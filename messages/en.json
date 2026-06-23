@@ -27,10 +27,10 @@
     "scheduled": "Scheduled"
   },
   "meta": {
-    "main_title": "{airport} Airport ({iata}) — Live Arrivals & Departures",
+    "main_title": "{airport} ({iata}) — Live Arrivals & Departures Board",
     "main_description": "Live flight board for {airport} ({iata}) in {city}, {country}. Real-time arrivals, departures, gate information and delay status updated every minute.",
-    "arrivals_title": "{airport} ({iata}) Arrivals — Live Flight Status",
-    "departures_title": "{airport} ({iata}) Departures — Live Flight Status",
+    "arrivals_title": "{airport} ({iata}) Arrivals Today — Live Flight Status",
+    "departures_title": "{airport} ({iata}) Departures Today — Live Flight Status",
     "arrivals_description": "Live arrival board for {airport} ({iata}) in {city}. Real-time flight status, baggage carousel numbers and terminal information updated every minute.",
     "departures_description": "Live departure board for {airport} ({iata}) in {city}. Real-time flight status, gate numbers, terminal and delay information updated every minute."
   },

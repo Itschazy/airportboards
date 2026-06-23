@@ -58,6 +58,8 @@ export default async function AirportPage({ params }: Props) {
 
   const canonical = `${BASE}/${locale}/airport/${airport.iata}`;
   const about = getAirportContent(airport.iata, locale);
+  const t = await getTranslations({ locale, namespace: 'meta' });
+  const h1 = t('main_title', { airport: airport.name, iata: airport.iata, city: airport.city, country: airport.country });
 
   const jsonLd = [
     {
@@ -101,6 +103,12 @@ export default async function AirportPage({ params }: Props) {
       {jsonLd.map((schema, i) => (
         <script key={i} type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
       ))}
+      <h1 style={{
+        position: 'absolute', width: 1, height: 1, padding: 0, margin: -1,
+        overflow: 'hidden', clip: 'rect(0,0,0,0)', whiteSpace: 'nowrap', border: 0,
+      }}>
+        {h1}
+      </h1>
       <FlightBoard airport={airport} locale={locale} />
       {about && (
         <section style={{ background: '#050505', padding: '8px 16px 56px' }}>
