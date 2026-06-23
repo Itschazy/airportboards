@@ -19,6 +19,7 @@ jobs:
             git pull origin main
             npm ci
             npm install lightningcss-linux-x64-gnu --save-optional 2>/dev/null || true
+            echo "AIRLABS_API_KEY=${{ secrets.AIRLABS_API_KEY }}" > .env.local
             npm run build
             pm2 restart airportsboard
             pm2 save
