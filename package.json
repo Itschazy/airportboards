@@ -16,7 +16,10 @@
   "optionalDependencies": {
     "lightningcss-linux-x64-gnu": "*",
     "lightningcss-darwin-arm64": "*",
-    "lightningcss-darwin-x64": "*"
+    "lightningcss-darwin-x64": "*",
+    "@tailwindcss/oxide-linux-x64-gnu": "*",
+    "@tailwindcss/oxide-darwin-arm64": "*",
+    "@tailwindcss/oxide-darwin-x64": "*"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4",

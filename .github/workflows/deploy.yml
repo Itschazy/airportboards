@@ -18,8 +18,8 @@ jobs:
             cd /var/www/airportsboard
             git stash
             git pull origin main
-            npm ci
-            npm install lightningcss-linux-x64-gnu --save-optional 2>/dev/null || true
+            rm -rf node_modules package-lock.json
+            npm install
             echo "AIRLABS_API_KEY=${{ secrets.AIRLABS_API_KEY }}" > .env.local
             npm run build
             AIRLABS_API_KEY=${{ secrets.AIRLABS_API_KEY }} pm2 restart airportsboard
