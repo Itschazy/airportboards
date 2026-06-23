@@ -399,9 +399,21 @@ export function FlightBoard({ airport, locale, defaultMode = 'departures' }: {
   }, [airport.iata, mode, t]);
 
   useEffect(() => { setLoading(true); fetchFlights(); }, [fetchFlights]);
+
+  // Poll only while the tab is visible, and stop after a stretch of idle
+  // time — so backgrounded/forgotten tabs don't keep burning API quota.
   useEffect(() => {
-    const id = setInterval(fetchFlights, 60_000);
-    return () => clearInterval(id);
+    let polls = 0;
+    const MAX_POLLS = 30; // ~30 min, then stop auto-refresh
+    const id = setInterval(() => {
+      if (document.hidden) return;
+      if (++polls > MAX_POLLS) { clearInterval(id); return; }
+      fetchFlights();
+    }, 60_000);
+    // Refresh immediately when the user returns to the tab
+    const onVisible = () => { if (!document.hidden) { polls = 0; fetchFlights(); } };
+    document.addEventListener('visibilitychange', onVisible);
+    return () => { clearInterval(id); document.removeEventListener('visibilitychange', onVisible); };
   }, [fetchFlights]);
 
   // Live clock
