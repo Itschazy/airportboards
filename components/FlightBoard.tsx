@@ -1,8 +1,10 @@
 'use client';
 
 import { useEffect, useState, useCallback } from 'react';
+import { useTranslations } from 'next-intl';
 import type { Airport } from '@/lib/airports';
 
+type T = (key: string, values?: Record<string, string | number>) => string;
 type Mode = 'departures' | 'arrivals';
 type FilterKey = 'all' | 'ontime' | 'delayed' | 'boarding' | 'finalcall' | 'departed';
 
@@ -45,18 +47,6 @@ const STATUS_COLOR: Record<string, string> = {
   scheduled: C.gray,
 };
 
-const STATUS_LABEL: Record<string, string> = {
-  ontime:    'ON TIME',
-  boarding:  'BOARDING',
-  delayed:   'DELAYED',
-  finalcall: 'FINAL CALL',
-  cancelled: 'CANCELLED',
-  departed:  'DEPARTED',
-  arrived:   'ARRIVED',
-  baggage:   'BAGGAGE CLAIM',
-  scheduled: 'SCHEDULED',
-};
-
 const FILTER_STATUSES: Record<FilterKey, string[]> = {
   all:       [],
   ontime:    ['ontime', 'scheduled'],
@@ -66,37 +56,28 @@ const FILTER_STATUSES: Record<FilterKey, string[]> = {
   departed:  ['departed', 'arrived', 'baggage'],
 };
 
-const FILTERS: { key: FilterKey; label: string }[] = [
-  { key: 'all',       label: 'All' },
-  { key: 'ontime',    label: 'On Time' },
-  { key: 'delayed',   label: 'Delayed' },
-  { key: 'boarding',  label: 'Boarding' },
-  { key: 'finalcall', label: 'Final Call' },
-  { key: 'departed',  label: 'Departed' },
-];
+const FILTERS: FilterKey[] = ['all', 'ontime', 'delayed', 'boarding', 'finalcall', 'departed'];
 
 const haptic = (ms = 6) => { try { (navigator as any).vibrate?.(ms); } catch {} };
 
-function relTime(d: Date | null): string {
+function relTime(d: Date | null, t: T): string {
   if (!d) return '';
   const s = Math.floor((Date.now() - d.getTime()) / 1000);
-  if (s < 15) return 'Updated now';
-  if (s < 60) return `Updated ${s}s ago`;
-  if (s < 120) return 'Updated 1 min ago';
-  return `Updated ${Math.floor(s / 60)} min ago`;
+  if (s < 60) return t('updated_now');
+  return t('updated_min_ago', { m: Math.max(1, Math.floor(s / 60)) });
 }
 
 function calcDeparture(
-  flight: Flight, tz: string, mode: Mode
+  flight: Flight, tz: string, mode: Mode, t: T
 ): { label: string; value: string; sub: string; accent?: string } | null {
   if (['departed', 'baggage'].includes(flight.status)) {
-    return { label: mode === 'departures' ? 'Departed' : 'Arrived', value: flight.scheduled, sub: '', accent: C.gray };
+    return { label: mode === 'departures' ? t('st_departed') : t('st_arrived'), value: flight.scheduled, sub: '', accent: C.gray };
   }
   if (flight.status === 'arrived') {
-    return { label: 'Arrived', value: flight.scheduled, sub: '', accent: C.gray };
+    return { label: t('st_arrived'), value: flight.scheduled, sub: '', accent: C.gray };
   }
   if (flight.status === 'cancelled') {
-    return { label: 'Cancelled', value: '—', sub: `Was ${flight.scheduled}`, accent: C.red };
+    return { label: t('st_cancelled'), value: '—', sub: t('was', { time: flight.scheduled }), accent: C.red };
   }
   const dispTime = flight.actual || flight.scheduled;
   const [h, m] = dispTime.split(':').map(Number);
@@ -113,19 +94,19 @@ function calcDeparture(
     if (flight.status === 'delayed' && flight.actual) {
       const [sh, sm] = flight.scheduled.split(':').map(Number);
       const delay = (h * 60 + m) - (sh * 60 + sm);
-      return { label: `Delayed by ${delay}m`, value: flight.actual, sub: `Was ${flight.scheduled}`, accent: C.orange };
+      return { label: t('delayed_by', { m: delay }), value: flight.actual, sub: t('was', { time: flight.scheduled }), accent: C.orange };
     }
     if (diff <= 0) {
-      if (flight.status === 'boarding') return { label: 'Boarding', value: 'now', sub: flight.gate ? `Gate ${flight.gate}` : '', accent: C.blue };
-      if (flight.status === 'finalcall') return { label: 'Final Call', value: 'now', sub: 'Go to gate immediately', accent: C.red };
-      return { label: mode === 'departures' ? 'Departing' : 'Landing', value: 'now', sub: '', accent: C.green };
+      if (flight.status === 'boarding') return { label: t('st_boarding'), value: t('now'), sub: flight.gate ? `${t('gate')} ${flight.gate}` : '', accent: C.blue };
+      if (flight.status === 'finalcall') return { label: t('final_call'), value: t('now'), sub: t('go_to_gate'), accent: C.red };
+      return { label: mode === 'departures' ? t('departing') : t('landing'), value: t('now'), sub: '', accent: C.green };
     }
     const hrs = Math.floor(diff / 60);
     const mins = diff % 60;
     const countdown = hrs > 0 ? `${hrs}h ${mins}m` : `${mins}m`;
-    if (flight.status === 'boarding') return { label: 'Boarding', value: countdown, sub: flight.gate ? `Gate ${flight.gate}` : '', accent: C.blue };
-    if (flight.status === 'finalcall') return { label: 'Final Call', value: countdown, sub: 'Go to gate now!', accent: C.red };
-    return { label: mode === 'departures' ? 'Departs in' : 'Arrives in', value: countdown, sub: `Scheduled ${flight.scheduled}` };
+    if (flight.status === 'boarding') return { label: t('st_boarding'), value: countdown, sub: flight.gate ? `${t('gate')} ${flight.gate}` : '', accent: C.blue };
+    if (flight.status === 'finalcall') return { label: t('final_call'), value: countdown, sub: t('go_to_gate'), accent: C.red };
+    return { label: mode === 'departures' ? t('departs_in') : t('arrives_in'), value: countdown, sub: t('scheduled_at', { time: flight.scheduled }) };
   } catch {
     return null;
   }
@@ -168,19 +149,19 @@ function BottomSheet({ flight, mode, onClose, tz, locale, updLabel }: {
   locale: string;
   updLabel: string;
 }) {
+  const t = useTranslations('ui');
   const vis = !!flight;
   const color = flight ? (STATUS_COLOR[flight.status] || C.gray) : C.gray;
-  const label = flight ? (STATUS_LABEL[flight.status] || flight.status.toUpperCase()) : '';
-  const labelTitle = label.split(' ').map(w => w[0] + w.slice(1).toLowerCase()).join(' ');
+  const label = flight ? t(`st_${flight.status}`) : '';
 
-  const countdown = flight ? calcDeparture(flight, tz, mode) : null;
+  const countdown = flight ? calcDeparture(flight, tz, mode, t) : null;
 
   const dateStr = flight ? new Date().toLocaleDateString(locale, {
     timeZone: tz || undefined,
     weekday: 'short', month: 'short', day: 'numeric',
   }) : '';
 
-  const updShort = updLabel.replace('Updated ', '') || '—';
+  const updShort = updLabel || '—';
 
   useEffect(() => {
     document.body.style.overflow = vis ? 'hidden' : '';
@@ -245,7 +226,7 @@ function BottomSheet({ flight, mode, onClose, tz, locale, updLabel }: {
                 marginTop: 8, flexShrink: 0,
               }}>
                 <div style={{ width: 7, height: 7, borderRadius: '50%', background: color, flexShrink: 0 }} />
-                <span style={{ fontSize: 12, fontWeight: 700, color, letterSpacing: '0.07em' }}>{label}</span>
+                <span style={{ fontSize: 12, fontWeight: 700, color, letterSpacing: '0.07em', textTransform: 'uppercase' }}>{label}</span>
               </div>
             </div>
 
@@ -298,7 +279,7 @@ function BottomSheet({ flight, mode, onClose, tz, locale, updLabel }: {
             <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '0 12px', marginBottom: 0 }}>
               <div>
                 <div style={{ fontSize: 12, color: '#8A8A8A', textTransform: 'uppercase', letterSpacing: '0.12em', marginBottom: 8 }}>
-                  {mode === 'departures' ? 'Departure' : 'Arrival'}
+                  {mode === 'departures' ? t('departure') : t('arrival')}
                 </div>
                 <div style={{
                   fontSize: 40, fontWeight: 700,
@@ -321,7 +302,7 @@ function BottomSheet({ flight, mode, onClose, tz, locale, updLabel }: {
 
               {flight.gate && (
                 <div>
-                  <div style={{ fontSize: 12, color: '#8A8A8A', textTransform: 'uppercase', letterSpacing: '0.12em', marginBottom: 8 }}>Gate</div>
+                  <div style={{ fontSize: 12, color: '#8A8A8A', textTransform: 'uppercase', letterSpacing: '0.12em', marginBottom: 8 }}>{t('gate')}</div>
                   <div style={{ fontSize: 40, fontWeight: 700, color: C.text, lineHeight: 1, letterSpacing: '-0.02em' }}>
                     {flight.gate}
                   </div>
@@ -335,15 +316,15 @@ function BottomSheet({ flight, mode, onClose, tz, locale, updLabel }: {
             <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '0 12px' }}>
               <div>
                 <div style={{ fontSize: 12, color: '#8A8A8A', textTransform: 'uppercase', letterSpacing: '0.12em', marginBottom: 8 }}>
-                  Flight status
+                  {t('flight_status')}
                 </div>
                 <div style={{ fontSize: 22, fontWeight: 600, color, lineHeight: 1.2 }}>
-                  {labelTitle}
+                  {label}
                 </div>
               </div>
               <div>
                 <div style={{ fontSize: 12, color: '#8A8A8A', textTransform: 'uppercase', letterSpacing: '0.12em', marginBottom: 8 }}>
-                  Updated
+                  {t('updated')}
                 </div>
                 <div style={{ fontSize: 22, fontWeight: 500, color: C.text, lineHeight: 1.2 }}>
                   {updShort}
@@ -356,7 +337,7 @@ function BottomSheet({ flight, mode, onClose, tz, locale, updLabel }: {
               <>
                 {D}
                 <div>
-                  <div style={{ fontSize: 12, color: '#8A8A8A', textTransform: 'uppercase', letterSpacing: '0.12em', marginBottom: 8 }}>Terminal</div>
+                  <div style={{ fontSize: 12, color: '#8A8A8A', textTransform: 'uppercase', letterSpacing: '0.12em', marginBottom: 8 }}>{t('terminal')}</div>
                   <div style={{ fontSize: 40, fontWeight: 700, color: C.text, lineHeight: 1, letterSpacing: '-0.02em' }}>
                     {flight.terminal}
                   </div>
@@ -369,7 +350,7 @@ function BottomSheet({ flight, mode, onClose, tz, locale, updLabel }: {
               <>
                 {D}
                 <div>
-                  <div style={{ fontSize: 12, color: '#8A8A8A', textTransform: 'uppercase', letterSpacing: '0.12em', marginBottom: 8 }}>Baggage claim</div>
+                  <div style={{ fontSize: 12, color: '#8A8A8A', textTransform: 'uppercase', letterSpacing: '0.12em', marginBottom: 8 }}>{t('baggage')}</div>
                   <div style={{ fontSize: 40, fontWeight: 700, color: C.green, lineHeight: 1, letterSpacing: '-0.02em' }}>
                     {flight.baggage}
                   </div>
@@ -391,6 +372,7 @@ export function FlightBoard({ airport, locale, defaultMode = 'departures' }: {
   locale: string;
   defaultMode?: Mode;
 }) {
+  const t = useTranslations('ui');
   const [mode, setMode]           = useState<Mode>(defaultMode);
   const [filter, setFilter]       = useState<FilterKey>('all');
   const [search, setSearch]       = useState('');
@@ -409,12 +391,12 @@ export function FlightBoard({ airport, locale, defaultMode = 'departures' }: {
       setFlights(data.flights || []);
       const now = new Date();
       setUpdated(now);
-      setUpdLabel('Updated now');
+      setUpdLabel(t('updated_now'));
       setIsLive(true);
     } catch { /* keep prev */ } finally {
       setLoading(false);
     }
-  }, [airport.iata, mode]);
+  }, [airport.iata, mode, t]);
 
   useEffect(() => { setLoading(true); fetchFlights(); }, [fetchFlights]);
   useEffect(() => {
@@ -437,11 +419,11 @@ export function FlightBoard({ airport, locale, defaultMode = 'departures' }: {
   useEffect(() => {
     if (!lastUpdated) return;
     const id = setInterval(() => {
-      setUpdLabel(relTime(lastUpdated));
+      setUpdLabel(relTime(lastUpdated, t));
       setIsLive((Date.now() - lastUpdated.getTime()) < 90_000);
     }, 15_000);
     return () => clearInterval(id);
-  }, [lastUpdated]);
+  }, [lastUpdated, t]);
 
   // Filter + search
   const trimSearch = search.trim();
@@ -485,7 +467,7 @@ export function FlightBoard({ airport, locale, defaultMode = 'departures' }: {
               {time}
             </div>
             <div style={{ fontSize: 11, color: C.secondary, marginTop: 4, letterSpacing: '0.02em', opacity: 0.5 }}>
-              Local time
+              {t('local_time')}
             </div>
           </div>
         </div>
@@ -513,7 +495,7 @@ export function FlightBoard({ airport, locale, defaultMode = 'departures' }: {
             type="search"
             autoComplete="off"
             spellCheck={false}
-            placeholder="Search flight (SU1404), city or airline"
+            placeholder={t('search_placeholder')}
             value={search}
             onChange={e => setSearch(e.target.value)}
             style={{
@@ -570,7 +552,7 @@ export function FlightBoard({ airport, locale, defaultMode = 'departures' }: {
                 opacity: active ? 1 : 0.45,
               }}>
                 <span style={{ fontSize: 15 }}>{m === 'departures' ? '✈' : '🛬'}</span>
-                {m === 'departures' ? 'Departures' : 'Arrivals'}
+                {m === 'departures' ? t('departures') : t('arrivals')}
               </button>
             );
           })}
@@ -584,10 +566,10 @@ export function FlightBoard({ airport, locale, defaultMode = 'departures' }: {
         overflowX: 'auto',
         maxWidth: 960, margin: '0 auto',
       }}>
-        {FILTERS.map(f => {
-          const active = filter === f.key;
+        {FILTERS.map(key => {
+          const active = filter === key;
           return (
-            <button key={f.key} onClick={() => { haptic(); setFilter(f.key); }} style={{
+            <button key={key} onClick={() => { haptic(); setFilter(key); }} style={{
               padding: '6px 14px',
               fontSize: 13, fontWeight: active ? 600 : 400,
               border: active ? 'none' : `1px solid ${C.border}`,
@@ -599,7 +581,7 @@ export function FlightBoard({ airport, locale, defaultMode = 'departures' }: {
               transition: 'all 0.15s ease',
               opacity: active ? 1 : 0.5,
             }}>
-              {f.label}
+              {t(`filter_${key}`)}
             </button>
           );
         })}
@@ -612,7 +594,7 @@ export function FlightBoard({ airport, locale, defaultMode = 'departures' }: {
           padding: '0 16px 10px', maxWidth: 960, margin: '0 auto',
         }}>
           <span style={{ fontSize: 12, color: C.secondary }}>
-            {mode === 'departures' ? '✈' : '🛬'} {flights.length} {mode} today
+            {mode === 'departures' ? '✈' : '🛬'} {mode === 'departures' ? t('departures_today', { count: flights.length }) : t('arrivals_today', { count: flights.length })}
           </span>
           <span style={{ fontSize: 12, color: C.dim }}>
             {new Date().toLocaleDateString(locale, {
@@ -635,7 +617,7 @@ export function FlightBoard({ airport, locale, defaultMode = 'departures' }: {
         {!loading && visible.length === 0 && (
           <div style={{ textAlign: 'center', padding: '60px 0' }}>
             <div style={{ fontSize: 32, marginBottom: 12 }}>✈</div>
-            <div style={{ fontSize: 15, color: C.secondary }}>No flights found</div>
+            <div style={{ fontSize: 15, color: C.secondary }}>{t('no_flights')}</div>
           </div>
         )}
 
@@ -646,9 +628,9 @@ export function FlightBoard({ airport, locale, defaultMode = 'departures' }: {
               const [ah, am] = f.actual.split(':').map(Number);
               const [sh, sm] = f.scheduled.split(':').map(Number);
               const delay = (ah * 60 + am) - (sh * 60 + sm);
-              return delay > 0 ? `DELAYED ${delay}M` : 'DELAYED';
+              return delay > 0 ? `${t('st_delayed')} ${delay}m` : t('st_delayed');
             }
-            return STATUS_LABEL[f.status] || f.status.toUpperCase();
+            return t(`st_${f.status}`);
           })();
           const isPast = ['departed', 'arrived'].includes(f.status);
 
@@ -723,6 +705,7 @@ export function FlightBoard({ airport, locale, defaultMode = 'departures' }: {
                       fontSize: 10, fontWeight: 700,
                       color,
                       letterSpacing: '0.08em',
+                      textTransform: 'uppercase',
                       marginTop: f.gate ? 4 : 0,
                       lineHeight: 1,
                     }}>
