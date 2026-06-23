@@ -27,12 +27,12 @@
     "scheduled": "Erwartet"
   },
   "meta": {
+    "main_title": "Flughafen {airport} ({iata}) — Live Ankünfte & Abflüge",
+    "main_description": "Live Flugtafel für {airport} ({iata}) in {city}, {country}. Echtzeit-Ankünfte, Abflüge, Gate-Informationen und Verspätungen — jede Minute aktualisiert.",
     "arrivals_title": "Ankünfte {airport} ({iata}) — Live Flugstatus",
     "departures_title": "Abflüge {airport} ({iata}) — Live Flugstatus",
-    "main_title": "Flughafen {airport} {city} — Live Ankünfte & Abflüge | RunwayBoard",
-    "description": "Live Ankünfte und Abflüge am Flughafen {airport} ({iata}) in {city}, {country}. Echtzeit-Status, Gate-Info und Verspätungen.",
-    "arrivals_description": "Live Ankünfte am Flughafen {airport} ({iata}). Echtzeit Flugstatus, Terminal und Gepäckausgabe.",
-    "departures_description": "Live Abflüge vom Flughafen {airport} ({iata}). Echtzeit Flugstatus, Gate und Verspätungen."
+    "arrivals_description": "Live Ankunftstafel für {airport} ({iata}) in {city}. Echtzeit-Flugstatus, Gepäckausgabebänder und Terminal-Informationen — jede Minute aktualisiert.",
+    "departures_description": "Live Abflugtafel für {airport} ({iata}) in {city}. Echtzeit-Flugstatus, Gate-Nummern, Terminal und Verspätungen — jede Minute aktualisiert."
   },
   "airport_info": {
     "location": "Standort",
@@ -42,8 +42,8 @@
     "icao_code": "ICAO-Code"
   },
   "home": {
-    "headline": "Live Flughafen-Anzeigetafeln weltweit",
-    "subline": "Ankünfte und Abflüge für 9.000+ Flughäfen in Echtzeit",
+    "headline": "Live Flugtafeln für 6.000+ Flughäfen",
+    "subline": "Echtzeit-Ankünfte und Abflüge weltweit. Jede Minute aktualisiert.",
     "popular": "Beliebte Flughäfen"
   }
 }

@@ -27,12 +27,12 @@
     "scheduled": "Scheduled"
   },
   "meta": {
+    "main_title": "{airport} Airport ({iata}) — Live Arrivals & Departures",
+    "main_description": "Live flight board for {airport} ({iata}) in {city}, {country}. Real-time arrivals, departures, gate information and delay status updated every minute.",
     "arrivals_title": "{airport} ({iata}) Arrivals — Live Flight Status",
     "departures_title": "{airport} ({iata}) Departures — Live Flight Status",
-    "main_title": "{airport} {city} — Live Arrivals & Departures | RunwayBoard",
-    "description": "Live flight arrivals and departures for {airport} ({iata}) in {city}, {country}. Real-time status, gate info and delays.",
-    "arrivals_description": "Live arrivals at {airport} ({iata}). Real-time flight status, terminal and baggage carousel information.",
-    "departures_description": "Live departures from {airport} ({iata}). Real-time flight status, gate and delay information."
+    "arrivals_description": "Live arrival board for {airport} ({iata}) in {city}. Real-time flight status, baggage carousel numbers and terminal information updated every minute.",
+    "departures_description": "Live departure board for {airport} ({iata}) in {city}. Real-time flight status, gate numbers, terminal and delay information updated every minute."
   },
   "airport_info": {
     "location": "Location",
@@ -42,8 +42,8 @@
     "icao_code": "ICAO code"
   },
   "home": {
-    "headline": "Live airport boards worldwide",
-    "subline": "Arrivals and departures for 9,000+ airports in real time",
+    "headline": "Live flight boards for 6,000+ airports",
+    "subline": "Real-time arrivals and departures worldwide. Updated every minute.",
     "popular": "Popular airports"
   }
 }

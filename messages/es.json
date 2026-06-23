@@ -27,12 +27,12 @@
     "scheduled": "Previsto"
   },
   "meta": {
+    "main_title": "Aeropuerto {airport} ({iata}) — Llegadas y Salidas en vivo",
+    "main_description": "Panel de vuelos en vivo para {airport} ({iata}) en {city}, {country}. Llegadas, salidas, puertas e información de retrasos en tiempo real — actualizado cada minuto.",
     "arrivals_title": "Llegadas {airport} ({iata}) — Estado de vuelos en vivo",
     "departures_title": "Salidas {airport} ({iata}) — Estado de vuelos en vivo",
-    "main_title": "Aeropuerto {airport} {city} — Llegadas y Salidas en vivo | RunwayBoard",
-    "description": "Llegadas y salidas en vivo del aeropuerto {airport} ({iata}) en {city}, {country}. Estado en tiempo real, puertas y retrasos.",
-    "arrivals_description": "Llegadas en vivo al aeropuerto {airport} ({iata}). Estado de vuelos, terminal e información de equipaje en tiempo real.",
-    "departures_description": "Salidas en vivo del aeropuerto {airport} ({iata}). Estado de vuelos, puertas y retrasos en tiempo real."
+    "arrivals_description": "Panel de llegadas en vivo para {airport} ({iata}) en {city}. Estado de vuelos, cintas de equipaje e información de terminal — actualizado cada minuto.",
+    "departures_description": "Panel de salidas en vivo para {airport} ({iata}) en {city}. Estado de vuelos, números de puerta, terminal y retrasos — actualizado cada minuto."
   },
   "airport_info": {
     "location": "Ubicación",
@@ -42,8 +42,8 @@
     "icao_code": "Código ICAO"
   },
   "home": {
-    "headline": "Paneles de aeropuertos en vivo en todo el mundo",
-    "subline": "Llegadas y salidas en tiempo real para 9.000+ aeropuertos",
+    "headline": "Paneles en vivo para 6.000+ aeropuertos",
+    "subline": "Llegadas y salidas en tiempo real en todo el mundo. Actualizado cada minuto.",
     "popular": "Aeropuertos populares"
   }
 }

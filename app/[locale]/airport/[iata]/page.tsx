@@ -5,6 +5,8 @@ import { getAirport, getAllIataCodes } from '@/lib/airports';
 import { FlightBoard } from '@/components/FlightBoard';
 import { locales } from '@/lib/i18n';
 
+const BASE = 'https://airportsboard.live';
+
 type Props = { params: Promise<{ locale: string; iata: string }> };
 
 export async function generateStaticParams() {
@@ -18,21 +20,29 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const t = await getTranslations({ locale, namespace: 'meta' });
 
   const title = t('main_title', { airport: airport.name, city: airport.city, iata: airport.iata });
-  const description = t('description', { airport: airport.name, iata: airport.iata, city: airport.city, country: airport.country });
+  const description = t('main_description', { airport: airport.name, iata: airport.iata, city: airport.city, country: airport.country });
+  const canonical = `${BASE}/${locale}/airport/${airport.iata}`;
 
-  const alternates: Record<string, string> = {};
+  const languages: Record<string, string> = {};
   for (const loc of locales) {
-    alternates[loc] = `https://airportboards.live/${loc}/airport/${iata.toUpperCase()}`;
+    languages[loc] = `${BASE}/${loc}/airport/${airport.iata}`;
   }
 
   return {
     title,
     description,
-    alternates: {
-      canonical: `https://airportboards.live/${locale}/airport/${iata.toUpperCase()}`,
-      languages: alternates,
+    keywords: [
+      `${airport.name} departures`, `${airport.name} arrivals`,
+      `${airport.iata} flight status`, `${airport.iata} live board`,
+      `${airport.city} airport flights`, `${airport.name} real time`,
+    ].join(', '),
+    alternates: { canonical, languages },
+    openGraph: {
+      title, description, type: 'website', url: canonical,
+      siteName: 'AirportsBoard.live',
     },
-    openGraph: { title, description, type: 'website' },
+    twitter: { card: 'summary', title, description },
+    robots: { index: true, follow: true },
   };
 }
 
@@ -40,21 +50,51 @@ export default async function AirportPage({ params }: Props) {
   const { locale, iata } = await params;
   const airport = getAirport(iata.toUpperCase());
   if (!airport) notFound();
-  const t = await getTranslations({ locale, namespace: 'meta' });
 
-  const jsonLd = {
-    '@context': 'https://schema.org',
-    '@type': 'Airport',
-    'iataCode': airport.iata,
-    'icaoCode': airport.icao,
-    'name': airport.name,
-    'address': { '@type': 'PostalAddress', 'addressLocality': airport.city, 'addressCountry': airport.iso2 || airport.country },
-    'geo': { '@type': 'GeoCoordinates', 'latitude': airport.lat, 'longitude': airport.lon },
-  };
+  const canonical = `${BASE}/${locale}/airport/${airport.iata}`;
+
+  const jsonLd = [
+    {
+      '@context': 'https://schema.org',
+      '@type': 'Airport',
+      iataCode: airport.iata,
+      icaoCode: airport.icao,
+      name: airport.name,
+      url: canonical,
+      address: {
+        '@type': 'PostalAddress',
+        addressLocality: airport.city,
+        addressCountry: airport.iso2 || airport.country,
+      },
+      geo: {
+        '@type': 'GeoCoordinates',
+        latitude: airport.lat,
+        longitude: airport.lon,
+      },
+    },
+    {
+      '@context': 'https://schema.org',
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Home', item: `${BASE}/${locale}` },
+        { '@type': 'ListItem', position: 2, name: `${airport.name} (${airport.iata})`, item: canonical },
+      ],
+    },
+    {
+      '@context': 'https://schema.org',
+      '@type': 'WebPage',
+      name: `${airport.name} Live Flight Board`,
+      description: `Live arrivals and departures at ${airport.name} (${airport.iata}), ${airport.city}`,
+      url: canonical,
+      inLanguage: locale,
+    },
+  ];
 
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+      {jsonLd.map((schema, i) => (
+        <script key={i} type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
+      ))}
       <FlightBoard airport={airport} locale={locale} />
     </>
   );

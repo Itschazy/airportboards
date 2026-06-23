@@ -27,12 +27,12 @@
     "scheduled": "Previsto"
   },
   "meta": {
+    "main_title": "Aeroporto {airport} ({iata}) — Arrivi e Partenze in diretta",
+    "main_description": "Tabellone voli in diretta per {airport} ({iata}) a {city}, {country}. Arrivi, partenze, gate e informazioni sui ritardi in tempo reale — aggiornato ogni minuto.",
     "arrivals_title": "Arrivi {airport} ({iata}) — Stato voli in tempo reale",
     "departures_title": "Partenze {airport} ({iata}) — Stato voli in tempo reale",
-    "main_title": "Aeroporto {airport} {city} — Arrivi e Partenze live | RunwayBoard",
-    "description": "Arrivi e partenze live all'aeroporto {airport} ({iata}) a {city}, {country}. Stato in tempo reale, gate e ritardi.",
-    "arrivals_description": "Arrivi live all'aeroporto {airport} ({iata}). Stato voli, terminal e ritiro bagagli in tempo reale.",
-    "departures_description": "Partenze live dall'aeroporto {airport} ({iata}). Stato voli, gate e ritardi in tempo reale."
+    "arrivals_description": "Tabellone arrivi in diretta per {airport} ({iata}) a {city}. Stato voli, nastri bagagli e informazioni terminal — aggiornato ogni minuto.",
+    "departures_description": "Tabellone partenze in diretta per {airport} ({iata}) a {city}. Stato voli, numeri gate, terminal e ritardi — aggiornato ogni minuto."
   },
   "airport_info": {
     "location": "Posizione",
@@ -42,8 +42,8 @@
     "icao_code": "Codice ICAO"
   },
   "home": {
-    "headline": "Tabelloni aeroporti in diretta nel mondo",
-    "subline": "Arrivi e partenze in tempo reale per 9.000+ aeroporti",
+    "headline": "Tabelloni in diretta per 6.000+ aeroporti",
+    "subline": "Arrivi e partenze in tempo reale in tutto il mondo. Aggiornato ogni minuto.",
     "popular": "Aeroporti popolari"
   }
 }

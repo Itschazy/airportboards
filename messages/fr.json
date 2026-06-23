@@ -27,12 +27,12 @@
     "scheduled": "Prévu"
   },
   "meta": {
+    "main_title": "Aéroport {airport} ({iata}) — Arrivées & Départs en direct",
+    "main_description": "Tableau de bord des vols en direct pour {airport} ({iata}) à {city}, {country}. Arrivées, départs, portes et retards en temps réel — mis à jour chaque minute.",
     "arrivals_title": "Arrivées {airport} ({iata}) — État des vols en direct",
     "departures_title": "Départs {airport} ({iata}) — État des vols en direct",
-    "main_title": "Aéroport {airport} {city} — Arrivées & Départs en direct | RunwayBoard",
-    "description": "Arrivées et départs en direct à l'aéroport {airport} ({iata}) à {city}, {country}. Statut en temps réel, portes et retards.",
-    "arrivals_description": "Arrivées en direct à l'aéroport {airport} ({iata}). Statut des vols, terminal et livraison bagages en temps réel.",
-    "departures_description": "Départs en direct de l'aéroport {airport} ({iata}). Statut des vols, portes et retards en temps réel."
+    "arrivals_description": "Tableau des arrivées en direct pour {airport} ({iata}) à {city}. Statut des vols, numéros de tapis bagages et informations terminal — mis à jour chaque minute.",
+    "departures_description": "Tableau des départs en direct pour {airport} ({iata}) à {city}. Statut des vols, numéros de porte, terminal et retards — mis à jour chaque minute."
   },
   "airport_info": {
     "location": "Localisation",
@@ -42,8 +42,8 @@
     "icao_code": "Code OACI"
   },
   "home": {
-    "headline": "Tableaux d'affichage aéroports en direct",
-    "subline": "Arrivées et départs en temps réel pour 9 000+ aéroports",
+    "headline": "Tableaux de bord en direct pour 6 000+ aéroports",
+    "subline": "Arrivées et départs en temps réel dans le monde entier. Mis à jour chaque minute.",
     "popular": "Aéroports populaires"
   }
 }

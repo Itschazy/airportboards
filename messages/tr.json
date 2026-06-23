@@ -27,12 +27,12 @@
     "scheduled": "Bekleniyor"
   },
   "meta": {
+    "main_title": "{airport} Havalimanı ({iata}) — Canlı Gelenler & Gidenler",
+    "main_description": "{city}, {country}'daki {airport} ({iata}) için canlı uçuş panosu. Gelenler, gidenler, kapı bilgileri ve gecikme durumu gerçek zamanlı — her dakika güncellenir.",
     "arrivals_title": "{airport} ({iata}) Gelenler — Canlı Uçuş Durumu",
     "departures_title": "{airport} ({iata}) Gidenler — Canlı Uçuş Durumu",
-    "main_title": "{airport} {city} Havalimanı — Canlı Gelenler & Gidenler | RunwayBoard",
-    "description": "{city}, {country}'daki {airport} ({iata}) havalimanı için canlı geliş ve gidiş tablosu. Gerçek zamanlı durum, kapı bilgisi ve gecikmeler.",
-    "arrivals_description": "{airport} ({iata}) havalimanına canlı gelenler. Gerçek zamanlı uçuş durumu ve bagaj bilgisi.",
-    "departures_description": "{airport} ({iata}) havalimanından canlı gidenler. Gerçek zamanlı uçuş durumu, kapı ve gecikme bilgisi."
+    "arrivals_description": "{city}'deki {airport} ({iata}) canlı gelenler panosu. Gerçek zamanlı uçuş durumu, bagaj bandı numaraları ve terminal bilgileri — her dakika güncellenir.",
+    "departures_description": "{city}'deki {airport} ({iata}) canlı gidenler panosu. Gerçek zamanlı uçuş durumu, kapı numaraları, terminal ve gecikme bilgileri — her dakika güncellenir."
   },
   "airport_info": {
     "location": "Konum",
@@ -42,8 +42,8 @@
     "icao_code": "ICAO kodu"
   },
   "home": {
-    "headline": "Dünya genelinde canlı havalimanı tabloları",
-    "subline": "9.000'den fazla havalimanı için gerçek zamanlı geliş ve gidiş",
+    "headline": "6.000'den fazla havalimanı için canlı uçuş panoları",
+    "subline": "Dünya genelinde gerçek zamanlı gelenler ve gidenler. Her dakika güncellenir.",
     "popular": "Popüler havalimanları"
   }
 }

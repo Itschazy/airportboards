@@ -10,7 +10,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: 'home' });
   return {
-    title: `airportboards.live — ${t('headline')}`,
+    title: `AirportsBoard — ${t('headline')}`,
     description: t('subline'),
   };
 }

@@ -27,12 +27,12 @@
     "scheduled": "예정"
   },
   "meta": {
-    "arrivals_title": "{airport} ({iata}) 도착 — 실시간 항공편 현황",
-    "departures_title": "{airport} ({iata}) 출발 — 실시간 항공편 현황",
-    "main_title": "{city} {airport} — 실시간 도착 및 출발 | AirportBoards",
-    "description": "{country} {city} {airport} ({iata})의 실시간 도착 및 출발 정보. 실시간 상태, 게이트 정보 및 지연 안내.",
-    "arrivals_description": "{airport} ({iata}) 실시간 도착 정보. 항공편 상태, 터미널 및 수하물 수취 정보.",
-    "departures_description": "{airport} ({iata}) 실시간 출발 정보. 항공편 상태, 게이트 및 지연 정보."
+    "main_title": "{airport}（{iata}） — 실시간 도착 및 출발 안내",
+    "main_description": "{country} {city}의 {airport}（{iata}） 실시간 항공 편광판. 도착, 출발, 게이트 정보 및 지연 상태를 매분 업데이트.",
+    "arrivals_title": "{airport}（{iata}） 도착 — 실시간 항공편 현황",
+    "departures_title": "{airport}（{iata}） 출발 — 실시간 항공편 현황",
+    "arrivals_description": "{city}의 {airport}（{iata}） 실시간 도착 안내판. 항공편 상태, 수하물 수취대 번호 및 터미널 정보를 매분 업데이트.",
+    "departures_description": "{city}의 {airport}（{iata}） 실시간 출발 안내판. 항공편 상태, 게이트 번호, 터미널 및 지연 정보를 매분 업데이트."
   },
   "airport_info": {
     "location": "위치",
@@ -42,8 +42,8 @@
     "icao_code": "ICAO 코드"
   },
   "home": {
-    "headline": "전 세계 공항 실시간 안내판",
-    "subline": "6,000개 이상의 공항 실시간 도착 및 출발 정보",
+    "headline": "6,000개 이상의 공항 실시간 항공편 안내판",
+    "subline": "전 세계 실시간 도착 및 출발 정보. 매분 업데이트.",
     "popular": "인기 공항"
   }
 }

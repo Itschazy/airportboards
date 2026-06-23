@@ -7,8 +7,12 @@ import { SiteHeader } from '@/components/SiteHeader';
 import '../globals.css';
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://airportboards.live'),
+  metadataBase: new URL('https://airportsboard.live'),
 };
+
+export function generateStaticParams() {
+  return locales.map(locale => ({ locale }));
+}
 
 export default async function LocaleLayout({
   children,
@@ -19,7 +23,7 @@ export default async function LocaleLayout({
 }) {
   const { locale } = await params;
   if (!locales.includes(locale as any)) notFound();
-  const messages = await getMessages();
+  const messages = await getMessages({ locale });
   const dir = rtlLocales.includes(locale as Locale) ? 'rtl' : 'ltr';
   return (
     <html lang={locale} dir={dir}>
@@ -35,7 +39,7 @@ export default async function LocaleLayout({
             color: '#3A3A3C',
             letterSpacing: '0.02em',
           }}>
-            airportboards.live · © 2026
+            airportsboard.live · © 2026
           </footer>
         </NextIntlClientProvider>
       </body>

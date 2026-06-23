@@ -27,12 +27,12 @@
     "scheduled": "计划中"
   },
   "meta": {
+    "main_title": "{airport}（{iata}）— 实时到达与出发",
+    "main_description": "{country}{city}{airport}（{iata}）的实时航班显示屏。到达、出发、登机口信息和延误状态每分钟更新。",
     "arrivals_title": "{airport}（{iata}）到达 — 实时航班状态",
     "departures_title": "{airport}（{iata}）出发 — 实时航班状态",
-    "main_title": "{city}{airport} — 实时到达与出发 | RunwayBoard",
-    "description": "{country}{city}{airport}（{iata}）的实时到达和出发信息。实时状态、登机口和延误信息。",
-    "arrivals_description": "{airport}（{iata}）实时到达信息。实时航班状态、航站楼和行李提取信息。",
-    "departures_description": "{airport}（{iata}）实时出发信息。实时航班状态、登机口和延误信息。"
+    "arrivals_description": "{city}{airport}（{iata}）实时到达显示屏。实时航班状态、行李转盘号码和航站楼信息每分钟更新。",
+    "departures_description": "{city}{airport}（{iata}）实时出发显示屏。实时航班状态、登机口号码、航站楼和延误信息每分钟更新。"
   },
   "airport_info": {
     "location": "位置",
@@ -42,8 +42,8 @@
     "icao_code": "ICAO代码"
   },
   "home": {
-    "headline": "全球机场实时显示屏",
-    "subline": "9000多个机场的实时到达与出发信息",
+    "headline": "6,000多个机场的实时航班显示屏",
+    "subline": "全球实时到达与出发信息，每分钟更新。",
     "popular": "热门机场"
   }
 }
