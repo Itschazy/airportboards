@@ -17,8 +17,9 @@ jobs:
           script: |
             set -e
             cd /var/www/airportsboard
-            git stash || true
-            git pull origin main
+            git fetch origin main
+            git reset --hard origin/main
+            git clean -fd -e node_modules -e .env.local
             rm -rf node_modules package-lock.json
             npm install
             echo "AIRLABS_API_KEY=${{ secrets.AIRLABS_API_KEY }}" > .env.local
