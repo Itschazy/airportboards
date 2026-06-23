@@ -1,0 +1,49 @@
+{
+  "nav": {
+    "arrivals": "到达",
+    "departures": "出发",
+    "search_placeholder": "机场、城市或IATA代码...",
+    "all_airports": "所有机场"
+  },
+  "board": {
+    "flight": "航班",
+    "airline": "航空公司",
+    "destination": "目的地",
+    "origin": "出发地",
+    "scheduled": "计划时间",
+    "gate": "登机口",
+    "terminal": "航站楼",
+    "status": "状态",
+    "updated": "更新时间"
+  },
+  "status": {
+    "ontime": "准时",
+    "delayed": "延误",
+    "boarding": "登机中",
+    "departed": "已起飞",
+    "arrived": "已到达",
+    "cancelled": "已取消",
+    "baggage": "行李提取",
+    "scheduled": "计划中"
+  },
+  "meta": {
+    "arrivals_title": "{airport}（{iata}）到达 — 实时航班状态",
+    "departures_title": "{airport}（{iata}）出发 — 实时航班状态",
+    "main_title": "{city}{airport} — 实时到达与出发 | RunwayBoard",
+    "description": "{country}{city}{airport}（{iata}）的实时到达和出发信息。实时状态、登机口和延误信息。",
+    "arrivals_description": "{airport}（{iata}）实时到达信息。实时航班状态、航站楼和行李提取信息。",
+    "departures_description": "{airport}（{iata}）实时出发信息。实时航班状态、登机口和延误信息。"
+  },
+  "airport_info": {
+    "location": "位置",
+    "country": "国家",
+    "timezone": "时区",
+    "iata_code": "IATA代码",
+    "icao_code": "ICAO代码"
+  },
+  "home": {
+    "headline": "全球机场实时显示屏",
+    "subline": "9000多个机场的实时到达与出发信息",
+    "popular": "热门机场"
+  }
+}

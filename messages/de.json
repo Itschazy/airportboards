@@ -1,0 +1,49 @@
+{
+  "nav": {
+    "arrivals": "Ankünfte",
+    "departures": "Abflüge",
+    "search_placeholder": "Flughafen, Stadt oder IATA-Code...",
+    "all_airports": "Alle Flughäfen"
+  },
+  "board": {
+    "flight": "Flug",
+    "airline": "Fluggesellschaft",
+    "destination": "Ziel",
+    "origin": "Herkunft",
+    "scheduled": "Planmäßig",
+    "gate": "Gate",
+    "terminal": "Terminal",
+    "status": "Status",
+    "updated": "Aktualisiert"
+  },
+  "status": {
+    "ontime": "Pünktlich",
+    "delayed": "Verspätet",
+    "boarding": "Boarding",
+    "departed": "Abgeflogen",
+    "arrived": "Gelandet",
+    "cancelled": "Annulliert",
+    "baggage": "Gepäckausgabe",
+    "scheduled": "Erwartet"
+  },
+  "meta": {
+    "arrivals_title": "Ankünfte {airport} ({iata}) — Live Flugstatus",
+    "departures_title": "Abflüge {airport} ({iata}) — Live Flugstatus",
+    "main_title": "Flughafen {airport} {city} — Live Ankünfte & Abflüge | RunwayBoard",
+    "description": "Live Ankünfte und Abflüge am Flughafen {airport} ({iata}) in {city}, {country}. Echtzeit-Status, Gate-Info und Verspätungen.",
+    "arrivals_description": "Live Ankünfte am Flughafen {airport} ({iata}). Echtzeit Flugstatus, Terminal und Gepäckausgabe.",
+    "departures_description": "Live Abflüge vom Flughafen {airport} ({iata}). Echtzeit Flugstatus, Gate und Verspätungen."
+  },
+  "airport_info": {
+    "location": "Standort",
+    "country": "Land",
+    "timezone": "Zeitzone",
+    "iata_code": "IATA-Code",
+    "icao_code": "ICAO-Code"
+  },
+  "home": {
+    "headline": "Live Flughafen-Anzeigetafeln weltweit",
+    "subline": "Ankünfte und Abflüge für 9.000+ Flughäfen in Echtzeit",
+    "popular": "Beliebte Flughäfen"
+  }
+}

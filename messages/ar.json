@@ -1,0 +1,49 @@
+{
+  "nav": {
+    "arrivals": "الوصول",
+    "departures": "المغادرة",
+    "search_placeholder": "المطار أو المدينة أو رمز IATA...",
+    "all_airports": "جميع المطارات"
+  },
+  "board": {
+    "flight": "رحلة",
+    "airline": "الخطوط الجوية",
+    "destination": "الوجهة",
+    "origin": "المصدر",
+    "scheduled": "المقرر",
+    "gate": "البوابة",
+    "terminal": "الصالة",
+    "status": "الحالة",
+    "updated": "آخر تحديث"
+  },
+  "status": {
+    "ontime": "في الموعد",
+    "delayed": "متأخر",
+    "boarding": "الصعود للطائرة",
+    "departed": "غادر",
+    "arrived": "وصل",
+    "cancelled": "ملغي",
+    "baggage": "استلام الأمتعة",
+    "scheduled": "مجدول"
+  },
+  "meta": {
+    "arrivals_title": "وصول {airport} ({iata}) — حالة الرحلات المباشرة",
+    "departures_title": "مغادرة {airport} ({iata}) — حالة الرحلات المباشرة",
+    "main_title": "مطار {airport} {city} — الوصول والمغادرة مباشرة | AirportBoards",
+    "description": "الوصول والمغادرة المباشرة في مطار {airport} ({iata}) في {city}، {country}. حالة الرحلات في الوقت الفعلي والبوابات والتأخيرات.",
+    "arrivals_description": "الوصول المباشر في مطار {airport} ({iata}). حالة الرحلات والصالات والأمتعة في الوقت الفعلي.",
+    "departures_description": "المغادرة المباشرة من مطار {airport} ({iata}). حالة الرحلات والبوابات والتأخيرات في الوقت الفعلي."
+  },
+  "airport_info": {
+    "location": "الموقع",
+    "country": "البلد",
+    "timezone": "المنطقة الزمنية",
+    "iata_code": "رمز IATA",
+    "icao_code": "رمز ICAO"
+  },
+  "home": {
+    "headline": "لوحات المطارات المباشرة حول العالم",
+    "subline": "الوصول والمغادرة في الوقت الفعلي لأكثر من 6000 مطار",
+    "popular": "المطارات الشائعة"
+  }
+}

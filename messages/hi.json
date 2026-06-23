@@ -1,0 +1,49 @@
+{
+  "nav": {
+    "arrivals": "आगमन",
+    "departures": "प्रस्थान",
+    "search_placeholder": "हवाई अड्डा, शहर या IATA कोड...",
+    "all_airports": "सभी हवाई अड्डे"
+  },
+  "board": {
+    "flight": "उड़ान",
+    "airline": "एयरलाइन",
+    "destination": "गंतव्य",
+    "origin": "उद्गम",
+    "scheduled": "निर्धारित",
+    "gate": "गेट",
+    "terminal": "टर्मिनल",
+    "status": "स्थिति",
+    "updated": "अपडेट"
+  },
+  "status": {
+    "ontime": "समय पर",
+    "delayed": "विलंबित",
+    "boarding": "बोर्डिंग",
+    "departed": "रवाना",
+    "arrived": "पहुंच गया",
+    "cancelled": "रद्द",
+    "baggage": "बैगेज क्लेम",
+    "scheduled": "निर्धारित"
+  },
+  "meta": {
+    "arrivals_title": "{airport} ({iata}) आगमन — लाइव उड़ान स्थिति",
+    "departures_title": "{airport} ({iata}) प्रस्थान — लाइव उड़ान स्थिति",
+    "main_title": "{city} {airport} — लाइव आगमन और प्रस्थान | AirportBoards",
+    "description": "{country}, {city} में {airport} ({iata}) के लिए रियल-टाइम आगमन और प्रस्थान। लाइव स्थिति, गेट जानकारी और देरी।",
+    "arrivals_description": "{airport} ({iata}) पर लाइव आगमन। रियल-टाइम उड़ान स्थिति, टर्मिनल और बैगेज जानकारी।",
+    "departures_description": "{airport} ({iata}) से लाइव प्रस्थान। रियल-टाइम उड़ान स्थिति, गेट और देरी की जानकारी।"
+  },
+  "airport_info": {
+    "location": "स्थान",
+    "country": "देश",
+    "timezone": "समय क्षेत्र",
+    "iata_code": "IATA कोड",
+    "icao_code": "ICAO कोड"
+  },
+  "home": {
+    "headline": "दुनिया भर के हवाई अड्डों का लाइव बोर्ड",
+    "subline": "6,000+ हवाई अड्डों के लिए रियल-टाइम आगमन और प्रस्थान",
+    "popular": "प्रमुख हवाई अड्डे"
+  }
+}

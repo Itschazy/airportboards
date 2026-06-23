@@ -1,0 +1,49 @@
+{
+  "nav": {
+    "arrivals": "Llegadas",
+    "departures": "Salidas",
+    "search_placeholder": "Aeropuerto, ciudad o código IATA...",
+    "all_airports": "Todos los aeropuertos"
+  },
+  "board": {
+    "flight": "Vuelo",
+    "airline": "Aerolínea",
+    "destination": "Destino",
+    "origin": "Origen",
+    "scheduled": "Programado",
+    "gate": "Puerta",
+    "terminal": "Terminal",
+    "status": "Estado",
+    "updated": "Actualizado"
+  },
+  "status": {
+    "ontime": "A tiempo",
+    "delayed": "Retrasado",
+    "boarding": "Embarque",
+    "departed": "Despegado",
+    "arrived": "Aterrizado",
+    "cancelled": "Cancelado",
+    "baggage": "Recogida de equipaje",
+    "scheduled": "Previsto"
+  },
+  "meta": {
+    "arrivals_title": "Llegadas {airport} ({iata}) — Estado de vuelos en vivo",
+    "departures_title": "Salidas {airport} ({iata}) — Estado de vuelos en vivo",
+    "main_title": "Aeropuerto {airport} {city} — Llegadas y Salidas en vivo | RunwayBoard",
+    "description": "Llegadas y salidas en vivo del aeropuerto {airport} ({iata}) en {city}, {country}. Estado en tiempo real, puertas y retrasos.",
+    "arrivals_description": "Llegadas en vivo al aeropuerto {airport} ({iata}). Estado de vuelos, terminal e información de equipaje en tiempo real.",
+    "departures_description": "Salidas en vivo del aeropuerto {airport} ({iata}). Estado de vuelos, puertas y retrasos en tiempo real."
+  },
+  "airport_info": {
+    "location": "Ubicación",
+    "country": "País",
+    "timezone": "Zona horaria",
+    "iata_code": "Código IATA",
+    "icao_code": "Código ICAO"
+  },
+  "home": {
+    "headline": "Paneles de aeropuertos en vivo en todo el mundo",
+    "subline": "Llegadas y salidas en tiempo real para 9.000+ aeropuertos",
+    "popular": "Aeropuertos populares"
+  }
+}

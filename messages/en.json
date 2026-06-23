@@ -1,0 +1,49 @@
+{
+  "nav": {
+    "arrivals": "Arrivals",
+    "departures": "Departures",
+    "search_placeholder": "Airport, city or IATA code...",
+    "all_airports": "All airports"
+  },
+  "board": {
+    "flight": "Flight",
+    "airline": "Airline",
+    "destination": "Destination",
+    "origin": "Origin",
+    "scheduled": "Scheduled",
+    "gate": "Gate",
+    "terminal": "Terminal",
+    "status": "Status",
+    "updated": "Updated"
+  },
+  "status": {
+    "ontime": "On time",
+    "delayed": "Delayed",
+    "boarding": "Boarding",
+    "departed": "Departed",
+    "arrived": "Arrived",
+    "cancelled": "Cancelled",
+    "baggage": "Baggage claim",
+    "scheduled": "Scheduled"
+  },
+  "meta": {
+    "arrivals_title": "{airport} ({iata}) Arrivals — Live Flight Status",
+    "departures_title": "{airport} ({iata}) Departures — Live Flight Status",
+    "main_title": "{airport} {city} — Live Arrivals & Departures | RunwayBoard",
+    "description": "Live flight arrivals and departures for {airport} ({iata}) in {city}, {country}. Real-time status, gate info and delays.",
+    "arrivals_description": "Live arrivals at {airport} ({iata}). Real-time flight status, terminal and baggage carousel information.",
+    "departures_description": "Live departures from {airport} ({iata}). Real-time flight status, gate and delay information."
+  },
+  "airport_info": {
+    "location": "Location",
+    "country": "Country",
+    "timezone": "Timezone",
+    "iata_code": "IATA code",
+    "icao_code": "ICAO code"
+  },
+  "home": {
+    "headline": "Live airport boards worldwide",
+    "subline": "Arrivals and departures for 9,000+ airports in real time",
+    "popular": "Popular airports"
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "nav": {
+    "arrivals": "到着",
+    "departures": "出発",
+    "search_placeholder": "空港、都市またはIATAコード...",
+    "all_airports": "すべての空港"
+  },
+  "board": {
+    "flight": "便名",
+    "airline": "航空会社",
+    "destination": "目的地",
+    "origin": "出発地",
+    "scheduled": "定刻",
+    "gate": "ゲート",
+    "terminal": "ターミナル",
+    "status": "状況",
+    "updated": "更新"
+  },
+  "status": {
+    "ontime": "定刻",
+    "delayed": "遅延",
+    "boarding": "搭乗中",
+    "departed": "出発済",
+    "arrived": "到着済",
+    "cancelled": "欠航",
+    "baggage": "手荷物受取",
+    "scheduled": "予定"
+  },
+  "meta": {
+    "arrivals_title": "{airport} ({iata}) 到着 — リアルタイム運航情報",
+    "departures_title": "{airport} ({iata}) 出発 — リアルタイム運航情報",
+    "main_title": "{city} {airport} — リアルタイム到着・出発情報 | AirportBoards",
+    "description": "{country} {city} {airport} ({iata}) のリアルタイム到着・出発情報。運航状況、ゲート情報、遅延情報をリアルタイムで確認。",
+    "arrivals_description": "{airport} ({iata}) のリアルタイム到着情報。運航状況、ターミナル、手荷物受取情報。",
+    "departures_description": "{airport} ({iata}) のリアルタイム出発情報。運航状況、ゲート、遅延情報。"
+  },
+  "airport_info": {
+    "location": "所在地",
+    "country": "国",
+    "timezone": "タイムゾーン",
+    "iata_code": "IATAコード",
+    "icao_code": "ICAOコード"
+  },
+  "home": {
+    "headline": "世界の空港リアルタイム出発到着案内",
+    "subline": "6,000以上の空港のリアルタイム到着・出発情報",
+    "popular": "主要空港"
+  }
+}

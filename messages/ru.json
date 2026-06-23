@@ -1,0 +1,49 @@
+{
+  "nav": {
+    "arrivals": "Прилёты",
+    "departures": "Вылеты",
+    "search_placeholder": "Аэропорт, город или код ИАТА...",
+    "all_airports": "Все аэропорты"
+  },
+  "board": {
+    "flight": "Рейс",
+    "airline": "Авиакомпания",
+    "destination": "Направление",
+    "origin": "Откуда",
+    "scheduled": "По расписанию",
+    "gate": "Гейт",
+    "terminal": "Терминал",
+    "status": "Статус",
+    "updated": "Обновлено"
+  },
+  "status": {
+    "ontime": "По расписанию",
+    "delayed": "Задержан",
+    "boarding": "Посадка",
+    "departed": "Вылетел",
+    "arrived": "Прилетел",
+    "cancelled": "Отменён",
+    "baggage": "Получение багажа",
+    "scheduled": "Ожидается"
+  },
+  "meta": {
+    "arrivals_title": "Прилёты {airport} ({iata}) — онлайн табло рейсов",
+    "departures_title": "Вылеты {airport} ({iata}) — онлайн табло рейсов",
+    "main_title": "Онлайн табло {airport} {city} — прилёты и вылеты | RunwayBoard",
+    "description": "Онлайн табло прилётов и вылетов аэропорта {airport} ({iata}), {city}, {country}. Актуальные статусы рейсов, гейты и задержки.",
+    "arrivals_description": "Онлайн табло прилётов аэропорта {airport} ({iata}). Актуальные статусы, терминалы и ленты выдачи багажа.",
+    "departures_description": "Онлайн табло вылетов аэропорта {airport} ({iata}). Актуальные статусы рейсов, гейты и задержки."
+  },
+  "airport_info": {
+    "location": "Расположение",
+    "country": "Страна",
+    "timezone": "Часовой пояс",
+    "iata_code": "Код ИАТА",
+    "icao_code": "Код ИКАО"
+  },
+  "home": {
+    "headline": "Онлайн табло аэропортов мира",
+    "subline": "Прилёты и вылеты в реальном времени для 9 000+ аэропортов",
+    "popular": "Популярные аэропорты"
+  }
+}

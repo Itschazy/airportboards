@@ -1,0 +1,49 @@
+{
+  "nav": {
+    "arrivals": "Gelenler",
+    "departures": "Gidenler",
+    "search_placeholder": "Havalimanı, şehir veya IATA kodu...",
+    "all_airports": "Tüm havalimanları"
+  },
+  "board": {
+    "flight": "Uçuş",
+    "airline": "Havayolu",
+    "destination": "Varış",
+    "origin": "Kalkış",
+    "scheduled": "Planlanan",
+    "gate": "Kapı",
+    "terminal": "Terminal",
+    "status": "Durum",
+    "updated": "Güncellendi"
+  },
+  "status": {
+    "ontime": "Zamanında",
+    "delayed": "Gecikti",
+    "boarding": "Biniş",
+    "departed": "Kalktı",
+    "arrived": "İndi",
+    "cancelled": "İptal",
+    "baggage": "Bagaj teslim",
+    "scheduled": "Bekleniyor"
+  },
+  "meta": {
+    "arrivals_title": "{airport} ({iata}) Gelenler — Canlı Uçuş Durumu",
+    "departures_title": "{airport} ({iata}) Gidenler — Canlı Uçuş Durumu",
+    "main_title": "{airport} {city} Havalimanı — Canlı Gelenler & Gidenler | RunwayBoard",
+    "description": "{city}, {country}'daki {airport} ({iata}) havalimanı için canlı geliş ve gidiş tablosu. Gerçek zamanlı durum, kapı bilgisi ve gecikmeler.",
+    "arrivals_description": "{airport} ({iata}) havalimanına canlı gelenler. Gerçek zamanlı uçuş durumu ve bagaj bilgisi.",
+    "departures_description": "{airport} ({iata}) havalimanından canlı gidenler. Gerçek zamanlı uçuş durumu, kapı ve gecikme bilgisi."
+  },
+  "airport_info": {
+    "location": "Konum",
+    "country": "Ülke",
+    "timezone": "Saat dilimi",
+    "iata_code": "IATA kodu",
+    "icao_code": "ICAO kodu"
+  },
+  "home": {
+    "headline": "Dünya genelinde canlı havalimanı tabloları",
+    "subline": "9.000'den fazla havalimanı için gerçek zamanlı geliş ve gidiş",
+    "popular": "Popüler havalimanları"
+  }
+}
