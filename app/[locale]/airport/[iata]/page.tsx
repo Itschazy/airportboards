@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { getTranslations } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 import { getAirport, getStaticIataCodes } from '@/lib/airports';
+import { getAirportContent } from '@/lib/airport-content';
 import { FlightBoard } from '@/components/FlightBoard';
 import { locales } from '@/lib/i18n';
 
@@ -56,6 +57,7 @@ export default async function AirportPage({ params }: Props) {
   if (!airport) notFound();
 
   const canonical = `${BASE}/${locale}/airport/${airport.iata}`;
+  const about = getAirportContent(airport.iata, locale);
 
   const jsonLd = [
     {
@@ -100,6 +102,21 @@ export default async function AirportPage({ params }: Props) {
         <script key={i} type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
       ))}
       <FlightBoard airport={airport} locale={locale} />
+      {about && (
+        <section style={{ background: '#050505', padding: '8px 16px 56px' }}>
+          <article style={{ maxWidth: 720, margin: '0 auto' }}>
+            <h2 style={{
+              fontSize: 'clamp(1.1rem, 3.5vw, 1.4rem)', fontWeight: 700,
+              letterSpacing: '-0.02em', color: '#FFFFFF', marginBottom: '0.75rem',
+            }}>
+              {airport.name} ({airport.iata})
+            </h2>
+            <p style={{ fontSize: '0.95rem', lineHeight: 1.7, color: '#9A9A9A' }}>
+              {about}
+            </p>
+          </article>
+        </section>
+      )}
     </>
   );
 }
