@@ -16,10 +16,11 @@ jobs:
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           script: |
             cd /var/www/airportsboard
+            git stash
             git pull origin main
             npm ci
             npm install lightningcss-linux-x64-gnu --save-optional 2>/dev/null || true
             echo "AIRLABS_API_KEY=${{ secrets.AIRLABS_API_KEY }}" > .env.local
             npm run build
-            pm2 restart airportsboard
+            AIRLABS_API_KEY=${{ secrets.AIRLABS_API_KEY }} pm2 restart airportsboard
             pm2 save
