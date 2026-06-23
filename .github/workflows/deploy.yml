@@ -18,5 +18,7 @@ jobs:
             cd /var/www/airportsboard
             git pull origin main
             npm ci
+            npm install lightningcss-linux-x64-gnu --save-optional 2>/dev/null || true
             npm run build
             pm2 restart airportsboard
+            pm2 save
