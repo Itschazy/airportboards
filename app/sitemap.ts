@@ -2,7 +2,7 @@ import type { MetadataRoute } from 'next';
 import { getAllIataCodes } from '@/lib/airports';
 import { locales } from '@/lib/i18n';
 
-const BASE = 'https://airportboards.live';
+const BASE = 'https://airportsboard.live';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const iataCodes = getAllIataCodes();
