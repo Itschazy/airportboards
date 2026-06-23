@@ -34,6 +34,15 @@ export function getAllIataCodes(): string[] {
   return airports.map(a => a.iata);
 }
 
+// Airports per child sitemap. Each airport emits 3 page types × N locales
+// URLs; 1000 × 3 × 12 = 36,000, safely under Google's 50,000-URL cap.
+// Shared by app/sitemap.ts (children) and app/sitemap.xml (index).
+export const AIRPORTS_PER_SITEMAP = 1000;
+
+export function getSitemapCount(): number {
+  return Math.ceil(getAllIataCodes().length / AIRPORTS_PER_SITEMAP);
+}
+
 // Airports pre-rendered at build time (instant load + crawled first).
 // Everything else renders on-demand via ISR and is cached after first hit.
 // Keeps the build fast instead of generating ~164k pages every deploy.
