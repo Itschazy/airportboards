@@ -15,12 +15,13 @@ jobs:
           username: deploy
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           script: |
+            set -e
             cd /var/www/airportsboard
-            git stash
+            git stash || true
             git pull origin main
             rm -rf node_modules package-lock.json
             npm install
             echo "AIRLABS_API_KEY=${{ secrets.AIRLABS_API_KEY }}" > .env.local
             npm run build
-            AIRLABS_API_KEY=${{ secrets.AIRLABS_API_KEY }} pm2 restart airportsboard
+            AIRLABS_API_KEY=${{ secrets.AIRLABS_API_KEY }} pm2 restart airportsboard --update-env
             pm2 save

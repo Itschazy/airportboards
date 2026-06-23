@@ -34,6 +34,15 @@ export function getAllIataCodes(): string[] {
   return airports.map(a => a.iata);
 }
 
+// Airports pre-rendered at build time (instant load + crawled first).
+// Everything else renders on-demand via ISR and is cached after first hit.
+// Keeps the build fast instead of generating ~164k pages every deploy.
+export function getStaticIataCodes(): string[] {
+  const priority = new Set<string>(POPULAR_AIRPORTS);
+  for (const iata of HUB_WEIGHT.keys()) priority.add(iata);
+  return [...priority].filter(iata => byIata.has(iata));
+}
+
 export function searchAirports(query: string, limit = 10): Airport[] {
   const q = query.trim().toLowerCase();
   if (!q) return POPULAR_AIRPORTS.map(iata => byIata.get(iata)!).filter(Boolean);

@@ -1,16 +1,20 @@
 import type { Metadata } from 'next';
 import { getTranslations } from 'next-intl/server';
 import { notFound } from 'next/navigation';
-import { getAirport, getAllIataCodes } from '@/lib/airports';
+import { getAirport, getStaticIataCodes } from '@/lib/airports';
 import { FlightBoard } from '@/components/FlightBoard';
 import { locales } from '@/lib/i18n';
 
 const BASE = 'https://airportsboard.live';
 
+// Pre-render only major hubs; rest render on-demand and cache via ISR.
+export const dynamicParams = true;
+export const revalidate = 300;
+
 type Props = { params: Promise<{ locale: string; iata: string }> };
 
 export async function generateStaticParams() {
-  return getAllIataCodes().map(iata => ({ iata }));
+  return getStaticIataCodes().map(iata => ({ iata }));
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
