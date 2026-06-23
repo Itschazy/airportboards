@@ -15,6 +15,7 @@ type Flight = {
   actual?: string;
   gate?: string;
   terminal?: string;
+  baggage?: string;
   status: string;
 };
 
@@ -358,6 +359,19 @@ function BottomSheet({ flight, mode, onClose, tz, locale, updLabel }: {
                   <div style={{ fontSize: 12, color: '#8A8A8A', textTransform: 'uppercase', letterSpacing: '0.12em', marginBottom: 8 }}>Terminal</div>
                   <div style={{ fontSize: 40, fontWeight: 700, color: C.text, lineHeight: 1, letterSpacing: '-0.02em' }}>
                     {flight.terminal}
+                  </div>
+                </div>
+              </>
+            )}
+
+            {/* ── Baggage carousel (arrivals only) ── */}
+            {flight.baggage && (
+              <>
+                {D}
+                <div>
+                  <div style={{ fontSize: 12, color: '#8A8A8A', textTransform: 'uppercase', letterSpacing: '0.12em', marginBottom: 8 }}>Baggage claim</div>
+                  <div style={{ fontSize: 40, fontWeight: 700, color: C.green, lineHeight: 1, letterSpacing: '-0.02em' }}>
+                    {flight.baggage}
                   </div>
                 </div>
               </>

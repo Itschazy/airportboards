@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 import airports from '@/data/airports.json';
+import airlines from '@/data/airlines.json';
 
 const AIRLABS_KEY = process.env.AIRLABS_API_KEY || '';
 const CACHE_SECONDS = 60;
@@ -10,43 +11,33 @@ for (const a of airports as { iata: string; city: string }[]) {
   if (a.iata) CITY_BY_IATA[a.iata] = a.city;
 }
 
+// IATA → airline display name (1175 carriers from airlabs reference)
+const AIRLINE = airlines as Record<string, string>;
+
 type AirlabsFlight = {
   airline_iata: string;
-  airline_name?: string;
   flight_iata: string;
   flight_number: string;
+  // codeshare markers — present on marketing duplicates of an operating flight
+  cs_flight_iata?: string | null;
   dep_iata: string;
   dep_terminal?: string;
   dep_gate?: string;
-  dep_time: string;        // "2024-06-23 14:35"
-  dep_actual?: string | null;
+  dep_time: string;          // local airport time "2024-06-23 14:35"
+  dep_time_ts?: number;      // absolute epoch seconds
   dep_estimated?: string | null;
+  dep_estimated_ts?: number | null;
   dep_delayed?: number | null;
   arr_iata: string;
   arr_terminal?: string;
   arr_gate?: string;
+  arr_baggage?: string | null;
   arr_time: string;
-  arr_actual?: string | null;
+  arr_time_ts?: number;
   arr_estimated?: string | null;
+  arr_estimated_ts?: number | null;
   arr_delayed?: number | null;
-  status: string;          // scheduled | active | landed | cancelled | diverted
-};
-
-// Airline IATA → display name fallback table
-const AIRLINE: Record<string, string> = {
-  SU:'Aeroflot', DP:'Pobeda', S7:'S7 Airlines', U6:'Ural Airlines',
-  FV:'Rossiya', UT:'UTair', N4:'Nordwind', '6R':'Smartavia',
-  AA:'American Airlines', DL:'Delta Air Lines', UA:'United Airlines',
-  BA:'British Airways', LH:'Lufthansa', AF:'Air France', KL:'KLM',
-  EK:'Emirates', QR:'Qatar Airways', EY:'Etihad Airways',
-  TK:'Turkish Airlines', PC:'Pegasus Airlines', FR:'Ryanair', U2:'easyJet',
-  VY:'Vueling', W6:'Wizz Air', SK:'SAS', AY:'Finnair',
-  LX:'Swiss International', OS:'Austrian Airlines', IB:'Iberia', TP:'TAP Portugal',
-  SQ:'Singapore Airlines', CX:'Cathay Pacific', NH:'ANA', JL:'Japan Airlines',
-  CA:'Air China', MU:'China Eastern', CZ:'China Southern',
-  KE:'Korean Air', OZ:'Asiana Airlines', QF:'Qantas', AI:'Air India',
-  LA:'LATAM Airlines', G3:'Gol', AD:'Azul', AM:'Aeromexico',
-  CM:'Copa Airlines', AV:'Avianca', WS:'WestJet', AC:'Air Canada',
+  status: string;            // scheduled | active | landed | cancelled | diverted
 };
 
 function timePart(datetime: string | null | undefined): string {
@@ -59,9 +50,10 @@ function airportLabel(iata: string): string {
   return city ? `${city} (${iata})` : iata;
 }
 
+// Status from airlabs' own state, refined for the boarding window using
+// absolute timestamps (no timezone math — ts is epoch seconds).
 function mapStatus(f: AirlabsFlight, direction: 'departures' | 'arrivals'): string {
-  if (f.status === 'cancelled') return 'cancelled';
-  if (f.status === 'diverted')  return 'cancelled';
+  if (f.status === 'cancelled' || f.status === 'diverted') return 'cancelled';
 
   if (direction === 'arrivals') {
     if (f.status === 'landed') return 'baggage';
@@ -69,18 +61,13 @@ function mapStatus(f: AirlabsFlight, direction: 'departures' | 'arrivals'): stri
     return 'ontime';
   }
 
-  // departures
+  // departures — airlabs 'active'/'landed' means it already left
   if (f.status === 'active' || f.status === 'landed') return 'departed';
+  if ((f.dep_delayed ?? 0) > 15) return 'delayed';
 
-  const delay = f.dep_delayed ?? 0;
-  if (delay > 15) return 'delayed';
-
-  // Estimate boarding window from scheduled/estimated time
-  const depTime = timePart(f.dep_estimated || f.dep_time);
-  if (depTime) {
-    const [h, m] = depTime.split(':').map(Number);
-    const now = new Date();
-    const minsUntil = (h * 60 + m) - (now.getUTCHours() * 60 + now.getUTCMinutes());
+  const depTs = f.dep_estimated_ts || f.dep_time_ts;
+  if (depTs) {
+    const minsUntil = (depTs - Date.now() / 1000) / 60;
     if (minsUntil <= 0)  return 'departed';
     if (minsUntil <= 10) return 'finalcall';
     if (minsUntil <= 30) return 'boarding';
@@ -90,17 +77,18 @@ function mapStatus(f: AirlabsFlight, direction: 'departures' | 'arrivals'): stri
 
 function mapFlight(f: AirlabsFlight, direction: 'departures' | 'arrivals') {
   const flightNum = f.flight_iata?.replace('-', ' ') ?? `${f.airline_iata} ${f.flight_number}`;
-  const airline   = f.airline_name || AIRLINE[f.airline_iata] || f.airline_iata;
+  const airline   = AIRLINE[f.airline_iata] || f.airline_iata;
   const status    = mapStatus(f, direction);
 
   const isDelay   = status === 'delayed';
   const scheduled = timePart(direction === 'departures' ? f.dep_time : f.arr_time);
   const actual    = isDelay
-    ? timePart(direction === 'departures' ? (f.dep_estimated || f.dep_actual) : (f.arr_estimated || f.arr_actual))
+    ? timePart(direction === 'departures' ? (f.dep_estimated) : (f.arr_estimated))
     : undefined;
 
   const gate     = direction === 'departures' ? f.dep_gate    : f.arr_gate;
   const terminal = direction === 'departures' ? f.dep_terminal : f.arr_terminal;
+  const baggage  = direction === 'arrivals' ? f.arr_baggage : undefined;
 
   return {
     flight: flightNum,
@@ -112,6 +100,7 @@ function mapFlight(f: AirlabsFlight, direction: 'departures' | 'arrivals') {
     ...(actual ? { actual } : {}),
     ...(gate     ? { gate }     : {}),
     ...(terminal ? { terminal } : {}),
+    ...(baggage  ? { baggage }  : {}),
     status,
   };
 }
@@ -140,7 +129,25 @@ export async function GET(
     const json = await res.json();
     if (json.error) throw new Error(json.error.message || 'airlabs error');
 
-    const flights = (json.response as AirlabsFlight[]).map(f => mapFlight(f, direction));
+    // Drop codeshare duplicates — keep only the operating flight, so the
+    // board shows each physical flight once instead of 4× per marketing carrier.
+    const raw = (json.response as AirlabsFlight[]).filter(f => !f.cs_flight_iata);
+
+    // Order like a real airport board: next-to-depart first (soonest upcoming),
+    // then already-departed flights most-recent first.
+    const now = Date.now() / 1000;
+    const tsOf = (f: AirlabsFlight) =>
+      (direction === 'departures'
+        ? (f.dep_estimated_ts || f.dep_time_ts)
+        : (f.arr_estimated_ts || f.arr_time_ts)) || 0;
+    raw.sort((a, b) => {
+      const ta = tsOf(a), tb = tsOf(b);
+      const aUp = ta >= now, bUp = tb >= now;
+      if (aUp !== bUp) return aUp ? -1 : 1;
+      return aUp ? ta - tb : tb - ta;
+    });
+
+    const flights = raw.map(f => mapFlight(f, direction));
 
     return NextResponse.json(
       { iata: code, direction, flights },
