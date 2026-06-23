@@ -4,6 +4,7 @@ import airlines from '@/data/airlines.json';
 
 const AIRLABS_KEY = process.env.AIRLABS_API_KEY || '';
 const CACHE_SECONDS = 60;
+const MAX_FLIGHTS = 80;
 
 // Quick IATA → city lookup from our airports dataset
 const CITY_BY_IATA: Record<string, string> = {};
@@ -147,7 +148,9 @@ export async function GET(
       return aUp ? ta - tb : tb - ta;
     });
 
-    const flights = raw.map(f => mapFlight(f, direction));
+    // Busy hubs now return 500+ rows; cap to the most relevant window
+    // (soonest upcoming + recently departed) to keep the board light.
+    const flights = raw.slice(0, MAX_FLIGHTS).map(f => mapFlight(f, direction));
 
     return NextResponse.json(
       { iata: code, direction, flights },
