@@ -22,7 +22,19 @@ const INDEXABLE_PATHS = ['', '/airport/SVO', '/airport/SVO/arrivals', '/airport/
   '/city/moscow', '/airports/russia', '/airports', '/airline/SU', '/az/a'];
 const NOINDEX_PATHS = ['/city/aalborg']; // single-airport city
 
-function fetchRaw(rawUrl, maxRedirects = 1) {
+// Serialize every network hit with a minimum inter-request gap. The audit otherwise
+// bursts ~250 requests at the small VDS, which can't on-demand-render the SSR-flight
+// pages fast enough → truncated 200s. A real crawler paces itself; so do we.
+const THROTTLE_MS = Number(process.env.THROTTLE_MS || 500);
+let lastReqAt = 0;
+async function gate() {
+  const wait = lastReqAt + THROTTLE_MS - Date.now();
+  if (wait > 0) await sleep(wait);
+  lastReqAt = Date.now();
+}
+
+async function fetchRaw(rawUrl, maxRedirects = 1) {
+  await gate();
   return new Promise((resolve, reject) => {
     const u = new URL(rawUrl);
     const req = request({ method: 'GET', host: IP || u.hostname, servername: u.hostname,
@@ -42,7 +54,30 @@ function fetchRaw(rawUrl, maxRedirects = 1) {
     req.end();
   });
 }
-async function status(url) { try { return (await fetchRaw(url, 0)).status; } catch { return 0; } }
+const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
+
+async function status(url, attempts = 4) {
+  for (let i = 0; i < attempts; i++) {
+    try { return (await fetchRaw(url, 0)).status; }
+    catch { if (i < attempts - 1) await sleep(600 * (i + 1)); } // timeout under load → retry
+  }
+  return 0;
+}
+
+// SSR pages that do a live airlabs call (airport/arrivals/departures/airline) render
+// on-demand on the small VDS; under a rapid audit burst the server occasionally flushes
+// a 200 whose <head> hasn't fully streamed (no </head> → null canonical). A real crawler
+// re-requests the warm ISR-cached page. Mirror that: retry a 200-without-</head> a few
+// times with backoff so the audit reflects what a crawler actually sees, not load noise.
+async function fetchStable(url, attempts = 4) {
+  let last;
+  for (let i = 0; i < attempts; i++) {
+    last = await fetchRaw(url);
+    if (last.status !== 200 || /<\/head>/i.test(last.body)) return last;
+    await sleep(600 * (i + 1));
+  }
+  return last;
+}
 
 function extractHead(html) {
   const head = html.slice(0, (html.search(/<\/head>/i) + 1) || html.length);
@@ -66,7 +101,7 @@ const check = (cond, msg) => { if (!cond) failures.push(msg); };
 async function auditIndexable(path) {
   for (const loc of LOCALES) {
     const url = `${BASE}/${loc}${path}`;
-    const res = await fetchRaw(url);
+    const res = await fetchStable(url);
     const label = `[${loc}${path || '/'}]`;
     if (res.status !== 200) { failures.push(`${label} status ${res.status}`); continue; }
     const { canonicalHref, alternates, robots } = extractHead(res.body);
@@ -84,7 +119,7 @@ async function auditIndexable(path) {
 }
 async function auditNoindex(path) {
   const url = `${BASE}/en${path}`;
-  const res = await fetchRaw(url);
+  const res = await fetchStable(url);
   const label = `[noindex en${path}]`;
   if (res.status !== 200) { failures.push(`${label} status ${res.status}`); return; }
   const { canonicalHref, alternates, robots } = extractHead(res.body);
