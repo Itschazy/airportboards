@@ -73,14 +73,18 @@ export function mapStatus(f: AirlabsFlight, direction: 'departures' | 'arrivals'
 }
 
 export function mapFlight(f: AirlabsFlight, direction: 'departures' | 'arrivals', locale: string) {
-  const flightNum = f.flight_iata?.replace('-', ' ') ?? `${f.airline_iata} ${f.flight_number}`;
+  const flightNum = (f.flight_iata && f.flight_iata.replace('-', ' ').trim())
+    || [f.airline_iata, f.flight_number].filter(Boolean).join(' ').trim()
+    || '—';
   const airline   = airlineName(f.airline_iata);
   const status    = mapStatus(f, direction);
-  const isDelay   = status === 'delayed';
   const scheduled = timePart(direction === 'departures' ? f.dep_time : f.arr_time);
-  const actual    = isDelay
-    ? timePart(direction === 'departures' ? (f.dep_estimated) : (f.arr_estimated))
-    : undefined;
+  const estimated = timePart(direction === 'departures' ? f.dep_estimated : f.arr_estimated);
+  // Show the effective (estimated/actual) time as the primary time whenever it
+  // differs from scheduled — this keeps the displayed time CONSISTENT with the
+  // sort key (fetchRaw orders by the estimated timestamp), so the list never looks
+  // out of order. The scheduled time is rendered struck-through next to it.
+  const actual    = estimated && estimated !== scheduled ? estimated : undefined;
   const gate     = direction === 'departures' ? f.dep_gate    : f.arr_gate;
   const terminal = direction === 'departures' ? f.dep_terminal : f.arr_terminal;
   const baggage  = direction === 'arrivals' ? f.arr_baggage : undefined;
