@@ -13,6 +13,7 @@ const geistMono = Geist_Mono({ variable: '--font-geist-mono', subsets: ['latin']
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://airportsboard.live'),
+  verification: { yandex: 'ea6daa0845815656' },
 };
 
 export function generateStaticParams() {
