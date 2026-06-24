@@ -152,3 +152,19 @@ export async function getFlightByNumber(flightIata: string, locale: string): Pro
   // pick the soonest upcoming (or most recent) instance
   return mapFlight(raw[0], 'departures', locale);
 }
+
+export async function getAirlineFlights(iata: string, locale: string): Promise<FlightRow[]> {
+  const raw = await fetchRaw(`airline_iata=${iata}`);
+  return raw.map(f => mapFlight(f, 'departures', locale));
+}
+
+// Airline directory (from airlines.json; '*' keys are airlabs' secondary assignments).
+export function getAirline(code: string): string | undefined {
+  const u = code.toUpperCase();
+  return AIRLINE[u] ?? AIRLINE[`${u}*`];
+}
+export function getAirlines(): { code: string; name: string }[] {
+  return Object.entries(AIRLINE)
+    .filter(([k]) => /^[A-Z0-9]{2}$/.test(k))
+    .map(([code, name]) => ({ code, name }));
+}

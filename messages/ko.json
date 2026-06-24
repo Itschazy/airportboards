@@ -98,7 +98,15 @@
     "route_h1": "{from} ({iata1}) → {to} ({iata2}) 항공편",
     "route_flights_today": "오늘 항공편",
     "route_airlines": "이 노선 항공사",
-    "route_none": "오늘 직항편이 없습니다"
+    "route_none": "오늘 직항편이 없습니다",
+    "flight_title": "항공편 {flight}",
+    "flight_desc": "항공편 {flight} 상태: 실시간 도착/출발 시간, 탑승구, 터미널, 지연 정보 및 실시간 추적.",
+    "flight_route": "경로",
+    "flight_notfound": "항공편 {flight}을(를) 찾을 수 없거나 오늘 일정이 없습니다.",
+    "airline_title": "항공편 {airline}",
+    "airline_desc": "{airline} ({iata}) 항공편: 실시간 상태, 출발 및 도착, 일정, 지연, 실시간 추적.",
+    "airline_live": "실시간 항공편",
+    "airline_none": "현재 {airline}의 활성 항공편이 없습니다."
   },
   "ui": {
     "departures": "출발",

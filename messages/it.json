@@ -98,7 +98,15 @@
     "route_h1": "{from} ({iata1}) → {to} ({iata2})",
     "route_flights_today": "Voli oggi",
     "route_airlines": "Compagnie su questa rotta",
-    "route_none": "Nessun volo diretto trovato oggi"
+    "route_none": "Nessun volo diretto trovato oggi",
+    "flight_title": "Volo {flight}",
+    "flight_desc": "Stato del volo {flight}: orari di arrivo/partenza in tempo reale, gate, terminal, ritardi e tracciamento live.",
+    "flight_route": "Itinerario",
+    "flight_notfound": "Volo {flight} non trovato o non previsto oggi.",
+    "airline_title": "Voli {airline}",
+    "airline_desc": "{airline} ({iata}) voli: stato in tempo reale, partenze e arrivi, orari, ritardi, tracciamento live.",
+    "airline_live": "Voli in tempo reale",
+    "airline_none": "Nessun volo attivo per {airline} in questo momento."
   },
   "ui": {
     "departures": "Partenze",
