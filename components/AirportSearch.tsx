@@ -37,10 +37,11 @@ function saveRecent(a: Result) {
   } catch {}
 }
 
-export function AirportSearch({ locale, placeholder }: { locale: string; placeholder: string }) {
+export function AirportSearch({ locale, placeholder, nearestLabel = 'Nearest airports' }: { locale: string; placeholder: string; nearestLabel?: string }) {
   const [query, setQuery]     = useState('');
   const [results, setResults] = useState<Result[]>([]);
   const [recent, setRecent]   = useState<Result[]>([]);
+  const [nearest, setNearest] = useState<Result[]>([]);
   const [open, setOpen]       = useState(false);
   const [active, setActive]   = useState(-1);
   const [focused, setFocused] = useState(false);
@@ -54,6 +55,25 @@ export function AirportSearch({ locale, placeholder }: { locale: string; placeho
       .then(r => r.json())
       .then(d => { if (!query) setResults(d.airports || []); })
       .catch(() => {});
+  }, []);
+
+  // Ask for geolocation on entry → nearest airports first
+  useEffect(() => {
+    if (!('geolocation' in navigator)) return;
+    const cached = (() => { try { return JSON.parse(localStorage.getItem('ab_geo') || 'null'); } catch { return null; } })();
+    const load = (lat: number, lon: number) => {
+      fetch(`/api/airports/nearest?lat=${lat}&lon=${lon}`)
+        .then(r => r.json()).then(d => setNearest((d.airports || []).slice(0, 6))).catch(() => {});
+    };
+    if (cached) load(cached.lat, cached.lon);
+    navigator.geolocation.getCurrentPosition(
+      pos => {
+        const { latitude: lat, longitude: lon } = pos.coords;
+        try { localStorage.setItem('ab_geo', JSON.stringify({ lat, lon })); } catch {}
+        load(lat, lon);
+      },
+      () => {}, { timeout: 8000, maximumAge: 600000 },
+    );
   }, []);
 
   // Search with debounce
@@ -102,7 +122,7 @@ export function AirportSearch({ locale, placeholder }: { locale: string; placeho
   };
 
   const onKey = (e: React.KeyboardEvent) => {
-    const list = showRecent ? recent : results;
+    const list = query.trim() ? results : emptyList;
     if (!open) return;
     if (e.key === 'ArrowDown') { e.preventDefault(); setActive(v => Math.min(v + 1, list.length - 1)); }
     if (e.key === 'ArrowUp')   { e.preventDefault(); setActive(v => Math.max(v - 1, 0)); }
@@ -114,8 +134,12 @@ export function AirportSearch({ locale, placeholder }: { locale: string; placeho
     if (e.key === 'Escape') { setOpen(false); inputRef.current?.blur(); }
   };
 
-  const showRecent = !query.trim() && recent.length > 0;
-  const showList   = open && (showRecent ? recent.length > 0 : results.length > 0);
+  const dedupe = (arr: Result[], seen: Set<string>) => arr.filter(a => !seen.has(a.iata) && seen.add(a.iata));
+  const emptyList = (() => {
+    const seen = new Set<string>();
+    return [...dedupe(recent, seen), ...dedupe(nearest, seen), ...dedupe(results, seen)];
+  })();
+  const showList = open && (query.trim() ? results.length > 0 : emptyList.length > 0);
 
   const Section = ({ label, items }: { label: string; items: Result[] }) => (
     <>
@@ -249,18 +273,14 @@ export function AirportSearch({ locale, placeholder }: { locale: string; placeho
           zIndex: 100,
           boxShadow: '0 20px 60px rgba(0,0,0,0.8)',
         }}>
-          {showRecent ? (
-            <>
-              <Section label="Recent" items={recent} />
-              {results.length > 0 && (
-                <>
-                  <div style={{ height: 1, background: '#1A1A1A' }} />
-                  <Section label="Popular" items={results.slice(0, 5)} />
-                </>
-              )}
-            </>
+          {query.trim() ? (
+            <Section label="Results" items={results} />
           ) : (
-            <Section label={query ? 'Results' : 'Popular airports'} items={results} />
+            <>
+              {recent.length > 0 && <Section label="Recent" items={recent} />}
+              {nearest.length > 0 && <Section label={nearestLabel} items={nearest} />}
+              {results.length > 0 && <Section label="Popular airports" items={results.slice(0, 6)} />}
+            </>
           )}
         </div>
       )}

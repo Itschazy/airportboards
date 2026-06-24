@@ -207,3 +207,73 @@ export const POPULAR_AIRPORTS = [
   'JFK', 'LHR', 'CDG', 'DXB', 'SVO', 'SIN', 'HND', 'LAX',
   'FRA', 'AMS', 'IST', 'ICN', 'PEK', 'ORD', 'ATL', 'LED',
 ];
+
+// Curated cities for the homepage SEO block (city → its primary airport).
+export const POPULAR_CITIES: { name: string; code: string; iata: string }[] = [
+  { name: 'New York', code: 'NYC', iata: 'JFK' },
+  { name: 'London', code: 'LON', iata: 'LHR' },
+  { name: 'Paris', code: 'PAR', iata: 'CDG' },
+  { name: 'Dubai', code: 'DXB', iata: 'DXB' },
+  { name: 'Istanbul', code: 'IST', iata: 'IST' },
+  { name: 'Singapore', code: 'SIN', iata: 'SIN' },
+  { name: 'Tokyo', code: 'TYO', iata: 'HND' },
+  { name: 'Moscow', code: 'MOW', iata: 'SVO' },
+  { name: 'Hong Kong', code: 'HKG', iata: 'HKG' },
+  { name: 'Los Angeles', code: 'LAX', iata: 'LAX' },
+  { name: 'Bangkok', code: 'BKK', iata: 'BKK' },
+  { name: 'Frankfurt', code: 'FRA', iata: 'FRA' },
+];
+
+// ── Geolocation: nearest airports ──────────────────────────────────────────
+function haversine(lat1: number, lon1: number, lat2: number, lon2: number): number {
+  const R = 6371, toRad = Math.PI / 180;
+  const dLat = (lat2 - lat1) * toRad, dLon = (lon2 - lon1) * toRad;
+  const a = Math.sin(dLat / 2) ** 2 +
+    Math.cos(lat1 * toRad) * Math.cos(lat2 * toRad) * Math.sin(dLon / 2) ** 2;
+  return 2 * R * Math.asin(Math.sqrt(a));
+}
+
+export function nearestAirports(lat: number, lon: number, n = 8): (Airport & { km: number })[] {
+  return airports
+    .map(a => ({ ...a, km: Math.round(haversine(lat, lon, a.lat, a.lon)) }))
+    .sort((x, y) => x.km - y.km)
+    .slice(0, n);
+}
+
+// ── Countries (for /airports/[country] SEO pages + homepage block) ──────────
+const slugify = (s: string) =>
+  fold(s.toLowerCase()).replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
+
+export interface CountryInfo { country: string; iso2: string; slug: string; count: number }
+let COUNTRIES: CountryInfo[] | null = null;
+export function getCountries(): CountryInfo[] {
+  if (!COUNTRIES) {
+    const m = new Map<string, CountryInfo>();
+    for (const a of airports) {
+      if (!a.country) continue;
+      const e = m.get(a.country) || { country: a.country, iso2: a.iso2, slug: slugify(a.country), count: 0 };
+      e.count++;
+      m.set(a.country, e);
+    }
+    COUNTRIES = [...m.values()].sort((x, y) => y.count - x.count);
+  }
+  return COUNTRIES;
+}
+export function getCountryBySlug(slug: string): CountryInfo | undefined {
+  return getCountries().find(c => c.slug === slug);
+}
+export function getAirportsByCountry(slug: string): Airport[] {
+  const c = getCountryBySlug(slug);
+  if (!c) return [];
+  return airports
+    .filter(a => a.country === c.country)
+    .sort((a, b) => (HUB_WEIGHT.get(b.iata) ?? 0) - (HUB_WEIGHT.get(a.iata) ?? 0) || a.city.localeCompare(b.city));
+}
+
+// ── A-Z index ───────────────────────────────────────────────────────────────
+export function getAirportsByLetter(letter: string): Airport[] {
+  const L = fold(letter.toLowerCase());
+  return airports
+    .filter(a => fold((a.name || '').toLowerCase()).startsWith(L))
+    .sort((a, b) => a.name.localeCompare(b.name));
+}
