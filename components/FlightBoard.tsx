@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useState, useCallback } from 'react';
+import { useEffect, useState, useCallback, useRef } from 'react';
 import { useTranslations } from 'next-intl';
 import type { Airport } from '@/lib/airports';
 
@@ -184,7 +184,25 @@ function BottomSheet({ flight, mode, onClose, tz, locale }: {
 
   const L = { fontSize: 12, color: C.secondary, textTransform: 'uppercase' as const, letterSpacing: '0.12em' };
   const [detailsOpen, setDetailsOpen] = useState(false);
-  useEffect(() => { if (!vis) setDetailsOpen(false); }, [vis]);
+  const [dragY, setDragY] = useState(0);
+  const dragStart = useRef<number | null>(null);
+  const sheetRef = useRef<HTMLDivElement>(null);
+  useEffect(() => { if (!vis) { setDetailsOpen(false); setDragY(0); dragStart.current = null; } }, [vis]);
+
+  const onTouchStart = (e: React.TouchEvent) => {
+    if ((sheetRef.current?.scrollTop ?? 0) <= 0) dragStart.current = e.touches[0].clientY;
+  };
+  const onTouchMove = (e: React.TouchEvent) => {
+    if (dragStart.current == null) return;
+    const d = e.touches[0].clientY - dragStart.current;
+    setDragY(d > 0 ? d : 0);
+  };
+  const onTouchEnd = () => {
+    if (dragStart.current == null) return;
+    if (dragY > 110) onClose();
+    setDragY(0);
+    dragStart.current = null;
+  };
 
   let body = null;
   if (flight) {
@@ -343,18 +361,24 @@ function BottomSheet({ flight, mode, onClose, tz, locale }: {
         background: 'rgba(0,0,0,0.55)', backdropFilter: 'blur(16px)', WebkitBackdropFilter: 'blur(16px)',
         opacity: vis ? 1 : 0, pointerEvents: vis ? 'auto' : 'none', transition: 'opacity 0.28s ease',
       }} />
-      <div style={{
-        position: 'fixed', bottom: 0, left: 0, right: 0, zIndex: 201,
-        background: '#111111', borderTop: '1px solid rgba(255,255,255,0.08)', borderRadius: '32px 32px 0 0',
-        transform: vis ? 'translateY(0)' : 'translateY(100%)',
-        transition: 'transform 0.34s cubic-bezier(0.32, 0.72, 0, 1)',
-        paddingBottom: 'calc(40px + env(safe-area-inset-bottom))',
-        maxHeight: '90vh', overflowY: 'auto',
-        maxWidth: 640, margin: '0 auto',
-      }}>
-        <div style={{ display: 'flex', justifyContent: 'center', padding: '10px 0 4px' }}>
-          <div style={{ width: 48, height: 5, borderRadius: 3, background: 'rgba(255,255,255,0.18)' }} />
-        </div>
+      <div
+        ref={sheetRef}
+        onTouchStart={onTouchStart}
+        onTouchMove={onTouchMove}
+        onTouchEnd={onTouchEnd}
+        style={{
+          position: 'fixed', bottom: 0, left: 0, right: 0, zIndex: 201,
+          background: '#111111', borderTop: '1px solid rgba(255,255,255,0.08)', borderRadius: '32px 32px 0 0',
+          transform: vis ? `translateY(${dragY}px)` : 'translateY(100%)',
+          transition: dragStart.current != null ? 'none' : 'transform 0.34s cubic-bezier(0.32, 0.72, 0, 1)',
+          paddingBottom: 'calc(40px + env(safe-area-inset-bottom))',
+          maxHeight: '90vh', overflowY: 'auto',
+          maxWidth: 640, margin: '0 auto',
+        }}>
+        {/* Handle (tap to close) */}
+        <button onClick={onClose} aria-label="Close" style={{ display: 'block', width: '100%', padding: '12px 0 6px', background: 'none', border: 'none', cursor: 'pointer' }}>
+          <div style={{ width: 48, height: 5, borderRadius: 3, background: 'rgba(255,255,255,0.22)', margin: '0 auto' }} />
+        </button>
         {body}
       </div>
     </>
@@ -680,23 +704,23 @@ export function FlightBoard({ airport, locale, defaultMode = 'departures' }: {
                 {/* Center: destination */}
                 <div style={{ flex: 1, minWidth: 0 }}>
                   <div style={{ whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis', lineHeight: 1.1 }}>
-                    <span style={{ fontSize: 'clamp(20px, 5.5vw, 26px)', fontWeight: 700, color: C.text, letterSpacing: '-0.01em' }}>{city}</span>
-                    {code && <span style={{ fontSize: 'clamp(14px, 4vw, 18px)', fontWeight: 500, color: C.secondary, marginLeft: 7 }}>({code})</span>}
+                    <span style={{ fontSize: 'clamp(18px, 5vw, 26px)', fontWeight: 700, color: C.text, letterSpacing: '-0.01em' }}>{city}</span>
+                    {code && <span style={{ fontSize: 'clamp(13px, 3.6vw, 18px)', fontWeight: 500, color: C.secondary, marginLeft: 6 }}>({code})</span>}
                   </div>
                 </div>
 
                 {/* Right: gate + status + chevron */}
-                <div style={{ flexShrink: 0, textAlign: 'right', display: 'flex', alignItems: 'center', gap: 10 }}>
-                  <div>
+                <div style={{ flexShrink: 0, textAlign: 'right', display: 'flex', alignItems: 'center', gap: 8 }}>
+                  <div style={{ maxWidth: 108 }}>
                     {f.gate && (
                       <div style={{ lineHeight: 1.1, whiteSpace: 'nowrap' }}>
-                        <span style={{ fontSize: 13, color: C.secondary }}>{t('gate')} </span>
-                        <span style={{ fontSize: 20, fontWeight: 700, color: C.text, letterSpacing: '-0.01em' }}>{f.gate}</span>
+                        <span style={{ fontSize: 12, color: C.secondary }}>{t('gate')} </span>
+                        <span style={{ fontSize: 19, fontWeight: 700, color: C.text, letterSpacing: '-0.01em' }}>{f.gate}</span>
                       </div>
                     )}
                     <div style={{
-                      fontSize: 13, fontWeight: 700, color, letterSpacing: '0.12em', textTransform: 'uppercase',
-                      marginTop: f.gate ? 6 : 0, lineHeight: 1, whiteSpace: 'nowrap',
+                      fontSize: 12, fontWeight: 700, color, letterSpacing: '0.1em', textTransform: 'uppercase',
+                      marginTop: f.gate ? 5 : 0, lineHeight: 1.2,
                       textShadow: f.status === 'finalcall' ? '0 0 10px rgba(255,69,58,0.15)' : 'none',
                     }}>
                       {label}
