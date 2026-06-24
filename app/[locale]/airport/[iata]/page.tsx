@@ -46,11 +46,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     title,
     description,
     alternates: { canonical, languages },
-    openGraph: {
-      title, description, type: 'website', url: canonical,
-      siteName: 'AirportsBoard.live',
-    },
-    twitter: { card: 'summary_large_image', title, description },
+    // openGraph/twitter (incl. the default OG image) are inherited from the locale layout;
+    // Next auto-fills og/twitter title+description from the title/description above. Defining
+    // a custom openGraph here would suppress the inherited file-based og:image.
     robots: { index: true, follow: true },
   };
 }

@@ -40,8 +40,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     title,
     description,
     alternates: { canonical, languages },
-    openGraph: { title, description, type: 'website', url: canonical, siteName: 'AirportsBoard.live' },
-    twitter: { card: 'summary_large_image', title, description },
+    // og/twitter (incl. default OG image) inherited from layout; custom openGraph would drop it.
     robots: { index: true, follow: true },
   };
 }
