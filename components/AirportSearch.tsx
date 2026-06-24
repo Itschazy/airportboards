@@ -51,7 +51,7 @@ export function AirportSearch({ locale, placeholder, nearestLabel = 'Nearest air
 
   // Load popular airports on mount
   useEffect(() => {
-    fetch('/api/airports/search?q=')
+    fetch(`/api/airports/search?q=&locale=${locale}`)
       .then(r => r.json())
       .then(d => { if (!query) setResults(d.airports || []); })
       .catch(() => {});
@@ -63,7 +63,7 @@ export function AirportSearch({ locale, placeholder, nearestLabel = 'Nearest air
     if (!('geolocation' in navigator)) return;
     const cached = (() => { try { return JSON.parse(localStorage.getItem('ab_geo') || 'null'); } catch { return null; } })();
     const load = (lat: number, lon: number) => {
-      fetch(`/api/airports/nearest?lat=${lat}&lon=${lon}`)
+      fetch(`/api/airports/nearest?lat=${lat}&lon=${lon}&locale=${locale}`)
         .then(r => r.json()).then(d => setNearest((d.airports || []).slice(0, 6))).catch(() => {});
     };
     if (cached) { load(cached.lat, cached.lon); return; }
@@ -81,14 +81,14 @@ export function AirportSearch({ locale, placeholder, nearestLabel = 'Nearest air
   useEffect(() => {
     if (!focused) return;
     if (!query.trim()) {
-      fetch('/api/airports/search?q=')
+      fetch(`/api/airports/search?q=&locale=${locale}`)
         .then(r => r.json())
         .then(d => setResults(d.airports || []))
         .catch(() => {});
       return;
     }
     const t = setTimeout(async () => {
-      const res = await fetch(`/api/airports/search?q=${encodeURIComponent(query)}`);
+      const res = await fetch(`/api/airports/search?q=${encodeURIComponent(query)}&locale=${locale}`);
       const data = await res.json();
       setResults(data.airports || []);
       setActive(-1);
