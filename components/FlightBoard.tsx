@@ -291,7 +291,7 @@ function BottomSheet({ flight, mode, onClose, tz, locale }: {
             <div key={i} style={{ background: 'rgba(255,255,255,0.04)', border: '1px solid rgba(255,255,255,0.08)', borderRadius: 14, padding: '14px 16px', minHeight: 104, display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
               <div style={L}>{b.label}</div>
               <div>
-                <div style={{ fontSize: b.value.length > 5 ? 22 : 30, fontWeight: 700, color: b.valueColor || C.text, lineHeight: 1.05, letterSpacing: '-0.02em', fontVariantNumeric: 'tabular-nums', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>{b.value}</div>
+                <div style={{ fontSize: b.value.length >= 5 ? 'clamp(19px, 5.3vw, 27px)' : b.value.length >= 4 ? 'clamp(20px, 6vw, 28px)' : 30, fontWeight: 700, color: b.valueColor || C.text, lineHeight: 1.05, letterSpacing: '-0.03em', fontVariantNumeric: 'tabular-nums', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'clip' }}>{b.value}</div>
                 {b.strike && <div style={{ fontSize: 12, color: C.secondary, textDecoration: 'line-through', marginTop: 2 }}>{b.strike}</div>}
                 {b.sub && <div style={{ fontSize: 12, color: '#6A6A6A', marginTop: 4 }}>{b.sub}</div>}
               </div>
