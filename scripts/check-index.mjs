@@ -10,13 +10,15 @@
 // page type, including invalid/edge cases. Exits 1 if any assertion fails.
 
 import { lookup } from 'node:dns';
-import { Agent, setGlobalDispatcher } from 'undici';
 
 const BASE = (process.env.BASE || 'https://airportsboard.live').replace(/\/$/, '');
 const HOST = new URL(BASE).hostname;
 const RESOLVE_IP = process.env.RESOLVE_IP || ''; // e.g. 95.81.103.82 when DNS doesn't resolve
 
+// undici is only needed for the optional DNS-pinning workaround; import it lazily so
+// the audit runs on plain DNS (the normal case now) without undici installed.
 if (RESOLVE_IP) {
+  const { Agent, setGlobalDispatcher } = await import('undici');
   setGlobalDispatcher(new Agent({
     connect: {
       lookup: (hostname, _opts, cb) =>
