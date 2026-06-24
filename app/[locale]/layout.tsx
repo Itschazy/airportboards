@@ -8,14 +8,27 @@ import { SiteFooter } from '@/components/SiteFooter';
 import { YandexMetrica } from '@/components/YandexMetrica';
 import '../globals.css';
 
-export const metadata: Metadata = {
-  metadataBase: new URL('https://airportsboard.live'),
-  verification: { yandex: 'ea6daa0845815656' },
-  // Site-wide social defaults — every page inherits these (og:image/twitter:image come
-  // automatically from app/opengraph-image.tsx); child pages add their own title/desc.
-  openGraph: { type: 'website', siteName: 'AirportsBoard.live' },
-  twitter: { card: 'summary_large_image' },
+const OG_LOCALE: Record<string, string> = {
+  en: 'en_US', ru: 'ru_RU', zh: 'zh_CN', ar: 'ar_AR', de: 'de_DE', ko: 'ko_KR',
+  ja: 'ja_JP', fr: 'fr_FR', es: 'es_ES', it: 'it_IT', hi: 'hi_IN', tr: 'tr_TR',
 };
+
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+  const { locale } = await params;
+  return {
+    metadataBase: new URL('https://airportsboard.live'),
+    verification: { yandex: 'ea6daa0845815656' },
+    // Site-wide social defaults — every page inherits these (og:image/twitter:image come
+    // automatically from app/opengraph-image.tsx); child pages add their own title/desc.
+    openGraph: {
+      type: 'website',
+      siteName: 'AirportsBoard.live',
+      locale: OG_LOCALE[locale] || 'en_US',
+      alternateLocale: locales.filter(l => l !== locale).map(l => OG_LOCALE[l]),
+    },
+    twitter: { card: 'summary_large_image' },
+  };
+}
 
 export function generateStaticParams() {
   return locales.map(locale => ({ locale }));

@@ -74,7 +74,7 @@ export default async function HomePage({ params }: Props) {
     },
     {
       '@context': 'https://schema.org', '@type': 'Organization',
-      name: 'AirportsBoard', url: BASE,
+      name: 'AirportsBoard', url: BASE, logo: `${BASE}/apple-icon`,
     },
   ];
 

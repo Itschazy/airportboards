@@ -130,7 +130,10 @@ export async function fetchRaw(query: string, direction: 'departures' | 'arrival
   if (hit && Date.now() - hit.ts < CACHE_SECONDS * 1000) return hit.data;
   rawCache.delete(cacheKey);
   const url = `https://airlabs.co/api/v9/schedules?${query}&api_key=${AIRLABS_KEY}`;
-  const res = await fetch(url, { cache: 'no-store' });
+  // Cap the cold-render airlabs call so a slow/hung upstream can't stall SSR (and a
+  // crawler) indefinitely. Observed p100 cold latency is ~2.9s; 5s leaves margin and
+  // only fires on genuine hangs — callers try/catch and fall back to an empty board.
+  const res = await fetch(url, { cache: 'no-store', signal: AbortSignal.timeout(5000) });
   if (!res.ok) throw new Error(`airlabs ${res.status}`);
   const json = await res.json();
   if (json.error) throw new Error(json.error.message || 'airlabs error');
