@@ -1,9 +1,12 @@
 import type { MetadataRoute } from 'next';
-import { getAllIataCodes, AIRPORTS_PER_SITEMAP, getSitemapCount, getCountries } from '@/lib/airports';
+import { getAllIataCodes, AIRPORTS_PER_SITEMAP, getSitemapCount, getCountries, getStaticIataCodes } from '@/lib/airports';
 import { locales } from '@/lib/i18n';
 
 const BASE = 'https://airportsboard.live';
 const LETTERS = 'abcdefghijklmnopqrstuvwxyz'.split('');
+// Major hubs get higher sitemap priority than obscure airfields — priority is
+// relative, so flagging everything 1.0 tells crawlers nothing.
+const HUBS = new Set(getStaticIataCodes());
 
 export async function generateSitemaps() {
   return Array.from({ length: getSitemapCount() }, (_, id) => ({ id }));
@@ -29,10 +32,12 @@ export default function sitemap({ id }: { id: number }): MetadataRoute.Sitemap {
   }
 
   for (const iata of slice) {
+    const hub = HUBS.has(iata);
+    const cf = hub ? 'hourly' as const : 'daily' as const;
     for (const locale of locales) {
-      entries.push({ url: `${BASE}/${locale}/airport/${iata}`, changeFrequency: 'hourly', priority: 1.0 });
-      entries.push({ url: `${BASE}/${locale}/airport/${iata}/arrivals`, changeFrequency: 'hourly', priority: 0.9 });
-      entries.push({ url: `${BASE}/${locale}/airport/${iata}/departures`, changeFrequency: 'hourly', priority: 0.9 });
+      entries.push({ url: `${BASE}/${locale}/airport/${iata}`, changeFrequency: cf, priority: hub ? 1.0 : 0.6 });
+      entries.push({ url: `${BASE}/${locale}/airport/${iata}/arrivals`, changeFrequency: cf, priority: hub ? 0.9 : 0.5 });
+      entries.push({ url: `${BASE}/${locale}/airport/${iata}/departures`, changeFrequency: cf, priority: hub ? 0.9 : 0.5 });
     }
   }
 

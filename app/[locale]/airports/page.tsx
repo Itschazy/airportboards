@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { getTranslations } from 'next-intl/server';
+import { getTranslations , setRequestLocale } from 'next-intl/server';
 import Link from 'next/link';
 import { getCountries } from '@/lib/airports';
 import { getCountryName } from '@/lib/places';
@@ -17,6 +17,7 @@ export const revalidate = 86400;
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
+  setRequestLocale(locale);
   const t = await getTranslations({ locale, namespace: 'home' });
   const title = t('sec_countries');
   const languages: Record<string, string> = {};
@@ -32,6 +33,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
 export default async function AirportsIndexPage({ params }: Props) {
   const { locale } = await params;
+  setRequestLocale(locale);
   const t = await getTranslations({ locale, namespace: 'home' });
   const tNav = await getTranslations({ locale, namespace: 'nav' });
   // Sort by airport count (busiest countries first).

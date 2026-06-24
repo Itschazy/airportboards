@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { getTranslations } from 'next-intl/server';
+import { getTranslations , setRequestLocale } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import { getAirportsByLetter } from '@/lib/airports';
@@ -17,6 +17,7 @@ export function generateStaticParams() {
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale, letter } = await params;
+  setRequestLocale(locale);
   const L = letter.toUpperCase();
   if (!LETTERS.includes(letter.toLowerCase())) return {};
   const t = await getTranslations({ locale, namespace: 'home' });
@@ -31,6 +32,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
 export default async function LetterPage({ params }: Props) {
   const { locale, letter } = await params;
+  setRequestLocale(locale);
   if (!LETTERS.includes(letter.toLowerCase())) notFound();
   const L = letter.toUpperCase();
   const t = await getTranslations({ locale, namespace: 'home' });

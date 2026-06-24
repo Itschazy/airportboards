@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { getTranslations } from 'next-intl/server';
+import { getTranslations , setRequestLocale } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 import { getAirport, getStaticIataCodes } from '@/lib/airports';
 import { getAirportName } from '@/lib/airport-names';
@@ -20,6 +20,7 @@ export async function generateStaticParams() {
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale, iata } = await params;
+  setRequestLocale(locale);
   const airport = getAirport(iata.toUpperCase());
   if (!airport) return {};
   const t = await getTranslations({ locale, namespace: 'meta' });
@@ -51,6 +52,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
 export default async function DeparturesPage({ params }: Props) {
   const { locale, iata } = await params;
+  setRequestLocale(locale);
   const airport = getAirport(iata.toUpperCase());
   if (!airport) notFound();
 

@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import { Geist, Geist_Mono } from 'next/font/google';
 import { NextIntlClientProvider } from 'next-intl';
-import { getMessages } from 'next-intl/server';
+import { getMessages, setRequestLocale } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 import { locales, rtlLocales, type Locale } from '@/lib/i18n';
 import { SiteHeader } from '@/components/SiteHeader';
@@ -28,6 +28,7 @@ export default async function LocaleLayout({
 }) {
   const { locale } = await params;
   if (!locales.includes(locale as any)) notFound();
+  setRequestLocale(locale);
   const messages = await getMessages({ locale });
   const dir = rtlLocales.includes(locale as Locale) ? 'rtl' : 'ltr';
   return (

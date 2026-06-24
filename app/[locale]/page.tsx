@@ -1,4 +1,4 @@
-import { getTranslations } from 'next-intl/server';
+import { getTranslations , setRequestLocale } from 'next-intl/server';
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import {
@@ -22,6 +22,7 @@ const flag = (iso2: string) =>
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
+  setRequestLocale(locale);
   const t = await getTranslations({ locale, namespace: 'home' });
   const languages: Record<string, string> = {};
   for (const loc of locales) languages[loc] = `${BASE}/${loc}`;
@@ -43,6 +44,7 @@ function Title({ children }: { children: React.ReactNode }) {
 
 export default async function HomePage({ params }: Props) {
   const { locale } = await params;
+  setRequestLocale(locale);
   const t = await getTranslations({ locale, namespace: 'home' });
   const tNav = await getTranslations({ locale, namespace: 'nav' });
   const tUi = await getTranslations({ locale, namespace: 'ui' });
