@@ -12,6 +12,29 @@ const nextConfig: NextConfig = {
   // generateMetadata on the high-traffic airport pages only does fs reads, so blocking
   // it is essentially free. `/./` matches any non-empty UA → metadata always in <head>.
   htmlLimitedBots: /./,
+  // www is a full duplicate of the site (nginx serves the app on both hosts). Send a
+  // single permanent redirect www.* → apex so crawlers don't split signals / waste budget.
+  async redirects() {
+    return [
+      {
+        source: '/:path*',
+        has: [{ type: 'host', value: 'www.airportsboard.live' }],
+        destination: 'https://airportsboard.live/:path*',
+        permanent: true,
+      },
+    ];
+  },
+  // HSTS — pin HTTPS for a year (http→https already 301s at nginx).
+  async headers() {
+    return [
+      {
+        source: '/:path*',
+        headers: [
+          { key: 'Strict-Transport-Security', value: 'max-age=31536000; includeSubDomains' },
+        ],
+      },
+    ];
+  },
   // The small prod VDS runs low on disk during build (webpack PackFileCache churn +
   // SSR-embedded flight data → "ENOENT pages-manifest.json"). Disable the webpack
   // filesystem cache: useless here anyway (deploy does `rm -rf node_modules` each

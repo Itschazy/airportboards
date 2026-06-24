@@ -1,10 +1,11 @@
 import { getTranslations } from 'next-intl/server';
 import Link from 'next/link';
 import type { Airport } from '@/lib/airports';
-import { nearestAirports, getCountries, getAirportsByCountry } from '@/lib/airports';
+import { nearestAirports, getCountries, getAirportsByCountry, getCities } from '@/lib/airports';
 import { getCityName, getCountryName } from '@/lib/places';
 import { getAirportName } from '@/lib/airport-names';
-import { MoreInfo, OverviewMetrics, PopularRoutes, AboutCard, Faq } from '@/components/AirportExtras';
+import type { FlightRow } from '@/lib/flights';
+import { MoreInfo, OverviewMetrics, AboutCard, Faq } from '@/components/AirportExtras';
 
 const LETTERS = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('');
 const SUB = '#8A8A8A';
@@ -21,7 +22,7 @@ function Chevron() {
   return <svg width="6" height="11" viewBox="0 0 6 11" fill="none" style={{ flexShrink: 0 }}><path d="M1 1L5 5.5L1 10" stroke="#3A3A3C" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" /></svg>;
 }
 
-export async function AirportBottom({ airport, locale, about, displayName }: { airport: Airport; locale: string; about: string | null; displayName?: string }) {
+export async function AirportBottom({ airport, locale, about, displayName, flights = [] }: { airport: Airport; locale: string; about: string | null; displayName?: string; flights?: FlightRow[] }) {
   const t = await getTranslations({ locale, namespace: 'home' });
   const name = displayName || airport.name;
   const city = getCityName(airport.city, locale);
@@ -33,6 +34,28 @@ export async function AirportBottom({ airport, locale, about, displayName }: { a
     ? getAirportsByCountry(countryInfo.slug).filter(a => a.iata !== airport.iata).slice(0, 8)
     : [];
   const offset = gmtOffset(airport.tz);
+
+  // Multi-airport city → link UP to its (indexed) city page.
+  const cityInfo = getCities().find(c => c.city === airport.city && c.country === airport.country);
+  const cityLink = cityInfo && cityInfo.count > 1 ? `/${locale}/city/${cityInfo.slug}` : null;
+
+  // Derive popular routes + airlines from today's SSR departures board, so these links
+  // ship as real <a href> in the server HTML (the client version left /route and /airline
+  // pages orphaned/undiscoverable). Aggregated by destination airport / operating carrier.
+  const routeMap = new Map<string, { label: string; n: number }>();
+  const airlineMap = new Map<string, { name: string; n: number }>();
+  for (const f of flights) {
+    if (f.arrIata && f.arrIata !== airport.iata) {
+      const e = routeMap.get(f.arrIata) || { label: ('destination' in f && f.destination) || f.arrIata, n: 0 };
+      e.n++; routeMap.set(f.arrIata, e);
+    }
+    if (f.airlineIata) {
+      const e = airlineMap.get(f.airlineIata) || { name: f.airline || f.airlineIata, n: 0 };
+      e.n++; airlineMap.set(f.airlineIata, e);
+    }
+  }
+  const routes = [...routeMap.entries()].map(([iata, v]) => ({ iata, ...v })).sort((a, b) => b.n - a.n).slice(0, 8);
+  const airlines = [...airlineMap.entries()].map(([iata, v]) => ({ iata, ...v })).sort((a, b) => b.n - a.n).slice(0, 10);
 
   const faq: { q: string; a: string }[] = [
     { q: t('faq_iata_q', { name }), a: airport.iata },
@@ -72,11 +95,36 @@ export async function AirportBottom({ airport, locale, about, displayName }: { a
             <OverviewMetrics iata={airport.iata} depLabel={t('ov_dep')} arrLabel={t('ov_arr')} />
           </section>
 
-          {/* 3. POPULAR ROUTES */}
-          <section style={sec}>
-            <H2 href={`/${locale}/airport/${airport.iata}/departures`} viewAll={t('view_all')}>{t('routes_title', { iata: airport.iata })}</H2>
-            <PopularRoutes iata={airport.iata} locale={locale} perDay={t('per_day', { n: '{n}' })} />
-          </section>
+          {/* 3. POPULAR ROUTES (server-rendered → crawlable /route links) */}
+          {routes.length > 0 && (
+            <section style={sec}>
+              <H2 href={`/${locale}/airport/${airport.iata}/departures`} viewAll={t('view_all')}>{t('routes_title', { iata: airport.iata })}</H2>
+              <div style={{ display: 'flex', gap: 12, overflowX: 'auto', paddingBottom: 4, scrollbarWidth: 'none' }}>
+                {routes.map(r => (
+                  <Link key={r.iata} href={`/${locale}/route/${airport.iata}-${r.iata}`} style={{ flexShrink: 0, width: 160, textDecoration: 'none', color: 'inherit', background: '#0B0B0B', border: '1px solid #1A1A1A', borderRadius: 16, padding: '14px 16px' }}>
+                    <div style={{ fontSize: 22, fontWeight: 700, color: '#FFFFFF', letterSpacing: '-0.02em' }}>{r.iata}</div>
+                    <div style={{ fontSize: 13, color: SUB, marginTop: 3, whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>{r.label.replace(/\s*\([A-Z]{3}\)\s*$/, '')}</div>
+                    <div style={{ fontSize: 12, color: '#34C759', marginTop: 10, fontWeight: 600 }}>{t('per_day', { n: r.n })}</div>
+                  </Link>
+                ))}
+              </div>
+            </section>
+          )}
+
+          {/* 3b. AIRLINES AT THIS AIRPORT (server-rendered → crawlable /airline links) */}
+          {airlines.length > 0 && (
+            <section style={sec}>
+              <H2>{t('airlines_title')}</H2>
+              <div style={{ display: 'flex', flexWrap: 'wrap', gap: 8 }}>
+                {airlines.map(al => (
+                  <Link key={al.iata} href={`/${locale}/airline/${al.iata}`} style={{ textDecoration: 'none', color: '#E4E4E7', background: '#0B0B0B', border: '1px solid #1A1A1A', borderRadius: 12, padding: '9px 14px', fontSize: 14, display: 'flex', alignItems: 'center', gap: 8 }}>
+                    <span style={{ fontSize: 12, fontWeight: 700, color: '#0A84FF' }}>{al.iata}</span>
+                    <span style={{ whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis', maxWidth: 180 }}>{al.name}</span>
+                  </Link>
+                ))}
+              </div>
+            </section>
+          )}
 
           {/* 4. NEARBY AIRPORTS */}
           {nearby.length > 0 && (
@@ -142,7 +190,7 @@ export async function AirportBottom({ airport, locale, about, displayName }: { a
             <p style={{ fontSize: 13, color: SUB, lineHeight: 1.5, marginTop: 8, maxWidth: 340 }}>{t('footer_tagline')}</p>
             <div style={{ display: 'flex', flexWrap: 'wrap', gap: '10px 18px', marginTop: 16, fontSize: 13 }}>
               {countryInfo && <Link href={`/${locale}/airports/${countryInfo.slug}`} style={{ color: SUB, textDecoration: 'none' }}>{t('footer_countries')}</Link>}
-              <Link href={`/${locale}`} style={{ color: SUB, textDecoration: 'none' }}>{t('footer_cities')}</Link>
+              {cityLink && <Link href={cityLink} style={{ color: SUB, textDecoration: 'none' }}>{city}</Link>}
               <Link href={`/${locale}/az/a`} style={{ color: SUB, textDecoration: 'none' }}>{t('az_all')}</Link>
             </div>
             <div style={{ fontSize: 12, color: '#3A3A3C', marginTop: 18 }}>© 2026 airportsboard.live</div>

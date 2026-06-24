@@ -106,7 +106,8 @@
     "airline_title": "Flights {airline}",
     "airline_desc": "{airline} ({iata}) flights: live status, departures and arrivals, schedule, delays, real-time tracking.",
     "airline_live": "Live flights",
-    "airline_none": "No active flights for {airline} right now."
+    "airline_none": "No active flights for {airline} right now.",
+    "airlines_title": "Airlines"
   },
   "ui": {
     "departures": "Departures",

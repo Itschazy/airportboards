@@ -106,7 +106,8 @@
     "airline_title": "रू—रूटें {airline}",
     "airline_desc": "{airline} ({iata}) flights: लाइव स्थिति, प्रस्थान और आगमन, समय-सारिणी, देरी, रियल-टाइम ट्रैकिंग.",
     "airline_live": "लाइव उड़ानें",
-    "airline_none": "अभी {airline} के लिए कोई सक्रिय उड़ान नहीं है."
+    "airline_none": "अभी {airline} के लिए कोई सक्रिय उड़ान नहीं है.",
+    "airlines_title": "एयरलाइंस"
   },
   "ui": {
     "departures": "प्रस्थान",

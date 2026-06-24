@@ -50,7 +50,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       title, description, type: 'website', url: canonical,
       siteName: 'AirportsBoard.live',
     },
-    twitter: { card: 'summary', title, description },
+    twitter: { card: 'summary_large_image', title, description },
     robots: { index: true, follow: true },
   };
 }
@@ -127,7 +127,7 @@ export default async function AirportPage({ params }: Props) {
         {h1}
       </h1>
       <FlightBoard airport={airport} locale={locale} displayName={name} initialFlights={initialFlights} />
-      <AirportBottom airport={airport} locale={locale} about={about} displayName={name} />
+      <AirportBottom airport={airport} locale={locale} about={about} displayName={name} flights={initialFlights} />
     </>
   );
 }

@@ -3,6 +3,8 @@ import { getTranslations , setRequestLocale } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import { getAirportsByLetter } from '@/lib/airports';
+import { getAirportName } from '@/lib/airport-names';
+import { getCityName, getCountryName } from '@/lib/places';
 import { locales } from '@/lib/i18n';
 
 const BASE = 'https://airportsboard.live';
@@ -28,6 +30,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     title: `${t('az_title', { letter: L })} — AirportsBoard`,
     description: t('az_desc', { letter: L }),
     alternates: { canonical: `${BASE}/${locale}/az/${letter.toLowerCase()}`, languages },
+    robots: { index: true, follow: true },
   };
 }
 
@@ -37,10 +40,21 @@ export default async function LetterPage({ params }: Props) {
   if (!LETTERS.includes(letter.toLowerCase())) notFound();
   const L = letter.toUpperCase();
   const t = await getTranslations({ locale, namespace: 'home' });
+  const tNav = await getTranslations({ locale, namespace: 'nav' });
   const airports = getAirportsByLetter(letter);
+
+  const breadcrumb = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: tNav('home'), item: `${BASE}/${locale}` },
+      { '@type': 'ListItem', position: 2, name: t('az_title', { letter: L }), item: `${BASE}/${locale}/az/${letter.toLowerCase()}` },
+    ],
+  };
 
   return (
     <main style={{ maxWidth: 720, margin: '0 auto', padding: '36px 18px 64px' }}>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
       <div style={{ fontSize: 13, color: '#5A5A5A', marginBottom: 8 }}>
         <Link href={`/${locale}`} style={{ color: '#6A6A6A', textDecoration: 'none' }}>airportsboard</Link>
       </div>
@@ -72,8 +86,8 @@ export default async function LetterPage({ params }: Props) {
           }}>
             <span style={{ width: 50, flexShrink: 0, fontSize: 18, fontWeight: 700, color: '#0A84FF', letterSpacing: '-0.02em' }}>{a.iata}</span>
             <span style={{ flex: 1, minWidth: 0 }}>
-              <span style={{ fontSize: 15, color: '#E4E4E7', display: 'block', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>{a.name}</span>
-              <span style={{ fontSize: 12, color: '#5A5A5A', display: 'block' }}>{a.city}, {a.country}</span>
+              <span style={{ fontSize: 15, color: '#E4E4E7', display: 'block', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>{getAirportName(a.iata, locale, a.name)}</span>
+              <span style={{ fontSize: 12, color: '#5A5A5A', display: 'block' }}>{getCityName(a.city, locale)}, {getCountryName(a.country, locale)}</span>
             </span>
           </Link>
         ))}

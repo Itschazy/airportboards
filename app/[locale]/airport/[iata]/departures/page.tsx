@@ -41,7 +41,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     description,
     alternates: { canonical, languages },
     openGraph: { title, description, type: 'website', url: canonical, siteName: 'AirportsBoard.live' },
-    twitter: { card: 'summary', title, description },
+    twitter: { card: 'summary_large_image', title, description },
     robots: { index: true, follow: true },
   };
 }

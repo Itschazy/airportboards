@@ -106,7 +106,8 @@
     "airline_title": "Vols {airline}",
     "airline_desc": "{airline} ({iata}) vols : statut en direct, départs et arrivées, horaires, retards, suivi en temps réel.",
     "airline_live": "Vols en direct",
-    "airline_none": "Aucun vol actif pour {airline} pour le moment."
+    "airline_none": "Aucun vol actif pour {airline} pour le moment.",
+    "airlines_title": "Compagnies aériennes"
   },
   "ui": {
     "departures": "Départs",

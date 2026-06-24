@@ -106,7 +106,8 @@
     "airline_title": "航班 {airline}",
     "airline_desc": "{airline} ({iata}) 航班：实时状态、出发与到达、时刻表、延误信息、实时跟踪。",
     "airline_live": "实时航班",
-    "airline_none": "暂时没有 {airline} 的在飞航班。"
+    "airline_none": "暂时没有 {airline} 的在飞航班。",
+    "airlines_title": "航空公司"
   },
   "ui": {
     "departures": "出发",

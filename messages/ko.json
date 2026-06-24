@@ -106,7 +106,8 @@
     "airline_title": "항공편 {airline}",
     "airline_desc": "{airline} ({iata}) 항공편: 실시간 상태, 출발 및 도착, 일정, 지연, 실시간 추적.",
     "airline_live": "실시간 항공편",
-    "airline_none": "현재 {airline}의 활성 항공편이 없습니다."
+    "airline_none": "현재 {airline}의 활성 항공편이 없습니다.",
+    "airlines_title": "항공사"
   },
   "ui": {
     "departures": "출발",

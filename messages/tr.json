@@ -106,7 +106,8 @@
     "airline_title": "Uçuşlar {airline}",
     "airline_desc": "{airline} ({iata}) uçuşları: canlı durum, kalkışlar ve varışlar, tarifeler, gecikmeler, gerçek zamanlı takip.",
     "airline_live": "Canlı uçuşlar",
-    "airline_none": "{airline} için şu anda aktif uçuş yok."
+    "airline_none": "{airline} için şu anda aktif uçuş yok.",
+    "airlines_title": "Havayolları"
   },
   "ui": {
     "departures": "Kalkışlar",

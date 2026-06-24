@@ -3,6 +3,8 @@ import { getTranslations , setRequestLocale } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import { getCountryBySlug, getAirportsByCountry, getCountries } from '@/lib/airports';
+import { getAirportName } from '@/lib/airport-names';
+import { getCityName, getCountryName } from '@/lib/places';
 import { locales } from '@/lib/i18n';
 
 const BASE = 'https://airportsboard.live';
@@ -27,14 +29,16 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const c = getCountryBySlug(country);
   if (!c) return {};
   const t = await getTranslations({ locale, namespace: 'home' });
-  const title = t('country_title', { country: c.country });
+  const countryName = getCountryName(c.country, locale);
+  const title = t('country_title', { country: countryName });
   const languages: Record<string, string> = {};
   for (const loc of locales) languages[loc] = `${BASE}/${loc}/airports/${c.slug}`;
   languages['x-default'] = `${BASE}/en/airports/${c.slug}`;
   return {
     title: `${title} — AirportsBoard`,
-    description: t('country_desc', { country: c.country, count: c.count }),
+    description: t('country_desc', { country: countryName, count: c.count }),
     alternates: { canonical: `${BASE}/${locale}/airports/${c.slug}`, languages },
+    robots: { index: true, follow: true },
   };
 }
 
@@ -45,14 +49,28 @@ export default async function CountryPage({ params }: Props) {
   if (!c) notFound();
   const t = await getTranslations({ locale, namespace: 'home' });
   const airports = getAirportsByCountry(country);
+  const countryName = getCountryName(c.country, locale);
+
+  const breadcrumb = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'airportsboard', item: `${BASE}/${locale}` },
+      { '@type': 'ListItem', position: 2, name: t('sec_countries'), item: `${BASE}/${locale}/airports` },
+      { '@type': 'ListItem', position: 3, name: countryName, item: `${BASE}/${locale}/airports/${c.slug}` },
+    ],
+  };
 
   return (
     <main style={{ maxWidth: 720, margin: '0 auto', padding: '36px 18px 64px' }}>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
       <div style={{ fontSize: 13, color: '#5A5A5A', marginBottom: 8 }}>
         <Link href={`/${locale}`} style={{ color: '#6A6A6A', textDecoration: 'none' }}>airportsboard</Link>
+        {' / '}
+        <Link href={`/${locale}/airports`} style={{ color: '#6A6A6A', textDecoration: 'none' }}>{t('sec_countries')}</Link>
       </div>
       <h1 style={{ fontSize: 'clamp(30px, 8vw, 42px)', fontWeight: 800, letterSpacing: '-0.03em', color: '#FFFFFF', lineHeight: 1.05, margin: 0 }}>
-        <span style={{ marginRight: 12 }}>{flag(c.iso2)}</span>{t('country_title', { country: c.country })}
+        <span style={{ marginRight: 12 }}>{flag(c.iso2)}</span>{t('country_title', { country: countryName })}
       </h1>
       <p style={{ fontSize: 15, color: '#8A8A8A', marginTop: 12 }}>{t('airports_count', { count: c.count })}</p>
 
@@ -64,8 +82,8 @@ export default async function CountryPage({ params }: Props) {
           }}>
             <span style={{ width: 50, flexShrink: 0, fontSize: 18, fontWeight: 700, color: '#0A84FF', letterSpacing: '-0.02em' }}>{a.iata}</span>
             <span style={{ flex: 1, minWidth: 0 }}>
-              <span style={{ fontSize: 15, color: '#E4E4E7', display: 'block', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>{a.city}</span>
-              <span style={{ fontSize: 12, color: '#5A5A5A', display: 'block', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>{a.name}</span>
+              <span style={{ fontSize: 15, color: '#E4E4E7', display: 'block', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>{getCityName(a.city, locale)}</span>
+              <span style={{ fontSize: 12, color: '#5A5A5A', display: 'block', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>{getAirportName(a.iata, locale, a.name)}</span>
             </span>
             <svg width="6" height="11" viewBox="0 0 6 11" fill="none" style={{ flexShrink: 0 }}>
               <path d="M1 1L5 5.5L1 10" stroke="#3A3A3C" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />

@@ -106,7 +106,8 @@
     "airline_title": "رحلات {airline}",
     "airline_desc": "{airline} ({iata}) رحلات: حالة مباشرة، مغادرات ووصولات، جدول، تأخيرات، تتبع في الوقت الحقيقي.",
     "airline_live": "الرحلات المباشرة",
-    "airline_none": "لا توجد رحلات نشطة لـ {airline} الآن."
+    "airline_none": "لا توجد رحلات نشطة لـ {airline} الآن.",
+    "airlines_title": "شركات الطيران"
   },
   "ui": {
     "departures": "المغادرات",

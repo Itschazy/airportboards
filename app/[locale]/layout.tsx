@@ -1,19 +1,20 @@
 import type { Metadata } from 'next';
-import { Geist, Geist_Mono } from 'next/font/google';
 import { NextIntlClientProvider } from 'next-intl';
 import { getMessages, setRequestLocale } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 import { locales, rtlLocales, type Locale } from '@/lib/i18n';
 import { SiteHeader } from '@/components/SiteHeader';
+import { SiteFooter } from '@/components/SiteFooter';
 import { YandexMetrica } from '@/components/YandexMetrica';
 import '../globals.css';
-
-const geistSans = Geist({ variable: '--font-geist-sans', subsets: ['latin'] });
-const geistMono = Geist_Mono({ variable: '--font-geist-mono', subsets: ['latin'] });
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://airportsboard.live'),
   verification: { yandex: 'ea6daa0845815656' },
+  // Site-wide social defaults — every page inherits these (og:image/twitter:image come
+  // automatically from app/opengraph-image.tsx); child pages add their own title/desc.
+  openGraph: { type: 'website', siteName: 'AirportsBoard.live' },
+  twitter: { card: 'summary_large_image' },
 };
 
 export function generateStaticParams() {
@@ -33,22 +34,13 @@ export default async function LocaleLayout({
   const messages = await getMessages({ locale });
   const dir = rtlLocales.includes(locale as Locale) ? 'rtl' : 'ltr';
   return (
-    <html lang={locale} dir={dir} className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}>
+    <html lang={locale} dir={dir} className="h-full antialiased">
       <body className="min-h-full flex flex-col">
         <YandexMetrica />
         <NextIntlClientProvider messages={messages}>
           <SiteHeader locale={locale as Locale} />
           {children}
-          <footer style={{
-            borderTop: '1px solid #1A1A1A',
-            padding: '1.25rem 1.5rem',
-            textAlign: 'center',
-            fontSize: '0.6875rem',
-            color: '#3A3A3C',
-            letterSpacing: '0.02em',
-          }}>
-            airportsboard.live · © 2026
-          </footer>
+          <SiteFooter locale={locale as Locale} />
         </NextIntlClientProvider>
       </body>
     </html>

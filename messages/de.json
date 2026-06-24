@@ -106,7 +106,8 @@
     "airline_title": "Flüge {airline}",
     "airline_desc": "{airline} ({iata}) Flüge: Live-Status, Abflüge und Ankünfte, Flugplan, Verspätungen, Echtzeit-Tracking.",
     "airline_live": "Live-Flüge",
-    "airline_none": "Keine aktiven Flüge für {airline} gerade."
+    "airline_none": "Keine aktiven Flüge für {airline} gerade.",
+    "airlines_title": "Fluggesellschaften"
   },
   "ui": {
     "departures": "Abflüge",

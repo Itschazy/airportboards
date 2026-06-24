@@ -106,7 +106,8 @@
     "airline_title": "フライト {airline}",
     "airline_desc": "{airline} ({iata}) のフライト：ライブ状況、出発・到着、時刻表、遅延、リアルタイム追跡。",
     "airline_live": "ライブフライト",
-    "airline_none": "現在 {airline} の運航中の便はありません。"
+    "airline_none": "現在 {airline} の運航中の便はありません。",
+    "airlines_title": "航空会社"
   },
   "ui": {
     "departures": "出発",

@@ -106,7 +106,8 @@
     "airline_title": "Voli {airline}",
     "airline_desc": "{airline} ({iata}) voli: stato in tempo reale, partenze e arrivi, orari, ritardi, tracciamento live.",
     "airline_live": "Voli in tempo reale",
-    "airline_none": "Nessun volo attivo per {airline} in questo momento."
+    "airline_none": "Nessun volo attivo per {airline} in questo momento.",
+    "airlines_title": "Compagnie aeree"
   },
   "ui": {
     "departures": "Partenze",
