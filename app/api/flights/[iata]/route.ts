@@ -19,6 +19,7 @@ type AirlabsFlight = {
   airline_iata: string;
   flight_iata: string;
   flight_number: string;
+  aircraft_icao?: string | null;
   // codeshare markers — present on marketing duplicates of an operating flight
   cs_flight_iata?: string | null;
   dep_iata: string;
@@ -90,6 +91,8 @@ function mapFlight(f: AirlabsFlight, direction: 'departures' | 'arrivals') {
   const gate     = direction === 'departures' ? f.dep_gate    : f.arr_gate;
   const terminal = direction === 'departures' ? f.dep_terminal : f.arr_terminal;
   const baggage  = direction === 'arrivals' ? f.arr_baggage : undefined;
+  const aircraft = f.aircraft_icao || undefined;
+  const delay    = (direction === 'departures' ? f.dep_delayed : f.arr_delayed) || undefined;
 
   return {
     flight: flightNum,
@@ -102,6 +105,8 @@ function mapFlight(f: AirlabsFlight, direction: 'departures' | 'arrivals') {
     ...(gate     ? { gate }     : {}),
     ...(terminal ? { terminal } : {}),
     ...(baggage  ? { baggage }  : {}),
+    ...(aircraft ? { aircraft } : {}),
+    ...(delay    ? { delay }    : {}),
     status,
   };
 }

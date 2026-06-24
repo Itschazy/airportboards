@@ -87,6 +87,21 @@
     "go_to_gate": "Vai al gate ora",
     "delayed_by": "Ritardo di {m}m",
     "was": "Era {time}",
-    "scheduled_at": "Programmato {time}"
+    "scheduled_at": "Programmato {time}",
+    "new_departure": "Nuova partenza {time}",
+    "on_schedule": "In orario {time}",
+    "boarding_now": "Imbarco in corso",
+    "final_call_now": "Ultima chiamata",
+    "go_to_gate_now": "Vai al gate {gate}",
+    "flight_departed": "Volo decollato",
+    "just_now": "Proprio adesso",
+    "aircraft": "Aeromobile",
+    "show_on_map": "Mostra sulla mappa dell'aeroporto",
+    "checkin": "Check-in",
+    "seat": "Posto",
+    "boarding_in": "Imbarco tra {time}",
+    "delayed_label": "In ritardo",
+    "dur_h": "h",
+    "dur_m": "m"
   }
 }

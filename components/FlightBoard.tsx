@@ -18,6 +18,8 @@ type Flight = {
   gate?: string;
   terminal?: string;
   baggage?: string;
+  aircraft?: string;
+  delay?: number;
   status: string;
 };
 
@@ -141,7 +143,7 @@ function IconChevron() {
 
 // ─── Bottom Sheet ────────────────────────────────────────────────────────────
 
-function BottomSheet({ flight, mode, onClose, tz, locale, updLabel }: {
+function BottomSheet({ flight, mode, onClose, tz, locale }: {
   flight: Flight | null;
   mode: Mode;
   onClose: () => void;
@@ -151,215 +153,185 @@ function BottomSheet({ flight, mode, onClose, tz, locale, updLabel }: {
 }) {
   const t = useTranslations('ui');
   const vis = !!flight;
-  const color = flight ? (STATUS_COLOR[flight.status] || C.gray) : C.gray;
-  const label = flight ? t(`st_${flight.status}`) : '';
-
-  const countdown = flight ? calcDeparture(flight, tz, mode, t) : null;
-
-  const dateStr = flight ? new Date().toLocaleDateString(locale, {
-    timeZone: tz || undefined,
-    weekday: 'short', month: 'short', day: 'numeric',
-  }) : '';
-
-  const updShort = updLabel || '—';
 
   useEffect(() => {
     document.body.style.overflow = vis ? 'hidden' : '';
     return () => { document.body.style.overflow = ''; };
   }, [vis]);
 
-  const D = <div style={{ height: 1, background: 'rgba(255,255,255,0.07)', margin: '16px 0' }} />;
+  const localNow = () => {
+    const parts = new Intl.DateTimeFormat('en-US', {
+      timeZone: tz || 'UTC', hour: 'numeric', minute: 'numeric', hourCycle: 'h23',
+    }).formatToParts(new Date());
+    return {
+      h: +(parts.find(p => p.type === 'hour')?.value ?? '0'),
+      m: +(parts.find(p => p.type === 'minute')?.value ?? '0'),
+    };
+  };
+  const minsUntil = (timeStr?: string): number | null => {
+    if (!timeStr) return null;
+    const [h, m] = timeStr.split(':').map(Number);
+    if (isNaN(h) || isNaN(m)) return null;
+    const now = localNow();
+    let diff = (h * 60 + m) - (now.h * 60 + now.m);
+    if (diff < -300) diff += 1440;
+    return diff;
+  };
+  const fmtDur = (mins: number) => {
+    const hrs = Math.floor(mins / 60), mm = mins % 60;
+    return hrs > 0 ? `${hrs} ${t('dur_h')} ${mm} ${t('dur_m')}` : `${mm} ${t('dur_m')}`;
+  };
+
+  const L = { fontSize: 12, color: C.secondary, textTransform: 'uppercase' as const, letterSpacing: '0.12em', marginBottom: 8 };
+
+  let body = null;
+  if (flight) {
+    const status = flight.status;
+    const color = STATUS_COLOR[status] || C.gray;
+    const statusLabel = t(`st_${status}`);
+    const isDep = mode === 'departures';
+    const dispTime = flight.actual || flight.scheduled;       // new time if delayed
+    const mins = minsUntil(dispTime);
+    const n = localNow();
+    const nowClock = `${String(n.h).padStart(2, '0')}:${String(n.m).padStart(2, '0')}`;
+    const dateStr = new Date().toLocaleDateString(locale, { timeZone: tz || undefined, weekday: 'short', month: 'short', day: 'numeric' });
+
+    // ── Main insight card (context-aware) ──
+    type Card = { label: string; value: string; sub?: string; accent?: string };
+    let card: Card;
+    if (status === 'departed' || status === 'arrived') {
+      card = { label: t('flight_departed'), value: flight.scheduled, accent: C.gray };
+    } else if (status === 'baggage') {
+      card = { label: t('st_baggage'), value: flight.baggage || dispTime, accent: C.green };
+    } else if (status === 'cancelled') {
+      card = { label: t('st_cancelled'), value: flight.scheduled, accent: C.red };
+    } else if (status === 'boarding') {
+      card = { label: t('boarding_now'), value: flight.gate ? `${t('gate')} ${flight.gate}` : t('boarding_now'),
+               sub: `${isDep ? t('departure') : t('arrival')} ${dispTime}`, accent: C.blue };
+    } else if (status === 'finalcall') {
+      card = { label: t('final_call'), value: flight.gate ? t('go_to_gate_now', { gate: flight.gate }) : t('final_call'),
+               sub: `${isDep ? t('departure') : t('arrival')} ${dispTime}`, accent: C.red };
+    } else {
+      const value = mins == null ? dispTime : (mins <= 0 ? t('now') : fmtDur(mins));
+      const delayed = status === 'delayed';
+      card = {
+        label: isDep ? t('departs_in') : t('arrives_in'),
+        value,
+        sub: delayed ? t('new_departure', { time: dispTime }) : t('on_schedule', { time: flight.scheduled }),
+        accent: delayed ? C.orange : undefined,
+      };
+    }
+
+    // ── Detail blocks (only those with data) ──
+    type Block = { label: string; value: string; valueColor?: string; sub?: string; strike?: string };
+    const blocks: Block[] = [];
+    blocks.push({
+      label: isDep ? t('departure') : t('arrival'),
+      value: dispTime,
+      valueColor: flight.actual ? C.orange : C.text,
+      strike: flight.actual ? flight.scheduled : undefined,
+      sub: dateStr,
+    });
+    if (flight.gate)     blocks.push({ label: t('gate'), value: flight.gate });
+    if (flight.terminal) blocks.push({ label: t('terminal'), value: flight.terminal });
+    if (flight.baggage)  blocks.push({ label: t('baggage'), value: flight.baggage, valueColor: C.green });
+    if (flight.aircraft) blocks.push({ label: t('aircraft'), value: flight.aircraft });
+    blocks.push({
+      label: t('flight_status'), value: statusLabel, valueColor: color,
+      sub: flight.delay && flight.delay > 0 ? t('delayed_by', { m: flight.delay }) : undefined,
+    });
+    blocks.push({ label: t('updated'), value: t('just_now'), sub: nowClock });
+
+    body = (
+      <div style={{ padding: '6px 24px 0' }}>
+
+        {/* Header */}
+        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: 12, gap: 12 }}>
+          <div style={{ minWidth: 0 }}>
+            <div style={{ fontSize: 'clamp(52px, 16vw, 68px)', fontWeight: 800, letterSpacing: '-0.04em', color: C.text, lineHeight: 0.95 }}>
+              {flight.flight}
+            </div>
+            <div style={{ fontSize: 'clamp(22px, 6vw, 28px)', color: '#A1A1A1', marginTop: 10, lineHeight: 1.15, fontWeight: 400 }}>
+              {flight.destination || flight.origin}
+            </div>
+            <div style={{ fontSize: 20, color: C.text, fontWeight: 600, marginTop: 4 }}>
+              {flight.airline}
+            </div>
+          </div>
+          <div style={{
+            display: 'flex', alignItems: 'center', gap: 6, padding: '7px 13px', borderRadius: 999,
+            background: color + '1A', border: `1px solid ${color}4D`, marginTop: 6, flexShrink: 0,
+          }}>
+            <div style={{ width: 7, height: 7, borderRadius: '50%', background: color }} />
+            <span style={{ fontSize: 12, fontWeight: 700, color, letterSpacing: '0.07em', textTransform: 'uppercase' }}>{statusLabel}</span>
+          </div>
+        </div>
+
+        <div style={{ height: 1, background: 'rgba(255,255,255,0.07)', margin: '18px 0' }} />
+
+        {/* Main insight card */}
+        <div style={{
+          background: card.accent ? `${card.accent}14` : '#1C1C1E',
+          border: card.accent ? `1px solid ${card.accent}33` : '1px solid transparent',
+          borderRadius: 18, padding: '16px 20px 18px', marginBottom: 22,
+        }}>
+          <div style={{ ...L, marginBottom: 8 }}>{card.label}</div>
+          <div style={{
+            fontSize: card.value.length > 9 ? 36 : card.value.length > 5 ? 44 : 54,
+            fontWeight: 800, letterSpacing: '-0.03em', lineHeight: 1,
+            color: card.accent || C.text, fontVariantNumeric: 'tabular-nums', textTransform: 'uppercase',
+          }}>
+            {card.value}
+          </div>
+          {card.sub && <div style={{ fontSize: 15, color: C.secondary, marginTop: 9 }}>{card.sub}</div>}
+        </div>
+
+        {/* Detail grid */}
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(100px, 1fr))', gap: '22px 14px' }}>
+          {blocks.map((b, i) => (
+            <div key={i} style={{ minWidth: 0 }}>
+              <div style={L}>{b.label}</div>
+              <div style={{
+                fontSize: b.value.length > 6 ? 19 : 30, fontWeight: 700,
+                color: b.valueColor || C.text, lineHeight: 1.05, letterSpacing: '-0.02em',
+                fontVariantNumeric: 'tabular-nums', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis',
+              }}>
+                {b.value}
+              </div>
+              {b.strike && (
+                <div style={{ fontSize: 13, color: C.secondary, textDecoration: 'line-through', marginTop: 3 }}>{b.strike}</div>
+              )}
+              {b.sub && (
+                <div style={{ fontSize: 13, color: '#6A6A6A', marginTop: 5, lineHeight: 1.3 }}>{b.sub}</div>
+              )}
+            </div>
+          ))}
+        </div>
+
+      </div>
+    );
+  }
 
   return (
     <>
-      {/* Backdrop */}
       <div onClick={onClose} style={{
         position: 'fixed', inset: 0, zIndex: 200,
-        background: 'rgba(0,0,0,0.55)',
-        backdropFilter: 'blur(16px)',
-        WebkitBackdropFilter: 'blur(16px)',
-        opacity: vis ? 1 : 0,
-        pointerEvents: vis ? 'auto' : 'none',
-        transition: 'opacity 0.28s ease',
+        background: 'rgba(0,0,0,0.55)', backdropFilter: 'blur(16px)', WebkitBackdropFilter: 'blur(16px)',
+        opacity: vis ? 1 : 0, pointerEvents: vis ? 'auto' : 'none', transition: 'opacity 0.28s ease',
       }} />
-
-      {/* Sheet */}
       <div style={{
         position: 'fixed', bottom: 0, left: 0, right: 0, zIndex: 201,
-        background: '#111111',
-        borderTop: '1px solid rgba(255,255,255,0.08)',
-        borderRadius: '32px 32px 0 0',
+        background: '#111111', borderTop: '1px solid rgba(255,255,255,0.08)', borderRadius: '32px 32px 0 0',
         transform: vis ? 'translateY(0)' : 'translateY(100%)',
         transition: 'transform 0.34s cubic-bezier(0.32, 0.72, 0, 1)',
         paddingBottom: 'calc(40px + env(safe-area-inset-bottom))',
-        maxHeight: '90vh',
-        overflowY: 'auto',
+        maxHeight: '90vh', overflowY: 'auto',
+        maxWidth: 640, margin: '0 auto',
       }}>
-
-        {/* Handle */}
         <div style={{ display: 'flex', justifyContent: 'center', padding: '10px 0 4px' }}>
           <div style={{ width: 48, height: 5, borderRadius: 3, background: 'rgba(255,255,255,0.18)' }} />
         </div>
-
-        {flight && (
-          <div style={{ padding: '8px 24px 0' }}>
-
-            {/* ── Header: flight number + status badge ── */}
-            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: 10 }}>
-              <div style={{
-                fontSize: 'clamp(48px, 14vw, 60px)',
-                fontWeight: 800,
-                letterSpacing: '-0.04em',
-                color: C.text,
-                lineHeight: 1,
-              }}>
-                {flight.flight}
-              </div>
-
-              {/* Status pill */}
-              <div style={{
-                display: 'flex', alignItems: 'center', gap: 6,
-                padding: '7px 13px',
-                borderRadius: 999,
-                background: color + '1A',
-                border: `1px solid ${color}4D`,
-                marginTop: 8, flexShrink: 0,
-              }}>
-                <div style={{ width: 7, height: 7, borderRadius: '50%', background: color, flexShrink: 0 }} />
-                <span style={{ fontSize: 12, fontWeight: 700, color, letterSpacing: '0.07em', textTransform: 'uppercase' }}>{label}</span>
-              </div>
-            </div>
-
-            {/* Destination */}
-            <div style={{ fontSize: 22, color: '#A1A1A1', marginBottom: 5, lineHeight: 1.2, fontWeight: 400 }}>
-              {flight.destination || flight.origin}
-            </div>
-
-            {/* Airline */}
-            <div style={{ fontSize: 17, color: C.text, fontWeight: 500 }}>
-              {flight.airline}
-            </div>
-
-            {D}
-
-            {/* ── Countdown card ── */}
-            {countdown && (
-              <div style={{
-                background: '#1C1C1E',
-                borderRadius: 18,
-                padding: '14px 20px 14px',
-                marginBottom: 16,
-              }}>
-                <div style={{
-                  fontSize: 12, color: '#8A8A8A',
-                  textTransform: 'uppercase', letterSpacing: '0.12em',
-                  marginBottom: 6,
-                }}>
-                  {countdown.label}
-                </div>
-                <div style={{
-                  fontSize: countdown.value.length > 5 ? 40 : 48,
-                  fontWeight: 700,
-                  letterSpacing: '-0.03em',
-                  color: countdown.accent || C.text,
-                  lineHeight: 1,
-                  fontVariantNumeric: 'tabular-nums',
-                }}>
-                  {countdown.value}
-                </div>
-                {countdown.sub && (
-                  <div style={{ fontSize: 14, color: C.secondary, marginTop: 7 }}>
-                    {countdown.sub}
-                  </div>
-                )}
-              </div>
-            )}
-
-            {/* ── Departure / Gate grid ── */}
-            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '0 12px', marginBottom: 0 }}>
-              <div>
-                <div style={{ fontSize: 12, color: '#8A8A8A', textTransform: 'uppercase', letterSpacing: '0.12em', marginBottom: 8 }}>
-                  {mode === 'departures' ? t('departure') : t('arrival')}
-                </div>
-                <div style={{
-                  fontSize: 40, fontWeight: 700,
-                  fontVariantNumeric: 'tabular-nums',
-                  letterSpacing: '-0.02em',
-                  color: flight.actual ? C.orange : C.text,
-                  lineHeight: 1,
-                }}>
-                  {flight.actual || flight.scheduled}
-                </div>
-                {flight.actual && (
-                  <div style={{ fontSize: 13, color: C.secondary, textDecoration: 'line-through', marginTop: 3 }}>
-                    {flight.scheduled}
-                  </div>
-                )}
-                <div style={{ fontSize: 14, color: '#6A6A6A', marginTop: 5 }}>
-                  {dateStr}
-                </div>
-              </div>
-
-              {flight.gate && (
-                <div>
-                  <div style={{ fontSize: 12, color: '#8A8A8A', textTransform: 'uppercase', letterSpacing: '0.12em', marginBottom: 8 }}>{t('gate')}</div>
-                  <div style={{ fontSize: 40, fontWeight: 700, color: C.text, lineHeight: 1, letterSpacing: '-0.02em' }}>
-                    {flight.gate}
-                  </div>
-                </div>
-              )}
-            </div>
-
-            {D}
-
-            {/* ── Status / Updated grid ── */}
-            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '0 12px' }}>
-              <div>
-                <div style={{ fontSize: 12, color: '#8A8A8A', textTransform: 'uppercase', letterSpacing: '0.12em', marginBottom: 8 }}>
-                  {t('flight_status')}
-                </div>
-                <div style={{ fontSize: 22, fontWeight: 600, color, lineHeight: 1.2 }}>
-                  {label}
-                </div>
-              </div>
-              <div>
-                <div style={{ fontSize: 12, color: '#8A8A8A', textTransform: 'uppercase', letterSpacing: '0.12em', marginBottom: 8 }}>
-                  {t('updated')}
-                </div>
-                <div style={{ fontSize: 22, fontWeight: 500, color: C.text, lineHeight: 1.2 }}>
-                  {updShort}
-                </div>
-              </div>
-            </div>
-
-            {/* ── Terminal (only if present) ── */}
-            {flight.terminal && (
-              <>
-                {D}
-                <div>
-                  <div style={{ fontSize: 12, color: '#8A8A8A', textTransform: 'uppercase', letterSpacing: '0.12em', marginBottom: 8 }}>{t('terminal')}</div>
-                  <div style={{ fontSize: 40, fontWeight: 700, color: C.text, lineHeight: 1, letterSpacing: '-0.02em' }}>
-                    {flight.terminal}
-                  </div>
-                </div>
-              </>
-            )}
-
-            {/* ── Baggage carousel (arrivals only) ── */}
-            {flight.baggage && (
-              <>
-                {D}
-                <div>
-                  <div style={{ fontSize: 12, color: '#8A8A8A', textTransform: 'uppercase', letterSpacing: '0.12em', marginBottom: 8 }}>{t('baggage')}</div>
-                  <div style={{ fontSize: 40, fontWeight: 700, color: C.green, lineHeight: 1, letterSpacing: '-0.02em' }}>
-                    {flight.baggage}
-                  </div>
-                </div>
-              </>
-            )}
-
-          </div>
-        )}
+        {body}
       </div>
     </>
   );
@@ -420,7 +392,7 @@ export function FlightBoard({ airport, locale, defaultMode = 'departures' }: {
   useEffect(() => {
     const tick = () => setTime(new Date().toLocaleTimeString(locale, {
       timeZone: airport.tz || undefined,
-      hour: '2-digit', minute: '2-digit',
+      hour: '2-digit', minute: '2-digit', hour12: false,
     }));
     tick();
     const id = setInterval(tick, 1000);

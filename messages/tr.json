@@ -82,11 +82,26 @@
     "departing": "Kalkıyor",
     "landing": "İniyor",
     "departs_in": "Kalkışa",
-    "arrives_in": "Varışa",
+    "arrives_in": "İnişe",
     "final_call": "Son çağrı",
     "go_to_gate": "Kapıya git",
     "delayed_by": "{m}m gecikme",
     "was": "{time} idi",
-    "scheduled_at": "{time} olarak planlandı"
+    "scheduled_at": "{time} olarak planlandı",
+    "new_departure": "Yeni kalkış {time}",
+    "on_schedule": "Zamanında {time}",
+    "boarding_now": "Biniş başladı",
+    "final_call_now": "Son çağrı",
+    "go_to_gate_now": "Kapıya git {gate}",
+    "flight_departed": "Uçuş kalktı",
+    "just_now": "Az önce",
+    "aircraft": "Uçak",
+    "show_on_map": "Havalimanı haritasında göster",
+    "checkin": "Check-in",
+    "seat": "Koltuk",
+    "boarding_in": "Biniş {time}",
+    "delayed_label": "Gecikme",
+    "dur_h": "sa",
+    "dur_m": "dk"
   }
 }

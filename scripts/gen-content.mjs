@@ -23,7 +23,18 @@ const LOCALE_KEYS = Object.keys(LOCALES);
 
 const LIMIT = process.env.LIMIT ? +process.env.LIMIT : airports.length;
 const CONCURRENCY = +(process.env.CONCURRENCY || 8);
-const MODEL = 'gpt-5.5';
+
+// Top-50 hubs get premium gpt-5.5; everyone else gpt-5-mini (minimal
+// reasoning) — near-identical quality on factual blurbs at a fraction of cost.
+const PREMIUM = new Set([
+  'LHR','CDG','DXB','JFK','LAX','HND','NRT','PEK','PVG','HKG','SIN','ICN','FRA','AMS','IST',
+  'SVO','ORD','ATL','EWR','LGA','BOS','SFO','MIA','DFW','DEN','SEA','LGW','FCO','BCN','MAD',
+  'MUC','ZRH','CPH','BRU','VIE','HEL','LIS','ARN','OSL','GVA','LED','SYD','MEL','BOM','DEL',
+  'BKK','KUL','CGK','GRU','GIG',
+]);
+const modelFor = (iata) => PREMIUM.has(iata)
+  ? { model: 'gpt-5.5', effort: null }
+  : { model: 'gpt-5-mini', effort: 'minimal' };
 
 const sleep = (ms) => new Promise(r => setTimeout(r, ms));
 
@@ -34,9 +45,10 @@ function sysPrompt(lang) {
   return `You are an SEO copywriter for a live airport flight-board website. Write a unique, factually accurate intro paragraph (70-110 words) in ${lang} for an airport page: mention terminals, which airlines are based there, popular destinations, and useful passenger context. IMPORTANT: if little reliable information exists about the airport, stay general and do NOT invent specific terminals, gate numbers, or routes. Naturally include the local-language equivalents of the keywords "online flight board", "arrivals" and "departures". Output ONLY the paragraph text — no headings, no quotes.`;
 }
 
-async function genOne(a, lang) {
+async function genOne(a, lang, model, effort) {
   const body = {
-    model: MODEL,
+    model,
+    ...(effort ? { reasoning_effort: effort } : {}),
     messages: [
       { role: 'system', content: sysPrompt(lang) },
       { role: 'user', content: `Airport: ${a.name} (${a.iata}), ${a.city}, ${a.country}. Write in ${lang}.` },
@@ -67,11 +79,12 @@ async function processAirport(a) {
   if (fs.existsSync(file)) {
     try { content = JSON.parse(fs.readFileSync(file, 'utf8')); } catch {}
   }
+  const { model, effort } = modelFor(a.iata);
   let changed = false;
   for (const loc of LOCALE_KEYS) {
     if (content[loc] && content[loc].length > 20) continue; // already done
     try {
-      content[loc] = await genOne(a, LOCALES[loc]);
+      content[loc] = await genOne(a, LOCALES[loc], model, effort);
       changed = true;
     } catch (e) {
       errors++;

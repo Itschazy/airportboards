@@ -87,6 +87,21 @@
     "go_to_gate": "अब गेट पर जाएँ",
     "delayed_by": "{m}m के लिए विलंबित",
     "was": "{time} था",
-    "scheduled_at": "निर्धारित {time}"
+    "scheduled_at": "निर्धारित {time}",
+    "new_departure": "नया प्रस्थान {time}",
+    "on_schedule": "समयानुसार {time}",
+    "boarding_now": "बोर्डिंग जारी",
+    "final_call_now": "अंतिम कॉल",
+    "go_to_gate_now": "गेट पर जाएँ {gate}",
+    "flight_departed": "उड़ान प्रस्थान कर चुकी है",
+    "just_now": "अभी",
+    "aircraft": "विमान",
+    "show_on_map": "हवाईअड्डे के नक्शे पर दिखाएँ",
+    "checkin": "चेक‑इन",
+    "seat": "सीट",
+    "boarding_in": "बोर्डिंग में {time}",
+    "delayed_label": "विलंबित",
+    "dur_h": "घं",
+    "dur_m": "मि"
   }
 }

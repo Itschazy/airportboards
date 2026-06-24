@@ -87,6 +87,21 @@
     "go_to_gate": "지금 게이트로 이동",
     "delayed_by": "{m}분 지연",
     "was": "{time} 출발 예정",
-    "scheduled_at": "{time} 예정"
+    "scheduled_at": "{time} 예정",
+    "new_departure": "새 출발 {time}",
+    "on_schedule": "정시 {time}",
+    "boarding_now": "탑승 중",
+    "final_call_now": "최종 호출",
+    "go_to_gate_now": "게이트로 이동 {gate}",
+    "flight_departed": "항공편 출발",
+    "just_now": "방금",
+    "aircraft": "항공기",
+    "show_on_map": "공항 지도에서 보기",
+    "checkin": "체크인",
+    "seat": "좌석",
+    "boarding_in": "탑승까지 {time}",
+    "delayed_label": "지연",
+    "dur_h": "시간",
+    "dur_m": "분"
   }
 }

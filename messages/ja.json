@@ -87,6 +87,21 @@
     "go_to_gate": "ただちにゲートへ",
     "delayed_by": "{m}分遅れ",
     "was": "{time}発",
-    "scheduled_at": "{time}予定"
+    "scheduled_at": "{time}予定",
+    "new_departure": "新しい出発 {time}",
+    "on_schedule": "定刻 {time}",
+    "boarding_now": "搭乗中",
+    "final_call_now": "最終案内",
+    "go_to_gate_now": "ゲートへ {gate}",
+    "flight_departed": "出発済み",
+    "just_now": "たった今",
+    "aircraft": "機材",
+    "show_on_map": "空港マップで表示",
+    "checkin": "チェックイン",
+    "seat": "座席",
+    "boarding_in": "搭乗開始まで {time}",
+    "delayed_label": "遅延",
+    "dur_h": "時間",
+    "dur_m": "分"
   }
 }

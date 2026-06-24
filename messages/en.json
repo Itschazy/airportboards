@@ -87,6 +87,21 @@
     "go_to_gate": "Go to gate now",
     "delayed_by": "Delayed by {m}m",
     "was": "Was {time}",
-    "scheduled_at": "Scheduled {time}"
+    "scheduled_at": "Scheduled {time}",
+    "new_departure": "New departure {time}",
+    "on_schedule": "On schedule {time}",
+    "boarding_now": "Boarding now",
+    "final_call_now": "Final call",
+    "go_to_gate_now": "Go to gate {gate}",
+    "flight_departed": "Flight departed",
+    "just_now": "Just now",
+    "aircraft": "Aircraft",
+    "show_on_map": "Show on airport map",
+    "checkin": "Check-in",
+    "seat": "Seat",
+    "boarding_in": "Boarding in {time}",
+    "delayed_label": "Delayed",
+    "dur_h": "h",
+    "dur_m": "m"
   }
 }

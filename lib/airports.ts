@@ -1,4 +1,6 @@
 import airportsRaw from '@/data/airports.json';
+import fs from 'fs';
+import path from 'path';
 
 export type AirportType = 'large_airport' | 'medium_airport' | 'small_airport';
 
@@ -52,27 +54,147 @@ export function getStaticIataCodes(): string[] {
   return [...priority].filter(iata => byIata.has(iata));
 }
 
+// Multilingual search aliases (city/airport names in 12 languages), loaded
+// once from the generated index. Server-only (fs) — lib/airports reaches
+// client components only as a type import, so this never hits the browser.
+let ALIASES: Record<string, string[]> | null = null;
+function aliasesOf(iata: string): string[] {
+  if (!ALIASES) {
+    try {
+      ALIASES = JSON.parse(fs.readFileSync(path.join(process.cwd(), 'data/airport-aliases.json'), 'utf8'));
+    } catch { ALIASES = {}; }
+  }
+  return ALIASES![iata] || [];
+}
+
+// Cyrillic → Latin fallback so a Russian-typed name can also match EN data.
+const CYR: Record<string, string> = {
+  'а':'a','б':'b','в':'v','г':'g','д':'d','е':'e','ё':'e','ж':'zh','з':'z','и':'i','й':'y',
+  'к':'k','л':'l','м':'m','н':'n','о':'o','п':'p','р':'r','с':'s','т':'t','у':'u','ф':'f',
+  'х':'h','ц':'c','ч':'ch','ш':'sh','щ':'sch','ъ':'','ы':'y','ь':'','э':'e','ю':'yu','я':'ya',
+};
+const translit = (s: string) => s.split('').map(c => CYR[c] ?? c).join('');
+const hasCyrillic = (s: string) => /[а-яё]/i.test(s);
+
+// Generic "airport" / filler words across languages — dropped from queries so
+// "Dubai airport" or "aéroport de Roissy" still match by the meaningful words.
+const STOP = new Set([
+  'airport','airfield','aerodrome','intl','international','air','field',
+  'aeroport','aeropuerto','aeroporto','flughafen','havalimani','lufthavn','luchthaven',
+  'аэропорт','аэропорта','аэропорту','аэропорты','مطار','हवाई','अड्डा','विमानतल','공항','空港',
+  'de','del','la','le','el','les','du','des','the','of','und','and','y','di','da','do','dos','en','het',
+]);
+
+// Levenshtein/Damerau distance ≤ 1 (one insert/delete/substitution/swap) — for typos.
+function within1edit(a: string, b: string): boolean {
+  if (a === b) return true;
+  const la = a.length, lb = b.length;
+  if (Math.abs(la - lb) > 1) return false;
+  if (la === lb) { // substitution or adjacent transposition
+    let diff = -1, n = 0;
+    for (let i = 0; i < la; i++) if (a[i] !== b[i]) { if (++n > 2) return false; if (diff < 0) diff = i; }
+    if (n <= 1) return true;
+    return n === 2 && diff >= 0 && a[diff] === b[diff + 1] && a[diff + 1] === b[diff];
+  }
+  const s = la < lb ? a : b, l = la < lb ? b : a; // s shorter by 1
+  let i = 0, j = 0, skipped = false;
+  while (i < s.length && j < l.length) {
+    if (s[i] === l[j]) { i++; j++; }
+    else { if (skipped) return false; skipped = true; j++; }
+  }
+  return true;
+}
+// Strip diacritics so "aéroport"/"Dubái"/"Düsseldorf" fold to plain ASCII.
+const fold = (s: string) => s.normalize('NFD').replace(/[̀-ͯ]/g, '');
+const splitWords = (s: string) =>
+  fold(s.toLowerCase()).split(/[\s,.'/()\-_:;]+/).filter(Boolean);
+
+// Generic "airport" words in non-spaced scripts — removed from the query so a
+// CJK/Arabic/Hindi search keeps only the meaningful city/airport part.
+const NATIVE_AIRPORT = [
+  '国际机场','國際機場','机场','機場','国际','國際','空港','国際','공항','국제공항','국제',
+  'مطار الدولي','المطار','مطار','हवाई अड्डा','हवाईअड्डा','हवाई','अड्डा','विमानतल',
+];
+
+// Per-airport "needles": every searchable token (iata, name/city words, country,
+// whole city, and all multilingual aliases + their words). Built once, cached.
+let NEEDLES: Map<string, string[]> | null = null;
+function needlesOf(a: Airport): string[] {
+  if (!NEEDLES) NEEDLES = new Map();
+  let n = NEEDLES.get(a.iata);
+  if (n) return n;
+  const set = new Set<string>();
+  set.add(a.iata.toLowerCase());
+  if (a.icao) set.add(a.icao.toLowerCase());
+  set.add(fold(a.city.toLowerCase()));
+  if (a.country) set.add(fold(a.country.toLowerCase()));
+  for (const w of splitWords(a.name)) set.add(w);
+  for (const w of splitWords(a.city)) set.add(w);
+  for (const al of aliasesOf(a.iata)) {
+    const l = fold(al.toLowerCase());
+    set.add(l);
+    for (const w of splitWords(al)) if (w.length >= 2) set.add(w);
+  }
+  n = [...set].filter(Boolean);
+  NEEDLES.set(a.iata, n);
+  return n;
+}
+
+// How strongly a query token matches an airport's needles (0 = no match).
+const isCJK = (s: string) => /[　-鿿가-힯぀-ヿ]/.test(s);
+
+// Match strength of a query token against an airport's needles.
+// 100 exact · 40 prefix · 12 substring/CJK-part · 5 fuzzy(1 typo) · 0 none.
+function tokenScore(tok: string, needles: string[]): number {
+  const cjk = isCJK(tok);
+  const cands = hasCyrillic(tok) ? [tok, translit(tok)] : [tok];
+  let best = 0;
+  for (const nd of needles) {
+    for (const c of cands) {
+      if (nd === c) return 100;
+      if (c.length >= 2 && nd.startsWith(c)) best = Math.max(best, 40);
+      else if ((c.length >= 3 || (cjk && c.length >= 2)) && nd.includes(c)) best = Math.max(best, 12);
+      else if (cjk && c.length >= 2 && nd.length >= 2 && c.includes(nd)) best = Math.max(best, 12); // CJK concat
+    }
+  }
+  if (best > 0) return best;
+  for (const c of cands) {            // typo tolerance
+    if (c.length < 4 || cjk) continue;
+    for (const nd of needles) {
+      if (nd.length >= 4 && Math.abs(nd.length - c.length) <= 1 && within1edit(c, nd)) return 5;
+    }
+  }
+  return 0;
+}
+
 export function searchAirports(query: string, limit = 10): Airport[] {
-  const q = query.trim().toLowerCase();
-  if (!q) return POPULAR_AIRPORTS.map(iata => byIata.get(iata)!).filter(Boolean);
+  const raw = fold(query.trim().toLowerCase());
+  if (!raw) return POPULAR_AIRPORTS.map(iata => byIata.get(iata)!).filter(Boolean);
+
+  // Drop generic non-spaced "airport" words (CJK/Arabic/Hindi) before tokenizing
+  let cleaned = raw;
+  for (const w of NATIVE_AIRPORT) if (cleaned.includes(w)) cleaned = cleaned.split(w).join(' ');
+
+  let tokens = splitWords(cleaned).filter(t => !STOP.has(t));
+  if (tokens.length === 0) tokens = [cleaned.trim() || raw]; // all-stopword or CJK (no spaces)
+
+  // Require most tokens to match (allow one descriptive extra to miss).
+  const needed = Math.max(1, tokens.length - 1);
 
   const results: Array<Airport & { _score: number }> = [];
   for (const a of airports) {
-    const iata = a.iata.toLowerCase();
-    const city = a.city.toLowerCase();
-    const name = a.name.toLowerCase();
-    const country = (a.country || '').toLowerCase();
-    let score = 0;
-    if (iata === q)                 score = 100;
-    else if (iata.startsWith(q))    score = 80;
-    else if (city === q)            score = 70;
-    else if (city.startsWith(q))    score = 60;
-    else if (name.startsWith(q))    score = 50;
-    else if (city.includes(q))      score = 40;
-    else if (name.includes(q))      score = 30;
-    else if (country.startsWith(q)) score = 20;
-    else continue;
-    score += (HUB_WEIGHT.get(a.iata) ?? 0);
+    const needles = needlesOf(a);
+    let sum = 0, matched = 0, strong = false;
+    for (const tok of tokens) {
+      const m = tokenScore(tok, needles);
+      if (m > 0) { matched++; sum += m; if (m >= 40) strong = true; }
+    }
+    if (matched < needed) continue;
+    if (matched < tokens.length && !strong) continue; // a token was skipped → need a strong anchor
+
+    let score = sum + (HUB_WEIGHT.get(a.iata) ?? 0);
+    if (a.iata.toLowerCase() === raw)            score = 100000;
+    else if (fold(a.city.toLowerCase()) === raw) score += 30;
     results.push({ ...a, _score: score });
   }
   return results
