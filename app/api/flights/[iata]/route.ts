@@ -143,6 +143,7 @@ export async function GET(
     if (hit && Date.now() - hit.ts < CACHE_SECONDS * 1000) {
       raw = hit.data;
     } else {
+      rawCache.delete(cacheKey); // drop the stale entry (and reset its LRU position)
       const param = direction === 'departures' ? `dep_iata=${code}` : `arr_iata=${code}`;
       const url   = `https://airlabs.co/api/v9/schedules?${param}&api_key=${AIRLABS_KEY}`;
 
@@ -172,12 +173,20 @@ export async function GET(
         return aUp ? ta - tb : tb - ta;
       });
 
+      // Cache only the slice we actually render (≤80), not the full mega-hub
+      // payload, and bound the cache so a crawl of all 6072 airports can't bloat
+      // the long-lived PM2 process unboundedly.
+      raw = raw.slice(0, MAX_FLIGHTS);
+      if (rawCache.size >= 3000) {
+        const oldest = rawCache.keys().next().value;
+        if (oldest) rawCache.delete(oldest);
+      }
       rawCache.set(cacheKey, { ts: Date.now(), data: raw });
     }
 
     // Busy hubs now return 500+ rows; cap to the most relevant window
     // (soonest upcoming + recently departed) to keep the board light.
-    const flights = raw.slice(0, MAX_FLIGHTS).map(f => mapFlight(f, direction, locale));
+    const flights = raw.map(f => mapFlight(f, direction, locale));
 
     return NextResponse.json(
       { iata: code, direction, flights },

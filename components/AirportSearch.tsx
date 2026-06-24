@@ -14,14 +14,18 @@ const flag = (iso2: string) => {
 };
 
 function highlight(text: string, query: string) {
-  if (!query.trim()) return <>{text}</>;
-  const idx = text.toLowerCase().indexOf(query.toLowerCase());
+  const q = query.trim();
+  if (!q) return <>{text}</>;
+  const idx = text.toLowerCase().indexOf(q.toLowerCase());
   if (idx === -1) return <>{text}</>;
+  const end = idx + q.length;
+  // Guard against case-fold width mismatches (ß→ss, İ/i, etc.) corrupting the slice.
+  if (text.slice(idx, end).toLowerCase() !== q.toLowerCase()) return <>{text}</>;
   return (
     <>
       {text.slice(0, idx)}
-      <span style={{ color: '#FFFFFF', fontWeight: 700 }}>{text.slice(idx, idx + query.length)}</span>
-      {text.slice(idx + query.length)}
+      <span style={{ color: '#FFFFFF', fontWeight: 700 }}>{text.slice(idx, end)}</span>
+      {text.slice(end)}
     </>
   );
 }
@@ -77,9 +81,10 @@ export function AirportSearch({ locale, placeholder, nearestLabel = 'Nearest air
     );
   }, []);
 
-  // Search with debounce
+  // Search with debounce. Gated on `open` (not `focused`) so a visible dropdown
+  // keeps fetching even if the input lost focus (e.g. scrolling on touch).
   useEffect(() => {
-    if (!focused) return;
+    if (!open) return;
     if (!query.trim()) {
       fetch(`/api/airports/search?q=&locale=${locale}`)
         .then(r => r.json())
@@ -94,7 +99,7 @@ export function AirportSearch({ locale, placeholder, nearestLabel = 'Nearest air
       setActive(-1);
     }, 100);
     return () => clearTimeout(t);
-  }, [query, focused]);
+  }, [query, open, locale]);
 
   // Close on outside click
   useEffect(() => {
@@ -124,9 +129,13 @@ export function AirportSearch({ locale, placeholder, nearestLabel = 'Nearest air
   };
 
   // Sections rendered in the empty state, and the flat list keyboard nav walks.
-  // The two MUST share order/indices or arrow-keys + Enter select the wrong row.
-  const popularItems = results.slice(0, 6);
-  const emptyFlat = [...recent, ...nearest, ...popularItems];
+  // De-dupe across sections (an airport can be in recent AND nearest AND popular)
+  // so there are no duplicate React keys and arrow-keys + Enter hit the right row.
+  const seen = new Set<string>();
+  const recentF = recent.filter(a => !seen.has(a.iata) && seen.add(a.iata));
+  const nearestF = nearest.filter(a => !seen.has(a.iata) && seen.add(a.iata));
+  const popularItems = results.slice(0, 6).filter(a => !seen.has(a.iata) && seen.add(a.iata));
+  const emptyFlat = [...recentF, ...nearestF, ...popularItems];
   const navList = query.trim() ? results : emptyFlat;
 
   const onKey = (e: React.KeyboardEvent) => {
@@ -279,9 +288,9 @@ export function AirportSearch({ locale, placeholder, nearestLabel = 'Nearest air
             <Section label="Results" items={results} />
           ) : (
             <>
-              {recent.length > 0 && <Section label="Recent" items={recent} startIndex={0} />}
-              {nearest.length > 0 && <Section label={nearestLabel} items={nearest} startIndex={recent.length} />}
-              {popularItems.length > 0 && <Section label="Popular airports" items={popularItems} startIndex={recent.length + nearest.length} />}
+              {recentF.length > 0 && <Section label="Recent" items={recentF} startIndex={0} />}
+              {nearestF.length > 0 && <Section label={nearestLabel} items={nearestF} startIndex={recentF.length} />}
+              {popularItems.length > 0 && <Section label="Popular airports" items={popularItems} startIndex={recentF.length + nearestF.length} />}
             </>
           )}
         </div>

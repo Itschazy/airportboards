@@ -52,7 +52,7 @@ export function OverviewMetrics({ iata, depLabel, arrLabel }: { iata: string; de
 export function PopularRoutes({ iata, locale, perDay }: { iata: string; locale: string; perDay: string }) {
   const [routes, setRoutes] = useState<{ iata: string; name: string; n: number }[]>([]);
   useEffect(() => {
-    fetch(`/api/flights/${iata}?direction=departures`).then(r => r.json()).then(d => {
+    fetch(`/api/flights/${iata}?direction=departures&locale=${locale}`).then(r => r.json()).then(d => {
       const m = new Map<string, { name: string; n: number }>();
       for (const f of d.flights || []) {
         const dest: string = f.destination || '';
@@ -64,7 +64,7 @@ export function PopularRoutes({ iata, locale, perDay }: { iata: string; locale: 
       }
       setRoutes([...m.entries()].map(([iata, v]) => ({ iata, ...v })).sort((a, b) => b.n - a.n).slice(0, 8));
     }).catch(() => {});
-  }, [iata]);
+  }, [iata, locale]);
   if (routes.length === 0) return null;
   return (
     <div style={{ display: 'flex', gap: 12, overflowX: 'auto', paddingBottom: 4, scrollbarWidth: 'none' }}>
