@@ -40,7 +40,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     title: `${title} — AirportsBoard`,
     description: t('city_desc', { city, count: c.count }),
     alternates: { canonical: `${BASE}/${locale}/city/${c.slug}`, languages },
-    robots: { index: true, follow: true },
+    // A single-airport "city" page is near-duplicate of that airport — don't index it.
+    robots: { index: c.count > 1, follow: true },
   };
 }
 

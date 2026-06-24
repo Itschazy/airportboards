@@ -66,8 +66,23 @@ export default async function HomePage({ params }: Props) {
   const depShort = t('departures_short');
   const arrShort = t('arrivals_short');
 
+  const jsonLd = [
+    {
+      '@context': 'https://schema.org', '@type': 'WebSite',
+      name: 'AirportsBoard', url: `${BASE}/${locale}`, inLanguage: locale,
+      description: t('subline'),
+    },
+    {
+      '@context': 'https://schema.org', '@type': 'Organization',
+      name: 'AirportsBoard', url: BASE,
+    },
+  ];
+
   return (
     <main style={{ width: '100%', maxWidth: 720, margin: '0 auto', padding: '40px 24px 64px', overflowX: 'clip' }}>
+      {jsonLd.map((s, i) => (
+        <script key={i} type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(s) }} />
+      ))}
 
       {/* HERO */}
       <h1 style={{
