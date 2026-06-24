@@ -147,6 +147,25 @@
     "boarding_in": "将在 {time} 登机",
     "delayed_label": "延误",
     "dur_h": "h",
-    "dur_m": "m"
+    "dur_m": "m",
+    "h_board_label": "登机中",
+    "h_board_main": "正在登机",
+    "gate_closes": "登机口将在 {m} 分钟后关闭",
+    "h_final_label": "最后召唤",
+    "h_final_main": "立即前往登机口",
+    "h_delay_label": "延误 {dur}",
+    "actual_dep": "实际起飞时间",
+    "h_cancel_label": "航班已取消",
+    "h_cancel_main": "请联系航空公司",
+    "h_cancel_sub": "查看备选航班",
+    "about_flight": "关于航班",
+    "airline_label": "航空公司",
+    "aircraft_type": "机型",
+    "flight_no": "航班号",
+    "flight_details": "航班详情",
+    "notice_board": "请提前到达登机口。登机口将严格按时关闭。",
+    "notice_final": "请立即前往登机口。登机口关闭后不允许登机。",
+    "notice_ontime": "请提前到达机场以完成所有手续。",
+    "notice_delayed": "出发时间已变更，请注意航显屏。"
   }
 }

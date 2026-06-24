@@ -147,6 +147,25 @@
     "boarding_in": "Boarding in {time}",
     "delayed_label": "Verspätet",
     "dur_h": "h",
-    "dur_m": "m"
+    "dur_m": "m",
+    "h_board_label": "Boarding",
+    "h_board_main": "Boarding jetzt",
+    "gate_closes": "Gate schließt in {m} Min.",
+    "h_final_label": "Letzter Aufruf",
+    "h_final_main": "Gehen Sie jetzt zum Gate",
+    "h_delay_label": "Verspätung {dur}",
+    "actual_dep": "Tatsächliche Abflugzeit",
+    "h_cancel_label": "Flug gestrichen",
+    "h_cancel_main": "Kontaktieren Sie die Fluggesellschaft",
+    "h_cancel_sub": "Prüfen Sie Alternativflüge",
+    "about_flight": "Informationen zum Flug",
+    "airline_label": "Fluggesellschaft",
+    "aircraft_type": "Flugzeugtyp",
+    "flight_no": "Flugnummer",
+    "flight_details": "Flugdetails",
+    "notice_board": "Bitte seien Sie frühzeitig am Gate. Das Gate schließt pünktlich.",
+    "notice_final": "Gehen Sie jetzt zum Gate. Boarding ist nach Schließung des Gates nicht möglich.",
+    "notice_ontime": "Kommen Sie rechtzeitig am Flughafen an, um alle Formalitäten zu erledigen.",
+    "notice_delayed": "Die Abflugzeit hat sich geändert. Achten Sie auf die Anzeige."
   }
 }

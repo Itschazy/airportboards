@@ -147,6 +147,25 @@
     "boarding_in": "Imbarco tra {time}",
     "delayed_label": "In ritardo",
     "dur_h": "h",
-    "dur_m": "m"
+    "dur_m": "m",
+    "h_board_label": "Imbarco",
+    "h_board_main": "Imbarco in corso",
+    "gate_closes": "La porta chiude tra {m} min",
+    "h_final_label": "Ultima chiamata",
+    "h_final_main": "Dirigiti subito al gate",
+    "h_delay_label": "Ritardo {dur}",
+    "actual_dep": "Orario effettivo di partenza",
+    "h_cancel_label": "Volo cancellato",
+    "h_cancel_main": "Contatta la compagnia",
+    "h_cancel_sub": "Verifica i voli alternativi",
+    "about_flight": "Informazioni sul volo",
+    "airline_label": "Compagnia aerea",
+    "aircraft_type": "Tipo di aeromobile",
+    "flight_no": "Numero volo",
+    "flight_details": "Dettagli del volo",
+    "notice_board": "Presentati al gate in anticipo. La porta chiude rigorosamente all'orario previsto.",
+    "notice_final": "Vai subito al gate. Non è consentito l'imbarco dopo la chiusura della porta.",
+    "notice_ontime": "Arriva in aeroporto in anticipo per completare tutte le procedure.",
+    "notice_delayed": "L'orario di partenza è cambiato. Controlla gli aggiornamenti sul tabellone."
   }
 }

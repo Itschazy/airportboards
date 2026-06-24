@@ -147,6 +147,25 @@
     "boarding_in": "탑승까지 {time}",
     "delayed_label": "지연",
     "dur_h": "시간",
-    "dur_m": "분"
+    "dur_m": "분",
+    "h_board_label": "탑승",
+    "h_board_main": "지금 탑승 중",
+    "gate_closes": "게이트는 {m}분 후에 닫습니다",
+    "h_final_label": "최종 호출",
+    "h_final_main": "지금 게이트로 가세요",
+    "h_delay_label": "지연 {dur}",
+    "actual_dep": "실제 출발 시각",
+    "h_cancel_label": "운항 취소",
+    "h_cancel_main": "항공사에 문의하세요",
+    "h_cancel_sub": "대체 항공편을 확인하세요",
+    "about_flight": "항공편 정보",
+    "airline_label": "항공사",
+    "aircraft_type": "기종",
+    "flight_no": "항공편 번호",
+    "flight_details": "항공편 세부 정보",
+    "notice_board": "정시에 게이트가 닫히니 미리 게이트에 도착하세요.",
+    "notice_final": "지금 바로 게이트로 이동하세요. 게이트가 닫히면 탑승이 불가합니다.",
+    "notice_ontime": "모든 절차를 완료하려면 공항에 일찍 도착하세요.",
+    "notice_delayed": "출발 시간이 변경되었습니다. 안내판을 확인하세요."
   }
 }

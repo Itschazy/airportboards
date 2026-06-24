@@ -147,6 +147,25 @@
     "boarding_in": "Biniş {time}",
     "delayed_label": "Gecikme",
     "dur_h": "sa",
-    "dur_m": "dk"
+    "dur_m": "dk",
+    "h_board_label": "Kalkışa çağrı",
+    "h_board_main": "Şimdi biniş",
+    "gate_closes": "Kapı {m} dk içinde kapanıyor",
+    "h_final_label": "Son çağrı",
+    "h_final_main": "Hemen kapıya gidin",
+    "h_delay_label": "Gecikme {dur}",
+    "actual_dep": "Gerçek kalkış zamanı",
+    "h_cancel_label": "Uçuş iptal edildi",
+    "h_cancel_main": "Havayolu ile iletişime geçin",
+    "h_cancel_sub": "Alternatif uçuşları kontrol edin",
+    "about_flight": "Uçuş hakkında",
+    "airline_label": "Havayolu",
+    "aircraft_type": "Uçak tipi",
+    "flight_no": "Uçuş numarası",
+    "flight_details": "Uçuş detayları",
+    "notice_board": "Lütfen kapıda erken bulunun. Kapı planlandığı gibi kesin olarak kapanır.",
+    "notice_final": "Hemen kapıya yönelin. Kapı kapandıktan sonra biniş yapılmaz.",
+    "notice_ontime": "Tüm işlemleri tamamlamak için havalimanına erken varın.",
+    "notice_delayed": "Kalkış saati değişti. Panoyu takip edin."
   }
 }

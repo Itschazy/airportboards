@@ -147,6 +147,25 @@
     "boarding_in": "Embarquement dans {time}",
     "delayed_label": "Retardé",
     "dur_h": "h",
-    "dur_m": "m"
+    "dur_m": "m",
+    "h_board_label": "Embarquement",
+    "h_board_main": "Embarquement en cours",
+    "gate_closes": "La porte ferme dans {m} min",
+    "h_final_label": "Dernier appel",
+    "h_final_main": "Rendez-vous à la porte maintenant",
+    "h_delay_label": "Retard {dur}",
+    "actual_dep": "Heure de départ réelle",
+    "h_cancel_label": "Vol annulé",
+    "h_cancel_main": "Contactez la compagnie aérienne",
+    "h_cancel_sub": "Vérifiez les vols alternatifs",
+    "about_flight": "À propos du vol",
+    "airline_label": "Compagnie aérienne",
+    "aircraft_type": "Type d'appareil",
+    "flight_no": "Numéro de vol",
+    "flight_details": "Détails du vol",
+    "notice_board": "Veuillez être à la porte en avance. La porte ferme strictement à l'heure prévue.",
+    "notice_final": "Dirigez-vous vers la porte maintenant. L'embarquement n'est pas autorisé une fois la porte fermée.",
+    "notice_ontime": "Arrivez tôt à l'aéroport pour effectuer toutes les formalités.",
+    "notice_delayed": "L'heure de départ a changé. Veuillez consulter les informations d'écran."
   }
 }

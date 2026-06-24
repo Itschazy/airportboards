@@ -147,6 +147,25 @@
     "boarding_in": "Boarding in {time}",
     "delayed_label": "Delayed",
     "dur_h": "h",
-    "dur_m": "m"
+    "dur_m": "m",
+    "h_board_label": "Boarding",
+    "h_board_main": "Boarding now",
+    "gate_closes": "Gate closes in {m} min",
+    "h_final_label": "Final call",
+    "h_final_main": "Go to the gate now",
+    "h_delay_label": "Delay {dur}",
+    "actual_dep": "Actual departure time",
+    "h_cancel_label": "Flight cancelled",
+    "h_cancel_main": "Contact the airline",
+    "h_cancel_sub": "Check alternative flights",
+    "about_flight": "About the flight",
+    "airline_label": "Airline",
+    "aircraft_type": "Aircraft type",
+    "flight_no": "Flight number",
+    "flight_details": "Flight details",
+    "notice_board": "Please be at the gate early. The gate closes strictly on schedule.",
+    "notice_final": "Head to the gate now. Boarding is not allowed once the gate closes.",
+    "notice_ontime": "Arrive at the airport early to complete all procedures.",
+    "notice_delayed": "The departure time has changed. Keep an eye on the board."
   }
 }

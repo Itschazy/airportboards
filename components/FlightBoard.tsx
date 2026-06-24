@@ -182,7 +182,9 @@ function BottomSheet({ flight, mode, onClose, tz, locale }: {
     return hrs > 0 ? `${hrs} ${t('dur_h')} ${mm} ${t('dur_m')}` : `${mm} ${t('dur_m')}`;
   };
 
-  const L = { fontSize: 12, color: C.secondary, textTransform: 'uppercase' as const, letterSpacing: '0.12em', marginBottom: 8 };
+  const L = { fontSize: 12, color: C.secondary, textTransform: 'uppercase' as const, letterSpacing: '0.12em' };
+  const [detailsOpen, setDetailsOpen] = useState(false);
+  useEffect(() => { if (!vis) setDetailsOpen(false); }, [vis]);
 
   let body = null;
   if (flight) {
@@ -190,123 +192,145 @@ function BottomSheet({ flight, mode, onClose, tz, locale }: {
     const color = STATUS_COLOR[status] || C.gray;
     const statusLabel = t(`st_${status}`);
     const isDep = mode === 'departures';
-    const dispTime = flight.actual || flight.scheduled;       // new time if delayed
+    const dispTime = flight.actual || flight.scheduled;
     const mins = minsUntil(dispTime);
     const n = localNow();
     const nowClock = `${String(n.h).padStart(2, '0')}:${String(n.m).padStart(2, '0')}`;
     const dateStr = new Date().toLocaleDateString(locale, { timeZone: tz || undefined, weekday: 'short', month: 'short', day: 'numeric' });
 
-    // ── Main insight card (context-aware) ──
-    type Card = { label: string; value: string; sub?: string; accent?: string };
-    let card: Card;
+    const Icon = ({ name }: { name: string }) => {
+      const p = { width: 26, height: 26, viewBox: '0 0 24 24', fill: 'none', stroke: color, strokeWidth: 1.8, strokeLinecap: 'round' as const, strokeLinejoin: 'round' as const, style: { flexShrink: 0, opacity: 0.9 } };
+      if (name === 'plane') return <svg {...p}><path d="M21 16v-2l-8-5V3.5a1.5 1.5 0 0 0-3 0V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5z" /></svg>;
+      if (name === 'bell') return <svg {...p}><path d="M18 8a6 6 0 0 0-12 0c0 7-3 9-3 9h18s-3-2-3-9M13.7 21a2 2 0 0 1-3.4 0" /></svg>;
+      if (name === 'clock') return <svg {...p}><circle cx="12" cy="12" r="9" /><path d="M12 7v5l3 2" /></svg>;
+      return null;
+    };
+
+    // ── Hero card (status-specific, action-oriented) ──
+    type Hero = { label: string; main: string; sub?: string; subStrike?: boolean; bottom?: string; icon?: string; medium?: boolean };
+    let hero: Hero;
     if (status === 'departed' || status === 'arrived') {
-      card = { label: t('flight_departed'), value: flight.scheduled, accent: C.gray };
+      hero = { label: t('flight_departed'), main: flight.scheduled, sub: t('actual_dep') };
     } else if (status === 'baggage') {
-      card = { label: t('st_baggage'), value: flight.baggage || dispTime, accent: C.green };
+      hero = { label: t('st_baggage'), main: flight.baggage || dispTime };
     } else if (status === 'cancelled') {
-      card = { label: t('st_cancelled'), value: flight.scheduled, accent: C.red };
+      hero = { label: t('h_cancel_label'), main: t('h_cancel_main'), sub: t('h_cancel_sub'), icon: 'bell', medium: true };
     } else if (status === 'boarding') {
-      card = { label: t('boarding_now'), value: flight.gate ? `${t('gate')} ${flight.gate}` : t('boarding_now'),
-               sub: `${isDep ? t('departure') : t('arrival')} ${dispTime}`, accent: C.blue };
+      hero = { label: t('h_board_label'), main: t('h_board_main'), sub: t('gate_closes', { m: Math.max(1, mins ?? 0) }), bottom: dispTime, icon: 'plane', medium: true };
     } else if (status === 'finalcall') {
-      card = { label: t('final_call'), value: flight.gate ? t('go_to_gate_now', { gate: flight.gate }) : t('final_call'),
-               sub: `${isDep ? t('departure') : t('arrival')} ${dispTime}`, accent: C.red };
+      hero = { label: t('h_final_label'), main: t('h_final_main'), sub: t('gate_closes', { m: Math.max(1, mins ?? 0) }), bottom: dispTime, icon: 'bell', medium: true };
+    } else if (status === 'delayed') {
+      hero = { label: t('h_delay_label', { dur: fmtDur(flight.delay && flight.delay > 0 ? flight.delay : Math.max(0, mins ?? 0)) }), main: dispTime, sub: t('was', { time: flight.scheduled }), subStrike: true, icon: 'clock' };
     } else {
-      const value = mins == null ? dispTime : (mins <= 0 ? t('now') : fmtDur(mins));
-      const delayed = status === 'delayed';
-      card = {
-        label: isDep ? t('departs_in') : t('arrives_in'),
-        value,
-        sub: delayed ? t('new_departure', { time: dispTime }) : t('on_schedule', { time: flight.scheduled }),
-        accent: delayed ? C.orange : undefined,
-      };
+      hero = { label: isDep ? t('departs_in') : t('arrives_in'), main: mins != null && mins > 0 ? fmtDur(mins) : t('now'), sub: t('on_schedule', { time: flight.scheduled }), icon: 'clock' };
     }
 
-    // ── Detail blocks (only those with data) ──
-    type Block = { label: string; value: string; valueColor?: string; sub?: string; strike?: string };
-    const blocks: Block[] = [];
-    blocks.push({
-      label: isDep ? t('departure') : t('arrival'),
-      value: dispTime,
-      valueColor: flight.actual ? C.orange : C.text,
-      strike: flight.actual ? flight.scheduled : undefined,
-      sub: dateStr,
-    });
+    // ── Detail grid: only fields with data, never the status (already in hero) ──
+    type Block = { label: string; value: string; valueColor?: string; strike?: string; sub?: string };
+    const blocks: Block[] = [{
+      label: isDep ? t('departure') : t('arrival'), value: dispTime,
+      valueColor: flight.actual ? C.orange : C.text, strike: flight.actual ? flight.scheduled : undefined, sub: dateStr,
+    }];
     if (flight.gate)     blocks.push({ label: t('gate'), value: flight.gate });
     if (flight.terminal) blocks.push({ label: t('terminal'), value: flight.terminal });
     if (flight.baggage)  blocks.push({ label: t('baggage'), value: flight.baggage, valueColor: C.green });
-    if (flight.aircraft) blocks.push({ label: t('aircraft'), value: flight.aircraft });
-    blocks.push({
-      label: t('flight_status'), value: statusLabel, valueColor: color,
-      sub: flight.delay && flight.delay > 0 ? t('delayed_by', { m: flight.delay }) : undefined,
-    });
-    blocks.push({ label: t('updated'), value: t('just_now'), sub: nowClock });
+
+    // ── About-the-flight rows (revealed via "flight details") ──
+    const about: { label: string; value: string }[] = [{ label: t('airline_label'), value: flight.airline }];
+    if (flight.aircraft) about.push({ label: t('aircraft_type'), value: flight.aircraft });
+    about.push({ label: t('flight_no'), value: flight.flight });
+
+    const notice =
+      status === 'boarding' ? t('notice_board') :
+      status === 'finalcall' ? t('notice_final') :
+      status === 'delayed' ? t('notice_delayed') :
+      (status === 'ontime' || status === 'scheduled') ? t('notice_ontime') : null;
+
+    const heroMainSize = hero.medium ? 30 : (hero.main.length > 8 ? 36 : hero.main.length > 5 ? 44 : 52);
 
     body = (
-      <div style={{ padding: '6px 24px 0' }}>
+      <div style={{ padding: '4px 24px calc(28px + env(safe-area-inset-bottom))' }}>
 
         {/* Header */}
-        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: 12, gap: 12 }}>
+        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', gap: 12 }}>
           <div style={{ minWidth: 0 }}>
-            <div style={{ fontSize: 'clamp(52px, 16vw, 68px)', fontWeight: 800, letterSpacing: '-0.04em', color: C.text, lineHeight: 0.95 }}>
-              {flight.flight}
-            </div>
-            <div style={{ fontSize: 'clamp(22px, 6vw, 28px)', color: '#A1A1A1', marginTop: 10, lineHeight: 1.15, fontWeight: 400 }}>
-              {flight.destination || flight.origin}
-            </div>
-            <div style={{ fontSize: 20, color: C.text, fontWeight: 600, marginTop: 4 }}>
-              {flight.airline}
-            </div>
+            <div style={{ fontSize: 'clamp(52px, 16vw, 70px)', fontWeight: 800, letterSpacing: '-0.04em', color: C.text, lineHeight: 0.95 }}>{flight.flight}</div>
+            <div style={{ fontSize: 'clamp(22px, 6.5vw, 30px)', color: '#A1A1A1', marginTop: 12, lineHeight: 1.15 }}>{flight.destination || flight.origin}</div>
+            <div style={{ fontSize: 22, color: C.text, fontWeight: 600, marginTop: 6 }}>{flight.airline}</div>
           </div>
-          <div style={{
-            display: 'flex', alignItems: 'center', gap: 6, padding: '7px 13px', borderRadius: 999,
-            background: color + '1A', border: `1px solid ${color}4D`, marginTop: 6, flexShrink: 0,
-          }}>
+          <div style={{ display: 'flex', alignItems: 'center', gap: 6, padding: '7px 13px', borderRadius: 999, background: color + '1F', border: `1px solid ${color}59`, marginTop: 6, flexShrink: 0 }}>
             <div style={{ width: 7, height: 7, borderRadius: '50%', background: color }} />
-            <span style={{ fontSize: 12, fontWeight: 700, color, letterSpacing: '0.07em', textTransform: 'uppercase' }}>{statusLabel}</span>
+            <span style={{ fontSize: 12, fontWeight: 700, color, letterSpacing: '0.08em', textTransform: 'uppercase' }}>{statusLabel}</span>
           </div>
         </div>
 
-        <div style={{ height: 1, background: 'rgba(255,255,255,0.07)', margin: '18px 0' }} />
+        <div style={{ height: 1, background: 'rgba(255,255,255,0.08)', margin: '20px 0' }} />
 
-        {/* Main insight card */}
-        <div style={{
-          background: card.accent ? `${card.accent}14` : '#1C1C1E',
-          border: card.accent ? `1px solid ${card.accent}33` : '1px solid transparent',
-          borderRadius: 18, padding: '16px 20px 18px', marginBottom: 22,
-        }}>
-          <div style={{ ...L, marginBottom: 8 }}>{card.label}</div>
-          <div style={{
-            fontSize: card.value.length > 9 ? 36 : card.value.length > 5 ? 44 : 54,
-            fontWeight: 800, letterSpacing: '-0.03em', lineHeight: 1,
-            color: card.accent || C.text, fontVariantNumeric: 'tabular-nums', textTransform: 'uppercase',
-          }}>
-            {card.value}
+        {/* Hero card */}
+        <div style={{ background: color + '1A', border: `1px solid ${color}40`, borderRadius: 18, padding: '18px 20px 20px' }}>
+          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', gap: 12 }}>
+            <div style={{ minWidth: 0 }}>
+              <div style={{ ...L, marginBottom: 10 }}>{hero.label}</div>
+              <div style={{ fontSize: heroMainSize, fontWeight: 800, letterSpacing: '-0.03em', lineHeight: 1, color, fontVariantNumeric: 'tabular-nums' }}>{hero.main}</div>
+              {hero.sub && <div style={{ fontSize: 15, color: C.secondary, marginTop: 10, textDecoration: hero.subStrike ? 'line-through' : 'none' }}>{hero.sub}</div>}
+            </div>
+            {hero.icon && <Icon name={hero.icon} />}
           </div>
-          {card.sub && <div style={{ fontSize: 15, color: C.secondary, marginTop: 9 }}>{card.sub}</div>}
+          {hero.bottom && (
+            <>
+              <div style={{ height: 1, background: 'rgba(255,255,255,0.08)', margin: '16px 0' }} />
+              <div style={{ ...L, marginBottom: 4 }}>{isDep ? t('departure') : t('arrival')}</div>
+              <div style={{ fontSize: 24, fontWeight: 700, color: C.text, fontVariantNumeric: 'tabular-nums' }}>{hero.bottom}</div>
+            </>
+          )}
         </div>
 
         {/* Detail grid */}
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(100px, 1fr))', gap: '22px 14px' }}>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(92px, 1fr))', gap: 12, marginTop: 24 }}>
           {blocks.map((b, i) => (
-            <div key={i} style={{ minWidth: 0 }}>
+            <div key={i} style={{ background: 'rgba(255,255,255,0.04)', border: '1px solid rgba(255,255,255,0.08)', borderRadius: 14, padding: '14px 16px', minHeight: 104, display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
               <div style={L}>{b.label}</div>
-              <div style={{
-                fontSize: b.value.length > 6 ? 19 : 30, fontWeight: 700,
-                color: b.valueColor || C.text, lineHeight: 1.05, letterSpacing: '-0.02em',
-                fontVariantNumeric: 'tabular-nums', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis',
-              }}>
-                {b.value}
+              <div>
+                <div style={{ fontSize: b.value.length > 5 ? 22 : 30, fontWeight: 700, color: b.valueColor || C.text, lineHeight: 1.05, letterSpacing: '-0.02em', fontVariantNumeric: 'tabular-nums', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>{b.value}</div>
+                {b.strike && <div style={{ fontSize: 12, color: C.secondary, textDecoration: 'line-through', marginTop: 2 }}>{b.strike}</div>}
+                {b.sub && <div style={{ fontSize: 12, color: '#6A6A6A', marginTop: 4 }}>{b.sub}</div>}
               </div>
-              {b.strike && (
-                <div style={{ fontSize: 13, color: C.secondary, textDecoration: 'line-through', marginTop: 3 }}>{b.strike}</div>
-              )}
-              {b.sub && (
-                <div style={{ fontSize: 13, color: '#6A6A6A', marginTop: 5, lineHeight: 1.3 }}>{b.sub}</div>
-              )}
             </div>
           ))}
         </div>
+
+        {/* Updated row */}
+        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', height: 50, marginTop: 12, padding: '0 16px', background: 'rgba(255,255,255,0.03)', borderRadius: 14 }}>
+          <span style={{ fontSize: 13, color: C.secondary }}>{t('updated')}</span>
+          <span style={{ fontSize: 14, color: C.text, fontVariantNumeric: 'tabular-nums' }}>{nowClock}</span>
+        </div>
+
+        {/* Flight details (collapsed "about the flight") */}
+        <button onClick={() => setDetailsOpen(o => !o)} style={{ width: '100%', height: 52, marginTop: 12, display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 8, border: '1px solid rgba(255,255,255,0.08)', background: 'rgba(255,255,255,0.03)', borderRadius: 14, color: C.text, fontSize: 15, fontWeight: 600, cursor: 'pointer' }}>
+          {t('flight_details')}
+          <svg width="13" height="13" viewBox="0 0 13 13" fill="none" style={{ transform: detailsOpen ? 'rotate(180deg)' : 'none', transition: 'transform 0.2s' }}><path d="M3 5L6.5 8.5L10 5" stroke="#8A8A8A" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" /></svg>
+        </button>
+        {detailsOpen && (
+          <div style={{ marginTop: 14 }}>
+            <div style={{ ...L, marginBottom: 12 }}>{t('about_flight')}</div>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
+              {about.map((r, i) => (
+                <div key={i} style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 12, padding: '13px 0', borderBottom: i < about.length - 1 ? '1px solid rgba(255,255,255,0.06)' : 'none' }}>
+                  <span style={{ fontSize: 13, color: C.secondary }}>{r.label}</span>
+                  <span style={{ fontSize: 15, color: C.text, fontWeight: 500, textAlign: 'right' }}>{r.value}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
+
+        {/* Info notice */}
+        {notice && (
+          <div style={{ display: 'flex', gap: 11, alignItems: 'flex-start', marginTop: 18, padding: '14px 16px', background: color + '0D', border: `1px solid ${color}40`, borderRadius: 14 }}>
+            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" style={{ flexShrink: 0, marginTop: 1 }}><circle cx="9" cy="9" r="8" stroke={color} strokeWidth="1.5" /><path d="M9 5.5v.5M9 8v4" stroke={color} strokeWidth="1.6" strokeLinecap="round" /></svg>
+            <span style={{ fontSize: 14, lineHeight: 1.45, color: '#C4C4C4' }}>{notice}</span>
+          </div>
+        )}
 
       </div>
     );

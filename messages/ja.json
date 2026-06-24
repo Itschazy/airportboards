@@ -147,6 +147,25 @@
     "boarding_in": "搭乗開始まで {time}",
     "delayed_label": "遅延",
     "dur_h": "時間",
-    "dur_m": "分"
+    "dur_m": "分",
+    "h_board_label": "搭乗中",
+    "h_board_main": "ただいま搭乗中",
+    "gate_closes": "ゲートはあと{m}分で閉まります",
+    "h_final_label": "最終案内",
+    "h_final_main": "ただちにゲートへ向かってください",
+    "h_delay_label": "遅延 {dur}",
+    "actual_dep": "実際の出発時刻",
+    "h_cancel_label": "欠航",
+    "h_cancel_main": "航空会社にお問い合わせください",
+    "h_cancel_sub": "代替便を確認してください",
+    "about_flight": "フライト情報",
+    "airline_label": "航空会社",
+    "aircraft_type": "機種",
+    "flight_no": "便名",
+    "flight_details": "便の詳細",
+    "notice_board": "時間厳守でゲートにお越しください。ゲートは定刻に確実に閉まります。",
+    "notice_final": "ただちにゲートへ向かってください。ゲート閉鎖後は搭乗できません。",
+    "notice_ontime": "出発手続きを余裕をもって行えるよう早めに空港へお越しください。",
+    "notice_delayed": "出発時刻が変更されています。掲示版の情報をご確認ください。"
   }
 }
