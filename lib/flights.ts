@@ -115,7 +115,7 @@ export type FlightRow = ReturnType<typeof mapFlight>;
 // Show arrivals that landed within the last ~2h, so people meeting a flight can
 // see when it touched down (could have been 10 min ago).
 const RECENT_ARR_WINDOW = 2 * 60 * 60;
-const RECENT_ARR_MAX = 20; // cap recently-landed shown, so upcoming arrivals still fit
+const RECENT_ARR_MAX = 50; // cap recently-landed shown, so upcoming arrivals still fit
 
 // Fetch + cache raw airlabs schedules for an arbitrary query (board / route / flight).
 // `direction` controls which timestamp drives the ordering (dep vs arr time).
@@ -137,12 +137,13 @@ export async function fetchRaw(query: string, direction: 'departures' | 'arrival
     : (f.dep_estimated_ts || f.dep_time_ts)) || 0;
 
   if (direction === 'arrivals') {
-    // Recently landed (last ~2h, most-recent first) above upcoming arrivals (soonest
-    // first). Cap the recent block so a busy hub still shows plenty of upcoming.
+    // Single ascending timeline by arrival time: earliest recent landing (up to ~2h
+    // ago) at the top → most recent → upcoming. Cap the recent block (keeping the
+    // MOST recent ones) so a busy hub still shows plenty of upcoming arrivals.
     const recent = raw
       .filter(f => { const t = tsOf(f); return t >= now - RECENT_ARR_WINDOW && t < now; })
-      .sort((a, b) => tsOf(b) - tsOf(a))
-      .slice(0, RECENT_ARR_MAX);
+      .sort((a, b) => tsOf(a) - tsOf(b))
+      .slice(-RECENT_ARR_MAX);
     const upcoming = raw.filter(f => tsOf(f) >= now).sort((a, b) => tsOf(a) - tsOf(b));
     raw = [...recent, ...upcoming];
   } else {
