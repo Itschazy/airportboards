@@ -1,9 +1,10 @@
 import type { Metadata } from 'next';
 import { getTranslations , setRequestLocale } from 'next-intl/server';
-import { notFound } from 'next/navigation';
+import { notFound, redirect } from 'next/navigation';
 import { getAirport, getStaticIataCodes } from '@/lib/airports';
 import { getAirportName } from '@/lib/airport-names';
 import { getCityName } from '@/lib/places';
+import { getBoard } from '@/lib/flights';
 import { FlightBoard } from '@/components/FlightBoard';
 import { locales } from '@/lib/i18n';
 
@@ -38,11 +39,6 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return {
     title,
     description,
-    keywords: [
-      `${airport.name} arrivals`, `${airport.iata} arrivals today`,
-      `${airport.city} airport arrivals`, `${airport.iata} arrival board`,
-      `flights to ${airport.city}`, `${airport.name} landing flights`,
-    ].join(', '),
     alternates: { canonical, languages },
     openGraph: { title, description, type: 'website', url: canonical, siteName: 'AirportsBoard.live' },
     twitter: { card: 'summary', title, description },
@@ -53,10 +49,13 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 export default async function ArrivalsPage({ params }: Props) {
   const { locale, iata } = await params;
   setRequestLocale(locale);
+  if (iata !== iata.toUpperCase()) redirect(`/${locale}/airport/${iata.toUpperCase()}/arrivals`);
   const airport = getAirport(iata.toUpperCase());
   if (!airport) notFound();
 
   const canonical = `${BASE}/${locale}/airport/${airport.iata}/arrivals`;
+  let initialFlights: Awaited<ReturnType<typeof getBoard>> = [];
+  try { initialFlights = await getBoard(airport.iata, 'arrivals', locale); } catch {}
   const t = await getTranslations({ locale, namespace: 'meta' });
   const tNav = await getTranslations({ locale, namespace: 'nav' });
   const name = getAirportName(airport.iata, locale, airport.name);
@@ -95,7 +94,7 @@ export default async function ArrivalsPage({ params }: Props) {
       }}>
         {h1}
       </h1>
-      <FlightBoard airport={airport} locale={locale} defaultMode="arrivals" displayName={getAirportName(airport.iata, locale, airport.name)} />
+      <FlightBoard airport={airport} locale={locale} defaultMode="arrivals" displayName={getAirportName(airport.iata, locale, airport.name)} initialFlights={initialFlights} />
     </>
   );
 }

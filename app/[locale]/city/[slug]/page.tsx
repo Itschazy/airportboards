@@ -36,11 +36,13 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const languages: Record<string, string> = {};
   for (const loc of locales) languages[loc] = `${BASE}/${loc}/city/${c.slug}`;
   languages['x-default'] = `${BASE}/en/city/${c.slug}`;
+  const canonical = `${BASE}/${locale}/city/${c.slug}`;
   return {
     title: `${title} — AirportsBoard`,
     description: t('city_desc', { city, count: c.count }),
-    alternates: { canonical: `${BASE}/${locale}/city/${c.slug}`, languages },
-    // A single-airport "city" page is near-duplicate of that airport — don't index it.
+    // A single-airport "city" page is near-duplicate of that airport — don't index it,
+    // and don't advertise an hreflang cluster for a noindex page.
+    alternates: c.count > 1 ? { canonical, languages } : { canonical },
     robots: { index: c.count > 1, follow: true },
   };
 }

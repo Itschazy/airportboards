@@ -1,10 +1,11 @@
 import type { Metadata } from 'next';
 import { getTranslations , setRequestLocale } from 'next-intl/server';
-import { notFound } from 'next/navigation';
+import { notFound, redirect } from 'next/navigation';
 import { getAirport, getStaticIataCodes } from '@/lib/airports';
 import { getAirportContent } from '@/lib/airport-content';
 import { getAirportName } from '@/lib/airport-names';
 import { getCityName, getCountryName } from '@/lib/places';
+import { getBoard } from '@/lib/flights';
 import { FlightBoard } from '@/components/FlightBoard';
 import { AirportBottom } from '@/components/AirportBottom';
 import { locales } from '@/lib/i18n';
@@ -44,11 +45,6 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return {
     title,
     description,
-    keywords: [
-      `${airport.name} departures`, `${airport.name} arrivals`,
-      `${airport.iata} flight status`, `${airport.iata} live board`,
-      `${airport.city} airport flights`, `${airport.name} real time`,
-    ].join(', '),
     alternates: { canonical, languages },
     openGraph: {
       title, description, type: 'website', url: canonical,
@@ -62,11 +58,16 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 export default async function AirportPage({ params }: Props) {
   const { locale, iata } = await params;
   setRequestLocale(locale);
+  // Wrong-case IATA → single 301 to the canonical uppercase URL (saves crawl budget).
+  if (iata !== iata.toUpperCase()) redirect(`/${locale}/airport/${iata.toUpperCase()}`);
   const airport = getAirport(iata.toUpperCase());
   if (!airport) notFound();
 
   const canonical = `${BASE}/${locale}/airport/${airport.iata}`;
   const about = getAirportContent(airport.iata, locale);
+  // SSR the first (departures) board so the page is useful without client JS.
+  let initialFlights: Awaited<ReturnType<typeof getBoard>> = [];
+  try { initialFlights = await getBoard(airport.iata, 'departures', locale); } catch {}
   const t = await getTranslations({ locale, namespace: 'meta' });
   const tNav = await getTranslations({ locale, namespace: 'nav' });
   const name = getAirportName(airport.iata, locale, airport.name);
@@ -124,7 +125,7 @@ export default async function AirportPage({ params }: Props) {
       }}>
         {h1}
       </h1>
-      <FlightBoard airport={airport} locale={locale} displayName={name} />
+      <FlightBoard airport={airport} locale={locale} displayName={name} initialFlights={initialFlights} />
       <AirportBottom airport={airport} locale={locale} about={about} displayName={name} />
     </>
   );

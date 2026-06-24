@@ -30,6 +30,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const title = t('country_title', { country: c.country });
   const languages: Record<string, string> = {};
   for (const loc of locales) languages[loc] = `${BASE}/${loc}/airports/${c.slug}`;
+  languages['x-default'] = `${BASE}/en/airports/${c.slug}`;
   return {
     title: `${title} — AirportsBoard`,
     description: t('country_desc', { country: c.country, count: c.count }),

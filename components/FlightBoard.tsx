@@ -390,18 +390,22 @@ function BottomSheet({ flight, mode, onClose, tz, locale }: {
 
 // ─── Main Component ───────────────────────────────────────────────────────────
 
-export function FlightBoard({ airport, locale, defaultMode = 'departures', displayName }: {
+export function FlightBoard({ airport, locale, defaultMode = 'departures', displayName, initialFlights }: {
   airport: Airport;
   locale: string;
   defaultMode?: Mode;
   displayName?: string;
+  initialFlights?: Flight[];
 }) {
   const t = useTranslations('ui');
+  const hasInitial = !!(initialFlights && initialFlights.length);
   const [mode, setMode]           = useState<Mode>(defaultMode);
   const [filter, setFilter]       = useState<FilterKey>('all');
   const [search, setSearch]       = useState('');
-  const [flights, setFlights]     = useState<Flight[]>([]);
-  const [loading, setLoading]     = useState(true);
+  // SSR-rendered first set (current/default mode) so crawlers and users see real
+  // flights without waiting for client JS; the poll below refreshes it.
+  const [flights, setFlights]     = useState<Flight[]>(initialFlights ?? []);
+  const [loading, setLoading]     = useState(!hasInitial);
   const [time, setTime]           = useState('');
   const [lastUpdated, setUpdated] = useState<Date | null>(null);
   const [updLabel, setUpdLabel]   = useState('');
@@ -423,7 +427,14 @@ export function FlightBoard({ airport, locale, defaultMode = 'departures', displ
     }
   }, [airport.iata, mode, t]);
 
-  useEffect(() => { setLoading(true); fetchFlights(); }, [fetchFlights]);
+  const didInit = useRef(false);
+  useEffect(() => {
+    // First mount with SSR flights → refresh silently (keep the server rows visible).
+    if (!didInit.current && hasInitial) { didInit.current = true; fetchFlights(); return; }
+    didInit.current = true;
+    setLoading(true);
+    fetchFlights();
+  }, [fetchFlights]);
 
   // Poll only while the tab is visible, and stop after a stretch of idle
   // time — so backgrounded/forgotten tabs don't keep burning API quota.

@@ -36,14 +36,19 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!c) return {};
   const t = await getTranslations({ locale, namespace: 'home' });
   const flight = pretty(c);
+  // Don't index a flight number with no current data (avoids soft-404s across the
+  // astronomically large flight-number space). Shared fetch is cache-deduped.
+  let found = null;
+  try { found = await getFlightByNumber(c, locale); } catch {}
+  const canonical = `${BASE}/${locale}/flight/${c}`;
   const languages: Record<string, string> = {};
   for (const loc of locales) languages[loc] = `${BASE}/${loc}/flight/${c}`;
   languages['x-default'] = `${BASE}/en/flight/${c}`;
   return {
     title: `${t('flight_title', { flight })} — AirportsBoard`,
     description: t('flight_desc', { flight }),
-    alternates: { canonical: `${BASE}/${locale}/flight/${c}`, languages },
-    robots: { index: true, follow: true },
+    alternates: found ? { canonical, languages } : { canonical },
+    robots: { index: !!found, follow: true },
   };
 }
 

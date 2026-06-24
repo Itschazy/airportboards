@@ -37,14 +37,19 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const from = getCityName(a.city, locale), to = getCityName(b.city, locale);
   const title = t('route_title', { from, to });
   const slug = `${p.from}-${p.to}`;
+  // Only index a route that actually has flights — avoids soft-404s on the huge
+  // pair space. Shared fetch is cache-deduped with the page render.
+  let hasFlights = false;
+  try { hasFlights = (await getRoute(p.from, p.to, locale)).length > 0; } catch {}
+  const canonical = `${BASE}/${locale}/route/${slug}`;
   const languages: Record<string, string> = {};
   for (const loc of locales) languages[loc] = `${BASE}/${loc}/route/${slug}`;
   languages['x-default'] = `${BASE}/en/route/${slug}`;
   return {
     title: `${title} — AirportsBoard`,
     description: t('route_desc', { from, to, iata1: p.from, iata2: p.to }),
-    alternates: { canonical: `${BASE}/${locale}/route/${slug}`, languages },
-    robots: { index: true, follow: true },
+    alternates: hasFlights ? { canonical, languages } : { canonical },
+    robots: { index: hasFlights, follow: true },
   };
 }
 

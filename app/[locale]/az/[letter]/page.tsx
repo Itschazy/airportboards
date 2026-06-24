@@ -23,6 +23,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const t = await getTranslations({ locale, namespace: 'home' });
   const languages: Record<string, string> = {};
   for (const loc of locales) languages[loc] = `${BASE}/${loc}/az/${letter.toLowerCase()}`;
+  languages['x-default'] = `${BASE}/en/az/${letter.toLowerCase()}`;
   return {
     title: `${t('az_title', { letter: L })} — AirportsBoard`,
     description: t('az_desc', { letter: L }),
