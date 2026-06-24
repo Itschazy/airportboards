@@ -49,9 +49,12 @@ export function getSitemapCount(): number {
 // Everything else renders on-demand via ISR and is cached after first hit.
 // Keeps the build fast instead of generating ~164k pages every deploy.
 export function getStaticIataCodes(): string[] {
-  const priority = new Set<string>(POPULAR_AIRPORTS);
-  for (const iata of HUB_WEIGHT.keys()) priority.add(iata);
-  return [...priority].filter(iata => byIata.has(iata));
+  // Prerender only the top ~30 hubs at BUILD time — each page now SSR-fetches its
+  // flight board, and the small VDS runs low on disk/time. The rest render on-demand
+  // via ISR (still fully indexable, just generated on first hit).
+  const top = [...HUB_WEIGHT.entries()].sort((a, b) => b[1] - a[1]).map(e => e[0]);
+  const ordered = [...new Set([...POPULAR_AIRPORTS, ...top])].filter(iata => byIata.has(iata));
+  return ordered.slice(0, 30);
 }
 
 // Multilingual search aliases (city/airport names in 12 languages), loaded
