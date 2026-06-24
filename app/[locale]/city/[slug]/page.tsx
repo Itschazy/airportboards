@@ -15,7 +15,9 @@ export const dynamicParams = true;
 export const revalidate = 86400;
 
 export async function generateStaticParams() {
-  return getCities().filter(c => c.count > 1).map(c => ({ slug: c.slug }));
+  // Prerender only the top multi-airport cities; the rest render on-demand via ISR.
+  // (A small VDS can't prerender thousands of extra pages without OOM during build.)
+  return getCities().filter(c => c.count > 1).slice(0, 20).map(c => ({ slug: c.slug }));
 }
 
 const flag = (iso2: string) =>
