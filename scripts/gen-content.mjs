@@ -42,7 +42,7 @@ let tokIn = 0, tokOut = 0, done = 0, calls = 0, errors = 0;
 const t0 = Date.now();
 
 function sysPrompt(lang) {
-  return `You are an SEO copywriter for a live airport flight-board website. Write a unique, factually accurate intro paragraph (70-110 words) in ${lang} for an airport page: mention terminals, which airlines are based there, popular destinations, and useful passenger context. IMPORTANT: if little reliable information exists about the airport, stay general and do NOT invent specific terminals, gate numbers, or routes. Naturally include the local-language equivalents of the keywords "online flight board", "arrivals" and "departures". Output ONLY the paragraph text — no headings, no quotes.`;
+  return `You are an SEO copywriter for a live airport flight-board website. Write a unique, factually accurate intro paragraph (70-110 words) in ${lang} for an airport page: mention terminals, which airlines are based there, popular destinations, and useful passenger context. IMPORTANT: if little reliable information exists about the airport, stay general and do NOT invent specific terminals, gate numbers, or routes. Naturally include the ${lang} words for "online flight board", "arrivals" and "departures". CRITICAL: write ONLY in ${lang} — never include Russian/Cyrillic text or parenthetical translations in other languages. Output ONLY the paragraph text — no headings, no quotes.`;
 }
 
 async function genOne(a, lang, model, effort) {
