@@ -18,6 +18,7 @@ export default function sitemap({ id }: { id: number }): MetadataRoute.Sitemap {
   if (id === 0) {
     for (const locale of locales) {
       entries.push({ url: `${BASE}/${locale}`, changeFrequency: 'monthly', priority: 0.8 });
+      entries.push({ url: `${BASE}/${locale}/airports`, changeFrequency: 'weekly', priority: 0.7 });
       for (const L of LETTERS) {
         entries.push({ url: `${BASE}/${locale}/az/${L}`, changeFrequency: 'weekly', priority: 0.5 });
       }
