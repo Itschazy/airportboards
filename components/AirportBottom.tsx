@@ -2,6 +2,8 @@ import { getTranslations } from 'next-intl/server';
 import Link from 'next/link';
 import type { Airport } from '@/lib/airports';
 import { nearestAirports, getCountries, getAirportsByCountry } from '@/lib/airports';
+import { getCityName, getCountryName } from '@/lib/places';
+import { getAirportName } from '@/lib/airport-names';
 import { MoreInfo, OverviewMetrics, PopularRoutes, AboutCard, Faq } from '@/components/AirportExtras';
 
 const LETTERS = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('');
@@ -22,6 +24,8 @@ function Chevron() {
 export async function AirportBottom({ airport, locale, about, displayName }: { airport: Airport; locale: string; about: string | null; displayName?: string }) {
   const t = await getTranslations({ locale, namespace: 'home' });
   const name = displayName || airport.name;
+  const city = getCityName(airport.city, locale);
+  const country = getCountryName(airport.country, locale);
 
   const nearby = nearestAirports(airport.lat, airport.lon, 7).filter(a => a.iata !== airport.iata).slice(0, 5);
   const countryInfo = getCountries().find(c => c.country === airport.country);
@@ -33,7 +37,7 @@ export async function AirportBottom({ airport, locale, about, displayName }: { a
   const faq: { q: string; a: string }[] = [
     { q: t('faq_iata_q', { name }), a: airport.iata },
     ...(airport.icao ? [{ q: t('faq_icao_q', { name }), a: airport.icao }] : []),
-    { q: t('faq_where_q', { name }), a: `${airport.city}, ${airport.country}` },
+    { q: t('faq_where_q', { name }), a: `${city}, ${country}` },
     { q: t('faq_tz_q', { name }), a: `${airport.tz}${offset ? ` (${offset})` : ''}` },
     { q: t('faq_arrive_q', { name }), a: t('faq_arrive_a') },
     { q: t('faq_live_q', { name }), a: t('faq_live_a', { name, iata: airport.iata }) },
@@ -63,7 +67,7 @@ export async function AirportBottom({ airport, locale, about, displayName }: { a
             <div style={{ background: '#0B0B0B', border: '1px solid #1A1A1A', borderRadius: 20, padding: '20px 22px' }}>
               <div style={{ fontSize: 30, fontWeight: 800, letterSpacing: '-0.03em', color: '#FFFFFF', lineHeight: 1 }}>{airport.iata} {t('airport_word')}</div>
               <div style={{ fontSize: 16, color: '#B4B4B4', marginTop: 8 }}>{name}</div>
-              <div style={{ fontSize: 14, color: SUB, marginTop: 4 }}>{airport.city}, {airport.country}{offset ? ` · ${offset}` : ''}</div>
+              <div style={{ fontSize: 14, color: SUB, marginTop: 4 }}>{city}, {country}{offset ? ` · ${offset}` : ''}</div>
             </div>
             <OverviewMetrics iata={airport.iata} depLabel={t('ov_dep')} arrLabel={t('ov_arr')} />
           </section>
@@ -77,13 +81,13 @@ export async function AirportBottom({ airport, locale, about, displayName }: { a
           {/* 4. NEARBY AIRPORTS */}
           {nearby.length > 0 && (
             <section style={sec}>
-              <H2>{t('nearby_title', { city: airport.city })}</H2>
+              <H2>{t('nearby_title', { city })}</H2>
               <ul style={{ listStyle: 'none', margin: 0, padding: 0, display: 'flex', flexDirection: 'column', gap: 8 }}>
                 {nearby.map(a => (
                   <li key={a.iata}>
                     <Link href={`/${locale}/airport/${a.iata}`} style={{ display: 'flex', alignItems: 'center', gap: 12, textDecoration: 'none', color: 'inherit', background: '#0B0B0B', border: '1px solid #1A1A1A', borderRadius: 14, padding: '12px 16px' }}>
                       <span style={{ fontSize: 16, fontWeight: 700, color: '#0A84FF', width: 44, flexShrink: 0 }}>{a.iata}</span>
-                      <span style={{ flex: 1, minWidth: 0, fontSize: 14, color: '#E4E4E7', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>{a.name}</span>
+                      <span style={{ flex: 1, minWidth: 0, fontSize: 14, color: '#E4E4E7', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>{getAirportName(a.iata, locale, a.name)}</span>
                       <span style={{ fontSize: 12, color: SUB, flexShrink: 0 }}>{t('km_away', { km: a.km, iata: airport.iata })}</span>
                       <Chevron />
                     </Link>
@@ -110,12 +114,12 @@ export async function AirportBottom({ airport, locale, about, displayName }: { a
           {/* 7. POPULAR AIRPORTS IN COUNTRY */}
           {countryAirports.length > 0 && countryInfo && (
             <section style={sec}>
-              <H2 href={`/${locale}/airports/${countryInfo.slug}`} viewAll={t('view_all')}>{t('country_air_title', { country: airport.country })}</H2>
+              <H2 href={`/${locale}/airports/${countryInfo.slug}`} viewAll={t('view_all')}>{t('country_air_title', { country })}</H2>
               <div style={{ display: 'flex', gap: 10, overflowX: 'auto', paddingBottom: 4, scrollbarWidth: 'none' }}>
                 {countryAirports.map(a => (
                   <Link key={a.iata} href={`/${locale}/airport/${a.iata}`} style={{ flexShrink: 0, textDecoration: 'none', color: 'inherit', background: '#0B0B0B', border: '1px solid #1A1A1A', borderRadius: 16, padding: '12px 16px', minWidth: 96 }}>
                     <div style={{ fontSize: 18, fontWeight: 700, color: '#FFFFFF' }}>{a.iata}</div>
-                    <div style={{ fontSize: 12, color: SUB, marginTop: 3, whiteSpace: 'nowrap' }}>{a.city}</div>
+                    <div style={{ fontSize: 12, color: SUB, marginTop: 3, whiteSpace: 'nowrap' }}>{getCityName(a.city, locale)}</div>
                   </Link>
                 ))}
               </div>

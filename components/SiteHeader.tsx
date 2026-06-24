@@ -37,7 +37,7 @@ export function SiteHeader({ locale }: { locale: Locale }) {
           display: 'flex', alignItems: 'center', gap: 6,
         }}>
           <span style={{ fontSize: 15 }}>✈</span>
-          airportboards
+          airportsboard
         </Link>
 
         <div style={{ flex: 1 }} />

@@ -3,6 +3,7 @@ import { getTranslations } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 import { getAirport, getStaticIataCodes } from '@/lib/airports';
 import { getAirportName } from '@/lib/airport-names';
+import { getCityName } from '@/lib/places';
 import { FlightBoard } from '@/components/FlightBoard';
 import { locales } from '@/lib/i18n';
 
@@ -23,14 +24,15 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!airport) return {};
   const t = await getTranslations({ locale, namespace: 'meta' });
 
-  const title = t('arrivals_title', { airport: getAirportName(airport.iata, locale, airport.name), iata: airport.iata, city: airport.city });
-  const description = t('arrivals_description', { airport: getAirportName(airport.iata, locale, airport.name), iata: airport.iata, city: airport.city });
+  const title = t('arrivals_title', { airport: getAirportName(airport.iata, locale, airport.name), iata: airport.iata, city: getCityName(airport.city, locale) });
+  const description = t('arrivals_description', { airport: getAirportName(airport.iata, locale, airport.name), iata: airport.iata, city: getCityName(airport.city, locale) });
   const canonical = `${BASE}/${locale}/airport/${airport.iata}/arrivals`;
 
   const languages: Record<string, string> = {};
   for (const loc of locales) {
     languages[loc] = `${BASE}/${loc}/airport/${airport.iata}/arrivals`;
   }
+  languages['x-default'] = `${BASE}/en/airport/${airport.iata}/arrivals`;
 
   return {
     title,
@@ -54,7 +56,7 @@ export default async function ArrivalsPage({ params }: Props) {
 
   const canonical = `${BASE}/${locale}/airport/${airport.iata}/arrivals`;
   const t = await getTranslations({ locale, namespace: 'meta' });
-  const h1 = t('arrivals_title', { airport: getAirportName(airport.iata, locale, airport.name), iata: airport.iata, city: airport.city });
+  const h1 = t('arrivals_title', { airport: getAirportName(airport.iata, locale, airport.name), iata: airport.iata, city: getCityName(airport.city, locale) });
 
   const jsonLd = [
     {

@@ -95,8 +95,10 @@ function calcDeparture(
 
     if (flight.status === 'delayed' && flight.actual) {
       const [sh, sm] = flight.scheduled.split(':').map(Number);
-      const delay = (h * 60 + m) - (sh * 60 + sm);
-      return { label: t('delayed_by', { m: delay }), value: flight.actual, sub: t('was', { time: flight.scheduled }), accent: C.orange };
+      let delay = (h * 60 + m) - (sh * 60 + sm);
+      if (delay < -720) delay += 1440;   // delayed across midnight (e.g. 23:50 → 00:20)
+      const delayM = flight.delay ?? delay;
+      return { label: t('delayed_by', { m: delayM }), value: flight.actual, sub: t('was', { time: flight.scheduled }), accent: C.orange };
     }
     if (diff <= 0) {
       if (flight.status === 'boarding') return { label: t('st_boarding'), value: t('now'), sub: flight.gate ? `${t('gate')} ${flight.gate}` : '', accent: C.blue };
@@ -269,16 +271,17 @@ function BottomSheet({ flight, mode, onClose, tz, locale }: {
     body = (
       <div style={{ padding: '4px 24px calc(28px + env(safe-area-inset-bottom))' }}>
 
-        {/* Header */}
-        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', gap: 12 }}>
-          <div style={{ minWidth: 0 }}>
-            <div style={{ fontSize: 'clamp(52px, 16vw, 70px)', fontWeight: 800, letterSpacing: '-0.04em', color: C.text, lineHeight: 0.95 }}>{flight.flight}</div>
+        {/* Header — status pill on its own line above the (large) flight number,
+            so long localized labels (ПОСЛЕДНИЙ ВЫЗОВ…) never collide with it */}
+        <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start', gap: 14 }}>
+          <div style={{ display: 'inline-flex', alignItems: 'center', gap: 6, padding: '7px 13px', borderRadius: 999, background: color + '1F', border: `1px solid ${color}59`, maxWidth: '100%' }}>
+            <div style={{ width: 7, height: 7, borderRadius: '50%', background: color, flexShrink: 0 }} />
+            <span style={{ fontSize: 12, fontWeight: 700, color, letterSpacing: '0.08em', textTransform: 'uppercase' }}>{statusLabel}</span>
+          </div>
+          <div style={{ minWidth: 0, width: '100%' }}>
+            <div style={{ fontSize: 'clamp(46px, 14vw, 66px)', fontWeight: 800, letterSpacing: '-0.04em', color: C.text, lineHeight: 0.95, wordBreak: 'break-word' }}>{flight.flight}</div>
             <div style={{ fontSize: 'clamp(22px, 6.5vw, 30px)', color: '#A1A1A1', marginTop: 12, lineHeight: 1.15 }}>{flight.destination || flight.origin}</div>
             <div style={{ fontSize: 22, color: C.text, fontWeight: 600, marginTop: 6 }}>{flight.airline}</div>
-          </div>
-          <div style={{ display: 'flex', alignItems: 'center', gap: 6, padding: '7px 13px', borderRadius: 999, background: color + '1F', border: `1px solid ${color}59`, marginTop: 6, flexShrink: 0 }}>
-            <div style={{ width: 7, height: 7, borderRadius: '50%', background: color }} />
-            <span style={{ fontSize: 12, fontWeight: 700, color, letterSpacing: '0.08em', textTransform: 'uppercase' }}>{statusLabel}</span>
           </div>
         </div>
 
@@ -408,7 +411,7 @@ export function FlightBoard({ airport, locale, defaultMode = 'departures', displ
 
   const fetchFlights = useCallback(async () => {
     try {
-      const res = await fetch(`/api/flights/${airport.iata}?direction=${mode}`);
+      const res = await fetch(`/api/flights/${airport.iata}?direction=${mode}&locale=${locale}`);
       const data = await res.json();
       setFlights(data.flights || []);
       const now = new Date();
@@ -655,8 +658,10 @@ export function FlightBoard({ airport, locale, defaultMode = 'departures', displ
             if (f.status === 'delayed' && f.actual) {
               const [ah, am] = f.actual.split(':').map(Number);
               const [sh, sm] = f.scheduled.split(':').map(Number);
-              const delay = (ah * 60 + am) - (sh * 60 + sm);
-              return delay > 0 ? `${t('st_delayed')} ${delay}m` : t('st_delayed');
+              let delay = (ah * 60 + am) - (sh * 60 + sm);
+              if (delay < -720) delay += 1440;   // delayed across midnight
+              const delayM = f.delay ?? delay;
+              return delayM > 0 ? `${t('st_delayed')} ${delayM}m` : t('st_delayed');
             }
             return t(`st_${f.status}`);
           })();
@@ -692,17 +697,21 @@ export function FlightBoard({ airport, locale, defaultMode = 'departures', displ
                   <div style={{ fontSize: 12, color: 'rgba(255,255,255,0.42)', marginTop: 5, fontVariantNumeric: 'tabular-nums', fontWeight: 500 }}>{f.flight}</div>
                 </div>
 
-                {/* Center: destination */}
+                {/* Center: destination — wraps up to 2 lines so long localized
+                    names (Санкт-Петербург, München…) stay readable instead of being cut */}
                 <div style={{ flex: 1, minWidth: 0 }}>
-                  <div style={{ whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis', lineHeight: 1.15 }}>
-                    <span style={{ fontSize: 'clamp(16px, 4.5vw, 25px)', fontWeight: 700, color: C.text, letterSpacing: '-0.01em' }}>{city}</span>
-                    {code && <span style={{ fontSize: 'clamp(12px, 3.2vw, 17px)', fontWeight: 500, color: C.secondary, marginLeft: 5 }}>({code})</span>}
+                  <div style={{
+                    display: '-webkit-box', WebkitLineClamp: 2, WebkitBoxOrient: 'vertical',
+                    overflow: 'hidden', lineHeight: 1.15, wordBreak: 'break-word',
+                  }}>
+                    <span style={{ fontSize: 'clamp(15px, 4.3vw, 24px)', fontWeight: 700, color: C.text, letterSpacing: '-0.01em' }}>{city}</span>
+                    {code && <span style={{ fontSize: 'clamp(12px, 3.2vw, 17px)', fontWeight: 500, color: C.secondary, marginLeft: 5, whiteSpace: 'nowrap' }}>({code})</span>}
                   </div>
                 </div>
 
                 {/* Right: gate + status + chevron */}
                 <div style={{ flexShrink: 0, textAlign: 'right', display: 'flex', alignItems: 'center', gap: 6 }}>
-                  <div style={{ maxWidth: 92 }}>
+                  <div style={{ maxWidth: 86 }}>
                     {f.gate && (
                       <div style={{ lineHeight: 1.1, whiteSpace: 'nowrap' }}>
                         <span style={{ fontSize: 11, color: C.secondary }}>{t('gate')} </span>

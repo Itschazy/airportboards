@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 import airports from '@/data/airports.json';
 import airlines from '@/data/airlines.json';
+import { getCityName } from '@/lib/places';
 
 const AIRLABS_KEY = process.env.AIRLABS_API_KEY || '';
 const CACHE_SECONDS = 60;
@@ -47,9 +48,10 @@ function timePart(datetime: string | null | undefined): string {
   return (datetime.split(' ')[1] ?? '').slice(0, 5);
 }
 
-function airportLabel(iata: string): string {
+function airportLabel(iata: string, locale: string): string {
   const city = CITY_BY_IATA[iata];
-  return city ? `${city} (${iata})` : iata;
+  if (!city) return iata;
+  return `${getCityName(city, locale)} (${iata})`;
 }
 
 // Status from airlabs' own state, refined for the boarding window using
@@ -77,9 +79,9 @@ function mapStatus(f: AirlabsFlight, direction: 'departures' | 'arrivals'): stri
   return 'ontime';
 }
 
-function mapFlight(f: AirlabsFlight, direction: 'departures' | 'arrivals') {
+function mapFlight(f: AirlabsFlight, direction: 'departures' | 'arrivals', locale: string) {
   const flightNum = f.flight_iata?.replace('-', ' ') ?? `${f.airline_iata} ${f.flight_number}`;
-  const airline   = AIRLINE[f.airline_iata] || f.airline_iata;
+  const airline   = AIRLINE[f.airline_iata] ?? AIRLINE[`${f.airline_iata}*`] ?? f.airline_iata;
   const status    = mapStatus(f, direction);
 
   const isDelay   = status === 'delayed';
@@ -98,8 +100,8 @@ function mapFlight(f: AirlabsFlight, direction: 'departures' | 'arrivals') {
     flight: flightNum,
     airline,
     ...(direction === 'departures'
-      ? { destination: airportLabel(f.arr_iata) }
-      : { origin:      airportLabel(f.dep_iata) }),
+      ? { destination: airportLabel(f.arr_iata, locale) }
+      : { origin:      airportLabel(f.dep_iata, locale) }),
     scheduled,
     ...(actual ? { actual } : {}),
     ...(gate     ? { gate }     : {}),
@@ -118,6 +120,7 @@ export async function GET(
   const { iata } = await params;
   const code = iata.toUpperCase();
   const direction = (req.nextUrl.searchParams.get('direction') || 'departures') as 'departures' | 'arrivals';
+  const locale = req.nextUrl.searchParams.get('locale') || 'en';
 
   if (!AIRLABS_KEY) {
     return NextResponse.json(mockData(code, direction), {
@@ -155,7 +158,7 @@ export async function GET(
 
     // Busy hubs now return 500+ rows; cap to the most relevant window
     // (soonest upcoming + recently departed) to keep the board light.
-    const flights = raw.slice(0, MAX_FLIGHTS).map(f => mapFlight(f, direction));
+    const flights = raw.slice(0, MAX_FLIGHTS).map(f => mapFlight(f, direction, locale));
 
     return NextResponse.json(
       { iata: code, direction, flights },

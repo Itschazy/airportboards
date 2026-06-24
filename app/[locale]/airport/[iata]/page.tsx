@@ -4,6 +4,7 @@ import { notFound } from 'next/navigation';
 import { getAirport, getStaticIataCodes } from '@/lib/airports';
 import { getAirportContent } from '@/lib/airport-content';
 import { getAirportName } from '@/lib/airport-names';
+import { getCityName, getCountryName } from '@/lib/places';
 import { FlightBoard } from '@/components/FlightBoard';
 import { AirportBottom } from '@/components/AirportBottom';
 import { locales } from '@/lib/i18n';
@@ -26,15 +27,18 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!airport) return {};
   const t = await getTranslations({ locale, namespace: 'meta' });
   const name = getAirportName(airport.iata, locale, airport.name);
+  const city = getCityName(airport.city, locale);
+  const country = getCountryName(airport.country, locale);
 
-  const title = t('main_title', { airport: name, city: airport.city, iata: airport.iata });
-  const description = t('main_description', { airport: name, iata: airport.iata, city: airport.city, country: airport.country });
+  const title = t('main_title', { airport: name, city, iata: airport.iata });
+  const description = t('main_description', { airport: name, iata: airport.iata, city, country });
   const canonical = `${BASE}/${locale}/airport/${airport.iata}`;
 
   const languages: Record<string, string> = {};
   for (const loc of locales) {
     languages[loc] = `${BASE}/${loc}/airport/${airport.iata}`;
   }
+  languages['x-default'] = `${BASE}/en/airport/${airport.iata}`;
 
   return {
     title,
@@ -63,7 +67,9 @@ export default async function AirportPage({ params }: Props) {
   const about = getAirportContent(airport.iata, locale);
   const t = await getTranslations({ locale, namespace: 'meta' });
   const name = getAirportName(airport.iata, locale, airport.name);
-  const h1 = t('main_title', { airport: name, iata: airport.iata, city: airport.city, country: airport.country });
+  const city = getCityName(airport.city, locale);
+  const country = getCountryName(airport.country, locale);
+  const h1 = t('main_title', { airport: name, iata: airport.iata, city, country });
 
   const jsonLd = [
     {
