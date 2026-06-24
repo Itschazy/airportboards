@@ -57,6 +57,10 @@ export function mapStatus(f: AirlabsFlight, direction: 'departures' | 'arrivals'
   if (f.status === 'cancelled' || f.status === 'diverted') return 'cancelled';
   if (direction === 'arrivals') {
     if (f.status === 'landed') return 'baggage';
+    // airlabs often lags the 'landed' status — if the (estimated) arrival time has
+    // already passed, the flight is on the ground, not "arriving now / on schedule".
+    const arrTs = f.arr_estimated_ts || f.arr_time_ts;
+    if (arrTs && arrTs <= Date.now() / 1000) return 'baggage';
     if ((f.arr_delayed ?? 0) > 15) return 'delayed';
     return 'ontime';
   }
