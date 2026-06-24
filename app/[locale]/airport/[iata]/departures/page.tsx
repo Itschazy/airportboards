@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import { getTranslations , setRequestLocale } from 'next-intl/server';
-import { notFound, redirect } from 'next/navigation';
+import { notFound, permanentRedirect } from 'next/navigation';
 import { getAirport, getStaticIataCodes } from '@/lib/airports';
 import { getAirportName } from '@/lib/airport-names';
 import { getCityName } from '@/lib/places';
@@ -49,7 +49,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 export default async function DeparturesPage({ params }: Props) {
   const { locale, iata } = await params;
   setRequestLocale(locale);
-  if (iata !== iata.toUpperCase()) redirect(`/${locale}/airport/${iata.toUpperCase()}/departures`);
+  if (iata !== iata.toUpperCase()) permanentRedirect(`/${locale}/airport/${iata.toUpperCase()}/departures`);
   const airport = getAirport(iata.toUpperCase());
   if (!airport) notFound();
 

@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import { getTranslations , setRequestLocale } from 'next-intl/server';
-import { notFound, redirect } from 'next/navigation';
+import { notFound, permanentRedirect } from 'next/navigation';
 import { getAirport, getStaticIataCodes } from '@/lib/airports';
 import { getAirportContent } from '@/lib/airport-content';
 import { getAirportName } from '@/lib/airport-names';
@@ -58,8 +58,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 export default async function AirportPage({ params }: Props) {
   const { locale, iata } = await params;
   setRequestLocale(locale);
-  // Wrong-case IATA → single 301 to the canonical uppercase URL (saves crawl budget).
-  if (iata !== iata.toUpperCase()) redirect(`/${locale}/airport/${iata.toUpperCase()}`);
+  // Wrong-case IATA → single permanent (308) redirect to the canonical uppercase URL
+  // (saves crawl budget; permanent so engines drop the lowercase variant from the index).
+  if (iata !== iata.toUpperCase()) permanentRedirect(`/${locale}/airport/${iata.toUpperCase()}`);
   const airport = getAirport(iata.toUpperCase());
   if (!airport) notFound();
 
