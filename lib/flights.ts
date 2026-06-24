@@ -108,12 +108,18 @@ export function mapFlight(f: AirlabsFlight, direction: 'departures' | 'arrivals'
 
 export type FlightRow = ReturnType<typeof mapFlight>;
 
+// Show arrivals that landed within the last ~2h, so people meeting a flight can
+// see when it touched down (could have been 10 min ago).
+const RECENT_ARR_WINDOW = 2 * 60 * 60;
+
 // Fetch + cache raw airlabs schedules for an arbitrary query (board / route / flight).
-export async function fetchRaw(query: string): Promise<AirlabsFlight[]> {
+// `direction` controls which timestamp drives the ordering (dep vs arr time).
+export async function fetchRaw(query: string, direction: 'departures' | 'arrivals' = 'departures'): Promise<AirlabsFlight[]> {
   if (!AIRLABS_KEY) return [];
-  const hit = rawCache.get(query);
+  const cacheKey = `${direction}:${query}`;
+  const hit = rawCache.get(cacheKey);
   if (hit && Date.now() - hit.ts < CACHE_SECONDS * 1000) return hit.data;
-  rawCache.delete(query);
+  rawCache.delete(cacheKey);
   const url = `https://airlabs.co/api/v9/schedules?${query}&api_key=${AIRLABS_KEY}`;
   const res = await fetch(url, { cache: 'no-store' });
   if (!res.ok) throw new Error(`airlabs ${res.status}`);
@@ -121,23 +127,37 @@ export async function fetchRaw(query: string): Promise<AirlabsFlight[]> {
   if (json.error) throw new Error(json.error.message || 'airlabs error');
   let raw = (json.response as AirlabsFlight[] | undefined || []).filter(f => !f.cs_flight_iata);
   const now = Date.now() / 1000;
-  const tsOf = (f: AirlabsFlight) => (f.dep_estimated_ts || f.dep_time_ts || f.arr_estimated_ts || f.arr_time_ts) || 0;
-  raw.sort((a, b) => {
-    const ta = tsOf(a), tb = tsOf(b);
-    const aUp = ta >= now, bUp = tb >= now;
-    if (aUp !== bUp) return aUp ? -1 : 1;
-    return aUp ? ta - tb : tb - ta;
-  });
+  const tsOf = (f: AirlabsFlight) => (direction === 'arrivals'
+    ? (f.arr_estimated_ts || f.arr_time_ts)
+    : (f.dep_estimated_ts || f.dep_time_ts)) || 0;
+
+  if (direction === 'arrivals') {
+    // Recently landed (last ~2h, most-recent first) above upcoming arrivals (soonest first).
+    const recent = raw
+      .filter(f => { const t = tsOf(f); return t >= now - RECENT_ARR_WINDOW && t < now; })
+      .sort((a, b) => tsOf(b) - tsOf(a));
+    const upcoming = raw.filter(f => tsOf(f) >= now).sort((a, b) => tsOf(a) - tsOf(b));
+    raw = [...recent, ...upcoming];
+  } else {
+    // Departures: next-to-depart first, then recently departed (most recent first).
+    raw.sort((a, b) => {
+      const ta = tsOf(a), tb = tsOf(b);
+      const aUp = ta >= now, bUp = tb >= now;
+      if (aUp !== bUp) return aUp ? -1 : 1;
+      return aUp ? ta - tb : tb - ta;
+    });
+  }
+
   raw = raw.slice(0, MAX_FLIGHTS);
   if (rawCache.size >= 3000) { const oldest = rawCache.keys().next().value; if (oldest) rawCache.delete(oldest); }
-  rawCache.set(query, { ts: Date.now(), data: raw });
+  rawCache.set(cacheKey, { ts: Date.now(), data: raw });
   return raw;
 }
 
 // High-level helpers
 export async function getBoard(iata: string, direction: 'departures' | 'arrivals', locale: string): Promise<FlightRow[]> {
   const param = direction === 'departures' ? `dep_iata=${iata}` : `arr_iata=${iata}`;
-  const raw = await fetchRaw(param);
+  const raw = await fetchRaw(param, direction);
   return raw.map(f => mapFlight(f, direction, locale));
 }
 
