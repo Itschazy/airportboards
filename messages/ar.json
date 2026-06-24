@@ -3,7 +3,8 @@
     "arrivals": "الوصول",
     "departures": "المغادرة",
     "search_placeholder": "المطار أو المدينة أو رمز IATA...",
-    "all_airports": "جميع المطارات"
+    "all_airports": "جميع المطارات",
+    "home": "الرئيسية"
   },
   "board": {
     "flight": "رحلة",

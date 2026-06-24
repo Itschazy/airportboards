@@ -3,7 +3,8 @@
     "arrivals": "도착",
     "departures": "출발",
     "search_placeholder": "공항, 도시 또는 IATA 코드...",
-    "all_airports": "모든 공항"
+    "all_airports": "모든 공항",
+    "home": "홈"
   },
   "board": {
     "flight": "항공편",

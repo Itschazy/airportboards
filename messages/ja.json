@@ -3,7 +3,8 @@
     "arrivals": "到着",
     "departures": "出発",
     "search_placeholder": "空港、都市またはIATAコード...",
-    "all_airports": "すべての空港"
+    "all_airports": "すべての空港",
+    "home": "ホーム"
   },
   "board": {
     "flight": "便名",

@@ -3,7 +3,8 @@
     "arrivals": "Ankünfte",
     "departures": "Abflüge",
     "search_placeholder": "Flughafen, Stadt oder IATA-Code...",
-    "all_airports": "Alle Flughäfen"
+    "all_airports": "Alle Flughäfen",
+    "home": "Startseite"
   },
   "board": {
     "flight": "Flug",

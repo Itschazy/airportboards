@@ -66,10 +66,12 @@ export default async function AirportPage({ params }: Props) {
   const canonical = `${BASE}/${locale}/airport/${airport.iata}`;
   const about = getAirportContent(airport.iata, locale);
   const t = await getTranslations({ locale, namespace: 'meta' });
+  const tNav = await getTranslations({ locale, namespace: 'nav' });
   const name = getAirportName(airport.iata, locale, airport.name);
   const city = getCityName(airport.city, locale);
   const country = getCountryName(airport.country, locale);
   const h1 = t('main_title', { airport: name, iata: airport.iata, city, country });
+  const webDesc = t('main_description', { airport: name, iata: airport.iata, city, country });
 
   const jsonLd = [
     {
@@ -95,7 +97,7 @@ export default async function AirportPage({ params }: Props) {
       '@context': 'https://schema.org',
       '@type': 'BreadcrumbList',
       itemListElement: [
-        { '@type': 'ListItem', position: 1, name: 'Home', item: `${BASE}/${locale}` },
+        { '@type': 'ListItem', position: 1, name: tNav('home'), item: `${BASE}/${locale}` },
         { '@type': 'ListItem', position: 2, name: `${name} (${airport.iata})`, item: canonical },
       ],
     },
@@ -103,7 +105,7 @@ export default async function AirportPage({ params }: Props) {
       '@context': 'https://schema.org',
       '@type': 'WebPage',
       name: `${name} (${airport.iata})`,
-      description: `Live arrivals and departures at ${name} (${airport.iata}), ${airport.city}`,
+      description: webDesc,
       url: canonical,
       inLanguage: locale,
     },

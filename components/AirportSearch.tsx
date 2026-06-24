@@ -57,7 +57,8 @@ export function AirportSearch({ locale, placeholder, nearestLabel = 'Nearest air
       .catch(() => {});
   }, []);
 
-  // Ask for geolocation on entry → nearest airports first
+  // Geolocation → nearest airports. Use cached coords on repeat visits so we
+  // don't re-trigger a position lookup every mount; only request live on first visit.
   useEffect(() => {
     if (!('geolocation' in navigator)) return;
     const cached = (() => { try { return JSON.parse(localStorage.getItem('ab_geo') || 'null'); } catch { return null; } })();
@@ -65,7 +66,7 @@ export function AirportSearch({ locale, placeholder, nearestLabel = 'Nearest air
       fetch(`/api/airports/nearest?lat=${lat}&lon=${lon}`)
         .then(r => r.json()).then(d => setNearest((d.airports || []).slice(0, 6))).catch(() => {});
     };
-    if (cached) load(cached.lat, cached.lon);
+    if (cached) { load(cached.lat, cached.lon); return; }
     navigator.geolocation.getCurrentPosition(
       pos => {
         const { latitude: lat, longitude: lon } = pos.coords;
@@ -97,11 +98,12 @@ export function AirportSearch({ locale, placeholder, nearestLabel = 'Nearest air
 
   // Close on outside click
   useEffect(() => {
-    const h = (e: MouseEvent) => {
+    const h = (e: Event) => {
       if (!wrapRef.current?.contains(e.target as Node)) setOpen(false);
     };
     document.addEventListener('mousedown', h);
-    return () => document.removeEventListener('mousedown', h);
+    document.addEventListener('touchstart', h);
+    return () => { document.removeEventListener('mousedown', h); document.removeEventListener('touchstart', h); };
   }, []);
 
   const onFocus = useCallback(() => {
@@ -121,27 +123,27 @@ export function AirportSearch({ locale, placeholder, nearestLabel = 'Nearest air
     setQuery('');
   };
 
+  // Sections rendered in the empty state, and the flat list keyboard nav walks.
+  // The two MUST share order/indices or arrow-keys + Enter select the wrong row.
+  const popularItems = results.slice(0, 6);
+  const emptyFlat = [...recent, ...nearest, ...popularItems];
+  const navList = query.trim() ? results : emptyFlat;
+
   const onKey = (e: React.KeyboardEvent) => {
-    const list = query.trim() ? results : emptyList;
     if (!open) return;
-    if (e.key === 'ArrowDown') { e.preventDefault(); setActive(v => Math.min(v + 1, list.length - 1)); }
+    if (e.key === 'ArrowDown') { e.preventDefault(); setActive(v => Math.min(v + 1, navList.length - 1)); }
     if (e.key === 'ArrowUp')   { e.preventDefault(); setActive(v => Math.max(v - 1, 0)); }
     if (e.key === 'Enter') {
       e.preventDefault();
-      const item = active >= 0 ? list[active] : list[0];
+      const item = active >= 0 ? navList[active] : navList[0];
       if (item) go(item);
     }
     if (e.key === 'Escape') { setOpen(false); inputRef.current?.blur(); }
   };
 
-  const dedupe = (arr: Result[], seen: Set<string>) => arr.filter(a => !seen.has(a.iata) && seen.add(a.iata));
-  const emptyList = (() => {
-    const seen = new Set<string>();
-    return [...dedupe(recent, seen), ...dedupe(nearest, seen), ...dedupe(results, seen)];
-  })();
-  const showList = open && (query.trim() ? results.length > 0 : emptyList.length > 0);
+  const showList = open && (query.trim() ? results.length > 0 : emptyFlat.length > 0);
 
-  const Section = ({ label, items }: { label: string; items: Result[] }) => (
+  const Section = ({ label, items, startIndex = 0 }: { label: string; items: Result[]; startIndex?: number }) => (
     <>
       <div style={{
         padding: '8px 14px 4px',
@@ -153,7 +155,7 @@ export function AirportSearch({ locale, placeholder, nearestLabel = 'Nearest air
         {label}
       </div>
       {items.map((a, i) => {
-        const globalIdx = i;
+        const globalIdx = startIndex + i;
         const isActive = active === globalIdx;
         return (
           <button
@@ -277,9 +279,9 @@ export function AirportSearch({ locale, placeholder, nearestLabel = 'Nearest air
             <Section label="Results" items={results} />
           ) : (
             <>
-              {recent.length > 0 && <Section label="Recent" items={recent} />}
-              {nearest.length > 0 && <Section label={nearestLabel} items={nearest} />}
-              {results.length > 0 && <Section label="Popular airports" items={results.slice(0, 6)} />}
+              {recent.length > 0 && <Section label="Recent" items={recent} startIndex={0} />}
+              {nearest.length > 0 && <Section label={nearestLabel} items={nearest} startIndex={recent.length} />}
+              {popularItems.length > 0 && <Section label="Popular airports" items={popularItems} startIndex={recent.length + nearest.length} />}
             </>
           )}
         </div>

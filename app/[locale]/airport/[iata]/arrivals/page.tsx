@@ -56,23 +56,27 @@ export default async function ArrivalsPage({ params }: Props) {
 
   const canonical = `${BASE}/${locale}/airport/${airport.iata}/arrivals`;
   const t = await getTranslations({ locale, namespace: 'meta' });
-  const h1 = t('arrivals_title', { airport: getAirportName(airport.iata, locale, airport.name), iata: airport.iata, city: getCityName(airport.city, locale) });
+  const tNav = await getTranslations({ locale, namespace: 'nav' });
+  const name = getAirportName(airport.iata, locale, airport.name);
+  const city = getCityName(airport.city, locale);
+  const h1 = t('arrivals_title', { airport: name, iata: airport.iata, city });
+  const desc = t('arrivals_description', { airport: name, iata: airport.iata, city });
 
   const jsonLd = [
     {
       '@context': 'https://schema.org',
       '@type': 'BreadcrumbList',
       itemListElement: [
-        { '@type': 'ListItem', position: 1, name: 'Home', item: `${BASE}/${locale}` },
-        { '@type': 'ListItem', position: 2, name: `${airport.name} (${airport.iata})`, item: `${BASE}/${locale}/airport/${airport.iata}` },
-        { '@type': 'ListItem', position: 3, name: 'Arrivals', item: canonical },
+        { '@type': 'ListItem', position: 1, name: tNav('home'), item: `${BASE}/${locale}` },
+        { '@type': 'ListItem', position: 2, name: `${name} (${airport.iata})`, item: `${BASE}/${locale}/airport/${airport.iata}` },
+        { '@type': 'ListItem', position: 3, name: tNav('arrivals'), item: canonical },
       ],
     },
     {
       '@context': 'https://schema.org',
       '@type': 'WebPage',
-      name: `${airport.name} Arrivals — Live Board`,
-      description: `Live arrivals board for ${airport.name} (${airport.iata}), ${airport.city}`,
+      name: h1,
+      description: desc,
       url: canonical,
       inLanguage: locale,
     },

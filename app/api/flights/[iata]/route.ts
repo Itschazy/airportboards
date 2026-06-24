@@ -7,6 +7,13 @@ const AIRLABS_KEY = process.env.AIRLABS_API_KEY || '';
 const CACHE_SECONDS = 60;
 const MAX_FLIGHTS = 80;
 
+// In-memory dedup cache for the raw airlabs payload (keyed by iata:direction).
+// Next's fetch cache can't store mega-hub responses (>2MB limit), which would
+// otherwise hit airlabs on every request and burn the monthly quota. PM2 keeps
+// this module alive in prod, so this caps real API calls to ~1 per minute per board.
+type RawFlight = AirlabsFlight[];
+const rawCache = new Map<string, { ts: number; data: RawFlight }>();
+
 // Quick IATA → city lookup from our airports dataset
 const CITY_BY_IATA: Record<string, string> = {};
 for (const a of airports as { iata: string; city: string }[]) {
@@ -129,32 +136,44 @@ export async function GET(
   }
 
   try {
-    const param = direction === 'departures' ? `dep_iata=${code}` : `arr_iata=${code}`;
-    const url   = `https://airlabs.co/api/v9/schedules?${param}&api_key=${AIRLABS_KEY}`;
+    const cacheKey = `${code}:${direction}`;
+    const hit = rawCache.get(cacheKey);
+    let raw: AirlabsFlight[];
 
-    const res = await fetch(url, { next: { revalidate: CACHE_SECONDS } });
-    if (!res.ok) throw new Error(`airlabs ${res.status}`);
+    if (hit && Date.now() - hit.ts < CACHE_SECONDS * 1000) {
+      raw = hit.data;
+    } else {
+      const param = direction === 'departures' ? `dep_iata=${code}` : `arr_iata=${code}`;
+      const url   = `https://airlabs.co/api/v9/schedules?${param}&api_key=${AIRLABS_KEY}`;
 
-    const json = await res.json();
-    if (json.error) throw new Error(json.error.message || 'airlabs error');
+      // no-store: rely on our own rawCache instead of Next's fetch cache, which
+      // silently fails (and re-fetches) for >2MB mega-hub payloads.
+      const res = await fetch(url, { cache: 'no-store' });
+      if (!res.ok) throw new Error(`airlabs ${res.status}`);
 
-    // Drop codeshare duplicates — keep only the operating flight, so the
-    // board shows each physical flight once instead of 4× per marketing carrier.
-    const raw = (json.response as AirlabsFlight[]).filter(f => !f.cs_flight_iata);
+      const json = await res.json();
+      if (json.error) throw new Error(json.error.message || 'airlabs error');
 
-    // Order like a real airport board: next-to-depart first (soonest upcoming),
-    // then already-departed flights most-recent first.
-    const now = Date.now() / 1000;
-    const tsOf = (f: AirlabsFlight) =>
-      (direction === 'departures'
-        ? (f.dep_estimated_ts || f.dep_time_ts)
-        : (f.arr_estimated_ts || f.arr_time_ts)) || 0;
-    raw.sort((a, b) => {
-      const ta = tsOf(a), tb = tsOf(b);
-      const aUp = ta >= now, bUp = tb >= now;
-      if (aUp !== bUp) return aUp ? -1 : 1;
-      return aUp ? ta - tb : tb - ta;
-    });
+      // Drop codeshare duplicates — keep only the operating flight, so the
+      // board shows each physical flight once instead of 4× per marketing carrier.
+      raw = (json.response as AirlabsFlight[]).filter(f => !f.cs_flight_iata);
+
+      // Order like a real airport board: next-to-depart first (soonest upcoming),
+      // then already-departed flights most-recent first.
+      const now = Date.now() / 1000;
+      const tsOf = (f: AirlabsFlight) =>
+        (direction === 'departures'
+          ? (f.dep_estimated_ts || f.dep_time_ts)
+          : (f.arr_estimated_ts || f.arr_time_ts)) || 0;
+      raw.sort((a, b) => {
+        const ta = tsOf(a), tb = tsOf(b);
+        const aUp = ta >= now, bUp = tb >= now;
+        if (aUp !== bUp) return aUp ? -1 : 1;
+        return aUp ? ta - tb : tb - ta;
+      });
+
+      rawCache.set(cacheKey, { ts: Date.now(), data: raw });
+    }
 
     // Busy hubs now return 500+ rows; cap to the most relevant window
     // (soonest upcoming + recently departed) to keep the board light.

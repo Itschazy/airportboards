@@ -309,10 +309,10 @@ function BottomSheet({ flight, mode, onClose, tz, locale }: {
         {/* Detail grid */}
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(92px, 1fr))', gap: 12, marginTop: 24 }}>
           {blocks.map((b, i) => (
-            <div key={i} style={{ background: 'rgba(255,255,255,0.04)', border: '1px solid rgba(255,255,255,0.08)', borderRadius: 14, padding: '14px 16px', minHeight: 104, display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
+            <div key={i} style={{ background: 'rgba(255,255,255,0.04)', border: '1px solid rgba(255,255,255,0.08)', borderRadius: 14, padding: '16px', minHeight: 104, display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
               <div style={L}>{b.label}</div>
               <div>
-                <div style={{ fontSize: b.value.length >= 5 ? 'clamp(19px, 5.3vw, 27px)' : b.value.length >= 4 ? 'clamp(20px, 6vw, 28px)' : 30, fontWeight: 700, color: b.valueColor || C.text, lineHeight: 1.05, letterSpacing: '-0.03em', fontVariantNumeric: 'tabular-nums', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'clip' }}>{b.value}</div>
+                <div style={{ fontSize: 24, fontWeight: 700, color: b.valueColor || C.text, lineHeight: 1.05, letterSpacing: '-0.02em', fontVariantNumeric: 'tabular-nums', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>{b.value}</div>
                 {b.strike && <div style={{ fontSize: 12, color: C.secondary, textDecoration: 'line-through', marginTop: 2 }}>{b.strike}</div>}
                 {b.sub && <div style={{ fontSize: 12, color: '#6A6A6A', marginTop: 4 }}>{b.sub}</div>}
               </div>
@@ -686,13 +686,13 @@ export function FlightBoard({ airport, locale, defaultMode = 'departures', displ
 
               {/* Row content */}
               <div style={{ display: 'flex', alignItems: 'center', flex: 1, padding: '18px 16px', gap: 12, minWidth: 0 }}>
-                {/* Left: time + flight number */}
-                <div style={{ flexShrink: 0 }}>
-                  <div style={{ fontSize: 'clamp(23px, 6.4vw, 30px)', fontWeight: 700, fontVariantNumeric: 'tabular-nums', color: f.actual ? C.orange : C.text, lineHeight: 1 }}>
+                {/* Left: time + flight number — fixed type scale (26 / 12) */}
+                <div style={{ flexShrink: 0, width: 72 }}>
+                  <div style={{ fontSize: 26, fontWeight: 700, fontVariantNumeric: 'tabular-nums', color: f.actual ? C.orange : C.text, lineHeight: 1, letterSpacing: '-0.02em' }}>
                     {f.actual || f.scheduled}
                   </div>
                   {f.actual && (
-                    <div style={{ fontSize: 11, color: C.secondary, textDecoration: 'line-through', lineHeight: 1.3, marginTop: 2 }}>{f.scheduled}</div>
+                    <div style={{ fontSize: 12, color: C.secondary, textDecoration: 'line-through', lineHeight: 1.3, marginTop: 2 }}>{f.scheduled}</div>
                   )}
                   <div style={{ fontSize: 12, color: 'rgba(255,255,255,0.42)', marginTop: 5, fontVariantNumeric: 'tabular-nums', fontWeight: 500 }}>{f.flight}</div>
                 </div>
@@ -702,25 +702,25 @@ export function FlightBoard({ airport, locale, defaultMode = 'departures', displ
                 <div style={{ flex: 1, minWidth: 0 }}>
                   <div style={{
                     display: '-webkit-box', WebkitLineClamp: 2, WebkitBoxOrient: 'vertical',
-                    overflow: 'hidden', lineHeight: 1.15, wordBreak: 'break-word',
+                    overflow: 'hidden', lineHeight: 1.2, wordBreak: 'break-word',
                   }}>
-                    <span style={{ fontSize: 'clamp(15px, 4.3vw, 24px)', fontWeight: 700, color: C.text, letterSpacing: '-0.01em' }}>{city}</span>
-                    {code && <span style={{ fontSize: 'clamp(12px, 3.2vw, 17px)', fontWeight: 500, color: C.secondary, marginLeft: 5, whiteSpace: 'nowrap' }}>({code})</span>}
+                    <span style={{ fontSize: 18, fontWeight: 700, color: C.text, letterSpacing: '-0.01em' }}>{city}</span>
+                    {code && <span style={{ fontSize: 12, fontWeight: 500, color: C.secondary, marginLeft: 6, whiteSpace: 'nowrap' }}>({code})</span>}
                   </div>
                 </div>
 
                 {/* Right: gate + status + chevron */}
                 <div style={{ flexShrink: 0, textAlign: 'right', display: 'flex', alignItems: 'center', gap: 6 }}>
-                  <div style={{ maxWidth: 86 }}>
+                  <div style={{ maxWidth: 92 }}>
                     {f.gate && (
-                      <div style={{ lineHeight: 1.1, whiteSpace: 'nowrap' }}>
-                        <span style={{ fontSize: 11, color: C.secondary }}>{t('gate')} </span>
+                      <div style={{ lineHeight: 1.1, whiteSpace: 'nowrap', marginBottom: 5 }}>
+                        <span style={{ fontSize: 12, color: C.secondary }}>{t('gate')} </span>
                         <span style={{ fontSize: 18, fontWeight: 700, color: C.text, letterSpacing: '-0.01em' }}>{f.gate}</span>
                       </div>
                     )}
                     <div style={{
-                      fontSize: 12, fontWeight: 700, color, letterSpacing: '0.1em', textTransform: 'uppercase',
-                      marginTop: f.gate ? 5 : 0, lineHeight: 1.2,
+                      fontSize: 12, fontWeight: 700, color, letterSpacing: '0.06em', textTransform: 'uppercase',
+                      lineHeight: 1.25,
                       textShadow: f.status === 'finalcall' ? '0 0 10px rgba(255,69,58,0.15)' : 'none',
                     }}>
                       {label}

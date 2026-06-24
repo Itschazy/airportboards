@@ -3,7 +3,8 @@
     "arrivals": "Прилёты",
     "departures": "Вылеты",
     "search_placeholder": "Аэропорт, город или код ИАТА...",
-    "all_airports": "Все аэропорты"
+    "all_airports": "Все аэропорты",
+    "home": "Главная"
   },
   "board": {
     "flight": "Рейс",

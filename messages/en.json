@@ -3,7 +3,8 @@
     "arrivals": "Arrivals",
     "departures": "Departures",
     "search_placeholder": "Airport, city or IATA code...",
-    "all_airports": "All airports"
+    "all_airports": "All airports",
+    "home": "Home"
   },
   "board": {
     "flight": "Flight",

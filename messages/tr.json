@@ -3,7 +3,8 @@
     "arrivals": "Gelenler",
     "departures": "Gidenler",
     "search_placeholder": "Havalimanı, şehir veya IATA kodu...",
-    "all_airports": "Tüm havalimanları"
+    "all_airports": "Tüm havalimanları",
+    "home": "Ana sayfa"
   },
   "board": {
     "flight": "Uçuş",

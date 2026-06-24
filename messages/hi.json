@@ -3,7 +3,8 @@
     "arrivals": "आगमन",
     "departures": "प्रस्थान",
     "search_placeholder": "हवाई अड्डा, शहर या IATA कोड...",
-    "all_airports": "सभी हवाई अड्डे"
+    "all_airports": "सभी हवाई अड्डे",
+    "home": "होम"
   },
   "board": {
     "flight": "उड़ान",

@@ -4,6 +4,7 @@ import Link from 'next/link';
 import {
   POPULAR_AIRPORTS, POPULAR_CITIES, getAirport, getCountries, getAllIataCodes,
 } from '@/lib/airports';
+import { locales } from '@/lib/i18n';
 import { AirportSearch } from '@/components/AirportSearch';
 import { PopularNow } from '@/components/PopularNow';
 import { PopularList } from '@/components/PopularList';
@@ -22,10 +23,13 @@ const flag = (iso2: string) =>
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: 'home' });
+  const languages: Record<string, string> = {};
+  for (const loc of locales) languages[loc] = `${BASE}/${loc}`;
+  languages['x-default'] = `${BASE}/en`;
   return {
     title: `AirportsBoard — ${t('hero1')} ${t('hero2')}`,
     description: t('subline'),
-    alternates: { canonical: `${BASE}/${locale}` },
+    alternates: { canonical: `${BASE}/${locale}`, languages },
   };
 }
 

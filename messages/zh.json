@@ -3,7 +3,8 @@
     "arrivals": "到达",
     "departures": "出发",
     "search_placeholder": "机场、城市或IATA代码...",
-    "all_airports": "所有机场"
+    "all_airports": "所有机场",
+    "home": "首页"
   },
   "board": {
     "flight": "航班",
