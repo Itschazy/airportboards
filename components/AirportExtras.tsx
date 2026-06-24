@@ -69,7 +69,7 @@ export function PopularRoutes({ iata, locale, perDay }: { iata: string; locale: 
   return (
     <div style={{ display: 'flex', gap: 12, overflowX: 'auto', paddingBottom: 4, scrollbarWidth: 'none' }}>
       {routes.map(r => (
-        <Link key={r.iata} href={`/${locale}/airport/${r.iata}`} style={{
+        <Link key={r.iata} href={`/${locale}/route/${iata}-${r.iata}`} style={{
           flexShrink: 0, width: 160, textDecoration: 'none', color: 'inherit',
           background: C.card, border: C.border, borderRadius: 16, padding: '14px 16px',
         }}>

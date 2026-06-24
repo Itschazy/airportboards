@@ -92,7 +92,13 @@
     "footer_countries": "Beliebte Länder",
     "footer_cities": "Beliebte Städte",
     "city_title": "Flughäfen in {city}",
-    "city_desc": "Alle Flughäfen in {city} ({count}): Live-Ankünfte & Abflüge, Flugstatus, alle Minute aktualisiert."
+    "city_desc": "Alle Flughäfen in {city} ({count}): Live-Ankünfte & Abflüge, Flugstatus, alle Minute aktualisiert.",
+    "route_title": "Flüge {from} — {to}",
+    "route_desc": "Flüge {from} ({iata1}) → {to} ({iata2}): Fahrplan, Airlines, Live-Status, Aktualisierung jede Minute.",
+    "route_h1": "{from} ({iata1}) → {to} ({iata2})",
+    "route_flights_today": "Flüge heute",
+    "route_airlines": "Airlines auf dieser Strecke",
+    "route_none": "Heute keine Direktflüge gefunden"
   },
   "ui": {
     "departures": "Abflüge",
