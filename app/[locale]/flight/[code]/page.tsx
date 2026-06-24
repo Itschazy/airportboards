@@ -19,7 +19,8 @@ function normalize(code: string): string | null {
   return /^[A-Z0-9]{2,3}\d{1,4}$/.test(c) ? c : null;
 }
 function pretty(code: string): string {
-  const m = code.match(/^([A-Z0-9]{2,3})(\d{1,4})$/);
+  // Airline IATA code is 2 chars (e.g. SU, S7, U6); the rest is the flight number.
+  const m = code.match(/^([A-Z0-9]{2})(\d{1,4})$/);
   return m ? `${m[1]} ${m[2]}` : code;
 }
 
