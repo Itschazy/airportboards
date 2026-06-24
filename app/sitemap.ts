@@ -27,13 +27,16 @@ export async function generateSitemaps() {
   return Array.from({ length: getSitemapCount() }, (_, id) => ({ id }));
 }
 
-export default function sitemap({ id }: { id: number }): MetadataRoute.Sitemap {
+export default function sitemap({ id }: { id: number | string }): MetadataRoute.Sitemap {
+  // Next passes `id` as a STRING — coerce, or `id === 0` fails (statics dropped) and
+  // `(id + 1)` string-concats ("1"+1 = "11" → slice(1000,11000), overlapping children).
+  const sid = Number(id);
   const iataCodes = getAllIataCodes();
-  const slice = iataCodes.slice(id * AIRPORTS_PER_SITEMAP, (id + 1) * AIRPORTS_PER_SITEMAP);
+  const slice = iataCodes.slice(sid * AIRPORTS_PER_SITEMAP, (sid + 1) * AIRPORTS_PER_SITEMAP);
   const entries: MetadataRoute.Sitemap = [];
 
   // Hubs / index / country / city / airline pages live only in the first child.
-  if (id === 0) {
+  if (sid === 0) {
     entries.push(entry('', 'daily', 0.8));               // home
     entries.push(entry('/airports', 'weekly', 0.7));     // countries index
     for (const L of LETTERS) entries.push(entry(`/az/${L}`, 'weekly', 0.4));
