@@ -625,19 +625,9 @@ export function FlightBoard({ airport, locale, defaultMode = 'departures' }: {
 
       {/* ── Top meta row ───────────────────────────────────── */}
       {!loading && flights.length > 0 && (
-        <div style={{
-          display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap',
-          gap: '4px 14px', padding: '0 16px 14px', maxWidth: 960, margin: '0 auto',
-        }}>
+        <div style={{ padding: '0 16px 14px', maxWidth: 960, margin: '0 auto' }}>
           <span style={{ fontSize: 13, color: C.secondary }}>
             {mode === 'departures' ? '✈' : '🛬'} {mode === 'departures' ? t('departures_today', { count: flights.length }) : t('arrivals_today', { count: flights.length })}
-          </span>
-          <span style={{ display: 'flex', alignItems: 'center', gap: 8, fontSize: 13 }}>
-            <span style={{ display: 'inline-flex', alignItems: 'center', gap: 6, color: C.green }}>
-              <span className={isLive ? 'live-dot' : ''} style={{ width: 7, height: 7, borderRadius: '50%', background: isLive ? C.green : C.gray, flexShrink: 0 }} />
-              {t('live_updates')}
-            </span>
-            <span style={{ color: C.dim }}>· {updLabel || t('updated_now')}</span>
           </span>
         </div>
       )}
@@ -689,10 +679,10 @@ export function FlightBoard({ airport, locale, defaultMode = 'departures' }: {
               <div style={{ width: 4, background: color, flexShrink: 0 }} />
 
               {/* Row content */}
-              <div style={{ display: 'flex', alignItems: 'center', flex: 1, padding: '18px 20px', gap: 14, minWidth: 0 }}>
+              <div style={{ display: 'flex', alignItems: 'center', flex: 1, padding: '18px 16px', gap: 12, minWidth: 0 }}>
                 {/* Left: time + flight number */}
                 <div style={{ flexShrink: 0 }}>
-                  <div style={{ fontSize: 30, fontWeight: 700, fontVariantNumeric: 'tabular-nums', color: f.actual ? C.orange : C.text, lineHeight: 1 }}>
+                  <div style={{ fontSize: 'clamp(23px, 6.4vw, 30px)', fontWeight: 700, fontVariantNumeric: 'tabular-nums', color: f.actual ? C.orange : C.text, lineHeight: 1 }}>
                     {f.actual || f.scheduled}
                   </div>
                   {f.actual && (
@@ -703,19 +693,19 @@ export function FlightBoard({ airport, locale, defaultMode = 'departures' }: {
 
                 {/* Center: destination */}
                 <div style={{ flex: 1, minWidth: 0 }}>
-                  <div style={{ whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis', lineHeight: 1.1 }}>
-                    <span style={{ fontSize: 'clamp(18px, 5vw, 26px)', fontWeight: 700, color: C.text, letterSpacing: '-0.01em' }}>{city}</span>
-                    {code && <span style={{ fontSize: 'clamp(13px, 3.6vw, 18px)', fontWeight: 500, color: C.secondary, marginLeft: 6 }}>({code})</span>}
+                  <div style={{ whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis', lineHeight: 1.15 }}>
+                    <span style={{ fontSize: 'clamp(16px, 4.5vw, 25px)', fontWeight: 700, color: C.text, letterSpacing: '-0.01em' }}>{city}</span>
+                    {code && <span style={{ fontSize: 'clamp(12px, 3.2vw, 17px)', fontWeight: 500, color: C.secondary, marginLeft: 5 }}>({code})</span>}
                   </div>
                 </div>
 
                 {/* Right: gate + status + chevron */}
-                <div style={{ flexShrink: 0, textAlign: 'right', display: 'flex', alignItems: 'center', gap: 8 }}>
-                  <div style={{ maxWidth: 108 }}>
+                <div style={{ flexShrink: 0, textAlign: 'right', display: 'flex', alignItems: 'center', gap: 6 }}>
+                  <div style={{ maxWidth: 92 }}>
                     {f.gate && (
                       <div style={{ lineHeight: 1.1, whiteSpace: 'nowrap' }}>
-                        <span style={{ fontSize: 12, color: C.secondary }}>{t('gate')} </span>
-                        <span style={{ fontSize: 19, fontWeight: 700, color: C.text, letterSpacing: '-0.01em' }}>{f.gate}</span>
+                        <span style={{ fontSize: 11, color: C.secondary }}>{t('gate')} </span>
+                        <span style={{ fontSize: 18, fontWeight: 700, color: C.text, letterSpacing: '-0.01em' }}>{f.gate}</span>
                       </div>
                     )}
                     <div style={{
