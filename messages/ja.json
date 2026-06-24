@@ -28,12 +28,12 @@
     "scheduled": "予定"
   },
   "meta": {
-    "main_title": "{airport}（{iata}） — リアルタイム到着・出発情報",
-    "main_description": "{country} {city}の{airport}（{iata}）のリアルタイムフライトボード。到着・出発・ゲート情報・遅延状況を毎分更新。",
-    "arrivals_title": "{airport}（{iata}）到着 — リアルタイム運航情報",
-    "departures_title": "{airport}（{iata}）出発 — リアルタイム運航情報",
-    "arrivals_description": "{city}の{airport}（{iata}）リアルタイム到着ボード。運航状況・手荷物受取ベルト番号・ターミナル情報を毎分更新。",
-    "departures_description": "{city}の{airport}（{iata}）リアルタイム出発ボード。運航状況・ゲート番号・ターミナル・遅延情報を毎分更新。"
+    "main_title": "{airport} 発着案内 ({iata})｜フライト情報",
+    "main_description": "{airport}の本日の発着案内。到着便・出発便の運航状況をリアルタイムで確認できます。",
+    "arrivals_title": "{airport} 発着案内・到着便 ({iata})",
+    "departures_title": "{airport} 発着案内・出発便 ({iata})",
+    "arrivals_description": "{airport}の本日の到着便案内。到着・出発の運航状況をリアルタイムで確認できます。",
+    "departures_description": "{airport}の本日の出発便案内。出発・到着の運航状況をリアルタイムで確認できます。"
   },
   "airport_info": {
     "location": "所在地",

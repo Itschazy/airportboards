@@ -28,12 +28,12 @@
     "scheduled": "예정"
   },
   "meta": {
-    "main_title": "{airport}（{iata}） — 실시간 도착 및 출발 안내",
-    "main_description": "{country} {city}의 {airport}（{iata}） 실시간 항공 편광판. 도착, 출발, 게이트 정보 및 지연 상태를 매분 업데이트.",
-    "arrivals_title": "{airport}（{iata}） 도착 — 실시간 항공편 현황",
-    "departures_title": "{airport}（{iata}） 출발 — 실시간 항공편 현황",
-    "arrivals_description": "{city}의 {airport}（{iata}） 실시간 도착 안내판. 항공편 상태, 수하물 수취대 번호 및 터미널 정보를 매분 업데이트.",
-    "departures_description": "{city}의 {airport}（{iata}） 실시간 출발 안내판. 항공편 상태, 게이트 번호, 터미널 및 지연 정보를 매분 업데이트."
+    "main_title": "{airport} 운항정보 ({iata}) | 실시간 도착·출발",
+    "main_description": "{airport} 공항 오늘 항공편 운항정보를 실시간 확인하세요. 도착·출발 시간, 지연, 결항, 게이트 정보를 제공합니다.",
+    "arrivals_title": "{airport} 도착 운항정보 ({iata}) | 실시간 도착",
+    "departures_title": "{airport} 출발 운항정보 ({iata}) | 실시간 출발",
+    "arrivals_description": "{airport} 공항 오늘 도착 운항정보를 실시간 확인하세요. 도착 항공편, 출발 연결편, 지연·결항, 게이트 정보를 제공합니다.",
+    "departures_description": "{airport} 공항 오늘 출발 운항정보를 실시간 확인하세요. 출발 항공편, 도착 연결편, 지연·결항, 게이트 정보를 제공합니다."
   },
   "airport_info": {
     "location": "위치",

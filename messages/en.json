@@ -28,12 +28,12 @@
     "scheduled": "Scheduled"
   },
   "meta": {
-    "main_title": "{airport} ({iata}) — Live Arrivals & Departures Board",
-    "main_description": "Live flight board for {airport} ({iata}) in {city}, {country}. Real-time arrivals, departures, gate information and delay status updated every minute.",
-    "arrivals_title": "{airport} ({iata}) Arrivals Today — Live Flight Status",
-    "departures_title": "{airport} ({iata}) Departures Today — Live Flight Status",
-    "arrivals_description": "Live arrival board for {airport} ({iata}) in {city}. Real-time flight status, baggage carousel numbers and terminal information updated every minute.",
-    "departures_description": "Live departure board for {airport} ({iata}) in {city}. Real-time flight status, gate numbers, terminal and delay information updated every minute."
+    "main_title": "{airport} Flight Board ({iata}): Arrivals & Departures",
+    "main_description": "Live flight board at {airport} ({iata}) today: real-time arrivals and departures with flight status, times, delays and gates.",
+    "arrivals_title": "{airport} Arrivals Board ({iata}) | Live Flights",
+    "departures_title": "{airport} Departures Board ({iata}) | Live Flights",
+    "arrivals_description": "Live arrivals board at {airport} ({iata}) today: real-time arrivals and departures, flight status, times, delays and gates.",
+    "departures_description": "Live departures board at {airport} ({iata}) today: real-time departures and arrivals, flight status, times, delays and gates."
   },
   "airport_info": {
     "location": "Location",

@@ -28,12 +28,12 @@
     "scheduled": "Prévu"
   },
   "meta": {
-    "main_title": "Aéroport {airport} ({iata}) — Arrivées & Départs en direct",
-    "main_description": "Tableau de bord des vols en direct pour {airport} ({iata}) à {city}, {country}. Arrivées, départs, portes et retards en temps réel — mis à jour chaque minute.",
-    "arrivals_title": "Arrivées {airport} ({iata}) — État des vols en direct",
-    "departures_title": "Départs {airport} ({iata}) — État des vols en direct",
-    "arrivals_description": "Tableau des arrivées en direct pour {airport} ({iata}) à {city}. Statut des vols, numéros de tapis bagages et informations terminal — mis à jour chaque minute.",
-    "departures_description": "Tableau des départs en direct pour {airport} ({iata}) à {city}. Statut des vols, numéros de porte, terminal et retards — mis à jour chaque minute."
+    "main_title": "{airport} tableau des vols ({iata})",
+    "main_description": "Tableau en direct des arrivées et départs de {airport} aujourd’hui : horaires, retards et statuts des vols ({iata}).",
+    "arrivals_title": "{airport} arrivées – tableau ({iata})",
+    "departures_title": "{airport} départs – tableau ({iata})",
+    "arrivals_description": "Arrivées {airport} aujourd’hui en direct : tableau des vols, horaires, retards et départs de l’aéroport ({iata}).",
+    "departures_description": "Départs {airport} aujourd’hui en direct : tableau des vols, horaires, retards et arrivées de l’aéroport ({iata})."
   },
   "airport_info": {
     "location": "Localisation",

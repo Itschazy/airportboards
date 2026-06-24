@@ -28,12 +28,12 @@
     "scheduled": "计划中"
   },
   "meta": {
-    "main_title": "{airport}（{iata}）— 实时到达与出发",
-    "main_description": "{country}{city}{airport}（{iata}）的实时航班显示屏。到达、出发、登机口信息和延误状态每分钟更新。",
-    "arrivals_title": "{airport}（{iata}）到达 — 实时航班状态",
-    "departures_title": "{airport}（{iata}）出发 — 实时航班状态",
-    "arrivals_description": "{city}{airport}（{iata}）实时到达显示屏。实时航班状态、行李转盘号码和航站楼信息每分钟更新。",
-    "departures_description": "{city}{airport}（{iata}）实时出发显示屏。实时航班状态、登机口号码、航站楼和延误信息每分钟更新。"
+    "main_title": "{airport}航班动态 ({iata})｜实时到达与出发",
+    "main_description": "查看{airport}今日航班动态：实时到达和出发信息、延误、取消、航站楼与登机口，按{iata}机场更新。",
+    "arrivals_title": "{airport}到达航班动态 ({iata})｜实时进港",
+    "departures_title": "{airport}出发航班动态 ({iata})｜实时离港",
+    "arrivals_description": "查看{airport}今日到达航班动态：实时进港、出发衔接、延误、取消、航站楼和行李信息，按{iata}机场更新。",
+    "departures_description": "查看{airport}今日出发航班动态：实时离港、到达衔接、延误、取消、值机柜台、航站楼和登机口。"
   },
   "airport_info": {
     "location": "位置",

@@ -1,0 +1,110 @@
+{
+  "zh": {
+    "target_query": "谢列梅捷沃机场航班动态",
+    "main_title": "{airport}航班动态 ({iata})｜实时到达与出发",
+    "arrivals_title": "{airport}到达航班动态 ({iata})｜实时进港",
+    "departures_title": "{airport}出发航班动态 ({iata})｜实时离港",
+    "main_description": "查看{airport}今日航班动态：实时到达和出发信息、延误、取消、航站楼与登机口，按{iata}机场更新。",
+    "arrivals_description": "查看{airport}今日到达航班动态：实时进港、出发衔接、延误、取消、航站楼和行李信息，按{iata}机场更新。",
+    "departures_description": "查看{airport}今日出发航班动态：实时离港、到达衔接、延误、取消、值机柜台、航站楼和登机口。"
+  },
+  "ja": {
+    "target_query": "シェレメーチエヴォ空港 発着案内",
+    "main_title": "{airport} 発着案内 ({iata})｜フライト情報",
+    "arrivals_title": "{airport} 発着案内・到着便 ({iata})",
+    "departures_title": "{airport} 発着案内・出発便 ({iata})",
+    "main_description": "{airport}の本日の発着案内。到着便・出発便の運航状況をリアルタイムで確認できます。",
+    "arrivals_description": "{airport}の本日の到着便案内。到着・出発の運航状況をリアルタイムで確認できます。",
+    "departures_description": "{airport}の本日の出発便案内。出発・到着の運航状況をリアルタイムで確認できます。"
+  },
+  "ru": {
+    "target_query": "шереметьево табло",
+    "main_title": "{airport} табло онлайн ({iata}) — рейсы сегодня",
+    "arrivals_title": "{airport} табло прилетов ({iata}) — онлайн",
+    "departures_title": "{airport} табло вылетов ({iata}) — онлайн",
+    "main_description": "Онлайн-табло аэропорта {airport}: прилеты и вылеты сегодня, статус рейсов в реальном времени, задержки и изменения.",
+    "arrivals_description": "Табло прилетов {airport} сегодня: рейсы онлайн, время прибытия, статусы, задержки и вылеты в реальном времени.",
+    "departures_description": "Табло вылетов {airport} сегодня: рейсы онлайн, время отправления, статусы, задержки и прилеты в реальном времени."
+  },
+  "ko": {
+    "target_query": "셰레메티예보 공항 운항정보",
+    "main_title": "{airport} 운항정보 ({iata}) | 실시간 도착·출발",
+    "arrivals_title": "{airport} 도착 운항정보 ({iata}) | 실시간 도착",
+    "departures_title": "{airport} 출발 운항정보 ({iata}) | 실시간 출발",
+    "main_description": "{airport} 공항 오늘 항공편 운항정보를 실시간 확인하세요. 도착·출발 시간, 지연, 결항, 게이트 정보를 제공합니다.",
+    "arrivals_description": "{airport} 공항 오늘 도착 운항정보를 실시간 확인하세요. 도착 항공편, 출발 연결편, 지연·결항, 게이트 정보를 제공합니다.",
+    "departures_description": "{airport} 공항 오늘 출발 운항정보를 실시간 확인하세요. 출발 항공편, 도착 연결편, 지연·결항, 게이트 정보를 제공합니다."
+  },
+  "it": {
+    "target_query": "sheremetyevo tabellone voli",
+    "main_title": "{airport} tabellone voli ({iata}) | Arrivi e partenze",
+    "arrivals_title": "{airport} tabellone arrivi ({iata}) | Oggi",
+    "departures_title": "{airport} tabellone partenze ({iata}) | Oggi",
+    "main_description": "Tabellone voli in tempo reale di {airport}: arrivi e partenze di oggi, orari, ritardi, cancellazioni e gate aggiornati.",
+    "arrivals_description": "Tabellone arrivi in tempo reale di {airport}: voli di oggi, orari, ritardi e partenze aggiornate.",
+    "departures_description": "Tabellone partenze in tempo reale di {airport}: voli di oggi, orari, ritardi, gate e arrivi aggiornati."
+  },
+  "fr": {
+    "target_query": "Sheremetyevo tableau des vols",
+    "main_title": "{airport} tableau des vols ({iata})",
+    "arrivals_title": "{airport} arrivées – tableau ({iata})",
+    "departures_title": "{airport} départs – tableau ({iata})",
+    "main_description": "Tableau en direct des arrivées et départs de {airport} aujourd’hui : horaires, retards et statuts des vols ({iata}).",
+    "arrivals_description": "Arrivées {airport} aujourd’hui en direct : tableau des vols, horaires, retards et départs de l’aéroport ({iata}).",
+    "departures_description": "Départs {airport} aujourd’hui en direct : tableau des vols, horaires, retards et arrivées de l’aéroport ({iata})."
+  },
+  "ar": {
+    "target_query": "مطار شيريميتيفو لوحة الرحلات",
+    "main_title": "{airport} لوحة الرحلات ({iata}) مباشر",
+    "arrivals_title": "{airport} لوحة وصول الرحلات ({iata})",
+    "departures_title": "{airport} لوحة مغادرة الرحلات ({iata})",
+    "main_description": "لوحة رحلات {airport} اليوم: وصول ومغادرة مباشرة مع مواعيد الرحلات، التأخير، الإلغاء والبوابات لحظة بلحظة.",
+    "arrivals_description": "وصول رحلات {airport} اليوم مباشر: لوحة الوصول مع حالة الرحلات، التأخير والبوابات، إضافة إلى معلومات المغادرة.",
+    "departures_description": "مغادرة رحلات {airport} اليوم مباشرة: لوحة المغادرة مع المواعيد، التأخير والبوابات، إضافة إلى معلومات الوصول."
+  },
+  "en": {
+    "target_query": "Sheremetyevo flight board",
+    "main_title": "{airport} Flight Board ({iata}): Arrivals & Departures",
+    "arrivals_title": "{airport} Arrivals Board ({iata}) | Live Flights",
+    "departures_title": "{airport} Departures Board ({iata}) | Live Flights",
+    "main_description": "Live flight board at {airport} ({iata}) today: real-time arrivals and departures with flight status, times, delays and gates.",
+    "arrivals_description": "Live arrivals board at {airport} ({iata}) today: real-time arrivals and departures, flight status, times, delays and gates.",
+    "departures_description": "Live departures board at {airport} ({iata}) today: real-time departures and arrivals, flight status, times, delays and gates."
+  },
+  "hi": {
+    "target_query": "शेरेमेत्येवो एयरपोर्ट फ्लाइट बोर्ड",
+    "main_title": "{airport} फ्लाइट बोर्ड ({iata}) | लाइव उड़ानें",
+    "arrivals_title": "{airport} आगमन फ्लाइट बोर्ड ({iata})",
+    "departures_title": "{airport} प्रस्थान फ्लाइट बोर्ड ({iata})",
+    "main_description": "{airport} एयरपोर्ट का लाइव फ्लाइट बोर्ड: आज के आगमन व प्रस्थान, उड़ान स्थिति, समय, देरी और गेट की जानकारी रियल-टाइम में देखें।",
+    "arrivals_description": "{airport} एयरपोर्ट पर आज के लाइव आगमन देखें। फ्लाइट बोर्ड पर आगमन व प्रस्थान, समय, देरी और उड़ान स्थिति रियल-टाइम में।",
+    "departures_description": "{airport} एयरपोर्ट से आज के लाइव प्रस्थान देखें। फ्लाइट बोर्ड पर प्रस्थान व आगमन, समय, देरी और उड़ान स्थिति रियल-टाइम में।"
+  },
+  "tr": {
+    "target_query": "Şeremetyevo uçuş tablosu",
+    "main_title": "{airport} Uçuş Tablosu ({iata}) | Canlı",
+    "arrivals_title": "{airport} Varış Uçuşları Tablosu ({iata})",
+    "departures_title": "{airport} Kalkış Uçuşları Tablosu ({iata})",
+    "main_description": "{airport} için bugün canlı uçuş tablosu: varışlar ve kalkışlar, saatler, durumlar, terminal ve kapı bilgileri gerçek zamanlı güncellenir.",
+    "arrivals_description": "Bugün {airport} varış uçuşları tablosu: gelen ve giden uçuşlar, saatler ve durumlar canlı olarak gerçek zamanlı güncellenir.",
+    "departures_description": "Bugün {airport} kalkış uçuşları tablosu: giden ve gelen uçuşlar, saatler ve durumlar canlı olarak gerçek zamanlı güncellenir."
+  },
+  "es": {
+    "target_query": "aeropuerto sheremetyevo panel de vuelos",
+    "main_title": "{airport} ({iata}) panel de vuelos en vivo",
+    "arrivals_title": "{airport} llegadas ({iata}) | panel de vuelos",
+    "departures_title": "{airport} salidas ({iata}) | panel de vuelos",
+    "main_description": "Panel de vuelos de {airport} hoy: llegadas y salidas en tiempo real, horarios, retrasos, cancelaciones y puertas actualizadas.",
+    "arrivals_description": "Panel de llegadas del aeropuerto {airport} hoy en tiempo real: horarios, retrasos y cancelaciones. Consulta también salidas.",
+    "departures_description": "Panel de salidas del aeropuerto {airport} hoy en tiempo real: horarios, retrasos, cancelaciones y puertas. Consulta también llegadas."
+  },
+  "de": {
+    "target_query": "flughafen scheremetjewo flugplan",
+    "main_title": "Flugplan {airport} ({iata}) – Ankunft & Abflug",
+    "arrivals_title": "{airport} Ankunftstafel ({iata}) – live",
+    "departures_title": "{airport} Abflugtafel ({iata}) – live",
+    "main_description": "Live-Flugplan für {airport}: Ankünfte und Abflüge in Echtzeit, Status, Gates und Verspätungen heute.",
+    "arrivals_description": "Ankünfte am Flughafen {airport} heute live: Landungen in Echtzeit, Status, Verspätungen sowie Abflüge im Überblick.",
+    "departures_description": "Abflüge am Flughafen {airport} heute live: Starts in Echtzeit, Gates, Status und Verspätungen plus aktuelle Ankünfte."
+  }
+}

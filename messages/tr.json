@@ -28,12 +28,12 @@
     "scheduled": "Bekleniyor"
   },
   "meta": {
-    "main_title": "{airport} Havalimanı ({iata}) — Canlı Gelenler & Gidenler",
-    "main_description": "{city}, {country}'daki {airport} ({iata}) için canlı uçuş panosu. Gelenler, gidenler, kapı bilgileri ve gecikme durumu gerçek zamanlı — her dakika güncellenir.",
-    "arrivals_title": "{airport} ({iata}) Gelenler — Canlı Uçuş Durumu",
-    "departures_title": "{airport} ({iata}) Gidenler — Canlı Uçuş Durumu",
-    "arrivals_description": "{city}'deki {airport} ({iata}) canlı gelenler panosu. Gerçek zamanlı uçuş durumu, bagaj bandı numaraları ve terminal bilgileri — her dakika güncellenir.",
-    "departures_description": "{city}'deki {airport} ({iata}) canlı gidenler panosu. Gerçek zamanlı uçuş durumu, kapı numaraları, terminal ve gecikme bilgileri — her dakika güncellenir."
+    "main_title": "{airport} Uçuş Tablosu ({iata}) | Canlı",
+    "main_description": "{airport} için bugün canlı uçuş tablosu: varışlar ve kalkışlar, saatler, durumlar, terminal ve kapı bilgileri gerçek zamanlı güncellenir.",
+    "arrivals_title": "{airport} Varış Uçuşları Tablosu ({iata})",
+    "departures_title": "{airport} Kalkış Uçuşları Tablosu ({iata})",
+    "arrivals_description": "Bugün {airport} varış uçuşları tablosu: gelen ve giden uçuşlar, saatler ve durumlar canlı olarak gerçek zamanlı güncellenir.",
+    "departures_description": "Bugün {airport} kalkış uçuşları tablosu: giden ve gelen uçuşlar, saatler ve durumlar canlı olarak gerçek zamanlı güncellenir."
   },
   "airport_info": {
     "location": "Konum",

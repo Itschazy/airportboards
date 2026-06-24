@@ -28,12 +28,12 @@
     "scheduled": "Previsto"
   },
   "meta": {
-    "main_title": "Aeroporto {airport} ({iata}) — Arrivi e Partenze in diretta",
-    "main_description": "Tabellone voli in diretta per {airport} ({iata}) a {city}, {country}. Arrivi, partenze, gate e informazioni sui ritardi in tempo reale — aggiornato ogni minuto.",
-    "arrivals_title": "Arrivi {airport} ({iata}) — Stato voli in tempo reale",
-    "departures_title": "Partenze {airport} ({iata}) — Stato voli in tempo reale",
-    "arrivals_description": "Tabellone arrivi in diretta per {airport} ({iata}) a {city}. Stato voli, nastri bagagli e informazioni terminal — aggiornato ogni minuto.",
-    "departures_description": "Tabellone partenze in diretta per {airport} ({iata}) a {city}. Stato voli, numeri gate, terminal e ritardi — aggiornato ogni minuto."
+    "main_title": "{airport} tabellone voli ({iata}) | Arrivi e partenze",
+    "main_description": "Tabellone voli in tempo reale di {airport}: arrivi e partenze di oggi, orari, ritardi, cancellazioni e gate aggiornati.",
+    "arrivals_title": "{airport} tabellone arrivi ({iata}) | Oggi",
+    "departures_title": "{airport} tabellone partenze ({iata}) | Oggi",
+    "arrivals_description": "Tabellone arrivi in tempo reale di {airport}: voli di oggi, orari, ritardi e partenze aggiornate.",
+    "departures_description": "Tabellone partenze in tempo reale di {airport}: voli di oggi, orari, ritardi, gate e arrivi aggiornati."
   },
   "airport_info": {
     "location": "Posizione",

@@ -28,12 +28,12 @@
     "scheduled": "Erwartet"
   },
   "meta": {
-    "main_title": "Flughafen {airport} ({iata}) — Live Ankünfte & Abflüge",
-    "main_description": "Live Flugtafel für {airport} ({iata}) in {city}, {country}. Echtzeit-Ankünfte, Abflüge, Gate-Informationen und Verspätungen — jede Minute aktualisiert.",
-    "arrivals_title": "Ankünfte {airport} ({iata}) — Live Flugstatus",
-    "departures_title": "Abflüge {airport} ({iata}) — Live Flugstatus",
-    "arrivals_description": "Live Ankunftstafel für {airport} ({iata}) in {city}. Echtzeit-Flugstatus, Gepäckausgabebänder und Terminal-Informationen — jede Minute aktualisiert.",
-    "departures_description": "Live Abflugtafel für {airport} ({iata}) in {city}. Echtzeit-Flugstatus, Gate-Nummern, Terminal und Verspätungen — jede Minute aktualisiert."
+    "main_title": "Flugplan {airport} ({iata}) – Ankunft & Abflug",
+    "main_description": "Live-Flugplan für {airport}: Ankünfte und Abflüge in Echtzeit, Status, Gates und Verspätungen heute.",
+    "arrivals_title": "{airport} Ankunftstafel ({iata}) – live",
+    "departures_title": "{airport} Abflugtafel ({iata}) – live",
+    "arrivals_description": "Ankünfte am Flughafen {airport} heute live: Landungen in Echtzeit, Status, Verspätungen sowie Abflüge im Überblick.",
+    "departures_description": "Abflüge am Flughafen {airport} heute live: Starts in Echtzeit, Gates, Status und Verspätungen plus aktuelle Ankünfte."
   },
   "airport_info": {
     "location": "Standort",

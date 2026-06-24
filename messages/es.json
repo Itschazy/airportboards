@@ -28,12 +28,12 @@
     "scheduled": "Previsto"
   },
   "meta": {
-    "main_title": "Aeropuerto {airport} ({iata}) — Llegadas y Salidas en vivo",
-    "main_description": "Panel de vuelos en vivo para {airport} ({iata}) en {city}, {country}. Llegadas, salidas, puertas e información de retrasos en tiempo real — actualizado cada minuto.",
-    "arrivals_title": "Llegadas {airport} ({iata}) — Estado de vuelos en vivo",
-    "departures_title": "Salidas {airport} ({iata}) — Estado de vuelos en vivo",
-    "arrivals_description": "Panel de llegadas en vivo para {airport} ({iata}) en {city}. Estado de vuelos, cintas de equipaje e información de terminal — actualizado cada minuto.",
-    "departures_description": "Panel de salidas en vivo para {airport} ({iata}) en {city}. Estado de vuelos, números de puerta, terminal y retrasos — actualizado cada minuto."
+    "main_title": "{airport} ({iata}) panel de vuelos en vivo",
+    "main_description": "Panel de vuelos de {airport} hoy: llegadas y salidas en tiempo real, horarios, retrasos, cancelaciones y puertas actualizadas.",
+    "arrivals_title": "{airport} llegadas ({iata}) | panel de vuelos",
+    "departures_title": "{airport} salidas ({iata}) | panel de vuelos",
+    "arrivals_description": "Panel de llegadas del aeropuerto {airport} hoy en tiempo real: horarios, retrasos y cancelaciones. Consulta también salidas.",
+    "departures_description": "Panel de salidas del aeropuerto {airport} hoy en tiempo real: horarios, retrasos, cancelaciones y puertas. Consulta también llegadas."
   },
   "airport_info": {
     "location": "Ubicación",
