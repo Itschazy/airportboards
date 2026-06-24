@@ -4,6 +4,7 @@ import { notFound } from 'next/navigation';
 import { getAirport, getStaticIataCodes } from '@/lib/airports';
 import { getAirportContent } from '@/lib/airport-content';
 import { FlightBoard } from '@/components/FlightBoard';
+import { AirportBottom } from '@/components/AirportBottom';
 import { locales } from '@/lib/i18n';
 
 const BASE = 'https://airportsboard.live';
@@ -110,21 +111,7 @@ export default async function AirportPage({ params }: Props) {
         {h1}
       </h1>
       <FlightBoard airport={airport} locale={locale} />
-      {about && (
-        <section style={{ background: '#050505', padding: '8px 16px 56px' }}>
-          <article style={{ maxWidth: 720, margin: '0 auto' }}>
-            <h2 style={{
-              fontSize: 'clamp(1.1rem, 3.5vw, 1.4rem)', fontWeight: 700,
-              letterSpacing: '-0.02em', color: '#FFFFFF', marginBottom: '0.75rem',
-            }}>
-              {airport.name} ({airport.iata})
-            </h2>
-            <p style={{ fontSize: '0.95rem', lineHeight: 1.7, color: '#9A9A9A' }}>
-              {about}
-            </p>
-          </article>
-        </section>
-      )}
+      <AirportBottom airport={airport} locale={locale} about={about} />
     </>
   );
 }
