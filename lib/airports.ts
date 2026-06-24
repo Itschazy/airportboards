@@ -241,7 +241,7 @@ export function nearestAirports(lat: number, lon: number, n = 8): (Airport & { k
 }
 
 // ── Countries (for /airports/[country] SEO pages + homepage block) ──────────
-const slugify = (s: string) =>
+export const slugify = (s: string) =>
   fold(s.toLowerCase()).replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
 
 export interface CountryInfo { country: string; iso2: string; slug: string; count: number }
@@ -268,6 +268,33 @@ export function getAirportsByCountry(slug: string): Airport[] {
   return airports
     .filter(a => a.country === c.country)
     .sort((a, b) => (HUB_WEIGHT.get(b.iata) ?? 0) - (HUB_WEIGHT.get(a.iata) ?? 0) || a.city.localeCompare(b.city));
+}
+
+// ── Cities (for /city/[slug] SEO pages — "аэропорты Москвы", multi-airport) ──
+export interface CityInfo { city: string; country: string; iso2: string; slug: string; count: number }
+let CITIES: CityInfo[] | null = null;
+export function getCities(): CityInfo[] {
+  if (!CITIES) {
+    const m = new Map<string, CityInfo>();
+    for (const a of airports) {
+      if (!a.city) continue;
+      const slug = slugify(a.city);
+      if (!slug) continue;
+      const e = m.get(slug) || { city: a.city, country: a.country, iso2: a.iso2, slug, count: 0 };
+      e.count++;
+      m.set(slug, e);
+    }
+    CITIES = [...m.values()].sort((x, y) => y.count - x.count);
+  }
+  return CITIES;
+}
+export function getCityBySlug(slug: string): CityInfo | undefined {
+  return getCities().find(c => c.slug === slug);
+}
+export function getAirportsByCity(slug: string): Airport[] {
+  return airports
+    .filter(a => a.city && slugify(a.city) === slug)
+    .sort((a, b) => (HUB_WEIGHT.get(b.iata) ?? 0) - (HUB_WEIGHT.get(a.iata) ?? 0) || a.name.localeCompare(b.name));
 }
 
 // ── A-Z index ───────────────────────────────────────────────────────────────

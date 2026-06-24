@@ -90,7 +90,9 @@
     "faq_live_a": "Bu sayfa {name} ({iata}) için canlı varış ve kalkışları gösterir, her dakika güncellenir.",
     "footer_tagline": "Dünyada 6.000+ havalimanı için canlı pano. Varışlar ve kalkışlar gerçek zamanlı, her dakika güncellenir.",
     "footer_countries": "Popüler ülkeler",
-    "footer_cities": "Popüler şehirler"
+    "footer_cities": "Popüler şehirler",
+    "city_title": "{city} Havalimanları",
+    "city_desc": "{city} içindeki tüm havalimanları ({count}): canlı varış & kalkışlar, uçuş durumu, her dakika güncellenir."
   },
   "ui": {
     "departures": "Kalkışlar",

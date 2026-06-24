@@ -90,7 +90,9 @@
     "faq_live_a": "Diese Seite zeigt Live‑Ankünfte und -Abflüge für {name} ({iata}), jede Minute aktualisiert.",
     "footer_tagline": "Live-Fluginformationen für über 6.000 Flughäfen weltweit. Ankünfte und Abflüge in Echtzeit, jede Minute aktualisiert.",
     "footer_countries": "Beliebte Länder",
-    "footer_cities": "Beliebte Städte"
+    "footer_cities": "Beliebte Städte",
+    "city_title": "Flughäfen in {city}",
+    "city_desc": "Alle Flughäfen in {city} ({count}): Live-Ankünfte & Abflüge, Flugstatus, alle Minute aktualisiert."
   },
   "ui": {
     "departures": "Abflüge",

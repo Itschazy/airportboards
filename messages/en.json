@@ -90,7 +90,9 @@
     "faq_live_a": "This page shows live arrivals and departures for {name} ({iata}), updated every minute.",
     "footer_tagline": "Live airport boards for 6,000+ airports worldwide. Arrivals and departures in real time, updated every minute.",
     "footer_countries": "Popular countries",
-    "footer_cities": "Popular cities"
+    "footer_cities": "Popular cities",
+    "city_title": "Airports in {city}",
+    "city_desc": "All airports in {city} ({count}): live arrivals & departures, flight status, updated every minute."
   },
   "ui": {
     "departures": "Departures",

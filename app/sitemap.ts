@@ -1,5 +1,5 @@
 import type { MetadataRoute } from 'next';
-import { getAllIataCodes, AIRPORTS_PER_SITEMAP, getSitemapCount, getCountries, getStaticIataCodes } from '@/lib/airports';
+import { getAllIataCodes, AIRPORTS_PER_SITEMAP, getSitemapCount, getCountries, getStaticIataCodes, getCities } from '@/lib/airports';
 import { locales } from '@/lib/i18n';
 
 const BASE = 'https://airportsboard.live';
@@ -27,6 +27,10 @@ export default function sitemap({ id }: { id: number }): MetadataRoute.Sitemap {
       }
       for (const c of getCountries()) {
         entries.push({ url: `${BASE}/${locale}/airports/${c.slug}`, changeFrequency: 'weekly', priority: 0.7 });
+      }
+      // Multi-airport cities ("аэропорты Москвы") — highest-value city pages.
+      for (const c of getCities()) {
+        if (c.count > 1) entries.push({ url: `${BASE}/${locale}/city/${c.slug}`, changeFrequency: 'weekly', priority: 0.7 });
       }
     }
   }

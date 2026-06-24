@@ -90,7 +90,9 @@
     "faq_live_a": "Cette page affiche les arrivées et départs en direct pour {name} ({iata}), mis à jour chaque minute.",
     "footer_tagline": "Tableaux d'aéroport en direct pour plus de 6 000 aéroports dans le monde. Arrivées et départs en temps réel, mis à jour chaque minute.",
     "footer_countries": "Pays populaires",
-    "footer_cities": "Villes populaires"
+    "footer_cities": "Villes populaires",
+    "city_title": "Aéroports de {city}",
+    "city_desc": "Tous les aéroports de {city} ({count}) : arrivées & départs en direct, statut des vols, mis à jour chaque minute."
   },
   "ui": {
     "departures": "Départs",

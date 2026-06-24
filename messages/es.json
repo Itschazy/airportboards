@@ -90,7 +90,9 @@
     "faq_live_a": "Esta página muestra llegadas y salidas en vivo para {name} ({iata}), actualizadas cada minuto.",
     "footer_tagline": "Tableros en vivo de aeropuertos para más de 6.000 aeropuertos en todo el mundo. Llegadas y salidas en tiempo real, actualizadas cada minuto.",
     "footer_countries": "Países populares",
-    "footer_cities": "Ciudades populares"
+    "footer_cities": "Ciudades populares",
+    "city_title": "Aeropuertos en {city}",
+    "city_desc": "Todos los aeropuertos en {city} ({count}): llegadas y salidas en vivo, estado de vuelos, actualizado cada minuto."
   },
   "ui": {
     "departures": "Salidas",

@@ -90,7 +90,9 @@
     "faq_live_a": "此页面显示 {name}（{iata}）的实时到达和出发信息，每分钟更新。",
     "footer_tagline": "覆盖 6000+ 机场的实时航显。到达和出发实时更新，每分钟刷新。",
     "footer_countries": "热门国家",
-    "footer_cities": "热门城市"
+    "footer_cities": "热门城市",
+    "city_title": "{city} 机场",
+    "city_desc": "{city} 的所有机场（{count}）：实时到达与出发、航班状态，每分钟更新。"
   },
   "ui": {
     "departures": "出发",

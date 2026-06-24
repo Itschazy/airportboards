@@ -2,7 +2,7 @@ import { getTranslations , setRequestLocale } from 'next-intl/server';
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import {
-  POPULAR_AIRPORTS, POPULAR_CITIES, getAirport, getCountries, getAllIataCodes,
+  POPULAR_AIRPORTS, POPULAR_CITIES, getAirport, getCountries, getAllIataCodes, slugify,
 } from '@/lib/airports';
 import { locales } from '@/lib/i18n';
 import { AirportSearch } from '@/components/AirportSearch';
@@ -131,7 +131,7 @@ export default async function HomePage({ params }: Props) {
         <Title>{t('sec_cities')}</Title>
         <div className="scroll-row">
           {POPULAR_CITIES.map(c => (
-            <Link key={c.code} href={`/${locale}/airport/${c.iata}`} style={{
+            <Link key={c.code} href={`/${locale}/city/${slugify(getAirport(c.iata)?.city || c.name)}`} style={{
               width: 150, height: 92, textDecoration: 'none', color: 'inherit',
               background: '#0B0B0B', border: '1px solid #1A1A1A', borderRadius: 16, padding: '12px 18px',
               display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', textAlign: 'center',

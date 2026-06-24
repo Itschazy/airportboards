@@ -90,7 +90,9 @@
     "faq_live_a": "このページでは{name}（{iata}）の到着・出発を1分ごとに更新して表示します。",
     "footer_tagline": "世界6,000以上の空港のライブ案内板。到着・出発をリアルタイムで1分ごとに更新。",
     "footer_countries": "人気の国",
-    "footer_cities": "人気の都市"
+    "footer_cities": "人気の都市",
+    "city_title": "{city} の空港",
+    "city_desc": "{city} の全{count}空港：到着・出発のライブ、運航状況（1分ごとに更新）."
   },
   "ui": {
     "departures": "出発",

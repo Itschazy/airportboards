@@ -90,7 +90,9 @@
     "faq_live_a": "이 페이지는 {name}({iata})의 실시간 도착 및 출발 정보를 분 단위로 제공합니다.",
     "footer_tagline": "전 세계 6,000개 이상의 공항 실시간 운항 정보. 도착 및 출발 정보를 매분 업데이트합니다.",
     "footer_countries": "인기 국가",
-    "footer_cities": "인기 도시"
+    "footer_cities": "인기 도시",
+    "city_title": "{city}의 공항",
+    "city_desc": "{city}의 모든 공항 ({count}): 도착·출발 실시간 정보, 항공편 상태, 1분마다 업데이트."
   },
   "ui": {
     "departures": "출발",
