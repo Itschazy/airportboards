@@ -5,6 +5,7 @@ import { getMessages } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 import { locales, rtlLocales, type Locale } from '@/lib/i18n';
 import { SiteHeader } from '@/components/SiteHeader';
+import { YandexMetrica } from '@/components/YandexMetrica';
 import '../globals.css';
 
 const geistSans = Geist({ variable: '--font-geist-sans', subsets: ['latin'] });
@@ -32,6 +33,7 @@ export default async function LocaleLayout({
   return (
     <html lang={locale} dir={dir} className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}>
       <body className="min-h-full flex flex-col">
+        <YandexMetrica />
         <NextIntlClientProvider messages={messages}>
           <SiteHeader locale={locale as Locale} />
           {children}
