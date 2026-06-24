@@ -166,6 +166,9 @@
     "notice_board": "Veuillez être à la porte en avance. La porte ferme strictement à l'heure prévue.",
     "notice_final": "Dirigez-vous vers la porte maintenant. L'embarquement n'est pas autorisé une fois la porte fermée.",
     "notice_ontime": "Arrivez tôt à l'aéroport pour effectuer toutes les formalités.",
-    "notice_delayed": "L'heure de départ a changé. Veuillez consulter les informations d'écran."
+    "notice_delayed": "L'heure de départ a changé. Veuillez consulter les informations d'écran.",
+    "more_departures": "Afficher plus de départs",
+    "more_arrivals": "Afficher plus d'arrivées",
+    "live_updates": "Mises à jour en direct"
   }
 }

@@ -166,6 +166,9 @@
     "notice_board": "Presentati al gate in anticipo. La porta chiude rigorosamente all'orario previsto.",
     "notice_final": "Vai subito al gate. Non è consentito l'imbarco dopo la chiusura della porta.",
     "notice_ontime": "Arriva in aeroporto in anticipo per completare tutte le procedure.",
-    "notice_delayed": "L'orario di partenza è cambiato. Controlla gli aggiornamenti sul tabellone."
+    "notice_delayed": "L'orario di partenza è cambiato. Controlla gli aggiornamenti sul tabellone.",
+    "more_departures": "Mostra altre partenze",
+    "more_arrivals": "Mostra altri arrivi",
+    "live_updates": "Aggiornamenti in tempo reale"
   }
 }

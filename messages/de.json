@@ -166,6 +166,9 @@
     "notice_board": "Bitte seien Sie frühzeitig am Gate. Das Gate schließt pünktlich.",
     "notice_final": "Gehen Sie jetzt zum Gate. Boarding ist nach Schließung des Gates nicht möglich.",
     "notice_ontime": "Kommen Sie rechtzeitig am Flughafen an, um alle Formalitäten zu erledigen.",
-    "notice_delayed": "Die Abflugzeit hat sich geändert. Achten Sie auf die Anzeige."
+    "notice_delayed": "Die Abflugzeit hat sich geändert. Achten Sie auf die Anzeige.",
+    "more_departures": "Mehr Abfahrten anzeigen",
+    "more_arrivals": "Mehr Ankünfte anzeigen",
+    "live_updates": "Live-Aktualisierungen"
   }
 }

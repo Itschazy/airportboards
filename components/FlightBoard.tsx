@@ -379,6 +379,7 @@ export function FlightBoard({ airport, locale, defaultMode = 'departures' }: {
   const [updLabel, setUpdLabel]   = useState('');
   const [selected, setSelected]   = useState<Flight | null>(null);
   const [isLive, setIsLive]       = useState(false);
+  const [showAll, setShowAll]     = useState(false);
 
   const fetchFlights = useCallback(async () => {
     try {
@@ -443,6 +444,9 @@ export function FlightBoard({ airport, locale, defaultMode = 'departures' }: {
       || (f.destination || f.origin || '').toLowerCase().includes(q)
       || (f.airline || '').toLowerCase().includes(q);
   });
+  const INITIAL = 12;
+  const shown = showAll ? visible : visible.slice(0, INITIAL);
+  useEffect(() => { setShowAll(false); }, [mode, filter, trimSearch]);
 
   return (
     <div style={{ background: C.bg, minHeight: '100dvh', paddingBottom: 'calc(48px + env(safe-area-inset-bottom))' }}>
@@ -595,20 +599,21 @@ export function FlightBoard({ airport, locale, defaultMode = 'departures' }: {
         })}
       </div>
 
-      {/* ── Flight count bar ───────────────────────────────── */}
+      {/* ── Top meta row ───────────────────────────────────── */}
       {!loading && flights.length > 0 && (
         <div style={{
-          display: 'flex', justifyContent: 'space-between', alignItems: 'center',
-          padding: '0 16px 10px', maxWidth: 960, margin: '0 auto',
+          display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap',
+          gap: '4px 14px', padding: '0 16px 14px', maxWidth: 960, margin: '0 auto',
         }}>
-          <span style={{ fontSize: 12, color: C.secondary }}>
+          <span style={{ fontSize: 13, color: C.secondary }}>
             {mode === 'departures' ? '✈' : '🛬'} {mode === 'departures' ? t('departures_today', { count: flights.length }) : t('arrivals_today', { count: flights.length })}
           </span>
-          <span style={{ fontSize: 12, color: C.dim }}>
-            {new Date().toLocaleDateString(locale, {
-              timeZone: airport.tz || undefined,
-              weekday: 'long', month: 'short', day: 'numeric',
-            })}
+          <span style={{ display: 'flex', alignItems: 'center', gap: 8, fontSize: 13 }}>
+            <span style={{ display: 'inline-flex', alignItems: 'center', gap: 6, color: C.green }}>
+              <span className={isLive ? 'live-dot' : ''} style={{ width: 7, height: 7, borderRadius: '50%', background: isLive ? C.green : C.gray, flexShrink: 0 }} />
+              {t('live_updates')}
+            </span>
+            <span style={{ color: C.dim }}>· {updLabel || t('updated_now')}</span>
           </span>
         </div>
       )}
@@ -629,7 +634,7 @@ export function FlightBoard({ airport, locale, defaultMode = 'departures' }: {
           </div>
         )}
 
-        {visible.map((f, i) => {
+        {shown.map((f, i) => {
           const color = STATUS_COLOR[f.status] || C.gray;
           const label = (() => {
             if (f.status === 'delayed' && f.actual) {
@@ -641,91 +646,82 @@ export function FlightBoard({ airport, locale, defaultMode = 'departures' }: {
             return t(`st_${f.status}`);
           })();
           const isPast = ['departed', 'arrived'].includes(f.status);
+          const place = f.destination || f.origin || '';
+          const dm = place.match(/^(.*?)\s*\(([A-Z0-9]{2,4})\)\s*$/);
+          const city = dm ? dm[1] : place;
+          const code = dm ? dm[2] : '';
 
           return (
             <div
               key={i}
               onClick={() => { haptic(); setSelected(f); }}
               style={{
-                display: 'flex',
-                background: C.surface,
-                borderRadius: 14,
-                marginBottom: 7,
-                overflow: 'hidden',
-                cursor: 'pointer',
-                opacity: isPast ? 0.4 : 1,
-                border: `1px solid ${C.border}`,
-                WebkitTapHighlightColor: 'transparent',
+                display: 'flex', background: 'rgba(255,255,255,0.025)', borderRadius: 22,
+                marginBottom: 12, overflow: 'hidden', cursor: 'pointer', opacity: isPast ? 0.45 : 1,
+                border: '1px solid rgba(255,255,255,0.08)', WebkitTapHighlightColor: 'transparent',
               }}
             >
               {/* Status bar */}
               <div style={{ width: 4, background: color, flexShrink: 0 }} />
 
               {/* Row content */}
-              <div style={{
-                display: 'flex',
-                alignItems: 'center',
-                flex: 1,
-                padding: '9px 14px',
-                gap: 11,
-                minWidth: 0,
-              }}>
+              <div style={{ display: 'flex', alignItems: 'center', flex: 1, padding: '18px 20px', gap: 14, minWidth: 0 }}>
                 {/* Left: time + flight number */}
-                <div style={{ flexShrink: 0, width: 60 }}>
-                  <div style={{
-                    fontSize: 19, fontWeight: 700,
-                    fontVariantNumeric: 'tabular-nums',
-                    color: f.actual ? C.orange : C.text,
-                    lineHeight: 1.1,
-                  }}>
+                <div style={{ flexShrink: 0 }}>
+                  <div style={{ fontSize: 30, fontWeight: 700, fontVariantNumeric: 'tabular-nums', color: f.actual ? C.orange : C.text, lineHeight: 1 }}>
                     {f.actual || f.scheduled}
                   </div>
                   {f.actual && (
-                    <div style={{ fontSize: 10, color: C.secondary, textDecoration: 'line-through', lineHeight: 1.2 }}>
-                      {f.scheduled}
-                    </div>
+                    <div style={{ fontSize: 11, color: C.secondary, textDecoration: 'line-through', lineHeight: 1.3, marginTop: 2 }}>{f.scheduled}</div>
                   )}
-                  <div style={{ fontSize: 11, color: '#5A5A5A', marginTop: 3, fontVariantNumeric: 'tabular-nums', fontWeight: 500 }}>
-                    {f.flight}
-                  </div>
+                  <div style={{ fontSize: 12, color: 'rgba(255,255,255,0.42)', marginTop: 5, fontVariantNumeric: 'tabular-nums', fontWeight: 500 }}>{f.flight}</div>
                 </div>
 
                 {/* Center: destination */}
                 <div style={{ flex: 1, minWidth: 0 }}>
-                  <div style={{
-                    fontSize: 16, fontWeight: 600, color: C.text,
-                    whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis',
-                    lineHeight: 1.1,
-                  }}>
-                    {f.destination || f.origin}
+                  <div style={{ whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis', lineHeight: 1.1 }}>
+                    <span style={{ fontSize: 'clamp(20px, 5.5vw, 26px)', fontWeight: 700, color: C.text, letterSpacing: '-0.01em' }}>{city}</span>
+                    {code && <span style={{ fontSize: 'clamp(14px, 4vw, 18px)', fontWeight: 500, color: C.secondary, marginLeft: 7 }}>({code})</span>}
                   </div>
                 </div>
 
                 {/* Right: gate + status + chevron */}
-                <div style={{ flexShrink: 0, textAlign: 'right', display: 'flex', alignItems: 'center', gap: 8 }}>
+                <div style={{ flexShrink: 0, textAlign: 'right', display: 'flex', alignItems: 'center', gap: 10 }}>
                   <div>
                     {f.gate && (
-                      <div style={{ fontSize: 15, fontWeight: 700, color: C.text, lineHeight: 1.1, letterSpacing: '-0.01em' }}>
-                        {f.gate}
+                      <div style={{ lineHeight: 1.1, whiteSpace: 'nowrap' }}>
+                        <span style={{ fontSize: 13, color: C.secondary }}>{t('gate')} </span>
+                        <span style={{ fontSize: 20, fontWeight: 700, color: C.text, letterSpacing: '-0.01em' }}>{f.gate}</span>
                       </div>
                     )}
                     <div style={{
-                      fontSize: 10, fontWeight: 700,
-                      color,
-                      letterSpacing: '0.08em',
-                      textTransform: 'uppercase',
-                      marginTop: f.gate ? 4 : 0,
-                      lineHeight: 1,
+                      fontSize: 13, fontWeight: 700, color, letterSpacing: '0.12em', textTransform: 'uppercase',
+                      marginTop: f.gate ? 6 : 0, lineHeight: 1, whiteSpace: 'nowrap',
+                      textShadow: f.status === 'finalcall' ? '0 0 10px rgba(255,69,58,0.15)' : 'none',
                     }}>
                       {label}
                     </div>
                   </div>
-                  <IconChevron />
+                  <svg width="8" height="14" viewBox="0 0 8 14" fill="none" style={{ flexShrink: 0 }}>
+                    <path d="M1 1L7 7L1 13" stroke="rgba(255,255,255,0.22)" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" />
+                  </svg>
                 </div>
               </div>
             </div>
           );
         })}
+
+        {!loading && visible.length > shown.length && (
+          <button onClick={() => setShowAll(true)} style={{
+            width: '100%', height: 56, marginTop: 4, marginBottom: 8,
+            display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 8,
+            border: '1px solid rgba(255,255,255,0.08)', background: 'rgba(255,255,255,0.02)',
+            borderRadius: 18, color: C.text, fontSize: 15, fontWeight: 600, cursor: 'pointer', WebkitTapHighlightColor: 'transparent',
+          }}>
+            {mode === 'departures' ? t('more_departures') : t('more_arrivals')}
+            <svg width="13" height="13" viewBox="0 0 13 13" fill="none"><path d="M3 5L6.5 8.5L10 5" stroke="#8A8A8A" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" /></svg>
+          </button>
+        )}
       </div>
 
       {/* ── Bottom sheet ───────────────────────────────────── */}

@@ -166,6 +166,9 @@
     "notice_board": "Por favor, esté en la puerta con antelación. La puerta cierra estrictamente según el horario.",
     "notice_final": "Diríjase a la puerta ahora. No se permite el embarque una vez que la puerta cierre.",
     "notice_ontime": "Llegue al aeropuerto con tiempo para completar todos los trámites.",
-    "notice_delayed": "La hora de salida ha cambiado. Manténgase atento a las pantallas."
+    "notice_delayed": "La hora de salida ha cambiado. Manténgase atento a las pantallas.",
+    "more_departures": "Mostrar más salidas",
+    "more_arrivals": "Mostrar más llegadas",
+    "live_updates": "Actualizaciones en vivo"
   }
 }

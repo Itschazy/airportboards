@@ -166,6 +166,9 @@
     "notice_board": "请提前到达登机口。登机口将严格按时关闭。",
     "notice_final": "请立即前往登机口。登机口关闭后不允许登机。",
     "notice_ontime": "请提前到达机场以完成所有手续。",
-    "notice_delayed": "出发时间已变更，请注意航显屏。"
+    "notice_delayed": "出发时间已变更，请注意航显屏。",
+    "more_departures": "显示更多出发",
+    "more_arrivals": "显示更多到达",
+    "live_updates": "实时更新"
   }
 }

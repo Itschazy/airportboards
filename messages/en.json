@@ -166,6 +166,9 @@
     "notice_board": "Please be at the gate early. The gate closes strictly on schedule.",
     "notice_final": "Head to the gate now. Boarding is not allowed once the gate closes.",
     "notice_ontime": "Arrive at the airport early to complete all procedures.",
-    "notice_delayed": "The departure time has changed. Keep an eye on the board."
+    "notice_delayed": "The departure time has changed. Keep an eye on the board.",
+    "more_departures": "Show more departures",
+    "more_arrivals": "Show more arrivals",
+    "live_updates": "Live updates"
   }
 }

@@ -166,6 +166,9 @@
     "notice_board": "Lütfen kapıda erken bulunun. Kapı planlandığı gibi kesin olarak kapanır.",
     "notice_final": "Hemen kapıya yönelin. Kapı kapandıktan sonra biniş yapılmaz.",
     "notice_ontime": "Tüm işlemleri tamamlamak için havalimanına erken varın.",
-    "notice_delayed": "Kalkış saati değişti. Panoyu takip edin."
+    "notice_delayed": "Kalkış saati değişti. Panoyu takip edin.",
+    "more_departures": "Diğer kalkışları göster",
+    "more_arrivals": "Diğer varışları göster",
+    "live_updates": "Canlı güncellemeler"
   }
 }

@@ -166,6 +166,9 @@
     "notice_board": "정시에 게이트가 닫히니 미리 게이트에 도착하세요.",
     "notice_final": "지금 바로 게이트로 이동하세요. 게이트가 닫히면 탑승이 불가합니다.",
     "notice_ontime": "모든 절차를 완료하려면 공항에 일찍 도착하세요.",
-    "notice_delayed": "출발 시간이 변경되었습니다. 안내판을 확인하세요."
+    "notice_delayed": "출발 시간이 변경되었습니다. 안내판을 확인하세요.",
+    "more_departures": "더 많은 출발편 보기",
+    "more_arrivals": "더 많은 도착편 보기",
+    "live_updates": "실시간 업데이트"
   }
 }
