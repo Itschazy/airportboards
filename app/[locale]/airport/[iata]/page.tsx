@@ -3,6 +3,7 @@ import { getTranslations } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 import { getAirport, getStaticIataCodes } from '@/lib/airports';
 import { getAirportContent } from '@/lib/airport-content';
+import { getAirportName } from '@/lib/airport-names';
 import { FlightBoard } from '@/components/FlightBoard';
 import { AirportBottom } from '@/components/AirportBottom';
 import { locales } from '@/lib/i18n';
@@ -24,9 +25,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const airport = getAirport(iata.toUpperCase());
   if (!airport) return {};
   const t = await getTranslations({ locale, namespace: 'meta' });
+  const name = getAirportName(airport.iata, locale, airport.name);
 
-  const title = t('main_title', { airport: airport.name, city: airport.city, iata: airport.iata });
-  const description = t('main_description', { airport: airport.name, iata: airport.iata, city: airport.city, country: airport.country });
+  const title = t('main_title', { airport: name, city: airport.city, iata: airport.iata });
+  const description = t('main_description', { airport: name, iata: airport.iata, city: airport.city, country: airport.country });
   const canonical = `${BASE}/${locale}/airport/${airport.iata}`;
 
   const languages: Record<string, string> = {};
@@ -60,7 +62,8 @@ export default async function AirportPage({ params }: Props) {
   const canonical = `${BASE}/${locale}/airport/${airport.iata}`;
   const about = getAirportContent(airport.iata, locale);
   const t = await getTranslations({ locale, namespace: 'meta' });
-  const h1 = t('main_title', { airport: airport.name, iata: airport.iata, city: airport.city, country: airport.country });
+  const name = getAirportName(airport.iata, locale, airport.name);
+  const h1 = t('main_title', { airport: name, iata: airport.iata, city: airport.city, country: airport.country });
 
   const jsonLd = [
     {
@@ -68,7 +71,8 @@ export default async function AirportPage({ params }: Props) {
       '@type': 'Airport',
       iataCode: airport.iata,
       icaoCode: airport.icao,
-      name: airport.name,
+      name,
+      alternateName: airport.name,
       url: canonical,
       address: {
         '@type': 'PostalAddress',
@@ -86,14 +90,14 @@ export default async function AirportPage({ params }: Props) {
       '@type': 'BreadcrumbList',
       itemListElement: [
         { '@type': 'ListItem', position: 1, name: 'Home', item: `${BASE}/${locale}` },
-        { '@type': 'ListItem', position: 2, name: `${airport.name} (${airport.iata})`, item: canonical },
+        { '@type': 'ListItem', position: 2, name: `${name} (${airport.iata})`, item: canonical },
       ],
     },
     {
       '@context': 'https://schema.org',
       '@type': 'WebPage',
-      name: `${airport.name} Live Flight Board`,
-      description: `Live arrivals and departures at ${airport.name} (${airport.iata}), ${airport.city}`,
+      name: `${name} (${airport.iata})`,
+      description: `Live arrivals and departures at ${name} (${airport.iata}), ${airport.city}`,
       url: canonical,
       inLanguage: locale,
     },
@@ -110,8 +114,8 @@ export default async function AirportPage({ params }: Props) {
       }}>
         {h1}
       </h1>
-      <FlightBoard airport={airport} locale={locale} />
-      <AirportBottom airport={airport} locale={locale} about={about} />
+      <FlightBoard airport={airport} locale={locale} displayName={name} />
+      <AirportBottom airport={airport} locale={locale} about={about} displayName={name} />
     </>
   );
 }

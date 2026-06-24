@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { getTranslations } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 import { getAirport, getStaticIataCodes } from '@/lib/airports';
+import { getAirportName } from '@/lib/airport-names';
 import { FlightBoard } from '@/components/FlightBoard';
 import { locales } from '@/lib/i18n';
 
@@ -22,8 +23,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!airport) return {};
   const t = await getTranslations({ locale, namespace: 'meta' });
 
-  const title = t('arrivals_title', { airport: airport.name, iata: airport.iata, city: airport.city });
-  const description = t('arrivals_description', { airport: airport.name, iata: airport.iata, city: airport.city });
+  const title = t('arrivals_title', { airport: getAirportName(airport.iata, locale, airport.name), iata: airport.iata, city: airport.city });
+  const description = t('arrivals_description', { airport: getAirportName(airport.iata, locale, airport.name), iata: airport.iata, city: airport.city });
   const canonical = `${BASE}/${locale}/airport/${airport.iata}/arrivals`;
 
   const languages: Record<string, string> = {};
@@ -53,7 +54,7 @@ export default async function ArrivalsPage({ params }: Props) {
 
   const canonical = `${BASE}/${locale}/airport/${airport.iata}/arrivals`;
   const t = await getTranslations({ locale, namespace: 'meta' });
-  const h1 = t('arrivals_title', { airport: airport.name, iata: airport.iata, city: airport.city });
+  const h1 = t('arrivals_title', { airport: getAirportName(airport.iata, locale, airport.name), iata: airport.iata, city: airport.city });
 
   const jsonLd = [
     {
@@ -86,7 +87,7 @@ export default async function ArrivalsPage({ params }: Props) {
       }}>
         {h1}
       </h1>
-      <FlightBoard airport={airport} locale={locale} defaultMode="arrivals" />
+      <FlightBoard airport={airport} locale={locale} defaultMode="arrivals" displayName={getAirportName(airport.iata, locale, airport.name)} />
     </>
   );
 }

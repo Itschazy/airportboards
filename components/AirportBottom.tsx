@@ -19,8 +19,9 @@ function Chevron() {
   return <svg width="6" height="11" viewBox="0 0 6 11" fill="none" style={{ flexShrink: 0 }}><path d="M1 1L5 5.5L1 10" stroke="#3A3A3C" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" /></svg>;
 }
 
-export async function AirportBottom({ airport, locale, about }: { airport: Airport; locale: string; about: string | null }) {
+export async function AirportBottom({ airport, locale, about, displayName }: { airport: Airport; locale: string; about: string | null; displayName?: string }) {
   const t = await getTranslations({ locale, namespace: 'home' });
+  const name = displayName || airport.name;
 
   const nearby = nearestAirports(airport.lat, airport.lon, 7).filter(a => a.iata !== airport.iata).slice(0, 5);
   const countryInfo = getCountries().find(c => c.country === airport.country);
@@ -30,12 +31,12 @@ export async function AirportBottom({ airport, locale, about }: { airport: Airpo
   const offset = gmtOffset(airport.tz);
 
   const faq: { q: string; a: string }[] = [
-    { q: t('faq_iata_q', { name: airport.name }), a: airport.iata },
-    ...(airport.icao ? [{ q: t('faq_icao_q', { name: airport.name }), a: airport.icao }] : []),
-    { q: t('faq_where_q', { name: airport.name }), a: `${airport.city}, ${airport.country}` },
-    { q: t('faq_tz_q', { name: airport.name }), a: `${airport.tz}${offset ? ` (${offset})` : ''}` },
-    { q: t('faq_arrive_q', { name: airport.name }), a: t('faq_arrive_a') },
-    { q: t('faq_live_q', { name: airport.name }), a: t('faq_live_a', { name: airport.name, iata: airport.iata }) },
+    { q: t('faq_iata_q', { name }), a: airport.iata },
+    ...(airport.icao ? [{ q: t('faq_icao_q', { name }), a: airport.icao }] : []),
+    { q: t('faq_where_q', { name }), a: `${airport.city}, ${airport.country}` },
+    { q: t('faq_tz_q', { name }), a: `${airport.tz}${offset ? ` (${offset})` : ''}` },
+    { q: t('faq_arrive_q', { name }), a: t('faq_arrive_a') },
+    { q: t('faq_live_q', { name }), a: t('faq_live_a', { name, iata: airport.iata }) },
   ];
   const faqLd = {
     '@context': 'https://schema.org', '@type': 'FAQPage',
@@ -61,7 +62,7 @@ export async function AirportBottom({ airport, locale, about }: { airport: Airpo
           <section style={{ marginTop: 24 }}>
             <div style={{ background: '#0B0B0B', border: '1px solid #1A1A1A', borderRadius: 20, padding: '20px 22px' }}>
               <div style={{ fontSize: 30, fontWeight: 800, letterSpacing: '-0.03em', color: '#FFFFFF', lineHeight: 1 }}>{airport.iata} {t('airport_word')}</div>
-              <div style={{ fontSize: 16, color: '#B4B4B4', marginTop: 8 }}>{airport.name}</div>
+              <div style={{ fontSize: 16, color: '#B4B4B4', marginTop: 8 }}>{name}</div>
               <div style={{ fontSize: 14, color: SUB, marginTop: 4 }}>{airport.city}, {airport.country}{offset ? ` · ${offset}` : ''}</div>
             </div>
             <OverviewMetrics iata={airport.iata} depLabel={t('ov_dep')} arrLabel={t('ov_arr')} />

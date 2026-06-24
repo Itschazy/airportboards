@@ -387,10 +387,11 @@ function BottomSheet({ flight, mode, onClose, tz, locale }: {
 
 // ─── Main Component ───────────────────────────────────────────────────────────
 
-export function FlightBoard({ airport, locale, defaultMode = 'departures' }: {
+export function FlightBoard({ airport, locale, defaultMode = 'departures', displayName }: {
   airport: Airport;
   locale: string;
   defaultMode?: Mode;
+  displayName?: string;
 }) {
   const t = useTranslations('ui');
   const [mode, setMode]           = useState<Mode>(defaultMode);
@@ -489,7 +490,7 @@ export function FlightBoard({ airport, locale, defaultMode = 'departures' }: {
               {airport.iata}
             </div>
             <div style={{ fontSize: 12, color: C.secondary, marginTop: 7, lineHeight: 1.4, maxWidth: 200, opacity: 0.5 }}>
-              {airport.name}
+              {displayName || airport.name}
             </div>
           </div>
           <div style={{ textAlign: 'right', paddingTop: 4 }}>
