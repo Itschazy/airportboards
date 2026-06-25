@@ -4,7 +4,14 @@
     "departures": "Abflüge",
     "search_placeholder": "Flughafen, Stadt oder IATA-Code...",
     "all_airports": "Alle Flughäfen",
-    "home": "Startseite"
+    "home": "Startseite",
+    "results": "Ergebnisse",
+    "recent": "Zuletzt",
+    "popular": "Beliebte Flughäfen",
+    "nearest": "Nächste Flughäfen",
+    "clear": "Löschen",
+    "language": "Sprache",
+    "close": "Schließen"
   },
   "board": {
     "flight": "Flug",
@@ -107,7 +114,8 @@
     "airline_desc": "{airline} ({iata}) Flüge: Live-Status, Abflüge und Ankünfte, Flugplan, Verspätungen, Echtzeit-Tracking.",
     "airline_live": "Live-Flüge",
     "airline_none": "Keine aktiven Flüge für {airline} gerade.",
-    "airlines_title": "Fluggesellschaften"
+    "airlines_title": "Fluggesellschaften",
+    "data_note": "Flugzeiten können sich ändern — bitte bei Airline oder Flughafen bestätigen."
   },
   "ui": {
     "departures": "Abflüge",
@@ -188,5 +196,10 @@
     "more_departures": "Mehr Abfahrten anzeigen",
     "more_arrivals": "Mehr Ankünfte anzeigen",
     "live_updates": "Live-Aktualisierungen"
+  },
+  "notfound": {
+    "title": "Seite nicht gefunden",
+    "text": "Diese Seite wurde nicht gefunden. Suche nach einem Flughafen oder kehre zur Startseite zurück.",
+    "home": "Zur Startseite"
   }
 }

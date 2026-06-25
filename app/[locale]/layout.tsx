@@ -1,4 +1,4 @@
-import type { Metadata } from 'next';
+import type { Metadata, Viewport } from 'next';
 import { NextIntlClientProvider } from 'next-intl';
 import { getMessages, setRequestLocale } from 'next-intl/server';
 import { notFound } from 'next/navigation';
@@ -7,6 +7,14 @@ import { SiteHeader } from '@/components/SiteHeader';
 import { SiteFooter } from '@/components/SiteFooter';
 import { YandexMetrica } from '@/components/YandexMetrica';
 import '../globals.css';
+
+// viewportFit:'cover' activates the env(safe-area-inset-*) padding used across the board
+// and bottom-sheet so content clears the iPhone home indicator / notch.
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  viewportFit: 'cover',
+};
 
 const OG_LOCALE: Record<string, string> = {
   en: 'en_US', ru: 'ru_RU', zh: 'zh_CN', ar: 'ar_AR', de: 'de_DE', ko: 'ko_KR',
@@ -52,7 +60,7 @@ export default async function LocaleLayout({
         <YandexMetrica />
         <NextIntlClientProvider messages={messages}>
           <SiteHeader locale={locale as Locale} />
-          {children}
+          <main style={{ flex: '1 0 auto', width: '100%' }}>{children}</main>
           <SiteFooter locale={locale as Locale} />
         </NextIntlClientProvider>
       </body>

@@ -4,7 +4,14 @@
     "departures": "Departures",
     "search_placeholder": "Airport, city or IATA code...",
     "all_airports": "All airports",
-    "home": "Home"
+    "home": "Home",
+    "results": "Results",
+    "recent": "Recent",
+    "popular": "Popular airports",
+    "nearest": "Nearest airports",
+    "clear": "Clear",
+    "language": "Language",
+    "close": "Close"
   },
   "board": {
     "flight": "Flight",
@@ -107,7 +114,8 @@
     "airline_desc": "{airline} ({iata}) flights: live status, departures and arrivals, schedule, delays, real-time tracking.",
     "airline_live": "Live flights",
     "airline_none": "No active flights for {airline} right now.",
-    "airlines_title": "Airlines"
+    "airlines_title": "Airlines",
+    "data_note": "Flight times may change — always verify with your airline or the airport."
   },
   "ui": {
     "departures": "Departures",
@@ -188,5 +196,10 @@
     "more_departures": "Show more departures",
     "more_arrivals": "Show more arrivals",
     "live_updates": "Live updates"
+  },
+  "notfound": {
+    "title": "Page not found",
+    "text": "We couldn’t find that page. Search for an airport or head back home.",
+    "home": "Back to home"
   }
 }

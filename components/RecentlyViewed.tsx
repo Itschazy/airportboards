@@ -14,7 +14,7 @@ export function RecentlyViewed({ locale, title }: { locale: string; title: strin
 
   return (
     <section style={{ marginTop: 44 }}>
-      <div style={{ fontSize: 13, fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.12em', color: '#5A5A5A', marginBottom: 14 }}>
+      <div style={{ fontSize: 13, fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.12em', color: '#8A8A8A', marginBottom: 14 }}>
         {title}
       </div>
       <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap' }}>

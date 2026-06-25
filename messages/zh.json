@@ -4,7 +4,14 @@
     "departures": "出发",
     "search_placeholder": "机场、城市或IATA代码...",
     "all_airports": "所有机场",
-    "home": "首页"
+    "home": "首页",
+    "results": "结果",
+    "recent": "最近",
+    "popular": "热门机场",
+    "nearest": "附近机场",
+    "clear": "清除",
+    "language": "语言",
+    "close": "关闭"
   },
   "board": {
     "flight": "航班",
@@ -107,7 +114,8 @@
     "airline_desc": "{airline} ({iata}) 航班：实时状态、出发与到达、时刻表、延误信息、实时跟踪。",
     "airline_live": "实时航班",
     "airline_none": "暂时没有 {airline} 的在飞航班。",
-    "airlines_title": "航空公司"
+    "airlines_title": "航空公司",
+    "data_note": "航班时间可能变动，请向航空公司或机场核实。"
   },
   "ui": {
     "departures": "出发",
@@ -188,5 +196,10 @@
     "more_departures": "显示更多出发",
     "more_arrivals": "显示更多到达",
     "live_updates": "实时更新"
+  },
+  "notfound": {
+    "title": "页面未找到",
+    "text": "找不到该页面。搜索机场或返回首页。",
+    "home": "返回首页"
   }
 }

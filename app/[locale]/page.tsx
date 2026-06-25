@@ -36,7 +36,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
 function Title({ children }: { children: React.ReactNode }) {
   return (
-    <div style={{ fontSize: 13, fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.16em', color: '#5A5A5A', marginBottom: 14 }}>
+    <div style={{ fontSize: 13, fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.16em', color: '#8A8A8A', marginBottom: 14 }}>
       {children}
     </div>
   );
@@ -79,7 +79,7 @@ export default async function HomePage({ params }: Props) {
   ];
 
   return (
-    <main style={{ width: '100%', maxWidth: 720, margin: '0 auto', padding: '40px 24px 64px', overflowX: 'clip' }}>
+    <div style={{ width: '100%', maxWidth: 720, margin: '0 auto', padding: '40px 24px 64px', overflowX: 'clip' }}>
       {jsonLd.map((s, i) => (
         <script key={i} type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(s) }} />
       ))}
@@ -183,6 +183,6 @@ export default async function HomePage({ params }: Props) {
         </div>
       </section>
 
-    </main>
+    </div>
   );
 }

@@ -45,7 +45,10 @@ export async function SiteFooter({ locale }: { locale: Locale }) {
           </ul>
         </div>
       </nav>
-      <p style={{ maxWidth: 1000, margin: '28px auto 0', textAlign: 'center', fontSize: 11, color: '#3A3A3C', letterSpacing: '0.02em' }}>
+      <p style={{ maxWidth: 1000, margin: '28px auto 0', textAlign: 'center', fontSize: 12, color: '#6A6A6A', lineHeight: 1.5 }}>
+        {t('data_note')}
+      </p>
+      <p style={{ maxWidth: 1000, margin: '10px auto 0', textAlign: 'center', fontSize: 11, color: '#5A5A5A', letterSpacing: '0.02em' }}>
         airportsboard.live · © 2026
       </p>
     </footer>

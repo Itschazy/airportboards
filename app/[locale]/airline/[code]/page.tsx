@@ -5,7 +5,6 @@ import Link from 'next/link';
 import { getAirport } from '@/lib/airports';
 import { getCityName } from '@/lib/places';
 import { getAirline, getAirlineFlights, type FlightRow } from '@/lib/flights';
-import { locales } from '@/lib/i18n';
 
 const BASE = 'https://airportsboard.live';
 type Props = { params: Promise<{ locale: string; code: string }> };
@@ -25,14 +24,15 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!name) return {};
   const t = await getTranslations({ locale, namespace: 'home' });
   const cu = code.toUpperCase();
-  const languages: Record<string, string> = {};
-  for (const loc of locales) languages[loc] = `${BASE}/${loc}/airline/${cu}`;
-  languages['x-default'] = `${BASE}/en/airline/${cu}`;
+  // Airline pages carry only a name + a (frequently empty) live flight list — too thin to
+  // index across ~976 codes without soft-404 risk, and indexability can't be derived from
+  // live data without spending quota on every crawl. Keep them noindex/follow (useful for
+  // users + link flow) and omit the hreflang cluster; they're also dropped from the sitemap.
   return {
     title: `${t('airline_title', { airline: name })} (${cu}) — AirportsBoard`,
     description: t('airline_desc', { airline: name, iata: cu }),
-    alternates: { canonical: `${BASE}/${locale}/airline/${cu}`, languages },
-    robots: { index: true, follow: true },
+    alternates: { canonical: `${BASE}/${locale}/airline/${cu}` },
+    robots: { index: false, follow: true },
   };
 }
 
@@ -59,9 +59,9 @@ export default async function AirlinePage({ params }: Props) {
   const link: React.CSSProperties = { color: '#0A84FF', textDecoration: 'none' };
 
   return (
-    <main style={{ maxWidth: 720, margin: '0 auto', padding: '36px 18px 64px' }}>
+    <div style={{ maxWidth: 720, margin: '0 auto', padding: '36px 18px 64px' }}>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
-      <div style={{ fontSize: 13, color: '#5A5A5A', marginBottom: 12 }}>
+      <div style={{ fontSize: 13, color: '#8A8A8A', marginBottom: 12 }}>
         <Link href={`/${locale}`} style={{ color: '#6A6A6A', textDecoration: 'none' }}>airportsboard</Link>
       </div>
       <h1 style={{ fontSize: 'clamp(30px, 8vw, 46px)', fontWeight: 800, letterSpacing: '-0.03em', color: '#FFFFFF', margin: 0, lineHeight: 1.05 }}>
@@ -69,7 +69,7 @@ export default async function AirlinePage({ params }: Props) {
       </h1>
       <div style={{ fontSize: 16, color: '#6A6A6A', marginTop: 6, fontWeight: 700, letterSpacing: '0.08em' }}>{cu}</div>
 
-      <div style={{ fontSize: 13, fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.12em', color: '#5A5A5A', margin: '32px 0 14px' }}>
+      <div style={{ fontSize: 13, fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.12em', color: '#8A8A8A', margin: '32px 0 14px' }}>
         {t('airline_live')}
       </div>
 
@@ -94,6 +94,6 @@ export default async function AirlinePage({ params }: Props) {
           })}
         </ul>
       )}
-    </main>
+    </div>
   );
 }

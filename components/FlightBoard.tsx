@@ -154,11 +154,22 @@ function BottomSheet({ flight, mode, onClose, tz, locale }: {
   updLabel: string;
 }) {
   const t = useTranslations('ui');
+  const tNav = useTranslations('nav');
   const vis = !!flight;
 
   useEffect(() => {
     document.body.style.overflow = vis ? 'hidden' : '';
     return () => { document.body.style.overflow = ''; };
+  }, [vis]);
+
+  // Dialog a11y: focus the sheet on open, close on Escape, restore focus on close.
+  useEffect(() => {
+    if (!vis) return;
+    const prev = document.activeElement as HTMLElement | null;
+    sheetRef.current?.focus();
+    const onKey = (e: KeyboardEvent) => { if (e.key === 'Escape') onClose(); };
+    document.addEventListener('keydown', onKey);
+    return () => { document.removeEventListener('keydown', onKey); prev?.focus?.(); };
   }, [vis]);
 
   const localNow = () => {
@@ -366,11 +377,16 @@ function BottomSheet({ flight, mode, onClose, tz, locale }: {
       }} />
       <div
         ref={sheetRef}
+        role="dialog"
+        aria-modal="true"
+        aria-label={flight ? `${flight.flight} — ${flight.destination || flight.origin || ''}` : undefined}
+        tabIndex={-1}
         onTouchStart={onTouchStart}
         onTouchMove={onTouchMove}
         onTouchEnd={onTouchEnd}
         style={{
           position: 'fixed', bottom: 0, left: 0, right: 0, zIndex: 201,
+          outline: 'none',
           background: '#111111', borderTop: '1px solid rgba(255,255,255,0.08)', borderRadius: '32px 32px 0 0',
           transform: vis ? `translateY(${dragY}px)` : 'translateY(100%)',
           transition: dragStart.current != null ? 'none' : 'transform 0.34s cubic-bezier(0.32, 0.72, 0, 1)',
@@ -379,7 +395,7 @@ function BottomSheet({ flight, mode, onClose, tz, locale }: {
           maxWidth: 640, margin: '0 auto',
         }}>
         {/* Handle (tap to close) */}
-        <button onClick={onClose} aria-label="Close" style={{ display: 'block', width: '100%', padding: '12px 0 6px', background: 'none', border: 'none', cursor: 'pointer' }}>
+        <button type="button" onClick={onClose} aria-label={tNav('close')} style={{ display: 'block', width: '100%', padding: '12px 0 6px', background: 'none', border: 'none', cursor: 'pointer' }}>
           <div style={{ width: 48, height: 5, borderRadius: 3, background: 'rgba(255,255,255,0.22)', margin: '0 auto' }} />
         </button>
         {body}
@@ -398,6 +414,7 @@ export function FlightBoard({ airport, locale, defaultMode = 'departures', displ
   initialFlights?: Flight[];
 }) {
   const t = useTranslations('ui');
+  const tNav = useTranslations('nav');
   const hasInitial = !!(initialFlights && initialFlights.length);
   const [mode, setMode]           = useState<Mode>(defaultMode);
   const [filter, setFilter]       = useState<FilterKey>('all');
@@ -523,27 +540,29 @@ export function FlightBoard({ airport, locale, defaultMode = 'departures', displ
           </div>
         </div>
 
-        {/* Live indicator */}
-        <div style={{ display: 'flex', alignItems: 'center', gap: 7, marginTop: 10 }}>
+        {/* Live indicator — polite status region so AT hears the refresh */}
+        <div role="status" aria-live="polite" style={{ display: 'flex', alignItems: 'center', gap: 7, marginTop: 10 }}>
           <div
+            aria-hidden="true"
             className={isLive ? 'live-dot' : ''}
             style={{
               width: 6, height: 6, borderRadius: '50%', flexShrink: 0,
               background: isLive ? C.green : C.gray,
             }}
           />
-          <span style={{ fontSize: 12, color: C.secondary, opacity: 0.7 }}>{updLabel || '—'}</span>
+          <span style={{ fontSize: 12, color: C.secondary, opacity: 0.85 }}>{updLabel || '—'}</span>
         </div>
       </div>
 
       {/* ── Search ─────────────────────────────────────────── */}
       <div style={{ padding: '0 16px 12px', maxWidth: 960, margin: '0 auto' }}>
         <div style={{ position: 'relative' }}>
-          <div style={{ position: 'absolute', left: 14, top: '50%', transform: 'translateY(-50%)', pointerEvents: 'none' }}>
+          <div aria-hidden="true" style={{ position: 'absolute', insetInlineStart: 14, top: '50%', transform: 'translateY(-50%)', pointerEvents: 'none' }}>
             <IconSearch color={search ? C.secondary : C.dim} />
           </div>
           <input
             type="search"
+            aria-label={t('search_placeholder')}
             autoComplete="off"
             spellCheck={false}
             placeholder={t('search_placeholder')}
@@ -564,11 +583,13 @@ export function FlightBoard({ airport, locale, defaultMode = 'departures', displ
           />
           {search && (
             <button
+              type="button"
+              aria-label={tNav('clear')}
               onClick={() => setSearch('')}
               style={{
-                position: 'absolute', right: 14, top: '50%', transform: 'translateY(-50%)',
+                position: 'absolute', insetInlineEnd: 14, top: '50%', transform: 'translateY(-50%)',
                 background: '#2C2C2E', border: 'none', borderRadius: '50%',
-                width: 20, height: 20, cursor: 'pointer',
+                width: 28, height: 28, cursor: 'pointer',
                 display: 'flex', alignItems: 'center', justifyContent: 'center',
                 padding: 0,
               }}
@@ -590,8 +611,8 @@ export function FlightBoard({ airport, locale, defaultMode = 'departures', displ
           {(['departures', 'arrivals'] as Mode[]).map(m => {
             const active = mode === m;
             return (
-              <button key={m} onClick={() => { haptic(); setMode(m); setFilter('all'); }} style={{
-                flex: 1, padding: '9px 0',
+              <button key={m} type="button" aria-pressed={active} onClick={() => { haptic(); setMode(m); setFilter('all'); }} style={{
+                flex: 1, padding: '11px 0', minHeight: 44,
                 fontSize: 14, fontWeight: 600,
                 border: 'none', borderRadius: 11,
                 cursor: 'pointer',
@@ -600,9 +621,8 @@ export function FlightBoard({ airport, locale, defaultMode = 'departures', displ
                 transition: 'all 0.18s ease',
                 letterSpacing: '-0.01em',
                 display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 6,
-                opacity: active ? 1 : 0.45,
               }}>
-                <span style={{ fontSize: 15 }}>{m === 'departures' ? '✈' : '🛬'}</span>
+                <span style={{ fontSize: 15 }} aria-hidden="true">{m === 'departures' ? '✈' : '🛬'}</span>
                 {m === 'departures' ? t('departures') : t('arrivals')}
               </button>
             );
@@ -620,8 +640,8 @@ export function FlightBoard({ airport, locale, defaultMode = 'departures', displ
         {FILTERS.map(key => {
           const active = filter === key;
           return (
-            <button key={key} onClick={() => { haptic(); setFilter(key); }} style={{
-              padding: '6px 14px',
+            <button key={key} type="button" aria-pressed={active} onClick={() => { haptic(); setFilter(key); }} style={{
+              padding: '8px 14px', minHeight: 36,
               fontSize: 13, fontWeight: active ? 600 : 400,
               border: active ? 'none' : `1px solid ${C.border}`,
               borderRadius: 999,
@@ -630,9 +650,8 @@ export function FlightBoard({ airport, locale, defaultMode = 'departures', displ
               color: active ? '#000000' : C.secondary,
               whiteSpace: 'nowrap', flexShrink: 0,
               transition: 'all 0.15s ease',
-              opacity: active ? 1 : 0.5,
             }}>
-              {t(`filter_${key}`)}
+              {key === 'departed' && mode === 'arrivals' ? t('st_arrived') : t(`filter_${key}`)}
             </button>
           );
         })}
@@ -642,7 +661,7 @@ export function FlightBoard({ airport, locale, defaultMode = 'departures', displ
       {!loading && flights.length > 0 && (
         <div style={{ padding: '0 16px 14px', maxWidth: 960, margin: '0 auto' }}>
           <span style={{ fontSize: 13, color: C.secondary }}>
-            {mode === 'departures' ? '✈' : '🛬'} {mode === 'departures' ? t('departures_today', { count: flights.length }) : t('arrivals_today', { count: flights.length })}
+            <span aria-hidden="true">{mode === 'departures' ? '✈' : '🛬'}</span> {mode === 'departures' ? t('departures_today', { count: flights.length }) : t('arrivals_today', { count: flights.length })}
           </span>
         </div>
       )}
@@ -685,7 +704,11 @@ export function FlightBoard({ airport, locale, defaultMode = 'departures', displ
           return (
             <div
               key={i}
+              role="button"
+              tabIndex={0}
+              aria-label={`${f.flight}, ${city}, ${label}`}
               onClick={() => { haptic(); setSelected(f); }}
+              onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); haptic(); setSelected(f); } }}
               style={{
                 display: 'flex', background: 'rgba(255,255,255,0.025)', borderRadius: 22,
                 marginBottom: 12, overflow: 'hidden', cursor: 'pointer', opacity: isPast ? 0.45 : 1,
@@ -721,7 +744,7 @@ export function FlightBoard({ airport, locale, defaultMode = 'departures', displ
                 </div>
 
                 {/* Right: gate + status + chevron */}
-                <div style={{ flexShrink: 0, textAlign: 'right', display: 'flex', alignItems: 'center', gap: 6 }}>
+                <div style={{ flexShrink: 0, textAlign: 'end', display: 'flex', alignItems: 'center', gap: 6 }}>
                   <div style={{ maxWidth: 92 }}>
                     {f.gate && (
                       <div style={{ lineHeight: 1.1, whiteSpace: 'nowrap', marginBottom: 5 }}>
@@ -737,7 +760,7 @@ export function FlightBoard({ airport, locale, defaultMode = 'departures', displ
                       {label}
                     </div>
                   </div>
-                  <svg width="8" height="14" viewBox="0 0 8 14" fill="none" style={{ flexShrink: 0 }}>
+                  <svg width="8" height="14" viewBox="0 0 8 14" fill="none" aria-hidden="true" style={{ flexShrink: 0 }}>
                     <path d="M1 1L7 7L1 13" stroke="rgba(255,255,255,0.22)" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" />
                   </svg>
                 </div>

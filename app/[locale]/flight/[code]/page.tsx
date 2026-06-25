@@ -83,16 +83,16 @@ export default async function FlightPage({ params }: Props) {
 
   const Card = ({ label, value }: { label: string; value: string }) => (
     <div style={{ background: '#0B0B0B', border: '1px solid #1A1A1A', borderRadius: 14, padding: '14px 16px', minWidth: 0 }}>
-      <div style={{ fontSize: 11, fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase', color: '#5A5A5A' }}>{label}</div>
+      <div style={{ fontSize: 11, fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase', color: '#8A8A8A' }}>{label}</div>
       <div style={{ fontSize: 22, fontWeight: 700, color: '#FFFFFF', marginTop: 6, whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>{value}</div>
     </div>
   );
   const link: React.CSSProperties = { color: '#0A84FF', textDecoration: 'none' };
 
   return (
-    <main style={{ maxWidth: 640, margin: '0 auto', padding: '36px 18px 64px' }}>
+    <div style={{ maxWidth: 640, margin: '0 auto', padding: '36px 18px 64px' }}>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
-      <div style={{ fontSize: 13, color: '#5A5A5A', marginBottom: 14 }}>
+      <div style={{ fontSize: 13, color: '#8A8A8A', marginBottom: 14 }}>
         <Link href={`/${locale}`} style={{ color: '#6A6A6A', textDecoration: 'none' }}>airportsboard</Link>
       </div>
 
@@ -131,6 +131,6 @@ export default async function FlightPage({ params }: Props) {
       ) : (
         <p style={{ fontSize: 16, color: '#8A8A8A', marginTop: 20 }}>{t('flight_notfound', { flight })}</p>
       )}
-    </main>
+    </div>
   );
 }

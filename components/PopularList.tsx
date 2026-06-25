@@ -31,7 +31,7 @@ export function PopularList({ airports, locale, depLabel, arrLabel }: {
             </div>
             <div style={{ flex: 1, minWidth: 0 }}>
               <div style={{ fontSize: 15, color: '#E4E4E7', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>{a.city}</div>
-              <div style={{ fontSize: 12, color: '#5A5A5A', marginTop: 1, whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>{a.name}</div>
+              <div style={{ fontSize: 12, color: '#8A8A8A', marginTop: 1, whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>{a.name}</div>
             </div>
             <div style={{ flexShrink: 0, textAlign: 'right', fontSize: 12, color: '#8A8A8A', minWidth: 70 }}>
               {typeof c?.dep === 'number' && <div><span style={{ color: '#34C759', fontWeight: 700 }}>{c.dep}</span> {depLabel}</div>}

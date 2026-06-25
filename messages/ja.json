@@ -4,7 +4,14 @@
     "departures": "出発",
     "search_placeholder": "空港、都市またはIATAコード...",
     "all_airports": "すべての空港",
-    "home": "ホーム"
+    "home": "ホーム",
+    "results": "検索結果",
+    "recent": "最近",
+    "popular": "人気の空港",
+    "nearest": "近くの空港",
+    "clear": "クリア",
+    "language": "言語",
+    "close": "閉じる"
   },
   "board": {
     "flight": "便名",
@@ -107,7 +114,8 @@
     "airline_desc": "{airline} ({iata}) のフライト：ライブ状況、出発・到着、時刻表、遅延、リアルタイム追跡。",
     "airline_live": "ライブフライト",
     "airline_none": "現在 {airline} の運航中の便はありません。",
-    "airlines_title": "航空会社"
+    "airlines_title": "航空会社",
+    "data_note": "発着時刻は変更される場合があります。航空会社または空港でご確認ください。"
   },
   "ui": {
     "departures": "出発",
@@ -188,5 +196,10 @@
     "more_departures": "出発をもっと表示",
     "more_arrivals": "到着をもっと表示",
     "live_updates": "ライブ更新"
+  },
+  "notfound": {
+    "title": "ページが見つかりません",
+    "text": "このページは見つかりませんでした。空港を検索するかホームに戻ってください。",
+    "home": "ホームに戻る"
   }
 }

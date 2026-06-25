@@ -4,7 +4,14 @@
     "departures": "Partenze",
     "search_placeholder": "Aeroporto, città o codice IATA...",
     "all_airports": "Tutti gli aeroporti",
-    "home": "Home"
+    "home": "Home",
+    "results": "Risultati",
+    "recent": "Recenti",
+    "popular": "Aeroporti popolari",
+    "nearest": "Aeroporti vicini",
+    "clear": "Cancella",
+    "language": "Lingua",
+    "close": "Chiudi"
   },
   "board": {
     "flight": "Volo",
@@ -107,7 +114,8 @@
     "airline_desc": "{airline} ({iata}) voli: stato in tempo reale, partenze e arrivi, orari, ritardi, tracciamento live.",
     "airline_live": "Voli in tempo reale",
     "airline_none": "Nessun volo attivo per {airline} in questo momento.",
-    "airlines_title": "Compagnie aeree"
+    "airlines_title": "Compagnie aeree",
+    "data_note": "Gli orari possono cambiare — verifica con la compagnia o l’aeroporto."
   },
   "ui": {
     "departures": "Partenze",
@@ -188,5 +196,10 @@
     "more_departures": "Mostra altre partenze",
     "more_arrivals": "Mostra altri arrivi",
     "live_updates": "Aggiornamenti in tempo reale"
+  },
+  "notfound": {
+    "title": "Pagina non trovata",
+    "text": "Pagina non trovata. Cerca un aeroporto o torna alla home.",
+    "home": "Torna alla home"
   }
 }

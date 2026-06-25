@@ -49,11 +49,23 @@ export default async function AirportsIndexPage({ params }: Props) {
       { '@type': 'ListItem', position: 2, name: t('sec_countries'), item: `${BASE}/${locale}/airports` },
     ],
   };
+  const itemList = {
+    '@context': 'https://schema.org',
+    '@type': 'ItemList',
+    name: t('sec_countries'),
+    numberOfItems: countries.length,
+    itemListElement: countries.map((c, i) => ({
+      '@type': 'ListItem', position: i + 1,
+      name: c.name,
+      item: `${BASE}/${locale}/airports/${c.slug}`,
+    })),
+  };
 
   return (
-    <main style={{ maxWidth: 760, margin: '0 auto', padding: '36px 18px 64px' }}>
+    <div style={{ maxWidth: 760, margin: '0 auto', padding: '36px 18px 64px' }}>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
-      <div style={{ fontSize: 13, color: '#5A5A5A', marginBottom: 10 }}>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(itemList) }} />
+      <div style={{ fontSize: 13, color: '#8A8A8A', marginBottom: 10 }}>
         <Link href={`/${locale}`} style={{ color: '#6A6A6A', textDecoration: 'none' }}>airportsboard</Link>
       </div>
       <h1 style={{ fontSize: 'clamp(28px, 7vw, 40px)', fontWeight: 800, letterSpacing: '-0.03em', color: '#FFFFFF', margin: '0 0 6px' }}>
@@ -72,11 +84,11 @@ export default async function AirportsIndexPage({ params }: Props) {
             }}>
               <span style={{ fontSize: 20, flexShrink: 0, width: 26, textAlign: 'center', lineHeight: 1 }}>{flag(c.iso2)}</span>
               <span style={{ flex: 1, minWidth: 0, fontSize: 15, color: '#E4E4E7', fontWeight: 600, whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>{c.name}</span>
-              <span style={{ fontSize: 13, color: '#5A5A5A', flexShrink: 0, fontVariantNumeric: 'tabular-nums' }}>{c.count}</span>
+              <span style={{ fontSize: 13, color: '#8A8A8A', flexShrink: 0, fontVariantNumeric: 'tabular-nums' }}>{c.count}</span>
             </Link>
           </li>
         ))}
       </ul>
-    </main>
+    </div>
   );
 }

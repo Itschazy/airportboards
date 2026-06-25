@@ -4,7 +4,14 @@
     "departures": "प्रस्थान",
     "search_placeholder": "हवाई अड्डा, शहर या IATA कोड...",
     "all_airports": "सभी हवाई अड्डे",
-    "home": "होम"
+    "home": "होम",
+    "results": "परिणाम",
+    "recent": "हाल के",
+    "popular": "लोकप्रिय हवाई अड्डे",
+    "nearest": "नज़दीकी हवाई अड्डे",
+    "clear": "साफ़ करें",
+    "language": "भाषा",
+    "close": "बंद करें"
   },
   "board": {
     "flight": "उड़ान",
@@ -102,12 +109,13 @@
     "flight_title": "फ्लाइट {flight} — लाइव स्थिति व ट्रैकिंग",
     "flight_desc": "फ्लाइट {flight} स्थिति: लाइव आगमन/प्रस्थान समय, गेट, टर्मिनल, देरी, वास्तविक समय ट्रैकिंग।",
     "flight_route": "रूट",
-    "flight_notfound": "रायड {flight} नहीं मिला या आज निर्धारित नहीं है।",
+    "flight_notfound": "उड़ान {flight} नहीं मिली या आज निर्धारित नहीं है।",
     "airline_title": "{airline} उड़ानें — लाइव स्थिति",
     "airline_desc": "{airline} ({iata}) flights: लाइव स्थिति, प्रस्थान और आगमन, समय-सारिणी, देरी, रियल-टाइम ट्रैकिंग.",
     "airline_live": "लाइव उड़ानें",
     "airline_none": "अभी {airline} के लिए कोई सक्रिय उड़ान नहीं है.",
-    "airlines_title": "एयरलाइंस"
+    "airlines_title": "एयरलाइंस",
+    "data_note": "उड़ान समय बदल सकता है — अपनी एयरलाइन या हवाई अड्डे से पुष्टि करें।"
   },
   "ui": {
     "departures": "प्रस्थान",
@@ -148,7 +156,7 @@
     "arrives_in": "आगमन में",
     "final_call": "अंतिम कॉल",
     "go_to_gate": "अब गेट पर जाएँ",
-    "delayed_by": "{m}m के लिए विलंबित",
+    "delayed_by": "{m} मिनट विलंबित",
     "was": "{time} था",
     "scheduled_at": "निर्धारित {time}",
     "new_departure": "नया प्रस्थान {time}",
@@ -174,7 +182,7 @@
     "h_delay_label": "विलंब {dur}",
     "actual_dep": "वास्तविक प्रस्थान समय",
     "h_cancel_label": "उड़ान रद्द",
-    "h_cancel_main": "लाइन एयर से संपर्क करें",
+    "h_cancel_main": "एयरलाइन से संपर्क करें",
     "h_cancel_sub": "वैकल्पिक उड़ानें देखें",
     "about_flight": "उड़ान के बारे में",
     "airline_label": "एयरलाइन",
@@ -188,5 +196,10 @@
     "more_departures": "और प्रस्थान दिखाएँ",
     "more_arrivals": "और आगमन दिखाएँ",
     "live_updates": "लाइव अपडेट्स"
+  },
+  "notfound": {
+    "title": "पेज नहीं मिला",
+    "text": "यह पेज नहीं मिला। कोई हवाई अड्डा खोजें या होम पर लौटें।",
+    "home": "होम पर लौटें"
   }
 }

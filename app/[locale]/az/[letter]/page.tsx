@@ -51,11 +51,23 @@ export default async function LetterPage({ params }: Props) {
       { '@type': 'ListItem', position: 2, name: t('az_title', { letter: L }), item: `${BASE}/${locale}/az/${letter.toLowerCase()}` },
     ],
   };
+  const itemList = {
+    '@context': 'https://schema.org',
+    '@type': 'ItemList',
+    name: t('az_title', { letter: L }),
+    numberOfItems: airports.length,
+    itemListElement: airports.map((a, i) => ({
+      '@type': 'ListItem', position: i + 1,
+      name: getAirportName(a.iata, locale, a.name),
+      item: `${BASE}/${locale}/airport/${a.iata}`,
+    })),
+  };
 
   return (
-    <main style={{ maxWidth: 720, margin: '0 auto', padding: '36px 18px 64px' }}>
+    <div style={{ maxWidth: 720, margin: '0 auto', padding: '36px 18px 64px' }}>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
-      <div style={{ fontSize: 13, color: '#5A5A5A', marginBottom: 8 }}>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(itemList) }} />
+      <div style={{ fontSize: 13, color: '#8A8A8A', marginBottom: 8 }}>
         <Link href={`/${locale}`} style={{ color: '#6A6A6A', textDecoration: 'none' }}>airportsboard</Link>
       </div>
       <h1 style={{ fontSize: 'clamp(30px, 8vw, 42px)', fontWeight: 800, letterSpacing: '-0.03em', color: '#FFFFFF', margin: 0 }}>
@@ -78,7 +90,7 @@ export default async function LetterPage({ params }: Props) {
 
       <p style={{ fontSize: 14, color: '#6A6A6A', marginTop: 22, marginBottom: 14 }}>{t('airports_count', { count: airports.length })}</p>
 
-      <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
+      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(260px, 1fr))', gap: 8 }}>
         {airports.map(a => (
           <Link key={a.iata} href={`/${locale}/airport/${a.iata}`} style={{
             display: 'flex', alignItems: 'center', gap: 14, textDecoration: 'none', color: 'inherit',
@@ -87,11 +99,11 @@ export default async function LetterPage({ params }: Props) {
             <span style={{ width: 50, flexShrink: 0, fontSize: 18, fontWeight: 700, color: '#0A84FF', letterSpacing: '-0.02em' }}>{a.iata}</span>
             <span style={{ flex: 1, minWidth: 0 }}>
               <span style={{ fontSize: 15, color: '#E4E4E7', display: 'block', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>{getAirportName(a.iata, locale, a.name)}</span>
-              <span style={{ fontSize: 12, color: '#5A5A5A', display: 'block' }}>{getCityName(a.city, locale)}, {getCountryName(a.country, locale)}</span>
+              <span style={{ fontSize: 12, color: '#8A8A8A', display: 'block' }}>{getCityName(a.city, locale)}, {getCountryName(a.country, locale)}</span>
             </span>
           </Link>
         ))}
       </div>
-    </main>
+    </div>
   );
 }

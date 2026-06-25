@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useRef, useCallback } from 'react';
 import { useRouter } from 'next/navigation';
+import { useTranslations } from 'next-intl';
 
 type Result = { iata: string; name: string; city: string; country: string; iso2: string };
 
@@ -42,6 +43,7 @@ function saveRecent(a: Result) {
 }
 
 export function AirportSearch({ locale, placeholder, nearestLabel = 'Nearest airports' }: { locale: string; placeholder: string; nearestLabel?: string }) {
+  const tNav = useTranslations('nav');
   const [query, setQuery]     = useState('');
   const [results, setResults] = useState<Result[]>([]);
   const [recent, setRecent]   = useState<Result[]>([]);
@@ -163,7 +165,7 @@ export function AirportSearch({ locale, placeholder, nearestLabel = 'Nearest air
         padding: '8px 14px 4px',
         fontSize: 10, fontWeight: 700,
         letterSpacing: '0.1em',
-        color: '#4A4A4A',
+        color: '#8A8A8A',
         textTransform: 'uppercase',
       }}>
         {label}
@@ -211,7 +213,7 @@ export function AirportSearch({ locale, placeholder, nearestLabel = 'Nearest air
             </span>
 
             {/* Country */}
-            <span style={{ fontSize: 11, color: '#4A4A4A', flexShrink: 0, maxWidth: 80, textAlign: 'right', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>
+            <span style={{ fontSize: 11, color: '#8A8A8A', flexShrink: 0, maxWidth: 80, textAlign: 'right', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>
               {a.country}
             </span>
           </button>
@@ -225,8 +227,8 @@ export function AirportSearch({ locale, placeholder, nearestLabel = 'Nearest air
       {/* Input */}
       <div style={{ position: 'relative' }}>
         <svg
-          width="16" height="16" viewBox="0 0 16 16" fill="none"
-          style={{ position: 'absolute', left: 14, top: '50%', transform: 'translateY(-50%)', pointerEvents: 'none' }}
+          width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"
+          style={{ position: 'absolute', insetInlineStart: 14, top: '50%', transform: 'translateY(-50%)', pointerEvents: 'none' }}
         >
           <circle cx="6.5" cy="6.5" r="4" stroke={focused ? '#8A8A8A' : '#4A4A4A'} strokeWidth="1.5"/>
           <path d="M10 10L13.5 13.5" stroke={focused ? '#8A8A8A' : '#4A4A4A'} strokeWidth="1.5" strokeLinecap="round"/>
@@ -235,6 +237,10 @@ export function AirportSearch({ locale, placeholder, nearestLabel = 'Nearest air
         <input
           ref={inputRef}
           type="text"
+          role="combobox"
+          aria-label={placeholder}
+          aria-expanded={showList}
+          aria-autocomplete="list"
           autoComplete="off"
           spellCheck={false}
           placeholder={placeholder}
@@ -259,15 +265,17 @@ export function AirportSearch({ locale, placeholder, nearestLabel = 'Nearest air
 
         {query && (
           <button
+            type="button"
+            aria-label={tNav('clear')}
             onMouseDown={() => { setQuery(''); setActive(-1); inputRef.current?.focus(); }}
             style={{
-              position: 'absolute', right: 12, top: '50%', transform: 'translateY(-50%)',
+              position: 'absolute', insetInlineEnd: 12, top: '50%', transform: 'translateY(-50%)',
               background: '#2C2C2E', border: 'none', borderRadius: '50%',
-              width: 20, height: 20, cursor: 'pointer',
+              width: 28, height: 28, cursor: 'pointer',
               display: 'flex', alignItems: 'center', justifyContent: 'center', padding: 0,
             }}
           >
-            <svg width="10" height="10" viewBox="0 0 10 10" fill="none">
+            <svg width="10" height="10" viewBox="0 0 10 10" fill="none" aria-hidden="true">
               <path d="M1 1L9 9M9 1L1 9" stroke="#8A8A8A" strokeWidth="1.5" strokeLinecap="round"/>
             </svg>
           </button>
@@ -290,12 +298,12 @@ export function AirportSearch({ locale, placeholder, nearestLabel = 'Nearest air
           boxShadow: '0 20px 60px rgba(0,0,0,0.8)',
         }}>
           {query.trim() ? (
-            <Section label="Results" items={results} />
+            <Section label={tNav('results')} items={results} />
           ) : (
             <>
-              {recentF.length > 0 && <Section label="Recent" items={recentF} startIndex={0} />}
+              {recentF.length > 0 && <Section label={tNav('recent')} items={recentF} startIndex={0} />}
               {nearestF.length > 0 && <Section label={nearestLabel} items={nearestF} startIndex={recentF.length} />}
-              {popularItems.length > 0 && <Section label="Popular airports" items={popularItems} startIndex={recentF.length + nearestF.length} />}
+              {popularItems.length > 0 && <Section label={tNav('popular')} items={popularItems} startIndex={recentF.length + nearestF.length} />}
             </>
           )}
         </div>

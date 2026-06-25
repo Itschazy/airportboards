@@ -4,7 +4,14 @@
     "departures": "Départs",
     "search_placeholder": "Aéroport, ville ou code IATA...",
     "all_airports": "Tous les aéroports",
-    "home": "Accueil"
+    "home": "Accueil",
+    "results": "Résultats",
+    "recent": "Récents",
+    "popular": "Aéroports populaires",
+    "nearest": "Aéroports proches",
+    "clear": "Effacer",
+    "language": "Langue",
+    "close": "Fermer"
   },
   "board": {
     "flight": "Vol",
@@ -107,7 +114,8 @@
     "airline_desc": "{airline} ({iata}) vols : statut en direct, départs et arrivées, horaires, retards, suivi en temps réel.",
     "airline_live": "Vols en direct",
     "airline_none": "Aucun vol actif pour {airline} pour le moment.",
-    "airlines_title": "Compagnies aériennes"
+    "airlines_title": "Compagnies aériennes",
+    "data_note": "Les horaires peuvent changer — vérifiez auprès de votre compagnie ou de l’aéroport."
   },
   "ui": {
     "departures": "Départs",
@@ -188,5 +196,10 @@
     "more_departures": "Afficher plus de départs",
     "more_arrivals": "Afficher plus d'arrivées",
     "live_updates": "Mises à jour en direct"
+  },
+  "notfound": {
+    "title": "Page introuvable",
+    "text": "Cette page est introuvable. Recherchez un aéroport ou revenez à l’accueil.",
+    "home": "Retour à l’accueil"
   }
 }

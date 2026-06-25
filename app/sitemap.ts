@@ -1,13 +1,11 @@
 import type { MetadataRoute } from 'next';
 import { getAllIataCodes, AIRPORTS_PER_SITEMAP, getSitemapCount, getCountries, getStaticIataCodes, getCities } from '@/lib/airports';
-import airlines from '@/data/airlines.json';
 import { locales } from '@/lib/i18n';
 
 const BASE = 'https://airportsboard.live';
 const LETTERS = 'abcdefghijklmnopqrstuvwxyz'.split('');
 // Major hubs get higher priority than obscure airfields (priority is relative).
 const HUBS = new Set(getStaticIataCodes());
-const AIRLINE_CODES = Object.keys(airlines as Record<string, string>).filter(k => /^[A-Z0-9]{2}$/.test(k));
 const NOW = new Date();
 
 type Freq = MetadataRoute.Sitemap[number]['changeFrequency'];
@@ -42,7 +40,7 @@ export default function sitemap({ id }: { id: number | string }): MetadataRoute.
     for (const L of LETTERS) entries.push(entry(`/az/${L}`, 'weekly', 0.4));
     for (const c of getCountries()) entries.push(entry(`/airports/${c.slug}`, 'weekly', 0.6));
     for (const c of getCities()) if (c.count > 1) entries.push(entry(`/city/${c.slug}`, 'weekly', 0.6));
-    for (const code of AIRLINE_CODES) entries.push(entry(`/airline/${code}`, 'daily', 0.5));
+    // Airline pages are noindex (thin across ~976 codes) — intentionally not listed.
   }
 
   for (const iata of slice) {

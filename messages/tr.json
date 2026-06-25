@@ -4,7 +4,14 @@
     "departures": "Gidenler",
     "search_placeholder": "Havalimanı, şehir veya IATA kodu...",
     "all_airports": "Tüm havalimanları",
-    "home": "Ana sayfa"
+    "home": "Ana sayfa",
+    "results": "Sonuçlar",
+    "recent": "Son",
+    "popular": "Popüler havalimanları",
+    "nearest": "En yakın havalimanları",
+    "clear": "Temizle",
+    "language": "Dil",
+    "close": "Kapat"
   },
   "board": {
     "flight": "Uçuş",
@@ -107,7 +114,8 @@
     "airline_desc": "{airline} ({iata}) uçuşları: canlı durum, kalkışlar ve varışlar, tarifeler, gecikmeler, gerçek zamanlı takip.",
     "airline_live": "Canlı uçuşlar",
     "airline_none": "{airline} için şu anda aktif uçuş yok.",
-    "airlines_title": "Havayolları"
+    "airlines_title": "Havayolları",
+    "data_note": "Uçuş saatleri değişebilir — havayolunuz veya havalimanından teyit edin."
   },
   "ui": {
     "departures": "Kalkışlar",
@@ -188,5 +196,10 @@
     "more_departures": "Diğer kalkışları göster",
     "more_arrivals": "Diğer varışları göster",
     "live_updates": "Canlı güncellemeler"
+  },
+  "notfound": {
+    "title": "Sayfa bulunamadı",
+    "text": "Bu sayfa bulunamadı. Bir havalimanı arayın veya ana sayfaya dönün.",
+    "home": "Ana sayfaya dön"
   }
 }

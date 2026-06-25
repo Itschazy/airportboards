@@ -2,10 +2,12 @@
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useState, useRef, useEffect } from 'react';
+import { useTranslations } from 'next-intl';
 import { locales, localeNames, type Locale } from '@/lib/i18n';
 
 export function SiteHeader({ locale }: { locale: Locale }) {
   const pathname = usePathname();
+  const tNav = useTranslations('nav');
   const [open, setOpen] = useState(false);
   const ref = useRef<HTMLDivElement>(null);
 
@@ -13,11 +15,18 @@ export function SiteHeader({ locale }: { locale: Locale }) {
     pathname.replace(new RegExp(`^/${locale}(?=/|$)`), `/${l}`);
 
   useEffect(() => {
-    const h = (e: MouseEvent) => {
+    const close = (e: Event) => {
       if (!ref.current?.contains(e.target as Node)) setOpen(false);
     };
-    document.addEventListener('mousedown', h);
-    return () => document.removeEventListener('mousedown', h);
+    const onKey = (e: KeyboardEvent) => { if (e.key === 'Escape') setOpen(false); };
+    document.addEventListener('mousedown', close);
+    document.addEventListener('touchstart', close); // touch devices: mousedown is unreliable
+    document.addEventListener('keydown', onKey);
+    return () => {
+      document.removeEventListener('mousedown', close);
+      document.removeEventListener('touchstart', close);
+      document.removeEventListener('keydown', onKey);
+    };
   }, []);
 
   return (
@@ -36,7 +45,7 @@ export function SiteHeader({ locale }: { locale: Locale }) {
           color: '#FFFFFF', letterSpacing: '-0.01em',
           display: 'flex', alignItems: 'center', gap: 6,
         }}>
-          <span style={{ fontSize: 15 }}>✈</span>
+          <span style={{ fontSize: 15 }} aria-hidden="true">✈</span>
           airportsboard
         </Link>
 
@@ -46,9 +55,12 @@ export function SiteHeader({ locale }: { locale: Locale }) {
         <div ref={ref} style={{ position: 'relative' }}>
           <button
             onClick={() => setOpen(o => !o)}
+            aria-haspopup="menu"
+            aria-expanded={open}
+            aria-label={`${tNav('language')}: ${localeNames[locale]}`}
             style={{
               display: 'flex', alignItems: 'center', gap: 5,
-              padding: '5px 10px',
+              padding: '9px 12px', minHeight: 40,
               borderRadius: 8,
               border: `1px solid ${open ? '#3A3A3C' : '#1A1A1A'}`,
               background: open ? '#1C1C1E' : 'transparent',
@@ -57,14 +69,14 @@ export function SiteHeader({ locale }: { locale: Locale }) {
               cursor: 'pointer', letterSpacing: '0.02em',
             }}
           >
-            <span style={{ fontSize: 13 }}>🌐</span>
+            <span style={{ fontSize: 13 }} aria-hidden="true">🌐</span>
             {locale.toUpperCase()}
-            <span style={{ fontSize: 10, opacity: 0.6, marginLeft: 1 }}>▾</span>
+            <span style={{ fontSize: 10, opacity: 0.6, marginInlineStart: 1 }} aria-hidden="true">▾</span>
           </button>
 
           {open && (
-            <div style={{
-              position: 'absolute', top: 'calc(100% + 6px)', right: 0,
+            <div role="menu" style={{
+              position: 'absolute', top: 'calc(100% + 6px)', insetInlineEnd: 0,
               background: '#111111',
               border: '1px solid #1A1A1A',
               borderRadius: 12,

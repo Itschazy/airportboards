@@ -66,11 +66,23 @@ export default async function CityPage({ params }: Props) {
       { '@type': 'ListItem', position: 2, name: t('city_title', { city }), item: `${BASE}/${locale}/city/${c.slug}` },
     ],
   };
+  const itemList = {
+    '@context': 'https://schema.org',
+    '@type': 'ItemList',
+    name: t('city_title', { city }),
+    numberOfItems: airports.length,
+    itemListElement: airports.map((a, i) => ({
+      '@type': 'ListItem', position: i + 1,
+      name: getAirportName(a.iata, locale, a.name),
+      item: `${BASE}/${locale}/airport/${a.iata}`,
+    })),
+  };
 
   return (
-    <main style={{ maxWidth: 760, margin: '0 auto', padding: '36px 18px 64px' }}>
+    <div style={{ maxWidth: 760, margin: '0 auto', padding: '36px 18px 64px' }}>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
-      <div style={{ fontSize: 13, color: '#5A5A5A', marginBottom: 10 }}>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(itemList) }} />
+      <div style={{ fontSize: 13, color: '#8A8A8A', marginBottom: 10 }}>
         <Link href={`/${locale}`} style={{ color: '#6A6A6A', textDecoration: 'none' }}>airportsboard</Link>
         {' · '}
         <Link href={`/${locale}/airports`} style={{ color: '#6A6A6A', textDecoration: 'none' }}>{t('sec_countries')}</Link>
@@ -99,6 +111,6 @@ export default async function CityPage({ params }: Props) {
           </li>
         ))}
       </ul>
-    </main>
+    </div>
   );
 }
