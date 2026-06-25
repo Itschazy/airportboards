@@ -130,10 +130,12 @@ export async function fetchRaw(query: string, direction: 'departures' | 'arrival
   if (hit && Date.now() - hit.ts < CACHE_SECONDS * 1000) return hit.data;
   rawCache.delete(cacheKey);
   const url = `https://airlabs.co/api/v9/schedules?${query}&api_key=${AIRLABS_KEY}`;
-  // Cap the cold-render airlabs call so a slow/hung upstream can't stall SSR (and a
-  // crawler) indefinitely. Observed p100 cold latency is ~2.9s; 5s leaves margin and
-  // only fires on genuine hangs — callers try/catch and fall back to an empty board.
-  const res = await fetch(url, { cache: 'no-store', signal: AbortSignal.timeout(5000) });
+  // Cache the upstream response in Next's persistent Data Cache (revalidate window)
+  // instead of `no-store`. With 6072 airports rendered on-demand, a no-store fetch made
+  // EVERY crawler hit a fresh airlabs request — which burned the 100k/mo quota in ~2 days.
+  // Caching lets repeated hits to the same airport reuse the response; the client board
+  // still refreshes for humans. (in-memory rawCache above is the short fast-path.)
+  const res = await fetch(url, { next: { revalidate: 180 } });
   if (!res.ok) throw new Error(`airlabs ${res.status}`);
   const json = await res.json();
   if (json.error) throw new Error(json.error.message || 'airlabs error');
@@ -169,28 +171,43 @@ export async function fetchRaw(query: string, direction: 'departures' | 'arrival
   return raw;
 }
 
-// High-level helpers
+// High-level helpers.
+// Each helper sanity-filters the raw response to rows that ACTUALLY match what was
+// requested. airlabs returns a fixed demo set (always the same ~6 Russian flights,
+// incl. a nonsensical SVO→SVO) when the API key is invalid / over-quota — without this
+// guard every airport board rendered identical fake flights (catastrophic duplicate
+// content + user-facing fake data). The filter is a no-op when real data is returned.
+const norm = (s?: string) => (s || '').toUpperCase().replace(/[\s-]/g, '');
+
 export async function getBoard(iata: string, direction: 'departures' | 'arrivals', locale: string): Promise<FlightRow[]> {
-  const param = direction === 'departures' ? `dep_iata=${iata}` : `arr_iata=${iata}`;
+  const code = iata.toUpperCase();
+  const param = direction === 'departures' ? `dep_iata=${code}` : `arr_iata=${code}`;
   const raw = await fetchRaw(param, direction);
-  return raw.map(f => mapFlight(f, direction, locale));
+  const own = raw.filter(f => (direction === 'departures' ? f.dep_iata : f.arr_iata) === code);
+  return own.map(f => mapFlight(f, direction, locale));
 }
 
 export async function getRoute(from: string, to: string, locale: string): Promise<FlightRow[]> {
-  const raw = await fetchRaw(`dep_iata=${from}&arr_iata=${to}`);
-  return raw.map(f => mapFlight(f, 'departures', locale));
+  const F = from.toUpperCase(), T = to.toUpperCase();
+  const raw = await fetchRaw(`dep_iata=${F}&arr_iata=${T}`);
+  const own = raw.filter(f => f.dep_iata === F && f.arr_iata === T);
+  return own.map(f => mapFlight(f, 'departures', locale));
 }
 
 export async function getFlightByNumber(flightIata: string, locale: string): Promise<FlightRow | null> {
+  const code = norm(flightIata);
   const raw = await fetchRaw(`flight_iata=${flightIata}`);
-  if (!raw.length) return null;
+  const match = raw.filter(f => norm(f.flight_iata) === code);
+  if (!match.length) return null;
   // pick the soonest upcoming (or most recent) instance
-  return mapFlight(raw[0], 'departures', locale);
+  return mapFlight(match[0], 'departures', locale);
 }
 
 export async function getAirlineFlights(iata: string, locale: string): Promise<FlightRow[]> {
-  const raw = await fetchRaw(`airline_iata=${iata}`);
-  return raw.map(f => mapFlight(f, 'departures', locale));
+  const code = iata.toUpperCase();
+  const raw = await fetchRaw(`airline_iata=${code}`);
+  const own = raw.filter(f => (f.airline_iata || '').toUpperCase() === code);
+  return own.map(f => mapFlight(f, 'departures', locale));
 }
 
 // Airline directory (from airlines.json; '*' keys are airlabs' secondary assignments).
