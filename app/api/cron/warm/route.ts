@@ -13,8 +13,11 @@ export async function GET(req: NextRequest) {
   // the Host header is loopback (nginx rewrites Host to the public domain for external
   // traffic) — or (b) a matching CRON_TOKEN is supplied. Idempotent within the store TTL
   // and hard-capped by the monthly budget either way.
-  const host = (req.headers.get('host') || '').toLowerCase();
-  const local = host.startsWith('127.0.0.1') || host.startsWith('localhost') || host.startsWith('[::1]');
+  // req.nextUrl.hostname is the parsed request host (reliable in route handlers, unlike
+  // the raw 'host' header). The on-box cron hits 127.0.0.1:3000; nginx rewrites external
+  // Host to the public domain, so loopback here ⇒ the local cron.
+  const host = req.nextUrl.hostname.toLowerCase();
+  const local = host === '127.0.0.1' || host === 'localhost' || host === '::1';
   const token = process.env.CRON_TOKEN || '';
   const authed = local || (!!token && req.nextUrl.searchParams.get('token') === token);
   if (!authed) return NextResponse.json({ error: 'forbidden' }, { status: 403 });
