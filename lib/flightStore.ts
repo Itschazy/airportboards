@@ -1,0 +1,71 @@
+// Persistent flight-data store + monthly airlabs budget guard.
+//
+// Why this exists: airlabs is billed per request (100k/mo plan). Previously every
+// on-demand SSR render fetched airlabs, so crawlers across 6072 airports burned the
+// whole month's quota in ~2 days. This store decouples airlabs spend from traffic:
+//   - reads are served from here (fresh within TTL, or stale as a fallback),
+//   - only the human-facing path may spend quota, and only under a hard monthly cap,
+//   - a bounded background warmer keeps the top hubs fresh.
+// On a single-process PM2 deploy this is an in-memory mirror persisted to one JSON file
+// (outside the repo so `git clean` on deploy doesn't wipe it). The counter is a
+// best-effort backstop; the real guarantee is structural (crawlers never spend).
+
+import fs from 'node:fs';
+import os from 'node:os';
+import path from 'node:path';
+import type { AirlabsFlight } from '@/lib/flights';
+
+const STORE_PATH = process.env.FLIGHT_STORE_PATH || path.join(os.tmpdir(), 'airportsboard-flights.json');
+const TTL_MS = (Number(process.env.FLIGHT_TTL_SEC) || 600) * 1000;       // 10 min freshness window
+const MONTHLY_CAP = Number(process.env.AIRLABS_MONTHLY_CAP) || 95000;    // hard backstop under the 100k plan
+const MAX_ENTRIES = 8000;
+
+type Entry = { ts: number; data: AirlabsFlight[] };
+type Store = { month: string; count: number; entries: Record<string, Entry> };
+
+const monthKey = () => new Date().toISOString().slice(0, 7); // YYYY-MM (calendar month)
+
+let mem: Store | null = null;
+function db(): Store {
+  if (!mem) {
+    try { mem = JSON.parse(fs.readFileSync(STORE_PATH, 'utf8')) as Store; }
+    catch { mem = { month: monthKey(), count: 0, entries: {} }; }
+  }
+  if (mem.month !== monthKey()) mem = { month: monthKey(), count: 0, entries: {} }; // roll over each month
+  return mem;
+}
+
+let timer: ReturnType<typeof setTimeout> | null = null;
+function persist() {
+  if (timer) return;
+  timer = setTimeout(() => {
+    timer = null;
+    try { fs.writeFileSync(STORE_PATH, JSON.stringify(mem)); } catch { /* best-effort */ }
+  }, 2000);
+  if (typeof timer.unref === 'function') timer.unref();
+}
+
+/** Fresh data within the TTL window, or null. */
+export function getFresh(key: string): AirlabsFlight[] | null {
+  const e = db().entries[key];
+  return e && Date.now() - e.ts < TTL_MS ? e.data : null;
+}
+/** Any stored data regardless of age (serve-stale fallback), or null. */
+export function getStale(key: string): AirlabsFlight[] | null {
+  const e = db().entries[key];
+  return e ? e.data : null;
+}
+export function put(key: string, data: AirlabsFlight[]) {
+  const s = db();
+  s.entries[key] = { ts: Date.now(), data };
+  const keys = Object.keys(s.entries);
+  if (keys.length > MAX_ENTRIES) delete s.entries[keys[0]]; // bound memory/disk
+  persist();
+}
+/** True while we are still under the monthly airlabs budget. */
+export function canSpend(): boolean { return db().count < MONTHLY_CAP; }
+export function spend() { db().count++; persist(); }
+export function usage() {
+  const s = db();
+  return { month: s.month, count: s.count, cap: MONTHLY_CAP, remaining: Math.max(0, MONTHLY_CAP - s.count) };
+}

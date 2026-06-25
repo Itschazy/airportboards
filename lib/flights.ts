@@ -1,6 +1,7 @@
 import airports from '@/data/airports.json';
 import airlines from '@/data/airlines.json';
 import { getCityName } from '@/lib/places';
+import { getFresh, getStale, put, canSpend, spend } from '@/lib/flightStore';
 
 const AIRLABS_KEY = process.env.AIRLABS_API_KEY || '';
 export const CACHE_SECONDS = 60;
@@ -32,8 +33,8 @@ export type AirlabsFlight = {
   status: string;
 };
 
-// In-memory dedup cache for raw airlabs payloads (PM2-persistent in prod).
-const rawCache = new Map<string, { ts: number; data: AirlabsFlight[] }>();
+// De-dupe concurrent live fetches of the same query (thundering-herd guard).
+const inflight = new Map<string, Promise<AirlabsFlight[]>>();
 
 const CITY_BY_IATA: Record<string, string> = {};
 for (const a of airports as { iata: string; city: string }[]) {
@@ -121,25 +122,40 @@ export type FlightRow = ReturnType<typeof mapFlight>;
 const RECENT_ARR_WINDOW = 2 * 60 * 60;
 const RECENT_ARR_MAX = 50; // cap recently-landed shown, so upcoming arrivals still fit
 
-// Fetch + cache raw airlabs schedules for an arbitrary query (board / route / flight).
-// `direction` controls which timestamp drives the ordering (dep vs arr time).
-export async function fetchRaw(query: string, direction: 'departures' | 'arrivals' = 'departures'): Promise<AirlabsFlight[]> {
-  if (!AIRLABS_KEY) return [];
+// Read flight schedules for a query (board / route / flight), served from the persistent
+// store. airlabs is only contacted on the HUMAN-facing path (`opts.live`) and only while
+// under the monthly budget — SSR page renders (which crawlers trigger across 6072 airports)
+// pass live:false and NEVER spend quota, so airlabs cost is decoupled from crawl volume.
+// Falls back to stale store data, then empty. Never throws.
+export async function fetchRaw(
+  query: string,
+  direction: 'departures' | 'arrivals' = 'departures',
+  opts: { live?: boolean } = {},
+): Promise<AirlabsFlight[]> {
   const cacheKey = `${direction}:${query}`;
-  const hit = rawCache.get(cacheKey);
-  if (hit && Date.now() - hit.ts < CACHE_SECONDS * 1000) return hit.data;
-  rawCache.delete(cacheKey);
+  const fresh = getFresh(cacheKey);
+  if (fresh) return fresh;
+  if (!opts.live || !AIRLABS_KEY || !canSpend()) return getStale(cacheKey) ?? [];
+  const pending = inflight.get(cacheKey);
+  if (pending) return pending;
+  const p = doFetch(query, direction, cacheKey).finally(() => inflight.delete(cacheKey));
+  inflight.set(cacheKey, p);
+  return p;
+}
+
+async function doFetch(query: string, direction: 'departures' | 'arrivals', cacheKey: string): Promise<AirlabsFlight[]> {
   const url = `https://airlabs.co/api/v9/schedules?${query}&api_key=${AIRLABS_KEY}`;
-  // Cache the upstream response in Next's persistent Data Cache (revalidate window)
-  // instead of `no-store`. With 6072 airports rendered on-demand, a no-store fetch made
-  // EVERY crawler hit a fresh airlabs request — which burned the 100k/mo quota in ~2 days.
-  // Caching lets repeated hits to the same airport reuse the response; the client board
-  // still refreshes for humans. (in-memory rawCache above is the short fast-path.)
-  const res = await fetch(url, { next: { revalidate: 180 } });
-  if (!res.ok) throw new Error(`airlabs ${res.status}`);
-  const json = await res.json();
-  if (json.error) throw new Error(json.error.message || 'airlabs error');
-  let raw = (json.response as AirlabsFlight[] | undefined || []).filter(f => !f.cs_flight_iata);
+  let json: { response?: AirlabsFlight[]; error?: { message?: string } };
+  try {
+    const res = await fetch(url, { cache: 'no-store', signal: AbortSignal.timeout(6000) });
+    spend(); // any answered airlabs request counts against the monthly budget
+    if (!res.ok) return getStale(cacheKey) ?? [];
+    json = await res.json();
+  } catch {
+    return getStale(cacheKey) ?? []; // network/timeout — keep serving last good data
+  }
+  if (!json || json.error || !Array.isArray(json.response)) return getStale(cacheKey) ?? [];
+  let raw = (json.response as AirlabsFlight[]).filter(f => !f.cs_flight_iata);
   const now = Date.now() / 1000;
   const tsOf = (f: AirlabsFlight) => (direction === 'arrivals'
     ? (f.arr_estimated_ts || f.arr_time_ts)
@@ -166,8 +182,7 @@ export async function fetchRaw(query: string, direction: 'departures' | 'arrival
   }
 
   raw = raw.slice(0, MAX_FLIGHTS);
-  if (rawCache.size >= 3000) { const oldest = rawCache.keys().next().value; if (oldest) rawCache.delete(oldest); }
-  rawCache.set(cacheKey, { ts: Date.now(), data: raw });
+  put(cacheKey, raw);
   return raw;
 }
 
@@ -179,33 +194,35 @@ export async function fetchRaw(query: string, direction: 'departures' | 'arrival
 // content + user-facing fake data). The filter is a no-op when real data is returned.
 const norm = (s?: string) => (s || '').toUpperCase().replace(/[\s-]/g, '');
 
-export async function getBoard(iata: string, direction: 'departures' | 'arrivals', locale: string): Promise<FlightRow[]> {
+// `live` = may this call spend airlabs quota? Pages (SSR / crawler-triggered) pass false
+// (read store only). The client /api/* path passes true for human (non-bot) requests.
+export async function getBoard(iata: string, direction: 'departures' | 'arrivals', locale: string, live = false): Promise<FlightRow[]> {
   const code = iata.toUpperCase();
   const param = direction === 'departures' ? `dep_iata=${code}` : `arr_iata=${code}`;
-  const raw = await fetchRaw(param, direction);
+  const raw = await fetchRaw(param, direction, { live });
   const own = raw.filter(f => (direction === 'departures' ? f.dep_iata : f.arr_iata) === code);
   return own.map(f => mapFlight(f, direction, locale));
 }
 
-export async function getRoute(from: string, to: string, locale: string): Promise<FlightRow[]> {
+export async function getRoute(from: string, to: string, locale: string, live = false): Promise<FlightRow[]> {
   const F = from.toUpperCase(), T = to.toUpperCase();
-  const raw = await fetchRaw(`dep_iata=${F}&arr_iata=${T}`);
+  const raw = await fetchRaw(`dep_iata=${F}&arr_iata=${T}`, 'departures', { live });
   const own = raw.filter(f => f.dep_iata === F && f.arr_iata === T);
   return own.map(f => mapFlight(f, 'departures', locale));
 }
 
-export async function getFlightByNumber(flightIata: string, locale: string): Promise<FlightRow | null> {
+export async function getFlightByNumber(flightIata: string, locale: string, live = false): Promise<FlightRow | null> {
   const code = norm(flightIata);
-  const raw = await fetchRaw(`flight_iata=${flightIata}`);
+  const raw = await fetchRaw(`flight_iata=${flightIata}`, 'departures', { live });
   const match = raw.filter(f => norm(f.flight_iata) === code);
   if (!match.length) return null;
   // pick the soonest upcoming (or most recent) instance
   return mapFlight(match[0], 'departures', locale);
 }
 
-export async function getAirlineFlights(iata: string, locale: string): Promise<FlightRow[]> {
+export async function getAirlineFlights(iata: string, locale: string, live = false): Promise<FlightRow[]> {
   const code = iata.toUpperCase();
-  const raw = await fetchRaw(`airline_iata=${code}`);
+  const raw = await fetchRaw(`airline_iata=${code}`, 'departures', { live });
   const own = raw.filter(f => (f.airline_iata || '').toUpperCase() === code);
   return own.map(f => mapFlight(f, 'departures', locale));
 }
@@ -219,4 +236,25 @@ export function getAirlines(): { code: string; name: string }[] {
   return Object.entries(AIRLINE)
     .filter(([k]) => /^[A-Z0-9]{2}$/.test(k))
     .map(([code, name]) => ({ code, name }));
+}
+
+// Hubs kept warm by the background refresher (instrumentation.ts) so their boards have
+// fresh live data without a per-render airlabs call. Bounded + budget-checked:
+// ~WARM_AIRPORTS × 2 directions × (24h / WARM_INTERVAL_MIN) requests/day.
+const WARM_HUBS = [
+  'JFK','LHR','CDG','DXB','SVO','DME','VKO','LED','SIN','HND','NRT','LAX','SFO','ORD','ATL','DFW','DEN','MIA','BOS','SEA',
+  'FRA','AMS','IST','SAW','ICN','PEK','PVG','CAN','HKG','BKK','KUL','DEL','BOM','MAD','BCN','FCO','MUC','ZRH','VIE','CPH',
+  'OSL','ARN','HEL','WAW','LIS','ATH','SVX','OVB','AER','KZN','KRR','ROV','UFA','GOJ','MRV','YYZ','YVR','GRU','GIG','MEX','SYD',
+];
+
+/** Refresh the top hubs into the store (bounded, budget-checked). Called on a timer. */
+export async function warmHubs(): Promise<void> {
+  if (!AIRLABS_KEY) return;
+  const n = Number(process.env.WARM_AIRPORTS) || WARM_HUBS.length;
+  for (const iata of WARM_HUBS.slice(0, n)) {
+    if (!canSpend()) break;
+    try { await fetchRaw(`dep_iata=${iata}`, 'departures', { live: true }); } catch { /* ignore */ }
+    try { await fetchRaw(`arr_iata=${iata}`, 'arrivals', { live: true }); } catch { /* ignore */ }
+    await new Promise(r => setTimeout(r, 250)); // gentle stagger
+  }
 }
