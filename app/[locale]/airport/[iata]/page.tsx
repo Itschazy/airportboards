@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import { getTranslations , setRequestLocale } from 'next-intl/server';
 import { notFound, permanentRedirect } from 'next/navigation';
-import { getAirport, getStaticIataCodes } from '@/lib/airports';
+import { getAirport, getStaticIataCodes, getCountries, getCities } from '@/lib/airports';
 import { getAirportContent } from '@/lib/airport-content';
 import { getAirportName } from '@/lib/airport-names';
 import { getCityName, getCountryName } from '@/lib/places';
@@ -72,7 +72,6 @@ export default async function AirportPage({ params }: Props) {
   const name = getAirportName(airport.iata, locale, airport.name);
   const city = getCityName(airport.city, locale);
   const country = getCountryName(airport.country, locale);
-  const h1 = t('main_title', { airport: name, iata: airport.iata, city, country });
   const webDesc = t('main_description', { airport: name, iata: airport.iata, city, country });
 
   const jsonLd = [
@@ -98,10 +97,18 @@ export default async function AirportPage({ params }: Props) {
     {
       '@context': 'https://schema.org',
       '@type': 'BreadcrumbList',
-      itemListElement: [
-        { '@type': 'ListItem', position: 1, name: tNav('home'), item: `${BASE}/${locale}` },
-        { '@type': 'ListItem', position: 2, name: `${name} (${airport.iata})`, item: canonical },
-      ],
+      // Deep trail Home → Country → City (only if the city has >1 airport, i.e. an
+      // indexed city page exists) → Airport. Richer breadcrumbs earn the trail in the
+      // SERP snippet and spread internal link context.
+      itemListElement: (() => {
+        const countryInfo = getCountries().find(c => c.country === airport.country);
+        const cityInfo = getCities().find(c => c.city === airport.city && c.country === airport.country);
+        const trail: { name: string; item: string }[] = [{ name: tNav('home'), item: `${BASE}/${locale}` }];
+        if (countryInfo) trail.push({ name: country, item: `${BASE}/${locale}/airports/${countryInfo.slug}` });
+        if (cityInfo && cityInfo.count > 1) trail.push({ name: city, item: `${BASE}/${locale}/city/${cityInfo.slug}` });
+        trail.push({ name: `${name} (${airport.iata})`, item: canonical });
+        return trail.map((c, i) => ({ '@type': 'ListItem', position: i + 1, name: c.name, item: c.item }));
+      })(),
     },
     {
       '@context': 'https://schema.org',
@@ -118,12 +125,7 @@ export default async function AirportPage({ params }: Props) {
       {jsonLd.map((schema, i) => (
         <script key={i} type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
       ))}
-      <h1 style={{
-        position: 'absolute', width: 1, height: 1, padding: 0, margin: -1,
-        overflow: 'hidden', clip: 'rect(0,0,0,0)', whiteSpace: 'nowrap', border: 0,
-      }}>
-        {h1}
-      </h1>
+      {/* The visible <h1> now lives in FlightBoard's airport header (single semantic h1). */}
       <FlightBoard airport={airport} locale={locale} displayName={name} initialFlights={initialFlights} />
       <AirportBottom airport={airport} locale={locale} about={about} displayName={name} flights={initialFlights} />
     </>

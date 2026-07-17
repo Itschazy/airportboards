@@ -1,9 +1,9 @@
 import type { Metadata } from 'next';
 import { getTranslations , setRequestLocale } from 'next-intl/server';
 import { notFound, permanentRedirect } from 'next/navigation';
-import { getAirport, getStaticIataCodes } from '@/lib/airports';
+import { getAirport, getStaticIataCodes, getCountries, getCities } from '@/lib/airports';
 import { getAirportName } from '@/lib/airport-names';
-import { getCityName } from '@/lib/places';
+import { getCityName, getCountryName } from '@/lib/places';
 import { getBoard } from '@/lib/flights';
 import { FlightBoard } from '@/components/FlightBoard';
 import { locales } from '@/lib/i18n';
@@ -67,6 +67,7 @@ export default async function DeparturesPage({ params }: Props) {
   const tNav = await getTranslations({ locale, namespace: 'nav' });
   const name = getAirportName(airport.iata, locale, airport.name);
   const city = getCityName(airport.city, locale);
+  const country = getCountryName(airport.country, locale);
   const h1 = t('departures_title', { airport: name, iata: airport.iata, city });
   const desc = t('departures_description', { airport: name, iata: airport.iata, city });
 
@@ -74,11 +75,17 @@ export default async function DeparturesPage({ params }: Props) {
     {
       '@context': 'https://schema.org',
       '@type': 'BreadcrumbList',
-      itemListElement: [
-        { '@type': 'ListItem', position: 1, name: tNav('home'), item: `${BASE}/${locale}` },
-        { '@type': 'ListItem', position: 2, name: `${name} (${airport.iata})`, item: `${BASE}/${locale}/airport/${airport.iata}` },
-        { '@type': 'ListItem', position: 3, name: tNav('departures'), item: canonical },
-      ],
+      // Home → Country → City (if it has an indexed page) → Airport → Departures.
+      itemListElement: (() => {
+        const countryInfo = getCountries().find(c => c.country === airport.country);
+        const cityInfo = getCities().find(c => c.city === airport.city && c.country === airport.country);
+        const trail: { name: string; item: string }[] = [{ name: tNav('home'), item: `${BASE}/${locale}` }];
+        if (countryInfo) trail.push({ name: country, item: `${BASE}/${locale}/airports/${countryInfo.slug}` });
+        if (cityInfo && cityInfo.count > 1) trail.push({ name: city, item: `${BASE}/${locale}/city/${cityInfo.slug}` });
+        trail.push({ name: `${name} (${airport.iata})`, item: `${BASE}/${locale}/airport/${airport.iata}` });
+        trail.push({ name: tNav('departures'), item: canonical });
+        return trail.map((c, i) => ({ '@type': 'ListItem', position: i + 1, name: c.name, item: c.item }));
+      })(),
     },
     {
       '@context': 'https://schema.org',
@@ -95,12 +102,7 @@ export default async function DeparturesPage({ params }: Props) {
       {jsonLd.map((schema, i) => (
         <script key={i} type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
       ))}
-      <h1 style={{
-        position: 'absolute', width: 1, height: 1, padding: 0, margin: -1,
-        overflow: 'hidden', clip: 'rect(0,0,0,0)', whiteSpace: 'nowrap', border: 0,
-      }}>
-        {h1}
-      </h1>
+      {/* The visible <h1> now lives in FlightBoard's airport header (single semantic h1). */}
       <FlightBoard airport={airport} locale={locale} defaultMode="departures" displayName={getAirportName(airport.iata, locale, airport.name)} initialFlights={initialFlights} />
     </>
   );

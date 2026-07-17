@@ -21,6 +21,14 @@ function parsePair(pair: string): { from: string; to: string } | null {
   return { from: m[1], to: m[2] };
 }
 
+// Build the canonical /flight/{code} URL from a board's display flight number
+// ("SU 1404"), matching the flight route's normalize() so the link never redirects.
+// Returns null for unlinkable rows ("—", codeshare junk) so we render plain text.
+function flightHref(locale: string, flight: string): string | null {
+  const c = flight.toUpperCase().replace(/[\s-]/g, '');
+  return /^[A-Z0-9]{2,3}\d{1,4}$/.test(c) ? `/${locale}/flight/${c}` : null;
+}
+
 const STATUS_COLOR: Record<string, string> = {
   ontime: '#8A8A8A', scheduled: '#8A8A8A', boarding: '#0A84FF', finalcall: '#FF453A',
   delayed: '#FF9F0A', departed: '#48484A', baggage: '#0A84FF', arrived: '#48484A', cancelled: '#FF453A',
@@ -111,16 +119,23 @@ export default async function RoutePage({ params }: Props) {
         <div style={{ fontSize: 15, color: '#8A8A8A', padding: '24px 0' }}>{t('route_none')}</div>
       ) : (
         <ul style={{ listStyle: 'none', margin: 0, padding: 0, display: 'flex', flexDirection: 'column', gap: 8 }}>
-          {flights.map((f, i) => (
+          {flights.map((f, i) => {
+            // Link the flight number to its own page — this is the only crawlable path
+            // to /flight/{code}, which was otherwise orphaned (board rows open a sheet).
+            const href = flightHref(locale, f.flight);
+            return (
             <li key={i} style={{ display: 'flex', alignItems: 'center', gap: 14, background: '#0B0B0B', border: '1px solid #1A1A1A', borderRadius: 14, padding: '14px 16px', overflow: 'hidden' }}>
               <span style={{ width: 4, alignSelf: 'stretch', background: STATUS_COLOR[f.status] || '#48484A', borderRadius: 2, flexShrink: 0 }} />
               <span style={{ fontSize: 22, fontWeight: 700, color: f.actual ? '#FF9F0A' : '#FFFFFF', fontVariantNumeric: 'tabular-nums', width: 64, flexShrink: 0 }}>{f.actual || f.scheduled}</span>
               <span style={{ flex: 1, minWidth: 0 }}>
                 <span style={{ display: 'block', fontSize: 15, color: '#E4E4E7', fontWeight: 600 }}>{f.airline}</span>
-                <span style={{ display: 'block', fontSize: 12, color: '#6A6A6A', marginTop: 2 }}>{f.flight}</span>
+                {href
+                  ? <Link href={href} style={{ display: 'block', fontSize: 12, color: '#0A84FF', marginTop: 2, textDecoration: 'none' }}>{f.flight}</Link>
+                  : <span style={{ display: 'block', fontSize: 12, color: '#6A6A6A', marginTop: 2 }}>{f.flight}</span>}
               </span>
             </li>
-          ))}
+            );
+          })}
         </ul>
       )}
 

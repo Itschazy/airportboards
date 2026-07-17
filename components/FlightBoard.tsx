@@ -510,7 +510,10 @@ export function FlightBoard({ airport, locale, defaultMode = 'departures', displ
       {/* ── Airport header ─────────────────────────────────── */}
       <div style={{ padding: '16px 20px 10px', maxWidth: 960, margin: '0 auto' }}>
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start' }}>
-          <div>
+          {/* The airport identity is the page's single visible <h1> (replaces the old
+              sr-only h1 on the airport/arrivals/departures pages). Styling lives on the
+              inner divs, so the heading looks identical — it's just now semantic. */}
+          <h1 style={{ margin: 0 }}>
             <div style={{
               fontSize: 'clamp(60px, 17vw, 76px)',
               fontWeight: 800,
@@ -523,7 +526,7 @@ export function FlightBoard({ airport, locale, defaultMode = 'departures', displ
             <div style={{ fontSize: 12, color: C.secondary, marginTop: 7, lineHeight: 1.4, maxWidth: 200, opacity: 0.5 }}>
               {displayName || airport.name}
             </div>
-          </div>
+          </h1>
           <div style={{ textAlign: 'right', paddingTop: 4 }}>
             <div style={{
               fontSize: 'clamp(18px, 4.5vw, 22px)',
