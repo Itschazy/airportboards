@@ -126,7 +126,9 @@ export default async function AirportPage({ params }: Props) {
         <script key={i} type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
       ))}
       {/* The visible <h1> now lives in FlightBoard's airport header (single semantic h1). */}
-      <FlightBoard airport={airport} locale={locale} displayName={name} initialFlights={initialFlights} />
+      {/* SSR only the first 40 rows to keep the HTML light (the client refetches the full
+          board on mount); AirportBottom still gets the full set to aggregate routes/airlines. */}
+      <FlightBoard airport={airport} locale={locale} displayName={name} initialFlights={initialFlights.slice(0, 40)} />
       <AirportBottom airport={airport} locale={locale} about={about} displayName={name} flights={initialFlights} />
     </>
   );
