@@ -278,16 +278,29 @@ export interface CityInfo { city: string; country: string; iso2: string; slug: s
 let CITIES: CityInfo[] | null = null;
 export function getCities(): CityInfo[] {
   if (!CITIES) {
-    const m = new Map<string, CityInfo>();
+    // Group by city slug, then keep ONE country per slug — the dominant one (biggest
+    // hub weight, then most airports). Same-named cities across countries (Athens US
+    // vs Athens GR, Barcelona VE vs ES, Naples US vs IT) previously merged into a
+    // single mixed-country page listing both; now the page belongs to the dominant
+    // city and the minor namesakes simply have no city page (their single airports
+    // are still fully reachable via country/A–Z).
+    const bySlug = new Map<string, Map<string, { city: string; country: string; iso2: string; count: number; weight: number }>>();
     for (const a of airports) {
       if (!a.city) continue;
       const slug = slugify(a.city);
       if (!slug) continue;
-      const e = m.get(slug) || { city: a.city, country: a.country, iso2: a.iso2, slug, count: 0 };
+      const countries = bySlug.get(slug) || new Map();
+      const e = countries.get(a.country) || { city: a.city, country: a.country, iso2: a.iso2, count: 0, weight: 0 };
       e.count++;
-      m.set(slug, e);
+      e.weight = Math.max(e.weight, HUB_WEIGHT.get(a.iata) ?? 0);
+      countries.set(a.country, e);
+      bySlug.set(slug, countries);
     }
-    CITIES = [...m.values()].sort((x, y) => y.count - x.count);
+    CITIES = [...bySlug.values()].map(countries => {
+      const dom = [...countries.values()].sort((x, y) => y.weight - x.weight || y.count - x.count)[0];
+      const slug = slugify(dom.city);
+      return { city: dom.city, country: dom.country, iso2: dom.iso2, slug, count: dom.count };
+    }).sort((x, y) => y.count - x.count);
   }
   return CITIES;
 }
@@ -295,8 +308,11 @@ export function getCityBySlug(slug: string): CityInfo | undefined {
   return getCities().find(c => c.slug === slug);
 }
 export function getAirportsByCity(slug: string): Airport[] {
+  // Restrict to the slug's dominant country (see getCities) so same-named cities in
+  // other countries don't leak onto the page (Athens page = Greek airports only).
+  const info = getCityBySlug(slug);
   return airports
-    .filter(a => a.city && slugify(a.city) === slug)
+    .filter(a => a.city && slugify(a.city) === slug && (!info || a.country === info.country))
     .sort((a, b) => (HUB_WEIGHT.get(b.iata) ?? 0) - (HUB_WEIGHT.get(a.iata) ?? 0) || a.name.localeCompare(b.name));
 }
 
