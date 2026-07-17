@@ -40,7 +40,7 @@
     "arrivals_title": "{airport}到达航班动态 ({iata})｜实时进港",
     "departures_title": "{airport}出发航班动态 ({iata})｜实时离港",
     "arrivals_description": "查看{airport}今日到达航班动态：实时进港、出发衔接、延误、取消、航站楼和行李信息，按{iata}机场更新。",
-    "departures_description": "查看{airport}今日出发航班动态：实时离港、到达衔接、延误、取消、值机柜台、航站楼和登机口。"
+    "departures_description": "查看{airport}今日出发航班动态：实时离港、到达衔接、延误、取消、值机柜台、航站楼和登机口，按{iata}机场更新。"
   },
   "airport_info": {
     "location": "位置",
@@ -100,7 +100,7 @@
     "footer_cities": "热门城市",
     "city_title": "{city} 机场",
     "city_desc": "{city} 的所有机场（{count}）：实时到达与出发、航班状态，每分钟更新。",
-    "route_title": "{from} → {to} 航班｜今日时刻表",
+    "route_title": "{from} ({iata1}) → {to} ({iata2}) 航班｜今日时刻表",
     "route_desc": "{from} ({iata1}) → {to} ({iata2}) 航班：时刻表、航空公司、实时状态，分钟级更新。",
     "route_h1": "{from} ({iata1}) → {to} ({iata2}) 航班",
     "route_flights_today": "今日航班",

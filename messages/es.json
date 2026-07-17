@@ -36,11 +36,11 @@
   },
   "meta": {
     "main_title": "{airport} ({iata}) panel de vuelos en vivo",
-    "main_description": "Panel de vuelos de {airport} hoy: llegadas y salidas en tiempo real, horarios, retrasos, cancelaciones y puertas actualizadas.",
+    "main_description": "Panel de vuelos de {airport} ({iata}) hoy: llegadas y salidas en tiempo real, horarios, retrasos, cancelaciones y puertas actualizadas.",
     "arrivals_title": "{airport} llegadas ({iata}) | panel de vuelos",
     "departures_title": "{airport} salidas ({iata}) | panel de vuelos",
-    "arrivals_description": "Panel de llegadas del aeropuerto {airport} hoy en tiempo real: horarios, retrasos y cancelaciones. Consulta también salidas.",
-    "departures_description": "Panel de salidas del aeropuerto {airport} hoy en tiempo real: horarios, retrasos, cancelaciones y puertas. Consulta también llegadas."
+    "arrivals_description": "Panel de llegadas del aeropuerto {airport} ({iata}) hoy en tiempo real: horarios, retrasos y cancelaciones. Consulta también salidas.",
+    "departures_description": "Panel de salidas del aeropuerto {airport} ({iata}) hoy en tiempo real: horarios, retrasos, cancelaciones y puertas. Consulta también llegadas."
   },
   "airport_info": {
     "location": "Ubicación",
@@ -100,7 +100,7 @@
     "footer_cities": "Ciudades populares",
     "city_title": "Aeropuertos en {city}",
     "city_desc": "Todos los aeropuertos en {city} ({count}): llegadas y salidas en vivo, estado de vuelos, actualizado cada minuto.",
-    "route_title": "Vuelos {from} — {to}: horario de hoy",
+    "route_title": "Vuelos {from} ({iata1}) — {to} ({iata2}): horario de hoy",
     "route_desc": "Vuelos {from} ({iata1}) → {to} ({iata2}): horarios, aerolíneas, estado en vivo, actualizado cada minuto.",
     "route_h1": "{from} ({iata1}) → {to} ({iata2})",
     "route_flights_today": "Vuelos hoy",

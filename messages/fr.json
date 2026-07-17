@@ -100,7 +100,7 @@
     "footer_cities": "Villes populaires",
     "city_title": "Aéroports de {city}",
     "city_desc": "Tous les aéroports de {city} ({count}) : arrivées & départs en direct, statut des vols, mis à jour chaque minute.",
-    "route_title": "Vols {from} — {to} : horaires du jour",
+    "route_title": "Vols {from} ({iata1}) — {to} ({iata2}) : horaires du jour",
     "route_desc": "Vols {from} ({iata1}) → {to} ({iata2}): horaires, compagnies, statut en direct, mise à jour chaque minute.",
     "route_h1": "{from} ({iata1}) → {to} ({iata2})",
     "route_flights_today": "Vols aujourd'hui",

@@ -35,7 +35,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!a || !b) return {};
   const t = await getTranslations({ locale, namespace: 'home' });
   const from = getCityName(a.city, locale), to = getCityName(b.city, locale);
-  const title = t('route_title', { from, to });
+  const title = t('route_title', { from, to, iata1: p.from, iata2: p.to });
   const slug = `${p.from}-${p.to}`;
   // Only index a route that actually has flights — avoids soft-404s on the huge
   // pair space. Shared fetch is cache-deduped with the page render.

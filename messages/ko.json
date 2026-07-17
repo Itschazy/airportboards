@@ -36,11 +36,11 @@
   },
   "meta": {
     "main_title": "{airport} 운항정보 ({iata}) | 실시간 도착·출발",
-    "main_description": "{airport} 공항 오늘 항공편 운항정보를 실시간 확인하세요. 도착·출발 시간, 지연, 결항, 게이트 정보를 제공합니다.",
+    "main_description": "{airport}({iata}) 공항 오늘 항공편 운항정보를 실시간 확인하세요. 도착·출발 시간, 지연, 결항, 게이트 정보를 제공합니다.",
     "arrivals_title": "{airport} 도착 운항정보 ({iata}) | 실시간 도착",
     "departures_title": "{airport} 출발 운항정보 ({iata}) | 실시간 출발",
-    "arrivals_description": "{airport} 공항 오늘 도착 운항정보를 실시간 확인하세요. 도착 항공편, 출발 연결편, 지연·결항, 게이트 정보를 제공합니다.",
-    "departures_description": "{airport} 공항 오늘 출발 운항정보를 실시간 확인하세요. 출발 항공편, 도착 연결편, 지연·결항, 게이트 정보를 제공합니다."
+    "arrivals_description": "{airport}({iata}) 공항 오늘 도착 운항정보를 실시간 확인하세요. 도착 항공편, 출발 연결편, 지연·결항, 게이트 정보를 제공합니다.",
+    "departures_description": "{airport}({iata}) 공항 오늘 출발 운항정보를 실시간 확인하세요. 출발 항공편, 도착 연결편, 지연·결항, 게이트 정보를 제공합니다."
   },
   "airport_info": {
     "location": "위치",
@@ -100,7 +100,7 @@
     "footer_cities": "인기 도시",
     "city_title": "{city}의 공항",
     "city_desc": "{city}의 모든 공항 ({count}): 도착·출발 실시간 정보, 항공편 상태, 1분마다 업데이트.",
-    "route_title": "{from} — {to} 항공편 | 오늘 시간표",
+    "route_title": "{from} ({iata1}) — {to} ({iata2}) 항공편 | 오늘 시간표",
     "route_desc": "{from} ({iata1}) → {to} ({iata2}): 운항 일정, 항공사, 실시간 상태. 정보는 매분 업데이트됩니다.",
     "route_h1": "{from} ({iata1}) → {to} ({iata2}) 항공편",
     "route_flights_today": "오늘 항공편",

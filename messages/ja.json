@@ -36,11 +36,11 @@
   },
   "meta": {
     "main_title": "{airport} 発着案内 ({iata})｜フライト情報",
-    "main_description": "{airport}の本日の発着案内。到着便・出発便の運航状況をリアルタイムで確認できます。",
+    "main_description": "{airport}（{iata}）の本日の発着案内。到着便・出発便の運航状況をリアルタイムで確認できます。",
     "arrivals_title": "{airport} 発着案内・到着便 ({iata})",
     "departures_title": "{airport} 発着案内・出発便 ({iata})",
-    "arrivals_description": "{airport}の本日の到着便案内。到着・出発の運航状況をリアルタイムで確認できます。",
-    "departures_description": "{airport}の本日の出発便案内。出発・到着の運航状況をリアルタイムで確認できます。"
+    "arrivals_description": "{airport}（{iata}）の本日の到着便案内。到着・出発の運航状況をリアルタイムで確認できます。",
+    "departures_description": "{airport}（{iata}）の本日の出発便案内。出発・到着の運航状況をリアルタイムで確認できます。"
   },
   "airport_info": {
     "location": "所在地",
@@ -100,7 +100,7 @@
     "footer_cities": "人気の都市",
     "city_title": "{city} の空港",
     "city_desc": "{city} の全{count}空港：到着・出発のライブ、運航状況（1分ごとに更新）.",
-    "route_title": "{from} — {to} 発着便｜本日の時刻表",
+    "route_title": "{from} ({iata1}) — {to} ({iata2}) 発着便｜本日の時刻表",
     "route_desc": "{from} ({iata1}) → {to} ({iata2}): 時刻表、運航会社、リアルタイム運航状況。毎分更新。",
     "route_h1": "{from} ({iata1}) → {to} ({iata2})",
     "route_flights_today": "本日の便",
