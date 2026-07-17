@@ -40,6 +40,9 @@ export default function sitemap({ id }: { id: number | string }): MetadataRoute.
   if (sid === 0) {
     entries.push(entry('', 'daily', 0.8));               // home
     entries.push(entry('/airports', 'weekly', 0.7));     // countries index
+    // Legal / info pages — low priority but crawlable (AdSense reviewers & Googlebot
+    // must be able to reach the Privacy Policy et al.).
+    for (const p of ['/privacy', '/terms', '/about', '/contact']) entries.push(entry(p, 'yearly', 0.3));
     for (const L of LETTERS) entries.push(entry(`/az/${L}`, 'weekly', 0.4));
     for (const c of getCountries()) entries.push(entry(`/airports/${c.slug}`, 'weekly', 0.6));
     for (const c of getCities()) if (c.count > 1) entries.push(entry(`/city/${c.slug}`, 'weekly', 0.6));

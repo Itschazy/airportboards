@@ -1,0 +1,80 @@
+{
+  "en": {
+    "title": "About airportsboard.live",
+    "intro": [
+      "airportsboard.live is a free service that shows live flight boards — arrivals and departures — for more than 6,000 airports around the world, available in 12 languages. There is nothing to install and no account to create: open the board for the airport you care about and read it the way you would read the screens in a terminal.",
+      "Our goal is simple: give travelers and the people waiting for them a fast, clean, up-to-date view of what is landing and taking off, wherever they are."
+    ],
+    "sections": [
+      {
+        "heading": "What you can do here",
+        "body": [
+          "- Look up any of 6,000+ airports worldwide and see its current arrivals and departures.",
+          "- Check flight status, scheduled and estimated times, and gate or terminal details where available.",
+          "- Read the boards in 12 languages, so the information is clear whether you are at home or abroad.",
+          "Boards refresh frequently throughout the day so the picture stays close to real time."
+        ]
+      },
+      {
+        "heading": "Who it is for",
+        "body": [
+          "airportsboard.live is built for anyone who needs to know what is happening at an airport right now: travelers tracking their own flight, friends and family driving to meet an arrival, and people who simply want to confirm a departure before leaving for the airport.",
+          "If you have ever refreshed an airline app in the parking lot wondering whether a flight has landed, this site is meant for you."
+        ]
+      },
+      {
+        "heading": "How it works",
+        "body": [
+          "We aggregate flight information from third-party flight-data providers and present it in a single, consistent board for each airport. That data is collected, formatted, and displayed automatically.",
+          "Because the information comes from external sources, it can occasionally be delayed, incomplete, or inaccurate. Please always verify critical details — final gate, boarding time, and any schedule change — directly with your airline or the official airport before you travel. airportsboard.live is an information tool, not an official source, and should not be your only reference for time-sensitive decisions."
+        ]
+      },
+      {
+        "heading": "An honest note about who runs this",
+        "body": [
+          "airportsboard.live is an independent project run by a single person — a solo operator, not a company or a large team. It grew out of a genuine interest in flight data and a wish for flight boards that are fast, free of clutter, and usable in many languages.",
+          "Being small keeps the site focused, but it also means feedback matters a great deal. If you spot something wrong or something that could be better, please get in touch through the contact page — it genuinely helps improve the service for everyone."
+        ]
+      }
+    ]
+  },
+  "ru": {
+    "title": "О проекте airportsboard.live",
+    "intro": [
+      "airportsboard.live — это бесплатный сервис, который показывает онлайн-табло рейсов — прилёты и вылеты — для более чем 6000 аэропортов по всему миру на 12 языках. Ничего не нужно устанавливать и не нужно создавать аккаунт: просто откройте табло нужного аэропорта и читайте его так же, как читали бы экраны в терминале.",
+      "Наша цель проста — дать путешественникам и тем, кто их встречает, быстрый, аккуратный и актуальный обзор того, что садится и вылетает, где бы вы ни находились."
+    ],
+    "sections": [
+      {
+        "heading": "Что здесь можно сделать",
+        "body": [
+          "- Найти любой из 6000+ аэропортов мира и увидеть его текущие прилёты и вылеты.",
+          "- Проверить статус рейса, плановое и расчётное время, а также гейт или терминал, где эти данные доступны.",
+          "- Читать табло на 12 языках, чтобы информация была понятна и дома, и за границей.",
+          "Табло обновляются в течение дня, поэтому картина остаётся близкой к реальному времени."
+        ]
+      },
+      {
+        "heading": "Для кого это",
+        "body": [
+          "airportsboard.live создан для всех, кому важно знать, что происходит в аэропорту прямо сейчас: для путешественников, следящих за своим рейсом, для друзей и близких, которые едут встречать прилёт, и для тех, кто просто хочет убедиться в вылете, прежде чем выехать в аэропорт.",
+          "Если вы когда-нибудь обновляли приложение авиакомпании на парковке, гадая, сел ли уже самолёт, — этот сайт для вас."
+        ]
+      },
+      {
+        "heading": "Как это работает",
+        "body": [
+          "Мы агрегируем информацию о рейсах от сторонних поставщиков авиационных данных и представляем её в едином, понятном табло для каждого аэропорта. Эти данные собираются, форматируются и отображаются автоматически.",
+          "Поскольку информация поступает из внешних источников, она иногда может запаздывать, быть неполной или неточной. Пожалуйста, всегда проверяйте важные детали — итоговый гейт, время посадки и любые изменения расписания — напрямую у вашей авиакомпании или на официальном ресурсе аэропорта перед поездкой. airportsboard.live — это информационный инструмент, а не официальный источник, и он не должен быть вашим единственным ориентиром при решениях, зависящих от времени."
+        ]
+      },
+      {
+        "heading": "Честно о том, кто ведёт проект",
+        "body": [
+          "airportsboard.live — это независимый проект, который ведёт один человек: соло-оператор, а не компания и не большая команда. Он вырос из искреннего интереса к данным о рейсах и желания сделать табло, которые работают быстро, без лишнего и удобны на многих языках.",
+          "Небольшой масштаб помогает сохранять фокус, но он же означает, что обратная связь очень важна. Если вы заметили ошибку или знаете, что можно улучшить, напишите нам через страницу контактов — это действительно помогает делать сервис лучше для всех."
+        ]
+      }
+    ]
+  }
+}

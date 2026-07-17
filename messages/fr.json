@@ -201,5 +201,15 @@
     "title": "Page introuvable",
     "text": "Cette page est introuvable. Recherchez un aéroport ou revenez à l’accueil.",
     "home": "Retour à l’accueil"
+  },
+  "legal": {
+    "privacy": "Politique de confidentialité",
+    "terms": "Conditions d'utilisation",
+    "about": "À propos",
+    "contact": "Contact",
+    "legal": "Mentions légales",
+    "last_updated": "Dernière mise à jour : {date}",
+    "cookie_msg": "Nous utilisons des cookies à des fins d'analyse et de publicité.",
+    "cookie_ok": "J'ai compris"
   }
 }

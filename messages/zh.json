@@ -201,5 +201,15 @@
     "title": "页面未找到",
     "text": "找不到该页面。搜索机场或返回首页。",
     "home": "返回首页"
+  },
+  "legal": {
+    "privacy": "隐私政策",
+    "terms": "使用条款",
+    "about": "关于我们",
+    "contact": "联系我们",
+    "legal": "法律信息",
+    "last_updated": "最后更新：{date}",
+    "cookie_msg": "我们使用 Cookie 进行分析和广告投放。",
+    "cookie_ok": "知道了"
   }
 }

@@ -201,5 +201,15 @@
     "title": "Pagina non trovata",
     "text": "Pagina non trovata. Cerca un aeroporto o torna alla home.",
     "home": "Torna alla home"
+  },
+  "legal": {
+    "privacy": "Informativa sulla privacy",
+    "terms": "Termini di utilizzo",
+    "about": "Chi siamo",
+    "contact": "Contatti",
+    "legal": "Note legali",
+    "last_updated": "Ultimo aggiornamento: {date}",
+    "cookie_msg": "Utilizziamo i cookie per analisi e pubblicità.",
+    "cookie_ok": "Ho capito"
   }
 }

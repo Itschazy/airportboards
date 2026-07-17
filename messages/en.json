@@ -201,5 +201,15 @@
     "title": "Page not found",
     "text": "We couldn’t find that page. Search for an airport or head back home.",
     "home": "Back to home"
+  },
+  "legal": {
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Use",
+    "about": "About",
+    "contact": "Contact",
+    "legal": "Legal",
+    "last_updated": "Last updated: {date}",
+    "cookie_msg": "We use cookies for analytics and advertising.",
+    "cookie_ok": "Got it"
   }
 }

@@ -201,5 +201,15 @@
     "title": "Seite nicht gefunden",
     "text": "Diese Seite wurde nicht gefunden. Suche nach einem Flughafen oder kehre zur Startseite zurück.",
     "home": "Zur Startseite"
+  },
+  "legal": {
+    "privacy": "Datenschutzerklärung",
+    "terms": "Nutzungsbedingungen",
+    "about": "Über uns",
+    "contact": "Kontakt",
+    "legal": "Rechtliches",
+    "last_updated": "Zuletzt aktualisiert: {date}",
+    "cookie_msg": "Wir verwenden Cookies für Analyse und Werbung.",
+    "cookie_ok": "Verstanden"
   }
 }

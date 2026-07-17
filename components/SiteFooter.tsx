@@ -13,7 +13,15 @@ const LETTERS = 'abcdefghijklmnopqrstuvwxyz'.split('');
 export async function SiteFooter({ locale }: { locale: Locale }) {
   const t = await getTranslations({ locale, namespace: 'home' });
   const tNav = await getTranslations({ locale, namespace: 'nav' });
+  const tLegal = await getTranslations({ locale, namespace: 'legal' });
   const topCountries = [...getCountries()].sort((a, b) => b.count - a.count).slice(0, 12);
+
+  const legalLinks = [
+    { href: `/${locale}/about`, label: tLegal('about') },
+    { href: `/${locale}/contact`, label: tLegal('contact') },
+    { href: `/${locale}/privacy`, label: tLegal('privacy') },
+    { href: `/${locale}/terms`, label: tLegal('terms') },
+  ];
 
   const linkStyle = { color: '#8A8A8A', textDecoration: 'none', fontSize: 13 } as const;
   const headStyle = { color: '#6A6A6A', fontSize: 11, fontWeight: 700, letterSpacing: '0.06em', textTransform: 'uppercase', margin: '0 0 10px' } as const;
@@ -45,7 +53,12 @@ export async function SiteFooter({ locale }: { locale: Locale }) {
           </ul>
         </div>
       </nav>
-      <p style={{ maxWidth: 1000, margin: '28px auto 0', textAlign: 'center', fontSize: 12, color: '#6A6A6A', lineHeight: 1.5 }}>
+      <nav aria-label={tLegal('legal')} style={{ maxWidth: 1000, margin: '28px auto 0', display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: '8px 20px' }}>
+        {legalLinks.map(l => (
+          <Link key={l.href} href={l.href} style={{ color: '#8A8A8A', textDecoration: 'none', fontSize: 13 }}>{l.label}</Link>
+        ))}
+      </nav>
+      <p style={{ maxWidth: 1000, margin: '20px auto 0', textAlign: 'center', fontSize: 12, color: '#6A6A6A', lineHeight: 1.5 }}>
         {t('data_note')}
       </p>
       <p style={{ maxWidth: 1000, margin: '10px auto 0', textAlign: 'center', fontSize: 11, color: '#5A5A5A', letterSpacing: '0.02em' }}>

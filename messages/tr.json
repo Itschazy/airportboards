@@ -201,5 +201,15 @@
     "title": "Sayfa bulunamadı",
     "text": "Bu sayfa bulunamadı. Bir havalimanı arayın veya ana sayfaya dönün.",
     "home": "Ana sayfaya dön"
+  },
+  "legal": {
+    "privacy": "Gizlilik Politikası",
+    "terms": "Kullanım Koşulları",
+    "about": "Hakkımızda",
+    "contact": "İletişim",
+    "legal": "Yasal Bilgiler",
+    "last_updated": "Son güncelleme: {date}",
+    "cookie_msg": "Analiz ve reklam için çerezler kullanıyoruz.",
+    "cookie_ok": "Anladım"
   }
 }

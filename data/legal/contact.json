@@ -1,0 +1,66 @@
+{
+  "en": {
+    "title": "Contact",
+    "intro": [
+      "airportsboard.live is run by an independent solo operator, and the best way to reach the operator is by email. Whether you have found a mistake, hit a bug, or want to discuss working together, your message is welcome.",
+      "Email: egorovartemyt@gmail.com"
+    ],
+    "sections": [
+      {
+        "heading": "What to write about",
+        "body": [
+          "- Corrections to airport or flight data: if a board shows something wrong, missing, or out of date, tell us which airport and flight so we can look into it.",
+          "- Bug reports: broken pages, display problems, wrong translations, or anything that does not work as expected.",
+          "- Advertising and partnership: proposals for advertising, affiliate cooperation, or other collaboration.",
+          "- Privacy requests: questions about the data we process, or requests related to your personal data and our privacy policy.",
+          "- DMCA and content concerns: copyright or other content issues you would like us to review."
+        ]
+      },
+      {
+        "heading": "What to expect",
+        "body": [
+          "Because airportsboard.live is run by one person, replies are informal and sent as soon as time allows rather than on a fixed schedule. Every message is read, and genuine corrections and bug reports are especially valued — they directly help improve the site.",
+          "To help us respond faster, please include the airport name or code, the specific flight or page, and, for bugs, your device and browser. The more detail you share, the quicker we can understand and act on it."
+        ]
+      },
+      {
+        "heading": "A quick reminder",
+        "body": [
+          "For urgent, time-sensitive travel questions — a final gate, a boarding time, or a last-minute schedule change — please contact your airline or the official airport directly. airportsboard.live cannot confirm or change flight details, so your airline will always be the fastest and most reliable source."
+        ]
+      }
+    ]
+  },
+  "ru": {
+    "title": "Контакты",
+    "intro": [
+      "airportsboard.live ведёт независимый соло-оператор, и самый надёжный способ связаться — по электронной почте. Нашли ошибку, столкнулись с багом или хотите обсудить сотрудничество — будем рады вашему письму.",
+      "Почта: egorovartemyt@gmail.com"
+    ],
+    "sections": [
+      {
+        "heading": "О чём можно написать",
+        "body": [
+          "- Исправления данных об аэропортах или рейсах: если на табло что-то отображается неверно, отсутствует или устарело, укажите аэропорт и рейс, чтобы мы могли разобраться.",
+          "- Сообщения об ошибках: сломанные страницы, проблемы с отображением, неверные переводы или всё, что работает не так, как ожидалось.",
+          "- Реклама и партнёрство: предложения о рекламе, партнёрских программах или другом сотрудничестве.",
+          "- Запросы по приватности: вопросы о том, какие данные мы обрабатываем, или обращения, связанные с вашими персональными данными и нашей политикой конфиденциальности.",
+          "- DMCA и вопросы по контенту: авторские права или иные вопросы по содержимому, которые вы хотели бы, чтобы мы рассмотрели."
+        ]
+      },
+      {
+        "heading": "Чего ожидать",
+        "body": [
+          "Поскольку airportsboard.live ведёт один человек, ответы носят неформальный характер и отправляются по мере возможности, а не по фиксированному графику. Каждое сообщение прочитывается, а реальные исправления и сообщения об ошибках особенно ценны — они напрямую помогают улучшать сайт.",
+          "Чтобы мы могли ответить быстрее, пожалуйста, укажите название или код аэропорта, конкретный рейс или страницу, а для ошибок — ваше устройство и браузер. Чем больше деталей, тем быстрее мы поймём проблему и займёмся ею."
+        ]
+      },
+      {
+        "heading": "Небольшое напоминание",
+        "body": [
+          "По срочным вопросам, зависящим от времени, — итоговый гейт, время посадки или изменение расписания в последнюю минуту — обращайтесь напрямую в вашу авиакомпанию или на официальный ресурс аэропорта. airportsboard.live не может подтвердить или изменить детали рейса, поэтому авиакомпания всегда будет самым быстрым и надёжным источником."
+        ]
+      }
+    ]
+  }
+}

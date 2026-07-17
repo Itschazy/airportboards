@@ -6,6 +6,9 @@ import { locales, rtlLocales, type Locale } from '@/lib/i18n';
 import { SiteHeader } from '@/components/SiteHeader';
 import { SiteFooter } from '@/components/SiteFooter';
 import { YandexMetrica } from '@/components/YandexMetrica';
+import { AdSense } from '@/components/AdSense';
+import { CookieNotice } from '@/components/CookieNotice';
+import { adsenseClient } from '@/lib/adsense';
 import '../globals.css';
 
 // viewportFit:'cover' activates the env(safe-area-inset-*) padding used across the board
@@ -26,6 +29,9 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   return {
     metadataBase: new URL('https://airportsboard.live'),
     verification: { yandex: 'ea6daa0845815656' },
+    // AdSense site-verification meta tag (Google reads <meta name="google-adsense-account">
+    // in <head>). Emitted only when the publisher id is configured.
+    ...(adsenseClient ? { other: { 'google-adsense-account': adsenseClient } } : {}),
     // Site-wide social defaults — every page inherits these (og:image/twitter:image come
     // automatically from app/opengraph-image.tsx); child pages add their own title/desc.
     openGraph: {
@@ -58,10 +64,12 @@ export default async function LocaleLayout({
     <html lang={locale} dir={dir} className="h-full antialiased">
       <body className="min-h-full flex flex-col">
         <YandexMetrica />
+        <AdSense />
         <NextIntlClientProvider messages={messages}>
           <SiteHeader locale={locale as Locale} />
           <main style={{ flex: '1 0 auto', width: '100%' }}>{children}</main>
           <SiteFooter locale={locale as Locale} />
+          <CookieNotice locale={locale as Locale} />
         </NextIntlClientProvider>
       </body>
     </html>
