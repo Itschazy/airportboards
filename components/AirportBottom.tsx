@@ -6,9 +6,28 @@ import { getCityName, getCountryName } from '@/lib/places';
 import { getAirportName } from '@/lib/airport-names';
 import type { FlightRow } from '@/lib/flights';
 import { MoreInfo, OverviewMetrics, AboutCard, Faq } from '@/components/AirportExtras';
+import { getAirportContentExtended } from '@/lib/airport-content-extended';
 
 const LETTERS = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('');
 const SUB = '#8A8A8A';
+
+// Section labels for the extended content (transport/terminals/tips). Kept as a small
+// local map rather than message keys so the feature is self-contained (labels + reader
+// + render live together) and doesn't touch the shared messages/*.json.
+const EXT_LABELS: Record<string, { transport: string; terminals: string; tips: string }> = {
+  en: { transport: 'Getting to & from the airport', terminals: 'Terminals', tips: 'Passenger tips' },
+  ru: { transport: 'Как добраться до аэропорта', terminals: 'Терминалы', tips: 'Советы пассажирам' },
+  zh: { transport: '机场交通', terminals: '航站楼', tips: '旅客提示' },
+  ar: { transport: 'الوصول إلى المطار', terminals: 'صالات المطار', tips: 'نصائح للمسافرين' },
+  de: { transport: 'Anreise zum Flughafen', terminals: 'Terminals', tips: 'Tipps für Reisende' },
+  ko: { transport: '공항 오시는 길', terminals: '터미널', tips: '여행 팁' },
+  ja: { transport: '空港へのアクセス', terminals: 'ターミナル', tips: '旅行のヒント' },
+  fr: { transport: 'Accès à l’aéroport', terminals: 'Terminaux', tips: 'Conseils voyageurs' },
+  es: { transport: 'Cómo llegar al aeropuerto', terminals: 'Terminales', tips: 'Consejos para pasajeros' },
+  it: { transport: 'Come arrivare in aeroporto', terminals: 'Terminal', tips: 'Consigli per i passeggeri' },
+  hi: { transport: 'एयरपोर्ट कैसे पहुँचें', terminals: 'टर्मिनल', tips: 'यात्री सुझाव' },
+  tr: { transport: 'Havalimanına ulaşım', terminals: 'Terminaller', tips: 'Yolcu ipuçları' },
+};
 
 function gmtOffset(tz?: string): string {
   if (!tz) return '';
@@ -27,6 +46,8 @@ export async function AirportBottom({ airport, locale, about, displayName, fligh
   const name = displayName || airport.name;
   const city = getCityName(airport.city, locale);
   const country = getCountryName(airport.country, locale);
+  const ext = getAirportContentExtended(airport.iata, locale);
+  const extLabels = EXT_LABELS[locale] || EXT_LABELS.en;
 
   const nearby = nearestAirports(airport.lat, airport.lon, 7).filter(a => a.iata !== airport.iata).slice(0, 5);
   const countryInfo = getCountries().find(c => c.country === airport.country);
@@ -156,6 +177,27 @@ export async function AirportBottom({ airport, locale, about, displayName, fligh
             <section style={sec}>
               <H2>{t('about_title', { iata: airport.iata })}</H2>
               <AboutCard text={about} readMore={t('read_more')} />
+            </section>
+          )}
+
+          {/* 6b. AIRPORT GUIDE — transport / terminals / tips (top hubs only; renders
+              nothing when there's no extended content file for this airport). */}
+          {ext?.transport && (
+            <section style={sec}>
+              <H2>{extLabels.transport}</H2>
+              <div style={{ background: '#0B0B0B', border: '1px solid #1A1A1A', borderRadius: 16, padding: '16px 18px', fontSize: 15, lineHeight: 1.6, color: '#B4B4B4' }}>{ext.transport}</div>
+            </section>
+          )}
+          {ext?.terminals && (
+            <section style={sec}>
+              <H2>{extLabels.terminals}</H2>
+              <div style={{ background: '#0B0B0B', border: '1px solid #1A1A1A', borderRadius: 16, padding: '16px 18px', fontSize: 15, lineHeight: 1.6, color: '#B4B4B4' }}>{ext.terminals}</div>
+            </section>
+          )}
+          {ext?.tips && (
+            <section style={sec}>
+              <H2>{extLabels.tips}</H2>
+              <div style={{ background: '#0B0B0B', border: '1px solid #1A1A1A', borderRadius: 16, padding: '16px 18px', fontSize: 15, lineHeight: 1.6, color: '#B4B4B4' }}>{ext.tips}</div>
             </section>
           )}
 
