@@ -30,6 +30,13 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const description = t('departures_description', { airport: getAirportName(airport.iata, locale, airport.name), iata: airport.iata, city: getCityName(airport.city, locale) });
   const canonical = `${BASE}/${locale}/airport/${airport.iata}/departures`;
 
+  // Only index a departures board that actually has flights. Thousands of small airfields
+  // otherwise ship near-identical "No flights" subpages (×12 locales) that dilute crawl
+  // budget and get mass-excluded, dragging host trust down. getBoard reads the in-memory
+  // store (live=false → never spends airlabs) — same read the page body does.
+  let hasFlights = false;
+  try { hasFlights = (await getBoard(airport.iata, 'departures', locale)).length > 0; } catch {}
+
   const languages: Record<string, string> = {};
   for (const loc of locales) {
     languages[loc] = `${BASE}/${loc}/airport/${airport.iata}/departures`;
@@ -39,9 +46,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return {
     title,
     description,
-    alternates: { canonical, languages },
+    // Advertise the 12-language hreflang cluster only when the page is indexable.
+    alternates: hasFlights ? { canonical, languages } : { canonical },
     // og/twitter (incl. default OG image) inherited from layout; custom openGraph would drop it.
-    robots: { index: true, follow: true },
+    robots: { index: hasFlights, follow: true },
   };
 }
 

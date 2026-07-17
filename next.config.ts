@@ -4,6 +4,8 @@ import createNextIntlPlugin from 'next-intl/plugin';
 const withNextIntl = createNextIntlPlugin('./i18n/request.ts');
 
 const nextConfig: NextConfig = {
+  // Drop the `X-Powered-By: Next.js` header — leaks the stack, no benefit.
+  poweredByHeader: false,
   // Force blocking (non-streaming) metadata for EVERY user-agent. Next 15 streams
   // <head> metadata into the <body> for non-bot UAs (and even the main Googlebot,
   // which it trusts to hoist via JS). On a cache-miss/dynamic render of our SSR

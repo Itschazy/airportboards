@@ -6,7 +6,6 @@ const BASE = 'https://airportsboard.live';
 const LETTERS = 'abcdefghijklmnopqrstuvwxyz'.split('');
 // Major hubs get higher priority than obscure airfields (priority is relative).
 const HUBS = new Set(getStaticIataCodes());
-const NOW = new Date();
 
 type Freq = MetadataRoute.Sitemap[number]['changeFrequency'];
 
@@ -14,11 +13,15 @@ type Freq = MetadataRoute.Sitemap[number]['changeFrequency'];
 // (incl. x-default). Search engines learn the full 12-language cluster at discovery
 // time — far better for multilingual indexing than 12 unrelated URLs, and far
 // smaller files, so we can list every page type.
+//
+// No `lastModified`: it was `new Date()` (build time) on every URL, so each deploy
+// claimed the entire site changed "just now" — a signal engines learn to ignore.
+// Omitting it is better than a lie.
 function entry(path: string, changeFrequency: Freq, priority: number): MetadataRoute.Sitemap[number] {
   const languages: Record<string, string> = {};
   for (const loc of locales) languages[loc] = `${BASE}/${loc}${path}`;
   languages['x-default'] = `${BASE}/en${path}`;
-  return { url: `${BASE}/en${path}`, lastModified: NOW, changeFrequency, priority, alternates: { languages } };
+  return { url: `${BASE}/en${path}`, changeFrequency, priority, alternates: { languages } };
 }
 
 export async function generateSitemaps() {
@@ -47,8 +50,14 @@ export default function sitemap({ id }: { id: number | string }): MetadataRoute.
     const hub = HUBS.has(iata);
     const cf: Freq = hub ? 'hourly' : 'daily';
     entries.push(entry(`/airport/${iata}`, cf, hub ? 1.0 : 0.6));
-    entries.push(entry(`/airport/${iata}/arrivals`, cf, hub ? 0.9 : 0.5));
-    entries.push(entry(`/airport/${iata}/departures`, cf, hub ? 0.9 : 0.5));
+    // Only hubs advertise arrivals/departures subpages. For the long tail these are
+    // usually empty "No flights" near-dupes; listing them wasted crawl budget and fed
+    // the mass-exclusion wave. They stay reachable (footer/board links) and indexable
+    // when they DO have flights (robots gate in each subpage) — just not in the sitemap.
+    if (hub) {
+      entries.push(entry(`/airport/${iata}/arrivals`, cf, 0.9));
+      entries.push(entry(`/airport/${iata}/departures`, cf, 0.9));
+    }
   }
 
   return entries;
