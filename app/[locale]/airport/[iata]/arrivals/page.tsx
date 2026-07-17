@@ -25,9 +25,13 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const airport = getAirport(iata.toUpperCase());
   if (!airport) return {};
   const t = await getTranslations({ locale, namespace: 'meta' });
+  const name = getAirportName(airport.iata, locale, airport.name);
+  const cityName = getCityName(airport.city, locale);
+  // Append the city only when the airport's localized name doesn't already contain it.
+  const showCity = name.toLowerCase().includes(cityName.toLowerCase()) ? 'no' : 'yes';
 
-  const title = t('arrivals_title', { airport: getAirportName(airport.iata, locale, airport.name), iata: airport.iata, city: getCityName(airport.city, locale) });
-  const description = t('arrivals_description', { airport: getAirportName(airport.iata, locale, airport.name), iata: airport.iata, city: getCityName(airport.city, locale) });
+  const title = t('arrivals_title', { airport: name, iata: airport.iata, city: cityName, showCity });
+  const description = t('arrivals_description', { airport: name, iata: airport.iata, city: cityName });
   const canonical = `${BASE}/${locale}/airport/${airport.iata}/arrivals`;
 
   // Only index an arrivals board that actually has flights. Thousands of small airfields
@@ -68,7 +72,8 @@ export default async function ArrivalsPage({ params }: Props) {
   const name = getAirportName(airport.iata, locale, airport.name);
   const city = getCityName(airport.city, locale);
   const country = getCountryName(airport.country, locale);
-  const h1 = t('arrivals_title', { airport: name, iata: airport.iata, city });
+  const showCity = name.toLowerCase().includes(city.toLowerCase()) ? 'no' : 'yes';
+  const h1 = t('arrivals_title', { airport: name, iata: airport.iata, city, showCity });
   const desc = t('arrivals_description', { airport: name, iata: airport.iata, city });
 
   const jsonLd = [

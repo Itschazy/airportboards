@@ -35,10 +35,10 @@
     "scheduled": "Ожидается"
   },
   "meta": {
-    "main_title": "{airport} табло онлайн ({iata}) — рейсы сегодня",
+    "main_title": "Онлайн-табло аэропорта {airport}{showCity, select, yes {, {city}} other {}} ({iata}) — прилеты и вылеты сегодня",
     "main_description": "Онлайн-табло аэропорта {airport} ({iata}): прилеты и вылеты сегодня, статус рейсов в реальном времени, задержки и изменения.",
-    "arrivals_title": "{airport} табло прилетов ({iata}) — онлайн",
-    "departures_title": "{airport} табло вылетов ({iata}) — онлайн",
+    "arrivals_title": "Табло прилета {airport}{showCity, select, yes {, {city}} other {}} ({iata}) сегодня — онлайн",
+    "departures_title": "Табло вылета {airport}{showCity, select, yes {, {city}} other {}} ({iata}) сегодня — онлайн",
     "arrivals_description": "Табло прилетов {airport} ({iata}) сегодня: рейсы онлайн, время прибытия, статусы, задержки и вылеты в реальном времени.",
     "departures_description": "Табло вылетов {airport} ({iata}) сегодня: рейсы онлайн, время отправления, статусы, задержки и прилеты в реальном времени."
   },

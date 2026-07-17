@@ -35,10 +35,10 @@
     "scheduled": "Previsto"
   },
   "meta": {
-    "main_title": "{airport} ({iata}) panel de vuelos en vivo",
+    "main_title": "Vuelos {airport}{showCity, select, yes {, {city}} other {}} ({iata}) | llegadas y salidas en vivo",
     "main_description": "Panel de vuelos de {airport} ({iata}) hoy: llegadas y salidas en tiempo real, horarios, retrasos, cancelaciones y puertas actualizadas.",
-    "arrivals_title": "{airport} llegadas ({iata}) | panel de vuelos",
-    "departures_title": "{airport} salidas ({iata}) | panel de vuelos",
+    "arrivals_title": "Llegadas {airport}{showCity, select, yes {, {city}} other {}} ({iata}) | vuelos en vivo",
+    "departures_title": "Salidas {airport}{showCity, select, yes {, {city}} other {}} ({iata}) | vuelos en vivo",
     "arrivals_description": "Panel de llegadas del aeropuerto {airport} ({iata}) hoy en tiempo real: horarios, retrasos y cancelaciones. Consulta también salidas.",
     "departures_description": "Panel de salidas del aeropuerto {airport} ({iata}) hoy en tiempo real: horarios, retrasos, cancelaciones y puertas. Consulta también llegadas."
   },

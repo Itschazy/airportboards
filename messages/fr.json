@@ -35,10 +35,10 @@
     "scheduled": "Prévu"
   },
   "meta": {
-    "main_title": "{airport} tableau des vols ({iata})",
+    "main_title": "Vols {airport}{showCity, select, yes {, {city}} other {}} ({iata}) – arrivées et départs en direct",
     "main_description": "Tableau en direct des arrivées et départs de {airport} aujourd’hui : horaires, retards et statuts des vols ({iata}).",
-    "arrivals_title": "{airport} arrivées – tableau ({iata})",
-    "departures_title": "{airport} départs – tableau ({iata})",
+    "arrivals_title": "Arrivées {airport}{showCity, select, yes {, {city}} other {}} ({iata}) – vols en direct",
+    "departures_title": "Départs {airport}{showCity, select, yes {, {city}} other {}} ({iata}) – vols en direct",
     "arrivals_description": "Arrivées {airport} aujourd’hui en direct : tableau des vols, horaires, retards et départs de l’aéroport ({iata}).",
     "departures_description": "Départs {airport} aujourd’hui en direct : tableau des vols, horaires, retards et arrivées de l’aéroport ({iata})."
   },

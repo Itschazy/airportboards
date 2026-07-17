@@ -35,10 +35,10 @@
     "scheduled": "مجدول"
   },
   "meta": {
-    "main_title": "{airport} لوحة الرحلات ({iata}) مباشر",
+    "main_title": "لوحة رحلات مطار {airport}{showCity, select, yes {، {city}} other {}} ({iata}) — الوصول والمغادرة مباشرة",
     "main_description": "لوحة رحلات {airport} ({iata}) اليوم: وصول ومغادرة مباشرة مع مواعيد الرحلات، التأخير، الإلغاء والبوابات لحظة بلحظة.",
-    "arrivals_title": "{airport} لوحة وصول الرحلات ({iata})",
-    "departures_title": "{airport} لوحة مغادرة الرحلات ({iata})",
+    "arrivals_title": "وصول الرحلات – مطار {airport}{showCity, select, yes {، {city}} other {}} ({iata}) مباشر",
+    "departures_title": "مغادرة الرحلات – مطار {airport}{showCity, select, yes {، {city}} other {}} ({iata}) مباشر",
     "arrivals_description": "وصول رحلات {airport} ({iata}) اليوم مباشر: لوحة الوصول مع حالة الرحلات، التأخير والبوابات، إضافة إلى معلومات المغادرة.",
     "departures_description": "مغادرة رحلات {airport} ({iata}) اليوم مباشرة: لوحة المغادرة مع المواعيد، التأخير والبوابات، إضافة إلى معلومات الوصول."
   },

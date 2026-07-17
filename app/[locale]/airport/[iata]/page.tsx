@@ -31,8 +31,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const name = getAirportName(airport.iata, locale, airport.name);
   const city = getCityName(airport.city, locale);
   const country = getCountryName(airport.country, locale);
+  // Titles append the city only when the airport's localized name doesn't already
+  // contain it ("Внуково" + Москва — yes; "Сочи" + Сочи — no). People search by city.
+  const showCity = name.toLowerCase().includes(city.toLowerCase()) ? 'no' : 'yes';
 
-  const title = t('main_title', { airport: name, city, iata: airport.iata });
+  const title = t('main_title', { airport: name, city, showCity, iata: airport.iata });
   const description = t('main_description', { airport: name, iata: airport.iata, city, country });
   const canonical = `${BASE}/${locale}/airport/${airport.iata}`;
 

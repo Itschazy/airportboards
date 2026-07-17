@@ -35,10 +35,10 @@
     "scheduled": "Erwartet"
   },
   "meta": {
-    "main_title": "Flugplan {airport} ({iata}) – Ankunft & Abflug",
+    "main_title": "{airport}{showCity, select, yes {, {city}} other {}} ({iata}) – Ankunft & Abflug live",
     "main_description": "Live-Flugplan für {airport} ({iata}): Ankünfte und Abflüge in Echtzeit, Status, Gates und Verspätungen heute.",
-    "arrivals_title": "{airport} Ankunftstafel ({iata}) – live",
-    "departures_title": "{airport} Abflugtafel ({iata}) – live",
+    "arrivals_title": "{airport}{showCity, select, yes {, {city}} other {}} ({iata}) – Ankunft live",
+    "departures_title": "{airport}{showCity, select, yes {, {city}} other {}} ({iata}) – Abflug live",
     "arrivals_description": "Ankünfte am Flughafen {airport} ({iata}) heute live: Landungen in Echtzeit, Status, Verspätungen sowie Abflüge im Überblick.",
     "departures_description": "Abflüge am Flughafen {airport} ({iata}) heute live: Starts in Echtzeit, Gates, Status und Verspätungen plus aktuelle Ankünfte."
   },

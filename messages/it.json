@@ -35,10 +35,10 @@
     "scheduled": "Previsto"
   },
   "meta": {
-    "main_title": "{airport} tabellone voli ({iata}) | Arrivi e partenze",
+    "main_title": "Voli {airport}{showCity, select, yes {, {city}} other {}} ({iata}) | arrivi e partenze in tempo reale",
     "main_description": "Tabellone voli in tempo reale di {airport} ({iata}): arrivi e partenze di oggi, orari, ritardi, cancellazioni e gate aggiornati.",
-    "arrivals_title": "{airport} tabellone arrivi ({iata}) | Oggi",
-    "departures_title": "{airport} tabellone partenze ({iata}) | Oggi",
+    "arrivals_title": "Arrivi {airport}{showCity, select, yes {, {city}} other {}} ({iata}) | voli in tempo reale",
+    "departures_title": "Partenze {airport}{showCity, select, yes {, {city}} other {}} ({iata}) | voli in tempo reale",
     "arrivals_description": "Tabellone arrivi in tempo reale di {airport} ({iata}): voli di oggi, orari, ritardi e partenze aggiornate.",
     "departures_description": "Tabellone partenze in tempo reale di {airport} ({iata}): voli di oggi, orari, ritardi, gate e arrivi aggiornati."
   },

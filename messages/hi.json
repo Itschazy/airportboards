@@ -35,10 +35,10 @@
     "scheduled": "निर्धारित"
   },
   "meta": {
-    "main_title": "{airport} फ्लाइट बोर्ड ({iata}) | लाइव उड़ानें",
+    "main_title": "{airport}{showCity, select, yes {, {city}} other {}} ({iata}) उड़ान स्थिति | लाइव आगमन और प्रस्थान",
     "main_description": "{airport} ({iata}) एयरपोर्ट का लाइव फ्लाइट बोर्ड: आज के आगमन व प्रस्थान, उड़ान स्थिति, समय, देरी और गेट की जानकारी रियल-टाइम में देखें।",
-    "arrivals_title": "{airport} आगमन फ्लाइट बोर्ड ({iata})",
-    "departures_title": "{airport} प्रस्थान फ्लाइट बोर्ड ({iata})",
+    "arrivals_title": "{airport}{showCity, select, yes {, {city}} other {}} ({iata}) आगमन उड़ानें | लाइव स्थिति",
+    "departures_title": "{airport}{showCity, select, yes {, {city}} other {}} ({iata}) प्रस्थान उड़ानें | लाइव स्थिति",
     "arrivals_description": "{airport} ({iata}) एयरपोर्ट पर आज के लाइव आगमन देखें। फ्लाइट बोर्ड पर आगमन व प्रस्थान, समय, देरी और उड़ान स्थिति रियल-टाइम में।",
     "departures_description": "{airport} ({iata}) एयरपोर्ट से आज के लाइव प्रस्थान देखें। फ्लाइट बोर्ड पर प्रस्थान व आगमन, समय, देरी और उड़ान स्थिति रियल-टाइम में।"
   },

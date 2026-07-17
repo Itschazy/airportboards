@@ -35,10 +35,10 @@
     "scheduled": "Bekleniyor"
   },
   "meta": {
-    "main_title": "{airport} Uçuş Tablosu ({iata}) | Canlı",
+    "main_title": "{airport}{showCity, select, yes {, {city}} other {}} ({iata}) Uçuş Bilgileri | Canlı Varış ve Kalkış",
     "main_description": "{airport} ({iata}) için bugün canlı uçuş tablosu: varışlar ve kalkışlar, saatler, durumlar, terminal ve kapı bilgileri gerçek zamanlı güncellenir.",
-    "arrivals_title": "{airport} Varış Uçuşları Tablosu ({iata})",
-    "departures_title": "{airport} Kalkış Uçuşları Tablosu ({iata})",
+    "arrivals_title": "{airport}{showCity, select, yes {, {city}} other {}} ({iata}) Varış Uçuşları | Canlı",
+    "departures_title": "{airport}{showCity, select, yes {, {city}} other {}} ({iata}) Kalkış Uçuşları | Canlı",
     "arrivals_description": "Bugün {airport} ({iata}) varış uçuşları tablosu: gelen ve giden uçuşlar, saatler ve durumlar canlı olarak gerçek zamanlı güncellenir.",
     "departures_description": "Bugün {airport} ({iata}) kalkış uçuşları tablosu: giden ve gelen uçuşlar, saatler ve durumlar canlı olarak gerçek zamanlı güncellenir."
   },
