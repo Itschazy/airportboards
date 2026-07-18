@@ -47,8 +47,12 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     title = `${name} (${airport.iata}) — ${tHome('closed_title')}`;
     description = tHome('closed_body', { name, year: String(airport.closed) })
       + (successor
-        ? ' ' + tHome('closed_successor', { successor: `${getAirportName(successor.iata, locale, successor.name)} (${successor.iata})` })
-            .replace(/<\/?link>/g, '')
+        // closed_successor contains <link> tags; plain t() cannot format tagged messages
+        // (falls back to the literal key path), so render via markup() with a pass-through.
+        ? ' ' + tHome.markup('closed_successor', {
+            successor: `${getAirportName(successor.iata, locale, successor.name)} (${successor.iata})`,
+            link: (chunks) => chunks,
+          })
         : '');
   } else if (hasNoService(airport.iata)) {
     // Don't advertise a live board for an airfield no airline serves — the snippet would be
