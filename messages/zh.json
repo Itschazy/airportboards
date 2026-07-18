@@ -217,7 +217,8 @@
     "legal": "法律信息",
     "last_updated": "最后更新：{date}",
     "cookie_msg": "我们使用 Cookie 进行分析和广告投放。",
-    "cookie_ok": "知道了"
+    "cookie_ok": "接受",
+    "cookie_decline": "拒绝"
   },
   "event": {
     "disclaimer": "与主办方、场馆及演出者无隶属关系。门票由主办方销售。",

@@ -32,7 +32,7 @@
         "heading": "3. Cookies and similar technologies",
         "body": [
           "A cookie is a small text file stored on your device by your browser. We and our partners also use similar technologies such as local storage, pixels, and tags.",
-          "- First-party analytics cookies: our analytics provider, Yandex.Metrica, sets cookies to measure traffic and understand how visitors use the Site (see the Analytics section).",
+          "- First-party analytics cookies: our analytics providers, Google Analytics and (on Russian-language pages) Yandex.Metrica, set cookies to measure traffic and understand how visitors use the Site (see the Analytics section).",
           "- Advertising cookies: our advertising partners, including Google, set cookies to deliver and measure ads (see the Advertising section).",
           "You can control or delete cookies through your browser settings and through the opt-out tools described below. Blocking some cookies may affect how parts of the Site work."
         ]
@@ -54,9 +54,19 @@
         "heading": "5. Analytics — Yandex.Metrica",
         "body": [
           "We use Yandex.Metrica, a web analytics service provided by Yandex, to understand how visitors interact with the Site.",
+          "Yandex.Metrica is loaded only on the Russian-language pages of the Site (URLs beginning /ru/). Session recording (Webvisor) is disabled, so mouse movement, keystrokes and page contents are not recorded.",
           "Yandex.Metrica sets cookies and collects information such as your IP address, device and browser data, pages viewed, referring source, and the time of your visit. This helps us measure traffic and improve the Site.",
           "Yandex processes this data in accordance with its own privacy policy, available at: https://yandex.com/legal/confidential",
           "You can opt out of Yandex.Metrica tracking by installing the official opt-out browser add-on (https://yandex.com/support/metrica/general/opt-out.html), by blocking cookies, or by using your browser's privacy settings."
+        ]
+      },
+      {
+        "heading": "5a. Analytics — Google Analytics 4",
+        "body": [
+          "We use Google Analytics 4, a web analytics service provided by Google, to understand how visitors find and use the Site.",
+          "Google Analytics sets cookies and collects information such as a randomly generated identifier, your approximate location derived from your IP address, device and browser data, the pages you view, the referring source, and the timing of your visit. We have not enabled Google Signals, and we do not send Google Analytics any information that identifies you personally.",
+          "Google processes this data as described at: https://policies.google.com/privacy and https://business.safety.google/privacy",
+          "Where the EU/UK GDPR applies, Google Analytics is loaded in a consent-denied state until you choose otherwise, so no analytics cookies are set unless you accept them. You can also opt out on any site using the Google Analytics opt-out browser add-on: https://tools.google.com/dlpage/gaoptout"
         ]
       },
       {
@@ -70,7 +80,7 @@
         "heading": "7. Consent and your choices",
         "body": [
           "You can accept, refuse, or delete cookies through your browser settings, and you can use the advertising opt-out tools listed above.",
-          "If you are located in the European Economic Area (EEA) or the United Kingdom, you will be shown a consent message allowing you to make choices about cookies and personalized advertising before non-essential cookies are set. You can change or withdraw your choices at any time.",
+          "If you are located in the European Economic Area (EEA) or the United Kingdom, analytics and advertising storage is disabled by default and no non-essential cookies are set until you choose. A notice at the bottom of the page lets you accept or decline; your choice is remembered in your browser and applied to Google’s tags through Google Consent Mode. You can change it at any time by clearing site data for this Site. You can change or withdraw your choices at any time.",
           "Some browsers offer a \"Do Not Track\" signal; because there is no common industry standard for these signals, the Site does not currently respond to them."
         ]
       },
@@ -152,7 +162,7 @@
         "heading": "3. Файлы cookie и аналогичные технологии",
         "body": [
           "Cookie — это небольшой текстовый файл, который ваш браузер сохраняет на вашем устройстве. Мы и наши партнёры также используем аналогичные технологии, такие как локальное хранилище, пиксели и теги.",
-          "- Аналитические cookie первой стороны: наш поставщик аналитики, Яндекс.Метрика, устанавливает cookie для измерения трафика и понимания того, как посетители пользуются Сайтом (см. раздел «Аналитика»).",
+          "- Аналитические cookie первой стороны: наши поставщики аналитики — Google Analytics и (на русскоязычных страницах) Яндекс.Метрика — устанавливают cookie для измерения трафика и понимания того, как посетители пользуются Сайтом (см. раздел «Аналитика»).",
           "- Рекламные cookie: наши рекламные партнёры, включая Google, устанавливают cookie для показа и измерения рекламы (см. раздел «Реклама»).",
           "Вы можете управлять файлами cookie или удалять их в настройках браузера, а также с помощью инструментов отказа, описанных ниже. Блокировка некоторых cookie может повлиять на работу отдельных частей Сайта."
         ]
@@ -174,9 +184,19 @@
         "heading": "5. Аналитика — Яндекс.Метрика",
         "body": [
           "Мы используем Яндекс.Метрику — сервис веб-аналитики компании Яндекс — чтобы понимать, как посетители взаимодействуют с Сайтом.",
+          "Яндекс.Метрика загружается только на русскоязычных страницах Сайта (адреса, начинающиеся с /ru/). Запись сессий (Вебвизор) отключена, поэтому движения мыши, нажатия клавиш и содержимое страниц не записываются.",
           "Яндекс.Метрика устанавливает файлы cookie и собирает такую информацию, как ваш IP-адрес, данные об устройстве и браузере, просматриваемые страницы, источник перехода и время посещения. Это помогает нам измерять трафик и улучшать Сайт.",
           "Яндекс обрабатывает эти данные в соответствии с собственной политикой конфиденциальности, доступной по адресу: https://yandex.ru/legal/confidential",
           "Вы можете отказаться от отслеживания Яндекс.Метрикой, установив официальное браузерное расширение для отказа (https://yandex.ru/support/metrica/general/opt-out.html), заблокировав cookie или используя настройки конфиденциальности вашего браузера."
+        ]
+      },
+      {
+        "heading": "5a. Аналитика — Google Analytics 4",
+        "body": [
+          "Мы используем Google Analytics 4 — сервис веб-аналитики компании Google — чтобы понимать, как посетители находят Сайт и пользуются им.",
+          "Google Analytics устанавливает файлы cookie и собирает такую информацию, как случайно сгенерированный идентификатор, приблизительное местоположение, определённое по IP-адресу, данные об устройстве и браузере, просматриваемые страницы, источник перехода и время визита. Google Signals мы не включали и не передаём в Google Analytics сведений, идентифицирующих вас лично.",
+          "Google обрабатывает эти данные в порядке, описанном по адресам: https://policies.google.com/privacy и https://business.safety.google/privacy",
+          "Там, где применяется GDPR ЕС/Великобритании, Google Analytics загружается с запретом на хранение данных до тех пор, пока вы не решите иначе, поэтому аналитические cookie не устанавливаются без вашего согласия. Также вы можете отказаться от сбора данных на любых сайтах с помощью официального дополнения Google Analytics: https://tools.google.com/dlpage/gaoptout"
         ]
       },
       {
@@ -190,7 +210,7 @@
         "heading": "7. Согласие и ваш выбор",
         "body": [
           "Вы можете принимать, отклонять или удалять файлы cookie в настройках браузера, а также использовать перечисленные выше инструменты отказа от рекламы.",
-          "Если вы находитесь в Европейской экономической зоне (ЕЭЗ) или Великобритании, перед установкой второстепенных cookie вам будет показано сообщение о согласии, позволяющее сделать выбор в отношении cookie и персонализированной рекламы. Вы можете изменить или отозвать свой выбор в любое время.",
+          "Если вы находитесь в Европейской экономической зоне (ЕЭЗ) или Великобритании, перед установкой второстепенных cookie хранение аналитических и рекламных данных отключено по умолчанию, и никакие необязательные cookie не устанавливаются до вашего выбора. Уведомление внизу страницы позволяет принять или отклонить их; ваш выбор сохраняется в браузере и применяется к тегам Google через Google Consent Mode. Изменить его можно в любой момент, очистив данные Сайта в браузере, позволяющее сделать выбор в отношении cookie и персонализированной рекламы. Вы можете изменить или отозвать свой выбор в любое время.",
           "Некоторые браузеры отправляют сигнал «Do Not Track» («Не отслеживать»); поскольку единого отраслевого стандарта для таких сигналов не существует, в настоящее время Сайт на них не реагирует."
         ]
       },

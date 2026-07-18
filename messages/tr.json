@@ -217,7 +217,8 @@
     "legal": "Yasal Bilgiler",
     "last_updated": "Son güncelleme: {date}",
     "cookie_msg": "Analiz ve reklam için çerezler kullanıyoruz.",
-    "cookie_ok": "Anladım"
+    "cookie_ok": "Kabul et",
+    "cookie_decline": "Reddet"
   },
   "event": {
     "disclaimer": "Organizatör, mekân veya sanatçı ile bağlantılı değildir. Biletleri organizatör satar.",

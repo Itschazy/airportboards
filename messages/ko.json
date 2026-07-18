@@ -217,7 +217,8 @@
     "legal": "법적 고지",
     "last_updated": "마지막 업데이트: {date}",
     "cookie_msg": "분석 및 광고를 위해 쿠키를 사용합니다.",
-    "cookie_ok": "확인"
+    "cookie_ok": "동의",
+    "cookie_decline": "거부"
   },
   "event": {
     "disclaimer": "주최사·공연장·아티스트와 제휴 관계가 없습니다. 티켓은 주최사가 판매합니다.",

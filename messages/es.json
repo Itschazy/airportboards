@@ -217,7 +217,8 @@
     "legal": "Aviso legal",
     "last_updated": "Última actualización: {date}",
     "cookie_msg": "Usamos cookies para análisis y publicidad.",
-    "cookie_ok": "Entendido"
+    "cookie_ok": "Aceptar",
+    "cookie_decline": "Rechazar"
   },
   "event": {
     "disclaimer": "Sin afiliación con el organizador, el recinto ni el artista. Las entradas las vende el organizador.",

@@ -217,7 +217,8 @@
     "legal": "Rechtliches",
     "last_updated": "Zuletzt aktualisiert: {date}",
     "cookie_msg": "Wir verwenden Cookies für Analyse und Werbung.",
-    "cookie_ok": "Verstanden"
+    "cookie_ok": "Akzeptieren",
+    "cookie_decline": "Ablehnen"
   },
   "event": {
     "disclaimer": "Nicht mit Veranstalter, Veranstaltungsort oder Künstler verbunden. Tickets verkauft der Veranstalter.",

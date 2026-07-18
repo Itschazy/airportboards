@@ -217,7 +217,8 @@
     "legal": "Legal",
     "last_updated": "Last updated: {date}",
     "cookie_msg": "We use cookies for analytics and advertising.",
-    "cookie_ok": "Got it"
+    "cookie_ok": "Accept",
+    "cookie_decline": "Decline"
   },
   "event": {
     "disclaimer": "Not affiliated with the organiser, venue or performer. Tickets are sold by the organiser.",

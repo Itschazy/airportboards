@@ -27,7 +27,7 @@ const DOCS: Record<LegalKind, DocByLocale> = {
 export const DATED_KINDS: ReadonlySet<LegalKind> = new Set<LegalKind>(['privacy', 'terms']);
 
 // ISO date the legal docs were last revised — surfaced as a localized line under the H1.
-export const LEGAL_UPDATED_ISO = '2026-07-17';
+export const LEGAL_UPDATED_ISO = '2026-07-19';
 
 export function getLegalDoc(kind: LegalKind, locale: Locale): LegalDoc {
   const byLocale = DOCS[kind];

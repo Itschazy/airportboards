@@ -6,6 +6,8 @@ import { locales, rtlLocales, type Locale } from '@/lib/i18n';
 import { SiteHeader } from '@/components/SiteHeader';
 import { SiteFooter } from '@/components/SiteFooter';
 import { YandexMetrica } from '@/components/YandexMetrica';
+import { Analytics, GA_ID } from '@/components/Analytics';
+import { GaRouteTracker } from '@/components/GaRouteTracker';
 import { AdSense } from '@/components/AdSense';
 import { CookieNotice } from '@/components/CookieNotice';
 import { adsenseClient } from '@/lib/adsense';
@@ -65,16 +67,22 @@ export default async function LocaleLayout({
   return (
     <html lang={locale} dir={dir} className="h-full antialiased">
       <body className="min-h-full flex flex-col">
-        {/* React hoists resource links into <head>: warm up the Metrika origin so
-            tag.js + the first hit skip DNS/TLS setup. */}
-        <link rel="preconnect" href="https://mc.yandex.ru" />
-        <YandexMetrica />
+        {/* React hoists resource links into <head>. Browsers honour only a handful of
+            preconnects, so they go to the origins that actually run on every locale: the
+            Google tag and the ad server. Metrica's origin is warmed only where it loads. */}
+        <link rel="preconnect" href="https://www.googletagmanager.com" />
+        <link rel="preconnect" href="https://pagead2.googlesyndication.com" />
+        {locale === 'ru' && <link rel="preconnect" href="https://mc.yandex.ru" />}
+        {/* Consent defaults first — every Google tag below reads them as it parses. */}
+        <Analytics />
+        <YandexMetrica locale={locale} />
         <AdSense />
         <NextIntlClientProvider messages={messages}>
           <SiteHeader locale={locale as Locale} />
           <main style={{ flex: '1 0 auto', width: '100%' }}>{children}</main>
           <SiteFooter locale={locale as Locale} />
           <CookieNotice locale={locale as Locale} />
+          {GA_ID && <GaRouteTracker gaId={GA_ID} />}
         </NextIntlClientProvider>
       </body>
     </html>
