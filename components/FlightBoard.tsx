@@ -62,11 +62,17 @@ const FILTERS: FilterKey[] = ['all', 'ontime', 'delayed', 'boarding', 'finalcall
 
 const haptic = (ms = 6) => { try { (navigator as any).vibrate?.(ms); } catch {} };
 
+// Age of the DATA, not of the request. Tail airports are refreshed daily, so this has to
+// degrade past minutes gracefully — "1440 min ago" is technically true and useless.
 function relTime(d: Date | null, t: T): string {
   if (!d) return '';
   const s = Math.floor((Date.now() - d.getTime()) / 1000);
   if (s < 60) return t('updated_now');
-  return t('updated_min_ago', { m: Math.max(1, Math.floor(s / 60)) });
+  const m = Math.floor(s / 60);
+  if (m < 60) return t('updated_min_ago', { m: Math.max(1, m) });
+  const h = Math.floor(m / 60);
+  if (h < 24) return t('updated_h_ago', { h });
+  return t('updated_d_ago', { d: Math.floor(h / 24) });
 }
 
 function calcDeparture(
@@ -437,12 +443,18 @@ function BottomSheet({ flight, mode, onClose, tz, locale }: {
 
 // ─── Main Component ───────────────────────────────────────────────────────────
 
-export function FlightBoard({ airport, locale, defaultMode = 'departures', displayName, initialFlights }: {
+export function FlightBoard({ airport, locale, defaultMode = 'departures', displayName, initialFlights, initialFetchedAt, noService = false }: {
   airport: Airport;
   locale: string;
   defaultMode?: Mode;
   displayName?: string;
   initialFlights?: Flight[];
+  /** Epoch ms when airlabs produced the SSR board, so the first paint labels its true age. */
+  initialFetchedAt?: number | null;
+  /** Airfield with no scheduled airline service at all. The board chrome is suppressed —
+   *  a freshness dot, direction tabs and status filters over a permanently empty list read
+   *  as a broken page. The notice above the board explains why it is empty. */
+  noService?: boolean;
 }) {
   const t = useTranslations('ui');
   const tNav = useTranslations('nav');
@@ -455,10 +467,10 @@ export function FlightBoard({ airport, locale, defaultMode = 'departures', displ
   const [flights, setFlights]     = useState<Flight[]>(initialFlights ?? []);
   const [loading, setLoading]     = useState(!hasInitial);
   const [time, setTime]           = useState('');
-  const [lastUpdated, setUpdated] = useState<Date | null>(null);
+  const [lastUpdated, setUpdated] = useState<Date | null>(initialFetchedAt ? new Date(initialFetchedAt) : null);
   const [updLabel, setUpdLabel]   = useState('');
   const [selected, setSelected]   = useState<Flight | null>(null);
-  const [isLive, setIsLive]       = useState(false);
+  const [isLive, setIsLive]       = useState(!!initialFetchedAt && Date.now() - initialFetchedAt < 90_000);
   const [showAll, setShowAll]     = useState(false);
   // Gate for the list "rise" animation: never on the initial (SSR/LCP) paint —
   // only once the user actually changes mode/filter. Key-based (not effect-based)
@@ -470,10 +482,13 @@ export function FlightBoard({ airport, locale, defaultMode = 'departures', displ
       const res = await fetch(`/api/flights/${airport.iata}?direction=${mode}&locale=${locale}`);
       const data = await res.json();
       setFlights(data.flights || []);
-      const now = new Date();
-      setUpdated(now);
-      setUpdLabel(t('updated_now'));
-      setIsLive(true);
+      // Label the age of the data, not of this response. A board for a daily-refreshed
+      // airport answers instantly from the store and is still a day old; claiming
+      // "updated now" there is exactly the kind of thing that makes the site untrustworthy.
+      const ts = typeof data.fetchedAt === 'number' ? new Date(data.fetchedAt) : new Date();
+      setUpdated(ts);
+      setUpdLabel(relTime(ts, t));
+      setIsLive(Date.now() - ts.getTime() < 90_000);
     } catch { /* keep prev */ } finally {
       setLoading(false);
     }
@@ -540,7 +555,10 @@ export function FlightBoard({ airport, locale, defaultMode = 'departures', displ
   useEffect(() => { setShowAll(false); }, [mode, filter, trimSearch]);
 
   return (
-    <div style={{ background: C.bg, minHeight: '100dvh', paddingBottom: 'calc(48px + env(safe-area-inset-bottom))' }}>
+    // 100dvh keeps the footer from jumping up while a real board loads. With no scheduled
+    // service nothing will ever fill it, so reserving a screenful leaves a dead gap between
+    // the notice and the rest of the page.
+    <div style={{ background: C.bg, minHeight: noService ? undefined : '100dvh', paddingBottom: noService ? 16 : 'calc(48px + env(safe-area-inset-bottom))' }}>
 
       {/* ── Airport header ─────────────────────────────────── */}
       <div style={{ padding: '16px 20px 10px', maxWidth: 960, margin: '0 auto' }}>
@@ -578,8 +596,9 @@ export function FlightBoard({ airport, locale, defaultMode = 'departures', displ
           </div>
         </div>
 
-        {/* Live indicator — polite status region so AT hears the refresh */}
-        <div role="status" aria-live="polite" style={{ display: 'flex', alignItems: 'center', gap: 7, marginTop: 10 }}>
+        {/* Live indicator — polite status region so AT hears the refresh. Hidden where no
+            airline flies: there is nothing to be fresh about. */}
+        {!noService && <div role="status" aria-live="polite" style={{ display: 'flex', alignItems: 'center', gap: 7, marginTop: 10 }}>
           <div
             aria-hidden="true"
             className={isLive ? 'live-dot' : ''}
@@ -589,10 +608,14 @@ export function FlightBoard({ airport, locale, defaultMode = 'departures', displ
             }}
           />
           <span style={{ fontSize: 12, color: C.secondary, opacity: 0.85 }}>{updLabel || '—'}</span>
-        </div>
+        </div>}
       </div>
 
       {/* ── Search ─────────────────────────────────────────── */}
+      {/* Search, direction tabs and status filters are all controls over a flight list. With
+          no scheduled service there is no list to control, so the whole block is dropped
+          rather than left as dead UI the visitor will try and get nothing from. */}
+      {!noService && <>
       <div style={{ padding: '0 16px 12px', maxWidth: 960, margin: '0 auto' }}>
         <div style={{ position: 'relative' }}>
           <div aria-hidden="true" style={{ position: 'absolute', insetInlineStart: 14, top: '50%', transform: 'translateY(-50%)', pointerEvents: 'none' }}>
@@ -694,6 +717,7 @@ export function FlightBoard({ airport, locale, defaultMode = 'departures', displ
           );
         })}
       </div>
+      </>}
 
       {/* ── Top meta row ───────────────────────────────────── */}
       {!loading && flights.length > 0 && (
@@ -713,7 +737,9 @@ export function FlightBoard({ airport, locale, defaultMode = 'departures', displ
           </div>
         )}
 
-        {!loading && visible.length === 0 && (
+        {/* With no scheduled service the notice above already explains the empty board;
+            repeating "no flights found" under an error-style icon reads as a failure. */}
+        {!loading && !noService && visible.length === 0 && (
           <div style={{ textAlign: 'center', padding: '60px 0' }}>
             <div style={{ fontSize: 32, marginBottom: 12 }}>✈</div>
             <div style={{ fontSize: 15, color: C.secondary }}>{t('no_flights')}</div>

@@ -202,7 +202,9 @@
     "notice_delayed": "La hora de salida ha cambiado. Manténgase atento a las pantallas.",
     "more_departures": "Mostrar más salidas",
     "more_arrivals": "Mostrar más llegadas",
-    "live_updates": "Actualizaciones en vivo"
+    "live_updates": "Actualizaciones en vivo",
+    "updated_h_ago": "Actualizado hace {h} h",
+    "updated_d_ago": "Actualizado hace {d} d"
   },
   "notfound": {
     "title": "Página no encontrada",

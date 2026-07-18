@@ -202,7 +202,9 @@
     "notice_delayed": "L'orario di partenza è cambiato. Controlla gli aggiornamenti sul tabellone.",
     "more_departures": "Mostra altre partenze",
     "more_arrivals": "Mostra altri arrivi",
-    "live_updates": "Aggiornamenti in tempo reale"
+    "live_updates": "Aggiornamenti in tempo reale",
+    "updated_h_ago": "Aggiornato {h} h fa",
+    "updated_d_ago": "Aggiornato {d} g fa"
   },
   "notfound": {
     "title": "Pagina non trovata",

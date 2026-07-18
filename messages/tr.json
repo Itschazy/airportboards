@@ -202,7 +202,9 @@
     "notice_delayed": "Kalkış saati değişti. Panoyu takip edin.",
     "more_departures": "Diğer kalkışları göster",
     "more_arrivals": "Diğer varışları göster",
-    "live_updates": "Canlı güncellemeler"
+    "live_updates": "Canlı güncellemeler",
+    "updated_h_ago": "{h} saat önce güncellendi",
+    "updated_d_ago": "{d} gün önce güncellendi"
   },
   "notfound": {
     "title": "Sayfa bulunamadı",

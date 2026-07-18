@@ -202,7 +202,9 @@
     "notice_delayed": "出发时间已变更，请注意航显屏。",
     "more_departures": "显示更多出发",
     "more_arrivals": "显示更多到达",
-    "live_updates": "实时更新"
+    "live_updates": "实时更新",
+    "updated_h_ago": "{h} 小时前更新",
+    "updated_d_ago": "{d} 天前更新"
   },
   "notfound": {
     "title": "页面未找到",

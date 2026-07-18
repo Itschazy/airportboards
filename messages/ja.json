@@ -202,7 +202,9 @@
     "notice_delayed": "出発時刻が変更されています。掲示版の情報をご確認ください。",
     "more_departures": "出発をもっと表示",
     "more_arrivals": "到着をもっと表示",
-    "live_updates": "ライブ更新"
+    "live_updates": "ライブ更新",
+    "updated_h_ago": "{h}時間前に更新",
+    "updated_d_ago": "{d}日前に更新"
   },
   "notfound": {
     "title": "ページが見つかりません",

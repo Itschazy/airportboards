@@ -202,7 +202,9 @@
     "notice_delayed": "Die Abflugzeit hat sich geändert. Achten Sie auf die Anzeige.",
     "more_departures": "Mehr Abfahrten anzeigen",
     "more_arrivals": "Mehr Ankünfte anzeigen",
-    "live_updates": "Live-Aktualisierungen"
+    "live_updates": "Live-Aktualisierungen",
+    "updated_h_ago": "Vor {h} Std. aktualisiert",
+    "updated_d_ago": "Vor {d} Tg. aktualisiert"
   },
   "notfound": {
     "title": "Seite nicht gefunden",

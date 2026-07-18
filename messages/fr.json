@@ -202,7 +202,9 @@
     "notice_delayed": "L'heure de départ a changé. Veuillez consulter les informations d'écran.",
     "more_departures": "Afficher plus de départs",
     "more_arrivals": "Afficher plus d'arrivées",
-    "live_updates": "Mises à jour en direct"
+    "live_updates": "Mises à jour en direct",
+    "updated_h_ago": "Mis à jour il y a {h} h",
+    "updated_d_ago": "Mis à jour il y a {d} j"
   },
   "notfound": {
     "title": "Page introuvable",

@@ -202,7 +202,9 @@
     "notice_delayed": "출발 시간이 변경되었습니다. 안내판을 확인하세요.",
     "more_departures": "더 많은 출발편 보기",
     "more_arrivals": "더 많은 도착편 보기",
-    "live_updates": "실시간 업데이트"
+    "live_updates": "실시간 업데이트",
+    "updated_h_ago": "{h}시간 전 업데이트",
+    "updated_d_ago": "{d}일 전 업데이트"
   },
   "notfound": {
     "title": "페이지를 찾을 수 없습니다",

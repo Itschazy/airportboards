@@ -202,7 +202,9 @@
     "notice_delayed": "The departure time has changed. Keep an eye on the board.",
     "more_departures": "Show more departures",
     "more_arrivals": "Show more arrivals",
-    "live_updates": "Live updates"
+    "live_updates": "Live updates",
+    "updated_h_ago": "Updated {h} h ago",
+    "updated_d_ago": "Updated {d} d ago"
   },
   "notfound": {
     "title": "Page not found",

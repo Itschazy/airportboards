@@ -1,7 +1,7 @@
 import airports from '@/data/airports.json';
 import airlines from '@/data/airlines.json';
 import { getCityName } from '@/lib/places';
-import { getFresh, getStale, put, canSpend, spend, type SpendKind } from '@/lib/flightStore';
+import { getFresh, getStale, getStaleTs, put, canSpend, spend, type SpendKind } from '@/lib/flightStore';
 import { getActiveEventAirports } from '@/lib/event-content';
 import { dueAirports, tickBudget } from '@/lib/warm';
 
@@ -204,6 +204,16 @@ export async function getBoard(iata: string, direction: 'departures' | 'arrivals
   const raw = await fetchRaw(param, direction, { live, kind });
   const own = raw.filter(f => (direction === 'departures' ? f.dep_iata : f.arr_iata) === code);
   return own.map(f => mapFlight(f, direction, locale));
+}
+
+/** When the stored board for this airport/direction was last written by airlabs, or null.
+ *  This is the age of the DATA, which is not the same as when we answered the request —
+ *  a tail airport is refreshed daily, so a board served instantly can still be a day old.
+ *  The UI shows this rather than the response time, so "updated now" is never a lie. */
+export function getBoardFetchedAt(iata: string, direction: 'departures' | 'arrivals'): number | null {
+  const code = iata.toUpperCase();
+  const param = direction === 'departures' ? `dep_iata=${code}` : `arr_iata=${code}`;
+  return getStaleTs(`${direction}:${param}`);
 }
 
 export async function getRoute(from: string, to: string, locale: string, live = false): Promise<FlightRow[]> {

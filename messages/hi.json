@@ -202,7 +202,9 @@
     "notice_delayed": "प्रस्थान समय बदल गया है। सूचना पट्टी पर नजर रखें।",
     "more_departures": "और प्रस्थान दिखाएँ",
     "more_arrivals": "और आगमन दिखाएँ",
-    "live_updates": "लाइव अपडेट्स"
+    "live_updates": "लाइव अपडेट्स",
+    "updated_h_ago": "{h} घंटे पहले अपडेट",
+    "updated_d_ago": "{d} दिन पहले अपडेट"
   },
   "notfound": {
     "title": "पेज नहीं मिला",

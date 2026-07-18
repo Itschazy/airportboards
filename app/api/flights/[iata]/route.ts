@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { getBoard, CACHE_SECONDS } from '@/lib/flights';
+import { getBoard, getBoardFetchedAt, CACHE_SECONDS } from '@/lib/flights';
 
 // Bots never spend airlabs quota — they get whatever is already in the store (or empty).
 // Only human requests may trigger a live fetch (and only under the monthly budget).
@@ -27,7 +27,9 @@ export async function GET(
   }
 
   return NextResponse.json(
-    { iata: code, direction, flights },
+    // fetchedAt = when airlabs actually produced this data, so the client can label its
+    // real age instead of assuming the response time is the data time.
+    { iata: code, direction, flights, fetchedAt: getBoardFetchedAt(code, direction) },
     { headers: { 'Cache-Control': `s-maxage=${CACHE_SECONDS}, stale-while-revalidate` } }
   );
 }
