@@ -7,6 +7,7 @@ import { getAirportName } from '@/lib/airport-names';
 import type { FlightRow } from '@/lib/flights';
 import { MoreInfo, OverviewMetrics, AboutCard, Faq } from '@/components/AirportExtras';
 import { getAirportContentExtended } from '@/lib/airport-content-extended';
+import { serviceLevel, serviceMeasuredOn } from '@/lib/warm';
 import { EventBanner } from '@/components/EventBanner';
 
 const LETTERS = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('');
@@ -56,7 +57,12 @@ export async function AirportBottom({ airport, locale, about, displayName, fligh
   const ext = getAirportContentExtended(airport.iata, locale);
   const extLabels = EXT_LABELS[locale] || EXT_LABELS.en;
 
-  const nearby = nearestAirports(airport.lat, airport.lon, 7).filter(a => a.iata !== airport.iata).slice(0, 5);
+  // Closed airports are dropped from "nearby": Berlin Brandenburg was listing Tegel,
+  // Schönefeld and Tempelhof as neighbouring airports with no hint that all three have been
+  // shut for years, which reads to a person (and an answer engine) as four working options.
+  const nearby = nearestAirports(airport.lat, airport.lon, 9)
+    .filter(a => a.iata !== airport.iata && !a.closed)
+    .slice(0, 5);
   const countryInfo = getCountries().find(c => c.country === airport.country);
   const countryAirports = countryInfo
     ? getAirportsByCountry(countryInfo.slug).filter(a => a.iata !== airport.iata).slice(0, 8)
@@ -85,13 +91,24 @@ export async function AirportBottom({ airport, locale, about, displayName, fligh
   const routes = [...routeMap.entries()].map(([iata, v]) => ({ iata, ...v })).sort((a, b) => b.n - a.n).slice(0, 8);
   const airlines = [...airlineMap.entries()].map(([iata, v]) => ({ iata, ...v })).sort((a, b) => b.n - a.n).slice(0, 10);
 
+  // Measured scheduled departures for this airport, and when that was measured.
+  const deps = serviceLevel(airport.iata);
+  const measuredOn = serviceMeasuredOn();
+
+  // Answers are full sentences, not bare values. "LHR" answers nothing out of context; an
+  // answer engine can only quote a fragment that still means something on its own.
   const faq: { q: string; a: string }[] = [
-    { q: t('faq_iata_q', { name }), a: airport.iata },
-    ...(airport.icao ? [{ q: t('faq_icao_q', { name }), a: airport.icao }] : []),
-    { q: t('faq_where_q', { name }), a: `${city}, ${country}` },
+    { q: t('faq_iata_q', { name }), a: t('faq_iata_a', { name, code: airport.iata }) },
+    ...(airport.icao ? [{ q: t('faq_icao_q', { name }), a: t('faq_icao_a', { name, code: airport.icao }) }] : []),
+    { q: t('faq_where_q', { name }), a: t('faq_where_a', { name, iata: airport.iata, city, country }) },
     // Only claim a timezone when we actually have one. 557 airports inherited the literal
     // "\N" null marker from the OpenFlights dump and rendered it as the visible answer.
-    ...(airport.tz ? [{ q: t('faq_tz_q', { name }), a: `${airport.tz}${offset ? ` (${offset})` : ''}` }] : []),
+    ...(airport.tz ? [{ q: t('faq_tz_q', { name }), a: t('faq_tz_a', { name, iata: airport.iata, tz: `${airport.tz}${offset ? ` (${offset})` : ''}` }) }] : []),
+    // How busy an airport is, from our own measurement — a question every other flight site
+    // answers with marketing copy or not at all.
+    ...(deps && deps > 0 && measuredOn
+      ? [{ q: t('faq_deps_q', { name }), a: t('faq_deps_a', { n: deps.toLocaleString(locale), name, iata: airport.iata, date: measuredOn }) }]
+      : []),
     // "Arrive 3 hours before departure" is advice for a place you can fly from. On the 3,789
     // airfields with no airline service and on closed airports it was being asserted as
     // FAQPage markup directly under a notice saying no flights exist — a self-contradiction

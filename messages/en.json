@@ -130,7 +130,15 @@
     "country_split": "Of the {count} airports with IATA codes in {country}, {served} have scheduled passenger service as of {date}; the remaining {rest} are airfields with no airline flights.",
     "grid_served": "With scheduled flights",
     "grid_unserved": "No scheduled service",
-    "world_split": "AirportsBoard tracks {total} airports with IATA codes worldwide. As measured on {date}, {served} of them had scheduled passenger service; the other {rest} are airfields, military bases and private strips with no airline flights."
+    "world_split": "AirportsBoard tracks {total} airports with IATA codes worldwide. As measured on {date}, {served} of them had scheduled passenger service; the other {rest} are airfields, military bases and private strips with no airline flights.",
+    "faq_iata_a": "The IATA airport code for {name} is {code}.",
+    "faq_icao_a": "The ICAO code for {name} is {code}.",
+    "faq_where_a": "{name} ({iata}) is located in {city}, {country}.",
+    "faq_tz_a": "The local time zone at {name} ({iata}) is {tz}.",
+    "faq_deps_q": "How many flights depart from {name}?",
+    "faq_deps_a": "About {n} scheduled departures were counted at {name} ({iata}) when flight schedules were last measured on {date}.",
+    "airport_lead": "{name} ({iata}) is an airport serving {city}, {country}.",
+    "replaced_line": "{name} ({iata}) took over the traffic of {predecessors}."
   },
   "ui": {
     "departures": "Departures",

@@ -130,7 +130,15 @@
     "country_split": "Sur les {count} aéroports dotés d’un code IATA en {country}, {served} proposent des vols passagers réguliers à la date du {date}; les {rest} restants sont des aérodromes sans vols de compagnies aériennes.",
     "grid_served": "Avec des vols réguliers",
     "grid_unserved": "Aucun service régulier",
-    "world_split": "AirportsBoard répertorie {total} aéroports dotés de codes IATA dans le monde. Selon les données relevées le {date}, {served} d’entre eux étaient desservis par des vols passagers réguliers ; les {rest} autres sont des aérodromes, des bases militaires et des pistes privées sans vols de compagnies aériennes."
+    "world_split": "AirportsBoard répertorie {total} aéroports dotés de codes IATA dans le monde. Selon les données relevées le {date}, {served} d’entre eux étaient desservis par des vols passagers réguliers ; les {rest} autres sont des aérodromes, des bases militaires et des pistes privées sans vols de compagnies aériennes.",
+    "faq_iata_a": "Le code IATA de l’aéroport de {name} est {code}.",
+    "faq_icao_a": "Le code OACI de {name} est {code}.",
+    "faq_where_a": "{name} ({iata}) se trouve à {city}, {country}.",
+    "faq_tz_a": "Le fuseau horaire local à {name} ({iata}) est {tz}.",
+    "faq_deps_q": "Combien de vols partent de {name} ?",
+    "faq_deps_a": "Environ {n} départs programmés ont été comptabilisés à {name} ({iata}) lors de la dernière mesure des horaires de vol, le {date}.",
+    "airport_lead": "{name} ({iata}) est un aéroport qui dessert {city}, {country}.",
+    "replaced_line": "{name} ({iata}) a repris le trafic de {predecessors}."
   },
   "ui": {
     "departures": "Départs",

@@ -130,7 +130,15 @@
     "country_split": "截至{date}，{country}拥有国际航空运输协会代码的{count}个机场中，有{served}个提供定期客运服务；其余{rest}个为没有航空公司航班的机场。",
     "grid_served": "有定期航班",
     "grid_unserved": "无定期航班服务",
-    "world_split": "机场看板收录了全球 {total} 个拥有国际航空运输协会代码的机场。截至 {date}，其中 {served} 个提供定期客运服务；其余 {rest} 个为没有航空公司航班的简易机场、军事基地和私人跑道。"
+    "world_split": "机场看板收录了全球 {total} 个拥有国际航空运输协会代码的机场。截至 {date}，其中 {served} 个提供定期客运服务；其余 {rest} 个为没有航空公司航班的简易机场、军事基地和私人跑道。",
+    "faq_iata_a": "{name} 的国际航空运输协会机场代码是 {code}。",
+    "faq_icao_a": "{name} 的国际民航组织代码是 {code}。",
+    "faq_where_a": "{name}（{iata}）位于{country}{city}。",
+    "faq_tz_a": "{name}（{iata}）的当地时区是 {tz}。",
+    "faq_deps_q": "有多少个航班从{name}出发？",
+    "faq_deps_a": "上次于{date}统计航班时刻表时，{name}（{iata}）约有{n}个定期出发航班。",
+    "airport_lead": "{name}（{iata}）是服务于{country}{city}的一座机场。",
+    "replaced_line": "{name} ({iata}) 接管了 {predecessors} 的客运流量。"
   },
   "ui": {
     "departures": "出发",

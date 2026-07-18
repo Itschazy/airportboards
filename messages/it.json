@@ -130,7 +130,15 @@
     "country_split": "Dei {count} aeroporti con codici IATA in {country}, {served} hanno un servizio passeggeri di linea al {date}; i restanti {rest} sono aerodromi senza voli di compagnie aeree.",
     "grid_served": "Con voli di linea",
     "grid_unserved": "Nessun servizio di linea",
-    "world_split": "AirportsBoard monitora {total} aeroporti con codici IATA in tutto il mondo. Secondo i dati rilevati il {date}, {served} di questi avevano voli passeggeri di linea; gli altri {rest} sono campi d'aviazione, basi militari e piste private senza voli di compagnie aeree."
+    "world_split": "AirportsBoard monitora {total} aeroporti con codici IATA in tutto il mondo. Secondo i dati rilevati il {date}, {served} di questi avevano voli passeggeri di linea; gli altri {rest} sono campi d'aviazione, basi militari e piste private senza voli di compagnie aeree.",
+    "faq_iata_a": "Il codice aeroportuale IATA di {name} è {code}.",
+    "faq_icao_a": "Il codice ICAO di {name} è {code}.",
+    "faq_where_a": "{name} ({iata}) si trova a {city}, {country}.",
+    "faq_tz_a": "Il fuso orario locale di {name} ({iata}) è {tz}.",
+    "faq_deps_q": "Quanti voli partono da {name}?",
+    "faq_deps_a": "Quando gli orari dei voli sono stati rilevati l'ultima volta, il {date}, sono state conteggiate circa {n} partenze programmate a {name} ({iata}).",
+    "airport_lead": "{name} ({iata}) è un aeroporto che serve {city}, {country}.",
+    "replaced_line": "{name} ({iata}) ha assorbito il traffico di {predecessors}."
   },
   "ui": {
     "departures": "Partenze",

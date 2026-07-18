@@ -2,8 +2,10 @@ import type { Metadata } from 'next';
 import { getTranslations , setRequestLocale } from 'next-intl/server';
 import { notFound, permanentRedirect } from 'next/navigation';
 import Link from 'next/link';
+import airportsAll from '@/data/airports.json';
 import { getAirport, getStaticIataCodes, getCountries, getCities, nearestAirports } from '@/lib/airports';
-import { hasNoService, nearestServiced } from '@/lib/warm';
+import { hasNoService, nearestServiced, serviceLevel, serviceMeasuredOn } from '@/lib/warm';
+import { sameAsFor, airportNodeId } from '@/lib/airport-sameas';
 import { getAirportContent } from '@/lib/airport-content';
 import { getAirportName } from '@/lib/airport-names';
 import { getCityName, getCountryName } from '@/lib/places';
@@ -133,6 +135,21 @@ export default async function AirportPage({ params }: Props) {
   // ~2/3 of the IATA codes in the dataset are military fields, bush strips or private
   // airfields with no airline service at all. An empty "live board" there reads as broken;
   // saying so plainly and pointing at the nearest served airport is true and more useful.
+  // The other side of the closure record: BER should say it took over from Tegel and
+  // Schönefeld. Both directions are in data/airports.json already; only one was rendered.
+  const predecessors = (() => {
+    const all = (airportsAll as { iata: string; name: string; closed?: number; successor?: string }[])
+      .filter(a => a.successor === airport.iata && a.closed);
+    if (!all.length) return [];
+    // Only the airports that closed in the actual handover year. Tempelhof also points at
+    // BER — correct going forward, since a Berlin traveller now flies from BER — but it shut
+    // in 2008 and its traffic went to Tegel and Schönefeld, twelve years before BER opened.
+    // Claiming BER took it over would be a causal statement that never happened.
+    const handover = Math.max(...all.map(a => a.closed!));
+    return all
+      .filter(a => a.closed === handover)
+      .map(a => `${getAirportName(a.iata, locale, a.name)} (${a.iata})`);
+  })();
   const noService = hasNoService(airport.iata);
   const nearestWithFlights = noService
     ? (() => {
@@ -151,10 +168,18 @@ export default async function AirportPage({ params }: Props) {
     {
       '@context': 'https://schema.org',
       '@type': 'Airport',
+      // A stable @id shared by every page about this airport, so the arrivals and departures
+      // subpages reference the same node instead of declaring three lookalike airports.
+      '@id': airportNodeId(BASE, airport.iata),
       iataCode: airport.iata,
       icaoCode: airport.icao,
       name,
-      alternateName: airport.name,
+      // Only worth stating when it differs — on /en it is the same string twice.
+      ...(airport.name !== name ? { alternateName: airport.name } : {}),
+      // Resolves this page to the Wikidata entity, turning a name into an identity an
+      // answer engine can match against what it already knows. Absent for the ~4% of codes
+      // Wikidata maps ambiguously; a wrong link would merge two airports in the graph.
+      ...(sameAsFor(airport.iata).length ? { sameAs: sameAsFor(airport.iata) } : {}),
       url: canonical,
       address: {
         '@type': 'PostalAddress',
@@ -198,6 +223,15 @@ export default async function AirportPage({ params }: Props) {
       {jsonLd.map((schema, i) => (
         <script key={i} type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
       ))}
+      {predecessors.length > 0 && (
+        <aside style={{
+          margin: '12px 16px 0', padding: '12px 14px', borderRadius: 10,
+          background: 'rgba(10,132,255,.10)', border: '1px solid rgba(10,132,255,.28)',
+          fontSize: 14, lineHeight: 1.45,
+        }}>
+          {tHome('replaced_line', { name, iata: airport.iata, predecessors: predecessors.join(', ') })}
+        </aside>
+      )}
       {!airport.closed && noService && (
         <aside style={{
           margin: '12px 16px 0', padding: '12px 14px', borderRadius: 10,

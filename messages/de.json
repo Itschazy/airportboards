@@ -130,7 +130,15 @@
     "country_split": "Von den {count} Flughäfen mit IATA-Codes in {country} bieten {served} mit Stand {date} planmäßigen Passagierverkehr; die übrigen {rest} sind Flugplätze ohne Linienflüge.",
     "grid_served": "Mit Linienflügen",
     "grid_unserved": "Kein Linienverkehr",
-    "world_split": "AirportsBoard erfasst weltweit {total} Flughäfen mit IATA-Codes. Stand {date} hatten {served} davon planmäßigen Passagierverkehr; die übrigen {rest} sind Flugplätze, Militärstützpunkte und private Landebahnen ohne Linienflüge."
+    "world_split": "AirportsBoard erfasst weltweit {total} Flughäfen mit IATA-Codes. Stand {date} hatten {served} davon planmäßigen Passagierverkehr; die übrigen {rest} sind Flugplätze, Militärstützpunkte und private Landebahnen ohne Linienflüge.",
+    "faq_iata_a": "Der IATA-Flughafencode für {name} lautet {code}.",
+    "faq_icao_a": "Der ICAO-Code für {name} lautet {code}.",
+    "faq_where_a": "{name} ({iata}) befindet sich in {city}, {country}.",
+    "faq_tz_a": "Die lokale Zeitzone von {name} ({iata}) ist {tz}.",
+    "faq_deps_q": "Wie viele Flüge starten ab {name}?",
+    "faq_deps_a": "Bei der letzten Erfassung der Flugpläne am {date} wurden am {name} ({iata}) etwa {n} planmäßige Abflüge gezählt.",
+    "airport_lead": "{name} ({iata}) ist ein Flughafen für {city}, {country}.",
+    "replaced_line": "{name} ({iata}) übernahm den Flugverkehr von {predecessors}."
   },
   "ui": {
     "departures": "Abflüge",

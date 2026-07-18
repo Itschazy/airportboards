@@ -130,7 +130,15 @@
     "country_split": "{country} içinde IATA koduna sahip {count} havalimanından {served} tanesi, {date} itibarıyla tarifeli yolcu hizmeti sunmaktadır; geriye kalan {rest} tanesi, hava yolu uçuşu bulunmayan hava meydanlarıdır.",
     "grid_served": "Tarifeli uçuşlarla",
     "grid_unserved": "Tarifeli sefer yok",
-    "world_split": "AirportsBoard, dünya genelinde IATA koduna sahip {total} havalimanını takip eder. {date} tarihinde yapılan ölçüme göre bunların {served} tanesinde tarifeli yolcu uçuşları bulunuyordu; geri kalan {rest} tanesi ise havayolu uçuşu bulunmayan havaalanları, askeri üsler ve özel pistlerdir."
+    "world_split": "AirportsBoard, dünya genelinde IATA koduna sahip {total} havalimanını takip eder. {date} tarihinde yapılan ölçüme göre bunların {served} tanesinde tarifeli yolcu uçuşları bulunuyordu; geri kalan {rest} tanesi ise havayolu uçuşu bulunmayan havaalanları, askeri üsler ve özel pistlerdir.",
+    "faq_iata_a": "{name} için IATA havalimanı kodu {code}.",
+    "faq_icao_a": "{name} için ICAO kodu {code} şeklindedir.",
+    "faq_where_a": "{name} ({iata}), {city}, {country} konumunda yer almaktadır.",
+    "faq_tz_a": "{name} ({iata}) için yerel saat dilimi {tz}.",
+    "faq_deps_q": "{name} kalkışlı kaç uçuş var?",
+    "faq_deps_a": "Uçuş tarifeleri en son {date} tarihinde ölçüldüğünde {name} ({iata}) için yaklaşık {n} tarifeli kalkış kaydedildi.",
+    "airport_lead": "{name} ({iata}), {city}, {country} şehrine hizmet veren bir havalimanıdır.",
+    "replaced_line": "{name} ({iata}), {predecessors} uçuş trafiğini devraldı."
   },
   "ui": {
     "departures": "Kalkışlar",

@@ -130,7 +130,15 @@
     "country_split": "{country}にある国際航空運送協会の空港符号を持つ空港{count}か所のうち、{date}現在、{served}か所で定期旅客便が運航されています。残りの{rest}か所は航空会社の便がない飛行場です。",
     "grid_served": "定期便あり",
     "grid_unserved": "定期便の運航はありません",
-    "world_split": "エアポーツボードは、世界中の国際航空運送協会コードを持つ空港{total}か所を追跡しています。{date}時点で、そのうち{served}か所では定期旅客便が運航されており、残りの{rest}か所は航空会社の便が発着しない飛行場、軍用基地、私用滑走路です。"
+    "world_split": "エアポーツボードは、世界中の国際航空運送協会コードを持つ空港{total}か所を追跡しています。{date}時点で、そのうち{served}か所では定期旅客便が運航されており、残りの{rest}か所は航空会社の便が発着しない飛行場、軍用基地、私用滑走路です。",
+    "faq_iata_a": "{name}の国際航空運送協会空港コードは{code}です。",
+    "faq_icao_a": "{name}の国際民間航空機関空港コードは{code}です。",
+    "faq_where_a": "{name}（{iata}）は{country}の{city}に位置しています。",
+    "faq_tz_a": "{name}（{iata}）の現地時間帯は{tz}です。",
+    "faq_deps_q": "{name}から出発する便は何便ありますか？",
+    "faq_deps_a": "{date}に運航スケジュールを最後に確認した時点で、{name}（{iata}）では約{n}便の定期出発便が確認されました。",
+    "airport_lead": "{name}（{iata}）は、{country}の{city}を利用圏とする空港です。",
+    "replaced_line": "{name} ({iata}) は{predecessors}の航空需要を引き継ぎました。"
   },
   "ui": {
     "departures": "出発",
