@@ -42,7 +42,13 @@ function Chevron() {
   return <svg width="6" height="11" viewBox="0 0 6 11" fill="none" style={{ flexShrink: 0 }}><path d="M1 1L5 5.5L1 10" stroke="#3A3A3C" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" /></svg>;
 }
 
-export async function AirportBottom({ airport, locale, about, displayName, flights = [] }: { airport: Airport; locale: string; about: string | null; displayName?: string; flights?: FlightRow[] }) {
+export async function AirportBottom({ airport, locale, about, displayName, flights = [], noService = false, nearestServed = null }: {
+  airport: Airport; locale: string; about: string | null; displayName?: string; flights?: FlightRow[];
+  /** Measured: no airline operates scheduled service here (see data/airport-service.json). */
+  noService?: boolean;
+  /** Nearest airport that does have scheduled service — computed once by the page. */
+  nearestServed?: (Airport & { km: number }) | null;
+}) {
   const t = await getTranslations({ locale, namespace: 'home' });
   const name = displayName || airport.name;
   const city = getCityName(airport.city, locale);
@@ -86,7 +92,26 @@ export async function AirportBottom({ airport, locale, about, displayName, fligh
     // Only claim a timezone when we actually have one. 557 airports inherited the literal
     // "\N" null marker from the OpenFlights dump and rendered it as the visible answer.
     ...(airport.tz ? [{ q: t('faq_tz_q', { name }), a: `${airport.tz}${offset ? ` (${offset})` : ''}` }] : []),
-    { q: t('faq_arrive_q', { name }), a: t('faq_arrive_a') },
+    // "Arrive 3 hours before departure" is advice for a place you can fly from. On the 3,789
+    // airfields with no airline service and on closed airports it was being asserted as
+    // FAQPage markup directly under a notice saying no flights exist — a self-contradiction
+    // an answer engine reads as an unreliable source.
+    ...(noService || airport.closed ? [] : [{ q: t('faq_arrive_q', { name }), a: t('faq_arrive_a') }]),
+    // The questions people actually ask about a field with no airline service — and the
+    // answers nobody else publishes, because nobody else measured which airports have
+    // scheduled service. Both are plain, self-contained sentences, so they can be lifted
+    // verbatim by an answer engine.
+    ...(noService ? [{ q: t('faq_hasflights_q', { name }), a: t('faq_hasflights_a', { name, iata: airport.iata }) }] : []),
+    ...(noService && nearestServed
+      ? [{
+          q: t('faq_nearest_q', { name }),
+          a: t('faq_nearest_a', {
+            airport: getAirportName(nearestServed.iata, locale, nearestServed.name),
+            code: nearestServed.iata,
+            km: String(nearestServed.km),
+          }),
+        }]
+      : []),
     // "shows live arrivals and departures … updated every minute" is false on an airport
     // with an empty board, and it was being asserted as FAQPage markup on every page.
     ...(flights.length ? [{ q: t('faq_live_q', { name }), a: t('faq_live_a', { name, iata: airport.iata }) }] : []),

@@ -443,7 +443,7 @@ function BottomSheet({ flight, mode, onClose, tz, locale }: {
 
 // ─── Main Component ───────────────────────────────────────────────────────────
 
-export function FlightBoard({ airport, locale, defaultMode = 'departures', displayName, initialFlights, initialFetchedAt, noService = false }: {
+export function FlightBoard({ airport, locale, defaultMode = 'departures', displayName, initialFlights, initialFetchedAt, boardTotal, noService = false }: {
   airport: Airport;
   locale: string;
   defaultMode?: Mode;
@@ -451,6 +451,11 @@ export function FlightBoard({ airport, locale, defaultMode = 'departures', displ
   initialFlights?: Flight[];
   /** Epoch ms when airlabs produced the SSR board, so the first paint labels its true age. */
   initialFetchedAt?: number | null;
+  /** Total rows on the board BEFORE the SSR slice — the counter must not report the slice.
+   *  page.tsx sends only the first 40 rows to keep the HTML light, and the counter was
+   *  reading that array, so every large airport claimed exactly "40 departures today"
+   *  (LHR actually has 80). AI crawlers read that number as fact. */
+  boardTotal?: number;
   /** Airfield with no scheduled airline service at all. The board chrome is suppressed —
    *  a freshness dot, direction tabs and status filters over a permanently empty list read
    *  as a broken page. The notice above the board explains why it is empty. */
@@ -723,7 +728,7 @@ export function FlightBoard({ airport, locale, defaultMode = 'departures', displ
       {!loading && flights.length > 0 && (
         <div style={{ padding: '0 16px 14px', maxWidth: 960, margin: '0 auto' }}>
           <span style={{ fontSize: 13, color: C.secondary }}>
-            <span aria-hidden="true">{mode === 'departures' ? '✈' : '🛬'}</span> {mode === 'departures' ? t('departures_today', { count: flights.length }) : t('arrivals_today', { count: flights.length })}
+            <span aria-hidden="true">{mode === 'departures' ? '✈' : '🛬'}</span> {(() => { const n = flights === initialFlights && boardTotal != null ? boardTotal : flights.length; return mode === 'departures' ? t('departures_today', { count: n }) : t('arrivals_today', { count: n }); })()}
           </span>
         </div>
       )}

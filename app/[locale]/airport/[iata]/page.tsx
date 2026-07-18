@@ -24,6 +24,53 @@ export async function generateStaticParams() {
   return getStaticIataCodes().map(iata => ({ iata }));
 }
 
+/**
+ * The one true description for an airport page, used by BOTH the <meta> tags and the
+ * WebPage JSON-LD.
+ *
+ * They used to be computed separately: generateMetadata branched on closed/no-service while
+ * the JSON-LD always used main_description, so 3,789 airfields with no airline service and
+ * every closed airport shipped structured data promising a live flight board. AI crawlers
+ * read the JSON-LD, so that was the version they were being handed. One helper, one answer.
+ *
+ * Returns `title: null` for ordinary airports so the caller keeps its own title logic
+ * (which needs `showCity`); closed and no-service pages get a title that matches the body.
+ */
+async function airportDescription(opts: {
+  airport: NonNullable<ReturnType<typeof getAirport>>;
+  locale: string; name: string; city: string; country: string;
+  t: Awaited<ReturnType<typeof getTranslations>>;
+}): Promise<{ title: string | null; description: string }> {
+  const { airport, locale, name, city, country, t } = opts;
+  if (airport.closed) {
+    const tHome = await getTranslations({ locale, namespace: 'home' });
+    const successor = airport.successor ? getAirport(airport.successor) : null;
+    return {
+      title: `${name} (${airport.iata}) — ${tHome('closed_title')}`,
+      description: tHome('closed_body', { name, year: String(airport.closed) })
+        + (successor
+          // closed_successor contains <link> tags; plain t() cannot format tagged messages
+          // (it falls back to the literal key path), so render via markup() with a
+          // pass-through for the tag — we want the sentence, not the anchor, in <meta>.
+          ? ' ' + tHome.markup('closed_successor', {
+              successor: `${getAirportName(successor.iata, locale, successor.name)} (${successor.iata})`,
+              link: (chunks) => chunks,
+            })
+          : ''),
+    };
+  }
+  if (hasNoService(airport.iata)) {
+    // Don't advertise a live board for an airfield no airline serves — the snippet would be
+    // a promise the page cannot keep, and that is exactly what a policy reviewer clicks.
+    const tHome = await getTranslations({ locale, namespace: 'home' });
+    return {
+      title: `${name} (${airport.iata}) — ${tHome('ns_title')}`,
+      description: tHome('ns_meta', { airport: name, iata: airport.iata, city, country }),
+    };
+  }
+  return { title: null, description: t('main_description', { airport: name, iata: airport.iata, city, country }) };
+}
+
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale, iata } = await params;
   setRequestLocale(locale);
@@ -39,28 +86,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
   // A closed airport must not promise a live board in the SERP snippet either. Reuse the
   // on-page notice copy so the title and description say the same true thing.
-  let title = t('main_title', { airport: name, city, showCity, iata: airport.iata });
-  let description = t('main_description', { airport: name, iata: airport.iata, city, country });
-  if (airport.closed) {
-    const tHome = await getTranslations({ locale, namespace: 'home' });
-    const successor = airport.successor ? getAirport(airport.successor) : null;
-    title = `${name} (${airport.iata}) — ${tHome('closed_title')}`;
-    description = tHome('closed_body', { name, year: String(airport.closed) })
-      + (successor
-        // closed_successor contains <link> tags; plain t() cannot format tagged messages
-        // (falls back to the literal key path), so render via markup() with a pass-through.
-        ? ' ' + tHome.markup('closed_successor', {
-            successor: `${getAirportName(successor.iata, locale, successor.name)} (${successor.iata})`,
-            link: (chunks) => chunks,
-          })
-        : '');
-  } else if (hasNoService(airport.iata)) {
-    // Don't advertise a live board for an airfield no airline serves — the snippet would be
-    // a promise the page cannot keep, and that is exactly what a policy reviewer clicks.
-    const tHome = await getTranslations({ locale, namespace: 'home' });
-    title = `${name} (${airport.iata}) — ${tHome('ns_title')}`;
-    description = tHome('ns_meta', { airport: name, iata: airport.iata, city, country });
-  }
+  const { title: descTitle, description } = await airportDescription({ airport, locale, name, city, country, t });
+  const title = descTitle ?? t('main_title', { airport: name, city, showCity, iata: airport.iata });
   const canonical = `${BASE}/${locale}/airport/${airport.iata}`;
 
   const languages: Record<string, string> = {};
@@ -116,7 +143,9 @@ export default async function AirportPage({ params }: Props) {
   const name = getAirportName(airport.iata, locale, airport.name);
   const city = getCityName(airport.city, locale);
   const country = getCountryName(airport.country, locale);
-  const webDesc = t('main_description', { airport: name, iata: airport.iata, city, country });
+  // Same source as the <meta> description — see airportDescription(). Structured data is
+  // what AI crawlers actually parse, so it must not claim a live board the page cannot show.
+  const { description: webDesc } = await airportDescription({ airport, locale, name, city, country, t });
 
   const jsonLd = [
     {
@@ -216,8 +245,8 @@ export default async function AirportPage({ params }: Props) {
       {/* The visible <h1> now lives in FlightBoard's airport header (single semantic h1). */}
       {/* SSR only the first 40 rows to keep the HTML light (the client refetches the full
           board on mount); AirportBottom still gets the full set to aggregate routes/airlines. */}
-      <FlightBoard airport={airport} locale={locale} displayName={name} initialFlights={initialFlights.slice(0, 40)} initialFetchedAt={getBoardFetchedAt(airport.iata, 'departures')} noService={noService} />
-      <AirportBottom airport={airport} locale={locale} about={about} displayName={name} flights={initialFlights} />
+      <FlightBoard airport={airport} locale={locale} displayName={name} initialFlights={initialFlights.slice(0, 40)} initialFetchedAt={getBoardFetchedAt(airport.iata, 'departures')} boardTotal={initialFlights.length} noService={noService} />
+      <AirportBottom airport={airport} locale={locale} about={about} displayName={name} flights={initialFlights} noService={noService} nearestServed={nearestWithFlights} />
     </>
   );
 }
