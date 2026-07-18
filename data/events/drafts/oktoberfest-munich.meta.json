@@ -1,0 +1,37 @@
+{
+  "meta": {
+    "slug": "oktoberfest-munich",
+    "name": "Oktoberfest Munich (191st Wiesn)",
+    "startDate": "2026-09-19T12:00:00+02:00",
+    "endDate": "2026-10-04T23:30:00+02:00",
+    "venue": "Theresienwiese",
+    "venueCity": "Munich",
+    "country": "DE",
+    "type": "festival",
+    "officialUrl": "https://www.muenchen.de/en/events/oktoberfest",
+    "status": "scheduled",
+    "sources": [
+      "https://www.muenchen.de/en/events/oktoberfest",
+      "https://www.oktoberfest.de/en",
+      "https://en.wikipedia.org/wiki/Oktoberfest",
+      "https://www.muenchen.de/en/events/oktoberfest/how-get-oktoberfest-routes-tickets-stations-apps",
+      "https://www.oktoberfest.de/en/information/oktoberfest-opening-times/opening-hours-munich-oktoberfest",
+      "https://www.oktoberfest.de/en/magazin/oktoberfest-news/die-wiesn-2025",
+      "https://www.munich-airport.com/public-transport-260822",
+      "https://en.wikipedia.org/wiki/Memmingen_Airport",
+      "https://muenchenunterwegs.de/news/oktoberfest-2025-u-bahn-zeitweise-ueberlastet-bitte-fussweg-nutzen"
+    ],
+    "airports": [
+      {
+        "iata": "MUC",
+        "km": 42
+      },
+      {
+        "iata": "FMM",
+        "km": 112
+      }
+    ]
+  },
+  "facts": "- **Dates confirmed:** the 191st Oktoberfest runs Saturday 19 September – Sunday 4 October 2026, 16 days, on the Theresienwiese in Munich. Official opening is the ceremonial keg-tapping (\"O'zapft is!\") at 12:00 on the opening Saturday in the Schottenhamel tent. Entry to the grounds is free.\n- **Venue:** Theresienwiese is a 42-hectare fairground inside Munich, immediately southwest of the main station — not an out-of-town site. Roughly 15 minutes on foot from München Hauptbahnhof.\n- **Main gateway:** Munich Airport (MUC), about 40–42 km northeast of the venue by road. Realistic door-to-door 45–65 minutes depending on mode.\n- **MUC rail:** S-Bahn lines **S1** and **S8** connect the airport to the city. They alternate to give a 10-minute combined interval, and reach München Hauptbahnhof in approx. 40 minutes. S8 runs 24/7 (40-minute intervals 01:00–04:00, otherwise every 20 minutes); S1 runs roughly 03:00–midnight every 20 minutes. Getting off one stop earlier at **Hackerbrücke** gives a signed 10-minute walk to the north entrance and is usually faster than continuing to Hauptbahnhof.\n- **MUC bus:** the **Lufthansa Express Bus** runs non-stop between the airport and Hauptbahnhof in approx. 45 minutes, every 20 minutes, year-round; also serves Munich Nord (Schwabing) in approx. 25 minutes.\n- **MUC taxi / ride-hailing:** metered taxis and pre-booked private transfers both operate; typical run to the Oktoberfest area is roughly 35–50 minutes in normal traffic.\n- **Second gateway (low-cost only):** Memmingen Airport (FMM), marketed by Ryanair and Wizz Air as \"Munich West\" / Allgäu Airport, sits about 110 km from Munich city centre. Dedicated coach services run direct to Munich in approx. 80 minutes; alternatively a local bus to Memmingen railway station then Deutsche Bahn to Munich in approx. 1 hour. Treat it as a budget alternative, not a real Munich airport.\n- **Last mile — U-Bahn:** **U4/U5 to Theresienwiese** is the closest station and the most crowded. Official city advice lists calmer alternatives, all about a 10-minute walk: U4/U5 to Schwanthalerhöhe (still very crowded), U3/U6 to Goetheplatz (normal), and U3/U6 to Poccistraße (relatively quiet).\n- **Last mile — S-Bahn / tram / bus:** all S-Bahn lines stop at Hackerbrücke (10-minute walk to the north entrance) and Hauptbahnhof (15-minute walk). Trams 16/17 to Hackerbrücke; 18/19 to Holzapfelstraße or Hermann-Lingg-Straße; 20/21 to Hauptbahnhof. Metro buses 53 and 58, plus buses 62 and 134, serve stops around the grounds.\n- **No parking:** there is no parking at the Theresienwiese. Drivers are directed to park-and-ride lots outside the city's low-emission zone, which requires a green environmental sticker to enter.\n- **Congestion pattern:** U4/U5 frequency is raised to a train every 2.5–3.3 minutes between the city centre and Theresienwiese, and MVG still warns of overload at peak. Hackerbrücke station is closed on demand when pedestrian volumes spike, typically weekends and evenings. Closures and crowding can add an hour or more to arrival. The MVG app has a dedicated Oktoberfest function that routes around the current crush in real time.\n- **Peak days:** the three Saturdays and the public holiday are traditionally the strongest days. In 2026 German Unity Day (3 October) falls on a Saturday and coincides with the closing weekend — the single heaviest concentration of the run. Precedent: on 3 October 2025 the grounds were temporarily closed for overcrowding, with about 150,000 guests still arriving after reopening. The middle weekend (around 25–27 September 2026) is traditionally the \"Italian weekend\", when large numbers of visitors drive up from northern Italy.\n- **Fly-home peak:** the closing weekend of 3–4 October 2026 and the following Monday, 5 October. The final Sunday (\"Kehraus\") closes the festival, pushing departures into Sunday evening and Monday morning. The opening Friday/Saturday (18–19 September) is the mirror-image arrival peak.\n- **International draw:** Oktoberfest drew roughly 6.5 million visitors in 2025 (6.7 million in 2024). Around a fifth of guests come from abroad on average, rising to about 30 percent on the busiest Saturdays. Leading source countries: USA, Italy, United Kingdom, Austria, Poland, Spain, France, India and Sweden. Australia is also a recognised long-haul market.",
+  "guidance": "Neutral service-directory tone. No prices, fares, flight numbers, timetables or gate numbers. Do not imply this site sells tickets or is official. If an airport in the list is far from the venue, say so plainly and call it a fallback rather than a nearby airport."
+}

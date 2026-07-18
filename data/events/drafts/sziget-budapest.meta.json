@@ -1,0 +1,34 @@
+{
+  "meta": {
+    "slug": "sziget-budapest",
+    "name": "Sziget Festival 2026",
+    "startDate": "2026-08-11T08:00:00+02:00",
+    "endDate": "2026-08-16T12:00:00+02:00",
+    "venue": "Óbuda Island (Óbudai-sziget), Május 9. park",
+    "venueCity": "Budapest",
+    "country": "HU",
+    "type": "festival",
+    "officialUrl": "https://szigetfestival.com/en/",
+    "status": "scheduled",
+    "sources": [
+      "https://szigetfestival.com/en/festival-info",
+      "https://szigetfestival.com/en/travel/local-travel-to-sziget/",
+      "https://szigetfestival.com/en/travel",
+      "https://szigetfestival.com/en/",
+      "https://visithungary.com/event/sziget-festival-2026",
+      "https://en.wikipedia.org/wiki/Sziget_Festival",
+      "https://www.sziget.minibud.hu/",
+      "https://ra.co/events/2322876",
+      "https://www.rome2rio.com/s/Budapest-Airport-BUD/Sziget-Festival",
+      "https://bkk.hu/en/news/2024/08/take-public-transport-to-the-sziget-festival.13003/"
+    ],
+    "airports": [
+      {
+        "iata": "BUD",
+        "km": 28
+      }
+    ]
+  },
+  "facts": "- **Main gateway: Budapest Ferenc Liszt International Airport (BUD)** — the only commercial airport serving Budapest, so effectively 100% of fly-in traffic for Sziget passes through it. No credible second airport serves the venue.\n- **Distance and time:** road distance BUD → Óbuda Island is roughly 28 km, about 35 minutes by car in normal traffic. The airport sits southeast of the city; the island is in the north, so the transfer crosses the whole metropolitan area.\n- **Venue:** Óbudai-sziget (\"Old Buda Island\"), a ~108-hectare island in the Danube in northern Budapest. Postal address Május 9. park, Budapest 1033.\n- **Rail to the venue:** the standard route is the **HÉV H5 suburban railway** from Batthyány tér (interchange with **metro line M2**) to **Filatorigát** station, roughly a 10-minute walk from the festival entrance. Trains run every 15–20 minutes and BKK adds extra day-and-night H5 service during the festival.\n- **Note on bridges:** the H-bridge is closed to pedestrians and cyclists, which is why Filatorigát — not the nearer stop — is the designated alighting point. The main entrance is at the K-bridge.\n- **Other surface transport that actually exists:** trams 4 and 6 from Nyugati railway station to Margit híd; tram 1 from Népliget coach station to Árpád híd; metro M3 to Gyöngyösi utca; city bus 9 to Óbuda, Bogdáni út.\n- **Airport-to-city buses:** the **100E Airport Express** (24/7, roughly 65 minutes to the centre) and the all-night **200E** bus to Kőbánya-Kispest for metro M3 (roughly 90 minutes). Both are ordinary scheduled BKK services, not festival-only.\n- **Direct airport shuttle:** miniBUD, the airport's shuttle operator, runs an official Sziget transfer by coach straight from BUD to the festival main entrance and registration point, with return departures from inside the festival area. Sziget also advertises a free airport shuttle for holders of a valid Sziget Citypass by Budapest Card.\n- **River transfer:** an official boat service runs between Jászai Mari tér (Dock 10, Pest side) and a dock on the island itself, roughly 22–26 minutes, letting arrivals bypass the main-entrance queue.\n- **Taxi / ride-hailing:** Bolt is the festival's official taxi partner and drops at the K-bridge main entrance; conventional taxis operate normally. Guidance is to avoid road transport at peak arrival and departure hours because the streets around the island congest heavily and rail is faster.\n- **Congestion pattern:** parking near the entrance is limited and must be booked in advance; road access around Óbuda clogs on the first arrival day and on the final morning, while the H5 and the boat keep moving. The crush is concentrated at Filatorigát and the K-bridge in the afternoon/evening on arrival days.\n- **Arrival peak:** Monday 10 August (camping move-in day) and Tuesday 11 August, when the site opens at 08:00 and gates open in the early afternoon.\n- **Fly-home peak:** **Sunday 16 August** is the dominant departure day — the programme runs into Sunday morning and the campsite officially closes at 12:00 on 16 August, pushing tens of thousands toward the airport in one window. Saturday 15 August is the secondary wave (day-ticket holders and early leavers).\n- **International draw:** around half of all Sziget attendees come from outside Hungary, with over 100 nationalities represented. The single largest foreign contingent is from the **Netherlands**, followed by **Belgium, the United Kingdom, Germany, Italy, France, Ireland and Romania**. Attendance is in the hundreds of thousands across the run (416,000 in 2025; the all-time peak was 565,000 in 2018), making August one of the busiest months of the year at BUD.\n- **Other inbound modes worth naming:** FlixBus coach network across Europe, MÁV Hungarian Railways international services, and a long-running festival \"party train\" bringing groups in from elsewhere in Europe. Wizz Air is the festival's official airline partner and has a large base at BUD.",
+  "guidance": "Neutral service-directory tone. No prices, fares, flight numbers, timetables or gate numbers. Do not imply this site sells tickets or is official. If an airport in the list is far from the venue, say so plainly and call it a fallback rather than a nearby airport."
+}

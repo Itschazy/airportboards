@@ -1,0 +1,230 @@
+{
+  "meta": {
+    "slug": "f1-abu-dhabi",
+    "name": "Formula 1 Etihad Airways Abu Dhabi Grand Prix 2026",
+    "startDate": "2026-12-04T13:30:00+04:00",
+    "endDate": "2026-12-06T23:59:00+04:00",
+    "venue": "Yas Marina Circuit",
+    "venueCity": "Abu Dhabi",
+    "country": "AE",
+    "type": "sports",
+    "officialUrl": "https://www.abudhabigp.com/en/",
+    "status": "scheduled",
+    "sources": [
+      "https://www.formula1.com/en/racing/2026/united-arab-emirates",
+      "https://en.wikipedia.org/wiki/2026_Formula_One_World_Championship",
+      "https://www.abudhabigp.com/en/",
+      "https://www.mediaoffice.abudhabi/en/sport/ethara-wins-2025-f1-promoter-of-the-year-award-and-draws-record-international-visitors-to-etihad-airways-abu-dhabi-grand-prix/",
+      "https://ae.visamiddleeast.com/en_AE/about-visa/newsroom/press-releases/prl-11022025.html",
+      "https://visitabudhabi.ae/en/plan-your-trip/getting-around-abu-dhabi/yas-express",
+      "https://www.thef1spectator.com/abu-dhabi-f1-travel-guide/getting-there/",
+      "https://www.wam.ae/en/article/blywk7v-etihad-rail-launch-passenger-services-2026",
+      "https://www.timeoutabudhabi.com/news/uae-public-holidays-2026",
+      "https://en.wikipedia.org/wiki/Yas_Marina_Circuit"
+    ],
+    "airports": [
+      {
+        "iata": "AUH",
+        "km": 11
+      },
+      {
+        "iata": "DXB",
+        "km": 125
+      }
+    ]
+  },
+  "locales": {
+    "en": {
+      "title": "Abu Dhabi Grand Prix 2026 Airports & Live Flights",
+      "description": "Plan flights for the Formula 1 Abu Dhabi Grand Prix 2026 with live flight boards for AUH/DXB, airport distances and race-week travel tips.",
+      "h1": "Formula 1 Abu Dhabi Grand Prix 2026 airport guide",
+      "banner": "Open the Abu Dhabi Grand Prix 2026 airport guide",
+      "intro": "The Formula 1 Etihad Airways Abu Dhabi Grand Prix 2026 runs at Yas Marina Circuit on Yas Island, Abu Dhabi, with the organiser’s four-day window from 3–6 December and F1 sessions from Friday 4 to Sunday 6 December. The race starts at 17:00 local time on Sunday. With AUH and DXB handling international arrivals around a UAE National Day holiday stretch, live airport boards help travellers spot delays before committing to road transfers.",
+      "getting": "AUH (Zayed International Airport) is the main gateway: about 11 km from Yas Marina Circuit, normally 10–15 minutes by car. DXB is a fallback secondary gateway, roughly 125 km away and about 1h15–1h30 by car in normal conditions. Options include regulated Abu Dhabi silver taxis, Uber, Careem, Yas Express shuttles on Yas Island, public buses, the AUH arrivals to Yas hotel shuttle for eligible guests, and Yas Mall park and ride.",
+      "leaving": "After the Sunday 6 December race, departures tend to bunch because the 17:00 local start finishes in the evening and Monday is a working day. The fly-home peak is late Sunday night and especially Monday 7 December at AUH and DXB. Yas Island access roads and drop-off areas are the pinch points, and previous editions saw long taxi waits after the chequered flag, so arrive earlier than usual and check live departures before leaving for the airport.",
+      "tips": "Build in extra road time during the 2–6 December holiday and race-week overlap. If using DXB, treat the Dubai–Yas trip as a long transfer, not a nearby airport hop. Abu Dhabi has no metro to the circuit; plan taxis, ride-hailing, buses, shuttles or park and ride. Keep baggage, hotel check-in and post-race transport queues in mind.",
+      "sec": {
+        "boards": "AUH and DXB live boards for Yas Marina",
+        "getting": "Getting to Yas Marina Circuit from AUH and DXB",
+        "leaving": "Flying home after the twilight race",
+        "tips": "Race-week airport travel tips"
+      }
+    },
+    "ru": {
+      "title": "Гран-при Абу-Даби F1 2026: аэропорты AUH/DXB и рейсы",
+      "description": "Гран-при Абу-Даби F1 2026: онлайн-табло рейсов AUH/DXB в реальном времени, путь до Yas Marina Circuit и обратный вылет.",
+      "h1": "Как лететь на Гран-при Абу-Даби F1 2026",
+      "banner": "Откройте гид по рейсам на Гран-при Абу-Даби",
+      "intro": "Formula 1 Etihad Airways Abu Dhabi Grand Prix 2026 проходит 3–6 декабря на Yas Marina Circuit на острове Yas в Абу-Даби. Это финал сезона чемпионата мира Формулы-1 2026: заезды F1 идут 4 декабря, 5 декабря и 6 декабря, гонка стартует в 17:00 по местному времени. На эти даты накладываются выходные после Eid Al Etihad 2–3 декабря, поэтому онлайн-табло AUH и DXB полезно проверять до выезда в аэропорт.",
+      "getting": "Главный авиаузел для трассы — AUH, Zayed International Airport: до Yas Marina Circuit около 11 км по дороге, обычно 10–15 минут на машине при нормальном движении. DXB — реальный, но дальний запасной вариант: примерно 125 км и 1 ч 15 мин–1 ч 30 мин на автомобиле. До острова едут такси, Uber и Careem; по Yas Island ходит бесплатный Yas Express. Есть автобусы Abu Dhabi Mobility, шаттл AUH–отели Yas для гостей с ваучером и перехватывающая парковка у Yas Mall.",
+      "leaving": "После гонки 6 декабря основная волна вылетов приходится на поздний вечер воскресенья и особенно на понедельник 7 декабря. Гонка начинается в 17:00, а понедельник — рабочий день, поэтому в AUH и DXB ожидайте загруженные терминалы и утренний пик. На острове Yas узкое место — подъездные дороги и зоны посадки; после финиша возможны длинные очереди на такси. Приезжайте раньше обычного и проверьте онлайн-табло вылетов перед выездом.",
+      "tips": "Планируйте прилёт с запасом: для полного официального окна программы нужен приезд к четвергу 3 декабря, а не только к пятнице. Держите маршрут через AUH и резерв через DXB отдельно, потому что DXB далеко от трассы. Сверяйте статус рейса перед поездкой, заранее выбирайте такси, шаттл или автобус и учитывайте высокий спрос 2–6 декабря.",
+      "sec": {
+        "boards": "Табло AUH и дальний резерв DXB",
+        "getting": "Маршрут к Yas Marina Circuit",
+        "leaving": "Вылет домой после гонки 6 декабря",
+        "tips": "Советы для недели Гран-при в Абу-Даби"
+      }
+    },
+    "zh": {
+      "title": "2026阿布扎比F1大奖赛机场与航班指南：AUH/DXB",
+      "description": "为2026年Formula 1阿提哈德航空阿布扎比大奖赛整理AUH与DXB实时航班看板、机场距离、到亚斯码头赛道交通和赛后返程高峰，帮助你规划12月2日至7日的机场往返。",
+      "h1": "2026阿布扎比F1大奖赛：机场、实时航班与赛道交通",
+      "banner": "前往亚斯码头赛道？查看大奖赛机场与航班指南",
+      "intro": "Formula 1 阿提哈德航空阿布扎比大奖赛 2026 将于12月4日至6日在阿布扎比亚斯岛的亚斯码头赛道举行，主办方也按12月3日至6日的四天窗口安排活动。12月2日至3日适逢阿联酋国庆假期，叠加周末和赛事客流，AUH与DXB的到港、离港信息值得提前查看。",
+      "getting": "AUH扎耶德国际机场是主要门户，距亚斯码头赛道约11公里，正常路况下乘车约10至15分钟。DXB迪拜国际机场约125公里，正常车程约1小时15分至1小时30分，是距离较远但实际可用的备选门户。可用方式包括出租车、网约车、Yas Express岛内穿梭巴士、公共巴士、机场至酒店接驳、Yas Mall停车换乘；阿布扎比没有通往赛道的地铁。",
+      "leaving": "返程压力集中在12月6日周日晚间比赛后及12月7日周一，AUH和DXB的晚间离港与周一早高峰会更紧张。亚斯岛道路和上落客点容量有限，往届赛后出租车等候曾明显拉长。离开酒店或赛道前，先查看实时离港看板，并比平时更早到机场。",
+      "tips": "大赛周把机场、道路和酒店需求一起规划：长途航班旅客优先确认到港状态，迪拜住宿者预留跨城车程；行李、护照和接驳地点提前整理。若使用铁路或巴士，只把它们视为部分路段方案，最后仍需安排前往亚斯岛和赛道的地面交通。",
+      "sec": {
+        "boards": "AUH/DXB实时航班看板",
+        "getting": "从机场前往亚斯码头赛道",
+        "leaving": "大奖赛后返程航班高峰",
+        "tips": "大赛周航空出行提示"
+      }
+    },
+    "ar": {
+      "title": "فورمولا 1 أبوظبي 2026: المطارات والرحلات",
+      "description": "دليل السفر الجوي لسباق فورمولا 1 أبوظبي 2026: أقرب المطارات، النقل إلى حلبة مرسى ياس، ولوحات الرحلات المباشرة AUH/DXB.",
+      "h1": "مطارات ورحلات فورمولا 1 أبوظبي 2026",
+      "banner": "افتح دليل مطارات سباق أبوظبي 2026",
+      "intro": "يقام سباق Formula 1 Etihad Airways Abu Dhabi Grand Prix 2026 في حلبة مرسى ياس، أبوظبي، من 4 إلى 6 ديسمبر 2026، ضمن ختام بطولة العالم للفورمولا 1. وتسوّق الجهة المنظمة نافذة 3–6 ديسمبر، مع يوم جماهيري غير مخصص للسباق يوم الخميس. حول هذه التواريخ، تساعد لوحات الرحلات المباشرة لمطاري AUH وDXB على متابعة الوصول والمغادرة عند تداخل أسبوع السباق مع عطلة عيد الاتحاد.",
+      "getting": "المطار الرئيسي هو AUH، مطار زايد الدولي في أبوظبي، على نحو 11 كم من حلبة مرسى ياس، أي 10–15 دقيقة بالسيارة في الحركة العادية. DXB في دبي بوابة بديلة حقيقية لكنه بعيد، نحو 125 كم وقرابة ساعة و15 دقيقة إلى ساعة و30 دقيقة بالسيارة. تتوافر سيارات الأجرة الفضية، Uber وCareem، حافلات Yas Express داخل الجزيرة، حافلات أبوظبي 190 و102، حافلات المطار ذات بادئة A، وخيار الوقوف في ياس مول مع حافلة إلى الحلبة.",
+      "leaving": "تتركز موجة السفر إلى المنزل بعد نهاية السباق المسائي؛ نقطة الضغط المتوقعة هي أواخر الأحد 6 ديسمبر، وبصورة أكبر صباح الاثنين 7 ديسمبر، في AUH وDXB. لأن السباق يبدأ 17:00 بالتوقيت المحلي والاثنين يوم عمل، قد تكون صالات المطار والطرق الخارجة من ياس مزدحمة. غادر أبكر من المعتاد، وراجع لوحة المغادرات المباشرة قبل التحرك إلى المطار لتفادي انتظار غير ضروري.",
+      "tips": "خطط للوصول قبل الخميس إذا كنت تريد برنامج 3–6 ديسمبر كاملاً. لا تعتمد على مترو إلى الحلبة؛ مترو دبي لا يصل إلى أبوظبي أو جزيرة ياس. اترك هامشاً للتنقل بين الفنادق والبوابات، واستخدم Yas Express أو سيارات الأجرة عند الحاجة. احتفظ ببديل نقل إذا طالت طوابير ما بعد السباق.",
+      "sec": {
+        "boards": "لوحات AUH وDXB المباشرة لسباق أبوظبي",
+        "getting": "الوصول إلى حلبة مرسى ياس من المطارات",
+        "leaving": "العودة الجوية بعد سباق الأحد",
+        "tips": "نصائح سفر لأسبوع فورمولا 1 في ياس"
+      }
+    },
+    "de": {
+      "title": "Abu Dhabi Grand Prix 2026: Flughäfen & Flüge AUH/DXB",
+      "description": "Anreise zum Abu Dhabi Grand Prix 2026: Flughäfen AUH und DXB, Transfers nach Yas Island und Live-Flugtafeln für AUH/DXB.",
+      "h1": "Flüge zum Abu Dhabi Grand Prix 2026",
+      "banner": "Grand-Prix-Anreise ab AUH und DXB prüfen",
+      "intro": "Der Formula 1 Etihad Airways Abu Dhabi Grand Prix 2026 findet vom 4. bis 6. Dezember am Yas Marina Circuit auf Yas Island in Abu Dhabi statt; das vermarktete Programm beginnt bereits am 3. Dezember mit einem Fan-Tag ohne Rennbetrieb. Als Saisonfinale mit Training, Qualifying und Rennen zieht die Veranstaltung viele internationale Fluggäste an. Rund um Eid Al Etihad am 2./3. Dezember helfen Live-Flugtafeln, Ankünfte in AUH und DXB früh zu prüfen.",
+      "getting": "AUH, Zayed International Airport, ist das Haupttor: etwa 11 km vom Yas Marina Circuit, normalerweise 10–15 Minuten mit dem Auto. DXB liegt rund 125 km entfernt und ist mit etwa 1:15–1:30 Stunden Fahrt klar ein Ausweichflughafen, auch wenn viele Besucher über Dubai reisen. Vor Ort gibt es regulierte silberne Taxis, Uber, Careem, Yas-Express-Shuttles auf Yas Island, öffentliche Busse, einen AUH-Hotelshuttle für Yas-Hotelgäste mit Buchungsvoucher und Park-and-Ride ab Yas Mall.",
+      "leaving": "Nach dem Rennen am Sonntag, 6. Dezember, startet der Heimflug-Andrang spät am Sonntagabend und am stärksten am Montag, 7. Dezember. Weil das Rennen um 17:00 Uhr Ortszeit beginnt und Montag ein Arbeitstag ist, können AUH und DXB besonders voll werden. Planen Sie mehr Zeit als üblich ein, auch für Zufahrten auf Yas Island und Taxi-Wartezeiten. Prüfen Sie die Live-Abflugtafel, bevor Sie zum Flughafen losfahren.",
+      "tips": "Prüfen und planen Sie Wege getrennt: Flugstatus, Hotel, Transfer und Rückfahrt vom Circuit. Rechnen Sie vom 2. bis 6. Dezember mit höherer Nachfrage auf Straßen, in Hotels und auf Regionalflügen. Abu Dhabi hat keine Metro; die Dubai Metro fährt nicht nach Abu Dhabi oder Yas Island. Für Bahnstrecken ist zusätzlich ein Taxi zum Circuit nötig.",
+      "sec": {
+        "boards": "Live-Flugtafeln für AUH und DXB zum Grand Prix",
+        "getting": "Vom Flughafen zum Yas Marina Circuit",
+        "leaving": "Heimflüge nach dem Saisonfinale",
+        "tips": "Reisetipps für Yas Island im Rennwochenende"
+      }
+    },
+    "ko": {
+      "title": "2026 포뮬러 1 아부다비 GP 공항·항공편 | AUH·DXB",
+      "description": "2026 F1 에티하드항공 아부다비 그랑프리 기간 야스 마리나 서킷 이동을 준비하세요. AUH/DXB 실시간 운항 보드로 도착·출발 지연과 귀국 항공편을 확인하고, 자이드 국제공항·두바이 국제공항 이동 시간과 셔틀 정보를 봅니다.",
+      "h1": "2026 포뮬러 1 아부다비 그랑프리 공항 이동 안내",
+      "banner": "AUH·DXB에서 야스 마리나 서킷 이동 안내 열기",
+      "intro": "포뮬러 1 에티하드항공 아부다비 그랑프리 2026은 2026년 12월 4일 금요일부터 12월 6일 일요일까지 아부다비 야스 아일랜드의 야스 마리나 서킷에서 열리는 2026 포뮬러 1 월드 챔피언십 시즌 최종전입니다. 금요일에는 연습 1·2, 토요일에는 연습 3과 예선, 일요일에는 결승이 이어집니다. 주최 측은 12월 3~6일을 4일 창구로 안내하며, 목요일은 비경주 팬 데이입니다. 아랍에미리트 국경일인 이드 알 에티하드가 12월 2~3일과 겹쳐 AUH와 DXB 도착 항공편, 도로 수요가 길게 높아질 수 있어 실시간 공항 보드 확인이 중요합니다.",
+      "getting": "야스 마리나 서킷의 주 관문은 AUH 자이드 국제공항입니다. 도로로 약 11km, 정상 교통 기준 자동차로 약 10~15분이라 야스 아일랜드 접근이 가장 짧습니다. DXB 두바이 국제공항은 도로 약 125km, 정상 조건 약 1시간 15분~1시간 30분으로, 가까운 공항이 아니라 두바이에 머무는 여행객의 보조 관문입니다. 이동 수단은 규제된 실버 택시, 우버·카림, 야스 익스프레스 셔틀, 아부다비 모빌리티 버스 190·102·A계열, AUH 도착층의 야스 호텔 투숙객 셔틀, 야스 몰 주차 후 셔틀이 있습니다.",
+      "leaving": "결승은 12월 6일 일요일 17:00 현지 시간에 시작하는 트와일라이트 레이스라, 귀국 수요는 늦은 일요일 밤과 특히 12월 7일 월요일에 몰립니다. AUH와 DXB의 늦은 출발편, 월요일 아침 출국 물결이 혼잡 지점입니다. 체커기 직후에는 야스 아일랜드의 제한된 진입 도로와 승하차 구역, 택시 대기가 병목이 될 수 있습니다. 공항으로 출발하기 전 실시간 출발 보드에서 지연과 상태를 확인하고, 평소보다 일찍 도착하도록 여유를 두세요.",
+      "tips": "큰 행사 주간에는 항공편, 도로, 호텔 수요가 같은 기간에 겹칩니다. AUH를 우선 관문으로 보고, DXB를 쓰면 장거리 도로 이동 시간을 별도로 잡으세요. 아부다비에는 메트로가 없고 두바이 메트로도 야스 아일랜드까지 가지 않습니다. 에티하드 레일은 야스 아일랜드 역이 없어, 이용 가능하더라도 아부다비 도착 뒤 택시 등 추가 이동이 필요합니다. 야스 익스프레스와 버스 노선은 섬 안팎 이동을 보완합니다.",
+      "sec": {
+        "boards": "야스 마리나 서킷 인근 공항과 실시간 보드",
+        "getting": "야스 아일랜드로 들어가는 공항 이동",
+        "leaving": "체커기 후 AUH·DXB 귀국 흐름",
+        "tips": "그랑프리 주간 항공 이동 팁"
+      }
+    },
+    "ja": {
+      "title": "F1アブダビGP 2026 空港・フライト案内｜AUH・DXB",
+      "description": "2026年F1エティハド航空アブダビGPの空路アクセス案内。ヤス・マリーナ・サーキット最寄りAUHと、代替のDXBのライブ発着ボードで12月3〜7日の到着・出発前に遅延や混雑を確認できます。",
+      "h1": "F1アブダビGP 2026：AUH・DXB空港とフライト案内",
+      "banner": "F1アブダビGPの空港アクセス案内を開く",
+      "intro": "Formula 1 Etihad Airways Abu Dhabi Grand Prix 2026は、2026年12月4日から6日までアブダビのヤス島、ヤス・マリーナ・サーキットで行われる2026年F1世界選手権の最終戦です。主催者は12月3〜6日の4日間をイベント期間として案内し、3日は非レースのファンデーです。UAE National Day直後と重なるため、AUHとDXBのライブ空港ボードで到着便を確認しておくと移動計画を立てやすくなります。",
+      "getting": "主な玄関口はAUH（ザイード国際空港）で、ヤス・マリーナ・サーキットまで道路距離で約11km、通常の車移動で約10〜15分です。DXB（ドバイ国際空港）は約125km、通常で約1時間15分〜1時間30分のため、近隣空港ではなく代替ゲートウェイです。現地ではタクシー、Uber、Careem、ヤス島内のYas Express、公共バス、AUH到着口からのホテル宿泊者向けシャトル、ヤス・モールのパークアンドライドが利用されます。",
+      "leaving": "決勝は12月6日（日）17:00現地時間に始まるため、帰路のピークは同日深夜の出発便と、特に12月7日（月）朝の便に集中します。レース後はヤス島のアクセス道路や乗降場所が混み、過去にはタクシー待ちが約2時間に達した例もあります。AUH、DXBへ向かう前にライブ出発ボードを確認し、通常より早めに空港へ着く計画にしてください。",
+      "tips": "大規模イベント期間は、空港よりもヤス島周辺の道路と降車地点が混みやすい点に注意してください。アブダビにはメトロがなく、ドバイメトロもヤス島へは直通しません。荷物、ホテルの場所、帰国便の時間に合わせて、タクシー、シャトル、バス、パークアンドライドを事前に組み合わせておくと安心です。",
+      "sec": {
+        "boards": "AUH・DXBのライブ発着ボード",
+        "getting": "ヤス・マリーナ・サーキットへの移動",
+        "leaving": "決勝後の帰国便ピーク",
+        "tips": "F1アブダビGP期間の空路移動ヒント"
+      }
+    },
+    "fr": {
+      "title": "Grand Prix F1 Abu Dhabi 2026 : aéroports et vols",
+      "description": "Accès aérien au Grand Prix F1 d’Abu Dhabi 2026 : consultez les tableaux de vols en direct AUH/DXB et les trajets vers Yas Marina.",
+      "h1": "Vols et aéroports pour le Grand Prix F1 Abu Dhabi 2026",
+      "banner": "Ouvrir le guide vols du Grand Prix F1 à Yas Marina",
+      "intro": "Le Formula 1 Etihad Airways Abu Dhabi Grand Prix 2026 se tient au Yas Marina Circuit, sur Yas Island à Abu Dhabi, du 4 au 6 décembre 2026, dans une fenêtre officielle élargie du 3 au 6 décembre. Finale de la saison 2026, l’épreuve attire un trafic aérien international important via AUH et DXB. Autour de ces dates, consulter les tableaux de vols en direct aide à suivre arrivées, retards et départs avant de rejoindre le circuit.",
+      "getting": "AUH, Zayed International Airport, est la porte d’entrée principale : environ 11 km du Yas Marina Circuit, soit 10 à 15 minutes en voiture en circulation normale. DXB, à Dubaï, est une solution de repli réelle mais éloignée, à environ 125 km et 1 h 15 à 1 h 30 par route. Côté accès, les options incluent taxis réglementés, Uber, Careem, Yas Express sur l’île, bus publics, navette AUH-hôtels Yas pour clients éligibles ou park and ride à Yas Mall.",
+      "leaving": "Après la course du dimanche 6 décembre, le pic de retour aérien se concentre tard le soir puis surtout le lundi 7 décembre, à AUH comme à DXB. Les accès de Yas Island, les déposes et les taxis peuvent être très chargés; des éditions précédentes ont signalé jusqu’à environ deux heures d’attente après le drapeau à damier. Prévoyez d’arriver plus tôt que d’habitude à l’aéroport et vérifiez le tableau des départs en direct avant de partir.",
+      "tips": "Du 2 au 6 décembre, la fête nationale des Émirats, le week-end et la semaine de course se superposent : gardez une marge pour routes, hôtels et vols régionaux. Confirmez l’aéroport utilisé avant de réserver un transfert, car DXB est loin du circuit. Abu Dhabi n’a pas de métro vers Yas Island; si vous utilisez le rail interurbain, il faut prévoir un taxi final.",
+      "sec": {
+        "boards": "Tableaux AUH/DXB pour Yas Marina",
+        "getting": "Rejoindre Yas Marina depuis AUH ou DXB",
+        "leaving": "Rentrer après la course du dimanche",
+        "tips": "Conseils de voyage pour la semaine de course"
+      }
+    },
+    "es": {
+      "title": "F1 Abu Dhabi GP 2026: vuelos y aeropuertos AUH/DXB",
+      "description": "Consulta paneles de vuelos en vivo para AUH/DXB y planifica llegadas y salidas del Formula 1 Etihad Airways Abu Dhabi Grand Prix 2026.",
+      "h1": "Vuelos para el GP de Abu Dhabi F1 2026",
+      "banner": "Abre la guía de vuelos del GP de Abu Dhabi",
+      "intro": "El Formula 1 Etihad Airways Abu Dhabi Grand Prix 2026 se celebra del 4 al 6 de diciembre de 2026 en Yas Marina Circuit, en Yas Island, Abu Dhabi. El organizador lo presenta como una ventana de cuatro días, del 3 al 6 de diciembre, con jornada de aficionados el jueves. Al coincidir con Eid Al Etihad el 2 y 3 de diciembre, conviene revisar los paneles en vivo de AUH y DXB antes de viajar.",
+      "getting": "AUH, Zayed International Airport, es la puerta principal: está a unos 11 km del circuito, normalmente 10 a 15 minutos en coche. DXB, Dubai International, queda a unos 125 km y 1 h 15-1 h 30 en condiciones normales; úsalo como alternativa si vuelas a Dubai. Hay taxis, Uber y Careem; las rutas 190 y 102 conectan Abu Dhabi con Yas Island, las rutas A sirven AUH, y Yas Express opera dentro de la isla. También hay lanzadera AUH-hotel para huéspedes de Yas y park and ride en Yas Mall.",
+      "leaving": "Tras la carrera del domingo 6 de diciembre, que empieza a las 17:00 hora local, la oleada de regreso se concentra tarde esa noche y, sobre todo, el lunes 7 de diciembre. AUH y DXB pueden recibir muchos pasajeros de salida, además de tráfico por carretera desde Yas Island. Sal con más margen de lo habitual, especialmente si dependes de taxi o recogida, y revisa el panel de salidas en vivo antes de salir hacia el aeropuerto.",
+      "tips": "Reserva margen para traslados por carretera: Yas Island tiene accesos limitados y los puntos de bajada se saturan. No planifiques llegar al circuito en metro; Dubai Metro no llega a Abu Dhabi ni a Yas Island. Si usas DXB, separa claramente el tramo Dubai-Abu Dhabi del traslado final. Lleva a mano documentos de viaje, confirmaciones de hotel y una opción de transporte alternativa.",
+      "sec": {
+        "boards": "Paneles en vivo para AUH y DXB durante el GP",
+        "getting": "Cómo llegar a Yas Marina Circuit desde el aeropuerto",
+        "leaving": "Regreso en avión tras la carrera del domingo",
+        "tips": "Consejos de viaje para la semana del GP"
+      }
+    },
+    "it": {
+      "title": "GP Abu Dhabi F1 2026: aeroporti e voli AUH/DXB",
+      "description": "Guida voli per il GP Abu Dhabi F1 2026: consulta i tabelloni voli live di AUH/DXB e pianifica arrivi, trasferimenti e rientro.",
+      "h1": "Voli e aeroporti per il GP Abu Dhabi F1 2026",
+      "banner": "Apri la guida aeroporti per il GP di Abu Dhabi",
+      "intro": "Il Formula 1 Etihad Airways Abu Dhabi Grand Prix 2026 si svolge al Yas Marina Circuit, sull’isola di Yas ad Abu Dhabi, dal 4 al 6 dicembre 2026, con finestra promossa del 3-6 dicembre. Il giovedì è giornata fan senza gara; in pista ci sono prove venerdì, qualifiche sabato e gara domenica alle 17:00 locali. Con arrivi internazionali su AUH e DXB, controllare un tabellone aeroportuale live aiuta a gestire ritardi e coincidenze.",
+      "getting": "AUH, Zayed International Airport, è il varco principale: il circuito dista circa 11 km, normalmente 10-15 minuti in auto. Taxi regolamentati, Uber e Careem servono Yas Island; i taxi possono lasciare vicino ai cancelli. Esistono anche navette Yas Express sull’isola, autobus pubblici 190 e 102 verso Yas Island, navetta aeroporto-hotel per ospiti con voucher, e park and ride da Yas Mall. DXB è un’alternativa lontana: circa 125 km, 1h15-1h30 in auto.",
+      "leaving": "Poiché la gara di domenica 6 dicembre parte alle 17:00 locali e termina in serata, il picco voli è previsto tra la tarda notte di domenica 6 e soprattutto lunedì 7 dicembre. AUH e DXB possono essere affollati in queste finestre. Parti per l’aeroporto prima del normale e controlla il tabellone partenze live prima di lasciare hotel o circuito, così da adeguare il trasferimento a eventuali variazioni.",
+      "tips": "Tra 2 e 6 dicembre considera anche Eid Al Etihad e il weekend: domanda stradale, alberghiera e regionale può restare alta. Yas Island ha accessi limitati; il collo di bottiglia sono strade e drop-off. Non pianificare una metro fino al circuito: Abu Dhabi non ne ha e quella di Dubai non raggiunge Yas Island. Tieni margine per taxi, shuttle e park and ride.",
+      "sec": {
+        "boards": "Tabelloni live AUH/DXB per Yas Marina",
+        "getting": "Dagli aeroporti al Yas Marina Circuit",
+        "leaving": "Rientro dopo la gara di domenica",
+        "tips": "Consigli di viaggio per la settimana del GP"
+      }
+    },
+    "hi": {
+      "title": "अबू धाबी ग्रां प्री 2026: एयरपोर्ट और फ्लाइट्स",
+      "description": "AUH और DXB के लाइव फ्लाइट बोर्ड देखें: अबू धाबी ग्रां प्री 2026 के लिए आगमन, प्रस्थान और यास मरीना सर्किट तक यात्रा।",
+      "h1": "फॉर्मूला 1 अबू धाबी ग्रां प्री 2026 एयरपोर्ट गाइड",
+      "banner": "AUH/DXB से ग्रां प्री यात्रा गाइड खोलें",
+      "intro": "फॉर्मूला 1 एतिहाद एयरवेज अबू धाबी ग्रां प्री 2026, 3-6 दिसंबर की इवेंट विंडो में यास मरीना सर्किट, यास आइलैंड, अबू धाबी में है। एफ1 ट्रैक रनिंग शुक्रवार 4 दिसंबर से रविवार 6 दिसंबर तक है; गुरुवार 3 दिसंबर गैर-रेसिंग फैन डे है। राष्ट्रीय अवकाश और अंतरराष्ट्रीय यात्रियों की वजह से इन तारीखों पर AUH और DXB के लाइव फ्लाइट बोर्ड देखना उपयोगी है।",
+      "getting": "मुख्य प्रवेश हवाई अड्डा AUH, ज़ायेद अंतरराष्ट्रीय हवाई अड्डा है: यास मरीना सर्किट से करीब 11 किमी, सामान्य यातायात में कार से लगभग 10-15 मिनट। DXB दुबई में वास्तविक सेकेंडरी गेटवे है, लेकिन दूर है: करीब 125 किमी और सामान्य स्थिति में 1 घंटा 15 मिनट से 1 घंटा 30 मिनट। विकल्पों में सिल्वर टैक्सी, Uber/Careem, Yas Express, सार्वजनिक बसें, AUH एयरपोर्ट-होटल शटल और Yas Mall पार्क-एंड-राइड शामिल हैं।",
+      "leaving": "रेस रविवार 6 दिसंबर को शाम में होती है, इसलिए उड़ान वापसी का दबाव देर रविवार रात और सबसे ज्यादा सोमवार 7 दिसंबर पर रहता है। AUH और DXB दोनों पर प्रस्थान क्षेत्र व्यस्त हो सकते हैं। यास आइलैंड की सीमित पहुंच सड़कों और ड्रॉप-ऑफ पॉइंट्स पर भीड़ बनती है; पिछले आयोजनों में रेस के बाद टैक्सी इंतजार करीब दो घंटे तक बताया गया। एयरपोर्ट निकलने से पहले लाइव डिपार्चर बोर्ड देखें और सामान्य से पहले पहुंचें।",
+      "tips": "2 और 3 दिसंबर 2026 को ईद अल इत्तिहाद, इवेंट के शुरुआती दिन से जुड़ता है, इसलिए 2-6 दिसंबर तक सड़क, होटल और क्षेत्रीय उड़ान मांग ऊंची रह सकती है। मेट्रो से सर्किट जाने की योजना न बनाएं; अबू धाबी में मेट्रो नहीं है और दुबई मेट्रो यास आइलैंड तक नहीं जाती। DXB चुनें तो लंबा सड़क समय रखें।",
+      "sec": {
+        "boards": "AUH/DXB लाइव बोर्ड और निकटतम गेटवे",
+        "getting": "यास मरीना सर्किट तक एयरपोर्ट से रास्ता",
+        "leaving": "रेस के बाद AUH/DXB से वापसी उड़ानें",
+        "tips": "ग्रां प्री सप्ताह की उड़ान सलाह"
+      }
+    },
+    "tr": {
+      "title": "Abu Dhabi GP 2026: AUH/DXB uçuş ve havalimanları",
+      "description": "Abu Dhabi GP 2026 için Yas Marina’ya AUH ve DXB’den ulaşım; AUH/DXB canlı uçuş panolarıyla geliş ve dönüşü kontrol edin.",
+      "h1": "Formula 1 Abu Dhabi GP 2026 için havalimanı rehberi",
+      "banner": "Abu Dhabi GP 2026 uçuş ve ulaşım rehberini açın",
+      "intro": "Formula 1 Etihad Airways Abu Dhabi Grand Prix 2026, 4-6 Aralık 2026’da Abu Dhabi’deki Yas Island’da, Yas Marina Circuit’te düzenlenen sezon finalidir. Organizatör etkinliği 3-6 Aralık penceresi olarak duyurur; 3 Aralık yarış dışı fan günüdür. Pist programı cuma antrenmanları, cumartesi sıralama ve pazar yarışıyla ilerler. Aynı hafta AUH ve DXB gelişlerinde yoğunluk olabileceğinden canlı havalimanı panosunu seyahat öncesi kontrol etmek önemlidir.",
+      "getting": "Yas Marina Circuit için ana kapı AUH, Zayed International Airport’tur: pistten yaklaşık 11 km, normal trafikte otomobille 10-15 dakika. DXB yaklaşık 125 km uzakta, normal koşullarda 1 saat 15 dakika-1 saat 30 dakika sürer; bu nedenle yakın havalimanı değil, Dubai’de kalanlar için yedek kapıdır. AUH’den taksi, Uber/Careem, Yas Island otel servisi; adada Yas Express, Abu Dhabi Mobility otobüsleri ve Yas Mall park-et-devam-et seçenekleri vardır.",
+      "leaving": "Yarış 6 Aralık Pazar 17:00 yerel saatte başlar ve akşam biter; dönüş uçuşu dalgası geç pazar gecesi ve en yoğun olarak 7 Aralık Pazartesi beklenir. AUH ve DXB’de kuyruklar, yolculuk süreleri ve bagaj işlemleri normalden ağır ilerleyebilir. Önceki yıllarda damalı bayraktan sonra taksi beklemeleri yaklaşık iki saate kadar bildirilmiştir. Havalimanına çıkmadan önce canlı kalkış panosunu kontrol edin ve normalden erken gidin.",
+      "tips": "2-6 Aralık boyunca yarış haftası, Eid Al Etihad ve hafta sonu aynı döneme denk gelir; planları dar bırakmayın. Metro ile piste gitmeyi planlamayın: Abu Dhabi’de metro yok, Dubai Metrosu Yas Island’a ulaşmaz. Etihad Rail varsa bile Yas Island istasyonu yoktur; son etap için taksi gerekir. Pasaport, bagaj ve otel transfer ayrıntılarını uçuş durumuyla birlikte tekrar kontrol edin.",
+      "sec": {
+        "boards": "AUH/DXB canlı panoları ve Yas Marina’ya yakınlık",
+        "getting": "Yas Island pistine ulaşım seçenekleri",
+        "leaving": "Pazar yarışı sonrası dönüş uçuşları",
+        "tips": "Yarış haftası yolcu ipuçları"
+      }
+    }
+  }
+}

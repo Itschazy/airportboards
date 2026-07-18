@@ -20,204 +20,200 @@
       {
         "iata": "ALA",
         "km": 15
-      },
-      {
-        "iata": "NQZ",
-        "km": 970
       }
     ]
   },
   "locales": {
     "en": {
-      "title": "Ye Almaty 2026 Concert Airports & Live Flights",
-      "description": "Plan Ye Almaty concert travel with live flight boards for ALA and NQZ, the 970 km Astana fallback, plus transfer and fly-home timing.",
-      "h1": "Ye Almaty 2026 concert airport and flight guide",
-      "banner": "Open the Ye Almaty 2026 airport guide",
-      "intro": "Ye (Kanye West) — LIVE CONCERT TOUR 2026 is scheduled for Friday 14 August 2026, about 21:00-23:30 Almaty time (UTC+5), at Central Stadium in Almaty, Kazakhstan. It is the only Central Asian date of this tour and the performer’s first large public concert in Kazakhstan, so many travellers are expected to fly in from Russia, Uzbekistan, Kyrgyzstan and the wider CIS. Checking live airport boards helps spot delays around the concert window.",
-      "getting": "ALA, Almaty International Airport, is the main gateway for Central Stadium: roughly 15 km north of the venue and about 25-40 minutes by road, depending on traffic. It has direct connections with Russia, Central Asia, Turkey, the Gulf and China. Licensed taxis and ride-hailing apps are the usual airport transfer options; Almaty also has buses and a metro line. NQZ is in Astana, about 970 km away, and is only a fallback entry point with an onward domestic flight to Almaty of roughly 1 hour 20 minutes or an overnight train.",
-      "leaving": "The fly-home wave is on 15-16 August, when ALA departures are noticeably busier than usual. Roads around Central Stadium and the city centre are congested on concert evening, so extra time is also useful when heading back to the airport. Allow more time than on a normal Almaty trip. Before leaving, check the live ALA departures board; use NQZ boards only if your return routing goes through Astana, about 970 km away.",
-      "tips": "For this concert trip, check the ALA live board before setting off and keep buffer time for traffic inside Almaty. Confirm whether your routing uses ALA or NQZ; NQZ is in Astana, about 970 km away, so treat it only as a fallback entry point with an onward domestic flight or overnight train.",
+      "title": "Ye Almaty 2026 Concert Airports & ALA Flights",
+      "description": "Plan flights for Ye’s Almaty concert on 14 Aug 2026 with live flight boards for ALA, airport transfer tips and departure advice.",
+      "h1": "Ye Almaty 2026 Concert: ALA Flights and Airport Travel",
+      "banner": "Open the ALA flight guide for the Almaty concert",
+      "intro": "Ye — LIVE CONCERT TOUR 2026 comes to Central Stadium in Almaty, Kazakhstan, on Friday 14 August 2026, with the concert scheduled from about 21:00 to 23:30 Almaty time (UTC+5). As the only Central Asian date of the tour, many travellers are expected to fly into Almaty. Checking a live ALA airport board helps track delays, early arrivals and baggage timing around the concert evening.",
+      "getting": "ALA (Almaty International Airport) is the main gateway for Central Stadium, about 15 km north of the venue and typically 25–40 minutes by road, depending on traffic. Licensed taxis and ride-hailing apps are the usual airport transfer options; buses and a metro line also serve the city, and the stadium is inside Almaty rather than out of town. Astana is a different city about 970 km away, only a fallback entry point with an onward domestic flight of roughly 1 hour 20 minutes, or an overnight train.",
+      "leaving": "After the concert, the main fly-home wave is expected on 15–16 August, when ALA departures are noticeably busier than usual. Airport roads, check-in areas and security queues can take longer during this period, especially if city-centre traffic is still heavy. Leave more time than on a normal trip, confirm your airline instructions, and check the live ALA departures board before setting out for the airport.",
+      "tips": "Plan transfers before landing, then re-check road time on the day because concert-evening congestion can change the trip. Keep airline documents handy, charge your phone for app-based rides and live boards, and avoid scheduling tight onward travel after arrival. If travelling with a group, agree on a meeting point before entering busy terminal areas.",
       "sec": {
-        "boards": "ALA live board and 970 km NQZ fallback",
+        "boards": "ALA live boards for the Almaty concert",
         "getting": "From ALA to Central Stadium",
-        "leaving": "15-16 August flights home from Almaty",
-        "tips": "Airport timing tips for concert travellers"
+        "leaving": "15–16 August departures from ALA",
+        "tips": "Flight-day tips for concert travellers"
       }
     },
     "ru": {
-      "title": "Концерт Канье Уэста в Алматы: аэропорты и табло ALA",
-      "description": "Как лететь на концерт Канье Уэста (Ye) в Алматы 14 августа 2026: онлайн-табло ALA, трансфер к Центральному стадиону и вылеты домой.",
-      "h1": "Как долететь на концерт Канье Уэста (Ye) в Алматы",
-      "banner": "Летите на концерт Канье Уэста в Алматы? Гид по рейсам",
-      "intro": "Концерт Канье Уэста (Ye) — LIVE CONCERT TOUR 2026 пройдет в пятницу, 14 августа 2026 года, с началом около 21:00 по времени Алматы (UTC+5) на Центральном стадионе в Алматы, Казахстан. Это первый крупный публичный концерт исполнителя в Казахстане и единственная центральноазиатская дата тура, поэтому часть зрителей прилетает из России, Узбекистана, Кыргызстана и стран СНГ. Вокруг этих дат онлайн-табло аэропортов помогает отслеживать прилеты, задержки и вылеты.",
-      "getting": "Главный аэропорт для поездки на Центрального стадиона — ALA, Международный аэропорт Алматы: он расположен примерно в 15 км к северу от стадиона, дорога обычно занимает около 25–40 минут в зависимости от трафика. Из ALA есть прямые направления с Россией, Центральной Азией, Турцией, странами Персидского залива и Китаем. В городе доступны лицензированные такси, приложения вызова, автобусы и линия метро; стадион находится в городской черте. NQZ в Астане находится примерно в 970 км и подходит только как запасной въезд с внутренним рейсом или ночным поездом.",
-      "leaving": "Основная волна обратных вылетов ожидается 15–16 августа, когда отправления из ALA будут заметно плотнее обычного. После концерта 14 августа дороги вокруг Центрального стадиона и центра Алматы могут быть перегружены, поэтому закладывайте дополнительное время на дорогу в аэропорт. Перед выездом из города откройте онлайн-табло вылетов ALA: так проще увидеть задержку, перенос статуса или изменение расписания и не ждать лишнее время в терминале.",
-      "tips": "Сверяйте в бронировании код аэропорта: ALA — Алматы, NQZ — Астана, другой город. Планируйте трансфер до стадиона и обратно заранее, особенно вечером концерта. Держите запас времени на пробки, проверку документов и возможные изменения статуса рейса. Если используете NQZ как запасной въезд, заранее увяжите внутренний перелет или ночной поезд до Алматы.",
+      "title": "Ye (Kanye West) Алматы 2026: аэропорт ALA и рейсы",
+      "description": "Ye (Kanye West) в Алматы 14.08.2026: живые табло рейсов ALA, прилеты и вылеты, дорога от аэропорта до Central Stadium в дни события.",
+      "h1": "Ye (Kanye West) в Алматы: рейсы ALA и дорога к стадиону",
+      "banner": "Откройте гид по рейсам ALA на концерт в Алматы",
+      "intro": "Концерт Ye (Kanye West) — LIVE CONCERT TOUR 2026 пройдет в пятницу, 14 августа 2026 года, с началом около 21:00 по времени Алматы (UTC+5), на Central Stadium в Алматы, Казахстан. Это первый крупный публичный концерт исполнителя в Казахстане и единственная дата тура в Центральной Азии, поэтому многие зрители летят из России, Узбекистана, Кыргызстана и других стран СНГ. В эти дни важно проверять онлайн-табло ALA: прилеты и вылеты могут влиять на дорогу к стадиону.",
+      "getting": "Главные воздушные ворота для концерта — Almaty International Airport (ALA): аэропорт находится примерно в 15 км к северу от Central Stadium, поездка по дороге обычно занимает около 25–40 минут в зависимости от трафика. От аэропорта чаще всего едут на лицензированном такси или через приложения вызова машины; в городе также есть автобусы и линия метро, а стадион расположен внутри Алматы. Астана — другой город примерно в 970 км: это лишь запасной въезд в Казахстан с дальнейшим внутренним перелетом около 1 часа 20 минут или ночным поездом.",
+      "leaving": "Основная волна вылетов домой приходится на 15–16 августа, когда вылеты из ALA заметно более загружены, чем обычно. Закладывайте больше времени на дорогу и процедуры в аэропорту: вечером концерта дороги вокруг Central Stadium и центра Алматы перегружены, а на следующий день часть пассажиров поедет в аэропорт в близкие интервалы. Перед выездом из города проверьте живое табло вылетов ALA, чтобы увидеть актуальный статус рейса.",
+      "tips": "Держите запас времени между прилетом и началом концерта, особенно если едете через центр города. Следите за живыми табло прилетов и вылетов ALA, проверяйте статус перед заказом такси или выходом к автобусу/метро. Для обратной дороги заранее выберите основной и резервный вариант трансфера и не планируйте поездку к аэропорту впритык к вылету.",
       "sec": {
-        "boards": "Онлайн-табло ALA и NQZ к концерту",
-        "getting": "Трансфер до Центрального стадиона",
-        "leaving": "Вылеты домой 15–16 августа",
-        "tips": "Советы пассажирам на концертный уикенд"
+        "boards": "Онлайн-табло ALA для концерта в Алматы",
+        "getting": "Как добраться от ALA до Central Stadium",
+        "leaving": "Вылет домой 15–16 августа из ALA",
+        "tips": "Советы для перелета на концерт"
       }
     },
     "zh": {
-      "title": "Ye 2026阿拉木图演唱会机场与航班｜ALA/NQZ实时看板",
-      "description": "Ye（Kanye West）2026年8月14日阿拉木图中央体育场演唱会机场出行指南：查看ALA和NQZ实时航班看板，了解阿拉木图机场到场馆距离、道路时间、出租车/网约车、公交与地铁选择，以及15-16日返程高峰前的航班状态，并确认NQZ仅适合作为入境备选。",
-      "h1": "Ye 2026阿拉木图演唱会：ALA/NQZ航班与机场出行",
-      "banner": "去中央体育场前，先查看ALA/NQZ实时航班看板",
-      "intro": "Ye（Kanye West）— LIVE CONCERT TOUR 2026阿拉木图站将于2026年8月14日（周五）约21:00至23:30，在哈萨克斯坦阿拉木图Central Stadium举行。作为该巡演唯一中亚日期，且有来自俄罗斯、乌兹别克斯坦、吉尔吉斯斯坦及更广泛独联体地区的飞来观众，14日前后查看ALA与NQZ实时机场看板，有助于确认到达延误和转机节奏。",
-      "getting": "ALA（阿拉木图国际机场）是前往中央体育场的主要门户，位于场馆以北约15公里，按路况约25-40分钟车程。机场到市区通常使用持牌出租车和网约车；阿拉木图也有公交和一条地铁线，体育场位于城内。NQZ在另一座城市，距场馆约970公里，只适合作为入境备选，需再搭约1小时20分钟国内航班到阿拉木图，或乘夜间列车。",
-      "leaving": "演出结束后的返程高峰集中在8月15-16日，ALA出港航班会比平时明显更忙。若从市中心或体育场周边前往机场，应把道路拥堵和排队时间计入计划，尽量比平常更早抵达机场。出发去机场前，先查看实时出港看板，确认航班状态是否有延误、取消或值机节奏变化。",
-      "tips": "围绕大型演唱会出行，建议把进城、离城和转机都留出缓冲。14日演出当晚，体育场和市中心道路会拥堵；从ALA进城优先选择持牌出租车或网约车。若行程涉及NQZ，务必记住它不是本地机场，而是远距离备选入口，需要后续国内航班或列车衔接。",
+      "title": "Ye 2026阿拉木图演唱会航班与ALA机场实时看板",
+      "description": "为2026年8月14日Ye（Kanye West）阿拉木图Central Stadium演唱会规划航班：查看ALA实时航班看板，了解机场至场馆约15公里的交通、8月15—16日返程高峰、延误与出发前提醒，适合经阿拉木图入境的观众。",
+      "h1": "Ye 2026阿拉木图演唱会：ALA机场航班与交通",
+      "banner": "打开Ye阿拉木图演唱会ALA航班与交通指南",
+      "intro": "Ye（Kanye West）— LIVE CONCERT TOUR 2026阿拉木图站定于2026年8月14日星期五21:00左右（阿拉木图时间，UTC+5）在哈萨克斯坦阿拉木图Central Stadium举行，预计23:30结束。作为本巡演唯一中亚日期，许多观众会从俄罗斯、乌兹别克斯坦、吉尔吉斯斯坦及更广泛独联体地区飞来。临近演出日，查看ALA实时航班看板有助于掌握到达、延误和转乘节奏。",
+      "getting": "ALA（阿拉木图国际机场）是本场演唱会的主要空中门户，位于体育场以北约15公里，正常道路时间约25—40分钟，视交通而定。机场有连接俄罗斯、中亚、土耳其、海湾地区和中国的直达航线。到市区和Central Stadium通常使用正规出租车或网约车；阿拉木图也有公交和地铁，且体育场位于城内。演出当晚体育场及市中心道路会拥堵，应预留时间。",
+      "leaving": "返程高峰集中在8月15—16日，ALA出发区会比平日明显繁忙。演出结束后若次日或隔日飞走，建议比平常更早到机场，给市区道路、行李托运和安检排队留出余量。出发去机场前先查看ALA实时出发看板，确认航班状态，再决定何时离开酒店或市中心，避免在已知延误时过早滞留机场。",
+      "tips": "把航班状态、地面交通和住宿退房时间放在同一计划里；晚间到达时预先确认接送地点。若从阿斯塔纳入境，请记住它在另一城市，距阿拉木图约970公里，只能作为进入哈萨克斯坦的远程备选，之后需约1小时20分钟国内航班或夜行火车。",
       "sec": {
-        "boards": "ALA/NQZ实时航班看板",
-        "getting": "前往阿拉木图中央体育场",
-        "leaving": "15-16日返程航班提示",
-        "tips": "演唱会航空出行建议"
+        "boards": "ALA实时航班看板与最近机场",
+        "getting": "从ALA前往Central Stadium",
+        "leaving": "8月15—16日从阿拉木图返程",
+        "tips": "演唱会出行实用提示"
       }
     },
     "ar": {
-      "title": "حفل Ye في ألماتي 2026: المطارات ولوحات الرحلات",
-      "description": "دليل الوصول الجوي إلى حفل Ye في ألماتي 2026 مع لوحات رحلات مباشرة لمطاري ALA وNQZ، ومعلومات النقل من المطار والعودة بعد الحفل.",
-      "h1": "الوصول بالطائرة إلى حفل Ye في ألماتي 2026",
-      "banner": "افتح دليل المطارات لحفل Ye في ألماتي",
-      "intro": "يقام حفل Ye — LIVE CONCERT TOUR 2026 في استاد سنترال بمدينة ألماتي، كازاخستان، يوم الجمعة 14 أغسطس 2026، من نحو 21:00 إلى 23:30 بتوقيت ألماتي (UTC+5). وبصفته الموعد الوحيد للجولة في آسيا الوسطى، يصل كثير من الحضور جواً من روسيا وأوزبكستان وقيرغيزستان ودول رابطة الدول المستقلة. لذلك تساعد لوحات الرحلات المباشرة على متابعة الوصول والتأخير حول موعد الحفل.",
-      "getting": "بوابة الوصول الأساسية هي مطار ألماتي الدولي ALA، على بعد نحو 15 كم شمال استاد سنترال، وتستغرق الرحلة براً حوالي 25 إلى 40 دقيقة حسب المرور. من ALA تُستخدم سيارات الأجرة المرخصة وتطبيقات طلب السيارة غالباً، وتوجد أيضاً حافلات وخط مترو، فالاستاد داخل المدينة. أما NQZ في أستانا، فيبعد نحو 970 كم ولا يعد مطاراً محلياً للملعب؛ يصلح فقط كنقطة دخول بديلة مع رحلة داخلية إلى ألماتي تقارب ساعة و20 دقيقة أو قطار ليلي.",
-      "leaving": "بعد انتهاء الحفل مساء 14 أغسطس، تبدأ موجة العودة بالطائرة خلال 15 و16 أغسطس، عندما تكون مغادرات ALA أكثر ازدحاماً من المعتاد. خطط للوصول إلى المطار أبكر من يوم سفر عادي، خصوصاً مع ازدحام الطرق حول الاستاد ووسط المدينة في ليلة الحفل. قبل مغادرة مكان الإقامة، راجع لوحة المغادرات المباشرة للتأكد من حالة الرحلة وتوقيت الإقلاع المحدث، ثم اختر وسيلة النقل إلى المطار وفق الوقت المتاح.",
-      "tips": "احتفظ بهامش زمني بين الوصول الجوي وبداية الحفل، ولا تعتمد على أقصر زمن قيادة معلن عند وجود فعالية كبيرة. تحقق من رمز المطار قبل ترتيب السفر؛ ALA هو مطار ألماتي، بينما NQZ في مدينة أخرى بعيدة. احمل وثائق السفر، وتابع لوحات الوصول والمغادرة المباشرة عند تغير حالة الرحلة أو حركة المرور.",
+      "title": "حفل Ye في ألماتي 2026: رحلات ومطار ALA",
+      "description": "دليل الوصول الجوي إلى حفل Ye في ألماتي 2026 مع لوحات رحلات مباشرة لمطار ALA، ونصائح الانتقال إلى الاستاد والمغادرة بعد الحفل.",
+      "h1": "رحلات ومطار ALA لحفل Ye في ألماتي",
+      "banner": "افتح دليل رحلات ALA لحفل Ye في ألماتي",
+      "intro": "يقام حفل Ye — جولة الحفلات المباشرة 2026 في ألماتي يوم الجمعة 14 أغسطس 2026، من نحو 21:00 حتى 23:30 بتوقيت ألماتي (UTC+5)، في الاستاد المركزي بالمدينة. وبما أنه أول حفل عام كبير للمؤدي في كازاخستان والموعد الوحيد للجولة في آسيا الوسطى، يصل جزء كبير من الجمهور جواً من روسيا وأوزبكستان وقرغيزستان ورابطة الدول المستقلة الأوسع. لذلك يفيد فحص لوحة مطار ALA المباشرة قرب هذه التواريخ لتتبّع الوصول والتأخير المحتمل.",
+      "getting": "مطار ألماتي الدولي ALA هو البوابة الرئيسية للحفل: يقع على بعد نحو 15 كم شمال الاستاد المركزي، وتستغرق الرحلة البرية عادةً 25-40 دقيقة بحسب الحركة. النقل المعتاد من المطار يكون بسيارات الأجرة المرخصة وتطبيقات طلب المركبات، وتوجد أيضاً حافلات وخط مترو داخل المدينة؛ فالاستاد يقع داخل ألماتي لا خارجها. أما أستانا فهي مدينة أخرى تبعد نحو 970 كم، ولا تصلح إلا كنقطة دخول بعيدة يتبعها طيران داخلي يقارب ساعة و20 دقيقة أو قطار ليلي.",
+      "leaving": "تبدأ موجة العودة بالطائرة في 15-16 أغسطس، عندما تكون مغادرات ALA أكثر ازدحاماً من المعتاد بسبب المسافرين بعد الحفل. خطط للوصول إلى المطار أبكر مما تفعل عادةً، خصوصاً إذا كنت تغادر من وسط ألماتي أو من قرب الاستاد حيث قد تستمر الحركة الكثيفة. قبل الانطلاق إلى المطار، راجع لوحة المغادرات المباشرة لمطار ALA للتأكد من حالة الرحلة وتجنب الانتظار غير الضروري.",
+      "tips": "احفظ وقتاً احتياطياً بين الهبوط والانتقال إلى الاستاد، ولا تعتمد على زمن طريق واحد في مساء الحفل. تابع حالة الرحلة أكثر من مرة في يوم السفر، ونسّق نقطة الالتقاء مع السائق أو المجموعة مسبقاً. إذا كانت لديك رحلة ربط أو مغادرة مبكرة، اجعل أمتعتك وخطة النقل جاهزتين قبل نهاية الحفل.",
       "sec": {
-        "boards": "لوحات رحلات ALA وNQZ لحفل Ye",
-        "getting": "من المطار إلى استاد سنترال",
-        "leaving": "العودة جواً بعد حفل 14 أغسطس",
-        "tips": "نصائح سفر جوي حول الحفل"
+        "boards": "لوحات ALA المباشرة لحفل Ye",
+        "getting": "الوصول من مطار ألماتي إلى الاستاد المركزي",
+        "leaving": "مغادرات ما بعد حفل ألماتي",
+        "tips": "نصائح السفر الجوي في يوم الحفل"
       }
     },
     "de": {
-      "title": "Ye (Kanye West) Almaty 2026: Flughäfen & Live-Flüge",
-      "description": "Flughafen-Guide zum Ye Konzert 2026 in Almaty: Live-Flugtafeln für ALA/NQZ, Transfers zum Central Stadium und Rückflug-Tipps.",
-      "h1": "Ye Konzert Almaty 2026: Flughäfen und Transfers",
-      "banner": "Zum Flug- und Transferguide für das Ye Konzert in Almaty",
-      "intro": "Ye (Kanye West) — LIVE CONCERT TOUR 2026 findet am Freitag, 14. August 2026, von etwa 21:00 bis 23:30 Uhr Almaty-Zeit (UTC+5) im Central Stadium in Almaty, Kasachstan, statt. Für diese einzige zentralasiatische Tourstation reisen viele Besucher per Flug aus Russland, Usbekistan, Kirgisistan und der weiteren GUS an. Rund um diese Daten hilft ein Live-Flughafenboard, Ankünfte, Verspätungen und Anschlusspläne für Almaty rechtzeitig zu prüfen.",
-      "getting": "Der wichtigste Zugang ist ALA (Almaty International Airport), rund 15 km nördlich des Central Stadiums; je nach Verkehr dauert die Fahrt auf der Straße etwa 25–40 Minuten. Üblich sind lizenzierte Taxis und Ride-Hailing-Apps; außerdem hat Almaty Busse und eine Metrolinie, da das Stadion in der Stadt liegt. NQZ liegt in einer anderen Stadt, Astana, etwa 970 km entfernt, und ist nur ein Ausweich-Einstieg mit weiterem Inlandsflug nach Almaty von rund 1 Stunde 20 Minuten oder Nachtzug.",
-      "leaving": "Die Rückreisewelle fällt vor allem auf den 15.–16. August. An diesen Tagen ist der Flughafen ALA bei Abflügen spürbar voller als sonst, besonders wenn viele Besucher nach Russland, Zentralasien oder in die weitere GUS zurückfliegen. Planen Sie die Fahrt zum Flughafen früher als gewohnt, weil Straßen rund um Stadion und Zentrum am Konzertabend stark belastet sind. Prüfen Sie vor dem Losfahren die Live-Abflugtafel, damit Verspätungen oder Änderungen nicht erst im Terminal auffallen.",
-      "tips": "Rechnen Sie bei Anreise und Abreise mit zusätzlichen Puffern, besonders für die Straße zwischen ALA, Innenstadt und Central Stadium. Halten Sie Flugstatus und Transferplan zusammen im Blick, bevor Sie losfahren. Wer über NQZ einreist, sollte den weiteren Inlandsflug nach Almaty oder den Nachtzug als eigenen, zeitkritischen Reiseabschnitt behandeln, nicht als lokalen Flughafentransfer.",
+      "title": "Ye Konzert Almaty 2026: Flüge & Flughafen ALA",
+      "description": "Anreise zum Ye Konzert 2026 in Almaty: Live-Flugtafeln für ALA, Transfers zum Central Stadium und Hinweise zur Rückreise.",
+      "h1": "Flüge zum Ye Konzert 2026 in Almaty über ALA",
+      "banner": "Zum ALA-Flugguide für das Ye Konzert in Almaty",
+      "intro": "Das Konzert Ye (Kanye West) — LIVE CONCERT TOUR 2026 findet am Freitag, 14. August 2026, von etwa 21:00 bis 23:30 Uhr Ortszeit (UTC+5) im Central Stadium in Almaty, Kasachstan, statt. Weil es die einzige zentralasiatische Station dieser Tour ist, reist ein großer Teil des Publikums per Flug aus Russland, Usbekistan, Kirgisistan und dem weiteren GUS-Raum an. Live-Flugtafeln helfen, Ankünfte rund um ALA zeitnah zu prüfen.",
+      "getting": "ALA, der Almaty International Airport, ist das Haupttor zum Konzert: etwa 15 km nördlich des Central Stadium und je nach Verkehr ungefähr 25 bis 40 Minuten auf der Straße. Vom Flughafen sind lizenzierte Taxis und App-Fahrdienste üblich; außerdem gibt es Busse und eine Metro-Linie in der Stadt. Das Stadion liegt innerstädtisch, doch am Konzertabend können Straßen rund um Stadion und Zentrum voll sein. Astana liegt in einer anderen Stadt, rund 970 km entfernt, und ist nur ein entfernter Einstiegspunkt mit etwa 1 Stunde 20 Minuten Inlandsflug nach Almaty oder Nachtzug.",
+      "leaving": "Die Rückreisewelle liegt am 15. und 16. August, wenn die Abflüge ab ALA spürbar stärker ausgelastet sind als gewöhnlich. Planen Sie für Check-in, Gepäckabgabe und Sicherheitskontrollen mehr Zeit ein als an normalen Reisetagen. Prüfen Sie die Live-Abflugtafel, bevor Sie zum Flughafen aufbrechen, damit Verspätungen, gestrichene Flüge oder geänderte Abläufe Ihre Transferzeit nicht unnötig belasten. Auch der Straßenverkehr Richtung Terminal kann nach einem vollen Konzertwochenende dichter sein.",
+      "tips": "Halten Sie den Flughafencode ALA, Ihre Reisedaten und die geplante Transferart griffbereit. Legen Sie Puffer zwischen Landung, Hotel, Stadionweg und Rückflug ein, besonders am Freitagabend. Nutzen Sie nur nachvollziehbare Transfers, speichern Sie die Adresse des Central Stadium offline und prüfen Sie kurz vor jeder Fahrt den aktuellen Flugstatus sowie mögliche Straßenverzögerungen.",
       "sec": {
-        "boards": "Live-Flugtafeln für ALA und NQZ zum Konzert",
+        "boards": "ALA-Livetafeln zum Konzertwochenende",
         "getting": "Vom Flughafen Almaty zum Central Stadium",
-        "leaving": "Rückflüge nach dem Konzert am 15.–16. August",
-        "tips": "Praktische Flugtipps für Almaty am Konzertwochenende"
+        "leaving": "Rückflugwelle nach dem Konzert",
+        "tips": "Praktische Flugtipps für Almaty"
       }
     },
     "ko": {
-      "title": "Ye 2026 알마티 콘서트 공항·항공편 안내",
-      "description": "2026년 8월 14일 알마티 Central Stadium 콘서트 이동 전후, ALA/NQZ 실시간 항공편 보드로 도착·출발 변동을 확인하고 공항 선택, 환승, 도로 이동 시간을 미리 계획하세요.",
-      "h1": "Ye 2026 알마티 콘서트 공항 이동 및 실시간 항공편",
-      "banner": "ALA/NQZ 실시간 보드로 알마티 공연 이동 확인",
-      "intro": "Ye (Kanye West) — LIVE CONCERT TOUR 2026 알마티 공연은 2026년 8월 14일 금요일 21:00경(알마티 시간, UTC+5)부터 23:30까지 카자흐스탄 알마티 Central Stadium에서 열립니다. 이 일정은 카자흐스탄에서 열리는 첫 대형 공개 공연이자 투어의 유일한 중앙아시아 일정이라 러시아, 우즈베키스탄, 키르기스스탄과 CIS 지역에서 항공 이동 수요가 몰릴 수 있습니다. 행사 전후에는 ALA와 NQZ 실시간 공항 보드로 지연, 도착, 출발 변동을 확인하는 것이 중요합니다.",
-      "getting": "Central Stadium 접근의 주 관문은 ALA 알마티 국제공항입니다. 공항은 경기장 북쪽 약 15km에 있으며, 도로 이동은 교통 상황에 따라 대략 25~40분입니다. 알마티에서는 공항에서 허가 택시와 차량 호출 앱을 주로 이용하고, 시내에는 버스와 지하철 노선도 있습니다. 경기장은 외곽이 아니라 도심 안에 있어 콘서트 저녁에는 경기장 주변과 도심 도로 정체를 감안해야 합니다. NQZ는 약 970km 떨어진 다른 도시의 공항으로, 현지 공항이 아니라 국내선 약 1시간 20분 또는 야간열차 연계가 필요한 예비 입국 지점입니다.",
-      "leaving": "공연 다음날과 그 다음날인 8월 15~16일에는 귀국·환승 승객이 한꺼번에 움직여 ALA 출발장이 평소보다 눈에 띄게 바빠집니다. 수하물 위탁, 보안 검색, 차량 호출 대기까지 시간이 늘 수 있으므로 평소보다 일찍 공항에 도착하도록 출발 시간을 잡으세요. 숙소나 경기장 주변을 떠나기 전에는 ALA 실시간 출발 보드에서 지연, 취소, 출발 상태를 확인하고, NQZ로 이동해 귀국하는 경우에도 국내선 또는 열차 연결 시간을 여유 있게 두는 것이 좋습니다.",
-      "tips": "대형 공연 기간에는 항공편 자체보다 이동 계획을 일찍 정리하는 것이 중요합니다. 여권, 수하물 규정, 환승 여유 시간, 도착 공항 표기를 다시 확인하세요. ALA와 NQZ를 혼동하지 말고, 특히 NQZ 이용 시 알마티까지의 추가 이동을 별도 일정으로 잡으세요. 도심 이동은 교통 정체를 전제로 계산하고, 배터리와 데이터 연결도 준비하세요.",
+      "title": "예(카니예 웨스트) 알마티 콘서트: ALA 공항 항공편",
+      "description": "2026년 8월 14일 알마티 센트럴 스타디움 콘서트 전후, ALA 실시간 항공편 게시판으로 도착·출발 변동, 공항 혼잡, 도로 이동 시간을 확인하고 15~16일 붐비는 ALA 출발 흐름까지 함께 살피세요.",
+      "h1": "예(카니예 웨스트) 알마티 콘서트 ALA 항공편 안내",
+      "banner": "알마티 콘서트 ALA 공항 이동 안내 열기",
+      "intro": "예(카니예 웨스트) — 라이브 콘서트 투어 2026 알마티 공연은 2026년 8월 14일 금요일, 알마티 시간 21:00경부터 23:30경까지 카자흐스탄 알마티 센트럴 스타디움에서 열립니다. 이 일정은 카자흐스탄 첫 대형 공개 공연이자 투어의 유일한 중앙아시아 일정으로 안내되어, 러시아, 우즈베키스탄, 키르기스스탄과 더 넓은 독립국가연합 지역에서 항공 입국이 늘 수 있습니다. 행사 전후에는 ALA 실시간 도착·출발 게시판으로 지연과 변경을 확인하세요.",
+      "getting": "알마티 국제공항(ALA)이 이 행사장의 주 관문입니다. 공항은 스타디움에서 북쪽으로 약 15km, 도로 기준 보통 25~40분 거리이지만 교통에 따라 달라집니다. ALA는 러시아, 중앙아시아, 튀르키예, 걸프, 중국과 직접 연결됩니다. 공항에서는 허가 택시와 호출 차량이 일반적이며, 알마티에는 버스와 지하철 노선도 있습니다. 스타디움은 외곽이 아니라 시내 안에 있습니다. 아스타나는 다른 도시의 약 970km 떨어진 대체 입국지일 뿐이며, 이후 알마티행 국내선 약 1시간 20분 또는 야간열차가 필요합니다.",
+      "leaving": "공연 뒤 귀국 흐름은 8월 15~16일에 집중되며, 이때 ALA 출발편 구역은 평소보다 눈에 띄게 붐빌 수 있습니다. 수하물, 보안 절차, 차량 하차 대기 시간을 감안해 평소보다 일찍 공항에 도착하도록 계획하세요. 숙소나 시내에서 출발하기 전에는 ALA 실시간 출발 게시판을 확인해 지연, 취소, 체크인 진행 상황에 맞춰 이동 시간을 조정하는 것이 현실적입니다. 공연 당일 저녁에도 스타디움 주변과 도심 도로가 혼잡하므로 여유를 두세요.",
+      "tips": "큰 공연 기간에는 항공편 변경을 먼저 확인한 뒤 공항 이동을 시작하세요. ALA와 센트럴 스타디움 사이 이동은 도로 상황에 민감하므로, 호출 차량이나 허가 택시를 부를 때도 여유 시간을 남겨두는 편이 좋습니다. 버스와 지하철을 조합할 경우 마지막 구간과 도심 혼잡을 따로 계산하세요. 15~16일 출발 승객은 실시간 게시판을 반복 확인하세요.",
       "sec": {
-        "boards": "ALA/NQZ 실시간 항공편 보드",
-        "getting": "Central Stadium까지 공항 이동",
-        "leaving": "8월 15~16일 귀국 출발",
-        "tips": "알마티 공연 항공 이동 팁"
+        "boards": "ALA 실시간 항공편 게시판",
+        "getting": "센트럴 스타디움까지 이동",
+        "leaving": "공연 다음 날 귀국편",
+        "tips": "알마티 항공 이동 팁"
       }
     },
     "ja": {
-      "title": "Yeアルマトイ公演2026の空港・フライト案内",
-      "description": "2026年8月14日、アルマトイ中央スタジアムでのYeコンサートへ向かう旅行者向け。主要玄関口ALAと、別都市の代替入国点NQZのライブ運航ボードで到着・出発を確認し、空港移動、乗継ぎ判断、15〜16日の帰国混雑に備えます。",
-      "h1": "Yeアルマトイ公演2026：空港とライブ運航ボード",
-      "banner": "Yeアルマトイ公演の空港アクセスを確認",
-      "intro": "Ye（Kanye West）— LIVE CONCERT TOUR 2026は、2026年8月14日（金）21:00頃から23:30頃まで、カザフスタン・アルマトイのCentral Stadiumで行われるコンサートです。カザフスタンでの初の大規模公開公演で、このツアー唯一の中央アジア日程のため、ロシア、ウズベキスタン、キルギス、CIS各地からの航空利用者が増えます。前後日はALAとNQZの発着をライブ運航ボードで確認すると、遅延や到着後の移動判断がしやすくなります。",
-      "getting": "会場への主な玄関口はALA（アルマトイ国際空港）です。スタジアムの北約15kmにあり、道路移動は交通状況により約25〜40分です。空港からは認可タクシーや配車アプリが一般的で、市内にはバスと地下鉄もあります。Central Stadiumは郊外ではなく市内にあります。NQZ（アスタナ国際空港）は別都市で約970km離れており、会場近くの空港ではありません。代替入国点として、アルマトイへの約1時間20分の国内線または夜行列車を組み合わせる場合に限られます。",
-      "leaving": "公演後の帰国便利用は8月15〜16日に集中し、ALAの出発便エリアは通常より目立って混み合います。空港へ向かう前にライブ出発ボードで便の状況を確認し、変更や遅延を見てから出発時間を決めると移動の無駄を減らせます。コンサート当日の夜はスタジアム周辺と市中心部の道路が混雑するため、復路のタクシー、配車、バス、地下鉄利用にも通常より余裕を見てください。",
-      "tips": "空港コードはALAとNQZを混同しないよう確認してください。ALAは会場アクセス用、NQZは別都市から入国する場合の予備ルートです。到着日と帰国日は、道路所要時間だけでなく空港内の混雑も見込みましょう。認可タクシーや配車アプリを使う場合も、コンサート時間帯は待ち時間を前提に計画してください。",
+      "title": "Ye（Kanye West）アルマトイ公演｜ALA空港・フライト案内",
+      "description": "2026年8月14日にアルマトイ中央スタジアムで行われるYe（Kanye West）公演へ。ALAのライブ発着ボードで到着・出発状況を確認し、空港移動と帰路の時間を組み立てましょう。",
+      "h1": "Ye（Kanye West）アルマトイ公演のALA空港・発着案内",
+      "banner": "ALA発着ボードから公演日の空港移動を確認",
+      "intro": "Ye（Kanye West）— LIVE CONCERT TOUR 2026のアルマトイ公演は、2026年8月14日（金）21:00頃、カザフスタン・アルマトイのCentral Stadiumで始まり、23:30頃まで予定されています。この公演はカザフスタンでの初の大規模公開コンサートで、ツアー唯一の中央アジア日程です。ロシア、ウズベキスタン、キルギス、広いCIS圏からの来訪者が多く、前後日はALAのライブ発着ボード確認が重要です。",
+      "getting": "最寄りで実用的な玄関口はALA（アルマトイ国際空港）です。スタジアムの北約15kmにあり、道路状況により車で約25〜40分です。空港からは認可タクシーと配車アプリが一般的で、市内にはバスと地下鉄路線もあります。会場は郊外ではなく市内にありますが、公演当日の夕方はスタジアム周辺と中心部の道路が混雑するため、余裕を持って移動してください。アスタナは別都市で約970km離れ、入国の代替地点として国内線約1時間20分または夜行列車でアルマトイへ進む選択肢です。",
+      "leaving": "帰路の集中は8月15〜16日にかけて起き、ALAの出発便は通常より明らかに混み合います。保安検査や空港内の移動に時間がかかる可能性があるため、普段より早めに空港へ到着する計画にしてください。宿泊先や市内を出る前に、ALAのライブ出発ボードで遅延、欠航、出発時刻の変更を確認し、道路移動の出発時間を調整しましょう。",
+      "tips": "大規模イベント周辺では、到着日と帰国日の便を同じ方法で繰り返し確認するのが安全です。予約名、渡航書類、荷物条件を前日までに整理し、空港から市内への移動手段を複数考えておきましょう。公演当日の夕方は道路混雑を前提に、食事や荷物預けの時間も移動計画へ含めてください。",
       "sec": {
-        "boards": "Ye公演向けALA/NQZライブ発着",
-        "getting": "Central Stadiumへの空港移動",
-        "leaving": "8月15〜16日の帰国便対策",
-        "tips": "アルマトイ公演の航空移動メモ"
+        "boards": "ALA最寄り空港とライブ発着ボード",
+        "getting": "Central Stadiumへの空港からの移動",
+        "leaving": "8月15〜16日の帰国便確認",
+        "tips": "公演前後の空港利用メモ"
       }
     },
     "fr": {
-      "title": "Concert Ye à Almaty 2026 : vols et aéroports ALA/NQZ",
-      "description": "Accès au concert Ye à Almaty : consultez les tableaux de vols en direct ALA/NQZ, transferts vers le Central Stadium et retours.",
-      "h1": "Vols et aéroports pour Ye à Almaty 2026",
-      "banner": "Ouvrir le guide vols ALA/NQZ pour le concert",
-      "intro": "Le concert Ye (Kanye West) — LIVE CONCERT TOUR 2026 a lieu le vendredi 14 août 2026, d’environ 21:00 à 23:30 heure d’Almaty (UTC+5), au Central Stadium d’Almaty, au Kazakhstan. Comme c’est la seule date d’Asie centrale de cette tournée, avec de nombreux voyageurs attendus de Russie, d’Ouzbékistan, du Kirghizistan et de la CEI, vérifier les tableaux d’aéroport en direct aide à suivre arrivées, retards et correspondances autour de ces dates.",
-      "getting": "Pour rejoindre le Central Stadium, ALA, l’aéroport international d’Almaty, est la porte d’entrée principale : il se trouve à environ 15 km au nord du stade, soit 25 à 40 minutes par la route selon le trafic. Les taxis licenciés et applications de VTC sont les options habituelles depuis l’aéroport; des bus existent aussi, et Almaty dispose d’une ligne de métro. NQZ est à Astana, autre ville à environ 970 km : seulement une solution de repli, avec vol intérieur vers Almaty d’environ 1 h 20 ou train de nuit.",
-      "leaving": "Le pic des retours se concentre les 15 et 16 août, lorsque les départs ALA sont nettement plus chargés que d’habitude. Après le concert, les routes autour du Central Stadium et du centre-ville peuvent rester congestionnées, donc prévoyez plus de marge pour rejoindre l’aéroport. Avant de quitter votre hébergement, consultez le tableau des départs en direct : il permet de repérer retards et changements d’horaire affichés, puis d’arriver plus tôt que d’ordinaire.",
-      "tips": "Gardez vos itinéraires simples : privilégiez ALA quand votre destination est le Central Stadium, car NQZ impose une étape supplémentaire depuis Astana. Suivez les arrivées et départs en direct avant chaque trajet, ajoutez une marge pour la circulation d’Almaty et confirmez le mode de transfert prévu. Si vous combinez bus, métro, taxi ou VTC, prévoyez assez de temps entre chaque correspondance.",
+      "title": "Ye à Almaty 2026 : vols et aéroport ALA",
+      "description": "Guide vols pour Ye à Almaty 2026 : accès au Central Stadium, transferts et tableaux de vols en direct pour ALA avant/après le concert.",
+      "h1": "Vols et transferts pour Ye à Almaty 2026",
+      "banner": "Ouvrir le guide vols ALA pour le concert à Almaty",
+      "intro": "Le concert Ye — LIVE CONCERT TOUR 2026 à Almaty a lieu le vendredi 14 août 2026, vers 21:00 heure locale (UTC+5), au Central Stadium d’Almaty, au Kazakhstan, avec une fin prévue vers 23:30. Comme cette date attire de nombreux voyageurs aériens, notamment depuis la Russie, l’Ouzbékistan, le Kirghizistan et la CEI, consulter le tableau des vols en direct d’ALA aide à suivre les arrivées, retards et changements autour du concert.",
+      "getting": "ALA, l’aéroport international d’Almaty, est la principale porte d’entrée : il se trouve à environ 15 km au nord du Central Stadium, soit environ 25 à 40 minutes par la route selon la circulation. L’aéroport est relié directement à la Russie, à l’Asie centrale, à la Turquie, au Golfe et à la Chine. Depuis ALA, les taxis agréés et applications de VTC sont les options habituelles ; la ville dispose aussi de bus et d’une ligne de métro.",
+      "leaving": "La vague de retours est attendue les 15 et 16 août, avec des départs ALA nettement plus chargés qu’un jour ordinaire. Le soir du concert, les routes autour du Central Stadium et du centre-ville peuvent être congestionnées, et le stade est situé en ville plutôt qu’en périphérie. Prévoyez d’arriver plus tôt que d’habitude à l’aéroport et vérifiez le tableau des départs en direct avant de quitter votre hébergement.",
+      "tips": "Gardez une marge entre votre transfert et l’heure limite d’enregistrement, surtout si vous voyagez avec bagages. Confirmez votre terminal, suivez les notifications de votre compagnie et contrôlez l’état du vol sur le tableau ALA. Si vous entrez au Kazakhstan par Astana, notez que cette ville est à environ 970 km : il faut ensuite un vol intérieur d’environ 1 h 20 vers Almaty ou un train de nuit.",
       "sec": {
-        "boards": "Tableaux ALA/NQZ pour le concert à Almaty",
-        "getting": "Transferts vers le Central Stadium",
-        "leaving": "Retours aériens des 15-16 août",
-        "tips": "Conseils vols et transferts pour le concert"
+        "boards": "Tableaux de vols ALA pour le concert à Almaty",
+        "getting": "Rejoindre le Central Stadium depuis ALA",
+        "leaving": "Départs ALA après le concert du 14 août",
+        "tips": "Conseils de voyage aérien pour ce concert"
       }
     },
     "es": {
-      "title": "Ye en Almaty 2026: vuelos y aeropuertos ALA/NQZ",
-      "description": "Consulta paneles de vuelos en vivo para ALA/NQZ y planifica llegadas, traslados y salidas del concierto Ye en Almaty 2026.",
-      "h1": "Vuelos para Ye — LIVE CONCERT TOUR 2026 en Almaty",
-      "banner": "Abre la guía de vuelos para el concierto en Almaty",
-      "intro": "Ye — LIVE CONCERT TOUR 2026 llega al Central Stadium de Almaty, Kazajistán, el viernes 14 de agosto de 2026, con inicio previsto sobre las 21:00, hora de Almaty (UTC+5), y final hacia las 23:30. Al ser la única fecha centroasiática de la gira y atraer viajeros de Rusia, Uzbekistán, Kirguistán y la CEI, conviene revisar paneles de vuelos en vivo en ALA y NQZ alrededor de esas fechas.",
-      "getting": "ALA (Aeropuerto Internacional de Almaty) es la puerta principal: está a unos 15 km al norte del Central Stadium y el trayecto por carretera suele tomar 25-40 minutos, según el tráfico. Desde el aeropuerto, lo habitual son taxis autorizados y apps de movilidad; también hay buses y una línea de metro en la ciudad. NQZ está en otra ciudad, a unos 970 km: solo sirve como entrada alternativa a Kazajistán, con vuelo doméstico posterior a Almaty de alrededor de 1 h 20 min o tren nocturno.",
-      "leaving": "La salida de regreso se concentra el 15 y 16 de agosto, cuando las salidas de ALA estarán más cargadas de lo habitual. Después del concierto, las vías cerca del estadio y del centro pueden seguir congestionadas, así que calcula margen adicional antes de ir al aeropuerto. Si vuelas desde Almaty, consulta el panel de salidas en vivo de ALA antes de salir del alojamiento y ajusta el traslado si hay retrasos o cambios.",
-      "tips": "Para viajar en fechas de gran evento, confirma el aeropuerto escrito en tu reserva, especialmente si comparas ALA con NQZ. Lleva los documentos de viaje accesibles, separa tiempo para equipaje y controles, y comparte tu plan de traslado con tu grupo. Si llegas el mismo día, evita conexiones ajustadas y revisa el estado del vuelo antes de cada desplazamiento.",
+      "title": "Ye en Almaty 2026: vuelos y aeropuerto ALA",
+      "description": "Vuelos para Ye en Almaty 2026: consulta paneles de vuelos en vivo de ALA, llegadas, salidas y traslados al Central Stadium.",
+      "h1": "Vuelos a ALA para Ye en Almaty 2026",
+      "banner": "Abre la guía de vuelos de ALA para Ye en Almaty",
+      "intro": "Ye (Kanye West) — LIVE CONCERT TOUR 2026 llega al Central Stadium de Almaty, Kazajistán, el viernes 14 de agosto de 2026, con inicio previsto hacia las 21:00 hora local (UTC+5) y cierre a las 23:30. Al ser la única fecha centroasiática de la gira y el primer gran concierto público del intérprete en Kazajistán, muchos viajeros llegan en avión desde Rusia, Uzbekistán, Kirguistán y otros países de la CEI; revisar el panel en vivo de ALA ayuda a ajustar conexiones y traslados.",
+      "getting": "ALA, el Aeropuerto Internacional de Almaty, es la puerta principal: está a unos 15 km al norte del Central Stadium y el trayecto por carretera suele tomar 25-40 minutos según el tráfico. Desde la terminal, los medios habituales son taxis autorizados y aplicaciones de transporte; la ciudad también cuenta con autobuses y una línea de metro. El estadio está dentro de Almaty, no fuera de la ciudad, pero esa noche conviene dejar margen.",
+      "leaving": "El regreso en avión se concentra el 15 y 16 de agosto, cuando las salidas de ALA están notablemente más concurridas de lo habitual. Si vuelas tras el concierto, prevé colas en accesos y controles y llega al aeropuerto antes de lo que usarías en una jornada normal. Antes de salir del hotel o del centro, consulta el panel de salidas en vivo de ALA: un cambio de hora puede modificar el momento adecuado para tomar taxi, app, autobús o metro.",
+      "tips": "Guarda margen para el tráfico del viernes por la tarde, especialmente cerca del estadio y del centro. Comprueba llegadas y salidas en vivo antes de reservar el traslado final, y vuelve a mirarlas antes de salir. Si conectas desde otro país, separa el tiempo de vuelo del tiempo terrestre en Almaty. Para grupos, acuerda un punto de encuentro claro en la terminal.",
       "sec": {
-        "boards": "Paneles ALA/NQZ para el concierto de Ye",
-        "getting": "Del aeropuerto al Central Stadium",
-        "leaving": "Regreso en avión el 15-16 de agosto",
+        "boards": "Paneles en vivo de ALA para el concierto",
+        "getting": "De ALA al Central Stadium",
+        "leaving": "Regreso del 15-16 de agosto por ALA",
         "tips": "Consejos de viaje para Almaty 2026"
       }
     },
     "it": {
-      "title": "Ye a Almaty 2026: aeroporti e voli ALA/NQZ",
-      "description": "Guida voli per Ye a Almaty: consulta i tabelloni live di ALA e NQZ, trasferimenti verso lo stadio e partenze del 15-16 agosto.",
-      "h1": "Voli e aeroporti per Ye a Almaty 2026",
-      "banner": "Apri la guida voli per Ye a Central Stadium",
-      "intro": "Ye — LIVE CONCERT TOUR 2026 arriva al Central Stadium di Almaty venerdì 14 agosto 2026, con inizio intorno alle 21:00 ora locale (UTC+5) e fine prevista alle 23:30. Per questa data unica in Asia centrale, molti viaggiatori possono arrivare in aereo da Russia, Uzbekistan, Kirghizistan e altri paesi CIS. Controllare i tabelloni live degli aeroporti aiuta a seguire ritardi, arrivi e coincidenze nelle ore più trafficate.",
-      "getting": "L’aeroporto principale è ALA, Almaty International Airport, circa 15 km a nord del Central Stadium e normalmente 25-40 minuti su strada, secondo il traffico. Dallo scalo si usano soprattutto taxi autorizzati e app di ride-hailing; in città sono presenti anche autobus e una linea metro, perché lo stadio è dentro Almaty. NQZ, ad Astana, è in un’altra città a circa 970 km: serve solo come ingresso alternativo in Kazakhstan, con volo interno di circa 1 ora e 20 minuti per Almaty o treno notturno.",
-      "leaving": "Dopo il concerto, la principale ondata di rientro è prevista il 15-16 agosto, quando le partenze da ALA saranno sensibilmente più affollate del solito. Pianifica margini più ampi per check-in, controlli e consegna bagagli, e considera che le strade intorno allo stadio e al centro possono essere congestionate nella serata dell’evento. Prima di partire per l’aeroporto, verifica il tabellone live delle partenze: un ritardo o cambio operativo può modificare il momento giusto per muoversi.",
-      "tips": "Salva in anticipo indirizzo del Central Stadium, riferimento della prenotazione aerea e una mappa offline di Almaty. Lascia margine tra atterraggio, trasferimento e ingresso in città, soprattutto se arrivi il 14 agosto. Se usi NQZ come ingresso in Kazakhstan, tratta il proseguimento verso Almaty come una seconda tappa, non come un semplice transfer locale.",
+      "title": "Ye a Almaty 2026: voli e aeroporto ALA",
+      "description": "Guida voli per Ye a Almaty 2026: controlla le live flight boards di ALA, arrivi, partenze e trasferimenti al Central Stadium.",
+      "h1": "Ye a Almaty 2026: voli ALA e Central Stadium",
+      "banner": "Apri la guida voli ALA per il concerto di Almaty",
+      "intro": "Ye — LIVE CONCERT TOUR 2026 arriva al Central Stadium di Almaty, Kazakhstan, venerdì 14 agosto 2026, con inizio intorno alle 21:00 ora locale (UTC+5) e termine previsto alle 23:30. È la data centroasiatica del tour e molti viaggiatori voleranno verso Almaty. Intorno a quelle date, controllare una board aeroportuale live aiuta a seguire arrivi, ritardi e partenze da ALA.",
+      "getting": "ALA, Almaty International Airport, è il gateway principale per il Central Stadium: si trova circa 15 km a nord dello stadio e il trasferimento su strada richiede di solito 25-40 minuti, secondo il traffico. L’aeroporto ha collegamenti diretti con Russia, Asia centrale, Turchia, Golfo e Cina. Da ALA sono comuni taxi autorizzati e app di ride-hailing; in città esistono anche autobus e metro. Astana è in un’altra città, circa 970 km via, e funziona solo come ingresso alternativo con volo interno o treno notturno.",
+      "leaving": "L’ondata di rientro è prevista il 15-16 agosto, quando le partenze da ALA saranno sensibilmente più affollate del normale. Dopo il concerto, le strade intorno al Central Stadium e al centro città possono essere congestionate, quindi conviene lasciare più margine per il trasferimento. Prima di partire per l’aeroporto, controlla la board live delle partenze ALA per verificare stato del volo e possibili variazioni.",
+      "tips": "Pianifica il trasferimento come parte del viaggio, non come dettaglio finale. Salva il percorso tra hotel, Central Stadium e ALA, considera traffico serale e code ai controlli, e tieni separati i tempi per bagagli, check-in e spostamenti urbani. Se viaggi con un gruppo, concorda un punto di incontro e controlla le informazioni live prima di muoverti.",
       "sec": {
-        "boards": "Tabelloni live per ALA e NQZ",
-        "getting": "Dal volo al Central Stadium",
-        "leaving": "Rientri del 15-16 agosto",
-        "tips": "Consigli di viaggio per Almaty"
+        "boards": "Board live ALA per il concerto di Almaty",
+        "getting": "Da ALA al Central Stadium",
+        "leaving": "Rientri in volo dopo il concerto",
+        "tips": "Consigli pratici per volare a Almaty"
       }
     },
     "hi": {
-      "title": "Ye 2026 अल्माटी कॉन्सर्ट: ALA/NQZ उड़ानें व एयरपोर्ट",
-      "description": "Ye 2026 अल्माटी कॉन्सर्ट के लिए ALA और NQZ के लाइव फ्लाइट बोर्ड देखें; आगमन, प्रस्थान और एयरपोर्ट ट्रांसफर की योजना बनाएं।",
-      "h1": "Ye 2026 अल्माटी कॉन्सर्ट के लिए एयरपोर्ट और उड़ानें",
-      "banner": "ALA/NQZ लाइव बोर्ड के साथ कॉन्सर्ट यात्रा गाइड खोलें",
-      "intro": "Ye (Kanye West) — LIVE CONCERT TOUR 2026 का अल्माटी कॉन्सर्ट शुक्रवार 14 अगस्त 2026 को लगभग 21:00 बजे, UTC+5, Central Stadium, Almaty में है और 23:30 तक निर्धारित है। यह कजाकिस्तान में इस कलाकार का पहला बड़ा सार्वजनिक कॉन्सर्ट और टूर की एकमात्र मध्य एशियाई तारीख है, इसलिए रूस, उज़्बेकिस्तान, किर्गिज़स्तान और व्यापक CIS से कई यात्री उड़ान से आ सकते हैं। इन तारीखों पर ALA/NQZ लाइव बोर्ड देखकर आगमन और देरी समझना उपयोगी है।",
-      "getting": "मुख्य प्रवेश एयरपोर्ट ALA, Almaty International Airport, है: यह स्टेडियम से लगभग 15 किमी उत्तर में है और सड़क से आम तौर पर 25–40 मिनट लगते हैं, ट्रैफिक पर निर्भर। एयरपोर्ट से लाइसेंस प्राप्त टैक्सी और राइड-हेलिंग ऐप सामान्य विकल्प हैं; शहर में बसें और मेट्रो लाइन भी हैं, क्योंकि स्टेडियम शहर के अंदर है। NQZ अस्ताना में करीब 970 किमी दूर है; यह केवल वैकल्पिक प्रवेश बिंदु है, फिर घरेलू उड़ान लगभग 1 घंटा 20 मिनट या रात की ट्रेन चाहिए।",
-      "leaving": "कॉन्सर्ट के बाद घर लौटने की मुख्य लहर 15–16 अगस्त को रहेगी, जब ALA से प्रस्थान सामान्य से अधिक व्यस्त हो सकते हैं। शुक्रवार रात के कार्यक्रम और अगले दिन की उड़ानों के कारण एयरपोर्ट, टैक्सी पिकअप और सड़कें भीड़भरी हो सकती हैं। एयरपोर्ट के लिए सामान्य से पहले निकलें और रवाना होने से ठीक पहले ALA लाइव डिपार्चर बोर्ड देखें। यदि यात्रा NQZ से जुड़ी है, तो याद रखें कि वह अलग शहर में है और पहले अल्माटी से आगे की उड़ान या ट्रेन चाहिए।",
-      "tips": "बड़े कॉन्सर्ट सप्ताहांत पर उड़ान योजना में अतिरिक्त समय रखें। एयरलाइन की जानकारी और लाइव बोर्ड दोनों मिलाकर देखें, क्योंकि देरी, बैगेज और ट्रांसफर समय बदल सकते हैं। होटल, स्टेडियम और एयरपोर्ट के बीच मार्ग पहले से सहेजें। शाम को स्टेडियम और सिटी सेंटर के आसपास सड़कें व्यस्त रहती हैं, इसलिए एक वैकल्पिक पिकअप स्थान और संपर्क तरीका तय रखें।",
+      "title": "Ye कॉन्सर्ट अल्माटी 2026: ALA एयरपोर्ट उड़ानें",
+      "description": "Ye कॉन्सर्ट अल्माटी 2026 के लिए ALA के लाइव फ्लाइट बोर्ड देखें: आगमन, प्रस्थान, एयरपोर्ट ट्रांसफर और वापसी की योजना।",
+      "h1": "Ye कॉन्सर्ट अल्माटी: ALA उड़ानें और एयरपोर्ट यात्रा",
+      "banner": "ALA से सेंट्रल स्टेडियम यात्रा गाइड खोलें",
+      "intro": "Ye — लाइव कॉन्सर्ट टूर 2026 का अल्माटी कॉन्सर्ट शुक्रवार, 14 अगस्त 2026 को लगभग 21:00 से 23:30 अल्माटी समय (UTC+5) तक सेंट्रल स्टेडियम, अल्माटी, कज़ाख़स्तान में है। यह कज़ाख़स्तान में इस प्रस्तोता का पहला बड़ा सार्वजनिक कॉन्सर्ट और इस टूर की एकमात्र मध्य एशियाई तारीख है, इसलिए रूस, उज्बेकिस्तान, किर्गिज़स्तान और व्यापक CIS से कई यात्री उड़कर आएंगे। उन दिनों ALA का लाइव बोर्ड देरी, आगमन और प्रस्थान समझने में मदद करता है।",
+      "getting": "ALA, यानी अल्माटी अंतरराष्ट्रीय एयरपोर्ट, सेंट्रल स्टेडियम के लिए मुख्य हवाई प्रवेश द्वार है। यह स्टेडियम से लगभग 15 किमी उत्तर में है और सड़क से सामान्यतः 25–40 मिनट लगते हैं, ट्रैफिक पर निर्भर करता है। एयरपोर्ट से लाइसेंस प्राप्त टैक्सी और राइड-हेलिंग ऐप सामान्य विकल्प हैं; शहर में बसें और मेट्रो लाइन भी हैं। स्टेडियम शहर के भीतर है। अस्ताना अलग शहर में लगभग 970 किमी दूर है; वह केवल कज़ाख़स्तान में वैकल्पिक प्रवेश है, फिर अल्माटी तक घरेलू उड़ान या रात की ट्रेन चाहिए।",
+      "leaving": "कॉन्सर्ट के बाद घर लौटने वाली उड़ानों की सबसे व्यस्त लहर 15–16 अगस्त को रहेगी, जब ALA प्रस्थान सामान्य से अधिक भीड़भाड़ वाले होंगे। एयरपोर्ट जाने से पहले लाइव प्रस्थान बोर्ड देखें, ताकि देरी या स्थिति बदलने पर यात्रा समय समायोजित किया जा सके। कॉन्सर्ट शाम को स्टेडियम और शहर केंद्र के आसपास सड़कें जाम रहती हैं, इसलिए वापसी के दिन भी सामान्य से पहले निकलना बेहतर है।",
+      "tips": "यात्रा योजना में अतिरिक्त समय रखें, खासकर कॉन्सर्ट शाम और 15–16 अगस्त की वापसी अवधि में। ALA पर आगमन और प्रस्थान बोर्ड बार-बार जांचें। एयरपोर्ट से शहर के लिए लाइसेंस प्राप्त टैक्सी या राइड-हेलिंग ऐप चुनें; बस और मेट्रो विकल्प भी पहले से समझ लें। स्टेडियम शहर में है, लेकिन केंद्र की भीड़ ट्रांसफर समय बढ़ा सकती है।",
       "sec": {
-        "boards": "Central Stadium के लिए ALA/NQZ लाइव बोर्ड",
-        "getting": "ALA से Central Stadium तक पहुँचना",
+        "boards": "अल्माटी कॉन्सर्ट के ALA लाइव बोर्ड",
+        "getting": "ALA से सेंट्रल स्टेडियम तक",
         "leaving": "15–16 अगस्त की वापसी उड़ानें",
-        "tips": "कॉन्सर्ट यात्रियों के लिए उड़ान सुझाव"
+        "tips": "कॉन्सर्ट यात्रियों के उड़ान सुझाव"
       }
     },
     "tr": {
-      "title": "Ye Konseri Almatı: ALA/NQZ Uçuş ve Havalimanı Rehberi",
-      "description": "14 Ağustos 2026 Almatı konseri için ALA/NQZ canlı uçuş panoları; geliş, aktarma ve dönüşte havalimanı zamanlamasını kontrol edin.",
-      "h1": "Ye Almatı Konseri İçin Havalimanları ve Uçuşlar",
-      "banner": "Ye Almatı konseri için ALA/NQZ uçuş rehberini açın",
-      "intro": "Ye (Kanye West) — LIVE CONCERT TOUR 2026, 14 Ağustos 2026 Cuma günü saat yaklaşık 21:00’de Almatı saatiyle Central Stadium, Almatı’da düzenlenir. Konser 23:30 civarında biter. Kazakhstan’daki ilk büyük açık konseri ve turun tek Orta Asya tarihi olduğu için Rusya, Özbekistan, Kırgızistan ve daha geniş BDT’den uçan yolcu payı yüksektir. Bu tarihlerde ALA ve NQZ canlı uçuş panolarını izlemek geliş saatleri ve aktarmalar için önemlidir.",
-      "getting": "Central Stadium için ana kapı ALA, Almaty International Airport’tur: stadyumun yaklaşık 15 km kuzeyinde, trafiğe göre karayoluyla yaklaşık 25-40 dakika uzaklıktadır. ALA’nın Rusya, Orta Asya, Türkiye, Körfez ve Çin ile direkt bağlantıları vardır. Havalimanından lisanslı taksiler ve araç çağırma uygulamaları yaygındır; şehirde otobüsler ve metro hattı da bulunur. NQZ Astana’dadır, yaklaşık 970 km uzakta başka bir şehirdir; yalnızca Almatı’ya yaklaşık 1 saat 20 dakikalık iç hat uçuşu veya gece treniyle devam edilecekse anlamlıdır.",
-      "leaving": "Konser sonrası dönüş yoğunluğu 15-16 Ağustos’ta beklenir; bu dönemde ALA kalkışları normalden belirgin biçimde daha kalabalık olur. Havalimanına her zamankinden erken gitmek ve yola çıkmadan önce canlı kalkış panosunu kontrol etmek iyi bir zamanlama sağlar. Konser akşamı stadyum çevresi ve şehir merkezi yolları sıkışır; bu nedenle dönüş transferleri için de ek süre bırakın. NQZ kullananlar, bunun yerel havalimanı olmadığını ve Almatı’dan ayrıca iç hat uçuşu veya tren gerektirdiğini planlamalıdır.",
-      "tips": "Uçuş gününüzü konser saatleriyle birlikte düşünün: ALA geliş panosunu inişten önce, kalkış panosunu ise havalimanına gitmeden önce kontrol edin. Stadyum şehir içinde olsa da konser akşamı yol süreleri uzayabilir. Taksiler, araç çağırma uygulamaları, otobüsler ve metro hattı arasında plan yaparken ek bekleme payı bırakın. NQZ’yi yalnızca Kazakhstan’a alternatif giriş noktası olarak değerlendirin.",
+      "title": "Ye Almatı 2026 konseri: ALA uçuşları ve havalimanı",
+      "description": "Ye Almatı 2026 konserine uçuşla gelenler için ALA canlı uçuş panoları, havalimanı transferleri ve dönüş yoğunluğu bilgisi.",
+      "h1": "Ye Almatı 2026 konseri için ALA uçuş ve ulaşım rehberi",
+      "banner": "ALA uçuş panosundan konser transferinizi planlayın",
+      "intro": "Ye (Kanye West) — LIVE CONCERT TOUR 2026, Almatı konseri 14 Ağustos 2026 Cuma günü yaklaşık 21:00’de (UTC+5) başlayıp 23:30’da bitecek; yer Central Stadium, Almatı, Kazakistan. Bu turun tek Orta Asya tarihi olduğu için izleyicilerin önemli bölümü Rusya, Özbekistan, Kırgızistan ve daha geniş BDT’den uçakla gelebilir. Bu tarihlerde ALA varış ve kalkış panosunu canlı kontrol etmek, gecikme veya yoğunluk nedeniyle transfer zamanını ayarlamaya yardımcı olur.",
+      "getting": "Central Stadium için ana hava kapısı ALA, stadyumun yaklaşık 15 km kuzeyindedir; yol trafiğine göre karayoluyla yaklaşık 25-40 dakika sürer. Almatı’da havalimanından şehir içine lisanslı taksiler ve çağrı uygulamaları olağan seçeneklerdir; otobüsler ve metro hattı da bulunur. Stadyum şehir içindedir, şehir dışı bir alan değildir. Konser akşamı stadyum ve merkez çevresinde trafik sıkışabileceğinden ek süre bırakın. Astana farklı bir şehirde, yaklaşık 970 km uzakta; yalnızca yaklaşık 1 saat 20 dakikalık iç hat uçuşu veya gece treniyle devam edilen yedek bir giriş noktasıdır.",
+      "leaving": "Konser 14 Ağustos Cuma gecesi bittiğinden, eve dönüş yoğunluğu 15-16 Ağustos’ta ALA kalkışlarında görülür; havalimanı normalden belirgin biçimde daha kalabalık olabilir. Araç çağırmadan veya taksiye binmeden önce canlı kalkış panosunu kontrol edin, çünkü gecikme ve yoğunluk kararınızı değiştirebilir. Bagaj işlemleri, terminal içi sıra ve yol trafiği için alıştığınızdan daha erken havalimanına gitmek, bu dönüş dalgasında daha temkinli bir plandır.",
+      "tips": "Uçuş günlerinde ALA panosunu hem konaklama yerinden çıkmadan önce hem de yoldayken yeniden kontrol edin. Transfer için lisanslı taksi veya çağrı uygulaması kullanacaksanız buluşma noktasını önceden netleştirin; otobüs ya da metroya geçecekseniz ekstra yürüme ve aktarma süresi bırakın. Konser akşamı merkez yolları sıkışabileceği için aynı gün varışlarda geniş zaman payı planlayın.",
       "sec": {
-        "boards": "Central Stadium için ALA/NQZ canlı uçuş panoları",
-        "getting": "Almatı Central Stadium’a havalimanından ulaşım",
+        "boards": "ALA canlı panoları ve konser uçuşları",
+        "getting": "Central Stadium’a havalimanı ulaşımı",
         "leaving": "15-16 Ağustos dönüş uçuşları",
-        "tips": "Konser yolcuları için uçuş ve transfer notları"
+        "tips": "Konser seyahati için kısa ipuçları"
       }
     }
   }

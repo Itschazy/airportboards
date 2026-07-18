@@ -1,0 +1,44 @@
+{
+  "meta": {
+    "slug": "asian-games-nagoya-2026",
+    "name": "20th Asian Games Aichi-Nagoya 2026",
+    "startDate": "2026-09-19T18:00:00+09:00",
+    "endDate": "2026-10-04T23:59:59+09:00",
+    "venue": "Paloma Mizuho Stadium (Mizuho Park, Mizuho-ku)",
+    "venueCity": "Nagoya",
+    "country": "JP",
+    "type": "sports",
+    "officialUrl": "https://www.aichi-nagoya2026.org/en/",
+    "status": "scheduled",
+    "sources": [
+      "https://www.aichi-nagoya2026.org/en/",
+      "https://www.aichi-nagoya2026.org/en/tournament/overview/",
+      "https://oca.asia/games/111-aichi-nagoya-2026.html",
+      "https://en.wikipedia.org/wiki/2026_Asian_Games",
+      "https://en.wikipedia.org/wiki/Paloma_Mizuho_Stadium_(2026)",
+      "https://en.wikipedia.org/wiki/Chubu_Centrair_International_Airport",
+      "https://en.wikipedia.org/wiki/Nagoya_Airfield",
+      "https://en.wikipedia.org/wiki/Mizuho_Und%C5%8Dj%C5%8D_Higashi_Station",
+      "https://www.nagoya-info.jp/en/access/centrair/",
+      "https://www.meitetsu.co.jp/eng/airport-access/index.html",
+      "https://www.soccerphile.com/stadiums/mizuho-stadium",
+      "https://en.wikipedia.org/wiki/2026_Asian_Para_Games",
+      "https://www.paralympic.org/news/aichi-nagoya-2026-celebrates-100-days-go-until-asian-para-games",
+      "https://selfguidejapan.com/blog/japan-silver-week-2026",
+      "https://www.nippon.com/en/japan-data/h02302/",
+      "https://www.olympics.com/en/news/asian-games-2026-competition-schedule-released"
+    ],
+    "airports": [
+      {
+        "iata": "NKM",
+        "km": 22
+      },
+      {
+        "iata": "NGO",
+        "km": 45
+      }
+    ]
+  },
+  "facts": "- **Main gateway: Chubu Centrair International Airport (NGO)**, the primary international airport for the Chūkyō metropolitan area (Japan's third-largest urban region). It sits on an artificial island in Ise Bay off the coast of Tokoname, roughly 35 km south of Nagoya; about 45 km by road to the stadium in Mizuho-ku. It handled just over 11 million passengers in FY2024.\n- **Rail from NGO is the default route.** The Meitetsu (Nagoya Railroad) Airport Line runs directly from the terminal: the all-reserved **μ-SKY Limited Express reaches Meitetsu Nagoya Station in 28 minutes**; ordinary Limited Express services take up to about 35 minutes. Transfers to JR lines, the Tōkaidō Shinkansen and the city subway are at the same Nagoya Station complex.\n- **Last leg to the venue is the Nagoya Municipal Subway.** From Nagoya Station the **Sakura-dōri Line** runs to **Mizuho Undōjō Nishi**, about a 15-minute walk from the stadium. The **Meijō Line** serves **Mizuho Undōjō Higashi**, about a 10-minute walk. The Meijō Line is typically reached by transferring from the Higashiyama Line at Motoyama.\n- **Other NGO ground options that genuinely exist:** Centrair Limousine bus services, the Chitaōdan toll road for cars and taxis, and a passenger ferry link to Tsu. Sightseeing-taxi transfers to the city are quoted at 50+ minutes. Note that the Meitetsu Bus link between the airport and Nagoya is listed as suspended — rail is the reliable choice.\n- **Second airport: Nagoya Airfield / Komaki (NKM)**, about 10 km north of central Nagoya and roughly 22 km by road to the stadium. It is **domestic-only** — international service moved to Centrair in 2005. It is the operating base and domestic hub of Fuji Dream Airlines, which is the only airline with scheduled service there. Useful for fans connecting from within Japan, not for international arrivals.\n- **Congestion — organiser policy.** The Aichi-Nagoya organising committee's plan states that spectators are in principle expected to use public transport, and that **access to venues by private car will be restricted**. Shuttle buses between competition venues and the nearest public-transport stations are part of the plan, along with public-messaging measures to discourage private car use around Games facilities.\n- **Congestion — the Silver Week factor.** The Games open on **Saturday 19 September 2026, which is day one of Japan's rare five-day Silver Week (19–23 September)**: the weekend plus Respect for the Aged Day (Mon 21 Sep), an automatic Citizen's Holiday (Tue 22 Sep) and Autumnal Equinox Day (Wed 23 Sep). This is only the third full Silver Week ever (after 2009 and 2015) and the next is not until 2032. Expect the opening weekend to collide with Japan's heaviest domestic travel period of the autumn.\n- **Fly-home peaks:** the days immediately after the **closing ceremony on Sunday 4 October** are the main departure surge for delegations and international fans. A secondary domestic-return surge lands at the **end of Silver Week, 23–24 September**, when holiday travellers head home mid-Games.\n- **International draw:** 45 National Olympic Committees from across Asia, with roughly 15,000 athletes and officials expected across 41 sports, 68 disciplines and 460 events. NGO's own international network is concentrated on exactly these markets — South Korea, Taiwan and mainland China in East Asia; Thailand, Vietnam, the Philippines and Singapore in Southeast Asia; plus limited transpacific service to Guam and Honolulu.\n- **Venue is brand new:** the rebuilt Paloma Mizuho Stadium opened on 18 April 2026. Capacity is 30,000, raised to 35,000 with temporary two-tier covered seating for the Games. It hosts athletics plus the opening and closing ceremonies. The opening ceremony runs 18:00–20:00 JST on 19 September.\n- **Second wave in October:** the 5th Asian Para Games use the same host region and the same stadium from **18–24 October 2026**, bringing around 3,000 athletes from 45 National Paralympic Committees — a distinct arrival/departure peak three weeks after the Asian Games close.",
+  "guidance": "Neutral service-directory tone. No prices, fares, flight numbers, timetables or gate numbers. Do not imply this site sells tickets or is official. If an airport in the list is far from the venue, say so plainly and call it a fallback rather than a nearby airport."
+}

@@ -1,0 +1,39 @@
+{
+  "meta": {
+    "slug": "f1-baku",
+    "name": "Formula 1 Azerbaijan Grand Prix 2026",
+    "startDate": "2026-09-24T12:30:00+04:00",
+    "endDate": "2026-09-26T15:00:00+04:00",
+    "venue": "Baku City Circuit",
+    "venueCity": "Baku",
+    "country": "AZ",
+    "type": "sports",
+    "officialUrl": "https://www.bakucitycircuit.com/",
+    "status": "scheduled",
+    "sources": [
+      "https://www.formula1.com/en/racing/2026/azerbaijan",
+      "https://www.motorsport.com/f1/news/2026-azerbaijan-grand-prix-date-changed-to-avoid-clash-with-day-of-national-mourning/10737989/",
+      "https://liquipedia.net/formula1/2026_Azerbaijan_Grand_Prix",
+      "https://www.mercedesamgf1.com/races/azerbaijan-grand-prix-2026",
+      "https://www.bakucitycircuit.com/",
+      "https://www.azerbaijanf1.com/en/by-plane-16",
+      "https://www.azerbaijanf1.com/en/getting-around-the-circuit-5",
+      "https://en.wikipedia.org/wiki/Baku_City_Circuit",
+      "https://en.wikipedia.org/wiki/Heydar_Aliyev_International_Airport",
+      "https://airport.az/en/transport/aero-express/from-airport/",
+      "https://www.airport.az/en/press-release/h1-airport-express-route-will-now-operate-24-7-for-the-convenience-of-passengers/",
+      "https://f1experiences.com/blog/azerbaijan-grand-prix-getting-around-guide",
+      "https://www.euronews.com/culture/2025/10/02/baku-grand-prix-2025-welcomed-13000-visitors-as-city-boosted-f1-safety-and-capacity",
+      "https://en.wikipedia.org/wiki/Remembrance_Day_(Azerbaijan)",
+      "https://www.bakucitycircuit.com/news/Statement-by-Baku-City-Circuit-on-road-restrictions-throughout-the-race-week"
+    ],
+    "airports": [
+      {
+        "iata": "GYD",
+        "km": 24
+      }
+    ]
+  },
+  "facts": "- **Single gateway.** Heydar Aliyev International Airport (GYD), in the Bina settlement, is the only airport with scheduled commercial passenger service for Baku. Nearby Zabrat is general-aviation and cargo only. GYD sits about 20 km north-east of Baku, linked to the city by the Baku Airport Highway; it has two passenger terminals (T1 international, T2 domestic and low-cost) and handled 7,537,000 passengers in 2024, up 31% on 2023.\n- **Airport to venue.** The circuit is in the city centre on the Caspian seafront, so road distance from GYD to the track is roughly 24 km. The official Azerbaijan GP site puts the airport \"about 20 km from the circuit\" and around 30 minutes by car or taxi; expect longer during race-week closures.\n- **No rail or metro link to the airport.** There is no railway station and no metro station at GYD; metro expansion toward the airport is only discussed for after 2040. The connection is the Aeroexpress / BakuBus **H1 Airport Express**, running Terminal 1 → Terminal 2 → Surakhani Bridge → **Koroglu** metro → **28 May** metro / Central Railway Station in about 30 minutes. H1 operates 24/7 (roughly every 20 minutes by day, every 45 minutes overnight). The Baku Kart multipass covers the airport bus, city buses and the metro on one card.\n- **Metro serves the circuit directly.** Three stations — **28 May**, **Sahil** and **Icheri Sheher** — are within walking distance of the track. In past editions 28 May and Icheri Sheher stayed open until 02:00 on the Friday-to-Sunday of Grand Prix week. Both the organiser and official fan guides explicitly recommend the metro over driving.\n- **Taxi and ride-hailing.** State-operated Baku Taxi has ranks outside Terminal 1; Uber operates in Baku. The official Azerbaijan GP travel page warns that unofficial taxi operators overcharge arriving passengers.\n- **Congestion pattern.** Baku City Circuit is a 6.003 km street track running through the working centre of the city — it starts beside Azadliq Square, loops around Government House, passes the Palace of the Shirvanshahs and the Maiden Tower, and runs along Neftchilar Avenue. Streets inside the circuit are closed to traffic for the build-up and race period; several main roads reopen only as transit corridors where parking and passenger pick-up/drop-off are banned. There is **no spectator parking at the circuit**. Public transport is extended over the race weekend, running up to about 20 hours a day, with buses as frequent as every three minutes to some points around the track. A 2025 barrier upgrade cut teardown time so city traffic is restored in roughly 12 hours after the event.\n- **Fly-home peak falls a day early in 2026.** Because the Grand Prix runs on **Saturday 26 September** rather than the usual Sunday, the departure surge lands on **Saturday evening 26 September and Sunday 27 September** — one day ahead of a normal F1 weekend. Sunday 27 September is Remembrance Day (Anım Günü), a national public holiday and day of mourning in Azerbaijan and the very reason the race was moved, so the city itself will be subdued while GYD departures peak.\n- **International draw.** The 2025 edition drew around 13,000 international visitors from Europe, the Americas, Asia and the Middle East, with two new grandstands lifting capacity past 20,000 seats; the 2024 weekend set an attendance record of 76,000 across the event. GYD is served by carriers including Turkish Airlines, Lufthansa, Qatar Airways and British Airways, so most fan traffic connects through Istanbul, Doha, Frankfurt and London rather than flying direct.\n- **Calendar position.** Baku is round 17 of 24 in 2026, slotted between the inaugural Madrid Grand Prix and the Singapore night race, with no event immediately before or after it — the date shift was made without disrupting team logistics.",
+  "guidance": "Neutral service-directory tone. No prices, fares, flight numbers, timetables or gate numbers. Do not imply this site sells tickets or is official. If an airport in the list is far from the venue, say so plainly and call it a fallback rather than a nearby airport."
+}

@@ -1,0 +1,33 @@
+{
+  "meta": {
+    "slug": "f1-madrid",
+    "name": "Formula 1 Spanish Grand Prix 2026 (Madrid, Madring)",
+    "startDate": "2026-09-11T13:30:00+02:00",
+    "endDate": "2026-09-13T17:00:00+02:00",
+    "venue": "Madring (IFEMA Madrid circuit), Avda. del Partenón 5",
+    "venueCity": "Madrid",
+    "country": "ES",
+    "type": "sports",
+    "officialUrl": "https://www.madring.com/en",
+    "status": "scheduled",
+    "sources": [
+      "https://www.formula1.com/en/racing/2026/spain",
+      "https://en.wikipedia.org/wiki/2026_Spanish_Grand_Prix",
+      "https://en.wikipedia.org/wiki/Madring",
+      "https://www.madring.com/en/press-releases/spanish-gp-calendar",
+      "https://www.madring.com/en/circuit/location-access",
+      "https://www.ifema.es/en/how-to-get-here",
+      "https://www.formula1.com/en/latest/article/madrid-formula-1-calendar-2026-spanish-grand-prix.rKwSPJ74MczwzDhHVxdQz",
+      "https://gpdestinations.com/how-to-get-to-the-madring-spanish-grand-prix-madrid/",
+      "https://motorsporttickets.com/blog/how-to-get-to-the-madring-circuit-for-the-madrid-f1-grand-prix/"
+    ],
+    "airports": [
+      {
+        "iata": "MAD",
+        "km": 9
+      }
+    ]
+  },
+  "facts": "- **Main (and effectively only) gateway: Adolfo Suárez Madrid-Barajas (MAD).** The Madring is built around the IFEMA Madrid exhibition centre in the Barajas/Valdebebas district, immediately next to the airport — the official circuit site describes the venue as \"5 minutes from Adolfo Suárez Madrid Barajas airport\". Road distance is roughly 8–13 km depending on which terminal you land at (T4 is the outlying one), i.e. about 10–15 minutes by car outside peak. Madrid has no second commercial airport, so essentially all air arrivals funnel through MAD.\n- **Metro is the headline connection.** Madrid Metro **Line 8 (Nuevos Ministerios – Aeropuerto T4)** links the airport terminals directly to **Feria de Madrid** station, which sits at IFEMA's South Gate — one stop from Aeropuerto T1-T2-T3 and three stops from Aeropuerto T4, around an 8-minute ride, then a short walk to the circuit. Line 8 also runs into the city at Nuevos Ministerios, where fans transfer to the rest of the network.\n- **Commuter rail exists too.** Renfe **Cercanías Line C-1** serves **Valdebebas**, on the Valdebebas side of the circuit, and connects the venue with Atocha, Chamartín, Nuevos Ministerios and Aeropuerto T4.\n- **Buses:** EMT city routes serve IFEMA, including **Line 73 (Diego de León – IFEMA Madrid)**, stopping at Partenón-Ribera del Sena and Feria de Madrid, and **Line 122 (Avenida de América – Feria de Madrid)**. Organisers have said bus frequencies to the three access zones (IFEMA, Valdebebas, Las Cárcavas) will be reinforced on event days, with additional special shuttle routes between metro hubs and the circuit and extended metro hours over the race weekend.\n- **Taxi and ride-hailing:** dedicated taxi ranks are planned at the venue; Madrid taxis operate a fixed airport fare regime, and Uber and Bolt both operate in the city.\n- **Congestion pattern.** Parking at the circuit is deliberately limited and organisers openly push public transport — they expect around **90% of spectators to arrive by metro, train or bus**. Road access is via the M-11, M-40 and A-2, the same corridors that feed the airport, so the roads around IFEMA, the airport approaches and the main hotel areas bunch up before each session and again immediately after it. The heaviest surges are before the Sunday race and in the hour after it ends.\n- **Scale.** The venue opens with capacity for about **110,000 spectators per day**, with a stated plan to grow toward 140,000 within five years — one of the largest crowds on the F1 calendar, arriving and leaving through an airport-adjacent transport corridor.\n- **Fly-home peak.** The Grand Prix runs on **Sunday 13 September**, starting mid-afternoon local time and finishing late afternoon. That makes **Sunday evening 13 September and Monday morning 14 September** the departure crunch at MAD; Friday 11 September is the arrival build-up, with a second arrival wave on Saturday for qualifying-only visitors.\n- **International draw.** This is F1's return to Madrid after more than 45 years and the first brand-new circuit on the calendar since Las Vegas in 2023, so the audience skews heavily international — the wider F1 travelling fanbase from across Europe (notably the UK, Netherlands, Italy, Germany and France) plus long-haul motorsport tourism, on top of a large domestic Spanish contingent drawn by home driver and circuit ambassador Carlos Sainz. Spain is the only country with two Grands Prix in 2026 (Barcelona-Catalunya in June, Madrid in September). Tourism coverage points to extended multi-night stays around the event rather than day trips.\n- **Same-weekend support races:** F2 and F3 also compete at the Madring that weekend, which lengthens the on-site day and spreads arrivals across all three days.",
+  "guidance": "Neutral service-directory tone. No prices, fares, flight numbers, timetables or gate numbers. Do not imply this site sells tickets or is official. If an airport in the list is far from the venue, say so plainly and call it a fallback rather than a nearby airport."
+}

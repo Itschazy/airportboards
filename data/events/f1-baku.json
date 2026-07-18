@@ -1,0 +1,231 @@
+{
+  "meta": {
+    "slug": "f1-baku",
+    "name": "Formula 1 Azerbaijan Grand Prix 2026",
+    "startDate": "2026-09-24T12:30:00+04:00",
+    "endDate": "2026-09-26T15:00:00+04:00",
+    "venue": "Baku City Circuit",
+    "venueCity": "Baku",
+    "country": "AZ",
+    "type": "sports",
+    "officialUrl": "https://www.bakucitycircuit.com/",
+    "status": "scheduled",
+    "sources": [
+      "https://www.formula1.com/en/racing/2026/azerbaijan",
+      "https://www.motorsport.com/f1/news/2026-azerbaijan-grand-prix-date-changed-to-avoid-clash-with-day-of-national-mourning/10737989/",
+      "https://liquipedia.net/formula1/2026_Azerbaijan_Grand_Prix",
+      "https://www.mercedesamgf1.com/races/azerbaijan-grand-prix-2026",
+      "https://www.bakucitycircuit.com/",
+      "https://www.azerbaijanf1.com/en/by-plane-16",
+      "https://www.azerbaijanf1.com/en/getting-around-the-circuit-5",
+      "https://en.wikipedia.org/wiki/Baku_City_Circuit",
+      "https://en.wikipedia.org/wiki/Heydar_Aliyev_International_Airport",
+      "https://airport.az/en/transport/aero-express/from-airport/",
+      "https://www.airport.az/en/press-release/h1-airport-express-route-will-now-operate-24-7-for-the-convenience-of-passengers/",
+      "https://f1experiences.com/blog/azerbaijan-grand-prix-getting-around-guide",
+      "https://www.euronews.com/culture/2025/10/02/baku-grand-prix-2025-welcomed-13000-visitors-as-city-boosted-f1-safety-and-capacity",
+      "https://en.wikipedia.org/wiki/Remembrance_Day_(Azerbaijan)",
+      "https://www.bakucitycircuit.com/news/Statement-by-Baku-City-Circuit-on-road-restrictions-throughout-the-race-week"
+    ],
+    "airports": [
+      {
+        "iata": "GYD",
+        "km": 24
+      }
+    ]
+  },
+  "locales": {
+    "en": {
+      "title": "Azerbaijan Grand Prix 2026 Airports & GYD Flights",
+      "description": "Plan airport travel for Formula 1 Azerbaijan Grand Prix 2026 with live flight boards for GYD, transfer notes and fly-home advice.",
+      "h1": "Formula 1 Azerbaijan Grand Prix 2026 airport guide",
+      "banner": "Open the Baku Grand Prix airport and live flights guide",
+      "intro": "Formula 1 Azerbaijan Grand Prix 2026 runs from 24 September at 12:30 to 26 September at 15:00 at Baku City Circuit in Baku. The street circuit sits in the working city centre on the Caspian seafront, where race-week road closures affect normal traffic. With international visitors moving through the same gateway, checking the GYD live airport board helps you see arrivals and departures before choosing when to leave for the city or airport.",
+      "getting": "Heydar Aliyev International Airport (GYD), in the Bina settlement, is Baku’s only scheduled commercial passenger airport and the main gateway for the Grand Prix. The circuit is roughly 24 km by road from GYD; the official event guidance describes it as about 20 km and around 30 minutes by car or taxi, longer during closures. There is no rail or metro station at the airport. Use taxi, ride-hailing, or the H1 Airport Express via Koroglu and 28 May, then metro stations such as 28 May, Sahil or Icheri Sheher.",
+      "leaving": "Because the 2026 race finishes on Saturday 26 September rather than Sunday, the fly-home wave falls on Saturday evening 26 September and Sunday 27 September, one day earlier than a normal F1 weekend. Sunday 27 September is Remembrance Day, a national public holiday and day of mourning in Azerbaijan. GYD departures peak while the city is subdued, so arrive earlier than usual and check the live departures board before leaving.",
+      "tips": "Use public transport where possible: organiser and fan guidance recommend the metro over driving, and there is no spectator parking at the circuit. Keep luggage plans simple if you are going straight from the track to GYD. At arrivals, use official taxi ranks or recognised ride-hailing; the event travel page warns that unofficial taxi operators overcharge passengers. Recheck your flight status before each airport transfer.",
+      "sec": {
+        "boards": "GYD live boards for Baku Grand Prix travel",
+        "getting": "From Heydar Aliyev Airport to Baku City Circuit",
+        "leaving": "Flying home after the Saturday finish",
+        "tips": "Grand Prix week airport travel tips"
+      }
+    },
+    "ru": {
+      "title": "Гран-при Азербайджана F1 2026: аэропорт GYD и рейсы",
+      "description": "Как лететь на Гран-при Азербайджана F1 2026 через Баку: онлайн-табло рейсов GYD, дорога к трассе и выезд домой.",
+      "h1": "Как лететь на Гран-при Азербайджана F1 2026",
+      "banner": "Откройте гид по рейсам на Гран-при Азербайджана",
+      "intro": "Formula 1 Azerbaijan Grand Prix 2026 пройдёт 24–26 сентября 2026 года на городской трассе Baku City Circuit в Баку. Трасса расположена в центре города на набережной Каспия, поэтому дни заездов совпадают с перекрытиями улиц и повышенным спросом на трансфер. Для прилёта через GYD полезно заранее смотреть онлайн-табло: статус рейсов помогает выбрать время выезда из аэропорта и избежать лишнего ожидания.",
+      "getting": "Основной и фактически единственный пассажирский воздушный вход в Баку — Международный аэропорт Гейдар Алиев (GYD) в посёлке Бина; Забрат обслуживает только авиацию общего назначения и грузы. От GYD до Baku City Circuit около 24 км, обычно примерно 30 минут на автомобиле или такси, но в гоночную неделю дорога может занять больше. Железной дороги и метро в аэропорту нет: доступны H1 Airport Express до Koroglu и 28 May, городское метро, Baku Taxi и Uber.",
+      "leaving": "Обратный пик в 2026 году ожидается раньше обычного: из-за субботнего завершения Гран-при основной поток вылетов придётся на вечер 26 сентября и воскресенье 27 сентября. В этот период GYD может быть заметно загружен, а поездка через город осложняться остаточными ограничениями у трассы. Планируйте прибытие в аэропорт раньше, чем в обычный день, и проверьте онлайн-табло вылетов GYD перед выездом из центра.",
+      "tips": "Учитывайте, что у Baku City Circuit нет зрительской парковки, а улицы внутри городского контура закрываются. Для подхода к трассе ориентируйтесь на метро: 28 May, Sahil и Icheri Sheher находятся в пешей доступности. Держите запас времени на пересадки, проверяйте статус рейса в день поездки и пользуйтесь официальными стоянками такси или приложениями, избегая неофициальных водителей.",
+      "sec": {
+        "boards": "Ближайший аэропорт и онлайн-табло GYD",
+        "getting": "Из GYD к Baku City Circuit",
+        "leaving": "Вылеты после субботнего финиша",
+        "tips": "Советы пассажирам на гоночную неделю"
+      }
+    },
+    "zh": {
+      "title": "2026 F1阿塞拜疆大奖赛机场与航班：GYD实时信息",
+      "description": "前往2026年F1阿塞拜疆大奖赛？本页汇总巴库市街赛道与GYD机场交通要点，并提供GYD实时航班板，便于查看到达、出发和赛后返程高峰。",
+      "h1": "2026 F1阿塞拜疆大奖赛：巴库GYD机场航班与交通",
+      "banner": "打开阿塞拜疆大奖赛GYD机场出行指南",
+      "intro": "Formula 1 Azerbaijan Grand Prix 2026将于2026年9月24日12:30至9月26日15:00在阿塞拜疆巴库的Baku City Circuit举行。赛道位于里海海滨的市中心，是穿过日常城区的6.003公里街道赛道。赛事周周边道路封闭和客流集中会影响进出城时间，因此查看GYD实时到达和出发航班板，有助于在抵达、换乘和返程前掌握航班状态。",
+      "getting": "Heydar Aliyev International Airport（GYD）是巴库唯一有定期商业客运服务的机场，位于Bina settlement，距离赛道约24公里；赛事资料也称机场距赛道约20公里，驾车或出租车约30分钟，赛事周封路时可能更久。GYD没有铁路站或地铁站，可乘H1 Airport Express经T1、T2前往Koroglu、28 May；28 May、Sahil和Icheri Sheher可步行到赛道。",
+      "leaving": "2026年赛事在9月26日星期六结束，返程客流高峰预计集中在9月26日星期六晚间和9月27日星期日，比通常F1周末提前一天。9月27日也是阿塞拜疆Anım Günü全国公共假日和哀悼日，城市氛围会较安静，但GYD出发旅客会集中。离开住处前先查看GYD实时出发航班板，并比平时更早到机场办理手续和安检。",
+      "tips": "GYD有T1国际航站楼和T2国内及低成本航站楼，出发前确认航站楼。赛道没有观众停车位，组织方和球迷指南都建议乘地铁而非自驾。可用Baku Kart乘机场巴士、市内巴士和地铁。若乘出租车，T1外有Baku Taxi站点，注意避开可能高收费的非正规出租车。",
+      "sec": {
+        "boards": "GYD机场实时航班板与最近机场",
+        "getting": "从GYD前往巴库市街赛道",
+        "leaving": "9月26日至27日赛后返程",
+        "tips": "大奖赛周机场出行提示"
+      }
+    },
+    "ar": {
+      "title": "جائزة أذربيجان الكبرى 2026: مطار GYD والرحلات",
+      "description": "دليل السفر إلى جائزة أذربيجان الكبرى 2026 في باكو، مع لوحات الرحلات الحية لمطار GYD لمتابعة الوصول والمغادرة حول السباق.",
+      "h1": "رحلات ومطار جائزة أذربيجان الكبرى 2026",
+      "banner": "افتح دليل السفر الجوي لسباق باكو 2026",
+      "intro": "تقام جائزة أذربيجان الكبرى للفورمولا 1 لعام 2026 من 24 إلى 26 سبتمبر 2026 على حلبة مدينة باكو، في وسط باكو على الواجهة البحرية لبحر قزوين. خلال هذه الفترة، يعتمد القادمون والمغادرون على مطار حيدر علييف الدولي GYD كبوابة جوية مجدولة للمدينة. متابعة لوحة المطار الحية تساعد على رصد تغييرات الوصول والمغادرة حول أيام السباق، عندما تتأثر الحركة داخل المدينة بإغلاقات الحلبة.",
+      "getting": "مطار حيدر علييف الدولي GYD، في منطقة بينا، هو البوابة الرئيسية والوحيدة ذات خدمة ركاب تجارية مجدولة لباكو. يبعد المسار نحو 24 كم براً عن الحلبة، وحوالي 30 دقيقة بالسيارة أو التاكسي في الظروف العادية، مع احتمال زمن أطول خلال إغلاقات أسبوع السباق. لا توجد محطة قطار أو مترو في المطار؛ يتوفر H1 Airport Express من مبنيي الركاب إلى كور أوغلو و28 مايو، إضافة إلى سيارات الأجرة وUber.",
+      "leaving": "تتركز موجة العودة بعد السباق مبكراً في 2026، لأن الحدث ينتهي يوم السبت 26 سبتمبر لا الأحد المعتاد. لذلك يُتوقع ضغط المغادرات في مساء السبت 26 سبتمبر والأحد 27 سبتمبر، وهو أيضاً يوم أنيم غونو، عطلة وطنية ويوم حداد في أذربيجان. اترك وقتاً أطول من المعتاد للوصول إلى GYD، وتحقق من لوحة المغادرات الحية قبل مغادرة مكان إقامتك لتجنب الانتظار غير الضروري.",
+      "tips": "استخدم المترو للوصول إلى محيط الحلبة حيث تقع محطات 28 مايو، ساحل وإتشري شهر ضمن مسافة مشي، ولا تعتمد على القيادة أو التوقف قرب المسار إذ لا توجد مواقف للمتفرجين. احتفظ ببطاقة باكو كارت إن استخدمت الحافلات أو المترو. تجنب سيارات الأجرة غير الرسمية عند الوصول، وراجع حالة الرحلة قبل كل انتقال مهم.",
+      "sec": {
+        "boards": "لوحات رحلات GYD الأقرب لسباق باكو",
+        "getting": "من مطار حيدر علييف إلى حلبة المدينة",
+        "leaving": "موجة المغادرة بعد سباق السبت",
+        "tips": "نصائح سفر جوي لأسبوع الجائزة الكبرى"
+      }
+    },
+    "de": {
+      "title": "Formula 1 Azerbaijan GP 2026: Flughäfen & Flüge",
+      "description": "Flughäfen und Flüge zum Formula 1 Azerbaijan Grand Prix 2026: Live-Flugtafeln für GYD, Transfers zum Baku City Circuit und Heimreise.",
+      "h1": "Flüge zum Formula 1 Azerbaijan Grand Prix 2026",
+      "banner": "Airport-Guide für den Azerbaijan GP 2026 öffnen",
+      "intro": "Der Formula 1 Azerbaijan Grand Prix 2026 findet vom 24. bis 26. September 2026 auf dem Baku City Circuit in Baku statt. Der Stadtkurs liegt am Kaspischen Meer mitten im Arbeitszentrum der Stadt. Rund um dieses Rennwochenende reisen viele internationale Besucher über Heydar Aliyev International Airport (GYD) an. Ein Live-Flughafenboard hilft, Ankünfte, Verspätungen und Abflüge zu prüfen, bevor Sie Transferzeiten oder die Fahrt zum Circuit festlegen.",
+      "getting": "GYD ist das einzige Flughafentor mit planmäßigem kommerziellem Passagierverkehr für Baku; Zabrat dient nur General Aviation und Fracht. Vom Flughafen in der Siedlung Bina sind es etwa 24 km zum Baku City Circuit, etwa 30 Minuten per Auto oder Taxi, bei Sperrungen länger. Es gibt keinen Bahn- oder Metroanschluss am Airport. Der H1 Airport Express fährt über Terminal 1, Terminal 2, Koroglu und 28 May; Taxis, Uber und die Metrostationen 28 May, Sahil und Icheri Sheher ergänzen den Weg.",
+      "leaving": "Die Rückreisewelle setzt 2026 früher ein als an üblichen F1-Wochenenden: Weil das Rennen am Samstag, 26. September, endet, konzentrieren sich viele Abflüge auf Samstagabend, 26. September, und Sonntag, 27. September. GYD kann dann voller sein, auch wenn Baku wegen Anım Günü, dem nationalen Gedenk- und Trauertag, ruhiger wirkt. Planen Sie mehr Zeit als gewöhnlich ein und prüfen Sie die Live-Abflugtafel, bevor Sie zum Flughafen fahren.",
+      "tips": "Rechnen Sie während Aufbau, Rennen und Abbau mit Straßensperren im Zentrum; am Circuit gibt es keine Zuschauerparkplätze. Nutzen Sie möglichst Metro, Bus oder H1 Airport Express und halten Sie beim Umstieg die Baku Kart bereit. Wählen Sie die Baku-Taxi-Stände vor Terminal 1 oder Uber, da vor überteuerten inoffiziellen Taxis gewarnt wird. Prüfen Sie Terminal und Flugstatus erneut am Reisetag.",
+      "sec": {
+        "boards": "GYD-Live-Flugtafeln für den Azerbaijan GP",
+        "getting": "Vom Heydar Aliyev Airport zum Baku City Circuit",
+        "leaving": "Heimflüge nach dem Samstagsrennen",
+        "tips": "Reisetipps für das GP-Wochenende in Baku"
+      }
+    },
+    "ko": {
+      "title": "2026 아제르바이잔 그랑프리 공항·항공편 | GYD 실시간 보드",
+      "description": "2026 포뮬러 1 아제르바이잔 그랑프리 기간 GYD 실시간 항공편 보드로 바쿠 도착·출발을 확인하세요. 헤이다르 알리예프 공항에서 바쿠 시티 서킷까지 이동, 귀국 피크 시간대와 대중교통 팁을 정리합니다.",
+      "h1": "2026 아제르바이잔 그랑프리 공항 및 항공편 안내",
+      "banner": "GYD 실시간 보드로 바쿠 그랑프리 이동을 확인하세요",
+      "intro": "2026 포뮬러 1 아제르바이잔 그랑프리는 2026년 9월 24일 12:30부터 9월 26일 15:00까지 아제르바이잔 바쿠의 바쿠 시티 서킷에서 열리는 스포츠 행사입니다. 도심 카스피해변의 6.003km 거리 서킷을 쓰기 때문에 준비와 경기 기간 도로 통제가 생깁니다. 바쿠의 정기 상업 여객 공항은 GYD 하나이므로, 이 날짜 전후에는 실시간 공항 보드 확인이 이동 계획에 중요합니다.",
+      "getting": "주 관문은 비나 정착지의 헤이다르 알리예프 국제공항, GYD입니다. 서킷은 바쿠 도심 해안에 있어 공항에서 도로로 약 24km이며, 공식 안내 기준 자동차나 택시로 약 30분입니다. 경기 주간 통제 때는 더 걸릴 수 있습니다. 공항에는 철도나 지하철역이 없고, H1 공항 익스프레스가 T1, T2, 코로글루, 28 메이를 잇습니다. 택시, 바쿠 택시, 우버도 이용됩니다.",
+      "leaving": "2026년에는 결승 주말 흐름이 평소와 다릅니다. 그랑프리가 일요일이 아니라 9월 26일 토요일에 끝나므로, 귀국 출발 수요는 토요일 저녁 26일과 일요일 27일에 몰립니다. 9월 27일은 아제르바이잔의 추모일인 공휴일이기도 합니다. GYD 출국장이 붐빌 수 있으니 평소보다 일찍 이동하고, 숙소를 나서기 전에 실시간 출발 보드로 항공편 상태를 확인하세요.",
+      "tips": "서킷에는 관람객 주차가 없고, 주최 측 안내도 운전보다 지하철 이용을 권합니다. 28 메이, 사힐, 이체리 셰헤르 역은 트랙에서 도보권입니다. 공항버스, 시내버스, 지하철은 바쿠 카트 한 장으로 이용할 수 있습니다. 터미널 밖 비공식 택시는 과다 청구 경고가 있으므로 공식 승강장이나 호출 서비스를 확인하세요.",
+      "sec": {
+        "boards": "GYD 실시간 항공편 보드와 바쿠 관문",
+        "getting": "헤이다르 알리예프 공항에서 바쿠 시티 서킷까지",
+        "leaving": "토요일 종료 후 GYD 귀국 출발",
+        "tips": "그랑프리 주간 공항·도심 이동 팁"
+      }
+    },
+    "ja": {
+      "title": "F1アゼルバイジャンGP 2026｜空港・GYD発着便情報",
+      "description": "F1アゼルバイジャンGP 2026でバクーへ飛ぶ旅行者向けに、GYDのライブフライトボード、空港から市街地サーキットへの移動、帰路の混雑目安を確認できます。",
+      "h1": "F1アゼルバイジャンGP 2026の空港・フライト案内",
+      "banner": "バクーGP期間のGYD発着と市内アクセスを確認",
+      "intro": "フォーミュラ1アゼルバイジャン・グランプリ2026は、2026年9月24日12:30から9月26日15:00まで、アゼルバイジャンのバクー市内にあるバクー・シティ・サーキットで開催されます。市街地コース周辺では交通規制や来訪者の移動が重なります。バクーの定期旅客便はGYDに集中するため、到着前後はライブ空港ボードで遅延、到着状況、出発状況を確認しておくと移動計画を調整しやすくなります。",
+      "getting": "主な玄関口はヘイダル・アリエフ国際空港（GYD）です。バクーで定期商業旅客便がある空港はGYDのみで、空港はビナ地区にあり、市中心部のサーキットまで道路距離は約24km、車やタクシーで約30分が目安です。レース週の通行規制では長くかかる場合があります。空港に鉄道駅や地下鉄駅はなく、H1 Airport ExpressがT1、T2、Koroglu、28 May方面を結びます。28 May、Sahil、Icheri Sheher駅はコース徒歩圏です。",
+      "leaving": "2026年は決勝が通常の日曜ではなく9月26日土曜に行われるため、帰国の山は土曜夕方26日と日曜27日に前倒しで重なります。9月27日はアゼルバイジャンの追悼の日（Anım Günü）でもあり、市内は落ち着いた雰囲気の一方で、GYDの出発便利用者は増えやすい時期です。空港へは普段より早めに向かい、ホテルや市内を出る前にライブ出発ボードで便の状況を確認してください。",
+      "tips": "サーキットに観客用駐車場はなく、主催者や公式ファンガイドは運転より地下鉄利用を勧めています。Baku Kartは空港バス、市内バス、地下鉄で使えます。ターミナル1外にはBaku Taxiの乗り場があり、Uberも利用できますが、非公式タクシーの過請求には注意が必要です。道路閉鎖中は乗降場所の制限も見込んでください。",
+      "sec": {
+        "boards": "アゼルバイジャンGP最寄り空港とGYDライブボード",
+        "getting": "GYDからバクー市街地サーキットへ",
+        "leaving": "土曜決勝後のGYD出発ピーク",
+        "tips": "バクーGP期間の空港利用メモ"
+      }
+    },
+    "fr": {
+      "title": "Grand Prix F1 d’Azerbaïdjan 2026 : vols et aéroport GYD",
+      "description": "Guide aéroport pour le Grand Prix F1 d’Azerbaïdjan 2026 à Bakou, avec tableaux des vols en direct pour GYD et trajets vers le circuit.",
+      "h1": "Vols pour le Grand Prix F1 d’Azerbaïdjan 2026",
+      "banner": "Ouvrir le guide aéroport du Grand Prix à Bakou",
+      "intro": "Le Formula 1 Azerbaijan Grand Prix 2026 se tient du 24 septembre à 12 h 30 au 26 septembre à 15 h au Baku City Circuit, dans le centre de Bakou. Le tracé urbain de 6,003 km longe le front de mer de la Caspienne et traverse des axes actifs de la ville. Autour de ces dates, consulter le tableau des vols en direct de GYD aide à suivre retards, arrivées et correspondances avant de rejoindre le circuit.",
+      "getting": "L’aéroport international Heydar Aliyev (GYD), à Bina, est la seule porte aérienne commerciale régulière de Bakou; Zabrat relève de l’aviation générale et du fret. Le circuit est à environ 24 km, soit près de 30 minutes en voiture ou taxi hors fermetures de semaine de course. Pas de train ni métro à GYD: le bus H1 Airport Express relie les terminaux, Koroglu et 28 May. Baku Taxi et Uber existent; le métro dessert le circuit depuis 28 May, Sahil et Icheri Sheher.",
+      "leaving": "Le retour sera concentré plus tôt qu’un week-end de F1 habituel: la course finissant le samedi 26 septembre, la vague de départs est attendue samedi soir 26 septembre et dimanche 27 septembre. Ce dimanche est Anım Günü, jour férié national et de deuil en Azerbaïdjan, tandis que les départs de GYD culminent. Prévoyez plus de marge que d’ordinaire et vérifiez le tableau des départs en direct avant de quitter Bakou pour l’aéroport.",
+      "tips": "Pendant le Grand Prix, évitez de compter sur la voiture près du circuit: il n’y a pas de parking spectateurs et des rues restent fermées. Gardez une Baku Kart chargée pour le bus H1, les bus urbains et le métro. Notez votre terminal, T1 international ou T2 domestique et low-cost, et utilisez les taxis officiels ou applications reconnues plutôt que les opérateurs non officiels.",
+      "sec": {
+        "boards": "GYD en direct pour Bakou 2026",
+        "getting": "De Heydar Aliyev au Baku City Circuit",
+        "leaving": "Départs après la course du samedi",
+        "tips": "Conseils de trajet pendant le Grand Prix"
+      }
+    },
+    "es": {
+      "title": "Fórmula 1 Azerbaiyán GP 2026: aeropuertos y vuelos",
+      "description": "Guía para volar al GP de Azerbaiyán de F1 2026 en Bakú, con paneles de vuelos en vivo para GYD y traslados al circuito.",
+      "h1": "Vuelos al Formula 1 Azerbaijan Grand Prix 2026",
+      "banner": "Abre la guía de vuelos para el GP de Azerbaiyán",
+      "intro": "El Formula 1 Azerbaijan Grand Prix 2026 se celebra del 24 al 26 de septiembre de 2026 en el Baku City Circuit, en Bakú. El trazado urbano está en el centro de la ciudad, junto al paseo del Caspio, y atrae tráfico aéreo internacional en torno al fin de semana. Consultar el panel en vivo de GYD ayuda a confirmar llegadas y salidas antes de coordinar traslados hacia el circuito.",
+      "getting": "El acceso aéreo principal es el Aeropuerto Internacional Heydar Aliyev (GYD), en Bina, el único aeropuerto con servicio comercial regular para Bakú. Está a unos 24 km por carretera del circuito, normalmente unos 30 minutos en coche o taxi, con más tiempo durante cierres de semana de carrera. No hay tren ni metro en GYD; el H1 Airport Express conecta T1, T2, Koroglu y 28 May. Desde 28 May, Sahil o Icheri Sheher se camina al trazado.",
+      "leaving": "La salida se concentra antes de lo habitual en 2026: al terminar el Gran Premio el sábado 26 de septiembre, el pico de vuelos cae la tarde-noche del sábado 26 y el domingo 27. Ese domingo es Anım Günü, festivo nacional y día de duelo en Azerbaiyán, mientras GYD puede estar concurrido. Sal del centro con margen extra y revisa el panel de salidas en vivo antes de ir al aeropuerto.",
+      "tips": "Planifica traslados con tiempo porque el circuito es urbano y varias calles se cierran durante el montaje y la carrera. No cuentes con aparcamiento para espectadores ni recogidas junto a las vías cerradas. Usa Baku Taxi o Uber; la página oficial del GP advierte de sobrecargos de taxis no oficiales. Lleva una Baku Kart si combinarás bus y metro.",
+      "sec": {
+        "boards": "Paneles en vivo para volar a Bakú (GYD)",
+        "getting": "De GYD al Baku City Circuit",
+        "leaving": "Regreso tras la carrera del sábado",
+        "tips": "Consejos de viaje para el GP urbano"
+      }
+    },
+    "it": {
+      "title": "Formula 1 Azerbaijan GP 2026: aeroporti e voli GYD",
+      "description": "Guida voli per Formula 1 Azerbaijan Grand Prix 2026: consulta i tabelloni voli live di GYD e pianifica arrivi e partenze da Baku.",
+      "h1": "Voli e aeroporti per Formula 1 Azerbaijan GP 2026",
+      "banner": "Apri la guida voli per il GP Azerbaijan 2026",
+      "intro": "Il Formula 1 Azerbaijan Grand Prix 2026 si svolge dal 24 settembre alle 12:30 al 26 settembre alle 15:00 al Baku City Circuit, nel centro di Baku. Il circuito cittadino affaccia sul Caspio e attraversa strade operative della città, con chiusure durante l’allestimento e il weekend di gara. Per chi arriva in aereo, controllare il tabellone live di GYD aiuta a seguire ritardi, cancellazioni e partenze nei giorni di maggiore afflusso.",
+      "getting": "L’aeroporto principale, e l’unico con servizio passeggeri commerciale di linea per Baku, è Heydar Aliyev International Airport (GYD), nell’insediamento di Bina. Il Baku City Circuit dista circa 24 km su strada, circa 30 minuti in auto o taxi in condizioni normali, ma di più con le chiusure della settimana di gara. Non ci sono treno o metro a GYD: l’H1 Airport Express collega Terminal 1, Terminal 2, Koroglu, 28 May e la stazione centrale.",
+      "leaving": "Il rientro sarà concentrato prima del solito: nel 2026 la gara finisce sabato 26 settembre, quindi il picco partenze cade tra la sera di sabato 26 e domenica 27 settembre. Domenica è anche Anım Günü, giorno nazionale di lutto in Azerbaijan, mentre GYD gestirà molti voli in uscita. Parti per l’aeroporto con più anticipo del normale e controlla il tabellone partenze live prima di lasciare Baku.",
+      "tips": "Usa la metro per avvicinarti al circuito: 28 May, Sahil e Icheri Sheher sono a distanza pedonale dalla pista, e le guide ufficiali la preferiscono all’auto. Non è previsto parcheggio spettatori al circuito. Per i taxi, usa i ranghi Baku Taxi fuori dal Terminal 1 o servizi ride-hailing disponibili, evitando operatori non ufficiali. Tieni la Baku Kart pronta per bus urbani, metro e bus aeroporto.",
+      "sec": {
+        "boards": "Tabelloni voli live GYD per il GP Azerbaijan",
+        "getting": "Da GYD al Baku City Circuit",
+        "leaving": "Partenze dopo la gara del sabato",
+        "tips": "Consigli di viaggio per il weekend di Baku"
+      }
+    },
+    "hi": {
+      "title": "फॉर्मूला 1 अज़रबैजान GP 2026: GYD एयरपोर्ट उड़ानें",
+      "description": "बाकू सिटी सर्किट जाने से पहले GYD के लाइव फ्लाइट बोर्ड देखें: आगमन, प्रस्थान और एयरपोर्ट-से-शहर यात्रा की जरूरी जानकारी।",
+      "h1": "फॉर्मूला 1 अज़रबैजान ग्रां प्री 2026 के लिए GYD उड़ानें",
+      "banner": "अज़रबैजान GP के लिए GYD लाइव उड़ान गाइड खोलें",
+      "intro": "फॉर्मूला 1 अज़रबैजान ग्रां प्री 2026, 24 सितंबर 12:30 से 26 सितंबर 15:00 तक बाकू के बाकू सिटी सर्किट में है। यह 6.003 किमी का स्ट्रीट ट्रैक शहर के कामकाजी केंद्र और कैस्पियन तट के पास चलता है। इवेंट के आसपास GYD ही बाकू की अनुसूचित यात्री उड़ानों का प्रवेश द्वार है, इसलिए आगमन और प्रस्थान की स्थिति के लिए लाइव एयरपोर्ट बोर्ड देखना उपयोगी है।",
+      "getting": "हेयदर अलीयेव अंतरराष्ट्रीय हवाई अड्डा (GYD) बीना बस्ती में है और बाकू के लिए अनुसूचित वाणिज्यिक यात्री सेवा वाला एकमात्र हवाई अड्डा है। सर्किट शहर के केंद्र में कैस्पियन समुद्रतट पर है; GYD से सड़क दूरी करीब 24 किमी है, कार या टैक्सी से सामान्यतः लगभग 30 मिनट, पर रेस-सप्ताह बंदियों में अधिक समय लग सकता है। एयरपोर्ट पर रेल या मेट्रो स्टेशन नहीं है; H1 एयरपोर्ट एक्सप्रेस T1, T2, कोरोग्लू और 28 मई से जोड़ता है।",
+      "leaving": "क्योंकि 2026 में ग्रां प्री शनिवार 26 सितंबर को खत्म होती है, वापसी उड़ानों की लहर शनिवार शाम 26 सितंबर और रविवार 27 सितंबर को आएगी, सामान्य फॉर्मूला 1 सप्ताहांत से एक दिन पहले। 27 सितंबर अज़रबैजान में स्मरण दिवस सार्वजनिक अवकाश और शोक दिवस है, इसलिए शहर शांत हो सकता है जबकि GYD प्रस्थान व्यस्त रहें। एयरपोर्ट जाने से पहले लाइव प्रस्थान बोर्ड देखें और सामान्य से पहले निकलें।",
+      "tips": "सर्किट पर दर्शक पार्किंग नहीं है, इसलिए ड्राइविंग को अंतिम विकल्प मानें। आयोजक और फैन गाइड मेट्रो को प्राथमिकता देते हैं; 28 मई, साहिल और इचेरी शेहेर स्टेशन ट्रैक से पैदल दूरी पर हैं। H1 बस, शहर बस और मेट्रो के लिए बाकू कार्ड एक ही कार्ड पर चलता है। अनौपचारिक टैक्सियों से बचें; आधिकारिक रैंक या ऐप-आधारित सेवा चुनें।",
+      "sec": {
+        "boards": "GYD लाइव बोर्ड और बाकू ग्रां प्री एयरपोर्ट",
+        "getting": "GYD से बाकू सिटी सर्किट तक",
+        "leaving": "26–27 सितंबर की वापसी उड़ानें",
+        "tips": "रेस सप्ताह में हवाई यात्रियों के सुझाव"
+      }
+    },
+    "tr": {
+      "title": "Formula 1 Azerbaycan GP 2026: GYD uçuşları ve havalimanı",
+      "description": "Formula 1 Azerbaycan GP 2026 için GYD canlı uçuş panolarını kontrol edin; Bakü City Circuit’e gidiş ve dönüş planınızı yapın.",
+      "h1": "Formula 1 Azerbaycan GP 2026 havalimanı ve uçuş rehberi",
+      "banner": "Bakü GP için GYD canlı uçuş ve ulaşım rehberini açın",
+      "intro": "Formula 1 Azerbaycan Grand Prix 2026, 24 Eylül 2026 saat 12:30’dan 26 Eylül 2026 saat 15:00’e kadar Bakü’deki Baku City Circuit’te düzenlenir. Pist, Hazar kıyısındaki şehir merkezinde yer alan bir sokak parkurudur. Bu tarihlerde uluslararası gelişler ve dönüş uçuşları GYD’de yoğunlaşır; bu yüzden havalimanına gitmeden önce canlı geliş ve gidiş panolarını kontrol etmek gecikme ve yoğunluk planı için özellikle önemlidir.",
+      "getting": "Bakü’ye tarifeli ticari yolcu hizmeti veren tek havalimanı, Bina yerleşimindeki Heydar Aliyev Uluslararası Havalimanı’dır (GYD); Zabrat genel havacılık ve kargo içindir. GYD pistten yaklaşık 24 km uzaklıktadır; Azerbaycan GP bilgisi araç veya taksiyle yaklaşık 30 dakika der, yarış haftası kapanışlarda daha uzun sürebilir. Havalimanında metro ya da tren yoktur. H1 Airport Express, T1 ve T2’den Koroglu ile 28 May metro/Merkez Tren İstasyonu’na gider; Baku Taxi ve Uber de vardır.",
+      "leaving": "Yarış 2026’da normal pazar yerine Cumartesi 26 Eylül’de bittiği için dönüş dalgası Cumartesi akşamı 26 Eylül ve Pazar 27 Eylül’e kayar. 27 Eylül Azerbaycan’da Anım Günü, ulusal resmî tatil ve yas günüdür; şehir daha sakin olabilirken GYD gidişleri yoğunlaşır. Havalimanında kuyruklara ve yol kapanışlarına pay bırakın, normalden erken gidin ve yola çıkmadan önce GYD canlı gidiş panosunu kontrol edin.",
+      "tips": "Piste araçla gitmeyi varsaymayın: Baku City Circuit çevresinde seyirci otoparkı yoktur ve kapalı sokaklarda indirme-bindirme kısıtlanabilir. 28 May, Sahil ve Icheri Sheher istasyonları piste yürünebilir mesafededir; organizatör ve taraftar rehberleri metroyu sürüşe tercih eder. Baku Kart’ı H1, şehir otobüsleri ve metro için tek kart olarak planlayın; takside resmî sıra veya uygulama kullanın.",
+      "sec": {
+        "boards": "GYD canlı panoları ve Bakü GP uçuşları",
+        "getting": "Baku City Circuit’e GYD’den ulaşım",
+        "leaving": "26-27 Eylül dönüş uçuşları",
+        "tips": "Grand Prix haftasında pratik ulaşım notları"
+      }
+    }
+  }
+}

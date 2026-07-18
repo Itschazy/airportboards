@@ -1,0 +1,42 @@
+{
+  "meta": {
+    "slug": "f1-singapore",
+    "name": "Formula 1 Singapore Grand Prix 2026",
+    "startDate": "2026-10-09T17:30:00+08:00",
+    "endDate": "2026-10-11T22:00:00+08:00",
+    "venue": "Marina Bay Street Circuit",
+    "venueCity": "Singapore",
+    "country": "SG",
+    "type": "sports",
+    "officialUrl": "https://www.singaporegp.sg/",
+    "status": "scheduled",
+    "sources": [
+      "https://www.formula1.com/en/racing/2026/singapore",
+      "https://en.wikipedia.org/wiki/2026_Formula_One_World_Championship",
+      "https://www.singaporegp.sg/",
+      "https://racingnews365.com/f1/races/singapore-gp",
+      "https://www.lta.gov.sg/content/ltagov/en/newsroom/2025/8/news-releases/f1_Singapore_2025_road_closure_PT_arrangement.html",
+      "https://www.lta.gov.sg/content/ltagov/en/newsroom/2025/9/news-releases/f1_Singapore_2025_road_closure_PT_arrangement_reminder.html",
+      "https://www.thef1spectator.com/singapore-grand-prix-travel-guide/getting-there/",
+      "https://gpdestinations.com/getting-around-singapore-f1-grand-prix/",
+      "https://singaporegp.sg/en/news/2022/formula-1-singapore-airlines-singapore-grand-prix-2022-sets-new-highest-attendance-record/",
+      "https://f1destinations.com/over-300000-attend-2025-singapore-grand-prix-weekend/",
+      "https://www.universalweather.com/blog/singapore-grand-prix-business-aviation-guide/",
+      "https://www.seletarairport.com/commercial-flights.html",
+      "https://en.wikipedia.org/wiki/Marina_Bay_Street_Circuit",
+      "https://motorsportscalendar.com/event/f1-2026-singapore-gp"
+    ],
+    "airports": [
+      {
+        "iata": "SIN",
+        "km": 20
+      },
+      {
+        "iata": "XSP",
+        "km": 23
+      }
+    ]
+  },
+  "facts": "- **Main gateway: Singapore Changi Airport (SIN).** It is effectively the single commercial gateway for this event — roughly 20 km by road from the Marina Bay Street Circuit, typically 20–30 minutes by taxi via the East Coast Parkway outside of event-related closures.\n- **Rail from the airport exists and is the recommended route.** Changi Airport MRT station sits on the Changi Airport branch of the **East-West Line**; passengers change at **Tanah Merah** to continue into the city. Total airport-to-circuit journey is roughly 30–50 minutes depending on the transfer.\n- **Closest MRT stations to the circuit**: **Bayfront** (Circle Line and Downtown Line) is nearest, about a 5-minute walk to most circuit entrances; **Raffles Place** (North-South and East-West Lines) is roughly 8–10 minutes on foot; **City Hall** (North-South and East-West Lines) roughly 12–15 minutes; **Promenade** and **Esplanade** also serve specific gates.\n- **No dedicated airport-to-circuit F1 shuttle.** Transport modes that genuinely exist are: MRT metro, public buses (including a direct city bus service from Changi), metered street taxis (Singapore has a large licensed taxi fleet, hailable on the street or by phone), and ride-hailing via **Grab**, which is the dominant app locally.\n- **Road closures are extensive and run for about a week, not just race days.** The Land Transport Authority closes roads across the Marina Centre and Padang area for roughly seven days around the event, reopening in the early morning after the final day. Roads historically affected include Nicoll Highway, St Andrew's Road, Raffles Boulevard, Esplanade Drive, Stamford Road and Bras Basah Road. Selected corridors toward Orchard Road, Shenton Way, Marina Boulevard and Changi Airport are reopened during morning and evening peak windows.\n- **Driving to the venue is impractical.** Access into Marina Centre during the closure period is reduced to limited single-lane routes; taxis and motorcycles retain access except during race hours. The LTA explicitly and strongly encourages ticket holders to use public transport.\n- **Late-night crowd surge is the defining congestion pattern.** This is a night event — the Grand Prix starts at 20:00 local on Sunday and runs about two hours, so 250,000-plus attendees disperse late at night. MRT services on the North-South and East-West Lines are extended past midnight on race days, and selected connecting bus services also run extended hours. Taxi and Grab pickup points near the circuit gates back up heavily after the race; waits of an hour or more are commonly reported, and certain gates (notably around the Bay Grandstand) bottleneck on foot.\n- **Fly-home peak is Monday 12 October**, the day after the Sunday-night race, with a secondary late-Sunday wave of overnight long-haul departures. Because the race finishes around 22:00, very few attendees can realistically fly out on race day itself.\n- **Scale and international draw.** The Singapore Grand Prix is one of the best-attended races on the calendar: the 2022 edition set the venue record at 302,000 across three days, and the 2025 edition again passed 300,000. The organiser has cited fans travelling from **Australia, the United Kingdom, Indonesia, the Netherlands and the United States**, with a large regional Southeast Asian contingent; the event draws tens of thousands of overseas visitors.\n- **Seletar Airport (XSP)** is the secondary field, about 23 km by road from Marina Bay (commonly described as a 15–20 minute drive to the Marina Bay and financial district area). It is primarily a **business-aviation airport** with dedicated FBO facilities and private immigration, and it is the preferred base for private jet traffic during the Grand Prix, when demand for parking and FBO slots peaks. Its only scheduled commercial passenger service is a short Firefly link to Subang (Kuala Lumpur), so it is not a realistic option for most travelling fans.\n- **2026 is a first for this race: it is a Sprint weekend**, adding a Sprint race on Saturday to the Friday–Sunday programme. That means all three days have significant headline track action, so arrival traffic is spread across Thursday and Friday rather than concentrated on Saturday.",
+  "guidance": "Neutral service-directory tone. No prices, fares, flight numbers, timetables or gate numbers. Do not imply this site sells tickets or is official. If an airport in the list is far from the venue, say so plainly and call it a fallback rather than a nearby airport."
+}

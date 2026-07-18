@@ -1,0 +1,52 @@
+{
+  "meta": {
+    "slug": "rio-carnival",
+    "name": "Rio Carnival (Sambadrome Parades)",
+    "startDate": "2027-02-05T20:50:00-03:00",
+    "endDate": "2027-02-13T21:00:00-03:00",
+    "venue": "Sambódromo Marquês de Sapucaí (Passarela Professor Darcy Ribeiro)",
+    "venueCity": "Rio de Janeiro",
+    "country": "BR",
+    "type": "festival",
+    "officialUrl": "https://liesa.org.br/",
+    "status": "scheduled",
+    "sources": [
+      "https://liesa.org.br/noticias/260416.html",
+      "https://liesa.org.br/carnaval/horario-dos-desfiles.html",
+      "https://exame.com/pop/venda-de-ingressos-para-a-sapucai-em-2027-comeca-hoje-confira-os-precos/",
+      "https://diariodorio.com/serie-ouro-define-ordem-dos-desfiles-para-o-carnaval-2027-na-sapucai/",
+      "https://www.camarotecarnaval.com/sambodromo/desfile-das-campeas",
+      "https://en.wikipedia.org/wiki/Sambadrome_Marqu%C3%AAs_de_Sapuca%C3%AD",
+      "https://en.wikipedia.org/wiki/Santos_Dumont_Airport",
+      "https://en.wikipedia.org/wiki/Rio_de_Janeiro/Gale%C3%A3o_International_Airport",
+      "https://cetrio.prefeitura.rio/noticias/cet-rio-implantara-operacoes-especiais-de-transito-para-o-carnaval-rio-2026/",
+      "https://cetrio.prefeitura.rio/noticias/cet-rio-monta-esquemas-de-transito-para-o-carnaval-do-rio-2026/",
+      "https://diariodorio.com/carnaval-2026-saiba-em-qual-estacao-do-metro-descer-de-acordo-com-seu-setor-na-sapucai-2/",
+      "https://www.metrorio.com.br/Estacoes?p_ponto=13",
+      "https://trilhos.motiva.com.br/vltrio/",
+      "https://pt.wikipedia.org/wiki/Linha_3_do_VLT_Carioca",
+      "https://pt.wikipedia.org/wiki/Linha_1_do_VLT_Carioca",
+      "https://www.riogaleao.com/passageiros/como-chegar-e-sair/brt/",
+      "https://pt.wikipedia.org/wiki/Esta%C3%A7%C3%A3o_Vicente_de_Carvalho_(BRT)",
+      "https://www.cnnbrasil.com.br/nacional/sudeste/rj/cerca-de-600-mil-passageiros-desembarcam-no-galeao-para-o-carnaval-do-rio/",
+      "https://diariodorio.com/galeao-recebe-quase-600-mil-passageiros-para-o-carnaval-do-rio",
+      "https://www.gov.br/portos-e-aeroportos/pt-br/assuntos/noticias/2026/02/carnaval-de-2026-movimenta-mais-de-2-1-milhoes-de-passageiros-e-pode-registrar-melhor-resultado-da-historia",
+      "https://brasilturis.com.br/2026/02/23/carnaval-2026-300-mil-turistas-internacionais/",
+      "https://temporealrj.com/rio-turistas-estrangeiros-carnaval-brasil-2026/",
+      "https://www.rome2rio.com/s/Rio-De-Janeiro-Galeao-Airport-GIG/Sambadrome-Marqu%C3%AAs-de-Sapuca%C3%AD",
+      "https://www.rome2rio.com/s/Rio-De-Janeiro-Santos-Dumont-Airport-SDU/Sambadrome-Marqu%C3%AAs-de-Sapuca%C3%AD"
+    ],
+    "airports": [
+      {
+        "iata": "SDU",
+        "km": 5
+      },
+      {
+        "iata": "GIG",
+        "km": 16
+      }
+    ]
+  },
+  "facts": "- **Venue**: Sambódromo Marquês de Sapucaí (the \"Sapucaí\"), designed by Oscar Niemeyer and opened in 1984, in the Cidade Nova district of downtown Rio de Janeiro. Roughly a 700 m parade strip with grandstands both sides; complex capacity around 90,000. Seating is split into odd-numbered (ímpar) and even-numbered (par) sectors on opposite sides of the avenue — the side printed on the ticket decides which station you should get off at.\n- **Parade programme 2027**: Série Ouro (access group, 17 schools) on Friday 5 and Saturday 6 February, 8 schools the first night and 9 the second, first school on the avenue around 20:50. Grupo Especial (top tier, 12 schools) across three nights — Sunday 7, Monday 8 and Tuesday 9 February, 4 schools each night. Results are announced on Ash Wednesday, 10 February, at 16:00. The Desfile das Campeãs (Champions' Parade), with the six best-placed schools, closes the season on Saturday 13 February from 21:00.\n- **Main international gateway**: Rio de Janeiro/Galeão–Antônio Carlos Jobim International Airport (GIG), on Governador Island. Since 2023 GIG handles Rio's international traffic, while Santos Dumont is essentially a domestic airport. Road distance to the Sambadrome is about 16 km; a taxi or ride-hail run is roughly 15–20 minutes off-peak and materially longer on parade nights.\n- **Closest airport**: Santos Dumont (SDU), about 5 km by road from the Sambadrome — a 10–15 minute taxi ride in normal traffic, walkable in under an hour. It sits next to the financial district and is domestic-only, so most foreign visitors arrive at GIG and only use SDU if connecting from another Brazilian city.\n- **Rail from SDU**: the VLT Carioca light rail has a terminus inside Santos Dumont airport. VLT Line 3 (Yellow) runs Santos Dumont ↔ Central; VLT Line 1 (Blue) runs Santos Dumont ↔ Terminal Intermodal Gentileza via the Rodoviária (long-distance bus terminal), Carioca and Cinelândia. From Central it is roughly a 700 m walk to the Sambadrome. VLT normally runs about 06:00 to midnight, with extended overnight running during Carnival.\n- **Metro is the recommended way in**: MetrôRio serves the venue from both sides. Praça Onze (Line 1) is the station for the even-numbered sectors — leave by Access B, Marquês de Sapucaí, straight into Sector 2. Central do Brasil (Lines 1 and 2, plus SuperVia commuter trains) is the station for the odd-numbered sectors and for the school assembly area at the Balança, about a 700 m walk past the floats queuing to enter and the Terreirão do Samba. During Carnival the metro runs continuously, 24 hours, with roughly 10-minute headways through the small hours.\n- **From GIG without a taxi**: there is no rail link at Galeão. The BRT TransCarioca corridor serves the airport and runs 24/7; Vicente de Carvalho is the one TransCarioca stop that connects to the metro (Line 2), via a footbridge over Avenida Vicente de Carvalho, and Line 2 continues to Central. There is also a direct city bus from GIG Terminal 2 towards the Praça Onze area. Regular taxis and ride-hailing apps operate at both airports.\n- **Congestion on parade days**: CET-Rio runs a special traffic scheme around the Sambadrome for every parade night. The central lanes of Avenida Presidente Vargas towards Candelária close from around 11:00 so the floats can be positioned, with stretches of Rua Afonso Cavalcanti and Rua Benedito Hipólito also closed for venue preparation. From around 15:00 the main feeders into Presidente Vargas are blocked — Avenida Francisco Bicalho, the Freyssinet/Paulo de Frontin viaduct and Praça da Bandeira — with traffic from Avenida Paulo de Frontin diverted onto Rua Aristides Lobo. Taxis get designated pick-up and drop-off points around the perimeter rather than at the gates. The city's standing advice is to use metro or train and avoid driving. Street blocos elsewhere in the city close additional roads across the whole Carnival week, so allow far more time than a map estimate suggests.\n- **Airport peaks**: at Carnival 2026 Galeão handled about 599,000 passengers over the ten-day Carnival window (roughly 238,800 international, 361,000 domestic), up about 23% year on year; Santos Dumont recorded about 110,900 passengers on 906 flights, up 27%. Nationally the 2026 Carnival moved about 2.1 million air passengers, a record. The heaviest days were Carnival Friday for arrivals and Ash Wednesday for departures — mapped onto 2027 that means Friday 5 February for the inbound rush and Ash Wednesday 10 February as the fly-home peak, with a smaller second wave after the Champions' Parade on the weekend of 13–14 February.\n- **International draw**: Carnival 2026 brought around 300,000 foreign visitors to Brazil, of whom more than 110,000 were in Rio de Janeiro state — about 36% of the national total, and roughly US$67 million of foreign-visitor spending in Rio alone. The five biggest source countries were Argentina, Chile, the United States, France and Portugal, with Argentina far ahead (around 32,000 tickets issued, up 30.5%) and the United States second (about 7,400, up 17%). Paraguay showed the fastest growth at 129%, followed by Chile at 69.4%.",
+  "guidance": "Neutral service-directory tone. No prices, fares, flight numbers, timetables or gate numbers. Do not imply this site sells tickets or is official. If an airport in the list is far from the venue, say so plainly and call it a fallback rather than a nearby airport."
+}

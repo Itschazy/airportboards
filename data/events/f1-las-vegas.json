@@ -1,0 +1,231 @@
+{
+  "meta": {
+    "slug": "f1-las-vegas",
+    "name": "Formula 1 Las Vegas Grand Prix 2026",
+    "startDate": "2026-11-19T16:30:00-08:00",
+    "endDate": "2026-11-21T22:00:00-08:00",
+    "venue": "Las Vegas Strip Circuit",
+    "venueCity": "Las Vegas",
+    "country": "US",
+    "type": "sports",
+    "officialUrl": "https://www.f1lasvegasgp.com/",
+    "status": "scheduled",
+    "sources": [
+      "https://en.wikipedia.org/wiki/2026_Formula_One_World_Championship",
+      "https://en.wikipedia.org/wiki/2026_Las_Vegas_Grand_Prix",
+      "https://www.mclaren.com/racing/formula-1/2026/las-vegas-grand-prix/",
+      "https://www.f1lasvegasgp.com/",
+      "https://www.reviewjournal.com/news/news-columns/road-warrior/paradise-loop-may-open-in-time-for-las-vegas-grand-prix-3825708/",
+      "https://assets.ctfassets.net/2pnrhs9eukyp/6micXuI5wIdFJbUvJ15WEy/3a83c0bd670024688523b4d6887f8ed3/11.17.2025_F1_and_Thanksgiving_Travel_Tips_Press_Release.pdf",
+      "https://ewscripps.brightspotcdn.com/ba/a8/ad3094094f42a32b81fd94057456/lvgp-2024-economic-impact-final.pdf",
+      "https://www.ktnv.com/news/busy-post-f1-sunday-at-reid-airport-record-breaking-holiday-travel-expected-this-week",
+      "https://www.tsa.gov/news/press/releases/2024/11/21/tsa-las-ready-post-formula-1-las-vegas-grand-prix-get-away",
+      "https://www.ktnv.com/news/vegas-grand-prix/2025-grand-prix-brings-earliest-traffic-closures-yet-to-the-las-vegas-strip",
+      "https://www.lvmonorail.com/route-map/",
+      "https://press.lvcva.com/news-releases/las-vegas-monorail-provides-convenient-strip-transportation-over-f1-weekend/s/861ae3aa-9c33-4316-a668-04fb92bd4401",
+      "https://gpdestinations.com/getting-around-f1-las-vegas-grand-prix/",
+      "https://www.8newsnow.com/news/local-news/private-jets-coming-to-f1-las-vegas-grand-prix-get-more-parking-new-fee-structure/",
+      "https://lasvegassun.com/news/2025/nov/16/grand-prix-glows-as-las-vegas-weathers-internation/"
+    ],
+    "airports": [
+      {
+        "iata": "LAS",
+        "km": 5
+      }
+    ]
+  },
+  "locales": {
+    "en": {
+      "title": "Formula 1 Las Vegas Grand Prix 2026 Airports & Flights",
+      "description": "Plan airport travel for the Formula 1 Las Vegas Grand Prix 2026 with LAS live flight boards, transfer options, and fly-home tips.",
+      "h1": "Formula 1 Las Vegas Grand Prix 2026 airport guide",
+      "banner": "Open the Las Vegas Grand Prix airport flight guide",
+      "intro": "The Formula 1 Las Vegas Grand Prix 2026 runs from 19 to 21 November 2026 at the Las Vegas Strip Circuit in Las Vegas. Sessions take place after dark on a 6.12 km circuit along the Strip, so airport demand and road access can shift quickly around race days. Use the LAS live arrivals and departures boards to check delays, cancellations and timing before arranging transfers to or from the circuit area.",
+      "getting": "Harry Reid International Airport (LAS) in Paradise, Nevada, is the main gateway and the only scheduled commercial airport serving the event. It sits about 5 km from the Strip/Grand Prix Plaza area, about 10 minutes by road in normal traffic. There is no rail or airport metro link to the Strip. Use taxis, Uber or Lyft zones, shuttles, limousines, rental cars, or RTC buses from Terminal 1 and Terminal 3; the Las Vegas Monorail helps on the Strip but not at LAS.",
+      "leaving": "The main fly-home wave follows the Saturday night race, with Sunday 22 November 2026 the peak departure day and Monday also heavy. LAS can be crowded, and race-week detours affect airport access; US Thanksgiving on 26 November adds holiday-week demand. Leave more time than usual, confirm taxi or rideshare pickup zones, and check the LAS live departures board before leaving for the airport so you can react to delays or cancellations.",
+      "tips": "On event days, expect Las Vegas Boulevard and nearby streets to close from early afternoon until after midnight. Driving to the circuit is not recommended because public parking is extremely limited; most spectators walk or use the monorail once on the Strip. If using Uber or Lyft, confirm the designated race-week zone. Treat the Vegas Loop airport station as a future plan, not an open option.",
+      "sec": {
+        "boards": "LAS live flight boards for Grand Prix week",
+        "getting": "From Harry Reid Airport to the Strip circuit",
+        "leaving": "Flying home after the Saturday night race",
+        "tips": "Race-week airport and Strip travel tips"
+      }
+    },
+    "ru": {
+      "title": "Гран-при Лас-Вегаса F1 2026: аэропорт LAS и рейсы",
+      "description": "Как лететь на Formula 1 Las Vegas Grand Prix 2026: аэропорт LAS, дорога до трассы и онлайн-табло прилётов и вылетов LAS.",
+      "h1": "Formula 1 Las Vegas Grand Prix 2026: аэропорт и рейсы",
+      "banner": "Откройте гид по перелётам на Гран-при Лас-Вегаса",
+      "intro": "Formula 1 Las Vegas Grand Prix 2026 пройдёт 19–21 ноября 2026 года на Las Vegas Strip Circuit в Лас-Вегасе. Сессии проходят после наступления темноты, а трасса идёт по району Strip. В 2026 году ожидается около 300 000 зрителей за три дня, поэтому в эти даты важно сверять прилёты и вылеты LAS по онлайн-табло: задержки, изменения статуса и плотный поток пассажиров могут влиять на путь к трассе.",
+      "getting": "Главные воздушные ворота события — Harry Reid International Airport (LAS) в Paradise, Nevada; это единственный аэропорт с регулярными коммерческими рейсами для Гран-при. До района Strip/Grand Prix Plaza примерно 5 км и около 10 минут в обычном трафике. Железной дороги или метро из LAS на Strip нет. Доступны такси, Uber и Lyft в выделенных зонах, шаттлы, лимузины, прокат авто и автобусы RTC: 108, 109, WAX и CX.",
+      "leaving": "Основная волна вылетов ожидается в воскресенье 22 ноября 2026 года, сразу после субботней ночной гонки; понедельник также будет загруженным. LAS предупреждает, что дорожные закрытия и объезды в гоночную неделю влияют на доступ к аэропорту. Приезжайте раньше обычного, заранее уточняйте зоны такси или rideshare и проверяйте онлайн-табло вылетов LAS до выезда: официальный ориентир аэропорта — план 4-3-2-1 для транспорта, багажа, контроля и выхода.",
+      "tips": "Не планируйте подъезд к трассе на машине: общественная парковка крайне ограничена, большинство зрителей идут пешком или пользуются монорельсом. Las Vegas Monorail не обслуживает аэропорт, но помогает передвигаться вдоль Strip во время закрытия улиц. Для rideshare используйте назначенные зоны у Virgin Hotels Las Vegas и Howard Hughes Center. Учитывайте, что гоночный уик-энд переходит в неделю Thanksgiving, когда спрос и пробки выше.",
+      "sec": {
+        "boards": "Ближайший аэропорт и онлайн-табло LAS",
+        "getting": "Как добраться от LAS до Las Vegas Strip Circuit",
+        "leaving": "Вылет домой после ночной гонки",
+        "tips": "Советы для перелёта на Гран-при Лас-Вегаса"
+      }
+    },
+    "zh": {
+      "title": "2026 F1拉斯维加斯大奖赛机场航班指南｜LAS实时航班",
+      "description": "前往2026 Formula 1 Las Vegas Grand Prix？查看LAS实时到达/出发航班看板，了解哈里·里德国际机场到拉斯维加斯大道赛道的到达、离场、交通方式与赛后返程提示。适合11月19日至21日比赛周末，帮助你在道路封闭、改道和感恩节出行高峰前安排行程。",
+      "h1": "2026 Formula 1 Las Vegas Grand Prix：LAS机场航班与交通",
+      "banner": "打开2026拉斯维加斯大奖赛LAS航班与交通指南",
+      "intro": "2026 Formula 1 Las Vegas Grand Prix 将于2026年11月19日16:30至11月21日22:00在美国拉斯维加斯的 Las Vegas Strip Circuit 举行。赛道位于大道核心区域，三天预计约30万名观众到场，所有赛段均在夜间进行。比赛周末叠加道路封闭、机场绕行和感恩节出行周，出发前查看LAS实时到达与出发看板，可减少航班变化或接机等待带来的不确定。",
+      "getting": "哈里·里德国际机场（LAS）位于内华达州Paradise，是服务本次赛事的主要门户，也是唯一有定期商业航班的机场。机场距赛道约5公里，正常路况到Strip/Grand Prix Plaza一带约10分钟；机场新闻稿称其距F1赛道仅两英里。LAS与大道之间没有铁路或机场地铁。可选方式包括出租车、Uber/Lyft指定上车区、酒店和城际班车、豪华轿车服务、租车中心，以及RTC公交：1号航站楼108、109、WAX，3号航站楼WAX、CX。",
+      "leaving": "返程高峰会出现在正赛后的周日：2026年11月21日周六夜赛结束后，11月22日周日将是主要离港潮，周一仍会繁忙。对照2025年同类周六夜赛，TSA曾预计赛后周日9.8万名、周一9.4万名旅客离港。LAS还把大奖赛与11月26日感恩节周一起规划，提醒停车紧张、道路拥堵。离开酒店前先看LAS实时出发看板，并按机场“4-3-2-1”建议提前安排地面交通、托运行李、安检和到达登机口时间。",
+      "tips": "比赛日午后起，Las Vegas Boulevard及周边道路会封闭至午夜后，机场通行也会受改道影响。提前确认出租车或网约车上下车区；Virgin Hotels Las Vegas和Howard Hughes Center是赛事周末指定网约车区域。大道单轨不服务机场，但在封路期间可服务赛区。自驾到赛道不建议，公共停车极有限，预留步行和等车时间。",
+      "sec": {
+        "boards": "最近机场与LAS实时航班",
+        "getting": "从LAS前往大道赛道",
+        "leaving": "夜赛后周日返程",
+        "tips": "大奖赛周末出行提示"
+      }
+    },
+    "ar": {
+      "title": "فورمولا 1 لاس فيغاس 2026: المطارات والرحلات",
+      "description": "دليل السفر الجوي لجائزة فورمولا 1 لاس فيغاس 2026 مع لوحات الرحلات المباشرة لمطار LAS، وخيارات الوصول والمغادرة حول الحلبة.",
+      "h1": "رحلات ومطار فورمولا 1 لاس فيغاس 2026",
+      "banner": "افتح دليل السفر إلى جائزة لاس فيغاس الكبرى 2026",
+      "intro": "تقام جائزة فورمولا 1 لاس فيغاس الكبرى 2026 من 19 إلى 21 نوفمبر 2026 على حلبة لاس فيغاس ستريب في مدينة لاس فيغاس. تمتد الحلبة لمسافة 6.12 كم وتمر جلساتها بعد حلول الظلام، ما يضع ضغطا على حركة الفنادق والطرق والمطار في فترة قصيرة. لأن مطار هاري ريد الدولي LAS هو بوابة الرحلات التجارية المجدولة للحدث، يساعد فحص لوحة الرحلات المباشرة على متابعة الوصول والتأخير قبل التحرك.",
+      "getting": "مطار هاري ريد الدولي LAS في بارادايس، نيفادا، هو البوابة الرئيسية والوحيدة ذات خدمة تجارية مجدولة للسباق. يقع انتقال الطريق إلى منطقة ستريب/جراند بري بلازا على نحو 5 كم، وحوالي 10 دقائق في الحركة العادية. لا يوجد قطار أو مترو بين LAS والستريب. من المحطات تتوفر سيارات الأجرة، ومناطق أوبر وليفت المخصصة، وخدمات النقل الفندقية وبين المدن، والليموزين، ومركز تأجير السيارات. كما تخدم حافلات RTC المبنى 1 بالمسارات 108 و109 وWAX، والمبنى 3 بـ WAX وCX.",
+      "leaving": "تأتي موجة العودة بالطيران يوم الأحد 22 نوفمبر 2026، مباشرة بعد سباق السبت الليلي، مع يوم ثقيل ثان يوم الاثنين. يتزامن ذلك مع بداية أسبوع سفر عيد الشكر في الولايات المتحدة، لذلك يحذر LAS من طلب مرتفع ومواقف محدودة وازدحام. اترك وقتا أطول من المعتاد للوصول، خاصة مع تحويلات أسبوع السباق. قبل مغادرة الفندق أو منطقة الستريب، راجع لوحة المغادرات المباشرة لمطار LAS لتأكيد حالة رحلتك.",
+      "tips": "خطط لمسار بري قبل الوصول، فلاس فيغاس بوليفارد وشوارع قريبة تغلق مبكرا وتبقى مغلقة بعد منتصف الليل في أيام الحدث. لا تعتمد على المونوريل للوصول من المطار؛ لكنه مفيد داخل الستريب ومحطات هاراز/لينك وفلامنغو وهورسشو/باريس لاس فيغاس تخدم مناطق السباق. أكد منطقة أوبر أو ليفت مسبقا، وفكر في المشي أو المونوريل بدلا من القيادة إلى الحلبة حيث المواقف العامة محدودة جدا.",
+      "sec": {
+        "boards": "لوحات LAS القريبة من حلبة الستريب",
+        "getting": "من هاري ريد إلى جراند بري بلازا",
+        "leaving": "العودة بالطيران بعد سباق السبت الليلي",
+        "tips": "نصائح تنقل أسبوع جائزة لاس فيغاس"
+      }
+    },
+    "de": {
+      "title": "Formula 1 Las Vegas GP 2026: Flughäfen und Flüge",
+      "description": "Live-Flugtafeln für LAS zum Formula 1 Las Vegas Grand Prix 2026: Ankunft, Abflug und Wege zwischen Airport und Las Vegas Strip Circuit.",
+      "h1": "Flüge zum Formula 1 Las Vegas Grand Prix 2026",
+      "banner": "Flug-Guide zum Las Vegas Grand Prix 2026 öffnen",
+      "intro": "Der Formula 1 Las Vegas Grand Prix 2026 findet vom 19. bis 21. November 2026 auf dem Las Vegas Strip Circuit in Las Vegas statt. Alle Sessions laufen nach Einbruch der Dunkelheit; der Kurs führt über 6,12 km und berührt Bereiche am Strip. Rund um das Rennwochenende bündelt Harry Reid International Airport (LAS) die Linienflüge zum Event. Ein Live-Board hilft, Ankünfte und Abflüge zu prüfen, bevor Transfers durch Sperrungen und Umleitungen geplant werden.",
+      "getting": "Harry Reid International Airport (LAS) in Paradise, Nevada, ist das Haupttor und der einzige Flughafen mit planmäßigem kommerziellem Verkehr für dieses Event. Der Straßentransfer zum Strip/Grand Prix Plaza-Bereich beträgt etwa 5 km und rund 10 Minuten bei normalem Verkehr; der Flughafen nennt zwei Meilen bis zum F1-Kurs. Es gibt keine Bahn- oder Metroverbindung vom LAS zum Strip. Verfügbar sind Taxis, Uber/Lyft-Zonen, Shuttle- und Limousinenservices, Mietwagen sowie RTC-Busse ab Terminal 1 und 3.",
+      "leaving": "Die stärkste Rückreisewelle folgt am Sonntag, 22. November 2026, direkt nach dem Samstagnacht-Rennen; auch der Montag gilt als zweiter starker Reisetag. LAS rechnet Rennwochenende und die anschließende Thanksgiving-Reisewoche zusammen und warnt vor hoher Nachfrage, begrenztem Parkraum und Staus. Plane mehr Zeit als üblich ein und nutze den 4-3-2-1-Plan des Flughafens. Prüfe die Live-Abflugtafel, bevor du zum Airport aufbrichst.",
+      "tips": "Bestätige vorab die Abholzonen für Taxi oder Rideshare, denn Straßensperren und Umleitungen beeinflussen auch die Zufahrt zum LAS. Verlasse dich nicht auf Parken am Circuit: öffentliche Parkplätze sind sehr begrenzt, viele Besucher gehen zu Fuß oder nutzen die Monorail. Beachte, dass die Monorail nicht den Flughafen bedient. Wenn du Mietwagen nutzt, kalkuliere Rückgabe und Umwege großzügig ein.",
+      "sec": {
+        "boards": "Live-Flugtafeln für LAS am Rennwochenende",
+        "getting": "Vom LAS zum Las Vegas Strip Circuit",
+        "leaving": "Rückflugwelle nach dem Nachtrennen",
+        "tips": "Transfertipps für die Grand-Prix-Tage"
+      }
+    },
+    "ko": {
+      "title": "포뮬러 1 라스베이거스 그랑프리 2026 공항·항공편",
+      "description": "2026년 11월 19~21일 라스베이거스 스트립 서킷에서 열리는 포뮬러 1 라스베이거스 그랑프리 여행자를 위한 안내입니다. LAS 실시간 운항 게시판으로 도착·출발 변동을 확인하고 공항 이동과 귀국 혼잡에 대비하세요.",
+      "h1": "포뮬러 1 라스베이거스 그랑프리 2026 공항 이동 안내",
+      "banner": "LAS 항공편 확인하고 그랑프리 공항 이동 안내 열기",
+      "intro": "포뮬러 1 라스베이거스 그랑프리 2026은 2026년 11월 19일 16:30부터 11월 21일 22:00까지 라스베이거스 스트립 서킷에서 열리는 스포츠 이벤트입니다. 서킷은 라스베이거스 스트립 구간에 있어 항공편 지연이나 도착 시간 변화가 숙소 이동과 관람 동선에 바로 영향을 줄 수 있습니다. 모든 세션은 해가 진 뒤 진행됩니다. 약 30만 명 규모가 예상되는 기간에는 LAS 실시간 도착·출발 게시판으로 변동을 먼저 확인하는 것이 유용합니다.",
+      "getting": "주요 관문은 네바다주 패러다이스의 해리 리드 국제공항(LAS)입니다. 이 이벤트를 정기 상업 항공편으로 이용할 수 있는 공항은 LAS뿐이며, 스트립과 그랑프리 플라자 지역까지 도로 이동은 약 5km, 보통 교통에서 약 10분입니다. 공항과 스트립 사이에는 철도나 공항 지하철이 없습니다. 터미널에서는 택시, 지정 구역의 우버·리프트, 호텔·도시간 셔틀, 리무진, 렌터카 센터를 이용합니다. RTC 버스는 1터미널 108·109·WAX, 3터미널 WAX·CX를 운행합니다.",
+      "leaving": "결승이 2026년 11월 21일 토요일 밤에 끝나므로 귀국 수요의 정점은 바로 다음 날인 11월 22일 일요일이며, 월요일도 무겁습니다. 전년도 같은 토요일 밤 경기 뒤 LAS는 일요일 9만 8천 명, 월요일 9만 4천 명 출발을 예상했습니다. 2026년에는 추수감사절 여행 주간도 이어져 주차와 도로 혼잡이 커질 수 있습니다. 공항으로 출발하기 전에 LAS 실시간 출발 게시판을 확인하고 평소보다 일찍 도착하세요.",
+      "tips": "행사일에는 라스베이거스 불러바드와 주변 도로가 이른 오후부터 자정 이후까지 통제될 수 있으므로 공항 접근 시간에 여유를 두세요. 운전은 권장되지 않으며 공공 주차는 매우 제한적입니다. 모노레일은 공항 연결이 아니지만 고가 노선이라 도로 통제 중에도 스트립 동쪽 이동에 쓰입니다. 우버·리프트는 지정 승하차 구역을 미리 확인하세요. 수하물과 신분증은 출발 전 정리해 두면 좋습니다.",
+      "sec": {
+        "boards": "LAS 실시간 운항 게시판과 가까운 공항",
+        "getting": "LAS에서 라스베이거스 스트립 서킷 이동",
+        "leaving": "11월 22일 이후 귀국 항공편 준비",
+        "tips": "그랑프리 주간 공항·스트립 이동 팁"
+      }
+    },
+    "ja": {
+      "title": "F1ラスベガスGP 2026の空港・フライト情報｜LAS発着",
+      "description": "2026年F1ラスベガスGPへ向かう旅行者向けに、最寄りのハリー・リード国際空港（LAS）のライブフライトボード、空港から会場までの移動、帰路の混雑対策を整理。11月19〜21日の道路規制や22日の出発集中も確認できます。",
+      "h1": "Formula 1 Las Vegas Grand Prix 2026の空港アクセス",
+      "banner": "F1ラスベガスGPの空港・移動ガイドを開く",
+      "intro": "Formula 1 Las Vegas Grand Prix 2026は、2026年11月19日から21日まで米国ラスベガスのLas Vegas Strip Circuitで行われます。会場は6.12km、17ターンの市街地コースで、各セッションは日没後に実施されます。約30万人規模の来場が見込まれ、LAS周辺の道路規制や迂回が空港アクセスにも影響するため、到着前にライブ発着ボードで遅延や到着状況を確認しておくと移動判断がしやすくなります。",
+      "getting": "主な玄関口はParadise, NevadaのHarry Reid International Airport（LAS）です。このイベントを定期商業便で利用できる空港はLASのみで、Strip Circuitまでは約5km、通常の道路移動で約10分です。空港からStripへの鉄道やメトロはありません。タクシー、Uber、Lyft、ホテル・都市間シャトル、リムジン、レンタカー、RTCバスが利用できます。Las Vegas Monorailは空港には来ませんが、Strip東側の高架路線としてレース週の移動に使われます。",
+      "leaving": "帰路の集中は、土曜夜のレース翌日である2026年11月22日（日）がピークで、月曜も混雑が続きます。2025年の同等日程では、TSAが日曜98,000人、月曜94,000人の出発旅客を想定しました。LASはレース週の迂回と空港アクセスへの影響を警告しており、通常より早めの到着が必要です。空港へ出る前にLASのライブ出発ボードを確認し、遅延やチェックイン判断に役立ててください。",
+      "tips": "レース日はLas Vegas Boulevard周辺が午後早くから深夜過ぎまで閉鎖されます。乗車場所は事前に確認し、ライドシェアはVirgin Hotels Las VegasやHoward Hughes Centerの指定ゾーンを使います。運転での会場入りは推奨されず、駐車は非常に限られます。LASの4-3-2-1 Planに沿って、地上移動、手荷物、保安検査、搭乗口到着に余裕を持たせましょう。",
+      "sec": {
+        "boards": "LASライブ発着ボードと最寄り空港",
+        "getting": "Strip Circuitまでの空港移動",
+        "leaving": "レース翌日の帰国・帰路便",
+        "tips": "ラスベガスGP週の空旅の要点"
+      }
+    },
+    "fr": {
+      "title": "Grand Prix F1 Las Vegas 2026 : vols et aéroport LAS",
+      "description": "Accès au Grand Prix F1 de Las Vegas 2026 via LAS : tableaux des vols en direct pour LAS, transports au Strip et conseils retour.",
+      "h1": "Vols et accès au Grand Prix F1 Las Vegas 2026",
+      "banner": "Ouvrir le guide vols du Grand Prix F1 Las Vegas",
+      "intro": "Le Formula 1 Las Vegas Grand Prix 2026 se déroule du 19 au 21 novembre 2026 au Las Vegas Strip Circuit, à Las Vegas. Chaque session a lieu après la tombée de la nuit et environ 300 000 spectateurs sont attendus sur trois jours. Comme LAS est la porte d’entrée commerciale de l’événement, consulter le tableau des vols en direct aide à suivre arrivées, retards et départs autour de ces dates.",
+      "getting": "La principale porte d’entrée est l’aéroport international Harry Reid (LAS), à Paradise, Nevada. Il se trouve à environ 5 km du Strip/Grand Prix Plaza, soit près de 10 minutes par route en trafic normal. Il n’existe ni train ni métro entre LAS et le Strip. Les options au terminal sont taxis, Uber/Lyft en zones désignées, navettes d’hôtel ou interurbaines, limousines, location de voiture, ainsi que les bus RTC depuis les terminaux concernés.",
+      "leaving": "Après la course du samedi soir 21 novembre, la vague de départs se concentre le dimanche 22 novembre 2026, puis reste forte le lundi. LAS prévoit aussi le chevauchement avec Thanksgiving, le jeudi 26 novembre, ce qui ajoute demande, stationnement limité et congestion. Arrivez plus tôt que d’habitude : l’aéroport recommande le plan 4-3-2-1. Avant de quitter votre hôtel, vérifiez le tableau des départs en direct pour éviter d’attendre inutilement à LAS.",
+      "tips": "Les jours d’événement, Las Vegas Boulevard et les rues proches ferment tôt l’après-midi et restent fermées après minuit; l’accès à LAS subit aussi déviations et ralentissements. Confirmez à l’avance votre zone taxi ou VTC. Pour les déplacements sur le Strip, le monorail reste utile pendant les fermetures, mais il ne dessert pas l’aéroport. La conduite vers le circuit n’est pas recommandée.",
+      "sec": {
+        "boards": "Aéroport LAS et tableaux des vols du Grand Prix",
+        "getting": "De LAS au Las Vegas Strip Circuit",
+        "leaving": "Retour du dimanche après la course nocturne",
+        "tips": "Conseils de voyage pendant les fermetures du Strip"
+      }
+    },
+    "es": {
+      "title": "Gran Premio F1 Las Vegas 2026: vuelos y aeropuerto LAS",
+      "description": "Guía para volar al F1 Las Vegas GP 2026: tableros de vuelos en vivo para LAS, accesos al Strip y regreso tras la carrera.",
+      "h1": "Vuelos a LAS para el Gran Premio de F1 Las Vegas 2026",
+      "banner": "Abre la guía de vuelos para el GP de Las Vegas",
+      "intro": "El Gran Premio de Fórmula 1 de Las Vegas 2026 se celebra desde el 19 de noviembre de 2026 a las 16:30 hasta el 21 de noviembre a las 22:00 en Las Vegas Strip Circuit, Las Vegas. Todas las sesiones son después del anochecer, en un circuito de 6,12 km por el Strip. En esas fechas, revisar el tablero en vivo de LAS ayuda a ajustar llegadas, conexiones y recogidas cuando coinciden cierres viales y alta demanda aérea.",
+      "getting": "Harry Reid International Airport (LAS), en Paradise, Nevada, es la puerta principal y el único aeropuerto con servicio comercial regular para el evento. Está a unos 5 km del Strip/Grand Prix Plaza, cerca de 10 minutos por carretera en tráfico normal. No hay tren ni metro entre LAS y el Strip. Desde las terminales hay taxis, Uber y Lyft en zonas designadas, traslados de hotel e interurbanos, limusinas, alquiler de coche y buses RTC; el Monorail ayuda en el Strip, pero no llega al aeropuerto.",
+      "leaving": "La ola de regreso empieza el domingo 22 de noviembre de 2026, justo después de la carrera nocturna del sábado, y continúa con otro día fuerte el lunes. LAS puede estar muy concurrido: en el fin de semana equivalente de 2025 se esperaban 98.000 salidas el domingo y 94.000 el lunes. Llega al aeropuerto con más margen de lo habitual, confirma tu zona de taxi o viaje compartido y revisa el tablero de salidas en vivo antes de salir.",
+      "tips": "Planifica los traslados como parte del vuelo, no al final. En días de evento, Las Vegas Boulevard y calles cercanas cierran desde primera hora de la tarde hasta después de medianoche; conducir al circuito no se recomienda y el estacionamiento público es muy limitado. Deja margen para devolver el coche, facturar equipaje, controles de seguridad y caminar entre zonas del Strip.",
+      "sec": {
+        "boards": "Vuelos en vivo de LAS para el GP de Las Vegas",
+        "getting": "Del aeropuerto Harry Reid al circuito del Strip",
+        "leaving": "Regreso del domingo tras la carrera nocturna",
+        "tips": "Consejos de viaje para la semana F1 en Las Vegas"
+      }
+    },
+    "it": {
+      "title": "F1 Las Vegas GP 2026: aeroporti e voli LAS",
+      "description": "Come arrivare al Formula 1 Las Vegas Grand Prix 2026: aeroporti, trasporti e tabelloni voli live per LAS nei giorni di gara.",
+      "h1": "Voli e aeroporto per il Las Vegas Grand Prix 2026",
+      "banner": "Apri la guida voli per il Las Vegas Grand Prix 2026",
+      "intro": "Il Formula 1 Las Vegas Grand Prix 2026 si svolge dal 19 al 21 novembre 2026 al Las Vegas Strip Circuit, a Las Vegas. Il circuito cittadino passa sulla Strip e ogni sessione è dopo il tramonto. Con circa 300.000 spettatori attesi in tre giorni e molti arrivi internazionali, controllare il tabellone voli live di LAS aiuta a verificare ritardi, cancellazioni e partenze prima di muoversi tra aeroporto, hotel e zona del circuito.",
+      "getting": "L’aeroporto principale è Harry Reid International (LAS), a Paradise, Nevada: è l’unico scalo con voli commerciali di linea per questo evento. LAS è a circa 5 km dalla zona Strip/Grand Prix Plaza, circa 10 minuti in traffico normale, e l’aeroporto indica che si trova a due miglia dal circuito. Non c’è treno né metro aeroportuale per la Strip. Dai terminal sono disponibili taxi, Uber/Lyft nelle aree designate, shuttle, limousine, auto a noleggio e bus RTC.",
+      "leaving": "Dopo la gara di sabato sera, 21 novembre 2026, il picco dei rientri aerei è domenica 22 novembre, con un secondo giorno intenso il lunedì. LAS può essere affollato: nel 2025, per un evento equivalente, TSA attendeva 98.000 passeggeri in partenza la domenica post-gara e 94.000 il lunedì. Parti prima del solito per l’aeroporto e controlla il tabellone partenze live prima di lasciare hotel o circuito.",
+      "tips": "Pianifica gli spostamenti prima di atterrare: le chiusure e le deviazioni della settimana di gara incidono anche sull’accesso a LAS. Conferma in anticipo le aree di pickup per taxi o rideshare e considera il piano 4-3-2-1 dell’aeroporto. Guidare verso il circuito non è consigliato: i parcheggi pubblici sono molto limitati e molti spettatori camminano o usano la monorotaia.",
+      "sec": {
+        "boards": "Aeroporto LAS e tabelloni voli live",
+        "getting": "Da Harry Reid al circuito sulla Strip",
+        "leaving": "Rientro dopo la gara notturna",
+        "tips": "Consigli di viaggio per il weekend F1"
+      }
+    },
+    "hi": {
+      "title": "Formula 1 Las Vegas GP 2026: LAS एयरपोर्ट उड़ानें",
+      "description": "Formula 1 Las Vegas Grand Prix 2026 के लिए LAS के लाइव फ्लाइट बोर्ड देखें: आगमन, प्रस्थान और Strip Circuit तक एयरपोर्ट यात्रा।",
+      "h1": "Formula 1 Las Vegas Grand Prix 2026: LAS यात्रा",
+      "banner": "F1 Las Vegas 2026 के लिए LAS उड़ान गाइड खोलें",
+      "intro": "Formula 1 Las Vegas Grand Prix 2026 19 नवंबर 2026 को 16:30 से 21 नवंबर 2026 को 22:00 तक Las Vegas Strip Circuit, Las Vegas में है। हर सत्र अंधेरे के बाद चलता है और लगभग 300,000 दर्शक तीन दिनों में अपेक्षित हैं। LAS, Harry Reid International Airport, इस आयोजन का मुख्य हवाई द्वार है, इसलिए इन तारीखों पर आगमन, देरी और सामान लेने से पहले लाइव एयरपोर्ट बोर्ड देखना उपयोगी है।",
+      "getting": "Harry Reid International Airport (LAS) Paradise, Nevada में है और इस आयोजन को सेवा देने वाला निर्धारित वाणिज्यिक उड़ानों वाला एकमात्र हवाई अड्डा है। एयरपोर्ट से Strip/Grand Prix Plaza क्षेत्र तक सड़क दूरी लगभग 5 किमी है और सामान्य ट्रैफिक में करीब 10 मिनट लगते हैं। LAS और Strip के बीच रेल या मेट्रो नहीं है। टर्मिनलों से टैक्सी, Uber/Lyft निर्धारित पिकअप, होटल/इंटर-सिटी शटल, लिमोजिन, Rent-A-Car Center और RTC बसें उपलब्ध हैं।",
+      "leaving": "Grand Prix शनिवार रात, 21 नवंबर 2026 को खत्म होता है, इसलिए उड़ान-घर की सबसे बड़ी लहर रविवार 22 नवंबर 2026 को LAS पर आती है; सोमवार भी भारी दिन है। Thanksgiving गुरुवार 26 नवंबर 2026 को है, इसलिए सप्ताह सीधे व्यस्त अमेरिकी छुट्टी यात्रा में जाता है। एयरपोर्ट के लिए निकलने से पहले LAS लाइव डिपार्चर बोर्ड देखें, पिकअप या डिटूर की पुष्टि करें और सामान्य से पहले पहुँचें।",
+      "tips": "बड़ी रेस-सप्ताह यात्रा में सड़क बंदी, सीमित पार्किंग और राइडशेयर प्रतीक्षा को योजना में रखें। Las Vegas Boulevard और आसपास की सड़कें आयोजन दिनों में दोपहर से आधी रात के बाद तक बंद रह सकती हैं। सर्किट तक ड्राइव करना अनुशंसित नहीं है; अधिकतर यात्री पैदल, मोनोरैल या निर्धारित राइडशेयर क्षेत्रों का उपयोग करते हैं। सामान, पहचान-पत्र और वापसी परिवहन पहले से व्यवस्थित रखें।",
+      "sec": {
+        "boards": "F1 Las Vegas के लिए LAS लाइव बोर्ड",
+        "getting": "LAS से Strip Circuit तक पहुँचना",
+        "leaving": "रेस के बाद LAS से वापसी उड़ानें",
+        "tips": "Grand Prix सप्ताह की यात्रा सावधानियाँ"
+      }
+    },
+    "tr": {
+      "title": "Formula 1 Las Vegas GP 2026: LAS uçuşları ve havalimanı",
+      "description": "Formula 1 Las Vegas Grand Prix 2026 için LAS canlı uçuş panoları; geliş, dönüş ve pist çevresi ulaşım bilgilerini kontrol edin.",
+      "h1": "Formula 1 Las Vegas Grand Prix 2026 için LAS uçuşları",
+      "banner": "Las Vegas GP 2026 için LAS ulaşım rehberini açın",
+      "intro": "Formula 1 Las Vegas Grand Prix 2026, 19-21 Kasım 2026 tarihlerinde Las Vegas’taki Las Vegas Strip Circuit’te düzenlenir. Seansların tamamı karanlıkta koşulur; pist 6,12 km uzunluğunda ve Las Vegas Boulevard üzerindeki 1,1 millik düzlükten geçer. Üç gün için yaklaşık 300.000 seyirci beklenirken, LAS geliş ve gidiş panolarını canlı kontrol etmek uçuş değişiklikleri, yoğun iniş dalgaları ve etkinlik haftası yol aksaklıkları için önemlidir.",
+      "getting": "Etkinliğin ana kapısı Harry Reid International Airport (LAS) olup Paradise, Nevada’dadır; bu etkinliğe tarifeli ticari uçuşla hizmet veren tek havalimanıdır. LAS, Las Vegas Strip Circuit’e yaklaşık 5 km uzaklıktadır ve normal trafikte Strip/Grand Prix Plaza bölgesine yolculuk yaklaşık 10 dakika sürer. Havalimanı ile Strip arasında tren veya metro yoktur. Terminallerden taksi, belirlenmiş Uber/Lyft alanları, otel ve şehirler arası servisler, limuzinler, araç kiralama merkezi ve RTC otobüsleri kullanılabilir.",
+      "leaving": "Grand Prix, 21 Kasım 2026 Cumartesi gecesi biter; eve dönüş dalgası 22 Kasım Pazar günü LAS’ta yoğunlaşır ve Pazartesi ikinci yoğun gün olur. 2026’da ABD Şükran Günü 26 Kasım’a denk geldiği için bu hafta zaten yoğun seyahat haftasına bağlanır. Havalimanına normalden erken gidin, kara ulaşımını önceden ayarlayın ve yola çıkmadan önce LAS canlı kalkış panosundan gecikme veya iptal durumunu kontrol edin.",
+      "tips": "Etkinlik günlerinde Las Vegas Boulevard ve çevre yolları öğleden sonra erken saatlerde kapanıp gece yarısından sonrasına kadar kapalı kalabilir. Araçla piste gitmek önerilmez; kamuya açık park alanı çok sınırlıdır. Uber/Lyft için Virgin Hotels Las Vegas ve Howard Hughes Center gibi yarış haftası bölgelerini önceden doğrulayın. Monorail havalimanına gitmez, ancak kapalı sokakların üzerinde çalıştığı için Strip içinde yararlı olabilir.",
+      "sec": {
+        "boards": "Las Vegas GP için LAS canlı uçuş panoları",
+        "getting": "LAS’tan Las Vegas Strip Circuit’e ulaşım",
+        "leaving": "Yarış sonrası LAS’tan eve dönüş",
+        "tips": "Las Vegas GP uçak yolcuları için notlar"
+      }
+    }
+  }
+}
