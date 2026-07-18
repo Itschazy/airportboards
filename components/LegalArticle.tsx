@@ -4,6 +4,7 @@ import { getTranslations } from 'next-intl/server';
 import type { Locale } from '@/lib/i18n';
 import {
   getLegalDoc,
+  legalContentLocale,
   DATED_KINDS,
   LEGAL_UPDATED_ISO,
   type LegalKind,
@@ -69,6 +70,11 @@ function renderBody(body: string[]): React.ReactNode[] {
 
 export async function LegalArticle({ kind, locale }: { kind: LegalKind; locale: Locale }) {
   const doc = getLegalDoc(kind, locale);
+  // These documents exist in English and Russian only. On the other ten locales the body is
+  // the English text inside an <html lang="xx"> page, so mark the prose with the language it
+  // is actually written in: a screen reader would otherwise read English with German
+  // pronunciation, and a crawler would file it as German content.
+  const contentLang = legalContentLocale(locale);
   const t = await getTranslations({ locale, namespace: 'legal' });
   const tNav = await getTranslations({ locale, namespace: 'nav' });
   const dated = DATED_KINDS.has(kind);
@@ -86,7 +92,7 @@ export async function LegalArticle({ kind, locale }: { kind: LegalKind; locale: 
   };
 
   return (
-    <div style={{ maxWidth: 760, margin: '0 auto', padding: '36px 18px 64px' }}>
+    <div lang={contentLang !== locale ? contentLang : undefined} style={{ maxWidth: 760, margin: '0 auto', padding: '36px 18px 64px' }}>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       <div style={{ fontSize: 13, color: '#8A8A8A', marginBottom: 10 }}>
         <Link href={`/${locale}`} style={{ color: '#6A6A6A', textDecoration: 'none' }}>airportsboard</Link>

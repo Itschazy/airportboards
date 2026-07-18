@@ -443,7 +443,7 @@ function BottomSheet({ flight, mode, onClose, tz, locale }: {
 
 // ─── Main Component ───────────────────────────────────────────────────────────
 
-export function FlightBoard({ airport, locale, defaultMode = 'departures', displayName, initialFlights, initialFetchedAt, boardTotal, noService = false }: {
+export function FlightBoard({ airport, locale, defaultMode = 'departures', displayName, initialFlights, initialFetchedAt, boardTotal, lead, noService = false }: {
   airport: Airport;
   locale: string;
   defaultMode?: Mode;
@@ -451,6 +451,10 @@ export function FlightBoard({ airport, locale, defaultMode = 'departures', displ
   initialFlights?: Flight[];
   /** Epoch ms when airlabs produced the SSR board, so the first paint labels its true age. */
   initialFetchedAt?: number | null;
+  /** One plain sentence stating what this airport is, rendered right under the H1.
+   *  Answer engines quote lead sentences, and the H1 alone ("LHR") states nothing a reader
+   *  could lift. Passed from the page so the wording stays localized. */
+  lead?: string;
   /** Total rows on the board BEFORE the SSR slice — the counter must not report the slice.
    *  page.tsx sends only the first 40 rows to keep the HTML light, and the counter was
    *  reading that array, so every large airport claimed exactly "40 departures today"
@@ -601,6 +605,9 @@ export function FlightBoard({ airport, locale, defaultMode = 'departures', displ
           </div>
         </div>
 
+        {lead && (
+          <p style={{ fontSize: 14, lineHeight: 1.5, color: C.secondary, margin: '10px 0 0', maxWidth: 620 }}>{lead}</p>
+        )}
         {/* Live indicator — polite status region so AT hears the refresh. Hidden where no
             airline flies: there is nothing to be fresh about. */}
         {!noService && <div role="status" aria-live="polite" style={{ display: 'flex', alignItems: 'center', gap: 7, marginTop: 10 }}>

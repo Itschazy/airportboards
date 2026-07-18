@@ -215,6 +215,10 @@ export default async function AirportPage({ params }: Props) {
       description: webDesc,
       url: canonical,
       inLanguage: locale,
+      publisher: { '@type': 'Organization', name: 'AirportsBoard', url: BASE },
+      // Ties the page to the Airport entity declared above rather than leaving two
+      // unrelated nodes for a consumer to correlate by name.
+      mainEntity: { '@id': airportNodeId(BASE, airport.iata) },
     },
   ];
 
@@ -279,7 +283,7 @@ export default async function AirportPage({ params }: Props) {
       {/* The visible <h1> now lives in FlightBoard's airport header (single semantic h1). */}
       {/* SSR only the first 40 rows to keep the HTML light (the client refetches the full
           board on mount); AirportBottom still gets the full set to aggregate routes/airlines. */}
-      <FlightBoard airport={airport} locale={locale} displayName={name} initialFlights={initialFlights.slice(0, 40)} initialFetchedAt={getBoardFetchedAt(airport.iata, 'departures')} boardTotal={initialFlights.length} noService={noService} />
+      <FlightBoard airport={airport} locale={locale} displayName={name} initialFlights={initialFlights.slice(0, 40)} initialFetchedAt={getBoardFetchedAt(airport.iata, 'departures')} boardTotal={initialFlights.length} lead={tHome('airport_lead', { name, iata: airport.iata, city, country })} noService={noService} />
       <AirportBottom airport={airport} locale={locale} about={about} displayName={name} flights={initialFlights} noService={noService} nearestServed={nearestWithFlights} />
     </>
   );

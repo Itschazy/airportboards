@@ -33,3 +33,19 @@ export function getLegalDoc(kind: LegalKind, locale: Locale): LegalDoc {
   const byLocale = DOCS[kind];
   return (byLocale[locale] ?? byLocale.en) as LegalDoc;
 }
+
+/** Locales these documents are actually written in. Everything else falls back to English. */
+export const LEGAL_LOCALES: readonly Locale[] = ['en', 'ru'];
+
+/**
+ * The language the prose on this page is really in.
+ *
+ * /de/privacy exists and renders, but its body is the English text under an `<html lang="de">`
+ * wrapper. Advertising a 12-language hreflang cluster for it tells search and answer engines
+ * that a German privacy policy exists when it does not — and a screen reader announces
+ * English prose with German pronunciation. Callers use this to mark the content honestly and
+ * to trim the cluster to the languages that exist.
+ */
+export function legalContentLocale(locale: Locale): Locale {
+  return (LEGAL_LOCALES as readonly string[]).includes(locale) ? locale : 'en';
+}

@@ -16,19 +16,25 @@ const SUB = '#8A8A8A';
 // Section labels for the extended content (transport/terminals/tips). Kept as a small
 // local map rather than message keys so the feature is self-contained (labels + reader
 // + render live together) and doesn't touch the shared messages/*.json.
+// Section labels for the extended content (transport/terminals/tips). Phrased as the
+// questions a traveller actually asks — "How do I get to and from Heathrow?" rather than
+// "Getting to & from the airport" — because a heading that matches a question is what an
+// answer engine matches a query against, and the paragraph beneath it becomes the answer.
+// {a} is the airport's localized name. Kept as a local map rather than message keys so the
+// feature stays self-contained and doesn't touch the shared messages/*.json.
 const EXT_LABELS: Record<string, { transport: string; terminals: string; tips: string }> = {
-  en: { transport: 'Getting to & from the airport', terminals: 'Terminals', tips: 'Passenger tips' },
-  ru: { transport: 'Как добраться до аэропорта', terminals: 'Терминалы', tips: 'Советы пассажирам' },
-  zh: { transport: '机场交通', terminals: '航站楼', tips: '旅客提示' },
-  ar: { transport: 'الوصول إلى المطار', terminals: 'صالات المطار', tips: 'نصائح للمسافرين' },
-  de: { transport: 'Anreise zum Flughafen', terminals: 'Terminals', tips: 'Tipps für Reisende' },
-  ko: { transport: '공항 오시는 길', terminals: '터미널', tips: '여행 팁' },
-  ja: { transport: '空港へのアクセス', terminals: 'ターミナル', tips: '旅行のヒント' },
-  fr: { transport: 'Accès à l’aéroport', terminals: 'Terminaux', tips: 'Conseils voyageurs' },
-  es: { transport: 'Cómo llegar al aeropuerto', terminals: 'Terminales', tips: 'Consejos para pasajeros' },
-  it: { transport: 'Come arrivare in aeroporto', terminals: 'Terminal', tips: 'Consigli per i passeggeri' },
-  hi: { transport: 'एयरपोर्ट कैसे पहुँचें', terminals: 'टर्मिनल', tips: 'यात्री सुझाव' },
-  tr: { transport: 'Havalimanına ulaşım', terminals: 'Terminaller', tips: 'Yolcu ipuçları' },
+  en: { transport: 'How do I get to and from {a}?', terminals: 'How do the terminals work at {a}?', tips: 'Tips for flying from {a}' },
+  ru: { transport: 'Как добраться до {a} и обратно?', terminals: 'Как устроены терминалы в {a}?', tips: 'Советы вылетающим из {a}' },
+  zh: { transport: '如何往返{a}？', terminals: '{a}的航站楼如何分布？', tips: '从{a}出发的实用建议' },
+  ar: { transport: 'كيف أصل إلى {a} وأعود منه؟', terminals: 'كيف تعمل صالات {a}؟', tips: 'نصائح للمسافرين من {a}' },
+  de: { transport: 'Wie komme ich zum und vom {a}?', terminals: 'Wie sind die Terminals am {a} aufgeteilt?', tips: 'Tipps für Abflüge ab {a}' },
+  ko: { transport: '{a}까지 어떻게 오가나요?', terminals: '{a}의 터미널은 어떻게 나뉘어 있나요?', tips: '{a} 출발 시 알아둘 점' },
+  ja: { transport: '{a}へのアクセス方法は？', terminals: '{a}のターミナルはどう分かれていますか？', tips: '{a}から出発する際のヒント' },
+  fr: { transport: 'Comment se rendre à {a} et en revenir ?', terminals: 'Comment sont organisés les terminaux de {a} ?', tips: 'Conseils pour partir de {a}' },
+  es: { transport: '¿Cómo llegar a {a} y volver?', terminals: '¿Cómo funcionan las terminales de {a}?', tips: 'Consejos para volar desde {a}' },
+  it: { transport: 'Come arrivare a {a} e tornare?', terminals: 'Come sono organizzati i terminal di {a}?', tips: 'Consigli per partire da {a}' },
+  hi: { transport: '{a} तक कैसे पहुँचें और लौटें?', terminals: '{a} के टर्मिनल कैसे बँटे हैं?', tips: '{a} से उड़ान भरने के सुझाव' },
+  tr: { transport: '{a} havalimanına nasıl gidilir ve dönülür?', terminals: '{a} terminalleri nasıl ayrılmış?', tips: '{a} çıkışlı uçuşlar için ipuçları' },
 };
 
 function gmtOffset(tz?: string | null): string {
@@ -55,7 +61,12 @@ export async function AirportBottom({ airport, locale, about, displayName, fligh
   const city = getCityName(airport.city, locale);
   const country = getCountryName(airport.country, locale);
   const ext = getAirportContentExtended(airport.iata, locale);
-  const extLabels = EXT_LABELS[locale] || EXT_LABELS.en;
+  const rawLabels = EXT_LABELS[locale] || EXT_LABELS.en;
+  const extLabels = {
+    transport: rawLabels.transport.replace('{a}', name),
+    terminals: rawLabels.terminals.replace('{a}', name),
+    tips: rawLabels.tips.replace('{a}', name),
+  };
 
   // Closed airports are dropped from "nearby": Berlin Brandenburg was listing Tegel,
   // Schönefeld and Tempelhof as neighbouring airports with no hint that all three have been

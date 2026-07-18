@@ -93,6 +93,11 @@ export default async function EventPage({ params }: Props) {
       description: c.description,
       url: canonical,
       inLanguage: locale,
+      // Event.name stays the event's real name. The localized H1 ("Oktoberfest München 2026:
+      // Flüge und Flughäfen") is the title of OUR ARTICLE about the event, not what the event
+      // is called — asserting it as the entity name would invent a name that exists nowhere.
+      // There is no localized event-name field in data/events/*.json to use instead, and
+      // generating one would risk translating proper nouns that do not translate.
       about: {
         '@type': 'Event',
         name: m.name,
