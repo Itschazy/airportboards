@@ -24,6 +24,28 @@ for (const loc of LOCALES) {
   }
 }
 
+// Event guides: the hub, every event page, and the airports each event serves. These are
+// time-critical (an event page is worthless after the date) so they always go in the push.
+try {
+  const files = fs.readdirSync('data/events').filter(f => f.endsWith('.json'));
+  const eventAirports = new Set();
+  for (const loc of LOCALES) urls.add(`${BASE}/${loc}/events`);
+  for (const f of files) {
+    const ev = JSON.parse(fs.readFileSync(`data/events/${f}`, 'utf8'));
+    const slug = ev?.meta?.slug;
+    if (!slug) continue;
+    const ended = Date.parse(ev.meta.endDate || ev.meta.startDate) + 3 * 86400000 < Date.now();
+    for (const loc of LOCALES) urls.add(`${BASE}/${loc}/event/${slug}`);
+    if (!ended) for (const a of ev.meta.airports || []) eventAirports.add(a.iata);
+  }
+  for (const loc of LOCALES) for (const iata of eventAirports) {
+    urls.add(`${BASE}/${loc}/airport/${iata}`);
+    urls.add(`${BASE}/${loc}/airport/${iata}/arrivals`);
+    urls.add(`${BASE}/${loc}/airport/${iata}/departures`);
+  }
+  console.log(`+ events: ${files.length} guide(s), ${eventAirports.size} active event airport(s)`);
+} catch { /* no events dir */ }
+
 if (process.argv.includes('--all-hubs')) {
   const airports = JSON.parse(fs.readFileSync('data/airports.json', 'utf8'));
   const slugify = s => s.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');

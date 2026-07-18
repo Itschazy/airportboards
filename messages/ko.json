@@ -211,5 +211,23 @@
     "last_updated": "마지막 업데이트: {date}",
     "cookie_msg": "분석 및 광고를 위해 쿠키를 사용합니다.",
     "cookie_ok": "확인"
+  },
+  "event": {
+    "disclaimer": "주최사·공연장·아티스트와 제휴 관계가 없습니다. 티켓은 주최사가 판매합니다.",
+    "organiser": "주최사 및 티켓",
+    "past_title": "종료된 행사입니다",
+    "past_text": "아래 공항 운항정보는 계속 실시간으로 제공됩니다 — 귀국편에 유용합니다.",
+    "postponed": "행사가 연기되었습니다 — 주최사에서 날짜를 확인하세요.",
+    "cancelled": "행사가 취소되었습니다.",
+    "hub_title": "행사",
+    "hub_desc": "행사를 보러 비행하시나요? 가까운 공항, 이동 방법, 실시간 운항정보.",
+    "hub_upcoming": "예정",
+    "hub_past": "지난 행사",
+    "when": "날짜",
+    "where": "장소",
+    "sec_boards": "가까운 공항과 실시간 운항정보",
+    "sec_getting": "가는 방법",
+    "sec_leaving": "귀국 항공편",
+    "sec_tips": "여행 팁"
   }
 }

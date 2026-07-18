@@ -7,7 +7,7 @@ import { getAirportName } from '@/lib/airport-names';
 import type { FlightRow } from '@/lib/flights';
 import { MoreInfo, OverviewMetrics, AboutCard, Faq } from '@/components/AirportExtras';
 import { getAirportContentExtended } from '@/lib/airport-content-extended';
-import { getEventsForAirport } from '@/lib/event-content';
+import { EventBanner } from '@/components/EventBanner';
 
 const LETTERS = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('');
 const SUB = '#8A8A8A';
@@ -100,32 +100,14 @@ export async function AirportBottom({ airport, locale, about, displayName, fligh
   );
   const sec: React.CSSProperties = { marginTop: 36 };
 
-  const events = getEventsForAirport(airport.iata);
-
   return (
     <div style={{ background: '#050505', padding: '0 24px 8px' }}>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqLd) }} />
       <div style={{ maxWidth: 720, margin: '0 auto' }}>
 
         {/* Live-event banner (e.g. World Cup final): visible above the fold-out,
-            links to the event guide. Auto-expires 3 days after the event. */}
-        {events.map(ev => {
-          const c = ev.locales[locale] || ev.locales.en;
-          if (!c?.banner) return null;
-          return (
-            <Link key={ev.meta.slug} href={`/${locale}/event/${ev.meta.slug}`} className="press" style={{
-              display: 'flex', alignItems: 'center', gap: 12, marginTop: 14,
-              background: 'rgba(10,132,255,0.09)', border: '1px solid rgba(10,132,255,0.35)',
-              borderRadius: 16, padding: '13px 16px', textDecoration: 'none',
-            }}>
-              <span style={{ fontSize: 20, flexShrink: 0 }} aria-hidden="true">🏆</span>
-              <span style={{ flex: 1, minWidth: 0, fontSize: 14, fontWeight: 600, color: '#E4E4E7', lineHeight: 1.35 }}>{c.banner}</span>
-              <svg width="8" height="14" viewBox="0 0 8 14" fill="none" aria-hidden="true" style={{ flexShrink: 0 }}>
-                <path d="M1 1L7 7L1 13" stroke="#0A84FF" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" />
-              </svg>
-            </Link>
-          );
-        })}
+            links to the event guide. Auto-expires once the event is over. */}
+        <EventBanner iata={airport.iata} locale={locale} style={{ marginTop: 14 }} />
 
         <MoreInfo label={t('show_more')}>
 

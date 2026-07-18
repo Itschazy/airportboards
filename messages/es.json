@@ -211,5 +211,23 @@
     "last_updated": "Última actualización: {date}",
     "cookie_msg": "Usamos cookies para análisis y publicidad.",
     "cookie_ok": "Entendido"
+  },
+  "event": {
+    "disclaimer": "Sin afiliación con el organizador, el recinto ni el artista. Las entradas las vende el organizador.",
+    "organiser": "Organizador y entradas",
+    "past_title": "Este evento ya terminó",
+    "past_text": "Los paneles de los aeropuertos siguen en vivo — útiles para el vuelo de vuelta.",
+    "postponed": "Evento aplazado — confirma la fecha con el organizador.",
+    "cancelled": "Evento cancelado.",
+    "hub_title": "Eventos",
+    "hub_desc": "¿Vuelas a un evento? Aeropuertos cercanos, cómo llegar y paneles de vuelos en vivo.",
+    "hub_upcoming": "Próximos",
+    "hub_past": "Pasados",
+    "when": "Fecha",
+    "where": "Recinto",
+    "sec_boards": "Aeropuertos cercanos y paneles en vivo",
+    "sec_getting": "Cómo llegar",
+    "sec_leaving": "Vuelo de vuelta",
+    "sec_tips": "Consejos de viaje"
   }
 }

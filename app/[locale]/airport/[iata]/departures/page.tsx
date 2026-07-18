@@ -6,6 +6,7 @@ import { getAirportName } from '@/lib/airport-names';
 import { getCityName, getCountryName } from '@/lib/places';
 import { getBoard } from '@/lib/flights';
 import { FlightBoard } from '@/components/FlightBoard';
+import { EventBanner } from '@/components/EventBanner';
 import { locales } from '@/lib/i18n';
 
 const BASE = 'https://airportsboard.live';
@@ -109,6 +110,9 @@ export default async function DeparturesPage({ params }: Props) {
       ))}
       {/* The visible <h1> now lives in FlightBoard's airport header (single semantic h1). */}
       <FlightBoard airport={airport} locale={locale} defaultMode="departures" displayName={getAirportName(airport.iata, locale, airport.name)} initialFlights={initialFlights.slice(0, 40)} />
+      <div style={{ maxWidth: 720, margin: '0 auto', padding: '0 24px 8px' }}>
+        <EventBanner iata={airport.iata} locale={locale} />
+      </div>
     </>
   );
 }

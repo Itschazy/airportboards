@@ -2,6 +2,7 @@ import airports from '@/data/airports.json';
 import airlines from '@/data/airlines.json';
 import { getCityName } from '@/lib/places';
 import { getFresh, getStale, put, canSpend, spend } from '@/lib/flightStore';
+import { getActiveEventAirports } from '@/lib/event-content';
 
 const AIRLABS_KEY = process.env.AIRLABS_API_KEY || '';
 export const CACHE_SECONDS = 60;
@@ -247,14 +248,22 @@ const WARM_HUBS = [
   'OSL','ARN','HEL','WAW','LIS','ATH','SVX','OVB','AER','KZN','KRR','ROV','UFA','GOJ','MRV','YYZ','YVR','GRU','GIG','MEX','SYD',
 ];
 
-/** Refresh the top hubs into the store (bounded, budget-checked). Called on a timer. */
-export async function warmHubs(): Promise<void> {
-  if (!AIRLABS_KEY) return;
+/** Refresh the top hubs into the store (bounded, budget-checked). Called on a timer.
+ *  Airports of events happening soon are merged in on top of the fixed hub list, so an
+ *  event guide's "money block" never links to a cold board (each extra airport costs
+ *  ~2 requests per warm cycle ≈ 24/day at the 2h cadence). Returns what it warmed. */
+export async function warmHubs(): Promise<{ hubs: number; eventAirports: string[] }> {
+  const eventAirports = getActiveEventAirports().filter(i => !WARM_HUBS.includes(i));
+  if (!AIRLABS_KEY) return { hubs: 0, eventAirports };
   const n = Number(process.env.WARM_AIRPORTS) || WARM_HUBS.length;
-  for (const iata of WARM_HUBS.slice(0, n)) {
+  const list = [...WARM_HUBS.slice(0, n), ...eventAirports];
+  let warmed = 0;
+  for (const iata of list) {
     if (!canSpend()) break;
     try { await fetchRaw(`dep_iata=${iata}`, 'departures', { live: true }); } catch { /* ignore */ }
     try { await fetchRaw(`arr_iata=${iata}`, 'arrivals', { live: true }); } catch { /* ignore */ }
+    warmed++;
     await new Promise(r => setTimeout(r, 250)); // gentle stagger
   }
+  return { hubs: warmed, eventAirports };
 }

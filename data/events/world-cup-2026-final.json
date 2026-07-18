@@ -3,8 +3,16 @@
     "slug": "world-cup-2026-final",
     "name": "FIFA World Cup 2026 Final — Spain vs Argentina",
     "startDate": "2026-07-19T15:00:00-04:00",
+    "endDate": "2026-07-19T18:00:00-04:00",
     "venue": "MetLife Stadium",
     "venueCity": "East Rutherford, New Jersey",
+    "country": "US",
+    "type": "sports",
+    "status": "scheduled",
+    "sources": [
+      "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026",
+      "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_knockout_stage"
+    ],
     "airports": [
       {
         "iata": "EWR",

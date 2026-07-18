@@ -211,5 +211,23 @@
     "last_updated": "Last updated: {date}",
     "cookie_msg": "We use cookies for analytics and advertising.",
     "cookie_ok": "Got it"
+  },
+  "event": {
+    "disclaimer": "Not affiliated with the organiser, venue or performer. Tickets are sold by the organiser.",
+    "organiser": "Organiser & tickets",
+    "past_title": "This event has ended",
+    "past_text": "The airport boards below are still live — handy for the trip home.",
+    "postponed": "This event has been postponed — check the date with the organiser.",
+    "cancelled": "This event has been cancelled.",
+    "hub_title": "Events",
+    "hub_desc": "Flying to an event? Nearest airports, transfers and live flight boards.",
+    "hub_upcoming": "Upcoming",
+    "hub_past": "Past events",
+    "when": "Date",
+    "where": "Venue",
+    "sec_boards": "Nearest airports & live boards",
+    "sec_getting": "Getting there",
+    "sec_leaving": "Flying home",
+    "sec_tips": "Travel tips"
   }
 }

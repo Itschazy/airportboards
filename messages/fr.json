@@ -211,5 +211,23 @@
     "last_updated": "Dernière mise à jour : {date}",
     "cookie_msg": "Nous utilisons des cookies à des fins d'analyse et de publicité.",
     "cookie_ok": "J'ai compris"
+  },
+  "event": {
+    "disclaimer": "Sans affiliation avec l’organisateur, le lieu ou l’artiste. Les billets sont vendus par l’organisateur.",
+    "organiser": "Organisateur et billets",
+    "past_title": "Cet événement est terminé",
+    "past_text": "Les tableaux des aéroports ci-dessous restent en direct — utiles pour le vol retour.",
+    "postponed": "Événement reporté — vérifiez la date auprès de l’organisateur.",
+    "cancelled": "Événement annulé.",
+    "hub_title": "Événements",
+    "hub_desc": "Vous prenez l’avion pour un événement ? Aéroports proches, accès et tableaux en direct.",
+    "hub_upcoming": "À venir",
+    "hub_past": "Passés",
+    "when": "Date",
+    "where": "Lieu",
+    "sec_boards": "Aéroports proches et tableaux en direct",
+    "sec_getting": "Comment s’y rendre",
+    "sec_leaving": "Vol retour",
+    "sec_tips": "Conseils de voyage"
   }
 }

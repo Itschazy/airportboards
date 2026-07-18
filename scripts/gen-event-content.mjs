@@ -1,64 +1,90 @@
 // Generate localized content for an /event/[slug] page (12 locales via gpt-5.5).
 // Facts are pinned in the prompt — the model localizes, it may not invent.
-// Usage: OPENAI_API_KEY=... node scripts/gen-event-content.mjs
+//
+// Usage:
+//   OPENAI_API_KEY=... node scripts/gen-event-content.mjs data/events/drafts/<slug>.meta.json
+//
+// The draft file holds the verified meta plus the facts the copy may use:
+// {
+//   "meta": { slug, name, startDate, endDate?, venue, venueCity, country, type,
+//             officialUrl?, sources[], airports:[{iata,km}] },
+//   "facts": "bullet list of verified, quotable facts (routes, transit, distances)",
+//   "guidance": "optional extra rules for this event (e.g. logistics-only)",
+//   "locales": ["en","ru",...]   // optional subset; defaults to all 12
+// }
+// Resumable: locales already present in the output keep their copy.
 import fs from 'fs';
 
 const KEY = process.env.OPENAI_API_KEY;
 if (!KEY) { console.error('OPENAI_API_KEY missing'); process.exit(1); }
 
-const SLUG = 'world-cup-2026-final';
-const OUT = `data/events/${SLUG}.json`;
-fs.mkdirSync('data/events', { recursive: true });
+const draftPath = process.argv[2];
+if (!draftPath) { console.error('usage: node scripts/gen-event-content.mjs <draft.meta.json>'); process.exit(1); }
+const draft = JSON.parse(fs.readFileSync(draftPath, 'utf8'));
+const meta = draft.meta;
+if (!meta?.slug) { console.error('draft.meta.slug missing'); process.exit(1); }
 
-const LOCALES = {
+const ALL = {
   en: 'English', ru: 'Russian', zh: 'Chinese (Simplified)', ar: 'Arabic',
   de: 'German', ko: 'Korean', ja: 'Japanese', fr: 'French',
   es: 'Spanish', it: 'Italian', hi: 'Hindi', tr: 'Turkish',
 };
+const LOCALES = Object.fromEntries(
+  (draft.locales?.length ? draft.locales : Object.keys(ALL)).map(l => [l, ALL[l]]),
+);
 
-const FACTS = `EVENT FACTS (fixed, do not alter):
-- FIFA World Cup 2026 Final: Spain vs Argentina.
-- Kick-off: Sunday, July 19, 2026, 15:00 local time (ET).
-- Venue: MetLife Stadium, East Rutherford, New Jersey (New York City area).
-- Nearest major airports: Newark Liberty (EWR, ~20 km from the stadium — closest), LaGuardia (LGA, ~32 km), John F. Kennedy (JFK, ~48 km).
-- Typical transit: NJ Transit rail to Meadowlands Sports Complex via Secaucus Junction on event days; taxis/ride-hailing also common. From EWR: AirTrain + NJ Transit. Roads around the stadium are heavily congested on match day.
-- Fans fly home mostly July 20–21; airports will be exceptionally busy — arrive much earlier than usual.
-FORBIDDEN: prices, fares, flight numbers, timetables, gate numbers, phone numbers, predictions of the result.`;
+const OUT = `data/events/${meta.slug}.json`;
+fs.mkdirSync('data/events', { recursive: true });
+
+const airportList = meta.airports.map(a => `${a.iata} (~${a.km} km from ${meta.venue})`).join(', ');
 
 function sys(lang) {
-  return `You write concise, factually-careful travel info for a live flight-board website (airportsboard.live). Write ONLY in ${lang}. Return a JSON object with EXACTLY these keys:
-- "title": SEO <title> for the page, ≤65 chars, must mention the World Cup final and airports (naturally, for how locals search).
-- "description": meta description, 120-155 chars, mention live flight boards for EWR/JFK/LGA.
+  return `You write concise, factually-careful TRAVEL LOGISTICS copy for a live flight-board website (airportsboard.live). The page answers one question: how air travellers get to and from this event. Write ONLY in ${lang}.
+
+Return a JSON object with EXACTLY these keys:
+- "title": SEO <title>, ≤65 chars. Must read naturally for how people in ${lang} search; mention the event and airports/flights.
+- "description": meta description, 120-155 chars, mentioning live flight boards for ${meta.airports.map(a => a.iata).join('/')}.
 - "h1": page heading, ≤70 chars.
-- "banner": one short line (≤70 chars) for a promo banner on airport pages, e.g. "Flying to the World Cup final? Nearest airports & tips →" in ${lang}.
-- "intro": 60-90 word paragraph: the final (Spain vs Argentina, July 19, MetLife Stadium near NYC) and why checking a live airport board matters that weekend.
-- "getting": 60-90 words: getting from EWR/LGA/JFK to MetLife Stadium in general terms (NJ Transit via Secaucus on event days, taxis, heavy traffic).
-- "leaving": 60-90 words: flying home July 20-21 — huge crowds, arrive very early, check the live departures board before leaving for the airport, allow extra time for security/passport.
-- "tips": 50-80 words of practical evergreen advice for match-weekend air travellers.
-${FACTS}
+- "banner": ONE short line (≤70 chars) for a promo chip on the airport pages, e.g. an invitation to open the event guide.
+- "intro": 60-90 words — what the event is (name, date, venue, city) and why checking a live airport board matters around those dates.
+- "getting": 60-90 words — getting from the listed airports to the venue: which airport is the main gateway, approximate distance/time, the transport modes that exist there.
+- "leaving": 60-90 words — the fly-home wave after the event: crowded airports, arrive earlier than usual, check the live departures board before leaving for the airport.
+- "tips": 50-80 words — practical, evergreen advice for air travellers around a big event.
+- "sec": an object with FOUR short section headings in ${lang}, tailored to THIS event (not generic football wording):
+    { "boards": heading for the nearest-airports/live-boards block,
+      "getting": heading for the getting-there block,
+      "leaving": heading for the flying-home block,
+      "tips": heading for the tips block }
+
+HARD RULES
+- Use ONLY the facts below. You may translate and rephrase them; you may NOT add new facts.
+- Across "intro" + "getting" + "leaving" you must use at least 5 CONCRETE facts from the list
+  (main gateway airport, distances/times, transport modes, the peak departure window, dates).
+- FORBIDDEN: ticket prices, fares, flight numbers, timetables, gate numbers, phone numbers,
+  predictions of results, and any claim that this site sells tickets or is official.
+- Neutral service-directory tone. No hype, no clickbait, no opinions about people.
+
+EVENT FACTS (fixed, do not alter):
+- Event: ${meta.name}
+- Type: ${meta.type}
+- Date: ${meta.startDate}${meta.endDate ? ` — ${meta.endDate}` : ''}
+- Venue: ${meta.venue}, ${meta.venueCity} (${meta.country})
+- Airports covered: ${airportList}
+${draft.facts || ''}
+${draft.guidance ? `\nEVENT-SPECIFIC RULES:\n${draft.guidance}` : ''}
+
 Return ONLY the JSON object.`;
 }
 
-const out = fs.existsSync(OUT) ? JSON.parse(fs.readFileSync(OUT, 'utf8')) : {
-  meta: {
-    slug: SLUG,
-    name: 'FIFA World Cup 2026 Final — Spain vs Argentina',
-    startDate: '2026-07-19T15:00:00-04:00',
-    venue: 'MetLife Stadium',
-    venueCity: 'East Rutherford, New Jersey',
-    airports: [
-      { iata: 'EWR', km: 20 },
-      { iata: 'LGA', km: 32 },
-      { iata: 'JFK', km: 48 },
-    ],
-  },
-  locales: {},
-};
+const out = fs.existsSync(OUT)
+  ? JSON.parse(fs.readFileSync(OUT, 'utf8'))
+  : { meta, locales: {} };
+out.meta = meta;   // draft is the source of truth for meta
 
 let tokIn = 0, tokOut = 0;
 for (const [loc, lang] of Object.entries(LOCALES)) {
   const cur = out.locales[loc];
-  if (cur && cur.title && cur.intro && cur.tips) { console.log(`= ${loc} (cached)`); continue; }
+  if (cur && cur.title && cur.intro && cur.tips && cur.sec) { console.log(`= ${loc} (cached)`); continue; }
   const body = {
     model: 'gpt-5.5',
     response_format: { type: 'json_object' },
@@ -78,11 +104,15 @@ for (const [loc, lang] of Object.entries(LOCALES)) {
       const j = await r.json();
       if (j.error) throw new Error(j.error.message);
       tokIn += j.usage.prompt_tokens; tokOut += j.usage.completion_tokens;
-      out.locales[loc] = JSON.parse(j.choices[0].message.content);
+      const parsed = JSON.parse(j.choices[0].message.content);
+      for (const k of ['title', 'description', 'h1', 'banner', 'intro', 'getting', 'leaving', 'tips']) {
+        if (!parsed[k]) throw new Error(`missing key "${k}"`);
+      }
+      out.locales[loc] = parsed;
       fs.writeFileSync(OUT, JSON.stringify(out, null, 2));
-      console.log(`✓ ${loc}: ${out.locales[loc].title}`);
+      console.log(`✓ ${loc}: ${parsed.title}`);
       break;
     } catch (e) { console.error(`! ${loc} attempt ${a}: ${e.message}`); await new Promise(s => setTimeout(s, 1500)); }
   }
 }
-console.log(`DONE tokens ${tokIn}+${tokOut} (~$${((tokIn * 1.25 + tokOut * 10) / 1e6).toFixed(2)})`);
+console.log(`DONE ${OUT} — ${Object.keys(out.locales).length} locales, tokens ${tokIn}+${tokOut} (~$${((tokIn * 1.25 + tokOut * 10) / 1e6).toFixed(2)})`);

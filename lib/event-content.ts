@@ -5,19 +5,38 @@ import path from 'path';
 // scripts/gen-event-content.mjs. Tiny set, read once and cached; fs (not import)
 // so content edits don't need a rebuild of the importing modules' chunks.
 const DIR = path.join(process.cwd(), 'data/events');
+const DAY = 86_400_000;
 
 export type EventAirport = { iata: string; km: number };
+export type EventStatus = 'scheduled' | 'postponed' | 'cancelled' | 'past';
+export type EventType = 'concert' | 'sports' | 'festival';
+
+/** Per-locale section headings — generated with the copy so a concert page doesn't
+ *  inherit football wording. page.tsx falls back to a generic map when absent. */
+export type EventSections = { boards: string; getting: string; leaving: string; tips: string };
+
 export type EventLocale = {
   title: string; description: string; h1: string; banner: string;
   intro: string; getting: string; leaving: string; tips: string;
+  sec?: EventSections;
 };
-export type EventData = {
-  meta: {
-    slug: string; name: string; startDate: string;
-    venue: string; venueCity: string; airports: EventAirport[];
-  };
-  locales: Record<string, EventLocale>;
+
+export type EventMeta = {
+  slug: string;
+  name: string;
+  startDate: string;        // ISO with offset
+  endDate?: string;         // ISO with offset — multi-day events (festivals, GP weekends)
+  venue: string;
+  venueCity: string;
+  country: string;          // ISO-3166-1 alpha-2, used for schema.org addressCountry
+  type: EventType;
+  officialUrl?: string;     // organiser / ticketing — plain link, never an affiliate one
+  status?: EventStatus;     // omitted ⇒ derived from the dates
+  sources?: string[];       // provenance for the facts (verification trail)
+  airports: EventAirport[];
 };
+
+export type EventData = { meta: EventMeta; locales: Record<string, EventLocale> };
 
 let cache: Map<string, EventData> | null = null;
 
@@ -45,13 +64,58 @@ export function getEventSlugs(): string[] {
   return [...all().keys()];
 }
 
+/** When the event stops being "current". endDate is the true event end (schema.org
+ *  semantics); we add a 2-day fly-home buffer because that traffic is the whole point of
+ *  the page. Without an endDate we fall back to startDate + 3d. */
+export function eventEndsAt(meta: EventMeta): number {
+  const end = meta.endDate ? Date.parse(meta.endDate) : NaN;
+  if (!Number.isNaN(end)) return end + 2 * DAY;
+  return Date.parse(meta.startDate) + 3 * DAY;
+}
+
+/** Explicit status wins (cancelled/postponed are editorial); otherwise derived from dates. */
+export function effectiveStatus(meta: EventMeta): EventStatus {
+  if (meta.status === 'cancelled' || meta.status === 'postponed' || meta.status === 'past') return meta.status;
+  return Date.now() > eventEndsAt(meta) ? 'past' : 'scheduled';
+}
+
+export function isPast(meta: EventMeta): boolean {
+  return effectiveStatus(meta) === 'past';
+}
+
 /** Events that involve this airport and haven't ended yet (shown as banners). */
 export function getEventsForAirport(iata: string): EventData[] {
-  const now = Date.now();
-  const DAY = 86_400_000;
+  const code = iata.toUpperCase();
   return [...all().values()].filter(e =>
-    e.meta.airports.some(a => a.iata === iata.toUpperCase())
-    // keep the banner through the fly-home wave: event day + 3 days
-    && now < Date.parse(e.meta.startDate) + 3 * DAY,
+    e.meta.airports.some(a => a.iata === code)
+    && effectiveStatus(e.meta) !== 'past'
+    && effectiveStatus(e.meta) !== 'cancelled',
   );
+}
+
+/** IATA codes to keep warm: any airport of an event inside [start-14d, end+3d].
+ *  Merged into WARM_HUBS so event boards are populated before the traffic lands. */
+export function getActiveEventAirports(): string[] {
+  const now = Date.now();
+  const out = new Set<string>();
+  for (const e of all().values()) {
+    const st = effectiveStatus(e.meta);
+    if (st === 'cancelled' || st === 'past') continue;
+    const from = Date.parse(e.meta.startDate) - 14 * DAY;
+    const to = eventEndsAt(e.meta) + 3 * DAY;
+    if (now >= from && now <= to) for (const a of e.meta.airports) out.add(a.iata.toUpperCase());
+  }
+  return [...out];
+}
+
+/** Hub listing: upcoming first (soonest first), then past (most recent first). */
+export function getEventsForHub(): { upcoming: EventData[]; past: EventData[] } {
+  const list = [...all().values()];
+  const upcoming = list
+    .filter(e => !isPast(e.meta))
+    .sort((a, b) => Date.parse(a.meta.startDate) - Date.parse(b.meta.startDate));
+  const past = list
+    .filter(e => isPast(e.meta))
+    .sort((a, b) => Date.parse(b.meta.startDate) - Date.parse(a.meta.startDate));
+  return { upcoming, past };
 }

@@ -211,5 +211,23 @@
     "last_updated": "Zuletzt aktualisiert: {date}",
     "cookie_msg": "Wir verwenden Cookies für Analyse und Werbung.",
     "cookie_ok": "Verstanden"
+  },
+  "event": {
+    "disclaimer": "Nicht mit Veranstalter, Veranstaltungsort oder Künstler verbunden. Tickets verkauft der Veranstalter.",
+    "organiser": "Veranstalter & Tickets",
+    "past_title": "Diese Veranstaltung ist vorbei",
+    "past_text": "Die Flughafentafeln unten sind weiterhin live — praktisch für den Rückflug.",
+    "postponed": "Die Veranstaltung wurde verschoben — Datum beim Veranstalter prüfen.",
+    "cancelled": "Die Veranstaltung wurde abgesagt.",
+    "hub_title": "Veranstaltungen",
+    "hub_desc": "Flug zu einer Veranstaltung? Nächste Flughäfen, Anreise und Live-Flugtafeln.",
+    "hub_upcoming": "Demnächst",
+    "hub_past": "Vergangen",
+    "when": "Datum",
+    "where": "Ort",
+    "sec_boards": "Nächste Flughäfen & Live-Tafeln",
+    "sec_getting": "Anreise",
+    "sec_leaving": "Heimflug",
+    "sec_tips": "Reisetipps"
   }
 }

@@ -211,5 +211,23 @@
     "last_updated": "Son güncelleme: {date}",
     "cookie_msg": "Analiz ve reklam için çerezler kullanıyoruz.",
     "cookie_ok": "Anladım"
+  },
+  "event": {
+    "disclaimer": "Organizatör, mekân veya sanatçı ile bağlantılı değildir. Biletleri organizatör satar.",
+    "organiser": "Organizatör ve biletler",
+    "past_title": "Bu etkinlik sona erdi",
+    "past_text": "Aşağıdaki havalimanı tabloları hâlâ canlı — dönüş uçuşu için kullanışlı.",
+    "postponed": "Etkinlik ertelendi — tarihi organizatörden teyit edin.",
+    "cancelled": "Etkinlik iptal edildi.",
+    "hub_title": "Etkinlikler",
+    "hub_desc": "Bir etkinlik için mi uçuyorsunuz? En yakın havalimanları, ulaşım ve canlı uçuş tabloları.",
+    "hub_upcoming": "Yaklaşan",
+    "hub_past": "Geçmiş",
+    "when": "Tarih",
+    "where": "Mekân",
+    "sec_boards": "En yakın havalimanları ve canlı tablolar",
+    "sec_getting": "Nasıl gidilir",
+    "sec_leaving": "Dönüş uçuşu",
+    "sec_tips": "Seyahat ipuçları"
   }
 }

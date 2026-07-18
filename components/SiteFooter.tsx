@@ -16,7 +16,12 @@ export async function SiteFooter({ locale }: { locale: Locale }) {
   const tLegal = await getTranslations({ locale, namespace: 'legal' });
   const topCountries = [...getCountries()].sort((a, b) => b.count - a.count).slice(0, 12);
 
+  const tEvent = await getTranslations({ locale, namespace: 'event' });
+
   const legalLinks = [
+    // Events hub sits here so event guides keep a permanent inbound link once their
+    // airport banners expire — otherwise they'd be sitemap-only orphans.
+    { href: `/${locale}/events`, label: tEvent('hub_title') },
     { href: `/${locale}/about`, label: tLegal('about') },
     { href: `/${locale}/contact`, label: tLegal('contact') },
     { href: `/${locale}/privacy`, label: tLegal('privacy') },
