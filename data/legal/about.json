@@ -26,7 +26,10 @@
         "heading": "How it works",
         "body": [
           "We aggregate flight information from third-party flight-data providers and present it in a single, consistent board for each airport. That data is collected, formatted, and displayed automatically.",
-          "Because the information comes from external sources, it can occasionally be delayed, incomplete, or inaccurate. Please always verify critical details — final gate, boarding time, and any schedule change — directly with your airline or the official airport before you travel. airportsboard.live is an information tool, not an official source, and should not be your only reference for time-sensitive decisions."
+          "Because the information comes from external sources, it can occasionally be delayed, incomplete, or inaccurate. Please always verify critical details — final gate, boarding time, and any schedule change — directly with your airline or the official airport before you travel. airportsboard.live is an information tool, not an official source, and should not be your only reference for time-sensitive decisions.",
+          "How the data is refreshed: boards are updated on a schedule matched to how busy an airport is — the busiest hubs several times a day, smaller airports at least daily. Every board displays the age of its own data, and a page never claims to be live when it is not.",
+          "How we know which airports have flights: we probed published flight schedules for every one of the roughly 6,000 airports that hold an IATA code. About 2,280 have scheduled passenger service; the rest are airfields, military bases and private strips with no airline flights. Those pages say so plainly and name the nearest airport you can actually fly from, with the distance, instead of showing an empty board.",
+          "Airports that have closed are marked as closed, with the year and the airport that took over their traffic, rather than being quietly left to look operational."
         ]
       },
       {
@@ -65,7 +68,10 @@
         "heading": "Как это работает",
         "body": [
           "Мы агрегируем информацию о рейсах от сторонних поставщиков авиационных данных и представляем её в едином, понятном табло для каждого аэропорта. Эти данные собираются, форматируются и отображаются автоматически.",
-          "Поскольку информация поступает из внешних источников, она иногда может запаздывать, быть неполной или неточной. Пожалуйста, всегда проверяйте важные детали — итоговый гейт, время посадки и любые изменения расписания — напрямую у вашей авиакомпании или на официальном ресурсе аэропорта перед поездкой. airportsboard.live — это информационный инструмент, а не официальный источник, и он не должен быть вашим единственным ориентиром при решениях, зависящих от времени."
+          "Поскольку информация поступает из внешних источников, она иногда может запаздывать, быть неполной или неточной. Пожалуйста, всегда проверяйте важные детали — итоговый гейт, время посадки и любые изменения расписания — напрямую у вашей авиакомпании или на официальном ресурсе аэропорта перед поездкой. airportsboard.live — это информационный инструмент, а не официальный источник, и он не должен быть вашим единственным ориентиром при решениях, зависящих от времени.",
+          "Как обновляются данные: табло обновляются по расписанию, подобранному под загруженность аэропорта — самые крупные узлы несколько раз в день, небольшие аэропорты не реже раза в сутки. На каждом табло показан возраст его собственных данных, и страница никогда не выдаёт себя за онлайн-табло, если это не так.",
+          "Откуда мы знаем, где есть рейсы: мы проверили опубликованные расписания по каждому из примерно 6 000 аэропортов, имеющих код IATA. Регулярные пассажирские рейсы есть примерно у 2 280; остальные — аэродромы, военные базы и частные полосы без авиасообщения. На их страницах об этом сказано прямо и указан ближайший аэропорт, откуда действительно можно улететь, с расстоянием — вместо пустого табло.",
+          "Закрытые аэропорты помечены как закрытые, с годом закрытия и аэропортом, принявшим их трафик, а не оставлены выглядеть работающими."
         ]
       },
       {
