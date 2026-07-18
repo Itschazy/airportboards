@@ -12,14 +12,14 @@ import fs from 'fs';
 
 const CAPS = process.argv.slice(2).map(Number).filter(Boolean);
 const PLANS = CAPS.length ? CAPS : [95000, 195000];
-const RESERVE = Number(process.env.AIRLABS_HUMAN_RESERVE ?? 3000);
+const PCT = Number(process.env.AIRLABS_HUMAN_RESERVE_PCT ?? 35) / 100;
 const svc = JSON.parse(fs.readFileSync('data/airport-service.json', 'utf8')).airports;
 
 // Keep in sync with TIERS in lib/warm.ts.
 const TIERS = [
-  { name: 'mega', min: 400, intervalMin: 120, skipNight: false },
-  { name: 'hub', min: 150, intervalMin: 240, skipNight: true },
-  { name: 'major', min: 40, intervalMin: 720, skipNight: true },
+  { name: 'mega', min: 400, intervalMin: 360, skipNight: false },
+  { name: 'hub', min: 150, intervalMin: 720, skipNight: true },
+  { name: 'major', min: 40, intervalMin: 1440, skipNight: true },
   { name: 'mid', min: 10, intervalMin: 1440, skipNight: true },
   { name: 'small', min: 1, intervalMin: 1440, skipNight: true },
 ];
@@ -47,14 +47,14 @@ console.log(`${'TARGET'.padEnd(8)}${''.padStart(7)}  ${''.padEnd(11)}${String(de
 
 console.log(`\nplan           spendable    achieved   effective cadence`);
 for (const cap of PLANS) {
-  const spendable = cap - RESERVE;
+  const spendable = cap - Math.round(cap * PCT);
   const ratio = Math.min(1, spendable / demand);
   const mult = 1 / ratio;
   const eff = mult <= 1.05 ? 'at target' : `target × ${mult.toFixed(1)} (mid/small ≈ every ${mult.toFixed(1)}d)`;
   console.log(`${cap.toLocaleString().padEnd(15)}${spendable.toLocaleString().padEnd(13)}${(Math.round(ratio * 100) + '%').padEnd(11)}${eff}`);
 }
-console.log(`\n${RESERVE.toLocaleString()} held back for live human page views, which spend the same quota`);
-console.log(`(override with AIRLABS_HUMAN_RESERVE). Everything else is spent — the warmer`);
-console.log(`always uses the full remaining budget, it just gets closer to target on a bigger plan.`);
+console.log(`\n${Math.round(PCT * 100)}% of each plan is held back for live human page views, which spend the`);
+console.log(`same quota (AIRLABS_HUMAN_RESERVE_PCT). Everything else is spent — the warmer always`);
+console.log(`uses the full remaining budget, it just gets closer to target on a bigger plan.`);
 console.log(`\nthe ${noService} airports with no scheduled service are never probed —`);
 console.log(`they render an honest "no scheduled flights" page instead.\n`);

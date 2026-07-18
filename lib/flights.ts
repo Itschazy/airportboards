@@ -1,7 +1,7 @@
 import airports from '@/data/airports.json';
 import airlines from '@/data/airlines.json';
 import { getCityName } from '@/lib/places';
-import { getFresh, getStale, put, canSpend, spend } from '@/lib/flightStore';
+import { getFresh, getStale, put, canSpend, spend, type SpendKind } from '@/lib/flightStore';
 import { getActiveEventAirports } from '@/lib/event-content';
 import { dueAirports, tickBudget } from '@/lib/warm';
 
@@ -132,7 +132,7 @@ const RECENT_ARR_MAX = 50; // cap recently-landed shown, so upcoming arrivals st
 export async function fetchRaw(
   query: string,
   direction: 'departures' | 'arrivals' = 'departures',
-  opts: { live?: boolean } = {},
+  opts: { live?: boolean; kind?: SpendKind } = {},
 ): Promise<AirlabsFlight[]> {
   const cacheKey = `${direction}:${query}`;
   const fresh = getFresh(cacheKey);
@@ -140,17 +140,17 @@ export async function fetchRaw(
   if (!opts.live || !AIRLABS_KEY || !canSpend()) return getStale(cacheKey) ?? [];
   const pending = inflight.get(cacheKey);
   if (pending) return pending;
-  const p = doFetch(query, direction, cacheKey).finally(() => inflight.delete(cacheKey));
+  const p = doFetch(query, direction, cacheKey, opts.kind ?? 'human').finally(() => inflight.delete(cacheKey));
   inflight.set(cacheKey, p);
   return p;
 }
 
-async function doFetch(query: string, direction: 'departures' | 'arrivals', cacheKey: string): Promise<AirlabsFlight[]> {
+async function doFetch(query: string, direction: 'departures' | 'arrivals', cacheKey: string, kind: SpendKind): Promise<AirlabsFlight[]> {
   const url = `https://airlabs.co/api/v9/schedules?${query}&api_key=${AIRLABS_KEY}`;
   let json: { response?: AirlabsFlight[]; error?: { message?: string } };
   try {
     const res = await fetch(url, { cache: 'no-store', signal: AbortSignal.timeout(6000) });
-    spend(); // any answered airlabs request counts against the monthly budget
+    spend(kind); // any answered airlabs request counts against the monthly budget
     if (!res.ok) return getStale(cacheKey) ?? [];
     json = await res.json();
   } catch {
@@ -198,10 +198,10 @@ const norm = (s?: string) => (s || '').toUpperCase().replace(/[\s-]/g, '');
 
 // `live` = may this call spend airlabs quota? Pages (SSR / crawler-triggered) pass false
 // (read store only). The client /api/* path passes true for human (non-bot) requests.
-export async function getBoard(iata: string, direction: 'departures' | 'arrivals', locale: string, live = false): Promise<FlightRow[]> {
+export async function getBoard(iata: string, direction: 'departures' | 'arrivals', locale: string, live = false, kind: SpendKind = 'human'): Promise<FlightRow[]> {
   const code = iata.toUpperCase();
   const param = direction === 'departures' ? `dep_iata=${code}` : `arr_iata=${code}`;
-  const raw = await fetchRaw(param, direction, { live });
+  const raw = await fetchRaw(param, direction, { live, kind });
   const own = raw.filter(f => (direction === 'departures' ? f.dep_iata : f.arr_iata) === code);
   return own.map(f => mapFlight(f, direction, locale));
 }
@@ -281,8 +281,8 @@ export async function warmHubs(): Promise<{
     if (seen.has(iata)) continue;
     seen.add(iata);
     if (spentHere + 2 > budget || !canSpend()) break;
-    try { await fetchRaw(`dep_iata=${iata}`, 'departures', { live: true }); } catch { /* ignore */ }
-    try { await fetchRaw(`arr_iata=${iata}`, 'arrivals', { live: true }); } catch { /* ignore */ }
+    try { await fetchRaw(`dep_iata=${iata}`, 'departures', { live: true, kind: 'warm' }); } catch { /* ignore */ }
+    try { await fetchRaw(`arr_iata=${iata}`, 'arrivals', { live: true, kind: 'warm' }); } catch { /* ignore */ }
     spentHere += 2;
     warmed++;
     const t = tierByIata.get(iata) ?? 'event/legacy';

@@ -17,14 +17,24 @@ import type { AirlabsFlight } from '@/lib/flights';
 
 const STORE_PATH = process.env.FLIGHT_STORE_PATH || path.join(os.tmpdir(), 'airportsboard-flights.json');
 const TTL_MS = (Number(process.env.FLIGHT_TTL_SEC) || 600) * 1000;       // 10 min freshness window
-const MONTHLY_CAP = Number(process.env.AIRLABS_MONTHLY_CAP) || 95000;    // hard backstop under the 100k plan
+// Hard backstop, deliberately just under the plan. Stays at the 100k figure until the larger
+// plan is actually purchased — defaulting to the bigger number first would let the warmer
+// sail past the real limit. After upgrading, set AIRLABS_MONTHLY_CAP=195000 on the VDS; the
+// warmer re-paces itself from it (130k warming / 70k visitors at the default 35% reserve).
+const MONTHLY_CAP = Number(process.env.AIRLABS_MONTHLY_CAP) || 95000;
 // Two entries (departures + arrivals) per warmed airport. The tiered warmer covers every
 // airport that has scheduled service — ~2,000 of the 6,072 — so the ceiling has to clear
 // ~4,100 comfortably, or eviction would start throwing away boards we just paid for.
 const MAX_ENTRIES = 12000;
 
 type Entry = { ts: number; data: AirlabsFlight[] };
-type Store = { month: string; count: number; entries: Record<string, Entry> };
+/** Who spent the request. The plan is split between the two (see lib/warm.ts tickBudget),
+ *  so a single total cannot answer "did visitors have enough left?". */
+export type SpendKind = 'warm' | 'human';
+type Store = {
+  month: string; count: number; entries: Record<string, Entry>;
+  byKind?: Record<SpendKind, number>;
+};
 
 const monthKey = () => new Date().toISOString().slice(0, 7); // YYYY-MM (calendar month)
 
@@ -72,8 +82,19 @@ export function put(key: string, data: AirlabsFlight[]) {
 }
 /** True while we are still under the monthly airlabs budget. */
 export function canSpend(): boolean { return db().count < MONTHLY_CAP; }
-export function spend() { db().count++; persist(); }
+export function spend(kind: SpendKind = 'human') {
+  const s = db();
+  s.count++;
+  s.byKind ??= { warm: 0, human: 0 };
+  s.byKind[kind]++;
+  persist();
+}
 export function usage() {
   const s = db();
-  return { month: s.month, count: s.count, cap: MONTHLY_CAP, remaining: Math.max(0, MONTHLY_CAP - s.count) };
+  const byKind = s.byKind ?? { warm: 0, human: 0 };
+  return {
+    month: s.month, count: s.count, cap: MONTHLY_CAP,
+    remaining: Math.max(0, MONTHLY_CAP - s.count),
+    warm: byKind.warm, human: byKind.human,
+  };
 }

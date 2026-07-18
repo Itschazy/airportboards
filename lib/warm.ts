@@ -35,21 +35,25 @@ export type WarmTier = {
 
 // Ordered busiest-first; the first tier an airport qualifies for wins.
 //
-// These intervals are a TARGET, not a schedule the warmer promises to hit. Total demand at
-// these settings is ~197k requests/month against measured tier populations, which is
-// deliberately more than the current 100k plan affords: tickBudget() hands out whatever is
-// actually left, and dueAirports() orders by how overdue each board is *relative to its own
-// tier*, so a tight budget slows every tier proportionally instead of starving one. That is
-// what "spend the quota to zero" means here — the budget is always fully used, and raising
-// the plan simply moves every tier closer to its target with no code change.
+// Sized for the agreed split of a 200k plan: 130k for warming, 70k left for live visitors.
+// Total demand here is ~131.5k/month, so the warmer runs at ~99% of target and the budget is
+// spent rather than left idle. dueAirports() orders by how overdue each board is *relative to
+// its own tier*, so if a month ever comes up short every tier slows proportionally instead of
+// the tail starving.
+//
+// The tail is the expensive part on purpose: mid + small are 1,820 of the 2,280 served
+// airports and daily refresh for them costs 91k of the 130k. That is the deliberate trade —
+// the busiest 68 airports settle for a 6h warm because their visitors get a live fetch on
+// demand out of the 70k human reserve, whereas a small airport's page is mostly read by a
+// crawler, which only ever sees whatever the warmer last stored.
 //
 // Measured 2026-07-19 (scripts/discover-schedules.mjs, 6,069 probes):
 //   mega 68 · hub 92 · major 300 · mid 567 · small 1,253 — 2,280 airports with service.
-// Run scripts/warm-plan.mjs after any change; it prints target demand against both plans.
+// Run scripts/warm-plan.mjs after any change; it prints demand against any plan size.
 export const TIERS: WarmTier[] = [
-  { name: 'mega', minFlights: 400, intervalMin: 120, skipNight: false },
-  { name: 'hub', minFlights: 150, intervalMin: 240, skipNight: true },
-  { name: 'major', minFlights: 40, intervalMin: 720, skipNight: true },
+  { name: 'mega', minFlights: 400, intervalMin: 360, skipNight: false },
+  { name: 'hub', minFlights: 150, intervalMin: 720, skipNight: true },
+  { name: 'major', minFlights: 40, intervalMin: 1440, skipNight: true },
   { name: 'mid', minFlights: 10, intervalMin: 1440, skipNight: true },
   { name: 'small', minFlights: 1, intervalMin: 1440, skipNight: true },
 ];
@@ -120,11 +124,19 @@ export function dueAirports(now = Date.now()): Due[] {
  */
 export function tickBudget(runsPerDay = 12, now = new Date()): number {
   const u = usage();
-  // Human page views spend from the same quota — /api/flights fetches live for a real
-  // browser. If the warmer drained the plan to the last request, visitors would be served
-  // stale boards for the rest of the month. This is a reserve for live traffic, not idle
-  // headroom: the warmer still spends everything else.
-  const reserve = Number(process.env.AIRLABS_HUMAN_RESERVE ?? 3000);
+  // Split the plan between the warmer and live human traffic. /api/flights fetches live for
+  // a real browser off the same quota, so a warmer that drained the plan would leave every
+  // visitor on a stale board for the rest of the month.
+  //
+  // Held as a SHARE of the cap rather than an absolute number so the split survives a plan
+  // change: the intended 130k warm / 70k human split on a 200k plan is 35% reserved, and on
+  // today's 100k plan the same 35% keeps the ratio instead of starving the warmer down to
+  // 25k. AIRLABS_HUMAN_RESERVE still overrides with an absolute figure if that is wanted.
+  const pct = Number(process.env.AIRLABS_HUMAN_RESERVE_PCT ?? 35) / 100;
+  const abs = process.env.AIRLABS_HUMAN_RESERVE;
+  const reserve = abs !== undefined ? Number(abs) : Math.round(u.cap * pct);
+  // Warming simply stops once only the reserve is left, which guarantees that many requests
+  // remain available to visitors no matter how the month went.
   const spendable = Math.max(0, u.remaining - reserve);
   const daysInMonth = new Date(now.getFullYear(), now.getMonth() + 1, 0).getDate();
   const daysLeft = Math.max(1, daysInMonth - now.getDate() + 1);
