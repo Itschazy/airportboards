@@ -1,5 +1,6 @@
 import type { MetadataRoute } from 'next';
 import { getAllIataCodes, AIRPORTS_PER_SITEMAP, getSitemapCount, getCountries, getStaticIataCodes, getCities } from '@/lib/airports';
+import { getEventSlugs } from '@/lib/event-content';
 import { locales } from '@/lib/i18n';
 
 const BASE = 'https://airportsboard.live';
@@ -46,6 +47,8 @@ export default function sitemap({ id }: { id: number | string }): MetadataRoute.
     for (const L of LETTERS) entries.push(entry(`/az/${L}`, 'weekly', 0.4));
     for (const c of getCountries()) entries.push(entry(`/airports/${c.slug}`, 'weekly', 0.6));
     for (const c of getCities()) if (c.count > 1) entries.push(entry(`/city/${c.slug}`, 'weekly', 0.6));
+    // Event guides (World Cup final etc.) — small, high-intent, freshness matters.
+    for (const s of getEventSlugs()) entries.push(entry(`/event/${s}`, 'daily', 0.8));
     // Airline pages are noindex (thin across ~976 codes) — intentionally not listed.
   }
 

@@ -1,0 +1,145 @@
+{
+  "meta": {
+    "slug": "world-cup-2026-final",
+    "name": "FIFA World Cup 2026 Final — Spain vs Argentina",
+    "startDate": "2026-07-19T15:00:00-04:00",
+    "venue": "MetLife Stadium",
+    "venueCity": "East Rutherford, New Jersey",
+    "airports": [
+      {
+        "iata": "EWR",
+        "km": 20
+      },
+      {
+        "iata": "LGA",
+        "km": 32
+      },
+      {
+        "iata": "JFK",
+        "km": 48
+      }
+    ]
+  },
+  "locales": {
+    "en": {
+      "title": "World Cup Final Airports near NYC | EWR JFK LGA",
+      "description": "World Cup final airport guide for MetLife Stadium: compare EWR, JFK and LGA, and check live flight boards for EWR/JFK/LGA.",
+      "h1": "World Cup Final Airports for MetLife Stadium",
+      "banner": "Flying to the World Cup final? Airports & live boards →",
+      "intro": "The FIFA World Cup 2026 Final brings Spain vs Argentina to MetLife Stadium in East Rutherford, New Jersey, near New York City, on Sunday, July 19, 2026, with kick-off at 15:00 ET. Newark Liberty is the closest major airport, with LaGuardia and JFK also serving fans. That weekend, delays, crowding and road congestion can change plans quickly, so checking a live airport board before every airport trip is essential.",
+      "getting": "EWR is about 20 km from MetLife Stadium and is usually the closest airport; LGA is about 32 km away, and JFK about 48 km. On event days, many fans use NJ Transit rail to the Meadowlands Sports Complex via Secaucus Junction; from EWR, that typically means AirTrain plus NJ Transit. Taxis and ride-hailing are common from all three airports, but roads around the stadium can be heavily congested on match day.",
+      "leaving": "Most fans flying home will depart on July 20–21, when EWR, JFK and LGA will be exceptionally busy. Arrive much earlier than usual, especially if you are checking bags or taking an international flight. Before leaving for the airport, check the live departures board for your terminal and airline, then allow extra time for traffic, check-in, security and passport control.",
+      "tips": "Travel light where possible, keep passports and fan documents handy, and save airport and hotel details offline. Recheck your airline alerts before moving, because airport transfers may take longer than map apps suggest. If your group splits up, agree on a meeting point away from crowded entrances. Build in rest time after the match before long-haul travel."
+    },
+    "ru": {
+      "title": "Финал ЧМ-2026: аэропорты Нью-Йорка EWR, JFK, LGA",
+      "description": "Финал ЧМ-2026 у Нью-Йорка: проверяйте живые онлайн-табло рейсов EWR/JFK/LGA перед поездкой в аэропорт, на матч и домой.",
+      "h1": "Финал ЧМ-2026 у Нью-Йорка: аэропорты и табло",
+      "banner": "Летите на финал ЧМ? Ближайшие аэропорты и советы →",
+      "intro": "Финал FIFA World Cup 2026 Испания — Аргентина пройдет в воскресенье, 19 июля 2026 года, в 15:00 по местному времени на MetLife Stadium в Ист-Ратерфорде, Нью-Джерси, рядом с Нью-Йорком. В этот уикенд EWR, JFK и LGA будут работать под большой нагрузкой: задержки, изменения статуса и переполненные рейсы возможны в любой момент, поэтому перед выездом стоит проверять онлайн-табло аэропорта.",
+      "getting": "Ближайший крупный аэропорт к стадиону — Newark Liberty (EWR), примерно 20 км; LaGuardia (LGA) — около 32 км, JFK — около 48 км. В дни событий обычно используют NJ Transit до Meadowlands Sports Complex с пересадкой через Secaucus Junction; из EWR удобна связка AirTrain + NJ Transit. Такси и ride-hailing тоже популярны, но дороги вокруг MetLife Stadium в день матча сильно загружены, поэтому закладывайте запас.",
+      "leaving": "Основной вылет болельщиков ожидается 20–21 июля, и аэропорты Нью-Йоркского региона будут исключительно загружены. Приезжайте намного раньше обычного, особенно если летите международным рейсом или сдаете багаж. До выхода из отеля или жилья проверьте онлайн-табло вылетов вашего аэропорта: статус рейса может измениться. Заложите дополнительное время на дорогу, регистрацию, досмотр безопасности, паспортный контроль и возможные очереди.",
+      "tips": "Держите документы, бронирования и посадочные талоны под рукой, а уведомления авиакомпании включенными. Сравните маршрут до аэропорта заранее и имейте запасной вариант на случай перекрытий или пробок. Путешествуйте налегке, заряжайте телефон до выхода, проверяйте правила багажа, сохраняйте спокойствие в очередях и не откладывайте поездку к терминалу до последнего часа."
+    },
+    "zh": {
+      "title": "世界杯决赛机场指南：EWR/JFK/LGA实时航班板",
+      "description": "2026世界杯决赛西班牙对阿根廷将在纽约都会区MetLife体育场举行。赛周末纽瓦克、拉瓜迪亚和肯尼迪机场人流激增；查看EWR/JFK/LGA实时航班板，掌握抵离港变化、出发提示和机场选择，合理预留安检和入境时间。",
+      "h1": "2026世界杯决赛机场与实时航班指南",
+      "banner": "飞往世界杯决赛？查看最近机场与实时航班 →",
+      "intro": "2026年FIFA世界杯决赛为西班牙对阿根廷，开球时间是7月19日星期日15:00（美国东部时间），地点在新泽西州东拉瑟福德的MetLife体育场，位于纽约市都会区。决赛周末，大量球迷会通过EWR、LGA和JFK抵达或转机；出发前查看实时机场航班板，可更快发现延误、取消或到港变化，避免把宝贵时间耗在拥挤路上。",
+      "getting": "离球场最近的主要机场是纽瓦克自由国际机场EWR，约20公里；拉瓜迪亚LGA约32公里，肯尼迪JFK约48公里。赛事日通常可乘NJ Transit，经Secaucus Junction前往Meadowlands Sports Complex；从EWR可先搭AirTrain再换乘NJ Transit。出租车和网约车也常见，但比赛日球场周边道路会严重拥堵，务必把换乘、步行和等待时间算进去。",
+      "leaving": "多数球迷会在7月20日至21日返程，纽约都会区三大机场预计异常繁忙。无论从EWR、LGA还是JFK起飞，都建议比平时更早到达机场；离开酒店或市区前，先查看实时出发航班板，确认航班状态和机场运行情况。国际旅客还要为安检、护照查验、托运行李和机场交通预留额外时间。",
+      "tips": "尽量把交通方案准备两套：公共交通为主，出租车或网约车作备选。随身携带证件、球票和必要充电设备，行李越少越好。不要只看城市距离，赛周末的拥堵会放大每一段路程。临出门前再次刷新实时航班板，并关注航空公司和机场公告。"
+    },
+    "ar": {
+      "title": "نهائي كأس العالم 2026 والمطارات: EWR وJFK وLGA",
+      "description": "تابع لوحات الرحلات المباشرة لمطارات EWR وJFK وLGA قبل نهائي كأس العالم 2026، مع نصائح الوصول إلى متلايف والعودة وسط الازدحام.",
+      "h1": "نهائي كأس العالم 2026: المطارات والرحلات المباشرة",
+      "banner": "مسافر إلى نهائي كأس العالم؟ أقرب المطارات ونصائح الوصول ←",
+      "intro": "يُقام نهائي كأس العالم 2026 بين إسبانيا والأرجنتين يوم الأحد 19 يوليو 2026، الساعة 15:00 بالتوقيت المحلي ET، في ملعب متلايف بمدينة إيست رذرفورد بولاية نيوجيرسي قرب نيويورك. أقرب المطارات الرئيسية هي نيوارك EWR، ثم لاغوارديا LGA، ثم جون إف كينيدي JFK. في عطلة هذا الحدث، قد تتغير أوقات الوصول والمغادرة بسرعة، لذلك تساعدك لوحة المطار المباشرة على متابعة التأخيرات والازدحام قبل التحرك.",
+      "getting": "للوصول إلى ملعب متلايف، يُعد مطار نيوارك ليبرتي EWR الأقرب، على نحو 20 كم من الملعب، ويمكن استخدام AirTrain ثم قطارات NJ Transit باتجاه سيكاوكوس، مع تشغيل خدمة إلى مجمع ميدولاندز الرياضي في أيام الفعاليات. من لاغوارديا LGA أو جون إف كينيدي JFK، غالبا ستحتاج إلى ربط بري أو قطار عبر مانهاتن أو سيكاوكوس. سيارات الأجرة وتطبيقات النقل شائعة، لكن الطرق حول الملعب مزدحمة جدا يوم المباراة.",
+      "leaving": "إذا كنت ستغادر في 20 أو 21 يوليو، فتوقع حشودا كبيرة جدا في نيوارك EWR وجون إف كينيدي JFK ولاغوارديا LGA، لأن كثيرين سيعودون بعد النهائي. غادر إلى المطار أبكر بكثير من المعتاد، وراجع لوحة المغادرات المباشرة قبل مغادرة الفندق أو المدينة. اترك وقتا إضافيا لتسجيل الأمتعة، التفتيش الأمني، ومراقبة الجوازات للرحلات الدولية، ولا تعتمد على زمن قيادة عادي في ذلك اليوم.",
+      "tips": "احتفظ بمستندات السفر والتذاكر الرقمية دون اتصال، وراقب تنبيهات شركة الطيران ولوحة المطار معا. اختر حقيبة يسهل حملها وسط الازدحام، واشحن هاتفك وبطاريتك قبل الخروج. خطط لطريق بديل بين المدينة والمطار، واتفق مع مجموعتك على نقطة لقاء واضحة إذا ضعفت الشبكات حول الملعب أو المحطات."
+    },
+    "de": {
+      "title": "World-Cup-Finale 2026: Flughäfen EWR, JFK & LGA",
+      "description": "WM-Finale 2026 bei NYC: Flughäfen, Anreise zum MetLife Stadium und Live-Flugtafeln für EWR/JFK/LGA am Finalwochenende in New York.",
+      "h1": "WM-Finale 2026: Flughäfen nahe MetLife Stadium",
+      "banner": "Zum WM-Finale? Nächste Flughäfen & Live-Flugtafeln →",
+      "intro": "Das FIFA-WM-Finale 2026 Spanien gegen Argentinien wird am Sonntag, 19. Juli 2026, um 15:00 Uhr Ortszeit im MetLife Stadium in East Rutherford, New Jersey, nahe New York City angepfiffen. Viele Fans reisen über Newark Liberty (EWR), LaGuardia (LGA) oder John F. Kennedy (JFK) an. An diesem Wochenende können Wetter, Verkehr und Abfertigung schnell wechseln – ein Live-Flugboard hilft, Ankünfte, Verspätungen und Abflüge rechtzeitig zu prüfen.",
+      "getting": "Newark Liberty ist mit rund 20 km der nächste große Flughafen zum Stadion; LGA liegt etwa 32 km, JFK etwa 48 km entfernt. Von EWR fahren Reisende meist per AirTrain und NJ Transit weiter, an Veranstaltungstagen mit Anschluss über Secaucus Junction zum Meadowlands Sports Complex. Von LGA und JFK sind Taxi oder Ride-Hailing gängig, teils kombiniert mit Bahn. Rund um das Stadion ist am Spieltag mit sehr dichtem Verkehr zu rechnen.",
+      "leaving": "Für den Rückflug am 20. und 21. Juli sollten Fans außergewöhnlich volle Terminals in EWR, JFK und LGA einplanen. Fahren Sie deutlich früher als sonst los und prüfen Sie vor der Abfahrt zum Flughafen die Live-Abflugtafel Ihres Airports. Rechnen Sie mit längeren Wegen, Schlangen bei Gepäckabgabe, Sicherheits- und Passkontrollen sowie Verzögerungen durch Verkehr rund um New York und New Jersey.",
+      "tips": "Speichern Sie Airline-App, Buchungsnummer und Ausweis digital und offline, laden Sie Akkus vor dem Stadionbesuch und packen Sie wichtige Dinge ins Handgepäck. Prüfen Sie Gepäckregeln, Terminalhinweise und den Flughafenstatus mehrmals täglich. Planen Sie Treffpunkte mit Ihrer Gruppe, denn Mobilfunknetze, Straßen und öffentliche Verkehrsmittel können während des Finalwochenendes stark belastet sein."
+    },
+    "ko": {
+      "title": "월드컵 결승 공항 안내: EWR·JFK·LGA 실시간 운항",
+      "description": "2026 월드컵 결승 스페인 vs 아르헨티나를 보러 뉴욕권에 온다면, 이동 전 EWR/JFK/LGA 실시간 운항 게시판에서 도착·출발 현황을 확인하세요. 메트라이프 스타디움 주변 혼잡과 귀국 공항 대기를 미리 고려하는 데 도움이 됩니다.",
+      "h1": "2026 월드컵 결승 공항 가이드: 스페인 vs 아르헨티나",
+      "banner": "월드컵 결승행 비행? 가까운 공항과 실시간 운항 확인 →",
+      "intro": "2026년 FIFA 월드컵 결승은 7월 19일 일요일 현지시간 15:00(ET), 뉴욕시 인근 뉴저지 이스트러더퍼드의 메트라이프 스타디움에서 열리며 스페인과 아르헨티나가 맞붙습니다. 경기 주말에는 해외 팬과 지역 이동객이 한꺼번에 몰려 EWR, LGA, JFK의 도착 지연, 수하물 대기, 교통 연결이 평소보다 복잡해질 수 있습니다. 공항으로 향하기 전 실시간 운항 게시판을 확인하면 도착 시간 조정과 환승 판단에 도움이 됩니다. 특히 장거리 입국자는 착륙 후 이동 계획을 여유 있게 잡아야 합니다.",
+      "getting": "메트라이프 스타디움에서 가장 가까운 주요 공항은 약 20km 거리의 뉴어크 리버티(EWR)이며, 라과디아(LGA)는 약 32km, 존 F. 케네디(JFK)는 약 48km 떨어져 있습니다. 이벤트 당일에는 세코커스 정션을 거쳐 메도랜즈 스포츠 콤플렉스로 가는 NJ Transit 철도 이용이 일반적입니다. EWR에서는 AirTrain과 NJ Transit을 연결하고, LGA/JFK에서는 택시나 차량호출, 철도 환승을 조합합니다. 경기일 도로는 매우 혼잡합니다. 주차장 진입과 픽업 지점도 지연될 수 있어 여유 시간을 두세요.",
+      "leaving": "귀국 수요는 7월 20~21일에 특히 몰릴 가능성이 크며, EWR, LGA, JFK 모두 터미널과 도로, 보안 검색대가 예외적으로 붐빌 수 있습니다. 호텔이나 경기장 주변을 떠나기 전에 실시간 출발 게시판으로 항공편 상태를 확인하고, 지연이나 취소가 보이면 이동 순서를 다시 잡으세요. 평소보다 훨씬 일찍 공항에 도착하고, 보안 검색과 여권 심사, 수하물 위탁에 추가 시간을 확보하는 것이 안전합니다. 국제선 승객은 서류 확인 대기까지 고려하세요.",
+      "tips": "여권, 비자 또는 전자여행허가, 항공사 앱 알림을 미리 확인하고 보조 배터리를 챙기세요. 경기장 반입 규정과 수하물 크기를 분리해 생각하고, 공항 이동은 마지막 순간까지 미루지 마세요. 일행과 만날 장소를 정해 두면 통신 지연이나 차량호출 혼잡 때도 덜 당황합니다. 물, 간식, 필요한 약도 휴대하세요. 여행 보험과 숙소 체크아웃 시간도 다시 확인해 두세요."
+    },
+    "ja": {
+      "title": "ワールドカップ決勝と空港案内｜EWR・JFK・LGA発着",
+      "description": "2026年7月19日のワールドカップ決勝（スペイン対アルゼンチン）でNY周辺へ向かう方へ。EWR/JFK/LGAのライブ発着ボードで遅延や出発状況を確認し、混雑する空港移動と7月20〜21日の帰国準備に役立てましょう。",
+      "h1": "ワールドカップ決勝：メットライフ周辺空港と発着情報",
+      "banner": "決勝観戦へ？EWR・JFK・LGAのライブ発着を確認 →",
+      "intro": "2026年7月19日（日）15:00（米東部時間）、FIFAワールドカップ2026決勝はスペイン対アルゼンチンとして、ニューヨーク市近郊のニュージャージー州イーストラザフォード、メットライフ・スタジアムで行われます。世界中から観戦客が集まる週末は、EWR、LGA、JFKの発着状況や保安検査の混雑が変わりやすくなります。空港へ向かう前にライブ発着ボードを確認すれば、遅延や到着便の変化に合わせて移動時間を調整しやすくなります。",
+      "getting": "スタジアムに最も近い主要空港はニューアーク・リバティー（EWR）で約20km、ラガーディア（LGA）は約32km、ジョン・F・ケネディ（JFK）は約48kmです。試合開催日は、セコーカス・ジャンクション経由でメドウランズ・スポーツ・コンプレックスへ向かうNJトランジット鉄道が一般的な選択肢になります。EWRからはAirTrainとNJトランジットを組み合わせられます。タクシーや配車も利用されますが、試合日は周辺道路が非常に渋滞します。",
+      "leaving": "決勝後、多くのファンは7月20〜21日に帰路へ向かうため、EWR、LGA、JFKはいずれも通常以上の混雑が見込まれます。空港へ出発する前にライブ出発ボードで運航状況を確認し、遅延や手続き状況の変化に備えてください。普段より大幅に早く到着し、手荷物預け、保安検査、国際線の出国・旅券確認に十分な余裕を取りましょう。道路や空港内の移動にも追加時間が必要です。",
+      "tips": "パスポート、渡航書類、航空会社アプリの通知を事前に確認し、モバイル充電器と必要な薬は機内持ち込みに入れておきましょう。空港名とターミナルを出発前に再確認し、同行者とは集合場所を決めてください。試合用の荷物制限と航空会社の手荷物ルールは別物です。余裕のある乗り継ぎと、雨や暑さに対応できる服装も大切です。"
+    },
+    "fr": {
+      "title": "Finale Coupe du monde 2026 : aéroports EWR, JFK, LGA",
+      "description": "Finale Espagne-Argentine au MetLife : consultez les tableaux de vols en direct pour EWR/JFK/LGA avant de partir ce week-end.",
+      "h1": "Finale 2026 Espagne-Argentine : aéroports et vols",
+      "banner": "Finale de la Coupe du monde ? Aéroports proches et conseils →",
+      "intro": "La finale de la Coupe du monde FIFA 2026 opposera l’Espagne à l’Argentine le dimanche 19 juillet 2026 à 15h00 (heure de l’Est) au MetLife Stadium, à East Rutherford, près de New York. Avec Newark, LaGuardia et JFK très sollicités, consulter un tableau des vols en direct aide à repérer retards, annulations et files possibles avant de se déplacer durant ce week-end exceptionnel.",
+      "getting": "Newark Liberty (EWR) est l’aéroport majeur le plus proche, à environ 20 km du stade ; LaGuardia est à environ 32 km et JFK à environ 48 km. Depuis EWR, l’AirTrain puis NJ Transit peuvent rejoindre Secaucus Junction, où des trains vers le Meadowlands Sports Complex circulent les jours d’événement. Depuis LGA ou JFK, taxis, VTC et transports combinés restent possibles. Le jour du match, les routes autour du stade seront très encombrées.",
+      "leaving": "Les retours se concentreront surtout les 20 et 21 juillet, avec des foules exceptionnelles à EWR, LGA et JFK. Arrivez beaucoup plus tôt que pour un voyage habituel, surtout si vous enregistrez des bagages ou passez un contrôle passeport. Avant de quitter votre hôtel ou le stade, vérifiez le tableau des départs en direct de votre aéroport : un retard affiché peut changer votre trajet, mais les files de sûreté resteront longues.",
+      "tips": "Gardez vos documents de voyage accessibles, chargez votre téléphone et prévoyez une batterie externe. Vérifiez les règles de bagages de votre compagnie avant d’aller à l’aéroport. Voyagez léger si possible, fixez un point de rendez-vous avec votre groupe et surveillez les alertes météo locales. Pour les correspondances, laissez une marge confortable : les contrôles, routes et quais peuvent être saturés."
+    },
+    "es": {
+      "title": "Final del Mundial 2026: aeropuertos cerca de MetLife",
+      "description": "Final España-Argentina en MetLife: consulta paneles de vuelos en vivo de EWR/JFK/LGA y consejos para llegar sin sorpresas.",
+      "h1": "Final España vs Argentina: vuelos y aeropuertos",
+      "banner": "¿Vuelas a la final del Mundial? Aeropuertos y consejos →",
+      "intro": "La final de la Copa Mundial FIFA 2026 será España vs Argentina el domingo 19 de julio de 2026, con inicio a las 15:00 (ET), en el MetLife Stadium de East Rutherford, Nueva Jersey, en el área de Nueva York. Ese fin de semana llegarán aficionados de todo el mundo, así que revisar un panel de vuelos en vivo ayuda a detectar retrasos, cambios de estado y congestión antes de moverse al aeropuerto.",
+      "getting": "EWR es el aeropuerto principal más cercano, a unos 20 km del estadio; LGA está a unos 32 km y JFK a unos 48 km. En días de evento, muchos viajeros usan AirTrain y NJ Transit desde EWR, con conexión en Secaucus Junction hacia Meadowlands Sports Complex. Desde LGA o JFK, combina transporte público, taxi o VTC según tu equipaje y horario. Las carreteras alrededor del estadio suelen estar muy congestionadas el día del partido.",
+      "leaving": "Si vuelas de regreso el 20 o 21 de julio, espera multitudes excepcionales en EWR, LGA y JFK. Sal hacia el aeropuerto mucho antes de lo habitual: habrá colas, tráfico y controles más lentos. Antes de salir del hotel o alojamiento, consulta el panel de salidas en vivo de tu aeropuerto para confirmar el estado del vuelo. Añade margen extra para seguridad, documentación y pasaporte, especialmente en vuelos internacionales.",
+      "tips": "Lleva documentos y reservas accesibles, batería externa, agua vacía para rellenar tras el control y un plan alternativo si tu vuelo cambia. Viaja ligero cuando puedas y etiqueta el equipaje. Revisa la aerolínea, el aeropuerto correcto y el tiempo de traslado real, no solo la distancia. Coordina puntos de encuentro fuera de zonas saturadas."
+    },
+    "it": {
+      "title": "Finale World Cup 2026: aeroporti EWR, JFK e LGA",
+      "description": "Per la finale World Cup 2026, consulta i tabelloni voli in tempo reale di EWR, JFK e LGA: arrivi, partenze e ritardi nel weekend.",
+      "h1": "Finale World Cup 2026: aeroporti per MetLife Stadium",
+      "banner": "Vai alla finale World Cup? Aeroporti e consigli →",
+      "intro": "La finale della FIFA World Cup 2026 sarà Spagna-Argentina, domenica 19 luglio 2026 alle 15:00 locali (ET), al MetLife Stadium di East Rutherford, New Jersey, nell’area di New York City. Con tifosi in arrivo da tutto il mondo e strade molto affollate, controllare un tabellone aeroportuale in tempo reale aiuta a seguire ritardi, arrivi e partenze prima di muoversi tra hotel, stadio e aeroporto.",
+      "getting": "EWR è l’aeroporto principale più vicino, a circa 20 km dallo stadio; LGA dista circa 32 km e JFK circa 48 km. Nei giorni di evento, il collegamento tipico è NJ Transit fino al Meadowlands Sports Complex via Secaucus Junction; da EWR si usa AirTrain più NJ Transit. Taxi e ride-hailing sono comuni, ma le strade intorno al MetLife Stadium possono essere fortemente congestionate il giorno della partita.",
+      "leaving": "Molti tifosi voleranno a casa il 20 e 21 luglio, quindi Newark, LaGuardia e JFK saranno eccezionalmente affollati. Parti per l’aeroporto molto prima del normale e controlla il tabellone partenze in tempo reale prima di lasciare l’alloggio. Prevedi margini ampi per code ai controlli di sicurezza, documenti, eventuale controllo passaporti e spostamenti lenti tra terminal, parcheggi e aree di discesa affollate.",
+      "tips": "Prenota itinerari con coincidenze non troppo strette, tieni documenti e conferme offline, e viaggia leggero se possibile. Monitora meteo, ritardi e cambi di terminal sul tabellone in tempo reale dell’aeroporto scelto. Per il giorno della finale, concorda un punto d’incontro con il gruppo e considera piani alternativi se traffico o trasporto pubblico rallentano."
+    },
+    "hi": {
+      "title": "वर्ल्ड कप फाइनल 2026: मेटलाइफ के नज़दीकी एयरपोर्ट",
+      "description": "स्पेन बनाम अर्जेंटीना फाइनल के लिए EWR/JFK/LGA के लाइव फ्लाइट बोर्ड देखें—आगमन, प्रस्थान और भीड़ वाले मैच वीकेंड की तैयारी।",
+      "h1": "स्पेन बनाम अर्जेंटीना फाइनल: NYC एयरपोर्ट गाइड",
+      "banner": "वर्ल्ड कप फाइनल जा रहे हैं? नज़दीकी एयरपोर्ट व सुझाव →",
+      "intro": "फीफा वर्ल्ड कप 2026 का फाइनल स्पेन बनाम अर्जेंटीना रविवार, 19 जुलाई 2026 को स्थानीय समय 15:00 बजे (ET) मेटलाइफ स्टेडियम, ईस्ट रदरफोर्ड, न्यू जर्सी में होगा, जो न्यूयॉर्क सिटी क्षेत्र में है। उस सप्ताहांत EWR, LGA और JFK पर प्रशंसकों की भारी आवाजाही रहेगी, इसलिए आगमन/प्रस्थान में बदलाव, देरी या टर्मिनल भीड़ देखने के लिए लाइव एयरपोर्ट बोर्ड जांचना जरूरी है।",
+      "getting": "स्टेडियम के लिए नेवार्क लिबर्टी (EWR) सबसे नज़दीक है, लगभग 20 किमी; लागार्डिया (LGA) करीब 32 किमी और जॉन एफ. केनेडी (JFK) करीब 48 किमी दूर हैं। मैच-दिनों में सामान्य विकल्प NJ Transit रेल से सेकॉकस जंक्शन होते हुए मेडोलैंड्स स्पोर्ट्स कॉम्प्लेक्स जाना है; EWR से AirTrain + NJ Transit सुविधाजनक हो सकता है। टैक्सी और राइड-हेलिंग भी मिलते हैं, लेकिन स्टेडियम के आसपास सड़कें बहुत जाम रहेंगी।",
+      "leaving": "20–21 जुलाई को अधिकतर प्रशंसक घर लौटेंगे, इसलिए EWR, JFK और LGA असाधारण रूप से व्यस्त हो सकते हैं। एयरपोर्ट के लिए निकलने से पहले लाइव प्रस्थान बोर्ड जरूर देखें, ताकि देरी या बदलाव का पता रहे। सामान्य से बहुत पहले पहुंचें, खासकर अंतरराष्ट्रीय उड़ानों के लिए। चेक-इन, सुरक्षा जांच, बैगेज ड्रॉप और पासपोर्ट नियंत्रण में अतिरिक्त समय रखें।",
+      "tips": "मैच वीकेंड पर यात्रा दस्तावेज, पासपोर्ट और एयरलाइन सूचनाएं पहले से तैयार रखें। सामान हल्का रखें और बैटरी/चार्जर साथ रखें। एयरपोर्ट जाने का वैकल्पिक रास्ता सोचें, क्योंकि सड़कें धीमी हो सकती हैं। समूह में हैं तो मिलने की जगह तय करें। उड़ान की स्थिति के लिए लाइव बोर्ड और एयरलाइन अपडेट दोनों देखते रहें।"
+    },
+    "tr": {
+      "title": "Dünya Kupası Finali Havalimanları: EWR, JFK, LGA",
+      "description": "İspanya-Arjantin finali için EWR/JFK/LGA canlı uçuş panolarını kontrol edin; varış, kalkış ve yoğun havalimanı ipuçları.",
+      "h1": "İspanya-Arjantin Finali: NYC Havalimanları",
+      "banner": "Dünya Kupası finaline uçuyor musunuz? Havalimanı ipuçları →",
+      "intro": "FIFA Dünya Kupası 2026 Finali, İspanya ile Arjantin arasında 19 Temmuz Pazar günü saat 15:00 ET’de, New York City bölgesindeki East Rutherford, New Jersey’de yer alan MetLife Stadium’da oynanacak. EWR, LGA ve JFK’ye gelen taraftar akını nedeniyle o hafta sonu gecikmeler ve terminal yoğunluğu artabilir. Canlı havalimanı panosunu kontrol etmek, varış saatlerini, iptalleri ve bagaj sonrası planınızı daha güvenli yönetmenize yardımcı olur.",
+      "getting": "Stadyuma en yakın büyük havalimanı Newark Liberty’dir (EWR, yaklaşık 20 km); LaGuardia (LGA) yaklaşık 32 km, JFK ise yaklaşık 48 km uzaklıktadır. Maç günlerinde genel toplu taşıma seçeneği, Secaucus Junction üzerinden Meadowlands Sports Complex’e NJ Transit trenidir; EWR’den AirTrain ile NJ Transit bağlantısı kullanılır. Taksi ve araç çağırma yaygındır, ancak stadyum çevresindeki yollar çok sıkışır. Ek süre bırakmak her zaman akıllıcadır.",
+      "leaving": "Çoğu taraftar 20-21 Temmuz’da eve uçacağı için EWR, JFK ve LGA olağanüstü kalabalık olabilir. Havalimanına normalden çok daha erken gidin ve yola çıkmadan önce canlı kalkış panosunu kontrol ederek gecikme, iptal veya terminal değişikliği olmadığından emin olun. Güvenlik, bagaj teslimi ve uluslararası uçuşlarda pasaport işlemleri için geniş zaman bırakın; trafik de yolculuğu uzatabilir, özellikle sabah saatlerinde ve bağlantılı uçuşlarda esnek plan yapın.",
+      "tips": "Bilet adınızı pasaportunuzla aynı yazın, belgeleri ve bagaj etiketlerini önceden kontrol edin. Aktarmalı uçuyorsanız arada bol pay bırakın. Taşınabilir şarj cihazı, su şişesi ve hafif atıştırmalık bulundurun. Uygulama bildirimlerini açın, fakat son karar için havalimanının canlı panosunu ve havayolu duyurularını birlikte takip edin. Kalabalıkta buluşma noktasını önceden belirleyip ailenizle paylaşın."
+    }
+  }
+}
