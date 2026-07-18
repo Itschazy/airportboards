@@ -17,6 +17,8 @@ export const viewport: Viewport = {
   width: 'device-width',
   initialScale: 1,
   viewportFit: 'cover',
+  // Blend the mobile browser chrome into the site's dark background.
+  themeColor: '#050505',
 };
 
 const OG_LOCALE: Record<string, string> = {
@@ -63,6 +65,9 @@ export default async function LocaleLayout({
   return (
     <html lang={locale} dir={dir} className="h-full antialiased">
       <body className="min-h-full flex flex-col">
+        {/* React hoists resource links into <head>: warm up the Metrika origin so
+            tag.js + the first hit skip DNS/TLS setup. */}
+        <link rel="preconnect" href="https://mc.yandex.ru" />
         <YandexMetrica />
         <AdSense />
         <NextIntlClientProvider messages={messages}>

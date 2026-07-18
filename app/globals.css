@@ -41,6 +41,52 @@ input::-webkit-search-cancel-button { display: none; }
   animation: pulse-live 2.4s ease-in-out infinite;
 }
 
+/* ── Micro-interactions ─────────────────────────────────────────────────────
+   One shared system: rows/cards get a hover lift (pointer devices only) and a
+   press scale; interactive pills/buttons get the press scale. transform/opacity
+   only — compositor-friendly, no layout/paint work. */
+.frow {
+  display: flex;
+  background: rgba(255,255,255,0.025);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 22px;
+  margin-bottom: 12px;
+  overflow: hidden;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  transition: background 0.16s ease, border-color 0.16s ease, transform 0.12s ease;
+}
+@media (hover: hover) {
+  .frow:hover { background: rgba(255,255,255,0.05); border-color: rgba(255,255,255,0.14); }
+}
+.frow:active { transform: scale(0.988); }
+
+.press {
+  transition: transform 0.12s ease, background 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+}
+.press:active { transform: scale(0.96); }
+@media (hover: hover) {
+  a.press:hover, button.press:hover { filter: brightness(1.18); }
+}
+
+/* List swap: new rows rise in when the user switches mode/filter (applied only
+   after first paint, so SSR/LCP is never delayed). */
+@keyframes rise-in {
+  from { opacity: 0; transform: translateY(6px); }
+  to   { opacity: 1; transform: none; }
+}
+.rise { animation: rise-in 0.22s cubic-bezier(0.2, 0.7, 0.2, 1); }
+
+/* Below-the-fold sections: skip rendering work until scrolled near the viewport.
+   contain-intrinsic-size keeps the scrollbar stable while unrendered. */
+.cv-auto {
+  content-visibility: auto;
+  contain-intrinsic-size: auto 320px;
+}
+
+/* Bottom sheet scroller: don't chain overscroll into the page behind it. */
+.sheet-scroll { overscroll-behavior: contain; }
+
 /* Visible keyboard focus (WCAG 2.4.7). :focus-visible so mouse users see nothing. */
 :focus-visible {
   outline: 2px solid #0A84FF;

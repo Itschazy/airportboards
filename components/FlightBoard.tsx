@@ -197,24 +197,51 @@ function BottomSheet({ flight, mode, onClose, tz, locale }: {
 
   const L = { fontSize: 12, color: C.secondary, textTransform: 'uppercase' as const, letterSpacing: '0.12em' };
   const [detailsOpen, setDetailsOpen] = useState(false);
-  const [dragY, setDragY] = useState(0);
   const dragStart = useRef<number | null>(null);
+  const dragY = useRef(0);
+  const raf = useRef(0);
   const sheetRef = useRef<HTMLDivElement>(null);
-  useEffect(() => { if (!vis) { setDetailsOpen(false); setDragY(0); dragStart.current = null; } }, [vis]);
+
+  // Drag follows the finger by writing transform straight to the DOM inside a
+  // requestAnimationFrame — no React state per touchmove, so the (large) sheet
+  // subtree never re-renders mid-gesture and tracking stays at 60fps.
+  const applyDrag = () => {
+    raf.current = 0;
+    const el = sheetRef.current;
+    if (el) el.style.transform = `translateY(${dragY.current}px)`;
+  };
+  // Restore the exact declared values (not '') — React's diff won't rewrite a style
+  // prop it believes is unchanged, so clearing them would strand the element with no
+  // transition and kill the close animation.
+  const settleBack = () => {
+    const el = sheetRef.current;
+    if (!el) return;
+    el.style.transition = 'transform 0.34s cubic-bezier(0.32, 0.72, 0, 1)';
+    el.style.transform = 'translateY(0)';
+  };
+  useEffect(() => { if (!vis) { setDetailsOpen(false); dragStart.current = null; dragY.current = 0; } }, [vis]);
+  useEffect(() => () => { if (raf.current) cancelAnimationFrame(raf.current); }, []);
 
   const onTouchStart = (e: React.TouchEvent) => {
-    if ((sheetRef.current?.scrollTop ?? 0) <= 0) dragStart.current = e.touches[0].clientY;
+    if ((sheetRef.current?.scrollTop ?? 0) <= 0) {
+      dragStart.current = e.touches[0].clientY;
+      dragY.current = 0;
+      if (sheetRef.current) sheetRef.current.style.transition = 'none';
+    }
   };
   const onTouchMove = (e: React.TouchEvent) => {
     if (dragStart.current == null) return;
     const d = e.touches[0].clientY - dragStart.current;
-    setDragY(d > 0 ? d : 0);
+    dragY.current = d > 0 ? d : 0;
+    if (!raf.current) raf.current = requestAnimationFrame(applyDrag);
   };
   const onTouchEnd = () => {
     if (dragStart.current == null) return;
-    if (dragY > 110) onClose();
-    setDragY(0);
+    const shouldClose = dragY.current > 110;
     dragStart.current = null;
+    dragY.current = 0;
+    settleBack();          // restore the CSS transition + declared transform
+    if (shouldClose) onClose();
   };
 
   let body = null;
@@ -338,7 +365,7 @@ function BottomSheet({ flight, mode, onClose, tz, locale }: {
         </div>
 
         {/* Flight details (collapsed "about the flight") */}
-        <button onClick={() => setDetailsOpen(o => !o)} style={{ width: '100%', height: 52, marginTop: 12, display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 8, border: '1px solid rgba(255,255,255,0.08)', background: 'rgba(255,255,255,0.03)', borderRadius: 14, color: C.text, fontSize: 15, fontWeight: 600, cursor: 'pointer' }}>
+        <button className="press" onClick={() => setDetailsOpen(o => !o)} style={{ width: '100%', height: 52, marginTop: 12, display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 8, border: '1px solid rgba(255,255,255,0.08)', background: 'rgba(255,255,255,0.03)', borderRadius: 14, color: C.text, fontSize: 15, fontWeight: 600, cursor: 'pointer' }}>
           {t('flight_details')}
           <svg width="13" height="13" viewBox="0 0 13 13" fill="none" style={{ transform: detailsOpen ? 'rotate(180deg)' : 'none', transition: 'transform 0.2s' }}><path d="M3 5L6.5 8.5L10 5" stroke="#8A8A8A" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" /></svg>
         </button>
@@ -381,6 +408,7 @@ function BottomSheet({ flight, mode, onClose, tz, locale }: {
         aria-modal="true"
         aria-label={flight ? `${flight.flight} — ${flight.destination || flight.origin || ''}` : undefined}
         tabIndex={-1}
+        className="sheet-scroll"
         onTouchStart={onTouchStart}
         onTouchMove={onTouchMove}
         onTouchEnd={onTouchEnd}
@@ -388,8 +416,11 @@ function BottomSheet({ flight, mode, onClose, tz, locale }: {
           position: 'fixed', bottom: 0, left: 0, right: 0, zIndex: 201,
           outline: 'none',
           background: '#111111', borderTop: '1px solid rgba(255,255,255,0.08)', borderRadius: '32px 32px 0 0',
-          transform: vis ? `translateY(${dragY}px)` : 'translateY(100%)',
-          transition: dragStart.current != null ? 'none' : 'transform 0.34s cubic-bezier(0.32, 0.72, 0, 1)',
+          // Drag offsets are written straight to el.style by the rAF handler; the
+          // declared transform only encodes open/closed.
+          transform: vis ? 'translateY(0)' : 'translateY(100%)',
+          transition: 'transform 0.34s cubic-bezier(0.32, 0.72, 0, 1)',
+          willChange: vis ? 'transform' : undefined,
           paddingBottom: 'calc(40px + env(safe-area-inset-bottom))',
           maxHeight: '90vh', overflowY: 'auto',
           maxWidth: 640, margin: '0 auto',
@@ -429,6 +460,10 @@ export function FlightBoard({ airport, locale, defaultMode = 'departures', displ
   const [selected, setSelected]   = useState<Flight | null>(null);
   const [isLive, setIsLive]       = useState(false);
   const [showAll, setShowAll]     = useState(false);
+  // Gate for the list "rise" animation: never on the initial (SSR/LCP) paint —
+  // only once the user actually changes mode/filter. Key-based (not effect-based)
+  // so a data refresh on the initial combination can't retrigger it.
+  const initialListKey = useRef<string | null>(`${defaultMode}:all`);
 
   const fetchFlights = useCallback(async () => {
     try {
@@ -614,7 +649,7 @@ export function FlightBoard({ airport, locale, defaultMode = 'departures', displ
           {(['departures', 'arrivals'] as Mode[]).map(m => {
             const active = mode === m;
             return (
-              <button key={m} type="button" aria-pressed={active} onClick={() => { haptic(); setMode(m); setFilter('all'); }} style={{
+              <button key={m} type="button" aria-pressed={active} className="press" onClick={() => { haptic(); setMode(m); setFilter('all'); }} style={{
                 flex: 1, padding: '11px 0', minHeight: 44,
                 fontSize: 14, fontWeight: 600,
                 border: 'none', borderRadius: 11,
@@ -643,7 +678,7 @@ export function FlightBoard({ airport, locale, defaultMode = 'departures', displ
         {FILTERS.map(key => {
           const active = filter === key;
           return (
-            <button key={key} type="button" aria-pressed={active} onClick={() => { haptic(); setFilter(key); }} style={{
+            <button key={key} type="button" aria-pressed={active} className="press" onClick={() => { haptic(); setFilter(key); }} style={{
               padding: '8px 14px', minHeight: 36,
               fontSize: 13, fontWeight: active ? 600 : 400,
               border: active ? 'none' : `1px solid ${C.border}`,
@@ -685,6 +720,9 @@ export function FlightBoard({ airport, locale, defaultMode = 'departures', displ
           </div>
         )}
 
+        {/* keyed by mode+filter so a swap remounts the block and replays the rise-in */}
+        {(() => { if (initialListKey.current !== null && `${mode}:${filter}` !== initialListKey.current) initialListKey.current = null; return null; })()}
+        <div key={`${mode}:${filter}`} className={initialListKey.current === null ? 'rise' : undefined}>
         {shown.map((f, i) => {
           const color = STATUS_COLOR[f.status] || C.gray;
           const label = (() => {
@@ -710,13 +748,10 @@ export function FlightBoard({ airport, locale, defaultMode = 'departures', displ
               role="button"
               tabIndex={0}
               aria-label={`${f.flight}, ${city}, ${label}`}
+              className="frow"
               onClick={() => { haptic(); setSelected(f); }}
               onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); haptic(); setSelected(f); } }}
-              style={{
-                display: 'flex', background: 'rgba(255,255,255,0.025)', borderRadius: 22,
-                marginBottom: 12, overflow: 'hidden', cursor: 'pointer', opacity: isPast ? 0.45 : 1,
-                border: '1px solid rgba(255,255,255,0.08)', WebkitTapHighlightColor: 'transparent',
-              }}
+              style={{ opacity: isPast ? 0.45 : 1 }}
             >
               {/* Status bar */}
               <div style={{ width: 4, background: color, flexShrink: 0 }} />
@@ -771,9 +806,10 @@ export function FlightBoard({ airport, locale, defaultMode = 'departures', displ
             </div>
           );
         })}
+        </div>
 
         {!loading && visible.length > shown.length && (
-          <button onClick={() => setShowAll(true)} style={{
+          <button className="press" onClick={() => setShowAll(true)} style={{
             width: '100%', height: 56, marginTop: 4, marginBottom: 8,
             display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 8,
             border: '1px solid rgba(255,255,255,0.08)', background: 'rgba(255,255,255,0.02)',

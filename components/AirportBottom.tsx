@@ -118,7 +118,7 @@ export async function AirportBottom({ airport, locale, about, displayName, fligh
 
           {/* 3. POPULAR ROUTES (server-rendered → crawlable /route links) */}
           {routes.length > 0 && (
-            <section style={sec}>
+            <section className="cv-auto" style={sec}>
               <H2 href={`/${locale}/airport/${airport.iata}/departures`} viewAll={t('view_all')}>{t('routes_title', { iata: airport.iata })}</H2>
               <div style={{ display: 'flex', gap: 12, overflowX: 'auto', paddingBottom: 4, scrollbarWidth: 'none' }}>
                 {routes.map(r => (
@@ -134,7 +134,7 @@ export async function AirportBottom({ airport, locale, about, displayName, fligh
 
           {/* 3b. AIRLINES AT THIS AIRPORT (server-rendered → crawlable /airline links) */}
           {airlines.length > 0 && (
-            <section style={sec}>
+            <section className="cv-auto" style={sec}>
               <H2>{t('airlines_title')}</H2>
               <div style={{ display: 'flex', flexWrap: 'wrap', gap: 8 }}>
                 {airlines.map(al => (
@@ -149,7 +149,7 @@ export async function AirportBottom({ airport, locale, about, displayName, fligh
 
           {/* 4. NEARBY AIRPORTS */}
           {nearby.length > 0 && (
-            <section style={sec}>
+            <section className="cv-auto" style={sec}>
               <H2>{t('nearby_title', { city })}</H2>
               <ul style={{ listStyle: 'none', margin: 0, padding: 0, display: 'flex', flexDirection: 'column', gap: 8 }}>
                 {nearby.map(a => (
@@ -167,14 +167,14 @@ export async function AirportBottom({ airport, locale, about, displayName, fligh
           )}
 
           {/* 5. FAQ */}
-          <section style={sec}>
+          <section className="cv-auto" style={sec}>
             <H2>{t('faq_title')}</H2>
             <Faq items={faq} />
           </section>
 
           {/* 6. ABOUT */}
           {about && (
-            <section style={sec}>
+            <section className="cv-auto" style={sec}>
               <H2>{t('about_title', { iata: airport.iata })}</H2>
               <AboutCard text={about} readMore={t('read_more')} />
             </section>
@@ -183,19 +183,19 @@ export async function AirportBottom({ airport, locale, about, displayName, fligh
           {/* 6b. AIRPORT GUIDE — transport / terminals / tips (top hubs only; renders
               nothing when there's no extended content file for this airport). */}
           {ext?.transport && (
-            <section style={sec}>
+            <section className="cv-auto" style={sec}>
               <H2>{extLabels.transport}</H2>
               <div style={{ background: '#0B0B0B', border: '1px solid #1A1A1A', borderRadius: 16, padding: '16px 18px', fontSize: 15, lineHeight: 1.6, color: '#B4B4B4' }}>{ext.transport}</div>
             </section>
           )}
           {ext?.terminals && (
-            <section style={sec}>
+            <section className="cv-auto" style={sec}>
               <H2>{extLabels.terminals}</H2>
               <div style={{ background: '#0B0B0B', border: '1px solid #1A1A1A', borderRadius: 16, padding: '16px 18px', fontSize: 15, lineHeight: 1.6, color: '#B4B4B4' }}>{ext.terminals}</div>
             </section>
           )}
           {ext?.tips && (
-            <section style={sec}>
+            <section className="cv-auto" style={sec}>
               <H2>{extLabels.tips}</H2>
               <div style={{ background: '#0B0B0B', border: '1px solid #1A1A1A', borderRadius: 16, padding: '16px 18px', fontSize: 15, lineHeight: 1.6, color: '#B4B4B4' }}>{ext.tips}</div>
             </section>
@@ -203,7 +203,7 @@ export async function AirportBottom({ airport, locale, about, displayName, fligh
 
           {/* 7. POPULAR AIRPORTS IN COUNTRY */}
           {countryAirports.length > 0 && countryInfo && (
-            <section style={sec}>
+            <section className="cv-auto" style={sec}>
               <H2 href={`/${locale}/airports/${countryInfo.slug}`} viewAll={t('view_all')}>{t('country_air_title', { country })}</H2>
               <div style={{ display: 'flex', gap: 10, overflowX: 'auto', paddingBottom: 4, scrollbarWidth: 'none' }}>
                 {countryAirports.map(a => (
@@ -217,7 +217,7 @@ export async function AirportBottom({ airport, locale, about, displayName, fligh
           )}
 
           {/* 8. A-Z */}
-          <section style={sec}>
+          <section className="cv-auto" style={sec}>
             <H2 href={`/${locale}/az/a`} viewAll={t('view_all')}>{t('az_all')}</H2>
             <div style={{ display: 'flex', gap: 7, flexWrap: 'wrap' }}>
               {LETTERS.map(L => (

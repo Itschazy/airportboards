@@ -11,7 +11,7 @@ export function MoreInfo({ label, children }: { label: string; children: React.R
   return (
     <>
       {!open && (
-        <button onClick={() => setOpen(true)} style={{
+        <button className="press" onClick={() => setOpen(true)} style={{
           width: '100%', height: 52, marginTop: 8,
           display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 8,
           border: '1px solid rgba(255,255,255,0.08)', background: 'rgba(255,255,255,0.03)',
@@ -94,7 +94,7 @@ export function AboutCard({ text, readMore }: { text: string; readMore: string }
         {text}
       </p>
       {!open && (
-        <button onClick={() => setOpen(true)} style={{ marginTop: 10, background: 'none', border: 'none', color: C.blue, fontSize: 14, fontWeight: 600, cursor: 'pointer', padding: 0 }}>
+        <button className="press" onClick={() => setOpen(true)} style={{ marginTop: 10, background: 'none', border: 'none', color: C.blue, fontSize: 14, fontWeight: 600, cursor: 'pointer', padding: 0 }}>
           {readMore}
         </button>
       )}
