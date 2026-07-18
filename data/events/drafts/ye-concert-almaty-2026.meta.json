@@ -1,0 +1,26 @@
+{
+  "meta": {
+    "slug": "ye-concert-almaty-2026",
+    "name": "Ye (Kanye West) — LIVE CONCERT TOUR 2026, Almaty",
+    "startDate": "2026-08-14T21:00:00+05:00",
+    "endDate": "2026-08-14T23:30:00+05:00",
+    "venue": "Central Stadium",
+    "venueCity": "Almaty",
+    "country": "KZ",
+    "type": "concert",
+    "officialUrl": "https://ticketon.kz/",
+    "status": "scheduled",
+    "sources": [
+      "https://qazinform.com/news/kanye-west-to-perform-in-kazakhstan-for-the-first-time-fda90c",
+      "https://tengrinews.kz/curious/poyavilas-informatsiya-o-kontserte-kane-uesta-v-almatyi-604158/",
+      "https://vlast.kz/novosti/70139-koncert-kane-uesta-projdet-v-almaty-14-avgusta.html",
+      "https://el.kz/ru/kanye-west-vpervye-vystupit-v-almaty-14-avgusta_400050112/"
+    ],
+    "airports": [
+      { "iata": "ALA", "km": 15 },
+      { "iata": "NQZ", "km": 970 }
+    ]
+  },
+  "facts": "- The concert is on Friday 14 August 2026, starting about 21:00 Almaty time (UTC+5), at Central Stadium in Almaty, Kazakhstan.\n- It is the artist's first large public concert in Kazakhstan and the only Central Asian date of this tour, so a large share of the audience flies in from Russia, Uzbekistan, Kyrgyzstan and the wider CIS.\n- ALA (Almaty International Airport) is the main gateway: roughly 15 km north of the stadium, about 25-40 minutes by road depending on traffic.\n- ALA has direct connections with Russia, Central Asia, Turkey, the Gulf and China.\n- Ground transport in Almaty: licensed taxis and ride-hailing apps are the usual way from the airport; the city also has buses and a metro line, and the stadium sits inside the city rather than out of town.\n- Roads around the stadium and the city centre are congested on concert evening; leaving extra time is essential.\n- NQZ (Astana International Airport) is about 970 km away in another city. It is NOT a local airport for this venue: it only makes sense as an alternative entry point into Kazakhstan, with an onward domestic flight of roughly 1 hour 20 minutes to Almaty, or an overnight train.\n- The fly-home wave is on 15-16 August, when ALA departures are noticeably busier than usual.\n- Tickets are sold by the organiser through the Freedom Ticketon platform.",
+  "guidance": "STRICTLY LOGISTICS ONLY. Write about flights, airports, transfers and timing — nothing else.\n- Do NOT mention the artist's biography, career, discography, songs, albums, public statements, controversies, opinions about him, or any commentary on his persona. Refer to him only as the performer of this concert.\n- Do NOT quote lyrics or describe the show's content.\n- Do NOT state or imply ticket prices, availability, or that this website sells or resells tickets.\n- When mentioning NQZ, make it explicit that it is in a different city about 970 km away and is only a fallback entry point with an onward domestic flight or train — never call it a nearby or convenient airport for the venue.\n- Neutral, practical service-directory tone throughout."
+}
