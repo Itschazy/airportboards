@@ -14,7 +14,12 @@ export interface Airport {
   lat: number;
   lon: number;
   elev: number;
-  tz: string;
+  /** IANA zone, or null when the source dump had no usable value (see scripts/fix-airport-tz.mjs). */
+  tz: string | null;
+  /** Year the airport stopped handling commercial traffic. Absent for operating airports. */
+  closed?: number;
+  /** IATA of the airport that took the traffic over, when one did. */
+  successor?: string;
 }
 
 const airports = airportsRaw as Airport[];

@@ -115,7 +115,10 @@
     "airline_live": "Voli in tempo reale",
     "airline_none": "Nessun volo attivo per {airline} in questo momento.",
     "airlines_title": "Compagnie aeree",
-    "data_note": "Gli orari possono cambiare — verifica con la compagnia o l’aeroporto."
+    "data_note": "Gli orari possono cambiare — verifica con la compagnia o l’aeroporto.",
+    "closed_title": "Questo aeroporto è chiuso",
+    "closed_body": "{name} ha cessato i voli di linea nel {year}, quindi non c’è un tabellone in tempo reale.",
+    "closed_successor": "I voli di questa città usano ora <link>{successor}</link>."
   },
   "ui": {
     "departures": "Partenze",

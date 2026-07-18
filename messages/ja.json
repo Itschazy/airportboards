@@ -115,7 +115,10 @@
     "airline_live": "ライブフライト",
     "airline_none": "現在 {airline} の運航中の便はありません。",
     "airlines_title": "航空会社",
-    "data_note": "発着時刻は変更される場合があります。航空会社または空港でご確認ください。"
+    "data_note": "発着時刻は変更される場合があります。航空会社または空港でご確認ください。",
+    "closed_title": "この空港は閉鎖されています",
+    "closed_body": "{name}は{year}年に定期便の運航を終了したため、発着案内は表示されません。",
+    "closed_successor": "この都市の便は現在<link>{successor}</link>を利用しています。"
   },
   "ui": {
     "departures": "出発",

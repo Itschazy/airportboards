@@ -115,7 +115,10 @@
     "airline_live": "Live flights",
     "airline_none": "No active flights for {airline} right now.",
     "airlines_title": "Airlines",
-    "data_note": "Flight times may change — always verify with your airline or the airport."
+    "data_note": "Flight times may change — always verify with your airline or the airport.",
+    "closed_title": "This airport is closed",
+    "closed_body": "{name} stopped handling scheduled flights in {year}, so there is no live board to show.",
+    "closed_successor": "Flights for this city now use <link>{successor}</link>."
   },
   "ui": {
     "departures": "Departures",

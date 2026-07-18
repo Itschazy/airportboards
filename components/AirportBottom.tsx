@@ -30,7 +30,7 @@ const EXT_LABELS: Record<string, { transport: string; terminals: string; tips: s
   tr: { transport: 'Havalimanına ulaşım', terminals: 'Terminaller', tips: 'Yolcu ipuçları' },
 };
 
-function gmtOffset(tz?: string): string {
+function gmtOffset(tz?: string | null): string {
   if (!tz) return '';
   try {
     const parts = new Intl.DateTimeFormat('en-US', { timeZone: tz, timeZoneName: 'shortOffset' }).formatToParts(new Date());
@@ -83,9 +83,13 @@ export async function AirportBottom({ airport, locale, about, displayName, fligh
     { q: t('faq_iata_q', { name }), a: airport.iata },
     ...(airport.icao ? [{ q: t('faq_icao_q', { name }), a: airport.icao }] : []),
     { q: t('faq_where_q', { name }), a: `${city}, ${country}` },
-    { q: t('faq_tz_q', { name }), a: `${airport.tz}${offset ? ` (${offset})` : ''}` },
+    // Only claim a timezone when we actually have one. 557 airports inherited the literal
+    // "\N" null marker from the OpenFlights dump and rendered it as the visible answer.
+    ...(airport.tz ? [{ q: t('faq_tz_q', { name }), a: `${airport.tz}${offset ? ` (${offset})` : ''}` }] : []),
     { q: t('faq_arrive_q', { name }), a: t('faq_arrive_a') },
-    { q: t('faq_live_q', { name }), a: t('faq_live_a', { name, iata: airport.iata }) },
+    // "shows live arrivals and departures … updated every minute" is false on an airport
+    // with an empty board, and it was being asserted as FAQPage markup on every page.
+    ...(flights.length ? [{ q: t('faq_live_q', { name }), a: t('faq_live_a', { name, iata: airport.iata }) }] : []),
   ];
   const faqLd = {
     '@context': 'https://schema.org', '@type': 'FAQPage',

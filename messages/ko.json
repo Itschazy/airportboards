@@ -115,7 +115,10 @@
     "airline_live": "실시간 항공편",
     "airline_none": "현재 {airline}의 활성 항공편이 없습니다.",
     "airlines_title": "항공사",
-    "data_note": "운항 시간은 변경될 수 있습니다 — 항공사나 공항에 확인하세요."
+    "data_note": "운항 시간은 변경될 수 있습니다 — 항공사나 공항에 확인하세요.",
+    "closed_title": "운영이 종료된 공항입니다",
+    "closed_body": "{name}은(는) {year}년에 정기편 운항을 종료하여 실시간 운항 정보가 없습니다.",
+    "closed_successor": "이 도시의 항공편은 현재 <link>{successor}</link>을(를) 이용합니다."
   },
   "ui": {
     "departures": "출발",

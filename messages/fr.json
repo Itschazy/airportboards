@@ -115,7 +115,10 @@
     "airline_live": "Vols en direct",
     "airline_none": "Aucun vol actif pour {airline} pour le moment.",
     "airlines_title": "Compagnies aériennes",
-    "data_note": "Les horaires peuvent changer — vérifiez auprès de votre compagnie ou de l’aéroport."
+    "data_note": "Les horaires peuvent changer — vérifiez auprès de votre compagnie ou de l’aéroport.",
+    "closed_title": "Cet aéroport est fermé",
+    "closed_body": "{name} a cessé d’accueillir des vols réguliers en {year}, il n’y a donc pas de tableau en direct.",
+    "closed_successor": "Les vols de cette ville passent désormais par <link>{successor}</link>."
   },
   "ui": {
     "departures": "Départs",

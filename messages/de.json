@@ -115,7 +115,10 @@
     "airline_live": "Live-Flüge",
     "airline_none": "Keine aktiven Flüge für {airline} gerade.",
     "airlines_title": "Fluggesellschaften",
-    "data_note": "Flugzeiten können sich ändern — bitte bei Airline oder Flughafen bestätigen."
+    "data_note": "Flugzeiten können sich ändern — bitte bei Airline oder Flughafen bestätigen.",
+    "closed_title": "Dieser Flughafen ist geschlossen",
+    "closed_body": "{name} hat den Linienflugbetrieb {year} eingestellt, daher gibt es hier keine Flugtafel.",
+    "closed_successor": "Die Flüge dieser Stadt laufen jetzt über <link>{successor}</link>."
   },
   "ui": {
     "departures": "Abflüge",

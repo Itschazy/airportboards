@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { getTranslations , setRequestLocale } from 'next-intl/server';
 import { notFound, permanentRedirect } from 'next/navigation';
+import Link from 'next/link';
 import { getAirport, getStaticIataCodes, getCountries, getCities } from '@/lib/airports';
 import { getAirportContent } from '@/lib/airport-content';
 import { getAirportName } from '@/lib/airport-names';
@@ -35,8 +36,20 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   // contain it ("Внуково" + Москва — yes; "Сочи" + Сочи — no). People search by city.
   const showCity = name.toLowerCase().includes(city.toLowerCase()) ? 'no' : 'yes';
 
-  const title = t('main_title', { airport: name, city, showCity, iata: airport.iata });
-  const description = t('main_description', { airport: name, iata: airport.iata, city, country });
+  // A closed airport must not promise a live board in the SERP snippet either. Reuse the
+  // on-page notice copy so the title and description say the same true thing.
+  let title = t('main_title', { airport: name, city, showCity, iata: airport.iata });
+  let description = t('main_description', { airport: name, iata: airport.iata, city, country });
+  if (airport.closed) {
+    const tHome = await getTranslations({ locale, namespace: 'home' });
+    const successor = airport.successor ? getAirport(airport.successor) : null;
+    title = `${name} (${airport.iata}) — ${tHome('closed_title')}`;
+    description = tHome('closed_body', { name, year: String(airport.closed) })
+      + (successor
+        ? ' ' + tHome('closed_successor', { successor: `${getAirportName(successor.iata, locale, successor.name)} (${successor.iata})` })
+            .replace(/<\/?link>/g, '')
+        : '');
+  }
   const canonical = `${BASE}/${locale}/airport/${airport.iata}`;
 
   const languages: Record<string, string> = {};
@@ -52,7 +65,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     // openGraph/twitter (incl. the default OG image) are inherited from the locale layout;
     // Next auto-fills og/twitter title+description from the title/description above. Defining
     // a custom openGraph here would suppress the inherited file-based og:image.
-    robots: { index: true, follow: true },
+    // A permanently closed airport has no live board to offer, so it must not compete in
+    // search for "live arrivals" queries. It stays 200 and `follow` so the indexed URL keeps
+    // its value and passes equity on to the successor airport we link from the page body.
+    robots: { index: !airport.closed, follow: true },
   };
 }
 
@@ -72,6 +88,10 @@ export default async function AirportPage({ params }: Props) {
   try { initialFlights = await getBoard(airport.iata, 'departures', locale); } catch {}
   const t = await getTranslations({ locale, namespace: 'meta' });
   const tNav = await getTranslations({ locale, namespace: 'nav' });
+  const tHome = await getTranslations({ locale, namespace: 'home' });
+  // A closed airport points at whatever took its traffic, so the page still sends the
+  // visitor (and the crawler) somewhere useful instead of dead-ending on an empty board.
+  const successorAirport = airport.successor ? getAirport(airport.successor) : null;
   const name = getAirportName(airport.iata, locale, airport.name);
   const city = getCityName(airport.city, locale);
   const country = getCountryName(airport.country, locale);
@@ -128,6 +148,28 @@ export default async function AirportPage({ params }: Props) {
       {jsonLd.map((schema, i) => (
         <script key={i} type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
       ))}
+      {airport.closed && (
+        <aside style={{
+          margin: '12px 16px 0', padding: '12px 14px', borderRadius: 10,
+          background: 'rgba(255,159,10,.12)', border: '1px solid rgba(255,159,10,.35)',
+          fontSize: 14, lineHeight: 1.45,
+        }}>
+          <strong style={{ display: 'block', marginBottom: 4 }}>{tHome('closed_title')}</strong>
+          {/* year as a string: ICU would otherwise group it as "2,020" */}
+          {tHome('closed_body', { name, year: String(airport.closed) })}
+          {successorAirport && (
+            <>
+              {' '}
+              {tHome.rich('closed_successor', {
+                successor: `${getAirportName(successorAirport.iata, locale, successorAirport.name)} (${successorAirport.iata})`,
+                link: (chunks) => (
+                  <Link href={`/${locale}/airport/${successorAirport.iata}`} style={{ fontWeight: 600 }}>{chunks}</Link>
+                ),
+              })}
+            </>
+          )}
+        </aside>
+      )}
       {/* The visible <h1> now lives in FlightBoard's airport header (single semantic h1). */}
       {/* SSR only the first 40 rows to keep the HTML light (the client refetches the full
           board on mount); AirportBottom still gets the full set to aggregate routes/airlines. */}
