@@ -126,7 +126,11 @@
     "faq_hasflights_q": "{name} offre voli passeggeri di linea?",
     "faq_hasflights_a": "No. Nessuna compagnia aerea opera voli passeggeri di linea da {name} ({iata}).",
     "faq_nearest_q": "Qual è l'aeroporto più vicino a {name} con voli di linea?",
-    "faq_nearest_a": "L'aeroporto più vicino con voli passeggeri di linea è {airport} ({code}), a circa {km} km di distanza."
+    "faq_nearest_a": "L'aeroporto più vicino con voli passeggeri di linea è {airport} ({code}), a circa {km} km di distanza.",
+    "country_split": "Dei {count} aeroporti con codici IATA in {country}, {served} hanno un servizio passeggeri di linea al {date}; i restanti {rest} sono aerodromi senza voli di compagnie aeree.",
+    "grid_served": "Con voli di linea",
+    "grid_unserved": "Nessun servizio di linea",
+    "world_split": "AirportsBoard monitora {total} aeroporti con codici IATA in tutto il mondo. Secondo i dati rilevati il {date}, {served} di questi avevano voli passeggeri di linea; gli altri {rest} sono campi d'aviazione, basi militari e piste private senza voli di compagnie aeree."
   },
   "ui": {
     "departures": "Partenze",

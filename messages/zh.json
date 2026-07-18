@@ -126,7 +126,11 @@
     "faq_hasflights_q": "{name} 有定期客运航班吗？",
     "faq_hasflights_a": "没有。没有航空公司运营从 {name}（{iata}）出发的定期客运航班。",
     "faq_nearest_q": "距离{name}最近且有定期航班的机场是哪个？",
-    "faq_nearest_a": "最近的提供定期客运航班的机场是 {airport}（{code}），距离约 {km} 公里。"
+    "faq_nearest_a": "最近的提供定期客运航班的机场是 {airport}（{code}），距离约 {km} 公里。",
+    "country_split": "截至{date}，{country}拥有国际航空运输协会代码的{count}个机场中，有{served}个提供定期客运服务；其余{rest}个为没有航空公司航班的机场。",
+    "grid_served": "有定期航班",
+    "grid_unserved": "无定期航班服务",
+    "world_split": "机场看板收录了全球 {total} 个拥有国际航空运输协会代码的机场。截至 {date}，其中 {served} 个提供定期客运服务；其余 {rest} 个为没有航空公司航班的简易机场、军事基地和私人跑道。"
   },
   "ui": {
     "departures": "出发",

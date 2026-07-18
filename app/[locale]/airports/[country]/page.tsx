@@ -6,6 +6,10 @@ import { getCountryBySlug, getAirportsByCountry, getCountries } from '@/lib/airp
 import { getAirportName } from '@/lib/airport-names';
 import { getCityName, getCountryName } from '@/lib/places';
 import { locales } from '@/lib/i18n';
+import { splitByService, serviceMeasuredOn } from '@/lib/warm';
+
+// See app/[locale]/airports/page.tsx — ICU renders a bare placeholder ungrouped.
+const fmt = (n: number, locale: string) => n.toLocaleString(locale);
 
 const BASE = 'https://airportsboard.live';
 type Props = { params: Promise<{ locale: string; country: string }> };
@@ -36,7 +40,16 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   languages['x-default'] = `${BASE}/en/airports/${c.slug}`;
   return {
     title: `${title} — AirportsBoard`,
-    description: t('country_desc', { country: countryName, count: c.count }),
+    description: (() => {
+      // Say how many of the country's airports you can actually fly from — the number a
+      // traveller wants and that no atlas publishes — rather than implying all of them
+      // have live boards.
+      const { served, unserved } = splitByService(getAirportsByCountry(c.slug));
+      const date = serviceMeasuredOn();
+      return date && served.length
+        ? t('country_split', { country: countryName, count: fmt(c.count, locale), served: fmt(served.length, locale), rest: fmt(unserved.length, locale), date })
+        : t('country_desc', { country: countryName, count: c.count });
+    })(),
     alternates: { canonical: `${BASE}/${locale}/airports/${c.slug}`, languages },
     robots: { index: true, follow: true },
   };
@@ -50,6 +63,11 @@ export default async function CountryPage({ params }: Props) {
   const t = await getTranslations({ locale, namespace: 'home' });
   const airports = getAirportsByCountry(country);
   const countryName = getCountryName(c.country, locale);
+  // The exclusive fact: of every IATA-coded airport in this country, how many actually have
+  // scheduled passenger service. Measured across all 6,069 codes, so it is ours to state.
+  const { served, unserved } = splitByService(airports);
+  const measuredOn = serviceMeasuredOn();
+  const showSplit = !!measuredOn && served.length > 0 && unserved.length > 0;
 
   const breadcrumb = {
     '@context': 'https://schema.org',
@@ -85,9 +103,16 @@ export default async function CountryPage({ params }: Props) {
         <span style={{ marginRight: 12 }}>{flag(c.iso2)}</span>{t('country_title', { country: countryName })}
       </h1>
       <p style={{ fontSize: 15, color: '#8A8A8A', marginTop: 12 }}>{t('airports_count', { count: c.count })}</p>
+      {/* One self-contained, dated sentence — the unit an answer engine lifts verbatim. */}
+      {showSplit && (
+        <p style={{ fontSize: 15, lineHeight: 1.55, color: '#C7C7CC', marginTop: 14, maxWidth: 640 }}>
+          {t('country_split', { country: countryName, count: fmt(c.count, locale), served: fmt(served.length, locale), rest: fmt(unserved.length, locale), date: measuredOn! })}
+        </p>
+      )}
 
+      {showSplit && <SectionLabel>{t('grid_served')}</SectionLabel>}
       <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(260px, 1fr))', gap: 8, marginTop: 28 }}>
-        {airports.map(a => (
+        {(showSplit ? served : airports).map(a => (
           <Link key={a.iata} href={`/${locale}/airport/${a.iata}`} style={{
             display: 'flex', alignItems: 'center', gap: 14, textDecoration: 'none', color: 'inherit',
             background: '#0B0B0B', border: '1px solid #1A1A1A', borderRadius: 14, padding: '11px 16px',
@@ -103,6 +128,38 @@ export default async function CountryPage({ params }: Props) {
           </Link>
         ))}
       </div>
+
+      {/* Airfields with no airline service are listed too — they are real places people
+          look up — but separated, so a military strip no longer sits beside Heathrow as if
+          both offered flights. */}
+      {showSplit && (
+        <>
+          <SectionLabel>{t('grid_unserved')}</SectionLabel>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(260px, 1fr))', gap: 8, marginTop: 28, opacity: 0.72 }}>
+            {unserved.map(a => (
+              <Link key={a.iata} href={`/${locale}/airport/${a.iata}`} style={{
+                display: 'flex', alignItems: 'center', gap: 14, textDecoration: 'none', color: 'inherit',
+                background: '#0B0B0B', border: '1px solid #1A1A1A', borderRadius: 14, padding: '11px 16px',
+              }}>
+                <span style={{ width: 50, flexShrink: 0, fontSize: 18, fontWeight: 700, color: '#6A6A6A', letterSpacing: '-0.02em' }}>{a.iata}</span>
+                <span style={{ flex: 1, minWidth: 0 }}>
+                  <span style={{ fontSize: 15, color: '#A1A1AA', display: 'block', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>{getCityName(a.city, locale)}</span>
+                  <span style={{ fontSize: 12, color: '#6A6A6A', display: 'block', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>{getAirportName(a.iata, locale, a.name)}</span>
+                </span>
+              </Link>
+            ))}
+          </div>
+        </>
+      )}
     </div>
+  );
+}
+
+function SectionLabel({ children }: { children: React.ReactNode }) {
+  return (
+    <h2 style={{
+      margin: '32px 0 -14px', fontSize: 13, fontWeight: 700, textTransform: 'uppercase',
+      letterSpacing: '0.12em', color: '#8A8A8A',
+    }}>{children}</h2>
   );
 }

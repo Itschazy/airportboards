@@ -126,7 +126,11 @@
     "faq_hasflights_q": "{name}에는 정기 여객 항공편이 있나요?",
     "faq_hasflights_a": "아니요. {name}({iata})에서 출발하는 정기 여객편을 운항하는 항공사는 없습니다.",
     "faq_nearest_q": "{name}에서 정기 항공편이 운항되는 가장 가까운 공항은 어디인가요?",
-    "faq_nearest_a": "정기 여객 항공편이 운항되는 가장 가까운 공항은 약 {km}킬로미터 떨어진 {airport}({code})입니다."
+    "faq_nearest_a": "정기 여객 항공편이 운항되는 가장 가까운 공항은 약 {km}킬로미터 떨어진 {airport}({code})입니다.",
+    "country_split": "{country}에서 국제항공운송협회 코드가 있는 공항 {count}곳 중 {date} 기준으로 {served}곳은 정기 여객편이 운항되며, 나머지 {rest}곳은 항공사 운항편이 없는 비행장입니다.",
+    "grid_served": "정기 항공편 운항",
+    "grid_unserved": "정기 운항 없음",
+    "world_split": "에어포츠보드는 전 세계에서 국제항공운송협회 코드가 있는 공항 {total}곳을 추적합니다. {date} 기준, 이 중 {served}곳에는 정기 여객편이 운항했으며, 나머지 {rest}곳은 항공사 운항편이 없는 비행장, 군사 기지 및 사설 활주로입니다."
   },
   "ui": {
     "departures": "출발",

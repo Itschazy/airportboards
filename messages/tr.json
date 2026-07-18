@@ -126,7 +126,11 @@
     "faq_hasflights_q": "{name} için tarifeli yolcu uçuşları var mı?",
     "faq_hasflights_a": "Hayır. {name} ({iata}) noktasından tarifeli yolcu uçuşu gerçekleştiren hiçbir hava yolu yok.",
     "faq_nearest_q": "{name} yakınlarında tarifeli uçuş yapılan en yakın havalimanı hangisidir?",
-    "faq_nearest_a": "Tarifeli yolcu uçuşları olan en yakın havalimanı {airport} ({code}) olup yaklaşık {km} km uzaklıktadır."
+    "faq_nearest_a": "Tarifeli yolcu uçuşları olan en yakın havalimanı {airport} ({code}) olup yaklaşık {km} km uzaklıktadır.",
+    "country_split": "{country} içinde IATA koduna sahip {count} havalimanından {served} tanesi, {date} itibarıyla tarifeli yolcu hizmeti sunmaktadır; geriye kalan {rest} tanesi, hava yolu uçuşu bulunmayan hava meydanlarıdır.",
+    "grid_served": "Tarifeli uçuşlarla",
+    "grid_unserved": "Tarifeli sefer yok",
+    "world_split": "AirportsBoard, dünya genelinde IATA koduna sahip {total} havalimanını takip eder. {date} tarihinde yapılan ölçüme göre bunların {served} tanesinde tarifeli yolcu uçuşları bulunuyordu; geri kalan {rest} tanesi ise havayolu uçuşu bulunmayan havaalanları, askeri üsler ve özel pistlerdir."
   },
   "ui": {
     "departures": "Kalkışlar",

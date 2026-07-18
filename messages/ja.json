@@ -126,7 +126,11 @@
     "faq_hasflights_q": "{name}に定期旅客便はありますか？",
     "faq_hasflights_a": "いいえ。{name}（{iata}）から定期旅客便を運航している航空会社はありません。",
     "faq_nearest_q": "定期便が就航している{name}の最寄りの空港はどこですか？",
-    "faq_nearest_a": "定期旅客便が就航している最寄りの空港は、約{km}キロメートル先の{airport}（{code}）です。"
+    "faq_nearest_a": "定期旅客便が就航している最寄りの空港は、約{km}キロメートル先の{airport}（{code}）です。",
+    "country_split": "{country}にある国際航空運送協会の空港符号を持つ空港{count}か所のうち、{date}現在、{served}か所で定期旅客便が運航されています。残りの{rest}か所は航空会社の便がない飛行場です。",
+    "grid_served": "定期便あり",
+    "grid_unserved": "定期便の運航はありません",
+    "world_split": "エアポーツボードは、世界中の国際航空運送協会コードを持つ空港{total}か所を追跡しています。{date}時点で、そのうち{served}か所では定期旅客便が運航されており、残りの{rest}か所は航空会社の便が発着しない飛行場、軍用基地、私用滑走路です。"
   },
   "ui": {
     "departures": "出発",

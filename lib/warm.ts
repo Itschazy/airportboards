@@ -182,6 +182,51 @@ export function nearestServiced(
   return null;
 }
 
+/**
+ * When the service levels were last measured, as YYYY-MM-DD, or null if never.
+ * Published alongside every derived count so the claim is dated rather than timeless.
+ */
+export function serviceMeasuredOn(): string | null {
+  try {
+    const p = path.join(process.cwd(), 'data', 'airport-service.json');
+    return (JSON.parse(fs.readFileSync(p, 'utf8')) as { generated?: string }).generated ?? null;
+  } catch { return null; }
+}
+
+/**
+ * Split a set of airports into the ones with measured scheduled service and the ones without.
+ *
+ * This is the site's one genuinely exclusive fact: we probed all 6,069 IATA codes, so we can
+ * say how many airports in a country a traveller can actually fly from — a number no atlas,
+ * Wikipedia list or competitor publishes. Un-probed airports count as unknown, never as
+ * "no service", so the published totals stay defensible.
+ */
+export function splitByService<T extends { iata: string }>(airports: T[]): {
+  served: T[]; unserved: T[]; unknown: T[];
+} {
+  const svc = getServiceData();
+  const served: T[] = [], unserved: T[] = [], unknown: T[] = [];
+  for (const a of airports) {
+    const v = svc[a.iata];
+    if (v === undefined) unknown.push(a);
+    else if (v > 0) served.push(a);
+    else unserved.push(a);
+  }
+  return { served, unserved, unknown };
+}
+
+/** Worldwide counts straight from the measurement file, for the /airports index. */
+export function worldServiceCounts(): { probed: number; withService: number; empty: number; generated: string | null } {
+  const svc = getServiceData();
+  const vals = Object.values(svc);
+  return {
+    probed: vals.length,
+    withService: vals.filter(n => n > 0).length,
+    empty: vals.filter(n => n === 0).length,
+    generated: serviceMeasuredOn(),
+  };
+}
+
 export function planSummary(): {
   tiers: { name: string; airports: number; intervalMin: number; reqPerDay: number }[];
   withService: number; noService: number; projectedMonthly: number;

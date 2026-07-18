@@ -33,6 +33,23 @@ const nextConfig: NextConfig = {
         source: '/:path*',
         headers: [
           { key: 'Strict-Transport-Security', value: 'max-age=31536000; includeSubDomains' },
+          // Cheap, no-downside hardening. Deliberately NO Content-Security-Policy: AdSense
+          // moderation is pending and an enforced policy is the classic way to break ad
+          // script injection right when it matters.
+          { key: 'X-Content-Type-Options', value: 'nosniff' },
+          { key: 'Referrer-Policy', value: 'strict-origin-when-cross-origin' },
+          { key: 'X-Frame-Options', value: 'SAMEORIGIN' },
+        ],
+      },
+      {
+        // Boards now state how old their data is, so they must not be served from cache for
+        // months. `revalidate = 300` makes Next derive stale-while-revalidate=31535700 —
+        // just under a YEAR — which means an infrequent AI crawler can be handed HTML whose
+        // "Updated 4 minutes ago" and dateModified were true last winter. Cap the stale
+        // window at one revalidate period: still absorbs a thundering herd, cannot lie.
+        source: '/:locale/airport/:path*',
+        headers: [
+          { key: 'Cache-Control', value: 'public, s-maxage=300, stale-while-revalidate=600' },
         ],
       },
     ];

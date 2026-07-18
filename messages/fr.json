@@ -126,7 +126,11 @@
     "faq_hasflights_q": "Y a-t-il des vols passagers réguliers à {name} ?",
     "faq_hasflights_a": "Non. Aucune compagnie aérienne n’exploite de vols passagers réguliers au départ de {name} ({iata}).",
     "faq_nearest_q": "Quel est l’aéroport le plus proche de {name} proposant des vols réguliers ?",
-    "faq_nearest_a": "L’aéroport le plus proche assurant des vols passagers réguliers est {airport} ({code}), à environ {km} km."
+    "faq_nearest_a": "L’aéroport le plus proche assurant des vols passagers réguliers est {airport} ({code}), à environ {km} km.",
+    "country_split": "Sur les {count} aéroports dotés d’un code IATA en {country}, {served} proposent des vols passagers réguliers à la date du {date}; les {rest} restants sont des aérodromes sans vols de compagnies aériennes.",
+    "grid_served": "Avec des vols réguliers",
+    "grid_unserved": "Aucun service régulier",
+    "world_split": "AirportsBoard répertorie {total} aéroports dotés de codes IATA dans le monde. Selon les données relevées le {date}, {served} d’entre eux étaient desservis par des vols passagers réguliers ; les {rest} autres sont des aérodromes, des bases militaires et des pistes privées sans vols de compagnies aériennes."
   },
   "ui": {
     "departures": "Départs",

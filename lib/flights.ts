@@ -218,7 +218,17 @@ export function getBoardFetchedAt(iata: string, direction: 'departures' | 'arriv
 
 export async function getRoute(from: string, to: string, locale: string, live = false): Promise<FlightRow[]> {
   const F = from.toUpperCase(), T = to.toUpperCase();
-  const raw = await fetchRaw(`dep_iata=${F}&arr_iata=${T}`, 'departures', { live });
+  let raw = await fetchRaw(`dep_iata=${F}&arr_iata=${T}`, 'departures', { live });
+  // The pair query has its own store key ("dep_iata=LHR&arr_iata=JFK") which the warmer
+  // never writes — it warms whole boards ("dep_iata=LHR"). So for a crawler, which cannot
+  // trigger a live fetch, every route page was permanently empty and told the world "no
+  // direct flights found today" about routes that run several times a day. The origin's
+  // warmed board already contains those flights: filter it. No extra airlabs spend, same
+  // store, and the noindex-when-empty guard still holds for routes that genuinely have none.
+  if (!raw.length) {
+    const board = await fetchRaw(`dep_iata=${F}`, 'departures', { live });
+    raw = board.filter(f => f.arr_iata === T);
+  }
   const own = raw.filter(f => f.dep_iata === F && f.arr_iata === T);
   return own.map(f => mapFlight(f, 'departures', locale));
 }

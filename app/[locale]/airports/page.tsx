@@ -4,6 +4,11 @@ import Link from 'next/link';
 import { getCountries } from '@/lib/airports';
 import { getCountryName } from '@/lib/places';
 import { locales } from '@/lib/i18n';
+import { worldServiceCounts } from '@/lib/warm';
+
+// Counts are passed to ICU pre-formatted for the locale: a bare placeholder renders 6069,
+// while German expects 6.069 and French 6 069.
+const fmt = (n: number, locale: string) => n.toLocaleString(locale);
 
 const BASE = 'https://airportsboard.live';
 type Props = { params: Promise<{ locale: string }> };
@@ -25,7 +30,12 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   languages['x-default'] = `${BASE}/en/airports`;
   return {
     title: `${title} — AirportsBoard`,
-    description: t('footer_tagline'),
+    description: (() => {
+      const w = worldServiceCounts();
+      return w.generated && w.withService
+        ? t('world_split', { total: fmt(w.probed, locale), date: w.generated, served: fmt(w.withService, locale), rest: fmt(w.empty, locale) })
+        : t('footer_tagline');
+    })(),
     alternates: { canonical: `${BASE}/${locale}/airports`, languages },
     robots: { index: true, follow: true },
   };
@@ -61,19 +71,45 @@ export default async function AirportsIndexPage({ params }: Props) {
     })),
   };
 
+  const world = worldServiceCounts();
+  // We probed every IATA code in the dataset, so how many airports on earth actually have
+  // scheduled passenger service is a measurement we own. Declaring it as a Dataset gives an
+  // answer engine something to cite by name instead of an anonymous number in a paragraph.
+  // Deliberately no `license` and no raw download: the underlying per-airport values come
+  // from airlabs, and asserting redistribution rights over them is a decision for the owner.
+  const dataset = world.generated && world.probed ? {
+    '@context': 'https://schema.org',
+    '@type': 'Dataset',
+    name: 'Worldwide airport scheduled-service levels',
+    description: `Which of the world's ${world.probed} IATA-coded airports have scheduled passenger service. Measured by probing published flight schedules for every code: ${world.withService} had scheduled departures, ${world.empty} had none.`,
+    url: `${BASE}/${locale}/airports`,
+    inLanguage: locale,
+    dateModified: world.generated,
+    temporalCoverage: world.generated,
+    measurementTechnique: 'Scheduled departures observed per airport at probe time',
+    variableMeasured: 'Presence of scheduled commercial passenger service',
+    creator: { '@type': 'Organization', name: 'AirportsBoard', url: BASE },
+  } : null;
+
   return (
     <div style={{ maxWidth: 760, margin: '0 auto', padding: '36px 18px 64px' }}>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(itemList) }} />
+      {dataset && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(dataset) }} />}
       <div style={{ fontSize: 13, color: '#8A8A8A', marginBottom: 10 }}>
         <Link href={`/${locale}`} style={{ color: '#6A6A6A', textDecoration: 'none' }}>airportsboard</Link>
       </div>
       <h1 style={{ fontSize: 'clamp(28px, 7vw, 40px)', fontWeight: 800, letterSpacing: '-0.03em', color: '#FFFFFF', margin: '0 0 6px' }}>
         {t('sec_countries')}
       </h1>
-      <p style={{ fontSize: 15, color: '#8A8A8A', margin: '0 0 28px' }}>
+      <p style={{ fontSize: 15, color: '#8A8A8A', margin: '0 0 14px' }}>
         {countries.length} {t('m_countries')}
       </p>
+      {world.generated && world.withService > 0 && (
+        <p style={{ fontSize: 15, lineHeight: 1.55, color: '#C7C7CC', margin: '0 0 28px', maxWidth: 660 }}>
+          {t('world_split', { total: fmt(world.probed, locale), date: world.generated!, served: fmt(world.withService, locale), rest: fmt(world.empty, locale) })}
+        </p>
+      )}
 
       <ul style={{ listStyle: 'none', margin: 0, padding: 0, display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(220px, 1fr))', gap: 8 }}>
         {countries.map(c => (

@@ -126,7 +126,11 @@
     "faq_hasflights_q": "Does {name} have scheduled passenger flights?",
     "faq_hasflights_a": "No. No airline operates scheduled passenger flights from {name} ({iata}).",
     "faq_nearest_q": "What is the nearest airport to {name} with scheduled flights?",
-    "faq_nearest_a": "The nearest airport with scheduled passenger flights is {airport} ({code}), about {km} km away."
+    "faq_nearest_a": "The nearest airport with scheduled passenger flights is {airport} ({code}), about {km} km away.",
+    "country_split": "Of the {count} airports with IATA codes in {country}, {served} have scheduled passenger service as of {date}; the remaining {rest} are airfields with no airline flights.",
+    "grid_served": "With scheduled flights",
+    "grid_unserved": "No scheduled service",
+    "world_split": "AirportsBoard tracks {total} airports with IATA codes worldwide. As measured on {date}, {served} of them had scheduled passenger service; the other {rest} are airfields, military bases and private strips with no airline flights."
   },
   "ui": {
     "departures": "Departures",

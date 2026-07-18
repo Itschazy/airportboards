@@ -126,7 +126,11 @@
     "faq_hasflights_q": "Bietet {name} planmäßige Passagierflüge an?",
     "faq_hasflights_a": "Nein. Keine Fluggesellschaft führt planmäßige Passagierflüge von {name} ({iata}) durch.",
     "faq_nearest_q": "Welcher ist der nächstgelegene Flughafen zu {name} mit Linienflügen?",
-    "faq_nearest_a": "Der nächstgelegene Flughafen mit planmäßigen Passagierflügen ist {airport} ({code}), etwa {km} km entfernt."
+    "faq_nearest_a": "Der nächstgelegene Flughafen mit planmäßigen Passagierflügen ist {airport} ({code}), etwa {km} km entfernt.",
+    "country_split": "Von den {count} Flughäfen mit IATA-Codes in {country} bieten {served} mit Stand {date} planmäßigen Passagierverkehr; die übrigen {rest} sind Flugplätze ohne Linienflüge.",
+    "grid_served": "Mit Linienflügen",
+    "grid_unserved": "Kein Linienverkehr",
+    "world_split": "AirportsBoard erfasst weltweit {total} Flughäfen mit IATA-Codes. Stand {date} hatten {served} davon planmäßigen Passagierverkehr; die übrigen {rest} sind Flugplätze, Militärstützpunkte und private Landebahnen ohne Linienflüge."
   },
   "ui": {
     "departures": "Abflüge",
