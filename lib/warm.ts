@@ -35,19 +35,23 @@ export type WarmTier = {
 
 // Ordered busiest-first; the first tier an airport qualifies for wins.
 //
-// Intervals are chosen to FIT the plan, not to express a wish — run scripts/warm-plan.mjs
-// after any change and keep the projection under the monthly cap. The measured shape of the
-// corpus drives this: of 2,280 airports with scheduled service the median has just 7
-// departures a day, so spending hub-grade polling on the tail would buy nothing while
-// starving the airports people actually look at.
+// These intervals are a TARGET, not a schedule the warmer promises to hit. Total demand at
+// these settings is ~197k requests/month against measured tier populations, which is
+// deliberately more than the current 100k plan affords: tickBudget() hands out whatever is
+// actually left, and dueAirports() orders by how overdue each board is *relative to its own
+// tier*, so a tight budget slows every tier proportionally instead of starving one. That is
+// what "spend the quota to zero" means here — the budget is always fully used, and raising
+// the plan simply moves every tier closer to its target with no code change.
 //
-// Measured 2026-07-19: mega 40 · hub 120 · major 300 · mid 567 · small 1,253 ≈ 90k/month.
+// Measured 2026-07-19 (scripts/discover-schedules.mjs, 6,069 probes):
+//   mega 68 · hub 92 · major 300 · mid 567 · small 1,253 — 2,280 airports with service.
+// Run scripts/warm-plan.mjs after any change; it prints target demand against both plans.
 export const TIERS: WarmTier[] = [
-  { name: 'mega', minFlights: 400, intervalMin: 180, skipNight: false },
-  { name: 'hub', minFlights: 150, intervalMin: 360, skipNight: true },
-  { name: 'major', minFlights: 40, intervalMin: 1440, skipNight: true },
-  { name: 'mid', minFlights: 10, intervalMin: 4320, skipNight: true },
-  { name: 'small', minFlights: 1, intervalMin: 10080, skipNight: true },
+  { name: 'mega', minFlights: 400, intervalMin: 120, skipNight: false },
+  { name: 'hub', minFlights: 150, intervalMin: 240, skipNight: true },
+  { name: 'major', minFlights: 40, intervalMin: 720, skipNight: true },
+  { name: 'mid', minFlights: 10, intervalMin: 1440, skipNight: true },
+  { name: 'small', minFlights: 1, intervalMin: 1440, skipNight: true },
 ];
 
 export function tierOf(flights: number): WarmTier | null {
@@ -116,11 +120,17 @@ export function dueAirports(now = Date.now()): Due[] {
  */
 export function tickBudget(runsPerDay = 12, now = new Date()): number {
   const u = usage();
+  // Human page views spend from the same quota — /api/flights fetches live for a real
+  // browser. If the warmer drained the plan to the last request, visitors would be served
+  // stale boards for the rest of the month. This is a reserve for live traffic, not idle
+  // headroom: the warmer still spends everything else.
+  const reserve = Number(process.env.AIRLABS_HUMAN_RESERVE ?? 3000);
+  const spendable = Math.max(0, u.remaining - reserve);
   const daysInMonth = new Date(now.getFullYear(), now.getMonth() + 1, 0).getDate();
   const daysLeft = Math.max(1, daysInMonth - now.getDate() + 1);
-  const perDay = Math.floor(u.remaining / daysLeft);
-  // Keep a floor so a nearly-exhausted month still refreshes the top hubs, and a ceiling so
-  // one run cannot swallow a whole day's allowance.
+  const perDay = Math.floor(spendable / daysLeft);
+  // Floor so a nearly-exhausted month still refreshes the busiest boards; ceiling so one
+  // run cannot swallow a whole day's allowance and leave the rest of the day cold.
   return Math.max(40, Math.min(Math.floor(perDay / runsPerDay), Math.floor(perDay / 2)));
 }
 
