@@ -1,0 +1,229 @@
+{
+  "meta": {
+    "slug": "oktoberfest-munich",
+    "name": "Oktoberfest Munich (191st Wiesn)",
+    "startDate": "2026-09-19T12:00:00+02:00",
+    "endDate": "2026-10-04T23:30:00+02:00",
+    "venue": "Theresienwiese",
+    "venueCity": "Munich",
+    "country": "DE",
+    "type": "festival",
+    "officialUrl": "https://www.muenchen.de/en/events/oktoberfest",
+    "status": "scheduled",
+    "sources": [
+      "https://www.muenchen.de/en/events/oktoberfest",
+      "https://www.oktoberfest.de/en",
+      "https://en.wikipedia.org/wiki/Oktoberfest",
+      "https://www.muenchen.de/en/events/oktoberfest/how-get-oktoberfest-routes-tickets-stations-apps",
+      "https://www.oktoberfest.de/en/information/oktoberfest-opening-times/opening-hours-munich-oktoberfest",
+      "https://www.oktoberfest.de/en/magazin/oktoberfest-news/die-wiesn-2025",
+      "https://www.munich-airport.com/public-transport-260822",
+      "https://en.wikipedia.org/wiki/Memmingen_Airport",
+      "https://muenchenunterwegs.de/news/oktoberfest-2025-u-bahn-zeitweise-ueberlastet-bitte-fussweg-nutzen"
+    ],
+    "airports": [
+      {
+        "iata": "MUC",
+        "km": 42
+      },
+      {
+        "iata": "FMM",
+        "km": 112
+      }
+    ]
+  },
+  "locales": {
+    "en": {
+      "title": "Oktoberfest Munich 2026 Airports and Live Flight Boards",
+      "description": "Plan flights for Oktoberfest Munich 2026 with live flight boards for MUC/FMM, airport distances, city transfers and fly-home tips.",
+      "h1": "Oktoberfest Munich 2026: airports and flights",
+      "banner": "Open the Oktoberfest airport and flight guide",
+      "intro": "Oktoberfest Munich, the 191st Wiesn, runs Saturday 19 September to Sunday 4 October 2026 on the Theresienwiese in Munich. The 42-hectare fairground is inside the city, immediately southwest of München Hauptbahnhof, with the ceremonial opening at 12:00 on the first Saturday. Around these travel dates, live airport boards help flyers watch arrivals and departures at MUC and FMM before choosing when to move between the airport, hotel and festival area.",
+      "getting": "Munich Airport (MUC) is the main gateway, about 40–42 km northeast of Theresienwiese by road, with realistic door-to-door travel of 45–65 minutes. S-Bahn S1 and S8 link the airport with München Hauptbahnhof; Hackerbrücke is a useful stop for a signed 10-minute walk to the north entrance. The Lufthansa Express Bus runs to Hauptbahnhof, and taxis, ride-hailing and pre-booked transfers operate. Memmingen (FMM) is about 112 km away, a low-cost fallback with coach or rail connections.",
+      "leaving": "The main fly-home wave is the closing weekend of 3–4 October 2026 and Monday 5 October, after the final Sunday closes the festival. Expect more passengers at MUC and some FMM queues, especially for morning and evening departures. Leave extra time for crowded stations, possible Hackerbrücke closures and airport processing, and check the live departures board before leaving Munich so you can react to delays, cancellations or late changes.",
+      "tips": "Use public transport for the last mile because there is no parking at Theresienwiese. The closest U-Bahn, U4/U5 to Theresienwiese, is often the most crowded; Schwanthalerhöhe, Goetheplatz, Poccistraße, Hackerbrücke and Hauptbahnhof are walkable alternatives. On Saturdays and the 3 October public holiday, build in buffer time and use current routing advice before entering the busiest stations.",
+      "sec": {
+        "boards": "Live MUC and FMM boards for Wiesn travellers",
+        "getting": "From Munich Airport to the Theresienwiese",
+        "leaving": "Flying home after Kehraus weekend",
+        "tips": "Wiesn airport and last-mile tips"
+      }
+    },
+    "ru": {
+      "title": "Октоберфест 2026: аэропорты MUC/FMM и рейсы",
+      "description": "Как лететь на Oktoberfest Munich 2026: онлайн-табло рейсов MUC/FMM, дорога до Theresienwiese и советы на вылет после фестиваля.",
+      "h1": "Октоберфест 2026: как лететь в Мюнхен",
+      "banner": "Откройте гид по перелётам на Октоберфест 2026",
+      "intro": "Oktoberfest Munich, 191-й Wiesn, проходит с субботы 19 сентября по воскресенье 4 октября 2026 года на Theresienwiese в Мюнхене. Фестиваль длится 16 дней; официальное открытие — церемония O'zapft is! в 12:00 в первую субботу. Площадка находится внутри города, сразу к юго-западу от главного вокзала. В эти даты прилёты и вылеты через MUC и FMM стоит сверять по онлайн-табло, особенно в дни пикового спроса.",
+      "getting": "Главный аэропорт для поездки — Munich Airport (MUC), примерно в 40–42 км к северо-востоку от Theresienwiese; реальная дорога «дверь — дверь» обычно занимает 45–65 минут. S-Bahn S1 и S8 идут к München Hauptbahnhof около 40 минут; выход на Hackerbrücke даёт подписанный 10-минутный пеший маршрут к северному входу. Также есть Lufthansa Express Bus до Hauptbahnhof примерно за 45 минут, такси и трансферы. Memmingen (FMM), около 112 км, — удалённая бюджетная запасная опция, а не близкий аэропорт.",
+      "leaving": "Основная волна обратных перелётов приходится на закрывающий уик-энд 3–4 октября 2026 года и понедельник 5 октября. Финальное воскресенье, Kehraus, завершает фестиваль и сдвигает часть вылетов на воскресный вечер и утро понедельника. В эти часы аэропорты и подъезды к ним могут быть загружены, поэтому закладывайте больше времени, чем обычно. Перед выездом из города проверьте онлайн-табло вылетов MUC или FMM, чтобы не ехать к аэропорту вслепую при задержке или переносе.",
+      "tips": "Сравнивайте аэропорты по фактическому времени в пути: MUC — основной вариант, FMM — дальний запасной. На последнем участке учитывайте толпы у U4/U5 Theresienwiese; спокойнее могут быть Hackerbrücke, Schwanthalerhöhe, Goetheplatz или Poccistraße с пешим подходом около 10 минут. Парковки на Theresienwiese нет, поэтому водителям нужны внешние park-and-ride. Держите запас времени на закрытия станций и перегрузку транспорта.",
+      "sec": {
+        "boards": "Онлайн-табло аэропортов MUC и FMM для Wiesn",
+        "getting": "Как добраться от аэропорта до Theresienwiese",
+        "leaving": "Вылет домой после закрывающего уик-энда",
+        "tips": "Практические советы для перелёта на Октоберфест"
+      }
+    },
+    "zh": {
+      "title": "2026慕尼黑啤酒节机场与航班：MUC/FMM实时航班板",
+      "description": "前往2026慕尼黑啤酒节的航空出行指南：查看MUC/FMM实时航班板，了解慕尼黑机场和梅明根机场到特蕾西娅草坪的距离、用时、交通方式及返程高峰提示。",
+      "h1": "2026慕尼黑啤酒节机场交通与实时航班",
+      "banner": "前往慕尼黑啤酒节？查看机场交通与实时航班",
+      "intro": "第191届慕尼黑啤酒节（Oktoberfest Munich，Wiesn）将于2026年9月19日星期六12:00至10月4日星期日23:30举行，地点是德国慕尼黑市内的特蕾西娅草坪。会期16天，场地在主火车站西南侧，不是城外场址。开幕前后和闭幕周末旅客集中，出发前查看MUC与FMM实时航班板，有助于确认抵达和离港动态。",
+      "getting": "慕尼黑机场MUC是主要门户，距特蕾西娅草坪约40–42公里，门到门通常45–65分钟。可乘S-Bahn S1/S8到市区，S8和S1合计约10分钟一班，到慕尼黑中央火车站约40分钟；在Hackerbrücke下车步行约10分钟也常更快。另有Lufthansa Express Bus、出租车和预约接送。FMM距场地约112公里，只适合作为低成本远距离备选。",
+      "leaving": "返程高峰集中在2026年10月3日至4日闭幕周末以及10月5日星期一；最后一个星期日Kehraus结束后，离境需求会延伸到周日晚上和周一早晨。MUC与FMM在这些时段可能更拥挤，前往机场应比平时更早出发。离开市区前先查看实时出港航班板，再决定何时动身前往机场。",
+      "tips": "特蕾西娅草坪没有停车位，驾车者需使用城外换乘停车。市内最后一程可选U4/U5至Theresienwiese，但该站最拥挤；Hackerbrücke、Goetheplatz、Poccistraße等步行约10分钟的替代站点可能更稳妥。周末和晚间Hackerbrücke可能按人流临时关闭，预留额外时间。",
+      "sec": {
+        "boards": "啤酒节最近机场与MUC/FMM实时航班板",
+        "getting": "从机场到特蕾西娅草坪",
+        "leaving": "Kehraus后返程航班提示",
+        "tips": "Wiesn航空旅客实用建议"
+      }
+    },
+    "ar": {
+      "title": "أكتوبرفست ميونخ 2026: المطارات والرحلات",
+      "description": "دليل الوصول إلى أكتوبرفست ميونخ 2026 مع لوحات الرحلات الحية لمطاري MUC/FMM، ومعلومات الانتقال بين المطار وثيريزينفيزه.",
+      "h1": "السفر جواً إلى أكتوبرفست ميونخ 2026",
+      "banner": "افتح دليل مطارات أكتوبرفست ميونخ",
+      "intro": "يقام أكتوبرفست ميونخ، النسخة 191 من فيزن، من السبت 19 سبتمبر إلى الأحد 4 أكتوبر 2026 في ثيريزينفيزه داخل ميونخ. يبدأ الافتتاح الرسمي عند الساعة 12:00 يوم السبت الأول بطقس فتح البرميل في خيمة شوتنهامل، والدخول إلى أرض المهرجان مجاني. حول هذه الفترة ترتفع حركة الوصول والمغادرة، لذلك تساعد لوحات الرحلات الحية في مطاري ميونخ MUC وميمينغن FMM على متابعة أي تغيير قبل التحرك.",
+      "getting": "البوابة الرئيسية هي مطار ميونخ MUC، على بعد نحو 40–42 كم شمال شرق ثيريزينفيزه، وزمن الوصول الواقعي من الباب إلى الباب 45–65 دقيقة بحسب الوسيلة. تصل قطارات S-Bahn S1 وS8 إلى هاوبتبانهوف في نحو 40 دقيقة، وقد يكون النزول في هاكربروكه أسرع مع مشي 10 دقائق. تتوفر أيضاً حافلة لوفتهانزا السريعة وسيارات الأجرة والتحويلات المحجوزة. أما FMM فبعيد، نحو 110–112 كم، مع حافلات مباشرة إلى ميونخ أو حافلة محلية ثم قطار؛ لذلك هو خيار احتياطي اقتصادي.",
+      "leaving": "تتركز موجة العودة الجوية في عطلة الختام 3–4 أكتوبر 2026، ثم صباح الاثنين 5 أكتوبر، لأن الأحد الأخير «كيهراوس» يغلق المهرجان ويدفع كثيراً من الرحلات إلى مساء الأحد والاثنين. توقّع ازدحاماً في MUC، ومعه حركة إضافية في FMM، خصوصاً إذا غادرت من المدينة بعد زيارة ثيريزينفيزه. اذهب إلى المطار أبكر من المعتاد، وافحص لوحة المغادرات الحية قبل مغادرة الفندق أو محطة القطار.",
+      "tips": "خطط لمرحلة الميل الأخير كما تخطط للرحلة نفسها. لا يوجد موقف سيارات في ثيريزينفيزه، ومحطة U4/U5 ثيريزينفيزه هي الأقرب لكنها الأكثر ازدحاماً. فكّر في هاكربروكه أو غوته بلاتس أو بوتشيشتراسه للمشي نحو 10 دقائق. في عطلات نهاية الأسبوع والأمسيات قد تُغلق هاكربروكه عند زيادة الحشود، فاحتفظ بخطة بديلة ومسار مشي واضح.",
+      "sec": {
+        "boards": "لوحات مطارات فيزن: MUC وFMM",
+        "getting": "الوصول من المطارات إلى ثيريزينفيزه",
+        "leaving": "مغادرة ميونخ بعد كيهراوس",
+        "tips": "نصائح سفر لأيام أكتوبرفست المزدحمة"
+      }
+    },
+    "de": {
+      "title": "Oktoberfest München 2026: Flughäfen & Flüge MUC/FMM",
+      "description": "Live-Flugtafeln für MUC/FMM zum Oktoberfest München 2026: Anreise zur Theresienwiese, Abflugwellen und Flughafen-Checks.",
+      "h1": "Oktoberfest München 2026: Flüge und Flughäfen",
+      "banner": "Zum Flughafen-Guide für die Wiesn 2026",
+      "intro": "Das 191. Oktoberfest München läuft von Samstag, 19. September, bis Sonntag, 4. Oktober 2026, auf der Theresienwiese in München. Die Eröffnung ist am ersten Samstag um 12:00 mit dem „O’zapft is!“ im Schottenhamel-Zelt; das Gelände liegt direkt südwestlich des Hauptbahnhofs. Rund um Anreise- und Abreisetage helfen Live-Flugtafeln, Verspätungen, Ankünfte und Abflüge an MUC und FMM vor der Weiterfahrt rechtzeitig zu prüfen.",
+      "getting": "Der Flughafen München (MUC) ist das wichtigste Tor zur Wiesn: etwa 40–42 km nordöstlich der Theresienwiese, realistisch 45–65 Minuten Tür zu Tür. S1 und S8 fahren zum Hauptbahnhof; Hackerbrücke liegt eine Station früher mit ausgeschildertem 10-Minuten-Fußweg. Alternativ gibt es Lufthansa Express Bus, Taxi oder vorgebuchte Transfers. Memmingen (FMM) liegt rund 112 km entfernt; Direktcoaches nach München brauchen etwa 80 Minuten. Es ist ein Budget-Ausweichflughafen, kein naher Flughafen.",
+      "leaving": "Die stärkste Abflugwelle liegt am Schlusswochenende 3.–4. Oktober 2026 und am Montag, 5. Oktober, weil der „Kehraus“ am Sonntag viele Rückflüge in den Abend und Montagmorgen schiebt. MUC kann dann deutlich voller sein; auch FMM braucht wegen der Entfernung mehr Puffer. Planen Sie früher als üblich am Flughafen zu sein und prüfen Sie die Live-Abflugtafel, bevor Sie Richtung Flughafen losfahren.",
+      "tips": "Nutzen Sie für die letzte Strecke möglichst Bahn, Tram oder Bus: An der Theresienwiese gibt es keine Parkplätze. U4/U5 bis Theresienwiese ist am nächsten, aber besonders voll; Hackerbrücke, Goetheplatz, Poccistraße oder Schwanthalerhöhe bedeuten etwa 10 Minuten Fußweg. Rechnen Sie an Wochenenden, abends und am 3. Oktober mit Sperrungen, Umwegen und zusätzlicher Zeit.",
+      "sec": {
+        "boards": "Live-Flugtafeln zur Wiesn: MUC und FMM",
+        "getting": "Vom Flughafen zur Theresienwiese",
+        "leaving": "Rückflug nach dem Kehraus",
+        "tips": "Wiesn-Anreise ohne Parkplatzsuche"
+      }
+    },
+    "ko": {
+      "title": "옥토버페스트 뮌헨 2026 공항·항공편 안내",
+      "description": "2026년 9월 19일~10월 4일 뮌헨 테레지엔비제의 제191회 옥토버페스트 여행자를 위해 MUC/FMM 실시간 항공편 보드와 공항 이동 정보를 확인하세요.",
+      "h1": "옥토버페스트 뮌헨 2026 공항 이동 및 실시간 항공편",
+      "banner": "옥토버페스트 공항 이동 가이드 열기",
+      "intro": "옥토버페스트 뮌헨, 제191회 비스엔은 2026년 9월 19일 토요일부터 10월 4일 일요일까지 독일 뮌헨의 테레지엔비제에서 열리는 축제입니다. 개막 토요일 12:00에는 쇼텐하멜 텐트의 케그 태핑으로 공식 개장이 시작됩니다. 행사장은 뮌헨 중앙역 바로 남서쪽 도심에 있어 항공 도착 시간이 중요합니다. 개막 금요일과 토요일, 그리고 폐막 주말에는 MUC/FMM 실시간 항공편 보드로 지연과 도착 변동을 먼저 확인하는 것이 좋습니다.",
+      "getting": "주 관문은 뮌헨공항 MUC로, 테레지엔비제에서 도로 기준 약 40~42km 북동쪽이며 실제 문앞 이동은 대략 45~65분입니다. S반 S1·S8은 공항과 중앙역을 약 40분에 잇고, 하커브뤼케에서 내리면 북쪽 입구까지 표지판을 따라 약 10분 걸을 수 있습니다. 루프트한자 익스프레스 버스는 공항과 중앙역을 약 45분에 연결합니다. 택시와 사전 예약 차량도 운행합니다. FMM은 약 112km 떨어진 예산형 대안 공항으로 보아야 합니다.",
+      "leaving": "귀국 항공편이 몰리는 시기는 2026년 10월 3~4일 폐막 주말과 다음 월요일인 10월 5일입니다. 마지막 일요일 케라우스가 축제를 마무리하면서 출발 수요가 일요일 저녁과 월요일 아침으로 이어집니다. MUC와 FMM 모두 보안, 수하물, 지상교통 대기 시간이 평소보다 길어질 수 있으므로 공항에는 평소보다 일찍 도착하세요. 숙소나 행사장을 떠나기 전 실시간 출발 보드에서 항공편 상태를 확인하면 불필요한 공항 대기를 줄일 수 있습니다.",
+      "tips": "테레지엔비제에는 주차장이 없으므로 대중교통을 우선 계획하세요. U4/U5 테레지엔비제역은 가장 가깝지만 혼잡이 큽니다. 슈반탈러회에, 괴테플라츠, 포치슈트라세, 하커브뤼케처럼 약 10분 걷는 대안도 검토하세요. 주말과 저녁에는 하커브뤼케가 보행량에 따라 닫힐 수 있어 여유 시간을 두는 것이 안전합니다.",
+      "sec": {
+        "boards": "옥토버페스트 주변 공항 실시간 보드",
+        "getting": "테레지엔비제까지 공항 이동",
+        "leaving": "폐막 주말 귀국 항공편",
+        "tips": "비스엔 항공 여행 팁"
+      }
+    },
+    "ja": {
+      "title": "オクトーバーフェスト・ミュンヘン2026｜空港・フライト案内",
+      "description": "2026年9月19日〜10月4日のミュンヘン・オクトーバーフェストへ飛行機で向かう方向け。MUC/FMMのライブ運航ボードで到着・出発を確認し、テレージエンヴィーゼまでの移動と帰路の混雑に備えます。",
+      "h1": "オクトーバーフェスト・ミュンヘン2026の空港アクセス",
+      "banner": "MUC/FMMからヴィーズン会場へ：空港・フライト案内",
+      "intro": "オクトーバーフェスト・ミュンヘン（第191回ヴィーズン）は、2026年9月19日（土）12:00から10月4日（日）23:30まで、ミュンヘン市内のテレージエンヴィーゼで開かれる祭典です。会場は中央駅の南西すぐにある42ヘクタールの見本市広場です。開幕日、週末、最終日周辺は到着と出発が重なりやすいため、MUC/FMMのライブ運航ボードで遅延や欠航を確認してから移動計画を固めると実用的です。",
+      "getting": "主な玄関口はミュンヘン空港（MUC）で、テレージエンヴィーゼから道路で約40〜42km北東、所要は手段によりおおむね45〜65分です。SバーンS1/S8は空港と市内を結び、中央駅まで約40分、Hackerbrückeで降りると北入口まで徒歩約10分です。Lufthansa Express Busは空港から中央駅へ直行約45分、タクシーや事前予約送迎も利用できます。メミンゲン空港（FMM）は約112km離れた低コスト便向けの代替で、近い空港ではありません。",
+      "leaving": "帰路の山は閉幕週末の2026年10月3〜4日と、翌10月5日（月）です。最終日「Kehraus」の後は日曜夜から月曜朝に出発が集中し、MUCやFMM、駅、空港行き交通が混み合う可能性があります。通常より早めに空港へ向かう余裕を取り、宿泊先や会場周辺を出る前にライブ出発ボードで運航状況を確認してください。",
+      "tips": "テレージエンヴィーゼに駐車場はないため、公共交通を前提にしてください。U4/U5のTheresienwiese駅は最寄りですが混雑しやすく、Schwanthalerhöhe、Goetheplatz、Poccistraße、Hackerbrückeなど徒歩約10分の代替も検討できます。週末や夕方はHackerbrückeが状況により閉鎖されることがあり、到着に1時間以上余分にかかる場合があります。",
+      "sec": {
+        "boards": "ヴィーズン最寄り空港のライブ運航ボード",
+        "getting": "MUC/FMMからテレージエンヴィーゼへ",
+        "leaving": "閉幕週末後の帰国フライト",
+        "tips": "オクトーバーフェスト期間の空港移動メモ"
+      }
+    },
+    "fr": {
+      "title": "Oktoberfest Munich 2026 : vols et aéroports MUC/FMM",
+      "description": "Guide aéroport pour l’Oktoberfest Munich 2026 avec tableaux de vols en direct MUC/FMM, accès à Theresienwiese et départs retour.",
+      "h1": "Oktoberfest Munich 2026 : aéroports et vols en direct",
+      "banner": "Ouvrir le guide vols pour l’Oktoberfest 2026",
+      "intro": "L’Oktoberfest Munich, 191e Wiesn, se tient du samedi 19 septembre au dimanche 4 octobre 2026 sur la Theresienwiese, à Munich. Le festival dure 16 jours; l’ouverture a lieu à 12:00 le premier samedi avec le cérémonial « O’zapft is! ». Autour de ces dates, les arrivées internationales et les retours se concentrent: consulter un tableau de vols en direct aide à suivre retards, annulations et changements avant de partir vers l’aéroport.",
+      "getting": "La porte d’entrée principale est l’aéroport de Munich (MUC), à environ 40–42 km au nord-est de la Theresienwiese; comptez 45–65 minutes porte à porte selon le mode. Les S-Bahn S1 et S8 rejoignent München Hauptbahnhof en environ 40 minutes; descendre à Hackerbrücke ajoute une marche indiquée de 10 minutes. Le Lufthansa Express Bus va à Hauptbahnhof en environ 45 minutes. Memmingen (FMM), à environ 112 km, est une solution de repli à bas coût, pas un aéroport proche.",
+      "leaving": "Le pic de retours suit le week-end de clôture des 3–4 octobre 2026 et le lundi 5 octobre. Le dernier dimanche, « Kehraus », concentre des départs le dimanche soir et le lundi matin. Les aéroports MUC et FMM peuvent être chargés, avec files et trajets urbains plus lents. Prévoyez d’arriver plus tôt que d’habitude et vérifiez le tableau des départs en direct avant de quitter Munich pour l’aéroport.",
+      "tips": "La Theresienwiese n’a pas de parking: privilégiez les transports publics ou les parcs relais hors de la zone à faibles émissions. La station U4/U5 Theresienwiese est la plus proche et la plus fréquentée; Schwanthalerhöhe, Goetheplatz, Poccistraße, Hackerbrücke ou Hauptbahnhof ajoutent environ 10 à 15 minutes à pied. Gardez une marge les week-ends et vérifiez votre vol avant le dernier trajet.",
+      "sec": {
+        "boards": "Tableaux de vols MUC/FMM pour la Wiesn",
+        "getting": "Rejoindre la Theresienwiese depuis l’aéroport",
+        "leaving": "Rentrer après le Kehraus",
+        "tips": "Conseils pratiques pour l’Oktoberfest"
+      }
+    },
+    "es": {
+      "title": "Oktoberfest Múnich 2026: aeropuertos y vuelos MUC/FMM",
+      "description": "Guía aérea para Oktoberfest Múnich 2026: consulta live flight boards de MUC/FMM y opciones entre aeropuertos y Theresienwiese.",
+      "h1": "Vuelos y aeropuertos para Oktoberfest Múnich 2026",
+      "banner": "Abre la guía aérea para Oktoberfest Múnich 2026",
+      "intro": "El Oktoberfest Munich (191st Wiesn) se celebra del sábado 19 de septiembre al domingo 4 de octubre de 2026 en Theresienwiese, Múnich. Son 16 días de festival, con apertura oficial a las 12:00 del primer sábado mediante el “O'zapft is!”. Al coincidir con grandes llegadas internacionales, consultar paneles de vuelos en vivo para MUC y FMM ayuda a ajustar traslados, esperas y conexiones alrededor de esas fechas.",
+      "getting": "El acceso principal es el Aeropuerto de Múnich (MUC), a unos 40–42 km al noreste de Theresienwiese; el trayecto puerta a puerta suele ser de 45–65 minutos. Desde MUC, las S-Bahn S1 y S8 conectan con Hauptbahnhof en unos 40 minutos; bajar en Hackerbrücke deja un paseo señalizado de 10 minutos. También existen Lufthansa Express Bus, taxis y traslados privados. Memmingen (FMM), a unos 112 km, es una alternativa de bajo coste y lejana, con coaches directos o bus local más tren.",
+      "leaving": "El mayor regreso por aire se concentra en el fin de semana de cierre, 3–4 de octubre de 2026, y el lunes 5 de octubre. El domingo final, “Kehraus”, cierra el festival y desplaza muchas salidas a la tarde del domingo y la mañana del lunes. MUC y, en menor medida, FMM pueden estar más concurridos: salga antes de lo habitual y revise el panel de salidas en vivo antes de ir al aeropuerto.",
+      "tips": "Planifique margen para el último tramo: Theresienwiese está dentro de Múnich, a unos 15 minutos a pie de Hauptbahnhof, pero U4/U5 y Hackerbrücke pueden saturarse. Considere rutas alternativas señaladas por la ciudad y viaje ligero. No cuente con aparcar en el recinto; si conduce, use park-and-ride fuera de la zona de bajas emisiones.",
+      "sec": {
+        "boards": "Paneles MUC/FMM para la Wiesn 2026",
+        "getting": "De MUC y FMM a Theresienwiese",
+        "leaving": "Regreso tras el Kehraus",
+        "tips": "Consejos de viaje para Oktoberfest"
+      }
+    },
+    "it": {
+      "title": "Oktoberfest Monaco 2026: aeroporti e voli live",
+      "description": "Come volare all’Oktoberfest 2026 a Monaco: aeroporti MUC/FMM, collegamenti con Theresienwiese e tabelloni voli live per arrivi e partenze.",
+      "h1": "Oktoberfest Monaco 2026: aeroporti, voli e trasferimenti",
+      "banner": "Apri la guida voli per l’Oktoberfest 2026",
+      "intro": "L’Oktoberfest di Monaco, 191ª Wiesn, si svolge da sabato 19 settembre a domenica 4 ottobre 2026 sulla Theresienwiese, a Monaco di Baviera. L’apertura ufficiale è alle 12:00 del primo sabato con il rito “O’zapft is!” nel tendone Schottenhamel; l’accesso all’area è gratuito. Nei giorni di arrivo e rientro, controllare i tabelloni voli live aiuta a verificare ritardi o cancellazioni prima di muoversi tra aeroporto, città e festival.",
+      "getting": "L’aeroporto principale è Munich Airport (MUC), circa 40–42 km a nord-est della Theresienwiese: il tragitto porta in genere 45–65 minuti porta a porta. Dall’aeroporto le S-Bahn S1 e S8 raggiungono München Hauptbahnhof in circa 40 minuti; scendere a Hackerbrücke lascia una camminata segnalata di 10 minuti. Esistono anche Lufthansa Express Bus, taxi e transfer. Memmingen (FMM), a circa 110–112 km, è un’alternativa low-cost lontana, con coach diretti o bus locale più Deutsche Bahn.",
+      "leaving": "Il picco dei voli di ritorno cade sul weekend finale del 3–4 ottobre 2026 e sul lunedì 5 ottobre. La domenica conclusiva, il “Kehraus”, chiude il festival e spinge molte partenze verso la sera di domenica e la mattina di lunedì. MUC e FMM possono risultare più affollati del normale: parti per l’aeroporto con margine extra e controlla il tabellone partenze live prima di lasciare Monaco.",
+      "tips": "Per l’ultimo tratto evita di contare solo su U4/U5 per Theresienwiese: è la fermata più vicina e anche la più affollata. Valuta Hackerbrücke, Hauptbahnhof, Schwanthalerhöhe, Goetheplatz o Poccistraße, con circa 10–15 minuti a piedi secondo la fermata. Non c’è parcheggio alla Theresienwiese. Nei sabati, nel weekend italiano del 25–27 settembre e il 3 ottobre, lascia più tempo e segui gli aggiornamenti MVG.",
+      "sec": {
+        "boards": "Tabelloni live MUC e FMM per la Wiesn",
+        "getting": "Da MUC e FMM alla Theresienwiese",
+        "leaving": "Rientri dopo il Kehraus del 4 ottobre",
+        "tips": "Consigli di viaggio per la Wiesn 2026"
+      }
+    },
+    "hi": {
+      "title": "ऑक्टोबरफेस्ट म्यूनिख 2026: एयरपोर्ट और उड़ानें",
+      "description": "ऑक्टोबरफेस्ट म्यूनिख 2026 के लिए MUC/FMM के लाइव उड़ान बोर्ड देखें: आगमन, प्रस्थान और थेरेज़िएनवीज़े तक यात्रा की योजना।",
+      "h1": "ऑक्टोबरफेस्ट म्यूनिख 2026 के लिए एयरपोर्ट गाइड",
+      "banner": "ऑक्टोबरफेस्ट के MUC/FMM लाइव बोर्ड खोलें",
+      "intro": "ऑक्टोबरफेस्ट म्यूनिख, 191वां वीज़न, शनिवार 19 सितंबर से रविवार 4 अक्टूबर 2026 तक म्यूनिख के थेरेज़िएनवीज़े में 16 दिनों का उत्सव है। स्थल शहर के भीतर, मुख्य स्टेशन के तुरंत दक्षिण-पश्चिम में 42-हेक्टेयर मेला मैदान है; म्यूनिख हाउपटबानहोफ से पैदल लगभग 15 मिनट लगते हैं। इन तारीखों पर अंतरराष्ट्रीय आगमन और वापसी बढ़ती है, इसलिए MUC और FMM के लाइव उड़ान बोर्ड देखकर आगमन और प्रस्थान स्थिति जांचना उपयोगी है।",
+      "getting": "मुख्य द्वार म्यूनिख एयरपोर्ट (MUC) है, स्थल से करीब 40–42 किमी उत्तर-पूर्व; सामान्य दरवाजा-दरवाजा समय 45–65 मिनट है। S-Bahn S1/S8 हाउपटबानहोफ तक लगभग 40 मिनट लेती हैं; हैकरब्रुके पर उतरकर उत्तर प्रवेश तक संकेतित 10 मिनट की पैदल राह अक्सर बेहतर है। लुफ्थांसा एक्सप्रेस बस करीब 45 मिनट, और टैक्सी/ऐप-गाड़ी सामान्य ट्रैफिक में 35–50 मिनट लेती है। FMM लगभग 112 किमी दूर है; सीधे कोच करीब 80 मिनट लेते हैं, या स्थानीय बस और रेल विकल्प है। इसे पास का एयरपोर्ट नहीं, दूरस्थ बजट विकल्प मानें।",
+      "leaving": "वापसी की सबसे व्यस्त उड़ान लहर समापन सप्ताहांत 3–4 अक्टूबर 2026 और सोमवार 5 अक्टूबर को है। अंतिम रविवार, “केहराउस”, उत्सव बंद करता है, इसलिए कई प्रस्थान रविवार शाम और सोमवार सुबह की ओर जाते हैं। MUC पर भीड़ अधिक हो सकती है और FMM पर कम लागत वाली उड़ानों के यात्री एक साथ पहुंच सकते हैं। सामान्य से पहले एयरपोर्ट के लिए निकलें, और शहर छोड़ने से पहले लाइव प्रस्थान बोर्ड जांचें।",
+      "tips": "थेरेज़िएनवीज़े पर पार्किंग नहीं है, इसलिए सार्वजनिक परिवहन या बाहरी पार्क-एंड-राइड की योजना बनाएं। U4/U5 का थेरेज़िएनवीज़े स्टेशन सबसे नजदीक पर सबसे भीड़भाड़ वाला है; गोएथेप्लात्स, पोच्चीश्ट्रासे या हैकरब्रुके से पैदल मार्ग शांत हो सकते हैं। सामान हल्का रखें, बदलाव के लिए अतिरिक्त समय रखें और एयरपोर्ट जाने से पहले आगमन/प्रस्थान बोर्ड दोबारा देखें।",
+      "sec": {
+        "boards": "ऑक्टोबरफेस्ट के नजदीकी एयरपोर्ट और लाइव बोर्ड",
+        "getting": "MUC/FMM से थेरेज़िएनवीज़े तक",
+        "leaving": "केहराउस के बाद वापसी उड़ानें",
+        "tips": "वीज़न यात्रा के एयरपोर्ट सुझाव"
+      }
+    },
+    "tr": {
+      "title": "Münih Oktoberfest 2026: Havalimanları ve Uçuşlar",
+      "description": "Oktoberfest Münih 2026 için MUC ve FMM canlı uçuş panoları; Theresienwiese’ye geliş ve dönüşte havalimanı bilgilerini kontrol edin.",
+      "h1": "Oktoberfest Münih 2026 havalimanı ve uçuş rehberi",
+      "banner": "Oktoberfest için MUC/FMM canlı uçuş rehberini açın",
+      "intro": "Münih Oktoberfest’i (191. Wiesn), 19 Eylül Cumartesi–4 Ekim Pazar 2026 arasında Münih’teki Theresienwiese’de düzenlenen 16 günlük bir festivaldir. Açılış, Schottenhamel çadırındaki törensel fıçı açılışıyla yapılır. Alan, Münih ana istasyonunun hemen güneybatısında, şehir içindedir. Bu tarihlerde varış ve dönüş dalgaları yoğunlaşabileceği için MUC ve FMM canlı uçuş panolarını kontrol etmek yol planını güncel tutar. Üç Cumartesi ve resmi tatil geleneksel olarak en güçlü günlerdir.",
+      "getting": "Ana giriş kapısı Münih Havalimanı’dır (MUC); Theresienwiese’nin yaklaşık 40–42 km kuzeydoğusundadır ve kapıdan kapıya gerçekçi süre 45–65 dakikadır. S1 ve S8 S-Bahn hatları havalimanından München Hauptbahnhof’a yaklaşık 40 dakikada gider; Hackerbrücke’de inmek kuzey girişine işaretli 10 dakikalık yürüyüş sağlar. Lufthansa Express Bus Hauptbahnhof’a yaklaşık 45 dakikada gider. Taksi ve önceden ayarlı özel transfer de çalışır. Memmingen (FMM) yaklaşık 112 km uzakta, düşük maliyetli bir yedek seçenektir; direkt otobüsle Münih’e yaklaşık 80 dakika sürer.",
+      "leaving": "Festivalden eve uçuş dalgası kapanış hafta sonu 3–4 Ekim 2026 ve takip eden Pazartesi, 5 Ekim’de yoğunlaşır. Son Pazar “Kehraus” festivali kapatır; bu da dönüşleri Pazar akşamı ve Pazartesi sabahına iter. Açılış Cuma/Cumartesi 18–19 Eylül karşı yönlü varış zirvesidir. MUC ve FMM’de kalabalık ve ulaşım gecikmeleri için normalden erken yola çıkın. Otelden veya şehir merkezinden ayrılmadan önce canlı kalkış panosunu kontrol ederek uçuş durumunu tekrar görün.",
+      "tips": "Yoğun günlerde son kilometreyi esnek planlayın: U4/U5 Theresienwiese en yakın ama en kalabalık istasyondur. Schwanthalerhöhe hâlâ çok kalabalık olabilir; Goetheplatz normal, Poccistraße nispeten sakindir. Hackerbrücke’den kuzey girişine 10 dakika, Hauptbahnhof’tan yaklaşık 15 dakika yürünür. Theresienwiese’de otopark yoktur; araçla gelenler şehir dışı park-et-devam alanlarını kullanmalı; düşük emisyon bölgesine girişte yeşil çevre etiketi gerekir.",
+      "sec": {
+        "boards": "Wiesn için MUC ve FMM canlı uçuş panoları",
+        "getting": "Theresienwiese’ye MUC ve FMM’den ulaşım",
+        "leaving": "Kehraus sonrası havalimanına dönüş",
+        "tips": "Oktoberfest günlerinde uçuş ve son kilometre notları"
+      }
+    }
+  }
+}

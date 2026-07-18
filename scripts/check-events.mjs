@@ -81,9 +81,14 @@ for (const f of files) {
     const c = ev.locales?.[loc];
     if (!c) { fail(`${id}: locale ${loc} missing (would render EN and be noindexed)`); continue; }
     for (const k of REQUIRED) if (!c[k]) fail(`${id}/${loc}: "${k}" missing`);
-    if (c.title && c.title.length > 70) warn(`${id}/${loc}: title ${c.title.length} chars (SERP truncates ~60-65)`);
-    if (c.description && (c.description.length < 80 || c.description.length > 170)) {
-      warn(`${id}/${loc}: description ${c.description.length} chars (aim 120-155)`);
+    // CJK packs far more meaning per character, and SERP truncation is by pixel width,
+    // so the Latin char budgets would flag perfectly good zh/ja/ko copy.
+    const cjk = ['zh', 'ja', 'ko'].includes(loc);
+    const maxTitle = cjk ? 40 : 70;
+    const [minDesc, maxDesc] = cjk ? [45, 95] : [80, 170];
+    if (c.title && c.title.length > maxTitle) warn(`${id}/${loc}: title ${c.title.length} chars (SERP truncates ~${cjk ? 35 : 60}-${cjk ? 40 : 65})`);
+    if (c.description && (c.description.length < minDesc || c.description.length > maxDesc)) {
+      warn(`${id}/${loc}: description ${c.description.length} chars (aim ${cjk ? '55-90' : '120-155'})`);
     }
   }
 }

@@ -1,0 +1,225 @@
+{
+  "meta": {
+    "slug": "f1-madrid",
+    "name": "Formula 1 Spanish Grand Prix 2026 (Madrid, Madring)",
+    "startDate": "2026-09-11T13:30:00+02:00",
+    "endDate": "2026-09-13T17:00:00+02:00",
+    "venue": "Madring (IFEMA Madrid circuit), Avda. del Partenón 5",
+    "venueCity": "Madrid",
+    "country": "ES",
+    "type": "sports",
+    "officialUrl": "https://www.madring.com/en",
+    "status": "scheduled",
+    "sources": [
+      "https://www.formula1.com/en/racing/2026/spain",
+      "https://en.wikipedia.org/wiki/2026_Spanish_Grand_Prix",
+      "https://en.wikipedia.org/wiki/Madring",
+      "https://www.madring.com/en/press-releases/spanish-gp-calendar",
+      "https://www.madring.com/en/circuit/location-access",
+      "https://www.ifema.es/en/how-to-get-here",
+      "https://www.formula1.com/en/latest/article/madrid-formula-1-calendar-2026-spanish-grand-prix.rKwSPJ74MczwzDhHVxdQz",
+      "https://gpdestinations.com/how-to-get-to-the-madring-spanish-grand-prix-madrid/",
+      "https://motorsporttickets.com/blog/how-to-get-to-the-madring-circuit-for-the-madrid-f1-grand-prix/"
+    ],
+    "airports": [
+      {
+        "iata": "MAD",
+        "km": 9
+      }
+    ]
+  },
+  "locales": {
+    "en": {
+      "title": "Formula 1 Spanish GP 2026 Airports & MAD Flights",
+      "description": "Use live flight boards for MAD around the Formula 1 Spanish Grand Prix 2026 at Madring, with airport arrivals and departures.",
+      "h1": "Formula 1 Spanish Grand Prix 2026 airport guide",
+      "banner": "Open the Madring airport and flight-board guide",
+      "intro": "The Formula 1 Spanish Grand Prix 2026 runs 11–13 September 2026 at Madring, the IFEMA Madrid circuit at Avda. del Partenón 5 in Madrid. F2 and F3 also compete that weekend, lengthening on-site days and spreading arrivals across all three days. With about 110,000 spectators per day and most international air travellers funnelling through MAD, live airport boards help track same-day arrivals, delays and departures around the race weekend.",
+      "getting": "Adolfo Suárez Madrid-Barajas (MAD) is the main and effectively only gateway: Madrid has no second commercial airport, and Madring sits beside the airport at IFEMA in Barajas/Valdebebas. The venue is about 9 km away, roughly 8–13 km by road depending on terminal, or about 10–15 minutes by car outside peak. Metro Line 8 to Feria de Madrid is the headline link; Cercanías C-1, EMT buses, taxis and ride-hailing also serve the area.",
+      "leaving": "After the Grand Prix finishes late afternoon on Sunday 13 September, the fly-home crunch is expected at MAD on Sunday evening 13 September and Monday morning 14 September. Roads around IFEMA, airport approaches and hotel areas can bunch up after sessions, especially in the hour after the Sunday race. Leave extra time for metro, train, bus, taxi or ride-hailing connections, and check the live MAD departures board before setting off for the airport.",
+      "tips": "Plan around public transport rather than circuit parking, which is deliberately limited. If you land at T4, allow for the outlying terminal when choosing Metro Line 8 or Cercanías C-1. Friday 11 September is the main arrival build-up, with another wave on Saturday. Keep airport-board checks close to travel time, because airport-adjacent roads and connections can tighten quickly.",
+      "sec": {
+        "boards": "MAD live boards for Madring weekend",
+        "getting": "From Barajas to the IFEMA Madrid circuit",
+        "leaving": "Flying home after the Sunday race",
+        "tips": "Race-weekend airport travel tips"
+      }
+    },
+    "ru": {
+      "title": "Гран-при Испании F1 2026: аэропорт MAD и рейсы",
+      "description": "Как лететь на Гран-при Испании F1 2026 в Мадриде: живые табло рейсов MAD, прилёты, вылеты и дорога до Madring у IFEMA и обратно.",
+      "h1": "Гран-при Испании F1 2026: рейсы через MAD",
+      "banner": "Откройте гид по рейсам на Гран-при Испании F1",
+      "intro": "Гран-при Испании Формулы-1 2026 пройдёт 11–13 сентября 2026 года на трассе Madring у IFEMA Madrid, Avda. del Partenón 5, в Мадриде. Гонка возвращает F1 в Мадрид после более чем 45 лет, а в тот же уик-энд на Madring выступают F2 и F3. Вместимость старта — около 110 000 зрителей в день, поэтому вокруг этих дат важно заранее смотреть живое табло MAD: задержки прилётов и вылетов быстро меняют планы поездок к трассе.",
+      "getting": "Главный и фактически единственный авиационный вход — Adolfo Suárez Madrid-Barajas (MAD): в Мадриде нет второго коммерческого аэропорта, а Madring построен вокруг IFEMA рядом с аэропортом. До Avda. del Partenón 5 около 8–13 км по дороге, примерно 10–15 минут на машине вне пиков. Базовая связь — метро Line 8 до Feria de Madrid: одна остановка от Aeropuerto T1-T2-T3, три от T4, около 8 минут и короткая пешая часть. Также есть Cercanías C-1 до Valdebebas, автобусы EMT, такси, Uber и Bolt.",
+      "leaving": "После гонки в воскресенье 13 сентября, которая начинается в середине дня и заканчивается ближе к вечеру, пик вылетов придётся на вечер 13 сентября и утро понедельника 14 сентября. MAD принимает почти весь авиапоток события, поэтому терминалы, подходы к аэропорту и дороги M-11, M-40 и A-2 могут уплотняться вместе с зонами IFEMA. Закладывайте больше времени, чем обычно, и перед выходом из отеля проверяйте живое табло вылетов MAD, чтобы не ехать к аэропорту вслепую.",
+      "tips": "Парковка у трассы намеренно ограничена, а организаторы ожидают, что около 90% зрителей приедут на метро, поезде или автобусе. Держите запас времени на пересадки, особенно перед воскресной гонкой и в час после финиша. Сравнивайте Line 8, Cercanías C-1 и автобусы EMT с текущим статусом рейса MAD; при такси, Uber или Bolt учитывайте те же коридоры к аэропорту.",
+      "sec": {
+        "boards": "Ближайший аэропорт к Madring: табло MAD",
+        "getting": "Как добраться из MAD к трассе Madring",
+        "leaving": "Вылет домой после мадридского Гран-при",
+        "tips": "Советы для авиапоездки на Madring"
+      }
+    },
+    "zh": {
+      "title": "2026年F1西班牙大奖赛机场交通：MAD航班动态",
+      "description": "查看2026年F1西班牙大奖赛（马德里Madring）机场出行指南：覆盖9月11日至13日赛事期间，提供MAD实时航班板、到IFEMA赛道的地铁/城铁/巴士选择、赛后周日晚至周一早返程高峰与提前到机场建议，适合经阿道弗·苏亚雷斯马德里-巴拉哈斯机场抵离的旅客。",
+      "h1": "2026年F1西班牙大奖赛：MAD机场航班与到场交通",
+      "banner": "去Madring看F1？打开MAD机场与赛道交通指南",
+      "intro": "2026年F1西班牙大奖赛将于2026年9月11日13:30至9月13日17:00在马德里Madring（IFEMA马德里赛道，帕特农大道5号）举行。赛道位于巴拉哈斯/巴尔德贝巴斯区域、机场旁，每日容量约11万人。周五有到达累积，周六还有排位观众抵达；查看MAD实时机场航班板，有助于在航班提前、延误或取消时调整到场时间。",
+      "getting": "阿道弗·苏亚雷斯马德里-巴拉哈斯机场（MAD）是主要且实际唯一的航空门户，马德里没有第二个商业机场。Madring距机场约9公里，按航站楼不同公路约8–13公里，非高峰驾车约10–15分钟；赛道资料称距机场5分钟。首选连接是地铁8号线：从T1-T2-T3一站、从T4三站到Feria de Madrid，约8分钟后短步行。C-1城铁到Valdebebas，73/122路巴士、出租车和Uber、Bolt也可用。",
+      "leaving": "大奖赛正赛在9月13日周日下午开始、傍晚前结束，因此MAD返程压力集中在9月13日周日晚上和9月14日周一早晨。赛事结束后一小时，航站楼、机场进出道路和IFEMA周边会同时聚集人流；M-11、M-40和A-2也是机场通道。离场去机场请比平时更早出发，并在离开酒店或赛道前查看MAD实时出发航班板。",
+      "tips": "尽量把地铁、城铁或巴士作为基础方案：停车有限，组织方预计约90%观众使用公共交通。提前确认航站楼，尤其T4位置较远；同一天还有F2、F3，现场停留时间可能更长。保留换乘缓冲，若航班状态变化，再调整去Feria de Madrid或Valdebebas的路线。",
+      "sec": {
+        "boards": "Madring最近机场与MAD实时航班板",
+        "getting": "从巴拉哈斯机场到IFEMA赛道",
+        "leaving": "9月13/14日赛后返程航班",
+        "tips": "大奖赛周末航空出行提示"
+      }
+    },
+    "ar": {
+      "title": "جائزة إسبانيا الكبرى F1 2026: مطار MAD والرحلات",
+      "description": "دليل الوصول إلى جائزة إسبانيا الكبرى F1 2026 في مدرينغ مع لوحات الرحلات المباشرة لمطار MAD لمتابعة الوصول والمغادرة حول عطلة السباق.",
+      "h1": "الرحلات والمطار لجائزة إسبانيا الكبرى F1 2026 في مدريد",
+      "banner": "افتح دليل السفر إلى مدرينغ عبر مطار مدريد",
+      "intro": "تقام جائزة إسبانيا الكبرى للفورمولا 1 2026 في مدرينغ، حلبة IFEMA Madrid، في Avda. del Partenón 5 بمدريد، من 11 سبتمبر 2026 الساعة 13:30 حتى 13 سبتمبر 2026 الساعة 17:00. لأنها تقام بجوار محور مطار مدريد ومع سباقات F2 وF3 في عطلة الأسبوع نفسها، قد تتجمع موجات وصول ومغادرة كبيرة. متابعة لوحة الرحلات الحية لمطار MAD تساعدك على ضبط وقت الخروج من الفندق أو الحلبة.",
+      "getting": "بوابة السفر الجوي الرئيسية، وعملياً الوحيدة، هي مطار أدولفو سواريز مدريد-باراخاس MAD؛ لا تملك مدريد مطاراً تجارياً ثانياً. تقع مدرينغ حول IFEMA في باراخاس/فالدبيباس، على نحو 9 كم من الحلبة، أو 8–13 كم براً حسب مبنى الوصول، وحوالي 10–15 دقيقة بالسيارة خارج الذروة. الخيار الأبرز هو المترو: الخط 8 إلى محطة Feria de Madrid، رحلة تقارب 8 دقائق ثم مشي قصير. تتوفر أيضاً Cercanías C-1 إلى Valdebebas، وحافلات EMT، وسيارات أجرة وتطبيقات.",
+      "leaving": "ينتهي سباق الأحد 13 سبتمبر في أواخر بعد الظهر بعد انطلاقه منتصف بعد الظهر، لذلك تكون ذروة السفر إلى الوطن في مساء الأحد 13 سبتمبر وصباح الاثنين 14 سبتمبر في MAD. مع سعة افتتاحية تقارب 110,000 متفرج يومياً، وممرات M-11 وM-40 وA-2 نفسها التي تخدم المطار، قد تزدحم الطرق والصالات. اترك وقتاً أطول من المعتاد، وراجع لوحة المغادرات الحية قبل مغادرة الحلبة أو الفندق.",
+      "tips": "خطط على أساس النقل العام أولاً، فمواقف الحلبة محدودة والمنظمون يدفعون نحو المترو والقطار والحافلات. احفظ اسم محطة Feria de Madrid وجهة Valdebebas قبل السفر، وتحقق من حالة رحلتك عند الاستيقاظ وقبل التحرك. إذا وصلت يوم الجمعة أو السبت، اترك هامشاً للحقائب والتنقل، خصوصاً عند تبديل الخطوط في Nuevos Ministerios أو محطات القطار.",
+      "sec": {
+        "boards": "أقرب مطار ولوحات MAD الحية لمدرينغ",
+        "getting": "من باراخاس إلى حلبة IFEMA Madrid",
+        "leaving": "مغادرة مدريد بعد سباق الأحد",
+        "tips": "نصائح سفر لعطلة سباق مدرينغ"
+      }
+    },
+    "de": {
+      "title": "Formula 1 Spanish Grand Prix 2026: Flughäfen & Flüge",
+      "description": "Anreise zum Formula 1 Spanish Grand Prix 2026 in Madrid: Live-Flugtafeln für MAD, Flughafentransfer zum Madring und Rückflugtipps.",
+      "h1": "Flüge zum Formula 1 Spanish Grand Prix 2026 in Madrid",
+      "banner": "Flugtafeln und Anreise zum Madring in Madrid öffnen",
+      "intro": "Der Formula 1 Spanish Grand Prix 2026 findet vom 11. bis 13. September 2026 am Madring, dem IFEMA-Madrid-Kurs an der Avda. del Partenón 5 in Madrid, statt. Das Gelände liegt direkt im Flughafen-Korridor von Barajas; am Freitag baut sich die Anreise auf, am Samstag folgt eine zweite Welle für Qualifying-Besucher. Weil F2 und F3 ebenfalls fahren, verteilen sich Ankünfte über mehrere Tage. Ein Live-Board für MAD hilft, Verspätungen vor der Weiterfahrt zum Madring einzuordnen.",
+      "getting": "Adolfo Suárez Madrid-Barajas (MAD) ist das Haupttor und praktisch der einzige Verkehrsflughafen für Madrid. Der Madring liegt etwa 9 km entfernt; je nach Terminal sind es auf der Straße rund 8–13 km, außerhalb der Spitzenzeiten etwa 10–15 Minuten mit dem Auto. Die wichtigste Verbindung ist Metro-Linie 8: von Aeropuerto T1-T2-T3 eine Station, von T4 drei Stationen bis Feria de Madrid, dann kurzer Fußweg. Cercanías C-1, EMT-Busse, Taxis sowie Uber und Bolt ergänzen die Anreise.",
+      "leaving": "Der stärkste Rückflugdruck entsteht nach dem Rennen am Sonntag, 13. September, das am Nachmittag beginnt und spät am Nachmittag endet. Sonntagabend, 13. September, und Montagmorgen, 14. September, sind deshalb die kritischen Abflugfenster bei MAD. Rund um IFEMA, die Flughafenzufahrten und Hotelbereiche können sich Verkehrswellen bilden, besonders in der Stunde nach Rennende. Planen Sie mehr Zeit als üblich ein und prüfen Sie die Live-Abflugtafel, bevor Sie zum Flughafen aufbrechen.",
+      "tips": "Speichern Sie Terminal und Verkehrsmittel vor der Landung: Metro-Linie 8, Cercanías C-1, EMT-Linien 73 und 122 sowie Shuttle- und Taktverstärkungen an Veranstaltungstagen sind die relevanten Optionen. Da Parkplätze am Circuit bewusst begrenzt sind und viele Besucher per öffentlichem Verkehr anreisen sollen, bleibt Flexibilität wichtig. Prüfen Sie bei jeder Umsteigeentscheidung die aktuelle MAD-Ankunfts- oder Abflugtafel.",
+      "sec": {
+        "boards": "MAD-Live-Flugtafeln für den Madring",
+        "getting": "Vom Flughafen Barajas zum IFEMA-Kurs",
+        "leaving": "Rückflüge nach dem Madrid-Grand-Prix",
+        "tips": "Praktische Hinweise für Madring-Reisende"
+      }
+    },
+    "ko": {
+      "title": "2026 F1 스페인 그랑프리 공항·항공편 안내 | MAD",
+      "description": "2026 F1 스페인 그랑프리 마드리드 방문자를 위한 MAD 실시간 운항판과 공항 이동 안내. Madring·IFEMA 주변 도착·출발 혼잡, 지하철 8호선, 일요일 저녁과 월요일 아침 귀국 피크 전 항공편 변동을 확인하세요.",
+      "h1": "2026 F1 스페인 그랑프리 MAD 공항 이동 안내",
+      "banner": "Madring 방문 전 MAD 실시간 운항판과 이동 방법을 확인하세요",
+      "intro": "Formula 1 Spanish Grand Prix 2026은 2026년 9월 11일 13:30부터 9월 13일 17:00까지 스페인 마드리드의 Madring, IFEMA Madrid circuit, Avda. del Partenón 5에서 열립니다. F2와 F3도 같은 주말에 진행되어 현장 체류 시간이 길어질 수 있습니다. 마드리드의 F1 복귀는 45년 이상 만이며, 유럽과 장거리 모터스포츠 여행객도 섞입니다. 경기장은 공항 옆 교통축에 있고 하루 약 110,000명 수용으로 시작하므로, MAD 도착·출발 실시간 운항판을 확인하면 일정 조정에 도움이 됩니다.",
+      "getting": "가장 가까운, 사실상 유일한 항공 관문은 Adolfo Suárez Madrid-Barajas(MAD)입니다. Madring은 Barajas/Valdebebas 지구의 IFEMA 주변에 있으며, 서킷 안내상 공항에서 5분 거리입니다. 터미널에 따라 도로 거리는 약 8–13km, 혼잡하지 않으면 차량으로 약 10–15분입니다. 대표 연결은 Madrid Metro 8호선으로, 공항 터미널에서 Feria de Madrid역까지 T1-T2-T3 기준 한 정거장, T4 기준 세 정거장, 약 8분 후 짧게 걸으면 됩니다. Cercanías C-1, EMT 73·122번, 택시와 Uber·Bolt도 이용됩니다.",
+      "leaving": "귀국 수요는 결승이 열리는 9월 13일 일요일 저녁과 9월 14일 월요일 아침에 MAD로 몰립니다. 금요일 9월 11일에는 도착이 늘고, 토요일에는 예선만 보는 방문객의 두 번째 도착 물결도 있습니다. 행사장 주차가 제한되고 약 90%가 지하철, 열차, 버스를 이용하도록 유도되지만, IFEMA 주변과 공항 접근도로는 세션 전후에 밀릴 수 있습니다. 평소보다 일찍 공항에 도착하도록 잡고, 출발 전 MAD 실시간 출발 운항판을 확인하세요.",
+      "tips": "큰 행사 주말에는 같은 노선에 관람객이 집중되므로, 이동 계획은 한 가지 이상 준비하세요. Metro 8호선, Cercanías C-1, EMT 버스, 택시·승차 호출 중 숙소 위치에 맞는 경로를 비교하고, 제한된 주차와 M-11, M-40, A-2 혼잡 가능성을 감안하세요. 공항으로 가기 전에는 실시간 운항판과 여유 시간을 함께 확인하면 일정 변경에 대응하기 쉽습니다.",
+      "sec": {
+        "boards": "MAD 실시간 운항판과 Madring 인근 공항",
+        "getting": "바라하스에서 IFEMA Madring까지",
+        "leaving": "결승 후 MAD 귀국 흐름",
+        "tips": "그랑프리 주말 항공 이동 팁"
+      }
+    },
+    "ja": {
+      "title": "F1スペインGP 2026（マドリード）空港・フライト情報",
+      "description": "F1スペインGP 2026（マドリード・Madring）へ向かう旅行者向けに、MADのライブフライトボード、空港からIFEMAへの移動、決勝後の出発ピークを整理。地下鉄8号線、セルカニアス、バス、タクシー利用時の要点も確認できます。",
+      "h1": "F1スペインGP 2026：MAD空港からMadringへ",
+      "banner": "MAD発着便を確認してMadring移動を計画",
+      "intro": "Formula 1 Spanish Grand Prix 2026は、2026年9月11日13:30から9月13日17:00まで、マドリードのMadring（IFEMA Madrid circuit、Avda. del Partenón 5）で開催されます。F2とF3も同じ週末に行われ、会場は1日約110,000人規模です。11日の到着増、12日の予選目的の到着、13日夕方から14日朝の帰路では、MADのライブ空港ボードで発着状況を確認しておくと移動判断に役立ちます。",
+      "getting": "Adolfo Suárez Madrid-Barajas（MAD）が主な、事実上唯一の空の玄関口です。MadringはIFEMA Madrid周辺にあり、空港から約9km、ターミナルにより道路距離は約8〜13km、混雑外なら車で約10〜15分です。地下鉄8号線は空港各ターミナルとFeria de Madrid駅を結び、T1-T2-T3から1駅、T4から3駅で約8分、そこから徒歩で会場へ向かえます。Cercanías C-1、EMTバス、タクシー、Uber、Boltも選択肢です。",
+      "leaving": "決勝は9月13日日曜の午後に始まり、現地時間の夕方遅くに終了します。そのためMADの出発混雑は、9月13日日曜夕方と9月14日月曜朝が中心です。会場周辺のM-11、M-40、A-2は空港への動線とも重なり、各セッション前後、特に日曜決勝前と終了後1時間に集中しやすくなります。通常より早めに空港へ向かい、出発前にMADのライブ出発ボードで便の状況を確認してください。",
+      "tips": "駐車場は意図的に限定され、主催者側は観客の約90%が地下鉄、鉄道、バスで来場すると見込んでいます。地下鉄8号線、Cercanías C-1、IFEMA行きのEMT路線を優先して比較し、T4利用時は移動距離が長くなる点も考慮してください。イベント日はIFEMA、Valdebebas、Las Cárcavas方面のバス増便や特別シャトル、地下鉄延長が案内されています。",
+      "sec": {
+        "boards": "Madring最寄りのMADライブ運航ボード",
+        "getting": "MADからIFEMAのMadringへ",
+        "leaving": "決勝後のMAD出発ピーク",
+        "tips": "レース週末の空港移動メモ"
+      }
+    },
+    "fr": {
+      "title": "GP d’Espagne F1 2026 : vols et aéroport MAD",
+      "description": "Accès aérien au GP d’Espagne F1 2026 à Madrid, avec tableaux de vols en direct pour MAD, départs, arrivées et conseils.",
+      "h1": "Vols et aéroport pour le GP d’Espagne F1 2026",
+      "banner": "Ouvrir le guide vols pour le GP F1 de Madrid",
+      "intro": "Le Formula 1 Spanish Grand Prix 2026 se déroule du 11 septembre à 13 h 30 au 13 septembre à 17 h au Madring, le circuit IFEMA Madrid, Avda. del Partenón 5, à Madrid. Le site est accolé au corridor de l’aéroport Adolfo Suárez Madrid-Barajas (MAD), porte d’entrée principale. Autour des arrivées du vendredi, des qualifications du samedi et de la course du dimanche, consulter le tableau des vols aide à suivre retards et départs.",
+      "getting": "MAD est la porte d’entrée principale, et pratiquement unique, pour rejoindre le Madring : environ 9 km, ou 8 à 13 km selon le terminal, soit 10 à 15 minutes en voiture hors pointe. Le métro est la liaison clé : la ligne 8 relie les terminaux à Feria de Madrid, à l’entrée sud d’IFEMA, en environ 8 minutes. Cercanías C-1 dessert aussi Valdebebas, tandis que des bus EMT, taxis et VTC existent.",
+      "leaving": "Le pic de retour se concentre le dimanche soir 13 septembre et le lundi matin 14 septembre, après une course qui finit en fin d’après-midi. Avec environ 110 000 spectateurs par jour et un stationnement limité, MAD, les accès IFEMA et les axes M-11, M-40 et A-2 peuvent être chargés. Prévoyez d’arriver à l’aéroport plus tôt que d’habitude et vérifiez le tableau des départs en direct avant de quitter Madrid ou le circuit.",
+      "tips": "Préparez votre trajet aéroport-circuit avant le départ : terminal d’arrivée, station Feria de Madrid ou Valdebebas, et marge pour marcher jusqu’aux accès. Les organisateurs poussent métro, train et bus, avec renforts annoncés les jours d’événement. Gardez vos bagages et documents de voyage accessibles, puis recontrôlez arrivées et départs MAD pendant le week-end.",
+      "sec": {
+        "boards": "Tableaux MAD en direct pour le Madring",
+        "getting": "De Madrid-Barajas au circuit IFEMA",
+        "leaving": "Repartir après la course du dimanche",
+        "tips": "Conseils voyageurs pour le week-end F1"
+      }
+    },
+    "es": {
+      "title": "GP de España F1 2026: vuelos y aeropuerto MAD",
+      "description": "Consulta paneles de vuelos en vivo de MAD para viajar al GP de España F1 2026 en Madring: llegadas, salidas y enlaces con IFEMA.",
+      "h1": "Vuelos y aeropuerto para el GP de España F1 2026",
+      "banner": "Abre la guía de vuelos para el GP de España F1 2026",
+      "intro": "El Formula 1 Spanish Grand Prix 2026 se celebra del 11 al 13 de septiembre de 2026 en Madring, el circuito de IFEMA Madrid, Avda. del Partenón 5, Madrid. Con F2 y F3 el mismo fin de semana y una capacidad inicial de unos 110.000 espectadores al día, las llegadas y salidas se concentran en torno a MAD. Revisar el panel de vuelos en vivo ayuda a ajustar traslados cuando haya cambios o demoras.",
+      "getting": "El aeropuerto principal, y en la práctica el único para vuelos comerciales, es Adolfo Suárez Madrid-Barajas (MAD). Madring está junto a IFEMA, a unos 9 km; por carretera son aproximadamente 8–13 km según terminal, unos 10–15 minutos en coche fuera de horas punta. La conexión destacada es Metro línea 8 hasta Feria de Madrid: una parada desde T1-T2-T3 y tres desde T4, unos 8 minutos, más un paseo corto. También existen Cercanías C-1 por Valdebebas, buses EMT 73 y 122, taxi, Uber y Bolt.",
+      "leaving": "La carrera del domingo 13 de septiembre empieza a media tarde y termina a última hora de la tarde, por lo que el pico de regreso en MAD se concentra el domingo por la noche y el lunes 14 por la mañana. El viernes 11 es la acumulación principal de llegadas, con otra ola el sábado. Tras el evento, MAD y los accesos de IFEMA pueden saturarse; llegue antes de lo habitual al aeropuerto y consulte el panel de salidas en vivo antes de salir hacia MAD.",
+      "tips": "Priorice metro, Cercanías o bus: el aparcamiento del circuito es limitado y la organización espera que alrededor del 90% del público llegue en transporte público. Prevea más tiempo en los corredores M-11, M-40 y A-2, especialmente antes de cada sesión y justo después. Guarde margen para caminar desde Feria de Madrid o Valdebebas y vuelva a comprobar su vuelo el día del viaje.",
+      "sec": {
+        "boards": "Paneles en vivo de MAD para Madring",
+        "getting": "Del aeropuerto Madrid-Barajas a Madring",
+        "leaving": "Regreso en avión tras la carrera del domingo",
+        "tips": "Consejos de viaje para el fin de semana de F1"
+      }
+    },
+    "it": {
+      "title": "GP di Spagna F1 2026: aeroporti e voli per Madrid",
+      "description": "Guida voli per il GP di Spagna F1 2026 al Madring: consulta i tabelloni voli live per MAD e pianifica arrivi e partenze.",
+      "h1": "Voli e aeroporti per il GP di Spagna F1 2026 a Madrid",
+      "banner": "Apri la guida voli per il GP di Spagna F1 al Madring",
+      "intro": "Il Formula 1 Spanish Grand Prix 2026 si svolge al Madring, il circuito IFEMA Madrid in Avda. del Partenón 5, Madrid, dall’11 settembre alle 13:30 al 13 settembre alle 17:00. Con F2 e F3 nello stesso weekend e una capacità iniziale di circa 110.000 spettatori al giorno, gli arrivi aerei su MAD possono concentrarsi soprattutto venerdì 11 e sabato 12. Controllare il tabellone live aiuta a seguire ritardi, arrivi e coincidenze prima di muoversi.",
+      "getting": "L’Adolfo Suárez Madrid-Barajas (MAD) è la porta principale e di fatto unica: Madrid non ha un secondo aeroporto commerciale e il circuito è accanto a Barajas/Valdebebas, circa 9 km da IFEMA; su strada sono 8–13 km, circa 10–15 minuti in auto fuori punta. La connessione chiave è la Metro Linea 8: da Aeropuerto T1-T2-T3 è una fermata per Feria de Madrid, da T4 tre fermate, circa 8 minuti, poi breve cammino. Esistono anche Cercanías C-1, bus EMT, taxi e ride-hailing.",
+      "leaving": "Dopo la gara di domenica 13 settembre, prevista nel pomeriggio e con fine nel tardo pomeriggio, l’ondata di rientro si concentra su domenica sera 13 settembre e lunedì mattina 14 settembre a MAD. Le aree IFEMA, gli accessi aeroportuali e i corridoi M-11, M-40 e A-2 possono essere affollati, soprattutto nell’ora dopo la fine. Parti prima del solito per l’aeroporto e controlla il tabellone partenze live prima di lasciare Madrid o il circuito.",
+      "tips": "Prepara il percorso prima di atterrare: il parcheggio al circuito è limitato e gli organizzatori spingono metro, treno e bus, con circa il 90% degli spettatori atteso sui mezzi pubblici. Verifica quale terminal usi a MAD, perché T4 è più esterno. Se dormi in città, considera Linea 8 via Nuevos Ministerios o Cercanías verso Valdebebas, lasciando margine per controlli e code.",
+      "sec": {
+        "boards": "Tabelloni voli MAD per il weekend del Madring",
+        "getting": "Da Madrid-Barajas al circuito IFEMA Madring",
+        "leaving": "Rientri dopo la gara di domenica",
+        "tips": "Consigli di viaggio per il GP a Madrid"
+      }
+    },
+    "hi": {
+      "title": "स्पैनिश ग्रां प्री 2026: MAD एयरपोर्ट उड़ानें",
+      "description": "Madring में F1 स्पैनिश ग्रां प्री 2026 के लिए MAD के लाइव फ्लाइट बोर्ड देखें: आगमन, प्रस्थान और एयरपोर्ट यात्रा जानकारी।",
+      "h1": "F1 स्पैनिश ग्रां प्री 2026 के लिए MAD एयरपोर्ट गाइड",
+      "banner": "Madring रेस वीकेंड के लिए MAD उड़ान गाइड खोलें",
+      "intro": "फॉर्मूला 1 स्पैनिश ग्रां प्री 2026, 11 सितंबर 13:30 से 13 सितंबर 17:00 तक, मद्रिद के Madring (IFEMA Madrid circuit), Avda. del Partenón 5 में होगा। F2 और F3 भी इसी वीकेंड चलेंगे, इसलिए ऑन-साइट दिन लंबे और आगमन तीनों दिनों में फैले रहेंगे। लगभग 110,000 दर्शक प्रतिदिन क्षमता वाले इस एयरपोर्ट-नजदीक स्थल के लिए MAD का लाइव एयरपोर्ट बोर्ड देखकर आगमन और प्रस्थान की स्थिति मिलाना उपयोगी है।",
+      "getting": "Adolfo Suárez Madrid-Barajas (MAD) मुख्य और लगभग अकेला हवाई प्रवेश द्वार है; मद्रिद में दूसरा वाणिज्यिक एयरपोर्ट नहीं है। Madring, IFEMA के Barajas/Valdebebas क्षेत्र में, MAD से करीब 9 किमी है; टर्मिनल के अनुसार सड़क दूरी 8–13 किमी और पीक के बाहर कार से लगभग 10–15 मिनट है। Metro Line 8 सीधे Feria de Madrid तक जाती है; Cercanías C-1 Valdebebas, बस 73/122, टैक्सी और Uber/Bolt भी विकल्प हैं।",
+      "leaving": "मुख्य रेस रविवार 13 सितंबर को स्थानीय समयानुसार दोपहर बाद शुरू होकर देर दोपहर समाप्त होती है, इसलिए MAD पर उड़ान-घर वापसी की भीड़ रविवार शाम 13 सितंबर और सोमवार सुबह 14 सितंबर में केंद्रित रहेगी। IFEMA, एयरपोर्ट अप्रोच और होटल क्षेत्रों वाली सड़कों पर सत्रों से पहले और समाप्ति के बाद दबाव बढ़ता है, खासकर रेस के बाद का पहला घंटा। सामान्य से पहले एयरपोर्ट पहुँचें और निकलने से पहले MAD लाइव प्रस्थान बोर्ड जाँचें।",
+      "tips": "बड़ी भीड़ वाले वीकेंड में अपनी एयरलाइन की सूचना और लाइव बोर्ड दोनों देखें। यदि संभव हो तो Metro Line 8, Cercanías C-1 या IFEMA जाने वाली बसों को सड़क यात्रा पर प्राथमिकता दें, क्योंकि पार्किंग सीमित है और अधिकांश दर्शक सार्वजनिक परिवहन से आएँगे। टर्मिनल, सामान और शहर-से-एयरपोर्ट समय में अतिरिक्त मार्जिन रखें।",
+      "sec": {
+        "boards": "Madring के लिए नजदीकी MAD लाइव बोर्ड",
+        "getting": "MAD से IFEMA Madring तक पहुँचना",
+        "leaving": "13–14 सितंबर की वापसी उड़ानें",
+        "tips": "रेस वीकेंड हवाई यात्रा सुझाव"
+      }
+    },
+    "tr": {
+      "title": "Formula 1 İspanya GP 2026: MAD uçuşları ve havalimanı",
+      "description": "Formula 1 İspanya GP 2026 için MAD canlı uçuş panoları: varış, kalkış, havalimanı ulaşımı ve Madring’e gidiş bilgileri.",
+      "h1": "Formula 1 İspanya GP 2026 için MAD uçuş rehberi",
+      "banner": "Madring’e uçuşla gelenler için MAD rehberini açın",
+      "intro": "Formula 1 İspanya Grand Prix 2026, 11 Eylül 13:30’dan 13 Eylül 17:00’ye kadar Madrid’deki Madring’de, IFEMA Madrid pisti çevresinde düzenlenir. Adres Avda. del Partenón 5, Madrid’dir. F2 ve F3 destek yarışları da aynı hafta sonunda yer aldığı için seyahat akışı üç güne yayılır. MAD canlı havalimanı panosunu kontrol etmek, 11 Eylül varış yoğunluğu ve yarış sonrası dönüş planları için özellikle önemlidir.",
+      "getting": "Adolfo Suárez Madrid-Barajas (MAD), Madring için ana ve fiilen tek hava kapısıdır; Madrid’in ikinci ticari havalimanı yoktur. Pist, IFEMA Madrid çevresinde, havalimanına yaklaşık 9 km mesafededir; terminale göre yol 8–13 km, yoğunluk dışında otomobille yaklaşık 10–15 dakikadır. En belirgin bağlantı Metro 8 hattıdır: Feria de Madrid istasyonu IFEMA Güney Kapısı’ndadır, T1-T2-T3’ten bir durak, T4’ten üç durak, yaklaşık 8 dakika. Cercanías C-1, EMT 73/122, taksi ve araç çağırma da seçeneklerdir.",
+      "leaving": "Grand Prix 13 Eylül Pazar günü öğleden sonra başlayıp geç öğleden sonra biter; bu nedenle MAD’de dönüş yoğunluğu 13 Eylül Pazar akşamı ve 14 Eylül Pazartesi sabahına toplanır. Yaklaşık 110.000 günlük kapasite, sınırlı pist otoparkı ve havalimanına giden M-11, M-40, A-2 koridorları nedeniyle IFEMA ve terminal yaklaşımları kalabalık olabilir. Havalimanına normalden erken gidin ve yola çıkmadan önce MAD canlı kalkış panosunu kontrol edin.",
+      "tips": "Etkinlik günlerinde seyahat belgelerinizi, havayolu bildirimlerini ve canlı panoları birlikte izleyin. Toplu taşımaya öncelik verin; organizatörler izleyicilerin büyük bölümünün metro, tren veya otobüsle gelmesini bekler. Aynı gün F2/F3 programı da bulunduğundan alandaki süre uzayabilir. Bagaj ve aktarma payınızı, kalabalık istasyon yürüyüşlerini hesaba katarak planlayın. Uçuşunuzda değişiklik olursa terminale gitmeden önce taşıyıcınızın yönlendirmesini kontrol edin.",
+      "sec": {
+        "boards": "Madring’e En Yakın MAD Canlı Panoları",
+        "getting": "MAD’den Madring ve IFEMA’ya Ulaşım",
+        "leaving": "Yarış Sonrası MAD’den Dönüş Uçuşları",
+        "tips": "Madrid GP Hafta Sonu Uçuş İpuçları"
+      }
+    }
+  }
+}

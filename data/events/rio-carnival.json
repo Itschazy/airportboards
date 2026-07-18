@@ -1,0 +1,244 @@
+{
+  "meta": {
+    "slug": "rio-carnival",
+    "name": "Rio Carnival (Sambadrome Parades)",
+    "startDate": "2027-02-05T20:50:00-03:00",
+    "endDate": "2027-02-13T21:00:00-03:00",
+    "venue": "Sambódromo Marquês de Sapucaí (Passarela Professor Darcy Ribeiro)",
+    "venueCity": "Rio de Janeiro",
+    "country": "BR",
+    "type": "festival",
+    "officialUrl": "https://liesa.org.br/",
+    "status": "scheduled",
+    "sources": [
+      "https://liesa.org.br/noticias/260416.html",
+      "https://liesa.org.br/carnaval/horario-dos-desfiles.html",
+      "https://exame.com/pop/venda-de-ingressos-para-a-sapucai-em-2027-comeca-hoje-confira-os-precos/",
+      "https://diariodorio.com/serie-ouro-define-ordem-dos-desfiles-para-o-carnaval-2027-na-sapucai/",
+      "https://www.camarotecarnaval.com/sambodromo/desfile-das-campeas",
+      "https://en.wikipedia.org/wiki/Sambadrome_Marqu%C3%AAs_de_Sapuca%C3%AD",
+      "https://en.wikipedia.org/wiki/Santos_Dumont_Airport",
+      "https://en.wikipedia.org/wiki/Rio_de_Janeiro/Gale%C3%A3o_International_Airport",
+      "https://cetrio.prefeitura.rio/noticias/cet-rio-implantara-operacoes-especiais-de-transito-para-o-carnaval-rio-2026/",
+      "https://cetrio.prefeitura.rio/noticias/cet-rio-monta-esquemas-de-transito-para-o-carnaval-do-rio-2026/",
+      "https://diariodorio.com/carnaval-2026-saiba-em-qual-estacao-do-metro-descer-de-acordo-com-seu-setor-na-sapucai-2/",
+      "https://www.metrorio.com.br/Estacoes?p_ponto=13",
+      "https://trilhos.motiva.com.br/vltrio/",
+      "https://pt.wikipedia.org/wiki/Linha_3_do_VLT_Carioca",
+      "https://pt.wikipedia.org/wiki/Linha_1_do_VLT_Carioca",
+      "https://www.riogaleao.com/passageiros/como-chegar-e-sair/brt/",
+      "https://pt.wikipedia.org/wiki/Esta%C3%A7%C3%A3o_Vicente_de_Carvalho_(BRT)",
+      "https://www.cnnbrasil.com.br/nacional/sudeste/rj/cerca-de-600-mil-passageiros-desembarcam-no-galeao-para-o-carnaval-do-rio/",
+      "https://diariodorio.com/galeao-recebe-quase-600-mil-passageiros-para-o-carnaval-do-rio",
+      "https://www.gov.br/portos-e-aeroportos/pt-br/assuntos/noticias/2026/02/carnaval-de-2026-movimenta-mais-de-2-1-milhoes-de-passageiros-e-pode-registrar-melhor-resultado-da-historia",
+      "https://brasilturis.com.br/2026/02/23/carnaval-2026-300-mil-turistas-internacionais/",
+      "https://temporealrj.com/rio-turistas-estrangeiros-carnaval-brasil-2026/",
+      "https://www.rome2rio.com/s/Rio-De-Janeiro-Galeao-Airport-GIG/Sambadrome-Marqu%C3%AAs-de-Sapuca%C3%AD",
+      "https://www.rome2rio.com/s/Rio-De-Janeiro-Santos-Dumont-Airport-SDU/Sambadrome-Marqu%C3%AAs-de-Sapuca%C3%AD"
+    ],
+    "airports": [
+      {
+        "iata": "SDU",
+        "km": 5
+      },
+      {
+        "iata": "GIG",
+        "km": 16
+      }
+    ]
+  },
+  "locales": {
+    "en": {
+      "title": "Rio Carnival 2027 Airports and Live Flight Boards",
+      "description": "Plan Rio Carnival flights with live flight boards for SDU/GIG, airport distances, transfers to the Sambadrome and fly-home timing.",
+      "h1": "Rio Carnival 2027: Airports, Flights and Sambadrome Transfers",
+      "banner": "Open the Rio Carnival airport and flight guide",
+      "intro": "Rio Carnival (Sambadrome Parades) runs from 5 to 13 February 2027 at the Sambódromo Marquês de Sapucaí, also called the Sapucaí, in Rio de Janeiro. The programme includes Série Ouro, Grupo Especial and the Champions' Parade, drawing heavy airport use around parade nights. Live boards for Santos Dumont (SDU) and Galeão (GIG) help travellers watch delays, arrivals and departures before choosing when to cross the city.",
+      "getting": "GIG is Rio's main international gateway and is about 16 km by road from the Sambadrome; taxi or ride-hail can take about 15–20 minutes off-peak and longer on parade nights. SDU is closest, about 5 km away and normally 10–15 minutes by taxi, but it is essentially domestic. From SDU, VLT light rail reaches Central, followed by roughly a 700 m walk. From GIG, use taxi, ride-hail, BRT to metro, or city bus.",
+      "leaving": "Airports are busiest after the main Carnival dates, especially Ash Wednesday, 10 February 2027, with a smaller second wave after the Champions' Parade on the weekend of 13–14 February. Expect crowded terminals at GIG and SDU, longer road journeys near the Sambadrome and more demand for taxis and ride-hailing. Arrive earlier than usual and check the live departures board before leaving for the airport so you can adjust your transfer time.",
+      "tips": "Match your Sambadrome sector to the correct rail stop: Praça Onze serves even-numbered sectors, while Central do Brasil serves odd-numbered sectors and the assembly area. On parade days, special traffic closures affect roads around Presidente Vargas and taxi points are kept around the perimeter. Allow much more time than a map estimate and avoid driving when possible.",
+      "sec": {
+        "boards": "Live SDU and GIG boards for the Sapucaí",
+        "getting": "Getting to the Sambadrome from Rio airports",
+        "leaving": "Flying home after the Carnival parades",
+        "tips": "Sapucaí travel tips for parade nights"
+      }
+    },
+    "ru": {
+      "title": "Карнавал в Рио 2027: аэропорты и рейсы SDU/GIG",
+      "description": "Онлайн-табло рейсов SDU/GIG для поездки на карнавал в Рио: прилёты, вылеты и ориентиры от аэропортов до Самбодрома.",
+      "h1": "Карнавал в Рио: рейсы SDU/GIG и дорога к Самбодрому",
+      "banner": "Откройте гид по аэропортам к карнавалу в Рио",
+      "intro": "Карнавал в Рио (парады Самбодрома) проходит с 5 февраля 2027 года, когда Série Ouro выводит первые школы на проспект примерно в 20:50, до 13 февраля, когда в 21:00 начинается Desfile das Campeãs. Место — Sambódromo Marquês de Sapucaí (Passarela Professor Darcy Ribeiro) в Рио-де-Жанейро. В эти дни поток прилётов через GIG и внутренних рейсов через SDU плотный, поэтому перед трансфером полезно сверять онлайн-табло прилётов и вылетов.",
+      "getting": "Главные международные прилёты идут через Rio de Janeiro/Galeão–Antônio Carlos Jobim (GIG) на острове Говернадор: до Sambódromo около 16 км, такси или заказная поездка через приложение занимают примерно 15–20 минут вне пика и дольше в парадные вечера. Ближайший аэропорт — Santos Dumont (SDU), около 5 км, 10–15 минут на такси в нормальном трафике; он фактически внутренний. От SDU есть VLT Carioca до Central, далее около 700 м пешком. Из GIG без такси — BRT TransCarioca 24/7 до пересадки на метро, линия 2.",
+      "leaving": "После основных ночей Grupo Especial 7–9 февраля первая крупная волна вылетов приходится на Пепельную среду, 10 февраля; меньшая — после Парада чемпионов 13–14 февраля. В такие дни GIG и SDU могут быть заметно загружены: в 2026 году пиковыми были пятница заездов и Пепельная среда вылетов. Выезжайте в аэропорт раньше обычного, учитывайте карнавальные перекрытия в центре и проверьте онлайн-табло вылетов SDU/GIG до выезда.",
+      "tips": "Сверьте сторону сектора в билете: чётные сектора удобнее через Praça Onze, нечётные — через Central do Brasil. В парадные ночи лучше полагаться на метро или поезд, а не на поездку к воротам на машине: такси работают с выделенными точками посадки и высадки по периметру. Закладывайте запас на blocos и держите под рукой обновления рейса.",
+      "sec": {
+        "boards": "Онлайн-табло SDU/GIG для Sapucaí",
+        "getting": "Как добраться до Sambódromo Marquês de Sapucaí",
+        "leaving": "Вылеты после ночей парадов",
+        "tips": "Советы для перелёта на карнавал"
+      }
+    },
+    "zh": {
+      "title": "2027里约狂欢节航班与机场指南：SDU/GIG实时看板",
+      "description": "查看2027里约狂欢节桑巴大道游行期间的机场出行信息：SDU/GIG实时航班看板、最近机场、GIG国际到达、SDU国内衔接、到桑巴大道的地铁/VLT/BRT/出租车选择、返程高峰与出发前提醒。",
+      "h1": "2027里约狂欢节桑巴大道游行机场与航班指南",
+      "banner": "前往桑巴大道？打开SDU/GIG机场航班与交通指南",
+      "intro": "2027里约狂欢节桑巴大道游行于2月5日20:50至2月13日21:00在里约热内卢的Sambódromo Marquês de Sapucaí举行。节目包括Série Ouro、Grupo Especial和2月13日的冠军游行。狂欢节周机场客流集中，尤其2月5日抵达潮明显；出发前查看SDU和GIG实时航班看板，有助于确认航班状态并预留转乘时间。",
+      "getting": "GIG是里约主要国际门户，位于Governador Island，距桑巴大道约16公里；非高峰时出租车或网约车约15–20分钟，游行夜会更久。SDU最近，距场馆约5公里，正常车流约10–15分钟，也可步行不足一小时，但基本为国内机场。进场建议用地铁：Praça Onze服务偶数区，Central do Brasil服务奇数区；SDU有VLT，GIG可用BRT TransCarioca接地铁，也有巴士、出租车和网约车。",
+      "leaving": "返程高峰预计落在圣灰星期三，即2027年2月10日；2月13日冠军游行后的13–14日周末还会有第二波离境。GIG和SDU在狂欢节窗口都可能更拥挤，安检、值机和进场道路都应留出比平日更多时间。离开住处前先看实时出发看板，再决定何时前往机场；若游行夜道路管制仍在，优先考虑地铁或列车衔接。",
+      "tips": "确认自己使用的是GIG还是SDU：多数国际旅客到达GIG，SDU多用于巴西国内衔接。桑巴大道周边游行夜有专项交通管制，出租车上下客点不一定在入口旁。按票面奇偶区选择Praça Onze或Central do Brasil下车，并把街区封路、步行距离和航班变化一起纳入计划。",
+      "sec": {
+        "boards": "桑巴大道附近机场与SDU/GIG实时看板",
+        "getting": "从GIG或SDU前往Sapucaí",
+        "leaving": "圣灰星期三与冠军游行后的返程航班",
+        "tips": "狂欢节周航空出行提示"
+      }
+    },
+    "ar": {
+      "title": "كرنفال ريو 2027: المطارات والرحلات إلى السامبودروم",
+      "description": "دليل السفر الجوي إلى عروض كرنفال ريو في السامبودروم، مع لوحات الرحلات المباشرة في SDU وGIG لمتابعة الوصول والمغادرة حول المهرجان.",
+      "h1": "الوصول جواً إلى عروض كرنفال ريو في السامبودروم",
+      "banner": "افتح دليل مطارات ورحلات كرنفال ريو",
+      "intro": "تقام عروض كرنفال ريو في سامبودروم ماركيز دي سابوكاي (باساريلا بروفيسور دارسي ريبيرو) في ريو دي جانيرو، من 5 فبراير 2027 الساعة 20:50 حتى 13 فبراير 2027 الساعة 21:00. يشمل البرنامج سيري أورو في 5 و6 فبراير، وغروبو إسبسيال من 7 إلى 9 فبراير، ثم موكب الأبطال في 13 فبراير. حول هذه الليالي، تساعد لوحات المطارات المباشرة على متابعة الوصول والتأخير قبل الانتقال إلى وسط المدينة.",
+      "getting": "البوابة الدولية الرئيسية هي مطار ريو دي جانيرو/غاليون – أنطونيو كارلوس جوبيم GIG، على بعد نحو 16 كم من السامبودروم؛ تستغرق سيارة الأجرة أو تطبيقات النقل 15–20 دقيقة خارج الذروة وتطول في ليالي العروض. مطار سانتوس دومونت SDU هو الأقرب، نحو 5 كم و10–15 دقيقة في حركة عادية، لكنه داخلي أساساً. من SDU يوجد ترام VLT إلى سنترال، ومن GIG حافلات BRT ترانسكاريوكا وحافلة مدينة مباشرة؛ والمترو هو الخيار الموصى به للمنطقة.",
+      "leaving": "تتركز موجة العودة بعد العروض، خصوصاً يوم أربعاء الرماد 10 فبراير 2027، مع موجة أصغر بعد موكب الأبطال في عطلة 13–14 فبراير. قد تكون صالات GIG وSDU أكثر ازدحاماً من المعتاد، كما تؤثر إغلاقات المرور حول السامبودروم والبلوكوس في المدينة على زمن الطريق. اذهب إلى المطار أبكر من المعتاد، وراجع لوحة المغادرات المباشرة قبل مغادرة الفندق أو موقعك حتى لا تبدأ الرحلة البرية على معلومات قديمة.",
+      "tips": "طابق جهة القطاع على تذكرتك مع محطة النزول: براسا أونزي للقطاعات الزوجية وسنترال دو برازيل للقطاعات الفردية. اترك هامشاً كبيراً للطرق، لأن خطة المرور الخاصة تبدأ نهاراً وتغيّر نقاط إنزال سيارات الأجرة. فضّل المترو أو القطار بدلاً من القيادة، وراقب لوحات الوصول والمغادرة في يومي السفر، خصوصاً إذا كان لديك انتقال داخلي عبر SDU.",
+      "sec": {
+        "boards": "لوحات SDU وGIG الحية لأيام السامبودروم",
+        "getting": "من غاليون وسانتوس دومونت إلى سابوكاي",
+        "leaving": "العودة جواً بعد موكب الأبطال",
+        "tips": "نصائح سفر حول كرنفال ريو"
+      }
+    },
+    "de": {
+      "title": "Rio Carnival 2027: Flughäfen & Flüge nach SDU/GIG",
+      "description": "Live-Flugtafeln für SDU/GIG zum Rio Carnival 2027: Anreise zum Sambódromo, Rückflugwelle und Verkehr rund um die Paraden.",
+      "h1": "Rio Carnival 2027: Flüge zum Sambódromo",
+      "banner": "Rio-Carnival-Guide für SDU/GIG öffnen",
+      "intro": "Der Rio Carnival (Sambadrome Parades) läuft vom 5. bis 13. Februar 2027 im Sambódromo Marquês de Sapucaí (Passarela Professor Darcy Ribeiro) in Rio de Janeiro. Auf die Série Ouro am 5./6. Februar folgt das Grupo Especial vom 7. bis 9. Februar; die Champions' Parade schließt am 13. Februar. Rund um diese Nächte treffen viele Ankünfte, Straßensperren und späte Rückwege zusammen. Live-Flugtafeln helfen, SDU und GIG vor der Fahrt zu prüfen.",
+      "getting": "Der wichtigste internationale Flughafen ist Rio de Janeiro/Galeão (GIG) auf der Ilha do Governador; seit 2023 bündelt er den internationalen Verkehr. Bis zum Sambódromo sind es etwa 16 km: Taxi oder Ride-Hailing brauchen außerhalb der Spitzenzeit rund 15–20 Minuten, auf Paradenächten deutlich länger. Santos Dumont (SDU) liegt näher, etwa 5 km entfernt, ist aber im Wesentlichen Inland. Von SDU fahren VLT-Linien Richtung Central; von dort sind es etwa 700 m. Von GIG gibt es BRT TransCarioca, Bus, Taxi und Apps.",
+      "leaving": "Für den Heimflug ist der stärkste Abreisepunkt Aschermittwoch, 10. Februar 2027; eine kleinere zweite Welle folgt nach der Champions' Parade am Wochenende 13./14. Februar. GIG und SDU können dann voll sein, zumal der Carnival 2026 in Galeão rund 599.000 Reisende im Zehn-Tage-Fenster und in Santos Dumont rund 110.900 Reisende zählte. Planen Sie mehr Zeit am Flughafen ein und prüfen Sie die Live-Abflugtafel, bevor Sie losfahren.",
+      "tips": "Prüfen Sie vor der Fahrt, ob Ihr Sektor auf der geraden oder ungeraden Seite liegt: Praça Onze bedient die geraden Sektoren, Central do Brasil die ungeraden und den Aufstellbereich. An Paradenächten empfiehlt die Stadt Metro oder Zug statt Auto. Wegen Sperren um Avenida Presidente Vargas und zusätzlichen blocos in der Stadt sollten Taxi-, App- und Fußwege großzügig geplant werden.",
+      "sec": {
+        "boards": "Live-Flugtafeln für Rio Carnival: SDU & GIG",
+        "getting": "Vom Flughafen zur Sapucaí",
+        "leaving": "Rückflug nach den Sambadrome-Paraden",
+        "tips": "Praktische Hinweise für Carnival-Reisende"
+      }
+    },
+    "ko": {
+      "title": "리우 카니발 삼바드롬 퍼레이드 공항·항공편 안내",
+      "description": "2027 리우 카니발 삼바드롬 퍼레이드 여행객을 위한 공항 안내입니다. SDU/GIG 실시간 항공편 보드로 도착·출발 상태를 확인하고, 갈레앙·산투스 두몽에서 사푸카이까지 거리와 이동 선택지, 귀국 혼잡 시점을 함께 정리합니다.",
+      "h1": "리우 카니발 삼바드롬 퍼레이드 공항 이동 및 실시간 항공편",
+      "banner": "리우 카니발 삼바드롬 공항 이동 가이드 열기",
+      "intro": "리우 카니발 삼바드롬 퍼레이드는 2027년 2월 5일 20:50부터 2월 13일 21:00까지 리우데자네이루의 삼보드로모 마르케스 지 사푸카이, 즉 파사렐라 프로페소르 다르시 히베이루에서 열리는 축제입니다. 세리 오우루는 5~6일, 그루포 에스페시알은 7~9일, 챔피언 퍼레이드는 13일에 이어집니다. 입국 수요가 2월 5일 금요일에 몰릴 수 있어 SDU와 GIG 실시간 공항 보드 확인이 유용합니다. 행사 기간에는 도심 도로 통제와 대규모 이동이 겹치므로, 최신 운항 상태를 확인하는 편이 좋습니다.",
+      "getting": "국제선의 주 관문은 고베르나도르 섬의 리우데자네이루/갈레앙–안토니우 카를루스 조빙 국제공항(GIG)입니다. 2023년 이후 리우 국제 교통은 GIG가 맡고, 산투스 두몽(SDU)은 사실상 국내선 공항입니다. GIG에서 삼바드롬까지는 도로 약 16km이며 비혼잡 시간 택시·호출차로 약 15~20분이지만 퍼레이드 밤에는 더 길어집니다. 철도는 없으므로 BRT 트랜스카리오카, 비센치 지 카르발류 지하철 환승, 터미널 2발 시내버스를 봅니다. SDU는 약 5km, 정상 교통에서 택시 10~15분이며 VLT가 공항 안에서 출발합니다. 도보도 한 시간 이내입니다.",
+      "leaving": "귀국 수요는 결과 발표가 있는 재의 수요일 2027년 2월 10일에 가장 커질 수 있고, 2월 13일 챔피언 퍼레이드 뒤 13~14일 주말에 두 번째 물결이 생깁니다. 2026년 카니발 기간 GIG는 열흘 동안 약 599,000명, SDU는 약 110,900명을 처리했습니다. 2027년에도 공항과 도심 접근로가 붐빌 수 있으니 평소보다 일찍 출발하고, 숙소를 나서기 전 SDU/GIG 실시간 출발 보드로 지연, 취소, 항공편 상태를 미리 확인하세요.",
+      "tips": "입장권의 짝수·홀수 구역을 확인해 하차역을 정하세요. 짝수 구역은 Praça Onze 1호선, 홀수 구역과 학교 대기 구역은 Central do Brasil이 기준입니다. 카니발 기간 지하철은 24시간 운행하며 심야에도 약 10분 간격입니다. 퍼레이드 밤에는 삼바드롬 주변 택시 승하차가 외곽 지점으로 운영되므로 짐은 가볍게 하고 지도 예상 시간보다 넉넉히 잡으세요. 도로 통제도 함께 고려하세요.",
+      "sec": {
+        "boards": "사푸카이 주변 공항과 SDU/GIG 실시간 보드",
+        "getting": "갈레앙·산투스 두몽에서 삼바드롬 가기",
+        "leaving": "재의 수요일과 챔피언 퍼레이드 뒤 출발",
+        "tips": "사푸카이 퍼레이드 밤 항공 여행 팁"
+      }
+    },
+    "ja": {
+      "title": "リオ・カーニバル2027と空港｜SDU/GIG発着便",
+      "description": "2027年2月5〜13日のリオ・カーニバル（サンボードロモ・パレード）向け空港移動ガイド。SDU/GIGのライブフライトボードで到着・出発を確認し、GIG約16km、SDU約5kmのサプカイ周辺交通規制と帰路の混雑に備え、出発前の判断材料にできます。",
+      "h1": "リオ・カーニバル2027の空港アクセスとライブ発着情報",
+      "banner": "サプカイへ向かう前にSDU/GIG発着情報を確認",
+      "intro": "リオ・カーニバル（サンボードロモ・パレード）は、2027年2月5日20:50から2月13日21:00まで、リオデジャネイロ市のサンボードロモ・マルケス・ジ・サプカイ（Passarela Professor Darcy Ribeiro）で行われる祭りです。サプカイはCidade Nova地区にある約700mのパレード会場で、両側に観覧席があります。到着集中は2月5日、帰国ピークは10日と13〜14日に重なるため、SDU/GIGのライブボード確認が役立ちます。",
+      "getting": "国際線の主玄関はリオデジャネイロ／ガレオン国際空港（GIG）で、2023年以降はリオの国際線を扱います。サプカイまで約16km、タクシーや配車は平常時で約15〜20分ですが、パレード夜は長くかかります。最寄りは国内線専用のサントス・ドゥモン（SDU）で約5km、通常のタクシーで10〜15分です。SDUにはVLT、GIGには鉄道連絡がなく、BRT、路線バス、タクシー、配車が利用できます。会場へは地下鉄が推奨されています。",
+      "leaving": "帰路の山は、灰の水曜日に当たる2027年2月10日で、チャンピオンズ・パレード後の2月13〜14日にも小さな第2波があります。2026年のカーニバル期間はGIGが約599,000人、SDUが約110,900人を扱い、空港は混雑しました。通常より早めに空港へ向かい、出発前にライブ出発ボードで便の状況を確認してから市内を出ると、道路規制や移動時間の変化に対応しやすくなります。",
+      "tips": "サプカイ周辺では各パレード夜に交通規制が入り、タクシーはゲート前ではなく周辺の指定乗降場所を使います。チケットの奇数側・偶数側で降りる駅が変わるため、事前に確認してください。偶数セクターはPraça Onze、奇数セクターと隊列集合エリアはCentral do Brasilが目安です。運転は避け、地下鉄や鉄道を優先し、地図表示より多めに時間を見込みます。",
+      "sec": {
+        "boards": "サプカイ最寄り空港のライブ発着ボード",
+        "getting": "SDU/GIGからサンボードロモへ",
+        "leaving": "パレード後の帰国便と空港混雑",
+        "tips": "カーニバル期間の空港移動メモ"
+      }
+    },
+    "fr": {
+      "title": "Carnaval de Rio 2027 : vols et aéroports SDU/GIG",
+      "description": "Accès aérien au Carnaval de Rio 2027, avec tableaux des vols en direct pour SDU/GIG, distances au Sambodrome et conseils retour.",
+      "h1": "Carnaval de Rio 2027 : venir par avion au Sambodrome",
+      "banner": "Ouvrir le guide vols du Carnaval de Rio",
+      "intro": "Le Carnaval de Rio (défilés du Sambodrome) se tient du 5 au 13 février 2027 au Sambódromo Marquês de Sapucaí, aussi Passarela Professor Darcy Ribeiro, à Rio de Janeiro. La Série Ouro commence les 5 et 6 février, le Grupo Especial suit du 7 au 9, puis le Desfile das Campeãs clôt le 13. Autour de ces soirées, vérifier les tableaux d’aéroport en direct aide à suivre arrivées, retards et départs.",
+      "getting": "Le principal point d’entrée international est Rio de Janeiro/Galeão–Antônio Carlos Jobim (GIG), à environ 16 km du Sambodrome ; taxi et VTC prennent environ 15–20 minutes hors pointe, plus les soirs de parade. Santos Dumont (SDU) est le plus proche, à environ 5 km et surtout domestique. Depuis SDU, le VLT Carioca rejoint Central, puis il reste environ 700 m à pied. Le métro est conseillé vers Praça Onze ou Central selon le secteur du billet.",
+      "leaving": "Après les défilés, les aéroports peuvent être chargés : le pic retour se place le mercredi des Cendres, 10 février 2027, avec une seconde vague plus limitée après le Desfile das Campeãs, le week-end des 13–14 février. À GIG comme à SDU, prévoyez d’arriver plus tôt que d’habitude, surtout si vous traversez le centre. Avant de quitter votre hébergement, consultez le tableau des départs en direct pour confirmer l’état du vol.",
+      "tips": "Les soirs de parade, CET-Rio applique un plan de circulation autour du Sambodrome et plusieurs axes ferment dès la journée. Privilégiez métro ou train, et évitez de conduire. Vérifiez le côté impair ou pair imprimé sur votre billet pour choisir Central do Brasil ou Praça Onze. Gardez une marge pour les blocos et les trajets entre aéroport, hôtel et Sapucaí.",
+      "sec": {
+        "boards": "Tableaux vols SDU/GIG pour la Sapucaí",
+        "getting": "De GIG ou SDU au Sambodrome",
+        "leaving": "Retour après les défilés de la Sapucaí",
+        "tips": "Conseils avion pendant le Carnaval"
+      }
+    },
+    "es": {
+      "title": "Carnaval de Río 2027: vuelos y aeropuertos SDU/GIG",
+      "description": "Guía aérea del Carnaval de Río 2027: consulta tableros de vuelos en vivo para SDU/GIG y planifica traslados al Sambódromo.",
+      "h1": "Cómo volar al Carnaval de Río 2027 en el Sambódromo",
+      "banner": "Abre la guía aérea del Carnaval de Río 2027",
+      "intro": "El Carnaval de Río 2027, con los desfiles del Sambódromo, se celebra del 5 al 13 de febrero en el Sambódromo Marquês de Sapucaí, en Rio de Janeiro. La Série Ouro abre el 5 y 6 de febrero, el Grupo Especial desfila del 7 al 9 y el Desfile das Campeãs cierra el 13. En esas fechas, revisar los tableros de vuelos en vivo ayuda a ajustar llegadas, conexiones y traslados.",
+      "getting": "El acceso internacional principal es Rio de Janeiro/Galeão–Antônio Carlos Jobim (GIG), en la Ilha do Governador, a unos 16 km del Sambódromo; en taxi o app son unos 15–20 minutos fuera de hora punta, más en noches de desfile. Santos Dumont (SDU) es el aeropuerto más cercano, a unos 5 km, pero es doméstico. Desde SDU hay VLT y metro; desde GIG, BRT TransCarioca, bus urbano, taxis y apps.",
+      "leaving": "La salida aérea más cargada se concentra el Miércoles de Ceniza, 10 de febrero, con una segunda ola menor tras el Desfile das Campeãs del fin de semana del 13–14 de febrero. GIG y SDU pueden estar más concurridos de lo habitual. Sal con más margen del normal, especialmente si hay cierres viales cerca del Sambódromo, y revisa el tablero de salidas en vivo antes de ir al aeropuerto.",
+      "tips": "Confirma si tu sector es par o impar: Praça Onze sirve los sectores pares y Central do Brasil los impares. El metro es la opción recomendada durante el Carnaval y funciona de forma continua en esas noches. Evita calcular solo con tiempos de mapa: hay cierres de tráfico, puntos designados para taxis y blocos en otras zonas de la ciudad.",
+      "sec": {
+        "boards": "Tableros en vivo para SDU y GIG",
+        "getting": "Del aeropuerto al Sambódromo",
+        "leaving": "Volar a casa tras los desfiles",
+        "tips": "Consejos para moverse en Sapucaí"
+      }
+    },
+    "it": {
+      "title": "Carnevale di Rio 2027: aeroporti e voli SDU/GIG",
+      "description": "Guida aeroporti per il Carnevale di Rio 2027: tabelloni voli in tempo reale per SDU/GIG, accessi alla Sapucaí e rientro.",
+      "h1": "Carnevale di Rio 2027: voli e aeroporti per la Sapucaí",
+      "banner": "Apri la guida voli per il Carnevale di Rio",
+      "intro": "Il Carnevale di Rio (Sfilate al Sambódromo) si svolge dal 5 febbraio 2027 alle 20:50 al 13 febbraio 2027 alle 21:00 al Sambódromo Marquês de Sapucaí (Passarela Professor Darcy Ribeiro), a Rio de Janeiro. La Sapucaí, nel distretto di Cidade Nova, ospita le sfilate su una striscia di circa 700 m. Nelle date di arrivo e rientro, controllare i tabelloni aeroportuali in tempo reale aiuta a seguire lo stato dei voli per SDU e GIG.",
+      "getting": "Il principale accesso internazionale è Rio de Janeiro/Galeão–Antônio Carlos Jobim (GIG), sull’Isola do Governador: circa 16 km dalla Sapucaí, 15–20 minuti in taxi o ride-hailing fuori punta e di più nelle notti di sfilata. Santos Dumont (SDU) è il più vicino, circa 5 km e 10–15 minuti in traffico normale, ma è essenzialmente domestico. Da GIG non c’è ferrovia: BRT TransCarioca 24/7 verso la metro a Vicente de Carvalho; da SDU c’è il VLT.",
+      "leaving": "Dopo le sfilate, gli aeroporti possono essere affollati: nel Carnevale 2026 GIG ha gestito circa 599.000 passeggeri nella finestra di dieci giorni, mentre SDU ne ha registrati circa 110.900. Per il 2027 il picco di rientro cade mercoledì delle Ceneri, 10 febbraio, con una seconda ondata più piccola dopo la Parata dei Campioni del 13–14 febbraio. Parti prima del solito per l’aeroporto e controlla il tabellone partenze in tempo reale prima di uscire.",
+      "tips": "Controlla sul biglietto se il settore è ímpar o par: Praça Onze serve i settori pari, Central do Brasil quelli dispari e l’area di assemblaggio. Nelle notti di sfilata CET-Rio chiude assi attorno al Sambódromo e i taxi usano punti dedicati sul perimetro. Evita di guidare, lascia margine extra e verifica SDU o GIG prima di cambiare mezzo.",
+      "sec": {
+        "boards": "Tabelloni voli live per SDU e GIG",
+        "getting": "Dagli aeroporti alla Sapucaí",
+        "leaving": "Rientro dopo le sfilate del Sambódromo",
+        "tips": "Consigli di viaggio per la settimana di Carnevale"
+      }
+    },
+    "hi": {
+      "title": "रियो कार्निवल 2027: SDU/GIG एयरपोर्ट उड़ानें",
+      "description": "रियो कार्निवल 2027 के लिए SDU/GIG लाइव फ्लाइट बोर्ड देखें: आगमन, प्रस्थान और सांबाड्रोम तक एयरपोर्ट यात्रा की योजना बनाएं।",
+      "h1": "रियो कार्निवल 2027 के लिए एयरपोर्ट और लाइव उड़ानें",
+      "banner": "SDU/GIG से सांबाड्रोम यात्रा गाइड खोलें",
+      "intro": "रियो कार्निवल (सांबाड्रोम परेड) 5 फ़रवरी 2027 रात 20:50 से 13 फ़रवरी 2027 रात 21:00 तक रियो डी जेनेरो के Sambódromo Marquês de Sapucaí (Passarela Professor Darcy Ribeiro) में है। सापुकाई, Cidade Nova में लगभग 700 मीटर की परेड पट्टी और बड़े स्टैंड वाला स्थल है। इन तारीखों पर SDU और GIG पर आगमन/प्रस्थान बढ़ते हैं, इसलिए लाइव एयरपोर्ट बोर्ड देखकर देरी और बदलते समय समझना उपयोगी है।",
+      "getting": "मुख्य अंतरराष्ट्रीय प्रवेशद्वार Rio de Janeiro/Galeão–Antônio Carlos Jobim (GIG) है; 2023 से रियो का अंतरराष्ट्रीय ट्रैफिक वहीं है। GIG से सांबाड्रोम लगभग 16 किमी है; ऑफ-पीक टैक्सी या राइड-हेल करीब 15–20 मिनट, पर परेड रातों में अधिक समय लगता है। निकटतम Santos Dumont (SDU) है, लगभग 5 किमी और सामान्य ट्रैफिक में 10–15 मिनट। SDU से VLT होकर Central, फिर लगभग 700 मीटर पैदल; GIG से BRT TransCarioca, मेट्रो कनेक्शन, बस, टैक्सी और राइड-हेल उपलब्ध हैं।",
+      "leaving": "समापन के बाद घर लौटने की भीड़ एयरपोर्ट पर जल्दी दिखती है। 2027 में भारी प्रस्थान लहर राख बुधवार, 10 फ़रवरी, को है, और चैंपियंस परेड के बाद 13–14 फ़रवरी के सप्ताहांत पर दूसरी छोटी लहर आती है। GIG और SDU दोनों पर कतारें और सड़क समय बढ़ सकते हैं। एयरपोर्ट निकलने से पहले लाइव प्रस्थान बोर्ड देखें, फिर सामान्य से पहले पहुंचने की योजना रखें।",
+      "tips": "अपने टिकट पर छपे सम/विषम सेक्टर के अनुसार स्टेशन चुनें: सम के लिए Praça Onze, विषम और असेंबली क्षेत्र के लिए Central do Brasil। परेड दिनों में केंद्र के आसपास सड़क बंद रहती हैं और टैक्सी पिक-अप/ड्रॉप-ऑफ तय परिधि पर होते हैं। हल्का सामान रखें, मोबाइल चार्ज रखें और मेट्रो/ट्रेन को प्राथमिक विकल्प मानें।",
+      "sec": {
+        "boards": "SDU/GIG लाइव बोर्ड और नज़दीकी एयरपोर्ट",
+        "getting": "सापुकाई तक एयरपोर्ट से पहुंचना",
+        "leaving": "परेड के बाद वापसी उड़ानें",
+        "tips": "सेक्टर, मेट्रो और सड़क-बंदी सुझाव"
+      }
+    },
+    "tr": {
+      "title": "Rio Karnavalı uçuşları: SDU ve GIG canlı panoları",
+      "description": "Rio Karnavalı için SDU/GIG canlı uçuş panolarıyla geliş ve dönüşleri kontrol edin; Sambódromo’ya havaalanı ulaşımını planlayın.",
+      "h1": "Rio Karnavalı için SDU/GIG uçuş ve ulaşım rehberi",
+      "banner": "Rio Karnavalı havaalanı rehberini açın",
+      "intro": "Rio Karnavalı (Sambódromo geçitleri), 5 Şubat 2027 saat 20:50’de başlayıp 13 Şubat 2027 saat 21:00’de Şampiyonlar Geçidi ile kapanan bir festivaldir. Mekân, Rio de Janeiro’daki Sambódromo Marquês de Sapucaí (Passarela Professor Darcy Ribeiro) olarak geçer. Série Ouro, Grupo Especial ve kapanış geceleri etrafında SDU ve GIG uçuşlarında yoğunluk olabileceği için canlı havaalanı panosunu kontrol etmek geliş saatini ayarlamaya yardımcı olur.",
+      "getting": "Ana uluslararası kapı, Governador Adası’ndaki Rio de Janeiro/Galeão–Antônio Carlos Jobim Uluslararası Havalimanı’dır (GIG); 2023’ten beri Rio’nun uluslararası trafiğini taşır ve Sambódromo’ya karayoluyla yaklaşık 16 km’dir. Trafik sakinken taksi veya araç çağırma yolculuğu yaklaşık 15–20 dakika sürer, geçit geceleri daha uzun olabilir. En yakın havalimanı SDU’dur: yaklaşık 5 km, normal trafikte 10–15 dakika. SDU’dan VLT, GIG’den BRT TransCarioca, şehir otobüsü, taksi ve araç çağırma seçenekleri bulunur.",
+      "leaving": "Etkinlik sonrası dönüş dalgası özellikle Kül Çarşambası 10 Şubat 2027’de yoğunlaşır; Şampiyonlar Geçidi sonrasındaki 13–14 Şubat hafta sonu daha küçük ikinci dalgaya denk gelir. 2026 Karnavalında GIG yaklaşık 599.000, SDU yaklaşık 110.900 yolcu görmüştü; bu nedenle terminal ve karayolu çevresi kalabalık olabilir. Havalimanına normalden erken gidin, bağlantı ve bagaj işlemleri için pay bırakın; yola çıkmadan önce SDU/GIG canlı kalkış panosunu kontrol edin.",
+      "tips": "Biletinizdeki sektör tarafını önceden kontrol edin: çift numaralı sektörler için Praça Onze, tek numaralı sektörler ve okul toplanma alanı için Central do Brasil kullanılır. Geçit günlerinde Presidente Vargas çevresinde kapatmalar ve taksiler için belirlenmiş indirme noktaları olur; metro veya tren tercih etmek daha öngörülebilir olabilir. Harita süresine ek pay bırakın ve canlı panoyu tekrar kontrol edin.",
+      "sec": {
+        "boards": "Rio Karnavalı için SDU/GIG canlı panoları",
+        "getting": "Sapucaí’ye havalimanından geliş",
+        "leaving": "Kül Çarşambası dönüş uçuşları",
+        "tips": "Sambódromo geceleri için yolcu notları"
+      }
+    }
+  }
+}

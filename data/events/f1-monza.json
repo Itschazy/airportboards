@@ -1,0 +1,234 @@
+{
+  "meta": {
+    "slug": "f1-monza",
+    "name": "Formula 1 Italian Grand Prix 2026 (Monza)",
+    "startDate": "2026-09-04T12:30:00+02:00",
+    "endDate": "2026-09-06T17:00:00+02:00",
+    "venue": "Autodromo Nazionale Monza",
+    "venueCity": "Monza",
+    "country": "IT",
+    "type": "sports",
+    "officialUrl": "https://www.formula1.com/en/racing/2026/italy",
+    "status": "scheduled",
+    "sources": [
+      "https://www.formula1.com/en/racing/2026/italy",
+      "https://www.monzanet.it/en/calendario-2026-formula-1-a-monza-dal-4-al-6-settembre/",
+      "https://en.wikipedia.org/wiki/2026_Formula_One_World_Championship",
+      "https://www.monzanet.it/en/how-to-reach-us/",
+      "https://racingnews365.com/f1/races/italian-gp",
+      "https://www.thef1spectator.com/italian-grand-prix-travel-guide/getting-there/",
+      "https://gpdestinations.com/getting-around-italian-f1-grand-prix/",
+      "https://www.tracksideculture.com/guides/monza-f1-access",
+      "https://gpdestinations.com/attendance-reaches-370000-at-2025-italian-grand-prix/",
+      "https://www.monzanet.it/en/the-gp-of-italy-in-history-never-so-many-people-at-a-sporting-event-in-italy/"
+    ],
+    "airports": [
+      {
+        "iata": "LIN",
+        "km": 25
+      },
+      {
+        "iata": "BGY",
+        "km": 40
+      },
+      {
+        "iata": "MXP",
+        "km": 50
+      }
+    ]
+  },
+  "locales": {
+    "en": {
+      "title": "Italian Grand Prix 2026 Flights: LIN, BGY & MXP Airports",
+      "description": "Plan flights for the Formula 1 Italian Grand Prix 2026 at Monza with live flight boards for LIN/BGY/MXP and airport travel notes.",
+      "h1": "Formula 1 Italian Grand Prix 2026 airport guide",
+      "banner": "Flying to Monza? Open the Italian GP airport guide",
+      "intro": "The Formula 1 Italian Grand Prix 2026 runs Friday 4 to Sunday 6 September 2026 at Autodromo Nazionale Monza in Monza, Italy, about 30 km north-east of Milan. Race day is Sunday 6 September, with the start at 15:00 local time. Around the arrival peak on Thursday 3 and Friday 4 September, live airport boards help travellers monitor arrivals, delays and cancellations before onward travel.",
+      "getting": "Milan Linate (LIN) is the closest airport, about 25 km from Autodromo Nazionale Monza and roughly a 30-minute drive in normal traffic. Milan Malpensa (MXP), about 50 km away, is the main long-haul/intercontinental gateway; Milan Bergamo (BGY), about 40 km away, is the budget-flight option. Airport links include coaches to Milano Centrale, Malpensa Express to Milano Cadorna and Alimonza minibuses, then Trenord S8, S9 or S11 to Monza FS plus bus or shuttle.",
+      "leaving": "The race finishes late Sunday afternoon, so departures cluster on Sunday evening 6 September and more heavily on Monday 7 September. Expect crowded airport routes after the post-race queue from the circuit back to Milan, with long return train lines possible. Build in more airport time than usual, especially for Monday morning flights, and check the live departures board for LIN, BGY or MXP before leaving for the airport.",
+      "tips": "Use rail where practical: trains are generally recommended over buses because race-day roads around the circuit close to general traffic and get heavily congested. Remember Monza FS is still 5–6.6 km from the track, so allow time for a bus, shuttle or walk through Parco di Monza. Keep airport plans flexible and compare all three Milan airports.",
+      "sec": {
+        "boards": "Live LIN, BGY and MXP boards for Monza 2026",
+        "getting": "From Milan airports to Autodromo Nazionale Monza",
+        "leaving": "Flying home after the Sunday race",
+        "tips": "Monza race-week airport travel tips"
+      }
+    },
+    "ru": {
+      "title": "Гран-при Италии F1 2026: аэропорты и рейсы",
+      "description": "Как лететь на Гран-при Италии F1 2026 в Монце: аэропорты Милана, онлайн-табло рейсов LIN/BGY/MXP и вылет домой после гонки.",
+      "h1": "Гран-при Италии F1 2026: аэропорты Монцы",
+      "banner": "Откройте гид по рейсам на Гран-при Италии в Монце",
+      "intro": "Formula 1 Italian Grand Prix 2026 пройдет с пятницы 4 по воскресенье 6 сентября 2026 года на Autodromo Nazionale Monza в Монце, примерно в 30 км к северо-востоку от Милана. День гонки — 6 сентября, старт в 15:00 по местному времени. Вокруг заезда прилеты сосредоточены 3–4 сентября, поэтому перед поездкой полезно сверять онлайн-табло аэропортов Милана: задержки и изменения рейсов влияют на стыковку с дорогой до Монцы.",
+      "getting": "Ближайший аэропорт к автодрому — Milan Linate (LIN), около 25 км и примерно 30 минут на машине при обычном движении. Milan Bergamo / Orio al Serio (BGY) находится примерно в 40 км; Milan Malpensa (MXP) — около 50 км и является главным дальнемагистральным, межконтинентальным входом для Милана. Из аэропортов обычно едут через Милан: автобусы до Milano Centrale, Malpensa Express до Milano Cadorna, затем Trenord S8, S9 или S11 до Monza FS и шаттл/автобус к трассе.",
+      "leaving": "После финиша поздно днем в воскресенье 6 сентября основной поток вылетов приходится на вечер 6 сентября и особенно на понедельник 7 сентября. После гонки возможны длинные очереди на возвратный транспорт в Милан, а аэропорты LIN, BGY и MXP будут заметно загружены. Закладывайте больше времени, чем в обычную поездку, и перед выездом с места проживания проверьте онлайн-табло вылетов своего аэропорта, чтобы не ехать слишком рано или слишком поздно.",
+      "tips": "Сравните аэропорт прилета с типом рейса: Linate ближе, Malpensa удобнее для дальних направлений, Bergamo часто используют бюджетные европейские рейсы. На дни события ориентируйтесь на поезд до Монцы: дороги у трассы закрываются для общего движения, а автобусы сильнее зависят от трафика. Учитывайте пеший участок по Parco di Monza и проверяйте табло перед каждой поездкой в аэропорт.",
+      "sec": {
+        "boards": "Онлайн-табло LIN, BGY и MXP для Монцы",
+        "getting": "Из аэропортов Милана к Autodromo Nazionale Monza",
+        "leaving": "Вылет после Гран-при Италии 2026",
+        "tips": "Советы авиапассажирам на уик-энд в Монце"
+      }
+    },
+    "zh": {
+      "title": "2026年F1意大利大奖赛机场航班指南：LIN/BGY/MXP",
+      "description": "面向2026年F1意大利大奖赛（蒙扎）的机场出行指南：比较LIN、BGY、MXP到赛道距离与换乘方式，查看LIN/BGY/MXP实时航班板，掌握到达与返程高峰，安排米兰、蒙扎和机场之间的行程，适合赛前抵达和赛后返程时使用。",
+      "h1": "2026年F1意大利大奖赛（蒙扎）机场与实时航班板",
+      "banner": "查看蒙扎大奖赛期间LIN/BGY/MXP航班与机场出行",
+      "intro": "2026年F1意大利大奖赛（蒙扎）于2026年9月4日星期五至9月6日星期日在意大利蒙扎的蒙扎国家赛车场举行，赛道位于米兰东北约30公里。正赛日为9月6日，15:00当地时间发车。赛事周边到达高峰在9月3日和4日，返程集中在9月6日晚至9月7日；提前查看机场实时航班板，可确认抵离港状态再安排进出城。",
+      "getting": "三座米兰机场服务赛道：LIN约25公里，正常交通下车程约30分钟，是最近选择；BGY约40公里，常用于欧洲低成本航班；MXP约50公里，是米兰最大机场，也是长途和洲际旅客的主要门户。各机场通常先接入米兰，再转往蒙扎。可用方式包括机场大巴、Malpensa Express列车、Alimonza小巴，以及从米兰乘Trenord S8/S9/S11到蒙扎FS站后接驳。",
+      "leaving": "正赛9月6日15:00开始，约17:00结束；返程航班压力主要落在9月6日周日晚间，更明显的是9月7日周一上午。赛后出园、接驳和返回米兰的列车排队可能很长，LIN、BGY和MXP也会更拥挤。请比平日更早到机场，并在离开蒙扎或米兰住宿前查看实时出发航班板，避免在航班状态变化时盲目赶路。",
+      "tips": "优先把铁路作为主方案，公交和出租车更容易受赛道周边交通限制影响。蒙扎FS站到赛道仍需接驳或步行，蒙扎公园内的步行时间也要预留。随身行李尽量轻，给换乘、安检和排队留缓冲；同行者分开抵达不同机场时，先约定米兰市内会合点。",
+      "sec": {
+        "boards": "蒙扎大奖赛附近机场实时航班板",
+        "getting": "从米兰三机场前往蒙扎赛道",
+        "leaving": "正赛后飞回家的航班高峰",
+        "tips": "大奖赛周末航空出行提示"
+      }
+    },
+    "ar": {
+      "title": "جائزة إيطاليا الكبرى 2026: المطارات والرحلات",
+      "description": "دليل السفر الجوي إلى جائزة إيطاليا الكبرى 2026 في مونزا، مع لوحات رحلات مباشرة لمطارات LIN وBGY وMXP وملاحظات الوصول والعودة.",
+      "h1": "السفر جواً إلى جائزة إيطاليا الكبرى 2026 في مونزا",
+      "banner": "افتح دليل مطارات ورحلات جائزة إيطاليا الكبرى 2026",
+      "intro": "تقام جائزة إيطاليا الكبرى للفورمولا 1 لعام 2026 من الجمعة 4 إلى الأحد 6 سبتمبر 2026 في حلبة أوتودرومو ناسيونالي مونزا، بمدينة مونزا في إيطاليا، على بعد نحو 30 كم شمال شرق ميلانو. يوم السباق هو الأحد 6 سبتمبر، مع الانطلاق عند 15:00 بالتوقيت المحلي. حول هذه التواريخ، تفيد لوحات الرحلات المباشرة لأن الحدث يجذب جمهوراً دولياً واسعاً وتتركز حركة الوصول قبل عطلة السباق.",
+      "getting": "أقرب مطار هو ميلانو ليناتي LIN، على نحو 25 كم من الحلبة وحوالي 30 دقيقة بالسيارة في حركة عادية. مالبينسا MXP يبعد نحو 50 كم وهو البوابة الرئيسية للرحلات الطويلة والدولية، أما بيرغامو BGY فيبعد نحو 40 كم ويخدم كثيراً من الرحلات الأوروبية منخفضة التكلفة. تتصل المطارات بميلانو عبر حافلات إلى Milano Centrale أو قطار Malpensa Express إلى Milano Cadorna، ثم قطارات الضواحي S8 وS9 وS11 إلى Monza FS مع حافلة أو مكوك إلى الحلبة.",
+      "leaving": "بعد انتهاء السباق بعد ظهر الأحد 6 سبتمبر، مع نهاية متوقعة قرب 17:00، تبدأ موجة المغادرة مساء الأحد وتكون أشد صباح الاثنين 7 سبتمبر. قد تكون مطارات LIN وBGY وMXP أكثر ازدحاماً، خصوصاً مع طوابير العودة من مونزا إلى ميلانو بعد العلم الشطرنجي. غادر إلى المطار أبكر من المعتاد، وتحقق من لوحة المغادرات المباشرة قبل مغادرة المدينة أو الحلبة حتى لا تتحرك على معلومات قديمة.",
+      "tips": "خطط لمسار يجمع القطار والمكوك بدلاً من الاعتماد على الطرق القريبة من الحلبة، لأنها تغلق أو تزدحم في أيام الحدث. محطة Monza FS تحتاج وصلة إضافية إلى البوابات، ومحطة Biassono-Lesmo Parco أقرب إلى محيط الحلبة الشمالي. اترك وقتاً للمشي داخل Parco di Monza ولطوابير ما بعد السباق، وراجع لوحة المطار قبل كل انتقال.",
+      "sec": {
+        "boards": "لوحات رحلات مطارات ميلانو القريبة من مونزا",
+        "getting": "من LIN وBGY وMXP إلى حلبة مونزا",
+        "leaving": "العودة بالطائرة بعد سباق الأحد",
+        "tips": "نصائح سفر لجمهور جائزة إيطاليا الكبرى"
+      }
+    },
+    "de": {
+      "title": "Formel 1 GP Italien 2026: Flughäfen & Flüge Monza",
+      "description": "Flughafen-Guide zum Formel 1 GP Italien 2026 in Monza: Live-Flugtafeln für LIN, BGY und MXP, Anreise und Abflugplanung.",
+      "h1": "Flughäfen & Live-Flüge zum Formel 1 GP Italien 2026",
+      "banner": "Zum Flughafen-Guide für den F1-Grand-Prix in Monza",
+      "intro": "Der Formula 1 Italian Grand Prix 2026 läuft von Freitag, 4. September, bis Sonntag, 6. September 2026, im Autodromo Nazionale Monza in Monza, rund 30 km nordöstlich von Mailand. Am Rennsonntag beginnt das Rennen um 15:00 Uhr CEST. Rund um die Anreise am 3./4. September und die Rückreise nach Rennende sind aktuelle Flughafenanzeigen wichtig, weil LIN, BGY und MXP die relevanten Mailänder Flughäfen für internationale Besucher sind.",
+      "getting": "Milan Linate (LIN) liegt mit rund 25 km am nächsten; bei normalem Verkehr sind es etwa 30 Minuten Fahrt zum Autodromo. Malpensa (MXP) ist mit rund 50 km Mailands größter Flughafen und wichtigstes Langstrecken- und Interkontinental-Drehkreuz, Bergamo/Orio al Serio (BGY) liegt rund 40 km entfernt und ist die Budgetflug-Option. Von den Flughäfen führen Coach-, Malpensa-Express- und Alimonza-Verbindungen zunächst nach Mailand oder Monza; weiter zum Kurs geht es per Trenord S8/S9/S11, Metro plus Bus, Shuttle oder Taxi.",
+      "leaving": "Nach der Zielflagge am Sonntag, 6. September, konzentriert sich die Rückreisewelle auf den Sonntagabend und stärker auf Montag, 7. September; der realistische Engpass ist der Montagmorgen. Rechnen Sie an LIN, BGY und MXP mit mehr Reisenden als üblich und planen Sie eine frühere Ankunft am Flughafen ein. Prüfen Sie vor der Abfahrt aus Monza oder Mailand die Live-Abflugtafel, damit Ihre Fahrt zum Flughafen nicht auf veralteten Angaben beruht.",
+      "tips": "Für die Rennwoche sind Züge meist robuster als Straßenverkehr, da die Straßen direkt am Kurs an Veranstaltungstagen gesperrt oder stark belastet sind. Planen Sie den Fußweg im Parco di Monza sowie Shuttle- oder Busabschnitte separat ein. Halten Sie für die Anreise am 3./4. September und die Rückreise nach Rennsonntag Puffer bereit und vergleichen Sie vor jeder Fahrt die Live-Ankünfte und Live-Abflüge.",
+      "sec": {
+        "boards": "Live-Flugtafeln für LIN, BGY und MXP",
+        "getting": "Von Mailands Flughäfen zum Autodromo Monza",
+        "leaving": "Rückflug nach dem Rennsonntag",
+        "tips": "Reisetipps für das Monza-Wochenende"
+      }
+    },
+    "ko": {
+      "title": "2026 F1 이탈리아 그랑프리 항공편·공항 안내",
+      "description": "몬차 2026 F1 이탈리아 그랑프리 기간 LIN/BGY/MXP 실시간 항공편 보드로 도착·출발 지연과 공항 이동을 확인하세요.",
+      "h1": "몬차 2026 F1 이탈리아 그랑프리 공항·실시간 항공편 안내",
+      "banner": "몬차 그랑프리 기간 LIN·BGY·MXP 실시간 운항 확인",
+      "intro": "Formula 1 Italian Grand Prix 2026은 2026년 9월 4일 금요일부터 9월 6일 일요일까지 이탈리아 몬차의 Autodromo Nazionale Monza에서 열립니다. 서킷은 밀라노 북동쪽 약 30km에 있으며, 레이스는 9월 6일 15:00 현지시각에 시작합니다. 도착 수요는 9월 3일과 4일에 집중되므로 LIN, BGY, MXP의 실시간 공항 보드로 지연과 변경을 확인하는 것이 유용합니다.",
+      "getting": "가장 가까운 공항은 밀라노 리나테 LIN으로 서킷에서 약 25km, 정상 교통 기준 차로 약 30분입니다. 장거리와 대륙간 여행객의 주 관문은 밀라노 말펜사 MXP이며 약 50km, 베르가모 BGY는 약 40km의 저비용 항공 선택지입니다. 세 공항 모두 밀라노를 거쳐 몬차로 이동하는 흐름이 일반적이며, 코치, Malpensa Express, Alimonza 미니버스, S8·S9·S11 교외철도, 지하철 1호선과 Z221 버스, 행사일 셔틀을 이용할 수 있습니다.",
+      "leaving": "귀국 항공편 수요는 레이스가 9월 6일 늦은 오후에 끝난 뒤 일요일 저녁과, 더 크게는 9월 7일 월요일 아침에 몰립니다. 경기 후 트랙 개방과 퇴장 동선 때문에 밀라노행 교통을 타기 전 60~120분의 야외 대기와 긴 열차 줄이 생길 수 있습니다. LIN, BGY, MXP로 가기 전 평소보다 일찍 움직이고, 출발 전에 실시간 출발 보드로 운항 상태를 확인하세요.",
+      "tips": "몬차에서는 버스보다 열차가 일반적으로 권장되며, 도로는 행사일에 통제와 정체가 잦습니다. Monza FS에서 서킷까지는 추가 버스나 셔틀, 도보 이동이 필요하고, 공원 안에서도 남쪽 게이트 기준 25~45분, 북쪽 경로 기준 20~40분을 걸을 수 있습니다. 귀가 때는 즉시 몰리기보다 현장에서 잠시 대기하는 계획도 고려하세요.",
+      "sec": {
+        "boards": "몬차 그랑프리 주변 공항 실시간 보드",
+        "getting": "LIN·BGY·MXP에서 Autodromo Nazionale Monza까지",
+        "leaving": "결승 후 귀국 항공편과 공항 이동",
+        "tips": "몬차 레이스 주간 항공 여행 팁"
+      }
+    },
+    "ja": {
+      "title": "F1イタリアGP 2026（モンツァ）の空港・フライト案内",
+      "description": "F1イタリアGP 2026でモンツァへ向かう旅行者向けに、LIN/BGY/MXPのライブ発着案内、各空港からアウトドローモ・ナツィオナーレ・モンツァまでの移動、9月4〜6日の到着と9月6日夜〜7日の帰路混雑を整理します。",
+      "h1": "F1イタリアGP 2026（モンツァ）空港アクセスとライブ発着案内",
+      "banner": "F1イタリアGP 2026の空港アクセスを見る",
+      "intro": "Formula 1 Italian Grand Prix 2026は、2026年9月4日（金）から6日（日）まで、イタリア・モンツァのアウトドローモ・ナツィオナーレ・モンツァで行われます。会場はミラノの北東約30kmにあり、決勝日は9月6日、現地15:00スタートです。到着の山は9月3日と4日になるため、LIN、BGY、MXPのライブ発着案内で遅延や変更を確認してから移動計画を固めると安心です。",
+      "getting": "最寄りはミラノ・リナーテ（LIN）で、会場まで約25km、通常交通なら車で約30分です。ミラノ・マルペンサ（MXP）は約50kmで、長距離・大陸間移動の主な玄関口です。ベルガモ（BGY）は約40kmで、低コスト便の選択肢になります。各空港からはミラノ中心部へ入り、そこからTrenordのS8、S9、S11でモンツァFSへ向かう流れが基本です。バス、シャトル、ミニバス、マルペンサ・エクスプレスも利用されます。",
+      "leaving": "決勝は9月6日（日）15:00に始まり、終了は夕方のため、帰国便の山は同日夜と、より大きくは9月7日（月）朝に重なります。レース後はサーキット周辺とミラノ方面の移動が混み、帰りの乗車待ちは長くなることがあります。空港へ向かう前に、利用するLIN、BGY、MXPのライブ出発案内を確認し、通常より早めに空港到着を見込んでください。",
+      "tips": "モンツァでは鉄道がバスより安定しやすい移動手段です。モンツァFSからサーキットまではさらにバス、シャトル、徒歩が必要で、園内の徒歩移動にも時間がかかります。イベント日は周辺道路が一般交通から制限され、車は指定駐車区域へ誘導されます。帰路はすぐに動くより、混雑の流れを見て移動する計画が現実的です。",
+      "sec": {
+        "boards": "モンツァGP最寄り空港とライブ発着案内",
+        "getting": "ミラノ3空港からアウトドローモへ",
+        "leaving": "決勝後の帰国便と出発ピーク",
+        "tips": "F1週末の空港移動のコツ"
+      }
+    },
+    "fr": {
+      "title": "Grand Prix d’Italie F1 2026 : vols et aéroports Milan",
+      "description": "Tableaux de vols en direct pour LIN, BGY et MXP avant le Grand Prix d’Italie F1 2026 à Monza; planifiez vos trajets aéroport-circuit.",
+      "h1": "Vols et aéroports pour le Grand Prix d’Italie F1 2026",
+      "banner": "Ouvrir le guide vols et accès pour Monza 2026",
+      "intro": "Le Grand Prix d’Italie de Formule 1 2026 se déroule du vendredi 4 au dimanche 6 septembre 2026 à l’Autodromo Nazionale Monza, à Monza, à environ 30 km au nord-est de Milan. Le départ de la course est prévu dimanche à 15:00, heure locale. Autour de ces dates, les arrivées se concentrent jeudi 3 et vendredi 4 septembre; consulter les tableaux de vols en direct aide à vérifier le statut des vols vers LIN, BGY ou MXP.",
+      "getting": "Pour l’accès aérien, Milan Linate (LIN) est le plus proche du circuit, à environ 25 km et autour de 30 minutes de route en trafic normal. Bergamo/Orio al Serio (BGY) est à environ 40 km; Malpensa (MXP), à environ 50 km, est la principale porte long-courrier et intercontinentale. Les trois aéroports renvoient souvent vers Milan: cars pour Milano Centrale, Malpensa Express vers Cadorna, minibus Alimonza selon l’aéroport, puis train suburbain vers Monza et navette ou bus vers le parc.",
+      "leaving": "Après la course du dimanche 6 septembre, qui part à 15:00 et se termine en fin d’après-midi, le pic de retours commence dimanche soir et se concentre surtout le lundi 7 septembre. Les files de sortie de Monza, puis les départs à LIN, BGY et MXP, peuvent être denses. Prévoyez d’arriver à l’aéroport plus tôt que d’habitude, surtout le lundi matin, et consultez le tableau des départs en direct avant de quitter Milan ou Monza.",
+      "tips": "Privilégiez le train quand c’est possible: les bus restent plus exposés au trafic de course. Depuis Monza FS, prévoyez encore une navette, un bus local ou une marche dans le Parco di Monza, souvent le vrai point lent. Les routes proches du circuit ferment au trafic général les jours d’événement; les conducteurs sont dirigés vers des parkings désignés.",
+      "sec": {
+        "boards": "Tableaux LIN, BGY et MXP pour Monza",
+        "getting": "De Milan au circuit de Monza",
+        "leaving": "Retours aériens après le Grand Prix",
+        "tips": "Conseils transport pour le week-end F1"
+      }
+    },
+    "es": {
+      "title": "GP de Italia F1 2026 Monza: aeropuertos y vuelos",
+      "description": "Guía aérea del GP de Italia F1 2026 en Monza con paneles de vuelos en vivo para LIN/BGY/MXP y consejos de llegada y salida.",
+      "h1": "Vuelos y aeropuertos para el GP de Italia F1 2026",
+      "banner": "Abre la guía aérea del GP de Italia F1 en Monza",
+      "intro": "El Gran Premio de Italia de Fórmula 1 2026 se celebra del viernes 4 al domingo 6 de septiembre de 2026 en el Autodromo Nazionale Monza, en Monza, Italia, a unos 30 km al noreste de Milán. La carrera es el domingo 6, con salida a las 15:00 CEST. Alrededor del fin de semana, los viajeros internacionales se reparten entre LIN, BGY y MXP; consultar paneles de vuelos en vivo ayuda a ajustar llegadas, conexiones terrestres y salidas.",
+      "getting": "LIN es el aeropuerto más cercano al circuito, a unos 25 km y cerca de 30 minutos en coche con tráfico normal. MXP, a unos 50 km, es el principal acceso intercontinental; BGY queda a unos 40 km y funciona como opción de vuelos de bajo coste. Desde los aeropuertos, muchas rutas pasan primero por Milán: autobuses a Milano Centrale, Malpensa Express a Cadorna, tren suburbano S8/S9/S11 a Monza FS, metro L1 + bus Z221, lanzaderas o taxi.",
+      "leaving": "La oleada de regreso empieza el domingo 6 de septiembre por la noche y pesa más el lunes 7 de septiembre por la mañana, después de la carrera y las colas de salida del parque. LIN, BGY y MXP pueden concentrar viajeros del Gran Premio en esos horarios. Sal con más margen de lo habitual hacia el aeropuerto y revisa el panel de salidas en vivo antes de dejar Monza o Milán, especialmente si dependes de trenes, lanzaderas o carretera.",
+      "tips": "Prioriza el tren cuando sea posible: en Monza suele resistir mejor que los autobuses al tráfico de carrera. Deja margen para caminar dentro del Parco di Monza y para las colas tras la bandera a cuadros. Ten un plan alternativo entre estación, lanzadera y taxi, y vuelve a comprobar tu aeropuerto real: LIN, BGY y MXP no están a la misma distancia.",
+      "sec": {
+        "boards": "Paneles en vivo: LIN, BGY y MXP para Monza",
+        "getting": "De los aeropuertos de Milán al Autodromo",
+        "leaving": "Regreso en avión tras la carrera de Monza",
+        "tips": "Consejos prácticos para viajar al Gran Premio"
+      }
+    },
+    "it": {
+      "title": "GP d’Italia F1 2026 Monza: aeroporti e voli live",
+      "description": "Guida voli per il GP d’Italia F1 2026 a Monza: consulta i tabelloni live di LIN, BGY e MXP per arrivi e partenze aggiornati.",
+      "h1": "GP d’Italia F1 2026: voli e aeroporti per Monza",
+      "banner": "Vai alla guida voli per il GP d’Italia F1 2026 a Monza",
+      "intro": "Il Formula 1 Italian Grand Prix 2026 si svolge da venerdì 4 a domenica 6 settembre 2026 all’Autodromo Nazionale Monza, a Monza, circa 30 km a nord-est di Milano. La gara è domenica 6 settembre, con partenza alle 15:00 locali. Intorno al weekend arrivano viaggiatori internazionali: il picco di arrivi è giovedì 3 e venerdì 4 settembre, quindi i tabelloni aeroportuali live aiutano a verificare arrivi e coincidenze.",
+      "getting": "Linate (LIN) è l’aeroporto più vicino, circa 25 km dall’Autodromo e circa 30 minuti in auto con traffico normale. Bergamo Orio al Serio (BGY) è a circa 40 km; Malpensa (MXP), a circa 50 km, è il principale gateway intercontinentale. Da LIN e BGY partono collegamenti coach verso Milano Centrale; da MXP il Malpensa Express arriva a Milano Cadorna. Da Milano, Trenord S8, S9 e S11 servono Monza FS in circa 20–30 minuti, poi bus o shuttle.",
+      "leaving": "Il rientro in volo si concentra dopo il finale di domenica 6 settembre: la gara parte alle 15:00 e termina nel tardo pomeriggio; il picco è domenica sera e soprattutto lunedì 7 settembre. Dopo la bandiera a scacchi e l’invasione di pista, le code per tornare verso Milano possono richiedere circa 60–120 minuti. LIN, BGY e MXP possono essere più affollati: parti prima del solito e controlla il tabellone partenze live prima di lasciare Monza.",
+      "tips": "Individua in anticipo il codice aeroporto corretto: LIN per Linate, BGY per Bergamo, MXP per Malpensa. Preferisci il treno quando possibile, perché i bus risentono di più del traffico di gara. Considera anche il cammino nel Parco di Monza: circa 25–45 minuti dagli accessi meridionali e 20–40 da quelli settentrionali. Ricontrolla arrivi o partenze prima di muoverti.",
+      "sec": {
+        "boards": "Tabelloni live LIN, BGY e MXP per Monza 2026",
+        "getting": "Dagli aeroporti di Milano all’Autodromo di Monza",
+        "leaving": "Rientro in volo dopo la gara di domenica",
+        "tips": "Consigli pratici per il weekend del GP"
+      }
+    },
+    "hi": {
+      "title": "फॉर्मूला 1 इटालियन ग्रां प्री 2026: एयरपोर्ट/उड़ानें",
+      "description": "मोंज़ा F1 2026 के लिए LIN/BGY/MXP के लाइव फ्लाइट बोर्ड देखें: आगमन, प्रस्थान और मिलान एयरपोर्ट से ऑटोड्रोमो तक यात्रा योजना।",
+      "h1": "मोंज़ा F1 2026 के लिए एयरपोर्ट और उड़ान गाइड",
+      "banner": "मोंज़ा ग्रां प्री यात्रा गाइड खोलें",
+      "intro": "फॉर्मूला 1 इटालियन ग्रां प्री 2026 शुक्रवार 4 से रविवार 6 सितंबर 2026 तक इटली के मोंज़ा में ऑटोड्रोमो नाज़ियोनाले मोंज़ा में आयोजित है। सर्किट मिलान से लगभग 30 किमी उत्तर-पूर्व में है, और रेस डे रविवार 6 सितंबर को 15:00 स्थानीय समय से शुरू होता है। बड़े अंतरराष्ट्रीय यात्रा प्रवाह के कारण LIN, BGY और MXP पर आगमन और प्रस्थान जाँचना ज़रूरी है; लाइव एयरपोर्ट बोर्ड आपकी कनेक्शन योजना को समय पर रखते हैं।",
+      "getting": "लिनाते (LIN) सबसे नज़दीकी एयरपोर्ट है: ऑटोड्रोमो से लगभग 25 किमी, सामान्य ट्रैफिक में करीब 30 मिनट की ड्राइव। मालपेंसा (MXP) लगभग 50 किमी दूर मिलान का मुख्य लंबी दूरी/इंटरकॉन्टिनेंटल गेटवे है; बर्गामो (BGY) लगभग 40 किमी का बजट-फ्लाइट विकल्प है। शहर तक STARFLY/कोच और मालपेंसा एक्सप्रेस जैसे लिंक, मोंज़ा के लिए अलिमोंज़ा मिनीबस, तथा आगे Trenord S8, S9, S11, शटल और बसें उपलब्ध हैं।",
+      "leaving": "रेस रविवार 6 सितंबर को 15:00 शुरू होकर देर दोपहर, लगभग 17:00, समाप्त होती है। चेकर्ड फ्लैग के बाद पार्क से बाहर पैदल चलना और मिलान वापसी की कतारें लंबी हो सकती हैं; 60–120 मिनट तक बाहरी कतार की योजना रखें। उड़ान-घर की भीड़ रविवार शाम 6 सितंबर और अधिकतर सोमवार 7 सितंबर को बनती है। LIN, BGY या MXP रवाना होने से पहले लाइव प्रस्थान बोर्ड देखें और सामान्य से पहले एयरपोर्ट पहुँचें।",
+      "tips": "बड़े इवेंट में कनेक्शन के बीच अतिरिक्त समय रखें। मिलान से मोंज़ा के लिए ट्रेन को प्राथमिकता दें, क्योंकि बसें सड़क बंदी और ट्रैफिक से धीमी हो सकती हैं। मोंज़ा FS से सर्किट तक शटल/बस के बाद भी पैदल दूरी रहती है। हल्का सामान रखें, वापसी में तुरंत भीड़ में न फँसें, और हर एयरपोर्ट बोर्ड को रवाना होने से पहले फिर जाँचें।",
+      "sec": {
+        "boards": "मोंज़ा के लिए LIN/BGY/MXP लाइव बोर्ड",
+        "getting": "एयरपोर्ट से ऑटोड्रोमो तक",
+        "leaving": "रेस के बाद घर की उड़ान",
+        "tips": "ग्रां प्री यात्रियों के सुझाव"
+      }
+    },
+    "tr": {
+      "title": "Formula 1 İtalya GP 2026: Monza uçuşları ve havalimanları",
+      "description": "Formula 1 İtalya GP 2026 için LIN, BGY ve MXP canlı uçuş panoları; Monza’ya geliş, dönüş ve havalimanı seçenekleri.",
+      "h1": "Formula 1 İtalya GP 2026 için havalimanları ve uçuşlar",
+      "banner": "Monza 2026 uçuş ve havalimanı rehberini açın",
+      "intro": "Formula 1 İtalya Grand Prix 2026, 4 Cuma–6 Pazar Eylül 2026 tarihleri arasında İtalya’nın Monza kentindeki Autodromo Nazionale Monza’da düzenlenir. Yarış günü 6 Eylül Pazar, başlangıç 15:00 yerel saattir ve hafta sonu geniş uluslararası yolcu akışı yaratır. Özellikle yoğun dönemlerde, 3-4 Eylül gelişleri ile 6-7 Eylül dönüşlerinde LIN, BGY ve MXP canlı uçuş panolarını kontrol etmek, uçuş durumunu havalimanına gitmeden izlemeye yardımcı olur.",
+      "getting": "Autodromo’ya en yakın havalimanı LIN’dir: yaklaşık 25 km ve normal trafikte yaklaşık 30 dakika sürüş. Uzak mesafe ve kıtalararası gelenler için ana kapı MXP’dir; pistten yaklaşık 50 km uzaktadır. BGY yaklaşık 40 km’de, düşük maliyetli uçuş seçeneği olarak kullanılır. LIN’den STARFLY ile Milano Centrale’ye, BGY’den otobüs servisleriyle Centrale’ye, MXP’den Malpensa Express ile Cadorna’ya gidilebilir. Monza’ya devamda Trenord S8, S9, S11, metro 1 + Z221 otobüsü ve Alimonza minibüsleri bulunur.",
+      "leaving": "Yarış Pazar 6 Eylül’de 15:00’te başlar ve geç öğleden sonra biter; uçuş dönüş zirvesi Pazar akşamı 6 Eylül ve daha yoğun olarak Pazartesi 7 Eylül’dür. Damalı bayrak sonrası geleneksel piste inişten sonra Milano’ya dönüşe binmeden önce 60–120 dakikalık açık hava kuyruğu oluşabilir. LIN, BGY ve MXP’de kalabalığa karşı normalden erken varmayı planlayın; yola çıkmadan canlı kalkış panosunda uçuş durumunu kontrol edin.",
+      "tips": "Uçuş gününüzde yalnızca havalimanı panosuna değil, Monza’dan çıkış ayağına da pay bırakın. Trenler, yarış günü karayolu trafiğine açık otobüslere göre daha tutarlı önerilir. Monza FS istasyonu pistten 5–6,6 km uzakta olduğundan son bölüm için servis, yerel otobüs veya yürüyüş süresini hesaba katın. Sürücüler belirlenmiş park alanlarına yönlendirilir.",
+      "sec": {
+        "boards": "Monza GP için LIN, BGY, MXP canlı panoları",
+        "getting": "Milano havalimanlarından Autodromo’ya ulaşım",
+        "leaving": "Yarış sonrası eve dönüş uçuşları",
+        "tips": "Monza yarış hafta sonu yolcu notları"
+      }
+    }
+  }
+}

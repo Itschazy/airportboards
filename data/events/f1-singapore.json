@@ -1,0 +1,234 @@
+{
+  "meta": {
+    "slug": "f1-singapore",
+    "name": "Formula 1 Singapore Grand Prix 2026",
+    "startDate": "2026-10-09T17:30:00+08:00",
+    "endDate": "2026-10-11T22:00:00+08:00",
+    "venue": "Marina Bay Street Circuit",
+    "venueCity": "Singapore",
+    "country": "SG",
+    "type": "sports",
+    "officialUrl": "https://www.singaporegp.sg/",
+    "status": "scheduled",
+    "sources": [
+      "https://www.formula1.com/en/racing/2026/singapore",
+      "https://en.wikipedia.org/wiki/2026_Formula_One_World_Championship",
+      "https://www.singaporegp.sg/",
+      "https://racingnews365.com/f1/races/singapore-gp",
+      "https://www.lta.gov.sg/content/ltagov/en/newsroom/2025/8/news-releases/f1_Singapore_2025_road_closure_PT_arrangement.html",
+      "https://www.lta.gov.sg/content/ltagov/en/newsroom/2025/9/news-releases/f1_Singapore_2025_road_closure_PT_arrangement_reminder.html",
+      "https://www.thef1spectator.com/singapore-grand-prix-travel-guide/getting-there/",
+      "https://gpdestinations.com/getting-around-singapore-f1-grand-prix/",
+      "https://singaporegp.sg/en/news/2022/formula-1-singapore-airlines-singapore-grand-prix-2022-sets-new-highest-attendance-record/",
+      "https://f1destinations.com/over-300000-attend-2025-singapore-grand-prix-weekend/",
+      "https://www.universalweather.com/blog/singapore-grand-prix-business-aviation-guide/",
+      "https://www.seletarairport.com/commercial-flights.html",
+      "https://en.wikipedia.org/wiki/Marina_Bay_Street_Circuit",
+      "https://motorsportscalendar.com/event/f1-2026-singapore-gp"
+    ],
+    "airports": [
+      {
+        "iata": "SIN",
+        "km": 20
+      },
+      {
+        "iata": "XSP",
+        "km": 23
+      }
+    ]
+  },
+  "locales": {
+    "en": {
+      "title": "Formula 1 Singapore Grand Prix 2026 Airports & Flights",
+      "description": "Plan airport travel for Formula 1 Singapore Grand Prix 2026 with live flight boards for SIN/XSP, road-closure notes and MRT options.",
+      "h1": "Formula 1 Singapore Grand Prix 2026 airport guide",
+      "banner": "Open the F1 Singapore Grand Prix airport guide",
+      "intro": "Formula 1 Singapore Grand Prix 2026 runs from 9 October at 17:30 to 11 October at 22:00 at the Marina Bay Street Circuit in Singapore. The 2026 race is a Sprint weekend, so all three days have headline track action and arrival traffic can spread across Thursday and Friday. With tens of thousands of overseas visitors and heavy post-race departures, checking live airport boards helps you time arrivals, connections and return journeys around SIN and XSP.",
+      "getting": "Singapore Changi Airport (SIN) is the main gateway, about 20 km by road from Marina Bay Street Circuit and typically 20-30 minutes by taxi via the East Coast Parkway outside event-related closures. The recommended airport route is MRT: Changi Airport station is on the East-West Line branch, with a change at Tanah Merah, then continue toward Bayfront, Raffles Place, City Hall, Promenade or Esplanade. There is no dedicated airport-to-circuit F1 shuttle; use MRT, public buses, taxis or Grab. Seletar (XSP) is mainly for business aviation.",
+      "leaving": "Flying home is busiest on Monday 12 October, the day after the Sunday-night race, with a secondary late-Sunday wave for overnight long-haul departures. The Grand Prix starts at 20:00 local time on Sunday and runs about two hours, so few attendees can realistically depart on race day. More than 250,000 attendees can disperse late at night, and taxi or Grab queues near the circuit can be long. Arrive earlier than usual and check the live departures board before leaving for SIN or XSP.",
+      "tips": "Use the MRT where possible, especially during the road-closure period around Marina Centre and Padang, which lasts about a week. Allow extra walking time from Bayfront, Raffles Place, City Hall, Promenade or Esplanade, and confirm which station best suits your entrance before setting out. Keep luggage plans simple, avoid relying on road access near race hours, and recheck live arrivals or departures if your ground-transfer plan changes.",
+      "sec": {
+        "boards": "Live SIN and XSP boards for Singapore GP",
+        "getting": "Getting to Marina Bay Street Circuit",
+        "leaving": "Flying home after the Sunday night race",
+        "tips": "Travel tips for Grand Prix weekend"
+      }
+    },
+    "ru": {
+      "title": "Formula 1 Singapore GP 2026: аэропорты SIN/XSP и рейсы",
+      "description": "Онлайн-табло рейсов SIN/XSP для Formula 1 Singapore Grand Prix 2026: прилёт, вылет и дорога к Marina Bay Street Circuit.",
+      "h1": "Как лететь на Formula 1 Singapore Grand Prix 2026",
+      "banner": "Откройте гид по рейсам на Гран-при Сингапура",
+      "intro": "Formula 1 Singapore Grand Prix 2026 проходит 9–11 октября 2026 года на городской трассе Marina Bay Street Circuit в Сингапуре. В 2026 году это впервые Sprint-уикенд, поэтому значимая программа есть все три дня, с пятницы по воскресенье. Событие собирает десятки тысяч зарубежных гостей, а рекордные выпуски превышали 300 000 посещений за три дня. В эти даты онлайн-табло аэропортов помогает вовремя увидеть задержки прилётов и вылетов вокруг SIN и XSP.",
+      "getting": "Главные воздушные ворота — Singapore Changi Airport (SIN): около 20 км по дороге до Marina Bay Street Circuit, обычно 20–30 минут на такси по East Coast Parkway вне перекрытий. Рекомендуемый маршрут — MRT: Changi Airport на ветке East-West Line, пересадка на Tanah Merah, всего примерно 30–50 минут. Ближайшая станция — Bayfront, около 5 минут пешком; также подходят Raffles Place, City Hall, Promenade и Esplanade. Шаттла F1 от аэропорта нет: доступны MRT, автобусы, такси и Grab. XSP — для бизнес-авиации.",
+      "leaving": "Основная волна вылетов домой ожидается в понедельник, 12 октября, на следующий день после воскресной ночной гонки. Есть и поздняя воскресная волна ночных дальнемагистральных рейсов, но старт Гран-при в 20:00 и финиш около 22:00 делают вылет в тот же день реалистичным лишь для немногих. После события более 250 000 зрителей расходятся поздно вечером, поэтому SIN может быть особенно загружен. Закладывайте больше времени и проверяйте онлайн-табло вылетов перед выездом в аэропорт.",
+      "tips": "Планируйте маршрут с учётом перекрытий: дороги вокруг Marina Centre и Padang закрываются примерно на неделю, а въезд к трассе ограничен. Не рассчитывайте на личный автомобиль; LTA настойчиво рекомендует общественный транспорт. Для позднего возвращения держите запас времени на пеший выход к станции, такси или Grab: точки посадки у трассы после гонки заметно перегружены.",
+      "sec": {
+        "boards": "Онлайн-табло SIN и XSP для Гран-при",
+        "getting": "Из аэропорта к Marina Bay Street Circuit",
+        "leaving": "Вылет после ночной гонки",
+        "tips": "Советы на уикенд Sprint в Сингапуре"
+      }
+    },
+    "zh": {
+      "title": "2026新加坡F1大奖赛机场航班：SIN/XSP实时看板",
+      "description": "为2026新加坡F1大奖赛旅客整理SIN/XSP实时航班看板、樟宜与实里达机场到滨海湾街道赛道的交通、赛后返程高峰和出行提示。",
+      "h1": "2026新加坡F1大奖赛机场与实时航班看板",
+      "banner": "查看新加坡F1大奖赛机场与返程指南",
+      "intro": "Formula 1 Singapore Grand Prix 2026将于2026年10月9日17:30至10月11日22:00在新加坡滨海湾街道赛道举行。2026年是该站首次Sprint周末，周五至周日都有重要赛道活动，抵达客流会分散在周四和周五。赛事吸引大量海外旅客，临近日期查看SIN和XSP实时航班看板，有助于确认抵达、延误和返程安排。",
+      "getting": "新加坡樟宜机场（SIN）是本赛事的主要门户，距滨海湾街道赛道约20公里；在不受赛事封路影响时，经东海岸公园大道乘出租车通常约20–30分钟。推荐使用MRT：樟宜机场站在东西线机场支线，需在丹那美拉换乘进城，全程约30–50分钟。赛道附近可用Bayfront、Raffles Place、City Hall、Promenade和Esplanade等站。XSP距赛道约23公里，主要服务商务航空。",
+      "leaving": "返程高峰预计集中在10月12日星期一，即周日晚间正赛之后，另有一波深夜长途离境客流。正赛周日20:00开始、约两小时结束，旅客通常难以在比赛日当天从容离境。机场和前往机场的交通可能拥挤，建议比平常更早出发，并在离开市区前查看SIN或XSP实时出发看板，确认航班状态。",
+      "tips": "赛事期间滨海中心和政府大厦草场一带会有约一周道路封闭，驾车进场不便。没有机场直达赛道的F1专用接驳车；可使用MRT、公共巴士、计程车或Grab。夜间散场时，赛道周边出租车和Grab上车点等待较长，步行瓶颈也可能出现。尽量预留换乘、安检和道路绕行时间。",
+      "sec": {
+        "boards": "新加坡F1最近机场与SIN/XSP实时看板",
+        "getting": "从樟宜或实里达到滨海湾街道赛道",
+        "leaving": "周日晚赛后与周一返程航班",
+        "tips": "大奖赛周末机场出行提示"
+      }
+    },
+    "ar": {
+      "title": "رحلات ومطارات جائزة سنغافورة الكبرى 2026",
+      "description": "دليل السفر الجوي لجائزة سنغافورة الكبرى 2026 مع لوحات الرحلات المباشرة لمطاري SIN وXSP، وخيارات الوصول إلى مارينا باي والعودة.",
+      "h1": "الوصول جواً إلى جائزة سنغافورة الكبرى 2026",
+      "banner": "افتح دليل رحلات مطارات جائزة سنغافورة الكبرى",
+      "intro": "تقام جائزة سنغافورة الكبرى للفورمولا 1 2026 من 9 أكتوبر الساعة 17:30 حتى 11 أكتوبر الساعة 22:00 بالتوقيت المحلي، على حلبة شارع مارينا باي في سنغافورة. نسخة 2026 هي أول عطلة سباق Sprint لهذا الحدث، لذلك تمتد حركة الوصول على الخميس والجمعة قبل برنامج الجمعة إلى الأحد. وبما أن الحدث يجذب عشرات الآلاف من الزوار الدوليين، تساعد لوحات الرحلات المباشرة في متابعة الوصول والمغادرة حول ذروة السفر.",
+      "getting": "المطار الرئيسي هو مطار سنغافورة شانغي SIN، وهو عملياً البوابة التجارية الوحيدة للحدث، على نحو 20 كم براً من الحلبة. تستغرق سيارة الأجرة عادة 20–30 دقيقة عبر East Coast Parkway خارج إغلاقات الحدث، لكن MRT هو المسار الموصى به: من محطة Changi Airport على فرع East-West Line مع تبديل في Tanah Merah، والرحلة 30–50 دقيقة. تتوافر أيضاً حافلات عامة، تاكسي مرخّص وGrab، ولا توجد حافلة F1 مخصصة. XSP يبعد نحو 23 كم وهو غالباً للطيران الخاص.",
+      "leaving": "بعد السباق الليلي، يكون ضغط العودة الجوي الأكبر يوم الاثنين 12 أكتوبر، مع موجة ثانوية متأخرة مساء الأحد للرحلات الطويلة الليلية. يبدأ سباق الأحد عند 20:00 ويمتد نحو ساعتين، لذلك لا يتمكن إلا عدد قليل جداً من المغادرة جواً في يوم السباق نفسه. مع تفرق أكثر من 250 ألف حاضر في وقت متأخر، قد تكون مناطق المغادرة في SIN ونقاط التاكسي وGrab قرب الحلبة مزدحمة. اذهب إلى المطار أبكر من المعتاد، وافتح لوحة المغادرات المباشرة قبل مغادرة المدينة.",
+      "tips": "خطط على أساس أن إغلاقات الطرق حول Marina Centre وPadang تستمر قرابة أسبوع، لا أيام السباق فقط. القيادة إلى الحلبة غير عملية، والهيئة المحلية تشجع استخدام النقل العام. اختر محطة MRT الأنسب لمدخلك: Bayfront الأقرب غالباً، أو Raffles Place وCity Hall وPromenade وEsplanade لبعض المداخل. بعد الجلسات الليلية، امنح وقتاً إضافياً للمشي والانتقال إلى التاكسي أو Grab.",
+      "sec": {
+        "boards": "لوحات SIN وXSP لجائزة سنغافورة الكبرى",
+        "getting": "من شانغي إلى حلبة مارينا باي",
+        "leaving": "موجة العودة بعد سباق الأحد الليلي",
+        "tips": "نصائح سفر لعطلة Sprint في سنغافورة"
+      }
+    },
+    "de": {
+      "title": "Formel 1 Singapur GP 2026: Flughäfen & Flüge",
+      "description": "Flüge zum Formel 1 Singapur GP 2026: Live-Flugtafeln für SIN/XSP, Anreise zum Marina Bay Street Circuit und Rückflughinweise.",
+      "h1": "Flüge zum Formula 1 Singapore Grand Prix 2026",
+      "banner": "Event-Guide für Flüge zum Singapur GP öffnen",
+      "intro": "Der Formula 1 Singapore Grand Prix 2026 findet vom 9. Oktober um 17:30 Uhr bis 11. Oktober um 22:00 Uhr am Marina Bay Street Circuit in Singapur statt. 2026 ist erstmals ein Sprint-Wochenende, daher gibt es an allen drei Tagen wichtige Streckenaction und Anreisen verteilen sich auf Donnerstag und Freitag. Bei mehr als 300.000 Besuchern in jüngeren Ausgaben helfen Live-Flugtafeln, Verspätungen und Ankunftswellen an SIN und XSP früh zu sehen.",
+      "getting": "Singapore Changi Airport (SIN) ist der Hauptzugang und praktisch das einzige kommerzielle Tor für die meisten Besucher, etwa 20 km per Straße vom Circuit. Per Taxi sind es außerhalb veranstaltungsbedingter Sperren typischerweise 20–30 Minuten über den East Coast Parkway. Empfohlen ist die MRT: Changi Airport Branch der East-West Line, Umstieg in Tanah Merah, rund 30–50 Minuten. Außerdem gibt es öffentliche Busse, darunter eine direkte Stadtbusverbindung, Taxen und Grab. XSP liegt 23 km entfernt und dient vor allem Business-Aviation.",
+      "leaving": "Die stärkste Rückreisewelle liegt am Montag, 12. Oktober, nach dem Sonntagnachtrennen; zusätzlich gibt es spät am Sonntag eine kleinere Welle von Nacht-Langstreckenflügen. Da das Rennen am Sonntag um 20:00 Uhr startet und etwa zwei Stunden dauert, können nur wenige Besucher realistisch noch am Renntag abfliegen. Rechnen Sie an SIN mit vollen Terminals, planen Sie früher als üblich anzukommen und prüfen Sie vor der Abfahrt die Live-Abflugtafel.",
+      "tips": "Nutzen Sie rund um Marina Bay möglichst MRT und öffentliche Busse: Es gibt keinen speziellen Flughafen-zum-Circuit-F1-Shuttle, und die Straßensperren dauern etwa eine Woche. Bayfront ist meist der nächste MRT-Halt; Raffles Place, City Hall, Promenade und Esplanade bedienen weitere Zugänge. Taxi- und Grab-Abholpunkte können nach dem Rennen lange Rückstaus haben, besonders bei Engstellen zu Fuß.",
+      "sec": {
+        "boards": "Live-Flugtafeln für SIN und XSP zum Grand Prix",
+        "getting": "Vom Flughafen zum Marina Bay Street Circuit",
+        "leaving": "Rückflug nach dem Sonntagnachtrennen",
+        "tips": "Praktische Hinweise fürs Sprint-Wochenende"
+      }
+    },
+    "ko": {
+      "title": "F1 싱가포르 GP 2026 공항·항공편 안내",
+      "description": "2026 F1 싱가포르 그랑프리 기간, SIN/XSP 실시간 운항판으로 도착·출발 변동을 확인하세요. 창이공항과 셀레타공항에서 마리나 베이 스트리트 서킷까지 MRT, 택시, Grab 이동을 함께 계획할 수 있습니다.",
+      "h1": "Formula 1 Singapore Grand Prix 2026 공항 이동 안내",
+      "banner": "F1 싱가포르 GP 공항·항공편 이동 가이드 열기",
+      "intro": "Formula 1 Singapore Grand Prix 2026은 2026년 10월 9일 17:30부터 10월 11일 22:00까지 싱가포르 Marina Bay Street Circuit에서 열리는 스포츠 행사입니다. 2026년에는 이 레이스 최초의 Sprint 주말로, 금요일부터 일요일까지 주요 주행이 이어집니다. 최근 대회는 3일 30만 명 이상 규모였고 해외 방문객도 많아, 이 기간에는 SIN과 XSP 실시간 공항 운항판 확인이 특히 중요합니다.",
+      "getting": "주 관문은 Singapore Changi Airport(SIN)입니다. 서킷까지 도로 약 20km이며, 행사 관련 폐쇄가 없을 때 East Coast Parkway 경유 택시는 보통 20~30분입니다. 권장 경로는 공항 MRT로, Changi Airport 역에서 East-West Line 지선을 타고 Tanah Merah에서 시내 방향으로 환승하며 전체 30~50분 정도입니다. Bayfront는 주요 입구까지 약 5분입니다. 전용 F1 셔틀은 없고 MRT, 공공버스, 미터 택시, Grab이 실제 선택지입니다. XSP는 약 23km의 비즈니스 항공 중심 대체 공항입니다.",
+      "leaving": "귀국 수요의 정점은 일요일 밤 레이스 다음 날인 10월 12일 월요일입니다. 일요일 20:00에 시작해 약 두 시간 진행되는 야간 레이스라 종료가 22:00 무렵이고, 당일 출국은 현실적으로 많지 않습니다. 늦은 일요일에는 일부 장거리 야간편 수요가 있습니다. 월요일에는 SIN과 XSP 주변이 붐빌 수 있으므로 평소보다 일찍 공항으로 출발하고, 이동 전에 실시간 출발 운항판으로 항공편 상태를 확인하세요.",
+      "tips": "Marina Centre와 Padang 주변 도로 폐쇄는 레이스일만이 아니라 약 일주일 이어집니다. 운전은 비실용적이고, LTA는 대중교통 이용을 강하게 권장합니다. Bayfront, Raffles Place, City Hall, Promenade, Esplanade 중 입구와 맞는 역을 미리 정하고, 레이스 후 택시·Grab 승차 대기와 도보 병목을 감안해 여유를 두세요. 공항 이동 전 항공편 상태도 다시 확인하세요.",
+      "sec": {
+        "boards": "SIN·XSP 실시간 운항판과 그랑프리 공항",
+        "getting": "마리나 베이 스트리트 서킷으로 가는 공항 이동",
+        "leaving": "일요일 야간 레이스 뒤 월요일 귀국 흐름",
+        "tips": "싱가포르 GP 항공 여행 실무 팁"
+      }
+    },
+    "ja": {
+      "title": "F1シンガポールGP 2026 空港・フライト案内",
+      "description": "Formula 1 Singapore Grand Prix 2026の渡航前に、SIN/XSPのライブフライトボードで到着・出発状況を確認。チャンギ、セレターからマリーナベイ市街地コースへの移動と帰路の要点を整理します。",
+      "h1": "Formula 1 Singapore Grand Prix 2026の空港・フライト案内",
+      "banner": "F1シンガポールGPの空港アクセス案内を開く",
+      "intro": "Formula 1 Singapore Grand Prix 2026は、2026年10月9日17:30から10月11日22:00まで、シンガポールのMarina Bay Street Circuitで開催されるスポーツイベントです。2026年はこのレース初のSprint週末で、金曜から日曜まで主要な走行があります。海外からの来訪も多いため、前後の日程ではSINとXSPのライブ空港ボードで到着・出発の変化を確認すると移動計画を立てやすくなります。",
+      "getting": "主な玄関口はSingapore Changi Airport（SIN）で、Marina Bay Street Circuitから道路で約20km、イベント関連の通行規制がない時間帯ならEast Coast Parkway経由のタクシーで通常20〜30分です。推奨される空港からの移動はMRTで、Changi Airport駅からEast-West Line支線に乗り、Tanah Merahで市内方面へ乗り換え、全体で約30〜50分です。Bayfrontは多くの入口へ徒歩約5分。XSPは約23kmのビジネス航空向け空港で、多くの観戦客には現実的な代替ではありません。",
+      "leaving": "帰路のピークは日曜夜のレース翌日、10月12日月曜日です。日曜のGrand Prixは現地20:00に始まり約2時間行われるため、当日中に出発できる観戦客は限られ、深夜の長距離便に向かう二次的な波もあります。250,000人超が夜遅くに分散し、タクシーやGrabの乗り場、徒歩動線、空港が混みやすくなります。空港へ向かう前にライブ出発ボードを確認し、通常より早めに到着してください。",
+      "tips": "Marina CentreとPadang周辺では、レース日だけでなく約1週間にわたり広範な道路閉鎖があります。会場への運転は実用的ではなく、公共交通の利用が強く推奨されています。専用の空港直行F1シャトルはありません。MRT、公共バス、メーター制タクシー、Grabを組み合わせ、Bayfront、Raffles Place、City Hall、Promenade、Esplanadeの各駅を目的の入口に合わせて選んでください。",
+      "sec": {
+        "boards": "SIN・XSPのライブフライトボード",
+        "getting": "チャンギからマリーナベイ市街地コースへ",
+        "leaving": "日曜夜レース後と10月12日の帰国",
+        "tips": "Sprint週末の移動準備"
+      }
+    },
+    "fr": {
+      "title": "Grand Prix F1 Singapour 2026 : aéroports et vols",
+      "description": "Tableaux de vols en direct SIN/XSP pour le Grand Prix F1 Singapour 2026 : arrivées, départs et accès au Marina Bay Street Circuit.",
+      "h1": "Vols et aéroports pour le Grand Prix F1 Singapour 2026",
+      "banner": "Ouvrir le guide vols et aéroports du Grand Prix",
+      "intro": "Le Formula 1 Singapore Grand Prix 2026 se déroule du 9 octobre à 17 h 30 au 11 octobre à 22 h, au Marina Bay Street Circuit, à Singapour. Premier week-end Sprint pour cette course, il ajoute une course Sprint le samedi et répartit les arrivées dès jeudi et vendredi. Avec plus de 300 000 spectateurs lors d’éditions récentes et de nombreux visiteurs étrangers, consulter les tableaux de vols en direct aide à ajuster trajets et attentes.",
+      "getting": "SIN, Singapore Changi Airport, est la porte d’entrée principale et, en pratique, le grand aéroport commercial de l’événement : environ 20 km par la route, souvent 20 à 30 minutes en taxi via l’East Coast Parkway hors fermetures liées au circuit. Le MRT est recommandé : depuis Changi Airport sur la branche East-West Line, changement à Tanah Merah, puis 30 à 50 minutes jusqu’au secteur du circuit. Bus publics, taxis au compteur et Grab existent. XSP, à 23 km, sert surtout l’aviation d’affaires.",
+      "leaving": "Le pic des retours aériens tombe le lundi 12 octobre, avec une seconde vague tard le dimanche pour les vols long-courriers de nuit. La course du dimanche commence à 20 h et dure environ deux heures ; peu de voyageurs peuvent donc repartir le soir même. Plus de 250 000 personnes se dispersent tard, et les points taxi ou Grab près du circuit saturent. Arrivez plus tôt que d’habitude à SIN ou XSP et vérifiez le tableau des départs en direct avant de partir.",
+      "tips": "Privilégiez le MRT quand c’est possible : Bayfront est à environ 5 minutes à pied de nombreuses entrées, Raffles Place à 8–10 minutes et City Hall à 12–15 minutes. Les fermetures de routes durent environ une semaine autour de Marina Centre et Padang, rendant la conduite peu pratique. Gardez une marge pour les correspondances, les contrôles et les bagages.",
+      "sec": {
+        "boards": "Tableaux en direct près du Marina Bay Street Circuit",
+        "getting": "Rejoindre Marina Bay depuis SIN ou XSP",
+        "leaving": "Repartir après la course de nuit",
+        "tips": "Conseils de voyage pendant le week-end Sprint"
+      }
+    },
+    "es": {
+      "title": "GP de Singapur F1 2026: vuelos y aeropuertos SIN/XSP",
+      "description": "Consulta paneles de vuelos en vivo para SIN/XSP durante el GP de Singapur F1 2026: llegadas, salidas y traslados a Marina Bay.",
+      "h1": "Vuelos y aeropuertos para el GP de Singapur F1 2026",
+      "banner": "Abre la guía de vuelos para el GP de Singapur 2026",
+      "intro": "El Formula 1 Singapore Grand Prix 2026 se celebra del 9 al 11 de octubre de 2026 en el Marina Bay Street Circuit, Singapur. Es un fin de semana Sprint, con acción principal los tres días, y atrae decenas de miles de visitantes internacionales. Como las llegadas se reparten entre jueves y viernes y la salida se concentra tras la carrera nocturna, conviene revisar los paneles de vuelos en vivo de SIN y XSP alrededor de esas fechas.",
+      "getting": "Singapore Changi Airport (SIN) es la puerta de entrada principal: unos 20 km por carretera al circuito, normalmente 20–30 minutos en taxi por East Coast Parkway fuera de cierres. La ruta recomendada es el MRT: desde Changi Airport, rama de la East-West Line, se cambia en Tanah Merah; Bayfront queda a unos 5 minutos a pie de muchos accesos. También existen autobuses públicos, taxis con taxímetro y Grab; no hay lanzadera F1 directa. XSP, a unos 23 km, es sobre todo aviación ejecutiva, no una opción realista para la mayoría.",
+      "leaving": "La ola de regreso alcanza su punto máximo el lunes 12 de octubre, después de la carrera nocturna del domingo; también hay una salida secundaria tarde el domingo para vuelos de larga distancia nocturnos. Como la carrera empieza a las 20:00 y termina alrededor de las 22:00, pocos viajeros pueden volar ese mismo día de forma realista. Espera aeropuertos y accesos más concurridos, sal con más margen de lo habitual y revisa el panel de salidas en vivo antes de ir a SIN o XSP.",
+      "tips": "Planifica los traslados como parte del viaje, no como un tramo corto. Durante el periodo de cierres, conducir hacia Marina Centre es poco práctico y la autoridad de transporte recomienda usar transporte público. Elige una estación MRT cercana a tu acceso, confirma el aeropuerto correcto en tu reserva y consulta llegadas o salidas en vivo antes de moverte con equipaje.",
+      "sec": {
+        "boards": "Paneles en vivo para Marina Bay: SIN y XSP",
+        "getting": "Cómo llegar al circuito urbano de Marina Bay",
+        "leaving": "Volar tras la carrera nocturna",
+        "tips": "Consejos de viaje para el GP de Singapur"
+      }
+    },
+    "it": {
+      "title": "Formula 1 Singapore GP 2026: aeroporti e voli",
+      "description": "Guida voli per il Formula 1 Singapore Grand Prix 2026 con tabelloni live per SIN/XSP, arrivi, partenze e accesso a Marina Bay.",
+      "h1": "Voli e aeroporti per Formula 1 Singapore Grand Prix 2026",
+      "banner": "Apri la guida voli per il GP di Singapore 2026",
+      "intro": "Il Formula 1 Singapore Grand Prix 2026 si svolge dal 9 ottobre alle 17:30 all’11 ottobre alle 22:00 al Marina Bay Street Circuit, a Singapore. Nel 2026 è anche un weekend Sprint, quindi l’azione in pista interessa tutti e tre i giorni e gli arrivi si distribuiscono soprattutto tra giovedì e venerdì. Con oltre 300.000 presenze registrate nelle edizioni recenti, controllare i tabelloni aeroportuali live aiuta a seguire arrivi, ritardi e partenze intorno all’evento.",
+      "getting": "Lo scalo principale è Singapore Changi Airport (SIN), circa 20 km su strada dal circuito e normalmente 20–30 minuti in taxi via East Coast Parkway fuori dalle chiusure dell’evento. La rotta consigliata è la MRT: da Changi Airport, ramo della East-West Line, si cambia a Tanah Merah; totale circa 30–50 minuti. Esistono anche bus pubblici, taxi con tassametro e Grab, senza shuttle F1 dedicato. XSP è secondario: 23 km, soprattutto business aviation.",
+      "leaving": "Il picco dei rientri in volo è lunedì 12 ottobre, dopo la gara notturna di domenica, con una seconda ondata di partenze a lungo raggio nella tarda serata di domenica. Poiché il Gran Premio parte alle 20:00 locali e dura circa due ore, pochi viaggiatori riescono realisticamente a volare lo stesso giorno. SIN può essere molto affollato: parti prima del solito e controlla il tabellone partenze live prima di lasciare la zona di Marina Bay.",
+      "tips": "Durante la settimana del Gran Premio, le chiusure stradali interessano Marina Centre e Padang per circa sette giorni; guidare fino al circuito è poco pratico. Usa la MRT quando possibile, scegli in anticipo la stazione più adatta all’ingresso e lascia margine per camminate e code. Dopo la gara, taxi e Grab vicino ai varchi possono accumulare attese lunghe.",
+      "sec": {
+        "boards": "Tabelloni live per SIN e XSP durante il GP",
+        "getting": "Da Changi e Seletar al Marina Bay Street Circuit",
+        "leaving": "Partenze dopo la gara notturna di Singapore",
+        "tips": "Consigli di viaggio per il weekend Sprint"
+      }
+    },
+    "hi": {
+      "title": "फॉर्मूला 1 सिंगापुर ग्रां प्री 2026: एयरपोर्ट व उड़ानें",
+      "description": "फॉर्मूला 1 सिंगापुर ग्रां प्री 2026 के लिए SIN/XSP लाइव उड़ान बोर्ड, चांगी व सेलेतर से मरीना बे तक यात्रा और वापसी सलाह।",
+      "h1": "फॉर्मूला 1 सिंगापुर ग्रां प्री 2026 एयरपोर्ट गाइड",
+      "banner": "SIN/XSP से ग्रां प्री यात्रा गाइड खोलें",
+      "intro": "फॉर्मूला 1 सिंगापुर ग्रां प्री 2026, 9 अक्टूबर 2026 को 17:30 से 11 अक्टूबर 2026 को 22:00 तक, सिंगापुर के मरीना बे स्ट्रीट सर्किट में होगा। 2026 में यह इस रेस का पहला स्प्रिंट वीकेंड है, इसलिए शुक्रवार से रविवार तक प्रमुख ट्रैक कार्यक्रम रहेंगे और आगमन गुरुवार-शुक्रवार में फैल सकता है। उन तारीखों पर SIN और XSP के लाइव एयरपोर्ट बोर्ड से देरी, आगमन लहर और कनेक्शन की स्थिति जाँचना उपयोगी है।",
+      "getting": "इस इवेंट के लिए मुख्य हवाई द्वार सिंगापुर चांगी एयरपोर्ट (SIN) है: मरीना बे स्ट्रीट सर्किट से लगभग 20 किमी, और इवेंट-सम्बंधित बंदिशों के बाहर ईस्ट कोस्ट पार्कवे से टैक्सी में सामान्यतः 20–30 मिनट। अनुशंसित मार्ग एमआरटी है: चांगी एयरपोर्ट स्टेशन ईस्ट-वेस्ट लाइन शाखा पर है; ताना मेराह पर बदलकर शहर जाएँ, कुल यात्रा लगभग 30–50 मिनट। समर्पित एफ1 शटल नहीं है; एमआरटी, सार्वजनिक बस, मीटर टैक्सी और ग्रैब उपलब्ध हैं। XSP 23 किमी दूर है, पर अधिकांश प्रशंसकों के लिए यथार्थ विकल्प नहीं।",
+      "leaving": "घर लौटने की सबसे बड़ी उड़ान लहर सोमवार 12 अक्टूबर को है; रविवार देर रात रातभर चलने वाली लंबी दूरी की प्रस्थान लहर भी रहती है। रविवार की ग्रां प्री 20:00 बजे शुरू होकर करीब दो घंटे चलती है, इसलिए 250,000 से अधिक लोग देर रात निकलते हैं। SIN या XSP जाते समय सामान्य से पहले निकलें, और होटल या शहर छोड़ने से पहले लाइव प्रस्थान बोर्ड देख लें।",
+      "tips": "योजना बनाते समय सर्किट के आसपास लगभग एक सप्ताह की सड़क बंदिशें मानकर चलें; मरीना सेंटर में ड्राइव करना व्यावहारिक नहीं है। एमआरटी पर बेफ्रंट अधिकांश प्रवेशों से करीब 5 मिनट पैदल है; रैफल्स प्लेस, सिटी हॉल, प्रोमेनेड और एस्प्लेनेड भी अलग-अलग प्रवेशों के लिए काम आते हैं। टैक्सी या ग्रैब पिकअप पर अतिरिक्त प्रतीक्षा रखें और एयरपोर्ट बोर्ड दोबारा देखें।",
+      "sec": {
+        "boards": "मरीना बे के निकट SIN/XSP लाइव बोर्ड",
+        "getting": "चांगी से मरीना बे स्ट्रीट सर्किट तक",
+        "leaving": "रविवार रात के बाद वापसी उड़ानें",
+        "tips": "स्प्रिंट वीकेंड में हवाई यात्रा सुझाव"
+      }
+    },
+    "tr": {
+      "title": "Formula 1 Singapur GP 2026: Havalimanları ve Uçuşlar",
+      "description": "Formula 1 Singapur GP 2026 için SIN ve XSP canlı uçuş panoları; Changi, Seletar, Marina Bay ulaşımı ve dönüş yoğunluğu.",
+      "h1": "Formula 1 Singapur GP 2026 havalimanı rehberi",
+      "banner": "Singapur GP uçuş ve havalimanı rehberini açın",
+      "intro": "Formula 1 Singapore Grand Prix 2026, 9 Ekim 2026 17:30’da başlayıp 11 Ekim 2026 22:00’de biten bir spor etkinliğidir. Yarış, Singapur’daki Marina Bay Street Circuit’te düzenlenir ve 2026’da bu yarış ilk kez Sprint hafta sonu formatındadır. Üç günün de yoğun pist programı olduğu için gelişler Perşembe ve Cuma’ya yayılabilir. Bu tarihlerde SIN ve XSP canlı panolarını kontrol etmek, iniş ve gecikme durumunu görmeye yardımcı olur.",
+      "getting": "Ana kapı Singapore Changi Airport (SIN) olup etkinlik için fiilen tek ticari kapıdır; Marina Bay Street Circuit’e karayoluyla yaklaşık 20 km uzaklıktadır. Etkinlik kapanışları dışında taksiyle East Coast Parkway üzerinden genellikle 20–30 dakika sürer. Önerilen seçenek raylı ulaşımdır: Changi Airport MRT istasyonu East-West Line kolundadır, Tanah Merah’ta aktarma yapılır ve toplam yolculuk yaklaşık 30–50 dakikadır. Özel F1 havalimanı servisi yoktur; MRT, halk otobüsleri, taksi ve Grab kullanılır. XSP yaklaşık 23 km’deki iş havacılığı alanıdır; çoğu seyirci için gerçekçi değildir.",
+      "leaving": "Uçuşla dönüş dalgası en çok 12 Ekim Pazartesi, Pazar gecesi yarışın ertesi günü görülür; ikinci dalga geç Pazar saatlerindeki gece uzun menzil kalkışlarıdır. Pazar Grand Prix’si yerel saatle 20:00’de başlar ve yaklaşık iki saat sürer, bu yüzden yarış günü ayrılmak çoğu yolcu için gerçekçi değildir. 250.000’den fazla katılımcı geç saatte dağılır; havalimanları ve erişim yolları kalabalık olabilir. Normalden erken çıkın ve yola düşmeden canlı kalkış panosunu kontrol edin.",
+      "tips": "Planı toplu taşımaya göre kurun: Bayfront çoğu girişe yaklaşık 5 dakika, Raffles Place 8–10 dakika, City Hall 12–15 dakika yürüme mesafesindedir; Promenade ve Esplanade belirli girişlere hizmet verir. Marina Centre ve Padang çevresindeki yol kapanışları yaklaşık bir hafta sürer, bu nedenle araçla gitmek pratik değildir. Taksi ve Grab noktalarında yarış sonrası uzun beklemelere hazırlıklı olun.",
+      "sec": {
+        "boards": "SIN/XSP canlı panoları ve havalimanları",
+        "getting": "Marina Bay Street Circuit’e ulaşım",
+        "leaving": "Gece yarışından sonra dönüş uçuşları",
+        "tips": "Sprint hafta sonu yolcu ipuçları"
+      }
+    }
+  }
+}

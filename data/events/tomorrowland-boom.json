@@ -1,0 +1,238 @@
+{
+  "meta": {
+    "slug": "tomorrowland-boom",
+    "name": "Tomorrowland",
+    "startDate": "2026-07-17T12:00:00+02:00",
+    "endDate": "2026-07-26T23:59:00+02:00",
+    "venue": "De Schorre provincial recreation domain",
+    "venueCity": "Boom",
+    "country": "BE",
+    "type": "festival",
+    "officialUrl": "https://www.tomorrowland.com/",
+    "status": "scheduled",
+    "sources": [
+      "https://en.wikipedia.org/wiki/Tomorrowland_(festival)",
+      "https://djmag.com/news/tomorrowland-belgium-2026-dates-announced",
+      "https://edmidentity.com/2025/12/04/tomorrowland-2026-dates/",
+      "https://en.wikipedia.org/wiki/De_Schorre",
+      "https://press.brusselsairlines.com/brussels-airlines-kicks-off-tomorrowland-travel-with-its-party-flights",
+      "https://www.aviation24.be/airlines/lufthansa-group/brussels-airlines/brussels-airlines-flies-nearly-25000-tomorrowland-visitors-launches-2026-party-flights/",
+      "https://www.aviation24.be/airports/brussels-airport-bru/brussels-airport-expects-record-summer-with-5-2-million-passengers/",
+      "https://tripbytrip.org/2026/06/24/brussels-airport-is-expecting-5-2-million-passengers-this-summer-holiday/",
+      "https://www.belgiantrain.be/en/leisure/music-events/tomorrowland",
+      "https://www.rome2rio.com/s/Brussels-Airport-BRU/Tomorrowland",
+      "https://www.rome2rio.com/s/Nearby-Airports/Boom-De-Schorre",
+      "https://nl.wikipedia.org/wiki/Spoorlijn_52",
+      "https://www.travelandtourworld.com/news/article/lk7jko990dsu/",
+      "https://www.tomorrowland.com/"
+    ],
+    "airports": [
+      {
+        "iata": "ANR",
+        "km": 18
+      },
+      {
+        "iata": "BRU",
+        "km": 33
+      },
+      {
+        "iata": "CRL",
+        "km": 87
+      }
+    ]
+  },
+  "locales": {
+    "en": {
+      "title": "Tomorrowland Airports and Live Flights: ANR, BRU, CRL",
+      "description": "Plan airport travel for Tomorrowland 2026 in Boom with live flight boards for ANR/BRU/CRL, plus routes to De Schorre and fly-home tips.",
+      "h1": "Tomorrowland 2026 airport and flight guide",
+      "banner": "Open the Tomorrowland airport flight guide",
+      "intro": "Tomorrowland 2026 is a festival at De Schorre provincial recreation domain in Boom, Belgium, running across two weekends: 17–19 July and 24–26 July 2026. The page range runs from Friday 17 July to Sunday 26 July, including the gap week between weekends. With about 400,000 visitors from more than 200 countries, live airport boards help travellers confirm arrivals, delays and departures around the busiest travel days.",
+      "getting": "Brussels Airport (BRU, Zaventem) is the main international gateway, about 33 km from De Schorre and roughly 25–35 minutes by car in normal traffic. Antwerp International (ANR) is nearest at about 18 km and around 20 minutes by road, but it has a limited scheduled network. Brussels South Charleroi (CRL) is about 87 km away, so treat it as a fallback low-cost gateway. Rail to Boom, De Lijn buses, festival shuttles, taxis and private transfers are the main options.",
+      "leaving": "Expect the largest fly-home waves on Monday 20 July and Monday 27 July, after each Tomorrowland weekend. Brussels Airport is listed as especially busy on 20 July, with more than 90,000 travellers, and airport processing can be slower during peak summer travel. Roads around Boom also carry car and coach traffic on departure days. Plan to arrive earlier than usual, and check the live departures board before leaving for the airport.",
+      "tips": "Match your flight day to the festival weekend you attend, because the date range includes a gap week with no main-site programme. Keep airport, rail and shuttle plans flexible, especially on Thursday, Friday and Monday travel peaks. If you stay in Antwerp or Brussels, allow time for the domestic rail connection to Boom and the short local bus or shuttle leg to De Schorre or DreamVille.",
+      "sec": {
+        "boards": "Live ANR, BRU and CRL boards for Tomorrowland",
+        "getting": "Getting from Belgium airports to De Schorre",
+        "leaving": "Monday departures after the Boom festival weekends",
+        "tips": "Travel tips for Tomorrowland flight days"
+      }
+    },
+    "ru": {
+      "title": "Tomorrowland 2026: аэропорты и рейсы ANR, BRU, CRL",
+      "description": "Как лететь на Tomorrowland 2026 в Boom: живые табло рейсов ANR/BRU/CRL, дорога до De Schorre и выезд после фестиваля.",
+      "h1": "Как лететь на Tomorrowland 2026 в Boom",
+      "banner": "Откройте гид по аэропортам для Tomorrowland 2026",
+      "intro": "Tomorrowland 2026 — фестиваль в De Schorre, провинциальном рекреационном домене в Boom, Бельгия. Даты охватывают 17–26 июля: программа проходит по пятницам–воскресеньям 17–19 и 24–26 июля, между ними остаётся неделя без основной программы на площадке. На эти дни приходится крупный международный поток: около 400 000 посетителей из более чем 200 стран. Поэтому перед вылетом и встречей рейса полезно сверять живое табло аэропортов ANR, BRU и CRL.",
+      "getting": "Основные международные прилёты удобнее планировать через Brussels Airport (BRU, Zaventem): это главный шлюз, около 33 км от De Schorre и примерно 25–35 минут на машине при обычном движении. Ближайший аэропорт — Antwerp International (ANR), около 18 км и примерно 20 минут по дороге, но сеть рейсов ограничена. Brussels South Charleroi (CRL) находится далеко, около 87 км, и скорее запасной вариант. Доступны поезд SNCB/NMBS до Boom, автобус De Lijn, шаттлы, такси и частные трансферы.",
+      "leaving": "Обратная волна после каждого уик-энда приходится на понедельники 20 и 27 июля. Brussels Airport особенно загружен 20 июля: на этот день приходится более 90 000 путешественников за сутки. В 2026 году внедрение EU Entry/Exit System также приводило к длинным очередям на пограничном контроле для пассажиров не из ЕС. Закладывайте больше времени, чем обычно, и перед выездом из Boom, Antwerp или Brussels проверьте живое табло вылетов нужного аэропорта.",
+      "tips": "Сверяйте аэропорт в бронировании: BRU и CRL находятся в разных направлениях, а ANR — небольшой региональный аэропорт. Если живёте в Antwerp или Brussels, заранее сопоставьте поезд до Boom, автобус до остановки Boom De Schorre и возможный шаттл. На дни прибытия и отъезда держите запас времени для дорог вокруг Boom и коридора A12/E19.",
+      "sec": {
+        "boards": "Живые табло рейсов к Tomorrowland: ANR, BRU, CRL",
+        "getting": "Как добраться от аэропорта до De Schorre в Boom",
+        "leaving": "Вылет домой после уик-эндов Tomorrowland",
+        "tips": "Практические советы для поездки на Tomorrowland"
+      }
+    },
+    "zh": {
+      "title": "Tomorrowland 2026机场航班：ANR、BRU、CRL交通指南",
+      "description": "前往Boom的Tomorrowland 2026？查看ANR/BRU/CRL实时航班板，了解布鲁塞尔、安特卫普、沙勒罗瓦机场到De Schorre的抵离安排与交通选择。",
+      "h1": "Tomorrowland 2026：机场、航班与往返De Schorre",
+      "banner": "打开Tomorrowland机场与实时航班指南",
+      "intro": "Tomorrowland 2026于7月17日至26日在比利时Boom的De Schorre省级休闲公园举行，实际节目分为7月17–19日和24–26日两个周末，中间周为间隔期。活动吸引来自200多个国家的约40万人次，抵达与返程集中。临近这些日期，查看ANR、BRU、CRL实时航班板，有助于确认到达、延误和出发状态。",
+      "getting": "主要国际门户是布鲁塞尔机场BRU，距De Schorre约33公里，正常路况驾车约25–35分钟。安特卫普机场ANR最近，约18公里、约20分钟车程，但属于小型区域机场，航线有限。布鲁塞尔南沙勒罗瓦CRL约87公里、约一小时车程，距离较远，更适合作为低成本航线的备选。可用方式包括火车到Boom站、De Lijn巴士、免费接驳、主办方接驳、出租车或私人接送。",
+      "leaving": "返程高峰集中在两个周末后的星期一：7月20日和7月27日。布鲁塞尔机场在7月20日预计为2026年暑期最繁忙的一天，旅客超过9万人；Boom周边及A12/E19通道也会承受汽车和大巴流量。离开住处前先查看实时出发航班板，确认BRU、ANR或CRL状态，并比平时更早到达机场。",
+      "tips": "尽量把机场选择、住宿城市和进出场方式一起规划；许多旅客住在安特卫普或布鲁塞尔并通勤。若住DreamVille，步行到入口约15分钟，并留意Boom站至营地的接驳运行日。非欧盟护照旅客在暑期入境可能遇到更长边检等待，转机和陆路接续都应预留缓冲。",
+      "sec": {
+        "boards": "Tomorrowland邻近机场实时航班板",
+        "getting": "从BRU、ANR、CRL前往De Schorre",
+        "leaving": "两个周末后的返程航班高峰",
+        "tips": "Boom音乐节行程实用提示"
+      }
+    },
+    "ar": {
+      "title": "رحلات ومطارات تومورولاند 2026: ANR وBRU وCRL",
+      "description": "دليل السفر إلى تومورولاند في بوم مع لوحات الرحلات الحية لمطارات ANR وBRU وCRL، ومعلومات الوصول والمغادرة حول عطلتَي المهرجان.",
+      "h1": "الوصول جواً إلى تومورولاند 2026 في بوم",
+      "banner": "افتح دليل مطارات ورحلات تومورولاند",
+      "intro": "تومورولاند 2026 هو مهرجان يقام في مجال دي شور الترفيهي الإقليمي في بوم، بلجيكا، من 17 إلى 26 يوليو 2026. يمتد البرنامج على عطلتَي نهاية أسبوع: 17–19 يوليو و24–26 يوليو، مع فجوة بينهما. يستقبل الحدث نحو 400,000 زائر من أكثر من 200 بلد، لذلك يساعد فحص لوحة مطار حية حول هذه التواريخ على متابعة الوصول والمغادرة قبل التحرك.",
+      "getting": "المطار الدولي الرئيسي لتومورولاند هو مطار بروكسل BRU في زافنتم، على بعد نحو 33 كم من دي شور وحوالي 25–35 دقيقة بالسيارة في حركة عادية. مطار أنتويرب ANR هو الأقرب جغرافياً، نحو 18 كم وقرابة 20 دقيقة براً، لكنه إقليمي صغير. مطار شارلروا CRL أبعد، نحو 87 كم، ويعد خياراً احتياطياً. تتوفر القطارات إلى محطة بوم، حافلات دي لاين، شاتل مجاني إلى دريم فيل، وشاتلات من بروكسل وأنتويرب.",
+      "leaving": "تتركز موجة العودة الجوية بعد كل عطلة نهاية أسبوع، خصوصاً يومي الاثنين 20 يوليو و27 يوليو. مطار بروكسل يشهد يوم 20 يوليو أكثر من 90,000 مسافر، وهو أكثر أيام عطلة صيف 2026 ازدحاماً هناك. كما قد تؤثر إجراءات نظام الدخول/الخروج الأوروبي على المسافرين من خارج الاتحاد الأوروبي. خطط للوصول إلى المطار أبكر من المعتاد، وتحقق من لوحة المغادرات الحية قبل مغادرة بوم أو دريم فيل.",
+      "tips": "طابق مطارك مع خطتك: BRU هو البوابة الدولية الرئيسية، ANR قريب لكن شبكته محدودة، وCRL أبعد كخيار بديل. اترك وقتاً إضافياً للربط بين القطار والحافلة أو الشاتل، خاصة في أيام الخميس والجمعة للوصول والاثنين للمغادرة. راجع لوحة الرحلات قبل الانطلاق، واحتفظ بخطة نقل ثانية من بوم أو أنتويرب أو بروكسل.",
+      "sec": {
+        "boards": "لوحات رحلات مطارات تومورولاند القريبة",
+        "getting": "من المطار إلى دي شور في بوم",
+        "leaving": "مغادرة بوم بعد عطلتَي تومورولاند",
+        "tips": "نصائح سفر جوي حول تومورولاند"
+      }
+    },
+    "de": {
+      "title": "Tomorrowland 2026: Flughäfen & Live-Flüge ANR BRU CRL",
+      "description": "Anreise zu Tomorrowland 2026 in Boom: Live-Flugtafeln für ANR/BRU/CRL, Flughäfen, Transfers und Rückflugspitzen im Blick.",
+      "h1": "Tomorrowland 2026: Anreise per Flug nach Boom",
+      "banner": "Tomorrowland-Anreise: Live-Flüge und Flughäfen öffnen",
+      "intro": "Tomorrowland 2026 ist ein Festival im Provinzialerholungsgebiet De Schorre in Boom, Belgien. Es läuft über zwei Wochenenden: 17.–19. Juli und 24.–26. Juli 2026; die Datenspanne dieser Seite reicht vom 17. bis 26. Juli. De Schorre ist ein 75 Hektar großer Provinzpark, kein Stadion. Rund um Anreise- und Rückreisetage treffen viele internationale Flüge ein, daher helfen Live-Flugtafeln für ANR, BRU und CRL beim Planen.",
+      "getting": "Brussels Airport (BRU, Zaventem) ist das wichtigste internationale Drehkreuz für Tomorrowland: etwa 33 km bis De Schorre und bei normalem Verkehr rund 25–35 Minuten mit dem Auto. Antwerp International Airport (ANR) liegt näher, etwa 18 km oder 20 Straßenminuten, hat aber ein kleines Regionalnetz. CRL liegt rund 87 km südlich und ist eine Ausweichoption. Vor Ort bestehen Bahnverbindungen nach Boom, De-Lijn-Bus, Shuttlebusse, Taxi, Privattransfer und App-Fahrdienst.",
+      "leaving": "Die stärkste Rückflugwelle folgt jeweils montags nach den Wochenenden: 20. Juli und 27. Juli 2026. Am 20. Juli ist Brussels Airport der verkehrsreichste Tag des Sommers 2026 mit mehr als 90.000 Reisenden. Rechnen Sie an BRU, ANR und besonders bei der weiter entfernten Ausweichoption CRL mit vollen Terminals, Straßenverkehr und längeren Wegen. Prüfen Sie vor der Abfahrt zum Flughafen die Live-Abflugtafel und fahren Sie früher als üblich los.",
+      "tips": "Planen Sie Puffer zwischen Landung, Gepäck, Grenzkontrolle und Weiterreise nach Boom ein. Nicht-EU-Reisende sollten zusätzliche Zeit für Einreiseprozesse vorsehen. Prüfen Sie sowohl Ankünfte als auch Abflüge mehrfach am Reisetag. Wenn Sie in Antwerpen oder Brüssel wohnen, vergleichen Sie Bahn nach Boom, De-Lijn-Bus, Festivalshuttle und Transfer, statt sich auf nur eine Route festzulegen.",
+      "sec": {
+        "boards": "Live-Flugtafeln für Tomorrowland: ANR, BRU, CRL",
+        "getting": "Vom Flughafen nach De Schorre in Boom",
+        "leaving": "Rückflug nach den Tomorrowland-Wochenenden",
+        "tips": "Praktische Hinweise für Festivalreisende"
+      }
+    },
+    "ko": {
+      "title": "Tomorrowland 2026 공항·항공편 안내 | BRU·ANR·CRL",
+      "description": "2026년 Tomorrowland 기간 De Schorre, Boom으로 가는 항공 여행자를 위해 ANR/BRU/CRL 실시간 운항 보드, 공항별 거리와 이동 방법, 도착·귀국 혼잡일 확인 요령을 정리합니다.",
+      "h1": "Tomorrowland 2026 공항 이동 및 실시간 항공편 보드",
+      "banner": "Tomorrowland 공항 이동 가이드 열기",
+      "intro": "Tomorrowland는 2026년 7월 17–19일과 24–26일 두 주말에 열리는 페스티벌이며, 장소는 벨기에 Boom의 De Schorre provincial recreation domain입니다. 페이지 기간은 첫 주말 첫날인 7월 17일부터 둘째 주말 마지막 날인 7월 26일까지로, 중간 평일에는 main site 프로그램이 없습니다. 약 400,000명이 200개국 이상에서 이동하므로, ANR·BRU·CRL의 실시간 도착·출발 보드 확인이 중요합니다.",
+      "getting": "주요 국제 관문은 Brussels Airport(BRU, Zaventem)입니다. De Schorre까지 약 33km, 정상 교통 시 자동차로 25–35분입니다. Antwerp International Airport(ANR)는 약 18km, 도로로 약 20분인 가장 가까운 공항이지만 작은 지역 공항입니다. Brussels South Charleroi(CRL)는 약 87km로 멀어 대체 관문에 가깝습니다. Boom역에는 철도, De Lijn 버스, DreamVille 무료 셔틀, Brussels Airport–DreamVille 전용 셔틀, 택시와 private transfer가 연결됩니다.",
+      "leaving": "귀국 수요는 각 주말 뒤 월요일인 7월 20일과 7월 27일에 집중됩니다. 특히 Brussels Airport는 2026년 여름휴가 기간 중 7월 20일이 가장 붐비는 날로, 90,000명 이상이 이용하는 것으로 알려져 있습니다. Boom 주변 도로와 A12/E19 축도 차량과 coach traffic이 몰립니다. 평소보다 일찍 공항에 도착하도록 계획하고, 출발 전 ANR·BRU·CRL 실시간 출발 보드를 확인하세요.",
+      "tips": "숙소가 DreamVille과 인근 제한 물량에 의존하므로 많은 방문객은 Antwerp 또는 Brussels에 머물며 통근합니다. DreamVille은 입구에서 도보 약 15분입니다. 공항 셔틀은 각 주말의 목요일 도착일과 월요일 출발일에 집중되며 계속 운행되는 방식이 아닙니다. 환승이 있으면 철도, 버스, 셔틀 시간을 여유 있게 잡고 공항 보드를 반복 확인하세요.",
+      "sec": {
+        "boards": "Tomorrowland 이용 공항 ANR·BRU·CRL 보드",
+        "getting": "De Schorre와 DreamVille로 이동",
+        "leaving": "두 주말 뒤 월요일 귀국 항공편",
+        "tips": "Boom 페스티벌 항공 여행 팁"
+      }
+    },
+    "ja": {
+      "title": "Tomorrowland 2026 空港・フライト案内｜ANR/BRU/CRL",
+      "description": "Tomorrowland 2026（7月17〜19日・24〜26日）でBoomのDe Schorreへ向かう航空利用者向けに、ANR/BRU/CRLのライブ発着ボード、BRU・ANR・CRLからの移動、帰国ピーク、空港へ出る前の確認ポイントを整理します。",
+      "h1": "Tomorrowland 2026：Boomへ向かう空港とライブ発着情報",
+      "banner": "Tomorrowland 2026の空港アクセス案内を開く",
+      "intro": "Tomorrowlandは、2026年7月17〜19日と24〜26日に、ベルギー・BoomのDe Schorre州立レクリエーション区域で開かれるフェスティバルです。ページ上の日付範囲は7月17日から26日までで、週末の間の平日は本会場でのプログラムがない期間を含みます。2週末にわたり国際線利用者が集中するため、ANR、BRU、CRLのライブ空港ボードで到着・出発の変化を確認しておくと移動判断に役立ちます。",
+      "getting": "主な国際玄関口はブリュッセル空港（BRU、ザベンテム）で、会場まで約33km、通常の道路状況で車25〜35分です。最寄りはアントワープ国際空港（ANR）で約18km、道路で約20分ですが、小規模な地域空港で路線は限られます。ブリュッセル・サウス・シャルルロワ空港（CRL）は約87km離れた遠めの代替空港です。鉄道でBoom駅へ向かい、De Lijnバス、無料シャトル、主催者シャトル、タクシーや専用送迎を組み合わせられます。",
+      "leaving": "帰国の山は各週末後の月曜、7月20日と27日です。特にブリュッセル空港は7月20日が2026年夏休み期間で最も混む日とされ、9万人超の旅行者が見込まれています。到着側では夏のEES導入により、非EU旅券保持者の生体登録で2〜5時間の待ち時間が報告されました。帰路も空港やBoom周辺道路、A12/E19方面が混みやすいため、普段より早めに空港へ着く計画にし、出発前にBRU、ANR、CRLのライブ出発ボードを確認してください。",
+      "tips": "週末ごとに到着日と出発日が分かれるため、空港コード、宿泊地、Boom駅までの乗り継ぎを同じメモで確認しましょう。DreamVilleは入口から徒歩約15分です。アントワープやブリュッセル滞在で通う場合は、鉄道、バス、シャトル、送迎の組み合わせを出発前に決め、遅延時の代替も用意しておくと移動が崩れにくくなります。",
+      "sec": {
+        "boards": "Tomorrowland向けANR・BRU・CRLライブ発着ボード",
+        "getting": "De Schorre州立レクリエーション区域への行き方",
+        "leaving": "2つの週末後の帰国フライト",
+        "tips": "Boom滞在・通い参加の空港メモ"
+      }
+    },
+    "fr": {
+      "title": "Tomorrowland 2026 : aéroports et vols ANR, BRU, CRL",
+      "description": "Guide aérien de Tomorrowland 2026 à Boom, avec tableaux de vols en direct pour ANR/BRU/CRL, arrivées, départs et transferts.",
+      "h1": "Tomorrowland 2026 : vols et accès à De Schorre",
+      "banner": "Ouvrir le guide vols et aéroports pour Tomorrowland",
+      "intro": "Tomorrowland 2026 est un festival organisé à De Schorre, domaine récréatif provincial de 75 hectares à Boom, en Belgique. L’édition CONSCIENCIA se déroule sur deux week-ends, du vendredi 17 au dimanche 19 juillet puis du vendredi 24 au dimanche 26 juillet 2026; la plage affichée couvre aussi la semaine entre les deux. Avec environ 400 000 visiteurs venant de plus de 200 pays, vérifier les tableaux de vols en direct aide à suivre arrivées, retards et départs.",
+      "getting": "Brussels Airport (BRU, Zaventem) est la principale porte d’entrée internationale: De Schorre se trouve à environ 33 km, soit 25 à 35 minutes en voiture en trafic normal. Antwerp International (ANR) est plus proche, à environ 18 km et 20 minutes par la route, mais reste un petit aéroport régional. CRL est à environ 87 km au sud: c’est une option plus éloignée, utile comme aéroport low-cost de repli. Train SNCB/NMBS, bus De Lijn, navettes Tomorrowland, taxis et transferts privés existent.",
+      "leaving": "Les pics de retour par avion tombent les lundis suivant chaque week-end: 20 juillet et 27 juillet 2026. Le 20 juillet correspond aussi au jour le plus chargé de l’été 2026 à Brussels Airport, avec plus de 90 000 voyageurs. Les routes autour de Boom et des axes A12/E19 peuvent aussi concentrer voitures et autocars. Prévoyez d’arriver plus tôt que d’habitude à l’aéroport et consultez le tableau des départs en direct avant de quitter votre hébergement.",
+      "tips": "Préparez un plan A et un plan B entre aéroport, gare de Boom, DreamVille ou votre hébergement à Anvers/Bruxelles. Les navettes aéroport officielles vers DreamVille sont concentrées les jeudis d’arrivée et les lundis de départ de chaque week-end, pas en continu. Gardez une marge pour bagages, contrôles et correspondances, surtout si vous voyagez avec un groupe.",
+      "sec": {
+        "boards": "Tableaux de vols pour ANR, BRU et CRL",
+        "getting": "Rejoindre De Schorre à Boom",
+        "leaving": "Retours après les deux week-ends",
+        "tips": "Conseils voyage pour Tomorrowland"
+      }
+    },
+    "es": {
+      "title": "Tomorrowland 2026: aeropuertos y vuelos en vivo",
+      "description": "Consulta paneles de vuelos en vivo para ANR/BRU/CRL y planifica llegadas y salidas de Tomorrowland 2026 en Boom desde los aeropuertos.",
+      "h1": "Vuelos y aeropuertos para Tomorrowland 2026",
+      "banner": "Abre la guía de vuelos para Tomorrowland en Boom",
+      "intro": "Tomorrowland 2026 se celebra en De Schorre, dominio recreativo provincial de Boom, Bélgica, durante dos fines de semana: 17-19 y 24-26 de julio de 2026. El rango del viaje cubre del 17 al 26 de julio, incluido el intervalo sin programa principal en el recinto. Con unos 400.000 visitantes de más de 200 países, revisar paneles de vuelos en vivo ayuda a ajustar llegadas, conexiones y recogidas alrededor de los picos de viaje.",
+      "getting": "Brussels Airport (BRU, Zaventem) es la puerta internacional principal: está a unos 33 km de De Schorre, normalmente 25-35 minutos en coche. Antwerp International (ANR) es el más cercano, a unos 18 km y 20 minutos por carretera, pero es regional y limitado. Charleroi (CRL) queda lejos, a unos 87 km, y funciona como alternativa. Hay tren hasta Boom, bus De Lijn a Boom De Schorre, lanzaderas del festival, taxis y traslados privados.",
+      "leaving": "Las mayores salidas por avión llegan los lunes posteriores a cada fin de semana: 20 y 27 de julio. El 20 de julio es además el día más cargado del verano 2026 en Brussels Airport, con más de 90.000 viajeros. En esas jornadas, carreteras hacia ANR/BRU/CRL y terminales pueden estar saturadas; llega antes de lo habitual y consulta el panel de salidas en vivo antes de salir hacia el aeropuerto.",
+      "tips": "Comprueba tu aeropuerto de llegada real, porque ANR, BRU y CRL no tienen la misma distancia al recinto. Si dependes de tren, bus o lanzadera, deja margen para conexiones y equipaje. Los viajeros no UE deben prever controles fronterizos más lentos en temporada alta. Guarda planes alternativos entre Boom, Amberes y Bruselas, especialmente en jueves, viernes y lunes.",
+      "sec": {
+        "boards": "Aeropuertos y paneles en vivo para Boom",
+        "getting": "Cómo llegar a De Schorre desde ANR, BRU y CRL",
+        "leaving": "Regreso en avión tras cada fin de semana",
+        "tips": "Consejos de viaje para Tomorrowland 2026"
+      }
+    },
+    "it": {
+      "title": "Tomorrowland 2026: aeroporti e voli in tempo reale",
+      "description": "Guida voli per Tomorrowland 2026: tabelloni voli in tempo reale per ANR, BRU e CRL, trasferimenti per Boom e rientri dal festival.",
+      "h1": "Tomorrowland 2026: aeroporti, voli e trasferimenti",
+      "banner": "Apri la guida voli per Tomorrowland a Boom",
+      "intro": "Tomorrowland 2026 si svolge nei weekend 17–19 e 24–26 luglio al dominio provinciale ricreativo De Schorre, a Boom, in Belgio; l’intervallo pagina va dal 17 al 26 luglio e include la settimana di pausa. Il festival richiama viaggiatori internazionali: controllare un tabellone aeroportuale in tempo reale aiuta a seguire arrivi, ritardi e partenze quando ANR, BRU e CRL gestiscono flussi concentrati intorno ai giorni di arrivo e rientro.",
+      "getting": "Brussels Airport (BRU, Zaventem) è il principale accesso internazionale: De Schorre dista circa 33 km, 25–35 minuti in auto con traffico normale. Antwerp International (ANR) è più vicino, 18 km e circa 20 minuti su strada, ma resta regionale; Charleroi (CRL) è lontano, 87 km e circa un’ora, quindi una soluzione di ripiego. Esistono treno SNCB/NMBS per Boom, bus De Lijn di 8 minuti fino a “Boom De Schorre”, navetta gratuita per DreamVille, shuttle dell’organizzatore da Bruxelles, Anversa e BRU, taxi e transfer privati.",
+      "leaving": "Dopo ciascun weekend, il picco di rientro in volo cade il lunedì: 20 luglio e 27 luglio. Il 20 luglio Brussels Airport è indicato come il giorno più trafficato dell’estate 2026, con oltre 90.000 viaggiatori; possono aggiungersi code ai controlli di frontiera EES per passaporti non UE. Parti per l’aeroporto prima del solito, soprattutto verso BRU, e controlla il tabellone partenze in tempo reale prima di lasciare Boom, DreamVille, Anversa o Bruxelles.",
+      "tips": "Conserva margine tra volo, treno, bus e ingresso al sito, perché i giorni di arrivo e partenza concentrano auto, pullman e navette. Se soggiorni ad Anversa o Bruxelles, verifica l’ultimo tratto verso Boom prima di muoverti. Per passaporti non UE, considera più tempo ai controlli. Salva i tabelloni di arrivi e partenze del tuo aeroporto e ricontrollali durante il viaggio.",
+      "sec": {
+        "boards": "Tabelloni voli per ANR, BRU e CRL",
+        "getting": "Da aeroporto a De Schorre e DreamVille",
+        "leaving": "Rientri in volo dopo i weekend di Tomorrowland",
+        "tips": "Consigli pratici per viaggiare verso Boom"
+      }
+    },
+    "hi": {
+      "title": "Tomorrowland 2026: एयरपोर्ट और लाइव उड़ान बोर्ड",
+      "description": "Tomorrowland 2026 के लिए ANR/BRU/CRL लाइव फ्लाइट बोर्ड देखें—Boom तक दूरी, BRU/ANR/CRL से यात्रा और वापसी की उड़ानों की तैयारी।",
+      "h1": "Tomorrowland 2026 के लिए एयरपोर्ट और लाइव फ्लाइट बोर्ड",
+      "banner": "Tomorrowland के ANR/BRU/CRL एयरपोर्ट गाइड खोलें",
+      "intro": "Tomorrowland 2026 एक फेस्टिवल है, जो 17–19 जुलाई और 24–26 जुलाई 2026 को Boom, बेल्जियम के De Schorre provincial recreation domain में होगा; पेज की तारीख सीमा 17–26 जुलाई तक है। यह 75-हेक्टेयर प्रांतीय पार्क है, स्टेडियम नहीं। इन आगमन और वापसी दिनों में ANR, BRU और CRL पर भीड़ और बदलाव दिख सकते हैं, इसलिए निकलने से पहले लाइव एयरपोर्ट बोर्ड देखना उपयोगी है।",
+      "getting": "मुख्य अंतरराष्ट्रीय गेटवे Brussels Airport (BRU, Zaventem) है: De Schorre से लगभग 33 किमी, सामान्य ट्रैफिक में कार से 25–35 मिनट। Antwerp International (ANR) भौगोलिक रूप से निकटतम है, करीब 18 किमी/~20 मिनट, पर छोटा क्षेत्रीय एयरपोर्ट है; CRL करीब 87 किमी दूर है, इसलिए फॉलबैक मानें। विकल्पों में Boom स्टेशन तक SNCB/NMBS रेल, स्टेशन से “Boom De Schorre” तक De Lijn बस, DreamVille शटल, आधिकारिक Tomorrowland शटल और टैक्सी/प्राइवेट ट्रांसफर शामिल हैं।",
+      "leaving": "वापसी की सबसे भारी लहर दोनों वीकेंड के बाद सोमवार को आती है: 20 जुलाई और 27 जुलाई। Brussels Airport के लिए 20 जुलाई 2026 पूरी गर्मी की सबसे व्यस्त तारीख बताई गई है, 90,000 से अधिक यात्रियों के साथ। BRU, ANR और CRL पर चेक-इन, सुरक्षा और सीमा नियंत्रण में अधिक समय लग सकता है। एयरपोर्ट जाने से पहले लाइव डिपार्चर बोर्ड देखें और सामान्य से पहले निकलें, खासकर Boom और A12/E19 कॉरिडोर से।",
+      "tips": "एयरपोर्ट चुनते समय केवल दूरी नहीं, उड़ान नेटवर्क और आगे की कनेक्टिविटी देखें। DreamVille में ठहरने वालों को प्रवेश द्वार तक लगभग 15 मिनट पैदल चलना पड़ सकता है। बड़े समूहों के लिए स्टेशन, शटल और टैक्सी पिक-अप बिंदु पहले तय करें। गैर-EU पासपोर्ट यात्रियों को BRU पर बॉर्डर प्रक्रिया के लिए अतिरिक्त समय रखना चाहिए और सामान हल्का, पहचान दस्तावेज़ हाथ में रखें।",
+      "sec": {
+        "boards": "ANR, BRU और CRL लाइव फ्लाइट बोर्ड",
+        "getting": "Boom में De Schorre तक पहुँचने के तरीके",
+        "leaving": "वीकेंड के बाद वापसी उड़ानें",
+        "tips": "CONSCIENCIA यात्रा सुझाव"
+      }
+    },
+    "tr": {
+      "title": "Tomorrowland 2026 havalimanları ve canlı uçuşlar",
+      "description": "Tomorrowland 2026 için ANR, BRU ve CRL canlı uçuş panolarını izleyin; Boom’daki De Schorre’ye varış ve dönüş planınızı güncel tutun.",
+      "h1": "Tomorrowland 2026 için havalimanı ve uçuş rehberi",
+      "banner": "Tomorrowland uçuş ve havalimanı rehberini açın",
+      "intro": "Tomorrowland 2026, 17–19 Temmuz ve 24–26 Temmuz hafta sonlarında Boom’daki De Schorre provincial recreation domain’de düzenlenen bir festivaldir. Sayfadaki tarih aralığı 17–26 Temmuz’u kapsar; aradaki hafta içinde ana alanda festival programı yoktur. De Schorre bir stadyum değil, eski kil ocakları çevresinde kurulmuş 75 hektarlık bir provincial parktır. Bu yoğun uluslararası seyahat döneminde ANR, BRU ve CRL canlı panolarını kontrol etmek varış planını güncel tutar.",
+      "getting": "Brussels Airport, BRU, ana uluslararası giriş kapısıdır; De Schorre’ye yaklaşık 33 km ve normal trafikte 25–35 dakika uzaklıktadır. ANR, Antwerp International, yaklaşık 18 km ve 20 dakika ile en yakındır ancak sınırlı ağı olan küçük bir bölgesel havalimanıdır. CRL yaklaşık 87 km güneyde, uzak bir alternatif ve düşük maliyetli uçuş kapısıdır. Boom istasyonu SNCB/NMBS hattındadır; De Lijn otobüsü, ücretsiz festival shuttle’ı, Tomorrowland servisleri, taksi ve özel transfer seçenekleri bulunur.",
+      "leaving": "Festival sonrası dönüş yoğunluğu özellikle 20 Temmuz Pazartesi ve 27 Temmuz Pazartesi günlerinde görülür; bunlar her iki hafta sonundan sonraki ana uçuşa dönüş dalgalarıdır. 20 Temmuz, Brussels Airport için 2026 yaz tatilinin en yoğun günü olarak 90.000’den fazla yolcuyla belirtilmiştir. Boom çevresi ve A12/E19 koridoru da aynı günlerde araç ve otobüs trafiği taşır. Havalimanına normalden erken gidin ve yola çıkmadan önce canlı kalkış panosunu kontrol edin.",
+      "tips": "Uçuşunuzu seçerken BRU’yu ana kapı, ANR’yi yakın fakat sınırlı bölgesel seçenek, CRL’yi ise daha uzak bir alternatif olarak değerlendirin. Varış günleri Perşembe ve Cuma, dönüş günleri Pazartesi yoğunlaşır. DreamVille, festival girişine yaklaşık 15 dakika yürüme mesafesindedir. AB dışı pasaportla gelenler, 2026 yazındaki EES biyometrik kayıt kuyruklarını hesaba katmalıdır.",
+      "sec": {
+        "boards": "De Schorre’ye yakın ANR, BRU ve CRL panoları",
+        "getting": "De Schorre ve DreamVille’e ulaşım",
+        "leaving": "Festival sonrası dönüş uçuşları",
+        "tips": "Tomorrowland yolcuları için pratik notlar"
+      }
+    }
+  }
+}
