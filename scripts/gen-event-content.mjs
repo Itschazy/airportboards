@@ -38,13 +38,18 @@ fs.mkdirSync('data/events', { recursive: true });
 
 const airportList = meta.airports.map(a => `${a.iata} (~${a.km} km from ${meta.venue})`).join(', ');
 
-function sys(lang) {
+function sys(lang, loc) {
+  // SERP truncation is by pixel width and CJK glyphs are ~2x the width of Latin, so the
+  // Latin character budgets would produce zh/ja/ko copy that gets cut off in the snippet.
+  const cjk = ['zh', 'ja', 'ko'].includes(loc);
+  const titleMax = cjk ? 32 : 65;
+  const descRange = cjk ? '55-85' : '120-155';
   return `You write concise, factually-careful TRAVEL LOGISTICS copy for a live flight-board website (airportsboard.live). The page answers one question: how air travellers get to and from this event. Write ONLY in ${lang}.
 
 Return a JSON object with EXACTLY these keys:
-- "title": SEO <title>, ≤65 chars. Must read naturally for how people in ${lang} search; mention the event and airports/flights.
-- "description": meta description, 120-155 chars, mentioning live flight boards for ${meta.airports.map(a => a.iata).join('/')}.
-- "h1": page heading, ≤70 chars.
+- "title": SEO <title>, ≤${titleMax} characters. Must read naturally for how people in ${lang} search; mention the event and airports/flights.
+- "description": meta description, ${descRange} characters, mentioning live flight boards for ${meta.airports.map(a => a.iata).join('/')}.
+- "h1": page heading, ≤${cjk ? 36 : 70} characters.
 - "banner": ONE short line (≤70 chars) for a promo chip on the airport pages, e.g. an invitation to open the event guide.
 - "intro": 60-90 words — what the event is (name, date, venue, city) and why checking a live airport board matters around those dates.
 - "getting": 60-90 words — getting from the listed airports to the venue: which airport is the main gateway, approximate distance/time, the transport modes that exist there.
@@ -89,7 +94,7 @@ for (const [loc, lang] of Object.entries(LOCALES)) {
     model: 'gpt-5.5',
     response_format: { type: 'json_object' },
     messages: [
-      { role: 'system', content: sys(lang) },
+      { role: 'system', content: sys(lang, loc) },
       { role: 'user', content: `Write the JSON in ${lang}.` },
     ],
   };
