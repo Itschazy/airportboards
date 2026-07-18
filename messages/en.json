@@ -118,7 +118,11 @@
     "data_note": "Flight times may change — always verify with your airline or the airport.",
     "closed_title": "This airport is closed",
     "closed_body": "{name} stopped handling scheduled flights in {year}, so there is no live board to show.",
-    "closed_successor": "Flights for this city now use <link>{successor}</link>."
+    "closed_successor": "Flights for this city now use <link>{successor}</link>.",
+    "ns_title": "No scheduled flights",
+    "ns_body": "No airline operates scheduled passenger flights from {name}, so there is no departure board to show.",
+    "ns_nearest": "The nearest airport with scheduled flights is <link>{airport}</link>, about {km} km away.",
+    "ns_meta": "{airport} ({iata}) in {city}, {country}: no scheduled passenger flights. Location, time zone and the nearest airport that does have flights."
   },
   "ui": {
     "departures": "Departures",

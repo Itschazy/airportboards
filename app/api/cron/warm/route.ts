@@ -21,6 +21,8 @@ export async function GET(req: NextRequest) {
   const token = process.env.CRON_TOKEN || '';
   const authed = local || (!!token && req.nextUrl.searchParams.get('token') === token);
   if (!authed) return NextResponse.json({ error: 'forbidden' }, { status: 403 });
-  await warmHubs();
-  return NextResponse.json({ ok: true, ...usage() }, { headers: { 'Cache-Control': 'no-store' } });
+  const result = await warmHubs();
+  // Report what the tiered warmer actually did, so a look at the cron log answers "is the
+  // long tail being covered, or is the budget all going to hubs?" without a deploy.
+  return NextResponse.json({ ok: true, ...result, ...usage() }, { headers: { 'Cache-Control': 'no-store' } });
 }

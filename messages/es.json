@@ -118,7 +118,11 @@
     "data_note": "Los horarios pueden cambiar — confírmalos con tu aerolínea o el aeropuerto.",
     "closed_title": "Este aeropuerto está cerrado",
     "closed_body": "{name} dejó de operar vuelos regulares en {year}, por lo que no hay panel en directo.",
-    "closed_successor": "Los vuelos de esta ciudad utilizan ahora <link>{successor}</link>."
+    "closed_successor": "Los vuelos de esta ciudad utilizan ahora <link>{successor}</link>.",
+    "ns_title": "Sin vuelos regulares",
+    "ns_body": "Ninguna aerolínea opera vuelos regulares de pasajeros desde {name}, por lo que no hay panel de salidas.",
+    "ns_nearest": "El aeropuerto con vuelos regulares más cercano es <link>{airport}</link>, a unos {km} km.",
+    "ns_meta": "{airport} ({iata}) en {city}, {country}: sin vuelos regulares de pasajeros. Ubicación, zona horaria y el aeropuerto con vuelos más cercano."
   },
   "ui": {
     "departures": "Salidas",

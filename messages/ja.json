@@ -118,7 +118,11 @@
     "data_note": "発着時刻は変更される場合があります。航空会社または空港でご確認ください。",
     "closed_title": "この空港は閉鎖されています",
     "closed_body": "{name}は{year}年に定期便の運航を終了したため、発着案内は表示されません。",
-    "closed_successor": "この都市の便は現在<link>{successor}</link>を利用しています。"
+    "closed_successor": "この都市の便は現在<link>{successor}</link>を利用しています。",
+    "ns_title": "定期便はありません",
+    "ns_body": "{name}を発着する定期旅客便はないため、出発案内は表示されません。",
+    "ns_nearest": "定期便のある最寄りの空港は<link>{airport}</link>で、約{km}kmの距離です。",
+    "ns_meta": "{city}（{country}）の{airport}（{iata}）：定期旅客便はありません。所在地、時間帯、定期便のある最寄り空港。"
   },
   "ui": {
     "departures": "出発",

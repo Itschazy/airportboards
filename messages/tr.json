@@ -118,7 +118,11 @@
     "data_note": "Uçuş saatleri değişebilir — havayolunuz veya havalimanından teyit edin.",
     "closed_title": "Bu havalimanı kapalı",
     "closed_body": "{name} {year} yılında tarifeli uçuşları sonlandırdı, bu nedenle canlı uçuş tablosu yok.",
-    "closed_successor": "Bu şehrin uçuşları artık <link>{successor}</link> üzerinden yapılıyor."
+    "closed_successor": "Bu şehrin uçuşları artık <link>{successor}</link> üzerinden yapılıyor.",
+    "ns_title": "Tarifeli uçuş yok",
+    "ns_body": "{name} havalimanından tarifeli yolcu uçuşu yapılmıyor, bu nedenle kalkış tablosu bulunmuyor.",
+    "ns_nearest": "Tarifeli uçuşu olan en yakın havalimanı <link>{airport}</link>, yaklaşık {km} km uzaklıkta.",
+    "ns_meta": "{city}, {country} bölgesindeki {airport} ({iata}): tarifeli yolcu uçuşu yok. Konum, saat dilimi ve uçuşu olan en yakın havalimanı."
   },
   "ui": {
     "departures": "Kalkışlar",

@@ -18,7 +18,10 @@ import type { AirlabsFlight } from '@/lib/flights';
 const STORE_PATH = process.env.FLIGHT_STORE_PATH || path.join(os.tmpdir(), 'airportsboard-flights.json');
 const TTL_MS = (Number(process.env.FLIGHT_TTL_SEC) || 600) * 1000;       // 10 min freshness window
 const MONTHLY_CAP = Number(process.env.AIRLABS_MONTHLY_CAP) || 95000;    // hard backstop under the 100k plan
-const MAX_ENTRIES = 8000;
+// Two entries (departures + arrivals) per warmed airport. The tiered warmer covers every
+// airport that has scheduled service — ~2,000 of the 6,072 — so the ceiling has to clear
+// ~4,100 comfortably, or eviction would start throwing away boards we just paid for.
+const MAX_ENTRIES = 12000;
 
 type Entry = { ts: number; data: AirlabsFlight[] };
 type Store = { month: string; count: number; entries: Record<string, Entry> };
@@ -54,6 +57,11 @@ export function getFresh(key: string): AirlabsFlight[] | null {
 export function getStale(key: string): AirlabsFlight[] | null {
   const e = db().entries[key];
   return e ? e.data : null;
+}
+/** When this key was last written, or null if never. Used by the warmer to decide what is due. */
+export function getStaleTs(key: string): number | null {
+  const e = db().entries[key];
+  return e ? e.ts : null;
 }
 export function put(key: string, data: AirlabsFlight[]) {
   const s = db();

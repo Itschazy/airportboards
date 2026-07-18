@@ -118,7 +118,11 @@
     "data_note": "Flugzeiten können sich ändern — bitte bei Airline oder Flughafen bestätigen.",
     "closed_title": "Dieser Flughafen ist geschlossen",
     "closed_body": "{name} hat den Linienflugbetrieb {year} eingestellt, daher gibt es hier keine Flugtafel.",
-    "closed_successor": "Die Flüge dieser Stadt laufen jetzt über <link>{successor}</link>."
+    "closed_successor": "Die Flüge dieser Stadt laufen jetzt über <link>{successor}</link>.",
+    "ns_title": "Keine Linienflüge",
+    "ns_body": "Ab {name} werden keine planmäßigen Passagierflüge durchgeführt, daher gibt es hier keine Abflugtafel.",
+    "ns_nearest": "Der nächste Flughafen mit Linienflügen ist <link>{airport}</link>, etwa {km} km entfernt.",
+    "ns_meta": "{airport} ({iata}) in {city}, {country}: keine planmäßigen Passagierflüge. Lage, Zeitzone und der nächste Flughafen mit Flugverbindungen."
   },
   "ui": {
     "departures": "Abflüge",

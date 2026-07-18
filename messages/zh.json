@@ -118,7 +118,11 @@
     "data_note": "航班时间可能变动，请向航空公司或机场核实。",
     "closed_title": "该机场已关闭",
     "closed_body": "{name}已于{year}年停止定期航班运营，因此没有实时航班信息板。",
-    "closed_successor": "该城市的航班现由<link>{successor}</link>承运。"
+    "closed_successor": "该城市的航班现由<link>{successor}</link>承运。",
+    "ns_title": "没有定期航班",
+    "ns_body": "目前没有航空公司从{name}运营定期客运航班，因此没有出发信息板。",
+    "ns_nearest": "最近的有定期航班的机场是<link>{airport}</link>，距离约{km}公里。",
+    "ns_meta": "{country}{city}的{airport}（{iata}）：无定期客运航班。位置、时区以及最近的有航班的机场。"
   },
   "ui": {
     "departures": "出发",

@@ -118,7 +118,11 @@
     "data_note": "Gli orari possono cambiare — verifica con la compagnia o l’aeroporto.",
     "closed_title": "Questo aeroporto è chiuso",
     "closed_body": "{name} ha cessato i voli di linea nel {year}, quindi non c’è un tabellone in tempo reale.",
-    "closed_successor": "I voli di questa città usano ora <link>{successor}</link>."
+    "closed_successor": "I voli di questa città usano ora <link>{successor}</link>.",
+    "ns_title": "Nessun volo di linea",
+    "ns_body": "Nessuna compagnia opera voli di linea passeggeri da {name}, quindi non c’è un tabellone delle partenze.",
+    "ns_nearest": "L’aeroporto di linea più vicino è <link>{airport}</link>, a circa {km} km.",
+    "ns_meta": "{airport} ({iata}) a {city}, {country}: nessun volo di linea passeggeri. Posizione, fuso orario e l’aeroporto servito più vicino."
   },
   "ui": {
     "departures": "Partenze",

@@ -2,7 +2,8 @@ import type { Metadata } from 'next';
 import { getTranslations , setRequestLocale } from 'next-intl/server';
 import { notFound, permanentRedirect } from 'next/navigation';
 import Link from 'next/link';
-import { getAirport, getStaticIataCodes, getCountries, getCities } from '@/lib/airports';
+import { getAirport, getStaticIataCodes, getCountries, getCities, nearestAirports } from '@/lib/airports';
+import { hasNoService, nearestServiced } from '@/lib/warm';
 import { getAirportContent } from '@/lib/airport-content';
 import { getAirportName } from '@/lib/airport-names';
 import { getCityName, getCountryName } from '@/lib/places';
@@ -49,6 +50,12 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
         ? ' ' + tHome('closed_successor', { successor: `${getAirportName(successor.iata, locale, successor.name)} (${successor.iata})` })
             .replace(/<\/?link>/g, '')
         : '');
+  } else if (hasNoService(airport.iata)) {
+    // Don't advertise a live board for an airfield no airline serves — the snippet would be
+    // a promise the page cannot keep, and that is exactly what a policy reviewer clicks.
+    const tHome = await getTranslations({ locale, namespace: 'home' });
+    title = `${name} (${airport.iata}) — ${tHome('ns_title')}`;
+    description = tHome('ns_meta', { airport: name, iata: airport.iata, city, country });
   }
   const canonical = `${BASE}/${locale}/airport/${airport.iata}`;
 
@@ -92,6 +99,16 @@ export default async function AirportPage({ params }: Props) {
   // A closed airport points at whatever took its traffic, so the page still sends the
   // visitor (and the crawler) somewhere useful instead of dead-ending on an empty board.
   const successorAirport = airport.successor ? getAirport(airport.successor) : null;
+  // ~2/3 of the IATA codes in the dataset are military fields, bush strips or private
+  // airfields with no airline service at all. An empty "live board" there reads as broken;
+  // saying so plainly and pointing at the nearest served airport is true and more useful.
+  const noService = hasNoService(airport.iata);
+  const nearestWithFlights = noService
+    ? (() => {
+        const n = nearestServiced(airport.iata, nearestAirports(airport.lat, airport.lon, 12));
+        return n ? { ...getAirport(n.iata)!, km: n.km } : null;
+      })()
+    : null;
   const name = getAirportName(airport.iata, locale, airport.name);
   const city = getCityName(airport.city, locale);
   const country = getCountryName(airport.country, locale);
@@ -148,6 +165,28 @@ export default async function AirportPage({ params }: Props) {
       {jsonLd.map((schema, i) => (
         <script key={i} type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
       ))}
+      {!airport.closed && noService && (
+        <aside style={{
+          margin: '12px 16px 0', padding: '12px 14px', borderRadius: 10,
+          background: 'rgba(120,120,128,.16)', border: '1px solid rgba(120,120,128,.32)',
+          fontSize: 14, lineHeight: 1.45,
+        }}>
+          <strong style={{ display: 'block', marginBottom: 4 }}>{tHome('ns_title')}</strong>
+          {tHome('ns_body', { name })}
+          {nearestWithFlights && (
+            <>
+              {' '}
+              {tHome.rich('ns_nearest', {
+                airport: `${getAirportName(nearestWithFlights.iata, locale, nearestWithFlights.name)} (${nearestWithFlights.iata})`,
+                km: String(nearestWithFlights.km),
+                link: (chunks) => (
+                  <Link href={`/${locale}/airport/${nearestWithFlights.iata}`} style={{ fontWeight: 600 }}>{chunks}</Link>
+                ),
+              })}
+            </>
+          )}
+        </aside>
+      )}
       {airport.closed && (
         <aside style={{
           margin: '12px 16px 0', padding: '12px 14px', borderRadius: 10,

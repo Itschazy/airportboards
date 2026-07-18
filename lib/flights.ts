@@ -3,6 +3,7 @@ import airlines from '@/data/airlines.json';
 import { getCityName } from '@/lib/places';
 import { getFresh, getStale, put, canSpend, spend } from '@/lib/flightStore';
 import { getActiveEventAirports } from '@/lib/event-content';
+import { dueAirports, tickBudget } from '@/lib/warm';
 
 const AIRLABS_KEY = process.env.AIRLABS_API_KEY || '';
 export const CACHE_SECONDS = 60;
@@ -248,22 +249,45 @@ const WARM_HUBS = [
   'OSL','ARN','HEL','WAW','LIS','ATH','SVX','OVB','AER','KZN','KRR','ROV','UFA','GOJ','MRV','YYZ','YVR','GRU','GIG','MEX','SYD',
 ];
 
-/** Refresh the top hubs into the store (bounded, budget-checked). Called on a timer.
- *  Airports of events happening soon are merged in on top of the fixed hub list, so an
- *  event guide's "money block" never links to a cold board (each extra airport costs
- *  ~2 requests per warm cycle ≈ 24/day at the 2h cadence). Returns what it warmed. */
-export async function warmHubs(): Promise<{ hubs: number; eventAirports: string[] }> {
-  const eventAirports = getActiveEventAirports().filter(i => !WARM_HUBS.includes(i));
-  if (!AIRLABS_KEY) return { hubs: 0, eventAirports };
-  const n = Number(process.env.WARM_AIRPORTS) || WARM_HUBS.length;
-  const list = [...WARM_HUBS.slice(0, n), ...eventAirports];
-  let warmed = 0;
-  for (const iata of list) {
-    if (!canSpend()) break;
+/** Refresh whatever is most overdue, within this run's share of the monthly budget.
+ *
+ *  Airports are tiered by real scheduled-flight volume (see lib/warm.ts), so coverage no
+ *  longer depends on someone remembering to add a busy airport to a list — which is how
+ *  Phuket, Cagliari and Trabzon ended up serving empty boards. Airports of imminent events
+ *  jump the queue so an event guide's "money block" never links to a cold board.
+ *
+ *  Falls back to the legacy fixed hub list until scripts/discover-schedules.mjs has
+ *  produced data/airport-service.json.
+ */
+export async function warmHubs(): Promise<{
+  warmed: number; skippedBudget: number; eventAirports: string[]; tiers: Record<string, number>;
+}> {
+  const eventAirports = getActiveEventAirports();
+  const tiers: Record<string, number> = {};
+  if (!AIRLABS_KEY) return { warmed: 0, skippedBudget: 0, eventAirports, tiers };
+
+  const due = dueAirports();
+  // Events first, then the most overdue. Legacy list only while service data is missing.
+  const queue: string[] = due.length
+    ? [...eventAirports, ...due.map(d => d.iata)]
+    : [...eventAirports, ...WARM_HUBS];
+  const tierByIata = new Map(due.map(d => [d.iata, d.tier.name]));
+
+  const budget = tickBudget();
+  let spentHere = 0, warmed = 0;
+  const seen = new Set<string>();
+
+  for (const iata of queue) {
+    if (seen.has(iata)) continue;
+    seen.add(iata);
+    if (spentHere + 2 > budget || !canSpend()) break;
     try { await fetchRaw(`dep_iata=${iata}`, 'departures', { live: true }); } catch { /* ignore */ }
     try { await fetchRaw(`arr_iata=${iata}`, 'arrivals', { live: true }); } catch { /* ignore */ }
+    spentHere += 2;
     warmed++;
-    await new Promise(r => setTimeout(r, 250)); // gentle stagger
+    const t = tierByIata.get(iata) ?? 'event/legacy';
+    tiers[t] = (tiers[t] ?? 0) + 1;
+    await new Promise(r => setTimeout(r, 120)); // gentle stagger
   }
-  return { hubs: warmed, eventAirports };
+  return { warmed, skippedBudget: Math.max(0, due.length - warmed), eventAirports, tiers };
 }

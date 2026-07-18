@@ -118,7 +118,11 @@
     "data_note": "운항 시간은 변경될 수 있습니다 — 항공사나 공항에 확인하세요.",
     "closed_title": "운영이 종료된 공항입니다",
     "closed_body": "{name}은(는) {year}년에 정기편 운항을 종료하여 실시간 운항 정보가 없습니다.",
-    "closed_successor": "이 도시의 항공편은 현재 <link>{successor}</link>을(를) 이용합니다."
+    "closed_successor": "이 도시의 항공편은 현재 <link>{successor}</link>을(를) 이용합니다.",
+    "ns_title": "정기편이 없습니다",
+    "ns_body": "{name}에서 운항하는 정기 여객편이 없어 출발 정보를 표시할 수 없습니다.",
+    "ns_nearest": "정기편이 있는 가장 가까운 공항은 <link>{airport}</link>이며, 약 {km}km 거리입니다.",
+    "ns_meta": "{city}, {country}의 {airport}({iata}): 정기 여객편 없음. 위치, 시간대, 정기편이 있는 가장 가까운 공항."
   },
   "ui": {
     "departures": "출발",

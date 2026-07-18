@@ -118,7 +118,11 @@
     "data_note": "Les horaires peuvent changer — vérifiez auprès de votre compagnie ou de l’aéroport.",
     "closed_title": "Cet aéroport est fermé",
     "closed_body": "{name} a cessé d’accueillir des vols réguliers en {year}, il n’y a donc pas de tableau en direct.",
-    "closed_successor": "Les vols de cette ville passent désormais par <link>{successor}</link>."
+    "closed_successor": "Les vols de cette ville passent désormais par <link>{successor}</link>.",
+    "ns_title": "Aucun vol régulier",
+    "ns_body": "Aucune compagnie n’assure de vols réguliers depuis {name}, il n’y a donc pas de tableau des départs.",
+    "ns_nearest": "L’aéroport le plus proche avec des vols réguliers est <link>{airport}</link>, à environ {km} km.",
+    "ns_meta": "{airport} ({iata}) à {city}, {country} : aucun vol régulier de passagers. Localisation, fuseau horaire et aéroport desservi le plus proche."
   },
   "ui": {
     "departures": "Départs",

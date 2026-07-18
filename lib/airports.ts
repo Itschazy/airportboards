@@ -30,7 +30,15 @@ const byIata = new Map<string, Airport>(airports.map(a => [a.iata, a]));
 const HUB_WEIGHT = new Map<string, number>([
   ...(['LHR','CDG','DXB','JFK','LAX','HND','NRT','PEK','PVG','HKG','SIN','ICN','FRA','AMS','IST'] as string[]).map(c => [c, 25] as [string, number]),
   ...(['SVO','ORD','ATL','EWR','LGA','BOS','SFO','MIA','DFW','DEN','SEA','LGW','FCO','BCN','MAD','MUC','ZRH','CPH','BRU','VIE','HEL','LIS','ARN','OSL','GVA','LED','SYD','MEL','BOM','DEL','BKK','KUL','CGK','GRU','GIG','MEX','BOG','LIM'] as string[]).map(c => [c, 15] as [string, number]),
-  ...(['MAN','BHX','EDI','LCY','LTN','STN','PMI','AGP','NCE','MRS','TLS','BOD','NTE','OPO','BRE','HAM','DUS','CGN','STR','MXP','LIN','VCE','NAP','BLQ','PMO','ATH','SAW','ADB','AYT','DLM','BGY','CIA','TXL','SXF','LPA','TFS','ACE'] as string[]).map(c => [c, 8] as [string, number]),
+  ...(['MAN','BHX','EDI','LCY','LTN','STN','PMI','AGP','NCE','MRS','TLS','BOD','NTE','OPO','BRE','HAM','DUS','CGN','STR','MXP','LIN','VCE','NAP','BLQ','PMO','ATH','SAW','ADB','AYT','DLM','BGY','CIA','LPA','TFS','ACE'] as string[]).map(c => [c, 8] as [string, number]),
+  // Target markets (US/UK/CA/AU/DE) were badly under-weighted: there were no Canadian
+  // airports here at all, so /airports/canada fell back to alphabetical-by-official-name
+  // and listed Toronto 338th. TXL and SXF were removed above — both closed in 2020.
+  ...(['YYZ','YVR','YUL','YYC','YEG','YOW','YHZ'] as string[]).map(c => [c, 12] as [string, number]),
+  ...(['BNE','PER','ADL','OOL','CNS'] as string[]).map(c => [c, 12] as [string, number]),
+  ...(['LAS','PHX','MCO','MSP','DTW','IAH','CLT','BWI','SLC','SAN','TPA','PDX'] as string[]).map(c => [c, 10] as [string, number]),
+  ...(['BRS','NCL','GLA','BFS'] as string[]).map(c => [c, 8] as [string, number]),
+  ...(['BER','NUE','LEJ'] as string[]).map(c => [c, 10] as [string, number]),
 ]);
 
 export function getAirport(iata: string): Airport | undefined {
@@ -211,9 +219,12 @@ export function searchAirports(query: string, limit = 10): Airport[] {
     .map(({ _score, ...a }) => a);
 }
 
+// Seeds the homepage block AND, via getStaticIataCodes(), the top prerender/sitemap tier.
+// Weighted to the markets that can actually be monetised — AdSense does not serve in
+// Russia, so SVO/LED earn nothing here and gave up their slots to Toronto and Sydney.
 export const POPULAR_AIRPORTS = [
-  'JFK', 'LHR', 'CDG', 'DXB', 'SVO', 'SIN', 'HND', 'LAX',
-  'FRA', 'AMS', 'IST', 'ICN', 'PEK', 'ORD', 'ATL', 'LED',
+  'JFK', 'LHR', 'CDG', 'DXB', 'YYZ', 'SIN', 'HND', 'LAX',
+  'FRA', 'AMS', 'IST', 'ICN', 'PEK', 'ORD', 'ATL', 'SYD',
 ];
 
 // Curated cities for the homepage SEO block (city → its primary airport).
