@@ -146,11 +146,10 @@ export function AirportSearch({ locale, placeholder, nearestLabel = 'Nearest air
     if (e.key === 'ArrowUp')   { e.preventDefault(); setActive(v => Math.max(v - 1, 0)); }
     if (e.key === 'Enter') {
       e.preventDefault();
-      // A flight number (e.g. "SU 1234") routes to the flight-status page.
-      const fl = query.trim().toUpperCase().replace(/[\s-]/g, '');
-      if (active < 0 && /^[A-Z0-9]{2,3}\d{1,4}$/.test(fl)) {
-        router.push(`/${locale}/flight/${fl}`); setOpen(false); setQuery(''); return;
-      }
+      // A flight number used to route to /flight/<CODE>. That page can never resolve — it
+      // reads a store key nothing writes — so the site's main search box was taking anyone
+      // who typed "BA175" straight to a dead end. Flight numbers now fall through to the
+      // normal airport matching rather than being special-cased into nothing.
       const item = active >= 0 ? navList[active] : navList[0];
       if (item) go(item);
     }

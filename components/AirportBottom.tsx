@@ -216,16 +216,23 @@ export async function AirportBottom({ airport, locale, about, displayName, fligh
             </section>
           )}
 
-          {/* 3b. AIRLINES AT THIS AIRPORT (server-rendered → crawlable /airline links) */}
+          {/* 3b. AIRLINES AT THIS AIRPORT.
+              These were links to /airline/<CODE>. That page reads a store key ("airline_iata=")
+              which nothing ever writes — lib/flights.ts getAirlineFlights() is dead by
+              construction, not merely stale — so every one of them answered 200 with an empty
+              body under noindex: a textbook soft-404. Ten of them on each of 6,072 airport
+              pages across 12 locales, emitted from the site's main indexable asset.
+              The names stay, because "which airlines fly from here" is a real question and the
+              answer is derived from the actual board. Only the dead link goes. */}
           {airlines.length > 0 && (
             <section className="cv-auto" style={sec}>
               <H2>{t('airlines_title')}</H2>
               <div style={{ display: 'flex', flexWrap: 'wrap', gap: 8 }}>
                 {airlines.map(al => (
-                  <Link key={al.iata} href={`/${locale}/airline/${al.iata}`} style={{ textDecoration: 'none', color: '#E4E4E7', background: '#0B0B0B', border: '1px solid #1A1A1A', borderRadius: 12, padding: '9px 14px', fontSize: 14, display: 'flex', alignItems: 'center', gap: 8 }}>
+                  <span key={al.iata} style={{ color: '#E4E4E7', background: '#0B0B0B', border: '1px solid #1A1A1A', borderRadius: 12, padding: '9px 14px', fontSize: 14, display: 'flex', alignItems: 'center', gap: 8 }}>
                     <span style={{ fontSize: 12, fontWeight: 700, color: '#0A84FF' }}>{al.iata}</span>
                     <span style={{ whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis', maxWidth: 180 }}>{al.name}</span>
-                  </Link>
+                  </span>
                 ))}
               </div>
             </section>

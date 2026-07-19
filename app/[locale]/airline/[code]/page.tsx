@@ -48,6 +48,10 @@ export default async function AirlinePage({ params }: Props) {
 
   let flights: FlightRow[] = [];
   try { flights = await getAirlineFlights(cu, locale); } catch {}
+  // Same soft-404 as the flight page: getAirlineFlights() reads "airline_iata=", a key the
+  // warmer never writes, so this always rendered an empty board under a 200. Ten of these
+  // were linked from every airport page until this commit's predecessor.
+  if (flights.length === 0) notFound();
 
   const jsonLd = {
     '@context': 'https://schema.org',

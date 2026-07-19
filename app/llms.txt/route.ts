@@ -85,7 +85,6 @@ Boards refresh on a schedule matched to how busy the airport is: the busiest hub
 - Arrivals: ${BASE}/{lang}/airport/{IATA}/arrivals
 - Departures: ${BASE}/{lang}/airport/{IATA}/departures
 - Route between two airports: ${BASE}/{lang}/route/{FROM}-{TO}
-- Airline flights: ${BASE}/{lang}/airline/{CODE}
 - All airports by country: ${BASE}/{lang}/airports
 - Airports A–Z: ${BASE}/{lang}/az/{letter}
 - Event travel guides: ${BASE}/{lang}/event/{slug}

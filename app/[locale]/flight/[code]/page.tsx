@@ -66,6 +66,13 @@ export default async function FlightPage({ params }: Props) {
 
   let f = null;
   try { f = await getFlightByNumber(c, locale); } catch {}
+  // A 200 carrying "flight not found" is a soft-404: Google keeps the URL in the crawl queue
+  // for months and re-checks it. Since getFlightByNumber() reads a store key nothing writes,
+  // that was every request to this page — roughly 12,000 URLs. Removing the inbound links
+  // stops new discovery but does nothing about what is already queued; this does.
+  // Deliberately after the lookup, so the day this page can resolve a flight it simply starts
+  // working instead of needing this line revisited.
+  if (!f) notFound();
 
   const dep = f ? getAirport(f.depIata) : undefined;
   const arr = f ? getAirport(f.arrIata) : undefined;
