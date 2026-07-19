@@ -1,6 +1,7 @@
 import fs from 'fs';
 import path from 'path';
 import { genericWord, type Facility } from '@/lib/generic-word';
+import { serviceLevel } from '@/lib/warm';
 
 // Localized airport names (data/airport-names.json) so /ru shows "Шереметьево",
 // /zh "谢列梅捷沃" etc. in titles, H1 and the board header. Server-only (fs).
@@ -38,5 +39,23 @@ export function getAirportName(iata: string, locale: string, fallback: string): 
   const name = n && n.length > 0 ? n : fallback;
   // The fallback is the English name, which already ends in "Airport" — never suffix that.
   if (!n || n.length === 0) return name;
-  return name + genericWord(locale, name, facilityOf(iata));
+  return name + genericWord(locale, name, facilityOf(iata), {
+    served: (serviceLevel(iata) ?? 0) > 0,
+    englishName: fallback,
+  });
+}
+
+/**
+ * The stored name WITHOUT any generic word.
+ *
+ * showCityFlag decides whether to append the city by looking for it inside the name, and the
+ * suffix can contain a city as a substring — Turkish "Havalimanı" contains "lima", which would
+ * have silently dropped "Lima" from Jorge Chávez's title. The decision belongs to the bare name.
+ */
+export function getAirportNameBare(iata: string, locale: string, fallback: string): string {
+  if (!NAMES) {
+    try { NAMES = JSON.parse(fs.readFileSync(FILE, 'utf8')); } catch { NAMES = {}; }
+  }
+  const n = NAMES![iata.toUpperCase()]?.[locale];
+  return n && n.length > 0 ? n : fallback;
 }

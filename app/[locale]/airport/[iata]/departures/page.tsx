@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import { getTranslations , setRequestLocale } from 'next-intl/server';
 import { notFound, permanentRedirect } from 'next/navigation';
 import { getAirport, getStaticIataCodes, getCountries, getCities } from '@/lib/airports';
-import { getAirportName } from '@/lib/airport-names';
+import { getAirportName, getAirportNameBare } from '@/lib/airport-names';
 import { getCityName, getCountryName } from '@/lib/places';
 import { getBoard, getBoardFetchedAt } from '@/lib/flights';
 import { FlightBoard } from '@/components/FlightBoard';
@@ -32,7 +32,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const name = getAirportName(airport.iata, locale, airport.name);
   const cityName = getCityName(airport.city, locale);
   // Append the city only when the airport's localized name doesn't already contain it.
-  const showCity = showCityFlag(name, cityName, airport.city);
+  const showCity = showCityFlag(getAirportNameBare(airport.iata, locale, airport.name), cityName, airport.city);
 
   const title = t('departures_title', { airport: name, iata: airport.iata, city: cityName, showCity });
   const description = t('departures_description', { airport: name, iata: airport.iata, city: cityName });
@@ -76,7 +76,7 @@ export default async function DeparturesPage({ params }: Props) {
   const name = getAirportName(airport.iata, locale, airport.name);
   const city = getCityName(airport.city, locale);
   const country = getCountryName(airport.country, locale);
-  const showCity = showCityFlag(name, city, airport.city);
+  const showCity = showCityFlag(getAirportNameBare(airport.iata, locale, airport.name), city, airport.city);
   const h1 = t('departures_title', { airport: name, iata: airport.iata, city, showCity });
   const desc = t('departures_description', { airport: name, iata: airport.iata, city });
 

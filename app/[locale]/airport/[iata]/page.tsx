@@ -8,7 +8,7 @@ import { hasNoService, nearestServiced, serviceLevel, serviceMeasuredOn } from '
 import { localizedMeasuredOn } from '@/lib/measured-date';
 import { sameAsFor, airportNodeId } from '@/lib/airport-sameas';
 import { getAirportContent } from '@/lib/airport-content';
-import { getAirportName } from '@/lib/airport-names';
+import { getAirportName, getAirportNameBare } from '@/lib/airport-names';
 import { getCityName, getCountryName } from '@/lib/places';
 import { getBoard, getBoardFetchedAt } from '@/lib/flights';
 import { FlightBoard } from '@/components/FlightBoard';
@@ -109,7 +109,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const country = getCountryName(airport.country, locale);
   // Titles append the city only when the airport's localized name doesn't already
   // contain it ("Внуково" + Москва — yes; "Сочи" + Сочи — no). People search by city.
-  const showCity = showCityFlag(name, city, airport.city);
+  const showCity = showCityFlag(getAirportNameBare(airport.iata, locale, airport.name), city, airport.city);
 
   // A closed airport must not promise a live board in the SERP snippet either. Reuse the
   // on-page notice copy so the title and description say the same true thing.

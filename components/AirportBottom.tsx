@@ -8,6 +8,7 @@ import type { FlightRow } from '@/lib/flights';
 import { MoreInfo, OverviewMetrics, AboutCard, Faq } from '@/components/AirportExtras';
 import { getAirportContentExtended } from '@/lib/airport-content-extended';
 import { serviceLevel, serviceMeasuredOn } from '@/lib/warm';
+import { GENERIC_LOCALES } from '@/lib/generic-word';
 import { localizedMeasuredOn } from '@/lib/measured-date';
 import { EventBanner } from '@/components/EventBanner';
 
@@ -177,7 +178,7 @@ export async function AirportBottom({ airport, locale, about, displayName, fligh
           {/* 2. OVERVIEW */}
           <section style={{ marginTop: 24 }}>
             <div style={{ background: '#0B0B0B', border: '1px solid #1A1A1A', borderRadius: 20, padding: '20px 22px' }}>
-              <div style={{ fontSize: 30, fontWeight: 800, letterSpacing: '-0.03em', color: '#FFFFFF', lineHeight: 1 }}>{airport.iata} {t('airport_word')}</div>
+              <div style={{ fontSize: 30, fontWeight: 800, letterSpacing: '-0.03em', color: '#FFFFFF', lineHeight: 1 }}>{airport.iata}{GENERIC_LOCALES.has(locale) ? '' : ` ${t('airport_word')}`}</div>
               <div style={{ fontSize: 16, color: '#B4B4B4', marginTop: 8 }}>{name}</div>
               <div style={{ fontSize: 14, color: SUB, marginTop: 4 }}>{city}, {country}{offset ? ` · ${offset}` : ''}</div>
             </div>

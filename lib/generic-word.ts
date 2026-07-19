@@ -13,6 +13,9 @@
  * So the decision needs the facility type, which now lives in data/airports.json (absent means an
  * ordinary airport — the common case, kept out of the file to save bytes).
  */
+/** English names that say outright this is not an ordinary airport. */
+const NOT_AN_AIRPORT = /\b(heliport|seaplane|balloonport|helipad)\b/i;
+
 export type Facility = 'heliport' | 'seaplane' | 'balloonport' | 'closed' | undefined;
 
 /** Words that already mean "airport" in this locale, in the scripts the data actually uses. */
@@ -26,6 +29,9 @@ const ALREADY: Record<string, RegExp> = {
   hi: /एयरपोर्ट|हवाई ?अड्डा|Airport/i,
 };
 
+/** Locales whose NAMES already carry the generic word, so surrounding copy must not repeat it. */
+export const GENERIC_LOCALES = new Set(['ko']);
+
 /** The generic word itself, per locale. Only locales where a native pass approved one. */
 const WORD: Record<string, string> = {
   ko: '공항',
@@ -38,8 +44,23 @@ const WORD: Record<string, string> = {
  * facility that is not an ordinary airport — those keep their bare name, which is exactly what
  * they render today, so there is no regression and no false claim.
  */
-export function genericWord(locale: string, name: string, facility?: Facility): string {
+export function genericWord(
+  locale: string,
+  name: string,
+  facility?: Facility,
+  opts?: { served?: boolean; englishName?: string },
+): string {
   if (facility) return '';                       // heliport, seaplane base, balloonport, closed
+  // Scheduled service is the load-bearing condition, and it does more work than the facility
+  // flag ever could. It removes the word from 3,051 records with no flights — which is also
+  // where the tautology lived, because the no-service notice already says "havalimanından" /
+  // "공항" in its own sentence — and it cuts the non-airports that slip past the facility data
+  // from ~100 to a handful, without needing that data to be complete.
+  if (opts?.served !== true) return '';
+  // The facility field comes from OurAirports, which does not know about every heliport either:
+  // AEI (Algeciras Heliport), KQA (Akutan Seaplane Base) and XRH (RAAF Base Richmond) all
+  // reached production as "공항". The English name we always have says so plainly.
+  if (opts.englishName && NOT_AN_AIRPORT.test(opts.englishName)) return '';
   const word = WORD[locale];
   if (!word) return '';
   const already = ALREADY[locale];

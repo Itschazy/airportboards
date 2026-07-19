@@ -36,11 +36,11 @@
   },
   "meta": {
     "main_title": "{airport}{showCity, select, yes {({city})} other {}} ({iata}) 실시간 운항정보 | 도착·출발",
-    "main_description": "{airport}({iata}) 공항 오늘 항공편 운항정보를 실시간 확인하세요. 도착·출발 시간, 지연, 결항, 게이트 정보를 제공합니다.",
+    "main_description": "{airport}({iata}) 오늘 항공편 운항정보를 실시간 확인하세요. 도착·출발 시간, 지연, 결항, 게이트 정보를 제공합니다.",
     "arrivals_title": "{airport}{showCity, select, yes {({city})} other {}} ({iata}) 도착 항공편 | 실시간",
     "departures_title": "{airport}{showCity, select, yes {({city})} other {}} ({iata}) 출발 항공편 | 실시간",
-    "arrivals_description": "{airport}({iata}) 공항 오늘 도착 운항정보를 실시간 확인하세요. 도착 항공편, 출발 연결편, 지연·결항, 게이트 정보를 제공합니다.",
-    "departures_description": "{airport}({iata}) 공항 오늘 출발 운항정보를 실시간 확인하세요. 출발 항공편, 도착 연결편, 지연·결항, 게이트 정보를 제공합니다."
+    "arrivals_description": "{airport}({iata}) 오늘 도착 운항정보를 실시간 확인하세요. 도착 항공편, 출발 연결편, 지연·결항, 게이트 정보를 제공합니다.",
+    "departures_description": "{airport}({iata}) 오늘 출발 운항정보를 실시간 확인하세요. 출발 항공편, 도착 연결편, 지연·결항, 게이트 정보를 제공합니다."
   },
   "airport_info": {
     "location": "위치",
