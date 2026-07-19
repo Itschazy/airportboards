@@ -238,8 +238,14 @@ export default async function AirportPage({ params }: Props) {
       url: canonical,
       address: {
         '@type': 'PostalAddress',
-        addressLocality: airport.city,
-        addressCountry: airport.iso2 || airport.country,
+        // Both properties are omitted rather than emitted empty or wrong. addressCountry wants
+        // an ISO 3166-1 alpha-2 code; falling back to the country NAME published invalid schema
+        // on 238 airports, and among those names were states that no longer exist — SXM said
+        // "Netherlands Antilles", dissolved in 2010. Backfilled from OurAirports per AIRPORT,
+        // not per country name: those five Antillean airports resolve to three different codes
+        // (BQ, CW, SX), so a name-based substitution would have merged three countries into one.
+        ...(airport.city ? { addressLocality: airport.city } : {}),
+        ...(airport.iso2 ? { addressCountry: airport.iso2 } : {}),
       },
       geo: {
         '@type': 'GeoCoordinates',
