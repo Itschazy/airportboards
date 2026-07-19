@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { withBrand } from '@/lib/title';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
@@ -45,7 +46,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   for (const loc of locales) languages[loc] = `${BASE}/${loc}/flight/${c}`;
   languages['x-default'] = `${BASE}/en/flight/${c}`;
   return {
-    title: `${t('flight_title', { flight })} — AirportsBoard`,
+    title: withBrand(t('flight_title', { flight })),
     description: t('flight_desc', { flight }),
     alternates: found ? { canonical, languages } : { canonical },
     robots: { index: !!found, follow: true },

@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { withBrand } from '@/lib/title';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import Link from 'next/link';
 import { getEventsForHub, type EventData, type EventType } from '@/lib/event-content';
@@ -19,7 +20,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   for (const loc of locales) languages[loc] = `${BASE}/${loc}/events`;
   languages['x-default'] = `${BASE}/en/events`;
   return {
-    title: `${tE('hub_title')} — AirportsBoard`,
+    title: withBrand(tE('hub_title')),
     description: tE('hub_desc'),
     alternates: { canonical: `${BASE}/${locale}/events`, languages },
     robots: { index: true, follow: true },

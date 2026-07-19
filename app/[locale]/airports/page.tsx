@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { withBrand } from '@/lib/title';
 import { getTranslations , setRequestLocale } from 'next-intl/server';
 import Link from 'next/link';
 import { getCountries } from '@/lib/airports';
@@ -30,7 +31,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   for (const loc of locales) languages[loc] = `${BASE}/${loc}/airports`;
   languages['x-default'] = `${BASE}/en/airports`;
   return {
-    title: `${title} — AirportsBoard`,
+    title: withBrand(title),
     description: (() => {
       const w = worldServiceCounts();
       if (!w.generated || !w.withService) return t('footer_tagline');

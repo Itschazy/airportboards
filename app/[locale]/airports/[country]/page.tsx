@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { withBrand } from '@/lib/title';
 import { getTranslations , setRequestLocale } from 'next-intl/server';
 import { notFound, permanentRedirect } from 'next/navigation';
 import Link from 'next/link';
@@ -41,7 +42,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   for (const loc of locales) languages[loc] = `${BASE}/${loc}/airports/${c.slug}`;
   languages['x-default'] = `${BASE}/en/airports/${c.slug}`;
   return {
-    title: `${title} — AirportsBoard`,
+    title: withBrand(title),
     description: (() => {
       // Say how many of the country's airports you can actually fly from — the number a
       // traveller wants and that no atlas publishes — rather than implying all of them

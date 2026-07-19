@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { withBrand } from '@/lib/title';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
@@ -29,7 +30,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   // live data without spending quota on every crawl. Keep them noindex/follow (useful for
   // users + link flow) and omit the hreflang cluster; they're also dropped from the sitemap.
   return {
-    title: `${t('airline_title', { airline: name })} (${cu}) — AirportsBoard`,
+    title: withBrand(`${t('airline_title', { airline: name })} (${cu})`),
     description: t('airline_desc', { airline: name, iata: cu }),
     alternates: { canonical: `${BASE}/${locale}/airline/${cu}` },
     robots: { index: false, follow: true },

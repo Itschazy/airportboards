@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { withBrand } from '@/lib/title';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
@@ -38,7 +39,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   languages['x-default'] = `${BASE}/en/city/${c.slug}`;
   const canonical = `${BASE}/${locale}/city/${c.slug}`;
   return {
-    title: `${title} — AirportsBoard`,
+    title: withBrand(title),
     description: t('city_desc', { city, count: c.count }),
     // A single-airport "city" page is near-duplicate of that airport — don't index it,
     // and don't advertise an hreflang cluster for a noindex page.
