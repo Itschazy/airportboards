@@ -111,7 +111,25 @@ export function dueAirports(now = Date.now()): Due[] {
     if (overdue < 1) continue;
     out.push({ iata, tier, overdue });
   }
-  out.sort((a, b) => b.overdue - a.overdue);
+  // Busiest tier first, most overdue within it.
+  //
+  // This used to sort on the raw overdue ratio alone, which sounds fair and is not: a board
+  // that has never been warmed has ts = 0, so its ratio is the epoch divided by the interval —
+  // tens of thousands. It outranks a hub that is genuinely three times late, permanently,
+  // because there are always more un-warmed airports than budget. The note on TIERS promises
+  // that a short month slows every tier proportionally rather than starving anyone; an
+  // unbounded ratio quietly broke that promise in the tail's favour, and clamping the ratio
+  // does not fix it either (the clamped tail still outranks a hub at 2x).
+  //
+  // Measured on production 2026-07-19, demand ~5,200/day against ~2,750 of budget: DXB, CDG,
+  // SIN and HND sat at 12 hours against a 6-hour target, ATL and PEK at 15, while the tail
+  // took the runs. Those are the most valuable pages on the site.
+  //
+  // Ordering by tier costs the tail nothing it was entitled to: boards refreshed within their
+  // own interval never enter this list at all (overdue < 1 is filtered above), so this only
+  // decides who goes first among boards that are ALL already late. Mega and hub together are
+  // 160 airports and ~850 requests a day, leaving ~1,900 of the 2,750 flowing downwards.
+  out.sort((a, b) => TIERS.indexOf(a.tier) - TIERS.indexOf(b.tier) || b.overdue - a.overdue);
   return out;
 }
 
