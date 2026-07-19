@@ -303,9 +303,22 @@ export async function warmHubs(): Promise<{
 
   const due = dueAirports();
   // Events first, then the most overdue. Legacy list only while service data is missing.
+  //
+  // Event airports are prepended, which put them OUTSIDE the overdue filter entirely: one was
+  // refreshed on every two-hourly run regardless of its tier, so ANR — a small field with one
+  // departure a day and a 24-hour target — was being warmed twelve times a day while nothing
+  // in its tier got touched at all. Six of them cost ~5% of a budget already in deficit.
+  // Priority is worth keeping; exemption is not. An hour is well inside every tier's target,
+  // so an event airport still gets far more attention than its size would earn it.
+  const EVENT_MIN_AGE_MS = 60 * 60_000;
+  const now = Date.now();
+  const staleEvents = eventAirports.filter(iata => {
+    const ts = getStaleTs(`departures:dep_iata=${iata}`);
+    return !ts || now - ts >= EVENT_MIN_AGE_MS;
+  });
   const queue: string[] = due.length
-    ? [...eventAirports, ...due.map(d => d.iata)]
-    : [...eventAirports, ...WARM_HUBS];
+    ? [...staleEvents, ...due.map(d => d.iata)]
+    : [...staleEvents, ...WARM_HUBS];
   const tierByIata = new Map(due.map(d => [d.iata, d.tier.name]));
 
   const budget = tickBudget();
