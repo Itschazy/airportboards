@@ -139,7 +139,9 @@
     "faq_deps_a": "About {n} scheduled departures were counted at {name} ({iata}) when flight schedules were last measured on {date}.",
     "airport_lead": "{name} ({iata}) is an airport serving {city}, {country}.",
     "replaced_line": "{name} ({iata}) took over the traffic of {predecessors}.",
-    "delays_line": "Board status as of {m} min ago: {delayed} of {pending} upcoming departures delayed by 15+ minutes."
+    "delays_line": "Board status as of {m} min ago: {delayed} of {pending} upcoming departures delayed by 15+ minutes.",
+    "country_split_partial": "Of the {count} airports with IATA codes in {country}, at least {served} have scheduled passenger service as of {date}.",
+    "world_split_partial": "AirportsBoard tracks {total} airports with IATA codes worldwide. As measured on {date}, at least {served} of them had scheduled passenger service."
   },
   "ui": {
     "departures": "Departures",
@@ -221,7 +223,8 @@
     "more_arrivals": "Show more arrivals",
     "live_updates": "Live updates",
     "updated_h_ago": "Updated {h} h ago",
-    "updated_d_ago": "Updated {d} d ago"
+    "updated_d_ago": "Updated {d} d ago",
+    "board_pending": "Live board data for this airport is not available right now."
   },
   "notfound": {
     "title": "Page not found",

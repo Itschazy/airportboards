@@ -32,9 +32,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     title: `${title} — AirportsBoard`,
     description: (() => {
       const w = worldServiceCounts();
-      return w.generated && w.withService
-        ? t('world_split', { total: fmt(w.probed, locale), date: w.generated, served: fmt(w.withService, locale), rest: fmt(w.empty, locale) })
-        : t('footer_tagline');
+      if (!w.generated || !w.withService) return t('footer_tagline');
+      // Same rule as the country pages: only claim the full breakdown when nothing is unknown.
+      return w.probed > w.withService + w.empty
+        ? t('world_split_partial', { total: fmt(w.probed, locale), date: w.generated, served: fmt(w.withService, locale) })
+        : t('world_split', { total: fmt(w.probed, locale), date: w.generated, served: fmt(w.withService, locale), rest: fmt(w.empty, locale) });
     })(),
     alternates: { canonical: `${BASE}/${locale}/airports`, languages },
     robots: { index: true, follow: true },
@@ -107,7 +109,9 @@ export default async function AirportsIndexPage({ params }: Props) {
       </p>
       {world.generated && world.withService > 0 && (
         <p style={{ fontSize: 15, lineHeight: 1.55, color: '#C7C7CC', margin: '0 0 28px', maxWidth: 660 }}>
-          {t('world_split', { total: fmt(world.probed, locale), date: world.generated!, served: fmt(world.withService, locale), rest: fmt(world.empty, locale) })}
+          {world.probed > world.withService + world.empty
+            ? t('world_split_partial', { total: fmt(world.probed, locale), date: world.generated!, served: fmt(world.withService, locale) })
+            : t('world_split', { total: fmt(world.probed, locale), date: world.generated!, served: fmt(world.withService, locale), rest: fmt(world.empty, locale) })}
         </p>
       )}
 

@@ -139,7 +139,9 @@
     "faq_deps_a": "Se contabilizaron alrededor de {n} salidas programadas en {name} ({iata}) cuando se midieron por última vez los horarios de vuelos el {date}.",
     "airport_lead": "{name} ({iata}) es un aeropuerto que presta servicio a {city}, {country}.",
     "replaced_line": "{name} ({iata}) asumió el tráfico de {predecessors}.",
-    "delays_line": "Estado del panel hace {m} min: {delayed} de {pending} próximas salidas con retraso de 15 minutos o más."
+    "delays_line": "Estado del panel hace {m} min: {delayed} de {pending} próximas salidas con retraso de 15 minutos o más.",
+    "country_split_partial": "De los {count} aeropuertos con códigos IATA en {country}, al menos {served} tienen servicio regular de pasajeros a fecha de {date}.",
+    "world_split_partial": "AirportsBoard rastrea {total} aeropuertos con códigos IATA en todo el mundo. Según la medición del {date}, al menos {served} de ellos tenían servicio regular de pasajeros."
   },
   "ui": {
     "departures": "Salidas",
@@ -221,7 +223,8 @@
     "more_arrivals": "Mostrar más llegadas",
     "live_updates": "Actualizaciones en vivo",
     "updated_h_ago": "Actualizado hace {h} h",
-    "updated_d_ago": "Actualizado hace {d} d"
+    "updated_d_ago": "Actualizado hace {d} d",
+    "board_pending": "Ahora mismo no hay datos del panel de vuelos para este aeropuerto."
   },
   "notfound": {
     "title": "Página no encontrada",

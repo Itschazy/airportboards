@@ -443,7 +443,7 @@ function BottomSheet({ flight, mode, onClose, tz, locale }: {
 
 // ─── Main Component ───────────────────────────────────────────────────────────
 
-export function FlightBoard({ airport, locale, defaultMode = 'departures', displayName, initialFlights, initialFetchedAt, boardTotal, lead, statusLine = null, noService = false }: {
+export function FlightBoard({ airport, locale, defaultMode = 'departures', displayName, initialFlights, initialFetchedAt, boardTotal, lead, statusLine = null, noService = false, pendingNote = null }: {
   airport: Airport;
   locale: string;
   defaultMode?: Mode;
@@ -468,6 +468,8 @@ export function FlightBoard({ airport, locale, defaultMode = 'departures', displ
    *  a freshness dot, direction tabs and status filters over a permanently empty list read
    *  as a broken page. The notice above the board explains why it is empty. */
   noService?: boolean;
+  /** Honest server-rendered stand-in when the store has no board for this airport yet. */
+  pendingNote?: string | null;
 }) {
   const t = useTranslations('ui');
   const tNav = useTranslations('nav');
@@ -478,7 +480,11 @@ export function FlightBoard({ airport, locale, defaultMode = 'departures', displ
   // SSR-rendered first set (current/default mode) so crawlers and users see real
   // flights without waiting for client JS; the poll below refreshes it.
   const [flights, setFlights]     = useState<Flight[]>(initialFlights ?? []);
-  const [loading, setLoading]     = useState(!hasInitial);
+  // Starts false so the SERVER never renders a spinner. It used to start as !hasInitial, which
+  // meant every un-warmed airport served crawlers three animated dots and nothing else — and the
+  // honest empty-state branch below was gated on !loading, so it was unreachable in SSR by
+  // construction. Real users are unaffected: the mount effect sets loading before it fetches.
+  const [loading, setLoading]     = useState(false);
   const [time, setTime]           = useState('');
   const [lastUpdated, setUpdated] = useState<Date | null>(initialFetchedAt ? new Date(initialFetchedAt) : null);
   // Seeded from the SSR timestamp, not left empty. It used to start as '' and only ever be
@@ -769,7 +775,14 @@ export function FlightBoard({ airport, locale, defaultMode = 'departures', displ
         {!loading && !noService && visible.length === 0 && (
           <div style={{ textAlign: 'center', padding: '60px 0' }}>
             <div style={{ fontSize: 32, marginBottom: 12 }}>✈</div>
-            <div style={{ fontSize: 15, color: C.secondary }}>{t('no_flights')}</div>
+            {/* "No flights found" is only true once we actually have a board and it is empty.
+                With nothing stored at all — the normal state for an airport the warmer has not
+                reached — saying it would be a straight falsehood about a real airport, on the
+                page type Google already flagged. pendingNote says what is true instead, and
+                carries the measured schedule figure so the page still answers the question. */}
+            <div style={{ fontSize: 15, color: C.secondary, maxWidth: 420, margin: '0 auto', lineHeight: 1.5 }}>
+              {pendingNote ?? t('no_flights')}
+            </div>
           </div>
         )}
 

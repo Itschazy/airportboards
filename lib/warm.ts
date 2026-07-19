@@ -147,14 +147,39 @@ export function tickBudget(runsPerDay = 12, now = new Date()): number {
 }
 
 /**
+ * IATA codes our probe recorded as zero but OurAirports flags as having scheduled service.
+ * See scripts/crosscheck-service.mjs — 1,580 of 3,789 zero verdicts, concentrated in exactly
+ * the regions where the provider's coverage is thin (Norway 38 of 40, Canada 175 of 292).
+ */
+let unverified: Set<string> | null = null;
+function getUnverified(): Set<string> {
+  if (unverified) return unverified;
+  try {
+    const p = path.join(process.cwd(), 'data', 'airport-service-unverified.json');
+    unverified = new Set((JSON.parse(fs.readFileSync(p, 'utf8')) as { codes?: string[] }).codes ?? []);
+  } catch {
+    unverified = new Set();   // no cross-check file — fall back to the raw measurement
+  }
+  return unverified;
+}
+
+/**
  * Scheduled departures we last measured for this airport.
  *   > 0  — it has commercial service
  *   0    — it does not (military field, bush strip, general-aviation or private airfield)
- *   null — never probed, so we must not claim either way
+ *   null — unknown: never probed, OR probed once as zero and contradicted by OurAirports
+ *
+ * The null case is load-bearing. A single empty `schedules?dep_iata=X` response is one sample of
+ * a feed whose coverage varies by region, not proof that no airline flies there — and we were
+ * publishing it as "No airline operates scheduled passenger flights from X" in the page copy,
+ * the meta description and a FAQPage answer, across whole networks (Widerøe, Loganair). Silence
+ * is the only honest answer when the two sources disagree.
  */
 export function serviceLevel(iata: string): number | null {
   const v = getServiceData()[iata];
-  return v === undefined ? null : v;
+  if (v === undefined) return null;
+  if (v === 0 && getUnverified().has(iata)) return null;
+  return v;
 }
 
 /** Explicitly known to have no scheduled commercial service. Never true for un-probed airports. */
@@ -204,11 +229,14 @@ export function serviceMeasuredOn(): string | null {
 export function splitByService<T extends { iata: string }>(airports: T[]): {
   served: T[]; unserved: T[]; unknown: T[];
 } {
-  const svc = getServiceData();
   const served: T[] = [], unserved: T[] = [], unknown: T[] = [];
   for (const a of airports) {
-    const v = svc[a.iata];
-    if (v === undefined) unknown.push(a);
+    // Via serviceLevel(), not the raw map, so an airport our probe zeroed but OurAirports
+    // contradicts lands in `unknown` rather than being counted as proof of no service. Reading
+    // the map directly is what made /airports/norway advertise "8 of 56 have scheduled
+    // passenger service" when the real figure is around 45.
+    const v = serviceLevel(a.iata);
+    if (v === null) unknown.push(a);
     else if (v > 0) served.push(a);
     else unserved.push(a);
   }
@@ -217,12 +245,16 @@ export function splitByService<T extends { iata: string }>(airports: T[]): {
 
 /** Worldwide counts straight from the measurement file, for the /airports index. */
 export function worldServiceCounts(): { probed: number; withService: number; empty: number; generated: string | null } {
-  const svc = getServiceData();
-  const vals = Object.values(svc);
+  const codes = Object.keys(getServiceData());
+  const levels = codes.map(serviceLevel);
   return {
-    probed: vals.length,
-    withService: vals.filter(n => n > 0).length,
-    empty: vals.filter(n => n === 0).length,
+    // `probed` stays the full set of codes we measured — that is what the site "tracks", and
+    // shrinking it here would have made /airports announce 4,489 airports while every other
+    // surface says 6,069. `withService` + `empty` no longer sum to it, which is precisely the
+    // signal the caller uses to pick the partial wording instead of claiming a full breakdown.
+    probed: codes.length,
+    withService: levels.filter(n => n !== null && n > 0).length,
+    empty: levels.filter(n => n === 0).length,
     generated: serviceMeasuredOn(),
   };
 }

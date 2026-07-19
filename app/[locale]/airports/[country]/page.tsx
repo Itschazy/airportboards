@@ -44,11 +44,18 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       // Say how many of the country's airports you can actually fly from — the number a
       // traveller wants and that no atlas publishes — rather than implying all of them
       // have live boards.
-      const { served, unserved } = splitByService(getAirportsByCountry(c.slug));
+      const { served, unserved, unknown } = splitByService(getAirportsByCountry(c.slug));
       const date = serviceMeasuredOn();
-      return date && served.length
-        ? t('country_split', { country: countryName, count: fmt(c.count, locale), served: fmt(served.length, locale), rest: fmt(unserved.length, locale), date })
-        : t('country_desc', { country: countryName, count: c.count });
+      // The full sentence accounts for every airport (served + the rest), so it may only be
+      // used when there is nothing we are unsure about. Once the OurAirports cross-check moves
+      // airports into `unknown`, "the remaining N are airfields with no airline flights" stops
+      // adding up — Norway would read "8 have service; the remaining 10" out of 56 — and it
+      // also asserts a negative we no longer stand behind. The partial variant states only the
+      // confirmed floor, which is both true and still the number a traveller wants.
+      if (!date || !served.length) return t('country_desc', { country: countryName, count: c.count });
+      return unknown.length
+        ? t('country_split_partial', { country: countryName, count: fmt(c.count, locale), served: fmt(served.length, locale), date })
+        : t('country_split', { country: countryName, count: fmt(c.count, locale), served: fmt(served.length, locale), rest: fmt(unserved.length, locale), date });
     })(),
     alternates: { canonical: `${BASE}/${locale}/airports/${c.slug}`, languages },
     robots: { index: true, follow: true },
@@ -65,7 +72,7 @@ export default async function CountryPage({ params }: Props) {
   const countryName = getCountryName(c.country, locale);
   // The exclusive fact: of every IATA-coded airport in this country, how many actually have
   // scheduled passenger service. Measured across all 6,069 codes, so it is ours to state.
-  const { served, unserved } = splitByService(airports);
+  const { served, unserved, unknown } = splitByService(airports);
   const measuredOn = serviceMeasuredOn();
   const showSplit = !!measuredOn && served.length > 0 && unserved.length > 0;
 
@@ -106,7 +113,9 @@ export default async function CountryPage({ params }: Props) {
       {/* One self-contained, dated sentence — the unit an answer engine lifts verbatim. */}
       {showSplit && (
         <p style={{ fontSize: 15, lineHeight: 1.55, color: '#C7C7CC', marginTop: 14, maxWidth: 640 }}>
-          {t('country_split', { country: countryName, count: fmt(c.count, locale), served: fmt(served.length, locale), rest: fmt(unserved.length, locale), date: measuredOn! })}
+          {unknown.length
+            ? t('country_split_partial', { country: countryName, count: fmt(c.count, locale), served: fmt(served.length, locale), date: measuredOn! })
+            : t('country_split', { country: countryName, count: fmt(c.count, locale), served: fmt(served.length, locale), rest: fmt(unserved.length, locale), date: measuredOn! })}
         </p>
       )}
 

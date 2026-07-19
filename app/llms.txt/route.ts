@@ -73,7 +73,7 @@ export function GET() {
 
 > Live arrivals and departures for the world's airports in 12 languages — plus something no other flight site publishes: a measured answer to which airports actually have scheduled passenger service, and where to fly from instead when they do not.
 
-AirportsBoard.live covers ${num(world.probed)} airports that hold IATA codes. Published flight schedules were probed for every one of them${world.generated ? ` (last measured ${world.generated})` : ''}: ${num(world.withService)} have scheduled passenger service and carry a live board; the other ${num(world.empty)} are airfields, military bases and private strips with no airline flights. Those pages say so plainly and name the nearest airport you can actually fly from, with the distance.
+AirportsBoard.live covers ${num(world.probed)} airports that hold IATA codes. Published flight schedules were probed for every one of them${world.generated ? ` (last measured ${world.generated})` : ''}: at least ${num(world.withService)} have scheduled passenger service, and ${num(world.empty)} are confirmed to have no airline flights at all — airfields, military bases and private strips. Those pages say so plainly and name the nearest airport you can actually fly from, with the distance. The remaining ${num(world.probed - world.withService - world.empty)} are cases where our own probe found nothing but an independent source (OurAirports) records scheduled service; we treat those as unknown and make no claim either way.
 
 Content is available in 12 languages — English (en), Russian (ru), Chinese (zh), Arabic (ar), German (de), Korean (ko), Japanese (ja), French (fr), Spanish (es), Italian (it), Hindi (hi), Turkish (tr) — each on its own URL.
 
@@ -98,7 +98,7 @@ Boards refresh on a schedule matched to how busy the airport is: the busiest hub
 - [About the data and how it is collected](${BASE}/en/about)
 
 ## Airfields without scheduled service
-${num(world.empty)} of the IATA codes covered here have no airline flights at all. Their pages state that directly and point to the nearest airport with scheduled service, for example:
+${num(world.empty)} of the IATA codes covered here are confirmed to have no airline flights at all. Their pages state that directly and point to the nearest airport with scheduled service, for example:
 - [Aachen-Merzbrück (AAH)](${BASE}/en/airport/AAH) — no scheduled flights; nearest served airport is Maastricht (MST)
 - [RAF Brize Norton (BZZ)](${BASE}/en/airport/BZZ) — military airfield, no airline service
 

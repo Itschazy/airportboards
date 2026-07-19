@@ -129,6 +129,7 @@ export default async function AirportPage({ params }: Props) {
   const t = await getTranslations({ locale, namespace: 'meta' });
   const tNav = await getTranslations({ locale, namespace: 'nav' });
   const tHome = await getTranslations({ locale, namespace: 'home' });
+  const tUi = await getTranslations({ locale, namespace: 'ui' });
   // A closed airport points at whatever took its traffic, so the page still sends the
   // visitor (and the crawler) somewhere useful instead of dead-ending on an empty board.
   const successorAirport = airport.successor ? getAirport(airport.successor) : null;
@@ -180,6 +181,22 @@ export default async function AirportPage({ params }: Props) {
       })()
     : null;
   const name = getAirportName(airport.iata, locale, airport.name);
+  // What to put under an empty board when the airport is NOT known to be service-free — i.e.
+  // the warmer simply has not reached it yet. Never "No flights found": that would assert
+  // something false about a real airport, and 1,580 of these are airports whose zero verdict
+  // OurAirports contradicts outright (see scripts/crosscheck-service.mjs). Where we do have a
+  // measured schedule figure, say it — the page then answers "how busy is this airport" even
+  // with no live rows, which is the whole point for a crawler that will never run our JS.
+  const pendingNote = (!noService && initialFlights.length === 0)
+    ? (() => {
+        const measured = serviceLevel(airport.iata);
+        const on = serviceMeasuredOn();
+        const line = tUi('board_pending');
+        return measured && measured > 0 && on
+          ? `${line} ${tHome('faq_deps_a', { n: String(measured), name, iata: airport.iata, date: on })}`
+          : line;
+      })()
+    : null;
   const city = getCityName(airport.city, locale);
   const country = getCountryName(airport.country, locale);
   // Same source as the <meta> description — see airportDescription(). Structured data is
@@ -314,7 +331,7 @@ export default async function AirportPage({ params }: Props) {
       {/* The visible <h1> now lives in FlightBoard's airport header (single semantic h1). */}
       {/* SSR only the first 40 rows to keep the HTML light (the client refetches the full
           board on mount); AirportBottom still gets the full set to aggregate routes/airlines. */}
-      <FlightBoard airport={airport} locale={locale} displayName={name} initialFlights={initialFlights.slice(0, 40)} initialFetchedAt={getBoardFetchedAt(airport.iata, 'departures')} boardTotal={initialFlights.length} lead={tHome('airport_lead', { name, iata: airport.iata, city, country })} statusLine={delayLine} noService={noService} />
+      <FlightBoard airport={airport} locale={locale} displayName={name} initialFlights={initialFlights.slice(0, 40)} initialFetchedAt={getBoardFetchedAt(airport.iata, 'departures')} boardTotal={initialFlights.length} lead={tHome('airport_lead', { name, iata: airport.iata, city, country })} statusLine={delayLine} noService={noService} pendingNote={pendingNote} />
       <AirportBottom airport={airport} locale={locale} about={about} displayName={name} flights={initialFlights} noService={noService} nearestServed={nearestWithFlights} />
     </>
   );

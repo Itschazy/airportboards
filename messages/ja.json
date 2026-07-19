@@ -139,7 +139,9 @@
     "faq_deps_a": "{date}に運航スケジュールを最後に確認した時点で、{name}（{iata}）では約{n}便の定期出発便が確認されました。",
     "airport_lead": "{name}（{iata}）は、{country}の{city}を利用圏とする空港です。",
     "replaced_line": "{name} ({iata}) は{predecessors}の航空需要を引き継ぎました。",
-    "delays_line": "{m}分前時点の運航掲示板状況：今後出発予定の{pending}便のうち、{delayed}便が15分以上遅延しています。"
+    "delays_line": "{m}分前時点の運航掲示板状況：今後出発予定の{pending}便のうち、{delayed}便が15分以上遅延しています。",
+    "country_split_partial": "{country}にある国際航空運送協会の空港符号を持つ空港{count}か所のうち、{date}現在、少なくとも{served}か所で定期旅客便が運航されています。",
+    "world_split_partial": "AirportsBoardは世界の国際航空運送協会の空港符号を持つ空港{total}か所を追跡しています。{date}の計測時点で、少なくとも{served}か所で定期旅客便が運航されていました。"
   },
   "ui": {
     "departures": "出発",
@@ -221,7 +223,8 @@
     "more_arrivals": "到着をもっと表示",
     "live_updates": "ライブ更新",
     "updated_h_ago": "{h}時間前に更新",
-    "updated_d_ago": "{d}日前に更新"
+    "updated_d_ago": "{d}日前に更新",
+    "board_pending": "この空港のフライトボードのデータは現在利用できません。"
   },
   "notfound": {
     "title": "ページが見つかりません",

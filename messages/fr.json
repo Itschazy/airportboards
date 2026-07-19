@@ -139,7 +139,9 @@
     "faq_deps_a": "Environ {n} départs programmés ont été comptabilisés à {name} ({iata}) lors de la dernière mesure des horaires de vol, le {date}.",
     "airport_lead": "{name} ({iata}) est un aéroport qui dessert {city}, {country}.",
     "replaced_line": "{name} ({iata}) a repris le trafic de {predecessors}.",
-    "delays_line": "État du tableau d’affichage il y a {m} min : {delayed} des {pending} prochains départs sont retardés de 15 min ou plus."
+    "delays_line": "État du tableau d’affichage il y a {m} min : {delayed} des {pending} prochains départs sont retardés de 15 min ou plus.",
+    "country_split_partial": "Sur les {count} aéroports dotés d’un code IATA en {country}, au moins {served} proposent des vols passagers réguliers à la date du {date}.",
+    "world_split_partial": "AirportsBoard suit {total} aéroports dotés d’un code IATA dans le monde. À la date du {date}, au moins {served} d’entre eux proposaient des vols passagers réguliers."
   },
   "ui": {
     "departures": "Départs",
@@ -221,7 +223,8 @@
     "more_arrivals": "Afficher plus d'arrivées",
     "live_updates": "Mises à jour en direct",
     "updated_h_ago": "Mis à jour il y a {h} h",
-    "updated_d_ago": "Mis à jour il y a {d} j"
+    "updated_d_ago": "Mis à jour il y a {d} j",
+    "board_pending": "Les données du tableau des vols ne sont pas disponibles pour cet aéroport pour le moment."
   },
   "notfound": {
     "title": "Page introuvable",
