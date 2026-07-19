@@ -32,7 +32,10 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   const { locale } = await params;
   return {
     metadataBase: new URL('https://airportsboard.live'),
-    verification: { yandex: 'ea6daa0845815656' },
+    // Site ownership proofs. `other` is where Next puts arbitrary verification meta tags;
+    // Bing's must stay in place permanently — removing it un-verifies the site, not just
+    // during the initial check.
+    verification: { yandex: 'ea6daa0845815656', other: { 'msvalidate.01': 'B98E7EB91E5D0100462CA06CD39AA4D7' } },
     // AdSense site-verification meta tag (Google reads <meta name="google-adsense-account">
     // in <head>). Emitted only when the publisher id is configured.
     ...(adsenseClient ? { other: { 'google-adsense-account': adsenseClient } } : {}),
