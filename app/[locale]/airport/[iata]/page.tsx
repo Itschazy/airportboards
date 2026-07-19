@@ -71,6 +71,21 @@ async function airportDescription(opts: {
       description: tHome('ns_meta', { airport: name, iata: airport.iata, city, country }),
     };
   }
+  // Served, but nothing stored to show yet. generateMetadata already branches for closed and
+  // for no-service airports; this third case was missing, so roughly a third of served
+  // airports promised "real-time arrivals and departures with flight status, times, delays and
+  // gates" in the SERP snippet above a page whose own body says the board is not available.
+  // The snippet and the page now agree per-airport instead of the copy being watered down for
+  // everyone — gates are genuinely delivered on 61% of rows where a board exists.
+  // Costs nothing: getBoardFetchedAt is a store read, never an airlabs call.
+  if (!getBoardFetchedAt(airport.iata, 'departures')) {
+    const tHome = await getTranslations({ locale, namespace: 'home' });
+    const tUi = await getTranslations({ locale, namespace: 'ui' });
+    return {
+      title: null,
+      description: `${tHome('airport_lead', { name, iata: airport.iata, city, country })} ${tUi('board_pending')}`,
+    };
+  }
   return { title: null, description: t('main_description', { airport: name, iata: airport.iata, city, country }) };
 }
 

@@ -35,10 +35,10 @@
     "scheduled": "Scheduled"
   },
   "meta": {
-    "main_title": "{airport}{showCity, select, yes {, {city}} other {}} ({iata}) Flight Board | Live Arrivals & Departures",
+    "main_title": "{airport}{showCity, select, yes {, {city}} other {}} ({iata}) Live Arrivals & Departures",
     "main_description": "Live flight board at {airport} ({iata}) today: real-time arrivals and departures with flight status, times, delays and gates.",
-    "arrivals_title": "{airport}{showCity, select, yes {, {city}} other {}} ({iata}) Arrivals | Live Flight Board",
-    "departures_title": "{airport}{showCity, select, yes {, {city}} other {}} ({iata}) Departures | Live Flight Board",
+    "arrivals_title": "{airport}{showCity, select, yes {, {city}} other {}} ({iata}) Live Arrivals",
+    "departures_title": "{airport}{showCity, select, yes {, {city}} other {}} ({iata}) Live Departures",
     "arrivals_description": "Live arrivals board at {airport} ({iata}) today: real-time arrivals and departures, flight status, times, delays and gates.",
     "departures_description": "Live departures board at {airport} ({iata}) today: real-time departures and arrivals, flight status, times, delays and gates."
   },
