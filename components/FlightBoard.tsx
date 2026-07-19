@@ -756,7 +756,15 @@ export function FlightBoard({ airport, locale, defaultMode = 'departures', displ
       {!loading && flights.length > 0 && (
         <div style={{ padding: '0 16px 14px', maxWidth: 960, margin: '0 auto' }}>
           <span style={{ fontSize: 13, color: C.secondary }}>
-            <span aria-hidden="true">{mode === 'departures' ? '✈' : '🛬'}</span> {(() => { const n = flights === initialFlights && boardTotal != null ? boardTotal : flights.length; return mode === 'departures' ? t('departures_today', { count: n }) : t('arrivals_today', { count: n }); })()}
+            {/* Says how many rows are on THIS board — nothing more. The key used to be
+                departures_today ("{count} departures today"), but the number is capped at
+                MAX_FLIGHTS, so 273 airports all printed exactly "80 departures today" while
+                their own FAQ said "About 543 scheduled departures were counted". One page,
+                two different answers to the same question, on the busiest pages we have.
+                Passing the total down to the subpages would only have made all three agree
+                on a fabricated figure, which for an answer engine is worse than an obvious
+                contradiction. The measured daily figure lives in the FAQ, where it is real. */}
+            <span aria-hidden="true">{mode === 'departures' ? '✈' : '🛬'}</span> {(() => { const n = flights === initialFlights && boardTotal != null ? boardTotal : flights.length; return mode === 'departures' ? t('departures_on_board', { count: n }) : t('arrivals_on_board', { count: n }); })()}
           </span>
         </div>
       )}
