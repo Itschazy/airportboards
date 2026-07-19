@@ -47,6 +47,12 @@ function entry(
 // lib/top-routes.ts), and a fully static sitemap would freeze whatever was true at build.
 export const revalidate = 86400;
 
+// Only the ids generateSitemaps() returns may be rendered. Without this, /sitemap/999.xml and
+// /sitemap/abc.xml answered 200 with an empty urlset, and /sitemap/0.5.xml answered 200 with
+// 1,038 <loc> from a slice straddling two children — each probed id minting a fresh ISR entry
+// on disk with revalidate=86400, on a VDS that has run out of disk before.
+export const dynamicParams = false;
+
 export async function generateSitemaps() {
   return Array.from({ length: getSitemapCount() }, (_, id) => ({ id }));
 }
