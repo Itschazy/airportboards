@@ -26,7 +26,13 @@ export function legalMetadata(kind: LegalKind) {
       title: `${doc.title} — AirportsBoard`,
       description,
       alternates: { canonical: `${BASE}/${locale}/${kind}`, languages },
-      robots: { index: true, follow: true },
+      // The ten locales these documents are NOT written in serve the English text verbatim.
+      // Indexing them publishes ten duplicates of the same document under different language
+      // URLs — and each one lacks a self-reference in its own hreflang cluster, because the
+      // cluster above only names en and ru. noindex/follow states the truth: real page, real
+      // content, not a translation. Reachability is untouched, so an AdSense reviewer (and
+      // anyone else) still gets there from the footer in any language.
+      robots: { index: (LEGAL_LOCALES as readonly string[]).includes(locale), follow: true },
     };
   };
 }

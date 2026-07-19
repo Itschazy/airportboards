@@ -4,6 +4,7 @@ import { getEventSlugs } from '@/lib/event-content';
 import { getMegaIataCodes } from '@/lib/warm';
 import { getTopRoutes } from '@/lib/top-routes';
 import { locales } from '@/lib/i18n';
+import { LEGAL_LOCALES } from '@/lib/legal-content';
 
 const BASE = 'https://airportsboard.live';
 const LETTERS = 'abcdefghijklmnopqrstuvwxyz'.split('');
@@ -25,9 +26,19 @@ type Freq = MetadataRoute.Sitemap[number]['changeFrequency'];
 // No `lastModified`: it was `new Date()` (build time) on every URL, so each deploy
 // claimed the entire site changed "just now" — a signal engines learn to ignore.
 // Omitting it is better than a lie.
-function entry(path: string, changeFrequency: Freq, priority: number): MetadataRoute.Sitemap[number] {
+function entry(
+  path: string,
+  changeFrequency: Freq,
+  priority: number,
+  // Which languages this page genuinely exists in. Defaults to all of them, but the legal
+  // documents are written only in en and ru — components/legal-page.tsx already advertises
+  // just those two, while this helper was claiming all twelve. The sitemap and the page were
+  // therefore contradicting each other about the same URLs, in hreflang, which is precisely
+  // where an engine checks before trusting either.
+  langs: readonly string[] = locales,
+): MetadataRoute.Sitemap[number] {
   const languages: Record<string, string> = {};
-  for (const loc of locales) languages[loc] = `${BASE}/${loc}${path}`;
+  for (const loc of langs) languages[loc] = `${BASE}/${loc}${path}`;
   languages['x-default'] = `${BASE}/en${path}`;
   return { url: `${BASE}/en${path}`, changeFrequency, priority, alternates: { languages } };
 }
@@ -54,7 +65,7 @@ export default function sitemap({ id }: { id: number | string }): MetadataRoute.
     entries.push(entry('/airports', 'weekly', 0.7));     // countries index
     // Legal / info pages — low priority but crawlable (AdSense reviewers & Googlebot
     // must be able to reach the Privacy Policy et al.).
-    for (const p of ['/privacy', '/terms', '/about', '/contact']) entries.push(entry(p, 'yearly', 0.3));
+    for (const p of ['/privacy', '/terms', '/about', '/contact']) entries.push(entry(p, 'yearly', 0.3, LEGAL_LOCALES));
     for (const L of LETTERS) entries.push(entry(`/az/${L}`, 'weekly', 0.4));
     for (const c of getCountries()) entries.push(entry(`/airports/${c.slug}`, 'weekly', 0.6));
     for (const c of getCities()) if (c.count > 1) entries.push(entry(`/city/${c.slug}`, 'weekly', 0.6));
