@@ -2,7 +2,7 @@ import type { MetadataRoute } from 'next';
 import { getAllIataCodes, AIRPORTS_PER_SITEMAP, getSitemapCount, getCountries, getStaticIataCodes, getCities } from '@/lib/airports';
 import { getEventSlugs } from '@/lib/event-content';
 import { getMegaIataCodes } from '@/lib/warm';
-import topRoutes from '@/data/top-routes.json';
+import { getTopRoutes } from '@/lib/top-routes';
 import { locales } from '@/lib/i18n';
 
 const BASE = 'https://airportsboard.live';
@@ -31,6 +31,10 @@ function entry(path: string, changeFrequency: Freq, priority: number): MetadataR
   languages['x-default'] = `${BASE}/en${path}`;
   return { url: `${BASE}/en${path}`, changeFrequency, priority, alternates: { languages } };
 }
+
+// Regenerate daily: the route list is refreshed in the background by the warmer (see
+// lib/top-routes.ts), and a fully static sitemap would freeze whatever was true at build.
+export const revalidate = 86400;
 
 export async function generateSitemaps() {
   return Array.from({ length: getSitemapCount() }, (_, id) => ({ id }));
@@ -65,7 +69,7 @@ export default function sitemap({ id }: { id: number | string }): MetadataRoute.
     // pointing the crawler at a noindexed page. "Flights X to Y today" is the highest-intent
     // query family the site can answer.
     const seenPair = new Set<string>();
-    for (const [origin, pairs] of Object.entries(topRoutes.top as Record<string, string[]>)) {
+    for (const [origin, pairs] of Object.entries(getTopRoutes())) {
       void origin;
       for (const pair of pairs) {
         if (seenPair.has(pair)) continue;

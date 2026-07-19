@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { warmHubs } from '@/lib/flights';
 import { usage } from '@/lib/flightStore';
+import { harvestFromStore } from '@/lib/top-routes';
 
 export const dynamic = 'force-dynamic';
 export const maxDuration = 60;
@@ -22,7 +23,12 @@ export async function GET(req: NextRequest) {
   const authed = local || (!!token && req.nextUrl.searchParams.get('token') === token);
   if (!authed) return NextResponse.json({ error: 'forbidden' }, { status: 403 });
   const result = await warmHubs();
+  // Right after a warm cycle the boards are as fresh as they ever get, so this is the best
+  // moment to take a route snapshot. It reads the in-process store — no HTTP, no airlabs
+  // call, no quota — and self-throttles to roughly once a day, which is why it can ride the
+  // existing 2-hourly cron instead of needing its own entry in the VDS crontab.
+  const routes = harvestFromStore();
   // Report what the tiered warmer actually did, so a look at the cron log answers "is the
   // long tail being covered, or is the budget all going to hubs?" without a deploy.
-  return NextResponse.json({ ok: true, ...result, ...usage() }, { headers: { 'Cache-Control': 'no-store' } });
+  return NextResponse.json({ ok: true, ...result, routes, ...usage() }, { headers: { 'Cache-Control': 'no-store' } });
 }
