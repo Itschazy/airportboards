@@ -6,6 +6,8 @@ import { getAirportName } from '@/lib/airport-names';
 import { getCityName, getCountryName } from '@/lib/places';
 import { getBoard, getBoardFetchedAt } from '@/lib/flights';
 import { FlightBoard } from '@/components/FlightBoard';
+import { Breadcrumb } from '@/components/Breadcrumb';
+import { airportNodeId } from '@/lib/airport-sameas';
 import { EventBanner } from '@/components/EventBanner';
 import { locales } from '@/lib/i18n';
 
@@ -77,21 +79,24 @@ export default async function DeparturesPage({ params }: Props) {
   const h1 = t('departures_title', { airport: name, iata: airport.iata, city, showCity });
   const desc = t('departures_description', { airport: name, iata: airport.iata, city });
 
+  // Computed once and used twice: as the BreadcrumbList below and as the visible nav that
+  // makes that list true. These pages previously had no link to the parent airport, the city,
+  // the country or the sibling board, so the schema described a hierarchy present nowhere in
+  // the HTML and the page was a dead end for anything following links.
+  const countryInfo = getCountries().find(c => c.country === airport.country);
+  const cityInfo = getCities().find(c => c.city === airport.city && c.country === airport.country);
+  const trail: { name: string; item: string }[] = [{ name: tNav('home'), item: `${BASE}/${locale}` }];
+  if (countryInfo) trail.push({ name: country, item: `${BASE}/${locale}/airports/${countryInfo.slug}` });
+  if (cityInfo && cityInfo.count > 1) trail.push({ name: city, item: `${BASE}/${locale}/city/${cityInfo.slug}` });
+  trail.push({ name: `${name} (${airport.iata})`, item: `${BASE}/${locale}/airport/${airport.iata}` });
+  trail.push({ name: tNav('departures'), item: canonical });
+
   const jsonLd = [
     {
       '@context': 'https://schema.org',
       '@type': 'BreadcrumbList',
       // Home → Country → City (if it has an indexed page) → Airport → Departures.
-      itemListElement: (() => {
-        const countryInfo = getCountries().find(c => c.country === airport.country);
-        const cityInfo = getCities().find(c => c.city === airport.city && c.country === airport.country);
-        const trail: { name: string; item: string }[] = [{ name: tNav('home'), item: `${BASE}/${locale}` }];
-        if (countryInfo) trail.push({ name: country, item: `${BASE}/${locale}/airports/${countryInfo.slug}` });
-        if (cityInfo && cityInfo.count > 1) trail.push({ name: city, item: `${BASE}/${locale}/city/${cityInfo.slug}` });
-        trail.push({ name: `${name} (${airport.iata})`, item: `${BASE}/${locale}/airport/${airport.iata}` });
-        trail.push({ name: tNav('departures'), item: canonical });
-        return trail.map((c, i) => ({ '@type': 'ListItem', position: i + 1, name: c.name, item: c.item }));
-      })(),
+      itemListElement: trail.map((c, i) => ({ '@type': 'ListItem', position: i + 1, name: c.name, item: c.item })),
     },
     {
       '@context': 'https://schema.org',
@@ -100,6 +105,8 @@ export default async function DeparturesPage({ params }: Props) {
       description: desc,
       url: canonical,
       inLanguage: locale,
+      // Tie the subpage to the airport's stable node instead of floating free in the graph.
+      mainEntity: { '@id': airportNodeId(BASE, airport.iata) },
     },
   ];
 
@@ -108,6 +115,7 @@ export default async function DeparturesPage({ params }: Props) {
       {jsonLd.map((schema, i) => (
         <script key={i} type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
       ))}
+      <Breadcrumb trail={trail} extra={{ href: `/${locale}/airport/${airport.iata}/arrivals`, label: tNav('arrivals') }} />
       {/* The visible <h1> now lives in FlightBoard's airport header (single semantic h1). */}
       <FlightBoard airport={airport} locale={locale} defaultMode="departures" displayName={getAirportName(airport.iata, locale, airport.name)} initialFlights={initialFlights.slice(0, 40)} initialFetchedAt={getBoardFetchedAt(airport.iata, 'departures')} />
       <div style={{ maxWidth: 720, margin: '0 auto', padding: '0 24px 8px' }}>
