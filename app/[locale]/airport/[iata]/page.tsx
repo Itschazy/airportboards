@@ -78,7 +78,15 @@ async function airportDescription(opts: {
   // The snippet and the page now agree per-airport instead of the copy being watered down for
   // everyone — gates are genuinely delivered on 61% of rows where a board exists.
   // Costs nothing: getBoardFetchedAt is a store read, never an airlabs call.
-  if (!getBoardFetchedAt(airport.iata, 'departures')) {
+  // The condition is "are there rows to show", the same question the body asks — not "was
+  // this ever fetched". Those two can disagree: a warm cycle that returns an empty response
+  // sets a timestamp with no rows, and the page would then say the board is unavailable while
+  // the snippet above it promised real-time departures. Two conditions that can contradict
+  // each other is the exact defect class this whole fix is about, so there is only one.
+  // getBoard with live:false is a store read; it never contacts airlabs.
+  let boardRows: Awaited<ReturnType<typeof getBoard>> = [];
+  try { boardRows = await getBoard(airport.iata, 'departures', locale); } catch {}
+  if (!boardRows.length) {
     const tHome = await getTranslations({ locale, namespace: 'home' });
     const tUi = await getTranslations({ locale, namespace: 'ui' });
     return {
