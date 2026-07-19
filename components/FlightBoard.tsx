@@ -277,7 +277,10 @@ function BottomSheet({ flight, mode, onClose, tz, locale, updLabel, originIata, 
     type Hero = { label: string; main: string; sub?: string; subStrike?: boolean; bottom?: string; icon?: string; medium?: boolean };
     let hero: Hero;
     if (status === 'departed' || status === 'arrived') {
-      hero = { label: t('flight_departed'), main: flight.scheduled, sub: t('actual_dep') };
+      // dispTime, not scheduled: with an actual time present the hero showed the SCHEDULED
+      // time under the caption "actual departure", while the real actual sat in the grid —
+      // and the dedup gate below, comparing against dispTime, let the time card render too.
+      hero = { label: t('flight_departed'), main: dispTime, sub: t('actual_dep') };
     } else if (status === 'baggage') {
       hero = { label: t('st_baggage'), main: flight.baggage || dispTime };
     } else if (status === 'cancelled') {
@@ -287,7 +290,8 @@ function BottomSheet({ flight, mode, onClose, tz, locale, updLabel, originIata, 
     } else if (status === 'finalcall') {
       hero = { label: t('h_final_label'), main: t('h_final_main'), sub: t('gate_closes', { m: Math.max(1, mins ?? 0) }), bottom: dispTime, icon: 'bell', medium: true };
     } else if (status === 'delayed') {
-      hero = { label: t('h_delay_label', { dur: fmtDur(flight.delay && flight.delay > 0 ? flight.delay : Math.max(0, mins ?? 0)) }), main: dispTime, sub: t('was', { time: flight.scheduled }), subStrike: true, icon: 'clock' };
+      // The struck "was HH:MM" line only makes sense when the displayed time differs from it.
+      hero = { label: t('h_delay_label', { dur: fmtDur(flight.delay && flight.delay > 0 ? flight.delay : Math.max(0, mins ?? 0)) }), main: dispTime, sub: flight.actual && flight.actual !== flight.scheduled ? t('was', { time: flight.scheduled }) : undefined, subStrike: true, icon: 'clock' };
     } else {
       hero = { label: isDep ? t('departs_in') : t('arrives_in'), main: mins != null && mins > 0 ? fmtDur(mins) : t('now'), sub: t('on_schedule', { time: flight.scheduled }), icon: 'clock' };
     }
@@ -305,7 +309,7 @@ function BottomSheet({ flight, mode, onClose, tz, locale, updLabel, originIata, 
     });
     if (flight.gate)     blocks.push({ label: t('gate'), value: flight.gate });
     if (flight.terminal) blocks.push({ label: t('terminal'), value: flight.terminal });
-    if (flight.baggage)  blocks.push({ label: t('baggage'), value: flight.baggage, valueColor: C.green });
+    if (flight.baggage && status !== 'baggage') blocks.push({ label: t('baggage'), value: flight.baggage, valueColor: C.green });
     if (flight.aircraft) blocks.push({ label: t('aircraft_type'), value: flight.aircraft });
 
     // ── Route strip: origin → destination, so the sheet carries its own context ──
@@ -696,7 +700,7 @@ export function FlightBoard({ airport, locale, defaultMode = 'departures', displ
               className="press"
               onClick={() => setSearchOpen(true)}
               style={{
-                width: 46, height: 46, flexShrink: 0, display: 'flex', alignItems: 'center', justifyContent: 'center',
+                width: 48, height: 48, flexShrink: 0, display: 'flex', alignItems: 'center', justifyContent: 'center',
                 background: C.surface, border: `1px solid ${C.border}`, borderRadius: 13, cursor: 'pointer',
               }}
             >
@@ -832,7 +836,7 @@ export function FlightBoard({ airport, locale, defaultMode = 'departures', displ
                       {label}
                     </div>
                   </div>
-                  <svg width="8" height="14" viewBox="0 0 8 14" fill="none" aria-hidden="true" style={{ flexShrink: 0 }}>
+                  <svg width="8" height="14" viewBox="0 0 8 14" fill="none" aria-hidden="true" className="route-arrow" style={{ flexShrink: 0 }}>
                     <path d="M1 1L7 7L1 13" stroke="rgba(255,255,255,0.22)" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" />
                   </svg>
                 </div>

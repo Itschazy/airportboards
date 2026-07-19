@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from 'react';
 import { useTranslations } from 'next-intl';
+import { CONSENT_KEY } from '@/components/Analytics';
 
 // A quiet "add to Home Screen" card.
 //
@@ -40,6 +41,12 @@ export function InstallPrompt() {
       const standalone = window.matchMedia('(display-mode: standalone)').matches
         || (navigator as unknown as { standalone?: boolean }).standalone === true;
       if (standalone || localStorage.getItem(K_DONE)) return;
+      // Consent comes first. Both cards live in the same bottom slot and this one has the
+      // higher z-index, so until the visitor has answered the cookie banner the install card
+      // would sit ON TOP of the Accept/Decline buttons — an install prompt that blocks a GDPR
+      // choice. If consent has not been decided yet, skip this visit entirely; the card's own
+      // visit gating means there is always a later one.
+      if (!localStorage.getItem(CONSENT_KEY)) return;
       const dismissed = Number(localStorage.getItem(K_DISMISSED) || 0);
       if (dismissed && Date.now() - dismissed < DISMISS_DAYS * 864e5) return;
 
@@ -50,7 +57,9 @@ export function InstallPrompt() {
       }
       if (Number(localStorage.getItem(K_VISITS) || 0) < 2) return;
 
-      const isIos = /iphone|ipad|ipod/i.test(navigator.userAgent);
+      // iPadOS 13+ reports itself as macOS; the touch-points check is the documented tell.
+      const isIos = /iphone|ipad|ipod/i.test(navigator.userAgent)
+        || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
       let timer: ReturnType<typeof setTimeout> | null = null;
       const arm = () => { if (!timer) timer = setTimeout(() => setShow(true), 4000); };
 
@@ -129,7 +138,7 @@ export function InstallPrompt() {
             background: '#0A84FF', color: '#FFFFFF', fontSize: 13, fontWeight: 650,
           }}>{t('pwa_install')}</button>
         )}
-        <button type="button" onClick={dismiss} aria-label="✕" style={{
+        <button type="button" onClick={dismiss} aria-label={t('pwa_got_it')} style={{
           flexShrink: 0, width: 28, height: 28, borderRadius: '50%', border: 'none', cursor: 'pointer',
           background: 'transparent', color: '#6A6A6E', fontSize: 15, lineHeight: 1, padding: 0,
         }}>✕</button>
