@@ -17,11 +17,38 @@ import type { AirlabsFlight } from '@/lib/flights';
 
 const STORE_PATH = process.env.FLIGHT_STORE_PATH || path.join(os.tmpdir(), 'airportsboard-flights.json');
 const TTL_MS = (Number(process.env.FLIGHT_TTL_SEC) || 600) * 1000;       // 10 min freshness window
-// Hard backstop, deliberately just under the plan. Stays at the 100k figure until the larger
-// plan is actually purchased — defaulting to the bigger number first would let the warmer
-// sail past the real limit. After upgrading, set AIRLABS_MONTHLY_CAP=195000 on the VDS; the
-// warmer re-paces itself from it (130k warming / 70k visitors at the default 35% reserve).
-const MONTHLY_CAP = Number(process.env.AIRLABS_MONTHLY_CAP) || 95000;
+// Hard backstop, deliberately just under the plan.
+//
+// This used to be the whole story, and it was wrong: the operator set
+// AIRLABS_MONTHLY_CAP=195000 in anticipation of a larger plan, but airlabs still reports
+// limits_by_month=100000, so the warmer was pacing to spend ~127k against a real 100k wall.
+// It would have run the plan dry a few days before month end and taken every board on the
+// site down with it — silently, because nothing in our own accounting knows the real limit.
+//
+// So the env var is now only a ceiling we ask for, never a promise. airlabs echoes the true
+// figure in `request.key.limits_by_month` on EVERY response, and noteProviderLimit() records
+// it; the effective cap is the lower of the two. Upgrading the plan therefore needs no code
+// change and no env change — the first response after the upgrade raises the cap by itself.
+const CONFIGURED_CAP = Number(process.env.AIRLABS_MONTHLY_CAP) || 95000;
+
+/** The lower of what we were configured to spend and what the provider actually allows. */
+export function monthlyCap(): number {
+  const observed = db().providerLimit;
+  return observed && observed > 0 ? Math.min(CONFIGURED_CAP, observed) : CONFIGURED_CAP;
+}
+
+/**
+ * Record the monthly limit airlabs reports for our key. Persisted with the store so a restart
+ * does not briefly forget it and let one over-generous warm cycle through.
+ */
+export function noteProviderLimit(limit: unknown): void {
+  const n = Number(limit);
+  if (!Number.isFinite(n) || n <= 0) return;
+  const s = db();
+  if (s.providerLimit === n) return;
+  s.providerLimit = n;
+  persist();
+}
 // Two entries (departures + arrivals) per warmed airport. The tiered warmer covers every
 // airport that has scheduled service — ~2,000 of the 6,072 — so the ceiling has to clear
 // ~4,100 comfortably, or eviction would start throwing away boards we just paid for.
@@ -34,6 +61,8 @@ export type SpendKind = 'warm' | 'human';
 type Store = {
   month: string; count: number; entries: Record<string, Entry>;
   byKind?: Record<SpendKind, number>;
+  /** monthly limit airlabs reports for our key; see noteProviderLimit(). */
+  providerLimit?: number;
 };
 
 const monthKey = () => new Date().toISOString().slice(0, 7); // YYYY-MM (calendar month)
@@ -81,7 +110,7 @@ export function put(key: string, data: AirlabsFlight[]) {
   persist();
 }
 /** True while we are still under the monthly airlabs budget. */
-export function canSpend(): boolean { return db().count < MONTHLY_CAP; }
+export function canSpend(): boolean { return db().count < monthlyCap(); }
 export function spend(kind: SpendKind = 'human') {
   const s = db();
   s.count++;
@@ -93,8 +122,9 @@ export function usage() {
   const s = db();
   const byKind = s.byKind ?? { warm: 0, human: 0 };
   return {
-    month: s.month, count: s.count, cap: MONTHLY_CAP,
-    remaining: Math.max(0, MONTHLY_CAP - s.count),
+    month: s.month, count: s.count, cap: monthlyCap(),
+    configuredCap: CONFIGURED_CAP, providerLimit: s.providerLimit ?? null,
+    remaining: Math.max(0, monthlyCap() - s.count),
     warm: byKind.warm, human: byKind.human,
   };
 }

@@ -1,7 +1,7 @@
 import airports from '@/data/airports.json';
 import airlines from '@/data/airlines.json';
 import { getCityName } from '@/lib/places';
-import { getFresh, getStale, getStaleTs, put, canSpend, spend, type SpendKind } from '@/lib/flightStore';
+import { getFresh, getStale, getStaleTs, put, canSpend, spend, noteProviderLimit, type SpendKind } from '@/lib/flightStore';
 import { getActiveEventAirports } from '@/lib/event-content';
 import { dueAirports, tickBudget } from '@/lib/warm';
 
@@ -147,7 +147,11 @@ export async function fetchRaw(
 
 async function doFetch(query: string, direction: 'departures' | 'arrivals', cacheKey: string, kind: SpendKind): Promise<AirlabsFlight[]> {
   const url = `https://airlabs.co/api/v9/schedules?${query}&api_key=${AIRLABS_KEY}`;
-  let json: { response?: AirlabsFlight[]; error?: { message?: string } };
+  let json: {
+    response?: AirlabsFlight[];
+    error?: { message?: string };
+    request?: { key?: { limits_by_month?: number } };
+  };
   try {
     const res = await fetch(url, { cache: 'no-store', signal: AbortSignal.timeout(6000) });
     spend(kind); // any answered airlabs request counts against the monthly budget
@@ -156,6 +160,11 @@ async function doFetch(query: string, direction: 'departures' | 'arrivals', cach
   } catch {
     return getStale(cacheKey) ?? []; // network/timeout — keep serving last good data
   }
+  // Every response echoes the real monthly allowance for our key. Recording it lets the
+  // budget clamp itself to what the plan actually is, instead of trusting an env var that
+  // was set in anticipation of an upgrade that had not landed. Done before the validity
+  // checks below on purpose: an error response still carries an accurate limit.
+  noteProviderLimit(json?.request?.key?.limits_by_month);
   if (!json || json.error || !Array.isArray(json.response)) return getStale(cacheKey) ?? [];
   let raw = (json.response as AirlabsFlight[]).filter(f => !f.cs_flight_iata);
   const now = Date.now() / 1000;
