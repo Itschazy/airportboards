@@ -968,7 +968,7 @@
     "ko": "미얀마(구 명: 버마)",
     "ar": "ميانمار (بورما)",
     "hi": "म्यांमार (पूर्व नाम: बर्मा)",
-    "de": "Myanmar (früher: Birma)",
+    "de": "Myanmar",
     "fr": "Myanmar (anciennement Birmanie)",
     "es": "Myanmar (antes: Birmania)",
     "it": "Myanmar (ex Birmania)",
@@ -1114,7 +1114,7 @@
     "de": "Wake Island",
     "fr": "île Wake",
     "es": "isla Wake",
-    "it": "isola Wake",
+    "it": "Isola Wake",
     "tr": "Wake Adası"
   },
   "Ecuador": {
@@ -1631,7 +1631,7 @@
     "ko": "버뮤다 제도",
     "ar": "جزر برمودا",
     "hi": "बर्मूडा द्वीपसमूह",
-    "de": "Bermuda (Bermuda-Inseln)",
+    "de": "Bermuda",
     "fr": "Bermudes",
     "es": "Bermudas",
     "it": "Bermuda (Isole Bermuda)",
@@ -2333,7 +2333,7 @@
     "ko": "마요트(프랑스령)",
     "ar": "مايوت (إقليم فرنسي)",
     "hi": "मायोट (फ़्रांसीसी क्षेत्र)",
-    "de": "Mayotte ( französisches Übersee-Département)",
+    "de": "Mayotte",
     "fr": "Mayotte",
     "es": "Mayotte (departamento de ultramar francés)",
     "it": "Mayotte (territorio francese d'oltremare)",
@@ -2661,7 +2661,7 @@
     "de": "Midwayinseln",
     "fr": "îles Midway",
     "es": "islas Midway",
-    "it": "isole Midway",
+    "it": "Isole Midway",
     "tr": "Midway Adaları"
   },
   "Montserrat": {
