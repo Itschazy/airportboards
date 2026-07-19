@@ -40,10 +40,24 @@ const airports = JSON.parse(fs.readFileSync('data/airports.json', 'utf8'));
 const prev = fs.existsSync(OUT) ? JSON.parse(fs.readFileSync(OUT, 'utf8')) : { airports: {} };
 const seen = prev.airports || {};
 
+// --only <file>: re-probe just the codes listed in a JSON file ({codes:[...]} or a bare array).
+// Added for the OurAirports cross-check: 1,580 airports our single probe recorded as zero are
+// contradicted by an independent source, and because tierOf(0) is null the warmer never touches
+// them — so their boards can never fill and the pages sit in "data not available" forever. One
+// deliberate re-probe resolves that: whichever of them really do have flights get a measured
+// level and enter the normal tiers, and a second zero is the N>=2 evidence the negative claim
+// needs before anyone considers publishing it.
+const ONLY = (() => {
+  const i = process.argv.indexOf('--only');
+  if (i === -1) return null;
+  const raw = JSON.parse(fs.readFileSync(process.argv[i + 1], 'utf8'));
+  return new Set(Array.isArray(raw) ? raw : raw.codes || []);
+})();
+
 // Closed airports are never going to have flights; don't spend a request finding that out.
 const todo = airports
   .filter(a => a.iata && !a.closed)
-  .filter(a => REFRESH || seen[a.iata] === undefined)
+  .filter(a => ONLY ? ONLY.has(a.iata) : (REFRESH || seen[a.iata] === undefined))
   .slice(0, LIMIT);
 
 console.log(`dataset ${airports.length} | already known ${Object.keys(seen).length} | to probe ${todo.length} | budget ${BUDGET}`);
