@@ -10,6 +10,7 @@ import { Breadcrumb } from '@/components/Breadcrumb';
 import { airportNodeId } from '@/lib/airport-sameas';
 import { EventBanner } from '@/components/EventBanner';
 import { locales } from '@/lib/i18n';
+import { showCityFlag } from '@/lib/show-city';
 
 const BASE = 'https://airportsboard.live';
 
@@ -31,7 +32,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const name = getAirportName(airport.iata, locale, airport.name);
   const cityName = getCityName(airport.city, locale);
   // Append the city only when the airport's localized name doesn't already contain it.
-  const showCity = name.toLowerCase().includes(cityName.toLowerCase()) ? 'no' : 'yes';
+  const showCity = showCityFlag(name, cityName, airport.city);
 
   const title = t('arrivals_title', { airport: name, iata: airport.iata, city: cityName, showCity });
   const description = t('arrivals_description', { airport: name, iata: airport.iata, city: cityName });
@@ -75,7 +76,7 @@ export default async function ArrivalsPage({ params }: Props) {
   const name = getAirportName(airport.iata, locale, airport.name);
   const city = getCityName(airport.city, locale);
   const country = getCountryName(airport.country, locale);
-  const showCity = name.toLowerCase().includes(city.toLowerCase()) ? 'no' : 'yes';
+  const showCity = showCityFlag(name, city, airport.city);
   const h1 = t('arrivals_title', { airport: name, iata: airport.iata, city, showCity });
   const desc = t('arrivals_description', { airport: name, iata: airport.iata, city });
 

@@ -1,8 +1,9 @@
 import type { Metadata } from 'next';
 import { getTranslations , setRequestLocale } from 'next-intl/server';
-import { notFound } from 'next/navigation';
+import { notFound, permanentRedirect } from 'next/navigation';
 import Link from 'next/link';
 import { getCountryBySlug, getAirportsByCountry, getCountries } from '@/lib/airports';
+import { COUNTRY_SLUG_ALIASES } from '@/lib/country-slug-aliases';
 import { getAirportName } from '@/lib/airport-names';
 import { getCityName, getCountryName } from '@/lib/places';
 import { locales } from '@/lib/i18n';
@@ -68,7 +69,13 @@ export default async function CountryPage({ params }: Props) {
   const { locale, country } = await params;
   setRequestLocale(locale);
   const c = getCountryBySlug(country);
-  if (!c) notFound();
+  // A renamed country moves its own URL. Redirect rather than 404, so the old page keeps its
+  // value — /en/airports/burma answered 200 and sat in the sitemap right up until the rename.
+  if (!c) {
+    const successor = COUNTRY_SLUG_ALIASES[country.toLowerCase()];
+    if (successor) permanentRedirect(`/${locale}/airports/${successor}`);
+    notFound();
+  }
   const t = await getTranslations({ locale, namespace: 'home' });
   const airports = getAirportsByCountry(country);
   const countryName = getCountryName(c.country, locale);
