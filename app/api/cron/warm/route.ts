@@ -2,7 +2,7 @@ import { NextRequest, NextResponse } from 'next/server';
 import { warmHubs } from '@/lib/flights';
 import { usage } from '@/lib/flightStore';
 import { harvestFromStore } from '@/lib/top-routes';
-import { isOperatorRequest } from '@/lib/api-auth';
+import { isCronRequest } from '@/lib/api-auth';
 
 export const dynamic = 'force-dynamic';
 export const maxDuration = 60;
@@ -11,9 +11,10 @@ export const maxDuration = 60;
 // can't be hammered to spend quota. Idempotent within the store TTL (warm hubs are no-ops).
 // Example cron (every 2h):  curl -s "https://airportsboard.live/api/cron/warm?token=XXX"
 export async function GET(req: NextRequest) {
-  // Operator-only (see lib/api-auth.ts). Idempotent within the store TTL and hard-capped by
-  // the monthly budget either way, so this gate is defence in depth rather than the guarantee.
-  if (!isOperatorRequest(req)) return NextResponse.json({ error: 'forbidden' }, { status: 403 });
+  // Deliberately the LOOSER check (see lib/api-auth.ts): tightening it risks silently killing
+  // all warming if the VDS cron calls the public URL without a token. Idempotent within the
+  // store TTL and hard-capped by the monthly budget, so the gate is defence in depth anyway.
+  if (!isCronRequest(req)) return NextResponse.json({ error: 'forbidden' }, { status: 403 });
   const result = await warmHubs();
   // Right after a warm cycle the boards are as fresh as they ever get, so this is the best
   // moment to take a route snapshot. It reads the in-process store — no HTTP, no airlabs
