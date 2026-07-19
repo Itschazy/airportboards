@@ -273,6 +273,12 @@ export default async function AirportPage({ params }: Props) {
             <>
               {' '}
               {tHome.rich('ns_nearest', {
+                // The message also interpolates {name}/{iata} for THIS airport. Omitting them
+                // made next-intl bail out and print the literal key path "home.ns_nearest" into
+                // the page body on ~3,400 no-service airports across all 12 locales — silently,
+                // because a missing ICU argument is not a build error.
+                name,
+                iata: airport.iata,
                 airport: `${getAirportName(nearestWithFlights.iata, locale, nearestWithFlights.name)} (${nearestWithFlights.iata})`,
                 km: String(nearestWithFlights.km),
                 link: (chunks) => (

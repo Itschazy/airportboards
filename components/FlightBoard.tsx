@@ -481,7 +481,12 @@ export function FlightBoard({ airport, locale, defaultMode = 'departures', displ
   const [loading, setLoading]     = useState(!hasInitial);
   const [time, setTime]           = useState('');
   const [lastUpdated, setUpdated] = useState<Date | null>(initialFetchedAt ? new Date(initialFetchedAt) : null);
-  const [updLabel, setUpdLabel]   = useState('');
+  // Seeded from the SSR timestamp, not left empty. It used to start as '' and only ever be
+  // filled by the client fetch, so server-rendered HTML always showed the em-dash placeholder —
+  // while the FAQ, the footer and /llms.txt all promise that every board states the age of its
+  // data. Crawlers and AI agents, which read exactly that HTML, saw the promise and not the fact.
+  const [updLabel, setUpdLabel]   = useState(() =>
+    initialFetchedAt ? relTime(new Date(initialFetchedAt), t) : '');
   const [selected, setSelected]   = useState<Flight | null>(null);
   const [isLive, setIsLive]       = useState(!!initialFetchedAt && Date.now() - initialFetchedAt < 90_000);
   const [showAll, setShowAll]     = useState(false);
@@ -626,7 +631,10 @@ export function FlightBoard({ airport, locale, defaultMode = 'departures', displ
               background: isLive ? C.green : C.gray,
             }}
           />
-          <span style={{ fontSize: 12, color: C.secondary, opacity: 0.85 }}>{updLabel || '—'}</span>
+          {/* The label is relative to "now", so the ISR-cached server value and the client's
+              first paint legitimately differ by a minute; that divergence is the correct
+              behaviour, not a bug to fix by dropping the SSR value. */}
+          <span suppressHydrationWarning style={{ fontSize: 12, color: C.secondary, opacity: 0.85 }}>{updLabel || '—'}</span>
         </div>}
       </div>
 
@@ -777,7 +785,10 @@ export function FlightBoard({ airport, locale, defaultMode = 'departures', displ
               let delay = (ah * 60 + am) - (sh * 60 + sm);
               if (delay < -720) delay += 1440;   // delayed across midnight
               const delayM = f.delay ?? delay;
-              return delayM > 0 ? `${t('st_delayed')} ${delayM}m` : t('st_delayed');
+              // 'm' was a bare literal here, so Japanese, Korean, Chinese, Arabic, Hindi and
+              // Russian boards all rendered "遅延 125m" / "Задержан 125m". The localised
+              // ui.delayed_by exists in every catalogue and is already used elsewhere.
+              return delayM > 0 ? t('delayed_by', { m: delayM }) : t('st_delayed');
             }
             return t(`st_${f.status}`);
           })();

@@ -197,7 +197,7 @@
     "boarding_in": "将在 {time} 登机",
     "delayed_label": "延误",
     "dur_h": "h",
-    "dur_m": "m",
+    "dur_m": "分钟",
     "h_board_label": "登机中",
     "h_board_main": "正在登机",
     "gate_closes": "登机口将在 {m} 分钟后关闭",

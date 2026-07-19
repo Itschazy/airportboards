@@ -68,11 +68,17 @@ export function mapStatus(f: AirlabsFlight, direction: 'departures' | 'arrivals'
     return 'ontime';
   }
   if (f.status === 'active' || f.status === 'landed') return 'departed';
-  if ((f.dep_delayed ?? 0) > 15) return 'delayed';
+  // Mirror of the arrivals guard above: airlabs lags the status field, so a flight whose
+  // (estimated) departure time has passed is gone, whatever `dep_delayed` still says. This
+  // check used to sit BELOW the delay check, which left departed flights showing "Delayed"
+  // indefinitely — JFK was advertising seven of them 1.5 hours after pushback. Worse, the
+  // delay statistics line counts anything not 'departed', so those ghosts inflated both its
+  // numerator and its denominator, corrupting the one original figure the hub pages publish.
   const depTs = f.dep_estimated_ts || f.dep_time_ts;
-  if (depTs) {
-    const minsUntil = (depTs - Date.now() / 1000) / 60;
-    if (minsUntil <= 0)  return 'departed';
+  const minsUntil = depTs ? (depTs - Date.now() / 1000) / 60 : null;
+  if (minsUntil !== null && minsUntil <= 0) return 'departed';
+  if ((f.dep_delayed ?? 0) > 15) return 'delayed';
+  if (minsUntil !== null) {
     if (minsUntil <= 10) return 'finalcall';
     if (minsUntil <= 30) return 'boarding';
   }

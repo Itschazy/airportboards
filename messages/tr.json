@@ -180,7 +180,7 @@
     "arrives_in": "İnişe",
     "final_call": "Son çağrı",
     "go_to_gate": "Kapıya git",
-    "delayed_by": "{m}m gecikme",
+    "delayed_by": "{m} dk gecikme",
     "was": "{time} idi",
     "scheduled_at": "{time} olarak planlandı",
     "new_departure": "Yeni kalkış {time}",
