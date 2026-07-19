@@ -8,6 +8,7 @@ import type { FlightRow } from '@/lib/flights';
 import { MoreInfo, OverviewMetrics, AboutCard, Faq } from '@/components/AirportExtras';
 import { getAirportContentExtended } from '@/lib/airport-content-extended';
 import { serviceLevel, serviceMeasuredOn } from '@/lib/warm';
+import { localizedMeasuredOn } from '@/lib/measured-date';
 import { EventBanner } from '@/components/EventBanner';
 
 const LETTERS = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('');
@@ -123,7 +124,7 @@ export async function AirportBottom({ airport, locale, about, displayName, fligh
     // How busy an airport is, from our own measurement — a question every other flight site
     // answers with marketing copy or not at all.
     ...(deps && deps > 0 && measuredOn
-      ? [{ q: t('faq_deps_q', { name }), a: t('faq_deps_a', { n: deps.toLocaleString(locale), name, iata: airport.iata, date: measuredOn }) }]
+      ? [{ q: t('faq_deps_q', { name }), a: t('faq_deps_a', { n: deps.toLocaleString(locale), name, iata: airport.iata, date: localizedMeasuredOn(measuredOn, locale) }) }]
       : []),
     // "Arrive 3 hours before departure" is advice for a place you can fly from. On the 3,789
     // airfields with no airline service and on closed airports it was being asserted as

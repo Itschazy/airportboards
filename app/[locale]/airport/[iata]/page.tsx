@@ -5,6 +5,7 @@ import Link from 'next/link';
 import airportsAll from '@/data/airports.json';
 import { getAirport, getStaticIataCodes, getCountries, getCities, nearestAirports } from '@/lib/airports';
 import { hasNoService, nearestServiced, serviceLevel, serviceMeasuredOn } from '@/lib/warm';
+import { localizedMeasuredOn } from '@/lib/measured-date';
 import { sameAsFor, airportNodeId } from '@/lib/airport-sameas';
 import { getAirportContent } from '@/lib/airport-content';
 import { getAirportName } from '@/lib/airport-names';
@@ -193,7 +194,7 @@ export default async function AirportPage({ params }: Props) {
         const on = serviceMeasuredOn();
         const line = tUi('board_pending');
         return measured && measured > 0 && on
-          ? `${line} ${tHome('faq_deps_a', { n: String(measured), name, iata: airport.iata, date: on })}`
+          ? `${line} ${tHome('faq_deps_a', { n: String(measured), name, iata: airport.iata, date: localizedMeasuredOn(on, locale) })}`
           : line;
       })()
     : null;

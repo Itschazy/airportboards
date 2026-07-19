@@ -7,6 +7,7 @@ import { getAirportName } from '@/lib/airport-names';
 import { getCityName, getCountryName } from '@/lib/places';
 import { locales } from '@/lib/i18n';
 import { splitByService, serviceMeasuredOn } from '@/lib/warm';
+import { localizedMeasuredOn } from '@/lib/measured-date';
 
 // See app/[locale]/airports/page.tsx — ICU renders a bare placeholder ungrouped.
 const fmt = (n: number, locale: string) => n.toLocaleString(locale);
@@ -45,7 +46,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       // traveller wants and that no atlas publishes — rather than implying all of them
       // have live boards.
       const { served, unserved, unknown } = splitByService(getAirportsByCountry(c.slug));
-      const date = serviceMeasuredOn();
+      const iso = serviceMeasuredOn();
+      const date = iso ? localizedMeasuredOn(iso, locale) : null;
       // The full sentence accounts for every airport (served + the rest), so it may only be
       // used when there is nothing we are unsure about. Once the OurAirports cross-check moves
       // airports into `unknown`, "the remaining N are airfields with no airline flights" stops
@@ -114,8 +116,8 @@ export default async function CountryPage({ params }: Props) {
       {showSplit && (
         <p style={{ fontSize: 15, lineHeight: 1.55, color: '#C7C7CC', marginTop: 14, maxWidth: 640 }}>
           {unknown.length
-            ? t('country_split_partial', { country: countryName, count: fmt(c.count, locale), served: fmt(served.length, locale), date: measuredOn! })
-            : t('country_split', { country: countryName, count: fmt(c.count, locale), served: fmt(served.length, locale), rest: fmt(unserved.length, locale), date: measuredOn! })}
+            ? t('country_split_partial', { country: countryName, count: fmt(c.count, locale), served: fmt(served.length, locale), date: localizedMeasuredOn(measuredOn!, locale) })
+            : t('country_split', { country: countryName, count: fmt(c.count, locale), served: fmt(served.length, locale), rest: fmt(unserved.length, locale), date: localizedMeasuredOn(measuredOn!, locale) })}
         </p>
       )}
 

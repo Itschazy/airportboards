@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { getCountries } from '@/lib/airports';
 import { getCountryName } from '@/lib/places';
 import { locales } from '@/lib/i18n';
+import { localizedMeasuredOn } from '@/lib/measured-date';
 import { worldServiceCounts } from '@/lib/warm';
 
 // Counts are passed to ICU pre-formatted for the locale: a bare placeholder renders 6069,
@@ -35,8 +36,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       if (!w.generated || !w.withService) return t('footer_tagline');
       // Same rule as the country pages: only claim the full breakdown when nothing is unknown.
       return w.probed > w.withService + w.empty
-        ? t('world_split_partial', { total: fmt(w.probed, locale), date: w.generated, served: fmt(w.withService, locale) })
-        : t('world_split', { total: fmt(w.probed, locale), date: w.generated, served: fmt(w.withService, locale), rest: fmt(w.empty, locale) });
+        ? t('world_split_partial', { total: fmt(w.probed, locale), date: localizedMeasuredOn(w.generated, locale), served: fmt(w.withService, locale) })
+        : t('world_split', { total: fmt(w.probed, locale), date: localizedMeasuredOn(w.generated, locale), served: fmt(w.withService, locale), rest: fmt(w.empty, locale) });
     })(),
     alternates: { canonical: `${BASE}/${locale}/airports`, languages },
     robots: { index: true, follow: true },
@@ -110,8 +111,8 @@ export default async function AirportsIndexPage({ params }: Props) {
       {world.generated && world.withService > 0 && (
         <p style={{ fontSize: 15, lineHeight: 1.55, color: '#C7C7CC', margin: '0 0 28px', maxWidth: 660 }}>
           {world.probed > world.withService + world.empty
-            ? t('world_split_partial', { total: fmt(world.probed, locale), date: world.generated!, served: fmt(world.withService, locale) })
-            : t('world_split', { total: fmt(world.probed, locale), date: world.generated!, served: fmt(world.withService, locale), rest: fmt(world.empty, locale) })}
+            ? t('world_split_partial', { total: fmt(world.probed, locale), date: localizedMeasuredOn(world.generated!, locale), served: fmt(world.withService, locale) })
+            : t('world_split', { total: fmt(world.probed, locale), date: localizedMeasuredOn(world.generated!, locale), served: fmt(world.withService, locale), rest: fmt(world.empty, locale) })}
         </p>
       )}
 
