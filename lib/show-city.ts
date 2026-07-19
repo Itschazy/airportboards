@@ -6,7 +6,7 @@
  * punctuation. "Ålesund" and "Alesund", "Алма‑Ата" (non-breaking hyphen) and "Алма-Ата",
  * "エルアリシュ" and "エル＝アリシュ" all land on the same string.
  */
-function fold(s: string): string {
+export function fold(s: string): string {
   return s.normalize('NFKD').replace(/[^\p{L}\p{N}]+/gu, '').toLowerCase();
 }
 

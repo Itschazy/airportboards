@@ -104,3 +104,13 @@ input::-webkit-search-cancel-button { display: none; }
     scroll-behavior: auto !important;
   }
 }
+
+/* PWA install card: rises once, gently. Motion-sensitive users get a plain appear. */
+@keyframes pwa-rise { from { transform: translateY(24px); opacity: 0; } to { transform: none; opacity: 1; } }
+.pwa-rise { animation: pwa-rise 0.45s cubic-bezier(0.22, 1, 0.36, 1) both; }
+@media (prefers-reduced-motion: reduce) { .pwa-rise { animation: none; } }
+
+/* The route strip's arrow points in the reading direction. Flex order flips itself in RTL;
+   the glyph does not, so an Arabic page would show DXB → MRV with the arrow aimed at the
+   origin. scaleX(-1) keeps the arrow travelling from origin to destination in both scripts. */
+[dir='rtl'] .route-arrow { transform: scaleX(-1); }

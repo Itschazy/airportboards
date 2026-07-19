@@ -10,6 +10,7 @@ import { Analytics, GA_ID } from '@/components/Analytics';
 import { GaRouteTracker } from '@/components/GaRouteTracker';
 import { AdSense } from '@/components/AdSense';
 import { CookieNotice } from '@/components/CookieNotice';
+import { InstallPrompt } from '@/components/InstallPrompt';
 import { adsenseClient } from '@/lib/adsense';
 import '../globals.css';
 
@@ -85,6 +86,7 @@ export default async function LocaleLayout({
           <main style={{ flex: '1 0 auto', width: '100%' }}>{children}</main>
           <SiteFooter locale={locale as Locale} />
           <CookieNotice locale={locale as Locale} />
+          <InstallPrompt />
           {GA_ID && <GaRouteTracker gaId={GA_ID} />}
         </NextIntlClientProvider>
       </body>

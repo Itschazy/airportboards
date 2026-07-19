@@ -141,7 +141,8 @@
     "replaced_line": "{name} ({iata}), {predecessors} uçuş trafiğini devraldı.",
     "delays_line": "{m} dk önceki uçuş panosu durumu: Yaklaşan {pending} kalkıştan {delayed} tanesi 15 dakika veya daha fazla gecikmeli.",
     "country_split_partial": "{country} içinde IATA koduna sahip {count} havalimanından en az {served} tanesi, {date} itibarıyla tarifeli yolcu hizmeti sunmaktadır.",
-    "world_split_partial": "AirportsBoard dünya genelinde IATA koduna sahip {total} havalimanını izler. {date} tarihli ölçüme göre bunlardan en az {served} tanesi tarifeli yolcu hizmeti sunuyordu."
+    "world_split_partial": "AirportsBoard dünya genelinde IATA koduna sahip {total} havalimanını izler. {date} tarihli ölçüme göre bunlardan en az {served} tanesi tarifeli yolcu hizmeti sunuyordu.",
+    "airport_lead_same": "{name} Havalimanı ({iata}), {country}."
   },
   "ui": {
     "departures": "Kalkışlar",
@@ -224,7 +225,12 @@
     "live_updates": "Canlı güncellemeler",
     "updated_h_ago": "{h} saat önce güncellendi",
     "updated_d_ago": "{d} gün önce güncellendi",
-    "board_pending": "Bu havalimanı için uçuş panosu verileri şu anda mevcut değil."
+    "board_pending": "Bu havalimanı için uçuş panosu verileri şu anda mevcut değil.",
+    "pwa_title": "AirportsBoard’u ana ekrana ekleyin",
+    "pwa_sub": "Uygulama gibi anında açılır.",
+    "pwa_install": "Yükle",
+    "pwa_ios_hint": "«Paylaş»a, ardından «Ana Ekrana Ekle»ye dokunun.",
+    "pwa_got_it": "Anladım"
   },
   "notfound": {
     "title": "Sayfa bulunamadı",

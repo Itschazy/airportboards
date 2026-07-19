@@ -13,6 +13,8 @@ type Flight = {
   airline: string;
   destination?: string;
   origin?: string;
+  arrIata?: string;
+  depIata?: string;
   scheduled: string;
   actual?: string;
   gate?: string;
@@ -151,13 +153,15 @@ function IconChevron() {
 
 // ─── Bottom Sheet ────────────────────────────────────────────────────────────
 
-function BottomSheet({ flight, mode, onClose, tz, locale }: {
+function BottomSheet({ flight, mode, onClose, tz, locale, updLabel, originIata, originName }: {
   flight: Flight | null;
   mode: Mode;
   onClose: () => void;
   tz: string;
   locale: string;
   updLabel: string;
+  originIata: string;
+  originName: string;
 }) {
   const t = useTranslations('ui');
   const tNav = useTranslations('nav');
@@ -202,7 +206,6 @@ function BottomSheet({ flight, mode, onClose, tz, locale }: {
   };
 
   const L = { fontSize: 12, color: C.secondary, textTransform: 'uppercase' as const, letterSpacing: '0.12em' };
-  const [detailsOpen, setDetailsOpen] = useState(false);
   const dragStart = useRef<number | null>(null);
   const dragY = useRef(0);
   const raf = useRef(0);
@@ -225,7 +228,7 @@ function BottomSheet({ flight, mode, onClose, tz, locale }: {
     el.style.transition = 'transform 0.34s cubic-bezier(0.32, 0.72, 0, 1)';
     el.style.transform = 'translateY(0)';
   };
-  useEffect(() => { if (!vis) { setDetailsOpen(false); dragStart.current = null; dragY.current = 0; } }, [vis]);
+  useEffect(() => { if (!vis) { dragStart.current = null; dragY.current = 0; } }, [vis]);
   useEffect(() => () => { if (raf.current) cancelAnimationFrame(raf.current); }, []);
 
   const onTouchStart = (e: React.TouchEvent) => {
@@ -290,19 +293,26 @@ function BottomSheet({ flight, mode, onClose, tz, locale }: {
     }
 
     // ── Detail grid: only fields with data, never the status (already in hero) ──
+    // The time card is skipped when the hero already displays the same time (boarding and
+    // final-call put it in hero.bottom; delayed and departed put it in hero.main) — the sheet
+    // used to show "ВЫЛЕТ 23:05" twice in a row, which reads as a rendering bug, not design.
     type Block = { label: string; value: string; valueColor?: string; strike?: string; sub?: string };
-    const blocks: Block[] = [{
+    const timeInHero = hero.bottom != null || hero.main === dispTime;
+    const blocks: Block[] = [];
+    if (!timeInHero) blocks.push({
       label: isDep ? t('departure') : t('arrival'), value: dispTime,
       valueColor: flight.actual ? C.orange : C.text, strike: flight.actual ? flight.scheduled : undefined, sub: dateStr,
-    }];
+    });
     if (flight.gate)     blocks.push({ label: t('gate'), value: flight.gate });
     if (flight.terminal) blocks.push({ label: t('terminal'), value: flight.terminal });
     if (flight.baggage)  blocks.push({ label: t('baggage'), value: flight.baggage, valueColor: C.green });
+    if (flight.aircraft) blocks.push({ label: t('aircraft_type'), value: flight.aircraft });
 
-    // ── About-the-flight rows (revealed via "flight details") ──
-    const about: { label: string; value: string }[] = [{ label: t('airline_label'), value: flight.airline }];
-    if (flight.aircraft) about.push({ label: t('aircraft_type'), value: flight.aircraft });
-    about.push({ label: t('flight_no'), value: flight.flight });
+    // ── Route strip: origin → destination, so the sheet carries its own context ──
+    const otherPlace = (flight.destination || flight.origin || '').replace(/\s*\([A-Z0-9]{2,4}\)\s*$/, '');
+    const otherIata = (isDep ? flight.arrIata : flight.depIata) || '';
+    const routeFrom = isDep ? { code: originIata, name: originName } : { code: otherIata, name: otherPlace };
+    const routeTo   = isDep ? { code: otherIata, name: otherPlace } : { code: originIata, name: originName };
 
     const notice =
       status === 'boarding' ? t('notice_board') :
@@ -329,7 +339,22 @@ function BottomSheet({ flight, mode, onClose, tz, locale }: {
           </div>
         </div>
 
-        <div style={{ height: 1, background: 'rgba(255,255,255,0.08)', margin: '20px 0' }} />
+        {/* Route strip — where from, where to. The sheet is shareable context on its own. */}
+        {routeFrom.code && routeTo.code && (
+        <div style={{ display: 'flex', alignItems: 'center', gap: 12, margin: '18px 0 0', padding: '14px 16px', background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.07)', borderRadius: 16 }}>
+          <div style={{ flex: 1, minWidth: 0 }}>
+            <div style={{ fontSize: 20, fontWeight: 800, letterSpacing: '-0.02em', color: C.text, lineHeight: 1 }}>{routeFrom.code}</div>
+            <div style={{ fontSize: 11.5, color: C.secondary, marginTop: 4, overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>{routeFrom.name}</div>
+          </div>
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true" className="route-arrow" style={{ flexShrink: 0, opacity: 0.45 }}><path d="M3 12h16m0 0-6-6m6 6-6 6" stroke="#FFFFFF" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" /></svg>
+          <div style={{ flex: 1, minWidth: 0, textAlign: 'end' }}>
+            <div style={{ fontSize: 20, fontWeight: 800, letterSpacing: '-0.02em', color: C.text, lineHeight: 1 }}>{routeTo.code}</div>
+            <div style={{ fontSize: 11.5, color: C.secondary, marginTop: 4, overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>{routeTo.name}</div>
+          </div>
+        </div>
+        )}
+
+        <div style={{ height: 1, background: 'rgba(255,255,255,0.08)', margin: '18px 0' }} />
 
         {/* Hero card */}
         <div style={{ background: color + '1A', border: `1px solid ${color}40`, borderRadius: 18, padding: '18px 20px 20px' }}>
@@ -338,6 +363,7 @@ function BottomSheet({ flight, mode, onClose, tz, locale }: {
               <div style={{ ...L, marginBottom: 10 }}>{hero.label}</div>
               <div style={{ fontSize: heroMainSize, fontWeight: 800, letterSpacing: '-0.03em', lineHeight: 1, color, fontVariantNumeric: 'tabular-nums' }}>{hero.main}</div>
               {hero.sub && <div style={{ fontSize: 15, color: C.secondary, marginTop: 10, textDecoration: hero.subStrike ? 'line-through' : 'none' }}>{hero.sub}</div>}
+              {timeInHero && <div style={{ fontSize: 12, color: C.secondary, opacity: 0.7, marginTop: 8 }}>{dateStr}</div>}
             </div>
             {hero.icon && <Icon name={hero.icon} />}
           </div>
@@ -364,30 +390,8 @@ function BottomSheet({ flight, mode, onClose, tz, locale }: {
           ))}
         </div>
 
-        {/* Updated row */}
-        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', height: 50, marginTop: 12, padding: '0 16px', background: 'rgba(255,255,255,0.03)', borderRadius: 14 }}>
-          <span style={{ fontSize: 13, color: C.secondary }}>{t('updated')}</span>
-          <span style={{ fontSize: 14, color: C.text, fontVariantNumeric: 'tabular-nums' }}>{nowClock}</span>
-        </div>
-
-        {/* Flight details (collapsed "about the flight") */}
-        <button className="press" onClick={() => setDetailsOpen(o => !o)} style={{ width: '100%', height: 52, marginTop: 12, display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 8, border: '1px solid rgba(255,255,255,0.08)', background: 'rgba(255,255,255,0.03)', borderRadius: 14, color: C.text, fontSize: 15, fontWeight: 600, cursor: 'pointer' }}>
-          {t('flight_details')}
-          <svg width="13" height="13" viewBox="0 0 13 13" fill="none" style={{ transform: detailsOpen ? 'rotate(180deg)' : 'none', transition: 'transform 0.2s' }}><path d="M3 5L6.5 8.5L10 5" stroke="#8A8A8A" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" /></svg>
-        </button>
-        {detailsOpen && (
-          <div style={{ marginTop: 14 }}>
-            <div style={{ ...L, marginBottom: 12 }}>{t('about_flight')}</div>
-            <div style={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
-              {about.map((r, i) => (
-                <div key={i} style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 12, padding: '13px 0', borderBottom: i < about.length - 1 ? '1px solid rgba(255,255,255,0.06)' : 'none' }}>
-                  <span style={{ fontSize: 13, color: C.secondary }}>{r.label}</span>
-                  <span style={{ fontSize: 15, color: C.text, fontWeight: 500, textAlign: 'right' }}>{r.value}</span>
-                </div>
-              ))}
-            </div>
-          </div>
-        )}
+        {/* Age of the data — the sheet inherits the board's honest freshness label. */}
+        {updLabel && <div style={{ fontSize: 12, color: C.secondary, opacity: 0.75, marginTop: 14, textAlign: 'end' }}>{updLabel}</div>}
 
         {/* Info notice */}
         {notice && (
@@ -496,6 +500,12 @@ export function FlightBoard({ airport, locale, defaultMode = 'departures', displ
   const [selected, setSelected]   = useState<Flight | null>(null);
   const [isLive, setIsLive]       = useState(!!initialFetchedAt && Date.now() - initialFetchedAt < 90_000);
   const [showAll, setShowAll]     = useState(false);
+  // Search starts as an icon and expands in place of the mode tabs. The full-width input cost
+  // ~62px of the first screen on every visit, for a control most visitors never touch — the
+  // board itself is what they came for, and it was down to a single visible row on mobile.
+  const [searchOpen, setSearchOpen] = useState(false);
+  const searchRef = useRef<HTMLInputElement>(null);
+  useEffect(() => { if (searchOpen) searchRef.current?.focus(); }, [searchOpen]);
   // Gate for the list "rise" animation: never on the initial (SSR/LCP) paint —
   // only once the user actually changes mode/filter. Key-based (not effect-based)
   // so a data refresh on the initial combination can't retrigger it.
@@ -584,166 +594,128 @@ export function FlightBoard({ airport, locale, defaultMode = 'departures', displ
     // the notice and the rest of the page.
     <div style={{ background: C.bg, minHeight: noService ? undefined : '100dvh', paddingBottom: noService ? 16 : 'calc(48px + env(safe-area-inset-bottom))' }}>
 
-      {/* ── Airport header ─────────────────────────────────── */}
-      <div style={{ padding: '16px 20px 10px', maxWidth: 960, margin: '0 auto' }}>
-        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start' }}>
-          {/* The airport identity is the page's single visible <h1> (replaces the old
-              sr-only h1 on the airport/arrivals/departures pages). Styling lives on the
-              inner divs, so the heading looks identical — it's just now semantic. */}
-          <h1 style={{ margin: 0 }}>
-            <div style={{
-              fontSize: 'clamp(60px, 17vw, 76px)',
-              fontWeight: 800,
-              letterSpacing: '-0.04em',
-              lineHeight: 0.9,
-              color: C.text,
-            }}>
-              {airport.iata}
-            </div>
-            <div style={{ fontSize: 12, color: C.secondary, marginTop: 7, lineHeight: 1.4, maxWidth: 200, opacity: 0.5 }}>
-              {displayName || airport.name}
-            </div>
+      {/* ── Airport header — compact. The identity is one line: code + name + clock. The old
+          header spent ~380px (a 76px IATA glyph, an always-open search field, two control
+          rows and two meta lines) before the first flight row; on a 812px phone the board the
+          visitor searched for showed exactly one row. Premium here means the content leads. */}
+      <div style={{ padding: '14px 20px 6px', maxWidth: 960, margin: '0 auto' }}>
+        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', gap: 12 }}>
+          <h1 style={{ margin: 0, display: 'flex', alignItems: 'baseline', gap: 10, minWidth: 0, flex: 1 }}>
+            <span style={{ fontSize: 'clamp(30px, 9vw, 38px)', fontWeight: 800, letterSpacing: '-0.03em', lineHeight: 1, color: C.text }}>{airport.iata}</span>
+            <span style={{ fontSize: 14, fontWeight: 500, color: C.secondary, lineHeight: 1.25, minWidth: 0, overflow: 'hidden', textOverflow: 'ellipsis', display: '-webkit-box', WebkitLineClamp: 2, WebkitBoxOrient: 'vertical' }}>{displayName || airport.name}</span>
           </h1>
-          <div style={{ textAlign: 'right', paddingTop: 4 }}>
-            <div style={{
-              fontSize: 'clamp(18px, 4.5vw, 22px)',
-              fontWeight: 600,
-              letterSpacing: '-0.02em',
-              fontVariantNumeric: 'tabular-nums',
-              color: C.text, lineHeight: 1,
-            }}>
-              {time}
-            </div>
-            <div style={{ fontSize: 11, color: C.secondary, marginTop: 4, letterSpacing: '0.02em', opacity: 0.5 }}>
-              {t('local_time')}
-            </div>
+          <div style={{ textAlign: 'end', flexShrink: 0 }}>
+            <div style={{ fontSize: 17, fontWeight: 600, letterSpacing: '-0.01em', fontVariantNumeric: 'tabular-nums', color: C.text, lineHeight: 1 }}>{time}</div>
+            <div style={{ fontSize: 10, color: C.secondary, marginTop: 3, letterSpacing: '0.03em', opacity: 0.55 }}>{t('local_time')}</div>
           </div>
         </div>
 
         {lead && (
-          <p style={{ fontSize: 14, lineHeight: 1.5, color: C.secondary, margin: '10px 0 0', maxWidth: 620 }}>{lead}</p>
+          <p style={{ fontSize: 13, lineHeight: 1.45, color: C.secondary, margin: '8px 0 0', maxWidth: 620 }}>{lead}</p>
         )}
         {statusLine && (
-          <p style={{ fontSize: 13, lineHeight: 1.5, color: C.text, margin: '6px 0 0', maxWidth: 620, fontVariantNumeric: 'tabular-nums' }}>{statusLine}</p>
+          <p style={{ fontSize: 12.5, lineHeight: 1.45, color: C.text, margin: '5px 0 0', maxWidth: 620, fontVariantNumeric: 'tabular-nums' }}>{statusLine}</p>
         )}
-        {/* Live indicator — polite status region so AT hears the refresh. Hidden where no
-            airline flies: there is nothing to be fresh about. */}
-        {!noService && <div role="status" aria-live="polite" style={{ display: 'flex', alignItems: 'center', gap: 7, marginTop: 10 }}>
+
+        {/* One meta line: freshness + row count. These were two separate rows. */}
+        {!noService && <div role="status" aria-live="polite" style={{ display: 'flex', alignItems: 'center', gap: 7, marginTop: 8, minHeight: 18 }}>
           <div
             aria-hidden="true"
             className={isLive ? 'live-dot' : ''}
-            style={{
-              width: 6, height: 6, borderRadius: '50%', flexShrink: 0,
-              background: isLive ? C.green : C.gray,
-            }}
+            style={{ width: 6, height: 6, borderRadius: '50%', flexShrink: 0, background: isLive ? C.green : C.gray }}
           />
-          {/* The label is relative to "now", so the ISR-cached server value and the client's
-              first paint legitimately differ by a minute; that divergence is the correct
-              behaviour, not a bug to fix by dropping the SSR value. */}
           <span suppressHydrationWarning style={{ fontSize: 12, color: C.secondary, opacity: 0.85 }}>{updLabel || '—'}</span>
+          {!loading && flights.length > 0 && (
+            <span style={{ fontSize: 12, color: C.secondary, opacity: 0.85 }}>
+              {' · '}{(() => { const n = flights === initialFlights && boardTotal != null ? boardTotal : flights.length; return mode === 'departures' ? t('departures_on_board', { count: n }) : t('arrivals_on_board', { count: n }); })()}
+            </span>
+          )}
         </div>}
       </div>
 
-      {/* ── Search ─────────────────────────────────────────── */}
-      {/* Search, direction tabs and status filters are all controls over a flight list. With
-          no scheduled service there is no list to control, so the whole block is dropped
-          rather than left as dead UI the visitor will try and get nothing from. */}
+      {/* ── Controls: mode tabs + search icon in ONE row; the input expands in place ── */}
       {!noService && <>
-      <div style={{ padding: '0 16px 12px', maxWidth: 960, margin: '0 auto' }}>
-        <div style={{ position: 'relative' }}>
-          <div aria-hidden="true" style={{ position: 'absolute', insetInlineStart: 14, top: '50%', transform: 'translateY(-50%)', pointerEvents: 'none' }}>
-            <IconSearch color={search ? C.secondary : C.dim} />
-          </div>
-          <input
-            type="search"
-            aria-label={t('search_placeholder')}
-            autoComplete="off"
-            spellCheck={false}
-            placeholder={t('search_placeholder')}
-            value={search}
-            onChange={e => setSearch(e.target.value)}
-            style={{
-              width: '100%',
-              padding: '13px 44px',
-              fontSize: 16,
-              border: `1px solid ${search ? '#333333' : C.border}`,
-              borderRadius: 14,
-              outline: 'none',
-              background: C.surface,
-              color: C.text,
-              WebkitAppearance: 'none',
-              transition: 'border-color 0.15s',
-            }}
-          />
-          {search && (
+      <div style={{ padding: '6px 16px 10px', maxWidth: 960, margin: '0 auto', display: 'flex', gap: 8 }}>
+        {searchOpen || search ? (
+          <div style={{ position: 'relative', flex: 1 }}>
+            <div aria-hidden="true" style={{ position: 'absolute', insetInlineStart: 14, top: '50%', transform: 'translateY(-50%)', pointerEvents: 'none' }}>
+              <IconSearch color={search ? C.secondary : C.dim} />
+            </div>
+            <input
+              ref={searchRef}
+              type="search"
+              aria-label={t('search_placeholder')}
+              autoComplete="off"
+              spellCheck={false}
+              placeholder={t('search_placeholder')}
+              value={search}
+              onChange={e => setSearch(e.target.value)}
+              onBlur={() => { if (!search) setSearchOpen(false); }}
+              style={{
+                width: '100%', height: 46, padding: '0 44px', fontSize: 16,
+                border: `1px solid ${search ? '#333333' : C.border}`, borderRadius: 13,
+                outline: 'none', background: C.surface, color: C.text, WebkitAppearance: 'none',
+              }}
+            />
             <button
               type="button"
               aria-label={tNav('clear')}
-              onClick={() => setSearch('')}
+              onClick={() => { setSearch(''); setSearchOpen(false); }}
               style={{
-                position: 'absolute', insetInlineEnd: 14, top: '50%', transform: 'translateY(-50%)',
-                background: '#2C2C2E', border: 'none', borderRadius: '50%',
-                width: 28, height: 28, cursor: 'pointer',
-                display: 'flex', alignItems: 'center', justifyContent: 'center',
-                padding: 0,
+                position: 'absolute', insetInlineEnd: 9, top: '50%', transform: 'translateY(-50%)',
+                background: '#2C2C2E', border: 'none', borderRadius: '50%', width: 28, height: 28,
+                cursor: 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'center', padding: 0,
               }}
             >
               <IconClose color={C.secondary} />
             </button>
-          )}
-        </div>
-      </div>
-
-      {/* ── Segmented control ──────────────────────────────── */}
-      <div style={{ padding: '0 16px 12px', maxWidth: 960, margin: '0 auto' }}>
-        <div style={{
-          display: 'flex',
-          background: C.surface,
-          border: `1px solid ${C.border}`,
-          borderRadius: 13, padding: 3, gap: 2,
-        }}>
-          {(['departures', 'arrivals'] as Mode[]).map(m => {
-            const active = mode === m;
-            return (
-              <button key={m} type="button" aria-pressed={active} className="press" onClick={() => { haptic(); setMode(m); setFilter('all'); }} style={{
-                flex: 1, padding: '11px 0', minHeight: 44,
-                fontSize: 14, fontWeight: 600,
-                border: 'none', borderRadius: 11,
-                cursor: 'pointer',
-                background: active ? '#1C1C1E' : 'transparent',
-                color: active ? C.text : C.secondary,
-                transition: 'all 0.18s ease',
-                letterSpacing: '-0.01em',
-                display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 6,
-              }}>
-                <span style={{ fontSize: 15 }} aria-hidden="true">{m === 'departures' ? '✈' : '🛬'}</span>
-                {m === 'departures' ? t('departures') : t('arrivals')}
-              </button>
-            );
-          })}
-        </div>
+          </div>
+        ) : (
+          <>
+            <div style={{ flex: 1, display: 'flex', background: C.surface, border: `1px solid ${C.border}`, borderRadius: 13, padding: 3, gap: 2 }}>
+              {(['departures', 'arrivals'] as Mode[]).map(m => {
+                const active = mode === m;
+                return (
+                  <button key={m} type="button" aria-pressed={active} className="press" onClick={() => { haptic(); setMode(m); setFilter('all'); }} style={{
+                    flex: 1, padding: '10px 0', minHeight: 40, fontSize: 14, fontWeight: 600,
+                    border: 'none', borderRadius: 10, cursor: 'pointer',
+                    background: active ? '#1C1C1E' : 'transparent', color: active ? C.text : C.secondary,
+                    transition: 'all 0.18s ease', letterSpacing: '-0.01em',
+                    display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 6,
+                  }}>
+                    <span style={{ fontSize: 15 }} aria-hidden="true">{m === 'departures' ? '✈' : '🛬'}</span>
+                    {m === 'departures' ? t('departures') : t('arrivals')}
+                  </button>
+                );
+              })}
+            </div>
+            <button
+              type="button"
+              aria-label={t('search_placeholder')}
+              aria-expanded={searchOpen}
+              className="press"
+              onClick={() => setSearchOpen(true)}
+              style={{
+                width: 46, height: 46, flexShrink: 0, display: 'flex', alignItems: 'center', justifyContent: 'center',
+                background: C.surface, border: `1px solid ${C.border}`, borderRadius: 13, cursor: 'pointer',
+              }}
+            >
+              <IconSearch color={C.secondary} />
+            </button>
+          </>
+        )}
       </div>
 
       {/* ── Filter pills ───────────────────────────────────── */}
-      <div style={{
-        display: 'flex', gap: 7,
-        padding: '0 16px 14px',
-        overflowX: 'auto',
-        maxWidth: 960, margin: '0 auto',
-      }}>
+      <div style={{ display: 'flex', gap: 7, padding: '0 16px 12px', overflowX: 'auto', maxWidth: 960, margin: '0 auto' }}>
         {FILTERS.map(key => {
           const active = filter === key;
           return (
             <button key={key} type="button" aria-pressed={active} className="press" onClick={() => { haptic(); setFilter(key); }} style={{
-              padding: '8px 14px', minHeight: 36,
-              fontSize: 13, fontWeight: active ? 600 : 400,
-              border: active ? 'none' : `1px solid ${C.border}`,
-              borderRadius: 999,
-              cursor: 'pointer',
-              background: active ? C.text : 'transparent',
-              color: active ? '#000000' : C.secondary,
-              whiteSpace: 'nowrap', flexShrink: 0,
-              transition: 'all 0.15s ease',
+              padding: '7px 13px', minHeight: 34, fontSize: 13, fontWeight: active ? 600 : 400,
+              border: active ? 'none' : `1px solid ${C.border}`, borderRadius: 999, cursor: 'pointer',
+              background: active ? C.text : 'transparent', color: active ? '#000000' : C.secondary,
+              whiteSpace: 'nowrap', flexShrink: 0, transition: 'all 0.15s ease',
             }}>
               {key === 'departed' && mode === 'arrivals' ? t('st_arrived') : t(`filter_${key}`)}
             </button>
@@ -752,22 +724,6 @@ export function FlightBoard({ airport, locale, defaultMode = 'departures', displ
       </div>
       </>}
 
-      {/* ── Top meta row ───────────────────────────────────── */}
-      {!loading && flights.length > 0 && (
-        <div style={{ padding: '0 16px 14px', maxWidth: 960, margin: '0 auto' }}>
-          <span style={{ fontSize: 13, color: C.secondary }}>
-            {/* Says how many rows are on THIS board — nothing more. The key used to be
-                departures_today ("{count} departures today"), but the number is capped at
-                MAX_FLIGHTS, so 273 airports all printed exactly "80 departures today" while
-                their own FAQ said "About 543 scheduled departures were counted". One page,
-                two different answers to the same question, on the busiest pages we have.
-                Passing the total down to the subpages would only have made all three agree
-                on a fabricated figure, which for an answer engine is worse than an obvious
-                contradiction. The measured daily figure lives in the FAQ, where it is real. */}
-            <span aria-hidden="true">{mode === 'departures' ? '✈' : '🛬'}</span> {(() => { const n = flights === initialFlights && boardTotal != null ? boardTotal : flights.length; return mode === 'departures' ? t('departures_on_board', { count: n }) : t('arrivals_on_board', { count: n }); })()}
-          </span>
-        </div>
-      )}
 
       {/* ── Flight list ────────────────────────────────────── */}
       <div style={{ padding: '0 16px', maxWidth: 960, margin: '0 auto' }}>
@@ -851,10 +807,11 @@ export function FlightBoard({ airport, locale, defaultMode = 'departures', displ
                 <div style={{ flex: 1, minWidth: 0 }}>
                   <div style={{
                     display: '-webkit-box', WebkitLineClamp: 2, WebkitBoxOrient: 'vertical',
-                    overflow: 'hidden', lineHeight: 1.2, wordBreak: 'break-word',
+                    overflow: 'hidden', lineHeight: 1.2, overflowWrap: 'break-word',
+                    hyphens: 'auto' as const, WebkitHyphens: 'auto' as const,
                   }}>
                     <span style={{ fontSize: 18, fontWeight: 700, color: C.text, letterSpacing: '-0.01em' }}>{city}</span>
-                    {code && <span style={{ fontSize: 12, fontWeight: 500, color: C.secondary, marginLeft: 6, whiteSpace: 'nowrap' }}>({code})</span>}
+                    {code && <span style={{ fontSize: 12, fontWeight: 500, color: C.secondary, marginInlineStart: 6, whiteSpace: 'nowrap' }}>({code})</span>}
                   </div>
                 </div>
 
@@ -906,6 +863,8 @@ export function FlightBoard({ airport, locale, defaultMode = 'departures', displ
         tz={airport.tz || ''}
         locale={locale}
         updLabel={updLabel}
+        originIata={airport.iata}
+        originName={displayName || airport.name}
       />
     </div>
   );

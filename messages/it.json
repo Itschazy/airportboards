@@ -141,7 +141,8 @@
     "replaced_line": "{name} ({iata}) ha assorbito il traffico di {predecessors}.",
     "delays_line": "Stato del tabellone {m} min fa: {delayed} su {pending} prossime partenze in ritardo di almeno 15 minuti.",
     "country_split_partial": "{country}: dei {count} aeroporti con codici IATA, almeno {served} hanno un servizio passeggeri di linea al {date}.",
-    "world_split_partial": "AirportsBoard monitora {total} aeroporti con codici IATA nel mondo. Alla rilevazione del {date}, almeno {served} di essi avevano un servizio passeggeri di linea."
+    "world_split_partial": "AirportsBoard monitora {total} aeroporti con codici IATA nel mondo. Alla rilevazione del {date}, almeno {served} di essi avevano un servizio passeggeri di linea.",
+    "airport_lead_same": "Aeroporto {name} ({iata}), {country}."
   },
   "ui": {
     "departures": "Partenze",
@@ -224,7 +225,12 @@
     "live_updates": "Aggiornamenti in tempo reale",
     "updated_h_ago": "Aggiornato {h} h fa",
     "updated_d_ago": "Aggiornato {d} g fa",
-    "board_pending": "Al momento non sono disponibili i dati del tabellone per questo aeroporto."
+    "board_pending": "Al momento non sono disponibili i dati del tabellone per questo aeroporto.",
+    "pwa_title": "Aggiungi AirportsBoard alla schermata Home",
+    "pwa_sub": "Si apre all’istante, come un’app.",
+    "pwa_install": "Installa",
+    "pwa_ios_hint": "Tocca «Condividi», poi «Aggiungi a Home».",
+    "pwa_got_it": "Ho capito"
   },
   "notfound": {
     "title": "Pagina non trovata",

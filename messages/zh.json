@@ -141,7 +141,8 @@
     "replaced_line": "{name} ({iata}) 接管了 {predecessors} 的客运流量。",
     "delays_line": "截至 {m} 分钟前的看板状态：{pending} 个即将出发航班中有 {delayed} 个延误 15 分钟以上。",
     "country_split_partial": "截至{date}，{country}拥有国际航空运输协会代码的{count}个机场中，至少有{served}个提供定期客运服务。",
-    "world_split_partial": "AirportsBoard 追踪全球 {total} 个拥有国际航空运输协会代码的机场。根据 {date} 的测量，其中至少有 {served} 个提供定期客运服务。"
+    "world_split_partial": "AirportsBoard 追踪全球 {total} 个拥有国际航空运输协会代码的机场。根据 {date} 的测量，其中至少有 {served} 个提供定期客运服务。",
+    "airport_lead_same": "{name}机场（{iata}），{country}。"
   },
   "ui": {
     "departures": "出发",
@@ -224,7 +225,12 @@
     "live_updates": "实时更新",
     "updated_h_ago": "{h} 小时前更新",
     "updated_d_ago": "{d} 天前更新",
-    "board_pending": "该机场的航班信息板数据暂时不可用。"
+    "board_pending": "该机场的航班信息板数据暂时不可用。",
+    "pwa_title": "把 AirportsBoard 添加到主屏幕",
+    "pwa_sub": "即点即开，像 App 一样。",
+    "pwa_install": "安装",
+    "pwa_ios_hint": "点按“分享”，然后选择“添加到主屏幕”。",
+    "pwa_got_it": "知道了"
   },
   "notfound": {
     "title": "页面未找到",

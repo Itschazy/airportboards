@@ -14,7 +14,7 @@ import { getBoard, getBoardFetchedAt } from '@/lib/flights';
 import { FlightBoard } from '@/components/FlightBoard';
 import { AirportBottom } from '@/components/AirportBottom';
 import { locales } from '@/lib/i18n';
-import { showCityFlag } from '@/lib/show-city';
+import { showCityFlag, fold } from '@/lib/show-city';
 
 const BASE = 'https://airportsboard.live';
 
@@ -92,7 +92,9 @@ async function airportDescription(opts: {
     const tUi = await getTranslations({ locale, namespace: 'ui' });
     return {
       title: null,
-      description: `${tHome('airport_lead', { name, iata: airport.iata, city, country })} ${tUi('board_pending')}`,
+      // "Sochi (AER) is an airport serving Sochi" reads as machine output the moment the
+      // airport's name IS the city's name. The _same variant names the place once.
+      description: `${tHome(fold(name) === fold(city) ? 'airport_lead_same' : 'airport_lead', { name, iata: airport.iata, city, country })} ${tUi('board_pending')}`,
     };
   }
   return { title: null, description: t('main_description', { airport: name, iata: airport.iata, city, country }) };
@@ -362,7 +364,7 @@ export default async function AirportPage({ params }: Props) {
       {/* The visible <h1> now lives in FlightBoard's airport header (single semantic h1). */}
       {/* SSR only the first 40 rows to keep the HTML light (the client refetches the full
           board on mount); AirportBottom still gets the full set to aggregate routes/airlines. */}
-      <FlightBoard airport={airport} locale={locale} displayName={name} initialFlights={initialFlights.slice(0, 40)} initialFetchedAt={getBoardFetchedAt(airport.iata, 'departures')} boardTotal={initialFlights.length} lead={tHome('airport_lead', { name, iata: airport.iata, city, country })} statusLine={delayLine} noService={noService} pendingNote={pendingNote} />
+      <FlightBoard airport={airport} locale={locale} displayName={name} initialFlights={initialFlights.slice(0, 40)} initialFetchedAt={getBoardFetchedAt(airport.iata, 'departures')} boardTotal={initialFlights.length} lead={tHome(fold(name) === fold(city) ? 'airport_lead_same' : 'airport_lead', { name, iata: airport.iata, city, country })} statusLine={delayLine} noService={noService} pendingNote={pendingNote} />
       <AirportBottom airport={airport} locale={locale} about={about} displayName={name} flights={initialFlights} noService={noService} nearestServed={nearestWithFlights} />
     </>
   );

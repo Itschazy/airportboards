@@ -141,7 +141,8 @@
     "replaced_line": "{name} ({iata}) übernahm den Flugverkehr von {predecessors}.",
     "delays_line": "Anzeigetafel-Status vor {m} Min.: {delayed} von {pending} anstehenden Abflügen haben mindestens 15 Minuten Verspätung.",
     "country_split_partial": "{country}: Von den {count} Flughäfen mit IATA-Codes bieten mindestens {served} mit Stand {date} planmäßigen Passagierverkehr.",
-    "world_split_partial": "AirportsBoard erfasst weltweit {total} Flughäfen mit IATA-Codes. Mit Stand {date} boten mindestens {served} davon planmäßigen Passagierverkehr."
+    "world_split_partial": "AirportsBoard erfasst weltweit {total} Flughäfen mit IATA-Codes. Mit Stand {date} boten mindestens {served} davon planmäßigen Passagierverkehr.",
+    "airport_lead_same": "Flughafen {name} ({iata}), {country}."
   },
   "ui": {
     "departures": "Abflüge",
@@ -224,7 +225,12 @@
     "live_updates": "Live-Aktualisierungen",
     "updated_h_ago": "Vor {h} Std. aktualisiert",
     "updated_d_ago": "Vor {d} Tg. aktualisiert",
-    "board_pending": "Für diesen Flughafen liegen derzeit keine Anzeigetafel-Daten vor."
+    "board_pending": "Für diesen Flughafen liegen derzeit keine Anzeigetafel-Daten vor.",
+    "pwa_title": "AirportsBoard zum Startbildschirm hinzufügen",
+    "pwa_sub": "Öffnet sofort, wie eine App.",
+    "pwa_install": "Installieren",
+    "pwa_ios_hint": "Tippe auf „Teilen“, dann „Zum Home-Bildschirm“.",
+    "pwa_got_it": "Verstanden"
   },
   "notfound": {
     "title": "Seite nicht gefunden",

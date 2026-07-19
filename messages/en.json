@@ -141,7 +141,8 @@
     "replaced_line": "{name} ({iata}) took over the traffic of {predecessors}.",
     "delays_line": "Board status as of {m} min ago: {delayed} of {pending} upcoming departures delayed by 15+ minutes.",
     "country_split_partial": "Of the {count} airports with IATA codes in {country}, at least {served} have scheduled passenger service as of {date}.",
-    "world_split_partial": "AirportsBoard tracks {total} airports with IATA codes worldwide. As measured on {date}, at least {served} of them had scheduled passenger service."
+    "world_split_partial": "AirportsBoard tracks {total} airports with IATA codes worldwide. As measured on {date}, at least {served} of them had scheduled passenger service.",
+    "airport_lead_same": "{name} Airport ({iata}), {country}."
   },
   "ui": {
     "departures": "Departures",
@@ -224,7 +225,12 @@
     "live_updates": "Live updates",
     "updated_h_ago": "Updated {h} h ago",
     "updated_d_ago": "Updated {d} d ago",
-    "board_pending": "Live board data for this airport is not available right now."
+    "board_pending": "Live board data for this airport is not available right now.",
+    "pwa_title": "Add AirportsBoard to your Home Screen",
+    "pwa_sub": "Opens instantly, works like an app.",
+    "pwa_install": "Install",
+    "pwa_ios_hint": "Tap Share, then “Add to Home Screen”.",
+    "pwa_got_it": "Got it"
   },
   "notfound": {
     "title": "Page not found",

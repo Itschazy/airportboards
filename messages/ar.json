@@ -141,7 +141,8 @@
     "replaced_line": "تولّى {name} ({iata}) حركة النقل الجوي الخاصة بـ{predecessors}.",
     "delays_line": "حالة لوحة المغادرات قبل {m} دقيقة: تأخرت {delayed} من أصل {pending} من المغادرات القادمة لمدة 15 دقيقة أو أكثر.",
     "country_split_partial": "من بين {count} مطارات تحمل رموز إياتا في {country}، لدى {served} منها على الأقل خدمات ركاب مجدولة اعتبارًا من {date}.",
-    "world_split_partial": "يتتبع AirportsBoard عدد {total} مطار تحمل رموز إياتا حول العالم. ووفقًا لقياس {date}، كان لدى {served} منها على الأقل خدمات ركاب مجدولة."
+    "world_split_partial": "يتتبع AirportsBoard عدد {total} مطار تحمل رموز إياتا حول العالم. ووفقًا لقياس {date}، كان لدى {served} منها على الأقل خدمات ركاب مجدولة.",
+    "airport_lead_same": "مطار {name} ({iata})، {country}."
   },
   "ui": {
     "departures": "المغادرات",
@@ -224,7 +225,12 @@
     "live_updates": "تحديثات مباشرة",
     "updated_h_ago": "تم التحديث قبل {h} ساعة",
     "updated_d_ago": "تم التحديث قبل {d} يوم",
-    "board_pending": "بيانات لوحة الرحلات لهذا المطار غير متوفرة حاليًا."
+    "board_pending": "بيانات لوحة الرحلات لهذا المطار غير متوفرة حاليًا.",
+    "pwa_title": "أضف AirportsBoard إلى الشاشة الرئيسية",
+    "pwa_sub": "يفتح فورًا مثل التطبيق.",
+    "pwa_install": "تثبيت",
+    "pwa_ios_hint": "اضغط «مشاركة» ثم «إضافة إلى الشاشة الرئيسية».",
+    "pwa_got_it": "فهمت"
   },
   "notfound": {
     "title": "الصفحة غير موجودة",

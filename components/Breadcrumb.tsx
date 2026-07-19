@@ -34,8 +34,12 @@ export function Breadcrumb({ trail, extra }: { trail: Crumb[]; extra?: { href: s
           </li>
         ))}
         <li aria-current="page" style={{ color: '#C7C7C7' }}>{current.name}</li>
+        {/* The sibling link flows inline after the current crumb. marginInlineStart:auto
+            pushed it to the far edge, which on a phone wrapped it onto its own line as a
+            right-aligned orphan — it read as broken layout, not as navigation. */}
         {extra && (
-          <li style={{ marginInlineStart: 'auto' }}>
+          <li style={{ display: 'flex', alignItems: 'center', gap: 6 }}>
+            <span aria-hidden="true" style={{ opacity: 0.6 }}>·</span>
             <Link href={extra.href} style={{ color: '#8A8A8A' }}>{extra.label}</Link>
           </li>
         )}

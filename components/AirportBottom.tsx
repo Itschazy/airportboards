@@ -26,15 +26,18 @@ const SUB = '#8A8A8A';
 // feature stays self-contained and doesn't touch the shared messages/*.json.
 const EXT_LABELS: Record<string, { transport: string; terminals: string; tips: string }> = {
   en: { transport: 'How do I get to and from {a}?', terminals: 'How do the terminals work at {a}?', tips: 'Tips for flying from {a}' },
-  ru: { transport: 'Как добраться до {a} и обратно?', terminals: 'Как устроены терминалы в {a}?', tips: 'Советы вылетающим из {a}' },
+  // ru/de/fr/es/it carry the airport word so the proper name stays nominative — «до
+  // Минеральные Воды» and "vom Frankfurt" were broken on every airport whose name declines
+  // or needs an article; «до аэропорта {a}» / "zum Flughafen {a}" are correct for all of them.
+  ru: { transport: 'Как добраться до аэропорта {a} и обратно?', terminals: 'Как устроены терминалы в аэропорту {a}?', tips: 'Советы вылетающим из аэропорта {a}' },
   zh: { transport: '如何往返{a}？', terminals: '{a}的航站楼如何分布？', tips: '从{a}出发的实用建议' },
   ar: { transport: 'كيف أصل إلى {a} وأعود منه؟', terminals: 'كيف تعمل صالات {a}؟', tips: 'نصائح للمسافرين من {a}' },
-  de: { transport: 'Wie komme ich zum und vom {a}?', terminals: 'Wie sind die Terminals am {a} aufgeteilt?', tips: 'Tipps für Abflüge ab {a}' },
+  de: { transport: 'Wie komme ich zum Flughafen {a} und zurück?', terminals: 'Wie sind die Terminals am Flughafen {a} aufgeteilt?', tips: 'Tipps für Abflüge ab dem Flughafen {a}' },
   ko: { transport: '{a}까지 어떻게 오가나요?', terminals: '{a}의 터미널은 어떻게 나뉘어 있나요?', tips: '{a} 출발 시 알아둘 점' },
   ja: { transport: '{a}へのアクセス方法は？', terminals: '{a}のターミナルはどう分かれていますか？', tips: '{a}から出発する際のヒント' },
-  fr: { transport: 'Comment se rendre à {a} et en revenir ?', terminals: 'Comment sont organisés les terminaux de {a} ?', tips: 'Conseils pour partir de {a}' },
-  es: { transport: '¿Cómo llegar a {a} y volver?', terminals: '¿Cómo funcionan las terminales de {a}?', tips: 'Consejos para volar desde {a}' },
-  it: { transport: 'Come arrivare a {a} e tornare?', terminals: 'Come sono organizzati i terminal di {a}?', tips: 'Consigli per partire da {a}' },
+  fr: { transport: 'Comment se rendre à l’aéroport {a} et en revenir ?', terminals: 'Comment sont organisés les terminaux de l’aéroport {a} ?', tips: 'Conseils pour partir de l’aéroport {a}' },
+  es: { transport: '¿Cómo llegar al aeropuerto {a} y volver?', terminals: '¿Cómo funcionan las terminales del aeropuerto {a}?', tips: 'Consejos para volar desde el aeropuerto {a}' },
+  it: { transport: 'Come arrivare all’aeroporto {a} e tornare?', terminals: 'Come sono organizzati i terminal dell’aeroporto {a}?', tips: 'Consigli per partire dall’aeroporto {a}' },
   hi: { transport: '{a} तक कैसे पहुँचें और लौटें?', terminals: '{a} के टर्मिनल कैसे बँटे हैं?', tips: '{a} से उड़ान भरने के सुझाव' },
   tr: { transport: '{a} havalimanına nasıl gidilir ve dönülür?', terminals: '{a} terminalleri nasıl ayrılmış?', tips: '{a} çıkışlı uçuşlar için ipuçları' },
 };
