@@ -51,6 +51,17 @@ const ALLOWED = {
   zh: ['latin', 'cjk'],
 };
 
+// Which blocks are the locale's OWN writing system, for the intra-word check below.
+const NATIVE_RANGES = {
+  ru: [[0x0400, 0x04FF]],
+  ar: [[0x0600, 0x06FF], [0x0750, 0x077F]],
+  hi: [[0x0900, 0x097F]],
+  ja: [[0x3040, 0x30FF], [0x4E00, 0x9FFF]],
+  ko: [[0xAC00, 0xD7AF], [0x4E00, 0x9FFF]],
+  zh: [[0x4E00, 0x9FFF]],
+};
+const SEPARATORS = new Set([...' ・-–—.,()/’\'«»"']);
+
 function scriptOf(cp) {
   for (const [name, ranges] of Object.entries(RANGES)) {
     for (const [a, b] of ranges) if (cp >= a && cp <= b) return name;
@@ -79,6 +90,31 @@ for (const file of fs.readdirSync('data').filter(f => f.endsWith('.json'))) {
         if (s && !allowed.includes(s)) found.add(s);
       }
       if (found.size) problems.push({ file, key, locale, text, scripts: [...found] });
+      // Latin is allowed everywhere (IATA codes, untranslated proper nouns), and that blanket
+      // permission hid a whole second class of damage: a Latin RUN SPLICED INSIDE a native
+      // word. "Арландa" (Arlanda with a Latin a), "अden", "سamana" — 165 of them, invisible to
+      // a per-character whitelist because every character is individually permitted.
+      //
+      // Worst are the homoglyphs: /ru/az/o listed "ITM Осака" and "Осaка" side by side, the
+      // second with a Latin a. Proofreading cannot catch that, and the page was unfindable by
+      // searching for Осака.
+      //
+      // A single capital between separators is left alone — "リー・C・ファイン" is a real middle
+      // initial, not contamination.
+      else if (NATIVE_RANGES[locale]) {
+        const isNative = ch => NATIVE_RANGES[locale].some(([a, b]) => ch.codePointAt(0) >= a && ch.codePointAt(0) <= b);
+        const isLatin = ch => /[A-Za-z]/.test(ch);
+        const chars = [...text];
+        for (let i = 0; i < chars.length; i++) {
+          if (!isLatin(chars[i])) continue;
+          const left = chars[i - 1] ?? '', right = chars[i + 1] ?? '';
+          if (/[A-Z]/.test(chars[i]) && (!left || SEPARATORS.has(left)) && (!right || SEPARATORS.has(right))) continue;
+          if ((left && isNative(left)) || (right && isNative(right))) {
+            problems.push({ file, key, locale, text, scripts: ['latin spliced into native word'] });
+            break;
+          }
+        }
+      }
     }
   }
 }

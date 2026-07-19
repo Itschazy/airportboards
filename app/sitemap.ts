@@ -3,6 +3,7 @@ import { getAllIataCodes, AIRPORTS_PER_SITEMAP, getSitemapCount, getCountries, g
 import { getEventSlugs } from '@/lib/event-content';
 import { getMegaIataCodes } from '@/lib/warm';
 import { getTopRoutes } from '@/lib/top-routes';
+import { getRoute } from '@/lib/flights';
 import { locales } from '@/lib/i18n';
 import { LEGAL_LOCALES } from '@/lib/legal-content';
 
@@ -57,7 +58,7 @@ export async function generateSitemaps() {
   return Array.from({ length: getSitemapCount() }, (_, id) => ({ id }));
 }
 
-export default function sitemap({ id }: { id: number | string }): MetadataRoute.Sitemap {
+export default async function sitemap({ id }: { id: number | string }): Promise<MetadataRoute.Sitemap> {
   // Next passes `id` as a STRING — coerce, or `id === 0` fails (statics dropped) and
   // `(id + 1)` string-concats ("1"+1 = "11" → slice(1000,11000), overlapping children).
   const sid = Number(id);
@@ -85,15 +86,33 @@ export default function sitemap({ id }: { id: number | string }): MetadataRoute.
     // listed, so a route that fades from the boards stops being advertised instead of
     // pointing the crawler at a noindexed page. "Flights X to Y today" is the highest-intent
     // query family the site can answer.
+    // Advertise a route only if its page will actually index — the SAME predicate the page
+    // uses (route/[pair]/page.tsx sets robots.index from getRoute().length > 0), not a
+    // separate one that can disagree with it.
+    //
+    // It did disagree: 71 of the 484 seeded routes rendered "No direct flights found today"
+    // under noindex while this file listed them. data/top-routes.json was built by the manual
+    // harvest without the MIN_SNAPSHOTS gate — all 673 of its pairs carry seen: 1 — and
+    // getTopRoutes() returns SEED.top verbatim, so the gate never applied to it. Running the
+    // seed through rank() instead would drop all 484, including the 413 that work.
+    //
+    // getRoute reads the store with live:false and never contacts airlabs. This runs once per
+    // sitemap regeneration (revalidate = 86400), not per request.
     const seenPair = new Set<string>();
-    for (const [origin, pairs] of Object.entries(getTopRoutes())) {
-      void origin;
+    const pairList: string[] = [];
+    for (const pairs of Object.values(getTopRoutes())) {
       for (const pair of pairs) {
         if (seenPair.has(pair)) continue;
         seenPair.add(pair);
-        entries.push(entry(`/route/${pair}`, 'daily', 0.7));
+        pairList.push(pair);
       }
     }
+    const resolvable = await Promise.all(pairList.map(async pair => {
+      const [from, to] = pair.split('-');
+      if (!from || !to) return null;
+      try { return (await getRoute(from, to, 'en')).length > 0 ? pair : null; } catch { return null; }
+    }));
+    for (const pair of resolvable) if (pair) entries.push(entry(`/route/${pair}`, 'daily', 0.7));
   }
 
   for (const iata of slice) {

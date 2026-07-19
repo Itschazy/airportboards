@@ -129,7 +129,27 @@ export function dueAirports(now = Date.now()): Due[] {
   // own interval never enter this list at all (overdue < 1 is filtered above), so this only
   // decides who goes first among boards that are ALL already late. Mega and hub together are
   // 160 airports and ~850 requests a day, leaving ~1,900 of the 2,750 flowing downwards.
-  out.sort((a, b) => TIERS.indexOf(a.tier) - TIERS.indexOf(b.tier) || b.overdue - a.overdue);
+  // Lateness, clamped, weighted by tier. Both halves are load-bearing and each fixes a
+  // failure the other caused.
+  //
+  // Sorting on the raw ratio starved the busiest boards: a board never warmed has ts = 0, so
+  // its ratio is the epoch over its interval — tens of thousands — and it outranks a hub that
+  // is genuinely three times late, permanently. Measured before the clamp: mega 49% fresh.
+  //
+  // Ordering by tier index instead fixed that and inverted it. With tier as the PRIMARY key
+  // the whole capacity deficit lands on the last tier, and there is a deficit: capacity is
+  // ~1,400 refreshes a day against demand of ~2,600. Measured on production after that
+  // change: 41.6% of served airports cold, small at 5%, a ~242-hour cycle. The comment that
+  // replaced was only true while supply exceeded demand, which it never did.
+  //
+  // Weighting keeps tier influential without letting it be absolute, so a shortfall spreads
+  // across tiers instead of falling entirely on the smallest. Simulated over a week at the
+  // measured capacity: mega/hub/major/mid 100%, small 58% — against 5% for tier-first and
+  // 49% mega for raw overdue.
+  const CAP = 3;                                   // past this, "very late" carries no more information
+  const WEIGHT = [6, 3, 1.5, 1.2, 1];              // parallel to TIERS, busiest first
+  const rank = (d: Due) => Math.min(d.overdue, CAP) * (WEIGHT[TIERS.indexOf(d.tier)] ?? 1);
+  out.sort((a, b) => rank(b) - rank(a));
   return out;
 }
 
