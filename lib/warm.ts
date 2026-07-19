@@ -227,6 +227,24 @@ export function worldServiceCounts(): { probed: number; withService: number; emp
   };
 }
 
+/**
+ * Mega-tier airports (>= the top tier's minFlights measured departures/day), excluding
+ * closed ones. Used by the sitemap to advertise arrivals/departures subpages: these boards
+ * are always warm, so the subpages always carry rows and pass their own robots gate.
+ *
+ * Deliberately SEPARATE from getStaticIataCodes(): that 30-airport list also drives
+ * build-time prerendering, and widening it to the mega tier would add ~1,370 prerendered
+ * pages. The sitemap tier costs nothing; the prerender tier costs build time and disk.
+ */
+export function getMegaIataCodes(): string[] {
+  const svc = getServiceData();
+  const min = TIERS[0].minFlights;
+  return Object.entries(svc)
+    .filter(([iata, n]) => n >= min && !getAirport(iata)?.closed)
+    .map(([iata]) => iata)
+    .sort();
+}
+
 export function planSummary(): {
   tiers: { name: string; airports: number; intervalMin: number; reqPerDay: number }[];
   withService: number; noService: number; projectedMonthly: number;

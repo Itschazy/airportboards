@@ -138,7 +138,8 @@
     "faq_deps_q": "¿Cuántos vuelos salen de {name}?",
     "faq_deps_a": "Se contabilizaron alrededor de {n} salidas programadas en {name} ({iata}) cuando se midieron por última vez los horarios de vuelos el {date}.",
     "airport_lead": "{name} ({iata}) es un aeropuerto que presta servicio a {city}, {country}.",
-    "replaced_line": "{name} ({iata}) asumió el tráfico de {predecessors}."
+    "replaced_line": "{name} ({iata}) asumió el tráfico de {predecessors}.",
+    "delays_line": "Estado del panel hace {m} min: {delayed} de {pending} próximas salidas con retraso de 15 minutos o más."
   },
   "ui": {
     "departures": "Salidas",

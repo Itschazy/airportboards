@@ -57,6 +57,7 @@ export async function AirportBottom({ airport, locale, about, displayName, fligh
   nearestServed?: (Airport & { km: number }) | null;
 }) {
   const t = await getTranslations({ locale, namespace: 'home' });
+  const tNav = await getTranslations({ locale, namespace: 'nav' });
   const name = displayName || airport.name;
   const city = getCityName(airport.city, locale);
   const country = getCountryName(airport.country, locale);
@@ -108,6 +109,10 @@ export async function AirportBottom({ airport, locale, about, displayName, fligh
 
   // Answers are full sentences, not bare values. "LHR" answers nothing out of context; an
   // answer engine can only quote a fragment that still means something on its own.
+  // The board's Arrivals/Departures toggle is a <button>, so the two subpages are invisible
+  // to crawlers from here. Real anchors fix the orphaning found in the sitemap audit.
+  const subpageLinks = !noService && !airport.closed;
+
   const faq: { q: string; a: string }[] = [
     { q: t('faq_iata_q', { name }), a: t('faq_iata_a', { name, code: airport.iata }) },
     ...(airport.icao ? [{ q: t('faq_icao_q', { name }), a: t('faq_icao_a', { name, code: airport.icao }) }] : []),
@@ -176,6 +181,22 @@ export async function AirportBottom({ airport, locale, about, displayName, fligh
               <div style={{ fontSize: 14, color: SUB, marginTop: 4 }}>{city}, {country}{offset ? ` · ${offset}` : ''}</div>
             </div>
             <OverviewMetrics iata={airport.iata} depLabel={t('ov_dep')} arrLabel={t('ov_arr')} />
+            {/* Real anchors to the two subpages. The board's Departures/Arrivals toggle is a
+                <button>, so without these the arrivals page is unreachable for a crawler —
+                the sitemap audit found zero /arrivals hrefs in the whole page HTML. */}
+            {subpageLinks && (
+              <div style={{ display: 'flex', gap: 8, marginTop: 10 }}>
+                {(['departures', 'arrivals'] as const).map(d => (
+                  <Link key={d} href={`/${locale}/airport/${airport.iata}/${d}`} style={{
+                    flex: 1, textAlign: 'center', padding: '10px 0', borderRadius: 12,
+                    background: '#0B0B0B', border: '1px solid #1A1A1A', textDecoration: 'none',
+                    color: '#B4B4B4', fontSize: 14, fontWeight: 600,
+                  }}>
+                    {d === 'departures' ? tNav('departures') : tNav('arrivals')}
+                  </Link>
+                ))}
+              </div>
+            )}
           </section>
 
           {/* 3. POPULAR ROUTES (server-rendered → crawlable /route links) */}

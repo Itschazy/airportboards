@@ -443,7 +443,7 @@ function BottomSheet({ flight, mode, onClose, tz, locale }: {
 
 // ─── Main Component ───────────────────────────────────────────────────────────
 
-export function FlightBoard({ airport, locale, defaultMode = 'departures', displayName, initialFlights, initialFetchedAt, boardTotal, lead, noService = false }: {
+export function FlightBoard({ airport, locale, defaultMode = 'departures', displayName, initialFlights, initialFetchedAt, boardTotal, lead, statusLine = null, noService = false }: {
   airport: Airport;
   locale: string;
   defaultMode?: Mode;
@@ -455,6 +455,10 @@ export function FlightBoard({ airport, locale, defaultMode = 'departures', displ
    *  Answer engines quote lead sentences, and the H1 alone ("LHR") states nothing a reader
    *  could lift. Passed from the page so the wording stays localized. */
   lead?: string;
+  /** One dated, data-only line ("Board status as of N min ago: 3 of 41 upcoming departures
+   *  delayed by 15+ minutes."). Computed server-side with its own honesty gates; null when
+   *  the board is cold, stale or empty of upcoming flights. */
+  statusLine?: string | null;
   /** Total rows on the board BEFORE the SSR slice — the counter must not report the slice.
    *  page.tsx sends only the first 40 rows to keep the HTML light, and the counter was
    *  reading that array, so every large airport claimed exactly "40 departures today"
@@ -607,6 +611,9 @@ export function FlightBoard({ airport, locale, defaultMode = 'departures', displ
 
         {lead && (
           <p style={{ fontSize: 14, lineHeight: 1.5, color: C.secondary, margin: '10px 0 0', maxWidth: 620 }}>{lead}</p>
+        )}
+        {statusLine && (
+          <p style={{ fontSize: 13, lineHeight: 1.5, color: C.text, margin: '6px 0 0', maxWidth: 620, fontVariantNumeric: 'tabular-nums' }}>{statusLine}</p>
         )}
         {/* Live indicator — polite status region so AT hears the refresh. Hidden where no
             airline flies: there is nothing to be fresh about. */}

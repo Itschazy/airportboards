@@ -138,7 +138,8 @@
     "faq_deps_q": "How many flights depart from {name}?",
     "faq_deps_a": "About {n} scheduled departures were counted at {name} ({iata}) when flight schedules were last measured on {date}.",
     "airport_lead": "{name} ({iata}) is an airport serving {city}, {country}.",
-    "replaced_line": "{name} ({iata}) took over the traffic of {predecessors}."
+    "replaced_line": "{name} ({iata}) took over the traffic of {predecessors}.",
+    "delays_line": "Board status as of {m} min ago: {delayed} of {pending} upcoming departures delayed by 15+ minutes."
   },
   "ui": {
     "departures": "Departures",

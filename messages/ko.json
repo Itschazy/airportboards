@@ -138,7 +138,8 @@
     "faq_deps_q": "{name}에서 출발하는 항공편은 몇 편인가요?",
     "faq_deps_a": "운항 일정이 마지막으로 집계된 {date} 기준, {name}({iata})에서 약 {n}편의 예정 출발편이 확인되었습니다.",
     "airport_lead": "{name} ({iata})은 {country} {city} 지역을 담당하는 공항입니다.",
-    "replaced_line": "{name} ({iata})은 {predecessors}의 항공 수요를 인수했습니다."
+    "replaced_line": "{name} ({iata})은 {predecessors}의 항공 수요를 인수했습니다.",
+    "delays_line": "{m}분 전 기준 출발 현황: 예정된 출발편 {pending}편 중 {delayed}편이 15분 이상 지연되었습니다."
   },
   "ui": {
     "departures": "출발",

@@ -138,7 +138,8 @@
     "faq_deps_q": "Combien de vols partent de {name} ?",
     "faq_deps_a": "Environ {n} départs programmés ont été comptabilisés à {name} ({iata}) lors de la dernière mesure des horaires de vol, le {date}.",
     "airport_lead": "{name} ({iata}) est un aéroport qui dessert {city}, {country}.",
-    "replaced_line": "{name} ({iata}) a repris le trafic de {predecessors}."
+    "replaced_line": "{name} ({iata}) a repris le trafic de {predecessors}.",
+    "delays_line": "État du tableau d’affichage il y a {m} min : {delayed} des {pending} prochains départs sont retardés de 15 min ou plus."
   },
   "ui": {
     "departures": "Départs",

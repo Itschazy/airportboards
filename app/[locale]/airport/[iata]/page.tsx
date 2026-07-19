@@ -150,6 +150,28 @@ export default async function AirportPage({ params }: Props) {
       .filter(a => a.closed === handover)
       .map(a => `${getAirportName(a.iata, locale, a.name)} (${a.iata})`);
   })();
+  // Honest delay summary for mega-tier boards — the "are there delays at X right now"
+  // query family, answered from data we hold rather than prose. Gates (all mandatory):
+  // count only status==='delayed' (=15+ min, see mapStatus), denominator = flights still
+  // to depart (the 80-row board includes already-departed rows), suppress when the board
+  // is cold, empty of upcoming flights, or the store data is older than two hours — a
+  // "right now" claim on a six-hour-old snapshot would be the exact kind of lie the last
+  // three waves removed.
+  const delayLine = (() => {
+    if ((serviceLevel(airport.iata) ?? 0) < 400) return null;
+    const fetchedAt = getBoardFetchedAt(airport.iata, 'departures');
+    if (!fetchedAt) return null;
+    const ageMin = Math.round((Date.now() - fetchedAt) / 60000);
+    if (ageMin > 120) return null;
+    const pending = initialFlights.filter(f => f.status !== 'departed' && f.status !== 'cancelled');
+    if (!pending.length) return null;
+    const delayed = pending.filter(f => f.status === 'delayed').length;
+    return tHome('delays_line', {
+      m: String(Math.max(1, ageMin)),
+      delayed: String(delayed),
+      pending: String(pending.length),
+    });
+  })();
   const noService = hasNoService(airport.iata);
   const nearestWithFlights = noService
     ? (() => {
@@ -191,6 +213,9 @@ export default async function AirportPage({ params }: Props) {
         latitude: airport.lat,
         longitude: airport.lon,
       },
+      // Machine-consumable map link; coordinates are present and validated for every
+      // airport in the dataset. %2C-encoded to match Google's Maps URL API format.
+      hasMap: `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(`${airport.lat},${airport.lon}`)}`,
     },
     {
       '@context': 'https://schema.org',
@@ -283,7 +308,7 @@ export default async function AirportPage({ params }: Props) {
       {/* The visible <h1> now lives in FlightBoard's airport header (single semantic h1). */}
       {/* SSR only the first 40 rows to keep the HTML light (the client refetches the full
           board on mount); AirportBottom still gets the full set to aggregate routes/airlines. */}
-      <FlightBoard airport={airport} locale={locale} displayName={name} initialFlights={initialFlights.slice(0, 40)} initialFetchedAt={getBoardFetchedAt(airport.iata, 'departures')} boardTotal={initialFlights.length} lead={tHome('airport_lead', { name, iata: airport.iata, city, country })} noService={noService} />
+      <FlightBoard airport={airport} locale={locale} displayName={name} initialFlights={initialFlights.slice(0, 40)} initialFetchedAt={getBoardFetchedAt(airport.iata, 'departures')} boardTotal={initialFlights.length} lead={tHome('airport_lead', { name, iata: airport.iata, city, country })} statusLine={delayLine} noService={noService} />
       <AirportBottom airport={airport} locale={locale} about={about} displayName={name} flights={initialFlights} noService={noService} nearestServed={nearestWithFlights} />
     </>
   );

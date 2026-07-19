@@ -138,7 +138,8 @@
     "faq_deps_q": "كم عدد الرحلات التي تغادر من {name}؟",
     "faq_deps_a": "تم تسجيل حوالي {n} رحلة مغادرة مجدولة في {name} ({iata}) عند آخر قياس لجداول الرحلات في {date}.",
     "airport_lead": "{name} ({iata}) هو مطار يخدم {city}، {country}.",
-    "replaced_line": "تولّى {name} ({iata}) حركة النقل الجوي الخاصة بـ{predecessors}."
+    "replaced_line": "تولّى {name} ({iata}) حركة النقل الجوي الخاصة بـ{predecessors}.",
+    "delays_line": "حالة لوحة المغادرات قبل {m} دقيقة: تأخرت {delayed} من أصل {pending} من المغادرات القادمة لمدة 15 دقيقة أو أكثر."
   },
   "ui": {
     "departures": "المغادرات",

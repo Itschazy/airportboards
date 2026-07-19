@@ -138,7 +138,8 @@
     "faq_deps_q": "{name} kalkışlı kaç uçuş var?",
     "faq_deps_a": "Uçuş tarifeleri en son {date} tarihinde ölçüldüğünde {name} ({iata}) için yaklaşık {n} tarifeli kalkış kaydedildi.",
     "airport_lead": "{name} ({iata}), {city}, {country} şehrine hizmet veren bir havalimanıdır.",
-    "replaced_line": "{name} ({iata}), {predecessors} uçuş trafiğini devraldı."
+    "replaced_line": "{name} ({iata}), {predecessors} uçuş trafiğini devraldı.",
+    "delays_line": "{m} dk önceki uçuş panosu durumu: Yaklaşan {pending} kalkıştan {delayed} tanesi 15 dakika veya daha fazla gecikmeli."
   },
   "ui": {
     "departures": "Kalkışlar",

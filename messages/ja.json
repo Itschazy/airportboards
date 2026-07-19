@@ -138,7 +138,8 @@
     "faq_deps_q": "{name}から出発する便は何便ありますか？",
     "faq_deps_a": "{date}に運航スケジュールを最後に確認した時点で、{name}（{iata}）では約{n}便の定期出発便が確認されました。",
     "airport_lead": "{name}（{iata}）は、{country}の{city}を利用圏とする空港です。",
-    "replaced_line": "{name} ({iata}) は{predecessors}の航空需要を引き継ぎました。"
+    "replaced_line": "{name} ({iata}) は{predecessors}の航空需要を引き継ぎました。",
+    "delays_line": "{m}分前時点の運航掲示板状況：今後出発予定の{pending}便のうち、{delayed}便が15分以上遅延しています。"
   },
   "ui": {
     "departures": "出発",

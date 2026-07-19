@@ -138,7 +138,8 @@
     "faq_deps_q": "有多少个航班从{name}出发？",
     "faq_deps_a": "上次于{date}统计航班时刻表时，{name}（{iata}）约有{n}个定期出发航班。",
     "airport_lead": "{name}（{iata}）是服务于{country}{city}的一座机场。",
-    "replaced_line": "{name} ({iata}) 接管了 {predecessors} 的客运流量。"
+    "replaced_line": "{name} ({iata}) 接管了 {predecessors} 的客运流量。",
+    "delays_line": "截至 {m} 分钟前的看板状态：{pending} 个即将出发航班中有 {delayed} 个延误 15 分钟以上。"
   },
   "ui": {
     "departures": "出发",

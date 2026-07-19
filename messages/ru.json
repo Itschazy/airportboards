@@ -138,7 +138,8 @@
     "faq_deps_q": "Сколько рейсов вылетает из {name}?",
     "faq_deps_a": "По состоянию на {date} в {name} ({iata}) было насчитано около {n} запланированных вылетов.",
     "airport_lead": "{name} ({iata}) — аэропорт, обслуживающий {city}, {country}.",
-    "replaced_line": "На {name} ({iata}) был переведён пассажиропоток {predecessors}."
+    "replaced_line": "На {name} ({iata}) был переведён пассажиропоток {predecessors}.",
+    "delays_line": "Статус табло {m} мин назад: у {delayed} из {pending} предстоящих вылетов задержка на 15 минут и более."
   },
   "ui": {
     "departures": "Вылеты",

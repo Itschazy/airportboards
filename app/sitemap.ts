@@ -1,12 +1,19 @@
 import type { MetadataRoute } from 'next';
 import { getAllIataCodes, AIRPORTS_PER_SITEMAP, getSitemapCount, getCountries, getStaticIataCodes, getCities } from '@/lib/airports';
 import { getEventSlugs } from '@/lib/event-content';
+import { getMegaIataCodes } from '@/lib/warm';
+import topRoutes from '@/data/top-routes.json';
 import { locales } from '@/lib/i18n';
 
 const BASE = 'https://airportsboard.live';
 const LETTERS = 'abcdefghijklmnopqrstuvwxyz'.split('');
 // Major hubs get higher priority than obscure airfields (priority is relative).
 const HUBS = new Set(getStaticIataCodes());
+// Arrivals/departures subpages are advertised for the whole mega tier (~68 warmed-hot
+// airports), not just the 30 prerendered ones — "X arrivals" is a huge query family and
+// these boards always have rows. Kept separate from HUBS on purpose: HUBS also controls
+// prerendering, and coupling the two would balloon the build.
+const SUBPAGE_HUBS = new Set(getMegaIataCodes());
 
 type Freq = MetadataRoute.Sitemap[number]['changeFrequency'];
 
@@ -51,6 +58,21 @@ export default function sitemap({ id }: { id: number | string }): MetadataRoute.
     entries.push(entry('/events', 'weekly', 0.6));   // permanent hub
     for (const s of getEventSlugs()) entries.push(entry(`/event/${s}`, 'daily', 0.8));
     // Airline pages are noindex (thin across ~976 codes) — intentionally not listed.
+
+    // Top routes out of mega airports, harvested from the live boards and cross-confirmed
+    // on both ends (scripts/harvest-top-routes.mjs). Only pairs with repeated evidence are
+    // listed, so a route that fades from the boards stops being advertised instead of
+    // pointing the crawler at a noindexed page. "Flights X to Y today" is the highest-intent
+    // query family the site can answer.
+    const seenPair = new Set<string>();
+    for (const [origin, pairs] of Object.entries(topRoutes.top as Record<string, string[]>)) {
+      void origin;
+      for (const pair of pairs) {
+        if (seenPair.has(pair)) continue;
+        seenPair.add(pair);
+        entries.push(entry(`/route/${pair}`, 'daily', 0.7));
+      }
+    }
   }
 
   for (const iata of slice) {
@@ -61,7 +83,7 @@ export default function sitemap({ id }: { id: number | string }): MetadataRoute.
     // usually empty "No flights" near-dupes; listing them wasted crawl budget and fed
     // the mass-exclusion wave. They stay reachable (footer/board links) and indexable
     // when they DO have flights (robots gate in each subpage) — just not in the sitemap.
-    if (hub) {
+    if (SUBPAGE_HUBS.has(iata)) {
       entries.push(entry(`/airport/${iata}/arrivals`, cf, 0.9));
       entries.push(entry(`/airport/${iata}/departures`, cf, 0.9));
     }

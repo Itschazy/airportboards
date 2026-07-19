@@ -138,7 +138,8 @@
     "faq_deps_q": "Wie viele Flüge starten ab {name}?",
     "faq_deps_a": "Bei der letzten Erfassung der Flugpläne am {date} wurden am {name} ({iata}) etwa {n} planmäßige Abflüge gezählt.",
     "airport_lead": "{name} ({iata}) ist ein Flughafen für {city}, {country}.",
-    "replaced_line": "{name} ({iata}) übernahm den Flugverkehr von {predecessors}."
+    "replaced_line": "{name} ({iata}) übernahm den Flugverkehr von {predecessors}.",
+    "delays_line": "Anzeigetafel-Status vor {m} Min.: {delayed} von {pending} anstehenden Abflügen haben mindestens 15 Minuten Verspätung."
   },
   "ui": {
     "departures": "Abflüge",
