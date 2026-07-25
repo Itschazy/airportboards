@@ -94,7 +94,7 @@
     "faq_arrive_q": "{name} için ne kadar erken gelmeliyim?",
     "faq_arrive_a": "Uluslararası uçuşlar için kalkıştan en az 3 saat; yurt içi uçuşlar için yaklaşık 2 saat öncesi önerilir.",
     "faq_live_q": "{name} için canlı uçuşları nasıl görebilirim?",
-    "faq_live_a": "Bu sayfadaki uçuş bilgi panosu, {name} ({iata}) için varışları ve kalkışları gösterir. Sayfa açıkken her dakika yenilenir ve verilerin en son ne zaman güncellendiğini her zaman gösterir.",
+    "faq_live_a": "Bu sayfadaki pano, {name} ({iata}) için varışları ve kalkışları gösterir. Sayfa açıkken güncellemeleri yeniden kontrol eder ve her pano verilerinin ne kadar eski olduğunu belirtir — yoğun merkezler saatler içinde, daha sakin havalimanları ise daha seyrek yenilenir.",
     "footer_tagline": "Dünya genelinde 6.000'den fazla havalimanı için canlı uçuş panoları. Varışlar ve kalkışlar; her panoda verilerin ne kadar güncel olduğu gösterilir.",
     "footer_countries": "Popüler ülkeler",
     "footer_cities": "Popüler şehirler",
@@ -142,7 +142,8 @@
     "delays_line": "{m} dk önceki uçuş panosu durumu: Yaklaşan {pending} kalkıştan {delayed} tanesi 15 dakika veya daha fazla gecikmeli.",
     "country_split_partial": "{country} içinde IATA koduna sahip {count} havalimanından en az {served} tanesi, {date} itibarıyla tarifeli yolcu hizmeti sunmaktadır.",
     "world_split_partial": "AirportsBoard dünya genelinde IATA koduna sahip {total} havalimanını izler. {date} tarihli ölçüme göre bunlardan en az {served} tanesi tarifeli yolcu hizmeti sunuyordu.",
-    "airport_lead_same": "{name} Havalimanı ({iata}), {country}."
+    "airport_lead_same": "{name} Havalimanı ({iata}), {country}.",
+    "routes_title_in": "{iata} — Popüler geliş rotaları"
   },
   "ui": {
     "departures": "Kalkışlar",

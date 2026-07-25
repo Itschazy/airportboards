@@ -94,7 +94,7 @@
     "faq_arrive_q": "{name}에는 얼마나 일찍 도착해야 하나요?",
     "faq_arrive_a": "국제선은 출발 최소 3시간 전, 국내선은 약 2시간 전에 도착하세요.",
     "faq_live_q": "{name}의 실시간 항공편을 어떻게 볼 수 있나요?",
-    "faq_live_a": "이 페이지의 운항 안내판은 {name} ({iata})의 도착 및 출발 정보를 보여줍니다. 페이지가 열려 있는 동안 1분마다 새로고침되며, 데이터가 마지막으로 업데이트된 시각을 항상 표시합니다.",
+    "faq_live_a": "이 페이지의 운항 안내판은 {name} ({iata})의 도착 및 출발 정보를 보여줍니다. 페이지가 열려 있는 동안 업데이트 여부를 다시 확인하며, 각 안내판에는 데이터가 얼마나 오래된 것인지 표시됩니다. 이용객이 많은 허브 공항은 몇 시간 이내에 새로고침되고, 한산한 공항은 그보다 덜 자주 새로고침됩니다.",
     "footer_tagline": "전 세계 6,000개 이상 공항의 실시간 운항 현황판. 모든 현황판에 데이터 갱신 후 경과 시간이 표시되는 도착 및 출발 정보.",
     "footer_countries": "인기 국가",
     "footer_cities": "인기 도시",
@@ -142,7 +142,8 @@
     "delays_line": "{m}분 전 기준 출발 현황: 예정된 출발편 {pending}편 중 {delayed}편이 15분 이상 지연되었습니다.",
     "country_split_partial": "{country}에서 국제항공운송협회 코드가 있는 공항 {count}곳 중 {date} 기준으로 최소 {served}곳은 정기 여객편이 운항됩니다.",
     "world_split_partial": "AirportsBoard는 전 세계에서 국제항공운송협회 코드가 있는 공항 {total}곳을 추적합니다. {date} 측정 기준으로 그중 최소 {served}곳에 정기 여객편이 운항되었습니다.",
-    "airport_lead_same": "{name}({iata}), {country}."
+    "airport_lead_same": "{name}({iata}), {country}.",
+    "routes_title_in": "{iata} 도착 인기 노선"
   },
   "ui": {
     "departures": "출발",

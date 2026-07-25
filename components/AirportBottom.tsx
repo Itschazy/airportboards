@@ -54,8 +54,13 @@ function Chevron() {
   return <svg width="6" height="11" viewBox="0 0 6 11" fill="none" style={{ flexShrink: 0 }}><path d="M1 1L5 5.5L1 10" stroke="#3A3A3C" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" /></svg>;
 }
 
-export async function AirportBottom({ airport, locale, about, displayName, flights = [], noService = false, nearestServed = null }: {
+export async function AirportBottom({ airport, locale, about, displayName, flights = [], noService = false, nearestServed = null, direction = 'departures' }: {
   airport: Airport; locale: string; about: string | null; displayName?: string; flights?: FlightRow[];
+  /**
+   * Which board the caller rendered. Controls which end of each flight the routes section
+   * aggregates, and therefore whether /route links point out of or into this airport.
+   */
+  direction?: 'departures' | 'arrivals';
   /** Measured: no airline operates scheduled service here (see data/airport-service.json). */
   noService?: boolean;
   /** Nearest airport that does have scheduled service — computed once by the page. */
@@ -90,15 +95,25 @@ export async function AirportBottom({ airport, locale, about, displayName, fligh
   const cityInfo = getCities().find(c => c.city === airport.city && c.country === airport.country);
   const cityLink = cityInfo && cityInfo.count > 1 ? `/${locale}/city/${cityInfo.slug}` : null;
 
-  // Derive popular routes + airlines from today's SSR departures board, so these links
-  // ship as real <a href> in the server HTML (the client version left /route and /airline
-  // pages orphaned/undiscoverable). Aggregated by destination airport / operating carrier.
+  // Derive popular routes + airlines from today's SSR board, so these links ship as real
+  // <a href> in the server HTML (the client version left /route and /airline pages
+  // orphaned/undiscoverable). Aggregated by the airport at the OTHER end of each flight.
+  //
+  // Which end that is depends on the board: a departures board names destinations, an
+  // arrivals board names origins. Reading arrIata unconditionally is what left the arrivals
+  // subpage with an empty routes section — on an arrivals board arrIata IS this airport, so
+  // every row was filtered out by the guard below.
+  const inbound = direction === 'arrivals';
   const routeMap = new Map<string, { label: string; n: number }>();
   const airlineMap = new Map<string, { name: string; n: number }>();
   for (const f of flights) {
-    if (f.arrIata && f.arrIata !== airport.iata) {
-      const e = routeMap.get(f.arrIata) || { label: ('destination' in f && f.destination) || f.arrIata, n: 0 };
-      e.n++; routeMap.set(f.arrIata, e);
+    const otherIata = inbound ? f.depIata : f.arrIata;
+    const otherLabel = inbound
+      ? ('origin' in f && f.origin) || f.depIata
+      : ('destination' in f && f.destination) || f.arrIata;
+    if (otherIata && otherIata !== airport.iata) {
+      const e = routeMap.get(otherIata) || { label: otherLabel || otherIata, n: 0 };
+      e.n++; routeMap.set(otherIata, e);
     }
     if (f.airlineIata) {
       const e = airlineMap.get(f.airlineIata) || { name: f.airline || f.airlineIata, n: 0 };
@@ -248,10 +263,12 @@ export async function AirportBottom({ airport, locale, about, displayName, fligh
           {/* 3. POPULAR ROUTES (server-rendered → crawlable /route links) */}
           {routes.length > 0 && (
             <section className="cv-auto" style={sec}>
-              <H2 href={`/${locale}/airport/${airport.iata}/departures`} viewAll={t('view_all')}>{t('routes_title', { iata: airport.iata })}</H2>
+              <H2 href={`/${locale}/airport/${airport.iata}/${inbound ? 'arrivals' : 'departures'}`} viewAll={t('view_all')}>{t(inbound ? 'routes_title_in' : 'routes_title', { iata: airport.iata })}</H2>
               <div style={{ display: 'flex', gap: 12, overflowX: 'auto', paddingBottom: 4, scrollbarWidth: 'none' }}>
                 {routes.map(r => (
-                  <Link key={r.iata} href={`/${locale}/route/${airport.iata}-${r.iata}`} style={{ flexShrink: 0, width: 160, textDecoration: 'none', color: 'inherit', background: '#0B0B0B', border: '1px solid #1A1A1A', borderRadius: 16, padding: '14px 16px' }}>
+                  /* Direction matters in the URL too: /route/A-B is "flights from A to B",
+                     so an arrivals board must link origin→here, not here→origin. */
+                  <Link key={r.iata} href={`/${locale}/route/${inbound ? `${r.iata}-${airport.iata}` : `${airport.iata}-${r.iata}`}`} style={{ flexShrink: 0, width: 160, textDecoration: 'none', color: 'inherit', background: '#0B0B0B', border: '1px solid #1A1A1A', borderRadius: 16, padding: '14px 16px' }}>
                     <div style={{ fontSize: 22, fontWeight: 700, color: '#FFFFFF', letterSpacing: '-0.02em' }}>{r.iata}</div>
                     <div style={{ fontSize: 13, color: SUB, marginTop: 3, whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>{r.label.replace(/\s*\([A-Z]{3}\)\s*$/, '')}</div>
                     <div style={{ fontSize: 12, color: '#34C759', marginTop: 10, fontWeight: 600 }}>{t('per_day', { n: r.n })}</div>

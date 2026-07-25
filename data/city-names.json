@@ -61056,19 +61056,6 @@
     "it": "Sulawesi Sudorientale",
     "tr": "Güneydoğu Sulawesi"
   },
-  "Tselinograd": {
-    "ru": "Целиноград",
-    "zh": "采林诺格勒",
-    "ja": "ツェリノゴラド",
-    "ko": "첼리노그라드",
-    "ar": "تسيلينوغراد",
-    "hi": "त्सेलिनोग्राद",
-    "de": "Tselinograd",
-    "fr": "Tselinograd",
-    "es": "Tselinógrad",
-    "it": "Tselinograd",
-    "tr": "Tselinograd"
-  },
   "Taos": {
     "ru": "Таос",
     "zh": "陶斯",
@@ -72595,5 +72582,18 @@
     "es": "Grenchen",
     "it": "Grenchen",
     "tr": "Grenchen"
+  },
+  "Astana": {
+    "ru": "Целиноград",
+    "zh": "采林诺格勒",
+    "ja": "ツェリノゴラド",
+    "ko": "첼리노그라드",
+    "ar": "تسيلينوغراد",
+    "hi": "त्सेलिनोग्राद",
+    "de": "Tselinograd",
+    "fr": "Tselinograd",
+    "es": "Tselinógrad",
+    "it": "Tselinograd",
+    "tr": "Tselinograd"
   }
 }

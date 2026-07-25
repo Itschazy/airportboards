@@ -8,7 +8,7 @@
     "venueCity": "East Rutherford, New Jersey",
     "country": "US",
     "type": "sports",
-    "status": "scheduled",
+    "status": "past",
     "sources": [
       "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026",
       "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_knockout_stage"

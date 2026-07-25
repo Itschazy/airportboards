@@ -94,7 +94,7 @@
     "faq_arrive_q": "Quanto prima dovrei arrivare a {name}?",
     "faq_arrive_a": "Per i voli internazionali, arriva almeno 3 ore prima della partenza; per i voli nazionali, circa 2 ore.",
     "faq_live_q": "Come posso vedere i voli in tempo reale a {name}?",
-    "faq_live_a": "Il tabellone in questa pagina mostra gli arrivi e le partenze di {name} ({iata}). Si aggiorna ogni minuto mentre la pagina è aperta e indica sempre quando i dati sono stati aggiornati l'ultima volta.",
+    "faq_live_a": "Il tabellone in questa pagina mostra gli arrivi e le partenze di {name} ({iata}). Verifica la presenza di aggiornamenti mentre la pagina è aperta e ogni tabellone indica quanto sono recenti i suoi dati: gli hub più trafficati vengono aggiornati entro poche ore, gli aeroporti più tranquilli meno spesso.",
     "footer_tagline": "Tabelloni aeroportuali in tempo reale per oltre 6.000 aeroporti in tutto il mondo. Arrivi e partenze, con l’età dei dati indicata su ogni tabellone.",
     "footer_countries": "Paesi più popolari",
     "footer_cities": "Città più popolari",
@@ -142,7 +142,8 @@
     "delays_line": "Stato del tabellone {m} min fa: {delayed} su {pending} prossime partenze in ritardo di almeno 15 minuti.",
     "country_split_partial": "{country}: dei {count} aeroporti con codici IATA, almeno {served} hanno un servizio passeggeri di linea al {date}.",
     "world_split_partial": "AirportsBoard monitora {total} aeroporti con codici IATA nel mondo. Alla rilevazione del {date}, almeno {served} di essi avevano un servizio passeggeri di linea.",
-    "airport_lead_same": "Aeroporto {name} ({iata}), {country}."
+    "airport_lead_same": "Aeroporto {name} ({iata}), {country}.",
+    "routes_title_in": "Rotte popolari per {iata}"
   },
   "ui": {
     "departures": "Partenze",

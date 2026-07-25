@@ -14,6 +14,7 @@ import { getBoard, getBoardFetchedAt } from '@/lib/flights';
 import { FlightBoard } from '@/components/FlightBoard';
 import { AirportBottom } from '@/components/AirportBottom';
 import { locales } from '@/lib/i18n';
+import { currentIata } from '@/lib/iata-aliases';
 import { showCityFlag, fold } from '@/lib/show-city';
 
 const BASE = 'https://airportsboard.live';
@@ -146,6 +147,10 @@ export default async function AirportPage({ params }: Props) {
   // (saves crawl budget; permanent so engines drop the lowercase variant from the index).
   if (iata !== iata.toUpperCase()) permanentRedirect(`/${locale}/airport/${iata.toUpperCase()}`);
   const airport = getAirport(iata.toUpperCase());
+  // A retired code (TSE → NQZ) redirects to the live one rather than 404ing or, worse,
+  // rendering a stale record. See lib/iata-aliases.ts.
+  const renamed = currentIata(iata);
+  if (renamed) permanentRedirect(`/${locale}/airport/${renamed}`);
   if (!airport) notFound();
 
   const canonical = `${BASE}/${locale}/airport/${airport.iata}`;
@@ -300,7 +305,11 @@ export default async function AirportPage({ params }: Props) {
       // entry's timestamp), not from render time: an ISR regeneration that re-serves the
       // same six-hour-old board must not claim it was just modified. Omitted entirely when
       // the board is empty — that page is static facts and has no freshness to assert.
-      ...(boardFetchedAt ? { dateModified: new Date(boardFetchedAt).toISOString() } : {}),
+      // Presence of a timestamp is NOT presence of a board: the warmer stamps the store even
+      // when the provider answered with an empty list, so this emitted dateModified on pages
+      // whose visible content is "no flights" — asserting freshness about nothing, which is
+      // precisely what the comment above forbids. Require rows as well as a timestamp.
+      ...(boardFetchedAt && initialFlights.length ? { dateModified: new Date(boardFetchedAt).toISOString() } : {}),
     },
   ];
 

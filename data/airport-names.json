@@ -65770,19 +65770,6 @@
     "it": "Tres Esquinas",
     "tr": "Tres Esquinas"
   },
-  "TSE": {
-    "ru": "Астана",
-    "zh": "阿斯塔纳",
-    "ja": "アスタナ",
-    "ko": "아스타나",
-    "ar": "أستانا",
-    "hi": "अस्ताना",
-    "de": "Astana",
-    "fr": "Astana",
-    "es": "Astaná",
-    "it": "Astana",
-    "tr": "Astana"
-  },
   "TRG": {
     "ru": "Тауринга",
     "zh": "陶朗加",
@@ -78735,5 +78722,18 @@
     "es": "Santa Mónica",
     "it": "Santa Monica",
     "tr": "Santa Monica"
+  },
+  "NQZ": {
+    "ru": "Астана",
+    "zh": "阿斯塔纳",
+    "ja": "アスタナ",
+    "ko": "아스타나",
+    "ar": "أستانا",
+    "hi": "अस्ताना",
+    "de": "Astana",
+    "fr": "Astana",
+    "es": "Astaná",
+    "it": "Astana",
+    "tr": "Astana"
   }
 }

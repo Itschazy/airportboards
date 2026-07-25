@@ -94,7 +94,7 @@
     "faq_arrive_q": "我应提前多久到达 {name}？",
     "faq_arrive_a": "国际航班请至少在起飞前 3 小时到达；国内航班约提前 2 小时。",
     "faq_live_q": "如何查看 {name} 的实时航班？",
-    "faq_live_a": "本页面的航班信息板显示{name}（{iata}）的到达和出发航班。页面打开期间每分钟刷新一次，并始终显示数据的最后更新时间。",
+    "faq_live_a": "本页面的航班信息板显示{name}（{iata}）的到达和出发航班。页面打开期间会重新检查更新，并且每个信息板都会说明其数据的新旧程度——繁忙枢纽机场的数据会在数小时内更新，较清闲的机场更新频率较低。",
     "footer_tagline": "覆盖全球 6,000 多座机场的实时航班信息看板。提供到达和出发信息，每个看板都会显示数据时效。",
     "footer_countries": "热门国家",
     "footer_cities": "热门城市",
@@ -142,7 +142,8 @@
     "delays_line": "截至 {m} 分钟前的看板状态：{pending} 个即将出发航班中有 {delayed} 个延误 15 分钟以上。",
     "country_split_partial": "截至{date}，{country}拥有国际航空运输协会代码的{count}个机场中，至少有{served}个提供定期客运服务。",
     "world_split_partial": "AirportsBoard 追踪全球 {total} 个拥有国际航空运输协会代码的机场。根据 {date} 的测量，其中至少有 {served} 个提供定期客运服务。",
-    "airport_lead_same": "{name}机场（{iata}），{country}。"
+    "airport_lead_same": "{name}机场（{iata}），{country}。",
+    "routes_title_in": "前往 {iata} 的热门航线"
   },
   "ui": {
     "departures": "出发",

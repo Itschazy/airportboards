@@ -31,6 +31,12 @@ const PREMIUM = new Set([
   'SVO','ORD','ATL','EWR','LGA','BOS','SFO','MIA','DFW','DEN','SEA','LGW','FCO','BCN','MAD',
   'MUC','ZRH','CPH','BRU','VIE','HEL','LIS','ARN','OSL','GVA','LED','SYD','MEL','BOM','DEL',
   'BKK','KUL','CGK','GRU','GIG',
+  // Added later than the original top-50 sweep and therefore never written by it:
+  // BER had no content file at all, in any of the twelve locales, so Berlin's page shipped
+  // with no About section; NQZ is Astana, which the source list carried under the retired
+  // code TSE (see lib/iata-aliases.ts) with its city recorded as "Tselinograd". Both are
+  // capital-city hubs and belong in the premium tier on the same grounds as their peers here.
+  'BER','NQZ',
 ]);
 const modelFor = (iata) => PREMIUM.has(iata)
   ? { model: 'gpt-5.5', effort: null }

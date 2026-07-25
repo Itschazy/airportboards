@@ -73,7 +73,16 @@ function db(): Store {
     try { mem = JSON.parse(fs.readFileSync(STORE_PATH, 'utf8')) as Store; }
     catch { mem = { month: monthKey(), count: 0, entries: {} }; }
   }
-  if (mem.month !== monthKey()) mem = { month: monthKey(), count: 0, entries: {} }; // roll over each month
+  if (mem.month !== monthKey()) {
+    // A new calendar month resets the SPEND, never the data. Rebuilding the whole object
+    // here also dropped `entries` — so at 00:00 UTC on the 1st every board on the site went
+    // empty at once, all 2,759 served airports rendered "no flights" (and therefore noindex),
+    // and the warmer needed ~2.7 days at the achievable rate to fill them back in. The boards
+    // are paid-for content that stays valid across the billing boundary; only the counter and
+    // its per-kind split belong to the month. `providerLimit` is a property of the key, not
+    // of the month, so it survives too.
+    mem = { ...mem, month: monthKey(), count: 0, byKind: { warm: 0, human: 0 } };
+  }
   return mem;
 }
 

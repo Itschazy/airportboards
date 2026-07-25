@@ -72,13 +72,41 @@ function scriptOf(cp) {
 let checked = 0;
 const problems = [];
 
-for (const file of fs.readdirSync('data').filter(f => f.endsWith('.json'))) {
-  const p = path.join('data', file);
+/**
+ * Files to walk: data/*.json PLUS data/airport-content/*.json.
+ *
+ * readdirSync('data') only lists the top level, so the airport prose — 6,072 files, 72,864
+ * localised paragraphs, 99.9% of the localised corpus by volume and the ONLY unique text on
+ * an airport page — was never covered by this check at all. That is how 863 English
+ * paragraphs came to carry Arabic, Chinese, Japanese, Devanagari and Hangul, and 1,187 the
+ * "arrivals (arrivals)" tautology, without anything failing. A validator that skips the
+ * corpus it exists to protect is worse than no validator, because it reports success.
+ */
+const FILES = [
+  ...fs.readdirSync('data').filter(f => f.endsWith('.json')).map(f => path.join('data', f)),
+  ...(fs.existsSync(path.join('data', 'airport-content'))
+    ? fs.readdirSync(path.join('data', 'airport-content'))
+        .filter(f => f.endsWith('.json'))
+        .map(f => path.join('data', 'airport-content', f))
+    : []),
+];
+
+for (const p of FILES) {
+  const file = path.relative('data', p);
   let json;
   try { json = JSON.parse(fs.readFileSync(p, 'utf8')); } catch { continue; }
   if (!json || typeof json !== 'object' || Array.isArray(json)) continue;
 
-  for (const [key, value] of Object.entries(json)) {
+  // Two shapes live under data/. The dictionaries are {key: {locale: text}} — airport-names,
+  // city-names and so on. The prose files are flat {locale: text}, one file per airport. Wrap
+  // the flat ones so a single loop handles both; without this the nested walk below hits a
+  // string where it expects an object and `continue`s past the entire prose corpus.
+  const isFlat = Object.values(json).every(v => typeof v === 'string');
+  const entries = isFlat
+    ? [[path.basename(p, '.json'), json]]
+    : Object.entries(json);
+
+  for (const [key, value] of entries) {
     if (!value || typeof value !== 'object' || Array.isArray(value)) continue;
     for (const [locale, text] of Object.entries(value)) {
       const allowed = ALLOWED[locale];
@@ -101,7 +129,15 @@ for (const file of fs.readdirSync('data').filter(f => f.endsWith('.json'))) {
       //
       // A single capital between separators is left alone — "リー・C・ファイン" is a real middle
       // initial, not contamination.
-      else if (NATIVE_RANGES[locale]) {
+      //
+      // Names only. The heuristic reads "a Latin letter touching a native character" as a
+      // homoglyph splice, which holds for a two-word airport name and does not hold for a
+      // paragraph: prose legitimately sets carrier names in Latin against native script all
+      // the time — 「JAL、ANA／AIRDO」, «شركات يابانية مثل ANA وJAL», "Air Peace وOverland".
+      // Running it over the prose corpus produced hundreds of those as findings, which is how
+      // a check stops being read. The cross-script test above is the one that matters there,
+      // and it runs on everything.
+      else if (NATIVE_RANGES[locale] && !isFlat) {
         const isNative = ch => NATIVE_RANGES[locale].some(([a, b]) => ch.codePointAt(0) >= a && ch.codePointAt(0) <= b);
         const isLatin = ch => /[A-Za-z]/.test(ch);
         const chars = [...text];
@@ -119,7 +155,7 @@ for (const file of fs.readdirSync('data').filter(f => f.endsWith('.json'))) {
   }
 }
 
-console.log(`checked ${checked} localised strings across data/*.json`);
+console.log(`checked ${checked} localised strings across ${FILES.length} files (data/*.json + data/airport-content/*.json)`);
 
 if (!problems.length) {
   console.log('no foreign-script contamination found');

@@ -94,7 +94,7 @@
     "faq_arrive_q": "Combien de temps à l'avance dois‑je arriver à {name} ?",
     "faq_arrive_a": "Pour les vols internationaux, arrivez au moins 3 heures avant le départ ; pour les vols nationaux, environ 2 heures.",
     "faq_live_q": "Comment voir les vols en direct à {name} ?",
-    "faq_live_a": "Le tableau de cette page affiche les arrivées et les départs pour {name} ({iata}). Il s’actualise toutes les minutes tant que la page est ouverte et indique toujours quand ses données ont été mises à jour pour la dernière fois.",
+    "faq_live_a": "Le tableau de cette page affiche les arrivées et les départs pour {name} ({iata}). Il vérifie les mises à jour tant que la page est ouverte, et chaque tableau indique l’âge de ses données : les grands hubs sont actualisés en quelques heures, les aéroports plus calmes moins souvent.",
     "footer_tagline": "Tableaux des vols en direct pour plus de 6 000 aéroports dans le monde. Arrivées et départs, avec l’ancienneté des données indiquée sur chaque tableau.",
     "footer_countries": "Pays populaires",
     "footer_cities": "Villes populaires",
@@ -142,7 +142,8 @@
     "delays_line": "État du tableau d’affichage il y a {m} min : {delayed} des {pending} prochains départs sont retardés de 15 min ou plus.",
     "country_split_partial": "Sur les {count} aéroports dotés d’un code IATA ({country}), au moins {served} proposent des vols passagers réguliers à la date du {date}.",
     "world_split_partial": "AirportsBoard suit {total} aéroports dotés d’un code IATA dans le monde. À la date du {date}, au moins {served} d’entre eux proposaient des vols passagers réguliers.",
-    "airport_lead_same": "Aéroport {name} ({iata}), {country}."
+    "airport_lead_same": "Aéroport {name} ({iata}), {country}.",
+    "routes_title_in": "Routes populaires vers {iata}"
   },
   "ui": {
     "departures": "Départs",

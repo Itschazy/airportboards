@@ -6,10 +6,15 @@ import { getAirportName, getAirportNameBare } from '@/lib/airport-names';
 import { getCityName, getCountryName } from '@/lib/places';
 import { getBoard, getBoardFetchedAt } from '@/lib/flights';
 import { FlightBoard } from '@/components/FlightBoard';
+import { AirportBottom } from '@/components/AirportBottom';
+import { getAirportContent } from '@/lib/airport-content';
+import { hasNoService, nearestServiced } from '@/lib/warm';
+import { nearestAirports } from '@/lib/airports';
 import { Breadcrumb } from '@/components/Breadcrumb';
 import { airportNodeId } from '@/lib/airport-sameas';
 import { EventBanner } from '@/components/EventBanner';
 import { locales } from '@/lib/i18n';
+import { currentIata } from '@/lib/iata-aliases';
 import { showCityFlag } from '@/lib/show-city';
 
 const BASE = 'https://airportsboard.live';
@@ -66,6 +71,10 @@ export default async function ArrivalsPage({ params }: Props) {
   setRequestLocale(locale);
   if (iata !== iata.toUpperCase()) permanentRedirect(`/${locale}/airport/${iata.toUpperCase()}/arrivals`);
   const airport = getAirport(iata.toUpperCase());
+  // A retired code (TSE → NQZ) redirects to the live one rather than 404ing or, worse,
+  // rendering a stale record. See lib/iata-aliases.ts.
+  const renamed = currentIata(iata);
+  if (renamed) permanentRedirect(`/${locale}/airport/${renamed}/arrivals`);
   if (!airport) notFound();
 
   const canonical = `${BASE}/${locale}/airport/${airport.iata}/arrivals`;
@@ -93,6 +102,14 @@ export default async function ArrivalsPage({ params }: Props) {
   trail.push({ name: tNav('arrivals'), item: canonical });
 
   const boardFetchedAt = getBoardFetchedAt(airport.iata, 'arrivals');
+  const about = getAirportContent(airport.iata, locale);
+  const noService = hasNoService(airport.iata);
+  const nearestWithFlights = noService
+    ? (() => {
+        const n = nearestServiced(airport.iata, nearestAirports(airport.lat, airport.lon, 12));
+        return n ? { ...getAirport(n.iata)!, km: n.km } : null;
+      })()
+    : null;
 
   const jsonLd = [
     {
@@ -112,7 +129,11 @@ export default async function ArrivalsPage({ params }: Props) {
       // entry's timestamp), not from render time: an ISR regeneration that re-serves the
       // same six-hour-old board must not claim it was just modified. Omitted entirely when
       // the board is empty — that page is static facts and has no freshness to assert.
-      ...(boardFetchedAt ? { dateModified: new Date(boardFetchedAt).toISOString() } : {}),
+      // Presence of a timestamp is NOT presence of a board: the warmer stamps the store even
+      // when the provider answered with an empty list, so this emitted dateModified on pages
+      // whose visible content is "no flights" — asserting freshness about nothing, which is
+      // precisely what the comment above forbids. Require rows as well as a timestamp.
+      ...(boardFetchedAt && initialFlights.length ? { dateModified: new Date(boardFetchedAt).toISOString() } : {}),
       // Tie the subpage to the airport's stable node instead of floating free in the graph.
       mainEntity: { '@id': airportNodeId(BASE, airport.iata) },
     },
@@ -125,10 +146,20 @@ export default async function ArrivalsPage({ params }: Props) {
       ))}
       <Breadcrumb trail={trail} extra={{ href: `/${locale}/airport/${airport.iata}/departures`, label: tNav('departures') }} />
       {/* The visible <h1> now lives in FlightBoard's airport header (single semantic h1). */}
-      <FlightBoard airport={airport} locale={locale} defaultMode="arrivals" displayName={getAirportName(airport.iata, locale, airport.name)} initialFlights={initialFlights.slice(0, 40)} initialFetchedAt={getBoardFetchedAt(airport.iata, 'arrivals')} />
+      {/* boardTotal is the full board, not the SSR slice: passing nothing here made the page
+          publish "40 arrivals" on airports whose board holds 80 — the same slice-vs-total
+          defect already fixed on the parent page. */}
+      <FlightBoard airport={airport} locale={locale} defaultMode="arrivals" displayName={getAirportName(airport.iata, locale, airport.name)} initialFlights={initialFlights.slice(0, 40)} initialFetchedAt={getBoardFetchedAt(airport.iata, 'arrivals')} boardTotal={initialFlights.length} />
       <div style={{ maxWidth: 720, margin: '0 auto', padding: '0 24px 8px' }}>
         <EventBanner iata={airport.iata} locale={locale} />
       </div>
+      {/* This subpage used to be board + footer and nothing else: 221 visible words against
+          903 on the parent. Google crawled 487 of these and indexed none — they are half of
+          everything sitting in "Crawled — currently not indexed". The About paragraph, the
+          travel guides and the FAQ already exist per airport; withholding them here bought
+          nothing. direction="arrivals" makes the routes section aggregate ORIGINS, so the
+          section genuinely differs from the parent rather than duplicating it. */}
+      <AirportBottom airport={airport} locale={locale} about={about} displayName={getAirportName(airport.iata, locale, airport.name)} flights={initialFlights} noService={noService} nearestServed={nearestWithFlights} direction="arrivals" />
     </>
   );
 }

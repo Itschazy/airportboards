@@ -94,7 +94,7 @@
     "faq_arrive_q": "Wie früh sollte ich bei {name} eintreffen?",
     "faq_arrive_a": "Bei internationalen Flügen mindestens 3 Stunden vor Abflug; bei Inlandsflügen etwa 2 Stunden.",
     "faq_live_q": "Wie kann ich Live‑Flüge an {name} sehen?",
-    "faq_live_a": "Die Anzeigetafel auf dieser Seite zeigt Ankünfte und Abflüge für {name} ({iata}). Sie aktualisiert sich jede Minute, solange die Seite geöffnet ist, und zeigt stets an, wann ihre Daten zuletzt aktualisiert wurden.",
+    "faq_live_a": "Die Anzeigetafel auf dieser Seite zeigt Ankünfte und Abflüge für {name} ({iata}). Sie prüft bei geöffneter Seite erneut auf Aktualisierungen, und jede Anzeigetafel gibt an, wie alt ihre Daten sind – stark frequentierte Drehkreuze werden innerhalb weniger Stunden aktualisiert, ruhigere Flughäfen seltener.",
     "footer_tagline": "Echtzeit-Flughafentafeln für mehr als 6.000 Flughäfen weltweit. Ankünfte und Abflüge mit Angabe des Datenalters auf jeder Tafel.",
     "footer_countries": "Beliebte Länder",
     "footer_cities": "Beliebte Städte",
@@ -142,7 +142,8 @@
     "delays_line": "Anzeigetafel-Status vor {m} Min.: {delayed} von {pending} anstehenden Abflügen haben mindestens 15 Minuten Verspätung.",
     "country_split_partial": "{country}: Von den {count} Flughäfen mit IATA-Codes bieten mindestens {served} mit Stand {date} planmäßigen Passagierverkehr.",
     "world_split_partial": "AirportsBoard erfasst weltweit {total} Flughäfen mit IATA-Codes. Mit Stand {date} boten mindestens {served} davon planmäßigen Passagierverkehr.",
-    "airport_lead_same": "Flughafen {name} ({iata}), {country}."
+    "airport_lead_same": "Flughafen {name} ({iata}), {country}.",
+    "routes_title_in": "Beliebte Verbindungen nach {iata}"
   },
   "ui": {
     "departures": "Abflüge",

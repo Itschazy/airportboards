@@ -94,7 +94,7 @@
     "faq_arrive_q": "How early should I arrive at {name}?",
     "faq_arrive_a": "For international flights, arrive at least 3 hours before departure; for domestic flights, about 2 hours.",
     "faq_live_q": "How can I see live flights at {name}?",
-    "faq_live_a": "The board on this page shows arrivals and departures for {name} ({iata}). It refreshes every minute while the page is open, and always shows when its data was last updated.",
+    "faq_live_a": "The board on this page shows arrivals and departures for {name} ({iata}). It re-checks for updates while the page is open, and every board states how old its data is — busy hubs are refreshed within hours, quieter airports less often.",
     "footer_tagline": "Live airport boards for 6,000+ airports worldwide. Arrivals and departures, with the age of the data shown on every board.",
     "footer_countries": "Popular countries",
     "footer_cities": "Popular cities",
@@ -142,7 +142,8 @@
     "delays_line": "Board status as of {m} min ago: {delayed} of {pending} upcoming departures delayed by 15+ minutes.",
     "country_split_partial": "Of the {count} airports with IATA codes in {country}, at least {served} have scheduled passenger service as of {date}.",
     "world_split_partial": "AirportsBoard tracks {total} airports with IATA codes worldwide. As measured on {date}, at least {served} of them had scheduled passenger service.",
-    "airport_lead_same": "{name} Airport ({iata}), {country}."
+    "airport_lead_same": "{name} Airport ({iata}), {country}.",
+    "routes_title_in": "Popular routes to {iata}"
   },
   "ui": {
     "departures": "Departures",
