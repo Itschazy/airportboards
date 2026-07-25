@@ -230,6 +230,8 @@ export default async function AirportPage({ params }: Props) {
   // what AI crawlers actually parse, so it must not claim a live board the page cannot show.
   const { description: webDesc } = await airportDescription({ airport, locale, name, city, country, t });
 
+  const boardFetchedAt = getBoardFetchedAt(airport.iata, 'departures');
+
   const jsonLd = [
     {
       '@context': 'https://schema.org',
@@ -294,6 +296,11 @@ export default async function AirportPage({ params }: Props) {
       // Ties the page to the Airport entity declared above rather than leaving two
       // unrelated nodes for a consumer to correlate by name.
       mainEntity: { '@id': airportNodeId(BASE, airport.iata) },
+      // Freshness signal, taken from the age of the DATA the page is showing (the store
+      // entry's timestamp), not from render time: an ISR regeneration that re-serves the
+      // same six-hour-old board must not claim it was just modified. Omitted entirely when
+      // the board is empty — that page is static facts and has no freshness to assert.
+      ...(boardFetchedAt ? { dateModified: new Date(boardFetchedAt).toISOString() } : {}),
     },
   ];
 

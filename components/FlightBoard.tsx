@@ -756,7 +756,10 @@ export function FlightBoard({ airport, locale, defaultMode = 'departures', displ
 
         {/* keyed by mode+filter so a swap remounts the block and replays the rise-in */}
         {(() => { if (initialListKey.current !== null && `${mode}:${filter}` !== initialListKey.current) initialListKey.current = null; return null; })()}
-        <div key={`${mode}:${filter}`} className={initialListKey.current === null ? 'rise' : undefined}>
+        {/* A departure/arrival board IS a list — mark it up as one. Semantic <ul>/<li>
+            gives screen readers "list, N items" and is the structure answer engines extract
+            most reliably. Visual output is unchanged (globals.css zeroes list defaults). */}
+        <ul key={`${mode}:${filter}`} className={initialListKey.current === null ? 'rise' : undefined} style={{ listStyle: 'none', margin: 0, padding: 0 }}>
         {shown.map((f, i) => {
           const color = STATUS_COLOR[f.status] || C.gray;
           const label = (() => {
@@ -780,8 +783,10 @@ export function FlightBoard({ airport, locale, defaultMode = 'departures', displ
           const code = dm ? dm[2] : '';
 
           return (
+            // <li> carries the list semantics; the inner div stays the button, so both roles
+            // survive (an li with role="button" would erase the list for assistive tech).
+            <li key={i}>
             <div
-              key={i}
               role="button"
               tabIndex={0}
               aria-label={`${f.flight}, ${city}, ${label}`}
@@ -842,9 +847,10 @@ export function FlightBoard({ airport, locale, defaultMode = 'departures', displ
                 </div>
               </div>
             </div>
+            </li>
           );
         })}
-        </div>
+        </ul>
 
         {!loading && visible.length > shown.length && (
           <button className="press" onClick={() => setShowAll(true)} style={{

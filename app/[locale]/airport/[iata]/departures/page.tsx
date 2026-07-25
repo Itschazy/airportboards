@@ -92,6 +92,8 @@ export default async function DeparturesPage({ params }: Props) {
   trail.push({ name: `${name} (${airport.iata})`, item: `${BASE}/${locale}/airport/${airport.iata}` });
   trail.push({ name: tNav('departures'), item: canonical });
 
+  const boardFetchedAt = getBoardFetchedAt(airport.iata, 'departures');
+
   const jsonLd = [
     {
       '@context': 'https://schema.org',
@@ -106,6 +108,11 @@ export default async function DeparturesPage({ params }: Props) {
       description: desc,
       url: canonical,
       inLanguage: locale,
+      // Freshness signal, taken from the age of the DATA the page is showing (the store
+      // entry's timestamp), not from render time: an ISR regeneration that re-serves the
+      // same six-hour-old board must not claim it was just modified. Omitted entirely when
+      // the board is empty — that page is static facts and has no freshness to assert.
+      ...(boardFetchedAt ? { dateModified: new Date(boardFetchedAt).toISOString() } : {}),
       // Tie the subpage to the airport's stable node instead of floating free in the graph.
       mainEntity: { '@id': airportNodeId(BASE, airport.iata) },
     },
