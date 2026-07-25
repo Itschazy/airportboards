@@ -195,7 +195,11 @@
     "notice_delayed": "L'orario di partenza è cambiato. Controlla gli aggiornamenti sul tabellone.",
     "more_departures": "Mostra altre partenze",
     "more_arrivals": "Mostra altri arrivi",
-    "live_updates": "Aggiornamenti in tempo reale"
+    "live_updates": "Aggiornamenti in tempo reale",
+    "board_answer_dep": "In questo momento, sul tabellone di {airport} ({iata}), le partenze sono {count}, con {delayed} in ritardo.",
+    "board_answer_arr": "In questo momento, sul tabellone di {airport} ({iata}), gli arrivi sono {count}, con {delayed} in ritardo.",
+    "board_next_dep": "Prossima partenza alle {time}.",
+    "board_next_arr": "Prossimo arrivo alle {time}."
   },
   "notfound": {
     "title": "Pagina non trovata",

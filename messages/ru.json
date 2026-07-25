@@ -195,7 +195,11 @@
     "notice_delayed": "Время вылета изменилось. Следите за обновлениями табло.",
     "more_departures": "Показать больше вылетов",
     "more_arrivals": "Показать больше прилётов",
-    "live_updates": "Обновления в реальном времени"
+    "live_updates": "Обновления в реальном времени",
+    "board_answer_dep": "Сейчас на табло вылетов аэропорта {airport} ({iata}) рейсов: {count}, задержано: {delayed}.",
+    "board_answer_arr": "Сейчас на табло прилётов аэропорта {airport} ({iata}) рейсов: {count}, задержано: {delayed}.",
+    "board_next_dep": "Следующий вылет в {time}.",
+    "board_next_arr": "Следующий прилёт в {time}."
   },
   "notfound": {
     "title": "Страница не найдена",

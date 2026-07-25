@@ -195,7 +195,11 @@
     "notice_delayed": "تم تغيير وقت المغادرة. راقب لوحة المعلومات.",
     "more_departures": "عرض مزيد من المغادرات",
     "more_arrivals": "عرض مزيد من القادمين",
-    "live_updates": "تحديثات مباشرة"
+    "live_updates": "تحديثات مباشرة",
+    "board_answer_dep": "عدد رحلات المغادرة على لوحة {airport} ({iata}) الآن هو {count}، والمتأخر منها {delayed}.",
+    "board_answer_arr": "عدد رحلات الوصول على لوحة {airport} ({iata}) الآن هو {count}، والمتأخر منها {delayed}.",
+    "board_next_dep": "المغادرة التالية في {time}.",
+    "board_next_arr": "الوصول التالي في {time}."
   },
   "notfound": {
     "title": "الصفحة غير موجودة",

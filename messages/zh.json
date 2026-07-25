@@ -195,7 +195,11 @@
     "notice_delayed": "出发时间已变更，请注意航显屏。",
     "more_departures": "显示更多出发",
     "more_arrivals": "显示更多到达",
-    "live_updates": "实时更新"
+    "live_updates": "实时更新",
+    "board_answer_dep": "当前{airport}（{iata}）航班信息板上显示{count}个出港航班，其中{delayed}个延误。",
+    "board_answer_arr": "当前{airport}（{iata}）航班信息板上显示{count}个到港航班，其中{delayed}个延误。",
+    "board_next_dep": "下一班出发时间：{time}。",
+    "board_next_arr": "下一班到达时间：{time}。"
   },
   "notfound": {
     "title": "页面未找到",

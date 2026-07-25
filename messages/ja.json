@@ -195,7 +195,11 @@
     "notice_delayed": "出発時刻が変更されています。掲示版の情報をご確認ください。",
     "more_departures": "出発をもっと表示",
     "more_arrivals": "到着をもっと表示",
-    "live_updates": "ライブ更新"
+    "live_updates": "ライブ更新",
+    "board_answer_dep": "現在、{airport}（{iata}）の掲示板には出発便が{count}便表示されており、遅延は{delayed}便です。",
+    "board_answer_arr": "現在、{airport}（{iata}）の掲示板には到着便が{count}便表示されており、遅延は{delayed}便です。",
+    "board_next_dep": "次の出発は{time}です。",
+    "board_next_arr": "次の到着は{time}です。"
   },
   "notfound": {
     "title": "ページが見つかりません",

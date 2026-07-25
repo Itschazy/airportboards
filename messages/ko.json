@@ -195,7 +195,11 @@
     "notice_delayed": "출발 시간이 변경되었습니다. 안내판을 확인하세요.",
     "more_departures": "더 많은 출발편 보기",
     "more_arrivals": "더 많은 도착편 보기",
-    "live_updates": "실시간 업데이트"
+    "live_updates": "실시간 업데이트",
+    "board_answer_dep": "현재 {airport} ({iata}) 전광판에 출발 {count}편이 표시되어 있으며, 지연은 {delayed}편입니다.",
+    "board_answer_arr": "현재 {airport} ({iata}) 전광판에 도착 {count}편이 표시되어 있으며, 지연은 {delayed}편입니다.",
+    "board_next_dep": "다음 출발은 {time}입니다.",
+    "board_next_arr": "다음 도착은 {time}입니다."
   },
   "notfound": {
     "title": "페이지를 찾을 수 없습니다",

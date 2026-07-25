@@ -195,7 +195,11 @@
     "notice_delayed": "L'heure de départ a changé. Veuillez consulter les informations d'écran.",
     "more_departures": "Afficher plus de départs",
     "more_arrivals": "Afficher plus d'arrivées",
-    "live_updates": "Mises à jour en direct"
+    "live_updates": "Mises à jour en direct",
+    "board_answer_dep": "Nombre de vols au départ affichés actuellement sur le tableau de {airport} ({iata}) : {count}, dont {delayed} en retard.",
+    "board_answer_arr": "Nombre de vols à l’arrivée affichés actuellement sur le tableau de {airport} ({iata}) : {count}, dont {delayed} en retard.",
+    "board_next_dep": "Prochain départ à {time}.",
+    "board_next_arr": "Prochaine arrivée à {time}."
   },
   "notfound": {
     "title": "Page introuvable",

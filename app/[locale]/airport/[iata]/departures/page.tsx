@@ -7,6 +7,7 @@ import { getCityName, getCountryName } from '@/lib/places';
 import { getBoard } from '@/lib/flights';
 import { FlightBoard } from '@/components/FlightBoard';
 import { locales } from '@/lib/i18n';
+import { computeBoardSummary } from '@/lib/board-summary';
 
 const BASE = 'https://airportsboard.live';
 
@@ -76,6 +77,9 @@ export default async function DeparturesPage({ params }: Props) {
   const h1 = t('departures_title', { airport: name, iata: airport.iata, city, showCity });
   const desc = t('departures_description', { airport: name, iata: airport.iata, city });
 
+  // Counts from the FULL board (the rows prop below is truncated for HTML weight).
+  const boardSummary = computeBoardSummary(initialFlights, airport.tz);
+
   const jsonLd = [
     {
       '@context': 'https://schema.org',
@@ -99,6 +103,10 @@ export default async function DeparturesPage({ params }: Props) {
       description: desc,
       url: canonical,
       inLanguage: locale,
+      // Freshness signal — but only claimed when the page actually carries live data.
+      // An empty board renders purely static facts, and stamping those with "modified
+      // just now" on every regeneration would be a freshness claim we cannot back.
+      ...(initialFlights.length ? { dateModified: new Date().toISOString() } : {}),
     },
   ];
 
@@ -108,7 +116,7 @@ export default async function DeparturesPage({ params }: Props) {
         <script key={i} type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
       ))}
       {/* The visible <h1> now lives in FlightBoard's airport header (single semantic h1). */}
-      <FlightBoard airport={airport} locale={locale} defaultMode="departures" displayName={getAirportName(airport.iata, locale, airport.name)} initialFlights={initialFlights.slice(0, 40)} />
+      <FlightBoard airport={airport} locale={locale} defaultMode="departures" displayName={getAirportName(airport.iata, locale, airport.name)} initialFlights={initialFlights.slice(0, 40)} initialSummary={boardSummary} />
     </>
   );
 }

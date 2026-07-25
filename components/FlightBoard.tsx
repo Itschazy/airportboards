@@ -3,6 +3,7 @@
 import { useEffect, useState, useCallback, useRef } from 'react';
 import { useTranslations } from 'next-intl';
 import type { Airport } from '@/lib/airports';
+import { computeBoardSummary, type BoardSummary } from '@/lib/board-summary';
 
 type T = (key: string, values?: Record<string, string | number>) => string;
 type Mode = 'departures' | 'arrivals';
@@ -437,12 +438,14 @@ function BottomSheet({ flight, mode, onClose, tz, locale }: {
 
 // ─── Main Component ───────────────────────────────────────────────────────────
 
-export function FlightBoard({ airport, locale, defaultMode = 'departures', displayName, initialFlights }: {
+export function FlightBoard({ airport, locale, defaultMode = 'departures', displayName, initialFlights, initialSummary }: {
   airport: Airport;
   locale: string;
   defaultMode?: Mode;
   displayName?: string;
   initialFlights?: Flight[];
+  /** Counts from the FULL server board (initialFlights may be truncated for HTML weight). */
+  initialSummary?: BoardSummary;
 }) {
   const t = useTranslations('ui');
   const tNav = useTranslations('nav');
@@ -470,6 +473,8 @@ export function FlightBoard({ airport, locale, defaultMode = 'departures', displ
       const res = await fetch(`/api/flights/${airport.iata}?direction=${mode}&locale=${locale}`);
       const data = await res.json();
       setFlights(data.flights || []);
+      gotClientData.current = true;   // from now on, count the real (full) array
+      dataMode.current = mode;        // these numbers describe THIS direction
       const now = new Date();
       setUpdated(now);
       setUpdLabel(t('updated_now'));
@@ -535,6 +540,38 @@ export function FlightBoard({ airport, locale, defaultMode = 'departures', displ
       || (f.destination || f.origin || '').toLowerCase().includes(q)
       || (f.airline || '').toLowerCase().includes(q);
   });
+  // Board stats for the answer line and the count row. The server only ships the first
+  // rows (HTML weight), so counting the rendered array would under-report — the page
+  // passes `initialSummary` computed from the FULL board instead. Once the client has
+  // fetched, we count the real array. The ref flips only after a fetch, so the first
+  // client render still matches the server output (no hydration mismatch).
+  const gotClientData = useRef(false);
+  const stats = (!gotClientData.current && initialSummary)
+    ? initialSummary
+    : computeBoardSummary(flights, airport.tz);
+
+  // Which direction the numbers in `stats` actually describe. `mode` flips the instant
+  // the user taps the segmented control, but `flights` is only replaced when the new
+  // fetch resolves — without this guard the arrivals sentence would be filled with
+  // departure numbers for the whole round-trip (and forever if the fetch fails).
+  const dataMode = useRef<Mode>(defaultMode);
+  const statsMatchMode = dataMode.current === mode;
+
+  // Factual one-liner about the board (see the "Live answer line" below). It renders
+  // server-side, so it's in the HTML crawlers and answer engines read. Wording says
+  // "on the board right now", never "today": lib/flights.ts caps a board at 80 rows and
+  // arrivals only keep a 2h look-back, so a per-day total would be a false claim.
+  const answer = (() => {
+    if (!stats.total || loading || !statsMatchMode) return '';
+    const isDep = mode === 'departures';
+    const summary = t(isDep ? 'board_answer_dep' : 'board_answer_arr', {
+      count: stats.total, delayed: stats.delayed, airport: displayName || airport.name, iata: airport.iata,
+    });
+    return stats.next
+      ? `${summary} ${t(isDep ? 'board_next_dep' : 'board_next_arr', { time: stats.next })}`
+      : summary;
+  })();
+
   const INITIAL = 12;
   const shown = showAll ? visible : visible.slice(0, INITIAL);
   useEffect(() => { setShowAll(false); }, [mode, filter, trimSearch]);
@@ -590,6 +627,16 @@ export function FlightBoard({ airport, locale, defaultMode = 'departures', displ
           />
           <span style={{ fontSize: 12, color: C.secondary, opacity: 0.85 }}>{updLabel || '—'}</span>
         </div>
+
+        {/* ── Live answer line ─────────────────────────────────────────────────
+            A one-sentence factual summary of today's board, server-rendered from the
+            same data as the rows. It sits in the first screenful — the part answer
+            engines quote most — and states numbers nobody else can publish. */}
+        {answer && (
+          <p style={{ fontSize: 14, color: '#B4B4B4', lineHeight: 1.5, margin: '12px 0 0', maxWidth: 640 }}>
+            {answer}
+          </p>
+        )}
       </div>
 
       {/* ── Search ─────────────────────────────────────────── */}
@@ -696,10 +743,10 @@ export function FlightBoard({ airport, locale, defaultMode = 'departures', displ
       </div>
 
       {/* ── Top meta row ───────────────────────────────────── */}
-      {!loading && flights.length > 0 && (
+      {!loading && statsMatchMode && flights.length > 0 && (
         <div style={{ padding: '0 16px 14px', maxWidth: 960, margin: '0 auto' }}>
           <span style={{ fontSize: 13, color: C.secondary }}>
-            <span aria-hidden="true">{mode === 'departures' ? '✈' : '🛬'}</span> {mode === 'departures' ? t('departures_today', { count: flights.length }) : t('arrivals_today', { count: flights.length })}
+            <span aria-hidden="true">{mode === 'departures' ? '✈' : '🛬'}</span> {mode === 'departures' ? t('departures_today', { count: stats.total }) : t('arrivals_today', { count: stats.total })}
           </span>
         </div>
       )}
@@ -722,7 +769,10 @@ export function FlightBoard({ airport, locale, defaultMode = 'departures', displ
 
         {/* keyed by mode+filter so a swap remounts the block and replays the rise-in */}
         {(() => { if (initialListKey.current !== null && `${mode}:${filter}` !== initialListKey.current) initialListKey.current = null; return null; })()}
-        <div key={`${mode}:${filter}`} className={initialListKey.current === null ? 'rise' : undefined}>
+        {/* A departure/arrival board IS a list — mark it up as one. Semantic <ul>/<li>
+            gives screen readers "list, 12 items" and is the structure answer engines
+            extract most reliably (visual result is identical). */}
+        <ul key={`${mode}:${filter}`} className={initialListKey.current === null ? 'rise' : undefined} style={{ listStyle: 'none', margin: 0, padding: 0 }}>
         {shown.map((f, i) => {
           const color = STATUS_COLOR[f.status] || C.gray;
           const label = (() => {
@@ -743,8 +793,10 @@ export function FlightBoard({ airport, locale, defaultMode = 'departures', displ
           const code = dm ? dm[2] : '';
 
           return (
+            // <li> carries the list semantics; the inner div stays the button, so both
+            // roles survive (an li with role="button" would erase the list for AT).
+            <li key={i}>
             <div
-              key={i}
               role="button"
               tabIndex={0}
               aria-label={`${f.flight}, ${city}, ${label}`}
@@ -804,9 +856,10 @@ export function FlightBoard({ airport, locale, defaultMode = 'departures', displ
                 </div>
               </div>
             </div>
+            </li>
           );
         })}
-        </div>
+        </ul>
 
         {!loading && visible.length > shown.length && (
           <button className="press" onClick={() => setShowAll(true)} style={{

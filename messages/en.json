@@ -195,7 +195,11 @@
     "notice_delayed": "The departure time has changed. Keep an eye on the board.",
     "more_departures": "Show more departures",
     "more_arrivals": "Show more arrivals",
-    "live_updates": "Live updates"
+    "live_updates": "Live updates",
+    "board_answer_dep": "{count} departures on the {airport} ({iata}) board right now, {delayed} delayed.",
+    "board_answer_arr": "{count} arrivals on the {airport} ({iata}) board right now, {delayed} delayed.",
+    "board_next_dep": "Next departure at {time}.",
+    "board_next_arr": "Next arrival at {time}."
   },
   "notfound": {
     "title": "Page not found",

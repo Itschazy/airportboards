@@ -127,6 +127,47 @@ export async function AirportBottom({ airport, locale, about, displayName, fligh
           );
         })}
 
+        {/* ── Always visible: the unique, quotable prose ──────────────────────────
+            About → guide (transport/terminals/tips) → FAQ sit ABOVE the fold-out.
+            These are the passages worth citing (and the only text here that no other
+            site has); keeping them behind a click hid ~83% of the page's text from
+            readers, search engines and AI answer engines alike. What stays inside
+            "show more" below is navigation — link lists, not prose. */}
+        {about && (
+          <section className="cv-auto" style={sec}>
+            <H2>{t('about_title', { iata: airport.iata })}</H2>
+            <AboutCard text={about} readMore={t('read_more')} />
+          </section>
+        )}
+
+        {/* AIRPORT GUIDE — transport / terminals / tips (top hubs only; renders
+            nothing when there's no extended content file for this airport). */}
+        {ext?.transport && (
+          <section className="cv-auto" style={sec}>
+            <H2>{extLabels.transport}</H2>
+            <div style={{ background: '#0B0B0B', border: '1px solid #1A1A1A', borderRadius: 16, padding: '16px 18px', fontSize: 15, lineHeight: 1.6, color: '#B4B4B4' }}>{ext.transport}</div>
+          </section>
+        )}
+        {ext?.terminals && (
+          <section className="cv-auto" style={sec}>
+            <H2>{extLabels.terminals}</H2>
+            <div style={{ background: '#0B0B0B', border: '1px solid #1A1A1A', borderRadius: 16, padding: '16px 18px', fontSize: 15, lineHeight: 1.6, color: '#B4B4B4' }}>{ext.terminals}</div>
+          </section>
+        )}
+        {ext?.tips && (
+          <section className="cv-auto" style={sec}>
+            <H2>{extLabels.tips}</H2>
+            <div style={{ background: '#0B0B0B', border: '1px solid #1A1A1A', borderRadius: 16, padding: '16px 18px', fontSize: 15, lineHeight: 1.6, color: '#B4B4B4' }}>{ext.tips}</div>
+          </section>
+        )}
+
+        {/* FAQ — visible: FAQ answers are the single most-cited block type in AI
+            answers, and the FAQPage JSON-LD below mirrors exactly this text. */}
+        <section className="cv-auto" style={sec}>
+          <H2>{t('faq_title')}</H2>
+          <Faq items={faq} />
+        </section>
+
         <MoreInfo label={t('show_more')}>
 
           {/* 2. OVERVIEW */}
@@ -186,41 +227,6 @@ export async function AirportBottom({ airport, locale, about, displayName, fligh
                   </li>
                 ))}
               </ul>
-            </section>
-          )}
-
-          {/* 5. FAQ */}
-          <section className="cv-auto" style={sec}>
-            <H2>{t('faq_title')}</H2>
-            <Faq items={faq} />
-          </section>
-
-          {/* 6. ABOUT */}
-          {about && (
-            <section className="cv-auto" style={sec}>
-              <H2>{t('about_title', { iata: airport.iata })}</H2>
-              <AboutCard text={about} readMore={t('read_more')} />
-            </section>
-          )}
-
-          {/* 6b. AIRPORT GUIDE — transport / terminals / tips (top hubs only; renders
-              nothing when there's no extended content file for this airport). */}
-          {ext?.transport && (
-            <section className="cv-auto" style={sec}>
-              <H2>{extLabels.transport}</H2>
-              <div style={{ background: '#0B0B0B', border: '1px solid #1A1A1A', borderRadius: 16, padding: '16px 18px', fontSize: 15, lineHeight: 1.6, color: '#B4B4B4' }}>{ext.transport}</div>
-            </section>
-          )}
-          {ext?.terminals && (
-            <section className="cv-auto" style={sec}>
-              <H2>{extLabels.terminals}</H2>
-              <div style={{ background: '#0B0B0B', border: '1px solid #1A1A1A', borderRadius: 16, padding: '16px 18px', fontSize: 15, lineHeight: 1.6, color: '#B4B4B4' }}>{ext.terminals}</div>
-            </section>
-          )}
-          {ext?.tips && (
-            <section className="cv-auto" style={sec}>
-              <H2>{extLabels.tips}</H2>
-              <div style={{ background: '#0B0B0B', border: '1px solid #1A1A1A', borderRadius: 16, padding: '16px 18px', fontSize: 15, lineHeight: 1.6, color: '#B4B4B4' }}>{ext.tips}</div>
             </section>
           )}
 

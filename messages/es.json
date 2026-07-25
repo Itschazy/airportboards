@@ -195,7 +195,11 @@
     "notice_delayed": "La hora de salida ha cambiado. Manténgase atento a las pantallas.",
     "more_departures": "Mostrar más salidas",
     "more_arrivals": "Mostrar más llegadas",
-    "live_updates": "Actualizaciones en vivo"
+    "live_updates": "Actualizaciones en vivo",
+    "board_answer_dep": "Vuelos de salida en el panel de {airport} ({iata}) en este momento: {count}; con retraso: {delayed}.",
+    "board_answer_arr": "Vuelos de llegada en el panel de {airport} ({iata}) en este momento: {count}; con retraso: {delayed}.",
+    "board_next_dep": "Hora de la próxima salida: {time}.",
+    "board_next_arr": "Hora de la próxima llegada: {time}."
   },
   "notfound": {
     "title": "Página no encontrada",

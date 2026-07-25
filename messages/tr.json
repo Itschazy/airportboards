@@ -195,7 +195,11 @@
     "notice_delayed": "Kalkış saati değişti. Panoyu takip edin.",
     "more_departures": "Diğer kalkışları göster",
     "more_arrivals": "Diğer varışları göster",
-    "live_updates": "Canlı güncellemeler"
+    "live_updates": "Canlı güncellemeler",
+    "board_answer_dep": "{airport} ({iata}) panosunda şu anda {count} kalkış var; {delayed} gecikmeli.",
+    "board_answer_arr": "{airport} ({iata}) panosunda şu anda {count} varış var; {delayed} gecikmeli.",
+    "board_next_dep": "Sonraki kalkış saati {time}.",
+    "board_next_arr": "Sonraki varış saati {time}."
   },
   "notfound": {
     "title": "Sayfa bulunamadı",

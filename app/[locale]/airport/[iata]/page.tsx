@@ -9,6 +9,7 @@ import { getBoard } from '@/lib/flights';
 import { FlightBoard } from '@/components/FlightBoard';
 import { AirportBottom } from '@/components/AirportBottom';
 import { locales } from '@/lib/i18n';
+import { computeBoardSummary } from '@/lib/board-summary';
 
 const BASE = 'https://airportsboard.live';
 
@@ -77,6 +78,9 @@ export default async function AirportPage({ params }: Props) {
   const country = getCountryName(airport.country, locale);
   const webDesc = t('main_description', { airport: name, iata: airport.iata, city, country });
 
+  // Counts from the FULL board (the rows prop below is truncated for HTML weight).
+  const boardSummary = computeBoardSummary(initialFlights, airport.tz);
+
   const jsonLd = [
     {
       '@context': 'https://schema.org',
@@ -120,6 +124,10 @@ export default async function AirportPage({ params }: Props) {
       description: webDesc,
       url: canonical,
       inLanguage: locale,
+      // Freshness signal — but only claimed when the page actually carries live data.
+      // An empty board renders purely static facts, and stamping those with "modified
+      // just now" on every regeneration would be a freshness claim we cannot back.
+      ...(initialFlights.length ? { dateModified: new Date().toISOString() } : {}),
     },
   ];
 
@@ -131,7 +139,7 @@ export default async function AirportPage({ params }: Props) {
       {/* The visible <h1> now lives in FlightBoard's airport header (single semantic h1). */}
       {/* SSR only the first 40 rows to keep the HTML light (the client refetches the full
           board on mount); AirportBottom still gets the full set to aggregate routes/airlines. */}
-      <FlightBoard airport={airport} locale={locale} displayName={name} initialFlights={initialFlights.slice(0, 40)} />
+      <FlightBoard airport={airport} locale={locale} displayName={name} initialFlights={initialFlights.slice(0, 40)} initialSummary={boardSummary} />
       <AirportBottom airport={airport} locale={locale} about={about} displayName={name} flights={initialFlights} />
     </>
   );
