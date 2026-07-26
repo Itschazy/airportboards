@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { usage } from '@/lib/flightStore';
+import { archiveStats } from '@/lib/board-archive';
 import { isOperatorRequest } from '@/lib/api-auth';
 
 export const dynamic = 'force-dynamic';
@@ -18,5 +19,5 @@ export function GET(req: NextRequest) {
   if (!isOperatorRequest(req)) {
     return NextResponse.json({ ok: true }, { headers: { 'Cache-Control': 'no-store' } });
   }
-  return NextResponse.json(usage(), { headers: { 'Cache-Control': 'no-store' } });
+  return NextResponse.json({ ...usage(), archive: archiveStats() }, { headers: { 'Cache-Control': 'no-store' } });
 }

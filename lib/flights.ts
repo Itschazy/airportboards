@@ -2,6 +2,7 @@ import airports from '@/data/airports.json';
 import airlines from '@/data/airlines.json';
 import { getCityName } from '@/lib/places';
 import { getFresh, getStale, getStaleTs, put, canSpend, spend, noteProviderLimit, type SpendKind } from '@/lib/flightStore';
+import { archiveBoard } from '@/lib/board-archive';
 import { getActiveEventAirports } from '@/lib/event-content';
 import { dueAirports, tickBudget } from '@/lib/warm';
 
@@ -200,6 +201,11 @@ async function doFetch(query: string, direction: 'departures' | 'arrivals', cach
 
   raw = raw.slice(0, MAX_FLIGHTS);
   put(cacheKey, raw);
+  // Every paid snapshot goes to the append-only archive — the store keeps only the latest
+  // board per airport, so without this each refresh destroys the history it replaces. Plain
+  // board queries only: route/flight/airline lookups are slices of the same boards.
+  const board = query.match(/^(dep|arr)_iata=([A-Z0-9]{3})$/);
+  if (board) archiveBoard(board[1] === 'dep' ? 'departures' : 'arrivals', board[2], raw);
   return raw;
 }
 
