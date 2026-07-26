@@ -5,6 +5,7 @@ import Link from 'next/link';
 import airportsAll from '@/data/airports.json';
 import { getAirport, getStaticIataCodes, getCountries, getCities, nearestAirports } from '@/lib/airports';
 import { hasNoService, nearestServiced, serviceLevel, serviceMeasuredOn, isUnfillable } from '@/lib/warm';
+import { hasWikiAirlines } from '@/lib/wiki-routes';
 import { localizedMeasuredOn } from '@/lib/measured-date';
 import { sameAsFor, airportNodeId } from '@/lib/airport-sameas';
 import { getAirportContent } from '@/lib/airport-content';
@@ -89,6 +90,19 @@ async function airportDescription(opts: {
   let boardRows: Awaited<ReturnType<typeof getBoard>> = [];
   try { boardRows = await getBoard(airport.iata, 'departures', locale); } catch {}
   if (!boardRows.length) {
+    // Empty board, but published airline/destination routes exist (Wikipedia-sourced): the
+    // page's real content is those routes, so the SERP snippet must sell THAT, not a live
+    // board. `title: null` below means "fall back to main_title", i.e. "… Live Arrivals &
+    // Departures" — acceptable for a served airport the warmer merely has not reached yet,
+    // and a permanent false promise for the 1,070 airports whose provider feed is empty by
+    // construction. Those are exactly the pages that carry the routes section, so the branch
+    // keys off the same predicate the body renders with.
+    if (hasWikiAirlines(airport.iata)) {
+      return {
+        title: t('routes_title', { airport: name, iata: airport.iata }),
+        description: t('routes_description', { airport: name, iata: airport.iata, city, country }),
+      };
+    }
     const tHome = await getTranslations({ locale, namespace: 'home' });
     const tUi = await getTranslations({ locale, namespace: 'ui' });
     return {

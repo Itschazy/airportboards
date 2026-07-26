@@ -40,7 +40,9 @@
     "arrivals_title": "{airport}{showCity, select, yes {, {city}} other {}} ({iata}) Varış Uçuşları | Canlı",
     "departures_title": "{airport}{showCity, select, yes {, {city}} other {}} ({iata}) Kalkış Uçuşları | Canlı",
     "arrivals_description": "Bugün {airport} ({iata}) varış uçuşları tablosu: gelen ve giden uçuşlar, saatler ve durumlar canlı olarak gerçek zamanlı güncellenir.",
-    "departures_description": "Bugün {airport} ({iata}) kalkış uçuşları tablosu: giden ve gelen uçuşlar, saatler ve durumlar canlı olarak gerçek zamanlı güncellenir."
+    "departures_description": "Bugün {airport} ({iata}) kalkış uçuşları tablosu: giden ve gelen uçuşlar, saatler ve durumlar canlı olarak gerçek zamanlı güncellenir.",
+    "routes_title": "{airport} ({iata}) — Havayolları ve Destinasyonlar",
+    "routes_description": "{city}, {country} konumundaki {airport} ({iata}): burada hangi hava yollarının hizmet verdiği, aktarmasız uçabileceğiniz yerler ve tarifeli uçuşları olan en yakın havalimanları."
   },
   "airport_info": {
     "location": "Konum",

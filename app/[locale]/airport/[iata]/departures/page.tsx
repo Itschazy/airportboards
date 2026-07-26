@@ -98,7 +98,13 @@ export default async function DeparturesPage({ params }: Props) {
   if (renamed) permanentRedirect(`/${locale}/airport/${renamed}/departures`);
   if (!airport) notFound();
 
-  const canonical = `${BASE}/${locale}/airport/${airport.iata}/departures`;
+  // The page's <link rel=canonical> (see generateMetadata above) points at the PARENT — this
+  // view is the same document. The structured data must state the same thing: a WebPage node
+  // that says url=/departures directly under a canonical that says "I am the parent" is a
+  // signal contradiction, and contradictions are what an engine checks before trusting
+  // either. The breadcrumb keeps its last element for orientation but drops `item` — schema
+  // allows the final crumb without a URL, which avoids asserting this URL as an entity.
+  const canonical = `${BASE}/${locale}/airport/${airport.iata}`;
   let initialFlights: Awaited<ReturnType<typeof getBoard>> = [];
   try { initialFlights = await getBoard(airport.iata, 'departures', locale); } catch {}
   const t = await getTranslations({ locale, namespace: 'meta' });
@@ -120,7 +126,7 @@ export default async function DeparturesPage({ params }: Props) {
   if (countryInfo) trail.push({ name: country, item: `${BASE}/${locale}/airports/${countryInfo.slug}` });
   if (cityInfo && cityInfo.count > 1) trail.push({ name: city, item: `${BASE}/${locale}/city/${cityInfo.slug}` });
   trail.push({ name: `${name} (${airport.iata})`, item: `${BASE}/${locale}/airport/${airport.iata}` });
-  trail.push({ name: tNav('departures'), item: canonical });
+  trail.push({ name: tNav('departures'), item: `${BASE}/${locale}/airport/${airport.iata}/departures` });
 
   const boardFetchedAt = getBoardFetchedAt(airport.iata, 'departures');
   const about = getAirportContent(airport.iata, locale);
@@ -137,7 +143,11 @@ export default async function DeparturesPage({ params }: Props) {
       '@context': 'https://schema.org',
       '@type': 'BreadcrumbList',
       // Home → Country → City (if it has an indexed page) → Airport → Departures.
-      itemListElement: trail.map((c, i) => ({ '@type': 'ListItem', position: i + 1, name: c.name, item: c.item })),
+      // The visible breadcrumb keeps every href (an empty <Link> would break the nav); the
+      // STRUCTURED last element drops `item`, which schema.org permits — the final crumb
+      // orients without asserting this URL as a canonical entity alongside a <link canonical>
+      // that points at the parent.
+      itemListElement: trail.map((c, i) => ({ '@type': 'ListItem', position: i + 1, name: c.name, ...(i < trail.length - 1 ? { item: c.item } : {}) })),
     },
     {
       '@context': 'https://schema.org',

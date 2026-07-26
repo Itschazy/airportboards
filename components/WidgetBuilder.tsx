@@ -46,12 +46,22 @@ export function WidgetBuilder({ locale }: { locale: string }) {
   const snippet = sel ? (() => {
     const src = `${BASE}/embed/${sel.iata}?lang=${lang}&dir=${dir}${theme === 'light' ? '&theme=light' : ''}`;
     const href = `${BASE}/${lang}/airport/${sel.iata}${dir === 'arrivals' ? '/arrivals' : ''}`;
-    const anchor = t('widgets_anchor', { name: sel.name, iata: sel.iata });
+    // Anchor and rel are deliberately conservative, and this was a correction, not the first
+    // draft. The first draft emitted a followed link with the localized keyword anchor
+    // («…онлайн-табло вылетов и прилётов») — which is, word for word, what Google's spam
+    // policy names as link spam: "keyword-rich … links embedded in widgets that are
+    // distributed across various sites". A manual action over widget links, on a domain that
+    // is mid-AdSense-review and climbing out of an indexing hole, is the single most
+    // expensive outcome available. So: the airport's name as the anchor (a natural
+    // reference, not a money phrase) and rel="nofollow" as shipped. Nofollow links still
+    // deliver what this programme actually needs first — referral traffic, brand queries,
+    // and discovery (Google treats nofollow as a crawl hint) — without the penalty surface.
+    const anchor = `${sel.name} (${sel.iata}) — airportsboard.live`;
     return `<iframe src="${src}"
         style="width:100%;max-width:420px;height:480px;border:0;border-radius:12px"
         loading="lazy" title="${sel.iata} ${dir}"></iframe>
 <p style="margin:4px 0 0;font-size:12px">
-  <a href="${href}">${anchor}</a>
+  <a href="${href}" rel="nofollow">${anchor}</a>
 </p>`;
   })() : '';
 

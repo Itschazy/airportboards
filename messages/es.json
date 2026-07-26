@@ -40,7 +40,9 @@
     "arrivals_title": "Llegadas {airport}{showCity, select, yes {, {city}} other {}} ({iata}) | vuelos en vivo",
     "departures_title": "Salidas {airport}{showCity, select, yes {, {city}} other {}} ({iata}) | vuelos en vivo",
     "arrivals_description": "Panel de llegadas del aeropuerto {airport} ({iata}) hoy en tiempo real: horarios, retrasos y cancelaciones. Consulta también salidas.",
-    "departures_description": "Panel de salidas del aeropuerto {airport} ({iata}) hoy en tiempo real: horarios, retrasos, cancelaciones y puertas. Consulta también llegadas."
+    "departures_description": "Panel de salidas del aeropuerto {airport} ({iata}) hoy en tiempo real: horarios, retrasos, cancelaciones y puertas. Consulta también llegadas.",
+    "routes_title": "{airport} ({iata}) — Aerolíneas y destinos",
+    "routes_description": "{airport} ({iata}) en {city}, {country}: qué aerolíneas operan aquí y a dónde puedes volar sin escalas, además de los aeropuertos más cercanos con vuelos programados."
   },
   "airport_info": {
     "location": "Ubicación",

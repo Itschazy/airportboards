@@ -40,7 +40,9 @@
     "arrivals_title": "Табло прилета {airport}{showCity, select, yes {, {city}} other {}} ({iata}) сегодня — онлайн",
     "departures_title": "Табло вылета {airport}{showCity, select, yes {, {city}} other {}} ({iata}) сегодня — онлайн",
     "arrivals_description": "Табло прилетов {airport} ({iata}) сегодня: рейсы онлайн, время прибытия, статусы, задержки и вылеты в реальном времени.",
-    "departures_description": "Табло вылетов {airport} ({iata}) сегодня: рейсы онлайн, время отправления, статусы, задержки и прилеты в реальном времени."
+    "departures_description": "Табло вылетов {airport} ({iata}) сегодня: рейсы онлайн, время отправления, статусы, задержки и прилеты в реальном времени.",
+    "routes_title": "{airport} ({iata}) — авиакомпании и направления",
+    "routes_description": "{airport} ({iata}), {city}, {country}: авиакомпании, выполняющие рейсы отсюда, направления без пересадок и ближайшие аэропорты с регулярными рейсами."
   },
   "airport_info": {
     "location": "Расположение",

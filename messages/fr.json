@@ -40,7 +40,9 @@
     "arrivals_title": "Arrivées {airport}{showCity, select, yes {, {city}} other {}} ({iata}) – vols en direct",
     "departures_title": "Départs {airport}{showCity, select, yes {, {city}} other {}} ({iata}) – vols en direct",
     "arrivals_description": "Arrivées {airport} aujourd’hui en direct : tableau des vols, horaires, retards et départs de l’aéroport ({iata}).",
-    "departures_description": "Départs {airport} aujourd’hui en direct : tableau des vols, horaires, retards et arrivées de l’aéroport ({iata})."
+    "departures_description": "Départs {airport} aujourd’hui en direct : tableau des vols, horaires, retards et arrivées de l’aéroport ({iata}).",
+    "routes_title": "{airport} ({iata}) — Compagnies aériennes et destinations",
+    "routes_description": "{airport} ({iata}) à {city}, {country} : quelles compagnies aériennes y opèrent, où vous pouvez voler sans escale, ainsi que les aéroports les plus proches avec des vols réguliers."
   },
   "airport_info": {
     "location": "Localisation",

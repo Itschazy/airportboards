@@ -40,7 +40,9 @@
     "arrivals_title": "{airport}{showCity, select, yes {, {city}} other {}} ({iata}) – Ankunft live",
     "departures_title": "{airport}{showCity, select, yes {, {city}} other {}} ({iata}) – Abflug live",
     "arrivals_description": "Ankünfte am Flughafen {airport} ({iata}) heute live: Landungen in Echtzeit, Status, Verspätungen sowie Abflüge im Überblick.",
-    "departures_description": "Abflüge am Flughafen {airport} ({iata}) heute live: Starts in Echtzeit, Gates, Status und Verspätungen plus aktuelle Ankünfte."
+    "departures_description": "Abflüge am Flughafen {airport} ({iata}) heute live: Starts in Echtzeit, Gates, Status und Verspätungen plus aktuelle Ankünfte.",
+    "routes_title": "{airport} ({iata}) — Fluggesellschaften und Reiseziele",
+    "routes_description": "{airport} ({iata}) in {city}, {country}: welche Fluggesellschaften hier verkehren und wohin Sie nonstop fliegen können, plus die nächstgelegenen Flughäfen mit Linienflügen."
   },
   "airport_info": {
     "location": "Standort",
