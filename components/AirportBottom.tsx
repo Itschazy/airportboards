@@ -172,9 +172,20 @@ export async function AirportBottom({ airport, locale, about, displayName, fligh
     ...(!inbound && !noService && !airport.closed && airlines.length >= 3
       ? [{ q: t('faq_airlines_q', { name }), a: t('faq_airlines_a', { name, iata: airport.iata, list: listFmt(airlines.slice(0, 5).map(al => al.name)) }) }]
       : []),
-    ...(!inbound && !noService && !airport.closed && routes.length >= 3
-      ? [{ q: t('faq_dest_q', { name }), a: t('faq_dest_a', { name, iata: airport.iata, list: listFmt(routes.slice(0, 6).map(r => r.label.replace(/\s*\([A-Z]{3}\)\s*$/, ''))) }) }]
-      : []),
+    ...((() => {
+      if (inbound || noService || airport.closed) return [];
+      // A destination whose label is just its IATA code (the localizer had no name) reads as
+      // garbage in a sentence («…направления: SVO, GME…»), and two airports of one city
+      // (Шереметьево + Внуково → «Москва, Москва») read as a stutter. Filter and dedupe;
+      // the ≥3 gate then applies to what would actually be printed.
+      const printable = [...new Set(
+        routes.map(r => r.label.replace(/\s*\([A-Z]{3}\)\s*$/, '').trim())
+          .filter(l => l && !/^[A-Z]{3}$/.test(l)),
+      )];
+      return printable.length >= 3
+        ? [{ q: t('faq_dest_q', { name }), a: t('faq_dest_a', { name, iata: airport.iata, list: listFmt(printable.slice(0, 6)) }) }]
+        : [];
+    })()),
     // The questions people actually ask about a field with no airline service — and the
     // answers nobody else publishes, because nobody else measured which airports have
     // scheduled service. Both are plain, self-contained sentences, so they can be lifted
@@ -236,7 +247,10 @@ export async function AirportBottom({ airport, locale, about, displayName, fligh
             available right now". Who flies here and where to is the actual question, it is a
             stable fact, and Wikipedia keeps it current. Facts only — no prose is copied — with
             the article and revision cited. */}
-        {wiki && (wiki.airlines.length > 0 || wiki.status === 'no_commercial_service') && (
+        {/* The no-service sentence renders only when the page-level banner is NOT already
+            saying the same thing — hasNoService() now covers the sourced-negative case, so
+            without this gate the two statements duplicated on the same screen. */}
+        {wiki && (wiki.airlines.length > 0 || (wiki.status === 'no_commercial_service' && !noService)) && (
           <section className="cv-auto" style={sec}>
             <H2>{t('wiki_routes_title', { iata: airport.iata })}</H2>
             {wiki.status === 'no_commercial_service' ? (

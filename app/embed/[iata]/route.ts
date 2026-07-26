@@ -50,8 +50,22 @@ export async function GET(req: NextRequest, ctx: { params: Promise<{ iata: strin
   const light = q.get('theme') === 'light';
 
   // Store read only — this endpoint must stay free at any traffic level.
+  //
+  // Row selection, audited: taking the head of the stored board replayed its ordering AT
+  // FETCH TIME — «upcoming first» — which hours later meant ten «Departed» rows and nothing
+  // else on 22 of 30 sampled majors. A widget whose every visible flight has already left is
+  // worse than no widget. Non-terminal rows (scheduled / delayed / boarding…) come first;
+  // terminal ones only pad the remainder. The data is no fresher — the footer's age label
+  // keeps saying exactly how old it is — but what fits into ten rows is now the part a
+  // visitor can still act on.
   let rows: Awaited<ReturnType<typeof getBoard>> = [];
-  try { rows = (await getBoard(iata, dir, lang, false)).slice(0, 10); } catch { /* empty board renders honestly */ }
+  try {
+    const all = await getBoard(iata, dir, lang, false);
+    const TERMINAL = new Set(['departed', 'arrived', 'baggage', 'cancelled']);
+    const active = all.filter(r => !TERMINAL.has(r.status));
+    const done = all.filter(r => TERMINAL.has(r.status));
+    rows = [...active, ...done].slice(0, 10);
+  } catch { /* empty board renders honestly */ }
   const fetchedAt = getBoardFetchedAt(iata, dir);
 
   const ui = (await import(`@/messages/${lang}.json`)).default.ui as Record<string, string>;
@@ -85,7 +99,7 @@ export async function GET(req: NextRequest, ctx: { params: Promise<{ iata: strin
   const dirLabel = dir === 'departures' ? (ui.departures || 'Departures') : (ui.arrivals || 'Arrivals');
 
   const html = `<!doctype html>
-<html lang="${lang}"><head>
+<html lang="${lang}"${lang === 'ar' ? ' dir="rtl"' : ''}><head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="robots" content="noindex">

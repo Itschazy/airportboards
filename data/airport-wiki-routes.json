@@ -4,7 +4,7 @@
   "licence": "Text CC BY-SA 4.0. Only facts (airline → destinations) are stored; no prose is copied. Attribution is rendered with the section.",
   "counts": {
     "airports": 3268,
-    "withData": 1070
+    "withData": 1042
   },
   "airports": {
     "AAK": {
@@ -508,26 +508,6 @@
     },
     "AGT": {
       "airlines": [
-        {
-          "airline": "Avianca Cargo",
-          "destinations": [
-            "Bogota",
-            "Campinas",
-            "Santiago de Chile"
-          ]
-        },
-        {
-          "airline": "Atlas Air",
-          "destinations": [
-            "Miami"
-          ]
-        },
-        {
-          "airline": "LATAM Cargo Chile",
-          "destinations": [
-            "Santiago de Chile"
-          ]
-        },
         {
           "airline": "Western Global Airlines",
           "destinations": [
@@ -1912,12 +1892,6 @@
     "BQU": {
       "airlines": [
         {
-          "airline": "3rdcoltitle = Refs",
-          "destinations": [
-            "3rdcolunsortable=yes"
-          ]
-        },
-        {
           "airline": "Grenadine Airways",
           "destinations": [
             "Saint Vincent–Argyle",
@@ -2576,12 +2550,6 @@
     "CCR": {
       "airlines": [
         {
-          "airline": "3rdcoltitle = Refs",
-          "destinations": [
-            "3rdcolunsortable=yes"
-          ]
-        },
-        {
           "airline": "JSX",
           "destinations": [
             "Burbank",
@@ -2862,12 +2830,6 @@
     },
     "CIW": {
       "airlines": [
-        {
-          "airline": "3rdcoltitle = Refs",
-          "destinations": [
-            "3rdcolunsortable=yes"
-          ]
-        },
         {
           "airline": "Grenadine Airways",
           "destinations": [
@@ -3328,22 +3290,16 @@
       "fetched": "2026-07-26"
     },
     "CWC": {
-      "airlines": [
-        {
-          "airline": "Windrose Airlines",
-          "destinations": [
-            "Kyiv–Boryspil"
-          ]
-        }
-      ],
-      "status": "served",
+      "airlines": [],
+      "status": "no_commercial_service",
       "source": {
         "title": "Chernivtsi International Airport",
         "revid": 1363026694,
         "url": "https://en.wikipedia.org/wiki/Chernivtsi_International_Airport"
       },
       "via": "template",
-      "fetched": "2026-07-26"
+      "fetched": "2026-07-26",
+      "since": "2022"
     },
     "CSA": {
       "airlines": [
@@ -3523,12 +3479,6 @@
     "DCF": {
       "airlines": [
         {
-          "airline": "3rdcoltitle = Refs",
-          "destinations": [
-            "3rdcolunsortable = yes"
-          ]
-        },
-        {
           "airline": "Airawak",
           "destinations": [
             "Castries",
@@ -3626,21 +3576,6 @@
     "DKR": {
       "airlines": [
         {
-          "airline": "Emirates SkyCargo",
-          "destinations": [
-            "Campinas–Viracopos",
-            "Dubai–Al Maktoum"
-          ]
-        },
-        {
-          "airline": "Lufthansa Cargo",
-          "destinations": [
-            "Buenos Aires–Ezeiza",
-            "Campinas–Viracopos",
-            "Montevideo"
-          ]
-        },
-        {
           "airline": "Med Airlines",
           "destinations": [
             "Casablanca"
@@ -3728,30 +3663,16 @@
       "fetched": "2026-07-26"
     },
     "DNK": {
-      "airlines": [
-        {
-          "airline": "Ukraine International Airlines",
-          "destinations": [
-            "Kyiv–Boryspil",
-            "Tel Aviv"
-          ]
-        },
-        {
-          "airline": "Windrose Airlines",
-          "destinations": [
-            "Kyiv–Boryspil",
-            "Sharm el-Sheikh"
-          ]
-        }
-      ],
-      "status": "served",
+      "airlines": [],
+      "status": "no_commercial_service",
       "source": {
         "title": "Dnipro International Airport",
         "revid": 1363489106,
         "url": "https://en.wikipedia.org/wiki/Dnipro_International_Airport"
       },
       "via": "template",
-      "fetched": "2026-07-26"
+      "fetched": "2026-07-26",
+      "since": "2022"
     },
     "DIA": {
       "airlines": [],
@@ -5972,12 +5893,6 @@
     "HJR": {
       "airlines": [
         {
-          "airline": "3rdcoltitle=",
-          "destinations": [
-            "3rdcolunsortable=yes"
-          ]
-        },
-        {
           "airline": "IndiGo",
           "destinations": [
             "Delhi",
@@ -5995,14 +5910,7 @@
       "fetched": "2026-07-26"
     },
     "HHR": {
-      "airlines": [
-        {
-          "airline": "3rdcoltitle = Refs",
-          "destinations": [
-            "3rdcolunsortable=yes"
-          ]
-        }
-      ],
+      "airlines": [],
       "status": "served",
       "source": {
         "title": "Hawthorne Municipal Airport (California)",
@@ -6432,8 +6340,8 @@
     },
     "IFO": {
       "airlines": [],
-      "status": "served",
-      "since": "",
+      "status": "no_commercial_service",
+      "since": "2022",
       "source": {
         "title": "Ivano-Frankivsk International Airport",
         "revid": 1363045132,
@@ -6736,14 +6644,7 @@
       "fetched": "2026-07-26"
     },
     "IXK": {
-      "airlines": [
-        {
-          "airline": "3rdcoltitle=",
-          "destinations": [
-            "3rdcolunsortable=yes"
-          ]
-        }
-      ],
+      "airlines": [],
       "status": "served",
       "source": {
         "title": "Keshod Airport",
@@ -7693,41 +7594,16 @@
       "fetched": "2026-07-26"
     },
     "KHE": {
-      "airlines": [
-        {
-          "airline": "Pegasus Airlines",
-          "destinations": [
-            "Istanbul–Sabiha Gökçen"
-          ]
-        },
-        {
-          "airline": "SkyUp",
-          "destinations": [
-            "Antalya",
-            "Sharm El Sheikh"
-          ]
-        },
-        {
-          "airline": "Turkish Airlines",
-          "destinations": [
-            "Istanbul"
-          ]
-        },
-        {
-          "airline": "Ukraine International Airlines",
-          "destinations": [
-            "Kyiv–Boryspil"
-          ]
-        }
-      ],
-      "status": "served",
+      "airlines": [],
+      "status": "no_commercial_service",
       "source": {
         "title": "Kherson International Airport",
         "revid": 1363048806,
         "url": "https://en.wikipedia.org/wiki/Kherson_International_Airport"
       },
       "via": "template",
-      "fetched": "2026-07-26"
+      "fetched": "2026-07-26",
+      "since": "2022"
     },
     "KGT": {
       "airlines": [],
@@ -8300,12 +8176,6 @@
     "KRP": {
       "airlines": [
         {
-          "airline": "3rdcoltitle = Refs",
-          "destinations": [
-            "3rdcolunsortable=yes"
-          ]
-        },
-        {
           "airline": "Airseven",
           "destinations": [
             "Palma de Mallorca"
@@ -8501,12 +8371,6 @@
     },
     "KWA": {
       "airlines": [
-        {
-          "airline": "3rdcoltitle=",
-          "destinations": [
-            "3rdcolunsortable=yes"
-          ]
-        },
         {
           "airline": "Air Marshall Islands",
           "destinations": [
@@ -9610,14 +9474,7 @@
       "fetched": "2026-07-26"
     },
     "LTX": {
-      "airlines": [
-        {
-          "airline": "=",
-          "destinations": [
-            "Cargolux"
-          ]
-        }
-      ],
+      "airlines": [],
       "status": "served",
       "source": {
         "title": "Cotopaxi International Airport",
@@ -9748,193 +9605,16 @@
       "fetched": "2026-07-26"
     },
     "LWO": {
-      "airlines": [
-        {
-          "airline": "Air Baltic",
-          "destinations": [
-            "Riga"
-          ]
-        },
-        {
-          "airline": "Austrian Airlines",
-          "destinations": [
-            "Vienna"
-          ]
-        },
-        {
-          "airline": "Azerbaijan Airlines",
-          "destinations": [
-            "Baku"
-          ]
-        },
-        {
-          "airline": "Flynas",
-          "destinations": [
-            "Riyadh",
-            "Gassim",
-            "Jeddah"
-          ]
-        },
-        {
-          "airline": "LOT Polish Airlines",
-          "destinations": [
-            "Warsaw–Chopin",
-            "Zielona Góra"
-          ]
-        },
-        {
-          "airline": "Lufthansa",
-          "destinations": [
-            "Frankfurt"
-          ]
-        },
-        {
-          "airline": "Motor Sich Airlines",
-          "destinations": [
-            "Kyiv–Zhuliany"
-          ]
-        },
-        {
-          "airline": "Pegasus Airlines",
-          "destinations": [
-            "Istanbul–Sabiha Gökçen",
-            "Bodrum",
-            "Dalaman"
-          ]
-        },
-        {
-          "airline": "Ryanair",
-          "destinations": [
-            "Barcelona",
-            "Bari",
-            "Bergamo",
-            "Bologna",
-            "Bratislava",
-            "Budapest",
-            "Charleroi",
-            "Gdańsk",
-            "Kaunas",
-            "Kraków",
-            "London–Stansted",
-            "Manchester",
-            "Memmingen",
-            "Naples",
-            "Nuremberg",
-            "Palermo",
-            "Pisa",
-            "Poznań",
-            "Riga",
-            "Rome–Fiumicino",
-            "Stockholm–Arlanda",
-            "Treviso",
-            "Turin",
-            "Warsaw–Modlin",
-            "Wrocław",
-            "Zagreb",
-            "Paphos",
-            "Weeze"
-          ]
-        },
-        {
-          "airline": "Skyline Express",
-          "destinations": [
-            "Sharm El Sheikh",
-            "Hurghada",
-            "Antalya",
-            "Bodrum",
-            "Dalaman",
-            "La Romana",
-            "Marsa Alam"
-          ]
-        },
-        {
-          "airline": "SkyUp",
-          "destinations": [
-            "Istanbul",
-            "Lisbon",
-            "Madrid",
-            "Prague",
-            "Tel Aviv",
-            "Valencia",
-            "Vienna",
-            "Alicante",
-            "Bahrain",
-            "Baku",
-            "Barcelona",
-            "Batumi",
-            "Burgas",
-            "Dammam",
-            "Kuwait City",
-            "Muscat",
-            "Rhodes",
-            "Riyadh",
-            "Tirana",
-            "Tivat",
-            "Antalya",
-            "Hurghada",
-            "Marsa Alam",
-            "Qassim",
-            "Sharm El Sheikh"
-          ]
-        },
-        {
-          "airline": "Turkish Airlines",
-          "destinations": [
-            "Istanbul"
-          ]
-        },
-        {
-          "airline": "Windrose Airlines",
-          "destinations": [
-            "Kyiv–Boryspil",
-            "Antalya",
-            "Hurghada"
-          ]
-        },
-        {
-          "airline": "Wizz Air",
-          "destinations": [
-            "Beauvais",
-            "Berlin",
-            "Billund",
-            "Bratislava",
-            "Budapest",
-            "Catania",
-            "Charleroi",
-            "Dortmund",
-            "Eindhoven",
-            "Gdańsk",
-            "Hamburg",
-            "Katowice",
-            "Larnaca",
-            "Lisbon",
-            "London–Luton",
-            "Madrid",
-            "Memmingen",
-            "Milan–Malpensa",
-            "Naples",
-            "Nice",
-            "Pardubice",
-            "Poznań",
-            "Rome–Ciampino",
-            "Rome–Fiumicino",
-            "Tallinn",
-            "Treviso",
-            "Valencia",
-            "Vilnius",
-            "Warsaw–Chopin",
-            "Wrocław"
-          ]
-        }
-      ],
-      "status": "served",
+      "airlines": [],
+      "status": "no_commercial_service",
       "source": {
         "title": "Lviv Danylo Halytskyi International Airport",
         "revid": 1363055507,
         "url": "https://en.wikipedia.org/wiki/Lviv_Danylo_Halytskyi_International_Airport"
       },
       "via": "template",
-      "fetched": "2026-07-26"
+      "fetched": "2026-07-26",
+      "since": "2022"
     },
     "LUG": {
       "airlines": [],
@@ -10829,12 +10509,6 @@
     },
     "MQS": {
       "airlines": [
-        {
-          "airline": "3rdcoltitle = Refs",
-          "destinations": [
-            "3rdcolunsortable=yes"
-          ]
-        },
         {
           "airline": "Grenadine Airways",
           "destinations": [
@@ -14590,12 +14264,6 @@
     "SCT": {
       "airlines": [
         {
-          "airline": "3rdcoltitle=",
-          "destinations": [
-            "3rdcolunsortable=yes"
-          ]
-        },
-        {
           "airline": "Yemenia",
           "destinations": [
             "Aden",
@@ -14811,167 +14479,16 @@
       "fetched": "2026-07-26"
     },
     "SIP": {
-      "airlines": [
-        {
-          "airline": "Aeroflot",
-          "destinations": [
-            "Krasnoyarsk–Yemelyanovo",
-            "Moscow–Sheremetyevo",
-            "Krasnodar"
-          ]
-        },
-        {
-          "airline": "Azimuth",
-          "destinations": [
-            "Elista",
-            "Krasnodar",
-            "Mineralnye Vody",
-            "Rostov-on-Don"
-          ]
-        },
-        {
-          "airline": "Ikar",
-          "destinations": [
-            "Belgorod",
-            "Cheboksary",
-            "Kirov",
-            "Krasnoyarsk–Yemelyanovo",
-            "Magnitogorsk",
-            "Novosibirsk",
-            "Ulyanovsk–Baratayevka",
-            "Volgograd"
-          ]
-        },
-        {
-          "airline": "IrAero",
-          "destinations": [
-            "Saratov"
-          ]
-        },
-        {
-          "airline": "Izhavia",
-          "destinations": [
-            "Cheboksary",
-            "Kirov",
-            "Nizhnekamsk",
-            "Penza"
-          ]
-        },
-        {
-          "airline": "Kosmos Airlines",
-          "destinations": [
-            "Novokuznetsk",
-            "Tomsk"
-          ]
-        },
-        {
-          "airline": "Kostroma Avia",
-          "destinations": [
-            "Kostroma",
-            "Voronezh"
-          ]
-        },
-        {
-          "airline": "Nordwind Airlines",
-          "destinations": [
-            "Magnitogorsk",
-            "Ufa"
-          ]
-        },
-        {
-          "airline": "RusLine",
-          "destinations": [
-            "Voronezh",
-            "Kursk",
-            "Penza",
-            "Ulyanovsk–Baratayevka",
-            "Volgograd"
-          ]
-        },
-        {
-          "airline": "S7 Airlines",
-          "destinations": [
-            "Irkutsk",
-            "Moscow–Domodedovo",
-            "Novosibirsk",
-            "Ivanovo",
-            "Kurgan",
-            "Lipetsk"
-          ]
-        },
-        {
-          "airline": "Smartavia",
-          "destinations": [
-            "Arkhangelsk",
-            "Cheboksary",
-            "Moscow–Domodedovo",
-            "Syktyvkar",
-            "Ufa",
-            "Volgograd",
-            "Voronezh"
-          ]
-        },
-        {
-          "airline": "Ural Airlines",
-          "destinations": [
-            "Belgorod",
-            "Kazan",
-            "Kemerovo",
-            "Kirov",
-            "Krasnodar",
-            "Krasnoyarsk–Yemelyanovo",
-            "Magnitogorsk",
-            "Moscow–Domodedovo",
-            "Moscow–Sheremetyevo",
-            "Murmansk",
-            "Nizhnevartovsk",
-            "Nizhny Novgorod",
-            "Omsk",
-            "Saint Petersburg",
-            "Samara",
-            "Yekaterinburg",
-            "Chelyabinsk",
-            "Moscow–Zhukovsky",
-            "Rostov-on-Don"
-          ]
-        },
-        {
-          "airline": "UVT Aero",
-          "destinations": [
-            "Bugulma",
-            "Ufa"
-          ]
-        },
-        {
-          "airline": "Yakutia Airlines",
-          "destinations": [
-            "Irkutsk",
-            "Krasnodar",
-            "Mineralnye Vody",
-            "Moscow–Vnukovo",
-            "Yakutsk"
-          ]
-        },
-        {
-          "airline": "Yamal Airlines",
-          "destinations": [
-            "Tyumen",
-            "Kursk",
-            "Moscow–Domodedovo",
-            "Nizhnevartovsk",
-            "Omsk",
-            "Surgut"
-          ]
-        }
-      ],
-      "status": "served",
+      "airlines": [],
+      "status": "no_commercial_service",
       "source": {
         "title": "Simferopol International Airport",
         "revid": 1363109395,
         "url": "https://en.wikipedia.org/wiki/Simferopol_International_Airport"
       },
       "via": "template",
-      "fetched": "2026-07-26"
+      "fetched": "2026-07-26",
+      "since": "2022"
     },
     "SFJ": {
       "airlines": [],
@@ -15051,12 +14568,6 @@
       "airlines": [
         {
           "airline": "Ameriflight",
-          "destinations": [
-            "Portland (OR)"
-          ]
-        },
-        {
-          "airline": "FedEx Feeder operated by Empire Airlines",
           "destinations": [
             "Portland (OR)"
           ]
@@ -15718,12 +15229,6 @@
     "STC": {
       "airlines": [
         {
-          "airline": "3rdcoltitle = Refs",
-          "destinations": [
-            "3rdcolunsortable=yes"
-          ]
-        },
-        {
           "airline": "Allegiant Air",
           "destinations": [
             "Phoenix/Mesa",
@@ -16049,14 +15554,7 @@
       "fetched": "2026-07-26"
     },
     "TEZ": {
-      "airlines": [
-        {
-          "airline": "3rdcoltitle=",
-          "destinations": [
-            "3rdcolunsortable=yes"
-          ]
-        }
-      ],
+      "airlines": [],
       "status": "served",
       "source": {
         "title": "Tezpur Airport",
@@ -17120,22 +16618,16 @@
       "fetched": "2026-07-26"
     },
     "UDJ": {
-      "airlines": [
-        {
-          "airline": "Windrose Airlines",
-          "destinations": [
-            "Kyiv–Boryspil"
-          ]
-        }
-      ],
-      "status": "served",
+      "airlines": [],
+      "status": "no_commercial_service",
       "source": {
         "title": "Uzhhorod International Airport",
         "revid": 1363085032,
         "url": "https://en.wikipedia.org/wiki/Uzhhorod_International_Airport"
       },
       "via": "template",
-      "fetched": "2026-07-26"
+      "fetched": "2026-07-26",
+      "since": "2022"
     },
     "UGA": {
       "airlines": [],
@@ -17470,12 +16962,6 @@
     },
     "UNI": {
       "airlines": [
-        {
-          "airline": "3rdcoltitle = Refs",
-          "destinations": [
-            "3rdcolunsortable=yes"
-          ]
-        },
         {
           "airline": "Grenadine Airways",
           "destinations": [
@@ -17826,14 +17312,7 @@
       "fetched": "2026-07-26"
     },
     "VBS": {
-      "airlines": [
-        {
-          "airline": "Poste Air Cargo",
-          "destinations": [
-            "Rome-Fiumicino"
-          ]
-        }
-      ],
+      "airlines": [],
       "status": "served",
       "source": {
         "title": "Brescia Airport",
@@ -17924,12 +17403,6 @@
     },
     "VDZ": {
       "airlines": [
-        {
-          "airline": "3rdcoltitle = Refs",
-          "destinations": [
-            "3rdcolunsortable=yes"
-          ]
-        },
         {
           "airline": "Reeve Air Alaska",
           "destinations": [
@@ -18520,12 +17993,6 @@
     },
     "WST": {
       "airlines": [
-        {
-          "airline": "3rdcoltitle = Refs",
-          "destinations": [
-            "3rdcolunsortable=yes"
-          ]
-        },
         {
           "airline": "Fly The Whale",
           "destinations": [
@@ -23740,12 +23207,6 @@
           "destinations": [
             "Fort Worth/Alliance"
           ]
-        },
-        {
-          "airline": "FedEx Express",
-          "destinations": [
-            "Memphis"
-          ]
         }
       ],
       "status": "served",
@@ -23791,14 +23252,7 @@
       "fetched": "2026-07-26"
     },
     "BFT": {
-      "airlines": [
-        {
-          "airline": "Planemaster for UPS Airlines",
-          "destinations": [
-            "Columbia (SC)"
-          ]
-        }
-      ],
+      "airlines": [],
       "status": "served",
       "source": {
         "title": "Beaufort County Airport",
@@ -25811,14 +25265,7 @@
       "fetched": "2026-07-26"
     },
     "CIC": {
-      "airlines": [
-        {
-          "airline": "FedEx Feeder",
-          "destinations": [
-            "Sacramento"
-          ]
-        }
-      ],
+      "airlines": [],
       "status": "served",
       "source": {
         "title": "Chico Regional Airport",
@@ -25967,14 +25414,7 @@
       "fetched": "2026-07-26"
     },
     "CLM": {
-      "airlines": [
-        {
-          "airline": "FedEx Feeder",
-          "destinations": [
-            "Seattle/Tacoma"
-          ]
-        }
-      ],
+      "airlines": [],
       "status": "served",
       "source": {
         "title": "William R. Fairchild International Airport",
@@ -26704,13 +26144,6 @@
             "Coos Bay",
             "Portland (OR)"
           ]
-        },
-        {
-          "airline": "FedEx Feeder",
-          "destinations": [
-            "Portland (OR)",
-            "Salem"
-          ]
         }
       ],
       "status": "served",
@@ -27311,12 +26744,6 @@
     "DNP": {
       "airlines": [
         {
-          "airline": "3rdcoltitle=",
-          "destinations": [
-            "3rdcolunsortable=yes"
-          ]
-        },
-        {
           "airline": "Nepal Airlines",
           "destinations": [
             "Kathmandu"
@@ -27344,14 +26771,7 @@
       "fetched": "2026-07-26"
     },
     "DNV": {
-      "airlines": [
-        {
-          "airline": "Air Cargo Carriers",
-          "destinations": [
-            "Louisville"
-          ]
-        }
-      ],
+      "airlines": [],
       "status": "served",
       "source": {
         "title": "Vermilion Regional Airport",
@@ -27474,12 +26894,6 @@
       "airlines": [
         {
           "airline": "Ameriflight",
-          "destinations": [
-            "San Antonio"
-          ]
-        },
-        {
-          "airline": "FedEx Feeder operated by Baron Aviation",
           "destinations": [
             "San Antonio"
           ]
@@ -29118,12 +28532,6 @@
     },
     "FMN": {
       "airlines": [
-        {
-          "airline": "3rdcoltitle = Refs",
-          "destinations": [
-            "3rdcolunsortable = yes"
-          ]
-        },
         {
           "airline": "United Express",
           "destinations": [
@@ -30827,12 +30235,6 @@
     "HFD": {
       "airlines": [
         {
-          "airline": "3rdcoltitle = Refs",
-          "destinations": [
-            "3rdcolunsortable=yes"
-          ]
-        },
-        {
           "airline": "Aer Lingus",
           "destinations": [
             "Dublin"
@@ -31189,62 +30591,16 @@
       "fetched": "2026-07-26"
     },
     "HRK": {
-      "airlines": [
-        {
-          "airline": "LOT Polish Airlines",
-          "destinations": [
-            "Warsaw–Chopin"
-          ]
-        },
-        {
-          "airline": "Pegasus Airlines",
-          "destinations": [
-            "Istanbul–Sabiha Gökçen",
-            "Bodrum"
-          ]
-        },
-        {
-          "airline": "Skyline Express",
-          "destinations": [
-            "Antalya",
-            "Dalaman",
-            "Sharm El Sheikh"
-          ]
-        },
-        {
-          "airline": "SkyUp",
-          "destinations": [
-            "Bratislava",
-            "Prague",
-            "Barcelona",
-            "Batumi",
-            "Burgas",
-            "Corfu",
-            "Larnaca",
-            "Odesa",
-            "Rimini",
-            "Tel Aviv",
-            "Tirana",
-            "Tivat",
-            "Antalya",
-            "Sharm El Sheikh"
-          ]
-        },
-        {
-          "airline": "Turkish Airlines",
-          "destinations": [
-            "Istanbul"
-          ]
-        }
-      ],
-      "status": "served",
+      "airlines": [],
+      "status": "no_commercial_service",
       "source": {
         "title": "Kharkiv International Airport",
         "revid": 1363048751,
         "url": "https://en.wikipedia.org/wiki/Kharkiv_International_Airport"
       },
       "via": "template",
-      "fetched": "2026-07-26"
+      "fetched": "2026-07-26",
+      "since": "2022"
     },
     "HRM": {
       "airlines": [
@@ -31683,22 +31039,16 @@
       "fetched": "2026-07-26"
     },
     "IEV": {
-      "airlines": [
-        {
-          "airline": "Pegasus Airlines",
-          "destinations": [
-            "Dalaman"
-          ]
-        }
-      ],
-      "status": "served",
+      "airlines": [],
+      "status": "no_commercial_service",
       "source": {
         "title": "Kyiv International Airport (Zhuliany)",
         "revid": 1364263737,
         "url": "https://en.wikipedia.org/wiki/Kyiv_International_Airport_(Zhuliany)"
       },
       "via": "template",
-      "fetched": "2026-07-26"
+      "fetched": "2026-07-26",
+      "since": "2022"
     },
     "IDP": {
       "airlines": [],
@@ -32336,14 +31686,7 @@
       "fetched": "2026-07-26"
     },
     "IYK": {
-      "airlines": [
-        {
-          "airline": "FedEx Feeder",
-          "destinations": [
-            "Ontario"
-          ]
-        }
-      ],
+      "airlines": [],
       "status": "served",
       "source": {
         "title": "Inyokern Airport",
@@ -33674,288 +33017,16 @@
       "fetched": "2026-07-26"
     },
     "KBP": {
-      "airlines": [
-        {
-          "airline": "Air Arabia",
-          "destinations": [
-            "Sharjah"
-          ]
-        },
-        {
-          "airline": "Air Astana",
-          "destinations": [
-            "Almaty",
-            "Astana"
-          ]
-        },
-        {
-          "airline": "Air France",
-          "destinations": [
-            "Paris–Charles de Gaulle"
-          ]
-        },
-        {
-          "airline": "AirBaltic",
-          "destinations": [
-            "Riga",
-            "Vilnius"
-          ]
-        },
-        {
-          "airline": "AJet",
-          "destinations": [
-            "Ankara"
-          ]
-        },
-        {
-          "airline": "Austrian Airlines",
-          "destinations": [
-            "Vienna"
-          ]
-        },
-        {
-          "airline": "Azerbaijan Airlines",
-          "destinations": [
-            "Baku"
-          ]
-        },
-        {
-          "airline": "Bravo Airways",
-          "destinations": [
-            "Amman–Queen Alia",
-            "Beirut"
-          ]
-        },
-        {
-          "airline": "El Al",
-          "destinations": [
-            "Tel Aviv"
-          ]
-        },
-        {
-          "airline": "Eurowings",
-          "destinations": [
-            "Düsseldorf"
-          ]
-        },
-        {
-          "airline": "Flydubai",
-          "destinations": [
-            "Dubai–International"
-          ]
-        },
-        {
-          "airline": "FlyOne",
-          "destinations": [
-            "Chișinău"
-          ]
-        },
-        {
-          "airline": "KLM",
-          "destinations": [
-            "Amsterdam"
-          ]
-        },
-        {
-          "airline": "Lufthansa",
-          "destinations": [
-            "Frankfurt",
-            "Munich"
-          ]
-        },
-        {
-          "airline": "Pegasus Airlines",
-          "destinations": [
-            "Ankara",
-            "Bodrum",
-            "Izmir"
-          ]
-        },
-        {
-          "airline": "Qatar Airways",
-          "destinations": [
-            "Doha"
-          ]
-        },
-        {
-          "airline": "Ryanair",
-          "destinations": [
-            "Athens",
-            "Barcelona",
-            "Bergamo",
-            "Berlin",
-            "Bologna",
-            "Bratislava",
-            "Bydgoszcz",
-            "Catania",
-            "Cologne/Bonn",
-            "Dublin",
-            "Gdańsk",
-            "Hahn",
-            "Katowice",
-            "Kraków",
-            "London–Stansted",
-            "Madrid",
-            "Malta",
-            "Manchester",
-            "Naples",
-            "Paphos",
-            "Poznań",
-            "Riga",
-            "Rome–Fiumicino",
-            "Sofia",
-            "Treviso",
-            "Turin",
-            "Valencia",
-            "Vienna",
-            "Vilnius",
-            "Warsaw–Modlin",
-            "Weeze",
-            "Wrocław",
-            "Chania"
-          ]
-        },
-        {
-          "airline": "Scandinavian Airlines",
-          "destinations": [
-            "Oslo"
-          ]
-        },
-        {
-          "airline": "Skyline Express",
-          "destinations": [
-            "Barcelona",
-            "Hurghada",
-            "Sharm El Sheikh",
-            "Antalya",
-            "Bodrum",
-            "Burgas",
-            "Dalaman",
-            "Enfidha",
-            "La Romana",
-            "Nha Trang",
-            "Punta Cana"
-          ]
-        },
-        {
-          "airline": "SkyUp",
-          "destinations": [
-            "Alicante",
-            "Almaty",
-            "Athens",
-            "Barcelona",
-            "Batumi",
-            "Beauvais",
-            "Berlin",
-            "Dammam",
-            "Dubai–International",
-            "Funchal",
-            "Istanbul",
-            "Jeddah",
-            "Larnaca",
-            "Lisbon",
-            "Łódź",
-            "Madrid",
-            "Munich",
-            "Nice",
-            "Prague",
-            "Riyadh",
-            "Tbilisi",
-            "Tel Aviv",
-            "Valencia",
-            "Yerevan",
-            "Bahrain",
-            "Bergamo",
-            "Bodrum",
-            "Burgas",
-            "Catania",
-            "Colombo–Bandaranaike",
-            "Dalaman",
-            "Dubrovnik",
-            "Faro",
-            "Hambantota–Mattala",
-            "Heraklion",
-            "Izmir",
-            "Kos",
-            "Kuwait City",
-            "Lamezia Terme",
-            "Lyon",
-            "Málaga",
-            "Malta",
-            "Marseille",
-            "Monastir",
-            "Muscat",
-            "Naples",
-            "Pula",
-            "Rhodes",
-            "Rimini",
-            "Rome–Ciampino",
-            "Salzburg",
-            "Sofia",
-            "Split",
-            "Tashkent",
-            "Tenerife–South",
-            "Tirana",
-            "Tivat",
-            "Varna",
-            "Zakynthos",
-            "Zanzibar",
-            "Antalya",
-            "Hurghada",
-            "Marsa Alam",
-            "Sharm El Sheikh"
-          ]
-        },
-        {
-          "airline": "Swiss International Air Lines",
-          "destinations": [
-            "Zürich"
-          ]
-        },
-        {
-          "airline": "Turkish Airlines",
-          "destinations": [
-            "Istanbul"
-          ]
-        },
-        {
-          "airline": "Vueling",
-          "destinations": [
-            "Paris–Orly"
-          ]
-        },
-        {
-          "airline": "Windrose Airlines",
-          "destinations": [
-            "Belgrade",
-            "Dnipro",
-            "Ivano-Frankivsk",
-            "Kharkiv",
-            "Ljubljana",
-            "Lviv",
-            "Odesa",
-            "Sofia",
-            "Uzhhorod",
-            "Zagreb",
-            "Zaporizhzhia",
-            "Bodrum",
-            "Burgas",
-            "Dubrovnik",
-            "Mykolaiv",
-            "Pula",
-            "Rhodes",
-            "Split"
-          ]
-        }
-      ],
-      "status": "served",
+      "airlines": [],
+      "status": "no_commercial_service",
       "source": {
         "title": "Boryspil International Airport",
         "revid": 1363188882,
         "url": "https://en.wikipedia.org/wiki/Boryspil_International_Airport"
       },
       "via": "template",
-      "fetched": "2026-07-26"
+      "fetched": "2026-07-26",
+      "since": "2022"
     },
     "KCO": {
       "airlines": [
@@ -35349,13 +34420,6 @@
             "Portland",
             "OR"
           ]
-        },
-        {
-          "airline": "FedEx Feeder",
-          "destinations": [
-            "Pendleton",
-            "Spokane"
-          ]
         }
       ],
       "status": "served",
@@ -36540,22 +35604,7 @@
       "fetched": "2026-07-26"
     },
     "MEO": {
-      "airlines": [
-        {
-          "airline": "FedEx Feeder",
-          "destinations": [
-            "Norfolk"
-          ]
-        },
-        {
-          "airline": "UPS Airlines",
-          "destinations": [
-            "Edenton",
-            "Norfolk",
-            "Raleigh/Durham"
-          ]
-        }
-      ],
+      "airlines": [],
       "status": "served",
       "source": {
         "title": "Dare County Regional Airport",
@@ -37829,12 +36878,6 @@
           "destinations": [
             "Seattle–Boeing"
           ]
-        },
-        {
-          "airline": "FedEx Feeder",
-          "destinations": [
-            "Seattle/Tacoma"
-          ]
         }
       ],
       "status": "served",
@@ -38606,35 +37649,16 @@
       "fetched": "2026-07-26"
     },
     "NLV": {
-      "airlines": [
-        {
-          "airline": "Motor Sich Airlines",
-          "destinations": [
-            "Kyiv–Zhuliany"
-          ]
-        },
-        {
-          "airline": "SkyUp",
-          "destinations": [
-            "Antalya",
-            "Sharm El Sheikh"
-          ]
-        },
-        {
-          "airline": "Windrose Airlines",
-          "destinations": [
-            "Kyiv–Boryspil"
-          ]
-        }
-      ],
-      "status": "served",
+      "airlines": [],
+      "status": "no_commercial_service",
       "source": {
         "title": "Mykolaiv Airport",
         "revid": 1363063018,
         "url": "https://en.wikipedia.org/wiki/Mykolaiv_Airport"
       },
       "via": "template",
-      "fetched": "2026-07-26"
+      "fetched": "2026-07-26",
+      "since": "2022"
     },
     "NMB": {
       "airlines": [
@@ -39354,97 +38378,16 @@
       "fetched": "2026-07-26"
     },
     "ODS": {
-      "airlines": [
-        {
-          "airline": "Air Baltic",
-          "destinations": [
-            "Riga"
-          ]
-        },
-        {
-          "airline": "AJet",
-          "destinations": [
-            "Istanbul–Sabiha Gökçen"
-          ]
-        },
-        {
-          "airline": "Austrian Airlines",
-          "destinations": [
-            "Vienna"
-          ]
-        },
-        {
-          "airline": "Azerbaijan Airlines",
-          "destinations": [
-            "Baku"
-          ]
-        },
-        {
-          "airline": "Flydubai",
-          "destinations": [
-            "Dubai–International"
-          ]
-        },
-        {
-          "airline": "LOT Polish Airlines",
-          "destinations": [
-            "Warsaw–Chopin",
-            "Rzeszow"
-          ]
-        },
-        {
-          "airline": "Motor Sich Airlines",
-          "destinations": [
-            "Kyiv–Zhuliany"
-          ]
-        },
-        {
-          "airline": "Pegasus Airlines",
-          "destinations": [
-            "Ankara",
-            "Istanbul–Sabiha Gökçen"
-          ]
-        },
-        {
-          "airline": "Skyline Express",
-          "destinations": [
-            "Antalya",
-            "Sharm El Sheikh"
-          ]
-        },
-        {
-          "airline": "SkyUp",
-          "destinations": [
-            "Prague",
-            "Tbilisi",
-            "Yerevan",
-            "Baku",
-            "Barcelona",
-            "Batumi",
-            "Rimini",
-            "Tel Aviv",
-            "Tirana",
-            "Tivat",
-            "Vilnius",
-            "Antalya",
-            "Sharm El Sheikh"
-          ]
-        },
-        {
-          "airline": "Turkish Airlines",
-          "destinations": [
-            "Istanbul"
-          ]
-        }
-      ],
-      "status": "served",
+      "airlines": [],
+      "status": "no_commercial_service",
       "source": {
         "title": "Odesa International Airport",
         "revid": 1363068042,
         "url": "https://en.wikipedia.org/wiki/Odesa_International_Airport"
       },
       "via": "template",
-      "fetched": "2026-07-26"
+      "fetched": "2026-07-26",
+      "since": "2022"
     },
     "OEL": {
       "airlines": [],
@@ -39774,14 +38717,6 @@
             "Portland (OR)",
             "Salem"
           ]
-        },
-        {
-          "airline": "FedEx Feeder",
-          "destinations": [
-            "Corvallis",
-            "Portland (OR)",
-            "Salem"
-          ]
         }
       ],
       "status": "served",
@@ -39917,16 +38852,7 @@
       "fetched": "2026-07-26"
     },
     "OSH": {
-      "airlines": [
-        {
-          "airline": "Freight Runners Express",
-          "destinations": [
-            "Milwaukee",
-            "Rhinelander",
-            "Sheboygan"
-          ]
-        }
-      ],
+      "airlines": [],
       "status": "served",
       "source": {
         "title": "Wittman Regional Airport",
@@ -40412,73 +39338,16 @@
       "fetched": "2026-07-26"
     },
     "OZH": {
-      "airlines": [
-        {
-          "airline": "Austrian Airlines",
-          "destinations": [
-            "Vienna"
-          ]
-        },
-        {
-          "airline": "LOT Polish Airlines",
-          "destinations": [
-            "Warsaw–Chopin"
-          ]
-        },
-        {
-          "airline": "Motor Sich Airlines",
-          "destinations": [
-            "Kyiv–Zhuliany",
-            "Burgas"
-          ]
-        },
-        {
-          "airline": "Pegasus Airlines",
-          "destinations": [
-            "Istanbul–Sabiha Gökçen",
-            "Bodrum"
-          ]
-        },
-        {
-          "airline": "Skyline Express",
-          "destinations": [
-            "Antalya",
-            "Dalaman",
-            "Sharm El Sheikh"
-          ]
-        },
-        {
-          "airline": "SkyUp",
-          "destinations": [
-            "Tel Aviv",
-            "Barcelona",
-            "Batumi",
-            "Burgas",
-            "Larnaca",
-            "Odesa",
-            "Prague",
-            "Rimini",
-            "Tirana",
-            "Tivat",
-            "Antalya",
-            "Sharm El Sheikh"
-          ]
-        },
-        {
-          "airline": "Turkish Airlines",
-          "destinations": [
-            "Istanbul"
-          ]
-        }
-      ],
-      "status": "served",
+      "airlines": [],
+      "status": "no_commercial_service",
       "source": {
         "title": "Zaporizhzhia International Airport",
         "revid": 1363088983,
         "url": "https://en.wikipedia.org/wiki/Zaporizhzhia_International_Airport"
       },
       "via": "template",
-      "fetched": "2026-07-26"
+      "fetched": "2026-07-26",
+      "since": "2022"
     },
     "OZP": {
       "airlines": [],
@@ -43397,12 +42266,6 @@
     "RUI": {
       "airlines": [
         {
-          "airline": "3rdcoltitle = Refs",
-          "destinations": [
-            "3rdcolunsortable=yes"
-          ]
-        },
-        {
           "airline": "Contour Airlines",
           "destinations": [
             "Denver"
@@ -44301,12 +43164,6 @@
     "SMO": {
       "airlines": [
         {
-          "airline": "3rdcoltitle = Refs",
-          "destinations": [
-            "3rdcolunsortable=yes"
-          ]
-        },
-        {
           "airline": "JSX",
           "destinations": [
             "Las Vegas",
@@ -44805,14 +43662,7 @@
       "fetched": "2026-07-26"
     },
     "STE": {
-      "airlines": [
-        {
-          "airline": "Freight Runners Express",
-          "destinations": [
-            "Rhinelander"
-          ]
-        }
-      ],
+      "airlines": [],
       "status": "served",
       "source": {
         "title": "Stevens Point Municipal Airport",
@@ -45434,14 +44284,7 @@
       "fetched": "2026-07-26"
     },
     "TBR": {
-      "airlines": [
-        {
-          "airline": "Martinaire for UPS Airlines",
-          "destinations": [
-            "Columbia (SC)"
-          ]
-        }
-      ],
+      "airlines": [],
       "status": "served",
       "source": {
         "title": "Statesboro–Bulloch County Airport",
@@ -46937,14 +45780,7 @@
       "fetched": "2026-07-26"
     },
     "UKI": {
-      "airlines": [
-        {
-          "airline": "FedEx Feeder",
-          "destinations": [
-            "Sacramento"
-          ]
-        }
-      ],
+      "airlines": [],
       "status": "served",
       "source": {
         "title": "Ukiah Municipal Airport",
@@ -47720,13 +46556,6 @@
           "airline": "Ameriflight",
           "destinations": [
             "Ontario"
-          ]
-        },
-        {
-          "airline": "Fedex Express",
-          "destinations": [
-            "Oakland",
-            "Fresno"
           ]
         }
       ],
@@ -50289,14 +49118,7 @@
       "fetched": "2026-07-26"
     },
     "ZER": {
-      "airlines": [
-        {
-          "airline": "3rdcoltitle=",
-          "destinations": [
-            "3rdcolunsortable="
-          ]
-        }
-      ],
+      "airlines": [],
       "status": "served",
       "source": {
         "title": "Zero Airport",
@@ -50671,5 +49493,6 @@
       "via": "none",
       "fetched": "2026-07-26"
     }
-  }
+  },
+  "note_corrections": "2026-07-27 audit pass: dropped template-parameter garbage rows (23) and cargo-only carriers (25) that the template parser had let through; Ukrainian airports forced to no_commercial_service since 2022 — civil airspace has been closed since 24.02.2022 and the Wikipedia airline tables there are historical, so presenting them as current routes was false."
 }

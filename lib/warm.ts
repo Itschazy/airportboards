@@ -22,7 +22,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { getAirport } from '@/lib/airports';
 import { getStaleTs, usage, canSpend } from '@/lib/flightStore';
-import { hasWikiAirlines } from '@/lib/wiki-routes';
+import { hasWikiAirlines, getWikiRoutes } from '@/lib/wiki-routes';
 
 export type WarmTier = {
   name: string;
@@ -270,8 +270,15 @@ export function serviceLevel(iata: string): number | null {
  * banner, the FAQ gate, the nearest-served-airport line and the JSON-LD description.
  */
 export function hasNoService(iata: string): boolean {
-  if (serviceLevel(iata) !== 0) return false;
-  return !hasWikiAirlines(iata);
+  const level = serviceLevel(iata);
+  if (level !== null && level > 0) return false;
+  if (hasWikiAirlines(iata)) return false;
+  if (level === 0) return true;
+  // Level unknown, but the airport's own article states there is no commercial service —
+  // the Ukrainian airports are the load-bearing case (civil airspace closed since 24.02.2022,
+  // KBP's article listed 24 historical carriers that were briefly published here as current).
+  // An explicit sourced negative beats an unknown.
+  return getWikiRoutes(iata)?.status === 'no_commercial_service';
 }
 
 let sizes: Record<string, string> | null = null;

@@ -522,6 +522,7 @@ export function FlightBoard({ airport, locale, defaultMode = 'departures', displ
   // (meeting someone means looking three to five times in a day); the chips rendered by
   // AirportBottom on every airport page close the loop.
   useEffect(() => {
+    if (airport.closed) return;   // a chip inviting a return visit to Tegel helps nobody
     try {
       const KEY = 'ab_recent';
       const entry = { iata: airport.iata, name: displayName || airport.name, city: airport.city, country: airport.country, iso2: airport.iso2 };

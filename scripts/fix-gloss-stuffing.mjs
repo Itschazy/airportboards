@@ -129,7 +129,7 @@ const STEMS = {
 };
 
 /** Normalise for comparison: lowercase, strip punctuation and accents-insensitive spacing. */
-const norm = (s) => s.toLowerCase().replace(/[«»"“”'’.,;:!?]/g, '').replace(/\s+/g, ' ').trim();
+const norm = (s) => s.toLowerCase().replace(/[«»"“”'’„‚.,;:!?]/g, '').replace(/\s+/g, ' ').trim();
 
 /** Does `gloss` merely restate `lead`, the words immediately before the parenthesis? */
 function restates(gloss, lead) {
@@ -208,7 +208,7 @@ function stripLooseGlosses(text, locale) {
   if (!(STEMS[locale] || []).length) return { out: text, removed: 0 };
   let removed = 0;
   const stems = (STEMS[locale] || []).map((x) => x.toLowerCase());
-  let out = text.replace(/["“”«»]\s*([^"“”«»]{2,60}?)\s*["“”»«]/g, (whole, inner) => {
+  let out = text.replace(/["“”«»„]\s*([^"“”«»„‚]{2,60}?)\s*["“”»«‚]/g, (whole, inner) => {
     const low = inner.toLowerCase();
     const words = inner.trim().split(/\s+/).length;
     if (words > 6 || !stems.some((st) => low.includes(st))) return whole;

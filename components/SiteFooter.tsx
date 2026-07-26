@@ -7,6 +7,28 @@ import { locales, localeNames, type Locale } from '@/lib/i18n';
 
 const LETTERS = 'abcdefghijklmnopqrstuvwxyz'.split('');
 
+/**
+ * Demand-sorted country slots, computed ONCE per process.
+ *
+ * The footer renders on every page, and the first version recomputed this inline on every
+ * render: getAirportsByCountry × 237 countries walks the 6,073-airport list per country —
+ * ~1.4M iterations per SSR of a component whose inputs (service levels, country list) are
+ * static for the process lifetime. The audit flagged it; module-level memoisation makes the
+ * footer O(1) after the first render, and the data cannot change without a deploy anyway.
+ */
+let cachedTop: (ReturnType<typeof getCountries>[number] & { flights: number })[] | null = null;
+function topCountriesByDemand(earning: string[]) {
+  if (cachedTop) return cachedTop;
+  const withVolume = [...getCountries()].map(c => ({
+    ...c,
+    flights: getAirportsByCountry(c.slug).reduce((n, a) => n + Math.max(0, serviceLevel(a.iata) ?? 0), 0),
+  }));
+  const byDemand = [...withVolume].sort((a, b) => b.flights - a.flights);
+  const top12 = byDemand.slice(0, 12);
+  cachedTop = [...top12, ...byDemand.filter(c => earning.includes(c.country) && !top12.includes(c))];
+  return cachedTop;
+}
+
 // Server-rendered global footer. Its real job is SEO: it ships crawlable <a href>
 // links to the top hubs (busiest countries + the full A–Z index) on EVERY page across
 // all 12 locales, flattening crawl depth and spreading internal link equity so the
@@ -35,15 +57,7 @@ export async function SiteFooter({ locale }: { locale: Locale }) {
   const EARNING_COUNTRIES = [
     'Russia', 'Turkey', 'Portugal', 'Kazakhstan', 'Uzbekistan', 'Georgia', 'Azerbaijan', 'Armenia',
   ];
-  const withVolume = [...getCountries()].map(c => ({
-    ...c,
-    flights: getAirportsByCountry(c.slug).reduce((n, a) => n + Math.max(0, serviceLevel(a.iata) ?? 0), 0),
-  }));
-  const byDemand = [...withVolume].sort((a, b) => b.flights - a.flights);
-  const topCountries = [
-    ...byDemand.slice(0, 12),
-    ...byDemand.filter(c => EARNING_COUNTRIES.includes(c.country) && !byDemand.slice(0, 12).includes(c)),
-  ];
+  const topCountries = topCountriesByDemand(EARNING_COUNTRIES);
 
   const tEvent = await getTranslations({ locale, namespace: 'event' });
 
