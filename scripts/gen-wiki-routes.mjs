@@ -47,10 +47,23 @@ const byIata = new Map(airports.map((a) => [a.iata, a]));
 const unverified = new Set(JSON.parse(fs.readFileSync(path.join(ROOT, 'data/airport-service-unverified.json'), 'utf8')).codes);
 const service = JSON.parse(fs.readFileSync(path.join(ROOT, 'data/airport-service.json'), 'utf8')).airports;
 
-/** The airports whose board can never fill: measured zero, but OurAirports says served. */
+/**
+ * Which airports to look up.
+ *
+ * Default: the ones whose board can never fill — measured zero, but OurAirports contradicts,
+ * so serviceLevel() calls them unknown.
+ *
+ * ZERO=1: the airports our probe measured at zero AND OurAirports agrees about. Those pages
+ * currently state "no scheduled flights" as fact. If Wikipedia lists current airlines for one,
+ * that statement is FALSE on a live page — our figure is a single probe from one provider,
+ * theirs is maintained by people who follow the airport. Worth knowing either way: a match
+ * confirms the claim, a mismatch corrects it.
+ */
 const targets = process.env.ALL
   ? airports.filter((a) => !a.closed).map((a) => a.iata)
-  : airports.filter((a) => !a.closed && service[a.iata] === 0 && unverified.has(a.iata)).map((a) => a.iata);
+  : process.env.ZERO
+    ? airports.filter((a) => !a.closed && service[a.iata] === 0 && !unverified.has(a.iata)).map((a) => a.iata)
+    : airports.filter((a) => !a.closed && service[a.iata] === 0 && unverified.has(a.iata)).map((a) => a.iata);
 
 let store = {};
 if (fs.existsSync(OUT)) {

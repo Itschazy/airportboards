@@ -606,7 +606,14 @@ export function FlightBoard({ airport, locale, defaultMode = 'departures', displ
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', gap: 12 }}>
           <h1 style={{ margin: 0, display: 'flex', alignItems: 'baseline', gap: 10, minWidth: 0, flex: 1 }}>
             <span style={{ fontSize: 'clamp(30px, 9vw, 38px)', fontWeight: 800, letterSpacing: '-0.03em', lineHeight: 1, color: C.text }}>{airport.iata}</span>
-            <span style={{ fontSize: 14, fontWeight: 500, color: C.secondary, lineHeight: 1.25, minWidth: 0, overflow: 'hidden', textOverflow: 'ellipsis', display: '-webkit-box', WebkitLineClamp: 2, WebkitBoxOrient: 'vertical' }}>{displayName || airport.name}</span>
+            {/* Leading space, deliberately.
+                The two spans are separated visually by the flex `gap`, which is layout only —
+                nothing separates them in the text. So the h1 read as "AERСочи" / "MADMadrid"
+                to anything consuming textContent: crawlers, screen readers, and the assistants
+                the AEO work is aimed at. A space as the first child of a flex item is stripped
+                for layout but kept in textContent, so this changes the read text and not a
+                single rendered pixel. */}
+            <span style={{ fontSize: 14, fontWeight: 500, color: C.secondary, lineHeight: 1.25, minWidth: 0, overflow: 'hidden', textOverflow: 'ellipsis', display: '-webkit-box', WebkitLineClamp: 2, WebkitBoxOrient: 'vertical' }}>{' '}{displayName || airport.name}</span>
           </h1>
           <div style={{ textAlign: 'end', flexShrink: 0 }}>
             <div style={{ fontSize: 17, fontWeight: 600, letterSpacing: '-0.01em', fontVariantNumeric: 'tabular-nums', color: C.text, lineHeight: 1 }}>{time}</div>

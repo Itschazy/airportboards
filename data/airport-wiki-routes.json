@@ -3,8 +3,8 @@
   "source": "English Wikipedia, per-article revision recorded with each entry",
   "licence": "Text CC BY-SA 4.0. Only facts (airline → destinations) are stored; no prose is copied. Attribution is rendered with the section.",
   "counts": {
-    "airports": 1060,
-    "withData": 732
+    "airports": 1410,
+    "withData": 798
   },
   "airports": {
     "AAK": {
@@ -21650,6 +21650,4533 @@
         "url": "https://en.wikipedia.org/wiki/T%C3%AAte-%C3%A0-la-Baleine_Airport"
       },
       "via": "template",
+      "fetched": "2026-07-26"
+    },
+    "AAO": {
+      "airlines": [],
+      "status": "unclear",
+      "source": {
+        "title": "Anaco Airport",
+        "revid": 1362959648,
+        "url": "https://en.wikipedia.org/wiki/Anaco_Airport"
+      },
+      "via": "none",
+      "fetched": "2026-07-26"
+    },
+    "AAH": {
+      "airlines": [],
+      "status": "unclear",
+      "source": {
+        "title": "Aachen Merzbrück Airfield",
+        "revid": 1362774688,
+        "url": "https://en.wikipedia.org/wiki/Aachen_Merzbr%C3%BCck_Airfield"
+      },
+      "via": "none",
+      "fetched": "2026-07-26"
+    },
+    "AAF": {
+      "airlines": [],
+      "status": "unclear",
+      "source": {
+        "title": "Apalachicola Regional Airport",
+        "revid": 1364139227,
+        "url": "https://en.wikipedia.org/wiki/Apalachicola_Regional_Airport"
+      },
+      "via": "none",
+      "fetched": "2026-07-26"
+    },
+    "AAM": {
+      "airlines": [
+        {
+          "airline": "Federal Air",
+          "destinations": [
+            "Johannesburg–O. R. Tambo"
+          ]
+        },
+        {
+          "airline": "CemAir",
+          "destinations": [
+            "Johannesburg–O. R. Tambo"
+          ]
+        }
+      ],
+      "status": "served",
+      "source": {
+        "title": "Mala Mala Airport",
+        "revid": 1363056351,
+        "url": "https://en.wikipedia.org/wiki/Mala_Mala_Airport"
+      },
+      "via": "template",
+      "fetched": "2026-07-26"
+    },
+    "AAV": {
+      "airlines": [],
+      "status": "unclear",
+      "source": {
+        "title": "Allah Valley Airport",
+        "revid": 1362958968,
+        "url": "https://en.wikipedia.org/wiki/Allah_Valley_Airport"
+      },
+      "via": "none",
+      "fetched": "2026-07-26"
+    },
+    "ACD": {
+      "airlines": [
+        {
+          "airline": "SATENA",
+          "destinations": [
+            "Medellín–Olaya Herrera"
+          ]
+        }
+      ],
+      "status": "served",
+      "source": {
+        "title": "Alcides Fernández Airport",
+        "revid": 1362958722,
+        "url": "https://en.wikipedia.org/wiki/Alcides_Fern%C3%A1ndez_Airport"
+      },
+      "via": "template",
+      "fetched": "2026-07-26"
+    },
+    "ABF": {
+      "airlines": [
+        {
+          "airline": "Air Kiribati",
+          "destinations": [
+            "Marakei",
+            "Tarawa"
+          ]
+        }
+      ],
+      "status": "served",
+      "source": {
+        "title": "Abaiang Airport",
+        "revid": 1362728541,
+        "url": "https://en.wikipedia.org/wiki/Abaiang_Airport"
+      },
+      "via": "template",
+      "fetched": "2026-07-26"
+    },
+    "ABH": {
+      "airlines": [],
+      "status": "unclear",
+      "source": {
+        "title": "Alpha Airport",
+        "revid": 1362959121,
+        "url": "https://en.wikipedia.org/wiki/Alpha_Airport"
+      },
+      "via": "none",
+      "fetched": "2026-07-26"
+    },
+    "ABN": {
+      "airlines": [
+        {
+          "airline": "Blue Wing Airlines",
+          "destinations": [
+            "Paramaribo–Zorg en Hoop"
+          ]
+        },
+        {
+          "airline": "Gum Air",
+          "destinations": [
+            "Paramaribo–Zorg en Hoop"
+          ]
+        },
+        {
+          "airline": "Pegasus Air Services",
+          "destinations": [
+            "Paramaribo–Zorg en Hoop"
+          ]
+        },
+        {
+          "airline": "United Air Services",
+          "destinations": [
+            "Paramaribo–Zorg en Hoop"
+          ]
+        },
+        {
+          "airline": "Vortex Aviation Suriname",
+          "destinations": [
+            "Paramaribo–Zorg en Hoop"
+          ]
+        }
+      ],
+      "status": "served",
+      "source": {
+        "title": "Albina Airstrip",
+        "revid": 1362958697,
+        "url": "https://en.wikipedia.org/wiki/Albina_Airstrip"
+      },
+      "via": "template",
+      "fetched": "2026-07-26"
+    },
+    "ACJ": {
+      "airlines": [
+        {
+          "airline": "Air Senok",
+          "destinations": [
+            "Colombo–Ratmalana"
+          ]
+        },
+        {
+          "airline": "FitsAir",
+          "destinations": [
+            "Colombo–Ratmalana"
+          ]
+        },
+        {
+          "airline": "Helitours",
+          "destinations": [
+            "Colombo–Ratmalana"
+          ]
+        }
+      ],
+      "status": "served",
+      "source": {
+        "title": "Anuradhapura Airport",
+        "revid": 1363013703,
+        "url": "https://en.wikipedia.org/wiki/Anuradhapura_Airport"
+      },
+      "via": "template",
+      "fetched": "2026-07-26"
+    },
+    "ACP": {
+      "airlines": [],
+      "status": "unclear",
+      "source": {
+        "title": "Allen Parish Airport",
+        "revid": 1364135734,
+        "url": "https://en.wikipedia.org/wiki/Allen_Parish_Airport"
+      },
+      "via": "none",
+      "fetched": "2026-07-26"
+    },
+    "ACR": {
+      "airlines": [
+        {
+          "airline": "SATENA",
+          "destinations": [
+            "Florencia",
+            "La Chorrera"
+          ]
+        }
+      ],
+      "status": "served",
+      "source": {
+        "title": "Araracuara Airport",
+        "revid": 1363013952,
+        "url": "https://en.wikipedia.org/wiki/Araracuara_Airport"
+      },
+      "via": "template",
+      "fetched": "2026-07-26"
+    },
+    "ACS": {
+      "airlines": [],
+      "status": "unclear",
+      "source": {
+        "title": "Achinsk Airport",
+        "revid": 1362752530,
+        "url": "https://en.wikipedia.org/wiki/Achinsk_Airport"
+      },
+      "via": "none",
+      "fetched": "2026-07-26"
+    },
+    "ADH": {
+      "airlines": [],
+      "status": "unclear",
+      "source": {
+        "title": "Aldan Airport",
+        "revid": 1362958731,
+        "url": "https://en.wikipedia.org/wiki/Aldan_Airport"
+      },
+      "via": "none",
+      "fetched": "2026-07-26"
+    },
+    "ACZ": {
+      "airlines": [
+        {
+          "airline": "Mahan Air",
+          "destinations": [
+            "Mashhad",
+            "Tehran–Mehrabad"
+          ]
+        },
+        {
+          "airline": "Pars Air",
+          "destinations": [
+            "Tehran–Mehrabad"
+          ]
+        },
+        {
+          "airline": "Qeshm Air",
+          "destinations": [
+            "Mashhad"
+          ]
+        }
+      ],
+      "status": "served",
+      "source": {
+        "title": "Zabol Airport",
+        "revid": 1363088830,
+        "url": "https://en.wikipedia.org/wiki/Zabol_Airport"
+      },
+      "via": "template",
+      "fetched": "2026-07-26"
+    },
+    "ADI": {
+      "airlines": [],
+      "status": "unclear",
+      "source": {
+        "title": "Arandis Airport",
+        "revid": 1363013919,
+        "url": "https://en.wikipedia.org/wiki/Arandis_Airport"
+      },
+      "via": "none",
+      "fetched": "2026-07-26"
+    },
+    "ABC": {
+      "airlines": [],
+      "status": "no_commercial_service",
+      "since": "",
+      "source": {
+        "title": "Albacete Airport",
+        "revid": 1362958623,
+        "url": "https://en.wikipedia.org/wiki/Albacete_Airport"
+      },
+      "via": "prose-status",
+      "fetched": "2026-07-26"
+    },
+    "ADP": {
+      "airlines": [
+        {
+          "airline": "FitsAir",
+          "destinations": [
+            "Colombo-Ratmalana"
+          ]
+        },
+        {
+          "airline": "Helitours",
+          "destinations": [
+            "Colombo-Ratmalana"
+          ]
+        }
+      ],
+      "status": "served",
+      "source": {
+        "title": "Ampara Airport",
+        "revid": 1362959592,
+        "url": "https://en.wikipedia.org/wiki/Ampara_Airport"
+      },
+      "via": "template",
+      "fetched": "2026-07-26"
+    },
+    "ADM": {
+      "airlines": [],
+      "status": "unclear",
+      "source": {
+        "title": "Ardmore Municipal Airport",
+        "revid": 1364139389,
+        "url": "https://en.wikipedia.org/wiki/Ardmore_Municipal_Airport"
+      },
+      "via": "none",
+      "fetched": "2026-07-26"
+    },
+    "ADS": {
+      "airlines": [
+        {
+          "airline": "GTA Air",
+          "destinations": [
+            "Austin",
+            "El Paso",
+            "Lubbock (TX)"
+          ]
+        },
+        {
+          "airline": "Martinaire",
+          "destinations": [
+            "Abilene",
+            "Dallas/Fort Worth",
+            "Houston-Intercontinental"
+          ]
+        }
+      ],
+      "status": "served",
+      "source": {
+        "title": "Addison Airport",
+        "revid": 1364132362,
+        "url": "https://en.wikipedia.org/wiki/Addison_Airport"
+      },
+      "via": "template",
+      "fetched": "2026-07-26"
+    },
+    "ADW": {
+      "airlines": [],
+      "status": "unclear",
+      "source": {
+        "title": "Joint Base Andrews",
+        "revid": 1365905844,
+        "url": "https://en.wikipedia.org/wiki/Joint_Base_Andrews"
+      },
+      "via": "none",
+      "fetched": "2026-07-26"
+    },
+    "ADX": {
+      "airlines": [],
+      "status": "unclear",
+      "source": {
+        "title": "RAF Leuchars",
+        "revid": 1365017710,
+        "url": "https://en.wikipedia.org/wiki/RAF_Leuchars"
+      },
+      "via": "none",
+      "fetched": "2026-07-26"
+    },
+    "ACN": {
+      "airlines": [],
+      "status": "unclear",
+      "source": {
+        "title": "Ciudad Acuña International Airport",
+        "revid": 1363028088,
+        "url": "https://en.wikipedia.org/wiki/Ciudad_Acu%C3%B1a_International_Airport"
+      },
+      "via": "none",
+      "fetched": "2026-07-26"
+    },
+    "ADY": {
+      "airlines": [],
+      "status": "unclear",
+      "source": {
+        "title": "Alldays Airport",
+        "revid": 1362958985,
+        "url": "https://en.wikipedia.org/wiki/Alldays_Airport"
+      },
+      "via": "none",
+      "fetched": "2026-07-26"
+    },
+    "AEA": {
+      "airlines": [
+        {
+          "airline": "Air Kiribati",
+          "destinations": [
+            "Tarawa"
+          ]
+        }
+      ],
+      "status": "served",
+      "source": {
+        "title": "Abemama Airport",
+        "revid": 1362728544,
+        "url": "https://en.wikipedia.org/wiki/Abemama_Airport"
+      },
+      "via": "template",
+      "fetched": "2026-07-26"
+    },
+    "AEG": {
+      "airlines": [],
+      "status": "unclear",
+      "source": {
+        "title": "Aek Godang Airport",
+        "revid": 1362957658,
+        "url": "https://en.wikipedia.org/wiki/Aek_Godang_Airport"
+      },
+      "via": "none",
+      "fetched": "2026-07-26"
+    },
+    "AEO": {
+      "airlines": [],
+      "status": "unclear",
+      "source": {
+        "title": "Aioun el Atrouss Airport",
+        "revid": 1362957997,
+        "url": "https://en.wikipedia.org/wiki/Aioun_el_Atrouss_Airport"
+      },
+      "via": "none",
+      "fetched": "2026-07-26"
+    },
+    "AEI": {
+      "airlines": [
+        {
+          "airline": "Hélity",
+          "destinations": [
+            "Ceuta"
+          ]
+        }
+      ],
+      "status": "served",
+      "source": {
+        "title": "Algeciras Heliport",
+        "revid": 1362958891,
+        "url": "https://en.wikipedia.org/wiki/Algeciras_Heliport"
+      },
+      "via": "template",
+      "fetched": "2026-07-26"
+    },
+    "AFT": {
+      "airlines": [],
+      "status": "unclear",
+      "source": {
+        "title": "Afutara Airport",
+        "revid": 1362957747,
+        "url": "https://en.wikipedia.org/wiki/Afutara_Airport"
+      },
+      "via": "none",
+      "fetched": "2026-07-26"
+    },
+    "ADT": {
+      "airlines": [],
+      "status": "unclear",
+      "source": {
+        "title": "Ada Municipal Airport",
+        "revid": 1364132344,
+        "url": "https://en.wikipedia.org/wiki/Ada_Municipal_Airport"
+      },
+      "via": "none",
+      "fetched": "2026-07-26"
+    },
+    "AFY": {
+      "airlines": [],
+      "status": "unclear",
+      "source": {
+        "title": "Afyonkarahisar",
+        "revid": 1365100522,
+        "url": "https://en.wikipedia.org/wiki/Afyonkarahisar"
+      },
+      "via": "none",
+      "fetched": "2026-07-26"
+    },
+    "AGC": {
+      "airlines": [],
+      "status": "unclear",
+      "source": {
+        "title": "Allegheny County Airport",
+        "revid": 1363891734,
+        "url": "https://en.wikipedia.org/wiki/Allegheny_County_Airport"
+      },
+      "via": "none",
+      "fetched": "2026-07-26"
+    },
+    "AFS": {
+      "airlines": [],
+      "status": "unclear",
+      "source": {
+        "title": "Zarafshan Airport",
+        "revid": 1363088992,
+        "url": "https://en.wikipedia.org/wiki/Zarafshan_Airport"
+      },
+      "via": "none",
+      "fetched": "2026-07-26"
+    },
+    "AGQ": {
+      "airlines": [],
+      "status": "unclear",
+      "source": {
+        "title": "Agrinion Airport",
+        "revid": 1362758651,
+        "url": "https://en.wikipedia.org/wiki/Agrinion_Airport"
+      },
+      "via": "none",
+      "fetched": "2026-07-26"
+    },
+    "AGV": {
+      "airlines": [
+        {
+          "airline": "Avior Airlines",
+          "destinations": [
+            "Caracas"
+          ]
+        },
+        {
+          "airline": "Conviasa",
+          "destinations": [
+            "Caracas",
+            "Porlamar"
+          ]
+        }
+      ],
+      "status": "served",
+      "source": {
+        "title": "Oswaldo Guevara Mujica Airport",
+        "revid": 1363069040,
+        "url": "https://en.wikipedia.org/wiki/Oswaldo_Guevara_Mujica_Airport"
+      },
+      "via": "template",
+      "fetched": "2026-07-26"
+    },
+    "AGB": {
+      "airlines": [],
+      "status": "no_commercial_service",
+      "since": "2019",
+      "source": {
+        "title": "Augsburg Airport",
+        "revid": 1363015058,
+        "url": "https://en.wikipedia.org/wiki/Augsburg_Airport"
+      },
+      "via": "prose-status",
+      "fetched": "2026-07-26"
+    },
+    "AHJ": {
+      "airlines": [
+        {
+          "airline": "Air China",
+          "destinations": [
+            "Chengdu–Tianfu",
+            "Lhasa"
+          ]
+        }
+      ],
+      "status": "served",
+      "source": {
+        "title": "Ngawa Hongyuan Airport",
+        "revid": 1363066353,
+        "url": "https://en.wikipedia.org/wiki/Ngawa_Hongyuan_Airport"
+      },
+      "via": "template",
+      "fetched": "2026-07-26"
+    },
+    "AGZ": {
+      "airlines": [],
+      "status": "unclear",
+      "source": {
+        "title": "Aggeneys Airport",
+        "revid": 1362957782,
+        "url": "https://en.wikipedia.org/wiki/Aggeneys_Airport"
+      },
+      "via": "none",
+      "fetched": "2026-07-26"
+    },
+    "AHS": {
+      "airlines": [],
+      "status": "unclear",
+      "source": {
+        "title": "Ahuas Airport",
+        "revid": 1362957951,
+        "url": "https://en.wikipedia.org/wiki/Ahuas_Airport"
+      },
+      "via": "none",
+      "fetched": "2026-07-26"
+    },
+    "AGF": {
+      "airlines": [],
+      "status": "no_commercial_service",
+      "since": "2020",
+      "source": {
+        "title": "Agen La Garenne Airport",
+        "revid": 1362957772,
+        "url": "https://en.wikipedia.org/wiki/Agen_La_Garenne_Airport"
+      },
+      "via": "prose-status",
+      "fetched": "2026-07-26"
+    },
+    "AHU": {
+      "airlines": [
+        {
+          "airline": "Corendon Dutch Airlines",
+          "destinations": [
+            "Rotterdam/The Hague",
+            "Maastricht/Aachen"
+          ]
+        },
+        {
+          "airline": "Royal Air Maroc",
+          "destinations": [
+            "Amsterdam",
+            "Brussels"
+          ]
+        },
+        {
+          "airline": "Royal Air Maroc Express",
+          "destinations": [
+            "Casablanca",
+            "Tangier",
+            "Tetouan"
+          ]
+        },
+        {
+          "airline": "Transavia",
+          "destinations": [
+            "Rotterdam/The Hague"
+          ]
+        },
+        {
+          "airline": "TUI fly Belgium",
+          "destinations": [
+            "Brussels"
+          ]
+        }
+      ],
+      "status": "served",
+      "source": {
+        "title": "Cherif Al Idrissi Airport",
+        "revid": 1363026670,
+        "url": "https://en.wikipedia.org/wiki/Cherif_Al_Idrissi_Airport"
+      },
+      "via": "template",
+      "fetched": "2026-07-26"
+    },
+    "AIR": {
+      "airlines": [
+        {
+          "airline": "Azul Conecta",
+          "destinations": [
+            "Cuiabá",
+            "Juína"
+          ]
+        }
+      ],
+      "status": "served",
+      "source": {
+        "title": "Aripuanã Airport",
+        "revid": 1365023589,
+        "url": "https://en.wikipedia.org/wiki/Aripuan%C3%A3_Airport"
+      },
+      "via": "template",
+      "fetched": "2026-07-26"
+    },
+    "AIK": {
+      "airlines": [],
+      "status": "unclear",
+      "source": {
+        "title": "Aiken Regional Airport",
+        "revid": 1364132467,
+        "url": "https://en.wikipedia.org/wiki/Aiken_Regional_Airport"
+      },
+      "via": "none",
+      "fetched": "2026-07-26"
+    },
+    "AIS": {
+      "airlines": [
+        {
+          "airline": "Air Kiribati",
+          "destinations": [
+            "Tabiteuea North",
+            "Tamana"
+          ]
+        }
+      ],
+      "status": "served",
+      "source": {
+        "title": "Arorae Airport",
+        "revid": 1363014209,
+        "url": "https://en.wikipedia.org/wiki/Arorae_Airport"
+      },
+      "via": "template",
+      "fetched": "2026-07-26"
+    },
+    "AIZ": {
+      "airlines": [],
+      "status": "unclear",
+      "source": {
+        "title": "Lee C. Fine Memorial Airport",
+        "revid": 1362755256,
+        "url": "https://en.wikipedia.org/wiki/Lee_C._Fine_Memorial_Airport"
+      },
+      "via": "none",
+      "fetched": "2026-07-26"
+    },
+    "AID": {
+      "airlines": [],
+      "status": "unclear",
+      "source": {
+        "title": "Anderson Municipal Airport",
+        "revid": 1364138895,
+        "url": "https://en.wikipedia.org/wiki/Anderson_Municipal_Airport"
+      },
+      "via": "none",
+      "fetched": "2026-07-26"
+    },
+    "AJK": {
+      "airlines": [
+        {
+          "airline": "Asa Jet",
+          "destinations": [
+            "Asaluyeh"
+          ]
+        }
+      ],
+      "status": "served",
+      "source": {
+        "title": "Arak Airport",
+        "revid": 1363013889,
+        "url": "https://en.wikipedia.org/wiki/Arak_Airport"
+      },
+      "via": "template",
+      "fetched": "2026-07-26"
+    },
+    "AKC": {
+      "airlines": [],
+      "status": "unclear",
+      "source": {
+        "title": "Akron Fulton International Airport",
+        "revid": 1364135004,
+        "url": "https://en.wikipedia.org/wiki/Akron_Fulton_International_Airport"
+      },
+      "via": "none",
+      "fetched": "2026-07-26"
+    },
+    "AKD": {
+      "airlines": [],
+      "status": "unclear",
+      "source": {
+        "title": "Akola Airport",
+        "revid": 1362725539,
+        "url": "https://en.wikipedia.org/wiki/Akola_Airport"
+      },
+      "via": "none",
+      "fetched": "2026-07-26"
+    },
+    "AKH": {
+      "airlines": [],
+      "status": "unclear",
+      "source": {
+        "title": "Prince Sultan Air Base",
+        "revid": 1365492211,
+        "url": "https://en.wikipedia.org/wiki/Prince_Sultan_Air_Base"
+      },
+      "via": "none",
+      "fetched": "2026-07-26"
+    },
+    "AKO": {
+      "airlines": [],
+      "status": "unclear",
+      "source": {
+        "title": "Colorado Plains Regional Airport",
+        "revid": 1364480336,
+        "url": "https://en.wikipedia.org/wiki/Colorado_Plains_Regional_Airport"
+      },
+      "via": "none",
+      "fetched": "2026-07-26"
+    },
+    "AKT": {
+      "airlines": [
+        {
+          "airline": "AirTanker",
+          "destinations": [
+            "RAF Brize Norton",
+            "Birmingham",
+            "East Midlands"
+          ]
+        },
+        {
+          "airline": "West Atlantic UK",
+          "destinations": [
+            "Bari",
+            "Ta'if",
+            "Warton"
+          ]
+        }
+      ],
+      "status": "served",
+      "source": {
+        "title": "RAF Akrotiri",
+        "revid": 1365035152,
+        "url": "https://en.wikipedia.org/wiki/RAF_Akrotiri"
+      },
+      "via": "template",
+      "fetched": "2026-07-26"
+    },
+    "AJY": {
+      "airlines": [],
+      "status": "no_commercial_service",
+      "since": "2026",
+      "source": {
+        "title": "Mano Dayak International Airport",
+        "revid": 1363056807,
+        "url": "https://en.wikipedia.org/wiki/Mano_Dayak_International_Airport"
+      },
+      "via": "prose-status",
+      "fetched": "2026-07-26"
+    },
+    "AKW": {
+      "airlines": [
+        {
+          "airline": "Pars Air",
+          "destinations": [
+            "Isfahan",
+            "Shiraz",
+            "Tehran–Mehrabad"
+          ]
+        }
+      ],
+      "status": "served",
+      "source": {
+        "title": "Aghajari Airport",
+        "revid": 1362957787,
+        "url": "https://en.wikipedia.org/wiki/Aghajari_Airport"
+      },
+      "via": "template",
+      "fetched": "2026-07-26"
+    },
+    "ALE": {
+      "airlines": [],
+      "status": "unclear",
+      "source": {
+        "title": "Alpine–Casparis Municipal Airport",
+        "revid": 1364136429,
+        "url": "https://en.wikipedia.org/wiki/Alpine%E2%80%93Casparis_Municipal_Airport"
+      },
+      "via": "none",
+      "fetched": "2026-07-26"
+    },
+    "ALI": {
+      "airlines": [],
+      "status": "unclear",
+      "source": {
+        "title": "Alice International Airport",
+        "revid": 1364135423,
+        "url": "https://en.wikipedia.org/wiki/Alice_International_Airport"
+      },
+      "via": "none",
+      "fetched": "2026-07-26"
+    },
+    "ALJ": {
+      "airlines": [],
+      "status": "unclear",
+      "source": {
+        "title": "Alexander Bay Airport",
+        "revid": 1362958791,
+        "url": "https://en.wikipedia.org/wiki/Alexander_Bay_Airport"
+      },
+      "via": "none",
+      "fetched": "2026-07-26"
+    },
+    "ALL": {
+      "airlines": [],
+      "status": "unclear",
+      "source": {
+        "title": "Riviera Airport",
+        "revid": 1363074965,
+        "url": "https://en.wikipedia.org/wiki/Riviera_Airport"
+      },
+      "via": "none",
+      "fetched": "2026-07-26"
+    },
+    "ALN": {
+      "airlines": [],
+      "status": "unclear",
+      "source": {
+        "title": "St. Louis Regional Airport",
+        "revid": 1363080228,
+        "url": "https://en.wikipedia.org/wiki/St._Louis_Regional_Airport"
+      },
+      "via": "none",
+      "fetched": "2026-07-26"
+    },
+    "ALU": {
+      "airlines": [],
+      "status": "unclear",
+      "source": {
+        "title": "Alula Airport",
+        "revid": 1362959257,
+        "url": "https://en.wikipedia.org/wiki/Alula_Airport"
+      },
+      "via": "none",
+      "fetched": "2026-07-26"
+    },
+    "ALR": {
+      "airlines": [],
+      "status": "unclear",
+      "source": {
+        "title": "Alexandra Aerodrome",
+        "revid": 1362809733,
+        "url": "https://en.wikipedia.org/wiki/Alexandra_Aerodrome"
+      },
+      "via": "none",
+      "fetched": "2026-07-26"
+    },
+    "ALX": {
+      "airlines": [],
+      "status": "unclear",
+      "source": {
+        "title": "Thomas C. Russell Field",
+        "revid": 1363082812,
+        "url": "https://en.wikipedia.org/wiki/Thomas_C._Russell_Field"
+      },
+      "via": "none",
+      "fetched": "2026-07-26"
+    },
+    "ALM": {
+      "airlines": [
+        {
+          "airline": "South Aero",
+          "destinations": [
+            "Albuquerque"
+          ]
+        }
+      ],
+      "status": "served",
+      "source": {
+        "title": "Alamogordo–White Sands Regional Airport",
+        "revid": 1364135057,
+        "url": "https://en.wikipedia.org/wiki/Alamogordo%E2%80%93White_Sands_Regional_Airport"
+      },
+      "via": "template",
+      "fetched": "2026-07-26"
+    },
+    "AMB": {
+      "airlines": [],
+      "status": "unclear",
+      "source": {
+        "title": "Ambilobe Airport",
+        "revid": 1362959432,
+        "url": "https://en.wikipedia.org/wiki/Ambilobe_Airport"
+      },
+      "via": "none",
+      "fetched": "2026-07-26"
+    },
+    "AMC": {
+      "airlines": [],
+      "status": "unclear",
+      "source": {
+        "title": "Am Timan Airport",
+        "revid": 1363258958,
+        "url": "https://en.wikipedia.org/wiki/Am_Timan_Airport"
+      },
+      "via": "none",
+      "fetched": "2026-07-26"
+    },
+    "AMI": {
+      "airlines": [],
+      "status": "unclear",
+      "source": {
+        "title": "Selaparang Airport",
+        "revid": 1363077868,
+        "url": "https://en.wikipedia.org/wiki/Selaparang_Airport"
+      },
+      "via": "none",
+      "fetched": "2026-07-26"
+    },
+    "AMN": {
+      "airlines": [],
+      "status": "unclear",
+      "source": {
+        "title": "Gratiot Community Airport",
+        "revid": 1365148339,
+        "url": "https://en.wikipedia.org/wiki/Gratiot_Community_Airport"
+      },
+      "via": "none",
+      "fetched": "2026-07-26"
+    },
+    "AMT": {
+      "airlines": [],
+      "status": "unclear",
+      "source": {
+        "title": "Alexander Salamon Airport",
+        "revid": 1366070195,
+        "url": "https://en.wikipedia.org/wiki/Alexander_Salamon_Airport"
+      },
+      "via": "none",
+      "fetched": "2026-07-26"
+    },
+    "AMZ": {
+      "airlines": [],
+      "status": "unclear",
+      "source": {
+        "title": "Ardmore Airport (New Zealand)",
+        "revid": 1362809738,
+        "url": "https://en.wikipedia.org/wiki/Ardmore_Airport_(New_Zealand)"
+      },
+      "via": "none",
+      "fetched": "2026-07-26"
+    },
+    "ALY": {
+      "airlines": [],
+      "status": "no_commercial_service",
+      "since": "",
+      "source": {
+        "title": "El Nouzha Airport",
+        "revid": 1363035304,
+        "url": "https://en.wikipedia.org/wiki/El_Nouzha_Airport"
+      },
+      "via": "prose-status",
+      "fetched": "2026-07-26"
+    },
+    "ANK": {
+      "airlines": [],
+      "status": "unclear",
+      "source": {
+        "title": "Etimesgut Air Base",
+        "revid": 1363036284,
+        "url": "https://en.wikipedia.org/wiki/Etimesgut_Air_Base"
+      },
+      "via": "none",
+      "fetched": "2026-07-26"
+    },
+    "ANB": {
+      "airlines": [],
+      "status": "unclear",
+      "source": {
+        "title": "Anniston Regional Airport",
+        "revid": 1364139117,
+        "url": "https://en.wikipedia.org/wiki/Anniston_Regional_Airport"
+      },
+      "via": "none",
+      "fetched": "2026-07-26"
+    },
+    "ANG": {
+      "airlines": [],
+      "status": "unclear",
+      "source": {
+        "title": "Angoulême–Cognac International Airport",
+        "revid": 1362959967,
+        "url": "https://en.wikipedia.org/wiki/Angoul%C3%AAme%E2%80%93Cognac_International_Airport"
+      },
+      "via": "none",
+      "fetched": "2026-07-26"
+    },
+    "ANM": {
+      "airlines": [],
+      "status": "unclear",
+      "source": {
+        "title": "Antsirabato Airport",
+        "revid": 1362960287,
+        "url": "https://en.wikipedia.org/wiki/Antsirabato_Airport"
+      },
+      "via": "none",
+      "fetched": "2026-07-26"
+    },
+    "ANN": {
+      "airlines": [],
+      "status": "unclear",
+      "source": {
+        "title": "Annette Island Airport",
+        "revid": 1364139102,
+        "url": "https://en.wikipedia.org/wiki/Annette_Island_Airport"
+      },
+      "via": "none",
+      "fetched": "2026-07-26"
+    },
+    "AND": {
+      "airlines": [],
+      "status": "unclear",
+      "source": {
+        "title": "Anderson Regional Airport",
+        "revid": 1364138904,
+        "url": "https://en.wikipedia.org/wiki/Anderson_Regional_Airport"
+      },
+      "via": "none",
+      "fetched": "2026-07-26"
+    },
+    "ANQ": {
+      "airlines": [],
+      "status": "unclear",
+      "source": {
+        "title": "Tri-State Steuben County Airport",
+        "revid": 1363083789,
+        "url": "https://en.wikipedia.org/wiki/Tri-State_Steuben_County_Airport"
+      },
+      "via": "none",
+      "fetched": "2026-07-26"
+    },
+    "ANP": {
+      "airlines": [],
+      "status": "unclear",
+      "source": {
+        "title": "Lee Airport",
+        "revid": 1362766129,
+        "url": "https://en.wikipedia.org/wiki/Lee_Airport"
+      },
+      "via": "none",
+      "fetched": "2026-07-26"
+    },
+    "AOL": {
+      "airlines": [],
+      "status": "unclear",
+      "source": {
+        "title": "Paso de los Libres Airport",
+        "revid": 1363070334,
+        "url": "https://en.wikipedia.org/wiki/Paso_de_los_Libres_Airport"
+      },
+      "via": "none",
+      "fetched": "2026-07-26"
+    },
+    "AOH": {
+      "airlines": [],
+      "status": "unclear",
+      "source": {
+        "title": "Lima Allen County Airport",
+        "revid": 1365061885,
+        "url": "https://en.wikipedia.org/wiki/Lima_Allen_County_Airport"
+      },
+      "via": "none",
+      "fetched": "2026-07-26"
+    },
+    "ANE": {
+      "airlines": [],
+      "status": "no_commercial_service",
+      "since": "2022",
+      "source": {
+        "title": "Angers–Loire Airport",
+        "revid": 1362959911,
+        "url": "https://en.wikipedia.org/wiki/Angers%E2%80%93Loire_Airport"
+      },
+      "via": "prose-status",
+      "fetched": "2026-07-26"
+    },
+    "AOP": {
+      "airlines": [
+        {
+          "airline": "Saeta Peru",
+          "destinations": [
+            "Iquitos"
+          ]
+        }
+      ],
+      "status": "served",
+      "source": {
+        "title": "Alférez FAP Alfredo Vladimir Sara Bauer Airport",
+        "revid": 1362958871,
+        "url": "https://en.wikipedia.org/wiki/Alf%C3%A9rez_FAP_Alfredo_Vladimir_Sara_Bauer_Airport"
+      },
+      "via": "template",
+      "fetched": "2026-07-26"
+    },
+    "AOC": {
+      "airlines": [],
+      "status": "no_commercial_service",
+      "since": "2011",
+      "source": {
+        "title": "Leipzig–Altenburg Airport",
+        "revid": 1363053296,
+        "url": "https://en.wikipedia.org/wiki/Leipzig%E2%80%93Altenburg_Airport"
+      },
+      "via": "prose-status",
+      "fetched": "2026-07-26"
+    },
+    "AOT": {
+      "airlines": [
+        {
+          "airline": "Luxwing",
+          "destinations": [
+            "Cagliari",
+            "Palermo"
+          ]
+        }
+      ],
+      "status": "served",
+      "source": {
+        "title": "Aosta Valley Airport",
+        "revid": 1362752630,
+        "url": "https://en.wikipedia.org/wiki/Aosta_Valley_Airport"
+      },
+      "via": "template",
+      "fetched": "2026-07-26"
+    },
+    "AOU": {
+      "airlines": [],
+      "status": "unclear",
+      "source": {
+        "title": "Attapeu International Airport",
+        "revid": 1363014945,
+        "url": "https://en.wikipedia.org/wiki/Attapeu_International_Airport"
+      },
+      "via": "none",
+      "fetched": "2026-07-26"
+    },
+    "APG": {
+      "airlines": [],
+      "status": "unclear",
+      "source": {
+        "title": "Aberdeen Proving Ground",
+        "revid": 1365276861,
+        "url": "https://en.wikipedia.org/wiki/Aberdeen_Proving_Ground"
+      },
+      "via": "none",
+      "fetched": "2026-07-26"
+    },
+    "API": {
+      "airlines": [],
+      "status": "unclear",
+      "source": {
+        "title": "Captain Luis F. Gómez Niño Air Base",
+        "revid": 1363025185,
+        "url": "https://en.wikipedia.org/wiki/Captain_Luis_F._G%C3%B3mez_Ni%C3%B1o_Air_Base"
+      },
+      "via": "none",
+      "fetched": "2026-07-26"
+    },
+    "APC": {
+      "airlines": [
+        {
+          "airline": "Aero",
+          "destinations": [
+            "Los Angeles–Van Nuys"
+          ]
+        },
+        {
+          "airline": "JSX",
+          "destinations": [
+            "Burbank",
+            "Orange County",
+            "Santa Monica"
+          ]
+        }
+      ],
+      "status": "served",
+      "source": {
+        "title": "Napa County Airport",
+        "revid": 1365500131,
+        "url": "https://en.wikipedia.org/wiki/Napa_County_Airport"
+      },
+      "via": "template",
+      "fetched": "2026-07-26"
+    },
+    "APT": {
+      "airlines": [],
+      "status": "unclear",
+      "source": {
+        "title": "Marion County, Tennessee",
+        "revid": 1364964840,
+        "url": "https://en.wikipedia.org/wiki/Marion_County%2C_Tennessee"
+      },
+      "via": "none",
+      "fetched": "2026-07-26"
+    },
+    "APZ": {
+      "airlines": [],
+      "status": "unclear",
+      "source": {
+        "title": "Zapala Airport",
+        "revid": 1363088964,
+        "url": "https://en.wikipedia.org/wiki/Zapala_Airport"
+      },
+      "via": "none",
+      "fetched": "2026-07-26"
+    },
+    "APQ": {
+      "airlines": [],
+      "source": null,
+      "via": "no-article"
+    },
+    "ARA": {
+      "airlines": [],
+      "status": "unclear",
+      "source": {
+        "title": "Acadiana Regional Airport",
+        "revid": 1364132309,
+        "url": "https://en.wikipedia.org/wiki/Acadiana_Regional_Airport"
+      },
+      "via": "none",
+      "fetched": "2026-07-26"
+    },
+    "AQB": {
+      "airlines": [],
+      "status": "unclear",
+      "source": {
+        "title": "Quiché Airport",
+        "revid": 1363073677,
+        "url": "https://en.wikipedia.org/wiki/Quich%C3%A9_Airport"
+      },
+      "via": "none",
+      "fetched": "2026-07-26"
+    },
+    "ARE": {
+      "airlines": [],
+      "status": "unclear",
+      "source": {
+        "title": "Antonio (Nery) Juarbe Pol Airport",
+        "revid": 1364139163,
+        "url": "https://en.wikipedia.org/wiki/Antonio_(Nery)_Juarbe_Pol_Airport"
+      },
+      "via": "none",
+      "fetched": "2026-07-26"
+    },
+    "ARR": {
+      "airlines": [],
+      "status": "unclear",
+      "source": {
+        "title": "Aurora Municipal Airport",
+        "revid": 1364140563,
+        "url": "https://en.wikipedia.org/wiki/Aurora_Municipal_Airport"
+      },
+      "via": "none",
+      "fetched": "2026-07-26"
+    },
+    "ASA": {
+      "airlines": [],
+      "status": "unclear",
+      "source": {
+        "title": "Assab International Airport",
+        "revid": 1363267630,
+        "url": "https://en.wikipedia.org/wiki/Assab_International_Airport"
+      },
+      "via": "none",
+      "fetched": "2026-07-26"
+    },
+    "ARY": {
+      "airlines": [],
+      "status": "unclear",
+      "source": {
+        "title": "ARY",
+        "revid": 1256345195,
+        "url": "https://en.wikipedia.org/wiki/ARY"
+      },
+      "via": "none",
+      "fetched": "2026-07-26"
+    },
+    "ASH": {
+      "airlines": [],
+      "status": "unclear",
+      "source": {
+        "title": "Nashua Airport",
+        "revid": 1363064112,
+        "url": "https://en.wikipedia.org/wiki/Nashua_Airport"
+      },
+      "via": "none",
+      "fetched": "2026-07-26"
+    },
+    "ARV": {
+      "airlines": [],
+      "status": "unclear",
+      "source": {
+        "title": "Lakeland Airport",
+        "revid": 1363052084,
+        "url": "https://en.wikipedia.org/wiki/Lakeland_Airport"
+      },
+      "via": "none",
+      "fetched": "2026-07-26"
+    },
+    "ARB": {
+      "airlines": [],
+      "status": "unclear",
+      "source": {
+        "title": "Ann Arbor Municipal Airport",
+        "revid": 1362960073,
+        "url": "https://en.wikipedia.org/wiki/Ann_Arbor_Municipal_Airport"
+      },
+      "via": "none",
+      "fetched": "2026-07-26"
+    },
+    "ASK": {
+      "airlines": [],
+      "status": "unclear",
+      "source": {
+        "title": "Yamoussoukro International Airport",
+        "revid": 1362758404,
+        "url": "https://en.wikipedia.org/wiki/Yamoussoukro_International_Airport"
+      },
+      "via": "none",
+      "fetched": "2026-07-26"
+    },
+    "ASN": {
+      "airlines": [],
+      "status": "unclear",
+      "source": {
+        "title": "Talladega Municipal Airport",
+        "revid": 1362804247,
+        "url": "https://en.wikipedia.org/wiki/Talladega_Municipal_Airport"
+      },
+      "via": "none",
+      "fetched": "2026-07-26"
+    },
+    "AST": {
+      "airlines": [],
+      "status": "unclear",
+      "source": {
+        "title": "Astoria Regional Airport",
+        "revid": 1364139977,
+        "url": "https://en.wikipedia.org/wiki/Astoria_Regional_Airport"
+      },
+      "via": "none",
+      "fetched": "2026-07-26"
+    },
+    "ATA": {
+      "airlines": [
+        {
+          "airline": "LATAM Perú",
+          "destinations": [
+            "Lima"
+          ]
+        }
+      ],
+      "status": "served",
+      "source": {
+        "title": "Comandante FAP Germán Arias Graziani Airport",
+        "revid": 1363028928,
+        "url": "https://en.wikipedia.org/wiki/Comandante_FAP_Germ%C3%A1n_Arias_Graziani_Airport"
+      },
+      "via": "template",
+      "fetched": "2026-07-26"
+    },
+    "ATB": {
+      "airlines": [],
+      "status": "unclear",
+      "source": {
+        "title": "Atbara Airport",
+        "revid": 1363014783,
+        "url": "https://en.wikipedia.org/wiki/Atbara_Airport"
+      },
+      "via": "none",
+      "fetched": "2026-07-26"
+    },
+    "ATD": {
+      "airlines": [
+        {
+          "airline": "Solomon Airlines",
+          "destinations": [
+            "Honiara",
+            "Manaoba"
+          ]
+        }
+      ],
+      "status": "served",
+      "source": {
+        "title": "Uru Harbour Airport",
+        "revid": 1363084889,
+        "url": "https://en.wikipedia.org/wiki/Uru_Harbour_Airport"
+      },
+      "via": "template",
+      "fetched": "2026-07-26"
+    },
+    "ASS": {
+      "airlines": [],
+      "source": null,
+      "via": "no-article"
+    },
+    "ATF": {
+      "airlines": [],
+      "status": "unclear",
+      "source": {
+        "title": "Chachoan Airport",
+        "revid": 1364127545,
+        "url": "https://en.wikipedia.org/wiki/Chachoan_Airport"
+      },
+      "via": "none",
+      "fetched": "2026-07-26"
+    },
+    "ATI": {
+      "airlines": [],
+      "status": "unclear",
+      "source": {
+        "title": "Artigas Airport",
+        "revid": 1363014291,
+        "url": "https://en.wikipedia.org/wiki/Artigas_Airport"
+      },
+      "via": "none",
+      "fetched": "2026-07-26"
+    },
+    "ATG": {
+      "airlines": [],
+      "status": "unclear",
+      "source": {
+        "title": "PAF Base Minhas",
+        "revid": 1365018112,
+        "url": "https://en.wikipedia.org/wiki/PAF_Base_Minhas"
+      },
+      "via": "none",
+      "fetched": "2026-07-26"
+    },
+    "ATR": {
+      "airlines": [],
+      "status": "unclear",
+      "source": {
+        "title": "Atar International Airport",
+        "revid": 1363014765,
+        "url": "https://en.wikipedia.org/wiki/Atar_International_Airport"
+      },
+      "via": "none",
+      "fetched": "2026-07-26"
+    },
+    "ATO": {
+      "airlines": [],
+      "status": "unclear",
+      "source": {
+        "title": "Gordon K. Bush Airport",
+        "revid": 1365147846,
+        "url": "https://en.wikipedia.org/wiki/Gordon_K._Bush_Airport"
+      },
+      "via": "none",
+      "fetched": "2026-07-26"
+    },
+    "AUO": {
+      "airlines": [],
+      "status": "unclear",
+      "source": {
+        "title": "Auburn University Regional Airport",
+        "revid": 1366117857,
+        "url": "https://en.wikipedia.org/wiki/Auburn_University_Regional_Airport"
+      },
+      "via": "none",
+      "fetched": "2026-07-26"
+    },
+    "ATJ": {
+      "airlines": [],
+      "source": null,
+      "via": "no-article"
+    },
+    "AUW": {
+      "airlines": [],
+      "status": "unclear",
+      "source": {
+        "title": "Wausau Downtown Airport",
+        "revid": 1363087207,
+        "url": "https://en.wikipedia.org/wiki/Wausau_Downtown_Airport"
+      },
+      "via": "none",
+      "fetched": "2026-07-26"
+    },
+    "AUF": {
+      "airlines": [],
+      "status": "unclear",
+      "source": {
+        "title": "Auxerre–Branches Aerodrome",
+        "revid": 1363015199,
+        "url": "https://en.wikipedia.org/wiki/Auxerre%E2%80%93Branches_Aerodrome"
+      },
+      "via": "none",
+      "fetched": "2026-07-26"
+    },
+    "AVB": {
+      "airlines": [],
+      "status": "unclear",
+      "source": {
+        "title": "Aviano Air Base",
+        "revid": 1365010662,
+        "url": "https://en.wikipedia.org/wiki/Aviano_Air_Base"
+      },
+      "via": "none",
+      "fetched": "2026-07-26"
+    },
+    "AVI": {
+      "airlines": [],
+      "status": "unclear",
+      "source": {
+        "title": "Máximo Gómez Airport",
+        "revid": 1363063085,
+        "url": "https://en.wikipedia.org/wiki/M%C3%A1ximo_G%C3%B3mez_Airport"
+      },
+      "via": "none",
+      "fetched": "2026-07-26"
+    },
+    "AWD": {
+      "airlines": [],
+      "status": "unclear",
+      "source": {
+        "title": "Aniwa Airport",
+        "revid": 1362960005,
+        "url": "https://en.wikipedia.org/wiki/Aniwa_Airport"
+      },
+      "via": "none",
+      "fetched": "2026-07-26"
+    },
+    "AXK": {
+      "airlines": [],
+      "status": "unclear",
+      "source": {
+        "title": "Ataq Airport",
+        "revid": 1363014756,
+        "url": "https://en.wikipedia.org/wiki/Ataq_Airport"
+      },
+      "via": "none",
+      "fetched": "2026-07-26"
+    },
+    "AVX": {
+      "airlines": [],
+      "status": "unclear",
+      "source": {
+        "title": "Catalina Airport",
+        "revid": 1364272808,
+        "url": "https://en.wikipedia.org/wiki/Catalina_Airport"
+      },
+      "via": "none",
+      "fetched": "2026-07-26"
+    },
+    "AXN": {
+      "airlines": [
+        {
+          "airline": "Bemidji Airlines",
+          "destinations": [
+            "Minneapolis/St. Paul",
+            "Fargo"
+          ]
+        },
+        {
+          "airline": "UPS",
+          "destinations": [
+            "Minneapolis/St. Paul"
+          ]
+        }
+      ],
+      "status": "served",
+      "source": {
+        "title": "Alexandria Municipal Airport",
+        "revid": 1364135387,
+        "url": "https://en.wikipedia.org/wiki/Alexandria_Municipal_Airport"
+      },
+      "via": "template",
+      "fetched": "2026-07-26"
+    },
+    "AYK": {
+      "airlines": [],
+      "status": "unclear",
+      "source": {
+        "title": "Arkalyk Airport",
+        "revid": 1363014143,
+        "url": "https://en.wikipedia.org/wiki/Arkalyk_Airport"
+      },
+      "via": "none",
+      "fetched": "2026-07-26"
+    },
+    "AYO": {
+      "airlines": [],
+      "status": "unclear",
+      "source": {
+        "title": "Juan de Ayolas Airport",
+        "revid": 1362765118,
+        "url": "https://en.wikipedia.org/wiki/Juan_de_Ayolas_Airport"
+      },
+      "via": "none",
+      "fetched": "2026-07-26"
+    },
+    "AVO": {
+      "airlines": [],
+      "status": "unclear",
+      "source": {
+        "title": "Avon Park Executive Airport",
+        "revid": 1364140761,
+        "url": "https://en.wikipedia.org/wiki/Avon_Park_Executive_Airport"
+      },
+      "via": "none",
+      "fetched": "2026-07-26"
+    },
+    "AVR": {
+      "airlines": [],
+      "source": null,
+      "via": "no-article"
+    },
+    "AYW": {
+      "airlines": [],
+      "status": "unclear",
+      "source": {
+        "title": "Ayawasi Airport",
+        "revid": 1363015373,
+        "url": "https://en.wikipedia.org/wiki/Ayawasi_Airport"
+      },
+      "via": "none",
+      "fetched": "2026-07-26"
+    },
+    "AZI": {
+      "airlines": [],
+      "status": "unclear",
+      "source": {
+        "title": "Al Bateen Executive Airport",
+        "revid": 1362958465,
+        "url": "https://en.wikipedia.org/wiki/Al_Bateen_Executive_Airport"
+      },
+      "via": "none",
+      "fetched": "2026-07-26"
+    },
+    "BAF": {
+      "airlines": [],
+      "status": "unclear",
+      "source": {
+        "title": "Westfield-Barnes Regional Airport",
+        "revid": 1363087467,
+        "url": "https://en.wikipedia.org/wiki/Westfield-Barnes_Regional_Airport"
+      },
+      "via": "none",
+      "fetched": "2026-07-26"
+    },
+    "BAG": {
+      "airlines": [],
+      "status": "unclear",
+      "source": {
+        "title": "Loakan Airport",
+        "revid": 1363054272,
+        "url": "https://en.wikipedia.org/wiki/Loakan_Airport"
+      },
+      "via": "none",
+      "fetched": "2026-07-26"
+    },
+    "BAD": {
+      "airlines": [],
+      "status": "unclear",
+      "source": {
+        "title": "Barksdale Air Force Base",
+        "revid": 1365517098,
+        "url": "https://en.wikipedia.org/wiki/Barksdale_Air_Force_Base"
+      },
+      "via": "none",
+      "fetched": "2026-07-26"
+    },
+    "BAI": {
+      "airlines": [],
+      "status": "unclear",
+      "source": {
+        "title": "Buenos Aires Airport",
+        "revid": 860624518,
+        "url": "https://en.wikipedia.org/wiki/Buenos_Aires_Airport"
+      },
+      "via": "none",
+      "fetched": "2026-07-26"
+    },
+    "AYS": {
+      "airlines": [],
+      "status": "unclear",
+      "source": {
+        "title": "Waycross, Georgia",
+        "revid": 1362906239,
+        "url": "https://en.wikipedia.org/wiki/Waycross%2C_Georgia"
+      },
+      "via": "none",
+      "fetched": "2026-07-26"
+    },
+    "BBC": {
+      "airlines": [],
+      "status": "unclear",
+      "source": {
+        "title": "Bay City Regional Airport",
+        "revid": 1364141813,
+        "url": "https://en.wikipedia.org/wiki/Bay_City_Regional_Airport"
+      },
+      "via": "none",
+      "fetched": "2026-07-26"
+    },
+    "BBD": {
+      "airlines": [],
+      "status": "unclear",
+      "source": {
+        "title": "Curtis Field",
+        "revid": 1364481468,
+        "url": "https://en.wikipedia.org/wiki/Curtis_Field"
+      },
+      "via": "none",
+      "fetched": "2026-07-26"
+    },
+    "BBH": {
+      "airlines": [],
+      "status": "unclear",
+      "source": {
+        "title": "Stralsund–Barth Airport",
+        "revid": 1363080672,
+        "url": "https://en.wikipedia.org/wiki/Stralsund%E2%80%93Barth_Airport"
+      },
+      "via": "none",
+      "fetched": "2026-07-26"
+    },
+    "BAB": {
+      "airlines": [],
+      "status": "unclear",
+      "source": {
+        "title": "Beale Air Force Base",
+        "revid": 1364988735,
+        "url": "https://en.wikipedia.org/wiki/Beale_Air_Force_Base"
+      },
+      "via": "none",
+      "fetched": "2026-07-26"
+    },
+    "BBL": {
+      "airlines": [
+        {
+          "airline": "Alliance Airlines",
+          "destinations": [
+            "Mining",
+            "Brisbane",
+            "Moomba"
+          ]
+        }
+      ],
+      "status": "served",
+      "source": {
+        "title": "Ballera Airport",
+        "revid": 1363016020,
+        "url": "https://en.wikipedia.org/wiki/Ballera_Airport"
+      },
+      "via": "template",
+      "fetched": "2026-07-26"
+    },
+    "BBP": {
+      "airlines": [],
+      "status": "unclear",
+      "source": {
+        "title": "Bembridge Airport",
+        "revid": 1363018528,
+        "url": "https://en.wikipedia.org/wiki/Bembridge_Airport"
+      },
+      "via": "none",
+      "fetched": "2026-07-26"
+    },
+    "BAU": {
+      "airlines": [],
+      "status": "no_commercial_service",
+      "since": "",
+      "source": {
+        "title": "Bauru Airport",
+        "revid": 1363016970,
+        "url": "https://en.wikipedia.org/wiki/Bauru_Airport"
+      },
+      "via": "prose-status",
+      "fetched": "2026-07-26"
+    },
+    "BBJ": {
+      "airlines": [],
+      "status": "no_commercial_service",
+      "since": "",
+      "source": {
+        "title": "Bitburg Airport",
+        "revid": 1363021024,
+        "url": "https://en.wikipedia.org/wiki/Bitburg_Airport"
+      },
+      "via": "prose-status",
+      "fetched": "2026-07-26"
+    },
+    "BBX": {
+      "airlines": [],
+      "status": "unclear",
+      "source": {
+        "title": "Wings Field",
+        "revid": 1363087815,
+        "url": "https://en.wikipedia.org/wiki/Wings_Field"
+      },
+      "via": "none",
+      "fetched": "2026-07-26"
+    },
+    "BBS": {
+      "airlines": [],
+      "status": "unclear",
+      "source": {
+        "title": "Blackbushe Airport",
+        "revid": 1365142810,
+        "url": "https://en.wikipedia.org/wiki/Blackbushe_Airport"
+      },
+      "via": "none",
+      "fetched": "2026-07-26"
+    },
+    "BCE": {
+      "airlines": [],
+      "status": "unclear",
+      "source": {
+        "title": "Bryce Canyon Airport",
+        "revid": 1364156985,
+        "url": "https://en.wikipedia.org/wiki/Bryce_Canyon_Airport"
+      },
+      "via": "none",
+      "fetched": "2026-07-26"
+    },
+    "BBT": {
+      "airlines": [],
+      "status": "unclear",
+      "source": {
+        "title": "Berbérati Airport",
+        "revid": 1363018784,
+        "url": "https://en.wikipedia.org/wiki/Berb%C3%A9rati_Airport"
+      },
+      "via": "none",
+      "fetched": "2026-07-26"
+    },
+    "BDI": {
+      "airlines": [
+        {
+          "airline": "Air Seychelles",
+          "destinations": [
+            "Mahé"
+          ]
+        }
+      ],
+      "status": "served",
+      "source": {
+        "title": "Bird Island Airport",
+        "revid": 1363020856,
+        "url": "https://en.wikipedia.org/wiki/Bird_Island_Airport"
+      },
+      "via": "template",
+      "fetched": "2026-07-26"
+    },
+    "BDE": {
+      "airlines": [],
+      "status": "unclear",
+      "source": {
+        "title": "Baudette International Airport",
+        "revid": 1364141715,
+        "url": "https://en.wikipedia.org/wiki/Baudette_International_Airport"
+      },
+      "via": "none",
+      "fetched": "2026-07-26"
+    },
+    "BDM": {
+      "airlines": [],
+      "status": "unclear",
+      "source": {
+        "title": "Bandırma Airport",
+        "revid": 1363016207,
+        "url": "https://en.wikipedia.org/wiki/Band%C4%B1rma_Airport"
+      },
+      "via": "none",
+      "fetched": "2026-07-26"
+    },
+    "BDN": {
+      "airlines": [],
+      "status": "unclear",
+      "source": {
+        "title": "Bend Municipal Airport",
+        "revid": 1364142544,
+        "url": "https://en.wikipedia.org/wiki/Bend_Municipal_Airport"
+      },
+      "via": "none",
+      "fetched": "2026-07-26"
+    },
+    "BEI": {
+      "airlines": [],
+      "status": "unclear",
+      "source": {
+        "title": "Beica Airport",
+        "revid": 1358738569,
+        "url": "https://en.wikipedia.org/wiki/Beica_Airport"
+      },
+      "via": "none",
+      "fetched": "2026-07-26"
+    },
+    "BEC": {
+      "airlines": [],
+      "status": "unclear",
+      "source": {
+        "title": "Beech Factory Airport",
+        "revid": 1364142108,
+        "url": "https://en.wikipedia.org/wiki/Beech_Factory_Airport"
+      },
+      "via": "none",
+      "fetched": "2026-07-26"
+    },
+    "BEO": {
+      "airlines": [],
+      "status": "unclear",
+      "source": {
+        "title": "Lake Macquarie Airport",
+        "revid": 1363052022,
+        "url": "https://en.wikipedia.org/wiki/Lake_Macquarie_Airport"
+      },
+      "via": "none",
+      "fetched": "2026-07-26"
+    },
+    "BEP": {
+      "airlines": [],
+      "status": "unclear",
+      "source": {
+        "title": "Bellary Airport",
+        "revid": 1362759551,
+        "url": "https://en.wikipedia.org/wiki/Bellary_Airport"
+      },
+      "via": "none",
+      "fetched": "2026-07-26"
+    },
+    "BCL": {
+      "airlines": [],
+      "status": "no_commercial_service",
+      "since": "",
+      "source": {
+        "title": "Barra del Colorado Airport",
+        "revid": 1363016567,
+        "url": "https://en.wikipedia.org/wiki/Barra_del_Colorado_Airport"
+      },
+      "via": "prose-status",
+      "fetched": "2026-07-26"
+    },
+    "BEV": {
+      "airlines": [],
+      "status": "unclear",
+      "source": {
+        "title": "Be'er Sheva Airfield",
+        "revid": 1363624313,
+        "url": "https://en.wikipedia.org/wiki/Be'er_Sheva_Airfield"
+      },
+      "via": "none",
+      "fetched": "2026-07-26"
+    },
+    "BEZ": {
+      "airlines": [
+        {
+          "airline": "Air Kiribati",
+          "destinations": [
+            "Nikunau",
+            "Tabiteuea North"
+          ]
+        }
+      ],
+      "status": "served",
+      "source": {
+        "title": "Beru Airport",
+        "revid": 1362728704,
+        "url": "https://en.wikipedia.org/wiki/Beru_Airport"
+      },
+      "via": "template",
+      "fetched": "2026-07-26"
+    },
+    "BEQ": {
+      "airlines": [],
+      "status": "unclear",
+      "source": {
+        "title": "RAF Honington",
+        "revid": 1365009656,
+        "url": "https://en.wikipedia.org/wiki/RAF_Honington"
+      },
+      "via": "none",
+      "fetched": "2026-07-26"
+    },
+    "BEX": {
+      "airlines": [],
+      "status": "unclear",
+      "source": {
+        "title": "RAF Benson",
+        "revid": 1365035204,
+        "url": "https://en.wikipedia.org/wiki/RAF_Benson"
+      },
+      "via": "none",
+      "fetched": "2026-07-26"
+    },
+    "BFE": {
+      "airlines": [],
+      "status": "unclear",
+      "source": {
+        "title": "Bielefeld airport",
+        "revid": 1362776550,
+        "url": "https://en.wikipedia.org/wiki/Bielefeld_airport"
+      },
+      "via": "none",
+      "fetched": "2026-07-26"
+    },
+    "BFM": {
+      "airlines": [
+        {
+          "airline": "Amazon Air",
+          "destinations": [
+            "Fort Worth/Alliance"
+          ]
+        },
+        {
+          "airline": "FedEx Express",
+          "destinations": [
+            "Memphis"
+          ]
+        }
+      ],
+      "status": "served",
+      "source": {
+        "title": "Mobile International Airport",
+        "revid": 1365149912,
+        "url": "https://en.wikipedia.org/wiki/Mobile_International_Airport"
+      },
+      "via": "template",
+      "fetched": "2026-07-26"
+    },
+    "BFO": {
+      "airlines": [],
+      "status": "unclear",
+      "source": {
+        "title": "Buffalo Range Airport",
+        "revid": 1363023000,
+        "url": "https://en.wikipedia.org/wiki/Buffalo_Range_Airport"
+      },
+      "via": "none",
+      "fetched": "2026-07-26"
+    },
+    "BFP": {
+      "airlines": [],
+      "status": "unclear",
+      "source": {
+        "title": "Beaver County Airport",
+        "revid": 1364141987,
+        "url": "https://en.wikipedia.org/wiki/Beaver_County_Airport"
+      },
+      "via": "none",
+      "fetched": "2026-07-26"
+    },
+    "BFK": {
+      "airlines": [],
+      "status": "unclear",
+      "source": {
+        "title": "Buckley Space Force Base",
+        "revid": 1364988746,
+        "url": "https://en.wikipedia.org/wiki/Buckley_Space_Force_Base"
+      },
+      "via": "none",
+      "fetched": "2026-07-26"
+    },
+    "BFT": {
+      "airlines": [
+        {
+          "airline": "Planemaster for UPS Airlines",
+          "destinations": [
+            "Columbia (SC)"
+          ]
+        }
+      ],
+      "status": "served",
+      "source": {
+        "title": "Beaufort County Airport",
+        "revid": 1364141933,
+        "url": "https://en.wikipedia.org/wiki/Beaufort_County_Airport"
+      },
+      "via": "template",
+      "fetched": "2026-07-26"
+    },
+    "BFH": {
+      "airlines": [],
+      "status": "no_commercial_service",
+      "since": "",
+      "source": {
+        "title": "Bacacheri Airport",
+        "revid": 1363015529,
+        "url": "https://en.wikipedia.org/wiki/Bacacheri_Airport"
+      },
+      "via": "prose-status",
+      "fetched": "2026-07-26"
+    },
+    "BFX": {
+      "airlines": [
+        {
+          "airline": "Camair-Co",
+          "destinations": [
+            "Douala"
+          ]
+        }
+      ],
+      "status": "served",
+      "source": {
+        "title": "Bafoussam Airport",
+        "revid": 1362759289,
+        "url": "https://en.wikipedia.org/wiki/Bafoussam_Airport"
+      },
+      "via": "template",
+      "fetched": "2026-07-26"
+    },
+    "BFU": {
+      "airlines": [],
+      "status": "unclear",
+      "source": {
+        "title": "Bengbu Airport",
+        "revid": 1363018598,
+        "url": "https://en.wikipedia.org/wiki/Bengbu_Airport"
+      },
+      "via": "none",
+      "fetched": "2026-07-26"
+    },
+    "BGD": {
+      "airlines": [],
+      "status": "unclear",
+      "source": {
+        "title": "Hutchinson County Airport",
+        "revid": 1365150956,
+        "url": "https://en.wikipedia.org/wiki/Hutchinson_County_Airport"
+      },
+      "via": "none",
+      "fetched": "2026-07-26"
+    },
+    "BGE": {
+      "airlines": [],
+      "status": "unclear",
+      "source": {
+        "title": "Decatur County Industrial Air Park",
+        "revid": 1364482173,
+        "url": "https://en.wikipedia.org/wiki/Decatur_County_Industrial_Air_Park"
+      },
+      "via": "none",
+      "fetched": "2026-07-26"
+    },
+    "BFW": {
+      "airlines": [],
+      "status": "unclear",
+      "source": {
+        "title": "Sidi Bel Abbès",
+        "revid": 1359619248,
+        "url": "https://en.wikipedia.org/wiki/Sidi_Bel_Abb%C3%A8s"
+      },
+      "via": "none",
+      "fetched": "2026-07-26"
+    },
+    "BGL": {
+      "airlines": [],
+      "status": "no_commercial_service",
+      "since": "early 2020s",
+      "source": {
+        "title": "Baglung Airport",
+        "revid": 1363015677,
+        "url": "https://en.wikipedia.org/wiki/Baglung_Airport"
+      },
+      "via": "prose-status",
+      "fetched": "2026-07-26"
+    },
+    "BGN": {
+      "airlines": [
+        {
+          "airline": "Polar Airlines",
+          "destinations": [
+            "Yakutsk"
+          ]
+        }
+      ],
+      "status": "served",
+      "source": {
+        "title": "Belaya Gora Airport",
+        "revid": 1363018264,
+        "url": "https://en.wikipedia.org/wiki/Belaya_Gora_Airport"
+      },
+      "via": "template",
+      "fetched": "2026-07-26"
+    },
+    "BHP": {
+      "airlines": [
+        {
+          "airline": "Nepal Airlines",
+          "destinations": [
+            "Biratnagar",
+            "Kathmandu"
+          ]
+        },
+        {
+          "airline": "Tara Air",
+          "destinations": [
+            "Kathmandu"
+          ]
+        }
+      ],
+      "status": "served",
+      "source": {
+        "title": "Bhojpur Airport",
+        "revid": 1363020454,
+        "url": "https://en.wikipedia.org/wiki/Bhojpur_Airport"
+      },
+      "via": "template",
+      "fetched": "2026-07-26"
+    },
+    "BHG": {
+      "airlines": [],
+      "status": "unclear",
+      "source": {
+        "title": "Brus Laguna Airport",
+        "revid": 1363022755,
+        "url": "https://en.wikipedia.org/wiki/Brus_Laguna_Airport"
+      },
+      "via": "none",
+      "fetched": "2026-07-26"
+    },
+    "BHW": {
+      "airlines": [],
+      "status": "unclear",
+      "source": {
+        "title": "BHW (disambiguation)",
+        "revid": 1188638561,
+        "url": "https://en.wikipedia.org/wiki/BHW_(disambiguation)"
+      },
+      "via": "none",
+      "fetched": "2026-07-26"
+    },
+    "BIB": {
+      "airlines": [
+        {
+          "airline": "Jubba Airways",
+          "destinations": [
+            "Mogadishu"
+          ]
+        }
+      ],
+      "status": "served",
+      "source": {
+        "title": "Baidoa Airport",
+        "revid": 1363015751,
+        "url": "https://en.wikipedia.org/wiki/Baidoa_Airport"
+      },
+      "via": "template",
+      "fetched": "2026-07-26"
+    },
+    "BHN": {
+      "airlines": [],
+      "status": "unclear",
+      "source": {
+        "title": "Beihan Airport",
+        "revid": 1363018176,
+        "url": "https://en.wikipedia.org/wiki/Beihan_Airport"
+      },
+      "via": "none",
+      "fetched": "2026-07-26"
+    },
+    "BGZ": {
+      "airlines": [],
+      "status": "unclear",
+      "source": {
+        "title": "Braga Airport",
+        "revid": 1363022171,
+        "url": "https://en.wikipedia.org/wiki/Braga_Airport"
+      },
+      "via": "none",
+      "fetched": "2026-07-26"
+    },
+    "BGX": {
+      "airlines": [],
+      "status": "no_commercial_service",
+      "since": "",
+      "source": {
+        "title": "Comandante Gustavo Kraemer Airport",
+        "revid": 1363028937,
+        "url": "https://en.wikipedia.org/wiki/Comandante_Gustavo_Kraemer_Airport"
+      },
+      "via": "prose-status",
+      "fetched": "2026-07-26"
+    },
+    "BIF": {
+      "airlines": [],
+      "status": "unclear",
+      "source": {
+        "title": "Biggs Army Airfield",
+        "revid": 1362776637,
+        "url": "https://en.wikipedia.org/wiki/Biggs_Army_Airfield"
+      },
+      "via": "none",
+      "fetched": "2026-07-26"
+    },
+    "BIG": {
+      "airlines": [],
+      "status": "unclear",
+      "source": {
+        "title": "Allen Army Airfield",
+        "revid": 1364892737,
+        "url": "https://en.wikipedia.org/wiki/Allen_Army_Airfield"
+      },
+      "via": "none",
+      "fetched": "2026-07-26"
+    },
+    "BIY": {
+      "airlines": [],
+      "source": null,
+      "via": "no-article"
+    },
+    "BIX": {
+      "airlines": [],
+      "status": "unclear",
+      "source": {
+        "title": "Keesler Air Force Base",
+        "revid": 1364989031,
+        "url": "https://en.wikipedia.org/wiki/Keesler_Air_Force_Base"
+      },
+      "via": "none",
+      "fetched": "2026-07-26"
+    },
+    "BIU": {
+      "airlines": [],
+      "status": "unclear",
+      "source": {
+        "title": "Eagle Air (Iceland)",
+        "revid": 1365066080,
+        "url": "https://en.wikipedia.org/wiki/Eagle_Air_(Iceland)"
+      },
+      "via": "none",
+      "fetched": "2026-07-26"
+    },
+    "BJH": {
+      "airlines": [
+        {
+          "airline": "Nepal Airlines",
+          "destinations": [
+            "Dhangadhi"
+          ]
+        }
+      ],
+      "status": "served",
+      "source": {
+        "title": "Bajhang Airport",
+        "revid": 1363015834,
+        "url": "https://en.wikipedia.org/wiki/Bajhang_Airport"
+      },
+      "via": "template",
+      "fetched": "2026-07-26"
+    },
+    "BJO": {
+      "airlines": [],
+      "status": "unclear",
+      "source": {
+        "title": "Bermejo Airport",
+        "revid": 1363018970,
+        "url": "https://en.wikipedia.org/wiki/Bermejo_Airport"
+      },
+      "via": "none",
+      "fetched": "2026-07-26"
+    },
+    "BIN": {
+      "airlines": [],
+      "status": "unclear",
+      "source": {
+        "title": "Bamyan",
+        "revid": 1363501517,
+        "url": "https://en.wikipedia.org/wiki/Bamyan"
+      },
+      "via": "none",
+      "fetched": "2026-07-26"
+    },
+    "BJY": {
+      "airlines": [],
+      "status": "unclear",
+      "source": {
+        "title": "Batajnica Air Base",
+        "revid": 1362809756,
+        "url": "https://en.wikipedia.org/wiki/Batajnica_Air_Base"
+      },
+      "via": "none",
+      "fetched": "2026-07-26"
+    },
+    "BJU": {
+      "airlines": [
+        {
+          "airline": "Sita Air",
+          "destinations": [
+            "Nepalgunj"
+          ]
+        },
+        {
+          "airline": "Summit Air",
+          "destinations": [
+            "Birendranagar",
+            "Nepalgunj"
+          ]
+        },
+        {
+          "airline": "Tara Air",
+          "destinations": [
+            "Nepalgunj"
+          ]
+        }
+      ],
+      "status": "served",
+      "source": {
+        "title": "Bajura Airport",
+        "revid": 1363015852,
+        "url": "https://en.wikipedia.org/wiki/Bajura_Airport"
+      },
+      "via": "template",
+      "fetched": "2026-07-26"
+    },
+    "BKA": {
+      "airlines": [],
+      "status": "unclear",
+      "source": {
+        "title": "Bykovo Airport",
+        "revid": 1362753077,
+        "url": "https://en.wikipedia.org/wiki/Bykovo_Airport"
+      },
+      "via": "none",
+      "fetched": "2026-07-26"
+    },
+    "BKB": {
+      "airlines": [
+        {
+          "airline": "Alliance Air",
+          "destinations": [
+            "Delhi"
+          ]
+        },
+        {
+          "airline": "IndiGo",
+          "destinations": [
+            "Delhi"
+          ]
+        }
+      ],
+      "status": "served",
+      "source": {
+        "title": "Bikaner Airport",
+        "revid": 1365439178,
+        "url": "https://en.wikipedia.org/wiki/Bikaner_Airport"
+      },
+      "via": "template",
+      "fetched": "2026-07-26"
+    },
+    "BKD": {
+      "airlines": [],
+      "status": "unclear",
+      "source": {
+        "title": "BKD",
+        "revid": 1154197789,
+        "url": "https://en.wikipedia.org/wiki/BKD"
+      },
+      "via": "none",
+      "fetched": "2026-07-26"
+    },
+    "BKH": {
+      "airlines": [],
+      "status": "unclear",
+      "source": {
+        "title": "Pacific Missile Range Facility",
+        "revid": 1364989275,
+        "url": "https://en.wikipedia.org/wiki/Pacific_Missile_Range_Facility"
+      },
+      "via": "none",
+      "fetched": "2026-07-26"
+    },
+    "BKL": {
+      "airlines": [
+        {
+          "airline": "AirNet Express",
+          "destinations": [
+            "Columbus–Rickenbacker"
+          ]
+        },
+        {
+          "airline": "Central Air Southwest",
+          "destinations": [
+            "Dayton",
+            "Hamilton (OH)",
+            "Kalamazoo",
+            "Ypsilanti"
+          ]
+        }
+      ],
+      "status": "served",
+      "source": {
+        "title": "Cleveland Burke Lakefront Airport",
+        "revid": 1364479946,
+        "url": "https://en.wikipedia.org/wiki/Cleveland_Burke_Lakefront_Airport"
+      },
+      "via": "template",
+      "fetched": "2026-07-26"
+    },
+    "BJP": {
+      "airlines": [],
+      "status": "no_commercial_service",
+      "since": "",
+      "source": {
+        "title": "Bragança Paulista Airport",
+        "revid": 1363022186,
+        "url": "https://en.wikipedia.org/wiki/Bragan%C3%A7a_Paulista_Airport"
+      },
+      "via": "prose-status",
+      "fetched": "2026-07-26"
+    },
+    "BKE": {
+      "airlines": [],
+      "status": "unclear",
+      "source": {
+        "title": "Baker City Municipal Airport",
+        "revid": 1364140929,
+        "url": "https://en.wikipedia.org/wiki/Baker_City_Municipal_Airport"
+      },
+      "via": "none",
+      "fetched": "2026-07-26"
+    },
+    "BKY": {
+      "airlines": [
+        {
+          "airline": "Compagnie Africaine d'Aviation",
+          "destinations": [
+            "Goma",
+            "Kalemie",
+            "Kongolo",
+            "Lubumbashi"
+          ]
+        }
+      ],
+      "status": "served",
+      "source": {
+        "title": "Kavumu Airport",
+        "revid": 1363950496,
+        "url": "https://en.wikipedia.org/wiki/Kavumu_Airport"
+      },
+      "via": "template",
+      "fetched": "2026-07-26"
+    },
+    "BLF": {
+      "airlines": [],
+      "status": "unclear",
+      "source": {
+        "title": "Mercer County Airport (West Virginia)",
+        "revid": 1363058610,
+        "url": "https://en.wikipedia.org/wiki/Mercer_County_Airport_(West_Virginia)"
+      },
+      "via": "none",
+      "fetched": "2026-07-26"
+    },
+    "BLN": {
+      "airlines": [],
+      "status": "unclear",
+      "source": {
+        "title": "Benalla Airport",
+        "revid": 1363018554,
+        "url": "https://en.wikipedia.org/wiki/Benalla_Airport"
+      },
+      "via": "none",
+      "fetched": "2026-07-26"
+    },
+    "BLK": {
+      "airlines": [
+        {
+          "airline": "NHV Helicopters",
+          "destinations": [
+            "Calder",
+            "Conwy",
+            "Douglas",
+            "Hamilton",
+            "Lennox",
+            "Millom",
+            "Morecambe",
+            "OSI"
+          ]
+        }
+      ],
+      "status": "served",
+      "source": {
+        "title": "Blackpool Airport",
+        "revid": 1365717965,
+        "url": "https://en.wikipedia.org/wiki/Blackpool_Airport"
+      },
+      "via": "template",
+      "fetched": "2026-07-26"
+    },
+    "BLH": {
+      "airlines": [
+        {
+          "airline": "Ameriflight",
+          "destinations": [
+            "Ontario"
+          ]
+        }
+      ],
+      "status": "served",
+      "source": {
+        "title": "Blythe Airport",
+        "revid": 1364155094,
+        "url": "https://en.wikipedia.org/wiki/Blythe_Airport"
+      },
+      "via": "template",
+      "fetched": "2026-07-26"
+    },
+    "BLT": {
+      "airlines": [],
+      "status": "unclear",
+      "source": {
+        "title": "Blackwater Airport",
+        "revid": 1363021090,
+        "url": "https://en.wikipedia.org/wiki/Blackwater_Airport"
+      },
+      "via": "none",
+      "fetched": "2026-07-26"
+    },
+    "BMC": {
+      "airlines": [],
+      "status": "unclear",
+      "source": {
+        "title": "Baystate Health",
+        "revid": 1359228066,
+        "url": "https://en.wikipedia.org/wiki/Baystate_Health"
+      },
+      "via": "none",
+      "fetched": "2026-07-26"
+    },
+    "BMD": {
+      "airlines": [],
+      "status": "unclear",
+      "source": {
+        "title": "Belo sur Tsiribihina Airport",
+        "revid": 1363018479,
+        "url": "https://en.wikipedia.org/wiki/Belo_sur_Tsiribihina_Airport"
+      },
+      "via": "none",
+      "fetched": "2026-07-26"
+    },
+    "BLG": {
+      "airlines": [],
+      "status": "unclear",
+      "since": "",
+      "source": {
+        "title": "Belaga Airport",
+        "revid": 1363018251,
+        "url": "https://en.wikipedia.org/wiki/Belaga_Airport"
+      },
+      "via": "prose-status",
+      "fetched": "2026-07-26"
+    },
+    "BMG": {
+      "airlines": [],
+      "status": "unclear",
+      "source": {
+        "title": "Monroe County Airport (Indiana)",
+        "revid": 1362953331,
+        "url": "https://en.wikipedia.org/wiki/Monroe_County_Airport_(Indiana)"
+      },
+      "via": "none",
+      "fetched": "2026-07-26"
+    },
+    "BMM": {
+      "airlines": [],
+      "status": "unclear",
+      "source": {
+        "title": "Bitam Airport",
+        "revid": 1363021019,
+        "url": "https://en.wikipedia.org/wiki/Bitam_Airport"
+      },
+      "via": "none",
+      "fetched": "2026-07-26"
+    },
+    "BMB": {
+      "airlines": [
+        {
+          "airline": "Compagnie Africaine d'Aviation",
+          "destinations": [
+            "Kisangani",
+            "Lisala"
+          ]
+        }
+      ],
+      "status": "served",
+      "source": {
+        "title": "Bumba Airport",
+        "revid": 1363023176,
+        "url": "https://en.wikipedia.org/wiki/Bumba_Airport"
+      },
+      "via": "template",
+      "fetched": "2026-07-26"
+    },
+    "BMT": {
+      "airlines": [],
+      "status": "unclear",
+      "source": {
+        "title": "Beaumont Municipal Airport",
+        "revid": 1364141941,
+        "url": "https://en.wikipedia.org/wiki/Beaumont_Municipal_Airport"
+      },
+      "via": "none",
+      "fetched": "2026-07-26"
+    },
+    "BMX": {
+      "airlines": [],
+      "status": "unclear",
+      "source": {
+        "title": "Big Mountain Air Force Station",
+        "revid": 1364143109,
+        "url": "https://en.wikipedia.org/wiki/Big_Mountain_Air_Force_Station"
+      },
+      "via": "none",
+      "fetched": "2026-07-26"
+    },
+    "BNG": {
+      "airlines": [],
+      "status": "unclear",
+      "source": {
+        "title": "Banning Municipal Airport",
+        "revid": 1364141134,
+        "url": "https://en.wikipedia.org/wiki/Banning_Municipal_Airport"
+      },
+      "via": "none",
+      "fetched": "2026-07-26"
+    },
+    "BNJ": {
+      "airlines": [],
+      "status": "unclear",
+      "source": {
+        "title": "BNJ",
+        "revid": 1160388456,
+        "url": "https://en.wikipedia.org/wiki/BNJ"
+      },
+      "via": "none",
+      "fetched": "2026-07-26"
+    },
+    "BMP": {
+      "airlines": [],
+      "source": null,
+      "via": "no-article"
+    },
+    "BNM": {
+      "airlines": [],
+      "source": null,
+      "via": "no-article"
+    },
+    "BNP": {
+      "airlines": [],
+      "status": "unclear",
+      "source": {
+        "title": "Bannu Airport",
+        "revid": 1363016310,
+        "url": "https://en.wikipedia.org/wiki/Bannu_Airport"
+      },
+      "via": "none",
+      "fetched": "2026-07-26"
+    },
+    "BNC": {
+      "airlines": [],
+      "status": "served",
+      "since": "",
+      "source": {
+        "title": "Beni Airport",
+        "revid": 1363018629,
+        "url": "https://en.wikipedia.org/wiki/Beni_Airport"
+      },
+      "via": "prose-status",
+      "fetched": "2026-07-26"
+    },
+    "BOA": {
+      "airlines": [],
+      "status": "unclear",
+      "source": {
+        "title": "Boma Airport",
+        "revid": 1363021555,
+        "url": "https://en.wikipedia.org/wiki/Boma_Airport"
+      },
+      "via": "none",
+      "fetched": "2026-07-26"
+    },
+    "BNO": {
+      "airlines": [],
+      "status": "unclear",
+      "source": {
+        "title": "Burns Municipal Airport",
+        "revid": 1364157202,
+        "url": "https://en.wikipedia.org/wiki/Burns_Municipal_Airport"
+      },
+      "via": "none",
+      "fetched": "2026-07-26"
+    },
+    "BOU": {
+      "airlines": [],
+      "status": "unclear",
+      "source": {
+        "title": "Bourges Airport",
+        "revid": 1363021984,
+        "url": "https://en.wikipedia.org/wiki/Bourges_Airport"
+      },
+      "via": "none",
+      "fetched": "2026-07-26"
+    },
+    "BPC": {
+      "airlines": [],
+      "status": "unclear",
+      "source": {
+        "title": "Bamenda Airport",
+        "revid": 1363016118,
+        "url": "https://en.wikipedia.org/wiki/Bamenda_Airport"
+      },
+      "via": "none",
+      "fetched": "2026-07-26"
+    },
+    "BOW": {
+      "airlines": [],
+      "status": "unclear",
+      "source": {
+        "title": "Bartow Executive Airport",
+        "revid": 1364141412,
+        "url": "https://en.wikipedia.org/wiki/Bartow_Executive_Airport"
+      },
+      "via": "none",
+      "fetched": "2026-07-26"
+    },
+    "BOX": {
+      "airlines": [
+        {
+          "airline": "Chartair",
+          "destinations": [
+            "Katherine",
+            "Tennant Creek"
+          ]
+        }
+      ],
+      "status": "served",
+      "source": {
+        "title": "Borroloola Airport",
+        "revid": 1363320016,
+        "url": "https://en.wikipedia.org/wiki/Borroloola_Airport"
+      },
+      "via": "template",
+      "fetched": "2026-07-26"
+    },
+    "BNU": {
+      "airlines": [],
+      "status": "no_commercial_service",
+      "since": "",
+      "source": {
+        "title": "Blumenau Airport",
+        "revid": 1363021206,
+        "url": "https://en.wikipedia.org/wiki/Blumenau_Airport"
+      },
+      "via": "prose-status",
+      "fetched": "2026-07-26"
+    },
+    "BPH": {
+      "airlines": [],
+      "status": "unclear",
+      "source": {
+        "title": "Bislig Airport",
+        "revid": 1363021009,
+        "url": "https://en.wikipedia.org/wiki/Bislig_Airport"
+      },
+      "via": "none",
+      "fetched": "2026-07-26"
+    },
+    "BPG": {
+      "airlines": [
+        {
+          "airline": "Azul Conecta",
+          "destinations": [
+            "Cuiabá"
+          ]
+        }
+      ],
+      "status": "served",
+      "source": {
+        "title": "Barra do Garças Airport",
+        "revid": 1365017257,
+        "url": "https://en.wikipedia.org/wiki/Barra_do_Gar%C3%A7as_Airport"
+      },
+      "via": "template",
+      "fetched": "2026-07-26"
+    },
+    "BPI": {
+      "airlines": [],
+      "status": "unclear",
+      "source": {
+        "title": "Miley Memorial Field",
+        "revid": 1362808895,
+        "url": "https://en.wikipedia.org/wiki/Miley_Memorial_Field"
+      },
+      "via": "none",
+      "fetched": "2026-07-26"
+    },
+    "BPF": {
+      "airlines": [],
+      "status": "unclear",
+      "source": {
+        "title": "BPF",
+        "revid": 1351736696,
+        "url": "https://en.wikipedia.org/wiki/BPF"
+      },
+      "via": "none",
+      "fetched": "2026-07-26"
+    },
+    "BQA": {
+      "airlines": [
+        {
+          "airline": "Air Juan",
+          "destinations": [
+            "Manila Harbor (Air Juan Seaplane Terminal)"
+          ]
+        }
+      ],
+      "status": "served",
+      "source": {
+        "title": "Dr. Juan C. Angara Airport",
+        "revid": 1363034041,
+        "url": "https://en.wikipedia.org/wiki/Dr._Juan_C._Angara_Airport"
+      },
+      "via": "template",
+      "fetched": "2026-07-26"
+    },
+    "BQE": {
+      "airlines": [],
+      "status": "unclear",
+      "source": {
+        "title": "Bubaque Airport",
+        "revid": 1363022830,
+        "url": "https://en.wikipedia.org/wiki/Bubaque_Airport"
+      },
+      "via": "none",
+      "fetched": "2026-07-26"
+    },
+    "BPM": {
+      "airlines": [],
+      "status": "unclear",
+      "source": {
+        "title": "Begumpet Airport",
+        "revid": 1365280888,
+        "url": "https://en.wikipedia.org/wiki/Begumpet_Airport"
+      },
+      "via": "none",
+      "fetched": "2026-07-26"
+    },
+    "BRT": {
+      "airlines": [
+        {
+          "airline": "Fly Tiwi",
+          "destinations": [
+            "Darwin"
+          ]
+        }
+      ],
+      "status": "served",
+      "source": {
+        "title": "Bathurst Island Airport",
+        "revid": 1363016854,
+        "url": "https://en.wikipedia.org/wiki/Bathurst_Island_Airport"
+      },
+      "via": "template",
+      "fetched": "2026-07-26"
+    },
+    "BSJ": {
+      "airlines": [],
+      "status": "unclear",
+      "source": {
+        "title": "Bairnsdale Airport",
+        "revid": 1363015810,
+        "url": "https://en.wikipedia.org/wiki/Bairnsdale_Airport"
+      },
+      "via": "none",
+      "fetched": "2026-07-26"
+    },
+    "BSF": {
+      "airlines": [],
+      "status": "unclear",
+      "source": {
+        "title": "Pohakuloa Training Area",
+        "revid": 1364981734,
+        "url": "https://en.wikipedia.org/wiki/Pohakuloa_Training_Area"
+      },
+      "via": "none",
+      "fetched": "2026-07-26"
+    },
+    "BST": {
+      "airlines": [
+        {
+          "airline": "Afghan Jet International",
+          "destinations": [
+            "Kabul"
+          ]
+        },
+        {
+          "airline": "Kam Air",
+          "destinations": [
+            "Kabul"
+          ]
+        }
+      ],
+      "status": "served",
+      "source": {
+        "title": "Bost Airport",
+        "revid": 1363188924,
+        "url": "https://en.wikipedia.org/wiki/Bost_Airport"
+      },
+      "via": "template",
+      "fetched": "2026-07-26"
+    },
+    "BSU": {
+      "airlines": [],
+      "status": "unclear",
+      "source": {
+        "title": "Basankusu Airport",
+        "revid": 1363016717,
+        "url": "https://en.wikipedia.org/wiki/Basankusu_Airport"
+      },
+      "via": "none",
+      "fetched": "2026-07-26"
+    },
+    "BTE": {
+      "airlines": [],
+      "status": "unclear",
+      "source": {
+        "title": "Sherbro International Airport",
+        "revid": 1363078506,
+        "url": "https://en.wikipedia.org/wiki/Sherbro_International_Airport"
+      },
+      "via": "none",
+      "fetched": "2026-07-26"
+    },
+    "BQH": {
+      "airlines": [],
+      "status": "no_commercial_service",
+      "since": "",
+      "source": {
+        "title": "London Biggin Hill Airport",
+        "revid": 1366035192,
+        "url": "https://en.wikipedia.org/wiki/London_Biggin_Hill_Airport"
+      },
+      "via": "prose-status",
+      "fetched": "2026-07-26"
+    },
+    "BUG": {
+      "airlines": [
+        {
+          "airline": "Fly Angola",
+          "destinations": [
+            "Luanda",
+            "Windhoek–Hosea Kutako"
+          ]
+        }
+      ],
+      "status": "served",
+      "source": {
+        "title": "Benguela Airport",
+        "revid": 1363018612,
+        "url": "https://en.wikipedia.org/wiki/Benguela_Airport"
+      },
+      "via": "template",
+      "fetched": "2026-07-26"
+    },
+    "BRV": {
+      "airlines": [],
+      "status": "no_commercial_service",
+      "since": "2016",
+      "source": {
+        "title": "Bremerhaven Airport",
+        "revid": 1366031117,
+        "url": "https://en.wikipedia.org/wiki/Bremerhaven_Airport"
+      },
+      "via": "prose-status",
+      "fetched": "2026-07-26"
+    },
+    "BUJ": {
+      "airlines": [
+        {
+          "airline": "Air Algérie",
+          "destinations": [
+            "Algiers",
+            "Laghouat",
+            "Touggourt"
+          ]
+        }
+      ],
+      "status": "served",
+      "source": {
+        "title": "Bou Saada Airport",
+        "revid": 1363021884,
+        "url": "https://en.wikipedia.org/wiki/Bou_Saada_Airport"
+      },
+      "via": "template",
+      "fetched": "2026-07-26"
+    },
+    "BTL": {
+      "airlines": [],
+      "status": "unclear",
+      "source": {
+        "title": "W. K. Kellogg Airport",
+        "revid": 1363086752,
+        "url": "https://en.wikipedia.org/wiki/W._K._Kellogg_Airport"
+      },
+      "via": "none",
+      "fetched": "2026-07-26"
+    },
+    "BUL": {
+      "airlines": [
+        {
+          "airline": "PNG Air",
+          "destinations": [
+            "Port Moresby"
+          ]
+        }
+      ],
+      "status": "served",
+      "source": {
+        "title": "Bulolo Airport",
+        "revid": 1363023169,
+        "url": "https://en.wikipedia.org/wiki/Bulolo_Airport"
+      },
+      "via": "template",
+      "fetched": "2026-07-26"
+    },
+    "BUO": {
+      "airlines": [],
+      "status": "unclear",
+      "source": {
+        "title": "Burao Airport",
+        "revid": 1363023269,
+        "url": "https://en.wikipedia.org/wiki/Burao_Airport"
+      },
+      "via": "none",
+      "fetched": "2026-07-26"
+    },
+    "BUP": {
+      "airlines": [
+        {
+          "airline": "Alliance Air",
+          "destinations": [
+            "Delhi"
+          ]
+        },
+        {
+          "airline": "FlyBig",
+          "destinations": [
+            "Ghaziabad"
+          ]
+        }
+      ],
+      "status": "served",
+      "source": {
+        "title": "Bathinda Airport",
+        "revid": 1365439928,
+        "url": "https://en.wikipedia.org/wiki/Bathinda_Airport"
+      },
+      "via": "template",
+      "fetched": "2026-07-26"
+    },
+    "BUY": {
+      "airlines": [],
+      "status": "unclear",
+      "source": {
+        "title": "Bunbury Airport",
+        "revid": 1363023186,
+        "url": "https://en.wikipedia.org/wiki/Bunbury_Airport"
+      },
+      "via": "none",
+      "fetched": "2026-07-26"
+    },
+    "BVY": {
+      "airlines": [],
+      "status": "unclear",
+      "source": {
+        "title": "Beverly Regional Airport",
+        "revid": 1364143005,
+        "url": "https://en.wikipedia.org/wiki/Beverly_Regional_Airport"
+      },
+      "via": "none",
+      "fetched": "2026-07-26"
+    },
+    "BTZ": {
+      "airlines": [],
+      "source": null,
+      "via": "no-article"
+    },
+    "BWB": {
+      "airlines": [
+        {
+          "airline": "National Jet Express",
+          "destinations": [
+            "Perth"
+          ]
+        }
+      ],
+      "status": "served",
+      "source": {
+        "title": "Barrow Island Airport",
+        "revid": 1363016642,
+        "url": "https://en.wikipedia.org/wiki/Barrow_Island_Airport"
+      },
+      "via": "template",
+      "fetched": "2026-07-26"
+    },
+    "BWF": {
+      "airlines": [
+        {
+          "airline": "BAE",
+          "destinations": [
+            "Bristol",
+            "Farnborough",
+            "Glasgow",
+            "Northolt",
+            "Southampton",
+            "Wick",
+            "East Midlands"
+          ]
+        }
+      ],
+      "status": "served",
+      "source": {
+        "title": "Walney Aerodrome",
+        "revid": 1363086949,
+        "url": "https://en.wikipedia.org/wiki/Walney_Aerodrome"
+      },
+      "via": "template",
+      "fetched": "2026-07-26"
+    },
+    "BWH": {
+      "airlines": [],
+      "status": "unclear",
+      "source": {
+        "title": "Bwh",
+        "revid": 1335423504,
+        "url": "https://en.wikipedia.org/wiki/Bwh"
+      },
+      "via": "none",
+      "fetched": "2026-07-26"
+    },
+    "BWQ": {
+      "airlines": [],
+      "status": "unclear",
+      "source": {
+        "title": "Brewarrina Airport",
+        "revid": 1363022433,
+        "url": "https://en.wikipedia.org/wiki/Brewarrina_Airport"
+      },
+      "via": "none",
+      "fetched": "2026-07-26"
+    },
+    "BWE": {
+      "airlines": [],
+      "status": "no_commercial_service",
+      "since": "",
+      "source": {
+        "title": "Braunschweig Wolfsburg Airport",
+        "revid": 1363022290,
+        "url": "https://en.wikipedia.org/wiki/Braunschweig_Wolfsburg_Airport"
+      },
+      "via": "prose-status",
+      "fetched": "2026-07-26"
+    },
+    "BWU": {
+      "airlines": [
+        {
+          "airline": "Toll Group",
+          "destinations": [
+            "Brisbane",
+            "Melbourne"
+          ]
+        }
+      ],
+      "status": "served",
+      "source": {
+        "title": "Bankstown Airport",
+        "revid": 1365284366,
+        "url": "https://en.wikipedia.org/wiki/Bankstown_Airport"
+      },
+      "via": "template",
+      "fetched": "2026-07-26"
+    },
+    "BWG": {
+      "airlines": [],
+      "status": "unclear",
+      "since": "",
+      "source": {
+        "title": "Bowling Green–Warren County Regional Airport",
+        "revid": 1364155466,
+        "url": "https://en.wikipedia.org/wiki/Bowling_Green%E2%80%93Warren_County_Regional_Airport"
+      },
+      "via": "prose-status",
+      "fetched": "2026-07-26"
+    },
+    "BXB": {
+      "airlines": [
+        {
+          "airline": "Susi Air",
+          "destinations": [
+            "Fakfak",
+            "Manokwari"
+          ]
+        },
+        {
+          "airline": "Travira Air",
+          "destinations": [
+            "Sorong",
+            "Biak"
+          ]
+        },
+        {
+          "airline": "Wings Air",
+          "destinations": [
+            "Sorong"
+          ]
+        }
+      ],
+      "status": "served",
+      "source": {
+        "title": "Babo Airport",
+        "revid": 1363015510,
+        "url": "https://en.wikipedia.org/wiki/Babo_Airport"
+      },
+      "via": "template",
+      "fetched": "2026-07-26"
+    },
+    "BWW": {
+      "airlines": [],
+      "status": "unclear",
+      "source": {
+        "title": "BWW",
+        "revid": 1360111179,
+        "url": "https://en.wikipedia.org/wiki/BWW"
+      },
+      "via": "none",
+      "fetched": "2026-07-26"
+    },
+    "BXE": {
+      "airlines": [],
+      "status": "unclear",
+      "source": {
+        "title": "Bakel Airport",
+        "revid": 1363015864,
+        "url": "https://en.wikipedia.org/wiki/Bakel_Airport"
+      },
+      "via": "none",
+      "fetched": "2026-07-26"
+    },
+    "BXK": {
+      "airlines": [],
+      "status": "unclear",
+      "source": {
+        "title": "Buckeye Municipal Airport",
+        "revid": 1364157031,
+        "url": "https://en.wikipedia.org/wiki/Buckeye_Municipal_Airport"
+      },
+      "via": "none",
+      "fetched": "2026-07-26"
+    },
+    "BXO": {
+      "airlines": [],
+      "status": "unclear",
+      "source": {
+        "title": "Buochs Airport",
+        "revid": 1364452221,
+        "url": "https://en.wikipedia.org/wiki/Buochs_Airport"
+      },
+      "via": "none",
+      "fetched": "2026-07-26"
+    },
+    "BXP": {
+      "airlines": [],
+      "status": "unclear",
+      "source": {
+        "title": "Biała Podlaska Airport",
+        "revid": 1363020487,
+        "url": "https://en.wikipedia.org/wiki/Bia%C5%82a_Podlaska_Airport"
+      },
+      "via": "none",
+      "fetched": "2026-07-26"
+    },
+    "BYC": {
+      "airlines": [
+        {
+          "airline": "Boliviana de Aviación",
+          "destinations": [
+            "Tarija"
+          ]
+        }
+      ],
+      "status": "served",
+      "source": {
+        "title": "Yacuiba Airport",
+        "revid": 1363088217,
+        "url": "https://en.wikipedia.org/wiki/Yacuiba_Airport"
+      },
+      "via": "template",
+      "fetched": "2026-07-26"
+    },
+    "BYF": {
+      "airlines": [],
+      "status": "unclear",
+      "source": {
+        "title": "Albert–Picardie Airport",
+        "revid": 1362958691,
+        "url": "https://en.wikipedia.org/wiki/Albert%E2%80%93Picardie_Airport"
+      },
+      "via": "none",
+      "fetched": "2026-07-26"
+    },
+    "BYH": {
+      "airlines": [],
+      "status": "unclear",
+      "source": {
+        "title": "Arkansas International Airport",
+        "revid": 1364139437,
+        "url": "https://en.wikipedia.org/wiki/Arkansas_International_Airport"
+      },
+      "via": "none",
+      "fetched": "2026-07-26"
+    },
+    "BYI": {
+      "airlines": [],
+      "status": "unclear",
+      "source": {
+        "title": "Burley Municipal Airport",
+        "revid": 1364157169,
+        "url": "https://en.wikipedia.org/wiki/Burley_Municipal_Airport"
+      },
+      "via": "none",
+      "fetched": "2026-07-26"
+    },
+    "BYP": {
+      "airlines": [],
+      "status": "unclear",
+      "source": {
+        "title": "Barimunya Airport",
+        "revid": 1363016478,
+        "url": "https://en.wikipedia.org/wiki/Barimunya_Airport"
+      },
+      "via": "none",
+      "fetched": "2026-07-26"
+    },
+    "BXN": {
+      "airlines": [],
+      "status": "unclear",
+      "source": {
+        "title": "Bodrum-Imsik Airport",
+        "revid": 1362752937,
+        "url": "https://en.wikipedia.org/wiki/Bodrum-Imsik_Airport"
+      },
+      "via": "none",
+      "fetched": "2026-07-26"
+    },
+    "BYJ": {
+      "airlines": [],
+      "status": "unclear",
+      "source": {
+        "title": "Beja Airbase",
+        "revid": 1365018763,
+        "url": "https://en.wikipedia.org/wiki/Beja_Airbase"
+      },
+      "via": "none",
+      "fetched": "2026-07-26"
+    },
+    "BYQ": {
+      "airlines": [
+        {
+          "airline": "Susi Air",
+          "destinations": [
+            "Tarakan"
+          ]
+        }
+      ],
+      "status": "served",
+      "source": {
+        "title": "Bunyu Airport",
+        "revid": 1362816595,
+        "url": "https://en.wikipedia.org/wiki/Bunyu_Airport"
+      },
+      "via": "template",
+      "fetched": "2026-07-26"
+    },
+    "BYT": {
+      "airlines": [],
+      "status": "unclear",
+      "source": {
+        "title": "Bantry Aerodrome",
+        "revid": 1363016318,
+        "url": "https://en.wikipedia.org/wiki/Bantry_Aerodrome"
+      },
+      "via": "none",
+      "fetched": "2026-07-26"
+    },
+    "BZA": {
+      "airlines": [],
+      "status": "unclear",
+      "source": {
+        "title": "San Pedro Airport (Nicaragua)",
+        "revid": 1363082777,
+        "url": "https://en.wikipedia.org/wiki/San_Pedro_Airport_(Nicaragua)"
+      },
+      "via": "none",
+      "fetched": "2026-07-26"
+    },
+    "BYS": {
+      "airlines": [],
+      "status": "unclear",
+      "source": {
+        "title": "Bicycle Lake Army Airfield",
+        "revid": 1364143020,
+        "url": "https://en.wikipedia.org/wiki/Bicycle_Lake_Army_Airfield"
+      },
+      "via": "none",
+      "fetched": "2026-07-26"
+    },
+    "BYU": {
+      "airlines": [],
+      "status": "no_commercial_service",
+      "since": "2001",
+      "source": {
+        "title": "Bayreuth Airport",
+        "revid": 1362776158,
+        "url": "https://en.wikipedia.org/wiki/Bayreuth_Airport"
+      },
+      "via": "prose-status",
+      "fetched": "2026-07-26"
+    },
+    "BZC": {
+      "airlines": [],
+      "status": "no_commercial_service",
+      "since": "",
+      "source": {
+        "title": "Umberto Modiano Airport",
+        "revid": 1363084668,
+        "url": "https://en.wikipedia.org/wiki/Umberto_Modiano_Airport"
+      },
+      "via": "prose-status",
+      "fetched": "2026-07-26"
+    },
+    "BZD": {
+      "airlines": [],
+      "status": "unclear",
+      "source": {
+        "title": "Balranald Airport",
+        "revid": 1363016046,
+        "url": "https://en.wikipedia.org/wiki/Balranald_Airport"
+      },
+      "via": "none",
+      "fetched": "2026-07-26"
+    },
+    "BZY": {
+      "airlines": [],
+      "source": null,
+      "via": "no-article"
+    },
+    "BZU": {
+      "airlines": [],
+      "status": "unclear",
+      "source": {
+        "title": "Buta Zega Airport",
+        "revid": 1363023424,
+        "url": "https://en.wikipedia.org/wiki/Buta_Zega_Airport"
+      },
+      "via": "none",
+      "fetched": "2026-07-26"
+    },
+    "BZH": {
+      "airlines": [],
+      "source": null,
+      "via": "no-article"
+    },
+    "CAQ": {
+      "airlines": [
+        {
+          "airline": "Pacifica de Aviacion",
+          "destinations": [
+            "Medellín–Olaya Herrera"
+          ]
+        },
+        {
+          "airline": "SATENA",
+          "destinations": [
+            "Medellín–Olaya Herrera"
+          ]
+        }
+      ],
+      "status": "served",
+      "source": {
+        "title": "Juan H. White Airport",
+        "revid": 1362781991,
+        "url": "https://en.wikipedia.org/wiki/Juan_H._White_Airport"
+      },
+      "via": "template",
+      "fetched": "2026-07-26"
+    },
+    "BZZ": {
+      "airlines": [],
+      "status": "unclear",
+      "source": {
+        "title": "RAF Brize Norton",
+        "revid": 1365840176,
+        "url": "https://en.wikipedia.org/wiki/RAF_Brize_Norton"
+      },
+      "via": "none",
+      "fetched": "2026-07-26"
+    },
+    "CAR": {
+      "airlines": [],
+      "status": "unclear",
+      "source": {
+        "title": "Caribou Municipal Airport",
+        "revid": 1363025294,
+        "url": "https://en.wikipedia.org/wiki/Caribou_Municipal_Airport"
+      },
+      "via": "none",
+      "fetched": "2026-07-26"
+    },
+    "CAX": {
+      "airlines": [],
+      "status": "unclear",
+      "source": {
+        "title": "Carlisle Lake District Airport",
+        "revid": 1364353971,
+        "url": "https://en.wikipedia.org/wiki/Carlisle_Lake_District_Airport"
+      },
+      "via": "none",
+      "fetched": "2026-07-26"
+    },
+    "CBD": {
+      "airlines": [],
+      "status": "unclear",
+      "source": {
+        "title": "Car Nicobar Air Force Station",
+        "revid": 1363025221,
+        "url": "https://en.wikipedia.org/wiki/Car_Nicobar_Air_Force_Station"
+      },
+      "via": "none",
+      "fetched": "2026-07-26"
+    },
+    "CBE": {
+      "airlines": [],
+      "status": "unclear",
+      "source": {
+        "title": "Greater Cumberland Regional Airport",
+        "revid": 1365148396,
+        "url": "https://en.wikipedia.org/wiki/Greater_Cumberland_Regional_Airport"
+      },
+      "via": "none",
+      "fetched": "2026-07-26"
+    },
+    "CBF": {
+      "airlines": [],
+      "status": "unclear",
+      "source": {
+        "title": "Council Bluffs Municipal Airport",
+        "revid": 1364480894,
+        "url": "https://en.wikipedia.org/wiki/Council_Bluffs_Municipal_Airport"
+      },
+      "via": "none",
+      "fetched": "2026-07-26"
+    },
+    "CBJ": {
+      "airlines": [],
+      "status": "unclear",
+      "source": {
+        "title": "Cabo Rojo Airport",
+        "revid": 1363023873,
+        "url": "https://en.wikipedia.org/wiki/Cabo_Rojo_Airport"
+      },
+      "via": "none",
+      "fetched": "2026-07-26"
+    },
+    "CBG": {
+      "airlines": [],
+      "status": "unclear",
+      "source": {
+        "title": "Cambridge City Airport",
+        "revid": 1363136450,
+        "url": "https://en.wikipedia.org/wiki/Cambridge_City_Airport"
+      },
+      "via": "none",
+      "fetched": "2026-07-26"
+    },
+    "CBN": {
+      "airlines": [],
+      "status": "unclear",
+      "source": {
+        "title": "Penggung Airport",
+        "revid": 1363070746,
+        "url": "https://en.wikipedia.org/wiki/Penggung_Airport"
+      },
+      "via": "none",
+      "fetched": "2026-07-26"
+    },
+    "CBM": {
+      "airlines": [],
+      "status": "unclear",
+      "source": {
+        "title": "Columbus Air Force Base",
+        "revid": 1364990214,
+        "url": "https://en.wikipedia.org/wiki/Columbus_Air_Force_Base"
+      },
+      "via": "none",
+      "fetched": "2026-07-26"
+    },
+    "CBL": {
+      "airlines": [
+        {
+          "airline": "RUTACA Airlines",
+          "destinations": [
+            "Caracas"
+          ]
+        },
+        {
+          "airline": "Transmandu",
+          "destinations": [
+            "Santa Elena de Uairén",
+            "Porlamar"
+          ]
+        }
+      ],
+      "status": "served",
+      "source": {
+        "title": "Tomás de Heres Airport",
+        "revid": 1363150531,
+        "url": "https://en.wikipedia.org/wiki/Tom%C3%A1s_de_Heres_Airport"
+      },
+      "via": "template",
+      "fetched": "2026-07-26"
+    },
+    "CBU": {
+      "airlines": [],
+      "status": "unclear",
+      "source": {
+        "title": "Cottbus-Drewitz Airport",
+        "revid": 1366030397,
+        "url": "https://en.wikipedia.org/wiki/Cottbus-Drewitz_Airport"
+      },
+      "via": "none",
+      "fetched": "2026-07-26"
+    },
+    "CBV": {
+      "airlines": [],
+      "status": "unclear",
+      "source": {
+        "title": "Cobán Airport",
+        "revid": 1363028460,
+        "url": "https://en.wikipedia.org/wiki/Cob%C3%A1n_Airport"
+      },
+      "via": "none",
+      "fetched": "2026-07-26"
+    },
+    "CCH": {
+      "airlines": [],
+      "status": "unclear",
+      "source": {
+        "title": "Chile Chico Airfield",
+        "revid": 1363027038,
+        "url": "https://en.wikipedia.org/wiki/Chile_Chico_Airfield"
+      },
+      "via": "none",
+      "fetched": "2026-07-26"
+    },
+    "CCB": {
+      "airlines": [],
+      "status": "unclear",
+      "source": {
+        "title": "Cable Airport",
+        "revid": 1364157431,
+        "url": "https://en.wikipedia.org/wiki/Cable_Airport"
+      },
+      "via": "none",
+      "fetched": "2026-07-26"
+    },
+    "CCL": {
+      "airlines": [],
+      "status": "unclear",
+      "source": {
+        "title": "Chinchilla Airport",
+        "revid": 1363027170,
+        "url": "https://en.wikipedia.org/wiki/Chinchilla_Airport"
+      },
+      "via": "none",
+      "fetched": "2026-07-26"
+    },
+    "CCI": {
+      "airlines": [],
+      "status": "no_commercial_service",
+      "since": "",
+      "source": {
+        "title": "Concórdia Airport",
+        "revid": 1363029031,
+        "url": "https://en.wikipedia.org/wiki/Conc%C3%B3rdia_Airport"
+      },
+      "via": "prose-status",
+      "fetched": "2026-07-26"
+    },
+    "CCN": {
+      "airlines": [
+        {
+          "airline": "Bakhtar Afghan Airlines",
+          "destinations": [
+            "Bamyan"
+          ]
+        },
+        {
+          "airline": "Afghan Jet International",
+          "destinations": [
+            "Kabul"
+          ]
+        },
+        {
+          "airline": "Kam Air",
+          "destinations": [
+            "Herat",
+            "Kabul"
+          ]
+        }
+      ],
+      "status": "served",
+      "source": {
+        "title": "Sultan Ghiyassuddin Ghori Airport",
+        "revid": 1363080947,
+        "url": "https://en.wikipedia.org/wiki/Sultan_Ghiyassuddin_Ghori_Airport"
+      },
+      "via": "template",
+      "fetched": "2026-07-26"
+    },
+    "CCM": {
+      "airlines": [],
+      "status": "no_commercial_service",
+      "since": "",
+      "source": {
+        "title": "Diomício Freitas Airport",
+        "revid": 1363033244,
+        "url": "https://en.wikipedia.org/wiki/Diom%C3%ADcio_Freitas_Airport"
+      },
+      "via": "prose-status",
+      "fetched": "2026-07-26"
+    },
+    "CDS": {
+      "airlines": [],
+      "status": "unclear",
+      "source": {
+        "title": "Childress Municipal Airport",
+        "revid": 1364479331,
+        "url": "https://en.wikipedia.org/wiki/Childress_Municipal_Airport"
+      },
+      "via": "none",
+      "fetched": "2026-07-26"
+    },
+    "CCX": {
+      "airlines": [],
+      "source": null,
+      "via": "no-article"
+    },
+    "CDA": {
+      "airlines": [],
+      "status": "unclear",
+      "source": {
+        "title": "Caledonia County Airport",
+        "revid": 1364157516,
+        "url": "https://en.wikipedia.org/wiki/Caledonia_County_Airport"
+      },
+      "via": "none",
+      "fetched": "2026-07-26"
+    },
+    "CCY": {
+      "airlines": [],
+      "status": "unclear",
+      "source": {
+        "title": "Northeast Iowa Regional Airport",
+        "revid": 1363067093,
+        "url": "https://en.wikipedia.org/wiki/Northeast_Iowa_Regional_Airport"
+      },
+      "via": "none",
+      "fetched": "2026-07-26"
+    },
+    "CDJ": {
+      "airlines": [],
+      "status": "no_commercial_service",
+      "since": "",
+      "source": {
+        "title": "Conceição do Araguaia Airport",
+        "revid": 1363029022,
+        "url": "https://en.wikipedia.org/wiki/Concei%C3%A7%C3%A3o_do_Araguaia_Airport"
+      },
+      "via": "prose-status",
+      "fetched": "2026-07-26"
+    },
+    "CDU": {
+      "airlines": [],
+      "status": "unclear",
+      "source": {
+        "title": "CDU (disambiguation)",
+        "revid": 1344945654,
+        "url": "https://en.wikipedia.org/wiki/CDU_(disambiguation)"
+      },
+      "via": "none",
+      "fetched": "2026-07-26"
+    },
+    "CEJ": {
+      "airlines": [],
+      "status": "unclear",
+      "source": {
+        "title": "Chernihiv Shestovytsia Airport",
+        "revid": 1363026685,
+        "url": "https://en.wikipedia.org/wiki/Chernihiv_Shestovytsia_Airport"
+      },
+      "via": "none",
+      "fetched": "2026-07-26"
+    },
+    "CEF": {
+      "airlines": [],
+      "status": "unclear",
+      "source": {
+        "title": "Westover Air Reserve Base",
+        "revid": 1365019350,
+        "url": "https://en.wikipedia.org/wiki/Westover_Air_Reserve_Base"
+      },
+      "via": "none",
+      "fetched": "2026-07-26"
+    },
+    "CEQ": {
+      "airlines": [],
+      "status": "unclear",
+      "source": {
+        "title": "Cannes–Mandelieu Airport",
+        "revid": 1363024946,
+        "url": "https://en.wikipedia.org/wiki/Cannes%E2%80%93Mandelieu_Airport"
+      },
+      "via": "none",
+      "fetched": "2026-07-26"
+    },
+    "CES": {
+      "airlines": [],
+      "status": "unclear",
+      "source": {
+        "title": "Cessnock Airport",
+        "revid": 1363026058,
+        "url": "https://en.wikipedia.org/wiki/Cessnock_Airport"
+      },
+      "via": "none",
+      "fetched": "2026-07-26"
+    },
+    "CET": {
+      "airlines": [],
+      "status": "unclear",
+      "source": {
+        "title": "Cholet Le Pontreau Airport",
+        "revid": 1363027746,
+        "url": "https://en.wikipedia.org/wiki/Cholet_Le_Pontreau_Airport"
+      },
+      "via": "none",
+      "fetched": "2026-07-26"
+    },
+    "CEG": {
+      "airlines": [],
+      "status": "no_commercial_service",
+      "since": "2020",
+      "source": {
+        "title": "Hawarden Airport",
+        "revid": 1365650961,
+        "url": "https://en.wikipedia.org/wiki/Hawarden_Airport"
+      },
+      "via": "prose-status",
+      "fetched": "2026-07-26"
+    },
+    "CEU": {
+      "airlines": [],
+      "status": "unclear",
+      "source": {
+        "title": "Oconee County Regional Airport",
+        "revid": 1362801015,
+        "url": "https://en.wikipedia.org/wiki/Oconee_County_Regional_Airport"
+      },
+      "via": "none",
+      "fetched": "2026-07-26"
+    },
+    "CEW": {
+      "airlines": [],
+      "status": "unclear",
+      "source": {
+        "title": "CEW",
+        "revid": 1194290208,
+        "url": "https://en.wikipedia.org/wiki/CEW"
+      },
+      "via": "none",
+      "fetched": "2026-07-26"
+    },
+    "CFD": {
+      "airlines": [],
+      "status": "unclear",
+      "source": {
+        "title": "Coulter Field",
+        "revid": 1364480879,
+        "url": "https://en.wikipedia.org/wiki/Coulter_Field"
+      },
+      "via": "none",
+      "fetched": "2026-07-26"
+    },
+    "CFV": {
+      "airlines": [],
+      "status": "unclear",
+      "source": {
+        "title": "Coffeyville Municipal Airport",
+        "revid": 1364480177,
+        "url": "https://en.wikipedia.org/wiki/Coffeyville_Municipal_Airport"
+      },
+      "via": "none",
+      "fetched": "2026-07-26"
+    },
+    "CGJ": {
+      "airlines": [],
+      "status": "unclear",
+      "source": {
+        "title": "Kasompe Airport",
+        "revid": 1364817433,
+        "url": "https://en.wikipedia.org/wiki/Kasompe_Airport"
+      },
+      "via": "none",
+      "fetched": "2026-07-26"
+    },
+    "CFC": {
+      "airlines": [],
+      "status": "no_commercial_service",
+      "since": "",
+      "source": {
+        "title": "Caçador Airport",
+        "revid": 1363025783,
+        "url": "https://en.wikipedia.org/wiki/Ca%C3%A7ador_Airport"
+      },
+      "via": "prose-status",
+      "fetched": "2026-07-26"
+    },
+    "CER": {
+      "airlines": [],
+      "status": "no_commercial_service",
+      "since": "",
+      "source": {
+        "title": "Cherbourg–Maupertus Airport",
+        "revid": 1363026658,
+        "url": "https://en.wikipedia.org/wiki/Cherbourg%E2%80%93Maupertus_Airport"
+      },
+      "via": "prose-status",
+      "fetched": "2026-07-26"
+    },
+    "CGX": {
+      "airlines": [],
+      "status": "unclear",
+      "source": {
+        "title": "Meigs Field",
+        "revid": 1361405166,
+        "url": "https://en.wikipedia.org/wiki/Meigs_Field"
+      },
+      "via": "none",
+      "fetched": "2026-07-26"
+    },
+    "CFO": {
+      "airlines": [],
+      "status": "no_commercial_service",
+      "since": "",
+      "source": {
+        "title": "Confresa Airport",
+        "revid": 1363029041,
+        "url": "https://en.wikipedia.org/wiki/Confresa_Airport"
+      },
+      "via": "prose-status",
+      "fetched": "2026-07-26"
+    },
+    "CGZ": {
+      "airlines": [],
+      "status": "unclear",
+      "source": {
+        "title": "Casa Grande Municipal Airport",
+        "revid": 1364272771,
+        "url": "https://en.wikipedia.org/wiki/Casa_Grande_Municipal_Airport"
+      },
+      "via": "none",
+      "fetched": "2026-07-26"
+    },
+    "CIC": {
+      "airlines": [
+        {
+          "airline": "FedEx Feeder",
+          "destinations": [
+            "Sacramento"
+          ]
+        }
+      ],
+      "status": "served",
+      "source": {
+        "title": "Chico Regional Airport",
+        "revid": 1364479292,
+        "url": "https://en.wikipedia.org/wiki/Chico_Regional_Airport"
+      },
+      "via": "template",
+      "fetched": "2026-07-26"
+    },
+    "CHR": {
+      "airlines": [],
+      "status": "unclear",
+      "since": "",
+      "source": {
+        "title": "Châteauroux-Centre \"Marcel Dassault\" Airport",
+        "revid": 1363290474,
+        "url": "https://en.wikipedia.org/wiki/Ch%C3%A2teauroux-Centre_%22Marcel_Dassault%22_Airport"
+      },
+      "via": "prose-status",
+      "fetched": "2026-07-26"
+    },
+    "CHF": {
+      "airlines": [],
+      "status": "no_commercial_service",
+      "since": "",
+      "source": {
+        "title": "Jinhae Airport",
+        "revid": 1363045961,
+        "url": "https://en.wikipedia.org/wiki/Jinhae_Airport"
+      },
+      "via": "prose-status",
+      "fetched": "2026-07-26"
+    },
+    "CIP": {
+      "airlines": [],
+      "status": "unclear",
+      "source": {
+        "title": "Chipata Airport",
+        "revid": 1363027240,
+        "url": "https://en.wikipedia.org/wiki/Chipata_Airport"
+      },
+      "via": "none",
+      "fetched": "2026-07-26"
+    },
+    "CIS": {
+      "airlines": [],
+      "status": "unclear",
+      "source": {
+        "title": "Canton Island Airport",
+        "revid": 1362753140,
+        "url": "https://en.wikipedia.org/wiki/Canton_Island_Airport"
+      },
+      "via": "none",
+      "fetched": "2026-07-26"
+    },
+    "CIO": {
+      "airlines": [],
+      "status": "unclear",
+      "source": {
+        "title": "Jennifer Homendy",
+        "revid": 1354681228,
+        "url": "https://en.wikipedia.org/wiki/Jennifer_Homendy"
+      },
+      "via": "none",
+      "fetched": "2026-07-26"
+    },
+    "CIZ": {
+      "airlines": [],
+      "status": "unclear",
+      "source": {
+        "title": "CIZ",
+        "revid": 1354364060,
+        "url": "https://en.wikipedia.org/wiki/CIZ"
+      },
+      "via": "none",
+      "fetched": "2026-07-26"
+    },
+    "CJF": {
+      "airlines": [],
+      "status": "unclear",
+      "source": {
+        "title": "Coondewanna Airport",
+        "revid": 1363029179,
+        "url": "https://en.wikipedia.org/wiki/Coondewanna_Airport"
+      },
+      "via": "none",
+      "fetched": "2026-07-26"
+    },
+    "CKC": {
+      "airlines": [],
+      "status": "unclear",
+      "source": {
+        "title": "Cherkasy International Airport",
+        "revid": 1363026677,
+        "url": "https://en.wikipedia.org/wiki/Cherkasy_International_Airport"
+      },
+      "via": "none",
+      "fetched": "2026-07-26"
+    },
+    "CKI": {
+      "airlines": [
+        {
+          "airline": "Fly Tiwi",
+          "destinations": [
+            "Darwin",
+            "Warruwi"
+          ]
+        }
+      ],
+      "status": "served",
+      "source": {
+        "title": "Croker Island Airport",
+        "revid": 1363029820,
+        "url": "https://en.wikipedia.org/wiki/Croker_Island_Airport"
+      },
+      "via": "template",
+      "fetched": "2026-07-26"
+    },
+    "CKL": {
+      "airlines": [],
+      "status": "unclear",
+      "source": {
+        "title": "Chkalovsky (air base)",
+        "revid": 1363270455,
+        "url": "https://en.wikipedia.org/wiki/Chkalovsky_(air_base)"
+      },
+      "via": "none",
+      "fetched": "2026-07-26"
+    },
+    "CKT": {
+      "airlines": [
+        {
+          "airline": "Mahan Air",
+          "destinations": [
+            "Tehran–Mehrabad"
+          ]
+        }
+      ],
+      "status": "served",
+      "source": {
+        "title": "Sarakhs Airport",
+        "revid": 1363077443,
+        "url": "https://en.wikipedia.org/wiki/Sarakhs_Airport"
+      },
+      "via": "template",
+      "fetched": "2026-07-26"
+    },
+    "CLM": {
+      "airlines": [
+        {
+          "airline": "FedEx Feeder",
+          "destinations": [
+            "Seattle/Tacoma"
+          ]
+        }
+      ],
+      "status": "served",
+      "source": {
+        "title": "William R. Fairchild International Airport",
+        "revid": 1363087681,
+        "url": "https://en.wikipedia.org/wiki/William_R._Fairchild_International_Airport"
+      },
+      "via": "template",
+      "fetched": "2026-07-26"
+    },
+    "CHN": {
+      "airlines": [],
+      "source": null,
+      "via": "no-article"
+    },
+    "CLS": {
+      "airlines": [],
+      "status": "unclear",
+      "source": {
+        "title": "Chehalis–Centralia Airport",
+        "revid": 1362778053,
+        "url": "https://en.wikipedia.org/wiki/Chehalis%E2%80%93Centralia_Airport"
+      },
+      "via": "none",
+      "fetched": "2026-07-26"
+    },
+    "CKV": {
+      "airlines": [],
+      "status": "unclear",
+      "source": {
+        "title": "Clarksville–Montgomery County Regional Airport",
+        "revid": 1364479742,
+        "url": "https://en.wikipedia.org/wiki/Clarksville%E2%80%93Montgomery_County_Regional_Airport"
+      },
+      "via": "none",
+      "fetched": "2026-07-26"
+    },
+    "CLW": {
+      "airlines": [],
+      "status": "unclear",
+      "source": {
+        "title": "Clearwater Executive Airport",
+        "revid": 1365834320,
+        "url": "https://en.wikipedia.org/wiki/Clearwater_Executive_Airport"
+      },
+      "via": "none",
+      "fetched": "2026-07-26"
+    },
+    "CLU": {
+      "airlines": [],
+      "status": "unclear",
+      "source": {
+        "title": "Columbus Municipal Airport (Indiana)",
+        "revid": 1364480519,
+        "url": "https://en.wikipedia.org/wiki/Columbus_Municipal_Airport_(Indiana)"
+      },
+      "via": "none",
+      "fetched": "2026-07-26"
+    },
+    "CLZ": {
+      "airlines": [],
+      "status": "unclear",
+      "source": {
+        "title": "Calabozo Airport",
+        "revid": 1363024283,
+        "url": "https://en.wikipedia.org/wiki/Calabozo_Airport"
+      },
+      "via": "none",
+      "fetched": "2026-07-26"
+    },
+    "CMD": {
+      "airlines": [],
+      "status": "unclear",
+      "source": {
+        "title": "Cootamundra Airport",
+        "revid": 1363029199,
+        "url": "https://en.wikipedia.org/wiki/Cootamundra_Airport"
+      },
+      "via": "none",
+      "fetched": "2026-07-26"
+    },
+    "CMJ": {
+      "airlines": [
+        {
+          "airline": "Daily Air",
+          "destinations": [
+            "Kaohsiung",
+            "Penghu"
+          ]
+        }
+      ],
+      "status": "served",
+      "source": {
+        "title": "Qimei Airport",
+        "revid": 1363073508,
+        "url": "https://en.wikipedia.org/wiki/Qimei_Airport"
+      },
+      "via": "template",
+      "fetched": "2026-07-26"
+    },
+    "CLN": {
+      "airlines": [],
+      "status": "no_commercial_service",
+      "since": "",
+      "source": {
+        "title": "Carolina (Maranhão) Airport",
+        "revid": 1363025353,
+        "url": "https://en.wikipedia.org/wiki/Carolina_(Maranh%C3%A3o)_Airport"
+      },
+      "via": "prose-status",
+      "fetched": "2026-07-26"
+    },
+    "CMQ": {
+      "airlines": [],
+      "status": "unclear",
+      "source": {
+        "title": "Clermont Airport",
+        "revid": 1363028292,
+        "url": "https://en.wikipedia.org/wiki/Clermont_Airport"
+      },
+      "via": "none",
+      "fetched": "2026-07-26"
+    },
+    "CMR": {
+      "airlines": [],
+      "status": "unclear",
+      "source": {
+        "title": "Colmar Airport",
+        "revid": 1363028676,
+        "url": "https://en.wikipedia.org/wiki/Colmar_Airport"
+      },
+      "via": "none",
+      "fetched": "2026-07-26"
+    },
+    "CMK": {
+      "airlines": [],
+      "source": null,
+      "via": "no-article"
+    },
+    "CNG": {
+      "airlines": [],
+      "status": "unclear",
+      "source": {
+        "title": "Cognac – Châteaubernard Air Base",
+        "revid": 1365859719,
+        "url": "https://en.wikipedia.org/wiki/Cognac_%E2%80%93_Ch%C3%A2teaubernard_Air_Base"
+      },
+      "via": "none",
+      "fetched": "2026-07-26"
+    },
+    "CNL": {
+      "airlines": [],
+      "status": "unclear",
+      "source": {
+        "title": "Sindal Airport",
+        "revid": 1362818945,
+        "url": "https://en.wikipedia.org/wiki/Sindal_Airport"
+      },
+      "via": "none",
+      "fetched": "2026-07-26"
+    },
+    "CNR": {
+      "airlines": [],
+      "status": "unclear",
+      "source": {
+        "title": "Chañaral Airport",
+        "revid": 1363026559,
+        "url": "https://en.wikipedia.org/wiki/Cha%C3%B1aral_Airport"
+      },
+      "via": "none",
+      "fetched": "2026-07-26"
+    },
+    "CNU": {
+      "airlines": [],
+      "status": "unclear",
+      "source": {
+        "title": "Chanute Martin Johnson Airport",
+        "revid": 1364273076,
+        "url": "https://en.wikipedia.org/wiki/Chanute_Martin_Johnson_Airport"
+      },
+      "via": "none",
+      "fetched": "2026-07-26"
+    },
+    "CNO": {
+      "airlines": [],
+      "status": "unclear",
+      "source": {
+        "title": "Chino Airport",
+        "revid": 1364479363,
+        "url": "https://en.wikipedia.org/wiki/Chino_Airport"
+      },
+      "via": "none",
+      "fetched": "2026-07-26"
+    },
+    "CNW": {
+      "airlines": [],
+      "status": "unclear",
+      "source": {
+        "title": "TSTC Waco Airport",
+        "revid": 1363081507,
+        "url": "https://en.wikipedia.org/wiki/TSTC_Waco_Airport"
+      },
+      "via": "none",
       "fetched": "2026-07-26"
     }
   }

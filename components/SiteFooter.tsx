@@ -1,7 +1,8 @@
 import Link from 'next/link';
 import { getTranslations } from 'next-intl/server';
-import { getCountries } from '@/lib/airports';
+import { getCountries, getAirportsByCountry } from '@/lib/airports';
 import { getCountryName } from '@/lib/places';
+import { serviceLevel } from '@/lib/warm';
 import { locales, localeNames, type Locale } from '@/lib/i18n';
 
 const LETTERS = 'abcdefghijklmnopqrstuvwxyz'.split('');
@@ -14,7 +15,35 @@ export async function SiteFooter({ locale }: { locale: Locale }) {
   const t = await getTranslations({ locale, namespace: 'home' });
   const tNav = await getTranslations({ locale, namespace: 'nav' });
   const tLegal = await getTranslations({ locale, namespace: 'legal' });
-  const topCountries = [...getCountries()].sort((a, b) => b.count - a.count).slice(0, 12);
+  /**
+   * Country slots, allocated by DEMAND rather than by how many airfields a country contains.
+   *
+   * `count` is the number of airports with an IATA code, which is a fact about geography, not
+   * about anyone's search behaviour. Sorting on it put Russia 6th (178 airports, 1,310 daily
+   * departures) and left Spain out of the footer entirely — 55 airports, 22nd by count, but
+   * 2,647 daily departures and 8th by demand. Italy (2,122) and Mexico (1,948) were missing for
+   * the same reason, while Canada's 379 mostly-empty northern strips took the second slot.
+   * Scheduled departures are the closest proxy for demand we hold, and the traffic model says
+   * board demand scales with passenger volume, not with the number of runways.
+   *
+   * PINNED separately: the countries that actually earn impressions today. Measured in Yandex
+   * Webmaster — Sochi, Mineralnye Vody, Kazan, Yekaterinburg (RU), Sukhumi (GE), Baku (AZ),
+   * Tashkent (UZ), Gyumri (AM), Horta (PT), Antalya (TR) — several of which sit below 60th by
+   * departures and would be dropped by a pure demand sort. Removing the country page of the one
+   * audience the site already has, from every page on the site, would be self-inflicted.
+   */
+  const EARNING_COUNTRIES = [
+    'Russia', 'Turkey', 'Portugal', 'Kazakhstan', 'Uzbekistan', 'Georgia', 'Azerbaijan', 'Armenia',
+  ];
+  const withVolume = [...getCountries()].map(c => ({
+    ...c,
+    flights: getAirportsByCountry(c.slug).reduce((n, a) => n + Math.max(0, serviceLevel(a.iata) ?? 0), 0),
+  }));
+  const byDemand = [...withVolume].sort((a, b) => b.flights - a.flights);
+  const topCountries = [
+    ...byDemand.slice(0, 12),
+    ...byDemand.filter(c => EARNING_COUNTRIES.includes(c.country) && !byDemand.slice(0, 12).includes(c)),
+  ];
 
   const tEvent = await getTranslations({ locale, namespace: 'event' });
 
