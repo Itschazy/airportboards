@@ -221,9 +221,24 @@ export function serviceLevel(iata: string): number | null {
   return v;
 }
 
-/** Explicitly known to have no scheduled commercial service. Never true for un-probed airports. */
+/**
+ * Explicitly known to have no scheduled commercial service. Never true for un-probed airports.
+ *
+ * Yields to Wikipedia. Where our probe measured zero AND OurAirports agreed, the page states
+ * "No airline operates scheduled passenger flights from X" as fact — and for some of those
+ * airports Wikipedia lists current airlines with destinations. One of the two is wrong, and it
+ * is not the one maintained by people who follow the airport: our figure is a single probe from
+ * a single provider at a single moment, and that provider demonstrably has gaps (42 of the 1,102
+ * it zeroed returned a schedule on a re-probe a week later).
+ *
+ * So when there are published airlines, we stop asserting the negative. The page shows those
+ * routes instead — see components/AirportBottom.tsx — which is both true and more useful than
+ * a claim we cannot stand behind. Every downstream consumer of this function follows suit: the
+ * banner, the FAQ gate, the nearest-served-airport line and the JSON-LD description.
+ */
 export function hasNoService(iata: string): boolean {
-  return serviceLevel(iata) === 0;
+  if (serviceLevel(iata) !== 0) return false;
+  return !hasWikiAirlines(iata);
 }
 
 let sizes: Record<string, string> | null = null;
