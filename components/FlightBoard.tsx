@@ -510,6 +510,25 @@ export function FlightBoard({ airport, locale, defaultMode = 'departures', displ
   const [searchOpen, setSearchOpen] = useState(false);
   const searchRef = useRef<HTMLInputElement>(null);
   useEffect(() => { if (searchOpen) searchRef.current?.focus(); }, [searchOpen]);
+
+  // Record this visit in the same localStorage list the homepage search maintains
+  // ('ab_recent', shape identical to AirportSearch's saveRecent).
+  //
+  // Until this existed the list was written only when someone PICKED an airport in the search
+  // box — but the audience this site actually has arrives from a search engine directly onto
+  // an airport page, never touching the search. So for the real visitor the return loop was
+  // dead at both ends: nothing recorded the airport they came for, and the only reader of the
+  // list was the homepage they never see. Checking a board is inherently a repeat activity
+  // (meeting someone means looking three to five times in a day); the chips rendered by
+  // AirportBottom on every airport page close the loop.
+  useEffect(() => {
+    try {
+      const KEY = 'ab_recent';
+      const entry = { iata: airport.iata, name: displayName || airport.name, city: airport.city, country: airport.country, iso2: airport.iso2 };
+      const prev = (JSON.parse(localStorage.getItem(KEY) || '[]') as { iata: string }[]).filter(r => r.iata !== airport.iata);
+      localStorage.setItem(KEY, JSON.stringify([entry, ...prev].slice(0, 5)));
+    } catch { /* storage unavailable — the loop simply stays open */ }
+  }, [airport.iata, airport.name, airport.city, airport.country, airport.iso2, displayName]);
   // Gate for the list "rise" animation: never on the initial (SSR/LCP) paint —
   // only once the user actually changes mode/filter. Key-based (not effect-based)
   // so a data refresh on the initial combination can't retrigger it.

@@ -12,6 +12,7 @@ import { serviceLevel, serviceMeasuredOn } from '@/lib/warm';
 import { GENERIC_LOCALES } from '@/lib/generic-word';
 import { localizedMeasuredOn } from '@/lib/measured-date';
 import { EventBanner } from '@/components/EventBanner';
+import { RecentlyViewed } from '@/components/RecentlyViewed';
 
 const LETTERS = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('');
 const SUB = '#8A8A8A';
@@ -276,6 +277,15 @@ export async function AirportBottom({ airport, locale, about, displayName, fligh
           <H2>{t('faq_title')}</H2>
           <Faq items={faq} />
         </section>
+
+        {/* 5b. RECENTLY VIEWED — the return loop, on the page people actually land on.
+            The visit itself is recorded by FlightBoard on mount; these chips render the list
+            back, minus the airport being viewed. Client-side and null when the list is empty,
+            so crawlers see nothing and there is no layout to shift. Checking a board is a
+            repeat activity — someone meeting a flight looks three to five times in a day, and
+            until now the only page showing this list was the homepage, which a search visitor
+            never sees. */}
+        <RecentlyViewed locale={locale} title={t('sec_recent')} exclude={airport.iata} />
 
         <MoreInfo label={t('show_more')}>
 

@@ -5,11 +5,17 @@ import Link from 'next/link';
 
 type R = { iata: string; city: string };
 
-export function RecentlyViewed({ locale, title }: { locale: string; title: string }) {
+export function RecentlyViewed({ locale, title, exclude }: { locale: string; title: string;
+  /** IATA of the page being viewed — a chip pointing at the page you are on is noise. */
+  exclude?: string;
+}) {
   const [recent, setRecent] = useState<R[]>([]);
   useEffect(() => {
-    try { setRecent(JSON.parse(localStorage.getItem('ab_recent') || '[]')); } catch {}
-  }, []);
+    try {
+      const all = JSON.parse(localStorage.getItem('ab_recent') || '[]') as R[];
+      setRecent(exclude ? all.filter(a => a.iata !== exclude) : all);
+    } catch {}
+  }, [exclude]);
   if (recent.length === 0) return null;
 
   return (
