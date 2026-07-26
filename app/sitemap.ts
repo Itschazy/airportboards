@@ -1,9 +1,9 @@
 import type { MetadataRoute } from 'next';
 import { getAllIataCodes, AIRPORTS_PER_SITEMAP, getSitemapCount, getCountries, getStaticIataCodes, getCities } from '@/lib/airports';
 import { getEventSlugs } from '@/lib/event-content';
-import { getMegaIataCodes, isUnfillable } from '@/lib/warm';
+import { isUnfillable, serviceLevel } from '@/lib/warm';
 import { getTopRoutes } from '@/lib/top-routes';
-import { getRoute } from '@/lib/flights';
+import { getRoute, getBoard } from '@/lib/flights';
 import { locales } from '@/lib/i18n';
 import { LEGAL_LOCALES } from '@/lib/legal-content';
 
@@ -11,11 +11,16 @@ const BASE = 'https://airportsboard.live';
 const LETTERS = 'abcdefghijklmnopqrstuvwxyz'.split('');
 // Major hubs get higher priority than obscure airfields (priority is relative).
 const HUBS = new Set(getStaticIataCodes());
-// Arrivals/departures subpages are advertised for the whole mega tier (~68 warmed-hot
-// airports), not just the 30 prerendered ones — "X arrivals" is a huge query family and
-// these boards always have rows. Kept separate from HUBS on purpose: HUBS also controls
-// prerendering, and coupling the two would balloon the build.
-const SUBPAGE_HUBS = new Set(getMegaIataCodes());
+// /arrivals subpages are advertised down to the major tier (>=40 scheduled departures a
+// day: mega + hub + major, ~460 airports), not just the ~68 mega ones. "X arrivals" is the
+// exact query shape of the money markets — five live SERP probes (Antalya/Palma/Barajas in
+// en, de, es) returned 8-10 sources each, every one an arrivals/Ankünfte/llegadas page, and
+// this domain in none of them; the incumbents there are eoob.de and easyflycheck.com class
+// sites, so the authority bar is on the floor. The tier threshold keeps the long tail out:
+// below ~40 departures a day an arrivals board is often empty at crawl time, and the page
+// then declares noindex — advertising it would be the sitemap/page contradiction that fed
+// the 4,035-page exclusion wave.
+const ARRIVALS_MIN_DAILY = 40;
 
 type Freq = MetadataRoute.Sitemap[number]['changeFrequency'];
 
@@ -133,8 +138,19 @@ export default async function sitemap({ id }: { id: number | string }): Promise<
     // arriving at a page that only forwards the credit. Arrivals stays: different flights,
     // different routes section, self-canonical, and the subpage that actually earns
     // impressions in Search Console.
-    if (SUBPAGE_HUBS.has(iata)) {
-      entries.push(entry(`/airport/${iata}/arrivals`, cf, 0.9));
+    //
+    // Advertised only when the arrivals board ACTUALLY has rows right now — the same
+    // predicate the page's robots gate uses (arrivals/page.tsx: index iff board non-empty),
+    // not a parallel one that can disagree with it. getBoard reads the in-process store with
+    // live:false and never contacts airlabs; this runs once per sitemap regeneration
+    // (revalidate = 86400), not per request. The list therefore grows with warm coverage
+    // instead of promising pages that would answer noindex today.
+    if ((serviceLevel(iata) ?? 0) >= ARRIVALS_MIN_DAILY) {
+      try {
+        if ((await getBoard(iata, 'arrivals', 'en')).length > 0) {
+          entries.push(entry(`/airport/${iata}/arrivals`, cf, 0.9));
+        }
+      } catch { /* empty or unreadable board — simply not advertised */ }
     }
   }
 
