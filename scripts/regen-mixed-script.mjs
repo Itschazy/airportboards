@@ -139,6 +139,19 @@ const SCRATCHPAD = new RegExp([
 // followed by a parenthetical nickname. 21 paragraphs were rejected three times each over it.
 const BROKEN_PUNCT = /,\s*,|[;:]\s*[,;]/;
 
+/**
+ * Locales written in their own script, where the Latin IATA code has to be spelled out
+ * explicitly or the model drops it.
+ *
+ * 769 paragraphs had no bare Latin code at all, and some spelled it phonetically instead —
+ * «код ИАТА Эй-эйч-джей» for AHJ, «с кодом АГДЖ» for AGJ, «с кодом СКО» for SCO. The code is
+ * the query: people search "AHJ arrivals", never its Cyrillic transcription, and the code is
+ * also what ties the paragraph to the H1 and the title. Roughly half of these predate the
+ * rewrites and half were introduced by them — the prompt's "write ONLY in {lang}, in {lang}'s
+ * own writing system" was read, reasonably, as forbidding the Latin code too.
+ */
+const OWN_SCRIPT_LOCALES = new Set(['ru', 'ar', 'hi', 'zh', 'ja', 'ko']);
+
 function sysPrompt(lang) {
   return `You are an SEO copywriter for a live airport flight-board website. Rewrite the supplied paragraph (70-110 words) in ${lang} for an airport page: keep every fact that is already there — terminals, based airlines, destinations, passenger context — and drop nothing that is true. Do not invent terminals, gate numbers, routes or airline names that are not in the source. CRITICAL: write ONLY in ${lang}, in ${lang}'s own writing system. The paragraph you are given is defective precisely because words in another language were pasted into it; your output must contain none. Never add a parenthetical translation or a gloss of any term — an earlier prompt asked for the ${lang} words for "online flight board", "arrivals" and "departures" and models answered by pasting those literals into the prose, which took 62k pages to repair. Those concepts already appear in the page H1, title and board headers, so do not reach for them at all. Output ONLY the paragraph text — no headings, no quotes, no commentary.`;
 }
@@ -164,6 +177,9 @@ async function ask(lang, source, airport, locale, kinds = []) {
   // A scratchpad paragraph has no foreign run to point at — the defect is that the text
   // discusses the writing task instead of the airport. Saying so explicitly matters: told
   // only "words in another language were pasted in", the model preserved the commentary.
+  const iataNote = OWN_SCRIPT_LOCALES.has(locale)
+    ? `\n\nThe IATA code ${airport?.iata ?? ''} must appear in the paragraph in LATIN LETTERS, exactly as written here, once. Do not transliterate it into ${lang}'s script and do not spell it out phonetically — «код ИАТА Эй-эйч-джей» is not the code, and the code is what people actually search for. Everything else stays in ${lang}.`
+    : '';
   const scratch = kinds.includes('scratchpad')
     ? `\n\nThis paragraph contains the previous model's own working notes published as page copy — self-corrections, questions about the airport code or spelling, remarks about word count or about what language to write in. None of that is page content. Write a clean paragraph about the airport itself and nothing else.`
     : '';
@@ -176,7 +192,7 @@ async function ask(lang, source, airport, locale, kinds = []) {
       { role: 'system', content: sysPrompt(lang) },
       {
         role: 'user',
-        content: `Airport: ${airport?.name ?? ''} (${airport?.iata ?? ''}), ${airport?.city ?? ''}, ${airport?.country ?? ''}.\n\nDefective paragraph to rewrite in ${lang}:\n${source}${pointer}${scratch}`,
+        content: `Airport: ${airport?.name ?? ''} (${airport?.iata ?? ''}), ${airport?.city ?? ''}, ${airport?.country ?? ''}.\n\nDefective paragraph to rewrite in ${lang}:\n${source}${pointer}${scratch}${iataNote}`,
       },
     ],
   };
@@ -209,6 +225,7 @@ for (const f of fs.readdirSync(CONTENT_DIR).filter((n) => n.endsWith('.json')).s
     const bad = foreignScripts(text, locale);
     if (QUOTED_GLOSS.test(text)) bad.push('quoted-gloss');
     if (BROKEN_PUNCT.test(text)) bad.push('broken-punctuation');
+    if (OWN_SCRIPT_LOCALES.has(locale) && !text.includes(f.replace('.json', ''))) bad.push('no-iata');
     if (SCRATCHPAD.test(text)) bad.push('scratchpad');
     if (bad.length) work.push({ file: p, iata: f.replace('.json', ''), locale, bad });
   }
@@ -222,35 +239,59 @@ if (DRY) { console.log('DRY — nothing called, nothing written'); process.exit(
 
 // ── rewrite ─────────────────────────────────────────────────────────────────────────────
 const CONCURRENCY = +(process.env.CONCURRENCY || 6);
-let ok = 0, gave_up = 0, idx = 0;
+let ok = 0, gave_up = 0;
 const failures = [];
 
+/**
+ * Work is claimed per FILE, not per paragraph.
+ *
+ * Each airport is one JSON document holding all twelve locales, so two workers repairing, say,
+ * the zh and the ja paragraph of the same airport would both read the document, each apply
+ * their own change to their own copy, and each write the whole thing back — the second write
+ * silently discarding the first. That is why successive runs kept reporting every paragraph
+ * "rewritten" while the defect count only fell by about two thirds each pass: 769 → 106 → 36.
+ * Grouping by file makes the read-modify-write atomic with respect to this script, and is
+ * faster besides, since a file is parsed and written once instead of once per locale.
+ */
+const byFile = new Map();
+for (const w of todo) {
+  if (!byFile.has(w.file)) byFile.set(w.file, []);
+  byFile.get(w.file).push(w);
+}
+const fileJobs = [...byFile.entries()];
+let fi = 0;
+
 async function worker() {
-  while (idx < todo.length) {
-    const w = todo[idx++];
-    const doc = JSON.parse(fs.readFileSync(w.file, 'utf8'));
-    const source = doc[w.locale];
-    let accepted = null;
-    for (let tryNo = 0; tryNo < 3 && !accepted; tryNo++) {
-      let out;
-      try { out = await ask(LOCALES[w.locale], source, byIata.get(w.iata), w.locale, w.bad); }
-      catch (e) { failures.push(`${w.iata}/${w.locale}: ${e.message}`); break; }
-      const stillForeign = foreignScripts(out, w.locale);
-      const words = out.split(/\s+/).length;
-      // Reject rather than accept-and-hope: a silent bad rewrite is worse than the defect,
-      // because the defect is at least detectable by the same check on the next run.
-      if (stillForeign.length) continue;
-      if (TAUT.test(out) || QUOTED_GLOSS.test(out) || SCRATCHPAD.test(out) || BROKEN_PUNCT.test(out)) continue;
-      if (w.locale === 'zh' || w.locale === 'ja' || w.locale === 'ko') {
-        if (out.length < 80 || out.length > 700) continue;   // CJK: characters, not words
-      } else if (words < 45 || words > 170) continue;
-      accepted = out;
+  while (fi < fileJobs.length) {
+    const [file, items] = fileJobs[fi++];
+    const doc = JSON.parse(fs.readFileSync(file, 'utf8'));
+    let changed = false;
+    for (const w of items) {
+      const source = doc[w.locale];
+      let accepted = null;
+      for (let tryNo = 0; tryNo < 3 && !accepted; tryNo++) {
+        let out;
+        try { out = await ask(LOCALES[w.locale], source, byIata.get(w.iata), w.locale, w.bad); }
+        catch (e) { failures.push(`${w.iata}/${w.locale}: ${e.message}`); break; }
+        const stillForeign = foreignScripts(out, w.locale);
+        const words = out.split(/\s+/).length;
+        // Reject rather than accept-and-hope: a silent bad rewrite is worse than the defect,
+        // because the defect is at least detectable by the same check on the next run.
+        if (stillForeign.length) continue;
+        if (TAUT.test(out) || QUOTED_GLOSS.test(out) || SCRATCHPAD.test(out) || BROKEN_PUNCT.test(out)) continue;
+        if (OWN_SCRIPT_LOCALES.has(w.locale) && !out.includes(w.iata)) continue;
+        if (w.locale === 'zh' || w.locale === 'ja' || w.locale === 'ko') {
+          if (out.length < 80 || out.length > 700) continue;   // CJK: characters, not words
+        } else if (words < 45 || words > 170) continue;
+        accepted = out;
+      }
+      if (!accepted) { gave_up++; failures.push(`${w.iata}/${w.locale}: no valid rewrite in 3 tries`); continue; }
+      doc[w.locale] = accepted;
+      changed = true;
+      ok++;
+      if (ok % 25 === 0) console.log(`  ${ok}/${todo.length} rewritten…`);
     }
-    if (!accepted) { gave_up++; failures.push(`${w.iata}/${w.locale}: no valid rewrite in 3 tries`); continue; }
-    doc[w.locale] = accepted;
-    fs.writeFileSync(w.file, JSON.stringify(doc, null, 2) + '\n');
-    ok++;
-    if (ok % 25 === 0) console.log(`  ${ok}/${todo.length} rewritten…`);
+    if (changed) fs.writeFileSync(file, JSON.stringify(doc, null, 2) + '\n');
   }
 }
 await Promise.all(Array.from({ length: CONCURRENCY }, worker));

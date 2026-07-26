@@ -78735,5 +78735,31 @@
     "es": "Astaná",
     "it": "Astana",
     "tr": "Astana"
+  },
+  "BER": {
+    "ru": "Аэропорт Берлин-Бранденбург имени Вилли Брандта",
+    "zh": "柏林勃兰登堡维利·勃兰特机场",
+    "ja": "ベルリン・ブランデンブルク国際空港",
+    "ko": "베를린 브란덴부르크 빌리 브란트 공항",
+    "ar": "مطار برلين براندنبورغ فيلي برانت",
+    "hi": "बर्लिन ब्रांडेनबर्ग हवाई अड्डा विली ब्रांट",
+    "de": "Flughafen Berlin Brandenburg Willy Brandt",
+    "fr": "Aéroport Willy-Brandt de Berlin-Brandebourg",
+    "es": "Aeropuerto de Berlín-Brandeburgo Willy Brandt",
+    "it": "Aeroporto di Berlino-Brandeburgo Willy Brandt",
+    "tr": "Berlin Brandenburg Willy Brandt Havalimanı"
+  },
+  "PFO": {
+    "ru": "Международный аэропорт Пафос",
+    "zh": "帕福斯国际机场",
+    "ja": "パフォス国際空港",
+    "ko": "파포스 국제공항",
+    "ar": "مطار بافوس الدولي",
+    "hi": "पाफोस अंतरराष्ट्रीय हवाई अड्डा",
+    "de": "Flughafen Paphos",
+    "fr": "Aéroport international de Paphos",
+    "es": "Aeropuerto Internacional de Pafos",
+    "it": "Aeroporto Internazionale di Pafo",
+    "tr": "Baf Uluslararası Havalimanı"
   }
 }

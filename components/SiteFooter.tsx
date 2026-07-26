@@ -2,7 +2,7 @@ import Link from 'next/link';
 import { getTranslations } from 'next-intl/server';
 import { getCountries } from '@/lib/airports';
 import { getCountryName } from '@/lib/places';
-import type { Locale } from '@/lib/i18n';
+import { locales, localeNames, type Locale } from '@/lib/i18n';
 
 const LETTERS = 'abcdefghijklmnopqrstuvwxyz'.split('');
 
@@ -58,7 +58,37 @@ export async function SiteFooter({ locale }: { locale: Locale }) {
           </ul>
         </div>
       </nav>
-      <nav aria-label={tLegal('legal')} style={{ maxWidth: 1000, margin: '28px auto 0', display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: '8px 20px' }}>
+      {/* Language row.
+          Until this existed, eleven of the twelve language trees had no inbound link anywhere
+          on the site. Measured on production: /en/airport/FRA carried 99 internal <a href> and
+          every single one pointed at /en/, and all 1,028 <loc> in a sitemap child were /en/ too
+          — the other locales appeared only as xhtml:link hreflang alternates. hreflang tells an
+          engine which version to SHOW a given user; it is not a discovery or ranking signal, and
+          it carries no link equity. So the ru/de/es/it trees the whole strategy depends on had
+          zero internal PageRank and were reachable only by an engine choosing to follow an
+          alternate.
+          The header already had a switcher, but its links render inside `{open && …}` — client
+          state, closed by default — so they were absent from the server HTML entirely. These are
+          plain server-rendered links, visible, on every page of every locale. `hrefLang` is set
+          so the relationship is explicit rather than inferred. */}
+      <nav aria-label={tNav('language')} style={{ maxWidth: 1000, margin: '28px auto 0', display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: '8px 16px' }}>
+        {locales.map(loc => (
+          <Link
+            key={loc}
+            href={`/${loc}`}
+            hrefLang={loc}
+            style={{
+              color: loc === locale ? '#FFFFFF' : '#8A8A8A',
+              fontWeight: loc === locale ? 600 : 400,
+              textDecoration: 'none',
+              fontSize: 13,
+            }}
+          >
+            {localeNames[loc]}
+          </Link>
+        ))}
+      </nav>
+      <nav aria-label={tLegal('legal')} style={{ maxWidth: 1000, margin: '18px auto 0', display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: '8px 20px' }}>
         {legalLinks.map(l => (
           <Link key={l.href} href={l.href} style={{ color: '#8A8A8A', textDecoration: 'none', fontSize: 13 }}>{l.label}</Link>
         ))}

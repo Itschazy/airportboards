@@ -74,8 +74,13 @@ export function SiteHeader({ locale }: { locale: Locale }) {
             <span style={{ fontSize: 10, opacity: 0.6, marginInlineStart: 1 }} aria-hidden="true">▾</span>
           </button>
 
-          {open && (
-            <div role="menu" style={{
+          {/* Rendered whether or not the menu is open, hidden with CSS instead of omitted.
+              `{open && …}` kept these twelve links out of the server HTML entirely, which is
+              half of why eleven language trees had no inbound link anywhere (see the note on
+              the language row in SiteFooter). A crawler reads the markup, not the click. */}
+          {(
+            <div role="menu" aria-hidden={!open} style={{
+              display: open ? 'block' : 'none',
               position: 'absolute', top: 'calc(100% + 6px)', insetInlineEnd: 0,
               background: '#111111',
               border: '1px solid #1A1A1A',
