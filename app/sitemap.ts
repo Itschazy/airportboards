@@ -83,6 +83,7 @@ export default async function sitemap({ id }: { id: number | string }): Promise<
     for (const c of getCities()) if (c.count > 1) entries.push(entry(`/city/${c.slug}`, 'weekly', 0.6));
     // Event guides (World Cup final etc.) — small, high-intent, freshness matters.
     entries.push(entry('/events', 'weekly', 0.6));   // permanent hub
+    entries.push(entry('/widgets', 'monthly', 0.5)); // widget generator (the link programme)
     for (const s of getEventSlugs()) entries.push(entry(`/event/${s}`, 'daily', 0.8));
     // Airline pages are noindex (thin across ~976 codes) — intentionally not listed.
 

@@ -148,7 +148,22 @@
     "wiki_routes_note": "定期航线以维基百科记录为准。我们的数据源没有该机场的实时航班信息，因此这里显示的是已公布的航线，而不是今天的航班。",
     "wiki_source": "来源：{name}",
     "wiki_no_service": "据维基百科，自 {year} 年以来，{name} 一直没有定期商业客运航班。",
-    "wiki_no_service_nodate": "根据维基百科，{name}目前没有定期商业客运航班。"
+    "wiki_no_service_nodate": "根据维基百科，{name}目前没有定期商业客运航班。",
+    "widgets_title": "免费机场航班信息板小组件",
+    "widgets_meta": "在您的网站上添加任意 6,000 多个机场的实时到达和出发航班看板。免费、无需注册、自动更新。",
+    "widgets_intro": "选择一个机场，复制代码并粘贴到您的页面中。该面板显示实时出发或到达航班，自动刷新，适用于任何网站——酒店、接送服务、旅行博客。免费使用；唯一要求是保留小组件下方的小链接。",
+    "widgets_airport": "机场",
+    "widgets_language": "语言",
+    "widgets_direction": "方向",
+    "widgets_theme": "主题",
+    "widgets_light": "浅色",
+    "widgets_dark": "深色",
+    "widgets_code": "嵌入代码",
+    "widgets_copy": "复制代码",
+    "widgets_copied": "已复制",
+    "widgets_preview": "预览",
+    "widgets_note": "任何网站均可免费使用。请保留小组件下方的链接——正是它让小组件得以免费。",
+    "widgets_anchor": "{name}（{iata}）— 实时离港和到港信息板"
   },
   "ui": {
     "departures": "出发",

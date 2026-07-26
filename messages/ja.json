@@ -148,7 +148,22 @@
     "wiki_routes_note": "Wikipediaに記録されている定期路線です。この空港は当社のデータフィードにリアルタイム発着案内がないため、表示されているのは本日のフライトではなく公表済みの路線です。",
     "wiki_source": "出典：{name}",
     "wiki_no_service": "ウィキペディアによると、{name}には{year}以降、定期商業旅客便が就航していません。",
-    "wiki_no_service_nodate": "ウィキペディアによると、{name}には現在、定期旅客便は就航していません。"
+    "wiki_no_service_nodate": "ウィキペディアによると、{name}には現在、定期旅客便は就航していません。",
+    "widgets_title": "無料の空港フライトボードウィジェット",
+    "widgets_meta": "6,000以上の空港に対応したライブ発着案内板をサイトに設置。無料・登録不要で自動更新。",
+    "widgets_intro": "空港を選び、コードをコピーして、あなたのページに貼り付けてください。ボードには出発便または到着便の最新情報が表示され、自動で更新されます。ホテル、送迎サービス、旅行ブログなど、どのサイトでも利用できます。無料でご利用いただけます。必要なのは、ウィジェット下の小さなリンクを保持することだけです。",
+    "widgets_airport": "空港",
+    "widgets_language": "言語",
+    "widgets_direction": "発着区分",
+    "widgets_theme": "テーマ",
+    "widgets_light": "ライト",
+    "widgets_dark": "ダーク",
+    "widgets_code": "埋め込みコード",
+    "widgets_copy": "コードをコピー",
+    "widgets_copied": "コピーしました",
+    "widgets_preview": "プレビュー",
+    "widgets_note": "どのウェブサイトでも無料でご利用いただけます。ウィジェットの下のリンクはそのまま残してください。それがウィジェットを無料で提供し続けるための支えです。",
+    "widgets_anchor": "{name}（{iata}）— リアルタイム発着案内"
   },
   "ui": {
     "departures": "出発",

@@ -148,7 +148,22 @@
     "wiki_routes_note": "Rutas programadas según lo registrado por Wikipedia. Este aeropuerto no tiene un panel en vivo en nuestra fuente de datos, por lo que estas son las rutas publicadas y no los vuelos de hoy.",
     "wiki_source": "Fuente: {name}",
     "wiki_no_service": "Según Wikipedia, {name} no ha tenido vuelos comerciales regulares de pasajeros desde {year}.",
-    "wiki_no_service_nodate": "Según Wikipedia, {name} no tiene actualmente vuelos comerciales regulares de pasajeros."
+    "wiki_no_service_nodate": "Según Wikipedia, {name} no tiene actualmente vuelos comerciales regulares de pasajeros.",
+    "widgets_title": "Widget gratuito de panel de vuelos",
+    "widgets_meta": "Añade a tu web un panel en vivo de llegadas y salidas para cualquiera de más de 6.000 aeropuertos. Gratis, sin registro y se actualiza solo.",
+    "widgets_intro": "Elige un aeropuerto, copia el código y pégalo en tu página. El panel muestra salidas o llegadas en vivo, se actualiza automáticamente y funciona en cualquier sitio: hoteles, servicios de traslado o blogs de viajes. Es gratuito; el único requisito es mantener el pequeño enlace debajo del widget.",
+    "widgets_airport": "Aeropuerto",
+    "widgets_language": "Idioma",
+    "widgets_direction": "Dirección",
+    "widgets_theme": "Tema",
+    "widgets_light": "Claro",
+    "widgets_dark": "Oscuro",
+    "widgets_code": "Código de inserción",
+    "widgets_copy": "Copiar código",
+    "widgets_copied": "Copiado",
+    "widgets_preview": "Vista previa",
+    "widgets_note": "Gratis para cualquier sitio web. Por favor, mantén el enlace debajo del widget: es lo que permite que el widget siga siendo gratuito.",
+    "widgets_anchor": "{name} ({iata}) — panel de salidas y llegadas en tiempo real"
   },
   "ui": {
     "departures": "Salidas",

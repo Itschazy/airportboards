@@ -148,7 +148,22 @@
     "wiki_routes_note": "Scheduled routes as recorded by Wikipedia. This airport has no live board on our data feed, so these are the published routes rather than today’s flights.",
     "wiki_source": "Source: {name}",
     "wiki_no_service": "According to Wikipedia, {name} has had no scheduled commercial passenger flights since {year}.",
-    "wiki_no_service_nodate": "According to Wikipedia, {name} currently has no scheduled commercial passenger flights."
+    "wiki_no_service_nodate": "According to Wikipedia, {name} currently has no scheduled commercial passenger flights.",
+    "widgets_title": "Free airport board widget",
+    "widgets_meta": "Put a live arrivals and departures board for any of 6,000+ airports on your website. Free, no sign-up, updates itself.",
+    "widgets_intro": "Pick an airport, copy the code, paste it into your page. The board shows live departures or arrivals, refreshes itself, and works on any site — hotels, transfer services, travel blogs. Free of charge; the only requirement is keeping the small link under the widget.",
+    "widgets_airport": "Airport",
+    "widgets_language": "Language",
+    "widgets_direction": "Direction",
+    "widgets_theme": "Theme",
+    "widgets_light": "Light",
+    "widgets_dark": "Dark",
+    "widgets_code": "Embed code",
+    "widgets_copy": "Copy code",
+    "widgets_copied": "Copied",
+    "widgets_preview": "Preview",
+    "widgets_note": "Free for any website. Please keep the link under the widget — it is what keeps the widget free.",
+    "widgets_anchor": "{name} ({iata}) — live departures and arrivals board"
   },
   "ui": {
     "departures": "Departures",

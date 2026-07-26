@@ -42,6 +42,17 @@ const nextConfig: NextConfig = {
         ],
       },
       {
+        // The embed widget exists to be framed on other people's sites — the opposite of the
+        // sitewide SAMEORIGIN above. Later rules override earlier ones for the same key, and
+        // browsers ignore an invalid X-Frame-Options value, so ALLOWALL neutralises it for
+        // the rare client that does not implement CSP frame-ancestors; every modern browser
+        // obeys the frame-ancestors * the route itself sends.
+        source: '/embed/:path*',
+        headers: [
+          { key: 'X-Frame-Options', value: 'ALLOWALL' },
+        ],
+      },
+      {
         // Boards now state how old their data is, so they must not be served from cache for
         // months. `revalidate = 300` makes Next derive stale-while-revalidate=31535700 —
         // just under a YEAR — which means an infrequent AI crawler can be handed HTML whose

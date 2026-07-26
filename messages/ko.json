@@ -148,7 +148,22 @@
     "wiki_routes_note": "위키백과에 기록된 정기 노선입니다. 이 공항은 당사 데이터 피드에 실시간 운항 현황판이 없어, 오늘의 항공편이 아닌 공표된 노선이 표시됩니다.",
     "wiki_source": "출처: {name}",
     "wiki_no_service": "위키백과에 따르면 {name}에서는 {year} 이후 정기 상업 여객편이 없었습니다.",
-    "wiki_no_service_nodate": "위키백과에 따르면 {name}에는 현재 정기 상업 여객 항공편이 없습니다."
+    "wiki_no_service_nodate": "위키백과에 따르면 {name}에는 현재 정기 상업 여객 항공편이 없습니다.",
+    "widgets_title": "무료 공항 운항정보 위젯",
+    "widgets_meta": "전 세계 6,000개 이상 공항의 실시간 도착·출발 현황판을 웹사이트에 추가하세요. 무료, 가입 불필요, 자동 업데이트.",
+    "widgets_intro": "공항을 선택하고 코드를 복사한 뒤 페이지에 붙여넣으세요. 이 보드는 실시간 출발 또는 도착 정보를 표시하고 자동으로 새로고침되며, 호텔, 교통편 서비스, 여행 블로그 등 어떤 사이트에서도 작동합니다. 무료로 이용할 수 있으며, 유일한 조건은 위젯 아래의 작은 링크를 유지하는 것입니다.",
+    "widgets_airport": "공항",
+    "widgets_language": "언어",
+    "widgets_direction": "방향",
+    "widgets_theme": "테마",
+    "widgets_light": "라이트",
+    "widgets_dark": "어두움",
+    "widgets_code": "삽입 코드",
+    "widgets_copy": "코드 복사",
+    "widgets_copied": "복사됨",
+    "widgets_preview": "미리보기",
+    "widgets_note": "모든 웹사이트에서 무료로 사용할 수 있습니다. 위젯 아래의 링크를 유지해 주세요. 이 링크 덕분에 위젯을 무료로 제공할 수 있습니다.",
+    "widgets_anchor": "{name} ({iata}) — 실시간 출발·도착 안내판"
   },
   "ui": {
     "departures": "출발",

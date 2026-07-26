@@ -148,7 +148,22 @@
     "wiki_routes_note": "Wikipedia’da kaydedildiği şekliyle tarifeli rotalar. Bu havalimanının veri akışımızda canlı uçuş panosu yok, bu nedenle bunlar bugünün uçuşları değil, yayımlanmış rotalardır.",
     "wiki_source": "Kaynak: {name}",
     "wiki_no_service": "Wikipedia'ya göre {name}, {year} yılından bu yana tarifeli ticari yolcu uçuşlarına sahip değildir.",
-    "wiki_no_service_nodate": "Wikipedia'ya göre, {name} şu anda tarifeli ticari yolcu uçuşlarına sahip değildir."
+    "wiki_no_service_nodate": "Wikipedia'ya göre, {name} şu anda tarifeli ticari yolcu uçuşlarına sahip değildir.",
+    "widgets_title": "Ücretsiz uçuş panosu bileşeni",
+    "widgets_meta": "6.000’den fazla havalimanı için canlı varış-kalkış panosunu sitenize ekleyin. Ücretsiz, kayıt gerekmez, kendini günceller.",
+    "widgets_intro": "Bir havalimanı seçin, kodu kopyalayın, sayfanıza yapıştırın. Pano canlı kalkışları veya varışları gösterir, kendini yeniler ve her sitede çalışır — oteller, transfer hizmetleri, seyahat blogları. Ücretsizdir; tek gereklilik, widget’ın altındaki küçük bağlantıyı korumaktır.",
+    "widgets_airport": "Havalimanı",
+    "widgets_language": "Dil",
+    "widgets_direction": "Yön",
+    "widgets_theme": "Tema",
+    "widgets_light": "Açık",
+    "widgets_dark": "Koyu",
+    "widgets_code": "Yerleştirme kodu",
+    "widgets_copy": "Kodu kopyala",
+    "widgets_copied": "Kopyalandı",
+    "widgets_preview": "Önizleme",
+    "widgets_note": "Her web sitesi için ücretsizdir. Lütfen widget’ın altındaki bağlantıyı koruyun — widget’ın ücretsiz kalmasını sağlayan şey budur.",
+    "widgets_anchor": "{name} ({iata}) — canlı kalkış ve varış panosu"
   },
   "ui": {
     "departures": "Kalkışlar",

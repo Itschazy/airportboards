@@ -148,7 +148,22 @@
     "wiki_routes_note": "Rotte programmate come registrate da Wikipedia. Questo aeroporto non dispone di un tabellone in tempo reale nel nostro feed di dati, quindi si tratta delle rotte pubblicate e non dei voli di oggi.",
     "wiki_source": "Fonte: {name}",
     "wiki_no_service": "Secondo Wikipedia, {name} non ha voli passeggeri commerciali di linea dal {year}.",
-    "wiki_no_service_nodate": "Secondo Wikipedia, {name} attualmente non ha voli passeggeri commerciali di linea."
+    "wiki_no_service_nodate": "Secondo Wikipedia, {name} attualmente non ha voli passeggeri commerciali di linea.",
+    "widgets_title": "Widget gratuito per tabellone voli aeroportuale",
+    "widgets_meta": "Aggiungi al tuo sito un tabellone in tempo reale di arrivi e partenze per oltre 6.000 aeroporti. Gratis, senza registrazione, si aggiorna da solo.",
+    "widgets_intro": "Scegli un aeroporto, copia il codice e incollalo nella tua pagina. La bacheca mostra partenze o arrivi in tempo reale, si aggiorna automaticamente e funziona su qualsiasi sito: hotel, servizi di transfer, blog di viaggio. Gratis; l’unico requisito è mantenere il piccolo link sotto il widget.",
+    "widgets_airport": "Aeroporto",
+    "widgets_language": "Lingua",
+    "widgets_direction": "Direzione",
+    "widgets_theme": "Tema",
+    "widgets_light": "Chiaro",
+    "widgets_dark": "Scuro",
+    "widgets_code": "Codice di incorporamento",
+    "widgets_copy": "Copia codice",
+    "widgets_copied": "Copiato",
+    "widgets_preview": "Anteprima",
+    "widgets_note": "Gratuito per qualsiasi sito web. Ti preghiamo di mantenere il link sotto il widget: è ciò che permette al widget di restare gratuito.",
+    "widgets_anchor": "{name} ({iata}) — tabellone partenze e arrivi in tempo reale"
   },
   "ui": {
     "departures": "Partenze",

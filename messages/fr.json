@@ -148,7 +148,22 @@
     "wiki_routes_note": "Liaisons régulières telles que recensées par Wikipédia. Cet aéroport ne dispose d’aucun tableau des vols en direct dans notre flux de données ; il s’agit donc des liaisons publiées, et non des vols d’aujourd’hui.",
     "wiki_source": "Source : {name}",
     "wiki_no_service": "Selon Wikipédia, {name} n’a accueilli aucun vol commercial régulier de passagers depuis {year}.",
-    "wiki_no_service_nodate": "Selon Wikipédia, {name} n’a actuellement aucun vol commercial régulier de passagers."
+    "wiki_no_service_nodate": "Selon Wikipédia, {name} n’a actuellement aucun vol commercial régulier de passagers.",
+    "widgets_title": "Widget gratuit de tableau d’affichage des vols",
+    "widgets_meta": "Ajoutez à votre site un tableau en direct des arrivées et départs pour plus de 6 000 aéroports : gratuit, sans inscription, mise à jour auto.",
+    "widgets_intro": "Choisissez un aéroport, copiez le code, puis collez-le dans votre page. Le tableau affiche les départs ou les arrivées en direct, se met à jour automatiquement et fonctionne sur n’importe quel site : hôtels, services de transfert, blogs de voyage. Gratuit ; la seule exigence est de conserver le petit lien sous le widget.",
+    "widgets_airport": "Aéroport",
+    "widgets_language": "Langue",
+    "widgets_direction": "Direction",
+    "widgets_theme": "Thème",
+    "widgets_light": "Clair",
+    "widgets_dark": "Sombre",
+    "widgets_code": "Code d’intégration",
+    "widgets_copy": "Copier le code",
+    "widgets_copied": "Copié",
+    "widgets_preview": "Aperçu",
+    "widgets_note": "Gratuit pour tout site web. Veuillez conserver le lien sous le widget — c’est ce qui permet au widget de rester gratuit.",
+    "widgets_anchor": "{name} ({iata}) — tableau des départs et arrivées en direct"
   },
   "ui": {
     "departures": "Départs",
