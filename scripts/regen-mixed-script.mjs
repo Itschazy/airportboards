@@ -126,6 +126,19 @@ const SCRATCHPAD = new RegExp([
   /\bneed local-language\b/.source,
 ].join('|'));
 
+/**
+ * Punctuation that no writer produces: a doubled comma, a bracket opening on punctuation, a
+ * parenthetical with nothing in front of it. Pre-existing generation damage rather than
+ * anything the repair scripts caused — `...bilgi önemli olup,, (varışlar) ve (kalkışlar)
+ * ekranları...` reads identically before and after them — and unfixable by deletion, since the
+ * clause has no subject to restore. Two paragraphs.
+ */
+// Only the shapes that cannot occur in real writing. An earlier version also flagged "a
+// sentence beginning with a bracket", which matched every airport named after a person:
+// `Merle K. (Mudhole) Smith Airport`, `Edward G. Pitka Sr. (GAL)` — an initial's full stop
+// followed by a parenthetical nickname. 21 paragraphs were rejected three times each over it.
+const BROKEN_PUNCT = /,\s*,|[;:]\s*[,;]/;
+
 function sysPrompt(lang) {
   return `You are an SEO copywriter for a live airport flight-board website. Rewrite the supplied paragraph (70-110 words) in ${lang} for an airport page: keep every fact that is already there — terminals, based airlines, destinations, passenger context — and drop nothing that is true. Do not invent terminals, gate numbers, routes or airline names that are not in the source. CRITICAL: write ONLY in ${lang}, in ${lang}'s own writing system. The paragraph you are given is defective precisely because words in another language were pasted into it; your output must contain none. Never add a parenthetical translation or a gloss of any term — an earlier prompt asked for the ${lang} words for "online flight board", "arrivals" and "departures" and models answered by pasting those literals into the prose, which took 62k pages to repair. Those concepts already appear in the page H1, title and board headers, so do not reach for them at all. Output ONLY the paragraph text — no headings, no quotes, no commentary.`;
 }
@@ -195,6 +208,7 @@ for (const f of fs.readdirSync(CONTENT_DIR).filter((n) => n.endsWith('.json')).s
     if (typeof text !== 'string' || !LOCALES[locale]) continue;
     const bad = foreignScripts(text, locale);
     if (QUOTED_GLOSS.test(text)) bad.push('quoted-gloss');
+    if (BROKEN_PUNCT.test(text)) bad.push('broken-punctuation');
     if (SCRATCHPAD.test(text)) bad.push('scratchpad');
     if (bad.length) work.push({ file: p, iata: f.replace('.json', ''), locale, bad });
   }
@@ -226,7 +240,7 @@ async function worker() {
       // Reject rather than accept-and-hope: a silent bad rewrite is worse than the defect,
       // because the defect is at least detectable by the same check on the next run.
       if (stillForeign.length) continue;
-      if (TAUT.test(out) || QUOTED_GLOSS.test(out) || SCRATCHPAD.test(out)) continue;
+      if (TAUT.test(out) || QUOTED_GLOSS.test(out) || SCRATCHPAD.test(out) || BROKEN_PUNCT.test(out)) continue;
       if (w.locale === 'zh' || w.locale === 'ja' || w.locale === 'ko') {
         if (out.length < 80 || out.length > 700) continue;   // CJK: characters, not words
       } else if (words < 45 || words > 170) continue;
