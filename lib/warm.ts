@@ -225,6 +225,48 @@ export function hasNoService(iata: string): boolean {
   return serviceLevel(iata) === 0;
 }
 
+let sizes: Record<string, string> | null = null;
+function getSizes(): Record<string, string> {
+  if (sizes) return sizes;
+  try {
+    const p = path.join(process.cwd(), 'data', 'airport-size.json');
+    sizes = (JSON.parse(fs.readFileSync(p, 'utf8')) as { airports?: Record<string, string> }).airports ?? {};
+  } catch { sizes = {}; }
+  return sizes;
+}
+
+/** Size classes nobody searches for by name. See isUnfillable(). */
+const MINOR = new Set(['small_airport', 'heliport', 'seaplane_base', 'closed', 'balloonport']);
+
+/**
+ * A page that promises a flight board it can never show.
+ *
+ * These are the airports our probe zeroed and OurAirports contradicts, so serviceLevel() calls
+ * them UNKNOWN — correctly, because publishing "no scheduled flights" about them would be a
+ * false claim. But unknown also means the warmer skips them (dueAirports only walks airports
+ * with a positive count), so the board stays empty forever and the page says "live board data
+ * is not available right now" in perpetuity. Re-probing all 1,102 on 2026-07-26 settled it:
+ * 42 do return a schedule and were moved into the measured set; the remaining 1,060 return
+ * nothing under any code.
+ *
+ * At twelve locales that is 12,720 URLs asking for an index slot on a site with 1,770 pages
+ * indexed in total — crawl budget spent to arrive at an absent feature. Google already declines
+ * them; saying so ourselves stops the requests.
+ *
+ * Size is the gate, and it has to be: 62 of the 1,060 are large airports — Adana, Dakar, Al
+ * Maktoum, Groningen, Karlovy Vary — where the About paragraph, the guides and the FAQ do
+ * answer the query even with no board. Only the 428 small fields, heliports and seaplane bases
+ * are dropped. There is no live traffic signal to use instead: not one of the 1,060 appears in
+ * any of the 2,778 queries Yandex Webmaster reports for the site.
+ *
+ * `follow` stays on at the call sites — the routes, nearest-airport and navigation links below
+ * are still worth crawling from here.
+ */
+export function isUnfillable(iata: string): boolean {
+  if (serviceLevel(iata) !== null) return false;      // measured, either way — not this case
+  return MINOR.has(getSizes()[iata] ?? '');
+}
+
 /**
  * Closest airport that does have scheduled service — the genuinely useful thing to tell
  * someone who landed on the page of an airfield with no airline flights.

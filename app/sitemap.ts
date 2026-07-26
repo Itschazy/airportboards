@@ -1,7 +1,7 @@
 import type { MetadataRoute } from 'next';
 import { getAllIataCodes, AIRPORTS_PER_SITEMAP, getSitemapCount, getCountries, getStaticIataCodes, getCities } from '@/lib/airports';
 import { getEventSlugs } from '@/lib/event-content';
-import { getMegaIataCodes } from '@/lib/warm';
+import { getMegaIataCodes, isUnfillable } from '@/lib/warm';
 import { getTopRoutes } from '@/lib/top-routes';
 import { getRoute } from '@/lib/flights';
 import { locales } from '@/lib/i18n';
@@ -116,6 +116,9 @@ export default async function sitemap({ id }: { id: number | string }): Promise<
   }
 
   for (const iata of slice) {
+    // Not listed at all: the page declares noindex (lib/warm.ts isUnfillable), and a sitemap
+    // entry for a noindexed URL is the contradiction that fed the mass-exclusion wave.
+    if (isUnfillable(iata)) continue;
     const hub = HUBS.has(iata);
     const cf: Freq = hub ? 'hourly' : 'daily';
     entries.push(entry(`/airport/${iata}`, cf, hub ? 1.0 : 0.6));

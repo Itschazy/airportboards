@@ -4,7 +4,7 @@ import { notFound, permanentRedirect } from 'next/navigation';
 import Link from 'next/link';
 import airportsAll from '@/data/airports.json';
 import { getAirport, getStaticIataCodes, getCountries, getCities, nearestAirports } from '@/lib/airports';
-import { hasNoService, nearestServiced, serviceLevel, serviceMeasuredOn } from '@/lib/warm';
+import { hasNoService, nearestServiced, serviceLevel, serviceMeasuredOn, isUnfillable } from '@/lib/warm';
 import { localizedMeasuredOn } from '@/lib/measured-date';
 import { sameAsFor, airportNodeId } from '@/lib/airport-sameas';
 import { getAirportContent } from '@/lib/airport-content';
@@ -136,7 +136,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     // A permanently closed airport has no live board to offer, so it must not compete in
     // search for "live arrivals" queries. It stays 200 and `follow` so the indexed URL keeps
     // its value and passes equity on to the successor airport we link from the page body.
-    robots: { index: !airport.closed, follow: true },
+    // isUnfillable(): a small field whose board can never fill, because the provider has no
+    // schedule for it under any code. 428 of them; see the note in lib/warm.ts. Still followed
+    // — the nearest-airport and navigation links below are worth crawling.
+    robots: { index: !airport.closed && !isUnfillable(airport.iata), follow: true },
   };
 }
 
