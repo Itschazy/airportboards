@@ -143,7 +143,12 @@
     "country_split_partial": "{country} içinde IATA koduna sahip {count} havalimanından en az {served} tanesi, {date} itibarıyla tarifeli yolcu hizmeti sunmaktadır.",
     "world_split_partial": "AirportsBoard dünya genelinde IATA koduna sahip {total} havalimanını izler. {date} tarihli ölçüme göre bunlardan en az {served} tanesi tarifeli yolcu hizmeti sunuyordu.",
     "airport_lead_same": "{name} Havalimanı ({iata}), {country}.",
-    "routes_title_in": "{iata} — Popüler geliş rotaları"
+    "routes_title_in": "{iata} — Popüler geliş rotaları",
+    "wiki_routes_title": "{iata} çıkışlı havayolları ve destinasyonlar",
+    "wiki_routes_note": "Wikipedia’da kaydedildiği şekliyle tarifeli rotalar. Bu havalimanının veri akışımızda canlı uçuş panosu yok, bu nedenle bunlar bugünün uçuşları değil, yayımlanmış rotalardır.",
+    "wiki_source": "Kaynak: {name}",
+    "wiki_no_service": "Wikipedia'ya göre {name}, {year} yılından bu yana tarifeli ticari yolcu uçuşlarına sahip değildir.",
+    "wiki_no_service_nodate": "Wikipedia'ya göre, {name} şu anda tarifeli ticari yolcu uçuşlarına sahip değildir."
   },
   "ui": {
     "departures": "Kalkışlar",

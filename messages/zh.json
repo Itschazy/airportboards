@@ -143,7 +143,12 @@
     "country_split_partial": "截至{date}，{country}拥有国际航空运输协会代码的{count}个机场中，至少有{served}个提供定期客运服务。",
     "world_split_partial": "AirportsBoard 追踪全球 {total} 个拥有国际航空运输协会代码的机场。根据 {date} 的测量，其中至少有 {served} 个提供定期客运服务。",
     "airport_lead_same": "{name}机场（{iata}），{country}。",
-    "routes_title_in": "前往 {iata} 的热门航线"
+    "routes_title_in": "前往 {iata} 的热门航线",
+    "wiki_routes_title": "从 {iata} 出发的航空公司和目的地",
+    "wiki_routes_note": "定期航线以维基百科记录为准。我们的数据源没有该机场的实时航班信息，因此这里显示的是已公布的航线，而不是今天的航班。",
+    "wiki_source": "来源：{name}",
+    "wiki_no_service": "据维基百科，自 {year} 年以来，{name} 一直没有定期商业客运航班。",
+    "wiki_no_service_nodate": "根据维基百科，{name}目前没有定期商业客运航班。"
   },
   "ui": {
     "departures": "出发",

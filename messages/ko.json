@@ -143,7 +143,12 @@
     "country_split_partial": "{country}에서 국제항공운송협회 코드가 있는 공항 {count}곳 중 {date} 기준으로 최소 {served}곳은 정기 여객편이 운항됩니다.",
     "world_split_partial": "AirportsBoard는 전 세계에서 국제항공운송협회 코드가 있는 공항 {total}곳을 추적합니다. {date} 측정 기준으로 그중 최소 {served}곳에 정기 여객편이 운항되었습니다.",
     "airport_lead_same": "{name}({iata}), {country}.",
-    "routes_title_in": "{iata} 도착 인기 노선"
+    "routes_title_in": "{iata} 도착 인기 노선",
+    "wiki_routes_title": "{iata} 출발 항공사 및 목적지",
+    "wiki_routes_note": "위키백과에 기록된 정기 노선입니다. 이 공항은 당사 데이터 피드에 실시간 운항 현황판이 없어, 오늘의 항공편이 아닌 공표된 노선이 표시됩니다.",
+    "wiki_source": "출처: {name}",
+    "wiki_no_service": "위키백과에 따르면 {name}에서는 {year} 이후 정기 상업 여객편이 없었습니다.",
+    "wiki_no_service_nodate": "위키백과에 따르면 {name}에는 현재 정기 상업 여객 항공편이 없습니다."
   },
   "ui": {
     "departures": "출발",

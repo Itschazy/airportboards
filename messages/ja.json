@@ -143,7 +143,12 @@
     "country_split_partial": "{country}にある国際航空運送協会の空港符号を持つ空港{count}か所のうち、{date}現在、少なくとも{served}か所で定期旅客便が運航されています。",
     "world_split_partial": "AirportsBoardは世界の国際航空運送協会の空港符号を持つ空港{total}か所を追跡しています。{date}の計測時点で、少なくとも{served}か所で定期旅客便が運航されていました。",
     "airport_lead_same": "{name}空港（{iata}）、{country}。",
-    "routes_title_in": "{iata}着の人気路線"
+    "routes_title_in": "{iata}着の人気路線",
+    "wiki_routes_title": "{iata}発の航空会社と就航地",
+    "wiki_routes_note": "Wikipediaに記録されている定期路線です。この空港は当社のデータフィードにリアルタイム発着案内がないため、表示されているのは本日のフライトではなく公表済みの路線です。",
+    "wiki_source": "出典：{name}",
+    "wiki_no_service": "ウィキペディアによると、{name}には{year}以降、定期商業旅客便が就航していません。",
+    "wiki_no_service_nodate": "ウィキペディアによると、{name}には現在、定期旅客便は就航していません。"
   },
   "ui": {
     "departures": "出発",

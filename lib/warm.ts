@@ -22,6 +22,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { getAirport } from '@/lib/airports';
 import { getStaleTs, usage, canSpend } from '@/lib/flightStore';
+import { hasWikiAirlines } from '@/lib/wiki-routes';
 
 export type WarmTier = {
   name: string;
@@ -264,6 +265,12 @@ const MINOR = new Set(['small_airport', 'heliport', 'seaplane_base', 'closed', '
  */
 export function isUnfillable(iata: string): boolean {
   if (serviceLevel(iata) !== null) return false;      // measured, either way — not this case
+  // Published airline/destination facts make the page worth indexing again, whatever its size.
+  // That is the point of scripts/gen-wiki-routes.mjs: hiding a page is the cheap answer to
+  // "the board is empty", and filling it is the real one. An airport with a routes section
+  // answers "who flies to X and where to" — which is the question people actually bring to a
+  // small airport — so it stops being a page about an absent feature.
+  if (hasWikiAirlines(iata)) return false;
   return MINOR.has(getSizes()[iata] ?? '');
 }
 

@@ -143,7 +143,12 @@
     "country_split_partial": "Of the {count} airports with IATA codes in {country}, at least {served} have scheduled passenger service as of {date}.",
     "world_split_partial": "AirportsBoard tracks {total} airports with IATA codes worldwide. As measured on {date}, at least {served} of them had scheduled passenger service.",
     "airport_lead_same": "{name} Airport ({iata}), {country}.",
-    "routes_title_in": "Popular routes to {iata}"
+    "routes_title_in": "Popular routes to {iata}",
+    "wiki_routes_title": "Airlines and destinations from {iata}",
+    "wiki_routes_note": "Scheduled routes as recorded by Wikipedia. This airport has no live board on our data feed, so these are the published routes rather than today’s flights.",
+    "wiki_source": "Source: {name}",
+    "wiki_no_service": "According to Wikipedia, {name} has had no scheduled commercial passenger flights since {year}.",
+    "wiki_no_service_nodate": "According to Wikipedia, {name} currently has no scheduled commercial passenger flights."
   },
   "ui": {
     "departures": "Departures",

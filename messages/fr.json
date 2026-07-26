@@ -143,7 +143,12 @@
     "country_split_partial": "Sur les {count} aéroports dotés d’un code IATA ({country}), au moins {served} proposent des vols passagers réguliers à la date du {date}.",
     "world_split_partial": "AirportsBoard suit {total} aéroports dotés d’un code IATA dans le monde. À la date du {date}, au moins {served} d’entre eux proposaient des vols passagers réguliers.",
     "airport_lead_same": "Aéroport {name} ({iata}), {country}.",
-    "routes_title_in": "Routes populaires vers {iata}"
+    "routes_title_in": "Routes populaires vers {iata}",
+    "wiki_routes_title": "Compagnies aériennes et destinations au départ de {iata}",
+    "wiki_routes_note": "Liaisons régulières telles que recensées par Wikipédia. Cet aéroport ne dispose d’aucun tableau des vols en direct dans notre flux de données ; il s’agit donc des liaisons publiées, et non des vols d’aujourd’hui.",
+    "wiki_source": "Source : {name}",
+    "wiki_no_service": "Selon Wikipédia, {name} n’a accueilli aucun vol commercial régulier de passagers depuis {year}.",
+    "wiki_no_service_nodate": "Selon Wikipédia, {name} n’a actuellement aucun vol commercial régulier de passagers."
   },
   "ui": {
     "departures": "Départs",

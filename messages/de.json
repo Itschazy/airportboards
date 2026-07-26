@@ -143,7 +143,12 @@
     "country_split_partial": "{country}: Von den {count} Flughäfen mit IATA-Codes bieten mindestens {served} mit Stand {date} planmäßigen Passagierverkehr.",
     "world_split_partial": "AirportsBoard erfasst weltweit {total} Flughäfen mit IATA-Codes. Mit Stand {date} boten mindestens {served} davon planmäßigen Passagierverkehr.",
     "airport_lead_same": "Flughafen {name} ({iata}), {country}.",
-    "routes_title_in": "Beliebte Verbindungen nach {iata}"
+    "routes_title_in": "Beliebte Verbindungen nach {iata}",
+    "wiki_routes_title": "Fluggesellschaften und Reiseziele ab {iata}",
+    "wiki_routes_note": "Planmäßige Routen gemäß Wikipedia. Für diesen Flughafen liegt in unserem Datenfeed keine Live-Anzeige vor; daher handelt es sich um veröffentlichte Routen und nicht um die heutigen Flüge.",
+    "wiki_source": "Quelle: {name}",
+    "wiki_no_service": "Laut Wikipedia hat {name} seit {year} keine planmäßigen kommerziellen Passagierflüge mehr.",
+    "wiki_no_service_nodate": "Laut Wikipedia hat {name} derzeit keine planmäßigen kommerziellen Passagierflüge."
   },
   "ui": {
     "departures": "Abflüge",

@@ -7,6 +7,7 @@ import { getAirportName } from '@/lib/airport-names';
 import type { FlightRow } from '@/lib/flights';
 import { MoreInfo, OverviewMetrics, AboutCard, Faq } from '@/components/AirportExtras';
 import { getAirportContentExtended } from '@/lib/airport-content-extended';
+import { getWikiRoutes } from '@/lib/wiki-routes';
 import { serviceLevel, serviceMeasuredOn } from '@/lib/warm';
 import { GENERIC_LOCALES } from '@/lib/generic-word';
 import { localizedMeasuredOn } from '@/lib/measured-date';
@@ -72,6 +73,10 @@ export async function AirportBottom({ airport, locale, about, displayName, fligh
   const city = getCityName(airport.city, locale);
   const country = getCountryName(airport.country, locale);
   const ext = getAirportContentExtended(airport.iata, locale);
+  // Published routes for airports whose live board can never fill (see lib/wiki-routes.ts).
+  // Only rendered when the board is genuinely empty — where flights exist, the board IS the
+  // better answer and this would just repeat it less precisely.
+  const wiki = flights.length ? null : getWikiRoutes(airport.iata);
   const rawLabels = EXT_LABELS[locale] || EXT_LABELS.en;
   const extLabels = {
     transport: rawLabels.transport.replace('{a}', name),
@@ -202,6 +207,46 @@ export async function AirportBottom({ airport, locale, about, displayName, fligh
           <section className="cv-auto" style={sec}>
             <H2>{t('about_title', { iata: airport.iata })}</H2>
             <AboutCard text={about} readMore={t('read_more')} />
+          </section>
+        )}
+
+        {/* 6a. PUBLISHED ROUTES — the answer for airports with no live board.
+            1,060 airports return no schedule from the provider under any code, so their board
+            is permanently empty and this page used to say only "live board data is not
+            available right now". Who flies here and where to is the actual question, it is a
+            stable fact, and Wikipedia keeps it current. Facts only — no prose is copied — with
+            the article and revision cited. */}
+        {wiki && (wiki.airlines.length > 0 || wiki.status === 'no_commercial_service') && (
+          <section className="cv-auto" style={sec}>
+            <H2>{t('wiki_routes_title', { iata: airport.iata })}</H2>
+            {wiki.status === 'no_commercial_service' ? (
+              <p style={{ fontSize: 15, lineHeight: 1.6, color: '#B4B4B4', margin: 0 }}>
+                {wiki.since
+                  ? t('wiki_no_service', { name, year: wiki.since })
+                  : t('wiki_no_service_nodate', { name })}
+              </p>
+            ) : (
+              <>
+                <p style={{ fontSize: 13, lineHeight: 1.5, color: SUB, margin: '0 0 12px' }}>{t('wiki_routes_note')}</p>
+                <ul style={{ listStyle: 'none', margin: 0, padding: 0, display: 'grid', gap: 10 }}>
+                  {wiki.airlines.map(row => (
+                    <li key={row.airline} style={{ background: '#0B0B0B', border: '1px solid #1A1A1A', borderRadius: 14, padding: '12px 16px' }}>
+                      <div style={{ fontSize: 15, fontWeight: 600, color: '#FFFFFF' }}>{row.airline}</div>
+                      <div style={{ fontSize: 14, color: '#B4B4B4', marginTop: 4, lineHeight: 1.5 }}>{row.destinations.join(' · ')}</div>
+                    </li>
+                  ))}
+                </ul>
+              </>
+            )}
+            {wiki.source && (
+              <p style={{ fontSize: 12, color: '#6A6A6A', margin: '12px 0 0' }}>
+                {t('wiki_source', { name: '' })}
+                <a href={`${wiki.source.url}?oldid=${wiki.source.revid}`} rel="nofollow noopener" target="_blank" style={{ color: '#8A8A8A' }}>
+                  {wiki.source.title}
+                </a>
+                {' '}· CC BY-SA 4.0
+              </p>
+            )}
           </section>
         )}
 
