@@ -163,7 +163,11 @@
     "widgets_copied": "Kopiert",
     "widgets_preview": "Vorschau",
     "widgets_note": "Für jede Website kostenlos. Bitte lassen Sie den Link unter dem Widget stehen – nur so bleibt das Widget kostenlos.",
-    "widgets_anchor": "{name} ({iata}) — Live-Abflug- und Ankunftstafel"
+    "widgets_anchor": "{name} ({iata}) — Live-Abflug- und Ankunftstafel",
+    "faq_airlines_q": "Welche Fluggesellschaften fliegen ab {name}?",
+    "faq_airlines_a": "Laut der aktuellen Abflugtafel von {name} ({iata}) werden planmäßige Flüge von {list} durchgeführt.",
+    "faq_dest_q": "Wohin kann man ab {name} nonstop fliegen?",
+    "faq_dest_a": "Zu den Zielen auf der aktuellen Abflugtafel von {name} ({iata}) gehören {list}."
   },
   "ui": {
     "departures": "Abflüge",

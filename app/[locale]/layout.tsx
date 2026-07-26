@@ -74,6 +74,10 @@ export default async function LocaleLayout({
         {/* React hoists resource links into <head>. Browsers honour only a handful of
             preconnects, so they go to the origins that actually run on every locale: the
             Google tag and the ad server. Metrica's origin is warmed only where it loads. */}
+        {/* The one language signal Bing actually reads (it ignores hreflang for ranking and
+            uses content-language / URL / visible text). React 19 hoists meta tags rendered
+            anywhere into <head>. Google ignores this tag — it costs nothing there. */}
+        <meta httpEquiv="content-language" content={locale} />
         <link rel="preconnect" href="https://www.googletagmanager.com" />
         <link rel="preconnect" href="https://pagead2.googlesyndication.com" />
         {locale === 'ru' && <link rel="preconnect" href="https://mc.yandex.ru" />}

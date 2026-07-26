@@ -139,6 +139,12 @@ export async function AirportBottom({ airport, locale, about, displayName, fligh
   // to crawlers from here. Real anchors fix the orphaning found in the sitemap audit.
   const subpageLinks = !noService && !airport.closed;
 
+  // Locale-aware list joining; the try covers locales Node's ICU build might not know.
+  const listFmt = (items: string[]) => {
+    try { return new Intl.ListFormat(locale, { style: 'long', type: 'conjunction' }).format(items); }
+    catch { return items.join(', '); }
+  };
+
   const faq: { q: string; a: string }[] = [
     { q: t('faq_iata_q', { name }), a: t('faq_iata_a', { name, code: airport.iata }) },
     ...(airport.icao ? [{ q: t('faq_icao_q', { name }), a: t('faq_icao_a', { name, code: airport.icao }) }] : []),
@@ -156,6 +162,19 @@ export async function AirportBottom({ airport, locale, about, displayName, fligh
     // FAQPage markup directly under a notice saying no flights exist — a self-contradiction
     // an answer engine reads as an unreliable source.
     ...(noService || airport.closed ? [] : [{ q: t('faq_arrive_q', { name }), a: t('faq_arrive_a') }]),
+    // Data-driven pairs from the board itself: which airlines operate here, where you can fly
+    // nonstop. Genuinely unique per airport, derived from rows we already aggregated above,
+    // and worded as sourced from the CURRENT departures board — a claim we can always stand
+    // behind. Gated to the departures view: on the arrivals subpage `routes`/`airlines` are
+    // aggregated over ORIGINS, and "fly nonstop from" would state the reverse of the data.
+    // Intl.ListFormat gives each locale its own conjunction («А, Б и В», 「AとB」) instead of a
+    // comma splice in eleven languages.
+    ...(!inbound && !noService && !airport.closed && airlines.length >= 3
+      ? [{ q: t('faq_airlines_q', { name }), a: t('faq_airlines_a', { name, iata: airport.iata, list: listFmt(airlines.slice(0, 5).map(al => al.name)) }) }]
+      : []),
+    ...(!inbound && !noService && !airport.closed && routes.length >= 3
+      ? [{ q: t('faq_dest_q', { name }), a: t('faq_dest_a', { name, iata: airport.iata, list: listFmt(routes.slice(0, 6).map(r => r.label.replace(/\s*\([A-Z]{3}\)\s*$/, ''))) }) }]
+      : []),
     // The questions people actually ask about a field with no airline service — and the
     // answers nobody else publishes, because nobody else measured which airports have
     // scheduled service. Both are plain, self-contained sentences, so they can be lifted

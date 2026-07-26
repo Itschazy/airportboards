@@ -163,7 +163,11 @@
     "widgets_copied": "Copiado",
     "widgets_preview": "Vista previa",
     "widgets_note": "Gratis para cualquier sitio web. Por favor, mantén el enlace debajo del widget: es lo que permite que el widget siga siendo gratuito.",
-    "widgets_anchor": "{name} ({iata}) — panel de salidas y llegadas en tiempo real"
+    "widgets_anchor": "{name} ({iata}) — panel de salidas y llegadas en tiempo real",
+    "faq_airlines_q": "¿Qué aerolíneas vuelan desde {name}?",
+    "faq_airlines_a": "Según el panel de salidas actual de {name} ({iata}), los vuelos programados son operados por {list}.",
+    "faq_dest_q": "¿A dónde se puede volar sin escalas desde {name}?",
+    "faq_dest_a": "Los destinos que figuran en el panel de salidas actual de {name} ({iata}) incluyen {list}."
   },
   "ui": {
     "departures": "Salidas",

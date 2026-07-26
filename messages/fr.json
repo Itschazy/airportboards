@@ -163,7 +163,11 @@
     "widgets_copied": "Copié",
     "widgets_preview": "Aperçu",
     "widgets_note": "Gratuit pour tout site web. Veuillez conserver le lien sous le widget — c’est ce qui permet au widget de rester gratuit.",
-    "widgets_anchor": "{name} ({iata}) — tableau des départs et arrivées en direct"
+    "widgets_anchor": "{name} ({iata}) — tableau des départs et arrivées en direct",
+    "faq_airlines_q": "Quelles compagnies aériennes proposent des vols au départ de {name} ?",
+    "faq_airlines_a": "D’après le tableau actuel des départs de {name} ({iata}), les vols programmés sont opérés par {list}.",
+    "faq_dest_q": "Où pouvez-vous voler sans escale depuis {name} ?",
+    "faq_dest_a": "Les destinations indiquées sur le tableau actuel des départs de {name} ({iata}) comprennent {list}."
   },
   "ui": {
     "departures": "Départs",

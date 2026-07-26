@@ -163,7 +163,11 @@
     "widgets_copied": "Copied",
     "widgets_preview": "Preview",
     "widgets_note": "Free for any website. Please keep the link under the widget — it is what keeps the widget free.",
-    "widgets_anchor": "{name} ({iata}) — live departures and arrivals board"
+    "widgets_anchor": "{name} ({iata}) — live departures and arrivals board",
+    "faq_airlines_q": "Which airlines fly from {name}?",
+    "faq_airlines_a": "Based on the current departures board at {name} ({iata}), scheduled flights are operated by {list}.",
+    "faq_dest_q": "Where can you fly nonstop from {name}?",
+    "faq_dest_a": "Destinations on the current departures board at {name} ({iata}) include {list}."
   },
   "ui": {
     "departures": "Departures",

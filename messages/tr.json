@@ -163,7 +163,11 @@
     "widgets_copied": "Kopyalandı",
     "widgets_preview": "Önizleme",
     "widgets_note": "Her web sitesi için ücretsizdir. Lütfen widget’ın altındaki bağlantıyı koruyun — widget’ın ücretsiz kalmasını sağlayan şey budur.",
-    "widgets_anchor": "{name} ({iata}) — canlı kalkış ve varış panosu"
+    "widgets_anchor": "{name} ({iata}) — canlı kalkış ve varış panosu",
+    "faq_airlines_q": "{name} kalkışlı hangi hava yolları uçuyor?",
+    "faq_airlines_a": "{name} ({iata}) için güncel kalkış panosundaki bilgilere göre, tarifeli uçuşlar {list} tarafından gerçekleştirilmektedir.",
+    "faq_dest_q": "{name} çıkışlı aktarmasız olarak nerelere uçabilirsiniz?",
+    "faq_dest_a": "{name} ({iata}) güncel kalkış panosundaki varış noktaları arasında {list} yer alır."
   },
   "ui": {
     "departures": "Kalkışlar",

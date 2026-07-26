@@ -163,7 +163,11 @@
     "widgets_copied": "已复制",
     "widgets_preview": "预览",
     "widgets_note": "任何网站均可免费使用。请保留小组件下方的链接——正是它让小组件得以免费。",
-    "widgets_anchor": "{name}（{iata}）— 实时离港和到港信息板"
+    "widgets_anchor": "{name}（{iata}）— 实时离港和到港信息板",
+    "faq_airlines_q": "哪些航空公司从{name}出发？",
+    "faq_airlines_a": "根据{name}（{iata}）当前出发航班信息板上的信息，定期航班由{list}运营。",
+    "faq_dest_q": "从{name}可以直飞哪里？",
+    "faq_dest_a": "{name}（{iata}）当前出发航班信息牌上的目的地包括 {list}。"
   },
   "ui": {
     "departures": "出发",

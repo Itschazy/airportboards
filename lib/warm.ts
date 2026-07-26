@@ -93,6 +93,34 @@ function isLocalNight(tz: string | null | undefined): boolean {
 export type Due = { iata: string; tier: WarmTier; overdue: number };
 
 /**
+ * Airports whose refresh interval is pinned to the mega cadence REGARDLESS of their tier,
+ * because measured demand says so.
+ *
+ * The tiers size the schedule by flight volume, which is the right default — but it is a
+ * proxy for demand, and where demand is actually measured it wins. Yandex Webmaster,
+ * 2,778 queries over July 2026: Sochi alone takes 32.8% of every impression the site earns,
+ * Mineralnye Vody 19.8%, and the top dozen cities 80.6% — yet AER (39 departures/day) and
+ * MRV (19) fall into the mid tier and refresh every 24 hours, while the 6-hour mega slots go
+ * to LHR and JFK, which bring this site zero impressions. The visible result was the site's
+ * highest-traffic page serving five-hour-old data with eight already-departed rows above the
+ * fold, on a query that literally says "онлайн табло".
+ *
+ * Freshness is NOT pinned in the hope of CTR — that link was tested and refuted (boards
+ * ≤1.5h old CTR-perform the same as >3h; PVG at 4h stale does 11%). It is pinned because
+ * serving day-old data on the pages nearly every visitor actually opens is a product defect
+ * on its own terms.
+ *
+ * AYT is here, not ATA: "Анта" (Peru) is a substring of «Анталья», and naive city matching
+ * had credited a Peruvian strip with Antalya's impressions. Cost of the whole list: 12
+ * airports lifted from 24h to 6h ≈ +72 requests/day ≈ 2.2k/month, ~3% of the warm budget.
+ * Revisit against fresh Webmaster data, not by feel.
+ */
+const DEMAND_PINNED = new Set([
+  'AER', 'MRV', 'SUI', 'KZN', 'GYD', 'TAS', 'HOR', 'AYT', 'SVX', 'LWN', 'PES', 'CAN',
+]);
+const DEMAND_INTERVAL_MIN = 360;
+
+/**
  * Airports whose board is older than their tier allows, most overdue first.
  * `overdue` is a ratio (1 = exactly due, 3 = three intervals late) so tiers compete on
  * lateness rather than a fixed hierarchy — a badly stale small airport can overtake a
@@ -106,9 +134,14 @@ export function dueAirports(now = Date.now()): Due[] {
     if (!tier) continue;                       // no scheduled service — never warm
     const airport = getAirport(iata);
     if (!airport || airport.closed) continue;
-    if (tier.skipNight && isLocalNight(airport.tz)) continue;
+    const pinned = DEMAND_PINNED.has(iata);
+    // Pinned airports also skip the night gate, for the same reason mega does: their boards
+    // are full of red-eyes (AER departs 00:55, 01:00, 01:25…), and the people checking at
+    // 01:30 are exactly the measured demand this pin exists for.
+    if (!pinned && tier.skipNight && isLocalNight(airport.tz)) continue;
     const ts = getStaleTs(`departures:dep_iata=${iata}`) ?? 0;
-    const overdue = (now - ts) / (tier.intervalMin * 60_000);
+    const interval = pinned ? Math.min(tier.intervalMin, DEMAND_INTERVAL_MIN) : tier.intervalMin;
+    const overdue = (now - ts) / (interval * 60_000);
     if (overdue < 1) continue;
     out.push({ iata, tier, overdue });
   }

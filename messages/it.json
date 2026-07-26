@@ -163,7 +163,11 @@
     "widgets_copied": "Copiato",
     "widgets_preview": "Anteprima",
     "widgets_note": "Gratuito per qualsiasi sito web. Ti preghiamo di mantenere il link sotto il widget: è ciò che permette al widget di restare gratuito.",
-    "widgets_anchor": "{name} ({iata}) — tabellone partenze e arrivi in tempo reale"
+    "widgets_anchor": "{name} ({iata}) — tabellone partenze e arrivi in tempo reale",
+    "faq_airlines_q": "Quali compagnie aeree volano dall'aeroporto {name}?",
+    "faq_airlines_a": "In base al tabellone aggiornato delle partenze di {name} ({iata}), i voli programmati sono operati da {list}.",
+    "faq_dest_q": "Dove puoi volare senza scalo da {name}?",
+    "faq_dest_a": "Le destinazioni presenti sull'attuale tabellone delle partenze di {name} ({iata}) includono {list}."
   },
   "ui": {
     "departures": "Partenze",

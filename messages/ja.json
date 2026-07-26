@@ -163,7 +163,11 @@
     "widgets_copied": "コピーしました",
     "widgets_preview": "プレビュー",
     "widgets_note": "どのウェブサイトでも無料でご利用いただけます。ウィジェットの下のリンクはそのまま残してください。それがウィジェットを無料で提供し続けるための支えです。",
-    "widgets_anchor": "{name}（{iata}）— リアルタイム発着案内"
+    "widgets_anchor": "{name}（{iata}）— リアルタイム発着案内",
+    "faq_airlines_q": "{name}から運航している航空会社はどこですか？",
+    "faq_airlines_a": "{name}（{iata}）の現在の出発便案内板によると、定期便は{list}により運航されています。",
+    "faq_dest_q": "{name}から直行便で行ける場所はどこですか？",
+    "faq_dest_a": "{name}（{iata}）の現在の出発案内板に表示されている目的地には、{list} が含まれます。"
   },
   "ui": {
     "departures": "出発",

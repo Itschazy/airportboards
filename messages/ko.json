@@ -163,7 +163,11 @@
     "widgets_copied": "복사됨",
     "widgets_preview": "미리보기",
     "widgets_note": "모든 웹사이트에서 무료로 사용할 수 있습니다. 위젯 아래의 링크를 유지해 주세요. 이 링크 덕분에 위젯을 무료로 제공할 수 있습니다.",
-    "widgets_anchor": "{name} ({iata}) — 실시간 출발·도착 안내판"
+    "widgets_anchor": "{name} ({iata}) — 실시간 출발·도착 안내판",
+    "faq_airlines_q": "어떤 항공사가 {name}에서 운항하나요?",
+    "faq_airlines_a": "현재 {name} ({iata})의 출발 안내판에 따르면, 예정된 항공편은 {list}에서 운항합니다.",
+    "faq_dest_q": "{name}에서 직항으로 어디까지 갈 수 있나요?",
+    "faq_dest_a": "현재 {name} ({iata}) 출발 안내판에 표시된 목적지에는 {list}가 포함됩니다."
   },
   "ui": {
     "departures": "출발",
