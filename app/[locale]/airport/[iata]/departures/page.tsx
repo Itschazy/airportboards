@@ -13,7 +13,6 @@ import { nearestAirports } from '@/lib/airports';
 import { Breadcrumb } from '@/components/Breadcrumb';
 import { airportNodeId } from '@/lib/airport-sameas';
 import { EventBanner } from '@/components/EventBanner';
-import { locales } from '@/lib/i18n';
 import { currentIata } from '@/lib/iata-aliases';
 import { showCityFlag } from '@/lib/show-city';
 
@@ -41,28 +40,50 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
   const title = t('departures_title', { airport: name, iata: airport.iata, city: cityName, showCity });
   const description = t('departures_description', { airport: name, iata: airport.iata, city: cityName });
-  const canonical = `${BASE}/${locale}/airport/${airport.iata}/departures`;
 
-  // Only index a departures board that actually has flights. Thousands of small airfields
-  // otherwise ship near-identical "No flights" subpages (×12 locales) that dilute crawl
-  // budget and get mass-excluded, dragging host trust down. getBoard reads the in-memory
-  // store (live=false → never spends airlabs) — same read the page body does.
-  let hasFlights = false;
-  try { hasFlights = (await getBoard(airport.iata, 'departures', locale)).length > 0; } catch {}
-
-  const languages: Record<string, string> = {};
-  for (const loc of locales) {
-    languages[loc] = `${BASE}/${loc}/airport/${airport.iata}/departures`;
-  }
-  languages['x-default'] = `${BASE}/en/airport/${airport.iata}/departures`;
+  /**
+   * Canonical points at the PARENT airport page, not at this URL.
+   *
+   * The parent renders the departures board by default — no `defaultMode`, and FlightBoard
+   * opens on departures — so /airport/FRA and /airport/FRA/departures show the same board.
+   * Once the About paragraph, the guides and the FAQ were added here too (they were withheld
+   * before, which left this page at 208 visible words), the two pages became the same
+   * document: measured on production, the only differences are the breadcrumb line and one
+   * introductory sentence. Similarity of visible text, 5-word shingles, Jaccard:
+   *
+   *     FRA 96.0%   AMS 96.0%   HAJ 96.0%   TRD 94.4%   BER 92.5%   LHR 64.0%
+   *
+   * (LHR is lower only because its 80-row board is a larger share of the page.)
+   *
+   * Two indexable URLs for one document is not a thin-content problem, it is a duplicate
+   * problem: Google picks one and reports the other as "Duplicate, Google chose different
+   * canonical", and whatever authority the pair earned is split until it does. Declaring the
+   * parent canonical hands it all to the page that also answers "arrivals AND departures",
+   * which is what its title already says.
+   *
+   * /arrivals is deliberately NOT treated this way — it self-canonicalises. Its board holds
+   * different flights, its routes section aggregates origins rather than destinations, and it
+   * measures 60.5% against the parent, most of that being the About/FAQ every page in a
+   * section legitimately shares. It is also, per Search Console, the subpage that actually
+   * earns impressions.
+   */
+  const canonical = `${BASE}/${locale}/airport/${airport.iata}`;
 
   return {
     title,
     description,
-    // Advertise the 12-language hreflang cluster only when the page is indexable.
-    alternates: hasFlights ? { canonical, languages } : { canonical },
-    // og/twitter (incl. default OG image) inherited from layout; custom openGraph would drop it.
-    robots: { index: hasFlights, follow: true },
+    // No hreflang cluster here: the alternates of a non-canonical URL are ignored anyway, and
+    // advertising a 12-language cluster for a page that defers to another one is a
+    // contradiction engines check for. The parent carries the cluster.
+    alternates: { canonical },
+    // Deliberately NOT noindex. Google's own guidance is to avoid combining noindex with
+    // rel=canonical: the pair is contradictory (one says "don't index me", the other says
+    // "credit that page instead"), and the documented failure mode is the noindex being
+    // carried over to the canonical target — which here is the airport page itself, the most
+    // valuable page on the site. The canonical alone is the correct and sufficient signal for
+    // a duplicate view; the previous `index: hasFlights` gate is no longer needed because the
+    // parent now decides indexability for this content.
+    robots: { index: true, follow: true },
   };
 }
 

@@ -123,9 +123,15 @@ export default async function sitemap({ id }: { id: number | string }): Promise<
     // usually empty "No flights" near-dupes; listing them wasted crawl budget and fed
     // the mass-exclusion wave. They stay reachable (footer/board links) and indexable
     // when they DO have flights (robots gate in each subpage) — just not in the sitemap.
+    // /departures is NOT listed: it canonicalises to the airport page (see the note in
+    // departures/page.tsx — the parent opens on the departures board, so the two are the same
+    // document, measured at 92-96% identical). A sitemap entry whose canonical points at a
+    // different URL is a contradiction an engine checks for, and it spends crawl budget
+    // arriving at a page that only forwards the credit. Arrivals stays: different flights,
+    // different routes section, self-canonical, and the subpage that actually earns
+    // impressions in Search Console.
     if (SUBPAGE_HUBS.has(iata)) {
       entries.push(entry(`/airport/${iata}/arrivals`, cf, 0.9));
-      entries.push(entry(`/airport/${iata}/departures`, cf, 0.9));
     }
   }
 

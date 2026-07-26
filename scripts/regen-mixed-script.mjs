@@ -81,6 +81,51 @@ const TAUT = /\b([\w][\w\s’'-]{2,40}?)\s*\(\s*\1\s*\)/i;
  */
 const QUOTED_GLOSS = /\b(?:as|or)\s+["“][^"”]{2,40}["”]/i;
 
+/**
+ * The generator's own scratchpad, published as page copy.
+ *
+ * Ten paragraphs across the corpus talk about the WRITING TASK instead of the airport, and
+ * they are live on indexed pages:
+ *
+ *   SOF/ar  "...هو المطار الرئيسي لرومانيا... wait — must be accurate: Sofia is in Bulgaria. Let's craft."
+ *   SCO/ru  "Актобе? Wait—user requested Aktau Airport (SCO)... Need to deliver in Russian."
+ *   USA/en  "Concord-Padgett is USA: airport code USA? Wait)"
+ *   MAQ/tr  "Word count check: Turkish words ~70-90. Should be within 70-110 words."
+ *
+ * These predate the gloss cleanup — neither repair script touched them, because they carry
+ * no foreign script and no bracketed gloss. For a reviewer looking for evidence of machine-
+ * generated filler this is the single most damning thing on the site, so it is worth its own
+ * detector rather than waiting to be noticed again.
+ *
+ * Deliberately narrow. "wait" is a normal English word on an airport site ("security
+ * wait-time updates", "minimal wait-area amenities"), so the bare word is excluded and only
+ * the self-correction shapes match.
+ */
+const SCRATCHPAD = new RegExp([
+  // Case-insensitive only right after a question mark — that is the self-correction shape
+  // ("(CWB? wait CAC)") and it cannot be ordinary prose. A bare lower-case "wait" is left
+  // alone because passengers legitimately wait.
+  /\?\s*(?:wait|actually|hmm)\b/i.source,
+  /\bWait\b(?![- ](?:time|times|area|areas|staff))/.source,
+  /\bactually (?:code|the code|it'?s the)\b/i.source,
+  // "(sic)" and an em-dashed "actually" are the two remaining self-correction shapes:
+  // "bedient die Region Südkalifornien (sic) — actually Oregon's Rogue Valley". Neither is
+  // copy anyone would write for a reader.
+  /\(sic\)/i.source,
+  /[—–]\s*actually\b/i.source,
+  /\bLet'?s (?:craft|generate|write|go)\b/.source,
+  /\buser requested\b/.source,
+  /\bNeed to deliver\b/.source,
+  /\bWord count\b/.source,
+  /\bShould be within \d/.source,
+  /\bavoid (?:inventing|specifics)\b/.source,
+  /\bkept (?:the )?user'?s\b/.source,
+  /\bcommonly spelled\b/.source,
+  /\bbetter to say\b/.source,
+  /\bmust be accurate\b/.source,
+  /\bneed local-language\b/.source,
+].join('|'));
+
 function sysPrompt(lang) {
   return `You are an SEO copywriter for a live airport flight-board website. Rewrite the supplied paragraph (70-110 words) in ${lang} for an airport page: keep every fact that is already there — terminals, based airlines, destinations, passenger context — and drop nothing that is true. Do not invent terminals, gate numbers, routes or airline names that are not in the source. CRITICAL: write ONLY in ${lang}, in ${lang}'s own writing system. The paragraph you are given is defective precisely because words in another language were pasted into it; your output must contain none. Never add a parenthetical translation or a gloss of any term — an earlier prompt asked for the ${lang} words for "online flight board", "arrivals" and "departures" and models answered by pasting those literals into the prose, which took 62k pages to repair. Those concepts already appear in the page H1, title and board headers, so do not reach for them at all. Output ONLY the paragraph text — no headings, no quotes, no commentary.`;
 }
@@ -101,8 +146,14 @@ function foreignRuns(text, locale) {
   return [...new Set(runs)].slice(0, 12);
 }
 
-async function ask(lang, source, airport, locale) {
+async function ask(lang, source, airport, locale, kinds = []) {
   const runs = foreignRuns(source, locale);
+  // A scratchpad paragraph has no foreign run to point at — the defect is that the text
+  // discusses the writing task instead of the airport. Saying so explicitly matters: told
+  // only "words in another language were pasted in", the model preserved the commentary.
+  const scratch = kinds.includes('scratchpad')
+    ? `\n\nThis paragraph contains the previous model's own working notes published as page copy — self-corrections, questions about the airport code or spelling, remarks about word count or about what language to write in. None of that is page content. Write a clean paragraph about the airport itself and nothing else.`
+    : '';
   const pointer = runs.length
     ? `\n\nThese exact fragments are in the WRONG language and must not appear in your output in any form — not transliterated, not translated in brackets, not at all. Where one sits inside a proper name, the name itself is corrupted: reconstruct the correct name from the airport details above and write it properly in ${lang}.\n${runs.map((r) => `  • ${r}`).join('\n')}`
     : '';
@@ -112,7 +163,7 @@ async function ask(lang, source, airport, locale) {
       { role: 'system', content: sysPrompt(lang) },
       {
         role: 'user',
-        content: `Airport: ${airport?.name ?? ''} (${airport?.iata ?? ''}), ${airport?.city ?? ''}, ${airport?.country ?? ''}.\n\nDefective paragraph to rewrite in ${lang}:\n${source}${pointer}`,
+        content: `Airport: ${airport?.name ?? ''} (${airport?.iata ?? ''}), ${airport?.city ?? ''}, ${airport?.country ?? ''}.\n\nDefective paragraph to rewrite in ${lang}:\n${source}${pointer}${scratch}`,
       },
     ],
   };
@@ -144,6 +195,7 @@ for (const f of fs.readdirSync(CONTENT_DIR).filter((n) => n.endsWith('.json')).s
     if (typeof text !== 'string' || !LOCALES[locale]) continue;
     const bad = foreignScripts(text, locale);
     if (QUOTED_GLOSS.test(text)) bad.push('quoted-gloss');
+    if (SCRATCHPAD.test(text)) bad.push('scratchpad');
     if (bad.length) work.push({ file: p, iata: f.replace('.json', ''), locale, bad });
   }
 }
@@ -167,14 +219,14 @@ async function worker() {
     let accepted = null;
     for (let tryNo = 0; tryNo < 3 && !accepted; tryNo++) {
       let out;
-      try { out = await ask(LOCALES[w.locale], source, byIata.get(w.iata), w.locale); }
+      try { out = await ask(LOCALES[w.locale], source, byIata.get(w.iata), w.locale, w.bad); }
       catch (e) { failures.push(`${w.iata}/${w.locale}: ${e.message}`); break; }
       const stillForeign = foreignScripts(out, w.locale);
       const words = out.split(/\s+/).length;
       // Reject rather than accept-and-hope: a silent bad rewrite is worse than the defect,
       // because the defect is at least detectable by the same check on the next run.
       if (stillForeign.length) continue;
-      if (TAUT.test(out) || QUOTED_GLOSS.test(out)) continue;
+      if (TAUT.test(out) || QUOTED_GLOSS.test(out) || SCRATCHPAD.test(out)) continue;
       if (w.locale === 'zh' || w.locale === 'ja' || w.locale === 'ko') {
         if (out.length < 80 || out.length > 700) continue;   // CJK: characters, not words
       } else if (words < 45 || words > 170) continue;
