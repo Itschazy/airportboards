@@ -278,9 +278,8 @@
     "sched_col_days": "Departure days",
     "sched_col_time": "Departs",
     "sched_more": "Another {n} destinations operate less often.",
-    "sched_note": "Carrier timetable as of {m}. Scheduled services only — charter flights are not included and appear on the live board above.",
     "sched_faq_q": "On which days do flights depart from {a}?",
-    "sched_faq_a": "Daily flights from {a} serve {d} destinations. Another {i} are available only on selected days — for example {ex}.",
+    "sched_faq_a": "As of the carrier timetable for {m}, daily flights from {a} serve {d} destinations. Another {i} are available only on selected days — for example {ex}.",
     "sched_faq_ex": "{city} on {days}",
     "sched_wd0": "Mondays",
     "sched_wd1": "Tuesdays",
@@ -288,7 +287,9 @@
     "sched_wd3": "Thursdays",
     "sched_wd4": "Fridays",
     "sched_wd5": "Saturdays",
-    "sched_wd6": "Sundays"
+    "sched_wd6": "Sundays",
+    "sched_lead_partial": "Not every destination from {a} is served daily — these operate on selected days of the week.",
+    "sched_note2": "Carrier timetable as of {m}, for the current scheduling season. Individual charter and seasonal services may be missing or incomplete."
   },
   "notfound": {
     "title": "Page not found",

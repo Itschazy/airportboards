@@ -278,9 +278,8 @@
     "sched_col_days": "Días operativos",
     "sched_col_time": "Salida",
     "sched_more": "Otros {n} destinos operan con menos frecuencia.",
-    "sched_note": "Horario de la compañía aérea a fecha de {m}. Solo servicios programados: los vuelos chárter no están incluidos y aparecen en el panel en directo de arriba.",
     "sched_faq_q": "¿En qué días salen vuelos desde {a}?",
-    "sched_faq_a": "Los vuelos diarios desde {a} cubren {d} destinos. Otros {i} están disponibles solo en días seleccionados, por ejemplo {ex}.",
+    "sched_faq_a": "Según el horario de las aerolíneas para {m}, los vuelos diarios desde {a} cubren {d} destinos. Otros {i} están disponibles solo en días seleccionados, por ejemplo {ex}.",
     "sched_faq_ex": "{city}: {days}",
     "sched_wd0": "los lunes",
     "sched_wd1": "los martes",
@@ -288,7 +287,9 @@
     "sched_wd3": "los jueves",
     "sched_wd4": "los viernes",
     "sched_wd5": "los sábados",
-    "sched_wd6": "los domingos"
+    "sched_wd6": "los domingos",
+    "sched_lead_partial": "No todos los destinos desde {a} tienen vuelos diarios; estas rutas operan en días seleccionados de la semana.",
+    "sched_note2": "Horario de la compañía aérea vigente al {m}, para la temporada de programación actual. Los servicios chárter puntuales y de temporada pueden faltar o estar incompletos."
   },
   "notfound": {
     "title": "Página no encontrada",

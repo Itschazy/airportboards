@@ -191,7 +191,8 @@ export async function AirportBottom({ airport, locale, about, displayName, fligh
     // rides into the FAQPage markup this component already emits, so no new schema type is
     // introduced. Appears and disappears with the section itself.
     ...((() => {
-      if (!sched) return [];
+      // Same reason: the FAQ answer quotes both counts, so it cannot run on a truncated list.
+      if (!sched || sched.partial) return [];
       const named = sched.rows
         .map(r => ({ city: getCityName(getAirport(r.iata)?.city ?? '', locale), mask: r.mask }))
         .filter(x => x.city && x.city.length > 2)
@@ -203,7 +204,14 @@ export async function AirportBottom({ airport, locale, about, displayName, fligh
       // "أيام الاثنين". The table keeps Intl's short forms, where no preposition governs them.
       const recurring = Array.from({ length: 7 }, (_, i) => tUi(`sched_wd${i}`));
       const ex = listFmt(named.map(x => tUi('sched_faq_ex', { city: x.city, days: listFmt(maskToDays(x.mask, recurring)) })));
-      return [{ q: tUi('sched_faq_q', { a: name }), a: tUi('sched_faq_a', { a: name, d: sched.dailyCount, i: sched.irregularCount, ex }) }];
+      // The marked-up answer carries the snapshot date too. The visible footnote had it, the
+      // JSON-LD did not — and the JSON-LD is the copy an answer engine quotes, where a
+      // timeless-sounding claim about a timetable is exactly the wrong thing to hand over.
+      const asOfLabel = sched.asOf
+        ? new Intl.DateTimeFormat(locale, { year: 'numeric', month: 'long', day: 'numeric' })
+            .format(new Date(`${sched.asOf}T00:00:00Z`)).replace(/\s*г\.?$/, '')
+        : '';
+      return [{ q: tUi('sched_faq_q', { a: name }), a: tUi('sched_faq_a', { m: asOfLabel, a: name, d: sched.dailyCount, i: sched.irregularCount, ex }) }];
     })()),
     ...((() => {
       if (inbound || noService || airport.closed) return [];
@@ -329,8 +337,16 @@ export async function AirportBottom({ airport, locale, about, displayName, fligh
           <section className="cv-auto" style={sec}>
             <H2>{tUi('sched_title', { a: name })}</H2>
             <p style={{ fontSize: 15, lineHeight: 1.6, color: '#B4B4B4', margin: '0 0 14px' }}>
-              {tUi('sched_lead', { a: name, d: sched.dailyCount, i: sched.irregularCount })}
+              {/* Where the provider's 500-row ceiling cut this airport's route list, the rows
+                  are real but the COUNTS are not — Stockholm and Berlin would have understated
+                  their own networks by a factor of several. Those pages get a lead sentence
+                  that states no numbers at all, and skip the peak-day claim entirely, until a
+                  backfill clears the flag. */}
+              {sched.partial
+                ? tUi('sched_lead_partial', { a: name })
+                : tUi('sched_lead', { a: name, d: sched.dailyCount, i: sched.irregularCount })}
               {(() => {
+                if (sched.partial) return null;
                 // Only when the spread is real. On an airport whose busiest and quietest days
                 // differ by one destination, this sentence would dress noise as a finding.
                 const max = Math.max(...sched.perDay), min = Math.min(...sched.perDay);
@@ -379,13 +395,13 @@ export async function AirportBottom({ airport, locale, about, displayName, fligh
               <p style={{ fontSize: 13, color: '#8A8A8A', marginTop: 10 }}>{tUi('sched_more', { n: sched.irregularCount - sched.rows.length })}</p>
             )}
             <p style={{ fontSize: 12, color: '#6A6A6A', marginTop: 10, lineHeight: 1.5 }}>
-              {tUi('sched_note', {
+              {tUi('sched_note2', {
                 // Russian renders "27 июля 2026 г." — its trailing period collides with the
                 // sentence's own, giving "…2026 г.. Только регулярные".
                 m: sched.asOf
                   ? new Intl.DateTimeFormat(locale, { year: 'numeric', month: 'long', day: 'numeric' })
                       .format(new Date(`${sched.asOf}T00:00:00Z`))
-                      .replace(/\.$/, '')
+                      .replace(/\s*г\.?$/, '')
                   : '',
               })}
             </p>

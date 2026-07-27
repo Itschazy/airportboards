@@ -44,20 +44,62 @@ export type AirportSchedule = {
   perDay: number[];
   /** Snapshot date of the underlying data, YYYY-MM-DD. */
   asOf: string;
+  /**
+   * True when this airport's route list is known to be cut off by the provider's 500-row
+   * response ceiling. The listed rows are real; the COUNTS are not, so the lead sentence must
+   * not state them as fact. Clears itself once the airport is backfilled.
+   */
+  partial: boolean;
 };
 
 const MAX_ROWS = 20;
 /** Below this many irregular destinations there is no pattern worth a section. */
 const MIN_IRREGULAR = 8;
 
-let cache: { airports: Record<string, [string, string, string, string, number, number][]>; generated: string } | null = null;
+/**
+ * A timetable is only true within its IATA season. The summer season ends on the last
+ * Saturday of October, the winter one on the last Saturday of March; on that night a large
+ * share of the world's schedules change at once. A snapshot taken in July describes summer
+ * and stops describing anything the moment summer ends — so the section retires itself rather
+ * than publishing confident weekday claims that have quietly become false. Nothing here needs
+ * a cron: the boundary is computed from the snapshot date.
+ */
+function seasonEnd(snapshot: Date): Date {
+  const y = snapshot.getUTCFullYear();
+  // The changeover is the last SUNDAY — the day the new season's timetable takes effect, which
+  // in 2026 is 25 October. Anchoring on the last Saturday instead would keep publishing summer
+  // weekdays for six days after the world had already moved to the winter schedule.
+  const lastSun = (year: number, month: number) => {
+    const d = new Date(Date.UTC(year, month + 1, 0));            // last day of the month
+    d.setUTCDate(d.getUTCDate() - d.getUTCDay());                 // walk back to Sunday
+    return d;
+  };
+  const marChange = lastSun(y, 2), octChange = lastSun(y, 9);
+  if (snapshot < marChange) return marChange;                    // winter season, ends in March
+  if (snapshot < octChange) return octChange;                    // summer season, ends in October
+  return lastSun(y + 1, 2);                                      // winter season spanning new year
+}
+
+let cache: {
+  airports: Record<string, [string, string, string, string, number, number][]>;
+  generated: string;
+  truncated: Set<string>;
+  expired: boolean;
+} | null = null;
 function load() {
   if (cache) return cache;
   try {
     const j = JSON.parse(fs.readFileSync(FILE, 'utf8'));
-    cache = { airports: j.airports ?? {}, generated: j.generated ?? '' };
+    const generated: string = j.generated ?? '';
+    const snap = generated ? new Date(`${generated}T00:00:00Z`) : null;
+    cache = {
+      airports: j.airports ?? {},
+      generated,
+      truncated: new Set<string>(j.truncated ?? []),
+      expired: !snap || Number.isNaN(snap.getTime()) ? true : Date.now() > seasonEnd(snap).getTime(),
+    };
   } catch {
-    cache = { airports: {}, generated: '' };
+    cache = { airports: {}, generated: '', truncated: new Set(), expired: true };
   }
   return cache;
 }
@@ -75,6 +117,8 @@ export function countDays(mask: number): number {
  */
 export function getAirportSchedule(iata: string, known: Set<string>): AirportSchedule | null {
   const db = load();
+  // Past the season boundary the whole dataset describes a timetable that no longer runs.
+  if (db.expired) return null;
   const rows = db.airports[iata.toUpperCase()];
   if (!rows?.length) return null;
 
@@ -113,6 +157,7 @@ export function getAirportSchedule(iata: string, known: Set<string>): AirportSch
     irregularCount: irregular.length,
     perDay,
     asOf: db.generated,
+    partial: db.truncated.has(iata.toUpperCase()),
   };
 }
 
