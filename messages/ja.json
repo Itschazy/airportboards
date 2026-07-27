@@ -260,7 +260,17 @@
     "pwa_got_it": "わかった",
     "pin_flight": "フライトを固定",
     "unpin_flight": "ピン留めを解除",
-    "pinned_flight": "ご搭乗便"
+    "pinned_flight": "ご搭乗便",
+    "guide_transfers": "空港から車での所要時間",
+    "guide_transit": "空港からの公共交通機関",
+    "guide_col_dest": "目的地",
+    "guide_col_time": "車で",
+    "guide_col_line": "路線",
+    "guide_col_fare": "運賃",
+    "guide_fare_check": "現地で確認",
+    "guide_asof": "参考データ、{m}。所要時間は目安で、交通状況により変動します。ご利用前に運賃をご確認ください。",
+    "guide_km": "km",
+    "guide_min": "分"
   },
   "notfound": {
     "title": "ページが見つかりません",

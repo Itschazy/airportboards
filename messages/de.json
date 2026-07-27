@@ -260,7 +260,17 @@
     "pwa_got_it": "Verstanden",
     "pin_flight": "Flug anheften",
     "unpin_flight": "Lösen",
-    "pinned_flight": "Ihr Flug"
+    "pinned_flight": "Ihr Flug",
+    "guide_transfers": "Fahrzeiten vom Flughafen",
+    "guide_transit": "Öffentliche Verkehrsmittel ab dem Flughafen",
+    "guide_col_dest": "Ziel",
+    "guide_col_time": "Mit dem Auto",
+    "guide_col_line": "Linie",
+    "guide_col_fare": "Preis",
+    "guide_fare_check": "lokal prüfen",
+    "guide_asof": "Referenzdaten, {m}. Zeiten sind Richtwerte und variieren je nach Verkehrslage; prüfen Sie die Fahrpreise vor Reiseantritt.",
+    "guide_km": "km",
+    "guide_min": "Min."
   },
   "notfound": {
     "title": "Seite nicht gefunden",

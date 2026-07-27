@@ -260,7 +260,17 @@
     "pwa_got_it": "Ho capito",
     "pin_flight": "Fissa questo volo",
     "unpin_flight": "Sblocca",
-    "pinned_flight": "Il tuo volo"
+    "pinned_flight": "Il tuo volo",
+    "guide_transfers": "Tempi di percorrenza dall'aeroporto",
+    "guide_transit": "Trasporto pubblico dall'aeroporto",
+    "guide_col_dest": "Destinazione",
+    "guide_col_time": "Su strada",
+    "guide_col_line": "Linea",
+    "guide_col_fare": "Tariffa",
+    "guide_fare_check": "verifica in loco",
+    "guide_asof": "Dati di riferimento, {m}. I tempi sono indicativi e variano in base al traffico; verifica le tariffe prima di partire.",
+    "guide_km": "km",
+    "guide_min": "min"
   },
   "notfound": {
     "title": "Pagina non trovata",

@@ -260,7 +260,17 @@
     "pwa_got_it": "확인",
     "pin_flight": "이 항공편 고정",
     "unpin_flight": "고정 해제",
-    "pinned_flight": "내 항공편"
+    "pinned_flight": "내 항공편",
+    "guide_transfers": "공항에서 출발하는 차량 이동 시간",
+    "guide_transit": "공항에서 출발하는 대중교통",
+    "guide_col_dest": "목적지",
+    "guide_col_time": "도로 기준",
+    "guide_col_line": "노선",
+    "guide_col_fare": "요금",
+    "guide_fare_check": "현지 확인",
+    "guide_asof": "참고 데이터, {m}. 소요 시간은 일반적인 기준이며 교통 상황에 따라 달라질 수 있습니다. 이동 전 요금을 확인하세요.",
+    "guide_km": "km",
+    "guide_min": "분"
   },
   "notfound": {
     "title": "페이지를 찾을 수 없습니다",

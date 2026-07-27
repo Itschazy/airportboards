@@ -260,7 +260,17 @@
     "pwa_got_it": "ठीक है",
     "pin_flight": "इस उड़ान को पिन करें",
     "unpin_flight": "अनपिन करें",
-    "pinned_flight": "आपकी उड़ान"
+    "pinned_flight": "आपकी उड़ान",
+    "guide_transfers": "हवाई अड्डे से सड़क यात्रा का समय",
+    "guide_transit": "हवाई अड्डे से सार्वजनिक परिवहन",
+    "guide_col_dest": "गंतव्य",
+    "guide_col_time": "सड़क मार्ग से",
+    "guide_col_line": "लाइन",
+    "guide_col_fare": "किराया",
+    "guide_fare_check": "स्थानीय रूप से जाँचें",
+    "guide_asof": "संदर्भ डेटा, {m}। समय औसत हैं और ट्रैफ़िक के अनुसार बदल सकते हैं; यात्रा से पहले किराए जाँच लें।",
+    "guide_km": "किमी",
+    "guide_min": "मि॰"
   },
   "notfound": {
     "title": "पेज नहीं मिला",

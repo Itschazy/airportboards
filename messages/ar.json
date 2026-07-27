@@ -260,7 +260,17 @@
     "pwa_got_it": "فهمت",
     "pin_flight": "ثبّت هذه الرحلة",
     "unpin_flight": "إلغاء التثبيت",
-    "pinned_flight": "رحلتك"
+    "pinned_flight": "رحلتك",
+    "guide_transfers": "أوقات القيادة من المطار",
+    "guide_transit": "وسائل النقل العام من المطار",
+    "guide_col_dest": "الوجهة",
+    "guide_col_time": "برًّا",
+    "guide_col_line": "الخط",
+    "guide_col_fare": "السعر",
+    "guide_fare_check": "تحقق محليًا",
+    "guide_asof": "بيانات مرجعية، {m}. الأوقات تقريبية وقد تختلف حسب حركة المرور؛ تحقّق من الأسعار قبل السفر.",
+    "guide_km": "كم",
+    "guide_min": "د"
   },
   "notfound": {
     "title": "الصفحة غير موجودة",

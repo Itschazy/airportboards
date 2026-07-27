@@ -70,6 +70,7 @@ export async function AirportBottom({ airport, locale, about, displayName, fligh
 }) {
   const t = await getTranslations({ locale, namespace: 'home' });
   const tNav = await getTranslations({ locale, namespace: 'nav' });
+  const tUi = await getTranslations({ locale, namespace: 'ui' });
   const name = displayName || airport.name;
   const city = getCityName(airport.city, locale);
   const country = getCountryName(airport.country, locale);
@@ -281,6 +282,96 @@ export async function AirportBottom({ airport, locale, about, displayName, fligh
                 {' '}· CC BY-SA 4.0
               </p>
             )}
+          </section>
+        )}
+
+        {/* 6a-bis. REFERENCE TABLES — the numbers, before the prose.
+            The pages that win this market answer "how far is my resort and what does the bus
+            cost", not "there are buses and taxis". Our prose block said the latter in every
+            language, with not a single figure in it. These tables carry road distances and
+            the actual line numbers; both were harvested twice independently and only the
+            agreeing rows survived, so a missing fare means the two passes disagreed — the
+            line still renders, because a number and a direction beat nothing. */}
+        {ext?.guide && (ext.guide.transfers.length > 0 || ext.guide.transit.length > 0) && (
+          <section className="cv-auto" style={sec}>
+            {ext.guide.transfers.length > 0 && (
+              <>
+                <H2>{tUi('guide_transfers')}</H2>
+                <div style={{ overflowX: 'auto', background: '#0B0B0B', border: '1px solid #1A1A1A', borderRadius: 16, padding: '4px 18px 8px', marginBottom: ext.guide.transit.length ? 22 : 10 }}>
+                  <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: 15 }}>
+                    <thead>
+                      <tr style={{ color: '#8A8A8A', fontSize: 12, textTransform: 'uppercase', letterSpacing: '0.06em' }}>
+                        <th style={{ textAlign: 'start', padding: '12px 8px 10px 0', fontWeight: 600 }}>{tUi('guide_col_dest')}</th>
+                        <th style={{ textAlign: 'end', padding: '12px 0 10px 8px', fontWeight: 600, whiteSpace: 'nowrap' }}>{tUi('guide_col_time')}</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {ext.guide.transfers.map((r) => (
+                        <tr key={r.dest} style={{ borderTop: '1px solid #1A1A1A' }}>
+                          <td style={{ padding: '11px 8px 11px 0', color: '#E4E4E4' }}>{r.dest}</td>
+                          <td style={{ padding: '11px 0 11px 8px', textAlign: 'end', color: '#B4B4B4', whiteSpace: 'nowrap', fontVariantNumeric: 'tabular-nums' }}>{r.km} {tUi('guide_km')} · {r.min} {tUi('guide_min')}</td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
+              </>
+            )}
+            {ext.guide.transit.length > 0 && (
+              <>
+                <H2>{tUi('guide_transit')}</H2>
+                <div style={{ overflowX: 'auto', background: '#0B0B0B', border: '1px solid #1A1A1A', borderRadius: 16, padding: '4px 18px 8px' }}>
+                  <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: 15 }}>
+                    <thead>
+                      <tr style={{ color: '#8A8A8A', fontSize: 12, textTransform: 'uppercase', letterSpacing: '0.06em' }}>
+                        <th style={{ textAlign: 'start', padding: '12px 8px 10px 0', fontWeight: 600 }}>{tUi('guide_col_line')}</th>
+                        <th style={{ textAlign: 'start', padding: '12px 8px 10px 0', fontWeight: 600 }}>{tUi('guide_col_dest')}</th>
+                        <th style={{ textAlign: 'end', padding: '12px 0 10px 8px', fontWeight: 600, whiteSpace: 'nowrap' }}>{tUi('guide_col_fare')}</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {ext.guide.transit.map((r, i) => (
+                        <tr key={`${r.line}:${i}`} style={{ borderTop: '1px solid #1A1A1A' }}>
+                          {/* The code is the line; the operator is a footnote. Rendering the
+                              full signage ("EMT Palma A1 Aeroport–Ciutat") ate the whole
+                              width on a phone and pushed the destination — the reason anyone
+                              reads this table — into a four-line wrap. */}
+                          <td style={{ padding: '11px 8px 11px 0', whiteSpace: 'nowrap' }}>
+                            <span style={{ color: '#E4E4E4', fontWeight: 700 }}>{r.line}</span>
+                            {r.op && <span style={{ display: 'block', color: '#6A6A6A', fontSize: 12, marginTop: 2 }}>{r.op}</span>}
+                          </td>
+                          {/* Three stops is a direction; five is a timetable. The long tail
+                              wrapped to five lines on a phone and pushed the fare column off
+                              the edge. */}
+                          <td style={{ padding: '11px 8px 11px 0', color: '#B4B4B4' }}>{
+                            (() => { const p = r.dest.split(' / '); return p.length > 3 ? `${p.slice(0, 3).join(' / ')} …` : r.dest; })()
+                          }</td>
+                          {/* An em dash where the two harvest passes disagreed on the price.
+                              Spelling out "check locally" in the cell cost more width than the
+                              price it replaced; the disclaimer under the table says it once. */}
+                          <td title={r.fare ? undefined : tUi('guide_fare_check')} style={{ padding: '11px 0 11px 8px', textAlign: 'end', color: r.fare ? '#B4B4B4' : '#4A4A4A', whiteSpace: 'nowrap' }}>{r.fare || '—'}</td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
+              </>
+            )}
+            <p style={{ fontSize: 12, color: '#6A6A6A', marginTop: 12, lineHeight: 1.5 }}>
+              {tUi('guide_asof', {
+                // "2026-07" is a storage format, not something to show a reader. Rendered as
+                // the month in their own language: "Juli 2026", "июль 2026 г.", "2026年7月".
+                m: (() => {
+                  const [y, mo] = ext.guide.asOf.split('-').map(Number);
+                  if (!y || !mo) return ext.guide.asOf;
+                  // Russian formats as "июль 2026 г." — a trailing period that collides with
+                  // the sentence's own, giving "июль 2026 г.. Время".
+                  return new Intl.DateTimeFormat(locale, { year: 'numeric', month: 'long' })
+                    .format(new Date(Date.UTC(y, mo - 1, 1)))
+                    .replace(/\.$/, '');
+                })(),
+              })}
+            </p>
           </section>
         )}
 

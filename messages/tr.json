@@ -260,7 +260,17 @@
     "pwa_got_it": "Anladım",
     "pin_flight": "Bu uçuşu sabitle",
     "unpin_flight": "Sabitlemeyi kaldır",
-    "pinned_flight": "Uçuşunuz"
+    "pinned_flight": "Uçuşunuz",
+    "guide_transfers": "Havalimanından araçla ulaşım süreleri",
+    "guide_transit": "Havalimanından toplu taşıma",
+    "guide_col_dest": "Varış",
+    "guide_col_time": "Karayoluyla",
+    "guide_col_line": "Hat",
+    "guide_col_fare": "Ücret",
+    "guide_fare_check": "yerelde kontrol edin",
+    "guide_asof": "Referans verileri, {m}. Süreler ortalamadır ve trafiğe göre değişir; seyahatten önce ücretleri kontrol edin.",
+    "guide_km": "km",
+    "guide_min": "dk"
   },
   "notfound": {
     "title": "Sayfa bulunamadı",

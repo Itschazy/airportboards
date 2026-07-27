@@ -260,7 +260,17 @@
     "pwa_got_it": "Entendido",
     "pin_flight": "Fijar este vuelo",
     "unpin_flight": "Desanclar",
-    "pinned_flight": "Tu vuelo"
+    "pinned_flight": "Tu vuelo",
+    "guide_transfers": "Tiempos de viaje en coche desde el aeropuerto",
+    "guide_transit": "Transporte público desde el aeropuerto",
+    "guide_col_dest": "Destino",
+    "guide_col_time": "Por carretera",
+    "guide_col_line": "Línea",
+    "guide_col_fare": "Tarifa",
+    "guide_fare_check": "consultar localmente",
+    "guide_asof": "Datos de referencia, {m}. Los tiempos son orientativos y varían según el tráfico; consulta las tarifas antes de viajar.",
+    "guide_km": "km",
+    "guide_min": "min"
   },
   "notfound": {
     "title": "Página no encontrada",

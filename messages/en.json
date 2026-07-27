@@ -260,7 +260,17 @@
     "pwa_got_it": "Got it",
     "pin_flight": "Pin this flight",
     "unpin_flight": "Unpin",
-    "pinned_flight": "Your flight"
+    "pinned_flight": "Your flight",
+    "guide_transfers": "Driving times from the airport",
+    "guide_transit": "Public transport from the airport",
+    "guide_col_dest": "Destination",
+    "guide_col_time": "By road",
+    "guide_col_line": "Line",
+    "guide_col_fare": "Fare",
+    "guide_fare_check": "check locally",
+    "guide_asof": "Reference data, {m}. Times are typical and vary with traffic; check fares before travelling.",
+    "guide_km": "km",
+    "guide_min": "min"
   },
   "notfound": {
     "title": "Page not found",

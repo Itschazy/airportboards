@@ -260,7 +260,17 @@
     "pwa_got_it": "Compris",
     "pin_flight": "Épingler ce vol",
     "unpin_flight": "Désépingler",
-    "pinned_flight": "Votre vol"
+    "pinned_flight": "Votre vol",
+    "guide_transfers": "Temps de trajet en voiture depuis l’aéroport",
+    "guide_transit": "Transports en commun depuis l’aéroport",
+    "guide_col_dest": "Destination",
+    "guide_col_time": "Par la route",
+    "guide_col_line": "Ligne",
+    "guide_col_fare": "Tarif",
+    "guide_fare_check": "à vérifier",
+    "guide_asof": "Données de référence, {m}. Les durées sont indicatives et varient selon le trafic ; vérifiez les tarifs avant de voyager.",
+    "guide_km": "km",
+    "guide_min": "min"
   },
   "notfound": {
     "title": "Page introuvable",

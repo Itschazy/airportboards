@@ -260,7 +260,17 @@
     "pwa_got_it": "知道了",
     "pin_flight": "置顶此航班",
     "unpin_flight": "取消固定",
-    "pinned_flight": "您的航班"
+    "pinned_flight": "您的航班",
+    "guide_transfers": "从机场出发的车程",
+    "guide_transit": "从机场出发的公共交通",
+    "guide_col_dest": "目的地",
+    "guide_col_time": "驾车",
+    "guide_col_line": "线路",
+    "guide_col_fare": "票价",
+    "guide_fare_check": "当地查询",
+    "guide_asof": "参考数据，{m}。所示时间为通常情况，可能因交通状况而异；出行前请核实票价。",
+    "guide_km": "公里",
+    "guide_min": "分钟"
   },
   "notfound": {
     "title": "页面未找到",

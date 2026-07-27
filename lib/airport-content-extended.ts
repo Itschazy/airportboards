@@ -8,7 +8,15 @@ import path from 'path';
 // everyone else returns null and the sections simply don't render.
 const DIR = path.join(process.cwd(), 'data/airport-content-extended');
 
-export type AirportExtended = { transport: string; terminals: string; tips: string };
+export type GuideTransfer = { dest: string; km: number; min: number };
+export type GuideTransit = { line: string; op?: string | null; mode: string; dest: string; fare: string | null };
+/** Verified reference tables — distances to nearby towns and the transport lines that
+ *  actually leave the airport. Facts were harvested twice independently and only the
+ *  agreeing rows were kept; a fare that the two passes did not agree on is null, and the
+ *  row still renders (a line number and a direction are useful without a price). */
+export type AirportGuide = { transfers: GuideTransfer[]; transit: GuideTransit[]; asOf: string };
+
+export type AirportExtended = { transport: string; terminals: string; tips: string; guide: AirportGuide | null };
 
 export function getAirportContentExtended(iata: string, locale: string): AirportExtended | null {
   try {
@@ -19,8 +27,12 @@ export function getAirportContentExtended(iata: string, locale: string): Airport
     const transport = (s.transport || '').trim();
     const terminals = (s.terminals || '').trim();
     const tips = (s.tips || '').trim();
-    if (!transport && !terminals && !tips) return null;
-    return { transport, terminals, tips };
+    const g = (s as { guide?: AirportGuide }).guide ?? null;
+    const guide = g && ((g.transfers?.length ?? 0) > 0 || (g.transit?.length ?? 0) > 0)
+      ? { transfers: g.transfers ?? [], transit: g.transit ?? [], asOf: g.asOf ?? '' }
+      : null;
+    if (!transport && !terminals && !tips && !guide) return null;
+    return { transport, terminals, tips, guide };
   } catch {
     return null;
   }
