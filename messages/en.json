@@ -288,7 +288,6 @@
     "sched_wd4": "Fridays",
     "sched_wd5": "Saturdays",
     "sched_wd6": "Sundays",
-    "sched_lead_partial": "Not every destination from {a} is served daily — these operate on selected days of the week.",
     "sched_note2": "Carrier timetable as of {m}, for the current scheduling season. Individual charter and seasonal services may be missing or incomplete."
   },
   "notfound": {

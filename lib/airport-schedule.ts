@@ -44,12 +44,6 @@ export type AirportSchedule = {
   perDay: number[];
   /** Snapshot date of the underlying data, YYYY-MM-DD. */
   asOf: string;
-  /**
-   * True when this airport's route list is known to be cut off by the provider's 500-row
-   * response ceiling. The listed rows are real; the COUNTS are not, so the lead sentence must
-   * not state them as fact. Clears itself once the airport is backfilled.
-   */
-  partial: boolean;
 };
 
 const MAX_ROWS = 20;
@@ -119,6 +113,12 @@ export function getAirportSchedule(iata: string, known: Set<string>): AirportSch
   const db = load();
   // Past the season boundary the whole dataset describes a timetable that no longer runs.
   if (db.expired) return null;
+  // Truncated lists are withheld entirely, not merely stripped of their counts. The provider
+  // sorts by destination code before cutting at 500 rows, so Dublin's list ends at BUD and
+  // every visible row starts with A or B: a reader looking for London finds nothing and
+  // concludes there is no such route. A table that is wrong in a systematic direction is worse
+  // than no table — see scripts/mark-truncated-routes.mjs for how these are proven.
+  if (db.truncated.has(iata.toUpperCase())) return null;
   const rows = db.airports[iata.toUpperCase()];
   if (!rows?.length) return null;
 
@@ -157,7 +157,6 @@ export function getAirportSchedule(iata: string, known: Set<string>): AirportSch
     irregularCount: irregular.length,
     perDay,
     asOf: db.generated,
-    partial: db.truncated.has(iata.toUpperCase()),
   };
 }
 

@@ -288,7 +288,6 @@
     "sched_wd4": "le vendredi",
     "sched_wd5": "le samedi",
     "sched_wd6": "le dimanche",
-    "sched_lead_partial": "Toutes les destinations au départ de {a} ne sont pas desservies quotidiennement — ces liaisons sont assurées certains jours de la semaine.",
     "sched_note2": "Horaires des compagnies aériennes au {m}, pour la saison de programmation en cours. Certains services charters et saisonniers peuvent être absents ou incomplets."
   },
   "notfound": {

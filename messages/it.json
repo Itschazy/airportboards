@@ -288,7 +288,6 @@
     "sched_wd4": "il venerdì",
     "sched_wd5": "il sabato",
     "sched_wd6": "la domenica",
-    "sched_lead_partial": "Non tutte le destinazioni da {a} sono servite tutti i giorni: i voli operano in giorni selezionati della settimana.",
     "sched_note2": "Orario della compagnia aerea al {m}, per la stagione di programmazione corrente. I singoli servizi charter e stagionali potrebbero essere mancanti o incompleti."
   },
   "notfound": {

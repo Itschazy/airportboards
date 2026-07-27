@@ -191,8 +191,7 @@ export async function AirportBottom({ airport, locale, about, displayName, fligh
     // rides into the FAQPage markup this component already emits, so no new schema type is
     // introduced. Appears and disappears with the section itself.
     ...((() => {
-      // Same reason: the FAQ answer quotes both counts, so it cannot run on a truncated list.
-      if (!sched || sched.partial) return [];
+      if (!sched) return [];
       const named = sched.rows
         .map(r => ({ city: getCityName(getAirport(r.iata)?.city ?? '', locale), mask: r.mask }))
         .filter(x => x.city && x.city.length > 2)
@@ -337,16 +336,8 @@ export async function AirportBottom({ airport, locale, about, displayName, fligh
           <section className="cv-auto" style={sec}>
             <H2>{tUi('sched_title', { a: name })}</H2>
             <p style={{ fontSize: 15, lineHeight: 1.6, color: '#B4B4B4', margin: '0 0 14px' }}>
-              {/* Where the provider's 500-row ceiling cut this airport's route list, the rows
-                  are real but the COUNTS are not — Stockholm and Berlin would have understated
-                  their own networks by a factor of several. Those pages get a lead sentence
-                  that states no numbers at all, and skip the peak-day claim entirely, until a
-                  backfill clears the flag. */}
-              {sched.partial
-                ? tUi('sched_lead_partial', { a: name })
-                : tUi('sched_lead', { a: name, d: sched.dailyCount, i: sched.irregularCount })}
+              {tUi('sched_lead', { a: name, d: sched.dailyCount, i: sched.irregularCount })}
               {(() => {
-                if (sched.partial) return null;
                 // Only when the spread is real. On an airport whose busiest and quietest days
                 // differ by one destination, this sentence would dress noise as a finding.
                 const max = Math.max(...sched.perDay), min = Math.min(...sched.perDay);
@@ -391,9 +382,7 @@ export async function AirportBottom({ airport, locale, about, displayName, fligh
                 </tbody>
               </table>
             </div>
-            {/* "Another N destinations operate less often" is a count too, and on a truncated
-                list it is understated exactly like the lead was. Same rule, same flag. */}
-            {!sched.partial && sched.irregularCount > sched.rows.length && (
+            {sched.irregularCount > sched.rows.length && (
               <p style={{ fontSize: 13, color: '#8A8A8A', marginTop: 10 }}>{tUi('sched_more', { n: sched.irregularCount - sched.rows.length })}</p>
             )}
             <p style={{ fontSize: 12, color: '#6A6A6A', marginTop: 10, lineHeight: 1.5 }}>
