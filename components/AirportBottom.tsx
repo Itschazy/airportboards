@@ -391,7 +391,9 @@ export async function AirportBottom({ airport, locale, about, displayName, fligh
                 </tbody>
               </table>
             </div>
-            {sched.irregularCount > sched.rows.length && (
+            {/* "Another N destinations operate less often" is a count too, and on a truncated
+                list it is understated exactly like the lead was. Same rule, same flag. */}
+            {!sched.partial && sched.irregularCount > sched.rows.length && (
               <p style={{ fontSize: 13, color: '#8A8A8A', marginTop: 10 }}>{tUi('sched_more', { n: sched.irregularCount - sched.rows.length })}</p>
             )}
             <p style={{ fontSize: 12, color: '#6A6A6A', marginTop: 10, lineHeight: 1.5 }}>
