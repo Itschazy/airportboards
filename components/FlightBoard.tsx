@@ -158,7 +158,7 @@ function IconChevron() {
 
 // ─── Bottom Sheet ────────────────────────────────────────────────────────────
 
-function BottomSheet({ flight, mode, onClose, tz, locale, updLabel, originIata, originName }: {
+function BottomSheet({ flight, mode, onClose, tz, locale, updLabel, originIata, originName, isPinned, onTogglePin }: {
   flight: Flight | null;
   mode: Mode;
   onClose: () => void;
@@ -167,6 +167,9 @@ function BottomSheet({ flight, mode, onClose, tz, locale, updLabel, originIata, 
   updLabel: string;
   originIata: string;
   originName: string;
+  /** Whether THIS flight is the pinned one, and the toggle for it. */
+  isPinned: boolean;
+  onTogglePin: () => void;
 }) {
   const t = useTranslations('ui');
   const tNav = useTranslations('nav');
@@ -343,6 +346,21 @@ function BottomSheet({ flight, mode, onClose, tz, locale, updLabel, originIata, 
           </div>
           <div style={{ minWidth: 0, width: '100%' }}>
             <div style={{ fontSize: 'clamp(46px, 14vw, 66px)', fontWeight: 800, letterSpacing: '-0.04em', color: C.text, lineHeight: 0.95, wordBreak: 'break-word' }}>{flight.flight}</div>
+            {/* The one persistent action this sheet has. Watching a flight means coming back
+                three to five times; before this button every return started with re-finding
+                the row in an 80-row list. Pin state lives in localStorage (ab_pinned), scoped
+                to today — see the pinned card in FlightBoard. */}
+            <button
+              onClick={() => { haptic(); onTogglePin(); }}
+              style={{
+                marginTop: 10, padding: '8px 14px', borderRadius: 999, fontSize: 13, fontWeight: 600,
+                border: `1px solid ${isPinned ? C.blue : C.border}`,
+                background: isPinned ? 'rgba(10,132,255,0.12)' : 'transparent',
+                color: isPinned ? C.blue : C.secondary, cursor: 'pointer',
+              }}
+            >
+              {isPinned ? t('unpin_flight') : t('pin_flight')}
+            </button>
             <div style={{ fontSize: 'clamp(22px, 6.5vw, 30px)', color: '#A1A1A1', marginTop: 12, lineHeight: 1.15 }}>{flight.destination || flight.origin}</div>
             <div style={{ fontSize: 22, color: C.text, fontWeight: 600, marginTop: 6 }}>{flight.airline}</div>
           </div>
@@ -516,6 +534,34 @@ export function FlightBoard({ airport, locale, defaultMode = 'departures', displ
   const searchRef = useRef<HTMLInputElement>(null);
   useEffect(() => { if (searchOpen) searchRef.current?.focus(); }, [searchOpen]);
 
+  // ── Pinned flight ────────────────────────────────────────────────────────────
+  // The strongest retention primitive this page can have without a backend. Watching a
+  // flight IS a repeat activity (Metrika: 235-second sessions, 0.7% returns — people study
+  // the board once and never come back); the pin gives the return visit something to land
+  // on: a sticky card at the top instead of re-scanning an 80-row list. Scoped to the
+  // CURRENT day — yesterday's pin is noise and is dropped on read.
+  type Pin = { iata: string; flight: string; date: string; mode: Mode };
+  const todayStr = () => new Date().toISOString().slice(0, 10);
+  const [pinned, setPinned] = useState<Pin | null>(null);
+  useEffect(() => {
+    try {
+      const p = JSON.parse(localStorage.getItem('ab_pinned') || 'null') as Pin | null;
+      if (p && p.iata === airport.iata && p.date === todayStr()) setPinned(p);
+      else if (p && p.date !== todayStr()) localStorage.removeItem('ab_pinned');
+    } catch { /* storage unavailable */ }
+  }, [airport.iata]);
+  const togglePin = useCallback((code: string) => {
+    setPinned(prev => {
+      const next = prev?.flight === code ? null : { iata: airport.iata, flight: code, date: todayStr(), mode };
+      try {
+        if (next) localStorage.setItem('ab_pinned', JSON.stringify(next));
+        else localStorage.removeItem('ab_pinned');
+      } catch { /* best-effort */ }
+      return next;
+    });
+  }, [airport.iata, mode]);
+  const pinnedFlight = pinned ? flights.find(f => f.flight === pinned.flight) ?? null : null;
+
   // A live title for the HIDDEN tab only: "12:35 SU1403 · AER" — the tab becomes a glanceable
   // board on its own, which is the cheapest return-visit surface a site like this has.
   // Strictly gated on document.hidden, and restored on visibility: Google renders pages with a
@@ -524,7 +570,10 @@ export function FlightBoard({ airport, locale, defaultMode = 'departures', displ
   useEffect(() => {
     const original = document.title;
     const compute = () => {
-      const next = flights.find(f => !['departed', 'arrived', 'baggage', 'cancelled'].includes(f.status));
+      // The pinned flight, if any, is what this person actually cares about; the next
+      // non-terminal flight is the fallback for everyone else.
+      const pin = pinned ? flights.find(f => f.flight === pinned.flight) : null;
+      const next = pin ?? flights.find(f => !['departed', 'arrived', 'baggage', 'cancelled'].includes(f.status));
       return next ? `${next.actual || next.scheduled} ${next.flight} · ${airport.iata}` : null;
     };
     let timer: ReturnType<typeof setInterval> | null = null;
@@ -544,7 +593,7 @@ export function FlightBoard({ airport, locale, defaultMode = 'departures', displ
       if (timer) clearInterval(timer);
       document.title = original;
     };
-  }, [flights, airport.iata]);
+  }, [flights, airport.iata, pinned]);
 
   // Record this visit in the same localStorage list the homepage search maintains
   // ('ab_recent', shape identical to AirportSearch's saveRecent).
@@ -819,6 +868,33 @@ export function FlightBoard({ airport, locale, defaultMode = 'departures', displ
           </div>
         )}
 
+        {/* Pinned flight card — the landing pad for the return visit. Sticky above the list,
+            styled as "yours" (blue ring + label), opens the same sheet on tap. Renders only
+            when the pinned flight is present in the CURRENT list, so a stale or cross-mode
+            pin silently shows nothing rather than an orphaned card. */}
+        {pinnedFlight && (
+          <button
+            onClick={() => { haptic(); setSelected(pinnedFlight); }}
+            style={{
+              position: 'sticky', top: 8, zIndex: 5, display: 'flex', width: '100%',
+              alignItems: 'center', gap: 12, padding: '12px 16px', marginBottom: 10,
+              borderRadius: 14, border: `1.5px solid ${C.blue}`, background: '#0B1220',
+              color: 'inherit', textAlign: 'start', cursor: 'pointer',
+              boxShadow: '0 6px 24px rgba(0,0,0,0.5)',
+            }}
+          >
+            <div style={{ minWidth: 0, flex: 1 }}>
+              <div style={{ fontSize: 10, fontWeight: 700, letterSpacing: '0.08em', textTransform: 'uppercase', color: C.blue }}>{t('pinned_flight')}</div>
+              <div style={{ display: 'flex', alignItems: 'baseline', gap: 8, marginTop: 3 }}>
+                <span style={{ fontSize: 17, fontWeight: 700, color: C.text, fontVariantNumeric: 'tabular-nums' }}>{pinnedFlight.actual || pinnedFlight.scheduled}</span>
+                <span style={{ fontSize: 14, fontWeight: 600, color: C.text }}>{pinnedFlight.flight}</span>
+                <span style={{ fontSize: 13, color: C.secondary, overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>{pinnedFlight.destination || pinnedFlight.origin || ''}</span>
+              </div>
+            </div>
+            <span style={{ fontSize: 11, fontWeight: 700, color: STATUS_COLOR[pinnedFlight.status] || C.gray, flexShrink: 0 }}>●</span>
+          </button>
+        )}
+
         {/* keyed by mode+filter so a swap remounts the block and replays the rise-in */}
         {(() => { if (initialListKey.current !== null && `${mode}:${filter}` !== initialListKey.current) initialListKey.current = null; return null; })()}
         {/* A departure/arrival board IS a list — mark it up as one. Semantic <ul>/<li>
@@ -932,6 +1008,8 @@ export function FlightBoard({ airport, locale, defaultMode = 'departures', displ
 
       {/* ── Bottom sheet ───────────────────────────────────── */}
       <BottomSheet
+        isPinned={!!selected && pinned?.flight === selected.flight}
+        onTogglePin={() => { if (selected) togglePin(selected.flight); }}
         flight={selected}
         mode={mode}
         onClose={() => setSelected(null)}

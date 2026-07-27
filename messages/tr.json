@@ -257,7 +257,10 @@
     "pwa_sub": "Uygulama gibi anında açılır.",
     "pwa_install": "Yükle",
     "pwa_ios_hint": "«Paylaş»a, ardından «Ana Ekrana Ekle»ye dokunun.",
-    "pwa_got_it": "Anladım"
+    "pwa_got_it": "Anladım",
+    "pin_flight": "Bu uçuşu sabitle",
+    "unpin_flight": "Sabitlemeyi kaldır",
+    "pinned_flight": "Uçuşunuz"
   },
   "notfound": {
     "title": "Sayfa bulunamadı",

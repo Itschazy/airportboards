@@ -257,7 +257,10 @@
     "pwa_sub": "アプリのようにすぐ開けます。",
     "pwa_install": "追加する",
     "pwa_ios_hint": "「共有」から「ホーム画面に追加」を選んでください。",
-    "pwa_got_it": "わかった"
+    "pwa_got_it": "わかった",
+    "pin_flight": "フライトを固定",
+    "unpin_flight": "ピン留めを解除",
+    "pinned_flight": "ご搭乗便"
   },
   "notfound": {
     "title": "ページが見つかりません",

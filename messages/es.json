@@ -257,7 +257,10 @@
     "pwa_sub": "Se abre al instante, como una app.",
     "pwa_install": "Instalar",
     "pwa_ios_hint": "Toca «Compartir» y luego «Añadir a pantalla de inicio».",
-    "pwa_got_it": "Entendido"
+    "pwa_got_it": "Entendido",
+    "pin_flight": "Fijar este vuelo",
+    "unpin_flight": "Desanclar",
+    "pinned_flight": "Tu vuelo"
   },
   "notfound": {
     "title": "Página no encontrada",

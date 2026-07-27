@@ -257,7 +257,10 @@
     "pwa_sub": "Öffnet sofort, wie eine App.",
     "pwa_install": "Installieren",
     "pwa_ios_hint": "Tippe auf „Teilen“, dann „Zum Home-Bildschirm“.",
-    "pwa_got_it": "Verstanden"
+    "pwa_got_it": "Verstanden",
+    "pin_flight": "Flug anheften",
+    "unpin_flight": "Lösen",
+    "pinned_flight": "Ihr Flug"
   },
   "notfound": {
     "title": "Seite nicht gefunden",

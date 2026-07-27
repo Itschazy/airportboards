@@ -257,7 +257,10 @@
     "pwa_sub": "Si apre all’istante, come un’app.",
     "pwa_install": "Installa",
     "pwa_ios_hint": "Tocca «Condividi», poi «Aggiungi a Home».",
-    "pwa_got_it": "Ho capito"
+    "pwa_got_it": "Ho capito",
+    "pin_flight": "Fissa questo volo",
+    "unpin_flight": "Sblocca",
+    "pinned_flight": "Il tuo volo"
   },
   "notfound": {
     "title": "Pagina non trovata",

@@ -257,7 +257,10 @@
     "pwa_sub": "即点即开，像 App 一样。",
     "pwa_install": "安装",
     "pwa_ios_hint": "点按“分享”，然后选择“添加到主屏幕”。",
-    "pwa_got_it": "知道了"
+    "pwa_got_it": "知道了",
+    "pin_flight": "置顶此航班",
+    "unpin_flight": "取消固定",
+    "pinned_flight": "您的航班"
   },
   "notfound": {
     "title": "页面未找到",

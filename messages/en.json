@@ -257,7 +257,10 @@
     "pwa_sub": "Opens instantly, works like an app.",
     "pwa_install": "Install",
     "pwa_ios_hint": "Tap Share, then “Add to Home Screen”.",
-    "pwa_got_it": "Got it"
+    "pwa_got_it": "Got it",
+    "pin_flight": "Pin this flight",
+    "unpin_flight": "Unpin",
+    "pinned_flight": "Your flight"
   },
   "notfound": {
     "title": "Page not found",
