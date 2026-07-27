@@ -1,12 +1,13 @@
 import { getTranslations } from 'next-intl/server';
 import Link from 'next/link';
 import type { Airport } from '@/lib/airports';
-import { nearestAirports, getCountries, getAirportsByCountry, getCities } from '@/lib/airports';
+import { nearestAirports, getCountries, getAirportsByCountry, getCities, getAllIataCodes, getAirport } from '@/lib/airports';
 import { getCityName, getCountryName } from '@/lib/places';
 import { getAirportName } from '@/lib/airport-names';
 import type { FlightRow } from '@/lib/flights';
 import { MoreInfo, OverviewMetrics, AboutCard, Faq } from '@/components/AirportExtras';
 import { getAirportContentExtended } from '@/lib/airport-content-extended';
+import { getAirportSchedule, weekdayNames, maskToDays } from '@/lib/airport-schedule';
 import { getWikiRoutes } from '@/lib/wiki-routes';
 import { serviceLevel, serviceMeasuredOn } from '@/lib/warm';
 import { GENERIC_LOCALES } from '@/lib/generic-word';
@@ -56,7 +57,7 @@ function Chevron() {
   return <svg width="6" height="11" viewBox="0 0 6 11" fill="none" style={{ flexShrink: 0 }}><path d="M1 1L5 5.5L1 10" stroke="#3A3A3C" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" /></svg>;
 }
 
-export async function AirportBottom({ airport, locale, about, displayName, flights = [], noService = false, nearestServed = null, direction = 'departures' }: {
+export async function AirportBottom({ airport, locale, about, displayName, flights = [], noService = false, nearestServed = null, direction = 'departures', schedule = false }: {
   airport: Airport; locale: string; about: string | null; displayName?: string; flights?: FlightRow[];
   /**
    * Which board the caller rendered. Controls which end of each flight the routes section
@@ -67,6 +68,12 @@ export async function AirportBottom({ airport, locale, about, displayName, fligh
   noService?: boolean;
   /** Nearest airport that does have scheduled service — computed once by the page. */
   nearestServed?: (Airport & { km: number }) | null;
+  /**
+   * Render the weekly departure pattern. Passed only by the parent airport page: the
+   * /departures subpage canonicalises to the parent, and on /arrivals the section would face
+   * the wrong way. Opt-in, so a new caller cannot get it by accident.
+   */
+  schedule?: boolean;
 }) {
   const t = await getTranslations({ locale, namespace: 'home' });
   const tNav = await getTranslations({ locale, namespace: 'nav' });
@@ -79,6 +86,13 @@ export async function AirportBottom({ airport, locale, about, displayName, fligh
   // Only rendered when the board is genuinely empty — where flights exist, the board IS the
   // better answer and this would just repeat it less precisely.
   const wiki = flights.length ? null : getWikiRoutes(airport.iata);
+  // Weekly departure pattern. Only on the parent page and only for departures: the arrivals
+  // view aggregates by ORIGIN, where "flights from here on Fridays" would state the reverse
+  // of the data. `schedule` is a prop the subpages never pass, which is a stronger gate than
+  // checking `direction` — /departures also reports direction 'departures'.
+  const sched = schedule ? getAirportSchedule(airport.iata, new Set(getAllIataCodes())) : null;
+  const wdShort = sched ? weekdayNames(locale, 'short') : [];
+  const wdLong = sched ? weekdayNames(locale, 'long') : [];
   const rawLabels = EXT_LABELS[locale] || EXT_LABELS.en;
   const extLabels = {
     transport: rawLabels.transport.replace('{a}', name),
@@ -173,6 +187,24 @@ export async function AirportBottom({ airport, locale, about, displayName, fligh
     ...(!inbound && !noService && !airport.closed && airlines.length >= 3
       ? [{ q: t('faq_airlines_q', { name }), a: t('faq_airlines_a', { name, iata: airport.iata, list: listFmt(airlines.slice(0, 5).map(al => al.name)) }) }]
       : []),
+    // "On which days do flights depart?" — answerable only from the timetable, and the pair
+    // rides into the FAQPage markup this component already emits, so no new schema type is
+    // introduced. Appears and disappears with the section itself.
+    ...((() => {
+      if (!sched) return [];
+      const named = sched.rows
+        .map(r => ({ city: getCityName(getAirport(r.iata)?.city ?? '', locale), mask: r.mask }))
+        .filter(x => x.city && x.city.length > 2)
+        .slice(0, 3);
+      if (named.length < 2) return [];
+      // The FAQ says a route runs on Mondays, every Monday — a recurring form that Intl does
+      // not provide. "по понедельник, вторник" (nominative, straight from Intl) is not
+      // Russian; "по понедельникам, вторникам" is. Same for "montags", "los lunes",
+      // "أيام الاثنين". The table keeps Intl's short forms, where no preposition governs them.
+      const recurring = Array.from({ length: 7 }, (_, i) => tUi(`sched_wd${i}`));
+      const ex = listFmt(named.map(x => tUi('sched_faq_ex', { city: x.city, days: listFmt(maskToDays(x.mask, recurring)) })));
+      return [{ q: tUi('sched_faq_q', { a: name }), a: tUi('sched_faq_a', { a: name, d: sched.dailyCount, i: sched.irregularCount, ex }) }];
+    })()),
     ...((() => {
       if (inbound || noService || airport.closed) return [];
       // A destination whose label is just its IATA code (the localizer had no name) reads as
@@ -282,6 +314,81 @@ export async function AirportBottom({ airport, locale, about, displayName, fligh
                 {' '}· CC BY-SA 4.0
               </p>
             )}
+          </section>
+        )}
+
+        {/* 6a-ter. WEEKLY DEPARTURE PATTERN — the question the board cannot answer.
+            The board is capped at 80 rows over roughly a day, so a route that runs on
+            Tuesdays is invisible here five days out of seven. This table is the only place on
+            the site that knows those routes exist, and the only one that can say WHICH days.
+            Daily destinations are deliberately excluded from the rows: sorted by frequency
+            they occupy every visible line and turn the days column into the same word
+            repeated twenty times. Their count goes in the lead sentence, where it is a fact
+            rather than filler. */}
+        {sched && (
+          <section className="cv-auto" style={sec}>
+            <H2>{tUi('sched_title', { a: name })}</H2>
+            <p style={{ fontSize: 15, lineHeight: 1.6, color: '#B4B4B4', margin: '0 0 14px' }}>
+              {tUi('sched_lead', { a: name, d: sched.dailyCount, i: sched.irregularCount })}
+              {(() => {
+                // Only when the spread is real. On an airport whose busiest and quietest days
+                // differ by one destination, this sentence would dress noise as a finding.
+                const max = Math.max(...sched.perDay), min = Math.min(...sched.perDay);
+                if (max - min < 3) return null;
+                // Intl gives weekday names lowercase in most locales ("пятница", "freitag"),
+                // and this string starts with one — mid-paragraph that reads as a typo.
+                const sentence = tUi('sched_peak', {
+                  best: wdLong[sched.perDay.indexOf(max)], bn: max,
+                  worst: wdLong[sched.perDay.indexOf(min)], wn: min,
+                });
+                return ' ' + sentence.charAt(0).toLocaleUpperCase(locale) + sentence.slice(1);
+              })()}
+            </p>
+            <div style={{ overflowX: 'auto', background: '#0B0B0B', border: '1px solid #1A1A1A', borderRadius: 16, padding: '4px 18px 8px' }}>
+              <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: 15 }}>
+                <thead>
+                  <tr style={{ color: '#8A8A8A', fontSize: 12, textTransform: 'uppercase', letterSpacing: '0.06em' }}>
+                    <th style={{ textAlign: 'start', padding: '12px 8px 10px 0', fontWeight: 600 }}>{tUi('sched_col_dest')}</th>
+                    <th style={{ textAlign: 'start', padding: '12px 8px 10px 0', fontWeight: 600 }}>{tUi('sched_col_days')}</th>
+                    <th style={{ textAlign: 'end', padding: '12px 0 10px 8px', fontWeight: 600, whiteSpace: 'nowrap' }}>{tUi('sched_col_time')}</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {sched.rows.map(r => (
+                    <tr key={r.iata} style={{ borderTop: '1px solid #1A1A1A' }}>
+                      <td style={{ padding: '11px 8px 11px 0' }}>
+                        {/* Links to an airport page that already exists and is already
+                            indexed — this section adds no URLs of its own. */}
+                        <Link href={`/${locale}/airport/${r.iata}`} style={{ color: '#E4E4E4', textDecoration: 'none' }}>
+                          {getCityName(getAirport(r.iata)?.city ?? r.iata, locale)} <span style={{ color: '#6A6A6A' }}>({r.iata})</span>
+                        </Link>
+                        {r.airlines.length > 0 && (
+                          <span style={{ display: 'block', color: '#6A6A6A', fontSize: 12, marginTop: 2 }}>{r.airlines.join(' · ')}</span>
+                        )}
+                      </td>
+                      <td style={{ padding: '11px 8px 11px 0', color: '#B4B4B4' }}>{maskToDays(r.mask, wdShort).join(', ')}</td>
+                      <td style={{ padding: '11px 0 11px 8px', textAlign: 'end', color: '#B4B4B4', whiteSpace: 'nowrap', fontVariantNumeric: 'tabular-nums' }}>
+                        {r.times.length === 1 ? r.times[0] : r.times.length === 2 ? r.times.join(' / ') : `${r.times[0]} +${r.times.length - 1}`}
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+            {sched.irregularCount > sched.rows.length && (
+              <p style={{ fontSize: 13, color: '#8A8A8A', marginTop: 10 }}>{tUi('sched_more', { n: sched.irregularCount - sched.rows.length })}</p>
+            )}
+            <p style={{ fontSize: 12, color: '#6A6A6A', marginTop: 10, lineHeight: 1.5 }}>
+              {tUi('sched_note', {
+                // Russian renders "27 июля 2026 г." — its trailing period collides with the
+                // sentence's own, giving "…2026 г.. Только регулярные".
+                m: sched.asOf
+                  ? new Intl.DateTimeFormat(locale, { year: 'numeric', month: 'long', day: 'numeric' })
+                      .format(new Date(`${sched.asOf}T00:00:00Z`))
+                      .replace(/\.$/, '')
+                  : '',
+              })}
+            </p>
           </section>
         )}
 

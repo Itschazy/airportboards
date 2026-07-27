@@ -79,14 +79,27 @@ async function backfill(iata) {
   }
   for (const t of store[iata] || []) if (t[1]) carriers.add(t[1]);
 
+  // Key on flight + time + DESTINATION. Keying on flight+time alone collapses the segments
+  // of a multi-leg rotation: TU397 leaves Abidjan at 22:30 for Ouagadougou on Thursdays and
+  // for Tunis at the same clock time on other days — same number, same minute, two different
+  // places. The first version overwrote one with the other and lost the days of both.
+  const key = (t) => `${t[0]}:${t[3]}:${t[2]}`;
+  // And merge day masks rather than replacing: two sources describing the same segment on
+  // different weekdays are two halves of one truth.
+  const put = (m, t) => {
+    const k = key(t);
+    const prev = m.get(k);
+    if (prev) prev[4] |= t[4];
+    else m.set(k, t);
+  };
   const byFlight = new Map();
-  for (const t of store[iata] || []) byFlight.set(`${t[0]}:${t[3]}`, t);
-  for (const r of probe) { const t = toTuple(r); if (t) byFlight.set(`${t[0]}:${t[3]}`, t); }
+  for (const t of store[iata] || []) put(byFlight, [...t]);
+  for (const r of probe) { const t = toTuple(r); if (t) put(byFlight, t); }
 
   for (const carrier of carriers) {
     const rows = await api(`dep_iata=${iata}&airline_iata=${carrier}&limit=500`);
     if (!rows) continue;
-    for (const r of rows) { const t = toTuple(r); if (t) byFlight.set(`${t[0]}:${t[3]}`, t); }
+    for (const r of rows) { const t = toTuple(r); if (t) put(byFlight, t); }
   }
   return { rows: [...byFlight.values()], carriers: carriers.size };
 }
