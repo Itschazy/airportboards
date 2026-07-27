@@ -61,6 +61,11 @@ const FILTER_STATUSES: Record<FilterKey, string[]> = {
 };
 
 const FILTERS: FilterKey[] = ['all', 'ontime', 'delayed', 'boarding', 'finalcall', 'departed'];
+// Arrivals never board and never make a final call — those chips on an arrivals board were
+// filters over statuses that cannot occur, i.e. two dead buttons on every arrivals view.
+// (Spotted by an external reviewer pass; confirmed in mapStatus: arrivals rows only ever map
+// to scheduled/ontime/delayed/arrived/baggage/cancelled.)
+const ARR_FILTERS: FilterKey[] = ['all', 'ontime', 'delayed', 'departed'];
 
 const haptic = (ms = 6) => { try { (navigator as any).vibrate?.(ms); } catch {} };
 
@@ -511,6 +516,36 @@ export function FlightBoard({ airport, locale, defaultMode = 'departures', displ
   const searchRef = useRef<HTMLInputElement>(null);
   useEffect(() => { if (searchOpen) searchRef.current?.focus(); }, [searchOpen]);
 
+  // A live title for the HIDDEN tab only: "12:35 SU1403 · AER" — the tab becomes a glanceable
+  // board on its own, which is the cheapest return-visit surface a site like this has.
+  // Strictly gated on document.hidden, and restored on visibility: Google renders pages with a
+  // visible viewport, so a dynamic title on the visible tab could be indexed in place of the
+  // SEO title. No i18n needed — the string is a time, a flight code and an IATA code.
+  useEffect(() => {
+    const original = document.title;
+    const compute = () => {
+      const next = flights.find(f => !['departed', 'arrived', 'baggage', 'cancelled'].includes(f.status));
+      return next ? `${next.actual || next.scheduled} ${next.flight} · ${airport.iata}` : null;
+    };
+    let timer: ReturnType<typeof setInterval> | null = null;
+    const apply = () => {
+      if (document.hidden) {
+        const t2 = compute();
+        if (t2) document.title = t2;
+        if (!timer) timer = setInterval(() => { const v = compute(); if (v && document.hidden) document.title = v; }, 60_000);
+      } else {
+        document.title = original;
+        if (timer) { clearInterval(timer); timer = null; }
+      }
+    };
+    document.addEventListener('visibilitychange', apply);
+    return () => {
+      document.removeEventListener('visibilitychange', apply);
+      if (timer) clearInterval(timer);
+      document.title = original;
+    };
+  }, [flights, airport.iata]);
+
   // Record this visit in the same localStorage list the homepage search maintains
   // ('ab_recent', shape identical to AirportSearch's saveRecent).
   //
@@ -655,7 +690,10 @@ export function FlightBoard({ airport, locale, defaultMode = 'departures', displ
             className={isLive ? 'live-dot' : ''}
             style={{ width: 6, height: 6, borderRadius: '50%', flexShrink: 0, background: isLive ? C.green : C.gray }}
           />
-          <span suppressHydrationWarning style={{ fontSize: 12, color: C.secondary, opacity: 0.85 }}>{updLabel || '—'}</span>
+          {/* The relative label answers "how old"; the machine-readable dateTime and the
+              hover/long-press title answer exactly WHEN — the transparency every review pass
+              kept asking for, at zero locale-string cost (a formatted datetime is universal). */}
+          <time suppressHydrationWarning dateTime={lastUpdated?.toISOString()} title={lastUpdated ? lastUpdated.toLocaleString(locale) : undefined} style={{ fontSize: 12, color: C.secondary, opacity: 0.85 }}>{updLabel || '—'}</time>
           {!loading && flights.length > 0 && (
             <span style={{ fontSize: 12, color: C.secondary, opacity: 0.85 }}>
               {' · '}{(() => { const n = flights === initialFlights && boardTotal != null ? boardTotal : flights.length; return mode === 'departures' ? t('departures_on_board', { count: n }) : t('arrivals_on_board', { count: n }); })()}
@@ -739,7 +777,7 @@ export function FlightBoard({ airport, locale, defaultMode = 'departures', displ
 
       {/* ── Filter pills ───────────────────────────────────── */}
       <div style={{ display: 'flex', gap: 7, padding: '0 16px 12px', overflowX: 'auto', maxWidth: 960, margin: '0 auto' }}>
-        {FILTERS.map(key => {
+        {(mode === 'arrivals' ? ARR_FILTERS : FILTERS).map(key => {
           const active = filter === key;
           return (
             <button key={key} type="button" aria-pressed={active} className="press" onClick={() => { haptic(); setFilter(key); }} style={{

@@ -6,6 +6,7 @@ import {
 } from '@/lib/airports';
 import { locales } from '@/lib/i18n';
 import { AirportSearch } from '@/components/AirportSearch';
+import { StandaloneResume } from '@/components/StandaloneResume';
 import { PopularNow } from '@/components/PopularNow';
 import { PopularList } from '@/components/PopularList';
 import { RecentlyViewed } from '@/components/RecentlyViewed';
@@ -98,6 +99,7 @@ export default async function HomePage({ params }: Props) {
       {/* SEARCH */}
       <div style={{ marginTop: 28, width: '100%' }}>
         <AirportSearch locale={locale} placeholder={tNav('search_placeholder')} nearestLabel={t('nearest')} />
+        <StandaloneResume locale={locale} />
       </div>
 
       {/* TRUST METRICS */}
