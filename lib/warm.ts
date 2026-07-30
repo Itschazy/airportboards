@@ -21,7 +21,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { getAirport } from '@/lib/airports';
-import { getStaleTs, usage, canSpend } from '@/lib/flightStore';
+import { getStaleTs, usage, canSpend, humanReserve } from '@/lib/flightStore';
 import { hasWikiAirlines, getWikiRoutes } from '@/lib/wiki-routes';
 
 export type WarmTier = {
@@ -200,13 +200,9 @@ export function tickBudget(runsPerDay = 12, now = new Date()): number {
   // a real browser off the same quota, so a warmer that drained the plan would leave every
   // visitor on a stale board for the rest of the month.
   //
-  // Held as a SHARE of the cap rather than an absolute number so the split survives a plan
-  // change: the intended 130k warm / 70k human split on a 200k plan is 35% reserved, and on
-  // today's 100k plan the same 35% keeps the ratio instead of starving the warmer down to
-  // 25k. AIRLABS_HUMAN_RESERVE still overrides with an absolute figure if that is wanted.
-  const pct = Number(process.env.AIRLABS_HUMAN_RESERVE_PCT ?? 35) / 100;
-  const abs = process.env.AIRLABS_HUMAN_RESERVE;
-  const reserve = abs !== undefined ? Number(abs) : Math.round(u.cap * pct);
+  // See humanReserve() for why this is a share of the cap rather than a fixed number. It is
+  // the same figure live-budget.ts holds visitors to, so neither side can outgrow the other.
+  const reserve = humanReserve();
   // Warming simply stops once only the reserve is left, which guarantees that many requests
   // remain available to visitors no matter how the month went.
   const spendable = Math.max(0, u.remaining - reserve);

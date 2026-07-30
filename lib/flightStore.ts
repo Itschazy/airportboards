@@ -120,6 +120,26 @@ export function put(key: string, data: AirlabsFlight[]) {
 }
 /** True while we are still under the monthly airlabs budget. */
 export function canSpend(): boolean { return db().count < monthlyCap(); }
+
+/**
+ * The share of the plan held for live visitor traffic, as a number of requests.
+ *
+ * Held as a SHARE of the cap rather than an absolute number so the split survives a plan
+ * change: the intended 130k warm / 70k human split on a 200k plan is 35% reserved, and on a
+ * 100k plan the same 35% keeps the ratio instead of starving the warmer down to 25k.
+ * AIRLABS_HUMAN_RESERVE still overrides with an absolute figure if that is wanted.
+ *
+ * Both directions of the split read this one function, because they have to agree: warm.ts
+ * stops warming once only the reserve is left, and lib/live-budget.ts stops serving live
+ * fetches once visitors have spent it. Only the first half of that existed for a long time —
+ * `canSpend()` looks at the total alone — so live traffic was free to eat the warmer's 88%.
+ */
+export function humanReserve(): number {
+  const abs = process.env.AIRLABS_HUMAN_RESERVE;
+  if (abs !== undefined) return Number(abs);
+  const pct = Number(process.env.AIRLABS_HUMAN_RESERVE_PCT ?? 35) / 100;
+  return Math.round(monthlyCap() * pct);
+}
 export function spend(kind: SpendKind = 'human') {
   const s = db();
   s.count++;

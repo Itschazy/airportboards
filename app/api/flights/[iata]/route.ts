@@ -1,9 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { getBoard, getBoardFetchedAt, CACHE_SECONDS } from '@/lib/flights';
-
-// Bots never spend airlabs quota — they get whatever is already in the store (or empty).
-// Only human requests may trigger a live fetch (and only under the monthly budget).
-const BOT_RE = /bot|crawl|spider|slurp|bing|yandex|google|baidu|duckduck|facebook|embed|preview|fetch|monitor|lighthouse|headless|wget|curl|python|java|go-http|axios|node-fetch/i;
+import { mayFetchLive } from '@/lib/live-budget';
 
 export async function GET(
   req: NextRequest,
@@ -13,7 +10,9 @@ export async function GET(
   const code = iata.toUpperCase();
   const direction = (req.nextUrl.searchParams.get('direction') || 'departures') as 'departures' | 'arrivals';
   const locale = req.nextUrl.searchParams.get('locale') || 'en';
-  const live = !BOT_RE.test(req.headers.get('user-agent') || '');
+  // Anything not recognisable as a visitor's browser reads the store instead of buying data;
+  // see lib/live-budget.ts for what that protects and why the old check was not enough.
+  const live = mayFetchLive(req, `${direction}:${code}`);
 
   let flights: Awaited<ReturnType<typeof getBoard>> = [];
   try { flights = await getBoard(code, direction, locale, live); } catch { /* honest empty */ }

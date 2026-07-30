@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { usage } from '@/lib/flightStore';
 import { archiveStats } from '@/lib/board-archive';
+import { liveBudgetStats } from '@/lib/live-budget';
 import { isOperatorRequest } from '@/lib/api-auth';
 
 export const dynamic = 'force-dynamic';
@@ -12,6 +13,10 @@ export const dynamic = 'force-dynamic';
 // spend quota structurally, but a flood of non-bot requests across distinct airports can, and
 // this endpoint would have handed that attacker a progress bar. Public callers get liveness only.
 //
+// `liveBudget` reports whether that flood is being throttled right now — the per-IP breadth cap
+// and the monthly human ceiling from lib/live-budget.ts, with what they have actually seen. Both
+// refuse silently by design, so this is the only place their effect is visible.
+//
 //   GET /api/airlabs-usage                  -> { ok: true }
 //   GET /api/airlabs-usage?token=CRON_TOKEN -> full usage figures
 //   (on-box, from the VDS itself, no token is needed)
@@ -19,5 +24,8 @@ export function GET(req: NextRequest) {
   if (!isOperatorRequest(req)) {
     return NextResponse.json({ ok: true }, { headers: { 'Cache-Control': 'no-store' } });
   }
-  return NextResponse.json({ ...usage(), archive: archiveStats() }, { headers: { 'Cache-Control': 'no-store' } });
+  return NextResponse.json(
+    { ...usage(), archive: archiveStats(), liveBudget: liveBudgetStats() },
+    { headers: { 'Cache-Control': 'no-store' } },
+  );
 }
