@@ -101,7 +101,7 @@ export default async function FlightPage({ params }: Props) {
     <div style={{ maxWidth: 640, margin: '0 auto', padding: '36px 18px 64px' }}>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       <div style={{ fontSize: 13, color: '#8A8A8A', marginBottom: 14 }}>
-        <Link href={`/${locale}`} style={{ color: '#6A6A6A', textDecoration: 'none' }}>airportsboard</Link>
+        <Link href={`/${locale}`} style={{ color: '#6A6A6A', textDecoration: 'none', display: 'inline-block', minHeight: 24 }}>airportsboard</Link>
       </div>
 
       {f && statusKey && (

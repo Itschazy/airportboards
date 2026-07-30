@@ -112,9 +112,9 @@ export default async function CountryPage({ params }: Props) {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(itemList) }} />
       <div style={{ fontSize: 13, color: '#8A8A8A', marginBottom: 8 }}>
-        <Link href={`/${locale}`} style={{ color: '#6A6A6A', textDecoration: 'none' }}>airportsboard</Link>
+        <Link href={`/${locale}`} style={{ color: '#6A6A6A', textDecoration: 'none', display: 'inline-block', minHeight: 24 }}>airportsboard</Link>
         {' / '}
-        <Link href={`/${locale}/airports`} style={{ color: '#6A6A6A', textDecoration: 'none' }}>{t('sec_countries')}</Link>
+        <Link href={`/${locale}/airports`} style={{ color: '#6A6A6A', textDecoration: 'none', display: 'inline-block', minHeight: 24 }}>{t('sec_countries')}</Link>
       </div>
       <h1 style={{ fontSize: 'clamp(30px, 8vw, 42px)', fontWeight: 800, letterSpacing: '-0.03em', color: '#FFFFFF', lineHeight: 1.05, margin: 0 }}>
         <span style={{ marginRight: 12 }}>{flag(c.iso2)}</span>{t('country_title', { country: countryName })}

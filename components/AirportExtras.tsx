@@ -94,7 +94,7 @@ export function AboutCard({ text, readMore }: { text: string; readMore: string }
         {text}
       </p>
       {!open && (
-        <button className="press" onClick={() => setOpen(true)} style={{ marginTop: 10, background: 'none', border: 'none', color: C.blue, fontSize: 14, fontWeight: 600, cursor: 'pointer', padding: 0 }}>
+        <button className="press" onClick={() => setOpen(true)} style={{ marginTop: 8, background: 'none', border: 'none', color: C.blue, fontSize: 14, fontWeight: 600, cursor: 'pointer', padding: '2px 0' }}>
           {readMore}
         </button>
       )}

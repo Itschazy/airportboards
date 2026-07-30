@@ -253,7 +253,10 @@ export async function AirportBottom({ airport, locale, about, displayName, fligh
   const H2 = ({ children, href, viewAll }: { children: React.ReactNode; href?: string; viewAll?: string }) => (
     <div style={{ display: 'flex', alignItems: 'baseline', justifyContent: 'space-between', marginBottom: 14, gap: 12 }}>
       <h2 style={{ margin: 0, fontSize: 13, fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.12em', color: '#8A8A8A' }}>{children}</h2>
-      {href && viewAll && <Link href={href} style={{ fontSize: 13, color: '#0A84FF', textDecoration: 'none', flexShrink: 0 }}>{viewAll}</Link>}
+      {/* Padding on the bottom and inline-start only: the row is baseline-aligned, so padding-top
+          would drag the heading down, and padding-inline-end would unstick it from the right edge.
+          The negative margin gives back the 6px so single-line headings keep their height. */}
+      {href && viewAll && <Link href={href} style={{ fontSize: 13, color: '#0A84FF', textDecoration: 'none', flexShrink: 0, paddingBottom: 6, paddingInlineStart: 6, marginBottom: -6 }}>{viewAll}</Link>}
     </div>
   );
   const sec: React.CSSProperties = { marginTop: 36 };
@@ -366,7 +369,7 @@ export async function AirportBottom({ airport, locale, about, displayName, fligh
                       <td style={{ padding: '11px 8px 11px 0' }}>
                         {/* Links to an airport page that already exists and is already
                             indexed — this section adds no URLs of its own. */}
-                        <Link href={`/${locale}/airport/${r.iata}`} style={{ color: '#E4E4E4', textDecoration: 'none' }}>
+                        <Link href={`/${locale}/airport/${r.iata}`} style={{ color: '#E4E4E4', textDecoration: 'none', display: 'inline-block', minHeight: 24 }}>
                           {getCityName(getAirport(r.iata)?.city ?? r.iata, locale)} <span style={{ color: '#6A6A6A' }}>({r.iata})</span>
                         </Link>
                         {r.airlines.length > 0 && (
@@ -642,9 +645,9 @@ export async function AirportBottom({ airport, locale, about, displayName, fligh
             <div style={{ fontSize: 15, fontWeight: 700, color: '#FFFFFF' }}>airportsboard</div>
             <p style={{ fontSize: 13, color: SUB, lineHeight: 1.5, marginTop: 8, maxWidth: 340 }}>{t('footer_tagline')}</p>
             <div style={{ display: 'flex', flexWrap: 'wrap', gap: '10px 18px', marginTop: 16, fontSize: 13 }}>
-              {countryInfo && <Link href={`/${locale}/airports/${countryInfo.slug}`} style={{ color: SUB, textDecoration: 'none' }}>{t('footer_countries')}</Link>}
-              {cityLink && <Link href={cityLink} style={{ color: SUB, textDecoration: 'none' }}>{city}</Link>}
-              <Link href={`/${locale}/az/a`} style={{ color: SUB, textDecoration: 'none' }}>{t('az_all')}</Link>
+              {countryInfo && <Link href={`/${locale}/airports/${countryInfo.slug}`} style={{ color: SUB, textDecoration: 'none', display: 'inline-block', minHeight: 24 }}>{t('footer_countries')}</Link>}
+              {cityLink && <Link href={cityLink} style={{ color: SUB, textDecoration: 'none', display: 'inline-block', minHeight: 24 }}>{city}</Link>}
+              <Link href={`/${locale}/az/a`} style={{ color: SUB, textDecoration: 'none', display: 'inline-block', minHeight: 24 }}>{t('az_all')}</Link>
             </div>
             <div style={{ fontSize: 12, color: '#3A3A3C', marginTop: 18 }}>© 2026 airportsboard.live</div>
           </footer>

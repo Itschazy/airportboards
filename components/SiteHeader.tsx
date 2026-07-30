@@ -40,10 +40,12 @@ export function SiteHeader({ locale }: { locale: Locale }) {
         padding: '0 16px', height: 48,
         display: 'flex', alignItems: 'center',
       }}>
+        {/* alignSelf stretch, not padding: the link is itself a centred flex box, so filling
+            the 48px bar moves the target from 22.5px to 48px and the wordmark not at all. */}
         <Link href={`/${locale}`} style={{
           fontSize: 14, fontWeight: 700,
           color: '#FFFFFF', letterSpacing: '-0.01em',
-          display: 'flex', alignItems: 'center', gap: 6,
+          display: 'flex', alignItems: 'center', gap: 6, alignSelf: 'stretch',
         }}>
           <span style={{ fontSize: 15 }} aria-hidden="true">✈</span>
           airportsboard

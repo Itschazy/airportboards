@@ -74,7 +74,11 @@ export async function SiteFooter({ locale }: { locale: Locale }) {
     { href: `/${locale}/terms`, label: tLegal('terms') },
   ];
 
-  const linkStyle = { color: '#8A8A8A', textDecoration: 'none', fontSize: 13 } as const;
+  // WCAG 2.2 (2.5.8) asks for a 24x24 CSS px target, and a 13px link's line box is 19.5px, so
+  // every link in this footer was short on a site where roughly 70% of visits are phones.
+  // inline-block + minHeight grows the target DOWNWARD into the 8px row gap that is already
+  // there: the text does not move, the column grows about 4.5px per row, nothing reflows.
+  const linkStyle = { color: '#8A8A8A', textDecoration: 'none', fontSize: 13, display: 'inline-block', minHeight: 24 } as const;
   const headStyle = { color: '#6A6A6A', fontSize: 11, fontWeight: 700, letterSpacing: '0.06em', textTransform: 'uppercase', margin: '0 0 10px' } as const;
 
   return (
@@ -98,7 +102,10 @@ export async function SiteFooter({ locale }: { locale: Locale }) {
           <ul style={{ listStyle: 'none', margin: 0, padding: 0, display: 'flex', flexWrap: 'wrap', gap: '8px 12px' }}>
             {LETTERS.map(x => (
               <li key={x}>
-                <Link href={`/${locale}/az/${x}`} style={{ ...linkStyle, fontWeight: 600 }}>{x.toUpperCase()}</Link>
+                {/* A single letter is about 9px wide, so this is the one place in the footer
+                    that also fails on the horizontal axis; centring inside 24px keeps the
+                    existing 12px column gap and the row reads the same. */}
+                <Link href={`/${locale}/az/${x}`} style={{ ...linkStyle, fontWeight: 600, minWidth: 24, textAlign: 'center' }}>{x.toUpperCase()}</Link>
               </li>
             ))}
           </ul>
@@ -128,6 +135,7 @@ export async function SiteFooter({ locale }: { locale: Locale }) {
               fontWeight: loc === locale ? 600 : 400,
               textDecoration: 'none',
               fontSize: 13,
+              display: 'inline-block', minHeight: 24,   // 24px tap target; see linkStyle above
             }}
           >
             {localeNames[loc]}
@@ -136,7 +144,7 @@ export async function SiteFooter({ locale }: { locale: Locale }) {
       </nav>
       <nav aria-label={tLegal('legal')} style={{ maxWidth: 1000, margin: '18px auto 0', display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: '8px 20px' }}>
         {legalLinks.map(l => (
-          <Link key={l.href} href={l.href} style={{ color: '#8A8A8A', textDecoration: 'none', fontSize: 13 }}>{l.label}</Link>
+          <Link key={l.href} href={l.href} style={{ color: '#8A8A8A', textDecoration: 'none', fontSize: 13, display: 'inline-block', minHeight: 24 }}>{l.label}</Link>
         ))}
       </nav>
       <p style={{ maxWidth: 1000, margin: '20px auto 0', textAlign: 'center', fontSize: 12, color: '#6A6A6A', lineHeight: 1.5 }}>

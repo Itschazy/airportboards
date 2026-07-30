@@ -81,13 +81,15 @@ export default async function RoutePage({ params }: Props) {
     ],
   };
 
-  const link: React.CSSProperties = { color: '#0A84FF', textDecoration: 'none' };
+  // Standalone navigation, not links inside a sentence, so WCAG 2.5.8's inline exception does
+  // not apply. The taller box grows into the paragraph margins that are already there.
+  const link: React.CSSProperties = { color: '#0A84FF', textDecoration: 'none', display: 'inline-block', minHeight: 24 };
 
   return (
     <div style={{ maxWidth: 760, margin: '0 auto', padding: '36px 18px 64px' }}>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       <div style={{ fontSize: 13, color: '#8A8A8A', marginBottom: 10 }}>
-        <Link href={`/${locale}`} style={{ color: '#6A6A6A', textDecoration: 'none' }}>airportsboard</Link>
+        <Link href={`/${locale}`} style={{ color: '#6A6A6A', textDecoration: 'none', display: 'inline-block', minHeight: 24 }}>airportsboard</Link>
       </div>
       <h1 style={{ fontSize: 'clamp(26px, 6.4vw, 38px)', fontWeight: 800, letterSpacing: '-0.03em', color: '#FFFFFF', margin: '0 0 8px', lineHeight: 1.1 }}>
         {t('route_h1', { from, to, iata1: p.from, iata2: p.to })}

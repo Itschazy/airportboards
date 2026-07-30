@@ -29,7 +29,7 @@ export function Breadcrumb({ trail, extra }: { trail: Crumb[]; extra?: { href: s
       }}>
         {path.map(c => (
           <li key={c.item} style={{ display: 'flex', alignItems: 'center', gap: 6 }}>
-            <Link href={c.item} style={{ color: '#8A8A8A', textDecoration: 'none' }}>{c.name}</Link>
+            <Link href={c.item} style={{ color: '#8A8A8A', textDecoration: 'none', minHeight: 24 }}>{c.name}</Link>
             <span aria-hidden="true">›</span>
           </li>
         ))}
@@ -40,7 +40,7 @@ export function Breadcrumb({ trail, extra }: { trail: Crumb[]; extra?: { href: s
         {extra && (
           <li style={{ display: 'flex', alignItems: 'center', gap: 6 }}>
             <span aria-hidden="true" style={{ opacity: 0.6 }}>·</span>
-            <Link href={extra.href} style={{ color: '#8A8A8A' }}>{extra.label}</Link>
+            <Link href={extra.href} style={{ color: '#8A8A8A', minHeight: 24 }}>{extra.label}</Link>
           </li>
         )}
       </ol>

@@ -67,7 +67,7 @@ export default async function AirlinePage({ params }: Props) {
     <div style={{ maxWidth: 720, margin: '0 auto', padding: '36px 18px 64px' }}>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       <div style={{ fontSize: 13, color: '#8A8A8A', marginBottom: 12 }}>
-        <Link href={`/${locale}`} style={{ color: '#6A6A6A', textDecoration: 'none' }}>airportsboard</Link>
+        <Link href={`/${locale}`} style={{ color: '#6A6A6A', textDecoration: 'none', display: 'inline-block', minHeight: 24 }}>airportsboard</Link>
       </div>
       <h1 style={{ fontSize: 'clamp(30px, 8vw, 46px)', fontWeight: 800, letterSpacing: '-0.03em', color: '#FFFFFF', margin: 0, lineHeight: 1.05 }}>
         {t('airline_title', { airline: name })}

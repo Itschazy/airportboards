@@ -139,9 +139,9 @@ export default async function EventPage({ params }: Props) {
         <script key={i} type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(s) }} />
       ))}
       <div style={{ fontSize: 13, color: '#8A8A8A', marginBottom: 10 }}>
-        <Link href={`/${locale}`} style={{ color: '#6A6A6A', textDecoration: 'none' }}>airportsboard</Link>
+        <Link href={`/${locale}`} style={{ color: '#6A6A6A', textDecoration: 'none', display: 'inline-block', minHeight: 24 }}>airportsboard</Link>
         {' / '}
-        <Link href={`/${locale}/events`} style={{ color: '#6A6A6A', textDecoration: 'none' }}>{tE('hub_title')}</Link>
+        <Link href={`/${locale}/events`} style={{ color: '#6A6A6A', textDecoration: 'none', display: 'inline-block', minHeight: 24 }}>{tE('hub_title')}</Link>
       </div>
       <h1 style={{ fontSize: 'clamp(28px, 7vw, 42px)', fontWeight: 800, letterSpacing: '-0.03em', color: '#FFFFFF', margin: '0 0 6px', lineHeight: 1.08 }}>
         <span aria-hidden="true">{TYPE_EMOJI[m.type] || '📍'}</span> {c.h1}
