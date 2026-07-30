@@ -2,7 +2,6 @@
 
 import { useEffect, useRef, useState } from 'react';
 import { useTranslations } from 'next-intl';
-import { CONSENT_KEY } from '@/components/Analytics';
 
 // A quiet "add to Home Screen" card.
 //
@@ -41,12 +40,6 @@ export function InstallPrompt() {
       const standalone = window.matchMedia('(display-mode: standalone)').matches
         || (navigator as unknown as { standalone?: boolean }).standalone === true;
       if (standalone || localStorage.getItem(K_DONE)) return;
-      // Consent comes first. Both cards live in the same bottom slot and this one has the
-      // higher z-index, so until the visitor has answered the cookie banner the install card
-      // would sit ON TOP of the Accept/Decline buttons — an install prompt that blocks a GDPR
-      // choice. If consent has not been decided yet, skip this visit entirely; the card's own
-      // visit gating means there is always a later one.
-      if (!localStorage.getItem(CONSENT_KEY)) return;
       const dismissed = Number(localStorage.getItem(K_DISMISSED) || 0);
       if (dismissed && Date.now() - dismissed < DISMISS_DAYS * 864e5) return;
 
@@ -61,7 +54,21 @@ export function InstallPrompt() {
       const isIos = /iphone|ipad|ipod/i.test(navigator.userAgent)
         || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
       let timer: ReturnType<typeof setTimeout> | null = null;
-      const arm = () => { if (!timer) timer = setTimeout(() => setShow(true), 4000); };
+      // Consent comes first, and the question is whether the slot is TAKEN — not whether a
+      // choice was recorded. Both cards live in the same bottom strip and this one has the
+      // higher z-index, so an install card must never land on top of Accept/Decline.
+      //
+      // This used to read `if (!localStorage.getItem(CONSENT_KEY)) return`, which stopped being
+      // equivalent the moment the cookie bar learned to stand down for Google's own CMP
+      // (see components/CookieNotice.tsx): an EEA visitor is never offered our bar, so that key
+      // is never written, so the card could never appear for them again. Asking the DOM keeps
+      // the original guarantee and covers Google's wall too — which is opaque, full-screen and
+      // at z-index 2147483645, so showing anything underneath it merely burns the visit.
+      // It also drops an accidental extra visit: the old early return ran BEFORE the counter
+      // below, so a first visit with consent undecided never counted, and the card really
+      // needed three visits rather than the two the rules describe.
+      const slotTaken = () => !!document.querySelector('[data-cookie-bar], .fc-consent-root, .fc-dialog-container');
+      const arm = () => { if (!timer) timer = setTimeout(() => { if (!slotTaken()) setShow(true); }, 4000); };
 
       const onBip = (e: Event) => {
         e.preventDefault();

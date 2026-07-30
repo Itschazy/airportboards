@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useState, useCallback, useRef } from 'react';
+import Link from 'next/link';
 import { useTranslations } from 'next-intl';
 import type { Airport } from '@/lib/airports';
 
@@ -384,20 +385,48 @@ function BottomSheet({ flight, mode, onClose, tz, locale, updLabel, originIata, 
           </div>
         </div>
 
-        {/* Route strip — where from, where to. The sheet is shareable context on its own. */}
-        {routeFrom.code && routeTo.code && (
-        <div style={{ display: 'flex', alignItems: 'center', gap: 12, margin: '18px 0 0', padding: '14px 16px', background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.07)', borderRadius: 16 }}>
-          <div style={{ flex: 1, minWidth: 0 }}>
-            <div style={{ fontSize: 20, fontWeight: 800, letterSpacing: '-0.02em', color: C.text, lineHeight: 1 }}>{routeFrom.code}</div>
-            <div style={{ fontSize: 11.5, color: C.secondary, marginTop: 4, overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>{routeFrom.name}</div>
-          </div>
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true" className="route-arrow" style={{ flexShrink: 0, opacity: 0.45 }}><path d="M3 12h16m0 0-6-6m6 6-6 6" stroke="#FFFFFF" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" /></svg>
-          <div style={{ flex: 1, minWidth: 0, textAlign: 'end' }}>
-            <div style={{ fontSize: 20, fontWeight: 800, letterSpacing: '-0.02em', color: C.text, lineHeight: 1 }}>{routeTo.code}</div>
-            <div style={{ fontSize: 11.5, color: C.secondary, marginTop: 4, overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>{routeTo.name}</div>
-          </div>
-        </div>
-        )}
+        {/* Route strip — where from, where to. The sheet is shareable context on its own.
+            It is also the sheet's only way OUT. Everything else here ends the journey: one
+            action (pin), a close button, and a board the visitor already came from — which is
+            most of why a session is 1.79 pages deep, since neither the mode tabs nor this sheet
+            change the URL. /{locale}/route/{FROM}-{TO} is an existing, indexed page that answers
+            the obvious next question ("what else flies this route today"), so no new page class
+            is created. Deliberately NOT /flight/{code}: that class 404s on purpose, and putting
+            ~13k thin pages back into the index is a decision already taken the other way.
+            Linkified only for real IATA pairs, because the route page matches ^[A-Z]{3}-[A-Z]{3}$
+            and anything else would hand the visitor a 404. */}
+        {routeFrom.code && routeTo.code && (() => {
+          const strip = (
+            <>
+              <div style={{ flex: 1, minWidth: 0 }}>
+                <div style={{ fontSize: 20, fontWeight: 800, letterSpacing: '-0.02em', color: C.text, lineHeight: 1 }}>{routeFrom.code}</div>
+                <div style={{ fontSize: 11.5, color: C.secondary, marginTop: 4, overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>{routeFrom.name}</div>
+              </div>
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true" className="route-arrow" style={{ flexShrink: 0, opacity: 0.45 }}><path d="M3 12h16m0 0-6-6m6 6-6 6" stroke="#FFFFFF" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" /></svg>
+              <div style={{ flex: 1, minWidth: 0, textAlign: 'end' }}>
+                <div style={{ fontSize: 20, fontWeight: 800, letterSpacing: '-0.02em', color: C.text, lineHeight: 1 }}>{routeTo.code}</div>
+                <div style={{ fontSize: 11.5, color: C.secondary, marginTop: 4, overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>{routeTo.name}</div>
+              </div>
+            </>
+          );
+          const box = { display: 'flex', alignItems: 'center', gap: 12, margin: '18px 0 0', padding: '14px 16px', background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.07)', borderRadius: 16 } as const;
+          const pair = /^[A-Z]{3}$/i.test(routeFrom.code) && /^[A-Z]{3}$/i.test(routeTo.code);
+          if (!pair) return <div style={box}>{strip}</div>;
+          return (
+            <Link
+              href={`/${locale}/route/${routeFrom.code.toUpperCase()}-${routeTo.code.toUpperCase()}`}
+              className="press"
+              aria-label={`${routeFrom.code} → ${routeTo.code}`}
+              style={{ ...box, textDecoration: 'none', color: 'inherit' }}
+            >
+              {strip}
+              {/* Same chevron the board rows use, so "this opens something" reads the same way twice. */}
+              <svg width="8" height="14" viewBox="0 0 8 14" fill="none" aria-hidden="true" style={{ flexShrink: 0, marginInlineStart: 2 }}>
+                <path d="M1 1L7 7L1 13" stroke="rgba(255,255,255,0.28)" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" />
+              </svg>
+            </Link>
+          );
+        })()}
 
         <div style={{ height: 1, background: 'rgba(255,255,255,0.08)', margin: '18px 0' }} />
 
@@ -481,7 +510,11 @@ function BottomSheet({ flight, mode, onClose, tz, locale, updLabel, originIata, 
           maxWidth: 640, margin: '0 auto',
         }}>
         {/* Handle (tap to close) */}
-        <button type="button" onClick={onClose} aria-label={tNav('close')} style={{ display: 'block', width: '100%', padding: '12px 0 6px', background: 'none', border: 'none', cursor: 'pointer' }}>
+        {/* The grab handle doubles as the close control, and at 12px+5px+6px it measured 23px
+            tall — just under the 24px WCAG 2.2 asks for, on the one control every visitor needs
+            to leave. The extra padding is invisible: the bar itself is unchanged, the target
+            around it is not. */}
+        <button type="button" onClick={onClose} aria-label={tNav('close')} style={{ display: 'block', width: '100%', padding: '16px 0 12px', background: 'none', border: 'none', cursor: 'pointer' }}>
           <div style={{ width: 48, height: 5, borderRadius: 3, background: 'rgba(255,255,255,0.22)', margin: '0 auto' }} />
         </button>
         {body}
@@ -940,6 +973,15 @@ export function FlightBoard({ airport, locale, defaultMode = 'departures', displ
           const dm = place.match(/^(.*?)\s*\(([A-Z0-9]{2,4})\)\s*$/);
           const city = dm ? dm[1] : place;
           const code = dm ? dm[2] : '';
+          // A name whose LONGEST WORD is wider than the column has no legal place to break, so
+          // it snaps mid-word with no hyphen — "Минеральны/е Воды" — which reads as a typo and
+          // is the one case hyphens:manual cannot help with. Stepping the type down buys the
+          // 11-17% that makes those names fit. Thresholds are calibrated on the 115px column at
+          // 375px, where 18px bold Cyrillic runs about 11.5px per character: 11 characters
+          // (Калининград, Новосибирск) overflow by a little, 12+ (Екатеринбург) by a lot.
+          // Everything shorter — which is most of the network — keeps the full 18px.
+          const longestWord = city.split(/[\s‐-―-]+/).reduce((a, w) => Math.max(a, w.length), 0);
+          const cityFs = longestWord >= 12 ? 15 : longestWord >= 11 ? 16 : 18;
 
           return (
             // <li> carries the list semantics; the inner div stays the button, so both roles
@@ -988,7 +1030,7 @@ export function FlightBoard({ airport, locale, defaultMode = 'departures', displ
                     overflow: 'hidden', lineHeight: 1.2, overflowWrap: 'break-word',
                     hyphens: 'manual' as const, WebkitHyphens: 'manual' as const,
                   }}>
-                    <span style={{ fontSize: 18, fontWeight: 700, color: C.text, letterSpacing: '-0.01em' }}>{city}</span>
+                    <span style={{ fontSize: cityFs, fontWeight: 700, color: C.text, letterSpacing: '-0.01em' }}>{city}</span>
                     {code && <span style={{ fontSize: 12, fontWeight: 500, color: C.secondary, marginInlineStart: 6, whiteSpace: 'nowrap' }}>({code})</span>}
                   </div>
                 </div>

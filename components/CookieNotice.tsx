@@ -127,6 +127,10 @@ export function CookieNotice({ locale }: { locale: Locale }) {
         role="dialog"
         aria-live="polite"
         aria-label={t('cookie_msg')}
+        // Marks the bottom slot as taken. components/InstallPrompt.tsx sits in the same slot
+        // with a higher z-index and looks for this before showing, so an install card can
+        // never land on top of a consent choice.
+        data-cookie-bar=""
         style={{
           pointerEvents: 'auto', width: '100%', maxWidth: 640,
           display: 'flex', alignItems: 'center', gap: 12, flexWrap: 'wrap',
