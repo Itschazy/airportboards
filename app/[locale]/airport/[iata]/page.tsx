@@ -112,6 +112,11 @@ async function airportDescription(opts: {
       description: `${tHome(fold(name) === fold(city) ? 'airport_lead_same' : 'airport_lead', { name, iata: airport.iata, city, country })} ${tUi('board_pending')}`,
     };
   }
+  // Deliberately no freshness promise here. The snippet is read before the click, but it is
+  // written by whatever the crawler last stored, and TIERS warms even the mega tier only every
+  // 360 minutes (hub 720, everything else daily) — so "updated every minute" would describe
+  // the live client poll while the indexed copy behind it can be hours old. The description
+  // therefore claims only what the page always shows: which fields it carries.
   return { title: null, description: t('main_description', { airport: name, iata: airport.iata, city, country }) };
 }
 

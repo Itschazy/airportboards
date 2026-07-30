@@ -36,7 +36,7 @@
   },
   "meta": {
     "main_title": "Vuelos {airport}{showCity, select, yes {, {city}} other {}} ({iata}) | llegadas y salidas en vivo",
-    "main_description": "Panel de vuelos de {airport} ({iata}) hoy: llegadas y salidas en tiempo real, horarios, retrasos, cancelaciones y puertas actualizadas.",
+    "main_description": "Horarios de salidas y llegadas, retrasos, puertas y terminales en {airport} ({iata}); datos del tablero antes de ir al aeropuerto.",
     "arrivals_title": "Llegadas {airport}{showCity, select, yes {, {city}} other {}} ({iata}) | vuelos en vivo",
     "departures_title": "Salidas {airport}{showCity, select, yes {, {city}} other {}} ({iata}) | vuelos en vivo",
     "arrivals_description": "Panel de llegadas del aeropuerto {airport} ({iata}) hoy en tiempo real: horarios, retrasos y cancelaciones. Consulta también salidas.",

@@ -36,7 +36,7 @@
   },
   "meta": {
     "main_title": "{airport}{showCity, select, yes {, {city}} other {}} ({iata}) Live Arrivals & Departures",
-    "main_description": "Live flight board at {airport} ({iata}) today: real-time arrivals and departures with flight status, times, delays and gates.",
+    "main_description": "Departure and arrival times, delays, gates and terminals at {airport} ({iata}) — the details you check before leaving for the airport.",
     "arrivals_title": "{airport}{showCity, select, yes {, {city}} other {}} ({iata}) Live Arrivals",
     "departures_title": "{airport}{showCity, select, yes {, {city}} other {}} ({iata}) Live Departures",
     "arrivals_description": "Live arrivals board at {airport} ({iata}) today: real-time arrivals and departures, flight status, times, delays and gates.",

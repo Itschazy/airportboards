@@ -36,7 +36,7 @@
   },
   "meta": {
     "main_title": "{airport}{showCity, select, yes {（{city}）} other {}}（{iata}）発着情報｜リアルタイム",
-    "main_description": "{airport}（{iata}）の本日の発着案内。到着便・出発便の運航状況をリアルタイムで確認できます。",
+    "main_description": "出発・到着便の時刻、遅延、ゲート、ターミナルを{airport} ({iata})のフライトボードで確認。",
     "arrivals_title": "{airport}{showCity, select, yes {（{city}）} other {}}（{iata}）到着便｜リアルタイム",
     "departures_title": "{airport}{showCity, select, yes {（{city}）} other {}}（{iata}）出発便｜リアルタイム",
     "arrivals_description": "{airport}（{iata}）の本日の到着便案内。到着・出発の運航状況をリアルタイムで確認できます。",

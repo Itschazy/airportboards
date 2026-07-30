@@ -36,7 +36,7 @@
   },
   "meta": {
     "main_title": "Онлайн-табло аэропорта {airport}{showCity, select, yes {, {city}} other {}} ({iata}) — прилеты и вылеты сегодня",
-    "main_description": "Онлайн-табло аэропорта {airport} ({iata}): прилеты и вылеты сегодня, статус рейсов в реальном времени, задержки и изменения.",
+    "main_description": "Время вылетов и прилётов, задержки, гейты и терминалы на табло {airport} ({iata}) — данные, которые проверяют перед поездкой в аэропорт.",
     "arrivals_title": "Табло прилета {airport}{showCity, select, yes {, {city}} other {}} ({iata}) сегодня — онлайн",
     "departures_title": "Табло вылета {airport}{showCity, select, yes {, {city}} other {}} ({iata}) сегодня — онлайн",
     "arrivals_description": "Табло прилетов {airport} ({iata}) сегодня: рейсы онлайн, время прибытия, статусы, задержки и вылеты в реальном времени.",
