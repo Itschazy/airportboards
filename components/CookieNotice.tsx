@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { useTranslations } from 'next-intl';
 import type { Locale } from '@/lib/i18n';
 import { CONSENT_KEY } from '@/components/Analytics';
+import { adsenseClient } from '@/lib/adsense';
 
 // Cookie consent notice, wired to Google Consent Mode v2.
 //
@@ -29,8 +30,15 @@ const CONSENT_KEYS = [
   'analytics_storage', 'functionality_storage', 'personalization_storage',
 ] as const;
 
+/** The slice of TCF v2 data we act on. */
+type TcData = { gdprApplies?: boolean; listenerId?: number };
+
 declare global {
-  interface Window { gtag?: (...args: unknown[]) => void }
+  interface Window {
+    gtag?: (...args: unknown[]) => void;
+    /** Installed by Google's CMP (Funding Choices), which arrives with adsbygoogle.js. */
+    __tcfapi?: (cmd: string, version: number, cb: (data: TcData, ok: boolean) => void, param?: number) => void;
+  }
 }
 
 export function CookieNotice({ locale }: { locale: Locale }) {
@@ -41,10 +49,45 @@ export function CookieNotice({ locale }: { locale: Locale }) {
     try {
       // Someone who dismissed the old informational bar never actually expressed a
       // preference about advertising cookies, so ask once now rather than assuming consent.
-      if (!localStorage.getItem(CONSENT_KEY)) setShow(true);
+      if (localStorage.getItem(CONSENT_KEY)) return;
     } catch {
-      /* localStorage unavailable — skip */
+      /* localStorage unavailable — fall through and ask */
     }
+
+    // Do not ask a second time when Google already asked.
+    //
+    // adsbygoogle.js brings the CMP configured in the AdSense console (Funding Choices), and
+    // that CMP is geo-gated: measured from Riga on 2026-07-30, an EEA visitor got a
+    // full-screen consent wall AND this bar underneath it at the same time, so the answer had
+    // to be given twice. A Russian visitor — about 70% of the traffic — gets no wall at all,
+    // which is why NEXT_PUBLIC_COOKIE_NOTICE=0 is the wrong instrument: it would take this bar
+    // away from the majority who are only ever offered this one.
+    //
+    // So ask the CMP whether it owns this visitor. gdprApplies true means Google's wall is the
+    // consent surface here and its choice already flows into Consent Mode; false means there is
+    // no wall and this bar is the only thing standing between an ad tag and a stranger.
+    if (!adsenseClient) { setShow(true); return; }
+
+    let settled = false;
+    const decide = (mine: boolean) => { if (!settled) { settled = true; if (mine) setShow(true); } };
+
+    const ask = (): boolean => {
+      const api = window.__tcfapi;
+      if (!api) return false;
+      api('addEventListener', 2, (tcData, ok) => {
+        if (!ok || settled) return;
+        decide(!tcData?.gdprApplies);
+        if (tcData?.listenerId !== undefined) api('removeEventListener', 2, () => {}, tcData.listenerId);
+      });
+      return true;
+    };
+
+    if (ask()) return;
+    // The CMP rides a deferred script, so it is usually not installed yet at mount.
+    const poll = setInterval(() => { if (ask()) clearInterval(poll); }, 150);
+    // No CMP arrived at all — AdSense is configured but no consent message is published.
+    const bail = setTimeout(() => { clearInterval(poll); decide(true); }, 2500);
+    return () => { clearInterval(poll); clearTimeout(bail); };
   }, []);
 
   if (process.env.NEXT_PUBLIC_COOKIE_NOTICE === '0' || !show) return null;
