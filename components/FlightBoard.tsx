@@ -180,12 +180,30 @@ function BottomSheet({ flight, mode, onClose, tz, locale, updLabel, originIata, 
     return () => { document.body.style.overflow = ''; };
   }, [vis]);
 
-  // Dialog a11y: focus the sheet on open, close on Escape, restore focus on close.
+  // Dialog a11y: focus the sheet on open, close on Escape, restore focus on close, and keep
+  // Tab inside it. aria-modal="true" tells a screen reader the rest of the page is out of
+  // scope, but it does nothing to keyboard focus — measured on the live sheet, Tab walked
+  // straight out into the board rows behind, which are still clickable but hidden behind a
+  // blurred scrim. Cycling within the sheet is the whole of the fix; the sheet itself is
+  // focusable (tabIndex -1) so a sheet with one button still has somewhere to land.
   useEffect(() => {
     if (!vis) return;
     const prev = document.activeElement as HTMLElement | null;
     sheetRef.current?.focus();
-    const onKey = (e: KeyboardEvent) => { if (e.key === 'Escape') onClose(); };
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') { onClose(); return; }
+      if (e.key !== 'Tab') return;
+      const sheet = sheetRef.current;
+      if (!sheet) return;
+      const stops = [...sheet.querySelectorAll<HTMLElement>('a[href], button:not([disabled]), [tabindex]:not([tabindex="-1"])')]
+        .filter(el => el.offsetParent !== null);
+      if (!stops.length) { e.preventDefault(); sheet.focus(); return; }
+      const first = stops[0], last = stops[stops.length - 1];
+      const on = document.activeElement;
+      if (e.shiftKey && (on === first || on === sheet)) { e.preventDefault(); last.focus(); }
+      else if (!e.shiftKey && on === last) { e.preventDefault(); first.focus(); }
+      else if (!sheet.contains(on)) { e.preventDefault(); first.focus(); }
+    };
     document.addEventListener('keydown', onKey);
     return () => { document.removeEventListener('keydown', onKey); prev?.focus?.(); };
   }, [vis]);
@@ -825,7 +843,7 @@ export function FlightBoard({ airport, locale, defaultMode = 'departures', displ
       </div>
 
       {/* ── Filter pills ───────────────────────────────────── */}
-      <div style={{ display: 'flex', gap: 7, padding: '0 16px 12px', overflowX: 'auto', maxWidth: 960, margin: '0 auto' }}>
+      <div className="pillrow" style={{ display: 'flex', gap: 7, padding: '0 16px 12px', overflowX: 'auto', maxWidth: 960, margin: '0 auto' }}>
         {(mode === 'arrivals' ? ARR_FILTERS : FILTERS).map(key => {
           const active = filter === key;
           return (
@@ -952,13 +970,23 @@ export function FlightBoard({ airport, locale, defaultMode = 'departures', displ
                   <div style={{ fontSize: 12, color: 'rgba(255,255,255,0.42)', marginTop: 5, fontVariantNumeric: 'tabular-nums', fontWeight: 500 }}>{f.flight}</div>
                 </div>
 
-                {/* Center: destination — wraps up to 2 lines so long localized
-                    names (Санкт-Петербург, München…) stay readable instead of being cut */}
+                {/* Center: destination — the primary datum on a board, so it gets the room it
+                    needs before anything else does.
+                    Three lines, not two: the IATA code shares this box, so a name that needed
+                    both lines pushed the code onto a third and the clamp then ate it. Measured
+                    on /ru/airport/KZN at 375px: "Санкт-Петербург (LED)" rendered as
+                    "Санкт-Петер-…" — two of twelve rows had an unreadable destination. Raising
+                    the clamp costs height only on the rows that actually need it (12 rows went
+                    from 1116px to 1130px, +1.3%), where putting the code on its own line cost
+                    ~15px on every row.
+                    hyphens: manual, not auto: auto broke short names mid-word for no gain
+                    ("Анта-лья", "Мурман-ск"). overflowWrap still rescues a word genuinely wider
+                    than the column, just without inventing a hyphen inside a place name. */}
                 <div style={{ flex: 1, minWidth: 0 }}>
                   <div style={{
-                    display: '-webkit-box', WebkitLineClamp: 2, WebkitBoxOrient: 'vertical',
+                    display: '-webkit-box', WebkitLineClamp: 3, WebkitBoxOrient: 'vertical',
                     overflow: 'hidden', lineHeight: 1.2, overflowWrap: 'break-word',
-                    hyphens: 'auto' as const, WebkitHyphens: 'auto' as const,
+                    hyphens: 'manual' as const, WebkitHyphens: 'manual' as const,
                   }}>
                     <span style={{ fontSize: 18, fontWeight: 700, color: C.text, letterSpacing: '-0.01em' }}>{city}</span>
                     {code && <span style={{ fontSize: 12, fontWeight: 500, color: C.secondary, marginInlineStart: 6, whiteSpace: 'nowrap' }}>({code})</span>}
@@ -966,8 +994,12 @@ export function FlightBoard({ airport, locale, defaultMode = 'departures', displ
                 </div>
 
                 {/* Right: gate + status + chevron */}
+                {/* Right: gate + status + chevron. 80px rather than 92: the status label already
+                    wraps to two lines in Russian ("ПО РАСПИСАНИЮ"), so the extra 12px bought
+                    nothing here and was taken straight out of the destination, which had none
+                    to spare. */}
                 <div style={{ flexShrink: 0, textAlign: 'end', display: 'flex', alignItems: 'center', gap: 6 }}>
-                  <div style={{ maxWidth: 92 }}>
+                  <div style={{ maxWidth: 80 }}>
                     {f.gate && (
                       <div style={{ lineHeight: 1.1, whiteSpace: 'nowrap', marginBottom: 5 }}>
                         <span style={{ fontSize: 12, color: C.secondary }}>{t('gate')} </span>
@@ -975,7 +1007,7 @@ export function FlightBoard({ airport, locale, defaultMode = 'departures', displ
                       </div>
                     )}
                     <div style={{
-                      fontSize: 12, fontWeight: 700, color, letterSpacing: '0.06em', textTransform: 'uppercase',
+                      fontSize: 12, fontWeight: 700, color, letterSpacing: '0.03em', textTransform: 'uppercase',
                       lineHeight: 1.25,
                       textShadow: f.status === 'finalcall' ? '0 0 10px rgba(255,69,58,0.15)' : 'none',
                     }}>

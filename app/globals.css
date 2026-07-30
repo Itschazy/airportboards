@@ -87,6 +87,19 @@ input::-webkit-search-cancel-button { display: none; }
 /* Bottom sheet scroller: don't chain overscroll into the page behind it. */
 .sheet-scroll { overscroll-behavior: contain; }
 
+/* Filter pills scroll sideways, and on a phone that was invisible: measured at 375px the row
+   is 663px wide, so 288px of it — including whole filters like "Вылетел" — sat past a hard
+   edge with nothing to suggest it existed. Fading the right edge is the affordance, and it is
+   CSS-only on purpose: when the pills do fit, they stop short of the 16px padding and the mask
+   has nothing to act on, so no state or measurement is needed. Right edge only — a symmetric
+   mask would dim the selected "All" pill at rest. */
+.pillrow {
+  -webkit-mask-image: linear-gradient(to right, #000 calc(100% - 30px), transparent);
+          mask-image: linear-gradient(to right, #000 calc(100% - 30px), transparent);
+  scrollbar-width: none;
+}
+.pillrow::-webkit-scrollbar { display: none; }
+
 /* Visible keyboard focus (WCAG 2.4.7). :focus-visible so mouse users see nothing. */
 :focus-visible {
   outline: 2px solid #0A84FF;
