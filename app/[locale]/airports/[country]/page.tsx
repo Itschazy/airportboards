@@ -41,6 +41,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const languages: Record<string, string> = {};
   for (const loc of locales) languages[loc] = `${BASE}/${loc}/airports/${c.slug}`;
   languages['x-default'] = `${BASE}/en/airports/${c.slug}`;
+  const hasServed = splitByService(getAirportsByCountry(c.slug)).served.length > 0;
   return {
     title: withBrand(title),
     description: (() => {
@@ -56,13 +57,22 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       // adding up — Norway would read "8 have service; the remaining 10" out of 56 — and it
       // also asserts a negative we no longer stand behind. The partial variant states only the
       // confirmed floor, which is both true and still the number a traveller wants.
-      if (!date || !served.length) return t('country_desc', { country: countryName, count: c.count });
+      // Zero served airports is NOT the same as "no measurement date", and the two used to
+      // share this branch — so /en/airports/ukraine (31 airports, none with service) answered
+      // with the most confident template on the site: "Live arrivals and departures for the 31
+      // airports in Ukraine … with the age of the data shown on every board." 19 countries did
+      // this. It is the country-page form of the promise AdSense rejected the site over.
+      if (!served.length) return t('country_none', { country: countryName, count: fmt(c.count, locale) });
+      if (!date) return t('country_desc', { country: countryName, count: c.count });
       return unknown.length
         ? t('country_split_partial', { country: countryName, count: fmt(c.count, locale), served: fmt(served.length, locale), date })
         : t('country_split', { country: countryName, count: fmt(c.count, locale), served: fmt(served.length, locale), rest: fmt(unserved.length, locale), date });
     })(),
     alternates: { canonical: `${BASE}/${locale}/airports/${c.slug}`, languages },
-    robots: { index: true, follow: true },
+    // A country where nothing is served has no flight content to offer — it is a list of codes.
+    // Reachable and followed, so the airports below still get crawled, but not competing in
+    // search as if it were a board.
+    robots: { index: hasServed, follow: true },
   };
 }
 

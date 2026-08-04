@@ -42,7 +42,9 @@
     "arrivals_description": "Ankünfte am Flughafen {airport} ({iata}) heute live: Landungen in Echtzeit, Status, Verspätungen sowie Abflüge im Überblick.",
     "departures_description": "Abflüge am Flughafen {airport} ({iata}) heute live: Starts in Echtzeit, Gates, Status und Verspätungen plus aktuelle Ankünfte.",
     "routes_title": "{airport} ({iata}) — Fluggesellschaften und Reiseziele",
-    "routes_description": "{airport} ({iata}) in {city}, {country}: welche Fluggesellschaften hier verkehren und wohin Sie nonstop fliegen können, plus die nächstgelegenen Flughäfen mit Linienflügen."
+    "routes_description": "{airport} ({iata}) in {city}, {country}: welche Fluggesellschaften hier verkehren und wohin Sie nonstop fliegen können, plus die nächstgelegenen Flughäfen mit Linienflügen.",
+    "info_title": "{airport} ({iata}) — Flughafeninformationen",
+    "info_description": "{airport} ({iata}) in {city}, {country}: IATA- und ICAO-Codes, Lage, Zeitzone und die nächstgelegenen Flughäfen mit Linienflügen."
   },
   "airport_info": {
     "location": "Standort",
@@ -169,7 +171,8 @@
     "faq_airlines_q": "Welche Fluggesellschaften fliegen ab {name}?",
     "faq_airlines_a": "Laut der aktuellen Abflugtafel von {name} ({iata}) werden planmäßige Flüge von {list} durchgeführt.",
     "faq_dest_q": "Wohin kann man ab {name} nonstop fliegen?",
-    "faq_dest_a": "Zu den Zielen auf der aktuellen Abflugtafel von {name} ({iata}) gehören {list}."
+    "faq_dest_a": "Zu den Zielen auf der aktuellen Abflugtafel von {name} ({iata}) gehören {list}.",
+    "country_none": "{count} Flughäfen mit IATA-Codes in {country}. Zu keinem davon liegen uns aktuelle Linienflugdaten vor; diese Seite führt daher Codes, Lage und Zeitzonen statt Live-Anzeigetafeln."
   },
   "ui": {
     "departures": "Abflüge",

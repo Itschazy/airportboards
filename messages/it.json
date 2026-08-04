@@ -42,7 +42,9 @@
     "arrivals_description": "Tabellone arrivi in tempo reale di {airport} ({iata}): voli di oggi, orari, ritardi e partenze aggiornate.",
     "departures_description": "Tabellone partenze in tempo reale di {airport} ({iata}): voli di oggi, orari, ritardi, gate e arrivi aggiornati.",
     "routes_title": "{airport} ({iata}) — Compagnie aeree e destinazioni",
-    "routes_description": "{airport} ({iata}) a {city}, {country}: quali compagnie aeree operano qui e dove puoi volare senza scalo, oltre agli aeroporti più vicini con voli di linea."
+    "routes_description": "{airport} ({iata}) a {city}, {country}: quali compagnie aeree operano qui e dove puoi volare senza scalo, oltre agli aeroporti più vicini con voli di linea.",
+    "info_title": "{airport} ({iata}) — informazioni sull’aeroporto",
+    "info_description": "{airport} ({iata}) a {city}, {country}: codici IATA e ICAO, posizione, fuso orario e gli aeroporti più vicini con voli di linea."
   },
   "airport_info": {
     "location": "Posizione",
@@ -169,7 +171,8 @@
     "faq_airlines_q": "Quali compagnie aeree volano dall'aeroporto {name}?",
     "faq_airlines_a": "In base al tabellone aggiornato delle partenze di {name} ({iata}), i voli programmati sono operati da {list}.",
     "faq_dest_q": "Dove puoi volare senza scalo da {name}?",
-    "faq_dest_a": "Le destinazioni presenti sull'attuale tabellone delle partenze di {name} ({iata}) includono {list}."
+    "faq_dest_a": "Le destinazioni presenti sull'attuale tabellone delle partenze di {name} ({iata}) includono {list}.",
+    "country_none": "{count} aeroporti con codici IATA in {country}. Non abbiamo dati aggiornati sui voli di linea per nessuno di essi, quindi questa pagina riporta codici, posizioni e fusi orari anziché tabelloni in tempo reale."
   },
   "ui": {
     "departures": "Partenze",

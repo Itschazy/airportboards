@@ -42,7 +42,9 @@
     "arrivals_description": "{airport}({iata}) 오늘 도착 운항정보를 실시간 확인하세요. 도착 항공편, 출발 연결편, 지연·결항, 게이트 정보를 제공합니다.",
     "departures_description": "{airport}({iata}) 오늘 출발 운항정보를 실시간 확인하세요. 출발 항공편, 도착 연결편, 지연·결항, 게이트 정보를 제공합니다.",
     "routes_title": "{airport} ({iata}) — 취항 항공사 및 목적지",
-    "routes_description": "{city}, {country}의 {airport} ({iata}): 운항 항공사와 직항으로 갈 수 있는 목적지, 정기편이 있는 가장 가까운 공항을 확인하세요."
+    "routes_description": "{city}, {country}의 {airport} ({iata}): 운항 항공사와 직항으로 갈 수 있는 목적지, 정기편이 있는 가장 가까운 공항을 확인하세요.",
+    "info_title": "{airport}({iata}) — 공항 정보",
+    "info_description": "{airport}({iata}), {country} {city}: IATA 및 ICAO 코드, 위치, 시간대, 그리고 정기편이 운항되는 가장 가까운 공항."
   },
   "airport_info": {
     "location": "위치",
@@ -169,7 +171,8 @@
     "faq_airlines_q": "어떤 항공사가 {name}에서 운항하나요?",
     "faq_airlines_a": "현재 {name} ({iata})의 출발 안내판에 따르면, 예정된 항공편은 {list}에서 운항합니다.",
     "faq_dest_q": "{name}에서 직항으로 어디까지 갈 수 있나요?",
-    "faq_dest_a": "현재 {name} ({iata}) 출발 안내판에 표시된 목적지에는 {list}가 포함됩니다."
+    "faq_dest_a": "현재 {name} ({iata}) 출발 안내판에 표시된 목적지에는 {list}가 포함됩니다.",
+    "country_none": "{country}에는 IATA 코드를 가진 공항이 {count}곳 있습니다. 그중 어느 곳에 대해서도 현재 정기편 데이터가 없어, 이 페이지는 실시간 운항 정보 대신 코드·위치·시간대를 제공합니다."
   },
   "ui": {
     "departures": "출발",

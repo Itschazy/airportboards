@@ -42,7 +42,9 @@
     "arrivals_description": "Bugün {airport} ({iata}) varış uçuşları tablosu: gelen ve giden uçuşlar, saatler ve durumlar canlı olarak gerçek zamanlı güncellenir.",
     "departures_description": "Bugün {airport} ({iata}) kalkış uçuşları tablosu: giden ve gelen uçuşlar, saatler ve durumlar canlı olarak gerçek zamanlı güncellenir.",
     "routes_title": "{airport} ({iata}) — Havayolları ve Destinasyonlar",
-    "routes_description": "{city}, {country} konumundaki {airport} ({iata}): burada hangi hava yollarının hizmet verdiği, aktarmasız uçabileceğiniz yerler ve tarifeli uçuşları olan en yakın havalimanları."
+    "routes_description": "{city}, {country} konumundaki {airport} ({iata}): burada hangi hava yollarının hizmet verdiği, aktarmasız uçabileceğiniz yerler ve tarifeli uçuşları olan en yakın havalimanları.",
+    "info_title": "{airport} ({iata}) — havalimanı bilgileri",
+    "info_description": "{airport} ({iata}), {city}, {country}: IATA ve ICAO kodları, konum, saat dilimi ve tarifeli uçuşu olan en yakın havalimanları."
   },
   "airport_info": {
     "location": "Konum",
@@ -169,7 +171,8 @@
     "faq_airlines_q": "{name} kalkışlı hangi hava yolları uçuyor?",
     "faq_airlines_a": "{name} ({iata}) için güncel kalkış panosundaki bilgilere göre, tarifeli uçuşlar {list} tarafından gerçekleştirilmektedir.",
     "faq_dest_q": "{name} çıkışlı aktarmasız olarak nerelere uçabilirsiniz?",
-    "faq_dest_a": "{name} ({iata}) güncel kalkış panosundaki varış noktaları arasında {list} yer alır."
+    "faq_dest_a": "{name} ({iata}) güncel kalkış panosundaki varış noktaları arasında {list} yer alır.",
+    "country_none": "{country} içinde IATA koduna sahip {count} havalimanı. Hiçbiri için güncel tarifeli uçuş verimiz yok; bu sayfa canlı pano yerine kodları, konumları ve saat dilimlerini içeriyor."
   },
   "ui": {
     "departures": "Kalkışlar",

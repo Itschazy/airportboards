@@ -19,6 +19,28 @@ export function YandexMetrica({ locale }: { locale: string }) {
   // it for a reader in Germany or Canada is a pure cost. Google Analytics covers those.
   if (!YM_ID || locale !== 'ru') return null;
 
+  // ── EEA/UK/CH: do not load at all ────────────────────────────────────────────────────
+  //
+  // Metrica never took part in the consent system. Its only gate was the locale check above,
+  // so a European reading a /ru page got _ym_uid, _ym_d and a hit before any consent surface
+  // existed. That was already true; removing the cookie bar (see app/[locale]/layout.tsx)
+  // makes it the ONLY unconsented storage on the site, so it has to go.
+  //
+  // Google's tags solve this with Consent Mode's server-resolved region. Metrica has no such
+  // mechanism, and asking a geo-IP service would be a network call on every page. The time
+  // zone is already in the browser, costs nothing, needs no permission and no storage — and
+  // over-blocking is the safe direction: the worst case is a Russian-speaking reader in
+  // Europe going unmeasured, which is a rounding error against 77% of traffic being in
+  // Russia and a legal exposure being closed.
+  //
+  // Bare IIFE rather than a hook so this stays a server component: the string below must be
+  // in the SSR HTML (Metrica's own verification reads the raw response), and the guard has
+  // to run in the browser, so it wraps the bootstrap instead of gating the render.
+  const regionGuard =
+    `try{var tz=(Intl.DateTimeFormat().resolvedOptions().timeZone||'');` +
+    `if(/^(Europe|Atlantic\/(Canary|Madeira|Azores|Faroe|Reykjavik))/.test(tz)` +
+    `&&!/^Europe\/(Moscow|Kaliningrad|Samara|Volgograd|Saratov|Astrakhan|Ulyanovsk|Kirov|Minsk|Kiev|Kyiv|Chisinau|Istanbul)$/.test(tz)){return}}catch(e){}`;
+
   // SINGLE quotes throughout, and no quote character adjacent to an interpolation.
   //
   // This was written with double quotes and shipped broken to production for nine days. In a
@@ -39,6 +61,8 @@ export function YandexMetrica({ locale }: { locale: string }) {
   // `}` for the folder to trip over. If this file is ever edited, verify against a real BUILD —
   // dev mode renders it correctly and will tell you it is fine.
   const bootstrap =
+    // Wrapped in a function so the guard's `return` aborts before anything is created.
+    `(function(){` + regionGuard +
     `(function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};` +
     `m[i].l=1*new Date();for(var j=0;j<e.scripts.length;j++){if(e.scripts[j].src===r){return;}}` +
     `k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})` +
@@ -47,7 +71,8 @@ export function YandexMetrica({ locale }: { locale: string }) {
     // OFF. It is the single most invasive thing the counter can do, the privacy policy never
     // disclosed it, and it was running before any consent was asked for. Do not re-enable it
     // without disclosing it in data/legal/privacy.json and gating it behind consent.
-    `ym(` + YM_ID + `,'init',{ssr:true,clickmap:true,trackLinks:true,accurateTrackBounce:true});`;
+    `ym(` + YM_ID + `,'init',{ssr:true,clickmap:true,trackLinks:true,accurateTrackBounce:true});` +
+    `})();`;
 
   return (
     <>

@@ -79,7 +79,9 @@ export default async function LocaleLayout({
             anywhere into <head>. Google ignores this tag — it costs nothing there. */}
         <meta httpEquiv="content-language" content={locale} />
         <link rel="preconnect" href="https://www.googletagmanager.com" />
-        <link rel="preconnect" href="https://pagead2.googlesyndication.com" />
+        {/* The ad server's preconnect is tied to the ad tag, not hardcoded: with AdSense off
+            it opened a TLS connection to an origin nothing would ever request. */}
+        {adsenseClient && <link rel="preconnect" href="https://pagead2.googlesyndication.com" />}
         {locale === 'ru' && <link rel="preconnect" href="https://mc.yandex.ru" />}
         {/* Consent defaults first — every Google tag below reads them as it parses. */}
         <Analytics />
@@ -89,8 +91,22 @@ export default async function LocaleLayout({
           <SiteHeader locale={locale as Locale} />
           <main style={{ flex: '1 0 auto', width: '100%' }}>{children}</main>
           <SiteFooter locale={locale as Locale} />
+          {/* Both overlays are OFF while AdSense review is pending (2026-08-03 rejection:
+              "low value content"). Nothing may cover the content a reviewer came to read.
+
+              The cookie bar is not merely hidden — it is not NEEDED any more. Its job was
+              advertising consent, and with NEXT_PUBLIC_ADSENSE_CLIENT unset there is no ad
+              tag and no Funding Choices wall. What remains is analytics, and the Consent
+              Mode defaults in <Analytics/> already deny storage across the EEA, UK and CH
+              by default; with no bar there is no path to grant, so a European visitor is
+              measured cookielessly and has nothing to consent to. Everyone else keeps the
+              granted default, exactly as before.
+
+              Restore both together when the review passes — the bar must come back in the
+              same deploy as the ad tag, or EEA visitors would get ads with no way to refuse.
           <CookieNotice locale={locale as Locale} />
           <InstallPrompt />
+          */}
           {GA_ID && <GaRouteTracker gaId={GA_ID} />}
         </NextIntlClientProvider>
       </body>

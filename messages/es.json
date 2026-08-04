@@ -42,7 +42,9 @@
     "arrivals_description": "Panel de llegadas del aeropuerto {airport} ({iata}) hoy en tiempo real: horarios, retrasos y cancelaciones. Consulta también salidas.",
     "departures_description": "Panel de salidas del aeropuerto {airport} ({iata}) hoy en tiempo real: horarios, retrasos, cancelaciones y puertas. Consulta también llegadas.",
     "routes_title": "{airport} ({iata}) — Aerolíneas y destinos",
-    "routes_description": "{airport} ({iata}) en {city}, {country}: qué aerolíneas operan aquí y a dónde puedes volar sin escalas, además de los aeropuertos más cercanos con vuelos programados."
+    "routes_description": "{airport} ({iata}) en {city}, {country}: qué aerolíneas operan aquí y a dónde puedes volar sin escalas, además de los aeropuertos más cercanos con vuelos programados.",
+    "info_title": "{airport} ({iata}) — información del aeropuerto",
+    "info_description": "{airport} ({iata}) en {city}, {country}: códigos IATA e ICAO, ubicación, huso horario y los aeropuertos más cercanos con vuelos regulares."
   },
   "airport_info": {
     "location": "Ubicación",
@@ -169,7 +171,8 @@
     "faq_airlines_q": "¿Qué aerolíneas vuelan desde {name}?",
     "faq_airlines_a": "Según el panel de salidas actual de {name} ({iata}), los vuelos programados son operados por {list}.",
     "faq_dest_q": "¿A dónde se puede volar sin escalas desde {name}?",
-    "faq_dest_a": "Los destinos que figuran en el panel de salidas actual de {name} ({iata}) incluyen {list}."
+    "faq_dest_a": "Los destinos que figuran en el panel de salidas actual de {name} ({iata}) incluyen {list}.",
+    "country_none": "{count} aeropuertos con códigos IATA en {country}. No tenemos datos actuales de vuelos regulares de ninguno, así que esta página recoge códigos, ubicaciones y husos horarios en lugar de paneles en vivo."
   },
   "ui": {
     "departures": "Salidas",

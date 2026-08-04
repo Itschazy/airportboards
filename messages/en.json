@@ -42,7 +42,9 @@
     "arrivals_description": "Live arrivals board at {airport} ({iata}) today: real-time arrivals and departures, flight status, times, delays and gates.",
     "departures_description": "Live departures board at {airport} ({iata}) today: real-time departures and arrivals, flight status, times, delays and gates.",
     "routes_title": "{airport} ({iata}) — Airlines and Destinations",
-    "routes_description": "{airport} ({iata}) in {city}, {country}: which airlines operate here and where you can fly nonstop, plus the nearest airports with scheduled flights."
+    "routes_description": "{airport} ({iata}) in {city}, {country}: which airlines operate here and where you can fly nonstop, plus the nearest airports with scheduled flights.",
+    "info_title": "{airport} ({iata}) — airport information",
+    "info_description": "{airport} ({iata}) in {city}, {country}: IATA and ICAO codes, location, time zone, and the nearest airports with scheduled flights."
   },
   "airport_info": {
     "location": "Location",
@@ -169,7 +171,8 @@
     "faq_airlines_q": "Which airlines fly from {name}?",
     "faq_airlines_a": "Based on the current departures board at {name} ({iata}), scheduled flights are operated by {list}.",
     "faq_dest_q": "Where can you fly nonstop from {name}?",
-    "faq_dest_a": "Destinations on the current departures board at {name} ({iata}) include {list}."
+    "faq_dest_a": "Destinations on the current departures board at {name} ({iata}) include {list}.",
+    "country_none": "{count} airports with IATA codes in {country}. We have no current scheduled-service data for any of them, so this page carries codes, locations and time zones rather than live boards."
   },
   "ui": {
     "departures": "Departures",

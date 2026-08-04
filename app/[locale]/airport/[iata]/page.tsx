@@ -103,8 +103,26 @@ async function airportDescription(opts: {
         description: t('routes_description', { airport: name, iata: airport.iata, city, country }),
       };
     }
+    // No board and no routes. `title: null` used to fall through to main_title — "… Live
+    // Arrivals & Departures" — over a description that says the board is not available. That
+    // contradiction shipped on 178 airports, every one of them in the sitemap, and it is
+    // exactly the shape of thing AdSense rejected the site for on 2026-08-03 ("low value
+    // content"): a promise in the SERP that the page cannot keep.
+    //
+    // For an airport whose provider feed is empty by construction the honest offer is what
+    // the page actually holds — codes, location, time zone, and the nearest airport you can
+    // really fly from. serviceLevel() === null means we have no measurement either way, so
+    // this must NOT say "no scheduled flights": that false negative was already fixed once
+    // (Norway 38/40, Canada 175/292) and must not come back through a different door.
     const tHome = await getTranslations({ locale, namespace: 'home' });
     const tUi = await getTranslations({ locale, namespace: 'ui' });
+    if (serviceLevel(airport.iata) === null) {
+      return {
+        title: t('info_title', { airport: name, iata: airport.iata }),
+        description: t('info_description', { airport: name, iata: airport.iata, city, country }),
+      };
+    }
+    // Measured service, board merely cold: the live promise is still true, just not right now.
     return {
       title: null,
       // "Sochi (AER) is an airport serving Sochi" reads as machine output the moment the
@@ -228,6 +246,14 @@ export default async function AirportPage({ params }: Props) {
     });
   })();
   const noService = hasNoService(airport.iata);
+  // The body half of the honest-title branch in generateMetadata(). Same three conditions in
+  // the same order, so a page can never advertise "airport information" in the SERP and then
+  // render a live-board skeleton — the exact contradiction AdSense rejected the site over.
+  // Self-healing: all three are read from data on every render, so the moment the warmer
+  // measures real service the board and its chrome come back on their own.
+  const infoOnly = initialFlights.length === 0
+    && !hasWikiAirlines(airport.iata)
+    && serviceLevel(airport.iata) === null;
   const nearestWithFlights = noService
     ? (() => {
         const n = nearestServiced(airport.iata, nearestAirports(airport.lat, airport.lon, 12));
@@ -402,7 +428,7 @@ export default async function AirportPage({ params }: Props) {
       {/* The visible <h1> now lives in FlightBoard's airport header (single semantic h1). */}
       {/* SSR only the first 40 rows to keep the HTML light (the client refetches the full
           board on mount); AirportBottom still gets the full set to aggregate routes/airlines. */}
-      <FlightBoard airport={airport} locale={locale} displayName={name} initialFlights={initialFlights.slice(0, 40)} initialFetchedAt={getBoardFetchedAt(airport.iata, 'departures')} boardTotal={initialFlights.length} lead={tHome(fold(name) === fold(city) ? 'airport_lead_same' : 'airport_lead', { name, iata: airport.iata, city, country })} statusLine={delayLine} noService={noService} pendingNote={pendingNote} />
+      <FlightBoard airport={airport} locale={locale} displayName={name} initialFlights={initialFlights.slice(0, 40)} initialFetchedAt={getBoardFetchedAt(airport.iata, 'departures')} boardTotal={initialFlights.length} lead={tHome(fold(name) === fold(city) ? 'airport_lead_same' : 'airport_lead', { name, iata: airport.iata, city, country })} statusLine={delayLine} noService={noService} infoOnly={infoOnly} pendingNote={pendingNote} />
       <AirportBottom airport={airport} locale={locale} about={about} displayName={name} flights={initialFlights} noService={noService} nearestServed={nearestWithFlights} schedule />
     </>
   );

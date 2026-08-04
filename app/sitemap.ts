@@ -1,7 +1,7 @@
 import type { MetadataRoute } from 'next';
-import { getAllIataCodes, AIRPORTS_PER_SITEMAP, getSitemapCount, getCountries, getStaticIataCodes, getCities } from '@/lib/airports';
+import { getAllIataCodes, AIRPORTS_PER_SITEMAP, getSitemapCount, getCountries, getStaticIataCodes, getCities, getAirportsByCountry } from '@/lib/airports';
 import { getEventSlugs } from '@/lib/event-content';
-import { isUnfillable, serviceLevel } from '@/lib/warm';
+import { isUnfillable, serviceLevel, splitByService } from '@/lib/warm';
 import { getTopRoutes } from '@/lib/top-routes';
 import { getRoute, getBoard } from '@/lib/flights';
 import { locales } from '@/lib/i18n';
@@ -79,7 +79,13 @@ export default async function sitemap({ id }: { id: number | string }): Promise<
     // must be able to reach the Privacy Policy et al.).
     for (const p of ['/privacy', '/terms', '/about', '/contact']) entries.push(entry(p, 'yearly', 0.3, LEGAL_LOCALES));
     for (const L of LETTERS) entries.push(entry(`/az/${L}`, 'weekly', 0.4));
-    for (const c of getCountries()) entries.push(entry(`/airports/${c.slug}`, 'weekly', 0.6));
+    // Only countries with at least one served airport. A sitemap entry for a page that
+    // renders noindex is a contradiction the crawler has to resolve, and it is the same
+    // predicate the page itself uses (airports/[country]/page.tsx) — one source, not two.
+    for (const c of getCountries()) {
+      if (!splitByService(getAirportsByCountry(c.slug)).served.length) continue;
+      entries.push(entry(`/airports/${c.slug}`, 'weekly', 0.6));
+    }
     for (const c of getCities()) if (c.count > 1) entries.push(entry(`/city/${c.slug}`, 'weekly', 0.6));
     // Event guides (World Cup final etc.) — small, high-intent, freshness matters.
     entries.push(entry('/events', 'weekly', 0.6));   // permanent hub

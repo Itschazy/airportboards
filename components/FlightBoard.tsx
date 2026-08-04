@@ -525,7 +525,7 @@ function BottomSheet({ flight, mode, onClose, tz, locale, updLabel, originIata, 
 
 // ─── Main Component ───────────────────────────────────────────────────────────
 
-export function FlightBoard({ airport, locale, defaultMode = 'departures', displayName, initialFlights, initialFetchedAt, boardTotal, lead, statusLine = null, noService = false, pendingNote = null }: {
+export function FlightBoard({ airport, locale, defaultMode = 'departures', displayName, initialFlights, initialFetchedAt, boardTotal, lead, statusLine = null, noService = false, pendingNote = null, infoOnly = false }: {
   airport: Airport;
   locale: string;
   defaultMode?: Mode;
@@ -552,10 +552,25 @@ export function FlightBoard({ airport, locale, defaultMode = 'departures', displ
   noService?: boolean;
   /** Honest server-rendered stand-in when the store has no board for this airport yet. */
   pendingNote?: string | null;
+  /** The board can never be filled for this airport (no provider feed, no published routes,
+   *  no measurement), so <title> offers airport INFORMATION rather than a live board.
+   *
+   *  This exists because the title and the body had drifted apart. `noService` covers the
+   *  airports measured at zero and already strips the chrome; the 299 airports that were
+   *  never measured at all got the honest new title and still rendered a full live-board
+   *  skeleton — direction tabs plus six status filters ("On time", "Boarding", "Final call")
+   *  over an empty list. That is the "broken tool" impression a reviewer forms in the first
+   *  screenful, and the page's genuine content (location, terminals, FAQ) sat below it.
+   *
+   *  Chrome only: the empty-state TEXT still comes from pendingNote, because "no scheduled
+   *  flights" would be a claim we cannot make about an airport we never measured. */
+  infoOnly?: boolean;
 }) {
   const t = useTranslations('ui');
   const tNav = useTranslations('nav');
   const hasInitial = !!(initialFlights && initialFlights.length);
+  /** Suppress the live-board chrome. Two different reasons, one identical layout. */
+  const bare = noService || infoOnly;
   const [mode, setMode]           = useState<Mode>(defaultMode);
   const [filter, setFilter]       = useState<FilterKey>('all');
   const [search, setSearch]       = useState('');
@@ -751,7 +766,7 @@ export function FlightBoard({ airport, locale, defaultMode = 'departures', displ
     // 100dvh keeps the footer from jumping up while a real board loads. With no scheduled
     // service nothing will ever fill it, so reserving a screenful leaves a dead gap between
     // the notice and the rest of the page.
-    <div style={{ background: C.bg, minHeight: noService ? undefined : '100dvh', paddingBottom: noService ? 16 : 'calc(48px + env(safe-area-inset-bottom))' }}>
+    <div style={{ background: C.bg, minHeight: bare ? undefined : '100dvh', paddingBottom: bare ? 16 : 'calc(48px + env(safe-area-inset-bottom))' }}>
 
       {/* ── Airport header — compact. The identity is one line: code + name + clock. The old
           header spent ~380px (a 76px IATA glyph, an always-open search field, two control
@@ -784,7 +799,7 @@ export function FlightBoard({ airport, locale, defaultMode = 'departures', displ
         )}
 
         {/* One meta line: freshness + row count. These were two separate rows. */}
-        {!noService && <div role="status" aria-live="polite" style={{ display: 'flex', alignItems: 'center', gap: 7, marginTop: 8, minHeight: 18 }}>
+        {!bare && <div role="status" aria-live="polite" style={{ display: 'flex', alignItems: 'center', gap: 7, marginTop: 8, minHeight: 18 }}>
           <div
             aria-hidden="true"
             className={isLive ? 'live-dot' : ''}
@@ -803,7 +818,7 @@ export function FlightBoard({ airport, locale, defaultMode = 'departures', displ
       </div>
 
       {/* ── Controls: mode tabs + search icon in ONE row; the input expands in place ── */}
-      {!noService && <>
+      {!bare && <>
       <div style={{ padding: '6px 16px 10px', maxWidth: 960, margin: '0 auto', display: 'flex', gap: 8 }}>
         {searchOpen || search ? (
           <div style={{ position: 'relative', flex: 1 }}>
@@ -905,9 +920,13 @@ export function FlightBoard({ airport, locale, defaultMode = 'departures', displ
 
         {/* With no scheduled service the notice above already explains the empty board;
             repeating "no flights found" under an error-style icon reads as a failure. */}
+        {/* infoOnly keeps this line and drops only the icon and the reserved height: a visitor
+            who searched "LBG departures" still has to learn WHY there is no board, and the
+            page has no other notice to tell them. Stripping the chrome removed the answer
+            along with it, which traded a broken-looking tool for a silent one. */}
         {!loading && !noService && visible.length === 0 && (
-          <div style={{ textAlign: 'center', padding: '60px 0' }}>
-            <div style={{ fontSize: 32, marginBottom: 12 }}>✈</div>
+          <div style={{ textAlign: 'center', padding: infoOnly ? '4px 0 22px' : '60px 0' }}>
+            {!infoOnly && <div style={{ fontSize: 32, marginBottom: 12 }}>✈</div>}
             {/* "No flights found" is only true once we actually have a board and it is empty.
                 With nothing stored at all — the normal state for an airport the warmer has not
                 reached — saying it would be a straight falsehood about a real airport, on the

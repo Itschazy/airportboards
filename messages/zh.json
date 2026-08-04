@@ -42,7 +42,9 @@
     "arrivals_description": "查看{airport}今日到达航班动态：实时进港、出发衔接、延误、取消、航站楼和行李信息，按{iata}机场更新。",
     "departures_description": "查看{airport}今日出发航班动态：实时离港、到达衔接、延误、取消、值机柜台、航站楼和登机口，按{iata}机场更新。",
     "routes_title": "{airport}（{iata}）— 航空公司和目的地",
-    "routes_description": "{airport}（{iata}）位于{country}{city}：了解有哪些航空公司在此运营、可直飞哪些目的地，以及附近有定期航班的机场。"
+    "routes_description": "{airport}（{iata}）位于{country}{city}：了解有哪些航空公司在此运营、可直飞哪些目的地，以及附近有定期航班的机场。",
+    "info_title": "{airport}（{iata}）— 机场信息",
+    "info_description": "{airport}（{iata}），{country}{city}：国际航空运输协会与国际民航组织代码、位置、时区，以及最近的有定期航班的机场。"
   },
   "airport_info": {
     "location": "位置",
@@ -169,7 +171,8 @@
     "faq_airlines_q": "哪些航空公司从{name}出发？",
     "faq_airlines_a": "根据{name}（{iata}）当前出发航班信息板上的信息，定期航班由{list}运营。",
     "faq_dest_q": "从{name}可以直飞哪里？",
-    "faq_dest_a": "{name}（{iata}）当前出发航班信息牌上的目的地包括 {list}。"
+    "faq_dest_a": "{name}（{iata}）当前出发航班信息牌上的目的地包括 {list}。",
+    "country_none": "{country}拥有国际航空运输协会代码的机场共{count}个。我们没有其中任何一个的当前定期航班数据，因此本页提供代码、位置和时区，而非实时航班板。"
   },
   "ui": {
     "departures": "出发",
