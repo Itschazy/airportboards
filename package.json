@@ -6,7 +6,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "check:scripts": "node scripts/check-scripts.mjs"
+    "check:scripts": "node scripts/check-scripts.mjs",
+    "check:metrica": "node scripts/check-metrica.mjs",
+    "check:metrica:built": "node scripts/check-metrica.mjs http://localhost:3002/ru/airport/KZN"
   },
   "dependencies": {
     "next": "^15.3.3",
