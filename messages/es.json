@@ -172,7 +172,8 @@
     "faq_airlines_a": "Según el panel de salidas actual de {name} ({iata}), los vuelos programados son operados por {list}.",
     "faq_dest_q": "¿A dónde se puede volar sin escalas desde {name}?",
     "faq_dest_a": "Los destinos que figuran en el panel de salidas actual de {name} ({iata}) incluyen {list}.",
-    "country_none": "{count, plural, one {# aeropuerto} other {# aeropuertos}} con códigos IATA en {country}. No tenemos datos actuales de vuelos regulares de ninguno, así que esta página recoge códigos, ubicaciones y husos horarios en lugar de paneles en vivo."
+    "country_none": "{count, plural, one {# aeropuerto} other {# aeropuertos}} con códigos IATA en {country}. No tenemos datos actuales de vuelos regulares de ninguno, así que esta página recoge códigos, ubicaciones y husos horarios en lugar de paneles en vivo.",
+    "city_none": "{count, plural, one {# aeropuerto} other {# aeropuertos}} en {city}. No tenemos datos actuales de vuelos regulares de ninguno, así que esta página recoge códigos, ubicaciones y husos horarios en lugar de paneles en vivo."
   },
   "ui": {
     "departures": "Salidas",

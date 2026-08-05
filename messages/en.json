@@ -172,7 +172,8 @@
     "faq_airlines_a": "Based on the current departures board at {name} ({iata}), scheduled flights are operated by {list}.",
     "faq_dest_q": "Where can you fly nonstop from {name}?",
     "faq_dest_a": "Destinations on the current departures board at {name} ({iata}) include {list}.",
-    "country_none": "{count, plural, one {# airport} other {# airports}} with IATA codes in {country}. We have no current scheduled-service data for {count, plural, one {it} other {any of them}}, so this page carries codes, locations and time zones rather than live boards."
+    "country_none": "{count, plural, one {# airport} other {# airports}} with IATA codes in {country}. We have no current scheduled-service data for {count, plural, one {it} other {any of them}}, so this page carries codes, locations and time zones rather than live boards.",
+    "city_none": "{count, plural, one {# airport} other {# airports}} in {city}. We have no current scheduled-service data for {count, plural, one {it} other {any of them}}, so this page carries codes, locations and time zones rather than live boards."
   },
   "ui": {
     "departures": "Departures",

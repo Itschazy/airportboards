@@ -172,7 +172,8 @@
     "faq_airlines_a": "Laut der aktuellen Abflugtafel von {name} ({iata}) werden planmäßige Flüge von {list} durchgeführt.",
     "faq_dest_q": "Wohin kann man ab {name} nonstop fliegen?",
     "faq_dest_a": "Zu den Zielen auf der aktuellen Abflugtafel von {name} ({iata}) gehören {list}.",
-    "country_none": "{count, plural, one {# Flughafen} other {# Flughäfen}} mit IATA-Codes in {country}. Zu keinem davon liegen uns aktuelle Linienflugdaten vor; diese Seite führt daher Codes, Lage und Zeitzonen statt Live-Anzeigetafeln."
+    "country_none": "{count, plural, one {# Flughafen} other {# Flughäfen}} mit IATA-Codes in {country}. Zu keinem davon liegen uns aktuelle Linienflugdaten vor; diese Seite führt daher Codes, Lage und Zeitzonen statt Live-Anzeigetafeln.",
+    "city_none": "{count, plural, one {# Flughafen} other {# Flughäfen}} in {city}. Zu keinem davon liegen uns aktuelle Linienflugdaten vor; diese Seite führt daher Codes, Lage und Zeitzonen statt Live-Anzeigetafeln."
   },
   "ui": {
     "departures": "Abflüge",

@@ -172,7 +172,8 @@
     "faq_airlines_a": "{name} ({iata}) için güncel kalkış panosundaki bilgilere göre, tarifeli uçuşlar {list} tarafından gerçekleştirilmektedir.",
     "faq_dest_q": "{name} çıkışlı aktarmasız olarak nerelere uçabilirsiniz?",
     "faq_dest_a": "{name} ({iata}) güncel kalkış panosundaki varış noktaları arasında {list} yer alır.",
-    "country_none": "{country} içinde IATA koduna sahip {count} havalimanı. Hiçbiri için güncel tarifeli uçuş verimiz yok; bu sayfa canlı pano yerine kodları, konumları ve saat dilimlerini içeriyor."
+    "country_none": "{country} içinde IATA koduna sahip {count} havalimanı. Hiçbiri için güncel tarifeli uçuş verimiz yok; bu sayfa canlı pano yerine kodları, konumları ve saat dilimlerini içeriyor.",
+    "city_none": "{city} şehrinde {count} havalimanı. Hiçbiri için güncel tarifeli uçuş verimiz yok; bu sayfa canlı pano yerine kodları, konumları ve saat dilimlerini listeler."
   },
   "ui": {
     "departures": "Kalkışlar",

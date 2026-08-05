@@ -1,7 +1,7 @@
 import type { MetadataRoute } from 'next';
-import { getAllIataCodes, AIRPORTS_PER_SITEMAP, getSitemapCount, getCountries, getStaticIataCodes, getCities, getAirportsByCountry } from '@/lib/airports';
+import { getAllIataCodes, AIRPORTS_PER_SITEMAP, getSitemapCount, getCountries, getStaticIataCodes, getCities, getAirportsByCountry, getAirportsByCity } from '@/lib/airports';
 import { getEventSlugs } from '@/lib/event-content';
-import { isUnfillable, serviceLevel, splitByService } from '@/lib/warm';
+import { isUnfillable, serviceLevel, splitByService, hasNoService } from '@/lib/warm';
 import { getTopRoutes } from '@/lib/top-routes';
 import { getRoute, getBoard } from '@/lib/flights';
 import { locales } from '@/lib/i18n';
@@ -86,7 +86,13 @@ export default async function sitemap({ id }: { id: number | string }): Promise<
       if (!splitByService(getAirportsByCountry(c.slug)).served.length) continue;
       entries.push(entry(`/airports/${c.slug}`, 'weekly', 0.6));
     }
-    for (const c of getCities()) if (c.count > 1) entries.push(entry(`/city/${c.slug}`, 'weekly', 0.6));
+    // Same predicate as the page's own robots.index — a city where nothing has a board is
+    // noindex, so declaring it here would ask Google to crawl what we just told it to skip.
+    for (const c of getCities()) {
+      if (c.count <= 1) continue;
+      if (!getAirportsByCity(c.slug).some(a => !hasNoService(a.iata))) continue;
+      entries.push(entry(`/city/${c.slug}`, 'weekly', 0.6));
+    }
     // Event guides (World Cup final etc.) — small, high-intent, freshness matters.
     entries.push(entry('/events', 'weekly', 0.6));   // permanent hub
     entries.push(entry('/widgets', 'monthly', 0.5)); // widget generator (the link programme)

@@ -4,6 +4,7 @@ import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import { getCities, getCityBySlug, getAirportsByCity } from '@/lib/airports';
+import { hasNoService } from '@/lib/warm';
 import { getCityName, getCountryName } from '@/lib/places';
 import { getAirportName } from '@/lib/airport-names';
 import { locales } from '@/lib/i18n';
@@ -34,17 +35,25 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const t = await getTranslations({ locale, namespace: 'home' });
   const city = getCityName(c.city, locale);
   const title = t('city_title', { city });
+  /** Does anything on this page actually have a board? */
+  const hasBoard = getAirportsByCity(slug).some(a => !hasNoService(a.iata));
   const languages: Record<string, string> = {};
   for (const loc of locales) languages[loc] = `${BASE}/${loc}/city/${c.slug}`;
   languages['x-default'] = `${BASE}/en/city/${c.slug}`;
   const canonical = `${BASE}/${locale}/city/${c.slug}`;
   return {
     title: withBrand(title),
-    description: t('city_desc', { city, count: c.count }),
+    // 28 city pages list only airports with no scheduled service, and every one of them
+    // promised "arrivals and departures, flight status" over a list where nothing has a board.
+    // Same defect the country pages carried for Ukraine and 18 others, and the same repair:
+    // say what the page actually holds, and stop competing in search as if it were a board.
+    description: hasBoard
+      ? t('city_desc', { city, count: c.count })
+      : t('city_none', { city, count: c.count }),
     // A single-airport "city" page is near-duplicate of that airport — don't index it,
     // and don't advertise an hreflang cluster for a noindex page.
-    alternates: c.count > 1 ? { canonical, languages } : { canonical },
-    robots: { index: c.count > 1, follow: true },
+    alternates: c.count > 1 && hasBoard ? { canonical, languages } : { canonical },
+    robots: { index: c.count > 1 && hasBoard, follow: true },
   };
 }
 
