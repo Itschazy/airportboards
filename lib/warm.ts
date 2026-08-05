@@ -277,6 +277,21 @@ export function hasNoService(iata: string): boolean {
   return getWikiRoutes(iata)?.status === 'no_commercial_service';
 }
 
+/**
+ * The airport's own source article states it has no commercial service — an independent,
+ * sourced negative rather than one empty probe of a feed with patchy coverage.
+ *
+ * 231 airports. It is the gate on publishing an operations description: a paragraph written in
+ * the present tense about terminals, carriers and destinations is not merely thin on a page
+ * headed "no scheduled flights", it is false. Surgery on the offending sentence was tried
+ * first and does not reach this — after removing every carrier claim from LWO, ODS, HRK, DIA,
+ * UIP and ZTU, all six still said the airport "serves domestic and international flights" in
+ * most locales, because the whole paragraph is framed as a working airport.
+ */
+export function sourcedNoCommercialService(iata: string): boolean {
+  return getWikiRoutes(iata)?.status === 'no_commercial_service';
+}
+
 let sizes: Record<string, string> | null = null;
 function getSizes(): Record<string, string> {
   if (sizes) return sizes;

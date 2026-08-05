@@ -35,19 +35,25 @@ const MIN_KEEP = 120;
 // What "the flight board" is called in each locale's generated prose. Deliberately narrow:
 // these match the board as a THING to consult, not the words "arrival"/"departure", which are
 // legitimate everywhere and appear in sentences we must keep.
+// Wave 2, 2026-08-05: the first pass ran on 299 codes and its vocabulary was one phrasing per
+// locale, so it cleared a fraction of the class. Measured across ALL 1,981 airports whose page
+// prints "no scheduled flights", 19,866 paragraphs still sent the reader to a board that does
+// not exist — the generator had invented a different name for it in almost every locale
+// (tr "çevrimiçi uçuş tablosu" against the expected "uçuş panosu"; zh "在线航班动态牌" against
+// "航班信息板"). Each alternative below was read in a real file before being added.
 const BOARD = {
-  en: /\b(?:online\s+)?flight(?:\s+information)?\s+board\b|\bdepartures?\s+board\b|\barrivals?\s+board\b/i,
+  en: /\b(?:online\s+)?flight(?:\s+information)?\s+board\b|\bdepartures?\s+board\b|\barrivals?\s+board\b|\bflight\s+display\b/i,
   ru: /табло/i,
-  de: /Flugtafel|Anzeigetafel|Abfahrtstafel/i,
-  es: /panel\s+de\s+vuelos|tablero\s+de\s+vuelos|panel\s+de\s+salidas/i,
-  fr: /tableau\s+des\s+vols|tableau\s+d[’']affichage/i,
-  it: /tabellone(?:\s+voli)?/i,
-  tr: /uçuş\s+panosu|uçuş\s+bilgi\s+ekranı/i,
-  ar: /لوحة\s+الرحلات/,
-  zh: /航班信息板|航班动态查询|在线航班信息/,
-  ja: /発着案内|フライトボード|運航情報板/,
-  ko: /운항\s?정보판|항공편\s?정보판|출도착\s?안내/,
-  hi: /फ्लाइट\s+बोर्ड|उड़ान\s+बोर्ड|सूचना[- ]?पट/,
+  de: /Flugtafel|Anzeigetafel|Flugtabelle|Abflugtafel|Ankunftstafel|Abfahrtstafel|Flug(?:informations)?anzeige/i,
+  es: /panel\s+de\s+vuelos|tablero\s+de\s+vuelos|panel\s+de\s+(?:salidas|llegadas)|tabl[óo]n\s+de\s+(?:vuelos|salidas|llegadas)/i,
+  fr: /tableau\s+des\s+vols|tableau\s+d[’']affichage|tableau\s+des\s+(?:d[ée]parts|arriv[ée]es)|panneau\s+des\s+vols/i,
+  it: /tabellone(?:\s+(?:voli|dei\s+voli))?|pannello\s+dei\s+voli|quadro\s+voli/i,
+  tr: /uçuş\s+panosu|uçuş\s+tablosu|uçuş\s+bilgi\s+(?:ekranı|panosu)|çevrimiçi\s+uçuş/i,
+  ar: /لوحة\s+الرحلات|لوحة\s+المغادرة|شاشة\s+الرحلات|لوحة\s+الوصول/,
+  zh: /航班信息板|航班动态|在线航班|航班显示|航班牌/,
+  ja: /発着案内|フライトボード|運航情報板|運航情報|オンラインフライト/,
+  ko: /운항\s?정보판|항공편\s?정보판|출도착\s?안내|온라인\s?항공편/,
+  hi: /फ्लाइट\s+बोर्ड|उड़ान\s+बोर्ड|सूचना[- ]?पट|ऑनलाइन\s+फ्लाइट/,
 };
 
 // Sentence terminators. Two alternatives, and the second one matters: CJK does not put a space

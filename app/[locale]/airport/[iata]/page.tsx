@@ -4,7 +4,7 @@ import { notFound, permanentRedirect } from 'next/navigation';
 import Link from 'next/link';
 import airportsAll from '@/data/airports.json';
 import { getAirport, getStaticIataCodes, getCountries, getCities, nearestAirports } from '@/lib/airports';
-import { hasNoService, nearestServiced, serviceLevel, serviceMeasuredOn, isUnfillable } from '@/lib/warm';
+import { hasNoService, nearestServiced, serviceLevel, serviceMeasuredOn, isUnfillable, sourcedNoCommercialService } from '@/lib/warm';
 import { hasWikiAirlines } from '@/lib/wiki-routes';
 import { localizedMeasuredOn } from '@/lib/measured-date';
 import { sameAsFor, airportNodeId } from '@/lib/airport-sameas';
@@ -194,7 +194,12 @@ export default async function AirportPage({ params }: Props) {
   if (!airport) notFound();
 
   const canonical = `${BASE}/${locale}/airport/${airport.iata}`;
-  const about = getAirportContent(airport.iata, locale);
+  // No operations description for an airport whose own source says it has no commercial
+  // service. See sourcedNoCommercialService() — the text is false there, not just thin, and
+  // the page still carries the honest notice, the nearest served airport, the FAQ and the
+  // neighbours. A shorter true page beats a longer false one, and this is the narrow set
+  // (231 airports) where an independent source says so, not the 1,750 resting on one probe.
+  const about = sourcedNoCommercialService(airport.iata) ? '' : getAirportContent(airport.iata, locale);
   // SSR the first (departures) board so the page is useful without client JS.
   let initialFlights: Awaited<ReturnType<typeof getBoard>> = [];
   try { initialFlights = await getBoard(airport.iata, 'departures', locale); } catch {}
