@@ -29,8 +29,19 @@ const listPath = process.argv[2];
 if (!listPath) { console.error('usage: strip-board-promise.mjs <codes.json> [--write]'); process.exit(1); }
 const CODES = new Set(JSON.parse(fs.readFileSync(listPath, 'utf8')));
 
-/** How much prose must survive for the paragraph to still be worth publishing. */
-const MIN_KEEP = 120;
+/**
+ * How much prose must survive for the paragraph to still be worth publishing.
+ *
+ * Per script, and that is not a nicety: a flat 120 was calibrated on Latin text and silently
+ * protected the very locales that needed the pass most. Measured over 600 airports, the average
+ * paragraph is 551 characters in en but 172 in zh, 201 in ja and 261 in ko — Chinese and
+ * Japanese carry several times the meaning per character — so removing one sentence routinely
+ * dropped a CJK paragraph under the flat threshold and the guard refused the edit. Result:
+ * 639 of 651 zh candidates and 163 of 209 ja candidates were left carrying a promise of a board
+ * that does not exist.
+ */
+const MIN_KEEP_BY_SCRIPT = { zh: 45, ja: 50, ko: 70 };
+const minKeep = (locale) => MIN_KEEP_BY_SCRIPT[locale] ?? 120;
 
 // What "the flight board" is called in each locale's generated prose. Deliberately narrow:
 // these match the board as a THING to consult, not the words "arrival"/"departure", which are
@@ -52,8 +63,14 @@ const BOARD = {
   ar: /لوحة\s+الرحلات|لوحة\s+المغادرة|شاشة\s+الرحلات|لوحة\s+الوصول/,
   zh: /航班信息板|航班动态|在线航班|航班显示|航班牌/,
   ja: /発着案内|フライトボード|運航情報板|運航情報|オンラインフライト/,
-  ko: /운항\s?정보판|항공편\s?정보판|출도착\s?안내|온라인\s?항공편/,
-  hi: /फ्लाइट\s+बोर्ड|उड़ान\s+बोर्ड|सूचना[- ]?पट|ऑनलाइन\s+फ्लाइट/,
+  // 플라이트 보드 — самая частая форма в корпусе (290 вхождений), её словарь не знал вовсе.
+  // Родовые 게시판/안내판/표시판/정보판 берутся ТОЛЬКО рядом с авиационным словом: сами по себе
+  // это просто «доска объявлений», и вырезать по ним предложение было бы наугад.
+  ko: /플라이트\s?보드|운항\s?정보판|항공편\s?정보판|출도착\s?안내|온라인\s?항공편|(?:항공편|운항|출도착|비행)[^.。]{0,12}(?:게시판|안내판|표시판|정보판)/,
+  // (?:फ़|फ) — с нуктой и без. Корпус использует ОБЕ формы, и вариант с нуктой встречается
+  // вдвое чаще (399 против 181); словарь знал только вторую, поэтому большинство хинди-абзацев
+  // проходило мимо.
+  hi: /(?:फ़|फ)्लाइट\s*बोर्ड|उड़ान\s*बोर्ड|सूचना[- ]?पट|ऑनलाइन\s*(?:फ़|फ)्लाइट/,
 };
 
 // Sentence terminators. Two alternatives, and the second one matters: CJK does not put a space
@@ -84,7 +101,7 @@ for (const f of files) {
     if (!hits.length) continue;
     if (hits.length > 1) { multi++; skipped.push(`${iata}/${locale}: ${hits.length} board sentences`); continue; }
     const kept = sents.filter(s => !pat.test(s)).join(CJK.has(locale) ? '' : ' ').replace(/\s+/g, ' ').trim();
-    if (kept.length < MIN_KEEP) { tooShort++; skipped.push(`${iata}/${locale}: ${kept.length} chars left`); continue; }
+    if (kept.length < minKeep(locale)) { tooShort++; skipped.push(`${iata}/${locale}: ${kept.length} chars left`); continue; }
     doc[locale] = kept;
     removed++; changed = true;
   }

@@ -8,7 +8,8 @@ import { getBoard, getBoardFetchedAt } from '@/lib/flights';
 import { FlightBoard } from '@/components/FlightBoard';
 import { AirportBottom } from '@/components/AirportBottom';
 import { getAirportContent } from '@/lib/airport-content';
-import { hasNoService, nearestServiced } from '@/lib/warm';
+import { hasWikiAirlines } from '@/lib/wiki-routes';
+import { hasNoService, nearestServiced, sourcedNoCommercialService, serviceLevel } from '@/lib/warm';
 import { nearestAirports } from '@/lib/airports';
 import { Breadcrumb } from '@/components/Breadcrumb';
 import { airportNodeId } from '@/lib/airport-sameas';
@@ -38,8 +39,30 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   // Append the city only when the airport's localized name doesn't already contain it.
   const showCity = showCityFlag(getAirportNameBare(airport.iata, locale, airport.name), cityName, airport.city);
 
-  const title = t('departures_title', { airport: name, iata: airport.iata, city: cityName, showCity });
-  const description = t('departures_description', { airport: name, iata: airport.iata, city: cityName });
+  // The parent decides whether this airport has a board at all, and until now these two
+  // subpages ignored that decision entirely: LWO's parent read "No scheduled flights" while
+  // /airport/LWO/departures read "Live Departures", both indexed, 23,772 URLs across the pair.
+  // Same predicate as the parent (page.tsx) so the three pages cannot disagree again.
+  const boardless = hasNoService(airport.iata);
+  // The parent has a THIRD state between "has a board" and "has no service": never measured,
+  // no published routes — nothing the warmer can ever fill. It offers airport information
+  // there. Mirroring only the no-service branch left 308 airports with a parent reading
+  // "— airport information" above a subpage reading "Live Departures".
+  const infoOnly = !boardless
+    && serviceLevel(airport.iata) === null
+    && !hasWikiAirlines(airport.iata);
+  const tHome = await getTranslations({ locale, namespace: 'home' });
+  const country = getCountryName(airport.country, locale);
+  const title = boardless
+    ? `${name} (${airport.iata}) — ${tHome('ns_title')}`
+    : infoOnly
+      ? t('info_title', { airport: name, iata: airport.iata })
+      : t('departures_title', { airport: name, iata: airport.iata, city: cityName, showCity });
+  const description = boardless
+    ? tHome('ns_meta', { airport: name, iata: airport.iata, city: cityName, country })
+    : infoOnly
+      ? t('info_description', { airport: name, iata: airport.iata, city: cityName, country })
+      : t('departures_description', { airport: name, iata: airport.iata, city: cityName });
 
   /**
    * Canonical points at the PARENT airport page, not at this URL.
@@ -129,7 +152,11 @@ export default async function DeparturesPage({ params }: Props) {
   trail.push({ name: tNav('departures'), item: `${BASE}/${locale}/airport/${airport.iata}/departures` });
 
   const boardFetchedAt = getBoardFetchedAt(airport.iata, 'departures');
-  const about = getAirportContent(airport.iata, locale);
+  // Mirror of the parent: an airport whose own source says it has no commercial service must
+  // not carry an operations description here either. Without this the paragraph removed from
+  // /airport/ODS went on being published at /airport/ODS/departures — 231 x 12 x 2 = 5,544 URLs
+  // still saying "Several Ukrainian and international carriers operate scheduled services here".
+  const about = sourcedNoCommercialService(airport.iata) ? '' : getAirportContent(airport.iata, locale);
   const noService = hasNoService(airport.iata);
   const nearestWithFlights = noService
     ? (() => {

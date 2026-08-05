@@ -100,8 +100,13 @@ export default async function CityPage({ params }: Props) {
       <h1 style={{ fontSize: 'clamp(28px, 7vw, 40px)', fontWeight: 800, letterSpacing: '-0.03em', color: '#FFFFFF', margin: '0 0 6px' }}>
         {flag(c.iso2)} {t('city_title', { city })}
       </h1>
+      {/* The honest variant was applied to the <meta> only, so the page carried both claims at
+          once: a description saying we have no scheduled-service data, above a paragraph
+          promising "arrivals and departures, flight status". Same predicate as the metadata. */}
       <p style={{ fontSize: 15, color: '#8A8A8A', margin: '0 0 28px' }}>
-        {t('city_desc', { city, count: c.count })}
+        {airports.some(a => !hasNoService(a.iata))
+          ? t('city_desc', { city, count: c.count })
+          : t('city_none', { city, count: c.count })}
       </p>
 
       <ul style={{ listStyle: 'none', margin: 0, padding: 0, display: 'flex', flexDirection: 'column', gap: 8 }}>
