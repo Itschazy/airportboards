@@ -72,9 +72,9 @@
     "sec_az": "Tous les aéroports A–Z",
     "departures_short": "départs",
     "arrivals_short": "arrivées",
-    "airports_count": "{count} aéroports",
+    "airports_count": "{count, plural, one {# aéroport} other {# aéroports}}",
     "country_title": "Aéroports : {country}",
-    "country_desc": "Arrivées et départs en direct pour les {count} aéroports ({country}). État des vols, avec l’ancienneté des données indiquée sur chaque tableau d’affichage.",
+    "country_desc": "Arrivées et départs en direct pour {count, plural, one {l’aéroport} other {les # aéroports}} ({country}). État des vols, avec l’ancienneté des données indiquée sur chaque tableau d’affichage.",
     "az_title": "Aéroports commençant par {letter}",
     "az_desc": "Tous les aéroports commençant par la lettre {letter} — arrivées et départs en direct, avec l’âge des données indiqué sur chaque tableau.",
     "show_more": "Afficher plus",
@@ -131,7 +131,7 @@
     "faq_hasflights_a": "Non. Aucune compagnie aérienne n’exploite de vols passagers réguliers au départ de {name} ({iata}).",
     "faq_nearest_q": "Quel est l’aéroport le plus proche de {name} proposant des vols réguliers ?",
     "faq_nearest_a": "L’aéroport le plus proche assurant des vols passagers réguliers est {airport} ({code}), à environ {km} km.",
-    "country_split": "Sur les {count} aéroports dotés d’un code IATA ({country}), {served} proposent des vols passagers réguliers à la date du {date} ; les {rest} restants sont des aérodromes sans vols de compagnies aériennes.",
+    "country_split": "Sur {count, plural, one {# aéroport doté} other {les # aéroports dotés}} d’un code IATA ({country}), {served, plural, one {# propose} other {# proposent}} des vols passagers réguliers à la date du {date}{rest, plural, =0 {.} one { ; le # restant est un aérodrome sans vols de compagnies aériennes.} other { ; les # restants sont des aérodromes sans vols de compagnies aériennes.}}",
     "grid_served": "Avec des vols réguliers",
     "grid_unserved": "Aucun service régulier",
     "world_split": "AirportsBoard répertorie {total} aéroports dotés de codes IATA dans le monde. Selon les données relevées le {date}, {served} d’entre eux étaient desservis par des vols passagers réguliers ; les {rest} autres sont des aérodromes, des bases militaires et des pistes privées sans vols de compagnies aériennes.",
@@ -144,7 +144,7 @@
     "airport_lead": "{name} ({iata}) est un aéroport qui dessert {city}, {country}.",
     "replaced_line": "{name} ({iata}) a repris le trafic de {predecessors}.",
     "delays_line": "État du tableau d’affichage il y a {m} min : {delayed} des {pending} prochains départs sont retardés de 15 min ou plus.",
-    "country_split_partial": "Sur les {count} aéroports dotés d’un code IATA ({country}), au moins {served} proposent des vols passagers réguliers à la date du {date}.",
+    "country_split_partial": "Sur {count, plural, one {# aéroport doté} other {les # aéroports dotés}} d’un code IATA ({country}), au moins {served, plural, one {# propose} other {# proposent}} des vols passagers réguliers à la date du {date}.",
     "world_split_partial": "AirportsBoard suit {total} aéroports dotés d’un code IATA dans le monde. À la date du {date}, au moins {served} d’entre eux proposaient des vols passagers réguliers.",
     "airport_lead_same": "Aéroport {name} ({iata}), {country}.",
     "routes_title_in": "Routes populaires vers {iata}",
@@ -172,7 +172,7 @@
     "faq_airlines_a": "D’après le tableau actuel des départs de {name} ({iata}), les vols programmés sont opérés par {list}.",
     "faq_dest_q": "Où pouvez-vous voler sans escale depuis {name} ?",
     "faq_dest_a": "Les destinations indiquées sur le tableau actuel des départs de {name} ({iata}) comprennent {list}.",
-    "country_none": "{count} aéroports dotés d’un code IATA en {country}. Nous n’avons de données de vols réguliers à jour pour aucun d’eux : cette page présente donc les codes, les localisations et les fuseaux horaires plutôt que des tableaux en direct."
+    "country_none": "{count, plural, one {# aéroport doté} other {# aéroports dotés}} d’un code IATA en {country}. Nous n’avons de données de vols réguliers à jour pour aucun d’eux : cette page présente donc les codes, les localisations et les fuseaux horaires plutôt que des tableaux en direct."
   },
   "ui": {
     "departures": "Départs",

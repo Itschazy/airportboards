@@ -72,9 +72,9 @@
     "sec_az": "All airports A–Z",
     "departures_short": "departures",
     "arrivals_short": "arrivals",
-    "airports_count": "{count} airports",
+    "airports_count": "{count, plural, one {# airport} other {# airports}}",
     "country_title": "Airports in {country}",
-    "country_desc": "Live arrivals and departures for the {count} airports in {country}. Flight status, with the age of the data shown on every board.",
+    "country_desc": "Live arrivals and departures for {count, plural, one {the airport} other {the # airports}} in {country}. Flight status, with the age of the data shown on every board.",
     "az_title": "Airports starting with {letter}",
     "az_desc": "All airports starting with the letter {letter} — live arrivals and departures, with the age of the data shown on every board.",
     "show_more": "Show more",
@@ -131,7 +131,7 @@
     "faq_hasflights_a": "No. No airline operates scheduled passenger flights from {name} ({iata}).",
     "faq_nearest_q": "What is the nearest airport to {name} with scheduled flights?",
     "faq_nearest_a": "The nearest airport with scheduled passenger flights is {airport} ({code}), about {km} km away.",
-    "country_split": "Of the {count} airports with IATA codes in {country}, {served} have scheduled passenger service as of {date}; the remaining {rest} are airfields with no airline flights.",
+    "country_split": "Of the {count, plural, one {# airport} other {# airports}} with {count, plural, one {an IATA code} other {IATA codes}} in {country}, {served, plural, one {# has} other {# have}} scheduled passenger service as of {date}{rest, plural, =0 {.} one {; the remaining # is an airfield with no airline flights.} other {; the remaining # are airfields with no airline flights.}}",
     "grid_served": "With scheduled flights",
     "grid_unserved": "No scheduled service",
     "world_split": "AirportsBoard tracks {total} airports with IATA codes worldwide. As measured on {date}, {served} of them had scheduled passenger service; the other {rest} are airfields, military bases and private strips with no airline flights.",
@@ -144,7 +144,7 @@
     "airport_lead": "{name} ({iata}) is an airport serving {city}, {country}.",
     "replaced_line": "{name} ({iata}) took over the traffic of {predecessors}.",
     "delays_line": "Board status as of {m} min ago: {delayed} of {pending} upcoming departures delayed by 15+ minutes.",
-    "country_split_partial": "Of the {count} airports with IATA codes in {country}, at least {served} have scheduled passenger service as of {date}.",
+    "country_split_partial": "Of the {count, plural, one {# airport} other {# airports}} with IATA codes in {country}, at least {served, plural, one {# has} other {# have}} scheduled passenger service as of {date}.",
     "world_split_partial": "AirportsBoard tracks {total} airports with IATA codes worldwide. As measured on {date}, at least {served} of them had scheduled passenger service.",
     "airport_lead_same": "{name} Airport ({iata}), {country}.",
     "routes_title_in": "Popular routes to {iata}",
@@ -172,7 +172,7 @@
     "faq_airlines_a": "Based on the current departures board at {name} ({iata}), scheduled flights are operated by {list}.",
     "faq_dest_q": "Where can you fly nonstop from {name}?",
     "faq_dest_a": "Destinations on the current departures board at {name} ({iata}) include {list}.",
-    "country_none": "{count} airports with IATA codes in {country}. We have no current scheduled-service data for any of them, so this page carries codes, locations and time zones rather than live boards."
+    "country_none": "{count, plural, one {# airport} other {# airports}} with IATA codes in {country}. We have no current scheduled-service data for {count, plural, one {it} other {any of them}}, so this page carries codes, locations and time zones rather than live boards."
   },
   "ui": {
     "departures": "Departures",

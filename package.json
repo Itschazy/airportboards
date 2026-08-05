@@ -8,7 +8,8 @@
     "start": "next start",
     "check:scripts": "node scripts/check-scripts.mjs",
     "check:metrica": "node scripts/check-metrica.mjs",
-    "check:metrica:built": "node scripts/check-metrica.mjs http://localhost:3002/ru/airport/KZN"
+    "check:metrica:built": "node scripts/check-metrica.mjs http://localhost:3002/ru/airport/KZN",
+    "check:plurals": "node scripts/check-plurals.mjs"
   },
   "dependencies": {
     "next": "^15.3.3",

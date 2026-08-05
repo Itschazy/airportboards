@@ -257,7 +257,17 @@ async function resolve(iata) {
   return null;
 }
 
-const todo = targets.filter((c) => !store[c]);
+// Entries carrying `suppressed` were removed BY HAND after review — a foreign airport whose
+// article was about a different field, a cargo-only strip, an airport that closed years ago.
+// Seven of them were publishing another airport's airline table (JOH shipped 78 of JFK's under
+// a heading saying no major airlines operate there), which is part of what AdSense rejected the
+// site for on 2026-08-03. The skip below already protects them, because it passes over anything
+// already in the store — but that is an accident of the resume logic, not a stated rule, and a
+// future `--refresh` flag would quietly undo a day of review. So the invariant is explicit and
+// enforced at the write sites too.
+const SUPPRESSED = new Set(Object.keys(store).filter((c) => store[c]?.suppressed));
+if (SUPPRESSED.size) console.log(`подавленных вручную записей (не трогаем): ${SUPPRESSED.size}`);
+const todo = targets.filter((c) => !store[c] && !SUPPRESSED.has(c));
 console.log(`airports in scope: ${targets.length}, already done: ${targets.length - todo.length}, to fetch: ${todo.length}`);
 if (DRY) { console.log('DRY — nothing called, nothing written'); process.exit(0); }
 
@@ -272,6 +282,7 @@ async function worker() {
     const iata = work[i++];
     let res = null;
     try { res = await resolve(iata); } catch { /* recorded as a miss below */ }
+    if (SUPPRESSED.has(iata)) continue;   // проверено вручную — не перезаписывать
     if (!res) { store[iata] = { airlines: [], source: null, via: 'no-article' }; noArticle++; }
     else {
       store[iata] = { ...res, fetched: '2026-07-26' };

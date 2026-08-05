@@ -62,11 +62,19 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       // with the most confident template on the site: "Live arrivals and departures for the 31
       // airports in Ukraine … with the age of the data shown on every board." 19 countries did
       // this. It is the country-page form of the promise AdSense rejected the site over.
-      if (!served.length) return t('country_none', { country: countryName, count: fmt(c.count, locale) });
+      // Raw numbers, not fmt(): these two keys now carry an ICU plural, and `#` inside a plural
+      // formats the number for the locale itself. Handing it a pre-formatted STRING makes the
+      // plural rule unmatchable, so every count would fall through to `other` — which is the
+      // bug being fixed. 56 countries have exactly one served airport and read "1 airports".
+      if (!served.length) return t('country_none', { country: countryName, count: c.count });
       if (!date) return t('country_desc', { country: countryName, count: c.count });
+      // Numbers, not fmt() — same reason as above: these keys pluralise count, served and rest,
+      // and ICU cannot match a plural rule against a pre-formatted string. Bahrain read
+      // "Of the 1 airports … 1 have scheduled passenger service"; it is one of 56 countries
+      // with exactly one served airport.
       return unknown.length
-        ? t('country_split_partial', { country: countryName, count: fmt(c.count, locale), served: fmt(served.length, locale), date })
-        : t('country_split', { country: countryName, count: fmt(c.count, locale), served: fmt(served.length, locale), rest: fmt(unserved.length, locale), date });
+        ? t('country_split_partial', { country: countryName, count: c.count, served: served.length, date })
+        : t('country_split', { country: countryName, count: c.count, served: served.length, rest: unserved.length, date });
     })(),
     alternates: { canonical: `${BASE}/${locale}/airports/${c.slug}`, languages },
     // A country where nothing is served has no flight content to offer — it is a list of codes.
@@ -134,8 +142,8 @@ export default async function CountryPage({ params }: Props) {
       {showSplit && (
         <p style={{ fontSize: 15, lineHeight: 1.55, color: '#C7C7CC', marginTop: 14, maxWidth: 640 }}>
           {unknown.length
-            ? t('country_split_partial', { country: countryName, count: fmt(c.count, locale), served: fmt(served.length, locale), date: localizedMeasuredOn(measuredOn!, locale) })
-            : t('country_split', { country: countryName, count: fmt(c.count, locale), served: fmt(served.length, locale), rest: fmt(unserved.length, locale), date: localizedMeasuredOn(measuredOn!, locale) })}
+            ? t('country_split_partial', { country: countryName, count: c.count, served: served.length, date: localizedMeasuredOn(measuredOn!, locale) })
+            : t('country_split', { country: countryName, count: c.count, served: served.length, rest: unserved.length, date: localizedMeasuredOn(measuredOn!, locale) })}
         </p>
       )}
 

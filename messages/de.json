@@ -72,9 +72,9 @@
     "sec_az": "Alle Flughäfen A–Z",
     "departures_short": "Abflüge",
     "arrivals_short": "Ankünfte",
-    "airports_count": "{count} Flughäfen",
+    "airports_count": "{count, plural, one {# Flughafen} other {# Flughäfen}}",
     "country_title": "Flughäfen: {country}",
-    "country_desc": "{country}: Live-Ankünfte und -Abflüge für die {count} Flughäfen. Flugstatus mit Angabe des Datenalters auf jeder Anzeigetafel.",
+    "country_desc": "{country}: Live-Ankünfte und -Abflüge für {count, plural, one {# Flughafen} other {die # Flughäfen}}. Flugstatus mit Angabe des Datenalters auf jeder Anzeigetafel.",
     "az_title": "Flughäfen mit dem Anfangsbuchstaben {letter}",
     "az_desc": "Alle Flughäfen mit dem Anfangsbuchstaben {letter} — Ankünfte und Abflüge in Echtzeit, wobei das Alter der Daten auf jeder Anzeigetafel angezeigt wird.",
     "show_more": "Mehr anzeigen",
@@ -131,7 +131,7 @@
     "faq_hasflights_a": "Nein. Keine Fluggesellschaft führt planmäßige Passagierflüge von {name} ({iata}) durch.",
     "faq_nearest_q": "Welcher ist der nächstgelegene Flughafen zu {name} mit Linienflügen?",
     "faq_nearest_a": "Der nächstgelegene Flughafen mit planmäßigen Passagierflügen ist {airport} ({code}), etwa {km} km entfernt.",
-    "country_split": "{country}: Von den {count} Flughäfen mit IATA-Codes bieten {served} mit Stand {date} planmäßigen Passagierverkehr; die übrigen {rest} sind Flugplätze ohne Linienflüge.",
+    "country_split": "{country}: Von {count, plural, one {# Flughafen} other {den # Flughäfen}} mit IATA-Codes {served, plural, one {bietet #} other {bieten #}} mit Stand {date} planmäßigen Passagierverkehr{rest, plural, =0 {.} one {; der übrige # ist ein Flugplatz ohne Linienflüge.} other {; die übrigen # sind Flugplätze ohne Linienflüge.}}",
     "grid_served": "Mit Linienflügen",
     "grid_unserved": "Kein Linienverkehr",
     "world_split": "AirportsBoard erfasst weltweit {total} Flughäfen mit IATA-Codes. Stand {date} hatten {served} davon planmäßigen Passagierverkehr; die übrigen {rest} sind Flugplätze, Militärstützpunkte und private Landebahnen ohne Linienflüge.",
@@ -144,7 +144,7 @@
     "airport_lead": "{name} ({iata}) ist ein Flughafen für {city}, {country}.",
     "replaced_line": "{name} ({iata}) übernahm den Flugverkehr von {predecessors}.",
     "delays_line": "Anzeigetafel-Status vor {m} Min.: {delayed} von {pending} anstehenden Abflügen haben mindestens 15 Minuten Verspätung.",
-    "country_split_partial": "{country}: Von den {count} Flughäfen mit IATA-Codes bieten mindestens {served} mit Stand {date} planmäßigen Passagierverkehr.",
+    "country_split_partial": "{country}: Von {count, plural, one {# Flughafen} other {den # Flughäfen}} mit IATA-Codes {served, plural, one {bietet mindestens #} other {bieten mindestens #}} mit Stand {date} planmäßigen Passagierverkehr.",
     "world_split_partial": "AirportsBoard erfasst weltweit {total} Flughäfen mit IATA-Codes. Mit Stand {date} boten mindestens {served} davon planmäßigen Passagierverkehr.",
     "airport_lead_same": "Flughafen {name} ({iata}), {country}.",
     "routes_title_in": "Beliebte Verbindungen nach {iata}",
@@ -172,7 +172,7 @@
     "faq_airlines_a": "Laut der aktuellen Abflugtafel von {name} ({iata}) werden planmäßige Flüge von {list} durchgeführt.",
     "faq_dest_q": "Wohin kann man ab {name} nonstop fliegen?",
     "faq_dest_a": "Zu den Zielen auf der aktuellen Abflugtafel von {name} ({iata}) gehören {list}.",
-    "country_none": "{count} Flughäfen mit IATA-Codes in {country}. Zu keinem davon liegen uns aktuelle Linienflugdaten vor; diese Seite führt daher Codes, Lage und Zeitzonen statt Live-Anzeigetafeln."
+    "country_none": "{count, plural, one {# Flughafen} other {# Flughäfen}} mit IATA-Codes in {country}. Zu keinem davon liegen uns aktuelle Linienflugdaten vor; diese Seite führt daher Codes, Lage und Zeitzonen statt Live-Anzeigetafeln."
   },
   "ui": {
     "departures": "Abflüge",
