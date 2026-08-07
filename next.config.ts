@@ -4,6 +4,21 @@ import createNextIntlPlugin from 'next-intl/plugin';
 const withNextIntl = createNextIntlPlugin('./i18n/request.ts');
 
 const nextConfig: NextConfig = {
+  // Build somewhere else, then swap — see scripts/swap-build.mjs.
+  //
+  // On 2026-08-05 the site was down for 11.5 hours because `next build` writes into the very
+  // directory the running server reads from. The deploy's SSH session hit appleboy/ssh-action's
+  // 10-minute ceiling and was killed mid-build, leaving `.next` half-written under a live
+  // process; `pm2 restart` comes after the build in the deploy script, so it never ran, and the
+  // app died on the next chunk it could not read. Every route answered 502.
+  //
+  // With this, a killed or failed build touches only the staging directory. The live `.next` is
+  // replaced by a rename that takes milliseconds, and only once the build has actually finished.
+  // A slow deploy becomes a slow deploy instead of an outage.
+  //
+  // `next start` reads this same config with the variable unset, so it serves `.next` — which is
+  // exactly what the swap put there.
+  distDir: process.env.NEXT_DIST_DIR || '.next',
   // Drop the `X-Powered-By: Next.js` header — leaks the stack, no benefit.
   poweredByHeader: false,
   // Force blocking (non-streaming) metadata for EVERY user-agent. Next 15 streams

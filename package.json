@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "NEXT_DIST_DIR=.next-build next build && node scripts/swap-build.mjs",
     "start": "next start",
     "check:scripts": "node scripts/check-scripts.mjs",
     "check:metrica": "node scripts/check-metrica.mjs",
