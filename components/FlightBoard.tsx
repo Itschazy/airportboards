@@ -290,7 +290,14 @@ function BottomSheet({ flight, mode, onClose, tz, locale, updLabel, originIata, 
     const mins = minsUntil(dispTime);
     const n = localNow();
     const nowClock = `${String(n.h).padStart(2, '0')}:${String(n.m).padStart(2, '0')}`;
-    const dateStr = new Date().toLocaleDateString(locale, { timeZone: tz || undefined, weekday: 'short', month: 'short', day: 'numeric' });
+    // The date of the FLIGHT, not of the reader. This printed today unconditionally, so a
+    // Kazan departure at 00:35 was labelled "Sat, 8 Aug" while the countdown right beside it
+    // correctly said "in 9 h" — the card contradicted itself, and six of the thirty-three
+    // departures on that board were already the next day. minsUntil() already rolls over
+    // midnight (see its -300 guard), so shifting now by it lands on the right day, and on a
+    // flight that has already gone it steps back, which is equally correct.
+    const dateStr = new Date(Date.now() + (mins ?? 0) * 60_000)
+      .toLocaleDateString(locale, { timeZone: tz || undefined, weekday: 'short', month: 'short', day: 'numeric' });
 
     const Icon = ({ name }: { name: string }) => {
       const p = { width: 26, height: 26, viewBox: '0 0 24 24', fill: 'none', stroke: color, strokeWidth: 1.8, strokeLinecap: 'round' as const, strokeLinejoin: 'round' as const, style: { flexShrink: 0, opacity: 0.9 } };
@@ -758,7 +765,15 @@ export function FlightBoard({ airport, locale, defaultMode = 'departures', displ
       || (f.destination || f.origin || '').toLowerCase().includes(q)
       || (f.airline || '').toLowerCase().includes(q);
   });
-  const INITIAL = 12;
+  // Twelve rows is right for a hub with eighty flights and wrong for an airport with thirty:
+  // Kazan's header says "33 departures on the board" directly above twelve of them, and the
+  // fifteen still to come that evening — 20:55 Novosibirsk through 01:50 Sheremetyevo — sat
+  // behind a tap. Measured on the real HTML, the twenty-one extra rows cost 1,205 bytes gzip
+  // (+3.3% of 36.6 KB), which is not a reason to hide a whole evening.
+  //
+  // The threshold reads the FULL board, not the filtered view, so switching a filter or typing
+  // a search cannot change how many rows the list starts with. Hubs keep the twelve-row start.
+  const INITIAL = flights.length <= 35 ? Math.max(flights.length, 12) : 12;
   const shown = showAll ? visible : visible.slice(0, INITIAL);
   useEffect(() => { setShowAll(false); }, [mode, filter, trimSearch]);
 

@@ -57,14 +57,34 @@ function airportLabel(iata: string, locale: string): string {
   return `${getCityName(city, locale)} (${iata})`;
 }
 
-export function mapStatus(f: AirlabsFlight, direction: 'departures' | 'arrivals'): string {
+/**
+ * @param asOfSec Unix seconds of the SNAPSHOT this row came from — not the current time.
+ *
+ * The distinction is the whole point. The two "the clock has passed it, so it has happened"
+ * inferences below cover for airlabs lagging its own `status` field, and they are sound only
+ * against the moment the data was taken. Measured against `Date.now()` they keep firing long
+ * after the snapshot went stale, and then they are not inference but invention: on 2026-08-08
+ * the Kazan arrivals board was serving a 2h19m-old snapshot in which 15 consecutive rows read
+ * "Получение багажа" — and for 5 of them the scheduled landing was LATER than the snapshot
+ * itself, so nothing in our data said anything about them at all. One was a flight from
+ * Hurghada shown in green, "at baggage claim", directly under a line saying the data was two
+ * hours old.
+ *
+ * With the snapshot time, a flight whose schedule expired after the data was taken simply keeps
+ * whatever the provider last said. That is less confident and it is true; the board already
+ * prints the age of its data next to it.
+ *
+ * Defaults to now() so the client-side path, which has no snapshot to reason about, behaves as
+ * before rather than silently changing meaning.
+ */
+export function mapStatus(f: AirlabsFlight, direction: 'departures' | 'arrivals', asOfSec = Date.now() / 1000): string {
   if (f.status === 'cancelled' || f.status === 'diverted') return 'cancelled';
   if (direction === 'arrivals') {
     if (f.status === 'landed') return 'baggage';
-    // airlabs often lags the 'landed' status — if the (estimated) arrival time has
-    // already passed, the flight is on the ground, not "arriving now / on schedule".
+    // airlabs often lags the 'landed' status — if the (estimated) arrival time had
+    // already passed WHEN THE SNAPSHOT WAS TAKEN, the flight was on the ground.
     const arrTs = f.arr_estimated_ts || f.arr_time_ts;
-    if (arrTs && arrTs <= Date.now() / 1000) return 'baggage';
+    if (arrTs && arrTs <= asOfSec) return 'baggage';
     if ((f.arr_delayed ?? 0) > 15) return 'delayed';
     return 'ontime';
   }
@@ -76,7 +96,10 @@ export function mapStatus(f: AirlabsFlight, direction: 'departures' | 'arrivals'
   // delay statistics line counts anything not 'departed', so those ghosts inflated both its
   // numerator and its denominator, corrupting the one original figure the hub pages publish.
   const depTs = f.dep_estimated_ts || f.dep_time_ts;
-  const minsUntil = depTs ? (depTs - Date.now() / 1000) / 60 : null;
+  // Against the snapshot, for the same reason as arrivals: a stale board would otherwise
+  // "depart" every flight on it as the clock rolled past, and "Boarding"/"Final call" —
+  // statuses that describe a gate right now — would be assigned from data hours old.
+  const minsUntil = depTs ? (depTs - asOfSec) / 60 : null;
   if (minsUntil !== null && minsUntil <= 0) return 'departed';
   if ((f.dep_delayed ?? 0) > 15) return 'delayed';
   if (minsUntil !== null) {
@@ -86,12 +109,12 @@ export function mapStatus(f: AirlabsFlight, direction: 'departures' | 'arrivals'
   return 'ontime';
 }
 
-export function mapFlight(f: AirlabsFlight, direction: 'departures' | 'arrivals', locale: string) {
+export function mapFlight(f: AirlabsFlight, direction: 'departures' | 'arrivals', locale: string, asOfSec = Date.now() / 1000) {
   const flightNum = (f.flight_iata && f.flight_iata.replace('-', ' ').trim())
     || [f.airline_iata, f.flight_number].filter(Boolean).join(' ').trim()
     || '—';
   const airline   = airlineName(f.airline_iata);
-  const status    = mapStatus(f, direction);
+  const status    = mapStatus(f, direction, asOfSec);
   const scheduled = timePart(direction === 'departures' ? f.dep_time : f.arr_time);
   const estimated = timePart(direction === 'departures' ? f.dep_estimated : f.arr_estimated);
   // Show the effective (estimated/actual) time as the primary time whenever it
@@ -152,6 +175,54 @@ export async function fetchRaw(
   return p;
 }
 
+/**
+ * Put a board in reading order: what is about to happen first, what just happened around it.
+ *
+ * Called twice, and that is the point. Ordering used to happen only inside the paid fetch, so
+ * the sequence froze at the moment the snapshot was taken while the statuses kept being
+ * recomputed — on 2026-08-08 the Kazan arrivals board opened on FIFTEEN consecutive landed
+ * flights, and the first arrival still to come was row sixteen, four rows below the twelve the
+ * board renders. Someone meeting a flight saw nothing but aircraft already on the ground.
+ *
+ * `prune` separates the two uses. Inside the fetch it also TRIMS: old arrivals outside the
+ * window are dropped so a busy hub does not spend its row budget on history. At read time it
+ * must only REORDER — a board that has gone stale would otherwise have every row fall outside
+ * the window at once and arrivals would render empty, which is worse than out of order.
+ *
+ * Ordering uses the reader's clock while statuses use the snapshot's (see mapStatus). Different
+ * questions: "what is next" is about now, "did it land" is about what the data actually saw.
+ */
+function orderBoard(rows: AirlabsFlight[], direction: 'departures' | 'arrivals', nowSec: number,
+                    { prune = false }: { prune?: boolean } = {}): AirlabsFlight[] {
+  const tsOf = (f: AirlabsFlight) => (direction === 'arrivals'
+    ? (f.arr_estimated_ts || f.arr_time_ts)
+    : (f.dep_estimated_ts || f.dep_time_ts)) || 0;
+  const asc = (a: AirlabsFlight, b: AirlabsFlight) => tsOf(a) - tsOf(b);
+
+  if (direction === 'arrivals') {
+    const past = rows.filter(f => tsOf(f) < nowSec).sort(asc);
+    const upcoming = rows.filter(f => tsOf(f) >= nowSec).sort(asc);
+    if (prune) {
+      const recent = past.filter(f => tsOf(f) >= nowSec - RECENT_ARR_WINDOW).slice(-RECENT_ARR_MAX);
+      return [...recent, ...upcoming];
+    }
+    // Read time: a couple of just-landed flights answer "has it arrived yet", everything still
+    // to come goes next, and the older landings keep their place at the bottom rather than
+    // being thrown away.
+    const head = past.slice(-RECENT_ARR_HEAD);
+    const tail = past.slice(0, Math.max(0, past.length - RECENT_ARR_HEAD));
+    return [...head, ...upcoming, ...tail];
+  }
+
+  const cmp = (a: AirlabsFlight, b: AirlabsFlight) => {
+    const ta = tsOf(a), tb = tsOf(b);
+    const aUp = ta >= nowSec, bUp = tb >= nowSec;
+    if (aUp !== bUp) return aUp ? -1 : 1;
+    return aUp ? ta - tb : tb - ta;   // upcoming ascending, departed most-recent-first
+  };
+  return [...rows].sort(cmp);
+}
+
 async function doFetch(query: string, direction: 'departures' | 'arrivals', cacheKey: string, kind: SpendKind): Promise<AirlabsFlight[]> {
   const url = `https://airlabs.co/api/v9/schedules?${query}&api_key=${AIRLABS_KEY}`;
   let json: {
@@ -179,25 +250,7 @@ async function doFetch(query: string, direction: 'departures' | 'arrivals', cach
     ? (f.arr_estimated_ts || f.arr_time_ts)
     : (f.dep_estimated_ts || f.dep_time_ts)) || 0;
 
-  if (direction === 'arrivals') {
-    // Single ascending timeline by arrival time: earliest recent landing (up to ~2h
-    // ago) at the top → most recent → upcoming. Cap the recent block (keeping the
-    // MOST recent ones) so a busy hub still shows plenty of upcoming arrivals.
-    const recent = raw
-      .filter(f => { const t = tsOf(f); return t >= now - RECENT_ARR_WINDOW && t < now; })
-      .sort((a, b) => tsOf(a) - tsOf(b))
-      .slice(-RECENT_ARR_MAX);
-    const upcoming = raw.filter(f => tsOf(f) >= now).sort((a, b) => tsOf(a) - tsOf(b));
-    raw = [...recent, ...upcoming];
-  } else {
-    // Departures: next-to-depart first, then recently departed (most recent first).
-    raw.sort((a, b) => {
-      const ta = tsOf(a), tb = tsOf(b);
-      const aUp = ta >= now, bUp = tb >= now;
-      if (aUp !== bUp) return aUp ? -1 : 1;
-      return aUp ? ta - tb : tb - ta;
-    });
-  }
+  raw = orderBoard(raw, direction, now, { prune: true });
 
   raw = raw.slice(0, MAX_FLIGHTS);
   put(cacheKey, raw);
@@ -215,6 +268,9 @@ async function doFetch(query: string, direction: 'departures' | 'arrivals', cach
 // incl. a nonsensical SVO→SVO) when the API key is invalid / over-quota — without this
 // guard every airport board rendered identical fake flights (catastrophic duplicate
 // content + user-facing fake data). The filter is a no-op when real data is returned.
+/** How many already-landed arrivals stay at the top when re-ordering for display. */
+const RECENT_ARR_HEAD = 3;
+
 const norm = (s?: string) => (s || '').toUpperCase().replace(/[\s-]/g, '');
 
 // `live` = may this call spend airlabs quota? Pages (SSR / crawler-triggered) pass false
@@ -224,7 +280,13 @@ export async function getBoard(iata: string, direction: 'departures' | 'arrivals
   const param = direction === 'departures' ? `dep_iata=${code}` : `arr_iata=${code}`;
   const raw = await fetchRaw(param, direction, { live, kind });
   const own = raw.filter(f => (direction === 'departures' ? f.dep_iata : f.arr_iata) === code);
-  return own.map(f => mapFlight(f, direction, locale));
+  // Statuses are derived against the moment the data was taken, not the moment we answer.
+  // getStaleTs is the same value getBoardFetchedAt() publishes as "updated N ago", so the
+  // status and the freshness line can no longer tell the reader different stories.
+  const asOfMs = getStaleTs(`${direction}:${param}`);
+  const asOfSec = asOfMs ? asOfMs / 1000 : Date.now() / 1000;
+  const ordered = orderBoard(own, direction, Date.now() / 1000);
+  return ordered.map(f => mapFlight(f, direction, locale, asOfSec));
 }
 
 /** When the stored board for this airport/direction was last written by airlabs, or null.
