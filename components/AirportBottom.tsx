@@ -9,7 +9,7 @@ import { MoreInfo, OverviewMetrics, AboutCard, Faq } from '@/components/AirportE
 import { getAirportContentExtended } from '@/lib/airport-content-extended';
 import { getAirportSchedule, weekdayNames, maskToDays } from '@/lib/airport-schedule';
 import { getWikiRoutes } from '@/lib/wiki-routes';
-import { serviceLevel, serviceMeasuredOn } from '@/lib/warm';
+import { serviceLevel, serviceMeasuredOn, worldServiceCounts } from '@/lib/warm';
 import { GENERIC_LOCALES } from '@/lib/generic-word';
 import { localizedMeasuredOn } from '@/lib/measured-date';
 import { EventBanner } from '@/components/EventBanner';
@@ -643,7 +643,7 @@ export async function AirportBottom({ airport, locale, about, displayName, fligh
           {/* 9. FOOTER */}
           <footer style={{ marginTop: 44, paddingTop: 24, borderTop: '1px solid #1A1A1A' }}>
             <div style={{ fontSize: 15, fontWeight: 700, color: '#FFFFFF' }}>airportsboard</div>
-            <p style={{ fontSize: 13, color: SUB, lineHeight: 1.5, marginTop: 8, maxWidth: 340 }}>{t('footer_tagline')}</p>
+            <p style={{ fontSize: 13, color: SUB, lineHeight: 1.5, marginTop: 8, maxWidth: 340 }}>{t('footer_tagline', { served: worldServiceCounts().withService })}</p>
             <div style={{ display: 'flex', flexWrap: 'wrap', gap: '10px 18px', marginTop: 16, fontSize: 13 }}>
               {countryInfo && <Link href={`/${locale}/airports/${countryInfo.slug}`} style={{ color: SUB, textDecoration: 'none', display: 'inline-block', minHeight: 24 }}>{t('footer_countries')}</Link>}
               {cityLink && <Link href={cityLink} style={{ color: SUB, textDecoration: 'none', display: 'inline-block', minHeight: 24 }}>{city}</Link>}

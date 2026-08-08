@@ -54,8 +54,8 @@
     "icao_code": "Codice ICAO"
   },
   "home": {
-    "headline": "Tabelloni in diretta per 6.000+ aeroporti",
-    "subline": "Arrivi e partenze per oltre 6.000 aeroporti in tutto il mondo. Ogni tabellone indica quanto sono aggiornati i dati.",
+    "headline": "Tabelloni voli in tempo reale per {served, number} aeroporti con voli di linea",
+    "subline": "Arrivi e partenze per {served, number} aeroporti realmente serviti dalle compagnie, più codici, posizione e fusi orari per {tracked, number} in totale. Ogni tabellone indica quanto sono aggiornati i dati.",
     "popular": "Aeroporti popolari",
     "hero1": "Bacheche aeroportuali",
     "hero2": "in tempo reale",
@@ -99,7 +99,7 @@
     "faq_arrive_a": "Per i voli internazionali, arriva almeno 3 ore prima della partenza; per i voli nazionali, circa 2 ore.",
     "faq_live_q": "Come posso vedere i voli in tempo reale a {name}?",
     "faq_live_a": "Il tabellone in questa pagina mostra gli arrivi e le partenze di {name} ({iata}). Verifica la presenza di aggiornamenti mentre la pagina è aperta e ogni tabellone indica quanto sono recenti i suoi dati: gli hub più trafficati vengono aggiornati entro poche ore, gli aeroporti più tranquilli meno spesso.",
-    "footer_tagline": "Tabelloni aeroportuali in tempo reale per oltre 6.000 aeroporti in tutto il mondo. Arrivi e partenze, con l’età dei dati indicata su ogni tabellone.",
+    "footer_tagline": "Tabelloni aeroportuali in tempo reale per {served, number} aeroporti con servizio passeggeri di linea. Arrivi e partenze, con l’età dei dati.",
     "footer_countries": "Paesi più popolari",
     "footer_cities": "Città più popolari",
     "city_title": "Aeroporti di {city}",
@@ -173,7 +173,8 @@
     "faq_dest_q": "Dove puoi volare senza scalo da {name}?",
     "faq_dest_a": "Le destinazioni presenti sull'attuale tabellone delle partenze di {name} ({iata}) includono {list}.",
     "country_none": "{count, plural, one {# aeroporto} other {# aeroporti}} con codici IATA in {country}. Non abbiamo dati aggiornati sui voli di linea per nessuno di essi, quindi questa pagina riporta codici, posizioni e fusi orari anziché tabelloni in tempo reale.",
-    "city_none": "{count, plural, one {# aeroporto} other {# aeroporti}} a {city}. Non abbiamo dati aggiornati sui voli di linea per nessuno di essi, quindi questa pagina riporta codici, posizioni e fusi orari anziché tabelloni in tempo reale."
+    "city_none": "{count, plural, one {# aeroporto} other {# aeroporti}} a {city}. Non abbiamo dati aggiornati sui voli di linea per nessuno di essi, quindi questa pagina riporta codici, posizioni e fusi orari anziché tabelloni in tempo reale.",
+    "m_airports_served": "aeroporti con voli di linea"
   },
   "ui": {
     "departures": "Partenze",

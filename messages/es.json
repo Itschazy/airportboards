@@ -54,8 +54,8 @@
     "icao_code": "Código ICAO"
   },
   "home": {
-    "headline": "Paneles en vivo para 6.000+ aeropuertos",
-    "subline": "Llegadas y salidas de más de 6000 aeropuertos de todo el mundo. Cada panel muestra lo recientes que son sus datos.",
+    "headline": "Paneles de vuelos en vivo de {served, number} aeropuertos con servicio regular",
+    "subline": "Llegadas y salidas de {served, number} aeropuertos a los que las aerolíneas vuelan de verdad, además de códigos, ubicación y husos horarios de {tracked, number} en total. Cada panel indica la antigüedad de sus datos.",
     "popular": "Aeropuertos populares",
     "hero1": "Paneles del aeropuerto",
     "hero2": "en tiempo real",
@@ -99,7 +99,7 @@
     "faq_arrive_a": "Para vuelos internacionales, llegue al menos 3 horas antes; para vuelos nacionales, aproximadamente 2 horas.",
     "faq_live_q": "¿Cómo puedo ver vuelos en vivo en {name}?",
     "faq_live_a": "El panel de esta página muestra las llegadas y salidas de {name} ({iata}). Vuelve a comprobar si hay actualizaciones mientras la página está abierta, y cada panel indica la antigüedad de sus datos: los grandes aeropuertos con mucho tráfico se actualizan en cuestión de horas; los aeropuertos más tranquilos, con menos frecuencia.",
-    "footer_tagline": "Paneles de vuelos en directo para más de 6.000 aeropuertos de todo el mundo. Llegadas y salidas, con la antigüedad de los datos indicada en cada panel.",
+    "footer_tagline": "Paneles de aeropuerto en vivo de {served, number} aeropuertos con servicio regular de pasajeros. Llegadas y salidas, con la antigüedad de los datos.",
     "footer_countries": "Países populares",
     "footer_cities": "Ciudades populares",
     "city_title": "Aeropuertos en {city}",
@@ -173,7 +173,8 @@
     "faq_dest_q": "¿A dónde se puede volar sin escalas desde {name}?",
     "faq_dest_a": "Los destinos que figuran en el panel de salidas actual de {name} ({iata}) incluyen {list}.",
     "country_none": "{count, plural, one {# aeropuerto} other {# aeropuertos}} con códigos IATA en {country}. No tenemos datos actuales de vuelos regulares de ninguno, así que esta página recoge códigos, ubicaciones y husos horarios en lugar de paneles en vivo.",
-    "city_none": "{count, plural, one {# aeropuerto} other {# aeropuertos}} en {city}. No tenemos datos actuales de vuelos regulares de ninguno, así que esta página recoge códigos, ubicaciones y husos horarios en lugar de paneles en vivo."
+    "city_none": "{count, plural, one {# aeropuerto} other {# aeropuertos}} en {city}. No tenemos datos actuales de vuelos regulares de ninguno, así que esta página recoge códigos, ubicaciones y husos horarios en lugar de paneles en vivo.",
+    "m_airports_served": "aeropuertos con vuelos regulares"
   },
   "ui": {
     "departures": "Salidas",

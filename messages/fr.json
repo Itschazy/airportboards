@@ -54,8 +54,8 @@
     "icao_code": "Code OACI"
   },
   "home": {
-    "headline": "Tableaux de bord en direct pour 6 000+ aéroports",
-    "subline": "Arrivées et départs pour plus de 6 000 aéroports dans le monde. Chaque panneau indique quand ses données ont été mises à jour.",
+    "headline": "Tableaux de vols en direct pour {served, number} aéroports desservis",
+    "subline": "Arrivées et départs pour {served, number} aéroports réellement desservis par des compagnies, plus les codes, la localisation et les fuseaux horaires pour {tracked, number} au total. Chaque tableau indique l’ancienneté de ses données.",
     "popular": "Aéroports populaires",
     "hero1": "Tableaux des aéroports",
     "hero2": "en temps réel",
@@ -99,7 +99,7 @@
     "faq_arrive_a": "Pour les vols internationaux, arrivez au moins 3 heures avant le départ ; pour les vols nationaux, environ 2 heures.",
     "faq_live_q": "Comment voir les vols en direct à {name} ?",
     "faq_live_a": "Le tableau de cette page affiche les arrivées et les départs pour {name} ({iata}). Il vérifie les mises à jour tant que la page est ouverte, et chaque tableau indique l’âge de ses données : les grands hubs sont actualisés en quelques heures, les aéroports plus calmes moins souvent.",
-    "footer_tagline": "Tableaux des vols en direct pour plus de 6 000 aéroports dans le monde. Arrivées et départs, avec l’ancienneté des données indiquée sur chaque tableau.",
+    "footer_tagline": "Tableaux d’aéroport en direct pour {served, number} aéroports assurant des vols réguliers. Arrivées et départs, avec l’ancienneté des données.",
     "footer_countries": "Pays populaires",
     "footer_cities": "Villes populaires",
     "city_title": "Aéroports de {city}",
@@ -173,7 +173,8 @@
     "faq_dest_q": "Où pouvez-vous voler sans escale depuis {name} ?",
     "faq_dest_a": "Les destinations indiquées sur le tableau actuel des départs de {name} ({iata}) comprennent {list}.",
     "country_none": "{count, plural, one {# aéroport doté} other {# aéroports dotés}} d’un code IATA en {country}. Nous n’avons de données de vols réguliers à jour pour aucun d’eux : cette page présente donc les codes, les localisations et les fuseaux horaires plutôt que des tableaux en direct.",
-    "city_none": "{count, plural, one {# aéroport} other {# aéroports}} à {city}. Nous n’avons de données de vols réguliers à jour pour aucun d’eux : cette page présente donc les codes, les localisations et les fuseaux horaires plutôt que des tableaux en direct."
+    "city_none": "{count, plural, one {# aéroport} other {# aéroports}} à {city}. Nous n’avons de données de vols réguliers à jour pour aucun d’eux : cette page présente donc les codes, les localisations et les fuseaux horaires plutôt que des tableaux en direct.",
+    "m_airports_served": "aéroports avec vols réguliers"
   },
   "ui": {
     "departures": "Départs",

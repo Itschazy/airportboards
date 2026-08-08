@@ -54,8 +54,8 @@
     "icao_code": "ICAO-Code"
   },
   "home": {
-    "headline": "Live Flugtafeln für 6.000+ Flughäfen",
-    "subline": "Ankünfte und Abflüge für über 6.000 Flughäfen weltweit. Jede Anzeigetafel zeigt, wie aktuell ihre Daten sind.",
+    "headline": "Live-Anzeigetafeln für {served, number} Flughäfen mit Linienverkehr",
+    "subline": "Ankünfte und Abflüge für {served, number} Flughäfen, die Airlines tatsächlich anfliegen, dazu Codes, Lage und Zeitzonen für insgesamt {tracked, number}. Jede Anzeigetafel zeigt, wie aktuell ihre Daten sind.",
     "popular": "Beliebte Flughäfen",
     "hero1": "Flugtafeln",
     "hero2": "in Echtzeit",
@@ -99,7 +99,7 @@
     "faq_arrive_a": "Bei internationalen Flügen mindestens 3 Stunden vor Abflug; bei Inlandsflügen etwa 2 Stunden.",
     "faq_live_q": "Wie kann ich Live‑Flüge an {name} sehen?",
     "faq_live_a": "Die Anzeigetafel auf dieser Seite zeigt Ankünfte und Abflüge für {name} ({iata}). Sie prüft bei geöffneter Seite erneut auf Aktualisierungen, und jede Anzeigetafel gibt an, wie alt ihre Daten sind – stark frequentierte Drehkreuze werden innerhalb weniger Stunden aktualisiert, ruhigere Flughäfen seltener.",
-    "footer_tagline": "Echtzeit-Flughafentafeln für mehr als 6.000 Flughäfen weltweit. Ankünfte und Abflüge mit Angabe des Datenalters auf jeder Tafel.",
+    "footer_tagline": "Live-Anzeigetafeln für {served, number} Flughäfen mit planmäßigem Passagierverkehr. Ankünfte und Abflüge mit Angabe des Datenalters.",
     "footer_countries": "Beliebte Länder",
     "footer_cities": "Beliebte Städte",
     "city_title": "Flughäfen in {city}",
@@ -173,7 +173,8 @@
     "faq_dest_q": "Wohin kann man ab {name} nonstop fliegen?",
     "faq_dest_a": "Zu den Zielen auf der aktuellen Abflugtafel von {name} ({iata}) gehören {list}.",
     "country_none": "{count, plural, one {# Flughafen} other {# Flughäfen}} mit IATA-Codes in {country}. Zu keinem davon liegen uns aktuelle Linienflugdaten vor; diese Seite führt daher Codes, Lage und Zeitzonen statt Live-Anzeigetafeln.",
-    "city_none": "{count, plural, one {# Flughafen} other {# Flughäfen}} in {city}. Zu keinem davon liegen uns aktuelle Linienflugdaten vor; diese Seite führt daher Codes, Lage und Zeitzonen statt Live-Anzeigetafeln."
+    "city_none": "{count, plural, one {# Flughafen} other {# Flughäfen}} in {city}. Zu keinem davon liegen uns aktuelle Linienflugdaten vor; diese Seite führt daher Codes, Lage und Zeitzonen statt Live-Anzeigetafeln.",
+    "m_airports_served": "Flughäfen mit Linienflügen"
   },
   "ui": {
     "departures": "Abflüge",

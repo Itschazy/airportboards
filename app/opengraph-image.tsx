@@ -30,7 +30,7 @@ export default function OpengraphImage() {
           Live flight boards
         </div>
         <div style={{ marginTop: 22, fontSize: 38, color: '#9AA0A6', fontWeight: 500 }}>
-          Arrivals &amp; departures · 6,000+ airports · real-time
+          Arrivals &amp; departures · every airport with scheduled service
         </div>
       </div>
     ),

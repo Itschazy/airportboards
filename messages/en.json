@@ -54,8 +54,8 @@
     "icao_code": "ICAO code"
   },
   "home": {
-    "headline": "Live flight boards for 6,000+ airports",
-    "subline": "Arrivals and departures for 6,000+ airports worldwide. Every board shows how fresh its data is.",
+    "headline": "Live flight boards for {served, number} airports with scheduled service",
+    "subline": "Arrivals and departures for {served, number} airports where airlines actually fly, plus codes, location and time zones for {tracked, number} in total. Every board shows how fresh its data is.",
     "popular": "Popular airports",
     "hero1": "Airport boards",
     "hero2": "in real time",
@@ -99,7 +99,7 @@
     "faq_arrive_a": "For international flights, arrive at least 3 hours before departure; for domestic flights, about 2 hours.",
     "faq_live_q": "How can I see live flights at {name}?",
     "faq_live_a": "The board on this page shows arrivals and departures for {name} ({iata}). It re-checks for updates while the page is open, and every board states how old its data is — busy hubs are refreshed within hours, quieter airports less often.",
-    "footer_tagline": "Live airport boards for 6,000+ airports worldwide. Arrivals and departures, with the age of the data shown on every board.",
+    "footer_tagline": "Live airport boards for {served, number} airports with scheduled passenger service. Arrivals and departures, with the age of the data on every board.",
     "footer_countries": "Popular countries",
     "footer_cities": "Popular cities",
     "city_title": "Airports in {city}",
@@ -173,7 +173,8 @@
     "faq_dest_q": "Where can you fly nonstop from {name}?",
     "faq_dest_a": "Destinations on the current departures board at {name} ({iata}) include {list}.",
     "country_none": "{count, plural, one {# airport} other {# airports}} with IATA codes in {country}. We have no current scheduled-service data for {count, plural, one {it} other {any of them}}, so this page carries codes, locations and time zones rather than live boards.",
-    "city_none": "{count, plural, one {# airport} other {# airports}} in {city}. We have no current scheduled-service data for {count, plural, one {it} other {any of them}}, so this page carries codes, locations and time zones rather than live boards."
+    "city_none": "{count, plural, one {# airport} other {# airports}} in {city}. We have no current scheduled-service data for {count, plural, one {it} other {any of them}}, so this page carries codes, locations and time zones rather than live boards.",
+    "m_airports_served": "airports with scheduled flights"
   },
   "ui": {
     "departures": "Departures",

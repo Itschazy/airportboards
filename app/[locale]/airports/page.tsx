@@ -34,7 +34,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     title: withBrand(title),
     description: (() => {
       const w = worldServiceCounts();
-      if (!w.generated || !w.withService) return t('footer_tagline');
+      if (!w.generated || !w.withService) return t('footer_tagline', { served: w.withService });
       // Same rule as the country pages: only claim the full breakdown when nothing is unknown.
       return w.probed > w.withService + w.empty
         ? t('world_split_partial', { total: fmt(w.probed, locale), date: localizedMeasuredOn(w.generated, locale), served: fmt(w.withService, locale) })

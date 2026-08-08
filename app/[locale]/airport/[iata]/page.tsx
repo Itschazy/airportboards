@@ -122,7 +122,26 @@ async function airportDescription(opts: {
         description: t('info_description', { airport: name, iata: airport.iata, city, country }),
       };
     }
-    // Measured service, board merely cold: the live promise is still true, just not right now.
+    // Measured service, board merely cold. For most airports the live promise is still true and
+    // just not true this minute — but not at the very bottom of the schedule. Sampled on
+    // production against the "N departures on the board" marker (the only honest signal; the
+    // string "No flights found" is in every page's serialised message catalogue and matching it
+    // reported 100% empty at every tier, which is false):
+    //
+    //     1-2 flights/day  71% empty      10-49  14% empty
+    //     3-4              14%            50+     0% empty
+    //     5-9              21%
+    //
+    // So the promise is keyed to the MEASURED schedule, not to the current rows: 943 airports
+    // fly once or twice a day and their board is empty most of the time, while tying the title
+    // to boardRows would make it flap between "Live Arrivals & Departures" and something else
+    // every warm cycle, which is worse for both the reader and the index.
+    if ((serviceLevel(airport.iata) ?? 0) <= 2) {
+      return {
+        title: t('info_title', { airport: name, iata: airport.iata }),
+        description: `${tHome(fold(name) === fold(city) ? 'airport_lead_same' : 'airport_lead', { name, iata: airport.iata, city, country })} ${tUi('board_pending')}`,
+      };
+    }
     return {
       title: null,
       // "Sochi (AER) is an airport serving Sochi" reads as machine output the moment the
@@ -194,12 +213,18 @@ export default async function AirportPage({ params }: Props) {
   if (!airport) notFound();
 
   const canonical = `${BASE}/${locale}/airport/${airport.iata}`;
-  // No operations description for an airport whose own source says it has no commercial
-  // service. See sourcedNoCommercialService() — the text is false there, not just thin, and
-  // the page still carries the honest notice, the nearest served airport, the FAQ and the
-  // neighbours. A shorter true page beats a longer false one, and this is the narrow set
-  // (231 airports) where an independent source says so, not the 1,750 resting on one probe.
-  const about = sourcedNoCommercialService(airport.iata) ? '' : getAirportContent(airport.iata, locale);
+  // No operations description on any page that prints "no scheduled flights".
+  //
+  // First shipped narrowly, gated on sourcedNoCommercialService — the 231 airports an
+  // independent source confirms — out of a worry that stripping the only prose from the rest
+  // would trade false content for thin content. Re-verification measured both sides of that
+  // trade and it does not hold: of the 1,750 airports resting on our own probe alone, the
+  // English paragraph asserts active airline service on roughly 1,289 of them, directly under
+  // a heading saying there are none. And the pages do not become empty — measured on
+  // production, a suppressed page still carries ~2,650 characters (the honest notice, the
+  // nearest served airport, the FAQ, the neighbours) against ~2,750 for one that keeps its
+  // paragraph. The paragraph was never the substance; it was the contradiction.
+  const about = hasNoService(airport.iata) ? '' : getAirportContent(airport.iata, locale);
   // SSR the first (departures) board so the page is useful without client JS.
   let initialFlights: Awaited<ReturnType<typeof getBoard>> = [];
   try { initialFlights = await getBoard(airport.iata, 'departures', locale); } catch {}

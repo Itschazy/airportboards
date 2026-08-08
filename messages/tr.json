@@ -54,8 +54,8 @@
     "icao_code": "ICAO kodu"
   },
   "home": {
-    "headline": "6.000'den fazla havalimanı için canlı uçuş panoları",
-    "subline": "Dünya genelinde 6.000'den fazla havalimanı için varış ve kalkış bilgileri. Her pano, verilerinin ne kadar güncel olduğunu gösterir.",
+    "headline": "Tarifeli seferi olan {served, number} havalimanı için canlı uçuş panoları",
+    "subline": "Havayollarının gerçekten uçtuğu {served, number} havalimanı için varış ve kalkışlar; ayrıca toplam {tracked, number} havalimanı için kodlar, konum ve saat dilimleri. Her panoda verilerin ne kadar güncel olduğu gösterilir.",
     "popular": "Popüler havalimanları",
     "hero1": "Havalimanı panoları",
     "hero2": "gerçek zamanlı",
@@ -99,7 +99,7 @@
     "faq_arrive_a": "Uluslararası uçuşlar için kalkıştan en az 3 saat; yurt içi uçuşlar için yaklaşık 2 saat öncesi önerilir.",
     "faq_live_q": "{name} için canlı uçuşları nasıl görebilirim?",
     "faq_live_a": "Bu sayfadaki pano, {name} ({iata}) için varışları ve kalkışları gösterir. Sayfa açıkken güncellemeleri yeniden kontrol eder ve her pano verilerinin ne kadar eski olduğunu belirtir — yoğun merkezler saatler içinde, daha sakin havalimanları ise daha seyrek yenilenir.",
-    "footer_tagline": "Dünya genelinde 6.000'den fazla havalimanı için canlı uçuş panoları. Varışlar ve kalkışlar; her panoda verilerin ne kadar güncel olduğu gösterilir.",
+    "footer_tagline": "Tarifeli yolcu seferi olan {served, number} havalimanı için canlı panolar. Varışlar ve kalkışlar, her panoda veri yaşı ile birlikte.",
     "footer_countries": "Popüler ülkeler",
     "footer_cities": "Popüler şehirler",
     "city_title": "{city} Havalimanları",
@@ -173,7 +173,8 @@
     "faq_dest_q": "{name} çıkışlı aktarmasız olarak nerelere uçabilirsiniz?",
     "faq_dest_a": "{name} ({iata}) güncel kalkış panosundaki varış noktaları arasında {list} yer alır.",
     "country_none": "{country} içinde IATA koduna sahip {count} havalimanı. Hiçbiri için güncel tarifeli uçuş verimiz yok; bu sayfa canlı pano yerine kodları, konumları ve saat dilimlerini içeriyor.",
-    "city_none": "{city} şehrinde {count} havalimanı. Hiçbiri için güncel tarifeli uçuş verimiz yok; bu sayfa canlı pano yerine kodları, konumları ve saat dilimlerini listeler."
+    "city_none": "{city} şehrinde {count} havalimanı. Hiçbiri için güncel tarifeli uçuş verimiz yok; bu sayfa canlı pano yerine kodları, konumları ve saat dilimlerini listeler.",
+    "m_airports_served": "tarifeli seferi olan havalimanı"
   },
   "ui": {
     "departures": "Kalkışlar",

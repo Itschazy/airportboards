@@ -4,7 +4,7 @@ export default function manifest(): MetadataRoute.Manifest {
   return {
     name: 'AirportsBoard.live — Live flight boards',
     short_name: 'AirportsBoard',
-    description: 'Live arrivals & departures boards for 6,000+ airports, in real time.',
+    description: 'Live arrivals & departures boards for every airport with scheduled service.',
     start_url: '/',
     display: 'standalone',
     background_color: '#050505',

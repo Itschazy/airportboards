@@ -5,7 +5,18 @@ import {
   POPULAR_AIRPORTS, POPULAR_CITIES, getAirport, getCountries, getAllIataCodes, slugify,
 } from '@/lib/airports';
 import { locales } from '@/lib/i18n';
+import { worldServiceCounts } from '@/lib/warm';
 import { AirportSearch } from '@/components/AirportSearch';
+
+// The homepage promised "6,000+ airports" in the headline, the subline, the footer tagline, the
+// OG image and the manifest — fifteen occurrences in the HTML of every locale — while /airports
+// said in plain words that only about 2,800 of them have scheduled passenger service. The site
+// contradicted itself on its own front door, which is the first thing a policy reviewer opens.
+// The number now comes from the same measurement /airports uses, so the two cannot drift apart.
+const worldCounts = () => {
+  const w = worldServiceCounts();
+  return { served: w.withService, tracked: w.probed };
+};
 import { StandaloneResume } from '@/components/StandaloneResume';
 import { PopularNow } from '@/components/PopularNow';
 import { PopularList } from '@/components/PopularList';
@@ -30,7 +41,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   languages['x-default'] = `${BASE}/en`;
   return {
     title: `AirportsBoard — ${t('hero1')} ${t('hero2')}`,
-    description: t('subline'),
+    description: t('subline', worldCounts()),
     alternates: { canonical: `${BASE}/${locale}`, languages },
   };
 }
@@ -71,7 +82,7 @@ export default async function HomePage({ params }: Props) {
     {
       '@context': 'https://schema.org', '@type': 'WebSite',
       name: 'AirportsBoard', url: `${BASE}/${locale}`, inLanguage: locale,
-      description: t('subline'),
+      description: t('subline', worldCounts()),
     },
     {
       '@context': 'https://schema.org', '@type': 'Organization',
@@ -93,7 +104,7 @@ export default async function HomePage({ params }: Props) {
         {t('hero1')}<br />{t('hero2')}
       </h1>
       <p style={{ fontSize: 16, color: '#8A8A8A', marginTop: 18, lineHeight: 1.5, maxWidth: '100%', overflowWrap: 'break-word' }}>
-        {t('subline')}
+        {t('subline', worldCounts())}
       </p>
 
       {/* SEARCH */}
@@ -105,7 +116,10 @@ export default async function HomePage({ params }: Props) {
       {/* TRUST METRICS */}
       <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, minmax(0, 1fr))', gap: 12, marginTop: 26 }}>
         {[
-          { icon: '✈', value: `${(Math.floor(totalAirports / 1000) * 1000).toLocaleString()}+`, label: t('m_airports') },
+          // The tile used to read "6,000+ airports", which is true about coverage and false about
+          // boards — and next to a headline promising live boards it reads as the latter. It now
+          // shows the same number the headline does, from the same measurement.
+          { icon: '✈', value: worldCounts().served.toLocaleString(locale), label: t('m_airports_served') },
           { icon: '🌍', value: `${totalCountries}+`, label: t('m_countries') },
           { icon: '↻', value: t('m_updates_v'), label: t('m_updates_l') },
         ].map((m, i) => (

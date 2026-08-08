@@ -49,9 +49,12 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   // no published routes — nothing the warmer can ever fill. It offers airport information
   // there. Mirroring only the no-service branch left 308 airports with a parent reading
   // "— airport information" above a subpage reading "Live Departures".
+  const lvl = serviceLevel(airport.iata);
+  // Never measured, no published routes — or measured at one or two flights a day, where the
+  // board is empty 71% of the time (sampled on production). Both are airports whose page is
+  // information rather than a live board; the parent makes the same call on the same numbers.
   const infoOnly = !boardless
-    && serviceLevel(airport.iata) === null
-    && !hasWikiAirlines(airport.iata);
+    && ((lvl === null && !hasWikiAirlines(airport.iata)) || (lvl !== null && lvl <= 2));
   const tHome = await getTranslations({ locale, namespace: 'home' });
   const country = getCountryName(airport.country, locale);
   const title = boardless
@@ -129,7 +132,7 @@ export default async function ArrivalsPage({ params }: Props) {
   // not carry an operations description here either. Without this the paragraph removed from
   // /airport/ODS went on being published at /airport/ODS/departures — 231 x 12 x 2 = 5,544 URLs
   // still saying "Several Ukrainian and international carriers operate scheduled services here".
-  const about = sourcedNoCommercialService(airport.iata) ? '' : getAirportContent(airport.iata, locale);
+  const about = hasNoService(airport.iata) ? '' : getAirportContent(airport.iata, locale);
   const noService = hasNoService(airport.iata);
   const nearestWithFlights = noService
     ? (() => {
