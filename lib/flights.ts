@@ -143,6 +143,17 @@ export function mapFlight(f: AirlabsFlight, direction: 'departures' | 'arrivals'
     ...(baggage  ? { baggage }  : {}),
     ...(aircraft ? { aircraft } : {}),
     ...(delay    ? { delay }    : {}),
+    // Effective time as a unix timestamp, alongside the "HH:MM" the row displays.
+    //
+    // Without it the client can only reason about time through the printed string, and that
+    // string cannot tell "already gone" from "still to come": a board that has rolled past
+    // midnight prints 23:50 above 00:25, and a row the sort put in the past still carries
+    // status 'ontime' (SVO had 24 such rows). Everything downstream that needs the past/future
+    // boundary — how many rows to render, which rows to mute — was guessing at it from the
+    // status field, which is a different question.
+    ts: (direction === 'departures'
+      ? (f.dep_estimated_ts || f.dep_time_ts)
+      : (f.arr_estimated_ts || f.arr_time_ts)) || 0,
     status,
   };
 }

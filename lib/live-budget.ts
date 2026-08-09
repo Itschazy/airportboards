@@ -127,6 +127,21 @@ function withinHumanReserve(): boolean {
  * is a normal, complete answer — see the note on refusal above.
  */
 export function mayFetchLive(req: NextRequest, boardKey: string): boolean {
+  // Layer 0: a development machine may never spend the production plan.
+  //
+  // Every other guard here is about WHO is asking; this one is about WHERE from. The key sits
+  // in .env.local on developer machines too, so simply opening a board in a browser fires the
+  // client poll and buys flights with real money — measured 2026-08-09, four requests charged
+  // by loading /ru/airport/KZN once while verifying an unrelated change. Nothing about a local
+  // page view is worth a paid call: the store answer is complete, and if fresh data is genuinely
+  // needed it can be fetched deliberately.
+  //
+  // Host-based rather than NODE_ENV-based on purpose — `next start` runs with NODE_ENV set to
+  // production locally, which is exactly the case that caught this out.
+  const host = req.nextUrl.hostname.toLowerCase();
+  if (host === 'localhost' || host === '127.0.0.1' || host === '::1' || host.endsWith('.local')) {
+    return false;
+  }
   if (!looksLikeBrowser(req.headers.get('user-agent') || '')) return false;
   if (!withinHumanReserve()) return false;
   return admitBoard(clientKey(req), boardKey);

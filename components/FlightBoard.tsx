@@ -3,6 +3,7 @@
 import { useEffect, useState, useCallback, useRef } from 'react';
 import Link from 'next/link';
 import { useTranslations } from 'next-intl';
+import { initialRowCount } from '@/lib/board-window';
 import type { Airport } from '@/lib/airports';
 
 type T = (key: string, values?: Record<string, string | number>) => string;
@@ -23,6 +24,10 @@ type Flight = {
   baggage?: string;
   aircraft?: string;
   delay?: number;
+  /** Effective time as unix seconds. See mapFlight in lib/flights.ts — the printed "HH:MM"
+   *  cannot separate past from future across a midnight rollover, and the status field
+   *  answers a different question. Optional because the client /api path predates it. */
+  ts?: number;
   status: string;
 };
 
@@ -584,6 +589,25 @@ export function FlightBoard({ airport, locale, defaultMode = 'departures', displ
   const hasInitial = !!(initialFlights && initialFlights.length);
   /** Suppress the live-board chrome. Two different reasons, one identical layout. */
   const bare = noService || infoOnly;
+
+  /**
+   * The instant the board is reasoned against for "past or still to come".
+   *
+   * Seeded with the SNAPSHOT time, not Date.now(), because this value decides how many rows
+   * render and which of them are muted — and those must be identical on the server and at
+   * hydration or React tears the tree down and rebuilds it. `initialFetchedAt` is a prop, so
+   * both sides see the same number. After mount it becomes the real clock and ticks, which is
+   * what the reader actually cares about.
+   *
+   * Zero when the board has never been fetched; the two call sites fall back to the status
+   * field there, which is the behaviour that shipped before this existed.
+   */
+  const [nowMs, setNowMs] = useState<number>(() => initialFetchedAt || 0);
+  useEffect(() => {
+    setNowMs(Date.now());
+    const id = setInterval(() => setNowMs(Date.now()), 60_000);
+    return () => clearInterval(id);
+  }, []);
   const [mode, setMode]           = useState<Mode>(defaultMode);
   const [filter, setFilter]       = useState<FilterKey>('all');
   const [search, setSearch]       = useState('');
@@ -777,9 +801,9 @@ export function FlightBoard({ airport, locale, defaultMode = 'departures', displ
   // behind a tap. Measured on the real HTML, the twenty-one extra rows cost 1,205 bytes gzip
   // (+3.3% of 36.6 KB), which is not a reason to hide a whole evening.
   //
-  // The threshold reads the FULL board, not the filtered view, so switching a filter or typing
-  // a search cannot change how many rows the list starts with. Hubs keep the twelve-row start.
-  const INITIAL = flights.length <= 35 ? Math.max(flights.length, 12) : 12;
+  // Rule and rationale live in lib/board-window.ts, so the test runs the same function the
+  // page does instead of a copy of it.
+  const INITIAL = initialRowCount(flights, nowMs);
   const shown = showAll ? visible : visible.slice(0, INITIAL);
   useEffect(() => { setShowAll(false); }, [mode, filter, trimSearch]);
 
@@ -1008,7 +1032,10 @@ export function FlightBoard({ airport, locale, defaultMode = 'departures', displ
             }
             return t(`st_${f.status}`);
           })();
-          const isPast = ['departed', 'arrived'].includes(f.status);
+          // By time, not by status. A row the sort placed in the past keeps whatever status the
+          // snapshot recorded — SVO had 24 rows in the past still reading 'ontime' — so the
+          // status field answers a different question than "has this already happened".
+          const isPast = (f.ts && nowMs) ? f.ts * 1000 < nowMs : ['departed', 'arrived'].includes(f.status);
           const place = f.destination || f.origin || '';
           const dm = place.match(/^(.*?)\s*\(([A-Z0-9]{2,4})\)\s*$/);
           const city = dm ? dm[1] : place;
