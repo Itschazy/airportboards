@@ -38,6 +38,12 @@ const C = {
   orange:    '#FF9F0A',
   red:       '#FF453A',
   gray:      '#3A3A3C',
+  // Past rows get their own tone rather than reusing `gray`. Measured against the composited
+  // row background (#080808 under the row's own translucency), the word "Вылетел" in #3A3A3C
+  // at opacity 0.45 came out at 1.18:1 — the WCAG floor for body text is 4.5:1, so it was not
+  // dim, it was invisible. #ADADB2 at 0.70 gives 4.69:1. `gray` itself still serves the
+  // `scheduled` status on full-opacity rows and must not move.
+  past:      '#ADADB2',
 };
 
 const STATUS_COLOR: Record<string, string> = {
@@ -46,8 +52,8 @@ const STATUS_COLOR: Record<string, string> = {
   delayed:   C.orange,
   finalcall: C.red,
   cancelled: C.red,
-  departed:  C.gray,
-  arrived:   C.gray,
+  departed:  C.past,
+  arrived:   C.past,
   baggage:   C.green,
   scheduled: C.gray,
 };
@@ -1028,7 +1034,7 @@ export function FlightBoard({ airport, locale, defaultMode = 'departures', displ
               className="frow"
               onClick={() => { haptic(); setSelected(f); }}
               onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); haptic(); setSelected(f); } }}
-              style={{ opacity: isPast ? 0.45 : 1 }}
+              style={{ opacity: isPast ? 0.7 : 1 }}
             >
               {/* Status bar */}
               <div style={{ width: 4, background: color, flexShrink: 0 }} />
@@ -1037,7 +1043,7 @@ export function FlightBoard({ airport, locale, defaultMode = 'departures', displ
               <div style={{ display: 'flex', alignItems: 'center', flex: 1, padding: '18px 16px', gap: 12, minWidth: 0 }}>
                 {/* Left: time + flight number — fixed type scale (26 / 12) */}
                 <div style={{ flexShrink: 0, width: 72 }}>
-                  <div style={{ fontSize: 26, fontWeight: 700, fontVariantNumeric: 'tabular-nums', color: f.actual ? C.orange : C.text, lineHeight: 1, letterSpacing: '-0.02em' }}>
+                  <div style={{ fontSize: 26, fontWeight: 700, fontVariantNumeric: 'tabular-nums', color: f.actual ? (isPast ? C.past : C.orange) : (isPast ? C.past : C.text), lineHeight: 1, letterSpacing: '-0.02em' }}>
                     {f.actual || f.scheduled}
                   </div>
                   {f.actual && (

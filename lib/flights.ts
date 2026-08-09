@@ -199,6 +199,17 @@ function orderBoard(rows: AirlabsFlight[], direction: 'departures' | 'arrivals',
     : (f.dep_estimated_ts || f.dep_time_ts)) || 0;
   const asc = (a: AirlabsFlight, b: AirlabsFlight) => tsOf(a) - tsOf(b);
 
+  const anyUpcoming = rows.some(f => tsOf(f) >= nowSec);
+  // A board whose every row is already in the past is not a board with a past section — it is
+  // a stale snapshot, and the only sane presentation is a plain timeline. Both branches below
+  // split around "now", which is meaningless when nothing is on the future side: departures
+  // came out in REVERSE (most recent first, so 10:40 above 09:30 on a 13-hour-old DME board)
+  // and arrivals came out incoherent — head, then an empty middle, then the oldest row last.
+  // Measured on production 2026-08-09: DME 13h, VKO 15h, CMN 17h, WAW and ESB a full day,
+  // KJA 59h. Not a corner case — MAX_FLIGHTS covers 1–4 hours of a dense board while the warm
+  // interval is 6–24 hours, so a busy airport is in this state most of the cycle.
+  if (!anyUpcoming) return [...rows].sort(asc);
+
   if (direction === 'arrivals') {
     const past = rows.filter(f => tsOf(f) < nowSec).sort(asc);
     const upcoming = rows.filter(f => tsOf(f) >= nowSec).sort(asc);

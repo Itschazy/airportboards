@@ -125,6 +125,21 @@ const dep = (id, atSec, extra = {}) => ({ flight_iata: id, dep_time_ts: atSec, d
   deps.map(f => f.flight_iata).join(',') === 'Z,Y,X'
     ? pass('вылеты: ближайший первым, улетевшие ниже')
     : fail(`порядок вылетов ${deps.map(f => f.flight_iata).join(',')}, ожидалось Z,Y,X`);
+
+  // A board with NOTHING upcoming — the normal state of a dense airport between warm cycles,
+  // measured on production at 13 to 59 hours old. Splitting around "now" is meaningless here
+  // and produced reversed departures and incoherent arrivals.
+  const staleDeps = orderBoard(
+    ['A', 'B', 'C', 'D'].map((id, i) => dep(id, T0 - (6 - i) * HOUR)), 'departures', T0);
+  staleDeps.map(f => f.flight_iata).join(',') === 'A,B,C,D'
+    ? pass('полностью устаревшие вылеты идут по возрастанию времени')
+    : fail(`устаревшие вылеты: ${staleDeps.map(f => f.flight_iata).join(',')}, ожидалось A,B,C,D`);
+
+  const staleArr = orderBoard(
+    ['P1', 'P2', 'P3', 'P4'].map((id, i) => arr(id, T0 - (4 - i) * HOUR)), 'arrivals', T0);
+  staleArr.map(f => f.flight_iata).join(',') === 'P1,P2,P3,P4'
+    ? pass('полностью устаревшие прилёты идут по возрастанию времени')
+    : fail(`устаревшие прилёты: ${staleArr.map(f => f.flight_iata).join(',')}, ожидалось P1,P2,P3,P4`);
 }
 
 // ── 3. The wiring, because the rule above is only as good as what the caller passes ──────

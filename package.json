@@ -10,7 +10,8 @@
     "check:metrica": "node scripts/check-metrica.mjs",
     "check:metrica:built": "node scripts/check-metrica.mjs http://localhost:3002/ru/airport/KZN",
     "check:plurals": "node scripts/check-plurals.mjs",
-    "check:board": "node scripts/check-board-logic.mjs"
+    "check:board": "node scripts/check-board-logic.mjs",
+    "check:contrast": "node scripts/check-contrast.mjs"
   },
   "dependencies": {
     "next": "^15.3.3",
