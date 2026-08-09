@@ -53,6 +53,25 @@ const NON_EEA_EUROPE = 'Moscow Kaliningrad Samara Volgograd Saratov Astrakhan Ul
 // `(' Canary Madeira Azores Faroe Reykjavikvar keep=…`: the closing quote, the `.indexOf`
 // call and the `;` simply gone. Plain `+` concatenation is not folded and is what the
 // counter id below has always used.
+/**
+ * Production host only.
+ *
+ * The counter fires wherever the page is rendered, including a developer's machine, and those
+ * visits land in the same production report: measured 2026-08-09, 19 visits and 89 pageviews
+ * from localhost:3001, :3020, :3031 and :60984. Volume is trivial; the damage is to the
+ * averages, because a dev session sits open — two of those visits are 668 and 956 seconds
+ * against a site average of 173, and they inflate depth the same way. Analytics that quietly
+ * measures its own author is worse than no analytics.
+ *
+ * Matched on the END of the hostname, not anywhere inside it. `indexOf` was the first version
+ * and it is subtly wrong: `airportsboard.live.evil.com` contains the domain and would have been
+ * counted, so anyone proxying the site would land in our numbers. Comparing the tail keeps
+ * www and any future subdomain working while a lookalike fails.
+ */
+const HOST_GUARD =
+  `try{var hn=(location.hostname||'');`
+  + `if(hn!=='airportsboard.live'&&hn.slice(-19)!=='.airportsboard.live'){return}}catch(e){}`;
+
 export const REGION_GUARD =
   `try{var tz=(Intl.DateTimeFormat().resolvedOptions().timeZone||'');`
   + `var p=tz.split('/'),area=p[0],zone=' '+(p[1]||'')+' ';`
@@ -71,7 +90,7 @@ export const REGION_GUARD =
 export function metricaSnippet(ymId: number): string {
   return (
     // Wrapped in a function so the guard's `return` aborts before anything is created.
-    `(function(){` + REGION_GUARD
+    `(function(){` + HOST_GUARD + REGION_GUARD
     + `(function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};`
     + `m[i].l=1*new Date();for(var j=0;j<e.scripts.length;j++){if(e.scripts[j].src===r){return;}}`
     + `k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})`

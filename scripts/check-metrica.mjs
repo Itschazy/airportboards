@@ -120,6 +120,7 @@ for (const [tz, shouldLoad, label] of REGIONS) {
   // defined" — a failure of the harness that looks exactly like a failure of the snippet.
   const ctx = {
     document: doc,
+    location: { hostname: 'airportsboard.live' },
     Intl: { DateTimeFormat: () => ({ resolvedOptions: () => ({ timeZone: tz }) }) },
   };
   ctx.window = ctx;
@@ -141,7 +142,38 @@ for (const [tz, shouldLoad, label] of REGIONS) {
   }
 }
 
-// ── 4. Webvisor must stay off ───────────────────────────────────────────────────────────
+// ── 4. Production host only ─────────────────────────────────────────────────────────────
+// Dev sessions were being counted in the production report — 19 visits, two of them 668 and
+// 956 seconds long against a 173-second site average.
+{
+  const hosts = [['airportsboard.live', true], ['www.airportsboard.live', true],
+                 ['localhost', false], ['127.0.0.1', false],
+                 // Lookalike: contains the domain but does not end with it.
+                 ['airportsboard.live.evil.com', false],
+                 ['notairportsboard.live', false]];
+  for (const [host, shouldLoad] of hosts) {
+    let requested = null;
+    const doc = {
+      scripts: [],
+      createElement: () => ({ set src(v) { requested = v; } }),
+      getElementsByTagName: () => [{ parentNode: { insertBefore: () => {} } }],
+    };
+    const ctx = {
+      document: doc,
+      location: { hostname: host },
+      Intl: { DateTimeFormat: () => ({ resolvedOptions: () => ({ timeZone: 'Europe/Moscow' }) }) },
+    };
+    ctx.window = ctx;
+    vm.createContext(ctx);
+    try { vm.runInContext(snippet, ctx); } catch (e) { fail(`${host}: ${e.message}`); continue; }
+    const loaded = typeof requested === 'string';
+    loaded === shouldLoad
+      ? pass(`${host}: ${shouldLoad ? 'считает' : 'не считает'}`)
+      : fail(`${host}: ожидалось ${shouldLoad ? 'считать' : 'НЕ считать'}, вышло наоборот`);
+  }
+}
+
+// ── 5. Webvisor must stay off ───────────────────────────────────────────────────────────
 // It was running undisclosed once already. Re-enabling it needs a privacy-policy change, so
 // it must not come back through a copy-paste of someone else's counter code.
 /webvisor\s*:\s*true/.test(snippet)
