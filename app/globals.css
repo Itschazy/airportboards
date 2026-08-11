@@ -127,3 +127,23 @@ input::-webkit-search-cancel-button { display: none; }
    the glyph does not, so an Arabic page would show DXB → MRV with the arrow aimed at the
    origin. scaleX(-1) keeps the arrow travelling from origin to destination in both scripts. */
 [dir='rtl'] .route-arrow { transform: scaleX(-1); }
+
+/* Letter-spacing is a Latin typographic device, and on two of our scripts it is destructive.
+ *
+ * Arabic is a CONNECTED script: letters join along a baseline, and any tracking — negative or
+ * positive — pulls those joins apart, so words stop reading as words. Devanagari hangs its
+ * letters from a continuous headline stroke (shirorekha) that tracking breaks into dashes.
+ * Neither degrades gracefully; both simply look wrong to a reader of that language.
+ *
+ * The site sets tracking inline in 44 places, tuned for Latin display type: -0.04em on the big
+ * IATA glyph, -0.03em on headings, -0.01em on the city line, +0.12em on uppercase labels. On
+ * /ar and /hi every one of those lands on native text.
+ *
+ * `!important` because those are inline styles and nothing else outranks them. The cost is the
+ * tight tracking on the handful of Latin elements that appear inside an Arabic or Hindi page —
+ * airport codes, clock digits. Losing a little polish there beats breaking the script the page
+ * is written in. CJK is deliberately not included: those are not connected scripts and tracking
+ * on them is ordinary practice.
+ */
+[lang='ar'] *,
+[lang='hi'] * { letter-spacing: normal !important; }

@@ -99,6 +99,45 @@ for (const [file, label] of Object.entries(FILES)) {
   console.log(`${label}: ${entries} записей, ${translations} переводов; хуже всего покрыты — ${missing}`);
 }
 
+// ── Coverage where it is actually seen ───────────────────────────────────────────────────
+//
+// A raw "N names missing" count is misleading: two thirds of the corpus is airfields nobody
+// searches for, and a gap there costs nothing — the page falls back to the English name, which
+// is true. What matters is a gap on an airport that HAS flights, because that is a page people
+// open. Russian is the striking case: 75 airports have no Russian name and 42 of them are
+// served, including Stockholm-Arlanda at 179 departures a day.
+//
+// Reported, never filled in by this script. These are proper nouns with established forms, and
+// guessing at them is how the corpus acquired "Берлевåg" and "कोंस्तानța".
+{
+  const names = JSON.parse(fs.readFileSync(path.join('data', 'airport-names.json'), 'utf8'));
+  const cityNames = JSON.parse(fs.readFileSync(path.join('data', 'city-names.json'), 'utf8'));
+  const raw = JSON.parse(fs.readFileSync(path.join('data', 'airports.json'), 'utf8'));
+  const rows = raw.airports ?? raw;
+  const svcRaw = JSON.parse(fs.readFileSync(path.join('data', 'airport-service.json'), 'utf8'));
+  const levels = svcRaw.airports ?? svcRaw;
+
+  const served = rows.filter((a) => Number(levels[a.iata]) > 0);
+  const locales = ['ru', 'zh', 'ja', 'ko', 'ar', 'hi', 'de', 'fr', 'es', 'it', 'tr'];
+
+  console.log('\nпропуски на ОБСЛУЖИВАЕМЫХ аэропортах (их страницы люди открывают):');
+  const worst = [];
+  for (const loc of locales) {
+    const gapsA = served.filter((a) => !names[a.iata]?.[loc]);
+    const gapsC = [...new Set(served.map((a) => a.city).filter(Boolean))].filter((c) => !cityNames[c]?.[loc]);
+    if (gapsA.length || gapsC.length) {
+      console.log(`  ${loc}: ${gapsA.length} аэропортов, ${gapsC.length} городов`);
+      // Rank by traffic, so the list starts with the ones that cost the most.
+      const top = gapsA.sort((a, b) => Number(levels[b.iata]) - Number(levels[a.iata])).slice(0, 3);
+      if (top.length) worst.push(`${loc}: ${top.map((a) => `${a.iata} (${levels[a.iata]}/сут)`).join(', ')}`);
+    }
+  }
+  if (worst.length) {
+    console.log('\n  самые заметные, по числу рейсов:');
+    for (const w of worst) console.log(`    ${w}`);
+  }
+}
+
 const show = (list, title, limit = 8) => {
   if (!list.length) return;
   console.log(`\n${title}: ${list.length}`);
