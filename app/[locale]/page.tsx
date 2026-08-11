@@ -136,7 +136,10 @@ export default async function HomePage({ params }: Props) {
             // русское числительное на 1 (кроме 11) требует единственного числа. Само число
             // в подписи не печатается — оно стоит выше, — поэтому «#» в шаблоне нет.
             label: t('m_airports_served', { count: worldCounts().served }) },
-          { icon: '🌍', value: `${totalCountries}+`, label: t('m_countries') },
+          // Число через toLocaleString, а не через шаблонную строку: у арабского по CLDR
+          // восточноарабские цифры, и соседняя плитка печатала «٢٬٨٠١», а эта — «237+»,
+          // западными, в одном ряду. Смешение систем счисления заметнее любой опечатки.
+          { icon: '🌍', value: `${totalCountries.toLocaleString(locale)}+`, label: t('m_countries') },
           { icon: '↻', value: t('m_updates_v'), label: t('m_updates_l') },
         ].map((m, i) => (
           <div key={i} style={{ minWidth: 0 }}>
