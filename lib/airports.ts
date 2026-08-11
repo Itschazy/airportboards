@@ -146,8 +146,31 @@ function within1edit(a: string, b: string): boolean {
   }
   return true;
 }
-// Strip diacritics so "aéroport"/"Dubái"/"Düsseldorf" fold to plain ASCII.
-const fold = (s: string) => s.normalize('NFD').replace(/[̀-ͯ]/g, '');
+/**
+ * Strip diacritics so "aéroport"/"Dubái"/"Düsseldorf" fold to plain ASCII.
+ *
+ * The range is the whole point. This stripped U+0300–U+036F alone — the COMBINING
+ * DIACRITICAL MARKS block, which is Latin. Every other script keeps its marks somewhere
+ * else, so an Arabic reader who types the damma they were taught to write got nothing:
+ * measured on a built server, "دبي" returned DXB DWC ADU NUW and "دُبي" returned an empty
+ * list. The mark survived folding and no needle in the index carries one.
+ *
+ * Two other classes are folded away because no search box distinguishes them:
+ *   - hamza seats and the like — أ إ آ ؤ ئ decompose under NFD and lose their hamza with
+ *     the marks above; ٱ has no decomposition, so it is mapped by hand;
+ *   - alef maksura ى → ي and ta marbuta ة → ه, which are spelling variants of the same
+ *     word ("القاهرة"/"القاهره"), plus tatweel, which is decoration and carries no sound.
+ *
+ * Index and query both pass through this function, so it cannot drift out of agreement
+ * with itself — a wrong rule here loses recall, it never splits the two sides apart.
+ */
+const MARKS = /[̀-ًͯ-ٰٟۖ-ۭ]/g;
+const fold = (s: string) => s.normalize('NFD')
+  .replace(MARKS, '')
+  .replace(/ـ/g, '')          // tatweel — a stretched joining line, not a letter
+  .replace(/ٱ/g, 'ا')    // alef wasla → alef
+  .replace(/ى/g, 'ي')    // alef maksura → ya
+  .replace(/ة/g, 'ه');   // ta marbuta → ha
 const splitWords = (s: string) =>
   fold(s.toLowerCase()).split(/[\s,.'/()\-_:;]+/).filter(Boolean);
 
@@ -156,7 +179,15 @@ const splitWords = (s: string) =>
 const NATIVE_AIRPORT = [
   '国际机场','國際機場','机场','機場','国际','國際','空港','国際','공항','국제공항','국제',
   'مطار الدولي','المطار','مطار','हवाई अड्डा','हवाईअड्डा','हवाई','अड्डा','विमानतल',
-];
+].map(fold);
+
+/**
+ * Both lists above are compared against a string that has ALREADY been folded, so they have
+ * to be folded too — otherwise they only match the inputs folding happens to leave alone.
+ * Korean was the casualty: NFD decomposes 공항 into jamo, the literal '공항' stays composed,
+ * and `cleaned.includes('공항')` was therefore false for every Korean query ever typed.
+ */
+const STOP_FOLDED = new Set([...STOP].map(fold));
 
 // Per-airport "needles": every searchable token (iata, name/city words, country,
 // whole city, and all multilingual aliases + their words). Built once, cached.
@@ -196,7 +227,9 @@ function needlesOf(a: Airport): string[] {
 }
 
 // How strongly a query token matches an airport's needles (0 = no match).
-const isCJK = (s: string) => /[　-鿿가-힯぀-ヿ]/.test(s);
+// Recomposed first: the token arrives folded, i.e. NFD, and a Hangul syllable in NFD is a run
+// of jamo outside every range below — Korean would never be recognised as CJK.
+const isCJK = (s: string) => /[　-鿿가-힯぀-ヿ]/.test(s.normalize('NFC'));
 
 // Match strength of a query token against an airport's needles.
 // 100 exact · 40 prefix · 12 substring/CJK-part · 5 fuzzy(1 typo) · 0 none.
@@ -230,7 +263,7 @@ export function searchAirports(query: string, limit = 10): Airport[] {
   let cleaned = raw;
   for (const w of NATIVE_AIRPORT) if (cleaned.includes(w)) cleaned = cleaned.split(w).join(' ');
 
-  let tokens = splitWords(cleaned).filter(t => !STOP.has(t));
+  let tokens = splitWords(cleaned).filter(t => !STOP_FOLDED.has(t));
   if (tokens.length === 0) tokens = [cleaned.trim() || raw]; // all-stopword or CJK (no spaces)
 
   // Require most tokens to match (allow one descriptive extra to miss).

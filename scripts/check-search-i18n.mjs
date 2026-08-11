@@ -92,5 +92,46 @@ for (const [q, locale, want] of PRECISION) {
     : fail(`${locale} «${q}»: ожидался ${want} первым, получено ${codes.slice(0, 3).join(' ') || 'пусто'}`);
 }
 
+// ── 3. Spelling variants a real keyboard produces ────────────────────────────────────────
+//
+// Recall above types the name back EXACTLY as the site printed it, which is the one thing a
+// person never does. They add the vowel marks they were taught to write, or their keyboard
+// emits a different-but-equivalent letter, or they append the word "airport" in their own
+// script. Each of those went through a different code path, and two of them were broken:
+//
+//   - fold() in lib/airports.ts stripped U+0300–U+036F only — the LATIN combining block — so
+//     "دُبي" with a damma returned nothing while "دبي" returned four airports;
+//   - the "airport" words removed from a query were stored composed while the query had been
+//     decomposed by the same fold, so 공항 never matched and Korean queries kept the suffix.
+//
+// Each case asserts against the plain form rather than a hardcoded list, so the test states
+// the actual contract: writing it the other way must not change the answer.
+console.log('');
+const VARIANTS = [
+  ['ar', 'دبي',        'دُبي',          'огласовка (дамма)'],
+  ['ar', 'دبي',        'دبى',           'алиф максура вместо йа'],
+  ['ar', 'دبي',        'مطار دُبي',      'слово «аэропорт» + огласовка'],
+  ['ar', 'القاهرة',    'القاهره',       'та марбута → ха'],
+  ['ar', 'اسطنبول',    'اســطنبول',      'татвиль (растяжка)'],
+  ['ko', '서울',        '서울공항',        '+ 공항'],
+  ['ko', '인천',        '인천국제공항',     '+ 국제공항'],
+  ['ja', '東京',        '東京国際空港',     '+ 国際空港'],
+  ['zh', '北京',        '北京首都国际机场',  '+ 国际机场'],
+  ['hi', 'दिल्ली',      'दिल्ली हवाई अड्डा', '+ हवाई अड्डा'],
+  ['de', 'Zurich',     'Z\u00FCrich',       'умляут (NFC, один символ)'],
+  ['de', 'Zurich',     'Zu\u0308rich',      'умляут (NFD, буква + знак)'],
+  ['ru', 'Москва',     'Мо\u0301сква',      'комбинирующее ударение'],
+  ['tr', 'Istanbul',   'İstanbul',      'турецкая I с точкой'],
+];
+for (const [locale, plain, variant, what] of VARIANTS) {
+  const base = await search(plain, locale);
+  const got = await search(variant, locale);
+  if (base === null || got === null) { fail(`${locale} «${variant}»: сервер не ответил`); continue; }
+  if (!base.length) { fail(`${locale} «${plain}»: базовый запрос сам ничего не находит — тест бессмыслен`); continue; }
+  got.includes(base[0])
+    ? pass(`${locale} ${what}: «${variant}» → ${base[0]}, как и «${plain}»`)
+    : fail(`${locale} ${what}: «${variant}» → ${got.slice(0, 3).join(' ') || 'ПУСТО'}, а «${plain}» → ${base[0]}`);
+}
+
 console.log(failures ? `\n${failures} проблем(ы) поиска` : '\nпоиск находит на всех языках');
 process.exit(failures ? 1 : 0);
