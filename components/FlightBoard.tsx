@@ -94,7 +94,11 @@ const haptic = (ms = 6) => { try { (navigator as any).vibrate?.(ms); } catch {} 
  */
 function fmtDur(mins: number, t: T): string {
   const hrs = Math.floor(mins / 60), mm = mins % 60;
-  return hrs > 0 ? `${hrs} ${t('dur_h')} ${mm} ${t('dur_m')}` : `${mm} ${t('dur_m')}`;
+  // Ровный час печатается без минут: «2 h», а не «2 h 0 m». Круглые задержки — самые частые
+  // (диспетчер объявляет два часа, а не сто девятнадцать минут), и «0 m» на проде висело
+  // на каждой второй задержанной строке.
+  if (hrs > 0) return mm > 0 ? `${hrs} ${t('dur_h')} ${mm} ${t('dur_m')}` : `${hrs} ${t('dur_h')}`;
+  return `${mm} ${t('dur_m')}`;
 }
 
 function relTime(d: Date | null, t: T): string {

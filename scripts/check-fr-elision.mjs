@@ -48,11 +48,13 @@ const CASES = [
   ['北京', 'de 北京', 'нелатиница — элизию не угадываем'],
   ['Žilina', 'de Žilina', 'согласная с диакритикой'],
   ['Ōita', 'd’Ōita', 'гласная с макроном'],
-  ['IST', 'd’IST', 'аббревиатура: буква «i» читается как гласная'],
-  ['AMS', 'd’AMS', 'буква «a»'],
-  ['KZN', 'de KZN', 'буква «ка» — согласный звук'],
-  ['BER', 'de BER', 'буква «бэ»'],
-  ['MSQ', 'd’MSQ', 'буква «эм» начинается с гласного звука'],
+  // Перед кодом ИАТА элизии нет НИКОГДА. Правило «по названию буквы» (effe → d’FRA) верно
+  // для устной речи и неверно для этого текста: на проде оно дало «10 km d’FRA», «42 km d’MUC».
+  ['IST', 'de IST', 'код ИАТА — предлог полный'],
+  ['AMS', 'de AMS', 'то же, хотя буква «a» гласная'],
+  ['FRA', 'de FRA', 'то же'],
+  ['KZN', 'de KZN', 'то же'],
+  ['MSQ', 'de MSQ', 'то же'],
 ];
 let bad = 0;
 for (const [input, want, why] of CASES) {
@@ -87,14 +89,21 @@ if (!bad) pass(`правило верно на ${CASES.length} случаях, �
 // только чтением журнала `next build`. Поэтому связь «ключ → параметр → вызов» проверяется
 // статически, по исходникам.
 {
-  const fr = JSON.parse(fs.readFileSync('messages/fr.json', 'utf8'));
-  const needs = new Map();                       // ключ → набор {deXxx}
-  for (const [ns, group] of Object.entries(fr)) {
-    if (!group || typeof group !== 'object') continue;
-    for (const [k, v] of Object.entries(group)) {
-      if (typeof v !== 'string') continue;
-      const params = [...v.matchAll(/\{(de[A-Z]\w*)\}/g)].map((m) => m[1]);
-      if (params.length) needs.set(k, new Set(params));
+  // ВСЕ каталоги, а не только французский. Первая версия смотрела на fr, поэтому пропустила
+  // {deAirport} в немецком и {arAirport} в арабском: 1141 FORMATTING_ERROR за одну сборку,
+  // и ни одного видимого следа на странице — next-intl не печатает голый плейсхолдер, он
+  // бросает исключение, пишет его в журнал и отдаёт строку как есть.
+  const needs = new Map();                       // ключ → набор параметров-форм имени
+  for (const file of fs.readdirSync('messages').filter((f) => f.endsWith('.json'))) {
+    const cat = JSON.parse(fs.readFileSync(`messages/${file}`, 'utf8'));
+    for (const [ns, group] of Object.entries(cat)) {
+      if (!group || typeof group !== 'object') continue;
+      for (const [k, v] of Object.entries(group)) {
+        if (typeof v !== 'string') continue;
+        // {deName}, {deCity}, {deIata}, {deA}, {dePredecessors}, {deAirport}, {arAirport}
+        const params = [...v.matchAll(/\{((?:de|ar)[A-Z]\w*)\}/g)].map((m) => m[1]);
+        if (params.length) needs.set(k, new Set([...(needs.get(k) ?? []), ...params]));
+      }
     }
   }
 
@@ -115,8 +124,16 @@ if (!bad) pass(`правило верно на ${CASES.length} случаях, �
       // вызов вида t('key', { … }) — берём содержимое объекта до закрывающей скобки вызова
       const re = new RegExp(`\\b\\w*t?\\w*\\(\\s*['"\`]${key}['"\`]\\s*,\\s*\\{([^{}]*(?:\\{[^{}]*\\}[^{}]*)*)\\}`, 'g');
       for (const m of src.matchAll(re)) {
+        // Раскрытие объекта: `t('key', { ...N, code })`. Значения лежат в объявлении N,
+        // а не в самом вызове — без этого проверка объявляет дефектом ровно тот приём,
+        // которым этот класс дефектов и лечится.
+        let body = m[1];
+        for (const sp of body.matchAll(/\.\.\.(\w+)/g)) {
+          const decl = src.match(new RegExp(`const ${sp[1]}\\s*=\\s*\\{([^}]*)\\}`));
+          if (decl) body += ` ${decl[1]}`;
+        }
         for (const p of params) {
-          if (!new RegExp(`\\b${p}\\b`).test(m[1])) {
+          if (!new RegExp(`\\b${p}\\b`).test(body)) {
             missing.push(`${file}: ${key} без ${p}`);
           }
         }
@@ -125,7 +142,7 @@ if (!bad) pass(`правило верно на ${CASES.length} случаях, �
   }
   missing.length
     ? missing.slice(0, 6).forEach((m) => fail(`параметр не передан — ${m}`))
-    : pass(`все ${needs.size} ключей с предлогом получают свой параметр во всех вызовах`);
+    : pass(`все ${needs.size} ключей с формами имени получают свои параметры во всех вызовах`);
 }
 
 // ── 3. Отрисованные страницы ─────────────────────────────────────────────────────────────
@@ -148,7 +165,9 @@ if (!BASE) {
     const raw = visible.match(/\{de[A-Z]\w*\}/);
     if (raw) { fail(`${path}: параметр не передан в вызов — на странице напечатано «${raw[0]}»`); continue; }
 
-    const missed = [...visible.matchAll(/\bde ([AEIOUÉÈÊÀÂÎÔÛaeiouéèêàâîôû][\wÀ-ÿ]{2,})/g)]
+    // Код ИАТА исключён: перед ним предлог полный по правилу (см. lib/fr-elision.ts), а
+    // регулярка иначе считает «de IST» пропущенной элизией — букву «I» она видит гласной.
+    const missed = [...visible.matchAll(/\bde (?![A-Z]{2,4}\b)([AEIOUÉÈÊÀÂÎÔÛaeiouéèêàâîôû][\wÀ-ÿ]{2,})/g)]
       .map((m) => m[0])
       // «de» перед нарицательным словом французского текста элизии не требует по нашим правилам
       // ровно тогда, когда слово начинается с согласной; сюда попадают только гласные, поэтому

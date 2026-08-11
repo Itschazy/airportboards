@@ -107,7 +107,7 @@ export default async function AirportsIndexPage({ params }: Props) {
         {t('sec_countries')}
       </h1>
       <p style={{ fontSize: 15, color: '#8A8A8A', margin: '0 0 14px' }}>
-        {countries.length} {t('m_countries')}
+        {countries.length.toLocaleString(locale)} {t('m_countries')}
       </p>
       {world.generated && world.withService > 0 && (
         <p style={{ fontSize: 15, lineHeight: 1.55, color: '#C7C7CC', margin: '0 0 28px', maxWidth: 660 }}>
@@ -126,7 +126,7 @@ export default async function AirportsIndexPage({ params }: Props) {
             }}>
               <span style={{ fontSize: 20, flexShrink: 0, width: 26, textAlign: 'center', lineHeight: 1 }}>{flag(c.iso2)}</span>
               <span style={{ flex: 1, minWidth: 0, fontSize: 15, color: '#E4E4E7', fontWeight: 600, whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>{c.name}</span>
-              <span style={{ fontSize: 13, color: '#8A8A8A', flexShrink: 0, fontVariantNumeric: 'tabular-nums' }}>{c.count}</span>
+              <span style={{ fontSize: 13, color: '#8A8A8A', flexShrink: 0, fontVariantNumeric: 'tabular-nums' }}>{c.count.toLocaleString(locale)}</span>
             </Link>
           </li>
         ))}

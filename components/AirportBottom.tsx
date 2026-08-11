@@ -11,7 +11,7 @@ import { getAirportContentExtended } from '@/lib/airport-content-extended';
 import { getAirportSchedule, weekdayNames, maskToDays } from '@/lib/airport-schedule';
 import { getWikiRoutes } from '@/lib/wiki-routes';
 import { serviceLevel, serviceMeasuredOn, worldServiceCounts } from '@/lib/warm';
-import { GENERIC_LOCALES } from '@/lib/generic-word';
+import { GENERIC_LOCALES, hasGenericWord } from '@/lib/generic-word';
 import { localizedMeasuredOn } from '@/lib/measured-date';
 import { joinList, listSeparator } from '@/lib/list-separator';
 import { deName as withDe } from '@/lib/fr-elision';
@@ -91,6 +91,33 @@ export async function AirportBottom({ airport, locale, about, displayName, fligh
   // значения ICU молча игнорирует — поэтому их можно передавать во все вызовы подряд, не
   // разбирая, какой строке предлог нужен: пропущенный параметр напечатал бы «{deName}».
   const deName = withDe(name, locale);
+  // Немецкое головное слово приезжает вместе с именем: имя 48 аэропортов само кончается на
+  // «Airport», и «am Flughafen Belfast International Airport» печатало родовое слово дважды,
+  // на двух языках подряд. Артикль и предлог ОСТАЮТСЯ в шаблоне: «am Flughafen …» — место
+  // (дательный), «an den Flughafen …» — направление (винительный), и вынести предлог вместе
+  // с артиклем в параметр значит потерять эту разницу. Оба варианта мужского рода, поэтому
+  // согласование не ломается: «am Flughafen Frankfurt» / «am Belfast International Airport».
+  const deAirport = locale === 'de' && !hasGenericWord('de', name) ? `Flughafen ${name}` : name;
+  // Арабское головное слово — тоже параметром, и по обратной причине, чем немецкое.
+  //
+  // Я убрал «مطار» из шаблонов, решив, что имя обычно его содержит. Замер показал обратное:
+  // «مطار» есть в 27 арабских именах из 6042 — 0.4%. Без головного слова согласование
+  // опиралось на подставленное имя, и выходило «الذي يستخدمه القاهرة» — глагол мужского рода
+  // при женской Каире, а на RUH ещё и «الذي يستخدمه الملك خالد», буквально «который использует
+  // король Халид». Со словом «مطار» подлежащим становится аэропорт, мужского рода, и от имени
+  // согласование больше не зависит вовсе.
+  const arAirport = locale === 'ar' && !hasGenericWord('ar', name) ? `مطار ${name}` : name;
+
+  /**
+   * Все формы имени одним объектом.
+   *
+   * Раньше каждый вызов перечислял их сам, и добавление формы означало правку двадцати вызовов
+   * вручную. Я дважды пропустил часть — и оба раза узнал об этом не из проверки, а из журнала
+   * `next build`: next-intl не печатает голый «{deAirport}», он бросает FORMATTING_ERROR и
+   * отдаёт строку как есть, поэтому на странице дефект не виден. 1141 ошибка за одну сборку.
+   */
+  const N = { name, deName, deAirport, arAirport };
+
   const deCity = withDe(city, locale);
   const deIata = withDe(airport.iata, locale);
   const ext = getAirportContentExtended(airport.iata, locale);
@@ -173,22 +200,22 @@ export async function AirportBottom({ airport, locale, about, displayName, fligh
   };
 
   const faq: { q: string; a: string }[] = [
-    { q: t('faq_iata_q', { name, deName }), a: t('faq_iata_a', { name, deName, code: airport.iata }) },
-    ...(airport.icao ? [{ q: t('faq_icao_q', { name, deName }), a: t('faq_icao_a', { name, deName, code: airport.icao }) }] : []),
-    { q: t('faq_where_q', { name, deName }), a: t('faq_where_a', { name, deName, iata: airport.iata, city, country }) },
+    { q: t('faq_iata_q', { ...N }), a: t('faq_iata_a', { ...N, code: airport.iata }) },
+    ...(airport.icao ? [{ q: t('faq_icao_q', { ...N }), a: t('faq_icao_a', { ...N, code: airport.icao }) }] : []),
+    { q: t('faq_where_q', { ...N }), a: t('faq_where_a', { ...N, iata: airport.iata, city, country }) },
     // Only claim a timezone when we actually have one. 557 airports inherited the literal
     // "\N" null marker from the OpenFlights dump and rendered it as the visible answer.
-    ...(airport.tz ? [{ q: t('faq_tz_q', { name, deName }), a: t('faq_tz_a', { name, deName, iata: airport.iata, tz: `${airport.tz}${offset ? ` (${offset})` : ''}` }) }] : []),
+    ...(airport.tz ? [{ q: t('faq_tz_q', { ...N }), a: t('faq_tz_a', { ...N, iata: airport.iata, tz: `${airport.tz}${offset ? ` (${offset})` : ''}` }) }] : []),
     // How busy an airport is, from our own measurement — a question every other flight site
     // answers with marketing copy or not at all.
     ...(deps && deps > 0 && measuredOn
-      ? [{ q: t('faq_deps_q', { name, deName }), a: t('faq_deps_a', { n: deps.toLocaleString(locale), name, iata: airport.iata, date: localizedMeasuredOn(measuredOn, locale) }) }]
+      ? [{ q: t('faq_deps_q', { ...N }), a: t('faq_deps_a', { ...N, n: deps, iata: airport.iata, date: localizedMeasuredOn(measuredOn, locale) }) }]
       : []),
     // "Arrive 3 hours before departure" is advice for a place you can fly from. On the 3,789
     // airfields with no airline service and on closed airports it was being asserted as
     // FAQPage markup directly under a notice saying no flights exist — a self-contradiction
     // an answer engine reads as an unreliable source.
-    ...(noService || airport.closed ? [] : [{ q: t('faq_arrive_q', { name, deName }), a: t('faq_arrive_a') }]),
+    ...(noService || airport.closed ? [] : [{ q: t('faq_arrive_q', { ...N }), a: t('faq_arrive_a') }]),
     // Data-driven pairs from the board itself: which airlines operate here, where you can fly
     // nonstop. Genuinely unique per airport, derived from rows we already aggregated above,
     // and worded as sourced from the CURRENT departures board — a claim we can always stand
@@ -197,7 +224,7 @@ export async function AirportBottom({ airport, locale, about, displayName, fligh
     // Intl.ListFormat gives each locale its own conjunction («А, Б и В», 「AとB」) instead of a
     // comma splice in eleven languages.
     ...(!inbound && !noService && !airport.closed && airlines.length >= 3
-      ? [{ q: t('faq_airlines_q', { name, deName }), a: t('faq_airlines_a', { name, deName, iata: airport.iata, list: listFmt(airlines.slice(0, 5).map(al => al.name)) }) }]
+      ? [{ q: t('faq_airlines_q', { ...N }), a: t('faq_airlines_a', { ...N, iata: airport.iata, list: listFmt(airlines.slice(0, 5).map(al => al.name)) }) }]
       : []),
     // "On which days do flights depart?" — answerable only from the timetable, and the pair
     // rides into the FAQPage markup this component already emits, so no new schema type is
@@ -219,7 +246,11 @@ export async function AirportBottom({ airport, locale, about, displayName, fligh
       // читается как заикание; в остальных локалях повторяющаяся форма живёт в самом названии
       // дня («montags», «по понедельникам»), и приставка там пустая.
       const everyWeek = (days: string) => tUi('sched_wd_every', { days });
-      const ex = listFmt(named.map(x => tUi('sched_faq_ex', { city: x.city, days: everyWeek(listFmt(maskToDays(x.mask, recurring))) })));
+      // Дни недели склеиваются РАЗДЕЛИТЕЛЕМ, а не listFmt: тот вставляет союз, и по-китайски
+      // выходило «每周一、三、四、五和日» — «по понедельникам, средам, четвергам, пятницам И
+      // воскресеньям», где «и» стоит внутри перечисления дней. Сам список примеров по городам
+      // остаётся на listFmt: там союз уместен.
+      const ex = listFmt(named.map(x => tUi('sched_faq_ex', { city: x.city, days: everyWeek(joinList(maskToDays(x.mask, recurring), locale)) })));
       // The marked-up answer carries the snapshot date too. The visible footnote had it, the
       // JSON-LD did not — and the JSON-LD is the copy an answer engine quotes, where a
       // timeless-sounding claim about a timetable is exactly the wrong thing to hand over.
@@ -240,17 +271,17 @@ export async function AirportBottom({ airport, locale, about, displayName, fligh
           .filter(l => l && !/^[A-Z]{3}$/.test(l)),
       )];
       return printable.length >= 3
-        ? [{ q: t('faq_dest_q', { name, deName }), a: t('faq_dest_a', { name, deName, iata: airport.iata, list: listFmt(printable.slice(0, 6)) }) }]
+        ? [{ q: t('faq_dest_q', { ...N }), a: t('faq_dest_a', { ...N, iata: airport.iata, list: listFmt(printable.slice(0, 6)) }) }]
         : [];
     })()),
     // The questions people actually ask about a field with no airline service — and the
     // answers nobody else publishes, because nobody else measured which airports have
     // scheduled service. Both are plain, self-contained sentences, so they can be lifted
     // verbatim by an answer engine.
-    ...(noService ? [{ q: t('faq_hasflights_q', { name, deName }), a: t('faq_hasflights_a', { name, deName, iata: airport.iata }) }] : []),
+    ...(noService ? [{ q: t('faq_hasflights_q', { ...N }), a: t('faq_hasflights_a', { ...N, iata: airport.iata }) }] : []),
     ...(noService && nearestServed
       ? [{
-          q: t('faq_nearest_q', { name, deName }),
+          q: t('faq_nearest_q', { ...N }),
           a: t('faq_nearest_a', {
             airport: getAirportName(nearestServed.iata, locale, nearestServed.name),
             code: nearestServed.iata,
@@ -260,7 +291,7 @@ export async function AirportBottom({ airport, locale, about, displayName, fligh
       : []),
     // "shows live arrivals and departures … updated every minute" is false on an airport
     // with an empty board, and it was being asserted as FAQPage markup on every page.
-    ...(flights.length ? [{ q: t('faq_live_q', { name, deName }), a: t('faq_live_a', { name, deName, iata: airport.iata }) }] : []),
+    ...(flights.length ? [{ q: t('faq_live_q', { ...N }), a: t('faq_live_a', { ...N, iata: airport.iata }) }] : []),
   ];
   const faqLd = {
     '@context': 'https://schema.org', '@type': 'FAQPage',
@@ -316,8 +347,8 @@ export async function AirportBottom({ airport, locale, about, displayName, fligh
             {wiki.status === 'no_commercial_service' ? (
               <p style={{ fontSize: 15, lineHeight: 1.6, color: '#B4B4B4', margin: 0 }}>
                 {wiki.since
-                  ? t('wiki_no_service', { name, deName, year: wiki.since })
-                  : t('wiki_no_service_nodate', { name, deName })}
+                  ? t('wiki_no_service', { ...N, year: wiki.since })
+                  : t('wiki_no_service_nodate', { ...N })}
               </p>
             ) : (
               <>

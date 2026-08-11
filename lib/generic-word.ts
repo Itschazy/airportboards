@@ -27,7 +27,21 @@ const ALREADY: Record<string, RegExp> = {
   de: /Flughafen|Flugplatz|Landeplatz|Airport/i,
   es: /Aeropuerto|Aeródromo|Airport/i,
   hi: /एयरपोर्ट|हवाई ?अड्डा|Airport/i,
+  ar: /مطار|مهبط|قاعدة جوية/,
 };
+
+/**
+ * Содержит ли имя слово, которое уже означает «аэропорт» на этом языке.
+ *
+ * Нужно не только чтобы НЕ добавлять слово, но и чтобы не добавлять его СНАРУЖИ, в шаблоне.
+ * Немецкие вопросы FAQ печатали «am Flughafen {name}», и на 48 аэропортах, чьё имя кончается
+ * на «Airport», выходило «am Flughafen Belfast International Airport» — родовое слово дважды,
+ * на двух языках подряд.
+ */
+export function hasGenericWord(locale: string, name: string): boolean {
+  const re = ALREADY[locale];
+  return Boolean(re && name && re.test(name));
+}
 
 /** Locales whose NAMES already carry the generic word, so surrounding copy must not repeat it. */
 export const GENERIC_LOCALES = new Set(['ko']);

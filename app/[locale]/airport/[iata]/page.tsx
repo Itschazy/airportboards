@@ -10,6 +10,7 @@ import { localizedMeasuredOn } from '@/lib/measured-date';
 import { sameAsFor, airportNodeId } from '@/lib/airport-sameas';
 import { getAirportContent } from '@/lib/airport-content';
 import { getAirportName, getAirportNameBare } from '@/lib/airport-names';
+import { hasGenericWord } from '@/lib/generic-word';
 import { Breadcrumb } from '@/components/Breadcrumb';
 import { deName as withDe } from '@/lib/fr-elision';
 import { getCityName, getCountryName } from '@/lib/places';
@@ -305,7 +306,7 @@ export default async function AirportPage({ params }: Props) {
         const on = serviceMeasuredOn();
         const line = tUi('board_pending');
         return measured && measured > 0 && on
-          ? `${line} ${tHome('faq_deps_a', { n: String(measured), name, iata: airport.iata, date: localizedMeasuredOn(on, locale) })}`
+          ? `${line} ${tHome('faq_deps_a', { n: measured, name, iata: airport.iata, date: localizedMeasuredOn(on, locale), deAirport: locale === 'de' && !hasGenericWord('de', name) ? `Flughafen ${name}` : name })}`
           : line;
       })()
     : null;

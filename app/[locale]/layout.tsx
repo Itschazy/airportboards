@@ -92,7 +92,11 @@ export default async function LocaleLayout({
         <Analytics />
         <YandexMetrica locale={locale} />
         <AdSense />
-        <NextIntlClientProvider messages={clientMessages(messages)}>
+        {/* locale ПЕРЕДАЁТСЯ ЯВНО. Без него клиентские компоненты форматируют числа и даты
+            локалью по умолчанию: на арабской странице счётчик «31 رحلة مغادرة» печатался
+            западными цифрами, тогда как серверная часть той же страницы давала «٢٬٨٠١»
+            восточными. Одна страница — две системы счисления. */}
+        <NextIntlClientProvider locale={locale} messages={clientMessages(messages)}>
           <SiteHeader locale={locale as Locale} />
           <main style={{ flex: '1 0 auto', width: '100%' }}>{children}</main>
           <SiteFooter locale={locale as Locale} />
