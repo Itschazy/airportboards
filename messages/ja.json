@@ -11,7 +11,9 @@
     "nearest": "近くの空港",
     "clear": "クリア",
     "language": "言語",
-    "close": "閉じる"
+    "close": "閉じる",
+    "aria_breadcrumb": "パンくずリスト",
+    "aria_footer": "フッター"
   },
   "board": {
     "flight": "便名",
@@ -215,7 +217,7 @@
     "arrives_in": "到着まで",
     "final_call": "最終案内",
     "go_to_gate": "ただちにゲートへ",
-    "delayed_by": "{m}分遅れ",
+    "delayed_by": "{d}遅れ",
     "was": "{time}発",
     "scheduled_at": "{time}予定",
     "new_departure": "新しい出発 {time}",
@@ -286,14 +288,15 @@
     "sched_faq_q": "{a}発のフライトは何曜日に出発しますか？",
     "sched_faq_a": "{m}時点の航空会社の時刻表では、{a}からの毎日運航便は{d}か所の目的地に就航しています。さらに{i}か所は特定の日にのみ利用できます（例：{ex}）。",
     "sched_faq_ex": "{city}：{days}",
-    "sched_wd0": "毎週月曜日",
-    "sched_wd1": "毎週火曜日",
-    "sched_wd2": "毎週水曜日",
-    "sched_wd3": "毎週木曜日",
-    "sched_wd4": "毎週金曜日",
-    "sched_wd5": "毎週土曜日",
-    "sched_wd6": "毎週日曜日",
-    "sched_note2": "現行スケジュール期間における、{m}時点の航空会社時刻表です。個別のチャーター便および季節運航便は、掲載されていないか不完全な場合があります。"
+    "sched_wd0": "月曜日",
+    "sched_wd1": "火曜日",
+    "sched_wd2": "水曜日",
+    "sched_wd3": "木曜日",
+    "sched_wd4": "金曜日",
+    "sched_wd5": "土曜日",
+    "sched_wd6": "日曜日",
+    "sched_note2": "現行スケジュール期間における、{m}時点の航空会社時刻表です。個別のチャーター便および季節運航便は、掲載されていないか不完全な場合があります。",
+    "sched_wd_every": "毎週{days}"
   },
   "notfound": {
     "title": "ページが見つかりません",

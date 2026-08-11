@@ -1,7 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import { getTranslations } from 'next-intl/server';
-import type { Locale } from '@/lib/i18n';
+import { rtlLocales, type Locale } from '@/lib/i18n';
 import {
   getLegalDoc,
   legalContentLocale,
@@ -91,8 +91,17 @@ export async function LegalArticle({ kind, locale }: { kind: LegalKind; locale: 
     ],
   };
 
+  // Направление тоже, а не только язык. На /ar страница объявлена dir="rtl", и английский
+  // текст внутри неё наследовал RTL: строки прижимались вправо, а точка в конце абзаца
+  // уезжала в начало. lang без dir помечает язык, но не чинит раскладку.
   return (
-    <div lang={contentLang !== locale ? contentLang : undefined} style={{ maxWidth: 760, margin: '0 auto', padding: '36px 18px 64px' }}>
+    <div
+      lang={contentLang !== locale ? contentLang : undefined}
+      dir={contentLang !== locale
+        ? (rtlLocales.includes(contentLang as Locale) ? 'rtl' : 'ltr')
+        : undefined}
+      style={{ maxWidth: 760, margin: '0 auto', padding: '36px 18px 64px' }}
+    >
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       <div style={{ fontSize: 13, color: '#8A8A8A', marginBottom: 10 }}>
         <Link href={`/${locale}`} style={{ color: '#6A6A6A', textDecoration: 'none', display: 'inline-block', minHeight: 24 }}>airportsboard</Link>

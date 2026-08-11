@@ -205,7 +205,7 @@ export default async function DeparturesPage({ params }: Props) {
       {jsonLd.map((schema, i) => (
         <script key={i} type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
       ))}
-      <Breadcrumb trail={trail} extra={{ href: `/${locale}/airport/${airport.iata}/arrivals`, label: tNav('arrivals') }} />
+      <Breadcrumb label={tNav('aria_breadcrumb')} trail={trail} extra={{ href: `/${locale}/airport/${airport.iata}/arrivals`, label: tNav('arrivals') }} />
       {/* The visible <h1> now lives in FlightBoard's airport header (single semantic h1). */}
       <FlightBoard airport={airport} locale={locale} defaultMode="departures" displayName={getAirportName(airport.iata, locale, airport.name)} initialFlights={initialFlights.slice(0, 40)} initialFetchedAt={getBoardFetchedAt(airport.iata, 'departures')} boardTotal={initialFlights.length} />
       <div style={{ maxWidth: 720, margin: '0 auto', padding: '0 24px 8px' }}>

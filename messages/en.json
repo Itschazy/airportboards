@@ -11,7 +11,9 @@
     "nearest": "Nearest airports",
     "clear": "Clear",
     "language": "Language",
-    "close": "Close"
+    "close": "Close",
+    "aria_breadcrumb": "Breadcrumb",
+    "aria_footer": "Footer"
   },
   "board": {
     "flight": "Flight",
@@ -215,7 +217,7 @@
     "arrives_in": "Arrives in",
     "final_call": "Final call",
     "go_to_gate": "Go to gate now",
-    "delayed_by": "Delayed by {m}m",
+    "delayed_by": "Delayed by {d}",
     "was": "Was {time}",
     "scheduled_at": "Scheduled {time}",
     "new_departure": "New departure {time}",
@@ -293,7 +295,8 @@
     "sched_wd4": "Fridays",
     "sched_wd5": "Saturdays",
     "sched_wd6": "Sundays",
-    "sched_note2": "Carrier timetable as of {m}, for the current scheduling season. Individual charter and seasonal services may be missing or incomplete."
+    "sched_note2": "Carrier timetable as of {m}, for the current scheduling season. Individual charter and seasonal services may be missing or incomplete.",
+    "sched_wd_every": "{days}"
   },
   "notfound": {
     "title": "Page not found",

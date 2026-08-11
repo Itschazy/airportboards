@@ -18,3 +18,13 @@ export const localeNames: Record<Locale, string> = {
   hi: 'हिन्दी',
   tr: 'Türkçe',
 };
+
+/**
+ * Стрелка «оттуда — туда» по ходу чтения.
+ *
+ * У U+2192 «→» свойство Bidi_Mirrored=No: алгоритм двунаправленного письма её НЕ разворачивает,
+ * и на арабской странице она продолжает указывать вправо, то есть назад. В подвале, в заголовке
+ * маршрута и на странице рейса она была вписана прямо в разметку.
+ */
+export const forwardArrow = (locale: string): string =>
+  rtlLocales.includes(locale as Locale) ? '←' : '→';

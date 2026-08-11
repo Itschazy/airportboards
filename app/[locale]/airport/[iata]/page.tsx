@@ -10,6 +10,7 @@ import { localizedMeasuredOn } from '@/lib/measured-date';
 import { sameAsFor, airportNodeId } from '@/lib/airport-sameas';
 import { getAirportContent } from '@/lib/airport-content';
 import { getAirportName, getAirportNameBare } from '@/lib/airport-names';
+import { Breadcrumb } from '@/components/Breadcrumb';
 import { deName as withDe } from '@/lib/fr-elision';
 import { getCityName, getCountryName } from '@/lib/places';
 import { getBoard, getBoardFetchedAt } from '@/lib/flights';
@@ -316,6 +317,25 @@ export default async function AirportPage({ params }: Props) {
 
   const boardFetchedAt = getBoardFetchedAt(airport.iata, 'departures');
 
+  /**
+   * Одна цепочка на разметку и на экран.
+   *
+   * Страница аэропорта отдавала BreadcrumbList из четырёх уровней, а видимых крошек на ней не
+   * было ни одной: разметка описывала иерархию, которой на странице не существует. Правила
+   * Google на структурированные данные требуют обратного — размеченное должно быть на
+   * странице. Компонент Breadcrumb для этого уже написан и уже стоит на /departures и
+   * /arrivals; здесь он получает ТОТ ЖЕ массив, поэтому разойтись они больше не могут.
+   */
+  const crumbs: { name: string; item: string }[] = (() => {
+    const countryInfo = getCountries().find(c => c.country === airport.country);
+    const cityInfo = getCities().find(c => c.city === airport.city && c.country === airport.country);
+    const trail: { name: string; item: string }[] = [{ name: tNav('home'), item: `${BASE}/${locale}` }];
+    if (countryInfo) trail.push({ name: country, item: `${BASE}/${locale}/airports/${countryInfo.slug}` });
+    if (cityInfo && cityInfo.count > 1) trail.push({ name: city, item: `${BASE}/${locale}/city/${cityInfo.slug}` });
+    trail.push({ name: `${name} (${airport.iata})`, item: canonical });
+    return trail;
+  })();
+
   const jsonLd = [
     {
       '@context': 'https://schema.org',
@@ -341,7 +361,10 @@ export default async function AirportPage({ params }: Props) {
         // "Netherlands Antilles", dissolved in 2010. Backfilled from OurAirports per AIRPORT,
         // not per country name: those five Antillean airports resolve to three different codes
         // (BQ, CW, SX), so a name-based substitution would have merged three countries into one.
-        ...(airport.city ? { addressLocality: airport.city } : {}),
+        // Локализованный город, а не исходный английский: на китайской странице разметка
+        // сообщала «Kazan», пока FAQ на той же странице отвечал «喀山», и это прямое
+        // расхождение разметки с видимым текстом.
+        ...(airport.city ? { addressLocality: city } : {}),
         ...(airport.iso2 ? { addressCountry: airport.iso2 } : {}),
       },
       geo: {
@@ -359,15 +382,7 @@ export default async function AirportPage({ params }: Props) {
       // Deep trail Home → Country → City (only if the city has >1 airport, i.e. an
       // indexed city page exists) → Airport. Richer breadcrumbs earn the trail in the
       // SERP snippet and spread internal link context.
-      itemListElement: (() => {
-        const countryInfo = getCountries().find(c => c.country === airport.country);
-        const cityInfo = getCities().find(c => c.city === airport.city && c.country === airport.country);
-        const trail: { name: string; item: string }[] = [{ name: tNav('home'), item: `${BASE}/${locale}` }];
-        if (countryInfo) trail.push({ name: country, item: `${BASE}/${locale}/airports/${countryInfo.slug}` });
-        if (cityInfo && cityInfo.count > 1) trail.push({ name: city, item: `${BASE}/${locale}/city/${cityInfo.slug}` });
-        trail.push({ name: `${name} (${airport.iata})`, item: canonical });
-        return trail.map((c, i) => ({ '@type': 'ListItem', position: i + 1, name: c.name, item: c.item }));
-      })(),
+      itemListElement: crumbs.map((c, i) => ({ '@type': 'ListItem', position: i + 1, name: c.name, item: c.item })),
     },
     {
       '@context': 'https://schema.org',
@@ -397,6 +412,7 @@ export default async function AirportPage({ params }: Props) {
       {jsonLd.map((schema, i) => (
         <script key={i} type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
       ))}
+      <Breadcrumb label={tNav('aria_breadcrumb')} trail={crumbs} />
       {predecessors.length > 0 && (
         <aside style={{
           margin: '12px 16px 0', padding: '12px 14px', borderRadius: 10,

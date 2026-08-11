@@ -11,7 +11,9 @@
     "nearest": "Aeroporti vicini",
     "clear": "Cancella",
     "language": "Lingua",
-    "close": "Chiudi"
+    "close": "Chiudi",
+    "aria_breadcrumb": "Percorso di navigazione",
+    "aria_footer": "Piè di pagina"
   },
   "board": {
     "flight": "Volo",
@@ -215,7 +217,7 @@
     "arrives_in": "Arriva tra",
     "final_call": "Ultimo imbarco",
     "go_to_gate": "Vai al gate ora",
-    "delayed_by": "Ritardo di {m}m",
+    "delayed_by": "Ritardo di {d}",
     "was": "Era {time}",
     "scheduled_at": "Programmato {time}",
     "new_departure": "Nuova partenza {time}",
@@ -293,7 +295,8 @@
     "sched_wd4": "il venerdì",
     "sched_wd5": "il sabato",
     "sched_wd6": "la domenica",
-    "sched_note2": "Orario della compagnia aerea al {m}, per la stagione di programmazione corrente. I singoli servizi charter e stagionali potrebbero essere mancanti o incompleti."
+    "sched_note2": "Orario della compagnia aerea al {m}, per la stagione di programmazione corrente. I singoli servizi charter e stagionali potrebbero essere mancanti o incompleti.",
+    "sched_wd_every": "{days}"
   },
   "notfound": {
     "title": "Pagina non trovata",

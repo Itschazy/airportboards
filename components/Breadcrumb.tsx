@@ -17,12 +17,12 @@ export type Crumb = { name: string; item: string };
  *
  * The last crumb is the current page, so it is text rather than a link.
  */
-export function Breadcrumb({ trail, extra }: { trail: Crumb[]; extra?: { href: string; label: string } | null }) {
+export function Breadcrumb({ trail, extra, label }: { trail: Crumb[]; extra?: { href: string; label: string } | null; label: string }) {
   if (trail.length < 2) return null;
   const path = trail.slice(0, -1);
   const current = trail[trail.length - 1];
   return (
-    <nav aria-label="Breadcrumb" style={{ maxWidth: 960, margin: '0 auto', padding: '10px 16px 0' }}>
+    <nav aria-label={label} style={{ maxWidth: 960, margin: '0 auto', padding: '10px 16px 0' }}>
       <ol style={{
         display: 'flex', flexWrap: 'wrap', alignItems: 'center', gap: 6,
         listStyle: 'none', margin: 0, padding: 0, fontSize: 12, color: '#8A8A8A',

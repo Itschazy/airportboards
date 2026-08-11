@@ -7,7 +7,7 @@ import { getAirport } from '@/lib/airports';
 import { getAirportName } from '@/lib/airport-names';
 import { getCityName } from '@/lib/places';
 import { getRoute, airlineName, type FlightRow } from '@/lib/flights';
-import { locales } from '@/lib/i18n';
+import { locales, forwardArrow } from '@/lib/i18n';
 
 const BASE = 'https://airportsboard.live';
 type Props = { params: Promise<{ locale: string; pair: string }> };
@@ -96,7 +96,7 @@ export default async function RoutePage({ params }: Props) {
       </h1>
       <p style={{ fontSize: 15, color: '#8A8A8A', margin: '0 0 8px' }}>
         <Link href={`/${locale}/airport/${a.iata}/departures`} style={link}>{fromName}</Link>
-        {' → '}
+        {` ${forwardArrow(locale)} `}
         <Link href={`/${locale}/airport/${b.iata}/arrivals`} style={link}>{toName}</Link>
       </p>
 

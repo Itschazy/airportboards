@@ -79,6 +79,55 @@ if (!bad) pass(`правило верно на ${CASES.length} случаях, �
     : pass('во французском каталоге не осталось «de {имя}»');
 }
 
+// ── 2b. Каждый {deXxx} должен передаваться в КАЖДЫЙ вызов своего ключа ───────────────────
+//
+// Отрисованная страница этот дефект не показывает: next-intl не печатает голый «{deA}», он
+// бросает FORMATTING_ERROR, пишет его в лог сборки и отдаёт строку как есть. Проверка по
+// видимому тексту проходила, а французская фраза на 2389 страницах теряла предлог — поймано
+// только чтением журнала `next build`. Поэтому связь «ключ → параметр → вызов» проверяется
+// статически, по исходникам.
+{
+  const fr = JSON.parse(fs.readFileSync('messages/fr.json', 'utf8'));
+  const needs = new Map();                       // ключ → набор {deXxx}
+  for (const [ns, group] of Object.entries(fr)) {
+    if (!group || typeof group !== 'object') continue;
+    for (const [k, v] of Object.entries(group)) {
+      if (typeof v !== 'string') continue;
+      const params = [...v.matchAll(/\{(de[A-Z]\w*)\}/g)].map((m) => m[1]);
+      if (params.length) needs.set(k, new Set(params));
+    }
+  }
+
+  const files = [];
+  const walk = (d) => {
+    for (const e of fs.readdirSync(d, { withFileTypes: true })) {
+      const p = `${d}/${e.name}`;
+      if (e.isDirectory()) { if (e.name !== 'node_modules') walk(p); }
+      else if (e.name.endsWith('.tsx') || e.name.endsWith('.ts')) files.push(p);
+    }
+  };
+  walk('app'); walk('components');
+
+  const missing = [];
+  for (const file of files) {
+    const src = fs.readFileSync(file, 'utf8');
+    for (const [key, params] of needs) {
+      // вызов вида t('key', { … }) — берём содержимое объекта до закрывающей скобки вызова
+      const re = new RegExp(`\\b\\w*t?\\w*\\(\\s*['"\`]${key}['"\`]\\s*,\\s*\\{([^{}]*(?:\\{[^{}]*\\}[^{}]*)*)\\}`, 'g');
+      for (const m of src.matchAll(re)) {
+        for (const p of params) {
+          if (!new RegExp(`\\b${p}\\b`).test(m[1])) {
+            missing.push(`${file}: ${key} без ${p}`);
+          }
+        }
+      }
+    }
+  }
+  missing.length
+    ? missing.slice(0, 6).forEach((m) => fail(`параметр не передан — ${m}`))
+    : pass(`все ${needs.size} ключей с предлогом получают свой параметр во всех вызовах`);
+}
+
 // ── 3. Отрисованные страницы ─────────────────────────────────────────────────────────────
 const BASE = process.argv[2];
 if (!BASE) {

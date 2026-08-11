@@ -7,6 +7,7 @@ import { getCountryBySlug, getAirportsByCountry, getCountries } from '@/lib/airp
 import { COUNTRY_SLUG_ALIASES } from '@/lib/country-slug-aliases';
 import { getAirportName } from '@/lib/airport-names';
 import { getCityName, getCountryName } from '@/lib/places';
+import { countryIn as esCountryIn } from '@/lib/es-article';
 import { locales } from '@/lib/i18n';
 import { splitByService, serviceMeasuredOn } from '@/lib/warm';
 import { localizedMeasuredOn } from '@/lib/measured-date';
@@ -37,7 +38,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!c) return {};
   const t = await getTranslations({ locale, namespace: 'home' });
   const countryName = getCountryName(c.country, locale);
-  const title = t('country_title', { country: countryName });
+  const title = t('country_title', { country: countryName, countryIn: esCountryIn(countryName, locale) });
   const languages: Record<string, string> = {};
   for (const loc of locales) languages[loc] = `${BASE}/${loc}/airports/${c.slug}`;
   languages['x-default'] = `${BASE}/en/airports/${c.slug}`;
@@ -66,15 +67,15 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       // formats the number for the locale itself. Handing it a pre-formatted STRING makes the
       // plural rule unmatchable, so every count would fall through to `other` — which is the
       // bug being fixed. 56 countries have exactly one served airport and read "1 airports".
-      if (!served.length) return t('country_none', { country: countryName, count: c.count });
-      if (!date) return t('country_desc', { country: countryName, count: c.count });
+      if (!served.length) return t('country_none', { country: countryName, countryIn: esCountryIn(countryName, locale), count: c.count });
+      if (!date) return t('country_desc', { country: countryName, countryIn: esCountryIn(countryName, locale), count: c.count });
       // Numbers, not fmt() — same reason as above: these keys pluralise count, served and rest,
       // and ICU cannot match a plural rule against a pre-formatted string. Bahrain read
       // "Of the 1 airports … 1 have scheduled passenger service"; it is one of 56 countries
       // with exactly one served airport.
       return unknown.length
-        ? t('country_split_partial', { country: countryName, count: c.count, served: served.length, date })
-        : t('country_split', { country: countryName, count: c.count, served: served.length, rest: unserved.length, date });
+        ? t('country_split_partial', { country: countryName, countryIn: esCountryIn(countryName, locale), count: c.count, served: served.length, date })
+        : t('country_split', { country: countryName, countryIn: esCountryIn(countryName, locale), count: c.count, served: served.length, rest: unserved.length, date });
     })(),
     alternates: { canonical: `${BASE}/${locale}/airports/${c.slug}`, languages },
     // A country where nothing is served has no flight content to offer — it is a list of codes.
@@ -116,7 +117,7 @@ export default async function CountryPage({ params }: Props) {
   const itemList = {
     '@context': 'https://schema.org',
     '@type': 'ItemList',
-    name: t('country_title', { country: countryName }),
+    name: t('country_title', { country: countryName, countryIn: esCountryIn(countryName, locale) }),
     numberOfItems: airports.length,
     itemListElement: airports.map((a, i) => ({
       '@type': 'ListItem', position: i + 1,
@@ -135,15 +136,15 @@ export default async function CountryPage({ params }: Props) {
         <Link href={`/${locale}/airports`} style={{ color: '#6A6A6A', textDecoration: 'none', display: 'inline-block', minHeight: 24 }}>{t('sec_countries')}</Link>
       </div>
       <h1 style={{ fontSize: 'clamp(30px, 8vw, 42px)', fontWeight: 800, letterSpacing: '-0.03em', color: '#FFFFFF', lineHeight: 1.05, margin: 0 }}>
-        <span style={{ marginRight: 12 }}>{flag(c.iso2)}</span>{t('country_title', { country: countryName })}
+        <span style={{ marginInlineEnd: 12 }}>{flag(c.iso2)}</span>{t('country_title', { country: countryName, countryIn: esCountryIn(countryName, locale) })}
       </h1>
       <p style={{ fontSize: 15, color: '#8A8A8A', marginTop: 12 }}>{t('airports_count', { count: c.count })}</p>
       {/* One self-contained, dated sentence — the unit an answer engine lifts verbatim. */}
       {showSplit && (
         <p style={{ fontSize: 15, lineHeight: 1.55, color: '#C7C7CC', marginTop: 14, maxWidth: 640 }}>
           {unknown.length
-            ? t('country_split_partial', { country: countryName, count: c.count, served: served.length, date: localizedMeasuredOn(measuredOn!, locale) })
-            : t('country_split', { country: countryName, count: c.count, served: served.length, rest: unserved.length, date: localizedMeasuredOn(measuredOn!, locale) })}
+            ? t('country_split_partial', { country: countryName, countryIn: esCountryIn(countryName, locale), count: c.count, served: served.length, date: localizedMeasuredOn(measuredOn!, locale) })
+            : t('country_split', { country: countryName, countryIn: esCountryIn(countryName, locale), count: c.count, served: served.length, rest: unserved.length, date: localizedMeasuredOn(measuredOn!, locale) })}
         </p>
       )}
 
@@ -159,7 +160,7 @@ export default async function CountryPage({ params }: Props) {
               <span style={{ fontSize: 15, color: '#E4E4E7', display: 'block', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>{getCityName(a.city, locale)}</span>
               <span style={{ fontSize: 12, color: '#8A8A8A', display: 'block', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>{getAirportName(a.iata, locale, a.name)}</span>
             </span>
-            <svg width="6" height="11" viewBox="0 0 6 11" fill="none" style={{ flexShrink: 0 }}>
+            <svg data-flip width="6" height="11" viewBox="0 0 6 11" fill="none" style={{ flexShrink: 0 }}>
               <path d="M1 1L5 5.5L1 10" stroke="#3A3A3C" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
             </svg>
           </Link>

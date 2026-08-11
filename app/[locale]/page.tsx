@@ -136,7 +136,7 @@ export default async function HomePage({ params }: Props) {
         ].map((m, i) => (
           <div key={i} style={{ minWidth: 0 }}>
             <div style={{ fontSize: 15, fontWeight: 700, color: '#FFFFFF', lineHeight: 1.15 }}>
-              <span style={{ opacity: 0.7, marginRight: 5, fontWeight: 400 }}>{m.icon}</span>{m.value}
+              <span style={{ opacity: 0.7, marginInlineEnd: 5, fontWeight: 400 }}>{m.icon}</span>{m.value}
             </div>
             <div style={{ fontSize: 12, color: '#6A6A6A', lineHeight: 1.25, marginTop: 2, overflowWrap: 'break-word' }}>{m.label}</div>
           </div>
@@ -167,7 +167,7 @@ export default async function HomePage({ params }: Props) {
                     the biggest navigation block on the site links by a name the destination
                     never uses. data/country-names.json covers all 235 countries in 12 locales,
                     so this needs no new data. */}
-                <span style={{ marginRight: 7 }}>{flag(c.iso2)}</span>{getCountryName(c.country, locale)}
+                <span style={{ marginInlineEnd: 7 }}>{flag(c.iso2)}</span>{getCountryName(c.country, locale)}
               </div>
               <div style={{ fontSize: 12, color: '#6A6A6A', marginTop: 5 }}>{t('airports_count', { count: c.count })}</div>
             </Link>

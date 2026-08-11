@@ -3,7 +3,7 @@ import { getTranslations } from 'next-intl/server';
 import { getCountries, getAirportsByCountry } from '@/lib/airports';
 import { getCountryName } from '@/lib/places';
 import { serviceLevel } from '@/lib/warm';
-import { locales, localeNames, type Locale } from '@/lib/i18n';
+import { locales, localeNames, type Locale, forwardArrow } from '@/lib/i18n';
 
 const LETTERS = 'abcdefghijklmnopqrstuvwxyz'.split('');
 
@@ -83,7 +83,7 @@ export async function SiteFooter({ locale }: { locale: Locale }) {
 
   return (
     <footer style={{ borderTop: '1px solid #1A1A1A', marginTop: 'auto', padding: '32px 18px 28px' }}>
-      <nav style={{ maxWidth: 1000, margin: '0 auto', display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: 28 }} aria-label="Footer">
+      <nav style={{ maxWidth: 1000, margin: '0 auto', display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: 28 }} aria-label={tNav('aria_footer')}>
         <div>
           <p style={headStyle}>{t('sec_countries')}</p>
           <ul style={{ listStyle: 'none', margin: 0, padding: 0, display: 'flex', flexWrap: 'wrap', gap: '8px 16px' }}>
@@ -93,7 +93,7 @@ export async function SiteFooter({ locale }: { locale: Locale }) {
               </li>
             ))}
             <li>
-              <Link href={`/${locale}/airports`} style={{ ...linkStyle, color: '#0A84FF' }}>{tNav('all_airports')} →</Link>
+              <Link href={`/${locale}/airports`} style={{ ...linkStyle, color: '#0A84FF' }}>{tNav('all_airports')} {forwardArrow(locale)}</Link>
             </li>
           </ul>
         </div>

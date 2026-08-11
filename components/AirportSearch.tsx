@@ -187,7 +187,7 @@ export function AirportSearch({ locale, placeholder, nearestLabel = 'Nearest air
               background: isActive ? '#1C1C1E' : 'transparent',
               color: '#FFFFFF',
               cursor: 'pointer',
-              textAlign: 'left',
+              textAlign: 'start',
               transition: 'background 0.1s',
             }}
           >
@@ -212,7 +212,7 @@ export function AirportSearch({ locale, placeholder, nearestLabel = 'Nearest air
             </span>
 
             {/* Country */}
-            <span style={{ fontSize: 11, color: '#8A8A8A', flexShrink: 0, maxWidth: 80, textAlign: 'right', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>
+            <span style={{ fontSize: 11, color: '#8A8A8A', flexShrink: 0, maxWidth: 80, textAlign: 'end', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>
               {a.country}
             </span>
           </button>

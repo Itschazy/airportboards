@@ -21,7 +21,8 @@
     "check:particles": "node scripts/check-particles.mjs",
     "check:fr": "node scripts/check-fr-elision.mjs",
     "check:content-grammar": "node scripts/fix-content-grammar.mjs",
-    "check:titles": "node scripts/check-title-duplication.mjs"
+    "check:titles": "node scripts/check-title-duplication.mjs",
+    "check:rtl": "node scripts/check-rtl.mjs"
   },
   "dependencies": {
     "next": "^15.3.3",

@@ -174,7 +174,7 @@ export default async function ArrivalsPage({ params }: Props) {
       {jsonLd.map((schema, i) => (
         <script key={i} type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
       ))}
-      <Breadcrumb trail={trail} extra={{ href: `/${locale}/airport/${airport.iata}/departures`, label: tNav('departures') }} />
+      <Breadcrumb label={tNav('aria_breadcrumb')} trail={trail} extra={{ href: `/${locale}/airport/${airport.iata}/departures`, label: tNav('departures') }} />
       {/* The visible <h1> now lives in FlightBoard's airport header (single semantic h1). */}
       {/* boardTotal is the full board, not the SSR slice: passing nothing here made the page
           publish "40 arrivals" on airports whose board holds 80 — the same slice-vs-total

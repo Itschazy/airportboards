@@ -112,7 +112,7 @@ export function Faq({ items }: { items: { q: string; a: string }[] }) {
           <button onClick={() => setOpen(open === i ? null : i)} style={{
             width: '100%', display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 12,
             padding: '14px 16px', background: 'none', border: 'none', color: '#FFFFFF', fontSize: 15, fontWeight: 600,
-            textAlign: 'left', cursor: 'pointer',
+            textAlign: 'start', cursor: 'pointer',
           }}>
             <h3 style={{ margin: 0, fontSize: 15, fontWeight: 600 }}>{it.q}</h3>
             <svg width="13" height="13" viewBox="0 0 13 13" fill="none" style={{ flexShrink: 0, transform: open === i ? 'rotate(180deg)' : 'none', transition: 'transform 0.2s' }}>

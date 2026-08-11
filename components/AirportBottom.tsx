@@ -3,6 +3,7 @@ import Link from 'next/link';
 import type { Airport } from '@/lib/airports';
 import { nearestAirports, getCountries, getAirportsByCountry, getCities, getAllIataCodes, getAirport } from '@/lib/airports';
 import { getCityName, getCountryName } from '@/lib/places';
+import { countryIn as esCountryIn } from '@/lib/es-article';
 import { getAirportName } from '@/lib/airport-names';
 import type { FlightRow } from '@/lib/flights';
 import { MoreInfo, OverviewMetrics, AboutCard, Faq } from '@/components/AirportExtras';
@@ -12,6 +13,7 @@ import { getWikiRoutes } from '@/lib/wiki-routes';
 import { serviceLevel, serviceMeasuredOn, worldServiceCounts } from '@/lib/warm';
 import { GENERIC_LOCALES } from '@/lib/generic-word';
 import { localizedMeasuredOn } from '@/lib/measured-date';
+import { joinList, listSeparator } from '@/lib/list-separator';
 import { deName as withDe } from '@/lib/fr-elision';
 import { EventBanner } from '@/components/EventBanner';
 import { RecentlyViewed } from '@/components/RecentlyViewed';
@@ -55,7 +57,7 @@ function gmtOffset(tz?: string | null): string {
 }
 
 function Chevron() {
-  return <svg width="6" height="11" viewBox="0 0 6 11" fill="none" style={{ flexShrink: 0 }}><path d="M1 1L5 5.5L1 10" stroke="#3A3A3C" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" /></svg>;
+  return <svg data-flip width="6" height="11" viewBox="0 0 6 11" fill="none" style={{ flexShrink: 0 }}><path d="M1 1L5 5.5L1 10" stroke="#3A3A3C" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" /></svg>;
 }
 
 export async function AirportBottom({ airport, locale, about, displayName, flights = [], noService = false, nearestServed = null, direction = 'departures', schedule = false }: {
@@ -167,7 +169,7 @@ export async function AirportBottom({ airport, locale, about, displayName, fligh
   // Locale-aware list joining; the try covers locales Node's ICU build might not know.
   const listFmt = (items: string[]) => {
     try { return new Intl.ListFormat(locale, { style: 'long', type: 'conjunction' }).format(items); }
-    catch { return items.join(', '); }
+    catch { return joinList(items, locale); }
   };
 
   const faq: { q: string; a: string }[] = [
@@ -212,7 +214,12 @@ export async function AirportBottom({ airport, locale, about, displayName, fligh
       // Russian; "по понедельникам, вторникам" is. Same for "montags", "los lunes",
       // "أيام الاثنين". The table keeps Intl's short forms, where no preposition governs them.
       const recurring = Array.from({ length: 7 }, (_, i) => tUi(`sched_wd${i}`));
-      const ex = listFmt(named.map(x => tUi('sched_faq_ex', { city: x.city, days: listFmt(maskToDays(x.mask, recurring)) })));
+      // Приставка «каждую неделю» выносится за перечисление, а не повторяется на каждом дне.
+      // В японском и китайском она стоит отдельным словом, и «毎週月曜日、毎週火曜日、毎週水曜日»
+      // читается как заикание; в остальных локалях повторяющаяся форма живёт в самом названии
+      // дня («montags», «по понедельникам»), и приставка там пустая.
+      const everyWeek = (days: string) => tUi('sched_wd_every', { days });
+      const ex = listFmt(named.map(x => tUi('sched_faq_ex', { city: x.city, days: everyWeek(listFmt(maskToDays(x.mask, recurring))) })));
       // The marked-up answer carries the snapshot date too. The visible footnote had it, the
       // JSON-LD did not — and the JSON-LD is the copy an answer engine quotes, where a
       // timeless-sounding claim about a timetable is exactly the wrong thing to hand over.
@@ -220,7 +227,7 @@ export async function AirportBottom({ airport, locale, about, displayName, fligh
         ? new Intl.DateTimeFormat(locale, { year: 'numeric', month: 'long', day: 'numeric' })
             .format(new Date(`${sched.asOf}T00:00:00Z`)).replace(/\s*г\.?$/, '')
         : '';
-      return [{ q: tUi('sched_faq_q', { a: name, deA: deName }), a: tUi('sched_faq_a', { m: asOfLabel, a: name, d: sched.dailyCount, i: sched.irregularCount, ex }) }];
+      return [{ q: tUi('sched_faq_q', { a: name, deA: deName }), a: tUi('sched_faq_a', { m: asOfLabel, a: name, deA: deName, d: sched.dailyCount, i: sched.irregularCount, ex }) }];
     })()),
     ...((() => {
       if (inbound || noService || airport.closed) return [];
@@ -368,15 +375,15 @@ export async function AirportBottom({ airport, locale, about, displayName, fligh
               <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: 15 }}>
                 <thead>
                   <tr style={{ color: '#8A8A8A', fontSize: 12, textTransform: 'uppercase', letterSpacing: '0.06em' }}>
-                    <th style={{ textAlign: 'start', padding: '12px 8px 10px 0', fontWeight: 600 }}>{tUi('sched_col_dest')}</th>
-                    <th style={{ textAlign: 'start', padding: '12px 8px 10px 0', fontWeight: 600 }}>{tUi('sched_col_days')}</th>
+                    <th style={{ textAlign: 'start', paddingBlock: '12px 10px', paddingInlineEnd: 8, paddingInlineStart: 0, fontWeight: 600 }}>{tUi('sched_col_dest')}</th>
+                    <th style={{ textAlign: 'start', paddingBlock: '12px 10px', paddingInlineEnd: 8, paddingInlineStart: 0, fontWeight: 600 }}>{tUi('sched_col_days')}</th>
                     <th style={{ textAlign: 'end', padding: '12px 0 10px 8px', fontWeight: 600, whiteSpace: 'nowrap' }}>{tUi('sched_col_time')}</th>
                   </tr>
                 </thead>
                 <tbody>
                   {sched.rows.map(r => (
                     <tr key={r.iata} style={{ borderTop: '1px solid #1A1A1A' }}>
-                      <td style={{ padding: '11px 8px 11px 0' }}>
+                      <td style={{ paddingBlock: 11, paddingInlineEnd: 8, paddingInlineStart: 0 }}>
                         {/* Links to an airport page that already exists and is already
                             indexed — this section adds no URLs of its own. */}
                         <Link href={`/${locale}/airport/${r.iata}`} style={{ color: '#E4E4E4', textDecoration: 'none', display: 'inline-block', minHeight: 24 }}>
@@ -386,7 +393,7 @@ export async function AirportBottom({ airport, locale, about, displayName, fligh
                           <span style={{ display: 'block', color: '#6A6A6A', fontSize: 12, marginTop: 2 }}>{r.airlines.join(' · ')}</span>
                         )}
                       </td>
-                      <td style={{ padding: '11px 8px 11px 0', color: '#B4B4B4' }}>{maskToDays(r.mask, wdShort).join(', ')}</td>
+                      <td style={{ paddingBlock: 11, paddingInlineEnd: 8, paddingInlineStart: 0, color: '#B4B4B4' }}>{joinList(maskToDays(r.mask, wdShort), locale)}</td>
                       <td style={{ padding: '11px 0 11px 8px', textAlign: 'end', color: '#B4B4B4', whiteSpace: 'nowrap', fontVariantNumeric: 'tabular-nums' }}>
                         {r.times.length === 1 ? r.times[0] : r.times.length === 2 ? r.times.join(' / ') : `${r.times[0]} +${r.times.length - 1}`}
                       </td>
@@ -428,14 +435,14 @@ export async function AirportBottom({ airport, locale, about, displayName, fligh
                   <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: 15 }}>
                     <thead>
                       <tr style={{ color: '#8A8A8A', fontSize: 12, textTransform: 'uppercase', letterSpacing: '0.06em' }}>
-                        <th style={{ textAlign: 'start', padding: '12px 8px 10px 0', fontWeight: 600 }}>{tUi('guide_col_dest')}</th>
+                        <th style={{ textAlign: 'start', paddingBlock: '12px 10px', paddingInlineEnd: 8, paddingInlineStart: 0, fontWeight: 600 }}>{tUi('guide_col_dest')}</th>
                         <th style={{ textAlign: 'end', padding: '12px 0 10px 8px', fontWeight: 600, whiteSpace: 'nowrap' }}>{tUi('guide_col_time')}</th>
                       </tr>
                     </thead>
                     <tbody>
                       {ext.guide.transfers.map((r) => (
                         <tr key={r.dest} style={{ borderTop: '1px solid #1A1A1A' }}>
-                          <td style={{ padding: '11px 8px 11px 0', color: '#E4E4E4' }}>{r.dest}</td>
+                          <td style={{ paddingBlock: 11, paddingInlineEnd: 8, paddingInlineStart: 0, color: '#E4E4E4' }}>{r.dest}</td>
                           <td style={{ padding: '11px 0 11px 8px', textAlign: 'end', color: '#B4B4B4', whiteSpace: 'nowrap', fontVariantNumeric: 'tabular-nums' }}>{r.km} {tUi('guide_km')} · {r.min} {tUi('guide_min')}</td>
                         </tr>
                       ))}
@@ -451,8 +458,8 @@ export async function AirportBottom({ airport, locale, about, displayName, fligh
                   <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: 15 }}>
                     <thead>
                       <tr style={{ color: '#8A8A8A', fontSize: 12, textTransform: 'uppercase', letterSpacing: '0.06em' }}>
-                        <th style={{ textAlign: 'start', padding: '12px 8px 10px 0', fontWeight: 600 }}>{tUi('guide_col_line')}</th>
-                        <th style={{ textAlign: 'start', padding: '12px 8px 10px 0', fontWeight: 600 }}>{tUi('guide_col_dest')}</th>
+                        <th style={{ textAlign: 'start', paddingBlock: '12px 10px', paddingInlineEnd: 8, paddingInlineStart: 0, fontWeight: 600 }}>{tUi('guide_col_line')}</th>
+                        <th style={{ textAlign: 'start', paddingBlock: '12px 10px', paddingInlineEnd: 8, paddingInlineStart: 0, fontWeight: 600 }}>{tUi('guide_col_dest')}</th>
                         <th style={{ textAlign: 'end', padding: '12px 0 10px 8px', fontWeight: 600, whiteSpace: 'nowrap' }}>{tUi('guide_col_fare')}</th>
                       </tr>
                     </thead>
@@ -463,14 +470,14 @@ export async function AirportBottom({ airport, locale, about, displayName, fligh
                               full signage ("EMT Palma A1 Aeroport–Ciutat") ate the whole
                               width on a phone and pushed the destination — the reason anyone
                               reads this table — into a four-line wrap. */}
-                          <td style={{ padding: '11px 8px 11px 0', whiteSpace: 'nowrap' }}>
+                          <td style={{ paddingBlock: 11, paddingInlineEnd: 8, paddingInlineStart: 0, whiteSpace: 'nowrap' }}>
                             <span style={{ color: '#E4E4E4', fontWeight: 700 }}>{r.line}</span>
                             {r.op && <span style={{ display: 'block', color: '#6A6A6A', fontSize: 12, marginTop: 2 }}>{r.op}</span>}
                           </td>
                           {/* Three stops is a direction; five is a timetable. The long tail
                               wrapped to five lines on a phone and pushed the fare column off
                               the edge. */}
-                          <td style={{ padding: '11px 8px 11px 0', color: '#B4B4B4' }}>{
+                          <td style={{ paddingBlock: 11, paddingInlineEnd: 8, paddingInlineStart: 0, color: '#B4B4B4' }}>{
                             (() => { const p = r.dest.split(' / '); return p.length > 3 ? `${p.slice(0, 3).join(' / ')} …` : r.dest; })()
                           }</td>
                           {/* An em dash where the two harvest passes disagreed on the price.
@@ -545,7 +552,7 @@ export async function AirportBottom({ airport, locale, about, displayName, fligh
             <div style={{ background: '#0B0B0B', border: '1px solid #1A1A1A', borderRadius: 20, padding: '20px 22px' }}>
               <div style={{ fontSize: 30, fontWeight: 800, letterSpacing: '-0.03em', color: '#FFFFFF', lineHeight: 1 }}>{airport.iata}{GENERIC_LOCALES.has(locale) ? '' : ` ${t('airport_word')}`}</div>
               <div style={{ fontSize: 16, color: '#B4B4B4', marginTop: 8 }}>{name}</div>
-              <div style={{ fontSize: 14, color: SUB, marginTop: 4 }}>{city}, {country}{offset ? ` · ${offset}` : ''}</div>
+              <div style={{ fontSize: 14, color: SUB, marginTop: 4 }}>{city}{listSeparator(locale)}{country}{offset ? ` · ${offset}` : ''}</div>
             </div>
             <OverviewMetrics iata={airport.iata} depLabel={t('ov_dep')} arrLabel={t('ov_arr')} />
             {/* Real anchors to the two subpages. The board's Departures/Arrivals toggle is a
@@ -628,7 +635,7 @@ export async function AirportBottom({ airport, locale, about, displayName, fligh
           {/* 7. POPULAR AIRPORTS IN COUNTRY */}
           {countryAirports.length > 0 && countryInfo && (
             <section className="cv-auto" style={sec}>
-              <H2 href={`/${locale}/airports/${countryInfo.slug}`} viewAll={t('view_all')}>{t('country_air_title', { country })}</H2>
+              <H2 href={`/${locale}/airports/${countryInfo.slug}`} viewAll={t('view_all')}>{t('country_air_title', { country, countryIn: esCountryIn(country, locale) })}</H2>
               <div style={{ display: 'flex', gap: 10, overflowX: 'auto', paddingBottom: 4, scrollbarWidth: 'none' }}>
                 {countryAirports.map(a => (
                   <Link key={a.iata} href={`/${locale}/airport/${a.iata}`} style={{ flexShrink: 0, textDecoration: 'none', color: 'inherit', background: '#0B0B0B', border: '1px solid #1A1A1A', borderRadius: 16, padding: '12px 16px', minWidth: 96 }}>

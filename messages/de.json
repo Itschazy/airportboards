@@ -11,7 +11,9 @@
     "nearest": "Nächste Flughäfen",
     "clear": "Löschen",
     "language": "Sprache",
-    "close": "Schließen"
+    "close": "Schließen",
+    "aria_breadcrumb": "Brotkrümelnavigation",
+    "aria_footer": "Fußzeile"
   },
   "board": {
     "flight": "Flug",
@@ -215,7 +217,7 @@
     "arrives_in": "Ankunft in",
     "final_call": "Letzter Aufruf",
     "go_to_gate": "Zum Gate gehen",
-    "delayed_by": "Verspätung {m}m",
+    "delayed_by": "Verspätung {d}",
     "was": "War {time}",
     "scheduled_at": "Geplant {time}",
     "new_departure": "Neuer Abflug {time}",
@@ -293,7 +295,8 @@
     "sched_wd4": "freitags",
     "sched_wd5": "samstags",
     "sched_wd6": "sonntags",
-    "sched_note2": "Flugplan der Fluggesellschaft mit Stand {m} für die aktuelle Flugplansaison. Einzelne Charter- und Saisonflüge können fehlen oder unvollständig sein."
+    "sched_note2": "Flugplan der Fluggesellschaft mit Stand {m} für die aktuelle Flugplansaison. Einzelne Charter- und Saisonflüge können fehlen oder unvollständig sein.",
+    "sched_wd_every": "{days}"
   },
   "notfound": {
     "title": "Seite nicht gefunden",

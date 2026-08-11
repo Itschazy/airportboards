@@ -98,6 +98,14 @@ input::-webkit-search-cancel-button { display: none; }
           mask-image: linear-gradient(to right, #000 calc(100% - 30px), transparent);
   scrollbar-width: none;
 }
+/* Арабская страница листает пилюли в другую сторону, а маска остаётся физической: у
+   `linear-gradient` нет логического аналога `to inline-end`, поэтому направление
+   переопределяется здесь. Без этого затухание гасило НАЧАЛО строки — то есть выбранную
+   пилюлю, стоящую в RTL справа, — а обрезанный край слева оставался без всякого намёка. */
+[dir='rtl'] .pillrow {
+  -webkit-mask-image: linear-gradient(to left, #000 calc(100% - 30px), transparent);
+          mask-image: linear-gradient(to left, #000 calc(100% - 30px), transparent);
+}
 .pillrow::-webkit-scrollbar { display: none; }
 
 /* Visible keyboard focus (WCAG 2.4.7). :focus-visible so mouse users see nothing. */
@@ -147,3 +155,11 @@ input::-webkit-search-cancel-button { display: none; }
  */
 [lang='ar'] *,
 [lang='hi'] * { letter-spacing: normal !important; }
+
+/* Значок «дальше» указывает в сторону чтения, а не всегда вправо.
+ *
+ * На арабской странице одиннадцать шевронов и стрелок смотрели вправо — то есть НАЗАД, — и
+ * ссылка «перейти» визуально вела к началу строки. Зеркалятся только помеченные `data-flip`:
+ * шеврон аккордеона смотрит вниз и зеркалить его не нужно, значок поиска и колокольчик — тем
+ * более. Признак ставится на сам <svg>, поэтому в разметке видно, какая иконка направленная. */
+[dir='rtl'] svg[data-flip] { transform: scaleX(-1); }

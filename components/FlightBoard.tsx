@@ -83,6 +83,20 @@ const haptic = (ms = 6) => { try { (navigator as any).vibrate?.(ms); } catch {} 
 
 // Age of the DATA, not of the request. Tail airports are refreshed daily, so this has to
 // degrade past minutes gracefully — "1440 min ago" is technically true and useless.
+/**
+ * Длительность словами локали: «2 ч 45 м», «2h 45m», «2小时 45分钟».
+ *
+ * Задержка печаталась сырыми минутами — «Delayed by 165m», «延误 165 分钟» — потому что единица
+ * была вшита в саму строку каталога, а часов в ней не было вовсе. Полтора часа задержки
+ * читаются как «90m», два с половиной — как «150m»: человек считает в уме то, что должен
+ * сообщать интерфейс. Форматировщик уже существовал внутри карточки рейса, но строка табло до
+ * него не дотягивалась — здесь он поднят на уровень модуля, чтобы им пользовались оба места.
+ */
+function fmtDur(mins: number, t: T): string {
+  const hrs = Math.floor(mins / 60), mm = mins % 60;
+  return hrs > 0 ? `${hrs} ${t('dur_h')} ${mm} ${t('dur_m')}` : `${mm} ${t('dur_m')}`;
+}
+
 function relTime(d: Date | null, t: T): string {
   if (!d) return '';
   const s = Math.floor((Date.now() - d.getTime()) / 1000);
@@ -123,17 +137,17 @@ function calcDeparture(
       let delay = (h * 60 + m) - (sh * 60 + sm);
       if (delay < -720) delay += 1440;   // delayed across midnight (e.g. 23:50 → 00:20)
       const delayM = flight.delay ?? delay;
-      return { label: t('delayed_by', { m: delayM }), value: flight.actual, sub: t('was', { time: flight.scheduled }), accent: C.orange };
+      return { label: t('delayed_by', { d: fmtDur(delayM, t) }), value: flight.actual, sub: t('was', { time: flight.scheduled }), accent: C.orange };
     }
     if (diff <= 0) {
-      if (flight.status === 'boarding') return { label: t('st_boarding'), value: t('now'), sub: flight.gate ? `${t('gate')} ${flight.gate}` : '', accent: C.blue };
+      if (flight.status === 'boarding') return { label: t('st_boarding'), value: t('now'), sub: flight.gate ? `${t('gate')}\u2068 ${flight.gate}\u2069` : '', accent: C.blue };
       if (flight.status === 'finalcall') return { label: t('final_call'), value: t('now'), sub: t('go_to_gate'), accent: C.red };
       return { label: mode === 'departures' ? t('departing') : t('landing'), value: t('now'), sub: '', accent: C.green };
     }
     const hrs = Math.floor(diff / 60);
     const mins = diff % 60;
     const countdown = hrs > 0 ? `${hrs}h ${mins}m` : `${mins}m`;
-    if (flight.status === 'boarding') return { label: t('st_boarding'), value: countdown, sub: flight.gate ? `${t('gate')} ${flight.gate}` : '', accent: C.blue };
+    if (flight.status === 'boarding') return { label: t('st_boarding'), value: countdown, sub: flight.gate ? `${t('gate')}\u2068 ${flight.gate}\u2069` : '', accent: C.blue };
     if (flight.status === 'finalcall') return { label: t('final_call'), value: countdown, sub: t('go_to_gate'), accent: C.red };
     return { label: mode === 'departures' ? t('departs_in') : t('arrives_in'), value: countdown, sub: t('scheduled_at', { time: flight.scheduled }) };
   } catch {
@@ -162,7 +176,7 @@ function IconClose({ color = '#8A8A8A' }) {
 
 function IconChevron() {
   return (
-    <svg width="6" height="11" viewBox="0 0 6 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg data-flip width="6" height="11" viewBox="0 0 6 11" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path d="M1 1L5 5.5L1 10" stroke="#3A3A3C" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
     </svg>
   );
@@ -184,6 +198,8 @@ function BottomSheet({ flight, mode, onClose, tz, locale, updLabel, originIata, 
   onTogglePin: () => void;
 }) {
   const t = useTranslations('ui');
+  // «→» не разворачивается алгоритмом двунаправленного письма (Bidi_Mirrored=No)
+  const arrow = locale === 'ar' ? '←' : '→';
   const tNav = useTranslations('nav');
   const vis = !!flight;
 
@@ -237,10 +253,6 @@ function BottomSheet({ flight, mode, onClose, tz, locale, updLabel, originIata, 
     let diff = (h * 60 + m) - (now.h * 60 + now.m);
     if (diff < -300) diff += 1440;
     return diff;
-  };
-  const fmtDur = (mins: number) => {
-    const hrs = Math.floor(mins / 60), mm = mins % 60;
-    return hrs > 0 ? `${hrs} ${t('dur_h')} ${mm} ${t('dur_m')}` : `${mm} ${t('dur_m')}`;
   };
 
   const L = { fontSize: 12, color: C.secondary, textTransform: 'uppercase' as const, letterSpacing: '0.12em' };
@@ -336,9 +348,9 @@ function BottomSheet({ flight, mode, onClose, tz, locale, updLabel, originIata, 
       hero = { label: t('h_final_label'), main: t('h_final_main'), sub: t('gate_closes', { m: Math.max(1, mins ?? 0) }), bottom: dispTime, icon: 'bell', medium: true };
     } else if (status === 'delayed') {
       // The struck "was HH:MM" line only makes sense when the displayed time differs from it.
-      hero = { label: t('h_delay_label', { dur: fmtDur(flight.delay && flight.delay > 0 ? flight.delay : Math.max(0, mins ?? 0)) }), main: dispTime, sub: flight.actual && flight.actual !== flight.scheduled ? t('was', { time: flight.scheduled }) : undefined, subStrike: true, icon: 'clock' };
+      hero = { label: t('h_delay_label', { dur: fmtDur(flight.delay && flight.delay > 0 ? flight.delay : Math.max(0, mins ?? 0), t) }), main: dispTime, sub: flight.actual && flight.actual !== flight.scheduled ? t('was', { time: flight.scheduled }) : undefined, subStrike: true, icon: 'clock' };
     } else {
-      hero = { label: isDep ? t('departs_in') : t('arrives_in'), main: mins != null && mins > 0 ? fmtDur(mins) : t('now'), sub: t('on_schedule', { time: flight.scheduled }), icon: 'clock' };
+      hero = { label: isDep ? t('departs_in') : t('arrives_in'), main: mins != null && mins > 0 ? fmtDur(mins, t) : t('now'), sub: t('on_schedule', { time: flight.scheduled }), icon: 'clock' };
     }
 
     // ── Detail grid: only fields with data, never the status (already in hero) ──
@@ -420,7 +432,7 @@ function BottomSheet({ flight, mode, onClose, tz, locale, updLabel, originIata, 
                 <div style={{ fontSize: 20, fontWeight: 800, letterSpacing: '-0.02em', color: C.text, lineHeight: 1 }}>{routeFrom.code}</div>
                 <div style={{ fontSize: 11.5, color: C.secondary, marginTop: 4, overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>{routeFrom.name}</div>
               </div>
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true" className="route-arrow" style={{ flexShrink: 0, opacity: 0.45 }}><path d="M3 12h16m0 0-6-6m6 6-6 6" stroke="#FFFFFF" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" /></svg>
+              <svg data-flip width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true" className="route-arrow" style={{ flexShrink: 0, opacity: 0.45 }}><path d="M3 12h16m0 0-6-6m6 6-6 6" stroke="#FFFFFF" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" /></svg>
               <div style={{ flex: 1, minWidth: 0, textAlign: 'end' }}>
                 <div style={{ fontSize: 20, fontWeight: 800, letterSpacing: '-0.02em', color: C.text, lineHeight: 1 }}>{routeTo.code}</div>
                 <div style={{ fontSize: 11.5, color: C.secondary, marginTop: 4, overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>{routeTo.name}</div>
@@ -434,12 +446,12 @@ function BottomSheet({ flight, mode, onClose, tz, locale, updLabel, originIata, 
             <Link
               href={`/${locale}/route/${routeFrom.code.toUpperCase()}-${routeTo.code.toUpperCase()}`}
               className="press"
-              aria-label={`${routeFrom.code} → ${routeTo.code}`}
+              aria-label={`${routeFrom.code} ${arrow} ${routeTo.code}`}
               style={{ ...box, textDecoration: 'none', color: 'inherit' }}
             >
               {strip}
               {/* Same chevron the board rows use, so "this opens something" reads the same way twice. */}
-              <svg width="8" height="14" viewBox="0 0 8 14" fill="none" aria-hidden="true" style={{ flexShrink: 0, marginInlineStart: 2 }}>
+              <svg data-flip width="8" height="14" viewBox="0 0 8 14" fill="none" aria-hidden="true" style={{ flexShrink: 0, marginInlineStart: 2 }}>
                 <path d="M1 1L7 7L1 13" stroke="rgba(255,255,255,0.28)" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" />
               </svg>
             </Link>
@@ -1028,7 +1040,7 @@ export function FlightBoard({ airport, locale, defaultMode = 'departures', displ
               // 'm' was a bare literal here, so Japanese, Korean, Chinese, Arabic, Hindi and
               // Russian boards all rendered "遅延 125m" / "Задержан 125m". The localised
               // ui.delayed_by exists in every catalogue and is already used elsewhere.
-              return delayM > 0 ? t('delayed_by', { m: delayM }) : t('st_delayed');
+              return delayM > 0 ? t('delayed_by', { d: fmtDur(delayM, t) }) : t('st_delayed');
             }
             return t(`st_${f.status}`);
           })();
@@ -1098,7 +1110,7 @@ export function FlightBoard({ airport, locale, defaultMode = 'departures', displ
                     hyphens: 'manual' as const, WebkitHyphens: 'manual' as const,
                   }}>
                     <span style={{ fontSize: cityFs, fontWeight: 700, color: C.text, letterSpacing: '-0.01em' }}>{city}</span>
-                    {code && <span style={{ fontSize: 12, fontWeight: 500, color: C.secondary, marginInlineStart: 6, whiteSpace: 'nowrap' }}>({code})</span>}
+                    {code && <bdi style={{ fontSize: 12, fontWeight: 500, color: C.secondary, marginInlineStart: 6, whiteSpace: 'nowrap' }}>({code})</bdi>}
                   </div>
                 </div>
 
@@ -1112,7 +1124,7 @@ export function FlightBoard({ airport, locale, defaultMode = 'departures', displ
                     {f.gate && (
                       <div style={{ lineHeight: 1.1, whiteSpace: 'nowrap', marginBottom: 5 }}>
                         <span style={{ fontSize: 12, color: C.secondary }}>{t('gate')} </span>
-                        <span style={{ fontSize: 18, fontWeight: 700, color: C.text, letterSpacing: '-0.01em' }}>{f.gate}</span>
+                        <bdi style={{ fontSize: 18, fontWeight: 700, color: C.text, letterSpacing: '-0.01em' }}>{f.gate}</bdi>
                       </div>
                     )}
                     <div style={{
@@ -1123,7 +1135,7 @@ export function FlightBoard({ airport, locale, defaultMode = 'departures', displ
                       {label}
                     </div>
                   </div>
-                  <svg width="8" height="14" viewBox="0 0 8 14" fill="none" aria-hidden="true" className="route-arrow" style={{ flexShrink: 0 }}>
+                  <svg data-flip width="8" height="14" viewBox="0 0 8 14" fill="none" aria-hidden="true" className="route-arrow" style={{ flexShrink: 0 }}>
                     <path d="M1 1L7 7L1 13" stroke="rgba(255,255,255,0.22)" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" />
                   </svg>
                 </div>

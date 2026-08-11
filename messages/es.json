@@ -11,7 +11,9 @@
     "nearest": "Aeropuertos cercanos",
     "clear": "Borrar",
     "language": "Idioma",
-    "close": "Cerrar"
+    "close": "Cerrar",
+    "aria_breadcrumb": "Migas de pan",
+    "aria_footer": "Pie de página"
   },
   "board": {
     "flight": "Vuelo",
@@ -36,7 +38,7 @@
   },
   "meta": {
     "main_title": "Vuelos {airport}{showCity, select, yes {, {city}} other {}} ({iata}) | llegadas y salidas en vivo",
-    "main_description": "Horarios de salidas y llegadas, retrasos, puertas y terminales en {airport} ({iata}); datos del tablero antes de ir al aeropuerto.",
+    "main_description": "Horarios de salidas y llegadas, retrasos, puertas y terminales en {airport} ({iata}); datos del panel antes de ir al aeropuerto.",
     "arrivals_title": "Llegadas {airport}{showCity, select, yes {, {city}} other {}} ({iata}) | vuelos en vivo",
     "departures_title": "Salidas {airport}{showCity, select, yes {, {city}} other {}} ({iata}) | vuelos en vivo",
     "arrivals_description": "Panel de llegadas del aeropuerto {airport} ({iata}) hoy en tiempo real: horarios, retrasos y cancelaciones. Consulta también salidas.",
@@ -73,7 +75,7 @@
     "departures_short": "salidas",
     "arrivals_short": "llegadas",
     "airports_count": "{count, plural, one {# aeropuerto} other {# aeropuertos}}",
-    "country_title": "Aeropuertos en {country}",
+    "country_title": "Aeropuertos en {countryIn}",
     "country_desc": "Llegadas y salidas en tiempo real {count, plural, one {del aeropuerto} other {de los # aeropuertos}} de {country}. Estado de los vuelos, con la antigüedad de los datos indicada en cada panel.",
     "az_title": "Aeropuertos que empiezan con {letter}",
     "az_desc": "Todos los aeropuertos que empiezan por la letra {letter}: llegadas y salidas en vivo, con la antigüedad de los datos mostrada en cada panel.",
@@ -89,7 +91,7 @@
     "km_away": "{km} km de {iata}",
     "faq_title": "Preguntas frecuentes",
     "about_title": "Acerca del aeropuerto {iata}",
-    "country_air_title": "Aeropuertos populares en {country}",
+    "country_air_title": "Aeropuertos populares en {countryIn}",
     "az_all": "Todos los aeropuertos A–Z",
     "faq_iata_q": "¿Cuál es el código IATA de {name}?",
     "faq_icao_q": "¿Cuál es el código ICAO de {name}?",
@@ -131,7 +133,7 @@
     "faq_hasflights_a": "No. Ninguna aerolínea opera vuelos regulares de pasajeros desde {name} ({iata}).",
     "faq_nearest_q": "¿Cuál es el aeropuerto más cercano a {name} con vuelos regulares?",
     "faq_nearest_a": "El aeropuerto más cercano con vuelos regulares de pasajeros es {airport} ({code}), a unos {km} km de distancia.",
-    "country_split": "De {count, plural, one {# aeropuerto} other {los # aeropuertos}} con códigos IATA en {country}, {served, plural, one {# tiene} other {# tienen}} servicio regular de pasajeros a fecha de {date}{rest, plural, =0 {.} one {; el # restante es un aeródromo sin vuelos de aerolíneas.} other {; los # restantes son aeródromos sin vuelos de aerolíneas.}}",
+    "country_split": "De {count, plural, one {# aeropuerto} other {los # aeropuertos}} con códigos IATA en {countryIn}, {served, plural, one {# tiene} other {# tienen}} servicio regular de pasajeros a fecha de {date}{rest, plural, =0 {.} one {; el # restante es un aeródromo sin vuelos de aerolíneas.} other {; los # restantes son aeródromos sin vuelos de aerolíneas.}}",
     "grid_served": "Con vuelos programados",
     "grid_unserved": "Sin servicio programado",
     "world_split": "AirportsBoard rastrea {total} aeropuertos con códigos IATA en todo el mundo. Según la medición del {date}, {served} de ellos tenían servicio regular de pasajeros; los otros {rest} son aeródromos, bases militares y pistas privadas sin vuelos de aerolíneas.",
@@ -144,7 +146,7 @@
     "airport_lead": "{name} ({iata}) es un aeropuerto que presta servicio a {city}, {country}.",
     "replaced_line": "{name} ({iata}) asumió el tráfico de {predecessors}.",
     "delays_line": "Estado del panel hace {m} min: {delayed} de {pending} próximas salidas con retraso de 15 minutos o más.",
-    "country_split_partial": "De {count, plural, one {# aeropuerto} other {los # aeropuertos}} con códigos IATA en {country}, al menos {served, plural, one {# tiene} other {# tienen}} servicio regular de pasajeros a fecha de {date}.",
+    "country_split_partial": "De {count, plural, one {# aeropuerto} other {los # aeropuertos}} con códigos IATA en {countryIn}, al menos {served, plural, one {# tiene} other {# tienen}} servicio regular de pasajeros a fecha de {date}.",
     "world_split_partial": "AirportsBoard rastrea {total} aeropuertos con códigos IATA en todo el mundo. Según la medición del {date}, al menos {served} de ellos tenían servicio regular de pasajeros.",
     "airport_lead_same": "Aeropuerto {name} ({iata}), {country}.",
     "routes_title_in": "Rutas populares hacia {iata}",
@@ -172,7 +174,7 @@
     "faq_airlines_a": "Según el panel de salidas actual de {name} ({iata}), los vuelos programados son operados por {list}.",
     "faq_dest_q": "¿A dónde se puede volar sin escalas desde {name}?",
     "faq_dest_a": "Los destinos que figuran en el panel de salidas actual de {name} ({iata}) incluyen {list}.",
-    "country_none": "{count, plural, one {# aeropuerto} other {# aeropuertos}} con códigos IATA en {country}. No tenemos datos actuales de vuelos regulares de ninguno, así que esta página recoge códigos, ubicaciones y husos horarios en lugar de paneles en vivo.",
+    "country_none": "{count, plural, one {# aeropuerto} other {# aeropuertos}} con códigos IATA en {countryIn}. No tenemos datos actuales de vuelos regulares de ninguno, así que esta página recoge códigos, ubicaciones y husos horarios en lugar de paneles en vivo.",
     "city_none": "{count, plural, one {# aeropuerto} other {# aeropuertos}} en {city}. No tenemos datos actuales de vuelos regulares de ninguno, así que esta página recoge códigos, ubicaciones y husos horarios en lugar de paneles en vivo.",
     "m_airports_served": "aeropuertos con vuelos regulares"
   },
@@ -215,7 +217,7 @@
     "arrives_in": "Llega en",
     "final_call": "Último llamado",
     "go_to_gate": "Vaya a la puerta ahora",
-    "delayed_by": "Retrasado {m}m",
+    "delayed_by": "Retrasado {d}",
     "was": "Fue a las {time}",
     "scheduled_at": "Programado a las {time}",
     "new_departure": "Nueva salida {time}",
@@ -293,7 +295,8 @@
     "sched_wd4": "los viernes",
     "sched_wd5": "los sábados",
     "sched_wd6": "los domingos",
-    "sched_note2": "Horario de la compañía aérea vigente al {m}, para la temporada de programación actual. Los servicios chárter puntuales y de temporada pueden faltar o estar incompletos."
+    "sched_note2": "Horario de la compañía aérea vigente al {m}, para la temporada de programación actual. Los servicios chárter puntuales y de temporada pueden faltar o estar incompletos.",
+    "sched_wd_every": "{days}"
   },
   "notfound": {
     "title": "Página no encontrada",

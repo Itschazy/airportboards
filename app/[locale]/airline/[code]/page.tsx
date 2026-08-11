@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { forwardArrow } from '@/lib/i18n';
 import { withBrand } from '@/lib/title';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { notFound } from 'next/navigation';
@@ -91,7 +92,7 @@ export default async function AirlinePage({ params }: Props) {
                 <span style={{ flex: 1, minWidth: 0 }}>
                   <Link href={`/${locale}/flight/${f.flight.replace(/\s/g, '')}`} style={{ ...link, display: 'block', fontSize: 14, fontWeight: 600 }}>{f.flight}</Link>
                   <span style={{ display: 'block', fontSize: 13, color: '#8A8A8A', marginTop: 2, whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>
-                    {dep ? getCityName(dep.city, locale) : f.depIata} → {arr ? getCityName(arr.city, locale) : f.arrIata}
+                    {dep ? getCityName(dep.city, locale) : f.depIata} {forwardArrow(locale)} {arr ? getCityName(arr.city, locale) : f.arrIata}
                   </span>
                 </span>
               </li>

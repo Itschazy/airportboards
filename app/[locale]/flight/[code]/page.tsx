@@ -7,7 +7,7 @@ import { getAirport } from '@/lib/airports';
 import { getAirportName } from '@/lib/airport-names';
 import { getCityName } from '@/lib/places';
 import { getFlightByNumber } from '@/lib/flights';
-import { locales } from '@/lib/i18n';
+import { locales, forwardArrow } from '@/lib/i18n';
 
 const BASE = 'https://airportsboard.live';
 type Props = { params: Promise<{ locale: string; code: string }> };
@@ -122,7 +122,7 @@ export default async function FlightPage({ params }: Props) {
         <>
           <p style={{ fontSize: 16, color: '#C4C4C4', marginTop: 14 }}>
             <Link href={`/${locale}/airport/${dep.iata}/departures`} style={link}>{getCityName(dep.city, locale)} ({dep.iata})</Link>
-            {'  →  '}
+            {`  ${forwardArrow(locale)}  `}
             <Link href={`/${locale}/airport/${arr.iata}/arrivals`} style={link}>{getCityName(arr.city, locale)} ({arr.iata})</Link>
           </p>
 
@@ -133,7 +133,7 @@ export default async function FlightPage({ params }: Props) {
           </div>
 
           <p style={{ fontSize: 14, color: '#6A6A6A', marginTop: 28 }}>
-            {t('flight_route')}: <Link href={`/${locale}/route/${dep.iata}-${arr.iata}`} style={link}>{getCityName(dep.city, locale)} → {getCityName(arr.city, locale)}</Link>
+            {t('flight_route')}: <Link href={`/${locale}/route/${dep.iata}-${arr.iata}`} style={link}>{getCityName(dep.city, locale)} {forwardArrow(locale)} {getCityName(arr.city, locale)}</Link>
           </p>
         </>
       ) : (

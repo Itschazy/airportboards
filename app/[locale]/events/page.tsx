@@ -71,7 +71,7 @@ export default async function EventsHubPage({ params }: Props) {
               {dateFmt.format(new Date(e.meta.startDate))} · {e.meta.venueCity} · {e.meta.airports.map(a => a.iata).join(' · ')}
             </span>
           </span>
-          <svg width="8" height="14" viewBox="0 0 8 14" fill="none" aria-hidden="true" style={{ flexShrink: 0 }}>
+          <svg data-flip width="8" height="14" viewBox="0 0 8 14" fill="none" aria-hidden="true" style={{ flexShrink: 0 }}>
             <path d="M1 1L7 7L1 13" stroke="rgba(255,255,255,0.3)" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" />
           </svg>
         </div>

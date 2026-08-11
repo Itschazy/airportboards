@@ -22,7 +22,7 @@ export function PopularNow({ airports, locale, depLabel, arrLabel }: {
         return (
           <Link key={a.iata} href={`/${locale}/airport/${a.iata}`} style={{
             width: 160, minWidth: 160, height: 170, textDecoration: 'none', color: 'inherit',
-            background: '#0B0B0B', border: '1px solid #1A1A1A', borderLeft: '3px solid #34C759',
+            background: '#0B0B0B', border: '1px solid #1A1A1A', borderInlineStart: '3px solid #34C759',
             borderRadius: 20, padding: '18px 18px', display: 'flex', flexDirection: 'column',
           }}>
             <div style={{ fontSize: 44, fontWeight: 800, letterSpacing: '-0.04em', color: '#FFFFFF', lineHeight: 1 }}>{a.iata}</div>

@@ -11,7 +11,9 @@
     "nearest": "Aéroports proches",
     "clear": "Effacer",
     "language": "Langue",
-    "close": "Fermer"
+    "close": "Fermer",
+    "aria_breadcrumb": "Fil d’Ariane",
+    "aria_footer": "Pied de page"
   },
   "board": {
     "flight": "Vol",
@@ -215,7 +217,7 @@
     "arrives_in": "Arrivée dans",
     "final_call": "Dernier appel",
     "go_to_gate": "Aller à la porte maintenant",
-    "delayed_by": "Retardé de {m}m",
+    "delayed_by": "Retardé de {d}",
     "was": "Était {time}",
     "scheduled_at": "Prévu {time}",
     "new_departure": "Nouveau départ {time}",
@@ -280,8 +282,8 @@
     "sched_lead": "Les compagnies aériennes proposent des vols quotidiens vers {d} destinations au départ {deA} ; {i} autres ne sont desservies que certains jours de la semaine.",
     "sched_peak": "Le plus grand nombre de destinations est accessible le {best} ({bn}) ; le plus petit nombre, le {worst} ({wn}).",
     "sched_col_dest": "Destination",
-    "sched_col_days": "Départs",
-    "sched_col_time": "Départ",
+    "sched_col_days": "Jours de départ",
+    "sched_col_time": "Heure de départ",
     "sched_more": "{n} autres destinations sont desservies moins fréquemment.",
     "sched_faq_q": "Quels jours les vols partent-ils {deA} ?",
     "sched_faq_a": "Au {m}, d’après les horaires du transporteur, des vols quotidiens au départ {deA} desservent {d} destinations. {i} autres ne sont disponibles que certains jours — par exemple {ex}.",
@@ -293,7 +295,8 @@
     "sched_wd4": "le vendredi",
     "sched_wd5": "le samedi",
     "sched_wd6": "le dimanche",
-    "sched_note2": "Horaires des compagnies aériennes au {m}, pour la saison de programmation en cours. Certains services charters et saisonniers peuvent être absents ou incomplets."
+    "sched_note2": "Horaires des compagnies aériennes au {m}, pour la saison de programmation en cours. Certains services charters et saisonniers peuvent être absents ou incomplets.",
+    "sched_wd_every": "{days}"
   },
   "notfound": {
     "title": "Page introuvable",

@@ -156,7 +156,7 @@ export default async function EventPage({ params }: Props) {
       {notice && (
         <div style={{
           background: 'rgba(255,255,255,0.04)', border: `1px solid ${notice.color}55`,
-          borderLeft: `3px solid ${notice.color}`, borderRadius: 12, padding: '13px 16px',
+          borderInlineStart: `3px solid ${notice.color}`, borderRadius: 12, padding: '13px 16px',
           fontSize: 14, color: '#E4E4E7', lineHeight: 1.5, margin: '0 0 24px',
         }}>
           {notice.text}
@@ -182,7 +182,7 @@ export default async function EventPage({ params }: Props) {
                     <span style={{ display: 'block', fontSize: 15, fontWeight: 600, color: '#E4E4E7' }}>{name}</span>
                     <span style={{ display: 'block', fontSize: 12, color: '#8A8A8A', marginTop: 2 }}>≈{a.km} km · {m.venue}</span>
                   </span>
-                  <svg width="8" height="14" viewBox="0 0 8 14" fill="none" aria-hidden="true" style={{ flexShrink: 0 }}>
+                  <svg data-flip width="8" height="14" viewBox="0 0 8 14" fill="none" aria-hidden="true" style={{ flexShrink: 0 }}>
                     <path d="M1 1L7 7L1 13" stroke="rgba(255,255,255,0.3)" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" />
                   </svg>
                 </div>

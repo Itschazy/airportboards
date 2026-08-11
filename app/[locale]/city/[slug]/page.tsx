@@ -6,6 +6,7 @@ import Link from 'next/link';
 import { getCities, getCityBySlug, getAirportsByCity } from '@/lib/airports';
 import { hasNoService } from '@/lib/warm';
 import { getCityName, getCountryName } from '@/lib/places';
+import { Breadcrumb } from '@/components/Breadcrumb';
 import { deName as withDe } from '@/lib/fr-elision';
 import { getAirportName } from '@/lib/airport-names';
 import { locales } from '@/lib/i18n';
@@ -71,13 +72,19 @@ export default async function CityPage({ params }: Props) {
   const deCity = withDe(city, locale);
   const country = getCountryName(c.country, locale);
 
+  const crumbs = [
+    { name: tNav('home'), item: `${BASE}/${locale}` },
+    { name: t('sec_countries'), item: `${BASE}/${locale}/airports` },
+    { name: t('city_title', { city, deCity }), item: `${BASE}/${locale}/city/${c.slug}` },
+  ];
+
   const jsonLd = {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
-    itemListElement: [
-      { '@type': 'ListItem', position: 1, name: tNav('home'), item: `${BASE}/${locale}` },
-      { '@type': 'ListItem', position: 2, name: t('city_title', { city, deCity }), item: `${BASE}/${locale}/city/${c.slug}` },
-    ],
+    // Разметка строится из ТОГО ЖЕ массива, что и видимый след. Раньше она заявляла
+    // «Главная → Аэропорты: Казань», а на экране стояло «airportsboard · Аэропорты по
+    // странам» — не совпадали ни имена, ни число уровней, ни адреса.
+    itemListElement: crumbs.map((cr, i) => ({ '@type': 'ListItem', position: i + 1, name: cr.name, item: cr.item })),
   };
   const itemList = {
     '@context': 'https://schema.org',
@@ -95,11 +102,7 @@ export default async function CityPage({ params }: Props) {
     <div style={{ maxWidth: 760, margin: '0 auto', padding: '36px 18px 64px' }}>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(itemList) }} />
-      <div style={{ fontSize: 13, color: '#8A8A8A', marginBottom: 10 }}>
-        <Link href={`/${locale}`} style={{ color: '#6A6A6A', textDecoration: 'none', display: 'inline-block', minHeight: 24 }}>airportsboard</Link>
-        {' · '}
-        <Link href={`/${locale}/airports`} style={{ color: '#6A6A6A', textDecoration: 'none', display: 'inline-block', minHeight: 24 }}>{t('sec_countries')}</Link>
-      </div>
+      <Breadcrumb label={tNav('aria_breadcrumb')} trail={crumbs} />
       <h1 style={{ fontSize: 'clamp(28px, 7vw, 40px)', fontWeight: 800, letterSpacing: '-0.03em', color: '#FFFFFF', margin: '0 0 6px' }}>
         {flag(c.iso2)} {t('city_title', { city, deCity })}
       </h1>
@@ -124,7 +127,7 @@ export default async function CityPage({ params }: Props) {
                 <span style={{ display: 'block', fontSize: 15, color: '#E4E4E7', fontWeight: 600, whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>{getAirportName(a.iata, locale, a.name)}</span>
                 <span style={{ display: 'block', fontSize: 12, color: '#6A6A6A', marginTop: 2 }}>{country}</span>
               </span>
-              <svg width="8" height="14" viewBox="0 0 8 14" fill="none" style={{ flexShrink: 0 }}><path d="M1 1L7 7L1 13" stroke="#3A3A3C" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" /></svg>
+              <svg data-flip width="8" height="14" viewBox="0 0 8 14" fill="none" style={{ flexShrink: 0 }}><path d="M1 1L7 7L1 13" stroke="#3A3A3C" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" /></svg>
             </Link>
           </li>
         ))}
