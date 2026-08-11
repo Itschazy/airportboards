@@ -38,7 +38,7 @@ const NON_LATIN = { ru: /[Ѐ-ӿ]/, zh: /[一-鿿]/, ja: /[぀-ヿ一-鿿]/,
 const DUPE = /^(.+?)\s*[（(]\s*(.+?)\s*[）)]\s*$/;
 
 let repairable = 0, repaired = 0;
-const report = { dupe: [], latin: [], space: [] };
+const report = { dupe: [], latin: [], space: [], broken: [] };
 
 for (const [file, label] of Object.entries(FILES)) {
   const p = path.join('data', file);
@@ -77,6 +77,21 @@ for (const [file, label] of Object.entries(FILES)) {
         report.space.push(`${label} ${key}/${loc}: ${JSON.stringify(value)}`);
         repairable++;
         if (WRITE) { locs[loc] = value.replace(/\s{2,}/g, ' ').trim(); changed = true; repaired++; }
+        continue;
+      }
+
+      // 3a. Битая индийская вязь — РЕМОНТУ НЕ ПОДЛЕЖИТ, только удаление.
+      //
+      // Знак гласной (matra) и вирама не могут начинать слово, а пробел не может стоять между
+      // согласной и её знаком: «ुओगाडौगौ» — это Ouagadougou, потерявшая первую букву, «वाल् डो′र»
+      // — Val d'Or, разорванный посреди слога. Браузер рисует такие строки испорченными глифами.
+      // Достроить недостающую букву нельзя не угадывая, а угадывание однажды уже дало
+      // «Берлевåg» и «कोंस्तानța», поэтому такие значения удаляются и имя откатывается на
+      // английское — оно по крайней мере правдиво.
+      if ((loc === 'hi' || loc === 'bn' || loc === 'mr') && /^[\u093E-\u094D\u0962\u0963]|\u094D\s|\s[\u093E-\u094D]/.test(value)) {
+        report.broken.push(`${label} ${key}/${loc}: ${value}`);
+        repairable++;
+        if (WRITE) { delete locs[loc]; changed = true; repaired++; }
         continue;
       }
 
@@ -148,6 +163,7 @@ const show = (list, title, limit = 8) => {
 show(report.dupe, WRITE ? 'исправлено — имя продублировано в скобках' : 'ИМЯ ПРОДУБЛИРОВАНО В СКОБКАХ');
 show(report.space, WRITE ? 'исправлено — лишние пробелы' : 'ЛИШНИЕ ПРОБЕЛЫ');
 // Non-breaking spaces are reported for awareness only; see the note above.
+show(report.broken, WRITE ? 'удалено — битая вязь' : 'БИТАЯ ИНДИЙСКАЯ ВЯЗЬ (знак гласной в начале слова)');
 show(report.latin, 'латиница в нелатинской локали (только отчёт, решает человек)', 10);
 
 if (WRITE) {

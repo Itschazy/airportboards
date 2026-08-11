@@ -10,6 +10,26 @@ import { locales, type Locale } from '@/lib/i18n';
 const BASE = 'https://airportsboard.live';
 type Props = { params: Promise<{ locale: string }> };
 
+/**
+ * Обрезать описание по границе предложения, а не по счётчику символов.
+ *
+ * Было `.slice(0, 155)`, и описание юридических страниц заканчивалось посреди слова: «…й при
+ * использовании вами», «…его использование. Сайт у». В выдаче это первое, что видит человек,
+ * и оборванное слово читается как поломка страницы.
+ *
+ * Сначала ищется конец предложения, и только если его в пределах лимита нет — конец слова.
+ * Многоточие ставится лишь во втором случае: предложение, законченное точкой, в нём не
+ * нуждается.
+ */
+function clampToSentence(text: string, limit: number): string {
+  if (text.length <= limit) return text;
+  const head = text.slice(0, limit);
+  const sentence = Math.max(head.lastIndexOf('. '), head.lastIndexOf('! '), head.lastIndexOf('? '));
+  if (sentence >= limit * 0.5) return head.slice(0, sentence + 1);
+  const word = head.lastIndexOf(' ');
+  return `${head.slice(0, word > 0 ? word : limit).replace(/[.,;:]$/, '')}…`;
+}
+
 export function legalMetadata(kind: LegalKind) {
   return async function generateMetadata({ params }: Props): Promise<Metadata> {
     const { locale } = await params;
@@ -21,7 +41,7 @@ export function legalMetadata(kind: LegalKind) {
     const languages: Record<string, string> = {};
     for (const loc of LEGAL_LOCALES) languages[loc] = `${BASE}/${loc}/${kind}`;
     languages['x-default'] = `${BASE}/en/${kind}`;
-    const description = (doc.intro[0] ?? '').replace(/\s+/g, ' ').trim().slice(0, 155);
+    const description = clampToSentence((doc.intro[0] ?? '').replace(/\s+/g, ' ').trim(), 155);
     return {
       title: `${doc.title} — AirportsBoard`,
       description,

@@ -40,8 +40,27 @@ function valuesFor(msg, num) {
   return out;
 }
 
-const KEYS = ['airports_count', 'country_desc', 'country_none', 'city_desc',
-  'country_split', 'country_split_partial'];
+/**
+ * Все ключи, где хоть в одной локали есть ICU-плюрал, а не список из шести штук.
+ *
+ * Фиксированный список отставал от каталога: `ui.sched_more` плюрала не имел вовсе и печатал
+ * «Another 1 destinations operate less often» в восьми языках, а проверка этого не видела,
+ * потому что ключа в её списке не было. Теперь набор выводится из самих каталогов, и новый
+ * ключ с плюралом попадает под проверку в тот же момент, когда появляется.
+ */
+const KEYS = (() => {
+  const found = new Set();
+  for (const file of fs.readdirSync('messages').filter((f) => f.endsWith('.json'))) {
+    const data = JSON.parse(fs.readFileSync(`messages/${file}`, 'utf8'));
+    for (const [ns, group] of Object.entries(data)) {
+      if (!group || typeof group !== 'object') continue;
+      for (const [k, v] of Object.entries(group)) {
+        if (typeof v === 'string' && /\{\s*\w+\s*,\s*plural/.test(v)) found.add(`${ns}.${k}`);
+      }
+    }
+  }
+  return [...found].sort();
+})();
 const NUMBERS = [0, 1, 2, 3, 5, 11, 21, 100, 1234];
 /** Locales whose nouns do not inflect after a numeral — no plural syntax expected. */
 const NO_PLURAL = new Set(['zh', 'ja', 'ko', 'tr']);
@@ -51,10 +70,11 @@ const fail = (m) => { console.error(`  ✗ ${m}`); failures++; };
 
 for (const f of fs.readdirSync('messages').filter(f => f.endsWith('.json'))) {
   const locale = f.replace('.json', '');
-  const home = JSON.parse(fs.readFileSync(`messages/${f}`, 'utf8')).home ?? {};
+  const data = JSON.parse(fs.readFileSync(`messages/${f}`, 'utf8'));
 
   for (const key of KEYS) {
-    const msg = home[key];
+    const [ns, name] = key.split('.');
+    const msg = data[ns]?.[name];
     if (typeof msg !== 'string') { fail(`${locale}/${key}: ключа нет`); continue; }
 
     const rendered = new Set();

@@ -1,4 +1,5 @@
 import privacy from '@/data/legal/privacy.json';
+import { worldServiceCounts } from '@/lib/warm';
 import terms from '@/data/legal/terms.json';
 import about from '@/data/legal/about.json';
 import contact from '@/data/legal/contact.json';
@@ -31,7 +32,29 @@ export const LEGAL_UPDATED_ISO = '2026-07-19';
 
 export function getLegalDoc(kind: LegalKind, locale: Locale): LegalDoc {
   const byLocale = DOCS[kind];
-  return (byLocale[locale] ?? byLocale.en) as LegalDoc;
+  const doc = (byLocale[locale] ?? byLocale.en) as LegalDoc;
+  return substituteCounts(doc);
+}
+
+/**
+ * Число обслуживаемых аэропортов подставляется, а не пишется в тексте.
+ *
+ * В about.json стояло «About 2,280 have scheduled passenger service», пока главная той же
+ * локали печатала 2 801 из живого замера — сайт спорил сам с собой на соседних страницах,
+ * и это ровно тот тип расхождения, из-за которого страницу отклоняет проверяющий. Замер
+ * меняется при каждом прогреве, поэтому в прозе стоит {served}.
+ */
+function substituteCounts<T>(doc: T): T {
+  const served = worldServiceCounts().withService.toLocaleString('en-US');
+  const walk = (v: unknown): unknown => {
+    if (typeof v === 'string') return v.replace(/\{served\}/g, served);
+    if (Array.isArray(v)) return v.map(walk);
+    if (v && typeof v === 'object') {
+      return Object.fromEntries(Object.entries(v as Record<string, unknown>).map(([k, x]) => [k, walk(x)]));
+    }
+    return v;
+  };
+  return walk(doc) as T;
 }
 
 /** Locales these documents are actually written in. Everything else falls back to English. */
