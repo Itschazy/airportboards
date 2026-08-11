@@ -62,6 +62,34 @@ for (const file of files) {
 if (!alternation) pass(`скобочного выбора частицы нет ни в одном из ${files.length} каталогов`);
 if (!bare) pass('в корейском нет частиц, приклеенных к подстановке');
 
+// ── Единое обращение к читателю ──────────────────────────────────────────────────────────
+//
+// Сайт обращался к испанцу то на «usted» («llegue al menos 3 horas antes»), то на «tú»
+// («Vuelve a comprobar») — в соседних ответах одного и того же FAQ. К немцу — на «Sie» в
+// тринадцати строках и на «du» на странице 404. Читатель этого не формулирует, но разнобой
+// читается как несколько разных авторов, писавших вразнобой, что для справочного сервиса
+// хуже любого из двух вариантов по отдельности.
+//
+// Правило закрытое: в этих двух языках перечислены формы, которых быть не должно. Список
+// глаголов — те, что реально встречаются в интерфейсе; «tu/tus» и «dein/deine» ловят
+// притяжательные, на которых чаще всего и проскакивает неформальность.
+{
+  const INFORMAL = {
+    es: /\b(Vuelve|Comprueba|Elige|Añade|Consulta|Pega|Copia|Busca|Selecciona|Revisa|confírmalos|pégalo|cópialo|tu |tus )\b/,
+    de: /\b(kehre|Prüfe|Wähle|Suche nach|dein|deine|deiner|deinem)\b/,
+  };
+  let bad = 0;
+  for (const [locale, re] of Object.entries(INFORMAL)) {
+    const file = path.join('messages', `${locale}.json`);
+    if (!fs.existsSync(file)) continue;
+    for (const [key, value] of walk(JSON.parse(fs.readFileSync(file, 'utf8')), '', [])) {
+      const m = value.match(re);
+      if (m) { fail(`${locale} ${key}: неформальное обращение «${m[0]}» — весь интерфейс на ${locale === 'es' ? '«usted»' : '«Sie»'}`); bad++; }
+    }
+  }
+  if (!bad) pass('обращение к читателю единое в испанском и немецком');
+}
+
 // Данные тоже рендерятся — проверять только каталоги было бы половиной работы.
 {
   const dir = 'data/airport-content';

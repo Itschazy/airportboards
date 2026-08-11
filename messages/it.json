@@ -90,7 +90,7 @@
     "nearby_title": "Altri aeroporti vicino a {city}",
     "km_away": "{km} km da {iata}",
     "faq_title": "Domande frequenti",
-    "about_title": "Informazioni su {iata} Airport",
+    "about_title": "Informazioni sull’aeroporto {iata}",
     "country_air_title": "Aeroporti principali: {country}",
     "az_all": "Tutti gli aeroporti A–Z",
     "faq_iata_q": "Qual è il codice IATA di {name}?",
@@ -174,7 +174,7 @@
     "faq_airlines_a": "In base al tabellone aggiornato delle partenze di {name} ({iata}), i voli programmati sono operati da {list}.",
     "faq_dest_q": "Dove puoi volare senza scalo da {name}?",
     "faq_dest_a": "Le destinazioni presenti sull'attuale tabellone delle partenze di {name} ({iata}) includono {list}.",
-    "country_none": "{count, plural, one {# aeroporto} other {# aeroporti}} con codici IATA in {country}. Non abbiamo dati aggiornati sui voli di linea per nessuno di essi, quindi questa pagina riporta codici, posizioni e fusi orari anziché tabelloni in tempo reale.",
+    "country_none": "{country}: {count, plural, one {# aeroporto} other {# aeroporti}} con codici IATA. Non disponiamo di dati aggiornati sui voli di linea per nessuno di essi, quindi questa pagina riporta codici, posizioni e fusi orari anziché tabelloni in tempo reale.",
     "city_none": "{count, plural, one {# aeroporto} other {# aeroporti}} a {city}. Non abbiamo dati aggiornati sui voli di linea per nessuno di essi, quindi questa pagina riporta codici, posizioni e fusi orari anziché tabelloni in tempo reale.",
     "m_airports_served": "aeroporti con voli di linea"
   },

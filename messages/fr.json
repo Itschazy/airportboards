@@ -174,7 +174,7 @@
     "faq_airlines_a": "D’après le tableau actuel des départs {deName} ({iata}), les vols programmés sont opérés par {list}.",
     "faq_dest_q": "Où pouvez-vous voler sans escale depuis {name} ?",
     "faq_dest_a": "Les destinations indiquées sur le tableau actuel des départs {deName} ({iata}) comprennent {list}.",
-    "country_none": "{count, plural, one {# aéroport doté} other {# aéroports dotés}} d’un code IATA en {country}. Nous n’avons de données de vols réguliers à jour pour aucun d’eux : cette page présente donc les codes, les localisations et les fuseaux horaires plutôt que des tableaux en direct.",
+    "country_none": "{country} : {count, plural, one {# aéroport doté} other {# aéroports dotés}} d’un code IATA. Nous ne disposons d’aucune donnée à jour sur les vols réguliers pour {count, plural, one {cet aéroport} other {aucun d’entre eux}} ; cette page présente donc les codes, les localisations et les fuseaux horaires plutôt que des tableaux en direct.",
     "city_none": "{count, plural, one {# aéroport} other {# aéroports}} à {city}. Nous n’avons de données de vols réguliers à jour pour aucun d’eux : cette page présente donc les codes, les localisations et les fuseaux horaires plutôt que des tableaux en direct.",
     "m_airports_served": "aéroports avec vols réguliers"
   },
