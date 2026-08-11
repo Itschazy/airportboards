@@ -15,7 +15,24 @@ export default async function EventOgImage({ params }: { params: Promise<{ local
   const { locale, slug } = await params;
   const ev = getEvent(slug);
   const c = ev ? (ev.locales[locale] || ev.locales.en) : null;
-  const heading = c?.h1 || ev?.meta.name || 'airportsboard.live';
+
+  // Satori, which renders these cards, ships no Arabic font — and unlike a missing glyph it does
+  // not degrade, it throws. Every one of the 13 events returned 500 on /ar and 200 on the other
+  // eleven locales; measured 2026-08-10. The airport card never hit this because it renders only
+  // the IATA code and "airportsboard.live", both Latin.
+  //
+  // Tested on the script rather than on `locale === 'ar'`, so a heading that happens to be
+  // written in Arabic under another locale is caught too. A readable English card beats a broken
+  // image: at 500 the social platform shows a bare link with no card at all.
+  //
+  // The complete fix is to embed Noto Sans Arabic and pass it to ImageResponse — roughly 200 KB
+  // in the bundle, loaded on every card render. Worth doing when Arabic traffic justifies it;
+  // today that locale has zero visits.
+  const ARABIC = /[\u0600-\u06FF\u0750-\u077F\u08A0-\u08FF]/;
+  const localised = c?.h1 || ev?.meta.name || 'airportsboard.live';
+  const heading = ARABIC.test(localised)
+    ? (ev?.locales.en?.h1 || ev?.meta.name || 'airportsboard.live')
+    : localised;
   const place = ev ? `${ev.meta.venue} · ${ev.meta.venueCity}` : '';
   const codes = ev ? ev.meta.airports.map(a => a.iata).join('  ·  ') : '';
 

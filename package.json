@@ -14,7 +14,8 @@
     "check:contrast": "node scripts/check-contrast.mjs",
     "check:names": "node scripts/check-names.mjs",
     "check:search": "node scripts/check-search-i18n.mjs",
-    "check:collation": "node scripts/check-collation.mjs"
+    "check:collation": "node scripts/check-collation.mjs",
+    "check:og": "node scripts/check-og.mjs"
   },
   "dependencies": {
     "next": "^15.3.3",
