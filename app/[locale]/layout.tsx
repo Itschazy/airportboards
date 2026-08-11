@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from 'next';
 import { NextIntlClientProvider } from 'next-intl';
 import { getMessages, setRequestLocale } from 'next-intl/server';
+import { clientMessages } from '@/lib/client-messages';
 import { notFound } from 'next/navigation';
 import { locales, rtlLocales, type Locale } from '@/lib/i18n';
 import { SiteHeader } from '@/components/SiteHeader';
@@ -87,7 +88,7 @@ export default async function LocaleLayout({
         <Analytics />
         <YandexMetrica locale={locale} />
         <AdSense />
-        <NextIntlClientProvider messages={messages}>
+        <NextIntlClientProvider messages={clientMessages(messages)}>
           <SiteHeader locale={locale as Locale} />
           <main style={{ flex: '1 0 auto', width: '100%' }}>{children}</main>
           <SiteFooter locale={locale as Locale} />
