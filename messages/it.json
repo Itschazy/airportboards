@@ -47,7 +47,11 @@
     "routes_description": "{airport} ({iata}) a {city}, {country}: quali compagnie aeree operano qui e dove puoi volare senza scalo, oltre agli aeroporti più vicini con voli di linea.",
     "info_title": "{airport} ({iata}) — informazioni sull’aeroporto",
     "info_description": "{airport} ({iata}) a {city}, {country}: codici IATA e ICAO, posizione, fuso orario e gli aeroporti più vicini con voli di linea.",
-    "main_title_stale": "Voli {airport}{showCity, select, yes {, {city}} other {}} ({iata}) | arrivi e partenze"
+    "main_title_stale": "Voli {airport}{showCity, select, yes {, {city}} other {}} ({iata}) | arrivi e partenze",
+    "arrivals_title_stale": "Arrivi {airport}{showCity, select, yes {, {city}} other {}} ({iata}) | tabellone voli",
+    "departures_title_stale": "Partenze {airport}{showCity, select, yes {, {city}} other {}} ({iata}) | tabellone voli",
+    "arrivals_description_stale": "Tabellone arrivi di {airport} ({iata}): voli, orari, ritardi e partenze.",
+    "departures_description_stale": "Tabellone partenze di {airport} ({iata}): voli, orari, ritardi, gate e arrivi."
   },
   "airport_info": {
     "location": "Posizione",
@@ -87,7 +91,7 @@
     "ov_dep": "Partenze oggi",
     "ov_arr": "Arrivi oggi",
     "routes_title": "Rotte popolari da {iata}",
-    "per_day": "{n} sul tabellone di oggi",
+    "per_day": "{n} sul tabellone",
     "nearby_title": "Altri aeroporti vicino a {city}",
     "km_away": "{km} km da {iata}",
     "faq_title": "Domande frequenti",

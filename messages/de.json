@@ -47,7 +47,11 @@
     "routes_description": "{airport} ({iata}) in {city}, {country}: welche Fluggesellschaften hier verkehren und wohin Sie nonstop fliegen können, plus die nächstgelegenen Flughäfen mit Linienflügen.",
     "info_title": "{airport} ({iata}) — Flughafeninformationen",
     "info_description": "{airport} ({iata}) in {city}, {country}: IATA- und ICAO-Codes, Lage, Zeitzone und die nächstgelegenen Flughäfen mit Linienflügen.",
-    "main_title_stale": "{airport}{showCity, select, yes {, {city}} other {}} ({iata}) – Ankunft & Abflug"
+    "main_title_stale": "{airport}{showCity, select, yes {, {city}} other {}} ({iata}) – Ankunft & Abflug",
+    "arrivals_title_stale": "{airport}{showCity, select, yes {, {city}} other {}} ({iata}) – Ankunftstafel",
+    "departures_title_stale": "{airport}{showCity, select, yes {, {city}} other {}} ({iata}) – Abflugtafel",
+    "arrivals_description_stale": "Ankunftstafel am Flughafen {airport} ({iata}): Landungen, Status, Verspätungen sowie Abflüge im Überblick.",
+    "departures_description_stale": "Abflugtafel am Flughafen {airport} ({iata}): Starts, Gates, Status und Verspätungen plus Ankünfte."
   },
   "airport_info": {
     "location": "Standort",
@@ -87,7 +91,7 @@
     "ov_dep": "Abflüge heute",
     "ov_arr": "Ankünfte heute",
     "routes_title": "Beliebte Verbindungen ab {iata}",
-    "per_day": "{n} auf der heutigen Flugtafel",
+    "per_day": "{n} auf der Flugtafel",
     "nearby_title": "Andere Flughäfen in der Nähe von {city}",
     "km_away": "{km} km von {iata} entfernt",
     "faq_title": "Häufig gestellte Fragen",

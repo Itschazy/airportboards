@@ -47,7 +47,11 @@
     "routes_description": "{airport} ({iata}) en {city}, {country}: qué aerolíneas operan aquí y a dónde puedes volar sin escalas, además de los aeropuertos más cercanos con vuelos programados.",
     "info_title": "{airport} ({iata}) — información del aeropuerto",
     "info_description": "{airport} ({iata}) en {city}, {country}: códigos IATA e ICAO, ubicación, huso horario y los aeropuertos más cercanos con vuelos regulares.",
-    "main_title_stale": "Vuelos {airport}{showCity, select, yes {, {city}} other {}} ({iata}) | llegadas y salidas"
+    "main_title_stale": "Vuelos {airport}{showCity, select, yes {, {city}} other {}} ({iata}) | llegadas y salidas",
+    "arrivals_title_stale": "Llegadas {airport}{showCity, select, yes {, {city}} other {}} ({iata}) | panel de vuelos",
+    "departures_title_stale": "Salidas {airport}{showCity, select, yes {, {city}} other {}} ({iata}) | panel de vuelos",
+    "arrivals_description_stale": "Panel de llegadas del aeropuerto {airport} ({iata}): horarios, retrasos y cancelaciones. Consulte también salidas.",
+    "departures_description_stale": "Panel de salidas del aeropuerto {airport} ({iata}): horarios, retrasos, cancelaciones y puertas. Consulte también llegadas."
   },
   "airport_info": {
     "location": "Ubicación",
@@ -87,7 +91,7 @@
     "ov_dep": "Salidas hoy",
     "ov_arr": "Llegadas hoy",
     "routes_title": "Rutas populares desde {iata}",
-    "per_day": "{n} en el panel de hoy",
+    "per_day": "{n} en el panel",
     "nearby_title": "Otros aeropuertos cerca de {city}",
     "km_away": "{km} km de {iata}",
     "faq_title": "Preguntas frecuentes",

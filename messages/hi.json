@@ -47,7 +47,11 @@
     "routes_description": "{city}, {country} में स्थित {airport} ({iata}): यहाँ कौन-सी एयरलाइंस संचालित होती हैं और आप किन गंतव्यों के लिए नॉनस्टॉप उड़ान भर सकते हैं, साथ ही निर्धारित उड़ानों वाले निकटतम हवाई अड्डे।",
     "info_title": "{airport} ({iata}) — एयरपोर्ट जानकारी",
     "info_description": "{airport} ({iata}), {city}, {country}: आईएटीए और आईसीएओ कोड, स्थान, समय क्षेत्र, और अनुसूचित उड़ानों वाले निकटतम एयरपोर्ट।",
-    "main_title_stale": "{airport}{showCity, select, yes {, {city}} other {}} ({iata}) उड़ान स्थिति | आगमन और प्रस्थान"
+    "main_title_stale": "{airport}{showCity, select, yes {, {city}} other {}} ({iata}) उड़ान स्थिति | आगमन और प्रस्थान",
+    "arrivals_title_stale": "{airport}{showCity, select, yes {, {city}} other {}} ({iata}) आगमन उड़ानें | फ्लाइट बोर्ड",
+    "departures_title_stale": "{airport}{showCity, select, yes {, {city}} other {}} ({iata}) प्रस्थान उड़ानें | फ्लाइट बोर्ड",
+    "arrivals_description_stale": "{airport} ({iata}) एयरपोर्ट का आगमन फ्लाइट बोर्ड। आगमन व प्रस्थान, समय, देरी और उड़ान स्थिति।",
+    "departures_description_stale": "{airport} ({iata}) एयरपोर्ट का प्रस्थान फ्लाइट बोर्ड। प्रस्थान व आगमन, समय, देरी और उड़ान स्थिति।"
   },
   "airport_info": {
     "location": "स्थान",
@@ -87,7 +91,7 @@
     "ov_dep": "आज प्रस्थान",
     "ov_arr": "आज आगमन",
     "routes_title": "{iata} से लोकप्रिय मार्ग",
-    "per_day": "आज की उड़ान-सूची में {n, plural, one {#} other {#}}",
+    "per_day": "उड़ान-सूची में {n, plural, one {#} other {#}}",
     "nearby_title": "{city} के पास अन्य हवाई अड्डे",
     "km_away": "{iata} से {km} किमी दूर",
     "faq_title": "अक्सर पूछे जाने वाले प्रश्न",

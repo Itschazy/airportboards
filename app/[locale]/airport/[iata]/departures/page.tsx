@@ -56,16 +56,27 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     && ((lvl === null && !hasWikiAirlines(airport.iata)) || (lvl !== null && lvl <= 2));
   const tHome = await getTranslations({ locale, namespace: 'home' });
   const country = getCountryName(airport.country, locale);
+  /**
+   * Обещание актуальности — только когда снимок свежий.
+   *
+   * Порог двенадцать часов, тот же, что на странице аэропорта и в самом табло: потолок яруса
+   * hub из lib/warm.ts. Ключевые слова («табло прилёта», «табло вылета») сохраняются — по ним
+   * приходят из поиска; уходит только «сегодня»/«today»/«实时», которое на почти половине
+   * заходов было неправдой. getBoardFetchedAt читает хранилище и платного вызова не делает.
+   */
+  const STALE_AFTER = 12 * 60 * 60 * 1000;
+  const at = getBoardFetchedAt(airport.iata, 'departures');
+  const fresh = at != null && Date.now() - at <= STALE_AFTER;
   const title = boardless
     ? `${name} (${airport.iata}) — ${tHome('ns_title')}`
     : infoOnly
       ? t('info_title', { airport: name, iata: airport.iata })
-      : t('departures_title', { airport: name, iata: airport.iata, city: cityName, showCity });
+      : t(fresh ? 'departures_title' : 'departures_title_stale', { airport: name, iata: airport.iata, city: cityName, showCity });
   const description = boardless
     ? tHome('ns_meta', { airport: name, iata: airport.iata, city: cityName, country })
     : infoOnly
       ? t('info_description', { airport: name, iata: airport.iata, city: cityName, country })
-      : t('departures_description', { airport: name, iata: airport.iata, city: cityName });
+      : t(fresh ? 'departures_description' : 'departures_description_stale', { airport: name, iata: airport.iata, city: cityName });
 
   /**
    * Canonical points at the PARENT airport page, not at this URL.

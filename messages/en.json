@@ -47,7 +47,11 @@
     "routes_description": "{airport} ({iata}) in {city}, {country}: which airlines operate here and where you can fly nonstop, plus the nearest airports with scheduled flights.",
     "info_title": "{airport} ({iata}) — airport information",
     "info_description": "{airport} ({iata}) in {city}, {country}: IATA and ICAO codes, location, time zone, and the nearest airports with scheduled flights.",
-    "main_title_stale": "{airport}{showCity, select, yes {, {city}} other {}} ({iata}) Arrivals & Departures"
+    "main_title_stale": "{airport}{showCity, select, yes {, {city}} other {}} ({iata}) Arrivals & Departures",
+    "arrivals_title_stale": "{airport}{showCity, select, yes {, {city}} other {}} ({iata}) Arrivals Board",
+    "departures_title_stale": "{airport}{showCity, select, yes {, {city}} other {}} ({iata}) Departures Board",
+    "arrivals_description_stale": "Arrivals board at {airport} ({iata}): arrivals and departures, flight status, times, delays and gates.",
+    "departures_description_stale": "Departures board at {airport} ({iata}): departures and arrivals, flight status, times, delays and gates."
   },
   "airport_info": {
     "location": "Location",
@@ -87,7 +91,7 @@
     "ov_dep": "Departures today",
     "ov_arr": "Arrivals today",
     "routes_title": "Popular routes from {iata}",
-    "per_day": "{n} on today's board",
+    "per_day": "{n} on the board",
     "nearby_title": "Other airports near {city}",
     "km_away": "{km} km from {iata}",
     "faq_title": "Frequently asked questions",

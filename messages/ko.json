@@ -47,7 +47,11 @@
     "routes_description": "{city}, {country}의 {airport} ({iata}): 운항 항공사와 직항으로 갈 수 있는 목적지, 정기편이 있는 가장 가까운 공항을 확인하세요.",
     "info_title": "{airport}({iata}) — 공항 정보",
     "info_description": "{airport}({iata}), {country} {city}: IATA 및 ICAO 코드, 위치, 시간대, 그리고 정기편이 운항되는 가장 가까운 공항.",
-    "main_title_stale": "{airport}{showCity, select, yes {({city})} other {}} ({iata}) 운항정보 | 도착·출발"
+    "main_title_stale": "{airport}{showCity, select, yes {({city})} other {}} ({iata}) 운항정보 | 도착·출발",
+    "arrivals_title_stale": "{airport}{showCity, select, yes {({city})} other {}} ({iata}) 도착 항공편 | 운항 정보판",
+    "departures_title_stale": "{airport}{showCity, select, yes {({city})} other {}} ({iata}) 출발 항공편 | 운항 정보판",
+    "arrivals_description_stale": "{airport}({iata}) 도착 운항정보입니다. 도착 항공편, 출발 연결편, 지연·결항, 게이트 정보를 제공합니다.",
+    "departures_description_stale": "{airport}({iata}) 출발 운항정보입니다. 출발 항공편, 도착 연결편, 지연·결항, 게이트 정보를 제공합니다."
   },
   "airport_info": {
     "location": "위치",
@@ -87,7 +91,7 @@
     "ov_dep": "오늘 출발",
     "ov_arr": "오늘 도착",
     "routes_title": "{iata} 출발 인기 노선",
-    "per_day": "오늘 운항 정보판에 {n, number}건",
+    "per_day": "운항 정보판에 {n, number}건",
     "nearby_title": "{city} 근처의 다른 공항",
     "km_away": "{iata}에서 {km}km",
     "faq_title": "자주 묻는 질문",
