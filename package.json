@@ -13,7 +13,8 @@
     "check:board": "node scripts/check-board-logic.mjs",
     "check:contrast": "node scripts/check-contrast.mjs",
     "check:names": "node scripts/check-names.mjs",
-    "check:search": "node scripts/check-search-i18n.mjs"
+    "check:search": "node scripts/check-search-i18n.mjs",
+    "check:collation": "node scripts/check-collation.mjs"
   },
   "dependencies": {
     "next": "^15.3.3",

@@ -5,6 +5,8 @@ import {
   POPULAR_AIRPORTS, POPULAR_CITIES, getAirport, getCountries, getAllIataCodes, slugify,
 } from '@/lib/airports';
 import { locales } from '@/lib/i18n';
+import { getCityName } from '@/lib/places';
+import { getAirportName } from '@/lib/airport-names';
 import { worldServiceCounts } from '@/lib/warm';
 import { AirportSearch } from '@/components/AirportSearch';
 
@@ -61,14 +63,23 @@ export default async function HomePage({ params }: Props) {
   const tNav = await getTranslations({ locale, namespace: 'nav' });
   const tUi = await getTranslations({ locale, namespace: 'ui' });
 
+  // Localise the labels. The front page was the only surface in the project that did not:
+  // every card read "New York", "London", "Paris" on all twelve locales, directly under a
+  // heading that said "当前热门" or "人気の空港" and above a footer that printed
+  // "Соединённые Штаты". The data to do it right has been there all along — the same tables
+  // every airport page uses.
   const popularNow = POPULAR_AIRPORTS.slice(0, 8).map(iata => {
     const a = getAirport(iata);
-    return a ? { iata, city: a.city } : null;
+    return a ? { iata, city: getCityName(a.city, locale, a.city) } : null;
   }).filter(Boolean) as { iata: string; city: string }[];
 
   const popularList = POPULAR_AIRPORTS.map(iata => {
     const a = getAirport(iata);
-    return a ? { iata, city: a.city, name: a.name } : null;
+    return a ? {
+      iata,
+      city: getCityName(a.city, locale, a.city),
+      name: getAirportName(iata, locale, a.name),
+    } : null;
   }).filter(Boolean) as { iata: string; city: string; name: string }[];
 
   const countries = getCountries().slice(0, 16);
@@ -167,7 +178,7 @@ export default async function HomePage({ params }: Props) {
               background: '#0B0B0B', border: '1px solid #1A1A1A', borderRadius: 16, padding: '12px 18px',
               display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', textAlign: 'center',
             }}>
-              <div style={{ fontSize: 16, color: '#E4E4E7', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis', maxWidth: '100%' }}>{c.name}</div>
+              <div style={{ fontSize: 16, color: '#E4E4E7', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis', maxWidth: '100%' }}>{getCityName(getAirport(c.iata)?.city || c.name, locale, c.name)}</div>
               <div style={{ fontSize: 12, fontWeight: 700, color: '#6A6A6A', marginTop: 5, letterSpacing: '0.06em' }}>{c.code}</div>
             </Link>
           ))}

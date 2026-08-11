@@ -42,7 +42,21 @@ export default async function LetterPage({ params }: Props) {
   const L = letter.toUpperCase();
   const t = await getTranslations({ locale, namespace: 'home' });
   const tNav = await getTranslations({ locale, namespace: 'nav' });
-  const airports = getAirportsByLetter(letter);
+  // Order by the name the reader SEES, with that language's own collation rules.
+  //
+  // getAirportsByLetter returns them sorted by the English name, and the page then prints the
+  // localised one — so the list looked shuffled to everyone except an English reader. Measured
+  // on /az/a, share of adjacent pairs out of order: hi 51%, ar 48%, ko 46%, ja 45%, zh 43%,
+  // ru 36%, de 19%, en 0%. The Russian page opened "Ла-Корунья, Аахен-Мерцбрюк, Ольборг".
+  //
+  // The GROUPING stays by Latin initial: it is the URL structure, it matches the letter strip
+  // at the top, and changing it would mint new URLs. Only the order within the page changes,
+  // which is the part a reader can actually see is wrong.
+  const airports = [...getAirportsByLetter(letter)].sort((a, b) =>
+    new Intl.Collator(locale).compare(
+      getAirportName(a.iata, locale, a.name),
+      getAirportName(b.iata, locale, b.name),
+    ));
 
   const breadcrumb = {
     '@context': 'https://schema.org',
