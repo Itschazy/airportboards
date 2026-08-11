@@ -10,6 +10,13 @@ import { dueAirports, tickBudget } from '@/lib/warm';
 const AIRLABS_KEY = process.env.AIRLABS_API_KEY || '';
 export const CACHE_SECONDS = 60;
 const MAX_FLIGHTS = 80;
+/**
+ * Сколько последних строк отдавать, когда впереди не осталось ничего.
+ *
+ * Больше, чем страница отрисует (она берёт 40, компонент 30), чтобы срез не отрезал ещё раз,
+ * и меньше полного борта — везти 80 строк истории незачем.
+ */
+const TAIL_WHEN_DEAD = 50;
 
 export type AirlabsFlight = {
   airline_iata: string;
@@ -235,7 +242,17 @@ function orderBoard(rows: AirlabsFlight[], direction: 'departures' | 'arrivals',
   // Measured on production 2026-08-09: DME 13h, VKO 15h, CMN 17h, WAW and ESB a full day,
   // KJA 59h. Not a corner case — MAX_FLIGHTS covers 1–4 hours of a dense board while the warm
   // interval is 6–24 hours, so a busy airport is in this state most of the cycle.
-  if (!anyUpcoming) return [...rows].sort(asc);
+  //
+  // Порядок возрастающий, но наружу идёт ХВОСТ, а не голова. Страница режет список первыми
+  // сорока строками, компонент рисует первые тридцать — и на мёртвом борту в этот срез
+  // попадало самое СТАРОЕ. Замерено 11.08 на AYT: снимок в 19:00, показаны рейсы 19:05–20:15,
+  // тогда как борт тянулся минимум до 21:00; ближайшие к «сейчас» строки не попали даже в
+  // отданные сорок. Человек, открывший страницу, видел не «последнее, что улетело», а
+  // «первое, что улетело» — на два часа хуже, чем мог бы.
+  if (!anyUpcoming) {
+    const sorted = [...rows].sort(asc);
+    return sorted.slice(-TAIL_WHEN_DEAD);
+  }
 
   if (direction === 'arrivals') {
     const past = rows.filter(f => tsOf(f) < nowSec).sort(asc);

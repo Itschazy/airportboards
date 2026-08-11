@@ -46,7 +46,8 @@
     "routes_title": "{airport} ({iata}) — Airlines and Destinations",
     "routes_description": "{airport} ({iata}) in {city}, {country}: which airlines operate here and where you can fly nonstop, plus the nearest airports with scheduled flights.",
     "info_title": "{airport} ({iata}) — airport information",
-    "info_description": "{airport} ({iata}) in {city}, {country}: IATA and ICAO codes, location, time zone, and the nearest airports with scheduled flights."
+    "info_description": "{airport} ({iata}) in {city}, {country}: IATA and ICAO codes, location, time zone, and the nearest airports with scheduled flights.",
+    "main_title_stale": "{airport}{showCity, select, yes {, {city}} other {}} ({iata}) Arrivals & Departures"
   },
   "airport_info": {
     "location": "Location",
@@ -299,7 +300,9 @@
     "sched_wd_every": "{days}",
     "sched_times_more": "{first} and {n, plural, one {# more departure} other {# more departures}} that week",
     "pwa_app_name": "AirportsBoard — Live Arrival & Departure Boards",
-    "pwa_app_desc": "Track live airport arrivals and departures."
+    "pwa_app_desc": "Track live airport arrivals and departures.",
+    "board_all_past": "All flights on this board have already departed. Data as of {date}.",
+    "board_stale": "Data outdated"
   },
   "notfound": {
     "title": "Page not found",

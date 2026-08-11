@@ -176,7 +176,33 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   // A closed airport must not promise a live board in the SERP snippet either. Reuse the
   // on-page notice copy so the title and description say the same true thing.
   const { title: descTitle, description } = await airportDescription({ airport, locale, name, city, country, t });
-  const title = descTitle ?? t('main_title', { airport: name, city, showCity, iata: airport.iata });
+  /**
+   * Обещание актуальности в заголовке — только когда оно правда.
+   *
+   * Заголовок уезжает в поисковую выдачу и обещает «прилеты и вылеты сегодня» / «Live
+   * Arrivals» / «实时». Замерено 12.08 по 25 самым востребованным страницам: 22.3% спроса
+   * приходит туда, где данным одни-двое суток, а слово «сегодня» стоит на странице до девяти
+   * раз. Уфа — 17.7% всего спроса — обещала «сегодня» при снимке двухсуточной давности.
+   *
+   * Порог тот же, что у пометки в интерфейсе (components/FlightBoard.tsx): двенадцать часов,
+   * потолок яруса hub. Ключевые слова при этом сохраняются — «онлайн-табло», «прилёты»,
+   * «вылеты» — уходит только временное обещание: по этим словам приходят из поиска, и
+   * менять их значило бы лечить честность ценой трафика.
+   *
+   * getBoardFetchedAt — чтение из хранилища, платного вызова не делает.
+   */
+  const boardAge = (() => {
+    const at = getBoardFetchedAt(airport.iata, 'departures');
+    return at ? Date.now() - at : Infinity;
+  })();
+  const STALE_TITLE_AFTER = 12 * 60 * 60 * 1000;
+  // Решение опирается ТОЛЬКО на возраст, не на число строк. Рядом (строка ~140) уже
+  // задокументировано, почему заголовок нельзя привязывать к наличию строк: 943 аэропорта
+  // летают раз-два в сутки, их борт пуст большую часть времени, и заголовок хлопал бы туда-
+  // сюда каждый цикл прогрева. Возраст такого хлопанья не даёт: он растёт монотонно и
+  // сбрасывается ровно тогда, когда обещание снова становится правдой.
+  const titleKey = boardAge <= STALE_TITLE_AFTER ? 'main_title' : 'main_title_stale';
+  const title = descTitle ?? t(titleKey, { airport: name, city, showCity, iata: airport.iata });
   const canonical = `${BASE}/${locale}/airport/${airport.iata}`;
 
   const languages: Record<string, string> = {};

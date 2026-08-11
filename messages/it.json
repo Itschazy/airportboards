@@ -46,7 +46,8 @@
     "routes_title": "{airport} ({iata}) — Compagnie aeree e destinazioni",
     "routes_description": "{airport} ({iata}) a {city}, {country}: quali compagnie aeree operano qui e dove puoi volare senza scalo, oltre agli aeroporti più vicini con voli di linea.",
     "info_title": "{airport} ({iata}) — informazioni sull’aeroporto",
-    "info_description": "{airport} ({iata}) a {city}, {country}: codici IATA e ICAO, posizione, fuso orario e gli aeroporti più vicini con voli di linea."
+    "info_description": "{airport} ({iata}) a {city}, {country}: codici IATA e ICAO, posizione, fuso orario e gli aeroporti più vicini con voli di linea.",
+    "main_title_stale": "Voli {airport}{showCity, select, yes {, {city}} other {}} ({iata}) | arrivi e partenze"
   },
   "airport_info": {
     "location": "Posizione",
@@ -299,7 +300,9 @@
     "sched_wd_every": "{days}",
     "sched_times_more": "{first} e {n, plural, one {# altra partenza} other {# altre partenze}} nella settimana",
     "pwa_app_name": "AirportsBoard — Tabelloni arrivi-partenze",
-    "pwa_app_desc": "Segui in tempo reale arrivi e partenze negli aeroporti."
+    "pwa_app_desc": "Segui in tempo reale arrivi e partenze negli aeroporti.",
+    "board_all_past": "Tutti i voli su questo tabellone sono già partiti. Dati del {date}.",
+    "board_stale": "Dati obsoleti"
   },
   "notfound": {
     "title": "Pagina non trovata",

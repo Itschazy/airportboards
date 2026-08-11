@@ -46,7 +46,8 @@
     "routes_title": "{airport} ({iata}) — Aerolíneas y destinos",
     "routes_description": "{airport} ({iata}) en {city}, {country}: qué aerolíneas operan aquí y a dónde puedes volar sin escalas, además de los aeropuertos más cercanos con vuelos programados.",
     "info_title": "{airport} ({iata}) — información del aeropuerto",
-    "info_description": "{airport} ({iata}) en {city}, {country}: códigos IATA e ICAO, ubicación, huso horario y los aeropuertos más cercanos con vuelos regulares."
+    "info_description": "{airport} ({iata}) en {city}, {country}: códigos IATA e ICAO, ubicación, huso horario y los aeropuertos más cercanos con vuelos regulares.",
+    "main_title_stale": "Vuelos {airport}{showCity, select, yes {, {city}} other {}} ({iata}) | llegadas y salidas"
   },
   "airport_info": {
     "location": "Ubicación",
@@ -299,7 +300,9 @@
     "sched_wd_every": "{days}",
     "sched_times_more": "{first} y {n, plural, one {# salida más} other {# salidas más}} esa semana",
     "pwa_app_name": "AirportsBoard — Paneles de vuelos",
-    "pwa_app_desc": "Consulte en tiempo real las llegadas y salidas de aeropuertos."
+    "pwa_app_desc": "Consulte en tiempo real las llegadas y salidas de aeropuertos.",
+    "board_all_past": "Todos los vuelos de este panel ya han salido. Datos del {date}.",
+    "board_stale": "Datos desactualizados"
   },
   "notfound": {
     "title": "Página no encontrada",

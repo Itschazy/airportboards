@@ -46,7 +46,8 @@
     "routes_title": "{airport} ({iata}) — Havayolları ve Destinasyonlar",
     "routes_description": "{city}, {country} konumundaki {airport} ({iata}): burada hangi hava yollarının hizmet verdiği, aktarmasız uçabileceğiniz yerler ve tarifeli uçuşları olan en yakın havalimanları.",
     "info_title": "{airport} ({iata}) — havalimanı bilgileri",
-    "info_description": "{airport} ({iata}), {city}, {country}: IATA ve ICAO kodları, konum, saat dilimi ve tarifeli uçuşu olan en yakın havalimanları."
+    "info_description": "{airport} ({iata}), {city}, {country}: IATA ve ICAO kodları, konum, saat dilimi ve tarifeli uçuşu olan en yakın havalimanları.",
+    "main_title_stale": "{airport}{showCity, select, yes {, {city}} other {}} ({iata}) Uçuş Bilgileri | Varış ve Kalkış"
   },
   "airport_info": {
     "location": "Konum",
@@ -299,7 +300,9 @@
     "sched_wd_every": "{days}",
     "sched_times_more": "{first} ve o hafta {n} kalkış daha",
     "pwa_app_name": "AirportsBoard — Canlı varış-kalkış panoları",
-    "pwa_app_desc": "Havalimanlarındaki varış ve kalkışları canlı takip edin."
+    "pwa_app_desc": "Havalimanlarındaki varış ve kalkışları canlı takip edin.",
+    "board_all_past": "Bu panodaki tüm uçuşlar çoktan kalktı. Veriler: {date}.",
+    "board_stale": "Veriler eski"
   },
   "notfound": {
     "title": "Sayfa bulunamadı",

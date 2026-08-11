@@ -46,7 +46,8 @@
     "routes_title": "{airport} ({iata}) — Fluggesellschaften und Reiseziele",
     "routes_description": "{airport} ({iata}) in {city}, {country}: welche Fluggesellschaften hier verkehren und wohin Sie nonstop fliegen können, plus die nächstgelegenen Flughäfen mit Linienflügen.",
     "info_title": "{airport} ({iata}) — Flughafeninformationen",
-    "info_description": "{airport} ({iata}) in {city}, {country}: IATA- und ICAO-Codes, Lage, Zeitzone und die nächstgelegenen Flughäfen mit Linienflügen."
+    "info_description": "{airport} ({iata}) in {city}, {country}: IATA- und ICAO-Codes, Lage, Zeitzone und die nächstgelegenen Flughäfen mit Linienflügen.",
+    "main_title_stale": "{airport}{showCity, select, yes {, {city}} other {}} ({iata}) – Ankunft & Abflug"
   },
   "airport_info": {
     "location": "Standort",
@@ -299,7 +300,9 @@
     "sched_wd_every": "{days}",
     "sched_times_more": "{first} und {n, plural, one {# weiterer Abflug} other {# weitere Abflüge}} in der Woche",
     "pwa_app_name": "AirportsBoard — Live-Ankunfts- und Abflugtafeln",
-    "pwa_app_desc": "Verfolgen Sie Ankünfte und Abflüge an Flughäfen in Echtzeit."
+    "pwa_app_desc": "Verfolgen Sie Ankünfte und Abflüge an Flughäfen in Echtzeit.",
+    "board_all_past": "Alle Flüge auf dieser Tafel sind bereits abgeflogen. Daten vom {date}.",
+    "board_stale": "Daten veraltet"
   },
   "notfound": {
     "title": "Seite nicht gefunden",

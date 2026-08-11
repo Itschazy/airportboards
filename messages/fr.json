@@ -46,7 +46,8 @@
     "routes_title": "{airport} ({iata}) — Compagnies aériennes et destinations",
     "routes_description": "{airport} ({iata}) à {city}, {country} : quelles compagnies aériennes y opèrent, où vous pouvez voler sans escale, ainsi que les aéroports les plus proches avec des vols réguliers.",
     "info_title": "{airport} ({iata}) — informations sur l’aéroport",
-    "info_description": "{airport} ({iata}) à {city}, {country} : codes IATA et OACI, localisation, fuseau horaire et les aéroports les plus proches avec des vols réguliers."
+    "info_description": "{airport} ({iata}) à {city}, {country} : codes IATA et OACI, localisation, fuseau horaire et les aéroports les plus proches avec des vols réguliers.",
+    "main_title_stale": "Vols {airport}{showCity, select, yes {, {city}} other {}} ({iata}) – arrivées et départs"
   },
   "airport_info": {
     "location": "Localisation",
@@ -299,7 +300,9 @@
     "sched_wd_every": "{days}",
     "sched_times_more": "{first} et {n, plural, one {# autre départ} other {# autres départs}} dans la semaine",
     "pwa_app_name": "AirportsBoard — Tableaux de vols",
-    "pwa_app_desc": "Suivez en direct les arrivées et départs dans les aéroports."
+    "pwa_app_desc": "Suivez en direct les arrivées et départs dans les aéroports.",
+    "board_all_past": "Tous les vols de ce tableau sont déjà partis. Données du {date}.",
+    "board_stale": "Données obsolètes"
   },
   "notfound": {
     "title": "Page introuvable",

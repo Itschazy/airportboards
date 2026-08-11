@@ -46,7 +46,8 @@
     "routes_title": "{airport} ({iata}) — شركات الطيران والوجهات",
     "routes_description": "{airport} ({iata}) في {city}، {country}: ما هي شركات الطيران التي تعمل هنا والوجهات التي يمكنك السفر إليها دون توقف، بالإضافة إلى أقرب المطارات ذات الرحلات المجدولة.",
     "info_title": "{airport} ({iata}) — معلومات المطار",
-    "info_description": "{airport} ({iata}) في {city}، {country}: رموز إياتا وإيكاو، الموقع، المنطقة الزمنية، وأقرب المطارات التي تتوفر فيها رحلات مجدولة."
+    "info_description": "{airport} ({iata}) في {city}، {country}: رموز إياتا وإيكاو، الموقع، المنطقة الزمنية، وأقرب المطارات التي تتوفر فيها رحلات مجدولة.",
+    "main_title_stale": "لوحة رحلات مطار {airport}{showCity, select, yes {، {city}} other {}} ({iata}) — الوصول والمغادرة"
   },
   "airport_info": {
     "location": "الموقع",
@@ -299,7 +300,9 @@
     "sched_wd_every": "{days}",
     "sched_times_more": "{first} و{n, plural, zero {# رحلات إضافية} one {رحلة إضافية واحدة} two {رحلتان إضافيتان} few {# رحلات إضافية} many {# رحلة إضافية} other {# رحلة إضافية}} في ذلك الأسبوع",
     "pwa_app_name": "AirportsBoard — لوحات الوصول والمغادرة المباشرة",
-    "pwa_app_desc": "تابع وصول ومغادرة الرحلات في المطارات مباشرةً."
+    "pwa_app_desc": "تابع وصول ومغادرة الرحلات في المطارات مباشرةً.",
+    "board_all_past": "جميع الرحلات المعروضة على هذه اللوحة أقلعت بالفعل. البيانات بتاريخ {date}.",
+    "board_stale": "البيانات قديمة"
   },
   "notfound": {
     "title": "الصفحة غير موجودة",

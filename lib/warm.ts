@@ -90,7 +90,7 @@ function isLocalNight(tz: string | null | undefined): boolean {
   } catch { return false; }
 }
 
-export type Due = { iata: string; tier: WarmTier; overdue: number };
+export type Due = { iata: string; tier: WarmTier; overdue: number; pinned: boolean };
 
 /**
  * Airports whose refresh interval is pinned to the mega cadence REGARDLESS of their tier,
@@ -116,7 +116,24 @@ export type Due = { iata: string; tier: WarmTier; overdue: number };
  * Revisit against fresh Webmaster data, not by feel.
  */
 const DEMAND_PINNED = new Set([
+  // Были с самого начала. HOR, LWN, PES и CAN держатся НАМЕРЕННО, хотя в русском спросе их
+  // нет: Яндекс.Метрика стоит только на русской локали (components/YandexMetrica.tsx:21), а
+  // Search Console по этому сайту не отдаёт ничего. Их аудитория просто не видна ни одному
+  // доступному счётчику, и снимать закрепление на основании слепого пятна нельзя.
   'AER', 'MRV', 'SUI', 'KZN', 'GYD', 'TAS', 'HOR', 'AYT', 'SVX', 'LWN', 'PES', 'CAN',
+
+  // Добавлены 12.08 по замеру Яндекс.Вебмастера: 500 запросов, 99 382 показа, сопоставлено с
+  // аэропортами 98%. Правило отбора: аэропорт входит в топ-25 по показам И его ярусный
+  // норматив хуже шести часов — иначе закрепление ничего не меняет (IST, DXB и PVG в топе
+  // есть, но они mega и уже получают 6 ч, поэтому их здесь нет).
+  //
+  // Первым идёт UFA — 17 262 показа, ВТОРОЙ результат по сайту после Казани, и на момент
+  // замера её борт стоял на 53 часах при нормативе 24. Пятнадцать из двадцати пяти самых
+  // востребованных страниц приходили на просроченный борт; в показах это 47.4% спроса.
+  //
+  // Очереди это добавляет 112 запросов в сутки из 2 933 доступных — 3.8%. Общий расход НЕ
+  // растёт ни на запрос: тик тратит ровно tickBudget(), меняется только кому достаётся.
+  'UFA', 'EVN', 'DYU', 'TBS', 'FRU', 'BAX', 'NJC', 'SLY', 'TIV', 'MQF', 'BJV', 'ARH', 'KGD', 'DME',
 ]);
 const DEMAND_INTERVAL_MIN = 360;
 
@@ -143,7 +160,7 @@ export function dueAirports(now = Date.now()): Due[] {
     const interval = pinned ? Math.min(tier.intervalMin, DEMAND_INTERVAL_MIN) : tier.intervalMin;
     const overdue = (now - ts) / (interval * 60_000);
     if (overdue < 1) continue;
-    out.push({ iata, tier, overdue });
+    out.push({ iata, tier, overdue, pinned });
   }
   // Busiest tier first, most overdue within it.
   //
@@ -182,7 +199,28 @@ export function dueAirports(now = Date.now()): Due[] {
   // 49% mega for raw overdue.
   const CAP = 3;                                   // past this, "very late" carries no more information
   const WEIGHT = [6, 3, 1.5, 1.2, 1];              // parallel to TIERS, busiest first
-  const rank = (d: Due) => Math.min(d.overdue, CAP) * (WEIGHT[TIERS.indexOf(d.tier)] ?? 1);
+
+  /**
+   * Закрепление поднимает не только срок, но и ВЕС — иначе оно не работает.
+   *
+   * DEMAND_PINNED резал интервал (строка выше), но в ранге его не было вовсе, а ранг решает,
+   * кто попадёт в бюджет тика. Из-за ограничителя CAP очередь режется примерно по потолку
+   * младшего яруса, поэтому достижимый возраст борта равен CAP / вес × интервал: у mega и hub
+   * это ровно цель, у major вдвое хуже, у mid в 2.5 раза, у small втрое. Закреплённый
+   * аэропорт из яруса mid получал цель 6 часов и потолок ранга 3.6 — то есть цель, которой не
+   * мог достичь никогда.
+   *
+   * Замерено на проде 11.08: из двенадцати закреплённых восемь цель 6 ч не выполняли — Сухум,
+   * Баку и Екатеринбург стояли на 13 часах, Сочи и Минводы на 7. Предсказание формулы
+   * совпало с замером до часа, что и подтвердило причину.
+   *
+   * Пол 3 (вес яруса hub) даёт закреплённому потолок ранга 9 при CAP=3 — достаточно, чтобы
+   * он проходил ватерлинию каждый раз, когда просрочен. Расход при этом не растёт ни на
+   * запрос: тик тратит ровно tickBudget() вызовов, меняется только КОМУ они достаются.
+   */
+  const PINNED_WEIGHT = 3;
+  const rank = (d: Due) => Math.min(d.overdue, CAP)
+    * Math.max(WEIGHT[TIERS.indexOf(d.tier)] ?? 1, d.pinned ? PINNED_WEIGHT : 0);
   out.sort((a, b) => rank(b) - rank(a));
   return out;
 }

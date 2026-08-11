@@ -31,6 +31,16 @@ type Flight = {
   status: string;
 };
 
+/**
+ * С какого возраста данные помечаются устаревшими.
+ *
+ * Двенадцать часов — потолок яруса hub из lib/warm.ts: всё, что старше, просрочено даже по
+ * самому щадящему нормативу, кроме младших ярусов, которым в принципе положены сутки. Порог
+ * намеренно один на все аэропорты: читателю не объяснить, почему у одного табло «устарело»
+ * начинается с шести часов, а у другого с суток.
+ */
+const STALE_AFTER_MS = 12 * 60 * 60 * 1000;
+
 const C = {
   bg:        '#050505',
   surface:   '#0B0B0B',
@@ -819,6 +829,34 @@ export function FlightBoard({ airport, locale, defaultMode = 'departures', displ
   //
   // Rule and rationale live in lib/board-window.ts, so the test runs the same function the
   // page does instead of a copy of it.
+
+  /**
+   * Впереди не осталось ни одного рейса — и об этом надо сказать вслух.
+   *
+   * Сравнение идёт с РЕАЛЬНЫМ временем, а не с `nowMs`: тот намеренно привязан к моменту
+   * снимка, чтобы серверная отрисовка и гидратация не расходились, но именно поэтому он
+   * никогда не покажет, что снимок протух. Замерено 11.08: на AYT возраст 5 ч (в норме при
+   * цели 6 ч), а впереди ноль рейсов из 42 — плотный аэропорт успевает пережить собственное
+   * окно внутри цикла прогрева. В показах это 8.8% измеренного спроса, из них 8.6% одна
+   * Анталья.
+   *
+   * `realNow` заводится состоянием и обновляется после монтирования: считать Date.now() прямо
+   * в теле рендера значит получить разные значения на сервере и на клиенте и поймать ошибку
+   * гидратации на ровном месте.
+   */
+  const [realNow, setRealNow] = useState<number>(0);
+  useEffect(() => {
+    setRealNow(Date.now());
+    const id = setInterval(() => setRealNow(Date.now()), 60_000);
+    return () => clearInterval(id);
+  }, []);
+  const allPast = flights.length > 0
+    && realNow > 0
+    && flights.every(f => !f.ts || f.ts * 1000 < realNow);
+
+  /** Данные старше норматива своего яруса — подпись должна об этом кричать, а не шептать. */
+  const staleHours = lastUpdated ? (realNow || Date.now()) - lastUpdated.getTime() : 0;
+  const isStale = staleHours > STALE_AFTER_MS;
   const INITIAL = initialRowCount(flights, nowMs);
   const shown = showAll ? visible : visible.slice(0, INITIAL);
   useEffect(() => { setShowAll(false); }, [mode, filter, trimSearch]);
@@ -875,6 +913,11 @@ export function FlightBoard({ airport, locale, defaultMode = 'departures', displ
               читателя, причём без всякой пометки, чей это пояс. Всё остальное табло
               показано во времени аэропорта. */}
           <time suppressHydrationWarning dateTime={lastUpdated?.toISOString()} title={lastUpdated ? lastUpdated.toLocaleString(locale, { timeZone: airport.tz || 'UTC', timeZoneName: 'short' }) : undefined} style={{ fontSize: 12, color: C.secondary, opacity: 0.85 }}>{updLabel || '—'}</time>
+          {isStale && (
+            <span style={{ fontSize: 12, fontWeight: 700, color: C.orange, letterSpacing: '0.02em' }}>
+              {' · '}{t('board_stale')}
+            </span>
+          )}
           {!loading && flights.length > 0 && (
             <span style={{ fontSize: 12, color: C.secondary, opacity: 0.85 }}>
               {' · '}{(() => { const n = flights === initialFlights && boardTotal != null ? boardTotal : flights.length; return mode === 'departures' ? t('departures_on_board', { count: n }) : t('arrivals_on_board', { count: n }); })()}
@@ -1031,6 +1074,26 @@ export function FlightBoard({ airport, locale, defaultMode = 'departures', displ
           </button>
         )}
 
+        {/* Прямая констатация, когда впереди не осталось ничего.
+            Раньше страница молча показывала вчерашнее как сегодняшнее: борт выглядел
+            обычным, статусы говорили «Посадка» и «Последний вызов», а все рейсы уже улетели.
+            Признак вычислялся внутри lib/flights.ts и наружу не отдавался. */}
+        {allPast && (
+          <div style={{
+            maxWidth: 960, margin: '0 auto 10px', padding: '11px 14px',
+            borderRadius: 12, background: 'rgba(255,159,10,.10)',
+            border: `1px solid ${C.orange}44`, color: '#E4E4E7',
+            fontSize: 14, lineHeight: 1.45,
+          }}>
+            {t('board_all_past', {
+              date: lastUpdated
+                ? lastUpdated.toLocaleString(locale, {
+                    timeZone: airport.tz || 'UTC', dateStyle: 'long', timeStyle: 'short',
+                  })
+                : '—',
+            })}
+          </div>
+        )}
         {/* keyed by mode+filter so a swap remounts the block and replays the rise-in */}
         {(() => { if (initialListKey.current !== null && `${mode}:${filter}` !== initialListKey.current) initialListKey.current = null; return null; })()}
         {/* A departure/arrival board IS a list — mark it up as one. Semantic <ul>/<li>
@@ -1038,7 +1101,19 @@ export function FlightBoard({ airport, locale, defaultMode = 'departures', displ
             most reliably. Visual output is unchanged (globals.css zeroes list defaults). */}
         <ul key={`${mode}:${filter}`} className={initialListKey.current === null ? 'rise' : undefined} style={{ listStyle: 'none', margin: 0, padding: 0 }}>
         {shown.map((f, i) => {
-          const color = STATUS_COLOR[f.status] || C.gray;
+          // Прошедшее считается от РЕАЛЬНОГО времени, а не от времени снимка.
+          //
+          // `nowMs` привязан к снимку намеренно — иначе серверная отрисовка и гидратация
+          // разойдутся. Но из-за этого на протухшем борту ни одна строка не выглядела
+          // прошедшей: снимок сделан в 19:00, все рейсы в 19:05–20:15 «ещё впереди», и в
+          // час ночи человек видел «Посадка» и «Последний вызов» красным со свечением на
+          // рейсах, улетевших шесть часов назад. `realNow` равен нулю до монтирования,
+          // поэтому сервер и первый клиентский рендер по-прежнему совпадают.
+          const isPast = f.ts ? f.ts * 1000 < (realNow || nowMs) : ['departed', 'arrived'].includes(f.status);
+          // Цвет статуса — только у актуальных строк. «Последний вызов» красным со свечением
+          // на улетевшем рейсе это не оформление, а указание идти на выход к самолёту,
+          // которого нет.
+          const color = isPast ? C.past : (STATUS_COLOR[f.status] || C.gray);
           const label = (() => {
             if (f.status === 'delayed' && f.actual) {
               const [ah, am] = f.actual.split(':').map(Number);
@@ -1056,7 +1131,6 @@ export function FlightBoard({ airport, locale, defaultMode = 'departures', displ
           // By time, not by status. A row the sort placed in the past keeps whatever status the
           // snapshot recorded — SVO had 24 rows in the past still reading 'ontime' — so the
           // status field answers a different question than "has this already happened".
-          const isPast = (f.ts && nowMs) ? f.ts * 1000 < nowMs : ['departed', 'arrived'].includes(f.status);
           const place = f.destination || f.origin || '';
           const dm = place.match(/^(.*?)\s*\(([A-Z0-9]{2,4})\)\s*$/);
           const city = dm ? dm[1] : place;
@@ -1139,7 +1213,7 @@ export function FlightBoard({ airport, locale, defaultMode = 'departures', displ
                     <div style={{
                       fontSize: 12, fontWeight: 700, color, letterSpacing: '0.03em', textTransform: 'uppercase',
                       lineHeight: 1.25,
-                      textShadow: f.status === 'finalcall' ? '0 0 10px rgba(255,69,58,0.15)' : 'none',
+                      textShadow: !isPast && f.status === 'finalcall' ? '0 0 10px rgba(255,69,58,0.15)' : 'none',
                     }}>
                       {label}
                     </div>

@@ -46,7 +46,8 @@
     "routes_title": "{airport} ({iata}) — एयरलाइंस और गंतव्य",
     "routes_description": "{city}, {country} में स्थित {airport} ({iata}): यहाँ कौन-सी एयरलाइंस संचालित होती हैं और आप किन गंतव्यों के लिए नॉनस्टॉप उड़ान भर सकते हैं, साथ ही निर्धारित उड़ानों वाले निकटतम हवाई अड्डे।",
     "info_title": "{airport} ({iata}) — एयरपोर्ट जानकारी",
-    "info_description": "{airport} ({iata}), {city}, {country}: आईएटीए और आईसीएओ कोड, स्थान, समय क्षेत्र, और अनुसूचित उड़ानों वाले निकटतम एयरपोर्ट।"
+    "info_description": "{airport} ({iata}), {city}, {country}: आईएटीए और आईसीएओ कोड, स्थान, समय क्षेत्र, और अनुसूचित उड़ानों वाले निकटतम एयरपोर्ट।",
+    "main_title_stale": "{airport}{showCity, select, yes {, {city}} other {}} ({iata}) उड़ान स्थिति | आगमन और प्रस्थान"
   },
   "airport_info": {
     "location": "स्थान",
@@ -299,7 +300,9 @@
     "sched_wd_every": "{days}",
     "sched_times_more": "{first} और उस सप्ताह {n, plural, one {# और उड़ान} other {# और उड़ानें}}",
     "pwa_app_name": "AirportsBoard — लाइव आगमन-प्रस्थान बोर्ड",
-    "pwa_app_desc": "हवाई अड्डों पर आगमन और प्रस्थान की जानकारी रीयल टाइम में देखें।"
+    "pwa_app_desc": "हवाई अड्डों पर आगमन और प्रस्थान की जानकारी रीयल टाइम में देखें।",
+    "board_all_past": "इस बोर्ड की सभी उड़ानें पहले ही रवाना हो चुकी हैं। डेटा: {date}।",
+    "board_stale": "डेटा पुराना है"
   },
   "notfound": {
     "title": "पेज नहीं मिला",
