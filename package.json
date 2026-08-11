@@ -23,7 +23,8 @@
     "check:content-grammar": "node scripts/fix-content-grammar.mjs",
     "check:titles": "node scripts/check-title-duplication.mjs",
     "check:rtl": "node scripts/check-rtl.mjs",
-    "check:manifest": "node scripts/check-manifest.mjs"
+    "check:manifest": "node scripts/check-manifest.mjs",
+    "check:sweep": "node scripts/check-locale-sweep.mjs"
   },
   "dependencies": {
     "next": "^15.3.3",
