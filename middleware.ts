@@ -23,10 +23,32 @@ export default function middleware(req: NextRequest): NextResponse {
   if (!hasLocale && pathname !== '/') {
     const url = req.nextUrl.clone();
     url.pathname = `/${defaultLocale}${pathname}`;
-    return NextResponse.redirect(url, 308);
+    const res = NextResponse.redirect(url, 308);
+    // Этот редирект ДЕТЕРМИНИРОВАН — цель всегда локаль по умолчанию, от языка браузера он
+    // не зависит (см. выше), поэтому кэшировать его можно жёстко и общим кэшем в том числе.
+    res.headers.set('Cache-Control', 'public, max-age=86400');
+    return res;
   }
 
-  return intlMiddleware(req) as NextResponse;
+  const res = intlMiddleware(req) as NextResponse;
+
+  // А вот корень — НАОБОРОТ: next-intl выбирает язык по Accept-Language и cookie NEXT_LOCALE,
+  // то есть на один и тот же URL «/» отвечает по-разному разным людям. Заголовков кэша у
+  // этого ответа не было вовсе, и Vary тоже, а значит первый же CDN запомнил бы редирект
+  // первого зашедшего и отдал бы его всем: москвич увёл бы японца на /ru, японец москвича
+  // на /ja. Пока общего кэша нет, это ничего не стоит и ничего не чинит — но поставить его
+  // перед сайтом, не закрыв эту дыру, нельзя, а закрывать её надо ДО, а не после.
+  //
+  // no-store, а не один Vary: Accept-Language — заголовок длинный и почти уникальный у
+  // каждого браузера, так что вариантов в кэше было бы столько же, сколько посетителей, а
+  // попаданий ноль. Проще не кэшировать: корень видят 0.48% хитов (~80 в месяц), и каждый
+  // из них всё равно уезжает редиректом на страницу, которая кэшируется нормально.
+  if (pathname === '/') {
+    res.headers.set('Cache-Control', 'no-store');
+    res.headers.set('Vary', 'Accept-Language, Cookie');
+  }
+
+  return res;
 }
 
 export const config = {

@@ -68,14 +68,63 @@ const nextConfig: NextConfig = {
         ],
       },
       {
+        // Списочные страницы: локальная главная, каталоги аэропортов, буквенный указатель,
+        // города. Next выводит им s-maxage=31536000 (для /:locale и /:locale/az/*) или
+        // s-maxage=86400 со stale-while-revalidate почти на год — то есть ГОД заморозки,
+        // если перед сайтом когда-нибудь встанет общий кэш. Сегодня его нет и эти числа не
+        // значат ничего, но ставить CDN поверх такого заголовка нельзя: страница застрянет
+        // в том виде, в каком её однажды забрали.
+        //
+        // Содержимое здесь меняется, только когда меняется корпус аэропортов, — то есть
+        // почти никогда, поэтому пятиминутный браузерный кэш безопасен и снимает три RTT
+        // с каждого возврата, а часовой s-maxage оставляет общему кэшу право отдавать
+        // страницу мгновенно и обновлять её в фоне.
+        //
+        // Правило намеренно широкое и стоит ПЕРЕД правилом для бортов: страницы аэропортов
+        // тоже под него попадают, но следующее правило перекрывает им Cache-Control своим,
+        // более коротким. Тот же приём, что у /embed выше.
+        source: '/:locale',
+        headers: [
+          { key: 'Cache-Control', value: 'public, max-age=300, s-maxage=3600, stale-while-revalidate=86400' },
+        ],
+      },
+      {
+        source: '/:locale/:path*',
+        headers: [
+          { key: 'Cache-Control', value: 'public, max-age=300, s-maxage=3600, stale-while-revalidate=86400' },
+        ],
+      },
+      {
         // Boards now state how old their data is, so they must not be served from cache for
         // months. `revalidate = 300` makes Next derive stale-while-revalidate=31535700 —
         // just under a YEAR — which means an infrequent AI crawler can be handed HTML whose
         // "Updated 4 minutes ago" and dateModified were true last winter. Cap the stale
         // window at one revalidate period: still absorbs a thundering herd, cannot lie.
+        //
+        // max-age=60 — это БРАУЗЕРНЫЙ кэш, которого не было вовсе: Next печатает только
+        // s-maxage, поэтому «назад» и повторное открытие той же страницы стоили полной
+        // дороги до Амстердама (замер: условный запрос с If-None-Match отдаёт 0 байт, а
+        // TTFB всё равно 0.65 с из Москвы и ~1.8 с из Токио — 304 не экономит дорогу,
+        // только трафик). Минута выбрана как то, на сколько борт имеет право отстать: он и
+        // так подписан «Обновлено N назад», а клиентский опрос в FlightBoard обновляет
+        // данные поверх HTML. Больше минуты ставить нельзя — на странице живые рейсы.
         source: '/:locale/airport/:path*',
         headers: [
-          { key: 'Cache-Control', value: 'public, s-maxage=300, stale-while-revalidate=600' },
+          { key: 'Cache-Control', value: 'public, max-age=60, s-maxage=300, stale-while-revalidate=600' },
+        ],
+      },
+      {
+        // Иконка. Раньше — дефолт create-next-app на 25 931 Б с `max-age=0,
+        // must-revalidate`: качалась целиком на КАЖДЫЙ показ страницы и весила больше, чем
+        // весь сжатый HTML главной. Файл заменён на 761 Б (scripts/gen-favicon.mjs), но
+        // заголовок всё равно заставлял ходить за ней каждый раз.
+        //
+        // Сутки, а не год: имя файла фиксированное, версии в нём нет, поэтому смена иконки
+        // разъезжается по кэшам ровно столько, сколько тут написано. Год — как у /icon*,
+        // которым Next даёт immutable, — здесь неверен: те отдаются по хэшированным путям.
+        source: '/favicon.ico',
+        headers: [
+          { key: 'Cache-Control', value: 'public, max-age=86400, stale-while-revalidate=604800' },
         ],
       },
     ];
