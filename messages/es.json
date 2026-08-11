@@ -296,7 +296,10 @@
     "sched_wd5": "los sábados",
     "sched_wd6": "los domingos",
     "sched_note2": "Horario de la compañía aérea vigente al {m}, para la temporada de programación actual. Los servicios chárter puntuales y de temporada pueden faltar o estar incompletos.",
-    "sched_wd_every": "{days}"
+    "sched_wd_every": "{days}",
+    "sched_times_more": "{first} y {n, plural, one {# salida más} other {# salidas más}} esa semana",
+    "pwa_app_name": "AirportsBoard — Paneles de vuelos",
+    "pwa_app_desc": "Consulta en tiempo real las llegadas y salidas de aeropuertos."
   },
   "notfound": {
     "title": "Página no encontrada",

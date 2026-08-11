@@ -296,7 +296,10 @@
     "sched_wd5": "il sabato",
     "sched_wd6": "la domenica",
     "sched_note2": "Orario della compagnia aerea al {m}, per la stagione di programmazione corrente. I singoli servizi charter e stagionali potrebbero essere mancanti o incompleti.",
-    "sched_wd_every": "{days}"
+    "sched_wd_every": "{days}",
+    "sched_times_more": "{first} e {n, plural, one {# altra partenza} other {# altre partenze}} nella settimana",
+    "pwa_app_name": "AirportsBoard — Tabelloni arrivi-partenze",
+    "pwa_app_desc": "Segui in tempo reale arrivi e partenze negli aeroporti."
   },
   "notfound": {
     "title": "Pagina non trovata",

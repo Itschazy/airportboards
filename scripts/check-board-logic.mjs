@@ -23,6 +23,7 @@ import ts from 'typescript';
 // tables at load time and would throw before a single test ran.
 const STUBS = `
 const airports = [];
+const airportLabels = {};
 const airlines = {};
 const getCityName = (c) => c;
 const getAirportName = (i) => i;

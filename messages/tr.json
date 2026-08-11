@@ -296,7 +296,10 @@
     "sched_wd5": "cumartesileri",
     "sched_wd6": "pazarları",
     "sched_note2": "Geçerli tarife sezonu için {m} itibarıyla havayolu tarifesi. Münferit charter ve sezonluk seferler eksik veya tamamlanmamış olabilir.",
-    "sched_wd_every": "{days}"
+    "sched_wd_every": "{days}",
+    "sched_times_more": "{first} ve o hafta {n} kalkış daha",
+    "pwa_app_name": "AirportsBoard — Canlı varış-kalkış panoları",
+    "pwa_app_desc": "Havalimanlarındaki varış ve kalkışları canlı takip edin."
   },
   "notfound": {
     "title": "Sayfa bulunamadı",

@@ -393,9 +393,14 @@ export async function AirportBottom({ airport, locale, about, displayName, fligh
                           <span style={{ display: 'block', color: '#6A6A6A', fontSize: 12, marginTop: 2 }}>{r.airlines.join(' · ')}</span>
                         )}
                       </td>
+                      {/* «01:50 +7» читалось как UTC+7 или «плюс семь дней» — самодельная
+                          склейка без слов. Теперь фраза локализована и говорит, что именно
+                          означает число: ещё столько-то вылетов за неделю. */}
                       <td style={{ paddingBlock: 11, paddingInlineEnd: 8, paddingInlineStart: 0, color: '#B4B4B4' }}>{joinList(maskToDays(r.mask, wdShort), locale)}</td>
                       <td style={{ padding: '11px 0 11px 8px', textAlign: 'end', color: '#B4B4B4', whiteSpace: 'nowrap', fontVariantNumeric: 'tabular-nums' }}>
-                        {r.times.length === 1 ? r.times[0] : r.times.length === 2 ? r.times.join(' / ') : `${r.times[0]} +${r.times.length - 1}`}
+                        {r.times.length <= 2
+                          ? r.times.join(' / ')
+                          : tUi('sched_times_more', { first: r.times[0], n: r.times.length - 1 })}
                       </td>
                     </tr>
                   ))}

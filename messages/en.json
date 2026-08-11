@@ -296,7 +296,10 @@
     "sched_wd5": "Saturdays",
     "sched_wd6": "Sundays",
     "sched_note2": "Carrier timetable as of {m}, for the current scheduling season. Individual charter and seasonal services may be missing or incomplete.",
-    "sched_wd_every": "{days}"
+    "sched_wd_every": "{days}",
+    "sched_times_more": "{first} and {n, plural, one {# more departure} other {# more departures}} that week",
+    "pwa_app_name": "AirportsBoard — Live Arrival & Departure Boards",
+    "pwa_app_desc": "Track live airport arrivals and departures."
   },
   "notfound": {
     "title": "Page not found",

@@ -34,6 +34,10 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   const { locale } = await params;
   return {
     metadataBase: new URL('https://airportsboard.live'),
+    // Манифест на локаль. Без этого Next подставляет корневой — один английский на двенадцать
+    // языков и со start_url: '/', а корень редиректит по Accept-Language, то есть установленное
+    // приложение открывалось в языке БРАУЗЕРА, а не в выбранном перед установкой.
+    manifest: `/${locale}/manifest.webmanifest`,
     // Site ownership proofs. `other` is where Next puts arbitrary verification meta tags;
     // Bing's must stay in place permanently — removing it un-verifies the site, not just
     // during the initial check.

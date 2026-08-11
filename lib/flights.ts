@@ -1,4 +1,5 @@
 import airports from '@/data/airports.json';
+import airportLabels from '@/data/airport-labels.json';
 import airlines from '@/data/airlines.json';
 import { getCityName } from '@/lib/places';
 import { getFresh, getStale, getStaleTs, put, canSpend, spend, noteProviderLimit, type SpendKind } from '@/lib/flightStore';
@@ -51,8 +52,23 @@ function timePart(datetime: string | null | undefined): string {
   return (datetime.split(' ')[1] ?? '').slice(0, 5);
 }
 
+/**
+ * Подпись направления в строке табло: «Казань (KZN)», а не «KZN».
+ *
+ * Провайдер рейсов знает коды, которых нет в нашем срезе OurAirports, и строка печатала голый
+ * код — во всех двенадцати локалях, включая aria-label для незрячих. Ни один такой код не
+ * имеет измеренных регулярных рейсов, то есть собственной страницы у него нет и не будет; он
+ * существует только как пункт назначения в чужой строке. Поэтому подписи лежат в отдельном
+ * плоском справочнике (data/airport-labels.json, 2506 записей), который НЕ участвует в
+ * генерации страниц: дополнить им data/airports.json значило бы завести 37 884 новых URL на
+ * сайте, который уже получал бан за массовые страницы.
+ *
+ * Если города нет и там — остаётся код. Это честнее выдуманного названия.
+ */
+const LABELS = airportLabels as Record<string, { city: string; country: string; name: string }>;
+
 function airportLabel(iata: string, locale: string): string {
-  const city = CITY_BY_IATA[iata];
+  const city = CITY_BY_IATA[iata] ?? LABELS[iata]?.city;
   if (!city) return iata;
   return `${getCityName(city, locale)} (${iata})`;
 }

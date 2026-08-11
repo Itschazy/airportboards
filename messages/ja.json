@@ -296,7 +296,10 @@
     "sched_wd5": "土曜日",
     "sched_wd6": "日曜日",
     "sched_note2": "現行スケジュール期間における、{m}時点の航空会社時刻表です。個別のチャーター便および季節運航便は、掲載されていないか不完全な場合があります。",
-    "sched_wd_every": "毎週{days}"
+    "sched_wd_every": "毎週{days}",
+    "sched_times_more": "{first}、その週にあと{n}便",
+    "pwa_app_name": "AirportsBoard — リアルタイム空港発着案内",
+    "pwa_app_desc": "空港の到着・出発便をリアルタイムで確認できます。"
   },
   "notfound": {
     "title": "ページが見つかりません",

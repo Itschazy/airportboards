@@ -296,7 +296,10 @@
     "sched_wd5": "samstags",
     "sched_wd6": "sonntags",
     "sched_note2": "Flugplan der Fluggesellschaft mit Stand {m} für die aktuelle Flugplansaison. Einzelne Charter- und Saisonflüge können fehlen oder unvollständig sein.",
-    "sched_wd_every": "{days}"
+    "sched_wd_every": "{days}",
+    "sched_times_more": "{first} und {n, plural, one {# weiterer Abflug} other {# weitere Abflüge}} in der Woche",
+    "pwa_app_name": "AirportsBoard — Live-Ankunfts- und Abflugtafeln",
+    "pwa_app_desc": "Verfolgen Sie Ankünfte und Abflüge an Flughäfen in Echtzeit."
   },
   "notfound": {
     "title": "Seite nicht gefunden",

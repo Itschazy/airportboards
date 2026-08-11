@@ -3,7 +3,7 @@ import { getTranslations } from 'next-intl/server';
 import { getCountries, getAirportsByCountry } from '@/lib/airports';
 import { getCountryName } from '@/lib/places';
 import { serviceLevel } from '@/lib/warm';
-import { locales, localeNames, type Locale, forwardArrow } from '@/lib/i18n';
+import { locales, localeNames, type Locale, forwardArrow, rtlLocales } from '@/lib/i18n';
 
 const LETTERS = 'abcdefghijklmnopqrstuvwxyz'.split('');
 
@@ -130,6 +130,13 @@ export async function SiteFooter({ locale }: { locale: Locale }) {
             key={loc}
             href={`/${loc}`}
             hrefLang={loc}
+            // lang и dir на самой ссылке, а не только hrefLang. hrefLang описывает, на каком
+            // языке страница ПО ССЫЛКЕ, а «中文», «العربية», «日本語» написаны прямо здесь, внутри
+            // страницы другого языка. Без lang программа чтения с экрана произносит их
+            // правилами текущего языка — «العربية» на немецкой странице читается вслух как
+            // набор букв. Для арабского нужен ещё и dir, иначе слово встраивается в LTR-поток.
+            lang={loc}
+            dir={rtlLocales.includes(loc) ? 'rtl' : 'ltr'}
             style={{
               color: loc === locale ? '#FFFFFF' : '#8A8A8A',
               fontWeight: loc === locale ? 600 : 400,

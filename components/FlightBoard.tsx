@@ -865,7 +865,12 @@ export function FlightBoard({ airport, locale, defaultMode = 'departures', displ
           {/* The relative label answers "how old"; the machine-readable dateTime and the
               hover/long-press title answer exactly WHEN — the transparency every review pass
               kept asking for, at zero locale-string cost (a formatted datetime is universal). */}
-          <time suppressHydrationWarning dateTime={lastUpdated?.toISOString()} title={lastUpdated ? lastUpdated.toLocaleString(locale) : undefined} style={{ fontSize: 12, color: C.secondary, opacity: 0.85 }}>{updLabel || '—'}</time>
+          {/* Пояс АЭРОПОРТА и его подпись. toLocaleString(locale) без опции timeZone
+              берёт пояс машины, где выполняется код: на сервере это UTC, и подсказка
+              сообщала момент, не совпадающий ни с временем аэропорта, ни с временем
+              читателя, причём без всякой пометки, чей это пояс. Всё остальное табло
+              показано во времени аэропорта. */}
+          <time suppressHydrationWarning dateTime={lastUpdated?.toISOString()} title={lastUpdated ? lastUpdated.toLocaleString(locale, { timeZone: airport.tz || 'UTC', timeZoneName: 'short' }) : undefined} style={{ fontSize: 12, color: C.secondary, opacity: 0.85 }}>{updLabel || '—'}</time>
           {!loading && flights.length > 0 && (
             <span style={{ fontSize: 12, color: C.secondary, opacity: 0.85 }}>
               {' · '}{(() => { const n = flights === initialFlights && boardTotal != null ? boardTotal : flights.length; return mode === 'departures' ? t('departures_on_board', { count: n }) : t('arrivals_on_board', { count: n }); })()}

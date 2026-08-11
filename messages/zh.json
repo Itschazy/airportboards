@@ -296,7 +296,10 @@
     "sched_wd5": "六",
     "sched_wd6": "日",
     "sched_note2": "截至 {m}的承运人时刻表，适用于当前航班计划季。个别包机和季节性服务可能缺失或不完整。",
-    "sched_wd_every": "每周{days}"
+    "sched_wd_every": "每周{days}",
+    "sched_times_more": "{first}，本周另有 {n} 个航班",
+    "pwa_app_name": "AirportsBoard — 实时航班到离港看板",
+    "pwa_app_desc": "实时查看机场航班到港和离港信息。"
   },
   "notfound": {
     "title": "页面未找到",

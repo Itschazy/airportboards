@@ -296,7 +296,10 @@
     "sched_wd5": "토요일마다",
     "sched_wd6": "일요일마다",
     "sched_note2": "현재 운항 시즌의 {m} 기준 항공사 시간표입니다. 일부 전세편 및 계절 운항편은 누락되었거나 불완전할 수 있습니다.",
-    "sched_wd_every": "{days}"
+    "sched_wd_every": "{days}",
+    "sched_times_more": "{first}, 그 주에 {n}편 더",
+    "pwa_app_name": "AirportsBoard — 실시간 공항 출도착 안내",
+    "pwa_app_desc": "공항 도착 및 출발 항공편을 실시간으로 확인하세요."
   },
   "notfound": {
     "title": "페이지를 찾을 수 없습니다",
