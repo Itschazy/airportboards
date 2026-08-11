@@ -83,6 +83,32 @@ function aliasesOf(iata: string): string[] {
   return ALIASES![iata] || [];
 }
 
+/**
+ * The localised city and airport names, for the search index.
+ *
+ * Read with fs rather than imported, exactly like the aliases above, and for a hard reason:
+ * `getAirportName` lives in lib/airport-names, which imports lib/warm, which imports this file.
+ * Importing it here closes the cycle and the module graph breaks at build time.
+ *
+ * Why this is needed at all: the search index was built only from the English source fields,
+ * while every page PRINTS the localised name. Measured on production against 60 served airports
+ * per locale, searching for the exact name the site had just displayed failed in hi 53%, ko 48%,
+ * ja 40%, zh 38%, ar 38%, ru 13%, de 7% of cases — "अरखांगेल्स्क", "아르한겔스크", "アルハンゲリスク" and
+ * "أرخانغلسك" all returned nothing for Arkhangelsk. The aliases file covers the big airports
+ * well (16.5 entries each) but is not a substitute for the names the site itself renders.
+ */
+let LOCAL_NAMES: { city: Record<string, Record<string, string>>; air: Record<string, Record<string, string>> } | null = null;
+function localNames() {
+  if (!LOCAL_NAMES) {
+    const read = (f: string) => {
+      try { return JSON.parse(fs.readFileSync(path.join(process.cwd(), 'data', f), 'utf8')); }
+      catch { return {}; }
+    };
+    LOCAL_NAMES = { city: read('city-names.json'), air: read('airport-names.json') };
+  }
+  return LOCAL_NAMES;
+}
+
 // Cyrillic → Latin fallback so a Russian-typed name can also match EN data.
 const CYR: Record<string, string> = {
   'а':'a','б':'b','в':'v','г':'g','д':'d','е':'e','ё':'e','ж':'zh','з':'z','и':'i','й':'y',
@@ -150,6 +176,19 @@ function needlesOf(a: Airport): string[] {
     const l = fold(al.toLowerCase());
     set.add(l);
     for (const w of splitWords(al)) if (w.length >= 2) set.add(w);
+  }
+  // Every localised name the site can print for this airport. Whole name and words, so both
+  // "аэропорт Архангельск" and "Архангельск" hit. Deduped by the Set, and the whole index only
+  // grows about 1.4x because most localisations share tokens with the English source.
+  const ln = localNames();
+  for (const src of [ln.city[a.city], ln.air[a.iata]]) {
+    if (!src) continue;
+    for (const value of Object.values(src)) {
+      if (typeof value !== 'string' || !value) continue;
+      const f = fold(value.toLowerCase());
+      if (f) set.add(f);
+      for (const w of splitWords(value)) if (w.length >= 2) set.add(w);
+    }
   }
   n = [...set].filter(Boolean);
   NEEDLES.set(a.iata, n);

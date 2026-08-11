@@ -139,12 +139,18 @@ for (const p of FILES) {
       // and it runs on everything.
       else if (NATIVE_RANGES[locale] && !isFlat) {
         const isNative = ch => NATIVE_RANGES[locale].some(([a, b]) => ch.codePointAt(0) >= a && ch.codePointAt(0) <= b);
-        const isLatin = ch => /[A-Za-z]/.test(ch);
+        // \p{Script=Latin}, not [A-Za-z]. The ASCII-only test is why this check reported
+        // "no foreign-script contamination found" over 203,472 strings while 43 of them read
+        // "Берлевåg", "कोंस्तानța", "फोस् दो इगुआçu" — every survivor used a Latin letter with
+        // a diacritic (å ɑ ț ș ñ ç ḥ ş), and every one of them slipped straight through. A
+        // guard that cannot see the defect it was written for is worse than no guard, because
+        // its green line is read as proof.
+        const isLatin = ch => /\p{Script=Latin}/u.test(ch);
         const chars = [...text];
         for (let i = 0; i < chars.length; i++) {
           if (!isLatin(chars[i])) continue;
           const left = chars[i - 1] ?? '', right = chars[i + 1] ?? '';
-          if (/[A-Z]/.test(chars[i]) && (!left || SEPARATORS.has(left)) && (!right || SEPARATORS.has(right))) continue;
+          if (/\p{Lu}/u.test(chars[i]) && (!left || SEPARATORS.has(left)) && (!right || SEPARATORS.has(right))) continue;
           if ((left && isNative(left)) || (right && isNative(right))) {
             problems.push({ file, key, locale, text, scripts: ['latin spliced into native word'] });
             break;
