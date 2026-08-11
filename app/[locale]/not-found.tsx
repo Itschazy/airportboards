@@ -21,7 +21,7 @@ export default async function NotFound() {
       <p style={{ fontSize: 15, color: '#8A8A8A', marginTop: 10, lineHeight: 1.5 }}>{t('text')}</p>
 
       <div style={{ marginTop: 24 }}>
-        <AirportSearch locale={locale} placeholder={tNav('search_placeholder')} nearestLabel={tHome('nearest')} />
+        <AirportSearch locale={locale} placeholder={tNav('search_placeholder')} />
       </div>
 
       <div style={{ fontSize: 12, fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.12em', color: '#8A8A8A', margin: '32px 0 12px' }}>{tNav('popular')}</div>

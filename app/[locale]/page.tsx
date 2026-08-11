@@ -120,7 +120,7 @@ export default async function HomePage({ params }: Props) {
 
       {/* SEARCH */}
       <div style={{ marginTop: 28, width: '100%' }}>
-        <AirportSearch locale={locale} placeholder={tNav('search_placeholder')} nearestLabel={t('nearest')} />
+        <AirportSearch locale={locale} placeholder={tNav('search_placeholder')} />
         <StandaloneResume locale={locale} />
       </div>
 

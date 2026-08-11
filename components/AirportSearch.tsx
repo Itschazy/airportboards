@@ -42,12 +42,11 @@ function saveRecent(a: Result) {
   } catch {}
 }
 
-export function AirportSearch({ locale, placeholder, nearestLabel = 'Nearest airports' }: { locale: string; placeholder: string; nearestLabel?: string }) {
+export function AirportSearch({ locale, placeholder }: { locale: string; placeholder: string }) {
   const tNav = useTranslations('nav');
   const [query, setQuery]     = useState('');
   const [results, setResults] = useState<Result[]>([]);
   const [recent, setRecent]   = useState<Result[]>([]);
-  const [nearest, setNearest] = useState<Result[]>([]);
   const [open, setOpen]       = useState(false);
   const [active, setActive]   = useState(-1);
   const [focused, setFocused] = useState(false);
@@ -63,25 +62,20 @@ export function AirportSearch({ locale, placeholder, nearestLabel = 'Nearest air
       .catch(() => {});
   }, []);
 
-  // Geolocation → nearest airports. Use cached coords on repeat visits so we
-  // don't re-trigger a position lookup every mount; only request live on first visit.
-  useEffect(() => {
-    if (!('geolocation' in navigator)) return;
-    const cached = (() => { try { return JSON.parse(localStorage.getItem('ab_geo') || 'null'); } catch { return null; } })();
-    const load = (lat: number, lon: number) => {
-      fetch(`/api/airports/nearest?lat=${lat}&lon=${lon}&locale=${locale}`)
-        .then(r => r.json()).then(d => setNearest((d.airports || []).slice(0, 6))).catch(() => {});
-    };
-    if (cached) { load(cached.lat, cached.lon); return; }
-    navigator.geolocation.getCurrentPosition(
-      pos => {
-        const { latitude: lat, longitude: lon } = pos.coords;
-        try { localStorage.setItem('ab_geo', JSON.stringify({ lat, lon })); } catch {}
-        load(lat, lon);
-      },
-      () => {}, { timeout: 8000, maximumAge: 600000 },
-    );
-  }, []);
+  // Запроса геолокации здесь БОЛЬШЕ НЕТ, и это осознанно.
+  //
+  // Он висел в useEffect с пустыми зависимостями, то есть браузер спрашивал разрешение на
+  // доступ к местоположению СРАЗУ при загрузке главной — без единого действия человека и до
+  // того, как тот вообще понял, куда попал. Диалог разрешения, показанный без спроса, стоит
+  // доверия дороже, чем стоила выгода: подсказка «ближайшие аэропорты» в выпадашке поиска.
+  //
+  // Выгода при этом почти нулевая по устройству трафика: люди приходят из поиска сразу на
+  // страницу нужного аэропорта, а не на главную. Замер по Яндекс.Вебмастеру: 99 382 показа,
+  // и практически все запросы вида «онлайн табло аэропорт ‹город›» — человек уже знает, какой
+  // аэропорт ему нужен, и подбирать ему ближайший по координатам незачем.
+  //
+  // Вместе с запросом убраны раздел «ближайшие» в выпадашке и маршрут /api/airports/nearest,
+  // у которого этот компонент был единственным потребителем.
 
   // Search with debounce. Gated on `open` (not `focused`) so a visible dropdown
   // keeps fetching even if the input lost focus (e.g. scrolling on touch).
@@ -131,13 +125,12 @@ export function AirportSearch({ locale, placeholder, nearestLabel = 'Nearest air
   };
 
   // Sections rendered in the empty state, and the flat list keyboard nav walks.
-  // De-dupe across sections (an airport can be in recent AND nearest AND popular)
+  // De-dupe across sections (an airport can be in recent AND popular)
   // so there are no duplicate React keys and arrow-keys + Enter hit the right row.
   const seen = new Set<string>();
   const recentF = recent.filter(a => !seen.has(a.iata) && seen.add(a.iata));
-  const nearestF = nearest.filter(a => !seen.has(a.iata) && seen.add(a.iata));
   const popularItems = results.slice(0, 6).filter(a => !seen.has(a.iata) && seen.add(a.iata));
-  const emptyFlat = [...recentF, ...nearestF, ...popularItems];
+  const emptyFlat = [...recentF, ...popularItems];
   const navList = query.trim() ? results : emptyFlat;
 
   const onKey = (e: React.KeyboardEvent) => {
@@ -301,8 +294,7 @@ export function AirportSearch({ locale, placeholder, nearestLabel = 'Nearest air
           ) : (
             <>
               {recentF.length > 0 && <Section label={tNav('recent')} items={recentF} startIndex={0} />}
-              {nearestF.length > 0 && <Section label={nearestLabel} items={nearestF} startIndex={recentF.length} />}
-              {popularItems.length > 0 && <Section label={tNav('popular')} items={popularItems} startIndex={recentF.length + nearestF.length} />}
+              {popularItems.length > 0 && <Section label={tNav('popular')} items={popularItems} startIndex={recentF.length} />}
             </>
           )}
         </div>
