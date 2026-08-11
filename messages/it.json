@@ -176,7 +176,7 @@
     "faq_dest_a": "Le destinazioni presenti sull'attuale tabellone delle partenze di {name} ({iata}) includono {list}.",
     "country_none": "{country}: {count, plural, one {# aeroporto} other {# aeroporti}} con codici IATA. Non disponiamo di dati aggiornati sui voli di linea per nessuno di essi, quindi questa pagina riporta codici, posizioni e fusi orari anziché tabelloni in tempo reale.",
     "city_none": "{count, plural, one {# aeroporto} other {# aeroporti}} a {city}. Non abbiamo dati aggiornati sui voli di linea per nessuno di essi, quindi questa pagina riporta codici, posizioni e fusi orari anziché tabelloni in tempo reale.",
-    "m_airports_served": "aeroporti con voli di linea"
+    "m_airports_served": "{count, plural, one {aeroporto con voli di linea} other {aeroporti con voli di linea}}"
   },
   "ui": {
     "departures": "Partenze",

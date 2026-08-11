@@ -176,7 +176,7 @@
     "faq_dest_a": "Zu den Zielen auf der aktuellen Abflugtafel von {name} ({iata}) gehören {list}.",
     "country_none": "{count, plural, one {# Flughafen} other {# Flughäfen}} mit IATA-Codes in {country}. Zu keinem davon liegen uns aktuelle Linienflugdaten vor; diese Seite führt daher Codes, Lage und Zeitzonen statt Live-Anzeigetafeln.",
     "city_none": "{count, plural, one {# Flughafen} other {# Flughäfen}} in {city}. Zu keinem davon liegen uns aktuelle Linienflugdaten vor; diese Seite führt daher Codes, Lage und Zeitzonen statt Live-Anzeigetafeln.",
-    "m_airports_served": "Flughäfen mit Linienflügen"
+    "m_airports_served": "{count, plural, one {Flughafen mit Linienflügen} other {Flughäfen mit Linienflügen}}"
   },
   "ui": {
     "departures": "Abflüge",
