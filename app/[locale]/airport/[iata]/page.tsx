@@ -10,6 +10,7 @@ import { localizedMeasuredOn } from '@/lib/measured-date';
 import { sameAsFor, airportNodeId } from '@/lib/airport-sameas';
 import { getAirportContent } from '@/lib/airport-content';
 import { getAirportName, getAirportNameBare } from '@/lib/airport-names';
+import { deName as withDe } from '@/lib/fr-elision';
 import { getCityName, getCountryName } from '@/lib/places';
 import { getBoard, getBoardFetchedAt } from '@/lib/flights';
 import { FlightBoard } from '@/components/FlightBoard';
@@ -402,7 +403,7 @@ export default async function AirportPage({ params }: Props) {
           background: 'rgba(10,132,255,.10)', border: '1px solid rgba(10,132,255,.28)',
           fontSize: 14, lineHeight: 1.45,
         }}>
-          {tHome('replaced_line', { name, iata: airport.iata, predecessors: predecessors.join(', ') })}
+          {tHome('replaced_line', { name, iata: airport.iata, predecessors: predecessors.join(', '), dePredecessors: withDe(predecessors.join(', '), locale) })}
         </aside>
       )}
       {!airport.closed && noService && (

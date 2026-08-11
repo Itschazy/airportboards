@@ -6,6 +6,7 @@ import Link from 'next/link';
 import { getCities, getCityBySlug, getAirportsByCity } from '@/lib/airports';
 import { hasNoService } from '@/lib/warm';
 import { getCityName, getCountryName } from '@/lib/places';
+import { deName as withDe } from '@/lib/fr-elision';
 import { getAirportName } from '@/lib/airport-names';
 import { locales } from '@/lib/i18n';
 
@@ -34,7 +35,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!c) return {};
   const t = await getTranslations({ locale, namespace: 'home' });
   const city = getCityName(c.city, locale);
-  const title = t('city_title', { city });
+  const deCity = withDe(city, locale);
+  const title = t('city_title', { city, deCity });
   /** Does anything on this page actually have a board? */
   const hasBoard = getAirportsByCity(slug).some(a => !hasNoService(a.iata));
   const languages: Record<string, string> = {};
@@ -48,8 +50,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     // Same defect the country pages carried for Ukraine and 18 others, and the same repair:
     // say what the page actually holds, and stop competing in search as if it were a board.
     description: hasBoard
-      ? t('city_desc', { city, count: c.count })
-      : t('city_none', { city, count: c.count }),
+      ? t('city_desc', { city, deCity, count: c.count })
+      : t('city_none', { city, deCity, count: c.count }),
     // A single-airport "city" page is near-duplicate of that airport — don't index it,
     // and don't advertise an hreflang cluster for a noindex page.
     alternates: c.count > 1 && hasBoard ? { canonical, languages } : { canonical },
@@ -66,6 +68,7 @@ export default async function CityPage({ params }: Props) {
   const tNav = await getTranslations({ locale, namespace: 'nav' });
   const airports = getAirportsByCity(slug);
   const city = getCityName(c.city, locale);
+  const deCity = withDe(city, locale);
   const country = getCountryName(c.country, locale);
 
   const jsonLd = {
@@ -73,13 +76,13 @@ export default async function CityPage({ params }: Props) {
     '@type': 'BreadcrumbList',
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: tNav('home'), item: `${BASE}/${locale}` },
-      { '@type': 'ListItem', position: 2, name: t('city_title', { city }), item: `${BASE}/${locale}/city/${c.slug}` },
+      { '@type': 'ListItem', position: 2, name: t('city_title', { city, deCity }), item: `${BASE}/${locale}/city/${c.slug}` },
     ],
   };
   const itemList = {
     '@context': 'https://schema.org',
     '@type': 'ItemList',
-    name: t('city_title', { city }),
+    name: t('city_title', { city, deCity }),
     numberOfItems: airports.length,
     itemListElement: airports.map((a, i) => ({
       '@type': 'ListItem', position: i + 1,
@@ -98,15 +101,15 @@ export default async function CityPage({ params }: Props) {
         <Link href={`/${locale}/airports`} style={{ color: '#6A6A6A', textDecoration: 'none', display: 'inline-block', minHeight: 24 }}>{t('sec_countries')}</Link>
       </div>
       <h1 style={{ fontSize: 'clamp(28px, 7vw, 40px)', fontWeight: 800, letterSpacing: '-0.03em', color: '#FFFFFF', margin: '0 0 6px' }}>
-        {flag(c.iso2)} {t('city_title', { city })}
+        {flag(c.iso2)} {t('city_title', { city, deCity })}
       </h1>
       {/* The honest variant was applied to the <meta> only, so the page carried both claims at
           once: a description saying we have no scheduled-service data, above a paragraph
           promising "arrivals and departures, flight status". Same predicate as the metadata. */}
       <p style={{ fontSize: 15, color: '#8A8A8A', margin: '0 0 28px' }}>
         {airports.some(a => !hasNoService(a.iata))
-          ? t('city_desc', { city, count: c.count })
-          : t('city_none', { city, count: c.count })}
+          ? t('city_desc', { city, deCity, count: c.count })
+          : t('city_none', { city, deCity, count: c.count })}
       </p>
 
       <ul style={{ listStyle: 'none', margin: 0, padding: 0, display: 'flex', flexDirection: 'column', gap: 8 }}>

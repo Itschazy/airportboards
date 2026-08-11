@@ -72,7 +72,7 @@
     "sec_az": "Tüm havalimanları A–Z",
     "departures_short": "kalkışlar",
     "arrivals_short": "inişler",
-    "airports_count": "{count} havalimanı",
+    "airports_count": "{count, number} havalimanı",
     "country_title": "{country} içindeki havalimanları",
     "country_desc": "{country} ülkesindeki {count} havalimanı için canlı varış ve kalkış bilgileri. Her panoda verilerin ne kadar güncel olduğu gösterilen uçuş durumu.",
     "az_title": "{letter} ile başlayan havalimanları",

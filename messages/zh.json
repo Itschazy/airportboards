@@ -72,7 +72,7 @@
     "sec_az": "所有机场 A–Z",
     "departures_short": "出发",
     "arrivals_short": "到达",
-    "airports_count": "{count} 个机场",
+    "airports_count": "{count, number} 个机场",
     "country_title": "{country}的机场",
     "country_desc": "{country} {count} 个机场的实时到达和出发信息。每个航班信息板均显示航班状态及数据时效。",
     "az_title": "以 {letter} 开头的机场",

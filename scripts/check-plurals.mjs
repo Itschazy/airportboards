@@ -22,6 +22,24 @@
 import fs from 'node:fs';
 import { IntlMessageFormat } from 'intl-messageformat';
 
+/**
+ * Значения выводятся из самой строки, а не перечисляются здесь.
+ *
+ * Раньше объект был захардкожен, и любой новый параметр ронял проверку с «The intl string
+ * context variable "deCity" was not provided» — то есть проверка падала не на дефекте
+ * каталога, а на собственном отставании от него. Числовые параметры получают число,
+ * остальные — заглушку.
+ */
+const NUMERIC = new Set(['count', 'served', 'rest', 'n', 'd', 'i', 'km', 'total', 'year']);
+function valuesFor(msg, num) {
+  const out = {};
+  for (const m of msg.matchAll(/\{\s*(\w+)/g)) {
+    const k = m[1];
+    out[k] = NUMERIC.has(k) ? num : (k === 'date' ? '1 января' : 'X');
+  }
+  return out;
+}
+
 const KEYS = ['airports_count', 'country_desc', 'country_none', 'city_desc',
   'country_split', 'country_split_partial'];
 const NUMBERS = [0, 1, 2, 3, 5, 11, 21, 100, 1234];
@@ -42,7 +60,7 @@ for (const f of fs.readdirSync('messages').filter(f => f.endsWith('.json'))) {
     const rendered = new Set();
     for (const count of NUMBERS) {
       try {
-        rendered.add(new IntlMessageFormat(msg, locale).format({ count, served: count, rest: count, country: 'X', city: 'Y', date: '1 января' }));
+        rendered.add(new IntlMessageFormat(msg, locale).format(valuesFor(msg, count)));
       } catch (e) {
         fail(`${locale}/${key} при count=${count}: ${e.message.slice(0, 90)}`);
       }
@@ -51,8 +69,8 @@ for (const f of fs.readdirSync('messages').filter(f => f.endsWith('.json'))) {
     // Distinctness check, only where the language actually distinguishes and only on the key
     // whose whole job is "N airports" — the descriptions may legitimately phrase around it.
     if (key === 'airports_count' && !NO_PLURAL.has(locale)) {
-      const one = new IntlMessageFormat(msg, locale).format({ count: 1, served: 1, rest: 1, country: 'X', city: 'Y', date: 'd' });
-      const two = new IntlMessageFormat(msg, locale).format({ count: 2, served: 2, rest: 2, country: 'X', city: 'Y', date: 'd' });
+      const one = new IntlMessageFormat(msg, locale).format(valuesFor(msg, 1));
+      const two = new IntlMessageFormat(msg, locale).format(valuesFor(msg, 2));
       if (String(one).replace(/\d/g, '') === String(two).replace(/\d/g, '')) {
         fail(`${locale}/${key}: 1 и 2 дают одну и ту же форму — множественное число не работает`);
       }

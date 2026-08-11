@@ -72,7 +72,7 @@
     "sec_az": "A〜Zの空港一覧",
     "departures_short": "出発",
     "arrivals_short": "到着",
-    "airports_count": "{count} 空港",
+    "airports_count": "{count, number} 空港",
     "country_title": "{country}の空港",
     "country_desc": "{country}国内の{count}空港における到着便・出発便の最新情報。各案内板にデータ取得からの経過時間を表示した運航状況。",
     "az_title": "{letter}で始まる空港",

@@ -12,6 +12,7 @@ import { getWikiRoutes } from '@/lib/wiki-routes';
 import { serviceLevel, serviceMeasuredOn, worldServiceCounts } from '@/lib/warm';
 import { GENERIC_LOCALES } from '@/lib/generic-word';
 import { localizedMeasuredOn } from '@/lib/measured-date';
+import { deName as withDe } from '@/lib/fr-elision';
 import { EventBanner } from '@/components/EventBanner';
 import { RecentlyViewed } from '@/components/RecentlyViewed';
 
@@ -81,6 +82,15 @@ export async function AirportBottom({ airport, locale, about, displayName, fligh
   const name = displayName || airport.name;
   const city = getCityName(airport.city, locale);
   const country = getCountryName(airport.country, locale);
+
+  // Французский предлог приезжает вместе с именем: «d’Amsterdam», «du Havre», «de Paris».
+  // Отдельные параметры, а не подмена name/city, потому что те же имена печатаются и без
+  // предлога. Остальные локали этих параметров в своих строках не используют, а лишние
+  // значения ICU молча игнорирует — поэтому их можно передавать во все вызовы подряд, не
+  // разбирая, какой строке предлог нужен: пропущенный параметр напечатал бы «{deName}».
+  const deName = withDe(name, locale);
+  const deCity = withDe(city, locale);
+  const deIata = withDe(airport.iata, locale);
   const ext = getAirportContentExtended(airport.iata, locale);
   // Published routes for airports whose live board can never fill (see lib/wiki-routes.ts).
   // Only rendered when the board is genuinely empty — where flights exist, the board IS the
@@ -161,22 +171,22 @@ export async function AirportBottom({ airport, locale, about, displayName, fligh
   };
 
   const faq: { q: string; a: string }[] = [
-    { q: t('faq_iata_q', { name }), a: t('faq_iata_a', { name, code: airport.iata }) },
-    ...(airport.icao ? [{ q: t('faq_icao_q', { name }), a: t('faq_icao_a', { name, code: airport.icao }) }] : []),
-    { q: t('faq_where_q', { name }), a: t('faq_where_a', { name, iata: airport.iata, city, country }) },
+    { q: t('faq_iata_q', { name, deName }), a: t('faq_iata_a', { name, deName, code: airport.iata }) },
+    ...(airport.icao ? [{ q: t('faq_icao_q', { name, deName }), a: t('faq_icao_a', { name, deName, code: airport.icao }) }] : []),
+    { q: t('faq_where_q', { name, deName }), a: t('faq_where_a', { name, deName, iata: airport.iata, city, country }) },
     // Only claim a timezone when we actually have one. 557 airports inherited the literal
     // "\N" null marker from the OpenFlights dump and rendered it as the visible answer.
-    ...(airport.tz ? [{ q: t('faq_tz_q', { name }), a: t('faq_tz_a', { name, iata: airport.iata, tz: `${airport.tz}${offset ? ` (${offset})` : ''}` }) }] : []),
+    ...(airport.tz ? [{ q: t('faq_tz_q', { name, deName }), a: t('faq_tz_a', { name, deName, iata: airport.iata, tz: `${airport.tz}${offset ? ` (${offset})` : ''}` }) }] : []),
     // How busy an airport is, from our own measurement — a question every other flight site
     // answers with marketing copy or not at all.
     ...(deps && deps > 0 && measuredOn
-      ? [{ q: t('faq_deps_q', { name }), a: t('faq_deps_a', { n: deps.toLocaleString(locale), name, iata: airport.iata, date: localizedMeasuredOn(measuredOn, locale) }) }]
+      ? [{ q: t('faq_deps_q', { name, deName }), a: t('faq_deps_a', { n: deps.toLocaleString(locale), name, iata: airport.iata, date: localizedMeasuredOn(measuredOn, locale) }) }]
       : []),
     // "Arrive 3 hours before departure" is advice for a place you can fly from. On the 3,789
     // airfields with no airline service and on closed airports it was being asserted as
     // FAQPage markup directly under a notice saying no flights exist — a self-contradiction
     // an answer engine reads as an unreliable source.
-    ...(noService || airport.closed ? [] : [{ q: t('faq_arrive_q', { name }), a: t('faq_arrive_a') }]),
+    ...(noService || airport.closed ? [] : [{ q: t('faq_arrive_q', { name, deName }), a: t('faq_arrive_a') }]),
     // Data-driven pairs from the board itself: which airlines operate here, where you can fly
     // nonstop. Genuinely unique per airport, derived from rows we already aggregated above,
     // and worded as sourced from the CURRENT departures board — a claim we can always stand
@@ -185,7 +195,7 @@ export async function AirportBottom({ airport, locale, about, displayName, fligh
     // Intl.ListFormat gives each locale its own conjunction («А, Б и В», 「AとB」) instead of a
     // comma splice in eleven languages.
     ...(!inbound && !noService && !airport.closed && airlines.length >= 3
-      ? [{ q: t('faq_airlines_q', { name }), a: t('faq_airlines_a', { name, iata: airport.iata, list: listFmt(airlines.slice(0, 5).map(al => al.name)) }) }]
+      ? [{ q: t('faq_airlines_q', { name, deName }), a: t('faq_airlines_a', { name, deName, iata: airport.iata, list: listFmt(airlines.slice(0, 5).map(al => al.name)) }) }]
       : []),
     // "On which days do flights depart?" — answerable only from the timetable, and the pair
     // rides into the FAQPage markup this component already emits, so no new schema type is
@@ -210,7 +220,7 @@ export async function AirportBottom({ airport, locale, about, displayName, fligh
         ? new Intl.DateTimeFormat(locale, { year: 'numeric', month: 'long', day: 'numeric' })
             .format(new Date(`${sched.asOf}T00:00:00Z`)).replace(/\s*г\.?$/, '')
         : '';
-      return [{ q: tUi('sched_faq_q', { a: name }), a: tUi('sched_faq_a', { m: asOfLabel, a: name, d: sched.dailyCount, i: sched.irregularCount, ex }) }];
+      return [{ q: tUi('sched_faq_q', { a: name, deA: deName }), a: tUi('sched_faq_a', { m: asOfLabel, a: name, d: sched.dailyCount, i: sched.irregularCount, ex }) }];
     })()),
     ...((() => {
       if (inbound || noService || airport.closed) return [];
@@ -223,17 +233,17 @@ export async function AirportBottom({ airport, locale, about, displayName, fligh
           .filter(l => l && !/^[A-Z]{3}$/.test(l)),
       )];
       return printable.length >= 3
-        ? [{ q: t('faq_dest_q', { name }), a: t('faq_dest_a', { name, iata: airport.iata, list: listFmt(printable.slice(0, 6)) }) }]
+        ? [{ q: t('faq_dest_q', { name, deName }), a: t('faq_dest_a', { name, deName, iata: airport.iata, list: listFmt(printable.slice(0, 6)) }) }]
         : [];
     })()),
     // The questions people actually ask about a field with no airline service — and the
     // answers nobody else publishes, because nobody else measured which airports have
     // scheduled service. Both are plain, self-contained sentences, so they can be lifted
     // verbatim by an answer engine.
-    ...(noService ? [{ q: t('faq_hasflights_q', { name }), a: t('faq_hasflights_a', { name, iata: airport.iata }) }] : []),
+    ...(noService ? [{ q: t('faq_hasflights_q', { name, deName }), a: t('faq_hasflights_a', { name, deName, iata: airport.iata }) }] : []),
     ...(noService && nearestServed
       ? [{
-          q: t('faq_nearest_q', { name }),
+          q: t('faq_nearest_q', { name, deName }),
           a: t('faq_nearest_a', {
             airport: getAirportName(nearestServed.iata, locale, nearestServed.name),
             code: nearestServed.iata,
@@ -243,7 +253,7 @@ export async function AirportBottom({ airport, locale, about, displayName, fligh
       : []),
     // "shows live arrivals and departures … updated every minute" is false on an airport
     // with an empty board, and it was being asserted as FAQPage markup on every page.
-    ...(flights.length ? [{ q: t('faq_live_q', { name }), a: t('faq_live_a', { name, iata: airport.iata }) }] : []),
+    ...(flights.length ? [{ q: t('faq_live_q', { name, deName }), a: t('faq_live_a', { name, deName, iata: airport.iata }) }] : []),
   ];
   const faqLd = {
     '@context': 'https://schema.org', '@type': 'FAQPage',
@@ -295,12 +305,12 @@ export async function AirportBottom({ airport, locale, about, displayName, fligh
             without this gate the two statements duplicated on the same screen. */}
         {wiki && (wiki.airlines.length > 0 || (wiki.status === 'no_commercial_service' && !noService)) && (
           <section className="cv-auto" style={sec}>
-            <H2>{t('wiki_routes_title', { iata: airport.iata })}</H2>
+            <H2>{t('wiki_routes_title', { iata: airport.iata, deIata })}</H2>
             {wiki.status === 'no_commercial_service' ? (
               <p style={{ fontSize: 15, lineHeight: 1.6, color: '#B4B4B4', margin: 0 }}>
                 {wiki.since
-                  ? t('wiki_no_service', { name, year: wiki.since })
-                  : t('wiki_no_service_nodate', { name })}
+                  ? t('wiki_no_service', { name, deName, year: wiki.since })
+                  : t('wiki_no_service_nodate', { name, deName })}
               </p>
             ) : (
               <>
@@ -337,9 +347,9 @@ export async function AirportBottom({ airport, locale, about, displayName, fligh
             rather than filler. */}
         {sched && (
           <section className="cv-auto" style={sec}>
-            <H2>{tUi('sched_title', { a: name })}</H2>
+            <H2>{tUi('sched_title', { a: name, deA: deName })}</H2>
             <p style={{ fontSize: 15, lineHeight: 1.6, color: '#B4B4B4', margin: '0 0 14px' }}>
-              {tUi('sched_lead', { a: name, d: sched.dailyCount, i: sched.irregularCount })}
+              {tUi('sched_lead', { a: name, deA: deName, d: sched.dailyCount, i: sched.irregularCount })}
               {(() => {
                 // Only when the spread is real. On an airport whose busiest and quietest days
                 // differ by one destination, this sentence would dress noise as a finding.
@@ -599,14 +609,14 @@ export async function AirportBottom({ airport, locale, about, displayName, fligh
           {/* 4. NEARBY AIRPORTS */}
           {nearby.length > 0 && (
             <section className="cv-auto" style={sec}>
-              <H2>{t('nearby_title', { city })}</H2>
+              <H2>{t('nearby_title', { city, deCity })}</H2>
               <ul style={{ listStyle: 'none', margin: 0, padding: 0, display: 'flex', flexDirection: 'column', gap: 8 }}>
                 {nearby.map(a => (
                   <li key={a.iata}>
                     <Link href={`/${locale}/airport/${a.iata}`} style={{ display: 'flex', alignItems: 'center', gap: 12, textDecoration: 'none', color: 'inherit', background: '#0B0B0B', border: '1px solid #1A1A1A', borderRadius: 14, padding: '12px 16px' }}>
                       <span style={{ fontSize: 16, fontWeight: 700, color: '#0A84FF', width: 44, flexShrink: 0 }}>{a.iata}</span>
                       <span style={{ flex: 1, minWidth: 0, fontSize: 14, color: '#E4E4E7', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>{getAirportName(a.iata, locale, a.name)}</span>
-                      <span style={{ fontSize: 12, color: SUB, flexShrink: 0 }}>{t('km_away', { km: a.km, iata: airport.iata })}</span>
+                      <span style={{ fontSize: 12, color: SUB, flexShrink: 0 }}>{t('km_away', { km: a.km, iata: airport.iata, deIata })}</span>
                       <Chevron />
                     </Link>
                   </li>

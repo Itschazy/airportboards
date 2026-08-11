@@ -5,7 +5,7 @@ import {
   POPULAR_AIRPORTS, POPULAR_CITIES, getAirport, getCountries, getAllIataCodes, slugify,
 } from '@/lib/airports';
 import { locales } from '@/lib/i18n';
-import { getCityName } from '@/lib/places';
+import { getCityName, getCountryName } from '@/lib/places';
 import { getAirportName } from '@/lib/airport-names';
 import { worldServiceCounts } from '@/lib/warm';
 import { AirportSearch } from '@/components/AirportSearch';
@@ -160,7 +160,14 @@ export default async function HomePage({ params }: Props) {
               display: 'flex', flexDirection: 'column', justifyContent: 'center',
             }}>
               <div style={{ fontSize: 15, color: '#E4E4E7', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>
-                <span style={{ marginRight: 7 }}>{flag(c.iso2)}</span>{c.country}
+                {/* Localised: c.country is the English source name, and printing it raw put
+                    "🇷🇺 Russia" on the Russian homepage directly above a correctly declined
+                    "178 аэропортов", with "Россия" in the footer of the same page. The anchor
+                    also has to match the target page's own title ("Aeroporti: Germania"), or
+                    the biggest navigation block on the site links by a name the destination
+                    never uses. data/country-names.json covers all 235 countries in 12 locales,
+                    so this needs no new data. */}
+                <span style={{ marginRight: 7 }}>{flag(c.iso2)}</span>{getCountryName(c.country, locale)}
               </div>
               <div style={{ fontSize: 12, color: '#6A6A6A', marginTop: 5 }}>{t('airports_count', { count: c.count })}</div>
             </Link>

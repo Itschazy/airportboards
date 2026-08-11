@@ -17,7 +17,11 @@
     "check:collation": "node scripts/check-collation.mjs",
     "check:og": "node scripts/check-og.mjs",
     "derive:names": "node scripts/derive-airport-names.mjs",
-    "check:client-messages": "node scripts/check-client-messages.mjs"
+    "check:client-messages": "node scripts/check-client-messages.mjs",
+    "check:particles": "node scripts/check-particles.mjs",
+    "check:fr": "node scripts/check-fr-elision.mjs",
+    "check:content-grammar": "node scripts/fix-content-grammar.mjs",
+    "check:titles": "node scripts/check-title-duplication.mjs"
   },
   "dependencies": {
     "next": "^15.3.3",
