@@ -15,7 +15,8 @@
     "check:names": "node scripts/check-names.mjs",
     "check:search": "node scripts/check-search-i18n.mjs",
     "check:collation": "node scripts/check-collation.mjs",
-    "check:og": "node scripts/check-og.mjs"
+    "check:og": "node scripts/check-og.mjs",
+    "derive:names": "node scripts/derive-airport-names.mjs"
   },
   "dependencies": {
     "next": "^15.3.3",

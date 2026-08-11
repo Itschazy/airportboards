@@ -711,7 +711,8 @@
     "fr": "Aden",
     "es": "Aden",
     "it": "Aden",
-    "tr": "Aden"
+    "tr": "Aden",
+    "hi": "अदेन"
   },
   "ACK": {
     "ru": "Нантакет",
@@ -2697,7 +2698,8 @@
     "fr": "Aomori",
     "es": "Aomori",
     "it": "Aomori",
-    "tr": "Aomori"
+    "tr": "Aomori",
+    "ru": "Аомори"
   },
   "AMZ": {
     "ru": "Ардмор",
@@ -5323,7 +5325,8 @@
     "fr": "Bethel",
     "es": "Bethel",
     "it": "Bethel",
-    "tr": "Bethel"
+    "tr": "Bethel",
+    "ru": "Беттел"
   },
   "BCU": {
     "ru": "Баути",
@@ -15583,7 +15586,8 @@
     "fr": "Diên Biên Phu",
     "es": "Dien Bien Phu",
     "it": "Dien Bien Phu",
-    "tr": "Dien Bien Phu"
+    "tr": "Dien Bien Phu",
+    "hi": "डिएनबिएनफू"
   },
   "DIS": {
     "ru": "Нго-Нзугу",
@@ -16607,7 +16611,8 @@
     "fr": "Des Moines",
     "es": "Des Moines",
     "it": "Des Moines",
-    "tr": "Des Moines"
+    "tr": "Des Moines",
+    "ko": "데모인"
   },
   "DWH": {
     "ru": "Хьюстон",
@@ -24293,7 +24298,8 @@
     "fr": "Hachijojima",
     "es": "Hachijojima",
     "it": "Hachijojima",
-    "tr": "Hachijojima"
+    "tr": "Hachijojima",
+    "ru": "Хачидзёдзима"
   },
   "HAR": {
     "ru": "Капитол",
@@ -24396,7 +24402,8 @@
     "fr": "Haugesund",
     "es": "Haugesund",
     "it": "Haugesund",
-    "tr": "Haugesund"
+    "tr": "Haugesund",
+    "hi": "हौगेसुन्ड"
   },
   "HAF": {
     "ru": "Хаф-Мун-Бэй",
@@ -25460,7 +25467,8 @@
     "fr": "Hokitika",
     "es": "Hokitika",
     "it": "Hokitika",
-    "tr": "Hokitika"
+    "tr": "Hokitika",
+    "ru": "Хокитика"
   },
   "HIO": {
     "ru": "Хиллсборо",
@@ -27665,7 +27673,9 @@
     "fr": "Ijevsk",
     "es": "IJévsk",
     "it": "Iževsk",
-    "tr": "İjevsk"
+    "tr": "İjevsk",
+    "ar": "إيزيفسك",
+    "hi": "इज़ेव्स्क"
   },
   "IIL": {
     "ru": "Илам",
@@ -31478,7 +31488,8 @@
     "de": "Jyväskylä",
     "fr": "Jyväskylä",
     "es": "Jyväskylä",
-    "tr": "Jyväskylä"
+    "tr": "Jyväskylä",
+    "it": "Jyväskylä"
   },
   "KCK": {
     "ru": "Киренск",
@@ -31724,7 +31735,8 @@
     "de": "Kuusamo",
     "fr": "Kuusamo",
     "es": "Kuusamo",
-    "it": "Kuusamo"
+    "it": "Kuusamo",
+    "tr": "Kuusamo"
   },
   "KEL": {
     "ru": "Киль",
@@ -32814,7 +32826,8 @@
     "fr": "Khon Kaen",
     "es": "Khon Kaen",
     "it": "Khon Kaen",
-    "tr": "Khon Kaen"
+    "tr": "Khon Kaen",
+    "ko": "콘켄"
   },
   "KKE": {
     "ru": "Керикери",
@@ -33891,7 +33904,8 @@
     "fr": "Kristiansand",
     "es": "Kristiansand",
     "it": "Kristiansand",
-    "tr": "Kristiansand"
+    "tr": "Kristiansand",
+    "ru": "Кристиансанн"
   },
   "KQH": {
     "ru": "Кишангарх",
@@ -34642,7 +34656,8 @@
     "fr": "Kuantan",
     "es": "Kuantan",
     "it": "Kuantan",
-    "tr": "Kuantan"
+    "tr": "Kuantan",
+    "ru": "Куантан"
   },
   "KRC": {
     "ru": "Департи Парбо",
@@ -37807,7 +37822,8 @@
     "fr": "Lampang",
     "es": "Lampang",
     "it": "Lampang",
-    "tr": "Lampang"
+    "tr": "Lampang",
+    "ko": "램팡"
   },
   "LRH": {
     "ru": "Ла-Рошель",
@@ -41399,7 +41415,8 @@
     "fr": "Mukah",
     "es": "Mukah",
     "it": "Mukah",
-    "tr": "Mukah"
+    "tr": "Mukah",
+    "ru": "Мука"
   },
   "MJC": {
     "ru": "Ман",
@@ -43709,7 +43726,8 @@
     "fr": "Meixian",
     "es": "Meixian",
     "it": "Meixian",
-    "tr": "Meixian"
+    "tr": "Meixian",
+    "ru": "Мэйсянь"
   },
   "MYD": {
     "ru": "Малинди",
@@ -45046,7 +45064,8 @@
     "fr": "Nagasaki",
     "es": "Nagasaki",
     "it": "Nagasaki",
-    "tr": "Nagasaki"
+    "tr": "Nagasaki",
+    "ru": "Нагасаки"
   },
   "NFL": {
     "ru": "Фэллон",
@@ -47887,7 +47906,8 @@
     "de": "Beslan",
     "es": "Beslán",
     "it": "Beslan",
-    "tr": "Beslan"
+    "tr": "Beslan",
+    "fr": "Beslan"
   },
   "OME": {
     "ru": "Ном",
@@ -52233,7 +52253,8 @@
     "fr": "Phu Quoc",
     "es": "Phu Quoc",
     "it": "Phu Quoc",
-    "tr": "Phu Quoc"
+    "tr": "Phu Quoc",
+    "ar": "فو قوك"
   },
   "PPM": {
     "ru": "Помпано-Бич",
@@ -58746,7 +58767,8 @@
     "fr": "Nanki-Shirahama",
     "es": "Nanki-Shirahama",
     "it": "Nanki-Shirahama",
-    "tr": "Nanki-Shirahama"
+    "tr": "Nanki-Shirahama",
+    "ru": "Нанки-Сирахама"
   },
   "SGZ": {
     "ru": "Сонгхла",
@@ -67813,7 +67835,8 @@
     "fr": "Umeå",
     "es": "Umeå",
     "it": "Umeå",
-    "tr": "Umeå"
+    "tr": "Umeå",
+    "ru": "Умео"
   },
   "URC": {
     "ru": "Урумчи",
@@ -71701,7 +71724,8 @@
     "fr": "Wuhai",
     "es": "Wuhai",
     "it": "Wuhai",
-    "tr": "Wuhai"
+    "tr": "Wuhai",
+    "ar": "ووهَاي"
   },
   "WLS": {
     "ru": "Хифифо",
@@ -76741,7 +76765,8 @@
     "fr": "Sioux Lookout",
     "es": "Sioux Lookout",
     "it": "Sioux Lookout",
-    "tr": "Sioux Lookout"
+    "tr": "Sioux Lookout",
+    "ru": "Су-Лукаут"
   },
   "YXJ": {
     "ru": "Форт-Сент-Джон",
