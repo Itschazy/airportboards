@@ -40,6 +40,13 @@ const { locales, numLocale, NUMERAL_SYSTEM } = await import(
 const BASE = process.argv[2] || 'http://localhost:3002';
 
 /**
+ * Страницы, на которых ищем сломанное форматирование. Одной главной мало: дефект с NaN жил
+ * на /{locale}/airports и в её мета-описании — то есть в том, что люди видят в выдаче
+ * поисковика, — и не показывался больше нигде.
+ */
+const PAGES = ['', '/airports', '/az/a'];
+
+/**
  * Диапазоны цифр по системам счисления.
  *
  * hanidec (〇一二三四五六七八九) сюда НЕ входит намеренно, хотя формально это система
@@ -93,28 +100,83 @@ const strip = (h) => {
 };
 
 for (const loc of locales) {
-  let text;
-  try {
-    const res = await fetch(`${BASE}/${loc}`, { headers: { 'user-agent': 'audit-bot' } });
-    if (!res.ok) { say(false, `${loc.padEnd(3)} HTTP ${res.status}`); continue; }
-    text = strip(await res.text());
-  } catch (e) {
-    say(false, `${loc.padEnd(3)} не ответил: ${e.message}`);
-    continue;
-  }
+  const fl = numLocale(loc);
+  /**
+   * Как ЭТА локаль печатает «не число». Берётся у самого ICU, а не списком в коде: в en это
+   * «NaN», в ru «не число», в ar «ليس رقمًا» — угадать все двенадцать вариантов нельзя, а
+   * промахнуться легко.
+   */
+  const nanWord = new Intl.NumberFormat(fl).format(NaN);
 
-  const want = expected[loc];
-  const foreign = [];
-  for (const [sys, re] of Object.entries(DIGITS)) {
-    if (sys === want) continue;
-    const hits = text.match(re);
-    if (hits?.length) foreign.push(`${sys}×${hits.length}`);
-  }
-  const own = (text.match(DIGITS[want]) ?? []).length;
+  for (const page of PAGES) {
+    const url = `${BASE}/${loc}${page}`;
+    let html;
+    try {
+      const res = await fetch(url, { headers: { 'user-agent': 'audit-bot' } });
+      if (!res.ok) { say(false, `${loc.padEnd(3)}${(page || '/').padEnd(10)} HTTP ${res.status}`); continue; }
+      html = await res.text();
+    } catch (e) {
+      say(false, `${loc.padEnd(3)}${(page || '/').padEnd(10)} не ответил: ${e.message}`);
+      continue;
+    }
 
-  say(!foreign.length,
-    `${loc.padEnd(3)} ${String(own).padStart(4)} своих (${want})`
-    + (foreign.length ? `, ЧУЖИЕ: ${foreign.join(', ')}` : ''));
+    const text = strip(html);
+    // Мета-описание проверяется ОТДЕЛЬНО и по сырой разметке: оно попадает в выдачу
+    // поисковика, а из <body> вырезается вместе с остальным <head>.
+    const meta = (html.match(/<meta name="description" content="([^"]*)"/) ?? [])[1] ?? '';
+
+    const want = expected[loc];
+    const foreign = [];
+    for (const [sys, re] of Object.entries(DIGITS)) {
+      if (sys === want) continue;
+      const hits = text.match(re);
+      if (hits?.length) foreign.push(`${sys}×${hits.length}`);
+    }
+    const own = (text.match(DIGITS[want]) ?? []).length;
+
+    say(!foreign.length,
+      `${loc.padEnd(3)}${(page || '/').padEnd(10)} ${String(own).padStart(4)} своих (${want})`
+      + (foreign.length ? `, ЧУЖИЕ: ${foreign.join(', ')}` : ''));
+
+    /**
+     * Сломанное форматирование: в шаблон с {x, number} передали уже отформатированную
+     * СТРОКУ, ICU сделал Number("2 801") и получил NaN. Проверка счисления это пропускала
+     * по построению — в слове «NaN» цифр нет.
+     *
+     * Хуже самого NaN тихий случай: de и tr читают «2,801» как две целых восемьсот одну
+     * тысячную, то есть печатали правдоподобное НЕВЕРНОЕ число вместо явной ошибки.
+     */
+    const broken = [];
+    if (text.includes(nanWord)) broken.push(`в теле («${nanWord}»)`);
+    if (meta.includes(nanWord)) broken.push(`в мета-описании («${nanWord}»)`);
+    if (broken.length) say(false, `${loc.padEnd(3)}${(page || '/').padEnd(10)} СЛОМАНО ФОРМАТИРОВАНИЕ: ${broken.join(', ')} — в {x, number} передали строку`);
+
+    /**
+     * Тихий случай той же поломки, который NaN не даёт и потому опаснее.
+     *
+     * fmt(2801,'de') = «2.801». Обратно Number("2.801") — это ВАЛИДНОЕ число две целых
+     * восемьсот одна тысячная, поэтому ICU не ругается, а печатает по-немецки «2,801».
+     * Читатель видит правдоподобную цифру вместо двух тысяч восьмисот одного аэропорта.
+     * По самим цифрам («2801») отличить нельзя — отличается РАЗДЕЛИТЕЛЬ РАЗРЯДОВ.
+     *
+     * Поэтому проверяется он: у локали свой разделитель, и число в тексте обязано стоять
+     * именно с ним. Ожидаемое значение берётся у ICU, а не списком в коде.
+     */
+    const parts = new Intl.NumberFormat(fl).formatToParts(2801);
+    const group = parts.find((p) => p.type === 'group')?.value;
+    if (group && page === '/airports') {
+      const others = [' ', ' ', ',', '.', ' ', '’'].filter((g) => g !== group);
+      const digit = DIGITS[want].source.replace(/\//g, '');
+      // Ищем «цифра РАЗДЕЛИТЕЛЬ три цифры» с ЧУЖИМ разделителем.
+      const wrong = others.filter((g) => {
+        const re = new RegExp(`${digit}${g.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}${digit}{3}(?!${digit})`, 'u');
+        return re.test(meta) || re.test(text);
+      });
+      if (wrong.length) {
+        say(false, `${loc.padEnd(3)}${(page || '/').padEnd(10)} ЧУЖОЙ РАЗДЕЛИТЕЛЬ РАЗРЯДОВ: ожидался «${group === ' ' ? 'NBSP' : group === ' ' ? 'узкий NBSP' : group}», найден «${wrong.map((g) => (g === ' ' ? 'NBSP' : g === ' ' ? 'узкий NBSP' : g)).join('», «')}» — число могло быть разобрано как дробное`);
+      }
+    }
+  }
 }
 
 console.log(fails

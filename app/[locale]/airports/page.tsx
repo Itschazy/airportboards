@@ -37,8 +37,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       if (!w.generated || !w.withService) return t('footer_tagline', { served: w.withService });
       // Same rule as the country pages: only claim the full breakdown when nothing is unknown.
       return w.probed > w.withService + w.empty
-        ? t('world_split_partial', { total: fmt(w.probed, locale), date: localizedMeasuredOn(w.generated, locale), served: fmt(w.withService, locale) })
-        : t('world_split', { total: fmt(w.probed, locale), date: localizedMeasuredOn(w.generated, locale), served: fmt(w.withService, locale), rest: fmt(w.empty, locale) });
+        ? t('world_split_partial', { total: w.probed, date: localizedMeasuredOn(w.generated, locale), served: w.withService })
+        : t('world_split', { total: w.probed, date: localizedMeasuredOn(w.generated, locale), served: w.withService, rest: w.empty });
     })(),
     alternates: { canonical: `${BASE}/${locale}/airports`, languages },
     robots: { index: true, follow: true },
@@ -112,8 +112,8 @@ export default async function AirportsIndexPage({ params }: Props) {
       {world.generated && world.withService > 0 && (
         <p style={{ fontSize: 15, lineHeight: 1.55, color: '#C7C7CC', margin: '0 0 28px', maxWidth: 660 }}>
           {world.probed > world.withService + world.empty
-            ? t('world_split_partial', { total: fmt(world.probed, locale), date: localizedMeasuredOn(world.generated!, locale), served: fmt(world.withService, locale) })
-            : t('world_split', { total: fmt(world.probed, locale), date: localizedMeasuredOn(world.generated!, locale), served: fmt(world.withService, locale), rest: fmt(world.empty, locale) })}
+            ? t('world_split_partial', { total: world.probed, date: localizedMeasuredOn(world.generated!, locale), served: world.withService })
+            : t('world_split', { total: world.probed, date: localizedMeasuredOn(world.generated!, locale), served: world.withService, rest: world.empty })}
         </p>
       )}
 
