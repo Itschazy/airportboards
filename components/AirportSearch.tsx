@@ -3,6 +3,7 @@
 import { useState, useEffect, useRef, useCallback } from 'react';
 import { useRouter } from 'next/navigation';
 import { useTranslations } from 'next-intl';
+import { track, GOALS } from '@/lib/track';
 
 type Result = { iata: string; name: string; city: string; country: string; iso2: string };
 
@@ -118,6 +119,7 @@ export function AirportSearch({ locale, placeholder }: { locale: string; placeho
   }, []);
 
   const go = (a: Result) => {
+    track(GOALS.searchPick);
     saveRecent(a);
     router.push(`/${locale}/airport/${a.iata}`);
     setOpen(false);

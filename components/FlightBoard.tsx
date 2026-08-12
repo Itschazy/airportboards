@@ -5,6 +5,7 @@ import { useEffect, useState, useCallback, useRef } from 'react';
 import Link from 'next/link';
 import { useTranslations } from 'next-intl';
 import { initialRowCount } from '@/lib/board-window';
+import { track, GOALS } from '@/lib/track';
 import type { Airport } from '@/lib/airports';
 
 type T = (key: string, values?: Record<string, string | number>) => string;
@@ -1071,7 +1072,7 @@ export function FlightBoard({ airport, locale, defaultMode = 'departures', displ
               {(['departures', 'arrivals'] as Mode[]).map(m => {
                 const active = mode === m;
                 return (
-                  <button key={m} type="button" aria-pressed={active} className="press" onClick={() => { haptic(); setMode(m); setFilter('all'); }} style={{
+                  <button key={m} type="button" aria-pressed={active} className="press" onClick={() => { haptic(); track(GOALS.boardMode, { mode: m }); setMode(m); setFilter('all'); }} style={{
                     flex: 1, padding: '10px 0', minHeight: 40, fontSize: 14, fontWeight: 600,
                     border: 'none', borderRadius: 10, cursor: 'pointer',
                     background: active ? '#1C1C1E' : 'transparent', color: active ? C.text : C.secondary,
@@ -1106,7 +1107,7 @@ export function FlightBoard({ airport, locale, defaultMode = 'departures', displ
         {(mode === 'arrivals' ? ARR_FILTERS : FILTERS).map(key => {
           const active = filter === key;
           return (
-            <button key={key} type="button" aria-pressed={active} className="press" onClick={() => { haptic(); setFilter(key); }} style={{
+            <button key={key} type="button" aria-pressed={active} className="press" onClick={() => { haptic(); track(GOALS.boardFilter, { filter: key }); setFilter(key); }} style={{
               padding: '7px 13px', minHeight: 34, fontSize: 13, fontWeight: active ? 600 : 400,
               border: active ? 'none' : `1px solid ${C.border}`, borderRadius: 999, cursor: 'pointer',
               background: active ? C.text : 'transparent', color: active ? '#000000' : C.secondary,
@@ -1155,7 +1156,7 @@ export function FlightBoard({ airport, locale, defaultMode = 'departures', displ
             pin silently shows nothing rather than an orphaned card. */}
         {pinnedFlight && (
           <button
-            onClick={() => { haptic(); setSelected(pinnedFlight); }}
+            onClick={() => { haptic(); track(GOALS.flightCard, { from: 'pinned' }); setSelected(pinnedFlight); }}
             style={{
               position: 'sticky', top: 8, zIndex: 5, display: 'flex', width: '100%',
               alignItems: 'center', gap: 12, padding: '12px 16px', marginBottom: 10,
@@ -1260,8 +1261,8 @@ export function FlightBoard({ airport, locale, defaultMode = 'departures', displ
               // то есть незрячий человек слышал номер и город, но не главное.
               aria-label={`${f.scheduled}, ${f.flight}, ${city}, ${label}`}
               className="frow"
-              onClick={() => { haptic(); setSelected(f); }}
-              onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); haptic(); setSelected(f); } }}
+              onClick={() => { haptic(); track(GOALS.flightCard, { from: 'row', past: !!f.ts && f.ts * 1000 < Date.now() }); setSelected(f); }}
+              onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); haptic(); track(GOALS.flightCard, { from: 'keyboard' }); setSelected(f); } }}
               style={{ opacity: isPast ? 0.7 : 1 }}
             >
               {/* Status bar */}
@@ -1340,7 +1341,7 @@ export function FlightBoard({ airport, locale, defaultMode = 'departures', displ
         </ul>
 
         {!loading && visible.length > shown.length && (
-          <button className="press" onClick={() => setShowAll(true)} style={{
+          <button className="press" onClick={() => { track(GOALS.boardMore, { shown: INITIAL, total: visible.length }); setShowAll(true); }} style={{
             width: '100%', height: 56, marginTop: 4, marginBottom: 8,
             display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 8,
             border: '1px solid rgba(255,255,255,0.08)', background: 'rgba(255,255,255,0.02)',

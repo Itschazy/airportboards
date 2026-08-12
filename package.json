@@ -30,7 +30,8 @@
     "check:numerals": "node scripts/check-numerals.mjs",
     "check:headers": "node scripts/check-header-scope.mjs",
     "check:pastcard": "node scripts/check-past-flight-card.mjs",
-    "check:warmtick": "node scripts/check-warm-tick.mjs"
+    "check:warmtick": "node scripts/check-warm-tick.mjs",
+    "check:track": "node scripts/check-track.mjs"
   },
   "dependencies": {
     "next": "^15.3.3",
