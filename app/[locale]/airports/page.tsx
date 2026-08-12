@@ -7,6 +7,7 @@ import { getCountryName } from '@/lib/places';
 import { numLocale, locales } from '@/lib/i18n';
 import { localizedMeasuredOn } from '@/lib/measured-date';
 import { worldServiceCounts } from '@/lib/warm';
+import { assertLocale } from '@/lib/locale-guard';
 
 // Counts are passed to ICU pre-formatted for the locale: a bare placeholder renders 6069,
 // while German expects 6.069 and French 6 069.
@@ -24,7 +25,7 @@ export const revalidate = 86400;
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
-  setRequestLocale(locale);
+  setRequestLocale(assertLocale(locale));
   const t = await getTranslations({ locale, namespace: 'home' });
   const title = t('sec_countries');
   const languages: Record<string, string> = {};
@@ -47,7 +48,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
 export default async function AirportsIndexPage({ params }: Props) {
   const { locale } = await params;
-  setRequestLocale(locale);
+  setRequestLocale(assertLocale(locale));
   const t = await getTranslations({ locale, namespace: 'home' });
   const tNav = await getTranslations({ locale, namespace: 'nav' });
   // Sort by airport count (busiest countries first).

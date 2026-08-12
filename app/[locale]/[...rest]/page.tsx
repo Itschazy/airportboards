@@ -1,6 +1,7 @@
 import { notFound } from 'next/navigation';
 import { setRequestLocale } from 'next-intl/server';
 import { locales } from '@/lib/i18n';
+import { assertLocale } from '@/lib/locale-guard';
 
 /**
  * Любой несуществующий адрес внутри локали — на локализованную страницу 404.
@@ -26,6 +27,6 @@ export function generateStaticParams() {
 
 export default async function CatchAll({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
-  if (locales.includes(locale as (typeof locales)[number])) setRequestLocale(locale);
+  if (locales.includes(locale as (typeof locales)[number])) setRequestLocale(assertLocale(locale));
   notFound();
 }

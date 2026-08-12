@@ -4,6 +4,7 @@ import { getTranslations, setRequestLocale } from 'next-intl/server';
 import Link from 'next/link';
 import { getEventsForHub, type EventData, type EventType } from '@/lib/event-content';
 import { numLocale, locales } from '@/lib/i18n';
+import { assertLocale } from '@/lib/locale-guard';
 
 const BASE = 'https://airportsboard.live';
 type Props = { params: Promise<{ locale: string }> };
@@ -14,7 +15,7 @@ const TYPE_EMOJI: Record<EventType, string> = { concert: '🎤', sports: '🏆',
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
-  setRequestLocale(locale);
+  setRequestLocale(assertLocale(locale));
   const tE = await getTranslations({ locale, namespace: 'event' });
   const languages: Record<string, string> = {};
   for (const loc of locales) languages[loc] = `${BASE}/${loc}/events`;
@@ -29,7 +30,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
 export default async function EventsHubPage({ params }: Props) {
   const { locale } = await params;
-  setRequestLocale(locale);
+  setRequestLocale(assertLocale(locale));
   const tE = await getTranslations({ locale, namespace: 'event' });
   const tNav = await getTranslations({ locale, namespace: 'nav' });
   const { upcoming, past } = getEventsForHub();

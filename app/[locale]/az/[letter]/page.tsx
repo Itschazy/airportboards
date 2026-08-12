@@ -7,6 +7,7 @@ import { getAirportsByLetter } from '@/lib/airports';
 import { getAirportName } from '@/lib/airport-names';
 import { getCityName, getCountryName } from '@/lib/places';
 import { locales } from '@/lib/i18n';
+import { assertLocale } from '@/lib/locale-guard';
 
 const BASE = 'https://airportsboard.live';
 const LETTERS = 'abcdefghijklmnopqrstuvwxyz'.split('');
@@ -20,7 +21,7 @@ export function generateStaticParams() {
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale, letter } = await params;
-  setRequestLocale(locale);
+  setRequestLocale(assertLocale(locale));
   const L = letter.toUpperCase();
   if (!LETTERS.includes(letter.toLowerCase())) return {};
   const t = await getTranslations({ locale, namespace: 'home' });
@@ -37,7 +38,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
 export default async function LetterPage({ params }: Props) {
   const { locale, letter } = await params;
-  setRequestLocale(locale);
+  setRequestLocale(assertLocale(locale));
   if (!LETTERS.includes(letter.toLowerCase())) notFound();
   const L = letter.toUpperCase();
   const t = await getTranslations({ locale, namespace: 'home' });

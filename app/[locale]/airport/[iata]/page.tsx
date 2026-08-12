@@ -20,6 +20,7 @@ import { AirportBottom } from '@/components/AirportBottom';
 import { locales } from '@/lib/i18n';
 import { currentIata } from '@/lib/iata-aliases';
 import { showCityFlag, fold } from '@/lib/show-city';
+import { assertLocale } from '@/lib/locale-guard';
 
 /**
  * Срез борта для показа и признак «всё уже в прошлом».
@@ -181,7 +182,7 @@ async function airportDescription(opts: {
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale, iata } = await params;
-  setRequestLocale(locale);
+  setRequestLocale(assertLocale(locale));
   const airport = getAirport(iata.toUpperCase());
   if (!airport) return {};
   const t = await getTranslations({ locale, namespace: 'meta' });
@@ -249,7 +250,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
 export default async function AirportPage({ params }: Props) {
   const { locale, iata } = await params;
-  setRequestLocale(locale);
+  setRequestLocale(assertLocale(locale));
   // Wrong-case IATA → single permanent (308) redirect to the canonical uppercase URL
   // (saves crawl budget; permanent so engines drop the lowercase variant from the index).
   if (iata !== iata.toUpperCase()) permanentRedirect(`/${locale}/airport/${iata.toUpperCase()}`);

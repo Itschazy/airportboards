@@ -16,6 +16,7 @@ import { airportNodeId } from '@/lib/airport-sameas';
 import { EventBanner } from '@/components/EventBanner';
 import { currentIata } from '@/lib/iata-aliases';
 import { showCityFlag } from '@/lib/show-city';
+import { assertLocale } from '@/lib/locale-guard';
 
 /**
  * Срез борта для показа и признак «всё уже в прошлом».
@@ -49,7 +50,7 @@ export async function generateStaticParams() {
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale, iata } = await params;
-  setRequestLocale(locale);
+  setRequestLocale(assertLocale(locale));
   const airport = getAirport(iata.toUpperCase());
   if (!airport) return {};
   const t = await getTranslations({ locale, namespace: 'meta' });
@@ -145,7 +146,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
 export default async function DeparturesPage({ params }: Props) {
   const { locale, iata } = await params;
-  setRequestLocale(locale);
+  setRequestLocale(assertLocale(locale));
   if (iata !== iata.toUpperCase()) permanentRedirect(`/${locale}/airport/${iata.toUpperCase()}/departures`);
   const airport = getAirport(iata.toUpperCase());
   // A retired code (TSE → NQZ) redirects to the live one rather than 404ing or, worse,

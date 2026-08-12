@@ -11,6 +11,7 @@ import { countryIn as esCountryIn } from '@/lib/es-article';
 import { numLocale, locales } from '@/lib/i18n';
 import { splitByService, serviceMeasuredOn } from '@/lib/warm';
 import { localizedMeasuredOn } from '@/lib/measured-date';
+import { assertLocale } from '@/lib/locale-guard';
 
 // See app/[locale]/airports/page.tsx — ICU renders a bare placeholder ungrouped.
 const fmt = (n: number, locale: string) => n.toLocaleString(numLocale(locale));
@@ -33,7 +34,7 @@ export async function generateStaticParams() {
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale, country } = await params;
-  setRequestLocale(locale);
+  setRequestLocale(assertLocale(locale));
   const c = getCountryBySlug(country);
   if (!c) return {};
   const t = await getTranslations({ locale, namespace: 'home' });
@@ -87,7 +88,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
 export default async function CountryPage({ params }: Props) {
   const { locale, country } = await params;
-  setRequestLocale(locale);
+  setRequestLocale(assertLocale(locale));
   const c = getCountryBySlug(country);
   // A renamed country moves its own URL. Redirect rather than 404, so the old page keeps its
   // value — /en/airports/burma answered 200 and sat in the sitemap right up until the rename.

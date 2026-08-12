@@ -8,6 +8,7 @@ import { getAirportName } from '@/lib/airport-names';
 import { getCityName } from '@/lib/places';
 import { getRoute, airlineName, type FlightRow } from '@/lib/flights';
 import { locales, forwardArrow } from '@/lib/i18n';
+import { assertLocale } from '@/lib/locale-guard';
 
 const BASE = 'https://airportsboard.live';
 type Props = { params: Promise<{ locale: string; pair: string }> };
@@ -29,7 +30,7 @@ const STATUS_COLOR: Record<string, string> = {
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale, pair } = await params;
-  setRequestLocale(locale);
+  setRequestLocale(assertLocale(locale));
   const p = parsePair(pair);
   if (!p) return {};
   const a = getAirport(p.from), b = getAirport(p.to);
@@ -56,7 +57,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
 export default async function RoutePage({ params }: Props) {
   const { locale, pair } = await params;
-  setRequestLocale(locale);
+  setRequestLocale(assertLocale(locale));
   const p = parsePair(pair);
   if (!p) notFound();
   const a = getAirport(p.from), b = getAirport(p.to);

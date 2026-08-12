@@ -23,6 +23,7 @@ import { StandaloneResume } from '@/components/StandaloneResume';
 import { PopularNow } from '@/components/PopularNow';
 import { PopularList } from '@/components/PopularList';
 import { RecentlyViewed } from '@/components/RecentlyViewed';
+import { assertLocale } from '@/lib/locale-guard';
 
 type Props = { params: Promise<{ locale: string }> };
 
@@ -36,7 +37,7 @@ const flag = (iso2: string) =>
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
-  setRequestLocale(locale);
+  setRequestLocale(assertLocale(locale));
   const t = await getTranslations({ locale, namespace: 'home' });
   const languages: Record<string, string> = {};
   for (const loc of locales) languages[loc] = `${BASE}/${loc}`;
@@ -58,7 +59,7 @@ function Title({ children }: { children: React.ReactNode }) {
 
 export default async function HomePage({ params }: Props) {
   const { locale } = await params;
-  setRequestLocale(locale);
+  setRequestLocale(assertLocale(locale));
   const t = await getTranslations({ locale, namespace: 'home' });
   const tNav = await getTranslations({ locale, namespace: 'nav' });
   const tUi = await getTranslations({ locale, namespace: 'ui' });

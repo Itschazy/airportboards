@@ -7,6 +7,7 @@ import Link from 'next/link';
 import { getAirport } from '@/lib/airports';
 import { getCityName } from '@/lib/places';
 import { getAirline, getAirlineFlights, type FlightRow } from '@/lib/flights';
+import { assertLocale } from '@/lib/locale-guard';
 
 const BASE = 'https://airportsboard.live';
 type Props = { params: Promise<{ locale: string; code: string }> };
@@ -21,7 +22,7 @@ const STATUS_COLOR: Record<string, string> = {
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale, code } = await params;
-  setRequestLocale(locale);
+  setRequestLocale(assertLocale(locale));
   const name = getAirline(code);
   if (!name) return {};
   const t = await getTranslations({ locale, namespace: 'home' });
@@ -40,7 +41,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
 export default async function AirlinePage({ params }: Props) {
   const { locale, code } = await params;
-  setRequestLocale(locale);
+  setRequestLocale(assertLocale(locale));
   const name = getAirline(code);
   if (!name) notFound();
   const cu = code.toUpperCase();

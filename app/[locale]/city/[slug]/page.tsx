@@ -10,6 +10,7 @@ import { Breadcrumb } from '@/components/Breadcrumb';
 import { deName as withDe } from '@/lib/fr-elision';
 import { getAirportName } from '@/lib/airport-names';
 import { locales } from '@/lib/i18n';
+import { assertLocale } from '@/lib/locale-guard';
 
 const BASE = 'https://airportsboard.live';
 type Props = { params: Promise<{ locale: string; slug: string }> };
@@ -31,7 +32,7 @@ const flag = (iso2: string) =>
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale, slug } = await params;
-  setRequestLocale(locale);
+  setRequestLocale(assertLocale(locale));
   const c = getCityBySlug(slug);
   if (!c) return {};
   const t = await getTranslations({ locale, namespace: 'home' });
@@ -62,7 +63,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
 export default async function CityPage({ params }: Props) {
   const { locale, slug } = await params;
-  setRequestLocale(locale);
+  setRequestLocale(assertLocale(locale));
   const c = getCityBySlug(slug);
   if (!c) notFound();
   const t = await getTranslations({ locale, namespace: 'home' });

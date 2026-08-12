@@ -8,6 +8,7 @@ import {
 import { getAirport } from '@/lib/airports';
 import { getAirportName } from '@/lib/airport-names';
 import { numLocale, locales } from '@/lib/i18n';
+import { assertLocale } from '@/lib/locale-guard';
 
 const BASE = 'https://airportsboard.live';
 type Props = { params: Promise<{ locale: string; slug: string }> };
@@ -30,7 +31,7 @@ function pick(ev: NonNullable<ReturnType<typeof getEvent>>, locale: string): Eve
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale, slug } = await params;
-  setRequestLocale(locale);
+  setRequestLocale(assertLocale(locale));
   const ev = getEvent(slug);
   if (!ev) return {};
   const c = pick(ev, locale);
@@ -54,7 +55,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
 export default async function EventPage({ params }: Props) {
   const { locale, slug } = await params;
-  setRequestLocale(locale);
+  setRequestLocale(assertLocale(locale));
   const ev = getEvent(slug);
   if (!ev) notFound();
   const c = pick(ev, locale);
