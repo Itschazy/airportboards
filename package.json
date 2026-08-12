@@ -26,7 +26,8 @@
     "check:manifest": "node scripts/check-manifest.mjs",
     "check:sweep": "node scripts/check-locale-sweep.mjs",
     "check:cache": "node scripts/check-cache-headers.mjs",
-    "check:shift": "node scripts/check-board-shift.mjs"
+    "check:shift": "node scripts/check-board-shift.mjs",
+    "check:numerals": "node scripts/check-numerals.mjs"
   },
   "dependencies": {
     "next": "^15.3.3",

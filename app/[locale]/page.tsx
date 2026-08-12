@@ -4,7 +4,7 @@ import Link from 'next/link';
 import {
   POPULAR_AIRPORTS, POPULAR_CITIES, getAirport, getCountries, getAllIataCodes, slugify,
 } from '@/lib/airports';
-import { locales } from '@/lib/i18n';
+import { numLocale, locales } from '@/lib/i18n';
 import { getCityName, getCountryName } from '@/lib/places';
 import { getAirportName } from '@/lib/airport-names';
 import { worldServiceCounts } from '@/lib/warm';
@@ -130,7 +130,7 @@ export default async function HomePage({ params }: Props) {
           // The tile used to read "6,000+ airports", which is true about coverage and false about
           // boards — and next to a headline promising live boards it reads as the latter. It now
           // shows the same number the headline does, from the same measurement.
-          { icon: '✈', value: worldCounts().served.toLocaleString(locale),
+          { icon: '✈', value: worldCounts().served.toLocaleString(numLocale(locale)),
             // Подпись согласуется с числом над ней. Была статичной строкой в родительном
             // множественного, и на 2801 выходило «2 801 аэропортов» вместо «2 801 аэропорт»:
             // русское числительное на 1 (кроме 11) требует единственного числа. Само число
@@ -139,7 +139,7 @@ export default async function HomePage({ params }: Props) {
           // Число через toLocaleString, а не через шаблонную строку: у арабского по CLDR
           // восточноарабские цифры, и соседняя плитка печатала «٢٬٨٠١», а эта — «237+»,
           // западными, в одном ряду. Смешение систем счисления заметнее любой опечатки.
-          { icon: '🌍', value: `${totalCountries.toLocaleString(locale)}+`, label: t('m_countries') },
+          { icon: '🌍', value: `${totalCountries.toLocaleString(numLocale(locale))}+`, label: t('m_countries') },
           { icon: '↻', value: t('m_updates_v'), label: t('m_updates_l') },
         ].map((m, i) => (
           <div key={i} style={{ minWidth: 0 }}>

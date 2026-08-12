@@ -7,7 +7,7 @@ import {
 } from '@/lib/event-content';
 import { getAirport } from '@/lib/airports';
 import { getAirportName } from '@/lib/airport-names';
-import { locales } from '@/lib/i18n';
+import { numLocale, locales } from '@/lib/i18n';
 
 const BASE = 'https://airportsboard.live';
 type Props = { params: Promise<{ locale: string; slug: string }> };
@@ -72,7 +72,7 @@ export default async function EventPage({ params }: Props) {
     tips: c.sec?.tips || tE('sec_tips'),
   };
 
-  const dateFmt = new Intl.DateTimeFormat(locale, {
+  const dateFmt = new Intl.DateTimeFormat(numLocale(locale), {
     day: 'numeric', month: 'long', year: 'numeric', timeZone: 'UTC',
   });
   const whenText = (() => {

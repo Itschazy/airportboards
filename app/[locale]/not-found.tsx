@@ -1,4 +1,5 @@
 import { getLocale, getTranslations } from 'next-intl/server';
+import { baseLocale } from '@/lib/i18n';
 import Link from 'next/link';
 import { AirportSearch } from '@/components/AirportSearch';
 import { POPULAR_AIRPORTS, getAirport } from '@/lib/airports';
@@ -8,7 +9,7 @@ import { POPULAR_AIRPORTS, getAirport } from '@/lib/airports';
 // airports, and a home link, in the visitor's language.
 export default async function NotFound() {
   let locale = 'en';
-  try { locale = await getLocale(); } catch { /* fall back to en */ }
+  try { locale = baseLocale(await getLocale()); } catch { /* fall back to en */ }
   const t = await getTranslations({ locale, namespace: 'notfound' });
   const tNav = await getTranslations({ locale, namespace: 'nav' });
   const tHome = await getTranslations({ locale, namespace: 'home' });

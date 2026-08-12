@@ -1,7 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import { getTranslations } from 'next-intl/server';
-import { rtlLocales, type Locale } from '@/lib/i18n';
+import { numLocale, rtlLocales, type Locale } from '@/lib/i18n';
 import {
   getLegalDoc,
   legalContentLocale,
@@ -79,7 +79,7 @@ export async function LegalArticle({ kind, locale }: { kind: LegalKind; locale: 
   const tNav = await getTranslations({ locale, namespace: 'nav' });
   const dated = DATED_KINDS.has(kind);
   const updatedLabel = dated
-    ? t('last_updated', { date: new Intl.DateTimeFormat(locale, { dateStyle: 'long', timeZone: 'UTC' }).format(new Date(LEGAL_UPDATED_ISO)) })
+    ? t('last_updated', { date: new Intl.DateTimeFormat(numLocale(locale), { dateStyle: 'long', timeZone: 'UTC' }).format(new Date(LEGAL_UPDATED_ISO)) })
     : null;
 
   const jsonLd = {

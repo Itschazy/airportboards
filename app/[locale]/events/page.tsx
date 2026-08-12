@@ -3,7 +3,7 @@ import { withBrand } from '@/lib/title';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import Link from 'next/link';
 import { getEventsForHub, type EventData, type EventType } from '@/lib/event-content';
-import { locales } from '@/lib/i18n';
+import { numLocale, locales } from '@/lib/i18n';
 
 const BASE = 'https://airportsboard.live';
 type Props = { params: Promise<{ locale: string }> };
@@ -34,7 +34,7 @@ export default async function EventsHubPage({ params }: Props) {
   const tNav = await getTranslations({ locale, namespace: 'nav' });
   const { upcoming, past } = getEventsForHub();
 
-  const dateFmt = new Intl.DateTimeFormat(locale, { day: 'numeric', month: 'short', year: 'numeric', timeZone: 'UTC' });
+  const dateFmt = new Intl.DateTimeFormat(numLocale(locale), { day: 'numeric', month: 'short', year: 'numeric', timeZone: 'UTC' });
 
   const breadcrumb = {
     '@context': 'https://schema.org',

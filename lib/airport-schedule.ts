@@ -1,3 +1,4 @@
+import { numLocale } from '@/lib/i18n';
 import fs from 'fs';
 import path from 'path';
 
@@ -162,7 +163,7 @@ export function getAirportSchedule(iata: string, known: Set<string>): AirportSch
 
 /** Weekday names in the reader's own language — no translation strings needed. */
 export function weekdayNames(locale: string, style: 'short' | 'long' = 'short'): string[] {
-  const fmt = new Intl.DateTimeFormat(locale, { weekday: style, timeZone: 'UTC' });
+  const fmt = new Intl.DateTimeFormat(numLocale(locale), { weekday: style, timeZone: 'UTC' });
   // 2024-01-01 was a Monday; seven consecutive days give Monday-first names.
   return Array.from({ length: 7 }, (_, i) => fmt.format(new Date(Date.UTC(2024, 0, 1 + i))));
 }

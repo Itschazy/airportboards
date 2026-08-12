@@ -1,4 +1,5 @@
 'use client';
+import { numLocale } from '@/lib/i18n';
 
 import { useEffect, useState, useCallback, useRef } from 'react';
 import Link from 'next/link';
@@ -334,7 +335,7 @@ function BottomSheet({ flight, mode, onClose, tz, locale, updLabel, originIata, 
     // midnight (see its -300 guard), so shifting now by it lands on the right day, and on a
     // flight that has already gone it steps back, which is equally correct.
     const dateStr = new Date(Date.now() + (mins ?? 0) * 60_000)
-      .toLocaleDateString(locale, { timeZone: tz || undefined, weekday: 'short', month: 'short', day: 'numeric' });
+      .toLocaleDateString(numLocale(locale), { timeZone: tz || undefined, weekday: 'short', month: 'short', day: 'numeric' });
 
     const Icon = ({ name }: { name: string }) => {
       const p = { width: 26, height: 26, viewBox: '0 0 24 24', fill: 'none', stroke: color, strokeWidth: 1.8, strokeLinecap: 'round' as const, strokeLinejoin: 'round' as const, style: { flexShrink: 0, opacity: 0.9 } };
@@ -807,7 +808,7 @@ export function FlightBoard({ airport, locale, defaultMode = 'departures', displ
 
   // Live clock
   useEffect(() => {
-    const tick = () => setTime(new Date().toLocaleTimeString(locale, {
+    const tick = () => setTime(new Date().toLocaleTimeString(numLocale(locale), {
       timeZone: airport.tz || undefined,
       hour: '2-digit', minute: '2-digit', hour12: false,
     }));
@@ -927,7 +928,7 @@ export function FlightBoard({ airport, locale, defaultMode = 'departures', displ
               сообщала момент, не совпадающий ни с временем аэропорта, ни с временем
               читателя, причём без всякой пометки, чей это пояс. Всё остальное табло
               показано во времени аэропорта. */}
-          <time suppressHydrationWarning dateTime={lastUpdated?.toISOString()} title={lastUpdated ? lastUpdated.toLocaleString(locale, { timeZone: airport.tz || 'UTC', timeZoneName: 'short' }) : undefined} style={{ fontSize: 12, color: C.secondary, opacity: 0.85 }}>{updLabel || '—'}</time>
+          <time suppressHydrationWarning dateTime={lastUpdated?.toISOString()} title={lastUpdated ? lastUpdated.toLocaleString(numLocale(locale), { timeZone: airport.tz || 'UTC', timeZoneName: 'short' }) : undefined} style={{ fontSize: 12, color: C.secondary, opacity: 0.85 }}>{updLabel || '—'}</time>
           {isStale && (
             <span style={{ fontSize: 12, fontWeight: 700, color: C.orange, letterSpacing: '0.02em' }}>
               {' · '}{t('board_stale')}
@@ -1102,7 +1103,7 @@ export function FlightBoard({ airport, locale, defaultMode = 'departures', displ
           }}>
             {t('board_all_past', {
               date: lastUpdated
-                ? lastUpdated.toLocaleString(locale, {
+                ? lastUpdated.toLocaleString(numLocale(locale), {
                     timeZone: airport.tz || 'UTC', dateStyle: 'long', timeStyle: 'short',
                   })
                 : '—',

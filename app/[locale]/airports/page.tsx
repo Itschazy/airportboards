@@ -4,13 +4,13 @@ import { getTranslations , setRequestLocale } from 'next-intl/server';
 import Link from 'next/link';
 import { getCountries } from '@/lib/airports';
 import { getCountryName } from '@/lib/places';
-import { locales } from '@/lib/i18n';
+import { numLocale, locales } from '@/lib/i18n';
 import { localizedMeasuredOn } from '@/lib/measured-date';
 import { worldServiceCounts } from '@/lib/warm';
 
 // Counts are passed to ICU pre-formatted for the locale: a bare placeholder renders 6069,
 // while German expects 6.069 and French 6 069.
-const fmt = (n: number, locale: string) => n.toLocaleString(locale);
+const fmt = (n: number, locale: string) => n.toLocaleString(numLocale(locale));
 
 const BASE = 'https://airportsboard.live';
 type Props = { params: Promise<{ locale: string }> };
@@ -107,7 +107,7 @@ export default async function AirportsIndexPage({ params }: Props) {
         {t('sec_countries')}
       </h1>
       <p style={{ fontSize: 15, color: '#8A8A8A', margin: '0 0 14px' }}>
-        {countries.length.toLocaleString(locale)} {t('m_countries')}
+        {countries.length.toLocaleString(numLocale(locale))} {t('m_countries')}
       </p>
       {world.generated && world.withService > 0 && (
         <p style={{ fontSize: 15, lineHeight: 1.55, color: '#C7C7CC', margin: '0 0 28px', maxWidth: 660 }}>
@@ -126,7 +126,7 @@ export default async function AirportsIndexPage({ params }: Props) {
             }}>
               <span style={{ fontSize: 20, flexShrink: 0, width: 26, textAlign: 'center', lineHeight: 1 }}>{flag(c.iso2)}</span>
               <span style={{ flex: 1, minWidth: 0, fontSize: 15, color: '#E4E4E7', fontWeight: 600, whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>{c.name}</span>
-              <span style={{ fontSize: 13, color: '#8A8A8A', flexShrink: 0, fontVariantNumeric: 'tabular-nums' }}>{c.count.toLocaleString(locale)}</span>
+              <span style={{ fontSize: 13, color: '#8A8A8A', flexShrink: 0, fontVariantNumeric: 'tabular-nums' }}>{c.count.toLocaleString(numLocale(locale))}</span>
             </Link>
           </li>
         ))}

@@ -8,12 +8,12 @@ import { COUNTRY_SLUG_ALIASES } from '@/lib/country-slug-aliases';
 import { getAirportName } from '@/lib/airport-names';
 import { getCityName, getCountryName } from '@/lib/places';
 import { countryIn as esCountryIn } from '@/lib/es-article';
-import { locales } from '@/lib/i18n';
+import { numLocale, locales } from '@/lib/i18n';
 import { splitByService, serviceMeasuredOn } from '@/lib/warm';
 import { localizedMeasuredOn } from '@/lib/measured-date';
 
 // See app/[locale]/airports/page.tsx — ICU renders a bare placeholder ungrouped.
-const fmt = (n: number, locale: string) => n.toLocaleString(locale);
+const fmt = (n: number, locale: string) => n.toLocaleString(numLocale(locale));
 
 const BASE = 'https://airportsboard.live';
 type Props = { params: Promise<{ locale: string; country: string }> };

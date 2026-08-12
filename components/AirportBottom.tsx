@@ -1,3 +1,4 @@
+import { numLocale } from '@/lib/i18n';
 import { getTranslations } from 'next-intl/server';
 import Link from 'next/link';
 import type { Airport } from '@/lib/airports';
@@ -255,7 +256,7 @@ export async function AirportBottom({ airport, locale, about, displayName, fligh
       // JSON-LD did not — and the JSON-LD is the copy an answer engine quotes, where a
       // timeless-sounding claim about a timetable is exactly the wrong thing to hand over.
       const asOfLabel = sched.asOf
-        ? new Intl.DateTimeFormat(locale, { year: 'numeric', month: 'long', day: 'numeric' })
+        ? new Intl.DateTimeFormat(numLocale(locale), { year: 'numeric', month: 'long', day: 'numeric' })
             .format(new Date(`${sched.asOf}T00:00:00Z`)).replace(/\s*г\.?$/, '')
         : '';
       return [{ q: tUi('sched_faq_q', { a: name, deA: deName }), a: tUi('sched_faq_a', { m: asOfLabel, a: name, deA: deName, d: sched.dailyCount, i: sched.irregularCount, ex }) }];
@@ -446,7 +447,7 @@ export async function AirportBottom({ airport, locale, about, displayName, fligh
                 // Russian renders "27 июля 2026 г." — its trailing period collides with the
                 // sentence's own, giving "…2026 г.. Только регулярные".
                 m: sched.asOf
-                  ? new Intl.DateTimeFormat(locale, { year: 'numeric', month: 'long', day: 'numeric' })
+                  ? new Intl.DateTimeFormat(numLocale(locale), { year: 'numeric', month: 'long', day: 'numeric' })
                       .format(new Date(`${sched.asOf}T00:00:00Z`))
                       .replace(/\s*г\.?$/, '')
                   : '',
@@ -536,7 +537,7 @@ export async function AirportBottom({ airport, locale, about, displayName, fligh
                   if (!y || !mo) return ext.guide.asOf;
                   // Russian formats as "июль 2026 г." — a trailing period that collides with
                   // the sentence's own, giving "июль 2026 г.. Время".
-                  return new Intl.DateTimeFormat(locale, { year: 'numeric', month: 'long' })
+                  return new Intl.DateTimeFormat(numLocale(locale), { year: 'numeric', month: 'long' })
                     .format(new Date(Date.UTC(y, mo - 1, 1)))
                     .replace(/\.$/, '');
                 })(),

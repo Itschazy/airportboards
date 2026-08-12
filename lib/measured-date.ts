@@ -1,3 +1,4 @@
+import { numLocale } from '@/lib/i18n';
 /**
  * Render the schedule-measurement date the way a reader of this locale writes dates.
  *
@@ -14,7 +15,7 @@
  */
 export function localizedMeasuredOn(iso: string, locale: string): string {
   try {
-    return new Intl.DateTimeFormat(locale, { dateStyle: 'long', timeZone: 'UTC' })
+    return new Intl.DateTimeFormat(numLocale(locale), { dateStyle: 'long', timeZone: 'UTC' })
       .format(new Date(`${iso}T00:00:00Z`));
   } catch {
     return iso;   // unparseable or unknown locale — the ISO string is still true

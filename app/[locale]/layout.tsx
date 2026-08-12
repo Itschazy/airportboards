@@ -3,7 +3,7 @@ import { NextIntlClientProvider } from 'next-intl';
 import { getMessages, setRequestLocale } from 'next-intl/server';
 import { clientMessages } from '@/lib/client-messages';
 import { notFound } from 'next/navigation';
-import { locales, rtlLocales, type Locale } from '@/lib/i18n';
+import { locales, rtlLocales, numLocale, type Locale } from '@/lib/i18n';
 import { SiteHeader } from '@/components/SiteHeader';
 import { SiteFooter } from '@/components/SiteFooter';
 import { YandexMetrica } from '@/components/YandexMetrica';
@@ -96,7 +96,7 @@ export default async function LocaleLayout({
             локалью по умолчанию: на арабской странице счётчик «31 رحلة مغادرة» печатался
             западными цифрами, тогда как серверная часть той же страницы давала «٢٬٨٠١»
             восточными. Одна страница — две системы счисления. */}
-        <NextIntlClientProvider locale={locale} messages={clientMessages(messages)}>
+        <NextIntlClientProvider locale={numLocale(locale)} messages={clientMessages(messages)}>
           <SiteHeader locale={locale as Locale} />
           <main style={{ flex: '1 0 auto', width: '100%' }}>{children}</main>
           <SiteFooter locale={locale as Locale} />
