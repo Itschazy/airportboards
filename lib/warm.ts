@@ -158,8 +158,31 @@ export function dueAirports(now = Date.now()): Due[] {
     if (!pinned && tier.skipNight && isLocalNight(airport.tz)) continue;
     const ts = getStaleTs(`departures:dep_iata=${iata}`) ?? 0;
     const interval = pinned ? Math.min(tier.intervalMin, DEMAND_INTERVAL_MIN) : tier.intervalMin;
-    const overdue = (now - ts) / (interval * 60_000);
-    if (overdue < 1) continue;
+    /**
+     * Допуск на то, что запись ложится ПОЗЖЕ начала тика.
+     *
+     * Без него прогрев systematically промахивался мимо собственного юбилейного тика.
+     * Механика: тик стартует в HH:00:03, а прошлая запись легла в HH:00:0x…HH:00:16 —
+     * `put()` пишется после ответа поставщика, со сдвигом `setTimeout(120)` на аэропорт.
+     * Значит на юбилейном тике возраст на секунды МЕНЬШЕ интервала:
+     *
+     *     KZN прогрет 00:00:10 → тик 06:00:03  overdue = 0.99964  → выброшен
+     *     IST прогрет 00:00:07 → тик 06:00:03  overdue = 0.99977  → выброшен
+     *     ORD прогрет 20:00:06 → тик 02:00:03  overdue = 0.99986  → выброшен
+     *     ORD                    тик 04:00:03  overdue = 1.33319  → взят
+     *
+     * Тики идут раз в два часа, поэтому промах стоит ровно два лишних часа — и стоит их
+     * КАЖДОМУ ярусу: цель 6 ч превращалась в 8, 12 в 14, 24 в 26. Любой аэропорт,
+     * записанный позже первых двух секунд тика, попадал под это гарантированно.
+     *
+     * Пять минут выбраны с запасом: реальное отставание записи измеряется секундами
+     * (даже триста аэропортов по 120 мс — это 36 секунд), а до следующего тика два часа,
+     * так что двойного прогрева допуск вызвать не может ни на одном ярусе.
+     */
+    const TICK_LAG_MS = 5 * 60_000;
+    const age = now - ts;
+    const overdue = age / (interval * 60_000);
+    if (age + TICK_LAG_MS < interval * 60_000) continue;
     out.push({ iata, tier, overdue, pinned });
   }
   // Busiest tier first, most overdue within it.

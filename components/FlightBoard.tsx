@@ -260,7 +260,22 @@ function BottomSheet({ flight, mode, onClose, tz, locale, updLabel, originIata, 
       m: +(parts.find(p => p.type === 'minute')?.value ?? '0'),
     };
   };
-  const minsUntil = (timeStr?: string): number | null => {
+  /**
+   * Сколько минут до рейса. ОТРИЦАТЕЛЬНОЕ значение означает, что время уже прошло.
+   *
+   * Считалось это по строке «05:05» с докруткой `if (diff < -300) diff += 1440` — то есть
+   * всё, что старше пяти часов, объявлялось завтрашним. На протухшем борту это давало
+   * карточку «Выход закроется в 974 мин», «Срочно направляйтесь к выходу» и завтрашнюю
+   * дату. Замер 12.08 на девяти бортах: 91 строка из 287, то есть треть всех открытий
+   * карточки — а открыть карточку и есть единственное осмысленное действие на странице.
+   *
+   * Отметка времени у строки есть (`f.ts` — оценочное время, а при его отсутствии
+   * расписание, ровно как и `dispTime`), поэтому арифметика на строках нужна только там,
+   * где её нет. Докрутка в этом запасном пути СОХРАНЕНА и остаётся верной: вылет в 00:35,
+   * увиденный в 22:00, действительно завтрашний.
+   */
+  const minsUntil = (timeStr?: string, ts?: number): number | null => {
+    if (ts) return Math.round((ts * 1000 - Date.now()) / 60_000);
     if (!timeStr) return null;
     const [h, m] = timeStr.split(':').map(Number);
     if (isNaN(h) || isNaN(m)) return null;
@@ -325,7 +340,20 @@ function BottomSheet({ flight, mode, onClose, tz, locale, updLabel, originIata, 
     const statusLabel = t(`st_${status}`);
     const isDep = mode === 'departures';
     const dispTime = flight.actual || flight.scheduled;
-    const mins = minsUntil(dispTime);
+    const mins = minsUntil(dispTime, flight.ts);
+    /**
+     * Время рейса УЖЕ прошло по часам читателя.
+     *
+     * Статус при этом может по-прежнему говорить «посадка» или «по расписанию»: он строится
+     * от часов СНИМКА (см. mapStatus в lib/flights.ts), а снимку бывает шесть часов. Писать
+     * из-за этого «Вылетел» нельзя — вылета снимок не видел, и это было бы выдуманным фактом.
+     * А вот гнать человека к выходу и считать обратный отсчёт — нельзя тем более.
+     *
+     * Поэтому у прошедшего рейса карточка становится нейтральной: время, направление, выход,
+     * терминал — и ни одного побуждения к действию. Возраст данных читатель видит тут же:
+     * подпись `updLabel` приезжает в саму карточку.
+     */
+    const past = mins != null && mins < 0;
     const n = localNow();
     const nowClock = `${String(n.h).padStart(2, '0')}:${String(n.m).padStart(2, '0')}`;
     // The date of the FLIGHT, not of the reader. This printed today unconditionally, so a
@@ -357,15 +385,20 @@ function BottomSheet({ flight, mode, onClose, tz, locale, updLabel, originIata, 
       hero = { label: t('st_baggage'), main: flight.baggage || dispTime };
     } else if (status === 'cancelled') {
       hero = { label: t('h_cancel_label'), main: t('h_cancel_main'), sub: t('h_cancel_sub'), icon: 'bell', medium: true };
-    } else if (status === 'boarding') {
+    } else if (status === 'boarding' && !past) {
       hero = { label: t('h_board_label'), main: t('h_board_main'), sub: t('gate_closes', { m: Math.max(1, mins ?? 0) }), bottom: dispTime, icon: 'plane', medium: true };
-    } else if (status === 'finalcall') {
+    } else if (status === 'finalcall' && !past) {
       hero = { label: t('h_final_label'), main: t('h_final_main'), sub: t('gate_closes', { m: Math.max(1, mins ?? 0) }), bottom: dispTime, icon: 'bell', medium: true };
-    } else if (status === 'delayed') {
+    } else if (status === 'delayed' && (!past || (flight.delay ?? 0) > 0)) {
       // The struck "was HH:MM" line only makes sense when the displayed time differs from it.
       hero = { label: t('h_delay_label', { dur: fmtDur(flight.delay && flight.delay > 0 ? flight.delay : Math.max(0, mins ?? 0), t) }), main: dispTime, sub: flight.actual && flight.actual !== flight.scheduled ? t('was', { time: flight.scheduled }) : undefined, subStrike: true, icon: 'clock' };
     } else {
-      hero = { label: isDep ? t('departs_in') : t('arrives_in'), main: mins != null && mins > 0 ? fmtDur(mins, t) : t('now'), sub: t('on_schedule', { time: flight.scheduled }), icon: 'clock' };
+      hero = past
+        // Нейтральная карточка: время и подпись «вылет»/«прибытие», без отсчёта и без
+        // утверждения, что рейс ушёл. Строку «По расписанию HH:MM» оставляем только
+        // когда показанное время от расписания отличается, иначе она дублирует главное.
+        ? { label: isDep ? t('departure') : t('arrival'), main: dispTime, sub: flight.actual && flight.actual !== flight.scheduled ? t('on_schedule', { time: flight.scheduled }) : undefined, subStrike: !!flight.actual, icon: 'clock' }
+        : { label: isDep ? t('departs_in') : t('arrives_in'), main: mins != null && mins > 0 ? fmtDur(mins, t) : t('now'), sub: t('on_schedule', { time: flight.scheduled }), icon: 'clock' };
     }
 
     // ── Detail grid: only fields with data, never the status (already in hero) ──
@@ -390,7 +423,9 @@ function BottomSheet({ flight, mode, onClose, tz, locale, updLabel, originIata, 
     const routeFrom = isDep ? { code: originIata, name: originName } : { code: otherIata, name: otherPlace };
     const routeTo   = isDep ? { code: otherIata, name: otherPlace } : { code: originIata, name: originName };
 
-    const notice =
+    // У прошедшего рейса совета «приезжайте заранее» быть не может по смыслу: ехать уже
+    // некуда. Это тот же дефект, что и обратный отсчёт, только словами.
+    const notice = past ? null :
       status === 'boarding' ? t('notice_board') :
       status === 'finalcall' ? t('notice_final') :
       status === 'delayed' ? t('notice_delayed') :

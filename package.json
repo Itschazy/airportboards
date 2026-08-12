@@ -28,7 +28,9 @@
     "check:cache": "node scripts/check-cache-headers.mjs",
     "check:shift": "node scripts/check-board-shift.mjs",
     "check:numerals": "node scripts/check-numerals.mjs",
-    "check:headers": "node scripts/check-header-scope.mjs"
+    "check:headers": "node scripts/check-header-scope.mjs",
+    "check:pastcard": "node scripts/check-past-flight-card.mjs",
+    "check:warmtick": "node scripts/check-warm-tick.mjs"
   },
   "dependencies": {
     "next": "^15.3.3",

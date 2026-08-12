@@ -419,10 +419,15 @@ const WARM_HUBS = [
  */
 export async function warmHubs(): Promise<{
   warmed: number; skippedBudget: number; eventAirports: string[]; tiers: Record<string, number>;
+  /** Коды, чьи борта в этом тике действительно обновились — чтобы вызывающий мог сбросить
+   *  для них кэш страниц. Без этого свежие данные лежат в хранилище, а страница отдаётся
+   *  прежняя: замер 12.08 на PEK показал отставание ровно в восемь часов. */
+  warmedIatas: string[];
 }> {
   const eventAirports = getActiveEventAirports();
   const tiers: Record<string, number> = {};
-  if (!AIRLABS_KEY) return { warmed: 0, skippedBudget: 0, eventAirports, tiers };
+  const warmedIatas: string[] = [];
+  if (!AIRLABS_KEY) return { warmed: 0, skippedBudget: 0, eventAirports, tiers, warmedIatas };
 
   const due = dueAirports();
   // Events first, then the most overdue. Legacy list only while service data is missing.
@@ -456,9 +461,10 @@ export async function warmHubs(): Promise<{
     try { await fetchRaw(`arr_iata=${iata}`, 'arrivals', { live: true, kind: 'warm' }); } catch { /* ignore */ }
     spentHere += 2;
     warmed++;
+    warmedIatas.push(iata);
     const t = tierByIata.get(iata) ?? 'event/legacy';
     tiers[t] = (tiers[t] ?? 0) + 1;
     await new Promise(r => setTimeout(r, 120)); // gentle stagger
   }
-  return { warmed, skippedBudget: Math.max(0, due.length - warmed), eventAirports, tiers };
+  return { warmed, skippedBudget: Math.max(0, due.length - warmed), eventAirports, tiers, warmedIatas };
 }
