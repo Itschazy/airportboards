@@ -109,7 +109,15 @@ export function Faq({ items }: { items: { q: string; a: string }[] }) {
     <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
       {items.map((it, i) => (
         <div key={i} style={{ background: C.card, border: C.border, borderRadius: 16, overflow: 'hidden' }}>
-          <button onClick={() => setOpen(open === i ? null : i)} style={{
+          {/* Раскрывающийся блок по ARIA APG: без aria-expanded программа чтения не сообщает
+            СОСТОЯНИЕ — человек слышит вопрос, но не знает, раскрыт ли ответ и что кнопка
+            вообще что-то раскрывает. Девять ответов из десяти на странице свёрнуты. */}
+        <button
+          onClick={() => setOpen(open === i ? null : i)}
+          aria-expanded={open === i}
+          aria-controls={`faq-a-${i}`}
+          id={`faq-q-${i}`}
+          style={{
             width: '100%', display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 12,
             padding: '14px 16px', background: 'none', border: 'none', color: '#FFFFFF', fontSize: 15, fontWeight: 600,
             textAlign: 'start', cursor: 'pointer',
@@ -119,7 +127,7 @@ export function Faq({ items }: { items: { q: string; a: string }[] }) {
               <path d="M3 5L6.5 8.5L10 5" stroke="#8A8A8A" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" />
             </svg>
           </button>
-          <p style={{ display: open === i ? 'block' : 'none', margin: 0, padding: '0 16px 16px', fontSize: 14, lineHeight: 1.55, color: C.sub }}>
+          <p id={`faq-a-${i}`} role="region" aria-labelledby={`faq-q-${i}`} style={{ display: open === i ? 'block' : 'none', margin: 0, padding: '0 16px 16px', fontSize: 14, lineHeight: 1.55, color: C.sub }}>
             {it.a}
           </p>
         </div>

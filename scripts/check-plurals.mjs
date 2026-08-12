@@ -107,4 +107,40 @@ if (!failures) {
       + ` | ${new IntlMessageFormat(ru, 'ru').format({ count: n })}`);
   }
 }
+
+// ── Арабский дуал: числительное в ветке `two` — ошибка ────────────────────────────────────
+//
+// В арабском двойственное число выражается САМОЙ ФОРМОЙ слова, а не числом рядом с ним:
+// CLDR даёт «قبل ساعتين» и «قبل يومين», а не «قبل ٢ ساعتين». Семь веток `two` в каталоге
+// содержали `#` и печатали «2 два-дня», при том что восемь других веток в том же файле были
+// написаны верно — то есть это была не позиция, а недосмотр.
+//
+// Исключение: если ВСЕ ветки плурала состоят из одного `#`, это не текст, а обёртка вокруг
+// числа (так сделаны home.per_day и home.city_desc) — там `#` на своём месте.
+{
+  const ar = JSON.parse(fs.readFileSync('messages/ar.json', 'utf8'));
+  const bad = [];
+  const walk = (o, path = '') => {
+    if (o && typeof o === 'object') {
+      for (const [k, v] of Object.entries(o)) walk(v, path ? `${path}.${k}` : k);
+      return;
+    }
+    if (typeof o !== 'string' || !o.includes('plural')) return;
+    const branches = [...o.matchAll(/(zero|one|two|few|many|other)\s*\{([^{}]*)\}/g)];
+    if (!branches.length) return;
+    // Обёртка вокруг числа — все ветки это ровно «#».
+    if (branches.every((b) => b[2].trim() === '#')) return;
+    const two = branches.find((b) => b[1] === 'two');
+    if (two && two[2].includes('#')) bad.push([path, two[2].trim()]);
+  };
+  walk(ar);
+  console.log('\nарабский дуал:\n');
+  if (bad.length) {
+    failures += bad.length;
+    for (const [path, v] of bad) console.log(`  ✗ ${path}: two {${v}} — дуал не требует числительного`);
+  } else {
+    console.log('  ✓ числительных в ветках two нет');
+  }
+}
+
 process.exit(failures ? 1 : 0);

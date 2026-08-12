@@ -62,7 +62,10 @@ export function SiteHeader({ locale }: { locale: Locale }) {
             aria-label={`${tNav('language')}: ${localeNames[locale]}`}
             style={{
               display: 'flex', alignItems: 'center', gap: 5,
-              padding: '9px 12px', minHeight: 40,
+              // 44, а не 40: шапка высотой 48, поднять можно бесплатно и ничего не сдвигая.
+          // Пункты самого меню при этом НЕ трогаем — у выпадающего списка нет max-height и
+          // overflow-y, и при 44 на ряд нижние языки уехали бы за экран.
+          padding: '11px 12px', minHeight: 44,
               borderRadius: 8,
               border: `1px solid ${open ? '#3A3A3C' : '#1A1A1A'}`,
               background: open ? '#1C1C1E' : 'transparent',

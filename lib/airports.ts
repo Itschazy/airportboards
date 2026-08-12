@@ -97,6 +97,25 @@ function aliasesOf(iata: string): string[] {
  * "أرخانغلسك" all returned nothing for Arkhangelsk. The aliases file covers the big airports
  * well (16.5 entries each) but is not a substitute for the names the site itself renders.
  */
+/**
+ * Сколько вылетов в сутки измерено у аэропорта. Нужен как ВТОРОЙ ключ сортировки выдачи.
+ *
+ * До этого ничью разрешал `a.city.localeCompare(b.city)`, а у аэропортов одного города он
+ * возвращает 0 — и порядок доставался позиции строки в data/airports.json. Замер на запросе
+ * «москва»: BKA и OSF (по нулю рейсов) стояли ВЫШЕ Домодедова (51) и Внукова (89). Человек,
+ * ищущий московский аэропорт, первыми видел два аэродрома без единого рейса.
+ */
+let SERVICE: Record<string, number> | null = null;
+function serviceOf(iata: string): number {
+  if (!SERVICE) {
+    try {
+      const raw = JSON.parse(fs.readFileSync(path.join(process.cwd(), 'data/airport-service.json'), 'utf8'));
+      SERVICE = (raw.airports ?? raw) as Record<string, number>;
+    } catch { SERVICE = {}; }
+  }
+  return SERVICE[iata] ?? 0;
+}
+
 let LOCAL_NAMES: { city: Record<string, Record<string, string>>; air: Record<string, Record<string, string>> } | null = null;
 function localNames() {
   if (!LOCAL_NAMES) {
@@ -192,6 +211,38 @@ const STOP_FOLDED = new Set([...STOP].map(fold));
 // Per-airport "needles": every searchable token (iata, name/city words, country,
 // whole city, and all multilingual aliases + their words). Built once, cached.
 let NEEDLES: Map<string, string[]> | null = null;
+/**
+ * Страна — ОТДЕЛЬНЫЙ и намеренно слабый признак.
+ *
+ * Раньше она лежала в том же наборе, что и город, то есть весила ровно столько же: префикс
+ * 40 очков. Посимвольный прогон показал, чем это кончается: по запросам «к», «ка», «каз»,
+ * «каза» аэропорта Казани в выдаче НЕТ вовсе — на «каз» совпал 31 аэропорт, 22 из них
+ * казахстанские, и все с теми же сорока очками, а разрешал ничью алфавит. KZN появлялся
+ * только с пятого символа. При этом «Казань» — вторая по посещаемости страница сайта
+ * (2095 визитов за 30 дней).
+ *
+ * Убирать страну целиком нельзя: запрос «Казахстан» — законный и должен что-то находить.
+ * Поэтому она осталась, но её вклад ограничен COUNTRY_MAX и считается ТОЛЬКО когда по
+ * основным признакам не совпало ничего, — так совпадение по городу всегда впереди.
+ */
+let COUNTRY_NEEDLES: Map<string, string[]> | null = null;
+function countryNeedlesOf(a: Airport): string[] {
+  if (!COUNTRY_NEEDLES) COUNTRY_NEEDLES = new Map();
+  let n = COUNTRY_NEEDLES.get(a.iata);
+  if (n) return n;
+  const set = new Set<string>();
+  if (a.country) {
+    set.add(fold(a.country.toLowerCase()));
+    for (const w of splitWords(a.country)) if (w.length >= 2) set.add(w);
+  }
+  n = [...set].filter(Boolean);
+  COUNTRY_NEEDLES.set(a.iata, n);
+  return n;
+}
+
+/** Потолок вклада страны. Ниже 12 — то есть слабее даже подстроки в названии города. */
+const COUNTRY_MAX = 8;
+
 function needlesOf(a: Airport): string[] {
   if (!NEEDLES) NEEDLES = new Map();
   let n = NEEDLES.get(a.iata);
@@ -200,7 +251,6 @@ function needlesOf(a: Airport): string[] {
   set.add(a.iata.toLowerCase());
   if (a.icao) set.add(a.icao.toLowerCase());
   set.add(fold(a.city.toLowerCase()));
-  if (a.country) set.add(fold(a.country.toLowerCase()));
   for (const w of splitWords(a.name)) set.add(w);
   for (const w of splitWords(a.city)) set.add(w);
   for (const al of aliasesOf(a.iata)) {
@@ -276,6 +326,12 @@ export function searchAirports(query: string, limit = 10): Airport[] {
     for (const tok of tokens) {
       const m = tokenScore(tok, needles);
       if (m > 0) { matched++; sum += m; if (m >= 40) strong = true; }
+      else {
+        // Запасной путь: по городу, названию и кодам не совпало — пробуем страну, но с
+        // потолком и БЕЗ права считаться сильным совпадением.
+        const cm = tokenScore(tok, countryNeedlesOf(a));
+        if (cm > 0) { matched++; sum += Math.min(cm, COUNTRY_MAX); }
+      }
     }
     if (matched < needed) continue;
     if (matched < tokens.length && !strong) continue; // a token was skipped → need a strong anchor
@@ -286,7 +342,13 @@ export function searchAirports(query: string, limit = 10): Airport[] {
     results.push({ ...a, _score: score });
   }
   return results
-    .sort((a, b) => b._score - a._score || a.city.localeCompare(b.city))
+    // Ничья разрешается по РАЗМЕРУ, а не по алфавиту: сначала вес хаба, затем измеренное
+    // число вылетов в сутки, и только третьим ключом — алфавит. Иначе у аэропортов одного
+    // города localeCompare возвращает 0 и порядок решает позиция строки в JSON.
+    .sort((a, b) => b._score - a._score
+      || (HUB_WEIGHT.get(b.iata) ?? 0) - (HUB_WEIGHT.get(a.iata) ?? 0)
+      || serviceOf(b.iata) - serviceOf(a.iata)
+      || a.city.localeCompare(b.city))
     .slice(0, limit)
     .map(({ _score, ...a }) => a);
 }

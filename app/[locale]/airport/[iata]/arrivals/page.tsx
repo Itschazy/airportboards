@@ -142,8 +142,14 @@ export default async function ArrivalsPage({ params }: Props) {
   const city = getCityName(airport.city, locale);
   const country = getCountryName(airport.country, locale);
   const showCity = showCityFlag(getAirportNameBare(airport.iata, locale, airport.name), city, airport.city);
-  const h1 = t('arrivals_title', { airport: name, iata: airport.iata, city, showCity });
-  const desc = t('arrivals_description', { airport: name, iata: airport.iata, city });
+  // Возраст решает и здесь, а не только в generateMetadata. h1 уходит в JSON-LD полем
+  // `name`, поэтому один и тот же объект обещал «сегодня, в реальном времени» и тут же
+  // ставил dateModified восьмидневной давности. Порог тот же, что у заголовка вкладки.
+  const STALE_AFTER_H1 = 12 * 60 * 60 * 1000;
+  const h1At = getBoardFetchedAt(airport.iata, 'arrivals');
+  const h1Fresh = h1At != null && Date.now() - h1At <= STALE_AFTER_H1;
+  const h1 = t(h1Fresh ? 'arrivals_title' : 'arrivals_title_stale', { airport: name, iata: airport.iata, city, showCity });
+  const desc = t(h1Fresh ? 'arrivals_description' : 'arrivals_description_stale', { airport: name, iata: airport.iata, city });
 
   // Computed once and used twice: as the BreadcrumbList below and as the visible nav that
   // makes that list true. These pages previously had no link to the parent airport, the city,

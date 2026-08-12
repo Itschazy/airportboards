@@ -3,6 +3,7 @@ import { baseLocale } from '@/lib/i18n';
 import Link from 'next/link';
 import { AirportSearch } from '@/components/AirportSearch';
 import { POPULAR_AIRPORTS, getAirport } from '@/lib/airports';
+import { getCityName } from '@/lib/places';
 
 // Localized 404 — replaces Next's English default. Renders inside the [locale] layout
 // (header/footer), so it just supplies helpful body content: a search box, popular
@@ -30,7 +31,10 @@ export default async function NotFound() {
         {popular.map(a => (
           <Link key={a.iata} href={`/${locale}/airport/${a.iata}`} style={{ background: '#0B0B0B', border: '1px solid #1A1A1A', borderRadius: 12, padding: '9px 14px', fontSize: 14, color: '#E4E4E7', textDecoration: 'none', display: 'flex', gap: 8 }}>
             <span style={{ fontWeight: 700, color: '#0A84FF' }}>{a.iata}</span>
-            <span>{a.city}</span>
+            {/* Город ПЕРЕВЕДЁННЫЙ: на русской странице чипы были подписаны «New York»,
+                «London», «Paris», хотя переводы в data/city-names.json есть и главная
+                со внутренним поиском их применяют. */}
+            <span>{getCityName(a.city, locale)}</span>
           </Link>
         ))}
       </div>
