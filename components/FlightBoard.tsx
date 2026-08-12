@@ -533,8 +533,14 @@ function BottomSheet({ flight, mode, onClose, tz, locale, updLabel, originIata, 
       }} />
       <div
         ref={sheetRef}
-        role="dialog"
-        aria-modal="true"
+        // Пока шторка закрыта, её не должно быть ни в дереве доступности, ни в обходе Tab:
+        // в отданной разметке она лежит всегда, и кнопка «Закрыть» была 54-й остановкой —
+        // между последней строкой рейса и кнопкой «показать ещё». role и aria-modal тоже
+        // объявляются только когда шторка видна: постоянный aria-modal="true" сообщает
+        // программе чтения, что остальная страница недоступна, — при закрытой шторке это ложь.
+        inert={!vis}
+        role={vis ? 'dialog' : undefined}
+        aria-modal={vis ? true : undefined}
         aria-label={flight ? `${flight.flight} — ${flight.destination || flight.origin || ''}` : undefined}
         tabIndex={-1}
         className="sheet-scroll"
@@ -570,7 +576,7 @@ function BottomSheet({ flight, mode, onClose, tz, locale, updLabel, originIata, 
 
 // ─── Main Component ───────────────────────────────────────────────────────────
 
-export function FlightBoard({ airport, locale, defaultMode = 'departures', displayName, initialFlights, initialFetchedAt, boardTotal, lead, statusLine = null, noService = false, pendingNote = null, infoOnly = false }: {
+export function FlightBoard({ airport, locale, defaultMode = 'departures', displayName, initialFlights, initialFetchedAt, boardTotal, lead, statusLine = null, noService = false, pendingNote = null, infoOnly = false, initialAllPast = false }: {
   airport: Airport;
   locale: string;
   defaultMode?: Mode;
@@ -610,6 +616,13 @@ export function FlightBoard({ airport, locale, defaultMode = 'departures', displ
    *  Chrome only: the empty-state TEXT still comes from pendingNote, because "no scheduled
    *  flights" would be a claim we cannot make about an airport we never measured. */
   infoOnly?: boolean;
+  /**
+   * Посчитано НА СЕРВЕРЕ от настоящего времени: все ли строки отданного борта уже в
+   * прошлом. Нужен затем, что клиентский `realNow` на сервере равен нулю, а значит
+   * плашка и направление среза не могли попасть в отданную разметку. Подробнее — у
+   * объявления `allPast` ниже.
+   */
+  initialAllPast?: boolean;
 }) {
   const t = useTranslations('ui');
   const tNav = useTranslations('nav');
@@ -774,6 +787,10 @@ export function FlightBoard({ airport, locale, defaultMode = 'departures', displ
       // было серверного снимка (nowMs = 0), после первой же загрузки показал бы 12 строк
       // вместо тридцати: initialRowCount при нулевой точке отсчёта уходит на нижнюю границу.
       setNowMs(ts.getTime());
+      // Признак «всё улетело» пересчитывается по ПРИШЕДШИМ строкам и настоящему времени:
+      // здесь клиент уже живой, и его часы — единственно верный источник.
+      const rows = data.flights || [];
+      setAllPast(rows.length > 0 && rows.every((f: Flight) => !f.ts || f.ts * 1000 < Date.now()));
       setUpdLabel(relTime(ts, t));
       setIsLive(Date.now() - ts.getTime() < 90_000);
     } catch { /* keep prev */ } finally {
@@ -866,15 +883,49 @@ export function FlightBoard({ airport, locale, defaultMode = 'departures', displ
     const id = setInterval(() => setRealNow(Date.now()), 60_000);
     return () => clearInterval(id);
   }, []);
-  const allPast = flights.length > 0
-    && realNow > 0
-    && flights.every(f => !f.ts || f.ts * 1000 < realNow);
+  /**
+   * «На этом борту всё уже улетело» — признак, который решает ДВЕ вещи: показывать ли
+   * честную плашку и с какого конца резать список.
+   *
+   * Считался он только от `realNow`, а тот на сервере равен нулю. Следствий было два, и оба
+   * измерены на проде 12.08 (18 страниц, из них 11 полностью мёртвых — это 22% трафика):
+   *
+   *   1. В ОТДАННОЙ разметке плашки не было ни на одной странице. Краулер и любой читатель
+   *      без JS получали борт из зелёных «По расписанию» на рейсах семичасовой давности —
+   *      то есть сайт молча выдавал протухшее за расписание. Человек видел оговорку только
+   *      после гидратации, вместе со сдвигом списка на 74.6 px (на узком экране 94.9 px),
+   *      причём вставлялась она примерно на 330 px от верха — в середину первого экрана.
+   *   2. Срез списка шёл с ГОЛОВЫ. orderBoard на мёртвом борту отдаёт хвост-50 по
+   *      возрастанию, страница брала `slice(0, 40)`, компонент — первые тридцать: два среза
+   *      подряд с головы, и человек видел самые СТАРЫЕ строки, а десять–двадцать самых
+   *      свежих не доезжали до разметки вовсе. AYT: на экране 07:00–07:55, в нагрузке было
+   *      до 08:30, в хранилище — примерно до 09:00.
+   *
+   * Теперь признак приезжает пропом, посчитанным на сервере от настоящего времени, и живёт
+   * состоянием, которое обновляется ВМЕСТЕ С ДАННЫМИ — как и точка отсчёта строк выше.
+   *
+   * Почему это безопасно при ISR-кэше: для фиксированного набора строк признак МОНОТОНЕН.
+   * Сервер посчитал в момент T1, клиент читает в T2 > T1; если всё было в прошлом тогда,
+   * оно в прошлом и сейчас. Ошибиться серверный флаг может только в сторону «не показали»,
+   * никогда — «показали ложно».
+   *
+   * Чего здесь делать НЕЛЬЗЯ (обе ошибки я проверял):
+   *   - `initialAllPast ?? allPast`: `??` проваливается только на null/undefined, поэтому
+   *     булев проп выиграл бы навсегда — `true` прибил бы плашку над только что
+   *     обновившимся живым табло, `false` запретил бы её насовсем;
+   *   - передавать со страницы `renderedAt={Date.now()}`: страница отдаётся из ISR-кэша
+   *     (revalidate 300, stale-while-revalidate 600), запечённое время было бы часами
+   *     старее реального. Признак — да, момент — нет.
+   */
+  const [allPast, setAllPast] = useState<boolean>(!!initialAllPast);
 
   /** Данные старше норматива своего яруса — подпись должна об этом кричать, а не шептать. */
   const staleHours = lastUpdated ? (realNow || Date.now()) - lastUpdated.getTime() : 0;
   const isStale = staleHours > STALE_AFTER_MS;
   const INITIAL = initialRowCount(flights, nowMs);
-  const shown = showAll ? visible : visible.slice(0, INITIAL);
+  // На мёртвом борту список идёт по возрастанию и самое ценное стоит В КОНЦЕ — это
+  // последнее, что улетело. Срез с головы показывал бы самое старое из имеющегося.
+  const shown = showAll ? visible : (allPast ? visible.slice(-INITIAL) : visible.slice(0, INITIAL));
   useEffect(() => { setShowAll(false); }, [mode, filter, trimSearch]);
 
   return (
@@ -1168,7 +1219,11 @@ export function FlightBoard({ airport, locale, defaultMode = 'departures', displ
             <div
               role="button"
               tabIndex={0}
-              aria-label={`${f.flight}, ${city}, ${label}`}
+              // Время ПЕРВЫМ: видимый порядок чтения строки — «10:40 | SU1269 | Москва | По расписанию»,
+              // а у роли button потомки презентационные, поэтому время из дерева доступности
+              // выпадало целиком. На всей странице было 35 aria-label и ни одного со временем —
+              // то есть незрячий человек слышал номер и город, но не главное.
+              aria-label={`${f.scheduled}, ${f.flight}, ${city}, ${label}`}
               className="frow"
               onClick={() => { haptic(); setSelected(f); }}
               onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); haptic(); setSelected(f); } }}
@@ -1187,7 +1242,11 @@ export function FlightBoard({ airport, locale, defaultMode = 'departures', displ
                   {f.actual && (
                     <div style={{ fontSize: 12, color: C.secondary, textDecoration: 'line-through', lineHeight: 1.3, marginTop: 2 }}>{f.scheduled}</div>
                   )}
-                  <div style={{ fontSize: 12, color: 'rgba(255,255,255,0.42)', marginTop: 5, fontVariantNumeric: 'tabular-nums', fontWeight: 500 }}>{f.flight}</div>
+                  {/* 0.65, а не 0.42: на фоне строки это давало 4.06:1 при норме AA 4.5, а на прошедшей
+                      строке, где сверху лежит групповая opacity 0.7, — 2.50:1. Для сравнения город и
+                      время в той же строке идут 19.65:1. Номер рейса — ровно то, по чему человек ищет
+                      свою строку, и он был самым тусклым текстом на экране. Стало 8.47:1 и 4.68:1. */}
+                  <div style={{ fontSize: 12, color: 'rgba(255,255,255,0.65)', marginTop: 5, fontVariantNumeric: 'tabular-nums', fontWeight: 500 }}>{f.flight}</div>
                 </div>
 
                 {/* Center: destination — the primary datum on a board, so it gets the room it

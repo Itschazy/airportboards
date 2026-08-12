@@ -17,6 +17,25 @@ import { EventBanner } from '@/components/EventBanner';
 import { currentIata } from '@/lib/iata-aliases';
 import { showCityFlag } from '@/lib/show-city';
 
+/**
+ * Срез борта для показа и признак «всё уже в прошлом».
+ *
+ * orderBoard на мёртвом борту отдаёт ХВОСТ по возрастанию — то есть самое ценное стоит в
+ * конце списка. Страница резала его `slice(0, 40)`, компонент рисовал первые тридцать: два
+ * среза подряд с головы, и человек видел самые СТАРЫЕ строки из имеющихся, а десять–двадцать
+ * самых свежих не доезжали до разметки вовсе. Замер 12.08 на AYT: на экране 07:00–07:55, в
+ * полезной нагрузке было до 08:30, в хранилище — примерно до 09:00.
+ *
+ * Считается на сервере от НАСТОЯЩЕГО времени, а не от времени снимка: вопрос «что уже
+ * улетело» — про часы читателя, а не про то, что видел поставщик данных.
+ */
+function boardWindow(rows: { ts?: number }[], n: number): { rows: any[]; allPast: boolean } {
+  const now = Date.now() / 1000;
+  const allPast = rows.length > 0 && rows.every(r => !r.ts || r.ts < now);
+  return { rows: allPast ? rows.slice(-n) : rows.slice(0, n), allPast };
+}
+
+
 const BASE = 'https://airportsboard.live';
 
 export const dynamicParams = true;
@@ -211,6 +230,11 @@ export default async function DeparturesPage({ params }: Props) {
     },
   ];
 
+
+  // Один вызов на рендер: между двумя вызовами Date.now() успел бы тикнуть, и строка
+  // могла бы перепрыгнуть из будущего в прошлое между срезом и признаком.
+  const board = boardWindow(initialFlights, 40);
+
   return (
     <>
       {jsonLd.map((schema, i) => (
@@ -218,7 +242,7 @@ export default async function DeparturesPage({ params }: Props) {
       ))}
       <Breadcrumb label={tNav('aria_breadcrumb')} trail={trail} extra={{ href: `/${locale}/airport/${airport.iata}/arrivals`, label: tNav('arrivals') }} />
       {/* The visible <h1> now lives in FlightBoard's airport header (single semantic h1). */}
-      <FlightBoard airport={airport} locale={locale} defaultMode="departures" displayName={getAirportName(airport.iata, locale, airport.name)} initialFlights={initialFlights.slice(0, 40)} initialFetchedAt={getBoardFetchedAt(airport.iata, 'departures')} boardTotal={initialFlights.length} />
+      <FlightBoard airport={airport} locale={locale} defaultMode="departures" displayName={getAirportName(airport.iata, locale, airport.name)} initialFlights={board.rows} initialAllPast={board.allPast} initialFetchedAt={getBoardFetchedAt(airport.iata, 'departures')} boardTotal={initialFlights.length} />
       <div style={{ maxWidth: 720, margin: '0 auto', padding: '0 24px 8px' }}>
         <EventBanner iata={airport.iata} locale={locale} />
       </div>

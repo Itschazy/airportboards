@@ -7,6 +7,12 @@ export const alt = 'AirportsBoard — live flight board';
 export const size = { width: 1200, height: 630 };
 export const contentType = 'image/png';
 
+// Хвост «· updated every minute» снят: это неправда, и её уже вычистили из всех 12
+// каталогов сообщений — здесь оставался последний остров. Реальный возраст данных
+// задан прогревом (lib/warm.ts: 360/720/1440 минут по ярусам) и TTL хранилища,
+// поэтому картинка обещала минуту там, где бывает и сутки. Карточку человек видит в
+// мессенджере ДО перехода на сайт — то есть обещание давалось раньше оговорки.
+//
 // Per-airport social card. Text is the English source data (IATA + name + city/country),
 // so the default Satori font renders it cleanly for every locale without embedding
 // Cyrillic/CJK/Arabic fonts. One distinctive card per airport → far better share CTR
@@ -50,7 +56,7 @@ export default async function Image({ params }: { params: Promise<{ locale: stri
         </div>
 
         <div style={{ display: 'flex', alignItems: 'center', fontSize: 28, color: '#0A84FF', fontWeight: 600 }}>
-          Live arrivals &amp; departures · updated every minute
+          Live arrivals &amp; departures
         </div>
       </div>
     ),
