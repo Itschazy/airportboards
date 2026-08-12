@@ -168,7 +168,16 @@ export function AirportSearch({ locale, placeholder }: { locale: string; placeho
         return (
           <button
             key={a.iata}
+            // onMouseDown СОХРАНЁН: он срабатывает до blur и до того, как экранная
+            // клавиатура сдвинет вёрстку. Но на нативной кнопке Enter и Space дают
+            // click, а не mousedown, — то есть выбор с клавиатуры по этой ветке не
+            // работал вовсе. Двойного срабатывания нет: mousedown уже уводит на
+            // страницу, и click по исчезнувшей кнопке не приходит.
+            id={`ap-opt-${globalIdx}`}
+            role="option"
+            aria-selected={isActive}
             onMouseDown={() => go(a)}
+            onClick={() => go(a)}
             onMouseEnter={() => setActive(globalIdx)}
             style={{
               width: '100%',
@@ -226,6 +235,10 @@ export function AirportSearch({ locale, placeholder }: { locale: string; placeho
           <path d="M10 10L13.5 13.5" stroke={focused ? '#8A8A8A' : '#4A4A4A'} strokeWidth="1.5" strokeLinecap="round"/>
         </svg>
 
+        {/* Договор роли combobox выполняется целиком: aria-controls указывает на список,
+            aria-activedescendant — на строку под выделением. Раньше роль была объявлена, а
+            списка с ролью listbox и строк с ролью option не существовало: программа чтения
+            слышала «поле со списком» и не находила списка. */}
         <input
           ref={inputRef}
           type="text"
@@ -233,6 +246,8 @@ export function AirportSearch({ locale, placeholder }: { locale: string; placeho
           aria-label={placeholder}
           aria-expanded={showList}
           aria-autocomplete="list"
+          aria-controls="ap-listbox"
+          aria-activedescendant={active >= 0 ? `ap-opt-${active}` : undefined}
           autoComplete="off"
           spellCheck={false}
           placeholder={placeholder}
@@ -276,7 +291,11 @@ export function AirportSearch({ locale, placeholder }: { locale: string; placeho
 
       {/* Dropdown */}
       {showList && (
-        <div style={{
+        // role="listbox" и id: роль combobox на поле была объявлена, а вторая половина
+        // её договора — список с ролью listbox, строки с ролью option и указатель на
+        // активную — отсутствовала целиком. Программа чтения слышала «поле со списком»
+        // и не находила списка.
+        <div id="ap-listbox" role="listbox" aria-label={placeholder} style={{
           position: 'absolute',
           top: 'calc(100% + 6px)',
           left: 0, right: 0,
