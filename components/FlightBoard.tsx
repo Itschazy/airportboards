@@ -617,23 +617,33 @@ export function FlightBoard({ airport, locale, defaultMode = 'departures', displ
   const bare = noService || infoOnly;
 
   /**
-   * The instant the board is reasoned against for "past or still to come".
+   * The instant the CURRENT SNAPSHOT was taken — not the wall clock.
    *
-   * Seeded with the SNAPSHOT time, not Date.now(), because this value decides how many rows
+   * Seeded with the snapshot time, not Date.now(), because this value decides how many rows
    * render and which of them are muted — and those must be identical on the server and at
    * hydration or React tears the tree down and rebuilds it. `initialFetchedAt` is a prop, so
-   * both sides see the same number. After mount it becomes the real clock and ticks, which is
-   * what the reader actually cares about.
+   * both sides see the same number.
+   *
+   * Раньше сразу после монтирования оно подменялось на Date.now() и дальше тикало каждую
+   * минуту. Для подсветки прошедших рейсов это было верно, но подсветка давно живёт на
+   * отдельном `realNow` (см. ниже), а здесь тиканье ЛОМАЛО РАЗМЕТКУ: число строк считает
+   * initialRowCount как «сколько рейсов ещё впереди», и стоило точке отсчёта уехать со
+   * времени снимка на настоящее, как ответ менялся скачком.
+   *
+   * Замер на проде, 43 борта: схлопывались 36. Сервер отдавал 30 строк, клиент через долю
+   * секунды оставлял 12 — минус 18 строк, около 1300 px, ровно под пальцем у человека,
+   * который уже начал читать. Причём строки к тому моменту уже приехали по проводу и были
+   * оплачены трафиком. Схлопывание точно совпадало с протухшестью снимка: у свежих бортов
+   * (AER, AYT, DXB, HND, IST, KZN — 0.2 ч) его не было вовсе, у 16–22-часовых — у всех.
+   *
+   * Теперь точка отсчёта меняется РОВНО ТОГДА, когда меняются сами данные: fetchFlights
+   * ставит её на fetchedAt пришедшего ответа. Смена разметки в этот момент оправдана — под
+   * ней новый снимок, — а на пустом месте её больше нет.
    *
    * Zero when the board has never been fetched; the two call sites fall back to the status
    * field there, which is the behaviour that shipped before this existed.
    */
   const [nowMs, setNowMs] = useState<number>(() => initialFetchedAt || 0);
-  useEffect(() => {
-    setNowMs(Date.now());
-    const id = setInterval(() => setNowMs(Date.now()), 60_000);
-    return () => clearInterval(id);
-  }, []);
   const [mode, setMode]           = useState<Mode>(defaultMode);
   const [filter, setFilter]       = useState<FilterKey>('all');
   const [search, setSearch]       = useState('');
@@ -758,6 +768,11 @@ export function FlightBoard({ airport, locale, defaultMode = 'departures', displ
       // "updated now" there is exactly the kind of thing that makes the site untrustworthy.
       const ts = typeof data.fetchedAt === 'number' ? new Date(data.fetchedAt) : new Date();
       setUpdated(ts);
+      // Точка отсчёта для «сколько рейсов впереди» переезжает вместе с данными, и только
+      // с ними — см. объяснение у объявления nowMs. Без этой строки борт, у которого не
+      // было серверного снимка (nowMs = 0), после первой же загрузки показал бы 12 строк
+      // вместо тридцати: initialRowCount при нулевой точке отсчёта уходит на нижнюю границу.
+      setNowMs(ts.getTime());
       setUpdLabel(relTime(ts, t));
       setIsLive(Date.now() - ts.getTime() < 90_000);
     } catch { /* keep prev */ } finally {
