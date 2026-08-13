@@ -34,7 +34,8 @@
     "check:track": "node scripts/check-track.mjs",
     "check:status": "node scripts/check-status-codes.mjs",
     "check:boardreg": "node scripts/check-board-regressions.mjs",
-    "check:embed": "node scripts/check-embed.mjs"
+    "check:embed": "node scripts/check-embed.mjs",
+    "check:sitemapscope": "node scripts/check-sitemap-scope.mjs"
   },
   "dependencies": {
     "next": "^15.3.3",
