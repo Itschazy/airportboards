@@ -19,7 +19,7 @@
 //         node scripts/yandex-recrawl.mjs --dry      → показать очередь и не отправлять
 //         node scripts/yandex-recrawl.mjs --limit 20 → потратить не больше 20
 
-import { BASE, readEnvFile, priorityPaths, loadState, saveState } from './seo-priority.mjs';
+import { BASE, readEnvFile, priorityPaths, loadState, saveState, knownPaths } from './seo-priority.mjs';
 
 const STATE = '.yandex-recrawl-state.json';
 const USER = 712865004;
@@ -51,9 +51,8 @@ if (budget <= 0) { console.log('на сегодня всё выбрано'); pro
 
 // ── Что именно ───────────────────────────────────────────────────────────────────────────
 const state = loadState(STATE);
-const known = new Set(Object.keys(state.sent));
-const { paths, sitemapSize } = await priorityPaths({ known, locales: ['ru'], limit: budget });
-console.log(`карта сайта: ${sitemapSize} записей | к отправке: ${paths.length}`);
+const { paths, sitemapSize, buckets } = await priorityPaths({ known: knownPaths(state), locales: ['ru'], limit: budget });
+console.log(`карта сайта: ${sitemapSize} записей | очередь: спрос+новое ${buckets.hot}, спрос ${buckets.warm}, новое без спроса ${buckets.cold} | к отправке: ${paths.length}`);
 if (!paths.length) { console.log('очередь пуста'); process.exit(0); }
 
 for (const p of paths.slice(0, 8)) console.log('   ', p);

@@ -89,40 +89,75 @@ export async function airportsByDemand(days = 30) {
 }
 
 /**
- * Итоговая очередь: сначала новое, потом востребованное, без повторов.
+ * Итоговая очередь. Порядок: новое-и-востребованное → востребованное → новое-без-спроса.
  *
- * `known` — пути, которые толкатель уже отправлял (его файл состояния). Всё, что есть в карте
- * и чего нет в known, считается новым и идёт первым. Дальше — страницы аэропортов по спросу,
- * каждая парой «борт + прилёты», потому что запросы делятся ровно так же и класс «прилёт»
- * даёт лучший CTR на сайте (3.0% против 1.5% у общего «табло»).
+ * ПОЧЕМУ НЕ «ПРОСТО НОВОЕ ВПЕРЁД», хотя так и было написано сначала. На первом запуске файл
+ * состояния пуст, значит новыми оказываются ВСЕ 4 474 записи карты, а карта отсортирована по
+ * коду ИАТА. Квота переобхода — 150 адресов в сутки, и она целиком ушла бы на AAA, AAB, AAC…
+ * то есть ровно мимо Казани и Уфы, которые вдвоём дают 54% показов. Ошибка тем неприятнее, что
+ * выглядела бы как успех: «отправлено 150, отказов 0».
+ *
+ * Поэтому спрос — первичный ключ сортировки, а новизна — вторичный. Аэропорт из Метрики, чей
+ * адрес толкатель ещё не отправлял, идёт первым: там сходятся оба сигнала. Новое без спроса
+ * замыкает очередь и получает то, что осталось, — на квоте в 150 обычно ничего, и это верно:
+ * страницу без спроса Яндекс и сам обойдёт по карте.
+ *
+ * Каждый аэропорт даёт ПАРУ адресов — борт и прилёты, — потому что запросы делятся ровно так
+ * же, и класс «прилёт» даёт лучший CTR на сайте: 3.0% против 1.5% у общего «табло».
  *
  * Возвращает пути, а не адреса: домен приклеивает вызывающий, ему же решать про локаль.
  */
 export async function priorityPaths({ known = new Set(), locales = ['ru'], limit = Infinity } = {}) {
   const inMap = await sitemapPaths();
   const mapSet = new Set(inMap);
-  const out = [];
-  const push = (p) => { if (p && !out.includes(p)) out.push(p); };
 
-  // 1. Новое в карте — то, чего толкатель ещё не отправлял.
-  for (const p of inMap) {
-    if (known.has(p)) continue;
-    for (const loc of locales) push(p.replace(/^\/en\b/, `/${loc}`));
-  }
+  const hot = [];      // спрос + не отправляли
+  const warm = [];     // спрос, отправляли раньше
+  const cold = [];     // новое в карте, спроса не измерено
+  const add = (bucket, p) => { if (p) bucket.push(p); };
 
-  // 2. По измеренному спросу. Прилёты — только если карта их заявляет: толкать адрес, который
-  //    сама карта не рекламирует, значит спорить с собственным сигналом.
-  for (const { code } of await airportsByDemand()) {
+  // 1-2. По измеренному спросу. Прилёты — только если карта их заявляет: толкать адрес,
+  //      который сама карта не рекламирует, значит спорить с собственным сигналом.
+  const demand = await airportsByDemand();
+  const demandCodes = new Set(demand.map((d) => d.code));
+  for (const { code } of demand) {
     for (const loc of locales) {
-      if (mapSet.has(`/en/airport/${code}`)) push(`/${loc}/airport/${code}`);
-      if (mapSet.has(`/en/airport/${code}/arrivals`)) push(`/${loc}/airport/${code}/arrivals`);
+      for (const suffix of ['', '/arrivals']) {
+        if (!mapSet.has(`/en/airport/${code}${suffix}`)) continue;
+        const p = `/${loc}/airport/${code}${suffix}`;
+        add(known.has(p) ? warm : hot, p);
+      }
     }
   }
 
-  return { paths: out.slice(0, limit), sitemapSize: inMap.length, fresh: out.length };
+  // 3. Новое в карте, о спросе на которое мы ничего не знаем.
+  for (const p of inMap) {
+    const code = /\/airport\/([A-Z0-9]{3})/.exec(p)?.[1];
+    if (code && demandCodes.has(code)) continue;   // уже разложено выше
+    for (const loc of locales) {
+      const q = p.replace(/^\/en\b/, `/${loc}`);
+      if (!known.has(q)) add(cold, q);
+    }
+  }
+
+  const paths = [...new Set([...hot, ...warm, ...cold])].slice(0, limit);
+  return { paths, sitemapSize: inMap.length, buckets: { hot: hot.length, warm: warm.length, cold: cold.length } };
 }
 
-/** Состояние толкателя: что уже отправляли и когда. Файлы под .gitignore. */
+/**
+ * Состояние толкателя: что уже отправляли и когда. Файлы под .gitignore.
+ *
+ * `known` собирается только из отправленного за последние STALE_DAYS суток. Иначе адрес,
+ * толкнутый однажды, навсегда выпадал бы из очереди — а страница табло меняется каждый день, и
+ * просить переобход самых востребованных раз в месяц осмысленно.
+ */
+const STALE_DAYS = 30;
+export function knownPaths(state) {
+  const cutoff = Date.now() - STALE_DAYS * 86400_000;
+  return new Set(Object.entries(state.sent ?? {})
+    .filter(([, at]) => Date.parse(at) > cutoff)
+    .map(([p]) => p));
+}
 export function loadState(file) {
   try { return JSON.parse(fs.readFileSync(file, 'utf8')); } catch { return { sent: {}, runs: [] }; }
 }

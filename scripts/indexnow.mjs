@@ -11,7 +11,7 @@
 // ничего не поменялось. Теперь к набору добавляется всё, чего в карте не было в прошлый раз
 // (scripts/seo-priority.mjs), плюс страницы по измеренному спросу из Метрики.
 import fs from 'fs';
-import { priorityPaths, loadState, saveState } from './seo-priority.mjs';
+import { priorityPaths, loadState, saveState, knownPaths } from './seo-priority.mjs';
 
 const HOST = 'airportsboard.live';
 const BASE = `https://${HOST}`;
@@ -76,8 +76,7 @@ if (process.argv.includes('--all-hubs')) {
 const state = loadState(STATE);
 if (!process.argv.includes('--no-fresh')) {
   try {
-    const known = new Set(Object.keys(state.sent));
-    const { paths, sitemapSize } = await priorityPaths({ known, locales: ['ru', 'en'] });
+    const { paths, sitemapSize } = await priorityPaths({ known: knownPaths(state), locales: ['ru', 'en'] });
     for (const p of paths) urls.add(BASE + p);
     console.log(`+ карта сайта: ${sitemapSize} записей, из них новых для этого толкателя ${paths.length}`);
   } catch (e) {
@@ -87,21 +86,40 @@ if (!process.argv.includes('--no-fresh')) {
 }
 
 const urlList = [...urls];
-console.log(`Submitting ${urlList.length} URLs to IndexNow…`);
+
+/**
+ * Партиями по 10 000 — это ЖЁСТКИЙ лимит обеих точек, а не рекомендация.
+ *
+ * Комментарий «IndexNow allows up to 10000 URLs per request» стоял здесь и раньше, но код
+ * отправлял список целиком: пока набор был курируемым, он не дотягивал до лимита, и строка
+ * оставалась заметкой на будущее. Будущее наступило вместе с добавлением адресов из карты —
+ * 13 142 штуки, и обе точки отказали разом:
+ *
+ *     yandex.com/indexnow      → 422 "No more than 10000 urls allowed"
+ *     api.indexnow.org         → 400 InvalidRequestParameters
+ *
+ * Отправка при этом не потеряла ничего: состояние пишется только после принятого ответа
+ * (см. ниже), так что неудачный прогон не пометил адреса отправленными.
+ */
+const CHUNK = 10_000;
+const chunks = [];
+for (let i = 0; i < urlList.length; i += CHUNK) chunks.push(urlList.slice(i, i + CHUNK));
+console.log(`Submitting ${urlList.length} URLs to IndexNow${chunks.length > 1 ? ` (${chunks.length} партиями)` : ''}…`);
 
 const ENDPOINTS = ['https://yandex.com/indexnow', 'https://api.indexnow.org/indexnow'];
-const body = JSON.stringify({ host: HOST, key: KEY, keyLocation: KEY_LOCATION, urlList });
 
 let accepted = false;
-for (const ep of ENDPOINTS) {
-  // IndexNow allows up to 10000 URLs per request.
-  try {
-    const r = await fetch(ep, { method: 'POST', headers: { 'Content-Type': 'application/json; charset=utf-8' }, body });
-    const txt = await r.text();
-    if (r.ok) accepted = true;
-    console.log(`${ep} → ${r.status} ${r.statusText} ${txt ? '| ' + txt.slice(0, 120) : ''}`);
-  } catch (e) {
-    console.log(`${ep} → ERROR ${e.message}`);
+for (const [n, chunk] of chunks.entries()) {
+  const body = JSON.stringify({ host: HOST, key: KEY, keyLocation: KEY_LOCATION, urlList: chunk });
+  for (const ep of ENDPOINTS) {
+    try {
+      const r = await fetch(ep, { method: 'POST', headers: { 'Content-Type': 'application/json; charset=utf-8' }, body });
+      const txt = await r.text();
+      if (r.ok) accepted = true;
+      console.log(`  [${n + 1}/${chunks.length}] ${ep} → ${r.status} ${r.statusText} ${txt ? '| ' + txt.slice(0, 100) : ''}`);
+    } catch (e) {
+      console.log(`  [${n + 1}/${chunks.length}] ${ep} → ERROR ${e.message}`);
+    }
   }
 }
 
