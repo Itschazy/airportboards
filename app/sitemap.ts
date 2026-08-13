@@ -3,7 +3,7 @@ import { getAllIataCodes, AIRPORTS_PER_SITEMAP, getSitemapCount, getCountries, g
 import { getEventSlugs } from '@/lib/event-content';
 import { isUnfillable, serviceLevel, splitByService, hasNoService } from '@/lib/warm';
 import { getTopRoutes } from '@/lib/top-routes';
-import { getRoute, getBoard } from '@/lib/flights';
+import { getRoute, getBoard, getBoardStampWithRows } from '@/lib/flights';
 import { locales } from '@/lib/i18n';
 import { LEGAL_LOCALES } from '@/lib/legal-content';
 
@@ -11,16 +11,42 @@ const BASE = 'https://airportsboard.live';
 const LETTERS = 'abcdefghijklmnopqrstuvwxyz'.split('');
 // Major hubs get higher priority than obscure airfields (priority is relative).
 const HUBS = new Set(getStaticIataCodes());
-// /arrivals subpages are advertised down to the major tier (>=40 scheduled departures a
-// day: mega + hub + major, ~460 airports), not just the ~68 mega ones. "X arrivals" is the
-// exact query shape of the money markets — five live SERP probes (Antalya/Palma/Barajas in
-// en, de, es) returned 8-10 sources each, every one an arrivals/Ankünfte/llegadas page, and
-// this domain in none of them; the incumbents there are eoob.de and easyflycheck.com class
-// sites, so the authority bar is on the floor. The tier threshold keeps the long tail out:
-// below ~40 departures a day an arrivals board is often empty at crawl time, and the page
-// then declares noindex — advertising it would be the sitemap/page contradiction that fed
-// the 4,035-page exclusion wave.
-const ARRIVALS_MIN_DAILY = 40;
+/**
+ * Нижняя граница яруса, у которого подстраница прилётов попадает в карту.
+ *
+ * «X arrivals» — точная форма денежного запроса: пять живых проб выдачи (Анталья/Пальма/
+ * Барахас на en, de, es) вернули по 8–10 источников, и каждый был страницей прилётов, а этого
+ * домена не было ни в одной. Порог задумывался как защита от пустых бортов внизу хвоста.
+ *
+ * ПОРОГ 40 ОТРЕЗАЛ РОВНО ТЕХ, КТО ЗАРАБАТЫВАЕТ. Замер Вебмастера 14.08 по 500 запросам
+ * (108 896 показов): класс «прилёт» даёт CTR 3.0% — лучший из всех классов сайта (вылет 2.6%,
+ * «табло» без направления 1.5%). А подстраница прилётов не была заявлена у:
+ *
+ *     KZN  29 вылетов/сут  30 266 показов      CEK  15   3 683
+ *     UFA  25              28 320              MRV  19   3 204
+ *     SUI   5               4 648              OSS  10     335
+ *     AER  39               4 418
+ *
+ * Проверено на проде: все семь отвечают 200, объявляют index, follow, на борту 19–39 строк.
+ * Страницы есть и они хорошие — поисковику про них просто не сказано.
+ *
+ * ПОЧЕМУ 10, А НЕ 3 И НЕ 40. Порог тут не единственная защита: ниже стоит второй гейт —
+ * «на борту есть строки прямо сейчас», тот же предикат, которым сама страница ставит robots.
+ * Он проверяет пустоту в момент генерации карты (revalidate = 86400), а порог хеджирует
+ * пустоту в момент ОБХОДА, то есть они закрывают разные окна и порог не избыточен. Замер
+ * долей пустых бортов по ярусам (см. airportDescription в airport/[iata]/page.tsx):
+ *
+ *     1-2 рейса/сут  71% пусто      10-49  14% пусто
+ *     3-4            14%            50+     0% пусто
+ *     5-9            21%
+ *
+ * На ярусе 10–49 пусто в 14% случаев, и эти 14% ловит гейт по строкам. Ниже десяти доля
+ * растёт до 71%, и там уже никакой гейт по одному снимку не спасает — потому 10.
+ *
+ * SUI (5 рейсов/сут, 4 648 показов) в порог не проходит и остаётся снаружи осознанно: сначала
+ * ему нужен борт, который не пустеет, а не строка в карте.
+ */
+const ARRIVALS_MIN_DAILY = 10;
 
 type Freq = MetadataRoute.Sitemap[number]['changeFrequency'];
 
@@ -28,10 +54,27 @@ type Freq = MetadataRoute.Sitemap[number]['changeFrequency'];
 // (incl. x-default). Search engines learn the full 12-language cluster at discovery
 // time — far better for multilingual indexing than 12 unrelated URLs, and far
 // smaller files, so we can list every page type.
-//
-// No `lastModified`: it was `new Date()` (build time) on every URL, so each deploy
-// claimed the entire site changed "just now" — a signal engines learn to ignore.
-// Omitting it is better than a lie.
+/**
+ * lastModified СТАВИТСЯ ТОЛЬКО ТАМ, ГДЕ ЕСТЬ НАСТОЯЩАЯ ОТМЕТКА ВРЕМЕНИ, и это главное здесь.
+ *
+ * Раньше поле было `new Date()`, то есть время СБОРКИ на каждом адресе: любой выкат заявлял,
+ * что изменился весь сайт разом. Такой сигнал поисковик перестаёт читать целиком, и поле убрали.
+ * Но отсутствие — тоже не сигнал, а Яндекс планирует переобход по lastmod, и переобход тут
+ * единственный канал: 99.7% показов приходят оттуда.
+ *
+ * Источник значения — время, когда изменились ДАННЫЕ, а не когда отрисовалась страница:
+ * getBoardFetchedAt читает отметку хранилища, ту же самую, которую страница публикует как
+ * dateModified и как «обновлено N назад». ISR-перегенерация, отдающая тот же шестичасовой борт,
+ * не имеет права заявлять свежесть, и не заявляет.
+ *
+ * Где отметки нет — поля нет. Страны, города, указатель A–Z, правовые документы и главная
+ * меняются по своим законам, и придумывать им дату означало бы вернуться ровно к тому, из-за
+ * чего поле и выкинули. Пустой борт при живой отметке тоже не считается: прогрев штампует
+ * хранилище даже когда провайдер ответил пустым списком, так что «есть отметка» ≠ «есть борт».
+ *
+ * Значение может отставать на сутки — карта перегенерируется раз в 86400 с. Это честное
+ * «изменилось не позже, чем», а не ложное «изменилось только что».
+ */
 function entry(
   path: string,
   changeFrequency: Freq,
@@ -42,11 +85,26 @@ function entry(
   // therefore contradicting each other about the same URLs, in hreflang, which is precisely
   // where an engine checks before trusting either.
   langs: readonly string[] = locales,
+  lastModified?: Date,
 ): MetadataRoute.Sitemap[number] {
   const languages: Record<string, string> = {};
   for (const loc of langs) languages[loc] = `${BASE}/${loc}${path}`;
   languages['x-default'] = `${BASE}/en${path}`;
-  return { url: `${BASE}/en${path}`, changeFrequency, priority, alternates: { languages } };
+  return { url: `${BASE}/en${path}`, changeFrequency, priority, alternates: { languages }, ...(lastModified ? { lastModified } : {}) };
+}
+
+/**
+ * Отметка времени борта, годная для lastmod, или undefined.
+ *
+ * Два условия, и оба обязательны. Отметка должна существовать — иначе врать нечем и незачем.
+ * И она должна лежать В ПРОШЛОМ: часы сервера уходили вперёд достаточно, чтобы это стоило
+ * проверки, а lastmod из будущего поисковик отбрасывает вместе с доверием к остальным.
+ */
+function boardStamp(iata: string, direction: 'departures' | 'arrivals'): Date | undefined {
+  const ts = getBoardStampWithRows(iata, direction);
+  if (ts == null || !Number.isFinite(ts)) return undefined;
+  if (ts > Date.now()) return undefined;
+  return new Date(ts);
 }
 
 // Regenerate daily: the route list is refreshed in the background by the warmer (see
@@ -147,10 +205,17 @@ export default async function sitemap({ id }: { id: number | string }): Promise<
      * Средняя позиция у взятых — 41.3, кликов за квартал двенадцать.
      *
      * Что именно он отвергал, видно по его же примерам: /de/airport/APN, /ar/airport/BBK,
-     * /hi/airport/EIN/arrivals — мелкие аэропорты в языках без аудитории. Разбор схожести
-     * подтвердил: 2 160 страниц «рейсов нет» похожи друг на друга на 0.975 при 0.42–0.44 у
-     * остальных классов сайта, видимого текста 2 400–2 900 знаков против 9 700 у JFK.
-     * Ровно за это же AdSense отклонил сайт 03.08 с формулировкой «бесполезный контент».
+     * /hi/airport/EIN/arrivals — мелкие аэропорты в языках без аудитории. Видимого текста у
+     * них 2 400–2 900 знаков против 9 700 у JFK. Ровно за это же AdSense отклонил сайт 03.08
+     * с формулировкой «бесполезный контент».
+     *
+     * ОДНО ЧИСЛО ЗДЕСЬ БЫЛО НЕВЕРНЫМ, и это стоит знать, потому что оно выглядело решающим.
+     * Комментарий утверждал схожесть 0.975 у страниц «рейсов нет» при 0.42–0.44 у остальных
+     * классов. Повторный замер 14.08 по 40 снятым страницам даёт медиану 0.305 при максимуме
+     * 0.400, а по 276 оставшимся в карте — 0.11–0.27 по ярусам. Похоже на замер по ПОЛНОМУ
+     * HTML вместе с RSC-нагрузкой, которая почти одинакова на любых двух страницах, — ту самую
+     * ловушку, в которую здесь попадали уже дважды. Рез при этом остаётся правильным, но
+     * опирается он на прямой отказ Google по 5 324 адресам, а не на эту схожесть.
      *
      * До этой строки карта заявляла 7 327 страниц × 12 языков = 87 924 URL, из них 3 143
      * страницы аэропортов (43% корпуса) — измеренный ноль вылетов. После: 50 208.
@@ -168,11 +233,11 @@ export default async function sitemap({ id }: { id: number | string }): Promise<
     if (hasNoService(iata)) continue;
     const hub = HUBS.has(iata);
     const cf: Freq = hub ? 'hourly' : 'daily';
-    entries.push(entry(`/airport/${iata}`, cf, hub ? 1.0 : 0.6));
-    // Only hubs advertise arrivals/departures subpages. For the long tail these are
-    // usually empty "No flights" near-dupes; listing them wasted crawl budget and fed
-    // the mass-exclusion wave. They stay reachable (footer/board links) and indexable
-    // when they DO have flights (robots gate in each subpage) — just not in the sitemap.
+    entries.push(entry(`/airport/${iata}`, cf, hub ? 1.0 : 0.6, locales, boardStamp(iata, 'departures')));
+    // Подстраница прилётов заявляется от яруса ARRIVALS_MIN_DAILY и ниже — не только у хабов
+    // (см. разбор у самой константы). Хвост ниже порога остаётся достижимым по ссылкам из
+    // подвала и с табло и индексируемым, когда рейсы ЕСТЬ (гейт robots на самой подстранице),
+    // просто не рекламируется картой.
     // /departures is NOT listed: it canonicalises to the airport page (see the note in
     // departures/page.tsx — the parent opens on the departures board, so the two are the same
     // document, measured at 92-96% identical). A sitemap entry whose canonical points at a
@@ -190,7 +255,7 @@ export default async function sitemap({ id }: { id: number | string }): Promise<
     if ((serviceLevel(iata) ?? 0) >= ARRIVALS_MIN_DAILY) {
       try {
         if ((await getBoard(iata, 'arrivals', 'en')).length > 0) {
-          entries.push(entry(`/airport/${iata}/arrivals`, cf, 0.9));
+          entries.push(entry(`/airport/${iata}/arrivals`, cf, 0.9, locales, boardStamp(iata, 'arrivals')));
         }
       } catch { /* empty or unreadable board — simply not advertised */ }
     }

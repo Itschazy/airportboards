@@ -354,6 +354,30 @@ export function getBoardFetchedAt(iata: string, direction: 'departures' | 'arriv
   return getStaleTs(`${direction}:${param}`);
 }
 
+/**
+ * Отметка времени борта, У КОТОРОГО ЕСТЬ СТРОКИ, — или null.
+ *
+ * Наличие отметки и наличие борта это разные вещи, и путать их уже приходилось: прогрев
+ * штампует хранилище даже когда провайдер ответил пустым списком, поэтому getBoardFetchedAt
+ * возвращает время и там, где показывать нечего. Страница прилётов из-за этого once публиковала
+ * dateModified над содержимым «рейсов нет» — заявляла свежесть про ничто.
+ *
+ * Нужна карте сайта, где такой вопрос задаётся про несколько тысяч кодов за одну регенерацию,
+ * поэтому считает ДЁШЕВО: getStale — это поиск по объекту в памяти, без разбора JSON, без
+ * orderBoard и без mapFlight, в отличие от getBoard. Фильтр по коду тот же, что у getBoard:
+ * ответ провайдера на dep_iata= может содержать чужие строки.
+ */
+export function getBoardStampWithRows(iata: string, direction: 'departures' | 'arrivals'): number | null {
+  const code = iata.toUpperCase();
+  const param = direction === 'departures' ? `dep_iata=${code}` : `arr_iata=${code}`;
+  const key = `${direction}:${param}`;
+  const ts = getStaleTs(key);
+  if (ts == null) return null;
+  const raw = getStale(key);
+  if (!raw?.some(f => (direction === 'departures' ? f.dep_iata : f.arr_iata) === code)) return null;
+  return ts;
+}
+
 export async function getRoute(from: string, to: string, locale: string, live = false): Promise<FlightRow[]> {
   const F = from.toUpperCase(), T = to.toUpperCase();
   let raw = await fetchRaw(`dep_iata=${F}&arr_iata=${T}`, 'departures', { live });

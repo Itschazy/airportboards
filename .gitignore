@@ -7,3 +7,10 @@ node_modules/
 *.log
 .DS_Store
 *.tsbuildinfo
+
+# Состояние толкателей поисковых систем — локальное, у каждой машины своё.
+.yandex-recrawl-state.json
+.indexnow-state.json
+
+# Изолированная сборка для прогона проверок (scripts/check-*), не выкатывается.
+.next-audit/

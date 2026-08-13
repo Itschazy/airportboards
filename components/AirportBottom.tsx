@@ -560,7 +560,16 @@ export async function AirportBottom({ airport, locale, about, displayName, fligh
             <div style={{ background: '#0B0B0B', border: '1px solid #1A1A1A', borderRadius: 16, padding: '16px 18px', fontSize: 15, lineHeight: 1.6, color: '#B4B4B4' }}>{ext.terminals}</div>
           </section>
         )}
-        {ext?.tips && (
+        {/* Советы — только на табло ВЫЛЕТА. Текст этого блока весь про отправление: приезжайте
+            заранее, регистрация, сдача багажа, контроль безопасности, ручная кладь. Заголовок
+            честно так и называется («Советы вылетающим из аэропорта {a}», 'Tips for flying
+            from {a}' — во всех двенадцати локалях EXT_LABELS). Человеку, который встречает
+            рейс, не адресовано ни слова, а раздел висел и у него.
+            Убирать блок, а не переименовывать: сменить заголовок значило бы оставить на
+            странице прилётов советы вылетающим под нейтральной вывеской — то есть спрятать
+            несоответствие вместо того, чтобы его убрать. Побочно это ещё и разводит родителя с
+            его подстраницей: замер 14.08 давал схожесть 0.36 по 12 парам, и она станет ниже. */}
+        {ext?.tips && !inbound && (
           <section className="cv-auto" style={sec}>
             <H2>{extLabels.tips}</H2>
             <div style={{ background: '#0B0B0B', border: '1px solid #1A1A1A', borderRadius: 16, padding: '16px 18px', fontSize: 15, lineHeight: 1.6, color: '#B4B4B4' }}>{ext.tips}</div>

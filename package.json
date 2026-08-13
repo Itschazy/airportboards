@@ -35,7 +35,11 @@
     "check:status": "node scripts/check-status-codes.mjs",
     "check:boardreg": "node scripts/check-board-regressions.mjs",
     "check:embed": "node scripts/check-embed.mjs",
-    "check:sitemapscope": "node scripts/check-sitemap-scope.mjs"
+    "check:sitemapscope": "node scripts/check-sitemap-scope.mjs",
+    "seo:indexnow": "node scripts/indexnow.mjs",
+    "seo:recrawl": "node scripts/yandex-recrawl.mjs",
+    "check:sitemaplastmod": "node scripts/check-sitemap-lastmod.mjs",
+    "check:arrivals": "node scripts/check-arrivals-page.mjs"
   },
   "dependencies": {
     "next": "^15.3.3",
