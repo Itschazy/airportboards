@@ -304,8 +304,9 @@
     "sched_times_more": "{first} y {n, plural, one {# salida más} other {# salidas más}} esa semana",
     "pwa_app_name": "AirportsBoard — Paneles de vuelos",
     "pwa_app_desc": "Consulte en tiempo real las llegadas y salidas de aeropuertos.",
-    "board_all_past": "Todos los vuelos de este panel ya han salido. Datos del {date}.",
-    "board_stale": "Datos desactualizados"
+    "board_stale": "Datos desactualizados",
+    "board_all_past_dep": "Todos los vuelos de este panel ya han salido. Datos del {date}.",
+    "board_all_past_arr": "Todos los vuelos de este panel ya han llegado. Datos del {date}."
   },
   "notfound": {
     "title": "Página no encontrada",

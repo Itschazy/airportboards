@@ -304,8 +304,9 @@
     "sched_times_more": "{first} und {n, plural, one {# weiterer Abflug} other {# weitere Abflüge}} in der Woche",
     "pwa_app_name": "AirportsBoard — Live-Ankunfts- und Abflugtafeln",
     "pwa_app_desc": "Verfolgen Sie Ankünfte und Abflüge an Flughäfen in Echtzeit.",
-    "board_all_past": "Alle Flüge auf dieser Tafel sind bereits abgeflogen. Daten vom {date}.",
-    "board_stale": "Daten veraltet"
+    "board_stale": "Daten veraltet",
+    "board_all_past_dep": "Alle Flüge auf dieser Tafel sind bereits abgeflogen. Daten vom {date}.",
+    "board_all_past_arr": "Alle Flüge auf dieser Tafel sind bereits gelandet. Daten vom {date}."
   },
   "notfound": {
     "title": "Seite nicht gefunden",

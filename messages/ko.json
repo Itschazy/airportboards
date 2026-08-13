@@ -304,8 +304,9 @@
     "sched_times_more": "{first}, 그 주에 {n}편 더",
     "pwa_app_name": "AirportsBoard — 실시간 공항 출도착 안내",
     "pwa_app_desc": "공항 도착 및 출발 항공편을 실시간으로 확인하세요.",
-    "board_all_past": "이 운항정보의 모든 항공편은 이미 출발했습니다. 데이터 기준: {date}.",
-    "board_stale": "데이터 오래됨"
+    "board_stale": "데이터 오래됨",
+    "board_all_past_dep": "이 운항정보의 모든 항공편은 이미 출발했습니다. 데이터 기준: {date}.",
+    "board_all_past_arr": "이 운항정보의 모든 항공편은 이미 도착했습니다. 데이터 기준: {date}."
   },
   "notfound": {
     "title": "페이지를 찾을 수 없습니다",

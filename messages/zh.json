@@ -304,8 +304,9 @@
     "sched_times_more": "{first}，本周另有 {n} 个航班",
     "pwa_app_name": "AirportsBoard — 实时航班到离港看板",
     "pwa_app_desc": "实时查看机场航班到港和离港信息。",
-    "board_all_past": "此航班牌上的所有航班均已起飞。数据截至 {date}。",
-    "board_stale": "数据已过期"
+    "board_stale": "数据已过期",
+    "board_all_past_dep": "此航班牌上的所有航班均已起飞。数据截至 {date}。",
+    "board_all_past_arr": "此航班牌上的所有航班均已到达。数据截至 {date}。"
   },
   "notfound": {
     "title": "页面未找到",

@@ -2,7 +2,8 @@ import { NextRequest, NextResponse } from 'next/server';
 import { getAirport } from '@/lib/airports';
 import { getAirportName } from '@/lib/airport-names';
 import { getBoard, getBoardFetchedAt } from '@/lib/flights';
-import { locales } from '@/lib/i18n';
+import { locales, numLocale } from '@/lib/i18n';
+import { createTranslator } from 'next-intl';
 import { currentIata } from '@/lib/iata-aliases';
 
 export const dynamic = 'force-dynamic';
@@ -75,11 +76,35 @@ export async function GET(req: NextRequest, ctx: { params: Promise<{ iata: strin
     ? { bg: '#FFFFFF', surface: '#F5F5F7', border: '#E5E5EA', text: '#111111', sub: '#6E6E73' }
     : { bg: '#050505', surface: '#0B0B0B', border: '#1A1A1A', text: '#FFFFFF', sub: '#8A8A8A' };
 
+  /**
+   * Возраст данных форматируется НАСТОЯЩИМ форматтером ICU, а не подменой подстроки.
+   *
+   * Раньше здесь стояло `.replace('{m}', …)`, и это работало ровно до тех пор, пока в
+   * каталогах лежали голые плейсхолдеры. Как только у ключей появились система счисления
+   * (`{h, number}`) и множественное число, подмена перестала находить что менять, и виджет
+   * стал печатать шаблон целиком. На проде это выглядело так:
+   *
+   *     ru:  «Обновлено {h, number} ч назад»
+   *     ar:  «تم التحديث قبل {h, plural, one {ساعة واحدة} two {ساعتين} few {# ساعات} …}»  — 90 знаков
+   *
+   * Причём ветка минут не срабатывает практически никогда: борт моложе часа — редкость,
+   * так что штатным видом виджета был сырой ICU.
+   *
+   * numLocale нужен по той же причине, что и везде: без явной системы счисления результат
+   * зависит от сборки ICU на хосте (см. NUMERAL_SYSTEM в lib/i18n.ts).
+   */
   const ageMin = fetchedAt ? Math.max(1, Math.round((Date.now() - fetchedAt) / 60000)) : null;
+  // createTranslator из next-intl, а не intl-messageformat напрямую: второй лежит в дереве
+  // лишь транзитивно, и опираться в коде приложения на незаявленную зависимость — значит
+  // однажды получить сломанную сборку от чужого обновления.
+  const tAge = createTranslator({ locale: numLocale(lang), messages: { ui }, namespace: 'ui' });
+  const safe = (key: string, vars: Record<string, number>, fallback: string) => {
+    try { return String(tAge(key as never, vars as never)); } catch { return fallback; }
+  };
   const ageLabel = ageMin === null ? '' :
-    ageMin < 60 ? (ui.updated_min_ago || '{m} min ago').replace('{m}', String(ageMin)) :
-    ageMin < 1440 ? (ui.updated_h_ago || '{h} h ago').replace('{h}', String(Math.round(ageMin / 60))) :
-    (ui.updated_d_ago || '{d} d ago').replace('{d}', String(Math.round(ageMin / 1440)));
+    ageMin < 60 ? safe('updated_min_ago', { m: ageMin }, `${ageMin} min ago`) :
+    ageMin < 1440 ? safe('updated_h_ago', { h: Math.round(ageMin / 60) }, `${Math.round(ageMin / 60)} h ago`) :
+    safe('updated_d_ago', { d: Math.round(ageMin / 1440) }, `${Math.round(ageMin / 1440)} d ago`);
 
   const rowsHtml = rows.length ? rows.map(r => {
     const place = dir === 'departures' ? (r as { destination?: string }).destination : (r as { origin?: string }).origin;

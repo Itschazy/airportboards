@@ -304,8 +304,9 @@
     "sched_times_more": "{first} et {n, plural, one {# autre départ} other {# autres départs}} dans la semaine",
     "pwa_app_name": "AirportsBoard — Tableaux de vols",
     "pwa_app_desc": "Suivez en direct les arrivées et départs dans les aéroports.",
-    "board_all_past": "Tous les vols de ce tableau sont déjà partis. Données du {date}.",
-    "board_stale": "Données obsolètes"
+    "board_stale": "Données obsolètes",
+    "board_all_past_dep": "Tous les vols de ce tableau sont déjà partis. Données du {date}.",
+    "board_all_past_arr": "Tous les vols de ce tableau sont déjà arrivés. Données du {date}."
   },
   "notfound": {
     "title": "Page introuvable",

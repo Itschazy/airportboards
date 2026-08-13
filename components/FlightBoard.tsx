@@ -962,6 +962,28 @@ export function FlightBoard({ airport, locale, defaultMode = 'departures', displ
   // На мёртвом борту список идёт по возрастанию и самое ценное стоит В КОНЦЕ — это
   // последнее, что улетело. Срез с головы показывал бы самое старое из имеющегося.
   const shown = showAll ? visible : (allPast ? visible.slice(-INITIAL) : visible.slice(0, INITIAL));
+  /**
+   * С какой стороны списка лежит скрытое — и, значит, где должна стоять кнопка.
+   *
+   * На мёртвом борту срез идёт с КОНЦА (показываем самое свежее из улетевшего), поэтому
+   * скрытые строки лежат в ГОЛОВЕ массива. Кнопка при этом стояла под списком, и нажатие
+   * вставляло около двадцати строк ВЫШЕ экрана — примерно 1900 px, больше двух экранов
+   * телефона, — а сама кнопка исчезала. Человек нажимал «показать ещё» и оставался на том
+   * же месте, не понимая, что случилось. На живом борту всё как было: скрытое в хвосте,
+   * кнопка снизу.
+   */
+  const moreAbove = allPast && !showAll;
+  const moreButton = !loading && visible.length > shown.length ? (
+          <button className="press" onClick={() => { track(GOALS.boardMore, { shown: INITIAL, total: visible.length }); setShowAll(true); }} style={{
+            width: '100%', height: 56, marginTop: 4, marginBottom: 8,
+            display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 8,
+            border: '1px solid rgba(255,255,255,0.08)', background: 'rgba(255,255,255,0.02)',
+            borderRadius: 18, color: C.text, fontSize: 15, fontWeight: 600, cursor: 'pointer', WebkitTapHighlightColor: 'transparent',
+          }}>
+            {mode === 'departures' ? t('more_departures') : t('more_arrivals')}
+            <svg width="13" height="13" viewBox="0 0 13 13" fill="none"><path d="M3 5L6.5 8.5L10 5" stroke="#8A8A8A" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" /></svg>
+          </button>
+  ) : null;
   useEffect(() => { setShowAll(false); }, [mode, filter, trimSearch]);
 
   return (
@@ -1188,10 +1210,13 @@ export function FlightBoard({ airport, locale, defaultMode = 'departures', displ
             border: `1px solid ${C.orange}44`, color: '#E4E4E7',
             fontSize: 14, lineHeight: 1.45,
           }}>
-            {t('board_all_past', {
+            {t(mode === 'arrivals' ? 'board_all_past_arr' : 'board_all_past_dep', {
               date: lastUpdated
                 ? lastUpdated.toLocaleString(numLocale(locale), {
-                    timeZone: airport.tz || 'UTC', dateStyle: 'long', timeStyle: 'short',
+                    // hourCycle задан ЯВНО: без него en/ar/ko/hi печатали «9:00 AM» под строками борта,
+                      // где время идёт в 24-часовом виде («09:45»). Соседние форматтеры цикл
+                      // задают (:144, :257, :866) — этот был единственным без него.
+                      timeZone: airport.tz || 'UTC', dateStyle: 'long', timeStyle: 'short', hourCycle: 'h23',
                   })
                 : '—',
             })}
@@ -1202,6 +1227,7 @@ export function FlightBoard({ airport, locale, defaultMode = 'departures', displ
         {/* A departure/arrival board IS a list — mark it up as one. Semantic <ul>/<li>
             gives screen readers "list, N items" and is the structure answer engines extract
             most reliably. Visual output is unchanged (globals.css zeroes list defaults). */}
+        {moreAbove && moreButton}
         <ul key={`${mode}:${filter}`} className={initialListKey.current === null ? 'rise' : undefined} style={{ listStyle: 'none', margin: 0, padding: 0 }}>
         {shown.map((f, i) => {
           // Прошедшее считается от РЕАЛЬНОГО времени, а не от времени снимка.
@@ -1259,7 +1285,12 @@ export function FlightBoard({ airport, locale, defaultMode = 'departures', displ
               // а у роли button потомки презентационные, поэтому время из дерева доступности
               // выпадало целиком. На всей странице было 35 aria-label и ни одного со временем —
               // то есть незрячий человек слышал номер и город, но не главное.
-              aria-label={`${f.scheduled}, ${f.flight}, ${city}, ${label}`}
+              // `actual || scheduled` — ровно то, что нарисовано крупно строкой ниже. Сначала я
+              // поставил сюда f.scheduled, и программа чтения озвучивала ПЕРЕЧЁРКНУТОЕ время:
+              // на проде 150 строк из 352 (42.6%) объявляли не то, что видно, а у 97 из них
+              // статус вообще без числа («По расписанию»), то есть показанное время
+              // восстановить было нечем. Худший случай — LED: крупно 00:47, в ярлыке 22:10.
+              aria-label={`${f.actual || f.scheduled}, ${f.flight}, ${city}, ${label}`}
               className="frow"
               onClick={() => { haptic(); track(GOALS.flightCard, { from: 'row', past: !!f.ts && f.ts * 1000 < Date.now() }); setSelected(f); }}
               onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); haptic(); track(GOALS.flightCard, { from: 'keyboard' }); setSelected(f); } }}
@@ -1340,17 +1371,7 @@ export function FlightBoard({ airport, locale, defaultMode = 'departures', displ
         })}
         </ul>
 
-        {!loading && visible.length > shown.length && (
-          <button className="press" onClick={() => { track(GOALS.boardMore, { shown: INITIAL, total: visible.length }); setShowAll(true); }} style={{
-            width: '100%', height: 56, marginTop: 4, marginBottom: 8,
-            display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 8,
-            border: '1px solid rgba(255,255,255,0.08)', background: 'rgba(255,255,255,0.02)',
-            borderRadius: 18, color: C.text, fontSize: 15, fontWeight: 600, cursor: 'pointer', WebkitTapHighlightColor: 'transparent',
-          }}>
-            {mode === 'departures' ? t('more_departures') : t('more_arrivals')}
-            <svg width="13" height="13" viewBox="0 0 13 13" fill="none"><path d="M3 5L6.5 8.5L10 5" stroke="#8A8A8A" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" /></svg>
-          </button>
-        )}
+        {!moreAbove && moreButton}
       </div>
 
       {/* ── Bottom sheet ───────────────────────────────────── */}

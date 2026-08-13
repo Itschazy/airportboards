@@ -304,8 +304,9 @@
     "sched_times_more": "{first}、その週にあと{n}便",
     "pwa_app_name": "AirportsBoard — リアルタイム空港発着案内",
     "pwa_app_desc": "空港の到着・出発便をリアルタイムで確認できます。",
-    "board_all_past": "この案内板の便はすべてすでに出発しています。データ：{date}。",
-    "board_stale": "データが古い"
+    "board_stale": "データが古い",
+    "board_all_past_dep": "この案内板の便はすべてすでに出発しています。データ：{date}。",
+    "board_all_past_arr": "この案内板の便はすべてすでに到着しています。データ：{date}。"
   },
   "notfound": {
     "title": "ページが見つかりません",

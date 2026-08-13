@@ -304,8 +304,9 @@
     "sched_times_more": "{first} ve o hafta {n} kalkış daha",
     "pwa_app_name": "AirportsBoard — Canlı varış-kalkış panoları",
     "pwa_app_desc": "Havalimanlarındaki varış ve kalkışları canlı takip edin.",
-    "board_all_past": "Bu panodaki tüm uçuşlar çoktan kalktı. Veriler: {date}.",
-    "board_stale": "Veriler eski"
+    "board_stale": "Veriler eski",
+    "board_all_past_dep": "Bu panodaki tüm uçuşlar çoktan kalktı. Veriler: {date}.",
+    "board_all_past_arr": "Bu panodaki tüm uçuşlar çoktan indi. Veriler: {date}."
   },
   "notfound": {
     "title": "Sayfa bulunamadı",
