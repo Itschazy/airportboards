@@ -14,8 +14,19 @@
 // стоит отдельно: у него есть отметка времени и НОЛЬ строк, и это единственный способ поймать
 // подмену «есть отметка» на «есть борт» — та самая пара, которую уже путали.
 //
+// ⚠️ ФИКСТУРУ НАДО ОТДАТЬ И СБОРКЕ, А НЕ ТОЛЬКО ЗАПУСКУ. Страницы хабов и карта сайта
+// пререндерятся, то есть состояние хранилища ЗАПЕКАЕТСЯ во время build. Сборка без
+// FLIGHT_STORE_PATH кладёт на диск холодные страницы, и `next start` с фикстурой отдаёт их
+// как есть: карта показала 0 прилётов и 0 lastmod, а схожесть SVO с его подстраницей
+// подскочила до 0.808 — две проверки красные, обе на пустом месте. Признак ровно этот:
+// цифры совпадают с прогоном на холодной машине, хотя фикстура заведомо на месте.
+//
 // Usage:  node scripts/make-fixture-store.mjs /tmp/fixture-store.json
-//         FLIGHT_STORE_PATH=/tmp/fixture-store.json npx next start -p 3099
+//         FLIGHT_STORE_PATH=/tmp/fixture-store.json NEXT_DIST_DIR=.next-audit npx next build
+//         FLIGHT_STORE_PATH=/tmp/fixture-store.json NEXT_DIST_DIR=.next-audit npx next start -p 3099
+//
+// И снести пререндер карты перед прогоном — она SSG с revalidate = 86400 и сама не обновится:
+//         rm -rf .next-audit/cache && find .next-audit/server/app -name 'sitemap*' -type f -delete
 
 import fs from 'node:fs';
 

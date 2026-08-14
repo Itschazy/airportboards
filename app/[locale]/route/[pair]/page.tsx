@@ -3,11 +3,13 @@ import { withBrand } from '@/lib/title';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
-import { getAirport } from '@/lib/airports';
+import { getAirport, distanceKm } from '@/lib/airports';
 import { getAirportName } from '@/lib/airport-names';
 import { getCityName } from '@/lib/places';
-import { getRoute, airlineName, type FlightRow } from '@/lib/flights';
+import { getRoute, getRouteStats, getBoardStampWithRows, airlineName, type FlightRow } from '@/lib/flights';
 import { locales, forwardArrow } from '@/lib/i18n';
+import { joinList } from '@/lib/list-separator';
+import { routeFacts } from '@/lib/route-facts';
 import { assertLocale } from '@/lib/locale-guard';
 
 const BASE = 'https://airportsboard.live';
@@ -73,14 +75,69 @@ export default async function RoutePage({ params }: Props) {
 
   const airlines = [...new Set(flights.map(f => f.airlineIata).filter(Boolean))].map(airlineName);
 
-  const jsonLd = {
+  /**
+   * Измеримые ответы вместо пустоты.
+   *
+   * До этого страница маршрута была самым тонким из заявленных в карте типов: 1 012 знаков,
+   * НОЛЬ заголовков второго уровня, из разметки один BreadcrumbList — при двенадцати h2 и
+   * четырёх типах разметки у страницы аэропорта. Таких страниц 454, и все они в карте, то
+   * есть ровно тот класс, за который Google пометил 5 324 адреса «просканирована, не
+   * проиндексирована».
+   *
+   * Всё, что добавлено, вычисляется: медиана времени в пути — из отметок вылета и прибытия
+   * тех же записей хранилища, что рисуют список ниже; расстояние — тем же haversine, которым
+   * считаются «соседние аэропорты». Ни одного утверждения, которого нельзя проверить по
+   * данным. Единицы («ч», «мин», «км», «Std.», «시간») выдаёт Intl по локали, вручную не
+   * переводится ни одна.
+   *
+   * Обращений к провайдеру нет: getRouteStats читает хранилище с live = false.
+   */
+  const stats = await getRouteStats(p.from, p.to);
+  const facts = routeFacts({
+    locale,
+    fromCity: from, toCity: to, fromIata: p.from, toIata: p.to,
+    durationMin: stats.durationMin,
+    km: a.lat != null && b.lat != null ? distanceKm(a, b) : null,
+    airlines,
+    airlineList: joinList(airlines, locale),
+  });
+  // Вопросы для FAQPage — только настоящие пары. У строки про авиакомпании вопросом служит
+  // существующий заголовок каталога, и попади она в разметку с пустым name, вся сущность
+  // стала бы невалидной.
+  const faq = facts.filter(f => f.q);
+  const stamp = getBoardStampWithRows(p.from, 'departures');
+
+  const canonicalUrl = `${BASE}/${locale}/route/${p.from}-${p.to}`;
+  const jsonLd: object[] = [{
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: tNav('home'), item: `${BASE}/${locale}` },
-      { '@type': 'ListItem', position: 2, name: t('route_h1', { from, to, iata1: p.from, iata2: p.to }), item: `${BASE}/${locale}/route/${p.from}-${p.to}` },
+      { '@type': 'ListItem', position: 2, name: t('route_h1', { from, to, iata1: p.from, iata2: p.to }), item: canonicalUrl },
     ],
-  };
+  }, {
+    '@context': 'https://schema.org',
+    '@type': 'WebPage',
+    name: t('route_h1', { from, to, iata1: p.from, iata2: p.to }),
+    description: t('route_desc', { from, to, iata1: p.from, iata2: p.to }),
+    url: canonicalUrl,
+    inLanguage: locale,
+    publisher: { '@type': 'Organization', name: 'AirportsBoard', url: BASE },
+    // Свежесть берётся из возраста ДАННЫХ, а не из времени отрисовки, и только когда на борту
+    // есть строки: отметка хранилища существует и после пустого ответа провайдера, а заявлять
+    // свежесть про «прямых рейсов не найдено» не о чем.
+    ...(stamp && flights.length ? { dateModified: new Date(stamp).toISOString() } : {}),
+  }];
+  if (faq.length) {
+    jsonLd.push({
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      mainEntity: faq.map(f => ({
+        '@type': 'Question', name: f.q,
+        acceptedAnswer: { '@type': 'Answer', text: f.a },
+      })),
+    });
+  }
 
   // Standalone navigation, not links inside a sentence, so WCAG 2.5.8's inline exception does
   // not apply. The taller box grows into the paragraph margins that are already there.
@@ -88,7 +145,9 @@ export default async function RoutePage({ params }: Props) {
 
   return (
     <div style={{ maxWidth: 760, margin: '0 auto', padding: '36px 18px 64px' }}>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+      {jsonLd.map((schema, i) => (
+        <script key={i} type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
+      ))}
       <div style={{ fontSize: 13, color: '#8A8A8A', marginBottom: 10 }}>
         <Link href={`/${locale}`} style={{ color: '#6A6A6A', textDecoration: 'none', display: 'inline-block', minHeight: 24 }}>airportsboard</Link>
       </div>
@@ -107,9 +166,28 @@ export default async function RoutePage({ params }: Props) {
         </p>
       )}
 
-      <div style={{ fontSize: 13, fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.12em', color: '#8A8A8A', margin: '16px 0 14px' }}>
+      {/* Вопросы, на которые страница теперь отвечает. Заголовок обязан быть ВОПРОСОМ, а
+          ответ — целым предложением: отвечающая машина цитирует фрагмент, и «357 км» вне
+          контекста не значит ничего, тогда как «Расстояние от AMS до LHR — 357 км по прямой»
+          значит. Ровно та же конструкция, что у FAQ страницы аэропорта.
+          Пары без вопроса (строка про авиакомпании) рисуются абзацем без заголовка — она уже
+          озаглавлена выше существующим ключом каталога. */}
+      {facts.length > 0 && (
+        <div style={{ margin: '0 0 28px' }}>
+          {facts.map((f, i) => (
+            <div key={i} style={{ marginTop: i ? 18 : 0 }}>
+              {f.q && (
+                <h2 style={{ margin: '0 0 6px', fontSize: 13, fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.12em', color: '#8A8A8A' }}>{f.q}</h2>
+              )}
+              <p style={{ margin: 0, fontSize: 15, lineHeight: 1.55, color: '#B4B4B4' }}>{f.a}</p>
+            </div>
+          ))}
+        </div>
+      )}
+
+      <h2 style={{ margin: '16px 0 14px', fontSize: 13, fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.12em', color: '#8A8A8A' }}>
         {t('route_flights_today')}
-      </div>
+      </h2>
 
       {flights.length === 0 ? (
         <div style={{ fontSize: 15, color: '#8A8A8A', padding: '24px 0' }}>{t('route_none')}</div>

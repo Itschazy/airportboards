@@ -221,7 +221,12 @@ export default async function ArrivalsPage({ params }: Props) {
       {/* boardTotal is the full board, not the SSR slice: passing nothing here made the page
           publish "40 arrivals" on airports whose board holds 80 — the same slice-vs-total
           defect already fixed on the parent page. */}
-      <FlightBoard airport={airport} locale={locale} defaultMode="arrivals" displayName={getAirportName(airport.iata, locale, airport.name)} initialFlights={board.rows} initialAllPast={board.allPast} initialFetchedAt={getBoardFetchedAt(airport.iata, 'arrivals')} boardTotal={initialFlights.length} />
+      {/* headingNote — признак ВЫДЕЛЕННОЙ подстраницы прилётов, а не текущего режима табло:
+          переключатель внутри компонента меняет режим без перехода, и заголовок первого
+          уровня прыгал бы под рукой. До этой строки h1 у родителя и здесь был один и тот же
+          («UFA Уфа»), хотя заголовки вкладок различаются, а класс запросов «прилёт» даёт
+          лучший CTR на сайте. Слово берётся из каталога, новых строк не заводится. */}
+      <FlightBoard airport={airport} locale={locale} defaultMode="arrivals" displayName={getAirportName(airport.iata, locale, airport.name)} headingNote={tNav('arrivals')} initialFlights={board.rows} initialAllPast={board.allPast} initialFetchedAt={getBoardFetchedAt(airport.iata, 'arrivals')} boardTotal={initialFlights.length} />
       <div style={{ maxWidth: 720, margin: '0 auto', padding: '0 24px 8px' }}>
         <EventBanner iata={airport.iata} locale={locale} />
       </div>

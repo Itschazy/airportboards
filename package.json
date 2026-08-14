@@ -39,7 +39,8 @@
     "seo:indexnow": "node scripts/indexnow.mjs",
     "seo:recrawl": "node scripts/yandex-recrawl.mjs",
     "check:sitemaplastmod": "node scripts/check-sitemap-lastmod.mjs",
-    "check:arrivals": "node scripts/check-arrivals-page.mjs"
+    "check:arrivals": "node scripts/check-arrivals-page.mjs",
+    "check:route": "node scripts/check-route-page.mjs"
   },
   "dependencies": {
     "next": "^15.3.3",

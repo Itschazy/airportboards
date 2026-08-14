@@ -395,6 +395,51 @@ export async function getRoute(from: string, to: string, locale: string, live = 
   return own.map(f => mapFlight(f, 'departures', locale));
 }
 
+/**
+ * Измеримые факты о маршруте: сколько рейсов, когда первый и последний, сколько лететь.
+ *
+ * Зачем отдельно от getRoute. Строка борта (FlightRow) отображается под ВЫЛЕТ и несёт только
+ * его время; времени прибытия в ней нет, а «сколько лететь» — главный вопрос о маршруте.
+ * Считать его можно лишь по сырой записи, где есть обе отметки.
+ *
+ * Продолжительность — МЕДИАНА, а не среднее. У пары городов рейсы разных авиакомпаний и типов
+ * судна расходятся на десятки минут, а один рейс с многочасовой задержкой в отметке прибытия
+ * утащил бы среднее в бессмыслицу. Медиана к такому выбросу равнодушна.
+ *
+ * Записи без обеих отметок пропускаются молча: лучше не ответить, чем ответить наугад. Если
+ * годных не осталось, durationMin равен null, и страница просто не задаёт этого вопроса.
+ *
+ * Читает то же хранилище и тем же ключом, что getRoute, с live = false: обращений к
+ * провайдеру нет ни одного, платить нечем.
+ */
+export async function getRouteStats(from: string, to: string): Promise<{
+  count: number; firstTs: number | null; lastTs: number | null; durationMin: number | null;
+}> {
+  const F = from.toUpperCase(), T = to.toUpperCase();
+  let raw = await fetchRaw(`dep_iata=${F}&arr_iata=${T}`, 'departures', { live: false });
+  if (!raw.length) {
+    const board = await fetchRaw(`dep_iata=${F}`, 'departures', { live: false });
+    raw = board.filter(f => f.arr_iata === T);
+  }
+  const own = raw.filter(f => f.dep_iata === F && f.arr_iata === T);
+  if (!own.length) return { count: 0, firstTs: null, lastTs: null, durationMin: null };
+
+  const deps = own.map(f => f.dep_time_ts || 0).filter(Boolean).sort((a, b) => a - b);
+  const spans = own
+    .map(f => (f.arr_time_ts || 0) - (f.dep_time_ts || 0))
+    // Отсечка снизу и сверху: отрицательная разница означает битые отметки, а сутки с
+    // лишним — почти наверняка сдвиг даты в источнике, а не настоящий рейс.
+    .filter(s => s > 15 * 60 && s < 20 * 3600)
+    .sort((a, b) => a - b);
+
+  return {
+    count: own.length,
+    firstTs: deps[0] ?? null,
+    lastTs: deps[deps.length - 1] ?? null,
+    durationMin: spans.length ? Math.round(spans[spans.length >> 1] / 60) : null,
+  };
+}
+
 export async function getFlightByNumber(flightIata: string, locale: string, live = false): Promise<FlightRow | null> {
   const code = norm(flightIata);
   const raw = await fetchRaw(`flight_iata=${flightIata}`, 'departures', { live });

@@ -612,11 +612,26 @@ function BottomSheet({ flight, mode, onClose, tz, locale, updLabel, originIata, 
 
 // ─── Main Component ───────────────────────────────────────────────────────────
 
-export function FlightBoard({ airport, locale, defaultMode = 'departures', displayName, initialFlights, initialFetchedAt, boardTotal, lead, statusLine = null, noService = false, pendingNote = null, infoOnly = false, initialAllPast = false }: {
+export function FlightBoard({ airport, locale, defaultMode = 'departures', displayName, headingNote, initialFlights, initialFetchedAt, boardTotal, lead, statusLine = null, noService = false, pendingNote = null, infoOnly = false, initialAllPast = false }: {
   airport: Airport;
   locale: string;
   defaultMode?: Mode;
   displayName?: string;
+  /**
+   * Хвост к заголовку первого уровня: «UFA Уфа · Прилёты».
+   *
+   * Ставит его ТОЛЬКО выделенная подстраница /arrivals, и передаётся сюда именно признак
+   * страницы, а не текущий режим табло. Разница существенная: `mode` — состояние клиента,
+   * переключатель «Вылеты / Прилёты» меняет его без перехода, и заголовок первого уровня
+   * прыгал бы под рукой у читателя.
+   *
+   * Зачем вообще. У родителя и у его /arrivals был ОДИН h1 — «UFA Уфа», — при том что
+   * заголовки вкладок различаются и говорят разное. Класс запросов «прилёт» даёт лучший CTR
+   * на сайте (3.0% против 1.5% у общего «табло»), а страница, которая на него отвечает, в
+   * своём единственном заголовке первого уровня о прилётах не упоминала. Слово берётся из
+   * каталога (nav.arrivals), новых строк не заводится ни одной.
+   */
+  headingNote?: string;
   initialFlights?: Flight[];
   /** Epoch ms when airlabs produced the SSR board, so the first paint labels its true age. */
   initialFetchedAt?: number | null;
@@ -1008,6 +1023,11 @@ export function FlightBoard({ airport, locale, defaultMode = 'departures', displ
                 for layout but kept in textContent, so this changes the read text and not a
                 single rendered pixel. */}
             <span style={{ fontSize: 14, fontWeight: 500, color: C.secondary, lineHeight: 1.25, minWidth: 0, overflow: 'hidden', textOverflow: 'ellipsis', display: '-webkit-box', WebkitLineClamp: 2, WebkitBoxOrient: 'vertical' }}>{' '}{displayName || airport.name}</span>
+            {/* Пробел перед разделителем — по той же причине, что и у имени выше: между
+                flex-элементами текста нет, и без него h1 читался бы «УфаПрилёты». */}
+            {headingNote && (
+              <span style={{ fontSize: 14, fontWeight: 600, color: C.secondary, lineHeight: 1.25, flexShrink: 0, opacity: 0.85 }}>{' · '}{headingNote}</span>
+            )}
           </h1>
           <div style={{ textAlign: 'end', flexShrink: 0 }}>
             <div style={{ fontSize: 17, fontWeight: 600, letterSpacing: '-0.01em', fontVariantNumeric: 'tabular-nums', color: C.text, lineHeight: 1 }}>{time}</div>

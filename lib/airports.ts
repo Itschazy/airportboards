@@ -409,6 +409,12 @@ function haversine(lat1: number, lon1: number, lat2: number, lon2: number): numb
   return 2 * R * Math.asin(Math.sqrt(a));
 }
 
+/** Расстояние между двумя аэропортами по большому кругу, км. Тот же haversine, что у
+ *  «соседних аэропортов», — чтобы на сайте не завелось двух разных ответов на один вопрос. */
+export function distanceKm(a: { lat: number; lon: number }, b: { lat: number; lon: number }): number {
+  return Math.round(haversine(a.lat, a.lon, b.lat, b.lon));
+}
+
 export function nearestAirports(lat: number, lon: number, n = 8): (Airport & { km: number })[] {
   return airports
     .map(a => ({ ...a, km: Math.round(haversine(lat, lon, a.lat, a.lon)) }))

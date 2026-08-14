@@ -43,8 +43,33 @@ export default async function WidgetsPage({ params }: Props) {
   setRequestLocale(assertLocale(locale));
   const t = await getTranslations({ locale, namespace: 'home' });
 
+  /**
+   * Единственная страница в карте сайта, у которой не было НИКАКОЙ разметки.
+   *
+   * WebApplication здесь не украшение и не натяжка: страница отдаёт работающий инструмент —
+   * выбрал аэропорт, скопировал код, вставил к себе, — а не рассказывает о нём. Тип описывает
+   * ровно это. Цена бесплатная и сказана прямо, потому что для встраиваемого виджета это
+   * первое, что спрашивают.
+   *
+   * Имя и описание берутся ИЗ ТЕХ ЖЕ ключей, что заголовок вкладки и h1 — новых строк не
+   * заводится ни одной, и разметка не может разойтись с тем, что на экране.
+   */
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'WebApplication',
+    name: t('widgets_title'),
+    description: t('widgets_meta'),
+    url: `${BASE}/${locale}/widgets`,
+    inLanguage: locale,
+    applicationCategory: 'TravelApplication',
+    operatingSystem: 'Any',
+    offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
+    publisher: { '@type': 'Organization', name: 'AirportsBoard', url: BASE },
+  };
+
   return (
     <main style={{ maxWidth: 720, margin: '0 auto', padding: '28px 20px 60px' }}>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       <h1 style={{ fontSize: 'clamp(26px, 6vw, 36px)', fontWeight: 800, letterSpacing: '-0.03em', color: '#FFFFFF', margin: 0 }}>
         {t('widgets_title')}
       </h1>
