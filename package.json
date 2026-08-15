@@ -40,7 +40,8 @@
     "seo:recrawl": "node scripts/yandex-recrawl.mjs",
     "check:sitemaplastmod": "node scripts/check-sitemap-lastmod.mjs",
     "check:arrivals": "node scripts/check-arrivals-page.mjs",
-    "check:route": "node scripts/check-route-page.mjs"
+    "check:route": "node scripts/check-route-page.mjs",
+    "check:warmdemand": "node scripts/check-warm-demand.mjs"
   },
   "dependencies": {
     "next": "^15.3.3",
