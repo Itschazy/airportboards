@@ -41,7 +41,8 @@
     "check:sitemaplastmod": "node scripts/check-sitemap-lastmod.mjs",
     "check:arrivals": "node scripts/check-arrivals-page.mjs",
     "check:route": "node scripts/check-route-page.mjs",
-    "check:warmdemand": "node scripts/check-warm-demand.mjs"
+    "check:warmdemand": "node scripts/check-warm-demand.mjs",
+    "check:servicefresh": "node scripts/check-service-freshness.mjs"
   },
   "dependencies": {
     "next": "^15.3.3",
