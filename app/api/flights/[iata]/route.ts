@@ -1,6 +1,20 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { getBoard, getBoardFetchedAt, CACHE_SECONDS, OUTBOUND_ROWS } from '@/lib/flights';
+import { getBoard, getBoardFetchedAt, OUTBOUND_ROWS } from '@/lib/flights';
 import { mayFetchLive } from '@/lib/live-budget';
+
+/**
+ * Ответ борта НЕ КЭШИРУЕТСЯ общим кэшем — по той же причине, что и сама страница табло.
+ *
+ * Раньше стояло `s-maxage=60`. Сегодня общего кэша перед приложением нет (проверено: nginx на
+ * ответах /api/ не ставит ни Age, ни X-Cache), поэтому вреда не было. Но заголовок его
+ * ПРИГЛАШАЕТ, а с его появлением получилась бы ловушка: ответ обходчику — а он покупки не
+ * запускает и получает борт из хранилища — лёг бы в общий кэш и раздавался бы живым читателям
+ * следующую минуту. Покупка свежести для них просто не состоялась бы, и заметить это было бы
+ * нечем: ответ 200, строки есть, возраст подписан честно.
+ *
+ * Заголовок теперь тот же, что у страницы: свежесть и разделяемый кэш ответа несовместимы.
+ */
+const BOARD_CACHE_CONTROL = 'private, max-age=0, must-revalidate';
 import { freshnessWorthBuying } from '@/lib/warm';
 
 export async function GET(
@@ -42,7 +56,7 @@ export async function GET(
   // blank while developing. NEVER in production — prod serves real data or an empty board.
   if (!flights.length && !process.env.AIRLABS_API_KEY && process.env.NODE_ENV !== 'production') {
     return NextResponse.json(mockData(code, direction), {
-      headers: { 'Cache-Control': `s-maxage=${CACHE_SECONDS}, stale-while-revalidate=${CACHE_SECONDS}` },
+      headers: { 'Cache-Control': BOARD_CACHE_CONTROL },
     });
   }
 
@@ -58,7 +72,7 @@ export async function GET(
      * ради строк, которых никто не увидит.
      */
     { iata: code, direction, flights: flights.slice(0, OUTBOUND_ROWS), fetchedAt: getBoardFetchedAt(code, direction) },
-    { headers: { 'Cache-Control': `s-maxage=${CACHE_SECONDS}, stale-while-revalidate=${CACHE_SECONDS}` } }
+    { headers: { 'Cache-Control': BOARD_CACHE_CONTROL } }
   );
 }
 

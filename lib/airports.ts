@@ -415,11 +415,32 @@ export function distanceKm(a: { lat: number; lon: number }, b: { lat: number; lo
   return Math.round(haversine(a.lat, a.lon, b.lat, b.lon));
 }
 
+/**
+ * Ближайшие аэропорты. Результат ЗАПОМИНАЕТСЯ: проход идёт по всем 6 072 записям с
+ * копированием объекта и полной сортировкой.
+ *
+ * Пока страницы аэропортов жили в ISR, это случалось раз в пять минут на страницу. 04.09 они
+ * стали динамическими, и тот же проход поехал на КАЖДЫЙ запрос, включая обход краулера и
+ * ферму обходчиков, которая обходит корпус целиком.
+ *
+ * Ключ — координаты и n, а не код аэропорта: функцию зовут и из геолокации, где кода нет.
+ * Набор координат конечен и мал (страница зовёт её для своего аэропорта), поэтому карта не
+ * растёт неограниченно; на всякий случай она всё же ограничена.
+ */
+const nearestCache = new Map<string, (Airport & { km: number })[]>();
+const NEAREST_CACHE_MAX = 4000;
+
 export function nearestAirports(lat: number, lon: number, n = 8): (Airport & { km: number })[] {
-  return airports
+  const key = `${lat.toFixed(4)},${lon.toFixed(4)},${n}`;
+  const hit = nearestCache.get(key);
+  if (hit) return hit;
+  const out = airports
     .map(a => ({ ...a, km: Math.round(haversine(lat, lon, a.lat, a.lon)) }))
     .sort((x, y) => x.km - y.km)
     .slice(0, n);
+  if (nearestCache.size >= NEAREST_CACHE_MAX) nearestCache.clear();
+  nearestCache.set(key, out);
+  return out;
 }
 
 // ── Countries (for /airports/[country] SEO pages + homepage block) ──────────

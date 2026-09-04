@@ -79,6 +79,10 @@ export type AirlabsFlight = {
   status: string;
 };
 
+/** Когда по ключу поставщик последний раз не ответил. Отрицательный кэш, см. fetchRaw. */
+const lastFailure = new Map<string, number>();
+const FAILURE_COOLDOWN_MS = 60_000;
+
 /** Ключи, по которым поставщик уже отдал пустоту один раз. Второй ноль подряд принимается. */
 const emptyOnce = new Set<string>();
 
@@ -240,6 +244,20 @@ export async function fetchRaw(
   const fresh = getFresh(cacheKey);
   if (fresh) return fresh;
   if (!opts.live || !AIRLABS_KEY || !canSpend()) return getStale(cacheKey) ?? [];
+  /**
+   * ОТРИЦАТЕЛЬНЫЙ КЭШ. Пока поставщик отвечает медленно или не отвечает, каждый читатель
+   * платил бы ожиданием заново.
+   *
+   * Тайм-аут обращения — шесть секунд, крайний срок серверного рендера — 2.5. То есть при
+   * недоступности поставщика КАЖДЫЙ заход на страницу добавлял 2.5 секунды к ответу и уходил
+   * в никуда. Раньше это ограничивалось тем, что живой путь почти не работал; теперь он
+   * работает, и цена стала реальной.
+   *
+   * Минута выбрана как заметно меньше окна TTL (10 минут): сбой на секунды не заморозит
+   * свежесть, а долгий сбой перестанет стоить времени читателям.
+   */
+  const failedAt = lastFailure.get(cacheKey);
+  if (failedAt && Date.now() - failedAt < FAILURE_COOLDOWN_MS) return getStale(cacheKey) ?? [];
   const pending = inflight.get(cacheKey);
   if (pending) return pending;
   const p = doFetch(query, direction, cacheKey, opts.kind ?? 'human').finally(() => inflight.delete(cacheKey));
@@ -326,9 +344,20 @@ async function doFetch(query: string, direction: 'departures' | 'arrivals', cach
   try {
     const res = await fetch(url, { cache: 'no-store', signal: AbortSignal.timeout(6000) });
     spend(kind); // any answered airlabs request counts against the monthly budget
-    if (!res.ok) return getStale(cacheKey) ?? [];
+    if (!res.ok) { lastFailure.set(cacheKey, Date.now()); return getStale(cacheKey) ?? []; }
     json = await res.json();
   } catch {
+    /**
+     * ТАЙМ-АУТ ТОЖЕ СТОИТ ДЕНЕГ. Прерывание по AbortSignal происходит у НАС, а не у
+     * поставщика: запрос до него дошёл и, скорее всего, был им посчитан. Не отмечая такую
+     * трату, собственный счётчик занижает расход — и потолок, которым он ограничивает и
+     * прогрев, и живой путь, оказывается выше настоящего. При долгой недоступности
+     * поставщика расхождение накапливается молча.
+     *
+     * Отмечаем и продолжаем отдавать последнее хорошее — поведение для читателя не меняется.
+     */
+    spend(kind);
+    lastFailure.set(cacheKey, Date.now());
     return getStale(cacheKey) ?? []; // network/timeout — keep serving last good data
   }
   // Every response echoes the real monthly allowance for our key. Recording it lets the
@@ -345,6 +374,7 @@ async function doFetch(query: string, direction: 'departures' | 'arrivals', cach
 
   raw = orderBoard(raw, direction, now, { prune: true });
 
+  lastFailure.delete(cacheKey);
   raw = raw.slice(0, maxRowsFor(query));
   /**
    * ПУСТОЙ ОТВЕТ НЕ ЗАТИРАЕТ КУПЛЕННЫЙ БОРТ С ПЕРВОГО РАЗА.
