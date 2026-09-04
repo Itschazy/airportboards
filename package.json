@@ -45,7 +45,8 @@
     "check:servicefresh": "node scripts/check-service-freshness.mjs",
     "check:alive": "node scripts/check-automation-alive.mjs",
     "check:liverefresh": "node scripts/check-live-refresh.mjs",
-    "check:codemoves": "node scripts/check-code-moves.mjs"
+    "check:codemoves": "node scripts/check-code-moves.mjs",
+    "service:remeasure": "node scripts/service-remeasure.mjs"
   },
   "dependencies": {
     "next": "^15.3.3",
