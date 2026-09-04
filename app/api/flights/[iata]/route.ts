@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { getBoard, getBoardFetchedAt, CACHE_SECONDS } from '@/lib/flights';
+import { getBoard, getBoardFetchedAt, CACHE_SECONDS, OUTBOUND_ROWS } from '@/lib/flights';
 import { mayFetchLive } from '@/lib/live-budget';
 import { freshnessWorthBuying } from '@/lib/warm';
 
@@ -49,7 +49,15 @@ export async function GET(
   return NextResponse.json(
     // fetchedAt = when airlabs actually produced this data, so the client can label its
     // real age instead of assuming the response time is the data time.
-    { iata: code, direction, flights, fetchedAt: getBoardFetchedAt(code, direction) },
+    /**
+     * Наружу — не больше OUTBOUND_ROWS строк.
+     *
+     * Хранилище у плотных аэропортов теперь держит до 240 строк, чтобы снимок не устаревал
+     * целиком между прогревами. Но клиенту столько не нужно: страница рисует 30 и раскрывает
+     * до 80 по кнопке. Отдавать 240 значило бы утроить полезную нагрузку опроса на мобильном
+     * ради строк, которых никто не увидит.
+     */
+    { iata: code, direction, flights: flights.slice(0, OUTBOUND_ROWS), fetchedAt: getBoardFetchedAt(code, direction) },
     { headers: { 'Cache-Control': `s-maxage=${CACHE_SECONDS}, stale-while-revalidate=${CACHE_SECONDS}` } }
   );
 }

@@ -5,11 +5,46 @@ import { getCityName } from '@/lib/places';
 import { getFresh, getStale, getStaleTs, put, canSpend, spend, noteProviderLimit, type SpendKind } from '@/lib/flightStore';
 import { archiveBoard } from '@/lib/board-archive';
 import { getActiveEventAirports } from '@/lib/event-content';
-import { dueAirports, tickBudget } from '@/lib/warm';
+import { dueAirports, tickBudget, tierOf, getServiceData } from '@/lib/warm';
 
 const AIRLABS_KEY = process.env.AIRLABS_API_KEY || '';
 export const CACHE_SECONDS = 60;
+/**
+ * Сколько строк борта хранить. НЕ ОДНО ЧИСЛО ДЛЯ ВСЕХ — и это главное здесь.
+ *
+ * Число строк определяет, СКОЛЬКО ЧАСОВ расписания держит снимок, а значит — как долго он
+ * остаётся полезным. Замер 04.09 прямо у поставщика: он отдаёт 559–1083 строки на 12–28 часов,
+ * но первые 80 покрывают у SIN всего 1.2 ч, у AYT 4.4 ч, у IST 8.9 ч — плотность разная на
+ * порядок. Комментарий к orderBoard ниже говорит об этом с 09.08: «MAX_FLIGHTS covers 1–4
+ * hours of a dense board while the warm interval is 6–24 hours, so a busy airport is in this
+ * state most of the cycle». Причину знали, чинить было нечем: план 100 000 и суточный прогрев.
+ *
+ * ПОЧЕМУ НЕ ПОДНЯТЬ ВСЕМ. Хранилище — один JSON, переписываемый целиком через writeFileSync
+ * на каждую запись. Замер: 6 012 записей × 80 строк ≈ 138 МБ уже сейчас; глобальный подъём до
+ * 240 даёт 413 МБ, переписываемых каждые две секунды во время тика прогрева. Это не улучшение,
+ * а способ положить бокс.
+ *
+ * Подъём только у mega и hub — 330 записей из 6 012 — стоит +15 МБ. Ровно там, где плотность
+ * борта и делает снимок бесполезным; у хвоста 80 строк покрывают сутки и больше.
+ */
 const MAX_FLIGHTS = 80;
+const MAX_FLIGHTS_DENSE = 240;
+
+/** Сколько строк отдавать наружу и класть в архив — не зависит от плотности, см. ниже. */
+export const OUTBOUND_ROWS = 80;
+
+/**
+ * Ярус аэропорта по ключу запроса. Плотные ярусы получают длинный снимок.
+ *
+ * Ключ уже разбирается ниже для архива тем же выражением — держим один разбор, чтобы форматы
+ * не разъехались.
+ */
+function maxRowsFor(query: string): number {
+  const m = /^(?:dep|arr)_iata=([A-Z0-9]{3})$/.exec(query);
+  if (!m) return MAX_FLIGHTS;
+  const name = tierOf(getServiceData()[m[1]] ?? 0)?.name;
+  return name === 'mega' || name === 'hub' ? MAX_FLIGHTS_DENSE : MAX_FLIGHTS;
+}
 /**
  * Сколько последних строк отдавать, когда впереди не осталось ничего.
  *
@@ -307,13 +342,25 @@ async function doFetch(query: string, direction: 'departures' | 'arrivals', cach
 
   raw = orderBoard(raw, direction, now, { prune: true });
 
-  raw = raw.slice(0, MAX_FLIGHTS);
+  raw = raw.slice(0, maxRowsFor(query));
   put(cacheKey, raw);
   // Every paid snapshot goes to the append-only archive — the store keeps only the latest
   // board per airport, so without this each refresh destroys the history it replaces. Plain
   // board queries only: route/flight/airline lookups are slices of the same boards.
   const board = query.match(/^(dep|arr)_iata=([A-Z0-9]{3})$/);
-  if (board) archiveBoard(board[1] === 'dep' ? 'departures' : 'arrivals', board[2], raw);
+  /**
+   * В АРХИВ идёт прежние 80 строк, а не весь снимок.
+   *
+   * Архив дописывается на КАЖДЫЙ оплаченный снимок и проверяет свой размер один раз в сутки;
+   * при 300 МБ он молча выключается до перезапуска процесса. Уплотнение ярусов 04.09 уже
+   * удвоило поток снимков — история сократилась примерно с 50 суток до 25. Записывать сюда
+   * ещё и втрое больше строк значило бы убить архив за десять дней, и узнать об этом было бы
+   * неоткуда: наружу это не проявляется ничем.
+   *
+   * Для истории задержек длинный хвост расписания и не нужен — там важно, что случилось с
+   * ближайшими рейсами.
+   */
+  if (board) archiveBoard(board[1] === 'dep' ? 'departures' : 'arrivals', board[2], raw.slice(0, OUTBOUND_ROWS));
   return raw;
 }
 
