@@ -89,6 +89,25 @@ say(/export function mayFetchLive\([^)]*ageMs: number \| null\)/.test(SRC),
 say(!/^import .*\bgetStaleTs\b.*from '@\/lib\/flightStore'/m.test(SRC),
   'lib/live-budget.ts не импортирует getStaleTs — ключ хранилища знает только lib/flights.ts');
 
+// ── Несколько читателей на одну страницу подряд стоят ОДНОГО запроса на окно ─────────────
+// Оплата дедуплицируется двумя независимыми местами, и оба обязаны стоять на месте:
+//   · getFresh ПЕРВЫМ в fetchRaw — внутри окна TTL запись отдаётся до всякой логики покупки;
+//   · inflight — полсотни одновременных запросов на один протухший борт идут к поставщику ОДИН
+//     раз, остальные ждут тот же промис.
+// Плюс ранний выход в boardForVisitor: без него свежий борт всё равно съедал слот из потолка
+// «сорок бортов на адрес в час» и завышал счётчик admitted, хотя денег не тратил ни копейки.
+const FL = fs.readFileSync('lib/flights.ts', 'utf8');
+const body = FL.slice(FL.indexOf('export async function fetchRaw'));
+const iFresh = body.indexOf('getFresh(cacheKey)');
+const iLive = body.indexOf('opts.live');
+say(iFresh > 0 && iLive > 0 && iFresh < iLive,
+  'getFresh стоит в fetchRaw ДО проверки live — заход внутри окна TTL не стоит ничего');
+say(/const pending = inflight\.get\(cacheKey\);[\s\S]{0,80}return pending;/.test(FL),
+  'одновременные запросы на один борт склеиваются в одно обращение к поставщику');
+const LB = fs.readFileSync('lib/live-board.ts', 'utf8');
+say(/if \(!needsRefresh\(/.test(LB) && LB.indexOf('if (!needsRefresh(') < LB.indexOf('mayFetchLiveFor('),
+  'boardForVisitor выходит на свежем борте ДО mayFetchLiveFor — слот по адресу не тратится зря');
+
 // Окно свежести обязано совпадать с TTL хранилища. Разъедутся — и сайт будет платить за
 // данные, которые getFresh отдал бы бесплатно, либо наоборот считать свежим просроченное.
 const stale = /const STALE_MS = \(Number\(process\.env\.(\w+)\) \|\| (\d+)\)/.exec(SRC);

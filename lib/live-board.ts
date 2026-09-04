@@ -1,6 +1,6 @@
 import { headers } from 'next/headers';
 import { getBoard, getBoardFetchedAt, type FlightRow } from '@/lib/flights';
-import { mayFetchLiveFor } from '@/lib/live-budget';
+import { mayFetchLiveFor, needsRefresh } from '@/lib/live-budget';
 import { freshnessWorthBuying } from '@/lib/warm';
 
 /**
@@ -57,6 +57,15 @@ export async function boardForVisitor(
   }
 
   const at = getBoardFetchedAt(iata, direction);
+
+  // Борт внутри окна свежести — покупать нечего, и спрашивать разрешение тоже незачем:
+  // mayFetchLiveFor съел бы слот из потолка по адресу, а fetchRaw всё равно отдал бы эту же
+  // запись даром. Несколько читателей на одну страницу подряд стоят ОДНОГО запроса на окно,
+  // а не одного на человека.
+  if (!needsRefresh(at == null ? null : Date.now() - at)) {
+    return { rows: await stored(), fetchedAt: at, refreshed: false };
+  }
+
   const live = mayFetchLiveFor(
     h,
     h.get('host') || '',
