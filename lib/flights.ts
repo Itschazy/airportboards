@@ -1,6 +1,7 @@
 import airports from '@/data/airports.json';
 import airportLabels from '@/data/airport-labels.json';
 import airlines from '@/data/airlines.json';
+import codeMoves from '@/data/airport-code-moves.json';
 import { getCityName } from '@/lib/places';
 import { getFresh, getStale, getStaleTs, put, canSpend, spend, noteProviderLimit, type SpendKind } from '@/lib/flightStore';
 import { archiveBoard } from '@/lib/board-archive';
@@ -334,8 +335,35 @@ function orderBoard(rows: AirlabsFlight[], direction: 'departures' | 'arrivals',
   return [...rows].sort(cmp);
 }
 
+/**
+ * КОД АЭРОПОРТА ИНОГДА МЕНЯЕТСЯ, А НАШ КАТАЛОГ ОСТАЁТСЯ НА СТАРОМ.
+ *
+ * Найдено 04.09.2026. Поставщик отдавал ноль по PBI (Палм-Бич) и FRU (Манас), два прохода
+ * замера подряд подтвердили ноль, и страницы начали печатать «Регулярных рейсов нет» про
+ * работающие международные аэропорты. Причина не в поставщике: код сменился. Палм-Бич теперь
+ * DJT, Манас — BSZ, и под новыми кодами тот же самый поставщик отдаёт 59 и 21 вылет.
+ *
+ * Такие случаи находятся соединением нашего каталога с OurAirports ПО ICAO — он при
+ * переименовании не меняется, в отличие от IATA (scripts/check-code-moves.mjs, он же сторожит
+ * появление новых). Каждая пара в файле ПОДТВЕРЖДЕНА живым ответом поставщика: переносов, где
+ * новый код тоже отдаёт пусто, в списке нет — там дыра в покрытии, а не переезд.
+ *
+ * Подменяется РОВНО исходящий запрос. Адрес страницы, ключ хранилища, ключ слоя 2 живого
+ * бюджета, карта сайта и все замеры остаются на старом коде — иначе пришлось бы синхронно
+ * править семь мест, которые строят строку `dep_iata=` независимо друг от друга.
+ */
+const MOVES = codeMoves.moves as Record<string, string>;
+function providerCode(code: string): string {
+  return MOVES[code] ?? code;
+}
+
+/** Переписать коды в строке запроса к поставщику. Годится и для парного `dep_iata=X&arr_iata=Y`. */
+function toProviderQuery(query: string): string {
+  return query.replace(/((?:dep|arr)_iata=)([A-Z0-9]{3})\b/g, (_m, p, c) => p + providerCode(c));
+}
+
 async function doFetch(query: string, direction: 'departures' | 'arrivals', cacheKey: string, kind: SpendKind): Promise<AirlabsFlight[]> {
-  const url = `https://airlabs.co/api/v9/schedules?${query}&api_key=${AIRLABS_KEY}`;
+  const url = `https://airlabs.co/api/v9/schedules?${toProviderQuery(query)}&api_key=${AIRLABS_KEY}`;
   let json: {
     response?: AirlabsFlight[];
     error?: { message?: string };
@@ -436,7 +464,8 @@ export async function getBoard(iata: string, direction: 'departures' | 'arrivals
   const code = iata.toUpperCase();
   const param = direction === 'departures' ? `dep_iata=${code}` : `arr_iata=${code}`;
   const raw = await fetchRaw(param, direction, { live, kind });
-  const own = raw.filter(f => (direction === 'departures' ? f.dep_iata : f.arr_iata) === code);
+  const want = providerCode(code);
+  const own = raw.filter(f => (direction === 'departures' ? f.dep_iata : f.arr_iata) === want);
   // Statuses are derived against the moment the data was taken, not the moment we answer.
   // getStaleTs is the same value getBoardFetchedAt() publishes as "updated N ago", so the
   // status and the freshness line can no longer tell the reader different stories.
@@ -476,7 +505,8 @@ export function getBoardStampWithRows(iata: string, direction: 'departures' | 'a
   const ts = getStaleTs(key);
   if (ts == null) return null;
   const raw = getStale(key);
-  if (!raw?.some(f => (direction === 'departures' ? f.dep_iata : f.arr_iata) === code)) return null;
+  const want = providerCode(code);
+  if (!raw?.some(f => (direction === 'departures' ? f.dep_iata : f.arr_iata) === want)) return null;
   return ts;
 }
 

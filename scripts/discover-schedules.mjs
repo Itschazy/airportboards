@@ -62,13 +62,17 @@ const todo = airports
 
 console.log(`dataset ${airports.length} | already known ${Object.keys(seen).length} | to probe ${todo.length} | budget ${BUDGET}`);
 
+const MOVES = JSON.parse(fs.readFileSync('data/airport-code-moves.json', 'utf8')).moves ?? {};
+
 let spent = 0, withService = 0, empty = 0, errors = 0, done = 0;
 const started = Date.now();
 
 async function probe(iata) {
   if (spent >= BUDGET) return null;
   spent++;
-  const url = `https://airlabs.co/api/v9/schedules?dep_iata=${iata}&api_key=${KEY}`;
+  // Тот же перенос кодов, что и в lib/flights.ts: спрашивать надо тем кодом, которым отвечает
+  // поставщик, иначе замер сам себе подтверждает ложный ноль (PBI, FRU — 04.09.2026).
+  const url = `https://airlabs.co/api/v9/schedules?dep_iata=${MOVES[iata] ?? iata}&api_key=${KEY}`;
   for (let attempt = 0; attempt < 3; attempt++) {
     try {
       const res = await fetch(url, { signal: AbortSignal.timeout(20000) });

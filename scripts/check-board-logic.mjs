@@ -25,6 +25,7 @@ const STUBS = `
 const airports = [];
 const airportLabels = {};
 const airlines = {};
+const codeMoves = { moves: {} };   // перенос кодов IATA: на логику борта не влияет
 const getCityName = (c) => c;
 const getAirportName = (i) => i;
 const archiveBoard = () => {};

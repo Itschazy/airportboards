@@ -50,6 +50,7 @@ process.stdout.write('fetching OurAirports… ');
 const csv = await (await fetch(SRC)).text();
 const lines = csv.split('\n').filter(Boolean);
 const head = splitCsvLine(lines[0]).map(h => h.replace(/^"|"$/g, ''));
+const iIcao = head.indexOf('ident');
 const iIata = head.indexOf('iata_code');
 const iSched = head.indexOf('scheduled_service');
 const iName = head.indexOf('name');
@@ -57,28 +58,54 @@ const iCountry = head.indexOf('iso_country');
 if (iIata < 0 || iSched < 0) throw new Error('OurAirports schema changed: no iata_code/scheduled_service column');
 
 const oa = new Map();
+/** Второй индекс — по ICAO. См. длинный комментарий ниже: без него вето слепо к смене кода. */
+const byIcao = new Map();
 for (const line of lines.slice(1)) {
   const f = splitCsvLine(line);
-  const iata = (f[iIata] || '').trim().toUpperCase();
-  if (iata.length !== 3) continue;
-  oa.set(iata, { sched: f[iSched] === 'yes', name: f[iName] || '', country: f[iCountry] || '' });
+  const rec = { sched: f[iSched] === 'yes', name: f[iName] || '', country: f[iCountry] || '',
+                iata: (f[iIata] || '').trim().toUpperCase() };
+  const icao = (f[iIcao] || '').trim().toUpperCase();
+  if (icao) byIcao.set(icao, rec);
+  if (rec.iata.length === 3) oa.set(rec.iata, rec);
 }
-console.log(`${oa.size} airports with an IATA code`);
+console.log(`${oa.size} airports with an IATA code, ${byIcao.size} with an ICAO ident`);
+
+/**
+ * ВТОРОЙ КЛЮЧ СОЕДИНЕНИЯ — ICAO. Соединение только по IATA имеет слепое пятно ровно там, где
+ * вето нужнее всего: КОД АЭРОПОРТА МЕНЯЕТСЯ, OurAirports переносит его на новую строку, а наш
+ * каталог держит старый. По старому коду в OurAirports строки нет вовсе — значит нет и вето, —
+ * и мы публикуем «регулярных рейсов нет» про работающий аэропорт.
+ *
+ * Найдено 04.09.2026: 168 наших кодов не находятся в OurAirports по IATA. Среди них Берлин-
+ * Шёнефельд (SXF → BER, 435 вылетов в сутки), Палм-Бич (PBI → DJT, 59) и Манас (FRU → BSZ, 21).
+ * Все три отдавали читателю прямое отрицание.
+ *
+ * ICAO не меняется при переименовании и ребрендинге, поэтому соединение по нему устойчиво.
+ * Направление то же, одностороннее: чужой источник может ОТМЕНИТЬ наше отрицание, но никогда
+ * не утверждает за нас наличие рейсов.
+ */
+const AIRPORTS = JSON.parse(fs.readFileSync(path.join('data', 'airports.json'), 'utf8'));
+const icaoOf = new Map((Array.isArray(AIRPORTS) ? AIRPORTS : Object.values(AIRPORTS))
+  .filter((a) => a.iata && a.icao).map((a) => [a.iata, a.icao.toUpperCase()]));
+/** Запись OurAirports про НАШ код: сперва по IATA, затем по ICAO из нашего же каталога. */
+const oaFor = (code) => oa.get(code) ?? byIcao.get(icaoOf.get(code) ?? '');
+const viaIcao = Object.keys(svc).filter((c) => !oa.has(c) && byIcao.has(icaoOf.get(c) ?? '')).length;
+console.log(`joined by ICAO where IATA missed: ${viaIcao}`);
 
 const zero = Object.keys(svc).filter(a => svc[a] === 0);
 const positive = Object.keys(svc).filter(a => svc[a] > 0);
-const unverified = zero.filter(a => oa.get(a)?.sched).sort();
+const unverified = zero.filter(a => oaFor(a)?.sched).sort();
 
 // If our own positives stop agreeing with OurAirports, the join is broken and the veto list
 // cannot be trusted either. Fail loudly rather than shipping a bad data file.
-const agree = positive.filter(a => oa.get(a)?.sched).length;
+const agree = positive.filter(a => oaFor(a)?.sched).length;
 const rate = Math.round((agree / Math.max(1, positive.length)) * 100);
 console.log(`sanity: ${agree}/${positive.length} (${rate}%) of our measured-positive airports also flagged by OurAirports`);
 if (rate < 85) throw new Error(`join looks broken (${rate}% agreement) — refusing to write ${OUT}`);
 
 const byCountry = {};
 for (const a of unverified) {
-  const c = oa.get(a).country || '??';
+  const c = oaFor(a).country || '??';
   byCountry[c] = (byCountry[c] ?? 0) + 1;
 }
 const worst = Object.entries(byCountry).sort((a, b) => b[1] - a[1]).slice(0, 8);
