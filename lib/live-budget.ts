@@ -1,5 +1,5 @@
 import type { NextRequest } from 'next/server';
-import { usage, humanReserve } from '@/lib/flightStore';
+import { usage, humanReserve, monthlyCap } from '@/lib/flightStore';
 
 /**
  * Who is allowed to spend airlabs quota on a live fetch.
@@ -63,8 +63,33 @@ const MAX_TRACKED_IPS = 4000;
 /** ip -> boardKey -> last time a live fetch was admitted for it. */
 const perIp = new Map<string, Map<string, number>>();
 
+/** Счётчики решений с последнего перезапуска — единственное окно в слой, который молчит. */
+let admitted = 0;
+const refused = { notBrowser: 0, budget: 0, perIp: 0, localhost: 0 };
+
+/**
+ * Явное имя обходчика. Отдельно от BOT_RE, потому что BOT_RE — список ПОДСТРОК, а обходчик
+ * всегда называет себя словом: Googlebot/2.1, YandexBot/3.0, AhrefsBot/7.0.
+ */
+const CRAWLER_NAME = /bot\/|\bbot\b|crawler|spider|slurp|headless|lighthouse/i;
+
+/**
+ * Встроенные браузеры приложений, в названии которых сидит подстрока из BOT_RE.
+ *
+ * Приложение Яндекса на iOS отдаёт «… Mobile/15E148 YandexSearch/23.101.1», и BOT_RE ловил в
+ * этом «yandex» — то есть живой читатель, пришедший из главного поставщика трафика сайта,
+ * считался обходчиком и свежих данных не получал никогда. 88% визитов приходят из Яндекса, и
+ * заметная их часть открывает страницу внутри его же приложения.
+ *
+ * Проверяется ПОСЛЕ имени обходчика, поэтому «YandexBot» сюда не проскочит.
+ */
+const APP_BROWSER = /\b(?:YaSearchApp|YaSearchBrowser|YandexSearch|YaApp_[A-Za-z]+|YaBrowser)\/[\w.]+/;
+
 function looksLikeBrowser(ua: string): boolean {
-  return BROWSER_PREFIX.test(ua) && ENGINE_TOKEN.test(ua) && !BOT_RE.test(ua);
+  if (!BROWSER_PREFIX.test(ua) || !ENGINE_TOKEN.test(ua)) return false;
+  if (CRAWLER_NAME.test(ua)) return false;
+  if (APP_BROWSER.test(ua)) return true;
+  return !BOT_RE.test(ua);
 }
 
 /**
@@ -123,10 +148,65 @@ function withinHumanReserve(): boolean {
 }
 
 /**
+ * Сколько борт вправе быть старым, прежде чем читатель видит вчерашнее.
+ *
+ * То же окно, что у TTL хранилища (FLIGHT_TTL_SEC, 600 с): внутри него getFresh отдаёт
+ * запись и до оплаты дело вообще не доходит, значит просить свежесть раньше бессмысленно.
+ */
+const STALE_MS = (Number(process.env.FLIGHT_TTL_SEC) || 600) * 1000;
+
+/**
+ * Доля месячного плана, которую нельзя отнять у прогрева ни при каких обстоятельствах.
+ *
+ * Нижний слой обороны для случая, когда живых читателей внезапно много: прогрев — то, что
+ * наполняет борта, которых никто не смотрит прямо сейчас, но которые завтра откроют из
+ * поиска. Отдать ему ноль значит выменять сегодняшний день на все следующие.
+ */
+const WARM_FLOOR_PCT = 0.35;
+
+
+/**
+ * Слой 3-бис: СВЕЖЕСТЬ ДЛЯ ТОГО, КТО СМОТРИТ, важнее очереди прогрева.
+ *
+ * Замер 04.09 в 04:38: ни один борт из двадцати одного самого посещаемого аэропорта не был
+ * свежее десяти минут. Ни один. Медиана — девять часов, при том что девятью часами раньше
+ * шёл вечерний пик и одну только Казань за это время открыли десятки раз. Разница с
+ * контрольной группой без трафика (20 часов) объясняется целиком закреплением в прогреве, а
+ * не посетителями. То есть живой путь не покупал данные НИКОГДА.
+ *
+ * Виноват потолок: withinHumanReserve сравнивает месячный счётчик людей с долей плана, и как
+ * только доля выбрана, отказ становится вечным до первого числа. Отказ по построению молчит —
+ * читатель просто видит вчерашний борт, и снаружи это неотличимо от исправной работы. Так оно
+ * и жило.
+ *
+ * Здесь потолок перестаёт быть обрывом. Читателю, у которого борт СТАРШЕ окна свежести,
+ * разрешено взять запрос сверх людской доли — но не дальше пола, оставленного прогреву.
+ * Ограничение сверху остаётся, меняется только то, что упирается в него не человек с
+ * устаревшей страницей, а фоновая задача.
+ *
+ * Расход этим не отпускается на волю: getFresh внутри TTL отдаёт запись бесплатно, поэтому
+ * цена ограничена ЧИСЛОМ РАЗНЫХ БОРТОВ, а не числом посетителей — не больше шести обращений
+ * в час на борт, сколько бы человек его ни открыло.
+ */
+function freshnessOverride(ageMs: number | null): boolean {
+  // ageMs === null — записи нет вовсе: борт холодный, это самая устаревшая из возможных
+  // ситуаций, и право на свежесть тут тем более уместно.
+  if (ageMs !== null && ageMs < STALE_MS) return false;   // борт свежий — доплачивать не за что
+  return usage().count < monthlyCap() * (1 - WARM_FLOOR_PCT);
+}
+
+/**
  * True if this request may trigger a paid provider call. False means "read the store", which
  * is a normal, complete answer — see the note on refusal above.
+ *
+ * `ageMs` ПРИХОДИТ СНАРУЖИ, а не считается здесь, и это не мелочь. Первая версия звала
+ * getStaleTs(boardKey) сама, но boardKey тут — ключ для слоя 2 («departures:BJV»), а ключ
+ * хранилища выглядит иначе («departures:dep_iata=BJV»). getStaleTs возвращал null всегда,
+ * условие «борт устарел» не срабатывало ни разу, и право на свежесть молча раздавалось всем
+ * подряд. Формат ключа хранилища знает lib/flights.ts (getBoardFetchedAt) — пусть он один и
+ * знает; заводить его второе описание здесь значит заводить второй источник правды.
  */
-export function mayFetchLive(req: NextRequest, boardKey: string): boolean {
+export function mayFetchLive(req: NextRequest, boardKey: string, ageMs: number | null): boolean {
   // Layer 0: a development machine may never spend the production plan.
   //
   // Every other guard here is about WHO is asking; this one is about WHERE from. The key sits
@@ -140,11 +220,15 @@ export function mayFetchLive(req: NextRequest, boardKey: string): boolean {
   // production locally, which is exactly the case that caught this out.
   const host = req.nextUrl.hostname.toLowerCase();
   if (host === 'localhost' || host === '127.0.0.1' || host === '::1' || host.endsWith('.local')) {
+    refused.localhost++;
     return false;
   }
-  if (!looksLikeBrowser(req.headers.get('user-agent') || '')) return false;
-  if (!withinHumanReserve()) return false;
-  return admitBoard(clientKey(req), boardKey);
+  if (!looksLikeBrowser(req.headers.get('user-agent') || '')) { refused.notBrowser++; return false; }
+  // Людская доля ИЛИ право на свежесть — второе не обходит слой 2, только слой 3.
+  if (!withinHumanReserve() && !freshnessOverride(ageMs)) { refused.budget++; return false; }
+  if (!admitBoard(clientKey(req), boardKey)) { refused.perIp++; return false; }
+  admitted++;
+  return true;
 }
 
 /** Operator visibility, for /api/airlabs-usage: is either throttle actually being reached? */
@@ -165,5 +249,12 @@ export function liveBudgetStats() {
     perIpLimit: PER_IP_BOARDS,
     humanSpent: u.human,
     humanCeiling: humanReserve(),
+    // Отказы по причинам. Их не было видно ВООБЩЕ, и именно поэтому мёртвый живой путь
+    // прожил незамеченным: каждый отказ по построению молчит и выглядит как исправная
+    // отдача из хранилища. Считаем с последнего перезапуска процесса.
+    admitted,
+    refused: { ...refused },
+    warmFloor: Math.round(monthlyCap() * WARM_FLOOR_PCT),
+    staleWindowSec: Math.round(STALE_MS / 1000),
   };
 }

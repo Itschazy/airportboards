@@ -12,7 +12,11 @@ export async function GET(
   const locale = req.nextUrl.searchParams.get('locale') || 'en';
   // Anything not recognisable as a visitor's browser reads the store instead of buying data;
   // see lib/live-budget.ts for what that protects and why the old check was not enough.
-  const live = mayFetchLive(req, `${direction}:${code}`);
+  // Возраст записи считает канонический помощник — он один знает формат ключа хранилища.
+  // Право на свежесть (lib/live-budget.ts) опирается на это число: борт старше окна TTL
+  // разрешено обновить читателю даже сверх людской доли плана.
+  const fetchedAt = getBoardFetchedAt(code, direction);
+  const live = mayFetchLive(req, `${direction}:${code}`, fetchedAt == null ? null : Date.now() - fetchedAt);
 
   let flights: Awaited<ReturnType<typeof getBoard>> = [];
   try { flights = await getBoard(code, direction, locale, live); } catch { /* honest empty */ }
@@ -21,7 +25,7 @@ export async function GET(
   // blank while developing. NEVER in production — prod serves real data or an empty board.
   if (!flights.length && !process.env.AIRLABS_API_KEY && process.env.NODE_ENV !== 'production') {
     return NextResponse.json(mockData(code, direction), {
-      headers: { 'Cache-Control': `s-maxage=${CACHE_SECONDS}, stale-while-revalidate` },
+      headers: { 'Cache-Control': `s-maxage=${CACHE_SECONDS}, stale-while-revalidate=${CACHE_SECONDS}` },
     });
   }
 
@@ -29,7 +33,7 @@ export async function GET(
     // fetchedAt = when airlabs actually produced this data, so the client can label its
     // real age instead of assuming the response time is the data time.
     { iata: code, direction, flights, fetchedAt: getBoardFetchedAt(code, direction) },
-    { headers: { 'Cache-Control': `s-maxage=${CACHE_SECONDS}, stale-while-revalidate` } }
+    { headers: { 'Cache-Control': `s-maxage=${CACHE_SECONDS}, stale-while-revalidate=${CACHE_SECONDS}` } }
   );
 }
 

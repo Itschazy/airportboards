@@ -26,6 +26,6 @@ export async function GET(req: NextRequest) {
   }));
 
   return NextResponse.json(out, {
-    headers: { 'Cache-Control': `s-maxage=${CACHE_SECONDS}, stale-while-revalidate` },
+    headers: { 'Cache-Control': `s-maxage=${CACHE_SECONDS}, stale-while-revalidate=${CACHE_SECONDS}` },
   });
 }
