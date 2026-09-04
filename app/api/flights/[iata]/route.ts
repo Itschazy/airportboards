@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { getBoard, getBoardFetchedAt, CACHE_SECONDS } from '@/lib/flights';
 import { mayFetchLive } from '@/lib/live-budget';
+import { freshnessWorthBuying } from '@/lib/warm';
 
 export async function GET(
   req: NextRequest,
@@ -16,7 +17,10 @@ export async function GET(
   // Право на свежесть (lib/live-budget.ts) опирается на это число: борт старше окна TTL
   // разрешено обновить читателю даже сверх людской доли плана.
   const fetchedAt = getBoardFetchedAt(code, direction);
-  const live = mayFetchLive(req, `${direction}:${code}`, fetchedAt == null ? null : Date.now() - fetchedAt);
+  // Тот же заслон, что и на серверном рендере: ферма исполняет наш JS и доходит сюда тоже.
+  // Разбор сигнатуры и почему разделитель именно такой — у freshnessWorthBuying в lib/warm.ts.
+  const live = freshnessWorthBuying(code)
+    && mayFetchLive(req, `${direction}:${code}`, fetchedAt == null ? null : Date.now() - fetchedAt);
 
   let flights: Awaited<ReturnType<typeof getBoard>> = [];
   try { flights = await getBoard(code, direction, locale, live); } catch { /* honest empty */ }

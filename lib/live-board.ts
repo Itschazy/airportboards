@@ -1,6 +1,7 @@
 import { headers } from 'next/headers';
 import { getBoard, getBoardFetchedAt, type FlightRow } from '@/lib/flights';
 import { mayFetchLiveFor } from '@/lib/live-budget';
+import { freshnessWorthBuying } from '@/lib/warm';
 
 /**
  * Борт для СЕРВЕРНОГО рендера: свежий, если перед нами живой человек и данные протухли.
@@ -47,6 +48,13 @@ export async function boardForVisitor(
 
   let h: Headers;
   try { h = await headers(); } catch { return { rows: await stored(), fetchedAt: getBoardFetchedAt(iata, direction), refreshed: false }; }
+
+  // Ферма обходчиков идёт по карте сайта подряд и выглядит браузером — см. разбор у
+  // freshnessWorthBuying. Покупаем свежесть только там, где спрос измерен; остальное
+  // отдаётся из хранилища, ровно как до 04.09.
+  if (!freshnessWorthBuying(iata)) {
+    return { rows: await stored(), fetchedAt: getBoardFetchedAt(iata, direction), refreshed: false };
+  }
 
   const at = getBoardFetchedAt(iata, direction);
   const live = mayFetchLiveFor(

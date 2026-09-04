@@ -101,6 +101,40 @@ const floor = /const WARM_FLOOR_PCT = ([\d.]+)/.exec(SRC);
 say(!!floor && Number(floor[1]) >= 0.2 && Number(floor[1]) <= 0.6,
   floor ? `прогреву гарантировано ${(100 * Number(floor[1])).toFixed(0)}% плана` : 'WARM_FLOOR_PCT не найден');
 
+// ── 2-бис. Заслон против фермы обходчиков ────────────────────────────────────────────────
+// Google Analytics 04.09, реальное время: 263 активных, 256 первых визитов, 266 просмотров на
+// 256 РАЗНЫХ страниц, источник указан у одного. За 28 дней: Direct 5 521 сессия при
+// вовлечённости 11%, Unassigned 2 706 при нуле — против Organic Search 13 093 при 82%.
+// Ферма исполняет наш JS, значит проходит распознавание браузера; ротация адресов обходит и
+// потолок по ширине. Пока живой путь был мёртв, она ничего не стоила — как только покупку
+// починили, 256 бортов за полчаса стали бы ~12 000 оплаченных запросов в сутки.
+const WARM = fs.readFileSync('lib/warm.ts', 'utf8');
+say(/export function freshnessWorthBuying\(/.test(WARM),
+  'freshnessWorthBuying объявлен — покупаем свежесть не для всего корпуса');
+for (const [file, what] of [['lib/live-board.ts', 'серверный рендер'], ['app/api/flights/[iata]/route.ts', 'ручка /api/flights']]) {
+  const src = fs.readFileSync(file, 'utf8');
+  say(/freshnessWorthBuying\(/.test(src), `${what} спрашивает freshnessWorthBuying перед покупкой`);
+}
+
+// Набор обязан покрывать спрос и НЕ покрывать хвост: иначе заслон либо бесполезен, либо режет
+// живых. Проверяется на тех самых кодах, что дали сигнатуру.
+{
+  const pin = new Set([...WARM.slice(WARM.indexOf('const DEMAND_PINNED'), WARM.indexOf('export const DEMAND_NOT_PINNED')).matchAll(/'([A-Z0-9]{3})'/g)].map((m) => m[1]));
+  const svc = JSON.parse(fs.readFileSync('data/airport-service.json', 'utf8')).airports;
+  const T = [['mega', 400], ['hub', 150], ['major', 40], ['mid', 10], ['small', 1]];
+  const tier = (n) => T.find((t) => n >= t[1])?.[0] ?? null;
+  const worth = (c) => pin.has(c) || ['mega', 'hub'].includes(tier(svc[c] ?? 0));
+  const mustBuy = ['SIN', 'KZN', 'UFA', 'AYT', 'OVB', 'BJV', 'EVN'];
+  const mustNot = ['DQM', 'HGO', 'OSI'];
+  const bad = [...mustBuy.filter((c) => !worth(c)).map((c) => `${c} должен покупать`),
+               ...mustNot.filter((c) => worth(c)).map((c) => `${c} покупать не должен`)];
+  const all = Object.keys(svc).filter((c) => (svc[c] ?? 0) > 0);
+  const share = 100 * all.filter(worth).length / all.length;
+  say(bad.length === 0, bad.length ? bad.join('; ')
+    : `набор покрывает ${all.filter(worth).length} из ${all.length} обслуживаемых (${share.toFixed(1)}%) и включает весь измеренный спрос`);
+  say(share < 15, `доля корпуса, для которой покупаем свежесть: ${share.toFixed(1)}% (порог 15%)`);
+}
+
 // ── 3. Людская доля не задана числом, которое молча схлопнется ───────────────────────────
 const env = fs.readFileSync('.env.production', 'utf8');
 const pct = /^AIRLABS_HUMAN_RESERVE_PCT=(\d+)/m.exec(env);
