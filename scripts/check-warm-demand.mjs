@@ -36,7 +36,23 @@ import path from 'node:path';
 const BASE = process.argv[2] || 'https://airportsboard.live';
 /** Сколько аэропортов из хвоста спроса ещё считать «топом». */
 const TOP_N = 25;
-const PIN_TARGET_MIN = 360;
+/**
+ * Срок для закреплённых читается ИЗ КОДА, а не хранится числом.
+ *
+ * Здесь стояло 360, и 04.09 это разъехалось: ярусы уплотнили, DEMAND_INTERVAL_MIN стал равен
+ * сроку mega (120 мин), а проверка продолжала мерить по 360 — то есть считала выполненной
+ * цель, которую код больше не ставит. Проверка с собственной копией числа не стережёт код,
+ * а рассказывает о нём устаревшую историю; в этом репозитории на этом спотыкались уже
+ * четырежды.
+ */
+const PIN_TARGET_MIN = (() => {
+  const src = fs.readFileSync('lib/warm.ts', 'utf8');
+  const m = /const DEMAND_INTERVAL_MIN = TIERS\[0\]\.intervalMin;/.test(src)
+    ? /\{ name: 'mega'[^}]*intervalMin: (\d+)/.exec(src)
+    : /const DEMAND_INTERVAL_MIN = (\d+)/.exec(src);
+  if (!m) { console.error('не удалось прочитать DEMAND_INTERVAL_MIN из lib/warm.ts'); process.exit(1); }
+  return Number(m[1]);
+})();
 
 let fails = 0;
 const say = (ok, msg) => { if (!ok) fails++; console.log(`  ${ok ? '✓' : '✗'} ${msg}`); };

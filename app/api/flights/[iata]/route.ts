@@ -9,7 +9,20 @@ export async function GET(
 ) {
   const { iata } = await params;
   const code = iata.toUpperCase();
-  const direction = (req.nextUrl.searchParams.get('direction') || 'departures') as 'departures' | 'arrivals';
+  /**
+   * direction ПРОВЕРЯЕТСЯ, а не приводится типом.
+   *
+   * Прежнее `as 'departures' | 'arrivals'` — обещание компилятору, а не проверка. Значение
+   * идёт в ключ хранилища (`${direction}:arr_iata=AER`), поэтому любая строка снаружи заводит
+   * НОВЫЙ ключ: он никогда не совпадает с настоящим, getFresh по нему пуст, и каждый такой
+   * запрос уходит к поставщику за деньги. Плюс мусор оседает в хранилище, а put() вытесняет
+   * ключи по порядку вставки — то есть выбрасывает настоящие оплаченные борта.
+   *
+   * Клиент шлёт только два значения (components/FlightBoard.tsx, type Mode), так что сузить
+   * до них ничего не ломает: неизвестное направление читается как вылеты.
+   */
+  const direction: 'departures' | 'arrivals' =
+    req.nextUrl.searchParams.get('direction') === 'arrivals' ? 'arrivals' : 'departures';
   const locale = req.nextUrl.searchParams.get('locale') || 'en';
   // Anything not recognisable as a visitor's browser reads the store instead of buying data;
   // see lib/live-budget.ts for what that protects and why the old check was not enough.

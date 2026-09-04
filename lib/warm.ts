@@ -21,7 +21,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { getAirport } from '@/lib/airports';
-import { getStaleTs, usage, canSpend, humanReserve } from '@/lib/flightStore';
+import { getStaleTs, usage, canSpend, humanReserve, monthlyCap } from '@/lib/flightStore';
 import { hasWikiAirlines, getWikiRoutes } from '@/lib/wiki-routes';
 
 export type WarmTier = {
@@ -189,6 +189,11 @@ const DEMAND_PINNED = new Set([
   // Оба яруса major (58 и 68 рейсов в сутки), то есть несколько часов расписания на борт —
   // арифметика окна за закрепление, а не против (см. разбор у DEMAND_NOT_PINNED).
   'OVB', 'HRG',
+
+  // Добавлен 04.09 — снова нашла проверка, а не рука. TJM (Тюмень): 128 визитов в месяц,
+  // 29 рейсов в сутки, ярус mid с нормативом 12 часов. Спрос продолжает мигрировать, и это
+  // третий случай подряд, когда список отстаёт от него на две недели.
+  'TJM',
 ]);
 
 /**
@@ -232,7 +237,20 @@ export const DEMAND_NOT_PINNED: Record<string, string> = {
   SYX: 'ярус hub; окно борта того же порядка — закрепление не спасёт от просрочки',
 };
 
-const DEMAND_INTERVAL_MIN = 360;
+/**
+ * Срок для закреплённых по спросу.
+ *
+ * 🔴 РЕГРЕССИЯ 04.09, найденная состязательным разбором в тот же день. Ярусы уплотнили
+ * (mega 6ч → 2ч), а это число оставили на 360, и знак закрепления перевернулся: строка ниже
+ * берёт МИНИМУМ из яруса и этого срока, поэтому закреплённая Казань (ярус mid) получила 6
+ * часов, тогда как безымянный mega-хаб — 2. Закрепление, смысл которого «спрос измерен,
+ * обновляй чаще», стало втрое худшим сроком, чем у страниц без всякого спроса.
+ *
+ * Держать его РАВНЫМ сроку mega — единственная форма, при которой знак не переворачивается
+ * снова: закреплённый аэропорт получает лучший срок в системе, каким бы тот ни стал.
+ * Отсюда ссылка на TIERS, а не число: разъехаться они больше не могут.
+ */
+const DEMAND_INTERVAL_MIN = TIERS[0].intervalMin;
 
 /**
  * Стоит ли ПОКУПАТЬ свежесть для этого аэропорта на приходе читателя.
@@ -396,7 +414,21 @@ export function tickBudget(runsPerDay = 12, now = new Date()): number {
   const reserve = humanReserve();
   // Warming simply stops once only the reserve is left, which guarantees that many requests
   // remain available to visitors no matter how the month went.
-  const spendable = Math.max(0, u.remaining - reserve);
+  /**
+   * Прогреву гарантирована СВОЯ доля, а не остаток после людей.
+   *
+   * `u.remaining - reserve` — это «сколько осталось всего минус людской резерв», и такой
+   * счёт молча отдаёт прогрев на милость живого пути: он тратит из того же общего счётчика,
+   * поэтому активный трафик обнуляет прогреву бюджет задолго до конца месяца. 04.09 разбор
+   * показал, что это достижимо не в теории: заслон freshnessWorthBuying пропускает 392 борта,
+   * а окно TTL в 600 с даёт до 2 352 покупок в час.
+   *
+   * Второй множитель считает по СОБСТВЕННОМУ счётчику прогрева: сколько он уже потратил
+   * против своей доли. Минимум из двух оставляет прежнюю защиту людского резерва и добавляет
+   * симметричную защиту прогреву.
+   */
+  const warmShare = Math.round(monthlyCap() * (1 - Number(process.env.AIRLABS_HUMAN_RESERVE_PCT ?? 35) / 100));
+  const spendable = Math.max(0, Math.min(u.remaining - reserve, warmShare - u.warm));
   const daysInMonth = new Date(now.getFullYear(), now.getMonth() + 1, 0).getDate();
   const daysLeft = Math.max(1, daysInMonth - now.getDate() + 1);
   const perDay = Math.floor(spendable / daysLeft);
