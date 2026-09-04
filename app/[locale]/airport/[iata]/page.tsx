@@ -15,6 +15,7 @@ import { Breadcrumb } from '@/components/Breadcrumb';
 import { deName as withDe } from '@/lib/fr-elision';
 import { getCityName, getCountryName } from '@/lib/places';
 import { getBoard, getBoardFetchedAt } from '@/lib/flights';
+import { boardForVisitor } from '@/lib/live-board';
 import { FlightBoard } from '@/components/FlightBoard';
 import { AirportBottom } from '@/components/AirportBottom';
 import { locales } from '@/lib/i18n';
@@ -44,8 +45,23 @@ function boardWindow(rows: { ts?: number }[], n: number): { rows: any[]; allPast
 const BASE = 'https://airportsboard.live';
 
 // Pre-render only major hubs; rest render on-demand and cache via ISR.
+/**
+ * Страница ДИНАМИЧЕСКАЯ, и это осознанный размен.
+ *
+ * ISR отдавал готовый HTML до пяти минут, не выполняя рендер вовсе — а значит живой читатель
+ * не мог никак повлиять на то, что ему покажут: под кэшем лежала запись хранилища любой
+ * давности. Свежесть на первом экране и кэш ответа несовместимы by construction.
+ *
+ * Цена измерена, а не предположена: холодный рендер 0.29–1.49 с против тёплого 0.28–0.80 с
+ * (замер 04.09 на проде, KZN/BJV/AYT) — то есть кэш экономил доли секунды, а стоил свежести.
+ * Обход Яндекса ~7 000 страниц в сутки, в худший день 33 000; при полусекунде на рендер это
+ * доли ядра, размазанные по суткам.
+ *
+ * generateStaticParams ниже остаётся: он не влияет на выдачу, но описывает набор хабов и
+ * используется другими местами. Пререндер он больше не делает.
+ */
+export const dynamic = 'force-dynamic';
 export const dynamicParams = true;
-export const revalidate = 300;
 
 type Props = { params: Promise<{ locale: string; iata: string }> };
 
@@ -274,9 +290,20 @@ export default async function AirportPage({ params }: Props) {
   // nearest served airport, the FAQ, the neighbours) against ~2,750 for one that keeps its
   // paragraph. The paragraph was never the substance; it was the contradiction.
   const about = hasNoService(airport.iata) ? '' : getAirportContent(airport.iata, locale);
-  // SSR the first (departures) board so the page is useful without client JS.
-  let initialFlights: Awaited<ReturnType<typeof getBoard>> = [];
-  try { initialFlights = await getBoard(airport.iata, 'departures', locale); } catch {}
+  /**
+   * Борт для ПЕРВОГО ЭКРАНА, и он обязан быть свежим для живого человека.
+   *
+   * Читатель приходит из поиска и видит то, что отрисовал сервер. Раньше здесь всегда стояло
+   * хранилище (live = false), а свежесть догоняла клиентским опросом за секунду-полторы — и
+   * эту секунду человек смотрел на вчерашнее табло. Замер 04.09 по Юго-Восточной Азии,
+   * аудитории вчерашнего всплеска: SIN, KUL, BKK, CGK, HKG, DPS, SGN, HAN — одиннадцать часов
+   * и ВСЕ РЕЙСЫ В ПРОШЛОМ, MNL и TPE двадцать один час.
+   *
+   * boardForVisitor решает то же ядром, что и ручка /api/flights: краулер и здесь читает
+   * хранилище и не тратит ни копейки. Разбор цены и крайнего срока — в lib/live-board.ts.
+   */
+  const visitorBoard = await boardForVisitor(airport.iata, 'departures', locale);
+  const initialFlights = visitorBoard.rows;
   const t = await getTranslations({ locale, namespace: 'meta' });
   const tNav = await getTranslations({ locale, namespace: 'nav' });
   const tHome = await getTranslations({ locale, namespace: 'home' });

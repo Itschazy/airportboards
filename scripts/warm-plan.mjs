@@ -7,22 +7,31 @@
 // tier proportionally rather than starving the tail. Read "achieved" as "how close to target
 // this plan gets you".
 //
-// Usage: node scripts/warm-plan.mjs [cap ...]      e.g. node scripts/warm-plan.mjs 95000 195000
+// Usage: node scripts/warm-plan.mjs [cap ...]      e.g. node scripts/warm-plan.mjs 195000 1000000
 import fs from 'fs';
 
 const CAPS = process.argv.slice(2).map(Number).filter(Boolean);
-const PLANS = CAPS.length ? CAPS : [95000, 195000];
+const PLANS = CAPS.length ? CAPS : [195000, 1000000];
 const PCT = Number(process.env.AIRLABS_HUMAN_RESERVE_PCT ?? 35) / 100;
 const svc = JSON.parse(fs.readFileSync('data/airport-service.json', 'utf8')).airports;
 
-// Keep in sync with TIERS in lib/warm.ts.
-const TIERS = [
-  { name: 'mega', min: 400, intervalMin: 360, skipNight: false },
-  { name: 'hub', min: 150, intervalMin: 720, skipNight: true },
-  { name: 'major', min: 40, intervalMin: 1440, skipNight: true },
-  { name: 'mid', min: 10, intervalMin: 1440, skipNight: true },
-  { name: 'small', min: 1, intervalMin: 1440, skipNight: true },
-];
+/**
+ * Ярусы читаются ИЗ lib/warm.ts, а не переписываются здесь.
+ *
+ * Раньше стояла копия с пометкой «keep in sync», и она разошлась при первом же изменении:
+ * 04.09 сроки уплотнили до 2/3/6/12/24 ч, а планировщик продолжал печатать 6/12/24/24/24 —
+ * то есть инструмент, которым проверяют цену правки, показывал цену ДО правки. Ровно тот
+ * класс дефекта, от которого в этом репозитории предостерегают трижды: проверка (или
+ * планировщик) обязана повторять источник, а не хранить его пересказ.
+ */
+const WARM_SRC = fs.readFileSync('lib/warm.ts', 'utf8');
+const TIERS = [...WARM_SRC.matchAll(
+  /\{ name: '(\w+)', minFlights: (\d+), intervalMin: (\d+), skipNight: (true|false) \}/g,
+)].map(m => ({ name: m[1], min: +m[2], intervalMin: +m[3], skipNight: m[4] === 'true' }));
+if (TIERS.length !== 5) {
+  console.error(`не удалось прочитать TIERS из lib/warm.ts (нашлось ${TIERS.length} из 5)`);
+  process.exit(1);
+}
 
 const rows = TIERS.map(t => ({ ...t, airports: 0, reqDay: 0 }));
 let noService = 0;

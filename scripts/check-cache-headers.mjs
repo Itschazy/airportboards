@@ -26,10 +26,18 @@ const BASE = process.argv[2] || 'http://localhost:3002';
 const MAX_SHARED = 86400;
 
 /**
- * Потолок браузерного кэша для страниц с живыми данными. На борту рейсы и подпись
- * «Обновлено N назад» — минута это ровно то, на сколько ему позволено отстать.
+ * Табло НЕ КЭШИРУЕТСЯ ВОВСЕ — ни у читателя, ни в общем кэше.
+ *
+ * Прежде тут стоял потолок в минуту, и это было верно, пока страница жила в ISR: борт всё
+ * равно приходил из хранилища, и лишняя минута ничего не меняла. 04.09 страницы аэропортов
+ * стали динамическими и покупают свежие данные на приходе живого читателя (lib/live-board.ts).
+ * С этого момента любое разрешение кэшировать ответ отменяет саму правку: сервер честно
+ * сходит к провайдеру, а следующим посетителям отдадут копию из кэша.
+ *
+ * Свежесть на первом экране и кэширование ответа несовместимы by construction, поэтому
+ * проверка требует РОВНО ноль и отсутствие s-maxage, а не «немного».
  */
-const MAX_BROWSER_LIVE = 60;
+const LIVE_MUST_NOT_CACHE = true;
 
 /** Потолок для страниц без живых данных: списки меняются вместе с корпусом аэропортов. */
 const MAX_BROWSER_STATIC = 3600;
@@ -43,6 +51,8 @@ const CASES = [
   { url: '/ru/city/moscow', kind: 'static' },
   { url: '/ru/airport/SVO', kind: 'live' },
   { url: '/ar/airport/DXB', kind: 'live' },
+  { url: '/ru/airport/SVO/arrivals', kind: 'live' },
+  { url: '/ru/airport/SVO/departures', kind: 'live' },
   { url: '/favicon.ico', kind: 'icon' },
 ];
 
@@ -89,11 +99,25 @@ for (const { url, kind } of CASES) {
     continue;
   }
 
-  const cap = kind === 'live' ? MAX_BROWSER_LIVE : MAX_BROWSER_STATIC;
+  if (kind === 'live') {
+    // Ноль ровно, а не «мало»: любое ненулевое окно отдаёт следующему читателю копию.
+    say(LIVE_MUST_NOT_CACHE && browser === 0, url,
+      browser === 0 ? 'браузер не кэширует (max-age=0) — каждый заход спрашивает сервер'
+        : `max-age=${browser ?? '—'} — табло кэшируется, живой рендер обесценен`);
+    // s-maxage опаснее вдвое: общий кэш отдаёт ОДНУ копию всем сразу.
+    say(shared == null, url,
+      shared == null ? 's-maxage не задан — общий кэш табло не хранит'
+        : `s-maxage=${shared} — общий кэш раздаст одну копию всем читателям`);
+    // must-revalidate, а не no-store: no-store убил бы и возврат кнопкой «назад».
+    say(/must-revalidate/.test(cc), url,
+      /must-revalidate/.test(cc) ? 'must-revalidate на месте — «назад» не перерисовывает с нуля'
+        : `нет must-revalidate: cc="${cc}"`);
+    continue;
+  }
 
-  say(browser != null && browser > 0 && browser <= cap, url,
+  say(browser != null && browser > 0 && browser <= MAX_BROWSER_STATIC, url,
     browser == null ? 'max-age НЕТ — браузер не кэширует, каждый возврат стоит полной дороги'
-      : browser > cap ? `max-age=${browser} > ${cap} — данные успеют устареть`
+      : browser > MAX_BROWSER_STATIC ? `max-age=${browser} > ${MAX_BROWSER_STATIC} — данные успеют устареть`
         : `браузер держит ${browser} с`);
 
   say(shared == null || shared <= MAX_SHARED, url,

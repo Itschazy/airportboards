@@ -5,6 +5,7 @@ import { getAirport, getStaticIataCodes, getCountries, getCities } from '@/lib/a
 import { getAirportName, getAirportNameBare } from '@/lib/airport-names';
 import { getCityName, getCountryName } from '@/lib/places';
 import { getBoard, getBoardFetchedAt } from '@/lib/flights';
+import { boardForVisitor } from '@/lib/live-board';
 import { FlightBoard } from '@/components/FlightBoard';
 import { AirportBottom } from '@/components/AirportBottom';
 import { getAirportContent } from '@/lib/airport-content';
@@ -39,8 +40,10 @@ function boardWindow(rows: { ts?: number }[], n: number): { rows: any[]; allPast
 
 const BASE = 'https://airportsboard.live';
 
+// Тот же борт, что у родителя, — и та же причина быть динамической.
+// Разбор в комментарии к dynamic в airport/[iata]/page.tsx.
+export const dynamic = 'force-dynamic';
 export const dynamicParams = true;
-export const revalidate = 300;
 
 type Props = { params: Promise<{ locale: string; iata: string }> };
 
@@ -163,7 +166,8 @@ export default async function DeparturesPage({ params }: Props) {
   // allows the final crumb without a URL, which avoids asserting this URL as an entity.
   const canonical = `${BASE}/${locale}/airport/${airport.iata}`;
   let initialFlights: Awaited<ReturnType<typeof getBoard>> = [];
-  try { initialFlights = await getBoard(airport.iata, 'departures', locale); } catch {}
+  // Свежесть на первом экране — то же ядро, что у родителя (lib/live-board.ts).
+  initialFlights = (await boardForVisitor(airport.iata, 'departures', locale)).rows;
   const t = await getTranslations({ locale, namespace: 'meta' });
   const tNav = await getTranslations({ locale, namespace: 'nav' });
   const name = getAirportName(airport.iata, locale, airport.name);

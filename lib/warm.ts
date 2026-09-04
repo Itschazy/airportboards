@@ -51,11 +51,27 @@ export type WarmTier = {
 // Measured 2026-07-19 (scripts/discover-schedules.mjs, 6,069 probes):
 //   mega 68 · hub 92 · major 300 · mid 567 · small 1,253 — 2,280 airports with service.
 // Run scripts/warm-plan.mjs after any change; it prints demand against any plan size.
+/**
+ * Сроки уплотнены 04.09 после перехода на план в 1 000 000 запросов (было 100 000).
+ *
+ * Прежние 6/12/24/24/24 задавались под план, который не покрывал даже цель: спрос 157 590 в
+ * месяц против ~65 000 доступных прогреву, то есть 40% цели, и младший ярус жил на шести
+ * сутках вместо одних. Теперь прогреву доступно порядка 650 000 (миллион минус людская доля),
+ * и держать прежние сроки значит не тратить купленное.
+ *
+ * Новая цена ≈ 293 000 в месяц — 29% плана. Считать после любой правки: scripts/warm-plan.mjs.
+ *
+ * ЧТО ЭТО ЧИНИТ, А ЧТО НЕТ. Для среднего аэропорта окно борта 5–15 часов (у KZN 24 строки
+ * покрывают 15.5 ч), поэтому шестичасовой снимок там всегда содержит предстоящие рейсы —
+ * ярус major и есть главный выигрыш. У загруженного хаба окно всего полчаса (50 строк = 0.5 ч
+ * у IST, 0.8 у DXB), и никакая частота прогрева его не спасёт: там работает только покупка на
+ * приходе читателя (lib/live-board.ts). Отсюда и разная логика двух механизмов.
+ */
 export const TIERS: WarmTier[] = [
-  { name: 'mega', minFlights: 400, intervalMin: 360, skipNight: false },
-  { name: 'hub', minFlights: 150, intervalMin: 720, skipNight: true },
-  { name: 'major', minFlights: 40, intervalMin: 1440, skipNight: true },
-  { name: 'mid', minFlights: 10, intervalMin: 1440, skipNight: true },
+  { name: 'mega', minFlights: 400, intervalMin: 120, skipNight: false },
+  { name: 'hub', minFlights: 150, intervalMin: 180, skipNight: true },
+  { name: 'major', minFlights: 40, intervalMin: 360, skipNight: true },
+  { name: 'mid', minFlights: 10, intervalMin: 720, skipNight: true },
   { name: 'small', minFlights: 1, intervalMin: 1440, skipNight: true },
 ];
 

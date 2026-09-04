@@ -5,6 +5,7 @@ import { getAirport, getStaticIataCodes, getCountries, getCities } from '@/lib/a
 import { getAirportName, getAirportNameBare } from '@/lib/airport-names';
 import { getCityName, getCountryName } from '@/lib/places';
 import { getBoard, getBoardFetchedAt } from '@/lib/flights';
+import { boardForVisitor } from '@/lib/live-board';
 import { FlightBoard } from '@/components/FlightBoard';
 import { AirportBottom } from '@/components/AirportBottom';
 import { getAirportContent } from '@/lib/airport-content';
@@ -40,8 +41,10 @@ function boardWindow(rows: { ts?: number }[], n: number): { rows: any[]; allPast
 
 const BASE = 'https://airportsboard.live';
 
+// Динамическая по той же причине, что и родитель: кэш ответа и свежесть на первом экране
+// несовместимы. Разбор — в комментарии к dynamic в airport/[iata]/page.tsx.
+export const dynamic = 'force-dynamic';
 export const dynamicParams = true;
-export const revalidate = 300;
 
 type Props = { params: Promise<{ locale: string; iata: string }> };
 
@@ -135,8 +138,10 @@ export default async function ArrivalsPage({ params }: Props) {
   if (!airport) notFound();
 
   const canonical = `${BASE}/${locale}/airport/${airport.iata}/arrivals`;
-  let initialFlights: Awaited<ReturnType<typeof getBoard>> = [];
-  try { initialFlights = await getBoard(airport.iata, 'arrivals', locale); } catch {}
+  // Свежесть на первом экране — то же ядро решений, что у родителя и у /api/flights.
+  // Разбор цены, крайнего срока и почему краулер сюда не попадает — в lib/live-board.ts.
+  const visitorBoard = await boardForVisitor(airport.iata, 'arrivals', locale);
+  const initialFlights = visitorBoard.rows;
   const t = await getTranslations({ locale, namespace: 'meta' });
   const tNav = await getTranslations({ locale, namespace: 'nav' });
   const name = getAirportName(airport.iata, locale, airport.name);

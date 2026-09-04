@@ -101,10 +101,10 @@ function looksLikeBrowser(ua: string): boolean {
  * layer 2. The right-most entry is the hop our own proxy added. X-Real-IP is preferred when
  * present for the same reason — nginx sets it from `$remote_addr`.
  */
-function clientKey(req: NextRequest): string {
-  const real = req.headers.get('x-real-ip')?.trim();
+function clientKey(h: Headers): string {
+  const real = h.get('x-real-ip')?.trim();
   if (real) return real;
-  const xff = req.headers.get('x-forwarded-for');
+  const xff = h.get('x-forwarded-for');
   if (xff) {
     const hops = xff.split(',');
     return hops[hops.length - 1].trim();
@@ -207,26 +207,33 @@ function freshnessOverride(ageMs: number | null): boolean {
  * знает; заводить его второе описание здесь значит заводить второй источник правды.
  */
 export function mayFetchLive(req: NextRequest, boardKey: string, ageMs: number | null): boolean {
-  // Layer 0: a development machine may never spend the production plan.
-  //
-  // Every other guard here is about WHO is asking; this one is about WHERE from. The key sits
-  // in .env.local on developer machines too, so simply opening a board in a browser fires the
-  // client poll and buys flights with real money — measured 2026-08-09, four requests charged
-  // by loading /ru/airport/KZN once while verifying an unrelated change. Nothing about a local
-  // page view is worth a paid call: the store answer is complete, and if fresh data is genuinely
-  // needed it can be fetched deliberately.
-  //
-  // Host-based rather than NODE_ENV-based on purpose — `next start` runs with NODE_ENV set to
-  // production locally, which is exactly the case that caught this out.
-  const host = req.nextUrl.hostname.toLowerCase();
-  if (host === 'localhost' || host === '127.0.0.1' || host === '::1' || host.endsWith('.local')) {
+  return mayFetchLiveFor(req.headers, req.nextUrl.hostname, boardKey, ageMs);
+}
+
+/**
+ * То же решение, но по одним заголовкам — для СЕРВЕРНОГО РЕНДЕРА страницы.
+ *
+ * Зачем понадобилось. Читатель приходит из поиска и первым экраном видит то, что отрисовал
+ * сервер. Клиентский опрос догоняет свежесть за секунду-полторы, но эту секунду человек уже
+ * смотрит на вчерашнее табло — а на странице, где половина строк «вылетел», секунды хватает,
+ * чтобы закрыть вкладку. Значит решение «покупать или читать хранилище» нужно и на рендере.
+ *
+ * Ядро ОДНО на оба пути намеренно. Развести их значило бы завести два набора правил про
+ * деньги, которые разъедутся при первой же правке одного из них.
+ *
+ * Хост берётся из заголовка, а не из NextRequest: на рендере страницы объекта запроса нет.
+ * Порт отрезается — слой 0 сравнивает имена, а не «localhost:3000».
+ */
+export function mayFetchLiveFor(h: Headers, host: string, boardKey: string, ageMs: number | null): boolean {
+  const name = (host || '').toLowerCase().split(':')[0];
+  if (name === 'localhost' || name === '127.0.0.1' || name === '::1' || name.endsWith('.local')) {
     refused.localhost++;
     return false;
   }
-  if (!looksLikeBrowser(req.headers.get('user-agent') || '')) { refused.notBrowser++; return false; }
+  if (!looksLikeBrowser(h.get('user-agent') || '')) { refused.notBrowser++; return false; }
   // Людская доля ИЛИ право на свежесть — второе не обходит слой 2, только слой 3.
   if (!withinHumanReserve() && !freshnessOverride(ageMs)) { refused.budget++; return false; }
-  if (!admitBoard(clientKey(req), boardKey)) { refused.perIp++; return false; }
+  if (!admitBoard(clientKey(h), boardKey)) { refused.perIp++; return false; }
   admitted++;
   return true;
 }
