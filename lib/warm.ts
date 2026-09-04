@@ -587,11 +587,23 @@ export function nearestServiced(
  * When the service levels were last measured, as YYYY-MM-DD, or null if never.
  * Published alongside every derived count so the claim is dated rather than timeless.
  */
+/**
+ * Дата замера обслуживания. ЧИТАЕТСЯ ОДИН РАЗ, а не на каждый вызов.
+ *
+ * Прежняя версия читала и разбирала весь data/airport-service.json (сотни килобайт) при
+ * каждом обращении — синхронно, в потоке рендера. Пока страницы аэропортов жили в ISR, это
+ * случалось раз в пять минут на страницу и терялось в шуме. 04.09 они стали динамическими, и
+ * тот же разбор поехал на КАЖДЫЙ запрос, включая обход краулера. Рядом, в getServiceData,
+ * тот же файл уже кэшируется в модуле — здесь просто забыли.
+ */
+let measuredOn: string | null | undefined;
 export function serviceMeasuredOn(): string | null {
+  if (measuredOn !== undefined) return measuredOn;
   try {
     const p = path.join(process.cwd(), 'data', 'airport-service.json');
-    return (JSON.parse(fs.readFileSync(p, 'utf8')) as { generated?: string }).generated ?? null;
-  } catch { return null; }
+    measuredOn = (JSON.parse(fs.readFileSync(p, 'utf8')) as { generated?: string }).generated ?? null;
+  } catch { measuredOn = null; }
+  return measuredOn;
 }
 
 /**

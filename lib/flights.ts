@@ -79,6 +79,9 @@ export type AirlabsFlight = {
   status: string;
 };
 
+/** Ключи, по которым поставщик уже отдал пустоту один раз. Второй ноль подряд принимается. */
+const emptyOnce = new Set<string>();
+
 // De-dupe concurrent live fetches of the same query (thundering-herd guard).
 const inflight = new Map<string, Promise<AirlabsFlight[]>>();
 
@@ -343,6 +346,28 @@ async function doFetch(query: string, direction: 'departures' | 'arrivals', cach
   raw = orderBoard(raw, direction, now, { prune: true });
 
   raw = raw.slice(0, maxRowsFor(query));
+  /**
+   * ПУСТОЙ ОТВЕТ НЕ ЗАТИРАЕТ КУПЛЕННЫЙ БОРТ С ПЕРВОГО РАЗА.
+   *
+   * Ответ поставщика бывает пустым и без признака ошибки — окно скользящее (~13 ч), провайдер
+   * иногда отдаёт ноль строк по живому аэропорту. Раньше такой ответ немедленно перезаписывал
+   * оплаченный борт пустотой, и следствия шли веером: страница показывала «рейсов нет»,
+   * подстраница прилётов уходила в noindex и теряла кластер hreflang, dateModified исчезал.
+   * Уплотнение ярусов 04.09 умножило число попыток вдвое, то есть и число таких затираний.
+   *
+   * Правило то же, что уже принято в reconcile-service.mjs для замера расписаний: ОДИН НОЛЬ
+   * НЕ ДОКАЗАТЕЛЬСТВО. Первый пустой ответ отбрасывается — старые строки и их честный возраст
+   * остаются на месте. Второй подряд принимается: это уже свидетельство, а не рябь.
+   *
+   * Отметка времени при первом отказе НЕ обновляется намеренно: подпись «обновлено N назад»
+   * обязана называть возраст показанных строк, а не время неудачной попытки. Цена — один
+   * лишний запрос на следующем тике, и она ограничена двумя попытками на аэропорт.
+   */
+  if (!raw.length && (getStale(cacheKey)?.length ?? 0) > 0 && !emptyOnce.has(cacheKey)) {
+    emptyOnce.add(cacheKey);
+    return getStale(cacheKey) ?? [];
+  }
+  emptyOnce.delete(cacheKey);
   put(cacheKey, raw);
   // Every paid snapshot goes to the append-only archive — the store keeps only the latest
   // board per airport, so without this each refresh destroys the history it replaces. Plain
