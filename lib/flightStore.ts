@@ -29,12 +29,50 @@ const TTL_MS = (Number(process.env.FLIGHT_TTL_SEC) || 600) * 1000;       // 10 m
 // figure in `request.key.limits_by_month` on EVERY response, and noteProviderLimit() records
 // it; the effective cap is the lower of the two. Upgrading the plan therefore needs no code
 // change and no env change — the first response after the upgrade raises the cap by itself.
-const CONFIGURED_CAP = Number(process.env.AIRLABS_MONTHLY_CAP) || 95000;
+/**
+ * 🔴 ПЕРЕПИСАНО 06.09.2026. Прежняя редакция брала МИНИМУМ из этой переменной и лимита
+ * провайдера — и абзац выше обещал, что «upgrading the plan needs no code change and no env
+ * change». КОД ДЕЛАЛ ОБРАТНОЕ, и это стоило двух суток мёртвого прогрева.
+ *
+ * ЧТО СЛУЧИЛОСЬ. 04.09 план подняли до 1 000 000, и я поднял AIRLABS_MONTHLY_CAP в
+ * .env.production. До работающего процесса это не доехало: рабочие переменные на VDS приходят
+ * из окружения pm2 (`pm2 restart --update-env` + `pm2 save`), а окружение процесса в Next.js
+ * ГЛАВНЕЕ файла .env.production. Значит здесь осталось прежнее число, и `Math.min` держал
+ * потолок на нём, сколько бы провайдер ни разрешал.
+ *
+ * Наружу это не проявлялось НИКАК: ответы 200, страницы целые, все 37 проверок зелёные. Первым
+ * симптомом стало то, что tickBudget() сел на аварийный пол в 40 запросов — тик брал двадцать
+ * аэропортов вместо семисот. Замер 06.09: медиана возраста борта 11 часов, mega держался на
+ * 29% норматива вместо вчерашних 100%. Обнаружено это было случайно, при разборе совсем другого
+ * вопроса.
+ *
+ * ПОЧЕМУ ТЕПЕРЬ ПОБЕЖДАЕТ ПРОВАЙДЕР. Локальный потолок ниже провайдерского не защищает ни от
+ * чего: перерасход невозможен в принципе — провайдер сам откажет, а тариф фиксированный, и
+ * счёта за превышение не существует. То есть число меньше провайдерского способно ТОЛЬКО
+ * заморить нас голодом, что оно и сделало. Переменная остаётся лишь на время, пока провайдер
+ * ещё не ответил ни разу: после первого же ответа noteProviderLimit() записывает настоящий
+ * лимит, и он становится потолком. Апгрейд плана снова не требует ни правки кода, ни правки
+ * окружения — теперь уже на самом деле.
+ *
+ * Откуда взято число, видно в /api/airlabs-usage полем capSource — чтобы следующий разбор не
+ * начинался с той же догадки, что и этот.
+ */
+const CONFIGURED_CAP = Number(process.env.AIRLABS_MONTHLY_CAP) || 0;
+/** Потолок до первого ответа провайдера. Заведомо низкий: лучше недобрать, чем упереться. */
+const BOOTSTRAP_CAP = 95000;
 
-/** The lower of what we were configured to spend and what the provider actually allows. */
+/** Сколько мы вправе потратить за месяц. Провайдер — источник истины, если он уже ответил. */
 export function monthlyCap(): number {
   const observed = db().providerLimit;
-  return observed && observed > 0 ? Math.min(CONFIGURED_CAP, observed) : CONFIGURED_CAP;
+  if (observed && observed > 0) return observed;
+  return CONFIGURED_CAP > 0 ? CONFIGURED_CAP : BOOTSTRAP_CAP;
+}
+
+/** Откуда взялся потолок — для диагностики, чтобы его происхождение не приходилось угадывать. */
+export function capSource(): string {
+  const observed = db().providerLimit;
+  if (observed && observed > 0) return `provider:${observed}`;
+  return CONFIGURED_CAP > 0 ? `env:${CONFIGURED_CAP}` : `bootstrap:${BOOTSTRAP_CAP}`;
 }
 
 /**
@@ -152,7 +190,7 @@ export function usage() {
   const byKind = s.byKind ?? { warm: 0, human: 0 };
   return {
     month: s.month, count: s.count, cap: monthlyCap(),
-    configuredCap: CONFIGURED_CAP, providerLimit: s.providerLimit ?? null,
+    configuredCap: CONFIGURED_CAP || null, providerLimit: s.providerLimit ?? null, capSource: capSource(),
     remaining: Math.max(0, monthlyCap() - s.count),
     warm: byKind.warm, human: byKind.human,
   };

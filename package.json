@@ -46,7 +46,8 @@
     "check:alive": "node scripts/check-automation-alive.mjs",
     "check:liverefresh": "node scripts/check-live-refresh.mjs",
     "check:codemoves": "node scripts/check-code-moves.mjs",
-    "service:remeasure": "node scripts/service-remeasure.mjs"
+    "service:remeasure": "node scripts/service-remeasure.mjs",
+    "check:warmthroughput": "node scripts/check-warm-throughput.mjs"
   },
   "dependencies": {
     "next": "^15.3.3",
