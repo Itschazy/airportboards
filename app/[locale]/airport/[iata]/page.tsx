@@ -517,7 +517,16 @@ export default async function AirportPage({ params }: Props) {
                 // made next-intl bail out and print the literal key path "home.ns_nearest" into
                 // the page body on ~3,400 no-service airports across all 12 locales — silently,
                 // because a missing ICU argument is not a build error.
+                //
+                // deName — ТОТ ЖЕ ПРОМАХ, ВТОРОЙ РАЗ. Французская редакция строки требует не
+                // «de {name}», а готовую форму с элизией («d’Amsterdam», «du Havre»), и её
+                // добавили в messages/fr.json, не тронув этот вызов. Здесь промах обошёлся
+                // дороже, чем в первый раз: next-intl бросает FORMATTING_ERROR, то есть
+                // страница аэропорта без регулярных рейсов падала на рендере целиком, молча
+                // и только на французской локали. Ловится теперь `npm run check:icuargs`,
+                // который сверяет переменные сообщения с тем, что вызов реально передаёт.
                 name,
+                deName: withDe(name, locale),
                 iata: airport.iata,
                 airport: `${getAirportName(nearestWithFlights.iata, locale, nearestWithFlights.name)} (${nearestWithFlights.iata})`,
                 km: String(nearestWithFlights.km),

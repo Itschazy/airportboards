@@ -47,7 +47,8 @@
     "check:liverefresh": "node scripts/check-live-refresh.mjs",
     "check:codemoves": "node scripts/check-code-moves.mjs",
     "service:remeasure": "node scripts/service-remeasure.mjs",
-    "check:warmthroughput": "node scripts/check-warm-throughput.mjs"
+    "check:warmthroughput": "node scripts/check-warm-throughput.mjs",
+    "check:icuargs": "node scripts/check-icu-args.mjs"
   },
   "dependencies": {
     "next": "^15.3.3",
