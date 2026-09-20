@@ -90,6 +90,45 @@ const emptyOnce = new Set<string>();
 // De-dupe concurrent live fetches of the same query (thundering-herd guard).
 const inflight = new Map<string, Promise<AirlabsFlight[]>>();
 
+/**
+ * 🔴 СКОЛЬКО МОЖНО ЖДАТЬ ЧУЖОЙ ЗАПРОС ПО ТОМУ ЖЕ КЛЮЧУ — И ПОЧЕМУ ЭТО НЕ ФОРМАЛЬНОСТЬ.
+ *
+ * Карта `inflight` склеивает одновременные обращения за одним бортом: второй вызывающий
+ * получает промис первого вместо второй покупки. Пока промис завершается — всё верно.
+ *
+ * 19–20.09.2026 он перестал завершаться. Прогрев не уложился в тайм-аут вызывающего (crontab
+ * ждёт 600 с), curl оборвал соединение, а Next при обрыве клиента отменяет обработчик — и
+ * промис остался в карте НАВСЕГДА, в состоянии pending. Дальше каждый тик доходил до этого
+ * ключа, делал `return pending` и вставал намертво: ответа нет, `warm` не растёт, тайм-аут
+ * вызывающего рвёт соединение снова и оставляет в карте ЕЩЁ один вечный ключ.
+ *
+ * Отказ самоподдерживающийся: за 29 часов тринадцать тиков прибавили 175 запросов вместо
+ * тридцати тысяч, борт Челябинска простоял двое суток, а снаружи сайт отвечал 200 и выглядел
+ * исправным. Лечился только перезапуском процесса — то есть очисткой этой карты.
+ *
+ * Восемь секунд: тайм-аут самого обращения к поставщику — шесть, плюс запас на разбор ответа.
+ * Дальше ждать бессмысленно — за таким ожиданием стоит либо мёртвый промис, либо поставщик,
+ * которому и шести секунд не хватило. В обоих случаях честный ответ читателю — отдать
+ * хранилище, а не висеть.
+ */
+const INFLIGHT_WAIT_MS = 8_000;
+
+/**
+ * Ждать промис не дольше дедлайна, иначе отдать хранилище.
+ *
+ * Гонка, а не отмена: сам запрос продолжает жить и, когда завершится, запишет борт в
+ * хранилище и снимет себя с карты. Мы всего лишь перестаём на него рассчитывать.
+ */
+async function waitBounded(p: Promise<AirlabsFlight[]>, cacheKey: string): Promise<AirlabsFlight[]> {
+  let timer: ReturnType<typeof setTimeout> | undefined;
+  const fallback = new Promise<AirlabsFlight[]>((resolve) => {
+    timer = setTimeout(() => resolve(getStale(cacheKey) ?? []), INFLIGHT_WAIT_MS);
+    if (typeof timer.unref === 'function') timer.unref();
+  });
+  try { return await Promise.race([p, fallback]); }
+  finally { if (timer) clearTimeout(timer); }
+}
+
 const CITY_BY_IATA: Record<string, string> = {};
 for (const a of airports as { iata: string; city: string }[]) {
   if (a.iata) CITY_BY_IATA[a.iata] = a.city;
@@ -260,10 +299,23 @@ export async function fetchRaw(
   const failedAt = lastFailure.get(cacheKey);
   if (failedAt && Date.now() - failedAt < FAILURE_COOLDOWN_MS) return getStale(cacheKey) ?? [];
   const pending = inflight.get(cacheKey);
-  if (pending) return pending;
-  const p = doFetch(query, direction, cacheKey, opts.kind ?? 'human').finally(() => inflight.delete(cacheKey));
+  // Чужой незавершённый запрос ждём ОГРАНИЧЕННО: см. INFLIGHT_WAIT_MS — залипший здесь промис
+  // однажды заморозил прогрев на двое суток.
+  if (pending) return waitBounded(pending, cacheKey);
+  const p = doFetch(query, direction, cacheKey, opts.kind ?? 'human');
   inflight.set(cacheKey, p);
-  return p;
+  /**
+   * Снятие с карты — ДВУМЯ путями, и второй обязателен.
+   *
+   * `finally` снимает ключ, когда промис завершился. Но промис, чей обработчик отменили
+   * вместе с оборванным запросом, не завершается никогда, и `finally` не срабатывает тоже —
+   * именно так карта и заполнялась вечными ключами. Таймер снимает такой ключ принудительно,
+   * так что следующий вызывающий начнёт новый запрос вместо ожидания мертвеца.
+   */
+  const evict = setTimeout(() => { if (inflight.get(cacheKey) === p) inflight.delete(cacheKey); }, INFLIGHT_WAIT_MS * 2);
+  if (typeof evict.unref === 'function') evict.unref();
+  void p.finally(() => { clearTimeout(evict); if (inflight.get(cacheKey) === p) inflight.delete(cacheKey); });
+  return waitBounded(p, cacheKey);
 }
 
 /**
@@ -618,8 +670,27 @@ const WARM_HUBS = [
  *  Falls back to the legacy fixed hub list until scripts/discover-schedules.mjs has
  *  produced data/airport-service.json.
  */
+/**
+ * 🔴 ТИК ОБЯЗАН ОТВЕЧАТЬ РАНЬШЕ, ЧЕМ ВЫЗЫВАЮЩИЙ ПЕРЕСТАНЕТ ЖДАТЬ.
+ *
+ * Crontab ждёт ответа 600 секунд. Пока очередь укладывалась в три-восемь минут, это не имело
+ * значения; 19.09.2026 очередь выросла (после двух пропущенных тиков просрочены оказались
+ * все ярусы сразу), тик перевалил за десять минут — и дальше произошло худшее, что может
+ * произойти с долгим обработчиком: клиент оборвал соединение, Next отменил обработчик на
+ * полпути, а незавершённые запросы остались вечными ключами в `inflight`. Прогрев встал на
+ * двое суток, и снаружи это выглядело как исправный сайт со вчерашним бортом.
+ *
+ * Поэтому тик ограничен СВОИМ временем, а не терпением вызывающего: дошёл до дедлайна —
+ * возвращает, что успел, честно сообщая `outOfTime`. Недобранное подберёт следующий тик через
+ * два часа, очередь для того и ранжируется по просрочке. Семь минут против шестисот секунд
+ * оставляют запас на разбор ответа и сброс кэша страниц.
+ */
+const TICK_DEADLINE_MS = Number(process.env.WARM_TICK_MAX_MS || 420_000);
+
 export async function warmHubs(): Promise<{
   warmed: number; skippedBudget: number; eventAirports: string[]; tiers: Record<string, number>;
+  /** Тик упёрся в собственный дедлайн и вернул неполный обход — см. TICK_DEADLINE_MS. */
+  outOfTime: boolean; elapsedMs: number;
   /** Коды, чьи борта в этом тике действительно обновились — чтобы вызывающий мог сбросить
    *  для них кэш страниц. Без этого свежие данные лежат в хранилище, а страница отдаётся
    *  прежняя: замер 12.08 на PEK показал отставание ровно в восемь часов. */
@@ -628,7 +699,8 @@ export async function warmHubs(): Promise<{
   const eventAirports = getActiveEventAirports();
   const tiers: Record<string, number> = {};
   const warmedIatas: string[] = [];
-  if (!AIRLABS_KEY) return { warmed: 0, skippedBudget: 0, eventAirports, tiers, warmedIatas };
+  const startedAt = Date.now();
+  if (!AIRLABS_KEY) return { warmed: 0, skippedBudget: 0, eventAirports, tiers, warmedIatas, outOfTime: false, elapsedMs: 0 };
 
   const due = dueAirports();
   // Events first, then the most overdue. Legacy list only while service data is missing.
@@ -651,13 +723,16 @@ export async function warmHubs(): Promise<{
   const tierByIata = new Map(due.map(d => [d.iata, d.tier.name]));
 
   const budget = tickBudget();
-  let spentHere = 0, warmed = 0;
+  let spentHere = 0, warmed = 0, outOfTime = false;
   const seen = new Set<string>();
 
   for (const iata of queue) {
     if (seen.has(iata)) continue;
     seen.add(iata);
     if (spentHere + 2 > budget || !canSpend()) break;
+    // Дедлайн проверяется ДО обращения, а не после: прерваться нужно, пока ответ ещё успеет
+    // уехать вызывающему (см. TICK_DEADLINE_MS).
+    if (Date.now() - startedAt > TICK_DEADLINE_MS) { outOfTime = true; break; }
     try { await fetchRaw(`dep_iata=${iata}`, 'departures', { live: true, kind: 'warm' }); } catch { /* ignore */ }
     try { await fetchRaw(`arr_iata=${iata}`, 'arrivals', { live: true, kind: 'warm' }); } catch { /* ignore */ }
     spentHere += 2;
@@ -667,5 +742,8 @@ export async function warmHubs(): Promise<{
     tiers[t] = (tiers[t] ?? 0) + 1;
     await new Promise(r => setTimeout(r, 120)); // gentle stagger
   }
-  return { warmed, skippedBudget: Math.max(0, due.length - warmed), eventAirports, tiers, warmedIatas };
+  return {
+    warmed, skippedBudget: Math.max(0, due.length - warmed), eventAirports, tiers, warmedIatas,
+    outOfTime, elapsedMs: Date.now() - startedAt,
+  };
 }

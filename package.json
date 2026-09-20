@@ -48,7 +48,8 @@
     "check:codemoves": "node scripts/check-code-moves.mjs",
     "service:remeasure": "node scripts/service-remeasure.mjs",
     "check:warmthroughput": "node scripts/check-warm-throughput.mjs",
-    "check:icuargs": "node scripts/check-icu-args.mjs"
+    "check:icuargs": "node scripts/check-icu-args.mjs",
+    "check:warmdeadline": "node scripts/check-warm-deadline.mjs"
   },
   "dependencies": {
     "next": "^15.3.3",
