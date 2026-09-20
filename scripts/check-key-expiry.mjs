@@ -1,0 +1,64 @@
+// Хватит ли ключа поставщика — по сроку и по остатку — до конца ближайшего месяца.
+//
+// ЗАЧЕМ ЭТОТ СТОРОЖ СУЩЕСТВУЕТ. Всё остальное в этом репозитории бережёт свежесть бортов
+// правкой на минуты и часы. Истёкший ключ обнуляет её разом и на всём корпусе: поставщик
+// начнёт отказывать, прогрев и живой путь встанут одновременно, а страницы останутся
+// отвечать 200 с бортом вчерашней давности — то есть снаружи это неотличимо от исправной
+// работы ровно так же, как все прошлые простои.
+//
+// Ключ оплачивается и продлевается ЧЕЛОВЕКОМ, поэтому предупреждать надо заранее, а не в
+// день отказа. Две границы:
+//
+//   · СРОК. Ключ, зарегистрированный 23.06.2026, истекает 09.10.2026 — продления идут
+//     месячными шагами, и между «истёк» и «продлён» стоит платёж, который кто-то должен
+//     успеть сделать.
+//   · ОСТАТОК. У ключа, кроме месячного лимита, есть общий остаток (limits_total). После
+//     уплотнения расписания сайт тратит около 29 000 в сутки: остатка, которого хватало на
+//     полгода при прежнем темпе, теперь хватает на месяц.
+//
+// Цена проверки — ОДНО обращение к поставщику (лимитов по минуте у ключа нет). Расход
+// сайта оно не искажает: счётчик ведёт приложение, а этот запрос идёт мимо него, и в
+// провайдерском счёте один запрос в сутки теряется в шуме.
+//
+// Usage:  node scripts/check-key-expiry.mjs
+
+import fs from 'node:fs';
+
+/** За сколько дней до истечения бить тревогу: платёж и продление требуют участия человека. */
+const WARN_DAYS = 14;
+/** Суточный расход после уплотнения (scripts/warm-plan.mjs + людской путь). */
+const DAILY_SPEND = 29_000;
+
+let fails = 0;
+const say = (ok, msg) => { if (!ok) fails++; console.log(`  ${ok ? '✓' : '✗'} ${msg}`); };
+
+const env = fs.readFileSync('.env.local', 'utf8');
+const key = (/^AIRLABS_API_KEY=(.+)$/m.exec(env) || [])[1]?.trim();
+say(!!key, key ? 'ключ найден в .env.local' : 'AIRLABS_API_KEY не найден в .env.local');
+if (!key) process.exit(1);
+
+const r = await fetch(`https://airlabs.co/api/v9/schedules?dep_iata=SVO&api_key=${key}`);
+const j = await r.json();
+const k = j?.request?.key ?? {};
+
+say(!j?.error, j?.error ? `поставщик отвечает ошибкой: ${JSON.stringify(j.error).slice(0, 120)}` : 'поставщик отвечает без ошибки');
+
+const expired = k.expired ? new Date(k.expired) : null;
+const daysLeft = expired ? Math.floor((expired - Date.now()) / 86_400_000) : null;
+say(daysLeft !== null && daysLeft > WARN_DAYS,
+  daysLeft === null ? 'поставщик не сообщил срок действия ключа'
+    : daysLeft > WARN_DAYS
+      ? `ключ действует ещё ${daysLeft} дней (до ${k.expired.slice(0, 10)})`
+      : `КЛЮЧ ИСТЕКАЕТ ЧЕРЕЗ ${daysLeft} ДНЕЙ (${k.expired.slice(0, 10)}) — продлевать должен владелец, после истечения встанут и прогрев, и живой путь`);
+
+const total = Number(k.limits_total);
+const daysOfQuota = Number.isFinite(total) ? Math.floor(total / DAILY_SPEND) : null;
+say(daysOfQuota === null || daysOfQuota > WARN_DAYS,
+  daysOfQuota === null ? 'поставщик не сообщил остаток по ключу'
+    : daysOfQuota > WARN_DAYS
+      ? `остатка ${total.toLocaleString('ru-RU')} хватит на ${daysOfQuota} дней при ${DAILY_SPEND.toLocaleString('ru-RU')}/сутки`
+      : `ОСТАТКА ${total.toLocaleString('ru-RU')} хватит лишь на ${daysOfQuota} дней при нынешнем темпе`);
+
+console.log(`\n  · месячный лимит: ${Number(k.limits_by_month).toLocaleString('ru-RU')} · тариф: ${k.type}`);
+console.log(fails ? `\nПРОВАЛОВ: ${fails}` : '\nключа хватает и по сроку, и по остатку');
+process.exit(fails ? 1 : 0);

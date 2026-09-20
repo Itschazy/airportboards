@@ -51,7 +51,8 @@
     "check:icuargs": "node scripts/check-icu-args.mjs",
     "check:warmdeadline": "node scripts/check-warm-deadline.mjs",
     "check:adsense": "node scripts/check-adsense.mjs",
-    "check:planuse": "node scripts/check-plan-utilisation.mjs"
+    "check:planuse": "node scripts/check-plan-utilisation.mjs",
+    "check:keyexpiry": "node scripts/check-key-expiry.mjs"
   },
   "dependencies": {
     "next": "^15.3.3",
