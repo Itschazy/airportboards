@@ -102,7 +102,18 @@ const iFresh = body.indexOf('getFresh(cacheKey)');
 const iLive = body.indexOf('opts.live');
 say(iFresh > 0 && iLive > 0 && iFresh < iLive,
   'getFresh стоит в fetchRaw ДО проверки live — заход внутри окна TTL не стоит ничего');
-say(/const pending = inflight\.get\(cacheKey\);[\s\S]{0,80}return pending;/.test(FL),
+/**
+ * ⚠️ ОБРАЗЕЦ ОБНОВЛЁН 21.09.2026, И ЭТО НЕ КОСМЕТИКА. Здесь стояло `return pending;` — ровно
+ * та форма, которую 19–20.09 пришлось убрать: незавершённый промис (обработчик отменили
+ * вместе с оборванным запросом) оставался в карте навсегда, и каждый следующий вызывающий
+ * ждал мертвеца. Прогрев простоял двое суток.
+ *
+ * Проверять теперь надо СКЛЕЙКУ, а не конкретную строку: второй вызывающий по-прежнему
+ * получает промис первого, но ждёт его ОГРАНИЧЕННО (waitBounded). Иначе два сторожа
+ * противоречили бы друг другу — check-warm-deadline требует, чтобы голого `return pending`
+ * в коде не было, а этот требовал бы его наличия.
+ */
+say(/const pending = inflight\.get\(cacheKey\);[\s\S]{0,400}?return (pending|waitBounded\(pending)/.test(FL),
   'одновременные запросы на один борт склеиваются в одно обращение к поставщику');
 const LB = fs.readFileSync('lib/live-board.ts', 'utf8');
 say(/if \(!needsRefresh\(/.test(LB) && LB.indexOf('if (!needsRefresh(') < LB.indexOf('mayFetchLiveFor('),
@@ -156,10 +167,30 @@ for (const [file, what] of [['lib/live-board.ts', 'серверный ренде
 
 // ── 3. Людская доля не задана числом, которое молча схлопнется ───────────────────────────
 const env = fs.readFileSync('.env.production', 'utf8');
+/**
+ * 🔑 РЕЗЕРВ МЕРЯЕТСЯ В ЗАПРОСАХ, А НЕ В ПРОЦЕНТАХ. Здесь стоял порог «не меньше 25%», и это
+ * ровно та ошибка, на которой проект уже обжигался с обратным знаком: 12% задавались в
+ * расчёте на план 195 000, реальный лимит оказался 100 000, и доля молча превратилась в
+ * 12 000 запросов. Процент без плана не означает ничего.
+ *
+ * 21.09.2026 долю снизили с 35% до 10% — и порог в процентах покраснел, хотя резерв при этом
+ * ВЫРОС в абсолюте: 35% от прежнего эффективного потолка давали меньше, чем 10% от миллиона.
+ *
+ * Порог — двукратный запас к ИЗМЕРЕННОМУ расходу читателей: 27 000 за месяц (поле human в
+ * /api/airlabs-usage, замер 21.09.2026). Шестьдесят тысяч запросов читателям хватит и при
+ * удвоении трафика; когда human устойчиво перевалит за 30 000, это число надо пересчитать, а
+ * не подкручивать процент.
+ */
+const MEASURED_HUMAN_MONTH = 27_000;
+const RESERVE_FLOOR = MEASURED_HUMAN_MONTH * 2;
 const pct = /^AIRLABS_HUMAN_RESERVE_PCT=(\d+)/m.exec(env);
-say(!!pct && Number(pct[1]) >= 25,
-  pct ? `людская доля плана ${pct[1]}%` + (Number(pct[1]) < 25 ? ' — мало, читатели упрутся в потолок до конца месяца' : '')
-      : 'AIRLABS_HUMAN_RESERVE_PCT не задан');
+const capM = /^AIRLABS_MONTHLY_CAP=(\d+)/m.exec(env);
+const reserve = pct && capM ? Math.round(Number(capM[1]) * Number(pct[1]) / 100) : null;
+say(reserve !== null && reserve >= RESERVE_FLOOR,
+  reserve === null ? 'AIRLABS_HUMAN_RESERVE_PCT или AIRLABS_MONTHLY_CAP не заданы'
+    : reserve >= RESERVE_FLOOR
+      ? `читателям резервируется ${reserve.toLocaleString('ru-RU')} запросов (${pct[1]}% плана) — вдвое с лишним больше измеренных ${MEASURED_HUMAN_MONTH.toLocaleString('ru-RU')}/мес`
+      : `читателям резервируется всего ${reserve.toLocaleString('ru-RU')} запросов при измеренном расходе ${MEASURED_HUMAN_MONTH.toLocaleString('ru-RU')}/мес — упрутся в потолок до конца месяца`);
 
 // ── 4. Наблюдение за продом — печатается, но не роняет ───────────────────────────────────
 // Уронить нельзя честно: ночью читателей нет, и борт законно стоит на цикле прогрева.
