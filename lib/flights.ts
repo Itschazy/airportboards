@@ -687,7 +687,7 @@ const WARM_HUBS = [
  */
 const TICK_DEADLINE_MS = Number(process.env.WARM_TICK_MAX_MS || 420_000);
 
-export async function warmHubs(): Promise<{
+export async function warmHubs(runsPerDay?: number): Promise<{
   warmed: number; skippedBudget: number; eventAirports: string[]; tiers: Record<string, number>;
   /** Тик упёрся в собственный дедлайн и вернул неполный обход — см. TICK_DEADLINE_MS. */
   outOfTime: boolean; elapsedMs: number;
@@ -722,7 +722,16 @@ export async function warmHubs(): Promise<{
     : [...staleEvents, ...WARM_HUBS];
   const tierByIata = new Map(due.map(d => [d.iata, d.tier.name]));
 
-  const budget = tickBudget();
+  /**
+   * Частоту тиков задаёт ТОТ, КТО ИХ ЗАПУСКАЕТ, — крон-строка на боксе передаёт её запросом.
+   *
+   * Число живёт в двух местах по своей природе: в crontab (как часто звать) и в tickBudget
+   * (на сколько частей делить дневную долю). Разойдясь, они бьют молча в обе стороны: при
+   * заниженном значении сутки тратят вдвое больше дневной доли, при завышенном прогрев
+   * недобирает и борта стареют. Поэтому источник истины один — вызывающий; env остаётся
+   * подстраховкой, если параметр не передали.
+   */
+  const budget = tickBudget(runsPerDay);
   let spentHere = 0, warmed = 0, outOfTime = false;
   const seen = new Set<string>();
 

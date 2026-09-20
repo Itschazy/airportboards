@@ -12,7 +12,17 @@ import fs from 'fs';
 
 const CAPS = process.argv.slice(2).map(Number).filter(Boolean);
 const PLANS = CAPS.length ? CAPS : [195000, 1000000];
-const PCT = Number(process.env.AIRLABS_HUMAN_RESERVE_PCT ?? 35) / 100;
+// Доля резерва берётся из .env.production — оттуда же её читает прод. Захардкоженное
+// умолчание врало бы ровно в тот момент, когда долю меняют: 21.09.2026 её снизили с 35% до
+// 10%, и планировщик, не знающий об этом, показывал бы «спрос не помещается» на ровном месте.
+const ENV_FILE = new URL('../.env.production', import.meta.url);
+const envPct = (() => {
+  try {
+    const m = /^AIRLABS_HUMAN_RESERVE_PCT=(\d+)\s*$/m.exec(fs.readFileSync(ENV_FILE, 'utf8'));
+    return m ? Number(m[1]) : null;
+  } catch { return null; }
+})();
+const PCT = Number(process.env.AIRLABS_HUMAN_RESERVE_PCT ?? envPct ?? 35) / 100;
 const svc = JSON.parse(fs.readFileSync('data/airport-service.json', 'utf8')).airports;
 
 /**

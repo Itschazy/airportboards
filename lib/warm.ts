@@ -99,12 +99,51 @@ export type WarmTier = {
  * ⚠️ Ночное окно — ЧЕТЫРЕ часа (isLocalNight: 01:00–05:00), а не восемь. Считая по восьми,
  * легко занизить цену на 20% и назначить сроки, которых бюджет не выдержит.
  */
+/**
+ * 🔴 УПЛОТНЕНО 21.09.2026 ПОД ЗАДАЧУ «ПЛАН ДОЛЖЕН ТРАТИТЬСЯ ЦЕЛИКОМ».
+ *
+ * Прежние сроки (2/3/2/6/12 ч) стоили 556 470 запросов в месяц — 56% оплаченного миллиона.
+ * Остальное простаивало: людской путь берёт около 27 000 в месяц, то есть вместе выходило
+ * 58% плана. Владелец платит за миллион и хочет свежесть, а не экономию.
+ *
+ * Новая цена — 860 533 в месяц (node scripts/warm-plan.mjs):
+ *
+ *     mega   65 × 1 ч    93 600     hub    100 × 2 ч    60 000
+ *     major 287 × 1.5 ч 229 600     mid    605 × 3 ч   242 000
+ *     small 1765 × 9 ч  235 333
+ *
+ * Плюс люди (~27 000) и переспрос расписаний раз в 28 суток (~6 600, идёт мимо нашего
+ * счётчика, но провайдер его считает) — около 894 000, то есть 89% плана. Оставшиеся 11%
+ * это запас на рост живого трафика и на наверстывание после простоя, а не забытые деньги.
+ *
+ * 🔑 ТРИ ЧИСЛА ДОЛЖНЫ СХОДИТЬСЯ ОДНОВРЕМЕННО, И ЭТО ГЛАВНОЕ ЗДЕСЬ:
+ *
+ *   1. СПРОС расписания (860 533) ≤ ДОЛЯ ПРОГРЕВА. Доля = план минус людской резерв, а он
+ *      снижен с 35% до 10% (.env.production): 35% держали 350 000 под путь, который тратит
+ *      27 000. Теперь доля прогрева 900 000 — спрос помещается с запасом 40 000. Если спрос
+ *      перевалит за долю, система встанет в режим постоянного дефицита, а там веса очереди
+ *      [6,3,1.5,1.2,1] режут С ХВОСТА: уплотнение хвоста обернулось бы его же голоданием.
+ *   2. СПРОС ≤ ПРОПУСКНОЙ СПОСОБНОСТИ тиков. Тик идёт ~0.4 с на аэропорт (два обращения плюс
+ *      пауза 120 мс) и ограничен дедлайном в 7 минут — значит берёт до ~1 000 аэропортов.
+ *      Спрос 860 533 в месяц = 13 824 аэропорта в сутки; при двухчасовом кроне это 1 152 на
+ *      тик, то есть БОЛЬШЕ, чем тик успевает. Поэтому крон переведён на ЧАСОВОЙ шаг: 576
+ *      аэропортов за тик, 230 секунд — втрое меньше дедлайна.
+ *   3. tickBudget() делит дневную долю на число тиков в сутки. При часовом кроне их 24, а не
+ *      12, иначе суммарный расход за сутки вышел бы вдвое больше дневной доли. Число живёт в
+ *      WARM_RUNS_PER_DAY и обязано совпадать с крон-строкой на боксе.
+ *
+ * ⚠️ Ночное окно (isLocalNight, 01:00–05:00 местного) сохранено: ночью борт не меняется, и
+ * эти запросы ушли бы впустую. Оно и даёт множитель 5/6 в расчёте выше.
+ *
+ * Проверять после любой правки: node scripts/warm-plan.mjs — он читает TIERS из этого файла
+ * и долю резерва из .env.production, то есть считает по тем же числам, что и код.
+ */
 export const TIERS: WarmTier[] = [
-  { name: 'mega', minFlights: 400, intervalMin: 120, skipNight: false },
-  { name: 'hub', minFlights: 150, intervalMin: 180, skipNight: true },
-  { name: 'major', minFlights: 40, intervalMin: 120, skipNight: true },
-  { name: 'mid', minFlights: 10, intervalMin: 360, skipNight: true },
-  { name: 'small', minFlights: 1, intervalMin: 720, skipNight: true },
+  { name: 'mega', minFlights: 400, intervalMin: 60, skipNight: false },
+  { name: 'hub', minFlights: 150, intervalMin: 120, skipNight: true },
+  { name: 'major', minFlights: 40, intervalMin: 90, skipNight: true },
+  { name: 'mid', minFlights: 10, intervalMin: 180, skipNight: true },
+  { name: 'small', minFlights: 1, intervalMin: 540, skipNight: true },
 ];
 
 export function tierOf(flights: number): WarmTier | null {
@@ -447,7 +486,15 @@ export function dueAirports(now = Date.now()): Due[] {
  * across the runs expected in a day. Deliberately derived rather than configured: if the
  * plan doubles, every tier simply gets refreshed more often.
  */
-export function tickBudget(runsPerDay = 12, now = new Date()): number {
+/**
+ * Сколько тиков в сутки делает крон. ОБЯЗАНО совпадать с крон-строкой на боксе:
+ * tickBudget() делит дневную долю на это число, и расхождение бьёт в обе стороны — при
+ * заниженном значении сутки тратят больше дневной доли, при завышенном прогрев недобирает.
+ * 21.09.2026 крон переведён с двухчасового шага на часовой (см. TIERS): 24, не 12.
+ */
+const RUNS_PER_DAY = Number(process.env.WARM_RUNS_PER_DAY || 12);
+
+export function tickBudget(runsPerDay = RUNS_PER_DAY, now = new Date()): number {
   const u = usage();
   // Split the plan between the warmer and live human traffic. /api/flights fetches live for
   // a real browser off the same quota, so a warmer that drained the plan would leave every

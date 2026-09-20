@@ -50,7 +50,8 @@
     "check:warmthroughput": "node scripts/check-warm-throughput.mjs",
     "check:icuargs": "node scripts/check-icu-args.mjs",
     "check:warmdeadline": "node scripts/check-warm-deadline.mjs",
-    "check:adsense": "node scripts/check-adsense.mjs"
+    "check:adsense": "node scripts/check-adsense.mjs",
+    "check:planuse": "node scripts/check-plan-utilisation.mjs"
   },
   "dependencies": {
     "next": "^15.3.3",
