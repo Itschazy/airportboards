@@ -61,7 +61,8 @@ const isNoindex   = (r) => (r.robots && r.robots.includes('noindex')) || (r.xRob
 const CASES = [
   { path: '/en/airport/JFK', label: 'valid airport JFK', check: r => [r.status === 200 && isIndexable(r) && r.canonical === `${BASE}/en/airport/JFK`, `status=${r.status} robots=${r.robots} canon=${r.canonical}`] },
   { path: '/en/airport/JFK/arrivals', label: 'arrivals subpage', check: r => [r.status === 200 && isIndexable(r) && r.canonical === `${BASE}/en/airport/JFK/arrivals`, `status=${r.status} robots=${r.robots} canon=${r.canonical}`] },
-  { path: '/en/airport/JFK/departures', label: 'departures subpage', check: r => [r.status === 200 && isIndexable(r), `status=${r.status} robots=${r.robots}`] },
+  // Canonical = the parent: it opens on the same departures board (departures/page.tsx).
+  { path: '/en/airport/JFK/departures', label: 'departures subpage (canonical -> parent)', check: r => [r.status === 200 && isIndexable(r) && r.canonical === `${BASE}/en/airport/JFK`, `status=${r.status} robots=${r.robots} canon=${r.canonical}`] },
   { path: '/en/airport/ZZZZ', label: 'nonexistent airport ZZZZ', check: r => [r.status === 404, `status=${r.status} (want 404)`] },
   { path: '/en/airport/XYZ', label: 'nonexistent airport XYZ', check: r => [r.status === 404, `status=${r.status} (want 404)`] },
   { path: '/en/airport/jfk', label: 'lowercase iata jfk', check: r => {
@@ -73,7 +74,9 @@ const CASES = [
   { path: '/en/flight/garbage123', label: 'flight bad format', check: r => [r.status === 404, `status=${r.status} (want 404)`] },
   { path: '/en/flight/ZZ9999', label: 'flight not-found (soft-404 guard)', check: r => [r.status === 404 || isNoindex(r), `status=${r.status} robots=${r.robots} (want noindex)`] },
   { path: '/en/airline/ZZ', label: 'airline unknown', check: r => [r.status === 404, `status=${r.status} (want 404)`] },
-  { path: '/en/airline/SU', label: 'airline valid SU', check: r => [r.status === 200, `status=${r.status} robots=${r.robots}`] },
+  // 404 while the airline has no flights (the warmer never writes its key — soft-404 fix of
+  // 2026-07-19), noindex when it has some: either way never an indexable 200.
+  { path: '/en/airline/SU', label: 'airline valid SU (404, or noindex)', check: r => [r.status === 404 || (r.status === 200 && isNoindex(r)), `status=${r.status} robots=${r.robots} (want 404, or 200 noindex)`] },
   { path: '/en/city/london', label: 'city multi-airport (index)', check: r => [r.status === 200 && isIndexable(r), `status=${r.status} robots=${r.robots}`] },
   { path: '/en/city/annaba', label: 'city single-airport (noindex)', check: r => [r.status === 200 && isNoindex(r), `status=${r.status} robots=${r.robots} (want noindex)`] },
   { path: '/ru/airport/JFK', label: 'locale ru', check: r => [r.status === 200, `status=${r.status}`] },

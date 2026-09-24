@@ -4,13 +4,19 @@
 // Fetches RAW server HTML (no JS), extracts canonical + every alternate hreflang,
 // and asserts self-canonical, reciprocity, x-default, valid codes, alternates 200,
 // and that noindex pages don't advertise an indexable hreflang cluster.
+// Two page types have their own contract and are checked as such, not as indexable:
+//   /departures — canonical = the parent airport page, NO hreflang cluster, not noindex
+//                 (departures/page.tsx: the parent opens on the same board);
+//   /airline/X  — 404 while it has no flights, else noindex with NO cluster
+//                 (airline/[code]/page.tsx, soft-404 fix of 2026-07-19).
 //
 // Usage:
 //   IP=95.81.103.82 node scripts/check-hreflang.mjs     # DNS-pinned (local workaround)
 //   node scripts/check-hreflang.mjs                     # normal DNS
 // Exit 0 = pass, 1 = failures.
 
-import { request } from 'node:https';
+import { request as httpsRequest } from 'node:https';
+import { request as httpRequest } from 'node:http';
 import { URL } from 'node:url';
 
 const LOCALES = ['en', 'ru', 'zh', 'ar', 'de', 'ko', 'ja', 'fr', 'es', 'it', 'hi', 'tr'];
@@ -18,9 +24,11 @@ const HOST = process.env.HOST || 'airportsboard.live';
 const IP = process.env.IP || ''; // set to 95.81.103.82 when DNS doesn't resolve
 const BASE = (process.env.BASE || `https://${HOST}`).replace(/\/$/, '');
 
-const INDEXABLE_PATHS = ['', '/airport/SVO', '/airport/SVO/arrivals', '/airport/SVO/departures',
-  '/city/moscow', '/airports/russia', '/airports', '/airline/SU', '/az/a'];
+const INDEXABLE_PATHS = ['', '/airport/SVO', '/airport/SVO/arrivals',
+  '/city/moscow', '/airports/russia', '/airports', '/az/a'];
 const NOINDEX_PATHS = ['/city/aalborg']; // single-airport city
+const DEFERRING_PATHS = [['/airport/SVO/departures', '/airport/SVO']]; // [page, its canonical]
+const DEAD_OR_NOINDEX_PATHS = ['/airline/SU'];
 
 // Serialize every network hit with a minimum inter-request gap. The audit otherwise
 // bursts ~250 requests at the small VDS, which can't on-demand-render the SSR-flight
@@ -37,8 +45,9 @@ async function fetchRaw(rawUrl, maxRedirects = 1) {
   await gate();
   return new Promise((resolve, reject) => {
     const u = new URL(rawUrl);
-    const req = request({ method: 'GET', host: IP || u.hostname, servername: u.hostname,
-      path: u.pathname + u.search, port: 443,
+    const tls = u.protocol === 'https:';
+    const req = (tls ? httpsRequest : httpRequest)({ method: 'GET', host: IP || u.hostname, servername: u.hostname,
+      path: u.pathname + u.search, port: u.port || (tls ? 443 : 80),
       headers: { Host: u.hostname, 'User-Agent': 'hreflang-audit/1.0', 'Accept-Encoding': 'identity' } }, (res) => {
       const loc = res.headers.location;
       if (res.statusCode >= 300 && res.statusCode < 400 && loc && maxRedirects > 0) {
@@ -128,9 +137,35 @@ async function auditNoindex(path) {
   check(alternates.length === 0, `${label} noindex page must have NO hreflang cluster, found ${alternates.length}`);
 }
 
+async function auditDeferring(path, target) {
+  for (const loc of LOCALES) {
+    const url = `${BASE}/${loc}${path}`;
+    const res = await fetchStable(url);
+    const label = `[${loc}${path}]`;
+    if (res.status !== 200) { failures.push(`${label} status ${res.status}`); continue; }
+    const { canonicalHref, alternates, robots } = extractHead(res.body);
+    const want = `${BASE}/${loc}${target}`;
+    check(canonicalHref === want, `${label} canonical "${canonicalHref}" != parent ${want}`);
+    check(!/noindex/i.test(robots || ''), `${label} noindex next to a canonical — the noindex can carry over to the parent`);
+    check(alternates.length === 0, `${label} page defers to its parent and must have NO hreflang cluster, found ${alternates.length}`);
+  }
+}
+async function auditDeadOrNoindex(path) {
+  const url = `${BASE}/en${path}`;
+  const res = await fetchStable(url);
+  const label = `[en${path}]`;
+  if (res.status === 404) return;
+  if (res.status !== 200) { failures.push(`${label} status ${res.status} (want 404, or 200 noindex)`); return; }
+  const { alternates, robots } = extractHead(res.body);
+  check(/noindex/i.test(robots || ''), `${label} renders 200 but is not noindex (robots="${robots}")`);
+  check(alternates.length === 0, `${label} noindex page must have NO hreflang cluster, found ${alternates.length}`);
+}
+
 console.log(`Auditing ${BASE}${IP ? ` (pinned ${HOST} -> ${IP})` : ''}\n`);
 for (const p of INDEXABLE_PATHS) { process.stdout.write(`indexable ${p || '/'} ... `); await auditIndexable(p); console.log('done'); }
 for (const p of NOINDEX_PATHS) { process.stdout.write(`noindex ${p} ... `); await auditNoindex(p); console.log('done'); }
+for (const [p, t] of DEFERRING_PATHS) { process.stdout.write(`canonical->parent ${p} ... `); await auditDeferring(p, t); console.log('done'); }
+for (const p of DEAD_OR_NOINDEX_PATHS) { process.stdout.write(`404-or-noindex ${p} ... `); await auditDeadOrNoindex(p); console.log('done'); }
 console.log('');
 if (!failures.length) { console.log('PASS — all canonical/hreflang assertions held.'); process.exit(0); }
 console.log(`FAIL — ${failures.length} issue(s):`);
