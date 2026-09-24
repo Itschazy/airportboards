@@ -48,11 +48,29 @@ console.log(`  записей: ${rows.length}, из них с lastmod: ${withMod
 say(rows.length > 0, `карта прочитана (${children.length} детей)`);
 
 // ── 3. Только там, где отметка существует ────────────────────────────────────────────────
-const isBoard = (p) => /^\/en\/airport\/[A-Z0-9]{3}(\/arrivals)?$/.test(p);
+// С 24.09 карта заявляет каждую языковую версию отдельной записью, и отметка борта стоит на
+// всех двенадцати: табло одно, язык меняет подписи, а не данные.
+const LOCALES = ['en', 'ru', 'zh', 'ar', 'de', 'ko', 'ja', 'fr', 'es', 'it', 'hi', 'tr'];
+const BOARD = new RegExp(`^/(${LOCALES.join('|')})(/airport/[A-Z0-9]{3}(?:/arrivals)?)$`);
+const isBoard = (p) => BOARD.test(p);
 const strays = withMod.filter((r) => !isBoard(r.path));
 say(strays.length === 0, strays.length
   ? `lastmod у ${strays.length} записей без борта: ${strays.slice(0, 4).map((r) => r.path).join(', ')}…`
   : 'lastmod стоит только у страниц аэропортов и прилётов');
+
+// Языковые версии одной страницы показывают одно табло — значит, и отметка у них одна.
+// Разные даты у /ru/airport/X и /en/airport/X означали бы, что хоть одна из них придумана.
+const byPage = new Map();
+for (const r of rows) {
+  const m = BOARD.exec(r.path);
+  if (!m) continue;
+  if (!byPage.has(m[2])) byPage.set(m[2], new Set());
+  byPage.get(m[2]).add(r.lastmod);
+}
+const split = [...byPage].filter(([, mods]) => mods.size > 1);
+say(split.length === 0, split.length
+  ? `у ${split.length} страниц языковые версии несут разные отметки: ${split[0][0]} → ${[...split[0][1]].map((v) => v ?? 'без отметки').join(' | ')}`
+  : `языковые версии каждой из ${byPage.size} страниц с бортом несут одну отметку`);
 
 // Обратная сторона: если борта прогреты, хоть у кого-то отметка обязана быть. Ноль означает
 // либо холодное хранилище, либо что поле снова отвалилось, — и молча отличить нельзя.
