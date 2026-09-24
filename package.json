@@ -52,7 +52,8 @@
     "check:warmdeadline": "node scripts/check-warm-deadline.mjs",
     "check:adsense": "node scripts/check-adsense.mjs",
     "check:planuse": "node scripts/check-plan-utilisation.mjs",
-    "check:keyexpiry": "node scripts/check-key-expiry.mjs"
+    "check:keyexpiry": "node scripts/check-key-expiry.mjs",
+    "check:sitemaplangs": "node scripts/check-sitemap-hreflang.mjs"
   },
   "dependencies": {
     "next": "^15.3.3",

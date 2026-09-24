@@ -77,10 +77,17 @@ const inMap = new Set(
   locs.map((l) => /\/en\/airport\/([A-Z0-9]{3})$/.exec(l)?.[1]).filter(Boolean)
 );
 
-console.log(`  записей <loc>: ${locs.length}, из них страниц аэропортов: ${inMap.size}`);
-console.log(`  заявлено URL с учётом ${LOCALES} языков: ${(locs.length * LOCALES).toLocaleString('ru-RU')}\n`);
+/**
+ * С 24.09.2026 каждый язык — отдельный <loc> (app/sitemap.ts, entry). Раньше карта держала
+ * только английские адреса, а языки жили альтернативами внутри них, поэтому корпус считался
+ * как «записи × 12». Теперь записи и есть корпус: умножать — значит насчитать 144 языка и
+ * покраснеть на ровном месте. Потолок MAX_DECLARED при этом не меняется: он всегда был в
+ * адресах с учётом языков.
+ */
+console.log(`  записей <loc>: ${locs.length}, из них страниц аэропортов (en): ${inMap.size}`);
+console.log(`  заявлено URL на ${LOCALES} языках: ${locs.length.toLocaleString('ru-RU')}\n`);
 
-say(locs.length * LOCALES <= MAX_DECLARED,
+say(locs.length <= MAX_DECLARED,
   `корпус в пределах ${MAX_DECLARED.toLocaleString('ru-RU')} URL`);
 
 // ── 1. Пустое не рекламируется ────────────────────────────────────────────────────────────

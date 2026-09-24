@@ -86,11 +86,33 @@ function entry(
   // where an engine checks before trusting either.
   langs: readonly string[] = locales,
   lastModified?: Date,
-): MetadataRoute.Sitemap[number] {
+): MetadataRoute.Sitemap {
   const languages: Record<string, string> = {};
   for (const loc of langs) languages[loc] = `${BASE}/${loc}${path}`;
   languages['x-default'] = `${BASE}/en${path}`;
-  return { url: `${BASE}/en${path}`, changeFrequency, priority, alternates: { languages }, ...(lastModified ? { lastModified } : {}) };
+  /**
+   * 🔴 ОДНА ЗАПИСЬ НА КАЖДЫЙ ЯЗЫК, а не одна английская с альтернативами.
+   *
+   * До 24.09.2026 здесь возвращался ровно один <url> — английский, — а одиннадцать остальных
+   * языков висели внутри него как xhtml:link. Для Google это разные статусы: <loc> — страница,
+   * которую сайт ЗАЯВЛЯЕТ, альтернатива — ссылка, по которой её можно найти. Документация
+   * Google на hreflang в карте прямо требует отдельный <url> на каждую языковую версию, и
+   * каждый — с полным списком альтернатив, включая себя.
+   *
+   * Цена прежней формы: карта предлагала 5 998 адресов, все английские. Одиннадцать языков
+   * Google находил по hreflang со страниц, обходил без приоритета — и в отчёте «просканирована,
+   * не проиндексирована» они стоят вперемешку: ar, hi, es, de. Владелец поставил задачу, чтобы
+   * сайт ранжировался на всех двенадцати языках; для этого их надо хотя бы заявить.
+   *
+   * Набор альтернатив у всех версий одного пути ОДИН И ТОТ ЖЕ объект — взаимность ссылок, без
+   * которой Google отбрасывает hreflang целиком, обеспечена построением, а не аккуратностью.
+   * Страницы на каждом языке сами себе канонические (замер 24.09 на пяти типах × пяти языках),
+   * поэтому карта им не противоречит.
+   */
+  return langs.map(loc => ({
+    url: `${BASE}/${loc}${path}`, changeFrequency, priority, alternates: { languages },
+    ...(lastModified ? { lastModified } : {}),
+  }));
 }
 
 /**
@@ -131,30 +153,30 @@ export default async function sitemap({ id }: { id: number | string }): Promise<
 
   // Hubs / index / country / city / airline pages live only in the first child.
   if (sid === 0) {
-    entries.push(entry('', 'daily', 0.8));               // home
-    entries.push(entry('/airports', 'weekly', 0.7));     // countries index
+    entries.push(...entry('', 'daily', 0.8));               // home
+    entries.push(...entry('/airports', 'weekly', 0.7));     // countries index
     // Legal / info pages — low priority but crawlable (AdSense reviewers & Googlebot
     // must be able to reach the Privacy Policy et al.).
-    for (const p of ['/privacy', '/terms', '/about', '/contact']) entries.push(entry(p, 'yearly', 0.3, LEGAL_LOCALES));
-    for (const L of LETTERS) entries.push(entry(`/az/${L}`, 'weekly', 0.4));
+    for (const p of ['/privacy', '/terms', '/about', '/contact']) entries.push(...entry(p, 'yearly', 0.3, LEGAL_LOCALES));
+    for (const L of LETTERS) entries.push(...entry(`/az/${L}`, 'weekly', 0.4));
     // Only countries with at least one served airport. A sitemap entry for a page that
     // renders noindex is a contradiction the crawler has to resolve, and it is the same
     // predicate the page itself uses (airports/[country]/page.tsx) — one source, not two.
     for (const c of getCountries()) {
       if (!splitByService(getAirportsByCountry(c.slug)).served.length) continue;
-      entries.push(entry(`/airports/${c.slug}`, 'weekly', 0.6));
+      entries.push(...entry(`/airports/${c.slug}`, 'weekly', 0.6));
     }
     // Same predicate as the page's own robots.index — a city where nothing has a board is
     // noindex, so declaring it here would ask Google to crawl what we just told it to skip.
     for (const c of getCities()) {
       if (c.count <= 1) continue;
       if (!getAirportsByCity(c.slug).some(a => !hasNoService(a.iata))) continue;
-      entries.push(entry(`/city/${c.slug}`, 'weekly', 0.6));
+      entries.push(...entry(`/city/${c.slug}`, 'weekly', 0.6));
     }
     // Event guides (World Cup final etc.) — small, high-intent, freshness matters.
-    entries.push(entry('/events', 'weekly', 0.6));   // permanent hub
-    entries.push(entry('/widgets', 'monthly', 0.5)); // widget generator (the link programme)
-    for (const s of getEventSlugs()) entries.push(entry(`/event/${s}`, 'daily', 0.8));
+    entries.push(...entry('/events', 'weekly', 0.6));   // permanent hub
+    entries.push(...entry('/widgets', 'monthly', 0.5)); // widget generator (the link programme)
+    for (const s of getEventSlugs()) entries.push(...entry(`/event/${s}`, 'daily', 0.8));
     // Airline pages are noindex (thin across ~976 codes) — intentionally not listed.
 
     // Top routes out of mega airports, harvested from the live boards and cross-confirmed
@@ -188,7 +210,7 @@ export default async function sitemap({ id }: { id: number | string }): Promise<
       if (!from || !to) return null;
       try { return (await getRoute(from, to, 'en')).length > 0 ? pair : null; } catch { return null; }
     }));
-    for (const pair of resolvable) if (pair) entries.push(entry(`/route/${pair}`, 'daily', 0.7));
+    for (const pair of resolvable) if (pair) entries.push(...entry(`/route/${pair}`, 'daily', 0.7));
   }
 
   for (const iata of slice) {
@@ -233,7 +255,7 @@ export default async function sitemap({ id }: { id: number | string }): Promise<
     if (hasNoService(iata)) continue;
     const hub = HUBS.has(iata);
     const cf: Freq = hub ? 'hourly' : 'daily';
-    entries.push(entry(`/airport/${iata}`, cf, hub ? 1.0 : 0.6, locales, boardStamp(iata, 'departures')));
+    entries.push(...entry(`/airport/${iata}`, cf, hub ? 1.0 : 0.6, locales, boardStamp(iata, 'departures')));
     // Подстраница прилётов заявляется от яруса ARRIVALS_MIN_DAILY и ниже — не только у хабов
     // (см. разбор у самой константы). Хвост ниже порога остаётся достижимым по ссылкам из
     // подвала и с табло и индексируемым, когда рейсы ЕСТЬ (гейт robots на самой подстранице),
@@ -255,7 +277,7 @@ export default async function sitemap({ id }: { id: number | string }): Promise<
     if ((serviceLevel(iata) ?? 0) >= ARRIVALS_MIN_DAILY) {
       try {
         if ((await getBoard(iata, 'arrivals', 'en')).length > 0) {
-          entries.push(entry(`/airport/${iata}/arrivals`, cf, 0.9, locales, boardStamp(iata, 'arrivals')));
+          entries.push(...entry(`/airport/${iata}/arrivals`, cf, 0.9, locales, boardStamp(iata, 'arrivals')));
         }
       } catch { /* empty or unreadable board — simply not advertised */ }
     }
