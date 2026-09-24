@@ -4,6 +4,20 @@ on:
   push:
     branches: [main]
 
+# Деплои идут СТРОГО ПО ОДНОМУ. Каждый прогон на боксе делает `git reset --hard`,
+# `rm -rf node_modules`, `npm install` и полную сборку в общий каталог: два параллельных
+# прогона сносят друг другу node_modules посреди установки и пишут одну и ту же сборку.
+# До 24.09.2026 это держалось на везении — пуши редко шли чаще, чем длилась сборка. Когда
+# коммиты посыпались пачкой, pm2 за один выкат успевал упасть по кругу 14 раз на
+# `next: not found`, потому что node_modules в этот момент не существовало.
+#
+# cancel-in-progress: false — прерывать начатый деплой нельзя: он оставил бы бокс ровно в
+# том полусобранном состоянии, от которого защищает scripts/swap-build.mjs. Следующий
+# прогон ждёт; из нескольких ожидающих GitHub оставляет последний, а он и содержит всё.
+concurrency:
+  group: deploy-production
+  cancel-in-progress: false
+
 jobs:
   deploy:
     runs-on: ubuntu-latest
@@ -14,6 +28,14 @@ jobs:
           host: ${{ secrets.SSH_HOST }}
           username: deploy
           key: ${{ secrets.SSH_PRIVATE_KEY }}
+          # ssh-action kills the script at 10m by default, and on 2026-08-04 that landed in the
+          # worst possible place: a 320-file commit invalidated the Next build cache, the full
+          # 2389-page rebuild ran past the limit, and the run was killed DURING `next build`.
+          # Nothing failed and nothing rolled back — the code was already checked out, pm2 was
+          # never restarted, and .next was left half-written under a live server. A deploy that
+          # can be cut mid-build is worse than a slow one, so the ceiling is now well clear of a
+          # cold rebuild (cached deploys still finish in ~2 minutes and are unaffected).
+          command_timeout: 30m
           script: |
             set -e
             cd /var/www/airportsboard
