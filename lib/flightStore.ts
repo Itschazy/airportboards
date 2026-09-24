@@ -109,7 +109,16 @@ let mem: Store | null = null;
 function db(): Store {
   if (!mem) {
     try { mem = JSON.parse(fs.readFileSync(STORE_PATH, 'utf8')) as Store; }
-    catch { mem = { month: monthKey(), count: 0, entries: {} }; }
+    catch (e) {
+      // Отсутствующий файл — законный старт с нуля (свежая машина, локальная сборка). А вот
+      // файл, который ЕСТЬ, но не разбирается, — авария, и молчать о ней нельзя: именно
+      // молчание сделало невидимым 24.09.2026, когда сборка прочитала хранилище посреди
+      // записи и запекла карту сайта без единого прилёта и маршрута (см. persist ниже).
+      if ((e as NodeJS.ErrnoException)?.code !== 'ENOENT') {
+        console.error(`[flightStore] ${STORE_PATH} не разбирается — начинаю с пустого хранилища:`, (e as Error)?.message);
+      }
+      mem = { month: monthKey(), count: 0, entries: {} };
+    }
   }
   if (mem.month !== monthKey()) {
     // A new calendar month resets the SPEND, never the data. Rebuilding the whole object
@@ -129,7 +138,32 @@ function persist() {
   if (timer) return;
   timer = setTimeout(() => {
     timer = null;
-    try { fs.writeFileSync(STORE_PATH, JSON.stringify(mem)); } catch { /* best-effort */ }
+    /**
+     * 🔴 ЗАПИСЬ АТОМАРНАЯ: временный файл рядом и rename поверх.
+     *
+     * Было `fs.writeFileSync(STORE_PATH, …)` — файл сначала обнуляется, потом заполняется, и
+     * при 69 МБ это окно, в которое кто угодно прочтёт половину JSON. 24.09.2026 туда попала
+     * сборка: выкат шёл 21:03–21:05, а тик прогрева в те же 21:00–21:04 переписывал хранилище.
+     * Сборка получила обрезанный файл, db() молча начала с пустого, и пререндер карты сайта
+     * запёкся без единой подстраницы прилётов и без единого маршрута — 1 549 путей на
+     * двенадцати языках, при revalidate = 86400, то есть на сутки. Предыдущий выкат в 20:38
+     * пришёлся между тиками и дал полную карту: дефект проявлялся по совпадению часов.
+     *
+     * Воспроизведено: 10 МБ, читатель параллельно с писателем — при прямой записи 4 из 7
+     * чтений разобрать нельзя, через rename — 0 из 5. rename в пределах одного каталога
+     * атомарен: читатель видит либо старый файл целиком, либо новый целиком.
+     *
+     * Тот же разрыв грозил и самому процессу: перезапуск посреди записи (выкат, watchdog)
+     * оставлял на диске половину файла, новый процесс начинал с пустого и первой же записью
+     * стирал остальное.
+     */
+    const tmp = `${STORE_PATH}.tmp-${process.pid}`;
+    try {
+      fs.writeFileSync(tmp, JSON.stringify(mem));
+      fs.renameSync(tmp, STORE_PATH);
+    } catch {
+      try { fs.unlinkSync(tmp); } catch { /* временного файла может и не быть */ }
+    }
   }, 2000);
   if (typeof timer.unref === 'function') timer.unref();
 }
