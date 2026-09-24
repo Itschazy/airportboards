@@ -30,6 +30,15 @@ const LEGAL_PATHS = new Set(['/privacy', '/terms', '/about', '/contact']);
 const LEGAL_LOCALES = ['en', 'ru'];
 const MAX_LOCS = 50_000;
 const MAX_BYTES = 50 * 1024 * 1024;
+/**
+ * Запас до лимита. После того как каждый язык стал отдельной записью, первый файл карты
+ * вырос в двенадцать раз: 24.09.2026 — 22 520 записей и 30.1 МБ, 60% лимита, потому что
+ * кроме аэропортов в нём вся статика — маршруты, города, страны, события. Корпус растёт
+ * вместе с обслуживанием, и узнать о переполнении по отказу Google читать файл — поздно.
+ * На 80% сторож говорит «пора разбивать мельче» (AIRPORTS_PER_SITEMAP в lib/airports.ts
+ * или статику — в отдельный файл), пока это ещё не авария.
+ */
+const HEADROOM = 0.8;
 /** Сжатый самый крупный файл должен приходить быстро; сырой шёл 47–51 с. */
 const MAX_SECONDS = 10;
 
@@ -54,8 +63,11 @@ for (const url of children) {
   const bytes = Buffer.byteLength(xml);
   if (bytes > biggest.bytes) biggest = { url: path, bytes };
   const blocks = xml.split('<url>').slice(1);
-  say(blocks.length <= MAX_LOCS && bytes <= MAX_BYTES,
-    `${path}: ${blocks.length.toLocaleString('ru-RU')} <loc>, ${(bytes / 1048576).toFixed(1)} МБ — в лимитах протокола`);
+  const share = Math.max(blocks.length / MAX_LOCS, bytes / MAX_BYTES);
+  say(share <= HEADROOM,
+    share > 1 ? `${path}: ${blocks.length.toLocaleString('ru-RU')} <loc>, ${(bytes / 1048576).toFixed(1)} МБ — ЗА ЛИМИТОМ ПРОТОКОЛА, Google файл не примет`
+      : share > HEADROOM ? `${path}: ${Math.round(share * 100)}% лимита — пора разбивать карту мельче (AIRPORTS_PER_SITEMAP в lib/airports.ts)`
+        : `${path}: ${blocks.length.toLocaleString('ru-RU')} <loc>, ${(bytes / 1048576).toFixed(1)} МБ — ${Math.round(share * 100)}% лимита`);
   for (const b of blocks) {
     const loc = (/<loc>([^<]+)<\/loc>/.exec(b) || [])[1];
     if (!loc) continue;

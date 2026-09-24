@@ -53,7 +53,8 @@
     "check:adsense": "node scripts/check-adsense.mjs",
     "check:planuse": "node scripts/check-plan-utilisation.mjs",
     "check:keyexpiry": "node scripts/check-key-expiry.mjs",
-    "check:sitemaplangs": "node scripts/check-sitemap-hreflang.mjs"
+    "check:sitemaplangs": "node scripts/check-sitemap-hreflang.mjs",
+    "check:generatedprose": "node scripts/check-generated-prose.mjs"
   },
   "dependencies": {
     "next": "^15.3.3",
