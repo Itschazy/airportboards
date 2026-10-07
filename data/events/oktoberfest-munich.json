@@ -9,7 +9,7 @@
     "country": "DE",
     "type": "festival",
     "officialUrl": "https://www.muenchen.de/en/events/oktoberfest",
-    "status": "scheduled",
+    "status": "past",
     "sources": [
       "https://www.muenchen.de/en/events/oktoberfest",
       "https://www.oktoberfest.de/en",

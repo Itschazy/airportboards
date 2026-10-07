@@ -1,7 +1,7 @@
 import type { MetadataRoute } from 'next';
 import { getAllIataCodes, AIRPORTS_PER_SITEMAP, getSitemapCount, getCountries, getStaticIataCodes, getCities, getAirportsByCountry, getAirportsByCity } from '@/lib/airports';
-import { getEventSlugs } from '@/lib/event-content';
-import { isUnfillable, serviceLevel, splitByService, hasNoService } from '@/lib/warm';
+import { getEventSlugs, getEvent, effectiveStatus } from '@/lib/event-content';
+import { isUnfillable, serviceLevel, hasNoService, advertisedInSitemap } from '@/lib/warm';
 import { getTopRoutes } from '@/lib/top-routes';
 import { getRoute, getBoard, getBoardStampWithRows } from '@/lib/flights';
 import { locales } from '@/lib/i18n';
@@ -159,24 +159,57 @@ export default async function sitemap({ id }: { id: number | string }): Promise<
     // must be able to reach the Privacy Policy et al.).
     for (const p of ['/privacy', '/terms', '/about', '/contact']) entries.push(...entry(p, 'yearly', 0.3, LEGAL_LOCALES));
     for (const L of LETTERS) entries.push(...entry(`/az/${L}`, 'weekly', 0.4));
-    // Only countries with at least one served airport. A sitemap entry for a page that
-    // renders noindex is a contradiction the crawler has to resolve, and it is the same
-    // predicate the page itself uses (airports/[country]/page.tsx) — one source, not two.
+    // Только страны, где заявлен хотя бы один аэропорт.
+    //
+    // Раньше условием было «есть хоть один обслуживаемый» (splitByService), и оно совпадало с
+    // гейтом robots самой страницы. С сужением корпуса (advertisedInSitemap) совпадение
+    // ломается в одну сторону: страница страны с одними лишь мелкими аэропортами по-прежнему
+    // индексируема — и правильно, — но карта её больше не предлагает. Это не противоречие:
+    // карта отвечает за обнаружение, а узел, из которого все пути ведут в хвост, который мы
+    // сознательно перестали рекламировать, — это и есть дорога в хвост.
     for (const c of getCountries()) {
-      if (!splitByService(getAirportsByCountry(c.slug)).served.length) continue;
+      if (!getAirportsByCountry(c.slug).some(a => advertisedInSitemap(a.iata))) continue;
       entries.push(...entry(`/airports/${c.slug}`, 'weekly', 0.6));
     }
-    // Same predicate as the page's own robots.index — a city where nothing has a board is
-    // noindex, so declaring it here would ask Google to crawl what we just told it to skip.
+    // То же для городов, и по той же причине. Условие c.count > 1 остаётся — оно из гейта
+    // robots самой страницы (city/[slug]/page.tsx), а не из нашего сужения.
     for (const c of getCities()) {
       if (c.count <= 1) continue;
-      if (!getAirportsByCity(c.slug).some(a => !hasNoService(a.iata))) continue;
+      if (!getAirportsByCity(c.slug).some(a => advertisedInSitemap(a.iata))) continue;
       entries.push(...entry(`/city/${c.slug}`, 'weekly', 0.6));
     }
     // Event guides (World Cup final etc.) — small, high-intent, freshness matters.
     entries.push(...entry('/events', 'weekly', 0.6));   // permanent hub
     entries.push(...entry('/widgets', 'monthly', 0.5)); // widget generator (the link programme)
-    for (const s of getEventSlugs()) entries.push(...entry(`/event/${s}`, 'daily', 0.8));
+    /**
+     * Только события, которые ещё не прошли.
+     *
+     * Здесь было `for (const s of getEventSlugs())` без условия, и это давало сразу два
+     * расхождения. Первое — с гейтом robots самой страницы: отменённое событие объявляет
+     * noindex (event/[slug]/page.tsx, indexable = hasLocale && status !== 'cancelled'), а
+     * карта его заявляла, то есть ровно та контрадикция, из-за которой в этом файле вычищали
+     * всё остальное. Второе — по смыслу: на 07.10 восемь из тринадцати событий закончились
+     * (Монца 06.09, Сигет 18.08, Tomorrowland 28.07…), и карта предлагала их обходить
+     * ЕЖЕДНЕВНО с приоритетом 0.8 — выше, чем борт любого аэропорта кроме хабов. Прошедшее
+     * событие не меняется ни разу, и бюджет обхода, ради которого сужается вся карта, тратить
+     * на него нечем оправдать.
+     *
+     * Страницы остаются: они живые, индексируемые и перечислены на /events (в нашем же
+     * check-events есть утверждение, что хаб продолжает их перечислять, пусть и приглушённо).
+     * Снимается только ежедневное приглашение обойти.
+     *
+     * Предикат — effectiveStatus из lib/event-content, тот же, которым страница ставит robots
+     * и который сам выводит «past» из дат, когда поле не проставлено. Своей копии «уже
+     * прошло?» здесь нет намеренно: двухдневный запас на возвращение домой живёт внутри
+     * eventEndsAt, и повторять его числом значило бы завести вторую правду о той же границе.
+     */
+    for (const s of getEventSlugs()) {
+      const ev = getEvent(s);
+      if (!ev) continue;
+      const st = effectiveStatus(ev.meta);
+      if (st === 'past' || st === 'cancelled') continue;
+      entries.push(...entry(`/event/${s}`, 'daily', 0.8));
+    }
     // Airline pages are noindex (thin across ~976 codes) — intentionally not listed.
 
     // Top routes out of mega airports, harvested from the live boards and cross-confirmed
@@ -253,6 +286,19 @@ export default async function sitemap({ id }: { id: number | string }): Promise<
      * дней) при 43.6% отказов, вдвое хуже среднего по сайту.
      */
     if (hasNoService(iata)) continue;
+    /**
+     * И, с 07.10.2026, только то, чей борт обновляется не реже раза в два часа.
+     *
+     * Предикат целиком в lib/warm.ts (advertisedInSitemap) — вместе с замером, из которого он
+     * взялся, и с разбором, почему граница проходит по сроку обновления, а не по числу рейсов.
+     * Он включает в себя оба условия выше, но они оставлены отдельными строками намеренно:
+     * каждое держит собственный разбор, и снятие сужения не должно случайно снять их тоже.
+     *
+     * Коротко: Google за 90 дней дал индексирующему боту порядка тридцати обращений в сутки на
+     * 72 020 заявленных адресов. Заявлять больше, чем он способен обойти, — значит отдать
+     * бюджет хвосту, борт которого он всё равно застанет вчерашним.
+     */
+    if (!advertisedInSitemap(iata)) continue;
     const hub = HUBS.has(iata);
     const cf: Freq = hub ? 'hourly' : 'daily';
     entries.push(...entry(`/airport/${iata}`, cf, hub ? 1.0 : 0.6, locales, boardStamp(iata, 'departures')));
