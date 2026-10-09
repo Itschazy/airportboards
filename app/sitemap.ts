@@ -1,5 +1,5 @@
 import type { MetadataRoute } from 'next';
-import { getAllIataCodes, AIRPORTS_PER_SITEMAP, getSitemapCount, getCountries, getStaticIataCodes, getCities, getAirportsByCountry, getAirportsByCity } from '@/lib/airports';
+import { getAllIataCodes, getSitemapCount, getCountries, getStaticIataCodes, getCities, getAirportsByCountry, getAirportsByCity } from '@/lib/airports';
 import { getEventSlugs, getEvent, effectiveStatus } from '@/lib/event-content';
 import { isUnfillable, serviceLevel, hasNoService, advertisedInSitemap } from '@/lib/warm';
 import { getTopRoutes } from '@/lib/top-routes';
@@ -144,15 +144,39 @@ export async function generateSitemaps() {
 }
 
 export default async function sitemap({ id }: { id: number | string }): Promise<MetadataRoute.Sitemap> {
-  // Next passes `id` as a STRING — coerce, or `id === 0` fails (statics dropped) and
-  // `(id + 1)` string-concats ("1"+1 = "11" → slice(1000,11000), overlapping children).
+  // Next passes `id` as a STRING — coerce, or `id === 0` fails and `(id + 1)` string-concats.
   const sid = Number(id);
-  const iataCodes = getAllIataCodes();
-  const slice = iataCodes.slice(sid * AIRPORTS_PER_SITEMAP, (sid + 1) * AIRPORTS_PER_SITEMAP);
+  const all = await allEntries();
+  // Even split across a fixed number of files (see SITEMAP_FILES in lib/airports.ts). Entries
+  // are built in a deterministic order, so each file's slice is stable between regenerations
+  // except where the underlying set itself changed.
+  const per = Math.ceil(all.length / getSitemapCount());
+  return all.slice(sid * per, (sid + 1) * per);
+}
+
+/**
+ * The whole sitemap, built once per process per hour and shared by all children.
+ *
+ * Each child is regenerated on its own ISR clock; building the full list in every one of them
+ * would repeat the route and arrivals probes twenty times. The probes read the in-process
+ * store only (never airlabs), so an hour-old list is at most an hour stale — far inside the
+ * daily revalidate.
+ */
+let built: { at: number; p: Promise<MetadataRoute.Sitemap> } | null = null;
+function allEntries(): Promise<MetadataRoute.Sitemap> {
+  if (!built || Date.now() - built.at > 3600_000) {
+    const p = buildAll().catch(e => { built = null; throw e; });
+    built = { at: Date.now(), p };
+  }
+  return built.p;
+}
+
+async function buildAll(): Promise<MetadataRoute.Sitemap> {
+  const slice = getAllIataCodes();
   const entries: MetadataRoute.Sitemap = [];
 
-  // Hubs / index / country / city / airline pages live only in the first child.
-  if (sid === 0) {
+  // Hubs / index / country / city / route pages first.
+  {
     entries.push(...entry('', 'daily', 0.8));               // home
     entries.push(...entry('/airports', 'weekly', 0.7));     // countries index
     // Legal / info pages — low priority but crawlable (AdSense reviewers & Googlebot

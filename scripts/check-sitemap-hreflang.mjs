@@ -35,7 +35,7 @@ const MAX_BYTES = 50 * 1024 * 1024;
  * вырос в двенадцать раз: 24.09.2026 — 22 520 записей и 30.1 МБ, 60% лимита, потому что
  * кроме аэропортов в нём вся статика — маршруты, города, страны, события. Корпус растёт
  * вместе с обслуживанием, и узнать о переполнении по отказу Google читать файл — поздно.
- * На 80% сторож говорит «пора разбивать мельче» (AIRPORTS_PER_SITEMAP в lib/airports.ts
+ * На 80% сторож говорит «пора разбивать мельче» (SITEMAP_FILES в lib/airports.ts
  * или статику — в отдельный файл), пока это ещё не авария.
  */
 const HEADROOM = 0.8;
@@ -66,7 +66,7 @@ for (const url of children) {
   const share = Math.max(blocks.length / MAX_LOCS, bytes / MAX_BYTES);
   say(share <= HEADROOM,
     share > 1 ? `${path}: ${blocks.length.toLocaleString('ru-RU')} <loc>, ${(bytes / 1048576).toFixed(1)} МБ — ЗА ЛИМИТОМ ПРОТОКОЛА, Google файл не примет`
-      : share > HEADROOM ? `${path}: ${Math.round(share * 100)}% лимита — пора разбивать карту мельче (AIRPORTS_PER_SITEMAP в lib/airports.ts)`
+      : share > HEADROOM ? `${path}: ${Math.round(share * 100)}% лимита — пора разбивать карту мельче (SITEMAP_FILES в lib/airports.ts)`
         : `${path}: ${blocks.length.toLocaleString('ru-RU')} <loc>, ${(bytes / 1048576).toFixed(1)} МБ — ${Math.round(share * 100)}% лимита`);
   for (const b of blocks) {
     const loc = (/<loc>([^<]+)<\/loc>/.exec(b) || [])[1];

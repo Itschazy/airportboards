@@ -49,13 +49,24 @@ export function getAllIataCodes(): string[] {
   return airports.map(a => a.iata);
 }
 
-// Airports per child sitemap. Each airport emits 3 page types × N locales
-// URLs; 1000 × 3 × 12 = 36,000, safely under Google's 50,000-URL cap.
+// Child sitemaps: a FIXED number of files, entries spread evenly across them.
+//
+// Until 09.10.2026 the split was "1,000 airports per child", and child 0 also carried every
+// static, country, city and route page. With twelve language versions per URL, each carrying
+// all twelve hreflang alternates, that made /sitemap/0.xml 11,384 URLs and 15.9 MB
+// uncompressed — 58 s to download from the VDS. Search Console showed every child as
+// "Couldn't fetch / Sitemap could not be read" with 0 discovered pages, and URL Inspection
+// on indexed pages reported "No referring sitemaps detected": Google had never received a
+// single URL from the sitemap since June. 20 files at ~1,000 URLs is ~1.4 MB each.
+//
+// Fixed rather than computed from the URL total, because the total moves daily with warm
+// coverage (arrivals, routes) while generateSitemaps() and the index are fixed at build:
+// a count derived from the data would 404 children the index still advertises.
 // Shared by app/sitemap.ts (children) and app/sitemap.xml (index).
-export const AIRPORTS_PER_SITEMAP = 1000;
+export const SITEMAP_FILES = 20;
 
 export function getSitemapCount(): number {
-  return Math.ceil(getAllIataCodes().length / AIRPORTS_PER_SITEMAP);
+  return SITEMAP_FILES;
 }
 
 // Airports pre-rendered at build time (instant load + crawled first).
