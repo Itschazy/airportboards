@@ -83,7 +83,7 @@ const CASES = [
   { path: '/ar/airport/JFK', label: 'locale ar', check: r => [r.status === 200, `status=${r.status}`] },
   { path: '/robots.txt', label: 'robots.txt + sitemap', check: r => [r.status === 200 && /Sitemap:\s*https?:\/\//i.test(r.body) && !/Disallow:\s*\/\s*$/im.test(r.body), `status=${r.status}`] },
   { path: '/sitemap.xml', label: 'sitemap index', check: r => [r.status === 200 && /<sitemapindex/i.test(r.body), `status=${r.status}`] },
-  { path: '/sitemap/0.xml', label: 'sitemap child 0', check: r => [r.status === 200 && /<urlset/i.test(r.body) && /<loc>/i.test(r.body), `status=${r.status}`] },
+  { path: '/sitemap-0.xml', label: 'sitemap child 0', check: r => [r.status === 200 && /<urlset/i.test(r.body) && /<loc>/i.test(r.body), `status=${r.status}`] },
 ];
 
 console.log(`\nIndexability audit -> ${BASE}${RESOLVE_IP ? ` (resolve ${HOST} -> ${RESOLVE_IP})` : ''}\n`);

@@ -5,12 +5,16 @@ const BASE = 'https://airportsboard.live';
 // Next.js `generateSitemaps` serves children at /sitemap/[id].xml but does
 // NOT emit a sitemap index. This route is that index — the single URL we
 // submit to Google, which then discovers every child sitemap.
+//
+// Children are listed at their root alias /sitemap-N.xml (a rewrite in next.config.ts), not
+// at /sitemap/N.xml: Google stopped scheduling the old addresses after months of failed
+// reads, see the comment on rewrites() there.
 export const dynamic = 'force-static';
 
 export function GET() {
   const count = getSitemapCount();
   const children = Array.from({ length: count }, (_, id) =>
-    `  <sitemap><loc>${BASE}/sitemap/${id}.xml</loc></sitemap>`
+    `  <sitemap><loc>${BASE}/sitemap-${id}.xml</loc></sitemap>`
   ).join('\n');
 
   const xml = `<?xml version="1.0" encoding="UTF-8"?>

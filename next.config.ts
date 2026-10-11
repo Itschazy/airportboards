@@ -41,6 +41,27 @@ const nextConfig: NextConfig = {
       },
     ];
   },
+  // Дочерние карты наружу отдаются из корня: /sitemap-N.xml, а не /sitemap/N.xml, где их
+  // кладёт generateSitemaps.
+  //
+  // Search Console 12.10.2026: индекс /sitemap.xml читается («Успешно»), а все двадцать
+  // /sitemap/N.xml через двое с половиной суток после ручной отправки — «Не получено» без даты
+  // обработки, и «Проверка URL» по каждому: «Последнее сканирование: Отсутствует». При этом
+  // живой тест того же адреса проходит («URL доступен Google»), сервер отдаёт 200 за секунду.
+  // Google просто не ставит эти адреса в обход — с июля они раз за разом не читались (файлы
+  // по 16 МБ, см. f369aa4d), и новые маленькие файлы по старым адресам он не берёт.
+  //
+  // Новые адреса для него без истории неудач. Заодно карта перестаёт нарушать протокол:
+  // по sitemaps.org файл из каталога /sitemap/ вправе перечислять только адреса под /sitemap/.
+  //
+  // Старые /sitemap/N.xml продолжают работать — их знают Яндекс и прошлые отправки.
+  // Параметр с регулярным выражением (`:id(\\d+)`) path-to-regexp Next принимает и без слеша
+  // перед ним; отбрасывается только повторяемый `:path*` (см. заголовки ниже).
+  async rewrites() {
+    return [
+      { source: '/sitemap-:id(\\d+).xml', destination: '/sitemap/:id.xml' },
+    ];
+  },
   // HSTS — pin HTTPS for a year (http→https already 301s at nginx).
   async headers() {
     return [
@@ -189,6 +210,14 @@ const nextConfig: NextConfig = {
       },
       {
         source: '/sitemap/:path*',
+        headers: [
+          { key: 'Cache-Control', value: 'public, max-age=3600, s-maxage=86400, stale-while-revalidate=604800' },
+        ],
+      },
+      {
+        // Публичные адреса дочерних карт (см. rewrites ниже). Заголовки сверяются с адресом
+        // ДО переписывания, поэтому правило для /sitemap/:path* сюда не дотягивается.
+        source: '/sitemap-:id(\\d+).xml',
         headers: [
           { key: 'Cache-Control', value: 'public, max-age=3600, s-maxage=86400, stale-while-revalidate=604800' },
         ],
