@@ -1,4 +1,5 @@
 import Script from 'next/script';
+import { AUTOMATION_TEST } from '@/lib/metrica-snippet';
 import { adsenseClient } from '@/lib/adsense';
 
 // Google Analytics 4 + Google Consent Mode v2.
@@ -33,6 +34,10 @@ export function Analytics() {
   if (!GA_ID && !adsenseClient) return null;
 
   const bootstrap = [
+    // The same automation test as the Metrika counter (lib/metrica-snippet.ts), applied through
+    // GA's own opt-out switch: with window['ga-disable-<ID>'] set, gtag sends nothing at all —
+    // neither this page_view nor the route-change ones from GaRouteTracker.
+    GA_ID ? `if(` + AUTOMATION_TEST + `){window['ga-disable-` + GA_ID + `']=true}` : '',
     'window.dataLayer=window.dataLayer||[];',
     'function gtag(){dataLayer.push(arguments)}',
     'window.gtag=gtag;',

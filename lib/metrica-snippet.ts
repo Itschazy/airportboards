@@ -72,6 +72,31 @@ const HOST_GUARD =
   `try{var hn=(location.hostname||'');`
   + `if(hn!=='airportsboard.live'&&hn.slice(-19)!=='.airportsboard.live'){return}}catch(e){}`;
 
+/**
+ * Headless-browser farm.
+ *
+ * Since 03.09.2026 a farm in Singapore has been loading pages in a real browser engine, so it
+ * runs our JS and lands in both counters. Metrika, 14 days to 16.10: 10 090 visits from
+ * Singapore — 38% of all traffic — at 98% bounce and 22 s, of which Metrika itself flags 97%
+ * as robots. The sample says HeadlessChrome at 1366×1366 and "Google Chrome" at 1280×1200,
+ * PC only, every visit landing on the homepage. Neither size is a real monitor.
+ *
+ * Most of it never gets this far now — middleware.ts refuses `HeadlessChrome` before a page
+ * is rendered. This catches the part that spoofs its user agent: `navigator.webdriver` is set
+ * by every automation driver (Puppeteer, Playwright, Selenium), and the two square screens
+ * are the farm's own fingerprint. Exported so the GA4 bootstrap applies the very same test.
+ *
+ * Over-blocking a real visitor here costs one uncounted visit; under-blocking cost a third of
+ * every report for six weeks.
+ */
+export const AUTOMATION_TEST =
+  `(function(){try{var n=navigator;if(n.webdriver){return true}`
+  + `if((n.userAgent||'').indexOf('HeadlessChrome')>=0){return true}`
+  + `var w=screen.width,h=screen.height;`
+  + `if((w===1366&&h===1366)||(w===1280&&h===1200)){return true}}catch(e){}return false})()`;
+
+const AUTOMATION_GUARD = `if(` + AUTOMATION_TEST + `){return}`;
+
 export const REGION_GUARD =
   `try{var tz=(Intl.DateTimeFormat().resolvedOptions().timeZone||'');`
   + `var p=tz.split('/'),area=p[0],zone=' '+(p[1]||'')+' ';`
@@ -90,7 +115,7 @@ export const REGION_GUARD =
 export function metricaSnippet(ymId: number): string {
   return (
     // Wrapped in a function so the guard's `return` aborts before anything is created.
-    `(function(){` + HOST_GUARD + REGION_GUARD
+    `(function(){` + HOST_GUARD + AUTOMATION_GUARD + REGION_GUARD
     + `(function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};`
     + `m[i].l=1*new Date();for(var j=0;j<e.scripts.length;j++){if(e.scripts[j].src===r){return;}}`
     + `k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})`

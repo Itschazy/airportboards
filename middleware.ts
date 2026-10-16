@@ -8,6 +8,17 @@ const LOCALES = locales as readonly string[];
 
 export default function middleware(req: NextRequest): NextResponse {
   const { pathname } = req.nextUrl;
+
+  // Headless-browser farm (Singapore, since 03.09.2026 — 38% of Metrika visits in the 14 days
+  // to 16.10, 98% bounce). Its default user agent names itself HeadlessChrome, so it is
+  // refused before a page is rendered: no counter loads, no CPU is spent on the render, and
+  // the VDS whose response time sets Googlebot's crawl rate stops serving it. No search
+  // engine renders with this string — Googlebot, YandexBot and Lighthouse all name
+  // themselves — and lib/live-budget.ts already refused it fresh data. The share that spoofs
+  // a normal Chrome UA is caught client-side by AUTOMATION_TEST in lib/metrica-snippet.ts.
+  if ((req.headers.get('user-agent') ?? '').includes('HeadlessChrome')) {
+    return new NextResponse('Forbidden', { status: 403, headers: { 'Cache-Control': 'no-store' } });
+  }
   const seg1 = pathname.split('/')[1] ?? '';
   const hasLocale = LOCALES.includes(seg1.toLowerCase());
 
