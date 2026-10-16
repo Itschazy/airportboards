@@ -11,6 +11,19 @@
 
 import { lookup } from 'node:dns';
 
+
+// Правила группы `User-Agent: *` из robots.txt: строки после её заголовка до следующего заголовка.
+function starGroupBlocksAll(body) {
+  let inStar = false;
+  for (const raw of body.split(/\r?\n/)) {
+    const line = raw.replace(/#.*/, '').trim();
+    const ua = line.match(/^user-agent:\s*(.+)$/i);
+    if (ua) { inStar = ua[1].trim() === '*'; continue; }
+    if (inStar && /^disallow:\s*\/\s*$/i.test(line)) return true;
+  }
+  return false;
+}
+
 const BASE = (process.env.BASE || 'https://airportsboard.live').replace(/\/$/, '');
 const HOST = new URL(BASE).hostname;
 const RESOLVE_IP = process.env.RESOLVE_IP || ''; // e.g. 95.81.103.82 when DNS doesn't resolve
@@ -81,7 +94,10 @@ const CASES = [
   { path: '/en/city/annaba', label: 'city single-airport (noindex)', check: r => [r.status === 200 && isNoindex(r), `status=${r.status} robots=${r.robots} (want noindex)`] },
   { path: '/ru/airport/JFK', label: 'locale ru', check: r => [r.status === 200, `status=${r.status}`] },
   { path: '/ar/airport/JFK', label: 'locale ar', check: r => [r.status === 200, `status=${r.status}`] },
-  { path: '/robots.txt', label: 'robots.txt + sitemap', check: r => [r.status === 200 && /Sitemap:\s*https?:\/\//i.test(r.body) && !/Disallow:\s*\/\s*$/im.test(r.body), `status=${r.status}`] },
+  // «Disallow: /» запрещён только в группе `*` — той, по которой ходит индексирующий Googlebot.
+  // С 16.10.2026 в файле есть законная группа AdsBot с полным запретом (app/robots.ts), и
+  // прежняя проверка «нет такой строки нигде» стала бы ложной тревогой на каждом прогоне.
+  { path: '/robots.txt', label: 'robots.txt + sitemap', check: r => [r.status === 200 && /Sitemap:\s*https?:\/\//i.test(r.body) && !starGroupBlocksAll(r.body), `status=${r.status}`] },
   { path: '/sitemap.xml', label: 'sitemap index', check: r => [r.status === 200 && /<sitemapindex/i.test(r.body), `status=${r.status}`] },
   { path: '/sitemap-0.xml', label: 'sitemap child 0', check: r => [r.status === 200 && /<urlset/i.test(r.body) && /<loc>/i.test(r.body), `status=${r.status}`] },
 ];
