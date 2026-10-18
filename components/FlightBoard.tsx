@@ -575,10 +575,13 @@ function BottomSheet({ flight, mode, onClose, tz, locale, clockMs, updLabel, ori
           )}
         </div>
 
-        {/* Detail grid */}
+        {/* Значения начинаются сразу под подписью с одинаковым отступом.
+            space-between прижимал весь блок значения к низу: дата под временем
+            поднимала время выше выхода и терминала (снимок владельца, 18.10.2026).
+            Свободное место оставляем снизу, чтобы необязательная дата не двигала цифры. */}
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(92px, 1fr))', gap: 12, marginTop: 24 }}>
           {blocks.map((b, i) => (
-            <div key={i} style={{ background: 'rgba(255,255,255,0.04)', border: '1px solid rgba(255,255,255,0.08)', borderRadius: 14, padding: '16px', minHeight: 104, display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
+            <div key={i} style={{ background: 'rgba(255,255,255,0.04)', border: '1px solid rgba(255,255,255,0.08)', borderRadius: 14, padding: '16px', minHeight: 104, display: 'flex', flexDirection: 'column', gap: 10 }}>
               <div style={L}>{b.label}</div>
               <div>
                 <div style={{ fontSize: 24, fontWeight: 700, color: b.valueColor || C.text, lineHeight: 1.05, letterSpacing: '-0.02em', fontVariantNumeric: 'tabular-nums', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>{b.value}</div>
