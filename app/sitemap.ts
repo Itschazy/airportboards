@@ -1,3 +1,4 @@
+import { sitemapShard } from '@/lib/sitemap-shard';
 import type { MetadataRoute } from 'next';
 import { getAllIataCodes, getSitemapCount, getCountries, getStaticIataCodes, getCities, getAirportsByCountry, getAirportsByCity } from '@/lib/airports';
 import { getEventSlugs, getEvent, effectiveStatus } from '@/lib/event-content';
@@ -147,11 +148,9 @@ export default async function sitemap({ id }: { id: number | string }): Promise<
   // Next passes `id` as a STRING — coerce, or `id === 0` fails and `(id + 1)` string-concats.
   const sid = Number(id);
   const all = await allEntries();
-  // Even split across a fixed number of files (see SITEMAP_FILES in lib/airports.ts). Entries
-  // are built in a deterministic order, so each file's slice is stable between regenerations
-  // except where the underlying set itself changed.
-  const per = Math.ceil(all.length / getSitemapCount());
-  return all.slice(sid * per, (sid + 1) * per);
+  // Стабильная корзина пути, а не срез изменяемого списка: разные ISR-снимки
+  // не должны переносить URL между файлами. Причина и регрессия — в helper.
+  return sitemapShard(all, sid, getSitemapCount());
 }
 
 /**

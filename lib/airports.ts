@@ -49,7 +49,9 @@ export function getAllIataCodes(): string[] {
   return airports.map(a => a.iata);
 }
 
-// Child sitemaps: a FIXED number of files, entries spread evenly across them.
+// Child sitemaps: a FIXED number of files, paths assigned by stable hash.
+// Since 18.10.2026 all translations of a path share one file (lib/sitemap-shard.ts);
+// changing warm coverage must not move existing URLs between independent ISR snapshots.
 //
 // Until 09.10.2026 the split was "1,000 airports per child", and child 0 also carried every
 // static, country, city and route page. With twelve language versions per URL, each carrying
