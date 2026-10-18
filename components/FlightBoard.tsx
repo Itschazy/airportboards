@@ -997,7 +997,10 @@ export function FlightBoard({ airport, locale, defaultMode = 'departures', displ
     if (filter !== 'all' && !FILTER_STATUSES[filter].includes(f.status)) return false;
     if (!trimSearch) return true;
     const q = trimSearch.toLowerCase();
+    // Номер рейса набирают как «SU 112», «su-112», «SU112» — пробелы и дефисы не в счёт.
+    const qCode = q.replace(/[\s-]+/g, '');
     return f.flight.toLowerCase().includes(q)
+      || (qCode.length > 1 && f.flight.toLowerCase().replace(/[\s-]+/g, '').includes(qCode))
       || (f.destination || f.origin || '').toLowerCase().includes(q)
       || (f.airline || '').toLowerCase().includes(q);
   });
