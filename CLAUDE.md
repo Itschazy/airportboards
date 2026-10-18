@@ -151,6 +151,28 @@ FLIGHT_STORE_PATH=/tmp/f.json NEXT_DIST_DIR=.next-audit npx next start -p 3099
   переносить её через веб-редактор github.com. Она защищает от повторения 04–05.08, когда
   сборку срезало на десятой минуте посреди записи в `.next`.
 
+## Сервер (с 18.10.2026)
+
+FirstVDS `eschudov1.fvds.ru`, 95.81.103.82, Амстердам. Пароль root утерян, «Перейти в панель»
+отдаёт Fatal error, ISPmanager на :1500 закрыт. Вход — **`ssh deploy@95.81.103.82`** по ключу
+этого Mac (кладётся при каждой сборке `scripts/ensure-operator-key.mjs`). sudo у deploy нет:
+nginx и root-крон отсюда не править, логи nginx не читаются (группа adm).
+
+- **pm2 — cluster, (ядра − 1) процессов**, `ecosystem.config.cjs`. Секреты (AIRLABS_API_KEY,
+  AIRLABS_MONTHLY_CAP, CRON_TOKEN) — `~/airportsboard.env` на боксе. После смены числа ядер:
+  `cd /var/www/airportsboard && pm2 delete airportsboard && pm2 start ecosystem.config.cjs && pm2 save`
+  — `pm2 restart` число процессов не пересчитывает. `pm2-deploy.service` поднимает всё при загрузке.
+- **Данные — `~/airportsboard-data`** (store/, archive/, top-routes.json), НЕ `/tmp`: Ubuntu
+  чистит `/tmp` при загрузке. Хранилище делят процессы (`lib/flightStore.ts`): борт — файл,
+  расход — журналы дозаписи, покупку склеивает замок.
+- **`/api/health`** — ядра, loadavg, память, задержка цикла событий. Денег нет, токен не нужен.
+  Очередь у порта: `ss -ltn | grep :3000` (Recv-Q у LISTEN). 18.10 там стояло 274–334.
+- **Расход по токену с бокса:** `curl "localhost:3000/api/airlabs-usage?token=$(grep ^CRON_TOKEN= ~/airportsboard.env | cut -d= -f2-)"`.
+  Лог прогрева — `/var/log/airportsboard-warm.log` (читается).
+- **Страницы аэропорта кэшируются на 30 с** (b014679c): первый экран больше не покупает
+  свежесть, её покупает клиентский опрос. «Людской» расход упал с ~250 до ~20 в час — это
+  ожидаемо, не поломка.
+
 ## Ежедневная автоматика
 
 `~/.claude/scheduled-tasks/airportsboard-seo-push/` — в 10:00 тратит квоту переобхода Вебмастера
