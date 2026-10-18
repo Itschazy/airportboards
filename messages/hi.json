@@ -207,6 +207,7 @@
     "st_scheduled": "निर्धारित",
     "updated_now": "अभी अपडेट हुआ",
     "updated_min_ago": "{m, number} मिनट पहले अपडेट",
+    "updating_now": "अपडेट हो रहा है…",
     "departure": "प्रस्थान",
     "arrival": "आगमन",
     "gate": "गेट",

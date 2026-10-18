@@ -207,6 +207,7 @@
     "st_scheduled": "예정",
     "updated_now": "방금 업데이트",
     "updated_min_ago": "{m, number}분 전 업데이트",
+    "updating_now": "업데이트 중…",
     "departure": "출발",
     "arrival": "도착",
     "gate": "게이트",

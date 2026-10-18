@@ -43,6 +43,13 @@ type Flight = {
  */
 const STALE_AFTER_MS = 12 * 60 * 60 * 1000;
 
+/**
+ * Окно, внутри которого снимок считается свежим и повторно не покупается, — то же, что TTL
+ * хранилища (FLIGHT_TTL_SEC, 600 с) и STALE_MS в lib/live-budget.ts. Старше — /api/flights
+ * докупает свежее для живого читателя, а табло на это время пишет «Обновляем…».
+ */
+const FRESH_WINDOW_MS = 10 * 60 * 1000;
+
 const C = {
   bg:        '#050505',
   surface:   '#0B0B0B',
@@ -852,7 +859,23 @@ export function FlightBoard({ airport, locale, defaultMode = 'departures', displ
   const didInit = useRef(false);
   useEffect(() => {
     // First mount with SSR flights → refresh silently (keep the server rows visible).
-    if (!didInit.current && hasInitial) { didInit.current = true; fetchFlights(); return; }
+    if (!didInit.current && hasInitial) {
+      didInit.current = true;
+      /**
+       * Читатель не должен видеть «обновлено 3 ч назад», если прямо сейчас ему докупают свежее
+       * (требование владельца 18.10.2026: старше десяти минут — обновить при заходе). Страница
+       * приходит из 30-секундного кэша с возрастом снимка хранилища, а /api/flights за
+       * секунду-две приносит новый. Пока он едет, вместо старой цифры — «Обновляем…»; ответ
+       * ставит честный возраст того, что пришло (в том числе старый, если покупка отказана).
+       *
+       * Только на клиенте и только после гидрации: серверный HTML по-прежнему называет
+       * настоящий возраст данных — его читают роботы, и обещание «возраст указан» должно
+       * оставаться правдой там.
+       */
+      if (initialFetchedAt && Date.now() - initialFetchedAt >= FRESH_WINDOW_MS) setUpdLabel(t('updating_now'));
+      fetchFlights();
+      return;
+    }
     didInit.current = true;
     setLoading(true);
     fetchFlights();

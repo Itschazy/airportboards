@@ -207,6 +207,7 @@
     "st_scheduled": "Scheduled",
     "updated_now": "Updated now",
     "updated_min_ago": "Updated {m, number} min ago",
+    "updating_now": "Updating…",
     "departure": "Departure",
     "arrival": "Arrival",
     "gate": "Gate",

@@ -15,7 +15,6 @@ import { mayFetchLive } from '@/lib/live-budget';
  * Заголовок теперь тот же, что у страницы: свежесть и разделяемый кэш ответа несовместимы.
  */
 const BOARD_CACHE_CONTROL = 'private, max-age=0, must-revalidate';
-import { freshnessWorthBuying } from '@/lib/warm';
 
 export async function GET(
   req: NextRequest,
@@ -44,10 +43,18 @@ export async function GET(
   // Право на свежесть (lib/live-budget.ts) опирается на это число: борт старше окна TTL
   // разрешено обновить читателю даже сверх людской доли плана.
   const fetchedAt = getBoardFetchedAt(code, direction);
-  // Тот же заслон, что и на серверном рендере: ферма исполняет наш JS и доходит сюда тоже.
-  // Разбор сигнатуры и почему разделитель именно такой — у freshnessWorthBuying в lib/warm.ts.
-  const live = freshnessWorthBuying(code)
-    && mayFetchLive(req, `${direction}:${code}`, fetchedAt == null ? null : Date.now() - fetchedAt);
+  /**
+   * ЛЮБОЙ аэропорт, а не только mega/hub и закреплённые по спросу — решение владельца 18.10.2026:
+   * читатель не должен видеть борт старше десяти минут. Старше — докупаем, моложе — getFresh
+   * отдаёт запись даром и до поставщика дело не доходит.
+   *
+   * Прежде здесь стоял freshnessWorthBuying(code): табло Челябинска (CEK, ярус ниже hub, не в
+   * закреплении) показывало живому читателю «обновлено 3 ч назад». Заслон был против фермы
+   * обходчиков, исполняющей наш JS; от неё теперь остаются слои mayFetchLive — браузерный UA,
+   * не больше ~40 бортов в час на адрес, людская доля плана с полом прогрева в 35% — плюс
+   * подсеть фермы, закрытая на nginx (/etc/nginx/conf.d/airportsboard-deny.conf).
+   */
+  const live = mayFetchLive(req, `${direction}:${code}`, fetchedAt == null ? null : Date.now() - fetchedAt);
 
   let flights: Awaited<ReturnType<typeof getBoard>> = [];
   try { flights = await getBoard(code, direction, locale, live); } catch { /* honest empty */ }

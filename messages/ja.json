@@ -207,6 +207,7 @@
     "st_scheduled": "予定",
     "updated_now": "ただ今更新",
     "updated_min_ago": "{m, number}分前に更新",
+    "updating_now": "更新中…",
     "departure": "出発",
     "arrival": "到着",
     "gate": "ゲート",

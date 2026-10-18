@@ -207,6 +207,7 @@
     "st_scheduled": "Planlandı",
     "updated_now": "Şimdi güncellendi",
     "updated_min_ago": "{m, number} dakika önce güncellendi",
+    "updating_now": "Güncelleniyor…",
     "departure": "Kalkış",
     "arrival": "Varış",
     "gate": "Kapı",

@@ -207,6 +207,7 @@
     "st_scheduled": "Geplant",
     "updated_now": "Gerade aktualisiert",
     "updated_min_ago": "Vor {m, number} Min. aktualisiert",
+    "updating_now": "Wird aktualisiert…",
     "departure": "Abflug",
     "arrival": "Ankunft",
     "gate": "Gate",

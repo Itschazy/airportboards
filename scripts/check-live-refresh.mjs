@@ -141,9 +141,19 @@ say(!!floor && Number(floor[1]) >= 0.2 && Number(floor[1]) <= 0.6,
 const WARM = fs.readFileSync('lib/warm.ts', 'utf8');
 say(/export function freshnessWorthBuying\(/.test(WARM),
   'freshnessWorthBuying объявлен — покупаем свежесть не для всего корпуса');
-for (const [file, what] of [['lib/live-board.ts', 'серверный рендер'], ['app/api/flights/[iata]/route.ts', 'ручка /api/flights']]) {
-  const src = fs.readFileSync(file, 'utf8');
-  say(/freshnessWorthBuying\(/.test(src), `${what} спрашивает freshnessWorthBuying перед покупкой`);
+{
+  const src = fs.readFileSync('lib/live-board.ts', 'utf8');
+  say(/freshnessWorthBuying\(/.test(src), 'серверный рендер спрашивает freshnessWorthBuying перед покупкой');
+}
+// Ручка /api/flights с 18.10.2026 покупает для ЛЮБОГО аэропорта (решение владельца: читатель не
+// видит борт старше десяти минут). Заслон по ярусу там снят намеренно; от фермы остаются слои
+// mayFetchLive и подсеть, закрытая на nginx. Сторож следит, что ручка идёт через mayFetchLive и
+// что заслон по ярусу не вернулся туда по ошибке.
+{
+  const src = fs.readFileSync('app/api/flights/[iata]/route.ts', 'utf8');
+  say(/mayFetchLive\(/.test(src), 'ручка /api/flights решает покупку через mayFetchLive');
+  const code = src.replace(/\/\*[\s\S]*?\*\//g, '').replace(/\/\/.*$/gm, '');
+  say(!/freshnessWorthBuying\(/.test(code), 'ручка /api/flights покупает свежесть для любого аэропорта');
 }
 
 // Набор обязан покрывать спрос и НЕ покрывать хвост: иначе заслон либо бесполезен, либо режет

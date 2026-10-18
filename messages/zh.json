@@ -207,6 +207,7 @@
     "st_scheduled": "计划",
     "updated_now": "刚刚更新",
     "updated_min_ago": "{m, number} 分钟前更新",
+    "updating_now": "正在更新…",
     "departure": "出发",
     "arrival": "到达",
     "gate": "登机口",

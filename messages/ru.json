@@ -207,6 +207,7 @@
     "st_scheduled": "По расписанию",
     "updated_now": "Обновлено только что",
     "updated_min_ago": "Обновлено {m, number} мин назад",
+    "updating_now": "Обновляем…",
     "departure": "Вылет",
     "arrival": "Прибытие",
     "gate": "Выход",

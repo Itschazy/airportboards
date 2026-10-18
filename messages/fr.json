@@ -207,6 +207,7 @@
     "st_scheduled": "Prévu",
     "updated_now": "Mis à jour maintenant",
     "updated_min_ago": "Mis à jour il y a {m, number} min",
+    "updating_now": "Mise à jour…",
     "departure": "Départ",
     "arrival": "Arrivée",
     "gate": "Porte",
