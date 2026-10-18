@@ -220,6 +220,7 @@
     "departing": "出発予定",
     "landing": "着陸中",
     "departs_in": "出発まで",
+    "in_duration": "{d}後",
     "arrives_in": "到着まで",
     "final_call": "最終案内",
     "go_to_gate": "ただちにゲートへ",

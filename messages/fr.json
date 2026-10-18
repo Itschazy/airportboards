@@ -220,6 +220,7 @@
     "departing": "Départ",
     "landing": "Atterrissage",
     "departs_in": "Départ dans",
+    "in_duration": "Dans {d}",
     "arrives_in": "Arrivée dans",
     "final_call": "Dernier appel",
     "go_to_gate": "Aller à la porte maintenant",

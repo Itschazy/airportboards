@@ -1,0 +1,23 @@
+// Регрессии времени без сети и платного поставщика.
+import fs from 'node:fs';
+import ts from 'typescript';
+import assert from 'node:assert/strict';
+const js=ts.transpileModule(fs.readFileSync('lib/flight-time.ts','utf8'),{compilerOptions:{module:ts.ModuleKind.ESNext}}).outputText;
+const {flightDelayMinutes:delay,imminentFlightMinutes:soon}=await import('data:text/javascript;base64,'+Buffer.from(js).toString('base64'));
+assert.equal(delay({scheduled:'12:00',delay:35}),35);
+assert.equal(delay({scheduled:'23:50',actual:'00:20'}),30);
+assert.equal(delay({scheduled:'12:00',actual:'11:50'}),null);
+assert.equal(delay({scheduled:'12:00'}),null);
+assert.equal(delay({scheduled:'12:00',actual:'12:00'}),null);
+assert.equal(delay({scheduled:'12:00',actual:'13:00',delay:1500}),1500);
+assert.equal(delay({scheduled:'xx',actual:'13:00'}),null);
+const now=Date.UTC(2026,9,18,23,50);
+const f={status:'ontime',ts:(now+25*60_000)/1000};
+assert.equal(soon(f,now),25);
+assert.equal(soon(f,0),null);
+assert.equal(soon(f,now+25*60_000),null);
+assert.equal(soon(f,now+26*60_000),null);
+assert.equal(soon({...f,ts:(now+60_000)/1000},now+59_000),1);
+assert.equal(soon({...f,ts:(now+61*60_000)/1000},now),null);
+for(const status of ['boarding','finalcall','delayed','cancelled','departed','arrived','baggage'])assert.equal(soon({...f,status},now),null);
+console.log('Время рейсов: 20 проверок пройдено (полночь, прошедшие, неизвестная задержка, приоритет статусов)');

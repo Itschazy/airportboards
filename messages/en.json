@@ -220,6 +220,7 @@
     "departing": "Departing",
     "landing": "Landing",
     "departs_in": "Departs in",
+    "in_duration": "In {d}",
     "arrives_in": "Arrives in",
     "final_call": "Final call",
     "go_to_gate": "Go to gate now",

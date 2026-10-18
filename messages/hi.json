@@ -220,6 +220,7 @@
     "departing": "प्रस्थान हो रहा है",
     "landing": "लैंड कर रहा है",
     "departs_in": "प्रस्थान में",
+    "in_duration": "{d} में",
     "arrives_in": "आगमन में",
     "final_call": "अंतिम कॉल",
     "go_to_gate": "अब गेट पर जाएँ",

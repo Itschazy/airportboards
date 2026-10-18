@@ -220,6 +220,7 @@
     "departing": "即将出发",
     "landing": "降落中",
     "departs_in": "起飞倒计时",
+    "in_duration": "{d}后",
     "arrives_in": "到达倒计时",
     "final_call": "最后呼叫",
     "go_to_gate": "请前往登机口",

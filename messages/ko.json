@@ -220,6 +220,7 @@
     "departing": "출발 중",
     "landing": "착륙 중",
     "departs_in": "출발까지",
+    "in_duration": "{d} 후",
     "arrives_in": "도착까지",
     "final_call": "마지막 호출",
     "go_to_gate": "지금 게이트로 이동",

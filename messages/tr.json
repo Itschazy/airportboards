@@ -220,6 +220,7 @@
     "departing": "Kalkıyor",
     "landing": "İniyor",
     "departs_in": "Kalkışa",
+    "in_duration": "{d} sonra",
     "arrives_in": "İnişe",
     "final_call": "Son çağrı",
     "go_to_gate": "Kapıya git",

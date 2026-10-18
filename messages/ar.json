@@ -220,6 +220,7 @@
     "departing": "تغادر",
     "landing": "تهبط",
     "departs_in": "المغادرة بعد",
+    "in_duration": "بعد {d}",
     "arrives_in": "الوصول بعد",
     "final_call": "النداء الأخير",
     "go_to_gate": "توجه إلى البوابة الآن",

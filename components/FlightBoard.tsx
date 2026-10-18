@@ -1,4 +1,5 @@
 'use client';
+import { flightDelayMinutes, imminentFlightMinutes } from '@/lib/flight-time';
 import { numLocale } from '@/lib/i18n';
 
 import { useEffect, useState, useCallback, useRef } from 'react';
@@ -96,22 +97,14 @@ const haptic = (ms = 6) => { try { (navigator as any).vibrate?.(ms); } catch {} 
 
 // Age of the DATA, not of the request. Tail airports are refreshed daily, so this has to
 // degrade past minutes gracefully — "1440 min ago" is technically true and useless.
-/**
- * Длительность словами локали: «2 ч 45 м», «2h 45m», «2小时 45分钟».
- *
- * Задержка печаталась сырыми минутами — «Delayed by 165m», «延误 165 分钟» — потому что единица
- * была вшита в саму строку каталога, а часов в ней не было вовсе. Полтора часа задержки
- * читаются как «90m», два с половиной — как «150m»: человек считает в уме то, что должен
- * сообщать интерфейс. Форматировщик уже существовал внутри карточки рейса, но строка табло до
- * него не дотягивалась — здесь он поднят на уровень модуля, чтобы им пользовались оба места.
+/** Единицы длительности из Intl: «мин», а не неоднозначное «м».
+ * Один формат для карточки и строки на всех 12 языках; numLocale сохраняет
+ * западные цифры в арабском интерфейсе. Ровные часы не дополняем нулём минут.
  */
-function fmtDur(mins: number, t: T): string {
+function fmtDur(mins: number, locale: string): string {
   const hrs = Math.floor(mins / 60), mm = mins % 60;
-  // Ровный час печатается без минут: «2 h», а не «2 h 0 m». Круглые задержки — самые частые
-  // (диспетчер объявляет два часа, а не сто девятнадцать минут), и «0 m» на проде висело
-  // на каждой второй задержанной строке.
-  if (hrs > 0) return mm > 0 ? `${hrs} ${t('dur_h')} ${mm} ${t('dur_m')}` : `${hrs} ${t('dur_h')}`;
-  return `${mm} ${t('dur_m')}`;
+  const unit = (n: number, u: 'hour' | 'minute') => new Intl.NumberFormat(numLocale(locale), { style: 'unit', unit: u, unitDisplay: 'short' }).format(n);
+  return hrs > 0 ? [unit(hrs, 'hour'), ...(mm > 0 ? [unit(mm, 'minute')] : [])].join(' ') : unit(mm, 'minute');
 }
 
 function relTime(d: Date | null, t: T): string {
@@ -126,7 +119,7 @@ function relTime(d: Date | null, t: T): string {
 }
 
 function calcDeparture(
-  flight: Flight, tz: string, mode: Mode, t: T
+  flight: Flight, tz: string, mode: Mode, t: T, locale: string
 ): { label: string; value: string; sub: string; accent?: string } | null {
   if (['departed', 'baggage'].includes(flight.status)) {
     return { label: mode === 'departures' ? t('st_departed') : t('st_arrived'), value: flight.scheduled, sub: '', accent: C.gray };
@@ -154,7 +147,7 @@ function calcDeparture(
       let delay = (h * 60 + m) - (sh * 60 + sm);
       if (delay < -720) delay += 1440;   // delayed across midnight (e.g. 23:50 → 00:20)
       const delayM = flight.delay ?? delay;
-      return { label: t('delayed_by', { d: fmtDur(delayM, t) }), value: flight.actual, sub: t('was', { time: flight.scheduled }), accent: C.orange };
+      return { label: t('delayed_by', { d: fmtDur(delayM, locale) }), value: flight.actual, sub: t('was', { time: flight.scheduled }), accent: C.orange };
     }
     if (diff <= 0) {
       if (flight.status === 'boarding') return { label: t('st_boarding'), value: t('now'), sub: flight.gate ? `${t('gate')}\u2068 ${flight.gate}\u2069` : '', accent: C.blue };
@@ -201,8 +194,9 @@ function IconChevron() {
 
 // ─── Bottom Sheet ────────────────────────────────────────────────────────────
 
-function BottomSheet({ flight, mode, onClose, tz, locale, updLabel, originIata, originName, isPinned, onTogglePin }: {
+function BottomSheet({ flight, mode, onClose, tz, locale, clockMs, updLabel, originIata, originName, isPinned, onTogglePin }: {
   flight: Flight | null;
+  clockMs: number;
   mode: Mode;
   onClose: () => void;
   tz: string;
@@ -313,7 +307,8 @@ function BottomSheet({ flight, mode, onClose, tz, locale, updLabel, originIata, 
    * увиденный в 22:00, действительно завтрашний.
    */
   const minsUntil = (timeStr?: string, ts?: number): number | null => {
-    if (ts) return Math.round((ts * 1000 - Date.now()) / 60_000);
+    // Тот же тик и округление, что в строке: карточка и табло не расходятся на минуту.
+    if (ts) return Math.ceil((ts * 1000 - (clockMs || Date.now())) / 60_000);
     if (!timeStr) return null;
     const [h, m] = timeStr.split(':').map(Number);
     if (isNaN(h) || isNaN(m)) return null;
@@ -391,7 +386,8 @@ function BottomSheet({ flight, mode, onClose, tz, locale, updLabel, originIata, 
      * терминал — и ни одного побуждения к действию. Возраст данных читатель видит тут же:
      * подпись `updLabel` приезжает в саму карточку.
      */
-    const past = mins != null && mins < 0;
+    const past = mins != null && mins < 0 || !!flight.ts && flight.ts * 1000 < (clockMs || Date.now());
+    const delayMinutes = flightDelayMinutes(flight);
     const n = localNow();
     const nowClock = `${String(n.h).padStart(2, '0')}:${String(n.m).padStart(2, '0')}`;
     // The date of the FLIGHT, not of the reader. This printed today unconditionally, so a
@@ -427,16 +423,17 @@ function BottomSheet({ flight, mode, onClose, tz, locale, updLabel, originIata, 
       hero = { label: t('h_board_label'), main: t('h_board_main'), sub: t('gate_closes', { m: Math.max(1, mins ?? 0) }), bottom: dispTime, icon: 'plane', medium: true };
     } else if (status === 'finalcall' && !past) {
       hero = { label: t('h_final_label'), main: t('h_final_main'), sub: t('gate_closes', { m: Math.max(1, mins ?? 0) }), bottom: dispTime, icon: 'bell', medium: true };
-    } else if (status === 'delayed' && (!past || (flight.delay ?? 0) > 0)) {
-      // The struck "was HH:MM" line only makes sense when the displayed time differs from it.
-      hero = { label: t('h_delay_label', { dur: fmtDur(flight.delay && flight.delay > 0 ? flight.delay : Math.max(0, mins ?? 0), t) }), main: dispTime, sub: flight.actual && flight.actual !== flight.scheduled ? t('was', { time: flight.scheduled }) : undefined, subStrike: true, icon: 'clock' };
+    } else if (status === 'delayed') {
+      // Известная задержка остаётся фактом и после времени рейса. Неизвестная
+      // показывается без числа: время до рейса не является длительностью задержки.
+      hero = { label: delayMinutes != null ? t('h_delay_label', { dur: fmtDur(delayMinutes, locale) }) : t('st_delayed'), main: dispTime, sub: flight.actual && flight.actual !== flight.scheduled ? t('was', { time: flight.scheduled }) : undefined, subStrike: true, icon: 'clock' };
     } else {
       hero = past
         // Нейтральная карточка: время и подпись «вылет»/«прибытие», без отсчёта и без
         // утверждения, что рейс ушёл. Строку «По расписанию HH:MM» оставляем только
         // когда показанное время от расписания отличается, иначе она дублирует главное.
         ? { label: isDep ? t('departure') : t('arrival'), main: dispTime, sub: flight.actual && flight.actual !== flight.scheduled ? t('on_schedule', { time: flight.scheduled }) : undefined, subStrike: !!flight.actual, icon: 'clock' }
-        : { label: isDep ? t('departs_in') : t('arrives_in'), main: mins != null && mins > 0 ? fmtDur(mins, t) : t('now'), sub: t('on_schedule', { time: flight.scheduled }), icon: 'clock' };
+        : { label: isDep ? t('departs_in') : t('arrives_in'), main: mins != null && mins > 0 ? fmtDur(mins, locale) : t('now'), sub: t('on_schedule', { time: flight.scheduled }), icon: 'clock' };
     }
 
     // ── Detail grid: only fields with data, never the status (already in hero) ──
@@ -1356,18 +1353,15 @@ export function FlightBoard({ airport, locale, defaultMode = 'departures', displ
           // на улетевшем рейсе это не оформление, а указание идти на выход к самолёту,
           // которого нет.
           const color = isPast ? C.past : (STATUS_COLOR[f.status] || C.gray);
+          const countdown = imminentFlightMinutes(f, realNow);
           const label = (() => {
-            if (f.status === 'delayed' && f.actual) {
-              const [ah, am] = f.actual.split(':').map(Number);
-              const [sh, sm] = f.scheduled.split(':').map(Number);
-              let delay = (ah * 60 + am) - (sh * 60 + sm);
-              if (delay < -720) delay += 1440;   // delayed across midnight
-              const delayM = f.delay ?? delay;
-              // 'm' was a bare literal here, so Japanese, Korean, Chinese, Arabic, Hindi and
-              // Russian boards all rendered "遅延 125m" / "Задержан 125m". The localised
-              // ui.delayed_by exists in every catalogue and is already used elsewhere.
-              return delayM > 0 ? t('delayed_by', { d: fmtDur(delayM, t) }) : t('st_delayed');
+            if (f.status === 'delayed') {
+              const delay = flightDelayMinutes(f);
+              return delay != null ? t('delayed_by', { d: fmtDur(delay, locale) }) : t('st_delayed');
             }
+            // Заменяем спокойную подпись, не добавляя ещё одну строку на телефоне.
+            // Вылет/прилёт уже задан вкладкой; полная формулировка остаётся в карточке.
+            if (countdown != null) return t('in_duration', { d: fmtDur(countdown, locale) });
             return t(`st_${f.status}`);
           })();
           // By time, not by status. A row the sort placed in the past keeps whatever status the
@@ -1501,6 +1495,7 @@ export function FlightBoard({ airport, locale, defaultMode = 'departures', displ
         isPinned={!!selected && pinned?.flight === selected.flight}
         onTogglePin={() => { if (selected) togglePin(selected.flight); }}
         flight={selected}
+        clockMs={realNow}
         mode={mode}
         onClose={() => setSelected(null)}
         tz={airport.tz || ''}

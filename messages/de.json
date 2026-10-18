@@ -220,6 +220,7 @@
     "departing": "Startet",
     "landing": "Landet",
     "departs_in": "Abflug in",
+    "in_duration": "In {d}",
     "arrives_in": "Ankunft in",
     "final_call": "Letzter Aufruf",
     "go_to_gate": "Zum Gate gehen",

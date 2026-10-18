@@ -220,6 +220,7 @@
     "departing": "In partenza",
     "landing": "Atterraggio",
     "departs_in": "Parte tra",
+    "in_duration": "Tra {d}",
     "arrives_in": "Arriva tra",
     "final_call": "Ultimo imbarco",
     "go_to_gate": "Vai al gate ora",

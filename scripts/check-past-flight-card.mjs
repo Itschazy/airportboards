@@ -42,7 +42,7 @@ console.log('карточка прошедшего рейса — устройс
 say(/minsUntil\s*=\s*\([^)]*\bts\b[^)]*\)/.test(SRC),
   'расчёт принимает отметку времени, а не только строку часов');
 
-say(/if \(ts\) return Math\.round\(\(ts \* 1000 - Date\.now\(\)\)/.test(SRC),
+say(SRC.includes('if (ts) return Math.ceil((ts * 1000 - (clockMs || Date.now())) / 60_000)'),
   'при наличии отметки времени арифметика на строках не используется');
 
 say(/const past = mins != null && mins < 0/.test(SRC),
