@@ -40,9 +40,10 @@ function boardWindow(rows: { ts?: number }[], n: number): { rows: any[]; allPast
 
 const BASE = 'https://airportsboard.live';
 
-// Тот же борт, что у родителя, — и та же причина быть динамической.
+// Тот же борт, что у родителя, — и тот же 30-секундный кэш.
 // Разбор в комментарии к dynamic в airport/[iata]/page.tsx.
-export const dynamic = 'force-dynamic';
+export const dynamic = 'force-static';
+export const revalidate = 30;
 export const dynamicParams = true;
 
 type Props = { params: Promise<{ locale: string; iata: string }> };
