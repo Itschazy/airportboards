@@ -13,11 +13,7 @@
     "language": "Sprache",
     "close": "Schließen",
     "aria_breadcrumb": "Brotkrümelnavigation",
-    "aria_footer": "Fußzeile",
-    "theme": "Darstellung",
-    "theme_system": "Wie auf dem Gerät",
-    "theme_light": "Hell",
-    "theme_dark": "Dunkel"
+    "aria_footer": "Fußzeile"
   },
   "board": {
     "flight": "Flug",

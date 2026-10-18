@@ -69,8 +69,8 @@ export function WidgetBuilder({ locale }: { locale: string }) {
     try { await navigator.clipboard.writeText(snippet); setCopied(true); setTimeout(() => setCopied(false), 1600); } catch { /* no-op */ }
   };
 
-  const label = { display: 'block', fontSize: 12, fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.08em', color: 'var(--color-secondary)', margin: '18px 0 8px' } as const;
-  const input = { width: '100%', background: 'var(--color-surface)', border: '1px solid var(--color-border)', borderRadius: 12, padding: '12px 14px', fontSize: 15, color: 'var(--color-text)' } as const;
+  const label = { display: 'block', fontSize: 12, fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.08em', color: '#8A8A8A', margin: '18px 0 8px' } as const;
+  const input = { width: '100%', background: '#0B0B0B', border: '1px solid #1A1A1A', borderRadius: 12, padding: '12px 14px', fontSize: 15, color: '#FFFFFF' } as const;
 
   return (
     <div>
@@ -80,13 +80,13 @@ export function WidgetBuilder({ locale }: { locale: string }) {
         onFocus={() => { if (sel) { setSel(null); setQ(''); } }}
         placeholder="LHR, Antalya, Палма…" autoComplete="off" />
       {!sel && hits.length > 0 && (
-        <div style={{ border: '1px solid var(--color-border)', borderRadius: 12, marginTop: 6, overflow: 'hidden' }}>
+        <div style={{ border: '1px solid #1A1A1A', borderRadius: 12, marginTop: 6, overflow: 'hidden' }}>
           {hits.map(h => (
             <button key={h.iata} type="button" onClick={() => { setSel(h); setHits([]); }}
-              style={{ display: 'flex', gap: 10, alignItems: 'baseline', width: '100%', textAlign: 'start', background: 'var(--color-surface)', border: 0, borderBottom: '1px solid var(--color-surface)', padding: '10px 14px', color: 'var(--color-text)', fontSize: 14, cursor: 'pointer' }}>
+              style={{ display: 'flex', gap: 10, alignItems: 'baseline', width: '100%', textAlign: 'start', background: '#0B0B0B', border: 0, borderBottom: '1px solid #151515', padding: '10px 14px', color: '#FFFFFF', fontSize: 14, cursor: 'pointer' }}>
               <span style={{ fontWeight: 700 }}>{h.iata}</span>
-              <span style={{ color: 'var(--color-secondary)', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>{h.name}</span>
-              <span style={{ color: 'var(--color-secondary)', marginInlineStart: 'auto', flexShrink: 0 }}>{h.city}</span>
+              <span style={{ color: '#B4B4B4', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>{h.name}</span>
+              <span style={{ color: '#6A6A6A', marginInlineStart: 'auto', flexShrink: 0 }}>{h.city}</span>
             </button>
           ))}
         </div>
@@ -125,7 +125,7 @@ export function WidgetBuilder({ locale }: { locale: string }) {
             style={{ ...input, fontFamily: 'ui-monospace, SFMono-Regular, Menlo, monospace', fontSize: 12.5, lineHeight: 1.5, resize: 'vertical' }}
             onFocus={e => e.currentTarget.select()} />
           <button type="button" onClick={copy}
-            style={{ marginTop: 10, background: copied ? 'var(--color-green)' : 'var(--color-blue)', color: 'var(--color-inverse)', border: 0, borderRadius: 999, padding: '10px 22px', fontSize: 14, fontWeight: 600, cursor: 'pointer' }}>
+            style={{ marginTop: 10, background: copied ? '#34C759' : '#0A84FF', color: '#FFFFFF', border: 0, borderRadius: 999, padding: '10px 22px', fontSize: 14, fontWeight: 600, cursor: 'pointer' }}>
             {copied ? t('widgets_copied') : t('widgets_copy')}
           </button>
 

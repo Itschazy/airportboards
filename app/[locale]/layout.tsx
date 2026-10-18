@@ -14,7 +14,6 @@ import { CookieNotice } from '@/components/CookieNotice';
 import { InstallPrompt } from '@/components/InstallPrompt';
 import { adsenseClient } from '@/lib/adsense';
 import '../globals.css';
-import { THEME_BOOTSTRAP } from '@/lib/theme';
 
 // viewportFit:'cover' activates the env(safe-area-inset-*) padding used across the board
 // and bottom-sheet so content clears the iPhone home indicator / notch.
@@ -22,8 +21,8 @@ export const viewport: Viewport = {
   width: 'device-width',
   initialScale: 1,
   viewportFit: 'cover',
-  // Цвет панели браузера соответствует системной теме; ручной выбор меняет только сайт.
-  themeColor: [{ media: '(prefers-color-scheme: light)', color: '#f3f5f7' }, { media: '(prefers-color-scheme: dark)', color: '#101820' }],
+  // Blend the mobile browser chrome into the site's dark background.
+  themeColor: '#050505',
 };
 
 const OG_LOCALE: Record<string, string> = {
@@ -76,8 +75,7 @@ export default async function LocaleLayout({
   const messages = await getMessages({ locale });
   const dir = rtlLocales.includes(locale as Locale) ? 'rtl' : 'ltr';
   return (
-    <html lang={locale} dir={dir} className="h-full antialiased" suppressHydrationWarning>
-      <head><script dangerouslySetInnerHTML={{ __html: THEME_BOOTSTRAP }} /></head>
+    <html lang={locale} dir={dir} className="h-full antialiased">
       <body className="min-h-full flex flex-col">
         {/* React hoists resource links into <head>. Browsers honour only a handful of
             preconnects, so they go to the origins that actually run on every locale: the

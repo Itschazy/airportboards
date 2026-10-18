@@ -22,9 +22,9 @@ export function EventBanner({ iata, locale, style }: { iata: string; locale: str
             borderRadius: 16, padding: '13px 16px', textDecoration: 'none', ...style,
           }}>
             <span style={{ fontSize: 20, flexShrink: 0 }} aria-hidden="true">{TYPE_EMOJI[ev.meta.type] || '📍'}</span>
-            <span style={{ flex: 1, minWidth: 0, fontSize: 14, fontWeight: 600, color: 'var(--color-text)', lineHeight: 1.35 }}>{c.banner}</span>
+            <span style={{ flex: 1, minWidth: 0, fontSize: 14, fontWeight: 600, color: '#E4E4E7', lineHeight: 1.35 }}>{c.banner}</span>
             <svg data-flip width="8" height="14" viewBox="0 0 8 14" fill="none" aria-hidden="true" style={{ flexShrink: 0 }}>
-              <path d="M1 1L7 7L1 13" stroke="var(--color-blue)" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" />
+              <path d="M1 1L7 7L1 13" stroke="#0A84FF" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" />
             </svg>
           </Link>
         );

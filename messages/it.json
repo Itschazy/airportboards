@@ -13,11 +13,7 @@
     "language": "Lingua",
     "close": "Chiudi",
     "aria_breadcrumb": "Percorso di navigazione",
-    "aria_footer": "Piè di pagina",
-    "theme": "Tema",
-    "theme_system": "Come sul dispositivo",
-    "theme_light": "Chiaro",
-    "theme_dark": "Scuro"
+    "aria_footer": "Piè di pagina"
   },
   "board": {
     "flight": "Volo",

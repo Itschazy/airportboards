@@ -26,7 +26,7 @@ function highlight(text: string, query: string) {
   return (
     <>
       {text.slice(0, idx)}
-      <span style={{ color: 'var(--color-text)', fontWeight: 700 }}>{text.slice(idx, end)}</span>
+      <span style={{ color: '#FFFFFF', fontWeight: 700 }}>{text.slice(idx, end)}</span>
       {text.slice(end)}
     </>
   );
@@ -159,7 +159,7 @@ export function AirportSearch({ locale, placeholder }: { locale: string; placeho
         padding: '8px 14px 4px',
         fontSize: 10, fontWeight: 700,
         letterSpacing: '0.1em',
-        color: 'var(--color-secondary)',
+        color: '#8A8A8A',
         textTransform: 'uppercase',
       }}>
         {label}
@@ -187,9 +187,9 @@ export function AirportSearch({ locale, placeholder }: { locale: string; placeho
               gap: 12,
               padding: '10px 14px',
               border: 'none',
-              borderBottom: i < items.length - 1 ? '1px solid var(--color-surface)' : 'none',
-              background: isActive ? 'var(--color-raised)' : 'transparent',
-              color: 'var(--color-text)',
+              borderBottom: i < items.length - 1 ? '1px solid #161616' : 'none',
+              background: isActive ? '#1C1C1E' : 'transparent',
+              color: '#FFFFFF',
               cursor: 'pointer',
               textAlign: 'start',
               transition: 'background 0.1s',
@@ -201,22 +201,22 @@ export function AirportSearch({ locale, placeholder }: { locale: string; placeho
             </span>
 
             {/* IATA */}
-            <span style={{ fontSize: 13, fontWeight: 800, color: 'var(--color-blue)', flexShrink: 0, width: 34, letterSpacing: '-0.02em' }}>
+            <span style={{ fontSize: 13, fontWeight: 800, color: '#0A84FF', flexShrink: 0, width: 34, letterSpacing: '-0.02em' }}>
               {highlight(a.iata, query)}
             </span>
 
             {/* City + name */}
             <span style={{ flex: 1, minWidth: 0 }}>
-              <span style={{ fontSize: 14, color: 'var(--color-text)', display: 'block', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>
+              <span style={{ fontSize: 14, color: '#E4E4E7', display: 'block', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>
                 {highlight(a.city, query)}
               </span>
-              <span style={{ fontSize: 11, color: 'var(--color-secondary)', display: 'block', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>
+              <span style={{ fontSize: 11, color: '#6A6A6A', display: 'block', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>
                 {highlight(a.name, query)}
               </span>
             </span>
 
             {/* Country */}
-            <span style={{ fontSize: 11, color: 'var(--color-secondary)', flexShrink: 0, maxWidth: 80, textAlign: 'end', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>
+            <span style={{ fontSize: 11, color: '#8A8A8A', flexShrink: 0, maxWidth: 80, textAlign: 'end', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>
               {a.country}
             </span>
           </button>
@@ -233,8 +233,8 @@ export function AirportSearch({ locale, placeholder }: { locale: string; placeho
           width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"
           style={{ position: 'absolute', insetInlineStart: 14, top: '50%', transform: 'translateY(-50%)', pointerEvents: 'none' }}
         >
-          <circle cx="6.5" cy="6.5" r="4" stroke={focused ? 'var(--color-secondary)' : 'var(--color-secondary)'} strokeWidth="1.5"/>
-          <path d="M10 10L13.5 13.5" stroke={focused ? 'var(--color-secondary)' : 'var(--color-secondary)'} strokeWidth="1.5" strokeLinecap="round"/>
+          <circle cx="6.5" cy="6.5" r="4" stroke={focused ? '#8A8A8A' : '#4A4A4A'} strokeWidth="1.5"/>
+          <path d="M10 10L13.5 13.5" stroke={focused ? '#8A8A8A' : '#4A4A4A'} strokeWidth="1.5" strokeLinecap="round"/>
         </svg>
 
         {/* Договор роли combobox выполняется целиком: aria-controls указывает на список,
@@ -262,11 +262,11 @@ export function AirportSearch({ locale, placeholder }: { locale: string; placeho
             width: '100%',
             padding: '14px 40px 14px 40px',
             fontSize: 16,
-            border: `1px solid ${focused ? 'var(--color-border)' : 'var(--color-border)'}`,
+            border: `1px solid ${focused ? '#333333' : '#1A1A1A'}`,
             borderRadius: 16,
             outline: 'none',
-            background: 'var(--color-surface)',
-            color: 'var(--color-text)',
+            background: '#0B0B0B',
+            color: '#FFFFFF',
             WebkitAppearance: 'none',
             transition: 'border-color 0.15s',
           }}
@@ -279,13 +279,13 @@ export function AirportSearch({ locale, placeholder }: { locale: string; placeho
             onMouseDown={() => { setQuery(''); setActive(-1); inputRef.current?.focus(); }}
             style={{
               position: 'absolute', insetInlineEnd: 12, top: '50%', transform: 'translateY(-50%)',
-              background: 'var(--color-raised)', border: 'none', borderRadius: '50%',
+              background: '#2C2C2E', border: 'none', borderRadius: '50%',
               width: 28, height: 28, cursor: 'pointer',
               display: 'flex', alignItems: 'center', justifyContent: 'center', padding: 0,
             }}
           >
             <svg width="10" height="10" viewBox="0 0 10 10" fill="none" aria-hidden="true">
-              <path d="M1 1L9 9M9 1L1 9" stroke="var(--color-secondary)" strokeWidth="1.5" strokeLinecap="round"/>
+              <path d="M1 1L9 9M9 1L1 9" stroke="#8A8A8A" strokeWidth="1.5" strokeLinecap="round"/>
             </svg>
           </button>
         )}
@@ -301,8 +301,8 @@ export function AirportSearch({ locale, placeholder }: { locale: string; placeho
           position: 'absolute',
           top: 'calc(100% + 6px)',
           left: 0, right: 0,
-          background: 'var(--color-surface)',
-          border: '1px solid var(--color-border)',
+          background: '#111111',
+          border: '1px solid #1E1E1E',
           borderRadius: 16,
           overflow: 'hidden',
           overflowY: 'auto',

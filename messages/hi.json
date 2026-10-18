@@ -13,11 +13,7 @@
     "language": "भाषा",
     "close": "बंद करें",
     "aria_breadcrumb": "नेविगेशन पथ",
-    "aria_footer": "पाद लेख",
-    "theme": "थीम",
-    "theme_system": "डिवाइस के अनुसार",
-    "theme_light": "हल्की",
-    "theme_dark": "गहरी"
+    "aria_footer": "पाद लेख"
   },
   "board": {
     "flight": "उड़ान",

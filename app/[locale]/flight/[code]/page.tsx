@@ -27,8 +27,8 @@ function pretty(code: string): string {
 }
 
 const STATUS_COLOR: Record<string, string> = {
-  ontime: 'var(--color-green)', scheduled: 'var(--color-secondary)', boarding: 'var(--color-blue)', finalcall: 'var(--color-red)',
-  delayed: 'var(--color-orange)', departed: 'var(--color-secondary)', baggage: 'var(--color-blue)', arrived: 'var(--color-secondary)', cancelled: 'var(--color-red)',
+  ontime: '#30D158', scheduled: '#8A8A8A', boarding: '#0A84FF', finalcall: '#FF453A',
+  delayed: '#FF9F0A', departed: '#48484A', baggage: '#0A84FF', arrived: '#48484A', cancelled: '#FF453A',
 };
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
@@ -79,7 +79,7 @@ export default async function FlightPage({ params }: Props) {
   const dep = f ? getAirport(f.depIata) : undefined;
   const arr = f ? getAirport(f.arrIata) : undefined;
   const statusKey = f && (f.status === 'finalcall' ? 'boarding' : f.status);
-  const color = f ? (STATUS_COLOR[f.status] || 'var(--color-secondary)') : 'var(--color-secondary)';
+  const color = f ? (STATUS_COLOR[f.status] || '#48484A') : '#48484A';
 
   const jsonLd = {
     '@context': 'https://schema.org',
@@ -91,18 +91,18 @@ export default async function FlightPage({ params }: Props) {
   };
 
   const Card = ({ label, value }: { label: string; value: string }) => (
-    <div style={{ background: 'var(--color-surface)', border: '1px solid var(--color-border)', borderRadius: 14, padding: '14px 16px', minWidth: 0 }}>
-      <div style={{ fontSize: 11, fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--color-secondary)' }}>{label}</div>
-      <div style={{ fontSize: 22, fontWeight: 700, color: 'var(--color-text)', marginTop: 6, whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>{value}</div>
+    <div style={{ background: '#0B0B0B', border: '1px solid #1A1A1A', borderRadius: 14, padding: '14px 16px', minWidth: 0 }}>
+      <div style={{ fontSize: 11, fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase', color: '#8A8A8A' }}>{label}</div>
+      <div style={{ fontSize: 22, fontWeight: 700, color: '#FFFFFF', marginTop: 6, whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>{value}</div>
     </div>
   );
-  const link: React.CSSProperties = { color: 'var(--color-blue)', textDecoration: 'none' };
+  const link: React.CSSProperties = { color: '#0A84FF', textDecoration: 'none' };
 
   return (
     <div style={{ maxWidth: 640, margin: '0 auto', padding: '36px 18px 64px' }}>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
-      <div style={{ fontSize: 13, color: 'var(--color-secondary)', marginBottom: 14 }}>
-        <Link href={`/${locale}`} style={{ color: 'var(--color-secondary)', textDecoration: 'none', display: 'inline-block', minHeight: 24 }}>airportsboard</Link>
+      <div style={{ fontSize: 13, color: '#8A8A8A', marginBottom: 14 }}>
+        <Link href={`/${locale}`} style={{ color: '#6A6A6A', textDecoration: 'none', display: 'inline-block', minHeight: 24 }}>airportsboard</Link>
       </div>
 
       {f && statusKey && (
@@ -112,16 +112,16 @@ export default async function FlightPage({ params }: Props) {
         </div>
       )}
 
-      <h1 style={{ fontSize: 'clamp(44px, 13vw, 64px)', fontWeight: 800, letterSpacing: '-0.04em', color: 'var(--color-text)', margin: 0, lineHeight: 0.95 }}>{flight}</h1>
+      <h1 style={{ fontSize: 'clamp(44px, 13vw, 64px)', fontWeight: 800, letterSpacing: '-0.04em', color: '#FFFFFF', margin: 0, lineHeight: 0.95 }}>{flight}</h1>
       {f?.airline && (
         <div style={{ fontSize: 20, marginTop: 8 }}>
-          {f.airlineIata ? <Link href={`/${locale}/airline/${f.airlineIata}`} style={{ color: 'var(--color-secondary)', textDecoration: 'none' }}>{f.airline}</Link> : <span style={{ color: 'var(--color-secondary)' }}>{f.airline}</span>}
+          {f.airlineIata ? <Link href={`/${locale}/airline/${f.airlineIata}`} style={{ color: '#A1A1A1', textDecoration: 'none' }}>{f.airline}</Link> : <span style={{ color: '#A1A1A1' }}>{f.airline}</span>}
         </div>
       )}
 
       {f && dep && arr ? (
         <>
-          <p style={{ fontSize: 16, color: 'var(--color-secondary)', marginTop: 14 }}>
+          <p style={{ fontSize: 16, color: '#C4C4C4', marginTop: 14 }}>
             <Link href={`/${locale}/airport/${dep.iata}/departures`} style={link}>{getCityName(dep.city, locale)} ({dep.iata})</Link>
             {`  ${forwardArrow(locale)}  `}
             <Link href={`/${locale}/airport/${arr.iata}/arrivals`} style={link}>{getCityName(arr.city, locale)} ({arr.iata})</Link>
@@ -133,12 +133,12 @@ export default async function FlightPage({ params }: Props) {
             {f.terminal && <Card label={tBoard('terminal')} value={f.terminal} />}
           </div>
 
-          <p style={{ fontSize: 14, color: 'var(--color-secondary)', marginTop: 28 }}>
+          <p style={{ fontSize: 14, color: '#6A6A6A', marginTop: 28 }}>
             {t('flight_route')}: <Link href={`/${locale}/route/${dep.iata}-${arr.iata}`} style={link}>{getCityName(dep.city, locale)} {forwardArrow(locale)} {getCityName(arr.city, locale)}</Link>
           </p>
         </>
       ) : (
-        <p style={{ fontSize: 16, color: 'var(--color-secondary)', marginTop: 20 }}>{t('flight_notfound', { flight })}</p>
+        <p style={{ fontSize: 16, color: '#8A8A8A', marginTop: 20 }}>{t('flight_notfound', { flight })}</p>
       )}
     </div>
   );

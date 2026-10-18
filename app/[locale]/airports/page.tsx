@@ -101,17 +101,17 @@ export default async function AirportsIndexPage({ params }: Props) {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(itemList) }} />
       {dataset && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(dataset) }} />}
-      <div style={{ fontSize: 13, color: 'var(--color-secondary)', marginBottom: 10 }}>
-        <Link href={`/${locale}`} style={{ color: 'var(--color-secondary)', textDecoration: 'none', display: 'inline-block', minHeight: 24 }}>airportsboard</Link>
+      <div style={{ fontSize: 13, color: '#8A8A8A', marginBottom: 10 }}>
+        <Link href={`/${locale}`} style={{ color: '#6A6A6A', textDecoration: 'none', display: 'inline-block', minHeight: 24 }}>airportsboard</Link>
       </div>
-      <h1 style={{ fontSize: 'clamp(28px, 7vw, 40px)', fontWeight: 800, letterSpacing: '-0.03em', color: 'var(--color-text)', margin: '0 0 6px' }}>
+      <h1 style={{ fontSize: 'clamp(28px, 7vw, 40px)', fontWeight: 800, letterSpacing: '-0.03em', color: '#FFFFFF', margin: '0 0 6px' }}>
         {t('sec_countries')}
       </h1>
-      <p style={{ fontSize: 15, color: 'var(--color-secondary)', margin: '0 0 14px' }}>
+      <p style={{ fontSize: 15, color: '#8A8A8A', margin: '0 0 14px' }}>
         {countries.length.toLocaleString(numLocale(locale))} {t('m_countries')}
       </p>
       {world.generated && world.withService > 0 && (
-        <p style={{ fontSize: 15, lineHeight: 1.55, color: 'var(--color-secondary)', margin: '0 0 28px', maxWidth: 660 }}>
+        <p style={{ fontSize: 15, lineHeight: 1.55, color: '#C7C7CC', margin: '0 0 28px', maxWidth: 660 }}>
           {world.probed > world.withService + world.empty
             ? t('world_split_partial', { total: world.probed, date: localizedMeasuredOn(world.generated!, locale), served: world.withService })
             : t('world_split', { total: world.probed, date: localizedMeasuredOn(world.generated!, locale), served: world.withService, rest: world.empty })}
@@ -123,11 +123,11 @@ export default async function AirportsIndexPage({ params }: Props) {
           <li key={c.slug}>
             <Link href={`/${locale}/airports/${c.slug}`} style={{
               display: 'flex', alignItems: 'center', gap: 12, textDecoration: 'none', color: 'inherit',
-              background: 'var(--color-surface)', border: '1px solid var(--color-border)', borderRadius: 14, padding: '12px 16px',
+              background: '#0B0B0B', border: '1px solid #1A1A1A', borderRadius: 14, padding: '12px 16px',
             }}>
               <span style={{ fontSize: 20, flexShrink: 0, width: 26, textAlign: 'center', lineHeight: 1 }}>{flag(c.iso2)}</span>
-              <span style={{ flex: 1, minWidth: 0, fontSize: 15, color: 'var(--color-text)', fontWeight: 600, whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>{c.name}</span>
-              <span style={{ fontSize: 13, color: 'var(--color-secondary)', flexShrink: 0, fontVariantNumeric: 'tabular-nums' }}>{c.count.toLocaleString(numLocale(locale))}</span>
+              <span style={{ flex: 1, minWidth: 0, fontSize: 15, color: '#E4E4E7', fontWeight: 600, whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>{c.name}</span>
+              <span style={{ fontSize: 13, color: '#8A8A8A', flexShrink: 0, fontVariantNumeric: 'tabular-nums' }}>{c.count.toLocaleString(numLocale(locale))}</span>
             </Link>
           </li>
         ))}

@@ -13,11 +13,7 @@
     "language": "Langue",
     "close": "Fermer",
     "aria_breadcrumb": "Fil d’Ariane",
-    "aria_footer": "Pied de page",
-    "theme": "Thème",
-    "theme_system": "Selon l’appareil",
-    "theme_light": "Clair",
-    "theme_dark": "Sombre"
+    "aria_footer": "Pied de page"
   },
   "board": {
     "flight": "Vol",
