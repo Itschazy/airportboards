@@ -6,16 +6,43 @@
 //   - reads are served from here (fresh within TTL, or stale as a fallback),
 //   - only the human-facing path may spend quota, and only under a hard monthly cap,
 //   - a bounded background warmer keeps the top hubs fresh.
-// On a single-process PM2 deploy this is an in-memory mirror persisted to one JSON file
-// (outside the repo so `git clean` on deploy doesn't wipe it). The counter is a
-// best-effort backstop; the real guarantee is structural (crawlers never spend).
+// The counter is a best-effort backstop; the real guarantee is structural (crawlers never spend).
+//
+// 🔴 НЕСКОЛЬКО ПРОЦЕССОВ ОДНОВРЕМЕННО — с 18.10.2026.
+//
+// До этого хранилище было зеркалом в памяти ОДНОГО процесса, раз в 2 с целиком записываемым в
+// один JSON на 69 МБ. 18.10 сайт встал под трафиком: Next.js держал одно ядро из четырёх, и
+// разложить нагрузку можно только несколькими процессами (pm2 cluster). Со старым устройством
+// каждый процесс считал бы расход сам, затирал бы файл соседей и покупал бы одни и те же борта
+// независимо — прямой перерасход у airlabs.
+//
+// Теперь общее состояние живёт на диске так, чтобы его делили процессы:
+//   • борт — свой маленький файл (entries/<ключ>.json), запись атомарная (tmp + rename),
+//     чтение сверяет mtime, поэтому купленное одним процессом сразу видят остальные;
+//   • расход — журналы только на дозапись, по байту на запрос (spend-<месяц>-<вид>):
+//     O_APPEND атомарен между процессами, число запросов = размер файла;
+//   • одновременная покупка одного борта склеивается файлом-замком (claimFetch);
+//   • предел провайдера — meta.json.
+// Заодно ушла синхронная запись 69 МБ, на время которой процесс не отвечал никому.
+//
+// Каталог данных — НЕ /tmp: Ubuntu очищает /tmp при загрузке (`D /tmp` в tmpfiles.d), и
+// перезагрузка стёрла бы все купленные борта. Старый JSON импортируется сам (importLegacy).
 
 import fs from 'node:fs';
 import os from 'node:os';
 import path from 'node:path';
 import type { AirlabsFlight } from '@/lib/flights';
 
-const STORE_PATH = process.env.FLIGHT_STORE_PATH || path.join(os.tmpdir(), 'airportsboard-flights.json');
+/** Старый однофайловый JSON — только источник импорта. Фикстуры сборки по-прежнему кладут его. */
+const LEGACY_PATH = process.env.FLIGHT_STORE_PATH || path.join(os.tmpdir(), 'airportsboard-flights.json');
+/** Постоянный каталог данных сайта на боксе — общий для хранилища, архива и маршрутов. */
+export const DATA_DIR = process.env.AIRPORTSBOARD_DATA_DIR || path.join(os.homedir(), 'airportsboard-data');
+const STORE_DIR = process.env.FLIGHT_STORE_PATH ? `${process.env.FLIGHT_STORE_PATH}.d` : path.join(DATA_DIR, 'store');
+const ENTRY_DIR = path.join(STORE_DIR, 'entries');
+const LOCK_DIR = path.join(STORE_DIR, 'locks');
+const META = path.join(STORE_DIR, 'meta.json');
+const MARK = path.join(STORE_DIR, 'imported.json');
+
 const TTL_MS = (Number(process.env.FLIGHT_TTL_SEC) || 600) * 1000;       // 10 min freshness window
 // Hard backstop, deliberately just under the plan.
 //
@@ -63,146 +90,278 @@ const BOOTSTRAP_CAP = 95000;
 
 /** Сколько мы вправе потратить за месяц. Провайдер — источник истины, если он уже ответил. */
 export function monthlyCap(): number {
-  const observed = db().providerLimit;
+  const observed = meta().providerLimit;
   if (observed && observed > 0) return observed;
   return CONFIGURED_CAP > 0 ? CONFIGURED_CAP : BOOTSTRAP_CAP;
 }
 
 /** Откуда взялся потолок — для диагностики, чтобы его происхождение не приходилось угадывать. */
 export function capSource(): string {
-  const observed = db().providerLimit;
+  const observed = meta().providerLimit;
   if (observed && observed > 0) return `provider:${observed}`;
   return CONFIGURED_CAP > 0 ? `env:${CONFIGURED_CAP}` : `bootstrap:${BOOTSTRAP_CAP}`;
 }
 
 /**
- * Record the monthly limit airlabs reports for our key. Persisted with the store so a restart
- * does not briefly forget it and let one over-generous warm cycle through.
+ * Record the monthly limit airlabs reports for our key. Persisted so a restart does not
+ * briefly forget it and let one over-generous warm cycle through.
  */
 export function noteProviderLimit(limit: unknown): void {
   const n = Number(limit);
   if (!Number.isFinite(n) || n <= 0) return;
-  const s = db();
-  if (s.providerLimit === n) return;
-  s.providerLimit = n;
-  persist();
+  if (meta().providerLimit === n) return;
+  writeAtomic(META, JSON.stringify({ ...meta(), providerLimit: n }));
 }
-// Two entries (departures + arrivals) per warmed airport. The tiered warmer covers every
-// airport that has scheduled service — ~2,000 of the 6,072 — so the ceiling has to clear
-// ~4,100 comfortably, or eviction would start throwing away boards we just paid for.
-const MAX_ENTRIES = 12000;
 
 type Entry = { ts: number; data: AirlabsFlight[] };
 /** Who spent the request. The plan is split between the two (see lib/warm.ts tickBudget),
  *  so a single total cannot answer "did visitors have enough left?". */
 export type SpendKind = 'warm' | 'human';
-type Store = {
+type Kinds = Record<SpendKind, number>;
+type Meta = { providerLimit?: number };
+/** Формат старого однофайлового хранилища — только для импорта. */
+type LegacyStore = {
   month: string; count: number; entries: Record<string, Entry>;
-  byKind?: Record<SpendKind, number>;
-  /** monthly limit airlabs reports for our key; see noteProviderLimit(). */
-  providerLimit?: number;
+  byKind?: Kinds; providerLimit?: number;
 };
 
 const monthKey = () => new Date().toISOString().slice(0, 7); // YYYY-MM (calendar month)
 
-let mem: Store | null = null;
-function db(): Store {
-  if (!mem) {
-    try { mem = JSON.parse(fs.readFileSync(STORE_PATH, 'utf8')) as Store; }
-    catch (e) {
-      // Отсутствующий файл — законный старт с нуля (свежая машина, локальная сборка). А вот
-      // файл, который ЕСТЬ, но не разбирается, — авария, и молчать о ней нельзя: именно
-      // молчание сделало невидимым 24.09.2026, когда сборка прочитала хранилище посреди
-      // записи и запекла карту сайта без единого прилёта и маршрута (см. persist ниже).
-      if ((e as NodeJS.ErrnoException)?.code !== 'ENOENT') {
-        console.error(`[flightStore] ${STORE_PATH} не разбирается — начинаю с пустого хранилища:`, (e as Error)?.message);
-      }
-      mem = { month: monthKey(), count: 0, entries: {} };
-    }
+// ── файловые примитивы ────────────────────────────────────────────────────────
+
+/** tmp + rename в том же каталоге: читатель видит либо старый файл целиком, либо новый. */
+function writeAtomic(file: string, body: string): void {
+  init();
+  const tmp = `${file}.tmp-${process.pid}-${Math.random().toString(36).slice(2, 8)}`;
+  try {
+    fs.writeFileSync(tmp, body);
+    fs.renameSync(tmp, file);
+  } catch (e) {
+    try { fs.unlinkSync(tmp); } catch { /* временного файла может и не быть */ }
+    throw e;
   }
-  if (mem.month !== monthKey()) {
-    // A new calendar month resets the SPEND, never the data. Rebuilding the whole object
-    // here also dropped `entries` — so at 00:00 UTC on the 1st every board on the site went
-    // empty at once, all 2,759 served airports rendered "no flights" (and therefore noindex),
-    // and the warmer needed ~2.7 days at the achievable rate to fill them back in. The boards
-    // are paid-for content that stays valid across the billing boundary; only the counter and
-    // its per-kind split belong to the month. `providerLimit` is a property of the key, not
-    // of the month, so it survives too.
-    mem = { ...mem, month: monthKey(), count: 0, byKind: { warm: 0, human: 0 } };
-  }
-  return mem;
+}
+
+function readJson<T>(file: string): T | null {
+  try { return JSON.parse(fs.readFileSync(file, 'utf8')) as T; } catch { return null; }
+}
+
+/** Синхронная пауза: импорт идёт внутри синхронных геттеров, ждать там иначе нечем. */
+function sleepSync(ms: number): void {
+  Atomics.wait(new Int32Array(new SharedArrayBuffer(4)), 0, 0, ms);
 }
 
 /**
- * Сколько стоит одна запись хранилища — для /api/health. Запись синхронная: пока идут
- * JSON.stringify и writeFileSync, процесс не отвечает никому, даже на ответы из кэша.
+ * Эксклюзивный замок между процессами: создание файла с флагом wx атомарно. Замок старше
+ * staleMs считается брошенным (процесс умер посреди работы) и перехватывается.
  */
-let persistStat = { at: 0, stringifyMs: 0, writeMs: 0, bytes: 0, count: 0 };
-export function persistStats() { return persistStat; }
-
-let timer: ReturnType<typeof setTimeout> | null = null;
-function persist() {
-  if (timer) return;
-  timer = setTimeout(() => {
-    timer = null;
-    /**
-     * 🔴 ЗАПИСЬ АТОМАРНАЯ: временный файл рядом и rename поверх.
-     *
-     * Было `fs.writeFileSync(STORE_PATH, …)` — файл сначала обнуляется, потом заполняется, и
-     * при 69 МБ это окно, в которое кто угодно прочтёт половину JSON. 24.09.2026 туда попала
-     * сборка: выкат шёл 21:03–21:05, а тик прогрева в те же 21:00–21:04 переписывал хранилище.
-     * Сборка получила обрезанный файл, db() молча начала с пустого, и пререндер карты сайта
-     * запёкся без единой подстраницы прилётов и без единого маршрута — 1 549 путей на
-     * двенадцати языках, при revalidate = 86400, то есть на сутки. Предыдущий выкат в 20:38
-     * пришёлся между тиками и дал полную карту: дефект проявлялся по совпадению часов.
-     *
-     * Воспроизведено: 10 МБ, читатель параллельно с писателем — при прямой записи 4 из 7
-     * чтений разобрать нельзя, через rename — 0 из 5. rename в пределах одного каталога
-     * атомарен: читатель видит либо старый файл целиком, либо новый целиком.
-     *
-     * Тот же разрыв грозил и самому процессу: перезапуск посреди записи (выкат, watchdog)
-     * оставлял на диске половину файла, новый процесс начинал с пустого и первой же записью
-     * стирал остальное.
-     */
-    const tmp = `${STORE_PATH}.tmp-${process.pid}`;
+function acquire(file: string, staleMs: number): boolean {
+  for (let attempt = 0; attempt < 2; attempt++) {
     try {
-      const t0 = Date.now();
-      const json = JSON.stringify(mem);
-      const t1 = Date.now();
-      fs.writeFileSync(tmp, json);
-      fs.renameSync(tmp, STORE_PATH);
-      persistStat = { at: t1, stringifyMs: t1 - t0, writeMs: Date.now() - t1, bytes: json.length, count: persistStat.count + 1 };
-    } catch {
-      try { fs.unlinkSync(tmp); } catch { /* временного файла может и не быть */ }
+      fs.closeSync(fs.openSync(file, 'wx'));
+      return true;
+    } catch (e) {
+      if ((e as NodeJS.ErrnoException).code !== 'EEXIST') return false;
+      try {
+        if (Date.now() - fs.statSync(file).mtimeMs < staleMs) return false;
+        fs.unlinkSync(file);
+      } catch { /* соседний процесс успел снять или перехватить — пробуем ещё раз */ }
     }
-  }, 2000);
-  if (typeof timer.unref === 'function') timer.unref();
+  }
+  return false;
 }
+
+function release(file: string): void {
+  try { fs.unlinkSync(file); } catch { /* уже снят */ }
+}
+
+// ── инициализация и импорт старого JSON ───────────────────────────────────────
+
+let ready = false;
+function init(): void {
+  if (ready) return;
+  ready = true;
+  fs.mkdirSync(ENTRY_DIR, { recursive: true });
+  fs.mkdirSync(LOCK_DIR, { recursive: true });
+  try { importLegacy(); } catch (e) {
+    console.error('[flightStore] импорт старого хранилища не удался:', (e as Error)?.message);
+  }
+}
+
+type Mark = { legacyMtimeMs: number; month: string; byKind: Kinds; at: number; imported: number };
+
+/**
+ * Перенос старого /tmp/airportsboard-flights.json в новый каталог.
+ *
+ * Делается ДВАЖДЫ за выкат, и оба раза нужны. Первый — во время сборки: новый код читает
+ * хранилище при пререндере, а старый процесс ещё работает и продолжает писать старый JSON.
+ * Второй — при старте новых процессов: за минуты сборки старый процесс успел купить борта и
+ * потратить запросы, и их надо дозабрать. Поэтому импорт сравнивает mtime старого файла с
+ * отметкой прошлого импорта и переносит только РАЗНИЦУ: борта новее имеющихся и прирост
+ * счётчика расхода с прошлого раза. После перезапуска старый JSON никто не пишет, и импорт
+ * больше не срабатывает.
+ *
+ * Расход старого файла за текущий месяц ложится в base-<месяц>.json — к нему прибавляются
+ * журналы новых процессов.
+ */
+function importLegacy(): void {
+  let st: fs.Stats;
+  try { st = fs.statSync(LEGACY_PATH); } catch { return; }
+  const done = () => (readJson<Mark>(MARK)?.legacyMtimeMs ?? -1) >= st.mtimeMs;
+  if (done()) return;
+
+  const lock = path.join(STORE_DIR, 'import.lock');
+  if (!acquire(lock, 5 * 60_000)) {
+    // Импортирует соседний процесс (сборка параллелит пререндер по воркерам). Ждём его, иначе
+    // этот процесс отрисует пустые борта и запечёт их в кэш.
+    for (let waited = 0; waited < 180_000 && !done(); waited += 200) sleepSync(200);
+    return;
+  }
+  try {
+    if (done()) return;
+    const legacy = readJson<LegacyStore>(LEGACY_PATH);
+    if (!legacy) return;
+    let imported = 0;
+    for (const [key, e] of Object.entries(legacy.entries ?? {})) {
+      const cur = readEntryFile(key);
+      if (cur && cur.ts >= e.ts) continue;
+      writeEntry(key, e);
+      imported++;
+    }
+    if (legacy.providerLimit && !meta().providerLimit) {
+      writeAtomic(META, JSON.stringify({ ...meta(), providerLimit: legacy.providerLimit }));
+    }
+    const warm = legacy.byKind?.warm ?? 0;
+    const now: Kinds = { warm, human: Math.max(0, (legacy.count ?? 0) - warm) };
+    const prev = readJson<Mark>(MARK);
+    if (legacy.month === monthKey()) {
+      const before: Kinds = prev?.month === legacy.month ? prev.byKind : { warm: 0, human: 0 };
+      const baseFile = path.join(STORE_DIR, `base-${legacy.month}.json`);
+      const base = readJson<Kinds>(baseFile) ?? { warm: 0, human: 0 };
+      base.warm += Math.max(0, now.warm - before.warm);
+      base.human += Math.max(0, now.human - before.human);
+      writeAtomic(baseFile, JSON.stringify(base));
+    }
+    writeAtomic(MARK, JSON.stringify({ legacyMtimeMs: st.mtimeMs, month: legacy.month, byKind: now, at: Date.now(), imported } satisfies Mark));
+    console.log(`[flightStore] импортировано из ${LEGACY_PATH}: бортов ${imported}`);
+  } finally {
+    release(lock);
+  }
+}
+
+// ── борта ─────────────────────────────────────────────────────────────────────
+
+const entryFile = (key: string) => path.join(ENTRY_DIR, `${encodeURIComponent(key)}.json`);
+
+function readEntryFile(key: string): Entry | null {
+  return readJson<Entry>(entryFile(key));
+}
+
+function writeEntry(key: string, e: Entry): void {
+  const file = entryFile(key);
+  writeAtomic(file, JSON.stringify(e));
+  // mtime = время покупки: getStaleTs читает только его, не разбирая файл (прогрев опрашивает
+  // тысячи ключей за тик).
+  const t = new Date(e.ts);
+  try { fs.utimesSync(file, t, t); } catch { /* не критично: ts есть и внутри файла */ }
+}
+
+/**
+ * Разобранные борта этого процесса — LRU. Не весь корпус: при нескольких процессах полная копия
+ * в каждом съела бы память машины. Свежесть сверяется по mtime файла при каждом чтении.
+ */
+const CACHE_MAX = 2500;
+const cache = new Map<string, { mtimeMs: number; e: Entry }>();
+
+function readEntry(key: string): Entry | null {
+  init();
+  let mtimeMs: number;
+  try { mtimeMs = fs.statSync(entryFile(key)).mtimeMs; } catch { cache.delete(key); return null; }
+  const hit = cache.get(key);
+  if (hit && hit.mtimeMs === mtimeMs) {
+    cache.delete(key); cache.set(key, hit); // освежить место в LRU
+    return hit.e;
+  }
+  const e = readEntryFile(key);
+  if (!e) return hit?.e ?? null; // файл подменяют прямо сейчас — отдаём прежний
+  cache.delete(key);
+  cache.set(key, { mtimeMs, e });
+  if (cache.size > CACHE_MAX) cache.delete(cache.keys().next().value as string);
+  return e;
+}
+
+/**
+ * Сколько стоит одна запись борта — для /api/health. Раньше здесь была синхронная запись всего
+ * JSON на 69 МБ, теперь — маленький файл одного борта.
+ */
+let persistStat = { at: 0, writeMs: 0, bytes: 0, count: 0 };
+export function persistStats() { return persistStat; }
 
 /** Fresh data within the TTL window, or null. */
 export function getFresh(key: string): AirlabsFlight[] | null {
-  const e = db().entries[key];
+  const e = readEntry(key);
   return e && Date.now() - e.ts < TTL_MS ? e.data : null;
 }
 /** Any stored data regardless of age (serve-stale fallback), or null. */
 export function getStale(key: string): AirlabsFlight[] | null {
-  const e = db().entries[key];
-  return e ? e.data : null;
+  return readEntry(key)?.data ?? null;
 }
 /** When this key was last written, or null if never. Used by the warmer to decide what is due. */
 export function getStaleTs(key: string): number | null {
-  const e = db().entries[key];
-  return e ? e.ts : null;
+  init();
+  try { return Math.round(fs.statSync(entryFile(key)).mtimeMs); } catch { return null; }
 }
 export function put(key: string, data: AirlabsFlight[]) {
-  const s = db();
-  s.entries[key] = { ts: Date.now(), data };
-  const keys = Object.keys(s.entries);
-  if (keys.length > MAX_ENTRIES) delete s.entries[keys[0]]; // bound memory/disk
-  persist();
+  const e: Entry = { ts: Date.now(), data };
+  const t0 = Date.now();
+  try {
+    writeEntry(key, e);
+    cache.delete(key);
+    try { cache.set(key, { mtimeMs: fs.statSync(entryFile(key)).mtimeMs, e }); } catch { /* прочтётся с диска */ }
+    persistStat = { at: t0, writeMs: Date.now() - t0, bytes: 0, count: persistStat.count + 1 };
+  } catch (err) {
+    console.error('[flightStore] не удалось записать борт', key, (err as Error)?.message);
+  }
 }
+
+/**
+ * Замок на покупку борта между процессами. Внутри процесса одновременные обращения склеивает
+ * карта inflight в lib/flights.ts; эта функция делает то же между процессами pm2 cluster.
+ * false — борт уже покупает соседний процесс: ждать его результата, а не покупать второй раз.
+ */
+export function claimFetch(key: string): boolean {
+  init();
+  return acquire(path.join(LOCK_DIR, encodeURIComponent(key)), 20_000);
+}
+export function releaseFetch(key: string): void {
+  release(path.join(LOCK_DIR, encodeURIComponent(key)));
+}
+
+// ── расход ────────────────────────────────────────────────────────────────────
+
+const ledger = (month: string, kind: SpendKind) => path.join(STORE_DIR, `spend-${month}-${kind}`);
+const size = (file: string) => { try { return fs.statSync(file).size; } catch { return 0; } };
+
+function spentByKind(): Kinds {
+  init();
+  const month = monthKey();
+  const base = readJson<Kinds>(path.join(STORE_DIR, `base-${month}.json`)) ?? { warm: 0, human: 0 };
+  return {
+    warm: base.warm + size(ledger(month, 'warm')),
+    human: base.human + size(ledger(month, 'human')),
+  };
+}
+
+function meta(): Meta {
+  init();
+  return readJson<Meta>(META) ?? {};
+}
+
 /** True while we are still under the monthly airlabs budget. */
-export function canSpend(): boolean { return db().count < monthlyCap(); }
+export function canSpend(): boolean {
+  const s = spentByKind();
+  return s.warm + s.human < monthlyCap();
+}
 
 /**
  * The share of the plan held for live visitor traffic, as a number of requests.
@@ -223,20 +382,23 @@ export function humanReserve(): number {
   const pct = Number(process.env.AIRLABS_HUMAN_RESERVE_PCT ?? 35) / 100;
   return Math.round(monthlyCap() * pct);
 }
+
+/** Один байт в журнал месяца: дозапись с O_APPEND атомарна между процессами. */
 export function spend(kind: SpendKind = 'human') {
-  const s = db();
-  s.count++;
-  s.byKind ??= { warm: 0, human: 0 };
-  s.byKind[kind]++;
-  persist();
+  init();
+  try { fs.appendFileSync(ledger(monthKey(), kind), '.'); } catch (e) {
+    console.error('[flightStore] не удалось учесть расход:', (e as Error)?.message);
+  }
 }
+
 export function usage() {
-  const s = db();
-  const byKind = s.byKind ?? { warm: 0, human: 0 };
+  const byKind = spentByKind();
+  const count = byKind.warm + byKind.human;
+  const m = meta();
   return {
-    month: s.month, count: s.count, cap: monthlyCap(),
-    configuredCap: CONFIGURED_CAP || null, providerLimit: s.providerLimit ?? null, capSource: capSource(),
-    remaining: Math.max(0, monthlyCap() - s.count),
+    month: monthKey(), count, cap: monthlyCap(),
+    configuredCap: CONFIGURED_CAP || null, providerLimit: m.providerLimit ?? null, capSource: capSource(),
+    remaining: Math.max(0, monthlyCap() - count),
     warm: byKind.warm, human: byKind.human,
   };
 }

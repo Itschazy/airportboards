@@ -3,7 +3,7 @@ import airportLabels from '@/data/airport-labels.json';
 import airlines from '@/data/airlines.json';
 import codeMoves from '@/data/airport-code-moves.json';
 import { getCityName } from '@/lib/places';
-import { getFresh, getStale, getStaleTs, put, canSpend, spend, noteProviderLimit, type SpendKind } from '@/lib/flightStore';
+import { getFresh, getStale, getStaleTs, put, canSpend, spend, noteProviderLimit, claimFetch, releaseFetch, type SpendKind } from '@/lib/flightStore';
 import { archiveBoard } from '@/lib/board-archive';
 import { getActiveEventAirports } from '@/lib/event-content';
 import { dueAirports, tickBudget, tierOf, getServiceData } from '@/lib/warm';
@@ -119,6 +119,20 @@ const INFLIGHT_WAIT_MS = 8_000;
  * Гонка, а не отмена: сам запрос продолжает жить и, когда завершится, запишет борт в
  * хранилище и снимет себя с карты. Мы всего лишь перестаём на него рассчитывать.
  */
+/**
+ * Борт покупает соседний процесс: опрашиваем хранилище, пока там не появится свежая запись, но
+ * не дольше INFLIGHT_WAIT_MS — дальше отдаём то, что есть.
+ */
+async function waitForNeighbour(cacheKey: string): Promise<AirlabsFlight[]> {
+  const until = Date.now() + INFLIGHT_WAIT_MS;
+  while (Date.now() < until) {
+    await new Promise(r => setTimeout(r, 250));
+    const fresh = getFresh(cacheKey);
+    if (fresh) return fresh;
+  }
+  return getStale(cacheKey) ?? [];
+}
+
 async function waitBounded(p: Promise<AirlabsFlight[]>, cacheKey: string): Promise<AirlabsFlight[]> {
   let timer: ReturnType<typeof setTimeout> | undefined;
   const fallback = new Promise<AirlabsFlight[]>((resolve) => {
@@ -302,7 +316,14 @@ export async function fetchRaw(
   // Чужой незавершённый запрос ждём ОГРАНИЧЕННО: см. INFLIGHT_WAIT_MS — залипший здесь промис
   // однажды заморозил прогрев на двое суток.
   if (pending) return waitBounded(pending, cacheKey);
+  /**
+   * То же самое МЕЖДУ процессами (pm2 cluster, с 18.10.2026). Карта inflight живёт в памяти
+   * одного процесса, и без замка четыре процесса купили бы один и тот же борт четыре раза.
+   * Соседний процесс уже покупает — ждём, пока его результат появится в хранилище.
+   */
+  if (!claimFetch(cacheKey)) return waitForNeighbour(cacheKey);
   const p = doFetch(query, direction, cacheKey, opts.kind ?? 'human');
+  void p.finally(() => releaseFetch(cacheKey)).catch(() => {});
   inflight.set(cacheKey, p);
   /**
    * Снятие с карты — ДВУМЯ путями, и второй обязателен.

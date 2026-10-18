@@ -3,6 +3,7 @@ import os from 'node:os';
 import path from 'node:path';
 import zlib from 'node:zlib';
 import type { AirlabsFlight } from '@/lib/flights';
+import { DATA_DIR } from '@/lib/flightStore';
 
 /**
  * Append-only archive of every board the site pays airlabs for.
@@ -39,8 +40,10 @@ import type { AirlabsFlight } from '@/lib/flights';
  *   {"t":<unix s>,"a":"AER","d":"dep","f":[[flight,airline,other,sched_ts,est_ts,delay_min,status],…]}
  */
 
+// Не /tmp: Ubuntu очищает его при загрузке. Каталог данных — общий с хранилищем (lib/flightStore.ts).
+// Строки дописываются одним appendFileSync — между процессами pm2 cluster это атомарно.
 const DIR = process.env.FLIGHT_ARCHIVE_PATH
-  || path.join(os.tmpdir(), 'airportsboard-archive');
+  || path.join(DATA_DIR, 'archive');
 
 /** Hard byte budget for the whole archive directory, plain + gzipped. */
 const MAX_BYTES = (Number(process.env.ARCHIVE_MAX_MB) || 300) * 1024 * 1024;

@@ -56,7 +56,13 @@ const BROWSER_PREFIX = /^Mozilla\/5\.0\b/;
 const ENGINE_TOKEN = /\b(?:AppleWebKit|Gecko|Chrome|CriOS|Chromium|Firefox|FxiOS|Safari|Version|Mobile|Edg|EdgiOS|OPR|OPiOS|YaBrowser|SamsungBrowser|Vivaldi)\/[\w.]+/;
 
 const WINDOW_MS = 60 * 60 * 1000;
-const PER_IP_BOARDS = Number(process.env.LIVE_BOARDS_PER_IP_HOUR) || 40;
+/**
+ * Таблица perIp живёт в памяти процесса. С 18.10.2026 процессов несколько (pm2 cluster, число —
+ * в process.env.instances, его выставляет pm2), запросы одного адреса раскладываются по ним
+ * примерно поровну — значит, каждому достаётся своя доля лимита, а не весь лимит целиком.
+ */
+const INSTANCES = Math.max(1, Number(process.env.instances) || 1);
+const PER_IP_BOARDS = Math.max(1, Math.ceil((Number(process.env.LIVE_BOARDS_PER_IP_HOUR) || 40) / INSTANCES));
 /** Bound on the table itself, so rotating addresses cannot grow it without limit. */
 const MAX_TRACKED_IPS = 4000;
 

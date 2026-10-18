@@ -2,7 +2,7 @@ import fs from 'node:fs';
 import os from 'node:os';
 import path from 'node:path';
 import seed from '@/data/top-routes.json';
-import { getStale, getStaleTs } from '@/lib/flightStore';
+import { getStale, getStaleTs, DATA_DIR } from '@/lib/flightStore';
 import type { AirlabsFlight } from '@/lib/flights';
 import { getMegaIataCodes } from '@/lib/warm';
 
@@ -24,8 +24,9 @@ import { getMegaIataCodes } from '@/lib/warm';
 // they have no flights, and a sitemap full of noindexed URLs is the exact signal that got
 // 4,035 pages excluded in the first place.
 
+// Не /tmp: Ubuntu очищает его при загрузке. Каталог данных — общий с хранилищем (lib/flightStore.ts).
 const LIVE_PATH = process.env.TOP_ROUTES_PATH
-  || path.join(os.tmpdir(), 'airportsboard-top-routes.json');
+  || path.join(DATA_DIR, 'top-routes.json');
 
 /** How much of the day must pass before the warmer takes another snapshot. */
 const HARVEST_INTERVAL_MS = 20 * 60 * 60 * 1000;
@@ -172,7 +173,13 @@ export function harvestFromStore(now = Date.now()): { snapshotPairs: number; run
     pairs,
   } as RouteFile & { note: string };
 
-  try { fs.writeFileSync(LIVE_PATH, JSON.stringify(out)); }
-  catch { return null; }                    // read-only fs — seed keeps serving
+  // Атомарно: процессов несколько, и соседний может читать файл посреди записи.
+  const tmp = `${LIVE_PATH}.tmp-${process.pid}`;
+  try {
+    fs.mkdirSync(path.dirname(LIVE_PATH), { recursive: true });
+    fs.writeFileSync(tmp, JSON.stringify(out));
+    fs.renameSync(tmp, LIVE_PATH);
+  }
+  catch { try { fs.unlinkSync(tmp); } catch { /* нет */ } return null; } // read-only fs — seed keeps serving
   return { snapshotPairs, runs };
 }
