@@ -155,12 +155,22 @@ FLIGHT_STORE_PATH=/tmp/f.json NEXT_DIST_DIR=.next-audit npx next start -p 3099
 
 ## Сервер (с 18.10.2026)
 
-FirstVDS `eschudov1.fvds.ru`, 95.81.103.82, Амстердам. Пароль root утерян, «Перейти в панель»
-отдаёт Fatal error, ISPmanager на :1500 закрыт. Вход — **`ssh deploy@95.81.103.82`** по ключу
-этого Mac (кладётся при каждой сборке `scripts/ensure-operator-key.mjs`). sudo у deploy нет:
-nginx и root-крон отсюда не править, логи nginx не читаются (группа adm).
+**Timeweb Cloud `airportsboard-1`, 217.149.26.240, Амстердам** (Premium 4 vCPU / 8 ГБ / 80 ГБ,
+Ubuntu 24.04, ~10 040 ₽/мес). Переезд 18.10.2026 с FirstVDS (95.81.103.82): там пароль root был
+утерян, панель отдавала Fatal error, а после инцидента FirstVDS 17.10 перезагрузки не работали.
+Вход **`ssh root@217.149.26.240`** и **`ssh deploy@217.149.26.240`** по ключу этого Mac (ключ
+«mac-whereiszhenya» в Timeweb). Вход по паролю выключен, ufw: 22/80/443.
 
-- **pm2 — cluster, (ядра − 1) процессов**, `ecosystem.config.cjs`. Секреты (AIRLABS_API_KEY,
+- **DNS — Timeweb** (`ns1/ns2.timeweb.ru`, `ns3/ns4.timeweb.org`), регистратор RU-CENTER (nic.ru).
+  Записи: A `@` и `www` → 217.149.26.240 (+ почтовые MX/SPF Timeweb по умолчанию, почты нет).
+- **nginx — микрокэш 30 с** для 200-ответов страниц (`/api/` и RSC-запросы мимо), сжатие в nginx,
+  Next получает пустой Accept-Encoding. Конфиг `/etc/nginx/sites-available/airportsboard`,
+  кэш `/var/cache/nginx/airportsboard`, заголовок `X-Cache`. TLS — certbot, автопродление.
+- **Крон** `/etc/cron.d/airportsboard`: прогрев */30 (root), сторож :15 (root), ежедневные
+  проверки 10:20 (deploy). Токен прогрева — `/root/.airportsboard-cron-token`.
+- Старый FirstVDS 95.81.103.82 остановлен после переезда; держится запасным, пока не удалён.
+
+- **pm2 — cluster, (ядра − 1) процессов** (сейчас 3), `ecosystem.config.cjs`. Секреты (AIRLABS_API_KEY,
   AIRLABS_MONTHLY_CAP, CRON_TOKEN) — `~/airportsboard.env` на боксе. После смены числа ядер:
   `cd /var/www/airportsboard && pm2 delete airportsboard && pm2 start ecosystem.config.cjs && pm2 save`
   — `pm2 restart` число процессов не пересчитывает. `pm2-deploy.service` поднимает всё при загрузке.
