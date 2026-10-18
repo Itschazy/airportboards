@@ -1,0 +1,71 @@
+{
+  "domain": "airportsboard.live",
+  "provider": "ClouDNS",
+  "zoneId": 15463533,
+  "delegated": false,
+  "nameservers": [
+    "gns21.cloudns.net",
+    "gns22.cloudns.net",
+    "gns23.cloudns.net",
+    "gns24.cloudns.net"
+  ],
+  "A": [
+    {
+      "host": "@",
+      "location": "Default",
+      "value": "217.149.26.240",
+      "ttl": 300
+    },
+    {
+      "host": "@",
+      "location": "Russian Federation",
+      "value": "85.193.89.51",
+      "ttl": 300
+    },
+    {
+      "host": "www",
+      "location": "Default",
+      "value": "217.149.26.240",
+      "ttl": 300
+    },
+    {
+      "host": "www",
+      "location": "Russian Federation",
+      "value": "85.193.89.51",
+      "ttl": 300
+    },
+    {
+      "host": "ru-test",
+      "location": "Default",
+      "value": "85.193.89.51",
+      "ttl": 300
+    }
+  ],
+  "MX": [
+    {
+      "host": "@",
+      "priority": 10,
+      "value": "mx1.timeweb.ru.",
+      "ttl": 600
+    },
+    {
+      "host": "@",
+      "priority": 20,
+      "value": "mx2.timeweb.ru.",
+      "ttl": 600
+    }
+  ],
+  "TXT": [
+    {
+      "host": "@",
+      "value": "v=spf1 include:_spf.timeweb.ru ~all",
+      "ttl": 600
+    },
+    {
+      "host": "_dmarc",
+      "value": "v=DMARC1;p=none",
+      "ttl": 600
+    }
+  ],
+  "cutoverGate": "Успешная проверка T2 владельцем, main/www TLS и автоматическое продление до изменения NS"
+}
