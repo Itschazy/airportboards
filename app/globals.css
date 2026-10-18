@@ -194,3 +194,19 @@ input::placeholder { color:var(--color-secondary); opacity:1; }
 }
 /* Заголовок главной не должен разрывать соединённые арабские/деванагари буквы. */
 [lang='ar'] .home-page h1, [lang='hi'] .home-page h1 { letter-spacing:normal!important; }
+
+/* Отдельные разделы можно держать открытыми одновременно; никаких вложенных шагов
+   для FAQ. Заголовок занимает весь target (не меньше 48 px), стрелка — вниз в LTR/RTL. */
+.seo-section { margin-top:12px; background:var(--color-surface); border:1px solid var(--color-border); border-radius:12px; }
+.seo-section summary { list-style:none; cursor:pointer; padding:16px; min-height:48px; }
+.seo-section summary::-webkit-details-marker { display:none; }
+.seo-section summary h2, .seo-section summary h3 { display:flex; align-items:center; justify-content:space-between; gap:14px; margin:0; font-size:15px; font-weight:650; line-height:1.45; color:var(--color-text); }
+.seo-section summary svg { flex-shrink:0; color:var(--color-secondary); }
+.seo-section[open] > summary svg { transform:rotate(180deg); }
+.seo-section-content { padding:0 16px 16px; margin:0; font-size:14px; line-height:1.6; color:var(--color-secondary); overflow-wrap:break-word; }
+.seo-section-content table { min-width:280px; }
+.faq-list { display:flex; flex-direction:column; gap:10px; }
+.faq-item { margin-top:0; }
+/* Внутри аккордеона уже есть рамка и отступы. Вторая рамка таблицы отнимала
+   36 px и обрезала колонку времени на 375 px; прокрутка остаётся для широких таблиц. */
+.seo-section-content > div:has(> table) { padding:0!important; border:0!important; border-radius:0!important; }

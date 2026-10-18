@@ -82,56 +82,13 @@ export function PopularRoutes({ iata, locale, perDay }: { iata: string; locale: 
   );
 }
 
-// ── About card with read-more ──
-export function AboutCard({ text, readMore }: { text: string; readMore: string }) {
-  const [open, setOpen] = useState(false);
-  return (
-    <div style={{ background: C.card, border: C.border, borderRadius: 18, padding: '18px 20px' }}>
-      <p style={{
-        fontSize: 15, lineHeight: 1.65, color: 'var(--color-secondary)', margin: 0,
-        ...(open ? {} : { display: '-webkit-box', WebkitLineClamp: 4, WebkitBoxOrient: 'vertical', overflow: 'hidden' }),
-      }}>
-        {text}
-      </p>
-      {!open && (
-        <button className="press" onClick={() => setOpen(true)} style={{ marginTop: 8, background: 'none', border: 'none', color: C.blue, fontSize: 14, fontWeight: 600, cursor: 'pointer', padding: '2px 0' }}>
-          {readMore}
-        </button>
-      )}
-    </div>
-  );
-}
-
-// ── FAQ accordion (answers stay in the DOM for SEO/schema) ──
+// Каждый вопрос раскрывается независимо без JS. Ответ всегда находится в SSR HTML,
+// а не появляется только после клика; FAQPage строится из того же массива в AirportBottom.
 export function Faq({ items }: { items: { q: string; a: string }[] }) {
-  const [open, setOpen] = useState<number | null>(0);
-  return (
-    <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
-      {items.map((it, i) => (
-        <div key={i} style={{ background: C.card, border: C.border, borderRadius: 16, overflow: 'hidden' }}>
-          {/* Раскрывающийся блок по ARIA APG: без aria-expanded программа чтения не сообщает
-            СОСТОЯНИЕ — человек слышит вопрос, но не знает, раскрыт ли ответ и что кнопка
-            вообще что-то раскрывает. Девять ответов из десяти на странице свёрнуты. */}
-        <button
-          onClick={() => setOpen(open === i ? null : i)}
-          aria-expanded={open === i}
-          aria-controls={`faq-a-${i}`}
-          id={`faq-q-${i}`}
-          style={{
-            width: '100%', display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 12,
-            padding: '14px 16px', background: 'none', border: 'none', color: 'var(--color-text)', fontSize: 15, fontWeight: 600,
-            textAlign: 'start', cursor: 'pointer',
-          }}>
-            <h3 style={{ margin: 0, fontSize: 15, fontWeight: 600 }}>{it.q}</h3>
-            <svg width="13" height="13" viewBox="0 0 13 13" fill="none" style={{ flexShrink: 0, transform: open === i ? 'rotate(180deg)' : 'none', transition: 'transform 0.2s' }}>
-              <path d="M3 5L6.5 8.5L10 5" stroke="var(--color-secondary)" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" />
-            </svg>
-          </button>
-          <p id={`faq-a-${i}`} role="region" aria-labelledby={`faq-q-${i}`} style={{ display: open === i ? 'block' : 'none', margin: 0, padding: '0 16px 16px', fontSize: 14, lineHeight: 1.55, color: C.sub }}>
-            {it.a}
-          </p>
-        </div>
-      ))}
-    </div>
-  );
+  return <div className="faq-list">{items.map((it, i) => (
+    <details className="seo-section faq-item" key={i}>
+      <summary><h3>{it.q}<svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="m4 6 4 4 4-4" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" /></svg></h3></summary>
+      <p className="seo-section-content">{it.a}</p>
+    </details>
+  ))}</div>;
 }

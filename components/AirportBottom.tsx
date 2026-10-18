@@ -1,3 +1,4 @@
+import { SeoSection } from '@/components/SeoSection';
 import { numLocale } from '@/lib/i18n';
 import { getTranslations } from 'next-intl/server';
 import Link from 'next/link';
@@ -7,7 +8,7 @@ import { getCityName, getCountryName } from '@/lib/places';
 import { countryIn as esCountryIn } from '@/lib/es-article';
 import { getAirportName } from '@/lib/airport-names';
 import type { FlightRow } from '@/lib/flights';
-import { MoreInfo, OverviewMetrics, AboutCard, Faq } from '@/components/AirportExtras';
+import { MoreInfo, OverviewMetrics, Faq } from '@/components/AirportExtras';
 import { getAirportContentExtended } from '@/lib/airport-content-extended';
 import { getAirportSchedule, weekdayNames, maskToDays } from '@/lib/airport-schedule';
 import { getWikiRoutes } from '@/lib/wiki-routes';
@@ -319,18 +320,16 @@ export async function AirportBottom({ airport, locale, about, displayName, fligh
             links to the event guide. Auto-expires once the event is over. */}
         <EventBanner iata={airport.iata} locale={locale} style={{ marginTop: 14 }} />
 
-        {/* ── Always visible: the unique, quotable prose ──────────────────────────
-            About → guide (transport/terminals/tips) → FAQ sit ABOVE the fold-out. These
-            are the passages worth citing and the only text here no other site has;
-            behind a click they were ~83% of the page's text, invisible to readers,
-            search engines and answer engines alike. What stays in "show more" below is
-            navigation — link lists, not prose. */}
+        {/* Справочные разделы свёрнуты по решению владельца 18.10.2026.
+            Раньше считалось, что весь текст надо раскрывать сразу; это превращало
+            мобильную страницу в длинную ленту. Теперь заголовки доступны сразу,
+            а всё содержимое остаётся в HTML внутри native details — без загрузки
+            по клику и без удаления FAQPage. Проверено сравнением HTML до/после. */}
         {/* 6. ABOUT */}
         {about && (
-          <section className="cv-auto" style={sec}>
-            <H2>{t('about_title', { iata: airport.iata })}</H2>
-            <AboutCard text={about} readMore={t('read_more')} />
-          </section>
+          <SeoSection title={t('about_title', { iata: airport.iata })}>
+            <p style={{ fontSize: 15, lineHeight: 1.65, color: SUB, margin: 0 }}>{about}</p>
+          </SeoSection>
         )}
 
         {/* 6a. PUBLISHED ROUTES — the answer for airports with no live board.
@@ -343,8 +342,7 @@ export async function AirportBottom({ airport, locale, about, displayName, fligh
             saying the same thing — hasNoService() now covers the sourced-negative case, so
             without this gate the two statements duplicated on the same screen. */}
         {wiki && (wiki.airlines.length > 0 || (wiki.status === 'no_commercial_service' && !noService)) && (
-          <section className="cv-auto" style={sec}>
-            <H2>{t('wiki_routes_title', { iata: airport.iata, deIata })}</H2>
+          <SeoSection title={t('wiki_routes_title', { iata: airport.iata, deIata })}>
             {wiki.status === 'no_commercial_service' ? (
               <p style={{ fontSize: 15, lineHeight: 1.6, color: 'var(--color-secondary)', margin: 0 }}>
                 {wiki.since
@@ -373,7 +371,7 @@ export async function AirportBottom({ airport, locale, about, displayName, fligh
                 {' '}· CC BY-SA 4.0
               </p>
             )}
-          </section>
+          </SeoSection>
         )}
 
         {/* 6a-ter. WEEKLY DEPARTURE PATTERN — the question the board cannot answer.
@@ -385,8 +383,7 @@ export async function AirportBottom({ airport, locale, about, displayName, fligh
             repeated twenty times. Their count goes in the lead sentence, where it is a fact
             rather than filler. */}
         {sched && (
-          <section className="cv-auto" style={sec}>
-            <H2>{tUi('sched_title', { a: name, deA: deName })}</H2>
+          <SeoSection title={tUi('sched_title', { a: name, deA: deName })}>
             <p style={{ fontSize: 15, lineHeight: 1.6, color: 'var(--color-secondary)', margin: '0 0 14px' }}>
               {tUi('sched_lead', { a: name, deA: deName, d: sched.dailyCount, i: sched.irregularCount })}
               {(() => {
@@ -453,7 +450,7 @@ export async function AirportBottom({ airport, locale, about, displayName, fligh
                   : '',
               })}
             </p>
-          </section>
+          </SeoSection>
         )}
 
         {/* 6a-bis. REFERENCE TABLES — the numbers, before the prose.
@@ -464,7 +461,7 @@ export async function AirportBottom({ airport, locale, about, displayName, fligh
             agreeing rows survived, so a missing fare means the two passes disagreed — the
             line still renders, because a number and a direction beat nothing. */}
         {ext?.guide && (ext.guide.transfers.length > 0 || ext.guide.transit.length > 0) && (
-          <section className="cv-auto" style={sec}>
+          <SeoSection title={extLabels.transport}>
             {ext.guide.transfers.length > 0 && (
               <>
                 <H2>{tUi('guide_transfers')}</H2>
@@ -543,22 +540,21 @@ export async function AirportBottom({ airport, locale, about, displayName, fligh
                 })(),
               })}
             </p>
-          </section>
+            {ext.transport && <p style={{ fontSize: 15, lineHeight: 1.6, color: SUB, marginTop: 16 }}>{ext.transport}</p>}
+          </SeoSection>
         )}
 
         {/* 6b. AIRPORT GUIDE — transport / terminals / tips (top hubs only; renders
             nothing when there's no extended content file for this airport). */}
-        {ext?.transport && (
-          <section className="cv-auto" style={sec}>
-            <H2>{extLabels.transport}</H2>
-            <div style={{ background: 'var(--color-surface)', border: '1px solid var(--color-border)', borderRadius: 16, padding: '16px 18px', fontSize: 15, lineHeight: 1.6, color: 'var(--color-secondary)' }}>{ext.transport}</div>
-          </section>
+        {ext?.transport && !(ext.guide && (ext.guide.transfers.length || ext.guide.transit.length)) && (
+          <SeoSection title={extLabels.transport}>
+            <p style={{ margin: 0, fontSize: 15, lineHeight: 1.6, color: SUB }}>{ext.transport}</p>
+          </SeoSection>
         )}
         {ext?.terminals && (
-          <section className="cv-auto" style={sec}>
-            <H2>{extLabels.terminals}</H2>
-            <div style={{ background: 'var(--color-surface)', border: '1px solid var(--color-border)', borderRadius: 16, padding: '16px 18px', fontSize: 15, lineHeight: 1.6, color: 'var(--color-secondary)' }}>{ext.terminals}</div>
-          </section>
+          <SeoSection title={extLabels.terminals}>
+            <p style={{ margin: 0, fontSize: 15, lineHeight: 1.6, color: SUB }}>{ext.terminals}</p>
+          </SeoSection>
         )}
         {/* Советы — только на табло ВЫЛЕТА. Текст этого блока весь про отправление: приезжайте
             заранее, регистрация, сдача багажа, контроль безопасности, ручная кладь. Заголовок
@@ -570,14 +566,13 @@ export async function AirportBottom({ airport, locale, about, displayName, fligh
             несоответствие вместо того, чтобы его убрать. Побочно это ещё и разводит родителя с
             его подстраницей: замер 14.08 давал схожесть 0.36 по 12 парам, и она станет ниже. */}
         {ext?.tips && !inbound && (
-          <section className="cv-auto" style={sec}>
-            <H2>{extLabels.tips}</H2>
-            <div style={{ background: 'var(--color-surface)', border: '1px solid var(--color-border)', borderRadius: 16, padding: '16px 18px', fontSize: 15, lineHeight: 1.6, color: 'var(--color-secondary)' }}>{ext.tips}</div>
-          </section>
+          <SeoSection title={extLabels.tips}>
+            <p style={{ margin: 0, fontSize: 15, lineHeight: 1.6, color: SUB }}>{ext.tips}</p>
+          </SeoSection>
         )}
 
         {/* 5. FAQ */}
-        <section className="cv-auto" style={sec}>
+        <section style={{ marginTop: 24 }}>
           <H2>{t('faq_title')}</H2>
           <Faq items={faq} />
         </section>
