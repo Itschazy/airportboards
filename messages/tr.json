@@ -191,6 +191,7 @@
     "arrivals_on_board": "panoda {count, number} varış",
     "no_flights": "Uçuş bulunamadı",
     "filter_all": "Tümü",
+    "filter_issues": "Gecikmeler ve iptaller",
     "filter_ontime": "Zamanında",
     "filter_delayed": "Gecikmiş",
     "filter_boarding": "Biniş",

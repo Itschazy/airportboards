@@ -191,6 +191,7 @@
     "arrivals_on_board": "航班板上有 {count, number} 个到达航班",
     "no_flights": "未找到航班",
     "filter_all": "全部",
+    "filter_issues": "延误和取消",
     "filter_ontime": "准点",
     "filter_delayed": "延误",
     "filter_boarding": "登机中",

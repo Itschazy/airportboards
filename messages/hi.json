@@ -191,6 +191,7 @@
     "arrivals_on_board": "बोर्ड पर {count, plural, one {# आगमन} other {# आगमन}}",
     "no_flights": "कोई फ्लाइट नहीं मिली",
     "filter_all": "सभी",
+    "filter_issues": "देरी और रद्द उड़ानें",
     "filter_ontime": "समय पर",
     "filter_delayed": "विलंबित",
     "filter_boarding": "बोर्डिंग",

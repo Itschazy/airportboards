@@ -191,6 +191,7 @@
     "arrivals_on_board": "{count, plural, one {# arrival} other {# arrivals}} on the board",
     "no_flights": "No flights found",
     "filter_all": "All",
+    "filter_issues": "Delays and cancellations",
     "filter_ontime": "On time",
     "filter_delayed": "Delayed",
     "filter_boarding": "Boarding",

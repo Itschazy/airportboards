@@ -191,6 +191,7 @@
     "arrivals_on_board": "운항 정보판에 도착 {count, number}편",
     "no_flights": "항공편이 없습니다",
     "filter_all": "전체",
+    "filter_issues": "지연 및 결항",
     "filter_ontime": "정시",
     "filter_delayed": "지연",
     "filter_boarding": "탑승",

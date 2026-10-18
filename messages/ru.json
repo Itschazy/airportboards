@@ -191,6 +191,7 @@
     "arrivals_on_board": "{count, plural, one {# прилёт} few {# прилёта} many {# прилётов} other {# прилётов}} на табло",
     "no_flights": "Рейсы не найдены",
     "filter_all": "Все",
+    "filter_issues": "Задержки и отмены",
     "filter_ontime": "По расписанию",
     "filter_delayed": "Задержанные",
     "filter_boarding": "Посадка",

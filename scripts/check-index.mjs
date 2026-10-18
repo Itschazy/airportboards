@@ -51,7 +51,7 @@ const canonical = (html) => {
 
 async function probe(path) {
   const url = `${BASE}${path}`;
-  const res = await fetch(url, { redirect: 'manual', headers: { 'user-agent': 'index-audit/1.0' } });
+  const res = await fetch(url, { redirect: 'manual', headers: { 'user-agent': 'audit-bot' } });
   const status = res.status;
   const location = res.headers.get('location');
   const xRobots = res.headers.get('x-robots-tag');

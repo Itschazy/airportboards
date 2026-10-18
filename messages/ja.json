@@ -191,6 +191,7 @@
     "arrivals_on_board": "掲示板に到着便{count, number}件",
     "no_flights": "該当する便はありません",
     "filter_all": "すべて",
+    "filter_issues": "遅延・欠航",
     "filter_ontime": "定刻",
     "filter_delayed": "遅延",
     "filter_boarding": "搭乗中",

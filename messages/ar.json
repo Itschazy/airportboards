@@ -191,6 +191,7 @@
     "arrivals_on_board": "{count, plural, zero {# رحلات قادمة} one {# رحلة قادمة} two {رحلتا قادمة} few {# رحلات قادمة} many {# رحلة قادمة} other {# رحلة قادمة}} على اللوحة",
     "no_flights": "لم يتم العثور على رحلات",
     "filter_all": "الكل",
+    "filter_issues": "التأخيرات والإلغاءات",
     "filter_ontime": "في الموعد",
     "filter_delayed": "متأخرة",
     "filter_boarding": "الصعود",

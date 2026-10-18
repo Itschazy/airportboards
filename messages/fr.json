@@ -191,6 +191,7 @@
     "arrivals_on_board": "{count, plural, one {# arrivée} other {# arrivées}} sur le tableau",
     "no_flights": "Aucun vol trouvé",
     "filter_all": "Tous",
+    "filter_issues": "Retards et annulations",
     "filter_ontime": "À l'heure",
     "filter_delayed": "Retardé",
     "filter_boarding": "Embarquement",

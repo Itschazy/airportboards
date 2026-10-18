@@ -10,7 +10,7 @@ import type { Airport } from '@/lib/airports';
 
 type T = (key: string, values?: Record<string, string | number>) => string;
 type Mode = 'departures' | 'arrivals';
-type FilterKey = 'all' | 'ontime' | 'delayed' | 'boarding' | 'finalcall' | 'departed';
+type FilterKey = 'all' | 'issues';
 
 type Flight = {
   flight: string;
@@ -82,21 +82,15 @@ const STATUS_COLOR: Record<string, string> = {
   scheduled: C.gray,
 };
 
+// Согласовано владельцем 18.10.2026 после сравнения на 375 px: оба фильтра видны
+// без горизонтальной прокрутки. Все статусы остаются в общем списке; отдельный
+// срез объединяет только задержки и отмены. Прежний delayed ошибочно включал
+// последний вызов, но пропускал отмены. Для прилётов и вылетов смысл одинаков.
 const FILTER_STATUSES: Record<FilterKey, string[]> = {
-  all:       [],
-  ontime:    ['ontime', 'scheduled'],
-  delayed:   ['delayed', 'finalcall'],
-  boarding:  ['boarding'],
-  finalcall: ['finalcall'],
-  departed:  ['departed', 'arrived', 'baggage'],
+  all: [],
+  issues: ['delayed', 'cancelled'],
 };
-
-const FILTERS: FilterKey[] = ['all', 'ontime', 'delayed', 'boarding', 'finalcall', 'departed'];
-// Arrivals never board and never make a final call — those chips on an arrivals board were
-// filters over statuses that cannot occur, i.e. two dead buttons on every arrivals view.
-// (Spotted by an external reviewer pass; confirmed in mapStatus: arrivals rows only ever map
-// to scheduled/ontime/delayed/arrived/baggage/cancelled.)
-const ARR_FILTERS: FilterKey[] = ['all', 'ontime', 'delayed', 'departed'];
+const FILTERS: FilterKey[] = ['all', 'issues'];
 
 const haptic = (ms = 6) => { try { (navigator as any).vibrate?.(ms); } catch {} };
 
@@ -713,7 +707,7 @@ export function FlightBoard({ airport, locale, defaultMode = 'departures', displ
    *  This exists because the title and the body had drifted apart. `noService` covers the
    *  airports measured at zero and already strips the chrome; the 299 airports that were
    *  never measured at all got the honest new title and still rendered a full live-board
-   *  skeleton — direction tabs plus six status filters ("On time", "Boarding", "Final call")
+   *  skeleton — direction tabs plus status filters
    *  over an empty list. That is the "broken tool" impression a reviewer forms in the first
    *  screenful, and the page's genuine content (location, terminals, FAQ) sat below it.
    *
@@ -1245,16 +1239,16 @@ export function FlightBoard({ airport, locale, defaultMode = 'departures', displ
 
       {/* ── Filter pills ───────────────────────────────────── */}
       <div className="pillrow" style={{ display: 'flex', gap: 7, padding: '0 16px 12px', overflowX: 'auto', maxWidth: 960, margin: '0 auto' }}>
-        {(mode === 'arrivals' ? ARR_FILTERS : FILTERS).map(key => {
+        {FILTERS.map(key => {
           const active = filter === key;
           return (
             <button key={key} type="button" aria-pressed={active} className="press" onClick={() => { haptic(); track(GOALS.boardFilter, { filter: key }); setFilter(key); }} style={{
-              padding: '7px 13px', minHeight: 34, fontSize: 13, fontWeight: active ? 600 : 400,
+              padding: '7px 13px', minHeight: 44, fontSize: 13, fontWeight: active ? 600 : 400,
               border: active ? 'none' : `1px solid ${C.border}`, borderRadius: 999, cursor: 'pointer',
               background: active ? C.text : 'transparent', color: active ? '#000000' : C.secondary,
               whiteSpace: 'nowrap', flexShrink: 0, transition: 'all 0.15s ease',
             }}>
-              {key === 'departed' && mode === 'arrivals' ? t('st_arrived') : t(`filter_${key}`)}
+              {t(`filter_${key}`)}
             </button>
           );
         })}
