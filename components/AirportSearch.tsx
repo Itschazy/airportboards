@@ -276,15 +276,18 @@ export function AirportSearch({ locale, placeholder }: { locale: string; placeho
           <button
             type="button"
             aria-label={tNav('clear')}
-            onMouseDown={() => { setQuery(''); setActive(-1); inputRef.current?.focus(); }}
+            // mousedown не вызывается при Enter/VoiceOver. Очистка должна работать
+            // через стандартный click; preventDefault сохраняет фокус при касании.
+            onMouseDown={e => e.preventDefault()}
+            onClick={() => { setQuery(''); setActive(-1); inputRef.current?.focus(); }}
             style={{
-              position: 'absolute', insetInlineEnd: 12, top: '50%', transform: 'translateY(-50%)',
-              background: '#2C2C2E', border: 'none', borderRadius: '50%',
-              width: 28, height: 28, cursor: 'pointer',
+              position: 'absolute', insetInlineEnd: 4, top: '50%', transform: 'translateY(-50%)',
+              background: 'transparent', border: 'none', borderRadius: '50%',
+              width: 44, height: 44, cursor: 'pointer',
               display: 'flex', alignItems: 'center', justifyContent: 'center', padding: 0,
             }}
           >
-            <svg width="10" height="10" viewBox="0 0 10 10" fill="none" aria-hidden="true">
+            <svg width="28" height="28" viewBox="0 0 10 10" fill="none" aria-hidden="true" style={{ padding: 9, background: '#2C2C2E', borderRadius: '50%' }}>
               <path d="M1 1L9 9M9 1L1 9" stroke="#8A8A8A" strokeWidth="1.5" strokeLinecap="round"/>
             </svg>
           </button>

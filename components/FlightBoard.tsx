@@ -264,7 +264,10 @@ function BottomSheet({ flight, mode, onClose, tz, locale, clockMs, updLabel, ori
   useEffect(() => {
     if (!vis) return;
     const prev = document.activeElement as HTMLElement | null;
-    sheetRef.current?.focus();
+    if (sheetRef.current) {
+      sheetRef.current.scrollTop = 0;
+      sheetRef.current.focus({ preventScroll: true });
+    }
     const onKey = (e: KeyboardEvent) => {
       if (e.key === 'Escape') { onClose(); return; }
       if (e.key !== 'Tab') return;
@@ -280,7 +283,7 @@ function BottomSheet({ flight, mode, onClose, tz, locale, clockMs, updLabel, ori
       else if (!sheet.contains(on)) { e.preventDefault(); first.focus(); }
     };
     document.addEventListener('keydown', onKey);
-    return () => { document.removeEventListener('keydown', onKey); prev?.focus?.(); };
+    return () => { document.removeEventListener('keydown', onKey); prev?.focus?.({ preventScroll: true }); };
   }, [vis]);
 
   const localNow = () => {
@@ -362,7 +365,9 @@ function BottomSheet({ flight, mode, onClose, tz, locale, clockMs, updLabel, ori
     const shouldClose = dragY.current > 110;
     dragStart.current = null;
     dragY.current = 0;
-    settleBack();          // restore the CSS transition + declared transform
+    // Не даём отложенному кадру снова сдвинуть уже закрытую карточку.
+    if (raf.current) { cancelAnimationFrame(raf.current); raf.current = 0; }
+    settleBack();
     if (shouldClose) onClose();
   };
 
@@ -627,9 +632,6 @@ function BottomSheet({ flight, mode, onClose, tz, locale, clockMs, updLabel, ori
         aria-label={flight ? `${flight.flight} — ${flight.destination || flight.origin || ''}` : undefined}
         tabIndex={-1}
         className="sheet-scroll"
-        onTouchStart={onTouchStart}
-        onTouchMove={onTouchMove}
-        onTouchEnd={onTouchEnd}
         style={{
           position: 'fixed', bottom: 0, left: 0, right: 0, zIndex: 201,
           outline: 'none',
@@ -640,17 +642,34 @@ function BottomSheet({ flight, mode, onClose, tz, locale, clockMs, updLabel, ori
           transition: 'transform 0.34s cubic-bezier(0.32, 0.72, 0, 1)',
           willChange: vis ? 'transform' : undefined,
           paddingBottom: 'calc(40px + env(safe-area-inset-bottom))',
-          maxHeight: '90vh', overflowY: 'auto',
+          maxHeight: '90dvh', overflowY: 'auto',
           maxWidth: 640, margin: '0 auto',
         }}>
-        {/* Handle (tap to close) */}
-        {/* The grab handle doubles as the close control, and at 12px+5px+6px it measured 23px
-            tall — just under the 24px WCAG 2.2 asks for, on the one control every visitor needs
-            to leave. The extra padding is invisible: the bar itself is unchanged, the target
-            around it is not. */}
-        <button type="button" onClick={onClose} aria-label={tNav('close')} style={{ display: 'block', width: '100%', padding: '16px 0 12px', background: 'none', border: 'none', cursor: 'pointer' }}>
-          <div style={{ width: 48, height: 5, borderRadius: 3, background: 'rgba(255,255,255,0.22)', margin: '0 auto' }} />
-        </button>
+        {/* На телефоне прежняя ручка прокручивалась за экран: на 375×600 её верх
+            после прокрутки был −274px. Sticky-панель остаётся доступна при прокрутке карточки,
+            а dvh выше учитывает панели браузера. Явное «Закрыть» не требует знать жест.
+            Перетаскивание ограничено панелью: касание контента теперь только прокручивает
+            текст и не конкурирует с нативной прокруткой iOS/Android. */}
+        <div
+          onTouchStart={onTouchStart}
+          onTouchMove={onTouchMove}
+          onTouchEnd={onTouchEnd}
+          onTouchCancel={() => {
+            dragStart.current = null; dragY.current = 0;
+            if (raf.current) { cancelAnimationFrame(raf.current); raf.current = 0; }
+            settleBack();
+          }}
+          style={{ position: 'sticky', top: 0, zIndex: 2, background: '#111111',
+            padding: '8px 16px', touchAction: 'none', borderRadius: '32px 32px 0 0' }}
+        >
+          <button type="button" onClick={onClose} aria-label={tNav('close')}
+            style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between',
+              width: '100%', minHeight: 44, padding: '0 8px', color: C.text,
+              background: 'none', border: 'none', cursor: 'pointer', fontSize: 14 }}>
+            <span aria-hidden="true" style={{ width: 48, height: 5, borderRadius: 3, background: 'rgba(255,255,255,0.22)' }} />
+            <span>{tNav('close')} <span aria-hidden="true" style={{ fontSize: 22, marginInlineStart: 8 }}>×</span></span>
+          </button>
+        </div>
         {body}
       </div>
     </>

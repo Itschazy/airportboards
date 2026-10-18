@@ -63,8 +63,8 @@ export function SiteHeader({ locale }: { locale: Locale }) {
             style={{
               display: 'flex', alignItems: 'center', gap: 5,
               // 44, а не 40: шапка высотой 48, поднять можно бесплатно и ничего не сдвигая.
-          // Пункты самого меню при этом НЕ трогаем — у выпадающего списка нет max-height и
-          // overflow-y, и при 44 на ряд нижние языки уехали бы за экран.
+          // Меню ниже ограничено видимой высотой и прокручивается: все 12 языков
+          // доступны даже на телефоне в альбомной ориентации.
           padding: '11px 12px', minHeight: 44,
               borderRadius: 8,
               border: `1px solid ${open ? '#3A3A3C' : '#1A1A1A'}`,
@@ -90,7 +90,9 @@ export function SiteHeader({ locale }: { locale: Locale }) {
               background: '#111111',
               border: '1px solid #1A1A1A',
               borderRadius: 12,
-              overflow: 'hidden',
+              // На экране 667×375 меню заканчивалось на539px: нижние языки
+              // были недоступны. Скроллер сохраняет размер пунктов для пальца.
+              maxHeight: 'calc(100dvh - 64px)', overflowY: 'auto', overscrollBehavior: 'contain',
               zIndex: 100,
               minWidth: 168,
               boxShadow: '0 12px 40px rgba(0,0,0,0.7)',
@@ -102,7 +104,7 @@ export function SiteHeader({ locale }: { locale: Locale }) {
                   onClick={() => setOpen(false)}
                   style={{
                     display: 'flex', alignItems: 'center', justifyContent: 'space-between',
-                    padding: '10px 14px',
+                    padding: '10px 14px', minHeight: 44,
                     fontSize: 13,
                     borderBottom: i < locales.length - 1 ? '1px solid #1A1A1A' : 'none',
                     color: loc === locale ? '#FFFFFF' : '#8A8A8A',
