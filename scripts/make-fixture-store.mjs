@@ -35,7 +35,10 @@ if (!OUT) { console.error('укажите путь: node scripts/make-fixture-st
 
 const now = Date.now();
 const nowSec = Math.floor(now / 1000);
-const hhmm = (ts) => new Date(ts * 1000).toISOString().slice(11, 16);
+// Полная форма «YYYY-MM-DD HH:MM», как у airlabs: lib/flights.ts timePart берёт время ПОСЛЕ
+// пробела. С голым «HH:MM» колонка времени на локальном табло была пустой, и снимки экрана с
+// фикстуры показывали карточку без главного поля (18.10.2026).
+const hhmm = (ts) => new Date(ts * 1000).toISOString().slice(0, 16).replace('T', ' ');
 
 /** [код, вылетов в сутки (для сверки с data/airport-service.json), строк на борту] */
 const AIRPORTS = [
