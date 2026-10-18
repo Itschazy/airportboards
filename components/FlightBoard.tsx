@@ -221,6 +221,41 @@ function BottomSheet({ flight, mode, onClose, tz, locale, updLabel, originIata, 
   onTogglePin: () => void;
 }) {
   const t = useTranslations('ui');
+  const [copied, setCopied] = useState(false);
+  /**
+   * «Поделиться рейсом» (18.10.2026). В поисковых запросах сайта много «табло прилёта» — это
+   * встречающие; самое полезное, что можно им дать, — ссылка, по которой сразу открыт ИХ рейс
+   * с живым статусом. Ссылка ведёт на ту же страницу аэропорта с ?flight=…&dir=… (FlightBoard
+   * открывает карточку по параметру), а не на /flight/{код}: этот класс страниц намеренно 404,
+   * плодить тонкие страницы в индексе — решение, уже принятое в другую сторону.
+   * На телефоне — системное меню «Поделиться», на компьютере — копирование ссылки.
+   */
+  const share = useCallback(async () => {
+    if (!flight) return;
+    const url = `${location.origin}${location.pathname}?flight=${encodeURIComponent(flight.flight)}&dir=${mode}`;
+    const text = `${flight.flight} · ${flight.destination || flight.origin || ''}`.trim();
+    if (navigator.share) {
+      try { await navigator.share({ title: text, text, url }); return; }
+      catch (e) { if ((e as Error)?.name === 'AbortError') return; /* закрыл меню — не ошибка */ }
+    }
+    // Копирование: Clipboard API, а где он запрещён (встроенные браузеры приложений, нет
+    // разрешения) — старый путь через выделенный textarea. Без запасного пути кнопка молча
+    // не делала ничего, и человек не понимал, скопировалась ли ссылка.
+    let ok = false;
+    try { await navigator.clipboard.writeText(url); ok = true; } catch { /* ниже запасной путь */ }
+    if (!ok) {
+      try {
+        const ta = document.createElement('textarea');
+        ta.value = url; ta.setAttribute('readonly', ''); ta.style.position = 'fixed'; ta.style.opacity = '0';
+        document.body.appendChild(ta); ta.select();
+        ok = document.execCommand('copy');
+        document.body.removeChild(ta);
+      } catch { /* совсем некуда — ниже покажем ссылку */ }
+    }
+    if (!ok) { window.prompt(t('share_flight'), url); return; }
+    setCopied(true);
+    setTimeout(() => setCopied(false), 2000);
+  }, [flight, mode, t]);
   // «→» не разворачивается алгоритмом двунаправленного письма (Bidi_Mirrored=No)
   const arrow = locale === 'ar' ? '←' : '→';
   const tNav = useTranslations('nav');
@@ -467,6 +502,16 @@ function BottomSheet({ flight, mode, onClose, tz, locale, updLabel, originIata, 
               }}
             >
               {isPinned ? t('unpin_flight') : t('pin_flight')}
+            </button>
+            <button
+              onClick={() => { haptic(); share(); }}
+              style={{
+                marginTop: 10, marginInlineStart: 8, padding: '8px 14px', borderRadius: 999, fontSize: 13, fontWeight: 600,
+                border: `1px solid ${C.border}`, background: 'transparent',
+                color: copied ? C.green : C.secondary, cursor: 'pointer',
+              }}
+            >
+              {copied ? t('link_copied') : t('share_flight')}
             </button>
             <div style={{ fontSize: 'clamp(22px, 6.5vw, 30px)', color: '#A1A1A1', marginTop: 12, lineHeight: 1.15 }}>{flight.destination || flight.origin}</div>
             <div style={{ fontSize: 22, color: C.text, fontWeight: 600, marginTop: 6 }}>{flight.airline}</div>
@@ -880,6 +925,33 @@ export function FlightBoard({ airport, locale, defaultMode = 'departures', displ
     setLoading(true);
     fetchFlights();
   }, [fetchFlights]);
+
+  /**
+   * Ссылка «Поделиться рейсом» (?flight=SU1234&dir=arrivals) открывает карточку этого рейса.
+   * Параметр читается один раз после монтирования — серверный HTML от него не зависит, и кэш
+   * страницы (Next 30 с, nginx 30 с) остаётся общим. Если рейса в табло нет (улетел, другой
+   * день), страница просто открывается как обычно.
+   */
+  const deepLink = useRef<{ flight: string; dir: Mode } | null>(null);
+  useEffect(() => {
+    try {
+      const q = new URLSearchParams(location.search);
+      const fl = q.get('flight');
+      if (!fl) return;
+      const dir: Mode = q.get('dir') === 'arrivals' ? 'arrivals' : 'departures';
+      deepLink.current = { flight: fl.toUpperCase(), dir };
+      // На следующем тике, а не прямо в эффекте: переключение в момент гидрации обновляло
+      // aria-pressed, но не стиль вкладки — подсвечивались «Вылеты» при открытых прилётах.
+      if (dir !== mode) setTimeout(() => setMode(dir), 0);
+    } catch { /* без параметра — обычная страница */ }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+  useEffect(() => {
+    const d = deepLink.current;
+    if (!d || d.dir !== mode) return;
+    const f = flights.find((x) => x.flight.toUpperCase() === d.flight);
+    if (f) { deepLink.current = null; setSelected(f); }
+  }, [flights, mode]);
 
   // Poll only while the tab is visible, and stop after a stretch of idle
   // time — so backgrounded/forgotten tabs don't keep burning API quota.
@@ -1315,7 +1387,9 @@ export function FlightBoard({ airport, locale, defaultMode = 'departures', displ
           // (Калининград, Новосибирск) overflow by a little, 12+ (Екатеринбург) by a lot.
           // Everything shorter — which is most of the network — keeps the full 18px.
           const longestWord = city.split(/[\s‐-―-]+/).reduce((a, w) => Math.max(a, w.length), 0);
-          const cityFs = longestWord >= 12 ? 15 : longestWord >= 11 ? 16 : 18;
+          // Пороги сдвинуты на букву 18.10.2026: спокойный статус в одну строку взял у колонки 8px, и
+          // «Новосибирск» (11) на 16px рвался посреди слова.
+          const cityFs = longestWord >= 11 ? 15 : longestWord >= 10 ? 16 : 18;
 
           return (
             // <li> carries the list semantics; the inner div stays the button, so both roles
@@ -1387,15 +1461,22 @@ export function FlightBoard({ airport, locale, defaultMode = 'departures', displ
                     wraps to two lines in Russian ("ПО РАСПИСАНИЮ"), so the extra 12px bought
                     nothing here and was taken straight out of the destination, which had none
                     to spare. */}
+                {/* Спокойный статус — обычным регистром и в одну строку (18.10.2026). Заглавные
+                    «ПО / РАСПИСАНИЮ» в две строки делали КАЖДУЮ карточку на ~20px выше, а это
+                    самый частый статус: на экран телефона входило 4.5 рейса. Тревожные статусы
+                    (задержка, посадка, последний вызов, отмена) остаются заглавными и жирными —
+                    они и должны бросаться в глаза, а «всё по плану» — нет. */}
                 <div style={{ flexShrink: 0, textAlign: 'end', display: 'flex', alignItems: 'center', gap: 6 }}>
-                  <div style={{ maxWidth: 80 }}>
+                  <div style={{ maxWidth: (f.status === 'ontime' || f.status === 'scheduled') ? 88 : 80 }}>
                     {f.gate && (
                       <div style={{ lineHeight: 1.1, whiteSpace: 'nowrap', marginBottom: 5 }}>
                         <span style={{ fontSize: 12, color: C.secondary }}>{t('gate')} </span>
                         <bdi style={{ fontSize: 18, fontWeight: 700, color: C.text, letterSpacing: '-0.01em' }}>{f.gate}</bdi>
                       </div>
                     )}
-                    <div style={{
+                    <div style={(f.status === 'ontime' || f.status === 'scheduled') ? {
+                      fontSize: 11, fontWeight: 600, color, whiteSpace: 'nowrap', lineHeight: 1.25,
+                    } : {
                       fontSize: 12, fontWeight: 700, color, letterSpacing: '0.03em', textTransform: 'uppercase',
                       lineHeight: 1.25,
                       textShadow: !isPast && f.status === 'finalcall' ? '0 0 10px rgba(255,69,58,0.15)' : 'none',
