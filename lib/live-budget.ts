@@ -248,7 +248,29 @@ function freshnessOverride(ageMs: number | null): boolean {
  * знает; заводить его второе описание здесь значит заводить второй источник правды.
  */
 export function mayFetchLive(req: NextRequest, boardKey: string, ageMs: number | null): boolean {
-  return mayFetchLiveFor(req.headers, req.nextUrl.hostname, boardKey, ageMs);
+  return mayFetchLiveFor(req.headers, requestHost(req), boardKey, ageMs);
+}
+
+/**
+ * Имя хоста, к которому обратился посетитель, — из заголовков, а НЕ из req.nextUrl.
+ *
+ * 🔴 18.10.2026: живая покупка с /api/flights не срабатывала НИ РАЗУ — `admitted: 0` при сотнях
+ * отказов. За nginx `next start` строит req.nextUrl из адреса, на котором слушает сам
+ * (localhost:3000), а не из заголовка Host, который передаёт прокси. Слой 0 видел «localhost»
+ * и отказывал каждому живому читателю. Воспроизведено локально: запрос с Host: airportsboard.live
+ * и браузерным UA — refused.localhost.
+ *
+ * Снаружи это было невидимо, пока свежесть докупал серверный рендер первого экрана
+ * (boardForVisitor, хост берёт из заголовков). 18.10 страницы аэропорта ушли под 30-секундный
+ * кэш (b014679c), рендер перестал покупать — и табло Домодедово показывало «обновлено 25 мин назад»
+ * живому читателю, который как раз и должен был получить свежее.
+ *
+ * Заголовок Host выставляет наш nginx (`proxy_set_header Host $host`); X-Forwarded-Host — на
+ * случай другого прокси. Локальные обращения к :3000 приходят с Host: localhost:3000 и
+ * отсекаются слоем 0 по-прежнему.
+ */
+function requestHost(req: NextRequest): string {
+  return req.headers.get('x-forwarded-host') || req.headers.get('host') || req.nextUrl.hostname;
 }
 
 /**
