@@ -133,6 +133,13 @@ function db(): Store {
   return mem;
 }
 
+/**
+ * Сколько стоит одна запись хранилища — для /api/health. Запись синхронная: пока идут
+ * JSON.stringify и writeFileSync, процесс не отвечает никому, даже на ответы из кэша.
+ */
+let persistStat = { at: 0, stringifyMs: 0, writeMs: 0, bytes: 0, count: 0 };
+export function persistStats() { return persistStat; }
+
 let timer: ReturnType<typeof setTimeout> | null = null;
 function persist() {
   if (timer) return;
@@ -159,8 +166,12 @@ function persist() {
      */
     const tmp = `${STORE_PATH}.tmp-${process.pid}`;
     try {
-      fs.writeFileSync(tmp, JSON.stringify(mem));
+      const t0 = Date.now();
+      const json = JSON.stringify(mem);
+      const t1 = Date.now();
+      fs.writeFileSync(tmp, json);
       fs.renameSync(tmp, STORE_PATH);
+      persistStat = { at: t1, stringifyMs: t1 - t0, writeMs: Date.now() - t1, bytes: json.length, count: persistStat.count + 1 };
     } catch {
       try { fs.unlinkSync(tmp); } catch { /* временного файла может и не быть */ }
     }
