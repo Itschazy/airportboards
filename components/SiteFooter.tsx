@@ -78,11 +78,11 @@ export async function SiteFooter({ locale }: { locale: Locale }) {
   // every link in this footer was short on a site where roughly 70% of visits are phones.
   // inline-block + minHeight grows the target DOWNWARD into the 8px row gap that is already
   // there: the text does not move, the column grows about 4.5px per row, nothing reflows.
-  const linkStyle = { color: '#8A8A8A', textDecoration: 'none', fontSize: 13, display: 'inline-block', minHeight: 24 } as const;
-  const headStyle = { color: '#6A6A6A', fontSize: 11, fontWeight: 700, letterSpacing: '0.06em', textTransform: 'uppercase', margin: '0 0 10px' } as const;
+  const linkStyle = { color: 'var(--color-secondary)', textDecoration: 'none', fontSize: 13, display: 'inline-block', minHeight: 24 } as const;
+  const headStyle = { color: 'var(--color-secondary)', fontSize: 11, fontWeight: 700, letterSpacing: '0.06em', textTransform: 'uppercase', margin: '0 0 10px' } as const;
 
   return (
-    <footer style={{ borderTop: '1px solid #1A1A1A', marginTop: 'auto', padding: '32px 18px 28px' }}>
+    <footer style={{ borderTop: '1px solid var(--color-border)', marginTop: 'auto', padding: '32px 18px 28px' }}>
       <nav style={{ maxWidth: 1000, margin: '0 auto', display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: 28 }} aria-label={tNav('aria_footer')}>
         <div>
           <p style={headStyle}>{t('sec_countries')}</p>
@@ -93,7 +93,7 @@ export async function SiteFooter({ locale }: { locale: Locale }) {
               </li>
             ))}
             <li>
-              <Link href={`/${locale}/airports`} style={{ ...linkStyle, color: '#0A84FF' }}>{tNav('all_airports')} {forwardArrow(locale)}</Link>
+              <Link href={`/${locale}/airports`} style={{ ...linkStyle, color: 'var(--color-blue)' }}>{tNav('all_airports')} {forwardArrow(locale)}</Link>
             </li>
           </ul>
         </div>
@@ -138,7 +138,7 @@ export async function SiteFooter({ locale }: { locale: Locale }) {
             lang={loc}
             dir={rtlLocales.includes(loc) ? 'rtl' : 'ltr'}
             style={{
-              color: loc === locale ? '#FFFFFF' : '#8A8A8A',
+              color: loc === locale ? 'var(--color-text)' : 'var(--color-secondary)',
               fontWeight: loc === locale ? 600 : 400,
               textDecoration: 'none',
               fontSize: 13,
@@ -151,13 +151,13 @@ export async function SiteFooter({ locale }: { locale: Locale }) {
       </nav>
       <nav aria-label={tLegal('legal')} style={{ maxWidth: 1000, margin: '18px auto 0', display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: '8px 20px' }}>
         {legalLinks.map(l => (
-          <Link key={l.href} href={l.href} style={{ color: '#8A8A8A', textDecoration: 'none', fontSize: 13, display: 'inline-block', minHeight: 24 }}>{l.label}</Link>
+          <Link key={l.href} href={l.href} style={{ color: 'var(--color-secondary)', textDecoration: 'none', fontSize: 13, display: 'inline-block', minHeight: 24 }}>{l.label}</Link>
         ))}
       </nav>
-      <p style={{ maxWidth: 1000, margin: '20px auto 0', textAlign: 'center', fontSize: 12, color: '#6A6A6A', lineHeight: 1.5 }}>
+      <p style={{ maxWidth: 1000, margin: '20px auto 0', textAlign: 'center', fontSize: 12, color: 'var(--color-secondary)', lineHeight: 1.5 }}>
         {t('data_note')}
       </p>
-      <p style={{ maxWidth: 1000, margin: '10px auto 0', textAlign: 'center', fontSize: 11, color: '#5A5A5A', letterSpacing: '0.02em' }}>
+      <p style={{ maxWidth: 1000, margin: '10px auto 0', textAlign: 'center', fontSize: 11, color: 'var(--color-secondary)', letterSpacing: '0.02em' }}>
         airportsboard.live · © 2026
       </p>
     </footer>

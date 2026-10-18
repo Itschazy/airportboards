@@ -22,20 +22,20 @@ export function PopularNow({ airports, locale, depLabel, arrLabel }: {
         return (
           <Link key={a.iata} href={`/${locale}/airport/${a.iata}`} style={{
             width: 160, minWidth: 160, height: 170, textDecoration: 'none', color: 'inherit',
-            background: '#0B0B0B', border: '1px solid #1A1A1A', borderInlineStart: '3px solid #34C759',
+            background: 'var(--color-surface)', border: '1px solid var(--color-border)', borderInlineStart: '3px solid var(--color-green)',
             borderRadius: 20, padding: '18px 18px', display: 'flex', flexDirection: 'column',
           }}>
-            <div style={{ fontSize: 44, fontWeight: 800, letterSpacing: '-0.04em', color: '#FFFFFF', lineHeight: 1 }}>{a.iata}</div>
-            <div style={{ fontSize: 18, color: '#8A8A8A', marginTop: 6, whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>{a.city}</div>
+            <div style={{ fontSize: 44, fontWeight: 800, letterSpacing: '-0.04em', color: 'var(--color-text)', lineHeight: 1 }}>{a.iata}</div>
+            <div style={{ fontSize: 18, color: 'var(--color-secondary)', marginTop: 6, whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>{a.city}</div>
             <div style={{ marginTop: 'auto', display: 'flex', flexDirection: 'column', gap: 4 }}>
               {typeof c?.dep === 'number' && (
-                <div style={{ fontSize: 16, color: '#8A8A8A' }}>
-                  <span style={{ color: '#34C759', fontWeight: 700 }}>{c.dep}</span> {depLabel}
+                <div style={{ fontSize: 16, color: 'var(--color-secondary)' }}>
+                  <span style={{ color: 'var(--color-green)', fontWeight: 700 }}>{c.dep}</span> {depLabel}
                 </div>
               )}
               {typeof c?.arr === 'number' && (
-                <div style={{ fontSize: 16, color: '#8A8A8A' }}>
-                  <span style={{ color: '#0A84FF', fontWeight: 700 }}>{c.arr}</span> {arrLabel}
+                <div style={{ fontSize: 16, color: 'var(--color-secondary)' }}>
+                  <span style={{ color: 'var(--color-blue)', fontWeight: 700 }}>{c.arr}</span> {arrLabel}
                 </div>
               )}
             </div>

@@ -16,8 +16,8 @@ export const dynamicParams = true;
 export const revalidate = 600;
 
 const STATUS_COLOR: Record<string, string> = {
-  ontime: '#8A8A8A', scheduled: '#8A8A8A', boarding: '#0A84FF', finalcall: '#FF453A',
-  delayed: '#FF9F0A', departed: '#48484A', baggage: '#0A84FF', arrived: '#48484A', cancelled: '#FF453A',
+  ontime: 'var(--color-secondary)', scheduled: 'var(--color-secondary)', boarding: 'var(--color-blue)', finalcall: 'var(--color-red)',
+  delayed: 'var(--color-orange)', departed: 'var(--color-secondary)', baggage: 'var(--color-blue)', arrived: 'var(--color-secondary)', cancelled: 'var(--color-red)',
 };
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
@@ -63,36 +63,36 @@ export default async function AirlinePage({ params }: Props) {
     iataCode: cu,
     url: `${BASE}/${locale}/airline/${cu}`,
   };
-  const link: React.CSSProperties = { color: '#0A84FF', textDecoration: 'none' };
+  const link: React.CSSProperties = { color: 'var(--color-blue)', textDecoration: 'none' };
 
   return (
     <div style={{ maxWidth: 720, margin: '0 auto', padding: '36px 18px 64px' }}>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
-      <div style={{ fontSize: 13, color: '#8A8A8A', marginBottom: 12 }}>
-        <Link href={`/${locale}`} style={{ color: '#6A6A6A', textDecoration: 'none', display: 'inline-block', minHeight: 24 }}>airportsboard</Link>
+      <div style={{ fontSize: 13, color: 'var(--color-secondary)', marginBottom: 12 }}>
+        <Link href={`/${locale}`} style={{ color: 'var(--color-secondary)', textDecoration: 'none', display: 'inline-block', minHeight: 24 }}>airportsboard</Link>
       </div>
-      <h1 style={{ fontSize: 'clamp(30px, 8vw, 46px)', fontWeight: 800, letterSpacing: '-0.03em', color: '#FFFFFF', margin: 0, lineHeight: 1.05 }}>
+      <h1 style={{ fontSize: 'clamp(30px, 8vw, 46px)', fontWeight: 800, letterSpacing: '-0.03em', color: 'var(--color-text)', margin: 0, lineHeight: 1.05 }}>
         {t('airline_title', { airline: name })}
       </h1>
-      <div style={{ fontSize: 16, color: '#6A6A6A', marginTop: 6, fontWeight: 700, letterSpacing: '0.08em' }}>{cu}</div>
+      <div style={{ fontSize: 16, color: 'var(--color-secondary)', marginTop: 6, fontWeight: 700, letterSpacing: '0.08em' }}>{cu}</div>
 
-      <div style={{ fontSize: 13, fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.12em', color: '#8A8A8A', margin: '32px 0 14px' }}>
+      <div style={{ fontSize: 13, fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.12em', color: 'var(--color-secondary)', margin: '32px 0 14px' }}>
         {t('airline_live')}
       </div>
 
       {flights.length === 0 ? (
-        <div style={{ fontSize: 15, color: '#8A8A8A', padding: '20px 0' }}>{t('airline_none', { airline: name })}</div>
+        <div style={{ fontSize: 15, color: 'var(--color-secondary)', padding: '20px 0' }}>{t('airline_none', { airline: name })}</div>
       ) : (
         <ul style={{ listStyle: 'none', margin: 0, padding: 0, display: 'flex', flexDirection: 'column', gap: 8 }}>
           {flights.map((f, i) => {
             const dep = getAirport(f.depIata), arr = getAirport(f.arrIata);
             return (
-              <li key={i} style={{ display: 'flex', alignItems: 'center', gap: 12, background: '#0B0B0B', border: '1px solid #1A1A1A', borderRadius: 14, padding: '14px 16px', overflow: 'hidden' }}>
-                <span style={{ width: 4, alignSelf: 'stretch', background: STATUS_COLOR[f.status] || '#48484A', borderRadius: 2, flexShrink: 0 }} />
-                <span style={{ fontSize: 20, fontWeight: 700, color: f.actual ? '#FF9F0A' : '#FFFFFF', fontVariantNumeric: 'tabular-nums', width: 58, flexShrink: 0 }}>{f.actual || f.scheduled}</span>
+              <li key={i} style={{ display: 'flex', alignItems: 'center', gap: 12, background: 'var(--color-surface)', border: '1px solid var(--color-border)', borderRadius: 14, padding: '14px 16px', overflow: 'hidden' }}>
+                <span style={{ width: 4, alignSelf: 'stretch', background: STATUS_COLOR[f.status] || 'var(--color-secondary)', borderRadius: 2, flexShrink: 0 }} />
+                <span style={{ fontSize: 20, fontWeight: 700, color: f.actual ? 'var(--color-orange)' : 'var(--color-text)', fontVariantNumeric: 'tabular-nums', width: 58, flexShrink: 0 }}>{f.actual || f.scheduled}</span>
                 <span style={{ flex: 1, minWidth: 0 }}>
                   <Link href={`/${locale}/flight/${f.flight.replace(/\s/g, '')}`} style={{ ...link, display: 'block', fontSize: 14, fontWeight: 600 }}>{f.flight}</Link>
-                  <span style={{ display: 'block', fontSize: 13, color: '#8A8A8A', marginTop: 2, whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>
+                  <span style={{ display: 'block', fontSize: 13, color: 'var(--color-secondary)', marginTop: 2, whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>
                     {dep ? getCityName(dep.city, locale) : f.depIata} {forwardArrow(locale)} {arr ? getCityName(arr.city, locale) : f.arrIata}
                   </span>
                 </span>

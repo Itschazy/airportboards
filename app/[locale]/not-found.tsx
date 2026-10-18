@@ -18,19 +18,19 @@ export default async function NotFound() {
 
   return (
     <div style={{ maxWidth: 640, margin: '0 auto', padding: '56px 24px 80px' }}>
-      <div style={{ fontSize: 'clamp(64px, 18vw, 104px)', fontWeight: 800, letterSpacing: '-0.05em', color: '#1A1A1A', lineHeight: 1 }}>404</div>
-      <h1 style={{ fontSize: 'clamp(24px, 6vw, 32px)', fontWeight: 800, letterSpacing: '-0.02em', color: '#FFFFFF', margin: '12px 0 0' }}>{t('title')}</h1>
-      <p style={{ fontSize: 15, color: '#8A8A8A', marginTop: 10, lineHeight: 1.5 }}>{t('text')}</p>
+      <div style={{ fontSize: 'clamp(64px, 18vw, 104px)', fontWeight: 800, letterSpacing: '-0.05em', color: 'var(--color-border)', lineHeight: 1 }}>404</div>
+      <h1 style={{ fontSize: 'clamp(24px, 6vw, 32px)', fontWeight: 800, letterSpacing: '-0.02em', color: 'var(--color-text)', margin: '12px 0 0' }}>{t('title')}</h1>
+      <p style={{ fontSize: 15, color: 'var(--color-secondary)', marginTop: 10, lineHeight: 1.5 }}>{t('text')}</p>
 
       <div style={{ marginTop: 24 }}>
         <AirportSearch locale={locale} placeholder={tNav('search_placeholder')} />
       </div>
 
-      <div style={{ fontSize: 12, fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.12em', color: '#8A8A8A', margin: '32px 0 12px' }}>{tNav('popular')}</div>
+      <div style={{ fontSize: 12, fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.12em', color: 'var(--color-secondary)', margin: '32px 0 12px' }}>{tNav('popular')}</div>
       <div style={{ display: 'flex', flexWrap: 'wrap', gap: 8 }}>
         {popular.map(a => (
-          <Link key={a.iata} href={`/${locale}/airport/${a.iata}`} style={{ background: '#0B0B0B', border: '1px solid #1A1A1A', borderRadius: 12, padding: '9px 14px', fontSize: 14, color: '#E4E4E7', textDecoration: 'none', display: 'flex', gap: 8 }}>
-            <span style={{ fontWeight: 700, color: '#0A84FF' }}>{a.iata}</span>
+          <Link key={a.iata} href={`/${locale}/airport/${a.iata}`} style={{ background: 'var(--color-surface)', border: '1px solid var(--color-border)', borderRadius: 12, padding: '9px 14px', fontSize: 14, color: 'var(--color-text)', textDecoration: 'none', display: 'flex', gap: 8 }}>
+            <span style={{ fontWeight: 700, color: 'var(--color-blue)' }}>{a.iata}</span>
             {/* Город ПЕРЕВЕДЁННЫЙ: на русской странице чипы были подписаны «New York»,
                 «London», «Paris», хотя переводы в data/city-names.json есть и главная
                 со внутренним поиском их применяют. */}
@@ -39,7 +39,7 @@ export default async function NotFound() {
         ))}
       </div>
 
-      <Link href={`/${locale}`} style={{ display: 'inline-block', marginTop: 32, color: '#0A84FF', fontSize: 15, fontWeight: 600, textDecoration: 'none' }}>← {t('home')}</Link>
+      <Link href={`/${locale}`} style={{ display: 'inline-block', marginTop: 32, color: 'var(--color-blue)', fontSize: 15, fontWeight: 600, textDecoration: 'none' }}>← {t('home')}</Link>
     </div>
   );
 }

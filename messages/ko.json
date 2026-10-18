@@ -13,7 +13,11 @@
     "language": "언어",
     "close": "닫기",
     "aria_breadcrumb": "이동 경로",
-    "aria_footer": "바닥글"
+    "aria_footer": "바닥글",
+    "theme": "테마",
+    "theme_system": "시스템 설정",
+    "theme_light": "라이트",
+    "theme_dark": "다크"
   },
   "board": {
     "flight": "항공편",

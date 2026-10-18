@@ -13,7 +13,11 @@
     "language": "Idioma",
     "close": "Cerrar",
     "aria_breadcrumb": "Migas de pan",
-    "aria_footer": "Pie de página"
+    "aria_footer": "Pie de página",
+    "theme": "Tema",
+    "theme_system": "Según el dispositivo",
+    "theme_light": "Claro",
+    "theme_dark": "Oscuro"
   },
   "board": {
     "flight": "Vuelo",

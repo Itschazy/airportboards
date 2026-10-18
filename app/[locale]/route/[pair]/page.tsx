@@ -26,8 +26,8 @@ function parsePair(pair: string): { from: string; to: string } | null {
 }
 
 const STATUS_COLOR: Record<string, string> = {
-  ontime: '#8A8A8A', scheduled: '#8A8A8A', boarding: '#0A84FF', finalcall: '#FF453A',
-  delayed: '#FF9F0A', departed: '#48484A', baggage: '#0A84FF', arrived: '#48484A', cancelled: '#FF453A',
+  ontime: 'var(--color-secondary)', scheduled: 'var(--color-secondary)', boarding: 'var(--color-blue)', finalcall: 'var(--color-red)',
+  delayed: 'var(--color-orange)', departed: 'var(--color-secondary)', baggage: 'var(--color-blue)', arrived: 'var(--color-secondary)', cancelled: 'var(--color-red)',
 };
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
@@ -141,28 +141,28 @@ export default async function RoutePage({ params }: Props) {
 
   // Standalone navigation, not links inside a sentence, so WCAG 2.5.8's inline exception does
   // not apply. The taller box grows into the paragraph margins that are already there.
-  const link: React.CSSProperties = { color: '#0A84FF', textDecoration: 'none', display: 'inline-block', minHeight: 24 };
+  const link: React.CSSProperties = { color: 'var(--color-blue)', textDecoration: 'none', display: 'inline-block', minHeight: 24 };
 
   return (
     <div style={{ maxWidth: 760, margin: '0 auto', padding: '36px 18px 64px' }}>
       {jsonLd.map((schema, i) => (
         <script key={i} type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
       ))}
-      <div style={{ fontSize: 13, color: '#8A8A8A', marginBottom: 10 }}>
-        <Link href={`/${locale}`} style={{ color: '#6A6A6A', textDecoration: 'none', display: 'inline-block', minHeight: 24 }}>airportsboard</Link>
+      <div style={{ fontSize: 13, color: 'var(--color-secondary)', marginBottom: 10 }}>
+        <Link href={`/${locale}`} style={{ color: 'var(--color-secondary)', textDecoration: 'none', display: 'inline-block', minHeight: 24 }}>airportsboard</Link>
       </div>
-      <h1 style={{ fontSize: 'clamp(26px, 6.4vw, 38px)', fontWeight: 800, letterSpacing: '-0.03em', color: '#FFFFFF', margin: '0 0 8px', lineHeight: 1.1 }}>
+      <h1 style={{ fontSize: 'clamp(26px, 6.4vw, 38px)', fontWeight: 800, letterSpacing: '-0.03em', color: 'var(--color-text)', margin: '0 0 8px', lineHeight: 1.1 }}>
         {t('route_h1', { from, to, iata1: p.from, iata2: p.to })}
       </h1>
-      <p style={{ fontSize: 15, color: '#8A8A8A', margin: '0 0 8px' }}>
+      <p style={{ fontSize: 15, color: 'var(--color-secondary)', margin: '0 0 8px' }}>
         <Link href={`/${locale}/airport/${a.iata}/departures`} style={link}>{fromName}</Link>
         {` ${forwardArrow(locale)} `}
         <Link href={`/${locale}/airport/${b.iata}/arrivals`} style={link}>{toName}</Link>
       </p>
 
       {airlines.length > 0 && (
-        <p style={{ fontSize: 14, color: '#6A6A6A', margin: '0 0 24px' }}>
-          {t('route_airlines')}: <span style={{ color: '#B4B4B4' }}>{airlines.join(' · ')}</span>
+        <p style={{ fontSize: 14, color: 'var(--color-secondary)', margin: '0 0 24px' }}>
+          {t('route_airlines')}: <span style={{ color: 'var(--color-secondary)' }}>{airlines.join(' · ')}</span>
         </p>
       )}
 
@@ -177,35 +177,35 @@ export default async function RoutePage({ params }: Props) {
           {facts.map((f, i) => (
             <div key={i} style={{ marginTop: i ? 18 : 0 }}>
               {f.q && (
-                <h2 style={{ margin: '0 0 6px', fontSize: 13, fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.12em', color: '#8A8A8A' }}>{f.q}</h2>
+                <h2 style={{ margin: '0 0 6px', fontSize: 13, fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.12em', color: 'var(--color-secondary)' }}>{f.q}</h2>
               )}
-              <p style={{ margin: 0, fontSize: 15, lineHeight: 1.55, color: '#B4B4B4' }}>{f.a}</p>
+              <p style={{ margin: 0, fontSize: 15, lineHeight: 1.55, color: 'var(--color-secondary)' }}>{f.a}</p>
             </div>
           ))}
         </div>
       )}
 
-      <h2 style={{ margin: '16px 0 14px', fontSize: 13, fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.12em', color: '#8A8A8A' }}>
+      <h2 style={{ margin: '16px 0 14px', fontSize: 13, fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.12em', color: 'var(--color-secondary)' }}>
         {t('route_flights_today')}
       </h2>
 
       {flights.length === 0 ? (
-        <div style={{ fontSize: 15, color: '#8A8A8A', padding: '24px 0' }}>{t('route_none')}</div>
+        <div style={{ fontSize: 15, color: 'var(--color-secondary)', padding: '24px 0' }}>{t('route_none')}</div>
       ) : (
         <ul style={{ listStyle: 'none', margin: 0, padding: 0, display: 'flex', flexDirection: 'column', gap: 8 }}>
           {flights.map((f, i) => {
             return (
-            <li key={i} style={{ display: 'flex', alignItems: 'center', gap: 14, background: '#0B0B0B', border: '1px solid #1A1A1A', borderRadius: 14, padding: '14px 16px', overflow: 'hidden' }}>
-              <span style={{ width: 4, alignSelf: 'stretch', background: STATUS_COLOR[f.status] || '#48484A', borderRadius: 2, flexShrink: 0 }} />
-              <span style={{ fontSize: 22, fontWeight: 700, color: f.actual ? '#FF9F0A' : '#FFFFFF', fontVariantNumeric: 'tabular-nums', width: 64, flexShrink: 0 }}>{f.actual || f.scheduled}</span>
+            <li key={i} style={{ display: 'flex', alignItems: 'center', gap: 14, background: 'var(--color-surface)', border: '1px solid var(--color-border)', borderRadius: 14, padding: '14px 16px', overflow: 'hidden' }}>
+              <span style={{ width: 4, alignSelf: 'stretch', background: STATUS_COLOR[f.status] || 'var(--color-secondary)', borderRadius: 2, flexShrink: 0 }} />
+              <span style={{ fontSize: 22, fontWeight: 700, color: f.actual ? 'var(--color-orange)' : 'var(--color-text)', fontVariantNumeric: 'tabular-nums', width: 64, flexShrink: 0 }}>{f.actual || f.scheduled}</span>
               <span style={{ flex: 1, minWidth: 0 }}>
-                <span style={{ display: 'block', fontSize: 15, color: '#E4E4E7', fontWeight: 600 }}>{f.airline}</span>
+                <span style={{ display: 'block', fontSize: 15, color: 'var(--color-text)', fontWeight: 600 }}>{f.airline}</span>
                 {/* The flight number used to link to /flight/<CODE>. getFlightByNumber() reads
                     a store key ("flight_iata=") the warmer never writes, so that page always
                     answered 200 with "not found" under noindex — a soft-404, for humans as
                     much as crawlers, since the page has no client-side refresh either.
                     ~13,000 such links across 484 route pairs and 12 locales. */}
-                <span style={{ display: 'block', fontSize: 12, color: '#6A6A6A', marginTop: 2 }}>{f.flight}</span>
+                <span style={{ display: 'block', fontSize: 12, color: 'var(--color-secondary)', marginTop: 2 }}>{f.flight}</span>
               </span>
             </li>
             );
@@ -213,7 +213,7 @@ export default async function RoutePage({ params }: Props) {
         </ul>
       )}
 
-      <p style={{ fontSize: 14, color: '#6A6A6A', marginTop: 32 }}>
+      <p style={{ fontSize: 14, color: 'var(--color-secondary)', marginTop: 32 }}>
         <Link href={`/${locale}/airport/${a.iata}`} style={link}>{fromName} ({a.iata})</Link>
         {' · '}
         <Link href={`/${locale}/airport/${b.iata}`} style={link}>{toName} ({b.iata})</Link>

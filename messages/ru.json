@@ -13,7 +13,11 @@
     "language": "Язык",
     "close": "Закрыть",
     "aria_breadcrumb": "Навигационная цепочка",
-    "aria_footer": "Нижний колонтитул"
+    "aria_footer": "Нижний колонтитул",
+    "theme": "Тема",
+    "theme_system": "Как на устройстве",
+    "theme_light": "Светлая",
+    "theme_dark": "Тёмная"
   },
   "board": {
     "flight": "Рейс",

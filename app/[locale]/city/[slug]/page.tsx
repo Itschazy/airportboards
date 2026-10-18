@@ -104,13 +104,13 @@ export default async function CityPage({ params }: Props) {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(itemList) }} />
       <Breadcrumb label={tNav('aria_breadcrumb')} trail={crumbs} />
-      <h1 style={{ fontSize: 'clamp(28px, 7vw, 40px)', fontWeight: 800, letterSpacing: '-0.03em', color: '#FFFFFF', margin: '0 0 6px' }}>
+      <h1 style={{ fontSize: 'clamp(28px, 7vw, 40px)', fontWeight: 800, letterSpacing: '-0.03em', color: 'var(--color-text)', margin: '0 0 6px' }}>
         {flag(c.iso2)} {t('city_title', { city, deCity })}
       </h1>
       {/* The honest variant was applied to the <meta> only, so the page carried both claims at
           once: a description saying we have no scheduled-service data, above a paragraph
           promising "arrivals and departures, flight status". Same predicate as the metadata. */}
-      <p style={{ fontSize: 15, color: '#8A8A8A', margin: '0 0 28px' }}>
+      <p style={{ fontSize: 15, color: 'var(--color-secondary)', margin: '0 0 28px' }}>
         {airports.some(a => !hasNoService(a.iata))
           ? t('city_desc', { city, deCity, count: c.count })
           : t('city_none', { city, deCity, count: c.count })}
@@ -121,14 +121,14 @@ export default async function CityPage({ params }: Props) {
           <li key={a.iata}>
             <Link href={`/${locale}/airport/${a.iata}`} style={{
               display: 'flex', alignItems: 'center', gap: 14, textDecoration: 'none', color: 'inherit',
-              background: '#0B0B0B', border: '1px solid #1A1A1A', borderRadius: 14, padding: '14px 18px',
+              background: 'var(--color-surface)', border: '1px solid var(--color-border)', borderRadius: 14, padding: '14px 18px',
             }}>
-              <span style={{ fontSize: 17, fontWeight: 800, color: '#0A84FF', width: 48, flexShrink: 0, letterSpacing: '-0.02em' }}>{a.iata}</span>
+              <span style={{ fontSize: 17, fontWeight: 800, color: 'var(--color-blue)', width: 48, flexShrink: 0, letterSpacing: '-0.02em' }}>{a.iata}</span>
               <span style={{ flex: 1, minWidth: 0 }}>
-                <span style={{ display: 'block', fontSize: 15, color: '#E4E4E7', fontWeight: 600, whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>{getAirportName(a.iata, locale, a.name)}</span>
-                <span style={{ display: 'block', fontSize: 12, color: '#6A6A6A', marginTop: 2 }}>{country}</span>
+                <span style={{ display: 'block', fontSize: 15, color: 'var(--color-text)', fontWeight: 600, whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>{getAirportName(a.iata, locale, a.name)}</span>
+                <span style={{ display: 'block', fontSize: 12, color: 'var(--color-secondary)', marginTop: 2 }}>{country}</span>
               </span>
-              <svg data-flip width="8" height="14" viewBox="0 0 8 14" fill="none" style={{ flexShrink: 0 }}><path d="M1 1L7 7L1 13" stroke="#3A3A3C" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" /></svg>
+              <svg data-flip width="8" height="14" viewBox="0 0 8 14" fill="none" style={{ flexShrink: 0 }}><path d="M1 1L7 7L1 13" stroke="var(--color-secondary)" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" /></svg>
             </Link>
           </li>
         ))}

@@ -70,14 +70,14 @@ export default async function WidgetsPage({ params }: Props) {
   return (
     <main style={{ maxWidth: 720, margin: '0 auto', padding: '28px 20px 60px' }}>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
-      <h1 style={{ fontSize: 'clamp(26px, 6vw, 36px)', fontWeight: 800, letterSpacing: '-0.03em', color: '#FFFFFF', margin: 0 }}>
+      <h1 style={{ fontSize: 'clamp(26px, 6vw, 36px)', fontWeight: 800, letterSpacing: '-0.03em', color: 'var(--color-text)', margin: 0 }}>
         {t('widgets_title')}
       </h1>
-      <p style={{ fontSize: 15, lineHeight: 1.6, color: '#B4B4B4', margin: '12px 0 6px' }}>
+      <p style={{ fontSize: 15, lineHeight: 1.6, color: 'var(--color-secondary)', margin: '12px 0 6px' }}>
         {t('widgets_intro')}
       </p>
       <WidgetBuilder locale={locale} />
-      <p style={{ fontSize: 13, lineHeight: 1.5, color: '#8A8A8A', marginTop: 26 }}>
+      <p style={{ fontSize: 13, lineHeight: 1.5, color: 'var(--color-secondary)', marginTop: 26 }}>
         {t('widgets_note')}
       </p>
     </main>

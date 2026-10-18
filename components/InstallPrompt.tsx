@@ -112,9 +112,9 @@ export function InstallPrompt() {
         style={{
           pointerEvents: 'auto',
           width: '100%', maxWidth: 420,
-          background: 'rgba(18,18,20,0.92)',
+          background: 'var(--color-surface)',
           backdropFilter: 'blur(20px)', WebkitBackdropFilter: 'blur(20px)',
-          border: '1px solid rgba(255,255,255,0.10)',
+          border: '1px solid rgba(var(--ink-rgb),0.10)',
           borderRadius: 20,
           boxShadow: '0 12px 40px rgba(0,0,0,0.55)',
           padding: '14px 14px 14px 16px',
@@ -123,31 +123,31 @@ export function InstallPrompt() {
       >
         <div aria-hidden="true" style={{
           width: 40, height: 40, borderRadius: 12, flexShrink: 0,
-          background: 'linear-gradient(135deg, #0A84FF, #0060DF)',
+          background: 'linear-gradient(135deg, var(--color-blue), var(--color-blue))',
           display: 'flex', alignItems: 'center', justifyContent: 'center',
         }}>
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><path d="M21 16v-2l-8-5V3.5a1.5 1.5 0 0 0-3 0V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5z" /></svg>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--color-inverse)" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><path d="M21 16v-2l-8-5V3.5a1.5 1.5 0 0 0-3 0V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5z" /></svg>
         </div>
         <div style={{ flex: 1, minWidth: 0 }}>
-          <div style={{ fontSize: 14, fontWeight: 650, color: '#FFFFFF', lineHeight: 1.25 }}>{t('pwa_title')}</div>
-          <div style={{ fontSize: 12.5, color: '#9A9AA0', marginTop: 3, lineHeight: 1.35 }}>
+          <div style={{ fontSize: 14, fontWeight: 650, color: 'var(--color-text)', lineHeight: 1.25 }}>{t('pwa_title')}</div>
+          <div style={{ fontSize: 12.5, color: 'var(--color-secondary)', marginTop: 3, lineHeight: 1.35 }}>
             {ios && !bip.current ? t('pwa_ios_hint') : t('pwa_sub')}
           </div>
         </div>
         {ios && !bip.current ? (
           <button type="button" onClick={dismiss} className="press" style={{
             flexShrink: 0, height: 36, padding: '0 14px', borderRadius: 999, border: 'none', cursor: 'pointer',
-            background: 'rgba(255,255,255,0.10)', color: '#FFFFFF', fontSize: 13, fontWeight: 600,
+            background: 'rgba(var(--ink-rgb),0.10)', color: 'var(--color-text)', fontSize: 13, fontWeight: 600,
           }}>{t('pwa_got_it')}</button>
         ) : (
           <button type="button" onClick={install} className="press" style={{
             flexShrink: 0, height: 36, padding: '0 16px', borderRadius: 999, border: 'none', cursor: 'pointer',
-            background: '#0A84FF', color: '#FFFFFF', fontSize: 13, fontWeight: 650,
+            background: 'var(--color-blue)', color: 'var(--color-inverse)', fontSize: 13, fontWeight: 650,
           }}>{t('pwa_install')}</button>
         )}
         <button type="button" onClick={dismiss} aria-label={t('pwa_got_it')} style={{
           flexShrink: 0, width: 28, height: 28, borderRadius: '50%', border: 'none', cursor: 'pointer',
-          background: 'transparent', color: '#6A6A6E', fontSize: 15, lineHeight: 1, padding: 0,
+          background: 'transparent', color: 'var(--color-secondary)', fontSize: 15, lineHeight: 1, padding: 0,
         }}>✕</button>
       </div>
     </div>
