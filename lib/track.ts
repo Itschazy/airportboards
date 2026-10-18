@@ -63,6 +63,8 @@ export const GOALS = {
   boardMore: 'board_more',
   /** Выбран аэропорт в поиске. */
   searchPick: 'search_pick',
+  /** «Поделиться рейсом» из карточки (18.10.2026). Параметр: via — share | copy | prompt. */
+  flightShare: 'flight_share',
 } as const;
 
 export type Goal = (typeof GOALS)[keyof typeof GOALS];

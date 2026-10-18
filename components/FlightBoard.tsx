@@ -235,7 +235,7 @@ function BottomSheet({ flight, mode, onClose, tz, locale, updLabel, originIata, 
     const url = `${location.origin}${location.pathname}?flight=${encodeURIComponent(flight.flight)}&dir=${mode}`;
     const text = `${flight.flight} · ${flight.destination || flight.origin || ''}`.trim();
     if (navigator.share) {
-      try { await navigator.share({ title: text, text, url }); return; }
+      try { await navigator.share({ title: text, text, url }); track(GOALS.flightShare, { via: 'share' }); return; }
       catch (e) { if ((e as Error)?.name === 'AbortError') return; /* закрыл меню — не ошибка */ }
     }
     // Копирование: Clipboard API, а где он запрещён (встроенные браузеры приложений, нет
@@ -252,7 +252,8 @@ function BottomSheet({ flight, mode, onClose, tz, locale, updLabel, originIata, 
         document.body.removeChild(ta);
       } catch { /* совсем некуда — ниже покажем ссылку */ }
     }
-    if (!ok) { window.prompt(t('share_flight'), url); return; }
+    if (!ok) { window.prompt(t('share_flight'), url); track(GOALS.flightShare, { via: 'prompt' }); return; }
+    track(GOALS.flightShare, { via: 'copy' });
     setCopied(true);
     setTimeout(() => setCopied(false), 2000);
   }, [flight, mode, t]);
