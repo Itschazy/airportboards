@@ -843,8 +843,20 @@ export function FlightBoard({ airport, locale, defaultMode = 'departures', displ
   // Strictly gated on document.hidden, and restored on visibility: Google renders pages with a
   // visible viewport, so a dynamic title on the visible tab could be indexed in place of the
   // SEO title. No i18n needed — the string is a time, a flight code and an IATA code.
+  //
+  // 🔴 19.10.2026: «скрытая вкладка» оказалась недостаточным заслоном. Яндекс Вебмастер записал
+  // для /ru/airport/BCN заголовок «19:19 UX6073 · BCN», для JNB/arrivals — «10:15 FA370 · JNB»:
+  // его рендерер исполняет JS в состоянии hidden и ловит visibilitychange, и подменённый
+  // заголовок уходит в индекс вместо SEO-заголовка (в диагностике — 394 дубля title). Теперь
+  // подмена включается только после ЖИВОГО взаимодействия со страницей — касание, клик, клавиша,
+  // прокрутка. Робот так не делает; человек, который смотрит табло и уходит в другую вкладку, —
+  // почти всегда да.
   useEffect(() => {
     const original = document.title;
+    let human = false;
+    const markHuman = () => { human = true; };
+    const HUMAN_EVENTS = ['pointerdown', 'keydown', 'touchstart', 'wheel', 'scroll'] as const;
+    HUMAN_EVENTS.forEach((e) => window.addEventListener(e, markHuman, { passive: true, once: true }));
     const compute = () => {
       // The pinned flight, if any, is what this person actually cares about; the next
       // non-terminal flight is the fallback for everyone else.
@@ -854,7 +866,7 @@ export function FlightBoard({ airport, locale, defaultMode = 'departures', displ
     };
     let timer: ReturnType<typeof setInterval> | null = null;
     const apply = () => {
-      if (document.hidden) {
+      if (document.hidden && human) {
         const t2 = compute();
         if (t2) document.title = t2;
         if (!timer) timer = setInterval(() => { const v = compute(); if (v && document.hidden) document.title = v; }, 60_000);
@@ -865,6 +877,7 @@ export function FlightBoard({ airport, locale, defaultMode = 'departures', displ
     };
     document.addEventListener('visibilitychange', apply);
     return () => {
+      HUMAN_EVENTS.forEach((e) => window.removeEventListener(e, markHuman));
       document.removeEventListener('visibilitychange', apply);
       if (timer) clearInterval(timer);
       document.title = original;
