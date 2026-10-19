@@ -485,6 +485,55 @@ function BottomSheet({ flight, mode, onClose, tz, locale, clockMs, updLabel, ori
           </div>
           <div style={{ minWidth: 0, width: '100%' }}>
             <div style={{ fontSize: 'clamp(46px, 14vw, 66px)', fontWeight: 800, letterSpacing: '-0.04em', color: C.text, lineHeight: 0.95, wordBreak: 'break-word' }}>{flight.flight}</div>
+            <div style={{ fontSize: 'clamp(22px, 6.5vw, 30px)', color: '#A1A1A1', marginTop: 12, lineHeight: 1.15 }}>{flight.destination || flight.origin}</div>
+            <div style={{ fontSize: 22, color: C.text, fontWeight: 600, marginTop: 6 }}>{flight.airline}</div>
+          </div>
+        </div>
+
+        <div style={{ height: 1, background: 'rgba(255,255,255,0.08)', margin: '18px 0' }} />
+
+        {/* Hero card */}
+        <div style={{ background: color + '1A', border: `1px solid ${color}40`, borderRadius: 18, padding: '18px 20px 20px' }}>
+          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', gap: 12 }}>
+            <div style={{ minWidth: 0 }}>
+              <div style={{ ...L, marginBottom: 10 }}>{hero.label}</div>
+              <div style={{ fontSize: heroMainSize, fontWeight: 800, letterSpacing: '-0.03em', lineHeight: 1, color, fontVariantNumeric: 'tabular-nums' }}>{hero.main}</div>
+              {hero.sub && <div style={{ fontSize: 15, color: C.secondary, marginTop: 10, textDecoration: hero.subStrike ? 'line-through' : 'none' }}>{hero.sub}</div>}
+              {timeInHero && <div style={{ fontSize: 12, color: C.secondary, opacity: 0.7, marginTop: 8 }}>{dateStr}</div>}
+            </div>
+            {hero.icon && <Icon name={hero.icon} />}
+          </div>
+          {hero.bottom && (
+            <>
+              <div style={{ height: 1, background: 'rgba(255,255,255,0.08)', margin: '16px 0' }} />
+              <div style={{ ...L, marginBottom: 4 }}>{isDep ? t('departure') : t('arrival')}</div>
+              <div style={{ fontSize: 24, fontWeight: 700, color: C.text, fontVariantNumeric: 'tabular-nums' }}>{hero.bottom}</div>
+            </>
+          )}
+        </div>
+
+        {/* Значения начинаются сразу под подписью с одинаковым отступом.
+            space-between прижимал весь блок значения к низу: дата под временем
+            поднимала время выше выхода и терминала (снимок владельца, 18.10.2026).
+            Свободное место оставляем снизу, чтобы необязательная дата не двигала цифры. */}
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(92px, 1fr))', gap: 12, marginTop: 24 }}>
+          {blocks.map((b, i) => (
+            <div key={i} style={{ background: 'rgba(255,255,255,0.04)', border: '1px solid rgba(255,255,255,0.08)', borderRadius: 14, padding: '16px', minHeight: 104, display: 'flex', flexDirection: 'column', gap: 10 }}>
+              <div style={L}>{b.label}</div>
+              <div>
+                <div style={{ fontSize: 24, fontWeight: 700, color: b.valueColor || C.text, lineHeight: 1.05, letterSpacing: '-0.02em', fontVariantNumeric: 'tabular-nums', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>{b.value}</div>
+                {b.strike && <div style={{ fontSize: 12, color: C.secondary, textDecoration: 'line-through', marginTop: 2 }}>{b.strike}</div>}
+                {b.sub && <div style={{ fontSize: 12, color: '#6A6A6A', marginTop: 4 }}>{b.sub}</div>}
+              </div>
+            </div>
+          ))}
+        </div>
+
+        {/* Время, выход и терминал раньше действий — согласовано владельцем 19.10.2026.
+            Раньше закрепление и маршрут отодвигали эти данные за первый экран телефона.
+            Размеры, цвета и состав информации сохранены; изменён только порядок.
+            Проверено на локальной фикстуре: снимок 375 px, закрытие и закрепление на 320 px. */}
+        <div style={{ marginTop: 14 }}>
             {/* The one persistent action this sheet has. Watching a flight means coming back
                 three to five times; before this button every return started with re-finding
                 the row in an 80-row list. Pin state lives in localStorage (ab_pinned), scoped
@@ -510,11 +559,7 @@ function BottomSheet({ flight, mode, onClose, tz, locale, clockMs, updLabel, ori
             >
               {copied ? t('link_copied') : t('share_flight')}
             </button>
-            <div style={{ fontSize: 'clamp(22px, 6.5vw, 30px)', color: '#A1A1A1', marginTop: 12, lineHeight: 1.15 }}>{flight.destination || flight.origin}</div>
-            <div style={{ fontSize: 22, color: C.text, fontWeight: 600, marginTop: 6 }}>{flight.airline}</div>
-          </div>
         </div>
-
         {/* Route strip — where from, where to. The sheet is shareable context on its own.
             It is also the sheet's only way OUT. Everything else here ends the journey: one
             action (pin), a close button, and a board the visitor already came from — which is
@@ -557,45 +602,6 @@ function BottomSheet({ flight, mode, onClose, tz, locale, clockMs, updLabel, ori
             </Link>
           );
         })()}
-
-        <div style={{ height: 1, background: 'rgba(255,255,255,0.08)', margin: '18px 0' }} />
-
-        {/* Hero card */}
-        <div style={{ background: color + '1A', border: `1px solid ${color}40`, borderRadius: 18, padding: '18px 20px 20px' }}>
-          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', gap: 12 }}>
-            <div style={{ minWidth: 0 }}>
-              <div style={{ ...L, marginBottom: 10 }}>{hero.label}</div>
-              <div style={{ fontSize: heroMainSize, fontWeight: 800, letterSpacing: '-0.03em', lineHeight: 1, color, fontVariantNumeric: 'tabular-nums' }}>{hero.main}</div>
-              {hero.sub && <div style={{ fontSize: 15, color: C.secondary, marginTop: 10, textDecoration: hero.subStrike ? 'line-through' : 'none' }}>{hero.sub}</div>}
-              {timeInHero && <div style={{ fontSize: 12, color: C.secondary, opacity: 0.7, marginTop: 8 }}>{dateStr}</div>}
-            </div>
-            {hero.icon && <Icon name={hero.icon} />}
-          </div>
-          {hero.bottom && (
-            <>
-              <div style={{ height: 1, background: 'rgba(255,255,255,0.08)', margin: '16px 0' }} />
-              <div style={{ ...L, marginBottom: 4 }}>{isDep ? t('departure') : t('arrival')}</div>
-              <div style={{ fontSize: 24, fontWeight: 700, color: C.text, fontVariantNumeric: 'tabular-nums' }}>{hero.bottom}</div>
-            </>
-          )}
-        </div>
-
-        {/* Значения начинаются сразу под подписью с одинаковым отступом.
-            space-between прижимал весь блок значения к низу: дата под временем
-            поднимала время выше выхода и терминала (снимок владельца, 18.10.2026).
-            Свободное место оставляем снизу, чтобы необязательная дата не двигала цифры. */}
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(92px, 1fr))', gap: 12, marginTop: 24 }}>
-          {blocks.map((b, i) => (
-            <div key={i} style={{ background: 'rgba(255,255,255,0.04)', border: '1px solid rgba(255,255,255,0.08)', borderRadius: 14, padding: '16px', minHeight: 104, display: 'flex', flexDirection: 'column', gap: 10 }}>
-              <div style={L}>{b.label}</div>
-              <div>
-                <div style={{ fontSize: 24, fontWeight: 700, color: b.valueColor || C.text, lineHeight: 1.05, letterSpacing: '-0.02em', fontVariantNumeric: 'tabular-nums', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>{b.value}</div>
-                {b.strike && <div style={{ fontSize: 12, color: C.secondary, textDecoration: 'line-through', marginTop: 2 }}>{b.strike}</div>}
-                {b.sub && <div style={{ fontSize: 12, color: '#6A6A6A', marginTop: 4 }}>{b.sub}</div>}
-              </div>
-            </div>
-          ))}
-        </div>
 
         {/* Age of the data — the sheet inherits the board's honest freshness label. */}
         {updLabel && <div style={{ fontSize: 12, color: C.secondary, opacity: 0.75, marginTop: 14, textAlign: 'end' }}>{updLabel}</div>}
