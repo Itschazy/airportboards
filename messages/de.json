@@ -85,6 +85,7 @@
     "az_desc": "Alle Flughäfen mit dem Anfangsbuchstaben {letter} — Ankünfte und Abflüge in Echtzeit, wobei das Alter der Daten auf jeder Anzeigetafel angezeigt wird.",
     "show_more": "Mehr anzeigen",
     "read_more": "Weiterlesen",
+    "read_less": "Weniger anzeigen",
     "view_all": "Alle anzeigen",
     "airport_word": "Flughafen",
     "ov_dep": "Abflüge auf der Anzeigetafel",

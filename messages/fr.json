@@ -85,6 +85,7 @@
     "az_desc": "Tous les aéroports commençant par la lettre {letter} — arrivées et départs en direct, avec l’âge des données indiqué sur chaque tableau.",
     "show_more": "Afficher plus",
     "read_more": "Lire la suite",
+    "read_less": "Réduire",
     "view_all": "Voir tout",
     "airport_word": "Aéroport",
     "ov_dep": "Départs sur le tableau",

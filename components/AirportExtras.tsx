@@ -5,24 +5,21 @@ import Link from 'next/link';
 
 const C = { card: '#0B0B0B', border: '1px solid #1A1A1A', sub: '#8A8A8A', green: '#34C759', blue: '#0A84FF' };
 
-// ── Collapse wrapper: content is in the DOM (SSR/SEO), revealed on tap ──
-export function MoreInfo({ label, children }: { label: string; children: React.ReactNode }) {
-  const [open, setOpen] = useState(false);
+// Раньше кнопка исчезала после открытия, и длинную навигацию нельзя было свернуть.
+// Native details работает до гидратации; ссылки и текст всегда остаются в SSR HTML.
+export function MoreInfo({ label, collapseLabel, children }: { label: string; collapseLabel: string; children: React.ReactNode }) {
   return (
-    <>
-      {!open && (
-        <button className="press" onClick={() => setOpen(true)} style={{
-          width: '100%', height: 52, marginTop: 8,
-          display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 8,
-          border: '1px solid rgba(255,255,255,0.08)', background: 'rgba(255,255,255,0.03)',
-          borderRadius: 14, color: '#FFFFFF', fontSize: 15, fontWeight: 600, cursor: 'pointer',
-        }}>
-          {label}
-          <svg width="13" height="13" viewBox="0 0 13 13" fill="none"><path d="M3 5L6.5 8.5L10 5" stroke="#8A8A8A" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" /></svg>
-        </button>
-      )}
-      <div style={{ display: open ? 'block' : 'none' }}>{children}</div>
-    </>
+    <details className="airport-disclosure">
+      <summary style={{
+        width: '100%', minHeight: 52, marginTop: 8,
+        display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 8,
+        border: '1px solid rgba(255,255,255,0.08)', background: 'rgba(255,255,255,0.03)',
+        borderRadius: 14, color: '#FFFFFF', fontSize: 15, fontWeight: 600, cursor: 'pointer',
+      }}>
+        <span className="disclosure-more">{label}</span><span className="disclosure-less">{collapseLabel}</span><span className="disclosure-arrow" aria-hidden="true">⌄</span>
+      </summary>
+      {children}
+    </details>
   );
 }
 
@@ -82,8 +79,9 @@ export function PopularRoutes({ iata, locale, perDay }: { iata: string; locale: 
   );
 }
 
-// ── About card with read-more ──
-export function AboutCard({ text, readMore }: { text: string; readMore: string }) {
+// Краткий текст остаётся видимым. Повторное нажатие теперь сворачивает полный текст;
+// прежде кнопка исчезала после раскрытия. Обе формы содержат весь исходный текст.
+export function AboutCard({ text, readMore, readLess }: { text: string; readMore: string; readLess: string }) {
   const [open, setOpen] = useState(false);
   return (
     <div style={{ background: C.card, border: C.border, borderRadius: 18, padding: '18px 20px' }}>
@@ -93,11 +91,11 @@ export function AboutCard({ text, readMore }: { text: string; readMore: string }
       }}>
         {text}
       </p>
-      {!open && (
-        <button className="press" onClick={() => setOpen(true)} style={{ marginTop: 8, background: 'none', border: 'none', color: C.blue, fontSize: 14, fontWeight: 600, cursor: 'pointer', padding: '2px 0' }}>
-          {readMore}
+      {
+        <button className="press" aria-expanded={open} onClick={() => setOpen(!open)} style={{ minHeight: 44, marginTop: 8, background: 'none', border: 'none', color: C.blue, fontSize: 14, fontWeight: 600, cursor: 'pointer', padding: '2px 0' }}>
+          {open ? readLess : readMore}
         </button>
-      )}
+      }
     </div>
   );
 }

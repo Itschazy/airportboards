@@ -85,6 +85,7 @@
     "az_desc": "Todos los aeropuertos que empiezan por la letra {letter}: llegadas y salidas en vivo, con la antigüedad de los datos mostrada en cada panel.",
     "show_more": "Mostrar más",
     "read_more": "Leer más",
+    "read_less": "Mostrar menos",
     "view_all": "Ver todo",
     "airport_word": "Aeropuerto",
     "ov_dep": "Salidas en el panel",

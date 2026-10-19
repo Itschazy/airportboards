@@ -85,6 +85,7 @@
     "az_desc": "所有以字母 {letter} 开头的机场——实时到达和出发信息，每个信息板均显示数据时效。",
     "show_more": "显示更多",
     "read_more": "阅读更多",
+    "read_less": "收起",
     "view_all": "查看全部",
     "airport_word": "机场",
     "ov_dep": "航班板上的出发航班",

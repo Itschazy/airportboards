@@ -163,3 +163,13 @@ input::-webkit-search-cancel-button { display: none; }
  * шеврон аккордеона смотрит вниз и зеркалить его не нужно, значок поиска и колокольчик — тем
  * более. Признак ставится на сам <svg>, поэтому в разметке видно, какая иконка направленная. */
 [dir='rtl'] svg[data-flip] { transform: scaleX(-1); }
+
+/* Справку можно открыть и закрыть без JS; стрелка отражает нативное состояние. */
+.airport-disclosure > summary { list-style: none; }
+.airport-disclosure > summary::-webkit-details-marker { display: none; }
+.airport-disclosure > summary .disclosure-arrow { color: #8A8A8A; flex-shrink: 0; }
+.airport-disclosure[open] > summary .disclosure-arrow { transform: rotate(180deg); }
+
+.airport-disclosure > summary .disclosure-less { display: none; }
+.airport-disclosure[open] > summary .disclosure-more { display: none; }
+.airport-disclosure[open] > summary .disclosure-less { display: inline; }

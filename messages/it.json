@@ -85,6 +85,7 @@
     "az_desc": "Tutti gli aeroporti che iniziano con la lettera {letter} — arrivi e partenze in tempo reale, con l’anzianità dei dati indicata su ogni tabellone.",
     "show_more": "Mostra altro",
     "read_more": "Leggi di più",
+    "read_less": "Mostra meno",
     "view_all": "Vedi tutto",
     "airport_word": "Aeroporto",
     "ov_dep": "Partenze sul tabellone",

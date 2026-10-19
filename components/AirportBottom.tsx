@@ -1,3 +1,4 @@
+import { SeoSection } from '@/components/SeoSection';
 import { numLocale } from '@/lib/i18n';
 import { getTranslations } from 'next-intl/server';
 import Link from 'next/link';
@@ -319,17 +320,15 @@ export async function AirportBottom({ airport, locale, about, displayName, fligh
             links to the event guide. Auto-expires once the event is over. */}
         <EventBanner iata={airport.iata} locale={locale} style={{ marginTop: 14 }} />
 
-        {/* ── Always visible: the unique, quotable prose ──────────────────────────
-            About → guide (transport/terminals/tips) → FAQ sit ABOVE the fold-out. These
-            are the passages worth citing and the only text here no other site has;
-            behind a click they were ~83% of the page's text, invisible to readers,
-            search engines and answer engines alike. What stays in "show more" below is
-            navigation — link lists, not prose. */}
+        {/* Краткое описание остаётся видимым; справка раскрывается по разделам.
+            Прежнее требование держать всю справку открытой создавало длинную ленту.
+            Сохраняем полный SSR HTML, H2, FAQ и ссылки: details меняет доступность
+            места на экране, а не состав текста. Проверяем HTML до/после без scripts. */}
         {/* 6. ABOUT */}
         {about && (
           <section className="cv-auto" style={sec}>
             <H2>{t('about_title', { iata: airport.iata })}</H2>
-            <AboutCard text={about} readMore={t('read_more')} />
+            <AboutCard text={about} readMore={t('read_more')} readLess={t('read_less')} />
           </section>
         )}
 
@@ -464,7 +463,7 @@ export async function AirportBottom({ airport, locale, about, displayName, fligh
             agreeing rows survived, so a missing fare means the two passes disagreed — the
             line still renders, because a number and a direction beat nothing. */}
         {ext?.guide && (ext.guide.transfers.length > 0 || ext.guide.transit.length > 0) && (
-          <section className="cv-auto" style={sec}>
+          <SeoSection title={extLabels.transport}>
             {ext.guide.transfers.length > 0 && (
               <>
                 <H2>{tUi('guide_transfers')}</H2>
@@ -543,22 +542,21 @@ export async function AirportBottom({ airport, locale, about, displayName, fligh
                 })(),
               })}
             </p>
-          </section>
+            {ext.transport && <div style={{ marginTop: 16, fontSize: 15, lineHeight: 1.6, color: '#B4B4B4' }}>{ext.transport}</div>}
+          </SeoSection>
         )}
 
         {/* 6b. AIRPORT GUIDE — transport / terminals / tips (top hubs only; renders
             nothing when there's no extended content file for this airport). */}
-        {ext?.transport && (
-          <section className="cv-auto" style={sec}>
-            <H2>{extLabels.transport}</H2>
+        {ext?.transport && !(ext.guide && (ext.guide.transfers.length || ext.guide.transit.length)) && (
+          <SeoSection title={extLabels.transport}>
             <div style={{ background: '#0B0B0B', border: '1px solid #1A1A1A', borderRadius: 16, padding: '16px 18px', fontSize: 15, lineHeight: 1.6, color: '#B4B4B4' }}>{ext.transport}</div>
-          </section>
+          </SeoSection>
         )}
         {ext?.terminals && (
-          <section className="cv-auto" style={sec}>
-            <H2>{extLabels.terminals}</H2>
+          <SeoSection title={extLabels.terminals}>
             <div style={{ background: '#0B0B0B', border: '1px solid #1A1A1A', borderRadius: 16, padding: '16px 18px', fontSize: 15, lineHeight: 1.6, color: '#B4B4B4' }}>{ext.terminals}</div>
-          </section>
+          </SeoSection>
         )}
         {/* Советы — только на табло ВЫЛЕТА. Текст этого блока весь про отправление: приезжайте
             заранее, регистрация, сдача багажа, контроль безопасности, ручная кладь. Заголовок
@@ -570,10 +568,9 @@ export async function AirportBottom({ airport, locale, about, displayName, fligh
             несоответствие вместо того, чтобы его убрать. Побочно это ещё и разводит родителя с
             его подстраницей: замер 14.08 давал схожесть 0.36 по 12 парам, и она станет ниже. */}
         {ext?.tips && !inbound && (
-          <section className="cv-auto" style={sec}>
-            <H2>{extLabels.tips}</H2>
+          <SeoSection title={extLabels.tips}>
             <div style={{ background: '#0B0B0B', border: '1px solid #1A1A1A', borderRadius: 16, padding: '16px 18px', fontSize: 15, lineHeight: 1.6, color: '#B4B4B4' }}>{ext.tips}</div>
-          </section>
+          </SeoSection>
         )}
 
         {/* 5. FAQ */}
@@ -591,7 +588,7 @@ export async function AirportBottom({ airport, locale, about, displayName, fligh
             never sees. */}
         <RecentlyViewed locale={locale} title={t('sec_recent')} exclude={airport.iata} />
 
-        <MoreInfo label={t('show_more')}>
+        <MoreInfo label={t('show_more')} collapseLabel={t('read_less')}>
 
           {/* 2. OVERVIEW */}
           <section style={{ marginTop: 24 }}>

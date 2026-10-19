@@ -20,7 +20,6 @@ const worldCounts = () => {
   return { served: w.withService, tracked: w.probed };
 };
 import { StandaloneResume } from '@/components/StandaloneResume';
-import { PopularNow } from '@/components/PopularNow';
 import { PopularList } from '@/components/PopularList';
 import { RecentlyViewed } from '@/components/RecentlyViewed';
 import { assertLocale } from '@/lib/locale-guard';
@@ -69,11 +68,6 @@ export default async function HomePage({ params }: Props) {
   // heading that said "当前热门" or "人気の空港" and above a footer that printed
   // "Соединённые Штаты". The data to do it right has been there all along — the same tables
   // every airport page uses.
-  const popularNow = POPULAR_AIRPORTS.slice(0, 8).map(iata => {
-    const a = getAirport(iata);
-    return a ? { iata, city: getCityName(a.city, locale, a.city) } : null;
-  }).filter(Boolean) as { iata: string; city: string }[];
-
   const popularList = POPULAR_AIRPORTS.map(iata => {
     const a = getAirport(iata);
     return a ? {
@@ -125,6 +119,10 @@ export default async function HomePage({ params }: Props) {
         <StandaloneResume locale={locale} />
       </div>
 
+      {/* Возвращающемуся посетителю нужен свой аэропорт рядом с поиском.
+          Каталог и обычные индексируемые ссылки ниже остаются доступны всем. */}
+      <RecentlyViewed locale={locale} title={t('sec_recent')} />
+
       {/* TRUST METRICS */}
       <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, minmax(0, 1fr))', gap: 12, marginTop: 26 }}>
         {[
@@ -152,10 +150,11 @@ export default async function HomePage({ params }: Props) {
         ))}
       </div>
 
-      {/* SECTION 1 — POPULAR NOW */}
+      {/* Один полный список вместо двух пересекающихся: сохраняем все ссылки,
+          но не заставляем посетителя дважды просматривать первые восемь аэропортов. */}
       <section style={{ marginTop: 44 }}>
-        <Title>{t('sec_popular_now')}</Title>
-        <PopularNow airports={popularNow} locale={locale} depLabel={depShort} arrLabel={arrShort} />
+        <Title>{t('sec_airports')}</Title>
+        <PopularList airports={popularList} locale={locale} depLabel={depShort} arrLabel={arrShort} />
       </section>
 
       {/* SECTION 2 — BY COUNTRY */}
@@ -200,15 +199,6 @@ export default async function HomePage({ params }: Props) {
           ))}
         </div>
       </section>
-
-      {/* SECTION 4 — POPULAR AIRPORTS */}
-      <section style={{ marginTop: 44 }}>
-        <Title>{t('sec_airports')}</Title>
-        <PopularList airports={popularList} locale={locale} depLabel={depShort} arrLabel={arrShort} />
-      </section>
-
-      {/* SECTION 5 — RECENTLY VIEWED */}
-      <RecentlyViewed locale={locale} title={t('sec_recent')} />
 
       {/* SECTION 6 — A-Z */}
       <section style={{ marginTop: 44 }}>

@@ -85,6 +85,7 @@
     "az_desc": "All airports starting with the letter {letter} — live arrivals and departures, with the age of the data shown on every board.",
     "show_more": "Show more",
     "read_more": "Read more",
+    "read_less": "Show less",
     "view_all": "View all",
     "airport_word": "Airport",
     "ov_dep": "Departures on the board",
