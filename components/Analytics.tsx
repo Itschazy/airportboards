@@ -1,4 +1,3 @@
-import Script from 'next/script';
 import { AUTOMATION_TEST } from '@/lib/metrica-snippet';
 import { adsenseClient } from '@/lib/adsense';
 
@@ -37,7 +36,11 @@ export function Analytics() {
     // The same automation test as the Metrika counter (lib/metrica-snippet.ts), applied through
     // GA's own opt-out switch: with window['ga-disable-<ID>'] set, gtag sends nothing at all —
     // neither this page_view nor the route-change ones from GaRouteTracker.
-    GA_ID ? `if(` + AUTOMATION_TEST + `){window['ga-disable-` + GA_ID + `']=true}` : '',
+    // Локальная production-сборка раньше попадала в реальные отчёты GA4, хотя Метрика
+    // давно защищена от localhost. Проверяем полный hostname, не подстроку: чужой
+    // airportsboard.live.example.com не должен загрязнять статистику. Флаг читает
+    // также GaRouteTracker, чтобы вообще не скачивать библиотеку в тестах/у роботов.
+    GA_ID ? `if((location.hostname!=='airportsboard.live'&&location.hostname.slice(-19)!=='.airportsboard.live')||` + AUTOMATION_TEST + `){window['ga-disable-` + GA_ID + `']=true}` : '',
     'window.dataLayer=window.dataLayer||[];',
     'function gtag(){dataLayer.push(arguments)}',
     'window.gtag=gtag;',
@@ -58,13 +61,10 @@ export function Analytics() {
   return (
     <>
       <script id="ga-consent" dangerouslySetInnerHTML={{ __html: bootstrap }} />
-      {GA_ID && (
-        <Script
-          id="ga-lib"
-          src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`}
-          strategy="afterInteractive"
-        />
-      )}
+      {/* Библиотеку подключает GaRouteTracker после гидратации. next/script с
+          afterInteractive заранее вставлял preload в head: тяжёлый Google tag
+          начинал конкурировать с HTML/JS табло ещё до первого текста. Очередь
+          consent/config выше остаётся синхронной, ранние события не теряются. */}
     </>
   );
 }
