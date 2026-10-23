@@ -10,7 +10,7 @@ import { FlightBoard } from '@/components/FlightBoard';
 import { AirportBottom } from '@/components/AirportBottom';
 import { getAirportContent } from '@/lib/airport-content';
 import { hasWikiAirlines } from '@/lib/wiki-routes';
-import { hasNoService, nearestServiced, sourcedNoCommercialService, serviceLevel } from '@/lib/warm';
+import { hasNoService, nearestServiced, sourcedNoCommercialService, serviceLevel, advertisedInSitemap, isUnfillable } from '@/lib/warm';
 import { nearestAirports } from '@/lib/airports';
 import { Breadcrumb } from '@/components/Breadcrumb';
 import { airportNodeId } from '@/lib/airport-sameas';
@@ -53,17 +53,15 @@ export async function generateStaticParams() {
   return getStaticIataCodes().map(iata => ({ iata }));
 }
 
-export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const { locale, iata } = await params;
-  setRequestLocale(assertLocale(locale));
-  const airport = getAirport(iata.toUpperCase());
-  if (!airport) return {};
+// 23.10.2026: Вебмастер показывает дубли TKQ/GYY/SCU и описаний CFK/IPT.
+// У информационных страниц сохраняем честное отсутствие обещания live-табло, но обозначаем
+// направление. Этот же текст использует JSON-LD: раньше он всегда обещал табло, даже когда
+// meta сообщала лишь справочную информацию. Проверка — check-seo-metadata.mjs на фикстуре.
+async function arrivalsCopy(airport: NonNullable<ReturnType<typeof getAirport>>, locale: string) {
   const t = await getTranslations({ locale, namespace: 'meta' });
   const name = getAirportName(airport.iata, locale, airport.name);
   const cityName = getCityName(airport.city, locale);
-  // Append the city only when the airport's localized name doesn't already contain it.
   const showCity = showCityFlag(getAirportNameBare(airport.iata, locale, airport.name), cityName, airport.city);
-
   // The parent decides whether this airport has a board at all, and until now these two
   // subpages ignored that decision entirely: LWO's parent read "No scheduled flights" while
   // /airport/LWO/departures read "Live Departures", both indexed, 23,772 URLs across the pair.
@@ -92,24 +90,36 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const STALE_AFTER = 12 * 60 * 60 * 1000;
   const at = getBoardFetchedAt(airport.iata, 'arrivals');
   const fresh = at != null && Date.now() - at <= STALE_AFTER;
+  const tNav = await getTranslations({ locale, namespace: 'nav' });
   const title = boardless
-    ? `${name} (${airport.iata}) — ${tHome('ns_title')}`
+    ? `${tNav('arrivals')}: ${name} (${airport.iata}) — ${tHome('ns_title')}`
     : infoOnly
-      ? t('info_title', { airport: name, iata: airport.iata })
+      ? `${tNav('arrivals')}: ${t('info_title', { airport: name, iata: airport.iata })}`
       : t(fresh ? 'arrivals_title' : 'arrivals_title_stale', { airport: name, iata: airport.iata, city: cityName, showCity });
   const description = boardless
-    ? tHome('ns_meta', { airport: name, iata: airport.iata, city: cityName, country })
+    ? `${tNav('arrivals')}: ${tHome('ns_meta', { airport: name, iata: airport.iata, city: cityName, country })}`
     : infoOnly
-      ? t('info_description', { airport: name, iata: airport.iata, city: cityName, country })
+      ? `${tNav('arrivals')}: ${t('info_description', { airport: name, iata: airport.iata, city: cityName, country })}`
       : t(fresh ? 'arrivals_description' : 'arrivals_description_stale', { airport: name, iata: airport.iata, city: cityName });
+  return { title, description };
+}
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { locale, iata } = await params;
+  setRequestLocale(assertLocale(locale));
+  const airport = getAirport(iata.toUpperCase());
+  if (!airport) return {};
+  const { title, description } = await arrivalsCopy(airport, locale);
   const canonical = `${BASE}/${locale}/airport/${airport.iata}/arrivals`;
 
-  // Only index an arrivals board that actually has flights. Thousands of small airfields
-  // otherwise ship near-identical "No flights" subpages (×12 locales) that dilute crawl
-  // budget and get mass-excluded, dragging host trust down. getBoard reads the in-memory
-  // store (live=false → never spends airlabs) — same read the page body does.
+  // Раньше index зависел только от строк текущего снимка: даже DME получал noindex
+  // при пустом ответе/ночной паузе. Для постоянно прогреваемых аэропортов используем
+  // устойчивый допуск sitemap; редкий хвост по-прежнему требует реальных строк.
+  // Закрытые/необслуживаемые аэропорты не индексируем даже при старом снимке в store.
   let hasFlights = false;
   try { hasFlights = (await getBoard(airport.iata, 'arrivals', locale)).length > 0; } catch {}
+  const indexable = !airport.closed && !hasNoService(airport.iata) && !isUnfillable(airport.iata)
+    && (advertisedInSitemap(airport.iata) || hasFlights);
 
   const languages: Record<string, string> = {};
   for (const loc of locales) {
@@ -121,9 +131,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     title,
     description,
     // Advertise the 12-language hreflang cluster only when the page is indexable.
-    alternates: hasFlights ? { canonical, languages } : { canonical },
+    alternates: indexable ? { canonical, languages } : { canonical },
     // og/twitter (incl. default OG image) inherited from layout; custom openGraph would drop it.
-    robots: { index: hasFlights, follow: true },
+    robots: { index: indexable, follow: true },
   };
 }
 
@@ -148,15 +158,7 @@ export default async function ArrivalsPage({ params }: Props) {
   const name = getAirportName(airport.iata, locale, airport.name);
   const city = getCityName(airport.city, locale);
   const country = getCountryName(airport.country, locale);
-  const showCity = showCityFlag(getAirportNameBare(airport.iata, locale, airport.name), city, airport.city);
-  // Возраст решает и здесь, а не только в generateMetadata. h1 уходит в JSON-LD полем
-  // `name`, поэтому один и тот же объект обещал «сегодня, в реальном времени» и тут же
-  // ставил dateModified восьмидневной давности. Порог тот же, что у заголовка вкладки.
-  const STALE_AFTER_H1 = 12 * 60 * 60 * 1000;
-  const h1At = getBoardFetchedAt(airport.iata, 'arrivals');
-  const h1Fresh = h1At != null && Date.now() - h1At <= STALE_AFTER_H1;
-  const h1 = t(h1Fresh ? 'arrivals_title' : 'arrivals_title_stale', { airport: name, iata: airport.iata, city, showCity });
-  const desc = t(h1Fresh ? 'arrivals_description' : 'arrivals_description_stale', { airport: name, iata: airport.iata, city });
+  const { title: schemaTitle, description: desc } = await arrivalsCopy(airport, locale);
 
   // Computed once and used twice: as the BreadcrumbList below and as the visible nav that
   // makes that list true. These pages previously had no link to the parent airport, the city,
@@ -194,7 +196,7 @@ export default async function ArrivalsPage({ params }: Props) {
     {
       '@context': 'https://schema.org',
       '@type': 'WebPage',
-      name: h1,
+      name: schemaTitle,
       description: desc,
       url: canonical,
       inLanguage: locale,

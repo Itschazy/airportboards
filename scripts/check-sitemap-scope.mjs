@@ -311,10 +311,11 @@ if (!arrivals.size) {
   say(belowTier.length === 0, belowTier.length
     ? `прилёты заявлены ниже яруса ${ARRIVALS_MIN_DAILY}: ${belowTier.slice(0, 6).join(', ')}…`
     : `ни одной подстраницы прилётов ниже яруса ${ARRIVALS_MIN_DAILY}`);
-  // И не больше, чем есть кандидатов: гейт по строкам обязан отсеивать, а не пропускать всё.
+  // Все устойчивые кандидаты остаются в карте даже при пустом ночном снимке.
+  // 23.10: robots прилётов больше не меняется вместе с числом строк.
   const candidates = Object.entries(LEVEL).filter(([c, n]) => (n ?? 0) >= ARRIVALS_MIN_DAILY && inMap.has(c)).length;
-  say(arrivals.size <= candidates,
-    `прилётов ${arrivals.size} при ${candidates} кандидатах яруса — гейт по строкам работает`);
+  say(arrivals.size === candidates,
+    `прилётов ${arrivals.size} при ${candidates} кандидатах яруса — устойчивый набор совпадает`);
 }
 
 console.log(fails

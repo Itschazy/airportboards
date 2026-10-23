@@ -38,7 +38,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const t = await getTranslations({ locale, namespace: 'home' });
   const city = getCityName(c.city, locale);
   const deCity = withDe(city, locale);
-  const title = t('city_title', { city, deCity });
+  // Вебмастер 23.10: город Columbia и страна Colombia имеют один русский title.
+  // Страна уточняет сущность города, не меняя H1, URL и оформление страницы.
+  const title = `${t('city_title', { city, deCity })} · ${getCountryName(c.country, locale)}`;
   /** Does anything on this page actually have a board? */
   const hasBoard = getAirportsByCity(slug).some(a => !hasNoService(a.iata));
   const languages: Record<string, string> = {};

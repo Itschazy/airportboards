@@ -337,18 +337,12 @@ async function buildAll(): Promise<MetadataRoute.Sitemap> {
     // different routes section, self-canonical, and the subpage that actually earns
     // impressions in Search Console.
     //
-    // Advertised only when the arrivals board ACTUALLY has rows right now — the same
-    // predicate the page's robots gate uses (arrivals/page.tsx: index iff board non-empty),
-    // not a parallel one that can disagree with it. getBoard reads the in-process store with
-    // live:false and never contacts airlabs; this runs once per sitemap regeneration
-    // (revalidate = 86400), not per request. The list therefore grows with warm coverage
-    // instead of promising pages that would answer noindex today.
+    // 23.10.2026: пустой текущий снимок больше не снимает устойчивое табло с карты
+    // на целые сутки. Внешний цикл уже ограничен advertisedInSitemap, а robots прилётов
+    // использует тот же устойчивый допуск. Хвост редких аэропортов сюда не расширяем.
+    // lastmod по-прежнему только от реального непустого снимка (boardStamp).
     if ((serviceLevel(iata) ?? 0) >= ARRIVALS_MIN_DAILY) {
-      try {
-        if ((await getBoard(iata, 'arrivals', 'en')).length > 0) {
-          entries.push(...entry(`/airport/${iata}/arrivals`, cf, 0.9, locales, boardStamp(iata, 'arrivals')));
-        }
-      } catch { /* empty or unreadable board — simply not advertised */ }
+      entries.push(...entry(`/airport/${iata}/arrivals`, cf, 0.9, locales, boardStamp(iata, 'arrivals')));
     }
   }
 
