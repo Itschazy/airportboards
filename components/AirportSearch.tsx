@@ -46,7 +46,10 @@ function saveRecent(a: Result) {
 export function AirportSearch({ locale, placeholder }: { locale: string; placeholder: string }) {
   const tNav = useTranslations('nav');
   const [query, setQuery]     = useState('');
-  const [results, setResults] = useState<Result[]>([]);
+  const [response, setResponse] = useState<{ query: string; locale: string; airports: Result[] } | null>(null);
+  // Результаты принадлежат конкретному запросу: даже до запуска effect старый
+  // список нельзя выбрать быстрым Enter или касанием после изменения поля.
+  const results = response?.query === query.trim() && response.locale === locale ? response.airports : [];
   const [recent, setRecent]   = useState<Result[]>([]);
   const [open, setOpen]       = useState(false);
   const [active, setActive]   = useState(-1);
@@ -54,14 +57,6 @@ export function AirportSearch({ locale, placeholder }: { locale: string; placeho
   const router    = useRouter();
   const inputRef  = useRef<HTMLInputElement>(null);
   const wrapRef   = useRef<HTMLDivElement>(null);
-
-  // Load popular airports on mount
-  useEffect(() => {
-    fetch(`/api/airports/search?q=&locale=${locale}`)
-      .then(r => r.json())
-      .then(d => { if (!query) setResults(d.airports || []); })
-      .catch(() => {});
-  }, []);
 
   // Запроса геолокации здесь БОЛЬШЕ НЕТ, и это осознанно.
   //
@@ -78,24 +73,30 @@ export function AirportSearch({ locale, placeholder }: { locale: string; placeho
   // Вместе с запросом убраны раздел «ближайшие» в выпадашке и маршрут /api/airports/nearest,
   // у которого этот компонент был единственным потребителем.
 
-  // Search with debounce. Gated on `open` (not `focused`) so a visible dropdown
-  // keeps fetching even if the input lost focus (e.g. scrolling on touch).
+  // Раньше популярные аэропорты и каждый поисковый запрос независимо писали в
+  // один массив. Быстрый AYT + Enter открывал JFK; медленный старый ответ мог
+  // заменить свежий. Один отменяемый запрос и привязка ответа к query/locale
+  // закрывают обе гонки. Ошибка сети не оставляет необработанный rejected Promise.
+  // Проверено быстрым Enter до ответа, сменой запроса и отменой на локальной фикстуре.
+  // Пустой запрос грузится и до открытия — подсказки готовы при первом фокусе.
   useEffect(() => {
-    if (!open) return;
-    if (!query.trim()) {
-      fetch(`/api/airports/search?q=&locale=${locale}`)
-        .then(r => r.json())
-        .then(d => setResults(d.airports || []))
-        .catch(() => {});
-      return;
-    }
-    const t = setTimeout(async () => {
-      const res = await fetch(`/api/airports/search?q=${encodeURIComponent(query)}&locale=${locale}`);
-      const data = await res.json();
-      setResults(data.airports || []);
-      setActive(-1);
-    }, 100);
-    return () => clearTimeout(t);
+    if (!open && query.trim()) return;
+    const controller = new AbortController();
+    const searchQuery = query.trim();
+    const timer = setTimeout(async () => {
+      try {
+        const res = await fetch(`/api/airports/search?q=${encodeURIComponent(searchQuery)}&locale=${locale}`, { signal: controller.signal });
+        if (!res.ok) throw new Error(`Search HTTP ${res.status}`);
+        const data = await res.json();
+        if (!controller.signal.aborted) {
+          setResponse({ query: searchQuery, locale, airports: data.airports || [] });
+          setActive(-1);
+        }
+      } catch {
+        if (!controller.signal.aborted) setResponse({ query: searchQuery, locale, airports: [] });
+      }
+    }, searchQuery ? 100 : 0);
+    return () => { clearTimeout(timer); controller.abort(); };
   }, [query, open, locale]);
 
   // Close on outside click
@@ -136,7 +137,7 @@ export function AirportSearch({ locale, placeholder }: { locale: string; placeho
   const navList = query.trim() ? results : emptyFlat;
 
   const onKey = (e: React.KeyboardEvent) => {
-    if (!open) return;
+    if (!open || e.nativeEvent.isComposing) return;
     if (e.key === 'ArrowDown') { e.preventDefault(); setActive(v => Math.min(v + 1, navList.length - 1)); }
     if (e.key === 'ArrowUp')   { e.preventDefault(); setActive(v => Math.max(v - 1, 0)); }
     if (e.key === 'Enter') {
@@ -254,7 +255,7 @@ export function AirportSearch({ locale, placeholder }: { locale: string; placeho
           spellCheck={false}
           placeholder={placeholder}
           value={query}
-          onChange={e => { setQuery(e.target.value); setOpen(true); }}
+          onChange={e => { setQuery(e.target.value); setActive(-1); setOpen(true); }}
           onKeyDown={onKey}
           onFocus={onFocus}
           onBlur={onBlur}

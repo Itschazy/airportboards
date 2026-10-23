@@ -194,7 +194,7 @@ function IconChevron() {
 
 // ─── Bottom Sheet ────────────────────────────────────────────────────────────
 
-function BottomSheet({ flight, mode, onClose, tz, locale, clockMs, updLabel, originIata, originName, isPinned, onTogglePin }: {
+function BottomSheet({ flight: selectedFlight, mode, onClose, tz, locale, clockMs, updLabel, originIata, originName, isPinned, onTogglePin }: {
   flight: Flight | null;
   clockMs: number;
   mode: Mode;
@@ -208,6 +208,18 @@ function BottomSheet({ flight, mode, onClose, tz, locale, clockMs, updLabel, ori
   isPinned: boolean;
   onTogglePin: () => void;
 }) {
+  // При закрытии нельзя сразу удалять тело: высота шторки схлопывалась с 860
+  // до 101 px ещё до translateY, вызывая скачок (CLS 0.72 при CPU ×6).
+  // Сохраняем последний рейс на время прежней анимации 340 мс; доступность и
+  // блокировка страницы зависят только от selectedFlight. Новое открытие сразу
+  // показывает новый рейс и отменяет очистку. Таймер страхует отсутствие transitionend.
+  const [lastFlight, setLastFlight] = useState<Flight | null>(selectedFlight);
+  const flight = selectedFlight || lastFlight;
+  useEffect(() => {
+    if (selectedFlight) { setLastFlight(selectedFlight); return; }
+    const timer = setTimeout(() => setLastFlight(null), 400);
+    return () => clearTimeout(timer);
+  }, [selectedFlight]);
   const t = useTranslations('ui');
   const [copied, setCopied] = useState(false);
   /**
@@ -248,7 +260,7 @@ function BottomSheet({ flight, mode, onClose, tz, locale, clockMs, updLabel, ori
   // «→» не разворачивается алгоритмом двунаправленного письма (Bidi_Mirrored=No)
   const arrow = locale === 'ar' ? '←' : '→';
   const tNav = useTranslations('nav');
-  const vis = !!flight;
+  const vis = !!selectedFlight;
 
   useEffect(() => {
     document.body.style.overflow = vis ? 'hidden' : '';
@@ -627,6 +639,9 @@ function BottomSheet({ flight, mode, onClose, tz, locale, clockMs, updLabel, ori
       }} />
       <div
         ref={sheetRef}
+        onTransitionEnd={e => {
+          if (e.target === e.currentTarget && e.propertyName === 'transform' && !vis) setLastFlight(null);
+        }}
         // Пока шторка закрыта, её не должно быть ни в дереве доступности, ни в обходе Tab:
         // в отданной разметке она лежит всегда, и кнопка «Закрыть» была 54-й остановкой —
         // между последней строкой рейса и кнопкой «показать ещё». role и aria-modal тоже
