@@ -1,7 +1,7 @@
 import { getLocale, getTranslations } from 'next-intl/server';
 import { baseLocale } from '@/lib/i18n';
 import Link from 'next/link';
-import { AirportSearch } from '@/components/AirportSearch';
+import { NotFoundSearch } from '@/components/NotFoundSearch';
 import { POPULAR_AIRPORTS, getAirport } from '@/lib/airports';
 import { getCityName } from '@/lib/places';
 
@@ -23,7 +23,7 @@ export default async function NotFound() {
       <p style={{ fontSize: 15, color: 'var(--ab-8a8a8a)', marginTop: 10, lineHeight: 1.5 }}>{t('text')}</p>
 
       <div style={{ marginTop: 24 }}>
-        <AirportSearch locale={locale} placeholder={tNav('search_placeholder')} />
+        <NotFoundSearch locale={locale} placeholder={tNav('search_placeholder')} />
       </div>
 
       <div style={{ fontSize: 12, fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.12em', color: 'var(--ab-8a8a8a)', margin: '32px 0 12px' }}>{tNav('popular')}</div>
