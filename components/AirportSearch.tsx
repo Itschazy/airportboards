@@ -4,8 +4,9 @@ import { useState, useEffect, useRef, useCallback } from 'react';
 import { useRouter } from 'next/navigation';
 import { useTranslations } from 'next-intl';
 import { track, GOALS } from '@/lib/track';
+import { prepareQuick, quickSearch, prioritizeQuick, type AirportSuggestion, type QuickTuple } from '@/lib/quick-search';
 
-type Result = { iata: string; name: string; city: string; country: string; iso2: string };
+type Result = AirportSuggestion;
 
 const RECENT_KEY = 'ab_recent';
 const MAX_RECENT = 5;
@@ -126,18 +127,27 @@ function SearchSection({ label, items, startIndex = 0, active, query, pending = 
 export function AirportSearch({ locale, placeholder }: { locale: string; placeholder: string }) {
   const tNav = useTranslations('nav');
   const [query, setQuery]     = useState('');
-  const [response, setResponse] = useState<{ query: string; locale: string; airports: Result[] } | null>(null);
+  const [response, setResponse] = useState<{ query: string; locale: string; airports: Result[]; failed?: boolean } | null>(null);
   // Результаты принадлежат конкретному запросу: даже до запуска effect старый
   // список нельзя выбрать быстрым Enter или касанием после изменения поля.
+  const [bootstrap, setBootstrap] = useState<{ locale: string; popular: Result[]; index: ReturnType<typeof prepareQuick> } | null>(null);
+  const cache = useRef(new Map<string, Result[]>());
   const currentQuery = query.trim();
+  const cacheKey = `${locale}:${currentQuery.toLowerCase()}`;
   const isCurrent = response?.query === currentQuery && response.locale === locale;
-  const results = isCurrent ? response.airports : [];
+  const cached = cache.current.get(cacheKey);
+  const quick = bootstrap?.locale === locale ? quickSearch(bootstrap.index, currentQuery) : [];
+  // Полный ответ всегда главнее предварительных совпадений, даже когда он пустой.
+  // До него разрешён выбор только проверенного совпадения с текущим вводом.
+  const results = isCurrent ? (response.failed ? quick : prioritizeQuick(response.airports, quick))
+    : cached ? prioritizeQuick(cached, quick) : quick;
+  // Если быстрый словарь не покрывает запрос, сохраняем прежний плавный переход.
   // При уточнении «чел» → «челя» раньше results=[] убирал весь список на debounce
   // и сетевой round-trip. Сохраняем прежние строки до ответа, но временно запрещаем
   // их выбор и сообщаем aria-busy. Enter по-прежнему использует только results.
   // Для другого запроса/языка подсказки не переносим. Пустой ответ или ошибка сети
   // завершает ожидание и убирает прежние строки. Проверено check-search-race.
-  const pending = !isCurrent && !!currentQuery && !!response?.query && response.locale === locale && (
+  const pending = !isCurrent && !cached && results.length === 0 && !!currentQuery && !!response?.query && response.locale === locale && (
     currentQuery.toLowerCase().startsWith(response.query.toLowerCase()) ||
     response.query.toLowerCase().startsWith(currentQuery.toLowerCase())
   );
@@ -165,31 +175,49 @@ export function AirportSearch({ locale, placeholder }: { locale: string; placeho
   // Вместе с запросом убраны раздел «ближайшие» в выпадашке и маршрут /api/airports/nearest,
   // у которого этот компонент был единственным потребителем.
 
-  // Раньше популярные аэропорты и каждый поисковый запрос независимо писали в
-  // один массив. Быстрый AYT + Enter открывал JFK; медленный старый ответ мог
-  // заменить свежий. Один отменяемый запрос и привязка ответа к query/locale
-  // закрывают обе гонки. Ошибка сети не оставляет необработанный rejected Promise.
-  // Проверено быстрым Enter до ответа, сменой запроса и отменой на локальной фикстуре.
-  // Пустой запрос грузится и до открытия — подсказки готовы при первом фокусе.
+  // Раньше каждый символ требовал нового сетевого round-trip (0.65–1.2с в замере),
+  // а изменение query отменяло даже подготовку популярных подсказок. Компактный
+  // словарь загружается один раз независимо от ввода; до его готовности работает
+  // прежний API. В клиентский JS большой каталог и алиасы не входят.
   useEffect(() => {
-    if (!open && query.trim()) return;
     const controller = new AbortController();
-    const searchQuery = query.trim();
+    fetch(`/api/airports/search?locale=${locale}&bootstrap=1`, { signal: controller.signal })
+      .then(res => { if (!res.ok) throw new Error('Search bootstrap'); return res.json(); })
+      .then(data => {
+        if (!controller.signal.aborted) setBootstrap({ locale, popular: data.airports || [], index: prepareQuick((data.quick || []) as QuickTuple[]) });
+      }).catch(() => { /* Полный поиск остаётся доступным при ошибке словаря. */ });
+    return () => controller.abort();
+  }, [locale]);
+
+  // Полный поиск сохраняет опечатки/алиасы/редкие аэропорты. Отмена и query+locale
+  // не дают старому ответу заменить новый. Последние 32 успешных ответа хранятся
+  // только в памяти компонента: возврат к запросу не требует ещё одного RTT,
+  // а неограниченный пользовательский ввод не раздувает память телефона.
+  useEffect(() => {
+    if (!open || !currentQuery || cache.current.has(cacheKey)) return;
+    const controller = new AbortController();
     const timer = setTimeout(async () => {
       try {
-        const res = await fetch(`/api/airports/search?q=${encodeURIComponent(searchQuery)}&locale=${locale}`, { signal: controller.signal });
+        const res = await fetch(`/api/airports/search?q=${encodeURIComponent(currentQuery)}&locale=${locale}`, { signal: controller.signal });
         if (!res.ok) throw new Error(`Search HTTP ${res.status}`);
         const data = await res.json();
         if (!controller.signal.aborted) {
-          setResponse({ query: searchQuery, locale, airports: data.airports || [] });
+          const airports = data.airports || [];
+          cache.current.set(cacheKey, airports);
+          if (cache.current.size > 32) cache.current.delete(cache.current.keys().next().value!);
+          setResponse({ query: currentQuery, locale, airports });
           setActive(-1);
         }
       } catch {
-        if (!controller.signal.aborted) setResponse({ query: searchQuery, locale, airports: [] });
+        // При недоступной сети оставляем проверенные локальные совпадения;
+        // устаревшую выдачу другого запроса показывать/выбирать нельзя.
+        if (!controller.signal.aborted) setResponse({ query: currentQuery, locale, airports: [], failed: true });
       }
-    }, searchQuery ? 100 : 0);
+    }, 100);
     return () => { clearTimeout(timer); controller.abort(); };
-  }, [query, open, locale]);
+    // quick не зависимость: загрузка словаря не должна перезапускать текущий запрос.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [currentQuery, open, locale, cacheKey]);
 
   // Close on outside click
   useEffect(() => {
@@ -224,7 +252,7 @@ export function AirportSearch({ locale, placeholder }: { locale: string; placeho
   // so there are no duplicate React keys and arrow-keys + Enter hit the right row.
   const seen = new Set<string>();
   const recentF = recent.filter(a => !seen.has(a.iata) && seen.add(a.iata));
-  const popularItems = results.slice(0, 6).filter(a => !seen.has(a.iata) && seen.add(a.iata));
+  const popularItems = (bootstrap?.locale === locale ? bootstrap.popular : []).slice(0, 6).filter(a => !seen.has(a.iata) && seen.add(a.iata));
   const emptyFlat = [...recentF, ...popularItems];
   const navList = query.trim() ? results : emptyFlat;
 
@@ -332,7 +360,10 @@ export function AirportSearch({ locale, placeholder }: { locale: string; placeho
           borderRadius: 16,
           overflow: 'hidden',
           overflowY: 'auto',
-          maxHeight: 'min(480px, calc(100dvh - 220px))',
+          // На высоте240px прежние 100dvh−220px оставляли20px: только заголовок,
+          // ни одного доступного города. Минимум88px вмещает заголовок и строку;
+          // длинная выдача всё ещё прокручивается внутри, страница — снаружи.
+          maxHeight: 'min(480px, max(88px, calc(100dvh - 220px)))',
           zIndex: 100,
           boxShadow: '0 20px 60px rgba(0,0,0,0.8)',
         }}>

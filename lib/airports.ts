@@ -319,9 +319,8 @@ const isCJK = (s: string) => /[　-鿿가-힯぀-ヿ]/.test(s.normalize('NFC'));
 
 // Match strength of a query token against an airport's needles.
 // 100 exact · 40 prefix · 12 substring/CJK-part · 5 fuzzy(1 typo) · 0 none.
-function tokenScore(tok: string, needles: string[]): number {
-  const cjk = isCJK(tok);
-  const cands = hasCyrillic(tok) ? [tok, translit(tok)] : [tok];
+type SearchToken = { cjk: boolean; cands: string[] };
+function tokenScore({ cjk, cands }: SearchToken, needles: string[]): number {
   let best = 0;
   for (const nd of needles) {
     for (const c of cands) {
@@ -354,12 +353,16 @@ export function searchAirports(query: string, limit = 10): Airport[] {
 
   // Require most tokens to match (allow one descriptive extra to miss).
   const needed = Math.max(1, tokens.length - 1);
+  // Раньше один и тот же токен транслитерировался до 12 тысяч раз за запрос
+  // (город и страна каждого аэропорта). Подготавливаем один раз; правила и веса
+  // не меняются. Проверка: сравнение выдачи с прежним кодом и check-search-i18n.
+  const prepared = tokens.map(tok => ({ cjk: isCJK(tok), cands: hasCyrillic(tok) ? [tok, translit(tok)] : [tok] }));
 
   const results: Array<Airport & { _score: number }> = [];
   for (const a of airports) {
     const needles = needlesOf(a);
     let sum = 0, matched = 0, strong = false;
-    for (const tok of tokens) {
+    for (const tok of prepared) {
       const m = tokenScore(tok, needles);
       if (m > 0) { matched++; sum += m; if (m >= 40) strong = true; }
       else {
@@ -535,4 +538,14 @@ export function getAirportsByLetter(letter: string): Airport[] {
   return airports
     .filter(a => fold((a.name || '').toLowerCase()).startsWith(L))
     .sort((a, b) => a.name.localeCompare(b.name));
+}
+
+// Быстрый словарь главной: 1000 обслуживаемых аэропортов покрывают частые города,
+// но не заставляют слабый телефон загружать все 6069 записей и алиасы 12 языков.
+// Список строится один раз в процессе по тем же измерениям сервиса, что и табло.
+let QUICK_AIRPORTS: Airport[] | null = null;
+export function getQuickAirports(): Airport[] {
+  if (!QUICK_AIRPORTS) QUICK_AIRPORTS = airports.filter(a => !a.closed && serviceOf(a.iata) > 0)
+    .sort((a, b) => serviceOf(b.iata) - serviceOf(a.iata) || a.iata.localeCompare(b.iata)).slice(0, 1000);
+  return QUICK_AIRPORTS;
 }
