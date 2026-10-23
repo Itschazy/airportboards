@@ -17,8 +17,23 @@ const BASE = 'https://airportsboard.live';
  * Keeping the two together in one copy-paste block is what makes the link survive contact
  * with real webmasters.
  */
-export function WidgetBuilder({ locale }: { locale: string }) {
-  const t = useTranslations('home');
+// Подписи приходят уже переведёнными с /widgets. Раньше ради этих десяти строк
+// весь home-каталог сериализовался в layout каждой страницы аэропорта. Передача
+// простых строк сохраняет SSR и язык виджета, но не нагружает первое открытие табло.
+type WidgetLabels = {
+  airport: string;
+  language: string;
+  direction: string;
+  theme: string;
+  dark: string;
+  light: string;
+  code: string;
+  copied: string;
+  copy: string;
+  preview: string;
+};
+
+export function WidgetBuilder({ locale, labels }: { locale: string; labels: WidgetLabels }) {
   const tUi = useTranslations('ui');
   const [q, setQ] = useState('');
   const [hits, setHits] = useState<Hit[]>([]);
@@ -74,7 +89,7 @@ export function WidgetBuilder({ locale }: { locale: string }) {
 
   return (
     <div>
-      <label style={label} htmlFor="wb-q">{t('widgets_airport')}</label>
+      <label style={label} htmlFor="wb-q">{labels.airport}</label>
       <input id="wb-q" style={input} value={sel ? `${sel.name} (${sel.iata})` : q}
         onChange={e => { setSel(null); setQ(e.target.value); }}
         onFocus={() => { if (sel) { setSel(null); setQ(''); } }}
@@ -94,13 +109,13 @@ export function WidgetBuilder({ locale }: { locale: string }) {
 
       <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(150px, 1fr))', gap: 12 }}>
         <div>
-          <label style={label} htmlFor="wb-lang">{t('widgets_language')}</label>
+          <label style={label} htmlFor="wb-lang">{labels.language}</label>
           <select id="wb-lang" style={input} value={lang} onChange={e => setLang(e.target.value)}>
             {locales.map(l => <option key={l} value={l}>{localeNames[l]}</option>)}
           </select>
         </div>
         <div>
-          <label style={label} htmlFor="wb-dir">{t('widgets_direction')}</label>
+          <label style={label} htmlFor="wb-dir">{labels.direction}</label>
           <select id="wb-dir" style={input} value={dir} onChange={e => setDir(e.target.value as 'departures' | 'arrivals')}>
             {/* ui.departures/arrivals are nominative board labels; home.*_short are the
                 genitive fragments other sentences interpolate — «вылетов» alone is not a
@@ -110,26 +125,26 @@ export function WidgetBuilder({ locale }: { locale: string }) {
           </select>
         </div>
         <div>
-          <label style={label} htmlFor="wb-theme">{t('widgets_theme')}</label>
+          <label style={label} htmlFor="wb-theme">{labels.theme}</label>
           <select id="wb-theme" style={input} value={theme} onChange={e => setTheme(e.target.value as 'dark' | 'light')}>
-            <option value="dark">{t('widgets_dark')}</option>
-            <option value="light">{t('widgets_light')}</option>
+            <option value="dark">{labels.dark}</option>
+            <option value="light">{labels.light}</option>
           </select>
         </div>
       </div>
 
       {sel && (
         <>
-          <label style={label} htmlFor="wb-code">{t('widgets_code')}</label>
+          <label style={label} htmlFor="wb-code">{labels.code}</label>
           <textarea id="wb-code" readOnly value={snippet} rows={7}
             style={{ ...input, fontFamily: 'ui-monospace, SFMono-Regular, Menlo, monospace', fontSize: 12.5, lineHeight: 1.5, resize: 'vertical' }}
             onFocus={e => e.currentTarget.select()} />
           <button type="button" onClick={copy}
             style={{ marginTop: 10, background: copied ? 'var(--ab-34c759)' : 'var(--ab-0a84ff)', color: 'var(--ab-ffffff)', border: 0, borderRadius: 999, padding: '10px 22px', fontSize: 14, fontWeight: 600, cursor: 'pointer' }}>
-            {copied ? t('widgets_copied') : t('widgets_copy')}
+            {copied ? labels.copied : labels.copy}
           </button>
 
-          <div style={label as React.CSSProperties}>{t('widgets_preview')}</div>
+          <div style={label as React.CSSProperties}>{labels.preview}</div>
           <iframe
             key={`${sel.iata}-${lang}-${dir}-${theme}`}
             src={`/embed/${sel.iata}?lang=${lang}&dir=${dir}${theme === 'light' ? '&theme=light' : ''}`}

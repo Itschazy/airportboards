@@ -1,4 +1,4 @@
-// The browser is sent four of the ten message namespaces. Prove that is still enough.
+// The browser is sent three message namespaces. Prove that is still enough.
 //
 // lib/client-messages.ts trims the catalogue handed to NextIntlClientProvider, which is worth
 // roughly 800 bytes of gzip per page and more for the non-Latin locales. The trim is only safe

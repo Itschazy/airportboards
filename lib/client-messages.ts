@@ -1,26 +1,24 @@
 /**
- * Which message namespaces travel to the browser.
+ * Пространства переводов, которые действительно нужны браузеру.
  *
- * next-intl serialises whatever `NextIntlClientProvider` is handed into the page — twice, in
- * the HTML and again in the RSC payload — and the layout was handing it the entire catalogue.
- * Six of the ten namespaces are read only by Server Components, which resolve translations on
- * the server and never touch the client provider, so they were being shipped to every reader
- * on every page for nothing.
+ * NextIntlClientProvider сериализует переданный каталог в RSC-нагрузку страницы.
+ * Серверные компоненты уже отдают переведённый HTML и не требуют второй копии
+ * исходных сообщений на телефоне. Первое сокращение убрало только серверные
+ * пространства; теперь убран и home, который держали ради десяти подписей виджета.
+ * /widgets переводит эти подписи на сервере и передаёт в WidgetBuilder строками.
+ * SEO-тексты главной/аэропортов остаются в HTML, меняется только передача словаря.
  *
- * The cost is not shared evenly, which is why this is an internationalisation fix and not a
- * performance one. Measured on the catalogues alone, gzip -6: en 5,186 B, ru 6,936 B, ar
- * 6,506 B, hi 7,054 B. A language written outside Latin-1 pays two to three bytes per
- * character before compression, so the reader who most needs the translation is the one
- * charged most for the part of it nobody renders.
+ * Здесь остаются ui/nav (табло и шапка) и legal (CookieNotice, чтобы его включение
+ * не потеряло переводы). Каталог ru: 24490→9213 Б, gzip 6387→3128 Б; полный HTML
+ * AYT на одинаковой фикстуре: gzip 46282→43009 Б. Это сокращение объёма передачи,
+ * а не доказательство ускорения LCP у посетителей.
  *
- * The four kept here are every namespace reached from a `'use client'` file through the import
- * graph — FlightBoard and SiteHeader take `ui` and `nav`, CookieNotice takes `legal`,
- * WidgetBuilder takes `home`. That set is re-derived from the source and asserted by
- * scripts/check-client-messages.mjs, because the failure mode is silent: a missing namespace
- * does not throw in production, it renders the key, and it would do so in twelve languages
- * at once while English — the one an author is most likely to open — kept working.
+ * check-client-messages.mjs повторно выводит пространства из клиентского графа
+ * импортов. Без этой проверки новый useTranslations может молча показать ключ
+ * вместо перевода. Дополнительно production build и сравнение 12 локалей
+ * подтвердили прежний SSR-текст виджета, а 24 страниц табло — прежние SEO/рейсы.
  */
-export const CLIENT_NAMESPACES = ['home', 'legal', 'nav', 'ui'] as const;
+export const CLIENT_NAMESPACES = ['legal', 'nav', 'ui'] as const;
 
 export function clientMessages(all: Record<string, unknown>): Record<string, unknown> {
   const out: Record<string, unknown> = {};

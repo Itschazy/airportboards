@@ -76,7 +76,18 @@ export default async function WidgetsPage({ params }: Props) {
       <p style={{ fontSize: 15, lineHeight: 1.6, color: 'var(--ab-b4b4b4)', margin: '12px 0 6px' }}>
         {t('widgets_intro')}
       </p>
-      <WidgetBuilder locale={locale} />
+      <WidgetBuilder locale={locale} labels={{
+        airport: t('widgets_airport'),
+        language: t('widgets_language'),
+        direction: t('widgets_direction'),
+        theme: t('widgets_theme'),
+        dark: t('widgets_dark'),
+        light: t('widgets_light'),
+        code: t('widgets_code'),
+        copied: t('widgets_copied'),
+        copy: t('widgets_copy'),
+        preview: t('widgets_preview'),
+      }} />
       <p style={{ fontSize: 13, lineHeight: 1.5, color: 'var(--ab-8a8a8a)', marginTop: 26 }}>
         {t('widgets_note')}
       </p>
