@@ -1320,18 +1320,22 @@ export function FlightBoard({ airport, locale, defaultMode = 'departures', displ
                   </div>
                 </div>
 
-                {/* Right: gate + status + chevron */}
-                {/* Right: gate + status + chevron. 80px rather than 92: the status label already
-                    wraps to two lines in Russian ("ПО РАСПИСАНИЮ"), so the extra 12px bought
-                    nothing here and was taken straight out of the destination, which had none
-                    to spare. */}
+                {/* Ширина статуса не зависит от его текста. Раньше maxWidth 80/88
+                    ограничивал только максимум: «Посадка» занимала 66px, «Последний
+                    вызов» — 80px. На 375px город при обновлении сжимался с 129 до
+                    115px и переносил IATA на новую строку. В Safari это создавало
+                    нового LCP-кандидата уже после гидратации, хотя табло давно видно.
+                    Резервируем прежний максимальный размер колонки (88px) сразу:
+                    обновление меняет статус, но не ширину соседнего города. Проверено
+                    на минимальном воспроизведении из SSR-строки SSH в WebKit и на
+                    полном табло; шрифты, цвета и содержимое сохраняются. */}
                 {/* Спокойный статус — обычным регистром и в одну строку (18.10.2026). Заглавные
                     «ПО / РАСПИСАНИЮ» в две строки делали КАЖДУЮ карточку на ~20px выше, а это
                     самый частый статус: на экран телефона входило 4.5 рейса. Тревожные статусы
                     (задержка, посадка, последний вызов, отмена) остаются заглавными и жирными —
                     они и должны бросаться в глаза, а «всё по плану» — нет. */}
                 <div style={{ flexShrink: 0, textAlign: 'end', display: 'flex', alignItems: 'center', gap: 6 }}>
-                  <div style={{ maxWidth: (f.status === 'ontime' || f.status === 'scheduled') ? 88 : 80 }}>
+                  <div style={{ width: 88, maxWidth: 88 }}>
                     {f.gate && (
                       <div style={{ lineHeight: 1.1, whiteSpace: 'nowrap', marginBottom: 5 }}>
                         <span style={{ fontSize: 12, color: C.secondary }}>{t('gate')} </span>
