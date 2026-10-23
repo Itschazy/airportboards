@@ -21,6 +21,14 @@ const nextConfig: NextConfig = {
   distDir: process.env.NEXT_DIST_DIR || '.next',
   // Drop the `X-Powered-By: Next.js` header — leaks the stack, no benefit.
   poweredByHeader: false,
+  // Табло уже есть в SSR, но до первого отображения браузер ждал отдельный CSS (~5 КБ gzip).
+  // На мобильной сети это лишний последовательный запрос: локальный стенд с задержкой
+  // 500 мс показал CSS responseEnd 1122 мс и первый текст 1224 мс. Отдаём те же стили
+  // вместе с HTML, не меняя ни одного правила. Цена — несколько КБ в каждом HTML вместо
+  // отдельного кэша CSS; для преимущественно новых посетителей из поиска это выгоднее.
+  // Опция экспериментальная в закреплённом Next 15.5.28: проверять именно production build,
+  // включая переходы App Router, SSR/SEO и мобильные снимки при обновлении Next.
+  experimental: { inlineCss: true },
   // Force blocking (non-streaming) metadata for EVERY user-agent. Next 15 streams
   // <head> metadata into the <body> for non-bot UAs (and even the main Googlebot,
   // which it trusts to hoist via JS). On a cache-miss/dynamic render of our SSR
