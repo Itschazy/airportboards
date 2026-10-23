@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "node scripts/ensure-operator-key.mjs && node scripts/clean-stale-types.mjs && NEXT_DIST_DIR=.next-build next build && node scripts/swap-build.mjs",
+    "build": "node scripts/maintenance-runner.mjs build",
     "start": "next start",
     "check:scripts": "node scripts/check-scripts.mjs",
     "check:metrica": "node scripts/check-metrica.mjs",
@@ -54,10 +54,11 @@
     "check:planuse": "node scripts/check-plan-utilisation.mjs",
     "check:keyexpiry": "node scripts/check-key-expiry.mjs",
     "check:sitemaplangs": "node scripts/check-sitemap-hreflang.mjs",
-    "check:generatedprose": "node scripts/check-generated-prose.mjs"
+    "check:generatedprose": "node scripts/check-generated-prose.mjs",
+    "maintain:cache": "node scripts/maintenance-runner.mjs cache"
   },
   "dependencies": {
-    "next": "^15.3.3",
+    "next": "15.5.28",
     "next-intl": "^4.1.0",
     "react": "^19.1.0",
     "react-dom": "^19.1.0"

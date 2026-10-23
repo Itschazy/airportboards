@@ -1,0 +1,10 @@
+[Unit]
+Description=Bound AirportsBoard reproducible Next.js cache
+[Service]
+Type=oneshot
+User=deploy
+WorkingDirectory=/var/www/airportsboard
+ExecStart=/usr/bin/node scripts/maintenance-runner.mjs cache
+Nice=15
+IOSchedulingClass=idle
+SuccessExitStatus=75

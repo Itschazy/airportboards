@@ -13,12 +13,14 @@
 // directory untouched. A slow deploy stays a slow deploy.
 //
 // The previous build is kept as `.next-prev` rather than deleted, so a bad deploy can be undone
-// by hand with one `mv` and a pm2 restart. Only one generation is kept — 844 MB each.
+// by hand with one mv and a pm2 restart. Only one generation is kept.
 //
-// The ISR page cache is carried across on purpose: it lives in `.next/cache` and holds rendered
-// city and country pages (revalidate = 86400). Losing it on every deploy would make the first
-// visitor after each release pay a full render, and would also throw away the fetch cache that
-// keeps the next build fast. It is data, not build output.
+// Next 15.5.28 stores runtime ISR in server/route-cache, NOT .next/cache.
+// The maintenance timer discards old rollback runtime entries and bounds live
+// entries; immutable server/app and chunks remain available for rollback.
+// .next/cache below contains disposable build/fetch caches, not flight data.
+// This distinction was verified against 15.5.28 source and the production tree
+// after duplicate runtime caches exhausted the disk on 2026-10-23.
 //
 // Usage:  node scripts/swap-build.mjs        (run by `npm run build`)
 
@@ -54,7 +56,7 @@ if (missing.length) {
   process.exit(1);
 }
 
-// Carry the ISR/fetch cache forward. Moved, not copied: it can be hundreds of megabytes, and a
+// Carry the build/fetch cache forward. Moved, not copied: it can be hundreds of megabytes, and a
 // rename is instant on the same filesystem. If the staged build already made its own cache
 // (first run after this change), keep that one and leave the old one to be discarded with PREV.
 const liveCache = path.join(LIVE, 'cache');
