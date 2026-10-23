@@ -823,7 +823,22 @@ export function FlightBoard({ airport, locale, defaultMode = 'departures', displ
   // board itself is what they came for, and it was down to a single visible row on mobile.
   const [searchOpen, setSearchOpen] = useState(false);
   const searchRef = useRef<HTMLInputElement>(null);
-  useEffect(() => { if (searchOpen) searchRef.current?.focus(); }, [searchOpen]);
+  const searchControlsRef = useRef<HTMLDivElement>(null);
+  const searchToggleRef = useRef<HTMLButtonElement>(null);
+  useEffect(() => {
+    if (!searchOpen) return;
+    searchRef.current?.focus({ preventScroll: true });
+    // Click, а не pointerdown: сначала выполняется выбор видимой строки рейса,
+    // затем сбрасывается фильтр. Иначе исчезнувшая под пальцем строка теряла click.
+    const outside = (event: MouseEvent) => {
+      if (searchControlsRef.current?.contains(event.target as Node)) return;
+      searchRef.current?.blur();
+      setSearchOpen(false);
+      setSearch('');
+    };
+    document.addEventListener('click', outside);
+    return () => document.removeEventListener('click', outside);
+  }, [searchOpen]);
 
   // ── Pinned flight ────────────────────────────────────────────────────────────
   // The strongest retention primitive this page can have without a backend. Watching a
@@ -1219,43 +1234,12 @@ export function FlightBoard({ airport, locale, defaultMode = 'departures', displ
 
       {/* ── Controls: mode tabs + search icon in ONE row; the input expands in place ── */}
       {!bare && <>
-      <div style={{ padding: '6px 16px 10px', maxWidth: 960, margin: '0 auto', display: 'flex', gap: 8 }}>
-        {searchOpen || search ? (
-          <div style={{ position: 'relative', flex: 1 }}>
-            <div aria-hidden="true" style={{ position: 'absolute', insetInlineStart: 14, top: '50%', transform: 'translateY(-50%)', pointerEvents: 'none' }}>
-              <IconSearch color={search ? C.secondary : C.dim} />
-            </div>
-            <input
-              ref={searchRef}
-              type="search"
-              aria-label={t('search_placeholder')}
-              autoComplete="off"
-              spellCheck={false}
-              placeholder={t('search_placeholder')}
-              value={search}
-              onChange={e => setSearch(e.target.value)}
-              onBlur={() => { if (!search) setSearchOpen(false); }}
-              style={{
-                width: '100%', height: 46, padding: '0 44px', fontSize: 16,
-                border: `1px solid ${search ? 'var(--ab-333333)' : C.border}`, borderRadius: 13,
-                outline: 'none', background: C.surface, color: C.text, WebkitAppearance: 'none',
-              }}
-            />
-            <button
-              type="button"
-              aria-label={tNav('clear')}
-              onClick={() => { setSearch(''); setSearchOpen(false); }}
-              style={{
-                position: 'absolute', insetInlineEnd: 9, top: '50%', transform: 'translateY(-50%)',
-                background: 'var(--ab-2c2c2e)', border: 'none', borderRadius: '50%', width: 28, height: 28,
-                cursor: 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'center', padding: 0,
-              }}
-            >
-              <IconClose color={C.secondary} />
-            </button>
-          </div>
-        ) : (
-          <>
+      <div style={{ padding: '6px 16px 10px', maxWidth: 960, margin: '0 auto' }}>
+        {/* Оба слоя остаются в DOM: поле растёт от лупы без скачка высоты табло.
+            inert исключает скрытые кнопки из Tab/VoiceOver; reduced-motion — в CSS.
+            При закрытии фильтр сбрасывается, чтобы не оставлять невидимый запрос. */}
+        <div ref={searchControlsRef} className="board-search-controls" data-open={searchOpen}>
+          <div className="board-search-modes" inert={searchOpen}>
             <div style={{ flex: 1, display: 'flex', background: C.surface, border: `1px solid ${C.border}`, borderRadius: 13, padding: 3, gap: 2 }}>
               {(['departures', 'arrivals'] as Mode[]).map(m => {
                 const active = mode === m;
@@ -1277,6 +1261,7 @@ export function FlightBoard({ airport, locale, defaultMode = 'departures', displ
               type="button"
               aria-label={t('search_placeholder')}
               aria-expanded={searchOpen}
+              ref={searchToggleRef}
               className="press"
               onClick={() => setSearchOpen(true)}
               style={{
@@ -1286,8 +1271,48 @@ export function FlightBoard({ airport, locale, defaultMode = 'departures', displ
             >
               <IconSearch color={C.secondary} />
             </button>
-          </>
-        )}
+
+          </div>
+          <div className="board-search-panel" inert={!searchOpen}>
+            <div aria-hidden="true" style={{ position: 'absolute', insetInlineStart: 14, top: '50%', transform: 'translateY(-50%)', pointerEvents: 'none' }}>
+              <IconSearch color={search ? C.secondary : C.dim} />
+            </div>
+            <input
+              ref={searchRef}
+              type="search"
+              aria-label={t('search_placeholder')}
+              autoComplete="off"
+              spellCheck={false}
+              placeholder={t('search_placeholder')}
+              value={search}
+              onChange={e => setSearch(e.target.value)}
+              onKeyDown={event => {
+                if (event.key === 'Escape') {
+                  setSearch(''); setSearchOpen(false);
+                  requestAnimationFrame(() => searchToggleRef.current?.focus({ preventScroll: true }));
+                }
+              }}
+              style={{
+                width: '100%', height: 46, padding: '0 44px', fontSize: 16,
+                border: `1px solid ${search ? 'var(--ab-333333)' : C.border}`, borderRadius: 13,
+                outline: 'none', background: C.surface, color: C.text, WebkitAppearance: 'none',
+              }}
+            />
+            <button
+              type="button"
+              aria-label={tNav('clear')}
+              onClick={() => { setSearch(''); setSearchOpen(false);
+                  requestAnimationFrame(() => searchToggleRef.current?.focus({ preventScroll: true })); }}
+              style={{
+                position: 'absolute', insetInlineEnd: 1, top: '50%', transform: 'translateY(-50%)',
+                background: 'transparent', border: 'none', borderRadius: '50%', width: 44, height: 44,
+                cursor: 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'center', padding: 0,
+              }}
+            >
+              <span style={{ background: 'var(--ab-2c2c2e)', borderRadius: '50%', width: 28, height: 28, display: 'flex', alignItems: 'center', justifyContent: 'center' }}><IconClose color={C.secondary} /></span>
+            </button>
+          </div>
+        </div>
       </div>
 
       {/* ── Filter pills ───────────────────────────────────── */}

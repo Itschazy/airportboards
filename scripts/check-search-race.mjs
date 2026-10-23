@@ -6,7 +6,7 @@ import vm from 'node:vm';
 import ts from 'typescript';
 import assert from 'node:assert/strict';
 const source=fs.readFileSync(process.argv[2] || 'components/AirportSearch.tsx','utf8');
-const js=ts.transpileModule(source,{compilerOptions:{module:ts.ModuleKind.CommonJS,jsx:ts.JsxEmit.ReactJSX}}).outputText;
+const js=ts.transpileModule(source,{compilerOptions:{target:ts.ScriptTarget.ES2017,module:ts.ModuleKind.CommonJS,jsx:ts.JsxEmit.ReactJSX}}).outputText;
 let slots=[], cursor=0, effects=[], dirty=false, tree;
 const depsEqual=(a,b)=>a&&b&&a.length===b.length&&a.every((x,i)=>Object.is(x,b[i]));
 const hooks={
@@ -34,5 +34,25 @@ await tick();const ayt=calls.at(-1);ayt.resolve([airport('AYT')]);await tick();
 popular.resolve([airport('JFK')]);await tick();enter();assert.equal(routes.at(-1),'/ru/airport/AYT');
 change('KZN');await tick();const old=calls.at(-1);change('OVB');await tick();calls.at(-1).resolve([airport('OVB')]);await tick();old.resolve([airport('KZN')]);await tick();enter();assert.equal(routes.at(-1),'/ru/airport/OVB');
 change('missing');await tick();calls.at(-1).reject(new Error('offline'));await tick();const count=routes.length;enter();assert.equal(routes.length,count);
+// Уточнение существующего запроса не должно снимать выпадающий список до ответа.
+function findRole(role,node=tree){
+  if(!node||typeof node!=='object')return null;
+  if(typeof node.type==='function')return findRole(role,node.type(node.props));
+  if(node.props?.role===role)return node;
+  for(const child of [node.props?.children].flat(Infinity)){if(child==null)continue;const found=findRole(role,child);if(found)return found;}
+  return null;
+}
+change('чел');await tick();calls.at(-1).resolve([{...airport('CEK'),city:'Челябинск'}]);await tick();
+assert.ok(findRole('listbox'),'Есть результат для чел');
+change('челя');
+assert.ok(findRole('listbox'),'Список не должен исчезать при чел → челя до нового ответа');
+assert.equal(findRole('listbox').props['aria-busy'],true,'Ожидающий список сообщает о загрузке');
+assert.equal(findRole('option').props.disabled,true,'Старый результат нельзя выбрать касанием');
+const beforePending=routes.length;enter();assert.equal(routes.length,beforePending,'Старый результат нельзя выбрать Enter');
+await tick();calls.at(-1).resolve([{...airport('CEK'),city:'Челябинск'}]);await tick();
+assert.equal(findRole('option').props.disabled,false);enter();assert.equal(routes.at(-1),'/ru/airport/CEK');
+change('чел');await tick();calls.at(-1).resolve([airport('CEK')]);await tick();
+change('челнет');await tick();calls.at(-1).resolve([]);await tick();
+assert.equal(findRole('listbox'),null,'Пустой новый ответ убирает старую подсказку');
 for(const s of slots)s?.cleanup?.();
-console.log('PASS: ранний Enter, поздний популярный ответ, обратный порядок ответов, ошибка сети');
+console.log('PASS: ранний Enter, поздний популярный ответ, обратный порядок ответов, ошибка сети, непрерывные подсказки чел → челя');

@@ -188,3 +188,22 @@ input::-webkit-search-cancel-button { display: none; }
 :root{--ab-0b0b0b:#0B0B0B;--ab-6a6a6a:#6A6A6A;--ab-b4b4b4:#B4B4B4;--ab-48484a:#48484A;--ab-34c759:#34C759;--ab-c7c7cc:#C7C7CC;--ab-4a4a4a:#4A4A4A;--ab-e4e4e4:#E4E4E4;--ab-bfbfc4:#BFBFC4;--ab-333333:#333333;--ab-2c2c2e:#2C2C2E;--ab-adadb2:#ADADB2;--ab-c4c4c4:#C4C4C4;--ab-000000:#000000;--ab-5a5a5a:#5A5A5A;--ab-d0d0d4:#D0D0D4;--ab-9a9aa0:#9A9AA0;--ab-6a6a6e:#6A6A6E;--ab-2a2a2a:#2A2A2A;--ab-151515:#151515;--ab-c7c7c7:#C7C7C7;--ab-161616:#161616;--ab-1e1e1e:#1E1E1E;--ab-a1a1aa:#A1A1AA;}
 @media(prefers-color-scheme:light){:root:not([data-theme="dark"]){--ab-0b0b0b:#f5f5f5;--ab-6a6a6a:#666666;--ab-b4b4b4:#494949;--ab-48484a:#777777;--ab-34c759:#147a32;--ab-c7c7cc:#444448;--ab-4a4a4a:#666666;--ab-e4e4e4:#242424;--ab-bfbfc4:#46464a;--ab-333333:#cccccc;--ab-2c2c2e:#dddddf;--ab-adadb2:#4c4c50;--ab-c4c4c4:#454545;--ab-000000:#ffffff;--ab-5a5a5a:#666666;--ab-d0d0d4:#353539;--ab-9a9aa0:#505056;--ab-6a6a6e:#555559;--ab-2a2a2a:#dddddd;--ab-151515:#f1f1f1;--ab-c7c7c7:#444444;--ab-161616:#f0f0f0;--ab-1e1e1e:#eaeaea;--ab-a1a1aa:#50505a;}}
 :root[data-theme="light"]{--ab-0b0b0b:#f5f5f5;--ab-6a6a6a:#666666;--ab-b4b4b4:#494949;--ab-48484a:#777777;--ab-34c759:#147a32;--ab-c7c7cc:#444448;--ab-4a4a4a:#666666;--ab-e4e4e4:#242424;--ab-bfbfc4:#46464a;--ab-333333:#cccccc;--ab-2c2c2e:#dddddf;--ab-adadb2:#4c4c50;--ab-c4c4c4:#454545;--ab-000000:#ffffff;--ab-5a5a5a:#666666;--ab-d0d0d4:#353539;--ab-9a9aa0:#505056;--ab-6a6a6e:#555559;--ab-2a2a2a:#dddddd;--ab-151515:#f1f1f1;--ab-c7c7c7:#444444;--ab-161616:#f0f0f0;--ab-1e1e1e:#eaeaea;--ab-a1a1aa:#50505a;}
+
+/* Лупа раскрывается в пределах прежней строки: соседние строки не сдвигаются.
+   Анимируется только локальная ширина, без масштабирования текста и тяжёлого blur.
+   Направление inset-inline-end работает и для арабского. */
+.board-search-controls { position: relative; height: 48px; }
+.board-search-modes { display: flex; gap: 8px; height: 48px; transition: opacity 180ms ease; }
+.board-search-panel {
+  position: absolute; inset-inline-end: 0; top: 1px; width: 48px;
+  opacity: 0; visibility: hidden; pointer-events: none; overflow: hidden;
+  transition: width 240ms cubic-bezier(.2,.8,.2,1), opacity 180ms ease, visibility 0s 240ms;
+}
+.board-search-controls[data-open="true"] .board-search-modes { opacity: 0; }
+.board-search-controls[data-open="true"] .board-search-panel {
+  width: 100%; opacity: 1; visibility: visible; pointer-events: auto;
+  transition-delay: 0s;
+}
+@media (prefers-reduced-motion: reduce) {
+  .board-search-panel, .board-search-modes { transition: none; }
+}

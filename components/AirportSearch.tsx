@@ -43,13 +43,105 @@ function saveRecent(a: Result) {
   } catch {}
 }
 
+// Стабильный тип компонента сохраняет DOM строк при вводе следующей буквы.
+// Вложенный Section раньше пересоздавался на каждом render и размонтировал кнопки.
+function SearchSection({ label, items, startIndex = 0, active, query, pending = false, go, setActive }: {
+  label: string; items: Result[]; startIndex?: number; active: number; query: string;
+  pending?: boolean; go: (airport: Result) => void; setActive: (index: number) => void;
+}) {
+  return (
+    <>
+      <div style={{
+        padding: '8px 14px 4px',
+        fontSize: 10, fontWeight: 700,
+        letterSpacing: '0.1em',
+        color: 'var(--ab-8a8a8a)',
+        textTransform: 'uppercase',
+      }}>
+        {label}
+      </div>
+      {items.map((a, i) => {
+        const globalIdx = startIndex + i;
+        const isActive = !pending && active === globalIdx;
+        return (
+          <button
+            key={a.iata}
+            // onMouseDown СОХРАНЁН: он срабатывает до blur и до того, как экранная
+            // клавиатура сдвинет вёрстку. Но на нативной кнопке Enter и Space дают
+            // click, а не mousedown, — то есть выбор с клавиатуры по этой ветке не
+            // работал вовсе. Двойного срабатывания нет: mousedown уже уводит на
+            // страницу, и click по исчезнувшей кнопке не приходит.
+            id={`ap-opt-${globalIdx}`}
+            role="option"
+            aria-selected={isActive}
+            disabled={pending}
+            onMouseDown={() => go(a)}
+            onClick={() => go(a)}
+            onMouseEnter={() => setActive(globalIdx)}
+            style={{
+              width: '100%',
+              display: 'flex', alignItems: 'center',
+              gap: 12,
+              padding: '10px 14px',
+              border: 'none',
+              borderBottom: i < items.length - 1 ? '1px solid var(--ab-161616)' : 'none',
+              background: isActive ? 'var(--ab-1c1c1e)' : 'transparent',
+              color: 'var(--ab-ffffff)',
+              cursor: pending ? 'progress' : 'pointer',
+              textAlign: 'start',
+              transition: 'background 0.1s',
+            }}
+          >
+            {/* Flag */}
+            <span style={{ fontSize: 18, flexShrink: 0, width: 24, textAlign: 'center', lineHeight: 1 }}>
+              {flag(a.iso2)}
+            </span>
+
+            {/* IATA */}
+            <span style={{ fontSize: 13, fontWeight: 800, color: 'var(--ab-0a84ff)', flexShrink: 0, width: 34, letterSpacing: '-0.02em' }}>
+              {highlight(a.iata, query)}
+            </span>
+
+            {/* City + name */}
+            <span style={{ flex: 1, minWidth: 0 }}>
+              <span style={{ fontSize: 14, color: 'var(--ab-e4e4e7)', display: 'block', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>
+                {highlight(a.city, query)}
+              </span>
+              <span style={{ fontSize: 11, color: 'var(--ab-6a6a6a)', display: 'block', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>
+                {highlight(a.name, query)}
+              </span>
+            </span>
+
+            {/* Country */}
+            <span style={{ fontSize: 11, color: 'var(--ab-8a8a8a)', flexShrink: 0, maxWidth: 80, textAlign: 'end', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>
+              {a.country}
+            </span>
+          </button>
+        );
+      })}
+    </>
+  );
+}
+
 export function AirportSearch({ locale, placeholder }: { locale: string; placeholder: string }) {
   const tNav = useTranslations('nav');
   const [query, setQuery]     = useState('');
   const [response, setResponse] = useState<{ query: string; locale: string; airports: Result[] } | null>(null);
   // Результаты принадлежат конкретному запросу: даже до запуска effect старый
   // список нельзя выбрать быстрым Enter или касанием после изменения поля.
-  const results = response?.query === query.trim() && response.locale === locale ? response.airports : [];
+  const currentQuery = query.trim();
+  const isCurrent = response?.query === currentQuery && response.locale === locale;
+  const results = isCurrent ? response.airports : [];
+  // При уточнении «чел» → «челя» раньше results=[] убирал весь список на debounce
+  // и сетевой round-trip. Сохраняем прежние строки до ответа, но временно запрещаем
+  // их выбор и сообщаем aria-busy. Enter по-прежнему использует только results.
+  // Для другого запроса/языка подсказки не переносим. Пустой ответ или ошибка сети
+  // завершает ожидание и убирает прежние строки. Проверено check-search-race.
+  const pending = !isCurrent && !!currentQuery && !!response?.query && response.locale === locale && (
+    currentQuery.toLowerCase().startsWith(response.query.toLowerCase()) ||
+    response.query.toLowerCase().startsWith(currentQuery.toLowerCase())
+  );
+  const visibleResults = pending ? response.airports : results;
   const [recent, setRecent]   = useState<Result[]>([]);
   const [open, setOpen]       = useState(false);
   const [active, setActive]   = useState(-1);
@@ -152,79 +244,9 @@ export function AirportSearch({ locale, placeholder }: { locale: string; placeho
     if (e.key === 'Escape') { setOpen(false); inputRef.current?.blur(); }
   };
 
-  const showList = open && (query.trim() ? results.length > 0 : emptyFlat.length > 0);
+  const showList = open && (query.trim() ? visibleResults.length > 0 : emptyFlat.length > 0);
 
-  const Section = ({ label, items, startIndex = 0 }: { label: string; items: Result[]; startIndex?: number }) => (
-    <>
-      <div style={{
-        padding: '8px 14px 4px',
-        fontSize: 10, fontWeight: 700,
-        letterSpacing: '0.1em',
-        color: 'var(--ab-8a8a8a)',
-        textTransform: 'uppercase',
-      }}>
-        {label}
-      </div>
-      {items.map((a, i) => {
-        const globalIdx = startIndex + i;
-        const isActive = active === globalIdx;
-        return (
-          <button
-            key={a.iata}
-            // onMouseDown СОХРАНЁН: он срабатывает до blur и до того, как экранная
-            // клавиатура сдвинет вёрстку. Но на нативной кнопке Enter и Space дают
-            // click, а не mousedown, — то есть выбор с клавиатуры по этой ветке не
-            // работал вовсе. Двойного срабатывания нет: mousedown уже уводит на
-            // страницу, и click по исчезнувшей кнопке не приходит.
-            id={`ap-opt-${globalIdx}`}
-            role="option"
-            aria-selected={isActive}
-            onMouseDown={() => go(a)}
-            onClick={() => go(a)}
-            onMouseEnter={() => setActive(globalIdx)}
-            style={{
-              width: '100%',
-              display: 'flex', alignItems: 'center',
-              gap: 12,
-              padding: '10px 14px',
-              border: 'none',
-              borderBottom: i < items.length - 1 ? '1px solid var(--ab-161616)' : 'none',
-              background: isActive ? 'var(--ab-1c1c1e)' : 'transparent',
-              color: 'var(--ab-ffffff)',
-              cursor: 'pointer',
-              textAlign: 'start',
-              transition: 'background 0.1s',
-            }}
-          >
-            {/* Flag */}
-            <span style={{ fontSize: 18, flexShrink: 0, width: 24, textAlign: 'center', lineHeight: 1 }}>
-              {flag(a.iso2)}
-            </span>
 
-            {/* IATA */}
-            <span style={{ fontSize: 13, fontWeight: 800, color: 'var(--ab-0a84ff)', flexShrink: 0, width: 34, letterSpacing: '-0.02em' }}>
-              {highlight(a.iata, query)}
-            </span>
-
-            {/* City + name */}
-            <span style={{ flex: 1, minWidth: 0 }}>
-              <span style={{ fontSize: 14, color: 'var(--ab-e4e4e7)', display: 'block', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>
-                {highlight(a.city, query)}
-              </span>
-              <span style={{ fontSize: 11, color: 'var(--ab-6a6a6a)', display: 'block', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>
-                {highlight(a.name, query)}
-              </span>
-            </span>
-
-            {/* Country */}
-            <span style={{ fontSize: 11, color: 'var(--ab-8a8a8a)', flexShrink: 0, maxWidth: 80, textAlign: 'end', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>
-              {a.country}
-            </span>
-          </button>
-        );
-      })}
-    </>
-  );
 
   return (
     <div ref={wrapRef} style={{ position: 'relative', width: '100%' }}>
@@ -301,7 +323,7 @@ export function AirportSearch({ locale, placeholder }: { locale: string; placeho
         // её договора — список с ролью listbox, строки с ролью option и указатель на
         // активную — отсутствовала целиком. Программа чтения слышала «поле со списком»
         // и не находила списка.
-        <div id="ap-listbox" role="listbox" aria-label={placeholder} style={{
+        <div id="ap-listbox" role="listbox" aria-label={placeholder} aria-busy={pending} style={{
           position: 'absolute',
           top: 'calc(100% + 6px)',
           left: 0, right: 0,
@@ -315,11 +337,11 @@ export function AirportSearch({ locale, placeholder }: { locale: string; placeho
           boxShadow: '0 20px 60px rgba(0,0,0,0.8)',
         }}>
           {query.trim() ? (
-            <Section label={tNav('results')} items={results} />
+            <SearchSection active={active} query={query} go={go} setActive={setActive} label={tNav('results')} items={visibleResults} pending={pending} />
           ) : (
             <>
-              {recentF.length > 0 && <Section label={tNav('recent')} items={recentF} startIndex={0} />}
-              {popularItems.length > 0 && <Section label={tNav('popular')} items={popularItems} startIndex={recentF.length} />}
+              {recentF.length > 0 && <SearchSection active={active} query={query} go={go} setActive={setActive} label={tNav('recent')} items={recentF} startIndex={0} />}
+              {popularItems.length > 0 && <SearchSection active={active} query={query} go={go} setActive={setActive} label={tNav('popular')} items={popularItems} startIndex={recentF.length} />}
             </>
           )}
         </div>
