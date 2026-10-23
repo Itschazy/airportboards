@@ -2,7 +2,7 @@
 import { flightDelayMinutes, imminentFlightMinutes } from '@/lib/flight-time';
 import { numLocale } from '@/lib/i18n';
 
-import { useEffect, useState, useCallback, useRef } from 'react';
+import { useEffect, useState, useCallback, useRef, useMemo } from 'react';
 import Link from 'next/link';
 import { useTranslations } from 'next-intl';
 import { initialRowCount } from '@/lib/board-window';
@@ -101,9 +101,17 @@ const haptic = (ms = 6) => { try { (navigator as any).vibrate?.(ms); } catch {} 
  * Один формат для карточки и строки на всех 12 языках; numLocale сохраняет
  * западные цифры в арабском интерфейсе. Ровные часы не дополняем нулём минут.
  */
+// Создание Intl-форматтера на каждую строку особенно дорого на слабом телефоне.
+// Пара форматтеров на язык сохраняет прежнее форматирование без этой работы.
+const durationFormats = new Map<string, Intl.NumberFormat>();
 function fmtDur(mins: number, locale: string): string {
   const hrs = Math.floor(mins / 60), mm = mins % 60;
-  const unit = (n: number, u: 'hour' | 'minute') => new Intl.NumberFormat(numLocale(locale), { style: 'unit', unit: u, unitDisplay: 'short' }).format(n);
+  const unit = (n: number, u: 'hour' | 'minute') => {
+    const key = `${numLocale(locale)}:${u}`;
+    let formatter = durationFormats.get(key);
+    if (!formatter) { formatter = new Intl.NumberFormat(numLocale(locale), { style: 'unit', unit: u, unitDisplay: 'short' }); durationFormats.set(key, formatter); }
+    return formatter.format(n);
+  };
   return hrs > 0 ? [unit(hrs, 'hour'), ...(mm > 0 ? [unit(mm, 'minute')] : [])].join(' ') : unit(mm, 'minute');
 }
 
@@ -802,11 +810,23 @@ export function FlightBoard({ airport, locale, defaultMode = 'departures', displ
   // SSR-rendered first set (current/default mode) so crawlers and users see real
   // flights without waiting for client JS; the poll below refreshes it.
   const [flights, setFlights]     = useState<Flight[]>(initialFlights ?? []);
+  // Только два направления текущего табло. Повторный переход показывает уже
+  // прочитанный снимок сразу, затем обычный API проверяет его свежесть. Кэш
+  // браузера не заменяет правило Airlabs >=10мин и не хранится между сессиями.
+  type BoardSnapshot = { rows: Flight[]; fetchedAt: number; allPast: boolean };
+  const boardCache = useRef<Map<string, BoardSnapshot> | null>(null);
+  if (!boardCache.current) boardCache.current = new Map(initialFlights?.length ? [[
+    `${airport.iata}:${locale}:${defaultMode}`,
+    { rows: initialFlights, fetchedAt: initialFetchedAt || 0, allPast: initialAllPast },
+  ]] : []);
+  const requestRef = useRef<AbortController | null>(null);
+
   // Starts false so the SERVER never renders a spinner. It used to start as !hasInitial, which
   // meant every un-warmed airport served crawlers three animated dots and nothing else — and the
   // honest empty-state branch below was gated on !loading, so it was unreachable in SSR by
   // construction. Real users are unaffected: the mount effect sets loading before it fetches.
   const [loading, setLoading]     = useState(false);
+  const [loadFailed, setLoadFailed] = useState(false);
   const [time, setTime]           = useState('');
   const [lastUpdated, setUpdated] = useState<Date | null>(initialFetchedAt ? new Date(initialFetchedAt) : null);
   // Seeded from the SSR timestamp, not left empty. It used to start as '' and only ever be
@@ -883,6 +903,14 @@ export function FlightBoard({ airport, locale, defaultMode = 'departures', displ
   // почти всегда да.
   useEffect(() => {
     const original = document.title;
+    // При переходе AYT→CEK Next уже ставит новый title, а cleanup старого борта
+    // раньше безусловно возвращал AYT. Восстанавливаем только собственную
+    // временную подпись рейса; чужой новый SEO-title никогда не перезаписываем.
+    let ownedTitle: string | null = null;
+    const restoreTitle = () => {
+      if (ownedTitle !== null && document.title === ownedTitle) document.title = original;
+      ownedTitle = null;
+    };
     let human = false;
     const markHuman = () => { human = true; };
     const HUMAN_EVENTS = ['pointerdown', 'keydown', 'touchstart', 'wheel', 'scroll'] as const;
@@ -898,10 +926,10 @@ export function FlightBoard({ airport, locale, defaultMode = 'departures', displ
     const apply = () => {
       if (document.hidden && human) {
         const t2 = compute();
-        if (t2) document.title = t2;
-        if (!timer) timer = setInterval(() => { const v = compute(); if (v && document.hidden) document.title = v; }, 60_000);
+        if (t2) { ownedTitle = t2; document.title = t2; }
+        if (!timer) timer = setInterval(() => { const v = compute(); if (v && document.hidden) { ownedTitle = v; document.title = v; } }, 60_000);
       } else {
-        document.title = original;
+        restoreTitle();
         if (timer) { clearInterval(timer); timer = null; }
       }
     };
@@ -910,7 +938,7 @@ export function FlightBoard({ airport, locale, defaultMode = 'departures', displ
       HUMAN_EVENTS.forEach((e) => window.removeEventListener(e, markHuman));
       document.removeEventListener('visibilitychange', apply);
       if (timer) clearInterval(timer);
-      document.title = original;
+      restoreTitle();
     };
   }, [flights, airport.iata, pinned]);
 
@@ -939,10 +967,21 @@ export function FlightBoard({ airport, locale, defaultMode = 'departures', displ
   const initialListKey = useRef<string | null>(`${defaultMode}:all`);
 
   const fetchFlights = useCallback(async () => {
+    // Медленный ответ вылетов раньше мог приехать после прилётов и подменить
+    // список. Отменяем предыдущий транспорт и проверяем signal даже после json:
+    // не каждый transport успевает остановиться от abort. Старый finally также
+    // не должен выключать загрузку нового направления.
+    requestRef.current?.abort();
+    const controller = new AbortController();
+    requestRef.current = controller;
+    setLoadFailed(false);
     try {
-      const res = await fetch(`/api/flights/${airport.iata}?direction=${mode}&locale=${locale}`);
+      const res = await fetch(`/api/flights/${airport.iata}?direction=${mode}&locale=${locale}`, { signal: controller.signal });
+      if (!res.ok) throw new Error(`Board HTTP ${res.status}`);
       const data = await res.json();
-      setFlights(data.flights || []);
+      if (controller.signal.aborted) return;
+      if (!Array.isArray(data.flights)) throw new Error('Invalid board response');
+      setFlights(data.flights);
       // Label the age of the data, not of this response. A board for a daily-refreshed
       // airport answers instantly from the store and is still a day old; claiming
       // "updated now" there is exactly the kind of thing that makes the site untrustworthy.
@@ -956,13 +995,26 @@ export function FlightBoard({ airport, locale, defaultMode = 'departures', displ
       // Признак «всё улетело» пересчитывается по ПРИШЕДШИМ строкам и настоящему времени:
       // здесь клиент уже живой, и его часы — единственно верный источник.
       const rows = data.flights || [];
-      setAllPast(rows.length > 0 && rows.every((f: Flight) => !f.ts || f.ts * 1000 < Date.now()));
+      const past = rows.length > 0 && rows.every((f: Flight) => !f.ts || f.ts * 1000 < Date.now());
+      setAllPast(past);
+      boardCache.current!.set(`${airport.iata}:${locale}:${mode}`, { rows, fetchedAt: ts.getTime(), allPast: past });
+      if (boardCache.current!.size > 2) boardCache.current!.delete(boardCache.current!.keys().next().value!);
       setUpdLabel(relTime(ts, t));
       setIsLive(Date.now() - ts.getTime() < 90_000);
-    } catch { /* keep prev */ } finally {
-      setLoading(false);
+    } catch {
+      // Сетевой сбой не означает «рейсов нет». Сохраняем правильный снимок;
+      // без него показываем существующую локализованную подпись недоступности.
+      // «Обновляем…» после завершившейся ошибки оставлять также нельзя.
+      if (!controller.signal.aborted) {
+        setLoadFailed(true);
+        const cached = boardCache.current!.get(`${airport.iata}:${locale}:${mode}`);
+        setUpdLabel(cached?.fetchedAt ? relTime(new Date(cached.fetchedAt), t) : '');
+      }
+    } finally {
+      if (!controller.signal.aborted) setLoading(false);
     }
-  }, [airport.iata, mode, t]);
+  }, [airport.iata, mode, locale, t]);
+  useEffect(() => () => { requestRef.current?.abort(); }, [fetchFlights]);
 
   const didInit = useRef(false);
   useEffect(() => {
@@ -985,7 +1037,7 @@ export function FlightBoard({ airport, locale, defaultMode = 'departures', displ
       return;
     }
     didInit.current = true;
-    setLoading(true);
+    setLoading(!boardCache.current!.has(`${airport.iata}:${locale}:${mode}`));
     fetchFlights();
   }, [fetchFlights]);
 
@@ -1005,7 +1057,7 @@ export function FlightBoard({ airport, locale, defaultMode = 'departures', displ
       deepLink.current = { flight: fl.toUpperCase(), dir };
       // На следующем тике, а не прямо в эффекте: переключение в момент гидрации обновляло
       // aria-pressed, но не стиль вкладки — подсвечивались «Вылеты» при открытых прилётах.
-      if (dir !== mode) setTimeout(() => setMode(dir), 0);
+      if (dir !== mode) setTimeout(() => switchMode(dir), 0);
     } catch { /* без параметра — обычная страница */ }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
@@ -1032,15 +1084,23 @@ export function FlightBoard({ airport, locale, defaultMode = 'departures', displ
     return () => { clearInterval(id); document.removeEventListener('visibilitychange', onVisible); };
   }, [fetchFlights]);
 
-  // Live clock
+  // Часы показывают только минуты. Раньше каждую секунду создавался новый Intl
+  // и вызывался setState, хотя текст не менялся. Тикаем на границе минуты,
+  // в скрытой вкладке останавливаемся; при возвращении сразу сверяем часы.
   useEffect(() => {
-    const tick = () => setTime(new Date().toLocaleTimeString(numLocale(locale), {
-      timeZone: airport.tz || undefined,
-      hour: '2-digit', minute: '2-digit', hour12: false,
-    }));
+    const formatter = new Intl.DateTimeFormat(numLocale(locale), {
+      timeZone: airport.tz || undefined, hour: '2-digit', minute: '2-digit', hour12: false,
+    });
+    let timer: ReturnType<typeof setTimeout> | undefined;
+    const tick = () => {
+      clearTimeout(timer);
+      if (document.hidden) return;
+      setTime(formatter.format(new Date()));
+      timer = setTimeout(tick, 60_000 - Date.now() % 60_000);
+    };
     tick();
-    const id = setInterval(tick, 1000);
-    return () => clearInterval(id);
+    document.addEventListener('visibilitychange', tick);
+    return () => { clearTimeout(timer); document.removeEventListener('visibilitychange', tick); };
   }, [airport.tz, locale]);
 
   // Stale label updater
@@ -1055,7 +1115,7 @@ export function FlightBoard({ airport, locale, defaultMode = 'departures', displ
 
   // Filter + search
   const trimSearch = search.trim();
-  const visible = flights.filter(f => {
+  const visible = useMemo(() => flights.filter(f => {
     if (filter !== 'all' && !FILTER_STATUSES[filter].includes(f.status)) return false;
     if (!trimSearch) return true;
     const q = trimSearch.toLowerCase();
@@ -1065,7 +1125,7 @@ export function FlightBoard({ airport, locale, defaultMode = 'departures', displ
       || (qCode.length > 1 && f.flight.toLowerCase().replace(/[\s-]+/g, '').includes(qCode))
       || (f.destination || f.origin || '').toLowerCase().includes(q)
       || (f.airline || '').toLowerCase().includes(q);
-  });
+  }), [flights, filter, trimSearch]);
   // Twelve rows is right for a hub with eighty flights and wrong for an airport with thirty:
   // Kazan's header says "33 departures on the board" directly above twelve of them, and the
   // fifteen still to come that evening — 20:55 Novosibirsk through 01:50 Sheremetyevo — sat
@@ -1137,7 +1197,7 @@ export function FlightBoard({ airport, locale, defaultMode = 'departures', displ
   const INITIAL = initialRowCount(flights, nowMs);
   // На мёртвом борту список идёт по возрастанию и самое ценное стоит В КОНЦЕ — это
   // последнее, что улетело. Срез с головы показывал бы самое старое из имеющегося.
-  const shown = showAll ? visible : (allPast ? visible.slice(-INITIAL) : visible.slice(0, INITIAL));
+  const shown = useMemo(() => showAll ? visible : (allPast ? visible.slice(-INITIAL) : visible.slice(0, INITIAL)), [showAll, visible, allPast, INITIAL]);
   /**
    * С какой стороны списка лежит скрытое — и, значит, где должна стоять кнопка.
    *
@@ -1148,279 +1208,10 @@ export function FlightBoard({ airport, locale, defaultMode = 'departures', displ
    * же месте, не понимая, что случилось. На живом борту всё как было: скрытое в хвосте,
    * кнопка снизу.
    */
-  const moreAbove = allPast && !showAll;
-  const moreButton = !loading && visible.length > shown.length ? (
-          <button className="press" onClick={() => { track(GOALS.boardMore, { shown: INITIAL, total: visible.length }); setShowAll(true); }} style={{
-            width: '100%', height: 56, marginTop: 4, marginBottom: 8,
-            display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 8,
-            border: '1px solid rgba(var(--ab-ink),0.08)', background: 'rgba(var(--ab-ink),0.02)',
-            borderRadius: 18, color: C.text, fontSize: 15, fontWeight: 600, cursor: 'pointer', WebkitTapHighlightColor: 'transparent',
-          }}>
-            {mode === 'departures' ? t('more_departures') : t('more_arrivals')}
-            <svg width="13" height="13" viewBox="0 0 13 13" fill="none"><path d="M3 5L6.5 8.5L10 5" stroke="var(--ab-8a8a8a)" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" /></svg>
-          </button>
-  ) : null;
-  useEffect(() => { setShowAll(false); }, [mode, filter, trimSearch]);
-
-  return (
-    // 100dvh keeps the footer from jumping up while a real board loads. With no scheduled
-    // service nothing will ever fill it, so reserving a screenful leaves a dead gap between
-    // the notice and the rest of the page.
-    <div style={{ background: C.bg, minHeight: bare ? undefined : '100dvh', paddingBottom: bare ? 16 : 'calc(48px + env(safe-area-inset-bottom))' }}>
-
-      {/* ── Airport header — compact. The identity is one line: code + name + clock. The old
-          header spent ~380px (a 76px IATA glyph, an always-open search field, two control
-          rows and two meta lines) before the first flight row; on a 812px phone the board the
-          visitor searched for showed exactly one row. Premium here means the content leads. */}
-      <div style={{ padding: '14px 20px 6px', maxWidth: 960, margin: '0 auto' }}>
-        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', gap: 12 }}>
-          <h1 style={{ margin: 0, display: 'flex', alignItems: 'baseline', gap: 10, minWidth: 0, flex: 1 }}>
-            <span style={{ fontSize: 'clamp(30px, 9vw, 38px)', fontWeight: 800, letterSpacing: '-0.03em', lineHeight: 1, color: C.text }}>{airport.iata}</span>
-            {/* Leading space, deliberately.
-                The two spans are separated visually by the flex `gap`, which is layout only —
-                nothing separates them in the text. So the h1 read as "AERСочи" / "MADMadrid"
-                to anything consuming textContent: crawlers, screen readers, and the assistants
-                the AEO work is aimed at. A space as the first child of a flex item is stripped
-                for layout but kept in textContent, so this changes the read text and not a
-                single rendered pixel. */}
-            <span style={{ fontSize: 14, fontWeight: 500, color: C.secondary, lineHeight: 1.25, minWidth: 0, overflow: 'hidden', textOverflow: 'ellipsis', display: '-webkit-box', WebkitLineClamp: 2, WebkitBoxOrient: 'vertical' }}>{' '}{displayName || airport.name}</span>
-            {/* Пробел перед разделителем — по той же причине, что и у имени выше: между
-                flex-элементами текста нет, и без него h1 читался бы «УфаПрилёты». */}
-            {headingNote && (
-              <span style={{ fontSize: 14, fontWeight: 600, color: C.secondary, lineHeight: 1.25, flexShrink: 0, opacity: 0.85 }}>{' · '}{headingNote}</span>
-            )}
-          </h1>
-          <div style={{ textAlign: 'end', flexShrink: 0 }}>
-            <div style={{ fontSize: 17, fontWeight: 600, letterSpacing: '-0.01em', fontVariantNumeric: 'tabular-nums', color: C.text, lineHeight: 1 }}>{time}</div>
-            <div style={{ fontSize: 10, color: C.secondary, marginTop: 3, letterSpacing: '0.03em', opacity: 0.55 }}>{t('local_time')}</div>
-          </div>
-        </div>
-
-        {lead && (
-          <p style={{ fontSize: 13, lineHeight: 1.45, color: C.secondary, margin: '8px 0 0', maxWidth: 620 }}>{lead}</p>
-        )}
-        {statusLine && (
-          <p style={{ fontSize: 12.5, lineHeight: 1.45, color: C.text, margin: '5px 0 0', maxWidth: 620, fontVariantNumeric: 'tabular-nums' }}>{statusLine}</p>
-        )}
-
-        {/* One meta line: freshness + row count. These were two separate rows. */}
-        {!bare && <div role="status" aria-live="polite" style={{ display: 'flex', alignItems: 'center', gap: 7, marginTop: 8, minHeight: 18 }}>
-          <div
-            aria-hidden="true"
-            className={isLive ? 'live-dot' : ''}
-            style={{ width: 6, height: 6, borderRadius: '50%', flexShrink: 0, background: isLive ? C.green : C.gray }}
-          />
-          {/* The relative label answers "how old"; the machine-readable dateTime and the
-              hover/long-press title answer exactly WHEN — the transparency every review pass
-              kept asking for, at zero locale-string cost (a formatted datetime is universal). */}
-          {/* Пояс АЭРОПОРТА и его подпись. toLocaleString(locale) без опции timeZone
-              берёт пояс машины, где выполняется код: на сервере это UTC, и подсказка
-              сообщала момент, не совпадающий ни с временем аэропорта, ни с временем
-              читателя, причём без всякой пометки, чей это пояс. Всё остальное табло
-              показано во времени аэропорта. */}
-          <time suppressHydrationWarning dateTime={lastUpdated?.toISOString()} title={lastUpdated ? lastUpdated.toLocaleString(numLocale(locale), { timeZone: airport.tz || 'UTC', timeZoneName: 'short' }) : undefined} style={{ fontSize: 12, color: C.secondary, opacity: 0.85 }}>{updLabel || '—'}</time>
-          {isStale && (
-            <span style={{ fontSize: 12, fontWeight: 700, color: C.orange, letterSpacing: '0.02em' }}>
-              {' · '}{t('board_stale')}
-            </span>
-          )}
-          {!loading && flights.length > 0 && (
-            <span style={{ fontSize: 12, color: C.secondary, opacity: 0.85 }}>
-              {' · '}{(() => { const n = flights === initialFlights && boardTotal != null ? boardTotal : flights.length; return mode === 'departures' ? t('departures_on_board', { count: n }) : t('arrivals_on_board', { count: n }); })()}
-            </span>
-          )}
-        </div>}
-      </div>
-
-      {/* ── Controls: mode tabs + search icon in ONE row; the input expands in place ── */}
-      {!bare && <>
-      <div style={{ padding: '6px 16px 10px', maxWidth: 960, margin: '0 auto' }}>
-        {/* Оба слоя остаются в DOM: поле растёт от лупы без скачка высоты табло.
-            inert исключает скрытые кнопки из Tab/VoiceOver; reduced-motion — в CSS.
-            При закрытии фильтр сбрасывается, чтобы не оставлять невидимый запрос. */}
-        <div ref={searchControlsRef} className="board-search-controls" data-open={searchOpen}>
-          <div className="board-search-modes" inert={searchOpen}>
-            <div style={{ flex: 1, display: 'flex', background: C.surface, border: `1px solid ${C.border}`, borderRadius: 13, padding: 3, gap: 2 }}>
-              {(['departures', 'arrivals'] as Mode[]).map(m => {
-                const active = mode === m;
-                return (
-                  <button key={m} type="button" aria-pressed={active} className="press" onClick={() => { haptic(); track(GOALS.boardMode, { mode: m }); setMode(m); setFilter('all'); }} style={{
-                    flex: 1, padding: '10px 0', minHeight: 40, fontSize: 14, fontWeight: 600,
-                    border: 'none', borderRadius: 10, cursor: 'pointer',
-                    background: active ? 'var(--ab-1c1c1e)' : 'transparent', color: active ? C.text : C.secondary,
-                    transition: 'all 0.18s ease', letterSpacing: '-0.01em',
-                    display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 6,
-                  }}>
-                    <span style={{ fontSize: 15 }} aria-hidden="true">{m === 'departures' ? '✈' : '🛬'}</span>
-                    {m === 'departures' ? t('departures') : t('arrivals')}
-                  </button>
-                );
-              })}
-            </div>
-            <button
-              type="button"
-              aria-label={t('search_placeholder')}
-              aria-expanded={searchOpen}
-              ref={searchToggleRef}
-              className="press"
-              onClick={() => setSearchOpen(true)}
-              style={{
-                width: 48, height: 48, flexShrink: 0, display: 'flex', alignItems: 'center', justifyContent: 'center',
-                background: C.surface, border: `1px solid ${C.border}`, borderRadius: 13, cursor: 'pointer',
-              }}
-            >
-              <IconSearch color={C.secondary} />
-            </button>
-
-          </div>
-          <div className="board-search-panel" inert={!searchOpen}>
-            <div aria-hidden="true" style={{ position: 'absolute', insetInlineStart: 14, top: '50%', transform: 'translateY(-50%)', pointerEvents: 'none' }}>
-              <IconSearch color={search ? C.secondary : C.dim} />
-            </div>
-            <input
-              ref={searchRef}
-              type="search"
-              aria-label={t('search_placeholder')}
-              autoComplete="off"
-              spellCheck={false}
-              placeholder={t('search_placeholder')}
-              value={search}
-              onChange={e => setSearch(e.target.value)}
-              onKeyDown={event => {
-                if (event.key === 'Escape') {
-                  setSearch(''); setSearchOpen(false);
-                  requestAnimationFrame(() => searchToggleRef.current?.focus({ preventScroll: true }));
-                }
-              }}
-              style={{
-                width: '100%', height: 46, padding: '0 44px', fontSize: 16,
-                border: `1px solid ${search ? 'var(--ab-333333)' : C.border}`, borderRadius: 13,
-                outline: 'none', background: C.surface, color: C.text, WebkitAppearance: 'none',
-              }}
-            />
-            <button
-              type="button"
-              aria-label={tNav('clear')}
-              onClick={() => { setSearch(''); setSearchOpen(false);
-                  requestAnimationFrame(() => searchToggleRef.current?.focus({ preventScroll: true })); }}
-              style={{
-                position: 'absolute', insetInlineEnd: 1, top: '50%', transform: 'translateY(-50%)',
-                background: 'transparent', border: 'none', borderRadius: '50%', width: 44, height: 44,
-                cursor: 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'center', padding: 0,
-              }}
-            >
-              <span style={{ background: 'var(--ab-2c2c2e)', borderRadius: '50%', width: 28, height: 28, display: 'flex', alignItems: 'center', justifyContent: 'center' }}><IconClose color={C.secondary} /></span>
-            </button>
-          </div>
-        </div>
-      </div>
-
-      {/* ── Filter pills ───────────────────────────────────── */}
-      <div className="pillrow" style={{ display: 'flex', gap: 7, padding: '0 16px 12px', overflowX: 'auto', maxWidth: 960, margin: '0 auto' }}>
-        {FILTERS.map(key => {
-          const active = filter === key;
-          return (
-            <button key={key} type="button" aria-pressed={active} className="press" onClick={() => { haptic(); track(GOALS.boardFilter, { filter: key }); setFilter(key); }} style={{
-              padding: '7px 13px', minHeight: 44, fontSize: 13, fontWeight: active ? 600 : 400,
-              border: active ? 'none' : `1px solid ${C.border}`, borderRadius: 999, cursor: 'pointer',
-              background: active ? C.text : 'transparent', color: active ? 'var(--ab-000000)' : C.secondary,
-              whiteSpace: 'nowrap', flexShrink: 0, transition: 'all 0.15s ease',
-            }}>
-              {t(`filter_${key}`)}
-            </button>
-          );
-        })}
-      </div>
-      </>}
-
-
-      {/* ── Flight list ────────────────────────────────────── */}
-      <div style={{ padding: '0 16px', maxWidth: 960, margin: '0 auto' }}>
-
-        {loading && (
-          <div style={{ textAlign: 'center', padding: '60px 0', color: C.gray }}>
-            <div style={{ fontSize: 28, letterSpacing: '0.2em' }}>···</div>
-          </div>
-        )}
-
-        {/* With no scheduled service the notice above already explains the empty board;
-            repeating "no flights found" under an error-style icon reads as a failure. */}
-        {/* infoOnly keeps this line and drops only the icon and the reserved height: a visitor
-            who searched "LBG departures" still has to learn WHY there is no board, and the
-            page has no other notice to tell them. Stripping the chrome removed the answer
-            along with it, which traded a broken-looking tool for a silent one. */}
-        {!loading && !noService && visible.length === 0 && (
-          <div style={{ textAlign: 'center', padding: infoOnly ? '4px 0 22px' : '60px 0' }}>
-            {!infoOnly && <div style={{ fontSize: 32, marginBottom: 12 }}>✈</div>}
-            {/* "No flights found" is only true once we actually have a board and it is empty.
-                With nothing stored at all — the normal state for an airport the warmer has not
-                reached — saying it would be a straight falsehood about a real airport, on the
-                page type Google already flagged. pendingNote says what is true instead, and
-                carries the measured schedule figure so the page still answers the question. */}
-            <div style={{ fontSize: 15, color: C.secondary, maxWidth: 420, margin: '0 auto', lineHeight: 1.5 }}>
-              {pendingNote ?? t('no_flights')}
-            </div>
-          </div>
-        )}
-
-        {/* Pinned flight card — the landing pad for the return visit. Sticky above the list,
-            styled as "yours" (blue ring + label), opens the same sheet on tap. Renders only
-            when the pinned flight is present in the CURRENT list, so a stale or cross-mode
-            pin silently shows nothing rather than an orphaned card. */}
-        {pinnedFlight && (
-          <button
-            onClick={() => { haptic(); track(GOALS.flightCard, { from: 'pinned' }); setSelected(pinnedFlight); }}
-            style={{
-              position: 'sticky', top: 8, zIndex: 5, display: 'flex', width: '100%',
-              alignItems: 'center', gap: 12, padding: '12px 16px', marginBottom: 10,
-              borderRadius: 14, border: `1.5px solid ${C.blue}`, background: 'var(--ab-0b1220)',
-              color: 'inherit', textAlign: 'start', cursor: 'pointer',
-              boxShadow: '0 6px 24px rgba(0,0,0,0.5)',
-            }}
-          >
-            <div style={{ minWidth: 0, flex: 1 }}>
-              <div style={{ fontSize: 10, fontWeight: 700, letterSpacing: '0.08em', textTransform: 'uppercase', color: C.blue }}>{t('pinned_flight')}</div>
-              <div style={{ display: 'flex', alignItems: 'baseline', gap: 8, marginTop: 3 }}>
-                <span style={{ fontSize: 17, fontWeight: 700, color: C.text, fontVariantNumeric: 'tabular-nums' }}>{pinnedFlight.actual || pinnedFlight.scheduled}</span>
-                <span style={{ fontSize: 14, fontWeight: 600, color: C.text }}>{pinnedFlight.flight}</span>
-                <span style={{ fontSize: 13, color: C.secondary, overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>{pinnedFlight.destination || pinnedFlight.origin || ''}</span>
-              </div>
-            </div>
-            <span style={{ fontSize: 11, fontWeight: 700, color: STATUS_COLOR[pinnedFlight.status] || C.gray, flexShrink: 0 }}>●</span>
-          </button>
-        )}
-
-        {/* Прямая констатация, когда впереди не осталось ничего.
-            Раньше страница молча показывала вчерашнее как сегодняшнее: борт выглядел
-            обычным, статусы говорили «Посадка» и «Последний вызов», а все рейсы уже улетели.
-            Признак вычислялся внутри lib/flights.ts и наружу не отдавался. */}
-        {allPast && (
-          <div style={{
-            maxWidth: 960, margin: '0 auto 10px', padding: '11px 14px',
-            borderRadius: 12, background: 'rgba(255,159,10,.10)',
-            border: `1px solid color-mix(in srgb, ${C.orange} 26.666666666666668%, transparent)`, color: 'var(--ab-e4e4e7)',
-            fontSize: 14, lineHeight: 1.45,
-          }}>
-            {t(mode === 'arrivals' ? 'board_all_past_arr' : 'board_all_past_dep', {
-              date: lastUpdated
-                ? lastUpdated.toLocaleString(numLocale(locale), {
-                    // hourCycle задан ЯВНО: без него en/ar/ko/hi печатали «9:00 AM» под строками борта,
-                      // где время идёт в 24-часовом виде («09:45»). Соседние форматтеры цикл
-                      // задают (:144, :257, :866) — этот был единственным без него.
-                      timeZone: airport.tz || 'UTC', dateStyle: 'long', timeStyle: 'short', hourCycle: 'h23',
-                  })
-                : '—',
-            })}
-          </div>
-        )}
-        {/* keyed by mode+filter so a swap remounts the block and replays the rise-in */}
-        {(() => { if (initialListKey.current !== null && `${mode}:${filter}` !== initialListKey.current) initialListKey.current = null; return null; })()}
-        {/* A departure/arrival board IS a list — mark it up as one. Semantic <ul>/<li>
-            gives screen readers "list, N items" and is the structure answer engines extract
-            most reliably. Visual output is unchanged (globals.css zeroes list defaults). */}
-        {moreAbove && moreButton}
-        <ul key={`${mode}:${filter}`} className={initialListKey.current === null ? 'rise' : undefined} style={{ listStyle: 'none', margin: 0, padding: 0 }}>
-        {shown.map((f, i) => {
+  // Открытие/закрытие карточки и раскрытие лупы не меняют рейсы. Раньше эти
+  // действия заново строили все строки и форматировали длительности. Сохраняем
+  // JSX строк до изменения данных, фильтра, языка или минутного отсчёта.
+  const flightRows = useMemo(() => shown.map((f, i) => {
           // Прошедшее считается от РЕАЛЬНОГО времени, а не от времени снимка.
           //
           // `nowMs` привязан к снимку намеренно — иначе серверная отрисовка и гидратация
@@ -1565,7 +1356,300 @@ export function FlightBoard({ airport, locale, defaultMode = 'departures', displ
             </div>
             </li>
           );
+        }), [shown, realNow, nowMs, t, locale]);
+
+  const moreAbove = allPast && !showAll;
+  const moreButton = !loading && visible.length > shown.length ? (
+          <button className="press" onClick={() => { track(GOALS.boardMore, { shown: INITIAL, total: visible.length }); setShowAll(true); }} style={{
+            width: '100%', height: 56, marginTop: 4, marginBottom: 8,
+            display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 8,
+            border: '1px solid rgba(var(--ab-ink),0.08)', background: 'rgba(var(--ab-ink),0.02)',
+            borderRadius: 18, color: C.text, fontSize: 15, fontWeight: 600, cursor: 'pointer', WebkitTapHighlightColor: 'transparent',
+          }}>
+            {mode === 'departures' ? t('more_departures') : t('more_arrivals')}
+            <svg width="13" height="13" viewBox="0 0 13 13" fill="none"><path d="M3 5L6.5 8.5L10 5" stroke="var(--ab-8a8a8a)" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" /></svg>
+          </button>
+  ) : null;
+  useEffect(() => { setShowAll(false); }, [mode, filter, trimSearch]);
+
+  function switchMode(next: Mode) {
+    if (next === mode) { setFilter('all'); return; }
+    // Отмена синхронна с нажатием, ещё до следующего effect. Старые вылеты
+    // нельзя показывать/выбирать под активной кнопкой «Прилёты» даже на один тик.
+    requestRef.current?.abort();
+    const cached = boardCache.current!.get(`${airport.iata}:${locale}:${next}`);
+    setFlights(cached?.rows ?? []);
+    const updated = cached?.fetchedAt ? new Date(cached.fetchedAt) : null;
+    setUpdated(updated);
+    setNowMs(cached?.fetchedAt || 0);
+    setAllPast(cached?.allPast ?? false);
+    setUpdLabel(updated ? relTime(updated, t) : t('updating_now'));
+    setIsLive(!!updated && Date.now() - updated.getTime() < 90_000);
+    setLoading(!cached);
+    setSelected(null);
+    setMode(next);
+    setFilter('all');
+  }
+
+  return (
+    // 100dvh keeps the footer from jumping up while a real board loads. With no scheduled
+    // service nothing will ever fill it, so reserving a screenful leaves a dead gap between
+    // the notice and the rest of the page.
+    <div style={{ background: C.bg, minHeight: bare ? undefined : '100dvh', paddingBottom: bare ? 16 : 'calc(48px + env(safe-area-inset-bottom))' }}>
+
+      {/* ── Airport header — compact. The identity is one line: code + name + clock. The old
+          header spent ~380px (a 76px IATA glyph, an always-open search field, two control
+          rows and two meta lines) before the first flight row; on a 812px phone the board the
+          visitor searched for showed exactly one row. Premium here means the content leads. */}
+      <div style={{ padding: '14px 20px 6px', maxWidth: 960, margin: '0 auto' }}>
+        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', gap: 12 }}>
+          <h1 style={{ margin: 0, display: 'flex', alignItems: 'baseline', gap: 10, minWidth: 0, flex: 1 }}>
+            <span style={{ fontSize: 'clamp(30px, 9vw, 38px)', fontWeight: 800, letterSpacing: '-0.03em', lineHeight: 1, color: C.text }}>{airport.iata}</span>
+            {/* Leading space, deliberately.
+                The two spans are separated visually by the flex `gap`, which is layout only —
+                nothing separates them in the text. So the h1 read as "AERСочи" / "MADMadrid"
+                to anything consuming textContent: crawlers, screen readers, and the assistants
+                the AEO work is aimed at. A space as the first child of a flex item is stripped
+                for layout but kept in textContent, so this changes the read text and not a
+                single rendered pixel. */}
+            <span style={{ fontSize: 14, fontWeight: 500, color: C.secondary, lineHeight: 1.25, minWidth: 0, overflow: 'hidden', textOverflow: 'ellipsis', display: '-webkit-box', WebkitLineClamp: 2, WebkitBoxOrient: 'vertical' }}>{' '}{displayName || airport.name}</span>
+            {/* Пробел перед разделителем — по той же причине, что и у имени выше: между
+                flex-элементами текста нет, и без него h1 читался бы «УфаПрилёты». */}
+            {headingNote && (
+              <span style={{ fontSize: 14, fontWeight: 600, color: C.secondary, lineHeight: 1.25, flexShrink: 0, opacity: 0.85 }}>{' · '}{headingNote}</span>
+            )}
+          </h1>
+          <div style={{ textAlign: 'end', flexShrink: 0 }}>
+            <div style={{ fontSize: 17, fontWeight: 600, letterSpacing: '-0.01em', fontVariantNumeric: 'tabular-nums', color: C.text, lineHeight: 1 }}>{time}</div>
+            <div style={{ fontSize: 10, color: C.secondary, marginTop: 3, letterSpacing: '0.03em', opacity: 0.55 }}>{t('local_time')}</div>
+          </div>
+        </div>
+
+        {lead && (
+          <p style={{ fontSize: 13, lineHeight: 1.45, color: C.secondary, margin: '8px 0 0', maxWidth: 620 }}>{lead}</p>
+        )}
+        {statusLine && (
+          <p style={{ fontSize: 12.5, lineHeight: 1.45, color: C.text, margin: '5px 0 0', maxWidth: 620, fontVariantNumeric: 'tabular-nums' }}>{statusLine}</p>
+        )}
+
+        {/* One meta line: freshness + row count. These were two separate rows. */}
+        {!bare && <div role="status" aria-live="polite" style={{ display: 'flex', alignItems: 'center', gap: 7, marginTop: 8, minHeight: 18 }}>
+          <div
+            aria-hidden="true"
+            className={isLive ? 'live-dot' : ''}
+            style={{ width: 6, height: 6, borderRadius: '50%', flexShrink: 0, background: isLive ? C.green : C.gray }}
+          />
+          {/* The relative label answers "how old"; the machine-readable dateTime and the
+              hover/long-press title answer exactly WHEN — the transparency every review pass
+              kept asking for, at zero locale-string cost (a formatted datetime is universal). */}
+          {/* Пояс АЭРОПОРТА и его подпись. toLocaleString(locale) без опции timeZone
+              берёт пояс машины, где выполняется код: на сервере это UTC, и подсказка
+              сообщала момент, не совпадающий ни с временем аэропорта, ни с временем
+              читателя, причём без всякой пометки, чей это пояс. Всё остальное табло
+              показано во времени аэропорта. */}
+          <time suppressHydrationWarning dateTime={lastUpdated?.toISOString()} title={lastUpdated ? lastUpdated.toLocaleString(numLocale(locale), { timeZone: airport.tz || 'UTC', timeZoneName: 'short' }) : undefined} style={{ fontSize: 12, color: C.secondary, opacity: 0.85 }}>{updLabel || '—'}</time>
+          {isStale && (
+            <span style={{ fontSize: 12, fontWeight: 700, color: C.orange, letterSpacing: '0.02em' }}>
+              {' · '}{t('board_stale')}
+            </span>
+          )}
+          {!loading && flights.length > 0 && (
+            <span style={{ fontSize: 12, color: C.secondary, opacity: 0.85 }}>
+              {' · '}{(() => { const n = flights === initialFlights && boardTotal != null ? boardTotal : flights.length; return mode === 'departures' ? t('departures_on_board', { count: n }) : t('arrivals_on_board', { count: n }); })()}
+            </span>
+          )}
+        </div>}
+      </div>
+
+      {/* ── Controls: mode tabs + search icon in ONE row; the input expands in place ── */}
+      {!bare && <>
+      <div style={{ padding: '6px 16px 10px', maxWidth: 960, margin: '0 auto' }}>
+        {/* Оба слоя остаются в DOM: поле растёт от лупы без скачка высоты табло.
+            inert исключает скрытые кнопки из Tab/VoiceOver; reduced-motion — в CSS.
+            При закрытии фильтр сбрасывается, чтобы не оставлять невидимый запрос. */}
+        <div ref={searchControlsRef} className="board-search-controls" data-open={searchOpen}>
+          <div className="board-search-modes" inert={searchOpen}>
+            <div style={{ flex: 1, display: 'flex', background: C.surface, border: `1px solid ${C.border}`, borderRadius: 13, padding: 3, gap: 2 }}>
+              {(['departures', 'arrivals'] as Mode[]).map(m => {
+                const active = mode === m;
+                return (
+                  <button key={m} type="button" aria-pressed={active} className="press" onClick={() => { haptic(); track(GOALS.boardMode, { mode: m }); switchMode(m); }} style={{
+                    flex: 1, padding: '10px 0', minHeight: 40, fontSize: 14, fontWeight: 600,
+                    border: 'none', borderRadius: 10, cursor: 'pointer',
+                    background: active ? 'var(--ab-1c1c1e)' : 'transparent', color: active ? C.text : C.secondary,
+                    transition: 'all 0.18s ease', letterSpacing: '-0.01em',
+                    display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 6,
+                  }}>
+                    <span style={{ fontSize: 15 }} aria-hidden="true">{m === 'departures' ? '✈' : '🛬'}</span>
+                    {m === 'departures' ? t('departures') : t('arrivals')}
+                  </button>
+                );
+              })}
+            </div>
+            <button
+              type="button"
+              aria-label={t('search_placeholder')}
+              aria-expanded={searchOpen}
+              ref={searchToggleRef}
+              className="press"
+              onClick={() => setSearchOpen(true)}
+              style={{
+                width: 48, height: 48, flexShrink: 0, display: 'flex', alignItems: 'center', justifyContent: 'center',
+                background: C.surface, border: `1px solid ${C.border}`, borderRadius: 13, cursor: 'pointer',
+              }}
+            >
+              <IconSearch color={C.secondary} />
+            </button>
+
+          </div>
+          <div className="board-search-panel" inert={!searchOpen}>
+            <div aria-hidden="true" style={{ position: 'absolute', insetInlineStart: 14, top: '50%', transform: 'translateY(-50%)', pointerEvents: 'none' }}>
+              <IconSearch color={search ? C.secondary : C.dim} />
+            </div>
+            <input
+              ref={searchRef}
+              type="search"
+              aria-label={t('search_placeholder')}
+              autoComplete="off"
+              spellCheck={false}
+              placeholder={t('search_placeholder')}
+              value={search}
+              onChange={e => setSearch(e.target.value)}
+              onKeyDown={event => {
+                if (event.key === 'Escape') {
+                  setSearch(''); setSearchOpen(false);
+                  requestAnimationFrame(() => searchToggleRef.current?.focus({ preventScroll: true }));
+                }
+              }}
+              style={{
+                width: '100%', height: 46, padding: '0 44px', fontSize: 16,
+                border: `1px solid ${search ? 'var(--ab-333333)' : C.border}`, borderRadius: 13,
+                outline: 'none', background: C.surface, color: C.text, WebkitAppearance: 'none',
+              }}
+            />
+            <button
+              type="button"
+              aria-label={tNav('clear')}
+              onClick={() => { setSearch(''); setSearchOpen(false);
+                  requestAnimationFrame(() => searchToggleRef.current?.focus({ preventScroll: true })); }}
+              style={{
+                position: 'absolute', insetInlineEnd: 1, top: '50%', transform: 'translateY(-50%)',
+                background: 'transparent', border: 'none', borderRadius: '50%', width: 44, height: 44,
+                cursor: 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'center', padding: 0,
+              }}
+            >
+              <span style={{ background: 'var(--ab-2c2c2e)', borderRadius: '50%', width: 28, height: 28, display: 'flex', alignItems: 'center', justifyContent: 'center' }}><IconClose color={C.secondary} /></span>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      {/* ── Filter pills ───────────────────────────────────── */}
+      <div className="pillrow" style={{ display: 'flex', gap: 7, padding: '0 16px 12px', overflowX: 'auto', maxWidth: 960, margin: '0 auto' }}>
+        {FILTERS.map(key => {
+          const active = filter === key;
+          return (
+            <button key={key} type="button" aria-pressed={active} className="press" onClick={() => { haptic(); track(GOALS.boardFilter, { filter: key }); setFilter(key); }} style={{
+              padding: '7px 13px', minHeight: 44, fontSize: 13, fontWeight: active ? 600 : 400,
+              border: active ? 'none' : `1px solid ${C.border}`, borderRadius: 999, cursor: 'pointer',
+              background: active ? C.text : 'transparent', color: active ? 'var(--ab-000000)' : C.secondary,
+              whiteSpace: 'nowrap', flexShrink: 0, transition: 'all 0.15s ease',
+            }}>
+              {t(`filter_${key}`)}
+            </button>
+          );
         })}
+      </div>
+      </>}
+
+
+      {/* ── Flight list ────────────────────────────────────── */}
+      <div style={{ padding: '0 16px', maxWidth: 960, margin: '0 auto' }}>
+
+        {loading && (
+          <div style={{ textAlign: 'center', padding: '60px 0', color: C.gray }}>
+            <div style={{ fontSize: 28, letterSpacing: '0.2em' }}>···</div>
+          </div>
+        )}
+
+        {/* With no scheduled service the notice above already explains the empty board;
+            repeating "no flights found" under an error-style icon reads as a failure. */}
+        {/* infoOnly keeps this line and drops only the icon and the reserved height: a visitor
+            who searched "LBG departures" still has to learn WHY there is no board, and the
+            page has no other notice to tell them. Stripping the chrome removed the answer
+            along with it, which traded a broken-looking tool for a silent one. */}
+        {!loading && !noService && visible.length === 0 && (
+          <div style={{ textAlign: 'center', padding: infoOnly ? '4px 0 22px' : '60px 0' }}>
+            {!infoOnly && <div style={{ fontSize: 32, marginBottom: 12 }}>✈</div>}
+            {/* "No flights found" is only true once we actually have a board and it is empty.
+                With nothing stored at all — the normal state for an airport the warmer has not
+                reached — saying it would be a straight falsehood about a real airport, on the
+                page type Google already flagged. pendingNote says what is true instead, and
+                carries the measured schedule figure so the page still answers the question. */}
+            <div style={{ fontSize: 15, color: C.secondary, maxWidth: 420, margin: '0 auto', lineHeight: 1.5 }}>
+              {loadFailed && flights.length === 0 ? t('board_pending') : pendingNote ?? t('no_flights')}
+            </div>
+          </div>
+        )}
+
+        {/* Pinned flight card — the landing pad for the return visit. Sticky above the list,
+            styled as "yours" (blue ring + label), opens the same sheet on tap. Renders only
+            when the pinned flight is present in the CURRENT list, so a stale or cross-mode
+            pin silently shows nothing rather than an orphaned card. */}
+        {pinnedFlight && (
+          <button
+            onClick={() => { haptic(); track(GOALS.flightCard, { from: 'pinned' }); setSelected(pinnedFlight); }}
+            style={{
+              position: 'sticky', top: 8, zIndex: 5, display: 'flex', width: '100%',
+              alignItems: 'center', gap: 12, padding: '12px 16px', marginBottom: 10,
+              borderRadius: 14, border: `1.5px solid ${C.blue}`, background: 'var(--ab-0b1220)',
+              color: 'inherit', textAlign: 'start', cursor: 'pointer',
+              boxShadow: '0 6px 24px rgba(0,0,0,0.5)',
+            }}
+          >
+            <div style={{ minWidth: 0, flex: 1 }}>
+              <div style={{ fontSize: 10, fontWeight: 700, letterSpacing: '0.08em', textTransform: 'uppercase', color: C.blue }}>{t('pinned_flight')}</div>
+              <div style={{ display: 'flex', alignItems: 'baseline', gap: 8, marginTop: 3 }}>
+                <span style={{ fontSize: 17, fontWeight: 700, color: C.text, fontVariantNumeric: 'tabular-nums' }}>{pinnedFlight.actual || pinnedFlight.scheduled}</span>
+                <span style={{ fontSize: 14, fontWeight: 600, color: C.text }}>{pinnedFlight.flight}</span>
+                <span style={{ fontSize: 13, color: C.secondary, overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>{pinnedFlight.destination || pinnedFlight.origin || ''}</span>
+              </div>
+            </div>
+            <span style={{ fontSize: 11, fontWeight: 700, color: STATUS_COLOR[pinnedFlight.status] || C.gray, flexShrink: 0 }}>●</span>
+          </button>
+        )}
+
+        {/* Прямая констатация, когда впереди не осталось ничего.
+            Раньше страница молча показывала вчерашнее как сегодняшнее: борт выглядел
+            обычным, статусы говорили «Посадка» и «Последний вызов», а все рейсы уже улетели.
+            Признак вычислялся внутри lib/flights.ts и наружу не отдавался. */}
+        {allPast && (
+          <div style={{
+            maxWidth: 960, margin: '0 auto 10px', padding: '11px 14px',
+            borderRadius: 12, background: 'rgba(255,159,10,.10)',
+            border: `1px solid color-mix(in srgb, ${C.orange} 26.666666666666668%, transparent)`, color: 'var(--ab-e4e4e7)',
+            fontSize: 14, lineHeight: 1.45,
+          }}>
+            {t(mode === 'arrivals' ? 'board_all_past_arr' : 'board_all_past_dep', {
+              date: lastUpdated
+                ? lastUpdated.toLocaleString(numLocale(locale), {
+                    // hourCycle задан ЯВНО: без него en/ar/ko/hi печатали «9:00 AM» под строками борта,
+                      // где время идёт в 24-часовом виде («09:45»). Соседние форматтеры цикл
+                      // задают (:144, :257, :866) — этот был единственным без него.
+                      timeZone: airport.tz || 'UTC', dateStyle: 'long', timeStyle: 'short', hourCycle: 'h23',
+                  })
+                : '—',
+            })}
+          </div>
+        )}
+        {/* keyed by mode+filter so a swap remounts the block and replays the rise-in */}
+        {(() => { if (initialListKey.current !== null && `${mode}:${filter}` !== initialListKey.current) initialListKey.current = null; return null; })()}
+        {/* A departure/arrival board IS a list — mark it up as one. Semantic <ul>/<li>
+            gives screen readers "list, N items" and is the structure answer engines extract
+            most reliably. Visual output is unchanged (globals.css zeroes list defaults). */}
+        {moreAbove && moreButton}
+        <ul key={`${mode}:${filter}`} className={initialListKey.current === null ? 'rise' : undefined} style={{ listStyle: 'none', margin: 0, padding: 0 }}>
+        {flightRows}
         </ul>
 
         {!moreAbove && moreButton}
