@@ -25,22 +25,22 @@ export function Breadcrumb({ trail, extra, label }: { trail: Crumb[]; extra?: { 
     <nav aria-label={label} style={{ maxWidth: 960, margin: '0 auto', padding: '10px 16px 0' }}>
       <ol style={{
         display: 'flex', flexWrap: 'wrap', alignItems: 'center', gap: 6,
-        listStyle: 'none', margin: 0, padding: 0, fontSize: 12, color: '#8A8A8A',
+        listStyle: 'none', margin: 0, padding: 0, fontSize: 12, color: 'var(--ab-8a8a8a)',
       }}>
         {path.map(c => (
           <li key={c.item} style={{ display: 'flex', alignItems: 'center', gap: 6 }}>
-            <Link href={c.item} style={{ color: '#8A8A8A', textDecoration: 'none', minHeight: 24 }}>{c.name}</Link>
+            <Link href={c.item} style={{ color: 'var(--ab-8a8a8a)', textDecoration: 'none', minHeight: 24 }}>{c.name}</Link>
             <span aria-hidden="true">›</span>
           </li>
         ))}
-        <li aria-current="page" style={{ color: '#C7C7C7' }}>{current.name}</li>
+        <li aria-current="page" style={{ color: 'var(--ab-c7c7c7)' }}>{current.name}</li>
         {/* The sibling link flows inline after the current crumb. marginInlineStart:auto
             pushed it to the far edge, which on a phone wrapped it onto its own line as a
             right-aligned orphan — it read as broken layout, not as navigation. */}
         {extra && (
           <li style={{ display: 'flex', alignItems: 'center', gap: 6 }}>
             <span aria-hidden="true" style={{ opacity: 0.6 }}>·</span>
-            <Link href={extra.href} style={{ color: '#8A8A8A', minHeight: 24 }}>{extra.label}</Link>
+            <Link href={extra.href} style={{ color: 'var(--ab-8a8a8a)', minHeight: 24 }}>{extra.label}</Link>
           </li>
         )}
       </ol>

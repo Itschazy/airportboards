@@ -50,7 +50,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
 function Title({ children }: { children: React.ReactNode }) {
   return (
-    <div style={{ fontSize: 13, fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.16em', color: '#8A8A8A', marginBottom: 14 }}>
+    <div style={{ fontSize: 13, fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.16em', color: 'var(--ab-8a8a8a)', marginBottom: 14 }}>
       {children}
     </div>
   );
@@ -105,11 +105,11 @@ export default async function HomePage({ params }: Props) {
       {/* HERO */}
       <h1 style={{
         fontSize: 'clamp(48px, 13vw, 76px)', fontWeight: 800, letterSpacing: '-0.05em',
-        lineHeight: 0.95, color: '#FFFFFF', margin: 0, maxWidth: '100%',
+        lineHeight: 0.95, color: 'var(--ab-ffffff)', margin: 0, maxWidth: '100%',
       }}>
         {t('hero1')}<br />{t('hero2')}
       </h1>
-      <p style={{ fontSize: 16, color: '#8A8A8A', marginTop: 18, lineHeight: 1.5, maxWidth: '100%', overflowWrap: 'break-word' }}>
+      <p style={{ fontSize: 16, color: 'var(--ab-8a8a8a)', marginTop: 18, lineHeight: 1.5, maxWidth: '100%', overflowWrap: 'break-word' }}>
         {t('subline', worldCounts())}
       </p>
 
@@ -142,10 +142,10 @@ export default async function HomePage({ params }: Props) {
           { icon: '↻', value: t('m_updates_v'), label: t('m_updates_l') },
         ].map((m, i) => (
           <div key={i} style={{ minWidth: 0 }}>
-            <div style={{ fontSize: 15, fontWeight: 700, color: '#FFFFFF', lineHeight: 1.15 }}>
+            <div style={{ fontSize: 15, fontWeight: 700, color: 'var(--ab-ffffff)', lineHeight: 1.15 }}>
               <span style={{ opacity: 0.7, marginInlineEnd: 5, fontWeight: 400 }}>{m.icon}</span>{m.value}
             </div>
-            <div style={{ fontSize: 12, color: '#6A6A6A', lineHeight: 1.25, marginTop: 2, overflowWrap: 'break-word' }}>{m.label}</div>
+            <div style={{ fontSize: 12, color: 'var(--ab-6a6a6a)', lineHeight: 1.25, marginTop: 2, overflowWrap: 'break-word' }}>{m.label}</div>
           </div>
         ))}
       </div>
@@ -164,10 +164,10 @@ export default async function HomePage({ params }: Props) {
           {countries.map(c => (
             <Link key={c.slug} href={`/${locale}/airports/${c.slug}`} style={{
               width: 190, height: 88, textDecoration: 'none', color: 'inherit',
-              background: '#0B0B0B', border: '1px solid #1A1A1A', borderRadius: 16, padding: '14px 16px',
+              background: 'var(--ab-0b0b0b)', border: '1px solid var(--ab-1a1a1a)', borderRadius: 16, padding: '14px 16px',
               display: 'flex', flexDirection: 'column', justifyContent: 'center',
             }}>
-              <div style={{ fontSize: 15, color: '#E4E4E7', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>
+              <div style={{ fontSize: 15, color: 'var(--ab-e4e4e7)', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>
                 {/* Localised: c.country is the English source name, and printing it raw put
                     "🇷🇺 Russia" on the Russian homepage directly above a correctly declined
                     "178 аэропортов", with "Россия" in the footer of the same page. The anchor
@@ -177,7 +177,7 @@ export default async function HomePage({ params }: Props) {
                     so this needs no new data. */}
                 <span style={{ marginInlineEnd: 7 }}>{flag(c.iso2)}</span>{getCountryName(c.country, locale)}
               </div>
-              <div style={{ fontSize: 12, color: '#6A6A6A', marginTop: 5 }}>{t('airports_count', { count: c.count })}</div>
+              <div style={{ fontSize: 12, color: 'var(--ab-6a6a6a)', marginTop: 5 }}>{t('airports_count', { count: c.count })}</div>
             </Link>
           ))}
         </div>
@@ -190,11 +190,11 @@ export default async function HomePage({ params }: Props) {
           {POPULAR_CITIES.map(c => (
             <Link key={c.code} href={`/${locale}/city/${slugify(getAirport(c.iata)?.city || c.name)}`} style={{
               width: 150, height: 92, textDecoration: 'none', color: 'inherit',
-              background: '#0B0B0B', border: '1px solid #1A1A1A', borderRadius: 16, padding: '12px 18px',
+              background: 'var(--ab-0b0b0b)', border: '1px solid var(--ab-1a1a1a)', borderRadius: 16, padding: '12px 18px',
               display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', textAlign: 'center',
             }}>
-              <div style={{ fontSize: 16, color: '#E4E4E7', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis', maxWidth: '100%' }}>{getCityName(getAirport(c.iata)?.city || c.name, locale, c.name)}</div>
-              <div style={{ fontSize: 12, fontWeight: 700, color: '#6A6A6A', marginTop: 5, letterSpacing: '0.06em' }}>{c.code}</div>
+              <div style={{ fontSize: 16, color: 'var(--ab-e4e4e7)', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis', maxWidth: '100%' }}>{getCityName(getAirport(c.iata)?.city || c.name, locale, c.name)}</div>
+              <div style={{ fontSize: 12, fontWeight: 700, color: 'var(--ab-6a6a6a)', marginTop: 5, letterSpacing: '0.06em' }}>{c.code}</div>
             </Link>
           ))}
         </div>
@@ -207,8 +207,8 @@ export default async function HomePage({ params }: Props) {
           {LETTERS.map(L => (
             <Link key={L} href={`/${locale}/az/${L.toLowerCase()}`} style={{
               width: 40, height: 40, display: 'flex', alignItems: 'center', justifyContent: 'center',
-              borderRadius: 12, border: '1px solid #1A1A1A', background: '#0B0B0B',
-              textDecoration: 'none', color: '#E4E4E7', fontSize: 15, fontWeight: 600,
+              borderRadius: 12, border: '1px solid var(--ab-1a1a1a)', background: 'var(--ab-0b0b0b)',
+              textDecoration: 'none', color: 'var(--ab-e4e4e7)', fontSize: 15, fontWeight: 600,
             }}>
               {L}
             </Link>

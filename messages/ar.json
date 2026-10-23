@@ -13,7 +13,9 @@
     "language": "اللغة",
     "close": "إغلاق",
     "aria_breadcrumb": "مسار التنقل",
-    "aria_footer": "تذييل الصفحة"
+    "aria_footer": "تذييل الصفحة",
+    "theme_light": "فاتح",
+    "theme_dark": "داكن"
   },
   "board": {
     "flight": "رحلة",

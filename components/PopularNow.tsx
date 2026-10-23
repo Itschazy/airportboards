@@ -22,20 +22,20 @@ export function PopularNow({ airports, locale, depLabel, arrLabel }: {
         return (
           <Link key={a.iata} href={`/${locale}/airport/${a.iata}`} style={{
             width: 160, minWidth: 160, height: 170, textDecoration: 'none', color: 'inherit',
-            background: '#0B0B0B', border: '1px solid #1A1A1A', borderInlineStart: '3px solid #34C759',
+            background: 'var(--ab-0b0b0b)', border: '1px solid var(--ab-1a1a1a)', borderInlineStart: '3px solid var(--ab-34c759)',
             borderRadius: 20, padding: '18px 18px', display: 'flex', flexDirection: 'column',
           }}>
-            <div style={{ fontSize: 44, fontWeight: 800, letterSpacing: '-0.04em', color: '#FFFFFF', lineHeight: 1 }}>{a.iata}</div>
-            <div style={{ fontSize: 18, color: '#8A8A8A', marginTop: 6, whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>{a.city}</div>
+            <div style={{ fontSize: 44, fontWeight: 800, letterSpacing: '-0.04em', color: 'var(--ab-ffffff)', lineHeight: 1 }}>{a.iata}</div>
+            <div style={{ fontSize: 18, color: 'var(--ab-8a8a8a)', marginTop: 6, whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>{a.city}</div>
             <div style={{ marginTop: 'auto', display: 'flex', flexDirection: 'column', gap: 4 }}>
               {typeof c?.dep === 'number' && (
-                <div style={{ fontSize: 16, color: '#8A8A8A' }}>
-                  <span style={{ color: '#34C759', fontWeight: 700 }}>{c.dep}</span> {depLabel}
+                <div style={{ fontSize: 16, color: 'var(--ab-8a8a8a)' }}>
+                  <span style={{ color: 'var(--ab-34c759)', fontWeight: 700 }}>{c.dep}</span> {depLabel}
                 </div>
               )}
               {typeof c?.arr === 'number' && (
-                <div style={{ fontSize: 16, color: '#8A8A8A' }}>
-                  <span style={{ color: '#0A84FF', fontWeight: 700 }}>{c.arr}</span> {arrLabel}
+                <div style={{ fontSize: 16, color: 'var(--ab-8a8a8a)' }}>
+                  <span style={{ color: 'var(--ab-0a84ff)', fontWeight: 700 }}>{c.arr}</span> {arrLabel}
                 </div>
               )}
             </div>

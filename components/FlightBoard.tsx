@@ -52,23 +52,23 @@ const STALE_AFTER_MS = 12 * 60 * 60 * 1000;
 const FRESH_WINDOW_MS = 10 * 60 * 1000;
 
 const C = {
-  bg:        '#050505',
-  surface:   '#0B0B0B',
-  border:    '#1A1A1A',
-  text:      '#FFFFFF',
-  secondary: '#8A8A8A',
-  dim:       '#4A4A4A',
-  green:     '#34C759',
-  blue:      '#0A84FF',
-  orange:    '#FF9F0A',
-  red:       '#FF453A',
-  gray:      '#3A3A3C',
+  bg:        'var(--ab-050505)',
+  surface:   'var(--ab-0b0b0b)',
+  border:    'var(--ab-1a1a1a)',
+  text:      'var(--ab-ffffff)',
+  secondary: 'var(--ab-8a8a8a)',
+  dim:       'var(--ab-4a4a4a)',
+  green:     'var(--ab-34c759)',
+  blue:      'var(--ab-0a84ff)',
+  orange:    'var(--ab-ff9f0a)',
+  red:       'var(--ab-ff453a)',
+  gray:      'var(--ab-3a3a3c)',
   // Past rows get their own tone rather than reusing `gray`. Measured against the composited
-  // row background (#080808 under the row's own translucency), the word "Вылетел" in #3A3A3C
+  // row background (#080808 under the row's own translucency), the word "Вылетел" in var(--ab-3a3a3c)
   // at opacity 0.45 came out at 1.18:1 — the WCAG floor for body text is 4.5:1, so it was not
-  // dim, it was invisible. #ADADB2 at 0.70 gives 4.69:1. `gray` itself still serves the
+  // dim, it was invisible. var(--ab-adadb2) at 0.70 gives 4.69:1. `gray` itself still serves the
   // `scheduled` status on full-opacity rows and must not move.
-  past:      '#ADADB2',
+  past:      'var(--ab-adadb2)',
 };
 
 const STATUS_COLOR: Record<string, string> = {
@@ -167,7 +167,7 @@ function calcDeparture(
 
 // ─── SVG Icons ────────────────────────────────────────────────────────────────
 
-function IconSearch({ color = '#8A8A8A' }) {
+function IconSearch({ color = 'var(--ab-8a8a8a)' }) {
   return (
     <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
       <circle cx="6.5" cy="6.5" r="4" stroke={color} strokeWidth="1.5"/>
@@ -176,7 +176,7 @@ function IconSearch({ color = '#8A8A8A' }) {
   );
 }
 
-function IconClose({ color = '#8A8A8A' }) {
+function IconClose({ color = 'var(--ab-8a8a8a)' }) {
   return (
     <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path d="M2 2L12 12M12 2L2 12" stroke={color} strokeWidth="1.5" strokeLinecap="round"/>
@@ -187,7 +187,7 @@ function IconClose({ color = '#8A8A8A' }) {
 function IconChevron() {
   return (
     <svg data-flip width="6" height="11" viewBox="0 0 6 11" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M1 1L5 5.5L1 10" stroke="#3A3A3C" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+      <path d="M1 1L5 5.5L1 10" stroke="var(--ab-3a3a3c)" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
     </svg>
   );
 }
@@ -491,21 +491,21 @@ function BottomSheet({ flight: selectedFlight, mode, onClose, tz, locale, clockM
         {/* Header — status pill on its own line above the (large) flight number,
             so long localized labels (ПОСЛЕДНИЙ ВЫЗОВ…) never collide with it */}
         <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start', gap: 14 }}>
-          <div style={{ display: 'inline-flex', alignItems: 'center', gap: 6, padding: '7px 13px', borderRadius: 999, background: color + '1F', border: `1px solid ${color}59`, maxWidth: '100%' }}>
+          <div style={{ display: 'inline-flex', alignItems: 'center', gap: 6, padding: '7px 13px', borderRadius: 999, background: `color-mix(in srgb, ${color} 12.156862745098039%, transparent)`, border: `1px solid color-mix(in srgb, ${color} 34.90196078431372%, transparent)`, maxWidth: '100%' }}>
             <div style={{ width: 7, height: 7, borderRadius: '50%', background: color, flexShrink: 0 }} />
             <span style={{ fontSize: 12, fontWeight: 700, color, letterSpacing: '0.08em', textTransform: 'uppercase' }}>{statusLabel}</span>
           </div>
           <div style={{ minWidth: 0, width: '100%' }}>
             <div style={{ fontSize: 'clamp(46px, 14vw, 66px)', fontWeight: 800, letterSpacing: '-0.04em', color: C.text, lineHeight: 0.95, wordBreak: 'break-word' }}>{flight.flight}</div>
-            <div style={{ fontSize: 'clamp(22px, 6.5vw, 30px)', color: '#A1A1A1', marginTop: 12, lineHeight: 1.15 }}>{flight.destination || flight.origin}</div>
+            <div style={{ fontSize: 'clamp(22px, 6.5vw, 30px)', color: 'var(--ab-a1a1a1)', marginTop: 12, lineHeight: 1.15 }}>{flight.destination || flight.origin}</div>
             <div style={{ fontSize: 22, color: C.text, fontWeight: 600, marginTop: 6 }}>{flight.airline}</div>
           </div>
         </div>
 
-        <div style={{ height: 1, background: 'rgba(255,255,255,0.08)', margin: '18px 0' }} />
+        <div style={{ height: 1, background: 'rgba(var(--ab-ink),0.08)', margin: '18px 0' }} />
 
         {/* Hero card */}
-        <div style={{ background: color + '1A', border: `1px solid ${color}40`, borderRadius: 18, padding: '18px 20px 20px' }}>
+        <div style={{ background: `color-mix(in srgb, ${color} 10.196078431372548%, transparent)`, border: `1px solid color-mix(in srgb, ${color} 25.098039215686274%, transparent)`, borderRadius: 18, padding: '18px 20px 20px' }}>
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', gap: 12 }}>
             <div style={{ minWidth: 0 }}>
               <div style={{ ...L, marginBottom: 10 }}>{hero.label}</div>
@@ -517,7 +517,7 @@ function BottomSheet({ flight: selectedFlight, mode, onClose, tz, locale, clockM
           </div>
           {hero.bottom && (
             <>
-              <div style={{ height: 1, background: 'rgba(255,255,255,0.08)', margin: '16px 0' }} />
+              <div style={{ height: 1, background: 'rgba(var(--ab-ink),0.08)', margin: '16px 0' }} />
               <div style={{ ...L, marginBottom: 4 }}>{isDep ? t('departure') : t('arrival')}</div>
               <div style={{ fontSize: 24, fontWeight: 700, color: C.text, fontVariantNumeric: 'tabular-nums' }}>{hero.bottom}</div>
             </>
@@ -530,12 +530,12 @@ function BottomSheet({ flight: selectedFlight, mode, onClose, tz, locale, clockM
             Свободное место оставляем снизу, чтобы необязательная дата не двигала цифры. */}
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(92px, 1fr))', gap: 12, marginTop: 24 }}>
           {blocks.map((b, i) => (
-            <div key={i} style={{ background: 'rgba(255,255,255,0.04)', border: '1px solid rgba(255,255,255,0.08)', borderRadius: 14, padding: '16px', minHeight: 104, display: 'flex', flexDirection: 'column', gap: 10 }}>
+            <div key={i} style={{ background: 'rgba(var(--ab-ink),0.04)', border: '1px solid rgba(var(--ab-ink),0.08)', borderRadius: 14, padding: '16px', minHeight: 104, display: 'flex', flexDirection: 'column', gap: 10 }}>
               <div style={L}>{b.label}</div>
               <div>
                 <div style={{ fontSize: 24, fontWeight: 700, color: b.valueColor || C.text, lineHeight: 1.05, letterSpacing: '-0.02em', fontVariantNumeric: 'tabular-nums', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>{b.value}</div>
                 {b.strike && <div style={{ fontSize: 12, color: C.secondary, textDecoration: 'line-through', marginTop: 2 }}>{b.strike}</div>}
-                {b.sub && <div style={{ fontSize: 12, color: '#6A6A6A', marginTop: 4 }}>{b.sub}</div>}
+                {b.sub && <div style={{ fontSize: 12, color: 'var(--ab-6a6a6a)', marginTop: 4 }}>{b.sub}</div>}
               </div>
             </div>
           ))}
@@ -589,14 +589,14 @@ function BottomSheet({ flight: selectedFlight, mode, onClose, tz, locale, clockM
                 <div style={{ fontSize: 20, fontWeight: 800, letterSpacing: '-0.02em', color: C.text, lineHeight: 1 }}>{routeFrom.code}</div>
                 <div style={{ fontSize: 11.5, color: C.secondary, marginTop: 4, overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>{routeFrom.name}</div>
               </div>
-              <svg data-flip width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true" className="route-arrow" style={{ flexShrink: 0, opacity: 0.45 }}><path d="M3 12h16m0 0-6-6m6 6-6 6" stroke="#FFFFFF" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" /></svg>
+              <svg data-flip width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true" className="route-arrow" style={{ flexShrink: 0, opacity: 0.45 }}><path d="M3 12h16m0 0-6-6m6 6-6 6" stroke="var(--ab-ffffff)" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" /></svg>
               <div style={{ flex: 1, minWidth: 0, textAlign: 'end' }}>
                 <div style={{ fontSize: 20, fontWeight: 800, letterSpacing: '-0.02em', color: C.text, lineHeight: 1 }}>{routeTo.code}</div>
                 <div style={{ fontSize: 11.5, color: C.secondary, marginTop: 4, overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>{routeTo.name}</div>
               </div>
             </>
           );
-          const box = { display: 'flex', alignItems: 'center', gap: 12, margin: '18px 0 0', padding: '14px 16px', background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.07)', borderRadius: 16 } as const;
+          const box = { display: 'flex', alignItems: 'center', gap: 12, margin: '18px 0 0', padding: '14px 16px', background: 'rgba(var(--ab-ink),0.03)', border: '1px solid rgba(var(--ab-ink),0.07)', borderRadius: 16 } as const;
           const pair = /^[A-Z]{3}$/i.test(routeFrom.code) && /^[A-Z]{3}$/i.test(routeTo.code);
           if (!pair) return <div style={box}>{strip}</div>;
           return (
@@ -609,7 +609,7 @@ function BottomSheet({ flight: selectedFlight, mode, onClose, tz, locale, clockM
               {strip}
               {/* Same chevron the board rows use, so "this opens something" reads the same way twice. */}
               <svg data-flip width="8" height="14" viewBox="0 0 8 14" fill="none" aria-hidden="true" style={{ flexShrink: 0, marginInlineStart: 2 }}>
-                <path d="M1 1L7 7L1 13" stroke="rgba(255,255,255,0.28)" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" />
+                <path d="M1 1L7 7L1 13" stroke="rgba(var(--ab-ink),0.28)" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" />
               </svg>
             </Link>
           );
@@ -620,9 +620,9 @@ function BottomSheet({ flight: selectedFlight, mode, onClose, tz, locale, clockM
 
         {/* Info notice */}
         {notice && (
-          <div style={{ display: 'flex', gap: 11, alignItems: 'flex-start', marginTop: 18, padding: '14px 16px', background: color + '0D', border: `1px solid ${color}40`, borderRadius: 14 }}>
+          <div style={{ display: 'flex', gap: 11, alignItems: 'flex-start', marginTop: 18, padding: '14px 16px', background: `color-mix(in srgb, ${color} 5.098039215686274%, transparent)`, border: `1px solid color-mix(in srgb, ${color} 25.098039215686274%, transparent)`, borderRadius: 14 }}>
             <svg width="18" height="18" viewBox="0 0 18 18" fill="none" style={{ flexShrink: 0, marginTop: 1 }}><circle cx="9" cy="9" r="8" stroke={color} strokeWidth="1.5" /><path d="M9 5.5v.5M9 8v4" stroke={color} strokeWidth="1.6" strokeLinecap="round" /></svg>
-            <span style={{ fontSize: 14, lineHeight: 1.45, color: '#C4C4C4' }}>{notice}</span>
+            <span style={{ fontSize: 14, lineHeight: 1.45, color: 'var(--ab-c4c4c4)' }}>{notice}</span>
           </div>
         )}
 
@@ -656,7 +656,7 @@ function BottomSheet({ flight: selectedFlight, mode, onClose, tz, locale, clockM
         style={{
           position: 'fixed', bottom: 0, left: 0, right: 0, zIndex: 201,
           outline: 'none',
-          background: '#111111', borderTop: '1px solid rgba(255,255,255,0.08)', borderRadius: '32px 32px 0 0',
+          background: 'var(--ab-111111)', borderTop: '1px solid rgba(var(--ab-ink),0.08)', borderRadius: '32px 32px 0 0',
           // Drag offsets are written straight to el.style by the rAF handler; the
           // declared transform only encodes open/closed.
           transform: vis ? 'translateY(0)' : 'translateY(100%)',
@@ -680,14 +680,14 @@ function BottomSheet({ flight: selectedFlight, mode, onClose, tz, locale, clockM
             if (raf.current) { cancelAnimationFrame(raf.current); raf.current = 0; }
             settleBack();
           }}
-          style={{ position: 'sticky', top: 0, zIndex: 2, background: '#111111',
+          style={{ position: 'sticky', top: 0, zIndex: 2, background: 'var(--ab-111111)',
             padding: '8px 16px', touchAction: 'none', borderRadius: '32px 32px 0 0' }}
         >
           <button type="button" onClick={onClose} aria-label={tNav('close')}
             style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between',
               width: '100%', minHeight: 44, padding: '0 8px', color: C.text,
               background: 'none', border: 'none', cursor: 'pointer', fontSize: 14 }}>
-            <span aria-hidden="true" style={{ width: 48, height: 5, borderRadius: 3, background: 'rgba(255,255,255,0.22)' }} />
+            <span aria-hidden="true" style={{ width: 48, height: 5, borderRadius: 3, background: 'rgba(var(--ab-ink),0.22)' }} />
             <span>{tNav('close')} <span aria-hidden="true" style={{ fontSize: 22, marginInlineStart: 8 }}>×</span></span>
           </button>
         </div>
@@ -1138,11 +1138,11 @@ export function FlightBoard({ airport, locale, defaultMode = 'departures', displ
           <button className="press" onClick={() => { track(GOALS.boardMore, { shown: INITIAL, total: visible.length }); setShowAll(true); }} style={{
             width: '100%', height: 56, marginTop: 4, marginBottom: 8,
             display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 8,
-            border: '1px solid rgba(255,255,255,0.08)', background: 'rgba(255,255,255,0.02)',
+            border: '1px solid rgba(var(--ab-ink),0.08)', background: 'rgba(var(--ab-ink),0.02)',
             borderRadius: 18, color: C.text, fontSize: 15, fontWeight: 600, cursor: 'pointer', WebkitTapHighlightColor: 'transparent',
           }}>
             {mode === 'departures' ? t('more_departures') : t('more_arrivals')}
-            <svg width="13" height="13" viewBox="0 0 13 13" fill="none"><path d="M3 5L6.5 8.5L10 5" stroke="#8A8A8A" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" /></svg>
+            <svg width="13" height="13" viewBox="0 0 13 13" fill="none"><path d="M3 5L6.5 8.5L10 5" stroke="var(--ab-8a8a8a)" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" /></svg>
           </button>
   ) : null;
   useEffect(() => { setShowAll(false); }, [mode, filter, trimSearch]);
@@ -1237,7 +1237,7 @@ export function FlightBoard({ airport, locale, defaultMode = 'departures', displ
               onBlur={() => { if (!search) setSearchOpen(false); }}
               style={{
                 width: '100%', height: 46, padding: '0 44px', fontSize: 16,
-                border: `1px solid ${search ? '#333333' : C.border}`, borderRadius: 13,
+                border: `1px solid ${search ? 'var(--ab-333333)' : C.border}`, borderRadius: 13,
                 outline: 'none', background: C.surface, color: C.text, WebkitAppearance: 'none',
               }}
             />
@@ -1247,7 +1247,7 @@ export function FlightBoard({ airport, locale, defaultMode = 'departures', displ
               onClick={() => { setSearch(''); setSearchOpen(false); }}
               style={{
                 position: 'absolute', insetInlineEnd: 9, top: '50%', transform: 'translateY(-50%)',
-                background: '#2C2C2E', border: 'none', borderRadius: '50%', width: 28, height: 28,
+                background: 'var(--ab-2c2c2e)', border: 'none', borderRadius: '50%', width: 28, height: 28,
                 cursor: 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'center', padding: 0,
               }}
             >
@@ -1263,7 +1263,7 @@ export function FlightBoard({ airport, locale, defaultMode = 'departures', displ
                   <button key={m} type="button" aria-pressed={active} className="press" onClick={() => { haptic(); track(GOALS.boardMode, { mode: m }); setMode(m); setFilter('all'); }} style={{
                     flex: 1, padding: '10px 0', minHeight: 40, fontSize: 14, fontWeight: 600,
                     border: 'none', borderRadius: 10, cursor: 'pointer',
-                    background: active ? '#1C1C1E' : 'transparent', color: active ? C.text : C.secondary,
+                    background: active ? 'var(--ab-1c1c1e)' : 'transparent', color: active ? C.text : C.secondary,
                     transition: 'all 0.18s ease', letterSpacing: '-0.01em',
                     display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 6,
                   }}>
@@ -1298,7 +1298,7 @@ export function FlightBoard({ airport, locale, defaultMode = 'departures', displ
             <button key={key} type="button" aria-pressed={active} className="press" onClick={() => { haptic(); track(GOALS.boardFilter, { filter: key }); setFilter(key); }} style={{
               padding: '7px 13px', minHeight: 44, fontSize: 13, fontWeight: active ? 600 : 400,
               border: active ? 'none' : `1px solid ${C.border}`, borderRadius: 999, cursor: 'pointer',
-              background: active ? C.text : 'transparent', color: active ? '#000000' : C.secondary,
+              background: active ? C.text : 'transparent', color: active ? 'var(--ab-000000)' : C.secondary,
               whiteSpace: 'nowrap', flexShrink: 0, transition: 'all 0.15s ease',
             }}>
               {t(`filter_${key}`)}
@@ -1348,7 +1348,7 @@ export function FlightBoard({ airport, locale, defaultMode = 'departures', displ
             style={{
               position: 'sticky', top: 8, zIndex: 5, display: 'flex', width: '100%',
               alignItems: 'center', gap: 12, padding: '12px 16px', marginBottom: 10,
-              borderRadius: 14, border: `1.5px solid ${C.blue}`, background: '#0B1220',
+              borderRadius: 14, border: `1.5px solid ${C.blue}`, background: 'var(--ab-0b1220)',
               color: 'inherit', textAlign: 'start', cursor: 'pointer',
               boxShadow: '0 6px 24px rgba(0,0,0,0.5)',
             }}
@@ -1373,7 +1373,7 @@ export function FlightBoard({ airport, locale, defaultMode = 'departures', displ
           <div style={{
             maxWidth: 960, margin: '0 auto 10px', padding: '11px 14px',
             borderRadius: 12, background: 'rgba(255,159,10,.10)',
-            border: `1px solid ${C.orange}44`, color: '#E4E4E7',
+            border: `1px solid color-mix(in srgb, ${C.orange} 26.666666666666668%, transparent)`, color: 'var(--ab-e4e4e7)',
             fontSize: 14, lineHeight: 1.45,
           }}>
             {t(mode === 'arrivals' ? 'board_all_past_arr' : 'board_all_past_dep', {
@@ -1478,7 +1478,7 @@ export function FlightBoard({ airport, locale, defaultMode = 'departures', displ
                       строке, где сверху лежит групповая opacity 0.7, — 2.50:1. Для сравнения город и
                       время в той же строке идут 19.65:1. Номер рейса — ровно то, по чему человек ищет
                       свою строку, и он был самым тусклым текстом на экране. Стало 8.47:1 и 4.68:1. */}
-                  <div style={{ fontSize: 12, color: 'rgba(255,255,255,0.65)', marginTop: 5, fontVariantNumeric: 'tabular-nums', fontWeight: 500 }}>{f.flight}</div>
+                  <div style={{ fontSize: 12, color: 'rgba(var(--ab-ink),0.65)', marginTop: 5, fontVariantNumeric: 'tabular-nums', fontWeight: 500 }}>{f.flight}</div>
                 </div>
 
                 {/* Center: destination — the primary datum on a board, so it gets the room it
@@ -1533,7 +1533,7 @@ export function FlightBoard({ airport, locale, defaultMode = 'departures', displ
                     </div>
                   </div>
                   <svg data-flip width="8" height="14" viewBox="0 0 8 14" fill="none" aria-hidden="true" className="route-arrow" style={{ flexShrink: 0 }}>
-                    <path d="M1 1L7 7L1 13" stroke="rgba(255,255,255,0.22)" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" />
+                    <path d="M1 1L7 7L1 13" stroke="rgba(var(--ab-ink),0.22)" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" />
                   </svg>
                 </div>
               </div>

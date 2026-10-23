@@ -26,7 +26,7 @@ function highlight(text: string, query: string) {
   return (
     <>
       {text.slice(0, idx)}
-      <span style={{ color: '#FFFFFF', fontWeight: 700 }}>{text.slice(idx, end)}</span>
+      <span style={{ color: 'var(--ab-ffffff)', fontWeight: 700 }}>{text.slice(idx, end)}</span>
       {text.slice(end)}
     </>
   );
@@ -160,7 +160,7 @@ export function AirportSearch({ locale, placeholder }: { locale: string; placeho
         padding: '8px 14px 4px',
         fontSize: 10, fontWeight: 700,
         letterSpacing: '0.1em',
-        color: '#8A8A8A',
+        color: 'var(--ab-8a8a8a)',
         textTransform: 'uppercase',
       }}>
         {label}
@@ -188,9 +188,9 @@ export function AirportSearch({ locale, placeholder }: { locale: string; placeho
               gap: 12,
               padding: '10px 14px',
               border: 'none',
-              borderBottom: i < items.length - 1 ? '1px solid #161616' : 'none',
-              background: isActive ? '#1C1C1E' : 'transparent',
-              color: '#FFFFFF',
+              borderBottom: i < items.length - 1 ? '1px solid var(--ab-161616)' : 'none',
+              background: isActive ? 'var(--ab-1c1c1e)' : 'transparent',
+              color: 'var(--ab-ffffff)',
               cursor: 'pointer',
               textAlign: 'start',
               transition: 'background 0.1s',
@@ -202,22 +202,22 @@ export function AirportSearch({ locale, placeholder }: { locale: string; placeho
             </span>
 
             {/* IATA */}
-            <span style={{ fontSize: 13, fontWeight: 800, color: '#0A84FF', flexShrink: 0, width: 34, letterSpacing: '-0.02em' }}>
+            <span style={{ fontSize: 13, fontWeight: 800, color: 'var(--ab-0a84ff)', flexShrink: 0, width: 34, letterSpacing: '-0.02em' }}>
               {highlight(a.iata, query)}
             </span>
 
             {/* City + name */}
             <span style={{ flex: 1, minWidth: 0 }}>
-              <span style={{ fontSize: 14, color: '#E4E4E7', display: 'block', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>
+              <span style={{ fontSize: 14, color: 'var(--ab-e4e4e7)', display: 'block', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>
                 {highlight(a.city, query)}
               </span>
-              <span style={{ fontSize: 11, color: '#6A6A6A', display: 'block', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>
+              <span style={{ fontSize: 11, color: 'var(--ab-6a6a6a)', display: 'block', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>
                 {highlight(a.name, query)}
               </span>
             </span>
 
             {/* Country */}
-            <span style={{ fontSize: 11, color: '#8A8A8A', flexShrink: 0, maxWidth: 80, textAlign: 'end', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>
+            <span style={{ fontSize: 11, color: 'var(--ab-8a8a8a)', flexShrink: 0, maxWidth: 80, textAlign: 'end', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>
               {a.country}
             </span>
           </button>
@@ -234,8 +234,8 @@ export function AirportSearch({ locale, placeholder }: { locale: string; placeho
           width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"
           style={{ position: 'absolute', insetInlineStart: 14, top: '50%', transform: 'translateY(-50%)', pointerEvents: 'none' }}
         >
-          <circle cx="6.5" cy="6.5" r="4" stroke={focused ? '#8A8A8A' : '#4A4A4A'} strokeWidth="1.5"/>
-          <path d="M10 10L13.5 13.5" stroke={focused ? '#8A8A8A' : '#4A4A4A'} strokeWidth="1.5" strokeLinecap="round"/>
+          <circle cx="6.5" cy="6.5" r="4" stroke={focused ? 'var(--ab-8a8a8a)' : 'var(--ab-4a4a4a)'} strokeWidth="1.5"/>
+          <path d="M10 10L13.5 13.5" stroke={focused ? 'var(--ab-8a8a8a)' : 'var(--ab-4a4a4a)'} strokeWidth="1.5" strokeLinecap="round"/>
         </svg>
 
         {/* Договор роли combobox выполняется целиком: aria-controls указывает на список,
@@ -263,11 +263,11 @@ export function AirportSearch({ locale, placeholder }: { locale: string; placeho
             width: '100%',
             padding: '14px 40px 14px 40px',
             fontSize: 16,
-            border: `1px solid ${focused ? '#333333' : '#1A1A1A'}`,
+            border: `1px solid ${focused ? 'var(--ab-333333)' : 'var(--ab-1a1a1a)'}`,
             borderRadius: 16,
             outline: 'none',
-            background: '#0B0B0B',
-            color: '#FFFFFF',
+            background: 'var(--ab-0b0b0b)',
+            color: 'var(--ab-ffffff)',
             WebkitAppearance: 'none',
             transition: 'border-color 0.15s',
           }}
@@ -288,8 +288,8 @@ export function AirportSearch({ locale, placeholder }: { locale: string; placeho
               display: 'flex', alignItems: 'center', justifyContent: 'center', padding: 0,
             }}
           >
-            <svg width="28" height="28" viewBox="0 0 10 10" fill="none" aria-hidden="true" style={{ padding: 9, background: '#2C2C2E', borderRadius: '50%' }}>
-              <path d="M1 1L9 9M9 1L1 9" stroke="#8A8A8A" strokeWidth="1.5" strokeLinecap="round"/>
+            <svg width="28" height="28" viewBox="0 0 10 10" fill="none" aria-hidden="true" style={{ padding: 9, background: 'var(--ab-2c2c2e)', borderRadius: '50%' }}>
+              <path d="M1 1L9 9M9 1L1 9" stroke="var(--ab-8a8a8a)" strokeWidth="1.5" strokeLinecap="round"/>
             </svg>
           </button>
         )}
@@ -305,8 +305,8 @@ export function AirportSearch({ locale, placeholder }: { locale: string; placeho
           position: 'absolute',
           top: 'calc(100% + 6px)',
           left: 0, right: 0,
-          background: '#111111',
-          border: '1px solid #1E1E1E',
+          background: 'var(--ab-111111)',
+          border: '1px solid var(--ab-1e1e1e)',
           borderRadius: 16,
           overflow: 'hidden',
           overflowY: 'auto',

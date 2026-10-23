@@ -105,9 +105,9 @@ export function CookieNotice({ locale }: { locale: Locale }) {
 
   const btn = (primary: boolean) => ({
     flexShrink: 0,
-    background: primary ? '#0A84FF' : 'transparent',
-    color: primary ? '#FFFFFF' : '#C7C7CC',
-    border: primary ? 'none' : '1px solid #3A3A3C',
+    background: primary ? 'var(--ab-0a84ff)' : 'transparent',
+    color: primary ? 'var(--ab-ffffff)' : 'var(--ab-c7c7cc)',
+    border: primary ? 'none' : '1px solid var(--ab-3a3a3c)',
     borderRadius: 8,
     padding: '8px 16px',
     fontSize: 13,
@@ -134,13 +134,13 @@ export function CookieNotice({ locale }: { locale: Locale }) {
         style={{
           pointerEvents: 'auto', width: '100%', maxWidth: 640,
           display: 'flex', alignItems: 'center', gap: 12, flexWrap: 'wrap',
-          background: '#111111', border: '1px solid #2A2A2A', borderRadius: 14,
+          background: 'var(--ab-111111)', border: '1px solid var(--ab-2a2a2a)', borderRadius: 14,
           padding: '11px 14px', boxShadow: '0 12px 40px rgba(0,0,0,0.55)',
         }}
       >
-        <p style={{ flex: 1, minWidth: 200, margin: 0, fontSize: 13, lineHeight: 1.5, color: '#C7C7CC' }}>
+        <p style={{ flex: 1, minWidth: 200, margin: 0, fontSize: 13, lineHeight: 1.5, color: 'var(--ab-c7c7cc)' }}>
           {t('cookie_msg')}{' '}
-          <Link href={`/${locale}/privacy`} style={{ color: '#0A84FF', textDecoration: 'none' }}>
+          <Link href={`/${locale}/privacy`} style={{ color: 'var(--ab-0a84ff)', textDecoration: 'none' }}>
             {t('privacy')}
           </Link>
         </p>

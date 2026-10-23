@@ -13,7 +13,9 @@
     "language": "Langue",
     "close": "Fermer",
     "aria_breadcrumb": "Fil d’Ariane",
-    "aria_footer": "Pied de page"
+    "aria_footer": "Pied de page",
+    "theme_light": "Clair",
+    "theme_dark": "Sombre"
   },
   "board": {
     "flight": "Vol",

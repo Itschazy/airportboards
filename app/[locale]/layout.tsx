@@ -22,7 +22,7 @@ export const viewport: Viewport = {
   initialScale: 1,
   viewportFit: 'cover',
   // Blend the mobile browser chrome into the site's dark background.
-  themeColor: '#050505',
+  themeColor: [{ media: '(prefers-color-scheme: dark)', color: '#050505' }, { media: '(prefers-color-scheme: light)', color: '#ffffff' }],
 };
 
 const OG_LOCALE: Record<string, string> = {
@@ -75,7 +75,8 @@ export default async function LocaleLayout({
   const messages = await getMessages({ locale });
   const dir = rtlLocales.includes(locale as Locale) ? 'rtl' : 'ltr';
   return (
-    <html lang={locale} dir={dir} className="h-full antialiased">
+    <html lang={locale} dir={dir} className="h-full antialiased" suppressHydrationWarning>
+      <head><script dangerouslySetInnerHTML={{__html: `try{var t=localStorage.getItem('ab_theme');if(t==='light'||t==='dark')document.documentElement.dataset.theme=t}catch(e){}`}} /></head>
       <body className="min-h-full flex flex-col">
         {/* React hoists resource links into <head>. Browsers honour only a handful of
             preconnects, so they go to the origins that actually run on every locale: the

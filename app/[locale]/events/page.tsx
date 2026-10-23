@@ -57,23 +57,23 @@ export default async function EventsHubPage({ params }: Props) {
     })),
   };
 
-  const h2s = { margin: '0 0 14px', fontSize: 13, fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.12em', color: '#8A8A8A' } as const;
+  const h2s = { margin: '0 0 14px', fontSize: 13, fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.12em', color: 'var(--ab-8a8a8a)' } as const;
 
   const Row = ({ e, dim }: { e: EventData; dim?: boolean }) => {
     const c = e.locales[locale] || e.locales.en;
     return (
       <Link href={`/${locale}/event/${e.meta.slug}`} className="frow" style={{ textDecoration: 'none', color: 'inherit', opacity: dim ? 0.65 : 1 }}>
-        <div style={{ width: 4, background: dim ? '#3A3A3C' : '#0A84FF', flexShrink: 0 }} />
+        <div style={{ width: 4, background: dim ? 'var(--ab-3a3a3c)' : 'var(--ab-0a84ff)', flexShrink: 0 }} />
         <div style={{ display: 'flex', alignItems: 'center', flex: 1, padding: '15px 16px', gap: 13, minWidth: 0 }}>
           <span style={{ fontSize: 22, flexShrink: 0 }} aria-hidden="true">{TYPE_EMOJI[e.meta.type] || '📍'}</span>
           <span style={{ flex: 1, minWidth: 0 }}>
-            <span style={{ display: 'block', fontSize: 15, fontWeight: 600, color: '#E4E4E7', lineHeight: 1.3 }}>{c?.h1 || e.meta.name}</span>
-            <span style={{ display: 'block', fontSize: 12, color: '#8A8A8A', marginTop: 3 }}>
+            <span style={{ display: 'block', fontSize: 15, fontWeight: 600, color: 'var(--ab-e4e4e7)', lineHeight: 1.3 }}>{c?.h1 || e.meta.name}</span>
+            <span style={{ display: 'block', fontSize: 12, color: 'var(--ab-8a8a8a)', marginTop: 3 }}>
               {dateFmt.format(new Date(e.meta.startDate))} · {e.meta.venueCity} · {e.meta.airports.map(a => a.iata).join(' · ')}
             </span>
           </span>
           <svg data-flip width="8" height="14" viewBox="0 0 8 14" fill="none" aria-hidden="true" style={{ flexShrink: 0 }}>
-            <path d="M1 1L7 7L1 13" stroke="rgba(255,255,255,0.3)" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" />
+            <path d="M1 1L7 7L1 13" stroke="rgba(var(--ab-ink),0.3)" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" />
           </svg>
         </div>
       </Link>
@@ -84,13 +84,13 @@ export default async function EventsHubPage({ params }: Props) {
     <div style={{ maxWidth: 760, margin: '0 auto', padding: '36px 18px 64px' }}>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(itemList) }} />
-      <div style={{ fontSize: 13, color: '#8A8A8A', marginBottom: 10 }}>
-        <Link href={`/${locale}`} style={{ color: '#6A6A6A', textDecoration: 'none', display: 'inline-block', minHeight: 24 }}>airportsboard</Link>
+      <div style={{ fontSize: 13, color: 'var(--ab-8a8a8a)', marginBottom: 10 }}>
+        <Link href={`/${locale}`} style={{ color: 'var(--ab-6a6a6a)', textDecoration: 'none', display: 'inline-block', minHeight: 24 }}>airportsboard</Link>
       </div>
-      <h1 style={{ fontSize: 'clamp(28px, 7vw, 40px)', fontWeight: 800, letterSpacing: '-0.03em', color: '#FFFFFF', margin: '0 0 6px' }}>
+      <h1 style={{ fontSize: 'clamp(28px, 7vw, 40px)', fontWeight: 800, letterSpacing: '-0.03em', color: 'var(--ab-ffffff)', margin: '0 0 6px' }}>
         {tE('hub_title')}
       </h1>
-      <p style={{ fontSize: 15, color: '#8A8A8A', margin: '0 0 30px', lineHeight: 1.5 }}>{tE('hub_desc')}</p>
+      <p style={{ fontSize: 15, color: 'var(--ab-8a8a8a)', margin: '0 0 30px', lineHeight: 1.5 }}>{tE('hub_desc')}</p>
 
       {upcoming.length > 0 && (
         <section style={{ marginBottom: 34 }}>

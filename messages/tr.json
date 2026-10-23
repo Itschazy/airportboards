@@ -13,7 +13,9 @@
     "language": "Dil",
     "close": "Kapat",
     "aria_breadcrumb": "Gezinme yolu",
-    "aria_footer": "Alt bilgi"
+    "aria_footer": "Alt bilgi",
+    "theme_light": "Açık",
+    "theme_dark": "Koyu"
   },
   "board": {
     "flight": "Uçuş",

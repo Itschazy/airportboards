@@ -8,8 +8,8 @@ html, body {
 }
 
 body {
-  background: #050505;
-  color: #FFFFFF;
+  background: var(--ab-050505);
+  color: var(--ab-ffffff);
   font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'SF Pro Text', 'Segoe UI', system-ui, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -47,8 +47,8 @@ input::-webkit-search-cancel-button { display: none; }
    only — compositor-friendly, no layout/paint work. */
 .frow {
   display: flex;
-  background: rgba(255,255,255,0.025);
-  border: 1px solid rgba(255,255,255,0.08);
+  background: rgba(var(--ab-ink),0.025);
+  border: 1px solid rgba(var(--ab-ink),0.08);
   border-radius: 22px;
   margin-bottom: 12px;
   overflow: hidden;
@@ -57,7 +57,7 @@ input::-webkit-search-cancel-button { display: none; }
   transition: background 0.16s ease, border-color 0.16s ease, transform 0.12s ease;
 }
 @media (hover: hover) {
-  .frow:hover { background: rgba(255,255,255,0.05); border-color: rgba(255,255,255,0.14); }
+  .frow:hover { background: rgba(var(--ab-ink),0.05); border-color: rgba(var(--ab-ink),0.14); }
 }
 .frow:active { transform: scale(0.988); }
 
@@ -110,7 +110,7 @@ input::-webkit-search-cancel-button { display: none; }
 
 /* Visible keyboard focus (WCAG 2.4.7). :focus-visible so mouse users see nothing. */
 :focus-visible {
-  outline: 2px solid #0A84FF;
+  outline: 2px solid var(--ab-0a84ff);
   outline-offset: 2px;
   border-radius: 4px;
 }
@@ -167,9 +167,24 @@ input::-webkit-search-cancel-button { display: none; }
 /* Справку можно открыть и закрыть без JS; стрелка отражает нативное состояние. */
 .airport-disclosure > summary { list-style: none; }
 .airport-disclosure > summary::-webkit-details-marker { display: none; }
-.airport-disclosure > summary .disclosure-arrow { color: #8A8A8A; flex-shrink: 0; }
+.airport-disclosure > summary .disclosure-arrow { color: var(--ab-8a8a8a); flex-shrink: 0; }
 .airport-disclosure[open] > summary .disclosure-arrow { transform: rotate(180deg); }
 
 .airport-disclosure > summary .disclosure-less { display: none; }
 .airport-disclosure[open] > summary .disclosure-more { display: none; }
 .airport-disclosure[open] > summary .disclosure-less { display: inline; }
+
+/* Тёмные значения точно повторяют прежнюю палитру. Только цвета зависят от темы;
+   системный выбор работает без JS, ручной data-theme имеет приоритет. Нельзя применять
+   filter к странице: он меняет цвета флагов и создаёт новый containing block карточки. */
+:root{--ab-050505:#050505;--ab-ffffff:#FFFFFF;--ab-111111:#111111;--ab-1a1a1a:#1A1A1A;--ab-1c1c1e:#1C1C1E;--ab-3a3a3c:#3A3A3C;--ab-8a8a8a:#8A8A8A;--ab-a1a1a1:#A1A1A1;--ab-e4e4e7:#E4E4E7;--ab-0b1220:#0B1220;--ab-30d158:#30D158;--ab-0a84ff:#0A84FF;--ab-ff9f0a:#FF9F0A;--ab-ff453a:#FF453A;--ab-636366:#636366;--ab-ink:255,255,255;color-scheme:dark;}
+@media(prefers-color-scheme:light){:root:not([data-theme="dark"]){--ab-050505:#ffffff;--ab-ffffff:#171717;--ab-111111:#f5f5f5;--ab-1a1a1a:#dedede;--ab-1c1c1e:#ededed;--ab-3a3a3c:#b8b8ba;--ab-8a8a8a:#595959;--ab-a1a1a1:#555555;--ab-e4e4e7:#242426;--ab-0b1220:#edf4ff;--ab-30d158:#147a32;--ab-0a84ff:#0664c7;--ab-ff9f0a:#955000;--ab-ff453a:#b72b23;--ab-636366:#59595c;--ab-ink:23,23,23;color-scheme:light;}}
+:root[data-theme="light"]{--ab-050505:#ffffff;--ab-ffffff:#171717;--ab-111111:#f5f5f5;--ab-1a1a1a:#dedede;--ab-1c1c1e:#ededed;--ab-3a3a3c:#b8b8ba;--ab-8a8a8a:#595959;--ab-a1a1a1:#555555;--ab-e4e4e7:#242426;--ab-0b1220:#edf4ff;--ab-30d158:#147a32;--ab-0a84ff:#0664c7;--ab-ff9f0a:#955000;--ab-ff453a:#b72b23;--ab-636366:#59595c;--ab-ink:23,23,23;color-scheme:light;}
+.theme-moon{display:none}
+:root[data-theme="light"] .theme-sun{display:none}
+:root[data-theme="light"] .theme-moon{display:block}
+@media(prefers-color-scheme:light){:root:not([data-theme="dark"]) .theme-sun{display:none}:root:not([data-theme="dark"]) .theme-moon{display:block}}
+
+:root{--ab-0b0b0b:#0B0B0B;--ab-6a6a6a:#6A6A6A;--ab-b4b4b4:#B4B4B4;--ab-48484a:#48484A;--ab-34c759:#34C759;--ab-c7c7cc:#C7C7CC;--ab-4a4a4a:#4A4A4A;--ab-e4e4e4:#E4E4E4;--ab-bfbfc4:#BFBFC4;--ab-333333:#333333;--ab-2c2c2e:#2C2C2E;--ab-adadb2:#ADADB2;--ab-c4c4c4:#C4C4C4;--ab-000000:#000000;--ab-5a5a5a:#5A5A5A;--ab-d0d0d4:#D0D0D4;--ab-9a9aa0:#9A9AA0;--ab-6a6a6e:#6A6A6E;--ab-2a2a2a:#2A2A2A;--ab-151515:#151515;--ab-c7c7c7:#C7C7C7;--ab-161616:#161616;--ab-1e1e1e:#1E1E1E;--ab-a1a1aa:#A1A1AA;}
+@media(prefers-color-scheme:light){:root:not([data-theme="dark"]){--ab-0b0b0b:#f5f5f5;--ab-6a6a6a:#666666;--ab-b4b4b4:#494949;--ab-48484a:#777777;--ab-34c759:#147a32;--ab-c7c7cc:#444448;--ab-4a4a4a:#666666;--ab-e4e4e4:#242424;--ab-bfbfc4:#46464a;--ab-333333:#cccccc;--ab-2c2c2e:#dddddf;--ab-adadb2:#4c4c50;--ab-c4c4c4:#454545;--ab-000000:#ffffff;--ab-5a5a5a:#666666;--ab-d0d0d4:#353539;--ab-9a9aa0:#505056;--ab-6a6a6e:#555559;--ab-2a2a2a:#dddddd;--ab-151515:#f1f1f1;--ab-c7c7c7:#444444;--ab-161616:#f0f0f0;--ab-1e1e1e:#eaeaea;--ab-a1a1aa:#50505a;}}
+:root[data-theme="light"]{--ab-0b0b0b:#f5f5f5;--ab-6a6a6a:#666666;--ab-b4b4b4:#494949;--ab-48484a:#777777;--ab-34c759:#147a32;--ab-c7c7cc:#444448;--ab-4a4a4a:#666666;--ab-e4e4e4:#242424;--ab-bfbfc4:#46464a;--ab-333333:#cccccc;--ab-2c2c2e:#dddddf;--ab-adadb2:#4c4c50;--ab-c4c4c4:#454545;--ab-000000:#ffffff;--ab-5a5a5a:#666666;--ab-d0d0d4:#353539;--ab-9a9aa0:#505056;--ab-6a6a6e:#555559;--ab-2a2a2a:#dddddd;--ab-151515:#f1f1f1;--ab-c7c7c7:#444444;--ab-161616:#f0f0f0;--ab-1e1e1e:#eaeaea;--ab-a1a1aa:#50505a;}

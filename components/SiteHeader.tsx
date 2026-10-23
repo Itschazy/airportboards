@@ -1,5 +1,6 @@
 'use client';
 import Link from 'next/link';
+import { ThemeSwitcher } from './ThemeSwitcher';
 import { usePathname } from 'next/navigation';
 import { useState, useRef, useEffect } from 'react';
 import { useTranslations } from 'next-intl';
@@ -32,8 +33,8 @@ export function SiteHeader({ locale }: { locale: Locale }) {
   return (
     <header style={{
       position: 'sticky', top: 0, zIndex: 50,
-      background: '#050505',
-      borderBottom: '1px solid #1A1A1A',
+      background: 'var(--ab-050505)',
+      borderBottom: '1px solid var(--ab-1a1a1a)',
     }}>
       <div style={{
         maxWidth: 960, margin: '0 auto',
@@ -44,7 +45,7 @@ export function SiteHeader({ locale }: { locale: Locale }) {
             the 48px bar moves the target from 22.5px to 48px and the wordmark not at all. */}
         <Link href={`/${locale}`} style={{
           fontSize: 14, fontWeight: 700,
-          color: '#FFFFFF', letterSpacing: '-0.01em',
+          color: 'var(--ab-ffffff)', letterSpacing: '-0.01em',
           display: 'flex', alignItems: 'center', gap: 6, alignSelf: 'stretch',
         }}>
           <span style={{ fontSize: 15 }} aria-hidden="true">✈</span>
@@ -53,6 +54,7 @@ export function SiteHeader({ locale }: { locale: Locale }) {
 
         <div style={{ flex: 1 }} />
 
+        <ThemeSwitcher />
         {/* Globe language selector */}
         <div ref={ref} style={{ position: 'relative' }}>
           <button
@@ -67,9 +69,9 @@ export function SiteHeader({ locale }: { locale: Locale }) {
           // доступны даже на телефоне в альбомной ориентации.
           padding: '11px 12px', minHeight: 44,
               borderRadius: 8,
-              border: `1px solid ${open ? '#3A3A3C' : '#1A1A1A'}`,
-              background: open ? '#1C1C1E' : 'transparent',
-              color: '#8A8A8A',
+              border: `1px solid ${open ? 'var(--ab-3a3a3c)' : 'var(--ab-1a1a1a)'}`,
+              background: open ? 'var(--ab-1c1c1e)' : 'transparent',
+              color: 'var(--ab-8a8a8a)',
               fontSize: 12, fontWeight: 600,
               cursor: 'pointer', letterSpacing: '0.02em',
             }}
@@ -87,8 +89,8 @@ export function SiteHeader({ locale }: { locale: Locale }) {
             <div role="menu" aria-hidden={!open} style={{
               display: open ? 'block' : 'none',
               position: 'absolute', top: 'calc(100% + 6px)', insetInlineEnd: 0,
-              background: '#111111',
-              border: '1px solid #1A1A1A',
+              background: 'var(--ab-111111)',
+              border: '1px solid var(--ab-1a1a1a)',
               borderRadius: 12,
               // На экране 667×375 меню заканчивалось на539px: нижние языки
               // были недоступны. Скроллер сохраняет размер пунктов для пальца.
@@ -106,15 +108,15 @@ export function SiteHeader({ locale }: { locale: Locale }) {
                     display: 'flex', alignItems: 'center', justifyContent: 'space-between',
                     padding: '10px 14px', minHeight: 44,
                     fontSize: 13,
-                    borderBottom: i < locales.length - 1 ? '1px solid #1A1A1A' : 'none',
-                    color: loc === locale ? '#FFFFFF' : '#8A8A8A',
+                    borderBottom: i < locales.length - 1 ? '1px solid var(--ab-1a1a1a)' : 'none',
+                    color: loc === locale ? 'var(--ab-ffffff)' : 'var(--ab-8a8a8a)',
                     fontWeight: loc === locale ? 600 : 400,
                     background: loc === locale ? 'rgba(10,132,255,0.08)' : 'transparent',
                   }}
                 >
                   <span>{localeNames[loc]}</span>
                   {loc === locale && (
-                    <span style={{ color: '#0A84FF', fontSize: 13 }}>✓</span>
+                    <span style={{ color: 'var(--ab-0a84ff)', fontSize: 13 }}>✓</span>
                   )}
                 </Link>
               ))}
