@@ -2,7 +2,7 @@ import { getTranslations , setRequestLocale } from 'next-intl/server';
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import {
-  POPULAR_AIRPORTS, POPULAR_CITIES, getAirport, getCountries, getAllIataCodes, slugify,
+  POPULAR_AIRPORTS, POPULAR_CITIES, getAirport, getCountries, slugify,
 } from '@/lib/airports';
 import { numLocale, locales } from '@/lib/i18n';
 import { getCityName, getCountryName } from '@/lib/places';
@@ -21,7 +21,6 @@ const worldCounts = () => {
 };
 import { StandaloneResume } from '@/components/StandaloneResume';
 import { PopularList } from '@/components/PopularList';
-import { RecentlyViewed } from '@/components/RecentlyViewed';
 import { assertLocale } from '@/lib/locale-guard';
 
 type Props = { params: Promise<{ locale: string }> };
@@ -61,7 +60,6 @@ export default async function HomePage({ params }: Props) {
   setRequestLocale(assertLocale(locale));
   const t = await getTranslations({ locale, namespace: 'home' });
   const tNav = await getTranslations({ locale, namespace: 'nav' });
-  const tUi = await getTranslations({ locale, namespace: 'ui' });
 
   // Localise the labels. The front page was the only surface in the project that did not:
   // every card read "New York", "London", "Paris" on all twelve locales, directly under a
@@ -78,7 +76,6 @@ export default async function HomePage({ params }: Props) {
   }).filter(Boolean) as { iata: string; city: string; name: string }[];
 
   const countries = getCountries().slice(0, 16);
-  const totalAirports = getAllIataCodes().length;
   const totalCountries = getCountries().length;
 
   const depShort = t('departures_short');
@@ -97,31 +94,35 @@ export default async function HomePage({ params }: Props) {
   ];
 
   return (
-    <div style={{ width: '100%', maxWidth: 720, margin: '0 auto', padding: '40px 24px 64px', overflowX: 'clip' }}>
+    <div className="home-search-page" data-home-page>
       {jsonLd.map((s, i) => (
         <script key={i} type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(s) }} />
       ))}
 
-      {/* HERO */}
-      <h1 style={{
-        fontSize: 'clamp(48px, 13vw, 76px)', fontWeight: 800, letterSpacing: '-0.05em',
-        lineHeight: 0.95, color: 'var(--ab-ffffff)', margin: 0, maxWidth: '100%',
-      }}>
-        {t('hero1')}<br />{t('hero2')}
-      </h1>
-      <p style={{ fontSize: 16, color: 'var(--ab-8a8a8a)', marginTop: 18, lineHeight: 1.5, maxWidth: '100%', overflowWrap: 'break-word' }}>
-        {t('subline', worldCounts())}
-      </p>
-
-      {/* SEARCH */}
-      <div style={{ marginTop: 28, width: '100%' }}>
+      {/* По просьбе владельца главная стала поисковым входом: бренд, короткий
+          смысловой H1 и поле. Системный шрифт и палитра сайта сохранены.
+          Большой каталог ниже раскрывается без JS; его ссылки не удалены. */}
+      <div className="home-search-heading">
+        <div className="home-wordmark" aria-hidden="true">airportsboard</div>
+        <h1>{t('hero1')} {t('hero2')}</h1>
+      </div>
+      <div className="home-search-input">
         <AirportSearch locale={locale} placeholder={tNav('search_placeholder')} />
         <StandaloneResume locale={locale} />
       </div>
 
-      {/* Возвращающемуся посетителю нужен свой аэропорт рядом с поиском.
-          Каталог и обычные индексируемые ссылки ниже остаются доступны всем. */}
-      <RecentlyViewed locale={locale} title={t('sec_recent')} />
+      {/* Вся справка находится ПОСЛЕ поиска, в одном нативном аккордеоне.
+          Текст, метрики и каталоги входят в исходный серверный HTML и одинаковы
+          для читателей и роботов. Не используем lazy-render или display:none
+          без доступной кнопки. Недавние аэропорты уже есть при фокусе поиска. */}
+      <details className="airport-disclosure home-reference" data-home-intro>
+        <summary>
+          <span className="disclosure-more">{t('read_more')}</span><span className="disclosure-less">{t('read_less')}</span>
+          <span aria-hidden="true" className="disclosure-arrow">⌄</span>
+        </summary>
+        <p style={{ fontSize: 16, color: 'var(--ab-8a8a8a)', marginTop: 18, lineHeight: 1.5, overflowWrap: 'break-word' }}>
+          {t('subline', worldCounts())}
+        </p>
 
       {/* TRUST METRICS */}
       <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, minmax(0, 1fr))', gap: 12, marginTop: 26 }}>
@@ -216,6 +217,7 @@ export default async function HomePage({ params }: Props) {
         </div>
       </section>
 
+      </details>
     </div>
   );
 }

@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { SiteFooterFrame } from './SiteFooterFrame';
 import { getTranslations } from 'next-intl/server';
 import { getCountries, getAirportsByCountry } from '@/lib/airports';
 import { getCountryName } from '@/lib/places';
@@ -82,7 +83,7 @@ export async function SiteFooter({ locale }: { locale: Locale }) {
   const headStyle = { color: 'var(--ab-6a6a6a)', fontSize: 11, fontWeight: 700, letterSpacing: '0.06em', textTransform: 'uppercase', margin: '0 0 10px' } as const;
 
   return (
-    <footer style={{ borderTop: '1px solid var(--ab-1a1a1a)', marginTop: 'auto', padding: '32px 18px 28px' }}>
+    <SiteFooterFrame locale={locale} label={tLegal('about')}>
       <nav style={{ maxWidth: 1000, margin: '0 auto', display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: 28 }} aria-label={tNav('aria_footer')}>
         <div>
           <p style={headStyle}>{t('sec_countries')}</p>
@@ -157,9 +158,6 @@ export async function SiteFooter({ locale }: { locale: Locale }) {
       <p style={{ maxWidth: 1000, margin: '20px auto 0', textAlign: 'center', fontSize: 12, color: 'var(--ab-6a6a6a)', lineHeight: 1.5 }}>
         {t('data_note')}
       </p>
-      <p style={{ maxWidth: 1000, margin: '10px auto 0', textAlign: 'center', fontSize: 11, color: 'var(--ab-5a5a5a)', letterSpacing: '0.02em' }}>
-        airportsboard.live · © 2026
-      </p>
-    </footer>
+    </SiteFooterFrame>
   );
 }
