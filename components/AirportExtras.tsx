@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useRef } from 'react';
 import Link from 'next/link';
 
 const C = { card: 'var(--ab-0b0b0b)', border: '1px solid var(--ab-1a1a1a)', sub: 'var(--ab-8a8a8a)', green: 'var(--ab-34c759)', blue: 'var(--ab-0a84ff)' };
@@ -25,9 +25,35 @@ export function MoreInfo({ label, collapseLabel, children }: { label: string; co
 
 // ── Live overview metrics (departures/arrivals today) ──
 export function OverviewMetrics({ iata, depLabel, arrLabel }: { iata: string; depLabel: string; arrLabel: string }) {
-  const [c, setC] = useState<{ dep: number | null; arr: number | null } | null>(null);
+  const anchor = useRef<HTMLDivElement>(null);
+  const [snapshot, setC] = useState<{ iata: string; dep: number | null; arr: number | null } | null>(null);
+  const c = snapshot?.iata === iata ? snapshot : null;
   useEffect(() => {
-    fetch(`/api/airports/counts?codes=${iata}`).then(r => r.json()).then(d => setC(d[iata] || null)).catch(() => {});
+    // Счётчики находятся внутри закрытой справки, но раньше каждый визит сразу
+    // делал дополнительный запрос рядом с обновлением рейсов. Нулевой якорь не
+    // меняет оформление: загружаем числа только при приближении открытого блока
+    // к экрану. Весь SEO-текст/ссылки вокруг по-прежнему отдаются сервером.
+    const controller = new AbortController();
+    let started = false;
+    const load = () => {
+      if (started || controller.signal.aborted) return;
+      started = true;
+      fetch(`/api/airports/counts?codes=${encodeURIComponent(iata)}`, { signal: controller.signal })
+        .then(r => { if (!r.ok) throw new Error('Counts unavailable'); return r.json(); })
+        .then(d => { if (!controller.signal.aborted) setC(d[iata] ? { ...d[iata], iata } : null); })
+        .catch(() => {});
+    };
+    let observer: IntersectionObserver | undefined;
+    if (typeof IntersectionObserver === 'undefined') load();
+    else if (anchor.current) {
+      observer = new IntersectionObserver(entries => {
+        if (entries.some(e => e.isIntersecting)) { observer?.disconnect(); load(); }
+      }, { rootMargin: '200px' });
+      observer.observe(anchor.current);
+    }
+    // Abort плюс проверка signal защищают от позднего JSON старого аэропорта,
+    // даже когда транспорт уже завершил запрос. Проверка — check-overview-loading.
+    return () => { observer?.disconnect(); controller.abort(); };
   }, [iata]);
   const Metric = ({ n, label, color }: { n: number | null | undefined; label: string; color: string }) =>
     typeof n === 'number' ? (
@@ -36,11 +62,12 @@ export function OverviewMetrics({ iata, depLabel, arrLabel }: { iata: string; de
         <div style={{ fontSize: 12, color: C.sub, marginTop: 4 }}>{label}</div>
       </div>
     ) : null;
-  if (!c || (c.dep == null && c.arr == null)) return null;
   return (
-    <div style={{ display: 'flex', gap: 12, marginTop: 14 }}>
+    <div ref={anchor} data-overview-metrics>
+    {c && (c.dep != null || c.arr != null) && <div style={{ display: 'flex', gap: 12, marginTop: 14 }}>
       <Metric n={c.dep} label={depLabel} color={C.green} />
       <Metric n={c.arr} label={arrLabel} color={C.blue} />
+    </div>}
     </div>
   );
 }
