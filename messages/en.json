@@ -105,7 +105,7 @@
     "faq_arrive_q": "How early should I arrive at {name}?",
     "faq_arrive_a": "For international flights, arrive at least 3 hours before departure; for domestic flights, about 2 hours.",
     "faq_live_q": "How can I see live flights at {name}?",
-    "faq_live_a": "The board on this page shows arrivals and departures for {name} ({iata}). It re-checks for updates while the page is open, and every board states how old its data is — busy hubs are refreshed within hours, quieter airports less often.",
+    "faq_live_a": "Choose departures or arrivals on the {name} ({iata}) board. Times are local, and the board shows how old the data is. When you open the page, the site requests an update if the data is 10 minutes old or more. If the update is delayed, the last saved snapshot remains visible — check its age.",
     "footer_tagline": "Live airport boards for {served, number} airports with scheduled passenger service. Arrivals and departures, with the age of the data on every board.",
     "footer_countries": "Popular countries",
     "footer_cities": "Popular cities",

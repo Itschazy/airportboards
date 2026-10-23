@@ -105,7 +105,7 @@
     "faq_arrive_q": "Combien de temps à l'avance dois‑je arriver à {name} ?",
     "faq_arrive_a": "Pour les vols internationaux, arrivez au moins 3 heures avant le départ ; pour les vols nationaux, environ 2 heures.",
     "faq_live_q": "Comment voir les vols en direct à {name} ?",
-    "faq_live_a": "Le tableau de cette page affiche les arrivées et les départs pour {name} ({iata}). Il vérifie les mises à jour tant que la page est ouverte, et chaque tableau indique l’âge de ses données : les grands hubs sont actualisés en quelques heures, les aéroports plus calmes moins souvent.",
+    "faq_live_a": "Choisissez les départs ou les arrivées sur le tableau de {name} ({iata}). Les horaires sont en heure locale et l’ancienneté des données est indiquée. À l’ouverture de la page, une mise à jour est demandée si les données ont au moins 10 minutes. Si elle tarde, les dernières données enregistrées restent affichées : vérifiez leur ancienneté.",
     "footer_tagline": "Tableaux d’aéroport en direct pour {served, number} aéroports assurant des vols réguliers. Arrivées et départs, avec l’ancienneté des données.",
     "footer_countries": "Pays populaires",
     "footer_cities": "Villes populaires",

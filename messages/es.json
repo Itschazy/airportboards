@@ -105,7 +105,7 @@
     "faq_arrive_q": "¿Con cuánta antelación debo llegar a {name}?",
     "faq_arrive_a": "Para vuelos internacionales, llegue al menos 3 horas antes; para vuelos nacionales, aproximadamente 2 horas.",
     "faq_live_q": "¿Cómo puedo ver vuelos en vivo en {name}?",
-    "faq_live_a": "El panel de esta página muestra las llegadas y salidas de {name} ({iata}). Vuelva a comprobar si hay actualizaciones mientras la página está abierta, y cada panel indica la antigüedad de sus datos: los grandes aeropuertos con mucho tráfico se actualizan en cuestión de horas; los aeropuertos más tranquilos, con menos frecuencia.",
+    "faq_live_a": "Seleccione salidas o llegadas en el panel de {name} ({iata}). Las horas son locales y se indica la antigüedad de los datos. Al abrir la página, se solicita una actualización si los datos tienen 10 minutos o más. Si la actualización se retrasa, se mantiene la última información guardada; compruebe su antigüedad.",
     "footer_tagline": "Paneles de aeropuerto en vivo de {served, number} aeropuertos con servicio regular de pasajeros. Llegadas y salidas, con la antigüedad de los datos.",
     "footer_countries": "Países populares",
     "footer_cities": "Ciudades populares",

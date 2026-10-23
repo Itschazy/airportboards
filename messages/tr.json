@@ -105,7 +105,7 @@
     "faq_arrive_q": "{name} için ne kadar erken gelmeliyim?",
     "faq_arrive_a": "Uluslararası uçuşlar için kalkıştan en az 3 saat; yurt içi uçuşlar için yaklaşık 2 saat öncesi önerilir.",
     "faq_live_q": "{name} için canlı uçuşları nasıl görebilirim?",
-    "faq_live_a": "Bu sayfadaki pano, {name} ({iata}) için varışları ve kalkışları gösterir. Sayfa açıkken güncellemeleri yeniden kontrol eder ve her pano verilerinin ne kadar eski olduğunu belirtir — yoğun merkezler saatler içinde, daha sakin havalimanları ise daha seyrek yenilenir.",
+    "faq_live_a": "{name} ({iata}) panosunda kalkışları veya varışları seçin. Saatler yerel saattir ve verilerin ne kadar güncel olduğu gösterilir. Sayfa açıldığında veriler 10 dakika veya daha eskiyse güncelleme istenir. Güncelleme gecikirse son kaydedilen bilgiler görünmeye devam eder; güncellik bilgisini kontrol edin.",
     "footer_tagline": "Tarifeli yolcu seferi olan {served, number} havalimanı için canlı panolar. Varışlar ve kalkışlar, her panoda veri yaşı ile birlikte.",
     "footer_countries": "Popüler ülkeler",
     "footer_cities": "Popüler şehirler",

@@ -1,3 +1,4 @@
+import { airportSchema } from '@/lib/airport-schema';
 import type { Metadata } from 'next';
 import { getTranslations , setRequestLocale } from 'next-intl/server';
 import { notFound, permanentRedirect } from 'next/navigation';
@@ -187,6 +188,7 @@ export default async function ArrivalsPage({ params }: Props) {
     : null;
 
   const jsonLd = [
+    airportSchema(airport, name, city, `${BASE}/${locale}/airport/${airport.iata}`, BASE),
     {
       '@context': 'https://schema.org',
       '@type': 'BreadcrumbList',

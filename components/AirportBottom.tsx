@@ -291,8 +291,12 @@ export async function AirportBottom({ airport, locale, about, displayName, fligh
           }),
         }]
       : []),
-    // "shows live arrivals and departures … updated every minute" is false on an airport
-    // with an empty board, and it was being asserted as FAQPage markup on every page.
+    // 23.10.2026: FAQ ещё описывал старый прогрев «в течение часов», хотя живому
+    // посетителю запрашиваем обновление с возраста 10 минут для любого аэропорта.
+    // Ответ теперь объясняет местное время, порог и сохранённый снимок при задержке;
+    // одинаковая строка идёт в видимый FAQ и JSON-LD на всех 12 языках. Не обещаем
+    // успешный ответ провайдера или обновление каждую минуту. При пустом табло
+    // вопрос по-прежнему отсутствует. Проверки: check-live-refresh и check-seo-facts.
     ...(flights.length ? [{ q: t('faq_live_q', { ...N }), a: t('faq_live_a', { ...N, iata: airport.iata }) }] : []),
   ];
   const faqLd = {

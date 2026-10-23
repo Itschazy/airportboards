@@ -105,7 +105,7 @@
     "faq_arrive_q": "Wie früh sollte ich am {deAirport} sein?",
     "faq_arrive_a": "Bei internationalen Flügen mindestens 3 Stunden vor Abflug; bei Inlandsflügen etwa 2 Stunden.",
     "faq_live_q": "Wie kann ich Live-Flüge für den {deAirport} sehen?",
-    "faq_live_a": "Die Anzeigetafel auf dieser Seite zeigt Ankünfte und Abflüge für {name} ({iata}). Sie prüft bei geöffneter Seite erneut auf Aktualisierungen, und jede Anzeigetafel gibt an, wie alt ihre Daten sind – stark frequentierte Drehkreuze werden innerhalb weniger Stunden aktualisiert, ruhigere Flughäfen seltener.",
+    "faq_live_a": "Wählen Sie Abflüge oder Ankünfte auf der Flugtafel für {name} ({iata}). Alle Zeiten sind Ortszeiten; das Alter der Daten wird angezeigt. Beim Öffnen der Seite wird eine Aktualisierung angefordert, wenn die Daten mindestens 10 Minuten alt sind. Verzögert sie sich, bleibt der letzte gespeicherte Stand sichtbar — achten Sie auf dessen Alter.",
     "footer_tagline": "Live-Anzeigetafeln für {served, number} Flughäfen mit planmäßigem Passagierverkehr. Ankünfte und Abflüge mit Angabe des Datenalters.",
     "footer_countries": "Beliebte Länder",
     "footer_cities": "Beliebte Städte",

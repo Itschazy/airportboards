@@ -105,7 +105,7 @@
     "faq_arrive_q": "Quanto prima dovrei arrivare a {name}?",
     "faq_arrive_a": "Per i voli internazionali, arriva almeno 3 ore prima della partenza; per i voli nazionali, circa 2 ore.",
     "faq_live_q": "Come posso vedere i voli in tempo reale a {name}?",
-    "faq_live_a": "Il tabellone in questa pagina mostra gli arrivi e le partenze di {name} ({iata}). Verifica la presenza di aggiornamenti mentre la pagina è aperta e ogni tabellone indica quanto sono recenti i suoi dati: gli hub più trafficati vengono aggiornati entro poche ore, gli aeroporti più tranquilli meno spesso.",
+    "faq_live_a": "Seleziona partenze o arrivi nel tabellone di {name} ({iata}). Gli orari sono locali ed è indicata l’età dei dati. All’apertura della pagina viene richiesto un aggiornamento se i dati risalgono ad almeno 10 minuti prima. Se l’aggiornamento tarda, restano visibili gli ultimi dati salvati: controlla quanto sono recenti.",
     "footer_tagline": "Tabelloni aeroportuali in tempo reale per {served, number} aeroporti con servizio passeggeri di linea. Arrivi e partenze, con l’età dei dati.",
     "footer_countries": "Paesi più popolari",
     "footer_cities": "Città più popolari",
