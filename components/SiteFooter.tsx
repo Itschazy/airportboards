@@ -1,4 +1,3 @@
-import Link from 'next/link';
 import { SiteFooterFrame } from './SiteFooterFrame';
 import { getTranslations } from 'next-intl/server';
 import { getCountries, getAirportsByCountry } from '@/lib/airports';
@@ -30,6 +29,13 @@ function topCountriesByDemand(earning: string[]) {
   return cachedTop;
 }
 
+// В общем подвале в замере было 65 справочных ссылок. Каждый Next Link запускал
+// hooks/ref/наблюдение видимости, хотя подвал нужен преимущественно для SEO.
+// Обычные a сохраняют разметку, доступность и все адреса, работают до гидратации
+// и не запускают предварительную загрузку десятков разделов при прокрутке вниз.
+// Переход из подвала теперь обычный документный; основные переходы шапки,
+// поиска и табло остаются клиентскими. Проверки: одинаковый HTML подвала во всех
+// 12 локалях, React Profiler до/после и мобильный переход/возврат браузера.
 // Server-rendered global footer. Its real job is SEO: it ships crawlable <a href>
 // links to the top hubs (busiest countries + the full A–Z index) on EVERY page across
 // all 12 locales, flattening crawl depth and spreading internal link equity so the
@@ -90,11 +96,11 @@ export async function SiteFooter({ locale }: { locale: Locale }) {
           <ul style={{ listStyle: 'none', margin: 0, padding: 0, display: 'flex', flexWrap: 'wrap', gap: '8px 16px' }}>
             {topCountries.map(c => (
               <li key={c.slug}>
-                <Link href={`/${locale}/airports/${c.slug}`} style={linkStyle}>{getCountryName(c.country, locale)}</Link>
+                <a href={`/${locale}/airports/${c.slug}`} style={linkStyle}>{getCountryName(c.country, locale)}</a>
               </li>
             ))}
             <li>
-              <Link href={`/${locale}/airports`} style={{ ...linkStyle, color: 'var(--ab-0a84ff)' }}>{tNav('all_airports')} {forwardArrow(locale)}</Link>
+              <a href={`/${locale}/airports`} style={{ ...linkStyle, color: 'var(--ab-0a84ff)' }}>{tNav('all_airports')} {forwardArrow(locale)}</a>
             </li>
           </ul>
         </div>
@@ -106,7 +112,7 @@ export async function SiteFooter({ locale }: { locale: Locale }) {
                 {/* A single letter is about 9px wide, so this is the one place in the footer
                     that also fails on the horizontal axis; centring inside 24px keeps the
                     existing 12px column gap and the row reads the same. */}
-                <Link href={`/${locale}/az/${x}`} style={{ ...linkStyle, fontWeight: 600, minWidth: 24, textAlign: 'center' }}>{x.toUpperCase()}</Link>
+                <a href={`/${locale}/az/${x}`} style={{ ...linkStyle, fontWeight: 600, minWidth: 24, textAlign: 'center' }}>{x.toUpperCase()}</a>
               </li>
             ))}
           </ul>
@@ -127,7 +133,7 @@ export async function SiteFooter({ locale }: { locale: Locale }) {
           so the relationship is explicit rather than inferred. */}
       <nav aria-label={tNav('language')} style={{ maxWidth: 1000, margin: '28px auto 0', display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: '8px 16px' }}>
         {locales.map(loc => (
-          <Link
+          <a
             key={loc}
             href={`/${loc}`}
             hrefLang={loc}
@@ -147,12 +153,12 @@ export async function SiteFooter({ locale }: { locale: Locale }) {
             }}
           >
             {localeNames[loc]}
-          </Link>
+          </a>
         ))}
       </nav>
       <nav aria-label={tLegal('legal')} style={{ maxWidth: 1000, margin: '18px auto 0', display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: '8px 20px' }}>
         {legalLinks.map(l => (
-          <Link key={l.href} href={l.href} style={{ color: 'var(--ab-8a8a8a)', textDecoration: 'none', fontSize: 13, display: 'inline-block', minHeight: 24 }}>{l.label}</Link>
+          <a key={l.href} href={l.href} style={{ color: 'var(--ab-8a8a8a)', textDecoration: 'none', fontSize: 13, display: 'inline-block', minHeight: 24 }}>{l.label}</a>
         ))}
       </nav>
       <p style={{ maxWidth: 1000, margin: '20px auto 0', textAlign: 'center', fontSize: 12, color: 'var(--ab-6a6a6a)', lineHeight: 1.5 }}>
