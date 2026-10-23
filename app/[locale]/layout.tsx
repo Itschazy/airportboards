@@ -1,3 +1,5 @@
+import { WebVitals } from '@/components/WebVitals';
+import { rumBootstrap } from '@/lib/rum-bootstrap';
 import type { Metadata, Viewport } from 'next';
 import { NextIntlClientProvider } from 'next-intl';
 import { getMessages, setRequestLocale } from 'next-intl/server';
@@ -76,7 +78,7 @@ export default async function LocaleLayout({
   const dir = rtlLocales.includes(locale as Locale) ? 'rtl' : 'ltr';
   return (
     <html lang={locale} dir={dir} className="h-full antialiased" suppressHydrationWarning>
-      <head><script dangerouslySetInnerHTML={{__html: `try{var t=localStorage.getItem('ab_theme');if(t==='light'||t==='dark')document.documentElement.dataset.theme=t}catch(e){}`}} /></head>
+      <head><script id="ab-rum-gate" dangerouslySetInnerHTML={{ __html: rumBootstrap }} /><script dangerouslySetInnerHTML={{__html: `try{var t=localStorage.getItem('ab_theme');if(t==='light'||t==='dark')document.documentElement.dataset.theme=t}catch(e){}`}} /></head>
       <body className="min-h-full flex flex-col">
         {/* React hoists resource links into <head>. Browsers honour only a handful of
             preconnects, so they go to the origins that actually run on every locale: the
@@ -92,6 +94,7 @@ export default async function LocaleLayout({
         {locale === 'ru' && <link rel="preconnect" href="https://mc.yandex.ru" />}
         {/* Consent defaults first — every Google tag below reads them as it parses. */}
         <Analytics />
+        <WebVitals />
         <YandexMetrica locale={locale} />
         <AdSense />
         {/* locale ПЕРЕДАЁТСЯ ЯВНО. Без него клиентские компоненты форматируют числа и даты

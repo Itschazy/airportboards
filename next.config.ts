@@ -1,9 +1,14 @@
+import { execFileSync } from 'node:child_process';
 import type { NextConfig } from 'next';
 import createNextIntlPlugin from 'next-intl/plugin';
 
 const withNextIntl = createNextIntlPlugin('./i18n/request.ts');
 
+// SHA подставляется в JS во время сборки. Чтение HEAD в API при приёме замера
+// ошибочно пометило бы старую открытую вкладку новым релизом после выката.
+const rumRelease = (() => { try { return execFileSync('git', ['rev-parse', '--short=12', 'HEAD'], { encoding: 'utf8' }).trim(); } catch { return 'unknown'; } })();
 const nextConfig: NextConfig = {
+  env: { NEXT_PUBLIC_RUM_RELEASE: rumRelease },
   // Build somewhere else, then swap — see scripts/swap-build.mjs.
   //
   // On 2026-08-05 the site was down for 11.5 hours because `next build` writes into the very
