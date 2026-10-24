@@ -56,7 +56,14 @@ for (const iata of AIRPORTS) {
     const own = prose[loc] ? text.includes(head(prose[loc])) : false;
     const fromEn = loc !== 'en' && prose.en ? text.includes(head(prose.en)) : false;
     if (KEEP.includes(loc)) {
-      if (!own) lost.push(`${loc}/${iata}`);
+      // С 25.10.2026 на ru абзац может быть заменён проверенным из справочной
+      // (data/airport-guide/<IATA>.json, поле about) — это не пропажа, а замена.
+      let verified = false;
+      try {
+        const g = JSON.parse(fs.readFileSync(`data/airport-guide/${iata}.json`, 'utf8'));
+        verified = loc === 'ru' && !!g.about && text.includes(head(g.about));
+      } catch { /* справочной нет */ }
+      if (!own && !verified) lost.push(`${loc}/${iata}`);
     } else if (own || fromEn) {
       leaked.push(`${loc}/${iata}${fromEn ? ' (английский фолбэк)' : ''}`);
     }

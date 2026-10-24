@@ -2,6 +2,7 @@ import airportsRaw from '@/data/airports.json';
 import { getAirport, getCountries, POPULAR_AIRPORTS, getAirportsByCountry } from '@/lib/airports';
 import { splitByService, worldServiceCounts } from '@/lib/warm';
 import { getEventsForHub } from '@/lib/event-content';
+import { guideIatas } from '@/lib/airport-guide';
 
 // /llms.txt — a concise, machine-readable map of the site for LLM crawlers
 // (ChatGPT, Claude, Perplexity, Gemini, …) following the llmstxt.org convention.
@@ -67,6 +68,12 @@ export function GET() {
   const events = getEventsForHub().upcoming
     .map(e => `- [${e.meta.name}](${BASE}/en/event/${e.meta.slug}): which airports serve it and how to reach the venue`);
 
+  // Справочные (25.10.2026): факты с официальных сайтов, источник и дата в каждом блоке.
+  const guides = guideIatas()
+    .map(iata => getAirport(iata))
+    .filter((a): a is NonNullable<typeof a> => Boolean(a))
+    .map(a => `- [${a.name} (${a.iata})](${BASE}/ru/airport/${a.iata})`);
+
   const natives = NATIVE_EXAMPLES.map(([loc, label, iata]) => `- [${label}](${BASE}/${loc}/airport/${iata})`);
 
   const body = `# AirportsBoard.live
@@ -103,6 +110,10 @@ ${num(world.empty)} of the IATA codes covered here are confirmed to have no airl
 
 ## Closed airports
 ${closed.join('\n')}
+
+## Airport passenger guides (Russian)
+Verified practical facts for ${guides.length} Russian airports: how to get there (bus and train numbers, intervals, fares), terminals, business lounges with prices, left luggage, where to sleep, mother-and-child rooms, parking, Wi‑Fi. Every fact comes from the airport's or carrier's official website; each block links its source page and shows the check date. Pages without a verified fact simply omit that topic.
+${guides.join('\n')}
 
 ## Event travel guides
 ${events.join('\n') || '- (none currently upcoming)'}

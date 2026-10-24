@@ -23,6 +23,7 @@ import { locales } from '@/lib/i18n';
 import { currentIata } from '@/lib/iata-aliases';
 import { showCityFlag, fold } from '@/lib/show-city';
 import { assertLocale } from '@/lib/locale-guard';
+import { getAirportGuide, guideAmenities } from '@/lib/airport-guide';
 
 /**
  * Срез борта для показа и признак «всё уже в прошлом».
@@ -422,7 +423,8 @@ export default async function AirportPage({ params }: Props) {
   })();
 
   const jsonLd = [
-    airportSchema(airport, name, city, canonical, BASE),
+    // Удобства из справочной (только ru и только подтверждённые блоки) — в узел Airport.
+    { ...airportSchema(airport, name, city, canonical, BASE), ...guideAmenities(getAirportGuide(airport.iata, locale)) },
     {
       '@context': 'https://schema.org',
       '@type': 'BreadcrumbList',

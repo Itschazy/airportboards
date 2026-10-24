@@ -26,7 +26,7 @@ const ICONS: Record<string, string> = {
 
 const fmtChecked = (iso: string) => {
   const d = new Date(`${iso}T12:00:00Z`);
-  return Number.isNaN(d.getTime()) ? iso : new Intl.DateTimeFormat('ru', { day: 'numeric', month: 'long', year: 'numeric' }).format(d);
+  return Number.isNaN(d.getTime()) ? iso : new Intl.DateTimeFormat('ru', { day: 'numeric', month: 'long', year: 'numeric' }).format(d).replace(/\s*г\.$/, '');
 };
 
 export function AirportGuide({ guide, title }: { guide: Guide; title: string }) {
@@ -35,6 +35,9 @@ export function AirportGuide({ guide, title }: { guide: Guide; title: string }) 
   return (
     <section style={{ marginTop: 36 }} aria-labelledby="ag-title">
       <h2 id="ag-title" style={{ margin: '0 0 14px', fontSize: 13, fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.12em', color: 'var(--ab-8a8a8a)' }}>{title}</h2>
+      {/* Откуда факты — одной строкой, до плиток: так читатель и answer-engine видят метод, а
+          не только результат (skill seo-aeo-geo, «methodology disclosure»). */}
+      <p className="ag-lead">Факты с официальных сайтов аэропорта и перевозчиков, источник под каждым блоком. Проверено <time dateTime={guide.checked}>{checked}</time>.</p>
       <div className="ag-grid">
         {blocks.map((b) => (
           <details key={b.id} className="ag-tile">
@@ -42,7 +45,7 @@ export function AirportGuide({ guide, title }: { guide: Guide; title: string }) 
               <svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" className="ag-ico">
                 <path d={ICONS[b.id] ?? ICONS.terminals} />
               </svg>
-              <span className="ag-t">{b.title}</span>
+              <h3 className="ag-t">{b.title}</h3>
               <span className="ag-h">{b.hint}</span>
             </summary>
             <div className="ag-body">
@@ -50,7 +53,7 @@ export function AirportGuide({ guide, title }: { guide: Guide; title: string }) 
               <p className="ag-src">
                 По данным <a href={b.url} target="_blank" rel="noopener noreferrer">{b.source}</a>
                 {b.url2 ? <> и <a href={b.url2} target="_blank" rel="noopener noreferrer">ещё одной страницы</a></> : null}
-                {' · '}проверено {checked}
+
               </p>
             </div>
           </details>

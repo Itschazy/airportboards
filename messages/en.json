@@ -258,6 +258,7 @@
     "about_flight": "About the flight",
     "airline_label": "Airline",
     "aircraft_type": "Aircraft type",
+    "flight_duration": "Flight time",
     "flight_no": "Flight number",
     "flight_details": "Flight details",
     "notice_board": "Please be at the gate early. The gate closes strictly on schedule.",

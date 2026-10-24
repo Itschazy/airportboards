@@ -512,7 +512,8 @@ function BottomSheet({ flight: selectedFlight, mode, onClose, tz, locale, clockM
     if (flight.gate)     blocks.push({ label: t('gate'), value: flight.gate });
     if (flight.terminal) blocks.push({ label: t('terminal'), value: flight.terminal });
     if (flight.baggage && status !== 'baggage') blocks.push({ label: t('baggage'), value: flight.baggage, valueColor: C.green });
-    if (flight.aircraft) blocks.push({ label: t('aircraft_type'), value: flight.aircraft });
+    if (flight.durationMin) blocks.push({ label: t('flight_duration'), value: fmtDur(flight.durationMin, locale) });
+    if (flight.aircraft) blocks.push({ label: t('aircraft_type'), value: AIRCRAFT[flight.aircraft] ?? flight.aircraft });
 
     // ── Route strip: origin → destination, so the sheet carries its own context ──
     const otherPlace = (flight.destination || flight.origin || '').replace(/\s*\([A-Z0-9]{2,4}\)\s*$/, '');
@@ -1309,7 +1310,7 @@ export function FlightBoard({ airport, locale, defaultMode = 'departures', displ
               // на проде 150 строк из 352 (42.6%) объявляли не то, что видно, а у 97 из них
               // статус вообще без числа («По расписанию»), то есть показанное время
               // восстановить было нечем. Худший случай — LED: крупно 00:47, в ярлыке 22:10.
-              aria-label={`${f.actual || f.scheduled}, ${f.flight}, ${city}, ${label}`}
+              aria-label={`${f.actual || f.scheduled}, ${f.flight}, ${city}, ${[...meta, label].join(', ')}`}
               className="frow"
               onClick={() => { haptic(); track(GOALS.flightCard, { from: 'row', past: !!f.ts && f.ts * 1000 < Date.now() }); setSelected(f); }}
               onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); haptic(); track(GOALS.flightCard, { from: 'keyboard' }); setSelected(f); } }}

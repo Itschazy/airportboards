@@ -1,5 +1,5 @@
 import { AirportGuide } from '@/components/AirportGuide';
-import { getAirportGuide } from '@/lib/airport-guide';
+import { getAirportGuide, guideFaq } from '@/lib/airport-guide';
 import { SeoSection } from '@/components/SeoSection';
 import { numLocale } from '@/lib/i18n';
 import { getTranslations } from 'next-intl/server';
@@ -309,7 +309,9 @@ export async function AirportBottom({ airport, locale, about, displayName, fligh
   ];
   const faqLd = {
     '@context': 'https://schema.org', '@type': 'FAQPage',
-    mainEntity: faq.map(f => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })),
+    // Ответы справочной идут в ту же FAQPage (одна на страницу): вопрос — тема плитки, ответ —
+    // видимый текст плитки с источником и датой проверки.
+    mainEntity: [...faq, ...(guide ? guideFaq(guide, name) : [])].map(f => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })),
   };
 
   const H2 = ({ children, href, viewAll }: { children: React.ReactNode; href?: string; viewAll?: string }) => (
