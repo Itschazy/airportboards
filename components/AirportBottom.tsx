@@ -1,3 +1,5 @@
+import { AirportGuide } from '@/components/AirportGuide';
+import { getAirportGuide } from '@/lib/airport-guide';
 import { SeoSection } from '@/components/SeoSection';
 import { numLocale } from '@/lib/i18n';
 import { getTranslations } from 'next-intl/server';
@@ -314,6 +316,7 @@ export async function AirportBottom({ airport, locale, about, displayName, fligh
     </div>
   );
   const sec: React.CSSProperties = { marginTop: 36 };
+  const guide = noService ? null : getAirportGuide(airport.iata, locale);
 
   return (
     <div style={{ background: 'var(--ab-050505)', padding: '0 24px 8px' }}>
@@ -328,6 +331,11 @@ export async function AirportBottom({ airport, locale, about, displayName, fligh
             Прежнее требование держать всю справку открытой создавало длинную ленту.
             Сохраняем полный SSR HTML, H2, FAQ и ссылки: details меняет доступность
             места на экране, а не состав текста. Проверяем HTML до/после без scripts. */}
+        {/* 5b. СПРАВОЧНАЯ — проверенные факты с официальных сайтов, только ru и только для
+            аэропортов с файлом data/airport-guide/<IATA>.json. Выше «Об аэропорте»: это то, за чем
+            человек пришёл после табло (как доехать, где залы), а абзац — справка о справке. */}
+        {guide && <AirportGuide guide={guide} title={`Справочная ${airport.iata}`} />}
+
         {/* 6. ABOUT */}
         {about && (
           <section className="cv-auto" style={sec}>

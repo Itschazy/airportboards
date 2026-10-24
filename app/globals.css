@@ -225,3 +225,21 @@ input::-webkit-search-cancel-button { display: none; }
 @media (prefers-reduced-motion: reduce) {
   .board-search-panel, .board-search-modes { transition: none; }
 }
+
+/* Справочная по аэропорту (components/AirportGuide.tsx, 25.10.2026). Нативные <details> в сетке
+   на две колонки; открытая плитка занимает всю строку, чтобы текст не жался в половину ширины. */
+.ag-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+@media(min-width:640px){.ag-grid{grid-template-columns:repeat(4,minmax(0,1fr))}}
+.ag-tile{background:var(--ab-0b0b0b);border:1px solid var(--ab-1a1a1a);border-radius:16px;min-width:0}
+.ag-tile[open]{grid-column:1/-1;border-color:rgba(10,132,255,.45)}
+.ag-tile>summary{list-style:none;cursor:pointer;padding:12px 12px 13px;display:flex;flex-direction:column;gap:2px;min-height:76px;-webkit-tap-highlight-color:transparent}
+.ag-tile>summary::-webkit-details-marker{display:none}
+.ag-tile>summary:focus-visible{outline:2px solid var(--ab-0a84ff);outline-offset:2px;border-radius:16px}
+.ag-ico{color:var(--ab-0a84ff);margin-bottom:6px}
+.ag-t{font-size:14px;font-weight:600;color:var(--ab-ffffff);line-height:1.25}
+.ag-h{font-size:12px;color:var(--ab-8a8a8a);line-height:1.3;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.ag-tile[open] .ag-h{white-space:normal}
+.ag-body{padding:0 14px 14px}
+.ag-body p{margin:0;font-size:14px;line-height:1.55;color:var(--ab-c7c7cc)}
+.ag-body .ag-src{margin-top:10px;font-size:12px;color:var(--ab-8a8a8a)}
+.ag-src a{color:var(--ab-0a84ff);text-decoration:none}
