@@ -1,0 +1,3 @@
+{"iata":"SCW","checked":"2026-10-25","blocks":[
+{"id":"storage","title":"Камера хранения","hint":"1 этаж аэровокзала","text":"Камера хранения на 1 этаже аэровокзала. Кресла-коляски в ней принимают бесплатно.","source":"komiaviatrans.ru","url":"https://komiaviatrans.ru/airport/standart.php?id=1"},
+{"id":"parking","title":"Парковка","hint":"ул. Колхозная, 3Б","text":"Автостоянка аэропорта на ул. Колхозной, 3Б, ещё места на ул. Колхозной напротив аэровокзала. У пандуса аэровокзала выделена зона посадки и высадки пассажиров с инвалидностью.","source":"komiaviatrans.ru","url":"https://komiaviatrans.ru/airport/standart.php?id=1"}]}
