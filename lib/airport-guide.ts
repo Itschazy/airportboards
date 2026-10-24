@@ -24,7 +24,9 @@ export type GuideBlock = {
   url: string;
   url2?: string;
 };
-export type AirportGuide = { iata: string; checked: string; blocks: GuideBlock[] };
+/** about — абзац «Об аэропорте» из тех же официальных источников; заменяет сгенерированный
+ *  (lib/airport-content.ts). Необязателен: нет подтверждённых фактов — остаётся старый. */
+export type AirportGuide = { iata: string; checked: string; about?: string; about_url?: string; blocks: GuideBlock[] };
 
 const DIR = path.join(process.cwd(), 'data/airport-guide');
 const cache = new Map<string, AirportGuide | null>();

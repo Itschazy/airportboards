@@ -1,0 +1,41 @@
+{
+ "iata": "UUA",
+ "checked": "2026-10-25",
+ "blocks": [
+  {
+   "id": "lounges",
+   "title": "Бизнес-залы",
+   "hint": "VIP: вылет 4600 ₽",
+   "text": "VIP-зал со своей стойкой регистрации и баром. Обслуживание при вылете 4600 ₽, при прилёте 3500 ₽. Администратор: +7 (85594) 6-35-16, круглосуточно.",
+   "source": "bugavia.ru",
+   "url": "https://bugavia.ru/services/zal_ozhidaniya_vip.php"
+  },
+  {
+   "id": "sleep",
+   "title": "Где поспать",
+   "hint": "Гостиница, 1900 ₽",
+   "text": "Гостиница на территории аэропорта. Место в одно- или двухместном полулюксе 1900 ₽ в сутки. Заезд в 16:00, выезд в 12:00. Детям до 3 лет бесплатно.",
+   "source": "bugavia.ru",
+   "url": "https://bugavia.ru/services/hotel.php",
+   "url2": "https://bugavia.ru/services/"
+  },
+  {
+   "id": "kids",
+   "title": "С ребёнком",
+   "hint": "Круглосуточно",
+   "text": "Комната матери и ребёнка в аэровокзале работает круглосуточно.",
+   "source": "bugavia.ru",
+   "url": "https://bugavia.ru/passengers/",
+   "url2": "https://bugavia.ru/services/"
+  },
+  {
+   "id": "parking",
+   "title": "Парковка",
+   "hint": "Платная, 24/7",
+   "text": "Платная охраняемая парковка работает круглосуточно.",
+   "source": "bugavia.ru",
+   "url": "https://bugavia.ru/services/parkovka.php",
+   "url2": "https://bugavia.ru/services/"
+  }
+ ]
+}

@@ -124,7 +124,13 @@ export async function AirportBottom({ airport, locale, about, displayName, fligh
 
   const deCity = withDe(city, locale);
   const deIata = withDe(airport.iata, locale);
-  const ext = getAirportContentExtended(airport.iata, locale);
+  const guide = noService ? null : getAirportGuide(airport.iata, locale);
+  // Где есть справочная, сгенерированные абзацы «Как добраться / Терминалы / Советы» снимаются
+  // (25.10.2026): они отвечают на те же вопросы водой без единой цифры («время в пути сильно
+  // зависит от пробок»), а справочная — номерами автобусов, этажами и ценами с источником.
+  // Проверенные таблицы (ext.guide: расстояния и маршруты) остаются — это факты, а не проза.
+  const extRaw = getAirportContentExtended(airport.iata, locale);
+  const ext = extRaw && guide ? { ...extRaw, transport: '', terminals: '', tips: '' } : extRaw;
   // Published routes for airports whose live board can never fill (see lib/wiki-routes.ts).
   // Only rendered when the board is genuinely empty — where flights exist, the board IS the
   // better answer and this would just repeat it less precisely.
@@ -316,7 +322,6 @@ export async function AirportBottom({ airport, locale, about, displayName, fligh
     </div>
   );
   const sec: React.CSSProperties = { marginTop: 36 };
-  const guide = noService ? null : getAirportGuide(airport.iata, locale);
 
   return (
     <div style={{ background: 'var(--ab-050505)', padding: '0 24px 8px' }}>

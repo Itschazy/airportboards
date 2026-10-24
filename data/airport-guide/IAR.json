@@ -1,0 +1,49 @@
+{
+ "iata": "IAR",
+ "checked": "2026-10-25",
+ "about": "Международный аэропорт Ярославля «Золотое кольцо» в Туношне. ВПП 3010×44 м. Работает воздушный пункт пропуска через госграницу, есть таможенный пост.",
+ "about_url": "https://iaravia.ru/ob-aeroporte/airfield-characteristics",
+ "blocks": [
+  {
+   "id": "transport",
+   "title": "Как доехать",
+   "hint": "Автобус 183, 40 мин",
+   "text": "Автобус 183 ходит от автовокзала Ярославля до аэропорта ежедневно. Время в пути 40 минут. Первый рейс от автовокзала в 05:50, последний из аэропорта в 22:35.",
+   "source": "iaravia.ru",
+   "url": "https://iaravia.ru/for-passengers/how-to-reach",
+   "url2": "https://iaravia.ru/ob-aeroporte/way"
+  },
+  {
+   "id": "lounges",
+   "title": "Бизнес-залы",
+   "hint": "Зал 2500 ₽",
+   "text": "Зал повышенной комфортности для вылетающих пассажиров. Внутри ТВ, Wi‑Fi, чайный стол, пресса. Цена 2500 ₽ за пассажира. Справки: +7 (4852) 43-18-00.",
+   "source": "iaravia.ru",
+   "url": "https://iaravia.ru/for-passengers/services/zal-povyshennoy-komfortnosti"
+  },
+  {
+   "id": "kids",
+   "title": "С ребёнком",
+   "hint": "Зал вылета, бесплатно",
+   "text": "Комната пассажиров с детьми находится в зале вылета, в стерильной зоне. Пускают с детьми или детьми-инвалидами до 14 лет по посадочному талону. Бесплатно, до 3 часов перед вылетом днём и до 4 часов ночью. В зале прилёта комнаты нет.",
+   "source": "iaravia.ru",
+   "url": "https://iaravia.ru/for-passengers/services"
+  },
+  {
+   "id": "parking",
+   "title": "Парковка",
+   "hint": "300 ₽/сутки",
+   "text": "Платная парковка, 300 ₽ в сутки. Бронирования и предоплаты нет, оплата при постановке машины при наличии мест. Время возврата за машиной уточняют по телефону 43-18-00.",
+   "source": "iaravia.ru",
+   "url": "https://iaravia.ru/for-passengers/services"
+  },
+  {
+   "id": "wifi",
+   "title": "Wi‑Fi",
+   "hint": "Бесплатно",
+   "text": "В аэровокзале работает бесплатный Wi‑Fi.",
+   "source": "iaravia.ru",
+   "url": "https://iaravia.ru/for-passengers/services"
+  }
+ ]
+}

@@ -1,0 +1,67 @@
+{
+ "iata": "KRR",
+ "checked": "2026-10-25",
+ "about": "Два терминала: для внутренних и для международных авиалиний. Площадь аэровокзального комплекса 16 448 кв. м. ВПП длиной 3000 м открыта в 2017 году.",
+ "about_url": "https://krr.aero/about-airport/",
+ "blocks": [
+  {
+   "id": "transport",
+   "title": "Как доехать",
+   "hint": "Троллейбус 7",
+   "text": "Остановка на привокзальной площади. Троллейбус № 7 идёт к автовокзалу и ж/д вокзалу Краснодар-1 по улице Ставропольской. Маршрутка № 30 идёт до Кооперативного рынка. Стойка официального такси в Терминале 1, зона выдачи багажа.",
+   "source": "krr.aero",
+   "url": "https://krr.aero/transport/obshhestvennyj-transport/",
+   "url2": "https://krr.aero/transport/taxi/"
+  },
+  {
+   "id": "terminals",
+   "title": "Терминалы",
+   "hint": "T1 ВВЛ, T2 МВЛ",
+   "text": "Терминал 1 обслуживает внутренние рейсы, Терминал 2 международные. Стойки регистрации 1–19, регистрация закрывается за 40 минут до вылета.",
+   "source": "krr.aero",
+   "url": "https://krr.aero/about-airport/",
+   "url2": "https://krr.aero/about-airport/passenger_guide/"
+  },
+  {
+   "id": "lounges",
+   "title": "Бизнес-залы",
+   "hint": "T1 2 этаж, T2 1 этаж",
+   "text": "Бизнес-зал внутренних линий: Терминал 1, 2 этаж, после контроля. Бизнес-зал международных линий: Терминал 2, 1 этаж, после контроля. Пускают участников ONPASS, Grey Wall Pass, GoldenKey, RusPriority и других программ, остальных за плату. Пребывание до 3 часов.",
+   "source": "krr.aero",
+   "url": "https://krr.aero/vip_business/biznes-zal-vnutrennikh-avialiniy/",
+   "url2": "https://krr.aero/vip_business/business-lounge-international-departures/"
+  },
+  {
+   "id": "storage",
+   "title": "Камера хранения",
+   "hint": "24/7, 400 ₽ сутки",
+   "text": "На привокзальной площади, круглосуточно. 400 ₽ за место в первые сутки, 200 ₽ за каждые следующие. Вес одного места до 30 кг.",
+   "source": "krr.aero",
+   "url": "https://krr.aero/services/bagazh/kamera-khraneniya/"
+  },
+  {
+   "id": "kids",
+   "title": "С ребёнком",
+   "hint": "Т1, 1 этаж, бесплатно",
+   "text": "Комната матери и ребёнка: Терминал 1, 1 этаж, зал регистрации внутренних авиалиний. Для пассажиров с детьми до 7 лет, детей с ОВЗ до 14 лет и беременных во второй половине срока. Плата не взимается. Нужны паспорт и посадочный талон или билет.",
+   "source": "krr.aero",
+   "url": "https://krr.aero/services/passazhiram-s-detmi/uslugi-dlya-semeynogo-komforta/"
+  },
+  {
+   "id": "parking",
+   "title": "Парковка",
+   "hint": "15 мин бесплатно, 400₽/ч",
+   "text": "Привокзальная площадь: первые 15 минут бесплатно, далее 400 ₽ за час. Дополнительная почасовая парковка справа от площади: 250 ₽ за час. Суточная 900 ₽ в сутки. Альтернативная парковка бесплатна.",
+   "source": "krr.aero",
+   "url": "https://krr.aero/transport/parking/"
+  },
+  {
+   "id": "wifi",
+   "title": "Wi‑Fi",
+   "hint": "Сеть Airport_Free",
+   "text": "Бесплатная сеть «Airport_Free» во всём аэровокзальном комплексе, в VIP-терминале и бизнес-зале. Вход только по SIM-карте российского оператора.",
+   "source": "krr.aero",
+   "url": "https://krr.aero/services/servisy-dlya-passazhirov/wi-fi/"
+  }
+ ]
+}
