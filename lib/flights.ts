@@ -246,6 +246,12 @@ export function mapFlight(f: AirlabsFlight, direction: 'departures' | 'arrivals'
   const baggage  = direction === 'arrivals' ? f.arr_baggage : undefined;
   const aircraft = f.aircraft_icao || undefined;
   const delay    = (direction === 'departures' ? f.dep_delayed : f.arr_delayed) || undefined;
+  // Время в пути по расписанию (25.10.2026) — для строки «Аэрофлот · 2 ч 25 мин» на табло.
+  // Обе метки приходят в каждой строке расписания (на SVO 187 из 187), так что новых запросов
+  // это не требует. Плановые, а не ожидаемые: задержка сдвигает оба конца и полёт не удлиняет.
+  // Вне 20 мин — 20 ч считаем мусором поставщика и не показываем вовсе.
+  const span = f.dep_time_ts && f.arr_time_ts ? Math.round((f.arr_time_ts - f.dep_time_ts) / 60) : 0;
+  const durationMin = span >= 20 && span <= 1200 ? span : undefined;
   return {
     flight: flightNum,
     airline,
@@ -262,6 +268,7 @@ export function mapFlight(f: AirlabsFlight, direction: 'departures' | 'arrivals'
     ...(baggage  ? { baggage }  : {}),
     ...(aircraft ? { aircraft } : {}),
     ...(delay    ? { delay }    : {}),
+    ...(durationMin ? { durationMin } : {}),
     // Effective time as a unix timestamp, alongside the "HH:MM" the row displays.
     //
     // Without it the client can only reason about time through the printed string, and that

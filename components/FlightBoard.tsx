@@ -27,6 +27,8 @@ type Flight = {
   baggage?: string;
   aircraft?: string;
   delay?: number;
+  /** Плановое время в пути, минуты. См. mapFlight. */
+  durationMin?: number;
   /** Effective time as unix seconds. See mapFlight in lib/flights.ts — the printed "HH:MM"
    *  cannot separate past from future across a midnight rollover, and the status field
    *  answers a different question. Optional because the client /api path predates it. */
@@ -113,6 +115,41 @@ function fmtDur(mins: number, locale: string): string {
     return formatter.format(n);
   };
   return hrs > 0 ? [unit(hrs, 'hour'), ...(mm > 0 ? [unit(mm, 'minute')] : [])].join(' ') : unit(mm, 'minute');
+}
+
+/**
+ * Подстрока строки табло: «2 ч 25 мин · Аэрофлот · A320» (25.10.2026, по образцу tablo.online).
+ *
+ * Только то, что пришло: тип самолёта поставщик отдаёт редко (на 20.10 — 11 строк из 6 180), и
+ * пустые места не закрываются прочерками — строка просто короче. Авиакомпания без названия в
+ * справочнике (airlineName вернул голый код) не показывается: «FV» рядом с «FV 6809» ничего
+ * не добавляет. Тип самолёта — человеческим именем, а не кодом ИКАО: «B738» читают единицы.
+ */
+const AIRCRAFT: Record<string, string> = {
+  A319: 'A319', A320: 'A320', A321: 'A321', A20N: 'A320neo', A21N: 'A321neo', A332: 'A330', A333: 'A330',
+  A339: 'A330neo', A359: 'A350', A35K: 'A350', A388: 'A380', B737: 'Boeing 737', B738: 'Boeing 737',
+  B739: 'Boeing 737', B38M: 'Boeing 737 MAX', B39M: 'Boeing 737 MAX', B744: 'Boeing 747', B748: 'Boeing 747',
+  B752: 'Boeing 757', B763: 'Boeing 767', B772: 'Boeing 777', B77W: 'Boeing 777', B788: 'Boeing 787',
+  B789: 'Boeing 787', B78X: 'Boeing 787', SU95: 'Superjet 100', AT72: 'ATR 72', AT76: 'ATR 72',
+  E190: 'Embraer 190', E195: 'Embraer 195', CRJ2: 'CRJ200', DH8D: 'Dash 8', MC21: 'МС-21',
+};
+/** Русские названия для перевозчиков, которых русскоязычный читатель знает по-русски.
+ *  Справочник data/airlines.json — латиницей, и «Pobeda» на русском табло выглядит чужим. */
+const AIRLINE_RU: Record<string, string> = {
+  Aeroflot: 'Аэрофлот', Pobeda: 'Победа', 'Rossiya Airlines': 'Россия', 'S7 Airlines': 'S7',
+  'Ural Airlines': 'Уральские авиалинии', 'Utair Aviation': 'ЮТэйр', 'Nordwind Airlines': 'Nordwind',
+  'Red Wings Airlines': 'Red Wings', 'Smartavia': 'Смартавиа', 'Yakutia Air': 'Якутия',
+  'Aurora Airlines': 'Аврора', Azimuth: 'Азимут', Severstal: 'Северсталь',
+  'Izhavia': 'Ижавиа', NordStar: 'NordStar', 'UVT aero': 'ЮВТ Аэро',
+  'RusLine / Air Volga': 'РусЛайн', 'Belavia': 'Белавиа', };
+function rowMeta(f: Flight, locale: string): string[] {
+  // Время в пути ПЕРВЫМ: на 375px колонке города ~125px, и многоточие съедает хвост. Название
+  // авиакомпании угадывается и по началу («Уральские…»), а обрезанное «1 ч 3…» — бесполезно.
+  const parts: string[] = [];
+  if (f.durationMin) parts.push(fmtDur(f.durationMin, locale));
+  if (f.airline && !/^[A-Z0-9]{2,3}\*?$/.test(f.airline)) parts.push((locale === 'ru' && AIRLINE_RU[f.airline]) || f.airline);
+  if (f.aircraft) parts.push(AIRCRAFT[f.aircraft] ?? f.aircraft);
+  return parts;
 }
 
 function relTime(d: Date | null, t: T): string {
@@ -1254,6 +1291,7 @@ export function FlightBoard({ airport, locale, defaultMode = 'departures', displ
           // Пороги сдвинуты на букву 18.10.2026: спокойный статус в одну строку взял у колонки 8px, и
           // «Новосибирск» (11) на 16px рвался посреди слова.
           const cityFs = longestWord >= 11 ? 15 : longestWord >= 10 ? 16 : 18;
+          const meta = rowMeta(f, locale);
 
           return (
             // <li> carries the list semantics; the inner div stays the button, so both roles
@@ -1318,6 +1356,14 @@ export function FlightBoard({ airport, locale, defaultMode = 'departures', displ
                     <span style={{ fontSize: cityFs, fontWeight: 700, color: C.text, letterSpacing: '-0.01em' }}>{city}</span>
                     {code && <bdi style={{ fontSize: 12, fontWeight: 500, color: C.secondary, marginInlineStart: 6, whiteSpace: 'nowrap' }}>({code})</bdi>}
                   </div>
+                  {/* Не больше двух строк и перенос ТОЛЬКО по разделителю: каждая часть nowrap. На 375px
+                      колонка ~125px, и в одну строку с многоточием авиакомпания съедалась целиком
+                      («1 ч 30 мин · Nor…»). Теперь «1 ч 30 мин ·» / «Nordwind», на десктопе — одна строка. */}
+                  {meta.length > 0 && (
+                    <div style={{ fontSize: 12, color: C.secondary, marginTop: 4, lineHeight: 1.3, display: '-webkit-box', WebkitLineClamp: 2, WebkitBoxOrient: 'vertical', overflow: 'hidden' }}>
+                      {meta.map((m, k) => <span key={k} style={{ whiteSpace: 'nowrap' }}>{m}{k < meta.length - 1 ? ' · ' : ''}{k < meta.length - 1 ? <wbr /> : null}</span>)}
+                    </div>
+                  )}
                 </div>
 
                 {/* Ширина статуса не зависит от его текста. Раньше maxWidth 80/88
