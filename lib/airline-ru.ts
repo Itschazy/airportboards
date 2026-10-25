@@ -11,7 +11,7 @@ const AIRLINE_RU: Record<string, string> = {
   'Red Wings Airlines': 'Red Wings', 'Smartavia': 'Смартавиа', 'Yakutia Air': 'Якутия',
   'Aurora Airlines': 'Аврора', Azimuth: 'Азимут', Severstal: 'Северсталь',
   'Izhavia': 'Ижавиа', NordStar: 'NordStar', 'UVT aero': 'ЮВТ Аэро',
-  'RusLine / Air Volga': 'РусЛайн', 'Belavia': 'Белавиа', };
+  'RusLine / Air Volga': 'РусЛайн', 'Belavia': 'Белавиа', 'Yamal Airlines': 'Ямал', };
 
 export function localAirlineName(name: string, locale: string): string {
   return (locale === 'ru' && AIRLINE_RU[name]) || name;
