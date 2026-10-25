@@ -1,0 +1,48 @@
+{
+ "iata": "UUD",
+ "checked": "2026-10-25",
+ "about": "Байкал: международный аэропорт Улан-Удэ, работает с 1926 года, рядом с озером Байкал. Взлётно-посадочная полоса длиной 3000 м.",
+ "about_url": "https://www.airportbaikal.ru/airport/info/",
+ "blocks": [
+  {
+   "id": "transport",
+   "title": "Как доехать",
+   "hint": "Автобусы 10, 55, 77",
+   "text": "Городские автобусы № 10, 55 и 77 идут через центр (остановка «Площадь Советов») до привокзальной площади аэропорта. Начало движения в будни в 6:15, в выходные в 7:00, интервал 7–10 минут; проезд на № 55 стоит 40 ₽. На машине от центра около 20 минут.",
+   "source": "airportbaikal.ru",
+   "url": "https://www.airportbaikal.ru/transport/how/bus/55"
+  },
+  {
+   "id": "storage",
+   "title": "Камера хранения",
+   "hint": "1 этаж, 270 ₽ в сутки",
+   "text": "Камера хранения в аэровокзале внутренних линий, на 1 этаже, с 6:00 до 20:00. Одно место 270 ₽ за календарный день, место больше 203 см в сумме трёх измерений 550 ₽.",
+   "source": "airportbaikal.ru",
+   "url": "https://www.airportbaikal.ru/services/infrastructure/storage/"
+  },
+  {
+   "id": "kids",
+   "title": "С ребёнком",
+   "hint": "2 этаж, бесплатно, 24/7",
+   "text": "Комната матери и ребёнка на втором этаже, в правом крыле терминала, бесплатно и круглосуточно, до 3 часов. Для детей до 7 лет с одним взрослым, детей с ОВЗ до 14 лет, многодетных семей с удостоверением и женщин во второй половине беременности.",
+   "source": "airportbaikal.ru",
+   "url": "https://www.airportbaikal.ru/services/infrastructure/babysroom/"
+  },
+  {
+   "id": "parking",
+   "title": "Парковка",
+   "hint": "15 мин бесплатно",
+   "text": "Краткосрочная P1 у терминала: до 15 минут бесплатно, 16–60 минут 500 ₽, второй час 300 ₽, третий и четвёртый по 200 ₽, от 241 минуты 1200 ₽, не дольше суток. Долговременная: до 3 суток 800 ₽ в сутки, с 4-х по 6-е 500 ₽.",
+   "source": "airportbaikal.ru",
+   "url": "https://www.airportbaikal.ru/transport/parking/tariff/"
+  },
+  {
+   "id": "wifi",
+   "title": "Wi‑Fi",
+   "hint": "Сеть FreeAirportBaikalRT",
+   "text": "Бесплатный Wi‑Fi: сеть FreeAirportBaikalRT, вход по номеру телефона с кодом из SMS.",
+   "source": "airportbaikal.ru",
+   "url": "https://www.airportbaikal.ru/services/infrastructure/wifi/"
+  }
+ ]
+}

@@ -1,0 +1,54 @@
+{
+ "iata": "GDX",
+ "checked": "2026-10-25",
+ "blocks": [
+  {
+   "id": "transport",
+   "title": "Как доехать",
+   "hint": "Автобус 101",
+   "text": "Автобус № 101 ходит между автовокзалом Магадана и аэропортом Сокол.",
+   "source": "airport-magadan.ru",
+   "url": "https://airport-magadan.ru/transport/how/bus/101/"
+  },
+  {
+   "id": "lounges",
+   "title": "Бизнес-залы",
+   "hint": "2 этаж, 4000 ₽",
+   "text": "Бизнес-зал на втором этаже в чистой зоне внутренних линий: после досмотра на 3 этаже спуститься по указателям. Работает на время обслуживания рейсов. Пускают по программам ON·PASS, Persona.aero, RusPriority, Every Lounge, Golden Key и другим; любой пассажир может заявить услугу на регистрации и оплатить в кассе: 4000 ₽ от 2 лет, младше бесплатно.",
+   "source": "airport-magadan.ru",
+   "url": "https://airport-magadan.ru/services/comfort/business/"
+  },
+  {
+   "id": "storage",
+   "title": "Камера хранения",
+   "hint": "2 этаж, 8:30–20:30",
+   "text": "Автоматическая камера хранения для пассажиров внутренних рейсов на 2 этаже, с 8:30 до 20:30, оплата только картой. Стандартная ячейка 51×63×76 см 1000 ₽ в сутки, большая 51×195×76 см 2000 ₽; меньше суток оплачивается как сутки.",
+   "source": "airport-magadan.ru",
+   "url": "https://airport-magadan.ru/services/infrastructure/storage/"
+  },
+  {
+   "id": "kids",
+   "title": "С ребёнком",
+   "hint": "3 этаж, бесплатно",
+   "text": "Комната матери и ребёнка на третьем этаже, бесплатно, для вылетающих и прилетевших. Для детей до 7 лет с одним взрослым, детей с ОВЗ до 14 лет и женщин во второй половине беременности.",
+   "source": "airport-magadan.ru",
+   "url": "https://airport-magadan.ru/services/infrastructure/babysroom/"
+  },
+  {
+   "id": "parking",
+   "title": "Парковка",
+   "hint": "15 мин бесплатно",
+   "text": "Привокзальная площадь P1 в 30 м от терминала: первые 15 минут бесплатно, до часа 500 ₽, каждый следующий час 300 ₽, сутки 2000 ₽. Повторный въезд в течение часа на 1–15 минут — 200 ₽.",
+   "source": "airport-magadan.ru",
+   "url": "https://airport-magadan.ru/transport/parking/tariff/"
+  },
+  {
+   "id": "wifi",
+   "title": "Wi‑Fi",
+   "hint": "Бесплатно",
+   "text": "Бесплатный Wi‑Fi на территории аэровокзала; по закону «О связи» нужна идентификация пользователя, условия — на приветственной странице оператора.",
+   "source": "airport-magadan.ru",
+   "url": "https://airport-magadan.ru/services/infrastructure/wifi/"
+  }
+ ]
+}
