@@ -21,9 +21,13 @@
 //   node scripts/discover-schedules.mjs --limit 50      # try it on 50 airports first
 //   node scripts/discover-schedules.mjs                 # full sweep
 //   node scripts/discover-schedules.mjs --refresh       # re-probe everything
+//   node scripts/discover-schedules.mjs --refresh --out /tmp/fresh.json
+//       # write the sweep somewhere else — scripts/service-remeasure.mjs does this, so that a
+//       # single pass never lands on the served file: reconcile-service.mjs decides what of it
+//       # is accepted and what must wait for a second probe at another time of day.
 import fs from 'fs';
 
-const OUT = 'data/airport-service.json';
+const OUT = (() => { const i = process.argv.indexOf('--out'); return i === -1 ? 'data/airport-service.json' : process.argv[i + 1]; })();
 const KEY = (fs.readFileSync('.env.local', 'utf8').match(/^AIRLABS_API_KEY=(.*)$/m) || [])[1]?.trim();
 if (!KEY) { console.error('AIRLABS_API_KEY missing from .env.local'); process.exit(1); }
 

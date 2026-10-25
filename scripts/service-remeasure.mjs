@@ -33,6 +33,8 @@
 // Exit:   0 — сделано или делать нечего; 1 — проход упал
 
 import fs from 'node:fs';
+import os from 'node:os';
+import path from 'node:path';
 import { execFileSync } from 'node:child_process';
 
 const DRY = process.argv.includes('--dry');
@@ -43,6 +45,21 @@ const MIN_GAP_H = 6;
 
 const SERVICE = 'data/airport-service.json';
 const QUEUE = 'data/airport-service-recheck.json';
+/**
+ * Свежий проход пишется СЮДА, а не в SERVICE (исправлено 25.10.2026).
+ *
+ * Прежняя редакция звала discover-schedules.mjs без --refresh и без --out. Без --refresh он
+ * пропускает всё уже известное — то есть первый проход не спрашивал поставщика НИ О ЧЁМ
+ * (прогон 25.10 06:13: «to probe 0»), и замер стоял с 04.09. Но и одного --refresh было бы мало:
+ * тогда проход переписал бы рабочий файл сайта на месте, вместе с первыми нулями, а очередь
+ * переспроса не завелась бы вовсе (её пишет только reconcile-service.mjs) — то есть второй проход
+ * не наступил бы никогда, и 61% ложных нулей уходили бы прямо на страницы.
+ *
+ * Теперь оба прохода пишут во временный файл, а reconcile-service.mjs сравнивает его с рабочим:
+ * положительные счета принимает, первый ноль там, где раньше были рейсы, НЕ принимает и кладёт
+ * в очередь, второй ноль по той же очереди — принимает.
+ */
+const FRESH = path.join(os.tmpdir(), 'airport-service-fresh.json');
 
 const read = (p) => { try { return JSON.parse(fs.readFileSync(p, 'utf8')); } catch { return null; } };
 
@@ -64,6 +81,9 @@ const run = (args) => {
   execFileSync('node', args, { stdio: 'inherit' });
 };
 
+/** Каждый проход начинает с чистого временного файла: иначе --only дописал бы к прошлому проходу. */
+const fresh = () => { if (!DRY) fs.rmSync(FRESH, { force: true }); };
+
 const svc = read(SERVICE);
 if (!svc) { console.error(`не читается ${SERVICE} — пересбор пропущен`); process.exit(1); }
 
@@ -79,8 +99,9 @@ console.log(`  очередь переспроса: ${pending} кодов${queue
 
 if (pending > 0 && queueAgeH != null && queueAgeH >= MIN_GAP_H) {
   console.log(`\nВТОРОЙ ПРОХОД: ${pending} кодов в другое время суток\n`);
-  run(['scripts/discover-schedules.mjs', '--only', QUEUE]);
-  run(['scripts/reconcile-service.mjs']);
+  fresh();
+  run(['scripts/discover-schedules.mjs', '--only', QUEUE, '--out', FRESH]);
+  run(['scripts/reconcile-service.mjs', FRESH, SERVICE]);
   // Сверка обязана идти СРАЗУ за приёмкой: она снимает наши отрицания там, где OurAirports
   // знает рейсы. Без неё свежие нули публикуются как «регулярных рейсов нет» — ровно то, что
   // 04.09 случилось с Палм-Бичем, Кишинёвом и Манасом.
@@ -97,7 +118,9 @@ if (pending > 0) {
 
 if (svcAgeD >= MAX_AGE_DAYS) {
   console.log('\nПЕРВЫЙ ПРОХОД: полный обход корпуса, 6 069 обращений\n');
-  run(['scripts/discover-schedules.mjs']);
+  fresh();
+  run(['scripts/discover-schedules.mjs', '--refresh', '--out', FRESH]);
+  run(['scripts/reconcile-service.mjs', FRESH, SERVICE]);
   console.log('\nпервый проход завершён — нули ушли в очередь, второй проход будет следующим запуском');
   process.exit(0);
 }
