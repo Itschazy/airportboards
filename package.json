@@ -43,6 +43,8 @@
     "check:route": "node scripts/check-route-page.mjs",
     "check:warmdemand": "node scripts/check-warm-demand.mjs",
     "check:servicefresh": "node scripts/check-service-freshness.mjs",
+    "check:guidefresh": "node scripts/check-guide-fresh.mjs",
+    "report:bots": "node scripts/bot-log-report.mjs",
     "check:alive": "node scripts/check-automation-alive.mjs",
     "check:liverefresh": "node scripts/check-live-refresh.mjs",
     "check:codemoves": "node scripts/check-code-moves.mjs",

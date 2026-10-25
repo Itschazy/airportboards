@@ -2,8 +2,14 @@
 // Harvest the strongest routes out of each mega-tier airport into data/top-routes.json,
 // for the sitemap and for anything else that wants a stable "top destinations" signal.
 //
-// Source: the production store, read through /api/flights with a bot user-agent — the API
-// serves bots store data only (lib/flights.ts BOT_RE), so this spends ZERO airlabs quota.
+// Source: the production store, read STRAIGHT FROM ITS FILES on the box
+// (~/airportsboard-data/store/entries, lib/flightStore.ts). Until 25.10.2026 it went through
+// /api/flights with a GPTBot user-agent: that never bought data (lib/live-budget.ts names
+// GPTBot a crawler and serves it the store), but it broke the project's one hard rule —
+// no agent calls /api/flights on prod, ever — and leaned on the bot classifier staying
+// exactly as it is. The files are the same data with no classifier in the way. Unlike the
+// API, they are not trimmed to the 80-row board, so per-snapshot evidence is somewhat larger
+// than in runs before 25.10.
 //
 // Why not one board, one snapshot: the board is capped at 80 rows, so single-snapshot
 // counts are thin (LHR's top route shows 3 rows, rank-8 is a seven-way tie at 2) and
@@ -15,11 +21,14 @@
 // The sitemap consumes only pairs with enough combined evidence, so a route that fades
 // from the boards stops being advertised instead of pointing at a noindexed page.
 //
-// Usage:  node scripts/harvest-top-routes.mjs          # merge into data/top-routes.json
+// Usage (on the box, as deploy, from /var/www/airportsboard):
+//   node scripts/harvest-top-routes.mjs          # merge into data/top-routes.json
 import fs from 'fs';
+import os from 'os';
+import path from 'path';
 
-const BASE = 'https://airportsboard.live';
-const UA = 'Mozilla/5.0 AppleWebKit/537.36 (KHTML, like Gecko); compatible; GPTBot/1.2; +https://openai.com/gptbot';
+const ENTRIES = path.join(process.env.AIRPORTSBOARD_DATA_DIR || path.join(os.homedir(), 'airportsboard-data'), 'store', 'entries');
+if (!fs.existsSync(ENTRIES)) { console.error(`no store at ${ENTRIES} — run this on the box`); process.exit(1); }
 const OUT = 'data/top-routes.json';
 const MEGA_MIN = 400;
 const PER_AIRPORT = 8;
@@ -33,13 +42,13 @@ const mega = Object.entries(svc)
   .sort();
 console.log(`mega airports: ${mega.length}`);
 
-async function board(iata, direction) {
+// Same key scheme as lib/flights.ts: "departures:dep_iata=LHR", file name URI-encoded.
+function board(iata, direction) {
+  const key = `${direction}:${direction === 'departures' ? 'dep' : 'arr'}_iata=${iata}`;
   try {
-    const r = await fetch(`${BASE}/api/flights/${iata}?direction=${direction}&locale=en`, {
-      headers: { 'user-agent': UA }, signal: AbortSignal.timeout(20000),
-    });
-    const j = await r.json();
-    return { rows: j.flights ?? [], fetchedAt: j.fetchedAt ?? null };
+    const e = JSON.parse(fs.readFileSync(path.join(ENTRIES, `${encodeURIComponent(key)}.json`), 'utf8'));
+    const rows = (e.data ?? []).map(f => ({ depIata: f.dep_iata, arrIata: f.arr_iata }));
+    return { rows, fetchedAt: e.ts ?? null };
   } catch { return { rows: [], fetchedAt: null }; }
 }
 
@@ -50,7 +59,7 @@ const arrEvidence = new Map();
 
 let cold = [];
 for (const iata of mega) {
-  const [dep, arr] = await Promise.all([board(iata, 'departures'), board(iata, 'arrivals')]);
+  const dep = board(iata, 'departures'), arr = board(iata, 'arrivals');
   if (!dep.rows.length && !arr.rows.length) { cold.push(iata); continue; }
   for (const f of dep.rows) {
     if (!f.arrIata || f.arrIata === iata) continue;
@@ -62,7 +71,6 @@ for (const iata of mega) {
     const k = `${f.depIata}-${iata}`;
     arrEvidence.set(k, (arrEvidence.get(k) ?? 0) + 1);
   }
-  await new Promise(r => setTimeout(r, 120));
 }
 console.log(`cold airports skipped: ${cold.length}${cold.length ? ` (${cold.join(', ')})` : ''}`);
 

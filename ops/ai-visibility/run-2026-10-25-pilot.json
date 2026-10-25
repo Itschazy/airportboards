@@ -1,0 +1,714 @@
+{
+ "run_id": "2026-10-25-pilot",
+ "corpus_id": "ru-airports-v1",
+ "observed_at": "2026-10-25T00:00Z/02:00Z",
+ "comparable_baseline": false,
+ "why_pilot": "Корпус заморожен ПОСЛЕ замера, один прогон без повторов; часть хостов источников скрыта инструментом (в данных — только видимые). Сравнивать как ориентир, а не как точку отсчёта; первая честная база — следующий прогон по этому корпусу с 2 повторами.",
+ "settings": {
+  "device": "desktop",
+  "account": "владелец, авторизован",
+  "region_yandex": "lr=56 (Челябинск)",
+  "chatgpt": "не мерили — недельная квота владельца 4%"
+ },
+ "runs": [
+  {
+   "query": "q01",
+   "engine": "perplexity",
+   "surface": "search",
+   "status": "observed",
+   "sources": [
+    "svo.su",
+    "airportsboard.live",
+    "tablo.online",
+    "flight-delayed.ru",
+    "expressaero.ru",
+    "airports.ru",
+    "aero-pass.ru"
+   ],
+   "ours_in_sources": true,
+   "ours_in_text": false
+  },
+  {
+   "query": "q01",
+   "engine": "google",
+   "surface": "ai-overview",
+   "status": "observed",
+   "sources": [
+    "svo.aero"
+   ],
+   "ours_in_sources": false,
+   "ours_in_text": false,
+   "organic_top10_ours": false
+  },
+  {
+   "query": "q01",
+   "engine": "yandex",
+   "surface": "alice-tab",
+   "status": "observed",
+   "sources": [
+    "svo.aero",
+    "rasp.yandex.ru",
+    "avia.tutu.ru",
+    "ru.trip.com"
+   ],
+   "ours_in_sources": false,
+   "ours_in_text": false,
+   "organic_pos_ours": null
+  },
+  {
+   "query": "q01",
+   "engine": "google",
+   "surface": "gemini-app",
+   "status": "observed",
+   "sources": [
+    "svo.aero",
+    "flightaware.com",
+    "flightradar24.com"
+   ],
+   "ours_in_sources": false,
+   "ours_in_text": false
+  },
+  {
+   "query": "q02",
+   "engine": "perplexity",
+   "surface": "search",
+   "status": "observed",
+   "sources": [
+    "t.rasp.yandex.ru",
+    "116.ru",
+    "aeroport-kazan.ru",
+    "avionio.com",
+    "business-gazeta.ru",
+    "fontanka.ru"
+   ],
+   "ours_in_sources": false,
+   "ours_in_text": false
+  },
+  {
+   "query": "q02",
+   "engine": "google",
+   "surface": "ai-overview",
+   "status": "observed",
+   "sources": [
+    "aeroport-kazan.ru",
+    "bilet.aero"
+   ],
+   "ours_in_sources": false,
+   "ours_in_text": false,
+   "organic_top10_ours": false
+  },
+  {
+   "query": "q02",
+   "engine": "yandex",
+   "surface": "alice-tab",
+   "status": "observed",
+   "sources": [
+    "kazan.aero",
+    "avia.tutu.ru",
+    "aviasales.ru"
+   ],
+   "ours_in_sources": false,
+   "ours_in_text": false,
+   "organic_pos_ours": null
+  },
+  {
+   "query": "q02",
+   "engine": "google",
+   "surface": "gemini-app",
+   "status": "observed",
+   "sources": [
+    "kazan.aero"
+   ],
+   "ours_in_sources": false,
+   "ours_in_text": false
+  },
+  {
+   "query": "q03",
+   "engine": "perplexity",
+   "surface": "search",
+   "status": "observed",
+   "sources": [
+    "aeroport-ufa.ru",
+    "airportufa.ru",
+    "airportsboard.live",
+    "airport-live.com",
+    "airports.ru",
+    "avionio.com"
+   ],
+   "ours_in_sources": true,
+   "ours_in_text": false
+  },
+  {
+   "query": "q03",
+   "engine": "google",
+   "surface": "ai-overview",
+   "status": "observed",
+   "sources": [
+    "airportufa.ru"
+   ],
+   "ours_in_sources": false,
+   "ours_in_text": false,
+   "organic_top10_ours": false
+  },
+  {
+   "query": "q03",
+   "engine": "yandex",
+   "surface": "alice-tab",
+   "status": "observed",
+   "sources": [
+    "airportufa.ru",
+    "avia.tutu.ru",
+    "rasp.yandex.ru"
+   ],
+   "ours_in_sources": false,
+   "ours_in_text": false,
+   "organic_pos_ours": null
+  },
+  {
+   "query": "q04",
+   "engine": "perplexity",
+   "surface": "search",
+   "status": "observed",
+   "sources": [
+    "tolmachevo.ru",
+    "t.rasp.yandex.ru",
+    "agent.ru",
+    "tablo.online"
+   ],
+   "ours_in_sources": false,
+   "ours_in_text": false
+  },
+  {
+   "query": "q04",
+   "engine": "google",
+   "surface": "ai-overview",
+   "status": "observed",
+   "sources": [
+    "tolmachevo.ru",
+    "t.rasp.yandex.kz",
+    "agent.ru"
+   ],
+   "ours_in_sources": false,
+   "ours_in_text": false,
+   "organic_top10_ours": false
+  },
+  {
+   "query": "q04",
+   "engine": "yandex",
+   "surface": "alice-tab",
+   "status": "observed",
+   "sources": [
+    "tolmachevo.ru",
+    "rasp.yandex.ru",
+    "avia.tutu.ru",
+    "aviasales.ru",
+    "ru.trip.com"
+   ],
+   "ours_in_sources": false,
+   "ours_in_text": false,
+   "organic_pos_ours": 11
+  },
+  {
+   "query": "q05",
+   "engine": "perplexity",
+   "surface": "search",
+   "status": "observed",
+   "sources": [
+    "dme.ru",
+    "t.rasp.yandex.ru",
+    "kupibilet.ru",
+    "domodedovo-online-tablo.ru",
+    "news.ru"
+   ],
+   "ours_in_sources": false,
+   "ours_in_text": false
+  },
+  {
+   "query": "q05",
+   "engine": "google",
+   "surface": "ai-overview",
+   "status": "observed",
+   "sources": [
+    "msk.guide",
+    "flytimer.ru"
+   ],
+   "ours_in_sources": false,
+   "ours_in_text": false,
+   "organic_top10_ours": false
+  },
+  {
+   "query": "q05",
+   "engine": "yandex",
+   "surface": "alice-tab",
+   "status": "observed",
+   "sources": [
+    "dme.ru",
+    "rasp.yandex.ru",
+    "avia.tutu.ru",
+    "ru.trip.com"
+   ],
+   "ours_in_sources": false,
+   "ours_in_text": false,
+   "organic_pos_ours": null
+  },
+  {
+   "query": "q06",
+   "engine": "perplexity",
+   "surface": "search",
+   "status": "observed",
+   "sources": [
+    "pulkovoairport.ru",
+    "aviasales.ru",
+    "peterburg.guide",
+    "2gis.ru",
+    "sokroma.ru",
+    "spb-gid.ru",
+    "kiwitaxi.ru"
+   ],
+   "ours_in_sources": false,
+   "ours_in_text": false
+  },
+  {
+   "query": "q06",
+   "engine": "google",
+   "surface": "ai-overview",
+   "status": "observed",
+   "sources": [
+    "sokroma.ru",
+    "aviasales.ru",
+    "spb-gid.ru",
+    "pulkovoairport.ru"
+   ],
+   "ours_in_sources": false,
+   "ours_in_text": false,
+   "organic_top10_ours": false
+  },
+  {
+   "query": "q06",
+   "engine": "yandex",
+   "surface": "alice-tab",
+   "status": "observed",
+   "sources": [
+    "rbc.ru",
+    "orgp.spb.ru",
+    "pulkovoairport.ru",
+    "travel.yandex.ru",
+    "ru.trip.com"
+   ],
+   "ours_in_sources": false,
+   "ours_in_text": false,
+   "organic_pos_ours": null
+  },
+  {
+   "query": "q07",
+   "engine": "perplexity",
+   "surface": "search",
+   "status": "observed",
+   "sources": [
+    "vnukovo.ru",
+    "qeepl.com",
+    "vc.ru",
+    "dtf.ru",
+    "yandex.ru",
+    "mghotels.ru",
+    "tenchat.ru",
+    "bagazhmat.ru",
+    "aeroexpress.ru"
+   ],
+   "ours_in_sources": false,
+   "ours_in_text": false
+  },
+  {
+   "query": "q07",
+   "engine": "google",
+   "surface": "ai-overview",
+   "status": "observed",
+   "sources": [
+    "vnukovo.ru",
+    "flynow.ru"
+   ],
+   "ours_in_sources": false,
+   "ours_in_text": false,
+   "organic_top10_ours": false
+  },
+  {
+   "query": "q07",
+   "engine": "yandex",
+   "surface": "alice-tab",
+   "status": "observed",
+   "sources": [
+    "vnukovo.ru",
+    "yandex.ru",
+    "dtf.ru",
+    "bag-stop.ru",
+    "grandparkingvnukovo.ru"
+   ],
+   "ours_in_sources": false,
+   "ours_in_text": false,
+   "organic_pos_ours": null
+  },
+  {
+   "query": "q08",
+   "engine": "perplexity",
+   "surface": "search",
+   "status": "observed",
+   "sources": [
+    "sodruzhestvoppk.ru",
+    "nashaplaneta.net",
+    "t.rasp.yandex.ru",
+    "aviakzn.ru",
+    "sputnik8.com",
+    "zhdkazan.ru",
+    "inkazan.ru",
+    "kazan-guide.ru"
+   ],
+   "ours_in_sources": false,
+   "ours_in_text": false
+  },
+  {
+   "query": "q08",
+   "engine": "google",
+   "surface": "ai-overview",
+   "status": "observed",
+   "sources": [
+    "sodruzhestvoppk.ru",
+    "zhdkazan.ru",
+    "laishevskyi.ru"
+   ],
+   "ours_in_sources": false,
+   "ours_in_text": false,
+   "organic_top10_ours": false
+  },
+  {
+   "query": "q08",
+   "engine": "yandex",
+   "surface": "alice-tab",
+   "status": "observed",
+   "sources": [
+    "trt-tv.ru",
+    "tourister.ru",
+    "sputnik8.com",
+    "inkazan.ru",
+    "dzen.ru",
+    "unitiki.com"
+   ],
+   "ours_in_sources": false,
+   "ours_in_text": false,
+   "organic_pos_ours": null
+  },
+  {
+   "query": "q09",
+   "engine": "perplexity",
+   "surface": "search",
+   "status": "observed",
+   "sources": [
+    "letim.me",
+    "akm.ru",
+    "aeraero.ru",
+    "2gis.ru",
+    "avito.ru",
+    "travelask.ru"
+   ],
+   "ours_in_sources": false,
+   "ours_in_text": false
+  },
+  {
+   "query": "q09",
+   "engine": "google",
+   "surface": "ai-overview",
+   "status": "observed",
+   "sources": [
+    "citydrive.ru",
+    "instagram.com",
+    "kolesa.kz",
+    "babyblog.ru",
+    "travelask.ru"
+   ],
+   "ours_in_sources": false,
+   "ours_in_text": false,
+   "organic_top10_ours": false
+  },
+  {
+   "query": "q09",
+   "engine": "yandex",
+   "surface": "alice-tab",
+   "status": "observed",
+   "sources": [
+    "sochi1.ru",
+    "aer.aero",
+    "kommersant.ru",
+    "unitiki.com"
+   ],
+   "ours_in_sources": false,
+   "ours_in_text": false,
+   "organic_pos_ours": null
+  },
+  {
+   "query": "q10",
+   "engine": "perplexity",
+   "surface": "search",
+   "status": "observed",
+   "sources": [
+    "avionio.com",
+    "airportsboard.live",
+    "biletyplus.ru",
+    "hurgada-airport.ru",
+    "tourprom.ru",
+    "airport-live.com",
+    "flytimer.ru"
+   ],
+   "ours_in_sources": true,
+   "ours_in_text": false
+  },
+  {
+   "query": "q10",
+   "engine": "google",
+   "surface": "ai-overview",
+   "status": "observed",
+   "sources": [
+    "avionio.com",
+    "lowcost.club"
+   ],
+   "ours_in_sources": false,
+   "ours_in_text": false,
+   "organic_top10_ours": false
+  },
+  {
+   "query": "q10",
+   "engine": "yandex",
+   "surface": "alice-tab",
+   "status": "observed",
+   "sources": [
+    "flightradar24.com",
+    "airportsboard.live",
+    "platipomiru.com"
+   ],
+   "ours_in_sources": true,
+   "ours_in_text": true,
+   "organic_pos_ours": null
+  },
+  {
+   "query": "q10",
+   "engine": "google",
+   "surface": "gemini-app",
+   "status": "observed",
+   "sources": [
+    "flightradar24.com",
+    "flightstats.com"
+   ],
+   "ours_in_sources": false,
+   "ours_in_text": false
+  },
+  {
+   "query": "q11",
+   "engine": "perplexity",
+   "surface": "search",
+   "status": "observed",
+   "sources": [
+    "antalya-airport.aero",
+    "avionio.com",
+    "t.rasp.yandex.ru",
+    "uralairlines.ru",
+    "kupibilet.ru",
+    "aytaero.ru",
+    "tourprom.ru"
+   ],
+   "ours_in_sources": false,
+   "ours_in_text": false
+  },
+  {
+   "query": "q11",
+   "engine": "google",
+   "surface": "ai-overview",
+   "status": "observed",
+   "sources": [
+    "antalya-airport.aero",
+    "airport-live.com"
+   ],
+   "ours_in_sources": false,
+   "ours_in_text": false,
+   "organic_top10_ours": false
+  },
+  {
+   "query": "q11",
+   "engine": "yandex",
+   "surface": "alice-tab",
+   "status": "observed",
+   "sources": [
+    "kupibilet.ru",
+    "antalya-airport.aero",
+    "rasp.yandex.ru",
+    "ru.trip.com"
+   ],
+   "ours_in_sources": false,
+   "ours_in_text": false,
+   "organic_pos_ours": null
+  },
+  {
+   "query": "q12",
+   "engine": "perplexity",
+   "surface": "search",
+   "status": "observed",
+   "sources": [
+    "mvairport.ru",
+    "t.rasp.yandex.ru",
+    "uralairlines.ru",
+    "biletyplus.ru",
+    "aviado.ru",
+    "tablo.online"
+   ],
+   "ours_in_sources": false,
+   "ours_in_text": false
+  },
+  {
+   "query": "q12",
+   "engine": "google",
+   "surface": "ai-overview",
+   "status": "observed",
+   "sources": [
+    "mvairport.ru",
+    "fomag.ru"
+   ],
+   "ours_in_sources": false,
+   "ours_in_text": false,
+   "organic_top10_ours": false
+  },
+  {
+   "query": "q12",
+   "engine": "yandex",
+   "surface": "alice-tab",
+   "status": "observed",
+   "sources": [
+    "mvairport.ru",
+    "rasp.yandex.ru",
+    "aviasales.ru",
+    "ru.trip.com"
+   ],
+   "ours_in_sources": false,
+   "ours_in_text": false,
+   "organic_pos_ours": null
+  },
+  {
+   "query": "q13",
+   "engine": "perplexity",
+   "surface": "search",
+   "status": "observed",
+   "sources": [
+    "ar-svx.ru",
+    "t.rasp.yandex.ru",
+    "uralairlines.ru",
+    "airports.ru"
+   ],
+   "ours_in_sources": false,
+   "ours_in_text": false
+  },
+  {
+   "query": "q13",
+   "engine": "google",
+   "surface": "ai-overview",
+   "status": "observed",
+   "sources": [
+    "ar-svx.ru",
+    "t.rasp.yandex.kz",
+    "agent.ru"
+   ],
+   "ours_in_sources": false,
+   "ours_in_text": false,
+   "organic_top10_ours": false
+  },
+  {
+   "query": "q13",
+   "engine": "yandex",
+   "surface": "alice-tab",
+   "status": "observed",
+   "sources": [
+    "svx.aero",
+    "rasp.yandex.ru",
+    "avia.tutu.ru",
+    "ru.trip.com"
+   ],
+   "ours_in_sources": false,
+   "ours_in_text": false,
+   "organic_pos_ours": null
+  },
+  {
+   "query": "q14",
+   "engine": "perplexity",
+   "surface": "search",
+   "status": "observed",
+   "sources": [
+    "ar-kuf.ru",
+    "airports.ru",
+    "gdereis.ru",
+    "w512.ru"
+   ],
+   "ours_in_sources": false,
+   "ours_in_text": false
+  },
+  {
+   "query": "q14",
+   "engine": "google",
+   "surface": "ai-overview",
+   "status": "observed",
+   "sources": [
+    "ar-kuf.ru",
+    "fomag.ru"
+   ],
+   "ours_in_sources": false,
+   "ours_in_text": false,
+   "organic_top10_ours": false
+  },
+  {
+   "query": "q14",
+   "engine": "yandex",
+   "surface": "alice-tab",
+   "status": "observed",
+   "sources": [
+    "ar-kuf.ru",
+    "rasp.yandex.ru",
+    "tutu.ru",
+    "avia.tutu.ru",
+    "ru.trip.com"
+   ],
+   "ours_in_sources": false,
+   "ours_in_text": false,
+   "organic_pos_ours": null
+  },
+  {
+   "query": "q15",
+   "engine": "perplexity",
+   "surface": "search",
+   "status": "observed",
+   "sources": [
+    "aviasales.ru",
+    "avticket.ru",
+    "kupibilet.ru",
+    "flydex.ru"
+   ],
+   "ours_in_sources": false,
+   "ours_in_text": false
+  },
+  {
+   "query": "q15",
+   "engine": "google",
+   "surface": "ai-overview",
+   "status": "observed",
+   "sources": [
+    "aviasales.ru",
+    "travelask.ru",
+    "tbank.ru",
+    "flydex.ru"
+   ],
+   "ours_in_sources": false,
+   "ours_in_text": false,
+   "organic_top10_ours": false
+  },
+  {
+   "query": "q15",
+   "engine": "yandex",
+   "surface": "alice-tab",
+   "status": "unavailable",
+   "note": "ответ без источников"
+  }
+ ]
+}

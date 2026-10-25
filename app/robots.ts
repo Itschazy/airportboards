@@ -23,9 +23,21 @@ export default function robots(): MetadataRoute.Robots {
     // it is listed explicitly as allowed so that no future edit of the AdsBot group can be
     // read as touching it. If a Google Ads campaign is ever started, delete the AdsBot group
     // first — ads to a landing page AdsBot cannot fetch get disapproved.
+    //
+    // SEO-service crawlers are shut out BY NAME for the same reason as AdsBot (25.10.2026).
+    // nginx log for 24.10, scripts/bot-log-report.mjs: DataForSeoBot 21 299 requests, QlyzeBot
+    // 20 312, AhrefsBot 13 398, SemrushBot 7 144, DotBot 2 037, MJ12bot 1 270 — ~65K a day,
+    // more than Googlebot, YandexBot, PerplexityBot and OAI-SearchBot put together, and 0–22%
+    // of it on pages the sitemap even advertises. They build databases for other people's SEO
+    // tools; no reader ever arrives through them. All of them honour robots.txt. Search and
+    // AI-answer crawlers (ExaSearchBot, YouBot, Qwantbot included) stay open — see above.
     rules: [
       { userAgent: '*', allow: '/', disallow: ['/api/'] },
       { userAgent: ['AdsBot-Google', 'AdsBot-Google-Mobile'], disallow: '/' },
+      {
+        userAgent: ['DataForSeoBot', 'QlyzeBot', 'AhrefsBot', 'SemrushBot', 'DotBot', 'MJ12bot', 'SERankingBacklinksBot', 'BLEXBot'],
+        disallow: '/',
+      },
       { userAgent: 'Mediapartners-Google', allow: '/' },
     ],
     sitemap: 'https://airportsboard.live/sitemap.xml',
