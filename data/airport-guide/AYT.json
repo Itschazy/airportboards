@@ -1,0 +1,46 @@
+{
+ "iata": "AYT",
+ "checked": "2026-10-25",
+ "blocks": [
+  {
+   "id": "transport",
+   "title": "Как доехать",
+   "hint": "Автобусы и трамвай AntRay",
+   "text": "До междугороднего автовокзала и центра Антальи ходят городские автобусы, расписание — в приложении Antalyakart или по телефону 0242 606 07 07. Трамвай AntRay идёт по маршруту аэропорт — центр города — междугородний автовокзал — район Фатих. Туристов турфирм у выхода из терминала встречают стойки туроператоров с их автобусами.",
+   "source": "antalya-airport.aero",
+   "url": "https://www.antalya-airport.aero/passazhiry-i-posetiteli-20-ru/transport-24-ru/avtobusy-i-obshchestvennyy-transport-77-ru"
+  },
+  {
+   "id": "taxi",
+   "title": "Такси",
+   "hint": "У выходов из терминалов",
+   "text": "Стоянки такси напротив выходов из всех терминалов, у водителей бейджи аэропорта. Тарифы — на информационном стенде рядом со стоянкой; есть онлайн-бронирование через кооперативную службу такси аэропорта (antalyaairporttaxi.net).",
+   "source": "antalya-airport.aero",
+   "url": "https://www.antalya-airport.aero/passazhiry-i-posetiteli-20-ru/transport-24-ru/taksi-78-ru"
+  },
+  {
+   "id": "storage",
+   "title": "Камера хранения",
+   "hint": "Зал прилёта внутреннего терминала",
+   "text": "Камера хранения находится в зале прилёта внутреннего терминала; ею могут пользоваться пассажиры, вылетающие из терминала 1 или внутреннего терминала. Упаковка багажа — круглосуточно, платно, в залах вылета терминалов 1 и 2.",
+   "source": "antalya-airport.aero",
+   "url": "https://www.antalya-airport.aero/passazhiry-i-posetiteli-20-ru/uslugi-27-ru/obsluzhivanie-bagazha-60-ru"
+  },
+  {
+   "id": "parking",
+   "title": "Парковка",
+   "hint": "Многоэтажная, 2643 места",
+   "text": "Многоэтажная парковка на 2643 машины напротив внутреннего терминала. Стоимость считает калькулятор на сайте аэропорта; абонементы оформляют в центре обслуживания на первом этаже (P1).",
+   "source": "antalya-airport.aero",
+   "url": "https://www.antalya-airport.aero/passazhiry-i-posetiteli-20-ru/parkovka-75-ru"
+  },
+  {
+   "id": "wifi",
+   "title": "Wi‑Fi",
+   "hint": "Бесплатно 1 час",
+   "text": "Бесплатный интернет на 1 час во всех терминалах. PIN-код выдают бесплатные киоски Wi‑Fi в залах прилёта и вылета, нужен мобильный телефон и паспорт или удостоверение личности. В терминале CIP и зонах отдыха доступ без ограничения.",
+   "source": "antalya-airport.aero",
+   "url": "https://www.antalya-airport.aero/passazhiry-i-posetiteli-20-ru/uslugi-27-ru/besplatnyy-wi-fi-64-ru"
+  }
+ ]
+}

@@ -1,0 +1,46 @@
+{
+ "iata": "GYD",
+ "checked": "2026-10-25",
+ "blocks": [
+  {
+   "id": "transport",
+   "title": "Как доехать",
+   "hint": "Аэроэкспресс до вокзала, 1,30 AZN",
+   "text": "Автобусы «Аэро Экспресс» идут от терминалов 1 и 2 до Бакинского ж/д вокзала (метро «28 Мая») с остановками у Сураханинского моста и метро «Кёроглу». С 06:00 до 23:15 каждые 20 минут, ночью каждые 45 минут. Проезд 1,30 AZN по карте BAKU CARD, сама карта 2 AZN; одну карту может использовать группа.",
+   "source": "airport.az",
+   "url": "https://airport.az/ru/transport/aero-express/"
+  },
+  {
+   "id": "lounges",
+   "title": "Бизнес-залы",
+   "hint": "Несколько залов",
+   "text": "В аэропорту работают залы AZAL, Business Class Lounge, Absheron, Salam, Baku Club, Premium и Mugam. AZAL Lounge на первом этаже терминала 1 — отдельная регистрация без очереди для пассажиров бизнес- и премиум-эконом-класса с собственной зоной высадки.",
+   "source": "airport.az",
+   "url": "https://airport.az/ru/facilities/lounges/"
+  },
+  {
+   "id": "kids",
+   "title": "С ребёнком",
+   "hint": "Терминалы 1 и 2",
+   "text": "Комнаты матери и ребёнка с пеленальным столиком, холодной и горячей водой: в терминале 1 на 3 и 4 этажах, в терминале 2 на 2 этаже. Пеленальные столики есть и во всех многофункциональных туалетах.",
+   "source": "airport.az",
+   "url": "https://airport.az/ru/facilities/customers-with-children/"
+  },
+  {
+   "id": "parking",
+   "title": "Парковка",
+   "hint": "15 мин бесплатно, 24/7",
+   "text": "Круглосуточно, больше 2 тысяч мест: 835 у терминала 1 и 1166 у терминала 2. Первые 15 минут бесплатно, до 2 часов 1 AZN, до 4 часов 2 AZN, до 12 часов 6 AZN, до суток 15 AZN, каждый следующий день +15 AZN. Оплата наличными, картой или онлайн (Tezöde, AzParkinq, Birbank).",
+   "source": "airport.az",
+   "url": "https://airport.az/ru/transport/parking/"
+  },
+  {
+   "id": "wifi",
+   "title": "Wi‑Fi",
+   "hint": "Сеть Baku-Airport-Free-WiFi",
+   "text": "Бесплатный Wi‑Fi по всему терминалу, включая кафе, магазины и бизнес-залы: сеть Baku-Airport-Free-WiFi. В зонах вылета терминала 1 есть бесплатные компьютеры с интернетом.",
+   "source": "airport.az",
+   "url": "https://airport.az/ru/facilities/internet-working-area/"
+  }
+ ]
+}

@@ -1,0 +1,46 @@
+{
+ "iata": "IST",
+ "checked": "2026-10-25",
+ "blocks": [
+  {
+   "id": "transport",
+   "title": "Как доехать",
+   "hint": "Метро M11, автобусы Havaist",
+   "text": "Метро M11 связывает аэропорт с Гайреттепе, а с 20 июня 2026 года линия продлена до Халкалы. Автобусы Havaist отправляются с транспортного этажа −2 по многим районам города, в том числе Бешикташ, Кадыкёй, Аксарай, Султанахмет (Чатладыкапы) и автовокзал Эсенлер. Городские автобусы İETT — 5 маршрутов до центра.",
+   "source": "istairport.com",
+   "url": "https://www.istairport.com/en/airport/airport-transportation/urban-transportation/public-transportation?locale=ru"
+  },
+  {
+   "id": "sleep",
+   "title": "Где поспать",
+   "hint": "YOTEL до и после контроля",
+   "text": "Отель YOTEL прямо в терминале: 171 кабина в общей зоне (напротив стоек регистрации P) и 280 в зоне вылета (YOTELAIR, зона A–B), вторая — только для улетающих международными рейсами. Бронирование от 4 часов. Почасовые Sleepcabins YOTELAIR — напротив входа в iGA Lounge, этажом выше, только без предварительной брони.",
+   "source": "istairport.com",
+   "url": "https://www.istairport.com/en/services/discover/accommodation/istanbul-airport-hotel?locale=ru"
+  },
+  {
+   "id": "kids",
+   "title": "С ребёнком",
+   "hint": "Игровые зоны 700 м²",
+   "text": "Есть комната матери и ребёнка, игровые площадки пяти тематик общей площадью 700 м², бесплатные поездки на багги для пассажиров с детьми до 2 лет, отдельные семейные парковочные места и семейные пункты досмотра.",
+   "source": "istairport.com",
+   "url": "https://www.istairport.com/en/services/discover/child-and-family-friendly-airport?locale=ru"
+  },
+  {
+   "id": "parking",
+   "title": "Парковка",
+   "hint": "Многоуровневая, под одной крышей",
+   "text": "Многоуровневая парковка под одной крышей, круглосуточное видеонаблюдение и охрана. С 1 января 2024 года без абонемента оплата посуточная; стоимость считает калькулятор на сайте аэропорта. При оплате через приложение аэропорта скидка 10% (кроме абонементов на 15 и 30 дней). Парковщик — у входа в терминал CIP.",
+   "source": "istairport.com",
+   "url": "https://www.istairport.com/en/airport/airport-transportation/airport-carpark?locale=ru"
+  },
+  {
+   "id": "wifi",
+   "title": "Wi‑Fi",
+   "hint": "Безлимитный, бесплатный",
+   "text": "Бесплатный безлимитный интернет: сеть Wi‑Fi iGA, вход по номеру телефона с паролем из SMS или по коду доступа, который выдают киоски в терминале после сканирования паспорта.",
+   "source": "istairport.com",
+   "url": "https://www.istairport.com/en/services/discover/general-facilities/wi-fi?locale=ru"
+  }
+ ]
+}
