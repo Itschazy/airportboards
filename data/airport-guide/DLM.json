@@ -1,0 +1,38 @@
+{
+ "iata": "DLM",
+ "checked": "2026-10-25",
+ "blocks": [
+  {
+   "id": "transport",
+   "title": "Как доехать",
+   "hint": "Havaş до Мармариса и Фетхие",
+   "text": "Шаттлы Havaş отходят с парковки аэропорта в центры Мармариса и Фетхие. Маршрут на Мармарис: Даламан, Ортаджа, Кёйджегиз, Гёкова, автовокзал Мармариса; на Фетхие: Даламан, Гёджек, Гюнлюкбаши, бульвар Аднана Мендереса, автовокзал Фетхие. По пути высаживают в оговорённых точках, если заранее сказать водителю. Расписание и цены — на сайте Havaş.",
+   "source": "dalamanairport.aero",
+   "url": "https://www.dalamanairport.aero/en/passengers/public-transport"
+  },
+  {
+   "id": "taxi",
+   "title": "Такси",
+   "hint": "Кооператив такси аэропорта",
+   "text": "Такси в аэропорту — кооператив Dalaman Airport Taxi; телефон и WhatsApp +90 533 958 28 72, сайт dalamanairporttaxi.com.",
+   "source": "dalamanairport.aero",
+   "url": "https://www.dalamanairport.aero/en/passengers/taxi"
+  },
+  {
+   "id": "parking",
+   "title": "Парковка",
+   "hint": "Круглосуточно, у терминалов 1 и 2",
+   "text": "Парковка у терминалов 1 и 2 общей площадью 72 972 м² работает круглосуточно и круглый год. Стоимость считает калькулятор на сайте аэропорта; тарифы устанавливает DHMI, последнее обновление — январь 2026 года, НДС включён.",
+   "source": "dalamanairport.aero",
+   "url": "https://www.dalamanairport.aero/en/passengers/parking"
+  },
+  {
+   "id": "wifi",
+   "title": "Wi‑Fi",
+   "hint": "Бесплатно 30 минут",
+   "text": "Wi‑Fi DorukNet во всех залах прилёта и вылета: 30 минут бесплатно по паролю, который выдают киоски после сканирования паспорта; дольше и премиум — платно. В бизнес-залах и терминале бизнес-авиации — без ограничений.",
+   "source": "dalamanairport.aero",
+   "url": "https://www.dalamanairport.aero/en/services/wifi"
+  }
+ ]
+}

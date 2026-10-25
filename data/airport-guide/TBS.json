@@ -1,0 +1,30 @@
+{
+ "iata": "TBS",
+ "checked": "2026-10-25",
+ "blocks": [
+  {
+   "id": "transport",
+   "title": "Как доехать",
+   "hint": "Автобус 337, 1 GEL",
+   "text": "Городской автобус № 337 «Аэропорт — центр Тбилиси» отходит от остановки перед залом прилёта, с 06:59 до 22:59. Через центр идёт по проспекту Руставели и площади Свободы до Вокзальной площади. Проезд 1 GEL с 90 минутами пересадок при оплате картой Metro Money или банковской картой; сама карта Metro Money стоит 2 GEL.",
+   "source": "tbilisiairport.com",
+   "url": "https://tbilisiairport.com/en-EN/passenger-guide/to-from-the-airport/page/bus"
+  },
+  {
+   "id": "taxi",
+   "title": "Такси",
+   "hint": "40 GEL до центра",
+   "text": "Такси круглосуточно у выхода из зала прилёта. До центра фиксированно 40 GEL, в пригороды 50 GEL, в пути 20–30 минут в зависимости от пробок.",
+   "source": "tbilisiairport.com",
+   "url": "https://tbilisiairport.com/en-EN/passenger-guide/to-from-the-airport/page/taxi"
+  },
+  {
+   "id": "wifi",
+   "title": "Wi‑Fi",
+   "hint": "Бесплатно, без регистрации",
+   "text": "Бесплатный Wi‑Fi без регистрации в большинстве зон ожидания терминалов вылета и прилёта: сети Tbilisi Loves You или Airport Free Wi‑Fi, затем принять условия на странице входа.",
+   "source": "tbilisiairport.com",
+   "url": "https://tbilisiairport.com/en-EN/passenger-guide/airport-facilities-services/page/internet-wi-fi"
+  }
+ ]
+}

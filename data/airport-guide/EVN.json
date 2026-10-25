@@ -1,0 +1,30 @@
+{
+ "iata": "EVN",
+ "checked": "2026-10-25",
+ "blocks": [
+  {
+   "id": "transport",
+   "title": "Как доехать",
+   "hint": "Автобусы N100 и N201",
+   "text": "Автобус N100 ходит по маршруту аэропорт Звартноц — центр Еревана и обратно. Маршрут N201 (Elitebus) — экспресс из аэропорта в центр Еревана и обратно. В зале прилёта на 1 этаже круглосуточно работают службы проката машин: Carwiz, Enterprise, GoMotion, Hertz, SIXT.",
+   "source": "zvartnots.am",
+   "url": "https://zvartnots.am/RU/Content/Transport"
+  },
+  {
+   "id": "taxi",
+   "title": "Такси",
+   "hint": "Eco Taxi, зал прилёта",
+   "text": "Стойка Eco Taxi в зале прилёта на 1 этаже, круглосуточно.",
+   "source": "zvartnots.am",
+   "url": "https://zvartnots.am/RU/Content/Transport"
+  },
+  {
+   "id": "parking",
+   "title": "Парковка",
+   "hint": "Крытая, 642 места",
+   "text": "Крытое парковочное здание на 642 машины напротив пассажирского терминала. Время считается с получения талона на въезде; заезд для посадки и высадки до 10 минут бесплатный. Оплата в автоматических терминалах до того, как сесть в машину.",
+   "source": "zvartnots.am",
+   "url": "https://zvartnots.am/RU/Content/Parking"
+  }
+ ]
+}
