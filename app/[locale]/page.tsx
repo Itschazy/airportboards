@@ -2,7 +2,7 @@ import { getTranslations , setRequestLocale } from 'next-intl/server';
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import {
-  POPULAR_AIRPORTS, POPULAR_CITIES, getAirport, getCountries, slugify,
+  POPULAR_AIRPORTS, POPULAR_AIRPORTS_RU, POPULAR_CITIES, getAirport, getCountries, slugify,
 } from '@/lib/airports';
 import { numLocale, locales } from '@/lib/i18n';
 import { getCityName, getCountryName } from '@/lib/places';
@@ -66,7 +66,7 @@ export default async function HomePage({ params }: Props) {
   // heading that said "当前热门" or "人気の空港" and above a footer that printed
   // "Соединённые Штаты". The data to do it right has been there all along — the same tables
   // every airport page uses.
-  const popularList = POPULAR_AIRPORTS.map(iata => {
+  const popularList = (locale === 'ru' ? POPULAR_AIRPORTS_RU : POPULAR_AIRPORTS).map(iata => {
     const a = getAirport(iata);
     return a ? {
       iata,

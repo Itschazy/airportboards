@@ -9,6 +9,7 @@ import { nearestAirports, getCountries, getAirportsByCountry, getCities, getAllI
 import { getCityName, getCountryName } from '@/lib/places';
 import { countryIn as esCountryIn } from '@/lib/es-article';
 import { getAirportName } from '@/lib/airport-names';
+import { localAirlineName } from '@/lib/airline-ru';
 import type { FlightRow } from '@/lib/flights';
 import { MoreInfo, OverviewMetrics, AboutCard, Faq } from '@/components/AirportExtras';
 import { getAirportContentExtended } from '@/lib/airport-content-extended';
@@ -186,7 +187,7 @@ export async function AirportBottom({ airport, locale, about, displayName, fligh
       e.n++; routeMap.set(otherIata, e);
     }
     if (f.airlineIata) {
-      const e = airlineMap.get(f.airlineIata) || { name: f.airline || f.airlineIata, n: 0 };
+      const e = airlineMap.get(f.airlineIata) || { name: f.airline ? localAirlineName(f.airline, locale) : f.airlineIata, n: 0 };
       e.n++; airlineMap.set(f.airlineIata, e);
     }
   }

@@ -400,6 +400,18 @@ export const POPULAR_AIRPORTS = [
   'FRA', 'AMS', 'IST', 'ICN', 'PEK', 'ORD', 'ATL', 'SYD',
 ];
 
+// Русская главная — по измеренному спросу, а не по списку выше (25.10.2026). Список выше
+// подбирался под AdSense, который в России не показывается; AdSense снят 18.10, а 98% живых
+// визитов — русская локаль. Здесь — первые 16 аэропортов по визитам на /ru/airport/XXX из
+// Метрики 110112198 за 30 дней до 25.10 (роботы исключены): HRG 3 630, SSH 3 129, AYT 2 917 …
+// TAS 903, EVN 860, PVG 639. Казань из CLAUDE.md здесь не первая: курортный сезон перевернул спрос.
+// Только показ: пререндер и карта сайта по-прежнему идут от POPULAR_AIRPORTS. Освежать по
+// той же Метрике, а не по ощущению.
+export const POPULAR_AIRPORTS_RU = [
+  'HRG', 'SSH', 'AYT', 'IST', 'GYD', 'DME', 'DXB', 'LWN',
+  'BJV', 'OVB', 'UFA', 'DLM', 'KZN', 'TAS', 'EVN', 'PVG',
+];
+
 // Curated cities for the homepage SEO block (city → its primary airport).
 export const POPULAR_CITIES: { name: string; code: string; iata: string }[] = [
   { name: 'New York', code: 'NYC', iata: 'JFK' },

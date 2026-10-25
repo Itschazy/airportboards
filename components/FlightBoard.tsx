@@ -1,6 +1,7 @@
 'use client';
 import { flightDelayMinutes, imminentFlightMinutes } from '@/lib/flight-time';
 import { numLocale } from '@/lib/i18n';
+import { localAirlineName } from '@/lib/airline-ru';
 
 import { useEffect, useState, useCallback, useRef, useMemo } from 'react';
 import Link from 'next/link';
@@ -133,21 +134,13 @@ const AIRCRAFT: Record<string, string> = {
   B789: 'Boeing 787', B78X: 'Boeing 787', SU95: 'Superjet 100', AT72: 'ATR 72', AT76: 'ATR 72',
   E190: 'Embraer 190', E195: 'Embraer 195', CRJ2: 'CRJ200', DH8D: 'Dash 8', MC21: 'МС-21',
 };
-/** Русские названия для перевозчиков, которых русскоязычный читатель знает по-русски.
- *  Справочник data/airlines.json — латиницей, и «Pobeda» на русском табло выглядит чужим. */
-const AIRLINE_RU: Record<string, string> = {
-  Aeroflot: 'Аэрофлот', Pobeda: 'Победа', 'Rossiya Airlines': 'Россия', 'S7 Airlines': 'S7',
-  'Ural Airlines': 'Уральские авиалинии', 'Utair Aviation': 'ЮТэйр', 'Nordwind Airlines': 'Nordwind',
-  'Red Wings Airlines': 'Red Wings', 'Smartavia': 'Смартавиа', 'Yakutia Air': 'Якутия',
-  'Aurora Airlines': 'Аврора', Azimuth: 'Азимут', Severstal: 'Северсталь',
-  'Izhavia': 'Ижавиа', NordStar: 'NordStar', 'UVT aero': 'ЮВТ Аэро',
-  'RusLine / Air Volga': 'РусЛайн', 'Belavia': 'Белавиа', };
+
 function rowMeta(f: Flight, locale: string): string[] {
   // Время в пути ПЕРВЫМ: на 375px колонке города ~125px, и многоточие съедает хвост. Название
   // авиакомпании угадывается и по началу («Уральские…»), а обрезанное «1 ч 3…» — бесполезно.
   const parts: string[] = [];
   if (f.durationMin) parts.push(fmtDur(f.durationMin, locale));
-  if (f.airline && !/^[A-Z0-9]{2,3}\*?$/.test(f.airline)) parts.push((locale === 'ru' && AIRLINE_RU[f.airline]) || f.airline);
+  if (f.airline && !/^[A-Z0-9]{2,3}\*?$/.test(f.airline)) parts.push(localAirlineName(f.airline, locale));
   if (f.aircraft) parts.push(AIRCRAFT[f.aircraft] ?? f.aircraft);
   return parts;
 }
