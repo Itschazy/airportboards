@@ -128,9 +128,23 @@ export async function airportsByDemand(days = 30) {
  *
  * Возвращает пути, а не адреса: домен приклеивает вызывающий, ему же решать про локаль.
  */
-export async function priorityPaths({ known = new Set(), locales = ['ru'], limit = Infinity } = {}) {
+export async function priorityPaths({ known = new Set(), locales = ['ru'], limit = Infinity, sentAt = {} } = {}) {
   const inMap = await sitemapPaths();
   const mapSet = new Set(inMap);
+
+  // 0. Страница с НОВЫМ содержимым (25.10.2026): справочная по аэропорту проверена позже, чем
+  //    страницу в последний раз отправляли на переобход. Сам борт меняется каждый день и
+  //    переобхода не просит, а справочная — это новый текст, который поисковик должен увидеть,
+  //    и на нём строятся ответы Алисы и FAQ. Идёт впереди спроса: таких страниц десятки, а не
+  //    сотни, и квоту в 150 они не съедают.
+  const changed = [];
+  for (const { code, checked } of guideChecks()) {
+    for (const loc of locales) {
+      const p = `/${loc}/airport/${code}`;
+      const last = Date.parse(sentAt[p] ?? '');
+      if (!(last >= Date.parse(`${checked}T00:00Z`))) changed.push(p);
+    }
+  }
 
   const hot = [];      // спрос + не отправляли
   const warm = [];     // спрос, отправляли раньше
@@ -161,8 +175,19 @@ export async function priorityPaths({ known = new Set(), locales = ['ru'], limit
     }
   }
 
-  const paths = [...new Set([...hot, ...warm, ...cold])].slice(0, limit);
-  return { paths, sitemapSize: inMap.length, buckets: { hot: hot.length, warm: warm.length, cold: cold.length } };
+  const paths = [...new Set([...changed, ...hot, ...warm, ...cold])].slice(0, limit);
+  return { paths, sitemapSize: inMap.length, buckets: { changed: changed.length, hot: hot.length, warm: warm.length, cold: cold.length } };
+}
+
+/** Аэропорты со справочной и дата её проверки — из data/airport-guide/<IATA>.json. */
+function guideChecks() {
+  const dir = 'data/airport-guide';
+  try {
+    return fs.readdirSync(dir).filter((f) => /^[A-Z]{3}\.json$/.test(f)).map((f) => {
+      try { return { code: f.slice(0, 3), checked: JSON.parse(fs.readFileSync(path.join(dir, f), 'utf8')).checked }; }
+      catch { return null; }
+    }).filter((x) => x && /^\d{4}-\d{2}-\d{2}$/.test(x.checked ?? ''));
+  } catch { return []; }
 }
 
 /**

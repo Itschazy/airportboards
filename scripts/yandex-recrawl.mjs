@@ -51,8 +51,8 @@ if (budget <= 0) { console.log('на сегодня всё выбрано'); pro
 
 // ── Что именно ───────────────────────────────────────────────────────────────────────────
 const state = loadState(STATE);
-const { paths, sitemapSize, buckets } = await priorityPaths({ known: knownPaths(state), locales: ['ru'], limit: budget });
-console.log(`карта сайта: ${sitemapSize} записей | очередь: спрос+новое ${buckets.hot}, спрос ${buckets.warm}, новое без спроса ${buckets.cold} | к отправке: ${paths.length}`);
+const { paths, sitemapSize, buckets } = await priorityPaths({ known: knownPaths(state), locales: ['ru'], limit: budget, sentAt: state.sent ?? {} });
+console.log(`карта сайта: ${sitemapSize} записей | очередь: новая справочная ${buckets.changed}, спрос+новое ${buckets.hot}, спрос ${buckets.warm}, новое без спроса ${buckets.cold} | к отправке: ${paths.length}`);
 if (!paths.length) { console.log('очередь пуста'); process.exit(0); }
 
 for (const p of paths.slice(0, 8)) console.log('   ', p);
