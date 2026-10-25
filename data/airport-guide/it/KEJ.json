@@ -1,0 +1,26 @@
+{
+  "iata": "KEJ",
+  "about": "Kemerovo: aeroporto internazionale intitolato ad A. A. Leonov, a 5 km a sud-est della periferia della città e a 11 km dal centro. Una sola pista; l’aerodromo è operativo giorno e notte ed è in uso condiviso con il Ministero della Difesa e la Rosgvardiya.",
+  "blocks": {
+    "lounges": {
+      "title": "Sale business",
+      "hint": "Livello 3, 4000 ₽",
+      "text": "Sala business per i voli nazionali al livello 3, dopo i controlli a destra, aperta dalle 04:30 alle 20:00. Gratuita per i passeggeri di classe business e i titolari di carte con diritto d’accesso; economy con le carte Every Lounge, GoldenKey, RusPriority, Persona.aero e di altri programmi. A pagamento 4000 ₽, bambini 2–12 anni 2000 ₽, sotto i 2 anni gratis."
+    },
+    "storage": {
+      "title": "Deposito bagagli",
+      "hint": "Da 200 ₽ al giorno",
+      "text": "Il deposito bagagli segue l’orario dell’aerostazione dei voli nazionali. Bagaglio a mano 200 ₽ al giorno, bagaglio fino a 50×40×20 cm 220 ₽, più grande 270 ₽, oltre 100×50×70 cm 500 ₽. Meno di un giorno si paga come un giorno intero."
+    },
+    "kids": {
+      "title": "Con bambini",
+      "hint": "Livello 3, 04:30–20:00",
+      "text": "Sala madre e bambino al livello 3, nell’ala sinistra accanto alla zona controlli, gratuita, dalle 04:30 alle 20:00. Per passeggeri in partenza con bambini sotto i 7 anni, bambini con disabilità sotto i 14 anni e donne nella seconda metà della gravidanza."
+    },
+    "parking": {
+      "title": "Parcheggio",
+      "hint": "15 min gratis",
+      "text": "Piazzale dell’aerostazione a 30 m dal terminal, 173 posti: fino a 15 minuti gratis, la prima ora 300 ₽, la seconda e la terza 200 ₽ ciascuna, dalla quarta ora tariffa giornaliera di 1000 ₽."
+    }
+  }
+}

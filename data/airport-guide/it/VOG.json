@@ -1,0 +1,30 @@
+{
+  "iata": "VOG",
+  "blocks": {
+    "transport": {
+      "title": "Come arrivare",
+      "hint": "Bus 6 per la stazione",
+      "text": "L’autobus n. 6 «Aeroporto — Stazione ferroviaria» circola circa dalle 6:00 alle 23:00: nei giorni feriali 78 corse in ciascuna direzione, nei fine settimana 61. I treni suburbani dalla fermata «Aeroport» vanno via Volgograd-1 fino a Shpalopropitka, biglietto 52,20 ₽, bambini sotto i 7 anni gratis; dall’aeroporto 4 treni al giorno, il primo alle 14:36."
+    },
+    "lounges": {
+      "title": "Sale business",
+      "hint": "Terminal С2, livello 2, 24/7",
+      "text": "Sala business del terminal dei voli nazionali С2 al livello 2, nella zona sterile dopo i controlli, aperta giorno e notte. Accedono i passeggeri di classe business, i clienti premium delle banche e i partecipanti ai programmi fedeltà; qualsiasi passeggero può pagare una visita singola presso l’addetto della sala. Permanenza fino a 2 ore."
+    },
+    "storage": {
+      "title": "Deposito bagagli",
+      "hint": "Terminal С2, 500 ₽ al giorno",
+      "text": "Deposito bagagli al livello 1 del terminal dei voli nazionali, per i passeggeri dei voli nazionali e internazionali, giorno e notte. Il primo giorno di calendario 500 ₽ a collo, ogni giorno successivo 100 ₽. Serve un documento d’identità; dimensioni del collo non oltre 75 × 60 × 65 cm, durata fino a 90 giorni."
+    },
+    "kids": {
+      "title": "Con bambini",
+      "hint": "Terminal C e С2, gratis",
+      "text": "Ci sono sale madre e bambino nei terminal dei voli nazionali (С2) e internazionali (C), gratuite e aperte giorno e notte, fino a 24 ore. Per bambini sotto i 7 anni e donne nella seconda metà della gravidanza con biglietto in partenza, documento e certificato del presidio sanitario."
+    },
+    "wifi": {
+      "title": "Wi‑Fi",
+      "hint": "Rete Airport",
+      "text": "Wi‑Fi nel complesso aerostazione: rete Airport nelle sale comuni, AirportZPK nelle sale comfort. Accesso tramite chiamata gratuita, Gosuslugi o codice via SMS/Push."
+    }
+  }
+}

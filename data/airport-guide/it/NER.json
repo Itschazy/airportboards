@@ -1,0 +1,21 @@
+{
+  "iata": "NER",
+  "about": "Aeroporto presso la località di Chulman, a 35 km da Neryungri. Filiale della FKP «Aeroporty Severa». Pista pavimentata 3600×45 m, aerostazione da 100 passeggeri.",
+  "blocks": {
+    "terminals": {
+      "title": "Terminal",
+      "hint": "Un’aerostazione",
+      "text": "Un’aerostazione da 100 passeggeri. La biglietteria aerea apre 2 ore prima dell’orario previsto del volo, senza pausa pranzo. Telefono della biglietteria +7 (4114) 77-74-60."
+    },
+    "lounges": {
+      "title": "Sale business",
+      "hint": "ON PASS, livello 2, 3500 ₽",
+      "text": "Sala ON PASS al livello 2, nella zona partenze dopo i controlli. Si accede da 3 ore prima del volo; è aperta a qualsiasi passeggero a pagamento. Adulto 3500 ₽, bambino 2–12 anni 2500 ₽, sotto i 2 anni gratis. Ci sono Wi‑Fi, snack, bevande. Telefono +7 (906) 241-71-62."
+    },
+    "kids": {
+      "title": "Con bambini",
+      "hint": "24/7, gratis",
+      "text": "La sala madre e bambino è aperta giorno e notte, gratuita. Accedono bambini sotto i 5 anni e bambini con disabilità sotto i 14 anni con un adulto e le donne nella seconda metà della gravidanza. Servono passaporto e biglietto. Ci sono letti per adulti e per bambini, fasciatoi."
+    }
+  }
+}

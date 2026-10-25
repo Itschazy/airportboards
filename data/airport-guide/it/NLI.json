@@ -1,0 +1,16 @@
+{
+ "iata": "NLI",
+ "about": "L’aeroporto si trova nel distretto di Nikolaevsk del Territorio di Khabarovsk, 2,5 km a ovest di Nikolaevsk-na-Amure. Classe «G», un’aerostazione da 50 passeggeri all’ora. Gestore: AO «Khabarovskie avialinii».",
+ "blocks": {
+  "storage": {
+   "title": "Deposito bagagli",
+   "hint": "419 ₽ a collo al giorno",
+   "text": "Custodia dei bagagli nel deposito: 418,83 ₽ a collo al giorno IVA inclusa. In caso di ritardo della partenza superiore a 3 ore, i bagagli registrati sono custoditi a 0,88 ₽ al kg all’ora. Prezzi secondo il listino dal 5 giugno 2026."
+  },
+  "lounges": {
+   "title": "Sale business",
+   "hint": "Sala VIP, 3773 ₽",
+   "text": "Servizio passeggeri nella sala VIP: 3773,25 ₽ IVA inclusa per un servizio. Prezzo secondo il listino dal 5 giugno 2026."
+  }
+ }
+}

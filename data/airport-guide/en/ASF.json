@@ -1,0 +1,30 @@
+{
+ "iata": "ASF",
+ "blocks": {
+  "transport": {
+   "title": "Getting there",
+   "hint": "Buses 45, 86, minibuses",
+   "text": "Minibus taxis No. 80с (from Latysheva St) and No. 86с (from Konservny Zavod). Buses No. 45 (from Myasokombinat St) and No. 86 (from Slavyansky Rynok)."
+  },
+  "lounges": {
+   "title": "Lounges",
+   "hint": "Level 2, round the clock",
+   "text": "Domestic business lounge on Level 2 in the airside area, after security, open round the clock. Admits business class passengers, members of airline and bank loyalty programmes, and anyone who pays for the visit by card, QR code or cash. Stay no longer than two hours before departure."
+  },
+  "storage": {
+   "title": "Left luggage",
+   "hint": "Basement floor, 24/7",
+   "text": "Left luggage for baggage and hand luggage of domestic and international passengers on the basement floor of the terminal, open round the clock."
+  },
+  "kids": {
+   "title": "With children",
+   "hint": "Free, 24/7",
+   "text": "The mother and child room is free and open round the clock, for stays of up to 3–4 hours. For passengers with children under 7 (under 8 if places are available), disabled children under 14 and women in the second half of pregnancy."
+  },
+  "parking": {
+   "title": "Parking",
+   "hint": "10 min free",
+   "text": "Station forecourt: first 10 minutes free, first hour 250 ₽, second to fourth hour 200 ₽ each, over 4 hours 900 ₽ per 24 hours. Daily car park (entrance No. 5): first three hours 200 ₽ each, from the 181st minute 600 ₽ for the first 24 hours, 1,100 ₽ for two 24-hour periods, 1,500 ₽ for three, then 300 ₽ per 24 hours. There is a free car park for at least 130 cars."
+  }
+ }
+}

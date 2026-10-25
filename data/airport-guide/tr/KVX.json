@@ -1,0 +1,20 @@
+{
+ "iata": "KVX",
+ "blocks": {
+  "lounges": {
+   "title": "Business salonu",
+   "hint": "Kat 1, 2 500 ₽",
+   "text": "Business salonu Kat 1'de, uçuş öncesi güvenlik kontrolünden sonra. 3 saate kadar ücreti 2 500 ₽. ON PASS, Grey Wall Pass, PersonaAero, Dragon Pass ve Every Lounge ile girilir. İçeride Wi‑Fi, atıştırmalıklar ve içecekler var."
+  },
+  "kids": {
+   "title": "Çocukla",
+   "hint": "Kat 2, 24/7, ücretsiz",
+   "text": "Anne-bebek odası Kat 2'de, geliş salonunun solunda. Gece gündüz açık ve ücretsiz, en fazla 24 saat. 7 yaşından küçük çocuklu, 14 yaşından küçük engelli çocuklu bir yetişkin ve gebeliğin ikinci yarısındaki kadınlar kabul edilir. Beşik ve yatak takımı var."
+  },
+  "parking": {
+   "title": "Otopark",
+   "hint": "P3 ücretsiz",
+   "text": "Karşılayanların ücretsiz P3 otoparkında beklemesi daha uygundur; yolcu çıkınca P1 terminal önü meydanına girip 15 dakika içinde ayrılabilirler. Uzun süreli park için ücretli P2 var. Terminale 30 m'den yakın park etmek yasaktır; ihlaller otomatik olarak kaydedilir."
+  }
+ }
+}

@@ -1,0 +1,31 @@
+{
+ "iata": "HMA",
+ "about": "Khanty-Mansiysk International Airport, managed by JSC Yugraavia. Open round the clock. The terminal complex with an international sector opened in 2001; a state border crossing point has operated since 2004.",
+ "blocks": {
+  "transport": {
+   "title": "Getting there",
+   "hint": "Buses 3 and 5",
+   "text": "Bus No. 3 Vostochny microdistrict – Poliklinika – Vostochny microdistrict runs from 6:00 to 0:00. Bus No. 5 Vostochny microdistrict – Ledovy Dvorets runs from 5:00 to 1:00. By car via Obyezdnaya St, Vostochnaya Obyezdnaya, Mira St or Tobolsky Trakt."
+  },
+  "lounges": {
+   "title": "Lounges",
+   "hint": "3,500 ₽ for 3 hours",
+   "text": "Business lounge for business class passengers and GOLD and PLATINUM members of airline programmes. Others pay 3,500 ₽ for 3 hours, then 700 ₽ per hour. Bank loyalty cards do not give free entry. VIP lounge for departure 10,000 ₽."
+  },
+  "sleep": {
+   "title": "Where to sleep",
+   "hint": "Sokol hotel",
+   "text": "Sokol hotel within walking distance of the airport and the bus stop, 43 rooms. Economy single from 2,500 ₽ per day, standard from 3,150 ₽. There is an evening rate from 20:00 to 6:00."
+  },
+  "kids": {
+   "title": "With children",
+   "hint": "Free, under 7",
+   "text": "Mother and child room for passengers with children under 7, children with disabilities under 14 and women from the second half of pregnancy. Admission 6 hours before departure and up to 3 hours after arrival, free of charge. First a medical check at the health post; passport, birth certificate and ticket required."
+  },
+  "parking": {
+   "title": "Parking",
+   "hint": "20 min free",
+   "text": "Station forecourt: up to 20 minutes free, from minute 21 to 4 hours 300 ₽ per hour, a part hour counts as a full hour. From the 5th hour 1,200 ₽ per day, following days 1,200 ₽. A repeat entry within 20 minutes is paid, 300 ₽ per hour."
+  }
+ }
+}

@@ -1,0 +1,31 @@
+{
+ "iata": "PEE",
+ "about": "Bolchoïe Savino : le seul aéroport du kraï de Perm avec des vols passagers réguliers, à 17 km de Perm. Le nouveau terminal de 31 000 m² a été construit en 2017 et est conçu pour 2 millions de passagers par an. Une seule piste de 3204 × 49 m.",
+ "blocks": {
+  "transport": {
+   "title": "Comment s'y rendre",
+   "hint": "Bus 108 vers la gare routière",
+   "text": "Bus n° 108 « Gare routière — Aéroport Bolchoïe Savino » : depuis l'aéroport (terminal A) de 06:00 à 23:45, depuis la gare routière « Perm » de 05:55 à 23:00 ; les week-ends et jours fériés, les derniers départs sont plus tôt. L'interurbain n° 822 relie l'aéroport à la gare de Perm-2, à Berezniki et à Oussolie."
+  },
+  "storage": {
+   "title": "Consigne à bagages",
+   "hint": "Niveau 1, jour et nuit",
+   "text": "Consigne à bagages au rez-de-chaussée, côté droit du terminal, dans la zone des arrivées des vols intérieurs. Ouverte jour et nuit, paiement selon la grille tarifaire de l'aéroport."
+  },
+  "kids": {
+   "title": "Avec un enfant",
+   "hint": "Gratuit, 24/7",
+   "text": "La salle mère-enfant est ouverte jour et nuit et gratuite, pour les passagers au départ et à l'arrivée. Accueil des enfants de moins de 7 ans avec un adulte, des enfants handicapés de moins de 14 ans et des femmes dans la seconde moitié de la grossesse. S'adresser au comptoir d'information ; déposer au préalable bagages et poussettes à la consigne."
+  },
+  "parking": {
+   "title": "Parking",
+   "hint": "15 min gratuites",
+   "text": "Parking central courte durée : jusqu'à 15 minutes gratuit, jusqu'à une heure 300 ₽, jusqu'à 24 heures 500 ₽, ensuite 500 ₽ par 24 heures. Longue durée : jusqu'à 10 minutes gratuit, jusqu'à 24 heures 400 ₽, ensuite 400 ₽ par 24 heures. Toute heure ou tranche de 24 heures entamée est due en entier."
+  },
+  "wifi": {
+   "title": "Wi‑Fi",
+   "hint": "Réseau Saturn-R",
+   "text": "Wi‑Fi gratuit à débit limité dans tout le bâtiment de l'aéroport, sans identifiant ni mot de passe. Choisir le réseau Saturn-R et ouvrir le navigateur."
+  }
+ }
+}

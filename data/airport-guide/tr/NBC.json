@@ -1,0 +1,46 @@
+{
+ "iata": "NBC",
+ "about": "N. V. Lemayev adını taşıyan Nijnekamsk (Begishevo) Uluslararası Havalimanı, KAMAZ PAO'nun yan kuruluşu. Havalimanının 25 km yarıçapında Naberejnıye Çelnı, Nijnekamsk, Yelabuga ve Almetyevsk var. Tek pist, yılda 700 bin üzerinde yolcu.",
+ "blocks": {
+  "transport": {
+   "title": "Nasıl gidilir",
+   "hint": "Nijnekamsk'a 21 km",
+   "text": "Havalimanı Nijnekamsk'a 21 km, Naberejnıye Çelnı'ya 24 km uzaklıkta. Havalimanı sitesi taksiyle gelinmesini öneriyor; sayfada tarifeli ulaşım yok."
+  },
+  "terminals": {
+   "title": "Terminaller",
+   "hint": "A dış hat, B iç hat",
+   "text": "A terminali dış hat uçuşlarına, B terminali iç hat uçuşlarına hizmet verir. VIP salon A terminalinde, business salonu B terminalinde."
+  },
+  "lounges": {
+   "title": "Business salonları",
+   "hint": "B terminali, 24/7",
+   "text": "Business salonu B terminalinde, VIP salon A terminalinde, ikisi de gece gündüz açık. Aeroflot ve Nordwind business sınıfı, Every.Lounge, MILEONAIR, GoldenKey, UNIPASS, GreyWall Pass, Dream Folks ve diğer program sahipleri ücretsiz kabul edilir. Tek seferlik ziyareti, bileti ne olursa olsun her yolcu satın alabilir; hizmet kalkıştan 2 saat önce başlar."
+  },
+  "storage": {
+   "title": "Emanet",
+   "hint": "B terminali, 24/7",
+   "text": "Emanet B terminalinde Kat 1'de, gece gündüz açık. İlk gün 400 ₽ (teslim günü 23:59'a kadar), sonrası günlüğü 200 ₽. Bir parça en fazla 30 kg. Eşyalar Pack&Fly paketleme istasyonu veya danışma kontuarı üzerinden teslim edilebilir."
+  },
+  "sleep": {
+   "title": "Nerede uyunur",
+   "hint": "Hailey, 26 oda",
+   "text": "Hailey Airport Hotel Begishevo havalimanına yürüme mesafesinde. 45 yataklı 26 oda, erken kahvaltı, Wi‑Fi. Rezervasyon: hotel-zakaz@nbc.aero, 8 (8552) 79-67-80."
+  },
+  "kids": {
+   "title": "Çocukla",
+   "hint": "Kat 2, ücretsiz",
+   "text": "Anne-bebek odaları A ve B terminallerinde Kat 2'de. 7 yaşından küçük çocuklarla ve 14 yaşından küçük engelli çocuklarla uçanlar için, kalkıştan 4 saat önce. Ücretsiz; pasaport ve bilet gerekir. Kayıt danışma bürosunda veya 8-800-200-18-19 numarasından."
+  },
+  "parking": {
+   "title": "Otopark",
+   "hint": "20 dakika ücretsiz",
+   "text": "A ve B terminallerinin önünde 150 araçlık ücretli otopark: 20 dakika ücretsiz, sonra 3 saate kadar saati 200 ₽, daha uzun süre günlüğü 700 ₽. 30 dakika içinde tekrar girişte ücretsiz süre yok. Alana girişten önce 410 araçlık ücretsiz otopark."
+  },
+  "wifi": {
+   "title": "Wi‑Fi",
+   "hint": "Begishevo free ağı",
+   "text": "B terminalinde Begishevo free ağı, otelde HOTEL ağı. Tarayıcıda \"Erişim al\" düğmesine basın, telefon numarasını ve SMS kodunu girin."
+  }
+ }
+}

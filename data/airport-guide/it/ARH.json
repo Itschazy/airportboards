@@ -1,0 +1,26 @@
+{
+  "iata": "ARH",
+  "about": "Aeroporto internazionale di Arcangelo intitolato a F. A. Abramov (Talagi). Gestore AO «Aeroport Arkhangelsk». Il primo volo sulla nuova pista presso il villaggio di Talagi fu accolto il 5 febbraio 1963.",
+  "blocks": {
+    "transport": {
+      "title": "Come arrivare",
+      "hint": "Bus 12 per il centro",
+      "text": "L’autobus n. 12 va fino alla Stazione marittima e fluviale passando per ul. Gagarina, ul. Voskresenskaya e Troitsky prospekt. L’autobus n. 153 va a Severodvinsk fino a prospekt Truda: dall’aeroporto alle 5:50, 9:10, 14:20 e 17:30. Verificare l’orario con il vettore."
+    },
+    "lounges": {
+      "title": "Sale business",
+      "hint": "Padiglione 3, livello 2",
+      "text": "Sala business per i voli nazionali al livello 2 del Padiglione n. 3. Ingresso 2 928 ₽, bambini 2–12 anni 1 464 ₽, sotto i 2 anni gratis. Gratuita per la classe business e i titolari di Aeroflot Bonus Gold e Platinum. Con le carte Mileonair, Every.Lounge, Golden Key e altre si accede alla SKY LOUNGE al livello 1 del Padiglione n. 3 dopo i controlli, 04:00–21:30, fino a 2 ore."
+    },
+    "storage": {
+      "title": "Deposito bagagli",
+      "hint": "Padiglione 3, 24/7",
+      "text": "Deposito bagagli nel Padiglione n. 3, aperto giorno e notte. Un collo fino a 30 kg e più corto di 1 m costa 250 ₽ al giorno. Non si accettano documenti, denaro, oggetti di valore e alimenti deperibili."
+    },
+    "parking": {
+      "title": "Parcheggio",
+      "hint": "30 min gratis al P2",
+      "text": "Breve sosta P2: 30 minuti gratis, poi 150 ₽ all’ora, oltre 4 ore 800 ₽ al giorno. Lunga sosta P1: 400 ₽ al giorno dal primo minuto. Parcheggio gratuito P4 da 70 posti a 200 m dall’aerostazione, senza limiti di tempo. Smarrimento del ticket: 2 000 ₽."
+    }
+  }
+}

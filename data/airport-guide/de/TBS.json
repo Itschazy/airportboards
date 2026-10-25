@@ -1,0 +1,20 @@
+{
+ "iata": "TBS",
+ "blocks": {
+  "transport": {
+   "title": "Anreise",
+   "hint": "Bus 337, 1 GEL",
+   "text": "Der Stadtbus Nr. 337 „Flughafen – Zentrum Tiflis“ fährt von der Haltestelle vor der Ankunftshalle ab, von 06:59 bis 22:59. Durch das Zentrum fährt er über den Rustaweli-Prospekt und den Freiheitsplatz bis zum Bahnhofsplatz. Fahrpreis 1 GEL mit 90 Minuten Umsteigezeit bei Bezahlung mit der Metro-Money-Karte oder einer Bankkarte; die Metro-Money-Karte selbst kostet 2 GEL."
+  },
+  "taxi": {
+   "title": "Taxi",
+   "hint": "40 GEL ins Zentrum",
+   "text": "Taxis rund um die Uhr am Ausgang der Ankunftshalle. Ins Zentrum zum Festpreis von 40 GEL, in die Vororte 50 GEL, Fahrzeit 20–30 Minuten je nach Verkehr."
+  },
+  "wifi": {
+   "title": "Wi‑Fi",
+   "hint": "Kostenlos, ohne Registrierung",
+   "text": "Kostenloses Wi‑Fi ohne Registrierung in den meisten Wartebereichen der Abflug- und Ankunftsterminals: Netze Tbilisi Loves You oder Airport Free Wi‑Fi, danach die Bedingungen auf der Anmeldeseite akzeptieren."
+  }
+ }
+}

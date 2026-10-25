@@ -1,0 +1,46 @@
+{
+  "iata": "SVO",
+  "about": "Sheremetyevo si trova a Khimki, nella regione di Mosca. I terminal sono divisi in due complessi: Nord (B e C) e Sud (D, E, F e terminal «Aeroexpress»), collegati da un treno interterminal. Gestore dell’aeroporto: AO «MASh».",
+  "blocks": {
+    "lounges": {
+      "title": "Sale business",
+      "hint": "8 sale in B, C e D",
+      "text": "Voli nazionali: «Rublyov» (B, livello 3, presso i gate 105–106), «Kandinsky» e «A-klub» (B, livello 2), «Sochi» (D, livello 2). Internazionali: «Malevich» (C, livello 3, ingresso presso il gate 143), «Chagall», «Alfa Only» e «Sber» (C, livello 3). Nelle sale «Rublyov» e «Malevich» accedono gratis i passeggeri delle classi prioritarie e i titolari di carte «Aeroflot Bonus» di livello Gold, Platinum, Infinite e Infinite Pro. Per gli altri 4500 ₽ per 4 ore, bambini sotto i 2 anni gratis."
+    },
+    "storage": {
+      "title": "Deposito bagagli",
+      "hint": "B, D e Aeroexpress",
+      "text": "Ci sono depositi bagagli a pagamento nel Terminal B (livello 1), nel Terminal D (livello −1) e nel terminal «Aeroexpress», tutti nell’area pubblica. In B e nel terminal «Aeroexpress» sono aperti giorno e notte. Le prime 24 ore costano 700 ₽ a collo, poi 300 ₽ ogni 24 ore. Un collo pesa al massimo 32 kg, custodia fino a 6 mesi."
+    },
+    "sleep": {
+      "title": "Dove dormire",
+      "hint": "Capsule in B, C e al treno",
+      "text": "GettSleep nel Terminal B: livello 3, area pubblica, accanto all’ufficio di cambio, la carta d’imbarco non serve. GettSleep nel Terminal C: livello 3, zona sterile internazionale, accanto alla sala Orion, solo con carta d’imbarco per un volo internazionale. Un altro GettSleep si trova al livello 3 del terminal «Aeroexpress». Tutti aperti giorno e notte, pagamento a ore, minimo 4 ore."
+    },
+    "kids": {
+      "title": "Con bambini",
+      "hint": "B, C, D — giorno e notte",
+      "text": "Ci sono sale madre e bambino nel Terminal B (livello 1), nel Terminal C (livello 3) e nel Terminal D (livello 2), tutte nell’area pubblica. Aperte giorno e notte e gratuite. Accedono passeggeri con bambini sotto i 7 anni (con bambini con disabilità sotto i 14 anni) e donne in gravidanza. Servono biglietti o carte d’imbarco e i documenti dell’adulto e del bambino."
+    },
+    "transport": {
+      "title": "Come arrivare",
+      "hint": "Aeroexpress e autobus",
+      "text": "L’Aeroexpress parte dalla stazione Belorussky, da Savyolovskaya, Okruzhnaya e Lianozovo ogni 30 minuti, di notte c’è una pausa. Dalla stazione Belorussky ai Terminal B e C 46 minuti, a D, E, F 61 minuti. Gli autobus espressi «Aeroexpress» partono dalla metro «Khovrino» (uscita n. 2): n. 1195 per B e C, n. 1195D per D. Frequenza 10–15 minuti, durata circa 20 minuti, biglietto 450 ₽."
+    },
+    "parking": {
+      "title": "Parcheggio",
+      "hint": "10 min gratis a B, C",
+      "text": "L’accesso alle zone «Arrivi» e «Partenze» dei Terminal B e C è gratuito per 10 minuti, sul piazzale di D, E, F per 15 minuti. Oltre il limite si paga una penale di 4000 ₽ all’ora. Le auto fanno scendere i passeggeri nella zona «Partenze» presso i parcheggi di B e C, da lì al terminal 2 minuti lungo una galleria coperta. L’ingresso gratuito è consentito al massimo due volte ogni due ore."
+    },
+    "wifi": {
+      "title": "Wi‑Fi",
+      "hint": "_Sheremetyevo Wi-Fi",
+      "text": "La rete gratuita «_Sheremetyevo Wi-Fi» funziona in tutta l’area dell’aeroporto. Per connettersi bisogna identificarsi con il numero di telefono: chiamare il numero sullo schermo, accettare la richiamata e inserire le ultime 4 cifre del numero oppure il codice ricevuto via SMS."
+    },
+    "terminals": {
+      "title": "Terminal",
+      "hint": "Nord B, C — sud D, E, F",
+      "text": "L’aeroporto è composto da due complessi: Nord (Terminal B e C) e Sud (Terminal D, E, F e terminal «Aeroexpress»). Tra i due circolano i treni del collegamento interterminal, il servizio è ripreso il 1° giugno 2024. Si possono anche usare gli autobus n. 817 e n. 851, secondo orario, oppure l’auto."
+    }
+  }
+}

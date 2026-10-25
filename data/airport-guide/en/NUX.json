@@ -1,0 +1,31 @@
+{
+ "iata": "NUX",
+ "about": "Novy Urengoy Airport is managed by Aeroporty Regionov management company. Scheduled flights serve 19 destinations; in 2025 the airport handled more than 1 million passengers.",
+ "blocks": {
+  "transport": {
+   "title": "Getting there",
+   "hint": "No. 101 from station, 18 min",
+   "text": "Bus No. 101 Yamal-Express from the railway station, 18 min. Bus No. 3 from the railway station, 30 min, every 8–15 min, 43 ₽. Bus No. 1 from the Sever district, 45 min, every 8–10 min, 43 ₽."
+  },
+  "parking": {
+   "title": "Parking",
+   "hint": "15 min free",
+   "text": "Drop-off and pick-up zone: 15 min free, up to 60 min 540 ₽, then 540 ₽/hour. Car park P1 with no free time: up to 60 min 320 ₽, up to 2 hours 560 ₽, up to 24 hours 740 ₽. Free car park P0 with 55 spaces at the Vertodrom stop, 2 stops from the terminal."
+  },
+  "lounges": {
+   "title": "Lounges",
+   "hint": "After security, 5,800 ₽",
+   "text": "Business lounge in the waiting area after security. Admits business class passengers, members of Persona.Aero, ON PASS, Grey Wall, Every Lounge, GoldenKey and self-paying passengers. Price 5,800 ₽ for up to 3 hours, then 550 ₽ for each hour."
+  },
+  "storage": {
+   "title": "Left luggage",
+   "hint": "Departure hall, from 500 ₽",
+   "text": "Automated left luggage in the departure hall on Level 1. Standard locker 500 ₽ per day or 200 ₽ per hour, large 900 ₽ per day or 300 ₽ per hour. The locker opens with the barcode on the receipt."
+  },
+  "wifi": {
+   "title": "Wi‑Fi",
+   "hint": "FREE_NUX network",
+   "text": "Free Wi‑Fi in passenger areas. Select the FREE_NUX network and confirm login with a mobile phone number."
+  }
+ }
+}

@@ -1,0 +1,15 @@
+{
+ "iata": "SCW",
+ "blocks": {
+  "storage": {
+   "title": "Emanet",
+   "hint": "Terminal binası, Kat 1",
+   "text": "Emanet terminal binasında Kat 1'de. Tekerlekli sandalyeler burada ücretsiz kabul edilir."
+  },
+  "parking": {
+   "title": "Otopark",
+   "hint": "Kolkhoznaya Caddesi, 3Б",
+   "text": "Havalimanı otoparkı Kolkhoznaya Caddesi 3Б'de; terminal binasının karşısında Kolkhoznaya Caddesi'nde başka park yerleri de var. Terminal binasının rampasının yanında engelli yolcuların inip binmesi için bir alan ayrılmıştır."
+  }
+ }
+}

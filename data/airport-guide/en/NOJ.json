@@ -1,0 +1,21 @@
+{
+ "iata": "NOJ",
+ "about": "The airport is 9 km south-west of Noyabrsk. Operator: JSC Surgut Airport. Runway 2,500 m, serves domestic flights within Russia.",
+ "blocks": {
+  "transport": {
+   "title": "Getting there",
+   "hint": "Buses 7 and 51",
+   "text": "About 9 km to the city centre. City buses No. 7 and No. 51 (Vyngapurovsky settlement) run. Taxis are available."
+  },
+  "terminals": {
+   "title": "Terminal",
+   "hint": "Terminal 07:00–18:00",
+   "text": "The terminal is open from 07:00 to 18:00. Domestic flights only. Inside: cafés, shops, souvenir kiosks, baggage wrapping, a mother and child room, left luggage."
+  },
+  "lounges": {
+   "title": "Lounges",
+   "hint": "Levels 1 and 2, daily",
+   "text": "Premium comfort lounge on Level 1, VIP lounge on Level 2. The lounge offers tea, coffee and pastries. For a fee according to the price list: food ordered from the café, transfer to the aircraft by separate vehicle. The premium comfort lounge is open daily."
+  }
+ }
+}

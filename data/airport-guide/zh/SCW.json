@@ -1,0 +1,15 @@
+{
+ "iata": "SCW",
+ "blocks": {
+  "storage": {
+   "title": "行李寄存",
+   "hint": "航站楼1楼",
+   "text": "行李寄存处位于航站楼1楼。轮椅可免费寄存。"
+  },
+  "parking": {
+   "title": "停车",
+   "hint": "Kolkhoznaya街3Б号",
+   "text": "机场停车场位于Kolkhoznaya街3Б号，航站楼对面的Kolkhoznaya街上还有车位。航站楼坡道旁设有残障旅客上下车区。"
+  }
+ }
+}

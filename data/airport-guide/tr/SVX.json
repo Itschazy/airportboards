@@ -1,0 +1,46 @@
+{
+ "iata": "SVX",
+ "about": "Koltsovo Uluslararası Havalimanı Aeroporty Regionov yönetim şirketi tarafından işletilir. 100'den fazla hat ve 40'tan fazla Rus ve yabancı havayolu. Havalimanı 2024'te 8 milyondan fazla yolcuya hizmet verdi.",
+ "blocks": {
+  "transport": {
+   "title": "Nasıl gidilir",
+   "hint": "66 numaralı otobüs, 30 dk",
+   "text": "66 numaralı otobüs Botanicheskaya metro istasyonundan, 30 dakika, 06:06–23:36, sefer aralığı 16–31 dk. 79 numaralı otobüs Botanicheskaya metro istasyonundan, 30 dakika, hafta içi 06:25–21:50. 65 numaralı otobüs tren garından, 1 saat 5 dakika. Ücret 33 ₽. Koltsovo Express treni Yekaterinburg-Pass. istasyonundan: 6038 numara 07:12'de (41 dk) ve 6040 numara 19:17'de (38 dk); biletler SPK gişelerinde ve Prigorod ile RZhD Passazhiram uygulamalarında."
+  },
+  "terminals": {
+   "title": "Terminaller",
+   "hint": "A iç hat, B dış hat",
+   "text": "A terminali iç hat uçuşlarına, B terminali dış hat uçuşlarına hizmet verir. Kayıp bagaj ekibi her terminalin bagaj alım salonunda 08:00–20:00 arası çalışır."
+  },
+  "lounges": {
+   "title": "Business salonları",
+   "hint": "4 salon, 5800 ₽'den",
+   "text": "İç hatlar terminalinde Izumrud ve Opal, dış hatlar terminalinde Topaz ve Agat salonları. Izumrud ve Topaz: business sınıfı yolcuları, havayolu bonus programlarının üyeleri ve ücretini ödeyen herkes; 3 saate kadar 5800 ₽, sonrası saati 550 ₽, 2–12 yaş çocuklar 2900 ₽. Opal ve Agat ON PASS, Grey Wall, EveryLounge, RusPriority, GoldenKey, UniPass programlarıyla kabul eder. Agat Ermenistan, Belarus, Kazakistan ve Kırgızistan'a uçanlar içindir."
+  },
+  "storage": {
+   "title": "Emanet",
+   "hint": "A terminali, Kat −1",
+   "text": "A terminali, Kat −1. Saati 200 ₽, ilk 24 saat 500 ₽, sonraki her 24 saat 300 ₽. Standart dışı (50×50×80 cm'den büyük veya 20 kg'dan ağır): saati 400 ₽, ilk 24 saat 800 ₽, sonraki her 24 saat 500 ₽. Dış giyim vestiyeri: takım başına 100 ₽."
+  },
+  "sleep": {
+   "title": "Nerede uyunur",
+   "hint": "Kapsüller, B terminali",
+   "text": "POWER NAP kapsülleri B terminalinde, Kat 1'de, pasaport kontrolünün yanında. Saatlik tarife, resepsiyon gece gündüz açık, bagaj saklama dahil. AZIMUT oteli (Bakhchivandzhi Caddesi, 55а) havalimanına kapalı geçitle bağlıdır. A-Otel Layner (Bakhchivandzhi Caddesi, 3) yürüyerek 7 dakika; transfer yolcuları için 12 saatlik tarife 3200 ₽'den."
+  },
+  "kids": {
+   "title": "Çocukla",
+   "hint": "A terminali, Kat 2, 24/7",
+   "text": "Anne-bebek odası A terminalinde, Kat 2'de, gece gündüz açık. 7 yaşından küçük çocuklar (engelli çocuklar 14 yaşından küçük), yalnızca bir yetişkinle. Kalkıştan önce 12 saate, inişten sonra 6 saate kadar. Revirden sağlık belgesi (A terminali, Kat 1), pasaport ve bilet gerekir."
+  },
+  "parking": {
+   "title": "Otopark",
+   "hint": "15 dakika ücretsiz",
+   "text": "İndirme-bindirme alanı: 15 dakikaya kadar ücretsiz, 16–60 dakika 880 ₽, sonrası saati 880 ₽. Terminalin yanındaki ücretsiz süresi olmayan P1 otoparkı: 1 saat 360 ₽, 24 saate kadar 900 ₽. Uzun süreli P2 ve P6: iki gün için 1790 ₽ ve 1380 ₽'den. P0 ücretsiz, terminale 5 dakika."
+  },
+  "wifi": {
+   "title": "Wi‑Fi",
+   "hint": "Free_SVX ağı",
+   "text": "Yolcu alanlarında ücretsiz. Ağ: Free_SVX, giriş cep telefonu numarasıyla."
+  }
+ }
+}

@@ -1,0 +1,20 @@
+{
+ "iata": "KVX",
+ "blocks": {
+  "lounges": {
+   "title": "Business-Lounge",
+   "hint": "Ebene 1, 2 500 ₽",
+   "text": "Business-Lounge auf Ebene 1, nach der Sicherheitskontrolle. Bis zu 3 Stunden kosten 2 500 ₽. Zugang mit ON PASS, Grey Wall Pass, PersonaAero, Dragon Pass und Every Lounge. Ausstattung: Wi‑Fi, Snacks und Getränke."
+  },
+  "kids": {
+   "title": "Mit Kind",
+   "hint": "Ebene 2, 24/7, kostenlos",
+   "text": "Mutter-Kind-Raum auf Ebene 2, links von der Ankunftshalle. Rund um die Uhr und kostenlos, höchstens 24 Stunden lang. Zugang für einen Erwachsenen mit Kindern unter 7 Jahren, mit Kindern mit Behinderung unter 14 Jahren sowie für Schwangere in der zweiten Schwangerschaftshälfte. Kinderbetten und Bettwäsche sind vorhanden."
+  },
+  "parking": {
+   "title": "Parken",
+   "hint": "P3 kostenlos",
+   "text": "Abholer warten am besten auf dem kostenlosen Parkplatz P3 und fahren, sobald der Passagier herauskommt, auf den Vorplatz P1, den sie innerhalb von 15 Minuten wieder verlassen. Zum längeren Parken gibt es den kostenpflichtigen P2. Näher als 30 m am Terminal ist das Parken verboten, Verstöße werden automatisch erfasst."
+  }
+ }
+}

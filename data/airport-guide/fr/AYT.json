@@ -1,0 +1,30 @@
+{
+ "iata": "AYT",
+ "blocks": {
+  "transport": {
+   "title": "Comment s'y rendre",
+   "hint": "Bus et tramway AntRay",
+   "text": "Des bus urbains desservent la gare routière interurbaine et le centre d'Antalya ; horaires dans l'application Antalyakart ou au 0242 606 07 07. Le tramway AntRay relie aéroport — centre-ville — gare routière interurbaine — quartier de Fatih. Pour les clients des agences de voyages, des comptoirs de voyagistes avec leurs bus les accueillent à la sortie du terminal."
+  },
+  "taxi": {
+   "title": "Taxi",
+   "hint": "Aux sorties des terminaux",
+   "text": "Les stations de taxi se trouvent face aux sorties de tous les terminaux, les chauffeurs portent un badge de l'aéroport. Les tarifs figurent sur le panneau d'information près de la station ; réservation en ligne possible via le service coopératif de taxis de l'aéroport (antalyaairporttaxi.net)."
+  },
+  "storage": {
+   "title": "Consigne à bagages",
+   "hint": "Arrivées, terminal domestique",
+   "text": "La consigne se trouve dans le hall des arrivées du terminal domestique ; elle est accessible aux passagers partant du terminal 1 ou du terminal domestique. Emballage des bagages jour et nuit, payant, dans les halls de départ des terminaux 1 et 2."
+  },
+  "parking": {
+   "title": "Parking",
+   "hint": "À étages, 2643 places",
+   "text": "Parking à étages de 2643 voitures face au terminal domestique. Le tarif est calculé par le simulateur du site de l'aéroport ; les abonnements se prennent au centre de service du rez-de-chaussée (P1)."
+  },
+  "wifi": {
+   "title": "Wi‑Fi",
+   "hint": "Gratuit 1 heure",
+   "text": "Internet gratuit pendant 1 heure dans tous les terminaux. Le code PIN est délivré par les bornes Wi‑Fi gratuites des halls d'arrivée et de départ ; un téléphone mobile et un passeport ou une pièce d'identité sont nécessaires. Dans le terminal CIP et les espaces de repos, l'accès est illimité."
+  }
+ }
+}

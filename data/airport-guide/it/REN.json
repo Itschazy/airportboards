@@ -1,0 +1,36 @@
+{
+  "iata": "REN",
+  "about": "Principale aeroporto della regione di Orenburg, serve voli nazionali e internazionali. Il nuovo terminal passeggeri di oltre 24 000 m² è stato costruito dalla società «ABS» (Aeroporty Bolshoy Strany), ha quattro piani e 4 pontili. L’aeroporto serve oltre 950.000 passeggeri l’anno.",
+  "blocks": {
+    "transport": {
+      "title": "Come arrivare",
+      "hint": "Bus 101, 120 ₽",
+      "text": "L’autobus n. 101 collega la stazione ferroviaria e l’aeroporto, biglietto 120 ₽. Dalla stazione all’aeroporto: 08:45, 16:00, 18:25. Dall’aeroporto alla stazione: 07:20, 11:00, 17:10. Alle 19:50 dall’aeroporto parte il n. 101 (k) per pl. Mira, durata 30 minuti."
+    },
+    "lounges": {
+      "title": "Sale business",
+      "hint": "Livelli 3 e 4, 6500 ₽",
+      "text": "Sala voli nazionali al livello 3, sala voli internazionali al livello 4. Accedono i passeggeri di classe business, i partecipanti ai programmi ON PASS, Grey Wall, Every Lounge, UniPass, Golden Key e chi paga di tasca propria. Prezzo in entrambe le sale: 6500 ₽ fino a 3 ore, poi 550 ₽ per ogni ora. I bambini dai 2 anni pagano secondo le regole del programma."
+    },
+    "storage": {
+      "title": "Deposito bagagli",
+      "hint": "Livello 1, 24/7",
+      "text": "Deposito bagagli automatico nella sala centrale dell’aerostazione, livello 1. Aperto giorno e notte. Armadietto standard: 300 ₽ all’ora o 500 ₽ al giorno."
+    },
+    "kids": {
+      "title": "Con bambini",
+      "hint": "Livello 2, 24/7",
+      "text": "Sala madre e bambino al livello 2 dell’aerostazione, aperta giorno e notte. Accoglie passeggeri con bambini sotto i 7 anni, con bambini con disabilità sotto i 14 anni e donne nella seconda metà della gravidanza. Si accede da 3 ore prima della partenza o entro 1 ora dall’arrivo. Servono un certificato del presidio medico al livello 1, passaporto, certificato di nascita del bambino e carta d’imbarco."
+    },
+    "parking": {
+      "title": "Parcheggio",
+      "hint": "15 min gratis",
+      "text": "Zona di salita e discesa passeggeri: fino a 15 minuti gratis, da 15 a 60 minuti 600 ₽, poi 600 ₽ per ogni ora. Zona Р1: fino a 60 minuti 250 ₽, fino a 120 minuti 500 ₽, fino a 24 ore 700 ₽. Zona Р2 per soste lunghe: fino a 48 ore 1400 ₽. Parcheggio gratuito Р4 a 6 minuti dal terminal."
+    },
+    "wifi": {
+      "title": "Wi‑Fi",
+      "hint": "Rete Beeline-WiFi-Free",
+      "text": "Wi‑Fi gratuito nelle aree passeggeri dell’aeroporto. Rete Beeline-WiFi-Free. Accesso con il numero di cellulare, poi seguire le istruzioni sullo schermo."
+    }
+  }
+}

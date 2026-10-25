@@ -1,0 +1,36 @@
+{
+ "iata": "VVO",
+ "about": "L'aéroport se trouve à Artiom, dans le kraï du Primorié. Le réseau compte plus de 40 destinations, desservies par plus de 20 compagnies aériennes russes et étrangères. Il dispose de halls de départ intérieurs et internationaux.",
+ "blocks": {
+  "transport": {
+   "title": "Comment s'y rendre",
+   "hint": "Train de banlieue, 52 min",
+   "text": "Train de la gare ferroviaire de Vladivostok jusqu'à la station « Aeroport », 10 départs par jour, trajet d'environ 52 minutes. Billet depuis Vladivostok et Vtoraïa Retchka 185 ₽, depuis Artiom 37 ₽. Comptoir de taxis au niveau 1, à la sortie de l'aérogare, transporteur officiel SARL « MIG »."
+  },
+  "lounges": {
+   "title": "Salons",
+   "hint": "Niveau 3, 24/7",
+   "text": "Salon « Laguna » : niveau 3, zone de départ des vols intérieurs, près de la porte 6, jour et nuit. International « Primorie » : niveau 3, près de la porte 3, après le Duty Free, jour et nuit. Salon « Priority » pour les vols intérieurs à côté de la porte 6, 2500 ₽ par passager."
+  },
+  "storage": {
+   "title": "Consigne à bagages",
+   "hint": "Niveau 1, 24/7, dès 400 ₽",
+   "text": "Niveau 1, derrière l'escalator, jour et nuit. Tarif « Standard » : 500 ₽ pour les premières 24 heures, 200 ₽ par tranche de 24 heures suivante, bagage jusqu'à 203 cm pour la somme des dimensions. Toute tranche de 24 heures entamée est due en entier."
+  },
+  "sleep": {
+   "title": "Où dormir",
+   "hint": "Hôtel, niveau 3",
+   "text": "« Zone d'attente confortable » (hôtel) au niveau 3, zone publique, aile gauche. 30 chambres. Chambre simple : 3000 ₽ pour 3 heures, 6000 ₽ pour 24 heures. Douche sans chambre 1000 ₽."
+  },
+  "kids": {
+   "title": "Avec un enfant",
+   "hint": "Niveau 3, 24/7, gratuit",
+   "text": "Salle mère-enfant au niveau 3, aile droite, jour et nuit, gratuite. Pour les passagers avec des enfants de moins de 7 ans, des enfants handicapés de moins de 14 ans et les femmes enceintes dans la seconde moitié de la grossesse. Séjour jusqu'à 3 heures. Billet d'avion, passeport et acte de naissance de l'enfant requis."
+  },
+  "parking": {
+   "title": "Parking",
+   "hint": "15 min gratuites",
+   "text": "Zones A, D et dépose/prise en charge : jusqu'à 15 minutes gratuit. Dans la zone de dépose/prise en charge, ensuite 1000 ₽ par tranche de 15 minutes. Zones A et D : 300 ₽ par heure au-delà de 15 minutes, au-delà de 3 heures 1500 ₽. Zones B, C et F avec paiement à la journée."
+  }
+ }
+}

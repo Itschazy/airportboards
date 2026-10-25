@@ -1,0 +1,31 @@
+{
+ "iata": "KGD",
+ "about": "Khrabrovo: Kaliningrad International Airport. The 39,762 sq. m passenger terminal is designed for 5 million passengers a year, with 6 jet bridges on the apron. One runway 3,350 × 45 m.",
+ "blocks": {
+  "transport": {
+   "title": "Getting there",
+   "hint": "Bus 244-Э, 45 min",
+   "text": "Bus No. 244-Э runs between the airport and Yuzhny bus station in Kaliningrad, average journey time 45 minutes. Departures may be up to 15 minutes late; the timetable may change."
+  },
+  "lounges": {
+   "title": "Lounges",
+   "hint": "Sectors A and C, Level 2",
+   "text": "Two business lounges on Level 2 airside: Kurshsky Zaliv for domestic flights in sector A and Dyuny for international flights in sector C. Admits business class passengers and anyone who has paid for entry; veterans of the Great Patriotic War with an escort free of charge."
+  },
+  "sleep": {
+   "title": "Where to sleep",
+   "hint": "RecoRoom capsules",
+   "text": "RecoRoom Sonnik capsule hotel on the airport grounds: hourly rates, automated check-in, single and double capsules with space for baggage, power sockets and free Wi‑Fi."
+  },
+  "kids": {
+   "title": "With children",
+   "hint": "Free",
+   "text": "The mother and child room is free for departing passengers with children under 7, disabled children under 14 and women in the second half of pregnancy; it follows the terminal's hours. First you need a certificate from the first-aid post on Level 1, in the right part of the building; baggage is left at the left luggage office."
+  },
+  "parking": {
+   "title": "Parking",
+   "hint": "15 min free, 400 ₽/hour",
+   "text": "Short-stay parking from 01.10.2026: first 15 minutes free, then 400 ₽ for each hour, including a part hour. Long-stay 900 ₽ per day. Free car park for 300 cars 400 m from the terminal. Parking on the first lane in front of the building is prohibited."
+  }
+ }
+}

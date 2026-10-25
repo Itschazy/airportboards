@@ -1,0 +1,21 @@
+{
+ "iata": "NNM",
+ "about": "L'aéroport est exploité par la SA « Narian-Marski obiedinionny aviaotriad », adresse : Narian-Mar, pereulok Aeroportovski, bât. 1A. L'escadrille assure les vols sur les lignes aériennes locales du district autonome des Nenets. Renseignements : 8 (81853) 91-555.",
+ "blocks": {
+  "lounges": {
+   "title": "Salons",
+   "hint": "Niveau 1, après contrôle",
+   "text": "Salon de confort supérieur au niveau 1, en zone de départ après le contrôle. Pour les passagers des vols intérieurs, entrée 2 heures avant le départ. Entrée gratuite pour les enfants de moins de 2 ans. L'accès se prend dans l'application MILE·ON·AIR, rubrique ON PASS. Téléphone du salon : 8 (81853) 91-537."
+  },
+  "storage": {
+   "title": "Consigne à bagages",
+   "hint": "Niveau 1 de l'aérogare",
+   "text": "Niveau 1 de l'aérogare, ouverte aux heures d'ouverture de l'aéroport. Un bagage pesant jusqu'à 30 kg. En cas de retard du vol ou de report au lendemain, les bagages sont gardés gratuitement sur présentation du billet de ce vol."
+  },
+  "parking": {
+   "title": "Parking",
+   "hint": "45 min gratuites",
+   "text": "Jusqu'à 45 minutes gratuit. De 46 à 60 minutes : 500 ₽. Au-delà d'une heure et jusqu'à 24 heures : 350 ₽ par heure. Au-delà de 24 heures, jusqu'à 30 jours : 600 ₽ par 24 heures. Tarifs en vigueur depuis le 1er août 2026."
+  }
+ }
+}

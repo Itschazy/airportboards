@@ -1,0 +1,20 @@
+{
+ "iata": "NAL",
+ "blocks": {
+  "transport": {
+   "title": "Anreise",
+   "hint": "Sammeltaxi 17",
+   "text": "Sammeltaxi Nr. 17 fährt vom Bahnhof direkt zum Terminal. Mit dem Auto aus dem Zentrum von Naltschik 15–20 Minuten, mit Abfahrt von der Uliza Idarowa. Vom Nationalpark „Prielbrussje“ 92 km, etwa 1 Stunde 20 Minuten."
+  },
+  "lounges": {
+   "title": "Komfort-Lounge",
+   "hint": "Eigener Eingang, 6200 ₽",
+   "text": "Komfort-Lounge mit eigenem Eingang und eigener Zufahrt: Check-in und Sicherheitskontrolle für Inlandsflüge in der Lounge, bis zu 10 Minuten, Transfer zum Flugzeug. Passagier 6200 ₽, Kinder unter 2 Jahren kostenlos, Begleitperson 5000 ₽. Vorab telefonisch buchen."
+  },
+  "kids": {
+   "title": "Mit Kind",
+   "hint": "Kostenlos",
+   "text": "Der Mutter-Kind-Raum ist kostenlos für Passagiere mit einem Ticket für einen Abflug ab Naltschik: mit Kindern unter 7 Jahren, Kindern mit Behinderung unter 16 Jahren und für Frauen in der zweiten Schwangerschaftshälfte. Erforderlich sind Ticket, Pass und Geburtsurkunde des Kindes."
+  }
+ }
+}

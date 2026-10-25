@@ -1,0 +1,31 @@
+{
+  "iata": "MRV",
+  "about": "Mineralnye Vody: il più grande aeroporto del Distretto federale del Caucaso Settentrionale. La pista lunga 3900 m e larga 60 m è entrata in servizio nel 2011. Due terminal partenze, nazionale e internazionale, e terminal arrivi separati.",
+  "blocks": {
+    "transport": {
+      "title": "Come arrivare",
+      "hint": "Marshrutka 11, 20–25 min",
+      "text": "Il taxi collettivo (marshrutka) n. 11 va fino alla stazione ferroviaria di Mineralnye Vody, durata 20–25 minuti; fino all’autostazione, fermata «Rynok Ruslan», circa 10 minuti. Dalla stazione per Pyatigorsk c’è l’autobus n. 223, per Zheleznovodsk il n. 107. Per Essentuki, Kislovodsk, Teberda e Dombay partono autobus interurbani dall’autostazione."
+    },
+    "lounges": {
+      "title": "Sale business",
+      "hint": "«Beshtau», livello 3, 24/7",
+      "text": "Sala business «Beshtau» al livello 3 del nuovo terminal, nella zona sterile dopo i controlli, aperta giorno e notte. Accedono i passeggeri di classe business, i partecipanti ai programmi ON Pass, Persona.Aero, Grey Wall Pass, Dragon Pass, Every Lounge e altri, e qualsiasi passeggero a pagamento secondo il listino."
+    },
+    "storage": {
+      "title": "Deposito bagagli",
+      "hint": "Seminterrato, 8:00–17:00",
+      "text": "Deposito bagagli al piano seminterrato, accesso solo dalle scale, aperto dalle 8:00 alle 17:00. Il primo giorno (fino alle 24:00) 900 ₽ a collo, poi 500 ₽ al giorno, il giorno iniziato si paga intero. Custodia non oltre un mese."
+    },
+    "kids": {
+      "title": "Con bambini",
+      "hint": "Gratis, 24/7",
+      "text": "La sala madre e bambino è aperta giorno e notte ed è gratuita per i passeggeri con biglietto in partenza da Mineralnye Vody: con bambini sotto i 7 anni, bambini con disabilità sotto i 16 anni e per le donne nella seconda metà della gravidanza. Servono biglietto, passaporto e certificato di nascita del bambino."
+    },
+    "parking": {
+      "title": "Parcheggio",
+      "hint": "15 min gratis",
+      "text": "Parcheggio breve sosta P1 presso la sala partenze: meno di 15 minuti gratis, 15–60 minuti 500 ₽, poi 500 ₽ all’ora, oltre 4 ore 1200 ₽ al giorno. Nuovo passaggio entro un’ora 500 ₽. C’è un parcheggio gratuito nell’area adiacente, posizione sulla mappa dei parcheggi."
+    }
+  }
+}

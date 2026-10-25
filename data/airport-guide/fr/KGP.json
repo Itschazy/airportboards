@@ -1,0 +1,16 @@
+{
+ "iata": "KGP",
+ "about": "L'aéroport se trouve à Kogalym, rue Aviatorov, 21. Exploitant : SA « Aéroport de Kogalym ». Il assure le transport des travailleurs postés de l'industrie pétrolière, des vols de fret et l'aviation d'affaires.",
+ "blocks": {
+  "terminals": {
+   "title": "Terminal",
+   "hint": "06:00–22:00",
+   "text": "L'aérogare est ouverte de 06:00 à 22:00, heure locale. Les horaires peuvent changer en fonction du programme des vols, renseignez-vous au +7 (34667) 4-33-11, poste 333. L'enregistrement commence 2 heures et se termine 40 minutes avant le départ."
+  },
+  "lounges": {
+   "title": "Salons",
+   "hint": "Départ : 13 908 ₽",
+   "text": "Salon de confort supérieur de la SA « Aéroport de Kogalym ». Départ : 13 908 ₽ par adulte, 6 954 ₽ par enfant de 2 à 12 ans. Arrivée : 10 223,60 ₽ et 5 111,80 ₽. Personnes accueillant un passager : 5 111,80 ₽, personnes accompagnant un passager : 6 954 ₽. Prix TTC, en vigueur depuis le 01.01.2026."
+  }
+ }
+}

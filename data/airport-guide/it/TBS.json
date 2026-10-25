@@ -1,0 +1,20 @@
+{
+ "iata": "TBS",
+ "blocks": {
+  "transport": {
+   "title": "Come arrivare",
+   "hint": "Bus 337, 1 GEL",
+   "text": "L’autobus urbano n. 337 «Aeroporto — centro di Tbilisi» parte dalla fermata davanti alla sala arrivi, dalle 06:59 alle 22:59. Attraversa il centro lungo il viale Rustaveli e piazza della Libertà fino a piazza della Stazione. Corsa 1 GEL, cambi compresi per 90 minuti, pagando con la carta Metro Money o con carta bancaria; la carta Metro Money costa 2 GEL."
+  },
+  "taxi": {
+   "title": "Taxi",
+   "hint": "40 GEL per il centro",
+   "text": "Taxi giorno e notte all’uscita della sala arrivi. Per il centro tariffa fissa 40 GEL, per i sobborghi 50 GEL, durata 20–30 minuti a seconda del traffico."
+  },
+  "wifi": {
+   "title": "Wi‑Fi",
+   "hint": "Gratis, senza registrazione",
+   "text": "Wi‑Fi gratuito senza registrazione nella maggior parte delle aree d’attesa dei terminal partenze e arrivi: reti Tbilisi Loves You o Airport Free Wi‑Fi, poi accettare le condizioni nella pagina di accesso."
+  }
+ }
+}

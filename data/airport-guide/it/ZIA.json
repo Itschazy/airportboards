@@ -1,0 +1,26 @@
+{
+  "iata": "ZIA",
+  "about": "L’aeroporto internazionale di Zhukovsky è stato costruito nell’area dell’aerodromo di Zhukovsky. Gestore dell’aeroporto: AO «Ramport Aero». L’aeroporto è aperto ai voli internazionali, vi opera un valico di frontiera di Stato.",
+  "blocks": {
+    "transport": {
+      "title": "Come arrivare",
+      "hint": "Bus 441, 1 h 5 min",
+      "text": "Treno elettrico dalla stazione Kazansky alla stazione Otdykh, circa 40 min, poi marshrutka 2А fino all’aeroporto, circa 20 min. Marshrutka 19к da MCD Ilyinskaya, circa 35 min. Autobus 441 dalla metro Kotelniki (uscita n. 5), frequenza 15–20 min, durata 1 h 5 min. Su autobus e marshrutka si accettano «Troyka», «Strelka» e carte bancarie."
+    },
+    "parking": {
+      "title": "Parcheggio",
+      "hint": "15 min gratis",
+      "text": "Zona breve sosta: i primi 15 min gratis, la prima ora 350 ₽, dalla 2ª alla 4ª ora 250 ₽/ora, dalla 5ª ora 3000 ₽/giorno. Zona lunga sosta: 700 ₽/giorno dal 1° al 5° giorno, 100 ₽/giorno dal 6° al 13°, 700 ₽/giorno dal 14° giorno. Nuovo ingresso gratuito non prima di 45 min."
+    },
+    "storage": {
+      "title": "Deposito bagagli",
+      "hint": "Livello 2, 24/7, da 600 ₽",
+      "text": "Deposito bagagli al livello 2 nell’area pubblica, aperto giorno e notte. Tariffa «Standard»: 700 ₽ per le prime 24 ore, 300 ₽ per ogni successivo periodo di 24 ore. «Standard Light»: 600 ₽ e 300 ₽. Fuori misura da 1150 ₽. Peso di un collo fino a 30 kg, custodia fino a 6 mesi."
+    },
+    "kids": {
+      "title": "Con bambini",
+      "hint": "Livello 2, 24/7",
+      "text": "Sale madre e bambino al livello 2: nell’area pubblica e nella zona d’attesa delle partenze verso i paesi dell’UEE. Aperte giorno e notte, l’addetto si chiama con il pulsante all’ingresso. Accedono bambini sotto i 7 anni con un adulto, bambini con disabilità sotto i 14 anni, donne in gravidanza. Nella zona partenze internazionali c’è un locale fasciatoio."
+    }
+  }
+}

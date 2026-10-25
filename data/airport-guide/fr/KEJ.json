@@ -1,0 +1,26 @@
+{
+ "iata": "KEJ",
+ "about": "Kemerovo : aéroport international Alexeï-Leonov à 5 km au sud-est de la périphérie de la ville et à 11 km du centre. Une seule piste ; l'aérodrome fonctionne jour et nuit et est utilisé conjointement avec le ministère de la Défense et la Rosgvardia.",
+ "blocks": {
+  "lounges": {
+   "title": "Salons",
+   "hint": "Niveau 3, 4000 ₽",
+   "text": "Salon des vols intérieurs au troisième niveau, à droite après le contrôle, ouvert de 04:30 à 20:00. Gratuit pour les passagers de classe affaires et les titulaires de cartes donnant droit d'accès ; en économique, avec les cartes Every Lounge, GoldenKey, RusPriority, Persona.aero et d'autres programmes. Payant 4000 ₽, enfants de 2 à 12 ans 2000 ₽, gratuit pour les moins de 2 ans."
+  },
+  "storage": {
+   "title": "Consigne à bagages",
+   "hint": "Dès 200 ₽ par jour",
+   "text": "La consigne fonctionne selon les horaires de l'aérogare des lignes intérieures. Bagage à main 200 ₽ par jour, bagage jusqu'à 50×40×20 cm 220 ₽, plus grand 270 ₽, au-delà de 100×50×70 cm 500 ₽. Moins d'un jour est facturé comme un jour entier."
+  },
+  "kids": {
+   "title": "Avec un enfant",
+   "hint": "Niveau 3, 04:30–20:00",
+   "text": "Salle mère-enfant au niveau 3, dans l'aile gauche près de la zone de contrôle, gratuite, de 04:30 à 20:00. Pour les passagers au départ avec des enfants de moins de 7 ans, les enfants handicapés de moins de 14 ans et les femmes dans la seconde moitié de la grossesse."
+  },
+  "parking": {
+   "title": "Parking",
+   "hint": "15 min gratuites",
+   "text": "Place de l'aérogare à 30 m du terminal, 173 places : jusqu'à 15 minutes gratuit, première heure 300 ₽, deuxième et troisième 200 ₽ chacune, à partir de la quatrième heure tarif journalier de 1000 ₽."
+  }
+ }
+}

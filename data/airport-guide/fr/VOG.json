@@ -1,0 +1,30 @@
+{
+ "iata": "VOG",
+ "blocks": {
+  "transport": {
+   "title": "Comment s'y rendre",
+   "hint": "Bus 6 vers la gare",
+   "text": "Le bus n° 6 « Aéroport — Gare ferroviaire » circule environ de 6:00 à 23:00 : en semaine 78 départs dans chaque sens, le week-end 61. Les trains de banlieue partent du quai « Aeroport » via Volgograd-1 jusqu'à Chpalopropitka, billet 52,20 ₽, enfants de moins de 7 ans gratuit ; depuis l'aéroport, 4 trains par jour, le premier à 14:36."
+  },
+  "lounges": {
+   "title": "Salons",
+   "hint": "Terminal С2, niveau 2, 24/7",
+   "text": "Salon du terminal des lignes intérieures С2 au deuxième niveau, en zone réservée après le contrôle, ouvert jour et nuit. Accès pour les passagers de classe affaires, les clients premium des banques et les membres des programmes de fidélité ; tout passager peut payer une visite unique auprès de l'agent du salon. Durée de séjour jusqu'à 2 heures."
+  },
+  "storage": {
+   "title": "Consigne à bagages",
+   "hint": "Terminal С2, 500 ₽ par jour",
+   "text": "Consigne au rez-de-chaussée du terminal des lignes intérieures, pour les passagers des vols intérieurs et internationaux, jour et nuit. Premier jour calendaire 500 ₽ par bagage, chaque jour suivant 100 ₽. Une pièce d'identité est requise ; taille d'un bagage au maximum 75 × 60 × 65 cm, durée jusqu'à 90 jours."
+  },
+  "kids": {
+   "title": "Avec un enfant",
+   "hint": "Terminaux C et С2, gratuit",
+   "text": "Des salles mère-enfant se trouvent dans les terminaux des lignes intérieures (С2) et internationales (C), gratuites et ouvertes jour et nuit, jusqu'à 24 heures. Pour les enfants de moins de 7 ans et les femmes dans la seconde moitié de la grossesse, avec un billet au départ, une pièce d'identité et un certificat du poste de santé."
+  },
+  "wifi": {
+   "title": "Wi‑Fi",
+   "hint": "Réseau Airport",
+   "text": "Wi‑Fi dans le complexe aéroportuaire : réseau Airport dans les halls publics, AirportZPK dans les salons de confort supérieur. Connexion par appel gratuit, Gosouslougui ou code reçu par SMS/Push."
+  }
+ }
+}

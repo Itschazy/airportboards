@@ -1,0 +1,25 @@
+{
+ "iata": "SSH",
+ "blocks": {
+  "transport": {
+   "title": "Comment s'y rendre",
+   "hint": "Minibus, prix fixé à l'avance",
+   "text": "Les minibus pour Charm el-Cheikh partent généralement quand ils sont pleins ; le prix se négocie avec le chauffeur à l'avance. Location de voitures disponible : Hertz, Thrifty et des sociétés locales."
+  },
+  "taxi": {
+   "title": "Taxi",
+   "hint": "Prix fixé avant de monter",
+   "text": "Des taxis sont disponibles à l'aéroport ; le prix de la course se négocie avec le chauffeur avant de monter."
+  },
+  "terminals": {
+   "title": "Terminaux",
+   "hint": "Deux terminaux",
+   "text": "L'aéroport compte deux terminaux passagers. Distributeurs de billets et bureaux de change disponibles."
+  },
+  "storage": {
+   "title": "Consigne à bagages",
+   "hint": "Disponible à l'aéroport",
+   "text": "L'aéroport dispose d'une consigne à bagages. Les sources n'indiquent pas le prix."
+  }
+ }
+}

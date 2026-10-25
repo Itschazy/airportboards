@@ -1,0 +1,36 @@
+{
+ "iata": "IJK",
+ "about": "Izhevsk Airport is part of JSC Izhavia together with the airline, a tour operator and a travel agency. The aviation company was founded in 1944; 100% of its shares belong to the Udmurt Republic.",
+ "blocks": {
+  "transport": {
+   "title": "Getting there",
+   "hint": "Transfer to city 1,500 ₽",
+   "text": "Airport transfer from the station forecourt in a car with a driver. Izhevsk and suburbs up to 30 km 1,500 ₽, Votkinsk 4,000 ₽, Sarapul 5,000 ₽, Chaikovsky 6,000 ₽. Book 3 hours or more in advance at izhavia.su or after arrival at the airport ticket office, if cars are available."
+  },
+  "terminals": {
+   "title": "Terminal",
+   "hint": "2 floors, 4 jet bridges",
+   "text": "Service in the new passenger terminal of 10,850 sq. m. 2 floors, 11 check-in counters, 4 boarding gates with jet bridges. 5 lifts, an escalator to the departure area. Signage in Russian, Udmurt, English and Chinese."
+  },
+  "lounges": {
+   "title": "Lounges",
+   "hint": "Level 2, 4,500 ₽",
+   "text": "Business lounge on Level 2 of the terminal: adults 4,500 ₽, children 2–12 years 2,250 ₽, under 2 free, up to 3 hours. RusPriority, ON PASS, Persona Aero, Every Lounge, Grey Wall Pass, GoldenKey cards accepted; Priority Pass and Lounge Key are not accepted. VIP lounge: adults 12,000 ₽, children 2–12 years 6,000 ₽. Requests: vip@izhavia.su."
+  },
+  "storage": {
+   "title": "Left luggage",
+   "hint": "Level 1, behind info desk",
+   "text": "Left luggage on Level 1, in the hall behind the information desk. Accepts baggage free of charge during flight delays, as well as unclaimed and forwarded baggage. Storage of found items 400 ₽. One item up to 30 kg."
+  },
+  "kids": {
+   "title": "With children",
+   "hint": "Level 2, 24/7, free",
+   "text": "Mother and child room on Level 2 of the terminal, open round the clock and free. Admits passengers with children under 7, children with disabilities under 18, and women in the second half of pregnancy. Boarding pass required. Parents bring food and hygiene products."
+  },
+  "parking": {
+   "title": "Parking",
+   "hint": "15 min free",
+   "text": "Up to 15 minutes free, from 16 to 30 minutes 250 ₽, from 30 minutes to 2 hours 500 ₽/hour, over 2 hours 750 ₽/day. VIP parking 300 ₽/hour up to 5 hours, no free time. Exit within 15 minutes after payment. Free for cars of disabled people listed in the federal register."
+  }
+ }
+}

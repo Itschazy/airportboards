@@ -1,0 +1,20 @@
+{
+ "iata": "EVN",
+ "blocks": {
+  "transport": {
+   "title": "Nasıl gidilir",
+   "hint": "N100 ve N201 otobüsleri",
+   "text": "N100 otobüsü Zvartnots havalimanı — Erivan merkezi güzergâhında gidiş-dönüş çalışır. N201 hattı (Elitebus) havalimanından Erivan merkezine ve geri ekspres seferdir. Kat 1'deki geliş salonunda araç kiralama şirketleri gece gündüz hizmet verir: Carwiz, Enterprise, GoMotion, Hertz, SIXT."
+  },
+  "taxi": {
+   "title": "Taksi",
+   "hint": "Eco Taxi, geliş salonu",
+   "text": "Eco Taxi kontuarı Kat 1'deki geliş salonunda, gece gündüz açık."
+  },
+  "parking": {
+   "title": "Otopark",
+   "hint": "Kapalı, 642 araçlık",
+   "text": "Yolcu terminalinin karşısında 642 araçlık kapalı otopark binası. Süre girişte bilet alındığı andan itibaren sayılır; yolcu indirme-bindirme için 10 dakikaya kadar giriş ücretsiz. Ödeme araca binmeden önce otomatik ödeme makinelerinde yapılır."
+  }
+ }
+}

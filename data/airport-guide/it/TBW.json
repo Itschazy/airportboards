@@ -1,0 +1,21 @@
+{
+  "iata": "TBW",
+  "about": "L’aerodromo di Tambov si trova a 10 km a nord-est del centro di Tambov, presso il villaggio di Donskoe. Gestore: TOGBU «Aeroport «Tambov». L’aeroporto ha status federale, una sola pista di 2098 × 42 m.",
+  "blocks": {
+    "terminals": {
+      "title": "Terminal",
+      "hint": "Partenze: livello 1",
+      "text": "I controlli si passano all’ingresso dell’aerostazione. Sala partenze al livello 1, dove si trovano i banchi check-in. Non ci sono scanner per la carta d’imbarco elettronica: stamparla in anticipo o ritirarla al banco."
+    },
+    "kids": {
+      "title": "Con bambini",
+      "hint": "Bambini sotto i 7 anni, gratis",
+      "text": "Sala per passeggeri con bambini sotto i 7 anni: camera da letto, letto, servizi igienici. Gratuita, negli orari di apertura dell’aeroporto. Servono passaporto, biglietto e certificato medico. Il certificato è rilasciato gratuitamente dal presidio medico, livello 1 dell’edificio amministrativo. Rivolgersi al servizio di organizzazione dei trasporti."
+    },
+    "parking": {
+      "title": "Parcheggio",
+      "hint": "Gratis",
+      "text": "Parcheggio gratuito sul piazzale dell’aerostazione. Ci sono posti per persone con disabilità. L’aeroporto non risponde delle auto lasciate."
+    }
+  }
+}

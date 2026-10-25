@@ -1,0 +1,31 @@
+{
+ "iata": "ULV",
+ "about": "Ulyanovsk (Barataevka) International Airport named after N. M. Karamzin, address: 20 Aviatsionnaya St. Operator: OJSC Ulyanovsk Airport. The reconstructed terminal was commissioned in 2013, capacity 240 passengers per hour.",
+ "blocks": {
+  "terminals": {
+   "title": "Terminal",
+   "hint": "One terminal building",
+   "text": "One terminal complex for domestic and international flights. Flight information boards and the information desk are on Level 1. Passport control, security and boarding are in the airside area on Level 2. Domestic check-in opens 2 hours and closes 40 minutes before departure; international check-in opens 3 hours before."
+  },
+  "lounges": {
+   "title": "Lounges",
+   "hint": "Level 1, 24/7, 3,000 ₽",
+   "text": "Business lounge on Level 1 in the right wing of the terminal, open round the clock. Adult 3,000 ₽, person seeing off or meeting 1,500 ₽, children under 2 free, VIP lounge 10,000 ₽. Admits Persona Aero, Every.Lounge, OnPass, MileOnAir, Grey Wall, GoldenKey cardholders, limit 3 hours."
+  },
+  "sleep": {
+   "title": "Where to sleep",
+   "hint": "Aeroport hotel",
+   "text": "Aeroport hotel on the airport grounds next to the terminal, open round the clock. Booking: +7 (8422) 587-323, hotel@ulkaero.ru. Prices are available from the manager. Payment in cash or by card."
+  },
+  "parking": {
+   "title": "Parking",
+   "hint": "15 min free",
+   "text": "Paid car park in front of the terminal for 150 cars. First 15 minutes free, from 15 minutes to 3 hours 150 ₽/hour, over 3 hours 500 ₽/day. A repeat entry within 60 minutes has no free time. After payment you have 30 minutes to exit."
+  },
+  "wifi": {
+   "title": "Wi‑Fi",
+   "hint": "Free, up to 50 Mbit/s",
+   "text": "Free Wi‑Fi throughout the terminal, with no data limit. Speed up to 50 Mbit/s."
+  }
+ }
+}

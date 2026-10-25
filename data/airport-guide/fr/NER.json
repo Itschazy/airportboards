@@ -1,0 +1,21 @@
+{
+ "iata": "NER",
+ "about": "Aéroport près du village de Tchoulman, à 35 km de Nerioungri. Filiale de l'entreprise publique fédérale « Aéroports du Nord ». Piste en dur de 3600×45 m, aérogare pour 100 passagers.",
+ "blocks": {
+  "terminals": {
+   "title": "Terminal",
+   "hint": "Une seule aérogare",
+   "text": "Une seule aérogare pour 100 passagers. La billetterie ouvre 2 heures avant le vol selon l'horaire, sans pause déjeuner. Téléphone de la billetterie +7 (4114) 77-74-60."
+  },
+  "lounges": {
+   "title": "Salons",
+   "hint": "ON PASS, niveau 2, 3500 ₽",
+   "text": "Salon ON PASS au niveau 2, en zone de départ après le contrôle. Accès 3 heures avant le vol, pour tout passager moyennant paiement. Adulte 3500 ₽, enfant de 2 à 12 ans 2500 ₽, gratuit pour les moins de 2 ans. Wi‑Fi, en-cas, boissons. Téléphone +7 (906) 241-71-62."
+  },
+  "kids": {
+   "title": "Avec un enfant",
+   "hint": "24/7, gratuit",
+   "text": "La salle mère-enfant est ouverte jour et nuit, gratuite. Accès pour les enfants de moins de 5 ans et les enfants handicapés de moins de 14 ans avec un adulte, pour les femmes enceintes dans la seconde moitié de la grossesse. Passeport et billet requis. Lits pour adultes et enfants, espaces à langer."
+  }
+ }
+}

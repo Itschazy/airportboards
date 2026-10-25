@@ -1,0 +1,31 @@
+{
+  "iata": "CEK",
+  "about": "Balandino: aeroporto internazionale di Chelyabinsk intitolato a I. V. Kurchatov. Il nuovo terminal dei voli nazionali è stato aperto il 26 novembre 2019: 16.500 m², quattro pontili d’imbarco, circa 900 passeggeri all’ora.",
+  "blocks": {
+    "transport": {
+      "title": "Come arrivare",
+      "hint": "Bus 1, 41, 45",
+      "text": "L’autobus n. 1 collega l’aeroporto e la stazione ferroviaria, passando anche per il Mercato Centrale e piazza Komsomolskaya. Il n. 41 va fino al DK Stroiteley, il n. 45 fino all’Avtotsentr."
+    },
+    "lounges": {
+      "title": "Sale business",
+      "hint": "Livello 2, dopo i controlli",
+      "text": "Sala business per i voli nazionali al livello 2 del terminal, dopo la zona dei controlli. Accedono i passeggeri di classe business, i membri élite dei programmi fedeltà di compagnie aeree e banche, e i passeggeri di classe economica a pagamento, al massimo 3 ore prima della partenza. Pasti e bevande analcoliche inclusi."
+    },
+    "kids": {
+      "title": "Con bambini",
+      "hint": "Gratis, 24/7",
+      "text": "La sala madre e bambino è gratuita e aperta giorno e notte, per soste fino a 3–4 ore. Per passeggeri con bambini sotto gli 8 anni, bambini con disabilità sotto i 14 anni e donne nella seconda metà della gravidanza. Se è chiusa, rivolgersi al banco informazioni al livello 1 di fronte all’ingresso."
+    },
+    "parking": {
+      "title": "Parcheggio",
+      "hint": "15 min gratis",
+      "text": "Parcheggio P sul piazzale dell’aerostazione: 15 minuti gratis una volta all’ora, la prima ora 300 ₽, poi 250 ₽ all’ora, le prime 24 ore in totale 1300 ₽, oltre le 24 ore 700 ₽ ogni 24 ore. Parcheggio gratuito da 100 posti per chi attende i passeggeri sul lato sud della località Aeroport."
+    },
+    "wifi": {
+      "title": "Wi‑Fi",
+      "hint": "Gratis",
+      "text": "Passeggeri e ospiti dell’aeroporto possono usare internet gratuitamente via Wi‑Fi."
+    }
+  }
+}

@@ -1,0 +1,26 @@
+{
+ "iata": "NYM",
+ "about": "El aeropuerto de Nadym lleva el nombre de V. S. Chernomyrdin. Operador: AO «Nadymskoye aviapredpriyatiye». El aeropuerto tiene dos salas de facturación; la segunda se abre según la demanda.",
+ "blocks": {
+  "transport": {
+   "title": "Cómo llegar",
+   "hint": "Autobuses 2 y 4А",
+   "text": "Hasta el aeropuerto llegan los autobuses urbanos n.º 2 y n.º 4А. Se puede ir en taxi o en coche propio."
+  },
+  "lounges": {
+   "title": "Salas VIP",
+   "hint": "Sala VIP, facturación n.º 2",
+   "text": "Sala VIP en la parte derecha de la sala de facturación n.º 2, con entrada propia y aparcamiento propio. Admite a pasajeros de clase turista que paguen a más tardar 15 horas antes de la salida, a miembros de S7 Priority y a la clase business de ATK «Yamal». La sala abre 1 hora 30 minutos antes de la salida y 30 minutos antes del aterrizaje del avión. Precios según la tarifa de la empresa aérea; menores de 2 años gratis."
+  },
+  "kids": {
+   "title": "Con niños",
+   "hint": "7:00–18:30, gratis",
+   "text": "La sala madre e hijo funciona de 7:00 a 18:30; la estancia es gratuita. Admite a pasajeros con niños menores de 7 años, niños con discapacidad menores de 14 años con un adulto y embarazadas en la segunda mitad del embarazo. Se necesitan certificado del puesto sanitario, tarjeta de embarque y documentos del adulto y del niño. Sin certificado se puede entrar en la sala n.º 1 para cambiar pañales y dar de comer."
+  },
+  "parking": {
+   "title": "Aparcamiento",
+   "hint": "Gratis",
+   "text": "El aparcamiento de la plaza de la terminal es gratuito. Hay explanadas junto a la entrada central de la sala de facturación n.º 1 y en la zona de la tienda «Layner». Las plazas para coches de personas con discapacidad están marcadas con señalización horizontal y vertical."
+  }
+ }
+}

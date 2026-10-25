@@ -1,0 +1,30 @@
+{
+ "iata": "ASF",
+ "blocks": {
+  "transport": {
+   "title": "Nasıl gidilir",
+   "hint": "45, 86 otobüsleri, minibüsler",
+   "text": "80с (Latysheva Caddesi'nden) ve 86с (Konserve Fabrikası'ndan) numaralı dolmuşlar. 45 (Myasokombinat Caddesi'nden) ve 86 (Slavyansky Pazarı'ndan) numaralı otobüsler."
+  },
+  "lounges": {
+   "title": "Business salonları",
+   "hint": "Kat 2, gece gündüz",
+   "text": "İç hatlar business salonu Kat 2'de, güvenlik kontrolünden sonraki steril alanda, gece gündüz açık. Business sınıfı yolcuları, havayolu ve banka bonus programlarının üyeleri ve ziyaret ücretini kartla, QR kodla veya nakit ödeyen herkes kabul edilir. Kalış süresi kalkıştan önce en fazla iki saat."
+  },
+  "storage": {
+   "title": "Emanet",
+   "hint": "Bodrum kat, 24/7",
+   "text": "İç ve dış hat yolcuları için bagaj ve el bagajı emaneti terminal binasının bodrum katında, gece gündüz çalışır."
+  },
+  "kids": {
+   "title": "Çocukla",
+   "hint": "Ücretsiz, 24/7",
+   "text": "Anne-bebek odası ücretsiz ve gece gündüz açık; 3–4 saate kadar kalış için. 7 yaşından küçük (yer varsa 8 yaşından küçük) çocuklu yolcular, 14 yaşından küçük engelli çocuklar ve gebeliğin ikinci yarısındaki kadınlar için."
+  },
+  "parking": {
+   "title": "Otopark",
+   "hint": "10 dakika ücretsiz",
+   "text": "Terminal önü meydanı: ilk 10 dakika ücretsiz, ilk saat 250 ₽, ikinciden dördüncüye kadar saati 200 ₽, 4 saatten fazlası her 24 saat için 900 ₽. Günlük otopark (5 numaralı giriş): ilk üç saat saati 200 ₽, 181. dakikadan itibaren ilk 24 saat 600 ₽, iki adet 24 saatlik dönem 1100 ₽, üç dönem 1500 ₽, sonrası her 24 saat için 300 ₽. En az 130 araçlık ücretsiz bir otopark var."
+  }
+ }
+}

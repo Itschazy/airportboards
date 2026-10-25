@@ -1,0 +1,31 @@
+{
+ "iata": "ULV",
+ "about": "Aeropuerto Internacional de Uliánovsk (Barataevka) N. M. Karamzin, dirección: calle Aviatsionnaya, 20. Operador: OAO «Aeropuerto de Uliánovsk». La terminal reconstruida entró en servicio en 2013; su capacidad es de 240 pasajeros por hora.",
+ "blocks": {
+  "terminals": {
+   "title": "Terminal",
+   "hint": "Una sola terminal",
+   "text": "Un único complejo terminal para vuelos nacionales e internacionales. Paneles y mostrador de información en el nivel 1. Control de pasaportes, control de seguridad y acceso al embarque por la zona estéril del nivel 2. La facturación de vuelos nacionales abre 2 horas antes y cierra 40 minutos antes; la de internacionales abre 3 horas antes."
+  },
+  "lounges": {
+   "title": "Salas VIP",
+   "hint": "Nivel 1, 24/7, 3000 ₽",
+   "text": "Sala business en el nivel 1, en el ala derecha de la terminal, día y noche. Adulto 3000 ₽, quien despide o recibe a un pasajero 1500 ₽, menores de 2 años gratis, sala VIP 10 000 ₽. Se accede con las tarjetas Persona Aero, Every.Lounge, OnPass, MileOnAir, Grey Wall y GoldenKey; límite de 3 horas."
+  },
+  "sleep": {
+   "title": "Dónde dormir",
+   "hint": "Hotel «Aeroport»",
+   "text": "Hotel «Aeroport» en el recinto del aeropuerto, junto a la terminal, día y noche. Reservas: +7 (8422) 587-323, hotel@ulkaero.ru. Los precios se consultan con el gestor. Pago en efectivo o con tarjeta."
+  },
+  "parking": {
+   "title": "Aparcamiento",
+   "hint": "15 min gratis",
+   "text": "Aparcamiento de pago frente a la terminal, para 150 coches. Los primeros 15 minutos gratis, de 15 minutos a 3 horas 150 ₽/hora, más de 3 horas 500 ₽/día. Una nueva entrada dentro de 60 minutos no tiene tiempo gratuito. Tras el pago hay 30 minutos para salir."
+  },
+  "wifi": {
+   "title": "Wi‑Fi",
+   "hint": "Gratis, hasta 50 Mbit/s",
+   "text": "Wi‑Fi gratuito en toda la terminal, sin límite de datos. Velocidad de hasta 50 Mbit/s."
+  }
+ }
+}

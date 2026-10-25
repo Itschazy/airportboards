@@ -1,0 +1,51 @@
+{
+ "iata": "LED",
+ "about": "Der Flughafen Pulkowo liegt 23 km vom Schlossplatz in Sankt Petersburg entfernt. Die Passagiere werden in einem zentralen Passagierterminal abgefertigt; das Gebäude „Pulkowo-1“ ist mit dem Hauptgebäude durch eine Verbindungsgalerie verbunden und fertigt Inlandsflüge ab. Seit 2010 wird der Flughafen von OOO „Wosduschnyje Worota Sewernoi Stolizy“ betrieben, Basisfluggesellschaft ist „Rossiya“.",
+ "blocks": {
+  "lounges": {
+   "title": "Business-Lounges",
+   "hint": "2 Inland + 1 international",
+   "text": "Drei Business-Lounges. Zwei im Abflugbereich der Inlandsflüge, darunter die New Pulkovo Lounge, und eine im Abflugbereich der internationalen Flüge. Bei den Inlandsflügen ist der Eingang am Ende der Halle auf Ebene 2. Kostenlos: Premium-Klasse und Premium-Stufen der Treueprogramme der Fluggesellschaften, 4 Stunden vor Abflug; MILE·ON·AIR, Every Lounge, Comfort Pass, RusPriority, Golden Key, Grey Wall Pass, Persona.aero, DreamFolks, 2 Stunden vorher. Einzelbesuch 3500 ₽ für 2 Stunden, Kinder unter 2 Jahren kostenlos."
+  },
+  "storage": {
+   "title": "Gepäckaufbewahrung",
+   "hint": "Ebene 1, ab 1100 ₽",
+   "text": "In der Ebene 1 des neuen Terminals. Ein Gepäckstück kostet 1100 ₽ für den ersten Kalendertag, danach 500 ₽ pro Tag. Schließfach: 1500 ₽, danach 800 ₽ pro Tag. Betreiber „Aeroservis“, +7 921 859-55-33."
+  },
+  "sleep": {
+   "title": "Schlafen",
+   "hint": "Kapseln, 1100 ₽/Std.",
+   "text": "Kapselhotel im Wartesaal auf Ebene 2 des zentralen Terminals. Schlafplatz 140×200 cm für zwei Personen, in der Kapsel eine Steckdose 220 V und kostenloses Wi‑Fi. Stundenweise Bezahlung 1100 ₽ pro Stunde, bar oder mit Karte. Telefon +7 921 859-55-22."
+  },
+  "kids": {
+   "title": "Mit Kind",
+   "hint": "Ebene 2, 24/7, kostenlos",
+   "text": "Mutter-Kind-Raum auf Ebene 2 des Terminal-Hauptgebäudes, rund um die Uhr und kostenlos. Zugang mit Kindern bis einschließlich 7 Jahren, mit Kindern mit Behinderung unter 14 Jahren, für höchstens 3 Stunden. Erforderlich sind Ticket oder Bordkarte, ein Dokument des Kindes und ein ärztliches Attest: Es wird kostenlos in der Sanitätsstation auf Ebene 2 ausgestellt. Der Kinderbereich für Inlandsflüge befindet sich auf Ebene 2 hinter dem Restaurant „Bufet“."
+  },
+  "transport": {
+   "title": "Anreise",
+   "hint": "Busse 39, 39Э, 82Э",
+   "text": "Nr. 39 ab Metro „Moskowskaja“ hält an allen Haltestellen: Takt 5–7 Min., Fahrzeit 35 Min., ab Flughafen von 5:15 bis 1:36. Nr. 39Э fährt ohne Halt: Takt 13–20 Min., Fahrzeit 27 Min., ab Flughafen von 6:00 bis 1:40. Nr. 82Э ab Metro „Prospekt Weteranow“: Takt 15–16 Min., Fahrzeit 25 Min., ab Flughafen von 6:05 bis 1:41."
+  },
+  "taxi": {
+   "title": "Taxi und Haltestellen",
+   "hint": "Yandex Go, Schalter 24/7",
+   "text": "Offizieller Taxipartner des Flughafens: Yandex Go. Die Schalter sind rund um die Uhr besetzt: in der Gepäckausgabe der Inlandsflüge und direkt am Ausgang der Gepäckausgabe der internationalen Flüge. Die Busse 39, 39Э und 82Э kommen auf Ebene 3 an und fahren von Ebene 1 ab, Fahrpreis 88 ₽. Der Kiosk von „Podoroschnik“ an der Haltestelle ist von 8:00 bis 20:00 geöffnet."
+  },
+  "parking": {
+   "title": "Parken",
+   "hint": "15 Min. am Eingang kostenlos",
+   "text": "Am Terminal sind die ersten 15 Minuten kostenlos, danach 2000 ₽ für jeweils 30 Minuten. Einfahren darf man höchstens einmal in 30 Minuten. P2 (Kurzzeit): 450 ₽ für 30 Minuten, 2–4 Minuten zu Fuß. P4 (Langzeit): 1100 ₽ für die ersten 24 Stunden, ab 14 Tagen 700 ₽ pro 24 Stunden. Der kostenlose Parkplatz P0 mit 120 Plätzen liegt am Pulkowskoje Schosse, 3 km vom Flughafen."
+  },
+  "wifi": {
+   "title": "Wi‑Fi",
+   "hint": "OBIT, Anmeldung per Anruf",
+   "text": "Kostenloses Netz „OBIT — Free Internet Access“ der Firma „OBIT“. Die Telefonnummer im Format +Ländervorwahl eingeben, ausländische Nummern funktionieren ebenfalls. Auf die Nummer kommt ein Anruf, den man nicht annehmen muss: Die letzten 4 Ziffern der anrufenden Nummer sind der Zugangscode."
+  },
+  "terminals": {
+   "title": "Terminal",
+   "hint": "1 Ankunft, 2–3 Abflug",
+   "text": "Check-in auf Ebene 3. Abflugbereich der Inlandsflüge auf Ebene 2, der internationalen auf Ebene 3. Ankunft und Abholbereich auf Ebene 1."
+  }
+ }
+}

@@ -1,0 +1,36 @@
+{
+ "iata": "REN",
+ "about": "Principal aéroport de l'oblast d'Orenbourg, il accueille des vols intérieurs et internationaux. Le nouveau terminal passagers de plus de 24 000 m² a été construit par la société « ABS » (Aeroporty Bolchoï Strany) ; il compte quatre étages et 4 passerelles télescopiques. L'aéroport accueille plus de 950 000 passagers par an.",
+ "blocks": {
+  "transport": {
+   "title": "Comment s'y rendre",
+   "hint": "Bus 101, 120 ₽",
+   "text": "Le bus n° 101 circule entre la gare ferroviaire et l'aéroport, billet 120 ₽. De la gare à l'aéroport : 08:45, 16:00, 18:25. De l'aéroport à la gare : 07:20, 11:00, 17:10. À 19:50, le n° 101 (k) part de l'aéroport jusqu'à la place Mira, trajet de 30 minutes."
+  },
+  "lounges": {
+   "title": "Salons",
+   "hint": "Niveaux 3 et 4, 6500 ₽",
+   "text": "Salon des vols intérieurs au niveau 3, salon des vols internationaux au niveau 4. Accès pour les passagers de classe affaires, les membres des programmes ON PASS, Grey Wall, Every Lounge, UniPass, Golden Key et tous ceux qui paient eux-mêmes. Prix dans les deux salons : 6500 ₽ jusqu'à 3 heures, ensuite 550 ₽ par heure. Les enfants à partir de 2 ans paient selon les règles du programme."
+  },
+  "storage": {
+   "title": "Consigne à bagages",
+   "hint": "Niveau 1, 24/7",
+   "text": "Consigne automatique dans le hall central de l'aérogare, niveau 1. Ouverte jour et nuit. Casier standard : 300 ₽ de l'heure ou 500 ₽ par jour."
+  },
+  "kids": {
+   "title": "Avec un enfant",
+   "hint": "Niveau 2, 24/7",
+   "text": "Salle mère-enfant au niveau 2 de l'aérogare, ouverte jour et nuit. Accueil des passagers avec des enfants de moins de 7 ans, des enfants handicapés de moins de 14 ans et des femmes enceintes dans la seconde moitié de la grossesse. Accès 3 heures avant le départ ou dans un délai de 1 heure après l'arrivée. Certificat du poste médical du niveau 1, passeport, acte de naissance de l'enfant et carte d'embarquement requis."
+  },
+  "parking": {
+   "title": "Parking",
+   "hint": "15 min gratuites",
+   "text": "Zone de dépose et de prise en charge : jusqu'à 15 minutes gratuit, de 15 à 60 minutes 600 ₽, ensuite 600 ₽ par heure. Zone Р1 : jusqu'à 60 minutes 250 ₽, jusqu'à 120 minutes 500 ₽, jusqu'à 24 heures 700 ₽. Zone Р2 pour le stationnement prolongé : jusqu'à 48 heures 1400 ₽. Parking gratuit Р4 à 6 minutes du terminal."
+  },
+  "wifi": {
+   "title": "Wi‑Fi",
+   "hint": "Réseau Beeline-WiFi-Free",
+   "text": "Wi‑Fi gratuit dans les zones passagers de l'aéroport. Réseau Beeline-WiFi-Free. Connexion par numéro de téléphone mobile, puis suivre les instructions à l'écran."
+  }
+ }
+}

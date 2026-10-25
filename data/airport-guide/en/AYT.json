@@ -1,0 +1,30 @@
+{
+ "iata": "AYT",
+ "blocks": {
+  "transport": {
+   "title": "Getting there",
+   "hint": "Buses and AntRay tram",
+   "text": "City buses run to the intercity bus station and the centre of Antalya; timetables are in the Antalyakart app or by phone 0242 606 07 07. The AntRay tram runs airport — city centre — intercity bus station — Fatih district. Tour operator desks with their buses meet tour company passengers at the terminal exit."
+  },
+  "taxi": {
+   "title": "Taxi",
+   "hint": "At terminal exits",
+   "text": "Taxi ranks are opposite the exits of all terminals; drivers wear airport badges. Fares are on the information board next to the rank; online booking is available through the airport taxi cooperative (antalyaairporttaxi.net)."
+  },
+  "storage": {
+   "title": "Left luggage",
+   "hint": "Domestic terminal arrivals hall",
+   "text": "Left luggage is in the arrivals hall of the domestic terminal; it can be used by passengers departing from terminal 1 or the domestic terminal. Baggage wrapping is available round the clock, for a fee, in the departure halls of terminals 1 and 2."
+  },
+  "parking": {
+   "title": "Parking",
+   "hint": "Multi-storey, 2,643 spaces",
+   "text": "Multi-storey car park for 2,643 cars opposite the domestic terminal. The price is calculated on the airport website; season passes are issued at the service centre on Level 1 (P1)."
+  },
+  "wifi": {
+   "title": "Wi‑Fi",
+   "hint": "Free for 1 hour",
+   "text": "Free internet for 1 hour in all terminals. PIN codes are issued by free Wi‑Fi kiosks in the arrival and departure halls; a mobile phone and a passport or ID card are required. In the CIP terminal and rest areas access is unlimited."
+  }
+ }
+}

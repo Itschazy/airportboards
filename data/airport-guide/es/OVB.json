@@ -1,0 +1,31 @@
+{
+ "iata": "OVB",
+ "about": "Tolmachevo: aeropuerto internacional de Novosibirsk A. I. Pokryshkin, a 17 km al oeste del centro de la ciudad. Dos pistas de 3597 y 3602 m de longitud. El complejo terminal está diseñado para 1800 pasajeros por hora en vuelos nacionales y 1300 en internacionales.",
+ "blocks": {
+  "transport": {
+   "title": "Cómo llegar",
+   "hint": "Exprés 111Э, cada 30 min",
+   "text": "El autobús exprés n.º 111Э une el aeropuerto con la estación de ferrocarril «Novosibirsk-Glavny» cada 30 minutos: desde la estación de 05:00 a 00:30, desde el aeropuerto de 04:00 a 23:30. Los trenes de cercanías paran en la estación «Ob», junto al aeropuerto; desde ella van a la terminal los autobuses n.º 4 (40 ₽), n.º 111Э y n.º 112."
+  },
+  "lounges": {
+   "title": "Salas VIP",
+   "hint": "Sectores B y C, 4000 ₽ por 4 h",
+   "text": "Salas business de vuelos nacionales «Komfort» y «Premier» en el nivel 2 del Sector C, en la zona estéril: tras el control de seguridad en el nivel 3, frente a la puerta n.º 6, bajar siguiendo las indicaciones. Sala de vuelos internacionales en el nivel 3 del Sector B, 50 plazas. Visita de pago: 4000 ₽ por 4 horas, niños de 2–12 años 2000 ₽, menores de 2 años gratis."
+  },
+  "storage": {
+   "title": "Consigna",
+   "hint": "Sector C, 500 ₽ al día",
+   "text": "La consigna para pasajeros de vuelos nacionales e internacionales está en el Sector C y funciona día y noche. Equipaje: 500 ₽ por bulto al día; ropa de abrigo: 100 ₽ al día. La custodia de menos de un día se paga como un día completo."
+  },
+  "kids": {
+   "title": "Con niños",
+   "hint": "Sector C, nivel 3, 24/7",
+   "text": "Sala madre e hijo en el nivel 3 del Sector C, abierta las 24 horas y gratuita. Para pasajeros que salen con niños menores de 7 años, niños con discapacidad menores de 14 años y mujeres en la segunda mitad del embarazo. Hay cocina, dormitorio con cunas y sala de juegos."
+  },
+  "parking": {
+   "title": "Aparcamiento",
+   "hint": "15 min gratis",
+   "text": "En la plaza de la terminal, los primeros 15 minutos son gratis; después, la primera hora 400 ₽, la segunda 300 ₽, a continuación 200 ₽ por hora; más de 6 horas, 1500 ₽ por día. Aparcamientos P1–P4: hasta 3 días, 700 ₽ por día; hasta 6 días, 500 ₽; más tiempo, 300 ₽. Entrada solo con matrícula reconocida."
+  }
+ }
+}

@@ -1,0 +1,26 @@
+{
+ "iata": "CEE",
+ "about": "Havalimanı Severstal havacılık işletmesine aittir. Pist uzunluğu 2500 m, terminalin kapasitesi saatte 120 yolcu.",
+ "blocks": {
+  "parking": {
+   "title": "Otopark",
+   "hint": "90 dakika ücretsiz",
+   "text": "Terminal önü meydanı: 90 dakikaya kadar ücretsiz, uçuş rötar yaparsa 90 dakikalık ikinci giriş ücretsiz. 90 dakikanın üzerinde her gün için 1000 ₽ ücret. Gece gündüz açık ücretli otopark: günlüğü 350 ₽. Telefon (8202) 675-217."
+  },
+  "lounges": {
+   "title": "Business salonları",
+   "hint": "Kat 1, solda",
+   "text": "ON PASS business salonu binanın sol tarafında, Kat 1'de, 14 kişilik. ON PASS erişimi olan yolcular ve Business tarifesindeki yolcular check-in ve güvenlik kontrolünden sonra kabul edilir. Çalışma saatleri havalimanı düzenine göre. Resepsiyon +7 (909) 523-92-09."
+  },
+  "sleep": {
+   "title": "Nerede uyunur",
+   "hint": "Yakında Sky-Park oteli",
+   "text": "Havalimanının yanında Sky-Park 3* otel: 62 oda, Kat 1'de restoran, Wi‑Fi. Rezervasyon +7 (8202) 67-52-64."
+  },
+  "kids": {
+   "title": "Çocukla",
+   "hint": "Kat 1, ücretsiz",
+   "text": "Anne-bebek odası Kat 1'de, iç hatlar bekleme salonunda. 7 yaşından küçük çocukla uçanlar, engelli çocuklar ve hamileler için. Ücretsiz. Yolcu hizmetleri görevlisini çağırın veya check-in kontuarına başvurun."
+  }
+ }
+}

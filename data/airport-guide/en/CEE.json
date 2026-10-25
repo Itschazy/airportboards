@@ -1,0 +1,26 @@
+{
+ "iata": "CEE",
+ "about": "The airport belongs to the Severstal aviation company. Runway length 2,500 m, terminal capacity 120 passengers per hour.",
+ "blocks": {
+  "parking": {
+   "title": "Parking",
+   "hint": "90 min free",
+   "text": "Station forecourt: up to 90 minutes free; if a flight is delayed, a repeat entry for 90 minutes is free. Over 90 minutes, a fee of 1,000 ₽ for each day. Paid round-the-clock car park: 350 ₽ per day. Phone (8202) 675-217."
+  },
+  "lounges": {
+   "title": "Lounges",
+   "hint": "Level 1, left side",
+   "text": "ON PASS business lounge on Level 1 in the left part of the building, 14 seats. Admits passengers with ON PASS access and Business fare passengers after check-in and security. Opening hours follow the airport schedule. Reception +7 (909) 523-92-09."
+  },
+  "sleep": {
+   "title": "Where to sleep",
+   "hint": "Sky-Park hotel nearby",
+   "text": "Sky-Park 3* hotel next to the airport: 62 rooms, restaurant on Level 1, Wi‑Fi. Booking +7 (8202) 67-52-64."
+  },
+  "kids": {
+   "title": "With children",
+   "hint": "Level 1, free",
+   "text": "Mother and child room on Level 1 in the domestic waiting hall. For departing passengers with children under 7, disabled children and pregnant women. Free of charge. Call a passenger service staff member or go to the check-in counter."
+  }
+ }
+}

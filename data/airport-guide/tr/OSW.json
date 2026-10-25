@@ -1,0 +1,20 @@
+{
+ "iata": "OSW",
+ "blocks": {
+  "lounges": {
+   "title": "Konforlu bekleme salonu",
+   "hint": "3800 ₽",
+   "text": "Giden yolcular için konforlu bekleme salonu: ayrı check-in kontuarı, kendi güvenlik kontrol noktası ve uçağa kadar refakat; çay, kahve, su. Kalkıştan en erken 2 saat önce kabul edilir. Ücretli, bireyler için 3800 ₽."
+  },
+  "kids": {
+   "title": "Çocukla",
+   "hint": "Biletle ücretsiz",
+   "text": "Anne-bebek odası uçak bileti olanlar için ücretsiz; 7 yaşından küçük çocuklu yolcular, 14 yaşından küçük engelli çocuklar ve gebeliğin ikinci yarısındaki kadınlar için. Bilet, pasaport, çocuğun belgesi ve terminal binasındaki revirden belge gerekir; havalimanı düzenine göre çalışır."
+  },
+  "parking": {
+   "title": "Otopark",
+   "hint": "15 dakika ücretsiz",
+   "text": "01.01.2026'dan itibaren kısa süreli otopark: 15 dakikaya kadar ücretsiz, bir saate kadar 250 ₽, 24 saate kadar 500 ₽, 24 saatten itibaren 500 ₽. Alan korumasızdır."
+  }
+ }
+}

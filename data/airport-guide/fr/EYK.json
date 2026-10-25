@@ -1,0 +1,20 @@
+{
+ "iata": "EYK",
+ "blocks": {
+  "lounges": {
+   "title": "Salons",
+   "hint": "2200 ₽ de l'heure",
+   "text": "Salon de confort supérieur pour les passagers au départ, en transit et à l'arrivée. 2200 ₽ par personne et par heure, avec enregistrement personnel 3500 ₽. Enregistrement accéléré et contrôle prioritaire 1700 ₽."
+  },
+  "storage": {
+   "title": "Consigne à bagages",
+   "hint": "380 ₽ par jour",
+   "text": "Consigne à bagages : 380 ₽ par bagage et par jour (tarifs à partir du 01.10.2026)."
+  },
+  "kids": {
+   "title": "Avec un enfant",
+   "hint": "Niveau 1, gratuit",
+   "text": "Salle mère-enfant au niveau 1 du terminal. Pour les passagers avec des enfants de moins de 14 ans et les femmes dans la seconde moitié de la grossesse. Gratuit. Renseignements : (34670) 62-222."
+  }
+ }
+}

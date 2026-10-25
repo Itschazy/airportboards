@@ -1,0 +1,35 @@
+{
+ "iata": "GDX",
+ "blocks": {
+  "transport": {
+   "title": "Cómo llegar",
+   "hint": "Autobús 101",
+   "text": "El autobús n.º 101 circula entre la estación de autobuses de Magadán y el aeropuerto de Sokol."
+  },
+  "lounges": {
+   "title": "Salas VIP",
+   "hint": "Nivel 2, 4000 ₽",
+   "text": "Sala business en el nivel 2, en la zona estéril de vuelos nacionales: tras el control de seguridad en el nivel 3, bajar siguiendo las indicaciones. Abre durante la atención de los vuelos. Admite con los programas ON·PASS, Persona.aero, RusPriority, Every Lounge, Golden Key y otros; cualquier pasajero puede solicitar el servicio en la facturación y pagarlo en caja: 4000 ₽ a partir de 2 años, los menores gratis."
+  },
+  "storage": {
+   "title": "Consigna",
+   "hint": "Nivel 2, 8:30–20:30",
+   "text": "Consigna automática para pasajeros de vuelos nacionales en el nivel 2, de 8:30 a 20:30, pago solo con tarjeta. Taquilla estándar de 51×63×76 cm 1000 ₽ por día, grande de 51×195×76 cm 2000 ₽; menos de un día se paga como un día."
+  },
+  "kids": {
+   "title": "Con niños",
+   "hint": "Nivel 3, gratis",
+   "text": "Sala madre e hijo en el nivel 3, gratuita, para pasajeros que salen y que llegan. Para niños menores de 7 años con un adulto, niños con discapacidad menores de 14 años y mujeres en la segunda mitad del embarazo."
+  },
+  "parking": {
+   "title": "Aparcamiento",
+   "hint": "15 min gratis",
+   "text": "Plaza de la terminal P1, a 30 m de la terminal: los primeros 15 minutos gratis, hasta una hora 500 ₽, cada hora siguiente 300 ₽, un día 2000 ₽. Nueva entrada dentro de la misma hora por 1–15 minutos: 200 ₽."
+  },
+  "wifi": {
+   "title": "Wi‑Fi",
+   "hint": "Gratis",
+   "text": "Wi‑Fi gratuito en el recinto de la terminal; según la ley «Sobre las comunicaciones», se requiere identificar al usuario; las condiciones figuran en la página de bienvenida del operador."
+  }
+ }
+}

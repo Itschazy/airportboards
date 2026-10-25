@@ -1,0 +1,31 @@
+{
+ "iata": "ULV",
+ "about": "Aéroport international d'Oulianovsk (Barataïevka) Nikolaï-Karamzine, adresse : rue Aviatsionnaïa, 20. Exploitant : SA « Aéroport d'Oulianovsk ». L'aérogare reconstruite a été mise en service en 2013, capacité de 240 passagers par heure.",
+ "blocks": {
+  "terminals": {
+   "title": "Terminal",
+   "hint": "Une seule aérogare",
+   "text": "Un seul complexe aéroportuaire pour les vols intérieurs et internationaux. Panneaux d'affichage et comptoir d'information au niveau 1. Contrôle des passeports, contrôle de sûreté et accès à l'embarquement par la zone réservée au niveau 2. L'enregistrement des vols intérieurs ouvre 2 heures avant et ferme 40 minutes avant, celui des vols internationaux ouvre 3 heures avant."
+  },
+  "lounges": {
+   "title": "Salons",
+   "hint": "Niveau 1, 24/7, 3000 ₽",
+   "text": "Salon au niveau 1, dans l'aile droite de l'aérogare, jour et nuit. Adulte 3000 ₽, personne accompagnant ou accueillant un passager 1500 ₽, entrée gratuite pour les enfants de moins de 2 ans, salon VIP 10 000 ₽. Accès avec les cartes Persona Aero, Every.Lounge, OnPass, MileOnAir, Grey Wall, GoldenKey, limite de 3 heures."
+  },
+  "sleep": {
+   "title": "Où dormir",
+   "hint": "Hôtel « Aeroport »",
+   "text": "L'hôtel « Aeroport » sur le site de l'aéroport, à côté de l'aérogare, jour et nuit. Réservation : +7 (8422) 587-323, hotel@ulkaero.ru. Prix à demander au responsable. Paiement en espèces ou par carte."
+  },
+  "parking": {
+   "title": "Parking",
+   "hint": "15 min gratuites",
+   "text": "Parking payant de 150 voitures devant le terminal. 15 premières minutes gratuites, de 15 minutes à 3 heures 150 ₽/heure, au-delà de 3 heures 500 ₽/jour. Nouvelle entrée dans les 60 minutes sans temps gratuit. Après paiement, 30 minutes pour sortir."
+  },
+  "wifi": {
+   "title": "Wi‑Fi",
+   "hint": "Gratuit, jusqu'à 50 Mbit/s",
+   "text": "Wi‑Fi gratuit dans toute l'aérogare, sans limite de trafic. Débit jusqu'à 50 Mbit/s."
+  }
+ }
+}

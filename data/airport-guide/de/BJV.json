@@ -1,0 +1,10 @@
+{
+ "iata": "BJV",
+ "blocks": {
+  "transport": {
+   "title": "Anreise",
+   "hint": "Havaş-Shuttle zum Busbahnhof",
+   "text": "Der Havaş-Shuttle bedient alle ankommenden Inlandsflüge und fährt vom Flughafen zum zentralen Busbahnhof von Bodrum über Güvercinlik und den Busbahnhof Torba. Fahrplan nach Datum auf der Havaş-Website (Richtung Bodrum Airport – Bodrum Center). Seit dem 7. August 2026 verkehrt kein Shuttle zwischen Flughafen und Didim."
+  }
+ }
+}

@@ -1,0 +1,31 @@
+{
+ "iata": "MRV",
+ "about": "Mineralnye Vody: Kuzey Kafkasya Federal Bölgesi'nin en büyük havalimanı. 3900 m uzunluğunda ve 60 m genişliğindeki pist 2011'de hizmete girdi. İki gidiş terminali (iç hatlar ve dış hatlar) ve ayrı geliş terminalleri var.",
+ "blocks": {
+  "transport": {
+   "title": "Nasıl gidilir",
+   "hint": "11 numaralı dolmuş, 20–25 dk",
+   "text": "11 numaralı dolmuş Mineralnye Vody tren garına gider, yolculuk 20–25 dakika; otogara (Rynok Ruslan durağı) yaklaşık 10 dakika. Gardan Pyatigorsk'a 223, Zheleznovodsk'a 107 numaralı otobüs gider. Yessentuki, Kislovodsk, Teberda ve Dombay'a otogardan şehirlerarası otobüsler kalkar."
+  },
+  "lounges": {
+   "title": "Business salonları",
+   "hint": "Beshtau, Kat 3, 24/7",
+   "text": "Beshtau business salonu yeni terminalde Kat 3'te, güvenlik kontrolünden sonraki steril alanda, gece gündüz açık. Business sınıfı yolcuları, ON Pass, Persona.Aero, Grey Wall Pass, Dragon Pass, Every Lounge ve diğer programların üyeleri ve tarifeye göre ücret ödeyen tüm yolcular kabul edilir."
+  },
+  "storage": {
+   "title": "Emanet",
+   "hint": "Bodrum kat, 8:00–17:00",
+   "text": "Emanet bodrum katta, inişi yalnızca merdivenle, 8:00–17:00 arası açık. İlk gün (24:00'e kadar) parça başına 900 ₽, sonrası günlüğü 500 ₽; tamamlanmamış gün tam gün olarak ücretlendirilir. Saklama süresi en fazla bir ay."
+  },
+  "kids": {
+   "title": "Çocukla",
+   "hint": "Ücretsiz, 24/7",
+   "text": "Anne-bebek odası Mineralnye Vody'den gidiş bileti olan yolcular için gece gündüz açık ve ücretsiz: 7 yaşından küçük çocuklarla, 16 yaşından küçük engelli çocuklarla ve gebeliğin ikinci yarısındaki kadınlar için. Bilet, pasaport ve çocuğun doğum belgesi gerekir."
+  },
+  "parking": {
+   "title": "Otopark",
+   "hint": "15 dakika ücretsiz",
+   "text": "Gidiş salonunun yanında kısa süreli P1 otoparkı: 15 dakikadan az ücretsiz, 15–60 dakika 500 ₽, sonrası saati 500 ₽, 4 saatten fazlası günlüğü 1200 ₽. Bir saat içinde tekrar geçiş 500 ₽. Çevredeki alanda ücretsiz otopark var, yeri otopark planında."
+  }
+ }
+}

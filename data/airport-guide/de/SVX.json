@@ -1,0 +1,46 @@
+{
+ "iata": "SVX",
+ "about": "Der Internationale Flughafen Kolzowo wird von der Verwaltungsgesellschaft „Aeroporty Regionow“ betrieben. Mehr als 100 Ziele und mehr als 40 russische und internationale Fluggesellschaften. 2024 fertigte der Flughafen mehr als 8 Mio. Passagiere ab.",
+ "blocks": {
+  "transport": {
+   "title": "Anreise",
+   "hint": "Bus 66, 30 Min.",
+   "text": "Bus Nr. 66 ab Metro „Botanitscheskaja“, 30 Minuten, 06:06–23:36, Takt 16–31 Min. Bus Nr. 79 ab Metro „Botanitscheskaja“, 30 Minuten, werktags 06:25–21:50. Bus Nr. 65 ab Bahnhof, 1 Stunde 5 Minuten. Fahrpreis 33 ₽. Der Elektrozug „Express Kolzowo“ ab Station Jekaterinburg-Pass.: Nr. 6038 um 07:12 (41 Min.) und Nr. 6040 um 19:17 (38 Min.), Fahrkarten an den Kassen der SPK und in den Apps „Prigorod“ und „RZD Passaschiram“."
+  },
+  "terminals": {
+   "title": "Terminals",
+   "hint": "A Inland, B international",
+   "text": "Terminal A fertigt Inlandsflüge ab, Terminal B internationale. Die Gepäckermittlung befindet sich in der Gepäckausgabehalle jedes Terminals, 08:00–20:00."
+  },
+  "lounges": {
+   "title": "Business-Lounges",
+   "hint": "4 Lounges, ab 5800 ₽",
+   "text": "Im Inlandsterminal die Lounges „Isumrud“ und „Opal“, im internationalen „Topas“ und „Agat“. „Isumrud“ und „Topas“: Passagiere der Business Class, Teilnehmer von Bonusprogrammen der Fluggesellschaften und alle Interessierten gegen Gebühr; 5800 ₽ bis zu 3 Stunden, danach 550 ₽ pro Stunde, Kinder von 2–12 Jahren 2900 ₽. „Opal“ und „Agat“ nehmen über die Programme ON PASS, Grey Wall, EveryLounge, RusPriority, GoldenKey, UniPass auf. „Agat“ für Abflüge nach Armenien, Belarus, Kasachstan und Kirgisistan."
+  },
+  "storage": {
+   "title": "Gepäckaufbewahrung",
+   "hint": "Terminal A, Ebene −1",
+   "text": "Terminal A, Ebene −1. 200 ₽ pro Stunde, 500 ₽ für die ersten 24 Stunden, 300 ₽ für je weitere 24 Stunden. Sperrgepäck (größer als 50×50×80 cm oder schwerer als 20 kg): 400 ₽ pro Stunde, 800 ₽ für die ersten 24 Stunden, 500 ₽ für je weitere 24 Stunden. Garderobe für Oberbekleidung: 100 ₽ pro Garnitur."
+  },
+  "sleep": {
+   "title": "Schlafen",
+   "hint": "Kapseln, Terminal B",
+   "text": "Kapseln POWER NAP in Terminal B, Ebene 1, neben der Passkontrolle. Stundentarif, Rezeption rund um die Uhr, Gepäckaufbewahrung inklusive. Das Hotel AZIMUT (Uliza Bachtschiwandschi 55a) ist durch einen überdachten Übergang mit dem Flughafen verbunden. A-Hotel Lainer (Uliza Bachtschiwandschi 3) 7 Gehminuten entfernt, 12-Stunden-Tarif für Transferpassagiere ab 3200 ₽."
+  },
+  "kids": {
+   "title": "Mit Kind",
+   "hint": "Terminal A, Ebene 2, 24/7",
+   "text": "Mutter-Kind-Raum in Terminal A, Ebene 2, rund um die Uhr. Kinder unter 7 Jahren (mit Behinderung unter 14 Jahren), nur mit einem Erwachsenen. Bis zu 12 Stunden vor Abflug und bis zu 6 Stunden nach Ankunft. Erforderlich sind ein ärztliches Attest der Sanitätsstation (Ebene 1 von Terminal A), Pass und Ticket."
+  },
+  "parking": {
+   "title": "Parken",
+   "hint": "15 Min. kostenlos",
+   "text": "Hol- und Bringzone: bis 15 Minuten kostenlos, 16–60 Minuten 880 ₽, danach 880 ₽ pro Stunde. Parkplatz P1 am Terminal ohne kostenlose Zeit: 1 Stunde 360 ₽, bis 24 Stunden 900 ₽. Langzeitparkplätze P2 und P6: ab 1790 ₽ bzw. 1380 ₽ für zwei Tage. P0 kostenlos, 5 Minuten zum Terminal."
+  },
+  "wifi": {
+   "title": "Wi‑Fi",
+   "hint": "Netz Free_SVX",
+   "text": "Kostenlos in den Passagierbereichen. Netz Free_SVX, Anmeldung mit der Mobilfunknummer."
+  }
+ }
+}

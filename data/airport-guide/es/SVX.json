@@ -1,0 +1,46 @@
+{
+  "iata": "SVX",
+  "about": "El Aeropuerto Internacional de Koltsovo lo gestiona la sociedad gestora «Aeroporty Regionov». Más de 100 destinos y más de 40 aerolíneas rusas e internacionales. En 2024 el aeropuerto atendió a más de 8 millones de pasajeros.",
+  "blocks": {
+    "transport": {
+      "title": "Cómo llegar",
+      "hint": "Autobús 66, 30 min",
+      "text": "Autobús n.º 66 desde el metro «Botanicheskaya», 30 minutos, 06:06–23:36, intervalo de 16–31 min. Autobús n.º 79 desde el metro «Botanicheskaya», 30 minutos, en días laborables 06:25–21:50. Autobús n.º 65 desde la estación de ferrocarril, 1 hora 5 minutos. Billete: 33 ₽. Tren eléctrico «Express Koltsovo» desde la estación Ekaterimburgo-Pass.: n.º 6038 a las 07:12 (41 min) y n.º 6040 a las 19:17 (38 min); billetes en las taquillas de SPK y en las aplicaciones «Prigorod» y «RZhD Passazhiram»."
+    },
+    "terminals": {
+      "title": "Terminales",
+      "hint": "A nacional, B internacional",
+      "text": "La terminal A atiende vuelos nacionales; la terminal B, internacionales. El servicio de búsqueda de equipaje funciona en la sala de recogida de equipajes de cada terminal, 08:00–20:00."
+    },
+    "lounges": {
+      "title": "Salas VIP",
+      "hint": "4 salas, desde 5800 ₽",
+      "text": "En la terminal nacional están las salas «Izumrud» y «Opal»; en la internacional, «Topaz» y «Agat». «Izumrud» y «Topaz»: pasajeros de clase business, participantes de programas de fidelización de aerolíneas y cualquier persona previo pago; 5800 ₽ hasta 3 horas, después 550 ₽ por hora, niños de 2–12 años 2900 ₽. «Opal» y «Agat» admiten con los programas ON PASS, Grey Wall, EveryLounge, RusPriority, GoldenKey y UniPass. «Agat» es para quienes salen hacia Armenia, Bielorrusia, Kazajistán y Kirguistán."
+    },
+    "storage": {
+      "title": "Consigna",
+      "hint": "Terminal A, nivel −1",
+      "text": "Terminal A, nivel −1. 200 ₽ por hora, 500 ₽ las primeras 24 horas, 300 ₽ por cada 24 horas siguientes. Equipaje de gran tamaño (más de 50×50×80 cm o más de 20 kg): 400 ₽ por hora, 800 ₽ las primeras 24 horas, 500 ₽ por cada 24 horas siguientes. Guardarropa para ropa de abrigo: 100 ₽ por conjunto."
+    },
+    "sleep": {
+      "title": "Dónde dormir",
+      "hint": "Cápsulas, terminal B",
+      "text": "Cápsulas POWER NAP en la terminal B, nivel 1, junto al control de pasaportes. Tarifa por horas, recepción día y noche, custodia de equipaje incluida. El hotel AZIMUT (calle Bakhchivandzhi, 55а) está unido al aeropuerto por una pasarela cubierta. A-Otel Layner (calle Bakhchivandzhi, 3), a 7 minutos a pie; tarifa de 12 horas para pasajeros en tránsito desde 3200 ₽."
+    },
+    "kids": {
+      "title": "Con niños",
+      "hint": "Terminal A, nivel 2, 24/7",
+      "text": "Sala madre e hijo en la terminal A, nivel 2, día y noche. Niños menores de 7 años (con discapacidad, menores de 14 años), solo con un adulto. Hasta 12 horas antes de la salida y hasta 6 horas después de la llegada. Se necesitan certificado médico del puesto médico (nivel 1 de la terminal A), pasaporte y billete."
+    },
+    "parking": {
+      "title": "Aparcamiento",
+      "hint": "15 min gratis",
+      "text": "Zona de recogida y bajada de pasajeros: hasta 15 minutos gratis, 16–60 minutos 880 ₽, después 880 ₽ por hora. Aparcamiento P1 junto a la terminal, sin tiempo gratuito: 1 hora 360 ₽, hasta 24 horas 900 ₽. Larga estancia P2 y P6: desde 1790 ₽ y 1380 ₽ por dos días. P0 gratuito, a 5 minutos de la terminal."
+    },
+    "wifi": {
+      "title": "Wi‑Fi",
+      "hint": "Red Free_SVX",
+      "text": "Gratis en las zonas de pasajeros. Red Free_SVX, acceso con el número de teléfono móvil."
+    }
+  }
+}

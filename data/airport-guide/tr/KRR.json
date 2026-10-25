@@ -1,0 +1,41 @@
+{
+ "iata": "KRR",
+ "about": "İki terminal: iç hatlar ve dış hatlar için. Terminal kompleksinin alanı 16 448 m². 3000 m uzunluğundaki pist 2017'de açıldı.",
+ "blocks": {
+  "transport": {
+   "title": "Nasıl gidilir",
+   "hint": "7 numaralı troleybüs",
+   "text": "Durak terminal önü meydanında. 7 numaralı troleybüs Stavropolskaya Caddesi üzerinden otogara ve Krasnodar-1 tren garına gider. 30 numaralı dolmuş Kooperativny Pazarı'na gider. Resmî taksi kontuarı Terminal 1'de, bagaj alım alanında."
+  },
+  "terminals": {
+   "title": "Terminaller",
+   "hint": "T1 iç hatlar, T2 dış hatlar",
+   "text": "Terminal 1 iç hat uçuşlarına, Terminal 2 dış hat uçuşlarına hizmet verir. Check-in kontuarları 1–19; check-in kalkıştan 40 dakika önce kapanır."
+  },
+  "lounges": {
+   "title": "Business salonları",
+   "hint": "T1 Kat 2, T2 Kat 1",
+   "text": "İç hatlar business salonu: Terminal 1, Kat 2, kontrolden sonra. Dış hatlar business salonu: Terminal 2, Kat 1, kontrolden sonra. ONPASS, Grey Wall Pass, GoldenKey, RusPriority ve diğer programların üyeleri kabul edilir, diğerleri ücret karşılığında. Kalış 3 saate kadar."
+  },
+  "storage": {
+   "title": "Emanet",
+   "hint": "24/7, günlüğü 400 ₽",
+   "text": "Terminal önü meydanında, gece gündüz açık. İlk 24 saat parça başına 400 ₽, sonraki her 24 saat 200 ₽. Bir parçanın ağırlığı en fazla 30 kg."
+  },
+  "kids": {
+   "title": "Çocukla",
+   "hint": "Т1, Kat 1, ücretsiz",
+   "text": "Anne-bebek odası: Terminal 1, Kat 1, iç hatlar check-in salonu. 7 yaşından küçük çocuklu yolcular, 14 yaşından küçük engelli çocuklar ve gebeliğin ikinci yarısındaki kadınlar için. Ücret alınmaz. Pasaport ve biniş kartı veya bilet gerekir."
+  },
+  "parking": {
+   "title": "Otopark",
+   "hint": "15 dk ücretsiz, saati 400₽",
+   "text": "Terminal önü meydanı: ilk 15 dakika ücretsiz, sonrası saati 400 ₽. Meydanın sağında ek saatlik otopark: saati 250 ₽. Günlük otopark günlüğü 900 ₽. Alternatif otopark ücretsiz."
+  },
+  "wifi": {
+   "title": "Wi‑Fi",
+   "hint": "Airport_Free ağı",
+   "text": "Ücretsiz Airport_Free ağı tüm terminal kompleksinde, VIP terminalinde ve business salonunda. Giriş yalnızca Rus operatörüne ait SIM kartla."
+  }
+ }
+}

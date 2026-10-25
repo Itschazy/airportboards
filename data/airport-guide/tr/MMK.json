@@ -1,0 +1,21 @@
+{
+ "iata": "MMK",
+ "about": "Murmansk: havalimanı şehir merkezinin 24 km güneybatısında ve Murmashi kasabasına 4 km uzaklıkta, gece gündüz açık. Tek pist, 2500 × 42 m. İşletici: Aeroport Murmansk AO.",
+ "blocks": {
+  "transport": {
+   "title": "Nasıl gidilir",
+   "hint": "106 no.lu otobüs, yaklaşık bir saat",
+   "text": "106 numaralı otobüs veya dolmuş Murmansk tren garı meydanından 20–30 dakika arayla kalkar, yolculuk yaklaşık bir saat. Gece 106н numaralı Murmansk — Havalimanı hattı çalışır."
+  },
+  "storage": {
+   "title": "Emanet",
+   "hint": "Bodrum kat, 24/7",
+   "text": "Emanet bodrum katta, gece gündüz açık. Önce terminal binası girişindeki güvenlik kontrolünde bagaj bildirilmelidir: kontrolden sonra emanete bir havacılık güvenliği görevlisi götürür. Ödeme danışma gişesinde."
+  },
+  "kids": {
+   "title": "Çocukla",
+   "hint": "Kat 2, ücretsiz, 24/7",
+   "text": "Anne-bebek odası terminal binasının sol kanadında, Kat 2'de, ücretsiz ve gece gündüz açık. 7 yaşından küçük çocuklu yolcular, 14 yaşından küçük engelli çocuklar ve gebeliğin ikinci yarısındaki kadınlar için. İçeriye yalnızca el bagajıyla girilir, bagaj emanete bırakılır."
+  }
+ }
+}

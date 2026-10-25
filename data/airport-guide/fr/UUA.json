@@ -1,0 +1,25 @@
+{
+ "iata": "UUA",
+ "blocks": {
+  "lounges": {
+   "title": "Salons",
+   "hint": "VIP : départ 4600 ₽",
+   "text": "Salon VIP avec son propre comptoir d'enregistrement et un bar. Service au départ 4600 ₽, à l'arrivée 3500 ₽. Administrateur : +7 (85594) 6-35-16, jour et nuit."
+  },
+  "sleep": {
+   "title": "Où dormir",
+   "hint": "Hôtel, 1900 ₽",
+   "text": "Hôtel sur le site de l'aéroport. Lit en semi-suite simple ou double 1900 ₽ par nuit. Arrivée à 16:00, départ à 12:00. Gratuit pour les enfants de moins de 3 ans."
+  },
+  "kids": {
+   "title": "Avec un enfant",
+   "hint": "Jour et nuit",
+   "text": "La salle mère-enfant de l'aérogare est ouverte jour et nuit."
+  },
+  "parking": {
+   "title": "Parking",
+   "hint": "Payant, 24/7",
+   "text": "Le parking payant gardé est ouvert jour et nuit."
+  }
+ }
+}

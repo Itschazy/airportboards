@@ -1,0 +1,26 @@
+{
+ "iata": "KEJ",
+ "about": "Kemerovo: A. A. Leonov International Airport, 5 km south-east of the city outskirts and 11 km from the centre. One runway; the airfield operates round the clock and is shared with the Ministry of Defence and Rosgvardia.",
+ "blocks": {
+  "lounges": {
+   "title": "Lounges",
+   "hint": "Level 3, 4,000 ₽",
+   "text": "Domestic business lounge on Level 3, to the right after security, open from 04:30 to 20:00. Free for business class passengers and holders of cards with access rights; economy passengers via Every Lounge, GoldenKey, RusPriority, Persona.aero and other programmes. Paid entry 4,000 ₽, children 2–12 years 2,000 ₽, under 2 free."
+  },
+  "storage": {
+   "title": "Left luggage",
+   "hint": "From 200 ₽ per day",
+   "text": "Left luggage follows the domestic terminal schedule. Hand luggage 200 ₽ per day, baggage up to 50×40×20 cm 220 ₽, larger 270 ₽, over 100×50×70 cm 500 ₽. Less than a day is charged as a full day."
+  },
+  "kids": {
+   "title": "With children",
+   "hint": "Level 3, 04:30–20:00",
+   "text": "Mother and child room on Level 3, in the left wing next to the security area, free, from 04:30 to 20:00. For departing passengers with children under 7, disabled children under 14 and women in the second half of pregnancy."
+  },
+  "parking": {
+   "title": "Parking",
+   "hint": "15 min free",
+   "text": "Station forecourt 30 m from the terminal, 173 spaces: up to 15 minutes free, first hour 300 ₽, second and third 200 ₽ each, from the fourth hour the daily rate of 1,000 ₽."
+  }
+ }
+}

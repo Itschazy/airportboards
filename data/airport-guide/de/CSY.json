@@ -1,0 +1,26 @@
+{
+ "iata": "CSY",
+ "about": "Flughafen 5 km vom Zentrum von Tscheboksary, Adresse: Ploschtschad I. F. Skworzowa 1. Zum Terminal fahren Oberleitungsbusse und ein Bus, man kann auch mit dem Taxi oder dem eigenen Auto anreisen.",
+ "blocks": {
+  "transport": {
+   "title": "Anreise",
+   "hint": "O-Busse 2, 15",
+   "text": "Bis ins Zentrum von Tscheboksary 5 km. Oberleitungsbusse Nr. 2 und Nr. 15, Bus Nr. 15. Außerdem Taxi oder eigenes Auto."
+  },
+  "lounges": {
+   "title": "Business-Lounges",
+   "hint": "Aufenthalt 4000 ₽",
+   "text": "Business-Lounge: Aufenthalt bis zu 2 Stunden für 4000 ₽, über die Programme Every Lounge und Golden Key, für Teilnehmer von Aeroflot Bonus der Stufen Platinum und Gold. Sonderservice mit Check-in auf Ebene 2 5500 ₽. VIP-Service bei Abflug 15 250 ₽, bei Ankunft 7700 ₽, Anmeldung 24 Stunden vorher. Zutritt zur Lounge frühestens 2 Stunden vor Abflug."
+  },
+  "storage": {
+   "title": "Gepäckaufbewahrung",
+   "hint": "300 ₽ pro Tag",
+   "text": "Gepäckaufbewahrung: 300 ₽ für 1 Gepäckstück pro Tag."
+  },
+  "parking": {
+   "title": "Parken",
+   "hint": "15 Min. kostenlos",
+   "text": "Die ersten 15 Minuten kostenlos. Pkw: 100 ₽ pro Stunde, 450 ₽ pro Tag, ab 3 Tagen 400 ₽ pro Tag. UAZ, „GAZelle“, „Sobol“: 200 ₽ pro Stunde, 650 ₽ pro Tag. Verlust des Belegs 500 ₽. Telefon 8 (8352) 22-94-03, Durchwahl 2-95."
+  }
+ }
+}

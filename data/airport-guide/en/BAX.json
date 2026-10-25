@@ -1,0 +1,41 @@
+{
+ "iata": "BAX",
+ "about": "Barnaul: G. S. Titov International Airport, the main airport of Altai Krai, operated by JSC Aviapredpriyatie Altai. Runway 2,850 × 50 m. The nearest major airport to the Altai Mountains resorts and Belokurikha.",
+ "blocks": {
+  "transport": {
+   "title": "Getting there",
+   "hint": "Bus 110",
+   "text": "Bus No. 110 runs between the airport and the Spartak-2 bus station, 11 trips in each direction: from the airport from 6:00 to 18:50, from the bus station from 7:10 to 20:00. Times may vary depending on traffic."
+  },
+  "lounges": {
+   "title": "Lounges",
+   "hint": "Right wing, 6,200 ₽",
+   "text": "Domestic business terminal in the right wing of the terminal, entry through the main entrance. Own check-in and security, transfer to the aircraft by minibus. For departing passengers aged 2 and over 6,200 ₽, for arriving 4,150 ₽, stay 3 hours, children under 2 free. Not available to international passengers."
+  },
+  "storage": {
+   "title": "Left luggage",
+   "hint": "Level 1, 210 ₽ per day",
+   "text": "Left luggage for baggage and hand luggage on Level 1 of the terminal. One item 210 ₽ per day regardless of size; days are calendar days, from 00:00 to 23:59. Bags and packages attached to baggage count as a separate item."
+  },
+  "sleep": {
+   "title": "Where to sleep",
+   "hint": "Airport hotel",
+   "text": "The hotel of JSC Aviapredpriyatie Altai is right on the airport grounds: rooms in different price categories and a café."
+  },
+  "kids": {
+   "title": "With children",
+   "hint": "Level 2, free, 24/7",
+   "text": "Mother and child room on Level 2, free and open round the clock. For departing passengers with children under 7, disabled children under 14 and women in the second half of pregnancy. There is a kitchen, a bedroom with cots and a playroom."
+  },
+  "parking": {
+   "title": "Parking",
+   "hint": "Free car park",
+   "text": "Beyond the airport park area there is a free car park for about 100 cars, with no time limit. Tow trucks operate on the station forecourt; parking outside designated spaces is prohibited."
+  },
+  "wifi": {
+   "title": "Wi‑Fi",
+   "hint": "Free, 3 providers",
+   "text": "Free Wi‑Fi for passengers and airport visitors from three providers: Avantel, Beeline and MTS. Select a provider on your device and follow the on-screen prompts."
+  }
+ }
+}

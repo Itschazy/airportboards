@@ -1,0 +1,46 @@
+{
+ "iata": "VKO",
+ "about": "Passengers at Vnukovo are served by terminal A; VIP lounges are in a separate building. Arrivals are on Level 1 of the terminal, departures on Level 2. An underground passage leads to the terminal from Aeroport Vnukovo metro station on the Solntsevskaya line.",
+ "blocks": {
+  "lounges": {
+   "title": "Lounges",
+   "hint": "Terminal A, 24 hours",
+   "text": "Domestic flights: Prokofiev Lounge, Level 2 after security, opposite gate 13. International: Tchaikovsky on Level 1 of the atrium after passport control and ART Lounge on Level 2 of the atrium, both by gate 21. VIP Lounge on Level 3 before security serves all flights; passengers on international flights should leave it 1 hour before departure. Admits business-class passengers, members of ON PASS, Persona Aero, Every lounge, RusPriority and other programmes, or for a fee: 2,900 ₽ (ART Lounge 3,500 ₽) for 3 hours."
+  },
+  "storage": {
+   "title": "Left luggage",
+   "hint": "Terminal A, Level −1",
+   "text": "Terminal A, Level −1, open round the clock. Baggage item up to 30 kg, storage up to 6 months. First calendar day 1,000 ₽, from the 2nd to the 29th 900 ₽ per day, oversized 1,500 ₽. Phone +7 (926) 895-36-82."
+  },
+  "sleep": {
+   "title": "Where to sleep",
+   "hint": "Hotel opposite terminal A",
+   "text": "DoubleTree by Hilton is opposite terminal A, 2 minutes from the underground tunnel to the terminal and the metro. The hotel has 432 rooms and is open round the clock. Address: 2nd Reysovaya St, 2, phone +7 (495) 436-37-37."
+  },
+  "kids": {
+   "title": "With children",
+   "hint": "Terminal A, Level 2",
+   "text": "Children's waiting room on Level 2 of terminal A, open round the clock and free, no earlier than 6 hours before departure. Admits children under 7 (with disabilities under 12) with one adult and women in the second half of pregnancy. Baggage and pushchairs are not allowed inside; phone +7 (495) 436-29-26."
+  },
+  "transport": {
+   "title": "Getting there",
+   "hint": "Metro to the terminal",
+   "text": "Aeroport Vnukovo metro station on the Solntsevskaya line. From the platform an underground passage leads to terminal A, to the trains and to the bus stops. Bus No. 911 runs from Salaryevo (Sokolnicheskaya line): 18–20 minutes, interval 10–15 minutes. Aeroexpress no longer runs here: a regular train runs from Kievsky railway station, 35–40 minutes, once an hour, to the airport from 7:00 to 23:00."
+  },
+  "parking": {
+   "title": "Parking",
+   "hint": "15 min free",
+   "text": "Entry to the station forecourt is free for 15 minutes, no more than 60 minutes a day in total. Multi-level car parks No. 1 and No. 2 with 350 spaces each. Rate: 1st hour 600 ₽, 2nd hour 400 ₽, then 1,500 ₽ per day. The underground car park at the DoubleTree hotel across the road costs 2,000 ₽ per day."
+  },
+  "wifi": {
+   "title": "Wi‑Fi",
+   "hint": "MT_FREE network",
+   "text": "Free Wi‑Fi covers all of terminal A. The network is called MT_FREE. Login with a phone number; the number is confirmed by a call."
+  },
+  "terminals": {
+   "title": "Terminal",
+   "hint": "Terminal A and VIP",
+   "text": "Passenger terminal A and a VIP lounge in a separate building. Arrivals are on Level 1 of terminal A, departures on Level 2, reached by a ramp; VIP lounges are on Level 3. You can move from the domestic to the international area without leaving the terminal."
+  }
+ }
+}

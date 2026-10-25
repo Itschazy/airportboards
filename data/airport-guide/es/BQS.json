@@ -1,0 +1,36 @@
+{
+ "iata": "BQS",
+ "about": "Aeropuerto de importancia federal a 15 km al noroeste de Blagovéshchensk y a 3,5 km de la frontera con China. Vuelos a ciudades del Lejano Oriente, de Siberia y a Moscú. Nuevo complejo terminal de más de 26 mil m²; en 2025 atendió a más de 1 millón de pasajeros.",
+ "blocks": {
+  "transport": {
+   "title": "Cómo llegar",
+   "hint": "Autobús 8А, 42 min",
+   "text": "El autobús urbano n.º 8А va de la parada «Univermag» a la parada «Aeroport» en 42 minutos; billete 46 ₽. Hacia la ciudad, el autobús va hasta la parada «m-n Blagoveshchensk», unos 40 minutos. Hay varios servicios al día; el horario varía según el día de la semana. Por obras en la carretera Blagovéshchensk – Bibikovo, el aeropuerto pide salir una hora antes."
+  },
+  "lounges": {
+   "title": "Salas VIP",
+   "hint": "Nivel 5, 6000 ₽ / 3 h",
+   "text": "Sala business en el ala derecha de la sala de salidas, nivel 5, de 5:00 a 17:00. Admite a pasajeros de clase business, participantes de programas de fidelización de aerolíneas y titulares de Grey Wall, Every Lounge, RUS Priority, On pass y Golden Key. Los demás pagan 6000 ₽ por 3 horas y después 550 ₽ por hora; menores de 2 años gratis."
+  },
+  "storage": {
+   "title": "Consigna",
+   "hint": "Nivel 1, desde 200 ₽/hora",
+   "text": "Consigna automática en el ala derecha de la terminal, nivel 1. Taquilla estándar: 200 ₽ por hora o 500 ₽ por día; grande: 300 ₽ por hora o 800 ₽ por día. Allí mismo, embalaje de equipaje desde 950 ₽ por bulto."
+  },
+  "kids": {
+   "title": "Con niños",
+   "hint": "Nivel 2, 5:00–17:00",
+   "text": "Sala madre e hijo en el ala derecha de la terminal, nivel 2, de 5:00 a 17:00. Admite a niños menores de 7 años y a niños con discapacidad menores de 14 años, 3 horas antes de la salida y durante una hora después de la llegada. Se necesitan pasaporte y billete; solo se entra con equipaje de mano."
+  },
+  "parking": {
+   "title": "Aparcamiento",
+   "hint": "15 min gratis",
+   "text": "Zona de recogida y bajada de pasajeros: hasta 15 minutos gratis, 16–60 minutos 600 ₽, después 600 ₽ por hora. Aparcamiento Р1 de 600 plazas a 2 minutos de la terminal, de pago desde el primer minuto: hasta 30 minutos 100 ₽, hasta una hora 150 ₽, hasta 2 horas 250 ₽, hasta 24 horas 400 ₽, cada 24 horas siguientes 400 ₽."
+  },
+  "wifi": {
+   "title": "Wi‑Fi",
+   "hint": "Red Goodfly",
+   "text": "Wi‑Fi gratuito en las zonas de pasajeros de la terminal. Red Goodfly, acceso con el número de teléfono móvil."
+  }
+ }
+}

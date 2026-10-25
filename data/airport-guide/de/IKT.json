@@ -1,0 +1,41 @@
+{
+ "iata": "IKT",
+ "about": "Der Flughafen liegt in Irkutsk in der Uliza Schirjamowa 13, Betreiber ist AO „Meschdunarodny Aeroport Irkutsk“. Direktflüge verbinden ihn mit 50 Städten Russlands, das internationale Netz umfasst 11 Ziele. Das Passagieraufkommen übersteigt 3,8 Mio. Personen.",
+ "blocks": {
+  "transport": {
+   "title": "Anreise",
+   "hint": "Busse 80, 90, 480",
+   "text": "Busse 80, 90, 406, 480, 42, 43. Oberleitungsbusse 4 und 6. Sammeltaxis 99, 20, 45, 61."
+  },
+  "terminals": {
+   "title": "Terminals",
+   "hint": "Т1 international, Т2 Abflug",
+   "text": "Terminal 1 fertigt internationale Flüge ab. Terminal 2: Abflug von Inlandsflügen. Terminal 3: Ankunft von Inlandsflügen."
+  },
+  "lounges": {
+   "title": "Business-Lounges",
+   "hint": "Business-Lounge Т2, 4250 ₽",
+   "text": "In Terminal 2 gibt es eine Business-Lounge, eine Komfort-Lounge und die Lounges VIP-1, VIP-2, VIP-3. Business-Lounge und Komfort-Lounge sind 2 Stunden vor Abflug geöffnet, sofern Plätze frei sind, 4250 ₽ pro Passagier. In Terminal 1 Komfort-Lounge 3 Stunden vor Abflug, 4473 ₽. Dragon-Pass-Karten werden nicht akzeptiert."
+  },
+  "storage": {
+   "title": "Gepäckaufbewahrung",
+   "hint": "610 ₽ pro Tag",
+   "text": "Im Inlandsterminal auf Ebene 1, Bezahlung bar oder mit Karte. 610 ₽ pro Gepäckstück und Tag, Gepäck größer als 40×40×50 cm wird nach der Zahl der belegten Plätze berechnet. Im internationalen Terminal befindet sich die Aufbewahrung auf Ebene 2, sie ist nur bei Flugverspätungen geöffnet. Telefon +7 (3952) 266-194."
+  },
+  "sleep": {
+   "title": "Schlafen",
+   "hint": "Hotel 100 m entfernt",
+   "text": "Flughafenhotel „Wosduschnaja Gawan“, Uliza Schirjamowa 6, 100 Meter vom Flughafen. 145 Zimmer, Check-in rund um die Uhr, Kurzaufenthalte. Im Terminal für Inlandsflüge steht ein Telefon mit Direktverbindung zum Hotel."
+  },
+  "kids": {
+   "title": "Mit Kind",
+   "hint": "Kostenlos, 24/7",
+   "text": "Mutter-Kind-Räume im Inlandsterminal (Ebene 1, VIP) und im internationalen Terminal (Ebene 2), rund um die Uhr, kostenlos. Kinder unter 7 Jahren: bis zu 3–4 Stunden vor Abflug, 1 Stunde nach Ankunft. Das Kind begleitet ein Erwachsener. An das Auskunftsbüro wenden."
+  },
+  "parking": {
+   "title": "Parken",
+   "hint": "10 Min. kostenlos",
+   "text": "Die ersten 10 Minuten kostenlos. 11–20 Minuten 100 ₽, bis 1 Stunde 350 ₽, von 2 Std. 41 Min. bis 24 Stunden 1200 ₽, jeder weitere Tag 1200 ₽. Jedes Terminal hat einen eigenen Parkplatz. Hol- und Bringzone: 10 Minuten kostenlos, länger Strafgebühr 2000 ₽ pro Stunde."
+  }
+ }
+}

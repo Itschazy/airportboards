@@ -1,0 +1,21 @@
+{
+ "iata": "NER",
+ "about": "Havalimanı Çulman kasabasının yanında, Neryungri'ye 35 km uzaklıkta. Aeroporty Severa FKP'nin şubesi. 3600×45 m yapay pist, 100 yolcu kapasiteli terminal binası.",
+ "blocks": {
+  "terminals": {
+   "title": "Terminal",
+   "hint": "Tek terminal binası",
+   "text": "100 yolcu kapasiteli tek terminal binası. Bilet gişesi tarifedeki kalkış saatinden 2 saat önce açılır, öğle arası yok. Gişe telefonu +7 (4114) 77-74-60."
+  },
+  "lounges": {
+   "title": "Business salonları",
+   "hint": "ON PASS, Kat 2, 3500 ₽",
+   "text": "ON PASS salonu Kat 2'de, güvenlik kontrolünden sonraki gidiş alanında. Uçuştan 3 saat önce, ücret karşılığında her yolcu kabul edilir. Yetişkin 3500 ₽, 2–12 yaş çocuk 2500 ₽, 2 yaşından küçük ücretsiz. Wi‑Fi, atıştırmalıklar, içecekler var. Telefon +7 (906) 241-71-62."
+  },
+  "kids": {
+   "title": "Çocukla",
+   "hint": "24/7, ücretsiz",
+   "text": "Anne-bebek odası gece gündüz açık, ücretsiz. Tek yetişkinle birlikte 5 yaşından küçük çocuklar ve 14 yaşından küçük engelli çocuklar, gebeliğin ikinci yarısındaki kadınlar kabul edilir. Pasaport ve bilet gerekir. Yetişkin ve çocuk yatakları, alt değiştirme yerleri var."
+  }
+ }
+}

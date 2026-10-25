@@ -1,0 +1,36 @@
+{
+ "iata": "IJK",
+ "about": "L'aéroport d'Ijevsk fait partie de la SA « Izhavia » avec la compagnie aérienne, un voyagiste et une agence de voyages. L'entreprise aérienne a été créée en 1944, 100% des actions appartiennent à la République d'Oudmourtie.",
+ "blocks": {
+  "transport": {
+   "title": "Comment s'y rendre",
+   "hint": "Transfert en ville 1500 ₽",
+   "text": "Transfert de l'aéroport depuis la place de l'aérogare en voiture avec chauffeur. Ijevsk et banlieue jusqu'à 30 km 1500 ₽, Votkinsk 4000 ₽, Sarapoul 5000 ₽, Tchaïkovski 6000 ₽. Réservation au moins 3 heures à l'avance sur izhavia.su ou après l'arrivée à la caisse de l'aéroport, selon les voitures disponibles."
+  },
+  "terminals": {
+   "title": "Terminal",
+   "hint": "2 étages, 4 passerelles",
+   "text": "Service dans le nouveau terminal passagers de 10 850 m². 2 étages, 11 comptoirs d'enregistrement, 4 portes d'embarquement avec passerelles télescopiques. 5 ascenseurs, escalator vers la zone des départs. Signalétique en russe, oudmourte, anglais et chinois."
+  },
+  "lounges": {
+   "title": "Salons",
+   "hint": "Niveau 2, 4500 ₽",
+   "text": "Salon au niveau 2 du terminal : adultes 4500 ₽, enfants de 2 à 12 ans 2250 ₽, gratuit pour les moins de 2 ans, jusqu'à 3 heures. Avec les cartes RusPriority, ON PASS, Persona Aero, Every Lounge, Grey Wall Pass, GoldenKey ; Priority Pass et Lounge Key ne sont pas acceptées. Salon VIP : adultes 12 000 ₽, enfants de 2 à 12 ans 6000 ₽. Demandes : vip@izhavia.su."
+  },
+  "storage": {
+   "title": "Consigne à bagages",
+   "hint": "Niveau 1, derrière l'info",
+   "text": "Consigne au niveau 1, dans la salle derrière le comptoir d'information. Elle accepte gratuitement les bagages pendant un retard de vol, ainsi que les bagages non réclamés et réacheminés. Garde des objets trouvés 400 ₽. Un bagage pesant jusqu'à 30 kg."
+  },
+  "kids": {
+   "title": "Avec un enfant",
+   "hint": "Niveau 2, 24/7, gratuit",
+   "text": "Salle mère-enfant au niveau 2 de l'aérogare, jour et nuit et gratuite. Accès avec des enfants de moins de 7 ans, des enfants handicapés de moins de 18 ans, pour les femmes enceintes dans la seconde moitié de la grossesse. Carte d'embarquement requise. Les parents apportent la nourriture et les produits d'hygiène."
+  },
+  "parking": {
+   "title": "Parking",
+   "hint": "15 min gratuites",
+   "text": "Jusqu'à 15 minutes gratuit, de 16 à 30 minutes 250 ₽, de 30 minutes à 2 heures 500 ₽/heure, au-delà de 2 heures 750 ₽/jour. Parking VIP 300 ₽/heure jusqu'à 5 heures, sans temps gratuit. Sortie dans les 15 minutes suivant le paiement. Gratuit pour les véhicules de personnes handicapées inscrits au registre fédéral."
+  }
+ }
+}

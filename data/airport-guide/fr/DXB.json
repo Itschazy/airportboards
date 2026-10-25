@@ -1,0 +1,20 @@
+{
+ "iata": "DXB",
+ "blocks": {
+  "transport": {
+   "title": "Comment s'y rendre",
+   "hint": "Métro, ligne rouge",
+   "text": "La ligne rouge du métro de Dubaï part des terminaux 1 et 3. Horaires : du lundi au jeudi et le samedi de 5:00 à minuit, le vendredi de 5:00 à 1:00, le dimanche de 8:00 à minuit ; les jours fériés, parfois plus tard. Billets et cartes Nol aux guichets et distributeurs des terminaux 1 et 3. Dans le métro, deux bagages au maximum, bagage à main compris."
+  },
+  "taxi": {
+   "title": "Taxi",
+   "hint": "Dès 25 AED, jour et nuit",
+   "text": "Taxis Dubai Taxi Company jour et nuit aux stations de chaque terminal, prise en charge à partir de 25 AED plus la distance. Uber, Careem et Bolt fonctionnent aussi — lieu de prise en charge selon la signalétique."
+  },
+  "storage": {
+   "title": "Consigne à bagages",
+   "hint": "Terminaux 1–3, dès 35 AED",
+   "text": "Les consignes dnata fonctionnent jour et nuit dans les terminaux 1, 2 et 3. Pour 12 heures ou moins : dans les terminaux 1 et 2, bagage standard (jusqu'à 21×24×11 pouces) 40 AED, grand ou de valeur 50 AED ; dans le terminal 3 — 35 et 40 AED. Dans le terminal 1, la consigne est au niveau des arrivées, à côté de la pharmacie Boots."
+  }
+ }
+}

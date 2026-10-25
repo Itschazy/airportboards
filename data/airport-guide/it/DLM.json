@@ -1,0 +1,25 @@
+{
+ "iata": "DLM",
+ "blocks": {
+  "transport": {
+   "title": "Come arrivare",
+   "hint": "Havaş per Marmaris e Fethiye",
+   "text": "Le navette Havaş partono dal parcheggio dell’aeroporto per i centri di Marmaris e Fethiye. Percorso per Marmaris: Dalaman, Ortaca, Köyceğiz, Gökova, autostazione di Marmaris; per Fethiye: Dalaman, Göcek, Günlükbaşı, viale Adnan Menderes, autostazione di Fethiye. Lungo il percorso si scende nei punti concordati, se lo si dice prima all’autista. Orari e prezzi sul sito Havaş."
+  },
+  "taxi": {
+   "title": "Taxi",
+   "hint": "Cooperativa taxi aeroporto",
+   "text": "I taxi dell’aeroporto sono della cooperativa Dalaman Airport Taxi; telefono e WhatsApp +90 533 958 28 72, sito dalamanairporttaxi.com."
+  },
+  "parking": {
+   "title": "Parcheggio",
+   "hint": "Sempre aperto, terminal 1 e 2",
+   "text": "Il parcheggio presso i terminal 1 e 2, con una superficie totale di 72 972 m², è aperto giorno e notte tutto l’anno. Il costo si calcola con il calcolatore sul sito dell’aeroporto; le tariffe sono stabilite da DHMI, ultimo aggiornamento gennaio 2026, IVA inclusa."
+  },
+  "wifi": {
+   "title": "Wi‑Fi",
+   "hint": "Gratis per 30 minuti",
+   "text": "Wi‑Fi DorukNet in tutte le sale arrivi e partenze: 30 minuti gratis con la password rilasciata dai chioschi dopo la scansione del passaporto; oltre e premium a pagamento. Nelle sale business e nel terminal dell’aviazione d’affari senza limiti."
+  }
+ }
+}

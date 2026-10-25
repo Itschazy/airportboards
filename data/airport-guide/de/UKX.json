@@ -1,0 +1,26 @@
+{
+ "iata": "UKX",
+ "about": "Der Flughafen liegt 10 km nördlich von Ust-Kut. Der Bau des heutigen Flughafens begann 1963, die ersten Flüge auf der unbefestigten Piste gingen im Herbst desselben Jahres.",
+ "blocks": {
+  "transport": {
+   "title": "Anreise",
+   "hint": "Nur Taxi",
+   "text": "Zum Flughafen gibt es keinen städtischen Nahverkehr. Erreichbar ist er nur mit einem privaten Taxi."
+  },
+  "terminals": {
+   "title": "Terminal",
+   "hint": "Schalter schließt 40 Min. vorher",
+   "text": "Der Check-in beginnt 2 Stunden oder 1 Std. 30 Min. vorher, je nach Flugzeugtyp. Er endet 40 Minuten vor Abflug. Zum Boarding ist eine Bordkarte auf Papier nötig: Holen Sie sie spätestens 10 Minuten vor Ende des Check-ins am Schalter ab."
+  },
+  "storage": {
+   "title": "Gepäckaufbewahrung",
+   "hint": "Am Check-in-Schalter",
+   "text": "Im Terminalgebäude, neben dem Check-in-Schalter. Telefon: +7 (39565) 5-07-09."
+  },
+  "kids": {
+   "title": "Mit Kind",
+   "hint": "Kinder unter 7 Jahren, kostenlos",
+   "text": "Mutter-Kind-Raum im Terminalgebäude. Für abfliegende Passagiere mit Kindern unter 7 Jahren, Aufenthalt bis zu 3–4 Stunden. Beim Kind darf sich ein Erwachsener aufhalten. Kostenlos. An das Auskunftsbüro oder den Check-in-Schalter wenden."
+  }
+ }
+}

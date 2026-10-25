@@ -1,0 +1,30 @@
+{
+ "iata": "HRG",
+ "blocks": {
+  "transport": {
+   "title": "Getting there",
+   "hint": "Minibuses, about 20 minutes",
+   "text": "The centre of Hurghada is about 20 minutes by car. Minibuses to the city wait at the airport exit and leave when full; they have no fixed timetable."
+  },
+  "taxi": {
+   "title": "Taxi",
+   "hint": "Agree the fare before boarding",
+   "text": "Taxis wait at the exit from the arrivals area. The fare is agreed with the driver before boarding. Car rental is available, including Hertz."
+  },
+  "terminals": {
+   "title": "Terminals",
+   "hint": "Two terminals",
+   "text": "The airport has two passenger terminals. The terminals have ATMs and currency exchange points."
+  },
+  "lounges": {
+   "title": "Lounges",
+   "hint": "Pearl Lounge, terminal 1",
+   "text": "Pearl Lounge in terminal 1 is after passport control and security, on Level 2 by gate 30, open round the clock. Sources differ on who is admitted; check entry conditions with the lounge."
+  },
+  "storage": {
+   "title": "Left luggage",
+   "hint": "Available at the airport",
+   "text": "The airport has a left luggage office. Sources do not state where exactly it is or how much it costs."
+  }
+ }
+}

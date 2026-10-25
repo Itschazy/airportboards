@@ -1,0 +1,20 @@
+{
+ "iata": "EVN",
+ "blocks": {
+  "transport": {
+   "title": "Getting there",
+   "hint": "Buses N100 and N201",
+   "text": "Bus N100 runs Zvartnots Airport — Yerevan centre and back. Route N201 (Elitebus) is an express from the airport to the centre of Yerevan and back. Car rental companies operate round the clock in the arrivals hall on Level 1: Carwiz, Enterprise, GoMotion, Hertz, SIXT."
+  },
+  "taxi": {
+   "title": "Taxi",
+   "hint": "Eco Taxi, arrivals hall",
+   "text": "Eco Taxi desk in the arrivals hall on Level 1, open round the clock."
+  },
+  "parking": {
+   "title": "Parking",
+   "hint": "Covered, 642 spaces",
+   "text": "Covered parking building for 642 cars opposite the passenger terminal. Time is counted from taking the ticket at the entrance; drop-off and pick-up stops of up to 10 minutes are free. Pay at the automated machines before returning to the car."
+  }
+ }
+}

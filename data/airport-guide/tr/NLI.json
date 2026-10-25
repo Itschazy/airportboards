@@ -1,0 +1,16 @@
+{
+ "iata": "NLI",
+ "about": "Havalimanı Habarovsk Krayı'nın Nikolayevsk ilçesinde, Nikolayevsk-na-Amure'nin 2,5 km batısında. G sınıfı, saatte 50 yolcu kapasiteli tek terminal binası. İşletmeci: Khabarovskiye Avialinii AO.",
+ "blocks": {
+  "storage": {
+   "title": "Emanet",
+   "hint": "Parça başına günlüğü 419 ₽",
+   "text": "Emanette bagaj saklama: KDV dahil parça başına günlük 418,83 ₽. Kalkış 3 saatten fazla rötar yaparsa kaydı yapılmış bagaj saatte kg başına 0,88 ₽'ye saklanır. Fiyatlar 5 Haziran 2026 tarihli tarifeye göre."
+  },
+  "lounges": {
+   "title": "Business salonları",
+   "hint": "VIP oda, 3773 ₽",
+   "text": "VIP odada yolcu hizmeti: hizmet başına KDV dahil 3773,25 ₽. Fiyat 5 Haziran 2026 tarihli tarifeye göre."
+  }
+ }
+}

@@ -1,0 +1,21 @@
+{
+ "iata": "MMK",
+ "about": "Murmansk: Flughafen 24 km südwestlich des Stadtzentrums und 4 km von der Siedlung Murmaschi, rund um die Uhr in Betrieb. Eine Start- und Landebahn 2500 × 42 m. Betreiber ist AO „Aeroport Murmansk“.",
+ "blocks": {
+  "transport": {
+   "title": "Anreise",
+   "hint": "Bus 106, etwa eine Stunde",
+   "text": "Bus oder Sammeltaxi Nr. 106 fährt vom Bahnhofsplatz Murmansk im Takt von 20–30 Minuten, Fahrzeit etwa eine Stunde. Nachts fährt Nr. 106н „Murmansk – Flughafen“."
+  },
+  "storage": {
+   "title": "Gepäckaufbewahrung",
+   "hint": "Untergeschoss, 24/7",
+   "text": "Gepäckaufbewahrung im Untergeschoss, rund um die Uhr geöffnet. Zuerst muss man das Gepäck bei der Sicherheitskontrolle am Eingang des Terminals melden: Nach der Kontrolle wird man von einem Mitarbeiter der Luftsicherheit zur Gepäckaufbewahrung begleitet. Bezahlung am Informationsschalter."
+  },
+  "kids": {
+   "title": "Mit Kind",
+   "hint": "Ebene 2, kostenlos, 24/7",
+   "text": "Mutter-Kind-Raum auf Ebene 2 im linken Flügel des Terminals, kostenlos und rund um die Uhr. Für Passagiere mit Kindern unter 7 Jahren, Kinder mit Behinderung unter 14 Jahren und Frauen in der zweiten Schwangerschaftshälfte. Zutritt nur mit Handgepäck, das Gepäck wird in der Gepäckaufbewahrung abgegeben."
+  }
+ }
+}

@@ -1,0 +1,35 @@
+{
+ "iata": "GDX",
+ "blocks": {
+  "transport": {
+   "title": "Getting there",
+   "hint": "Bus 101",
+   "text": "Bus No. 101 runs between Magadan bus station and Sokol Airport."
+  },
+  "lounges": {
+   "title": "Lounges",
+   "hint": "Level 2, 4,000 ₽",
+   "text": "Business lounge on Level 2 in the domestic airside area: after security on Level 3, go down following the signs. Open while flights are being handled. Admits via ON·PASS, Persona.aero, RusPriority, Every Lounge, Golden Key and other programmes; any passenger can request the service at check-in and pay at the ticket office: 4,000 ₽ from age 2, younger children free."
+  },
+  "storage": {
+   "title": "Left luggage",
+   "hint": "Level 2, 8:30–20:30",
+   "text": "Automated left luggage for domestic passengers on Level 2, from 8:30 to 20:30, card payment only. Standard locker 51×63×76 cm 1,000 ₽ per day, large 51×195×76 cm 2,000 ₽; less than a day is charged as a full day."
+  },
+  "kids": {
+   "title": "With children",
+   "hint": "Level 3, free",
+   "text": "Mother and child room on Level 3, free, for departing and arriving passengers. For children under 7 with one adult, children with disabilities under 14 and women in the second half of pregnancy."
+  },
+  "parking": {
+   "title": "Parking",
+   "hint": "15 min free",
+   "text": "Station forecourt P1, 30 m from the terminal: first 15 minutes free, up to an hour 500 ₽, each following hour 300 ₽, a day 2,000 ₽. A repeat entry within an hour for 1–15 minutes: 200 ₽."
+  },
+  "wifi": {
+   "title": "Wi‑Fi",
+   "hint": "Free",
+   "text": "Free Wi‑Fi in the terminal; under the law On Communications user identification is required, terms are on the operator's welcome page."
+  }
+ }
+}

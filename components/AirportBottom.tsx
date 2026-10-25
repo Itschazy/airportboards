@@ -312,7 +312,7 @@ export async function AirportBottom({ airport, locale, about, displayName, fligh
     '@context': 'https://schema.org', '@type': 'FAQPage',
     // Ответы справочной идут в ту же FAQPage (одна на страницу): вопрос — тема плитки, ответ —
     // видимый текст плитки с источником и датой проверки.
-    mainEntity: [...faq, ...(guide ? guideFaq(guide, name) : [])].map(f => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })),
+    mainEntity: [...faq, ...(guide ? guideFaq(guide, name, (k, v) => tUi(k, v), numLocale(locale)) : [])].map(f => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })),
   };
 
   const H2 = ({ children, href, viewAll }: { children: React.ReactNode; href?: string; viewAll?: string }) => (
@@ -339,10 +339,21 @@ export async function AirportBottom({ airport, locale, about, displayName, fligh
             Прежнее требование держать всю справку открытой создавало длинную ленту.
             Сохраняем полный SSR HTML, H2, FAQ и ссылки: details меняет доступность
             места на экране, а не состав текста. Проверяем HTML до/после без scripts. */}
-        {/* 5b. СПРАВОЧНАЯ — проверенные факты с официальных сайтов, только ru и только для
+        {/* 5b. СПРАВОЧНАЯ — проверенные факты с официальных сайтов, на языке страницы (ru — оригинал,
+            остальные — переводы из data/airport-guide/<locale>/), только для
             аэропортов с файлом data/airport-guide/<IATA>.json. Выше «Об аэропорте»: это то, за чем
             человек пришёл после табло (как доехать, где залы), а абзац — справка о справке. */}
-        {guide && <AirportGuide guide={guide} title={`Справочная ${airport.iata}`} />}
+        {guide && (
+          <AirportGuide
+            guide={guide}
+            title={tUi('aguide_title', { iata: airport.iata })}
+            numLocale={numLocale(locale)}
+            labels={{
+              leadOfficial: tUi('aguide_lead_official'), leadThird: tUi('aguide_lead_third'), checked: tUi('aguide_checked'),
+              src: tUi('aguide_src'), srcAnd: tUi('aguide_src_and'), srcMore: tUi('aguide_src_more'), srcThird: tUi('aguide_src_third'),
+            }}
+          />
+        )}
 
         {/* 6. ABOUT */}
         {about && (

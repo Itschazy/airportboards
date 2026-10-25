@@ -1,0 +1,26 @@
+{
+ "iata": "CEE",
+ "about": "Der Flughafen gehört dem Luftfahrtunternehmen „Severstal“. Länge der Start- und Landebahn 2500 m, Kapazität des Terminals 120 Passagiere pro Stunde.",
+ "blocks": {
+  "parking": {
+   "title": "Parken",
+   "hint": "90 Min. kostenlos",
+   "text": "Vorplatz: bis zu 90 Minuten kostenlos, bei Flugverspätung erneute Einfahrt für 90 Minuten ohne Bezahlung. Über 90 Minuten Gebühr von 1000 ₽ für jeden Tag. Kostenpflichtiger Parkplatz, rund um die Uhr: 350 ₽ pro Tag. Telefon (8202) 675-217."
+  },
+  "lounges": {
+   "title": "Business-Lounges",
+   "hint": "Ebene 1, links",
+   "text": "Business-Lounge ON PASS auf Ebene 1 im linken Gebäudeteil, 14 Plätze. Zugang für Passagiere mit ON-PASS-Zugang und Passagiere im Tarif „Business“ nach Check-in und Sicherheitskontrolle. Öffnungszeiten nach dem Betriebsplan des Flughafens. Rezeption +7 (909) 523-92-09."
+  },
+  "sleep": {
+   "title": "Schlafen",
+   "hint": "Hotel Sky-Park in der Nähe",
+   "text": "Hotel Sky-Park 3* in der Nähe des Flughafens: 62 Zimmer, Restaurant auf Ebene 1, Wi‑Fi. Reservierung +7 (8202) 67-52-64."
+  },
+  "kids": {
+   "title": "Mit Kind",
+   "hint": "Ebene 1, kostenlos",
+   "text": "Mutter-Kind-Raum auf Ebene 1 im Wartesaal für Inlandsflüge. Für Abfliegende mit Kindern unter 7 Jahren, Kinder mit Behinderung und Schwangere. Kostenlos. Wenden Sie sich an Mitarbeiter des Passagierdienstes oder an den Check-in-Schalter."
+  }
+ }
+}

@@ -1,0 +1,30 @@
+{
+ "iata": "VOG",
+ "blocks": {
+  "transport": {
+   "title": "Nasıl gidilir",
+   "hint": "Gara 6 numaralı otobüs",
+   "text": "6 numaralı otobüs (Havalimanı — Tren Garı) yaklaşık 6:00–23:00 arası çalışır: hafta içi her yönde 78 sefer, hafta sonu 61. Banliyö trenleri Aeroport peronundan Volgograd-1 üzerinden Shpalopropitka'ya gider, bilet 52,20 ₽, 7 yaşından küçük çocuklar ücretsiz; havalimanından günde 4 tren, ilki 14:36'da."
+  },
+  "lounges": {
+   "title": "Business salonları",
+   "hint": "С2 terminali, Kat 2, 24/7",
+   "text": "С2 iç hatlar terminalinin business salonu Kat 2'de, güvenlik kontrolünden sonraki steril alanda, gece gündüz açık. Business sınıfı yolcuları, bankaların premium müşterileri ve sadakat programlarının üyeleri kabul edilir; her yolcu tek seferlik ziyareti salon görevlisine ödeyebilir. Kalış süresi 2 saate kadar."
+  },
+  "storage": {
+   "title": "Emanet",
+   "hint": "С2 terminali, günlüğü 500 ₽",
+   "text": "Emanet iç hatlar terminalinde Kat 1'de; iç ve dış hat yolcuları için, gece gündüz açık. İlk takvim günü parça başına 500 ₽, sonraki her gün 100 ₽. Kimlik belgesi gerekir; parça boyutu en fazla 75 × 60 × 65 cm, süre 90 güne kadar."
+  },
+  "kids": {
+   "title": "Çocukla",
+   "hint": "C ve С2 terminalleri, ücretsiz",
+   "text": "Anne-bebek odaları iç hatlar (С2) ve dış hatlar (C) terminallerinde var; ücretsiz ve gece gündüz açık, en fazla 24 saat. Gidiş bileti, kimlik belgesi ve sağlık noktasından belgesi olan, 7 yaşından küçük çocuklar ve gebeliğin ikinci yarısındaki kadınlar için."
+  },
+  "wifi": {
+   "title": "Wi‑Fi",
+   "hint": "Airport ağı",
+   "text": "Terminal kompleksinde Wi‑Fi: genel salonlarda Airport ağı, konforlu bekleme salonlarında AirportZPK. Giriş ücretsiz arama, Gosuslugi veya SMS/Push kodu ile."
+  }
+ }
+}

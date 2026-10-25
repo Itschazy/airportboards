@@ -1,0 +1,46 @@
+{
+ "iata": "NBC",
+ "about": "Aéroport international de Nijnekamsk (Beguichevo) N. V. Lemaïev, filiale de la SA publique « KAMAZ ». Dans un rayon de 25 km autour de l'aéroport : Naberejnye Tchelny, Nijnekamsk, Ielabouga et Almetievsk. Une seule piste, plus de 700 000 passagers par an.",
+ "blocks": {
+  "transport": {
+   "title": "Comment s'y rendre",
+   "hint": "21 km de Nijnekamsk",
+   "text": "L'aéroport est à 21 km de Nijnekamsk et à 24 km de Naberejnye Tchelny. Le site de l'aéroport propose de s'y rendre en taxi ; la page ne mentionne pas de transport régulier."
+  },
+  "terminals": {
+   "title": "Terminaux",
+   "hint": "A international, B intérieur",
+   "text": "Le terminal A accueille les vols internationaux, le terminal B les vols intérieurs. Salon VIP dans le terminal A, salon d'affaires dans le terminal B."
+  },
+  "lounges": {
+   "title": "Salons",
+   "hint": "Terminal B, 24/7",
+   "text": "Salon d'affaires dans le terminal B, salon VIP dans le terminal A, tous deux ouverts jour et nuit. Accès gratuit pour les passagers de classe affaires d'« Aeroflot » et de « Nordwind », les titulaires d'Every.Lounge, MILEONAIR, GoldenKey, UNIPASS, GreyWall Pass, Dream Folks et d'autres programmes. Un passager avec n'importe quel billet peut acheter une visite unique, le service commence 2 heures avant le départ."
+  },
+  "storage": {
+   "title": "Consigne à bagages",
+   "hint": "Terminal B, 24/7",
+   "text": "Consigne au niveau 1 du terminal B, jour et nuit. Premier jour 400 ₽ (jusqu'à 23:59 le jour du dépôt), ensuite 200 ₽ par jour. Un bagage pesant jusqu'à 30 kg. On peut déposer ses affaires via la station d'emballage Pack&Fly ou le comptoir d'information."
+  },
+  "sleep": {
+   "title": "Où dormir",
+   "hint": "Hailey, 26 chambres",
+   "text": "L'hôtel Hailey Airport Hotel Begishevo, à distance de marche de l'aéroport. 26 chambres pour 45 personnes, petits-déjeuners matinaux, Wi‑Fi. Réservation : hotel-zakaz@nbc.aero, 8 (8552) 79-67-80."
+  },
+  "kids": {
+   "title": "Avec un enfant",
+   "hint": "Niveau 2, gratuit",
+   "text": "Salles mère-enfant au niveau 2 des terminaux A et B. Pour les passagers au départ avec des enfants de moins de 7 ans et des enfants handicapés de moins de 14 ans, 4 heures avant le départ. Gratuit, passeport et billet requis. Inscription au bureau d'information ou au 8-800-200-18-19."
+  },
+  "parking": {
+   "title": "Parking",
+   "hint": "20 min gratuites",
+   "text": "Parking payant de 150 places devant les terminaux A et B : 20 minutes gratuites, puis 200 ₽ de l'heure jusqu'à 3 heures, au-delà 700 ₽ par jour. En cas de nouvelle entrée dans les 30 minutes, pas de temps gratuit. Avant l'entrée sur le site, parking gratuit de 410 places."
+  },
+  "wifi": {
+   "title": "Wi‑Fi",
+   "hint": "Réseau Begishevo free",
+   "text": "Réseau Begishevo free dans le terminal B, réseau HOTEL à l'hôtel. Dans le navigateur, cliquer sur « Obtenir l'accès », saisir le numéro de téléphone et le code reçu par SMS."
+  }
+ }
+}

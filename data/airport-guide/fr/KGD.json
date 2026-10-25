@@ -1,0 +1,31 @@
+{
+ "iata": "KGD",
+ "about": "Khrabrovo : aéroport international de Kaliningrad. Le terminal passagers de 39 762 m² est conçu pour 5 millions de passagers par an, avec 6 passerelles télescopiques sur l'aire de trafic. Une seule piste de 3350 × 45 m.",
+ "blocks": {
+  "transport": {
+   "title": "Comment s'y rendre",
+   "hint": "Bus 244-Э, 45 min",
+   "text": "Le bus n° 244-Э circule entre l'aéroport et la gare routière « Ioujny » de Kaliningrad, durée moyenne du trajet 45 minutes. Le départ peut avoir jusqu'à 15 minutes de retard, les horaires peuvent changer."
+  },
+  "lounges": {
+   "title": "Salons",
+   "hint": "Secteurs A et C, niveau 2",
+   "text": "Deux salons au deuxième niveau, en zone réservée : « Kourchski Zaliv » pour les vols intérieurs dans le secteur A et « Diouny » pour les vols internationaux dans le secteur C. Accès pour les passagers de classe affaires et tous ceux qui ont payé l'entrée ; gratuit pour les vétérans de la Grande Guerre patriotique avec un accompagnateur."
+  },
+  "sleep": {
+   "title": "Où dormir",
+   "hint": "Capsules RecoRoom",
+   "text": "Hôtel capsule « RecoRoom Sonnik » sur le site de l'aéroport : paiement à l'heure, enregistrement automatique, capsules simples et doubles avec espace pour les bagages, prises et Wi‑Fi gratuit."
+  },
+  "kids": {
+   "title": "Avec un enfant",
+   "hint": "Gratuit",
+   "text": "La salle mère-enfant est gratuite pour les passagers au départ avec des enfants de moins de 7 ans, les enfants handicapés de moins de 14 ans et les femmes dans la seconde moitié de la grossesse ; elle suit les horaires de l'aérogare. Il faut d'abord un certificat du poste médical au rez-de-chaussée, dans la partie droite du bâtiment ; les bagages sont déposés à la consigne."
+  },
+  "parking": {
+   "title": "Parking",
+   "hint": "15 min gratuites, 400 ₽/h",
+   "text": "Parking courte durée à partir du 01.10.2026 : 15 premières minutes gratuites, ensuite 400 ₽ par heure, y compris entamée. Longue durée 900 ₽ par jour. Parking gratuit de 300 voitures à 400 m de l'aérogare. Le stationnement sur la première voie devant le bâtiment est interdit."
+  }
+ }
+}

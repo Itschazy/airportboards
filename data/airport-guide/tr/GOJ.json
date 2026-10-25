@@ -1,0 +1,36 @@
+{
+ "iata": "GOJ",
+ "about": "V. P. Çkalov adını taşıyan Nijniy Novgorod Uluslararası Havalimanı iç ve dış hat uçuşlarına hizmet verir. İşletmeci: MANN AO. Havalimanı 2024 yılında 1,47 milyon yolcuya hizmet verdi, ağında 29 hat var.",
+ "blocks": {
+  "transport": {
+   "title": "Nasıl gidilir",
+   "hint": "11, 56, А50 otobüsleri",
+   "text": "Şehir otobüsleri: 11 numara Druzhayeva Caddesi'ne, 56 numara Krasnoye Sormovo'ya, А50 numara DK Avtozavoda'ya. Banliyö trenleri N. Novgorod-Chkalov istasyonundan Moskovsky Garı'na gider, yolculuk 26–34 dakika, bilet 28 ₽. Tren işletmecisi: Volgo-Vyatskaya PPK AO."
+  },
+  "lounges": {
+   "title": "Business salonları",
+   "hint": "Kat 2, 5800 ₽'den",
+   "text": "Kat 2'de üç salon: iç hatlar salonu, dış hatlar salonu ve iç hatlar gidiş alanında banka kartı sahipleri için salon. İç ve dış hatlar salonları: 3 saate kadar 5800 ₽, sonrası her saat 550 ₽. Banka salonuna On-pass, Grey Wall, UniPass, Every Lounge, Golden Key, RusPriority programlarıyla girilir. İç hatlar salonu gece gündüz açık."
+  },
+  "storage": {
+   "title": "Emanet",
+   "hint": "Kat 1, saati 250 ₽'den",
+   "text": "Otomatik emanet dolapları Kat 1'de, iç hatlar bagaj alım alanı çıkışının solunda. Standart dolap: saati 250 ₽ veya günlüğü 550 ₽. Büyük dolap: saati 350 ₽ veya günlüğü 900 ₽. Vestiyer: günlüğü 100 ₽."
+  },
+  "kids": {
+   "title": "Çocukla",
+   "hint": "Kat 2, 24/7",
+   "text": "Anne-bebek odası terminalde Kat 2'de, gece gündüz açık. 7 yaşından küçük çocuklar, 14 yaşından küçük engelli çocuklar, yalnızca bir yetişkinle kabul edilir. Pasaport ve uçak bileti gerekir. Kalış kalkıştan önce 12 saate, inişten sonra 6 saate kadar."
+  },
+  "parking": {
+   "title": "Otopark",
+   "hint": "15 dakika ücretsiz",
+   "text": "İndirme-bindirme alanı: ilk 15 dakika ücretsiz, 16. ila 60. dakika arası 890 ₽, sonrası saati 890 ₽. Terminalin yanındaki P otoparkı: 1 saate kadar 370 ₽, 1 ila 24 saat 750 ₽, 2 güne kadar 1500 ₽. Terminale 700 m uzaklıkta gece gündüz açık ücretsiz otopark, korumasız. Birinci şerit (VIP alanı): giriş başına 3000 ₽."
+  },
+  "wifi": {
+   "title": "Wi‑Fi",
+   "hint": "Free_GOJ ağı",
+   "text": "Terminalin yolcu alanlarında ücretsiz Wi‑Fi. Ağ: Free_GOJ. Giriş cep telefonu numarasıyla, ardından ekrandaki yönergelere göre."
+  }
+ }
+}

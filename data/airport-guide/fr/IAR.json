@@ -1,0 +1,31 @@
+{
+ "iata": "IAR",
+ "about": "Aéroport international d'Iaroslavl « Zolotoïe Koltso » à Tounochna. Piste de 3010×44 m. Un point de passage aérien de la frontière d'État fonctionne, avec un poste de douane.",
+ "blocks": {
+  "transport": {
+   "title": "Comment s'y rendre",
+   "hint": "Bus 183, 40 min",
+   "text": "Le bus 183 circule chaque jour de la gare routière d'Iaroslavl à l'aéroport. Durée du trajet 40 minutes. Premier départ de la gare routière à 05:50, dernier départ de l'aéroport à 22:35."
+  },
+  "lounges": {
+   "title": "Salons",
+   "hint": "Salon 2500 ₽",
+   "text": "Salon de confort supérieur pour les passagers au départ. À l'intérieur : TV, Wi‑Fi, table à thé, presse. Prix 2500 ₽ par passager. Renseignements : +7 (4852) 43-18-00."
+  },
+  "kids": {
+   "title": "Avec un enfant",
+   "hint": "Hall des départs, gratuit",
+   "text": "La salle des passagers avec enfants se trouve dans le hall des départs, en zone réservée. Accès avec des enfants ou des enfants handicapés de moins de 14 ans sur présentation de la carte d'embarquement. Gratuit, jusqu'à 3 heures avant le départ le jour et jusqu'à 4 heures la nuit. Il n'y a pas de salle dans le hall des arrivées."
+  },
+  "parking": {
+   "title": "Parking",
+   "hint": "300 ₽/jour",
+   "text": "Parking payant, 300 ₽ par jour. Pas de réservation ni de prépaiement, paiement au moment de garer la voiture, selon les places disponibles. L'heure de retour pour récupérer la voiture se précise par téléphone au 43-18-00."
+  },
+  "wifi": {
+   "title": "Wi‑Fi",
+   "hint": "Gratuit",
+   "text": "Un Wi‑Fi gratuit fonctionne dans l'aérogare."
+  }
+ }
+}

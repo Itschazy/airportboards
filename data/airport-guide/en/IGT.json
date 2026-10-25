@@ -1,0 +1,21 @@
+{
+ "iata": "IGT",
+ "about": "S. S. Oskanov Airport is 30 km north-east of Magas, on the western outskirts of the stanitsa of Ordzhonikidzevskaya, 2 km from Sleptsovskaya railway station. Operator: JSC Magas International Airport named after S. S. Oskanov. The terminal is equipped for border and customs control.",
+ "blocks": {
+  "terminals": {
+   "title": "Terminal",
+   "hint": "1 terminal building",
+   "text": "One terminal building (passenger terminal). It has facilities for border, immigration, customs, veterinary and sanitary-quarantine control. Capacity: 150 passengers per hour."
+  },
+  "lounges": {
+   "title": "Lounges",
+   "hint": "VIP lounge, on request",
+   "text": "VIP lounge in a separate building: waiting area, bar area. Service on advance request, paid at airport rates. There is a transfer to and from the aircraft steps and a paid VIP car park for those meeting and seeing off passengers."
+  },
+  "wifi": {
+   "title": "Wi‑Fi",
+   "hint": "Free Wi‑Fi",
+   "text": "Free Wi‑Fi access in the terminal building."
+  }
+ }
+}

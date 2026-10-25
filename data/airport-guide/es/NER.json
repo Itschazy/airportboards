@@ -1,0 +1,21 @@
+{
+ "iata": "NER",
+ "about": "Aeropuerto junto al asentamiento de Chulman, a 35 km de Neriungri. Filial de FKP «Aeroporty Severa». Pista artificial de 3600×45 m, terminal para 100 pasajeros.",
+ "blocks": {
+  "terminals": {
+   "title": "Terminal",
+   "hint": "Una sola terminal",
+   "text": "Una sola terminal para 100 pasajeros. La taquilla abre 2 horas antes de la hora programada del vuelo, sin pausa para comer. Teléfono de la taquilla: +7 (4114) 77-74-60."
+  },
+  "lounges": {
+   "title": "Salas VIP",
+   "hint": "ON PASS, nivel 2, 3500 ₽",
+   "text": "Sala ON PASS en el nivel 2, en la zona de salidas tras el control de seguridad. Admite desde 3 horas antes del vuelo, a cualquier pasajero previo pago. Adulto 3500 ₽, niño de 2–12 años 2500 ₽, menores de 2 años gratis. Hay Wi‑Fi, aperitivos y bebidas. Teléfono +7 (906) 241-71-62."
+  },
+  "kids": {
+   "title": "Con niños",
+   "hint": "24/7, gratis",
+   "text": "La sala madre e hijo funciona día y noche, gratis. Admite a niños menores de 5 años y niños con discapacidad menores de 14 años con un adulto, y a embarazadas en la segunda mitad del embarazo. Se necesitan pasaporte y billete. Hay camas para adultos y para niños y espacios para cambiar pañales."
+  }
+ }
+}

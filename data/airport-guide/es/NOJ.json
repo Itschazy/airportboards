@@ -1,0 +1,21 @@
+{
+ "iata": "NOJ",
+ "about": "Aeropuerto a 9 km al suroeste de Noyabrsk. Explotador: AO «Aeropuerto de Surgut». Pista de 2500 m; atiende vuelos nacionales dentro de Rusia.",
+ "blocks": {
+  "transport": {
+   "title": "Cómo llegar",
+   "hint": "Autobuses 7 y 51",
+   "text": "Al centro de la ciudad hay unos 9 km. Circulan los autobuses urbanos n.º 7 y n.º 51 (asentamiento de Vyngapurovski). Hay taxis."
+  },
+  "terminals": {
+   "title": "Terminal",
+   "hint": "Terminal 07:00–18:00",
+   "text": "La terminal funciona de 07:00 a 18:00. Solo vuelos nacionales. Dentro hay cafetería, tiendas, quioscos de recuerdos, embalaje de equipaje, sala madre e hijo y consigna."
+  },
+  "lounges": {
+   "title": "Salas VIP",
+   "hint": "Niveles 1 y 2, a diario",
+   "text": "Sala de confort superior en el nivel 1 y sala VIP en el nivel 2. En la sala hay té, café y repostería. De pago según tarifa: pedidos de comida de la cafetería y traslado al avión en transporte aparte. La sala de confort superior funciona a diario."
+  }
+ }
+}

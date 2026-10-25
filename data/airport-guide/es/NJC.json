@@ -1,0 +1,36 @@
+{
+ "iata": "NJC",
+ "about": "El aeropuerto de Nizhnevártovsk pasó a ser internacional tras la reconstrucción de 2005. Pista de 3200 por 60 m. Es el segundo aeropuerto del Distrito Autónomo de Janti-Mansi-Yugra por volumen de tráfico.",
+ "blocks": {
+  "transport": {
+   "title": "Cómo llegar",
+   "hint": "4 km, autobús 15",
+   "text": "Al centro de la ciudad hay 4 km. Autobuses urbanos: n.º 4 hasta el asentamiento U Severnoy Roshchi, n.º 9 hasta Starovartovskaya, n.º 15 hasta la estación de ferrocarril y la estación de autobuses, n.º 21 hasta DRSU. Desde la plaza de la terminal sale un aerobús a Strezhevoy; horario en el sitio web de la estación de autobuses. La parada de taxis está en la plaza de la terminal, frente a la terminal n.º 2."
+  },
+  "terminals": {
+   "title": "Terminales",
+   "hint": "Tarjeta de embarque en papel",
+   "text": "Dos terminales: n.º 1 y n.º 2. Actualmente no se acepta la tarjeta de embarque electrónica para los trámites previos al vuelo; se necesita en papel."
+  },
+  "lounges": {
+   "title": "Salas VIP",
+   "hint": "Terminal 1, 24/7",
+   "text": "Sala business en el nivel 1 de la terminal 1, abierta día y noche. Admite a pasajeros de clase business y titulares de tarjetas élite de aerolíneas; a los demás, previo pago si hay plazas libres. Salida: 7950 ₽ por 2 h 30 min, cada hora siguiente 1141 ₽. Llegada, recibimiento o despedida: 4050 ₽. Niños de 2–12 años, 70 % de la tarifa; menores de 2 años gratis."
+  },
+  "storage": {
+   "title": "Consigna",
+   "hint": "Terminal 1, 24/7",
+   "text": "Terminal n.º 1, nivel 1, día y noche. Maleta, bolsa o mochila de hasta 203 cm de suma de las tres dimensiones: 600 ₽ por día. Objetos voluminosos: 700 ₽ por día. Pérdida de la ficha: 400 ₽."
+  },
+  "kids": {
+   "title": "Con niños",
+   "hint": "Sala para menores de 7 años",
+   "text": "Sala madre e hijo solo con billete con salida en las próximas 24 horas. Gratis para mujeres con niños menores de 7 años y para niños con discapacidad. Los demás, 1200 ₽ por cama y día."
+  },
+  "parking": {
+   "title": "Aparcamiento",
+   "hint": "15 min gratis",
+   "text": "Aparcamiento en la plaza de la terminal. Hasta 15 minutos gratis, después 200 ₽ por hora hasta 5 horas. Las primeras 24 horas 1000 ₽, cada 24 horas siguientes 800 ₽. Una nueva entrada dentro de 30 minutos se paga desde el momento de entrar. Las máquinas de las terminales 1 y 2 solo aceptan billetes; la caja de la salida acepta tarjetas y QR."
+  }
+ }
+}

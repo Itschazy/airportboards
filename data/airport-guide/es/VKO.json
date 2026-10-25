@@ -1,0 +1,46 @@
+{
+ "iata": "VKO",
+ "about": "En Vnúkovo, los pasajeros son atendidos en la terminal A; las salas VIP funcionan en un edificio aparte. Llegadas en el nivel 1 de la terminal, salidas en el 2. Desde la estación de metro «Aeroport Vnukovo» de la línea Solntsevskaya, un paso subterráneo lleva a la terminal.",
+ "blocks": {
+  "lounges": {
+   "title": "Salas VIP",
+   "hint": "Terminal A, 24 horas",
+   "text": "Vuelos nacionales: Prokofiev Lounge, nivel 2 tras el control de seguridad, frente a la puerta 13. Internacionales: «Chaikovski», en el nivel 1 del atrio tras el control de pasaportes, y ART Lounge, en el nivel 2 del atrio, ambas junto a la puerta 21. VIP Lounge, en el nivel 3 antes del control de seguridad, atiende todos los vuelos; para salidas internacionales hay que dejar la sala 1 hora antes. Admiten a la clase business, con los programas ON PASS, Persona Aero, Every lounge, RusPriority y otros, o previo pago: 2900 ₽ (ART Lounge 3500 ₽) por 3 horas."
+  },
+  "storage": {
+   "title": "Consigna",
+   "hint": "Terminal A, nivel −1",
+   "text": "Terminal A, nivel −1, día y noche. Bulto de hasta 30 kg, plazo de hasta 6 meses. Primer día natural 1000 ₽, del 2.º al 29.º 900 ₽ por día, equipaje de gran tamaño 1500 ₽. Teléfono +7 (926) 895-36-82."
+  },
+  "sleep": {
+   "title": "Dónde dormir",
+   "hint": "Hotel frente a la terminal A",
+   "text": "DoubleTree by Hilton está frente a la terminal A, a 2 minutos del túnel subterráneo que lleva a la terminal y al metro. El hotel tiene 432 habitaciones y funciona día y noche. Dirección: calle 2-ya Reisovaya, 2; teléfono +7 (495) 436-37-37."
+  },
+  "kids": {
+   "title": "Con niños",
+   "hint": "Terminal A, nivel 2",
+   "text": "Sala de espera infantil en el nivel 2 de la terminal A, abierta las 24 horas y gratuita, como máximo 6 horas antes de la salida. Admite a niños menores de 7 años (con discapacidad, menores de 12) acompañados de un solo adulto y a embarazadas en la segunda mitad del embarazo. No se permite entrar con equipaje ni cochecitos; teléfono +7 (495) 436-29-26."
+  },
+  "transport": {
+   "title": "Cómo llegar",
+   "hint": "Metro hasta la terminal",
+   "text": "Estación de metro «Aeroport Vnukovo», en la línea Solntsevskaya. Desde el andén, un paso subterráneo lleva a la terminal A, a los trenes y a las paradas de autobús. Desde «Salaryevo» (línea Sokolnicheskaya) sale el autobús n.º 911: 18–20 minutos, intervalo de 10–15 minutos. El Aeroexpress ya no llega aquí: desde la estación Kievski sale un tren normal, 35–40 minutos, una vez por hora, hacia el aeropuerto de 7:00 a 23:00."
+  },
+  "parking": {
+   "title": "Aparcamiento",
+   "hint": "15 min gratis",
+   "text": "La entrada en la plaza de la terminal es gratuita durante 15 minutos, en total no más de 60 minutos al día. Aparcamientos de varios niveles n.º 1 y n.º 2, de 350 plazas cada uno. Tarifa: 1.ª hora 600 ₽, 2.ª hora 400 ₽, después 1500 ₽ por día. El aparcamiento subterráneo del hotel DoubleTree, al otro lado de la calle, cuesta 2000 ₽ por día."
+  },
+  "wifi": {
+   "title": "Wi‑Fi",
+   "hint": "Red MT_FREE",
+   "text": "El Wi‑Fi gratuito funciona en toda la terminal A. La red se llama MT_FREE. Acceso con el número de teléfono, que se confirma con una llamada."
+  },
+  "terminals": {
+   "title": "Terminal",
+   "hint": "Terminal A y VIP",
+   "text": "Terminal de pasajeros A y sala VIP en un edificio aparte. Llegadas en el nivel 1 de la terminal A, salidas en el 2, al que lleva un paso elevado; salas VIP en el 3. Se puede pasar de la zona nacional a la internacional sin salir de la terminal."
+  }
+ }
+}

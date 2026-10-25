@@ -1,0 +1,36 @@
+{
+ "iata": "GOJ",
+ "about": "Der Internationale Flughafen Nischni Nowgorod „W. P. Tschkalow“ fertigt Inlands- und internationale Flüge ab. Betreiber: AO „MANN“. 2024 fertigte der Flughafen 1,47 Mio. Passagiere ab, im Streckennetz sind 29 Ziele.",
+ "blocks": {
+  "transport": {
+   "title": "Anreise",
+   "hint": "Busse 11, 56, А50",
+   "text": "Stadtbusse: Nr. 11 zur Uliza Druschajewa, Nr. 56 nach Krasnoje Sormowo, Nr. А50 zum Kulturhaus des Autowerks. Vorortzüge fahren von der Station N. Nowgorod-Tschkalow zum Moskauer Bahnhof, Fahrzeit 26–34 Minuten, Fahrschein 28 ₽. Betreiber der Züge: AO „Wolgo-Wjatskaja PPK“."
+  },
+  "lounges": {
+   "title": "Business-Lounges",
+   "hint": "Ebene 2, ab 5800 ₽",
+   "text": "Drei Lounges auf Ebene 2: Lounge für Inlandsflüge, Lounge für internationale Flüge und Lounge für Bankkarteninhaber im Abflugbereich der Inlandsflüge. Lounges für Inlands- und internationale Flüge: 5800 ₽ bis zu 3 Stunden, danach 550 ₽ für jede Stunde. In die Bank-Lounge gelangt man über die Programme On-pass, Grey Wall, UniPass, Every Lounge, Golden Key, RusPriority. Die Lounge für Inlandsflüge ist rund um die Uhr geöffnet."
+  },
+  "storage": {
+   "title": "Gepäckaufbewahrung",
+   "hint": "Ebene 1, ab 250 ₽/Std.",
+   "text": "Automatische Gepäckaufbewahrung auf Ebene 1, links vom Ausgang der Gepäckausgabe für Inlandsflüge. Standardfach: 250 ₽ pro Stunde oder 550 ₽ pro Tag. Großes Fach: 350 ₽ pro Stunde oder 900 ₽ pro Tag. Garderobe: 100 ₽ pro Tag."
+  },
+  "kids": {
+   "title": "Mit Kind",
+   "hint": "Ebene 2, 24/7",
+   "text": "Mutter-Kind-Raum auf Ebene 2 des Terminals, rund um die Uhr geöffnet. Aufgenommen werden Kinder unter 7 Jahren, Kinder mit Behinderung unter 14 Jahren, nur mit einem Erwachsenen. Erforderlich sind Pass und Flugticket. Aufenthalt bis zu 12 Stunden vor Abflug und bis zu 6 Stunden nach Ankunft."
+  },
+  "parking": {
+   "title": "Parken",
+   "hint": "15 Min. kostenlos",
+   "text": "Hol- und Bringzone: die ersten 15 Minuten kostenlos, von der 16. bis zur 60. Minute 890 ₽, danach 890 ₽ pro Stunde. Parkplatz P am Terminal: bis 1 Stunde 370 ₽, von 1 bis 24 Stunden 750 ₽, bis 2 Tage 1500 ₽. Kostenloser Parkplatz rund um die Uhr 700 m vom Terminal, unbewacht. Erste Reihe (VIP-Zone): 3000 ₽ pro Einfahrt."
+  },
+  "wifi": {
+   "title": "Wi‑Fi",
+   "hint": "Netz Free_GOJ",
+   "text": "Kostenloses Wi‑Fi in den Passagierbereichen des Terminals. Netz Free_GOJ. Anmeldung mit der Mobilfunknummer, danach den Anweisungen auf dem Bildschirm folgen."
+  }
+ }
+}

@@ -1,0 +1,41 @@
+{
+ "iata": "UFA",
+ "about": "Betreiber AO „Meschdunarodny aeroport ‚Ufa‘“, der Flugplatz hat zwei Start- und Landebahnen. Das Streckennetz umfasst 65 Ziele, davon 22 international. 2024 fertigte der Flughafen 4 753 742 Passagiere ab.",
+ "blocks": {
+  "transport": {
+   "title": "Anreise",
+   "hint": "Busse 101, 110, 110С",
+   "text": "Busse von „Baschawtotrans“ Nr. 101, 110 und 110С. Fahrplan auf bashauto.ru und unter +7 (347) 297-97-92. Taxis von „Yandex Go“ bestellt man an den Schaltern in der Gepäckausgabe und in der Ankunftshalle des Inlandsterminals, Bezahlung bar oder mit Karte."
+  },
+  "terminals": {
+   "title": "Terminals",
+   "hint": "Т1 Inland, Т2 international",
+   "text": "Terminal 1 fertigt Inlandsflüge ab, Terminal 2 internationale. Parkplatz А2 gegenüber Terminal 1, А3 gegenüber Terminal 2, 2 Minuten zu den Terminals."
+  },
+  "lounges": {
+   "title": "Business-Lounges",
+   "hint": "„Kurai“ in Т2, 3000 ₽",
+   "text": "„Agidel“: Terminal 1, Ebene 2, gegenüber Gate Nr. 2; Erwachsene 6000 ₽, Kinder von 2–12 Jahren 3000 ₽, über 3 Stunden 2000 ₽ pro Stunde. „Iremel Lounge“: für Teilnehmer von On Pass, Mir Pass, Every lounge, Grey wall pass, Persona Aero, RusPriority, alle anderen 3000 ₽. „Kurai“: Abflugbereich von Terminal 2, kostenlos für die Business Class von Aeroflot, Flydubai, Utair und Inhaber von Programmkarten, alle anderen 3000 ₽. Kinder unter 2 Jahren kostenlos."
+  },
+  "storage": {
+   "title": "Gepäckaufbewahrung",
+   "hint": "Pack & Fly, 24/7",
+   "text": "Rund um die Uhr geöffnet, Betreiber Pack & Fly, Telefon +7 (960) 803-80-67. Ein Gepäckstück höchstens 203 cm Summe der drei Maße und höchstens 32 kg."
+  },
+  "kids": {
+   "title": "Mit Kind",
+   "hint": "Т1, Ebene 1, 24/7",
+   "text": "Mutter-Kind-Raum in Terminal 1, Ebene 1, gegenüber den Check-in-Schaltern, rund um die Uhr. Kinder unter 7 Jahren (mit Behinderung unter 14) mit einem Erwachsenen. Bis zu 12 Stunden vor Abflug, bis zu 1 Stunde nach Ankunft. Erforderlich sind Pass, Geburtsurkunde, Tickets und eine Bescheinigung der Sanitätsstation des Inlandsterminals."
+  },
+  "parking": {
+   "title": "Parken",
+   "hint": "15 Min. kostenlos",
+   "text": "Hol- und Bringzone А1: 15 Minuten kostenlos, danach 500 ₽ pro Stunde, Parken verboten. Warteparkplatz С5 (10 Minuten zu den Terminals): 3 Stunden kostenlos, danach 150 ₽ pro Stunde, ein Tag 600 ₽. Parkplätze А2 und А3 an den Terminals: die erste Stunde 300 ₽, danach 100 ₽ pro Stunde, ein Tag 700 ₽."
+  },
+  "wifi": {
+   "title": "Wi‑Fi",
+   "hint": "Airport.FreeWiFi.Ufanet",
+   "text": "Kostenlos, ohne Zeit- und Datenbegrenzung. Netze Airport.FreeWiFi.Ufanet und Airport.FreeWiFi.TTK. Anmeldung mit der Mobilfunknummer: Nummer eingeben, dann die zugesandte Nummer anrufen."
+  }
+ }
+}

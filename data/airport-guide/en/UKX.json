@@ -1,0 +1,26 @@
+{
+ "iata": "UKX",
+ "about": "The airport is 10 km north of Ust-Kut. Construction of the current airport began in 1963; the first flights to the unpaved runway started in the autumn of the same year.",
+ "blocks": {
+  "transport": {
+   "title": "Getting there",
+   "hint": "Taxi only",
+   "text": "There is no public transport to the airport. It can only be reached by private taxi."
+  },
+  "terminals": {
+   "title": "Terminal",
+   "hint": "Counter closes 40 min before",
+   "text": "Check-in opens 2 hours or 1 h 30 min before departure, depending on the aircraft type. It closes 40 minutes before departure. A paper boarding pass is required for boarding: get it at the counter no later than 10 minutes before check-in closes."
+  },
+  "storage": {
+   "title": "Left luggage",
+   "hint": "By the check-in counter",
+   "text": "In the terminal building, next to the check-in counter. Phone: +7 (39565) 5-07-09."
+  },
+  "kids": {
+   "title": "With children",
+   "hint": "Children under 7, free",
+   "text": "Mother and child room in the terminal building. For departing passengers with children under 7, stays of up to 3–4 hours. One adult may stay with the child. Free of charge. Apply at the information desk or the check-in counter."
+  }
+ }
+}

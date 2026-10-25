@@ -1,0 +1,31 @@
+{
+ "iata": "UUS",
+ "about": "L'aérogare se trouve dans le quartier de Khomoutovo, à la périphérie sud de Ioujno-Sakhalinsk, à 10 km du centre. Le complexe aéroportuaire est exploité par la SA « Aerovokzal Ioujno-Sakhalinsk » ; sa surface dépasse 47 000 m².",
+ "blocks": {
+  "transport": {
+   "title": "Comment s'y rendre",
+   "hint": "Bus 3, 8, 63",
+   "text": "Depuis le centre, les bus n° 3, 8 et 63 ont leur terminus à l'aérogare. Ils circulent de 6:30 à 22:00, trajet de 30–40 min. Train de banlieue de la gare ferroviaire jusqu'à Khomoutovo, puis environ 10 min en bus. Taxi : environ 25 min, environ 350 ₽."
+  },
+  "parking": {
+   "title": "Parking",
+   "hint": "15 min gratuites",
+   "text": "Zone de dépose et de prise en charge : 15 min gratuites, jusqu'à 60 min 400 ₽, puis 1200 ₽ pour les premières 24 heures et 600 ₽ par tranche de 24 heures suivante. Longue durée P1 : 500 ₽ par 24 heures pour les 5 premières tranches de 24 heures, ensuite 400 ₽. Gratuit pour les passagers à mobilité réduite avec le macaron « Handicapé »."
+  },
+  "lounges": {
+   "title": "Salons",
+   "hint": "« Aniva », niveau 3",
+   "text": "Salon « Aniva » au niveau 3, de 6:00 à 23:00 : 4400 ₽, enfants de 2 à 12 ans 2200 ₽, 2 heures maximum, accès avec Every Lounge. Salon « Krilion » au niveau 2, de 6:00 à 23:00 : 2800 ₽, accepte Comfort pass, Every Lounge, Mir Pass, Grey Wall Pass, ONPASS. Entrée gratuite pour les enfants de moins de 2 ans."
+  },
+  "storage": {
+   "title": "Consigne à bagages",
+   "hint": "Niveau 1, dès 500 ₽",
+   "text": "Consigne au niveau 1 de l'aérogare. Bagage ordinaire : 500 ₽ pour les premières 24 heures, 200 ₽ par tranche de 24 heures suivante. Hors format de plus de 203 cm : 850 ₽ et 400 ₽. Un bagage pesant jusqu'à 30 kg, durée jusqu'à 30 jours."
+  },
+  "kids": {
+   "title": "Avec un enfant",
+   "hint": "Niveau 2, 6:00–23:00",
+   "text": "Salle mère-enfant au niveau 2 en zone publique, de 6:00 à 23:00, gratuite. Accès pour les enfants de moins de 8 ans avec un adulte, les enfants handicapés de moins de 14 ans, les femmes enceintes dans la seconde moitié de la grossesse. Billet ou carte d'embarquement, passeport, acte de naissance requis. Cuisine avec micro-ondes, pas de stérilisateur."
+  }
+ }
+}

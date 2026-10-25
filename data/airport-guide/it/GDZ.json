@@ -1,0 +1,31 @@
+{
+  "iata": "GDZ",
+  "about": "Gestore dell’aeroporto: OOO «Aeroport Gelendzhik». Il nuovo terminal di 16.700 m², progettato dallo studio Fuksas, è stato aperto nel 2022, capacità 891 passeggeri all’ora. I voli servono destinazioni nazionali in Russia.",
+  "blocks": {
+    "transport": {
+      "title": "Come arrivare",
+      "hint": "Bus 5",
+      "text": "Autobus n. 5 «mkr Tolsty mys — mkr Tonky mys». Fermata a destra dell’uscita dal terminal, sulla seconda corsia di transito. Il taxi ufficiale «Avtoexpress» arriva sulla prima corsia di fronte all’uscita della zona arrivi. Indirizzo per il taxi: ul. Solntsedarskaya, 10."
+    },
+    "lounges": {
+      "title": "Sale business",
+      "hint": "Livello 2",
+      "text": "Sala business al livello 2 dell’aerostazione. Hanno la priorità i passeggeri di classe business e i titolari di carte fedeltà delle compagnie aeree, la classe economica se ci sono posti. C’è un banco check-in separato e il trasferimento all’aereo. Sala comfort AURA lounge: fino a 3 ore, bambini sotto i 2 anni gratis, accesso con ONPASS."
+    },
+    "storage": {
+      "title": "Deposito bagagli",
+      "hint": "Livello 1, da 200 ₽",
+      "text": "Deposito bagagli automatico al livello 1, a sinistra dei banchi check-in, negli orari di apertura dell’aeroporto. Armadietto piccolo da 200 ₽ per 2 ore a 800 ₽ al giorno, medio 300–900 ₽, grande 400–1000 ₽. Pagamento in contanti o con carta al terminale, lo scontrino con codice a barre apre l’armadietto."
+    },
+    "kids": {
+      "title": "Con bambini",
+      "hint": "Livello 1, gratis",
+      "text": "Sala madre e bambino al livello 1, nell’ala destra del terminal. Gratuita, fino a 3 ore. Accedono i passeggeri con bambini sotto i 7 anni, con bambini con disabilità sotto i 14 anni e le donne nella seconda metà della gravidanza. Servono una visita al presidio medico, biglietto o carta d’imbarco, passaporto e certificato di nascita del bambino."
+    },
+    "parking": {
+      "title": "Parcheggio",
+      "hint": "15 min gratis",
+      "text": "250 posti. I primi 15 minuti gratis, poi 300 ₽ per ogni ora, oltre 3 ore 900 ₽/giorno. Sosta sulla seconda corsia di transito 1000 ₽/ora, parcheggio VIP 2000 ₽/ora. Nuovo ingresso entro un’ora senza i 15 minuti gratuiti."
+    }
+  }
+}

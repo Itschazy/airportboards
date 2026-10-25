@@ -1,0 +1,31 @@
+{
+ "iata": "HMA",
+ "about": "Aéroport international de Khanty-Mansiïsk, société de gestion SA « Yugraavia ». Ouvert jour et nuit. Le complexe aéroportuaire avec secteur international a ouvert en 2001 ; depuis 2004, un point de passage de la frontière d'État y fonctionne.",
+ "blocks": {
+  "transport": {
+   "title": "Comment s'y rendre",
+   "hint": "Bus 3 et 5",
+   "text": "Le bus n° 3 « mkr. Vostotchny – Polyclinique – mkr. Vostotchny » circule de 6:00 à 0:00. Le bus n° 5 « mkr. Vostotchny – Palais de glace » circule de 5:00 à 1:00. En voiture par la rue Obezdnaïa, la rocade Est, la rue Mira ou le Tobolski trakt."
+  },
+  "lounges": {
+   "title": "Salons",
+   "hint": "3500 ₽ pour 3 heures",
+   "text": "Salon pour les passagers de classe affaires et les membres des programmes des compagnies aériennes de niveau GOLD et PLATINUM. Pour les autres 3500 ₽ pour 3 heures, ensuite 700 ₽ de l'heure. Les cartes de fidélité bancaires ne donnent pas d'accès gratuit. Salon VIP au départ : 10 000 ₽."
+  },
+  "sleep": {
+   "title": "Où dormir",
+   "hint": "Hôtel « Sokol »",
+   "text": "L'hôtel « Sokol », à distance de marche de l'aéroport et de l'arrêt, 43 chambres. Simple économique à partir de 2500 ₽ par nuit, standard à partir de 3150 ₽. Tarif de soirée de 20:00 à 6:00."
+  },
+  "kids": {
+   "title": "Avec un enfant",
+   "hint": "Gratuit, moins de 7 ans",
+   "text": "Salle mère-enfant pour les passagers avec des enfants de moins de 7 ans, des enfants handicapés de moins de 14 ans et les femmes enceintes à partir de la seconde moitié de la grossesse. Accès 6 heures avant le départ et jusqu'à 3 heures après l'arrivée, gratuit. D'abord un examen au poste de santé ; passeport, acte de naissance et billet requis."
+  },
+  "parking": {
+   "title": "Parking",
+   "hint": "20 min gratuites",
+   "text": "Place de l'aérogare : jusqu'à 20 minutes gratuit, de la 21e minute à 4 heures 300 ₽ de l'heure, toute heure entamée est due. À partir de la 5e heure 1200 ₽ par jour, jour suivant 1200 ₽. Une nouvelle entrée dans les 20 minutes est payante, 300 ₽ de l'heure."
+  }
+ }
+}

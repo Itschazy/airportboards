@@ -1,0 +1,25 @@
+{
+ "iata": "SSH",
+ "blocks": {
+  "transport": {
+   "title": "Getting there",
+   "hint": "Minibuses, agree fare first",
+   "text": "Minibuses to Sharm El Sheikh usually leave when full; the fare is agreed with the driver in advance. Car rental is available: Hertz, Thrifty and local companies."
+  },
+  "taxi": {
+   "title": "Taxi",
+   "hint": "Agree the fare before boarding",
+   "text": "Taxis are available at the airport; the fare is agreed with the driver before boarding."
+  },
+  "terminals": {
+   "title": "Terminals",
+   "hint": "Two terminals",
+   "text": "The airport has two passenger terminals. There are ATMs and currency exchange points."
+  },
+  "storage": {
+   "title": "Left luggage",
+   "hint": "Available at the airport",
+   "text": "The airport has a left luggage office. Sources do not state the price."
+  }
+ }
+}

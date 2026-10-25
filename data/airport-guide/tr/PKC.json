@@ -1,0 +1,41 @@
+{
+ "iata": "PKC",
+ "about": "Petropavlovsk-Kamçatski (Yelizovo) Uluslararası Havalimanı Aeroporty Regionov yönetim şirketi tarafından işletilir. 31 Mart 2025'ten itibaren tüm tarifeli yolcu uçuşlarına yeni terminal hizmet veriyor. Havalimanı 2024 yılında 931 bin yolcu ağırladı.",
+ "blocks": {
+  "transport": {
+   "title": "Nasıl gidilir",
+   "hint": "7, 8, 104, 120 otobüsleri",
+   "text": "7 numaralı (Avtokhozyaystvo durağı) ve 8 numaralı (Garnizon'a ve Uralskaya Caddesi'ne) şehir otobüsleri. 104 numaralı otobüs Yelizovo'ya gider, sefer aralığı 5–20 dakika. Şehirlerarası 120 numara Vilyuchinsk'e gider, yolculuk 1 sa 35 dk. Tarife Kamçatka Krayı Ulaştırma Bakanlığı verilerine göre verilmiştir."
+  },
+  "terminals": {
+   "title": "Terminal",
+   "hint": "2025'ten beri yeni terminal",
+   "text": "31 Mart 2025'ten itibaren tüm tarifeli uçuşlara yeni terminal hizmet veriyor. 30 check-in kontuarı: 15'i iç hatlar, 15'i dış hatlar için. Biniş 5 körük üzerinden. BAGS ID self bagaj teslim kioskları var."
+  },
+  "lounges": {
+   "title": "Business salonları",
+   "hint": "Kat 3, 7 500 ₽",
+   "text": "Business salonu terminalde Kat 3'te. Giriş 3 saate kadar 7 500 ₽, 2–12 yaş çocuklar 3 750 ₽. Business sınıfı yolcuları, ON PASS, Grey Wall, EveryLounge, Persona.Aero, RusPriority, GoldenKey üyeleri ve giriş ücretini ödeyen herkes kabul edilir."
+  },
+  "storage": {
+   "title": "Emanet",
+   "hint": "Kat 1, günlüğü 600 ₽",
+   "text": "Emanet terminalde Kat 1'de. 1 saate kadar 300 ₽, sonrası günlüğü 600 ₽. Eşyalar yalnızca sarılı olarak kabul edilir. Bagaj sarma Kat 1'de, 7:00–19:00, parça başına 1 000 ₽'den."
+  },
+  "sleep": {
+   "title": "Nerede uyunur",
+   "hint": "Yakında Polyot oteli",
+   "text": "Polyot oteli terminal binasına yürüme mesafesinde: Yelizovo, Zvyozdnaya Caddesi 10/7. 36 oda, gece gündüz açık. Kahvaltı dahil, çıkış saati 12:00. Telefon +7 (41531) 99-315."
+  },
+  "kids": {
+   "title": "Çocukla",
+   "hint": "Kat 3, 8:00–19:30",
+   "text": "Anne-bebek odası terminalde Kat 3'te, 8:00–19:30, ücretsiz. Tek yetişkinle birlikte 7 yaşından küçük çocuklar, 14 yaşından küçük engelli çocuklar ve gebeliğin ikinci yarısındaki kadınlar için. Bilet veya biniş kartı ve Kat 1'deki revirden belge gerekir."
+  },
+  "wifi": {
+   "title": "Wi‑Fi",
+   "hint": "airport-pkc ağı",
+   "text": "Yolcu alanlarında ücretsiz Wi‑Fi. Ağ: airport-pkc, giriş cep telefonu numarasıyla."
+  }
+ }
+}

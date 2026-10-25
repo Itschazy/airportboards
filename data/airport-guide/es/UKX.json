@@ -1,0 +1,26 @@
+{
+ "iata": "UKX",
+ "about": "El aeropuerto está a 10 km al norte de Ust-Kut. La construcción del aeropuerto actual comenzó en 1963, y los primeros vuelos a la pista de tierra empezaron en otoño de ese mismo año.",
+ "blocks": {
+  "transport": {
+   "title": "Cómo llegar",
+   "hint": "Solo taxi",
+   "text": "No hay transporte urbano hasta el aeropuerto. Solo se puede llegar en taxi privado."
+  },
+  "terminals": {
+   "title": "Terminal",
+   "hint": "Mostrador cierra 40 min antes",
+   "text": "La facturación empieza 2 horas o 1 h 30 min antes, según el tipo de avión. Termina 40 minutos antes de la salida. Para embarcar se necesita una tarjeta de embarque en papel: obténgala en el mostrador a más tardar 10 minutos antes del cierre de la facturación."
+  },
+  "storage": {
+   "title": "Consigna",
+   "hint": "Junto al mostrador de facturación",
+   "text": "En el edificio de la terminal, junto al mostrador de facturación. Teléfono: +7 (39565) 5-07-09."
+  },
+  "kids": {
+   "title": "Con niños",
+   "hint": "Menores de 7 años, gratis",
+   "text": "Sala madre e hijo en el edificio de la terminal. Para pasajeros que salen con niños menores de 7 años; estancia de hasta 3–4 horas. Con el niño puede quedarse un solo adulto. Gratis. Diríjase a la oficina de información o al mostrador de facturación."
+  }
+ }
+}

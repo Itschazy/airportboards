@@ -1,0 +1,21 @@
+{
+ "iata": "TBW",
+ "about": "Tambov havaalanı Tambov merkezinin 10 km kuzeydoğusunda, Donskoye köyünün yanında. İşletmeci: TOGBU Aeroport Tambov. Havalimanı federal statüdedir; tek pist, 2098 × 42 m.",
+ "blocks": {
+  "terminals": {
+   "title": "Terminal",
+   "hint": "Gidiş: Kat 1",
+   "text": "Güvenlik kontrolü terminal binasının girişinde yapılır. Gidiş salonu Kat 1'de, check-in kontuarları da orada. Elektronik biniş kartı için tarayıcı yok: önceden yazdırın veya kontuardan alın."
+  },
+  "kids": {
+   "title": "Çocukla",
+   "hint": "7 yaşından küçük çocuklar, ücretsiz",
+   "text": "7 yaşından küçük çocuklu yolcular için oda: yatak odası, yatak, tuvalet. Ücretsiz, havalimanının çalışma saatlerinde. Pasaport, bilet ve sağlık belgesi gerekir. Belge idari binada Kat 1'deki revirde ücretsiz verilir. Yolcu hizmetleri servisine başvurun."
+  },
+  "parking": {
+   "title": "Otopark",
+   "hint": "Ücretsiz",
+   "text": "Terminal önü meydanında ücretsiz otopark. Engelliler için park yerleri var. Havalimanı bırakılan araçlardan sorumlu değildir."
+  }
+ }
+}

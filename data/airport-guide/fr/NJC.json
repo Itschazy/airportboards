@@ -1,0 +1,36 @@
+{
+ "iata": "NJC",
+ "about": "L'aéroport de Nijnevartovsk est devenu international après la reconstruction de 2005. Piste de 3200 sur 60 m. Deuxième aéroport du district autonome des Khantys-Mansis – Iougra par le volume de trafic.",
+ "blocks": {
+  "transport": {
+   "title": "Comment s'y rendre",
+   "hint": "4 km, bus 15",
+   "text": "Le centre-ville est à 4 km. Bus urbains : n° 4 jusqu'au village d'Ou Severnoï Rochtchi, n° 9 jusqu'à Starovartovskaïa, n° 15 jusqu'à la gare ferroviaire et la gare routière, n° 21 jusqu'au DRSU. Depuis la place de l'aérogare, un aérobus va à Strejevoï, horaires sur le site de la gare routière. Station de taxis sur la place de l'aérogare, face au terminal n° 2."
+  },
+  "terminals": {
+   "title": "Terminaux",
+   "hint": "Carte papier requise",
+   "text": "Deux terminaux : n° 1 et n° 2. La carte d'embarquement électronique n'est actuellement pas acceptée pour les formalités avant le vol, il faut une carte papier."
+  },
+  "lounges": {
+   "title": "Salons",
+   "hint": "Terminal 1, 24/7",
+   "text": "Salon au niveau 1 du terminal 1, ouvert jour et nuit. Accès pour les passagers de classe affaires et les titulaires de cartes élite des compagnies aériennes, pour les autres payant selon les places disponibles. Départ 7950 ₽ pour 2 h 30 min, chaque heure suivante 1141 ₽. Arrivée, accueil ou accompagnement 4050 ₽. Enfants de 2 à 12 ans 70 % du tarif, gratuit pour les moins de 2 ans."
+  },
+  "storage": {
+   "title": "Consigne à bagages",
+   "hint": "Terminal 1, 24/7",
+   "text": "Terminal n° 1, rez-de-chaussée, jour et nuit. Valise, sac ou sac à dos jusqu'à 203 cm pour la somme des trois dimensions 600 ₽ par jour. Objets volumineux 700 ₽ par jour. Perte du jeton 400 ₽."
+  },
+  "kids": {
+   "title": "Avec un enfant",
+   "hint": "Salle pour moins de 7 ans",
+   "text": "Salle mère-enfant uniquement sur présentation d'un billet pour un départ dans les 24 heures. Gratuit pour les femmes avec des enfants de moins de 7 ans et pour les enfants handicapés. Pour les autres 1200 ₽ par lit et par jour."
+  },
+  "parking": {
+   "title": "Parking",
+   "hint": "15 min gratuites",
+   "text": "Parking sur la place de l'aérogare. Jusqu'à 15 minutes gratuit, ensuite 200 ₽ de l'heure jusqu'à 5 heures. Premières 24 heures 1000 ₽, chaque tranche de 24 heures suivante 800 ₽. Une nouvelle entrée dans les 30 minutes est payante dès l'entrée. Les bornes des terminaux 1 et 2 n'acceptent que les billets, la caisse à la sortie accepte les cartes et le QR."
+  }
+ }
+}

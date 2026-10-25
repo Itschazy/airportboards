@@ -1,0 +1,8 @@
+{
+ "iata": "IWA",
+ "about": "A. M. Vasilevsky의 이름을 딴 이바노보 공항은 이바노보 중심에서 남서쪽으로 7 km 떨어져 있습니다. 연방급 공항으로 1939년부터 운영하고 있습니다. 운영자 및 주 운영사: Tsentr Avia LLC.",
+ "blocks": {
+  "transport": { "title": "가는 방법", "hint": "트롤리버스 11번", "text": "11번 트롤리버스: 공항, Zagorodnaya 거리, Lezhnevskaya 거리, 버스터미널, Revolyutsii 광장, Sheremetevsky 대로, 철도역. 7:00부터 20:00까지 운행하며 배차 간격 22–44분. 택시: Yandex Taxi, Vezyot, Maxim 앱으로 호출. 공항은 시 경계 밖에 있으므로 택시는 미리 부르는 것이 좋습니다." },
+  "parking": { "title": "주차", "hint": "10분 무료", "text": "차단기가 있는 경비 자동 주차장. 처음 10분 무료, 시간당 100 ₽, 하루 400 ₽. 정산기(현금은 거스름돈 없음, 또는 카드), QR 코드, Hippoparking 앱 또는 웹사이트로 결제합니다. 결제 후 15분 이내에 출차해야 합니다." }
+ }
+}

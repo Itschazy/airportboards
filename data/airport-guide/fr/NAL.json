@@ -1,0 +1,20 @@
+{
+ "iata": "NAL",
+ "blocks": {
+  "transport": {
+   "title": "Comment s'y rendre",
+   "hint": "Minibus 17",
+   "text": "Le minibus n° 17 va de la gare ferroviaire directement à l'aérogare. En voiture depuis le centre de Naltchik, 15–20 minutes, en quittant la rue Idarova. Depuis le parc national « Prielbrousie », 92 km, environ 1 heure 20 minutes."
+  },
+  "lounges": {
+   "title": "Salon de confort supérieur",
+   "hint": "Entrée séparée, 6200 ₽",
+   "text": "Salon de confort supérieur avec entrée et accès séparés : enregistrement et contrôle des vols intérieurs à l'intérieur du salon, jusqu'à 10 minutes, transfert à l'avion. Passager 6200 ₽, entrée gratuite pour les enfants de moins de 2 ans, accompagnant 5000 ₽. Réserver à l'avance par téléphone."
+  },
+  "kids": {
+   "title": "Avec un enfant",
+   "hint": "Gratuit",
+   "text": "La salle mère-enfant est gratuite pour les passagers munis d'un billet au départ de Naltchik : avec des enfants de moins de 7 ans, des enfants handicapés de moins de 16 ans et pour les femmes dans la seconde moitié de la grossesse. Billet, passeport et acte de naissance de l'enfant requis."
+  }
+ }
+}

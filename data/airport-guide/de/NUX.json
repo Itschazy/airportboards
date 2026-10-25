@@ -1,0 +1,31 @@
+{
+ "iata": "NUX",
+ "about": "Der Flughafen Nowy Urengoi wird von der Verwaltungsgesellschaft „Aeroporty Regionow“ betrieben. Linienflüge gehen zu 19 Zielen, 2025 fertigte der Flughafen mehr als 1 Mio. Passagiere ab.",
+ "blocks": {
+  "transport": {
+   "title": "Anreise",
+   "hint": "Nr. 101 ab Bahnhof, 18 Min.",
+   "text": "Bus Nr. 101 „Jamal-Express“ ab Bahnhof, 18 Min. Bus Nr. 3 ab Bahnhof, 30 Min., alle 8–15 Min., 43 ₽. Bus Nr. 1 aus dem Stadtteil Sewer, 45 Min., alle 8–10 Min., 43 ₽."
+  },
+  "parking": {
+   "title": "Parken",
+   "hint": "15 Min. kostenlos",
+   "text": "Hol- und Bringzone: 15 Min. kostenlos, bis 60 Min. 540 ₽, danach 540 ₽/Stunde. Parkplatz P1 ohne kostenlose Zeit: bis 60 Min. 320 ₽, bis 2 Stunden 560 ₽, bis 24 Stunden 740 ₽. Kostenloser Parkplatz P0 mit 55 Plätzen an der Haltestelle „Wertodrom“, 2 Haltestellen bis zum Terminal."
+  },
+  "lounges": {
+   "title": "Business-Lounges",
+   "hint": "Nach der Kontrolle, 5800 ₽",
+   "text": "Business-Lounge im Wartebereich nach der Sicherheitskontrolle. Zugang für Passagiere der Business Class, Teilnehmer von Persona.Aero, ON PASS, Grey Wall, Every Lounge, GoldenKey und Selbstzahler. Preis 5800 ₽ bis zu 3 Stunden, danach 550 ₽ für jede Stunde."
+  },
+  "storage": {
+   "title": "Gepäckaufbewahrung",
+   "hint": "Abflughalle, ab 500 ₽",
+   "text": "Automatische Gepäckaufbewahrung in der Abflughalle auf Ebene 1. Standardfach 500 ₽ pro Tag oder 200 ₽ pro Stunde, großes Fach 900 ₽ pro Tag oder 300 ₽ pro Stunde. Das Fach öffnet sich mit dem Strichcode auf dem Beleg."
+  },
+  "wifi": {
+   "title": "Wi‑Fi",
+   "hint": "Netz FREE_NUX",
+   "text": "Kostenloses Wi‑Fi in den Passagierbereichen. Netz FREE_NUX wählen und die Anmeldung mit der Mobilfunknummer bestätigen."
+  }
+ }
+}

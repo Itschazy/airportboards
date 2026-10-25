@@ -1,0 +1,41 @@
+{
+  "iata": "KRR",
+  "about": "Due terminal: per i voli nazionali e per quelli internazionali. Superficie del complesso aerostazione 16 448 m². La pista lunga 3000 m è stata aperta nel 2017.",
+  "blocks": {
+    "transport": {
+      "title": "Come arrivare",
+      "hint": "Filobus 7",
+      "text": "Fermata sul piazzale dell’aerostazione. Il filobus n. 7 va all’autostazione e alla stazione ferroviaria Krasnodar-1 lungo ulitsa Stavropolskaya. Il taxi collettivo (marshrutka) n. 30 va fino al Kooperativny rynok. Banco dei taxi ufficiali nel Terminal 1, zona ritiro bagagli."
+    },
+    "terminals": {
+      "title": "Terminal",
+      "hint": "T1 nazionali, T2 internaz.",
+      "text": "Il Terminal 1 serve i voli nazionali, il Terminal 2 quelli internazionali. Banchi check-in 1–19, il check-in chiude 40 minuti prima della partenza."
+    },
+    "lounges": {
+      "title": "Sale business",
+      "hint": "T1 livello 2, T2 livello 1",
+      "text": "Sala business voli nazionali: Terminal 1, livello 2, dopo i controlli. Sala business voli internazionali: Terminal 2, livello 1, dopo i controlli. Accedono i membri di ONPASS, Grey Wall Pass, GoldenKey, RusPriority e altri programmi, gli altri a pagamento. Permanenza fino a 3 ore."
+    },
+    "storage": {
+      "title": "Deposito bagagli",
+      "hint": "24/7, 400 ₽ al giorno",
+      "text": "Sul piazzale dell’aerostazione, giorno e notte. 400 ₽ a collo per le prime 24 ore, 200 ₽ per ogni successivo periodo di 24 ore. Peso di un collo fino a 30 kg."
+    },
+    "kids": {
+      "title": "Con bambini",
+      "hint": "Т1, livello 1, gratis",
+      "text": "Sala madre e bambino: Terminal 1, livello 1, sala check-in dei voli nazionali. Per passeggeri con bambini sotto i 7 anni, bambini con disabilità sotto i 14 anni e donne nella seconda metà della gravidanza. Non si paga. Servono passaporto e carta d’imbarco o biglietto."
+    },
+    "parking": {
+      "title": "Parcheggio",
+      "hint": "15 min gratis, 400₽/h",
+      "text": "Piazzale dell’aerostazione: i primi 15 minuti gratis, poi 400 ₽ all’ora. Parcheggio orario aggiuntivo a destra del piazzale: 250 ₽ all’ora. Giornaliero 900 ₽ al giorno. Il parcheggio alternativo è gratuito."
+    },
+    "wifi": {
+      "title": "Wi‑Fi",
+      "hint": "Rete Airport_Free",
+      "text": "Rete gratuita «Airport_Free» in tutto il complesso aerostazione, nel terminal VIP e nella sala business. Accesso solo con SIM di un operatore russo."
+    }
+  }
+}

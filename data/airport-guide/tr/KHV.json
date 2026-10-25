@@ -1,0 +1,41 @@
+{
+ "iata": "KHV",
+ "about": "Havalimanı gece gündüz açık; Asya-Pasifik ülkeleri dahil 40'tan fazla hatta tarifeli ve charter uçuşlar yapılır. Yer hizmetlerinin ana operatörü: Khabarovsk Airport AO. Yolculara iki terminal hizmet verir: iç hatlar ve dış hatlar.",
+ "blocks": {
+  "transport": {
+   "title": "Nasıl gidilir",
+   "hint": "1 no.lu troleybüs, 35 no.lu otobüs",
+   "text": "Troleybüsler: 1 numara Komsomolskaya Meydanı'ndan, 2 ve 3 numara tren garı üzerinden ring hattı. Otobüsler: 35 numara Polyarnaya'dan, 18 numara Yuzhny mahallesinden. 180 numaralı dolmuş: Rechnoy Vokzal – Matveyevka köyü."
+  },
+  "terminals": {
+   "title": "Terminaller",
+   "hint": "İç ve dış hatlar ayrı",
+   "text": "İki terminal: iç hatlar ve dış hatlar, her birinde 3 kat. Yeni iç hatlar terminali 2019'da açıldı. Kat planları sitede yayımlanmıştır."
+  },
+  "lounges": {
+   "title": "Business salonları",
+   "hint": "İç hatlar Kat 3, 4000 ₽",
+   "text": "İç hatlar terminalinde Kat 3'te, steril alanda iki business salonu. Amur gece gündüz açık. Shantary güvenlik kontrolü çıkışının sağında; banka programı sahipleri (Every Lounge, Golden Key, Rus Priority vb.) için gece gündüz açık. Herkes için ücret: 4000 ₽, 4 saatten sonra saati 1100 ₽."
+  },
+  "storage": {
+   "title": "Emanet",
+   "hint": "İç hatlar, Kat 1 solda",
+   "text": "Otomatik emanet dolapları iç hatlar terminalinde, Kat 1, sol taraf. Saklama süresi 30 güne kadar. Para, belge, hayvan, silah ve tehlikeli madde kabul edilmez."
+  },
+  "sleep": {
+   "title": "Nerede uyunur",
+   "hint": "Mishka otel, 1 saatten",
+   "text": "Havalimanındaki Mishka transit oteli: B terminali, Kat 2, 1 saatten itibaren saatlik ücretli odalar. Havalimanının yanında Aeropolis oteli, Matveyevskoye Şossesi 30, odalar 1200 ila 6000 ₽."
+  },
+  "kids": {
+   "title": "Çocukla",
+   "hint": "Kat 2, 24/7, ücretsiz",
+   "text": "Anne-bebek odası Kat 2'de, genel alanda. Gece gündüz açık, ücretsiz. 7 yaşından küçük çocuklar, 14 yaşından küçük engelli çocuklar ve gebeliğin ikinci yarısındaki kadınlar için. Giden yolculara biniş kartı gerekir."
+  },
+  "parking": {
+   "title": "Otopark",
+   "hint": "15 dakika ücretsiz",
+   "text": "İç hatlar terminalinin karşısında kısa süreli P2: 15 dk'ya kadar ücretsiz, 30 dk'ya kadar 150 ₽, 60 dk'ya kadar 300 ₽, 24 saate kadar 500 ₽. Dalaeronavigatsiya binasının karşısında uzun süreli P1: 4 güne kadar günlüğü 500 ₽, 5. günden itibaren 350 ₽. Süre sınırı olmayan ücretsiz otopark var."
+  }
+ }
+}

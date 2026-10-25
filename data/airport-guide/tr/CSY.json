@@ -1,0 +1,26 @@
+{
+ "iata": "CSY",
+ "about": "Havalimanı Çeboksarı merkezine 5 km uzaklıkta, adres: I. F. Skvortsov Meydanı, 1. Terminale troleybüsler ve otobüs gider; taksiyle veya özel araçla da gelinebilir.",
+ "blocks": {
+  "transport": {
+   "title": "Nasıl gidilir",
+   "hint": "2, 15 numaralı troleybüsler",
+   "text": "Çeboksarı merkezine 5 km. 2 ve 15 numaralı troleybüsler, 15 numaralı otobüs. Ayrıca taksi veya özel araç."
+  },
+  "lounges": {
+   "title": "Business salonları",
+   "hint": "Kalış 4000 ₽",
+   "text": "Business salonu: 2 saate kadar kalış 4000 ₽; Every Lounge ve Golden Key programlarıyla ve Aeroflot Bonus Platinum ile Gold üyeleri için. Kat 2'de check-in'li özel hizmet 5500 ₽. Gidişte VIP hizmet 15 250 ₽, gelişte 7700 ₽, talep 24 saat önceden. Salona kalkıştan en erken 2 saat önce girilir."
+  },
+  "storage": {
+   "title": "Emanet",
+   "hint": "Günlüğü 300 ₽",
+   "text": "Bagaj emaneti: 1 parça için günlük 300 ₽."
+  },
+  "parking": {
+   "title": "Otopark",
+   "hint": "15 dakika ücretsiz",
+   "text": "İlk 15 dakika ücretsiz. Binek araçlar: saati 100 ₽, günlüğü 450 ₽, 3 günden itibaren günlüğü 400 ₽. UAZ, GAZelle, Sobol: saati 200 ₽, günlüğü 650 ₽. Makbuz kaybı 500 ₽. Telefon 8 (8352) 22-94-03, dahili 2-95."
+  }
+ }
+}

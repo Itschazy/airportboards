@@ -1,0 +1,30 @@
+{
+ "iata": "IST",
+ "blocks": {
+  "transport": {
+   "title": "Getting there",
+   "hint": "Metro M11, Havaist buses",
+   "text": "Metro M11 connects the airport with Gayrettepe, and since 20 June 2026 it has been extended to Halkalı. Havaist buses leave from the transport level, Level −2 for many districts of the city, including Beşiktaş, Kadıköy, Aksaray, Sultanahmet (Çatladıkapı) and Esenler bus station. İETT city buses: 5 routes to the centre."
+  },
+  "sleep": {
+   "title": "Where to sleep",
+   "hint": "YOTEL landside and airside",
+   "text": "YOTEL hotel right in the terminal: 171 cabins in the landside area (opposite check-in counters P) and 280 in the departure area (YOTELAIR, zone A–B), the latter only for passengers departing on international flights. Bookings from 4 hours. Hourly YOTELAIR Sleepcabins are opposite the iGA Lounge entrance, one floor up, walk-in only (no advance booking)."
+  },
+  "kids": {
+   "title": "With children",
+   "hint": "Play areas 700 m²",
+   "text": "There is a mother and child room, play areas in five themes with a total area of 700 m², free buggy rides for passengers with children under 2, separate family parking spaces and family security checkpoints."
+  },
+  "parking": {
+   "title": "Parking",
+   "hint": "Multi-level, under one roof",
+   "text": "Multi-level car park under one roof, round-the-clock video surveillance and security. From 1 January 2024, without a season pass payment is per day; the price is calculated on the airport website. Paying through the airport app gives 10% off (except season passes for 15 and 30 days). Valet parking is at the CIP terminal entrance."
+  },
+  "wifi": {
+   "title": "Wi‑Fi",
+   "hint": "Unlimited, free",
+   "text": "Free unlimited internet: iGA Wi‑Fi network, login with a phone number and an SMS password or with an access code issued by kiosks in the terminal after scanning a passport."
+  }
+ }
+}

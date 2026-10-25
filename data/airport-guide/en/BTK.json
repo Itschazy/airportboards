@@ -1,0 +1,25 @@
+{
+ "iata": "BTK",
+ "blocks": {
+  "lounges": {
+   "title": "Waiting lounge",
+   "hint": "Level 2, 2,200 ₽",
+   "text": "Premium comfort lounge on Level 2 of the terminal. Open from 6:00 to 12:00, on Friday and Sunday until 14:00, at other times on request to sop@aerobratsk.ru. Free for Business Standard, Business Plus and Economy Plus fares, Gold and Platinum tiers, ON PASS and Grey Wall Pass. Others pay 2,200 ₽ for 3 hours."
+  },
+  "sleep": {
+   "title": "Where to sleep",
+   "hint": "Hotel 350 m away",
+   "text": "AeroBratsk hotel 350 m from the terminal. A bed in a triple room from 900 ₽ per day, a single room from 3,500 ₽. Breakfast 600 ₽; guests get 20% off lunch in the terminal canteen."
+  },
+  "parking": {
+   "title": "Parking",
+   "hint": "80 spaces free",
+   "text": "Free car park with 80 spaces on the station forecourt, 8 of them for people with disabilities. Long-stay parking from 300 ₽ per day. Warming up a car in winter costs 4,200 ₽ for 20 minutes, battery charging 2,100 ₽."
+  },
+  "wifi": {
+   "title": "Wi‑Fi",
+   "hint": "Free",
+   "text": "Free Wi‑Fi for passengers and airport visitors. Login with identification, as required by law."
+  }
+ }
+}

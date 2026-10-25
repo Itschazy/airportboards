@@ -1,0 +1,10 @@
+{
+ "iata": "BJV",
+ "blocks": {
+  "transport": {
+   "title": "가는 방법",
+   "hint": "Havaş 셔틀, 버스터미널행",
+   "text": "Havaş 셔틀은 도착하는 모든 국내선에 맞춰 운행하며, 공항에서 Güvercinlik과 Torba 버스정류장을 거쳐 보드룸 중앙 버스터미널까지 갑니다. 날짜별 시간표는 Havaş 웹사이트(Bodrum Airport — Bodrum Center 방향)에 있습니다. 2026년 8월 7일부터 공항과 디딤 사이 셔틀은 운행하지 않습니다."
+  }
+ }
+}

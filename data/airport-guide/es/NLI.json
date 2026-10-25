@@ -1,0 +1,16 @@
+{
+ "iata": "NLI",
+ "about": "El aeropuerto está en el distrito de Nikoláyevsk del krai de Jabárovsk, 2,5 km al oeste de Nikoláyevsk del Amur. Clase «G», una terminal para 50 pasajeros por hora. Operador: AO «Khabarovskie Avialinii».",
+ "blocks": {
+  "storage": {
+   "title": "Consigna",
+   "hint": "419 ₽ por bulto al día",
+   "text": "Custodia de equipaje en la consigna: 418,83 ₽ por bulto al día, IVA incluido. Si la salida se retrasa más de 3 horas, el equipaje facturado se guarda a 0,88 ₽ por kg y hora. Precios según la tarifa vigente desde el 5 de junio de 2026."
+  },
+  "lounges": {
+   "title": "Salas VIP",
+   "hint": "Sala VIP, 3773 ₽",
+   "text": "Atención a pasajeros en la sala VIP: 3773,25 ₽, IVA incluido, por servicio. Precio según la tarifa vigente desde el 5 de junio de 2026."
+  }
+ }
+}

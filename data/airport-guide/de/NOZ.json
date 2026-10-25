@@ -1,0 +1,41 @@
+{
+ "iata": "NOZ",
+ "about": "Internationaler Flughafen Nowokusnezk „B. W. Wolynow“, Tor zum Ferienort Scheregesch. Das neue Terminal mit 19.500 m² Fläche wurde am 25. Februar 2025 eröffnet, Kapazität 1,73 Mio. Passagiere pro Jahr.",
+ "blocks": {
+  "transport": {
+   "title": "Anreise",
+   "hint": "Bus 160, ~60 Min.",
+   "text": "Die Busse 120, 130 und 160 fahren von 5:20 bis 22:34. Nr. 160 ab Oktjabrski-Prospekt, etwa 60 Minuten, 76 ₽. Nr. 120 ab Schacht Krasnogorskaja, etwa 80 Minuten, 50 ₽. Nr. 130 ab dem Haus der Veteranen, etwa 90 Minuten, 50 ₽. Taxi etwa 40 Minuten, ungefähr 800 ₽."
+  },
+  "terminals": {
+   "title": "Terminal",
+   "hint": "6 Flugsteige, 3 Fluggastbrücken",
+   "text": "Das neue Terminal wurde am 25. Februar 2025 eröffnet. 13 Check-in-Schalter, 6 Flugsteige, 3 Fluggastbrücken. Check-in und Gepäckabgabe schließen 40 Minuten vor Abflug, das Boarding 20 Minuten vorher."
+  },
+  "lounges": {
+   "title": "Business-Lounges",
+   "hint": "Ebene 3, 3400 ₽",
+   "text": "Business-Lounge für Inlandsflüge auf Ebene 3, geöffnet während der Abfertigung von Flügen. Erwachsene 3400 ₽, Kinder von 2–12 Jahren 1700 ₽, unter 2 Jahren kostenlos, bis zu 3 Stunden. Zugang mit MILEONAIR, Every Lounge, UniPass, Grey Wall Pass, Golden Key, Persona aero. VIP-Lounge auf Ebene 1–2 auf Anfrage, Abflug ab 18 900 ₽."
+  },
+  "storage": {
+   "title": "Gepäckaufbewahrung",
+   "hint": "Ebene 1, 24/7",
+   "text": "Gepäckaufbewahrung auf Ebene 1, rund um die Uhr. Standardgepäck bis 203 cm Summe der Maße: 400 ₽ für die ersten 24 Stunden, danach 200 ₽. Sperrgepäck: 750 ₽ für die ersten 24 Stunden, danach 400 ₽. Ein Gepäckstück bis 30 kg."
+  },
+  "sleep": {
+   "title": "Schlafen",
+   "hint": "Hotel, ab 4200 ₽",
+   "text": "Hotel auf dem Flughafengelände, Uliza Aeroportowaja 33. 27 Zimmer, ab 4200 ₽ pro Tag. Rezeption rund um die Uhr: +7 (3843) 993 455. Das Hotelcafé ist rund um die Uhr geöffnet."
+  },
+  "kids": {
+   "title": "Mit Kind",
+   "hint": "Ebene 2, 24/7, kostenlos",
+   "text": "Mutter-Kind-Raum auf Ebene 2, im öffentlichen Bereich des Terminals. Rund um die Uhr, kostenlos. Zugang mit einem Kind unter 7 Jahren in Begleitung eines Erwachsenen. Es gibt eine Küche mit Kühlschrank und Mikrowelle, eine Dusche, einen Wickeltisch; Sterilisatoren gibt es nicht."
+  },
+  "parking": {
+   "title": "Parken",
+   "hint": "15 Min. kostenlos",
+   "text": "P1 nur zum Ein- und Aussteigen, Parken verboten. P2 Kurzzeit: 15 Minuten kostenlos, 16–60 Minuten 300 ₽, von der 2. bis zur 4. Stunde 100 ₽/Stunde, über 4 Stunden 700 ₽/Tag. P3 Langzeit: 15 Minuten kostenlos, 500 ₽/Tag bis 6 Tage. Angefangene Tage werden als volle berechnet."
+  }
+ }
+}

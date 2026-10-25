@@ -1,0 +1,36 @@
+{
+ "iata": "NJC",
+ "about": "Der Flughafen Nischnewartowsk wurde nach dem Umbau 2005 international. Start- und Landebahn 3200 × 60 m. Zweitgrößter Flughafen des Autonomen Kreises der Chanten und Mansen – Jugra nach Verkehrsaufkommen.",
+ "blocks": {
+  "transport": {
+   "title": "Anreise",
+   "hint": "4 km, Bus 15",
+   "text": "Bis ins Stadtzentrum 4 km. Stadtbusse: Nr. 4 zur Siedlung U sewernoi roschtschi, Nr. 9 zur Starowartowskaja, Nr. 15 zum Bahnhof und Busbahnhof, Nr. 21 zum DRSU. Vom Vorplatz fährt ein Flughafenbus nach Streschewoi, Fahrplan auf der Website des Busbahnhofs. Taxistand auf dem Vorplatz gegenüber Terminal Nr. 2."
+  },
+  "terminals": {
+   "title": "Terminals",
+   "hint": "Papier-Bordkarte nötig",
+   "text": "Zwei Terminals: Nr. 1 und Nr. 2. Elektronische Bordkarten werden für die Abfertigung vor dem Flug derzeit nicht akzeptiert, eine Bordkarte auf Papier ist erforderlich."
+  },
+  "lounges": {
+   "title": "Business-Lounges",
+   "hint": "Terminal 1, 24/7",
+   "text": "Business-Lounge auf Ebene 1 von Terminal 1, rund um die Uhr geöffnet. Zugang für Passagiere der Business Class und Inhaber von Elite-Karten der Fluggesellschaften, alle anderen gegen Gebühr bei freien Plätzen. Abflug 7950 ₽ für 2 Std. 30 Min., jede weitere Stunde 1141 ₽. Ankunft, Abholung oder Verabschiedung 4050 ₽. Kinder von 2–12 Jahren 70 % des Tarifs, unter 2 Jahren kostenlos."
+  },
+  "storage": {
+   "title": "Gepäckaufbewahrung",
+   "hint": "Terminal 1, 24/7",
+   "text": "Terminal Nr. 1, Ebene 1, rund um die Uhr. Koffer, Tasche oder Rucksack bis 203 cm Summe der drei Maße 600 ₽ pro Tag. Sperrige Gegenstände 700 ₽ pro Tag. Verlust der Marke 400 ₽."
+  },
+  "kids": {
+   "title": "Mit Kind",
+   "hint": "Mutter-Kind-Raum, Kinder unter 7",
+   "text": "Mutter-Kind-Raum nur mit einem Ticket für einen Abflug innerhalb der nächsten 24 Stunden. Für Frauen mit Kindern unter 7 Jahren und Kinder mit Behinderung kostenlos. Alle anderen zahlen 1200 ₽ pro Bett und Tag."
+  },
+  "parking": {
+   "title": "Parken",
+   "hint": "15 Min. kostenlos",
+   "text": "Parkplatz auf dem Vorplatz. Bis 15 Minuten kostenlos, danach 200 ₽ pro Stunde bis 5 Stunden. Die ersten 24 Stunden 1000 ₽, je weitere 24 Stunden 800 ₽. Erneute Einfahrt innerhalb von 30 Minuten ist ab der Einfahrt kostenpflichtig. Die Automaten in den Terminals 1 und 2 nehmen nur Banknoten, die Kasse an der Ausfahrt akzeptiert Karten und QR."
+  }
+ }
+}

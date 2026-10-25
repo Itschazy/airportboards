@@ -1,0 +1,41 @@
+{
+ "iata": "KRR",
+ "about": "Zwei Terminals: für Inlands- und für internationale Flüge. Fläche des Terminalkomplexes 16 448 m². Die 3000 m lange Start- und Landebahn wurde 2017 eröffnet.",
+ "blocks": {
+  "transport": {
+   "title": "Anreise",
+   "hint": "O-Bus 7",
+   "text": "Haltestelle auf dem Vorplatz. Oberleitungsbus Nr. 7 fährt über die Uliza Stawropolskaja zum Busbahnhof und zum Bahnhof Krasnodar-1. Sammeltaxi Nr. 30 fährt zum Kooperativny-Markt. Schalter des offiziellen Taxis in Terminal 1, Gepäckausgabe."
+  },
+  "terminals": {
+   "title": "Terminals",
+   "hint": "T1 Inland, T2 international",
+   "text": "Terminal 1 fertigt Inlandsflüge ab, Terminal 2 internationale. Check-in-Schalter 1–19, der Check-in schließt 40 Minuten vor Abflug."
+  },
+  "lounges": {
+   "title": "Business-Lounges",
+   "hint": "T1 Ebene 2, T2 Ebene 1",
+   "text": "Business-Lounge für Inlandsflüge: Terminal 1, Ebene 2, nach der Kontrolle. Business-Lounge für internationale Flüge: Terminal 2, Ebene 1, nach der Kontrolle. Zugang für Teilnehmer von ONPASS, Grey Wall Pass, GoldenKey, RusPriority und anderen Programmen, alle anderen gegen Gebühr. Aufenthalt bis zu 3 Stunden."
+  },
+  "storage": {
+   "title": "Gepäckaufbewahrung",
+   "hint": "24/7, 400 ₽ pro Tag",
+   "text": "Auf dem Vorplatz, rund um die Uhr. 400 ₽ pro Gepäckstück für die ersten 24 Stunden, 200 ₽ für je weitere 24 Stunden. Gewicht eines Gepäckstücks bis 30 kg."
+  },
+  "kids": {
+   "title": "Mit Kind",
+   "hint": "Т1, Ebene 1, kostenlos",
+   "text": "Mutter-Kind-Raum: Terminal 1, Ebene 1, Check-in-Halle für Inlandsflüge. Für Passagiere mit Kindern unter 7 Jahren, Kinder mit Behinderung unter 14 Jahren und Schwangere in der zweiten Schwangerschaftshälfte. Es wird keine Gebühr erhoben. Erforderlich sind Pass und Bordkarte oder Ticket."
+  },
+  "parking": {
+   "title": "Parken",
+   "hint": "15 Min. kostenlos, 400 ₽/Std.",
+   "text": "Vorplatz: die ersten 15 Minuten kostenlos, danach 400 ₽ pro Stunde. Zusätzlicher Stundenparkplatz rechts vom Vorplatz: 250 ₽ pro Stunde. Tagesparkplatz 900 ₽ pro Tag. Der Ausweichparkplatz ist kostenlos."
+  },
+  "wifi": {
+   "title": "Wi‑Fi",
+   "hint": "Netz Airport_Free",
+   "text": "Kostenloses Netz „Airport_Free“ im gesamten Terminalkomplex, im VIP-Terminal und in der Business-Lounge. Anmeldung nur mit SIM-Karte eines russischen Mobilfunkanbieters."
+  }
+ }
+}

@@ -1,0 +1,31 @@
+{
+ "iata": "HMA",
+ "about": "Hantı-Mansiysk Uluslararası Havalimanı, işletmeci şirket Yugraavia AO. Gece gündüz açık. Dış hatlar bölümü olan terminal kompleksi 2001'de açıldı, 2004'ten beri burada hava hudut kapısı faaliyette.",
+ "blocks": {
+  "transport": {
+   "title": "Nasıl gidilir",
+   "hint": "3 ve 5 numaralı otobüsler",
+   "text": "3 numaralı otobüs (mkr. Vostochny – Poliklinika – mkr. Vostochny) 6:00–0:00 arası çalışır. 5 numaralı otobüs (mkr. Vostochny – Ledovy Dvorets) 5:00–1:00 arası çalışır. Araçla Obyezdnaya Caddesi, Vostochnaya Obyezdnaya, Mira Caddesi veya Tobolsky Trakt üzerinden."
+  },
+  "lounges": {
+   "title": "Business salonları",
+   "hint": "3 saati 3500 ₽",
+   "text": "Business sınıfı yolcuları ve havayolu programlarının GOLD ve PLATINUM üyeleri için business salonu. Diğerleri için 3 saati 3500 ₽, sonrası saati 700 ₽. Banka sadakat kartlarıyla ücretsiz giriş yok. Gidişte VIP salonu 10 000 ₽."
+  },
+  "sleep": {
+   "title": "Nerede uyunur",
+   "hint": "Sokol oteli",
+   "text": "Sokol oteli havalimanına ve durağa yürüme mesafesinde, 43 oda. Ekonomi tek kişilik günlüğü 2500 ₽'den, standart 3150 ₽'den. 20:00–6:00 arası için akşam tarifesi var."
+  },
+  "kids": {
+   "title": "Çocukla",
+   "hint": "Ücretsiz, 7 yaşından küçük",
+   "text": "Anne-bebek odası 7 yaşından küçük çocuklu yolcular, 14 yaşından küçük engelli çocuklar ve gebeliğin ikinci yarısından itibaren hamileler için. Kalkıştan 6 saat önce ve inişten sonra 3 saate kadar kabul edilir, ücretsiz. Önce sağlık noktasında muayene; pasaport, doğum belgesi ve bilet gerekir."
+  },
+  "parking": {
+   "title": "Otopark",
+   "hint": "20 dakika ücretsiz",
+   "text": "Terminal önü meydanı: 20 dakikaya kadar ücretsiz, 21. dakikadan 4 saate kadar saati 300 ₽, tamamlanmamış saat tam saat sayılır. 5. saatten itibaren günlüğü 1200 ₽, sonraki gün 1200 ₽. 20 dakika içinde tekrar giriş ücretli, saati 300 ₽."
+  }
+ }
+}

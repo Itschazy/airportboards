@@ -1,0 +1,20 @@
+{
+  "iata": "NAL",
+  "blocks": {
+    "transport": {
+      "title": "Come arrivare",
+      "hint": "Marshrutka 17",
+      "text": "Il taxi collettivo (marshrutka) n. 17 va dalla stazione ferroviaria direttamente all’aerostazione. In auto dal centro di Nalchik 15–20 minuti, con uscita da ulitsa Idarova. Dal parco nazionale «Prielbrusye» 92 km, circa 1 ora e 20 minuti."
+    },
+    "lounges": {
+      "title": "Sala comfort",
+      "hint": "Ingresso separato, 6200 ₽",
+      "text": "Sala comfort con ingresso e accesso auto separati: check-in e controlli per i voli nazionali all’interno della sala, fino a 10 minuti, trasferimento all’aereo. Passeggero 6200 ₽, bambini sotto i 2 anni gratis, accompagnatore 5000 ₽. Prenotare in anticipo per telefono."
+    },
+    "kids": {
+      "title": "Con bambini",
+      "hint": "Gratis",
+      "text": "La sala madre e bambino è gratuita per i passeggeri con biglietto in partenza da Nalchik: con bambini sotto i 7 anni, bambini con disabilità sotto i 16 anni e per le donne nella seconda metà della gravidanza. Servono biglietto, passaporto e certificato di nascita del bambino."
+    }
+  }
+}

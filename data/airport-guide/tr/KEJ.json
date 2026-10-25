@@ -1,0 +1,26 @@
+{
+ "iata": "KEJ",
+ "about": "Kemerovo: A. A. Leonov adını taşıyan uluslararası havalimanı, şehrin kenarının 5 km güneydoğusunda ve merkeze 11 km uzaklıkta. Tek pist; havaalanı gece gündüz açık ve Savunma Bakanlığı ve Rosgvardiya ile ortak kullanılır.",
+ "blocks": {
+  "lounges": {
+   "title": "Business salonları",
+   "hint": "Kat 3, 4000 ₽",
+   "text": "İç hatlar business salonu Kat 3'te, güvenlik kontrolünden sonra sağda, 04:30–20:00 arası açık. Business sınıfı yolcuları ve giriş hakkı veren kart sahipleri için ücretsiz; ekonomi — Every Lounge, GoldenKey, RusPriority, Persona.aero ve diğer program kartlarıyla. Ücretli 4000 ₽, 2–12 yaş çocuklar 2000 ₽, 2 yaşından küçük ücretsiz."
+  },
+  "storage": {
+   "title": "Emanet",
+   "hint": "Günlüğü 200 ₽'den",
+   "text": "Emanet iç hatlar terminal binasının çalışma saatlerine göre açık. El bagajı günlüğü 200 ₽, 50×40×20 cm'ye kadar bagaj 220 ₽, daha büyüğü 270 ₽, 100×50×70 cm'den büyüğü 500 ₽. Bir günden kısa süre tam gün olarak ücretlendirilir."
+  },
+  "kids": {
+   "title": "Çocukla",
+   "hint": "Kat 3, 04:30–20:00",
+   "text": "Anne-bebek odası Kat 3'te, sol kanatta güvenlik kontrol alanının yanında, ücretsiz, 04:30–20:00. 7 yaşından küçük çocuklu giden yolcular, 14 yaşından küçük engelli çocuklar ve gebeliğin ikinci yarısındaki kadınlar için."
+  },
+  "parking": {
+   "title": "Otopark",
+   "hint": "15 dakika ücretsiz",
+   "text": "Terminale 30 m uzaklıkta terminal önü meydanı, 173 araçlık: 15 dakikaya kadar ücretsiz, ilk saat 300 ₽, ikinci ve üçüncü saat 200'er ₽, dördüncü saatten itibaren günlük tarife 1000 ₽."
+  }
+ }
+}

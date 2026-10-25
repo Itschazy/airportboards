@@ -1,0 +1,31 @@
+{
+  "iata": "UUS",
+  "about": "L’aerostazione si trova nel distretto urbanistico di Khomutovo, alla periferia sud di Yuzhno-Sakhalinsk, a 10 km dal centro. Il complesso aerostazione è gestito dalla AO «Aerovokzal Yuzhno-Sakhalinsk», superficie del complesso oltre 47.000 m².",
+  "blocks": {
+    "transport": {
+      "title": "Come arrivare",
+      "hint": "Bus 3, 8, 63",
+      "text": "Dal centro partono gli autobus n. 3, 8 e 63, per i quali l’aerostazione è il capolinea. Circolano dalle 6:30 alle 22:00, durata 30–40 min. Treno suburbano dalla stazione ferroviaria fino a Khomutovo, da lì circa 10 min in autobus. Taxi: circa 25 min, circa 350 ₽."
+    },
+    "parking": {
+      "title": "Parcheggio",
+      "hint": "15 min gratis",
+      "text": "Zona di salita e discesa passeggeri: 15 min gratis, fino a 60 min 400 ₽, poi 1200 ₽ per le prime 24 ore e 600 ₽ per ogni successivo periodo di 24 ore. Lunga sosta P1: 500 ₽ ogni 24 ore per i primi 5 periodi di 24 ore, poi 400 ₽. Per i passeggeri a mobilità ridotta gratis con il contrassegno disabili."
+    },
+    "lounges": {
+      "title": "Sale business",
+      "hint": "«Aniva», livello 3",
+      "text": "Sala business «Aniva» al livello 3, dalle 6:00 alle 23:00: 4400 ₽, bambini 2–12 anni 2200 ₽, non oltre 2 ore, si accede con Every Lounge. Sala «Krilyon» al livello 2, dalle 6:00 alle 23:00: 2800 ₽, accetta Comfort pass, Every Lounge, Mir Pass, Grey Wall Pass, ONPASS. Bambini sotto i 2 anni gratis."
+    },
+    "storage": {
+      "title": "Deposito bagagli",
+      "hint": "Livello 1, da 500 ₽",
+      "text": "Deposito bagagli al livello 1 dell’aerostazione. Bagaglio normale: 500 ₽ per le prime 24 ore, 200 ₽ per ogni successivo periodo di 24 ore. Fuori misura oltre 203 cm: 850 ₽ e 400 ₽. Un collo fino a 30 kg, durata fino a 30 giorni."
+    },
+    "kids": {
+      "title": "Con bambini",
+      "hint": "Livello 2, 6:00–23:00",
+      "text": "Sala madre e bambino al livello 2 nell’area pubblica, dalle 6:00 alle 23:00, gratuita. Accedono bambini sotto gli 8 anni con un adulto, bambini con disabilità sotto i 14 anni, donne nella seconda metà della gravidanza. Servono biglietto o carta d’imbarco, passaporto, certificato di nascita. C’è una cucina con microonde, non c’è lo sterilizzatore."
+    }
+  }
+}

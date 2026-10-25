@@ -1,0 +1,41 @@
+{
+ "iata": "KHV",
+ "about": "L'aéroport fonctionne jour et nuit ; des vols réguliers et charters desservent plus de 40 destinations, dont des pays de la région Asie-Pacifique. Principal opérateur au sol : SA « Aéroport de Khabarovsk ». Deux terminaux accueillent les passagers : lignes intérieures et lignes internationales.",
+ "blocks": {
+  "transport": {
+   "title": "Comment s'y rendre",
+   "hint": "Trolleybus 1, bus 35",
+   "text": "Trolleybus : n° 1 depuis la place Komsomolskaïa, n° 2 et n° 3 en circulaire via la gare ferroviaire. Bus : n° 35 depuis Poliarnaïa, n° 18 depuis le micro-district Sud. Minibus n° 180 Gare fluviale – village de Matveïevka."
+  },
+  "terminals": {
+   "title": "Terminaux",
+   "hint": "Intérieur et international séparés",
+   "text": "Deux terminaux : lignes intérieures et lignes internationales, chacun sur 3 étages. Le nouveau terminal des lignes intérieures a ouvert en 2019. Les plans des étages sont publiés sur le site."
+  },
+  "lounges": {
+   "title": "Salons",
+   "hint": "Niveau 3, vols intérieurs, 4000 ₽",
+   "text": "Deux salons au niveau 3 du terminal des lignes intérieures, en zone réservée. « Amour » est ouvert jour et nuit. « Chantary », à droite de la sortie du contrôle, jour et nuit pour les titulaires de programmes bancaires (Every Lounge, Golden Key, Rus Priority, etc.). Prix pour tous : 4000 ₽, au-delà de 4 heures 1100 ₽ de l'heure."
+  },
+  "storage": {
+   "title": "Consigne à bagages",
+   "hint": "Intérieur, niveau 1, à gauche",
+   "text": "Consigne automatique dans le terminal des lignes intérieures, niveau 1, côté gauche. Durée de garde jusqu'à 30 jours. Argent, documents, animaux, armes et substances dangereuses non acceptés."
+  },
+  "sleep": {
+   "title": "Où dormir",
+   "hint": "Hôtel « Michka » dès 1 heure",
+   "text": "Hôtel de transit « Michka » dans l'aéroport : terminal B, niveau 2, chambres payables à l'heure à partir de 1 heure. À côté de l'aéroport, l'hôtel « Aeropolis », chaussée Matveïevskoïe, 30, chambres de 1200 à 6000 ₽."
+  },
+  "kids": {
+   "title": "Avec un enfant",
+   "hint": "Niveau 2, 24/7, gratuit",
+   "text": "Salle mère-enfant au niveau 2, en zone publique. Ouverte jour et nuit, gratuite. Pour les enfants de moins de 7 ans, les enfants handicapés de moins de 14 ans, les femmes enceintes dans la seconde moitié de la grossesse. Les passagers au départ doivent présenter leur carte d'embarquement."
+  },
+  "parking": {
+   "title": "Parking",
+   "hint": "15 min gratuites",
+   "text": "Courte durée P2 face au terminal des lignes intérieures : jusqu'à 15 min gratuit, jusqu'à 30 min 150 ₽, jusqu'à 60 min 300 ₽, jusqu'à 24 heures 500 ₽. Longue durée P1 face au bâtiment de Dalaeronavigatsia : 500 ₽/jour jusqu'à 4 jours, à partir de 5 jours 350 ₽. Un parking gratuit sans limite de temps est disponible."
+  }
+ }
+}

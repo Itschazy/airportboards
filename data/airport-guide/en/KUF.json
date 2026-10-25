@@ -1,0 +1,36 @@
+{
+ "iata": "KUF",
+ "about": "Kurumoch: Samara International Airport. Managed by Aeroporty Regionov management company. More than 80 destinations, more than 30 Russian and international airlines.",
+ "blocks": {
+  "transport": {
+   "title": "Getting there",
+   "hint": "Bus 222, 1 hour",
+   "text": "City bus No. 222 runs from Samara railway station, journey time about 1 hour. Route No. 78 runs from Barboshina Polyana, about 1 hour, on weekdays. Intercity No. 607 connects the airport with Samara (railway station) and Tolyatti, 50–80 minutes, 265 ₽. No. 333 and No. 652Т also run from Tolyatti."
+  },
+  "lounges": {
+   "title": "Lounges",
+   "hint": "Level 4, from 5,800 ₽",
+   "text": "Domestic and international lounges on Level 4. Admits business class passengers, members of airline loyalty programmes and anyone who pays for the visit: 5,800 ₽ for up to 3 hours, child 2–12 years 2,900 ₽. Lounge for ON PASS, Grey Wall, EveryLounge, Persona.Aero, RusPriority, GoldenKey programmes in the domestic departure area, Level 3."
+  },
+  "storage": {
+   "title": "Left luggage",
+   "hint": "Level 1, from 250 ₽/hour",
+   "text": "Automated left luggage on Level 1, to the right of the entrance, by the airline ticket offices. Standard locker 250 ₽ per hour or 550 ₽ per day. Large 350 ₽ per hour or 900 ₽ per day. Oversized baggage 1,200 ₽ per item."
+  },
+  "kids": {
+   "title": "With children",
+   "hint": "Level 3, 24/7",
+   "text": "Mother and child room on Level 3, open round the clock. Admits children under 7, or under 14 with disabilities, only with an adult. A certificate from the first-aid post on Level 1, a passport and a ticket are required. Up to 12 hours before departure and up to 6 hours after arrival."
+  },
+  "parking": {
+   "title": "Parking",
+   "hint": "Drop-off 15 min free",
+   "text": "In the drop-off and pick-up zone the first 15 minutes are free, from minute 16 to 60: 880 ₽. Short-stay P1: up to an hour 357 ₽, up to 2 hours 682 ₽, a day 1,391 ₽. Long-stay P2: a day 791 ₽. Economy P4: 1,054 ₽ for the first 2 days. All car parks are open round the clock."
+  },
+  "wifi": {
+   "title": "Wi‑Fi",
+   "hint": "Free_KUF network",
+   "text": "The free Free_KUF network covers the passenger areas of the terminal. Login with a mobile phone number, then follow the on-screen instructions."
+  }
+ }
+}

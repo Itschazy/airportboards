@@ -1,0 +1,31 @@
+{
+ "iata": "IAR",
+ "about": "Yaroslavl International Airport Zolotoe Koltso in Tunoshna. Runway 3,010 × 44 m. There is an air border crossing point and a customs post.",
+ "blocks": {
+  "transport": {
+   "title": "Getting there",
+   "hint": "Bus 183, 40 min",
+   "text": "Bus 183 runs daily from Yaroslavl bus station to the airport. Journey time 40 minutes. The first trip from the bus station is at 05:50, the last from the airport at 22:35."
+  },
+  "lounges": {
+   "title": "Lounges",
+   "hint": "Lounge 2,500 ₽",
+   "text": "Premium comfort lounge for departing passengers. Inside: TV, Wi‑Fi, tea table, newspapers. Price 2,500 ₽ per passenger. Enquiries: +7 (4852) 43-18-00."
+  },
+  "kids": {
+   "title": "With children",
+   "hint": "Departure hall, free",
+   "text": "The room for passengers with children is in the departure hall, airside. Admits passengers with children or disabled children under 14 with a boarding pass. Free, up to 3 hours before departure during the day and up to 4 hours at night. There is no room in the arrivals hall."
+  },
+  "parking": {
+   "title": "Parking",
+   "hint": "300 ₽/day",
+   "text": "Paid car park, 300 ₽ per day. No booking or prepayment; pay when parking, subject to availability. The time to collect the car is agreed by phone 43-18-00."
+  },
+  "wifi": {
+   "title": "Wi‑Fi",
+   "hint": "Free",
+   "text": "Free Wi‑Fi is available in the terminal."
+  }
+ }
+}

@@ -1,0 +1,15 @@
+{
+ "iata": "SCW",
+ "blocks": {
+  "storage": {
+   "title": "Gepäckaufbewahrung",
+   "hint": "Ebene 1 des Terminals",
+   "text": "Gepäckaufbewahrung auf Ebene 1 des Terminals. Rollstühle werden dort kostenlos angenommen."
+  },
+  "parking": {
+   "title": "Parken",
+   "hint": "Uliza Kolchosnaja 3Б",
+   "text": "Parkplatz des Flughafens in der Uliza Kolchosnaja 3Б, weitere Plätze in der Uliza Kolchosnaja gegenüber dem Terminal. An der Rampe des Terminals gibt es eine Zone zum Ein- und Aussteigen für Passagiere mit Behinderung."
+  }
+ }
+}

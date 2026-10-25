@@ -1,0 +1,21 @@
+{
+ "iata": "MCX",
+ "about": "İki kez Sovyetler Birliği Kahramanı unvanı alan Amet-Han Sultan adını taşıyan Mahaçkale Uluslararası Havalimanı. Havaalanı 3 Şubat 1927'de Moskova – Harkov – Rostov – Tiflis hattı üzerinde bir hava istasyonu olarak kuruldu.",
+ "blocks": {
+  "terminals": {
+   "title": "Terminaller",
+   "hint": "A ve B terminalleri",
+   "text": "İki terminal: A ve B; ikisinin de planları havalimanı sitesinde. Elektronik biniş kartları şu anda kabul edilmiyor. Biniş kartı kâğıt olarak gerekir; self check-in kontuarında yazdırılabilir."
+  },
+  "lounges": {
+   "title": "Business salonları",
+   "hint": "VIP-2, gidiş 6000 ₽",
+   "text": "VIP-2 salonu. 2 yaşından itibaren giden yolculara hizmet 6000 ₽, gelenlere 3000 ₽. Karşılayanlar ve uğurlayanlar 1000 ₽. Toplantı odası saati 5000 ₽, VIP-2 önünde park 1000 ₽. Tüzel kişiler talebi check-in başlamadan en geç bir saat önce iletir."
+  },
+  "parking": {
+   "title": "Otopark",
+   "hint": "15 dakika ücretsiz",
+   "text": "Genel alan: ilk girişte 15 dakikaya kadar ücretsiz, sonrası saati 400 ₽, 3 saatin üzerinde günlüğü 1200 ₽. Girişte sağdaki günlük otopark günlüğü 600 ₽. İndirme alanı (birinci şerit): 10 dakikanın üzerinde saati 1500 ₽. 30 dakika içinde tekrar giriş ücretli. Ödemeden sonra çıkış için 30 dakika."
+  }
+ }
+}

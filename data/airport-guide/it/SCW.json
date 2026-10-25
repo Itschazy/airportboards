@@ -1,0 +1,15 @@
+{
+ "iata": "SCW",
+ "blocks": {
+  "storage": {
+   "title": "Deposito bagagli",
+   "hint": "Livello 1 dell’aerostazione",
+   "text": "Deposito bagagli al livello 1 dell’aerostazione. Le sedie a rotelle vi sono accettate gratuitamente."
+  },
+  "parking": {
+   "title": "Parcheggio",
+   "hint": "ul. Kolkhoznaya, 3B",
+   "text": "Parcheggio dell’aeroporto in ul. Kolkhoznaya, 3B, altri posti in ul. Kolkhoznaya di fronte all’aerostazione. Presso la rampa dell’aerostazione è riservata una zona di salita e discesa passeggeri con disabilità."
+  }
+ }
+}

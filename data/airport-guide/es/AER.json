@@ -1,0 +1,46 @@
+{
+ "iata": "AER",
+ "about": "Los autobuses conectan el aeropuerto de Sochi con los distritos de Adler, Josta y Central de la ciudad y con la estación de montaña de Krásnaya Poliana. El complejo terminal, de 65 mil m², se reconstruyó en 2007–2013; además funciona una terminal VIP. Operador: AO «Aeropuerto Internacional de Sochi»; en 2024 el aeropuerto atendió a 13,7 millones de pasajeros.",
+ "blocks": {
+  "lounges": {
+   "title": "Salas VIP",
+   "hint": "Sectores B y C, nivel 2",
+   "text": "Sala business de vuelos nacionales en el sector B, nivel 2, junto a la puerta 21. Cuesta 4 800 ₽. Sala business de vuelos internacionales en el sector C, nivel 2. Cuesta 4 300 ₽; se accede con las tarjetas Grey Wall, UNIPASS, ONPASS, GoldenKey, Comfort Pass y RusPriority. Sala de confort superior en el sector B, nivel 2, junto a la puerta 21; cuesta 2 650 ₽. Todas las salas abren día y noche, se puede permanecer en ellas hasta 3 horas, los niños menores de 12 años tienen un 50% de descuento y los menores de 2 años entran gratis."
+  },
+  "storage": {
+   "title": "Consigna",
+   "hint": "Sector C, nivel 1, 24/7",
+   "text": "Sector C, nivel 1, abierta día y noche. Las primeras 24 horas cuestan desde 600 ₽ por bulto; cada 24 horas siguientes, desde 300 ₽. Un bulto pesa como máximo 30 kg y la suma de sus tres dimensiones no supera los 203 cm. Los objetos no recogidos en 30 días se consideran no reclamados. Teléfono 8 (862) 249-78-46."
+  },
+  "sleep": {
+   "title": "Dónde dormir",
+   "hint": "Cápsulas, sector B",
+   "text": "Cápsulas Aero Hotel en el sector B, nivel 2, abiertas día y noche. Desde 990 ₽ por pasajero. La cápsula tiene insonorización, aire acondicionado, enchufes y Wi‑Fi. Reservas en cellhotel.ru o por teléfono +7 (938) 875-18-05."
+  },
+  "kids": {
+   "title": "Madre e hijo",
+   "hint": "Sector B, nivel 2",
+   "text": "Sala madre e hijo en el sector B, nivel 2, de uso gratuito. Admite a pasajeros con niños menores de 7 años, con niños con discapacidad menores de 14 años y a embarazadas en la segunda mitad del embarazo. Se necesitan pasaporte y tarjeta de embarque o billete. Para quienes llegan con niños, la sala abre de 22:00 a 06:00, mientras no circula el transporte. Hay salas para cambiar pañales junto a los aseos en todos los sectores."
+  },
+  "transport": {
+   "title": "Cómo llegar",
+   "hint": "Lastochka, autobuses",
+   "text": "El «Lastochka» y los trenes de cercanías salen de la plaza ferroviaria: sector C1, nivel 1. Van a Adler, Sochi, Rosa Khutor y el Parque Olímpico. La plaza de autobuses está entre B1 y C1. A Adler y al Parque Olímpico van los n.º 557, 558 y 535. A Sochi, los n.º 105 y 105с. A Krásnaya Poliana, los n.º 105, 105с y 535. El mostrador del taxi oficial está en la sala de recogida de equipajes, sectores A y B."
+  },
+  "parking": {
+   "title": "Aparcamiento",
+   "hint": "15 minutos gratis",
+   "text": "En la plaza de la terminal (accesos 1–6), los primeros 15 minutos son gratis; después, 400 ₽ por hora. En el aparcamiento por días (accesos 31, 32), los primeros 15 minutos son gratis; después, 300 ₽ por hora, y si se aparca más de 3 horas, 1 500 ₽ por día. Está 100 m antes de la entrada principal, girando a la derecha. Hay un aparcamiento alternativo a unos 400 m de la terminal."
+  },
+  "wifi": {
+   "title": "Wi‑Fi",
+   "hint": "Airport_Free",
+   "text": "La red gratuita Airport_Free funciona en toda la terminal, en la terminal VIP y en la sala business. Solo se puede acceder con una tarjeta SIM de un operador ruso."
+  },
+  "terminals": {
+   "title": "Terminal",
+   "hint": "Sectores A, B, C",
+   "text": "Una sola terminal, con los sectores A, B y C. Hay mostradores de facturación en los tres, y mostradores para pasajeros sin equipaje solo en A y B. El equipaje de los vuelos nacionales se entrega en los sectores A y B, el de los internacionales en el sector C, todo en el nivel 1. La facturación en mostrador abre 3 horas antes de la salida y cierra 40 minutos antes."
+  }
+ }
+}

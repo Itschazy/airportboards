@@ -1,0 +1,25 @@
+{
+ "iata": "DLM",
+ "blocks": {
+  "transport": {
+   "title": "Getting there",
+   "hint": "Havaş to Marmaris and Fethiye",
+   "text": "Havaş shuttles leave from the airport car park for the centres of Marmaris and Fethiye. Route to Marmaris: Dalaman, Ortaca, Köyceğiz, Gökova, Marmaris bus station; to Fethiye: Dalaman, Göcek, Günlükbaşı, Adnan Menderes Boulevard, Fethiye bus station. Passengers are dropped off at agreed points along the way if they tell the driver in advance. Timetable and fares are on the Havaş website."
+  },
+  "taxi": {
+   "title": "Taxi",
+   "hint": "Airport taxi cooperative",
+   "text": "The airport taxi service is the Dalaman Airport Taxi cooperative; phone and WhatsApp +90 533 958 28 72, website dalamanairporttaxi.com."
+  },
+  "parking": {
+   "title": "Parking",
+   "hint": "Round the clock, terminals 1 and 2",
+   "text": "The car park at terminals 1 and 2, with a total area of 72,972 m², is open round the clock all year. The price is calculated on the airport website; fares are set by DHMI, last updated January 2026, VAT included."
+  },
+  "wifi": {
+   "title": "Wi‑Fi",
+   "hint": "30 minutes free",
+   "text": "DorukNet Wi‑Fi in all arrival and departure halls: 30 minutes free with a password issued by kiosks after scanning a passport; longer and premium access is paid. In business lounges and the business aviation terminal there is no limit."
+  }
+ }
+}

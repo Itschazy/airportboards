@@ -1,0 +1,20 @@
+{
+ "iata": "OSW",
+ "blocks": {
+  "lounges": {
+   "title": "Premium comfort lounge",
+   "hint": "3,800 ₽",
+   "text": "Premium comfort lounge for departing passengers: a separate check-in counter, its own security checkpoint and escort to the aircraft, tea, coffee, water. Entry no earlier than 2 hours before departure. Paid; for individuals 3,800 ₽."
+  },
+  "kids": {
+   "title": "With children",
+   "hint": "Free with a ticket",
+   "text": "The mother and child room is free with an air ticket, for passengers with children under 7, disabled children under 14 and women in the second half of pregnancy. Ticket, passport, the child's document and a certificate from the terminal first-aid post required; it follows the airport schedule."
+  },
+  "parking": {
+   "title": "Parking",
+   "hint": "15 min free",
+   "text": "Short-stay parking from 01.01.2026: up to 15 minutes free, up to an hour 250 ₽, up to 24 hours 500 ₽, from 24 hours 500 ₽. The area is not guarded."
+  }
+ }
+}

@@ -1,0 +1,31 @@
+{
+ "iata": "NSK",
+ "about": "Flughafen im Süden der Taimyr-Halbinsel, im Norden der Region Krasnojarsk. Betreiber OOO „Aeroport ‚Norilsk‘“. Vier Fluggesellschaften fliegen regelmäßig zehn Städte Russlands an, Passagieraufkommen 2024: 883.000 Personen.",
+ "blocks": {
+  "transport": {
+   "title": "Anreise",
+   "hint": "Bus 33, 1 Std. 10 Min.",
+   "text": "Bus 33 verkehrt zwischen dem Busbahnhof „Norilsk (ADZ)“, dem Busbahnhof „Kajerkan (TBK)“ und dem Terminal, Fahrzeit 1 Std. 10 Min. Bus 110 nach Dudinka fährt täglich um 09:00 vom Flughafen ab. Die Haltestelle des Busses nach Dudinka ist am Ausgang der Ankunftshalle."
+  },
+  "terminals": {
+   "title": "Terminal",
+   "hint": "Ein Terminal, 2 Etagen",
+   "text": "Ein Terminalgebäude. Auf Ebene 1 Auskunftsbüro, Check-in-Schalter, Wartesaal, Gepäckverpackung und Gepäckermittlung. Auf Ebene 2 Sicherheitskontrolle, Business-Lounge und Polizei. Vom 25.10.2026 bis 27.03.2027 ist das Terminal Mo–Sa 06:00–21:00, So 06:00–12:00 geöffnet."
+  },
+  "lounges": {
+   "title": "Business-Lounges",
+   "hint": "Ebene 2, 7450 ₽",
+   "text": "Business-Lounge in der Abflughalle auf Ebene 2, bis zu 49 Plätze. Abflug oder Ankunft 7450 ₽, Kinder von 2–12 Jahren 3725 ₽, unter 2 Jahren kostenlos. Begleitpersonen und Abholer 3240 ₽. Telefon: +7 (3919) 31-54-22, 31-53-89."
+  },
+  "sleep": {
+   "title": "Schlafen",
+   "hint": "Erholungsheim, 24/7",
+   "text": "Erholungsheim (Profilaktorium) des Flughafens auf dem Vorplatz. 30 Zimmer mit 55 Betten, rund um die Uhr geöffnet. Untergebracht werden Passagiere und andere Personen mit Pass, bezahlt werden volle Tage, 100 % Vorauszahlung. Telefon +7 (3919) 31-53-70."
+  },
+  "kids": {
+   "title": "Mit Kind",
+   "hint": "Ebene 2, kostenlos",
+   "text": "Mutter-Kind-Raum auf Ebene 2 des Terminals. Kostenlos für Frauen mit Kindern unter 5 Jahren und Schwangere in der zweiten Schwangerschaftshälfte. Bei Flugverspätung werden Kinder unter 7 Jahren kostenlos auf Kosten der Fluggesellschaft untergebracht. Es gibt einen Schlafraum, ein Spielzimmer und einen Bereich zum Zubereiten und Essen."
+  }
+ }
+}

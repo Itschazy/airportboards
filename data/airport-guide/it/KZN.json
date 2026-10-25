@@ -1,0 +1,36 @@
+{
+  "iata": "KZN",
+  "about": "L’aeroporto internazionale «Kazan» intitolato a Gabdulla Tukay si trova a 26 km dal centro di Kazan. Ci arrivano un autobus e un treno suburbano; ci sono parcheggi a pagamento e uno gratuito.",
+  "blocks": {
+    "transport": {
+      "title": "Come arrivare",
+      "hint": "Bus 197, treno suburbano",
+      "text": "L’autobus n. 197 parte dall’autostazione «Vostochny» lungo prospekt Pobedy, passa davanti alla metro «Prospekt Pobedy» e termina la corsa presso i Terminal 1 e 1А. Circola dalle 6:00 alle 22:00, vettore PATP-8. I treni suburbani Kazan — Aeroporto sono gestiti dalla società «Sodruzhestvo». I taxi sono disponibili giorno e notte."
+    },
+    "lounges": {
+      "title": "Sale business",
+      "hint": "Da 3 200 ₽",
+      "text": "«Bolgar — Ak Bars Bank Lounge»: livello 2 dopo i controlli, a destra dopo il gate n. 4, 3 500 ₽. «Sviyazhsk»: livello 3 dopo i controlli, 4 500 ₽. Per le partenze internazionali nel Terminal 1А: Sky Lounge al livello 1, 5 500 ₽, e Prime Lounge al livello 2, 3 200 ₽. Per i bambini 2–12 anni metà prezzo."
+    },
+    "storage": {
+      "title": "Deposito bagagli",
+      "hint": "Т1, seminterrato, 24/7",
+      "text": "Terminal 1, piano seminterrato, giorno e notte. Un collo costa 400 ₽ fino alla mezzanotte del giorno in corso, poi 200 ₽ per ogni giorno. Il giorno iniziato conta come intero. Operatore PACK&FLY, telefono +7 843 254 00 21."
+    },
+    "sleep": {
+      "title": "Dove dormire",
+      "hint": "Hotel a 270 m",
+      "text": "L’hotel «Polyot» si trova nell’area dell’aeroporto, a 270 m dal Terminal 1. I pasti si ordinano al momento della prenotazione o con consegna in camera, mensa al livello 3 del Terminal 1. Reception: +7 (843) 267-87-05."
+    },
+    "kids": {
+      "title": "Con bambini",
+      "hint": "Т1, livello 2, 24/7",
+      "text": "Sala madre e bambino al livello 2 del Terminal 1, giorno e notte. Accedono i passeggeri con bambini sotto i 7 anni, con bambini con disabilità sotto i 14 anni e le donne nella seconda metà della gravidanza. All’interno due camere con lettini, due sale giochi, una zona pasti con microonde e scaldabiberon, una doccia. Telefono +7 (843) 267-87-86."
+    },
+    "parking": {
+      "title": "Parcheggio",
+      "hint": "20 min gratis",
+      "text": "I primi 20 minuti dall’ingresso sono gratuiti. Il parcheggio a pagamento si paga ai parcometri nei terminal e nelle aree di sosta o nell’app dell’aeroporto. Domande sul parcheggio presso i terminal 1, 1А e 2: +7 (843) 254-01-55."
+    }
+  }
+}

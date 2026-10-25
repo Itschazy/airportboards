@@ -1,0 +1,21 @@
+{
+ "iata": "NER",
+ "about": "Flughafen bei der Siedlung Tschulman, 35 km von Nerjungri. Filiale der FKP „Aeroporty Sewera“. Befestigte Piste 3600×45 m, Terminal für 100 Passagiere.",
+ "blocks": {
+  "terminals": {
+   "title": "Terminal",
+   "hint": "Ein Terminalgebäude",
+   "text": "Ein Terminalgebäude für 100 Passagiere. Der Ticketschalter öffnet 2 Stunden vor dem planmäßigen Flug, ohne Mittagspause. Telefon des Schalters +7 (4114) 77-74-60."
+  },
+  "lounges": {
+   "title": "Business-Lounges",
+   "hint": "ON PASS, Ebene 2, 3500 ₽",
+   "text": "Lounge ON PASS auf Ebene 2, im Abflugbereich nach der Sicherheitskontrolle. Zugang 3 Stunden vor dem Flug, für alle Passagiere gegen Gebühr. Erwachsene 3500 ₽, Kinder von 2–12 Jahren 2500 ₽, unter 2 Jahren kostenlos. Es gibt Wi‑Fi, Snacks, Getränke. Telefon +7 (906) 241-71-62."
+  },
+  "kids": {
+   "title": "Mit Kind",
+   "hint": "24/7, kostenlos",
+   "text": "Der Mutter-Kind-Raum ist rund um die Uhr geöffnet, kostenlos. Zugang für Kinder unter 5 Jahren und Kinder mit Behinderung unter 14 Jahren mit einem Erwachsenen sowie für Schwangere in der zweiten Schwangerschaftshälfte. Erforderlich sind Pass und Ticket. Es gibt Betten für Erwachsene und Kinder sowie Wickelplätze."
+  }
+ }
+}

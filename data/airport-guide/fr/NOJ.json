@@ -1,0 +1,21 @@
+{
+ "iata": "NOJ",
+ "about": "Aéroport à 9 km au sud-ouest de Noïabrsk. Exploitant : SA « Aéroport de Sourgout ». Piste de 2500 m, vols intérieurs en Russie.",
+ "blocks": {
+  "transport": {
+   "title": "Comment s'y rendre",
+   "hint": "Bus 7 et 51",
+   "text": "Le centre-ville est à environ 9 km. Bus urbains n° 7 et n° 51 (village de Vyngapourovski). Taxis disponibles."
+  },
+  "terminals": {
+   "title": "Terminal",
+   "hint": "Terminal 07:00–18:00",
+   "text": "Le terminal est ouvert de 07:00 à 18:00. Vols intérieurs uniquement. À l'intérieur : café, boutiques, kiosques de souvenirs, emballage des bagages, salle mère-enfant, consigne à bagages."
+  },
+  "lounges": {
+   "title": "Salons",
+   "hint": "Niveaux 1 et 2, tous les jours",
+   "text": "Salon de confort supérieur au niveau 1, salon VIP au niveau 2. Dans le salon : thé, café, pâtisseries. Payant selon la grille tarifaire : commande de repas au café, transfert à l'avion par un véhicule séparé. Le salon de confort supérieur est ouvert tous les jours."
+  }
+ }
+}

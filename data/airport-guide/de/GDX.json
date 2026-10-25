@@ -1,0 +1,35 @@
+{
+ "iata": "GDX",
+ "blocks": {
+  "transport": {
+   "title": "Anreise",
+   "hint": "Bus 101",
+   "text": "Bus Nr. 101 verkehrt zwischen dem Busbahnhof Magadan und dem Flughafen Sokol."
+  },
+  "lounges": {
+   "title": "Business-Lounges",
+   "hint": "Ebene 2, 4000 ₽",
+   "text": "Business-Lounge auf Ebene 2 im Sicherheitsbereich der Inlandsflüge: nach der Kontrolle auf Ebene 3 den Schildern folgend nach unten gehen. Geöffnet während der Abfertigung von Flügen. Zugang über die Programme ON·PASS, Persona.aero, RusPriority, Every Lounge, Golden Key und andere; jeder Passagier kann den Service beim Check-in anmelden und an der Kasse bezahlen: 4000 ₽ ab 2 Jahren, Jüngere kostenlos."
+  },
+  "storage": {
+   "title": "Gepäckaufbewahrung",
+   "hint": "Ebene 2, 8:30–20:30",
+   "text": "Automatische Gepäckaufbewahrung für Passagiere von Inlandsflügen auf Ebene 2, von 8:30 bis 20:30, Bezahlung nur mit Karte. Standardfach 51×63×76 cm 1000 ₽ pro Tag, großes Fach 51×195×76 cm 2000 ₽; weniger als ein Tag wird als ganzer Tag berechnet."
+  },
+  "kids": {
+   "title": "Mit Kind",
+   "hint": "Ebene 3, kostenlos",
+   "text": "Mutter-Kind-Raum auf Ebene 3, kostenlos, für abfliegende und angekommene Passagiere. Für Kinder unter 7 Jahren mit einem Erwachsenen, Kinder mit Behinderung unter 14 Jahren und Frauen in der zweiten Schwangerschaftshälfte."
+  },
+  "parking": {
+   "title": "Parken",
+   "hint": "15 Min. kostenlos",
+   "text": "Vorplatz P1 30 m vom Terminal: die ersten 15 Minuten kostenlos, bis zu einer Stunde 500 ₽, jede weitere Stunde 300 ₽, ein Tag 2000 ₽. Erneute Einfahrt innerhalb einer Stunde für 1–15 Minuten: 200 ₽."
+  },
+  "wifi": {
+   "title": "Wi‑Fi",
+   "hint": "Kostenlos",
+   "text": "Kostenloses Wi‑Fi im Terminalgebäude; nach dem Gesetz „Über die Kommunikation“ ist eine Identifizierung des Nutzers erforderlich, die Bedingungen stehen auf der Begrüßungsseite des Anbieters."
+  }
+ }
+}

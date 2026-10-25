@@ -1,0 +1,21 @@
+{
+ "iata": "TBW",
+ "about": "Tambov airfield is 10 km north-east of the centre of Tambov, near the village of Donskoye. Operator: TOGBU Tambov Airport. The airport has federal status, one runway 2,098 × 42 m.",
+ "blocks": {
+  "terminals": {
+   "title": "Terminal",
+   "hint": "Departures: Level 1",
+   "text": "Security screening is at the terminal entrance. The departure hall is on Level 1, with the check-in counters. There are no scanners for electronic boarding passes: print yours in advance or get it at the counter."
+  },
+  "kids": {
+   "title": "With children",
+   "hint": "Children under 7, free",
+   "text": "Room for passengers with children under 7: bedroom, bed, toilet. Free, during airport opening hours. Passport, ticket and medical certificate required. The certificate is issued free at the first-aid post, Level 1 of the administrative building. Apply to the passenger handling service."
+  },
+  "parking": {
+   "title": "Parking",
+   "hint": "Free",
+   "text": "Free parking on the station forecourt. There are spaces for people with disabilities. The airport is not responsible for cars left there."
+  }
+ }
+}

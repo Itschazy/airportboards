@@ -1,0 +1,21 @@
+{
+ "iata": "MCX",
+ "about": "Makhachkala International Airport named after twice Hero of the Soviet Union Amet-Khan Sultan. The airfield was founded on 3 February 1927 as an air station on the Moscow – Kharkov – Rostov – Tiflis route.",
+ "blocks": {
+  "terminals": {
+   "title": "Terminals",
+   "hint": "Terminals A and B",
+   "text": "Two terminals: A and B; plans of both are on the airport website. Electronic boarding passes are currently not accepted. A paper boarding pass is required; it can be printed at a self-service check-in kiosk."
+  },
+  "lounges": {
+   "title": "Lounges",
+   "hint": "VIP-2, departure 6,000 ₽",
+   "text": "VIP-2 lounge. Service for departing passengers aged 2 and over 6,000 ₽, arriving 3,000 ₽. Those meeting and seeing off passengers 1,000 ₽. Meeting room 5,000 ₽ per hour, parking at VIP-2 1,000 ₽. Legal entities submit a request no later than an hour before check-in opens."
+  },
+  "parking": {
+   "title": "Parking",
+   "hint": "15 min free",
+   "text": "General zone: up to 15 minutes free on the first entry, then 400 ₽ per hour, over 3 hours 1,200 ₽ per day. Daily car park on the right at the entrance 600 ₽ per day. Drop-off zone (first lane): over 10 minutes 1,500 ₽ per hour. A repeat entry within 30 minutes is paid. After payment you have 30 minutes to exit."
+  }
+ }
+}

@@ -1,0 +1,31 @@
+{
+ "iata": "GDZ",
+ "about": "Airport operator: Gelendzhik Airport LLC. The new 16,700 sq. m terminal designed by the Fuksas studio opened in 2022, capacity 891 passengers per hour. Flights serve domestic destinations in Russia.",
+ "blocks": {
+  "transport": {
+   "title": "Getting there",
+   "hint": "Bus 5",
+   "text": "Bus No. 5 Tolsty Mys microdistrict — Tonky Mys microdistrict. The stop is to the right of the terminal exit, on the second lane of the driveway. The official taxi Avtoexpress picks up on the first lane opposite the arrivals exit. Address for taxis: 10 Solntsedarskaya St."
+  },
+  "lounges": {
+   "title": "Lounges",
+   "hint": "Level 2",
+   "text": "Business lounge on Level 2 of the terminal. Priority is given to business class passengers and holders of airline loyalty cards; economy class if places are available. There is a separate check-in counter and transfer to the aircraft. AURA lounge (premium comfort lounge): up to 3 hours, children under 2 free, access via ONPASS."
+  },
+  "storage": {
+   "title": "Left luggage",
+   "hint": "Level 1, from 200 ₽",
+   "text": "Automated left luggage on Level 1, to the left of the check-in counters, during airport opening hours. Small locker from 200 ₽ for 2 hours to 800 ₽ per day, medium 300–900 ₽, large 400–1,000 ₽. Pay in cash or by card at the terminal; the receipt with a barcode opens the locker."
+  },
+  "kids": {
+   "title": "With children",
+   "hint": "Level 1, free",
+   "text": "Mother and child room on Level 1, in the right wing of the terminal. Free, up to 3 hours. Admits passengers with a child under 7, a child with disabilities under 14, and women in the second half of pregnancy. A check at the first-aid post, a ticket or boarding pass, a passport and the child's birth certificate are required."
+  },
+  "parking": {
+   "title": "Parking",
+   "hint": "15 min free",
+   "text": "250 spaces. First 15 minutes free, then 300 ₽ for each hour, over 3 hours 900 ₽/day. Parking on the second lane of the driveway 1,000 ₽/hour, VIP parking 2,000 ₽/hour. A repeat entry within an hour has no free 15 minutes."
+  }
+ }
+}

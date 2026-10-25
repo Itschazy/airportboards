@@ -1,0 +1,21 @@
+{
+ "iata": "NNM",
+ "about": "Havalimanına Naryan-Marsky Obyedinyonny Aviaotryad AO hizmet verir, adres: Naryan-Mar, Aeroportovsky Sokağı, bina 1А. Hava filosu Nenets Özerk Okrugu'nun yerel hava hatlarında uçuşlar yapar. Danışma: 8 (81853) 91-555.",
+ "blocks": {
+  "lounges": {
+   "title": "Business salonları",
+   "hint": "Kat 1, güvenlikten sonra",
+   "text": "Konforlu bekleme salonu Kat 1'de, güvenlik kontrolünden sonraki gidiş alanında. İç hat yolcuları için, giriş kalkıştan 2 saat önce. 2 yaşından küçük çocuklar ücretsiz. Erişim MILE·ON·AIR uygulamasının ON PASS bölümünden alınır. Salon telefonu: 8 (81853) 91-537."
+  },
+  "storage": {
+   "title": "Emanet",
+   "hint": "Terminal binası, Kat 1",
+   "text": "Terminal binası, Kat 1, havalimanının çalışma saatlerinde açık. Bir parça en fazla 30 kg. Uçuş rötar yaparsa veya ertesi güne ertelenirse bagaj o uçuşun biletiyle ücretsiz saklanır."
+  },
+  "parking": {
+   "title": "Otopark",
+   "hint": "45 dakika ücretsiz",
+   "text": "45 dakikaya kadar ücretsiz. 46 ila 60 dakika: 500 ₽. Bir saatin üzerinde ve 24 saate kadar: her saat 350 ₽. 24 saatin üzerinde, 30 güne kadar: her 24 saat için 600 ₽. Tarifeler 1 Ağustos 2026'dan itibaren geçerli."
+  }
+ }
+}

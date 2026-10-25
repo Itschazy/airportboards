@@ -1,0 +1,46 @@
+{
+ "iata": "VKO",
+ "about": "Vnukovo'da yolculara A terminali hizmet verir, VIP salonlar ayrı bir binada. Gelişler terminalde Kat 1'de, gidişler Kat 2'de. Solntsevskaya hattının Aeroport Vnukovo metro istasyonundan terminale yeraltı geçidi gider.",
+ "blocks": {
+  "lounges": {
+   "title": "Business salonları",
+   "hint": "A terminali, 24 saat",
+   "text": "İç hatlar: Prokofiev Lounge, güvenlik kontrolünden sonra Kat 2, 13 numaralı kapının karşısında. Dış hatlar: pasaport kontrolünden sonra atriumda Kat 1'de Chaykovsky ve atriumda Kat 2'de ART Lounge, ikisi de 21 numaralı kapının yanında. Güvenlik kontrolünden önce Kat 3'teki VIP Lounge tüm uçuşları kabul eder; dış hat uçuşunda salondan kalkıştan 1 saat önce çıkılmalıdır. Business sınıfı, ON PASS, Persona Aero, Every lounge, RusPriority ve diğer programlarla ya da ücret karşılığında kabul edilir: 3 saati 2900 ₽ (ART Lounge 3500 ₽)."
+  },
+  "storage": {
+   "title": "Emanet",
+   "hint": "A terminali, Kat −1",
+   "text": "A terminali, Kat −1, gece gündüz açık. 30 kg'a kadar bagaj parçası, süre 6 aya kadar. İlk takvim günü 1000 ₽, 2. ila 29. gün arası günlüğü 900 ₽, standart dışı 1500 ₽. Telefon +7 (926) 895-36-82."
+  },
+  "sleep": {
+   "title": "Nerede uyunur",
+   "hint": "A terminalinin karşısında otel",
+   "text": "DoubleTree by Hilton, A terminalinin karşısında, terminale ve metroya giden yeraltı tüneline 2 dakika uzaklıkta. Otelde 432 oda var, gece gündüz açık. Adres: 2-ya Reysovaya Caddesi, bina 2, telefon +7 (495) 436-37-37."
+  },
+  "kids": {
+   "title": "Çocukla",
+   "hint": "A terminali, Kat 2",
+   "text": "Çocuk bekleme salonu A terminalinde Kat 2'de, gece gündüz açık ve ücretsiz, kalkıştan en erken 6 saat önce. Tek yetişkinle birlikte 7 yaşından küçük çocuklar (engelli çocuklar 12 yaşından küçük) ve gebeliğin ikinci yarısındaki kadınlar kabul edilir. Bagaj ve bebek arabaları içeri alınmaz; telefon +7 (495) 436-29-26."
+  },
+  "transport": {
+   "title": "Nasıl gidilir",
+   "hint": "Terminale metro",
+   "text": "Solntsevskaya hattında Aeroport Vnukovo metro istasyonu. Perondan yeraltı geçidi A terminaline, trenlere ve otobüs duraklarına gider. Salaryevo'dan (Sokolnicheskaya hattı) 911 numaralı otobüs kalkar: 18–20 dakika, sefer aralığı 10–15 dakika. Aeroexpress artık buraya gelmiyor: Kievsky Garı'ndan normal tren kalkar, 35–40 dakika, saatte bir, havalimanına 7:00–23:00 arası."
+  },
+  "parking": {
+   "title": "Otopark",
+   "hint": "15 dakika ücretsiz",
+   "text": "Terminal önü meydanına giriş 15 dakika ücretsiz, günde toplam en fazla 60 dakika. 1 ve 2 numaralı katlı otoparklar, her biri 350 araçlık. Tarife: 1. saat 600 ₽, 2. saat 400 ₽, sonrası günlüğü 1500 ₽. Yolun karşısındaki DoubleTree otelinin yeraltı otoparkı günlüğü 2000 ₽."
+  },
+  "wifi": {
+   "title": "Wi‑Fi",
+   "hint": "MT_FREE ağı",
+   "text": "Ücretsiz Wi‑Fi A terminalinin tamamında çalışır. Ağın adı MT_FREE. Giriş telefon numarasıyla, numara bir aramayla doğrulanır."
+  },
+  "terminals": {
+   "title": "Terminal",
+   "hint": "A terminali ve VIP",
+   "text": "Yolcu terminali A ve ayrı binada VIP salon. Gelişler A terminalinde Kat 1'de, gidişler Kat 2'de, oraya viyadük çıkar; VIP salonlar Kat 3'te. İç hatlar alanından dış hatlar alanına terminalden çıkmadan geçilebilir."
+  }
+ }
+}

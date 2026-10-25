@@ -1,0 +1,36 @@
+{
+ "iata": "REN",
+ "about": "The main airport of Orenburg Oblast, serving domestic and international flights. The new passenger terminal of more than 24,000 sq. m was built by ABS (Aeroporty Bolshoy Strany); it has four floors and 4 jet bridges. The airport serves more than 950,000 passengers a year.",
+ "blocks": {
+  "transport": {
+   "title": "Getting there",
+   "hint": "Bus 101, 120 ₽",
+   "text": "Bus No. 101 runs between the railway station and the airport, fare 120 ₽. From the station to the airport: 08:45, 16:00, 18:25. From the airport to the station: 07:20, 11:00, 17:10. At 19:50 bus No. 101 (k) leaves the airport for Mira Square, journey time 30 minutes."
+  },
+  "lounges": {
+   "title": "Lounges",
+   "hint": "Levels 3 and 4, 6,500 ₽",
+   "text": "Domestic lounge on Level 3, international lounge on Level 4. Admits business class passengers, members of ON PASS, Grey Wall, Every Lounge, UniPass, Golden Key programmes and self-paying passengers. Price in both lounges: 6,500 ₽ for up to 3 hours, then 550 ₽ for each hour. Children from age 2 are charged according to programme rules."
+  },
+  "storage": {
+   "title": "Left luggage",
+   "hint": "Level 1, 24/7",
+   "text": "Automated left luggage in the central hall of the terminal, Level 1. Open round the clock. Standard locker: 300 ₽ per hour or 500 ₽ per day."
+  },
+  "kids": {
+   "title": "With children",
+   "hint": "Level 2, 24/7",
+   "text": "Mother and child room on Level 2 of the terminal, open round the clock. Admits passengers with children under 7, with disabled children under 14 and women in the second half of pregnancy. Entry 3 hours before departure or within 1 hour after arrival. A certificate from the first-aid post on Level 1, a passport, the child's birth certificate and a boarding pass are required."
+  },
+  "parking": {
+   "title": "Parking",
+   "hint": "15 min free",
+   "text": "Drop-off and pick-up zone: up to 15 minutes free, from 15 to 60 minutes 600 ₽, then 600 ₽ for each hour. Zone Р1: up to 60 minutes 250 ₽, up to 120 minutes 500 ₽, up to 24 hours 700 ₽. Zone Р2 for long stays: up to 48 hours 1,400 ₽. Free car park Р4, 6 minutes from the terminal."
+  },
+  "wifi": {
+   "title": "Wi‑Fi",
+   "hint": "Beeline-WiFi-Free network",
+   "text": "Free Wi‑Fi in the passenger areas of the airport. Network Beeline-WiFi-Free. Login with a mobile phone number, then follow the on-screen instructions."
+  }
+ }
+}

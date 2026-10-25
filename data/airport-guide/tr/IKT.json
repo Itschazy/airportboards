@@ -1,0 +1,41 @@
+{
+ "iata": "IKT",
+ "about": "Havalimanı Irkutsk'ta, Shiryamova Caddesi 13'te; işletmeci Irkutsk Uluslararası Havalimanı AO. Doğrudan uçuşlar onu Rusya'nın 50 şehrine bağlar, uluslararası ağında 11 hat var. Yolcu trafiği 3,8 milyonu aşıyor.",
+ "blocks": {
+  "transport": {
+   "title": "Nasıl gidilir",
+   "hint": "80, 90, 480 otobüsleri",
+   "text": "80, 90, 406, 480, 42, 43 numaralı otobüsler. 4 ve 6 numaralı troleybüsler. 99, 20, 45, 61 numaralı dolmuşlar."
+  },
+  "terminals": {
+   "title": "Terminaller",
+   "hint": "Т1 dış hat, Т2 giden",
+   "text": "Terminal 1 dış hat uçuşlarına hizmet verir. Terminal 2: iç hat gidişleri. Terminal 3: iç hat gelişleri."
+  },
+  "lounges": {
+   "title": "Business salonları",
+   "hint": "Т2 business salonu, 4250 ₽",
+   "text": "Terminal 2'de business salonu, konforlu bekleme salonu ve VIP-1, VIP-2, VIP-3 salonları var. Business salonu ve konforlu bekleme salonu kalkıştan 2 saat önce, yer varsa açılır; yolcu başına 4250 ₽. Terminal 1'de konforlu bekleme salonu kalkıştan 3 saat önce, 4473 ₽. Dragon Pass kartları kabul edilmez."
+  },
+  "storage": {
+   "title": "Emanet",
+   "hint": "Günlüğü 610 ₽",
+   "text": "İç hatlar terminalinde Kat 1'de, ödeme nakit veya kartla. Parça başına günlük 610 ₽; 40×40×50 cm'den büyük bagaj kapladığı yer sayısına göre ücretlendirilir. Dış hatlar terminalinde emanet Kat 2'de, yalnızca uçuş rötarlarında çalışır. Telefon +7 (3952) 266-194."
+  },
+  "sleep": {
+   "title": "Nerede uyunur",
+   "hint": "100 m uzakta otel",
+   "text": "Havalimanı oteli Vozdushnaya Gavan, Shiryamova Caddesi 6, havalimanına 100 metre. 145 oda, gece gündüz check-in, kısa süreli konaklama. İç hatlar terminal binasında otele doğrudan bağlı bir telefon var."
+  },
+  "kids": {
+   "title": "Çocukla",
+   "hint": "Ücretsiz, 24/7",
+   "text": "Anne-bebek odaları iç hatlar terminalinde (Kat 1, VIP) ve dış hatlar terminalinde (Kat 2), gece gündüz açık, ücretsiz. 7 yaşından küçük çocuklar: kalkıştan önce 3–4 saate kadar, inişten sonra 1 saat. Çocukla birlikte bir yetişkin. Danışma bürosuna başvurun."
+  },
+  "parking": {
+   "title": "Otopark",
+   "hint": "10 dakika ücretsiz",
+   "text": "İlk 10 dakika ücretsiz. 11–20 dakika 100 ₽, 1 saate kadar 350 ₽, 2 sa 41 dk'dan 24 saate kadar 1200 ₽, sonraki her gün 1200 ₽. Her terminalin kendi otoparkı var. İndirme-bindirme alanı: 10 dakika ücretsiz, daha uzun süre için saati 2000 ₽ ceza."
+  }
+ }
+}

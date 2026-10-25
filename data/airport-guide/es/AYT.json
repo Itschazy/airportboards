@@ -1,0 +1,30 @@
+{
+ "iata": "AYT",
+ "blocks": {
+  "transport": {
+   "title": "Cómo llegar",
+   "hint": "Autobuses y tranvía AntRay",
+   "text": "A la estación de autobuses interurbanos y al centro de Antalya van autobuses urbanos; el horario está en la aplicación Antalyakart o en el teléfono 0242 606 07 07. El tranvía AntRay recorre la ruta aeropuerto — centro de la ciudad — estación de autobuses interurbanos — distrito de Fatih. A los turistas de agencias de viajes los esperan, a la salida de la terminal, mostradores de los turoperadores con sus autobuses."
+  },
+  "taxi": {
+   "title": "Taxi",
+   "hint": "En las salidas de las terminales",
+   "text": "Las paradas de taxi están frente a las salidas de todas las terminales; los conductores llevan acreditación del aeropuerto. Las tarifas figuran en el panel informativo junto a la parada; hay reserva en línea a través del servicio cooperativo de taxis del aeropuerto (antalyaairporttaxi.net)."
+  },
+  "storage": {
+   "title": "Consigna",
+   "hint": "Llegadas, terminal nacional",
+   "text": "La consigna está en la sala de llegadas de la terminal nacional; pueden usarla los pasajeros que salen de la terminal 1 o de la terminal nacional. Embalaje de equipaje: día y noche, de pago, en las salas de salidas de las terminales 1 y 2."
+  },
+  "parking": {
+   "title": "Aparcamiento",
+   "hint": "De varias plantas, 2643 plazas",
+   "text": "Aparcamiento de varias plantas para 2643 coches frente a la terminal nacional. El precio lo calcula la calculadora del sitio web del aeropuerto; los abonos se tramitan en el centro de atención del nivel 1 (P1)."
+  },
+  "wifi": {
+   "title": "Wi‑Fi",
+   "hint": "Gratis 1 hora",
+   "text": "Internet gratuito durante 1 hora en todas las terminales. El código PIN lo dan los quioscos Wi‑Fi gratuitos de las salas de llegadas y salidas; se necesita un teléfono móvil y pasaporte o documento de identidad. En la terminal CIP y en las zonas de descanso el acceso es ilimitado."
+  }
+ }
+}

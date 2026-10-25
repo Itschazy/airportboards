@@ -1,0 +1,51 @@
+{
+ "iata": "LED",
+ "about": "Pulkovo Airport is 23 km from Palace Square in Saint Petersburg. Passengers are served by a centralised passenger terminal; the Pulkovo-1 building is connected to its main building by a walkway and serves domestic flights. Since 2010 the airport has been managed by Vozdushnye Vorota Severnoy Stolitsy LLC; the base carrier is Rossiya airline.",
+ "blocks": {
+  "lounges": {
+   "title": "Lounges",
+   "hint": "2 domestic + 1 international",
+   "text": "Three business lounges. Two are in the domestic departure area, one of them New Pulkovo Lounge, and one in the international departure area. For domestic flights the entrance is at the end of the hall on Level 2. Free: priority class and priority tiers of airline loyalty programmes, 4 hours before departure; MILE·ON·AIR, Every Lounge, Comfort Pass, RusPriority, Golden Key, Grey Wall Pass, Persona.aero, DreamFolks, 2 hours before. Single visit 3,500 ₽ for 2 hours, children under 2 free."
+  },
+  "storage": {
+   "title": "Left luggage",
+   "hint": "Level 1, from 1,100 ₽",
+   "text": "On Level 1 of the new terminal. One item of baggage costs 1,100 ₽ for the first calendar day, then 500 ₽ per day. Safe locker: 1,500 ₽, then 800 ₽ per day. Operator Aeroservis, +7 921 859-55-33."
+  },
+  "sleep": {
+   "title": "Where to sleep",
+   "hint": "Capsules, 1,100 ₽/hour",
+   "text": "Capsule hotel in the waiting hall on Level 2 of the central terminal. A 140×200 cm bed for two; the capsule has a 220 V socket and free Wi‑Fi. Hourly rate 1,100 ₽ per hour, cash or card. Phone +7 921 859-55-22."
+  },
+  "kids": {
+   "title": "With children",
+   "hint": "Level 2, 24/7, free",
+   "text": "Mother and child room on Level 2 of the main terminal building, open round the clock and free. Admits passengers with children aged 7 and under, with children with disabilities under 14, for no more than 3 hours. A ticket or boarding pass, the child's document and a medical certificate are required; the certificate is issued free at the first-aid post on Level 2. The children's area for domestic flights is on Level 2 behind the Bufet restaurant."
+  },
+  "transport": {
+   "title": "Getting there",
+   "hint": "Buses 39, 39Э, 82Э",
+   "text": "No. 39 from Moskovskaya metro station makes all stops: interval 5–7 min, journey 35 min, from the airport from 5:15 to 1:36. No. 39Э runs non-stop: interval 13–20 min, journey 27 min, from the airport from 6:00 to 1:40. No. 82Э from Prospekt Veteranov metro station: interval 15–16 min, journey 25 min, from the airport from 6:05 to 1:41."
+  },
+  "taxi": {
+   "title": "Taxi and stops",
+   "hint": "Yandex Go, desks 24/7",
+   "text": "The airport's official taxi partner is Yandex Go. Desks are open round the clock: in the domestic baggage claim area and right at the exit from international baggage claim. Buses 39, 39Э and 82Э arrive at Level 3 and depart from Level 1, fare 88 ₽. The Podorozhnik kiosk by the stop is open from 8:00 to 20:00."
+  },
+  "parking": {
+   "title": "Parking",
+   "hint": "15 min free at entrance",
+   "text": "At the terminal the first 15 minutes are free, then 2,000 ₽ for every 30 minutes. Entry is allowed no more than once every 30 minutes. P2 (short-stay): 450 ₽ for 30 minutes, 2–4 minutes on foot. P4 (long-stay): 1,100 ₽ for the first 24 hours, from 14 days 700 ₽ per 24 hours. The free car park P0 with 120 spaces is on Pulkovskoe Shosse, 3 km from the airport."
+  },
+  "wifi": {
+   "title": "Wi‑Fi",
+   "hint": "OBIT, login by call",
+   "text": "The free OBIT — Free Internet Access network, run by OBIT. Enter your phone number in the +country code format; foreign numbers also work. You will receive a call, no need to answer: the last 4 digits of the calling number are the access code."
+  },
+  "terminals": {
+   "title": "Terminal",
+   "hint": "Level 1 arrivals, 2–3 departures",
+   "text": "Check-in is on Level 3. The domestic departure area is on Level 2, international on Level 3. Arrivals and the meeting area are on Level 1."
+  }
+ }
+}

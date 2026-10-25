@@ -1,0 +1,30 @@
+{
+ "iata": "IST",
+ "blocks": {
+  "transport": {
+   "title": "Cómo llegar",
+   "hint": "Metro M11, autobuses Havaist",
+   "text": "El metro M11 une el aeropuerto con Gayrettepe, y desde el 20 de junio de 2026 la línea llega hasta Halkalı. Los autobuses Havaist salen del nivel de transporte −2 hacia muchos barrios de la ciudad, entre ellos Beşiktaş, Kadıköy, Aksaray, Sultanahmet (Çatladıkapı) y la estación de autobuses de Esenler. Autobuses urbanos İETT: 5 líneas al centro."
+  },
+  "sleep": {
+   "title": "Dónde dormir",
+   "hint": "YOTEL antes y después del control",
+   "text": "Hotel YOTEL dentro de la terminal: 171 cabinas en la zona pública (frente a los mostradores de facturación P) y 280 en la zona de salidas (YOTELAIR, zona A–B); estas últimas, solo para pasajeros que salen en vuelos internacionales. Reserva desde 4 horas. Las Sleepcabins de YOTELAIR por horas, frente a la entrada de iGA Lounge, una planta más arriba, solo sin reserva previa."
+  },
+  "kids": {
+   "title": "Con niños",
+   "hint": "Zonas de juego de 700 m²",
+   "text": "Hay sala madre e hijo, zonas de juego de cinco temáticas con una superficie total de 700 m², traslados gratuitos en buggy para pasajeros con niños menores de 2 años, plazas de aparcamiento familiares separadas y puntos de control de seguridad familiares."
+  },
+  "parking": {
+   "title": "Aparcamiento",
+   "hint": "De varios niveles, bajo techo",
+   "text": "Aparcamiento de varios niveles bajo un mismo techo, con videovigilancia y seguridad día y noche. Desde el 1 de enero de 2024, sin abono se paga por días; el precio lo calcula la calculadora del sitio web del aeropuerto. Pagando con la aplicación del aeropuerto, 10% de descuento (salvo los abonos de 15 y 30 días). Servicio de aparcacoches en la entrada de la terminal CIP."
+  },
+  "wifi": {
+   "title": "Wi‑Fi",
+   "hint": "Ilimitado y gratuito",
+   "text": "Internet gratuito e ilimitado: red Wi‑Fi iGA, acceso con el número de teléfono y una contraseña por SMS o con un código de acceso que dan los quioscos de la terminal tras escanear el pasaporte."
+  }
+ }
+}

@@ -1,0 +1,41 @@
+{
+  "iata": "BAX",
+  "about": "Barnaul: aeroporto internazionale intitolato a G. S. Titov, principale aeroporto del Territorio dell’Altai, gestito dalla AO «Aviapredpriyatie «Altai». Pista 2850 × 50 m. È il grande aeroporto più vicino alle località dell’Altai montano e a Belokurikha.",
+  "blocks": {
+    "transport": {
+      "title": "Come arrivare",
+      "hint": "Bus 110",
+      "text": "L’autobus n. 110 collega l’aeroporto e l’autostazione «Spartak-2», 11 corse in ciascuna direzione: dall’aeroporto dalle 6:00 alle 18:50, dall’autostazione dalle 7:10 alle 20:00. Gli orari possono variare in base al traffico."
+    },
+    "lounges": {
+      "title": "Sale business",
+      "hint": "Ala destra, 6200 ₽",
+      "text": "Terminal business per i voli nazionali nell’ala destra dell’aerostazione, accesso dall’ingresso principale. Check-in e controlli propri, trasferimento all’aereo in minibus. Per chi parte dai 2 anni 6200 ₽, per chi arriva 4150 ₽, permanenza 3 ore, bambini sotto i 2 anni gratis. Non disponibile per i passeggeri internazionali."
+    },
+    "storage": {
+      "title": "Deposito bagagli",
+      "hint": "Livello 1, 210 ₽ al giorno",
+      "text": "Deposito per bagagli e bagaglio a mano al livello 1 dell’aerostazione. Un collo 210 ₽ al giorno indipendentemente dalle dimensioni; il giorno è inteso come giorno di calendario, dalle 00:00 alle 23:59. Borse e sacchetti agganciati al bagaglio contano come collo separato."
+    },
+    "sleep": {
+      "title": "Dove dormire",
+      "hint": "Hotel dell’aeroporto",
+      "text": "L’hotel della AO «Aviapredpriyatie «Altai» si trova direttamente nell’area dell’aeroporto: camere di diverse fasce di prezzo e un caffè."
+    },
+    "kids": {
+      "title": "Con bambini",
+      "hint": "Livello 2, gratis, 24/7",
+      "text": "Sala madre e bambino al livello 2, gratuita e aperta giorno e notte. Per passeggeri in partenza con bambini sotto i 7 anni, bambini con disabilità sotto i 14 anni e donne nella seconda metà della gravidanza. Ci sono una cucina, una camera con lettini e una sala giochi."
+    },
+    "parking": {
+      "title": "Parcheggio",
+      "hint": "Parcheggio gratuito",
+      "text": "Oltre l’area verde dell’aeroporto c’è un parcheggio gratuito per circa 100 auto, senza limiti di tempo. Sul piazzale dell’aerostazione operano i carri attrezzi, la sosta fuori dagli spazi designati è vietata."
+    },
+    "wifi": {
+      "title": "Wi‑Fi",
+      "hint": "Gratis, 3 provider",
+      "text": "Wi‑Fi gratuito per passeggeri e ospiti dell’aeroporto da tre provider: «Avantel», «Beeline» e MTS. Scegliere il provider sul dispositivo e seguire le indicazioni sullo schermo."
+    }
+  }
+}

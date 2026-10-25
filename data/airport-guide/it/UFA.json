@@ -1,0 +1,41 @@
+{
+  "iata": "UFA",
+  "about": "Gestore AO «Mezhdunarodny aeroport «Ufa»»; l’aerodromo ha due piste. La rete di rotte conta 65 destinazioni, di cui 22 internazionali. Nel 2024 l’aeroporto ha servito 4 753 742 passeggeri.",
+  "blocks": {
+    "transport": {
+      "title": "Come arrivare",
+      "hint": "Bus 101, 110, 110С",
+      "text": "Autobus di «Bashavtotrans» n. 101, 110 e 110С. Orari su bashauto.ru e al telefono +7 (347) 297-97-92. I taxi «Yandex Go» si prenotano ai banchi nella zona ritiro bagagli e nella sala arrivi del terminal dei voli nazionali, pagamento in contanti o con carta."
+    },
+    "terminals": {
+      "title": "Terminal",
+      "hint": "Т1 nazionali, Т2 internaz.",
+      "text": "Il terminal 1 serve i voli nazionali, il terminal 2 quelli internazionali. Parcheggio А2 di fronte al terminal 1, А3 di fronte al terminal 2, a 2 minuti dai terminal."
+    },
+    "lounges": {
+      "title": "Sale business",
+      "hint": "«Kuray» nel Т2, 3000 ₽",
+      "text": "«Agidel»: terminal 1, livello 2, di fronte al gate n. 2; adulti 6000 ₽, bambini 2–12 anni 3000 ₽, oltre 3 ore 2000 ₽ all’ora. «Iremel Lounge»: per i partecipanti a On Pass, Mir Pass, Every lounge, Grey wall pass, Persona Aero, RusPriority, per gli altri 3000 ₽. «Kuray»: zona partenze del terminal 2, gratuita per la classe business di Aeroflot, Flydubai, Utair e per i titolari delle carte dei programmi, per gli altri 3000 ₽. Bambini sotto i 2 anni gratis."
+    },
+    "storage": {
+      "title": "Deposito bagagli",
+      "hint": "Pack & Fly, 24/7",
+      "text": "Aperto giorno e notte, operatore Pack & Fly, telefono +7 (960) 803-80-67. Un collo non oltre 203 cm come somma delle tre dimensioni e non più pesante di 32 kg."
+    },
+    "kids": {
+      "title": "Con bambini",
+      "hint": "Т1, livello 1, 24/7",
+      "text": "Sala madre e bambino nel terminal 1, livello 1, di fronte ai banchi check-in, giorno e notte. Bambini sotto i 7 anni (con disabilità fino a 14) con un adulto. Fino a 12 ore prima della partenza, fino a 1 ora dopo l’arrivo. Servono passaporto, certificato di nascita, biglietti e un certificato del presidio sanitario del terminal dei voli nazionali."
+    },
+    "parking": {
+      "title": "Parcheggio",
+      "hint": "15 min gratis",
+      "text": "Zona di salita e discesa passeggeri А1: 15 minuti gratis, poi 500 ₽ all’ora, sosta vietata. Parcheggio d’attesa С5 (a 10 minuti dai terminal): 3 ore gratis, poi 150 ₽ all’ora, un giorno 600 ₽. Parcheggi А2 e А3 presso i terminal: la prima ora 300 ₽, poi 100 ₽ all’ora, un giorno 700 ₽."
+    },
+    "wifi": {
+      "title": "Wi‑Fi",
+      "hint": "Airport.FreeWiFi.Ufanet",
+      "text": "Gratis, senza limiti di tempo e di traffico. Reti Airport.FreeWiFi.Ufanet e Airport.FreeWiFi.TTK. Accesso con il numero di cellulare: inserire il numero, poi chiamare il numero ricevuto."
+    }
+  }
+}

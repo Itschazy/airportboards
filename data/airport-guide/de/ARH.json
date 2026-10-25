@@ -1,0 +1,26 @@
+{
+ "iata": "ARH",
+ "about": "Internationaler Flughafen Archangelsk „F. A. Abramow“ (Talagi). Betreiber AO „Aeroport Archangelsk“. Der erste Flug auf der neuen Piste beim Dorf Talagi wurde am 5. Februar 1963 empfangen.",
+ "blocks": {
+  "transport": {
+   "title": "Anreise",
+   "hint": "Bus 12 ins Zentrum",
+   "text": "Bus Nr. 12 fährt zum See- und Flussbahnhof über die Uliza Gagarina, die Uliza Woskressenskaja und den Troizki-Prospekt. Bus Nr. 153 fährt nach Sewerodwinsk bis zum Prospekt Truda: ab Flughafen um 5:50, 9:10, 14:20 und 17:30. Fahrplan beim Busunternehmen erfragen."
+  },
+  "lounges": {
+   "title": "Business-Lounges",
+   "hint": "Pavillon 3, Ebene 2",
+   "text": "Business-Lounge für Inlandsflüge auf Ebene 2 von Pavillon Nr. 3. Eintritt 2 928 ₽, Kinder von 2–12 Jahren 1 464 ₽, unter 2 Jahren kostenlos. Kostenlos für Business Class und Inhaber von Aeroflot Bonus Gold und Platinum. Mit Karten von Mileonair, Every.Lounge, Golden Key u. a. Zugang zur SKY LOUNGE auf Ebene 1 von Pavillon Nr. 3 nach der Sicherheitskontrolle, 04:00–21:30, bis zu 2 Stunden."
+  },
+  "storage": {
+   "title": "Gepäckaufbewahrung",
+   "hint": "Pavillon 3, 24/7",
+   "text": "Gepäckaufbewahrung in Pavillon Nr. 3, rund um die Uhr. Ein Gepäckstück bis 30 kg und kürzer als 1 m kostet 250 ₽ pro Tag. Nicht angenommen werden Dokumente, Geld, Wertsachen und verderbliche Lebensmittel."
+  },
+  "parking": {
+   "title": "Parken",
+   "hint": "30 Min. kostenlos auf P2",
+   "text": "Kurzzeitparkplatz P2: 30 Minuten kostenlos, danach 150 ₽ pro Stunde, über 4 Stunden 800 ₽ pro Tag. Langzeitparkplatz P1: 400 ₽ pro Tag ab der ersten Minute. Kostenloser Parkplatz P4 mit 70 Plätzen 200 m vom Terminal entfernt, ohne Zeitbegrenzung. Verlust des Parkscheins: 2 000 ₽."
+  }
+ }
+}

@@ -1,0 +1,41 @@
+{
+ "iata": "PKC",
+ "about": "Der Internationale Flughafen Petropawlowsk-Kamtschatski (Jelisowo) wird von der Verwaltungsgesellschaft „Aeroporty Regionow“ betrieben. Seit dem 31. März 2025 werden alle regulären Passagierflüge im neuen Terminal abgefertigt. 2024 zählte der Flughafen 931.000 Passagiere.",
+ "blocks": {
+  "transport": {
+   "title": "Anreise",
+   "hint": "Busse 7, 8, 104, 120",
+   "text": "Stadtbusse Nr. 7 (Haltestelle „Awtochosjaistwo“) und Nr. 8 (bis „Garnison“ und Uliza Uralskaja). Bus Nr. 104 fährt nach Jelisowo, Takt 5–20 Minuten. Der Überlandbus Nr. 120 fährt nach Wiljutschinsk, Fahrzeit 1 Std. 35 Min. Fahrplan nach Angaben des Verkehrsministeriums der Region Kamtschatka."
+  },
+  "terminals": {
+   "title": "Terminal",
+   "hint": "Neues Terminal seit 2025",
+   "text": "Alle Linienflüge werden seit dem 31. März 2025 im neuen Terminal abgefertigt. 30 Check-in-Schalter: 15 für Inlands- und 15 für internationale Flüge. Boarding über 5 Fluggastbrücken. Es gibt Kioske zur Selbst-Gepäckaufgabe BAGS ID."
+  },
+  "lounges": {
+   "title": "Business-Lounges",
+   "hint": "Ebene 3, 7 500 ₽",
+   "text": "Business-Lounge auf Ebene 3 des Terminals. Eintritt 7 500 ₽ bis zu 3 Stunden, Kinder von 2–12 Jahren 3 750 ₽. Zugang für Passagiere der Business Class, Teilnehmer von ON PASS, Grey Wall, EveryLounge, Persona.Aero, RusPriority, GoldenKey und alle, die den Eintritt bezahlen."
+  },
+  "storage": {
+   "title": "Gepäckaufbewahrung",
+   "hint": "Ebene 1, 600 ₽/Tag",
+   "text": "Gepäckaufbewahrung auf Ebene 1 des Terminals. 300 ₽ bis 1 Stunde, danach 600 ₽ pro Tag. Gegenstände werden nur verpackt angenommen. Gepäckverpackung auf Ebene 1 von 7:00 bis 19:00, ab 1 000 ₽ pro Stück."
+  },
+  "sleep": {
+   "title": "Schlafen",
+   "hint": "Hotel „Poljot“ in der Nähe",
+   "text": "Hotel „Poljot“ in Gehweite vom Terminal: Jelisowo, Uliza Swjosdnaja 10/7. 36 Zimmer, rund um die Uhr geöffnet. Frühstück inklusive, Check-out 12:00. Telefon +7 (41531) 99-315."
+  },
+  "kids": {
+   "title": "Mit Kind",
+   "hint": "Ebene 3, 8:00–19:30",
+   "text": "Mutter-Kind-Raum auf Ebene 3 des Terminals, 8:00–19:30, kostenlos. Für Kinder unter 7 Jahren mit einem Erwachsenen, Kinder mit Behinderung unter 14 Jahren und Schwangere in der zweiten Schwangerschaftshälfte. Erforderlich sind Ticket oder Bordkarte und eine Bescheinigung der Sanitätsstation auf Ebene 1."
+  },
+  "wifi": {
+   "title": "Wi‑Fi",
+   "hint": "Netz airport-pkc",
+   "text": "Kostenloses Wi‑Fi in den Passagierbereichen. Netz airport-pkc, Anmeldung mit der Mobilfunknummer."
+  }
+ }
+}

@@ -1,0 +1,36 @@
+{
+  "iata": "NJC",
+  "about": "L’aeroporto di Nizhnevartovsk è diventato internazionale dopo la ricostruzione del 2005. Pista 3200 per 60 m. Secondo aeroporto del Circondario autonomo dei Khanty-Mansi – Yugra per volume di traffico.",
+  "blocks": {
+    "transport": {
+      "title": "Come arrivare",
+      "hint": "4 km, bus 15",
+      "text": "Il centro città dista 4 km. Autobus urbani: n. 4 fino a pos. U severnoy roshchi, n. 9 fino a Starovartovskaya, n. 15 fino alla stazione ferroviaria e all’autostazione, n. 21 fino al DRSU. Dal piazzale dell’aerostazione parte un aerobus per Strezhevoy, orari sul sito dell’autostazione. Stazione dei taxi sul piazzale di fronte al terminal n. 2."
+    },
+    "terminals": {
+      "title": "Terminal",
+      "hint": "Serve la carta d’imbarco cartacea",
+      "text": "Due terminal: n. 1 e n. 2. La carta d’imbarco elettronica per le procedure prima del volo al momento non è accettata, serve quella cartacea."
+    },
+    "lounges": {
+      "title": "Sale business",
+      "hint": "Terminal 1, 24/7",
+      "text": "Sala business al livello 1 del terminal 1, aperta giorno e notte. Accedono i passeggeri di classe business e i titolari di carte élite delle compagnie aeree, gli altri a pagamento se ci sono posti liberi. Partenza 7950 ₽ per 2 h 30 min, ogni ora successiva 1141 ₽. Arrivo, accoglienza o accompagnamento 4050 ₽. Bambini 2–12 anni 70 % della tariffa, sotto i 2 anni gratis."
+    },
+    "storage": {
+      "title": "Deposito bagagli",
+      "hint": "Terminal 1, 24/7",
+      "text": "Terminal n. 1, livello 1, giorno e notte. Valigia, borsa o zaino fino a 203 cm come somma delle tre dimensioni 600 ₽ al giorno. Oggetti voluminosi 700 ₽ al giorno. Smarrimento del contrassegno 400 ₽."
+    },
+    "kids": {
+      "title": "Con bambini",
+      "hint": "Sala madre-bambino sotto i 7 anni",
+      "text": "Sala madre e bambino solo con biglietto per una partenza entro le 24 ore successive. Gratuita per donne con bambini sotto i 7 anni e bambini con disabilità. Per gli altri 1200 ₽ per posto letto al giorno."
+    },
+    "parking": {
+      "title": "Parcheggio",
+      "hint": "15 min gratis",
+      "text": "Parcheggio sul piazzale dell’aerostazione. Fino a 15 minuti gratis, poi 200 ₽ all’ora fino a 5 ore. Le prime 24 ore 1000 ₽, ogni successivo periodo di 24 ore 800 ₽. Un nuovo ingresso entro 30 minuti si paga dal momento dell’ingresso. Le casse automatiche nei terminal 1 e 2 accettano solo banconote, la cassa all’uscita accetta carte e QR."
+    }
+  }
+}

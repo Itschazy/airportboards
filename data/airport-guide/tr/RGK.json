@@ -1,0 +1,41 @@
+{
+ "iata": "RGK",
+ "about": "Gorno-Altaysk'a 14 km, М-52 karayoluna (Chuysky Trakt) 400 m uzaklıkta federal öneme sahip havalimanı. 1968'den beri hizmette, 2024'ten beri Sber Grubu'na bağlı. Üç bina: gidiş terminali, iç hatlar geliş terminali ve dış hatlar terminali.",
+ "blocks": {
+  "transport": {
+   "title": "Nasıl gidilir",
+   "hint": "103 numaralı otobüs, 30 dk",
+   "text": "103 (6:33–21:37) ve 103-1 (6:37–20:37) numaralı otobüsler Gorno-Altaysk merkezine, yaklaşık 30 dakika, 35–40 ₽. Havalimanının resmî taşıyıcısı Manzherok taksi: 800 ₽'den, kontuar geliş terminalinde, +7 913 690-29-31. Araçla 14 km, 15–20 dakika."
+  },
+  "terminals": {
+   "title": "Terminaller",
+   "hint": "3 bina, geliş solda",
+   "text": "Merkez binada gidiş terminali ve business salonu. Solda ayrı iç hatlar geliş terminali. Sağda VIP salonlu dış hatlar terminali."
+  },
+  "lounges": {
+   "title": "Business salonları",
+   "hint": "Konforlu salon 3500 ₽",
+   "text": "Merkez binada business salonu: business sınıfı yolcuları, havayollarının Gold ve Platinum kart sahipleri, ayrıca Every Lounge, Grey Wall Pass ve On Pass ile veya ücret karşılığında. Konforlu bekleme salonu: yetişkin 3500 ₽, 2–12 yaş çocuk 2500 ₽, 2 yaşından küçük ücretsiz, 3 saate kadar. VIP salon dış hatlar terminalinde. Rezervasyon: +7 913 691-11-39, vip@rgk-aero.ru."
+  },
+  "storage": {
+   "title": "Emanet",
+   "hint": "Kat 1, günlüğü 400 ₽'den",
+   "text": "Otomatik emanet dolapları terminal binasında Kat 1'de, havalimanının çalışma saatlerinde. Dolaplar boyuta göre günlüğü 400, 600 ve 1000 ₽. Süre 6 aya kadar. Ödeme kart veya nakit."
+  },
+  "kids": {
+   "title": "Çocukla",
+   "hint": "Kat 2, ücretsiz",
+   "text": "Anne-bebek odası terminal binasında Kat 2'de, ücretsiz. 7 yaşından küçük çocuklarla, 14 yaşından küçük engelli çocuklarla ve gebeliğin ikinci yarısındaki kadınlar kabul edilir. Kalış kalkıştan önce 12 saate kadar; sağlık noktasında muayeneden sonra, belgeler ve biniş kartıyla."
+  },
+  "parking": {
+   "title": "Otopark",
+   "hint": "15 dakika ücretsiz",
+   "text": "Terminallerin önünde indirme-bindirme 15 dakika ücretsiz, bir saat içinde tekrar giriş 250 ₽. P1: saati 400 ₽, 1 ila 5 saat arası saati 300 ₽, günlüğü 3000 ₽. P2: günlüğü 1000 ₽. P3: 180 dakika ücretsiz, 3 ila 5 saat arası saati 200 ₽, sonrası günlüğü 800 ₽."
+  },
+  "wifi": {
+   "title": "Wi‑Fi",
+   "hint": "RGK_WIFI_FREE, SMS ile",
+   "text": "RGK_WIFI_FREE ve Rostelekom_WiFi_FREE ağları. Giriş telefon numarasıyla: kod SMS ile gelir. Giriş sırasında mobil interneti kapatın."
+  }
+ }
+}

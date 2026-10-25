@@ -1,0 +1,30 @@
+{
+ "iata": "HRG",
+ "blocks": {
+  "transport": {
+   "title": "Anreise",
+   "hint": "Sammeltaxis, etwa 20 Minuten",
+   "text": "Ins Zentrum von Hurghada sind es etwa 20 Minuten mit dem Auto. Sammeltaxis in die Stadt warten am Flughafenausgang und fahren ab, sobald sie voll sind, einen festen Fahrplan haben sie nicht."
+  },
+  "taxi": {
+   "title": "Taxi",
+   "hint": "Preis vor dem Einsteigen",
+   "text": "Taxis stehen am Ausgang des Ankunftsbereichs. Den Fahrpreis vereinbart man vor dem Einsteigen mit dem Fahrer. Es gibt Autovermietungen, darunter Hertz."
+  },
+  "terminals": {
+   "title": "Terminals",
+   "hint": "Zwei Terminals",
+   "text": "Der Flughafen hat zwei Passagierterminals. In den Terminals gibt es Geldautomaten und Wechselstuben."
+  },
+  "lounges": {
+   "title": "Business-Lounges",
+   "hint": "Pearl Lounge, Terminal 1",
+   "text": "Pearl Lounge in Terminal 1: nach Passkontrolle und Sicherheitskontrolle, auf Ebene 2 an Gate 30, rund um die Uhr geöffnet. Wer Zugang hat, geben die Quellen unterschiedlich an – Zugangsbedingungen bitte bei der Lounge erfragen."
+  },
+  "storage": {
+   "title": "Gepäckaufbewahrung",
+   "hint": "Am Flughafen vorhanden",
+   "text": "Am Flughafen gibt es eine Gepäckaufbewahrung. Wo genau sie sich befindet und was sie kostet, geben die Quellen nicht an."
+  }
+ }
+}

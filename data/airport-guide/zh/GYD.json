@@ -1,0 +1,30 @@
+{
+  "iata": "GYD",
+  "blocks": {
+    "transport": {
+      "title": "交通方式",
+      "hint": "大巴至火车站，1.30 AZN",
+      "text": "Aero Express大巴从1号和2号航站楼开往巴库火车站（28 May地铁站），途经Suraxanı桥和Koroğlu地铁站。06:00至23:15每20分钟一班，夜间每45分钟一班。使用BAKU CARD乘车1.30 AZN，卡本身2 AZN；一张卡可供多人共同使用。"
+    },
+    "lounges": {
+      "title": "商务休息室",
+      "hint": "多个休息室",
+      "text": "机场设有AZAL、Business Class Lounge、Absheron、Salam、Baku Club、Premium和Mugam休息室。AZAL Lounge位于1号航站楼一楼，为商务舱和高端经济舱旅客提供免排队的单独值机，并有专用下车区。"
+    },
+    "kids": {
+      "title": "携儿童出行",
+      "hint": "1号和2号航站楼",
+      "text": "母婴室配有尿布台以及冷热水：1号航站楼在3楼和4楼，2号航站楼在2楼。所有多功能卫生间也设有尿布台。"
+    },
+    "parking": {
+      "title": "停车",
+      "hint": "前15分钟免费，24/7",
+      "text": "24小时开放，车位超过2000个：1号航站楼旁835个，2号航站楼旁1166个。前15分钟免费，2小时内1 AZN，4小时内2 AZN，12小时内6 AZN，一天内15 AZN，之后每天加收15 AZN。可用现金、银行卡或在线支付（Tezöde、AzParkinq、Birbank）。"
+    },
+    "wifi": {
+      "title": "Wi‑Fi",
+      "hint": "Baku-Airport-Free-WiFi",
+      "text": "整个航站楼提供免费Wi‑Fi，包括咖啡馆、商店和商务休息室：网络名Baku-Airport-Free-WiFi。1号航站楼出发区设有可免费上网的电脑。"
+    }
+  }
+}

@@ -1,0 +1,46 @@
+{
+ "iata": "VKO",
+ "about": "Die Passagiere in Wnukowo werden im Terminal A abgefertigt, die VIP-Lounges befinden sich in einem separaten Gebäude. Ankunft auf Ebene 1 des Terminals, Abflug auf Ebene 2. Von der Metrostation „Aeroport Wnukowo“ der Solnzewskaja-Linie führt eine Unterführung ins Terminal.",
+ "blocks": {
+  "lounges": {
+   "title": "Business-Lounges",
+   "hint": "Terminal A, 24 Stunden",
+   "text": "Inlandsflüge: Prokofiev Lounge, Ebene 2 nach der Sicherheitskontrolle, gegenüber Gate 13. International: „Tschaikowski“ auf Ebene 1 des Atriums nach der Passkontrolle und ART Lounge auf Ebene 2 des Atriums, beide an Gate 21. Die VIP Lounge auf Ebene 3 vor der Sicherheitskontrolle nimmt alle Flüge auf, bei internationalem Abflug die Lounge 1 Stunde vorher verlassen. Zugang für die Business Class, über die Programme ON PASS, Persona Aero, Every lounge, RusPriority und andere oder gegen Gebühr: 2900 ₽ (ART Lounge 3500 ₽) für 3 Stunden."
+  },
+  "storage": {
+   "title": "Gepäckaufbewahrung",
+   "hint": "Terminal A, Ebene −1",
+   "text": "Terminal A, Ebene −1, rund um die Uhr. Gepäckstück bis 30 kg, Aufbewahrung bis zu 6 Monate. Erster Kalendertag 1000 ₽, vom 2. bis zum 29. Tag 900 ₽ pro Tag, Sperrgepäck 1500 ₽. Telefon +7 (926) 895-36-82."
+  },
+  "sleep": {
+   "title": "Schlafen",
+   "hint": "Hotel gegenüber Terminal A",
+   "text": "Das DoubleTree by Hilton liegt gegenüber Terminal A, 2 Minuten vom unterirdischen Tunnel zum Terminal und zur Metro. Das Hotel hat 432 Zimmer und ist rund um die Uhr geöffnet. Adresse: 2-ja Reissowaja Uliza 2, Telefon +7 (495) 436-37-37."
+  },
+  "kids": {
+   "title": "Mit Kind",
+   "hint": "Terminal A, Ebene 2",
+   "text": "Kinderwartesaal auf Ebene 2 von Terminal A, rund um die Uhr und kostenlos, frühestens 6 Stunden vor Abflug. Aufgenommen werden Kinder unter 7 Jahren (mit Behinderung unter 12) mit einem Erwachsenen und Schwangere in der zweiten Schwangerschaftshälfte. Gepäck und Kinderwagen dürfen nicht mit hinein, Telefon +7 (495) 436-29-26."
+  },
+  "transport": {
+   "title": "Anreise",
+   "hint": "Metro bis zum Terminal",
+   "text": "Metrostation „Aeroport Wnukowo“ an der Solnzewskaja-Linie. Vom Bahnsteig führt eine Unterführung ins Terminal A, zu den Zügen und zu den Bushaltestellen. Ab „Saljarjewo“ (Sokolnitscheskaja-Linie) fährt Bus Nr. 911: 18–20 Minuten, Takt 10–15 Minuten. Der Aeroexpress fährt hier nicht mehr: Vom Kiewer Bahnhof fährt ein normaler Zug, 35–40 Minuten, einmal pro Stunde, zum Flughafen von 7:00 bis 23:00."
+  },
+  "parking": {
+   "title": "Parken",
+   "hint": "15 Min. kostenlos",
+   "text": "Die Einfahrt auf den Vorplatz ist 15 Minuten kostenlos, insgesamt höchstens 60 Minuten pro Tag. Die Parkhäuser Nr. 1 und Nr. 2 mit je 350 Plätzen. Tarif: 1. Stunde 600 ₽, 2. Stunde 400 ₽, danach 1500 ₽ pro Tag. Die Tiefgarage im Hotel DoubleTree auf der anderen Straßenseite kostet 2000 ₽ pro Tag."
+  },
+  "wifi": {
+   "title": "Wi‑Fi",
+   "hint": "Netz MT_FREE",
+   "text": "Kostenloses Wi‑Fi im gesamten Terminal A. Das Netz heißt MT_FREE. Anmeldung mit der Telefonnummer, die Nummer wird per Anruf bestätigt."
+  },
+  "terminals": {
+   "title": "Terminal",
+   "hint": "Terminal A und VIP",
+   "text": "Passagierterminal A und VIP-Lounge in einem separaten Gebäude. Ankunft auf Ebene 1 von Terminal A, Abflug auf Ebene 2, dorthin führt eine Hochstraße, die VIP-Lounges auf Ebene 3. Vom Inlandsbereich in den internationalen Bereich kann man wechseln, ohne das Terminal zu verlassen."
+  }
+ }
+}

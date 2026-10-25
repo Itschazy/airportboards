@@ -1,0 +1,51 @@
+{
+ "iata": "LED",
+ "about": "Pulkovo Havalimanı, Sankt-Peterburg'un Saray Meydanı'na 23 km uzaklıkta. Yolculara merkezî yolcu terminali hizmet verir; Pulkovo-1 binası ana binaya bir geçiş galerisiyle bağlıdır ve iç hat uçuşlarına hizmet verir. Havalimanını 2010'dan beri Vozdushnye Vorota Severnoy Stolitsy OOO işletiyor, ana taşıyıcı Rossiya havayolu.",
+ "blocks": {
+  "lounges": {
+   "title": "Business salonları",
+   "hint": "2 iç hat + 1 dış hat",
+   "text": "Üç business salonu. İkisi iç hatlar gidiş alanında, bunlardan biri New Pulkovo Lounge; biri dış hatlar gidiş alanında. İç hatlarda giriş Kat 2'deki salonun sonunda. Ücretsiz: öncelikli sınıf ve havayolu sadakat programlarının öncelikli seviyeleri, kalkıştan 4 saat önce; MILE·ON·AIR, Every Lounge, Comfort Pass, RusPriority, Golden Key, Grey Wall Pass, Persona.aero, DreamFolks, 2 saat önce. Tek seferlik ziyaret 2 saati 3500 ₽, 2 yaşından küçük çocuklar ücretsiz."
+  },
+  "storage": {
+   "title": "Emanet",
+   "hint": "Kat 1, 1100 ₽'den",
+   "text": "Yeni terminalde Kat 1'de. Bir bagaj parçası ilk takvim günü için 1100 ₽, sonrası günlüğü 500 ₽. Kasalı dolap: 1500 ₽, sonrası günlüğü 800 ₽. Operatör Aeroservis, +7 921 859-55-33."
+  },
+  "sleep": {
+   "title": "Nerede uyunur",
+   "hint": "Kapsüller, saati 1100 ₽",
+   "text": "Merkezî terminalde Kat 2'deki bekleme salonunda kapsül otel. İki kişilik 140×200 cm yatak; kapsülde 220 V priz ve ücretsiz Wi‑Fi. Saatlik ücret saati 1100 ₽, nakit veya kartla. Telefon +7 921 859-55-22."
+  },
+  "kids": {
+   "title": "Çocukla",
+   "hint": "Kat 2, 24/7, ücretsiz",
+   "text": "Anne-bebek odası terminal ana binasında Kat 2'de, gece gündüz açık ve ücretsiz. 7 yaşına kadar (bu yaş dahil) çocuklarla, 14 yaşından küçük engelli çocuklarla, en fazla 3 saat için kabul edilir. Bilet veya biniş kartı, çocuğun belgesi ve sağlık raporu gerekir; rapor Kat 2'deki revirde ücretsiz verilir. İç hatlar için çocuk alanı Kat 2'de, Bufet restoranının arkasında."
+  },
+  "transport": {
+   "title": "Nasıl gidilir",
+   "hint": "39, 39Э, 82Э otobüsleri",
+   "text": "39 numara Moskovskaya metro istasyonundan tüm duraklarda durarak gider: sefer aralığı 5–7 dk, yolculuk 35 dk, havalimanından 5:15–1:36 arası. 39Э durmadan gider: sefer aralığı 13–20 dk, yolculuk 27 dk, havalimanından 6:00–1:40 arası. 82Э Prospekt Veteranov metro istasyonundan: sefer aralığı 15–16 dk, yolculuk 25 dk, havalimanından 6:05–1:41 arası."
+  },
+  "taxi": {
+   "title": "Taksi ve duraklar",
+   "hint": "Yandex Go, kontuarlar 24/7",
+   "text": "Havalimanının resmî taksi ortağı: Yandex Go. Kontuarlar gece gündüz açık: iç hatlar bagaj alım alanında ve dış hatlar bagaj alımından çıkışta. 39, 39Э ve 82Э otobüsleri Kat 3'e getirir, Kat 1'den kalkar; ücret 88 ₽. Duraktaki Podorozhnik kiosku 8:00–20:00 arası açık."
+  },
+  "parking": {
+   "title": "Otopark",
+   "hint": "Giriş önünde 15 dk ücretsiz",
+   "text": "Terminal önünde ilk 15 dakika ücretsiz, sonra her 30 dakika için 2000 ₽. 30 dakikada en fazla bir kez girilebilir. P2 (kısa süreli): 30 dakikası 450 ₽, yürüyerek 2–4 dakika. P4 (uzun süreli): ilk 24 saat 1100 ₽, 14 günden itibaren her 24 saat için 700 ₽. 120 araçlık ücretsiz P0 otoparkı Pulkovskoye Şossesi'nde, havalimanına 3 km uzaklıkta."
+  },
+  "wifi": {
+   "title": "Wi‑Fi",
+   "hint": "OBIT, arama ile giriş",
+   "text": "OBIT şirketinin ücretsiz \"OBIT — Free Internet Access\" ağı. Telefon numarası +ülke kodu biçiminde girilmelidir; yabancı numaralar da kabul edilir. Numaraya bir arama gelir, yanıtlamak gerekmez: arayan numaranın son 4 hanesi erişim kodudur."
+  },
+  "terminals": {
+   "title": "Terminal",
+   "hint": "1 geliş, 2–3 gidiş",
+   "text": "Check-in Kat 3'te. İç hatlar gidiş alanı Kat 2'de, dış hatlar Kat 3'te. Geliş ve karşılama alanı Kat 1'de."
+  }
+ }
+}

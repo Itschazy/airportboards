@@ -1,0 +1,36 @@
+{
+ "iata": "NJC",
+ "about": "Nizhnevartovsk Airport became international after reconstruction in 2005. Runway 3,200 by 60 m. The second-largest airport of KhMAO-Yugra by traffic volume.",
+ "blocks": {
+  "transport": {
+   "title": "Getting there",
+   "hint": "4 km, bus 15",
+   "text": "4 km to the city centre. City buses: No. 4 to U Severnoy Roshchi settlement, No. 9 to Starovartovskaya, No. 15 to the railway station and bus station, No. 21 to DRSU. An airport bus to Strezhevoy runs from the station forecourt; timetable on the bus station website. The taxi rank is on the station forecourt opposite terminal No. 2."
+  },
+  "terminals": {
+   "title": "Terminals",
+   "hint": "Paper boarding pass needed",
+   "text": "Two terminals: No. 1 and No. 2. Electronic boarding passes are currently not accepted for pre-flight procedures; a paper one is required."
+  },
+  "lounges": {
+   "title": "Lounges",
+   "hint": "Terminal 1, 24/7",
+   "text": "Business lounge on Level 1 of terminal 1, open round the clock. Admits business class passengers and holders of elite airline cards, others for a fee if places are available. Departure 7,950 ₽ for 2 h 30 min, each following hour 1,141 ₽. Arrival, meeting or seeing off 4,050 ₽. Children 2–12 years 70 % of the fare, under 2 free."
+  },
+  "storage": {
+   "title": "Left luggage",
+   "hint": "Terminal 1, 24/7",
+   "text": "Terminal No. 1, Level 1, open round the clock. A suitcase, bag or backpack up to 203 cm (sum of three dimensions): 600 ₽ per day. Oversized items 700 ₽ per day. Lost tag 400 ₽."
+  },
+  "kids": {
+   "title": "With children",
+   "hint": "Room for children under 7",
+   "text": "The mother and child room is available only with a ticket for a departure within the next 24 hours. Free for women with children under 7 and disabled children. Others pay 1,200 ₽ per bed per day."
+  },
+  "parking": {
+   "title": "Parking",
+   "hint": "15 min free",
+   "text": "Car park on the station forecourt. Up to 15 minutes free, then 200 ₽ per hour up to 5 hours. First 24 hours 1,000 ₽, each further 24 hours 800 ₽. A repeat entry within 30 minutes is paid from the moment of entry. Machines in terminals 1 and 2 accept banknotes only; the cashier at the exit accepts cards and QR."
+  }
+ }
+}

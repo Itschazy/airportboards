@@ -1,0 +1,31 @@
+{
+ "iata": "NUX",
+ "about": "L'aéroport de Novy Ourengoï est géré par la société de gestion « Aeroporty Regionov ». Des vols réguliers desservent 19 destinations ; en 2025, l'aéroport a accueilli plus de 1 million de passagers.",
+ "blocks": {
+  "transport": {
+   "title": "Comment s'y rendre",
+   "hint": "N° 101 depuis la gare, 18 min",
+   "text": "Bus n° 101 « Yamal-Express » depuis la gare ferroviaire, 18 min. Bus n° 3 depuis la gare ferroviaire, 30 min, toutes les 8–15 min, 43 ₽. Bus n° 1 depuis le quartier Sever, 45 min, toutes les 8–10 min, 43 ₽."
+  },
+  "parking": {
+   "title": "Parking",
+   "hint": "15 min gratuites",
+   "text": "Zone de dépose et de prise en charge : 15 min gratuites, jusqu'à 60 min 540 ₽, ensuite 540 ₽/heure. Parking P1 sans temps gratuit : jusqu'à 60 min 320 ₽, jusqu'à 2 heures 560 ₽, jusqu'à 24 heures 740 ₽. Parking gratuit P0 de 55 places près de l'arrêt « Vertodrom », à 2 arrêts du terminal."
+  },
+  "lounges": {
+   "title": "Salons",
+   "hint": "Après contrôle, 5800 ₽",
+   "text": "Salon dans la zone d'attente après le contrôle. Accès pour les passagers de classe affaires, les membres de Persona.Aero, ON PASS, Grey Wall, Every Lounge, GoldenKey et ceux qui paient eux-mêmes. Prix 5800 ₽ jusqu'à 3 heures, ensuite 550 ₽ par heure."
+  },
+  "storage": {
+   "title": "Consigne à bagages",
+   "hint": "Hall des départs, dès 500 ₽",
+   "text": "Consigne automatique dans le hall des départs au niveau 1. Casier standard 500 ₽ par jour ou 200 ₽ de l'heure, grand casier 900 ₽ par jour ou 300 ₽ de l'heure. Le casier s'ouvre avec le code-barres du ticket."
+  },
+  "wifi": {
+   "title": "Wi‑Fi",
+   "hint": "Réseau FREE_NUX",
+   "text": "Wi‑Fi gratuit dans les zones passagers. Choisissez le réseau FREE_NUX et confirmez la connexion par numéro de téléphone mobile."
+  }
+ }
+}

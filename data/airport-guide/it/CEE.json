@@ -1,0 +1,26 @@
+{
+  "iata": "CEE",
+  "about": "L’aeroporto appartiene all’azienda aeronautica «Severstal». Lunghezza della pista 2500 m, capacità del terminal 120 passeggeri all’ora.",
+  "blocks": {
+    "parking": {
+      "title": "Parcheggio",
+      "hint": "90 min gratis",
+      "text": "Piazzale dell’aerostazione: fino a 90 minuti gratis, in caso di ritardo del volo un nuovo ingresso di 90 minuti senza pagamento. Oltre 90 minuti tariffa di 1000 ₽ per ogni giorno. Parcheggio a pagamento aperto giorno e notte: 350 ₽ al giorno. Telefono (8202) 675-217."
+    },
+    "lounges": {
+      "title": "Sale business",
+      "hint": "Livello 1, a sinistra",
+      "text": "Sala business ON PASS al livello 1 nella parte sinistra dell’edificio, 14 posti. Accedono i passeggeri con accesso ON PASS e i passeggeri con tariffa «Business» dopo check-in e controlli. Orari secondo il regolamento dell’aeroporto. Reception +7 (909) 523-92-09."
+    },
+    "sleep": {
+      "title": "Dove dormire",
+      "hint": "Hotel Sky-Park vicino",
+      "text": "Hotel Sky-Park 3* vicino all’aeroporto: 62 camere, ristorante al livello 1, Wi‑Fi. Prenotazioni +7 (8202) 67-52-64."
+    },
+    "kids": {
+      "title": "Con bambini",
+      "hint": "Livello 1, gratis",
+      "text": "Sala madre e bambino al livello 1 nella sala d’attesa dei voli nazionali. Per chi parte con bambini sotto i 7 anni, bambini con disabilità e donne in gravidanza. Gratis. Chiamare un addetto del servizio passeggeri o rivolgersi al banco check-in."
+    }
+  }
+}

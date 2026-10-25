@@ -1,0 +1,26 @@
+{
+ "iata": "ABA",
+ "about": "Aéroport international d'Abakan, adresse : Abakan, prospekt Droujby Narodov, 59. À partir du 25 octobre 2026, l'aérogare est ouverte de 04:30 à 22:00. Renseignements (3902) 202-489.",
+ "blocks": {
+  "transport": {
+   "title": "Comment s'y rendre",
+   "hint": "Bus 106, trolleybus 3–5",
+   "text": "Bus n° 106, trolleybus n° 3, n° 4 et n° 5. Taxis : « Maxim » +7 (3902) 28-28-28, « Khorochee » +7 (3902) 30-07-00, « Troïka » +7 (3902) 23-33-33."
+  },
+  "lounges": {
+   "title": "Salons",
+   "hint": "Aile droite, 05–22",
+   "text": "Salon de confort supérieur dans l'aile droite de l'aérogare, 05:00–22:00, jusqu'à 3 heures. Classe économique : adulte 5000 ₽, enfant de moins de 12 ans 2500 ₽, gratuit pour les moins de 2 ans. Classe affaires et programmes d'accès aux salons : 2700 ₽ par adulte. Téléphone +7 913 449-38-26."
+  },
+  "kids": {
+   "title": "Avec un enfant",
+   "hint": "Aile gauche, gratuit",
+   "text": "Salle mère-enfant dans l'aile gauche de l'aérogare, à côté du poste médical. Chambre, salle de jeux, cuisine, table à langer. Pour les enfants de moins de 7 ans, passeport et carte d'embarquement requis. Gratuit. Téléphone (3902) 202-551."
+  },
+  "parking": {
+   "title": "Parking",
+   "hint": "Fermé temporairement",
+   "text": "Le parking payant longue durée, à 50 m à droite de l'aérogare, est temporairement fermé."
+  }
+ }
+}

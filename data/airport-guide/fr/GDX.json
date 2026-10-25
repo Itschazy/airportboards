@@ -1,0 +1,35 @@
+{
+ "iata": "GDX",
+ "blocks": {
+  "transport": {
+   "title": "Comment s'y rendre",
+   "hint": "Bus 101",
+   "text": "Le bus n° 101 circule entre la gare routière de Magadan et l'aéroport Sokol."
+  },
+  "lounges": {
+   "title": "Salons",
+   "hint": "Niveau 2, 4000 ₽",
+   "text": "Salon au deuxième niveau, en zone réservée des vols intérieurs : après le contrôle au niveau 3, descendre en suivant la signalétique. Ouvert pendant le traitement des vols. Accès avec les programmes ON·PASS, Persona.aero, RusPriority, Every Lounge, Golden Key et d'autres ; tout passager peut demander le service à l'enregistrement et le payer à la caisse : 4000 ₽ à partir de 2 ans, gratuit en dessous."
+  },
+  "storage": {
+   "title": "Consigne à bagages",
+   "hint": "Niveau 2, 8:30–20:30",
+   "text": "Consigne automatique pour les passagers des vols intérieurs au niveau 2, de 8:30 à 20:30, paiement par carte uniquement. Casier standard 51×63×76 cm 1000 ₽ par jour, grand 51×195×76 cm 2000 ₽ ; moins d'un jour est facturé comme un jour."
+  },
+  "kids": {
+   "title": "Avec un enfant",
+   "hint": "Niveau 3, gratuit",
+   "text": "Salle mère-enfant au troisième niveau, gratuite, pour les passagers au départ et à l'arrivée. Pour les enfants de moins de 7 ans avec un adulte, les enfants handicapés de moins de 14 ans et les femmes dans la seconde moitié de la grossesse."
+  },
+  "parking": {
+   "title": "Parking",
+   "hint": "15 min gratuites",
+   "text": "Place de l'aérogare P1 à 30 m du terminal : 15 premières minutes gratuites, jusqu'à une heure 500 ₽, chaque heure suivante 300 ₽, la journée 2000 ₽. Nouvelle entrée dans l'heure pour 1–15 minutes : 200 ₽."
+  },
+  "wifi": {
+   "title": "Wi‑Fi",
+   "hint": "Gratuit",
+   "text": "Wi‑Fi gratuit dans l'aérogare ; selon la loi « Sur les communications », l'identification de l'utilisateur est requise, conditions sur la page d'accueil de l'opérateur."
+  }
+ }
+}

@@ -1,0 +1,36 @@
+{
+ "iata": "KZN",
+ "about": "Kazan International Airport named after Gabdulla Tukay is 26 km from the centre of Kazan. A bus and a suburban train run to it; there are paid car parks and a free one.",
+ "blocks": {
+  "transport": {
+   "title": "Getting there",
+   "hint": "Bus 197, suburban train",
+   "text": "Bus No. 197 runs from Vostochny bus station along Pobedy Ave, past Prospekt Pobedy metro station, and ends at Terminals 1 and 1А. Runs from 6:00 to 22:00, operator PATP-8. Kazan — Airport suburban trains are run by Sodruzhestvo. Taxis operate round the clock."
+  },
+  "lounges": {
+   "title": "Lounges",
+   "hint": "From 3,200 ₽",
+   "text": "Bolgar — Ak Bars Bank Lounge: Level 2 after security, on the right after gate No. 4, 3,500 ₽. Sviyazhsk: Level 3 after security, 4,500 ₽. In the international departure area of Terminal 1А: Sky Lounge on Level 1, 5,500 ₽, and Prime Lounge on Level 2, 3,200 ₽. Children 2–12 years pay half price."
+  },
+  "storage": {
+   "title": "Left luggage",
+   "hint": "Т1, basement, 24/7",
+   "text": "Terminal 1, basement floor, open round the clock. An item of baggage costs 400 ₽ until midnight of the current day, then 200 ₽ for each day. A part day counts as a full day. Operator PACK&FLY, phone +7 843 254 00 21."
+  },
+  "sleep": {
+   "title": "Where to sleep",
+   "hint": "Hotel 270 m away",
+   "text": "Polyot hotel is on the airport grounds, 270 m from Terminal 1. Meals are ordered when booking or delivered to the room; the canteen is on Level 3 of Terminal 1. Front desk: +7 (843) 267-87-05."
+  },
+  "kids": {
+   "title": "With children",
+   "hint": "Т1, Level 2, 24/7",
+   "text": "Mother and child room on Level 2 of Terminal 1, open round the clock. Admits passengers with children under 7, with children with disabilities under 14, and women in the second half of pregnancy. Inside: two bedrooms with cots, two playrooms, an eating area with a microwave and a food warmer, a shower. Phone +7 (843) 267-87-86."
+  },
+  "parking": {
+   "title": "Parking",
+   "hint": "20 min free",
+   "text": "The first 20 minutes from entry are free. Parking is paid at pay stations in the terminals and car parks or in the airport app. Questions about parking at terminals 1, 1А and 2: +7 (843) 254-01-55."
+  }
+ }
+}

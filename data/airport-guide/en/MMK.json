@@ -1,0 +1,21 @@
+{
+ "iata": "MMK",
+ "about": "Murmansk: the airport is 24 km south-west of the city centre and 4 km from the settlement of Murmashi, open round the clock. One runway 2,500 × 42 m. Operator: JSC Murmansk Airport.",
+ "blocks": {
+  "transport": {
+   "title": "Getting there",
+   "hint": "Bus 106, about an hour",
+   "text": "Bus or minibus taxi No. 106 runs from the Murmansk railway station square at intervals of 20–30 minutes, journey time about an hour. At night No. 106н Murmansk — Airport runs."
+  },
+  "storage": {
+   "title": "Left luggage",
+   "hint": "Basement floor, 24/7",
+   "text": "Left luggage on the basement floor, open round the clock. First tell the security staff about your baggage at the terminal entrance screening: after screening, an aviation security officer escorts you to left luggage. Payment at the information window."
+  },
+  "kids": {
+   "title": "With children",
+   "hint": "Level 2, free, 24/7",
+   "text": "Mother and child room on Level 2 in the left wing of the terminal, free and open round the clock. For passengers with children under 7, disabled children under 14 and women in the second half of pregnancy. Enter with hand luggage only; baggage goes to left luggage."
+  }
+ }
+}

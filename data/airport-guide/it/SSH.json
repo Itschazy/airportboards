@@ -1,0 +1,25 @@
+{
+ "iata": "SSH",
+ "blocks": {
+  "transport": {
+   "title": "Come arrivare",
+   "hint": "Minibus, prezzo in anticipo",
+   "text": "I minibus per Sharm el-Sheikh di solito partono quando sono pieni; il prezzo si concorda in anticipo con l’autista. C’è il noleggio auto: Hertz, Thrifty e aziende locali."
+  },
+  "taxi": {
+   "title": "Taxi",
+   "hint": "Prezzo prima di salire",
+   "text": "In aeroporto ci sono i taxi; il prezzo della corsa si concorda con l’autista prima di salire."
+  },
+  "terminals": {
+   "title": "Terminal",
+   "hint": "Due terminal",
+   "text": "L’aeroporto ha due terminal passeggeri. Ci sono bancomat e uffici di cambio valuta."
+  },
+  "storage": {
+   "title": "Deposito bagagli",
+   "hint": "Presente in aeroporto",
+   "text": "In aeroporto c’è un deposito bagagli. Il prezzo non è indicato dalle fonti."
+  }
+ }
+}

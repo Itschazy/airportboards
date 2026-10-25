@@ -1,0 +1,36 @@
+{
+ "iata": "IJK",
+ "about": "El aeropuerto de Izhevsk forma parte de AO «Izhavia» junto con la aerolínea, un turoperador y una agencia de viajes. La empresa aérea se fundó en 1944; el 100% de las acciones pertenece a la República de Udmurtia.",
+ "blocks": {
+  "transport": {
+   "title": "Cómo llegar",
+   "hint": "Traslado a la ciudad 1500 ₽",
+   "text": "Traslado del aeropuerto desde la plaza de la terminal en coche con conductor. Izhevsk y alrededores hasta 30 km, 1500 ₽; Votkinsk, 4000 ₽; Sarapul, 5000 ₽; Chaikovski, 6000 ₽. Reserva con 3 horas o más de antelación en izhavia.su o, tras la llegada, en la caja del aeropuerto, si hay coches libres."
+  },
+  "terminals": {
+   "title": "Terminal",
+   "hint": "2 plantas, 4 pasarelas",
+   "text": "Atención en la nueva terminal de pasajeros de 10 850 m². 2 plantas, 11 mostradores de facturación, 4 puertas de embarque con pasarela. 5 ascensores, escalera mecánica a la zona de salidas. Señalización en ruso, udmurto, inglés y chino."
+  },
+  "lounges": {
+   "title": "Salas VIP",
+   "hint": "Nivel 2, 4500 ₽",
+   "text": "Sala business en el nivel 2 de la terminal: adultos 4500 ₽, niños de 2–12 años 2250 ₽, menores de 2 años gratis, hasta 3 horas. Con las tarjetas RusPriority, ON PASS, Persona Aero, Every Lounge, Grey Wall Pass y GoldenKey; no se aceptan Priority Pass ni Lounge Key. Sala VIP: adultos 12 000 ₽, niños de 2–12 años 6000 ₽. Solicitudes: vip@izhavia.su."
+  },
+  "storage": {
+   "title": "Consigna",
+   "hint": "Nivel 1, detrás de información",
+   "text": "Consigna en el nivel 1, en la sala detrás del mostrador de información. Acepta gratis equipaje durante el retraso de un vuelo, así como equipaje no reclamado y equipaje reexpedido. Custodia de objetos encontrados: 400 ₽. Un bulto, hasta 30 kg."
+  },
+  "kids": {
+   "title": "Con niños",
+   "hint": "Nivel 2, 24/7, gratis",
+   "text": "Sala madre e hijo en el nivel 2 de la terminal, abierta las 24 horas y gratuita. Admite a pasajeros con niños menores de 7 años, con niños con discapacidad menores de 18 años y a embarazadas en la segunda mitad del embarazo. Se necesita tarjeta de embarque. La comida y los productos de higiene los traen los padres."
+  },
+  "parking": {
+   "title": "Aparcamiento",
+   "hint": "15 min gratis",
+   "text": "Hasta 15 minutos gratis, de 16 a 30 minutos 250 ₽, de 30 minutos a 2 horas 500 ₽/hora, más de 2 horas 750 ₽/día. Aparcamiento VIP 300 ₽/hora hasta 5 horas, sin tiempo gratuito. Salida dentro de los 15 minutos siguientes al pago. Gratis para vehículos de personas con discapacidad inscritos en el registro federal."
+  }
+ }
+}

@@ -1,0 +1,30 @@
+{
+ "iata": "VOG",
+ "blocks": {
+  "transport": {
+   "title": "Anreise",
+   "hint": "Bus 6 zum Bahnhof",
+   "text": "Bus Nr. 6 „Flughafen – Bahnhof“ fährt etwa von 6:00 bis 23:00: werktags 78 Fahrten in jede Richtung, am Wochenende 61. Vorortzüge fahren vom Bahnsteig „Aeroport“ über Wolgograd-1 bis Schpalopropitka, Fahrschein 52,20 ₽, Kinder unter 7 Jahren kostenlos; ab Flughafen 4 Züge pro Tag, der erste um 14:36."
+  },
+  "lounges": {
+   "title": "Business-Lounges",
+   "hint": "Terminal С2, Ebene 2, 24/7",
+   "text": "Business-Lounge des Inlandsterminals С2 auf Ebene 2, im Sicherheitsbereich nach der Kontrolle, rund um die Uhr geöffnet. Zugang für Passagiere der Business Class, Premium-Kunden von Banken und Teilnehmer von Treueprogrammen; jeder Passagier kann einen Einzelbesuch beim Lounge-Mitarbeiter bezahlen. Aufenthalt bis zu 2 Stunden."
+  },
+  "storage": {
+   "title": "Gepäckaufbewahrung",
+   "hint": "Terminal С2, 500 ₽ pro Tag",
+   "text": "Gepäckaufbewahrung auf Ebene 1 des Inlandsterminals, für Passagiere von Inlands- und internationalen Flügen, rund um die Uhr. Erster Kalendertag 500 ₽ pro Gepäckstück, jeder weitere 100 ₽. Ein Ausweisdokument ist erforderlich; Größe eines Gepäckstücks höchstens 75 × 60 × 65 cm, Aufbewahrung bis 90 Tage."
+  },
+  "kids": {
+   "title": "Mit Kind",
+   "hint": "Terminals C und С2, kostenlos",
+   "text": "Mutter-Kind-Räume gibt es im Inlandsterminal (С2) und im internationalen Terminal (C), kostenlos und rund um die Uhr, bis zu 24 Stunden. Für Kinder unter 7 Jahren und Frauen in der zweiten Schwangerschaftshälfte mit Abflugticket, Ausweisdokument und Bescheinigung der Sanitätsstation."
+  },
+  "wifi": {
+   "title": "Wi‑Fi",
+   "hint": "Netz Airport",
+   "text": "Wi‑Fi im Terminalkomplex: Netz Airport in den allgemeinen Hallen, AirportZPK in den Komfort-Lounges. Anmeldung über einen kostenlosen Anruf, Gosuslugi oder einen Code per SMS/Push."
+  }
+ }
+}

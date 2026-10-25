@@ -1,0 +1,26 @@
+{
+ "iata": "SGC",
+ "about": "Surgut uluslararası havalimanı, işletmeci Aeroport Surgut AO. Hat ağı 30'dan fazla noktayı kapsar. Terminal binasında business salonları, VIP salonlar ve körükler var.",
+ "blocks": {
+  "transport": {
+   "title": "Nasıl gidilir",
+   "hint": "16 ve 107 numaralı otobüsler",
+   "text": "Havalimanına 16 ve 107 numaralı şehir hatları gider. Hat şemaları ve tarifeleri \"Nasıl gidilir\" sayfasında yayımlanmıştır."
+  },
+  "lounges": {
+   "title": "Business salonları",
+   "hint": "ON PASS, 3500 ₽",
+   "text": "Business salonu geliş salonunda, Kat 2 (asansörle), gece gündüz açık; business sınıfı ve havayolu elit kart sahipleri, ekonomi sınıfı ücret karşılığında; dış hat uçuşlarına hizmet vermez. ON PASS salonu: steril alan, Kat 2, yalnızca iç hatlar, gece gündüz açık, yetişkin 3500 ₽, 2–12 yaş çocuk 2500 ₽."
+  },
+  "storage": {
+   "title": "Emanet",
+   "hint": "24/7, günlüğü 400 ₽",
+   "text": "Gece gündüz açık. İlk gün 400 ₽ (00:00'a kadar), sonrası günlüğü 200 ₽; tamamlanmamış gün tam gün sayılır. Bir parçanın ağırlığı en fazla 30 kg."
+  },
+  "parking": {
+   "title": "Otopark",
+   "hint": "20 dakika ücretsiz",
+   "text": "Terminal önü meydanında ilk 20 dakika ücretsiz. Durak pavyonunun hemen arkasında 50 araçlık uzun süreli park alanı: günlüğü 750 ₽. Ödeme terminal binasındaki gişelerde ve ana giriş ile geliş salonundaki ödeme makinelerinde."
+  }
+ }
+}

@@ -1,0 +1,36 @@
+{
+ "iata": "VVO",
+ "about": "Der Flughafen liegt in der Stadt Artjom in der Region Primorje. Das Streckennetz umfasst mehr als 40 Ziele, die Flüge führen mehr als 20 russische und ausländische Fluggesellschaften durch. Es gibt Lounges für Inlands- und internationale Abflüge.",
+ "blocks": {
+  "transport": {
+   "title": "Anreise",
+   "hint": "Vorortzug, 52 Min.",
+   "text": "Elektrozug vom Bahnhof Wladiwostok bis zur Station „Aeroport“, 10 Fahrten pro Tag, Fahrzeit etwa 52 Minuten. Fahrschein ab Wladiwostok und Wtoraja Retschka 185 ₽, ab Artjom 37 ₽. Taxischalter auf Ebene 1 am Ausgang des Terminals, offizieller Beförderer OOO „MIG“."
+  },
+  "lounges": {
+   "title": "Business-Lounges",
+   "hint": "Ebene 3, 24/7",
+   "text": "Business-Lounge „Laguna“: Ebene 3, Abflugbereich der Inlandsflüge, an Gate 6, rund um die Uhr. International „Primorje“: Ebene 3, an Gate 3, nach dem Duty Free, rund um die Uhr. Lounge „Priority“ für Inlandsflüge neben Gate 6, 2500 ₽ pro Passagier."
+  },
+  "storage": {
+   "title": "Gepäckaufbewahrung",
+   "hint": "Ebene 1, 24/7, ab 400 ₽",
+   "text": "Ebene 1, hinter der Rolltreppe, rund um die Uhr. Tarif „Standard“: 500 ₽ für die ersten 24 Stunden, 200 ₽ für je weitere 24 Stunden, Gepäckstück bis 203 cm Summe der Maße. Angefangene 24-Stunden-Zeiträume zählen als volle."
+  },
+  "sleep": {
+   "title": "Schlafen",
+   "hint": "Hotel, Ebene 3",
+   "text": "„Komfort-Wartezone“ (Hotel) auf Ebene 3, öffentlicher Bereich, linker Flügel. 30 Zimmer. Einzelzimmer: 3000 ₽ für 3 Stunden, 6000 ₽ für 24 Stunden. Dusche ohne Zimmer 1000 ₽."
+  },
+  "kids": {
+   "title": "Mit Kind",
+   "hint": "Ebene 3, 24/7, kostenlos",
+   "text": "Mutter-Kind-Raum auf Ebene 3, rechter Flügel, rund um die Uhr, kostenlos. Für Passagiere mit Kindern unter 7 Jahren, Kindern mit gesundheitlichen Einschränkungen unter 14 Jahren und Schwangere in der zweiten Schwangerschaftshälfte. Aufenthalt bis zu 3 Stunden. Erforderlich sind Flugticket, Pass und Geburtsurkunde des Kindes."
+  },
+  "parking": {
+   "title": "Parken",
+   "hint": "15 Min. kostenlos",
+   "text": "Zonen A, D und Hol- und Bringzone: bis 15 Minuten kostenlos. In der Hol- und Bringzone danach 1000 ₽ für jeweils 15 Minuten. Zonen A und D: 300 ₽ für jede Stunde nach 15 Minuten, über 3 Stunden 1500 ₽. Zonen B, C und F mit Tagestarif."
+  }
+ }
+}

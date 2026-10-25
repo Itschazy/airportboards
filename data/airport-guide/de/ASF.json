@@ -1,0 +1,30 @@
+{
+ "iata": "ASF",
+ "blocks": {
+  "transport": {
+   "title": "Anreise",
+   "hint": "Busse 45, 86, Marschrutkas",
+   "text": "Sammeltaxis (Marschrutkas) Nr. 80с (ab Uliza Latyschewa) und Nr. 86с (ab Konservenfabrik). Busse Nr. 45 (ab Uliza Mjasokombinat) und Nr. 86 (ab Slawjanski-Markt)."
+  },
+  "lounges": {
+   "title": "Business-Lounges",
+   "hint": "Ebene 2, rund um die Uhr",
+   "text": "Business-Lounge für Inlandsflüge auf Ebene 2 im Sicherheitsbereich, nach der Kontrolle, rund um die Uhr geöffnet. Zugang für Passagiere der Business Class, Teilnehmer von Bonusprogrammen von Fluggesellschaften und Banken sowie für alle, die den Besuch per Karte, QR-Code oder bar bezahlen. Aufenthalt höchstens zwei Stunden vor Abflug."
+  },
+  "storage": {
+   "title": "Gepäckaufbewahrung",
+   "hint": "Untergeschoss, 24/7",
+   "text": "Aufbewahrung von Gepäck und Handgepäck für Passagiere von Inlands- und internationalen Flügen im Untergeschoss des Terminals, rund um die Uhr geöffnet."
+  },
+  "kids": {
+   "title": "Mit Kind",
+   "hint": "Kostenlos, 24/7",
+   "text": "Der Mutter-Kind-Raum ist kostenlos und rund um die Uhr geöffnet, für einen Aufenthalt von bis zu 3–4 Stunden. Für Passagiere mit Kindern unter 7 Jahren (bei freien Plätzen unter 8), Kinder mit Behinderung unter 14 Jahren und Frauen in der zweiten Schwangerschaftshälfte."
+  },
+  "parking": {
+   "title": "Parken",
+   "hint": "10 Min. kostenlos",
+   "text": "Vorplatz: die ersten 10 Minuten kostenlos, die erste Stunde 250 ₽, die zweite bis vierte je 200 ₽, über 4 Stunden 900 ₽ pro 24 Stunden. Tagesparkplatz (Einfahrt Nr. 5): die ersten drei Stunden je 200 ₽, ab der 181. Minute für die ersten 24 Stunden 600 ₽, für zweimal 24 Stunden 1100 ₽, für dreimal 24 Stunden 1500 ₽, danach 300 ₽ pro 24 Stunden. Es gibt einen kostenlosen Parkplatz für mindestens 130 Autos."
+  }
+ }
+}

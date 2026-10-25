@@ -1,0 +1,25 @@
+{
+ "iata": "DLM",
+ "blocks": {
+  "transport": {
+   "title": "交通方式",
+   "hint": "Havaş至马尔马里斯和费特希耶",
+   "text": "Havaş班车从机场停车场开往马尔马里斯和费特希耶市中心。马尔马里斯线：达拉曼、Ortaca、Köyceğiz、Gökova、马尔马里斯汽车站；费特希耶线：达拉曼、Göcek、Günlükbaşı、Adnan Menderes大道、费特希耶汽车站。如提前告知司机，可在沿途约定地点下车。时刻表和票价见Havaş网站。"
+  },
+  "taxi": {
+   "title": "出租车",
+   "hint": "机场出租车合作社",
+   "text": "机场出租车为Dalaman Airport Taxi合作社；电话和WhatsApp +90 533 958 28 72，网站dalamanairporttaxi.com。"
+  },
+  "parking": {
+   "title": "停车",
+   "hint": "全天候，1号和2号航站楼旁",
+   "text": "1号和2号航站楼旁的停车场总面积72 972平方米，全年全天候开放。费用可用机场网站上的计算器计算；收费标准由DHMI制定，最近更新为2026年1月，含增值税。"
+  },
+  "wifi": {
+   "title": "Wi‑Fi",
+   "hint": "免费30分钟",
+   "text": "所有到达和出发大厅提供DorukNet Wi‑Fi：凭密码免费使用30分钟，密码由自助终端扫描护照后发放；更长时间和高级服务收费。商务休息室和公务航空航站楼内不限时。"
+  }
+ }
+}

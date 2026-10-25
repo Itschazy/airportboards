@@ -1,0 +1,26 @@
+{
+ "iata": "NYM",
+ "about": "Nadym Airport is named after V.S. Chernomyrdin. Operator: JSC Nadym Aviation Enterprise. The airport has two check-in halls; the second one opens as needed.",
+ "blocks": {
+  "transport": {
+   "title": "Getting there",
+   "hint": "Buses 2 and 4А",
+   "text": "City buses No. 2 and No. 4А run to the airport. You can also get there by taxi or by your own car."
+  },
+  "lounges": {
+   "title": "Lounges",
+   "hint": "VIP lounge, check-in hall No. 2",
+   "text": "VIP lounge in the right part of check-in hall No. 2, with a separate entrance and its own car park. Admits economy class passengers who pay no later than 15 hours before departure, S7 Priority members and ATK Yamal business class. The lounge opens 1 hour 30 minutes before departure and 30 minutes before the aircraft lands. Prices are in the aviation enterprise's price list; children under 2 free."
+  },
+  "kids": {
+   "title": "With children",
+   "hint": "7:00–18:30, free",
+   "text": "The mother and child room is open from 7:00 to 18:30, free of charge. Admits passengers with children under 7, children with disabilities under 14 with an adult, and women in the second half of pregnancy. A certificate from the health post, a boarding pass and documents for the adult and the child are required. Without a certificate you can use room No. 1 for changing and feeding."
+  },
+  "parking": {
+   "title": "Parking",
+   "hint": "Free",
+   "text": "Parking on the station forecourt is free. Parking areas are at the central entrance to check-in hall No. 1 and near the Liner shop. Spaces for cars of people with disabilities are marked with road markings and a sign."
+  }
+ }
+}

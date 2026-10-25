@@ -1,0 +1,16 @@
+{
+ "iata": "IWA",
+ "about": "A. M. Vasilevski adını taşıyan İvanovo Havalimanı, İvanovo merkezinin 7 km güneybatısında. Federal öneme sahip havalimanı, 1939'dan beri hizmette. İşletici ve ana operatör: Tsentr Avia OOO.",
+ "blocks": {
+  "transport": {
+   "title": "Nasıl gidilir",
+   "hint": "11 numaralı troleybüs",
+   "text": "11 numaralı troleybüs: havalimanı, Zagorodnaya Caddesi, Lezhnevskaya Caddesi, otogar, Devrim Meydanı, Sheremetevsky Bulvarı, tren garı. 7:00–20:00 arası çalışır, sefer aralığı 22–44 dakika. Taksi: Yandex Taxi, Vezyot, Maxim, uygulamalar üzerinden. Havalimanı şehir sınırının dışında; taksiyi önceden çağırmak daha iyidir."
+  },
+  "parking": {
+   "title": "Otopark",
+   "hint": "10 dakika ücretsiz",
+   "text": "Bariyerli, korumalı otomatik otopark. İlk 10 dakika ücretsiz, saati 100 ₽, günlüğü 400 ₽. Ödeme otomatik makinede nakit (para üstü verilmez) veya kartla, QR kodla, Hippoparking uygulamasında veya sitede. Ödemeden sonra çıkış için 15 dakika."
+  }
+ }
+}

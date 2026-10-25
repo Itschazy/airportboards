@@ -1,0 +1,41 @@
+{
+ "iata": "PKC",
+ "about": "El Aeropuerto Internacional de Petropávlovsk-Kamchatski (Yelizovo) lo gestiona la sociedad gestora «Aeroporty Regionov». Desde el 31 de marzo de 2025, todos los vuelos regulares de pasajeros se atienden en la nueva terminal. En 2024 el aeropuerto recibió 931 mil pasajeros.",
+ "blocks": {
+  "transport": {
+   "title": "Cómo llegar",
+   "hint": "Autobuses 7, 8, 104, 120",
+   "text": "Autobuses urbanos n.º 7 (parada «Avtokhozyaistvo») y n.º 8 (hasta «Garnizon» y la calle Uralskaya). El autobús n.º 104 va a Yelizovo, con intervalos de 5–20 minutos. El interurbano n.º 120 va a Viliuchinsk; el trayecto dura 1 h 35 min. Horarios según datos del Ministerio de Transporte del krai de Kamchatka."
+  },
+  "terminals": {
+   "title": "Terminal",
+   "hint": "Nueva terminal desde 2025",
+   "text": "Desde el 31 de marzo de 2025, todos los vuelos regulares se atienden en la nueva terminal. 30 mostradores de facturación: 15 para vuelos nacionales y 15 para internacionales. Embarque por 5 pasarelas. Hay quioscos de autoentrega de equipaje BAGS ID."
+  },
+  "lounges": {
+   "title": "Salas VIP",
+   "hint": "Nivel 3, 7 500 ₽",
+   "text": "Sala business en el nivel 3 de la terminal. Entrada 7 500 ₽ hasta 3 horas, niños de 2–12 años 3 750 ₽. Admite a pasajeros de clase business, a miembros de ON PASS, Grey Wall, EveryLounge, Persona.Aero, RusPriority y GoldenKey, y a todos los que paguen la entrada."
+  },
+  "storage": {
+   "title": "Consigna",
+   "hint": "Nivel 1, 600 ₽/día",
+   "text": "Consigna en el nivel 1 de la terminal. 300 ₽ hasta 1 hora, después 600 ₽ por día. Solo se aceptan objetos embalados. Embalaje de equipaje en el nivel 1, de 7:00 a 19:00, desde 1 000 ₽ por bulto."
+  },
+  "sleep": {
+   "title": "Dónde dormir",
+   "hint": "Hotel «Polyot», al lado",
+   "text": "Hotel «Polyot», a poca distancia a pie de la terminal: Yelizovo, calle Zvyozdnaya, 10/7. 36 habitaciones, abierto día y noche. Desayuno incluido, hora de salida 12:00. Teléfono +7 (41531) 99-315."
+  },
+  "kids": {
+   "title": "Con niños",
+   "hint": "Nivel 3, 8:00–19:30",
+   "text": "Sala madre e hijo en el nivel 3 de la terminal, 8:00–19:30, gratis. Para niños menores de 7 años con un adulto, niños con discapacidad menores de 14 años y embarazadas en la segunda mitad del embarazo. Se necesitan billete o tarjeta de embarque y certificado del puesto médico del nivel 1."
+  },
+  "wifi": {
+   "title": "Wi‑Fi",
+   "hint": "Red airport-pkc",
+   "text": "Wi‑Fi gratuito en las zonas de pasajeros. Red airport-pkc, acceso con el número de teléfono móvil."
+  }
+ }
+}

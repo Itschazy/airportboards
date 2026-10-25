@@ -1,0 +1,30 @@
+{
+  "iata": "ASF",
+  "blocks": {
+    "transport": {
+      "title": "Come arrivare",
+      "hint": "Bus 45, 86, marshrutka",
+      "text": "Taxi collettivi (marshrutka) n. 80с (da ul. Latysheva) e n. 86с (dal Konservny zavod). Autobus n. 45 (da ul. Myasokombinat) e n. 86 (dallo Slavyansky rynok)."
+    },
+    "lounges": {
+      "title": "Sale business",
+      "hint": "Livello 2, giorno e notte",
+      "text": "Sala business per i voli nazionali al livello 2 nella zona sterile, dopo i controlli, aperta giorno e notte. Accedono i passeggeri di classe business, i partecipanti ai programmi fedeltà di compagnie aeree e banche, e chiunque paghi la visita con carta, tramite codice QR o in contanti. Permanenza non oltre due ore prima della partenza."
+    },
+    "storage": {
+      "title": "Deposito bagagli",
+      "hint": "Seminterrato, 24/7",
+      "text": "Deposito per bagagli e bagaglio a mano per i passeggeri dei voli nazionali e internazionali al piano seminterrato dell’aerostazione, aperto giorno e notte."
+    },
+    "kids": {
+      "title": "Con bambini",
+      "hint": "Gratis, 24/7",
+      "text": "La sala madre e bambino è gratuita e aperta giorno e notte, per soste fino a 3–4 ore. Per passeggeri con bambini sotto i 7 anni (fino a 8 se ci sono posti liberi), bambini con disabilità sotto i 14 anni e donne nella seconda metà della gravidanza."
+    },
+    "parking": {
+      "title": "Parcheggio",
+      "hint": "10 min gratis",
+      "text": "Piazzale dell’aerostazione: i primi 10 minuti gratis, la prima ora 250 ₽, dalla seconda alla quarta 200 ₽ ciascuna, oltre 4 ore 900 ₽ ogni 24 ore. Parcheggio giornaliero (ingresso n. 5): le prime tre ore 200 ₽ ciascuna, dal 181° minuto per le prime 24 ore 600 ₽, per due periodi di 24 ore 1100 ₽, per tre 1500 ₽, poi 300 ₽ ogni 24 ore. C’è un parcheggio gratuito per almeno 130 auto."
+    }
+  }
+}

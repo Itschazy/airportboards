@@ -1,0 +1,26 @@
+{
+ "iata": "CSY",
+ "about": "The airport is 5 km from the centre of Cheboksary, address: 1 I. F. Skvortsova Square. Trolleybuses and a bus run to the terminal; you can also get there by taxi or private car.",
+ "blocks": {
+  "transport": {
+   "title": "Getting there",
+   "hint": "Trolleybuses 2, 15",
+   "text": "5 km to the centre of Cheboksary. Trolleybuses No. 2 and No. 15, bus No. 15. Also taxi or private car."
+  },
+  "lounges": {
+   "title": "Lounges",
+   "hint": "Stay 4,000 ₽",
+   "text": "Business lounge: stay of up to 2 hours for 4,000 ₽, via Every Lounge and Golden Key programmes, for Aeroflot Bonus Platinum and Gold members. Special service with check-in on Level 2: 5,500 ₽. VIP service for departure 15,250 ₽, for arrival 7,700 ₽, request 24 hours in advance. Entry to the lounge no earlier than 2 hours before departure."
+  },
+  "storage": {
+   "title": "Left luggage",
+   "hint": "300 ₽ per day",
+   "text": "Baggage storage: 300 ₽ per 1 item per day."
+  },
+  "parking": {
+   "title": "Parking",
+   "hint": "15 min free",
+   "text": "The first 15 minutes are free. Cars: 100 ₽ per hour, 450 ₽ per day, from 3 days 400 ₽ per day. UAZ, Gazel, Sobol: 200 ₽ per hour, 650 ₽ per day. Lost receipt 500 ₽. Phone 8 (8352) 22-94-03, ext. 2-95."
+  }
+ }
+}

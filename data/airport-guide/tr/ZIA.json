@@ -1,0 +1,26 @@
+{
+ "iata": "ZIA",
+ "about": "Jukovski Uluslararası Havalimanı, Jukovski havaalanının sahasında inşa edildi. Havalimanı işletmecisi: Ramport Aero AO. Havalimanı uluslararası uçuşlara açıktır; burada hava hudut kapısı faaliyette.",
+ "blocks": {
+  "transport": {
+   "title": "Nasıl gidilir",
+   "hint": "441 numaralı otobüs, 1 sa 5 dk",
+   "text": "Kazansky Garı'ndan Otdykh istasyonuna banliyö treni, yaklaşık 40 dk, oradan havalimanına 2А numaralı dolmuş, yaklaşık 20 dk. MTsD Ilyinskaya'dan 19к numaralı dolmuş, yaklaşık 35 dk. Kotelniki metro istasyonundan (5 numaralı çıkış) 441 numaralı otobüs, sefer aralığı 15–20 dk, yolculuk 1 sa 5 dk. Otobüs ve dolmuşlarda Troika, Strelka ve banka kartları geçerlidir."
+  },
+  "parking": {
+   "title": "Otopark",
+   "hint": "15 dakika ücretsiz",
+   "text": "Kısa süreli alan: ilk 15 dk ücretsiz, ilk saat 350 ₽, 2. ila 4. saat saati 250 ₽, 5. saatten itibaren günlüğü 3000 ₽. Uzun süreli alan: 1. ila 5. gün günlüğü 700 ₽, 6. ila 13. gün günlüğü 100 ₽, 14. günden itibaren günlüğü 700 ₽. Ücretsiz tekrar giriş en erken 45 dk sonra."
+  },
+  "storage": {
+   "title": "Emanet",
+   "hint": "Kat 2, 24/7, 600 ₽'den",
+   "text": "Emanet Kat 2'de, genel alanda, gece gündüz açık. Standart tarife: ilk 24 saat 700 ₽, sonraki her 24 saat 300 ₽. Standart Layt: 600 ₽ ve 300 ₽. Standart dışı 1150 ₽'den. Bir parça en fazla 30 kg, saklama süresi 6 aya kadar."
+  },
+  "kids": {
+   "title": "Çocukla",
+   "hint": "Kat 2, 24/7",
+   "text": "Anne-bebek odaları Kat 2'de: genel alanda ve Avrasya Ekonomik Birliği ülkelerine giden yolcuların bekleme alanında. Gece gündüz açık; görevli girişteki düğmeyle çağrılır. Bir yetişkinle birlikte 7 yaşından küçük çocuklar, 14 yaşından küçük engelli çocuklar ve hamileler kabul edilir. Dış hatlar gidiş alanında bebek bakım odası var."
+  }
+ }
+}

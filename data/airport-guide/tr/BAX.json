@@ -1,0 +1,41 @@
+{
+ "iata": "BAX",
+ "about": "Barnaul: G. S. Titov adını taşıyan uluslararası havalimanı, Altay Krayı'nın ana havalimanı; Aviapredpriyatiye Altay AO tarafından işletilir. Pist 2850 × 50 m. Dağlık Altay tatil merkezlerine ve Belokurikha'ya en yakın büyük havalimanı.",
+ "blocks": {
+  "transport": {
+   "title": "Nasıl gidilir",
+   "hint": "110 numaralı otobüs",
+   "text": "110 numaralı otobüs havalimanı ile Spartak-2 otogarı arasında çalışır, her yönde 11 sefer: havalimanından 6:00–18:50, otogardan 7:10–20:00 arası. Saatler trafik durumuna göre değişebilir."
+  },
+  "lounges": {
+   "title": "Business salonları",
+   "hint": "Sağ kanat, 6200 ₽",
+   "text": "İç hatlar business terminali terminal binasının sağ kanadında, giriş ana kapıdan. Kendi check-in'i ve güvenlik kontrolü var, uçağa minibüsle götürülür. 2 yaşından itibaren giden yolcular için 6200 ₽, gelen yolcular için 4150 ₽, kalış 3 saat, 2 yaşından küçük çocuklar ücretsiz. Dış hat yolcularına açık değildir."
+  },
+  "storage": {
+   "title": "Emanet",
+   "hint": "Kat 1, günlüğü 210 ₽",
+   "text": "Bagaj ve el bagajı emaneti terminal binasında Kat 1'de. Bir parça, boyutundan bağımsız olarak günlük 210 ₽; gün takvim günü olarak, 00:00'dan 23:59'a kadar sayılır. Bagaja bağlanmış çanta ve poşetler ayrı parça sayılır."
+  },
+  "sleep": {
+   "title": "Nerede uyunur",
+   "hint": "Havalimanı oteli",
+   "text": "Aviapredpriyatiye Altay AO'ya ait otel doğrudan havalimanı alanında: farklı fiyat kategorilerinde odalar ve kafe."
+  },
+  "kids": {
+   "title": "Çocukla",
+   "hint": "Kat 2, ücretsiz, 24/7",
+   "text": "Anne-bebek odası Kat 2'de, ücretsiz ve gece gündüz açık. 7 yaşından küçük çocuklu giden yolcular, 14 yaşından küçük engelli çocuklar ve gebeliğin ikinci yarısındaki kadınlar için. Mutfak, beşikli yatak odası ve oyun odası var."
+  },
+  "parking": {
+   "title": "Otopark",
+   "hint": "Ücretsiz otopark",
+   "text": "Havalimanının park alanının arkasında yaklaşık 100 araçlık ücretsiz bir otopark var, süre sınırı yok. Terminal önü meydanında çekiciler çalışır; ayrılmış yerler dışında park etmek yasaktır."
+  },
+  "wifi": {
+   "title": "Wi‑Fi",
+   "hint": "Ücretsiz, 3 sağlayıcı",
+   "text": "Havalimanı yolcuları ve misafirleri için üç sağlayıcıdan ücretsiz Wi‑Fi: Avantel, Beeline ve MTS. Cihazda sağlayıcıyı seçin ve ekrandaki yönergeleri izleyin."
+  }
+ }
+}

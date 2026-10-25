@@ -1,0 +1,20 @@
+{
+ "iata": "TBS",
+ "blocks": {
+  "transport": {
+   "title": "Nasıl gidilir",
+   "hint": "337 numaralı otobüs, 1 GEL",
+   "text": "337 numaralı şehir otobüsü (Havalimanı — Tiflis merkezi) geliş salonunun önündeki duraktan 06:59–22:59 arası kalkar. Merkezde Rustaveli Caddesi ve Özgürlük Meydanı üzerinden Vokzal Meydanı'na kadar gider. Metro Money kartı veya banka kartıyla ödemede ücret 1 GEL, 90 dakika aktarma dahil; Metro Money kartının kendisi 2 GEL."
+  },
+  "taxi": {
+   "title": "Taksi",
+   "hint": "Merkeze 40 GEL",
+   "text": "Taksiler gece gündüz geliş salonu çıkışında. Merkeze sabit 40 GEL, banliyölere 50 GEL; trafiğe göre yolculuk 20–30 dakika."
+  },
+  "wifi": {
+   "title": "Wi‑Fi",
+   "hint": "Ücretsiz, kayıt olmadan",
+   "text": "Gidiş ve geliş terminallerindeki bekleme alanlarının çoğunda kayıt gerektirmeyen ücretsiz Wi‑Fi: Tbilisi Loves You veya Airport Free Wi‑Fi ağları; ardından giriş sayfasında koşulları kabul edin."
+  }
+ }
+}

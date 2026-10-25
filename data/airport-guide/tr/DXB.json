@@ -1,0 +1,20 @@
+{
+ "iata": "DXB",
+ "blocks": {
+  "transport": {
+   "title": "Nasıl gidilir",
+   "hint": "Metro, kırmızı hat",
+   "text": "Dubai metrosunun kırmızı hattı Terminal 1 ve 3'ten kalkar. Çalışma saatleri: pazartesi–perşembe ve cumartesi 5:00'ten gece yarısına, cuma 5:00'ten 1:00'e, pazar 8:00'den gece yarısına; bayramlarda daha uzun olabilir. Biletler ve Nol kartları Terminal 1 ve 3'teki gişe ve otomatlarda. Metroda el bagajı dahil en fazla iki parça bagaja izin verilir."
+  },
+  "taxi": {
+   "title": "Taksi",
+   "hint": "25 AED'den, gece gündüz",
+   "text": "Dubai Taxi Company taksileri gece gündüz her terminalin önündeki duraklarda; açılış 25 AED'den başlar, üzerine mesafe ücreti eklenir. Uber, Careem ve Bolt da çalışır — biniş noktası tabelalarla gösterilir."
+  },
+  "storage": {
+   "title": "Emanet",
+   "hint": "Terminal 1–3, 35 AED'den",
+   "text": "dnata emanetleri Terminal 1, 2 ve 3'te gece gündüz açık. 12 saat ve daha kısa süre için: Terminal 1 ve 2'de standart parça (21×24×11 inçe kadar) 40 AED, büyük veya değerli parça 50 AED; Terminal 3'te 35 ve 40 AED. Terminal 1'de emanet geliş katında, Boots eczanesinin yanında."
+  }
+ }
+}

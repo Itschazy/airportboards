@@ -1,0 +1,46 @@
+{
+ "iata": "AER",
+ "about": "Buses connect Sochi Airport with the Adlersky, Khostinsky and Tsentralny districts of the city and the Krasnaya Polyana resort. The 65,000 m² terminal complex was reconstructed in 2007–2013; a VIP terminal also operates. Operator: JSC Sochi International Airport; in 2024 the airport handled 13.7 million passengers.",
+ "blocks": {
+  "lounges": {
+   "title": "Lounges",
+   "hint": "Sectors B and C, Level 2",
+   "text": "Domestic business lounge in sector B, Level 2, by gate 21. Price 4,800 ₽. International business lounge in sector C, Level 2. Price 4,300 ₽; Grey Wall, UNIPASS, ONPASS, GoldenKey, Comfort Pass and RusPriority cards are accepted. Premium comfort lounge in sector B, Level 2, by gate 21, price 2,650 ₽. All lounges are open round the clock, stays up to 3 hours, children under 12 get 50% off, under 2 enter free."
+  },
+  "storage": {
+   "title": "Left luggage",
+   "hint": "Sector C, Level 1, 24/7",
+   "text": "Sector C, Level 1, open round the clock. The first 24 hours cost from 600 ₽ per item, each further 24 hours from 300 ₽. An item may weigh no more than 30 kg, with the sum of three dimensions no more than 203 cm. Items not collected within 30 days are treated as unclaimed. Phone 8 (862) 249-78-46."
+  },
+  "sleep": {
+   "title": "Where to sleep",
+   "hint": "Capsules, sector B",
+   "text": "Aero Hotel capsules in sector B, Level 2, open round the clock. From 990 ₽ per passenger. Capsules have soundproofing, air conditioning, power sockets and Wi‑Fi. Booking at cellhotel.ru or by phone +7 (938) 875-18-05."
+  },
+  "kids": {
+   "title": "Mother and child",
+   "hint": "Sector B, Level 2",
+   "text": "Mother and child room in sector B, Level 2, free of charge. Open to passengers with children under 7, with disabled children under 14, and women in the second half of pregnancy. Passport and boarding pass or ticket required. For arriving passengers with children the room is open from 22:00 to 06:00, while public transport is not running. Baby changing rooms are next to the toilets in all sectors."
+  },
+  "transport": {
+   "title": "Getting there",
+   "hint": "Lastochka, buses",
+   "text": "Lastochka and suburban trains depart from the railway square: sector C1, Level 1. They go to Adler, Sochi, Rosa Khutor and Olympic Park. The bus square is between B1 and C1. Buses No. 557, 558 and 535 go to Adler and Olympic Park. No. 105 and 105с go to Sochi. No. 105, 105с and 535 go to Krasnaya Polyana. The official taxi desk is in the baggage claim hall, sectors A and B."
+  },
+  "parking": {
+   "title": "Parking",
+   "hint": "15 minutes free",
+   "text": "On the station forecourt (entrances 1–6) the first 15 minutes are free, then 400 ₽ per hour. At the daily car park (entrances 31, 32) the first 15 minutes are free, then 300 ₽ per hour, and for stays over 3 hours 1,500 ₽ per day. It is 100 m before the main entrance, turn right. An alternative car park is about 400 m from the terminal."
+  },
+  "wifi": {
+   "title": "Wi‑Fi",
+   "hint": "Airport_Free",
+   "text": "The free Airport_Free network covers the entire terminal, the VIP terminal and the business lounge. Login is possible only with a SIM card from a Russian operator."
+  },
+  "terminals": {
+   "title": "Terminal",
+   "hint": "Sectors A, B, C",
+   "text": "One terminal with sectors A, B and C. Check-in counters are in all three, while counters for passengers without baggage are only in A and B. Domestic baggage is delivered in sectors A and B, international in sector C, all on Level 1. Counter check-in opens 3 hours before departure and closes 40 minutes before."
+  }
+ }
+}

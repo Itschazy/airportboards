@@ -1,0 +1,31 @@
+{
+ "iata": "OVB",
+ "about": "Tolmaçovo: A. I. Pokrışkin adını taşıyan Novosibirsk uluslararası havalimanı, şehir merkezinin 17 km batısında. 3597 ve 3602 m uzunluğunda iki pist. Terminal kompleksi iç hatlarda saatte 1800, dış hatlarda 1300 yolcu için tasarlanmıştır.",
+ "blocks": {
+  "transport": {
+   "title": "Nasıl gidilir",
+   "hint": "111Э ekspresi, 30 dakikada bir",
+   "text": "111Э numaralı ekspres otobüs havalimanını Novosibirsk-Glavny tren garına 30 dakikada bir bağlar: gardan 05:00–00:30, havalimanından 04:00–23:30 arası. Banliyö trenleri havalimanının yanındaki Ob istasyonunda durur; oradan terminale 4 (40 ₽), 111Э ve 112 numaralı otobüsler gider."
+  },
+  "lounges": {
+   "title": "Business salonları",
+   "hint": "B ve C sektörleri, 4 saati 4000 ₽",
+   "text": "İç hatlar business salonları Komfort ve Premyer, C sektöründe Kat 2'de, steril alanda: Kat 3'teki güvenlik kontrolünden sonra 6 numaralı kapının karşısından tabelaları izleyerek aşağı inilir. Dış hatlar salonu B sektöründe Kat 3'te, 50 kişilik. Ücretli ziyaret 4 saati 4000 ₽, 2–12 yaş çocuklar 2000 ₽, 2 yaşından küçük ücretsiz."
+  },
+  "storage": {
+   "title": "Emanet",
+   "hint": "C sektörü, günlüğü 500 ₽",
+   "text": "İç ve dış hat yolcuları için emanet C sektöründe, gece gündüz açık. Bagaj parça başına günlüğü 500 ₽, dış giyim günlüğü 100 ₽. Bir günden kısa saklama tam gün olarak ücretlendirilir."
+  },
+  "kids": {
+   "title": "Çocukla",
+   "hint": "C sektörü, Kat 3, 24/7",
+   "text": "Anne-bebek odası C sektöründe Kat 3'te, gece gündüz açık ve ücretsiz. 7 yaşından küçük çocuklu giden yolcular, 14 yaşından küçük engelli çocuklar ve gebeliğin ikinci yarısındaki kadınlar için. Mutfak, beşikli yatak odası ve oyun odası var."
+  },
+  "parking": {
+   "title": "Otopark",
+   "hint": "15 dakika ücretsiz",
+   "text": "Terminal önü meydanında ilk 15 dakika ücretsiz, sonra ilk saat 400 ₽, ikinci saat 300 ₽, sonrası saati 200 ₽, 6 saatin üzerinde günlüğü 1500 ₽. P1–P4 otoparkları: 3 güne kadar günlüğü 700 ₽, 6 güne kadar 500 ₽, daha uzun 300 ₽. Giriş yalnızca plakası tanınan araçlarla."
+  }
+ }
+}

@@ -1,0 +1,10 @@
+{
+ "iata": "GYD",
+ "blocks": {
+  "transport": { "title": "가는 방법", "hint": "Aero Express, 1.30 AZN", "text": "Aero Express 버스는 1·2터미널에서 바쿠 철도역(지하철 28 May역)까지 운행하며 Suraxanı 다리와 지하철 Koroğlu역에 정차합니다. 06:00부터 23:15까지 20분마다, 야간에는 45분마다 운행합니다. 요금은 BAKU CARD로 1.30 AZN, 카드 자체는 2 AZN이며 카드 한 장을 일행이 함께 쓸 수 있습니다." },
+  "lounges": { "title": "비즈니스 라운지", "hint": "여러 라운지", "text": "공항에는 AZAL, Business Class Lounge, Absheron, Salam, Baku Club, Premium, Mugam 라운지가 있습니다. AZAL Lounge는 1터미널 1층에 있으며, 비즈니스 및 프리미엄 이코노미 클래스 승객을 위한 대기 없는 별도 체크인과 전용 하차 구역을 갖추고 있습니다." },
+  "kids": { "title": "아이와 함께", "hint": "1·2터미널", "text": "기저귀 교환대, 냉온수를 갖춘 유아휴게실: 1터미널 3층과 4층, 2터미널 2층. 기저귀 교환대는 모든 다목적 화장실에도 있습니다." },
+  "parking": { "title": "주차", "hint": "15분 무료, 24/7", "text": "상시 운영, 2,000면 이상: 1터미널 옆 835면, 2터미널 옆 1166면. 처음 15분 무료, 2시간까지 1 AZN, 4시간까지 2 AZN, 12시간까지 6 AZN, 24시간까지 15 AZN, 이후 하루마다 +15 AZN. 현금, 카드 또는 온라인(Tezöde, AzParkinq, Birbank)으로 결제합니다." },
+  "wifi": { "title": "Wi‑Fi", "hint": "Baku-Airport-Free-WiFi", "text": "카페, 상점, 비즈니스 라운지를 포함한 터미널 전역에서 무료 Wi‑Fi: 네트워크 Baku-Airport-Free-WiFi. 1터미널 출발 구역에는 인터넷이 되는 무료 컴퓨터가 있습니다." }
+ }
+}

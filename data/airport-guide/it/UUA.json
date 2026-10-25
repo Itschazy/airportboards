@@ -1,0 +1,25 @@
+{
+  "iata": "UUA",
+  "blocks": {
+    "lounges": {
+      "title": "Sale business",
+      "hint": "VIP: partenza 4600 ₽",
+      "text": "Sala VIP con banco check-in proprio e bar. Servizio in partenza 4600 ₽, in arrivo 3500 ₽. Reception: +7 (85594) 6-35-16, giorno e notte."
+    },
+    "sleep": {
+      "title": "Dove dormire",
+      "hint": "Hotel, 1900 ₽",
+      "text": "Hotel nell’area dell’aeroporto. Posto in junior suite singola o doppia 1900 ₽ al giorno. Check-in alle 16:00, check-out alle 12:00. Bambini sotto i 3 anni gratis."
+    },
+    "kids": {
+      "title": "Con bambini",
+      "hint": "Giorno e notte",
+      "text": "La sala madre e bambino nell’aerostazione è aperta giorno e notte."
+    },
+    "parking": {
+      "title": "Parcheggio",
+      "hint": "A pagamento, 24/7",
+      "text": "Il parcheggio custodito a pagamento è aperto giorno e notte."
+    }
+  }
+}

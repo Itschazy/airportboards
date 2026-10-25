@@ -1,0 +1,20 @@
+{
+ "iata": "EYK",
+ "blocks": {
+  "lounges": {
+   "title": "Lounges",
+   "hint": "2,200 ₽ per hour",
+   "text": "Premium comfort lounge for departing, transit and arriving passengers. 2,200 ₽ per person per hour, with personal check-in 3,500 ₽. Fast-track check-in and priority security 1,700 ₽."
+  },
+  "storage": {
+   "title": "Left luggage",
+   "hint": "380 ₽ per day",
+   "text": "Left luggage: 380 ₽ per item per day (price list from 01.10.2026)."
+  },
+  "kids": {
+   "title": "With children",
+   "hint": "Level 1, free",
+   "text": "Mother and child room on Level 1 of the terminal. For passengers with children under 14 and women in the second half of pregnancy. Free of charge. Enquiries: (34670) 62-222."
+  }
+ }
+}

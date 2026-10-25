@@ -1,0 +1,31 @@
+{
+ "iata": "MRV",
+ "about": "Mineralnye Vody: el mayor aeropuerto del Distrito Federal del Cáucaso Norte. La pista, de 3900 m de longitud y 60 m de anchura, entró en servicio en 2011. Dos terminales de salidas, nacional e internacional, y terminales de llegadas separadas.",
+ "blocks": {
+  "transport": {
+   "title": "Cómo llegar",
+   "hint": "Microbús 11, 20–25 min",
+   "text": "El microbús de ruta fija n.º 11 va a la estación de ferrocarril de Mineralnye Vody, en 20–25 minutos; a la estación de autobuses, parada «Rynok Ruslan», en unos 10 minutos. Desde la estación sale el autobús n.º 223 a Piatigorsk y el n.º 107 a Zheleznovodsk. A Yesentukí, Kislovodsk, Teberdá y Dombái van autobuses interurbanos desde la estación de autobuses."
+  },
+  "lounges": {
+   "title": "Salas VIP",
+   "hint": "«Beshtau», nivel 3, 24/7",
+   "text": "Sala business «Beshtau» en el nivel 3 de la nueva terminal, en la zona estéril tras el control de seguridad; abre día y noche. Admite a pasajeros de clase business, a miembros de los programas ON Pass, Persona.Aero, Grey Wall Pass, Dragon Pass, Every Lounge y otros, y a cualquier pasajero previo pago según tarifa."
+  },
+  "storage": {
+   "title": "Consigna",
+   "hint": "Semisótano, 8:00–17:00",
+   "text": "Consigna en el semisótano, con acceso solo por escalera; funciona de 8:00 a 17:00. El primer día (hasta las 24:00), 900 ₽ por bulto; después, 500 ₽ por día; el día incompleto se paga como completo. Plazo máximo de custodia: un mes."
+  },
+  "kids": {
+   "title": "Con niños",
+   "hint": "Gratis, 24/7",
+   "text": "La sala madre e hijo funciona día y noche y es gratuita para pasajeros con billete de salida desde Mineralnye Vody: con niños menores de 7 años, niños con discapacidad menores de 16 años y para mujeres en la segunda mitad del embarazo. Se necesitan billete, pasaporte y partida de nacimiento del niño."
+  },
+  "parking": {
+   "title": "Aparcamiento",
+   "hint": "15 min gratis",
+   "text": "Aparcamiento de corta estancia P1 junto a la sala de salidas: menos de 15 minutos gratis, 15–60 minutos 500 ₽, después 500 ₽ por hora; más de 4 horas, 1200 ₽ por día. Una nueva entrada dentro de la misma hora: 500 ₽. Hay aparcamiento gratuito en el terreno contiguo; su ubicación figura en el plano de aparcamientos."
+  }
+ }
+}

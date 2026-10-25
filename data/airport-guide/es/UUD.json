@@ -1,0 +1,31 @@
+{
+ "iata": "UUD",
+ "about": "Baikal: aeropuerto internacional de Ulán-Udé, funciona desde 1926, cerca del lago Baikal. Pista de 3000 m de longitud.",
+ "blocks": {
+  "transport": {
+   "title": "Cómo llegar",
+   "hint": "Autobuses 10, 55, 77",
+   "text": "Los autobuses urbanos n.º 10, 55 y 77 pasan por el centro (parada «Ploshchad Sovetov») hasta la plaza de la terminal del aeropuerto. Empiezan a circular a las 6:15 en días laborables y a las 7:00 los fines de semana, con intervalos de 7–10 minutos; el billete del n.º 55 cuesta 40 ₽. En coche desde el centro, unos 20 minutos."
+  },
+  "storage": {
+   "title": "Consigna",
+   "hint": "Nivel 1, 270 ₽ al día",
+   "text": "Consigna en la terminal de vuelos nacionales, en el nivel 1, de 6:00 a 20:00. Un bulto, 270 ₽ por día natural; un bulto de más de 203 cm de suma de las tres dimensiones, 550 ₽."
+  },
+  "kids": {
+   "title": "Con niños",
+   "hint": "Nivel 2, gratis, 24/7",
+   "text": "Sala madre e hijo en el nivel 2, en el ala derecha de la terminal, gratis y día y noche, hasta 3 horas. Para niños menores de 7 años con un adulto, niños con discapacidad menores de 14 años, familias numerosas con acreditación y mujeres en la segunda mitad del embarazo."
+  },
+  "parking": {
+   "title": "Aparcamiento",
+   "hint": "15 min gratis",
+   "text": "Corta estancia P1 junto a la terminal: hasta 15 minutos gratis, 16–60 minutos 500 ₽, la segunda hora 300 ₽, la tercera y la cuarta 200 ₽ cada una, a partir del minuto 241 1200 ₽, no más de 24 horas. Larga estancia: hasta 3 días, 800 ₽ por día; del 4.º al 6.º día, 500 ₽."
+  },
+  "wifi": {
+   "title": "Wi‑Fi",
+   "hint": "Red FreeAirportBaikalRT",
+   "text": "Wi‑Fi gratuito: red FreeAirportBaikalRT, acceso con el número de teléfono y un código por SMS."
+  }
+ }
+}

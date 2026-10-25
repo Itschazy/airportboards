@@ -1,0 +1,26 @@
+{
+ "iata": "ABA",
+ "about": "Aeropuerto Internacional de Abakán, dirección: Abakán, avenida Druzhby Narodov, 59. Desde el 25 de octubre de 2026, la terminal funciona de 04:30 a 22:00. Información: (3902) 202-489.",
+ "blocks": {
+  "transport": {
+   "title": "Cómo llegar",
+   "hint": "Autobús 106, trolebuses 3–5",
+   "text": "Autobús n.º 106, trolebuses n.º 3, n.º 4 y n.º 5. Taxis: «Maxim» +7 (3902) 28-28-28, «Khoroshee» +7 (3902) 30-07-00, «Troika» +7 (3902) 23-33-33."
+  },
+  "lounges": {
+   "title": "Salas VIP",
+   "hint": "Ala derecha, 05–22",
+   "text": "Sala de confort superior en el ala derecha de la terminal, 05:00–22:00, hasta 3 horas. Clase turista: adulto 5000 ₽, niño menor de 12 años 2500 ₽, menor de 2 años gratis. Clase business y programas de acceso a salas: 2700 ₽ adulto. Teléfono +7 913 449-38-26."
+  },
+  "kids": {
+   "title": "Con niños",
+   "hint": "Ala izquierda, gratis",
+   "text": "Sala madre e hijo en el ala izquierda de la terminal, junto al puesto médico. Dormitorio, sala de juegos, cocina, cambiador. Para niños menores de 7 años; se necesitan pasaporte y tarjeta de embarque. Gratis. Teléfono (3902) 202-551."
+  },
+  "parking": {
+   "title": "Aparcamiento",
+   "hint": "Cerrado temporalmente",
+   "text": "El aparcamiento de pago de larga estancia, a 50 m a la derecha de la terminal, no funciona temporalmente."
+  }
+ }
+}

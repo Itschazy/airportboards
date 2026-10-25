@@ -1,0 +1,46 @@
+{
+ "iata": "NBC",
+ "about": "Nizhnekamsk (Begishevo) International Airport named after N.V. Lemaev, a subsidiary of PJSC KAMAZ. Within 25 km of the airport are Naberezhnye Chelny, Nizhnekamsk, Yelabuga and Almetyevsk. One runway, more than 700,000 passengers a year.",
+ "blocks": {
+  "transport": {
+   "title": "Getting there",
+   "hint": "21 km from Nizhnekamsk",
+   "text": "The airport is 21 km from Nizhnekamsk and 24 km from Naberezhnye Chelny. The airport website suggests getting there by taxi; the page lists no scheduled transport."
+  },
+  "terminals": {
+   "title": "Terminals",
+   "hint": "A international, B domestic",
+   "text": "Terminal A serves international flights, terminal B domestic. The VIP lounge is in terminal A, the business lounge in terminal B."
+  },
+  "lounges": {
+   "title": "Lounges",
+   "hint": "Terminal B, 24/7",
+   "text": "Business lounge in terminal B, VIP lounge in terminal A, both open round the clock. Free entry for Aeroflot and Severny Veter business class, holders of Every.Lounge, MILEONAIR, GoldenKey, UNIPASS, GreyWall Pass, Dream Folks and other programmes. A single visit can be bought by a passenger with any ticket; service starts 2 hours before departure."
+  },
+  "storage": {
+   "title": "Left luggage",
+   "hint": "Terminal B, 24/7",
+   "text": "Left luggage on Level 1 of terminal B, open round the clock. The first day 400 ₽ (until 23:59 on the day of drop-off), then 200 ₽ per day. One item up to 30 kg. Items can be left via the Pack&Fly wrapping station or the information desk."
+  },
+  "sleep": {
+   "title": "Where to sleep",
+   "hint": "Hailey, 26 rooms",
+   "text": "Hailey Airport Hotel Begishevo within walking distance of the airport. 26 rooms with 45 beds, early breakfasts, Wi‑Fi. Booking: hotel-zakaz@nbc.aero, 8 (8552) 79-67-80."
+  },
+  "kids": {
+   "title": "With children",
+   "hint": "Level 2, free",
+   "text": "Mother and child rooms on Level 2 of terminals A and B. For departing passengers with children under 7 and disabled children under 14, 4 hours before departure. Free; passport and ticket required. Sign up at the information desk or by phone 8-800-200-18-19."
+  },
+  "parking": {
+   "title": "Parking",
+   "hint": "20 min free",
+   "text": "Paid car park in front of terminals A and B with 150 spaces: 20 minutes free, then 200 ₽ per hour up to 3 hours, longer 700 ₽ per day. On a repeat entry within 30 minutes there is no free time. Before the entrance to the grounds there is a free car park with 410 spaces."
+  },
+  "wifi": {
+   "title": "Wi‑Fi",
+   "hint": "Begishevo free network",
+   "text": "The Begishevo free network covers terminal B; the hotel has the HOTEL network. In the browser, tap Get access, enter your phone number and the code from the SMS."
+  }
+ }
+}

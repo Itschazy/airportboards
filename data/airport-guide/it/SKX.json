@@ -1,0 +1,30 @@
+{
+  "iata": "SKX",
+  "blocks": {
+    "transport": {
+      "title": "Come arrivare",
+      "hint": "Bus 7, marshrutka 15",
+      "text": "Alla fermata «Aeroport» arrivano il taxi collettivo (marshrutka) n. 15 e l’autobus n. 7. Orari sul sito bus13.ru."
+    },
+    "storage": {
+      "title": "Deposito bagagli",
+      "hint": "Terminal nazionale, da 100 ₽/ora",
+      "text": "Deposito bagagli per i passeggeri dei voli nazionali e internazionali nel terminal dei voli nazionali, giorno e notte. Armadietto 50×40×50: 100 ₽ all’ora, 70×60×70: 150 ₽, 100×70×100: 200 ₽."
+    },
+    "kids": {
+      "title": "Con bambini",
+      "hint": "Gratis",
+      "text": "La sala madre e bambino è gratuita, per bambini sotto i 7 anni con un adulto. Rivolgersi al personale dei banchi check-in; prima della sistemazione i bambini vengono visitati dall’operatore sanitario di turno."
+    },
+    "parking": {
+      "title": "Parcheggio",
+      "hint": "15 min gratis",
+      "text": "Piazzale dell’aerostazione a 30 m dal terminal: meno di 15 minuti gratis, oltre 15 minuti 200 ₽ all’ora, oltre un’ora 600 ₽ al giorno."
+    },
+    "wifi": {
+      "title": "Wi‑Fi",
+      "hint": "Rete Free WiFi",
+      "text": "Wi‑Fi gratuito dell’aeroporto: rete Free WiFi, accesso con il numero di telefono e il codice via SMS, vanno bene anche i numeri di operatori stranieri."
+    }
+  }
+}

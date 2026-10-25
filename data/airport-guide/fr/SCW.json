@@ -1,0 +1,15 @@
+{
+ "iata": "SCW",
+ "blocks": {
+  "storage": {
+   "title": "Consigne à bagages",
+   "hint": "Niveau 1 de l'aérogare",
+   "text": "Consigne au niveau 1 de l'aérogare. Les fauteuils roulants y sont acceptés gratuitement."
+  },
+  "parking": {
+   "title": "Parking",
+   "hint": "Rue Kolkhoznaïa, 3Б",
+   "text": "Parking de l'aéroport rue Kolkhoznaïa, 3Б, et d'autres places rue Kolkhoznaïa face à l'aérogare. Près de la rampe de l'aérogare, une zone de dépose et de prise en charge est réservée aux passagers handicapés."
+  }
+ }
+}

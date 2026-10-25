@@ -1,0 +1,36 @@
+{
+ "iata": "GOJ",
+ "about": "Nizhny Novgorod International Airport named after V.P. Chkalov serves domestic and international flights. Operator: JSC MANN. In 2024 the airport handled 1.47 million passengers, with 29 destinations in its network.",
+ "blocks": {
+  "transport": {
+   "title": "Getting there",
+   "hint": "Buses 11, 56, А50",
+   "text": "City buses: No. 11 to Druzhaeva St, No. 56 to Krasnoye Sormovo, No. А50 to DK Avtozavoda. Suburban trains run from N. Novgorod-Chkalov station to Moskovsky railway station, journey time 26–34 minutes, ticket 28 ₽. Train operator: JSC Volgo-Vyatskaya PPK."
+  },
+  "lounges": {
+   "title": "Lounges",
+   "hint": "Level 2, from 5,800 ₽",
+   "text": "Three lounges on Level 2: a domestic lounge, an international lounge and a lounge for bank card holders in the domestic departures area. Domestic and international lounges: 5,800 ₽ for up to 3 hours, then 550 ₽ for each hour. The bank lounge admits via On-pass, Grey Wall, UniPass, Every Lounge, Golden Key, RusPriority programmes. The domestic lounge is open round the clock."
+  },
+  "storage": {
+   "title": "Left luggage",
+   "hint": "Level 1, from 250 ₽/hour",
+   "text": "Automated left luggage on Level 1, to the left of the exit from the domestic baggage claim area. Standard locker: 250 ₽ per hour or 550 ₽ per day. Large locker: 350 ₽ per hour or 900 ₽ per day. Cloakroom: 100 ₽ per day."
+  },
+  "kids": {
+   "title": "With children",
+   "hint": "Level 2, 24/7",
+   "text": "Mother and child room on Level 2 of the terminal, open round the clock. Admits children under 7 and children with disabilities under 14, only with an adult. Passport and air ticket required. Stay up to 12 hours before departure and up to 6 hours after arrival."
+  },
+  "parking": {
+   "title": "Parking",
+   "hint": "15 min free",
+   "text": "Drop-off and pick-up zone: first 15 minutes free, from minute 16 to 60: 890 ₽, then 890 ₽ per hour. Car park P at the terminal: up to 1 hour 370 ₽, from 1 to 24 hours 750 ₽, up to 2 days 1,500 ₽. Free round-the-clock car park 700 m from the terminal, unguarded. First lane (VIP zone): 3,000 ₽ per entry."
+  },
+  "wifi": {
+   "title": "Wi‑Fi",
+   "hint": "Free_GOJ network",
+   "text": "Free Wi‑Fi in the passenger areas of the terminal. Network Free_GOJ. Login with a mobile phone number, then follow the on-screen instructions."
+  }
+ }
+}

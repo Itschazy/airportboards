@@ -1,0 +1,16 @@
+{
+ "iata": "IWA",
+ "about": "Der Flughafen Iwanowo „A. M. Wassilewski“ liegt 7 km südwestlich des Zentrums von Iwanowo. Flughafen von föderaler Bedeutung, in Betrieb seit 1939. Betreiber und Hauptoperator: OOO „Zentr Awia“.",
+ "blocks": {
+  "transport": {
+   "title": "Anreise",
+   "hint": "O-Bus 11",
+   "text": "Oberleitungsbus Nr. 11: Flughafen, Uliza Sagorodnaja, Uliza Leschnewskaja, Busbahnhof, Platz der Revolution, Scheremetewski-Prospekt, Bahnhof. Fährt von 7:00 bis 20:00, Takt 22–44 Minuten. Taxi: Yandex Taxi, „Vezet“, „Maxim“ über Apps. Der Flughafen liegt außerhalb der Stadtgrenze, ein Taxi bestellt man besser im Voraus."
+  },
+  "parking": {
+   "title": "Parken",
+   "hint": "10 Min. kostenlos",
+   "text": "Bewachter automatischer Parkplatz mit Schranke. Die ersten 10 Minuten kostenlos, eine Stunde 100 ₽, ein Tag 400 ₽. Bezahlung am Terminal (bar ohne Wechselgeld oder mit Karte), per QR-Code, in der App Hippoparking oder auf der Website. Nach der Bezahlung 15 Minuten für die Ausfahrt."
+  }
+ }
+}

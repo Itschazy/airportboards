@@ -1,0 +1,41 @@
+{
+ "iata": "NOZ",
+ "about": "Novokuznetsk B. V. Volynov International Airport, the air gateway to the Sheregesh resort. The new 19,500 sq. m terminal opened on 25 February 2025, capacity 1.73 million passengers a year.",
+ "blocks": {
+  "transport": {
+   "title": "Getting there",
+   "hint": "Bus 160, ~60 min",
+   "text": "Buses 120, 130 and 160 run from 5:20 to 22:34. No. 160 from Oktyabrsky Ave, about 60 minutes, 76 ₽. No. 120 from the Krasnogorskaya mine, about 80 minutes, 50 ₽. No. 130 from Dom Veteranov, about 90 minutes, 50 ₽. Taxi about 40 minutes, roughly 800 ₽."
+  },
+  "terminals": {
+   "title": "Terminal",
+   "hint": "6 gates, 3 jet bridges",
+   "text": "The new terminal opened on 25 February 2025. 13 check-in counters, 6 boarding gates, 3 jet bridges. Check-in and baggage drop close 40 minutes before departure, boarding 20 minutes before."
+  },
+  "lounges": {
+   "title": "Lounges",
+   "hint": "Level 3, 3,400 ₽",
+   "text": "Domestic business lounge on Level 3, open while flights are being handled. Adults 3,400 ₽, children 2–12 years 1,700 ₽, under 2 free, up to 3 hours. Access via MILEONAIR, Every Lounge, UniPass, Grey Wall Pass, Golden Key, Persona aero. VIP lounge on Levels 1–2 on request, departure from 18,900 ₽."
+  },
+  "storage": {
+   "title": "Left luggage",
+   "hint": "Level 1, 24/7",
+   "text": "Left luggage on Level 1, open round the clock. Standard baggage up to 203 cm in total dimensions: 400 ₽ for the first 24 hours, then 200 ₽. Oversized: 750 ₽ for the first 24 hours, then 400 ₽. One item up to 30 kg."
+  },
+  "sleep": {
+   "title": "Where to sleep",
+   "hint": "Hotel, from 4,200 ₽",
+   "text": "Hotel on the airport grounds, 33 Aeroportovaya St. 27 rooms, from 4,200 ₽ per day. Front desk round the clock: +7 (3843) 993 455. The hotel café is open round the clock."
+  },
+  "kids": {
+   "title": "With children",
+   "hint": "Level 2, 24/7, free",
+   "text": "Mother and child room on Level 2, in the landside area of the terminal. Open round the clock, free. Admits a child under 7 accompanied by one adult. There is a kitchen with a fridge and a microwave, a shower, a changing table; no sterilisers."
+  },
+  "parking": {
+   "title": "Parking",
+   "hint": "15 min free",
+   "text": "P1 drop-off and pick-up only, parking prohibited. P2 short-stay: 15 minutes free, 16–60 minutes 300 ₽, from the 2nd to the 4th hour 100 ₽/hour, over 4 hours 700 ₽/day. P3 long-stay: 15 minutes free, 500 ₽/day for up to 6 days. A part day is charged as a full day."
+  }
+ }
+}

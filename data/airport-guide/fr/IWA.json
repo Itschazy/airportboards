@@ -1,0 +1,16 @@
+{
+ "iata": "IWA",
+ "about": "L'aéroport d'Ivanovo Alexandre-Vassilevski se trouve à 7 km au sud-ouest du centre d'Ivanovo. Aéroport d'importance fédérale, en service depuis 1939. Exploitant et opérateur principal : SARL « Tsentr Avia ».",
+ "blocks": {
+  "transport": {
+   "title": "Comment s'y rendre",
+   "hint": "Trolleybus 11",
+   "text": "Trolleybus n° 11 : aéroport, rue Zagorodnaïa, rue Lejnevskaïa, gare routière, place de la Révolution, prospekt Cheremetevski, gare ferroviaire. Circule de 7:00 à 20:00, intervalle 22–44 minutes. Taxis : Yandex Taxi, « Vezyot », « Maxim » via les applications. L'aéroport est hors de la ville, mieux vaut commander le taxi à l'avance."
+  },
+  "parking": {
+   "title": "Parking",
+   "hint": "10 min gratuites",
+   "text": "Parking automatique gardé avec barrière. 10 premières minutes gratuites, l'heure 100 ₽, la journée 400 ₽. Paiement à la borne (espèces sans rendu de monnaie ou carte), par QR code, dans l'application Hippoparking ou sur le site. Après paiement, 15 minutes pour sortir."
+  }
+ }
+}

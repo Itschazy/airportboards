@@ -1,0 +1,30 @@
+{
+ "iata": "HRG",
+ "blocks": {
+  "transport": {
+   "title": "Nasıl gidilir",
+   "hint": "Minibüsler, yaklaşık 20 dakika",
+   "text": "Hurghada merkezine araçla yaklaşık 20 dakika. Şehre giden minibüsler havalimanı çıkışında bekler ve dolunca kalkar; sabit tarifeleri yoktur."
+  },
+  "taxi": {
+   "title": "Taksi",
+   "hint": "Fiyat — binmeden önce",
+   "text": "Taksiler geliş alanı çıkışında bekler. Yolculuk ücreti binmeden önce şoförle kararlaştırılır. Hertz dahil araç kiralama hizmeti var."
+  },
+  "terminals": {
+   "title": "Terminaller",
+   "hint": "İki terminal",
+   "text": "Havalimanında iki yolcu terminali var. Terminallerde ATM'ler ve döviz büroları bulunur."
+  },
+  "lounges": {
+   "title": "Business salonları",
+   "hint": "Pearl Lounge, Terminal 1",
+   "text": "Pearl Lounge Terminal 1'de — pasaport kontrolü ve güvenlik taramasından sonra, Kat 2'de 30 numaralı kapının yanında, gece gündüz açık. Kimlerin kabul edildiği konusunda kaynaklar farklı bilgi veriyor — giriş koşullarını salondan teyit edin."
+  },
+  "storage": {
+   "title": "Emanet",
+   "hint": "Havalimanında var",
+   "text": "Havalimanında bagaj emaneti var. Tam olarak nerede olduğu ve ücreti kaynaklarda belirtilmiyor."
+  }
+ }
+}

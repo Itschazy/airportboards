@@ -1,0 +1,20 @@
+{
+ "iata": "TBS",
+ "blocks": {
+  "transport": {
+   "title": "Getting there",
+   "hint": "Bus 337, 1 GEL",
+   "text": "City bus No. 337 (Airport — Tbilisi centre) leaves from the stop in front of the arrivals hall, from 06:59 to 22:59. Through the centre it runs along Rustaveli Avenue and Freedom Square to Station Square. Fare 1 GEL including transfers within 90 minutes when paying with a Metro Money card or a bank card; the Metro Money card itself costs 2 GEL."
+  },
+  "taxi": {
+   "title": "Taxi",
+   "hint": "40 GEL to the centre",
+   "text": "Taxis are available round the clock at the exit from the arrivals hall. To the centre a fixed 40 GEL, to the suburbs 50 GEL, journey time 20–30 minutes depending on traffic."
+  },
+  "wifi": {
+   "title": "Wi‑Fi",
+   "hint": "Free, no registration",
+   "text": "Free Wi‑Fi without registration in most waiting areas of the departure and arrival terminals: networks Tbilisi Loves You or Airport Free Wi‑Fi, then accept the terms on the login page."
+  }
+ }
+}

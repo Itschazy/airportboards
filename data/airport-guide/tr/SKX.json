@@ -1,0 +1,30 @@
+{
+ "iata": "SKX",
+ "blocks": {
+  "transport": {
+   "title": "Nasıl gidilir",
+   "hint": "7 no.lu otobüs, 15 no.lu dolmuş",
+   "text": "Aeroport durağına 15 numaralı dolmuş ve 7 numaralı otobüs gider. Tarife bus13.ru sitesinde."
+  },
+  "storage": {
+   "title": "Emanet",
+   "hint": "İç hat terminali, saati 100 ₽'den",
+   "text": "İç ve dış hat yolcuları için emanet iç hatlar terminalinde, gece gündüz açık. 50×40×50 dolap saati 100 ₽, 70×60×70 — 150 ₽, 100×70×100 — 200 ₽."
+  },
+  "kids": {
+   "title": "Çocukla",
+   "hint": "Ücretsiz",
+   "text": "Anne-bebek odası ücretsiz, tek yetişkinle birlikte 7 yaşından küçük çocuklar için. Check-in kontuarlarındaki görevlilere başvurun; yerleştirmeden önce çocukları nöbetçi sağlık görevlisi muayene eder."
+  },
+  "parking": {
+   "title": "Otopark",
+   "hint": "15 dakika ücretsiz",
+   "text": "Terminale 30 m uzaklıkta terminal önü meydanı: 15 dakikadan az ücretsiz, 15 dakikadan fazla saati 200 ₽, bir saatten fazla günlüğü 600 ₽."
+  },
+  "wifi": {
+   "title": "Wi‑Fi",
+   "hint": "Free WiFi ağı",
+   "text": "Havalimanından ücretsiz Wi‑Fi: Free WiFi ağı, SMS kodlu telefon numarasıyla giriş; yabancı operatör numaraları da kabul edilir."
+  }
+ }
+}

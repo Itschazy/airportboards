@@ -1,0 +1,30 @@
+{
+ "iata": "ASF",
+ "blocks": {
+  "transport": {
+   "title": "Cómo llegar",
+   "hint": "Autobuses 45, 86, microbuses",
+   "text": "Microbuses de ruta fija n.º 80с (desde la calle Latysheva) y n.º 86с (desde la fábrica de conservas). Autobuses n.º 45 (desde la calle Myasokombinat) y n.º 86 (desde el mercado Slavianski)."
+  },
+  "lounges": {
+   "title": "Salas VIP",
+   "hint": "Nivel 2, día y noche",
+   "text": "Sala business de vuelos nacionales en el nivel 2, en la zona estéril, después del control de seguridad; abierta día y noche. Admite a pasajeros de clase business, a participantes de programas de fidelización de aerolíneas y bancos, y a todos los que paguen la visita con tarjeta, con código QR o en efectivo. La estancia no puede superar las dos horas antes de la salida."
+  },
+  "storage": {
+   "title": "Consigna",
+   "hint": "Semisótano, 24/7",
+   "text": "Consigna de equipaje y equipaje de mano para pasajeros de vuelos nacionales e internacionales en el semisótano de la terminal; funciona día y noche."
+  },
+  "kids": {
+   "title": "Con niños",
+   "hint": "Gratis, 24/7",
+   "text": "La sala madre e hijo es gratuita y funciona día y noche, para estancias de hasta 3–4 horas. Para pasajeros con niños menores de 7 años (si hay plazas libres, menores de 8), niños con discapacidad menores de 14 años y mujeres en la segunda mitad del embarazo."
+  },
+  "parking": {
+   "title": "Aparcamiento",
+   "hint": "10 min gratis",
+   "text": "Plaza de la terminal: los primeros 10 minutos gratis, la primera hora 250 ₽, de la segunda a la cuarta 200 ₽ cada una, más de 4 horas — 900 ₽ por cada 24 horas. Aparcamiento por días (acceso n.º 5): las tres primeras horas, 200 ₽ cada una; a partir del minuto 181, las primeras 24 horas 600 ₽, dos periodos de 24 horas 1100 ₽, tres 1500 ₽, después 300 ₽ por cada 24 horas. Hay un aparcamiento gratuito para al menos 130 coches."
+  }
+ }
+}

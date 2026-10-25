@@ -1,0 +1,31 @@
+{
+ "iata": "CEK",
+ "about": "Balandino: aeropuerto internacional de Cheliábinsk I. V. Kurchatov. La nueva terminal de vuelos nacionales se inauguró el 26 de noviembre de 2019: 16,5 mil m², cuatro pasarelas de embarque y unos 900 pasajeros por hora.",
+ "blocks": {
+  "transport": {
+   "title": "Cómo llegar",
+   "hint": "Autobuses 1, 41, 45",
+   "text": "El autobús n.º 1 circula entre el aeropuerto y la estación de ferrocarril, pasando también por el Mercado Central y la plaza Komsomólskaya. El n.º 41 va hasta DK Stroiteley y el n.º 45 hasta Avtotsentr."
+  },
+  "lounges": {
+   "title": "Salas VIP",
+   "hint": "Nivel 2, tras el control",
+   "text": "Sala business de vuelos nacionales en el nivel 2 de la terminal, después de la zona de control de seguridad. Admite a pasajeros de clase business, a miembros élite de programas de fidelización de aerolíneas y bancos, y a pasajeros de clase turista previo pago, como máximo 3 horas antes de la salida. Comida y bebidas sin alcohol incluidas."
+  },
+  "kids": {
+   "title": "Con niños",
+   "hint": "Gratis, 24/7",
+   "text": "La sala madre e hijo es gratuita y funciona día y noche, para estancias de hasta 3–4 horas. Para pasajeros con niños menores de 8 años, niños con discapacidad menores de 14 años y mujeres en la segunda mitad del embarazo. Si está cerrada, diríjase al mostrador de información del nivel 1, frente a la entrada."
+  },
+  "parking": {
+   "title": "Aparcamiento",
+   "hint": "15 min gratis",
+   "text": "Aparcamiento P en la plaza de la terminal: 15 minutos gratis una vez por hora, la primera hora 300 ₽, después 250 ₽ por hora, las primeras 24 horas en total 1300 ₽, más de 24 horas, 700 ₽ por cada 24 horas. Aparcamiento gratuito de 100 plazas para quienes esperan a pasajeros, en el lado sur del asentamiento de Aeroport."
+  },
+  "wifi": {
+   "title": "Wi‑Fi",
+   "hint": "Gratis",
+   "text": "Los pasajeros y visitantes del aeropuerto pueden usar internet gratis por Wi‑Fi."
+  }
+ }
+}

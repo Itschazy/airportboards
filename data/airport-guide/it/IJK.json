@@ -1,0 +1,36 @@
+{
+  "iata": "IJK",
+  "about": "L’aeroporto di Izhevsk fa parte della AO «Izhavia» insieme alla compagnia aerea, a un tour operator e a un’agenzia di viaggi. L’azienda aeronautica è stata fondata nel 1944, il 100% delle azioni appartiene alla Repubblica di Udmurtia.",
+  "blocks": {
+    "transport": {
+      "title": "Come arrivare",
+      "hint": "Transfer in città 1500 ₽",
+      "text": "Transfer dell’aeroporto dal piazzale dell’aerostazione in auto con autista. Izhevsk e dintorni fino a 30 km 1500 ₽, Votkinsk 4000 ₽, Sarapul 5000 ₽, Chaykovsky 6000 ₽. Prenotazione con 3 ore o più di anticipo su izhavia.su o dopo l’arrivo alla cassa dell’aeroporto, se ci sono auto libere."
+    },
+    "terminals": {
+      "title": "Terminal",
+      "hint": "2 piani, 4 pontili",
+      "text": "Servizio nel nuovo terminal passeggeri di 10 850 m². 2 piani, 11 banchi check-in, 4 gate d’imbarco con pontili. 5 ascensori, scala mobile verso la zona partenze. Segnaletica in russo, udmurto, inglese e cinese."
+    },
+    "lounges": {
+      "title": "Sale business",
+      "hint": "Livello 2, 4500 ₽",
+      "text": "Sala business al livello 2 del terminal: adulti 4500 ₽, bambini 2–12 anni 2250 ₽, sotto i 2 anni gratis, fino a 3 ore. Con le carte RusPriority, ON PASS, Persona Aero, Every Lounge, Grey Wall Pass, GoldenKey; Priority Pass e Lounge Key non sono accettate. Sala VIP: adulti 12 000 ₽, bambini 2–12 anni 6000 ₽. Richieste: vip@izhavia.su."
+    },
+    "storage": {
+      "title": "Deposito bagagli",
+      "hint": "Livello 1, dietro le informazioni",
+      "text": "Deposito bagagli al livello 1, nella sala dietro il banco informazioni. Accetta gratuitamente i bagagli per la durata del ritardo del volo, oltre ai bagagli non reclamati e a quelli in inoltro. Custodia degli oggetti ritrovati 400 ₽. Un collo fino a 30 kg."
+    },
+    "kids": {
+      "title": "Con bambini",
+      "hint": "Livello 2, 24/7, gratis",
+      "text": "Sala madre e bambino al livello 2 dell’aerostazione, giorno e notte e gratuita. Accedono i passeggeri con bambini sotto i 7 anni, con bambini con disabilità sotto i 18 anni e le donne nella seconda metà della gravidanza. Serve la carta d’imbarco. Cibo e prodotti per l’igiene vanno portati dai genitori."
+    },
+    "parking": {
+      "title": "Parcheggio",
+      "hint": "15 min gratis",
+      "text": "Fino a 15 minuti gratis, da 16 a 30 minuti 250 ₽, da 30 minuti a 2 ore 500 ₽/ora, oltre 2 ore 750 ₽/giorno. Parcheggio VIP 300 ₽/ora fino a 5 ore, senza tempo gratuito. Uscita entro 15 minuti dal pagamento. Gratis per le auto delle persone con disabilità iscritte nel registro federale."
+    }
+  }
+}

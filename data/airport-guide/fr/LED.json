@@ -1,0 +1,51 @@
+{
+ "iata": "LED",
+ "about": "L'aéroport de Poulkovo se trouve à 23 km de la place du Palais de Saint-Pétersbourg. Les passagers sont accueillis dans un terminal passagers centralisé ; le bâtiment « Poulkovo-1 » est relié à son bâtiment principal par une galerie de liaison et accueille les vols intérieurs. Depuis 2010, l'aéroport est géré par la SARL « Vozdouchnye Vorota Severnoï Stolitsy » ; transporteur de base : la compagnie « Rossiya ».",
+ "blocks": {
+  "lounges": {
+   "title": "Salons",
+   "hint": "2 intérieurs + 1 international",
+   "text": "Trois salons d'affaires. Deux dans la zone de départ des vols intérieurs, dont le New Pulkovo Lounge, et un dans la zone de départ des vols internationaux. Pour les vols intérieurs, l'entrée est au fond du hall, au niveau 2. Gratuit : classe prioritaire et niveaux prioritaires des programmes de fidélité des compagnies aériennes, 4 heures avant le départ ; MILE·ON·AIR, Every Lounge, Comfort Pass, RusPriority, Golden Key, Grey Wall Pass, Persona.aero, DreamFolks, 2 heures avant. Visite unique 3500 ₽ pour 2 heures, entrée gratuite pour les enfants de moins de 2 ans."
+  },
+  "storage": {
+   "title": "Consigne à bagages",
+   "hint": "Niveau 1, dès 1100 ₽",
+   "text": "Au niveau 1 du nouveau terminal. Un bagage coûte 1100 ₽ pour le premier jour calendaire, ensuite 500 ₽ par jour. Coffre-fort : 1500 ₽, ensuite 800 ₽ par jour. Opérateur « Aeroservis », +7 921 859-55-33."
+  },
+  "sleep": {
+   "title": "Où dormir",
+   "hint": "Capsules, 1100 ₽/h",
+   "text": "Hôtel capsule dans la salle d'attente au niveau 2 du terminal central. Couchage de 140×200 cm pour deux, dans la capsule une prise 220 V et Wi‑Fi gratuit. Tarif horaire : 1100 ₽, en espèces ou par carte. Téléphone +7 921 859-55-22."
+  },
+  "kids": {
+   "title": "Avec un enfant",
+   "hint": "Niveau 2, 24/7, gratuit",
+   "text": "Salle mère-enfant au niveau 2 du bâtiment principal du terminal, jour et nuit et gratuite. Accès avec des enfants jusqu'à 7 ans inclus, des enfants handicapés de moins de 14 ans, pour 3 heures maximum. Billet ou carte d'embarquement, document de l'enfant et certificat médical requis : il est délivré gratuitement au poste médical du niveau 2. L'espace enfants des vols intérieurs se trouve au niveau 2 derrière le restaurant « Boufet »."
+  },
+  "transport": {
+   "title": "Comment s'y rendre",
+   "hint": "Bus 39, 39Э, 82Э",
+   "text": "Le n° 39 depuis le métro « Moskovskaïa » marque tous les arrêts : intervalle 5–7 min, trajet 35 min, départs de l'aéroport de 5:15 à 1:36. Le n° 39Э est direct : intervalle 13–20 min, trajet 27 min, départs de l'aéroport de 6:00 à 1:40. Le n° 82Э depuis le métro « Prospekt Veteranov » : intervalle 15–16 min, trajet 25 min, départs de l'aéroport de 6:05 à 1:41."
+  },
+  "taxi": {
+   "title": "Taxis et arrêts",
+   "hint": "Yandex Go, comptoirs 24/7",
+   "text": "Partenaire taxi officiel de l'aéroport : Yandex Go. Les comptoirs sont ouverts jour et nuit : dans la zone de livraison des bagages des vols intérieurs et juste à la sortie de la livraison des bagages internationaux. Les bus 39, 39Э et 82Э déposent au niveau 3 et partent du niveau 1, trajet 88 ₽. Le kiosque « Podorojnik » près de l'arrêt est ouvert de 8:00 à 20:00."
+  },
+  "parking": {
+   "title": "Parking",
+   "hint": "15 min gratuites à l'entrée",
+   "text": "Devant le terminal, 15 premières minutes gratuites, puis 2000 ₽ par tranche de 30 minutes. Une entrée au maximum toutes les 30 minutes. P2 (courte durée) : 450 ₽ pour 30 minutes, 2–4 minutes à pied. P4 (longue durée) : 1100 ₽ pour les premières 24 heures, à partir de 14 jours 700 ₽ par 24 heures. Le parking gratuit P0 de 120 places se trouve sur la chaussée de Poulkovo, à 3 km de l'aéroport."
+  },
+  "wifi": {
+   "title": "Wi‑Fi",
+   "hint": "OBIT, connexion par appel",
+   "text": "Réseau gratuit « OBIT — Free Internet Access » de la société « OBIT ». Il faut saisir le numéro de téléphone au format +indicatif du pays ; les numéros étrangers sont acceptés. Un appel arrive sur le numéro, inutile de répondre : les 4 derniers chiffres du numéro appelant constituent le code d'accès."
+  },
+  "terminals": {
+   "title": "Terminal",
+   "hint": "1 arrivées, 2–3 départs",
+   "text": "Enregistrement au niveau 3. Zone de départ des vols intérieurs au niveau 2, internationaux au niveau 3. Arrivées et zone d'accueil au niveau 1."
+  }
+ }
+}

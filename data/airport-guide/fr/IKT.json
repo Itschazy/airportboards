@@ -1,0 +1,41 @@
+{
+ "iata": "IKT",
+ "about": "L'aéroport se trouve à Irkoutsk, rue Chiriamova, 13 ; exploitant : SA « Aéroport international d'Irkoutsk ». Des vols directs le relient à 50 villes de Russie, le réseau international compte 11 destinations. Le trafic dépasse 3,8 millions de passagers.",
+ "blocks": {
+  "transport": {
+   "title": "Comment s'y rendre",
+   "hint": "Bus 80, 90, 480",
+   "text": "Bus 80, 90, 406, 480, 42, 43. Trolleybus 4 et 6. Minibus 99, 20, 45, 61."
+  },
+  "terminals": {
+   "title": "Terminaux",
+   "hint": "Т1 internat., Т2 départs",
+   "text": "Le terminal 1 accueille les vols internationaux. Terminal 2 : départs des vols intérieurs. Terminal 3 : arrivées des vols intérieurs."
+  },
+  "lounges": {
+   "title": "Salons",
+   "hint": "Salon du Т2, 4250 ₽",
+   "text": "Le terminal 2 compte un salon d'affaires, un salon de confort supérieur et les salons VIP-1, VIP-2, VIP-3. Le salon d'affaires et le salon de confort supérieur ouvrent 2 heures avant le départ selon les places disponibles, 4250 ₽ par passager. Dans le terminal 1, salon de confort supérieur 3 heures avant le départ, 4473 ₽. Les cartes Dragon Pass ne sont pas acceptées."
+  },
+  "storage": {
+   "title": "Consigne à bagages",
+   "hint": "610 ₽ par jour",
+   "text": "Dans le terminal domestique au niveau 1, paiement en espèces ou par carte. 610 ₽ par bagage et par jour ; un bagage de plus de 40×40×50 cm est facturé selon le nombre de places occupées. Dans le terminal international, la consigne est au niveau 2 et ne fonctionne qu'en cas de retard des vols. Téléphone +7 (3952) 266-194."
+  },
+  "sleep": {
+   "title": "Où dormir",
+   "hint": "Hôtel à 100 m",
+   "text": "Hôtel de l'aéroport « Vozdouchnaïa Gavan », rue Chiriamova, 6, à 100 mètres de l'aéroport. 145 chambres, réception jour et nuit, séjours de courte durée. Dans l'aérogare des lignes intérieures, un téléphone en liaison directe avec l'hôtel est disponible."
+  },
+  "kids": {
+   "title": "Avec un enfant",
+   "hint": "Gratuit, 24/7",
+   "text": "Salles mère-enfant dans le terminal domestique (niveau 1 VIP) et dans l'international (niveau 2), jour et nuit, gratuites. Enfants de moins de 7 ans : jusqu'à 3–4 heures avant le départ, 1 heure après l'arrivée. Un seul adulte avec l'enfant. S'adresser au bureau d'information."
+  },
+  "parking": {
+   "title": "Parking",
+   "hint": "10 min gratuites",
+   "text": "Les 10 premières minutes sont gratuites. 11–20 minutes 100 ₽, jusqu'à 1 heure 350 ₽, de 2 h 41 min à 24 heures 1200 ₽, chaque jour suivant 1200 ₽. Chaque terminal a son propre parking. Zone de dépose et de prise en charge : 10 minutes gratuites, au-delà pénalité de 2000 ₽ de l'heure."
+  }
+ }
+}

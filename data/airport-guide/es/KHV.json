@@ -1,0 +1,41 @@
+{
+ "iata": "KHV",
+ "about": "El aeropuerto funciona día y noche; los vuelos regulares y chárter cubren más de 40 destinos, incluidos países de Asia-Pacífico. Operador principal de servicios en tierra: AO «Aeropuerto de Jabárovsk». Los pasajeros son atendidos en dos terminales: de vuelos nacionales y de vuelos internacionales.",
+ "blocks": {
+  "transport": {
+   "title": "Cómo llegar",
+   "hint": "Trolebús 1, autobús 35",
+   "text": "Trolebuses: n.º 1 desde la plaza Komsomólskaya, n.º 2 y n.º 3 en circuito pasando por la estación de ferrocarril. Autobuses: n.º 35 desde Polyarnaya, n.º 18 desde el barrio Yuzhny. Microbús de ruta fija n.º 180 Estación fluvial – pueblo de Matveevka."
+  },
+  "terminals": {
+   "title": "Terminales",
+   "hint": "Nacional e internacional aparte",
+   "text": "Dos terminales: de vuelos nacionales y de vuelos internacionales, cada una con 3 plantas. La nueva terminal de vuelos nacionales se inauguró en 2019. Los planos de las plantas están publicados en el sitio web."
+  },
+  "lounges": {
+   "title": "Salas VIP",
+   "hint": "Nacional, nivel 3, 4000 ₽",
+   "text": "Dos salas business en el nivel 3 de la terminal de vuelos nacionales, en la zona estéril. «Amur» abre día y noche. «Shantary», a la derecha de la salida del control de seguridad, abre día y noche para titulares de programas bancarios (Every Lounge, Golden Key, Rus Priority y otros). Precio para todos: 4000 ₽; pasadas 4 horas, 1100 ₽ por hora."
+  },
+  "storage": {
+   "title": "Consigna",
+   "hint": "Nacional, nivel 1, izquierda",
+   "text": "Consigna automática en la terminal de vuelos nacionales, nivel 1, lado izquierdo. Plazo de custodia de hasta 30 días. No se aceptan dinero, documentos, animales, armas ni sustancias peligrosas."
+  },
+  "sleep": {
+   "title": "Dónde dormir",
+   "hint": "Hotel «Mishka», desde 1 hora",
+   "text": "Hotel de tránsito «Mishka» en el aeropuerto: terminal B, nivel 2, habitaciones con pago por horas desde 1 hora. Junto al aeropuerto, el hotel «Aeropolis», Matveevskoye shosse, 30, habitaciones de 1200 a 6000 ₽."
+  },
+  "kids": {
+   "title": "Con niños",
+   "hint": "Nivel 2, 24/7, gratis",
+   "text": "Sala madre e hijo en el nivel 2, en la zona pública. Funciona día y noche, gratis. Para niños menores de 7 años, niños con discapacidad menores de 14 años y embarazadas en la segunda mitad del embarazo. Los pasajeros que salen necesitan tarjeta de embarque."
+  },
+  "parking": {
+   "title": "Aparcamiento",
+   "hint": "15 min gratis",
+   "text": "Corta estancia P2, frente a la terminal de vuelos nacionales: hasta 15 min gratis, hasta 30 min 150 ₽, hasta 60 min 300 ₽, hasta 24 horas 500 ₽. Larga estancia P1, frente al edificio de Dalaeronavigatsiya: 500 ₽/día hasta 4 días, a partir de 5 días 350 ₽. Hay aparcamiento gratuito sin límite de tiempo."
+  }
+ }
+}

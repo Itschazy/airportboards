@@ -1,0 +1,31 @@
+{
+ "iata": "UUS",
+ "about": "Das Terminal liegt im Planungsbezirk Chomutowo am südlichen Stadtrand von Juschno-Sachalinsk, 10 km vom Zentrum. Den Terminalkomplex betreibt AO „Aerowoksal Juschno-Sachalinsk“, die Fläche des Komplexes beträgt mehr als 47.000 m².",
+ "blocks": {
+  "transport": {
+   "title": "Anreise",
+   "hint": "Busse 3, 8, 63",
+   "text": "Vom Zentrum fahren die Busse Nr. 3, 8 und 63, das Terminal ist für sie Endstation. Betrieb von 6:30 bis 22:00, Fahrzeit 30–40 Min. Vorortzug vom Bahnhof nach Chomutowo, von dort etwa 10 Min. mit dem Bus. Taxi: etwa 25 Min., etwa 350 ₽."
+  },
+  "parking": {
+   "title": "Parken",
+   "hint": "15 Min. kostenlos",
+   "text": "Hol- und Bringzone: 15 Min. kostenlos, bis 60 Min. 400 ₽, danach 1200 ₽ für die ersten 24 Stunden und 600 ₽ für je weitere 24 Stunden. Langzeitparkplatz P1: 500 ₽ pro 24 Stunden für die ersten 5 Zeiträume von je 24 Stunden, danach 400 ₽. Für Passagiere mit eingeschränkter Mobilität mit Behindertenschild kostenlos."
+  },
+  "lounges": {
+   "title": "Business-Lounges",
+   "hint": "„Aniwa“, Ebene 3",
+   "text": "Business-Lounge „Aniwa“ auf Ebene 3, von 6:00 bis 23:00: 4400 ₽, Kinder von 2–12 Jahren 2200 ₽, höchstens 2 Stunden, Zugang mit Every Lounge. Lounge „Krilon“ auf Ebene 2, von 6:00 bis 23:00: 2800 ₽, akzeptiert Comfort pass, Every Lounge, Mir Pass, Grey Wall Pass, ONPASS. Kinder unter 2 Jahren kostenlos."
+  },
+  "storage": {
+   "title": "Gepäckaufbewahrung",
+   "hint": "Ebene 1, ab 500 ₽",
+   "text": "Gepäckaufbewahrung auf Ebene 1 des Terminals. Normales Gepäck: 500 ₽ für die ersten 24 Stunden, 200 ₽ für je weitere 24 Stunden. Sperrgepäck über 203 cm: 850 ₽ und 400 ₽. Ein Gepäckstück bis 30 kg, Aufbewahrung bis 30 Tage."
+  },
+  "kids": {
+   "title": "Mit Kind",
+   "hint": "Ebene 2, 6:00–23:00",
+   "text": "Mutter-Kind-Raum auf Ebene 2 im öffentlichen Bereich, von 6:00 bis 23:00, kostenlos. Zugang für Kinder unter 8 Jahren mit einem Erwachsenen, Kinder mit Behinderung unter 14 Jahren und Schwangere in der zweiten Schwangerschaftshälfte. Erforderlich sind Ticket oder Bordkarte, Pass, Geburtsurkunde. Es gibt eine Küche mit Mikrowelle, einen Sterilisator gibt es nicht."
+  }
+ }
+}

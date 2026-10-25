@@ -1,0 +1,30 @@
+{
+ "iata": "GYD",
+ "blocks": {
+  "transport": {
+   "title": "アクセス",
+   "hint": "駅行きバス、1.30 AZN",
+   "text": "Aero Expressのバスは第1・第2ターミナルからバクー鉄道駅（地下鉄28 May駅）まで運行し、Surakhani橋と地下鉄Koroglu駅に停車する。06:00〜23:15は20分ごと、夜間は45分ごと。運賃はBAKU CARDで1.30 AZN、カード自体は2 AZN。1枚のカードをグループで使える。"
+  },
+  "lounges": {
+   "title": "ラウンジ",
+   "hint": "複数のラウンジ",
+   "text": "空港にはAZAL、Business Class Lounge、Absheron、Salam、Baku Club、Premium、Mugamのラウンジがある。第1ターミナル1階のAZAL Loungeでは、ビジネスクラスとプレミアムエコノミークラスの旅客が、専用の降車エリアを備えた別カウンターで並ばずにチェックインできる。"
+  },
+  "kids": {
+   "title": "お子様連れ",
+   "hint": "第1・第2ターミナル",
+   "text": "おむつ替え台と冷水・温水を備えた母子室：第1ターミナルの3階と4階、第2ターミナルの2階。おむつ替え台はすべての多機能トイレにもある。"
+  },
+  "parking": {
+   "title": "駐車場",
+   "hint": "15分無料、24/7",
+   "text": "24時間営業、2,000台超：第1ターミナルに835台、第2ターミナルに1166台。最初の15分無料、2時間まで1 AZN、4時間まで2 AZN、12時間まで6 AZN、1日まで15 AZN、以降1日ごとに+15 AZN。支払いは現金、カード、オンライン（Tezöde、AzParkinq、Birbank）。"
+  },
+  "wifi": {
+   "title": "Wi‑Fi",
+   "hint": "Baku-Airport-Free-WiFi",
+   "text": "カフェ、ショップ、ビジネスラウンジを含むターミナル全域で無料Wi‑Fi：ネットワークBaku-Airport-Free-WiFi。第1ターミナルの出発エリアには、インターネットに接続された無料のパソコンがある。"
+  }
+ }
+}

@@ -1,0 +1,20 @@
+{
+ "iata": "EVN",
+ "blocks": {
+  "transport": {
+   "title": "交通方式",
+   "hint": "N100和N201路公交",
+   "text": "N100路公交车往返于兹瓦特诺茨机场和埃里温市中心之间。N201路（Elitebus）为机场至埃里温市中心的往返快线。1楼到达大厅有全天候租车服务：Carwiz、Enterprise、GoMotion、Hertz、SIXT。"
+  },
+  "taxi": {
+   "title": "出租车",
+   "hint": "Eco Taxi，到达大厅",
+   "text": "Eco Taxi柜台位于1楼到达大厅，全天候服务。"
+  },
+  "parking": {
+   "title": "停车",
+   "hint": "室内，642个车位",
+   "text": "室内停车楼位于客运航站楼对面，可停642辆车。从入口取票时开始计时；上下客停留10分钟内免费。取车前在自动缴费机付款。"
+  }
+ }
+}

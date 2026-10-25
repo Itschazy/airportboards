@@ -1,0 +1,31 @@
+{
+ "iata": "OVB",
+ "about": "Tolmatchevo : aéroport international de Novossibirsk Alexandre-Pokrychkine, à 17 km à l'ouest du centre-ville. Deux pistes de 3597 et 3602 m. Le complexe de terminaux est conçu pour 1800 passagers par heure sur les lignes intérieures et 1300 sur les internationales.",
+ "blocks": {
+  "transport": {
+   "title": "Comment s'y rendre",
+   "hint": "Express 111Э, toutes les 30 min",
+   "text": "Le bus express n° 111Э relie l'aéroport à la gare ferroviaire « Novossibirsk-Glavny » toutes les 30 minutes : depuis la gare de 05:00 à 00:30, depuis l'aéroport de 04:00 à 23:30. Les trains de banlieue s'arrêtent à la gare « Ob » près de l'aéroport ; de là, les bus n° 4 (40 ₽), n° 111Э et n° 112 vont au terminal."
+  },
+  "lounges": {
+   "title": "Salons",
+   "hint": "Secteurs B et C, 4000 ₽ / 4 h",
+   "text": "Salons des lignes intérieures « Komfort » et « Premier » au niveau 2 du Secteur C, en zone réservée : après le contrôle au niveau 3, face à la porte n° 6, descendre en suivant la signalétique. Salon des lignes internationales au niveau 3 du Secteur B, 50 places. Visite payante 4000 ₽ pour 4 heures, enfants de 2 à 12 ans 2000 ₽, gratuit pour les moins de 2 ans."
+  },
+  "storage": {
+   "title": "Consigne à bagages",
+   "hint": "Secteur C, 500 ₽ par jour",
+   "text": "La consigne pour les passagers des vols intérieurs et internationaux se trouve dans le Secteur C et est ouverte jour et nuit. Bagages 500 ₽ par jour et par bagage, vêtements d'extérieur 100 ₽ par jour. Moins d'un jour est facturé comme un jour entier."
+  },
+  "kids": {
+   "title": "Avec un enfant",
+   "hint": "Secteur C, niveau 3, 24/7",
+   "text": "Salle mère-enfant au niveau 3 du Secteur C, jour et nuit et gratuite. Pour les passagers au départ avec des enfants de moins de 7 ans, les enfants handicapés de moins de 14 ans et les femmes dans la seconde moitié de la grossesse. Cuisine, chambre avec lits d'enfant, salle de jeux."
+  },
+  "parking": {
+   "title": "Parking",
+   "hint": "15 min gratuites",
+   "text": "Sur la place de l'aérogare, 15 premières minutes gratuites, puis première heure 400 ₽, deuxième 300 ₽, ensuite 200 ₽ de l'heure, au-delà de 6 heures 1500 ₽ par jour. Parkings P1–P4 : jusqu'à 3 jours 700 ₽ par jour, jusqu'à 6 jours 500 ₽, au-delà 300 ₽. Entrée uniquement avec une plaque d'immatriculation reconnue."
+  }
+ }
+}

@@ -1,0 +1,20 @@
+{
+ "iata": "TBS",
+ "blocks": {
+  "transport": {
+   "title": "Cómo llegar",
+   "hint": "Autobús 337, 1 GEL",
+   "text": "El autobús urbano n.º 337 «Aeropuerto — centro de Tiflis» sale de la parada situada frente a la sala de llegadas, de 06:59 a 22:59. Por el centro pasa por la avenida Rustaveli y la plaza de la Libertad hasta la plaza de la Estación. El billete cuesta 1 GEL, con 90 minutos de transbordos, pagando con la tarjeta Metro Money o con tarjeta bancaria; la tarjeta Metro Money cuesta 2 GEL."
+  },
+  "taxi": {
+   "title": "Taxi",
+   "hint": "40 GEL al centro",
+   "text": "Taxis día y noche a la salida de la sala de llegadas. Al centro, precio fijo de 40 GEL; a las afueras, 50 GEL; el trayecto dura 20–30 minutos según el tráfico."
+  },
+  "wifi": {
+   "title": "Wi‑Fi",
+   "hint": "Gratis, sin registro",
+   "text": "Wi‑Fi gratuito sin registro en la mayoría de las zonas de espera de las terminales de salidas y llegadas: redes Tbilisi Loves You o Airport Free Wi‑Fi; después, aceptar las condiciones en la página de acceso."
+  }
+ }
+}

@@ -1,0 +1,25 @@
+{
+ "iata": "DLM",
+ "blocks": {
+  "transport": {
+   "title": "가는 방법",
+   "hint": "Havaş, 마르마리스·페티예행",
+   "text": "Havaş 셔틀은 공항 주차장에서 마르마리스와 페티예 시내로 출발합니다. 마르마리스 노선: Dalaman, Ortaca, Köyceğiz, Gökova, 마르마리스 버스터미널; 페티예 노선: Dalaman, Göcek, Günlükbaşı, Adnan Menderes 대로, 페티예 버스터미널. 미리 기사에게 말하면 경로상의 지정 지점에서 내려 줍니다. 시간표와 요금은 Havaş 웹사이트에 있습니다."
+  },
+  "taxi": {
+   "title": "택시",
+   "hint": "공항 택시 협동조합",
+   "text": "공항 택시는 Dalaman Airport Taxi 협동조합이 운영합니다. 전화 및 WhatsApp +90 533 958 28 72, 웹사이트 dalamanairporttaxi.com."
+  },
+  "parking": {
+   "title": "주차",
+   "hint": "상시, 1·2터미널 앞",
+   "text": "1·2터미널 앞 총면적 72,972 m²의 주차장은 연중 상시 운영합니다. 요금은 공항 웹사이트의 계산기로 확인하며, 요금은 DHMI가 정하고 최근 갱신은 2026년 1월, 부가가치세 포함입니다."
+  },
+  "wifi": {
+   "title": "Wi‑Fi",
+   "hint": "30분 무료",
+   "text": "모든 도착장과 출발장의 DorukNet Wi‑Fi: 여권을 스캔하면 키오스크에서 발급하는 비밀번호로 30분 무료; 그 이상과 프리미엄은 유료. 비즈니스 라운지와 비즈니스 항공 터미널에서는 제한 없음."
+  }
+ }
+}

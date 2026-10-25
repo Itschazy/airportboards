@@ -1,0 +1,41 @@
+{
+ "iata": "BAX",
+ "about": "Barnaul: aeropuerto internacional G. S. Titov, principal aeropuerto del krai de Altái, gestionado por AO «Aviapredpriyatiye Altai». Pista de 2850 × 50 m. Es el gran aeropuerto más cercano a los centros turísticos del Altái montañoso y a Belokurija.",
+ "blocks": {
+  "transport": {
+   "title": "Cómo llegar",
+   "hint": "Autobús 110",
+   "text": "El autobús n.º 110 circula entre el aeropuerto y la estación de autobuses «Spartak-2», 11 servicios en cada sentido: desde el aeropuerto de 6:00 a 18:50, desde la estación de 7:10 a 20:00. El horario puede variar según el tráfico."
+  },
+  "lounges": {
+   "title": "Salas VIP",
+   "hint": "Ala derecha, 6200 ₽",
+   "text": "Terminal business de vuelos nacionales en el ala derecha de la terminal, con acceso por la entrada principal. Facturación y control de seguridad propios, traslado al avión en microbús. Para pasajeros que salen, a partir de 2 años, 6200 ₽; para los que llegan, 4150 ₽; estancia de 3 horas, menores de 2 años gratis. No disponible para pasajeros internacionales."
+  },
+  "storage": {
+   "title": "Consigna",
+   "hint": "Nivel 1, 210 ₽ al día",
+   "text": "Consigna de equipaje y equipaje de mano en el nivel 1 de la terminal. Un bulto cuesta 210 ₽ por día, sea cual sea su tamaño; los días se cuentan por calendario, de 00:00 a 23:59. Las bolsas y paquetes sujetos al equipaje cuentan como bulto aparte."
+  },
+  "sleep": {
+   "title": "Dónde dormir",
+   "hint": "Hotel del aeropuerto",
+   "text": "El hotel de AO «Aviapredpriyatiye Altai» está en el propio recinto del aeropuerto: habitaciones de distintas categorías de precio y cafetería."
+  },
+  "kids": {
+   "title": "Con niños",
+   "hint": "Nivel 2, gratis, 24/7",
+   "text": "Sala madre e hijo en el nivel 2, gratuita y abierta día y noche. Para pasajeros que salen con niños menores de 7 años, niños con discapacidad menores de 14 años y mujeres en la segunda mitad del embarazo. Hay cocina, dormitorio con cunas y sala de juegos."
+  },
+  "parking": {
+   "title": "Aparcamiento",
+   "hint": "Aparcamiento gratuito",
+   "text": "Detrás de la zona de parque del aeropuerto hay un aparcamiento gratuito para unos 100 coches, sin límite de tiempo. En la plaza de la terminal operan grúas; está prohibido aparcar fuera de los lugares designados."
+  },
+  "wifi": {
+   "title": "Wi‑Fi",
+   "hint": "Gratis, 3 proveedores",
+   "text": "Wi‑Fi gratuito para pasajeros y visitantes del aeropuerto, de tres proveedores: Avantel, Beeline y MTS. Elija el proveedor en el dispositivo y siga las indicaciones de la pantalla."
+  }
+ }
+}

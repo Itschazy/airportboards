@@ -1,0 +1,26 @@
+{
+ "iata": "CEE",
+ "about": "L'aéroport appartient à l'entreprise aérienne « Severstal ». Longueur de piste 2500 m, capacité du terminal 120 passagers par heure.",
+ "blocks": {
+  "parking": {
+   "title": "Parking",
+   "hint": "90 min gratuites",
+   "text": "Place de l'aérogare : jusqu'à 90 minutes gratuit ; en cas de retard du vol, nouvelle entrée de 90 minutes sans frais. Au-delà de 90 minutes, redevance de 1000 ₽ par jour. Parking payant ouvert jour et nuit : 350 ₽ par jour. Téléphone (8202) 675-217."
+  },
+  "lounges": {
+   "title": "Salons",
+   "hint": "Niveau 1, à gauche",
+   "text": "Salon ON PASS au niveau 1, dans la partie gauche du bâtiment, 14 places. Accès pour les passagers disposant d'un accès ON PASS et pour les passagers du tarif « Business » après l'enregistrement et le contrôle. Horaires selon le règlement de l'aéroport. Réception +7 (909) 523-92-09."
+  },
+  "sleep": {
+   "title": "Où dormir",
+   "hint": "Hôtel Sky-Park à côté",
+   "text": "Hôtel Sky-Park 3* à côté de l'aéroport : 62 chambres, restaurant au niveau 1, Wi‑Fi. Réservation +7 (8202) 67-52-64."
+  },
+  "kids": {
+   "title": "Avec un enfant",
+   "hint": "Niveau 1, gratuit",
+   "text": "Salle mère-enfant au niveau 1, dans la salle d'attente des vols intérieurs. Pour les passagers au départ avec des enfants de moins de 7 ans, les enfants handicapés et les femmes enceintes. Gratuit. Appelez un agent du service passagers ou adressez-vous au comptoir d'enregistrement."
+  }
+ }
+}

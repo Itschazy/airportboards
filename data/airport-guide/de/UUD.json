@@ -1,0 +1,31 @@
+{
+ "iata": "UUD",
+ "about": "Baikal: Internationaler Flughafen Ulan-Ude, in Betrieb seit 1926, nahe dem Baikalsee. Start- und Landebahn mit 3000 m Länge.",
+ "blocks": {
+  "transport": {
+   "title": "Anreise",
+   "hint": "Busse 10, 55, 77",
+   "text": "Die Stadtbusse Nr. 10, 55 und 77 fahren über das Zentrum (Haltestelle „Ploschtschad Sowetow“) bis zum Vorplatz des Flughafens. Betriebsbeginn werktags um 6:15, am Wochenende um 7:00, Takt 7–10 Minuten; die Fahrt mit Nr. 55 kostet 40 ₽. Mit dem Auto vom Zentrum etwa 20 Minuten."
+  },
+  "storage": {
+   "title": "Gepäckaufbewahrung",
+   "hint": "Ebene 1, 270 ₽ pro Tag",
+   "text": "Gepäckaufbewahrung im Inlandsterminal, auf Ebene 1, von 6:00 bis 20:00. Ein Gepäckstück 270 ₽ pro Kalendertag, ein Gepäckstück über 203 cm Summe der drei Maße 550 ₽."
+  },
+  "kids": {
+   "title": "Mit Kind",
+   "hint": "Ebene 2, kostenlos, 24/7",
+   "text": "Mutter-Kind-Raum auf Ebene 2, im rechten Flügel des Terminals, kostenlos und rund um die Uhr, bis zu 3 Stunden. Für Kinder unter 7 Jahren mit einem Erwachsenen, Kinder mit Behinderung unter 14 Jahren, kinderreiche Familien mit Ausweis und Frauen in der zweiten Schwangerschaftshälfte."
+  },
+  "parking": {
+   "title": "Parken",
+   "hint": "15 Min. kostenlos",
+   "text": "Kurzzeitparkplatz P1 am Terminal: bis 15 Minuten kostenlos, 16–60 Minuten 500 ₽, die zweite Stunde 300 ₽, die dritte und vierte je 200 ₽, ab der 241. Minute 1200 ₽, höchstens 24 Stunden. Langzeitparkplatz: bis 3 Tage 800 ₽ pro Tag, vom 4. bis zum 6. Tag 500 ₽."
+  },
+  "wifi": {
+   "title": "Wi‑Fi",
+   "hint": "Netz FreeAirportBaikalRT",
+   "text": "Kostenloses Wi‑Fi: Netz FreeAirportBaikalRT, Anmeldung mit Telefonnummer und Code per SMS."
+  }
+ }
+}

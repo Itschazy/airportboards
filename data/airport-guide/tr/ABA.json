@@ -1,0 +1,26 @@
+{
+ "iata": "ABA",
+ "about": "Abakan Uluslararası Havalimanı, adres: Abakan, Drujby Narodov Caddesi, 59. 25 Ekim 2026'dan itibaren terminal binası 04:30–22:00 arasında açıktır. Danışma: (3902) 202-489.",
+ "blocks": {
+  "transport": {
+   "title": "Nasıl gidilir",
+   "hint": "Otobüs 106, troleybüs 3–5",
+   "text": "Otobüs: 106 numara; troleybüsler: 3, 4 ve 5 numara. Taksi: Maxim +7 (3902) 28-28-28, Khoroshee +7 (3902) 30-07-00, Troyka +7 (3902) 23-33-33."
+  },
+  "lounges": {
+   "title": "Business salonları",
+   "hint": "Sağ kanat, 05–22",
+   "text": "Terminal binasının sağ kanadında konforlu bekleme salonu, 05:00–22:00, en fazla 3 saat. Ekonomi sınıfı: yetişkin 5000 ₽, 12 yaşından küçük çocuk 2500 ₽, 2 yaşından küçük ücretsiz. Business sınıfı ve salon erişim programları: yetişkin 2700 ₽. Telefon +7 913 449-38-26."
+  },
+  "kids": {
+   "title": "Çocukla",
+   "hint": "Sol kanat, ücretsiz",
+   "text": "Anne-bebek odası terminal binasının sol kanadında, yanında revir var. Yatak odası, oyun odası, mutfak, alt değiştirme masası. 7 yaşından küçük çocuklar için; pasaport ve biniş kartı gerekir. Ücretsiz. Telefon (3902) 202-551."
+  },
+  "parking": {
+   "title": "Otopark",
+   "hint": "Geçici olarak kapalı",
+   "text": "Terminal binasının 50 m sağındaki ücretli uzun süreli otopark geçici olarak hizmet vermiyor."
+  }
+ }
+}

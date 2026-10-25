@@ -1,0 +1,36 @@
+{
+ "iata": "IJK",
+ "about": "Der Flughafen Ischewsk gehört zusammen mit der Fluggesellschaft, einem Reiseveranstalter und einem Reisebüro zur AO „Izhavia“. Das Luftfahrtunternehmen wurde 1944 gegründet, 100 % der Aktien gehören der Republik Udmurtien.",
+ "blocks": {
+  "transport": {
+   "title": "Anreise",
+   "hint": "Transfer in die Stadt 1500 ₽",
+   "text": "Flughafentransfer ab dem Vorplatz im Auto mit Fahrer. Ischewsk und Umland bis 30 km 1500 ₽, Wotkinsk 4000 ₽, Sarapul 5000 ₽, Tschaikowski 6000 ₽. Bestellung mindestens 3 Stunden vorher auf izhavia.su oder nach der Ankunft an der Flughafenkasse, sofern Autos frei sind."
+  },
+  "terminals": {
+   "title": "Terminal",
+   "hint": "2 Etagen, 4 Fluggastbrücken",
+   "text": "Abfertigung im neuen Passagierterminal mit 10 850 m² Fläche. 2 Etagen, 11 Check-in-Schalter, 4 Flugsteige mit Fluggastbrücken. 5 Aufzüge, eine Rolltreppe in den Abflugbereich. Beschilderung auf Russisch, Udmurtisch, Englisch und Chinesisch."
+  },
+  "lounges": {
+   "title": "Business-Lounges",
+   "hint": "Ebene 2, 4500 ₽",
+   "text": "Business-Lounge auf Ebene 2 des Terminals: Erwachsene 4500 ₽, Kinder von 2–12 Jahren 2250 ₽, unter 2 Jahren kostenlos, bis zu 3 Stunden. Mit den Karten RusPriority, ON PASS, Persona Aero, Every Lounge, Grey Wall Pass, GoldenKey; Priority Pass und Lounge Key werden nicht akzeptiert. VIP-Lounge: Erwachsene 12 000 ₽, Kinder von 2–12 Jahren 6000 ₽. Anfragen: vip@izhavia.su."
+  },
+  "storage": {
+   "title": "Gepäckaufbewahrung",
+   "hint": "Ebene 1, hinter der Auskunft",
+   "text": "Gepäckaufbewahrung auf Ebene 1, in der Halle hinter dem Informationsschalter. Nimmt Gepäck für die Dauer einer Flugverspätung kostenlos an, außerdem nicht abgeholtes und nachgesandtes Gepäck. Aufbewahrung von Fundsachen 400 ₽. Ein Gepäckstück bis 30 kg."
+  },
+  "kids": {
+   "title": "Mit Kind",
+   "hint": "Ebene 2, 24/7, kostenlos",
+   "text": "Mutter-Kind-Raum auf Ebene 2 des Terminals, rund um die Uhr und kostenlos. Zugang mit Kindern unter 7 Jahren, Kindern mit Behinderung unter 18 Jahren und für Schwangere in der zweiten Schwangerschaftshälfte. Bordkarte erforderlich. Verpflegung und Hygieneartikel bringen die Eltern mit."
+  },
+  "parking": {
+   "title": "Parken",
+   "hint": "15 Min. kostenlos",
+   "text": "Bis 15 Minuten kostenlos, von 16 bis 30 Minuten 250 ₽, von 30 Minuten bis 2 Stunden 500 ₽/Stunde, über 2 Stunden 750 ₽/Tag. VIP-Parkplatz 300 ₽/Stunde bis 5 Stunden, ohne kostenlose Zeit. Ausfahrt innerhalb von 15 Minuten nach der Bezahlung. Für Fahrzeuge von Menschen mit Behinderung aus dem föderalen Register kostenlos."
+  }
+ }
+}

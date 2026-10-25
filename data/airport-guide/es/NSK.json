@@ -1,0 +1,31 @@
+{
+ "iata": "NSK",
+ "about": "Aeropuerto en el sur de la península de Taimyr, en el norte del krai de Krasnoyarsk. Operador: OOO «Aeropuerto Norilsk». Cuatro aerolíneas operan vuelos regulares a diez ciudades de Rusia; tráfico en 2024: 883 mil pasajeros.",
+ "blocks": {
+  "transport": {
+   "title": "Cómo llegar",
+   "hint": "Autobús 33, 1 h 10 min",
+   "text": "El autobús 33 circula entre la estación de autobuses «Norilsk (ADTs)», la estación de autobuses «Kayerkan (TBK)» y la terminal; el trayecto dura 1 h 10 min. El autobús 110 a Dudinka sale del aeropuerto todos los días a las 09:00. La parada del autobús a Dudinka está a la salida de la sala de llegadas."
+  },
+  "terminals": {
+   "title": "Terminal",
+   "hint": "Una terminal, 2 plantas",
+   "text": "Una sola terminal. En el nivel 1: oficina de información, mostradores de facturación, sala de espera, embalaje y búsqueda de equipaje. En el nivel 2: control de seguridad, sala business y policía. Del 25.10.2026 al 27.03.2027 la terminal funciona lun–sáb 06:00–21:00, dom 06:00–12:00."
+  },
+  "lounges": {
+   "title": "Salas VIP",
+   "hint": "Nivel 2, 7450 ₽",
+   "text": "Sala business en la sala de salidas del nivel 2, hasta 49 plazas. Salida o llegada 7450 ₽, niño de 2–12 años 3725 ₽, menores de 2 años gratis. Quienes despiden o reciben a pasajeros: 3240 ₽. Teléfonos: +7 (3919) 31-54-22, 31-53-89."
+  },
+  "sleep": {
+   "title": "Dónde dormir",
+   "hint": "Residencia, 24/7",
+   "text": "Residencia del aeropuerto en la plaza de la terminal. 30 habitaciones con 55 plazas, abierta día y noche. Aloja a pasajeros y a otras personas con pasaporte; se paga por días completos, con prepago del 100%. Teléfono +7 (3919) 31-53-70."
+  },
+  "kids": {
+   "title": "Con niños",
+   "hint": "Nivel 2, gratis",
+   "text": "Sala madre e hijo en el nivel 2 de la terminal. Gratis para mujeres con niños menores de 5 años y embarazadas en la segunda mitad del embarazo. Si el vuelo se retrasa, los niños menores de 7 años se alojan gratis a cargo de la aerolínea. Hay dormitorio, sala de juegos y espacio para preparar y tomar comida."
+  }
+ }
+}

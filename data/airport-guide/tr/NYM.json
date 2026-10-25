@@ -1,0 +1,26 @@
+{
+ "iata": "NYM",
+ "about": "Nadım Havalimanı V. S. Çernomırdin'in adını taşır. İşletmeci: Nadymskoye Aviapredpriyatiye AO. Havalimanında iki check-in salonu var; ikincisi ihtiyaç halinde açılır.",
+ "blocks": {
+  "transport": {
+   "title": "Nasıl gidilir",
+   "hint": "2 ve 4А numaralı otobüsler",
+   "text": "Havalimanına 2 ve 4А numaralı şehir otobüsleri gider. Taksiyle veya kendi aracınızla da gelinebilir."
+  },
+  "lounges": {
+   "title": "Business salonları",
+   "hint": "VIP salon, 2 No.lu check-in salonu",
+   "text": "VIP salon 2 numaralı check-in salonunun sağ tarafında, ayrı girişi ve kendi otoparkı var. Kalkıştan en geç 15 saat önce ödeme yapan ekonomi sınıfı yolcuları, S7 Priority üyeleri ve Yamal havayolunun business sınıfı kabul edilir. Salon kalkıştan 1 saat 30 dakika önce ve uçağın inişinden 30 dakika önce açılır. Fiyatlar havacılık işletmesinin tarifesinde; 2 yaşından küçük çocuklar ücretsiz."
+  },
+  "kids": {
+   "title": "Çocukla",
+   "hint": "7:00–18:30, ücretsiz",
+   "text": "Anne-bebek odası 7:00–18:30 arası açık, kalış ücretsiz. 7 yaşından küçük çocuklu yolcular, bir yetişkinle birlikte 14 yaşından küçük engelli çocuklar ve gebeliğin ikinci yarısındaki kadınlar kabul edilir. Sağlık noktasından belge, biniş kartı ve yetişkin ile çocuğun belgeleri gerekir. Belge olmadan alt değiştirme ve emzirme için 1 numaralı odaya girilebilir."
+  },
+  "parking": {
+   "title": "Otopark",
+   "hint": "Ücretsiz",
+   "text": "Terminal önü meydanındaki otopark ücretsiz. Park alanları 1 numaralı check-in salonunun ana girişinde ve Layner mağazası civarında. Engelli araçları için yerler çizgi ve tabelayla işaretlenmiştir."
+  }
+ }
+}

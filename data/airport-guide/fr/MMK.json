@@ -1,0 +1,21 @@
+{
+ "iata": "MMK",
+ "about": "Mourmansk : aéroport à 24 km au sud-ouest du centre-ville et à 4 km du village de Mourmachi, ouvert jour et nuit. Une seule piste de 2500 × 42 m. Exploitant : SA « Aéroport de Mourmansk ».",
+ "blocks": {
+  "transport": {
+   "title": "Comment s'y rendre",
+   "hint": "Bus 106, environ une heure",
+   "text": "Le bus ou minibus n° 106 part de la place de la gare ferroviaire de Mourmansk avec un intervalle de 20–30 minutes, trajet d'environ une heure. La nuit circule le n° 106н « Mourmansk — Aéroport »."
+  },
+  "storage": {
+   "title": "Consigne à bagages",
+   "hint": "Sous-sol, 24/7",
+   "text": "Consigne au sous-sol, ouverte jour et nuit. Il faut d'abord signaler le bagage au contrôle à l'entrée de l'aérogare : après le contrôle, un agent de sûreté aérienne accompagne jusqu'à la consigne. Paiement au guichet d'information."
+  },
+  "kids": {
+   "title": "Avec un enfant",
+   "hint": "Niveau 2, gratuit, 24/7",
+   "text": "Salle mère-enfant au deuxième niveau, dans l'aile gauche de l'aérogare, gratuite et ouverte jour et nuit. Pour les passagers avec des enfants de moins de 7 ans, les enfants handicapés de moins de 14 ans et les femmes dans la seconde moitié de la grossesse. Entrée uniquement avec le bagage à main, les bagages sont déposés à la consigne."
+  }
+ }
+}

@@ -1,0 +1,30 @@
+{
+ "iata": "SKX",
+ "blocks": {
+  "transport": {
+   "title": "Getting there",
+   "hint": "Bus 7, minibus 15",
+   "text": "Minibus taxi No. 15 and bus No. 7 run to the Aeroport stop. Timetable on bus13.ru."
+  },
+  "storage": {
+   "title": "Left luggage",
+   "hint": "Domestic terminal, from 100 ₽/hour",
+   "text": "Left luggage for domestic and international passengers in the domestic terminal, open round the clock. Locker 50×40×50 — 100 ₽ per hour, 70×60×70 — 150 ₽, 100×70×100 — 200 ₽."
+  },
+  "kids": {
+   "title": "With children",
+   "hint": "Free",
+   "text": "The mother and child room is free, for children under 7 with one adult. Ask the staff at the check-in counters; children are examined by the duty medical officer before admission."
+  },
+  "parking": {
+   "title": "Parking",
+   "hint": "15 min free",
+   "text": "Station forecourt 30 m from the terminal: less than 15 minutes free, more than 15 minutes 200 ₽ per hour, more than an hour 600 ₽ per day."
+  },
+  "wifi": {
+   "title": "Wi‑Fi",
+   "hint": "Free WiFi network",
+   "text": "Free Wi‑Fi from the airport: network Free WiFi, login with a phone number and an SMS code; numbers of foreign operators also work."
+  }
+ }
+}

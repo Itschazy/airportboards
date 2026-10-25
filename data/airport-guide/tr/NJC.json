@@ -1,0 +1,36 @@
+{
+ "iata": "NJC",
+ "about": "Nijnevartovsk Havalimanı, 2005'teki yeniden yapılanmanın ardından uluslararası oldu. Pist 3200 × 60 m. Taşıma hacmi bakımından Hantı-Mansi Özerk Okrugu – Yugra'nın ikinci havalimanı.",
+ "blocks": {
+  "transport": {
+   "title": "Nasıl gidilir",
+   "hint": "4 km, 15 numaralı otobüs",
+   "text": "Şehir merkezine 4 km. Şehir otobüsleri: 4 numara U Severnoy Roshchi yerleşimine, 9 numara Starovartovskaya'ya, 15 numara tren garına ve otogara, 21 numara DRSU'ya. Terminal önü meydanından Strezhevoy'a havalimanı otobüsü kalkar, tarife otogarın sitesinde. Taksi durağı terminal önü meydanında, 2 numaralı terminalin karşısında."
+  },
+  "terminals": {
+   "title": "Terminaller",
+   "hint": "Kâğıt biniş kartı gerekir",
+   "text": "İki terminal: 1 ve 2 numaralı. Uçuş öncesi işlemler için elektronik biniş kartı şu anda kabul edilmiyor, kâğıt kart gerekir."
+  },
+  "lounges": {
+   "title": "Business salonları",
+   "hint": "Terminal 1, 24/7",
+   "text": "Business salonu Terminal 1'de Kat 1'de, gece gündüz açık. Business sınıfı yolcuları ve havayolu elit kart sahipleri kabul edilir, diğerleri yer varsa ücret karşılığında. Gidiş 2 sa 30 dk için 7950 ₽, sonraki her saat 1141 ₽. Geliş, karşılama veya uğurlama 4050 ₽. 2–12 yaş çocuklar tarifenin %70'i, 2 yaşından küçük ücretsiz."
+  },
+  "storage": {
+   "title": "Emanet",
+   "hint": "Terminal 1, 24/7",
+   "text": "1 numaralı terminal, Kat 1, gece gündüz açık. Üç boyutunun toplamı 203 cm'ye kadar valiz, çanta veya sırt çantası günlüğü 600 ₽. Büyük boyutlu eşyalar günlüğü 700 ₽. Numaralı fişi kaybetme: 400 ₽."
+  },
+  "kids": {
+   "title": "Çocukla",
+   "hint": "7 yaşından küçük çocuklar için oda",
+   "text": "Anne-bebek odası yalnızca 24 saat içinde kalkışı olan biletle kullanılabilir. 7 yaşından küçük çocuklu kadınlar ve engelli çocuklar için ücretsiz. Diğerleri için yatak başına günlük 1200 ₽."
+  },
+  "parking": {
+   "title": "Otopark",
+   "hint": "15 dakika ücretsiz",
+   "text": "Terminal önü meydanında otopark. 15 dakikaya kadar ücretsiz, sonra 5 saate kadar saati 200 ₽. İlk 24 saat 1000 ₽, sonraki her 24 saat 800 ₽. 30 dakika içinde tekrar giriş, giriş anından itibaren ücretlidir. Terminal 1 ve 2'deki ödeme makineleri yalnızca banknot kabul eder; çıkıştaki gişe kart ve QR kabul eder."
+  }
+ }
+}

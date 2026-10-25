@@ -1,0 +1,46 @@
+{
+ "iata": "SVO",
+ "about": "Şeremetyevo, Moskova Oblastı'nın Himki şehrindedir. Terminaller iki komplekse ayrılır: Kuzey (B ve C) ve Güney (D, E, F ve Aeroexpress terminali); aralarında terminaller arası geçiş treni çalışır. Havalimanı işletmecisi: MASh AO.",
+ "blocks": {
+  "lounges": {
+   "title": "Business salonları",
+   "hint": "B, C ve D'de 8 salon",
+   "text": "İç hatlar: Rublyov (B, Kat 3, 105–106 numaralı kapıların yanında), Kandinsky ve A-Club (B, Kat 2), Sochi (D, Kat 2). Dış hatlar: Malevich (C, Kat 3, giriş 143 numaralı kapının yanında), Chagall, Alfa Only ve Sber (C, Kat 3). Rublyov ve Malevich'e öncelikli sınıf yolcuları ile Aeroflot Bonus Gold, Platinum, Infinit ve Infinit Pro kart sahipleri ücretsiz girer. Diğerleri için 4 saati 4500 ₽, 2 yaşından küçük çocuklar ücretsiz."
+  },
+  "storage": {
+   "title": "Emanet",
+   "hint": "B, D ve Aeroexpress",
+   "text": "Ücretli emanetler Terminal B'de (Kat 1), Terminal D'de (Kat −1) ve Aeroexpress terminalinde, hepsi genel alanda. B'de ve Aeroexpress terminalinde gece gündüz açık. İlk 24 saat parça başına 700 ₽, sonrası her 24 saat için 300 ₽. Bir parça en fazla 32 kg, saklama süresi 6 aya kadar."
+  },
+  "sleep": {
+   "title": "Nerede uyunur",
+   "hint": "B, C'de ve tren yanında kapsüller",
+   "text": "Terminal B'de GettSleep: Kat 3, genel alan, döviz bürosunun yanında, biniş kartı gerekmez. Terminal C'de GettSleep: Kat 3, dış hatlar steril alanı, Orion salonunun yanında, yalnızca dış hat biniş kartıyla. Bir GettSleep daha Aeroexpress terminalinde Kat 3'te. Hepsi gece gündüz açık, ödeme saatlik, en az 4 saat."
+  },
+  "kids": {
+   "title": "Çocukla",
+   "hint": "B, C, D — gece gündüz",
+   "text": "Anne-bebek odaları Terminal B'de (Kat 1), Terminal C'de (Kat 3) ve Terminal D'de (Kat 2), hepsi genel alanda. Gece gündüz açık ve ücretsiz. 7 yaşından küçük çocuklu yolcular (engelli çocuklarla 14 yaşından küçük) ve hamileler kabul edilir. Bilet veya biniş kartı ile yetişkinin ve çocuğun belgeleri gerekir."
+  },
+  "transport": {
+   "title": "Nasıl gidilir",
+   "hint": "Aeroexpress ve otobüs",
+   "text": "Aeroexpress Belorussky Garı, Savyolovskaya, Okruzhnaya ve Lianozovo'dan 30 dakikada bir kalkar, geceleri seferlere ara verilir. Belorussky Garı'ndan Terminal B ve C'ye 46 dakika, D, E, F'ye 61 dakika. Aeroexpress'in ekspres otobüsleri Khovrino metro istasyonundan (2 numaralı çıkış) kalkar: 1195 numaralı otobüs B ve C'ye, 1195D numaralı otobüs D'ye. Sefer aralığı 10–15 dakika, yolculuk yaklaşık 20 dakika, bilet 450 ₽."
+  },
+  "parking": {
+   "title": "Otopark",
+   "hint": "B, C önünde 10 dk ücretsiz",
+   "text": "Terminal B ve C'nin Geliş ve Gidiş alanlarına giriş 10 dakika, D, E, F önündeki meydana 15 dakika ücretsiz. Sınır aşılırsa saatte 4000 ₽ ceza. Araçlar B ve C otoparklarının yanındaki Gidiş alanında yolcu indirir; oradan terminale kapalı galeriyle 2 dakika. İki saat içinde en fazla iki kez ücretsiz girilebilir."
+  },
+  "wifi": {
+   "title": "Wi‑Fi",
+   "hint": "_Sheremetyevo Wi-Fi",
+   "text": "Ücretsiz \"_Sheremetyevo Wi-Fi\" ağı havalimanının tamamında çalışır. Bağlanmak için telefon numarasıyla kimlik doğrulaması gerekir: ekrandaki numarayı arayın, geri aramayı kabul edin ve numaranın son 4 hanesini girin ya da SMS kodunu girin."
+  },
+  "terminals": {
+   "title": "Terminaller",
+   "hint": "Kuzey B, C — güney D, E, F",
+   "text": "Havalimanı iki kompleksten oluşur: Kuzey (Terminal B ve C) ve Güney (Terminal D, E, F ve Aeroexpress terminali). Aralarında terminaller arası geçiş trenleri çalışır; seferler 1 Haziran 2024'te yeniden başladı. Tarifeli 817 ve 851 numaralı otobüslerle veya araçla da gidilebilir."
+  }
+ }
+}

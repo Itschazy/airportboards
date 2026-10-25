@@ -1,0 +1,20 @@
+{
+ "iata": "NAL",
+ "blocks": {
+  "transport": {
+   "title": "Getting there",
+   "hint": "Minibus 17",
+   "text": "Minibus taxi No. 17 runs from the railway station directly to the terminal. By car from the centre of Nalchik 15–20 minutes, turning off Idarova St. 92 km from Prielbrusye National Park, about 1 hour 20 minutes."
+  },
+  "lounges": {
+   "title": "Premium comfort lounge",
+   "hint": "Separate entrance, 6,200 ₽",
+   "text": "Premium comfort lounge with its own entrance and access road: check-in and security for domestic flights inside the lounge, up to 10 minutes, transfer to the aircraft. Passenger 6,200 ₽, children under 2 free, person seeing off 5,000 ₽. Book in advance by phone."
+  },
+  "kids": {
+   "title": "With children",
+   "hint": "Free",
+   "text": "The mother and child room is free for holders of a ticket for a departure from Nalchik: passengers with children under 7 or disabled children under 16, and women in the second half of pregnancy. Ticket, passport and the child's birth certificate required."
+  }
+ }
+}

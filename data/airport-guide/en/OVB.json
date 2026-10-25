@@ -1,0 +1,31 @@
+{
+ "iata": "OVB",
+ "about": "Tolmachevo: Novosibirsk International Airport named after A. I. Pokryshkin, 17 km west of the city centre. Two runways, 3,597 and 3,602 m long. The terminal complex is designed for 1,800 passengers per hour on domestic routes and 1,300 on international routes.",
+ "blocks": {
+  "transport": {
+   "title": "Getting there",
+   "hint": "Express 111Э, every 30 min",
+   "text": "Express bus No. 111Э connects the airport with Novosibirsk-Glavny railway station every 30 minutes: from the station from 05:00 to 00:30, from the airport from 04:00 to 23:30. Suburban trains stop at Ob station near the airport; from there buses No. 4 (40 ₽), No. 111Э and No. 112 go to the terminal."
+  },
+  "lounges": {
+   "title": "Lounges",
+   "hint": "Sectors B and C, 4,000 ₽ / 4 h",
+   "text": "Domestic business lounges Komfort and Premier on Level 2 of Sector C airside: after security on Level 3 opposite gate No. 6, go down following the signs. The international lounge is on Level 3 of Sector B, 50 seats. Paid visit 4,000 ₽ for 4 hours, children 2–12 years 2,000 ₽, under 2 free."
+  },
+  "storage": {
+   "title": "Left luggage",
+   "hint": "Sector C, 500 ₽ per day",
+   "text": "Left luggage for domestic and international passengers is in Sector C and is open round the clock. Baggage 500 ₽ per item per day, outerwear 100 ₽ per day. Storage of less than a day is charged as a full day."
+  },
+  "kids": {
+   "title": "With children",
+   "hint": "Sector C, Level 3, 24/7",
+   "text": "Mother and child room on Level 3 of Sector C, open round the clock and free. For departing passengers with children under 7, disabled children under 14 and women in the second half of pregnancy. There is a kitchen, a bedroom with cots and a playroom."
+  },
+  "parking": {
+   "title": "Parking",
+   "hint": "15 min free",
+   "text": "On the station forecourt the first 15 minutes are free, then the first hour 400 ₽, the second 300 ₽, then 200 ₽ per hour, over 6 hours 1,500 ₽ per day. Car parks P1–P4: up to 3 days 700 ₽ per day, up to 6 days 500 ₽, longer 300 ₽. Entry only with a recognised licence plate."
+  }
+ }
+}

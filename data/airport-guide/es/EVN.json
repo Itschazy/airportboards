@@ -1,0 +1,20 @@
+{
+ "iata": "EVN",
+ "blocks": {
+  "transport": {
+   "title": "Cómo llegar",
+   "hint": "Autobuses N100 y N201",
+   "text": "El autobús N100 hace la ruta aeropuerto de Zvartnots — centro de Ereván y vuelta. La ruta N201 (Elitebus) es un exprés del aeropuerto al centro de Ereván y vuelta. En la sala de llegadas del nivel 1 hay oficinas de alquiler de coches abiertas las 24 horas: Carwiz, Enterprise, GoMotion, Hertz, SIXT."
+  },
+  "taxi": {
+   "title": "Taxi",
+   "hint": "Eco Taxi, sala de llegadas",
+   "text": "Mostrador de Eco Taxi en la sala de llegadas del nivel 1, abierto día y noche."
+  },
+  "parking": {
+   "title": "Aparcamiento",
+   "hint": "Cubierto, 642 plazas",
+   "text": "Edificio de aparcamiento cubierto para 642 coches frente a la terminal de pasajeros. El tiempo se cuenta desde que se recoge el tique en la entrada; para subir y bajar pasajeros, hasta 10 minutos gratis. Se paga en las máquinas automáticas antes de subir al coche."
+  }
+ }
+}

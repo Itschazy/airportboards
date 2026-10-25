@@ -1,0 +1,16 @@
+{
+ "iata": "IWA",
+ "about": "L’aeroporto di Ivanovo intitolato ad A. M. Vasilevsky si trova a 7 km a sud-ovest del centro di Ivanovo. Aeroporto di rilevanza federale, operativo dal 1939. Gestore e operatore principale: OOO «Tsentr Avia».",
+ "blocks": {
+  "transport": {
+   "title": "Come arrivare",
+   "hint": "Filobus 11",
+   "text": "Filobus n. 11: aeroporto, ul. Zagorodnaya, ul. Lezhnevskaya, autostazione, piazza Revolyutsii, Sheremetevsky prospekt, stazione ferroviaria. Circola dalle 7:00 alle 20:00, frequenza 22–44 minuti. Taxi: Yandex Taxi, «Vezyot», «Maxim» tramite app. L’aeroporto è fuori città, meglio chiamare il taxi in anticipo."
+  },
+  "parking": {
+   "title": "Parcheggio",
+   "hint": "10 min gratis",
+   "text": "Parcheggio automatico custodito con sbarra. I primi 10 minuti gratis, un’ora 100 ₽, un giorno 400 ₽. Pagamento al terminale (contanti senza resto o carta), tramite codice QR, nell’app Hippoparking o sul sito. Dopo il pagamento 15 minuti per uscire."
+  }
+ }
+}

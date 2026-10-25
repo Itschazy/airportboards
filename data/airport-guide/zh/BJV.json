@@ -1,0 +1,10 @@
+{
+ "iata": "BJV",
+ "blocks": {
+  "transport": {
+   "title": "交通方式",
+   "hint": "Havaş班车至汽车站",
+   "text": "Havaş班车接驳所有到达的国内航班，从机场经Güvercinlik和Torba汽车站开往博德鲁姆中央汽车站。按日期查询的时刻表见Havaş网站（线路Bodrum Airport — Bodrum Center）。自2026年8月7日起，机场与迪迪姆之间的班车停运。"
+  }
+ }
+}

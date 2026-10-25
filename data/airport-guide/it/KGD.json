@@ -1,0 +1,31 @@
+{
+  "iata": "KGD",
+  "about": "Khrabrovo: aeroporto internazionale di Kaliningrad. Il terminal passeggeri di 39 762 m² è progettato per 5 milioni di passeggeri l’anno, sul piazzale ci sono 6 pontili telescopici. Una sola pista di 3350 × 45 m.",
+  "blocks": {
+    "transport": {
+      "title": "Come arrivare",
+      "hint": "Bus 244-Э, 45 min",
+      "text": "L’autobus n. 244-Э collega l’aeroporto e l’autostazione «Yuzhny» di Kaliningrad, durata media del viaggio 45 minuti. La partenza può avvenire con un ritardo fino a 15 minuti, l’orario può cambiare."
+    },
+    "lounges": {
+      "title": "Sale business",
+      "hint": "Settori A e C, livello 2",
+      "text": "Due sale business al livello 2 nella zona sterile: «Kurshsky zaliv» per i voli nazionali nel settore A e «Dyuny» per quelli internazionali nel settore C. Accedono i passeggeri di classe business e chiunque abbia pagato l’ingresso; gratis i veterani della Grande guerra patriottica con un accompagnatore."
+    },
+    "sleep": {
+      "title": "Dove dormire",
+      "hint": "Capsule RecoRoom",
+      "text": "Hotel a capsule «RecoRoom Sonnik» nell’area dell’aeroporto: pagamento a ore, check-in automatico, capsule singole e doppie con spazio per i bagagli, prese elettriche e Wi‑Fi gratuito."
+    },
+    "kids": {
+      "title": "Con bambini",
+      "hint": "Gratis",
+      "text": "La sala madre e bambino è gratuita per i passeggeri in partenza con bambini sotto i 7 anni, bambini con disabilità sotto i 14 anni e donne nella seconda metà della gravidanza, e segue l’orario dell’aerostazione. Prima serve un certificato del presidio medico al livello 1, nella parte destra dell’edificio; i bagagli si lasciano al deposito."
+    },
+    "parking": {
+      "title": "Parcheggio",
+      "hint": "15 min gratis, 400 ₽/ora",
+      "text": "Parcheggio breve sosta dal 01.10.2026: i primi 15 minuti gratis, poi 400 ₽ per ogni ora, anche se non completa. Lunga sosta 900 ₽ al giorno. Parcheggio gratuito da 300 auto a 400 m dall’aerostazione. Vietata la sosta sulla prima corsia davanti all’edificio."
+    }
+  }
+}

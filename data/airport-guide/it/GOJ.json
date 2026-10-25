@@ -1,0 +1,36 @@
+{
+  "iata": "GOJ",
+  "about": "L’aeroporto internazionale di Nizhny Novgorod intitolato a V.P. Chkalov serve voli nazionali e internazionali. Gestore: AO «MANN». Nel 2024 l’aeroporto ha servito 1,47 milioni di passeggeri, la rete conta 29 destinazioni.",
+  "blocks": {
+    "transport": {
+      "title": "Come arrivare",
+      "hint": "Bus 11, 56, А50",
+      "text": "Autobus urbani: n. 11 fino a ul. Druzhaeva, n. 56 fino a Krasnoe Sormovo, n. А50 fino al DK Avtozavoda. I treni suburbani partono dalla stazione N. Novgorod-Chkalov per la stazione Moskovsky, durata del viaggio 26–34 minuti, biglietto 28 ₽. Vettore dei treni: AO «Volgo-Vyatskaya PPK»."
+    },
+    "lounges": {
+      "title": "Sale business",
+      "hint": "Livello 2, da 5800 ₽",
+      "text": "Tre sale al livello 2: sala voli nazionali, sala voli internazionali e sala per i titolari di carte bancarie nella zona partenze dei voli nazionali. Sale voli nazionali e internazionali: 5800 ₽ fino a 3 ore, poi 550 ₽ per ogni ora. Nella sala per i titolari di carte bancarie si accede con i programmi On-pass, Grey Wall, UniPass, Every Lounge, Golden Key, RusPriority. La sala voli nazionali è aperta giorno e notte."
+    },
+    "storage": {
+      "title": "Deposito bagagli",
+      "hint": "Livello 1, da 250 ₽/ora",
+      "text": "Deposito bagagli automatico al livello 1, a sinistra dell’uscita dalla zona ritiro bagagli dei voli nazionali. Armadietto standard: 250 ₽ all’ora o 550 ₽ al giorno. Armadietto maggiorato: 350 ₽ all’ora o 900 ₽ al giorno. Guardaroba: 100 ₽ al giorno."
+    },
+    "kids": {
+      "title": "Con bambini",
+      "hint": "Livello 2, 24/7",
+      "text": "Sala madre e bambino al livello 2 del terminal, aperta giorno e notte. Accoglie bambini sotto i 7 anni, bambini con disabilità sotto i 14 anni, solo con un adulto. Servono passaporto e biglietto aereo. Permanenza fino a 12 ore prima della partenza e fino a 6 ore dopo l’arrivo."
+    },
+    "parking": {
+      "title": "Parcheggio",
+      "hint": "15 min gratis",
+      "text": "Zona di salita e discesa passeggeri: i primi 15 minuti gratis, dal 16° al 60° minuto 890 ₽, poi 890 ₽ all’ora. Parcheggio P presso il terminal: fino a 1 ora 370 ₽, da 1 a 24 ore 750 ₽, fino a 2 giorni 1500 ₽. Parcheggio gratuito giorno e notte a 700 m dal terminal, non custodito. Prima corsia (zona VIP): 3000 ₽ per ingresso."
+    },
+    "wifi": {
+      "title": "Wi‑Fi",
+      "hint": "Rete Free_GOJ",
+      "text": "Wi‑Fi gratuito nelle aree passeggeri del terminal. Rete Free_GOJ. Accesso con il numero di cellulare, poi seguire le istruzioni sullo schermo."
+    }
+  }
+}

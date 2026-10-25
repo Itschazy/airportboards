@@ -1,0 +1,46 @@
+{
+ "iata": "SVO",
+ "about": "Cheremetievo se trouve à Khimki, dans l'oblast de Moscou. Les terminaux sont répartis en deux complexes : Nord (B et C) et Sud (D, E, F et le terminal « Aeroexpress ») ; un train de liaison inter-terminaux circule entre eux. Exploitant de l'aéroport : SA « MASh ».",
+ "blocks": {
+  "lounges": {
+   "title": "Salons",
+   "hint": "8 salons dans B, C et D",
+   "text": "Vols intérieurs : « Roublev » (B, niveau 3, près des portes 105–106), « Kandinsky » et « A-Club » (B, niveau 2), « Sotchi » (D, niveau 2). Internationaux : « Malevitch » (C, niveau 3, entrée près de la porte 143), « Chagall », « Alfa Only » et « Sber » (C, niveau 3). Les salons « Roublev » et « Malevitch » sont gratuits pour les passagers des classes prioritaires et les titulaires des cartes « Aeroflot Bonus » de niveaux Gold, Platinum, Infinite et Infinite Pro. Pour les autres 4500 ₽ pour 4 heures, entrée gratuite pour les enfants de moins de 2 ans."
+  },
+  "storage": {
+   "title": "Consigne à bagages",
+   "hint": "B, D et Aeroexpress",
+   "text": "Des consignes payantes se trouvent dans le Terminal B (niveau 1), le Terminal D (niveau −1) et le terminal « Aeroexpress », toutes en zone publique. Dans B et le terminal « Aeroexpress », elles sont ouvertes jour et nuit. Les premières 24 heures coûtent 700 ₽ par bagage, ensuite 300 ₽ par 24 heures. Un bagage pèse au maximum 32 kg, durée de garde jusqu'à 6 mois."
+  },
+  "sleep": {
+   "title": "Où dormir",
+   "hint": "Capsules : B, C et Aeroexpress",
+   "text": "GettSleep dans le Terminal B : niveau 3, zone publique, à côté du bureau de change, carte d'embarquement non requise. GettSleep dans le Terminal C : niveau 3, zone réservée internationale, à côté du salon Orion, uniquement avec une carte d'embarquement pour un vol international. Un autre GettSleep se trouve au niveau 3 du terminal « Aeroexpress ». Tous ouverts jour et nuit, paiement à l'heure à partir de 4 heures."
+  },
+  "kids": {
+   "title": "Avec un enfant",
+   "hint": "B, C, D — jour et nuit",
+   "text": "Des salles mère-enfant se trouvent dans le Terminal B (niveau 1), le Terminal C (niveau 3) et le Terminal D (niveau 2), toutes en zone publique. Ouvertes jour et nuit et gratuites. Accès pour les passagers avec des enfants de moins de 7 ans (enfants handicapés : moins de 14 ans) et les femmes enceintes. Billets ou cartes d'embarquement et documents de l'adulte et de l'enfant requis."
+  },
+  "transport": {
+   "title": "Comment s'y rendre",
+   "hint": "Aeroexpress et bus",
+   "text": "L'Aeroexpress part de la gare de Biélorussie, de Saviolovskaïa, d'Okroujnaïa et de Lianozovo toutes les 30 minutes, avec une interruption la nuit. De la gare de Biélorussie aux Terminaux B et C 46 minutes, à D, E, F 61 minutes. Les bus express « Aeroexpress » partent du métro « Khovrino » (sortie n° 2) : n° 1195 vers B et C, n° 1195D vers D. Intervalle 10–15 minutes, trajet d'environ 20 minutes, billet 450 ₽."
+  },
+  "parking": {
+   "title": "Parking",
+   "hint": "10 min gratuites à B, C",
+   "text": "L'entrée dans les zones « Arrivées » et « Départs » des Terminaux B et C est gratuite 10 minutes, sur la place de D, E, F 15 minutes. Au-delà, pénalité de 4000 ₽ de l'heure. Les voitures déposent les passagers dans la zone « Départs » près des parkings B et C, d'où le terminal est à 2 minutes par une galerie couverte. L'entrée gratuite est limitée à deux fois en deux heures."
+  },
+  "wifi": {
+   "title": "Wi‑Fi",
+   "hint": "_Sheremetyevo Wi-Fi",
+   "text": "Le réseau gratuit « _Sheremetyevo Wi-Fi » fonctionne dans tout l'aéroport. Pour se connecter, il faut s'identifier par numéro de téléphone : appeler le numéro affiché à l'écran, accepter le rappel et saisir les 4 derniers chiffres du numéro, ou saisir le code reçu par SMS."
+  },
+  "terminals": {
+   "title": "Terminaux",
+   "hint": "Nord B, C — Sud D, E, F",
+   "text": "L'aéroport se compose de deux complexes : Nord (Terminaux B et C) et Sud (Terminaux D, E, F et le terminal « Aeroexpress »). Des trains de liaison inter-terminaux circulent entre eux, le service a repris le 1er juin 2024. On peut aussi s'y rendre avec les bus n° 817 et n° 851 selon l'horaire, ou en voiture."
+  }
+ }
+}

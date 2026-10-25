@@ -1,0 +1,41 @@
+{
+ "iata": "IKT",
+ "about": "The airport is in Irkutsk at 13 Shiryamova St, operator JSC Irkutsk International Airport. Direct flights connect it with 50 Russian cities; the international network includes 11 destinations. Passenger traffic exceeds 3.8 million people.",
+ "blocks": {
+  "transport": {
+   "title": "Getting there",
+   "hint": "Buses 80, 90, 480",
+   "text": "Buses 80, 90, 406, 480, 42, 43. Trolleybuses 4 and 6. Minibus taxis 99, 20, 45, 61."
+  },
+  "terminals": {
+   "title": "Terminals",
+   "hint": "Т1 international, Т2 departures",
+   "text": "Terminal 1 serves international flights. Terminal 2: domestic departures. Terminal 3: domestic arrivals."
+  },
+  "lounges": {
+   "title": "Lounges",
+   "hint": "Т2 business lounge, 4,250 ₽",
+   "text": "Terminal 2 has a business lounge, a premium comfort lounge and VIP-1, VIP-2, VIP-3 lounges. The business lounge and premium comfort lounge are open 2 hours before departure if places are available, 4,250 ₽ per passenger. In terminal 1 the premium comfort lounge opens 3 hours before departure, 4,473 ₽. Dragon Pass cards are not accepted."
+  },
+  "storage": {
+   "title": "Left luggage",
+   "hint": "610 ₽ per day",
+   "text": "In the domestic terminal on Level 1, payment in cash or by card. 610 ₽ per item per day; baggage larger than 40×40×50 cm is charged by the number of spaces it occupies. In the international terminal left luggage is on Level 2 and operates only during flight delays. Phone +7 (3952) 266-194."
+  },
+  "sleep": {
+   "title": "Where to sleep",
+   "hint": "Hotel 100 m away",
+   "text": "Airport hotel Vozdushnaya Gavan, 6 Shiryamova St, 100 metres from the airport. 145 rooms, round-the-clock check-in, short stays. The domestic terminal has a direct-line phone to the hotel."
+  },
+  "kids": {
+   "title": "With children",
+   "hint": "Free, 24/7",
+   "text": "Mother and child rooms in the domestic terminal (Level 1, VIP area) and the international terminal (Level 2), open round the clock, free of charge. Children under 7: up to 3–4 hours before departure, 1 hour after arrival. One adult with the child. Apply at the information desk."
+  },
+  "parking": {
+   "title": "Parking",
+   "hint": "10 min free",
+   "text": "The first 10 minutes are free. 11–20 minutes 100 ₽, up to 1 hour 350 ₽, from 2 h 41 min to 24 hours 1,200 ₽, each following day 1,200 ₽. Each terminal has its own car park. Drop-off and pick-up zone: 10 minutes free, longer stays incur a penalty of 2,000 ₽ per hour."
+  }
+ }
+}

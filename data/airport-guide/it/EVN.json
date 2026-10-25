@@ -1,0 +1,20 @@
+{
+ "iata": "EVN",
+ "blocks": {
+  "transport": {
+   "title": "Come arrivare",
+   "hint": "Bus N100 e N201",
+   "text": "L’autobus N100 percorre la linea aeroporto Zvartnots — centro di Erevan e ritorno. La linea N201 (Elitebus) è un espresso dall’aeroporto al centro di Erevan e ritorno. Nella sala arrivi al livello 1 sono attivi giorno e notte i servizi di noleggio auto: Carwiz, Enterprise, GoMotion, Hertz, SIXT."
+  },
+  "taxi": {
+   "title": "Taxi",
+   "hint": "Eco Taxi, sala arrivi",
+   "text": "Banco Eco Taxi nella sala arrivi al livello 1, giorno e notte."
+  },
+  "parking": {
+   "title": "Parcheggio",
+   "hint": "Coperto, 642 posti",
+   "text": "Autosilo coperto da 642 posti di fronte al terminal passeggeri. Il tempo si conta dal ritiro del ticket all’ingresso; l’accesso per la salita e la discesa dei passeggeri fino a 10 minuti è gratuito. Pagamento ai terminali automatici prima di salire in auto."
+  }
+ }
+}

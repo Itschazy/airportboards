@@ -1,0 +1,20 @@
+{
+ "iata": "NAL",
+ "blocks": {
+  "transport": {
+   "title": "Nasıl gidilir",
+   "hint": "17 numaralı dolmuş",
+   "text": "17 numaralı dolmuş tren garından doğrudan terminal binasına gider. Araçla Nalçik merkezinden 15–20 dakika, Idarova Caddesi'nden sapılarak. Prielbrusye Millî Parkı'ndan 92 km, yaklaşık 1 saat 20 dakika."
+  },
+  "lounges": {
+   "title": "Konforlu bekleme salonu",
+   "hint": "Ayrı giriş, 6200 ₽",
+   "text": "Ayrı girişi ve yaklaşma yolu olan konforlu bekleme salonu: iç hat uçuşları için check-in ve güvenlik kontrolü salonun içinde, 10 dakikaya kadar, uçağa transfer. Yolcu 6200 ₽, 2 yaşından küçük çocuklar ücretsiz, uğurlayan 5000 ₽. Telefonla önceden sipariş edilmelidir."
+  },
+  "kids": {
+   "title": "Çocukla",
+   "hint": "Ücretsiz",
+   "text": "Anne-bebek odası Nalçik'ten gidiş bileti olan yolcular için ücretsiz: 7 yaşından küçük çocuklarla, 16 yaşından küçük engelli çocuklarla ve gebeliğin ikinci yarısındaki kadınlar için. Bilet, pasaport ve çocuğun doğum belgesi gerekir."
+  }
+ }
+}

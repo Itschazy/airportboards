@@ -1,0 +1,26 @@
+{
+ "iata": "NYM",
+ "about": "L'aéroport de Nadym porte le nom de V. S. Tchernomyrdine. Exploitant : SA « Nadymskoïe aviapredpriïatie ». L'aéroport compte deux halls d'enregistrement, le second ouvre selon les besoins.",
+ "blocks": {
+  "transport": {
+   "title": "Comment s'y rendre",
+   "hint": "Bus 2 et 4А",
+   "text": "Les bus urbains n° 2 et n° 4А desservent l'aéroport. On peut aussi s'y rendre en taxi ou en voiture particulière."
+  },
+  "lounges": {
+   "title": "Salons",
+   "hint": "Salon VIP, hall d'enr. n° 2",
+   "text": "Salon VIP dans la partie droite du hall d'enregistrement n° 2, entrée séparée et parking propre. Accès pour les passagers de classe économique ayant payé au plus tard 15 heures avant le départ, les membres de S7 Priority et la classe affaires de la compagnie « Yamal ». Le salon ouvre 1 heure 30 minutes avant le départ et 30 minutes avant l'atterrissage de l'avion. Prix selon la grille tarifaire de l'entreprise aérienne, entrée gratuite pour les enfants de moins de 2 ans."
+  },
+  "kids": {
+   "title": "Avec un enfant",
+   "hint": "7:00–18:30, gratuit",
+   "text": "La salle mère-enfant est ouverte de 7:00 à 18:30, séjour gratuit. Accueil des passagers avec des enfants de moins de 7 ans, des enfants handicapés de moins de 14 ans avec un adulte et des femmes enceintes dans la seconde moitié de la grossesse. Certificat du poste de santé, carte d'embarquement et documents de l'adulte et de l'enfant requis. Sans certificat, on peut accéder à la salle n° 1 pour le change et l'allaitement."
+  },
+  "parking": {
+   "title": "Parking",
+   "hint": "Gratuit",
+   "text": "Le parking de la place de l'aérogare est gratuit. Aires près de l'entrée centrale du hall d'enregistrement n° 1 et près du magasin « Laïner ». Les places pour les véhicules des personnes handicapées sont signalées par un marquage et un panneau."
+  }
+ }
+}

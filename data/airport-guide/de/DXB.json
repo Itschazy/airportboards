@@ -1,0 +1,20 @@
+{
+ "iata": "DXB",
+ "blocks": {
+  "transport": {
+   "title": "Anreise",
+   "hint": "Metro, Rote Linie",
+   "text": "Die Rote Linie der Metro Dubai fährt ab den Terminals 1 und 3. Betriebszeiten: Mo–Do und Sa von 5:00 bis Mitternacht, Fr von 5:00 bis 1:00, So von 8:00 bis Mitternacht; an Feiertagen teils länger. Tickets und Nol-Karten an den Schaltern und Automaten der Terminals 1 und 3. In der Metro sind höchstens zwei Gepäckstücke erlaubt, Handgepäck eingeschlossen."
+  },
+  "taxi": {
+   "title": "Taxi",
+   "hint": "Ab 25 AED, rund um die Uhr",
+   "text": "Taxis der Dubai Taxi Company rund um die Uhr an den Taxiständen jedes Terminals, Grundpreis ab 25 AED plus Entfernungstarif. Außerdem fahren Uber, Careem und Bolt – Einstiegsort laut Beschilderung."
+  },
+  "storage": {
+   "title": "Gepäckaufbewahrung",
+   "hint": "Terminals 1–3, ab 35 AED",
+   "text": "Die Gepäckaufbewahrung von dnata ist in den Terminals 1, 2 und 3 rund um die Uhr geöffnet. Für 12 Stunden und weniger: in den Terminals 1 und 2 Standardgepäckstück (bis 21×24×11 Zoll) 40 AED, großes oder wertvolles 50 AED; in Terminal 3 35 bzw. 40 AED. In Terminal 1 befindet sich die Aufbewahrung auf der Ankunftsebene, neben der Apotheke Boots."
+  }
+ }
+}

@@ -1,0 +1,21 @@
+{
+ "iata": "NOJ",
+ "about": "Havalimanı Noyabrsk'in 9 km güneybatısında. İşletici: Aeroport Surgut AO. Pist 2500 m; Rusya iç hat uçuşlarına hizmet verir.",
+ "blocks": {
+  "transport": {
+   "title": "Nasıl gidilir",
+   "hint": "7 ve 51 numaralı otobüsler",
+   "text": "Şehir merkezine yaklaşık 9 km. 7 ve 51 numaralı (Vyngapurovsky yerleşimi) şehir otobüsleri çalışır. Taksi var."
+  },
+  "terminals": {
+   "title": "Terminal",
+   "hint": "Terminal 07:00–18:00",
+   "text": "Terminal 07:00–18:00 arası açık. Yalnızca iç hat uçuşları. İçeride kafe, mağazalar, hediyelik eşya kioskları, bagaj sarma, anne-bebek odası ve emanet var."
+  },
+  "lounges": {
+   "title": "Business salonları",
+   "hint": "Kat 1 ve 2, her gün",
+   "text": "Konforlu bekleme salonu Kat 1'de, VIP salon Kat 2'de. Salonda çay, kahve ve tatlılar var. Tarifeye göre ücret karşılığında: kafeden yemek siparişi, ayrı araçla uçağa transfer. Konforlu bekleme salonu her gün açık."
+  }
+ }
+}

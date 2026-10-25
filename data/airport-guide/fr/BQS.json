@@ -1,0 +1,36 @@
+{
+ "iata": "BQS",
+ "about": "Aéroport d'importance fédérale à 15 km au nord-ouest de Blagovechtchensk et à 3,5 km de la frontière chinoise. Vols vers les villes de l'Extrême-Orient, de la Sibérie et vers Moscou. Nouveau complexe aéroportuaire de plus de 26 000 m², plus de 1 million de passagers en 2025.",
+ "blocks": {
+  "transport": {
+   "title": "Comment s'y rendre",
+   "hint": "Bus 8А, 42 min",
+   "text": "Le bus urbain n° 8А va de l'arrêt « Univermag » à l'arrêt « Aeroport » en 42 minutes, billet 46 ₽. Vers la ville, le bus va jusqu'à l'arrêt « Magasin Blagovechtchensk », environ 40 minutes. Plusieurs départs par jour, horaires variables selon les jours de la semaine. En raison des travaux sur la route Blagovechtchensk – Bibikovo, l'aéroport demande de partir une heure plus tôt."
+  },
+  "lounges": {
+   "title": "Salons",
+   "hint": "Niveau 5, 6000 ₽ / 3 h",
+   "text": "Salon dans l'aile droite du hall des départs, niveau 5, de 5:00 à 17:00. Accès pour les passagers de classe affaires, les membres des programmes de fidélité des compagnies aériennes, les titulaires Grey Wall, Every Lounge, RUS Priority, On pass et Golden Key. Pour les autres 6000 ₽ pour 3 heures, puis 550 ₽ de l'heure, entrée gratuite pour les enfants de moins de 2 ans."
+  },
+  "storage": {
+   "title": "Consigne à bagages",
+   "hint": "Niveau 1, dès 200 ₽/h",
+   "text": "Consigne automatique dans l'aile droite de l'aérogare, niveau 1. Casier standard 200 ₽ de l'heure ou 500 ₽ par jour, grand casier 300 ₽ de l'heure ou 800 ₽ par jour. Emballage des bagages au même endroit, à partir de 950 ₽ par bagage."
+  },
+  "kids": {
+   "title": "Avec un enfant",
+   "hint": "Niveau 2, 5:00–17:00",
+   "text": "Salle mère-enfant dans l'aile droite de l'aérogare, niveau 2, de 5:00 à 17:00. Enfants de moins de 7 ans, enfants handicapés de moins de 14 ans, 3 heures avant le départ et dans l'heure suivant l'arrivée. Passeport et billet requis, entrée uniquement avec le bagage à main."
+  },
+  "parking": {
+   "title": "Parking",
+   "hint": "15 min gratuites",
+   "text": "Zone de dépose et de prise en charge : jusqu'à 15 minutes gratuit, 16–60 minutes 600 ₽, ensuite 600 ₽ de l'heure. Parking Р1 de 600 places à 2 minutes du terminal, payant dès la première minute : jusqu'à 30 minutes 100 ₽, jusqu'à une heure 150 ₽, jusqu'à 2 heures 250 ₽, jusqu'à 24 heures 400 ₽, chaque tranche de 24 heures suivante 400 ₽."
+  },
+  "wifi": {
+   "title": "Wi‑Fi",
+   "hint": "Réseau Goodfly",
+   "text": "Wi‑Fi gratuit dans les zones passagers de l'aérogare. Réseau Goodfly, connexion par numéro de téléphone mobile."
+  }
+ }
+}

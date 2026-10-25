@@ -1,0 +1,36 @@
+{
+ "iata": "BQS",
+ "about": "Flughafen von föderaler Bedeutung 15 km nordwestlich von Blagoweschtschensk und 3,5 km von der Grenze zu China. Flüge in Städte im Fernen Osten, in Sibirien und nach Moskau. Neuer Terminalkomplex mit mehr als 26.000 m² Fläche, im Jahr 2025 mehr als 1 Mio. Passagiere.",
+ "blocks": {
+  "transport": {
+   "title": "Anreise",
+   "hint": "Bus 8А, 42 Min.",
+   "text": "Der Stadtbus Nr. 8А fährt von der Haltestelle „Univermag“ zur Haltestelle „Aeroport“ in 42 Minuten, Fahrschein 46 ₽. In die Stadt fährt der Bus bis zur Haltestelle „M-n ‚Blagoweschtschensk‘“, etwa 40 Minuten. Mehrere Fahrten täglich, der Fahrplan ist je nach Wochentag unterschiedlich. Wegen Straßenbauarbeiten auf der Strecke Blagoweschtschensk – Bibikowo bittet der Flughafen, eine Stunde früher loszufahren."
+  },
+  "lounges": {
+   "title": "Business-Lounges",
+   "hint": "Ebene 5, 6000 ₽ / 3 Std.",
+   "text": "Business-Lounge im rechten Flügel der Abflughalle, Ebene 5, von 5:00 bis 17:00. Zugang für Passagiere der Business Class, Teilnehmer von Bonusprogrammen der Fluggesellschaften sowie Inhaber von Grey Wall, Every Lounge, RUS Priority, On pass und Golden Key. Alle anderen zahlen 6000 ₽ für 3 Stunden, danach 550 ₽ pro Stunde, Kinder unter 2 Jahren kostenlos."
+  },
+  "storage": {
+   "title": "Gepäckaufbewahrung",
+   "hint": "Ebene 1, ab 200 ₽/Std.",
+   "text": "Automatische Gepäckaufbewahrung im rechten Flügel des Terminals, Ebene 1. Standardfach 200 ₽ pro Stunde oder 500 ₽ pro Tag, großes Fach 300 ₽ pro Stunde oder 800 ₽ pro Tag. Dort auch Gepäckverpackung ab 950 ₽ pro Stück."
+  },
+  "kids": {
+   "title": "Mit Kind",
+   "hint": "Ebene 2, 5:00–17:00",
+   "text": "Mutter-Kind-Raum im rechten Flügel des Terminals, Ebene 2, von 5:00 bis 17:00. Aufgenommen werden Kinder unter 7 Jahren, mit Behinderung unter 14 Jahren, 3 Stunden vor Abflug und innerhalb einer Stunde nach Ankunft. Erforderlich sind Pass und Ticket, Zutritt nur mit Handgepäck."
+  },
+  "parking": {
+   "title": "Parken",
+   "hint": "15 Min. kostenlos",
+   "text": "Hol- und Bringzone: bis 15 Minuten kostenlos, 16–60 Minuten 600 ₽, danach 600 ₽ pro Stunde. Parkplatz Р1 mit 600 Plätzen 2 Minuten vom Terminal, Bezahlung ab der ersten Minute: bis 30 Minuten 100 ₽, bis zu einer Stunde 150 ₽, bis 2 Stunden 250 ₽, bis 24 Stunden 400 ₽, je weitere 24 Stunden 400 ₽."
+  },
+  "wifi": {
+   "title": "Wi‑Fi",
+   "hint": "Netz Goodfly",
+   "text": "Kostenloses Wi‑Fi in den Passagierbereichen des Terminals. Netz Goodfly, Anmeldung mit der Mobilfunknummer."
+  }
+ }
+}

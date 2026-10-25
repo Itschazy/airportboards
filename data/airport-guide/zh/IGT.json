@@ -1,0 +1,21 @@
+{
+ "iata": "IGT",
+ "about": "S. S. Oskanov机场位于马加斯东北30公里处，Ordzhonikidzevskaya镇西郊，距Sleptsovskaya火车站2公里。运营方：Mezhdunarodny aeroport Magas im. S. S. Oskanova股份公司。航站楼配备边防和海关检查设施。",
+ "blocks": {
+  "terminals": {
+   "title": "航站楼",
+   "hint": "1座航站楼",
+   "text": "一座航站楼（客运航站楼）。楼内设有边防、移民、海关、兽医和卫生检疫检查用房。通行能力：每小时150名旅客。"
+  },
+  "lounges": {
+   "title": "商务休息室",
+   "hint": "VIP厅，需预约",
+   "text": "VIP厅位于独立建筑内：设有候机区和酒吧区。需提前申请服务，按机场价格付费。提供往返舷梯的接送，并为接送机者提供VIP厅收费停车场。"
+  },
+  "wifi": {
+   "title": "Wi‑Fi",
+   "hint": "免费Wi‑Fi",
+   "text": "航站楼内可免费使用Wi‑Fi。"
+  }
+ }
+}

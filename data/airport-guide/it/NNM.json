@@ -1,0 +1,21 @@
+{
+  "iata": "NNM",
+  "about": "L’aeroporto è servito dalla AO «Naryan-Marsky obyedinyonny aviaotryad», indirizzo: Naryan-Mar, per. Aeroportovsky, zd. 1A. Il reparto aereo opera voli sulle linee aeree locali del Circondario autonomo dei Nenezi. Informazioni: 8 (81853) 91-555.",
+  "blocks": {
+    "lounges": {
+      "title": "Sale business",
+      "hint": "Livello 1, dopo i controlli",
+      "text": "Sala comfort al livello 1, nella zona partenze dopo i controlli. Per i passeggeri dei voli nazionali, ingresso da 2 ore prima della partenza. Bambini sotto i 2 anni gratis. L’accesso si ottiene nell’app MILE·ON·AIR, sezione ON PASS. Telefono della sala: 8 (81853) 91-537."
+    },
+    "storage": {
+      "title": "Deposito bagagli",
+      "hint": "Livello 1 dell’aerostazione",
+      "text": "Livello 1 dell’aerostazione, aperto negli orari dell’aeroporto. Un collo fino a 30 kg. In caso di ritardo del volo o di rinvio al giorno successivo i bagagli sono custoditi gratuitamente con il biglietto per quel volo."
+    },
+    "parking": {
+      "title": "Parcheggio",
+      "hint": "45 min gratis",
+      "text": "Fino a 45 minuti gratis. Da 46 a 60 minuti: 500 ₽. Oltre un’ora e fino a 24 ore: 350 ₽ per ogni ora. Oltre 24 ore, fino a 30 giorni: 600 ₽ ogni 24 ore. Tariffe in vigore dal 1° agosto 2026."
+    }
+  }
+}

@@ -1,0 +1,21 @@
+{
+ "iata": "IGT",
+ "about": "S. S. Oskanov adını taşıyan havalimanı Magas'ın 30 km kuzeydoğusunda, Ordzhonikidzevskaya köyünün batı ucunda, Sleptsovskaya tren istasyonuna 2 km uzaklıkta. İşletmeci: Magas S. S. Oskanov Uluslararası Havalimanı AO. Terminal binası sınır ve gümrük kontrolü için donatılmıştır.",
+ "blocks": {
+  "terminals": {
+   "title": "Terminal",
+   "hint": "1 terminal binası",
+   "text": "Tek terminal binası (yolcu terminali). İçinde sınır, göç, gümrük, veteriner ve sağlık-karantina kontrolü için alanlar var. Kapasite: saatte 150 yolcu."
+  },
+  "lounges": {
+   "title": "Business salonları",
+   "hint": "VIP salon, talep üzerine",
+   "text": "Ayrı bir binada VIP salon: bekleme salonu, bar alanı. Hizmet önceden talep üzerine verilir, ödeme havalimanı tarifelerine göre. Uçak merdivenine gidiş-dönüş transfer ve karşılayanlar ile uğurlayanlar için VIP salonun ücretli otoparkı var."
+  },
+  "wifi": {
+   "title": "Wi‑Fi",
+   "hint": "Ücretsiz Wi‑Fi",
+   "text": "Terminal binasında Wi‑Fi'ye ücretsiz erişim."
+  }
+ }
+}

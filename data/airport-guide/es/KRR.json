@@ -1,0 +1,41 @@
+{
+ "iata": "KRR",
+ "about": "Dos terminales: para vuelos nacionales y para vuelos internacionales. Superficie del complejo terminal: 16 448 m². La pista de 3000 m de longitud se abrió en 2017.",
+ "blocks": {
+  "transport": {
+   "title": "Cómo llegar",
+   "hint": "Trolebús 7",
+   "text": "La parada está en la plaza de la terminal. El trolebús n.º 7 va a la estación de autobuses y a la estación de ferrocarril Krasnodar-1 por la calle Stavropolskaya. El microbús n.º 30 va hasta el mercado Kooperativny. El mostrador del taxi oficial está en la Terminal 1, zona de recogida de equipajes."
+  },
+  "terminals": {
+   "title": "Terminales",
+   "hint": "T1 nacional, T2 internacional",
+   "text": "La Terminal 1 atiende vuelos nacionales; la Terminal 2, internacionales. Mostradores de facturación 1–19; la facturación cierra 40 minutos antes de la salida."
+  },
+  "lounges": {
+   "title": "Salas VIP",
+   "hint": "T1 nivel 2, T2 nivel 1",
+   "text": "Sala business de vuelos nacionales: Terminal 1, nivel 2, después del control. Sala business de vuelos internacionales: Terminal 2, nivel 1, después del control. Admiten a miembros de ONPASS, Grey Wall Pass, GoldenKey, RusPriority y otros programas; a los demás, previo pago. Estancia de hasta 3 horas."
+  },
+  "storage": {
+   "title": "Consigna",
+   "hint": "24/7, 400 ₽ al día",
+   "text": "En la plaza de la terminal, día y noche. 400 ₽ por bulto las primeras 24 horas, 200 ₽ por cada 24 horas siguientes. Peso de un bulto: hasta 30 kg."
+  },
+  "kids": {
+   "title": "Con niños",
+   "hint": "Т1, nivel 1, gratis",
+   "text": "Sala madre e hijo: Terminal 1, nivel 1, sala de facturación de vuelos nacionales. Para pasajeros con niños menores de 7 años, niños con discapacidad menores de 14 años y embarazadas en la segunda mitad del embarazo. No se cobra. Se necesitan pasaporte y tarjeta de embarque o billete."
+  },
+  "parking": {
+   "title": "Aparcamiento",
+   "hint": "15 min gratis, 400 ₽/h",
+   "text": "Plaza de la terminal: los primeros 15 minutos gratis, después 400 ₽ por hora. Aparcamiento adicional por horas a la derecha de la plaza: 250 ₽ por hora. Por días: 900 ₽ por día. El aparcamiento alternativo es gratuito."
+  },
+  "wifi": {
+   "title": "Wi‑Fi",
+   "hint": "Red Airport_Free",
+   "text": "Red gratuita «Airport_Free» en todo el complejo terminal, en la terminal VIP y en la sala business. Acceso solo con tarjeta SIM de un operador ruso."
+  }
+ }
+}

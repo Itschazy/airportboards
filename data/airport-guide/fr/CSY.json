@@ -1,0 +1,26 @@
+{
+ "iata": "CSY",
+ "about": "Aéroport à 5 km du centre de Tcheboksary, adresse : place I. F. Skvortsova, 1. Des trolleybus et un bus desservent le terminal ; on peut aussi s'y rendre en taxi ou en voiture particulière.",
+ "blocks": {
+  "transport": {
+   "title": "Comment s'y rendre",
+   "hint": "Trolleybus 2, 15",
+   "text": "Le centre de Tcheboksary est à 5 km. Trolleybus n° 2 et n° 15, bus n° 15. Également taxi ou voiture particulière."
+  },
+  "lounges": {
+   "title": "Salons",
+   "hint": "Séjour 4000 ₽",
+   "text": "Salon : séjour jusqu'à 2 heures pour 4000 ₽, avec les programmes Every Lounge et Golden Key, pour les membres « Aeroflot Bonus » de niveaux Platinum et Gold. Service spécial avec enregistrement au niveau 2 5500 ₽. Service VIP au départ 15 250 ₽, à l'arrivée 7700 ₽, demande 24 heures à l'avance. Entrée au salon au plus tôt 2 heures avant le départ."
+  },
+  "storage": {
+   "title": "Consigne à bagages",
+   "hint": "300 ₽ par jour",
+   "text": "Consigne des bagages : 300 ₽ pour 1 bagage par jour."
+  },
+  "parking": {
+   "title": "Parking",
+   "hint": "15 min gratuites",
+   "text": "Les 15 premières minutes sont gratuites. Voitures particulières : 100 ₽ de l'heure, 450 ₽ par jour, à partir de 3 jours 400 ₽ par jour. UAZ, « Gazelle », « Sobol » : 200 ₽ de l'heure, 650 ₽ par jour. Perte du reçu 500 ₽. Téléphone 8 (8352) 22-94-03, poste 2-95."
+  }
+ }
+}

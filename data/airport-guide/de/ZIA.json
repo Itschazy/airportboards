@@ -1,0 +1,26 @@
+{
+ "iata": "ZIA",
+ "about": "Der Internationale Flughafen Schukowski wurde auf dem Gelände des Flugplatzes Schukowski gebaut. Betreiber des Flughafens: AO „Ramport Aero“. Der Flughafen ist für internationale Flüge geöffnet, es gibt einen Grenzübergang.",
+ "blocks": {
+  "transport": {
+   "title": "Anreise",
+   "hint": "Bus 441, 1 Std. 5 Min.",
+   "text": "Elektrozug vom Kasaner Bahnhof bis zur Station Otdych, etwa 40 Min., weiter mit dem Sammeltaxi 2А zum Flughafen, etwa 20 Min. Sammeltaxi 19к ab MZD Ilinskaja, etwa 35 Min. Bus 441 ab Metro Kotelniki (Ausgang Nr. 5), Takt 15–20 Min., Fahrzeit 1 Std. 5 Min. In Bussen und Sammeltaxis werden „Troika“, „Strelka“ und Bankkarten akzeptiert."
+  },
+  "parking": {
+   "title": "Parken",
+   "hint": "15 Min. kostenlos",
+   "text": "Kurzzeitzone: die ersten 15 Min. kostenlos, die erste Stunde 350 ₽, von der 2. bis zur 4. Stunde 250 ₽/Stunde, ab der 5. Stunde 3000 ₽/Tag. Langzeitzone: 700 ₽/Tag vom 1. bis zum 5. Tag, 100 ₽/Tag vom 6. bis zum 13., 700 ₽/Tag ab dem 14. Tag. Erneute kostenlose Einfahrt frühestens nach 45 Min."
+  },
+  "storage": {
+   "title": "Gepäckaufbewahrung",
+   "hint": "Ebene 2, 24/7, ab 600 ₽",
+   "text": "Gepäckaufbewahrung auf Ebene 2 im öffentlichen Bereich, rund um die Uhr geöffnet. Tarif „Standard“: 700 ₽ für die ersten 24 Stunden, 300 ₽ für je weitere 24 Stunden. „Standard light“: 600 ₽ und 300 ₽. Sperrgepäck ab 1150 ₽. Gewicht eines Gepäckstücks bis 30 kg, Aufbewahrung bis zu 6 Monate."
+  },
+  "kids": {
+   "title": "Mit Kind",
+   "hint": "Ebene 2, 24/7",
+   "text": "Mutter-Kind-Räume auf Ebene 2: im öffentlichen Bereich und im Wartebereich für Abflüge in die Länder der EAWU. Rund um die Uhr geöffnet, Mitarbeiter ruft man mit einer Taste am Eingang. Zugang für Kinder unter 7 Jahren mit einem Erwachsenen, Kinder mit Behinderung unter 14 Jahren, Schwangere. Im Bereich der internationalen Abflüge gibt es einen Wickelraum."
+  }
+ }
+}

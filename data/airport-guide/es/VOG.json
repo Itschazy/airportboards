@@ -1,0 +1,30 @@
+{
+ "iata": "VOG",
+ "blocks": {
+  "transport": {
+   "title": "Cómo llegar",
+   "hint": "Autobús 6 a la estación",
+   "text": "El autobús n.º 6 «Aeropuerto — Estación de ferrocarril» circula aproximadamente de 6:00 a 23:00: en días laborables, 78 servicios en cada sentido; los fines de semana, 61. Los trenes de cercanías salen del apeadero «Aeroport» y pasan por Volgogrado-1 hasta Shpalopropitka; billete 52,20 ₽, menores de 7 años gratis; desde el aeropuerto salen 4 trenes al día, el primero a las 14:36."
+  },
+  "lounges": {
+   "title": "Salas VIP",
+   "hint": "Terminal С2, nivel 2, 24/7",
+   "text": "Sala business de la terminal de vuelos nacionales С2, en el nivel 2, en la zona estéril tras el control de seguridad; abre día y noche. Admite a pasajeros de clase business, clientes premium de bancos y miembros de programas de fidelización; cualquier pasajero puede pagar una visita única al agente de la sala. Estancia de hasta 2 horas."
+  },
+  "storage": {
+   "title": "Consigna",
+   "hint": "Terminal С2, 500 ₽ al día",
+   "text": "Consigna en el nivel 1 de la terminal de vuelos nacionales, para pasajeros de vuelos nacionales e internacionales, día y noche. Primer día natural, 500 ₽ por bulto; cada día siguiente, 100 ₽. Se necesita un documento de identidad; tamaño máximo del bulto 75 × 60 × 65 cm, plazo de hasta 90 días."
+  },
+  "kids": {
+   "title": "Con niños",
+   "hint": "Terminales C y С2, gratis",
+   "text": "Hay salas madre e hijo en las terminales de vuelos nacionales (С2) e internacionales (C), gratis y día y noche, hasta 24 horas. Para niños menores de 7 años y mujeres en la segunda mitad del embarazo, con billete de salida, documento y certificado del puesto sanitario."
+  },
+  "wifi": {
+   "title": "Wi‑Fi",
+   "hint": "Red Airport",
+   "text": "Wi‑Fi en el complejo terminal: red Airport en las salas generales, AirportZPK en las salas de confort superior. Acceso mediante una llamada gratuita, Gosuslugi o un código por SMS/Push."
+  }
+ }
+}

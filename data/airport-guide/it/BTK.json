@@ -1,0 +1,25 @@
+{
+ "iata": "BTK",
+ "blocks": {
+  "lounges": {
+   "title": "Sala d’attesa",
+   "hint": "Livello 2, 2 200 ₽",
+   "text": "Sala comfort al livello 2 dell’aerostazione. Aperta dalle 6:00 alle 12:00, il venerdì e la domenica fino alle 14:00, in altri orari su richiesta a sop@aerobratsk.ru. Gratuita per le tariffe «Biznes Standart», «Biznes Plyus», «Ekonom Plyus», i livelli Gold e Platinum, ON PASS e Grey Wall Pass. Per gli altri 2 200 ₽ per 3 ore."
+  },
+  "sleep": {
+   "title": "Dove dormire",
+   "hint": "Hotel a 350 m",
+   "text": "Hotel «AeroBratsk» a 350 m dall’aerostazione. Posto in camera tripla da 900 ₽ al giorno, camera singola da 3 500 ₽. Colazione 600 ₽, alla mensa dell’aerostazione gli ospiti hanno uno sconto del 20% sul pranzo."
+  },
+  "parking": {
+   "title": "Parcheggio",
+   "hint": "80 posti gratis",
+   "text": "Sul piazzale dell’aerostazione parcheggio gratuito da 80 posti, 8 dei quali per persone con disabilità. Parcheggio lunga sosta da 300 ₽ al giorno. Il riscaldamento dell’auto in inverno costa 4 200 ₽ per 20 minuti, la ricarica della batteria 2 100 ₽."
+  },
+  "wifi": {
+   "title": "Wi‑Fi",
+   "hint": "Gratis",
+   "text": "Wi‑Fi gratuito per passeggeri e ospiti dell’aeroporto. Accesso con identificazione, come richiesto dalla legge."
+  }
+ }
+}

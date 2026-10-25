@@ -1,0 +1,36 @@
+{
+  "iata": "VVO",
+  "about": "L’aeroporto si trova nella città di Artyom, nel Territorio del Litorale. La rete di rotte conta oltre 40 destinazioni, i voli sono operati da oltre 20 compagnie aeree russe e straniere. Ci sono sale per le partenze nazionali e internazionali.",
+  "blocks": {
+    "transport": {
+      "title": "Come arrivare",
+      "hint": "Treno suburbano, 52 min",
+      "text": "Treno elettrico dalla stazione ferroviaria di Vladivostok alla stazione «Aeroport», 10 corse al giorno, durata circa 52 minuti. Biglietto da Vladivostok e Vtoraya Rechka 185 ₽, da Artyom 37 ₽. Banco taxi al livello 1 all’uscita dell’aerostazione, vettore ufficiale OOO «MIG»."
+    },
+    "lounges": {
+      "title": "Sale business",
+      "hint": "Livello 3, 24/7",
+      "text": "Sala business «Laguna»: livello 3, zona partenze dei voli nazionali, presso il gate 6, giorno e notte. Internazionale «Primorye»: livello 3, presso il gate 3, dopo il Duty Free, giorno e notte. Sala «Priority» per i voli nazionali accanto al gate 6, 2500 ₽ a passeggero."
+    },
+    "storage": {
+      "title": "Deposito bagagli",
+      "hint": "Livello 1, 24/7, da 400 ₽",
+      "text": "Livello 1, dietro la scala mobile, giorno e notte. Tariffa «Standard»: 500 ₽ per le prime 24 ore, 200 ₽ per ogni successivo periodo di 24 ore, collo fino a 203 cm come somma delle dimensioni. Il periodo di 24 ore iniziato conta come intero."
+    },
+    "sleep": {
+      "title": "Dove dormire",
+      "hint": "Hotel, livello 3",
+      "text": "«Zona di attesa confortevole» (hotel) al livello 3, area pubblica, ala sinistra. 30 camere. Camera singola: 3000 ₽ per 3 ore, 6000 ₽ per 24 ore. Doccia senza camera 1000 ₽."
+    },
+    "kids": {
+      "title": "Con bambini",
+      "hint": "Livello 3, 24/7, gratis",
+      "text": "Sala madre e bambino al livello 3, ala destra, giorno e notte, gratuita. Per passeggeri con bambini sotto i 7 anni, bambini con disabilità sotto i 14 anni e donne nella seconda metà della gravidanza. Permanenza fino a 3 ore. Servono biglietto aereo, passaporto e certificato di nascita del bambino."
+    },
+    "parking": {
+      "title": "Parcheggio",
+      "hint": "15 min gratis",
+      "text": "Zone A, D e carico/scarico: fino a 15 minuti gratis. Nella zona di carico/scarico poi 1000 ₽ ogni 15 minuti. Zone A e D: 300 ₽ per ogni ora dopo 15 minuti, oltre 3 ore 1500 ₽. Zone B, C e F con pagamento giornaliero."
+    }
+  }
+}

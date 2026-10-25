@@ -1,0 +1,30 @@
+{
+ "iata": "HRG",
+ "blocks": {
+  "transport": {
+   "title": "Comment s'y rendre",
+   "hint": "Minibus, environ 20 minutes",
+   "text": "Le centre d'Hurghada est à environ 20 minutes en voiture. Les minibus vers la ville attendent à la sortie de l'aéroport et partent quand ils sont pleins, sans horaire fixe."
+  },
+  "taxi": {
+   "title": "Taxi",
+   "hint": "Prix fixé avant de monter",
+   "text": "Les taxis stationnent à la sortie de la zone des arrivées. Le prix de la course se négocie avec le chauffeur avant de monter. Location de voitures disponible, notamment Hertz."
+  },
+  "terminals": {
+   "title": "Terminaux",
+   "hint": "Deux terminaux",
+   "text": "L'aéroport compte deux terminaux passagers. Les terminaux disposent de distributeurs de billets et de bureaux de change."
+  },
+  "lounges": {
+   "title": "Salons",
+   "hint": "Pearl Lounge, terminal 1",
+   "text": "Pearl Lounge dans le terminal 1 : après le contrôle des passeports et de sûreté, au deuxième niveau près de la porte 30, ouvert jour et nuit. Les sources divergent sur les conditions d'accès — renseignez-vous auprès du salon."
+  },
+  "storage": {
+   "title": "Consigne à bagages",
+   "hint": "Disponible à l'aéroport",
+   "text": "L'aéroport dispose d'une consigne à bagages. Les sources n'indiquent ni son emplacement exact ni son prix."
+  }
+ }
+}

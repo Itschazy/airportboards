@@ -1,0 +1,21 @@
+{
+ "iata": "MCX",
+ "about": "Aéroport international de Makhatchkala Amet-Khan-Soultan, deux fois Héros de l'Union soviétique. L'aérodrome a été créé le 3 février 1927 comme station aérienne sur la ligne Moscou – Kharkov – Rostov – Tiflis.",
+ "blocks": {
+  "terminals": {
+   "title": "Terminaux",
+   "hint": "Terminaux A et B",
+   "text": "Deux terminaux : A et B, les plans des deux figurent sur le site de l'aéroport. Les cartes d'embarquement électroniques ne sont actuellement pas acceptées. La carte d'embarquement doit être sur papier ; on peut l'imprimer à une borne d'enregistrement libre-service."
+  },
+  "lounges": {
+   "title": "Salons",
+   "hint": "VIP-2, départ 6000 ₽",
+   "text": "Salon VIP-2. Service des passagers au départ à partir de 2 ans 6000 ₽, à l'arrivée 3000 ₽. Personnes accueillant ou accompagnant un passager 1000 ₽. Salle de réunion 5000 ₽ de l'heure, stationnement près du VIP-2 1000 ₽. Les personnes morales soumettent leur demande au plus tard une heure avant le début de l'enregistrement."
+  },
+  "parking": {
+   "title": "Parking",
+   "hint": "15 min gratuites",
+   "text": "Zone générale : jusqu'à 15 minutes gratuites lors de la première entrée, ensuite 400 ₽ de l'heure, au-delà de 3 heures 1200 ₽ par jour. Parking à la journée à droite à l'entrée 600 ₽ par jour. Zone de dépose (première voie) : au-delà de 10 minutes 1500 ₽ de l'heure. Une nouvelle entrée dans les 30 minutes est payante. Après paiement, 30 minutes pour sortir."
+  }
+ }
+}

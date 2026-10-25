@@ -1,0 +1,31 @@
+{
+ "iata": "PEE",
+ "about": "Bolshoye Savino: the only airport in Perm Krai with scheduled passenger flights, 17 km from Perm. The new 31,000 sq. m terminal was built in 2017 and is designed for 2 million passengers a year. One runway 3,204 × 49 m.",
+ "blocks": {
+  "transport": {
+   "title": "Getting there",
+   "hint": "Bus 108 to bus station",
+   "text": "Bus No. 108 Bus Station — Bolshoye Savino Airport: from the airport (terminal A) from 06:00 to 23:45, from Perm bus station from 05:55 to 23:00; on weekends and holidays the last trips are earlier. Intercity No. 822 connects the airport with Perm-2 station, Berezniki and Usolye."
+  },
+  "storage": {
+   "title": "Left luggage",
+   "hint": "Level 1, round the clock",
+   "text": "Left luggage for baggage on Level 1, on the right side of the terminal, in the domestic arrivals area. Open round the clock, payment according to the airport price list."
+  },
+  "kids": {
+   "title": "With children",
+   "hint": "Free, 24/7",
+   "text": "The mother and child room is open round the clock and free, for departing and arriving passengers. Admits children under 7 with one adult, children with disabilities under 14 and women in the second half of pregnancy. Go to the information desk; leave baggage and pushchairs at left luggage in advance."
+  },
+  "parking": {
+   "title": "Parking",
+   "hint": "15 min free",
+   "text": "Short-stay central car park: up to 15 minutes free, up to an hour 300 ₽, up to 24 hours 500 ₽, then 500 ₽ per 24 hours. Long-stay: up to 10 minutes free, up to 24 hours 400 ₽, then 400 ₽ per 24 hours. An incomplete hour or 24-hour period is charged in full."
+  },
+  "wifi": {
+   "title": "Wi‑Fi",
+   "hint": "Saturn-R network",
+   "text": "Free Wi‑Fi with speed limits throughout the airport building, no login or password. Select the Saturn-R network and open a browser."
+  }
+ }
+}

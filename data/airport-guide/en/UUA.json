@@ -1,0 +1,25 @@
+{
+ "iata": "UUA",
+ "blocks": {
+  "lounges": {
+   "title": "Lounges",
+   "hint": "VIP: departure 4,600 ₽",
+   "text": "VIP lounge with its own check-in counter and bar. Service on departure 4,600 ₽, on arrival 3,500 ₽. Administrator: +7 (85594) 6-35-16, round the clock."
+  },
+  "sleep": {
+   "title": "Where to sleep",
+   "hint": "Hotel, 1,900 ₽",
+   "text": "Hotel on the airport grounds. A bed in a single or double junior suite 1,900 ₽ per day. Check-in at 16:00, check-out at 12:00. Free for children under 3."
+  },
+  "kids": {
+   "title": "With children",
+   "hint": "Round the clock",
+   "text": "The mother and child room in the terminal is open round the clock."
+  },
+  "parking": {
+   "title": "Parking",
+   "hint": "Paid, 24/7",
+   "text": "The paid guarded car park is open round the clock."
+  }
+ }
+}

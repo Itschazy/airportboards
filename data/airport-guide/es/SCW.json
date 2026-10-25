@@ -1,0 +1,15 @@
+{
+ "iata": "SCW",
+ "blocks": {
+  "storage": {
+   "title": "Consigna",
+   "hint": "Nivel 1 de la terminal",
+   "text": "Consigna en el nivel 1 de la terminal. Las sillas de ruedas se aceptan en ella gratis."
+  },
+  "parking": {
+   "title": "Aparcamiento",
+   "hint": "Calle Kolkhoznaya, 3Б",
+   "text": "Aparcamiento del aeropuerto en la calle Kolkhoznaya, 3Б; hay más plazas en la calle Kolkhoznaya, frente a la terminal. Junto a la rampa de la terminal hay una zona reservada para subir y bajar pasajeros con discapacidad."
+  }
+ }
+}

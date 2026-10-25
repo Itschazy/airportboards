@@ -1,0 +1,31 @@
+{
+ "iata": "MRV",
+ "about": "Mineralnyje Wody: größter Flughafen des Föderationskreises Nordkaukasus. Die Start- und Landebahn mit 3900 m Länge und 60 m Breite wurde 2011 in Betrieb genommen. Zwei Abflugterminals, ein Inlands- und ein internationales, sowie separate Ankunftsterminals.",
+ "blocks": {
+  "transport": {
+   "title": "Anreise",
+   "hint": "Sammeltaxi 11, 20–25 Min.",
+   "text": "Sammeltaxi Nr. 11 fährt zum Bahnhof Mineralnyje Wody, Fahrzeit 20–25 Minuten; zum Busbahnhof, Haltestelle „Rynok Ruslan“, etwa 10 Minuten. Vom Bahnhof fährt Bus Nr. 223 nach Pjatigorsk, Nr. 107 nach Schelesnowodsk. Nach Jessentuki, Kislowodsk, Teberda und Dombai fahren Überlandbusse ab dem Busbahnhof."
+  },
+  "lounges": {
+   "title": "Business-Lounges",
+   "hint": "„Beschtau“, Ebene 3, 24/7",
+   "text": "Business-Lounge „Beschtau“ auf Ebene 3 des neuen Terminals, im Sicherheitsbereich nach der Kontrolle, rund um die Uhr geöffnet. Zugang für Passagiere der Business Class, Teilnehmer der Programme ON Pass, Persona.Aero, Grey Wall Pass, Dragon Pass, Every Lounge und anderer sowie für alle Passagiere gegen Gebühr laut Preisliste."
+  },
+  "storage": {
+   "title": "Gepäckaufbewahrung",
+   "hint": "Untergeschoss, 8:00–17:00",
+   "text": "Gepäckaufbewahrung im Untergeschoss, nur über die Treppe erreichbar, geöffnet von 8:00 bis 17:00. Der erste Tag (bis 24:00) 900 ₽ pro Gepäckstück, danach 500 ₽ pro Tag, angefangene Tage werden als volle berechnet. Aufbewahrung höchstens einen Monat."
+  },
+  "kids": {
+   "title": "Mit Kind",
+   "hint": "Kostenlos, 24/7",
+   "text": "Der Mutter-Kind-Raum ist rund um die Uhr geöffnet und kostenlos für Passagiere mit einem Ticket für einen Abflug ab Mineralnyje Wody: mit Kindern unter 7 Jahren, Kindern mit Behinderung unter 16 Jahren und für Frauen in der zweiten Schwangerschaftshälfte. Erforderlich sind Ticket, Pass und Geburtsurkunde des Kindes."
+  },
+  "parking": {
+   "title": "Parken",
+   "hint": "15 Min. kostenlos",
+   "text": "Kurzzeitparkplatz P1 an der Abflughalle: unter 15 Minuten kostenlos, 15–60 Minuten 500 ₽, danach 500 ₽ pro Stunde, über 4 Stunden 1200 ₽ pro Tag. Erneute Durchfahrt innerhalb einer Stunde 500 ₽. Auf dem angrenzenden Gelände gibt es einen kostenlosen Parkplatz, die Lage zeigt der Parkplan."
+  }
+ }
+}

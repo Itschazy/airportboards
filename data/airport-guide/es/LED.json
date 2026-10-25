@@ -1,0 +1,51 @@
+{
+ "iata": "LED",
+ "about": "El aeropuerto de Púlkovo está a 23 km de la plaza del Palacio de San Petersburgo. Los pasajeros son atendidos en una terminal de pasajeros centralizada; el edificio «Púlkovo-1» está unido a su edificio principal por una galería de conexión y atiende vuelos nacionales. Desde 2010 el aeropuerto lo gestiona OOO «Vozdushnye Vorota Severnoy Stolitsy»; la aerolínea base es «Rossiya».",
+ "blocks": {
+  "lounges": {
+   "title": "Salas VIP",
+   "hint": "2 nacionales + 1 internacional",
+   "text": "Tres salas business. Dos en la zona de salidas nacionales, una de ellas New Pulkovo Lounge, y una en la zona de salidas internacionales. En los vuelos nacionales, la entrada está al fondo de la sala, en el nivel 2. Gratis: clase prioritaria y niveles prioritarios de los programas de fidelización de aerolíneas, 4 horas antes de la salida; MILE·ON·AIR, Every Lounge, Comfort Pass, RusPriority, Golden Key, Grey Wall Pass, Persona.aero, DreamFolks, 2 horas antes. Visita única: 3500 ₽ por 2 horas, menores de 2 años gratis."
+  },
+  "storage": {
+   "title": "Consigna",
+   "hint": "Nivel 1, desde 1100 ₽",
+   "text": "En el nivel 1 de la nueva terminal. Un bulto cuesta 1100 ₽ el primer día natural y después 500 ₽ por día. Caja de seguridad: 1500 ₽, después 800 ₽ por día. Operador «Aeroservis», +7 921 859-55-33."
+  },
+  "sleep": {
+   "title": "Dónde dormir",
+   "hint": "Cápsulas, 1100 ₽/hora",
+   "text": "Hotel de cápsulas en la sala de espera del nivel 2 de la terminal central. Cama de 140×200 cm para dos; en la cápsula hay un enchufe de 220 V y Wi‑Fi gratuito. Pago por horas: 1100 ₽ por hora, en efectivo o con tarjeta. Teléfono +7 921 859-55-22."
+  },
+  "kids": {
+   "title": "Con niños",
+   "hint": "Nivel 2, 24/7, gratis",
+   "text": "Sala madre e hijo en el nivel 2 del edificio principal de la terminal, abierta las 24 horas y gratuita. Admite a pasajeros con niños de hasta 7 años inclusive y con niños con discapacidad menores de 14 años, por no más de 3 horas. Se necesitan billete o tarjeta de embarque, documento del niño y certificado médico, que se expide gratis en el puesto médico del nivel 2. La zona infantil de vuelos nacionales está en el nivel 2, detrás del restaurante «Bufet»."
+  },
+  "transport": {
+   "title": "Cómo llegar",
+   "hint": "Autobuses 39, 39Э, 82Э",
+   "text": "El n.º 39, desde el metro «Moskovskaya», hace todas las paradas: intervalo de 5–7 min, trayecto de 35 min, desde el aeropuerto de 5:15 a 1:36. El n.º 39Э va sin paradas: intervalo de 13–20 min, trayecto de 27 min, desde el aeropuerto de 6:00 a 1:40. El n.º 82Э, desde el metro «Prospekt Veteranov»: intervalo de 15–16 min, trayecto de 25 min, desde el aeropuerto de 6:05 a 1:41."
+  },
+  "taxi": {
+   "title": "Taxi y paradas",
+   "hint": "Yandex Go, mostradores 24/7",
+   "text": "Socio oficial de taxi del aeropuerto: Yandex Go. Los mostradores funcionan día y noche: en la zona de recogida de equipajes de vuelos nacionales y justo a la salida de la recogida de internacionales. Los autobuses 39, 39Э y 82Э llegan al nivel 3 y salen del nivel 1; el billete cuesta 88 ₽. El quiosco de «Podorozhnik» junto a la parada abre de 8:00 a 20:00."
+  },
+  "parking": {
+   "title": "Aparcamiento",
+   "hint": "15 min gratis en la entrada",
+   "text": "Junto a la terminal, los primeros 15 minutos son gratis; después, 2000 ₽ por cada 30 minutos. Solo se puede entrar una vez cada 30 minutos. P2 (corta estancia): 450 ₽ por 30 minutos, a 2–4 minutos a pie. P4 (larga estancia): 1100 ₽ las primeras 24 horas, a partir de 14 días 700 ₽ por cada 24 horas. El aparcamiento gratuito P0, de 120 plazas, está en el Pulkovskoye shosse, a 3 km del aeropuerto."
+  },
+  "wifi": {
+   "title": "Wi‑Fi",
+   "hint": "OBIT, acceso por llamada",
+   "text": "Red gratuita «OBIT — Free Internet Access» de la compañía «OBIT». Hay que introducir el número de teléfono en formato +código de país; también sirven números extranjeros. Al número llegará una llamada que no hace falta contestar: las últimas 4 cifras del número que llama son el código de acceso."
+  },
+  "terminals": {
+   "title": "Terminal",
+   "hint": "1 llegadas, 2–3 salidas",
+   "text": "Facturación en el nivel 3. Zona de salidas de vuelos nacionales en el nivel 2, de internacionales en el nivel 3. Llegadas y zona de espera en el nivel 1."
+  }
+ }
+}

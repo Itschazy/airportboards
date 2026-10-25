@@ -1,0 +1,16 @@
+{
+ "iata": "NLI",
+ "about": "Der Flughafen liegt im Rajon Nikolajewsk der Region Chabarowsk, 2,5 km westlich von Nikolajewsk am Amur. Klasse „G“, ein Terminal für 50 Passagiere pro Stunde. Betreiber: AO „Chabarowskije awialinii“.",
+ "blocks": {
+  "storage": {
+   "title": "Gepäckaufbewahrung",
+   "hint": "419 ₽ pro Stück und Tag",
+   "text": "Aufbewahrung von Gepäck in der Gepäckaufbewahrung: 418,83 ₽ pro Gepäckstück und Tag inkl. MwSt. Bei einer Abflugverspätung von mehr als 3 Stunden wird aufgegebenes Gepäck für 0,88 ₽ pro kg und Stunde aufbewahrt. Preise laut Preisliste ab 5. Juni 2026."
+  },
+  "lounges": {
+   "title": "Business-Lounges",
+   "hint": "VIP-Raum, 3773 ₽",
+   "text": "Service für Passagiere im VIP-Raum: 3773,25 ₽ inkl. MwSt. pro Service. Preis laut Preisliste ab 5. Juni 2026."
+  }
+ }
+}

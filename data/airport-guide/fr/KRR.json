@@ -1,0 +1,41 @@
+{
+ "iata": "KRR",
+ "about": "Deux terminaux : lignes intérieures et lignes internationales. Surface du complexe aéroportuaire : 16 448 m². La piste de 3000 m a été ouverte en 2017.",
+ "blocks": {
+  "transport": {
+   "title": "Comment s'y rendre",
+   "hint": "Trolleybus 7",
+   "text": "Arrêt sur la place de l'aérogare. Le trolleybus n° 7 va à la gare routière et à la gare ferroviaire Krasnodar-1 par la rue Stavropolskaïa. Le minibus n° 30 va jusqu'au marché Kooperativny. Comptoir des taxis officiels dans le Terminal 1, zone de livraison des bagages."
+  },
+  "terminals": {
+   "title": "Terminaux",
+   "hint": "T1 intérieur, T2 international",
+   "text": "Le Terminal 1 accueille les vols intérieurs, le Terminal 2 les vols internationaux. Comptoirs d'enregistrement 1–19, l'enregistrement ferme 40 minutes avant le départ."
+  },
+  "lounges": {
+   "title": "Salons",
+   "hint": "T1 niveau 2, T2 niveau 1",
+   "text": "Salon des lignes intérieures : Terminal 1, niveau 2, après le contrôle. Salon des lignes internationales : Terminal 2, niveau 1, après le contrôle. Accès pour les membres d'ONPASS, Grey Wall Pass, GoldenKey, RusPriority et d'autres programmes, payant pour les autres. Séjour jusqu'à 3 heures."
+  },
+  "storage": {
+   "title": "Consigne à bagages",
+   "hint": "24/7, 400 ₽ par jour",
+   "text": "Sur la place de l'aérogare, jour et nuit. 400 ₽ par bagage pour les premières 24 heures, 200 ₽ par tranche de 24 heures suivante. Poids d'un bagage jusqu'à 30 kg."
+  },
+  "kids": {
+   "title": "Avec un enfant",
+   "hint": "Т1, niveau 1, gratuit",
+   "text": "Salle mère-enfant : Terminal 1, niveau 1, hall d'enregistrement des lignes intérieures. Pour les passagers avec des enfants de moins de 7 ans, les enfants handicapés de moins de 14 ans et les femmes enceintes dans la seconde moitié de la grossesse. Aucun frais. Passeport et carte d'embarquement ou billet requis."
+  },
+  "parking": {
+   "title": "Parking",
+   "hint": "15 min gratuites, 400₽/h",
+   "text": "Place de l'aérogare : 15 premières minutes gratuites, ensuite 400 ₽ de l'heure. Parking horaire supplémentaire à droite de la place : 250 ₽ de l'heure. À la journée 900 ₽ par jour. Le parking alternatif est gratuit."
+  },
+  "wifi": {
+   "title": "Wi‑Fi",
+   "hint": "Réseau Airport_Free",
+   "text": "Réseau gratuit « Airport_Free » dans tout le complexe aéroportuaire, dans le terminal VIP et dans le salon. Connexion uniquement avec une carte SIM d'un opérateur russe."
+  }
+ }
+}

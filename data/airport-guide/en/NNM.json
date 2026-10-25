@@ -1,0 +1,21 @@
+{
+ "iata": "NNM",
+ "about": "The airport is operated by JSC Naryan-Mar United Air Squadron, address: building 1А, Aeroportovsky Lane, Naryan-Mar. The air squadron operates flights on local air routes of the Nenets Autonomous Okrug. Information desk: 8 (81853) 91-555.",
+ "blocks": {
+  "lounges": {
+   "title": "Lounges",
+   "hint": "Level 1, after security",
+   "text": "Premium comfort lounge on Level 1, in the departure area after security. For domestic passengers, entry 2 hours before departure. Children under 2 free. Access is arranged in the MILE·ON·AIR app, ON PASS section. Lounge phone: 8 (81853) 91-537."
+  },
+  "storage": {
+   "title": "Left luggage",
+   "hint": "Level 1 of the terminal",
+   "text": "Level 1 of the terminal, open during airport hours. One item up to 30 kg. If a flight is delayed or moved to the next day, baggage is stored free of charge with a ticket for that flight."
+  },
+  "parking": {
+   "title": "Parking",
+   "hint": "45 min free",
+   "text": "Up to 45 minutes free. From 46 to 60 minutes: 500 ₽. Over an hour and up to 24 hours: 350 ₽ for each hour. Over 24 hours, up to 30 days: 600 ₽ per 24 hours. Rates valid from 1 August 2026."
+  }
+ }
+}

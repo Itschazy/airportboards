@@ -1,0 +1,41 @@
+{
+ "iata": "NOZ",
+ "about": "B. V. Volınov adını taşıyan Novokuznetsk Uluslararası Havalimanı, Sheregesh tatil merkezinin hava kapısı. 19,5 bin m²'lik yeni terminal 25 Şubat 2025'te açıldı, kapasitesi yılda 1,73 milyon yolcu.",
+ "blocks": {
+  "transport": {
+   "title": "Nasıl gidilir",
+   "hint": "160 numaralı otobüs, ~60 dk",
+   "text": "120, 130 ve 160 numaralı otobüsler 5:20–22:34 arası çalışır. 160 numara Oktyabrsky Bulvarı'ndan, yaklaşık 60 dakika, 76 ₽. 120 numara Krasnogorskaya madeninden, yaklaşık 80 dakika, 50 ₽. 130 numara Dom Veteranov'dan, yaklaşık 90 dakika, 50 ₽. Taksi yaklaşık 40 dakika, aşağı yukarı 800 ₽."
+  },
+  "terminals": {
+   "title": "Terminal",
+   "hint": "6 kapı, 3 körük",
+   "text": "Yeni terminal 25 Şubat 2025'te açıldı. 13 check-in kontuarı, 6 biniş kapısı, 3 körük. Check-in ve bagaj teslimi kalkıştan 40 dakika, biniş 20 dakika önce kapanır."
+  },
+  "lounges": {
+   "title": "Business salonları",
+   "hint": "Kat 3, 3400 ₽",
+   "text": "İç hatlar business salonu Kat 3'te, uçuşlara hizmet verildiği saatlerde açık. Yetişkinler 3400 ₽, 2–12 yaş çocuklar 1700 ₽, 2 yaşından küçük ücretsiz, 3 saate kadar. MILEONAIR, Every Lounge, UniPass, Grey Wall Pass, Golden Key, Persona aero ile girilir. VIP salon Kat 1–2'de, talep üzerine, gidiş 18 900 ₽'den."
+  },
+  "storage": {
+   "title": "Emanet",
+   "hint": "Kat 1, 24/7",
+   "text": "Emanet Kat 1'de, gece gündüz açık. Boyutlarının toplamı 203 cm'ye kadar standart bagaj: ilk 24 saat 400 ₽, sonrası 200 ₽. Standart dışı: ilk 24 saat 750 ₽, sonrası 400 ₽. Bir parça en fazla 30 kg."
+  },
+  "sleep": {
+   "title": "Nerede uyunur",
+   "hint": "Otel, 4200 ₽'den",
+   "text": "Havalimanı alanında otel, Aeroportovaya Caddesi 33. 27 oda, günlüğü 4200 ₽'den. Resepsiyon gece gündüz: +7 (3843) 993 455. Otelin kafesi gece gündüz açık."
+  },
+  "kids": {
+   "title": "Çocukla",
+   "hint": "Kat 2, 24/7, ücretsiz",
+   "text": "Anne-bebek odası Kat 2'de, terminalin genel alanında. Gece gündüz açık, ücretsiz. 7 yaşından küçük çocukla, tek yetişkin eşliğinde kabul edilir. Buzdolabı ve mikrodalga fırınlı mutfak, duş, alt değiştirme masası var; sterilizatör yok."
+  },
+  "parking": {
+   "title": "Otopark",
+   "hint": "15 dakika ücretsiz",
+   "text": "P1 yalnızca indirme-bindirme, park yasak. P2 kısa süreli: 15 dakika ücretsiz, 16–60 dakika 300 ₽, 2. ila 4. saat saati 100 ₽, 4 saatten fazlası günlüğü 700 ₽. P3 uzun süreli: 15 dakika ücretsiz, 6 güne kadar günlüğü 500 ₽. Tamamlanmamış gün tam gün olarak ücretlendirilir."
+  }
+ }
+}

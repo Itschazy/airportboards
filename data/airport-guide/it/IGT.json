@@ -1,0 +1,21 @@
+{
+ "iata": "IGT",
+ "about": "L’aeroporto intitolato a S. S. Oskanov si trova a 30 km a nord-est di Magas, alla periferia occidentale della stanitsa Ordzhonikidzevskaya, a 2 km dalla stazione ferroviaria «Sleptsovskaya». Gestore: AO «Mezhdunarodny aeroport «Magas» im. S. S. Oskanova». L’aerostazione è attrezzata per i controlli di frontiera e doganali.",
+ "blocks": {
+  "terminals": {
+   "title": "Terminal",
+   "hint": "1 aerostazione",
+   "text": "Un’unica aerostazione (terminal passeggeri). Al suo interno ci sono locali per i controlli di frontiera, immigrazione, doganali, veterinari, sanitari e di quarantena. Capacità: 150 passeggeri all’ora."
+  },
+  "lounges": {
+   "title": "Sale business",
+   "hint": "Sala VIP, su richiesta",
+   "text": "Sala VIP in un edificio separato: sala d’attesa, zona bar. Servizio su richiesta preventiva, pagamento secondo le tariffe dell’aeroporto. C’è il trasferimento da e verso la scaletta e un parcheggio a pagamento della sala VIP per chi accoglie e accompagna i passeggeri."
+  },
+  "wifi": {
+   "title": "Wi‑Fi",
+   "hint": "Wi‑Fi gratuito",
+   "text": "Nell’edificio dell’aerostazione accesso gratuito al Wi‑Fi."
+  }
+ }
+}

@@ -1,0 +1,36 @@
+{
+ "iata": "VVO",
+ "about": "Havalimanı Primorye Krayı'nın Artyom şehrinde. Hat ağı 40'tan fazla noktayı kapsar; uçuşları 20'den fazla Rus ve yabancı havayolu gerçekleştirir. İç ve dış hat gidişleri için salonlar var.",
+ "blocks": {
+  "transport": {
+   "title": "Nasıl gidilir",
+   "hint": "Banliyö treni, 52 dk",
+   "text": "Vladivostok tren garından Aeroport istasyonuna banliyö treni, günde 10 sefer, yolculuk yaklaşık 52 dakika. Vladivostok ve Vtoraya Rechka'dan bilet 185 ₽, Artyom'dan 37 ₽. Taksi kontuarı Kat 1'de, terminal binası çıkışında; resmî taşıyıcı MIG OOO."
+  },
+  "lounges": {
+   "title": "Business salonları",
+   "hint": "Kat 3, 24/7",
+   "text": "Laguna business salonu: Kat 3, iç hatlar gidiş alanı, 6 numaralı kapının yanında, gece gündüz açık. Dış hatlar salonu Primorye: Kat 3, 3 numaralı kapının yanında, Duty Free'den sonra, gece gündüz açık. İç hatlar için Priority salonu 6 numaralı kapının yanında, yolcu başına 2500 ₽."
+  },
+  "storage": {
+   "title": "Emanet",
+   "hint": "Kat 1, 24/7, 400 ₽'den",
+   "text": "Kat 1, yürüyen merdivenin arkasında, gece gündüz açık. Standart tarife: ilk 24 saat 500 ₽, sonraki her 24 saat 200 ₽; boyutlarının toplamı 203 cm'ye kadar parça. Tamamlanmamış 24 saatlik dönem tam sayılır."
+  },
+  "sleep": {
+   "title": "Nerede uyunur",
+   "hint": "Otel, Kat 3",
+   "text": "Konforlu bekleme alanı (otel) Kat 3'te, herkese açık alanda, sol kanatta. 30 oda. Tek kişilik oda: 3 saati 3000 ₽, 24 saati 6000 ₽. Odasız duş 1000 ₽."
+  },
+  "kids": {
+   "title": "Çocukla",
+   "hint": "Kat 3, 24/7, ücretsiz",
+   "text": "Anne-bebek odası Kat 3'te, sağ kanatta, gece gündüz açık, ücretsiz. 7 yaşından küçük çocuklu yolcular, 14 yaşından küçük sağlık kısıtlılığı olan çocuklar ve gebeliğin ikinci yarısındaki kadınlar için. Kalış 3 saate kadar. Uçak bileti, pasaport ve çocuğun doğum belgesi gerekir."
+  },
+  "parking": {
+   "title": "Otopark",
+   "hint": "15 dakika ücretsiz",
+   "text": "A, D ve indirme-bindirme alanları: 15 dakikaya kadar ücretsiz. İndirme-bindirme alanında sonrası her 15 dakika için 1000 ₽. A ve D alanları: 15 dakikadan sonra her saat 300 ₽, 3 saatin üzerinde 1500 ₽. B, C ve F alanları günlük ücretli."
+  }
+ }
+}

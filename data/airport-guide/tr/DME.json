@@ -1,0 +1,41 @@
+{
+ "iata": "DME",
+ "about": "Domodedovo Uluslararası Havalimanı Moskova merkezine 45 km, MKAD'a 24 km uzaklıkta; şehre А-105 karayoluyla bağlanır. Yolculara Т2 bölümü de dahil olmak üzere tek bir terminal kompleksi hizmet verir. Tarifeli yolcu ve kargo uçuşlarını 27 havayolu gerçekleştirir.",
+ "blocks": {
+  "lounges": {
+   "title": "Business salonları",
+   "hint": "Radius, Gorizont, S7",
+   "text": "Radius: Kat 2, iç hatlar gidiş steril alanı, gece gündüz açık. Gorizont: atrium, Kat 3, dış hatlar gidiş steril alanı, gece gündüz açık. İki salona da 4 saatlik erişim satın alınabilir; ayrıca Radius NordStar, Yamal, Alrosa, Ural Airlines ve Izhavia'nın öncelikli sınıf yolcularını kabul eder. S7'nin business salonları iç hatlarda, C sektöründe; iç hatlar giden Kat 1'deki Shostakovich Premier Lounge IrAero, Severstal ve Red Wings'in öncelikli sınıfını kabul eder."
+  },
+  "storage": {
+   "title": "Emanet",
+   "hint": "Bodrum kat, 24/7",
+   "text": "Terminal kompleksinin bodrum katı. Gece gündüz açık. Standart parça: ilk 3 saat 900 ₽, 3 saatten uzun süreli emanette ilk 24 saat 1300 ₽. Otomatik dolap: saati 700 ₽."
+  },
+  "sleep": {
+   "title": "Nerede uyunur",
+   "hint": "Terminalde Aerotel",
+   "text": "Aerotel Express terminalde Kat 2'de, resepsiyon gece gündüz açık. 2 ila 24 saat transit konaklama, sabit giriş saati yok. Aerotel terminale 500 m uzaklıkta. Oraya 2 numaralı çıkıştan gece gündüz ücretsiz servis gider, 30 dakikada bir."
+  },
+  "kids": {
+   "title": "Anne-bebek odası",
+   "hint": "Т2, 5 No.lu giriş, 24/7",
+   "text": "Terminal 2, Kat 1, 156 numaralı check-in kontuarının yanındaki 5 numaralı giriş. Gece gündüz açık, ücretsiz. Tek yetişkinle birlikte 8 yaşından küçük çocuklar ve gebeliğin ikinci yarısındaki kadınlar kabul edilir. 3 yaşından küçük çocuklar için beşikli yatak odası, oyun odaları ve mutfak var; sterilizatör yok."
+  },
+  "transport": {
+   "title": "Nasıl gidilir",
+   "hint": "Aeroexpress 45 dakika",
+   "text": "Aeroexpress Paveletsky Garı'ndan yaklaşık 45 dakikada, Verkhniye Kotly'den (MTsK) yaklaşık 40 dakikada gelir. Havalimanında istasyon Terminal 1'in 2 numaralı çıkışında. Aeroexpress'in Domodedovskaya metro istasyonuna giden 1185 numaralı otobüsü 20 dakikada bir kalkar, yolculuk 35–40 dakika. Terminal 2'de durur."
+  },
+  "parking": {
+   "title": "Otoparklar",
+   "hint": "P2 — terminale 1 dakika",
+   "text": "Çok katlı P2: terminale 1 dakika, Kat 3'te kapalı geçit, 963 araçlık. P2 genel alanı: ilk 2 saat 900 ₽. P3 terminale 200 m, P5 ise 500 m uzaklıkta; ikisinde de ilk saat 800 ₽. P1, P3, P5'te ve P2'nin Komfort ve VIP alanlarında ücretsiz süre yok."
+  },
+  "terminals": {
+   "title": "Terminal",
+   "hint": "Т1 ve Т2 tek çatı altında",
+   "text": "Terminal, \"tek çatı altında\" anlayışıyla tek bir bina. Т2 bölümü 2023'te açıldı ve yalnızca dış hat uçuşlarına hizmet verir. 7 katı ve 22 biniş kapısı var. Check-in Kat 1'de, pasaport kontrolü Kat 2'de; giden ve gelen yolcular farklı katlara ayrılmıştır."
+  }
+ }
+}

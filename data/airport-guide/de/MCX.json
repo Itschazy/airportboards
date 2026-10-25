@@ -1,0 +1,21 @@
+{
+ "iata": "MCX",
+ "about": "Internationaler Flughafen Machatschkala „Amet-Chan Sultan“, benannt nach dem zweifachen Helden der Sowjetunion. Der Flugplatz wurde am 3. Februar 1927 als Luftstation an der Strecke Moskau – Charkiw – Rostow – Tiflis gegründet.",
+ "blocks": {
+  "terminals": {
+   "title": "Terminals",
+   "hint": "Terminals A und B",
+   "text": "Zwei Terminals: A und B, Pläne beider gibt es auf der Website des Flughafens. Elektronische Bordkarten werden derzeit nicht akzeptiert. Die Bordkarte wird auf Papier benötigt, man kann sie am Self-Check-in-Schalter ausdrucken."
+  },
+  "lounges": {
+   "title": "Business-Lounges",
+   "hint": "VIP-2, Abflug 6000 ₽",
+   "text": "Lounge VIP-2. Service für abfliegende Passagiere ab 2 Jahren 6000 ₽, für ankommende 3000 ₽. Abholer und Begleitpersonen 1000 ₽. Besprechungsraum 5000 ₽ pro Stunde, Parkplatz an VIP-2 1000 ₽. Juristische Personen melden sich spätestens eine Stunde vor Beginn des Check-ins an."
+  },
+  "parking": {
+   "title": "Parken",
+   "hint": "15 Min. kostenlos",
+   "text": "Allgemeiner Bereich: bis 15 Minuten bei der ersten Einfahrt kostenlos, danach 400 ₽ pro Stunde, über 3 Stunden 1200 ₽ pro Tag. Tagesparkplatz rechts an der Einfahrt 600 ₽ pro Tag. Aussteigezone (erste Reihe): über 10 Minuten 1500 ₽ pro Stunde. Erneute Einfahrt innerhalb von 30 Minuten kostenpflichtig. Nach der Bezahlung 30 Minuten für die Ausfahrt."
+  }
+ }
+}

@@ -1,0 +1,31 @@
+{
+ "iata": "CEK",
+ "about": "Balandino: Internationaler Flughafen Tscheljabinsk „I. W. Kurtschatow“. Das neue Inlandsterminal wurde am 26. November 2019 eröffnet: 16.500 m², vier Fluggastbrücken, etwa 900 Passagiere pro Stunde.",
+ "blocks": {
+  "transport": {
+   "title": "Anreise",
+   "hint": "Busse 1, 41, 45",
+   "text": "Bus Nr. 1 verkehrt zwischen Flughafen und Bahnhof, unter anderem über den Zentralmarkt und den Komsomolskaja-Platz. Nr. 41 fährt zum Kulturhaus „Stroitelei“, Nr. 45 zum „Awtozentr“."
+  },
+  "lounges": {
+   "title": "Business-Lounges",
+   "hint": "Ebene 2, nach der Kontrolle",
+   "text": "Business-Lounge für Inlandsflüge auf Ebene 2 des Terminals, nach der Sicherheitskontrolle. Zugang für Passagiere der Business Class, Elite-Mitglieder von Treueprogrammen von Fluggesellschaften und Banken sowie gegen Gebühr für Economy-Passagiere, frühestens 3 Stunden vor Abflug. Speisen und alkoholfreie Getränke inklusive."
+  },
+  "kids": {
+   "title": "Mit Kind",
+   "hint": "Kostenlos, 24/7",
+   "text": "Der Mutter-Kind-Raum ist kostenlos und rund um die Uhr geöffnet, für einen Aufenthalt von bis zu 3–4 Stunden. Für Passagiere mit Kindern unter 8 Jahren, Kinder mit Behinderung unter 14 Jahren und Frauen in der zweiten Schwangerschaftshälfte. Falls geschlossen: Informationsschalter auf Ebene 1 gegenüber dem Eingang."
+  },
+  "parking": {
+   "title": "Parken",
+   "hint": "15 Min. kostenlos",
+   "text": "Parkplatz P auf dem Vorplatz: 15 Minuten kostenlos einmal pro Stunde, die erste Stunde 300 ₽, danach 250 ₽ pro Stunde, die ersten 24 Stunden insgesamt 1300 ₽, über 24 Stunden hinaus 700 ₽ pro 24 Stunden. Kostenloser Parkplatz mit 100 Plätzen für Abholer an der Südseite der Siedlung Aeroport."
+  },
+  "wifi": {
+   "title": "Wi‑Fi",
+   "hint": "Kostenlos",
+   "text": "Passagiere und Gäste des Flughafens können das Internet über Wi‑Fi kostenlos nutzen."
+  }
+ }
+}

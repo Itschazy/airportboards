@@ -1,0 +1,21 @@
+{
+ "iata": "TBW",
+ "about": "Der Flugplatz Tambow liegt 10 km nordöstlich des Zentrums von Tambow, beim Dorf Donskoje. Betreiber: TOGBU „Aeroport ‚Tambow‘“. Der Flughafen hat föderalen Status, eine Start- und Landebahn 2098 × 42 m.",
+ "blocks": {
+  "terminals": {
+   "title": "Terminal",
+   "hint": "Abflug: Ebene 1",
+   "text": "Die Sicherheitskontrolle erfolgt am Eingang des Terminals. Die Abflughalle mit den Check-in-Schaltern liegt auf Ebene 1. Scanner für elektronische Bordkarten gibt es nicht: Drucken Sie die Bordkarte vorher aus oder holen Sie sie am Schalter ab."
+  },
+  "kids": {
+   "title": "Mit Kind",
+   "hint": "Kinder unter 7 Jahren, kostenlos",
+   "text": "Raum für Passagiere mit Kindern unter 7 Jahren: Schlafraum, Bett, Toilette. Kostenlos, während der Öffnungszeiten des Flughafens. Erforderlich sind Pass, Ticket und ärztliches Attest. Das Attest stellt die Sanitätsstation auf Ebene 1 des Verwaltungsgebäudes kostenlos aus. An den Passagierdienst wenden."
+  },
+  "parking": {
+   "title": "Parken",
+   "hint": "Kostenlos",
+   "text": "Kostenloser Parkplatz auf dem Vorplatz. Es gibt Plätze für Menschen mit Behinderung. Für abgestellte Autos übernimmt der Flughafen keine Haftung."
+  }
+ }
+}

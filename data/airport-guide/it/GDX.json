@@ -1,0 +1,35 @@
+{
+  "iata": "GDX",
+  "blocks": {
+    "transport": {
+      "title": "Come arrivare",
+      "hint": "Bus 101",
+      "text": "L’autobus n. 101 collega l’autostazione di Magadan e l’aeroporto Sokol."
+    },
+    "lounges": {
+      "title": "Sale business",
+      "hint": "Livello 2, 4000 ₽",
+      "text": "Sala business al livello 2 nella zona sterile dei voli nazionali: dopo i controlli al livello 3 scendere seguendo la segnaletica. Aperta durante l’operatività dei voli. Si accede con i programmi ON·PASS, Persona.aero, RusPriority, Every Lounge, Golden Key e altri; qualsiasi passeggero può richiedere il servizio al check-in e pagarlo alla cassa: 4000 ₽ dai 2 anni, i più piccoli gratis."
+    },
+    "storage": {
+      "title": "Deposito bagagli",
+      "hint": "Livello 2, 8:30–20:30",
+      "text": "Deposito bagagli automatico per i passeggeri dei voli nazionali al livello 2, dalle 8:30 alle 20:30, pagamento solo con carta. Armadietto standard 51×63×76 cm 1000 ₽ al giorno, grande 51×195×76 cm 2000 ₽; meno di un giorno si paga come un giorno intero."
+    },
+    "kids": {
+      "title": "Con bambini",
+      "hint": "Livello 3, gratis",
+      "text": "Sala madre e bambino al livello 3, gratuita, per chi parte e per chi è arrivato. Per bambini sotto i 7 anni con un adulto, bambini con disabilità sotto i 14 anni e donne nella seconda metà della gravidanza."
+    },
+    "parking": {
+      "title": "Parcheggio",
+      "hint": "15 min gratis",
+      "text": "Piazzale dell’aerostazione P1 a 30 m dal terminal: i primi 15 minuti gratis, fino a un’ora 500 ₽, ogni ora successiva 300 ₽, giornata intera 2000 ₽. Nuovo ingresso entro un’ora per 1–15 minuti: 200 ₽."
+    },
+    "wifi": {
+      "title": "Wi‑Fi",
+      "hint": "Gratis",
+      "text": "Wi‑Fi gratuito nell’area dell’aerostazione; secondo la legge «Sulle comunicazioni» è necessaria l’identificazione dell’utente, condizioni sulla pagina di benvenuto dell’operatore."
+    }
+  }
+}

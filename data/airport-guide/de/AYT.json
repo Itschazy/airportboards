@@ -1,0 +1,30 @@
+{
+ "iata": "AYT",
+ "blocks": {
+  "transport": {
+   "title": "Anreise",
+   "hint": "Busse und Straßenbahn AntRay",
+   "text": "Zum Fernbusbahnhof und ins Zentrum von Antalya fahren Stadtbusse, Fahrplan in der App Antalyakart oder telefonisch unter 0242 606 07 07. Die Straßenbahn AntRay fährt die Strecke Flughafen – Stadtzentrum – Fernbusbahnhof – Stadtteil Fatih. Pauschaltouristen werden am Terminalausgang an den Schaltern der Reiseveranstalter mit deren Bussen empfangen."
+  },
+  "taxi": {
+   "title": "Taxi",
+   "hint": "An den Terminalausgängen",
+   "text": "Taxistände gegenüber den Ausgängen aller Terminals, die Fahrer tragen Flughafenausweise. Die Tarife stehen auf einer Infotafel neben dem Taxistand; Online-Buchung ist über den genossenschaftlichen Taxidienst des Flughafens möglich (antalyaairporttaxi.net)."
+  },
+  "storage": {
+   "title": "Gepäckaufbewahrung",
+   "hint": "Ankunftshalle Inlandsterminal",
+   "text": "Die Gepäckaufbewahrung befindet sich in der Ankunftshalle des Inlandsterminals; sie steht Passagieren offen, die von Terminal 1 oder vom Inlandsterminal abfliegen. Gepäckverpackung rund um die Uhr, kostenpflichtig, in den Abflughallen der Terminals 1 und 2."
+  },
+  "parking": {
+   "title": "Parken",
+   "hint": "Parkhaus, 2643 Plätze",
+   "text": "Parkhaus mit 2643 Stellplätzen gegenüber dem Inlandsterminal. Die Kosten berechnet ein Rechner auf der Website des Flughafens; Dauerparkkarten gibt es im Servicecenter auf Ebene 1 (P1)."
+  },
+  "wifi": {
+   "title": "Wi‑Fi",
+   "hint": "1 Stunde kostenlos",
+   "text": "Kostenloses Internet für 1 Stunde in allen Terminals. Den PIN-Code geben kostenlose Wi‑Fi-Kioske in den Ankunfts- und Abflughallen aus, nötig sind ein Mobiltelefon und ein Reisepass oder Personalausweis. Im CIP-Terminal und in den Lounges ist der Zugang unbegrenzt."
+  }
+ }
+}

@@ -1,0 +1,30 @@
+{
+ "iata": "IST",
+ "blocks": {
+  "transport": {
+   "title": "Comment s'y rendre",
+   "hint": "Métro M11, bus Havaist",
+   "text": "Le métro M11 relie l'aéroport à Gayrettepe et, depuis le 20 juin 2026, la ligne est prolongée jusqu'à Halkalı. Les bus Havaist partent du niveau −2 (transports) vers de nombreux quartiers de la ville, dont Beşiktaş, Kadıköy, Aksaray, Sultanahmet (Çatladıkapı) et la gare routière d'Esenler. Bus urbains İETT : 5 lignes vers le centre."
+  },
+  "sleep": {
+   "title": "Où dormir",
+   "hint": "YOTEL avant et après contrôle",
+   "text": "L'hôtel YOTEL se trouve dans le terminal même : 171 cabines en zone publique (face aux comptoirs d'enregistrement P) et 280 en zone de départ (YOTELAIR, zone A–B), cette dernière réservée aux passagers partant sur un vol international. Réservation pour 4 heures minimum. Les Sleepcabins YOTELAIR à l'heure sont face à l'entrée de l'iGA Lounge, un étage plus haut, uniquement sans réservation préalable."
+  },
+  "kids": {
+   "title": "Avec un enfant",
+   "hint": "Aires de jeux 700 m²",
+   "text": "Il y a une salle mère-enfant, des aires de jeux sur cinq thèmes d'une surface totale de 700 m², des trajets gratuits en voiturette pour les passagers avec des enfants de moins de 2 ans, des places de parking familiales et des points de contrôle familiaux."
+  },
+  "parking": {
+   "title": "Parking",
+   "hint": "À étages, sous un même toit",
+   "text": "Parking à étages sous un même toit, vidéosurveillance et gardiennage jour et nuit. Depuis le 1er janvier 2024, sans abonnement, paiement à la journée ; le tarif est calculé par le simulateur du site de l'aéroport. Paiement via l'application de l'aéroport : 10% de réduction (sauf abonnements de 15 et 30 jours). Voiturier à l'entrée du terminal CIP."
+  },
+  "wifi": {
+   "title": "Wi‑Fi",
+   "hint": "Illimité, gratuit",
+   "text": "Internet gratuit et illimité : réseau Wi‑Fi iGA, connexion par numéro de téléphone avec mot de passe reçu par SMS ou par code d'accès délivré par les bornes du terminal après scan du passeport."
+  }
+ }
+}

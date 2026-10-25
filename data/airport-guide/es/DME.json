@@ -1,0 +1,41 @@
+{
+ "iata": "DME",
+ "about": "El Aeropuerto Internacional de Domodédovo está a 45 km del centro de Moscú y a 24 km del MKAD; la autopista А-105 lo une con la ciudad. Los pasajeros son atendidos en un único complejo terminal, que incluye el segmento Т2. Operan vuelos regulares de pasajeros y de carga 27 aerolíneas.",
+ "blocks": {
+  "lounges": {
+   "title": "Salas VIP",
+   "hint": "Radius, Gorizont, S7",
+   "text": "«Radius»: nivel 2, zona estéril de salidas nacionales, abierta día y noche. «Gorizont»: nivel 3 del atrio, zona estéril de salidas internacionales, abierta día y noche. En ambas salas se puede comprar acceso por 4 horas; además, «Radius» admite a pasajeros de clase prioritaria de NordStar, Yamal, Alrosa, Ural Airlines e Izhavia. S7 tiene salas VIP en los vuelos nacionales, sector C; Shostakovich Premier Lounge, en el nivel 1 de salidas nacionales, admite a la clase prioritaria de IrAero, Severstal y Red Wings."
+  },
+  "storage": {
+   "title": "Consigna",
+   "hint": "Semisótano, 24/7",
+   "text": "Semisótano del complejo terminal. Funciona día y noche. Bulto estándar: 900 ₽ las primeras 3 horas, 1300 ₽ las primeras 24 horas si se deja más de 3 horas. Taquilla automática: 700 ₽ por hora."
+  },
+  "sleep": {
+   "title": "Dónde dormir",
+   "hint": "Aerotel en la terminal",
+   "text": "«Aerotel Express», en el nivel 2 de la terminal, con recepción día y noche. Estancia de tránsito de 2 a 24 horas, sin hora fija de entrada. «Aerotel» está a 500 m de la terminal. Hasta él va una lanzadera gratuita, día y noche, desde la salida n.º 2, cada 30 minutos."
+  },
+  "kids": {
+   "title": "Sala madre e hijo",
+   "hint": "Т2, entrada n.º 5, 24/7",
+   "text": "Nivel 1 de la Terminal 2, entrada n.º 5, junto al mostrador de facturación n.º 156. Funciona día y noche, gratis. Admite a niños menores de 8 años con un adulto y a embarazadas en la segunda mitad del embarazo. Hay dormitorio con cunas para menores de 3 años, salas de juegos y cocina; no hay esterilizadores."
+  },
+  "transport": {
+   "title": "Cómo llegar",
+   "hint": "Aeroexpress, 45 minutos",
+   "text": "El Aeroexpress va desde la estación Paveletski en unos 45 minutos, desde Verkhnie Kotly (MTsK) en unos 40 minutos. En el aeropuerto, la estación está junto a la salida n.º 2 de la Terminal 1. El autobús de Aeroexpress n.º 1185 hasta el metro Domodedovskaya sale cada 20 minutos; el trayecto dura 35–40 minutos. Para junto a la Terminal 2."
+  },
+  "parking": {
+   "title": "Aparcamientos",
+   "hint": "P2 — 1 min de la terminal",
+   "text": "P2, de varios niveles: a 1 minuto de la terminal, pasarela cubierta en el nivel 3, 963 plazas. Zona general de P2: 900 ₽ las primeras 2 horas. P3, a 200 m de la terminal, y P5, a 500 m, ambos 800 ₽ la primera hora. En P1, P3, P5 y en las zonas «Komfort» y «VIP» de P2 no hay tiempo gratuito."
+  },
+  "terminals": {
+   "title": "Terminal",
+   "hint": "Т1 y Т2 bajo un mismo techo",
+   "text": "La terminal es única, según el concepto «bajo un mismo techo». El segmento Т2 se abrió en 2023 y atiende solo vuelos internacionales. Tiene 7 plantas y 22 puertas de embarque. La facturación está en el nivel 1, el control de pasaportes en el 2, y las salidas y llegadas están separadas en niveles distintos."
+  }
+ }
+}

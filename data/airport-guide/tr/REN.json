@@ -1,0 +1,36 @@
+{
+ "iata": "REN",
+ "about": "Orenburg Oblastı'nın ana havalimanı; iç ve dış hat uçuşlarına hizmet verir. 24 000 m²'den büyük yeni yolcu terminalini ABS (Aeroporty Bolshoy Strany) şirketi inşa etti; dört katı ve 4 körüğü var. Havalimanı yılda 950 bin üzerinde yolcuya hizmet veriyor.",
+ "blocks": {
+  "transport": {
+   "title": "Nasıl gidilir",
+   "hint": "101 numaralı otobüs, 120 ₽",
+   "text": "101 numaralı otobüs tren garı ile havalimanı arasında çalışır, bilet 120 ₽. Gardan havalimanına: 08:45, 16:00, 18:25. Havalimanından gara: 07:20, 11:00, 17:10. 19:50'de havalimanından Mira Meydanı'na 101 (k) numaralı otobüs kalkar, yolculuk 30 dakika."
+  },
+  "lounges": {
+   "title": "Business salonları",
+   "hint": "Kat 3 ve 4, 6500 ₽",
+   "text": "İç hatlar salonu Kat 3'te, dış hatlar salonu Kat 4'te. Business sınıfı yolcuları, ON PASS, Grey Wall, Every Lounge, UniPass, Golden Key programlarının üyeleri ve ücretini kendisi ödeyenler kabul edilir. İki salonda da fiyat: 3 saate kadar 6500 ₽, sonrası her saat 550 ₽. 2 yaşından itibaren çocuklar programın kurallarına göre ücretlendirilir."
+  },
+  "storage": {
+   "title": "Emanet",
+   "hint": "Kat 1, 24/7",
+   "text": "Otomatik emanet dolapları terminal binasının merkez salonunda, Kat 1. Gece gündüz açık. Standart dolap: saati 300 ₽ veya günlüğü 500 ₽."
+  },
+  "kids": {
+   "title": "Çocukla",
+   "hint": "Kat 2, 24/7",
+   "text": "Anne-bebek odası terminal binasında Kat 2'de, gece gündüz açık. 7 yaşından küçük çocuklu, 14 yaşından küçük engelli çocuklu yolcular ve gebeliğin ikinci yarısındaki kadınlar kabul edilir. Kalkıştan 3 saat önce veya inişten sonraki 1 saat içinde girilir. Kat 1'deki revirden belge, pasaport, çocuğun doğum belgesi ve biniş kartı gerekir."
+  },
+  "parking": {
+   "title": "Otopark",
+   "hint": "15 dakika ücretsiz",
+   "text": "İndirme-bindirme alanı: 15 dakikaya kadar ücretsiz, 15 ila 60 dakika 600 ₽, sonrası her saat 600 ₽. Р1 alanı: 60 dakikaya kadar 250 ₽, 120 dakikaya kadar 500 ₽, 24 saate kadar 700 ₽. Uzun süreli park için Р2 alanı: 48 saate kadar 1400 ₽. Ücretsiz Р4 otoparkı terminale 6 dakika uzaklıkta."
+  },
+  "wifi": {
+   "title": "Wi‑Fi",
+   "hint": "Beeline-WiFi-Free ağı",
+   "text": "Havalimanının yolcu alanlarında ücretsiz Wi‑Fi. Ağ: Beeline-WiFi-Free. Giriş cep telefonu numarasıyla, ardından ekrandaki yönergelere göre."
+  }
+ }
+}

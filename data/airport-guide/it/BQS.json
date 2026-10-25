@@ -1,0 +1,36 @@
+{
+  "iata": "BQS",
+  "about": "Aeroporto di rilevanza federale a 15 km a nord-ovest di Blagoveshchensk e a 3,5 km dal confine con la Cina. Voli per le città dell’Estremo Oriente, della Siberia e per Mosca. Nuovo complesso aerostazione di oltre 26.000 m²; nel 2025 più di 1 milione di passeggeri.",
+  "blocks": {
+    "transport": {
+      "title": "Come arrivare",
+      "hint": "Bus 8А, 42 min",
+      "text": "L’autobus urbano n. 8А va dalla fermata «Univermag» alla fermata «Aeroport» in 42 minuti, biglietto 46 ₽. Verso la città l’autobus arriva alla fermata «m-n «Blagoveshchensk»», circa 40 minuti. Ci sono alcune corse al giorno, con orari diversi a seconda del giorno della settimana. A causa dei lavori sulla strada Blagoveshchensk – Bibikovo l’aeroporto chiede di partire un’ora prima."
+    },
+    "lounges": {
+      "title": "Sale business",
+      "hint": "Livello 5, 6000 ₽ / 3 h",
+      "text": "Sala business nell’ala destra della sala partenze, livello 5, dalle 5:00 alle 17:00. Accedono i passeggeri di classe business, i partecipanti ai programmi fedeltà delle compagnie aeree, i titolari di Grey Wall, Every Lounge, RUS Priority, On pass e Golden Key. Per gli altri 6000 ₽ per 3 ore, poi 550 ₽ all’ora, bambini sotto i 2 anni gratis."
+    },
+    "storage": {
+      "title": "Deposito bagagli",
+      "hint": "Livello 1, da 200 ₽/ora",
+      "text": "Deposito bagagli automatico nell’ala destra dell’aerostazione, livello 1. Armadietto standard 200 ₽ all’ora o 500 ₽ al giorno, maggiorato 300 ₽ all’ora o 800 ₽ al giorno. Nello stesso punto imballaggio bagagli da 950 ₽ a collo."
+    },
+    "kids": {
+      "title": "Con bambini",
+      "hint": "Livello 2, 5:00–17:00",
+      "text": "Sala madre e bambino nell’ala destra dell’aerostazione, livello 2, dalle 5:00 alle 17:00. Accoglie bambini sotto i 7 anni, con disabilità sotto i 14 anni, 3 ore prima della partenza ed entro un’ora dall’arrivo. Servono passaporto e biglietto, si entra solo con il bagaglio a mano."
+    },
+    "parking": {
+      "title": "Parcheggio",
+      "hint": "15 min gratis",
+      "text": "Zona di salita e discesa passeggeri: fino a 15 minuti gratis, 16–60 minuti 600 ₽, poi 600 ₽ all’ora. Parcheggio Р1 da 600 posti a 2 minuti dal terminal, a pagamento dal primo minuto: fino a 30 minuti 100 ₽, fino a un’ora 150 ₽, fino a 2 ore 250 ₽, fino a 24 ore 400 ₽, ogni successivo periodo di 24 ore 400 ₽."
+    },
+    "wifi": {
+      "title": "Wi‑Fi",
+      "hint": "Rete Goodfly",
+      "text": "Wi‑Fi gratuito nelle aree passeggeri dell’aerostazione. Rete Goodfly, accesso con il numero di cellulare."
+    }
+  }
+}

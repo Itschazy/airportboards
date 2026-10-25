@@ -1,0 +1,41 @@
+{
+ "iata": "PKC",
+ "about": "Petropavlovsk-Kamchatsky (Yelizovo) International Airport is managed by Aeroporty Regionov management company. Since 31 March 2025 all scheduled passenger flights have been served by the new terminal. In 2024 the airport handled 931,000 passengers.",
+ "blocks": {
+  "transport": {
+   "title": "Getting there",
+   "hint": "Buses 7, 8, 104, 120",
+   "text": "City buses No. 7 (Avtokhozyaistvo stop) and No. 8 (to Garnizon and Uralskaya St). Bus No. 104 runs to Yelizovo, interval 5–20 minutes. Intercity No. 120 goes to Vilyuchinsk, journey time 1 h 35 min. Timetables are based on data from the Kamchatka Krai Ministry of Transport."
+  },
+  "terminals": {
+   "title": "Terminal",
+   "hint": "New terminal since 2025",
+   "text": "Since 31 March 2025 all scheduled flights have been served by the new terminal. 30 check-in counters: 15 domestic and 15 international. Boarding via 5 jet bridges. There are BAGS ID self-service bag drop kiosks."
+  },
+  "lounges": {
+   "title": "Lounges",
+   "hint": "Level 3, 7,500 ₽",
+   "text": "Business lounge on Level 3 of the terminal. Entry 7,500 ₽ for up to 3 hours, children 2–12 years 3,750 ₽. Admits business class passengers, members of ON PASS, Grey Wall, EveryLounge, Persona.Aero, RusPriority, GoldenKey and anyone who pays for entry."
+  },
+  "storage": {
+   "title": "Left luggage",
+   "hint": "Level 1, 600 ₽/day",
+   "text": "Left luggage on Level 1 of the terminal. 300 ₽ for up to 1 hour, then 600 ₽ per day. Items are accepted only when wrapped. Baggage wrapping on Level 1 from 7:00 to 19:00, from 1,000 ₽ per item."
+  },
+  "sleep": {
+   "title": "Where to sleep",
+   "hint": "Polyot hotel nearby",
+   "text": "Polyot hotel within walking distance of the terminal: 10/7 Zvyozdnaya St, Yelizovo. 36 rooms, open round the clock. Breakfast included, check-out time 12:00. Phone +7 (41531) 99-315."
+  },
+  "kids": {
+   "title": "With children",
+   "hint": "Level 3, 8:00–19:30",
+   "text": "Mother and child room on Level 3 of the terminal, 8:00–19:30, free. For children under 7 with one adult, children with disabilities under 14 and women in the second half of pregnancy. A ticket or boarding pass and a certificate from the first-aid post on Level 1 are required."
+  },
+  "wifi": {
+   "title": "Wi‑Fi",
+   "hint": "airport-pkc network",
+   "text": "Free Wi‑Fi in passenger areas. Network airport-pkc, login with a mobile phone number."
+  }
+ }
+}

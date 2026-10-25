@@ -1,0 +1,35 @@
+{
+ "iata": "GDX",
+ "blocks": {
+  "transport": {
+   "title": "Nasıl gidilir",
+   "hint": "101 numaralı otobüs",
+   "text": "101 numaralı otobüs Magadan otogarı ile Sokol havalimanı arasında çalışır."
+  },
+  "lounges": {
+   "title": "Business salonları",
+   "hint": "Kat 2, 4000 ₽",
+   "text": "Business salonu iç hatların steril alanında, Kat 2'de: Kat 3'teki güvenlik kontrolünden sonra tabelaları izleyerek aşağı inilir. Uçuşlara hizmet verildiği saatlerde açıktır. ON·PASS, Persona.aero, RusPriority, Every Lounge, Golden Key ve diğer programlarla girilir; her yolcu hizmeti check-in sırasında talep edip kasada ödeyebilir: 2 yaşından itibaren 4000 ₽, daha küçükler ücretsiz."
+  },
+  "storage": {
+   "title": "Emanet",
+   "hint": "Kat 2, 8:30–20:30",
+   "text": "İç hat yolcuları için otomatik emanet dolapları Kat 2'de, 8:30–20:30, ödeme yalnızca kartla. 51×63×76 cm standart dolap günlüğü 1000 ₽, 51×195×76 cm büyük dolap 2000 ₽; bir günden kısa süre bir gün olarak ücretlendirilir."
+  },
+  "kids": {
+   "title": "Çocukla",
+   "hint": "Kat 3, ücretsiz",
+   "text": "Anne-bebek odası Kat 3'te, ücretsiz, giden ve gelen yolcular için. Tek yetişkinle birlikte 7 yaşından küçük çocuklar, 14 yaşından küçük engelli çocuklar ve gebeliğin ikinci yarısındaki kadınlar için."
+  },
+  "parking": {
+   "title": "Otopark",
+   "hint": "15 dakika ücretsiz",
+   "text": "Terminale 30 m uzaklıktaki P1 terminal önü meydanı: ilk 15 dakika ücretsiz, bir saate kadar 500 ₽, sonraki her saat 300 ₽, günlüğü 2000 ₽. Bir saat içinde 1–15 dakikalık tekrar giriş 200 ₽."
+  },
+  "wifi": {
+   "title": "Wi‑Fi",
+   "hint": "Ücretsiz",
+   "text": "Terminal binasında ücretsiz Wi‑Fi; İletişim Kanunu gereği kullanıcı kimlik doğrulaması gerekir, koşullar operatörün karşılama sayfasında."
+  }
+ }
+}

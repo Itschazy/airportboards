@@ -1,0 +1,20 @@
+{
+ "iata": "NAL",
+ "blocks": {
+  "transport": {
+   "title": "Cómo llegar",
+   "hint": "Microbús 17",
+   "text": "El microbús de ruta fija n.º 17 va de la estación de ferrocarril directamente a la terminal. En coche desde el centro de Nálchik, 15–20 minutos, saliendo de la calle Idarova. El parque nacional «Prielbrusye» está a 92 km, aproximadamente 1 hora y 20 minutos."
+  },
+  "lounges": {
+   "title": "Sala de confort superior",
+   "hint": "Entrada propia, 6200 ₽",
+   "text": "Sala de confort superior con entrada y acceso de vehículos propios: facturación y control de seguridad para vuelos nacionales dentro de la sala, hasta 10 minutos, y traslado al avión. Pasajero 6200 ₽, menores de 2 años gratis, acompañante que despide 5000 ₽. Reservar con antelación por teléfono."
+  },
+  "kids": {
+   "title": "Con niños",
+   "hint": "Gratis",
+   "text": "La sala madre e hijo es gratuita para pasajeros con billete de salida desde Nálchik: con niños menores de 7 años, niños con discapacidad menores de 16 años y para mujeres en la segunda mitad del embarazo. Se necesitan billete, pasaporte y partida de nacimiento del niño."
+  }
+ }
+}

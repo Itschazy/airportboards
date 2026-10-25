@@ -1,0 +1,20 @@
+{
+ "iata": "OSW",
+ "blocks": {
+  "lounges": {
+   "title": "Komfort-Lounge",
+   "hint": "3800 ₽",
+   "text": "Komfort-Lounge für Abfliegende: eigener Check-in-Schalter, eigene Sicherheitskontrolle und Begleitung zum Flugzeug, Tee, Kaffee, Wasser. Zutritt frühestens 2 Stunden vor Abflug. Kostenpflichtig, für Privatpersonen 3800 ₽."
+  },
+  "kids": {
+   "title": "Mit Kind",
+   "hint": "Kostenlos mit Ticket",
+   "text": "Der Mutter-Kind-Raum ist mit einem Flugticket kostenlos, für Passagiere mit Kindern unter 7 Jahren, Kindern mit Behinderung unter 14 Jahren und Frauen in der zweiten Schwangerschaftshälfte. Erforderlich sind Ticket, Pass, ein Dokument des Kindes und eine Bescheinigung der Sanitätsstation des Terminals; geöffnet nach dem Betriebsplan des Flughafens."
+  },
+  "parking": {
+   "title": "Parken",
+   "hint": "15 Min. kostenlos",
+   "text": "Kurzzeitparkplatz ab 01.01.2026: bis 15 Minuten kostenlos, bis zu einer Stunde 250 ₽, bis 24 Stunden 500 ₽, ab 24 Stunden 500 ₽. Das Gelände ist unbewacht."
+  }
+ }
+}

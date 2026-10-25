@@ -1,0 +1,51 @@
+{
+  "iata": "LED",
+  "about": "L’aeroporto di Pulkovo si trova a 23 km da piazza del Palazzo a San Pietroburgo. I passeggeri sono serviti da un terminal passeggeri centralizzato; l’edificio «Pulkovo-1» è collegato all’edificio principale da una galleria e serve i voli nazionali. Dal 2010 l’aeroporto è gestito da OOO «Vozdushnye Vorota Severnoy Stolitsy», vettore di base la compagnia aerea «Rossiya».",
+  "blocks": {
+    "lounges": {
+      "title": "Sale business",
+      "hint": "2 nazionali + 1 internaz.",
+      "text": "Tre sale business. Due nella zona partenze dei voli nazionali, uno dei quali è la New Pulkovo Lounge, e uno nella zona partenze internazionali. Sui voli nazionali l’ingresso è in fondo alla sala al livello 2. Gratis: classe prioritaria e livelli prioritari dei programmi fedeltà delle compagnie aeree, da 4 ore prima della partenza; MILE·ON·AIR, Every Lounge, Comfort Pass, RusPriority, Golden Key, Grey Wall Pass, Persona.aero, DreamFolks, da 2 ore prima. Visita singola 3500 ₽ per 2 ore, bambini sotto i 2 anni gratis."
+    },
+    "storage": {
+      "title": "Deposito bagagli",
+      "hint": "Livello 1, da 1100 ₽",
+      "text": "Al livello 1 del nuovo terminal. Un collo costa 1100 ₽ per il primo giorno di calendario, poi 500 ₽ al giorno. Cassetta di sicurezza: 1500 ₽, poi 800 ₽ al giorno. Operatore «Aeroservis», +7 921 859-55-33."
+    },
+    "sleep": {
+      "title": "Dove dormire",
+      "hint": "Capsule, 1100 ₽/ora",
+      "text": "Hotel a capsule nella sala d’attesa al livello 2 del terminal centrale. Posto letto 140×200 cm per due, nella capsula una presa da 220 V e Wi‑Fi gratuito. Pagamento a ore 1100 ₽ all’ora, in contanti o con carta. Telefono +7 921 859-55-22."
+    },
+    "kids": {
+      "title": "Con bambini",
+      "hint": "Livello 2, 24/7, gratis",
+      "text": "Sala madre e bambino al livello 2 dell’edificio principale del terminal, giorno e notte e gratuita. Si accede con bambini fino a 7 anni compresi, con bambini con disabilità sotto i 14 anni, per non più di 3 ore. Servono biglietto o carta d’imbarco, un documento del bambino e un certificato medico, rilasciato gratuitamente dal presidio medico al livello 2. L’area bambini per i voli nazionali è al livello 2 dietro il ristorante «Bufet»."
+    },
+    "transport": {
+      "title": "Come arrivare",
+      "hint": "Bus 39, 39Э, 82Э",
+      "text": "Il n. 39 dalla metro «Moskovskaya» fa tutte le fermate: frequenza 5–7 min, durata 35 min, dall’aeroporto dalle 5:15 all’1:36. Il n. 39Э è senza fermate: frequenza 13–20 min, durata 27 min, dall’aeroporto dalle 6:00 all’1:40. Il n. 82Э dalla metro «Prospekt Veteranov»: frequenza 15–16 min, durata 25 min, dall’aeroporto dalle 6:05 all’1:41."
+    },
+    "taxi": {
+      "title": "Taxi e fermate",
+      "hint": "Yandex Go, banchi 24/7",
+      "text": "Partner ufficiale dell’aeroporto per i taxi: Yandex Go. I banchi sono aperti giorno e notte: nella zona ritiro bagagli dei voli nazionali e subito all’uscita del ritiro bagagli dei voli internazionali. Gli autobus 39, 39Э e 82Э arrivano al livello 3 e partono dal livello 1, corsa 88 ₽. Il chiosco «Podorozhnik» presso la fermata è aperto dalle 8:00 alle 20:00."
+    },
+    "parking": {
+      "title": "Parcheggio",
+      "hint": "15 min gratis all’ingresso",
+      "text": "Presso il terminal i primi 15 minuti gratis, poi 2000 ₽ per ogni 30 minuti. Si può entrare non più di una volta ogni 30 minuti. P2 (breve sosta): 450 ₽ per 30 minuti, 2–4 minuti a piedi. P4 (lunga sosta): 1100 ₽ per le prime 24 ore, da 14 giorni 700 ₽ ogni 24 ore. Il parcheggio gratuito P0 da 120 posti si trova sul Pulkovskoe shosse a 3 km dall’aeroporto."
+    },
+    "wifi": {
+      "title": "Wi‑Fi",
+      "hint": "OBIT, accesso con chiamata",
+      "text": "Rete gratuita «OBIT — Free Internet Access» della società «OBIT». Si inserisce il numero di telefono nel formato +prefisso del paese, vanno bene anche i numeri stranieri. Arriva una chiamata a cui non serve rispondere: le ultime 4 cifre del numero chiamante sono il codice d’accesso."
+    },
+    "terminals": {
+      "title": "Terminal",
+      "hint": "1 arrivi, 2–3 partenze",
+      "text": "Check-in al livello 3. Zona partenze dei voli nazionali al livello 2, internazionali al livello 3. Arrivi e zona accoglienza al livello 1."
+    }
+  }
+}

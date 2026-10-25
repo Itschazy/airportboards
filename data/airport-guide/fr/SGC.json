@@ -1,0 +1,26 @@
+{
+ "iata": "SGC",
+ "about": "Aéroport international de Sourgout, exploitant SA « Aéroport de Sourgout ». Le réseau compte plus de 30 destinations. L'aérogare dispose de salons d'affaires, de salons VIP et de passerelles télescopiques.",
+ "blocks": {
+  "transport": {
+   "title": "Comment s'y rendre",
+   "hint": "Bus 16 et 107",
+   "text": "Les lignes urbaines n° 16 et n° 107 desservent l'aéroport. Plans et horaires des lignes sur la page « Comment s'y rendre »."
+  },
+  "lounges": {
+   "title": "Salons",
+   "hint": "ON PASS, 3500 ₽",
+   "text": "Salon d'affaires dans le hall des arrivées, niveau 2 (par ascenseur), jour et nuit ; classe affaires et titulaires de cartes élite des compagnies aériennes, classe économique moyennant paiement, pas de service pour les vols internationaux. Salon ON PASS : niveau 2 de la zone réservée, vols intérieurs uniquement, jour et nuit, adulte 3500 ₽, enfant de 2 à 12 ans 2500 ₽."
+  },
+  "storage": {
+   "title": "Consigne à bagages",
+   "hint": "24/7, 400 ₽ par jour",
+   "text": "Ouverte jour et nuit. Premier jour 400 ₽ (jusqu'à 00:00), ensuite 200 ₽ par jour, tout jour entamé est dû en entier. Poids d'un bagage jusqu'à 30 kg."
+  },
+  "parking": {
+   "title": "Parking",
+   "hint": "20 min gratuites",
+   "text": "Sur la place de l'aérogare, 20 premières minutes gratuites. Aire de stationnement prolongé de 50 voitures juste derrière l'abri de l'arrêt : 750 ₽ par jour. Paiement aux caisses de l'aérogare et aux bornes près de l'entrée centrale et dans le hall des arrivées."
+  }
+ }
+}

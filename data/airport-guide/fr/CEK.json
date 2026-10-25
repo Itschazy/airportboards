@@ -1,0 +1,31 @@
+{
+ "iata": "CEK",
+ "about": "Balandino : aéroport international de Tcheliabinsk Igor-Kourtchatov. Le nouveau terminal des vols intérieurs a ouvert le 26 novembre 2019 : 16 500 m², quatre passerelles télescopiques, environ 900 passagers par heure.",
+ "blocks": {
+  "transport": {
+   "title": "Comment s'y rendre",
+   "hint": "Bus 1, 41, 45",
+   "text": "Le bus n° 1 circule entre l'aéroport et la gare ferroviaire, notamment via le Marché central et la place Komsomolskaïa. Le n° 41 va jusqu'à la Maison de la culture des Bâtisseurs, le n° 45 jusqu'à Avtotsentr."
+  },
+  "lounges": {
+   "title": "Salons",
+   "hint": "Niveau 2, après le contrôle",
+   "text": "Salon des vols intérieurs au deuxième niveau du terminal, après la zone de contrôle. Accès pour les passagers de classe affaires, les membres élite des programmes de fidélité des compagnies aériennes et des banques, ainsi que pour les passagers en économique moyennant paiement, au plus tôt 3 heures avant le départ. Repas et boissons sans alcool inclus."
+  },
+  "kids": {
+   "title": "Avec un enfant",
+   "hint": "Gratuit, 24/7",
+   "text": "La salle mère-enfant est gratuite et ouverte jour et nuit, pour un séjour de 3–4 heures maximum. Pour les passagers avec des enfants de moins de 8 ans, les enfants handicapés de moins de 14 ans et les femmes dans la seconde moitié de la grossesse. Si elle est fermée, s'adresser au comptoir d'information du rez-de-chaussée, face à l'entrée."
+  },
+  "parking": {
+   "title": "Parking",
+   "hint": "15 min gratuites",
+   "text": "Parking P sur la place de l'aérogare : 15 minutes gratuites une fois par heure, première heure 300 ₽, ensuite 250 ₽ de l'heure, les premières 24 heures au total 1300 ₽, au-delà de 24 heures 700 ₽ par 24 heures. Parking gratuit de 100 places pour les personnes venant accueillir des passagers, du côté sud du village d'Aeroport."
+  },
+  "wifi": {
+   "title": "Wi‑Fi",
+   "hint": "Gratuit",
+   "text": "Les passagers et visiteurs de l'aéroport peuvent utiliser Internet gratuitement par Wi‑Fi."
+  }
+ }
+}

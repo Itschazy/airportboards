@@ -1,0 +1,31 @@
+{
+ "iata": "IAR",
+ "about": "Aeropuerto Internacional de Yaroslavl «Zolotoye Koltso», en Tunoshna. Pista de 3010×44 m. Funciona un paso fronterizo aéreo estatal y hay puesto de aduanas.",
+ "blocks": {
+  "transport": {
+   "title": "Cómo llegar",
+   "hint": "Autobús 183, 40 min",
+   "text": "El autobús 183 va todos los días de la estación de autobuses de Yaroslavl al aeropuerto. El trayecto dura 40 minutos. El primer servicio sale de la estación de autobuses a las 05:50; el último, del aeropuerto a las 22:35."
+  },
+  "lounges": {
+   "title": "Salas VIP",
+   "hint": "Sala 2500 ₽",
+   "text": "Sala de confort superior para pasajeros que salen. Dentro hay TV, Wi‑Fi, mesa de té y prensa. Precio: 2500 ₽ por pasajero. Información: +7 (4852) 43-18-00."
+  },
+  "kids": {
+   "title": "Con niños",
+   "hint": "Sala de salidas, gratis",
+   "text": "La sala para pasajeros con niños está en la sala de salidas, en la zona estéril. Se admite a pasajeros con niños o niños con discapacidad menores de 14 años, con tarjeta de embarque. Gratis, hasta 3 horas antes de la salida de día y hasta 4 horas de noche. En la sala de llegadas no la hay."
+  },
+  "parking": {
+   "title": "Aparcamiento",
+   "hint": "300 ₽/día",
+   "text": "Aparcamiento de pago, 300 ₽ por día. No hay reserva ni prepago; se paga al dejar el coche, si hay plazas. La hora de recogida del coche se consulta por teléfono en el 43-18-00."
+  },
+  "wifi": {
+   "title": "Wi‑Fi",
+   "hint": "Gratis",
+   "text": "En la terminal funciona un Wi‑Fi gratuito."
+  }
+ }
+}

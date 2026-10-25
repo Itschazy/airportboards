@@ -1,0 +1,31 @@
+{
+ "iata": "PEE",
+ "about": "Bolschoje Sawino: der einzige Flughafen der Region Perm mit regelmäßigen Passagierflügen, 17 km von Perm entfernt. Das neue Terminal mit 31.000 m² Fläche wurde 2017 gebaut und ist auf 2 Mio. Passagiere pro Jahr ausgelegt. Eine Start- und Landebahn 3204 × 49 m.",
+ "blocks": {
+  "transport": {
+   "title": "Anreise",
+   "hint": "Bus 108 zum Busbahnhof",
+   "text": "Bus Nr. 108 „Busbahnhof – Flughafen Bolschoje Sawino“: ab Flughafen (Terminal A) von 06:00 bis 23:45, ab Busbahnhof „Perm“ von 05:55 bis 23:00; an Wochenenden und Feiertagen fahren die letzten Busse früher. Der Überlandbus Nr. 822 verbindet den Flughafen mit dem Bahnhof Perm-2, Beresniki und Usolje."
+  },
+  "storage": {
+   "title": "Gepäckaufbewahrung",
+   "hint": "Ebene 1, rund um die Uhr",
+   "text": "Gepäckaufbewahrung auf Ebene 1, auf der rechten Seite des Terminals, im Ankunftsbereich der Inlandsflüge. Rund um die Uhr geöffnet, Bezahlung laut Preisliste des Flughafens."
+  },
+  "kids": {
+   "title": "Mit Kind",
+   "hint": "Kostenlos, 24/7",
+   "text": "Der Mutter-Kind-Raum ist rund um die Uhr geöffnet und kostenlos, für abfliegende und ankommende Passagiere. Aufgenommen werden Kinder unter 7 Jahren mit einem Erwachsenen, Kinder mit Behinderung unter 14 Jahren und Frauen in der zweiten Schwangerschaftshälfte. An den Informationsschalter wenden, Gepäck und Kinderwagen vorher in der Gepäckaufbewahrung abgeben."
+  },
+  "parking": {
+   "title": "Parken",
+   "hint": "15 Min. kostenlos",
+   "text": "Zentraler Kurzzeitparkplatz: bis 15 Minuten kostenlos, bis zu einer Stunde 300 ₽, bis 24 Stunden 500 ₽, danach 500 ₽ pro 24 Stunden. Langzeitparkplatz: bis 10 Minuten kostenlos, bis 24 Stunden 400 ₽, danach 400 ₽ pro 24 Stunden. Angefangene Stunden und 24-Stunden-Zeiträume werden voll berechnet."
+  },
+  "wifi": {
+   "title": "Wi‑Fi",
+   "hint": "Netz Saturn-R",
+   "text": "Kostenloses Wi‑Fi mit Geschwindigkeitsbegrenzung im gesamten Flughafengebäude, ohne Login und Passwort. Netz Saturn-R wählen und den Browser öffnen."
+  }
+ }
+}

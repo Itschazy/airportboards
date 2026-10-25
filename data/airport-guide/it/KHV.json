@@ -1,0 +1,41 @@
+{
+  "iata": "KHV",
+  "about": "L’aeroporto è aperto giorno e notte; voli di linea e charter collegano oltre 40 destinazioni, anche nei paesi dell’Asia-Pacifico. Operatore principale delle attività a terra: AO «Khabarovsky aeroport». I passeggeri sono serviti da due terminal: voli nazionali e internazionali.",
+  "blocks": {
+    "transport": {
+      "title": "Come arrivare",
+      "hint": "Filobus 1, bus 35",
+      "text": "Filobus: n. 1 da piazza Komsomolskaya, n. 2 e n. 3 ad anello passando per la stazione ferroviaria. Autobus: n. 35 da Polyarnaya, n. 18 dal quartiere Yuzhny. Taxi collettivo (marshrutka) n. 180 Stazione fluviale – villaggio di Matveevka."
+    },
+    "terminals": {
+      "title": "Terminal",
+      "hint": "Nazionali e internazionali separati",
+      "text": "Due terminal: voli nazionali e voli internazionali, ciascuno con 3 piani. Il nuovo terminal dei voli nazionali è stato aperto nel 2019. Le piante dei piani sono pubblicate sul sito."
+    },
+    "lounges": {
+      "title": "Sale business",
+      "hint": "Livello 3 nazionali, 4000 ₽",
+      "text": "Due sale business al livello 3 del terminal dei voli nazionali, nella zona sterile. «Amur» è aperta giorno e notte. «Shantary», a destra dell’uscita dai controlli, è aperta giorno e notte per i titolari dei programmi bancari (Every Lounge, Golden Key, Rus Priority e altri). Prezzo per tutti: 4000 ₽, dopo 4 ore 1100 ₽ all’ora."
+    },
+    "storage": {
+      "title": "Deposito bagagli",
+      "hint": "Nazionali, livello 1 a sinistra",
+      "text": "Deposito bagagli automatico nel terminal dei voli nazionali, livello 1, lato sinistro. Custodia fino a 30 giorni. Non si accettano denaro, documenti, animali, armi e sostanze pericolose."
+    },
+    "sleep": {
+      "title": "Dove dormire",
+      "hint": "Hotel «Mishka» da 1 ora",
+      "text": "Hotel di transito «Mishka» in aeroporto: terminal B, livello 2, camere con pagamento a ore da 1 ora. Vicino all’aeroporto l’hotel «Aeropolis», Matveevskoe shosse, 30, camere da 1200 a 6000 ₽."
+    },
+    "kids": {
+      "title": "Con bambini",
+      "hint": "Livello 2, 24/7, gratis",
+      "text": "Sala madre e bambino al livello 2 nell’area pubblica. Aperta giorno e notte, gratuita. Per bambini sotto i 7 anni, bambini con disabilità sotto i 14 anni, donne nella seconda metà della gravidanza. Chi parte deve avere la carta d’imbarco."
+    },
+    "parking": {
+      "title": "Parcheggio",
+      "hint": "15 min gratis",
+      "text": "Breve sosta P2 di fronte al terminal dei voli nazionali: fino a 15 min gratis, fino a 30 min 150 ₽, fino a 60 min 300 ₽, fino a 24 ore 500 ₽. Lunga sosta P1 di fronte all’edificio di Dalaeronavigatsiya: 500 ₽/giorno fino a 4 giorni, dal 5° giorno 350 ₽. C’è un parcheggio gratuito senza limiti di tempo."
+    }
+  }
+}

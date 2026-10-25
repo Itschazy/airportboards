@@ -1,0 +1,31 @@
+{
+ "iata": "UUS",
+ "about": "La terminal está en el distrito de Khomutovo, en el extremo sur de Yuzhno-Sajalinsk, a 10 km del centro. El complejo terminal lo gestiona AO «Aerovokzal Yuzhno-Sakhalinsk»; su superficie supera los 47 mil m².",
+ "blocks": {
+  "transport": {
+   "title": "Cómo llegar",
+   "hint": "Autobuses 3, 8, 63",
+   "text": "Desde el centro circulan los autobuses n.º 3, 8 y 63; la terminal es su final de línea. Funcionan de 6:30 a 22:00; el trayecto dura 30–40 min. Tren de cercanías desde la estación de ferrocarril hasta Khomutovo y, desde allí, unos 10 min en autobús. Taxi: unos 25 min, unos 350 ₽."
+  },
+  "parking": {
+   "title": "Aparcamiento",
+   "hint": "15 min gratis",
+   "text": "Zona de recogida y bajada de pasajeros: 15 min gratis, hasta 60 min 400 ₽, después 1200 ₽ las primeras 24 horas y 600 ₽ por cada 24 horas siguientes. Larga estancia P1: 500 ₽ por cada 24 horas durante los 5 primeros periodos de 24 horas, después 400 ₽. Gratis para pasajeros con movilidad reducida con la señal de «Persona con discapacidad»."
+  },
+  "lounges": {
+   "title": "Salas VIP",
+   "hint": "«Aniva», nivel 3",
+   "text": "Sala business «Aniva» en el nivel 3, de 6:00 a 23:00: 4400 ₽, niños de 2–12 años 2200 ₽, no más de 2 horas; se accede con Every Lounge. Sala «Krilyon» en el nivel 2, de 6:00 a 23:00: 2800 ₽; acepta Comfort pass, Every Lounge, Mir Pass, Grey Wall Pass y ONPASS. Menores de 2 años gratis."
+  },
+  "storage": {
+   "title": "Consigna",
+   "hint": "Nivel 1, desde 500 ₽",
+   "text": "Consigna en el nivel 1 de la terminal. Equipaje normal: 500 ₽ las primeras 24 horas, 200 ₽ por cada 24 horas siguientes. Equipaje de gran tamaño, de más de 203 cm: 850 ₽ y 400 ₽. Un bulto, hasta 30 kg; plazo de hasta 30 días."
+  },
+  "kids": {
+   "title": "Con niños",
+   "hint": "Nivel 2, 6:00–23:00",
+   "text": "Sala madre e hijo en el nivel 2, en la zona pública, de 6:00 a 23:00, gratis. Admite a niños menores de 8 años con un adulto, niños con discapacidad menores de 14 años y embarazadas en la segunda mitad del embarazo. Se necesitan billete o tarjeta de embarque, pasaporte y partida de nacimiento. Hay cocina con microondas; no hay esterilizador."
+  }
+ }
+}

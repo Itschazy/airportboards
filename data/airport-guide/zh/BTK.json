@@ -1,0 +1,25 @@
+{
+ "iata": "BTK",
+ "blocks": {
+  "lounges": {
+   "title": "候机厅",
+   "hint": "2楼，2200 ₽",
+   "text": "高舒适度候机厅位于航站楼2楼。开放时间6:00至12:00，周五和周日至14:00，其他时间可发邮件至sop@aerobratsk.ru申请。Biznes Standart、Biznes Plyus、Ekonom Plyus票价，Gold和Platinum等级，ON PASS和Grey Wall Pass可免费使用。其他旅客3小时2200 ₽。"
+  },
+  "sleep": {
+   "title": "休息住宿",
+   "hint": "350米外的酒店",
+   "text": "AeroBratsk酒店距航站楼350米。三人间床位每天900 ₽起，单人间3500 ₽起。早餐600 ₽，住客在航站楼食堂用午餐可享20%折扣。"
+  },
+  "parking": {
+   "title": "停车",
+   "hint": "80个免费车位",
+   "text": "航站楼前广场有免费停车场，80个车位，其中8个供残障人士使用。长时停车每天300 ₽起。冬季暖车每20分钟4200 ₽，电瓶充电2100 ₽。"
+  },
+  "wifi": {
+   "title": "Wi‑Fi",
+   "hint": "免费",
+   "text": "为机场旅客和访客提供免费Wi‑Fi。按法律要求需身份验证后登录。"
+  }
+ }
+}

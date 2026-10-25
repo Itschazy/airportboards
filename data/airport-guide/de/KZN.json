@@ -1,0 +1,36 @@
+{
+ "iata": "KZN",
+ "about": "Der Internationale Flughafen „Kasan“, benannt nach Gabdulla Tukai, liegt 26 km vom Zentrum Kasans entfernt. Er ist mit Bus und Vorortzug erreichbar, es gibt kostenpflichtige Parkplätze und einen kostenlosen.",
+ "blocks": {
+  "transport": {
+   "title": "Anreise",
+   "hint": "Bus 197, Vorortzug",
+   "text": "Bus Nr. 197 fährt vom Busbahnhof „Wostotschny“ über den Prospekt Pobedy, an der Metro „Prospekt Pobedy“ vorbei, und endet an den Terminals 1 und 1А. Fährt von 6:00 bis 22:00, Betreiber PATP-8. Die Vorortzüge Kasan – Flughafen betreibt die Gesellschaft „Sodruschestwo“. Taxis fahren rund um die Uhr."
+  },
+  "lounges": {
+   "title": "Business-Lounges",
+   "hint": "Ab 3 200 ₽",
+   "text": "„Bolgar – Ak Bars Bank Lounge“: Ebene 2 nach der Sicherheitskontrolle, rechts nach Gate 4, 3 500 ₽. „Swijaschsk“: Ebene 3 nach der Sicherheitskontrolle, 4 500 ₽. Bei den internationalen Abflügen in Terminal 1А: Sky Lounge auf Ebene 1, 5 500 ₽, und Prime Lounge auf Ebene 2, 3 200 ₽. Kinder von 2–12 Jahren zahlen den halben Preis."
+  },
+  "storage": {
+   "title": "Gepäckaufbewahrung",
+   "hint": "Т1, Untergeschoss, 24/7",
+   "text": "Terminal 1, Untergeschoss, rund um die Uhr. Ein Gepäckstück kostet 400 ₽ bis Mitternacht des laufenden Tages, danach 200 ₽ für jeden Tag. Angefangene Tage zählen als volle. Betreiber PACK&FLY, Telefon +7 843 254 00 21."
+  },
+  "sleep": {
+   "title": "Schlafen",
+   "hint": "Hotel 270 m entfernt",
+   "text": "Das Hotel „Poljot“ liegt auf dem Flughafengelände, 270 m von Terminal 1. Verpflegung wird bei der Buchung oder mit Lieferung aufs Zimmer bestellt, die Kantine befindet sich auf Ebene 3 von Terminal 1. Rezeption: +7 (843) 267-87-05."
+  },
+  "kids": {
+   "title": "Mit Kind",
+   "hint": "Т1, Ebene 2, 24/7",
+   "text": "Mutter-Kind-Raum auf Ebene 2 von Terminal 1, rund um die Uhr. Zugang mit Kindern unter 7 Jahren, mit Kindern mit Behinderung unter 14 Jahren und für Schwangere in der zweiten Schwangerschaftshälfte. Ausstattung: zwei Schlafräume mit Kinderbetten, zwei Spielzimmer, ein Essbereich mit Mikrowelle und Wärmegerät, Dusche. Telefon +7 (843) 267-87-86."
+  },
+  "parking": {
+   "title": "Parken",
+   "hint": "20 Min. kostenlos",
+   "text": "Die ersten 20 Minuten ab der Einfahrt kostenlos. Kostenpflichtiges Parken bezahlt man an Parkautomaten in den Terminals und auf den Parkflächen oder in der App des Flughafens. Fragen zum Parken an den Terminals 1, 1А und 2: +7 (843) 254-01-55."
+  }
+ }
+}

@@ -1,0 +1,30 @@
+{
+ "iata": "SKX",
+ "blocks": {
+  "transport": {
+   "title": "Cómo llegar",
+   "hint": "Autobús 7, microbús 15",
+   "text": "Hasta la parada «Aeroport» van el microbús de ruta fija n.º 15 y el autobús n.º 7. Horario en el sitio web bus13.ru."
+  },
+  "storage": {
+   "title": "Consigna",
+   "hint": "Terminal nacional, desde 100 ₽/h",
+   "text": "Consigna para pasajeros de vuelos nacionales e internacionales en la terminal de vuelos nacionales, día y noche. Taquilla de 50×40×50: 100 ₽ por hora; de 70×60×70: 150 ₽; de 100×70×100: 200 ₽."
+  },
+  "kids": {
+   "title": "Con niños",
+   "hint": "Gratis",
+   "text": "La sala madre e hijo es gratuita, para niños menores de 7 años con un adulto. Diríjase al personal de los mostradores de facturación; antes del alojamiento, el personal médico de guardia examina a los niños."
+  },
+  "parking": {
+   "title": "Aparcamiento",
+   "hint": "15 min gratis",
+   "text": "Plaza de la terminal, a 30 m de la terminal: menos de 15 minutos gratis, más de 15 minutos 200 ₽ por hora, más de una hora 600 ₽ por día."
+  },
+  "wifi": {
+   "title": "Wi‑Fi",
+   "hint": "Red Free WiFi",
+   "text": "Wi‑Fi gratuito del aeropuerto: red Free WiFi, acceso con el número de teléfono y un código por SMS; también sirven números de operadores extranjeros."
+  }
+ }
+}

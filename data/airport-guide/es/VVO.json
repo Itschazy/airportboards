@@ -1,0 +1,36 @@
+{
+ "iata": "VVO",
+ "about": "El aeropuerto está en la ciudad de Artiom, krai de Primorie. La red de rutas cuenta con más de 40 destinos, operados por más de 20 aerolíneas rusas y extranjeras. Hay salas para salidas nacionales e internacionales.",
+ "blocks": {
+  "transport": {
+   "title": "Cómo llegar",
+   "hint": "Tren de cercanías, 52 min",
+   "text": "Tren eléctrico desde la estación de ferrocarril de Vladivostok hasta la estación «Aeroport», 10 servicios al día; el trayecto dura unos 52 minutos. Billete desde Vladivostok y Vtoraya Rechka 185 ₽, desde Artiom 37 ₽. Mostrador de taxis en el nivel 1, a la salida de la terminal; transportista oficial: OOO «MIG»."
+  },
+  "lounges": {
+   "title": "Salas VIP",
+   "hint": "Nivel 3, 24/7",
+   "text": "Sala business «Laguna»: nivel 3, zona de salidas nacionales, junto a la puerta 6, día y noche. Internacional «Primorye»: nivel 3, junto a la puerta 3, después del Duty Free, día y noche. Sala «Priority» para vuelos nacionales junto a la puerta 6, 2500 ₽ por pasajero."
+  },
+  "storage": {
+   "title": "Consigna",
+   "hint": "Nivel 1, 24/7, desde 400 ₽",
+   "text": "Nivel 1, detrás de la escalera mecánica, día y noche. Tarifa «Standard»: 500 ₽ las primeras 24 horas, 200 ₽ por cada 24 horas siguientes, bulto de hasta 203 cm de suma de dimensiones. Un periodo de 24 horas incompleto se cuenta como completo."
+  },
+  "sleep": {
+   "title": "Dónde dormir",
+   "hint": "Hotel, nivel 3",
+   "text": "«Zona de espera confortable» (hotel) en el nivel 3, zona pública, ala izquierda. 30 habitaciones. Habitación individual: 3000 ₽ por 3 horas, 6000 ₽ por 24 horas. Ducha sin habitación: 1000 ₽."
+  },
+  "kids": {
+   "title": "Con niños",
+   "hint": "Nivel 3, 24/7, gratis",
+   "text": "Sala madre e hijo en el nivel 3, ala derecha, día y noche, gratis. Para pasajeros con niños menores de 7 años, niños con limitaciones de salud menores de 14 años y embarazadas en la segunda mitad del embarazo. Estancia de hasta 3 horas. Se necesitan billete de avión, pasaporte y partida de nacimiento del niño."
+  },
+  "parking": {
+   "title": "Aparcamiento",
+   "hint": "15 min gratis",
+   "text": "Zonas A, D y de recogida/bajada de pasajeros: hasta 15 minutos gratis. En la zona de recogida/bajada, después, 1000 ₽ por cada 15 minutos. Zonas A y D: 300 ₽ por cada hora pasados los 15 minutos; más de 3 horas, 1500 ₽. Zonas B, C y F con pago por días."
+  }
+ }
+}

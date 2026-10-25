@@ -1,0 +1,25 @@
+{
+ "iata": "UUA",
+ "blocks": {
+  "lounges": {
+   "title": "Salas VIP",
+   "hint": "VIP: salida 4600 ₽",
+   "text": "Sala VIP con mostrador de facturación propio y bar. Servicio a la salida 4600 ₽, a la llegada 3500 ₽. Administrador: +7 (85594) 6-35-16, día y noche."
+  },
+  "sleep": {
+   "title": "Dónde dormir",
+   "hint": "Hotel, 1900 ₽",
+   "text": "Hotel en el recinto del aeropuerto. Plaza en junior suite individual o doble: 1900 ₽ por día. Entrada a las 16:00, salida a las 12:00. Menores de 3 años gratis."
+  },
+  "kids": {
+   "title": "Con niños",
+   "hint": "Día y noche",
+   "text": "La sala madre e hijo de la terminal funciona día y noche."
+  },
+  "parking": {
+   "title": "Aparcamiento",
+   "hint": "De pago, 24/7",
+   "text": "El aparcamiento de pago vigilado funciona día y noche."
+  }
+ }
+}

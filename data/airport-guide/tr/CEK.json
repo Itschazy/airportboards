@@ -1,0 +1,31 @@
+{
+ "iata": "CEK",
+ "about": "Balandino: I. V. Kurçatov adını taşıyan Çelyabinsk uluslararası havalimanı. Yeni iç hatlar terminali 26 Kasım 2019'da açıldı: 16,5 bin m², dört körük, saatte yaklaşık 900 yolcu.",
+ "blocks": {
+  "transport": {
+   "title": "Nasıl gidilir",
+   "hint": "1, 41, 45 numaralı otobüsler",
+   "text": "1 numaralı otobüs havalimanı ile tren garı arasında, Merkez Pazarı ve Komsomolskaya Meydanı üzerinden de çalışır. 41 numara DK Stroiteley'e, 45 numara Avtotsentr'e gider."
+  },
+  "lounges": {
+   "title": "Business salonları",
+   "hint": "Kat 2, güvenlikten sonra",
+   "text": "İç hatlar business salonu terminalde Kat 2'de, güvenlik kontrolü alanından sonra. Business sınıfı yolcuları, havayolu ve banka sadakat programlarının elit üyeleri ve ücret karşılığında ekonomi yolcuları kabul edilir, kalkıştan en erken 3 saat önce. Yemek ve alkolsüz içecekler dahildir."
+  },
+  "kids": {
+   "title": "Çocukla",
+   "hint": "Ücretsiz, 24/7",
+   "text": "Anne-bebek odası ücretsiz ve gece gündüz açık; 3–4 saate kadar kalış için. 8 yaşından küçük çocuklu yolcular, 14 yaşından küçük engelli çocuklar ve gebeliğin ikinci yarısındaki kadınlar için. Kapalıysa Kat 1'de girişin karşısındaki danışma kontuarına başvurun."
+  },
+  "parking": {
+   "title": "Otopark",
+   "hint": "15 dakika ücretsiz",
+   "text": "Terminal önü meydanındaki P otoparkı: saatte bir kez 15 dakika ücretsiz, ilk saat 300 ₽, sonrası saati 250 ₽, ilk 24 saat toplamda 1300 ₽, 24 saatin üzerinde her 24 saat için 700 ₽. Karşılayanlar için 100 araçlık ücretsiz otopark Aeroport yerleşiminin güney tarafında."
+  },
+  "wifi": {
+   "title": "Wi‑Fi",
+   "hint": "Ücretsiz",
+   "text": "Havalimanı yolcuları ve misafirleri Wi‑Fi üzerinden internetten ücretsiz yararlanabilir."
+  }
+ }
+}

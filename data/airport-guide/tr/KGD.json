@@ -1,0 +1,31 @@
+{
+ "iata": "KGD",
+ "about": "Khrabrovo: Kaliningrad uluslararası havalimanı. 39 762 m²'lik yolcu terminali yılda 5 milyon yolcu için tasarlanmıştır, apronda 6 körük var. Tek pist, 3350 × 45 m.",
+ "blocks": {
+  "transport": {
+   "title": "Nasıl gidilir",
+   "hint": "244-Э otobüsü, 45 dk",
+   "text": "244-Э numaralı otobüs havalimanı ile Kaliningrad'daki Yuzhny otogarı arasında çalışır, ortalama yolculuk süresi 45 dakika. Kalkış 15 dakikaya kadar gecikebilir, tarife değişebilir."
+  },
+  "lounges": {
+   "title": "Business salonları",
+   "hint": "A ve C sektörleri, Kat 2",
+   "text": "İkinci katta, steril alanda iki business salonu: A sektöründe iç hatlar için Kurshsky Zaliv ve C sektöründe dış hatlar için Dyuny. Business sınıfı yolcuları ve giriş ücretini ödeyen herkes kabul edilir; Büyük Vatanseverlik Savaşı gazileri refakatçileriyle ücretsiz."
+  },
+  "sleep": {
+   "title": "Nerede uyunur",
+   "hint": "RecoRoom kapsülleri",
+   "text": "Havalimanı alanında RecoRoom Sonnik kapsül otel: saatlik ödeme, otomatik check-in, bagaj yeri, priz ve ücretsiz Wi‑Fi bulunan tek ve çift kişilik kapsüller."
+  },
+  "kids": {
+   "title": "Çocukla",
+   "hint": "Ücretsiz",
+   "text": "Anne-bebek odası 7 yaşından küçük çocuklu giden yolcular, 14 yaşından küçük engelli çocuklar ve gebeliğin ikinci yarısındaki kadınlar için ücretsiz; terminal binasının çalışma saatlerine göre açık. Önce Kat 1'de, binanın sağ tarafındaki revirden belge alınması gerekir; bagaj emanete bırakılır."
+  },
+  "parking": {
+   "title": "Otopark",
+   "hint": "15 dk ücretsiz, saati 400 ₽",
+   "text": "01.10.2026'dan itibaren kısa süreli otopark: ilk 15 dakika ücretsiz, sonrası tamamlanmamış saat dahil her saat 400 ₽. Uzun süreli günlüğü 900 ₽. Terminal binasına 400 m uzaklıkta 300 araçlık ücretsiz otopark. Binanın önündeki birinci şeritte park yasaktır."
+  }
+ }
+}

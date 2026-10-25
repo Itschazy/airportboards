@@ -1,0 +1,20 @@
+{
+ "iata": "OSW",
+ "blocks": {
+  "lounges": {
+   "title": "Salon de confort supérieur",
+   "hint": "3800 ₽",
+   "text": "Salon de confort supérieur pour les passagers au départ : comptoir d'enregistrement séparé, point de contrôle propre et accompagnement jusqu'à l'avion, thé, café, eau. Accès au plus tôt 2 heures avant le départ. Payant, pour les particuliers 3800 ₽."
+  },
+  "kids": {
+   "title": "Avec un enfant",
+   "hint": "Gratuit avec billet",
+   "text": "La salle mère-enfant est gratuite sur présentation d'un billet d'avion, pour les passagers avec des enfants de moins de 7 ans, des enfants handicapés de moins de 14 ans et les femmes dans la seconde moitié de la grossesse. Billet, passeport, document de l'enfant et certificat du poste médical de l'aérogare requis ; fonctionne selon le règlement de l'aéroport."
+  },
+  "parking": {
+   "title": "Parking",
+   "hint": "15 min gratuites",
+   "text": "Parking courte durée depuis le 01.01.2026 : jusqu'à 15 minutes gratuit, jusqu'à une heure 250 ₽, jusqu'à 24 heures 500 ₽, au-delà de 24 heures 500 ₽. Le site n'est pas gardé."
+  }
+ }
+}

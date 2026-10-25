@@ -1,0 +1,26 @@
+{
+ "iata": "CSY",
+ "about": "Aeropuerto a 5 km del centro de Cheboksary, dirección: plaza I. F. Skvortsova, 1. Hasta la terminal llegan trolebuses y un autobús; también se puede ir en taxi o en coche propio.",
+ "blocks": {
+  "transport": {
+   "title": "Cómo llegar",
+   "hint": "Trolebuses 2, 15",
+   "text": "Al centro de Cheboksary hay 5 km. Trolebuses n.º 2 y n.º 15, autobús n.º 15. También taxi o coche propio."
+  },
+  "lounges": {
+   "title": "Salas VIP",
+   "hint": "Estancia 4000 ₽",
+   "text": "Sala business: estancia de hasta 2 horas por 4000 ₽, con los programas Every Lounge y Golden Key, para miembros de «Aeroflot Bonus» de los niveles Platinum y Gold. Servicio especial con facturación en el nivel 2: 5500 ₽. Servicio VIP a la salida 15 250 ₽, a la llegada 7700 ₽, previa solicitud con 24 horas de antelación. Se entra en la sala como máximo 2 horas antes de la salida."
+  },
+  "storage": {
+   "title": "Consigna",
+   "hint": "300 ₽ al día",
+   "text": "Consigna de equipaje: 300 ₽ por 1 bulto al día."
+  },
+  "parking": {
+   "title": "Aparcamiento",
+   "hint": "15 min gratis",
+   "text": "Los primeros 15 minutos, gratis. Turismos: 100 ₽ por hora, 450 ₽ por día, a partir de 3 días 400 ₽ por día. UAZ, «Gazel», «Sobol»: 200 ₽ por hora, 650 ₽ por día. Pérdida del recibo: 500 ₽. Teléfono 8 (8352) 22-94-03, ext. 2-95."
+  }
+ }
+}

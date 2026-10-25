@@ -1,0 +1,16 @@
+{
+ "iata": "IWA",
+ "about": "El aeropuerto de Ivánovo A. M. Vasilevski está a 7 km al suroeste del centro de Ivánovo. Aeropuerto de importancia federal, funciona desde 1939. Explotador y operador principal: OOO «Tsentr Avia».",
+ "blocks": {
+  "transport": {
+   "title": "Cómo llegar",
+   "hint": "Trolebús 11",
+   "text": "Trolebús n.º 11: aeropuerto, calle Zagorodnaya, calle Lezhnevskaya, estación de autobuses, plaza Revolyutsii, avenida Sheremetevski, estación de ferrocarril. Circula de 7:00 a 20:00, con intervalos de 22–44 minutos. Taxi: Yandex Taxi, «Vezyot», «Maxim» a través de sus aplicaciones. El aeropuerto está fuera del casco urbano; es mejor pedir el taxi con antelación."
+  },
+  "parking": {
+   "title": "Aparcamiento",
+   "hint": "10 min gratis",
+   "text": "Aparcamiento automático vigilado con barrera. Los primeros 10 minutos gratis, una hora 100 ₽, un día 400 ₽. Pago en el terminal (efectivo sin cambio o tarjeta), con código QR, en la aplicación Hippoparking o en el sitio web. Tras el pago hay 15 minutos para salir."
+  }
+ }
+}

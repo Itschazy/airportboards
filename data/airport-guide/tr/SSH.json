@@ -1,0 +1,25 @@
+{
+ "iata": "SSH",
+ "blocks": {
+  "transport": {
+   "title": "Nasıl gidilir",
+   "hint": "Minibüsler, fiyat — önceden",
+   "text": "Şarm el-Şeyh'e giden minibüsler genellikle dolunca kalkar; fiyat şoförle önceden kararlaştırılır. Araç kiralama var — Hertz, Thrifty ve yerel şirketler."
+  },
+  "taxi": {
+   "title": "Taksi",
+   "hint": "Fiyat — binmeden önce",
+   "text": "Havalimanında taksi var; yolculuk ücreti binmeden önce şoförle kararlaştırılır."
+  },
+  "terminals": {
+   "title": "Terminaller",
+   "hint": "İki terminal",
+   "text": "Havalimanında iki yolcu terminali var. ATM'ler ve döviz büroları bulunur."
+  },
+  "storage": {
+   "title": "Emanet",
+   "hint": "Havalimanında var",
+   "text": "Havalimanında bagaj emaneti var. Ücreti kaynaklarda belirtilmiyor."
+  }
+ }
+}

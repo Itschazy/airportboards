@@ -1,0 +1,41 @@
+{
+ "iata": "KHV",
+ "about": "The airport is open round the clock; scheduled and charter flights serve more than 40 destinations, including Asia-Pacific countries. Main ground handling operator: JSC Khabarovsk Airport. Passengers are served by two terminals: domestic and international.",
+ "blocks": {
+  "transport": {
+   "title": "Getting there",
+   "hint": "Trolleybus 1, bus 35",
+   "text": "Trolleybuses: No. 1 from Komsomolskaya Square, No. 2 and No. 3 on a loop via the railway station. Buses: No. 35 from Polyarnaya, No. 18 from Yuzhny microdistrict. Minibus taxi No. 180 Rechnoy Vokzal – Matveevka village."
+  },
+  "terminals": {
+   "title": "Terminals",
+   "hint": "Separate domestic and international",
+   "text": "Two terminals: domestic and international, each with 3 floors. The new domestic terminal opened in 2019. Floor plans are published on the website."
+  },
+  "lounges": {
+   "title": "Lounges",
+   "hint": "Domestic, Level 3, 4,000 ₽",
+   "text": "Two business lounges on Level 3 of the domestic terminal, airside. Amur is open round the clock. Shantary, to the right of the security exit, is open round the clock for holders of bank programmes (Every Lounge, Golden Key, Rus Priority, etc.). Price for everyone: 4,000 ₽, after 4 hours 1,100 ₽ per hour."
+  },
+  "storage": {
+   "title": "Left luggage",
+   "hint": "Domestic, Level 1, left side",
+   "text": "Automated left luggage in the domestic terminal, Level 1, left side. Storage for up to 30 days. Money, documents, animals, weapons and hazardous substances are not accepted."
+  },
+  "sleep": {
+   "title": "Where to sleep",
+   "hint": "Mishka hotel from 1 hour",
+   "text": "Mishka transit hotel at the airport: terminal B, Level 2, rooms paid by the hour from 1 hour. Next to the airport is the Aeropolis hotel, 30 Matveevskoe Shosse, rooms from 1,200 to 6,000 ₽."
+  },
+  "kids": {
+   "title": "With children",
+   "hint": "Level 2, 24/7, free",
+   "text": "Mother and child room on Level 2 in the landside area. Open round the clock, free of charge. For children under 7, disabled children under 14, and women in the second half of pregnancy. Departing passengers need a boarding pass."
+  },
+  "parking": {
+   "title": "Parking",
+   "hint": "15 min free",
+   "text": "Short-stay P2 opposite the domestic terminal: up to 15 min free, up to 30 min 150 ₽, up to 60 min 300 ₽, up to 24 hours 500 ₽. Long-stay P1 opposite the Dalaeronavigatsiya building: 500 ₽/day for up to 4 days, from 5 days 350 ₽. There is a free car park with no time limit."
+  }
+ }
+}

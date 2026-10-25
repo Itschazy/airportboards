@@ -1,0 +1,31 @@
+{
+ "iata": "ULV",
+ "about": "N. M. Karamzin adını taşıyan Ulyanovsk (Baratayevka) Uluslararası Havalimanı, adres: Aviatsionnaya Caddesi, 20. İşletmeci Aeroport Ulyanovsk OAO. Yenilenen terminal binası 2013'te hizmete girdi, kapasitesi saatte 240 yolcu.",
+ "blocks": {
+  "terminals": {
+   "title": "Terminal",
+   "hint": "Tek terminal binası",
+   "text": "İç ve dış hat uçuşları için tek terminal kompleksi. Uçuş bilgi ekranı ve danışma kontuarı Kat 1'de. Pasaport kontrolü, güvenlik kontrolü ve biniş Kat 2'deki steril alandan. İç hat check-in'i kalkıştan 2 saat önce açılır ve 40 dakika önce kapanır; dış hatlarda 3 saat önce açılır."
+  },
+  "lounges": {
+   "title": "Business salonları",
+   "hint": "Kat 1, 24/7, 3000 ₽",
+   "text": "Business salonu terminal binasının sağ kanadında, Kat 1'de, gece gündüz açık. Yetişkin 3000 ₽, uğurlayan veya karşılayan 1500 ₽, 2 yaşından küçük çocuklar ücretsiz, VIP salon 10 000 ₽. Persona Aero, Every.Lounge, OnPass, MileOnAir, Grey Wall, GoldenKey kartlarıyla girilir, süre sınırı 3 saat."
+  },
+  "sleep": {
+   "title": "Nerede uyunur",
+   "hint": "Aeroport oteli",
+   "text": "Aeroport oteli havalimanı alanında, terminal binasının yanında, gece gündüz açık. Rezervasyon: +7 (8422) 587-323, hotel@ulkaero.ru. Fiyatlar yetkiliden öğrenilir. Ödeme nakit veya kartla."
+  },
+  "parking": {
+   "title": "Otopark",
+   "hint": "15 dakika ücretsiz",
+   "text": "Terminalin önünde 150 araçlık ücretli otopark. İlk 15 dakika ücretsiz, 15 dakikadan 3 saate kadar saati 150 ₽, 3 saatten fazlası günlüğü 500 ₽. 60 dakika içinde tekrar girişte ücretsiz süre yok. Ödemeden sonra çıkış için 30 dakika."
+  },
+  "wifi": {
+   "title": "Wi‑Fi",
+   "hint": "Ücretsiz, 50 Mbit/sn'ye kadar",
+   "text": "Tüm terminal binasında trafik sınırı olmayan ücretsiz Wi‑Fi. Hız 50 Mbit/sn'ye kadar."
+  }
+ }
+}

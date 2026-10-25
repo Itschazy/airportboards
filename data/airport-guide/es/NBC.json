@@ -1,0 +1,46 @@
+{
+ "iata": "NBC",
+ "about": "Aeropuerto Internacional de Nizhnekamsk (Begishevo) N. V. Lemaev, filial de PAO «KAMAZ». En un radio de 25 km del aeropuerto están Naberezhnye Chelny, Nizhnekamsk, Yelabuga y Almetyevsk. Una sola pista, más de 700 mil pasajeros al año.",
+ "blocks": {
+  "transport": {
+   "title": "Cómo llegar",
+   "hint": "21 km de Nizhnekamsk",
+   "text": "El aeropuerto está a 21 km de Nizhnekamsk y a 24 km de Naberezhnye Chelny. El sitio web del aeropuerto propone llegar en taxi; en la página no figura transporte regular."
+  },
+  "terminals": {
+   "title": "Terminales",
+   "hint": "A internac., B nacional",
+   "text": "La terminal A atiende vuelos internacionales; la terminal B, nacionales. Sala VIP en la terminal A, sala business en la terminal B."
+  },
+  "lounges": {
+   "title": "Salas VIP",
+   "hint": "Terminal B, 24/7",
+   "text": "Sala business en la terminal B y sala VIP en la terminal A, ambas abiertas día y noche. Admiten gratis a la clase business de «Aeroflot» y «Nordwind» y a los titulares de Every.Lounge, MILEONAIR, GoldenKey, UNIPASS, GreyWall Pass, Dream Folks y otros programas. Una visita única puede comprarla un pasajero con cualquier billete; la atención empieza 2 horas antes de la salida."
+  },
+  "storage": {
+   "title": "Consigna",
+   "hint": "Terminal B, 24/7",
+   "text": "Consigna en el nivel 1 de la terminal B, día y noche. El primer día, 400 ₽ (hasta las 23:59 del día de entrega); después, 200 ₽ por día. Un bulto, hasta 30 kg. Los objetos se pueden dejar a través de la estación de embalaje Pack&Fly o del mostrador de información."
+  },
+  "sleep": {
+   "title": "Dónde dormir",
+   "hint": "Hailey, 26 habitaciones",
+   "text": "Hotel Hailey Airport Hotel Begishevo, a poca distancia a pie del aeropuerto. 26 habitaciones con 45 plazas, desayunos tempranos, Wi‑Fi. Reservas: hotel-zakaz@nbc.aero, 8 (8552) 79-67-80."
+  },
+  "kids": {
+   "title": "Con niños",
+   "hint": "Nivel 2, gratis",
+   "text": "Salas madre e hijo en el nivel 2 de las terminales A y B. Para pasajeros que salen con niños menores de 7 años y niños con discapacidad menores de 14 años, 4 horas antes de la salida. Gratis; se necesitan pasaporte y billete. Inscripción en la oficina de información o en el 8-800-200-18-19."
+  },
+  "parking": {
+   "title": "Aparcamiento",
+   "hint": "20 min gratis",
+   "text": "Aparcamiento de pago frente a las terminales A y B, de 150 plazas: 20 minutos gratis, después 200 ₽ por hora hasta 3 horas; más tiempo, 700 ₽ por día. En una nueva entrada dentro de 30 minutos no hay tiempo gratuito. Antes de la entrada al recinto hay un aparcamiento gratuito de 410 plazas."
+  },
+  "wifi": {
+   "title": "Wi‑Fi",
+   "hint": "Red Begishevo free",
+   "text": "Red Begishevo free en la terminal B; en el hotel, red HOTEL. En el navegador, pulse «Obtener acceso» e introduzca el número de teléfono y el código del SMS."
+  }
+ }
+}

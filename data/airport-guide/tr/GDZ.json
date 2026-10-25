@@ -1,0 +1,31 @@
+{
+ "iata": "GDZ",
+ "about": "Havalimanı işletmecisi Aeroport Gelendzhik OOO. Fuksas bürosunun projesiyle inşa edilen 16,7 bin m²'lik yeni terminal 2022'de açıldı, kapasitesi saatte 891 yolcu. Uçuşlar Rusya iç hatlarında yapılır.",
+ "blocks": {
+  "transport": {
+   "title": "Nasıl gidilir",
+   "hint": "5 numaralı otobüs",
+   "text": "5 numaralı otobüs: mkr Tolstiy Mys — mkr Tonkiy Mys. Durak terminal çıkışının sağında, ikinci şeritte. Resmî taksi Avtoekspress, geliş alanı çıkışının karşısındaki birinci şeride yanaşır. Taksi için adres: Solntsedarskaya Caddesi, 10."
+  },
+  "lounges": {
+   "title": "Business salonları",
+   "hint": "Kat 2",
+   "text": "Business salonu terminal binasında Kat 2'de. Öncelik business sınıfı yolcularında ve havayolu sadakat kartı sahiplerinde; ekonomi sınıfı yer olursa kabul edilir. Ayrı check-in kontuarı ve uçağa transfer var. Konforlu bekleme salonu AURA lounge: 3 saate kadar, 2 yaşından küçük çocuklar ücretsiz, ONPASS ile giriş."
+  },
+  "storage": {
+   "title": "Emanet",
+   "hint": "Kat 1, 200 ₽'den",
+   "text": "Otomatik emanet dolapları Kat 1'de, check-in kontuarlarının solunda, havalimanının çalışma saatlerinde. Küçük dolap 2 saati 200 ₽'den günlüğü 800 ₽'ye kadar, orta 300–900 ₽, büyük 400–1000 ₽. Ücret, ödeme makinesinde nakit veya kartla ödenir; barkodlu fiş dolabı açar."
+  },
+  "kids": {
+   "title": "Çocukla",
+   "hint": "Kat 1, ücretsiz",
+   "text": "Anne-bebek odası Kat 1'de, terminalin sağ kanadında. Ücretsiz, 3 saate kadar. 7 yaşından küçük çocukla, 14 yaşından küçük engelli çocukla ve gebeliğin ikinci yarısındaki kadınlar kabul edilir. Revirde muayene, bilet veya biniş kartı, pasaport ve çocuğun doğum belgesi gerekir."
+  },
+  "parking": {
+   "title": "Otopark",
+   "hint": "15 dakika ücretsiz",
+   "text": "250 araçlık. İlk 15 dakika ücretsiz, sonra her saat 300 ₽, 3 saatin üzerinde günlüğü 900 ₽. İkinci şeritte park saati 1000 ₽, VIP otopark saati 2000 ₽. Bir saat içinde tekrar girişte ücretsiz 15 dakika yoktur."
+  }
+ }
+}

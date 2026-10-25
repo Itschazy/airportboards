@@ -1,0 +1,20 @@
+{
+  "iata": "EYK",
+  "blocks": {
+    "lounges": {
+      "title": "Sale business",
+      "hint": "2200 ₽ all’ora",
+      "text": "Sala comfort per passeggeri in partenza, in transito e in arrivo. 2200 ₽ a persona all’ora, con check-in dedicato 3500 ₽. Check-in rapido e controlli senza coda 1700 ₽."
+    },
+    "storage": {
+      "title": "Deposito bagagli",
+      "hint": "380 ₽ al giorno",
+      "text": "Deposito bagagli: 380 ₽ a collo al giorno (listino dal 01.10.2026)."
+    },
+    "kids": {
+      "title": "Con bambini",
+      "hint": "Livello 1, gratis",
+      "text": "Sala madre e bambino al livello 1 del terminal. Per passeggeri con bambini sotto i 14 anni e donne nella seconda metà della gravidanza. Gratis. Informazioni: (34670) 62-222."
+    }
+  }
+}

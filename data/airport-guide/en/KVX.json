@@ -1,0 +1,20 @@
+{
+ "iata": "KVX",
+ "blocks": {
+  "lounges": {
+   "title": "Business lounge",
+   "hint": "Level 1, 2,500 ₽",
+   "text": "Business lounge on Level 1, after pre-flight security. A stay of up to 3 hours costs 2,500 ₽. Access via ON PASS, Grey Wall Pass, PersonaAero, Dragon Pass and Every Lounge. Inside: Wi‑Fi, snacks and drinks."
+  },
+  "kids": {
+   "title": "With children",
+   "hint": "Level 2, 24/7, free",
+   "text": "Mother and child room on Level 2, to the left of the arrivals hall. Open round the clock and free, for no longer than 24 hours. Admits one adult with children under 7, with children with disabilities under 14, and women in the second half of pregnancy. Cots and bed linen are provided."
+  },
+  "parking": {
+   "title": "Parking",
+   "hint": "P3 free",
+   "text": "Those meeting passengers are better off waiting at the free car park P3, and when the passenger comes out, driving onto the station forecourt P1 and leaving within 15 minutes. For long stays there is the paid P2. Parking closer than 30 m to the terminal is prohibited; violations are recorded automatically."
+  }
+ }
+}

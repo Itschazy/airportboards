@@ -1,0 +1,31 @@
+{
+ "iata": "UUD",
+ "about": "Baïkal : aéroport international d'Oulan-Oude, en service depuis 1926, près du lac Baïkal. Piste de 3000 m de long.",
+ "blocks": {
+  "transport": {
+   "title": "Comment s'y rendre",
+   "hint": "Bus 10, 55, 77",
+   "text": "Les bus urbains n° 10, 55 et 77 passent par le centre (arrêt « Plochtchad Sovetov ») jusqu'à la place de l'aérogare. Début du service en semaine à 6:15, le week-end à 7:00, intervalle 7–10 minutes ; le trajet sur le n° 55 coûte 40 ₽. En voiture depuis le centre, environ 20 minutes."
+  },
+  "storage": {
+   "title": "Consigne à bagages",
+   "hint": "Niveau 1, 270 ₽ par jour",
+   "text": "Consigne dans l'aérogare des lignes intérieures, au niveau 1, de 6:00 à 20:00. Un bagage 270 ₽ par jour calendaire, un bagage de plus de 203 cm pour la somme des trois dimensions 550 ₽."
+  },
+  "kids": {
+   "title": "Avec un enfant",
+   "hint": "Niveau 2, gratuit, 24/7",
+   "text": "Salle mère-enfant au deuxième niveau, dans l'aile droite du terminal, gratuite et ouverte jour et nuit, jusqu'à 3 heures. Pour les enfants de moins de 7 ans avec un adulte, les enfants handicapés de moins de 14 ans, les familles nombreuses munies de leur carte et les femmes dans la seconde moitié de la grossesse."
+  },
+  "parking": {
+   "title": "Parking",
+   "hint": "15 min gratuites",
+   "text": "Courte durée P1 près du terminal : jusqu'à 15 minutes gratuit, 16–60 minutes 500 ₽, deuxième heure 300 ₽, troisième et quatrième 200 ₽ chacune, à partir de la 241e minute 1200 ₽, 24 heures maximum. Longue durée : jusqu'à 3 jours 800 ₽ par jour, du 4e au 6e 500 ₽."
+  },
+  "wifi": {
+   "title": "Wi‑Fi",
+   "hint": "Réseau FreeAirportBaikalRT",
+   "text": "Wi‑Fi gratuit : réseau FreeAirportBaikalRT, connexion par numéro de téléphone avec un code reçu par SMS."
+  }
+ }
+}

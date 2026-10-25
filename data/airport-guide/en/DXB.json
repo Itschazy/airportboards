@@ -1,0 +1,20 @@
+{
+ "iata": "DXB",
+ "blocks": {
+  "transport": {
+   "title": "Getting there",
+   "hint": "Metro, Red Line",
+   "text": "The Dubai Metro Red Line runs from terminals 1 and 3. Hours: Mon–Thu and Sat from 5:00 to midnight, Fri from 5:00 to 1:00, Sun from 8:00 to midnight; on holidays sometimes longer. Tickets and Nol cards are sold at ticket offices and machines in terminals 1 and 3. No more than two pieces of baggage, including hand luggage, are allowed on the metro."
+  },
+  "taxi": {
+   "title": "Taxi",
+   "hint": "From 25 AED, round the clock",
+   "text": "Dubai Taxi Company taxis are available round the clock at the ranks at each terminal, flag fall from 25 AED plus a distance charge. Uber, Careem and Bolt also operate; follow the signs to the pick-up point."
+  },
+  "storage": {
+   "title": "Left luggage",
+   "hint": "Terminals 1–3, from 35 AED",
+   "text": "dnata left luggage is open round the clock in terminals 1, 2 and 3. For 12 hours or less: in terminals 1 and 2 a standard item (up to 21×24×11 inches) is 40 AED, a large or valuable item 50 AED; in terminal 3 — 35 and 40 AED. In terminal 1 left luggage is on the arrivals level, next to the Boots pharmacy."
+  }
+ }
+}

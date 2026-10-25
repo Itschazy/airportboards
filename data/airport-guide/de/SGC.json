@@ -1,0 +1,26 @@
+{
+ "iata": "SGC",
+ "about": "Internationaler Flughafen Surgut, Betreiber AO „Aeroport Surgut“. Das Streckennetz umfasst mehr als 30 Ziele. Im Terminal gibt es Business-Lounges, VIP-Lounges und Fluggastbrücken.",
+ "blocks": {
+  "transport": {
+   "title": "Anreise",
+   "hint": "Busse 16 und 107",
+   "text": "Zum Flughafen fahren die Stadtlinien Nr. 16 und Nr. 107. Linienpläne und Fahrpläne sind auf der Seite „Kak dobratsja“ (Anreise) veröffentlicht."
+  },
+  "lounges": {
+   "title": "Business-Lounges",
+   "hint": "ON PASS, 3500 ₽",
+   "text": "Business-Lounge in der Ankunftshalle, Ebene 2 (mit dem Aufzug), rund um die Uhr; Business Class und Inhaber von Elite-Karten der Fluggesellschaften, Economy Class gegen Gebühr, internationale Flüge werden nicht bedient. Lounge ON PASS: Ebene 2 im Sicherheitsbereich, nur Inlandsflüge, rund um die Uhr, Erwachsene 3500 ₽, Kinder von 2–12 Jahren 2500 ₽."
+  },
+  "storage": {
+   "title": "Gepäckaufbewahrung",
+   "hint": "24/7, 400 ₽ pro Tag",
+   "text": "Rund um die Uhr geöffnet. Der erste Tag 400 ₽ (bis 00:00), danach 200 ₽ pro Tag, angefangene Tage zählen als volle. Gewicht eines Gepäckstücks bis 30 kg."
+  },
+  "parking": {
+   "title": "Parken",
+   "hint": "20 Min. kostenlos",
+   "text": "Auf dem Vorplatz die ersten 20 Minuten kostenlos. Fläche für Langzeitparken mit 50 Plätzen direkt hinter dem Haltestellenpavillon: 750 ₽ pro Tag. Bezahlung an den Kassen des Terminals und an Automaten am Haupteingang und in der Ankunftshalle."
+  }
+ }
+}

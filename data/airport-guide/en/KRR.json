@@ -1,0 +1,41 @@
+{
+ "iata": "KRR",
+ "about": "Two terminals: domestic and international. The terminal complex covers 16,448 sq. m. The 3,000 m runway opened in 2017.",
+ "blocks": {
+  "transport": {
+   "title": "Getting there",
+   "hint": "Trolleybus 7",
+   "text": "The stop is on the station forecourt. Trolleybus No. 7 goes to the bus station and Krasnodar-1 railway station along Stavropolskaya St. Minibus No. 30 goes to Kooperativny Rynok. The official taxi desk is in Terminal 1, baggage claim area."
+  },
+  "terminals": {
+   "title": "Terminals",
+   "hint": "T1 domestic, T2 international",
+   "text": "Terminal 1 serves domestic flights, Terminal 2 international. Check-in counters 1–19; check-in closes 40 minutes before departure."
+  },
+  "lounges": {
+   "title": "Lounges",
+   "hint": "T1 Level 2, T2 Level 1",
+   "text": "Domestic business lounge: Terminal 1, Level 2, after security checks. International business lounge: Terminal 2, Level 1, after security checks. Admits members of ONPASS, Grey Wall Pass, GoldenKey, RusPriority and other programmes, others for a fee. Stay up to 3 hours."
+  },
+  "storage": {
+   "title": "Left luggage",
+   "hint": "24/7, 400 ₽ per day",
+   "text": "On the station forecourt, open round the clock. 400 ₽ per item for the first 24 hours, 200 ₽ for each further 24 hours. One item may weigh up to 30 kg."
+  },
+  "kids": {
+   "title": "With children",
+   "hint": "Т1, Level 1, free",
+   "text": "Mother and child room: Terminal 1, Level 1, domestic check-in hall. For passengers with children under 7, children with disabilities under 14 and women in the second half of pregnancy. No charge. Passport and boarding pass or ticket required."
+  },
+  "parking": {
+   "title": "Parking",
+   "hint": "15 min free, 400₽/h",
+   "text": "Station forecourt: first 15 minutes free, then 400 ₽ per hour. Additional hourly car park to the right of the forecourt: 250 ₽ per hour. Daily car park 900 ₽ per day. The alternative car park is free."
+  },
+  "wifi": {
+   "title": "Wi‑Fi",
+   "hint": "Airport_Free network",
+   "text": "Free Airport_Free network throughout the terminal complex, in the VIP terminal and the business lounge. Login only with a SIM card from a Russian operator."
+  }
+ }
+}

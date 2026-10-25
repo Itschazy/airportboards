@@ -1,0 +1,30 @@
+{
+  "iata": "IST",
+  "blocks": {
+    "transport": {
+      "title": "Come arrivare",
+      "hint": "Metro M11, bus Havaist",
+      "text": "La metro M11 collega l’aeroporto a Gayrettepe, e dal 20 giugno 2026 la linea è prolungata fino a Halkalı. Gli autobus Havaist partono dal piano trasporti −2 per molti quartieri della città, tra cui Beşiktaş, Kadıköy, Aksaray, Sultanahmet (Çatladıkapı) e l’autostazione di Esenler. Autobus urbani İETT: 5 linee per il centro."
+    },
+    "sleep": {
+      "title": "Dove dormire",
+      "hint": "YOTEL prima e dopo i controlli",
+      "text": "Hotel YOTEL direttamente nel terminal: 171 cabine nell’area pubblica (di fronte ai banchi check-in P) e 280 nella zona partenze (YOTELAIR, zona A–B); la seconda è solo per chi parte con voli internazionali. Prenotazione minima di 4 ore. Le Sleepcabins YOTELAIR a ore sono di fronte all’ingresso della iGA Lounge, un piano più su, solo senza prenotazione anticipata."
+    },
+    "kids": {
+      "title": "Con bambini",
+      "hint": "Aree gioco 700 m²",
+      "text": "C’è una sala madre e bambino, aree gioco a cinque temi per una superficie totale di 700 m², passaggi gratuiti in buggy per passeggeri con bambini sotto i 2 anni, posti auto riservati alle famiglie e varchi di controllo per famiglie."
+    },
+    "parking": {
+      "title": "Parcheggio",
+      "hint": "Multipiano, sotto un unico tetto",
+      "text": "Parcheggio multipiano sotto un unico tetto, videosorveglianza e vigilanza giorno e notte. Dal 1° gennaio 2024 senza abbonamento si paga a giornata; il costo si calcola con il calcolatore sul sito dell’aeroporto. Pagando tramite l’app dell’aeroporto sconto del 10% (esclusi gli abbonamenti da 15 e 30 giorni). Il servizio di parcheggio con valet è all’ingresso del terminal CIP."
+    },
+    "wifi": {
+      "title": "Wi‑Fi",
+      "hint": "Illimitato, gratuito",
+      "text": "Internet gratuito e illimitato: rete Wi‑Fi iGA, accesso con il numero di telefono e la password via SMS o con il codice d’accesso rilasciato dai chioschi nel terminal dopo la scansione del passaporto."
+    }
+  }
+}

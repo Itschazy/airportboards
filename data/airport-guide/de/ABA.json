@@ -1,0 +1,26 @@
+{
+ "iata": "ABA",
+ "about": "Internationaler Flughafen Abakan, Adresse: Abakan, Prospekt Druschby Narodow 59. Ab dem 25. Oktober 2026 ist das Terminal von 04:30 bis 22:00 geöffnet. Auskunft (3902) 202-489.",
+ "blocks": {
+  "transport": {
+   "title": "Anreise",
+   "hint": "Bus 106, O-Bus 3–5",
+   "text": "Bus Nr. 106, Oberleitungsbusse Nr. 3, Nr. 4 und Nr. 5. Taxi: „Maxim“ +7 (3902) 28-28-28, „Choroscheje“ +7 (3902) 30-07-00, „Troika“ +7 (3902) 23-33-33."
+  },
+  "lounges": {
+   "title": "Business-Lounges",
+   "hint": "Rechter Flügel, 05–22",
+   "text": "Komfort-Lounge im rechten Flügel des Terminals, 05:00–22:00, bis zu 3 Stunden. Economy Class: Erwachsene 5000 ₽, Kinder unter 12 Jahren 2500 ₽, unter 2 Jahren kostenlos. Business Class und Lounge-Zugangsprogramme: 2700 ₽ für Erwachsene. Telefon +7 913 449-38-26."
+  },
+  "kids": {
+   "title": "Mit Kind",
+   "hint": "Linker Flügel, kostenlos",
+   "text": "Mutter-Kind-Raum im linken Flügel des Terminals, daneben die Sanitätsstation. Schlafraum, Spielzimmer, Küche, Wickeltisch. Für Kinder unter 7 Jahren, Pass und Bordkarte erforderlich. Kostenlos. Telefon (3902) 202-551."
+  },
+  "parking": {
+   "title": "Parken",
+   "hint": "Vorübergehend geschlossen",
+   "text": "Der kostenpflichtige Langzeitparkplatz 50 m rechts vom Terminal ist vorübergehend außer Betrieb."
+  }
+ }
+}

@@ -1,0 +1,25 @@
+{
+ "iata": "UUA",
+ "blocks": {
+  "lounges": {
+   "title": "Business salonları",
+   "hint": "VIP: gidiş 4600 ₽",
+   "text": "Kendi check-in kontuarı ve barı olan VIP salon. Gidişte hizmet 4600 ₽, gelişte 3500 ₽. Yetkili: +7 (85594) 6-35-16, gece gündüz."
+  },
+  "sleep": {
+   "title": "Nerede uyunur",
+   "hint": "Otel, 1900 ₽",
+   "text": "Havalimanı alanında otel. Tek veya iki kişilik junior suitte yatak günlüğü 1900 ₽. Giriş 16:00'da, çıkış 12:00'de. 3 yaşından küçük çocuklar ücretsiz."
+  },
+  "kids": {
+   "title": "Çocukla",
+   "hint": "Gece gündüz",
+   "text": "Terminal binasındaki anne-bebek odası gece gündüz açık."
+  },
+  "parking": {
+   "title": "Otopark",
+   "hint": "Ücretli, 24/7",
+   "text": "Ücretli korumalı otopark gece gündüz açık."
+  }
+ }
+}

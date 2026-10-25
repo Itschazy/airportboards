@@ -1,0 +1,41 @@
+{
+  "iata": "IKT",
+  "about": "L’aeroporto si trova a Irkutsk in ul. Shiryamova, 13, gestore AO «Mezhdunarodny Aeroport Irkutsk». Voli diretti lo collegano a 50 città della Russia, la rete internazionale comprende 11 destinazioni. Il traffico passeggeri supera 3,8 milioni di persone.",
+  "blocks": {
+    "transport": {
+      "title": "Come arrivare",
+      "hint": "Bus 80, 90, 480",
+      "text": "Autobus 80, 90, 406, 480, 42, 43. Filobus 4 e 6. Taxi collettivi (marshrutka) 99, 20, 45, 61."
+    },
+    "terminals": {
+      "title": "Terminal",
+      "hint": "Т1 internaz., Т2 partenze",
+      "text": "Il Terminal 1 serve i voli internazionali. Terminal 2: partenze dei voli nazionali. Terminal 3: arrivi dei voli nazionali."
+    },
+    "lounges": {
+      "title": "Sale business",
+      "hint": "Sala business Т2, 4250 ₽",
+      "text": "Nel terminal 2 ci sono una sala business, una sala comfort e le sale VIP-1, VIP-2, VIP-3. La sala business e la sala comfort sono accessibili da 2 ore prima della partenza se ci sono posti, 4250 ₽ a passeggero. Nel terminal 1 sala comfort accessibile da 3 ore prima della partenza, 4473 ₽. Le carte Dragon Pass non sono accettate."
+    },
+    "storage": {
+      "title": "Deposito bagagli",
+      "hint": "610 ₽ al giorno",
+      "text": "Nel terminal nazionale al livello 1, pagamento in contanti o con carta. 610 ₽ a collo al giorno, i bagagli oltre 40×40×50 cm si pagano in base al numero di posti occupati. Nel terminal internazionale il deposito è al livello 2 e funziona solo in caso di ritardo dei voli. Telefono +7 (3952) 266-194."
+    },
+    "sleep": {
+      "title": "Dove dormire",
+      "hint": "Hotel a 100 m",
+      "text": "Hotel dell’aeroporto «Vozdushnaya gavan», ul. Shiryamova, 6, a 100 metri dall’aeroporto. 145 camere, check-in giorno e notte, soggiorni brevi. Nell’aerostazione dei voli nazionali c’è un telefono di collegamento diretto con l’hotel."
+    },
+    "kids": {
+      "title": "Con bambini",
+      "hint": "Gratis, 24/7",
+      "text": "Sale madre e bambino nel terminal nazionale (livello 1 VIP) e in quello internazionale (livello 2), giorno e notte, gratuite. Bambini sotto i 7 anni: fino a 3–4 ore prima della partenza, 1 ora dopo l’arrivo. Il bambino può essere accompagnato da un solo adulto. Rivolgersi all’ufficio informazioni."
+    },
+    "parking": {
+      "title": "Parcheggio",
+      "hint": "10 min gratis",
+      "text": "I primi 10 minuti gratis. 11–20 minuti 100 ₽, fino a 1 ora 350 ₽, da 2 h 41 min a 24 ore 1200 ₽, ogni giorno successivo 1200 ₽. Ogni terminal ha il proprio parcheggio. Zona di salita e discesa passeggeri: 10 minuti gratis, oltre si paga una penale di 2000 ₽ all’ora."
+    }
+  }
+}

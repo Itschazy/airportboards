@@ -1,0 +1,26 @@
+{
+ "iata": "ARH",
+ "about": "Arkhangelsk International Airport named after F. A. Abramov (Talagi). Operator: JSC Arkhangelsk Airport. The first flight on the new runway near the village of Talagi was received on 5 February 1963.",
+ "blocks": {
+  "transport": {
+   "title": "Getting there",
+   "hint": "Bus 12 to the centre",
+   "text": "Bus No. 12 runs to Morskoy-Rechnoy Vokzal via Gagarina St, Voskresenskaya St and Troitsky Ave. Bus No. 153 runs to Severodvinsk, to Truda Ave: from the airport at 5:50, 9:10, 14:20 and 17:30. Check the timetable with the carrier."
+  },
+  "lounges": {
+   "title": "Lounges",
+   "hint": "Pavilion 3, Level 2",
+   "text": "Domestic business lounge on Level 2 of Pavilion No. 3. Entry 2,928 ₽, children 2–12 years 1,464 ₽, under 2 free. Free for business class and Aeroflot Bonus Gold and Platinum holders. Mileonair, Every.Lounge, Golden Key and other cards give access to SKY LOUNGE on Level 1 of Pavilion No. 3 after security, 04:00–21:30, up to 2 hours."
+  },
+  "storage": {
+   "title": "Left luggage",
+   "hint": "Pavilion 3, 24/7",
+   "text": "Left luggage in Pavilion No. 3, open round the clock. An item up to 30 kg and shorter than 1 m costs 250 ₽ per day. Documents, money, valuables and perishable food are not accepted."
+  },
+  "parking": {
+   "title": "Parking",
+   "hint": "30 min free at P2",
+   "text": "Short-stay P2: 30 minutes free, then 150 ₽ per hour, over 4 hours 800 ₽ per day. Long-stay P1: 400 ₽ per day from the first minute. Free P4 with 70 spaces 200 m from the terminal, no time limit. Lost parking ticket: 2,000 ₽."
+  }
+ }
+}

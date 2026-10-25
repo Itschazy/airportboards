@@ -1,0 +1,41 @@
+{
+ "iata": "UFA",
+ "about": "Exploitant : SA « Aéroport international d'Oufa » ; l'aérodrome dispose de deux pistes. Le réseau compte 65 destinations, dont 22 internationales. En 2024, l'aéroport a accueilli 4 753 742 passagers.",
+ "blocks": {
+  "transport": {
+   "title": "Comment s'y rendre",
+   "hint": "Bus 101, 110, 110С",
+   "text": "Bus « Bachavtotrans » n° 101, 110 et 110С. Horaires sur bashauto.ru et au +7 (347) 297-97-92. Les taxis « Yandex Go » se commandent aux comptoirs de la zone de livraison des bagages et dans le hall des arrivées du terminal des lignes intérieures, paiement en espèces ou par carte."
+  },
+  "terminals": {
+   "title": "Terminaux",
+   "hint": "Т1 intérieur, Т2 international",
+   "text": "Le terminal 1 accueille les vols intérieurs, le terminal 2 les vols internationaux. Parking А2 face au terminal 1, А3 face au terminal 2, à 2 minutes des terminaux."
+  },
+  "lounges": {
+   "title": "Salons",
+   "hint": "« Kouraï » au Т2, 3000 ₽",
+   "text": "« Agidel » : terminal 1, niveau 2, face à la porte n° 2 ; adultes 6000 ₽, enfants de 2 à 12 ans 3000 ₽, au-delà de 3 heures 2000 ₽ de l'heure. « Iremel Lounge » : pour les membres d'On Pass, Mir Pass, Every lounge, Grey wall pass, Persona Aero, RusPriority, pour les autres 3000 ₽. « Kouraï » : zone de départ du terminal 2, gratuit pour les passagers de classe affaires d'Aeroflot, Flydubai, Utair et les titulaires de cartes des programmes, pour les autres 3000 ₽. Entrée gratuite pour les enfants de moins de 2 ans."
+  },
+  "storage": {
+   "title": "Consigne à bagages",
+   "hint": "Pack & Fly, 24/7",
+   "text": "Ouverte jour et nuit, opérateur Pack & Fly, téléphone +7 (960) 803-80-67. Un bagage ne dépasse pas 203 cm pour la somme des trois dimensions ni 32 kg."
+  },
+  "kids": {
+   "title": "Avec un enfant",
+   "hint": "Т1, niveau 1, 24/7",
+   "text": "Salle mère-enfant dans le terminal 1, niveau 1, face aux comptoirs d'enregistrement, jour et nuit. Enfants de moins de 7 ans (enfants handicapés : moins de 14 ans) avec un adulte. Jusqu'à 12 heures avant le départ, jusqu'à 1 heure après l'arrivée. Passeport, acte de naissance, billets et certificat du poste de santé du terminal des lignes intérieures requis."
+  },
+  "parking": {
+   "title": "Parking",
+   "hint": "15 min gratuites",
+   "text": "Zone de dépose et de prise en charge А1 : 15 minutes gratuites, ensuite 500 ₽ de l'heure, stationnement interdit. Parking d'attente С5 (10 minutes des terminaux) : 3 heures gratuites, ensuite 150 ₽ de l'heure, la journée 600 ₽. Parkings А2 et А3 près des terminaux : première heure 300 ₽, ensuite 100 ₽ de l'heure, la journée 700 ₽."
+  },
+  "wifi": {
+   "title": "Wi‑Fi",
+   "hint": "Airport.FreeWiFi.Ufanet",
+   "text": "Gratuit, sans limite de temps ni de trafic. Réseaux Airport.FreeWiFi.Ufanet et Airport.FreeWiFi.TTK. Connexion par numéro de mobile : saisir le numéro, puis appeler le numéro envoyé."
+  }
+ }
+}

@@ -1,0 +1,30 @@
+{
+ "iata": "GYD",
+ "blocks": {
+  "transport": {
+   "title": "Anreise",
+   "hint": "Aero Express zum Bahnhof, 1,30 AZN",
+   "text": "Die Busse „Aero Express“ fahren von den Terminals 1 und 2 zum Bahnhof Baku (Metro „28 May“) mit Halt an der Suraxanı-Brücke und an der Metro „Koroğlu“. Von 06:00 bis 23:15 alle 20 Minuten, nachts alle 45 Minuten. Fahrpreis 1,30 AZN mit der BAKU CARD, die Karte selbst kostet 2 AZN; eine Karte kann von einer Gruppe genutzt werden."
+  },
+  "lounges": {
+   "title": "Business-Lounges",
+   "hint": "Mehrere Lounges",
+   "text": "Am Flughafen gibt es die Lounges AZAL, Business Class Lounge, Absheron, Salam, Baku Club, Premium und Mugam. AZAL Lounge auf Ebene 1 von Terminal 1: separater Check-in ohne Anstehen für Passagiere der Business und Premium Economy Class mit eigener Vorfahrt."
+  },
+  "kids": {
+   "title": "Mit Kind",
+   "hint": "Terminals 1 und 2",
+   "text": "Mutter-Kind-Räume mit Wickeltisch, kaltem und warmem Wasser: in Terminal 1 auf Ebene 3 und 4, in Terminal 2 auf Ebene 2. Wickeltische gibt es auch in allen Mehrzwecktoiletten."
+  },
+  "parking": {
+   "title": "Parken",
+   "hint": "15 Min. kostenlos, 24/7",
+   "text": "Rund um die Uhr, über 2.000 Plätze: 835 an Terminal 1 und 1166 an Terminal 2. Die ersten 15 Minuten kostenlos, bis 2 Stunden 1 AZN, bis 4 Stunden 2 AZN, bis 12 Stunden 6 AZN, bis 24 Stunden 15 AZN, jeder weitere Tag +15 AZN. Bezahlung bar, mit Karte oder online (Tezöde, AzParkinq, Birbank)."
+  },
+  "wifi": {
+   "title": "Wi‑Fi",
+   "hint": "Netz Baku-Airport-Free-WiFi",
+   "text": "Kostenloses Wi‑Fi im gesamten Terminal, auch in Cafés, Geschäften und Business-Lounges: Netz Baku-Airport-Free-WiFi. In den Abflugbereichen von Terminal 1 gibt es kostenlose Computer mit Internet."
+  }
+ }
+}

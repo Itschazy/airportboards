@@ -1,0 +1,36 @@
+{
+ "iata": "KUF",
+ "about": "Kurumoch: Samara uluslararası havalimanı. Aeroporty Regionov yönetim şirketi tarafından işletilir. 80'den fazla hat, 30'dan fazla Rus ve yabancı havayolu.",
+ "blocks": {
+  "transport": {
+   "title": "Nasıl gidilir",
+   "hint": "222 numaralı otobüs, 1 saat",
+   "text": "222 numaralı şehir otobüsü Samara tren garından kalkar, yolculuk yaklaşık 1 saat. 78 numaralı hat Barboshina Polyana'dan, yaklaşık 1 saat, hafta içi. Şehirlerarası 607 numara havalimanını Samara (tren garı) ve Tolyatti'ye bağlar, 50–80 dakika, 265 ₽. Tolyatti'den 333 ve 652Т numaralı hatlar da çalışır."
+  },
+  "lounges": {
+   "title": "Business salonları",
+   "hint": "Kat 4, 5800 ₽'den",
+   "text": "İç ve dış hatlar salonları Kat 4'te. Business sınıfı yolcuları, havayolu bonus programlarının üyeleri ve ziyaret ücretini ödeyen herkes kabul edilir: 3 saate kadar 5800 ₽, 2–12 yaş çocuk 2900 ₽. ON PASS, Grey Wall, EveryLounge, Persona.Aero, RusPriority, GoldenKey programları için salon iç hatlar gidiş alanında, Kat 3'te."
+  },
+  "storage": {
+   "title": "Emanet",
+   "hint": "Kat 1, saati 250 ₽'den",
+   "text": "Otomatik emanet dolapları Kat 1'de, girişin sağında, bilet gişelerinin yanında. Standart dolap saati 250 ₽ veya günlüğü 550 ₽. Büyük dolap saati 350 ₽ veya günlüğü 900 ₽. Standart dışı bagaj parça başına 1200 ₽."
+  },
+  "kids": {
+   "title": "Çocukla",
+   "hint": "Kat 3, 24/7",
+   "text": "Anne-bebek odası Kat 3'te, gece gündüz açık. 7 yaşından küçük çocuklar, 14 yaşından küçük engelli çocuklar, yalnızca bir yetişkinle kabul edilir. Kat 1'deki revirden belge, pasaport ve bilet gerekir. Kalkıştan önce 12 saate, inişten sonra 6 saate kadar."
+  },
+  "parking": {
+   "title": "Otopark",
+   "hint": "İndirme 15 dakika ücretsiz",
+   "text": "İndirme-bindirme alanında ilk 15 dakika ücretsiz, 16. ila 60. dakika 880 ₽. Kısa süreli P1: bir saate kadar 357 ₽, 2 saate kadar 682 ₽, günlüğü 1391 ₽. Uzun süreli P2: günlüğü 791 ₽. Ekonomi P4: ilk 2 gün 1054 ₽. Tüm otoparklar gece gündüz açık."
+  },
+  "wifi": {
+   "title": "Wi‑Fi",
+   "hint": "Free_KUF ağı",
+   "text": "Terminalin yolcu alanlarında ücretsiz Free_KUF ağı. Giriş cep telefonu numarasıyla, ardından ekrandaki yönergelere göre."
+  }
+ }
+}

@@ -1,0 +1,41 @@
+{
+ "iata": "UFA",
+ "about": "Operator: JSC Ufa International Airport; the airfield has two runways. The route network has 65 destinations, 22 of them international. In 2024 the airport handled 4,753,742 passengers.",
+ "blocks": {
+  "transport": {
+   "title": "Getting there",
+   "hint": "Buses 101, 110, 110С",
+   "text": "Bashavtotrans buses No. 101, 110 and 110С. Timetable at bashauto.ru and by phone +7 (347) 297-97-92. Yandex Go taxis are ordered at desks in the baggage claim area and in the arrivals hall of the domestic terminal, payment in cash or by card."
+  },
+  "terminals": {
+   "title": "Terminals",
+   "hint": "Т1 domestic, Т2 international",
+   "text": "Terminal 1 serves domestic flights, terminal 2 international. Car park А2 is opposite terminal 1, А3 opposite terminal 2, 2 minutes to the terminals."
+  },
+  "lounges": {
+   "title": "Lounges",
+   "hint": "Kurai in Т2, 3,000 ₽",
+   "text": "Agidel: terminal 1, Level 2, opposite gate No. 2; adults 6,000 ₽, children 2–12 years 3,000 ₽, over 3 hours 2,000 ₽ per hour. Iremel Lounge: for members of On Pass, Mir Pass, Every lounge, Grey wall pass, Persona Aero, RusPriority, others 3,000 ₽. Kurai: departure area of terminal 2, free for Aeroflot, Flydubai and Utair business class and programme cardholders, others 3,000 ₽. Children under 2 free."
+  },
+  "storage": {
+   "title": "Left luggage",
+   "hint": "Pack & Fly, 24/7",
+   "text": "Open round the clock, operator Pack & Fly, phone +7 (960) 803-80-67. One item no more than 203 cm (sum of three dimensions) and no heavier than 32 kg."
+  },
+  "kids": {
+   "title": "With children",
+   "hint": "Т1, Level 1, 24/7",
+   "text": "Mother and child room in terminal 1, Level 1, opposite the check-in counters, open round the clock. Children under 7 (with disabilities under 14) with one adult. Up to 12 hours before departure, up to 1 hour after arrival. A passport, birth certificate, tickets and a certificate from the domestic terminal health post are required."
+  },
+  "parking": {
+   "title": "Parking",
+   "hint": "15 min free",
+   "text": "Drop-off and pick-up zone А1: 15 minutes free, then 500 ₽ per hour, parking prohibited. Waiting car park С5 (10 minutes to the terminals): 3 hours free, then 150 ₽ per hour, a day 600 ₽. Car parks А2 and А3 at the terminals: first hour 300 ₽, then 100 ₽ per hour, a day 700 ₽."
+  },
+  "wifi": {
+   "title": "Wi‑Fi",
+   "hint": "Airport.FreeWiFi.Ufanet",
+   "text": "Free, with no time or data limits. Networks Airport.FreeWiFi.Ufanet and Airport.FreeWiFi.TTK. Login with a mobile number: enter the number, then call the number sent to you."
+  }
+ }
+}

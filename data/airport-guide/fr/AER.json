@@ -1,0 +1,46 @@
+{
+ "iata": "AER",
+ "about": "Des bus relient l'aéroport de Sotchi aux districts d'Adler, de Khosta et Central de la ville ainsi qu'à la station de Krasnaïa Poliana. Le complexe aéroportuaire de 65 000 m² a été reconstruit en 2007–2013 ; un terminal VIP fonctionne en plus. Exploitant : SA « Aéroport international de Sotchi » ; en 2024, l'aéroport a accueilli 13,7 millions de passagers.",
+ "blocks": {
+  "lounges": {
+   "title": "Salons",
+   "hint": "Secteurs B et C, niveau 2",
+   "text": "Salon des vols intérieurs dans le secteur B, au niveau 2, près de la porte 21. Prix : 4 800 ₽. Salon des vols internationaux dans le secteur C, au niveau 2. Prix : 4 300 ₽ ; accès avec les cartes Grey Wall, UNIPASS, ONPASS, GoldenKey, Comfort Pass et RusPriority. Salon de confort supérieur dans le secteur B, au niveau 2, près de la porte 21, à 2 650 ₽. Tous les salons sont ouverts jour et nuit, séjour jusqu'à 3 heures, réduction de 50% pour les enfants de moins de 12 ans, entrée gratuite pour les moins de 2 ans."
+  },
+  "storage": {
+   "title": "Consigne à bagages",
+   "hint": "Secteur C, niveau 1, 24/7",
+   "text": "Secteur C, niveau 1, ouverte jour et nuit. Les premières 24 heures coûtent à partir de 600 ₽ par bagage, chaque tranche de 24 heures suivante à partir de 300 ₽. Un bagage pèse au maximum 30 kg, la somme des trois dimensions ne dépasse pas 203 cm. Les affaires non récupérées sous 30 jours sont considérées comme non réclamées. Téléphone 8 (862) 249-78-46."
+  },
+  "sleep": {
+   "title": "Où dormir",
+   "hint": "Capsules, secteur B",
+   "text": "Capsules Aero Hotel dans le secteur B, au niveau 2, ouvertes jour et nuit. À partir de 990 ₽ par passager. La capsule dispose d'une isolation phonique, de la climatisation, de prises et du Wi‑Fi. Réservation sur cellhotel.ru ou par téléphone au +7 (938) 875-18-05."
+  },
+  "kids": {
+   "title": "Mère et enfant",
+   "hint": "Secteur B, niveau 2",
+   "text": "Salle mère-enfant dans le secteur B, au niveau 2, utilisation gratuite. Accès avec des enfants de moins de 7 ans, des enfants handicapés de moins de 14 ans et pour les femmes enceintes dans la seconde moitié de la grossesse. Passeport et carte d'embarquement ou billet requis. Pour les passagers arrivés avec des enfants, la salle est ouverte de 22:00 à 06:00, tant que les transports ne circulent pas. Des espaces à langer se trouvent près des toilettes dans tous les secteurs."
+  },
+  "transport": {
+   "title": "Comment s'y rendre",
+   "hint": "Lastotchka, bus",
+   "text": "La « Lastotchka » et les trains de banlieue partent de la place de la gare ferroviaire : secteur C1, niveau 1. Ils desservent Adler, Sotchi, Rosa Khoutor et le Parc olympique. La place des bus se trouve entre B1 et C1. Pour Adler et le Parc olympique : n° 557, 558 et 535. Pour Sotchi : n° 105 et 105с. Pour Krasnaïa Poliana : n° 105, 105с et 535. Le comptoir des taxis officiels se trouve dans la salle de livraison des bagages, secteurs A et B."
+  },
+  "parking": {
+   "title": "Parking",
+   "hint": "15 minutes gratuites",
+   "text": "Sur la place de l'aérogare (entrées 1–6), les 15 premières minutes sont gratuites, ensuite 400 ₽ de l'heure. Au parking à la journée (entrées 31, 32), les 15 premières minutes sont gratuites, ensuite 300 ₽ de l'heure, et au-delà de 3 heures, 1 500 ₽ par jour. Il se trouve à 100 m avant l'entrée principale, en tournant à droite. Un parking alternatif se situe à environ 400 m du terminal."
+  },
+  "wifi": {
+   "title": "Wi‑Fi",
+   "hint": "Airport_Free",
+   "text": "Le réseau gratuit Airport_Free fonctionne dans tout le terminal, dans le terminal VIP et dans le salon. La connexion n'est possible qu'avec une carte SIM d'un opérateur russe."
+  },
+  "terminals": {
+   "title": "Terminal",
+   "hint": "Secteurs A, B, C",
+   "text": "Un seul terminal, avec les secteurs A, B et C. Des comptoirs d'enregistrement se trouvent dans les trois, mais les comptoirs pour passagers sans bagage seulement dans A et B. Les bagages des vols intérieurs sont livrés dans les secteurs A et B, ceux des vols internationaux dans le secteur C, le tout au niveau 1. L'enregistrement au comptoir ouvre 3 heures avant le départ et ferme 40 minutes avant."
+  }
+ }
+}

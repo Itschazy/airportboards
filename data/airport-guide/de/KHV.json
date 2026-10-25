@@ -1,0 +1,41 @@
+{
+ "iata": "KHV",
+ "about": "Der Flughafen ist rund um die Uhr in Betrieb, Linien- und Charterflüge gehen zu mehr als 40 Zielen, darunter in Länder der Asien-Pazifik-Region. Hauptbetreiber der Bodenabfertigung: AO „Chabarowski aeroport“. Die Passagiere werden in zwei Terminals abgefertigt: für Inlands- und für internationale Flüge.",
+ "blocks": {
+  "transport": {
+   "title": "Anreise",
+   "hint": "O-Bus 1, Bus 35",
+   "text": "Oberleitungsbusse: Nr. 1 ab dem Komsomolskaja-Platz, Nr. 2 und Nr. 3 als Ringlinie über den Bahnhof. Busse: Nr. 35 ab „Poljarnaja“, Nr. 18 aus dem Südlichen Mikrorajon. Sammeltaxi Nr. 180 Flussbahnhof – Dorf Matwejewka."
+  },
+  "terminals": {
+   "title": "Terminals",
+   "hint": "Inland und international getrennt",
+   "text": "Zwei Terminals: für Inlandsflüge und für internationale Flüge, jedes mit 3 Etagen. Das neue Inlandsterminal wurde 2019 eröffnet. Etagenpläne sind auf der Website veröffentlicht."
+  },
+  "lounges": {
+   "title": "Business-Lounges",
+   "hint": "Ebene 3 Inland, 4000 ₽",
+   "text": "Zwei Business-Lounges auf Ebene 3 des Inlandsterminals, im Sicherheitsbereich. „Amur“ ist rund um die Uhr geöffnet. „Schantary“ rechts vom Ausgang der Sicherheitskontrolle, rund um die Uhr für Inhaber von Bankprogrammen (Every Lounge, Golden Key, Rus Priority u. a.). Preis für alle: 4000 ₽, nach 4 Stunden 1100 ₽ pro Stunde."
+  },
+  "storage": {
+   "title": "Gepäckaufbewahrung",
+   "hint": "Inland, Ebene 1 links",
+   "text": "Automatische Gepäckaufbewahrung im Inlandsterminal, Ebene 1, linke Seite. Aufbewahrung bis zu 30 Tage. Nicht angenommen werden Geld, Dokumente, Tiere, Waffen und gefährliche Stoffe."
+  },
+  "sleep": {
+   "title": "Schlafen",
+   "hint": "Hotel „Mischka“ ab 1 Stunde",
+   "text": "Transithotel „Mischka“ im Flughafen: Terminal B, Ebene 2, Zimmer mit stundenweiser Bezahlung ab 1 Stunde. In der Nähe des Flughafens das Hotel „Aeropolis“, Matwejewskoje Schosse 30, Zimmer von 1200 bis 6000 ₽."
+  },
+  "kids": {
+   "title": "Mit Kind",
+   "hint": "Ebene 2, 24/7, kostenlos",
+   "text": "Mutter-Kind-Raum auf Ebene 2 im öffentlichen Bereich. Rund um die Uhr geöffnet, kostenlos. Für Kinder unter 7 Jahren, Kinder mit Behinderung unter 14 Jahren, Schwangere in der zweiten Schwangerschaftshälfte. Abfliegende brauchen eine Bordkarte."
+  },
+  "parking": {
+   "title": "Parken",
+   "hint": "15 Min. kostenlos",
+   "text": "Kurzzeitparkplatz P2 gegenüber dem Inlandsterminal: bis 15 Min. kostenlos, bis 30 Min. 150 ₽, bis 60 Min. 300 ₽, bis 24 Stunden 500 ₽. Langzeitparkplatz P1 gegenüber dem Gebäude der Dalaeronawigazija: 500 ₽/Tag bis 4 Tage, ab 5 Tagen 350 ₽. Es gibt einen kostenlosen Parkplatz ohne Zeitbegrenzung."
+  }
+ }
+}

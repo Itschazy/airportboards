@@ -1,0 +1,31 @@
+{
+  "iata": "OVB",
+  "about": "Tolmachevo: aeroporto internazionale di Novosibirsk intitolato ad A. I. Pokryshkin, a 17 km a ovest del centro città. Due piste lunghe 3597 e 3602 m. Il complesso dei terminal è progettato per 1800 passeggeri all’ora sui voli nazionali e 1300 su quelli internazionali.",
+  "blocks": {
+    "transport": {
+      "title": "Come arrivare",
+      "hint": "Espresso 111Э, ogni 30 min",
+      "text": "L’autobus espresso n. 111Э collega l’aeroporto con la stazione ferroviaria «Novosibirsk-Glavny» ogni 30 minuti: dalla stazione dalle 05:00 alle 00:30, dall’aeroporto dalle 04:00 alle 23:30. I treni suburbani fermano alla stazione «Ob» vicino all’aeroporto, da cui partono per il terminal gli autobus n. 4 (40 ₽), n. 111Э e n. 112."
+    },
+    "lounges": {
+      "title": "Sale business",
+      "hint": "Settori B e C, 4000 ₽ per 4 h",
+      "text": "Sale business dei voli nazionali «Komfort» e «Premyer» al livello 2 del Settore C nella zona sterile: dopo i controlli al livello 3, di fronte al gate n. 6, scendere seguendo la segnaletica. Sala dei voli internazionali al livello 3 del Settore B, 50 posti. Ingresso a pagamento 4000 ₽ per 4 ore, bambini 2–12 anni 2000 ₽, sotto i 2 anni gratis."
+    },
+    "storage": {
+      "title": "Deposito bagagli",
+      "hint": "Settore C, 500 ₽ al giorno",
+      "text": "Il deposito bagagli per i passeggeri dei voli nazionali e internazionali si trova nel Settore C ed è aperto giorno e notte. Bagaglio 500 ₽ al giorno a collo, capispalla 100 ₽ al giorno. La custodia per meno di un giorno si paga come un giorno intero."
+    },
+    "kids": {
+      "title": "Con bambini",
+      "hint": "Settore C, livello 3, 24/7",
+      "text": "Sala madre e bambino al livello 3 del Settore C, giorno e notte e gratuita. Per passeggeri in partenza con bambini sotto i 7 anni, bambini con disabilità sotto i 14 anni e donne nella seconda metà della gravidanza. Ci sono una cucina, una camera con lettini, una sala giochi."
+    },
+    "parking": {
+      "title": "Parcheggio",
+      "hint": "15 min gratis",
+      "text": "Sul piazzale dell’aerostazione i primi 15 minuti gratis, poi la prima ora 400 ₽, la seconda 300 ₽, poi 200 ₽ all’ora, oltre 6 ore 1500 ₽ al giorno. Parcheggi P1–P4: fino a 3 giorni 700 ₽ al giorno, fino a 6 giorni 500 ₽, oltre, 300 ₽. Ingresso solo con targa riconosciuta."
+    }
+  }
+}

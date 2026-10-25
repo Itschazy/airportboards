@@ -1,0 +1,25 @@
+{
+ "iata": "SSH",
+ "blocks": {
+  "transport": {
+   "title": "Cómo llegar",
+   "hint": "Microbuses, precio por adelantado",
+   "text": "Los microbuses a Sharm el-Sheij suelen salir cuando se llenan; el precio se acuerda antes con el conductor. Hay alquiler de coches: Hertz, Thrifty y empresas locales."
+  },
+  "taxi": {
+   "title": "Taxi",
+   "hint": "Precio, antes de subir",
+   "text": "Hay taxis en el aeropuerto; el precio del trayecto se acuerda con el conductor antes de subir."
+  },
+  "terminals": {
+   "title": "Terminales",
+   "hint": "Dos terminales",
+   "text": "El aeropuerto tiene dos terminales de pasajeros. Hay cajeros automáticos y oficinas de cambio de divisas."
+  },
+  "storage": {
+   "title": "Consigna",
+   "hint": "Hay en el aeropuerto",
+   "text": "En el aeropuerto hay consigna de equipaje. Las fuentes no indican el precio."
+  }
+ }
+}

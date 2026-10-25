@@ -1,0 +1,31 @@
+{
+ "iata": "UUS",
+ "about": "Terminal binası Yujno-Sahalinsk'in güney ucundaki Khomutovo planlama bölgesinde, merkeze 10 km uzaklıkta. Terminal kompleksini Aerovokzal Yuzhno-Sakhalinsk AO işletir; kompleksin alanı 47 bin m²'den büyük.",
+ "blocks": {
+  "transport": {
+   "title": "Nasıl gidilir",
+   "hint": "3, 8, 63 numaralı otobüsler",
+   "text": "Merkezden 3, 8 ve 63 numaralı otobüsler gelir, terminal binası bunların son durağıdır. 6:30–22:00 arası çalışır, yolculuk 30–40 dk. Tren garından Khomutovo'ya banliyö treni, oradan otobüsle yaklaşık 10 dk. Taksi: yaklaşık 25 dk, yaklaşık 350 ₽."
+  },
+  "parking": {
+   "title": "Otopark",
+   "hint": "15 dakika ücretsiz",
+   "text": "İndirme-bindirme alanı: 15 dk ücretsiz, 60 dk'ya kadar 400 ₽, sonra ilk 24 saat 1200 ₽ ve sonraki her 24 saat 600 ₽. Uzun süreli P1: 24 saatlik ilk 5 dönemde her 24 saat için 500 ₽, sonrası 400 ₽. Hareket kısıtlılığı olan yolcular için \"Engelli\" işaretiyle ücretsiz."
+  },
+  "lounges": {
+   "title": "Business salonları",
+   "hint": "Aniva, Kat 3",
+   "text": "Aniva business salonu Kat 3'te, 6:00–23:00: 4400 ₽, 2–12 yaş çocuklar 2200 ₽, en fazla 2 saat; Every Lounge ile girilir. Krilyon salonu Kat 2'de, 6:00–23:00: 2800 ₽; Comfort pass, Every Lounge, Mir Pass, Grey Wall Pass, ONPASS kabul eder. 2 yaşından küçük çocuklar ücretsiz."
+  },
+  "storage": {
+   "title": "Emanet",
+   "hint": "Kat 1, 500 ₽'den",
+   "text": "Emanet terminal binasında Kat 1'de. Normal bagaj: ilk 24 saat 500 ₽, sonraki her 24 saat 200 ₽. 203 cm'den büyük standart dışı bagaj: 850 ₽ ve 400 ₽. Bir parça en fazla 30 kg, süre 30 güne kadar."
+  },
+  "kids": {
+   "title": "Çocukla",
+   "hint": "Kat 2, 6:00–23:00",
+   "text": "Anne-bebek odası Kat 2'de, genel alanda, 6:00–23:00, ücretsiz. Bir yetişkinle birlikte 8 yaşından küçük çocuklar, 14 yaşından küçük engelli çocuklar ve gebeliğin ikinci yarısındaki kadınlar kabul edilir. Bilet veya biniş kartı, pasaport ve doğum belgesi gerekir. Mikrodalga fırınlı mutfak var, sterilizatör yok."
+  }
+ }
+}

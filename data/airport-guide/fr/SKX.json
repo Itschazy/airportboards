@@ -1,0 +1,30 @@
+{
+ "iata": "SKX",
+ "blocks": {
+  "transport": {
+   "title": "Comment s'y rendre",
+   "hint": "Bus 7, minibus 15",
+   "text": "Le minibus n° 15 et le bus n° 7 desservent l'arrêt « Aeroport ». Horaires sur le site bus13.ru."
+  },
+  "storage": {
+   "title": "Consigne à bagages",
+   "hint": "Terminal intérieur, dès 100 ₽/h",
+   "text": "Consigne pour les passagers des vols intérieurs et internationaux dans le terminal des lignes intérieures, jour et nuit. Casier 50×40×50 — 100 ₽ de l'heure, 70×60×70 — 150 ₽, 100×70×100 — 200 ₽."
+  },
+  "kids": {
+   "title": "Avec un enfant",
+   "hint": "Gratuit",
+   "text": "La salle mère-enfant est gratuite, pour les enfants de moins de 7 ans avec un adulte. S'adresser au personnel des comptoirs d'enregistrement ; avant l'installation, les enfants sont examinés par le personnel médical de garde."
+  },
+  "parking": {
+   "title": "Parking",
+   "hint": "15 min gratuites",
+   "text": "Place de l'aérogare à 30 m du terminal : moins de 15 minutes gratuit, au-delà de 15 minutes 200 ₽ de l'heure, au-delà d'une heure 600 ₽ par jour."
+  },
+  "wifi": {
+   "title": "Wi‑Fi",
+   "hint": "Réseau Free WiFi",
+   "text": "Wi‑Fi gratuit de l'aéroport : réseau Free WiFi, connexion par numéro de téléphone avec un code reçu par SMS ; les numéros d'opérateurs étrangers sont acceptés."
+  }
+ }
+}

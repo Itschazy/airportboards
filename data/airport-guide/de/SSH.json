@@ -1,0 +1,25 @@
+{
+ "iata": "SSH",
+ "blocks": {
+  "transport": {
+   "title": "Anreise",
+   "hint": "Sammeltaxis, Preis vorher klären",
+   "text": "Sammeltaxis nach Scharm asch-Scheich fahren meist ab, sobald sie voll sind; den Preis vereinbart man vorher mit dem Fahrer. Es gibt Autovermietungen – Hertz, Thrifty und lokale Firmen."
+  },
+  "taxi": {
+   "title": "Taxi",
+   "hint": "Preis vor dem Einsteigen",
+   "text": "Am Flughafen gibt es Taxis; den Fahrpreis vereinbart man vor dem Einsteigen mit dem Fahrer."
+  },
+  "terminals": {
+   "title": "Terminals",
+   "hint": "Zwei Terminals",
+   "text": "Der Flughafen hat zwei Passagierterminals. Es gibt Geldautomaten und Wechselstuben."
+  },
+  "storage": {
+   "title": "Gepäckaufbewahrung",
+   "hint": "Am Flughafen vorhanden",
+   "text": "Am Flughafen gibt es eine Gepäckaufbewahrung. Den Preis geben die Quellen nicht an."
+  }
+ }
+}

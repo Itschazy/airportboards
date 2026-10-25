@@ -1,0 +1,41 @@
+{
+ "iata": "UFA",
+ "about": "İşletmeci Ufa Uluslararası Havalimanı AO; havaalanında iki pist var. Hat ağı 22'si uluslararası olmak üzere 65 noktayı kapsıyor. Havalimanı 2024'te 4 753 742 yolcuya hizmet verdi.",
+ "blocks": {
+  "transport": {
+   "title": "Nasıl gidilir",
+   "hint": "101, 110, 110С otobüsleri",
+   "text": "Bashavtotrans'ın 101, 110 ve 110С numaralı otobüsleri. Tarife bashauto.ru sitesinde ve +7 (347) 297-97-92 numaralı telefonda. Yandex Go taksi, bagaj alım alanındaki ve iç hatlar terminalinin geliş salonundaki kontuarlardan çağrılır; ödeme nakit veya kartla."
+  },
+  "terminals": {
+   "title": "Terminaller",
+   "hint": "Т1 iç hat, Т2 dış hat",
+   "text": "Terminal 1 iç hat uçuşlarına, Terminal 2 dış hat uçuşlarına hizmet verir. А2 otoparkı Terminal 1'in, А3 Terminal 2'nin karşısında; terminallere 2 dakika."
+  },
+  "lounges": {
+   "title": "Business salonları",
+   "hint": "Т2'de Kuray, 3000 ₽",
+   "text": "Agidel: Terminal 1, Kat 2, 2 numaralı kapının karşısında; yetişkinler 6000 ₽, 2–12 yaş çocuklar 3000 ₽, 3 saatin üzerinde saati 2000 ₽. Iremel Lounge: On Pass, Mir Pass, Every lounge, Grey wall pass, Persona Aero, RusPriority üyeleri için; diğerlerine 3000 ₽. Kuray: Terminal 2 gidiş alanı; Aeroflot, Flydubai ve Utair business sınıfı ile program kartı sahipleri için ücretsiz, diğerlerine 3000 ₽. 2 yaşından küçük çocuklar ücretsiz."
+  },
+  "storage": {
+   "title": "Emanet",
+   "hint": "Pack & Fly, 24/7",
+   "text": "Gece gündüz açık, operatör Pack & Fly, telefon +7 (960) 803-80-67. Bir parçanın üç boyutunun toplamı 203 cm'yi, ağırlığı 32 kg'ı geçmemelidir."
+  },
+  "kids": {
+   "title": "Çocukla",
+   "hint": "Т1, Kat 1, 24/7",
+   "text": "Anne-bebek odası Terminal 1'de, Kat 1'de, check-in kontuarlarının karşısında, gece gündüz açık. Tek yetişkinle birlikte 7 yaşından küçük çocuklar (engelli çocuklar 14 yaşından küçük). Kalkıştan önce 12 saate, inişten sonra 1 saate kadar. Pasaport, doğum belgesi, biletler ve iç hatlar terminalinin sağlık noktasından belge gerekir."
+  },
+  "parking": {
+   "title": "Otopark",
+   "hint": "15 dakika ücretsiz",
+   "text": "А1 indirme-bindirme alanı: 15 dakika ücretsiz, sonrası saati 500 ₽, park yasak. С5 bekleme otoparkı (terminallere 10 dakika): 3 saat ücretsiz, sonrası saati 150 ₽, günlüğü 600 ₽. Terminallerin yanındaki А2 ve А3 otoparkları: ilk saat 300 ₽, sonrası saati 100 ₽, günlüğü 700 ₽."
+  },
+  "wifi": {
+   "title": "Wi‑Fi",
+   "hint": "Airport.FreeWiFi.Ufanet",
+   "text": "Ücretsiz; süre ve trafik sınırı yok. Airport.FreeWiFi.Ufanet ve Airport.FreeWiFi.TTK ağları. Cep telefonu numarasıyla giriş: numarayı girin, ardından gönderilen numarayı arayın."
+  }
+ }
+}

@@ -1,0 +1,41 @@
+{
+  "iata": "RGK",
+  "about": "Aeroporto di rilevanza federale a 14 km da Gorno-Altaysk, a 400 m dall’autostrada M-52 (Chuysky trakt). Operativo dal 1968, dal 2024 fa parte del Gruppo Sber. Tre edifici: terminal partenze, terminal arrivi dei voli nazionali e terminal internazionale.",
+  "blocks": {
+    "transport": {
+      "title": "Come arrivare",
+      "hint": "Bus 103, 30 min",
+      "text": "Autobus 103 (6:33–21:37) e 103-1 (6:37–20:37) per il centro di Gorno-Altaysk, circa 30 minuti, 35–40 ₽. Taxi «Manzherok», vettore ufficiale dell’aeroporto: da 800 ₽, banco nel terminal arrivi, +7 913 690-29-31. In auto 14 km, 15–20 minuti."
+    },
+    "terminals": {
+      "title": "Terminal",
+      "hint": "3 edifici, arrivi a sinistra",
+      "text": "Nell’edificio centrale terminal partenze e sala business. A sinistra un terminal separato per gli arrivi dei voli nazionali. A destra il terminal internazionale con sala VIP."
+    },
+    "lounges": {
+      "title": "Sale business",
+      "hint": "Sala comfort 3500 ₽",
+      "text": "Sala business nell’edificio centrale: passeggeri di classe business, titolari di carte Gold e Platinum delle compagnie aeree, oppure con Every Lounge, Grey Wall Pass e On Pass o a pagamento. Sala comfort: 3500 ₽ adulto, 2500 ₽ bambino 2–12 anni, sotto i 2 anni gratis, fino a 3 ore. Sala VIP nel terminal internazionale. Prenotazioni: +7 913 691-11-39, vip@rgk-aero.ru."
+    },
+    "storage": {
+      "title": "Deposito bagagli",
+      "hint": "Livello 1, da 400 ₽/giorno",
+      "text": "Deposito bagagli automatico al livello 1 dell’aerostazione, negli orari di apertura dell’aeroporto. Armadietti da 400, 600 e 1000 ₽ al giorno a seconda delle dimensioni. Durata fino a 6 mesi. Pagamento con carta o in contanti."
+    },
+    "kids": {
+      "title": "Con bambini",
+      "hint": "Livello 2, gratis",
+      "text": "Sala madre e bambino al livello 2 dell’aerostazione, gratuita. Accedono i passeggeri con bambini sotto i 7 anni, con bambini con disabilità sotto i 14 anni e le donne nella seconda metà della gravidanza. Permanenza fino a 12 ore prima della partenza, dopo una visita al presidio sanitario, con documenti e carta d’imbarco."
+    },
+    "parking": {
+      "title": "Parcheggio",
+      "hint": "15 min gratis",
+      "text": "Presso i terminal carico e scarico gratis per 15 minuti, nuovo ingresso entro un’ora 250 ₽. P1: 400 ₽/ora, da 1 a 5 ore 300 ₽/ora, 3000 ₽/giorno. P2: 1000 ₽/giorno. P3: 180 minuti gratis, da 3 a 5 ore 200 ₽/ora, poi 800 ₽/giorno."
+    },
+    "wifi": {
+      "title": "Wi‑Fi",
+      "hint": "RGK_WIFI_FREE, via SMS",
+      "text": "Reti RGK_WIFI_FREE e Rostelekom_WiFi_FREE. Accesso con il numero di telefono: il codice arriva via SMS. Durante l’accesso disattivare i dati mobili."
+    }
+  }
+}

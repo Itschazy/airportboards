@@ -1,0 +1,26 @@
+{
+ "iata": "ZIA",
+ "about": "Zhukovsky International Airport was built on the site of the Zhukovsky airfield. Airport operator: JSC Ramport Aero. The airport is open to international flights and has a state border crossing point.",
+ "blocks": {
+  "transport": {
+   "title": "Getting there",
+   "hint": "Bus 441, 1 h 5 min",
+   "text": "Suburban train from Kazansky railway station to Otdykh station, about 40 min, then minibus 2А to the airport, about 20 min. Minibus 19к from MCD Ilyinskaya, about 35 min. Bus 441 from Kotelniki metro station (exit No. 5), interval 15–20 min, journey time 1 h 5 min. Buses and minibuses accept Troika, Strelka and bank cards."
+  },
+  "parking": {
+   "title": "Parking",
+   "hint": "15 min free",
+   "text": "Short-stay zone: first 15 min free, first hour 350 ₽, from the 2nd to the 4th hour 250 ₽/hour, from the 5th hour 3,000 ₽/day. Long-stay zone: 700 ₽/day from day 1 to day 5, 100 ₽/day from day 6 to 13, 700 ₽/day from day 14. The next free entry is possible no sooner than 45 min later."
+  },
+  "storage": {
+   "title": "Left luggage",
+   "hint": "Level 2, 24/7, from 600 ₽",
+   "text": "Left luggage on Level 2 in the landside area, open round the clock. Standard rate: 700 ₽ for the first 24 hours, 300 ₽ for each further 24 hours. Standard Lite: 600 ₽ and 300 ₽. Oversized from 1,150 ₽. One item may weigh up to 30 kg, storage up to 6 months."
+  },
+  "kids": {
+   "title": "With children",
+   "hint": "Level 2, 24/7",
+   "text": "Mother and child rooms on Level 2: in the landside area and in the departure waiting area for EAEU countries. Open round the clock; staff are called with a button at the entrance. Admits children under 7 with an adult, children with disabilities under 14, and pregnant women. There is a baby changing room in the international departures area."
+  }
+ }
+}

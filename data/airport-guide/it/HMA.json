@@ -1,0 +1,31 @@
+{
+  "iata": "HMA",
+  "about": "Aeroporto internazionale di Khanty-Mansiysk, società di gestione AO «Yugraavia». Aperto giorno e notte. Il complesso aerostazione con settore internazionale è stato aperto nel 2001, dal 2004 è attivo un valico di frontiera.",
+  "blocks": {
+    "transport": {
+      "title": "Come arrivare",
+      "hint": "Bus 3 e 5",
+      "text": "L’autobus n. 3 «mkr. Vostochny – Poliklinika – mkr. Vostochny» circola dalle 6:00 alle 0:00. L’autobus n. 5 «mkr. Vostochny – Ledovy dvorets» circola dalle 5:00 all’1:00. In auto tramite ul. Obyezdnaya, la Vostochnaya obyezdnaya, ul. Mira o il Tobolsky trakt."
+    },
+    "lounges": {
+      "title": "Sale business",
+      "hint": "3500 ₽ per 3 ore",
+      "text": "Sala business per i passeggeri di classe business e i partecipanti ai programmi delle compagnie aeree di livello GOLD e PLATINUM. Per gli altri 3500 ₽ per 3 ore, poi 700 ₽ all’ora. Con le carte fedeltà bancarie non c’è ingresso gratuito. Sala VIP in partenza 10 000 ₽."
+    },
+    "sleep": {
+      "title": "Dove dormire",
+      "hint": "Hotel «Sokol»",
+      "text": "Hotel «Sokol» a pochi passi dall’aeroporto e dalla fermata, 43 camere. Singola economy da 2500 ₽ al giorno, standard da 3150 ₽. C’è una tariffa serale dalle 20:00 alle 6:00."
+    },
+    "kids": {
+      "title": "Con bambini",
+      "hint": "Gratis, sotto i 7 anni",
+      "text": "Sala madre e bambino per passeggeri con bambini sotto i 7 anni, bambini con disabilità sotto i 14 anni e donne nella seconda metà della gravidanza. Si accede da 6 ore prima della partenza e fino a 3 ore dopo l’arrivo, gratis. Prima una visita al presidio sanitario; servono passaporto, certificato di nascita e biglietto."
+    },
+    "parking": {
+      "title": "Parcheggio",
+      "hint": "20 min gratis",
+      "text": "Piazzale dell’aerostazione: fino a 20 minuti gratis, dal 21° minuto a 4 ore 300 ₽ all’ora, l’ora iniziata si paga intera. Dalla 5ª ora 1200 ₽ al giorno, ogni giorno successivo 1200 ₽. Un nuovo ingresso entro 20 minuti è a pagamento, 300 ₽ all’ora."
+    }
+  }
+}

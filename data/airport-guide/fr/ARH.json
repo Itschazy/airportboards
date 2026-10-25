@@ -1,0 +1,26 @@
+{
+ "iata": "ARH",
+ "about": "Aéroport international d'Arkhangelsk Fiodor-Abramov (Talagi). Exploitant : SA « Aéroport d'Arkhangelsk ». Le premier vol sur la nouvelle piste près du village de Talagi a été accueilli le 5 février 1963.",
+ "blocks": {
+  "transport": {
+   "title": "Comment s'y rendre",
+   "hint": "Bus 12 vers le centre",
+   "text": "Le bus n° 12 va jusqu'à la gare maritime et fluviale par la rue Gagarina, la rue Voskressenskaïa et le prospekt Troïtski. Le bus n° 153 dessert Severodvinsk jusqu'au prospekt Trouda : départs de l'aéroport à 5:50, 9:10, 14:20 et 17:30. Vérifiez les horaires auprès du transporteur."
+  },
+  "lounges": {
+   "title": "Salons",
+   "hint": "Pavillon 3, niveau 2",
+   "text": "Salon des vols intérieurs au niveau 2 du Pavillon n° 3. Entrée 2 928 ₽, enfants de 2 à 12 ans 1 464 ₽, gratuit pour les moins de 2 ans. Gratuit pour les passagers de classe affaires et les titulaires Aeroflot Bonus Gold et Platinum. Avec les cartes Mileonair, Every.Lounge, Golden Key, etc., accès au SKY LOUNGE au niveau 1 du Pavillon n° 3 après le contrôle, 04:00–21:30, jusqu'à 2 heures."
+  },
+  "storage": {
+   "title": "Consigne à bagages",
+   "hint": "Pavillon 3, 24/7",
+   "text": "Consigne à bagages dans le Pavillon n° 3, jour et nuit. Un bagage pesant jusqu'à 30 kg et de moins de 1 m coûte 250 ₽ par jour. Les documents, l'argent, les objets de valeur et les denrées périssables ne sont pas acceptés."
+  },
+  "parking": {
+   "title": "Parking",
+   "hint": "30 min gratuites sur P2",
+   "text": "Courte durée P2 : 30 minutes gratuites, puis 150 ₽ de l'heure, au-delà de 4 heures 800 ₽ par jour. Longue durée P1 : 400 ₽ par jour dès la première minute. P4 gratuit de 70 places à 200 m de l'aérogare, sans limite de temps. Perte du ticket de parking : 2 000 ₽."
+  }
+ }
+}

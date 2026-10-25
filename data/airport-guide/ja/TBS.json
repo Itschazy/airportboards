@@ -1,0 +1,20 @@
+{
+ "iata": "TBS",
+ "blocks": {
+  "transport": {
+   "title": "アクセス",
+   "hint": "337番バス、1 GEL",
+   "text": "市バス337番（Airport — Tbilisi center）は到着ホール前の停留所から06:59〜22:59に発車する。中心部ではルスタヴェリ大通りと自由広場を通り、駅前広場まで行く。Metro Moneyカードまたは銀行カードで支払うと運賃1 GELで、90分間乗り換えができる。Metro Moneyカード自体は2 GEL。"
+  },
+  "taxi": {
+   "title": "タクシー",
+   "hint": "中心部まで40 GEL",
+   "text": "タクシーは到着ホールの出口で24時間待機している。中心部まで定額40 GEL、郊外へは50 GEL、所要は渋滞状況により20–30分。"
+  },
+  "wifi": {
+   "title": "Wi‑Fi",
+   "hint": "無料、登録不要",
+   "text": "出発・到着ターミナルのほとんどの待合エリアで登録不要の無料Wi‑Fi：ネットワークTbilisi Loves YouまたはAirport Free Wi‑Fiに接続し、ログインページで利用条件に同意する。"
+  }
+ }
+}

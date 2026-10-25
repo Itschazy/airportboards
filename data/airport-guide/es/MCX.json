@@ -1,0 +1,21 @@
+{
+ "iata": "MCX",
+ "about": "Aeropuerto Internacional de Majachkalá Amet-Jan Sultán, dos veces Héroe de la Unión Soviética. El aeródromo se creó el 3 de febrero de 1927 como estación aérea de la ruta Moscú – Járkov – Rostov – Tiflis.",
+ "blocks": {
+  "terminals": {
+   "title": "Terminales",
+   "hint": "Terminales A y B",
+   "text": "Dos terminales: A y B; los planos de ambas están en el sitio web del aeropuerto. Actualmente no se aceptan tarjetas de embarque electrónicas. La tarjeta de embarque tiene que ser en papel; se puede imprimir en el mostrador de autofacturación."
+  },
+  "lounges": {
+   "title": "Salas VIP",
+   "hint": "VIP-2, salida 6000 ₽",
+   "text": "Sala VIP-2. Atención a pasajeros que salen, a partir de 2 años, 6000 ₽; a los que llegan, 3000 ₽. Quienes reciben o despiden a pasajeros, 1000 ₽. Sala de reuniones 5000 ₽ por hora, aparcamiento junto a VIP-2 1000 ₽. Las personas jurídicas presentan la solicitud a más tardar una hora antes del inicio de la facturación."
+  },
+  "parking": {
+   "title": "Aparcamiento",
+   "hint": "15 min gratis",
+   "text": "Zona general: hasta 15 minutos gratis en la primera entrada, después 400 ₽ por hora; más de 3 horas, 1200 ₽ por día. Aparcamiento por días a la derecha de la entrada: 600 ₽ por día. Zona de bajada de pasajeros (primer carril): más de 10 minutos, 1500 ₽ por hora. Una nueva entrada dentro de 30 minutos es de pago. Tras el pago hay 30 minutos para salir."
+  }
+ }
+}

@@ -1,0 +1,36 @@
+{
+ "iata": "IJK",
+ "about": "İjevsk Havalimanı, havayolu şirketi, tur operatörü ve seyahat acentesiyle birlikte Izhavia AO'nun bünyesindedir. Havacılık işletmesi 1944'te kuruldu, hisselerinin %100'ü Udmurt Cumhuriyeti'ne aittir.",
+ "blocks": {
+  "transport": {
+   "title": "Nasıl gidilir",
+   "hint": "Şehre transfer 1500 ₽",
+   "text": "Havalimanının terminal önü meydanından şoförlü araçla transfer. İjevsk ve 30 km'ye kadar banliyöler 1500 ₽, Votkinsk 4000 ₽, Sarapul 5000 ₽, Chaykovsky 6000 ₽. Sipariş en az 3 saat önceden izhavia.su üzerinden veya inişten sonra havalimanı gişesinden, boş araç varsa."
+  },
+  "terminals": {
+   "title": "Terminal",
+   "hint": "2 kat, 4 körük",
+   "text": "Hizmet 10 850 m²'lik yeni yolcu terminalinde. 2 kat, 11 check-in kontuarı, körüklü 4 biniş kapısı. 5 asansör, gidiş alanına yürüyen merdiven. Yönlendirmeler Rusça, Udmurtça, İngilizce ve Çince."
+  },
+  "lounges": {
+   "title": "Business salonları",
+   "hint": "Kat 2, 4500 ₽",
+   "text": "Business salonu terminalde Kat 2'de: yetişkinler 4500 ₽, 2–12 yaş çocuklar 2250 ₽, 2 yaşından küçük ücretsiz, 3 saate kadar. RusPriority, ON PASS, Persona Aero, Every Lounge, Grey Wall Pass, GoldenKey kartları geçerli; Priority Pass ve Lounge Key kabul edilmez. VIP salon: yetişkinler 12 000 ₽, 2–12 yaş çocuklar 6000 ₽. Talepler: vip@izhavia.su."
+  },
+  "storage": {
+   "title": "Emanet",
+   "hint": "Kat 1, danışmanın arkasında",
+   "text": "Emanet Kat 1'de, salonda danışma kontuarının arkasında. Uçuş rötarı süresince bagajı ücretsiz kabul eder; sahipsiz ve sonradan gönderilen bagajı da kabul eder. Bulunan eşyaların saklanması 400 ₽. Bir parça en fazla 30 kg."
+  },
+  "kids": {
+   "title": "Çocukla",
+   "hint": "Kat 2, 24/7, ücretsiz",
+   "text": "Anne-bebek odası terminal binasında Kat 2'de, gece gündüz açık ve ücretsiz. 7 yaşından küçük çocuklarla, 18 yaşından küçük engelli çocuklarla ve gebeliğin ikinci yarısındaki kadınlar kabul edilir. Biniş kartı gerekir. Yiyecek ve hijyen malzemelerini ebeveynler getirir."
+  },
+  "parking": {
+   "title": "Otopark",
+   "hint": "15 dakika ücretsiz",
+   "text": "15 dakikaya kadar ücretsiz, 16 ila 30 dakika 250 ₽, 30 dakikadan 2 saate kadar saati 500 ₽, 2 saatten fazlası günlüğü 750 ₽. VIP otopark 5 saate kadar saati 300 ₽, ücretsiz süre yok. Ödemeden sonra 15 dakika içinde çıkış. Federal sicile kayıtlı engelli araçları için ücretsiz."
+  }
+ }
+}

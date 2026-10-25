@@ -1,0 +1,26 @@
+{
+ "iata": "SGC",
+ "about": "Aeroporto internazionale di Surgut, gestore AO «Aeroport Surgut». La rete di rotte conta oltre 30 destinazioni. Nell’aerostazione ci sono sale business, sale VIP e pontili telescopici.",
+ "blocks": {
+  "transport": {
+   "title": "Come arrivare",
+   "hint": "Bus 16 e 107",
+   "text": "All’aeroporto arrivano le linee urbane n. 16 e n. 107. Mappe e orari delle linee sono pubblicati nella pagina «Come arrivare»."
+  },
+  "lounges": {
+   "title": "Sale business",
+   "hint": "ON PASS, 3500 ₽",
+   "text": "Sala business nella sala arrivi, livello 2 (in ascensore), giorno e notte; classe business e titolari di carte élite delle compagnie aeree, classe economica a pagamento, non serve i voli internazionali. Sala ON PASS: livello 2 della zona sterile, solo voli nazionali, giorno e notte, adulto 3500 ₽, bambino 2–12 anni 2500 ₽."
+  },
+  "storage": {
+   "title": "Deposito bagagli",
+   "hint": "24/7, 400 ₽ al giorno",
+   "text": "Aperto giorno e notte. Il primo giorno 400 ₽ (fino alle 00:00), poi 200 ₽ al giorno, il giorno iniziato conta come intero. Peso di un collo fino a 30 kg."
+  },
+  "parking": {
+   "title": "Parcheggio",
+   "hint": "20 min gratis",
+   "text": "Sul piazzale dell’aerostazione i primi 20 minuti gratis. Area per soste lunghe da 50 auto subito dietro la pensilina della fermata: 750 ₽ al giorno. Pagamento alle casse dell’aerostazione e alle casse automatiche presso l’ingresso centrale e nella sala arrivi."
+  }
+ }
+}

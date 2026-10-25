@@ -1,0 +1,31 @@
+{
+ "iata": "UUD",
+ "about": "Baikal: Ulan-Ude International Airport, operating since 1926, near Lake Baikal. Runway length 3,000 m.",
+ "blocks": {
+  "transport": {
+   "title": "Getting there",
+   "hint": "Buses 10, 55, 77",
+   "text": "City buses No. 10, 55 and 77 run via the centre (Ploshchad Sovetov stop) to the airport station forecourt. Service starts at 6:15 on weekdays and 7:00 at weekends, interval 7–10 minutes; the fare on No. 55 is 40 ₽. By car about 20 minutes from the centre."
+  },
+  "storage": {
+   "title": "Left luggage",
+   "hint": "Level 1, 270 ₽ per day",
+   "text": "Left luggage in the domestic terminal, on Level 1, from 6:00 to 20:00. One item 270 ₽ per calendar day, an item over 203 cm (sum of three dimensions) 550 ₽."
+  },
+  "kids": {
+   "title": "With children",
+   "hint": "Level 2, free, 24/7",
+   "text": "Mother and child room on Level 2, in the right wing of the terminal, free and open round the clock, up to 3 hours. For children under 7 with one adult, children with disabilities under 14, large families with a certificate and women in the second half of pregnancy."
+  },
+  "parking": {
+   "title": "Parking",
+   "hint": "15 min free",
+   "text": "Short-stay P1 at the terminal: up to 15 minutes free, 16–60 minutes 500 ₽, second hour 300 ₽, third and fourth 200 ₽ each, from minute 241 1,200 ₽, no longer than 24 hours. Long-stay: up to 3 days 800 ₽ per day, from the 4th to the 6th 500 ₽."
+  },
+  "wifi": {
+   "title": "Wi‑Fi",
+   "hint": "FreeAirportBaikalRT network",
+   "text": "Free Wi‑Fi: network FreeAirportBaikalRT, login with a phone number and an SMS code."
+  }
+ }
+}

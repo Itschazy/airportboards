@@ -1,0 +1,26 @@
+{
+ "iata": "ABA",
+ "about": "Abakan International Airport, address: 59 Druzhby Narodov Ave, Abakan. From 25 October 2026 the terminal is open from 04:30 to 22:00. Information desk (3902) 202-489.",
+ "blocks": {
+  "transport": {
+   "title": "Getting there",
+   "hint": "Bus 106, trolleybus 3–5",
+   "text": "Bus No. 106, trolleybuses No. 3, No. 4 and No. 5. Taxi: Maxim +7 (3902) 28-28-28, Khoroshee +7 (3902) 30-07-00, Troika +7 (3902) 23-33-33."
+  },
+  "lounges": {
+   "title": "Lounges",
+   "hint": "Right wing, 05–22",
+   "text": "Premium comfort lounge in the right wing of the terminal, 05:00–22:00, up to 3 hours. Economy class: adult 5,000 ₽, child under 12 2,500 ₽, under 2 free. Business class and lounge access programmes: 2,700 ₽ per adult. Phone +7 913 449-38-26."
+  },
+  "kids": {
+   "title": "With children",
+   "hint": "Left wing, free",
+   "text": "Mother and child room in the left wing of the terminal, next to the first-aid post. Bedroom, playroom, kitchen, changing table. For children under 7; passport and boarding pass required. Free of charge. Phone (3902) 202-551."
+  },
+  "parking": {
+   "title": "Parking",
+   "hint": "Temporarily closed",
+   "text": "The paid long-stay car park 50 m to the right of the terminal is temporarily closed."
+  }
+ }
+}

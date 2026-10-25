@@ -1,0 +1,16 @@
+{
+ "iata": "KGP",
+ "about": "Der Flughafen liegt in Kogalym, Uliza Awiatorow 21. Betreiber: AO „Aeroport Kogalym“. Er bedient den Schichtarbeiterverkehr der Ölindustrie, Frachtflüge und die Geschäftsluftfahrt.",
+ "blocks": {
+  "terminals": {
+   "title": "Terminal",
+   "hint": "06:00–22:00",
+   "text": "Das Terminal ist von 06:00 bis 22:00 Ortszeit geöffnet. Die Öffnungszeiten können sich mit dem Flugplan ändern, Auskunft unter +7 (34667) 4-33-11, Durchwahl 333. Der Check-in beginnt 2 Stunden und endet 40 Minuten vor Abflug."
+  },
+  "lounges": {
+   "title": "Business-Lounges",
+   "hint": "Abflug: 13 908 ₽",
+   "text": "Komfort-Lounge der AO „Aeroport Kogalym“. Abflug: 13 908 ₽ Erwachsene, 6 954 ₽ Kinder von 2–12 Jahren. Ankunft: 10 223,60 ₽ und 5 111,80 ₽. Abholer: 5 111,80 ₽, Begleitpersonen: 6 954 ₽. Preise inkl. MwSt., gültig ab 01.01.2026."
+  }
+ }
+}

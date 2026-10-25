@@ -1,0 +1,25 @@
+{
+ "iata": "BTK",
+ "blocks": {
+  "lounges": {
+   "title": "Bekleme salonu",
+   "hint": "Kat 2, 2 200 ₽",
+   "text": "Konforlu bekleme salonu terminal binasında Kat 2'de. 6:00–12:00 arası açık, cuma ve pazar 14:00'e kadar, diğer saatlerde sop@aerobratsk.ru adresine talep üzerine. Biznes Standart, Biznes Plyus, Ekonom Plyus tarifeleri, Gold ve Platinum seviyeleri, ON PASS ve Grey Wall Pass için ücretsiz. Diğerleri için 3 saati 2 200 ₽."
+  },
+  "sleep": {
+   "title": "Nerede uyunur",
+   "hint": "350 m uzakta otel",
+   "text": "AeroBratsk oteli terminal binasına 350 m uzaklıkta. Üç kişilik odada yatak günlüğü 900 ₽'den, tek kişilik oda 3 500 ₽'den. Kahvaltı 600 ₽; terminal binasının yemekhanesinde misafirlere öğle yemeğinde %20 indirim."
+  },
+  "parking": {
+   "title": "Otopark",
+   "hint": "80 araçlık ücretsiz",
+   "text": "Terminal önü meydanında 80 araçlık ücretsiz otopark, bunların 8'i engelliler için. Uzun süreli otopark günlüğü 300 ₽'den. Kışın aracın ısıtılması 20 dakika için 4 200 ₽, akü şarjı 2 100 ₽."
+  },
+  "wifi": {
+   "title": "Wi‑Fi",
+   "hint": "Ücretsiz",
+   "text": "Havalimanı yolcuları ve misafirleri için ücretsiz Wi‑Fi. Giriş, yasanın gerektirdiği şekilde kimlik doğrulamayla."
+  }
+ }
+}

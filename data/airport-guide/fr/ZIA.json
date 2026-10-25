@@ -1,0 +1,26 @@
+{
+ "iata": "ZIA",
+ "about": "L'aéroport international de Joukovski a été construit sur le site de l'aérodrome de Joukovski. Exploitant : SA « Ramport Aero ». L'aéroport est ouvert aux vols internationaux et dispose d'un point de passage de la frontière d'État.",
+ "blocks": {
+  "transport": {
+   "title": "Comment s'y rendre",
+   "hint": "Bus 441, 1 h 5 min",
+   "text": "Train de la gare de Kazan jusqu'à la station Otdykh, environ 40 min, puis minibus 2А jusqu'à l'aéroport, environ 20 min. Minibus 19к depuis Ilinskaïa (MTsD), environ 35 min. Bus 441 depuis le métro Kotelniki (sortie n° 5), intervalle 15–20 min, trajet de 1 h 5 min. Les bus et minibus acceptent les cartes « Troïka », « Strelka » et les cartes bancaires."
+  },
+  "parking": {
+   "title": "Parking",
+   "hint": "15 min gratuites",
+   "text": "Zone courte durée : 15 premières min gratuites, première heure 350 ₽, de la 2e à la 4e heure 250 ₽/heure, à partir de la 5e heure 3000 ₽/jour. Zone longue durée : 700 ₽/jour du 1er au 5e jour, 100 ₽/jour du 6e au 13e, 700 ₽/jour à partir du 14e jour. Nouvelle entrée gratuite au plus tôt 45 min après."
+  },
+  "storage": {
+   "title": "Consigne à bagages",
+   "hint": "Niveau 2, 24/7, dès 600 ₽",
+   "text": "Consigne au niveau 2 en zone publique, ouverte jour et nuit. Tarif « Standard » : 700 ₽ pour les premières 24 heures, 300 ₽ par tranche de 24 heures suivante. « Standard Light » : 600 ₽ et 300 ₽. Hors format à partir de 1150 ₽. Poids d'un bagage jusqu'à 30 kg, durée de garde jusqu'à 6 mois."
+  },
+  "kids": {
+   "title": "Avec un enfant",
+   "hint": "Niveau 2, 24/7",
+   "text": "Salles mère-enfant au niveau 2 : en zone publique et dans la zone d'attente des départs vers les pays de l'UEE. Ouvertes jour et nuit, on appelle un agent avec le bouton à l'entrée. Accès pour les enfants de moins de 7 ans avec un adulte, les enfants handicapés de moins de 14 ans, les femmes enceintes. Dans la zone des départs internationaux, il y a une salle à langer."
+  }
+ }
+}

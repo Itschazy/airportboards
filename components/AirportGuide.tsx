@@ -1,4 +1,4 @@
-import type { AirportGuide as Guide } from '@/lib/airport-guide';
+import { guideDate, type AirportGuide as Guide } from '@/lib/airport-guide';
 
 /**
  * Справочная по аэропорту — плитки, раскрываются на месте (25.10.2026, макет согласован).
@@ -24,22 +24,21 @@ const ICONS: Record<string, string> = {
   wifi: 'M5 12a10 10 0 0 1 14 0M8.5 15.5a5 5 0 0 1 7 0M12 19h.01M2 8.8a15 15 0 0 1 20 0',
 };
 
-const fmtChecked = (iso: string) => {
-  const d = new Date(`${iso}T12:00:00Z`);
-  return Number.isNaN(d.getTime()) ? iso : new Intl.DateTimeFormat('ru', { day: 'numeric', month: 'long', year: 'numeric' }).format(d).replace(/\s*г\.$/, '');
+/** Строки интерфейса — из messages (ui.aguide_*), чтобы справочная говорила на языке страницы. */
+export type GuideLabels = {
+  leadOfficial: string; leadThird: string; checked: string;
+  src: string; srcAnd: string; srcMore: string; srcThird: string;
 };
 
-export function AirportGuide({ guide, title }: { guide: Guide; title: string }) {
+export function AirportGuide({ guide, title, labels, numLocale }: { guide: Guide; title: string; labels: GuideLabels; numLocale: string }) {
   const blocks = [...guide.blocks].sort((a, b) => (ORDER.indexOf(a.id) + 99) % 99 - (ORDER.indexOf(b.id) + 99) % 99);
-  const checked = fmtChecked(guide.checked);
+  const checked = guideDate(guide.checked, numLocale);
   return (
     <section style={{ marginTop: 36 }} aria-labelledby="ag-title">
       <h2 id="ag-title" style={{ margin: '0 0 14px', fontSize: 13, fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.12em', color: 'var(--ab-8a8a8a)' }}>{title}</h2>
       {/* Откуда факты — одной строкой, до плиток: так читатель и answer-engine видят метод, а
           не только результат (skill seo-aeo-geo, «methodology disclosure»). */}
-      {guide.basis === 'third-party'
-        ? <p className="ag-lead">Официального сайта у аэропорта нет. Здесь только факты, совпавшие минимум на двух независимых сторонних сайтах, оба источника под каждым блоком. Проверено <time dateTime={guide.checked}>{checked}</time>.</p>
-        : <p className="ag-lead">Факты с официальных сайтов аэропорта и перевозчиков, источник под каждым блоком. Проверено <time dateTime={guide.checked}>{checked}</time>.</p>}
+      <p className="ag-lead">{guide.basis === 'third-party' ? labels.leadThird : labels.leadOfficial} {labels.checked} <time dateTime={guide.checked}>{checked}</time>.</p>
       <div className="ag-grid">
         {blocks.map((b) => (
           <details key={b.id} className="ag-tile">
@@ -54,12 +53,12 @@ export function AirportGuide({ guide, title }: { guide: Guide; title: string }) 
               <p>{b.text}</p>
               {guide.basis === 'third-party' ? (
                 <p className="ag-src">
-                  По данным сторонних сайтов: <a href={b.url} target="_blank" rel="noopener noreferrer">{b.source}</a> и <a href={b.url2} target="_blank" rel="noopener noreferrer">{b.source2}</a>
+                  {labels.srcThird} <a href={b.url} target="_blank" rel="noopener noreferrer">{b.source}</a> {labels.srcAnd} <a href={b.url2} target="_blank" rel="noopener noreferrer">{b.source2}</a>
                 </p>
               ) : (
                 <p className="ag-src">
-                  По данным <a href={b.url} target="_blank" rel="noopener noreferrer">{b.source}</a>
-                  {b.url2 ? <> и <a href={b.url2} target="_blank" rel="noopener noreferrer">ещё одной страницы</a></> : null}
+                  {labels.src} <a href={b.url} target="_blank" rel="noopener noreferrer">{b.source}</a>
+                  {b.url2 ? <> {labels.srcAnd} <a href={b.url2} target="_blank" rel="noopener noreferrer">{labels.srcMore}</a></> : null}
                 </p>
               )}
             </div>

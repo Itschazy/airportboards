@@ -10,8 +10,13 @@ import path from 'path';
  * на официальной странице, того нет и здесь: у DME нет блока Wi‑Fi, у VKO — комнаты «в
  * терминале Д», потому что сайт аэропорта сам себе противоречит.
  *
- * Только русский и только аэропорты, для которых файл заведён руками: data/airport-guide/<IATA>.json.
- * Перевода на 11 языков пока нет сознательно — сначала замер, приносит ли блок трафик.
+ * Аэропорты, для которых файл заведён руками: data/airport-guide/<IATA>.json — русский оригинал.
+ * Остальные 11 языков (решение владельца 25.10.2026) — переводы ТОЛЬКО текстов в
+ * data/airport-guide/<locale>/<IATA>.json: { about?, blocks: { <id>: { title, hint, text } } }.
+ * Источники, ссылки, дата проверки и basis берутся из оригинала — перевод не может сослаться на
+ * другую страницу или «освежить» дату. Нет перевода на язык — справочной на нём нет; нет
+ * перевода блока — блок на этом языке не показывается (лучше меньше, чем русский текст на
+ * немецкой странице).
  * Факты стареют: цены и часы меняются, поэтому дата проверки видна читателю, а при
  * обновлении файла её надо менять вместе с текстом.
  */
@@ -44,17 +49,34 @@ export type AirportGuide = {
 const DIR = path.join(process.cwd(), 'data/airport-guide');
 const cache = new Map<string, AirportGuide | null>();
 
+type GuideTranslation = { about?: string; blocks?: Record<string, { title?: string; hint?: string; text?: string }> };
+
+function readJson<T>(file: string): T | null {
+  try { return JSON.parse(fs.readFileSync(file, 'utf8')) as T; } catch { return null; }
+}
+
 export function getAirportGuide(iata: string, locale: string): AirportGuide | null {
-  if (locale !== 'ru') return null;
   const code = iata.toUpperCase();
-  if (!/^[A-Z]{3}$/.test(code)) return null;
-  if (cache.has(code)) return cache.get(code)!;
+  if (!/^[A-Z]{3}$/.test(code) || !/^[a-z]{2}$/.test(locale)) return null;
+  const key = `${locale}:${code}`;
+  if (cache.has(key)) return cache.get(key)!;
   let guide: AirportGuide | null = null;
-  try {
-    const g = JSON.parse(fs.readFileSync(path.join(DIR, `${code}.json`), 'utf8')) as AirportGuide;
-    if (g?.blocks?.length) guide = g;
-  } catch { /* файла нет — справочной у аэропорта нет */ }
-  cache.set(code, guide);
+  const base = readJson<AirportGuide>(path.join(DIR, `${code}.json`));
+  if (base?.blocks?.length) {
+    if (locale === 'ru') guide = base;
+    else {
+      const tr = readJson<GuideTranslation>(path.join(DIR, locale, `${code}.json`));
+      if (tr?.blocks) {
+        const blocks = base.blocks.flatMap((b) => {
+          const t = tr.blocks?.[b.id];
+          return t?.title && t.hint && t.text ? [{ ...b, title: t.title, hint: t.hint, text: t.text }] : [];
+        });
+        // about переводится вместе с оригиналом; нет перевода — не показываем русский.
+        if (blocks.length) guide = { ...base, about: base.about && tr.about ? tr.about : undefined, blocks };
+      }
+    }
+  }
+  cache.set(key, guide);
   return guide;
 }
 
@@ -65,31 +87,25 @@ export function getAirportGuide(iata: string, locale: string): AirportGuide | nu
  * не видит. Формулировки в именительном падеже имени («до аэропорта Шереметьево») — склонять
  * имена собственные нельзя (CLAUDE.md, «Имена собственные оставлять в именительном»).
  */
-const QUESTIONS: Record<string, string> = {
-  transport: 'Как доехать до аэропорта {a}?',
-  taxi: 'Где такси и остановки у аэропорта {a}?',
-  terminals: 'Как устроены терминалы аэропорта {a}?',
-  lounges: 'Где бизнес-залы в аэропорту {a} и сколько стоит вход?',
-  storage: 'Где камера хранения в аэропорту {a}?',
-  sleep: 'Где поспать в аэропорту {a}?',
-  kids: 'Где в аэропорту {a} отдохнуть с ребёнком?',
-  parking: 'Как устроена парковка у аэропорта {a}?',
-  wifi: 'Есть ли в аэропорту {a} бесплатный Wi‑Fi?',
-};
+const QUESTION_IDS = new Set(['transport', 'taxi', 'terminals', 'lounges', 'storage', 'sleep', 'kids', 'parking', 'wifi']);
 
-const ruDate = (iso: string) => {
-  const [y, m, d] = iso.split('-');
-  return d && m && y ? `${d}.${m}.${y}` : iso;
-};
+/** Дата проверки в сокращённой числовой форме языка (числа — западные, как по всему сайту). */
+export function guideDate(iso: string, numLocale: string): string {
+  const d = new Date(`${iso}T12:00:00Z`);
+  return Number.isNaN(d.getTime()) ? iso : new Intl.DateTimeFormat(numLocale, { day: '2-digit', month: '2-digit', year: 'numeric', timeZone: 'UTC' }).format(d);
+}
 
-export function guideFaq(guide: AirportGuide, name: string): { q: string; a: string }[] {
+type Tr = (key: string, values?: Record<string, string>) => string;
+
+export function guideFaq(guide: AirportGuide, name: string, t: Tr, numLocale: string): { q: string; a: string }[] {
+  const date = guideDate(guide.checked, numLocale);
   return guide.blocks
-    .filter((b) => QUESTIONS[b.id])
+    .filter((b) => QUESTION_IDS.has(b.id))
     .map((b) => ({
-      q: QUESTIONS[b.id].replace('{a}', name),
-      a: guide.basis === 'third-party'
-        ? `${b.text} По данным сторонних сайтов (${b.source}, ${b.source2}), совпадает на обоих; проверено ${ruDate(guide.checked)}.`
-        : `${b.text} По данным ${b.source}, проверено ${ruDate(guide.checked)}.`,
+      q: t(`aguide_q_${b.id}`, { a: name }),
+      a: `${b.text} ${guide.basis === 'third-party'
+        ? t('aguide_faq_third', { sources: `${b.source}, ${b.source2}`, date })
+        : t('aguide_faq_official', { source: b.source, date })}`,
     }));
 }
 

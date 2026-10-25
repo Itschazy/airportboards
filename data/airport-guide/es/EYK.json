@@ -1,0 +1,20 @@
+{
+ "iata": "EYK",
+ "blocks": {
+  "lounges": {
+   "title": "Salas VIP",
+   "hint": "2200 ₽ por hora",
+   "text": "Sala de confort superior para pasajeros que salen, en tránsito y que llegan. 2200 ₽ por persona y hora; con facturación personal, 3500 ₽. Facturación rápida y control de seguridad sin cola: 1700 ₽."
+  },
+  "storage": {
+   "title": "Consigna",
+   "hint": "380 ₽ al día",
+   "text": "Consigna: 380 ₽ por bulto al día (tarifas desde el 01.10.2026)."
+  },
+  "kids": {
+   "title": "Con niños",
+   "hint": "Nivel 1, gratis",
+   "text": "Sala madre e hijo en el nivel 1 de la terminal. Para pasajeros con niños menores de 14 años y mujeres en la segunda mitad del embarazo. Gratis. Información: (34670) 62-222."
+  }
+ }
+}

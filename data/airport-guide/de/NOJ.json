@@ -1,0 +1,21 @@
+{
+ "iata": "NOJ",
+ "about": "Flughafen 9 km südwestlich von Nojabrsk. Betreiber: AO „Aeroport Surgut“. Piste 2500 m, bedient Inlandsflüge innerhalb Russlands.",
+ "blocks": {
+  "transport": {
+   "title": "Anreise",
+   "hint": "Busse 7 und 51",
+   "text": "Bis ins Stadtzentrum etwa 9 km. Es fahren die Stadtbusse Nr. 7 und Nr. 51 (Siedlung Wyngapurowski). Es gibt Taxis."
+  },
+  "terminals": {
+   "title": "Terminal",
+   "hint": "Terminal 07:00–18:00",
+   "text": "Das Terminal ist von 07:00 bis 18:00 geöffnet. Nur Inlandsflüge. Im Terminal gibt es ein Café, Geschäfte, Souvenirkioske, Gepäckverpackung, einen Mutter-Kind-Raum und eine Gepäckaufbewahrung."
+  },
+  "lounges": {
+   "title": "Business-Lounges",
+   "hint": "Ebene 1 und 2, täglich",
+   "text": "Komfort-Lounge auf Ebene 1, VIP-Lounge auf Ebene 2. In der Lounge Tee, Kaffee, Gebäck. Gegen Gebühr laut Preisliste: Bestellung von Speisen aus dem Café, Transfer zum Flugzeug mit separatem Fahrzeug. Die Komfort-Lounge ist täglich geöffnet."
+  }
+ }
+}

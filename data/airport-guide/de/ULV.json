@@ -1,0 +1,31 @@
+{
+ "iata": "ULV",
+ "about": "Internationaler Flughafen Uljanowsk (Barataewka) „N. M. Karamsin“, Adresse: Uliza Awiazionnaja 20. Betreiber OAO „Aeroport Uljanowsk“. Das umgebaute Terminal wurde 2013 in Betrieb genommen, Kapazität 240 Passagiere pro Stunde.",
+ "blocks": {
+  "terminals": {
+   "title": "Terminal",
+   "hint": "Ein Terminalgebäude",
+   "text": "Ein Terminalkomplex für Inlands- und internationale Flüge. Anzeigetafel und Informationsschalter auf Ebene 1. Passkontrolle, Sicherheitskontrolle und Boarding über den Sicherheitsbereich auf Ebene 2. Der Check-in für Inlandsflüge öffnet 2 Stunden vorher und schließt 40 Minuten vorher, für internationale Flüge öffnet er 3 Stunden vorher."
+  },
+  "lounges": {
+   "title": "Business-Lounges",
+   "hint": "Ebene 1, 24/7, 3000 ₽",
+   "text": "Business-Lounge auf Ebene 1 im rechten Flügel des Terminals, rund um die Uhr. Erwachsene 3000 ₽, Begleitpersonen oder Abholer 1500 ₽, Kinder unter 2 Jahren kostenlos, VIP-Lounge 10 000 ₽. Zugang mit den Karten Persona Aero, Every.Lounge, OnPass, MileOnAir, Grey Wall, GoldenKey, Limit 3 Stunden."
+  },
+  "sleep": {
+   "title": "Schlafen",
+   "hint": "Hotel „Aeroport“",
+   "text": "Hotel „Aeroport“ auf dem Flughafengelände neben dem Terminal, rund um die Uhr. Buchung: +7 (8422) 587-323, hotel@ulkaero.ru. Preise beim Manager erfragen. Bezahlung bar oder mit Karte."
+  },
+  "parking": {
+   "title": "Parken",
+   "hint": "15 Min. kostenlos",
+   "text": "Kostenpflichtiger Parkplatz vor dem Terminal für 150 Autos. Die ersten 15 Minuten kostenlos, von 15 Minuten bis 3 Stunden 150 ₽/Stunde, über 3 Stunden 500 ₽/Tag. Erneute Einfahrt innerhalb von 60 Minuten ohne kostenlose Zeit. Nach der Bezahlung 30 Minuten für die Ausfahrt."
+  },
+  "wifi": {
+   "title": "Wi‑Fi",
+   "hint": "Kostenlos, bis 50 Mbit/s",
+   "text": "Kostenloses Wi‑Fi im gesamten Terminal, ohne Datenbegrenzung. Geschwindigkeit bis 50 Mbit/s."
+  }
+ }
+}

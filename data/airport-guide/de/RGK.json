@@ -1,0 +1,41 @@
+{
+ "iata": "RGK",
+ "about": "Flughafen von föderaler Bedeutung 14 km von Gorno-Altaisk, 400 m von der Fernstraße М-52 (Tschuiski Trakt). In Betrieb seit 1968, seit 2024 Teil der Sber-Gruppe. Drei Gebäude: Abflugterminal, Ankunftsterminal für Inlandsflüge und internationales Terminal.",
+ "blocks": {
+  "transport": {
+   "title": "Anreise",
+   "hint": "Bus 103, 30 Min.",
+   "text": "Busse 103 (6:33–21:37) und 103-1 (6:37–20:37) ins Zentrum von Gorno-Altaisk, etwa 30 Minuten, 35–40 ₽. Taxi „Manscherok“, offizieller Beförderer des Flughafens: ab 800 ₽, Schalter im Ankunftsterminal, +7 913 690-29-31. Mit dem Auto 14 km, 15–20 Minuten."
+  },
+  "terminals": {
+   "title": "Terminals",
+   "hint": "3 Gebäude, Ankunft links",
+   "text": "Im zentralen Gebäude befinden sich das Abflugterminal und die Business-Lounge. Links ein separates Ankunftsterminal für Inlandsflüge. Rechts das internationale Terminal mit VIP-Lounge."
+  },
+  "lounges": {
+   "title": "Business-Lounges",
+   "hint": "Komfort-Lounge 3500 ₽",
+   "text": "Business-Lounge im zentralen Gebäude: Passagiere der Business Class, Inhaber von Gold- und Platinum-Karten der Fluggesellschaften sowie mit Every Lounge, Grey Wall Pass und On Pass oder gegen Gebühr. Komfort-Lounge: 3500 ₽ Erwachsene, 2500 ₽ Kinder von 2–12 Jahren, unter 2 Jahren kostenlos, bis zu 3 Stunden. VIP-Lounge im internationalen Terminal. Buchung: +7 913 691-11-39, vip@rgk-aero.ru."
+  },
+  "storage": {
+   "title": "Gepäckaufbewahrung",
+   "hint": "Ebene 1, ab 400 ₽/Tag",
+   "text": "Automatische Gepäckaufbewahrung auf Ebene 1 des Terminals, während der Öffnungszeiten des Flughafens. Fächer zu 400, 600 und 1000 ₽ pro Tag je nach Größe. Aufbewahrung bis zu 6 Monate. Bezahlung mit Karte oder bar."
+  },
+  "kids": {
+   "title": "Mit Kind",
+   "hint": "Ebene 2, kostenlos",
+   "text": "Mutter-Kind-Raum auf Ebene 2 des Terminals, kostenlos. Zugang mit Kindern unter 7 Jahren, Kindern mit Behinderung unter 14 Jahren und für Schwangere in der zweiten Schwangerschaftshälfte. Aufenthalt bis zu 12 Stunden vor Abflug, nach einer Untersuchung in der Sanitätsstation, mit Dokumenten und Bordkarte."
+  },
+  "parking": {
+   "title": "Parken",
+   "hint": "15 Min. kostenlos",
+   "text": "An den Terminals ist Ein- und Aussteigen 15 Minuten kostenlos, erneute Einfahrt innerhalb einer Stunde 250 ₽. P1: 400 ₽/Stunde, von 1 bis 5 Stunden 300 ₽/Stunde, 3000 ₽/Tag. P2: 1000 ₽/Tag. P3: 180 Minuten kostenlos, von 3 bis 5 Stunden 200 ₽/Stunde, danach 800 ₽/Tag."
+  },
+  "wifi": {
+   "title": "Wi‑Fi",
+   "hint": "RGK_WIFI_FREE, per SMS",
+   "text": "Netze RGK_WIFI_FREE und Rostelekom_WiFi_FREE. Anmeldung mit der Telefonnummer: Der Code kommt per SMS. Während der Anmeldung das mobile Internet ausschalten."
+  }
+ }
+}

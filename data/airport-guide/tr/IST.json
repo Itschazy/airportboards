@@ -1,0 +1,30 @@
+{
+ "iata": "IST",
+ "blocks": {
+  "transport": {
+   "title": "Nasıl gidilir",
+   "hint": "M11 metrosu, Havaist otobüsleri",
+   "text": "M11 metrosu havalimanını Gayrettepe'ye bağlar; 20 Haziran 2026'dan itibaren hat Halkalı'ya kadar uzatıldı. Havaist otobüsleri −2 ulaşım katından şehrin birçok semtine kalkar; aralarında Beşiktaş, Kadıköy, Aksaray, Sultanahmet (Çatladıkapı) ve Esenler Otogarı var. İETT şehir otobüsleri — merkeze 5 hat."
+  },
+  "sleep": {
+   "title": "Nerede uyunur",
+   "hint": "Kontrolden önce ve sonra YOTEL",
+   "text": "YOTEL oteli doğrudan terminalde: genel alanda 171 kabin (P check-in kontuarlarının karşısında) ve gidiş alanında 280 kabin (YOTELAIR, A–B bölgesi); ikincisi yalnızca dış hatlardan uçan yolcular için. Rezervasyon en az 4 saatlik yapılır. Saatlik YOTELAIR Sleepcabins — iGA Lounge girişinin karşısında, bir kat yukarıda, yalnızca ön rezervasyonsuz."
+  },
+  "kids": {
+   "title": "Çocukla",
+   "hint": "700 m² oyun alanları",
+   "text": "Anne-bebek odası, toplam 700 m² alana sahip beş temalı oyun alanı, 2 yaşından küçük çocuklu yolcular için ücretsiz buggy yolculuğu, ayrı aile park yerleri ve aile güvenlik kontrol noktaları var."
+  },
+  "parking": {
+   "title": "Otopark",
+   "hint": "Katlı, tek çatı altında",
+   "text": "Tek çatı altında katlı otopark, gece gündüz kamera gözetimi ve güvenlik. 1 Ocak 2024'ten itibaren abonesiz ödeme günlük; ücreti havalimanı sitesindeki hesaplayıcı belirler. Havalimanı uygulamasıyla ödemede %10 indirim (15 ve 30 günlük abonelikler hariç). Vale — CIP terminali girişinde."
+  },
+  "wifi": {
+   "title": "Wi‑Fi",
+   "hint": "Sınırsız, ücretsiz",
+   "text": "Ücretsiz sınırsız internet: iGA Wi‑Fi ağı; giriş SMS şifreli telefon numarasıyla veya terminaldeki kioskların pasaport taramasından sonra verdiği erişim koduyla."
+  }
+ }
+}

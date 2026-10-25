@@ -1,0 +1,30 @@
+{
+ "iata": "GYD",
+ "blocks": {
+  "transport": {
+   "title": "Nasıl gidilir",
+   "hint": "Gara Aero Express, 1,30 AZN",
+   "text": "Aero Express otobüsleri Terminal 1 ve 2'den Bakü tren garına (28 May metro istasyonu) gider, Suraxanı köprüsü ve Koroğlu metro istasyonunda durur. 06:00–23:15 arası 20 dakikada bir, gece 45 dakikada bir. Ücret BAKU CARD ile 1,30 AZN, kartın kendisi 2 AZN; bir kartı bir grup kullanabilir."
+  },
+  "lounges": {
+   "title": "Business salonları",
+   "hint": "Birkaç salon",
+   "text": "Havalimanında AZAL, Business Class Lounge, Absheron, Salam, Baku Club, Premium ve Mugam salonları var. Terminal 1'de Kat 1'deki AZAL Lounge — business ve premium ekonomi sınıfı yolcuları için kendi indirme alanı olan, sırasız ayrı check-in."
+  },
+  "kids": {
+   "title": "Çocukla",
+   "hint": "Terminal 1 ve 2",
+   "text": "Alt değiştirme masası, soğuk ve sıcak su bulunan anne-bebek odaları: Terminal 1'de Kat 3 ve Kat 4'te, Terminal 2'de Kat 2'de. Alt değiştirme masaları tüm çok işlevli tuvaletlerde de var."
+  },
+  "parking": {
+   "title": "Otopark",
+   "hint": "15 dakika ücretsiz, 24/7",
+   "text": "Gece gündüz açık, 2 bin yerden fazla: Terminal 1'de 835, Terminal 2'de 1166. İlk 15 dakika ücretsiz, 2 saate kadar 1 AZN, 4 saate kadar 2 AZN, 12 saate kadar 6 AZN, 24 saate kadar 15 AZN, sonraki her gün +15 AZN. Ödeme nakit, kartla veya çevrim içi (Tezöde, AzParkinq, Birbank)."
+  },
+  "wifi": {
+   "title": "Wi‑Fi",
+   "hint": "Baku-Airport-Free-WiFi ağı",
+   "text": "Kafeler, mağazalar ve business salonları dahil tüm terminalde ücretsiz Wi‑Fi: Baku-Airport-Free-WiFi ağı. Terminal 1'in gidiş alanlarında internetli ücretsiz bilgisayarlar var."
+  }
+ }
+}

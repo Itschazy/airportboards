@@ -1,0 +1,46 @@
+{
+ "iata": "AER",
+ "about": "Otobüsler Soçi havalimanını şehrin Adler, Hosta ve Merkez ilçelerine ve Krasnaya Polyana tatil merkezine bağlar. 65 bin m² alana sahip terminal kompleksi 2007–2013 yıllarında yeniden inşa edildi, bunun yanında bir VIP terminali de çalışıyor. İşletmeci: Sochi International Airport AO; havalimanı 2024 yılında 13,7 milyon yolcuya hizmet verdi.",
+ "blocks": {
+  "lounges": {
+   "title": "Business salonları",
+   "hint": "B ve C sektörleri, Kat 2",
+   "text": "İç hatlar business salonu B sektöründe, Kat 2'de, 21 numaralı kapının yanında. Ücreti 4 800 ₽. Dış hatlar business salonu C sektöründe, Kat 2'de. Ücreti 4 300 ₽; Grey Wall, UNIPASS, ONPASS, GoldenKey, Comfort Pass ve RusPriority kartlarıyla girilir. Konforlu bekleme salonu B sektöründe, Kat 2'de, 21 numaralı kapının yanında, ücreti 2 650 ₽. Tüm salonlar gece gündüz açık, salonda en fazla 3 saat kalınabilir; 12 yaşından küçük çocuklara %50 indirim, 2 yaşından küçük giriş ücretsiz."
+  },
+  "storage": {
+   "title": "Emanet",
+   "hint": "C sektörü, Kat 1, 24/7",
+   "text": "C sektörü, Kat 1, gece gündüz açık. İlk 24 saat parça başına 600 ₽'den, sonraki her 24 saat 300 ₽'den başlar. Bir parça en fazla 30 kg, üç boyutun toplamı en fazla 203 cm. 30 gün içinde alınmayan eşyalar sahipsiz sayılır. Telefon 8 (862) 249-78-46."
+  },
+  "sleep": {
+   "title": "Nerede uyunur",
+   "hint": "Kapsüller, B sektörü",
+   "text": "Aero Hotel kapsülleri B sektöründe, Kat 2'de, gece gündüz açık. Yolcu başına 990 ₽'den başlar. Kapsülde ses yalıtımı, klima, priz ve Wi‑Fi var. Rezervasyon cellhotel.ru üzerinden veya +7 (938) 875-18-05 numaralı telefondan."
+  },
+  "kids": {
+   "title": "Anne-bebek odası",
+   "hint": "B sektörü, Kat 2",
+   "text": "Anne-bebek odası B sektöründe, Kat 2'de, kullanımı ücretsiz. 7 yaşından küçük çocuklu yolcular, 14 yaşından küçük engelli çocuklu yolcular ve gebeliğin ikinci yarısındaki kadınlar kabul edilir. Pasaport ve biniş kartı veya bilet gerekir. Çocuklu gelen yolculara oda, ulaşım çalışmadığı 22:00–06:00 arasında açıktır. Bebek bakım odaları tüm sektörlerde tuvaletlerin yanında bulunur."
+  },
+  "transport": {
+   "title": "Nasıl gidilir",
+   "hint": "Lastochka, otobüsler",
+   "text": "Lastochka ve banliyö trenleri tren istasyonu meydanından kalkar: C1 sektörü, Kat 1. Adler, Soçi, Rosa Khutor ve Olimpiyat Parkı'na giderler. Otobüs meydanı B1 ile C1 arasında. Adler ve Olimpiyat Parkı'na 557, 558 ve 535 numaralı otobüsler gider. Soçi'ye 105 ve 105с. Krasnaya Polyana'ya 105, 105с ve 535. Resmî taksi kontuarı bagaj alım salonunda, A ve B sektörlerinde."
+  },
+  "parking": {
+   "title": "Otopark",
+   "hint": "15 dakika ücretsiz",
+   "text": "Terminal önü meydanında (1–6 numaralı girişler) ilk 15 dakika ücretsiz, sonrası saati 400 ₽. Günlük otoparkta (31, 32 numaralı girişler) ilk 15 dakika ücretsiz, sonrası saati 300 ₽; 3 saatten uzun kalınırsa günlüğü 1 500 ₽. Ana girişe 100 m kala, sağa dönüşte. Alternatif otopark terminalden yaklaşık 400 m uzakta."
+  },
+  "wifi": {
+   "title": "Wi‑Fi",
+   "hint": "Airport_Free",
+   "text": "Ücretsiz Airport_Free ağı tüm terminalde, VIP terminalinde ve business salonunda çalışır. Yalnızca Rus operatörüne ait SIM kartla bağlanılabilir."
+  },
+  "terminals": {
+   "title": "Terminal",
+   "hint": "A, B, C sektörleri",
+   "text": "Tek terminal, içinde A, B ve C sektörleri var. Check-in kontuarları üç sektörde de var, bagajsız yolcu kontuarları ise yalnızca A ve B'de. İç hat bagajları A ve B sektörlerinde, dış hat bagajları C sektöründe teslim edilir; hepsi Kat 1'de. Kontuarda check-in kalkıştan 3 saat önce açılır ve 40 dakika önce kapanır."
+  }
+ }
+}

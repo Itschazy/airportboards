@@ -1,0 +1,26 @@
+{
+ "iata": "KEJ",
+ "about": "Kemerowo: Internationaler Flughafen „A. A. Leonow“ 5 km südöstlich des Stadtrands und 11 km vom Zentrum. Eine Start- und Landebahn, der Flugplatz ist rund um die Uhr in Betrieb und wird gemeinsam mit dem Verteidigungsministerium und der Rosgwardija genutzt.",
+ "blocks": {
+  "lounges": {
+   "title": "Business-Lounges",
+   "hint": "Ebene 3, 4000 ₽",
+   "text": "Business-Lounge für Inlandsflüge auf Ebene 3, nach der Sicherheitskontrolle rechts, geöffnet von 04:30 bis 20:00. Kostenlos für Passagiere der Business Class und Inhaber von Karten mit Zugangsberechtigung; Economy mit den Karten Every Lounge, GoldenKey, RusPriority, Persona.aero und anderer Programme. Kostenpflichtig 4000 ₽, Kinder von 2–12 Jahren 2000 ₽, unter 2 Jahren kostenlos."
+  },
+  "storage": {
+   "title": "Gepäckaufbewahrung",
+   "hint": "Ab 200 ₽ pro Tag",
+   "text": "Die Gepäckaufbewahrung ist nach dem Zeitplan des Inlandsterminals geöffnet. Handgepäck 200 ₽ pro Tag, Gepäck bis 50×40×20 cm 220 ₽, größeres 270 ₽, über 100×50×70 cm 500 ₽. Weniger als ein Tag wird als voller Tag berechnet."
+  },
+  "kids": {
+   "title": "Mit Kind",
+   "hint": "Ebene 3, 04:30–20:00",
+   "text": "Mutter-Kind-Raum auf Ebene 3, im linken Flügel neben der Sicherheitskontrolle, kostenlos, von 04:30 bis 20:00. Für abfliegende Passagiere mit Kindern unter 7 Jahren, Kinder mit Behinderung unter 14 Jahren und Frauen in der zweiten Schwangerschaftshälfte."
+  },
+  "parking": {
+   "title": "Parken",
+   "hint": "15 Min. kostenlos",
+   "text": "Vorplatz 30 m vom Terminal, 173 Plätze: bis 15 Minuten kostenlos, die erste Stunde 300 ₽, die zweite und dritte je 200 ₽, ab der vierten Stunde Tagestarif 1000 ₽."
+  }
+ }
+}

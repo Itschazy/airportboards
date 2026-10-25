@@ -1,0 +1,26 @@
+{
+ "iata": "ARH",
+ "about": "F. A. Abramov adını taşıyan Arhangelsk Uluslararası Havalimanı (Talagi). İşletmeci: Arkhangelsk Airport AO. Talagi köyü yakınındaki yeni piste ilk uçuş 5 Şubat 1963'te kabul edildi.",
+ "blocks": {
+  "transport": {
+   "title": "Nasıl gidilir",
+   "hint": "Merkeze 12 numaralı otobüs",
+   "text": "12 numaralı otobüs Gagarina Caddesi, Voskresenskaya Caddesi ve Troitsky Bulvarı üzerinden Deniz-Nehir Garı'na gider. 153 numaralı otobüs Severodvinsk'e, Truda Bulvarı'na kadar gider: havalimanından 5:50, 9:10, 14:20 ve 17:30'da. Tarifeyi taşıyıcıdan teyit edin."
+  },
+  "lounges": {
+   "title": "Business salonları",
+   "hint": "3 No.lu pavyon, Kat 2",
+   "text": "İç hatlar business salonu 3 numaralı pavyonda Kat 2'de. Giriş 2 928 ₽, 2–12 yaş arası çocuklar 1 464 ₽, 2 yaşından küçük ücretsiz. Business sınıfı ve Aeroflot Bonus Gold ile Platinum sahipleri için ücretsiz. Mileonair, Every.Lounge, Golden Key ve diğer kartlarla güvenlik kontrolünden sonra 3 numaralı pavyonda Kat 1'deki SKY LOUNGE'a girilir, 04:00–21:30, en fazla 2 saat."
+  },
+  "storage": {
+   "title": "Emanet",
+   "hint": "3 No.lu pavyon, 24/7",
+   "text": "Emanet 3 numaralı pavyonda, gece gündüz açık. 30 kg'a kadar ve 1 m'den kısa bir bagaj parçası günlük 250 ₽. Belge, para, değerli eşya ve çabuk bozulan gıda kabul edilmez."
+  },
+  "parking": {
+   "title": "Otopark",
+   "hint": "P2'de 30 dakika ücretsiz",
+   "text": "Kısa süreli P2: 30 dakika ücretsiz, sonra saati 150 ₽, 4 saatin üzerinde günlüğü 800 ₽. Uzun süreli P1: ilk dakikadan itibaren günlüğü 400 ₽. Ücretsiz P4, 70 araçlık, terminal binasına 200 m uzaklıkta, süre sınırı yok. Otopark biletini kaybetme: 2 000 ₽."
+  }
+ }
+}

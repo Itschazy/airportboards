@@ -1,0 +1,31 @@
+{
+ "iata": "KGD",
+ "about": "Khrabrovo: aeropuerto internacional de Kaliningrado. La terminal de pasajeros, de 39 762 m², está diseñada para 5 millones de pasajeros al año; en la plataforma hay 6 pasarelas telescópicas. Una sola pista de 3350 × 45 m.",
+ "blocks": {
+  "transport": {
+   "title": "Cómo llegar",
+   "hint": "Autobús 244-Э, 45 min",
+   "text": "El autobús n.º 244-Э circula entre el aeropuerto y la estación de autobuses «Yuzhny» de Kaliningrado; el trayecto dura de media 45 minutos. La salida puede retrasarse hasta 15 minutos y el horario puede cambiar."
+  },
+  "lounges": {
+   "title": "Salas VIP",
+   "hint": "Sectores A y C, nivel 2",
+   "text": "Dos salas business en el nivel 2, en la zona estéril: «Kurshskiy Zaliv», para vuelos nacionales, en el sector A, y «Dyuny», para internacionales, en el sector C. Admiten a pasajeros de clase business y a todos los que paguen la entrada; los veteranos de la Gran Guerra Patria con acompañante, gratis."
+  },
+  "sleep": {
+   "title": "Dónde dormir",
+   "hint": "Cápsulas RecoRoom",
+   "text": "Hotel de cápsulas «RecoRoom Sonnik» en el recinto del aeropuerto: pago por horas, registro automático, cápsulas individuales y dobles con espacio para equipaje, enchufes y Wi‑Fi gratuito."
+  },
+  "kids": {
+   "title": "Con niños",
+   "hint": "Gratis",
+   "text": "La sala madre e hijo es gratuita para pasajeros que salen con niños menores de 7 años, niños con discapacidad menores de 14 años y mujeres en la segunda mitad del embarazo; funciona según el horario de la terminal. Primero se necesita un certificado del puesto médico del nivel 1, en la parte derecha del edificio; el equipaje se deja en la consigna."
+  },
+  "parking": {
+   "title": "Aparcamiento",
+   "hint": "15 min gratis, 400 ₽/hora",
+   "text": "Aparcamiento de corta estancia desde el 01.10.2026: los primeros 15 minutos gratis, después 400 ₽ por cada hora, también la incompleta. Larga estancia: 900 ₽ por día. Aparcamiento gratuito a 400 m de la terminal, para 300 coches. Está prohibido estacionar en el primer carril frente al edificio."
+  }
+ }
+}

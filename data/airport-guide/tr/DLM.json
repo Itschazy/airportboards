@@ -1,0 +1,25 @@
+{
+ "iata": "DLM",
+ "blocks": {
+  "transport": {
+   "title": "Nasıl gidilir",
+   "hint": "Marmaris ve Fethiye'ye Havaş",
+   "text": "Havaş servisleri havalimanı otoparkından Marmaris ve Fethiye merkezlerine kalkar. Marmaris güzergâhı: Dalaman, Ortaca, Köyceğiz, Gökova, Marmaris otogarı; Fethiye güzergâhı: Dalaman, Göcek, Günlükbaşı, Adnan Menderes Bulvarı, Fethiye otogarı. Şoföre önceden söylenirse yol üzerinde belirlenen noktalarda indirirler. Tarife ve fiyatlar Havaş sitesinde."
+  },
+  "taxi": {
+   "title": "Taksi",
+   "hint": "Havalimanı taksi kooperatifi",
+   "text": "Havalimanında taksi — Dalaman Airport Taxi kooperatifi; telefon ve WhatsApp +90 533 958 28 72, site dalamanairporttaxi.com."
+  },
+  "parking": {
+   "title": "Otopark",
+   "hint": "Gece gündüz, Terminal 1 ve 2",
+   "text": "Terminal 1 ve 2'nin yanındaki toplam 72 972 m²'lik otopark gece gündüz ve yıl boyu açık. Ücreti havalimanı sitesindeki hesaplayıcı belirler; tarifeleri DHMİ belirler, son güncelleme Ocak 2026, KDV dahil."
+  },
+  "wifi": {
+   "title": "Wi‑Fi",
+   "hint": "30 dakika ücretsiz",
+   "text": "Tüm geliş ve gidiş salonlarında DorukNet Wi‑Fi: kioskların pasaport taramasından sonra verdiği şifreyle 30 dakika ücretsiz; daha uzun süre ve premium ücretli. Business salonlarında ve genel havacılık terminalinde sınırsız."
+  }
+ }
+}

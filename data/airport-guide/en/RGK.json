@@ -1,0 +1,41 @@
+{
+ "iata": "RGK",
+ "about": "A federal airport 14 km from Gorno-Altaysk, 400 m from the М-52 highway (Chuysky Trakt). Operating since 1968, part of Sber Group since 2024. Three buildings: the departure terminal, the domestic arrivals terminal and the international terminal.",
+ "blocks": {
+  "transport": {
+   "title": "Getting there",
+   "hint": "Bus 103, 30 min",
+   "text": "Buses 103 (6:33–21:37) and 103-1 (6:37–20:37) to the centre of Gorno-Altaysk, about 30 minutes, 35–40 ₽. Manzherok taxi, the airport's official carrier: from 800 ₽, desk in the arrivals terminal, +7 913 690-29-31. By car 14 km, 15–20 minutes."
+  },
+  "terminals": {
+   "title": "Terminals",
+   "hint": "3 buildings, arrivals on left",
+   "text": "The central building houses the departure terminal and the business lounge. On the left is a separate domestic arrivals terminal. On the right is the international terminal with a VIP lounge."
+  },
+  "lounges": {
+   "title": "Lounges",
+   "hint": "Premium lounge 3,500 ₽",
+   "text": "Business lounge in the central building: business class passengers, holders of airline Gold and Platinum cards, and via Every Lounge, Grey Wall Pass and On Pass or for a fee. Premium comfort lounge: 3,500 ₽ adult, 2,500 ₽ child 2–12 years, under 2 free, up to 3 hours. VIP lounge in the international terminal. Booking: +7 913 691-11-39, vip@rgk-aero.ru."
+  },
+  "storage": {
+   "title": "Left luggage",
+   "hint": "Level 1, from 400 ₽/day",
+   "text": "Automated left luggage on Level 1 of the terminal, during airport opening hours. Lockers 400, 600 and 1,000 ₽ per day depending on size. Storage up to 6 months. Payment by card or cash."
+  },
+  "kids": {
+   "title": "With children",
+   "hint": "Level 2, free",
+   "text": "Mother and child room on Level 2 of the terminal, free. Admits passengers with children under 7, children with disabilities under 14, and women in the second half of pregnancy. Stay up to 12 hours before departure, after a check at the health post, with documents and a boarding pass."
+  },
+  "parking": {
+   "title": "Parking",
+   "hint": "15 min free",
+   "text": "At the terminals drop-off and pick-up is free for 15 minutes; a repeat entry within an hour 250 ₽. P1: 400 ₽/hour, from 1 to 5 hours 300 ₽/hour, 3,000 ₽/day. P2: 1,000 ₽/day. P3: 180 minutes free, from 3 to 5 hours 200 ₽/hour, then 800 ₽/day."
+  },
+  "wifi": {
+   "title": "Wi‑Fi",
+   "hint": "RGK_WIFI_FREE, via SMS",
+   "text": "Networks RGK_WIFI_FREE and Rostelekom_WiFi_FREE. Login with a phone number: the code arrives by SMS. Turn off mobile data while logging in."
+  }
+ }
+}

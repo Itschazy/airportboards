@@ -1,0 +1,36 @@
+{
+ "iata": "KUF",
+ "about": "Kurumotsch: Internationaler Flughafen Samara. Betrieben von der Verwaltungsgesellschaft „Aeroporty Regionow“. Mehr als 80 Ziele, mehr als 30 russische und internationale Fluggesellschaften.",
+ "blocks": {
+  "transport": {
+   "title": "Anreise",
+   "hint": "Bus 222, 1 Stunde",
+   "text": "Der Stadtbus Nr. 222 fährt vom Bahnhof Samara, Fahrzeit etwa 1 Stunde. Linie Nr. 78 fährt ab Barboschina Poljana, etwa 1 Stunde, werktags. Der Überlandbus Nr. 607 verbindet den Flughafen mit Samara (Bahnhof) und Toljatti, 50–80 Minuten, 265 ₽. Aus Toljatti fahren außerdem Nr. 333 und Nr. 652Т."
+  },
+  "lounges": {
+   "title": "Business-Lounges",
+   "hint": "Ebene 4, ab 5800 ₽",
+   "text": "Lounges für Inlands- und internationale Flüge auf Ebene 4. Zugang für Passagiere der Business Class, Teilnehmer von Bonusprogrammen der Fluggesellschaften und alle, die den Besuch bezahlen: 5800 ₽ bis zu 3 Stunden, Kinder von 2–12 Jahren 2900 ₽. Lounge für die Programme ON PASS, Grey Wall, EveryLounge, Persona.Aero, RusPriority, GoldenKey im Abflugbereich der Inlandsflüge, Ebene 3."
+  },
+  "storage": {
+   "title": "Gepäckaufbewahrung",
+   "hint": "Ebene 1, ab 250 ₽/Std.",
+   "text": "Automatische Gepäckaufbewahrung auf Ebene 1, rechts vom Eingang, bei den Ticketschaltern. Standardfach 250 ₽ pro Stunde oder 550 ₽ pro Tag. Großes Fach 350 ₽ pro Stunde oder 900 ₽ pro Tag. Sperrgepäck 1200 ₽ pro Stück."
+  },
+  "kids": {
+   "title": "Mit Kind",
+   "hint": "Ebene 3, 24/7",
+   "text": "Mutter-Kind-Raum auf Ebene 3, rund um die Uhr geöffnet. Aufgenommen werden Kinder unter 7 Jahren, mit Behinderung unter 14 Jahren, nur mit einem Erwachsenen. Erforderlich sind eine Bescheinigung der Sanitätsstation auf Ebene 1, Pass und Ticket. Bis zu 12 Stunden vor Abflug und bis zu 6 Stunden nach Ankunft."
+  },
+  "parking": {
+   "title": "Parken",
+   "hint": "Aussteigen 15 Min. kostenlos",
+   "text": "In der Hol- und Bringzone sind die ersten 15 Minuten kostenlos, von der 16. bis zur 60. Minute 880 ₽. Kurzzeitparkplatz P1: bis zu einer Stunde 357 ₽, bis 2 Stunden 682 ₽, ein Tag 1391 ₽. Langzeitparkplatz P2: ein Tag 791 ₽. Economy P4: 1054 ₽ für die ersten 2 Tage. Alle Parkplätze sind rund um die Uhr geöffnet."
+  },
+  "wifi": {
+   "title": "Wi‑Fi",
+   "hint": "Netz Free_KUF",
+   "text": "Kostenloses Netz Free_KUF in den Passagierbereichen des Terminals. Anmeldung mit der Mobilfunknummer, danach den Anweisungen auf dem Bildschirm folgen."
+  }
+ }
+}

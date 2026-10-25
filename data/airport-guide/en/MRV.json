@@ -1,0 +1,31 @@
+{
+ "iata": "MRV",
+ "about": "Mineralnye Vody: the largest airport of the North Caucasian Federal District. The runway, 3,900 m long and 60 m wide, was commissioned in 2011. Two departure terminals, domestic and international, and separate arrival terminals.",
+ "blocks": {
+  "transport": {
+   "title": "Getting there",
+   "hint": "Minibus 11, 20–25 min",
+   "text": "Minibus taxi No. 11 goes to Mineralnye Vody railway station, journey time 20–25 minutes; to the bus station, Rynok Ruslan stop, about 10 minutes. From the station, bus No. 223 goes to Pyatigorsk and No. 107 to Zheleznovodsk. Intercity buses to Essentuki, Kislovodsk, Teberda and Dombai leave from the bus station."
+  },
+  "lounges": {
+   "title": "Lounges",
+   "hint": "Beshtau, Level 3, 24/7",
+   "text": "Beshtau business lounge on Level 3 of the new terminal, airside after security, open round the clock. Admits business class passengers, members of ON Pass, Persona.Aero, Grey Wall Pass, Dragon Pass, Every Lounge and other programmes, and any passenger for a fee according to the price list."
+  },
+  "storage": {
+   "title": "Left luggage",
+   "hint": "Basement floor, 8:00–17:00",
+   "text": "Left luggage on the basement floor, reached by stairs only, open from 8:00 to 17:00. The first day (until 24:00) 900 ₽ per item, then 500 ₽ per day; a part day is charged as a full day. Storage for no longer than a month."
+  },
+  "kids": {
+   "title": "With children",
+   "hint": "Free, 24/7",
+   "text": "The mother and child room is open round the clock and free for holders of a ticket for a departure from Mineralnye Vody: passengers with children under 7 or disabled children under 16, and women in the second half of pregnancy. Ticket, passport and the child's birth certificate required."
+  },
+  "parking": {
+   "title": "Parking",
+   "hint": "15 min free",
+   "text": "Short-stay car park P1 at the departure hall: less than 15 minutes free, 15–60 minutes 500 ₽, then 500 ₽ per hour, over 4 hours 1,200 ₽ per day. A repeat entry within an hour 500 ₽. There is a free car park in the adjacent area; its location is on the parking map."
+  }
+ }
+}

@@ -1,0 +1,21 @@
+{
+ "iata": "IGT",
+ "about": "Der Flughafen „S. S. Oskanow“ liegt 30 km nordöstlich von Magas, am westlichen Rand der Staniza Ordschonikidsewskaja, 2 km vom Bahnhof „Slepzowskaja“. Betreiber: AO „Meschdunarodny aeroport ‚Magas‘ im. S. S. Oskanowa“. Das Terminal ist für Grenz- und Zollkontrollen ausgestattet.",
+ "blocks": {
+  "terminals": {
+   "title": "Terminal",
+   "hint": "1 Terminalgebäude",
+   "text": "Ein Terminalgebäude (Passagierterminal). Darin gibt es Räume für Grenz-, Einwanderungs-, Zoll-, Veterinär- sowie Sanitäts- und Quarantänekontrollen. Kapazität: 150 Passagiere pro Stunde."
+  },
+  "lounges": {
+   "title": "Business-Lounges",
+   "hint": "VIP-Lounge, auf Anfrage",
+   "text": "VIP-Lounge in einem separaten Gebäude: Wartebereich, Barbereich. Service auf Voranmeldung, Bezahlung nach den Tarifen des Flughafens. Es gibt einen Transfer zur und von der Flugzeugtreppe sowie einen kostenpflichtigen Parkplatz der VIP-Lounge für Abholer und Begleitpersonen."
+  },
+  "wifi": {
+   "title": "Wi‑Fi",
+   "hint": "Kostenloses Wi‑Fi",
+   "text": "Im Terminalgebäude gibt es kostenlosen Zugang zu Wi‑Fi."
+  }
+ }
+}

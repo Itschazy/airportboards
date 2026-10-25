@@ -1,0 +1,21 @@
+{
+ "iata": "NNM",
+ "about": "Der Flughafen wird von AO „Narjan-Marski objedinjonny awiaotrjad“ betrieben, Adresse: Narjan-Mar, Pereulok Aeroportowski, Gebäude 1А. Die Fluggesellschaft fliegt lokale Strecken im Autonomen Kreis der Nenzen. Auskunft: 8 (81853) 91-555.",
+ "blocks": {
+  "lounges": {
+   "title": "Business-Lounges",
+   "hint": "Ebene 1, nach der Kontrolle",
+   "text": "Komfort-Lounge auf Ebene 1, im Abflugbereich nach der Sicherheitskontrolle. Für Passagiere von Inlandsflügen, Zutritt 2 Stunden vor Abflug. Kinder unter 2 Jahren kostenlos. Der Zugang wird in der App MILE·ON·AIR im Bereich ON PASS gebucht. Telefon der Lounge: 8 (81853) 91-537."
+  },
+  "storage": {
+   "title": "Gepäckaufbewahrung",
+   "hint": "Ebene 1 des Terminals",
+   "text": "Ebene 1 des Terminals, geöffnet während der Betriebszeiten des Flughafens. Ein Gepäckstück bis 30 kg. Bei Flugverspätung oder Verschiebung auf den nächsten Tag wird Gepäck mit dem Ticket für diesen Flug kostenlos aufbewahrt."
+  },
+  "parking": {
+   "title": "Parken",
+   "hint": "45 Min. kostenlos",
+   "text": "Bis 45 Minuten kostenlos. Von 46 bis 60 Minuten: 500 ₽. Über eine Stunde bis 24 Stunden: 350 ₽ für jede Stunde. Über 24 Stunden bis 30 Tage: 600 ₽ pro 24 Stunden. Die Tarife gelten ab 1. August 2026."
+  }
+ }
+}

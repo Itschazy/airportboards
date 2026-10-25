@@ -1,0 +1,31 @@
+{
+ "iata": "CEK",
+ "about": "Balandino: Chelyabinsk International Airport named after I. V. Kurchatov. The new domestic terminal opened on 26 November 2019: 16,500 sq. m, four jet bridges, about 900 passengers per hour.",
+ "blocks": {
+  "transport": {
+   "title": "Getting there",
+   "hint": "Buses 1, 41, 45",
+   "text": "Bus No. 1 runs between the airport and the railway station, including via Tsentralny Rynok and Komsomolskaya Ploshchad. No. 41 goes to DK Stroiteley, No. 45 to Avtotsentr."
+  },
+  "lounges": {
+   "title": "Lounges",
+   "hint": "Level 2, after security",
+   "text": "Domestic business lounge on Level 2 of the terminal, after security screening. Admits business class passengers, elite members of airline and bank loyalty programmes, and economy passengers for a fee, no earlier than 3 hours before departure. Food and soft drinks are included."
+  },
+  "kids": {
+   "title": "With children",
+   "hint": "Free, 24/7",
+   "text": "The mother and child room is free and open round the clock, for stays of up to 3–4 hours. For passengers with children under 8, disabled children under 14 and women in the second half of pregnancy. If it is closed, go to the information desk on Level 1 opposite the entrance."
+  },
+  "parking": {
+   "title": "Parking",
+   "hint": "15 min free",
+   "text": "Car park P on the station forecourt: 15 minutes free once an hour, first hour 300 ₽, then 250 ₽ per hour, first 24 hours 1,300 ₽ in total, beyond 24 hours 700 ₽ per 24 hours. A free car park with 100 spaces for those meeting passengers is on the south side of the Aeroport settlement."
+  },
+  "wifi": {
+   "title": "Wi‑Fi",
+   "hint": "Free",
+   "text": "Passengers and airport visitors can use the internet over Wi‑Fi free of charge."
+  }
+ }
+}

@@ -1,0 +1,36 @@
+{
+ "iata": "GOJ",
+ "about": "El Aeropuerto Internacional de Nizhni Nóvgorod V. P. Chkálov atiende vuelos nacionales e internacionales. Operador: AO «MANN». En 2024 el aeropuerto atendió a 1,47 millones de pasajeros; su red tiene 29 destinos.",
+ "blocks": {
+  "transport": {
+   "title": "Cómo llegar",
+   "hint": "Autobuses 11, 56, А50",
+   "text": "Autobuses urbanos: n.º 11 hasta la calle Druzhaeva, n.º 56 hasta Krasnoye Sormovo, n.º А50 hasta DK Avtozavoda. Los trenes de cercanías salen de la estación N. Novgorod-Chkalov hacia la estación Moskovski; el trayecto dura 26–34 minutos y el billete cuesta 28 ₽. Operador de los trenes: AO «Volgo-Vyatskaya PPK»."
+  },
+  "lounges": {
+   "title": "Salas VIP",
+   "hint": "Nivel 2, desde 5800 ₽",
+   "text": "Tres salas en el nivel 2: sala de vuelos nacionales, sala de vuelos internacionales y sala para titulares de tarjetas bancarias en la zona de salidas nacionales. Salas de vuelos nacionales e internacionales: 5800 ₽ hasta 3 horas, después 550 ₽ por cada hora. A la sala bancaria se accede con los programas On-pass, Grey Wall, UniPass, Every Lounge, Golden Key y RusPriority. La sala de vuelos nacionales abre día y noche."
+  },
+  "storage": {
+   "title": "Consigna",
+   "hint": "Nivel 1, desde 250 ₽/hora",
+   "text": "Consigna automática en el nivel 1, a la izquierda de la salida de la zona de recogida de equipajes de vuelos nacionales. Taquilla estándar: 250 ₽ por hora o 550 ₽ por día. Taquilla grande: 350 ₽ por hora o 900 ₽ por día. Guardarropa: 100 ₽ por día."
+  },
+  "kids": {
+   "title": "Con niños",
+   "hint": "Nivel 2, 24/7",
+   "text": "Sala madre e hijo en el nivel 2 de la terminal, abierta día y noche. Admite a niños menores de 7 años y niños con discapacidad menores de 14 años, solo con un adulto. Se necesitan pasaporte y billete de avión. Estancia de hasta 12 horas antes de la salida y hasta 6 horas después de la llegada."
+  },
+  "parking": {
+   "title": "Aparcamiento",
+   "hint": "15 min gratis",
+   "text": "Zona de recogida y bajada de pasajeros: los primeros 15 minutos gratis, del minuto 16 al 60, 890 ₽, después 890 ₽ por hora. Aparcamiento P junto a la terminal: hasta 1 hora 370 ₽, de 1 a 24 horas 750 ₽, hasta 2 días 1500 ₽. Aparcamiento gratuito abierto día y noche a 700 m de la terminal, sin vigilancia. Primer carril (zona VIP): 3000 ₽ por entrada."
+  },
+  "wifi": {
+   "title": "Wi‑Fi",
+   "hint": "Red Free_GOJ",
+   "text": "Wi‑Fi gratuito en las zonas de pasajeros de la terminal. Red Free_GOJ. Acceso con el número de teléfono móvil y, después, siguiendo las instrucciones de la pantalla."
+  }
+ }
+}

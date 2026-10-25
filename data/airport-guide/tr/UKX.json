@@ -1,0 +1,26 @@
+{
+ "iata": "UKX",
+ "about": "Havalimanı Ust-Kut'un 10 km kuzeyinde. Bugünkü havalimanının inşaatı 1963'te başladı; toprak piste ilk uçuşlar aynı yılın sonbaharında yapıldı.",
+ "blocks": {
+  "transport": {
+   "title": "Nasıl gidilir",
+   "hint": "Yalnızca taksi",
+   "text": "Havalimanına şehir içi toplu taşıma yok. Yalnızca özel taksiyle gidilebilir."
+  },
+  "terminals": {
+   "title": "Terminal",
+   "hint": "Kontuar 40 dk önce kapanır",
+   "text": "Check-in, uçak tipine göre kalkıştan 2 saat veya 1 sa 30 dk önce başlar. Kalkıştan 40 dakika önce biter. Biniş için kâğıt biniş kartı gerekir: check-in bitiminden en geç 10 dakika önce kontuardan alın."
+  },
+  "storage": {
+   "title": "Emanet",
+   "hint": "Check-in kontuarının yanında",
+   "text": "Terminal binasında, check-in kontuarının yanında. Telefon: +7 (39565) 5-07-09."
+  },
+  "kids": {
+   "title": "Çocukla",
+   "hint": "7 yaşından küçük çocuklar, ücretsiz",
+   "text": "Anne-bebek odası terminal binasında. 7 yaşından küçük çocuklu giden yolcular için, kalış 3–4 saate kadar. Çocukla birlikte bir yetişkin kalabilir. Ücretsiz. Danışma bürosuna veya check-in kontuarına başvurun."
+  }
+ }
+}

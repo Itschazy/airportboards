@@ -1,0 +1,46 @@
+{
+ "iata": "SVO",
+ "about": "Scheremetjewo liegt in Chimki im Gebiet Moskau. Die Terminals sind auf zwei Komplexe verteilt: Nord (B und C) und Süd (D, E, F und das Aeroexpress-Terminal), zwischen ihnen fährt ein Terminalverbindungszug. Betreiber des Flughafens: AO „MASCH“.",
+ "blocks": {
+  "lounges": {
+   "title": "Business-Lounges",
+   "hint": "8 Lounges in B, C und D",
+   "text": "Inlandsflüge: „Rubljow“ (B, Ebene 3, an den Gates 105–106), „Kandinsky“ und „A-Klub“ (B, Ebene 2), „Sotschi“ (D, Ebene 2). International: „Malewitsch“ (C, Ebene 3, Eingang an Gate 143), „Chagall“, „Alfa Only“ und „Sber“ (C, Ebene 3). In „Rubljow“ und „Malewitsch“ haben Passagiere der Premium-Klassen und Inhaber von „Aeroflot Bonus“-Karten der Stufen Gold, Platinum, Infinite und Infinite Pro kostenlosen Zutritt. Alle anderen zahlen 4500 ₽ für 4 Stunden, Kinder unter 2 Jahren kostenlos."
+  },
+  "storage": {
+   "title": "Gepäckaufbewahrung",
+   "hint": "B, D und Aeroexpress",
+   "text": "Kostenpflichtige Gepäckaufbewahrungen gibt es in Terminal B (Ebene 1), Terminal D (Ebene −1) und im Aeroexpress-Terminal, alle im öffentlichen Bereich. In B und im Aeroexpress-Terminal sind sie rund um die Uhr geöffnet. Die ersten 24 Stunden kosten 700 ₽ pro Gepäckstück, danach 300 ₽ pro 24 Stunden. Ein Gepäckstück wiegt höchstens 32 kg, Aufbewahrung bis zu 6 Monate."
+  },
+  "sleep": {
+   "title": "Schlafen",
+   "hint": "Kapseln in B, C und am Zug",
+   "text": "GettSleep in Terminal B: Ebene 3, öffentlicher Bereich, neben der Wechselstube, keine Bordkarte nötig. GettSleep in Terminal C: Ebene 3, internationaler Sicherheitsbereich, neben der Lounge Orion, nur mit Bordkarte für einen internationalen Flug. Ein weiteres GettSleep befindet sich auf Ebene 3 des Aeroexpress-Terminals. Alle rund um die Uhr, stundenweise Bezahlung ab 4 Stunden."
+  },
+  "kids": {
+   "title": "Mit Kind",
+   "hint": "B, C, D – rund um die Uhr",
+   "text": "Mutter-Kind-Räume gibt es in Terminal B (Ebene 1), Terminal C (Ebene 3) und Terminal D (Ebene 2), alle im öffentlichen Bereich. Rund um die Uhr geöffnet und kostenlos. Zugang für Passagiere mit Kindern unter 7 Jahren (mit Kindern mit Behinderung unter 14 Jahren) und Schwangere. Mitzubringen sind Tickets oder Bordkarten und Dokumente für Erwachsene und Kind."
+  },
+  "transport": {
+   "title": "Anreise",
+   "hint": "Aeroexpress und Bus",
+   "text": "Der Aeroexpress fährt vom Belorussischen Bahnhof, Sawjolowskaja, Okruschnaja und Lianosowo alle 30 Minuten, nachts mit Pause. Vom Belorussischen Bahnhof zu den Terminals B und C 46 Minuten, zu D, E, F 61 Minuten. Die Expressbusse von Aeroexpress fahren ab Metro „Chowrino“ (Ausgang Nr. 2): Nr. 1195 nach B und C, Nr. 1195D nach D. Takt 10–15 Minuten, Fahrzeit etwa 20 Minuten, Fahrschein 450 ₽."
+  },
+  "parking": {
+   "title": "Parken",
+   "hint": "10 Min. kostenlos an B, C",
+   "text": "Die Einfahrt in die Zonen „Ankunft“ und „Abflug“ der Terminals B und C ist 10 Minuten kostenlos, auf dem Platz an D, E, F 15 Minuten. Über das Limit hinaus Strafgebühr 4000 ₽ pro Stunde. Autos lassen Fahrgäste in der Zone „Abflug“ an den Parkhäusern B und C aussteigen, von dort sind es 2 Minuten durch eine überdachte Galerie zum Terminal. Kostenlos darf man höchstens zweimal in zwei Stunden einfahren."
+  },
+  "wifi": {
+   "title": "Wi‑Fi",
+   "hint": "_Sheremetyevo Wi-Fi",
+   "text": "Das kostenlose Netz „_Sheremetyevo Wi-Fi“ ist auf dem gesamten Flughafengelände verfügbar. Zum Verbinden ist eine Identifizierung per Telefonnummer nötig: die Nummer auf dem Bildschirm anrufen, den Rückruf annehmen und die letzten 4 Ziffern der Nummer oder den Code aus der SMS eingeben."
+  },
+  "terminals": {
+   "title": "Terminals",
+   "hint": "Nord B, C – Süd D, E, F",
+   "text": "Der Flughafen besteht aus zwei Komplexen: Nord (Terminals B und C) und Süd (Terminals D, E, F und das Aeroexpress-Terminal). Zwischen ihnen fahren Terminalverbindungszüge, der Betrieb wurde am 1. Juni 2024 wieder aufgenommen. Außerdem kommt man mit den Bussen Nr. 817 und Nr. 851 nach Fahrplan oder mit dem Auto hinüber."
+  }
+ }
+}

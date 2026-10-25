@@ -1,0 +1,36 @@
+{
+ "iata": "GOJ",
+ "about": "L'aéroport international de Nijni Novgorod Valeri-Tchkalov accueille des vols intérieurs et internationaux. Exploitant : SA « MANN ». En 2024, l'aéroport a accueilli 1,47 million de passagers, et son réseau compte 29 destinations.",
+ "blocks": {
+  "transport": {
+   "title": "Comment s'y rendre",
+   "hint": "Bus 11, 56, А50",
+   "text": "Bus urbains : n° 11 jusqu'à la rue Droujaeva, n° 56 jusqu'à Krasnoïe Sormovo, n° А50 jusqu'à la Maison de la culture de l'Usine automobile. Les trains de banlieue partent de la gare de N. Novgorod-Tchkalov vers la gare de Moscou, trajet de 26–34 minutes, billet 28 ₽. Transporteur ferroviaire : SA « Volgo-Viatskaïa PPK »."
+  },
+  "lounges": {
+   "title": "Salons",
+   "hint": "Niveau 2, dès 5800 ₽",
+   "text": "Trois salons au niveau 2 : salon des vols intérieurs, salon des vols internationaux et salon pour les titulaires de cartes bancaires dans la zone de départ des vols intérieurs. Salons des vols intérieurs et internationaux : 5800 ₽ jusqu'à 3 heures, ensuite 550 ₽ par heure. Le salon bancaire est accessible avec les programmes On-pass, Grey Wall, UniPass, Every Lounge, Golden Key, RusPriority. Le salon des vols intérieurs est ouvert jour et nuit."
+  },
+  "storage": {
+   "title": "Consigne à bagages",
+   "hint": "Niveau 1, dès 250 ₽/h",
+   "text": "Consigne automatique au niveau 1, à gauche de la sortie de la zone de livraison des bagages des vols intérieurs. Casier standard : 250 ₽ de l'heure ou 550 ₽ par jour. Grand casier : 350 ₽ de l'heure ou 900 ₽ par jour. Vestiaire : 100 ₽ par jour."
+  },
+  "kids": {
+   "title": "Avec un enfant",
+   "hint": "Niveau 2, 24/7",
+   "text": "Salle mère-enfant au niveau 2 du terminal, ouverte jour et nuit. Enfants de moins de 7 ans, enfants handicapés de moins de 14 ans, uniquement avec un adulte. Passeport et billet d'avion requis. Séjour jusqu'à 12 heures avant le départ et jusqu'à 6 heures après l'arrivée."
+  },
+  "parking": {
+   "title": "Parking",
+   "hint": "15 min gratuites",
+   "text": "Zone de dépose et de prise en charge : 15 premières minutes gratuites, de la 16e à la 60e minute 890 ₽, ensuite 890 ₽ de l'heure. Parking P près du terminal : jusqu'à 1 heure 370 ₽, de 1 à 24 heures 750 ₽, jusqu'à 2 jours 1500 ₽. Parking gratuit jour et nuit à 700 m du terminal, non gardé. Première voie (zone VIP) : 3000 ₽ par entrée."
+  },
+  "wifi": {
+   "title": "Wi‑Fi",
+   "hint": "Réseau Free_GOJ",
+   "text": "Wi‑Fi gratuit dans les zones passagers du terminal. Réseau Free_GOJ. Connexion par numéro de téléphone mobile, puis suivre les instructions à l'écran."
+  }
+ }
+}

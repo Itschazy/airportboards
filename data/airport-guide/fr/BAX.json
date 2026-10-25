@@ -1,0 +1,41 @@
+{
+ "iata": "BAX",
+ "about": "Barnaoul : aéroport international Guerman-Titov, principal aéroport du kraï de l'Altaï, géré par la SA « Aviapredpriïatie Altaï ». Piste de 2850 × 50 m. Le grand aéroport le plus proche des stations de l'Altaï montagneux et de Belokourikha.",
+ "blocks": {
+  "transport": {
+   "title": "Comment s'y rendre",
+   "hint": "Bus 110",
+   "text": "Le bus n° 110 circule entre l'aéroport et la gare routière « Spartak-2 », 11 départs dans chaque sens : depuis l'aéroport de 6:00 à 18:50, depuis la gare routière de 7:10 à 20:00. Les horaires peuvent varier selon la circulation."
+  },
+  "lounges": {
+   "title": "Salons",
+   "hint": "Aile droite, 6200 ₽",
+   "text": "Terminal affaires des vols intérieurs dans l'aile droite de l'aérogare, accès par l'entrée principale. Enregistrement et contrôle propres, transfert à l'avion en minibus. Pour les passagers au départ à partir de 2 ans 6200 ₽, à l'arrivée 4150 ₽, séjour de 3 heures, entrée gratuite pour les enfants de moins de 2 ans. Non accessible aux passagers internationaux."
+  },
+  "storage": {
+   "title": "Consigne à bagages",
+   "hint": "Niveau 1, 210 ₽ par jour",
+   "text": "Consigne pour bagages et bagages à main au niveau 1 de l'aérogare. Un bagage 210 ₽ par jour quelle que soit sa taille ; le jour est calendaire, de 00:00 à 23:59. Les sacs attachés aux bagages comptent comme un bagage distinct."
+  },
+  "sleep": {
+   "title": "Où dormir",
+   "hint": "Hôtel de l'aéroport",
+   "text": "L'hôtel de la SA « Aviapredpriïatie Altaï » se trouve directement sur le site de l'aéroport : chambres de différentes catégories de prix et café."
+  },
+  "kids": {
+   "title": "Avec un enfant",
+   "hint": "Niveau 2, gratuit, 24/7",
+   "text": "Salle mère-enfant au deuxième niveau, gratuite et ouverte jour et nuit. Pour les passagers au départ avec des enfants de moins de 7 ans, les enfants handicapés de moins de 14 ans et les femmes dans la seconde moitié de la grossesse. Cuisine, chambre avec lits d'enfant, salle de jeux."
+  },
+  "parking": {
+   "title": "Parking",
+   "hint": "Parking gratuit",
+   "text": "Au-delà de la zone de parc de l'aéroport se trouve un parking gratuit d'environ 100 voitures, sans limite de temps. Des dépanneuses opèrent sur la place de l'aérogare, le stationnement hors des emplacements prévus est interdit."
+  },
+  "wifi": {
+   "title": "Wi‑Fi",
+   "hint": "Gratuit, 3 fournisseurs",
+   "text": "Wi‑Fi gratuit pour les passagers et visiteurs de l'aéroport, proposé par trois fournisseurs : « Avantel », « Beeline » et MTS. Choisir le fournisseur sur l'appareil et suivre les instructions à l'écran."
+  }
+ }
+}

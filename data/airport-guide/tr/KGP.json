@@ -1,0 +1,16 @@
+{
+ "iata": "KGP",
+ "about": "Havalimanı Kogalım'da, Aviatorov Caddesi 21'de. İşletmeci: Aeroport Kogalym AO. Petrol sektörünün vardiyalı personel taşımacılığına, kargo uçuşlarına ve iş havacılığına hizmet verir.",
+ "blocks": {
+  "terminals": {
+   "title": "Terminal",
+   "hint": "06:00–22:00",
+   "text": "Terminal binası yerel saatle 06:00–22:00 arası açık. Çalışma düzeni uçuş tarifesine göre değişebilir; +7 (34667) 4-33-11, dahili 333 numaralı telefondan teyit edin. Check-in kalkıştan 2 saat önce başlar ve 40 dakika önce biter."
+  },
+  "lounges": {
+   "title": "Business salonları",
+   "hint": "Gidiş: 13 908 ₽",
+   "text": "Aeroport Kogalym AO'nun konforlu bekleme salonu. Gidiş: yetişkin 13 908 ₽, 2–12 yaş çocuk 6 954 ₽. Geliş: 10 223,60 ₽ ve 5 111,80 ₽. Karşılayanlar: 5 111,80 ₽, uğurlayanlar: 6 954 ₽. Fiyatlar KDV dahil, 01.01.2026'dan itibaren geçerli."
+  }
+ }
+}

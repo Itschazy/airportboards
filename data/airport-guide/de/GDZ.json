@@ -1,0 +1,31 @@
+{
+ "iata": "GDZ",
+ "about": "Betreiber des Flughafens ist OOO „Aeroport Gelendschik“. Das neue Terminal mit 16.700 m² nach einem Entwurf des Büros Fuksas wurde 2022 eröffnet, Kapazität 891 Passagiere pro Stunde. Es werden Inlandsflüge innerhalb Russlands durchgeführt.",
+ "blocks": {
+  "transport": {
+   "title": "Anreise",
+   "hint": "Bus 5",
+   "text": "Bus Nr. 5 „Mikrorajon Tolsty Mys – Mikrorajon Tonki Mys“. Die Haltestelle liegt rechts vom Terminalausgang, an der zweiten Fahrspur. Das offizielle Taxi „Awtoexpress“ hält an der ersten Fahrspur gegenüber dem Ausgang aus dem Ankunftsbereich. Adresse für Taxis: Uliza Solnzedarskaja 10."
+  },
+  "lounges": {
+   "title": "Business-Lounges",
+   "hint": "Ebene 2",
+   "text": "Business-Lounge auf Ebene 2 des Terminals. Vorrang haben Passagiere der Business Class und Inhaber von Treuekarten von Fluggesellschaften, Economy Class bei freien Plätzen. Es gibt einen eigenen Check-in-Schalter und einen Transfer zum Flugzeug. Komfort-Lounge AURA lounge: bis zu 3 Stunden, Kinder unter 2 Jahren kostenlos, Zugang mit ONPASS."
+  },
+  "storage": {
+   "title": "Gepäckaufbewahrung",
+   "hint": "Ebene 1, ab 200 ₽",
+   "text": "Automatische Gepäckaufbewahrung auf Ebene 1, links von den Check-in-Schaltern, während der Öffnungszeiten des Flughafens. Kleines Fach von 200 ₽ für 2 Stunden bis 800 ₽ pro Tag, mittleres 300–900 ₽, großes 400–1000 ₽. Bezahlung bar oder mit Karte am Terminal, der Beleg mit Strichcode öffnet das Fach."
+  },
+  "kids": {
+   "title": "Mit Kind",
+   "hint": "Ebene 1, kostenlos",
+   "text": "Mutter-Kind-Raum auf Ebene 1, im rechten Flügel des Terminals. Kostenlos, bis zu 3 Stunden. Zugang mit Kindern unter 7 Jahren, Kindern mit Behinderung unter 14 Jahren und für Schwangere in der zweiten Schwangerschaftshälfte. Erforderlich sind eine Untersuchung in der Sanitätsstation, Ticket oder Bordkarte, Pass und Geburtsurkunde des Kindes."
+  },
+  "parking": {
+   "title": "Parken",
+   "hint": "15 Min. kostenlos",
+   "text": "250 Plätze. Die ersten 15 Minuten kostenlos, danach 300 ₽ für jede Stunde, über 3 Stunden 900 ₽/Tag. Halten an der zweiten Fahrspur 1000 ₽/Stunde, VIP-Parkplatz 2000 ₽/Stunde. Erneute Einfahrt innerhalb einer Stunde ohne kostenlose 15 Minuten."
+  }
+ }
+}

@@ -1,0 +1,16 @@
+{
+ "iata": "KGP",
+ "about": "The airport is in Kogalym, 21 Aviatorov St. Operator: JSC Kogalym Airport. It serves shift-worker transport for the oil industry, cargo flights and business aviation.",
+ "blocks": {
+  "terminals": {
+   "title": "Terminal",
+   "hint": "06:00–22:00",
+   "text": "The terminal is open from 06:00 to 22:00 local time. Hours may change with the flight schedule; check by phone +7 (34667) 4-33-11, ext. 333. Check-in opens 2 hours and closes 40 minutes before departure."
+  },
+  "lounges": {
+   "title": "Lounges",
+   "hint": "Departure: 13,908 ₽",
+   "text": "Premium comfort lounge of JSC Kogalym Airport. Departure: 13,908 ₽ adult, 6,954 ₽ child 2–12 years. Arrival: 10,223.60 ₽ and 5,111.80 ₽. Meeting passengers: 5,111.80 ₽, seeing off: 6,954 ₽. Prices include VAT, valid from 01.01.2026."
+  }
+ }
+}

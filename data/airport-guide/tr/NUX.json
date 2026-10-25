@@ -1,0 +1,31 @@
+{
+ "iata": "NUX",
+ "about": "Noviy Urengoy Havalimanı Aeroporty Regionov yönetim şirketi tarafından işletilir. 19 hatta tarifeli uçuşlar yapılır; havalimanı 2025'te 1 milyondan fazla yolcuya hizmet verdi.",
+ "blocks": {
+  "transport": {
+   "title": "Nasıl gidilir",
+   "hint": "Gardan 101 numara, 18 dk",
+   "text": "101 numaralı Yamal-Ekspress otobüsü tren garından, 18 dk. 3 numaralı otobüs tren garından, 30 dk, 8–15 dk arayla, 43 ₽. 1 numaralı otobüs Sever semtinden, 45 dk, 8–10 dk arayla, 43 ₽."
+  },
+  "parking": {
+   "title": "Otopark",
+   "hint": "15 dakika ücretsiz",
+   "text": "İndirme-bindirme alanı: 15 dk ücretsiz, 60 dk'ya kadar 540 ₽, sonrası saati 540 ₽. Ücretsiz süresi olmayan P1 otoparkı: 60 dk'ya kadar 320 ₽, 2 saate kadar 560 ₽, 24 saate kadar 740 ₽. 55 araçlık ücretsiz P0 otoparkı Vertodrom durağında, terminale 2 durak."
+  },
+  "lounges": {
+   "title": "Business salonları",
+   "hint": "Güvenlikten sonra, 5800 ₽",
+   "text": "Business salonu güvenlik kontrolünden sonraki bekleme alanında. Business sınıfı yolcuları, Persona.Aero, ON PASS, Grey Wall, Every Lounge, GoldenKey üyeleri ve ücretini kendisi ödeyenler kabul edilir. Ücreti 3 saate kadar 5800 ₽, sonrası her saat 550 ₽."
+  },
+  "storage": {
+   "title": "Emanet",
+   "hint": "Gidiş salonu, 500 ₽'den",
+   "text": "Otomatik emanet dolapları Kat 1'deki gidiş salonunda. Standart dolap günlüğü 500 ₽ veya saati 200 ₽, büyük dolap günlüğü 900 ₽ veya saati 300 ₽. Dolap fişteki barkodla açılır."
+  },
+  "wifi": {
+   "title": "Wi‑Fi",
+   "hint": "FREE_NUX ağı",
+   "text": "Yolcu alanlarında ücretsiz Wi‑Fi. FREE_NUX ağını seçin ve girişi cep telefonu numaranızla onaylayın."
+  }
+ }
+}

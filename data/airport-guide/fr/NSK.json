@@ -1,0 +1,31 @@
+{
+ "iata": "NSK",
+ "about": "Aéroport au sud de la péninsule de Taïmyr, dans le nord du kraï de Krasnoïarsk. Exploitant : SARL « Aéroport de Norilsk ». Quatre compagnies aériennes assurent des vols réguliers vers dix villes de Russie ; trafic de 883 000 passagers en 2024.",
+ "blocks": {
+  "transport": {
+   "title": "Comment s'y rendre",
+   "hint": "Bus 33, 1 h 10 min",
+   "text": "Le bus 33 circule entre la gare routière « Norilsk (ADTs) », la gare routière « Kaïerkan (TBK) » et l'aérogare, trajet de 1 h 10 min. Le bus 110 pour Doudinka part de l'aéroport tous les jours à 09:00. L'arrêt du bus pour Doudinka est à la sortie du hall des arrivées."
+  },
+  "terminals": {
+   "title": "Terminal",
+   "hint": "Une aérogare, 2 étages",
+   "text": "Une seule aérogare. Au niveau 1 : bureau d'information, comptoirs d'enregistrement, salle d'attente, emballage et recherche des bagages. Au niveau 2 : contrôle, salon et police. Du 25.10.2026 au 27.03.2027, l'aérogare est ouverte du lundi au samedi 06:00–21:00, le dimanche 06:00–12:00."
+  },
+  "lounges": {
+   "title": "Salons",
+   "hint": "Niveau 2, 7450 ₽",
+   "text": "Salon dans le hall des départs au niveau 2, jusqu'à 49 places. Départ ou arrivée 7450 ₽, enfant de 2 à 12 ans 3725 ₽, gratuit pour les moins de 2 ans. Personnes accompagnant ou accueillant un passager 3240 ₽. Téléphones : +7 (3919) 31-54-22, 31-53-89."
+  },
+  "sleep": {
+   "title": "Où dormir",
+   "hint": "Maison de repos, 24/7",
+   "text": "Maison de repos de l'aéroport sur la place de l'aérogare. 30 chambres pour 55 personnes, ouverte jour et nuit. Hébergement des passagers et d'autres personnes sur présentation du passeport, paiement par journée entière, prépaiement de 100%. Téléphone +7 (3919) 31-53-70."
+  },
+  "kids": {
+   "title": "Avec un enfant",
+   "hint": "Niveau 2, gratuit",
+   "text": "Salle mère-enfant au niveau 2 de l'aérogare. Gratuite pour les femmes avec des enfants de moins de 5 ans et les femmes enceintes dans la seconde moitié de la grossesse. En cas de retard du vol, les enfants de moins de 7 ans sont hébergés gratuitement aux frais de la compagnie aérienne. Chambre, salle de jeux, espace pour préparer et prendre les repas."
+  }
+ }
+}

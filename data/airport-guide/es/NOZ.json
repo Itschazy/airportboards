@@ -1,0 +1,41 @@
+{
+ "iata": "NOZ",
+ "about": "Aeropuerto Internacional de Novokuznetsk B. V. Volynov, puerta aérea de la estación de esquí de Sheregesh. La nueva terminal, de 19,5 mil m², se inauguró el 25 de febrero de 2025; su capacidad es de 1,73 millones de pasajeros al año.",
+ "blocks": {
+  "transport": {
+   "title": "Cómo llegar",
+   "hint": "Autobús 160, ~60 min",
+   "text": "Los autobuses 120, 130 y 160 circulan de 5:20 a 22:34. El n.º 160, desde la avenida Oktyabrski, unos 60 minutos, 76 ₽. El n.º 120, desde la mina Krasnogorskaya, unos 80 minutos, 50 ₽. El n.º 130, desde Dom Veteranov, unos 90 minutos, 50 ₽. Taxi: unos 40 minutos, aproximadamente 800 ₽."
+  },
+  "terminals": {
+   "title": "Terminal",
+   "hint": "6 puertas, 3 pasarelas",
+   "text": "La nueva terminal se inauguró el 25 de febrero de 2025. 13 mostradores de facturación, 6 puertas de embarque, 3 pasarelas telescópicas. La facturación y la entrega de equipaje cierran 40 minutos antes de la salida; el embarque, 20 minutos antes."
+  },
+  "lounges": {
+   "title": "Salas VIP",
+   "hint": "Nivel 3, 3400 ₽",
+   "text": "Sala business de vuelos nacionales en el nivel 3; funciona durante la atención de los vuelos. Adultos 3400 ₽, niños de 2–12 años 1700 ₽, menores de 2 años gratis, hasta 3 horas. Se accede con MILEONAIR, Every Lounge, UniPass, Grey Wall Pass, Golden Key y Persona aero. Sala VIP en los niveles 1–2, previa solicitud; salida desde 18 900 ₽."
+  },
+  "storage": {
+   "title": "Consigna",
+   "hint": "Nivel 1, 24/7",
+   "text": "Consigna en el nivel 1, día y noche. Equipaje estándar de hasta 203 cm de suma de dimensiones: 400 ₽ las primeras 24 horas, después 200 ₽. Equipaje de gran tamaño: 750 ₽ las primeras 24 horas, después 400 ₽. Un bulto, hasta 30 kg."
+  },
+  "sleep": {
+   "title": "Dónde dormir",
+   "hint": "Hotel, desde 4200 ₽",
+   "text": "Hotel en el recinto del aeropuerto, calle Aeroportovaya, 33. 27 habitaciones, desde 4200 ₽ por día. Recepción día y noche: +7 (3843) 993 455. La cafetería del hotel abre día y noche."
+  },
+  "kids": {
+   "title": "Con niños",
+   "hint": "Nivel 2, 24/7, gratis",
+   "text": "Sala madre e hijo en el nivel 2, en la zona pública de la terminal. Día y noche, gratis. Admite a un niño menor de 7 años acompañado de un adulto. Hay cocina con nevera y microondas, ducha y cambiador; no hay esterilizadores."
+  },
+  "parking": {
+   "title": "Aparcamiento",
+   "hint": "15 min gratis",
+   "text": "P1: solo para subir y bajar pasajeros; prohibido estacionar. P2, corta estancia: 15 minutos gratis, 16–60 minutos 300 ₽, de la 2.ª a la 4.ª hora 100 ₽/hora, más de 4 horas 700 ₽/día. P3, larga estancia: 15 minutos gratis, 500 ₽/día hasta 6 días. El día incompleto se paga como completo."
+  }
+ }
+}

@@ -1,0 +1,20 @@
+{
+ "iata": "EYK",
+ "blocks": {
+  "lounges": {
+   "title": "Business-Lounges",
+   "hint": "2200 ₽ pro Stunde",
+   "text": "Komfort-Lounge für abfliegende, Transit- und ankommende Passagiere. 2200 ₽ pro Person und Stunde, mit persönlichem Check-in 3500 ₽. Beschleunigter Check-in und Sicherheitskontrolle ohne Anstehen 1700 ₽."
+  },
+  "storage": {
+   "title": "Gepäckaufbewahrung",
+   "hint": "380 ₽ pro Tag",
+   "text": "Gepäckaufbewahrung: 380 ₽ pro Gepäckstück und Tag (Preisliste ab 01.10.2026)."
+  },
+  "kids": {
+   "title": "Mit Kind",
+   "hint": "Ebene 1, kostenlos",
+   "text": "Mutter-Kind-Raum auf Ebene 1 des Terminals. Für Passagiere mit Kindern unter 14 Jahren und Frauen in der zweiten Schwangerschaftshälfte. Kostenlos. Auskunft: (34670) 62-222."
+  }
+ }
+}

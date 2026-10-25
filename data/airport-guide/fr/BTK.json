@@ -1,0 +1,25 @@
+{
+ "iata": "BTK",
+ "blocks": {
+  "lounges": {
+   "title": "Salle d'attente",
+   "hint": "Niveau 2, 2 200 ₽",
+   "text": "Salon de confort supérieur au niveau 2 de l'aérogare. Ouvert de 6:00 à 12:00, le vendredi et le dimanche jusqu'à 14:00, à d'autres heures sur demande à sop@aerobratsk.ru. Gratuit pour les tarifs « Business Standard », « Business Plus », « Economy Plus », les niveaux Gold et Platinum, ON PASS et Grey Wall Pass. Pour les autres 2 200 ₽ pour 3 heures."
+  },
+  "sleep": {
+   "title": "Où dormir",
+   "hint": "Hôtel à 350 m",
+   "text": "Hôtel « AeroBratsk » à 350 m de l'aérogare. Lit en chambre triple à partir de 900 ₽ par nuit, chambre simple à partir de 3 500 ₽. Petit-déjeuner 600 ₽ ; à la cantine de l'aérogare, les clients ont 20% de réduction sur le déjeuner."
+  },
+  "parking": {
+   "title": "Parking",
+   "hint": "80 places gratuites",
+   "text": "Sur la place de l'aérogare, parking gratuit de 80 places, dont 8 pour les personnes handicapées. Parking longue durée à partir de 300 ₽ par jour. Le réchauffage de la voiture en hiver coûte 4 200 ₽ pour 20 minutes, la recharge de batterie 2 100 ₽."
+  },
+  "wifi": {
+   "title": "Wi‑Fi",
+   "hint": "Gratuit",
+   "text": "Wi‑Fi gratuit pour les passagers et visiteurs de l'aéroport. Connexion avec identification, comme l'exige la loi."
+  }
+ }
+}

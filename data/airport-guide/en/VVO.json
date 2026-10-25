@@ -1,0 +1,36 @@
+{
+ "iata": "VVO",
+ "about": "The airport is in the town of Artyom, Primorsky Krai. The route network has more than 40 destinations, served by more than 20 Russian and foreign airlines. There are lounges for domestic and international departures.",
+ "blocks": {
+  "transport": {
+   "title": "Getting there",
+   "hint": "Suburban train, 52 min",
+   "text": "Suburban train from Vladivostok railway station to Aeroport station, 10 trips a day, journey time about 52 minutes. Ticket from Vladivostok and Vtoraya Rechka 185 ₽, from Artyom 37 ₽. The taxi desk is on Level 1 at the terminal exit; official carrier MIG LLC."
+  },
+  "lounges": {
+   "title": "Lounges",
+   "hint": "Level 3, 24/7",
+   "text": "Laguna business lounge: Level 3, domestic departure area, by gate 6, open round the clock. International Primorye: Level 3, by gate 3, after Duty Free, open round the clock. Priority lounge for domestic flights next to gate 6, 2,500 ₽ per passenger."
+  },
+  "storage": {
+   "title": "Left luggage",
+   "hint": "Level 1, 24/7, from 400 ₽",
+   "text": "Level 1, behind the escalator, open round the clock. Standard rate: 500 ₽ for the first 24 hours, 200 ₽ for each further 24 hours, item up to 203 cm in total dimensions. An incomplete 24-hour period counts as a full one."
+  },
+  "sleep": {
+   "title": "Where to sleep",
+   "hint": "Hotel, Level 3",
+   "text": "Zona Komfortnogo Ozhidaniya (hotel) on Level 3, public area, left wing. 30 rooms. Single room: 3,000 ₽ for 3 hours, 6,000 ₽ for 24 hours. Shower without a room 1,000 ₽."
+  },
+  "kids": {
+   "title": "With children",
+   "hint": "Level 3, 24/7, free",
+   "text": "Mother and child room on Level 3, right wing, open round the clock, free. For passengers with children under 7, children with health limitations under 14 and women in the second half of pregnancy. Stay up to 3 hours. Air ticket, passport and the child's birth certificate required."
+  },
+  "parking": {
+   "title": "Parking",
+   "hint": "15 min free",
+   "text": "Zones A, D and drop-off/pick-up: up to 15 minutes free. After that, the drop-off/pick-up zone costs 1,000 ₽ for every 15 minutes. Zones A and D: 300 ₽ for each hour after 15 minutes, over 3 hours 1,500 ₽. Zones B, C and F are charged per day."
+  }
+ }
+}

@@ -1,0 +1,20 @@
+{
+ "iata": "EYK",
+ "blocks": {
+  "lounges": {
+   "title": "Business salonları",
+   "hint": "Saati 2200 ₽",
+   "text": "Giden, transit ve gelen yolcular için konforlu bekleme salonu. Kişi başı saati 2200 ₽, kişisel check-in ile 3500 ₽. Hızlı check-in ve sırasız güvenlik kontrolü 1700 ₽."
+  },
+  "storage": {
+   "title": "Emanet",
+   "hint": "Günlüğü 380 ₽",
+   "text": "Emanet: parça başına günlük 380 ₽ (01.10.2026'dan itibaren geçerli tarife)."
+  },
+  "kids": {
+   "title": "Çocukla",
+   "hint": "Kat 1, ücretsiz",
+   "text": "Anne-bebek odası terminalde Kat 1'de. 14 yaşından küçük çocuklu yolcular ve gebeliğin ikinci yarısındaki kadınlar için. Ücretsiz. Bilgi: (34670) 62-222."
+  }
+ }
+}

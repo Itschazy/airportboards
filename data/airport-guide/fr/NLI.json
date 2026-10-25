@@ -1,0 +1,16 @@
+{
+ "iata": "NLI",
+ "about": "L'aéroport se trouve dans le district de Nikolaïevsk du kraï de Khabarovsk, à 2,5 km à l'ouest de Nikolaïevsk-sur-l'Amour. Classe « G », une aérogare pour 50 passagers par heure. Exploitant : SA « Khabarovskie Avialinii ».",
+ "blocks": {
+  "storage": {
+   "title": "Consigne à bagages",
+   "hint": "419 ₽ par bagage et par jour",
+   "text": "Garde des bagages à la consigne : 418,83 ₽ par bagage et par jour, TVA incluse. En cas de retard du départ de plus de 3 heures, les bagages enregistrés sont gardés à 0,88 ₽ par kg et par heure. Prix selon la grille tarifaire à partir du 5 juin 2026."
+  },
+  "lounges": {
+   "title": "Salons",
+   "hint": "Salle VIP, 3773 ₽",
+   "text": "Service des passagers dans la salle VIP : 3773,25 ₽ TVA incluse par prestation. Prix selon la grille tarifaire à partir du 5 juin 2026."
+  }
+ }
+}

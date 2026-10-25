@@ -1,0 +1,20 @@
+{
+ "iata": "TBS",
+ "blocks": {
+  "transport": {
+   "title": "Comment s'y rendre",
+   "hint": "Bus 337, 1 GEL",
+   "text": "Le bus urbain n° 337 « Aéroport — centre de Tbilissi » part de l'arrêt devant le hall des arrivées, de 06:59 à 22:59. Dans le centre, il emprunte l'avenue Roustaveli et la place de la Liberté jusqu'à la place de la Gare. Trajet 1 GEL avec 90 minutes de correspondances en payant avec la carte Metro Money ou une carte bancaire ; la carte Metro Money elle-même coûte 2 GEL."
+  },
+  "taxi": {
+   "title": "Taxi",
+   "hint": "40 GEL jusqu'au centre",
+   "text": "Taxis jour et nuit à la sortie du hall des arrivées. Jusqu'au centre, forfait de 40 GEL, vers la banlieue 50 GEL, trajet de 20–30 minutes selon les embouteillages."
+  },
+  "wifi": {
+   "title": "Wi‑Fi",
+   "hint": "Gratuit, sans inscription",
+   "text": "Wi‑Fi gratuit sans inscription dans la plupart des zones d'attente des terminaux de départ et d'arrivée : réseaux Tbilisi Loves You ou Airport Free Wi‑Fi, puis accepter les conditions sur la page de connexion."
+  }
+ }
+}

@@ -1,0 +1,31 @@
+{
+ "iata": "KGD",
+ "about": "Chrabrowo: Internationaler Flughafen Kaliningrad. Das Passagierterminal mit 39 762 m² Fläche ist auf 5 Mio. Passagiere pro Jahr ausgelegt, auf dem Vorfeld gibt es 6 Fluggastbrücken. Eine Start- und Landebahn 3350 × 45 m.",
+ "blocks": {
+  "transport": {
+   "title": "Anreise",
+   "hint": "Bus 244-Э, 45 Min.",
+   "text": "Bus Nr. 244-Э verkehrt zwischen dem Flughafen und dem Busbahnhof „Juschny“ in Kaliningrad, durchschnittliche Fahrzeit 45 Minuten. Die Abfahrt kann sich um bis zu 15 Minuten verzögern, der Fahrplan kann sich ändern."
+  },
+  "lounges": {
+   "title": "Business-Lounges",
+   "hint": "Sektoren A und C, Ebene 2",
+   "text": "Zwei Business-Lounges auf Ebene 2 im Sicherheitsbereich: „Kurschski Saliw“ für Inlandsflüge in Sektor A und „Djuny“ für internationale Flüge in Sektor C. Zugang für Passagiere der Business Class und alle, die den Eintritt bezahlt haben; Veteranen des Großen Vaterländischen Krieges mit Begleitperson kostenlos."
+  },
+  "sleep": {
+   "title": "Schlafen",
+   "hint": "Kapseln RecoRoom",
+   "text": "Kapselhotel „RecoRoom Sonnik“ auf dem Flughafengelände: stundenweise Bezahlung, automatischer Check-in, Einzel- und Doppelkapseln mit Platz für Gepäck, Steckdosen und kostenlosem Wi‑Fi."
+  },
+  "kids": {
+   "title": "Mit Kind",
+   "hint": "Kostenlos",
+   "text": "Der Mutter-Kind-Raum ist kostenlos für abfliegende Passagiere mit Kindern unter 7 Jahren, Kinder mit Behinderung unter 14 Jahren und Frauen in der zweiten Schwangerschaftshälfte, geöffnet nach den Betriebszeiten des Terminals. Zuerst ist eine Bescheinigung der Sanitätsstation auf Ebene 1, im rechten Gebäudeteil, nötig; das Gepäck wird in der Gepäckaufbewahrung abgegeben."
+  },
+  "parking": {
+   "title": "Parken",
+   "hint": "15 Min. kostenlos, 400 ₽/Std.",
+   "text": "Kurzzeitparkplatz ab 01.10.2026: die ersten 15 Minuten kostenlos, danach 400 ₽ für jede, auch angefangene, Stunde. Langzeitparkplatz 900 ₽ pro Tag. Kostenloser Parkplatz für 300 Autos 400 m vom Terminal. Halten in der ersten Reihe vor dem Gebäude ist verboten."
+  }
+ }
+}

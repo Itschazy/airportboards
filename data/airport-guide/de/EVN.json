@@ -1,0 +1,20 @@
+{
+ "iata": "EVN",
+ "blocks": {
+  "transport": {
+   "title": "Anreise",
+   "hint": "Busse N100 und N201",
+   "text": "Bus N100 fährt die Strecke Flughafen Swartnoz – Zentrum von Jerewan und zurück. Linie N201 (Elitebus) ist ein Expressbus vom Flughafen ins Zentrum von Jerewan und zurück. In der Ankunftshalle auf Ebene 1 sind rund um die Uhr Autovermietungen geöffnet: Carwiz, Enterprise, GoMotion, Hertz, SIXT."
+  },
+  "taxi": {
+   "title": "Taxi",
+   "hint": "Eco Taxi, Ankunftshalle",
+   "text": "Schalter von Eco Taxi in der Ankunftshalle auf Ebene 1, rund um die Uhr."
+  },
+  "parking": {
+   "title": "Parken",
+   "hint": "Parkhaus, 642 Plätze",
+   "text": "Überdachtes Parkhaus für 642 Autos gegenüber dem Passagierterminal. Die Zeit zählt ab dem Ziehen des Tickets an der Einfahrt; Einfahrt zum Ein- und Aussteigen bis 10 Minuten kostenlos. Bezahlung an Automaten, bevor man ins Auto steigt."
+  }
+ }
+}

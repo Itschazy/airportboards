@@ -1,0 +1,20 @@
+{
+  "iata": "KVX",
+  "blocks": {
+    "lounges": {
+      "title": "Sala business",
+      "hint": "Livello 1, 2 500 ₽",
+      "text": "Sala business al livello 1, dopo i controlli di sicurezza. Fino a 3 ore costa 2 500 ₽. Si accede con ON PASS, Grey Wall Pass, PersonaAero, Dragon Pass ed Every Lounge. All’interno Wi‑Fi, snack e bevande."
+    },
+    "kids": {
+      "title": "Con bambini",
+      "hint": "Livello 2, 24/7, gratis",
+      "text": "Sala madre e bambino al livello 2, a sinistra della sala arrivi. Aperta giorno e notte e gratuita, per non più di 24 ore. Accedono un solo adulto con bambini sotto i 7 anni o con bambini con disabilità sotto i 14 anni e le donne nella seconda metà della gravidanza. Ci sono lettini e biancheria da letto."
+    },
+    "parking": {
+      "title": "Parcheggio",
+      "hint": "P3 gratis",
+      "text": "Per chi attende i passeggeri è più comodo aspettare nel parcheggio gratuito P3 e, quando il passeggero esce, entrare nel piazzale dell’aerostazione P1 e ripartire entro 15 minuti. Per le soste lunghe c’è il P2 a pagamento. È vietato parcheggiare a meno di 30 m dal terminal, è attiva la rilevazione automatica delle infrazioni."
+    }
+  }
+}

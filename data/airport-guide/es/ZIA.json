@@ -1,0 +1,26 @@
+{
+ "iata": "ZIA",
+ "about": "El Aeropuerto Internacional de Zhukovski está construido en el recinto del aeródromo de Zhukovski. Operador del aeropuerto: AO «Ramport Aero». El aeropuerto está abierto a vuelos internacionales y cuenta con un paso fronterizo estatal.",
+ "blocks": {
+  "transport": {
+   "title": "Cómo llegar",
+   "hint": "Autobús 441, 1 h 5 min",
+   "text": "Tren eléctrico desde la estación Kazanski hasta la estación Otdykh, unos 40 min, y después el microbús 2А hasta el aeropuerto, unos 20 min. Microbús 19к desde MTsD Ilyinskaya, unos 35 min. Autobús 441 desde el metro Kotelniki (salida n.º 5), intervalo de 15–20 min, trayecto de 1 h 5 min. En autobuses y microbuses se aceptan «Troika», «Strelka» y tarjetas bancarias."
+  },
+  "parking": {
+   "title": "Aparcamiento",
+   "hint": "15 min gratis",
+   "text": "Zona de corta estancia: los primeros 15 min gratis, la primera hora 350 ₽, de la 2.ª a la 4.ª hora 250 ₽/hora, a partir de la 5.ª hora 3000 ₽/día. Zona de larga estancia: 700 ₽/día del día 1 al 5, 100 ₽/día del 6 al 13, 700 ₽/día a partir del día 14. Una nueva entrada gratuita solo es posible pasados 45 min."
+  },
+  "storage": {
+   "title": "Consigna",
+   "hint": "Nivel 2, 24/7, desde 600 ₽",
+   "text": "Consigna en el nivel 2, en la zona pública; funciona día y noche. Tarifa «Standard»: 700 ₽ las primeras 24 horas, 300 ₽ por cada 24 horas siguientes. «Standard Lite»: 600 ₽ y 300 ₽. Equipaje de gran tamaño desde 1150 ₽. Peso de un bulto: hasta 30 kg; plazo de custodia de hasta 6 meses."
+  },
+  "kids": {
+   "title": "Con niños",
+   "hint": "Nivel 2, 24/7",
+   "text": "Salas madre e hijo en el nivel 2: en la zona pública y en la zona de espera de salidas a países de la UEE. Funcionan día y noche; se llama al empleado con un botón junto a la entrada. Admiten a niños menores de 7 años con un adulto, niños con discapacidad menores de 14 años y embarazadas. En la zona de salidas internacionales hay una sala para cambiar pañales."
+  }
+ }
+}

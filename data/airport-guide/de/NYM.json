@@ -1,0 +1,26 @@
+{
+ "iata": "NYM",
+ "about": "Der Flughafen Nadym trägt den Namen von W. S. Tschernomyrdin. Betreiber: AO „Nadymskoje awiapredprijatije“. Der Flughafen hat zwei Check-in-Hallen, die zweite wird bei Bedarf geöffnet.",
+ "blocks": {
+  "transport": {
+   "title": "Anreise",
+   "hint": "Busse 2 und 4А",
+   "text": "Zum Flughafen fahren die Stadtbusse Nr. 2 und Nr. 4А. Man kann mit dem Taxi oder dem eigenen Auto anreisen."
+  },
+  "lounges": {
+   "title": "Business-Lounges",
+   "hint": "VIP-Lounge, Check-in-Halle 2",
+   "text": "VIP-Lounge im rechten Teil der Check-in-Halle Nr. 2, eigener Eingang und eigener Parkplatz. Zugang für Passagiere der Economy Class mit Bezahlung spätestens 15 Stunden vor Abflug, Teilnehmer von S7 Priority und die Business Class der ATK „Yamal“. Die Lounge öffnet 1 Stunde 30 Minuten vor Abflug und 30 Minuten vor der Landung des Flugzeugs. Preise laut Preisliste des Luftfahrtunternehmens, Kinder unter 2 Jahren kostenlos."
+  },
+  "kids": {
+   "title": "Mit Kind",
+   "hint": "7:00–18:30, kostenlos",
+   "text": "Der Mutter-Kind-Raum ist von 7:00 bis 18:30 geöffnet, der Aufenthalt ist kostenlos. Aufgenommen werden Passagiere mit Kindern unter 7 Jahren, Kinder mit Behinderung unter 14 Jahren mit einem Erwachsenen und Schwangere in der zweiten Schwangerschaftshälfte. Erforderlich sind eine Bescheinigung der Sanitätsstation, die Bordkarte und Dokumente für Erwachsene und Kind. Ohne Bescheinigung kann man den Raum Nr. 1 zum Wickeln und Füttern nutzen."
+  },
+  "parking": {
+   "title": "Parken",
+   "hint": "Kostenlos",
+   "text": "Der Parkplatz auf dem Vorplatz ist kostenlos. Stellflächen am Haupteingang zur Check-in-Halle Nr. 1 und beim Geschäft „Lainer“. Plätze für Fahrzeuge von Menschen mit Behinderung sind mit Markierung und Schild gekennzeichnet."
+  }
+ }
+}

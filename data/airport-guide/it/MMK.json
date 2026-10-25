@@ -1,0 +1,21 @@
+{
+  "iata": "MMK",
+  "about": "Murmansk: aeroporto a 24 km a sud-ovest del centro città e a 4 km dalla località di Murmashi, aperto giorno e notte. Una sola pista di 2500 × 42 m. Gestore: AO «Aeroport Murmansk».",
+  "blocks": {
+    "transport": {
+      "title": "Come arrivare",
+      "hint": "Bus 106, circa un’ora",
+      "text": "L’autobus o taxi collettivo (marshrutka) n. 106 parte dal piazzale della stazione ferroviaria di Murmansk con frequenza di 20–30 minuti, durata del viaggio circa un’ora. Di notte circola il n. 106н «Murmansk — Aeroport»."
+    },
+    "storage": {
+      "title": "Deposito bagagli",
+      "hint": "Seminterrato, 24/7",
+      "text": "Deposito bagagli al piano seminterrato, aperto giorno e notte. Prima bisogna segnalare il bagaglio al controllo all’ingresso dell’aerostazione: dopo il controllo un addetto alla sicurezza aerea accompagna al deposito. Pagamento allo sportello informazioni."
+    },
+    "kids": {
+      "title": "Con bambini",
+      "hint": "Livello 2, gratis, 24/7",
+      "text": "Sala madre e bambino al livello 2 nell’ala sinistra dell’aerostazione, gratuita e aperta giorno e notte. Per passeggeri con bambini sotto i 7 anni, bambini con disabilità sotto i 14 anni e donne nella seconda metà della gravidanza. Si entra solo con il bagaglio a mano, i bagagli si lasciano al deposito."
+    }
+  }
+}

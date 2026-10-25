@@ -1,0 +1,20 @@
+{
+  "iata": "TBS",
+  "blocks": {
+    "transport": {
+      "title": "交通方式",
+      "hint": "337路公交，1 GEL",
+      "text": "337路市内公交车（机场—第比利斯市中心）从到达大厅前的车站发车，运营时间06:59至22:59。经市中心沿Rustaveli大道和自由广场开往火车站广场。使用Metro Money卡或银行卡支付，票价1 GEL，含90分钟换乘；Metro Money卡本身2 GEL。"
+    },
+    "taxi": {
+      "title": "出租车",
+      "hint": "到市中心40 GEL",
+      "text": "到达大厅出口处全天候有出租车。到市中心固定价40 GEL，到郊区50 GEL，视路况车程20–30分钟。"
+    },
+    "wifi": {
+      "title": "Wi‑Fi",
+      "hint": "免费，无需注册",
+      "text": "出发和到达航站楼的大部分候机区提供无需注册的免费Wi‑Fi：网络Tbilisi Loves You或Airport Free Wi‑Fi，然后在登录页面接受条款。"
+    }
+  }
+}

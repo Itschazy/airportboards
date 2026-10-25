@@ -1,0 +1,21 @@
+{
+ "iata": "NNM",
+ "about": "El aeropuerto lo gestiona AO «Naryan-Marski obyedinyonny aviaotryad», dirección: Narian-Mar, pereulok Aeroportovski, edificio 1А. La compañía opera vuelos en las líneas aéreas locales del Distrito Autónomo de Nenets. Información: 8 (81853) 91-555.",
+ "blocks": {
+  "lounges": {
+   "title": "Salas VIP",
+   "hint": "Nivel 1, tras el control",
+   "text": "Sala de confort superior en el nivel 1, en la zona de salidas tras el control de seguridad. Para pasajeros de vuelos nacionales; entrada 2 horas antes de la salida. Menores de 2 años gratis. El acceso se tramita en la aplicación MILE·ON·AIR, sección ON PASS. Teléfono de la sala: 8 (81853) 91-537."
+  },
+  "storage": {
+   "title": "Consigna",
+   "hint": "Nivel 1 de la terminal",
+   "text": "Nivel 1 de la terminal; funciona en el horario del aeropuerto. Un bulto, hasta 30 kg. Si el vuelo se retrasa o se aplaza al día siguiente, el equipaje se guarda gratis con el billete de ese vuelo."
+  },
+  "parking": {
+   "title": "Aparcamiento",
+   "hint": "45 min gratis",
+   "text": "Hasta 45 minutos gratis. Del minuto 46 al 60: 500 ₽. Más de una hora y hasta 24 horas: 350 ₽ por cada hora. Más de 24 horas, hasta 30 días: 600 ₽ por cada 24 horas. Tarifas vigentes desde el 1 de agosto de 2026."
+  }
+ }
+}

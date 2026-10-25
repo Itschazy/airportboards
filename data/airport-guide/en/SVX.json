@@ -1,0 +1,46 @@
+{
+ "iata": "SVX",
+ "about": "Koltsovo International Airport is managed by Aeroporty Regionov management company. More than 100 destinations and more than 40 Russian and international airlines. In 2024 the airport handled more than 8 million passengers.",
+ "blocks": {
+  "transport": {
+   "title": "Getting there",
+   "hint": "Bus 66, 30 min",
+   "text": "Bus No. 66 from Botanicheskaya metro station, 30 minutes, 06:06–23:36, interval 16–31 min. Bus No. 79 from Botanicheskaya metro station, 30 minutes, weekdays 06:25–21:50. Bus No. 65 from the railway station, 1 hour 5 minutes. Fare 33 ₽. Koltsovo Express train from Yekaterinburg-Pass. station: No. 6038 at 07:12 (41 min) and No. 6040 at 19:17 (38 min); tickets at SPK ticket offices and in the Prigorod and RZD Passengers apps."
+  },
+  "terminals": {
+   "title": "Terminals",
+   "hint": "A domestic, B international",
+   "text": "Terminal A serves domestic flights, terminal B international. The lost baggage team works in the baggage claim hall of each terminal, 08:00–20:00."
+  },
+  "lounges": {
+   "title": "Lounges",
+   "hint": "4 lounges, from 5,800 ₽",
+   "text": "The domestic terminal has the Izumrud and Opal lounges, the international terminal Topaz and Agat. Izumrud and Topaz: business class passengers, members of airline loyalty programmes and anyone for a fee; 5,800 ₽ for up to 3 hours, then 550 ₽ per hour, children 2–12 years 2,900 ₽. Opal and Agat admit via ON PASS, Grey Wall, EveryLounge, RusPriority, GoldenKey, UniPass programmes. Agat is for passengers departing to Armenia, Belarus, Kazakhstan and Kyrgyzstan."
+  },
+  "storage": {
+   "title": "Left luggage",
+   "hint": "Terminal A, Level −1",
+   "text": "Terminal A, Level −1. 200 ₽ per hour, 500 ₽ for the first 24 hours, 300 ₽ for each further 24 hours. Oversized (larger than 50×50×80 cm or heavier than 20 kg): 400 ₽ per hour, 800 ₽ for the first 24 hours, 500 ₽ for each further 24 hours. Cloakroom for outerwear: 100 ₽ per set."
+  },
+  "sleep": {
+   "title": "Where to sleep",
+   "hint": "Capsules, terminal B",
+   "text": "POWER NAP capsules in terminal B, Level 1, next to passport control. Hourly rate, reception round the clock, baggage storage included. AZIMUT hotel (55а Bakhchivandzhi St) is connected to the airport by a covered walkway. A-Hotel Liner (3 Bakhchivandzhi St) is a 7-minute walk away; a 12-hour rate for transfer passengers from 3,200 ₽."
+  },
+  "kids": {
+   "title": "With children",
+   "hint": "Terminal A, Level 2, 24/7",
+   "text": "Mother and child room in terminal A, Level 2, open round the clock. Children under 7 (with disabilities under 14), only with an adult. Up to 12 hours before departure and up to 6 hours after arrival. A medical certificate from the first-aid post (Level 1 of terminal A), a passport and a ticket are required."
+  },
+  "parking": {
+   "title": "Parking",
+   "hint": "15 min free",
+   "text": "Drop-off and pick-up zone: up to 15 minutes free, 16–60 minutes 880 ₽, then 880 ₽ per hour. Car park P1 at the terminal with no free time: 1 hour 360 ₽, up to 24 hours 900 ₽. Long-stay P2 and P6: from 1,790 ₽ and 1,380 ₽ for two days. P0 is free, 5 minutes from the terminal."
+  },
+  "wifi": {
+   "title": "Wi‑Fi",
+   "hint": "Free_SVX network",
+   "text": "Free in passenger areas. Network Free_SVX, login with a mobile phone number."
+  }
+ }
+}

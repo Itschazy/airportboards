@@ -1,0 +1,31 @@
+{
+ "iata": "NUX",
+ "about": "L’aeroporto di Novy Urengoy è gestito dalla società di gestione «Aeroporty Regionov». Voli di linea per 19 destinazioni; nel 2025 l’aeroporto ha servito oltre 1 milione di passeggeri.",
+ "blocks": {
+  "transport": {
+   "title": "Come arrivare",
+   "hint": "N. 101 dalla stazione, 18 min",
+   "text": "Autobus n. 101 «Yamal-Express» dalla stazione ferroviaria, 18 min. Autobus n. 3 dalla stazione ferroviaria, 30 min, ogni 8–15 min, 43 ₽. Autobus n. 1 dal quartiere Sever, 45 min, ogni 8–10 min, 43 ₽."
+  },
+  "parking": {
+   "title": "Parcheggio",
+   "hint": "15 min gratis",
+   "text": "Zona di salita e discesa passeggeri: 15 min gratis, fino a 60 min 540 ₽, poi 540 ₽/ora. Parcheggio P1 senza tempo gratuito: fino a 60 min 320 ₽, fino a 2 ore 560 ₽, fino a 24 ore 740 ₽. Parcheggio gratuito P0 da 55 posti presso la fermata «Vertodrom», 2 fermate prima del terminal."
+  },
+  "lounges": {
+   "title": "Sale business",
+   "hint": "Dopo i controlli, 5800 ₽",
+   "text": "Sala business nella zona d’attesa dopo i controlli. Accedono i passeggeri di classe business, i membri di Persona.Aero, ON PASS, Grey Wall, Every Lounge, GoldenKey e chi paga di tasca propria. Prezzo 5800 ₽ fino a 3 ore, poi 550 ₽ per ogni ora."
+  },
+  "storage": {
+   "title": "Deposito bagagli",
+   "hint": "Sala partenze, da 500 ₽",
+   "text": "Deposito bagagli automatico nella sala partenze al livello 1. Armadietto standard 500 ₽ al giorno o 200 ₽ all’ora, maggiorato 900 ₽ al giorno o 300 ₽ all’ora. L’armadietto si apre con il codice a barre sullo scontrino."
+  },
+  "wifi": {
+   "title": "Wi‑Fi",
+   "hint": "Rete FREE_NUX",
+   "text": "Wi‑Fi gratuito nelle aree passeggeri. Scegliere la rete FREE_NUX e confermare l’accesso con il numero di cellulare."
+  }
+ }
+}

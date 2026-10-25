@@ -1,0 +1,31 @@
+{
+ "iata": "UUD",
+ "about": "Baykal: Ulan-Ude uluslararası havalimanı, 1926'dan beri hizmette, Baykal Gölü'nün yakınında. Pist uzunluğu 3000 m.",
+ "blocks": {
+  "transport": {
+   "title": "Nasıl gidilir",
+   "hint": "10, 55, 77 numaralı otobüsler",
+   "text": "10, 55 ve 77 numaralı şehir otobüsleri merkezden (Ploshchad Sovetov durağı) geçerek havalimanının terminal önü meydanına gider. Hafta içi seferler 6:15'te, hafta sonu 7:00'de başlar, sefer aralığı 7–10 dakika; 55 numarada ücret 40 ₽. Araçla merkezden yaklaşık 20 dakika."
+  },
+  "storage": {
+   "title": "Emanet",
+   "hint": "Kat 1, günlüğü 270 ₽",
+   "text": "Emanet iç hatlar terminal binasında, Kat 1'de, 6:00–20:00. Bir parça takvim günü başına 270 ₽, üç boyutunun toplamı 203 cm'yi aşan parça 550 ₽."
+  },
+  "kids": {
+   "title": "Çocukla",
+   "hint": "Kat 2, ücretsiz, 24/7",
+   "text": "Anne-bebek odası terminalin sağ kanadında, Kat 2'de, ücretsiz ve gece gündüz açık, 3 saate kadar. Tek yetişkinle birlikte 7 yaşından küçük çocuklar, 14 yaşından küçük engelli çocuklar, belgesi olan çok çocuklu aileler ve gebeliğin ikinci yarısındaki kadınlar için."
+  },
+  "parking": {
+   "title": "Otopark",
+   "hint": "15 dakika ücretsiz",
+   "text": "Terminalin yanındaki kısa süreli P1: 15 dakikaya kadar ücretsiz, 16–60 dakika 500 ₽, ikinci saat 300 ₽, üçüncü ve dördüncü saat 200'er ₽, 241. dakikadan itibaren 1200 ₽, en fazla 24 saat. Uzun süreli: 3 güne kadar günlüğü 800 ₽, 4. ila 6. gün 500 ₽."
+  },
+  "wifi": {
+   "title": "Wi‑Fi",
+   "hint": "FreeAirportBaikalRT ağı",
+   "text": "Ücretsiz Wi‑Fi: FreeAirportBaikalRT ağı, SMS kodlu telefon numarasıyla giriş."
+  }
+ }
+}

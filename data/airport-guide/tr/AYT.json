@@ -1,0 +1,30 @@
+{
+ "iata": "AYT",
+ "blocks": {
+  "transport": {
+   "title": "Nasıl gidilir",
+   "hint": "Otobüsler ve AntRay tramvayı",
+   "text": "Şehirlerarası otogara ve Antalya merkezine şehir otobüsleri gider; tarife Antalyakart uygulamasında veya 0242 606 07 07 numaralı telefonda. AntRay tramvayı havalimanı — şehir merkezi — şehirlerarası otogar — Fatih semti güzergâhında çalışır. Tur şirketlerinin turistlerini terminal çıkışında tur operatörlerinin kontuarları kendi otobüsleriyle karşılar."
+  },
+  "taxi": {
+   "title": "Taksi",
+   "hint": "Terminal çıkışlarında",
+   "text": "Taksi durakları tüm terminallerin çıkışlarının karşısında, şoförlerde havalimanı yaka kartı var. Tarifeler durağın yanındaki bilgi panosunda; havalimanı taksi kooperatifi üzerinden çevrim içi rezervasyon yapılabilir (antalyaairporttaxi.net)."
+  },
+  "storage": {
+   "title": "Emanet",
+   "hint": "İç hatlar terminali geliş salonu",
+   "text": "Emanet iç hatlar terminalinin geliş salonunda; Terminal 1'den veya iç hatlar terminalinden uçan yolcular kullanabilir. Bagaj sarma gece gündüz, ücretli, Terminal 1 ve 2'nin gidiş salonlarında."
+  },
+  "parking": {
+   "title": "Otopark",
+   "hint": "Katlı, 2643 araçlık",
+   "text": "İç hatlar terminalinin karşısında 2643 araçlık katlı otopark. Ücreti havalimanı sitesindeki hesaplayıcı belirler; abonelikler Kat 1'deki (P1) hizmet merkezinde düzenlenir."
+  },
+  "wifi": {
+   "title": "Wi‑Fi",
+   "hint": "1 saat ücretsiz",
+   "text": "Tüm terminallerde 1 saat ücretsiz internet. PIN kodunu geliş ve gidiş salonlarındaki ücretsiz Wi‑Fi kioskları verir; cep telefonu ve pasaport veya kimlik kartı gerekir. CIP terminalinde ve dinlenme alanlarında erişim sınırsızdır."
+  }
+ }
+}

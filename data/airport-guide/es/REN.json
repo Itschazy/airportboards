@@ -1,0 +1,36 @@
+{
+ "iata": "REN",
+ "about": "Principal aeropuerto del óblast de Oremburgo; atiende vuelos nacionales e internacionales. La nueva terminal de pasajeros, de más de 24 000 m², la construyó la empresa «ABS» (Aeroporty Bolshoy Strany); tiene cuatro plantas y 4 pasarelas. El aeropuerto atiende a más de 950 mil pasajeros al año.",
+ "blocks": {
+  "transport": {
+   "title": "Cómo llegar",
+   "hint": "Autobús 101, 120 ₽",
+   "text": "El autobús n.º 101 circula entre la estación de ferrocarril y el aeropuerto; billete 120 ₽. De la estación al aeropuerto: 08:45, 16:00, 18:25. Del aeropuerto a la estación: 07:20, 11:00, 17:10. A las 19:50 sale del aeropuerto el n.º 101 (k) hasta la plaza Mira; el trayecto dura 30 minutos."
+  },
+  "lounges": {
+   "title": "Salas VIP",
+   "hint": "Niveles 3 y 4, 6500 ₽",
+   "text": "Sala de vuelos nacionales en el nivel 3, sala de vuelos internacionales en el nivel 4. Admiten a pasajeros de clase business, a miembros de los programas ON PASS, Grey Wall, Every Lounge, UniPass y Golden Key, y a quienes pagan por su cuenta. Precio en ambas salas: 6500 ₽ hasta 3 horas, después 550 ₽ por cada hora. Los niños a partir de 2 años pagan según las reglas del programa."
+  },
+  "storage": {
+   "title": "Consigna",
+   "hint": "Nivel 1, 24/7",
+   "text": "Consigna automática en la sala central de la terminal, nivel 1. Funciona día y noche. Taquilla estándar: 300 ₽ por hora o 500 ₽ por día."
+  },
+  "kids": {
+   "title": "Con niños",
+   "hint": "Nivel 2, 24/7",
+   "text": "Sala madre e hijo en el nivel 2 de la terminal, abierta día y noche. Admite a pasajeros con niños menores de 7 años, con niños con discapacidad menores de 14 años y a embarazadas en la segunda mitad del embarazo. Se entra 3 horas antes de la salida o durante 1 hora después de la llegada. Se necesitan certificado del puesto médico del nivel 1, pasaporte, partida de nacimiento del niño y tarjeta de embarque."
+  },
+  "parking": {
+   "title": "Aparcamiento",
+   "hint": "15 min gratis",
+   "text": "Zona de bajada y recogida de pasajeros: hasta 15 minutos gratis, de 15 a 60 minutos 600 ₽, después 600 ₽ por cada hora. Zona Р1: hasta 60 minutos 250 ₽, hasta 120 minutos 500 ₽, hasta 24 horas 700 ₽. Zona Р2, para estancias largas: hasta 48 horas 1400 ₽. Aparcamiento gratuito Р4 a 6 minutos de la terminal."
+  },
+  "wifi": {
+   "title": "Wi‑Fi",
+   "hint": "Red Beeline-WiFi-Free",
+   "text": "Wi‑Fi gratuito en las zonas de pasajeros del aeropuerto. Red Beeline-WiFi-Free. Acceso con el número de teléfono móvil y, después, siguiendo las instrucciones de la pantalla."
+  }
+ }
+}

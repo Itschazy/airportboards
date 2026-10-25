@@ -1,0 +1,46 @@
+{
+ "iata": "NBC",
+ "about": "Internationaler Flughafen Nischnekamsk (Begischewo) „N. W. Lemajew“, Tochterunternehmen der PAO „KAMAZ“. Im Umkreis von 25 km um den Flughafen liegen Nabereschnyje Tschelny, Nischnekamsk, Jelabuga und Almetjewsk. Eine Start- und Landebahn, mehr als 700.000 Passagiere pro Jahr.",
+ "blocks": {
+  "transport": {
+   "title": "Anreise",
+   "hint": "21 km von Nischnekamsk",
+   "text": "Der Flughafen liegt 21 km von Nischnekamsk und 24 km von Nabereschnyje Tschelny entfernt. Die Website des Flughafens empfiehlt die Anreise mit dem Taxi, Linienverkehr ist auf der Seite nicht angegeben."
+  },
+  "terminals": {
+   "title": "Terminals",
+   "hint": "A international, B Inland",
+   "text": "Terminal A fertigt internationale Flüge ab, Terminal B Inlandsflüge. VIP-Lounge in Terminal A, Business-Lounge in Terminal B."
+  },
+  "lounges": {
+   "title": "Business-Lounges",
+   "hint": "Terminal B, 24/7",
+   "text": "Business-Lounge in Terminal B, VIP-Lounge in Terminal A, beide rund um die Uhr. Kostenlosen Zugang haben die Business Class von Aeroflot und Nordwind sowie Inhaber von Every.Lounge, MILEONAIR, GoldenKey, UNIPASS, GreyWall Pass, Dream Folks und anderer Programme. Einen Einzelbesuch kann jeder Passagier mit beliebigem Ticket kaufen, der Service beginnt 2 Stunden vor Abflug."
+  },
+  "storage": {
+   "title": "Gepäckaufbewahrung",
+   "hint": "Terminal B, 24/7",
+   "text": "Gepäckaufbewahrung auf Ebene 1 von Terminal B, rund um die Uhr. Der erste Tag 400 ₽ (bis 23:59 des Abgabetages), danach 200 ₽ pro Tag. Ein Gepäckstück bis 30 kg. Abgabe über die Verpackungsstation Pack&Fly oder den Informationsschalter."
+  },
+  "sleep": {
+   "title": "Schlafen",
+   "hint": "Hailey, 26 Zimmer",
+   "text": "Das Hailey Airport Hotel Begishevo liegt in Gehweite vom Flughafen. 26 Zimmer mit 45 Betten, frühes Frühstück, Wi‑Fi. Buchung: hotel-zakaz@nbc.aero, 8 (8552) 79-67-80."
+  },
+  "kids": {
+   "title": "Mit Kind",
+   "hint": "Ebene 2, kostenlos",
+   "text": "Mutter-Kind-Räume auf Ebene 2 der Terminals A und B. Für Abfliegende mit Kindern unter 7 Jahren und Kindern mit Behinderung unter 14 Jahren, 4 Stunden vor Abflug. Kostenlos, erforderlich sind Pass und Ticket. Anmeldung beim Auskunftsbüro oder unter 8-800-200-18-19."
+  },
+  "parking": {
+   "title": "Parken",
+   "hint": "20 Min. kostenlos",
+   "text": "Kostenpflichtiger Parkplatz vor den Terminals A und B mit 150 Plätzen: 20 Minuten kostenlos, danach 200 ₽ pro Stunde bis 3 Stunden, länger 700 ₽ pro Tag. Bei erneuter Einfahrt innerhalb von 30 Minuten gibt es keine kostenlose Zeit. Vor der Einfahrt auf das Gelände ein kostenloser Parkplatz mit 410 Plätzen."
+  },
+  "wifi": {
+   "title": "Wi‑Fi",
+   "hint": "Netz Begishevo free",
+   "text": "Netz Begishevo free in Terminal B, im Hotel das Netz HOTEL. Im Browser auf „Polutschit dostup“ (Zugang erhalten) klicken, Telefonnummer und Code aus der SMS eingeben."
+  }
+ }
+}

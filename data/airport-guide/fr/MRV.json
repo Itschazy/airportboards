@@ -1,0 +1,31 @@
+{
+ "iata": "MRV",
+ "about": "Mineralnye Vody : le plus grand aéroport du district fédéral du Caucase du Nord. La piste de 3900 m de long et 60 m de large a été mise en service en 2011. Deux terminaux de départ, intérieur et international, et des terminaux d'arrivée distincts.",
+ "blocks": {
+  "transport": {
+   "title": "Comment s'y rendre",
+   "hint": "Minibus 11, 20–25 min",
+   "text": "Le minibus n° 11 va jusqu'à la gare ferroviaire de Mineralnye Vody, trajet de 20–25 minutes ; jusqu'à la gare routière, arrêt « Rynok Rouslan », environ 10 minutes. De la gare, le bus n° 223 va à Piatigorsk, le n° 107 à Jeleznovodsk. Pour Essentouki, Kislovodsk, Teberda et Dombaï, des bus interurbains partent de la gare routière."
+  },
+  "lounges": {
+   "title": "Salons",
+   "hint": "« Bechtaou », niveau 3, 24/7",
+   "text": "Salon « Bechtaou » au niveau 3 du nouveau terminal, en zone réservée après le contrôle, ouvert jour et nuit. Accès pour les passagers de classe affaires, les membres des programmes ON Pass, Persona.Aero, Grey Wall Pass, Dragon Pass, Every Lounge et d'autres, ainsi que pour tout passager moyennant paiement selon la grille tarifaire."
+  },
+  "storage": {
+   "title": "Consigne à bagages",
+   "hint": "Sous-sol, 8:00–17:00",
+   "text": "Consigne au sous-sol, accès uniquement par l'escalier, ouverte de 8:00 à 17:00. Premier jour (jusqu'à 24:00) 900 ₽ par bagage, ensuite 500 ₽ par jour, tout jour entamé est dû en entier. Durée de garde d'un mois maximum."
+  },
+  "kids": {
+   "title": "Avec un enfant",
+   "hint": "Gratuit, 24/7",
+   "text": "La salle mère-enfant est ouverte jour et nuit et gratuite pour les passagers munis d'un billet au départ de Mineralnye Vody : avec des enfants de moins de 7 ans, des enfants handicapés de moins de 16 ans et pour les femmes dans la seconde moitié de la grossesse. Billet, passeport et acte de naissance de l'enfant requis."
+  },
+  "parking": {
+   "title": "Parking",
+   "hint": "15 min gratuites",
+   "text": "Parking courte durée P1 près du hall des départs : moins de 15 minutes gratuit, 15–60 minutes 500 ₽, ensuite 500 ₽ de l'heure, au-delà de 4 heures 1200 ₽ par jour. Nouveau passage dans l'heure 500 ₽. Un parking gratuit existe sur le terrain attenant, emplacement sur le plan des parkings."
+  }
+ }
+}

@@ -1,0 +1,16 @@
+{
+  "iata": "IWA",
+  "about": "伊万诺沃A. M. Vasilevsky机场位于伊万诺沃市中心西南7公里处。为联邦级机场，自1939年起运营。运营者和主要经营方：Tsentr Avia有限责任公司。",
+  "blocks": {
+    "transport": {
+      "title": "交通方式",
+      "hint": "11路无轨电车",
+      "text": "11路无轨电车：机场、Zagorodnaya街、Lezhnevskaya街、汽车站、Revolyutsii广场、Sheremetevsky大道、火车站。运营时间7:00至20:00，间隔22–44分钟。出租车：可通过应用叫Yandex Taxi、Vezyot、Maxim。机场在市区以外，出租车最好提前叫。"
+    },
+    "parking": {
+      "title": "停车",
+      "hint": "前10分钟免费",
+      "text": "有人看管的自动道闸停车场。前10分钟免费，每小时100 ₽，每天400 ₽。可在缴费机支付（现金不找零或银行卡）、扫二维码、通过Hippoparking应用或网站支付。付款后有15分钟出场时间。"
+    }
+  }
+}

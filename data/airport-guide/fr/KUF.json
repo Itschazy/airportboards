@@ -1,0 +1,36 @@
+{
+ "iata": "KUF",
+ "about": "Kouroumotch : aéroport international de Samara. Géré par la société de gestion « Aeroporty Regionov ». Plus de 80 destinations, plus de 30 compagnies aériennes russes et internationales.",
+ "blocks": {
+  "transport": {
+   "title": "Comment s'y rendre",
+   "hint": "Bus 222, 1 heure",
+   "text": "Le bus urbain n° 222 part de la gare ferroviaire de Samara, trajet d'environ 1 heure. La ligne n° 78 part de Barbochina Poliana, environ 1 heure, en semaine. L'interurbain n° 607 relie l'aéroport à Samara (gare ferroviaire) et à Togliatti, 50–80 minutes, 265 ₽. Depuis Togliatti circulent aussi les n° 333 et n° 652Т."
+  },
+  "lounges": {
+   "title": "Salons",
+   "hint": "Niveau 4, dès 5800 ₽",
+   "text": "Salons des vols intérieurs et internationaux au niveau 4. Accès pour les passagers de classe affaires, les membres des programmes de fidélité des compagnies aériennes et tous ceux qui paient la visite : 5800 ₽ jusqu'à 3 heures, enfant de 2 à 12 ans 2900 ₽. Salon pour les programmes ON PASS, Grey Wall, EveryLounge, Persona.Aero, RusPriority, GoldenKey dans la zone de départ des vols intérieurs, niveau 3."
+  },
+  "storage": {
+   "title": "Consigne à bagages",
+   "hint": "Niveau 1, dès 250 ₽/h",
+   "text": "Consigne automatique au niveau 1, à droite de l'entrée, près des guichets de billets d'avion. Casier standard 250 ₽ de l'heure ou 550 ₽ par jour. Grand casier 350 ₽ de l'heure ou 900 ₽ par jour. Bagage hors gabarit 1200 ₽ par bagage."
+  },
+  "kids": {
+   "title": "Avec un enfant",
+   "hint": "Niveau 3, 24/7",
+   "text": "Salle mère-enfant au niveau 3, ouverte jour et nuit. Enfants de moins de 7 ans, enfants handicapés de moins de 14 ans, uniquement avec un adulte. Certificat du poste médical au niveau 1, passeport et billet requis. Jusqu'à 12 heures avant le départ et jusqu'à 6 heures après l'arrivée."
+  },
+  "parking": {
+   "title": "Parking",
+   "hint": "Dépose 15 min gratuites",
+   "text": "Dans la zone de dépose et de prise en charge, 15 premières minutes gratuites, de la 16e à la 60e minute 880 ₽. Courte durée P1 : jusqu'à une heure 357 ₽, jusqu'à 2 heures 682 ₽, la journée 1391 ₽. Longue durée P2 : la journée 791 ₽. Économique P4 : 1054 ₽ pour les 2 premiers jours. Tous les parkings sont ouverts jour et nuit."
+  },
+  "wifi": {
+   "title": "Wi‑Fi",
+   "hint": "Réseau Free_KUF",
+   "text": "Réseau gratuit Free_KUF dans les zones passagers du terminal. Connexion par numéro de téléphone mobile, puis suivre les instructions à l'écran."
+  }
+ }
+}

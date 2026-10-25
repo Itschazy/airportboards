@@ -1,0 +1,31 @@
+{
+  "iata": "PEE",
+  "about": "Bolshoye Savino: l’unico aeroporto del Territorio di Perm con voli passeggeri di linea, a 17 km da Perm. Il nuovo terminal di 31.000 m² è stato costruito nel 2017 ed è progettato per 2 milioni di passeggeri l’anno. Una sola pista di 3204 × 49 m.",
+  "blocks": {
+    "transport": {
+      "title": "Come arrivare",
+      "hint": "Bus 108 per l’autostazione",
+      "text": "Autobus n. 108 «Avtovokzal — Aeroport Bolshoye Savino»: dall’aeroporto (terminal A) dalle 06:00 alle 23:45, dall’autostazione «Perm» dalle 05:55 alle 23:00; nei fine settimana e nei festivi le ultime corse partono prima. L’interurbano n. 822 collega l’aeroporto con la stazione Perm-2, Berezniki e Usolye."
+    },
+    "storage": {
+      "title": "Deposito bagagli",
+      "hint": "Livello 1, giorno e notte",
+      "text": "Deposito bagagli al livello 1, sul lato destro del terminal, nella zona arrivi dei voli nazionali. Aperto giorno e notte, pagamento secondo il listino dell’aeroporto."
+    },
+    "kids": {
+      "title": "Con bambini",
+      "hint": "Gratis, 24/7",
+      "text": "La sala madre e bambino è aperta giorno e notte ed è gratuita, per chi parte e per chi arriva. Accoglie bambini sotto i 7 anni con un adulto, bambini con disabilità sotto i 14 anni e donne nella seconda metà della gravidanza. Rivolgersi al banco informazioni; bagagli e passeggini vanno lasciati prima al deposito."
+    },
+    "parking": {
+      "title": "Parcheggio",
+      "hint": "15 min gratis",
+      "text": "Parcheggio centrale breve sosta: fino a 15 minuti gratis, fino a un’ora 300 ₽, fino a 24 ore 500 ₽, poi 500 ₽ ogni 24 ore. Lunga sosta: fino a 10 minuti gratis, fino a 24 ore 400 ₽, poi 400 ₽ ogni 24 ore. L’ora iniziata e il periodo di 24 ore iniziato si pagano interi."
+    },
+    "wifi": {
+      "title": "Wi‑Fi",
+      "hint": "Rete Saturn-R",
+      "text": "Wi‑Fi gratuito con limiti di velocità in tutto l’edificio dell’aeroporto, senza login né password. Scegliere la rete Saturn-R e aprire il browser."
+    }
+  }
+}

@@ -1,0 +1,36 @@
+{
+ "iata": "REN",
+ "about": "Der wichtigste Flughafen des Gebiets Orenburg, bedient Inlands- und internationale Flüge. Das neue Passagierterminal mit mehr als 24.000 m² Fläche hat die Firma „ABS“ (Aeroporty Bolschoi Strany) gebaut, es hat vier Etagen und 4 Fluggastbrücken. Der Flughafen fertigt mehr als 950.000 Passagiere pro Jahr ab.",
+ "blocks": {
+  "transport": {
+   "title": "Anreise",
+   "hint": "Bus 101, 120 ₽",
+   "text": "Bus Nr. 101 verkehrt zwischen Bahnhof und Flughafen, Fahrschein 120 ₽. Vom Bahnhof zum Flughafen: 08:45, 16:00, 18:25. Vom Flughafen zum Bahnhof: 07:20, 11:00, 17:10. Um 19:50 fährt ab Flughafen Nr. 101 (k) zur Ploschtschad Mira, Fahrzeit 30 Minuten."
+  },
+  "lounges": {
+   "title": "Business-Lounges",
+   "hint": "Ebene 3 und 4, 6500 ₽",
+   "text": "Lounge für Inlandsflüge auf Ebene 3, Lounge für internationale Flüge auf Ebene 4. Zugang für Passagiere der Business Class, Teilnehmer der Programme ON PASS, Grey Wall, Every Lounge, UniPass, Golden Key und Selbstzahler. Preis in beiden Lounges: 6500 ₽ bis zu 3 Stunden, danach 550 ₽ für jede Stunde. Kinder ab 2 Jahren zahlen nach den Regeln des jeweiligen Programms."
+  },
+  "storage": {
+   "title": "Gepäckaufbewahrung",
+   "hint": "Ebene 1, 24/7",
+   "text": "Automatische Gepäckaufbewahrung in der zentralen Halle des Terminals, Ebene 1. Rund um die Uhr geöffnet. Standardfach: 300 ₽ pro Stunde oder 500 ₽ pro Tag."
+  },
+  "kids": {
+   "title": "Mit Kind",
+   "hint": "Ebene 2, 24/7",
+   "text": "Mutter-Kind-Raum auf Ebene 2 des Terminals, rund um die Uhr geöffnet. Aufgenommen werden Passagiere mit Kindern unter 7 Jahren, mit Kindern mit Behinderung unter 14 Jahren und Schwangere in der zweiten Schwangerschaftshälfte. Zutritt 3 Stunden vor Abflug oder innerhalb von 1 Stunde nach Ankunft. Erforderlich sind eine Bescheinigung der Sanitätsstation auf Ebene 1, Pass, Geburtsurkunde des Kindes und Bordkarte."
+  },
+  "parking": {
+   "title": "Parken",
+   "hint": "15 Min. kostenlos",
+   "text": "Hol- und Bringzone: bis 15 Minuten kostenlos, von 15 bis 60 Minuten 600 ₽, danach 600 ₽ für jede Stunde. Zone Р1: bis 60 Minuten 250 ₽, bis 120 Minuten 500 ₽, bis 24 Stunden 700 ₽. Zone Р2 zum Langzeitparken: bis 48 Stunden 1400 ₽. Kostenloser Parkplatz Р4 6 Minuten vom Terminal."
+  },
+  "wifi": {
+   "title": "Wi‑Fi",
+   "hint": "Netz Beeline-WiFi-Free",
+   "text": "Kostenloses Wi‑Fi in den Passagierbereichen des Flughafens. Netz Beeline-WiFi-Free. Anmeldung mit der Mobilfunknummer, danach den Anweisungen auf dem Bildschirm folgen."
+  }
+ }
+}

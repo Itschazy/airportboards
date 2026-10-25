@@ -1,0 +1,46 @@
+{
+ "iata": "SVX",
+ "about": "L'aéroport international de Koltsovo est géré par la société de gestion « Aeroporty Regionov ». Plus de 100 destinations et plus de 40 compagnies aériennes russes et internationales. En 2024, l'aéroport a accueilli plus de 8 millions de passagers.",
+ "blocks": {
+  "transport": {
+   "title": "Comment s'y rendre",
+   "hint": "Bus 66, 30 min",
+   "text": "Bus n° 66 depuis le métro « Botanitcheskaïa », 30 minutes, 06:06–23:36, intervalle 16–31 min. Bus n° 79 depuis le métro « Botanitcheskaïa », 30 minutes, en semaine 06:25–21:50. Bus n° 65 depuis la gare ferroviaire, 1 heure 5 minutes. Trajet 33 ₽. Train « Express Koltsovo » depuis la gare d'Iekaterinbourg-Pass. : n° 6038 à 07:12 (41 min) et n° 6040 à 19:17 (38 min), billets aux guichets de la SPK et dans les applications « Prigorod » et « RZD Passajiram »."
+  },
+  "terminals": {
+   "title": "Terminaux",
+   "hint": "A intérieur, B international",
+   "text": "Le terminal A accueille les vols intérieurs, le terminal B les vols internationaux. Le service de recherche des bagages se trouve dans la salle de livraison des bagages de chaque terminal, 08:00–20:00."
+  },
+  "lounges": {
+   "title": "Salons",
+   "hint": "4 salons, dès 5800 ₽",
+   "text": "Dans le terminal intérieur, les salons « Izoumroud » et « Opal », dans l'international « Topaz » et « Agat ». « Izoumroud » et « Topaz » : passagers de classe affaires, membres des programmes de fidélité des compagnies aériennes et toute personne moyennant paiement ; 5800 ₽ jusqu'à 3 heures, ensuite 550 ₽ de l'heure, enfants de 2 à 12 ans 2900 ₽. « Opal » et « Agat » acceptent les programmes ON PASS, Grey Wall, EveryLounge, RusPriority, GoldenKey, UniPass. « Agat » est réservé aux passagers partant pour l'Arménie, la Biélorussie, le Kazakhstan et le Kirghizistan."
+  },
+  "storage": {
+   "title": "Consigne à bagages",
+   "hint": "Terminal A, niveau −1",
+   "text": "Terminal A, niveau −1. 200 ₽ de l'heure, 500 ₽ pour les premières 24 heures, 300 ₽ par tranche de 24 heures suivante. Hors format (plus de 50×50×80 cm ou plus de 20 kg) : 400 ₽ de l'heure, 800 ₽ pour les premières 24 heures, 500 ₽ par tranche de 24 heures suivante. Vestiaire pour vêtements d'extérieur : 100 ₽ par ensemble."
+  },
+  "sleep": {
+   "title": "Où dormir",
+   "hint": "Capsules, terminal B",
+   "text": "Capsules POWER NAP dans le terminal B, niveau 1, près du contrôle des passeports. Tarif horaire, réception jour et nuit, garde des bagages incluse. L'hôtel AZIMUT (rue Bakhtchivandji, 55а) est relié à l'aéroport par un passage couvert. L'A-Hotel Laïner (rue Bakhtchivandji, 3), à 7 minutes à pied, propose un tarif de 12 heures pour les passagers en correspondance à partir de 3200 ₽."
+  },
+  "kids": {
+   "title": "Avec un enfant",
+   "hint": "Terminal A, niveau 2, 24/7",
+   "text": "Salle mère-enfant dans le terminal A, niveau 2, jour et nuit. Enfants de moins de 7 ans (enfants handicapés : moins de 14 ans), uniquement avec un adulte. Jusqu'à 12 heures avant le départ et jusqu'à 6 heures après l'arrivée. Certificat médical du poste médical (niveau 1 du terminal A), passeport et billet requis."
+  },
+  "parking": {
+   "title": "Parking",
+   "hint": "15 min gratuites",
+   "text": "Zone de dépose et de prise en charge : jusqu'à 15 minutes gratuit, 16–60 minutes 880 ₽, ensuite 880 ₽ de l'heure. Parking P1 près du terminal sans temps gratuit : 1 heure 360 ₽, jusqu'à 24 heures 900 ₽. Longue durée P2 et P6 : à partir de 1790 ₽ et 1380 ₽ pour deux jours. P0 gratuit, à 5 minutes du terminal."
+  },
+  "wifi": {
+   "title": "Wi‑Fi",
+   "hint": "Réseau Free_SVX",
+   "text": "Gratuit dans les zones passagers. Réseau Free_SVX, connexion par numéro de téléphone mobile."
+  }
+ }
+}

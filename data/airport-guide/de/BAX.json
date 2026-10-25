@@ -1,0 +1,41 @@
+{
+ "iata": "BAX",
+ "about": "Barnaul: Internationaler Flughafen „G. S. Titow“, der wichtigste Flughafen der Region Altai, betrieben von AO „Awiapredprijatije ‚Altai‘“. Start- und Landebahn 2850 × 50 m. Nächstgelegener großer Flughafen zu den Ferienorten des Altai-Gebirges und zu Belokuricha.",
+ "blocks": {
+  "transport": {
+   "title": "Anreise",
+   "hint": "Bus 110",
+   "text": "Bus Nr. 110 verkehrt zwischen Flughafen und Busstation „Spartak-2“, 11 Fahrten in jede Richtung: ab Flughafen von 6:00 bis 18:50, ab Busstation von 7:10 bis 20:00. Die Zeiten können sich je nach Verkehrslage ändern."
+  },
+  "lounges": {
+   "title": "Business-Lounges",
+   "hint": "Rechter Flügel, 6200 ₽",
+   "text": "Business-Terminal für Inlandsflüge im rechten Flügel des Terminals, Zugang über den Haupteingang. Eigener Check-in und eigene Sicherheitskontrolle, Transfer zum Flugzeug im Kleinbus. Für Abfliegende ab 2 Jahren 6200 ₽, für Ankommende 4150 ₽, Aufenthalt 3 Stunden, Kinder unter 2 Jahren kostenlos. Für internationale Passagiere nicht zugänglich."
+  },
+  "storage": {
+   "title": "Gepäckaufbewahrung",
+   "hint": "Ebene 1, 210 ₽ pro Tag",
+   "text": "Aufbewahrung von Gepäck und Handgepäck auf Ebene 1 des Terminals. Ein Gepäckstück kostet 210 ₽ pro Tag unabhängig von der Größe; gerechnet wird nach Kalendertagen, von 00:00 bis 23:59. Am Gepäck befestigte Taschen und Tüten gelten als eigenes Gepäckstück."
+  },
+  "sleep": {
+   "title": "Schlafen",
+   "hint": "Hotel am Flughafen",
+   "text": "Das Hotel der AO „Awiapredprijatije ‚Altai‘“ liegt direkt auf dem Flughafengelände: Zimmer verschiedener Preisklassen und ein Café."
+  },
+  "kids": {
+   "title": "Mit Kind",
+   "hint": "Ebene 2, kostenlos, 24/7",
+   "text": "Mutter-Kind-Raum auf Ebene 2, kostenlos und rund um die Uhr. Für abfliegende Passagiere mit Kindern unter 7 Jahren, Kinder mit Behinderung unter 14 Jahren und Frauen in der zweiten Schwangerschaftshälfte. Es gibt eine Küche, einen Schlafraum mit Kinderbetten und ein Spielzimmer."
+  },
+  "parking": {
+   "title": "Parken",
+   "hint": "Kostenloser Parkplatz",
+   "text": "Hinter der Parkanlage des Flughafens gibt es einen kostenlosen Parkplatz für etwa 100 Autos, ohne Zeitbegrenzung. Auf dem Vorplatz sind Abschleppwagen im Einsatz, Parken außerhalb der ausgewiesenen Flächen ist verboten."
+  },
+  "wifi": {
+   "title": "Wi‑Fi",
+   "hint": "Kostenlos, 3 Anbieter",
+   "text": "Kostenloses Wi‑Fi für Passagiere und Gäste des Flughafens von drei Anbietern: Avantel, Beeline und MTS. Anbieter auf dem Gerät auswählen und den Hinweisen auf dem Bildschirm folgen."
+  }
+ }
+}

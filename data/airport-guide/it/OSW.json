@@ -1,0 +1,20 @@
+{
+  "iata": "OSW",
+  "blocks": {
+    "lounges": {
+      "title": "Sala comfort",
+      "hint": "3800 ₽",
+      "text": "Sala comfort per i passeggeri in partenza: banco check-in separato, controllo di sicurezza proprio e accompagnamento fino all’aereo, tè, caffè, acqua. Si accede al massimo 2 ore prima della partenza. A pagamento, per i privati 3800 ₽."
+    },
+    "kids": {
+      "title": "Con bambini",
+      "hint": "Gratis con biglietto",
+      "text": "La sala madre e bambino è gratuita con un biglietto aereo, per passeggeri con bambini sotto i 7 anni, bambini con disabilità sotto i 14 anni e donne nella seconda metà della gravidanza. Servono biglietto, passaporto, un documento del bambino e un certificato del presidio medico dell’aerostazione; gli orari seguono il regolamento dell’aeroporto."
+    },
+    "parking": {
+      "title": "Parcheggio",
+      "hint": "15 min gratis",
+      "text": "Parcheggio breve sosta dal 01.01.2026: fino a 15 minuti gratis, fino a un’ora 250 ₽, fino a 24 ore 500 ₽, oltre 24 ore 500 ₽. L’area non è custodita."
+    }
+  }
+}

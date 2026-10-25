@@ -1,0 +1,31 @@
+{
+ "iata": "PEE",
+ "about": "Bolshoye Savino: Perm Krayı'nın tarifeli yolcu uçuşu olan tek havalimanı, Perm'e 17 km uzaklıkta. 31 bin m²'lik yeni terminal 2017'de inşa edildi ve yılda 2 milyon yolcu için tasarlandı. Tek pist, 3204 × 49 m.",
+ "blocks": {
+  "transport": {
+   "title": "Nasıl gidilir",
+   "hint": "Otogara 108 numaralı otobüs",
+   "text": "108 numaralı otobüs (Otogar — Bolshoye Savino Havalimanı): havalimanından (A terminali) 06:00–23:45, Perm otogarından 05:55–23:00 arası; hafta sonu ve bayramlarda son seferler daha erken. Şehirlerarası 822 numara havalimanını Perm-2 istasyonuna, Berezniki'ye ve Usolye'ye bağlar."
+  },
+  "storage": {
+   "title": "Emanet",
+   "hint": "Kat 1, gece gündüz",
+   "text": "Bagaj emaneti Kat 1'de, terminalin sağ tarafında, iç hatlar geliş alanında. Gece gündüz açık, ödeme havalimanı tarifesine göre."
+  },
+  "kids": {
+   "title": "Çocukla",
+   "hint": "Ücretsiz, 24/7",
+   "text": "Anne-bebek odası giden ve gelen yolcular için gece gündüz açık ve ücretsiz. Tek yetişkinle birlikte 7 yaşından küçük çocuklar, 14 yaşından küçük engelli çocuklar ve gebeliğin ikinci yarısındaki kadınlar kabul edilir. Danışma kontuarına başvurun; bagaj ve bebek arabaları önceden emanete bırakılmalıdır."
+  },
+  "parking": {
+   "title": "Otopark",
+   "hint": "15 dakika ücretsiz",
+   "text": "Kısa süreli merkez otoparkı: 15 dakikaya kadar ücretsiz, bir saate kadar 300 ₽, 24 saate kadar 500 ₽, sonrası her 24 saat için 500 ₽. Uzun süreli: 10 dakikaya kadar ücretsiz, 24 saate kadar 400 ₽, sonrası her 24 saat için 400 ₽. Tamamlanmamış saat ve 24 saatlik dönem tam olarak ücretlendirilir."
+  },
+  "wifi": {
+   "title": "Wi‑Fi",
+   "hint": "Saturn-R ağı",
+   "text": "Havalimanı binasının tamamında hız sınırlı ücretsiz Wi‑Fi, kullanıcı adı ve şifre olmadan. Saturn-R ağını seçin ve tarayıcıyı açın."
+  }
+ }
+}

@@ -1,0 +1,30 @@
+{
+ "iata": "ASF",
+ "blocks": {
+  "transport": {
+   "title": "Comment s'y rendre",
+   "hint": "Bus 45, 86, minibus",
+   "text": "Minibus n° 80с (depuis la rue Latycheva) et n° 86с (depuis l'usine de conserves). Bus n° 45 (depuis la rue Myassokombinat) et n° 86 (depuis le marché Slavianski)."
+  },
+  "lounges": {
+   "title": "Salons",
+   "hint": "Niveau 2, jour et nuit",
+   "text": "Salon des vols intérieurs au deuxième niveau, en zone réservée, après le contrôle, ouvert jour et nuit. Accès pour les passagers de classe affaires, les membres des programmes de fidélité des compagnies aériennes et des banques, ainsi que pour tous ceux qui paient la visite par carte, par QR code ou en espèces. Séjour de deux heures maximum avant le départ."
+  },
+  "storage": {
+   "title": "Consigne à bagages",
+   "hint": "Sous-sol, 24/7",
+   "text": "Consigne pour bagages et bagages à main des passagers des vols intérieurs et internationaux au sous-sol de l'aérogare, ouverte jour et nuit."
+  },
+  "kids": {
+   "title": "Avec un enfant",
+   "hint": "Gratuit, 24/7",
+   "text": "La salle mère-enfant est gratuite et ouverte jour et nuit, pour un séjour de 3–4 heures maximum. Pour les passagers avec des enfants de moins de 7 ans (jusqu'à 8 s'il reste de la place), les enfants handicapés de moins de 14 ans et les femmes dans la seconde moitié de la grossesse."
+  },
+  "parking": {
+   "title": "Parking",
+   "hint": "10 min gratuites",
+   "text": "Place de l'aérogare : 10 premières minutes gratuites, première heure 250 ₽, de la deuxième à la quatrième 200 ₽ chacune, au-delà de 4 heures 900 ₽ par 24 heures. Parking à la journée (entrée n° 5) : les trois premières heures 200 ₽ chacune, à partir de la 181e minute 600 ₽ pour les premières 24 heures, 1100 ₽ pour deux tranches de 24 heures, 1500 ₽ pour trois, ensuite 300 ₽ par 24 heures. Il existe un parking gratuit d'au moins 130 voitures."
+  }
+ }
+}

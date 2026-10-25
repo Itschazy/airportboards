@@ -1,0 +1,31 @@
+{
+ "iata": "NSK",
+ "about": "Havalimanı Taymır Yarımadası'nın güneyinde, Krasnoyarsk Krayı'nın kuzeyinde. İşletmeci Aeroport Norilsk OOO. Dört havayolu Rusya'nın on şehrine tarifeli uçuş yapıyor; 2024 yılı yolcu trafiği 883 bin kişi.",
+ "blocks": {
+  "transport": {
+   "title": "Nasıl gidilir",
+   "hint": "33 numaralı otobüs, 1 sa 10 dk",
+   "text": "33 numaralı otobüs Norilsk (ADTs) otogarı, Kayerkan (TBK) otogarı ve terminal binası arasında çalışır, yolculuk süresi 1 sa 10 dk. Dudinka'ya giden 110 numaralı otobüs her gün 09:00'da havalimanından kalkar. Dudinka otobüsünün durağı geliş salonu çıkışında."
+  },
+  "terminals": {
+   "title": "Terminal",
+   "hint": "Tek terminal binası, 2 kat",
+   "text": "Tek terminal binası. Kat 1'de danışma bürosu, check-in kontuarları, bekleme salonu, bagaj sarma ve kayıp bagaj bürosu. Kat 2'de güvenlik kontrolü, business salonu ve polis. 25.10.2026–27.03.2027 arasında terminal binası pazartesi–cumartesi 06:00–21:00, pazar 06:00–12:00 açık."
+  },
+  "lounges": {
+   "title": "Business salonları",
+   "hint": "Kat 2, 7450 ₽",
+   "text": "Business salonu Kat 2'deki gidiş salonunda, 49 kişiye kadar. Gidiş veya geliş 7450 ₽, 2–12 yaş çocuk 3725 ₽, 2 yaşından küçük ücretsiz. Uğurlayanlar ve karşılayanlar 3240 ₽. Telefonlar: +7 (3919) 31-54-22, 31-53-89."
+  },
+  "sleep": {
+   "title": "Nerede uyunur",
+   "hint": "Dinlenme evi, 24/7",
+   "text": "Havalimanının dinlenme evi (profilaktoriy) terminal önü meydanında. 55 yataklı 30 oda, gece gündüz açık. Yolcular ve diğer kişiler pasaportla konaklar; ödeme tam gün üzerinden, %100 ön ödeme. Telefon +7 (3919) 31-53-70."
+  },
+  "kids": {
+   "title": "Çocukla",
+   "hint": "Kat 2, ücretsiz",
+   "text": "Anne-bebek odası terminal binasında Kat 2'de. 5 yaşından küçük çocuklu kadınlar ve gebeliğin ikinci yarısındaki kadınlar için ücretsiz. Uçuş rötar yaparsa 7 yaşından küçük çocuklar masrafları havayoluna ait olmak üzere ücretsiz yerleştirilir. Yatak odası, oyun salonu, yemek hazırlama ve yeme alanı var."
+  }
+ }
+}

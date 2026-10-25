@@ -1,0 +1,26 @@
+{
+ "iata": "UKX",
+ "about": "L'aéroport se trouve à 10 km au nord d'Oust-Kout. La construction de l'aéroport actuel a commencé en 1963, les premiers vols sur la piste en terre ont eu lieu à l'automne de la même année.",
+ "blocks": {
+  "transport": {
+   "title": "Comment s'y rendre",
+   "hint": "Taxi uniquement",
+   "text": "Aucun transport urbain ne dessert l'aéroport. On ne peut s'y rendre qu'en taxi privé."
+  },
+  "terminals": {
+   "title": "Terminal",
+   "hint": "Comptoir fermé 40 min avant",
+   "text": "L'enregistrement commence 2 heures ou 1 h 30 min avant, selon le type d'avion. Il se termine 40 minutes avant le départ. Une carte d'embarquement papier est nécessaire pour embarquer : obtenez-la au comptoir au plus tard 10 minutes avant la fin de l'enregistrement."
+  },
+  "storage": {
+   "title": "Consigne à bagages",
+   "hint": "Près de l'enregistrement",
+   "text": "Dans le bâtiment de l'aérogare, à côté du comptoir d'enregistrement. Téléphone : +7 (39565) 5-07-09."
+  },
+  "kids": {
+   "title": "Avec un enfant",
+   "hint": "Moins de 7 ans, gratuit",
+   "text": "Salle mère-enfant dans le bâtiment de l'aérogare. Pour les passagers au départ avec des enfants de moins de 7 ans, séjour de 3–4 heures maximum. Un seul adulte peut rester avec l'enfant. Gratuit. S'adresser au bureau d'information ou au comptoir d'enregistrement."
+  }
+ }
+}

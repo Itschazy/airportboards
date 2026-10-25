@@ -1,0 +1,31 @@
+{
+ "iata": "GDZ",
+ "about": "Operador del aeropuerto: OOO «Aeropuerto de Gelendzhik». La nueva terminal, de 16,7 mil m² y diseñada por el estudio Fuksas, se inauguró en 2022; su capacidad es de 891 pasajeros por hora. Los vuelos cubren destinos nacionales de Rusia.",
+ "blocks": {
+  "transport": {
+   "title": "Cómo llegar",
+   "hint": "Autobús 5",
+   "text": "Autobús n.º 5 «barrio Tolstiy Mys — barrio Tonkiy Mys». La parada está a la derecha de la salida de la terminal, en el segundo carril de circulación. El taxi oficial «Avtoexpress» se sitúa en el primer carril, frente a la salida de la zona de llegadas. Dirección para el taxi: calle Solntsedarskaya, 10."
+  },
+  "lounges": {
+   "title": "Salas VIP",
+   "hint": "Nivel 2",
+   "text": "Sala business en el nivel 2 de la terminal. Tienen prioridad los pasajeros de clase business y los titulares de tarjetas de fidelización de aerolíneas; la clase turista, si hay plazas. Hay mostrador de facturación propio y traslado al avión. Sala de confort superior AURA lounge: hasta 3 horas, menores de 2 años gratis, acceso con ONPASS."
+  },
+  "storage": {
+   "title": "Consigna",
+   "hint": "Nivel 1, desde 200 ₽",
+   "text": "Consigna automática en el nivel 1, a la izquierda de los mostradores de facturación, en el horario del aeropuerto. Taquilla pequeña desde 200 ₽ por 2 horas hasta 800 ₽ por día, mediana 300–900 ₽, grande 400–1000 ₽. Pago en efectivo o con tarjeta en el terminal; el recibo con código de barras abre la taquilla."
+  },
+  "kids": {
+   "title": "Con niños",
+   "hint": "Nivel 1, gratis",
+   "text": "Sala madre e hijo en el nivel 1, en el ala derecha de la terminal. Gratis, hasta 3 horas. Admite a pasajeros con un niño menor de 7 años o con un niño con discapacidad menor de 14 años, y a embarazadas en la segunda mitad del embarazo. Se necesitan revisión en el puesto médico, billete o tarjeta de embarque, pasaporte y partida de nacimiento del niño."
+  },
+  "parking": {
+   "title": "Aparcamiento",
+   "hint": "15 min gratis",
+   "text": "250 plazas. Los primeros 15 minutos gratis, después 300 ₽ por cada hora; más de 3 horas, 900 ₽/día. Estacionamiento en el segundo carril de circulación 1000 ₽/hora, aparcamiento VIP 2000 ₽/hora. Una nueva entrada dentro de la misma hora no tiene los 15 minutos gratis."
+  }
+ }
+}

@@ -1,0 +1,31 @@
+{
+  "iata": "NSK",
+  "about": "Aeroporto nel sud della penisola del Taymyr, nel nord del Territorio di Krasnoyarsk. Gestore OOO «Aeroport «Norilsk». Quattro compagnie aeree operano voli di linea per dieci città della Russia, traffico passeggeri nel 2024 883.000 persone.",
+  "blocks": {
+    "transport": {
+      "title": "Come arrivare",
+      "hint": "Bus 33, 1 h 10 min",
+      "text": "L’autobus 33 collega l’autostazione «Norilsk (ADTs)», l’autostazione «Kayerkan (TBK)» e l’aerostazione, durata del viaggio 1 h 10 min. L’autobus 110 per Dudinka parte dall’aeroporto ogni giorno alle 09:00. La fermata dell’autobus per Dudinka è all’uscita della sala arrivi."
+    },
+    "terminals": {
+      "title": "Terminal",
+      "hint": "Un’aerostazione, 2 piani",
+      "text": "Un’unica aerostazione. Al livello 1 ufficio informazioni, banchi check-in, sala d’attesa, imballaggio e ricerca bagagli. Al livello 2 controlli, sala business e polizia. Dal 25.10.2026 al 27.03.2027 l’aerostazione è aperta lun–sab 06:00–21:00, dom 06:00–12:00."
+    },
+    "lounges": {
+      "title": "Sale business",
+      "hint": "Livello 2, 7450 ₽",
+      "text": "Sala business nella sala partenze al livello 2, fino a 49 posti. Partenza o arrivo 7450 ₽, bambino 2–12 anni 3725 ₽, sotto i 2 anni gratis. Chi accompagna e chi accoglie 3240 ₽. Telefoni: +7 (3919) 31-54-22, 31-53-89."
+    },
+    "sleep": {
+      "title": "Dove dormire",
+      "hint": "Foresteria, 24/7",
+      "text": "La foresteria (profilaktorij) dell’aeroporto sul piazzale dell’aerostazione. 30 camere per 55 posti, aperto giorno e notte. Accoglie passeggeri e altri cittadini con passaporto, pagamento per giorni interi, pagamento anticipato al 100%. Telefono +7 (3919) 31-53-70."
+    },
+    "kids": {
+      "title": "Con bambini",
+      "hint": "Livello 2, gratis",
+      "text": "Sala madre e bambino al livello 2 dell’aerostazione. Gratuita per donne con bambini sotto i 5 anni e per le donne nella seconda metà della gravidanza. In caso di ritardo del volo i bambini sotto i 7 anni sono alloggiati gratuitamente a spese della compagnia aerea. Ci sono una camera da letto, una sala giochi, uno spazio per preparare e consumare i pasti."
+    }
+  }
+}

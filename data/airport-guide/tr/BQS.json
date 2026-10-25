@@ -1,0 +1,36 @@
+{
+ "iata": "BQS",
+ "about": "Blagoveşçensk'in 15 km kuzeybatısında ve Çin sınırına 3,5 km uzaklıkta federal öneme sahip havalimanı. Uzak Doğu ve Sibirya şehirlerine ve Moskova'ya uçuşlar. 26 bin m²'den büyük yeni terminal kompleksi; 2025 yılı sonunda 1 milyondan fazla yolcu.",
+ "blocks": {
+  "transport": {
+   "title": "Nasıl gidilir",
+   "hint": "8А otobüsü, 42 dk",
+   "text": "8А numaralı şehir otobüsü Univermag durağından Aeroport durağına 42 dakikada gider, bilet 46 ₽. Şehre otobüs mkr. Blagoveshchensk durağına kadar gider, yaklaşık 40 dakika. Günde birkaç sefer var, tarife haftanın günlerine göre farklı. Blagoveşçensk – Bibikovo yolundaki onarım nedeniyle havalimanı bir saat erken yola çıkılmasını rica ediyor."
+  },
+  "lounges": {
+   "title": "Business salonları",
+   "hint": "Kat 5, 6000 ₽ / 3 sa",
+   "text": "Business salonu giden yolcu salonunun sağ kanadında, Kat 5, 5:00–17:00. Business sınıfı yolcuları, havayolu bonus programlarının üyeleri, Grey Wall, Every Lounge, RUS Priority, On pass ve Golden Key sahipleri kabul edilir. Diğerleri için 3 saati 6000 ₽, sonrası saati 550 ₽; 2 yaşından küçük çocuklar ücretsiz."
+  },
+  "storage": {
+   "title": "Emanet",
+   "hint": "Kat 1, saati 200 ₽'den",
+   "text": "Otomatik emanet dolapları terminal binasının sağ kanadında, Kat 1. Standart dolap saati 200 ₽ veya günlüğü 500 ₽, büyük dolap saati 300 ₽ veya günlüğü 800 ₽. Aynı yerde parça başına 950 ₽'den bagaj sarma."
+  },
+  "kids": {
+   "title": "Çocukla",
+   "hint": "Kat 2, 5:00–17:00",
+   "text": "Anne-bebek odası terminal binasının sağ kanadında, Kat 2, 5:00–17:00. 7 yaşından küçük çocuklar, 14 yaşından küçük engelli çocuklar, kalkıştan 3 saat önce ve inişten sonraki bir saat içinde kabul edilir. Pasaport ve bilet gerekir; yalnızca el bagajıyla girilir."
+  },
+  "parking": {
+   "title": "Otopark",
+   "hint": "15 dakika ücretsiz",
+   "text": "İndirme-bindirme alanı: 15 dakikaya kadar ücretsiz, 16–60 dakika 600 ₽, sonrası saati 600 ₽. Terminale 2 dakika uzaklıkta 600 araçlık Р1 otoparkı, ilk dakikadan itibaren ücretli: 30 dakikaya kadar 100 ₽, bir saate kadar 150 ₽, 2 saate kadar 250 ₽, 24 saate kadar 400 ₽, sonraki her 24 saat 400 ₽."
+  },
+  "wifi": {
+   "title": "Wi‑Fi",
+   "hint": "Goodfly ağı",
+   "text": "Terminal binasının yolcu alanlarında ücretsiz Wi‑Fi. Goodfly ağı, cep telefonu numarasıyla giriş."
+  }
+ }
+}

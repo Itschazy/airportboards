@@ -1,0 +1,31 @@
+{
+ "iata": "IAR",
+ "about": "Internationaler Flughafen Jaroslawl „Solotoje Kolzo“ in Tunoschna. Start- und Landebahn 3010×44 m. Es gibt einen Luft-Grenzübergang und eine Zollstelle.",
+ "blocks": {
+  "transport": {
+   "title": "Anreise",
+   "hint": "Bus 183, 40 Min.",
+   "text": "Bus 183 fährt täglich vom Busbahnhof Jaroslawl zum Flughafen. Fahrzeit 40 Minuten. Erste Fahrt ab Busbahnhof um 05:50, letzte ab Flughafen um 22:35."
+  },
+  "lounges": {
+   "title": "Business-Lounges",
+   "hint": "Lounge 2500 ₽",
+   "text": "Komfort-Lounge für abfliegende Passagiere. Ausstattung: TV, Wi‑Fi, Teetisch, Presse. Preis 2500 ₽ pro Passagier. Auskunft: +7 (4852) 43-18-00."
+  },
+  "kids": {
+   "title": "Mit Kind",
+   "hint": "Abflughalle, kostenlos",
+   "text": "Der Raum für Passagiere mit Kindern befindet sich in der Abflughalle, im Sicherheitsbereich. Zugang mit Kindern oder Kindern mit Behinderung unter 14 Jahren mit Bordkarte. Kostenlos, bis zu 3 Stunden vor Abflug tagsüber und bis zu 4 Stunden nachts. In der Ankunftshalle gibt es keinen solchen Raum."
+  },
+  "parking": {
+   "title": "Parken",
+   "hint": "300 ₽/Tag",
+   "text": "Kostenpflichtiger Parkplatz, 300 ₽ pro Tag. Keine Reservierung und keine Vorauszahlung, Bezahlung beim Abstellen des Autos, sofern Plätze frei sind. Die Abholzeit des Autos wird telefonisch unter 43-18-00 abgestimmt."
+  },
+  "wifi": {
+   "title": "Wi‑Fi",
+   "hint": "Kostenlos",
+   "text": "Im Terminal gibt es kostenloses Wi‑Fi."
+  }
+ }
+}

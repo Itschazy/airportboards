@@ -1,0 +1,20 @@
+{
+ "iata": "DXB",
+ "blocks": {
+  "transport": {
+   "title": "Come arrivare",
+   "hint": "Metro, linea rossa",
+   "text": "La linea rossa della metro di Dubai parte dai terminal 1 e 3. Orari: lun–gio e sab dalle 5:00 a mezzanotte, ven dalle 5:00 all’1:00, dom dalle 8:00 a mezzanotte; nei giorni festivi a volte più a lungo. Biglietti e carte Nol alle biglietterie e ai distributori dei terminal 1 e 3. In metro sono ammessi al massimo due colli, bagaglio a mano compreso."
+  },
+  "taxi": {
+   "title": "Taxi",
+   "hint": "Da 25 AED, giorno e notte",
+   "text": "Taxi Dubai Taxi Company giorno e notte alle stazioni presso ogni terminal, partenza da 25 AED più il costo per la distanza. Operano anche Uber, Careem e Bolt: punto di salita secondo la segnaletica."
+  },
+  "storage": {
+   "title": "Deposito bagagli",
+   "hint": "Terminal 1–3, da 35 AED",
+   "text": "I depositi bagagli dnata sono aperti giorno e notte nei terminal 1, 2 e 3. Per 12 ore o meno: nei terminal 1 e 2 collo standard (fino a 21×24×11 pollici) 40 AED, grande o di valore 50 AED; nel terminal 3: 35 e 40 AED. Nel terminal 1 il deposito è al livello arrivi, accanto alla farmacia Boots."
+  }
+ }
+}

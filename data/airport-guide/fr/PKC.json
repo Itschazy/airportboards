@@ -1,0 +1,41 @@
+{
+ "iata": "PKC",
+ "about": "L'aéroport international de Petropavlovsk-Kamtchatski (Ielizovo) est géré par la société de gestion « Aeroporty Regionov ». Depuis le 31 mars 2025, tous les vols passagers réguliers sont traités par le nouveau terminal. En 2024, l'aéroport a accueilli 931 000 passagers.",
+ "blocks": {
+  "transport": {
+   "title": "Comment s'y rendre",
+   "hint": "Bus 7, 8, 104, 120",
+   "text": "Bus urbains n° 7 (arrêt « Avtokhoziaïstvo ») et n° 8 (jusqu'à « Garnizon » et la rue Ouralskaïa). Le bus n° 104 va à Ielizovo, intervalle 5–20 minutes. L'interurbain n° 120 va à Vilioutchinsk, trajet de 1 h 35 min. Horaires selon les données du ministère des Transports du kraï du Kamtchatka."
+  },
+  "terminals": {
+   "title": "Terminal",
+   "hint": "Nouveau terminal depuis 2025",
+   "text": "Depuis le 31 mars 2025, tous les vols réguliers sont traités par le nouveau terminal. 30 comptoirs d'enregistrement : 15 pour les lignes intérieures et 15 pour les internationales. Embarquement par 5 passerelles télescopiques. Bornes de dépôt automatique des bagages BAGS ID."
+  },
+  "lounges": {
+   "title": "Salons",
+   "hint": "Niveau 3, 7 500 ₽",
+   "text": "Salon au niveau 3 du terminal. Entrée 7 500 ₽ jusqu'à 3 heures, enfants de 2 à 12 ans 3 750 ₽. Accès pour les passagers de classe affaires, les membres d'ON PASS, Grey Wall, EveryLounge, Persona.Aero, RusPriority, GoldenKey et tous ceux qui paient l'entrée."
+  },
+  "storage": {
+   "title": "Consigne à bagages",
+   "hint": "Niveau 1, 600 ₽/jour",
+   "text": "Consigne au niveau 1 du terminal. 300 ₽ jusqu'à 1 heure, ensuite 600 ₽ par jour. Les affaires ne sont acceptées qu'emballées. Emballage des bagages au niveau 1 de 7:00 à 19:00, à partir de 1 000 ₽ par bagage."
+  },
+  "sleep": {
+   "title": "Où dormir",
+   "hint": "Hôtel « Poliot » à côté",
+   "text": "L'hôtel « Poliot », à distance de marche de l'aérogare : Ielizovo, rue Zviozdnaïa, 10/7. 36 chambres, ouvert jour et nuit. Petit-déjeuner inclus, libération de la chambre à 12:00. Téléphone +7 (41531) 99-315."
+  },
+  "kids": {
+   "title": "Avec un enfant",
+   "hint": "Niveau 3, 8:00–19:30",
+   "text": "Salle mère-enfant au niveau 3 du terminal, 8:00–19:30, gratuite. Pour les enfants de moins de 7 ans avec un adulte, les enfants handicapés de moins de 14 ans et les femmes enceintes dans la seconde moitié de la grossesse. Billet ou carte d'embarquement et certificat du poste médical du niveau 1 requis."
+  },
+  "wifi": {
+   "title": "Wi‑Fi",
+   "hint": "Réseau airport-pkc",
+   "text": "Wi‑Fi gratuit dans les zones passagers. Réseau airport-pkc, connexion par numéro de téléphone mobile."
+  }
+ }
+}

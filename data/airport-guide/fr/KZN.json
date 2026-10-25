@@ -1,0 +1,36 @@
+{
+ "iata": "KZN",
+ "about": "L'aéroport international « Kazan » Gabdoulla-Toukaï se trouve à 26 km du centre de Kazan. Un bus et un train de banlieue le desservent ; il dispose de parkings payants et d'un parking gratuit.",
+ "blocks": {
+  "transport": {
+   "title": "Comment s'y rendre",
+   "hint": "Bus 197, train de banlieue",
+   "text": "Le bus n° 197 part de la gare routière « Vostotchny » par le prospekt Pobedy, passe près du métro « Prospekt Pobedy » et termine son trajet aux Terminaux 1 et 1А. Il circule de 6:00 à 22:00, transporteur PATP-8. Les trains de banlieue Kazan — Aéroport sont exploités par la société « Sodroujestvo ». Les taxis fonctionnent jour et nuit."
+  },
+  "lounges": {
+   "title": "Salons",
+   "hint": "Dès 3 200 ₽",
+   "text": "« Bolgar — Ak Bars Bank Lounge » : niveau 2 après le contrôle, à droite après la porte n° 4, 3 500 ₽. « Sviajsk » : niveau 3 après le contrôle, 4 500 ₽. Aux départs internationaux dans le Terminal 1А : Sky Lounge au niveau 1, 5 500 ₽, et Prime Lounge au niveau 2, 3 200 ₽. Enfants de 2 à 12 ans : moitié prix."
+  },
+  "storage": {
+   "title": "Consigne à bagages",
+   "hint": "Т1, sous-sol, 24/7",
+   "text": "Terminal 1, sous-sol, jour et nuit. Un bagage coûte 400 ₽ jusqu'à minuit du jour en cours, ensuite 200 ₽ par jour. Tout jour entamé est dû en entier. Opérateur PACK&FLY, téléphone +7 843 254 00 21."
+  },
+  "sleep": {
+   "title": "Où dormir",
+   "hint": "Hôtel à 270 m",
+   "text": "L'hôtel « Poliot » se trouve sur le site de l'aéroport, à 270 m du Terminal 1. Les repas se commandent à la réservation ou avec livraison en chambre ; cantine au niveau 3 du Terminal 1. Administrateur : +7 (843) 267-87-05."
+  },
+  "kids": {
+   "title": "Avec un enfant",
+   "hint": "Т1, niveau 2, 24/7",
+   "text": "Salle mère-enfant au niveau 2 du Terminal 1, jour et nuit. Accès avec des enfants de moins de 7 ans, des enfants handicapés de moins de 14 ans et pour les femmes enceintes dans la seconde moitié de la grossesse. À l'intérieur : deux chambres avec lits d'enfant, deux salles de jeux, un coin repas avec micro-ondes et chauffe-biberon, une douche. Téléphone +7 (843) 267-87-86."
+  },
+  "parking": {
+   "title": "Parking",
+   "hint": "20 min gratuites",
+   "text": "Les 20 premières minutes à compter de l'entrée sur le parking sont gratuites. Le parking payant se règle aux bornes de paiement des terminaux et des aires de stationnement ou dans l'application de l'aéroport. Questions sur le parking des terminaux 1, 1А et 2 : +7 (843) 254-01-55."
+  }
+ }
+}

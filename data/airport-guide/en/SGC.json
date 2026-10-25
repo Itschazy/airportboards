@@ -1,0 +1,26 @@
+{
+ "iata": "SGC",
+ "about": "Surgut International Airport, operator JSC Surgut Airport. The route network has more than 30 destinations. The terminal has business lounges, VIP lounges and jet bridges.",
+ "blocks": {
+  "transport": {
+   "title": "Getting there",
+   "hint": "Buses 16 and 107",
+   "text": "City routes No. 16 and No. 107 run to the airport. Route maps and timetables are published on the Getting there page."
+  },
+  "lounges": {
+   "title": "Lounges",
+   "hint": "ON PASS, 3,500 ₽",
+   "text": "Business lounge in the arrivals hall, Level 2 (by lift), open round the clock; business class and holders of elite airline cards, economy class for a fee; does not serve international flights. ON PASS lounge: Level 2 airside, domestic flights only, open round the clock, adult 3,500 ₽, child 2–12 years 2,500 ₽."
+  },
+  "storage": {
+   "title": "Left luggage",
+   "hint": "24/7, 400 ₽ per day",
+   "text": "Open round the clock. The first day 400 ₽ (until 00:00), then 200 ₽ per day; a part day counts as a full day. One item may weigh up to 30 kg."
+  },
+  "parking": {
+   "title": "Parking",
+   "hint": "20 min free",
+   "text": "On the station forecourt the first 20 minutes are free. A long-stay area for 50 cars right behind the bus shelter: 750 ₽ per day. Payment at the terminal ticket offices and at machines by the main entrance and in the arrivals hall."
+  }
+ }
+}

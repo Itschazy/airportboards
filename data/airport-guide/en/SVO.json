@@ -1,0 +1,46 @@
+{
+ "iata": "SVO",
+ "about": "Sheremetyevo is in Khimki, Moscow Oblast. The terminals are divided into two complexes: North (B and C) and South (D, E, F and the Aeroexpress terminal), connected by an inter-terminal train. Airport operator: JSC MASH.",
+ "blocks": {
+  "lounges": {
+   "title": "Lounges",
+   "hint": "8 lounges in B, C and D",
+   "text": "Domestic flights: Rublyov (B, Level 3, by gates 105–106), Kandinsky and A-Club (B, Level 2), Sochi (D, Level 2). International: Malevich (C, Level 3, entrance by gate 143), Chagall, Alfa Only and Sber (C, Level 3). Rublyov and Malevich admit free of charge priority class passengers and Aeroflot Bonus Gold, Platinum, Infinit and Infinit Pro cardholders. Others pay 4,500 ₽ for 4 hours, children under 2 free."
+  },
+  "storage": {
+   "title": "Left luggage",
+   "hint": "B, D and Aeroexpress",
+   "text": "Paid left luggage is available in Terminal B (Level 1), Terminal D (Level −1) and the Aeroexpress terminal, all landside. In B and the Aeroexpress terminal it is open round the clock. The first 24 hours cost 700 ₽ per item, then 300 ₽ per 24 hours. One item may weigh no more than 32 kg; storage for up to 6 months."
+  },
+  "sleep": {
+   "title": "Where to sleep",
+   "hint": "Capsules in B, C and by the train",
+   "text": "GettSleep in Terminal B: Level 3, landside, next to the currency exchange, no boarding pass needed. GettSleep in Terminal C: Level 3, international airside, next to the Orion lounge, only with a boarding pass for an international flight. Another GettSleep is on Level 3 of the Aeroexpress terminal. All open round the clock, hourly rates from 4 hours."
+  },
+  "kids": {
+   "title": "With children",
+   "hint": "B, C, D — round the clock",
+   "text": "Mother and child rooms are in Terminal B (Level 1), Terminal C (Level 3) and Terminal D (Level 2), all landside. Open round the clock and free. Admits passengers with children under 7 (under 14 for children with disabilities) and pregnant women. Bring tickets or boarding passes and documents for the adult and the child."
+  },
+  "transport": {
+   "title": "Getting there",
+   "hint": "Aeroexpress and bus",
+   "text": "Aeroexpress runs from Belorussky railway station, Savyolovskaya, Okruzhnaya and Lianozovo every 30 minutes, with a break at night. The journey from Belorussky railway station takes 46 minutes to Terminals B and C and 61 minutes to D, E, F. Aeroexpress express buses run from Khovrino metro station (exit No. 2): No. 1195 to B and C, No. 1195D to D. Buses run every 10–15 minutes; the journey takes about 20 minutes and a ticket costs 450 ₽."
+  },
+  "parking": {
+   "title": "Parking",
+   "hint": "10 min free at B, C",
+   "text": "Entry to the Arrivals and Departures zones of Terminals B and C is free for 10 minutes, on the square at D, E, F for 15 minutes. Beyond the limit, a penalty of 4,000 ₽ per hour. Cars drop off in the Departures zone at the B and C car parks; from there it is 2 minutes to the terminal via a covered walkway. Free entry is allowed no more than twice in two hours."
+  },
+  "wifi": {
+   "title": "Wi‑Fi",
+   "hint": "_Sheremetyevo Wi-Fi",
+   "text": "The free network _Sheremetyevo Wi-Fi covers the entire airport. To connect, identify yourself by phone number: call the number on the screen, accept the callback and enter the last 4 digits of the number, or enter the code from the SMS."
+  },
+  "terminals": {
+   "title": "Terminals",
+   "hint": "North B, C — South D, E, F",
+   "text": "The airport consists of two complexes: North (Terminals B and C) and South (Terminals D, E, F and the Aeroexpress terminal). Inter-terminal trains run between them; service resumed on 1 June 2024. You can also travel by scheduled buses No. 817 and No. 851 or by car."
+  }
+ }
+}

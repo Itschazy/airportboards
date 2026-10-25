@@ -1,0 +1,26 @@
+{
+  "iata": "UKX",
+  "about": "L’aeroporto si trova a 10 km a nord di Ust-Kut. La costruzione dell’attuale aeroporto iniziò nel 1963, i primi voli sulla pista in terra battuta partirono nell’autunno dello stesso anno.",
+  "blocks": {
+    "transport": {
+      "title": "Come arrivare",
+      "hint": "Solo taxi",
+      "text": "Non ci sono trasporti urbani per l’aeroporto. Si arriva solo con un taxi privato."
+    },
+    "terminals": {
+      "title": "Terminal",
+      "hint": "Banco chiuso 40 min prima",
+      "text": "Il check-in inizia 2 ore o 1 h 30 min prima, a seconda del tipo di aereo. Termina 40 minuti prima della partenza. Per l’imbarco serve la carta d’imbarco cartacea: ritirarla al banco non oltre 10 minuti prima della fine del check-in."
+    },
+    "storage": {
+      "title": "Deposito bagagli",
+      "hint": "Presso il banco check-in",
+      "text": "Nell’edificio dell’aerostazione, accanto al banco check-in. Telefono: +7 (39565) 5-07-09."
+    },
+    "kids": {
+      "title": "Con bambini",
+      "hint": "Bambini sotto i 7 anni, gratis",
+      "text": "Sala madre e bambino nell’edificio dell’aerostazione. Per passeggeri in partenza con bambini sotto i 7 anni, permanenza fino a 3–4 ore. Con il bambino può stare un solo adulto. Gratis. Rivolgersi all’ufficio informazioni o al banco check-in."
+    }
+  }
+}

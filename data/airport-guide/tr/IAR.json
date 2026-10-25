@@ -1,0 +1,31 @@
+{
+ "iata": "IAR",
+ "about": "Yaroslavl'ın Tunoşna'daki Zolotoye Koltso Uluslararası Havalimanı. Pist 3010×44 m. Hava hudut kapısı faaliyette, gümrük noktası var.",
+ "blocks": {
+  "transport": {
+   "title": "Nasıl gidilir",
+   "hint": "183 numaralı otobüs, 40 dk",
+   "text": "183 numaralı otobüs her gün Yaroslavl otogarından havalimanına çalışır. Yolculuk süresi 40 dakika. Otogardan ilk sefer 05:50'de, havalimanından son sefer 22:35'te."
+  },
+  "lounges": {
+   "title": "Business salonları",
+   "hint": "Salon 2500 ₽",
+   "text": "Giden yolcular için konforlu bekleme salonu. İçeride TV, Wi‑Fi, çay masası, basın. Ücreti yolcu başına 2500 ₽. Bilgi: +7 (4852) 43-18-00."
+  },
+  "kids": {
+   "title": "Çocukla",
+   "hint": "Gidiş salonu, ücretsiz",
+   "text": "Çocuklu yolcu odası gidiş salonunda, steril alanda. 14 yaşından küçük çocuklarla veya engelli çocuklarla biniş kartıyla girilir. Ücretsiz; kalkıştan önce gündüz 3 saate, gece 4 saate kadar. Geliş salonunda oda yok."
+  },
+  "parking": {
+   "title": "Otopark",
+   "hint": "Günlüğü 300 ₽",
+   "text": "Ücretli otopark, günlüğü 300 ₽. Rezervasyon ve ön ödeme yok; yer varsa ödeme araç park edilirken yapılır. Aracı geri alma saati 43-18-00 numaralı telefondan teyit edilir."
+  },
+  "wifi": {
+   "title": "Wi‑Fi",
+   "hint": "Ücretsiz",
+   "text": "Terminal binasında ücretsiz Wi‑Fi var."
+  }
+ }
+}

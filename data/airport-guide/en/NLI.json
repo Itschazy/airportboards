@@ -1,0 +1,16 @@
+{
+ "iata": "NLI",
+ "about": "The airport is in the Nikolaevsky District of Khabarovsk Krai, 2.5 km west of Nikolaevsk-on-Amur. Class G, one terminal for 50 passengers per hour. Operator: JSC Khabarovskie Avialinii.",
+ "blocks": {
+  "storage": {
+   "title": "Left luggage",
+   "hint": "419 ₽ per item per day",
+   "text": "Baggage storage at left luggage: 418.83 ₽ per item per day including VAT. If departure is delayed by more than 3 hours, checked baggage is stored at 0.88 ₽ per kg per hour. Prices per the price list from 5 June 2026."
+  },
+  "lounges": {
+   "title": "Lounges",
+   "hint": "VIP room, 3,773 ₽",
+   "text": "Passenger service in the VIP room: 3,773.25 ₽ including VAT per service. Price per the price list from 5 June 2026."
+  }
+ }
+}

@@ -1,0 +1,31 @@
+{
+ "iata": "UUS",
+ "about": "The terminal is in the Khomutovo planning district on the southern outskirts of Yuzhno-Sakhalinsk, 10 km from the centre. The terminal complex is operated by JSC Aerovokzal Yuzhno-Sakhalinsk; the complex covers more than 47,000 sq. m.",
+ "blocks": {
+  "transport": {
+   "title": "Getting there",
+   "hint": "Buses 3, 8, 63",
+   "text": "Buses No. 3, 8 and 63 run from the centre; the terminal is their last stop. They run from 6:30 to 22:00, journey time 30–40 min. Suburban train from the railway station to Khomutovo, then about 10 min by bus. Taxi: about 25 min, about 350 ₽."
+  },
+  "parking": {
+   "title": "Parking",
+   "hint": "15 min free",
+   "text": "Drop-off and pick-up zone: 15 min free, up to 60 min 400 ₽, then 1,200 ₽ for the first 24 hours and 600 ₽ for each further 24 hours. Long-stay P1: 500 ₽ per 24 hours for the first 5 periods of 24 hours, then 400 ₽. Free for passengers with reduced mobility displaying a Disabled sign."
+  },
+  "lounges": {
+   "title": "Lounges",
+   "hint": "Aniva, Level 3",
+   "text": "Aniva business lounge on Level 3, from 6:00 to 23:00: 4,400 ₽, children 2–12 years 2,200 ₽, no more than 2 hours, admits via Every Lounge. Krilyon lounge on Level 2, from 6:00 to 23:00: 2,800 ₽, accepts Comfort pass, Every Lounge, Mir Pass, Grey Wall Pass, ONPASS. Children under 2 free."
+  },
+  "storage": {
+   "title": "Left luggage",
+   "hint": "Level 1, from 500 ₽",
+   "text": "Left luggage on Level 1 of the terminal. Regular baggage: 500 ₽ for the first 24 hours, 200 ₽ for each further 24 hours. Oversized over 203 cm: 850 ₽ and 400 ₽. One item up to 30 kg, storage up to 30 days."
+  },
+  "kids": {
+   "title": "With children",
+   "hint": "Level 2, 6:00–23:00",
+   "text": "Mother and child room on Level 2 in the landside area, from 6:00 to 23:00, free. Admits children under 8 with an adult, children with disabilities under 14, and women in the second half of pregnancy. A ticket or boarding pass, a passport and a birth certificate are required. There is a kitchen with a microwave; no steriliser."
+  }
+ }
+}

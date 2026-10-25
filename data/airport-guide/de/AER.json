@@ -1,0 +1,46 @@
+{
+ "iata": "AER",
+ "about": "Busse verbinden den Flughafen Sotschi mit den Stadtbezirken Adler, Chosta und Zentralny sowie mit dem Ferienort Krasnaja Poljana. Der Terminalkomplex mit 65.000 m² Fläche wurde 2007–2013 umgebaut, daneben gibt es ein VIP-Terminal. Betreiber: AO „Meschdunarodny aeroport Sotschi“, 2024 fertigte der Flughafen 13,7 Mio. Passagiere ab.",
+ "blocks": {
+  "lounges": {
+   "title": "Business-Lounges",
+   "hint": "Sektoren B und C, Ebene 2",
+   "text": "Business-Lounge für Inlandsflüge in Sektor B, Ebene 2, an Gate 21. Preis 4 800 ₽. Business-Lounge für internationale Flüge in Sektor C, Ebene 2. Preis 4 300 ₽, Zugang mit den Karten Grey Wall, UNIPASS, ONPASS, GoldenKey, Comfort Pass und RusPriority. Komfort-Lounge in Sektor B, Ebene 2, an Gate 21, Preis 2 650 ₽. Alle Lounges sind rund um die Uhr geöffnet, Aufenthalt bis zu 3 Stunden, Kinder unter 12 Jahren 50 % Rabatt, unter 2 Jahren Eintritt frei."
+  },
+  "storage": {
+   "title": "Gepäckaufbewahrung",
+   "hint": "Sektor C, Ebene 1, 24/7",
+   "text": "Sektor C, Ebene 1, rund um die Uhr geöffnet. Die ersten 24 Stunden kosten ab 600 ₽ pro Gepäckstück, je weitere 24 Stunden ab 300 ₽. Ein Gepäckstück wiegt höchstens 30 kg, die Summe der drei Maße beträgt höchstens 203 cm. Gegenstände, die nicht innerhalb von 30 Tagen abgeholt werden, gelten als herrenlos. Telefon 8 (862) 249-78-46."
+  },
+  "sleep": {
+   "title": "Schlafen",
+   "hint": "Kapseln, Sektor B",
+   "text": "Kapseln von Aero Hotel in Sektor B, Ebene 2, rund um die Uhr geöffnet. Preis ab 990 ₽ pro Passagier. Die Kapsel hat Schallschutz, Klimaanlage, Steckdosen und Wi‑Fi. Buchung über cellhotel.ru oder telefonisch unter +7 (938) 875-18-05."
+  },
+  "kids": {
+   "title": "Mutter und Kind",
+   "hint": "Sektor B, Ebene 2",
+   "text": "Mutter-Kind-Raum in Sektor B, Ebene 2, Nutzung kostenlos. Zugang mit Kindern unter 7 Jahren, mit Kindern mit Behinderung unter 14 Jahren sowie für Schwangere in der zweiten Schwangerschaftshälfte. Erforderlich sind Pass und Bordkarte oder Ticket. Für ankommende Passagiere mit Kindern ist der Raum von 22:00 bis 06:00 geöffnet, solange keine Verkehrsmittel fahren. Wickelräume gibt es an den Toiletten in allen Sektoren."
+  },
+  "transport": {
+   "title": "Anreise",
+   "hint": "Lastotschka, Busse",
+   "text": "Die „Lastotschka“ und Vorortzüge fahren vom Bahnhofsvorplatz ab: Sektor C1, Ebene 1. Sie fahren nach Adler, Sotschi, Rosa Chutor und zum Olympiapark. Der Busplatz liegt zwischen B1 und C1. Nach Adler und zum Olympiapark fahren Nr. 557, 558 und 535. Nach Sotschi Nr. 105 und 105с. Nach Krasnaja Poljana Nr. 105, 105с und 535. Der Schalter des offiziellen Taxis befindet sich in der Gepäckausgabehalle, Sektoren A und B."
+  },
+  "parking": {
+   "title": "Parken",
+   "hint": "15 Minuten kostenlos",
+   "text": "Auf dem Vorplatz (Einfahrten 1–6) sind die ersten 15 Minuten kostenlos, danach 400 ₽ pro Stunde. Auf dem Tagesparkplatz (Einfahrten 31, 32) sind die ersten 15 Minuten kostenlos, danach 300 ₽ pro Stunde, bei mehr als 3 Stunden 1 500 ₽ pro Tag. Er liegt 100 m vor dem Haupteingang, rechts abbiegen. Ein Ausweichparkplatz liegt etwa 400 m vom Terminal entfernt."
+  },
+  "wifi": {
+   "title": "Wi‑Fi",
+   "hint": "Airport_Free",
+   "text": "Das kostenlose Netz Airport_Free ist im gesamten Terminal, im VIP-Terminal und in der Business-Lounge verfügbar. Anmeldung nur mit SIM-Karte eines russischen Mobilfunkanbieters."
+  },
+  "terminals": {
+   "title": "Terminal",
+   "hint": "Sektoren A, B, C",
+   "text": "Ein Terminal mit den Sektoren A, B und C. Check-in-Schalter gibt es in allen drei, Schalter für Passagiere ohne Gepäck nur in A und B. Gepäck von Inlandsflügen wird in den Sektoren A und B ausgegeben, von internationalen Flügen in Sektor C, alles auf Ebene 1. Der Check-in am Schalter öffnet 3 Stunden vor Abflug und schließt 40 Minuten vorher."
+  }
+ }
+}

@@ -1,0 +1,41 @@
+{
+ "iata": "DME",
+ "about": "Der Internationale Flughafen Domodedowo liegt 45 km vom Zentrum Moskaus und 24 km vom Autobahnring MKAD entfernt, mit der Stadt verbindet ihn die Fernstraße А-105. Die Passagiere werden in einem einheitlichen Terminalkomplex einschließlich des Segments Т2 abgefertigt. Regelmäßige Passagier- und Frachtflüge führen 27 Fluggesellschaften durch.",
+ "blocks": {
+  "lounges": {
+   "title": "Business-Lounges",
+   "hint": "Radius, Gorisont, S7",
+   "text": "„Radius“: Ebene 2, Sicherheitsbereich der Inlandsabflüge, rund um die Uhr. „Gorisont“: Ebene 3 des Atriums, Sicherheitsbereich der internationalen Abflüge, rund um die Uhr. Für beide Lounges kann man Zugang für 4 Stunden kaufen, außerdem nimmt „Radius“ Passagiere der Premium-Klassen von NordStar, Yamal, Alrosa, Ural Airlines und Izhavia auf. S7 hat Business-Lounges bei den Inlandsflügen, Sektor C; die Shostakovich Premier Lounge auf Ebene 1 der Inlandsabflüge nimmt die Premium-Klassen von IrAero, Severstal und Red Wings auf."
+  },
+  "storage": {
+   "title": "Gepäckaufbewahrung",
+   "hint": "Untergeschoss, 24/7",
+   "text": "Untergeschoss des Terminalkomplexes. Rund um die Uhr geöffnet. Standardplatz: 900 ₽ für die ersten 3 Stunden, 1300 ₽ für die ersten 24 Stunden bei mehr als 3 Stunden. Automatisches Schließfach: 700 ₽ pro Stunde."
+  },
+  "sleep": {
+   "title": "Schlafen",
+   "hint": "Aerotel im Terminal",
+   "text": "„Aerotel Express“ auf Ebene 2 des Terminals, Rezeption rund um die Uhr. Transitaufenthalt von 2 bis 24 Stunden, ohne feste Check-in-Zeit. Das „Aerotel“ liegt 500 m vom Terminal entfernt. Dorthin fährt ein kostenloser Shuttle rund um die Uhr ab Ausgang Nr. 2, alle 30 Minuten."
+  },
+  "kids": {
+   "title": "Mutter-Kind-Raum",
+   "hint": "Т2, Eingang Nr. 5, 24/7",
+   "text": "Ebene 1 von Terminal 2, Eingang Nr. 5 neben Check-in-Schalter Nr. 156. Rund um die Uhr geöffnet, kostenlos. Zugang für Kinder unter 8 Jahren mit einem Erwachsenen und Schwangere in der zweiten Schwangerschaftshälfte. Es gibt einen Schlafraum mit Kinderbetten für Kinder unter 3 Jahren, Spielzimmer und eine Küche, Sterilisatoren gibt es nicht."
+  },
+  "transport": {
+   "title": "Anreise",
+   "hint": "Aeroexpress 45 Minuten",
+   "text": "Der Aeroexpress fährt vom Paweletzker Bahnhof etwa 45 Minuten, von Werchnije Kotly (MZK) etwa 40 Minuten. Am Flughafen liegt der Bahnhof an Ausgang Nr. 2 von Terminal 1. Der Aeroexpress-Bus Nr. 1185 zur Metrostation „Domodedowskaja“ fährt alle 20 Minuten, Fahrzeit 35–40 Minuten. Er hält an Terminal 2."
+  },
+  "parking": {
+   "title": "Parkplätze",
+   "hint": "P2 – 1 Min. zum Terminal",
+   "text": "Parkhaus P2: 1 Minute zum Terminal, überdachter Übergang auf Ebene 3, 963 Plätze. Allgemeiner Bereich P2: 900 ₽ für die ersten 2 Stunden. P3 liegt 200 m vom Terminal entfernt, P5 in 500 m, beide 800 ₽ für die erste Stunde. Auf P1, P3, P5 und in den Bereichen „Komfort“ und „VIP“ von P2 gibt es keine kostenlose Parkzeit."
+  },
+  "terminals": {
+   "title": "Terminal",
+   "hint": "Т1 und Т2 unter einem Dach",
+   "text": "Das Terminal ist einheitlich, nach dem Konzept „unter einem Dach“. Das Segment Т2 wurde 2023 eröffnet und fertigt nur internationale Flüge ab. Es hat 7 Etagen und 22 Flugsteige. Check-in auf Ebene 1, Passkontrolle auf Ebene 2, Abflug und Ankunft sind auf verschiedene Ebenen verteilt."
+  }
+ }
+}
