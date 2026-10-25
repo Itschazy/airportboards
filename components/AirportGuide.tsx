@@ -37,7 +37,9 @@ export function AirportGuide({ guide, title }: { guide: Guide; title: string }) 
       <h2 id="ag-title" style={{ margin: '0 0 14px', fontSize: 13, fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.12em', color: 'var(--ab-8a8a8a)' }}>{title}</h2>
       {/* Откуда факты — одной строкой, до плиток: так читатель и answer-engine видят метод, а
           не только результат (skill seo-aeo-geo, «methodology disclosure»). */}
-      <p className="ag-lead">Факты с официальных сайтов аэропорта и перевозчиков, источник под каждым блоком. Проверено <time dateTime={guide.checked}>{checked}</time>.</p>
+      {guide.basis === 'third-party'
+        ? <p className="ag-lead">Официального сайта у аэропорта нет. Здесь только факты, совпавшие минимум на двух независимых сторонних сайтах, оба источника под каждым блоком. Проверено <time dateTime={guide.checked}>{checked}</time>.</p>
+        : <p className="ag-lead">Факты с официальных сайтов аэропорта и перевозчиков, источник под каждым блоком. Проверено <time dateTime={guide.checked}>{checked}</time>.</p>}
       <div className="ag-grid">
         {blocks.map((b) => (
           <details key={b.id} className="ag-tile">
@@ -50,11 +52,16 @@ export function AirportGuide({ guide, title }: { guide: Guide; title: string }) 
             </summary>
             <div className="ag-body">
               <p>{b.text}</p>
-              <p className="ag-src">
-                По данным <a href={b.url} target="_blank" rel="noopener noreferrer">{b.source}</a>
-                {b.url2 ? <> и <a href={b.url2} target="_blank" rel="noopener noreferrer">ещё одной страницы</a></> : null}
-
-              </p>
+              {guide.basis === 'third-party' ? (
+                <p className="ag-src">
+                  По данным сторонних сайтов: <a href={b.url} target="_blank" rel="noopener noreferrer">{b.source}</a> и <a href={b.url2} target="_blank" rel="noopener noreferrer">{b.source2}</a>
+                </p>
+              ) : (
+                <p className="ag-src">
+                  По данным <a href={b.url} target="_blank" rel="noopener noreferrer">{b.source}</a>
+                  {b.url2 ? <> и <a href={b.url2} target="_blank" rel="noopener noreferrer">ещё одной страницы</a></> : null}
+                </p>
+              )}
             </div>
           </details>
         ))}

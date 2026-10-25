@@ -57,9 +57,16 @@ for (const f of files) {
     for (const k of ['title', 'hint', 'text', 'source']) if (!String(b[k] ?? '').trim()) fails.push(`${where}: пусто поле ${k}`);
     for (const k of ['url', 'url2']) if (b[k] !== undefined && !/^https?:\/\/[^\s]+$/.test(b[k])) fails.push(`${where}: ${k} не ссылка`);
     if (!b.url) fails.push(`${where}: нет ссылки на источник`);
+    const host = (u) => (u || '').replace(/^https?:\/\/(www\.)?/, '').split('/')[0];
     if (b.url && b.source && !b.url.replace(/^https?:\/\/(www\.)?/, '').startsWith(b.source.replace(/^www\./, ''))) {
       fails.push(`${where}: источник «${b.source}» не совпадает с доменом ссылки ${b.url}`);
     }
+    // Справочная по сторонним сайтам держится на ДВУХ независимых источниках у каждого блока.
+    if (g.basis === 'third-party') {
+      if (!b.url2 || !b.source2) fails.push(`${where}: у справочной по сторонним сайтам нужен второй источник (url2 и source2)`);
+      else if (host(b.url) === host(b.url2)) fails.push(`${where}: оба источника с одного домена ${host(b.url)} — это не два независимых сайта`);
+      else if (!b.url2.replace(/^https?:\/\/(www\.)?/, '').startsWith(b.source2.replace(/^www\./, ''))) fails.push(`${where}: источник «${b.source2}» не совпадает с доменом ${b.url2}`);
+    } else if (g.basis !== undefined) fails.push(`${f}: неизвестное basis «${g.basis}»`);
   }
 }
 

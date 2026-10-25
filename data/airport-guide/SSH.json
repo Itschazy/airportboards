@@ -1,0 +1,47 @@
+{
+ "iata": "SSH",
+ "checked": "2026-10-25",
+ "basis": "third-party",
+ "blocks": [
+  {
+   "id": "transport",
+   "title": "Как доехать",
+   "hint": "Маршрутки, цену — заранее",
+   "text": "Маршрутки в Шарм-эш-Шейх обычно отправляются, когда заполнятся; цену договаривают с водителем заранее. Есть прокат машин — Hertz, Thrifty и местные компании.",
+   "source": "worldtravelguide.net",
+   "url": "https://www.worldtravelguide.net/guides/africa/egypt/sharm-el-sheikh/sharm-el-sheikh-international-airport/",
+   "source2": "sleepinginairports.net",
+   "url2": "https://www.sleepinginairports.net/guides/sharm-el-sheikh-airport-guide.htm"
+  },
+  {
+   "id": "taxi",
+   "title": "Такси",
+   "hint": "Цену — до посадки",
+   "text": "Такси у аэропорта есть; цену поездки договаривают с водителем до посадки.",
+   "source": "worldtravelguide.net",
+   "url": "https://www.worldtravelguide.net/guides/africa/egypt/sharm-el-sheikh/sharm-el-sheikh-international-airport/",
+   "source2": "sleepinginairports.net",
+   "url2": "https://www.sleepinginairports.net/guides/sharm-el-sheikh-airport-guide.htm"
+  },
+  {
+   "id": "terminals",
+   "title": "Терминалы",
+   "hint": "Два терминала",
+   "text": "В аэропорту два пассажирских терминала. Есть банкоматы и пункты обмена валюты.",
+   "source": "worldtravelguide.net",
+   "url": "https://www.worldtravelguide.net/guides/africa/egypt/sharm-el-sheikh/sharm-el-sheikh-international-airport/",
+   "source2": "sleepinginairports.net",
+   "url2": "https://www.sleepinginairports.net/guides/sharm-el-sheikh-airport-guide.htm"
+  },
+  {
+   "id": "storage",
+   "title": "Камера хранения",
+   "hint": "Есть в аэропорту",
+   "text": "В аэропорту есть камера хранения багажа. Цену источники не указывают.",
+   "source": "worldtravelguide.net",
+   "url": "https://www.worldtravelguide.net/guides/africa/egypt/sharm-el-sheikh/sharm-el-sheikh-international-airport/",
+   "source2": "sleepinginairports.net",
+   "url2": "https://www.sleepinginairports.net/guides/sharm-el-sheikh-airport-guide.htm"
+  }
+ ]
+}

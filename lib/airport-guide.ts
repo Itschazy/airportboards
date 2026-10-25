@@ -23,10 +23,23 @@ export type GuideBlock = {
   source: string;
   url: string;
   url2?: string;
+  /** Домен второй страницы — обязателен у справочной basis: 'third-party' (см. ниже). */
+  source2?: string;
 };
 /** about — абзац «Об аэропорте» из тех же официальных источников; заменяет сгенерированный
  *  (lib/airport-content.ts). Необязателен: нет подтверждённых фактов — остаётся старый. */
-export type AirportGuide = { iata: string; checked: string; about?: string; about_url?: string; blocks: GuideBlock[] };
+export type AirportGuide = {
+  iata: string; checked: string; about?: string; about_url?: string; blocks: GuideBlock[];
+  /**
+   * 'third-party' — у аэропорта нет официального сайта, и факты взяты со сторонних (25.10.2026,
+   * решение владельца, Хургада и Шарм-эш-Шейх — две самые посещаемые страницы сайта). Правило
+   * для таких файлов жёстче, а не мягче: в блок идёт только то, что совпало минимум на ДВУХ
+   * независимых сайтах (url/source и url2/source2 с разных доменов), а читатель и разметка видят
+   * «по данным сторонних сайтов», а не «официальный сайт». Почему не пользовательские данные
+   * как есть: на Бодруме два гайда дали тариф шаттла «10 лир» и «230 ₺» для одного маршрута.
+   */
+  basis?: 'third-party';
+};
 
 const DIR = path.join(process.cwd(), 'data/airport-guide');
 const cache = new Map<string, AirportGuide | null>();
@@ -74,7 +87,9 @@ export function guideFaq(guide: AirportGuide, name: string): { q: string; a: str
     .filter((b) => QUESTIONS[b.id])
     .map((b) => ({
       q: QUESTIONS[b.id].replace('{a}', name),
-      a: `${b.text} По данным ${b.source}, проверено ${ruDate(guide.checked)}.`,
+      a: guide.basis === 'third-party'
+        ? `${b.text} По данным сторонних сайтов (${b.source}, ${b.source2}), совпадает на обоих; проверено ${ruDate(guide.checked)}.`
+        : `${b.text} По данным ${b.source}, проверено ${ruDate(guide.checked)}.`,
     }));
 }
 

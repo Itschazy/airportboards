@@ -1,0 +1,57 @@
+{
+ "iata": "HRG",
+ "checked": "2026-10-25",
+ "basis": "third-party",
+ "blocks": [
+  {
+   "id": "transport",
+   "title": "Как доехать",
+   "hint": "Маршрутки, около 20 минут",
+   "text": "До центра Хургады около 20 минут на машине. Маршрутки в город ждут у выхода из аэропорта и отправляются, когда заполнятся, твёрдого расписания у них нет.",
+   "source": "worldtravelguide.net",
+   "url": "https://www.worldtravelguide.net/guides/africa/egypt/hurghada-international-airport/",
+   "source2": "iexplore.com",
+   "url2": "https://www.iexplore.com/articles/travel-guides/africa/egypt/airports"
+  },
+  {
+   "id": "taxi",
+   "title": "Такси",
+   "hint": "Цену — до посадки",
+   "text": "Такси стоят у выхода из зоны прилёта. Цену поездки договаривают с водителем до посадки. Есть прокат машин, в том числе Hertz.",
+   "source": "worldtravelguide.net",
+   "url": "https://www.worldtravelguide.net/guides/africa/egypt/hurghada-international-airport/",
+   "source2": "sleepinginairports.net",
+   "url2": "https://www.sleepinginairports.net/guides/hurghada-airport-guide.htm"
+  },
+  {
+   "id": "terminals",
+   "title": "Терминалы",
+   "hint": "Два терминала",
+   "text": "В аэропорту два пассажирских терминала. В терминалах есть банкоматы и пункты обмена валюты.",
+   "source": "worldtravelguide.net",
+   "url": "https://www.worldtravelguide.net/guides/africa/egypt/hurghada-international-airport/",
+   "source2": "sleepinginairports.net",
+   "url2": "https://www.sleepinginairports.net/guides/hurghada-airport-guide.htm"
+  },
+  {
+   "id": "lounges",
+   "title": "Бизнес-залы",
+   "hint": "Pearl Lounge, терминал 1",
+   "text": "Pearl Lounge в терминале 1 — после паспортного контроля и досмотра, на втором этаже у выхода 30, работает круглосуточно. Кого пускают, источники пишут по-разному — условия входа уточняйте у зала.",
+   "source": "sleepinginairports.net",
+   "url": "https://www.sleepinginairports.net/guides/hurghada-airport-guide.htm",
+   "source2": "viplounges.com",
+   "url2": "https://www.viplounges.com/egypt/hurghada/hurghada-international/hrg-terminal-1/pearl-lounge-1512"
+  },
+  {
+   "id": "storage",
+   "title": "Камера хранения",
+   "hint": "Есть в аэропорту",
+   "text": "В аэропорту есть камера хранения багажа. Где именно она находится и сколько стоит, источники не указывают.",
+   "source": "worldtravelguide.net",
+   "url": "https://www.worldtravelguide.net/guides/africa/egypt/hurghada-international-airport/",
+   "source2": "sleepinginairports.net",
+   "url2": "https://www.sleepinginairports.net/guides/hurghada-airport-guide.htm"
+  }
+ ]
+}
