@@ -1,0 +1,46 @@
+{
+ "iata": "CDG",
+ "checked": "2026-10-25",
+ "blocks": [
+  {
+   "id": "transport",
+   "title": "Как доехать",
+   "hint": "RER B, автобус 9517, Noctilien",
+   "text": "RER B — самый простой путь между аэропортом и Парижем (прежде всего Gare du Nord и Châtelet), около 35 минут; поезда ходят с 4:50 до 23:00 (последнее прибытие в аэропорт). Автобус 9517 (бывший RoissyBus) в связке с линией метро 14 идёт до Saint-Denis Pleyel. Ночью работают автобусы Noctilien N143 и N140 от терминалов 1, 2 и 3 до Gare de l'Est. Все терминалы соединяет бесплатный поезд CDGVAL; подходят проездные Navigo (день или неделя, все зоны) и билеты, которые можно скачать на смартфон.",
+   "source": "parisaeroport.fr",
+   "url": "https://www.parisaeroport.fr/en/passengers/transport-parking/public-transport-paris/cdg"
+  },
+  {
+   "id": "taxi",
+   "title": "Такси",
+   "hint": "Фикс €56 / €65 до Парижа",
+   "text": "Фиксированный тариф в обе стороны, установленный префектурой полиции: €56 до правого берега Парижа, €65 до левого. Дорога до центра занимает 35–60 минут в зависимости от пробок. Официальные такси с подсвеченной табличкой «TAXI» берут пассажиров только на стоянках у выходов из терминалов 1, 2 и 3; предложения водителей внутри терминала надо отклонять. Поездки в пригороды и дальние — по счётчику.",
+   "source": "parisaeroport.fr",
+   "url": "https://www.parisaeroport.fr/en/passengers/transport-parking/taxi/cdg"
+  },
+  {
+   "id": "storage",
+   "title": "Камера хранения",
+   "hint": "Bagages du Monde, 7:00–21:00",
+   "text": "Камера хранения Bagages du Monde — в терминале 2, уровень 0, в зале пересадок вокзала Aéroport Charles de Gaulle 2 TGV, до досмотра. Открыта ежедневно с 7:00 до 21:00, багаж просвечивают рентгеном, помещение под постоянным видеонаблюдением. Там же упаковка багажа, доставка в отель, прокат колясок и автокресел, гардероб для велосипедов, досок и другого нестандартного багажа.",
+   "source": "parisaeroport.fr",
+   "url": "https://www.parisaeroport.fr/en/passengers/at-the-airport/services/luggage-storage/cdg"
+  },
+  {
+   "id": "sleep",
+   "title": "Где поспать",
+   "hint": "Sheraton и YotelAir в терминале 2",
+   "text": "В терминале 2 — отель Sheraton, а для пассажиров терминала 2E — компактные номера YotelAir в международной зоне (оба у станции CDGVAL «Terminal 2»). В зоне Roissypôle у станции CDGVAL «Terminal 3 - Roissypôle» — citizenM, Hilton, ibis, ibis Styles, Novotel и Radisson Blu. Номер можно взять на ночь или на несколько часов.",
+   "source": "parisaeroport.fr",
+   "url": "https://www.parisaeroport.fr/en/passengers/at-the-airport/hotels/cdg"
+  },
+  {
+   "id": "wifi",
+   "title": "Wi‑Fi",
+   "hint": "Бесплатно, сеть WIFI-AIRPORT",
+   "text": "Бесплатный Wi‑Fi во всех терминалах, зонах посадки и выдачи багажа: сеть WIFI-AIRPORT сама открывает стартовую страницу Paris Aéroport. Бесплатные запираемые зарядные шкафчики ChargeBox работают круглосуточно после досмотра в терминалах 1, 2D, 2E и 3.",
+   "source": "parisaeroport.fr",
+   "url": "https://www.parisaeroport.fr/en/passengers/at-the-airport/services/wifi/cdg"
+  }
+ ]
+}

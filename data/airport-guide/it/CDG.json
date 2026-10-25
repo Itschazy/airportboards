@@ -1,0 +1,30 @@
+{
+ "iata": "CDG",
+ "blocks": {
+  "transport": {
+   "title": "Come arrivare",
+   "hint": "RER B, bus 9517, Noctilien",
+   "text": "La RER B è il modo più semplice per spostarsi tra l’aeroporto e Parigi (soprattutto Gare du Nord e Châtelet), circa 35 minuti; i treni circolano dalle 4:50 alle 23:00 (ultimo arrivo in aeroporto). Il bus 9517 (ex RoissyBus), in combinazione con la linea 14 della metro, arriva a Saint-Denis Pleyel. Di notte circolano i bus Noctilien N143 e N140 dai terminal 1, 2 e 3 fino a Gare de l'Est. Tutti i terminal sono collegati dal treno gratuito CDGVAL; valgono gli abbonamenti Navigo (giornaliero o settimanale, tutte le zone) e i biglietti scaricabili sullo smartphone."
+  },
+  "taxi": {
+   "title": "Taxi",
+   "hint": "Fisso 56 € / 65 € per Parigi",
+   "text": "Tariffa fissa in entrambe le direzioni, stabilita dalla prefettura di polizia: 56 € per la riva destra di Parigi, 65 € per la riva sinistra. Il tragitto fino al centro dura 35–60 minuti a seconda del traffico. I taxi ufficiali con l’insegna luminosa «TAXI» caricano passeggeri solo ai posteggi presso le uscite dei terminal 1, 2 e 3; le offerte dei conducenti all’interno del terminal vanno rifiutate. Le corse verso la periferia e quelle lunghe sono a tassametro."
+  },
+  "storage": {
+   "title": "Deposito bagagli",
+   "hint": "Bagages du Monde, 7:00–21:00",
+   "text": "Il deposito bagagli Bagages du Monde si trova nel Terminal 2, livello 0, nella sala di interscambio della stazione Aéroport Charles de Gaulle 2 TGV, prima dei controlli. È aperto tutti i giorni dalle 7:00 alle 21:00; i bagagli passano ai raggi X e il locale è sotto videosorveglianza continua. Qui anche avvolgimento bagagli, consegna in hotel, noleggio di passeggini e seggiolini auto, deposito per biciclette, tavole e altri bagagli fuori formato."
+  },
+  "sleep": {
+   "title": "Dove dormire",
+   "hint": "Sheraton e YotelAir nel Terminal 2",
+   "text": "Nel Terminal 2 c’è l’hotel Sheraton e, per i passeggeri del Terminal 2E, le camere compatte YotelAir nell’area internazionale (entrambi presso la stazione CDGVAL «Terminal 2»). Nella zona di Roissypôle, presso la stazione CDGVAL «Terminal 3 - Roissypôle»: citizenM, Hilton, ibis, ibis Styles, Novotel e Radisson Blu. La camera si può prendere per la notte o per qualche ora."
+  },
+  "wifi": {
+   "title": "Wi‑Fi",
+   "hint": "Gratis, rete WIFI-AIRPORT",
+   "text": "Wi‑Fi gratuito in tutti i terminal, nelle aree d’imbarco e di ritiro bagagli: la rete WIFI-AIRPORT apre da sola la pagina iniziale di Paris Aéroport. Gli armadietti di ricarica gratuiti con chiusura ChargeBox funzionano giorno e notte dopo i controlli nei terminal 1, 2D, 2E e 3."
+  }
+ }
+}

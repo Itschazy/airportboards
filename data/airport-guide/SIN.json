@@ -1,0 +1,62 @@
+{
+ "iata": "SIN",
+ "checked": "2026-10-25",
+ "blocks": [
+  {
+   "id": "transport",
+   "title": "Как доехать",
+   "hint": "MRT и автобусы 24, 27, 36, 858",
+   "text": "До центра — поездом от станции Changi Airport MRT (CG2) до Tanah Merah (EW4) с пересадкой на линию East West в сторону Tuas Link (EW33) или до Expo (CG1/DT35) с пересадкой на линию Downtown. Первый поезд до Tanah Merah — в 5:31 с понедельника по субботу, в 5:59 по воскресеньям и праздникам; последний с пересадкой на Tuas Link — в 23:18 ежедневно. Автобусы 24, 27, 34, 36, 53, 110 и 858 отходят от подземных автобусных площадок терминалов 1, 2 и 3. Оплата — бесконтактными картами Mastercard/Visa/NETS, мобильными кошельками, картами EZ-Link; в автобусе можно наличными без сдачи.",
+   "source": "changiairport.com",
+   "url": "https://www.changiairport.com/en/at-changi/transport-and-directions/leaving-the-airport.html"
+  },
+  {
+   "id": "taxi",
+   "title": "Такси",
+   "hint": "S$25–45 до центра, по счётчику",
+   "text": "Стоянки такси — в зонах прилёта терминалов 1–4; дорога до центра около 30 минут и S$25–45 по счётчику. За поездку из аэропорта доплата S$8 с 17:00 до 23:59 и S$6 в остальное время; с 0:00 до 5:59 действует ночная надбавка 50% к итогу по счётчику. Заказ через Grab, Gojek, Zig, Tada Mobility, Ryde или Geolah — посадка в точках Arrival and Ride-Hailing pick-up. Круглосуточная стойка Ground Transport Concierge: трансфер в любую точку Сингапура S$70 на 4-местной машине и S$75 на 6-местной.",
+   "source": "changiairport.com",
+   "url": "https://www.changiairport.com/en/at-changi/transport-and-directions/leaving-the-airport.html"
+  },
+  {
+   "id": "terminals",
+   "title": "Терминалы",
+   "hint": "Skytrain T1–T3, автобус до T4",
+   "text": "Терминалы 1, 2 и 3 связывает бесплатный Skytrain — и в общей, и в транзитной зоне; в транзитной зоне между ними можно пройти и по траволаторам. До терминала 4 — бесплатный шаттл-автобус каждые 5–9 минут с 6:00 до 0:00 от T1/Jewel и T2/MRT: около 10 минут в общей зоне и 10–18 минут в транзитной; в транзитной зоне — только если багаж оформлен до конечного пункта. Jewel находится в общей зоне между T2 и T3: из T1 вход прямо из зала прилёта уровня 1, из T2 и T3 — 5–10 минут пешком по переходу; транзитным пассажирам нужно пройти паспортный контроль.",
+   "source": "changiairport.com",
+   "url": "https://www.changiairport.com/en/at-changi/transport-and-directions/transferring-between-terminals-jewel.html"
+  },
+  {
+   "id": "lounges",
+   "title": "Бизнес-залы",
+   "hint": "Платные залы в T1, T2, T4",
+   "text": "Платные залы: Plaza Premium Lounge — терминал 1, транзитная зона, уровень 3, круглосуточно; JetQuay Lounge — терминал 2, транзитная зона, уровень 2, круглосуточно; Blossom – SATS & Plaza Premium Lounge — терминал 4, транзитная зона, уровень 2M, круглосуточно. Также Ambassador Transit Lounge (2 зала), Changi Lounge в Jewel на уровне 1 и Hub & Spoke в общей зоне терминала 2 на уровне 1.",
+   "source": "changiairport.com",
+   "url": "https://www.changiairport.com/en/at-changi/facilities-and-services-directory.html?category=pay-per-use-lounges"
+  },
+  {
+   "id": "storage",
+   "title": "Камера хранения",
+   "hint": "Во всех терминалах, от S$6 в сутки",
+   "text": "Камеры хранения Smarte Carte работают круглосуточно: в общей зоне — Jewel (уровень 1), T2 (зал прилёта North), T3 (уровень 1, у Train to City), T4 (уровень 1); в транзитной — во всех четырёх терминалах. Цена за 24 часа с GST: отдельные предметы S$6, небольшие вещи до 10 кг S$11, крупные и нестандартные свыше 10 кг S$16, очень крупные S$19. Все сдаваемые вещи досматриваются.",
+   "source": "changiairport.com",
+   "url": "https://www.changiairport.com/en/at-changi/facilities-and-services-directory/baggage-storage.html"
+  },
+  {
+   "id": "sleep",
+   "title": "Где поспать",
+   "hint": "Бесплатные зоны отдыха, круглосуточно",
+   "text": "Бесплатные зоны отдыха Snooze Lounge в транзитной зоне работают круглосуточно: T1 — уровень 3, Departure Transit Hall East; T2 — Sanctuary Lounge, Oasis Lounge и Pavilion Lounge на уровне 2; T3 — два зала на уровне 2 (South и North); T4 — уровень 2M.",
+   "source": "changiairport.com",
+   "url": "https://www.changiairport.com/en/at-changi/facilities-and-services-directory/free-snooze-lounges-changi-airport-rest-areas.html"
+  },
+  {
+   "id": "kids",
+   "title": "С ребёнком",
+   "hint": "Бесплатные коляски",
+   "text": "Детские коляски выдают бесплатно в порядке очереди на стойках информации и на стойках консьержа в Jewel. Пассажиры с маленькими детьми могут проходить паспортный контроль по более широким Special Assistance Lanes — до четырёх человек вместе.",
+   "source": "changiairport.com",
+   "url": "https://www.changiairport.com/en/at-changi/special-assistance/children.html"
+  }
+ ]
+}

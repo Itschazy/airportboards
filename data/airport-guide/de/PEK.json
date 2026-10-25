@@ -1,0 +1,30 @@
+{
+ "iata": "PEK",
+ "blocks": {
+  "transport": {
+   "title": "Anreise",
+   "hint": "Airport Express, 25 Yuan",
+   "text": "Der Airport Express fährt im 10-Minuten-Takt und hält an den Terminals T2 und T3 sowie an den Stationen Sanyuanqiao und Dongzhimen. Einzelfahrt 25 Yuan. Die Station in T2 liegt auf Ebene B2 des Terminals, in T3 auf Ebene 2 des Parkhauses Nr. 3. In Sanyuanqiao Umstieg in die Metrolinien 10 und 12, in Dongzhimen in die Linien 2 und 13."
+  },
+  "taxi": {
+   "title": "Taxi",
+   "hint": "Ab 13 Yuan, T2 und T3",
+   "text": "Taxistand in T2 vor den Türen 5–9 auf Ebene 1, in T3 nach der Beschilderung im Terminal. Grundpreis inklusive der ersten 3 km 13 Yuan, danach 2,3 Yuan pro km, plus 1 Yuan Treibstoffzuschlag pro Fahrt. Für den Streckenanteil über 15 km wird auf den Kilometertarif ein Leerfahrtzuschlag von 50 % erhoben, von 23:00 bis 5:00 ist der Kilometer um 20 % teurer. Maut für Straßen und Brücken zahlt der Fahrgast."
+  },
+  "storage": {
+   "title": "Gepäckaufbewahrung",
+   "hint": "T2 und T3, Regale und Schließfächer",
+   "text": "In T2 liegen die Gepäckaufbewahrungen an Tür 9 der Ankunftshalle auf Ebene 1 und an den Türen 8 und 10 der Abflughalle auf Ebene 2. In T3 im östlichen und westlichen Teil des öffentlichen Bereichs der Ankunftshalle auf Ebene 2 von Gebäude T3-C. Angenommen werden großes Gepäck und Sportausrüstung, für Kleinteile gibt es eigene Schließfächer. Telefon: 17801096112."
+  },
+  "kids": {
+   "title": "Mit Kind",
+   "hint": "Spielplätze an Gates C09 und E21",
+   "text": "Im Terminal T3 gibt es zwei Kinderspielplätze. An Gate C09 im Autothema: Comic-Autos und Schildkröten, ein Teppich mit Rennstreckenmuster. An Gate E21 ein Spielplatz mit Pandas."
+  },
+  "parking": {
+   "title": "Parken",
+   "hint": "Nr. 2 und 3, 100 Yuan pro 24 Std.",
+   "text": "Parkhaus Nr. 2 vor T2, etwa 4.300 Plätze: Kurzzeitparken auf den Ebenen F2, F1 und B1, Langzeitparken auf B2, B3 und B4. Parkhaus Nr. 3 südlich von T3, etwa 4.300 Plätze, auf seiner Ebene 2 die Station des Airport Express; Kurzzeitzonen B und C auf B1, Langzeitzonen D und E auf B1 und H auf B2. Im Parkhaus Nr. 2 kostet ein Fahrzeug bis 19 Sitze 3 Yuan pro 10 Minuten, Langzeitparken (mehr als 5,5 Stunden am Stück, nur im Bereich B2–B4) 100 Yuan pro 24 Stunden; unter 10 Minuten kostenlos."
+  }
+ }
+}

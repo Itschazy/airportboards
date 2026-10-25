@@ -1,0 +1,35 @@
+{
+ "iata": "HKG",
+ "blocks": {
+  "transport": {
+   "title": "Cómo llegar",
+   "hint": "Airport Express, 24 min a Central",
+   "text": "El tren Airport Express lleva del aeropuerto al distrito de Central en 24 minutos; los trenes pasan aproximadamente cada 10 minutos, de 05:54 a 00:48 todos los días. Billete sencillo Smart Ticket para adultos: hasta la estación Hong Kong, HK$130; Kowloon, HK$115; Tsing Yi, HK$80; con la tarjeta Octopus, HK$120, HK$105 y HK$73. Smart Ticket infantil hasta la estación Hong Kong: HK$65. En las estaciones Hong Kong y Kowloon funciona la facturación en la ciudad (In-Town Check-In)."
+  },
+  "taxi": {
+   "title": "Taxi",
+   "hint": "Rojos urbanos, a Central HK$375",
+   "text": "La parada de taxis está en la rampa izquierda, en el exterior de la sala de llegadas; los vehículos reservados con antelación llegan a la Prebooked Taxi Pick-up Zone, junto a Car Park 1. Los taxis se distinguen por el color: los rojos (Urban) circulan por casi todo Hong Kong; los verdes, por el noreste y el noroeste de los Nuevos Territorios; los azules, solo por Lantau y Chek Lap Kok; todos pueden ir al aeropuerto. Tarifa orientativa del taxi rojo: Central / Admiralty, HK$375; Tsim Sha Tsui, HK$290; Mong Kok, HK$285; los peajes están incluidos en la tarifa, los recargos adicionales del taxi no. Por el equipaje en el maletero se puede cobrar un suplemento."
+  },
+  "lounges": {
+   "title": "Salas VIP",
+   "hint": "Plaza Premium, Kyra, Centurion",
+   "text": "Las salas de pago están en la terminal 1, junto a las puertas de embarque. Plaza Premium Lounge: junto a la puerta 1 (nivel 6, día y noche), junto a la puerta 35 (nivel 6, 06:00–01:00) y junto a la puerta 60 (nivel 7, día y noche); Plaza Premium First, junto a las puertas 1 y 35; Kyra Lounge, junto a la puerta 23 (nivel 6, 05:30–23:30). Duchas y masajes Refreshhh by Aerotel, junto a la puerta 60, día y noche. The Centurion Lounge, junto a la puerta 60 (06:00–00:00), es para titulares de tarjetas American Express con derecho de acceso."
+  },
+  "storage": {
+   "title": "Consigna",
+   "hint": "Nivel 5, HK$14 por hora",
+   "text": "La consigna está en el nivel 5 de la terminal 1, en la zona pública. Un bulto de hasta 30 kg y con una suma de dimensiones de hasta 199 cm cuesta HK$14 por hora o HK$165 por 24 horas; menos de una hora se cobra como una hora, y por 24 horas se cobra el menor de los dos importes. El equipaje grande y pesado paga un suplemento. Se paga al recogerlo: efectivo, Visa, Mastercard, UnionPay, Alipay, WeChat Pay, Apple Pay, Samsung Pay; los objetos no recogidos en 30 días y sin aviso del pasajero se consideran abandonados."
+  },
+  "sleep": {
+   "title": "Dónde dormir",
+   "hint": "Zonas de descanso en las puertas",
+   "text": "Las zonas de descanso Resting Lounges para pasajeros en salida y en tránsito están en el nivel de salidas (L6), junto a las puertas 1, 5, 6, 7, 24, 26, 33, 44, 45, 47, 48, 64, 65, 66 y 69, y en el Midfield Concourse de la terminal 1, junto a las puertas 205, 207, 213 y 215. Una sala de espera aparte, Bonded Bus Waiting Lounge, está en el nivel de salidas L4."
+  },
+  "wifi": {
+   "title": "Wi‑Fi",
+   "hint": "Gratis, sin registro",
+   "text": "Wi‑Fi gratuito sin registro en la mayoría de las zonas de espera y zonas públicas de las terminales. Redes #HKAirport Free WiFi y #HKAirport Hi-Speed WiFi: hay que conectarse, abrir en el navegador cualquier dirección que no empiece por https:// y pulsar Agree and Continue. Si no aparece la red #HKAirport Free WiFi, hay que elegir Wi-Fi.HK via HKAirport. Línea de información: 2188 7799."
+  }
+ }
+}

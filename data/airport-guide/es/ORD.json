@@ -1,0 +1,40 @@
+{
+ "iata": "ORD",
+ "blocks": {
+  "transport": {
+   "title": "Cómo llegar",
+   "hint": "CTA Blue Line 24 h, Metra",
+   "text": "El tren CTA Blue Line circula día y noche; la estación está en el nivel inferior del garaje: desde las terminales 1, 2 y 3 hay que seguir las señales «Trains to City» por los túneles peatonales del nivel inferior; desde la terminal 5, primero hay que ir en el ATS hasta la terminal 3 o 2. El billete se compra en las máquinas junto a la estación, en efectivo o con tarjeta. Los trenes de cercanías Metra North Central Service salen de la estación O'Hare Transfer, detrás del nudo de transporte Multi-Modal Facility, al que va el ATS desde cualquier terminal; el billete se compra al revisor. Desde el Multi-Modal Facility (dársenas 8 y 9) salen los autobuses Pace 250 y 330."
+  },
+  "taxi": {
+   "title": "Taxi",
+   "hint": "Unos 50 $ al centro",
+   "text": "Las paradas de taxi están en el nivel inferior, a la salida de la zona de recogida de equipajes de cada terminal; hay que subir solo allí, no con conductores en el nivel de salidas. El taxi va con taxímetro; de media, del aeropuerto al centro de Chicago, 50 $. Los taxis a las afueras se piden con antelación por teléfono a una compañía de la zona. Uber y Lyft recogen en el nivel superior: en la terminal 2, zonas 2A–2G con señales naranjas; en la terminal 3, 3G, 3H, 3J y 3K con señales verdes."
+  },
+  "lounges": {
+   "title": "Salas VIP",
+   "hint": "United Club, Admirals, Sky Club",
+   "text": "En la mayoría de las salas se puede comprar un pase de un día. United Club: en la terminal 1, junto a las puertas B6, B18 y C10, y en la terminal 2, junto a E7 y F9; United Polaris Lounge (solo primera y business internacionales): terminal 1, junto a C18. Admirals Club (American, JAL, Iberia): terminal 3, junto a G8, L2A y H6/K6; junto a H6/K6 también está American Flagship Lounge. En la terminal 5: Delta Sky Club, junto a M13; la sala de Air France, junto a M17; LOT Business Lounge y Swissport Lounge (también para Priority Pass), junto a M18; Wingtips Lounge, junto a M19."
+  },
+  "sleep": {
+   "title": "Dónde dormir",
+   "hint": "Hilton frente a las terminales 1–3",
+   "text": "El hotel Hilton Chicago O'Hare Airport está justo enfrente de las terminales 1, 2 y 3: a las terminales nacionales se llega a pie por pasos subterráneos; desde la terminal 5, en el ATS. Desde el hotel hay un paso cubierto a la estación de CTA Blue Line. Otros hoteles cercanos al aeropuerto llevan a sus huéspedes en lanzaderas gratuitas; la lanzadera se puede pedir en los quioscos Virtual Concierge del nivel de llegadas, junto a la recogida de equipajes."
+  },
+  "kids": {
+   "title": "Con niños",
+   "hint": "Family Lounge en la terminal 2",
+   "text": "La zona infantil Family Lounge está en la terminal 2, justo después del control, en el vestíbulo principal junto a la puerta F1: espacio de juego, carga de dispositivos y aparcamiento para cochecitos. Hay salas de lactancia en todas las terminales, y cabinas de lactancia Mamava en las terminales 1, 2 y 3. Hay cambiadores en la mayoría de los aseos. Las máquinas Oops Diapers 2Go venden pañales, leche de fórmula y biberones."
+  },
+  "parking": {
+   "title": "Aparcamiento",
+   "hint": "Desde 16 $ por 24 h",
+   "text": "Aparcamiento por horas: nivel 1 del garaje principal, 3 $ la primera hora; por días: niveles 2–6 del garaje y aparcamientos B y C, 43 $ por 24 horas; junto a la terminal 5, el aparcamiento D, 43 $ por 24 horas. Aparcamientos económicos: F, 30 $; G y H, 16 $ por 24 horas; en H solo se paga con tarjeta. Las tarifas incluyen impuestos; se paga a la salida. Pasados 30 días sin acuerdo con la oficina de aparcamiento, (773) 686-7530, el coche puede ser retirado por la grúa."
+  },
+  "wifi": {
+   "title": "Wi‑Fi",
+   "hint": "Gratis, sin límite",
+   "text": "Wi‑Fi gratuito e ilimitado en todas las terminales, antes y después del control. Red Boingo Hotspot o _Free_ORD _Wi-Fi; tras conectarse, hay que abrir en el navegador cualquier dirección sin https y elegir «Watch Ad to Connect». En todas las terminales hay estaciones de carga gratuitas de 4–8 plazas."
+  }
+ }
+}

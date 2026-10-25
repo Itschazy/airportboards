@@ -1,0 +1,20 @@
+{
+ "iata": "BCN",
+ "blocks": {
+  "transport": {
+   "title": "Comment s'y rendre",
+   "hint": "Métro, ligne 9",
+   "text": "La ligne 9 du métro (University zone — Airport) dessert les deux terminaux : la station Aeroport T1 dans le terminal T1 au niveau 0 et la station du terminal T2 au niveau 0. Une navette gratuite circule jour et nuit entre les terminaux."
+  },
+  "taxi": {
+   "title": "Taxi",
+   "hint": "Noir et jaune, aux arrivées",
+   "text": "Les stations de taxis se trouvent face aux zones d'arrivée du terminal T1, du couloir de la navette Barcelona–Madrid et des terminaux T2A, T2B et T2C ; chacune a une file sans réservation et un emplacement pour les voitures réservées. Dans le terminal T1, le taxi officiel est au niveau 0. Le seul taxi officiel de Barcelone est noir et jaune."
+  },
+  "wifi": {
+   "title": "Wi‑Fi",
+   "hint": "Gratuit, sans limite de temps",
+   "text": "Réseau Airport Free Wifi Aena : connexion sur la page d'accueil avec une adresse e-mail en tant qu'invité ou via un compte Aena Club. Pour confirmer l'adresse e-mail, 15 minutes d'internet gratuit sont accordées ; après confirmation, accès sans limite de temps."
+  }
+ }
+}

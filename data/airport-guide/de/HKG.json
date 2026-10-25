@@ -1,0 +1,35 @@
+{
+ "iata": "HKG",
+ "blocks": {
+  "transport": {
+   "title": "Anreise",
+   "hint": "Airport Express, 24 Min. zu Central",
+   "text": "Der Airport Express bringt Fahrgäste vom Flughafen in 24 Minuten in den Stadtteil Central, die Züge fahren etwa alle 10 Minuten täglich von 05:54 bis 00:48. Einzelticket Smart Ticket für Erwachsene: bis Station Hong Kong HK$130, Kowloon HK$115, Tsing Yi HK$80; mit Octopus-Karte HK$120, HK$105 und HK$73. Kinder-Smart-Ticket bis Station Hong Kong HK$65. An den Stationen Hong Kong und Kowloon gibt es Check-in in der Stadt (In-Town Check-In)."
+  },
+  "taxi": {
+   "title": "Taxi",
+   "hint": "Rote Stadttaxis, Central HK$375",
+   "text": "Der Taxistand liegt an der linken Rampe vor der Ankunftshalle; vorbestellte Wagen halten in der Prebooked Taxi Pick-up Zone neben Car Park 1. Taxis unterscheiden sich nach Farbe: rote (Urban) fahren fast überall in Hongkong, grüne im Nordosten und Nordwesten der New Territories, blaue nur auf Lantau und Chek Lap Kok; zum Flughafen dürfen alle fahren. Richtpreis eines roten Taxis: Central / Admiralty HK$375, Tsim Sha Tsui HK$290, Mong Kok HK$285; Mautstraßen sind im Tarif enthalten, Zusatzgebühren des Taxis nicht. Für Gepäck im Kofferraum kann eine Gebühr erhoben werden."
+  },
+  "lounges": {
+   "title": "Business-Lounges",
+   "hint": "Plaza Premium, Kyra, Centurion",
+   "text": "Kostenpflichtige Lounges in Terminal 1 an den Gates. Plaza Premium Lounge: an Gate 1 (Ebene 6, rund um die Uhr), an Gate 35 (Ebene 6, 06:00–01:00) und an Gate 60 (Ebene 7, rund um die Uhr); Plaza Premium First an den Gates 1 und 35; Kyra Lounge an Gate 23 (Ebene 6, 05:30–23:30). Dusche und Massage Refreshhh by Aerotel an Gate 60, rund um die Uhr. The Centurion Lounge an Gate 60 (06:00–00:00) für Inhaber von American-Express-Karten mit Zugangsberechtigung."
+  },
+  "storage": {
+   "title": "Gepäckaufbewahrung",
+   "hint": "Ebene 5, HK$14 pro Stunde",
+   "text": "Die Gepäckaufbewahrung liegt auf Ebene 5 von Terminal 1, im öffentlichen Bereich. Ein Stück bis 30 kg mit einer Summe der Maße bis 199 cm kostet HK$14 pro Stunde oder HK$165 pro 24 Stunden; weniger als eine Stunde gilt als eine Stunde, für 24 Stunden wird der niedrigere der beiden Beträge berechnet. Für großes und schweres Gepäck gibt es einen Aufschlag. Bezahlung bei Abholung: bar, Visa, Mastercard, UnionPay, Alipay, WeChat Pay, Apple Pay, Samsung Pay; Gegenstände, die nicht innerhalb von 30 Tagen abgeholt werden und zu denen der Passagier keine Nachricht hinterlassen hat, gelten als nicht beansprucht."
+  },
+  "sleep": {
+   "title": "Schlafen",
+   "hint": "Ruhebereiche an den Gates",
+   "text": "Ruhebereiche Resting Lounges für abfliegende und Transitpassagiere auf der Abflugebene (L6) an den Gates 1, 5, 6, 7, 24, 26, 33, 44, 45, 47, 48, 64, 65, 66 und 69 sowie im Midfield Concourse von Terminal 1 an den Gates 205, 207, 213 und 215. Ein eigener Warteraum, die Bonded Bus Waiting Lounge, liegt auf der Abflugebene L4."
+  },
+  "wifi": {
+   "title": "Wi‑Fi",
+   "hint": "Kostenlos, ohne Registrierung",
+   "text": "Kostenloses Wi‑Fi ohne Registrierung in den meisten Wartebereichen und öffentlichen Bereichen der Terminals. Netze #HKAirport Free WiFi und #HKAirport Hi-Speed WiFi: verbinden, im Browser eine beliebige Adresse öffnen, die nicht mit https:// beginnt, und auf Agree and Continue tippen. Ist das Netz #HKAirport Free WiFi nicht sichtbar, Wi-Fi.HK via HKAirport wählen. Hotline: 2188 7799."
+  }
+ }
+}

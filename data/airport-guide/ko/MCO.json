@@ -1,0 +1,35 @@
+{
+ "iata": "MCO",
+ "blocks": {
+  "transport": {
+   "title": "가는 방법",
+   "hint": "마이애미행 열차 등",
+   "text": "공항 철도역은 터미널 C 옆에 있으며, 이곳에 터미널 A·B행 Terminal Link 열차역과 택시, 셔틀, 시내버스도 있습니다. Brightline 역에서는 웨스트팜비치, 보카러톤, 포트로더데일, 애번추라에 정차하는 마이애미행 열차가 출발합니다. 통근 열차 SunRail은 Sand Lake Road 역에서 출발하며, 공항에서 그곳까지 버스가 운행합니다."
+  },
+  "taxi": {
+   "title": "택시",
+   "hint": "택시 예상 요금",
+   "text": "공항 출발 택시 예상 요금: 공항 주변 호텔 $14–18, International Drive와 올랜도 다운타운 $38–45, 윈터파크와 메이틀랜드 $45–55, 레이크부에나비스타 $47–55, 키시미 $45–75, Disney 리조트 $52–68, 포트커내버럴 $115."
+  },
+  "sleep": {
+   "title": "잠잘 곳",
+   "hint": "터미널 A/B 안 호텔",
+   "text": "객실 445개의 Hyatt Regency Orlando International Airport는 터미널 A/B 안, 70–129번 게이트로 가는 보안검색대 위의 보안검색 전 구역에 있습니다. 숙박 없이 낮 시간에 이용하는 Day Stay도 있습니다: 옥상 수영장, 피트니스 센터, 레스토랑, 룸서비스. 호텔 전화: +1-407-825-1234."
+  },
+  "kids": {
+   "title": "아이와 함께",
+   "hint": "A·B 놀이 공간과 도서관",
+   "text": "플로리다 분위기의 부드러운 소재의 놀이 공간은 터미널 A 1층 보안검색 전 구역에 있습니다. 몸을 움직이는 게임이 있는 Interactive Family Zone은 터미널 B 3층 푸드코트 옆 보안검색 전 구역에 있습니다. 어린이 도서관 Flybrary는 터미널 C 2층 240번 게이트 옆 보안검색 후 구역에 있습니다. 수유실과 수유 캡슐은 모든 터미널에, 가족 화장실은 모든 층에 있습니다."
+  },
+  "parking": {
+   "title": "주차",
+   "hint": "C 주차 건물 예약 1일 $32",
+   "text": "터미널 A·B 옆에는 A·B 주차 건물, Terminal Top Parking, 발레 파킹이 있고, 터미널 C 옆에는 C 주차 건물, 철도역 옆에는 야외 주차장 Atlantis, Discovery, Endeavour가 있습니다. 이코노미 주차장은 North Park Place, South Park Place, West Park입니다. C 주차 건물은 예약할 수 있습니다: 24시간 $32, 최대 45일. 높이 7피트 초과 또는 길이 25피트 이하 차량은 South Park Place에서 받습니다. 주차 건물에서는 전용 차로에서 E-PASS/SunPass로 결제할 수 있습니다."
+  },
+  "wifi": {
+   "title": "Wi‑Fi",
+   "hint": "무료, MCO Internet",
+   "text": "공항의 모든 공용 구역에서 무료 Wi‑Fi를 이용할 수 있으며, 네트워크는 MCO Internet입니다. 목록의 다른 네트워크는 공항 소유가 아닙니다. 신호가 약하면 공항은 다른 사람이 켜 둔 핫스폿에서 떨어지고, 자신의 핫스폿은 필요 없을 때 꺼 달라고 요청합니다."
+  }
+ }
+}

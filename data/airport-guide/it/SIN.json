@@ -1,0 +1,40 @@
+{
+ "iata": "SIN",
+ "blocks": {
+  "transport": {
+   "title": "Come arrivare",
+   "hint": "MRT e bus 24, 27, 36, 858",
+   "text": "Per il centro: treno dalla stazione Changi Airport MRT (CG2) a Tanah Merah (EW4) con cambio sulla linea East West in direzione Tuas Link (EW33), oppure fino a Expo (CG1/DT35) con cambio sulla linea Downtown. Il primo treno per Tanah Merah parte alle 5:31 dal lunedì al sabato, alle 5:59 la domenica e nei festivi; l’ultimo con coincidenza per Tuas Link alle 23:18 tutti i giorni. I bus 24, 27, 34, 36, 53, 110 e 858 partono dalle piazzole bus sotterranee dei terminal 1, 2 e 3. Pagamento con carte contactless Mastercard/Visa/NETS, portafogli digitali, carte EZ-Link; sul bus si può pagare in contanti, senza resto."
+  },
+  "taxi": {
+   "title": "Taxi",
+   "hint": "25–45 S$ per il centro, tassametro",
+   "text": "I posteggi dei taxi si trovano nelle aree arrivi dei terminal 1–4; il tragitto fino al centro dura circa 30 minuti e costa 25–45 S$ a tassametro. Per le corse dall’aeroporto supplemento di 8 S$ dalle 17:00 alle 23:59 e di 6 S$ nelle altre ore; dalle 0:00 alle 5:59 vige una maggiorazione notturna del 50% sul totale del tassametro. Prenotazione tramite Grab, Gojek, Zig, Tada Mobility, Ryde o Geolah: salita nei punti Arrival and Ride-Hailing pick-up. Banco Ground Transport Concierge aperto giorno e notte: transfer verso qualsiasi punto di Singapore a 70 S$ con auto da 4 posti e 75 S$ con auto da 6 posti."
+  },
+  "terminals": {
+   "title": "Terminal",
+   "hint": "Skytrain T1–T3, bus per T4",
+   "text": "I terminal 1, 2 e 3 sono collegati dallo Skytrain gratuito, sia nell’area pubblica sia in quella di transito; nell’area di transito tra i terminal ci si può spostare anche con i tapis roulant. Per il Terminal 4: bus navetta gratuito ogni 5–9 minuti dalle 6:00 alle 0:00 da T1/Jewel e T2/MRT: circa 10 minuti nell’area pubblica e 10–18 minuti in quella di transito; nell’area di transito solo se il bagaglio è registrato fino alla destinazione finale. Jewel si trova nell’area pubblica tra T2 e T3: da T1 si entra direttamente dalla sala arrivi del livello 1, da T2 e T3 in 5–10 minuti a piedi lungo un passaggio; i passeggeri in transito devono passare il controllo passaporti."
+  },
+  "lounges": {
+   "title": "Sale business",
+   "hint": "Sale a pagamento in T1, T2, T4",
+   "text": "Sale a pagamento: Plaza Premium Lounge, Terminal 1, area transiti, livello 3, giorno e notte; JetQuay Lounge, Terminal 2, area transiti, livello 2, giorno e notte; Blossom – SATS & Plaza Premium Lounge, Terminal 4, area transiti, livello 2M, giorno e notte. Inoltre Ambassador Transit Lounge (2 sale), Changi Lounge nel Jewel al livello 1 e Hub & Spoke nell’area pubblica del Terminal 2 al livello 1."
+  },
+  "storage": {
+   "title": "Deposito bagagli",
+   "hint": "In tutti i terminal, da 6 S$/24 h",
+   "text": "I depositi bagagli Smarte Carte sono aperti giorno e notte: nell’area pubblica a Jewel (livello 1), T2 (sala arrivi North), T3 (livello 1, presso Train to City), T4 (livello 1); nell’area di transito in tutti e quattro i terminal. Prezzo per 24 ore, GST inclusa: singoli oggetti 6 S$, oggetti piccoli fino a 10 kg 11 S$, oggetti grandi e fuori formato oltre 10 kg 16 S$, oggetti molto grandi 19 S$. Tutti gli oggetti consegnati vengono controllati."
+  },
+  "sleep": {
+   "title": "Dove dormire",
+   "hint": "Aree riposo gratuite, sempre aperte",
+   "text": "Le aree di riposo gratuite Snooze Lounge nell’area di transito sono aperte giorno e notte: T1, livello 3, Departure Transit Hall East; T2, Sanctuary Lounge, Oasis Lounge e Pavilion Lounge al livello 2; T3, due sale al livello 2 (South e North); T4, livello 2M."
+  },
+  "kids": {
+   "title": "Con bambini",
+   "hint": "Passeggini gratuiti",
+   "text": "I passeggini vengono prestati gratuitamente, in ordine di arrivo, ai banchi informazioni e ai banchi concierge del Jewel. I passeggeri con bambini piccoli possono passare il controllo passaporti nelle corsie più larghe Special Assistance Lanes, fino a quattro persone insieme."
+  }
+ }
+}

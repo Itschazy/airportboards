@@ -1,0 +1,30 @@
+{
+ "iata": "LHR",
+ "blocks": {
+  "transport": {
+   "title": "Come arrivare",
+   "hint": "Express, Elizabeth, Piccadilly",
+   "text": "L’Heathrow Express va a Paddington ogni 15 minuti; il viaggio tra Paddington e i terminal 2 e 3 dura 15 minuti. La Elizabeth line collega l’aeroporto con Bond Street, Farringdon, Liverpool Street, Paddington, Stratford e Tottenham Court Road, fino al centro di Londra in meno di 40 minuti; pagamento con carta contactless o Oyster. L’opzione più economica è la linea Piccadilly della metropolitana da tutti i terminal: fino al centro in meno di un’ora, con fermate a King's Cross St. Pancras, Leicester Square e Piccadilly Circus."
+  },
+  "taxi": {
+   "title": "Taxi",
+   "hint": "Black cab presso ogni terminal",
+   "text": "I black cab londinesi attendono ai posteggi presso ogni terminal; i conducenti hanno la licenza e hanno superato l’esame Knowledge of London, tutte le auto sono attrezzate per la sedia a rotelle. I transfer elettrici WeKnow operano a tariffe fisse; i loro banchi si trovano nelle aree arrivi di tutti i terminal."
+  },
+  "lounges": {
+   "title": "Sale business",
+   "hint": "Sale a pagamento da 35 £",
+   "text": "Sale a pagamento dopo i controlli, tutti i giorni. Terminal 2: No.1 Lounges e Plaza Premium, entrambe dalle 05:00 alle 21:00, da 44 £ e da 40 £ a persona. Terminal 5: Plaza Premium dalle 04:45 alle 21:30, da 35 £ a persona. Nel Terminal 2 ci sono anche le sale delle compagnie Lufthansa, Singapore Airlines, Air Canada e United, nel Terminal 5 le sale British Airways."
+  },
+  "storage": {
+   "title": "Deposito bagagli",
+   "hint": "Excess Baggage, da 10 £",
+   "text": "Depositi bagagli Excess Baggage Company, con videosorveglianza giorno e notte; prezzo per collo: fino a 3 ore 10 £, 3–24 ore 15 £, 24–48 ore 27,50 £, 48–72 ore 40 £. Oltre le 72 ore 12,50 £ per ogni giorno aggiuntivo, oltre i 7 giorni 10 £ al giorno. Si può prenotare online."
+  },
+  "wifi": {
+   "title": "Wi‑Fi",
+   "hint": "Gratis, rete Heathrow Wi‑Fi",
+   "text": "Wi‑Fi gratuito in tutti i terminal: scegliere la rete Heathrow Wi‑Fi, seguire le istruzioni sullo schermo e registrarsi. La rete ha la certificazione Friendly WiFi e filtra i contenuti non adatti ai bambini."
+  }
+ }
+}

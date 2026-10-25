@@ -1,0 +1,25 @@
+{
+ "iata": "LAS",
+ "blocks": {
+  "transport": {
+   "title": "Come arrivare",
+   "hint": "Bus RTC 108 e Red Line",
+   "text": "I bus urbani RTC fermano presso il Terminal 1 al Level Zero: dal ritiro bagagli scendere con l’ascensore o la scala mobile, uscire dall’edificio, attraversare sulle strisce pedonali e tenersi a destra fino alla fermata coperta. Qui fermano la linea 108 — Paradise e la Red Line (in precedenza linea 109 — Maryland Parkway). Dal Terminal 3 alla fermata si arriva con la navetta interterminal gratuita dal ritiro bagagli."
+  },
+  "taxi": {
+   "title": "Taxi",
+   "hint": "Ritiro bagagli, tariffa fissa Strip",
+   "text": "Nel Terminal 1 i taxi attendono nella parte est dell’area ritiro bagagli, oltre le porte 1–4; nel Terminal 3 presso il ritiro bagagli, alla porta 52. Le tariffe sono fissate dalla Nevada Taxicab Authority; tutte le compagnie accettano carte bancarie. Dall’aeroporto alle zone della Strip vige una tariffa fissa per zone."
+  },
+  "terminals": {
+   "title": "Terminal",
+   "hint": "Terminal 1 e Terminal 3",
+   "text": "Il Terminal 1 serve i gate A, B, C e D; accanto c’è un garage da 6.000 posti; la sala satellite D è collegata al Terminal 1 da un treno automatico. Il Terminal 3 serve tutte le compagnie internazionali e parte di quelle nazionali, con check-in, ritiro bagagli e controllo di frontiera propri; anche da qui un treno porta ai gate D. La fermata della navetta interterminal nel Terminal 3 è al Level Zero, presso la porta 55."
+  },
+  "parking": {
+   "title": "Parcheggio",
+   "hint": "Oltre 17.000 posti, da 14 $/24 h",
+   "text": "Oltre 17.000 posti presso entrambi i terminal e in un’area remota, giorno e notte. A breve termine: 4 $ la prima ora, 8 $ fino a 2 ore, poi 5 $ l’ora, massimo 38 $ per 24 ore. A lungo termine: 12 $ per 2 ore, poi 4 $ l’ora, massimo 20 $ per 24 ore; con prenotazione anticipata nel Terminal 3, dal sabato al mercoledì, 16 $. Economy e area remota (quest’ultima servita da una navetta gratuita): 6 $ per 2 ore, poi 2 $ l’ora, massimo 14 $ per 24 ore; valet 34 $ per 24 ore. L’area di sosta per chi attende (Cell Phone Lot) è gratuita."
+  }
+ }
+}

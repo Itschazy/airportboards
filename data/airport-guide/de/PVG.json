@@ -1,0 +1,30 @@
+{
+ "iata": "PVG",
+ "blocks": {
+  "transport": {
+   "title": "Anreise",
+   "hint": "Maglev bis Longyang Road, 50 Yuan",
+   "text": "Die Magnetschwebebahn (Maglev) fährt vom Flughafen zur Station Longyang Road mit einer Höchstgeschwindigkeit von 300 km/h. Ab Flughafen von 07:02 bis 21:42, zum Flughafen von 06:45 bis 21:40. Normales Ticket einfache Fahrt 50 Yuan, hin und zurück 80; VIP 100 und 160 Yuan."
+  },
+  "taxi": {
+   "title": "Taxi",
+   "hint": "Rund um die Uhr, ab 14 Yuan",
+   "text": "Die Taxistände sind rund um die Uhr in Betrieb: in Terminal 1 vor Tür 12 der Ankunftshalle (von den Türen 4 oder 8 nach Süden gehen), in Terminal 2 vor Tür 25 der Ankunftshalle. Tarif in Shanghai: Grundpreis inklusive der ersten 3 km 14 Yuan, bei Wagen von TuAn und Elektroautos Roewe Ei5 16, danach 2,7 Yuan pro km. Bei Fahrten über 15 km ist der Kilometertarif über diese Strecke hinaus 50 % höher, von 23:00 bis 5:00 sind Grundpreis und Kilometer 30 % teurer."
+  },
+  "storage": {
+   "title": "Gepäckaufbewahrung",
+   "hint": "Terminals 1 und 2, ab 15 Yuan",
+   "text": "Terminal 1: Abflughalle auf Ebene 3 zwischen den Türen 4 und 5 und Ankunftshalle auf Ebene 1 gegenüber Tür 7. Terminal 2: Abflughalle auf Ebene 3 an Insel A und internationale Ankunftshalle an Ausgang 2A. Alle Gepäckaufbewahrungsstellen sind von 06:00 bis 24:00 geöffnet, Aufbewahrung bis zu 2 Monate, bei der Abgabe ist ein Ausweisdokument nötig, die Gegenstände werden durchleuchtet. Handgepäck bis 20 Zoll – 15, 20 und 25 Yuan für bis zu 4, 10 und 24 Stunden; Gepäck von 20 bis 28 Zoll – 30, 40 und 45 Yuan; über 28 Zoll – 60 Yuan pro Stück und 24 Stunden."
+  },
+  "sleep": {
+   "title": "Schlafen",
+   "hint": "Nachtruhezonen, rund um die Uhr",
+   "text": "Ruhebereiche für übernachtende Passagiere sind rund um die Uhr geöffnet: in Terminal 1 an Tür 2 der Ankunftshalle und an den Gates 6–7 für Inlandsflüge, im Satelliten S1 an den Gates H105 und G139; in Terminal 2 an den Gates C71 und C91–98 und an Tür 29 der Ankunftshalle, im Satelliten S2 an den Gates H177 und G148. Kostenpflichtige Ruhebereiche, ebenfalls rund um die Uhr, an den Gates 25–26 im internationalen Abflug (Terminal 1) und an Gate D64 im internationalen Abflug (Terminal 2)."
+  },
+  "wifi": {
+   "title": "Wi‑Fi",
+   "hint": "#AirportPVG-Free-WiFi, kostenlos",
+   "text": "Das kostenlose Netz #AirportPVG-Free-WiFi deckt alle öffentlichen Bereiche der Terminals ab. Anmeldung über das Mini-Programm Shanghai Airports in WeChat, mit SMS-Code an die Telefonnummer oder mit einer Nummer, die ein Kiosk nach dem Scannen des Passes ausgibt. Kioske stehen in den Bereichen für Inlands- und internationale Abflüge sowie für internationale Ankünfte von Terminal 1 und im Satelliten S1."
+  }
+ }
+}

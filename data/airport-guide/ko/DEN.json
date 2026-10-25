@@ -1,0 +1,35 @@
+{
+ "iata": "DEN",
+ "blocks": {
+  "transport": {
+   "title": "가는 방법",
+   "hint": "A Line 열차, RTD 버스",
+   "text": "DEN Transit Center는 Jeppesen 터미널 남쪽 끝에 있습니다. 유리문으로 나가 에스컬레이터나 엘리베이터로 지상층까지 내려갑니다. 이곳에서 Denver Union Station행 A Line 열차와 RTD AB, AT, 104L, 145X, 169L 버스가 출발합니다. 대중교통은 대략 3:30부터 자정까지 운행하며, 공항에서 출발하는 마지막 버스는 1:28입니다. RTD 전 노선 1일 이용권은 $10입니다."
+  },
+  "taxi": {
+   "title": "택시",
+   "hint": "다운타운 정액 $72.04",
+   "text": "편도 정액 요금(공항 수수료 포함): 덴버 다운타운(A 구역) $72.04, Denver Tech Center(B 구역) $80.04, 볼더(C 구역) $115.04, Tower Road(D 구역) $37.04. 그 밖의 목적지는 미터 요금에 수수료 $6.04가 추가됩니다. 택시 승강장은 Jeppesen 터미널 5층 Island 1, 505·507·511번 문(동쪽)과 506·510·512번 문(서쪽) 옆에 있습니다."
+  },
+  "lounges": {
+   "title": "비즈니스 라운지",
+   "hint": "콘코스별 라운지",
+   "text": "라운지는 콘코스 메자닌에 있습니다: American Airlines Admirals Club은 C-32 게이트 옆, American Express Centurion Lounge는 C-46 옆, Capital One Lounge(Plaza Premium)는 A-34 옆, United Club은 A-25, B-44, B-32 옆에 있습니다. United Club Fly는 B-60 게이트 옆에 있습니다. Delta Sky Club은 보안검색 후 콘코스 A 북쪽 끝, Jeppesen 터미널에서 이어지는 다리 위에 있습니다. 리클라이너 의자가 있는 무료 휴식 공간 Rest and Recharge는 콘코스 A 메자닌에 있습니다."
+  },
+  "sleep": {
+   "title": "잠잘 곳",
+   "hint": "터미널 옆 Westin",
+   "text": "객실 519개의 Westin Denver International Airport 호텔은 메인 터미널에서 몇 걸음 거리, DEN Transit Center 바로 위에 있으며 에스컬레이터로 올라갑니다."
+  },
+  "kids": {
+   "title": "아이와 함께",
+   "hint": "A25·C54 옆 놀이 공간",
+   "text": "어린이 놀이 공간 두 곳이 A25와 C54 게이트 옆에서 상시 운영합니다. 기저귀 교환대와 세면대가 있는 무료 수유실은 상시 개방하며, 보안검색 후 각 콘코스에 있고 Jeppesen 터미널에도 두 곳(5층 중앙 도착 구역 옆, 북서쪽 국제선 도착 구역 옆) 있습니다."
+  },
+  "wifi": {
+   "title": "Wi‑Fi",
+   "hint": "공항 전역 무료",
+   "text": "공항 전역에서 무료 Wi‑Fi: DEN Airport Free WiFi, DEN Airport Free WiFi 2.4G 또는 DEN FREE WIFI 6E 네트워크를 선택하고 Connect를 누릅니다. Jeppesen 터미널 전체와 콘코스 세 곳에 콘센트가 있으며, 좌석과 테이블이 있는 별도의 충전 스테이션도 있습니다."
+  }
+ }
+}

@@ -1,0 +1,35 @@
+{
+ "iata": "MCO",
+ "blocks": {
+  "transport": {
+   "title": "Nasıl gidilir",
+   "hint": "Miami'ye Brightline, SunRail",
+   "text": "Havalimanının tren istasyonu Terminal C'nin yanında: burada ayrıca A ve B terminallerine giden Terminal Link treninin istasyonu, taksiler, servisler ve şehir otobüsleri var. Brightline istasyonundan West Palm Beach, Boca Raton, Fort Lauderdale ve Aventura'da durarak Miami'ye trenler gider. SunRail banliyö trenleri, havalimanından otobüsle gidilen Sand Lake Road istasyonundan kalkar."
+  },
+  "taxi": {
+   "title": "Taksi",
+   "hint": "International Drive — $38–45",
+   "text": "Havalimanından yaklaşık taksi ücretleri: havalimanı yakınındaki otellere $14–18, International Drive'a ve Orlando şehir merkezine (Downtown) $38–45, Winter Park ve Maitland'e $45–55, Lake Buena Vista'ya $47–55, Kissimmee'ye $45–75, Disney tatil köylerine $52–68, Port Canaveral'a $115."
+  },
+  "sleep": {
+   "title": "Nerede uyunur",
+   "hint": "A/B terminalinde Hyatt Regency",
+   "text": "445 odalı Hyatt Regency Orlando International Airport, A/B terminalinin içinde, 70–129 numaralı kapılara giden güvenlik kontrol noktasının üstünde, kontrol öncesi alanda. Gece kalmadan Day Stay gündüz konaklaması da var: çatı havuzu, fitness merkezi, restoran ve oda servisi. Otelin telefonu: +1-407-825-1234."
+  },
+  "kids": {
+   "title": "Çocukla",
+   "hint": "A ve B'de oyun alanları, Flybrary",
+   "text": "Florida tarzı yumuşak oyun alanı Terminal A'da Kat 1'de, güvenlik kontrolünden önce. Hareketli oyunlar içeren Interactive Family Zone Terminal B'de Kat 3'te yemek alanının yanında, kontrolden önce. Flybrary çocuk kütüphanesi Terminal C'de Kat 2'de 240 numaralı kapının yanında, kontrolden sonra. Emzirme odaları ve kabinleri her terminalde, aile tuvaletleri her katta var."
+  },
+  "parking": {
+   "title": "Otopark",
+   "hint": "Garaj C rezervasyonla 24 saati $32",
+   "text": "A ve B terminallerinin yanında A ve B garajları, Terminal Top Parking ve vale; Terminal C'nin yanında Garaj C; tren istasyonunun yanında Atlantis, Discovery ve Endeavour açık otoparkları; ekonomik otoparklar North Park Place, South Park Place ve West Park. Garaj C'de yer ayırtılabilir: 24 saat için $32, en fazla 45 gün. 7 fitten yüksek veya 25 fite kadar uzunluktaki araçları South Park Place kabul eder. Garajlarda ayrı şeritlerden E-PASS/SunPass ile ödeme yapılabilir."
+  },
+  "wifi": {
+   "title": "Wi‑Fi",
+   "hint": "Ücretsiz, MCO Internet",
+   "text": "Havalimanının tüm genel alanlarında ücretsiz Wi‑Fi, “MCO Internet” ağı; listedeki diğer ağlar havalimanına ait değil. Sinyal zayıfsa havalimanı başkalarının açık erişim noktalarından uzaklaşmayı ve kendi erişim noktalarınızı gerekmediğinde kapatmayı rica eder."
+  }
+ }
+}

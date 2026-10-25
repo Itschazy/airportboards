@@ -1,0 +1,40 @@
+{
+ "iata": "SIN",
+ "blocks": {
+  "transport": {
+   "title": "가는 방법",
+   "hint": "MRT와 여러 버스 노선",
+   "text": "시내 중심까지는 Changi Airport MRT 역(CG2)에서 열차로 Tanah Merah(EW4)까지 가서 Tuas Link(EW33) 방면 East West 노선으로 갈아타거나, Expo(CG1/DT35)까지 가서 Downtown 노선으로 갈아탑니다. Tanah Merah행 첫차는 월–토 5:31, 일요일과 공휴일 5:59이며, Tuas Link 방면 환승 막차는 매일 23:18입니다. 24, 27, 34, 36, 53, 110, 858번 버스는 1, 2, 3터미널의 지하 버스 승강장에서 출발합니다. 결제는 비접촉 Mastercard/Visa/NETS 카드, 모바일 지갑, EZ-Link 카드로 하며, 버스에서는 거스름돈 없이 현금으로도 낼 수 있습니다."
+  },
+  "taxi": {
+   "title": "택시",
+   "hint": "시내 S$25–45, 미터",
+   "text": "택시 승강장은 1–4터미널 도착 구역에 있으며, 시내 중심까지 약 30분, 미터 요금 S$25–45입니다. 공항 출발 할증은 17:00–23:59에 S$8, 그 외 시간에 S$6이며, 0:00–5:59에는 미터 요금 합계에 심야 할증 50%가 붙습니다. Grab, Gojek, Zig, Tada Mobility, Ryde, Geolah로 호출한 차량은 Arrival and Ride-Hailing pick-up 지점에서 탑니다. 상시 운영하는 Ground Transport Concierge 카운터: 싱가포르 어디든 4인승 S$70, 6인승 S$75."
+  },
+  "terminals": {
+   "title": "터미널",
+   "hint": "T1–T3 열차, T4 버스",
+   "text": "1, 2, 3터미널은 일반 구역과 환승 구역 모두에서 무료 Skytrain으로 연결되며, 환승 구역에서는 무빙워크로 걸어서도 이동할 수 있습니다. 4터미널까지는 T1/Jewel과 T2/MRT에서 6:00부터 0:00까지 5–9분 간격으로 무료 셔틀버스가 운행합니다: 일반 구역은 약 10분, 환승 구역은 10–18분이며, 환승 구역 셔틀은 수하물이 최종 목적지까지 부쳐진 경우에만 이용할 수 있습니다. Jewel은 T2와 T3 사이 일반 구역에 있습니다: T1에서는 1층 도착 홀에서 바로 들어가고, T2와 T3에서는 연결 통로로 걸어서 5–10분입니다. 환승 승객은 출입국 심사를 거쳐야 합니다."
+  },
+  "lounges": {
+   "title": "비즈니스 라운지",
+   "hint": "T1·T2·T4 유료 라운지",
+   "text": "유료 라운지: Plaza Premium Lounge는 1터미널 환승 구역 3층, 상시; JetQuay Lounge는 2터미널 환승 구역 2층, 상시; Blossom – SATS & Plaza Premium Lounge는 4터미널 환승 구역 2M층, 상시. 그 밖에 Ambassador Transit Lounge(2곳), Jewel 1층의 Changi Lounge, 2터미널 일반 구역 1층의 Hub & Spoke가 있습니다."
+  },
+  "storage": {
+   "title": "수하물 보관소",
+   "hint": "전 터미널, 24시간 S$6부터",
+   "text": "Smarte Carte 수하물 보관소는 상시 운영합니다: 일반 구역은 Jewel(1층), T2(North 도착 홀), T3(1층, Train to City 옆), T4(1층); 환승 구역은 네 터미널 모두. GST 포함 24시간 요금: 소형 단품 S$6, 10 kg 이하 작은 짐 S$11, 10 kg 초과 대형·규격 외 짐 S$16, 초대형 짐 S$19. 맡기는 모든 물품은 검사를 받습니다."
+  },
+  "sleep": {
+   "title": "잠잘 곳",
+   "hint": "무료 휴식 공간, 상시",
+   "text": "환승 구역의 무료 휴식 공간 Snooze Lounge는 상시 운영합니다: T1은 3층 Departure Transit Hall East; T2는 2층의 Sanctuary Lounge, Oasis Lounge, Pavilion Lounge; T3은 2층 두 곳(South와 North); T4는 2M층."
+  },
+  "kids": {
+   "title": "아이와 함께",
+   "hint": "무료 유모차",
+   "text": "유모차는 안내 카운터와 Jewel 컨시어지 카운터에서 선착순으로 무료 대여합니다. 어린 아이를 동반한 승객은 더 넓은 Special Assistance Lanes로 출입국 심사를 받을 수 있으며, 최대 4명까지 함께 통과할 수 있습니다."
+  }
+ }
+}

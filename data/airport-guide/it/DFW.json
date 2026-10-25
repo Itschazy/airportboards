@@ -1,0 +1,35 @@
+{
+ "iata": "DFW",
+ "blocks": {
+  "transport": {
+   "title": "Come arrivare",
+   "hint": "DART, TEXRail, bus per la TRE",
+   "text": "Dai terminal partono tre tipi di trasporto pubblico. Dal Terminal A: DART Orange Line per il centro di Dallas. Dal Terminal B: DART Silver Line per il nord di Dallas e TEXRail dell’operatore Trinity Metro per il centro di Fort Worth. Il bus TRE LINK porta alla stazione CentrePort/DFW della linea TRE, che collega Dallas e Fort Worth."
+  },
+  "taxi": {
+   "title": "Taxi",
+   "hint": "19 compagnie, livello inferiore",
+   "text": "I taxi di 19 compagnie attendono al livello inferiore dei terminal A, B, C, D ed E. Dalle 8:00 a mezzanotte ai posteggi è presente un addetto dell’aeroporto che assegna i passeggeri alle auto. Dopo mezzanotte il taxi si può chiamare al numero +1-972-973-4061."
+  },
+  "lounges": {
+   "title": "Sale business",
+   "hint": "Oltre 20 sale, tutti i terminal",
+   "text": "In aeroporto ci sono oltre 20 sale e aree premium. Tutti e cinque i terminal sono collegati all’interno dell’area dopo i controlli dal treno Skylink, quindi i passeggeri che ne hanno diritto possono usare le sale di qualsiasi terminal, indipendentemente dal gate d’imbarco. Tra gli operatori: American Airlines, American Express Centurion Lounge, Capital One Lounge, Chase Sapphire Lounge by The Club, The Club DFW, Plaza Premium Lounges e PS DFW."
+  },
+  "kids": {
+   "title": "Con bambini",
+   "hint": "Area giochi D8, sale allattamento",
+   "text": "L’area giochi McDonald's Play Area si trova nel Terminal D presso il gate D8, con un parco giochi morbido, posti per gli adulti e prese elettriche. Le sale allattamento ci sono in ogni terminal, nell’area dopo i controlli: presso i gate A18, B40, C13/14, C36, D2, D36, E14 ed E26."
+  },
+  "parking": {
+   "title": "Parcheggio",
+   "hint": "Terminal, Express, Remote, Valet",
+   "text": "Il parcheggio Terminal si trova accanto a ogni terminal. Express: posti coperti e scoperti presso l’ingresso nord dell’aeroporto, con navetta per il terminal. Remote è il parcheggio più economico dell’aeroporto, con navetta gratuita per tutti i terminal. Ci sono anche il Valet e due aree di sosta gratuite Cell Phone Lots per chi attende i passeggeri. Il posto si può prenotare in anticipo sul sito o nell’app dell’aeroporto."
+  },
+  "wifi": {
+   "title": "Wi‑Fi",
+   "hint": "Gratuito, DFW Public",
+   "text": "Wi‑Fi gratuito: scegliere la rete «DFW Public 5G Wi-Fi» o «DFW Public 6E Wi-Fi» e accettare le condizioni. Stazioni di ricarica con porte USB si trovano presso molti gate d’imbarco; la ricarica è gratuita."
+  }
+ }
+}

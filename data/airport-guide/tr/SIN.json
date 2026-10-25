@@ -1,0 +1,40 @@
+{
+ "iata": "SIN",
+ "blocks": {
+  "transport": {
+   "title": "Nasıl gidilir",
+   "hint": "MRT ve 24, 27, 36, 858 otobüsleri",
+   "text": "Merkeze trenle: Changi Airport MRT istasyonundan (CG2) Tanah Merah'a (EW4), oradan Tuas Link (EW33) yönündeki East West hattına aktarma, ya da Expo'ya (CG1/DT35), oradan Downtown hattına aktarma. Tanah Merah'a ilk tren pazartesiden cumartesiye 5:31'de, pazar ve bayram günleri 5:59'da; Tuas Link aktarmalı son tren her gün 23:18'de. 24, 27, 34, 36, 53, 110 ve 858 numaralı otobüsler Terminal 1, 2 ve 3'ün yeraltı otobüs peronlarından kalkar. Ödeme temassız Mastercard/Visa/NETS kartları, mobil cüzdanlar ve EZ-Link kartlarıyla; otobüste para üstü verilmeden nakit ödenebilir."
+  },
+  "taxi": {
+   "title": "Taksi",
+   "hint": "Merkeze S$25–45, taksimetreyle",
+   "text": "Taksi durakları Terminal 1–4'ün geliş alanlarında; merkeze yolculuk yaklaşık 30 dakika ve taksimetreyle S$25–45. Havalimanından yolculuk için ek ücret 17:00–23:59 arası S$8, diğer saatlerde S$6; 0:00–5:59 arası taksimetre toplamına %50 gece zammı. Grab, Gojek, Zig, Tada Mobility, Ryde veya Geolah ile çağrılan araçlara Arrival and Ride-Hailing pick-up noktalarında binilir. Gece gündüz açık Ground Transport Concierge kontuarı: Singapur'un her yerine transfer 4 kişilik araçla S$70, 6 kişilik araçla S$75."
+  },
+  "terminals": {
+   "title": "Terminaller",
+   "hint": "T1–T3 Skytrain, T4'e otobüs",
+   "text": "Terminal 1, 2 ve 3'ü ücretsiz Skytrain bağlar, hem genel hem transit alanda; transit alanda aralarında yürüyen bantlarla da geçilebilir. Terminal 4'e T1/Jewel ve T2/MRT'den 6:00'dan 0:00'a kadar 5–9 dakikada bir ücretsiz servis otobüsü: genel alanda yaklaşık 10 dakika, transit alanda 10–18 dakika; transit alanda yalnızca bagajın son varış noktasına kadar check-in işlemi tamamlanmışsa. Jewel, T2 ile T3 arasındaki genel alanda: T1'den doğrudan Kat 1'deki geliş salonundan girilir, T2 ve T3'ten geçitten 5–10 dakika yürünür; transit yolcuların pasaport kontrolünden geçmesi gerekir."
+  },
+  "lounges": {
+   "title": "Business salonları",
+   "hint": "T1, T2, T4'te ücretli salonlar",
+   "text": "Ücretli salonlar: Plaza Premium Lounge — Terminal 1, transit alan, Kat 3, gece gündüz; JetQuay Lounge — Terminal 2, transit alan, Kat 2, gece gündüz; Blossom – SATS & Plaza Premium Lounge — Terminal 4, transit alan, Kat 2M, gece gündüz. Ayrıca Ambassador Transit Lounge (2 salon), Jewel'de Kat 1'de Changi Lounge ve Terminal 2'nin genel alanında Kat 1'de Hub & Spoke."
+  },
+  "storage": {
+   "title": "Emanet",
+   "hint": "Her terminalde, 24 saati S$6'dan",
+   "text": "Smarte Carte emanetleri gece gündüz açık: genel alanda Jewel (Kat 1), T2 (North geliş salonu), T3 (Kat 1, Train to City yanında), T4 (Kat 1); transit alanda dört terminalin hepsinde. GST dahil 24 saatlik fiyat: tek tek eşyalar S$6, 10 kg'a kadar küçük eşyalar S$11, 10 kg'dan ağır büyük ve standart dışı eşyalar S$16, çok büyük eşyalar S$19. Teslim edilen tüm eşyalar kontrol edilir."
+  },
+  "sleep": {
+   "title": "Nerede uyunur",
+   "hint": "Ücretsiz dinlenme alanları, 24 saat",
+   "text": "Transit alandaki ücretsiz Snooze Lounge dinlenme alanları gece gündüz açık: T1 — Kat 3, Departure Transit Hall East; T2 — Kat 2'de Sanctuary Lounge, Oasis Lounge ve Pavilion Lounge; T3 — Kat 2'de iki salon (South ve North); T4 — Kat 2M."
+  },
+  "kids": {
+   "title": "Çocukla",
+   "hint": "Ücretsiz bebek arabaları",
+   "text": "Bebek arabaları danışma kontuarlarında ve Jewel'deki konsiyerj kontuarlarında sıra usulüyle ücretsiz verilir. Küçük çocuklu yolcular pasaport kontrolünden daha geniş Special Assistance Lanes şeritlerinden geçebilir — en fazla dört kişi birlikte."
+  }
+ }
+}

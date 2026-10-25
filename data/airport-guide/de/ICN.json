@@ -1,0 +1,30 @@
+{
+ "iata": "ICN",
+ "blocks": {
+  "taxi": {
+   "title": "Taxi",
+   "hint": "Ebene 1, Nachtzuschlag",
+   "text": "Taxistände auf Ebene 1 an den Ausgängen der Ankunftshalle, jedes Ziel (Seoul, Incheon, Gyeonggi-do) hat eine eigene Standnummer: nach Seoul ab Terminal 1 – 5C, 6C, 6D, ab Terminal 2 – 7C. Von 22:00 bis 4:00 gilt ein Nachtzuschlag von etwa 20 % bis 40 %. Nach Seoul, Incheon, Goyang, Gwangmyeong, Gimpo und Bucheon wird kein Zuschlag für das Verlassen des Tarifgebiets erhoben. Der Flughafen bittet, nur die offiziellen Taxistände zu nutzen: Als Taxis getarnt fahren oft illegale Call Vans mit überhöhten Preisen."
+  },
+  "terminals": {
+   "title": "Terminals",
+   "hint": "AREX-Zug, 6 Minuten",
+   "text": "Zwischen den Terminals 1 und 2 fährt der Zug Airport Railroad – etwa 6 Minuten, 1.050 ₩, kostenpflichtig. Für Rollstuhlnutzer kommt auf Anruf beim Shuttlebus-Dienst (032-741-3217) kostenlos ein Fahrzeug mit Hebebühne: nur montags bis freitags, von 5:00 bis 24:00, am besten vorab buchen."
+  },
+  "lounges": {
+   "title": "Business-Lounges",
+   "hint": "Terminal 1, Ebene 4",
+   "text": "In Terminal 1 liegen alle Lounges auf Ebene 4. Rund um die Uhr mit Pause 21:30–22:00 geöffnet sind SKY HUB Lounge East (Transitbereich, an Gate 11) und West (an Gate 42). Außerdem Asiana Business Lounge (West, an Gate 42, 6:00–0:30; Central, an Gate 26; East, an Gate 11), Oneworld Lounge an Gate 28 (5:30–1:30), KE Lounge für Passagiere ausländischer Fluggesellschaften an Gate 28, Matina Lounge East und West, SilverKris Lounge an Gate 29."
+  },
+  "sleep": {
+   "title": "Schlafen",
+   "hint": "Kapseln Darakhyu, Transithotel",
+   "text": "In Terminal 1 sind rund um die Uhr das Kapselhotel Darakhyu in der Mitte des Verkehrszentrums und das Transit Hotel an Gate 11 auf Ebene 4 geöffnet. Kostenlose, rund um die Uhr geöffnete Ruhezonen NAP Zone, Cozy Zone und Refresh Zone liegen in der östlichen Transithalle auf Ebene 4, die Relax Zone in der westlichen. Die Duschen an den Gates 25 und 29 auf Ebene 4 sind von 5:00 bis 23:00 geöffnet."
+  },
+  "kids": {
+   "title": "Mit Kind",
+   "hint": "Spielplätze und Mutter-Kind-Räume",
+   "text": "In Terminal 1 gibt es rund um die Uhr geöffnete Kinderspielplätze an den Gates 9, 11, 14, 41 und 45 auf Ebene 3 sowie in der östlichen und westlichen Transithalle auf Ebene 4. Mutter-Kind-Räume (Baby Care Room) sind rund um die Uhr geöffnet: in der Ankunftshalle an den Hallen B und E auf Ebene 1, an den Check-in-Schaltern D und K auf Ebene 3, an den Gates 11, 22, 25, 29, 33 und 45 auf Ebene 3 sowie in der östlichen und westlichen Transithalle auf Ebene 4."
+  }
+ }
+}

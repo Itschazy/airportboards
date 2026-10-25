@@ -1,0 +1,40 @@
+{
+ "iata": "FRA",
+ "blocks": {
+  "transport": {
+   "title": "가는 방법",
+   "hint": "S-Bahn S8·S9 등",
+   "text": "공항 지역 열차역은 프랑크푸르트, 오펜바흐, 하나우, 아샤펜부르크, 뤼셀스하임, 마인츠, 비스바덴과 직접 연결됩니다: S-Bahn S8, S9 노선과 지역 열차 RB58, RE59, RE2, RE3. 역은 1터미널 지하층(0층)에 있으며, A, B, C 모든 구역에서 Train stations S T 표지를 따라 갑니다. 열차는 1–3번 선로에 도착합니다. 3터미널까지는 SkyLine 열차로 약 10–15분 걸리며, Terminal 3 G, H, J 표지를 따라 갑니다."
+  },
+  "taxi": {
+   "title": "택시",
+   "hint": "상시, 시내까지 20–30분",
+   "text": "택시는 세 터미널 모두와 장거리 열차역 앞에서 상시 대기합니다. 프랑크푸르트에서 교통 상황에 따라 20–30분 걸립니다. Uber 승하차: 1터미널은 단기 주차장 P31(출발층); 3터미널은 전세버스 차로 P62에서 승차, 출발층 P63에서 하차합니다."
+  },
+  "terminals": {
+   "title": "터미널",
+   "hint": "무료 SkyLine, 야간 버스",
+   "text": "1터미널과 3터미널은 무료 열차 SkyLine으로 연결됩니다: 4:00부터 23:00까지 2–3분 간격으로 운행하며, 두 터미널 모두에 역이 있습니다. 22:00부터 5:00까지는 터미널 사이를 셔틀버스가 운행하며, 정류장은 터미널 건물 앞 도착 구역 앞 광장에 있습니다."
+  },
+  "lounges": {
+   "title": "비즈니스 라운지",
+   "hint": "T1·T3 라운지",
+   "text": "1터미널 보안검색 후: A, B, Z 구역의 Lufthansa 라운지(Business, Senator, First Class), C 구역의 Lufthansa Bistro Lounge(Non-Schengen), B 구역의 Air Canada Lounge. 3터미널 보안검색 후: H 구역의 Air France Lounge, J 구역의 Emirates Lounge, Priority Lounge, SkyTeam Lounge. 보안검색 전: 1터미널 C 구역의 Luxx Lounge."
+  },
+  "sleep": {
+   "title": "잠잘 곳",
+   "hint": "napcabs, €12/시간~",
+   "text": "침대, 에어컨, 알람, 업무용 책상을 갖춘 수면 캐빈 napcabs: 1터미널 보안검색 후 Pier A Schengen에 6개, 3층 B 환승 구역에 3개(B42 게이트 옆 에스컬레이터), 3터미널 Pier H Schengen에 3개, Pier J Non-Schengen에 5개. 6:00–22:00 시간당 €17(최소 2시간), 22:00–6:00 시간당 €12(최소 3시간). 온라인 예약은 카드나 PayPal로, 현장 결제는 카드만 가능합니다. 캐빈 옆에 샤워실이 있습니다."
+  },
+  "parking": {
+   "title": "주차",
+   "hint": "15,000면, 7일 €99부터",
+   "text": "공항 전체 주차면은 15,000면입니다. 온라인 예약 시 Terminal Parking은 7일 €99.00부터, Weekend Special(금요일부터 일요일까지 2–3일)은 €55.00부터입니다. 예약은 출발 9개월 전부터 24시간 전까지, 이용 기간 1–44일로 할 수 있습니다. 터미널 주차장의 진입 높이 제한은 2.10 m이며, 더 높은 차량은 버스 주차장 P36을 이용합니다. LPG 차량은 1터미널 주차장에 들어갈 수 없지만 3터미널 주차장에는 들어갈 수 있습니다."
+  },
+  "wifi": {
+   "title": "Wi‑Fi",
+   "hint": "무료, 가입 불필요",
+   "text": "무료 무제한 Wi‑Fi를 상시 이용할 수 있으며, 액세스 포인트는 300개 이상이고 가입이 필요 없습니다. Airport-Frankfurt 네트워크를 선택한 다음 Wi-Fi Free 또는 Wi-Fi Free+를 고르고, Fraport AG 약관에 동의한 뒤 Go online을 누릅니다."
+  }
+ }
+}

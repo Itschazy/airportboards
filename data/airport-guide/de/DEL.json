@@ -1,0 +1,20 @@
+{
+ "iata": "DEL",
+ "blocks": {
+  "transport": {
+   "title": "Anreise",
+   "hint": "Metro: Airport Express und Magenta",
+   "text": "Die orangefarbene Metrolinie Airport Express fährt vom Bahnhof New Delhi Railway Station bis YASHOBHOOMI DWARKA SECTOR - 25 mit Halt an Terminal 3, Fahrzeit ab New Delhi etwa 25 Minuten; erster Zug um 4:45, letzter um 23:15 ab Dwarka Sector 21 und um 23:30 ab New Delhi. Terminal 2 liegt neben Terminal 3, zu Fuß oder mit dem Shuttle erreichbar. Zu Terminal 1 fährt die Linie Magenta: Die unterirdische Station Terminal 1‑IGI Airport liegt 5–7 Gehminuten entfernt (300–400 m durch einen überdachten Gang mit Laufbändern), Züge von 5:30 bis 23:30. Fahrkartenautomaten gibt es in den Ankunftsbereichen der Terminals 2 und 3 und an der Station von Terminal 1."
+  },
+  "taxi": {
+   "title": "Taxi",
+   "hint": "Prepaid-Taxis sowie Uber, Ola",
+   "text": "An allen drei Terminals gibt es rund um die Uhr Prepaid-Taxis mit Festpreis, Uber und Ola sowie Mietwagen. In den Terminals 1 und 2 (nur Inlandsflüge) steigt man am Ausgang des Ankunftsbereichs ein, in Terminal 1 fährt außerdem Rapido. In Terminal 3 (internationale und Inlandsflüge) steigt man im Parkhaus auf Ebene 0 ein; dort auch die Elektrotaxis Evera EV."
+  },
+  "parking": {
+   "title": "Parken",
+   "hint": "Parkhaus, ab ₹160",
+   "text": "An Terminal 3 liegt das Parkhaus (MLCP) gegenüber dem Gebäude, an Terminal 1 die Zonen Park & Fly / Long Stay; rund um die Uhr geöffnet, mit Videoüberwachung. Tarif für Privatwagen seit dem 15. April 2025: bis 30 Minuten ₹160, bis 1 Stunde ₹250, 1–2 Stunden ₹320, 2–3 Stunden ₹400, 3–4 Stunden ₹500, von 4 bis 24 Stunden ₹600. Ein Platz kann vorab auf der Website gebucht werden; Stornierung spätestens 12 Stunden vorher."
+  }
+ }
+}

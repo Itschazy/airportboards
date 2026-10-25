@@ -1,0 +1,40 @@
+{
+ "iata": "FRA",
+ "blocks": {
+  "transport": {
+   "title": "交通方式",
+   "hint": "S-Bahn S8、S9及区域列车",
+   "text": "机场区域火车站直通法兰克福、奥芬巴赫、哈瑙、阿沙芬堡、吕瑟尔斯海姆、美因茨和威斯巴登：S-Bahn S8和S9线以及RB58、RE59、RE2和RE3区域列车。车站位于1号航站楼地下层（0层），从A、B、C各区按“Train stations S T”指示牌前往。列车停靠1–3站台。前往3号航站楼乘SkyLine列车，约10–15分钟，按“Terminal 3 G, H, J”指示牌前往。"
+  },
+  "taxi": {
+   "title": "出租车",
+   "hint": "全天候，至市区20–30分钟",
+   "text": "三座航站楼和长途火车站旁全天候有出租车候客。从法兰克福出发视交通状况需20至30分钟。Uber上下车点：1号航站楼在短时停车场P31（出发层）；3号航站楼在包车巴士车道P62上车，在出发层P63下车。"
+  },
+  "terminals": {
+   "title": "航站楼",
+   "hint": "免费SkyLine，夜间巴士",
+   "text": "1号和3号航站楼之间有免费SkyLine列车：运营时间4:00至23:00，间隔2–3分钟，两座航站楼均设站。22:00至5:00航站楼之间有穿梭巴士；站点在航站楼前到达区前方的广场上。"
+  },
+  "lounges": {
+   "title": "商务休息室",
+   "hint": "T1、T3的休息室",
+   "text": "1号航站楼安检后：A、B、Z区有Lufthansa休息室（Business、Senator、First Class），C区有Lufthansa Bistro Lounge（Non-Schengen），B区有Air Canada Lounge。3号航站楼安检后：H区有Air France Lounge，J区有Emirates Lounge、Priority Lounge和SkyTeam Lounge。安检前：1号航站楼C区的Luxx Lounge。"
+  },
+  "sleep": {
+   "title": "休息住宿",
+   "hint": "napcabs，€12/小时起",
+   "text": "napcabs睡眠舱配有床、空调、闹钟和办公桌，位于1号航站楼安检后：Pier A Schengen有6间，B区中转区3层有3间（B42登机口旁的自动扶梯）；3号航站楼：Pier H Schengen有3间，Pier J Non-Schengen有5间。6:00至22:00每小时€17（至少2小时），22:00至6:00每小时€12（至少3小时）。可在线用银行卡或PayPal预订，现场仅限刷卡。睡眠舱旁设有淋浴间。"
+  },
+  "parking": {
+   "title": "停车",
+   "hint": "15,000个车位，7天€99起",
+   "text": "机场共有15,000个停车位。在线预订Terminal Parking：7天€99.00起，Weekend Special（周五至周日2–3天）€55.00起；可在出发前9个月至24小时之间预订，停车期限1–44天。航站楼停车楼最大限高2.10米，更高的车辆请使用巴士停车场P36。使用液化石油气（LPG）的车辆不得进入1号航站楼停车楼，可进入3号航站楼停车楼。"
+  },
+  "wifi": {
+   "title": "Wi‑Fi",
+   "hint": "免费，无需注册",
+   "text": "全天候免费不限流量Wi‑Fi，300多个接入点，无需注册。选择“Airport-Frankfurt”网络，再选Wi-Fi Free或Wi-Fi Free+，同意Fraport AG的条款后点击“Go online”。"
+  }
+ }
+}

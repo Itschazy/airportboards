@@ -1,0 +1,46 @@
+{
+ "iata": "AMS",
+ "checked": "2026-10-25",
+ "blocks": [
+  {
+   "id": "transport",
+   "title": "Как доехать",
+   "hint": "Поезд NS до Amsterdam CS",
+   "text": "Станция NS — прямо под зданием терминала, спуститься на эскалаторе или лифте. Между Amsterdam CS и аэропортом поезд ходит 8 раз в час, с остановками Sloterdijk и Lelylaan, и всегда отправляется из аэропорта с пути 3. Из Амстердама, Утрехта, Лейдена, Гааги, Делфта и Роттердама до аэропорта можно доехать круглосуточно, часто без пересадок. Билет покупают в аэропорту или платят бесконтактной картой либо телефоном, отмечаясь на жёлтых валидаторах наверху эскалаторов и лифтов в Schiphol Plaza.",
+   "source": "schiphol.nl",
+   "url": "https://www.schiphol.nl/en/from-to-schiphol/by-public-transport/train/"
+  },
+  {
+   "id": "taxi",
+   "title": "Такси",
+   "hint": "Стоянка у Schiphol Plaza",
+   "text": "Официальная стоянка такси — перед Schiphol Plaza, бронировать заранее не нужно. Машины Uber и Bolt забирают на отдельной остановке «App pick-up point», к ней ведут указатели в терминале; там есть бесплатный Wi‑Fi. Микроавтобусы Schiphol Travel Taxi — для групп до 8 человек, можно ехать вскладчину с попутчиками.",
+   "source": "schiphol.nl",
+   "url": "https://www.schiphol.nl/en/from-to-schiphol/taxi/"
+  },
+  {
+   "id": "storage",
+   "title": "Камера хранения",
+   "hint": "Уровень −1, от €7 в сутки",
+   "text": "Камера хранения на уровне −1 между Arrivals 1 и Arrivals 2, круглосуточно, до 30 дней; за сутки: ручная кладь (до 55×35×25 см) €7, багаж €9.50, негабарит €12, гардероб €2.50 за вещь. За утерянную квитанцию — сбор €8. После досмотра в транзитной зоне у выходов — ячейки 40×40×70 см за €8.50, до 7 дней, круглосуточно.",
+   "source": "schiphol.nl",
+   "url": "https://www.schiphol.nl/en/at-schiphol/services/luggage-storage/"
+  },
+  {
+   "id": "sleep",
+   "title": "Где поспать",
+   "hint": "YOTELAIR и Mercure после досмотра",
+   "text": "После досмотра работают два отеля, круглосуточно: Mercure Hotel в Lounge 3 и YOTELAIR в Lounge 2, оба по пути к выходам D1–D57, E, F, G и H. В YOTELAIR можно попасть даже без визы в Нидерланды.",
+   "source": "schiphol.nl",
+   "url": "https://www.schiphol.nl/en/at-schiphol/services/sleep-after-passport-control/"
+  },
+  {
+   "id": "kids",
+   "title": "С ребёнком",
+   "hint": "Площадка с самолётом, бесплатно",
+   "text": "Детская площадка Kids Playground — после досмотра, на этаже 1 в Lounge 2, по пути к выходам D1–D57, E, F, G и H, круглосуточно. Дети лазают в настоящем самолёте; рядом фудкорт, вход бесплатный.",
+   "source": "schiphol.nl",
+   "url": "https://www.schiphol.nl/en/at-schiphol/services/kids-playground/"
+  }
+ ]
+}

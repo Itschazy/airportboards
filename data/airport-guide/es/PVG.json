@@ -1,0 +1,30 @@
+{
+ "iata": "PVG",
+ "blocks": {
+  "transport": {
+   "title": "Cómo llegar",
+   "hint": "Maglev a Longyang Road, 50 yuanes",
+   "text": "El tren de levitación magnética (Maglev) va del aeropuerto a la estación Longyang Road a una velocidad máxima de 300 km/h. Desde el aeropuerto, de 07:02 a 21:42; hacia el aeropuerto, de 06:45 a 21:40. El billete normal de ida cuesta 50 yuanes; de ida y vuelta, 80; VIP, 100 y 160 yuanes."
+  },
+  "taxi": {
+   "title": "Taxi",
+   "hint": "Día y noche, desde 14 yuanes",
+   "text": "Las paradas de taxi funcionan día y noche: en la terminal 1, en el exterior de la puerta 12 de la sala de llegadas (desde las puertas 4 u 8, ir hacia el sur); en la terminal 2, en el exterior de la puerta 25 de la sala de llegadas. Tarifa de Shanghái: bajada de bandera con los primeros 3 km incluidos, 14 yuanes (en los vehículos TuAn y los eléctricos Roewe Ei5, 16); después, 2,7 yuanes por km. En los trayectos de más de 15 km, la tarifa por kilómetro a partir de esa distancia es un 50% más alta; de 23:00 a 5:00, la bajada de bandera y el kilómetro son un 30% más caros."
+  },
+  "storage": {
+   "title": "Consigna",
+   "hint": "Terminales 1 y 2, desde 15 yuanes",
+   "text": "Terminal 1: sala de salidas, nivel 3, entre las puertas 4 y 5, y sala de llegadas, nivel 1, frente a la puerta 7. Terminal 2: sala de salidas, nivel 3, junto a la isla A, y sala de llegadas internacionales, junto a la salida 2A. Todos los puntos abren de 06:00 a 24:00 y guardan hasta 2 meses; al dejar el equipaje hace falta un documento y los objetos pasan por rayos X. Equipaje de mano de hasta 20 pulgadas: 15, 20 y 25 yuanes por un plazo de hasta 4, 10 y 24 horas; equipaje de 20 a 28 pulgadas: 30, 40 y 45 yuanes; de más de 28 pulgadas: 60 yuanes por bulto y 24 horas."
+  },
+  "sleep": {
+   "title": "Dónde dormir",
+   "hint": "Zonas de descanso nocturno, 24 h",
+   "text": "Las zonas de descanso para pasajeros que pasan la noche funcionan día y noche: en la terminal 1, junto a la puerta 2 de la sala de llegadas y junto a las puertas 6–7 de vuelos nacionales; en el satélite S1, junto a las puertas H105 y G139; en la terminal 2, junto a las puertas C71 y C91–98 y junto a la puerta 29 de la sala de llegadas; en el satélite S2, junto a las puertas H177 y G148. Las zonas de descanso de pago, también abiertas día y noche, están junto a las puertas 25–26 de salidas internacionales (terminal 1) y junto a la puerta D64 de salidas internacionales (terminal 2)."
+  },
+  "wifi": {
+   "title": "Wi‑Fi",
+   "hint": "#AirportPVG-Free-WiFi, gratis",
+   "text": "La red gratuita #AirportPVG-Free-WiFi cubre todas las zonas públicas de las terminales. Se puede entrar con el miniprograma Shanghai Airports en WeChat, con un código por SMS al número de teléfono o con el número que da un quiosco tras escanear el pasaporte. Los quioscos están en las zonas de salidas nacionales e internacionales y de llegadas internacionales de la terminal 1 y en el satélite S1."
+  }
+ }
+}

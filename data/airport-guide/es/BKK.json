@@ -1,0 +1,25 @@
+{
+ "iata": "BKK",
+ "blocks": {
+  "taxi": {
+   "title": "Taxi",
+   "hint": "Nivel 1, puertas 4–7, +50 baht",
+   "text": "El mostrador de información de taxis y las máquinas expendedoras de tiques están en la terminal de pasajeros, en el nivel 1, entre las puertas 4 y 7. A la tarifa se suma un recargo de 50 baht para el conductor por disposición del Ministerio de Transporte; los peajes los paga el pasajero. Hay trayectos de corta distancia, por los alrededores del aeropuerto y no más allá de 20 km; en las distancias normales, según las normas del Departamento de Transporte Terrestre, el precio se puede acordar con el conductor."
+  },
+  "terminals": {
+   "title": "Terminales",
+   "hint": "Terminal principal y satélite SAT-1",
+   "text": "Además de la terminal principal (MTB) funciona el satélite SAT-1: 28 pasarelas de embarque, 8 de ellas para aviones de clase F como el A380 y el B747-8. SAT-1 está unido a la terminal principal por un túnel de cerca de un kilómetro por el que circulan trenes automáticos APM; el trayecto, incluida la espera, dura unos tres minutos. En SAT-1, el nivel 4 son salas de espera y salas de aerolíneas; el nivel 3, salidas; el nivel 2, llegadas y conexiones; la estación del APM está en el nivel subterráneo B2."
+  },
+  "lounges": {
+   "title": "Salas VIP",
+   "hint": "Miracle, desde 1500 THB por 2 h",
+   "text": "Las salas Miracle Lounge están en la terminal principal, en las zonas de salidas de los niveles 2 a 4 junto a los vestíbulos A, C, D, F y G, y en el satélite SAT-1, en el nivel 4. En la sala hay aperitivos, bebidas frías y calientes, Wi‑Fi gratuito, periódicos y revistas. Precio orientativo por 2 horas y persona: First Class, 1800 THB; Business Class, 1500 THB."
+  },
+  "storage": {
+   "title": "Consigna",
+   "hint": "Niveles 2 y 4, desde 150 THB/24 h",
+   "text": "Consigna Bellugg: en la zona de llegadas, nivel 2, junto a la puerta 4, cerca de la policía turística; en la zona de salidas, nivel 4, filas P/Q. Precio por bulto y 24 horas: talla S (35×56×22 cm), 150 THB; M (45×65×28 cm), 180 THB; L (mayor que M), 200 THB. Al dejar el equipaje se entrega un resguardo."
+  }
+ }
+}

@@ -1,0 +1,35 @@
+{
+ "iata": "CAN",
+ "blocks": {
+  "transport": {
+   "title": "Anreise",
+   "hint": "Metro Linie 3 – Airport North",
+   "text": "Terminal 2 liegt an der Station Airport North der nördlichen Verlängerung der Metrolinie 3. Eine direkte Metro zu Terminal 3 gibt es nicht: mit Linie 3 bis Airport North, dann mit dem Shuttle ab Tür 42 von Terminal 2 oder mit dem Intercity-Nahverkehrszug ab dem Verkehrszentrum GTC von Terminal 2. Die Betriebszeiten der Metro Guangzhou können sich ändern."
+  },
+  "taxi": {
+   "title": "Taxi",
+   "hint": "T2 – Türen 50 und 53, T3 – 75",
+   "text": "In Terminal 2 steigt man am Verkehrszentrum GTC ins Taxi: der östliche Taxistand vor Tür 53, der westliche vor Tür 50. In Terminal 3 befindet sich der internationale Taxistand auf Ebene 1 im Ankunftsbereich, vor Tür 75."
+  },
+  "lounges": {
+   "title": "Business-Lounges",
+   "hint": "Premium Lounge, Sky Pearl, L32",
+   "text": "Premium Lounge – Terminal 2, Ebene 4, hinter dem Duty-free-Shop nach der internationalen Kontrolle, rund um die Uhr. Easy Boarding Lounge – Terminal 2, gegenüber der First-Class-Lounge von China Southern (nach der Sicherheitskontrolle 50 m nach links), 04:45–21:30. Lounges China Southern Sky Pearl in Terminal 2: die Inlandslounge auf Ebene 3 nach der Sicherheitskontrolle (05:45–21:00), die internationale auf Ebene 4 hinter dem Duty-free-Bereich (von 04:30 bis zum letzten Flug). In Terminal 3 – L32 Lounge auf Ebene 4 hinter einer eigenen Sicherheitskontrolle für Inlandsflüge (gegenüber Schalter 16 der Insel K), von 05:00 bis zum letzten Abflug."
+  },
+  "storage": {
+   "title": "Gepäckaufbewahrung",
+   "hint": "Überall, teils rund um die Uhr",
+   "text": "Terminal 1: Abflughalle, Ebene 3, an Tür 16 – rund um die Uhr. Terminal 2: hinter dem Check-in-Bereich C der Abflughalle (04:30–23:30), hinter dem Check-in-Bereich P/N (rund um die Uhr) und gegenüber Tür 53 der Ankunftshalle (05:30–23:30). Terminal 3: an der Toilette hinter Insel C im westlichen Teil der Check-in-Halle (rund um die Uhr) und in der internationalen Ankunftshalle auf Ebene 1 (05:30–21:30). Die Öffnungszeiten können sich je nach Lage vor Ort ändern."
+  },
+  "sleep": {
+   "title": "Schlafen",
+   "hint": "Kapseln in T2 und T3, durchgehend",
+   "text": "Kapseln mit Stundentarif – Terminal 2, Ebene 1, internationaler Ankunftsbereich, an Tür 53, rund um die Uhr. Kapseln NAPHUBS – Terminal 3, Ebene 4: im Ruhebereich für übernachtende Passagiere links hinter Tür 61 und in der internationalen Transithalle, ebenfalls rund um die Uhr."
+  },
+  "wifi": {
+   "title": "Wi‑Fi",
+   "hint": "AIRPORT-FREE-WiFi, Login per SMS",
+   "text": "Kostenloses Netz AIRPORT-FREE-WiFi. Auf der Anmeldeseite kann man sich mit Telefonnummer und SMS-Code anmelden (Ausländer wählen die Vorwahl ihres Landes) oder mit einem Foto des Ausweises. In den internationalen Abflug- und Ankunftsbereichen von Terminal 2 stehen Wi‑Fi-Kioske."
+  }
+ }
+}

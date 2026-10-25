@@ -1,0 +1,30 @@
+{
+ "iata": "AMS",
+ "blocks": {
+  "transport": {
+   "title": "Come arrivare",
+   "hint": "Treno NS per Amsterdam CS",
+   "text": "La stazione NS si trova direttamente sotto l’edificio del terminal: si scende con la scala mobile o l’ascensore. Tra Amsterdam CS e l’aeroporto il treno passa 8 volte all’ora, con fermate a Sloterdijk e Lelylaan, e dall’aeroporto parte sempre dal binario 3. Da Amsterdam, Utrecht, Leida, L’Aia, Delft e Rotterdam si raggiunge l’aeroporto giorno e notte, spesso senza cambi. Il biglietto si compra in aeroporto oppure si paga con carta contactless o con il telefono, validando ai validatori gialli in cima alle scale mobili e agli ascensori di Schiphol Plaza."
+  },
+  "taxi": {
+   "title": "Taxi",
+   "hint": "Posteggio presso Schiphol Plaza",
+   "text": "Il posteggio ufficiale dei taxi si trova davanti a Schiphol Plaza, non serve prenotare in anticipo. Le auto Uber e Bolt caricano i passeggeri in una fermata separata, «App pick-up point», indicata dai cartelli nel terminal; lì c’è Wi‑Fi gratuito. I minibus Schiphol Travel Taxi sono per gruppi fino a 8 persone; si può viaggiare dividendo la spesa con altri passeggeri."
+  },
+  "storage": {
+   "title": "Deposito bagagli",
+   "hint": "Livello −1, da 7 € per 24 ore",
+   "text": "Deposito bagagli al livello −1 tra Arrivals 1 e Arrivals 2, giorno e notte, fino a 30 giorni; per 24 ore: bagaglio a mano (fino a 55×35×25 cm) 7 €, bagaglio 9,50 €, fuori misura 12 €, guardaroba 2,50 € a capo. Per lo scontrino smarrito si paga un supplemento di 8 €. Dopo i controlli, nell’area di transito presso i gate, armadietti da 40×40×70 cm a 8,50 €, fino a 7 giorni, giorno e notte."
+  },
+  "sleep": {
+   "title": "Dove dormire",
+   "hint": "YOTELAIR e Mercure dopo i controlli",
+   "text": "Dopo i controlli ci sono due hotel, aperti giorno e notte: Mercure Hotel nella Lounge 3 e YOTELAIR nella Lounge 2, entrambi lungo il percorso verso i gate D1–D57, E, F, G e H. A YOTELAIR si può accedere anche senza visto per i Paesi Bassi."
+  },
+  "kids": {
+   "title": "Con bambini",
+   "hint": "Area giochi con aereo, gratis",
+   "text": "L’area giochi Kids Playground si trova dopo i controlli, al livello 1 nella Lounge 2, lungo il percorso verso i gate D1–D57, E, F, G e H, aperta giorno e notte. I bambini si arrampicano su un vero aereo; accanto c’è un food court, l’ingresso è gratuito."
+  }
+ }
+}

@@ -1,0 +1,25 @@
+{
+ "iata": "KUL",
+ "blocks": {
+  "transport": {
+   "title": "Nasıl gidilir",
+   "hint": "KLIA Ekspres, KL Sentral'e 28 dk",
+   "text": "Merkeze en hızlı yol KLIA Ekspres treni: KL Sentral istasyonundaki KL City Air Terminal'e (KL CAT) duraksız 28 dakikada gider. Üç duraklı transit tren — Bandar Tasik Selatan, Putrajaya/Cyberjaya ve Salak Tinggi — 35 dakika sürer. Trenlerde bagaj rafları, tekerlekli sandalye sabitleme yerleri ve tekerlekli sandalyeye uygun tuvalet var."
+  },
+  "taxi": {
+   "title": "Taksi",
+   "hint": "Kuponlu veya taksimetreli",
+   "text": "Terminal 1'de iki resmî taksi türü var: kuponlu (yöne ve araç sınıfına göre sabit fiyat, ödeme yolculuktan önce) ve taksimetreli. Taksimetreli taksi açılış ücreti: Budget — RM 3,00, Teks1M — RM 4,00, Executive — RM 6,00, artı RM 2,00 hizmet bedeli; 0:00'dan 6:00'ya kadar %50 zam. Airport Taxi kontuarları iç hatlar geliş salonunda, dış hatlar bagaj teslim alanında ve kaldırım kenarında, hepsi ana binanın Kat 3'ünde; gohub.com.my üzerinden de çağrılabilir."
+  },
+  "terminals": {
+   "title": "Terminaller",
+   "hint": "Ücretsiz servis, gece gündüz",
+   "text": "Terminal 1 ile 2 arasında gece gündüz ücretsiz ring servisi çalışır: Terminal 1 — Terminal 2 — uzun süreli otopark (LTCP) — Terminal 1. Duraklar: Terminal 1'de 4 numaralı kapı, Kat 1; Terminal 2'de A10 peronu, Kat 1, Gateway alışveriş merkezinin ulaşım noktası."
+  },
+  "parking": {
+   "title": "Otopark",
+   "hint": "Terminalde ve uzun süreli LTCP",
+   "text": "Terminal 1 otoparkı — 5.700'den fazla yer, ana binaya yürüyerek yaklaşık 3 dakika. B ve C bloklarının Kat 2'sindeki Preferred Parking — 300'den fazla yer, yürüyerek 2 dakika. Uzun süreli LTCP otoparkı — 5.200'den fazla yer, Terminal 1 ve 2'ye gece gündüz ücretsiz servisle. Gece gündüz kamera gözetimi, aileler ve kadınlar için yerler, klimalı bekleme salonu var; yer sitede ayırtılabilir."
+  }
+ }
+}

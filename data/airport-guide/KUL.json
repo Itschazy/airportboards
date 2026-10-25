@@ -1,0 +1,38 @@
+{
+ "iata": "KUL",
+ "checked": "2026-10-25",
+ "blocks": [
+  {
+   "id": "transport",
+   "title": "Как доехать",
+   "hint": "KLIA Ekspres, 28 минут до KL Sentral",
+   "text": "Быстрее всего до центра — поездом KLIA Ekspres: без остановок до KL City Air Terminal (KL CAT) на станции KL Sentral за 28 минут. Транзитный поезд с тремя остановками — Bandar Tasik Selatan, Putrajaya/Cyberjaya и Salak Tinggi — идёт 35 минут. В поездах есть багажные полки, места для крепления кресла-коляски и туалет, доступный для колясок.",
+   "source": "malaysiaairports.com.my",
+   "url": "https://www.malaysiaairports.com.my/en/klia1/air-travel/public-transport?tab=train"
+  },
+  {
+   "id": "taxi",
+   "title": "Такси",
+   "hint": "Купонное или по счётчику",
+   "text": "В терминале 1 два официальных вида такси: купонное (фиксированная цена по направлению и классу машины, оплата до поездки) и по счётчику. Посадка в счётчиковое такси: Budget — RM 3.00, Teks1M — RM 4.00, Executive — RM 6.00, плюс сервисный сбор RM 2.00; с 0:00 до 6:00 надбавка 50%. Стойки Airport Taxi — в зале внутренних прилётов, в зоне выдачи международного багажа и у бордюра, всё на уровне 3 главного здания; заказать можно и на gohub.com.my.",
+   "source": "malaysiaairports.com.my",
+   "url": "https://www.malaysiaairports.com.my/en/klia1/air-travel/public-transport"
+  },
+  {
+   "id": "terminals",
+   "title": "Терминалы",
+   "hint": "Бесплатный шаттл, круглосуточно",
+   "text": "Между терминалами 1 и 2 круглосуточно ходит бесплатный шаттл по кругу: терминал 1 — терминал 2 — долгосрочная парковка (LTCP) — терминал 1. Остановки: в терминале 1 — дверь 4, уровень 1; в терминале 2 — площадка A10, уровень 1, транспортный узел торгового центра Gateway.",
+   "source": "malaysiaairports.com.my",
+   "url": "https://www.malaysiaairports.com.my/en/klia1/air-travel/inter-terminal-transfer"
+  },
+  {
+   "id": "parking",
+   "title": "Парковка",
+   "hint": "У терминала и долгосрочная LTCP",
+   "text": "Парковка терминала 1 — более 5 700 мест, около 3 минут пешком до главного здания. Preferred Parking на уровне 2 блоков B и C — более 300 мест, 2 минуты пешком. Долгосрочная парковка LTCP — более 5 200 мест, с бесплатным круглосуточным шаттлом до терминалов 1 и 2. Видеонаблюдение круглосуточно, есть места для семей и женщин, кондиционированный зал ожидания; место можно забронировать на сайте.",
+   "source": "malaysiaairports.com.my",
+   "url": "https://www.malaysiaairports.com.my/en/klia1/parking"
+  }
+ ]
+}

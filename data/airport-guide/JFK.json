@@ -1,0 +1,38 @@
+{
+ "iata": "JFK",
+ "checked": "2026-10-25",
+ "blocks": [
+  {
+   "id": "transport",
+   "title": "Как доехать",
+   "hint": "AirTrain до Jamaica и Howard Beach, $8.75",
+   "text": "AirTrain бесплатно возит между терминалами, поезда каждые 5–15 минут. До метро Нью-Йорка, электричек LIRR и городских автобусов — на AirTrain до станций Jamaica или Howard Beach, проезд в одну сторону $8.75, дети до 5 лет бесплатно. Оплата — бесконтактной картой, телефоном с Apple Pay или Google Pay либо картой OMNY. Групповой тариф: первый пассажир $8.75, каждый следующий $4.50, до 5 человек.",
+   "source": "jfkairport.com",
+   "url": "https://www.jfkairport.com/transportation/airtrain"
+  },
+  {
+   "id": "taxi",
+   "title": "Такси",
+   "hint": "До Манхэттена $70 фиксировано",
+   "text": "Стоянки такси есть у всех терминалов, очередь регулирует диспетчер, бронировать не нужно. До Манхэттена — фиксированные $70 плюс платные дороги, чаевые и сборы от $2.75 до $8.50 в зависимости от времени и места назначения. Ориентировочно: до Флашинга $60, до Даунтауна Бруклина $90, до аэропорта LaGuardia $60, до аэропорта Newark $160. В машине не больше 4 пассажиров (в минивэне 5).",
+   "source": "jfkairport.com",
+   "url": "https://www.jfkairport.com/transportation/taxi-service"
+  },
+  {
+   "id": "sleep",
+   "title": "Где поспать",
+   "hint": "TWA Hotel у терминала 5",
+   "text": "Единственный отель на территории аэропорта — TWA Hotel рядом с терминалом 5. Из терминала 5 к нему ведут переходы-трубы старого TWA Flight Center, из других терминалов — на AirTrain до терминала 5 и дальше по указателям.",
+   "source": "jfkairport.com",
+   "url": "https://www.jfkairport.com/frequently-asked-questions"
+  },
+  {
+   "id": "wifi",
+   "title": "Wi‑Fi",
+   "hint": "Бесплатный, без лимита",
+   "text": "Бесплатный безлимитный Wi‑Fi: сеть «_Free JFK WiFi». Поддержка круглосуточно: +1 (800) 880-4117.",
+   "source": "jfkairport.com",
+   "url": "https://www.jfkairport.com/frequently-asked-questions"
+  }
+ ]
+}

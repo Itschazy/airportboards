@@ -1,0 +1,20 @@
+{
+ "iata": "MAD",
+ "blocks": {
+  "transport": {
+   "title": "Cómo llegar",
+   "hint": "Metro, línea 8",
+   "text": "La línea 8 de metro Nuevos Ministerios – Aeropuerto T4 funciona de 06:05 a 02:00 todos los días, festivos incluidos. En el aeropuerto hay dos estaciones: Aeropuerto T1-T2-T3, en la terminal 2, nivel 1, y Aeropuerto T4, en la terminal T4, nivel −1. El billete sencillo de la zona A cuesta de 1,50 € a 2 € según el número de estaciones, más un suplemento de aeropuerto de 3 €."
+  },
+  "taxi": {
+   "title": "Taxi",
+   "hint": "Fija: 33 € dentro de la M-30",
+   "text": "Las paradas de taxi están junto a las zonas de llegadas de las terminales T1, T2 y T4, en el nivel 0; el taxi solo debe tomarse en la parada. Tarifa 4: 33 € fijos, día y noche, para trayectos desde o hacia el aeropuerto con origen o destino dentro de la M-30, sin suplementos. Tarifa 3 (mínima para trayectos desde el aeropuerto): precio inicial 22 €, distancia mínima 9 km, 1,40 € por kilómetro, 27,00 € por hora."
+  },
+  "wifi": {
+   "title": "Wi‑Fi",
+   "hint": "Gratis, sin límite de tiempo",
+   "text": "Red Airport Free Wifi Aena: se accede en la página de inicio con una dirección de correo electrónico como invitado o con una cuenta de Aena Club. Para confirmar el correo se dan 15 minutos de internet gratis; tras la confirmación, el acceso no tiene límite de tiempo."
+  }
+ }
+}

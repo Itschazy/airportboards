@@ -1,0 +1,40 @@
+{
+ "iata": "ORD",
+ "blocks": {
+  "transport": {
+   "title": "Come arrivare",
+   "hint": "CTA Blue Line giorno e notte, Metra",
+   "text": "Il treno CTA Blue Line circola giorno e notte; la stazione si trova al livello inferiore del garage: dai terminal 1, 2 e 3 seguire i cartelli «Trains to City» attraverso i tunnel pedonali del piano interrato, dal Terminal 5 prima andare con l’ATS al Terminal 3 o 2. Il biglietto si compra ai distributori presso la stazione, in contanti o con carta. I treni suburbani Metra North Central Service partono dalla stazione O'Hare Transfer, dietro il nodo di trasporto Multi-Modal Facility, raggiungibile con l’ATS da qualsiasi terminal; il biglietto si compra dal capotreno. Dal Multi-Modal Facility (aree di sosta 8 e 9) partono i bus Pace 250 e 330."
+  },
+  "taxi": {
+   "title": "Taxi",
+   "hint": "Circa 50 $ per il centro",
+   "text": "I posteggi dei taxi si trovano al livello inferiore, presso l’uscita dall’area ritiro bagagli di ogni terminal; salire solo lì, non con i conducenti al livello partenze. Il taxi va a tassametro: in media dall’aeroporto al centro di Chicago 50 $. I taxi per la periferia si prenotano in anticipo per telefono presso una compagnia suburbana. Uber e Lyft caricano al livello superiore: nel Terminal 2 nelle zone 2A–2G con cartelli arancioni, nel Terminal 3 nelle zone 3G, 3H, 3J e 3K con cartelli verdi."
+  },
+  "lounges": {
+   "title": "Sale business",
+   "hint": "United, Admirals Club, Sky Club",
+   "text": "Nella maggior parte delle sale si può acquistare un pass giornaliero. United Club: Terminal 1 presso i gate B6, B18, C10 e Terminal 2 presso E7 e F9; United Polaris Lounge (solo prima classe e business internazionali): Terminal 1 presso C18. Admirals Club (American, JAL, Iberia): Terminal 3 presso G8, L2A e H6/K6; presso H6/K6 anche American Flagship Lounge. Nel Terminal 5: Delta Sky Club presso M13, sala Air France presso M17, LOT Business Lounge e Swissport Lounge (anche per Priority Pass) presso M18, Wingtips Lounge presso M19."
+  },
+  "sleep": {
+   "title": "Dove dormire",
+   "hint": "Hilton di fronte ai terminal 1–3",
+   "text": "L’hotel Hilton Chicago O'Hare Airport si trova proprio di fronte ai terminal 1, 2 e 3: dai terminal nazionali a piedi attraverso i passaggi sotterranei, dal Terminal 5 con l’ATS. Dall’hotel un passaggio coperto porta alla stazione CTA Blue Line. Gli altri hotel vicini all’aeroporto portano gli ospiti con navette gratuite; la navetta si può chiamare dai chioschi Virtual Concierge al livello arrivi, presso il ritiro bagagli."
+  },
+  "kids": {
+   "title": "Con bambini",
+   "hint": "Family Lounge nel Terminal 2",
+   "text": "L’area per bambini Family Lounge si trova nel Terminal 2 subito dopo i controlli, nella sala principale presso il gate F1: spazio giochi, ricarica dei dispositivi, parcheggio per passeggini. Le sale per le mamme ci sono in tutti i terminal, le capsule per l’allattamento Mamava nei terminal 1, 2 e 3. Fasciatoi nella maggior parte dei bagni. Pannolini, latte artificiale e biberon sono in vendita nei distributori Oops Diapers 2Go."
+  },
+  "parking": {
+   "title": "Parcheggio",
+   "hint": "Da 16 $ per 24 ore",
+   "text": "Parcheggio a ore: livello 1 del garage principale, 3 $ la prima ora; giornaliero: livelli 2–6 del garage e aree B e C, 43 $ per 24 ore; presso il Terminal 5 l’area D, 43 $ per 24 ore. Aree economiche: F 30 $, G e H 16 $ per 24 ore; nella H pagamento solo con carta. Le tariffe includono le tasse, si paga all’uscita. Oltre 30 giorni senza accordo con l’ufficio parcheggi, (773) 686-7530, l’auto può essere rimossa."
+  },
+  "wifi": {
+   "title": "Wi‑Fi",
+   "hint": "Gratuito, illimitato",
+   "text": "Wi‑Fi gratuito e illimitato in tutti i terminal, prima e dopo i controlli. Rete Boingo Hotspot o _Free_ORD _Wi-Fi; dopo la connessione aprire nel browser un indirizzo qualsiasi senza https e scegliere «Watch Ad to Connect». Stazioni di ricarica gratuite da 4–8 posti ci sono in tutti i terminal."
+  }
+ }
+}

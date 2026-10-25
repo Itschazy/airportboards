@@ -1,0 +1,70 @@
+{
+ "iata": "MIA",
+ "checked": "2026-10-25",
+ "blocks": [
+  {
+   "id": "transport",
+   "title": "Как доехать",
+   "hint": "Metrorail, Metrobus, Tri-Rail, MIA Mover",
+   "text": "Остановки Metrorail, Metrobus и Tri-Rail — в Miami Intermodal Center (станция Miami International Airport), туда из аэропорта идёт бесплатный поезд MIA Mover со станции на уровне 3 между гаражами Dolphin и Flamingo. Для проезда нужна карта EASY Card, автоматы — в Miami Intermodal Center. Поездка на Metrorail стоит $2.25 в одну сторону. Автобус Miami Beach Bus за $2.25 ходит каждые 30 минут с 6:00 до 23:40 ежедневно между станцией Metrorail аэропорта и Майами-Бич (от 41-й улицы до South Pointe Drive).",
+   "source": "miami-airport.com",
+   "url": "https://www.miami-airport.com/public-transportation.asp"
+  },
+  {
+   "id": "taxi",
+   "title": "Такси",
+   "hint": "Минимум $15, уровень прилёта",
+   "text": "Такси — на уровне прилёта (наземном), у выходов из зон выдачи багажа. По счётчику: $2.95 за первую 1/6 мили, $0.85 за каждую следующую 1/6 мили до одной мили, затем $0.55 за каждую 1/6 мили; ожидание $0.40 в минуту. Сбор аэропорта $2.00, минимальная поездка из MIA — $15. За внедорожник или минивэн надбавка 30% к счётчику. Машины по приложениям забирают на уровне 1 (прилёт) и уровне 2 (вылет).",
+   "source": "miami-airport.com",
+   "url": "https://www.miami-airport.com/taxicabs-shuttles.asp"
+  },
+  {
+   "id": "lounges",
+   "title": "Бизнес-залы",
+   "hint": "Flagship, Admirals Club, Centurion",
+   "text": "В Северном терминале D после досмотра: American Airlines Flagship Lounge напротив выхода D-30 (ежедневно 5:00–23:00), Admirals Club над выходом D15 на третьем этаже (5:00–23:00) и напротив выхода D-30 (6:00–20:30). У выхода D-12 Северного терминала — American Express Centurion Lounge (5:00–22:00). В залы American пускают по статусу и билету бизнес- или первого класса American или oneworld; разовый пропуск продаётся, если есть места.",
+   "source": "miami-airport.com",
+   "url": "https://www.miami-airport.com/clubs-and-lounges.asp"
+  },
+  {
+   "id": "storage",
+   "title": "Камера хранения",
+   "hint": "Терминал E, 5:00–21:00",
+   "text": "Камера хранения Communitel Baggage Storage — на уровне 2 Центрального терминала E, ежедневно с 5:00 до 21:00, оплата посуточная. Там же нотариальные услуги и багажные аксессуары.",
+   "source": "miami-airport.com",
+   "url": "https://www.miami-airport.com/services-and-amenities.asp"
+  },
+  {
+   "id": "sleep",
+   "title": "Где поспать",
+   "hint": "Отель в терминале E, Wait n' rest",
+   "text": "Miami International Airport Hotel на уровне 2 Центрального терминала E: 260 номеров со звукоизоляцией и ресторан Viena. Комнаты для сна Wait n' rest работают круглосуточно: номера на 1–4 гостей с душем, полотенцами и закусками.",
+   "source": "miami-airport.com",
+   "url": "https://www.miami-airport.com/services-and-amenities.asp"
+  },
+  {
+   "id": "kids",
+   "title": "С ребёнком",
+   "hint": "Детская зона Plane Fun",
+   "text": "Интерактивная детская зона Plane Fun — в зале E у выхода E5, пройти туда можно и из зала D. Комнаты для кормления MIAmamas есть в каждом зале после досмотра.",
+   "source": "miami-airport.com",
+   "url": "https://www.miami-airport.com/services-and-amenities.asp"
+  },
+  {
+   "id": "parking",
+   "title": "Парковка",
+   "hint": "$2 за 20 минут, до $25 в сутки",
+   "text": "Гаражи Dolphin и Flamingo: $2.00 за каждые 20 минут, после 4 часов действует максимум $25.00 в сутки. Место можно оплатить заранее, до года вперёд: въезд и выезд по QR-коду из письма, сбор за бронь не возвращается, изменить или отменить бронь можно не позже чем за 24 часа. Оплата наличными, картами Visa, MasterCard, American Express, Discover, Apple Pay и Samsung Pay.",
+   "source": "miami-airport.com",
+   "url": "https://www.miami-airport.com/airport-parking.asp"
+  },
+  {
+   "id": "wifi",
+   "title": "Wi‑Fi",
+   "hint": "Бесплатно с рекламой",
+   "text": "Интернет в сети аэропорта бесплатный, с рекламой. Непрерывный доступ: стандартный $4.95, премиальный $7.95.",
+   "source": "miami-airport.com",
+   "url": "https://www.miami-airport.com/services-and-amenities.asp"
+  }
+ ]
+}

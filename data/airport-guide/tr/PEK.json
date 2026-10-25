@@ -1,0 +1,30 @@
+{
+ "iata": "PEK",
+ "blocks": {
+  "transport": {
+   "title": "Nasıl gidilir",
+   "hint": "Airport Express, 25 yuan",
+   "text": "Airport Express treni 10 dakika arayla çalışır, T2 ve T3 terminallerinde ve Sanyuanqiao ile Dongzhimen istasyonlarında durur. Tek yön bileti 25 yuan. T2'deki istasyon terminalin Kat B2'sinde, T3'teki istasyon 3 numaralı garajın Kat 2'sinde. Sanyuanqiao'da 10 ve 12 numaralı metro hatlarına, Dongzhimen'de 2 ve 13 numaralı hatlara aktarma yapılır."
+  },
+  "taxi": {
+   "title": "Taksi",
+   "hint": "13 yuan'dan, T2 ve T3",
+   "text": "T2'de taksi durağı Kat 1'de 5–9 numaralı kapıların dışında, T3'te terminaldeki tabelaları izleyerek. İlk 3 km dahil açılış ücreti 13 yuan, sonrası km başına 2,3 yuan, artı yolculuk başına 1 yuan yakıt ücreti. Yolculuğun 15 km'yi aşan kısmında kilometre ücretine dönüş yolu farkı olarak %50 eklenir, 23:00'ten 5:00'e kadar kilometre %20 daha pahalı. Ücretli yolları ve köprüleri yolcu öder."
+  },
+  "storage": {
+   "title": "Emanet",
+   "hint": "T2 ve T3, raflar ve dolaplar",
+   "text": "T2'de emanetler Kat 1'deki geliş salonunun 9 numaralı kapısının yanında ve Kat 2'deki gidiş salonunun 8 ve 10 numaralı kapılarının yanında. T3'te T3-C binasının Kat 2'sindeki geliş salonunun genel alanının doğu ve batı kısımlarında. Büyük bagaj ve spor ekipmanı kabul edilir, küçük eşyalar için ayrı dolaplar var. Telefon: 17801096112."
+  },
+  "kids": {
+   "title": "Çocukla",
+   "hint": "C09 ve E21 yanında oyun alanları",
+   "text": "T3 terminalinde iki çocuk oyun alanı var. C09 biniş kapısının yanındaki otomobil temalı: çizgi film arabaları ve kaplumbağalar, yarış pisti desenli halı. E21 kapısının yanında pandalı oyun alanı."
+  },
+  "parking": {
+   "title": "Otopark",
+   "hint": "Garaj 2 ve 3, 24 saati 100 yuan",
+   "text": "2 numaralı garaj T2'nin önünde, yaklaşık 4.300 yer: saatlik park F2, F1 ve B1 katlarında, uzun süreli park B2, B3 ve B4'te. 3 numaralı garaj T3'ün güneyinde, yaklaşık 4.300 yer, Kat 2'sinde Airport Express istasyonu var; B ve C saatlik alanları B1'de, D ve E uzun süreli alanları B1'de ve H alanı B2'de. 2 numaralı garajda 19 koltuğa kadar araç için 10 dakikası 3 yuan, uzun süreli park (kesintisiz 5,5 saatten uzun, yalnızca B2–B4 alanında) 24 saati 100 yuan; 10 dakikadan kısa süre ücretsiz."
+  }
+ }
+}

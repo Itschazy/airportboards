@@ -1,0 +1,40 @@
+{
+ "iata": "SIN",
+ "blocks": {
+  "transport": {
+   "title": "Comment s'y rendre",
+   "hint": "MRT et bus 24, 27, 36, 858",
+   "text": "Vers le centre — en train depuis la station Changi Airport MRT (CG2) jusqu'à Tanah Merah (EW4) avec correspondance sur la ligne East West en direction de Tuas Link (EW33), ou jusqu'à Expo (CG1/DT35) avec correspondance sur la ligne Downtown. Premier train vers Tanah Merah — à 5:31 du lundi au samedi, à 5:59 les dimanches et jours fériés ; dernier avec correspondance vers Tuas Link — à 23:18 tous les jours. Les bus 24, 27, 34, 36, 53, 110 et 858 partent des quais de bus en sous-sol des terminaux 1, 2 et 3. Paiement par cartes sans contact Mastercard/Visa/NETS, portefeuilles mobiles, cartes EZ-Link ; dans le bus, en espèces sans rendu de monnaie."
+  },
+  "taxi": {
+   "title": "Taxi",
+   "hint": "25–45 S$ vers le centre, compteur",
+   "text": "Les stations de taxis sont dans les zones d'arrivée des terminaux 1–4 ; le trajet jusqu'au centre prend environ 30 minutes et coûte 25–45 S$ au compteur. Pour une course depuis l'aéroport, supplément de 8 S$ de 17:00 à 23:59 et de 6 S$ le reste du temps ; de 0:00 à 5:59, une majoration de nuit de 50% s'applique au total du compteur. Réservation via Grab, Gojek, Zig, Tada Mobility, Ryde ou Geolah — prise en charge aux points Arrival and Ride-Hailing pick-up. Comptoir Ground Transport Concierge ouvert jour et nuit : transfert vers n'importe quel point de Singapour à 70 S$ en voiture 4 places et 75 S$ en voiture 6 places."
+  },
+  "terminals": {
+   "title": "Terminaux",
+   "hint": "Skytrain T1–T3, bus vers T4",
+   "text": "Les terminaux 1, 2 et 3 sont reliés par le Skytrain gratuit — en zone publique comme en zone de transit ; en zone de transit, on peut aussi se déplacer entre ces terminaux en empruntant les trottoirs roulants. Vers le terminal 4 — navette en bus gratuite toutes les 5–9 minutes de 6:00 à 0:00 depuis T1/Jewel et T2/MRT : environ 10 minutes en zone publique et 10–18 minutes en zone de transit ; en zone de transit, uniquement si les bagages sont enregistrés jusqu'à la destination finale. Jewel se trouve en zone publique entre T2 et T3 : depuis T1, accès direct depuis le hall des arrivées du niveau 1, depuis T2 et T3 — 5–10 minutes à pied par une passerelle ; les passagers en transit doivent passer le contrôle des passeports."
+  },
+  "lounges": {
+   "title": "Salons",
+   "hint": "Salons payants en T1, T2, T4",
+   "text": "Salons payants : Plaza Premium Lounge — terminal 1, zone de transit, niveau 3, jour et nuit ; JetQuay Lounge — terminal 2, zone de transit, niveau 2, jour et nuit ; Blossom – SATS & Plaza Premium Lounge — terminal 4, zone de transit, niveau 2M, jour et nuit. Également Ambassador Transit Lounge (2 salons), Changi Lounge dans Jewel au niveau 1 et Hub & Spoke en zone publique du terminal 2 au niveau 1."
+  },
+  "storage": {
+   "title": "Consigne à bagages",
+   "hint": "Tous terminaux, dès 6 S$/24 h",
+   "text": "Les consignes Smarte Carte sont ouvertes jour et nuit : en zone publique — Jewel (niveau 1), T2 (hall des arrivées North), T3 (niveau 1, près de Train to City), T4 (niveau 1) ; en zone de transit — dans les quatre terminaux. Prix pour 24 heures, GST comprise : objets isolés 6 S$, petits bagages jusqu'à 10 kg 11 S$, gros bagages et hors gabarit de plus de 10 kg 16 S$, très gros bagages 19 S$. Tous les objets déposés sont contrôlés."
+  },
+  "sleep": {
+   "title": "Où dormir",
+   "hint": "Espaces de repos gratuits, 24h/24",
+   "text": "Les espaces de repos gratuits Snooze Lounge en zone de transit sont ouverts jour et nuit : T1 — niveau 3, Departure Transit Hall East ; T2 — Sanctuary Lounge, Oasis Lounge et Pavilion Lounge au niveau 2 ; T3 — deux salles au niveau 2 (South et North) ; T4 — niveau 2M."
+  },
+  "kids": {
+   "title": "Avec un enfant",
+   "hint": "Poussettes gratuites",
+   "text": "Des poussettes sont prêtées gratuitement, dans l'ordre d'arrivée, aux comptoirs d'information et aux comptoirs de conciergerie de Jewel. Les passagers avec de jeunes enfants peuvent passer le contrôle des passeports par les Special Assistance Lanes, plus larges — jusqu'à quatre personnes ensemble."
+  }
+ }
+}

@@ -1,0 +1,35 @@
+{
+ "iata": "DEN",
+ "blocks": {
+  "transport": {
+   "title": "アクセス",
+   "hint": "A Line列車、RTDバス",
+   "text": "DEN Transit CenterはJeppesenターミナルの南端にある：ガラスのドアから外へ出て、エスカレーターかエレベーターで地上階へ下りる。ここからDenver Union Station行きのA Line列車と、RTDのAB、AT、104L、145X、169Lのバスが出ている。運行時間はおよそ3:30から真夜中までで、空港発の最終バスは1:28。RTD全路線で使える1日乗車券は$10。"
+  },
+  "taxi": {
+   "title": "タクシー",
+   "hint": "ダウンタウンまで定額$72.04",
+   "text": "片道の定額運賃（空港使用料込み）：デンバーのダウンタウン（ゾーンA）$72.04、Denver Tech Center（ゾーンB）$80.04、ボルダー（ゾーンC）$115.04、Tower Road（ゾーンD）$37.04。その他の行き先はメーター料金に$6.04の料金が加算される。タクシー乗り場はJeppesenターミナルの5階、Island 1で、505、507、511番ドア（東側）と506、510、512番ドア（西側）の前。"
+  },
+  "lounges": {
+   "title": "ラウンジ",
+   "hint": "各コンコースのラウンジ",
+   "text": "コンコースのメザニンにあるラウンジ：American Airlines Admirals ClubはC-32番ゲート付近、American Express Centurion LoungeはC-46付近、Capital One Lounge（Plaza Premium）はA-34付近、United ClubはA-25、B-44、B-32付近。United Club FlyはB-60番ゲート付近。Delta Sky Clubは保安検査後、コンコースAの北端、Jeppesenターミナルからの連絡橋にある。リクライニングチェアを備えた無料の休憩エリアRest and RechargeはコンコースAのメザニンにある。"
+  },
+  "sleep": {
+   "title": "仮眠・宿泊",
+   "hint": "ターミナル隣接のWestin",
+   "text": "客室数519のホテルWestin Denver International Airportはメインターミナルから数歩の距離、DEN Transit Centerの真上にあり、エスカレーターで上がる。"
+  },
+  "kids": {
+   "title": "お子様連れ",
+   "hint": "A25とC54にプレイエリア",
+   "text": "子ども用のプレイエリアは2か所あり、A25番ゲートとC54番ゲートの付近で24時間利用できる。おむつ交換台と洗面台を備えた無料の授乳室は24時間利用でき、保安検査後の各コンコースと、Jeppesenターミナルの2か所（中央部の5階の到着エリア付近と、北西部の国際線到着エリア付近）にある。"
+  },
+  "wifi": {
+   "title": "Wi‑Fi",
+   "hint": "無料、空港全域",
+   "text": "空港全域で無料Wi‑Fiが利用できる：ネットワークDEN Airport Free WiFi、DEN Airport Free WiFi 2.4G、またはDEN FREE WIFI 6Eを選び、「Connect」を押す。コンセントはJeppesenターミナル全体と3つのコンコースにあり、座席とテーブルを備えた充電ステーションもある。"
+  }
+ }
+}

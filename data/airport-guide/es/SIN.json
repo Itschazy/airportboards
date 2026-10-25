@@ -1,0 +1,40 @@
+{
+ "iata": "SIN",
+ "blocks": {
+  "transport": {
+   "title": "Cómo llegar",
+   "hint": "MRT y autobuses 24, 27, 36, 858",
+   "text": "Al centro, en tren desde la estación Changi Airport MRT (CG2) hasta Tanah Merah (EW4), con transbordo a la línea East West en dirección a Tuas Link (EW33), o hasta Expo (CG1/DT35), con transbordo a la línea Downtown. El primer tren a Tanah Merah sale a las 5:31 de lunes a sábado y a las 5:59 los domingos y festivos; el último con transbordo a Tuas Link, a las 23:18 todos los días. Los autobuses 24, 27, 34, 36, 53, 110 y 858 salen de las dársenas subterráneas de autobuses de las terminales 1, 2 y 3. Pago con tarjetas sin contacto Mastercard/Visa/NETS, monederos móviles y tarjetas EZ-Link; en el autobús se puede pagar en efectivo, sin cambio."
+  },
+  "taxi": {
+   "title": "Taxi",
+   "hint": "S$25–45 al centro, con taxímetro",
+   "text": "Las paradas de taxi están en las zonas de llegadas de las terminales 1–4; el trayecto al centro dura unos 30 minutos y cuesta S$25–45 con taxímetro. Por un viaje desde el aeropuerto hay un recargo de S$8 de 17:00 a 23:59 y de S$6 el resto del tiempo; de 0:00 a 5:59 se aplica un recargo nocturno del 50% sobre el total del taxímetro. Por Grab, Gojek, Zig, Tada Mobility, Ryde o Geolah, la recogida es en los puntos Arrival and Ride-Hailing pick-up. Mostrador Ground Transport Concierge, abierto día y noche: traslado a cualquier punto de Singapur por S$70 en un coche de 4 plazas y S$75 en uno de 6 plazas."
+  },
+  "terminals": {
+   "title": "Terminales",
+   "hint": "Skytrain T1–T3, autobús a la T4",
+   "text": "Las terminales 1, 2 y 3 están unidas por el Skytrain gratuito, tanto en la zona pública como en la de tránsito; en la zona de tránsito también se puede ir de una terminal a otra utilizando pasillos rodantes. A la terminal 4, autobús lanzadera gratuito cada 5–9 minutos de 6:00 a 0:00 desde T1/Jewel y T2/MRT: unos 10 minutos en la zona pública y 10–18 minutos en la de tránsito; en la zona de tránsito, solo si el equipaje está facturado hasta el destino final. Jewel está en la zona pública entre la T2 y la T3: desde la T1 se entra directamente desde la sala de llegadas del nivel 1; desde la T2 y la T3, 5–10 minutos a pie por un pasaje; los pasajeros en tránsito tienen que pasar el control de pasaportes."
+  },
+  "lounges": {
+   "title": "Salas VIP",
+   "hint": "Salas de pago en T1, T2 y T4",
+   "text": "Salas de pago: Plaza Premium Lounge, terminal 1, zona de tránsito, nivel 3, día y noche; JetQuay Lounge, terminal 2, zona de tránsito, nivel 2, día y noche; Blossom – SATS & Plaza Premium Lounge, terminal 4, zona de tránsito, nivel 2M, día y noche. Además, Ambassador Transit Lounge (2 salas), Changi Lounge en Jewel, nivel 1, y Hub & Spoke en la zona pública de la terminal 2, nivel 1."
+  },
+  "storage": {
+   "title": "Consigna",
+   "hint": "Todas las T, desde S$6/24 h",
+   "text": "Las consignas de Smarte Carte funcionan día y noche: en la zona pública, Jewel (nivel 1), T2 (sala de llegadas North), T3 (nivel 1, junto a Train to City) y T4 (nivel 1); en la zona de tránsito, en las cuatro terminales. Precio por 24 horas con GST: objetos sueltos, S$6; bultos pequeños de hasta 10 kg, S$11; grandes y especiales de más de 10 kg, S$16; muy grandes, S$19. Todos los objetos depositados se inspeccionan."
+  },
+  "sleep": {
+   "title": "Dónde dormir",
+   "hint": "Zonas de descanso gratis, 24 h",
+   "text": "Las zonas de descanso gratuitas Snooze Lounge de la zona de tránsito funcionan día y noche: T1, nivel 3, Departure Transit Hall East; T2, Sanctuary Lounge, Oasis Lounge y Pavilion Lounge, en el nivel 2; T3, dos salas en el nivel 2 (South y North); T4, nivel 2M."
+  },
+  "kids": {
+   "title": "Con niños",
+   "hint": "Cochecitos gratis",
+   "text": "Los cochecitos infantiles se prestan gratis, por orden de llegada, en los mostradores de información y en los mostradores de conserjería de Jewel. Los pasajeros con niños pequeños pueden pasar el control de pasaportes por los carriles más anchos Special Assistance Lanes, hasta cuatro personas juntas."
+  }
+ }
+}

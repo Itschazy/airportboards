@@ -1,0 +1,25 @@
+{
+ "iata": "JFK",
+ "blocks": {
+  "transport": {
+   "title": "交通方式",
+   "hint": "AirTrain，$8.75",
+   "text": "AirTrain在各航站楼之间免费运行，每5–15分钟一班。前往纽约地铁、LIRR通勤铁路和市区巴士，需乘AirTrain到Jamaica站或Howard Beach站，单程$8.75，5岁以下儿童免费。支付方式：非接触式银行卡、支持Apple Pay或Google Pay的手机或OMNY卡。团体票价：第一位乘客$8.75，之后每位$4.50，最多5人。"
+  },
+  "taxi": {
+   "title": "出租车",
+   "hint": "至曼哈顿固定价$70",
+   "text": "所有航站楼均设出租车候车点，由调度员管理排队，无需预约。至曼哈顿固定价$70，另加过路费、小费以及视时间和目的地而定的$2.75至$8.50附加费。参考价格：至法拉盛$60，至布鲁克林市中心$90，至LaGuardia机场$60，至Newark机场$160。每车乘客不超过4人（小型厢式车5人）。"
+  },
+  "sleep": {
+   "title": "休息住宿",
+   "hint": "5号航站楼旁的TWA Hotel",
+   "text": "机场内唯一的酒店是5号航站楼旁的TWA Hotel。从5号航站楼经旧TWA Flight Center的管状通道前往，从其他航站楼乘AirTrain到5号航站楼后按指示牌前往。"
+  },
+  "wifi": {
+   "title": "Wi‑Fi",
+   "hint": "免费，不限量",
+   "text": "免费不限量Wi‑Fi：网络“_Free JFK WiFi”。全天候技术支持：+1 (800) 880-4117。"
+  }
+ }
+}

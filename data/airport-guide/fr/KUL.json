@@ -1,0 +1,25 @@
+{
+ "iata": "KUL",
+ "blocks": {
+  "transport": {
+   "title": "Comment s'y rendre",
+   "hint": "KLIA Ekspres, 28 min à KL Sentral",
+   "text": "Le plus rapide pour le centre est le train KLIA Ekspres : sans arrêt jusqu'au KL City Air Terminal (KL CAT) à la gare KL Sentral en 28 minutes. Le train de transit avec trois arrêts — Bandar Tasik Selatan, Putrajaya/Cyberjaya et Salak Tinggi — met 35 minutes. Les trains disposent de porte-bagages, d'emplacements de fixation pour fauteuil roulant et de toilettes accessibles en fauteuil."
+  },
+  "taxi": {
+   "title": "Taxi",
+   "hint": "À coupon ou au compteur",
+   "text": "Au terminal 1, il existe deux types de taxis officiels : à coupon (prix fixe selon la destination et la catégorie de voiture, paiement avant le trajet) et au compteur. Prise en charge du taxi au compteur : Budget — RM 3,00, Teks1M — RM 4,00, Executive — RM 6,00, plus frais de service de RM 2,00 ; de 0:00 à 6:00, majoration de 50%. Les comptoirs Airport Taxi se trouvent dans le hall des arrivées intérieures, dans la zone de livraison des bagages internationaux et le long du trottoir, le tout au niveau 3 du bâtiment principal ; réservation possible aussi sur gohub.com.my."
+  },
+  "terminals": {
+   "title": "Terminaux",
+   "hint": "Navette gratuite, jour et nuit",
+   "text": "Entre les terminaux 1 et 2, une navette gratuite circule en boucle jour et nuit : terminal 1 — terminal 2 — parking longue durée (LTCP) — terminal 1. Arrêts : au terminal 1 — sortie 4, niveau 1 ; au terminal 2 — quai A10, niveau 1, pôle de transport du centre commercial Gateway."
+  },
+  "parking": {
+   "title": "Parking",
+   "hint": "Au terminal et longue durée LTCP",
+   "text": "Parking du terminal 1 — plus de 5 700 places, environ 3 minutes à pied du bâtiment principal. Preferred Parking au niveau 2 des blocs B et C — plus de 300 places, 2 minutes à pied. Parking longue durée LTCP — plus de 5 200 places, avec navette gratuite jour et nuit vers les terminaux 1 et 2. Vidéosurveillance jour et nuit, places pour les familles et les femmes, salle d'attente climatisée ; réservation possible sur le site."
+  }
+ }
+}

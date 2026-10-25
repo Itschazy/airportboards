@@ -1,0 +1,25 @@
+{
+ "iata": "BKK",
+ "blocks": {
+  "taxi": {
+   "title": "Taxi",
+   "hint": "Livello 1, porte 4–7, +50 baht",
+   "text": "Il banco informazioni taxi e i distributori di tagliandi si trovano nel terminal passeggeri al livello 1, tra le porte 4 e 7. Alla tariffa si aggiunge un supplemento di 50 baht a favore del conducente, stabilito dal Ministero dei Trasporti; i pedaggi sono a carico del passeggero. Ci sono corse a breve distanza, nei dintorni dell’aeroporto, non oltre 20 km; per le distanze normali, secondo le regole del Dipartimento dei trasporti terrestri, il prezzo si può concordare con il conducente."
+  },
+  "terminals": {
+   "title": "Terminal",
+   "hint": "Terminal principale e SAT-1",
+   "text": "Oltre al terminal principale (MTB) è in funzione il satellite SAT-1, con 28 pontili d’imbarco, 8 dei quali accolgono aerei di classe F come A380 e B747-8. SAT-1 è collegato al terminal principale da un tunnel lungo circa un chilometro, percorso da treni senza conducente APM; il viaggio, attesa compresa, dura circa tre minuti. In SAT-1 il livello 4 ospita sale d’attesa e lounge delle compagnie aeree, il livello 3 le partenze, il livello 2 arrivi e transiti; la stazione APM è al livello interrato B2."
+  },
+  "lounges": {
+   "title": "Sale business",
+   "hint": "Miracle, da 1.500 THB per 2 ore",
+   "text": "Le sale Miracle Lounge si trovano nel terminal principale, nelle aree partenze ai livelli 2–4 presso i concourse A, C, D, F e G, e nel satellite SAT-1 al livello 4. In sala: snack, bevande calde e fredde, Wi‑Fi gratuito, giornali e riviste. Prezzo indicativo per 2 ore a persona: First Class 1.800 THB, Business Class 1.500 THB."
+  },
+  "storage": {
+   "title": "Deposito bagagli",
+   "hint": "Livelli 2 e 4, da 150 THB/24 h",
+   "text": "Deposito bagagli Bellugg: nell’area arrivi al livello 2, presso la porta 4, accanto alla polizia turistica; nell’area partenze al livello 4, file P/Q. Prezzo per collo per 24 ore: taglia S (35×56×22 cm) 150 THB, M (45×65×28 cm) 180 THB, L (più grande di M) 200 THB. Alla consegna viene rilasciata una ricevuta."
+  }
+ }
+}

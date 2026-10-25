@@ -1,0 +1,30 @@
+{
+ "iata": "AMS",
+ "blocks": {
+  "transport": {
+   "title": "Cómo llegar",
+   "hint": "Tren NS a Amsterdam CS",
+   "text": "La estación de NS está justo debajo del edificio de la terminal; se baja por escalera mecánica o en ascensor. Entre Amsterdam CS y el aeropuerto el tren pasa 8 veces por hora, con paradas en Sloterdijk y Lelylaan, y en el aeropuerto siempre sale de la vía 3. Desde Ámsterdam, Utrecht, Leiden, La Haya, Delft y Róterdam se puede llegar al aeropuerto día y noche, a menudo sin transbordos. El billete se compra en el aeropuerto, o se paga con tarjeta sin contacto o con el móvil, validando en las validadoras amarillas situadas en lo alto de las escaleras mecánicas y los ascensores de Schiphol Plaza."
+  },
+  "taxi": {
+   "title": "Taxi",
+   "hint": "Parada junto a Schiphol Plaza",
+   "text": "La parada oficial de taxis está frente a Schiphol Plaza; no hace falta reservar con antelación. Los coches de Uber y Bolt recogen en una parada aparte, «App pick-up point», a la que llevan las señales de la terminal; allí hay Wi‑Fi gratuito. Los monovolúmenes Schiphol Travel Taxi son para grupos de hasta 8 personas; se puede compartir el viaje con otros pasajeros."
+  },
+  "storage": {
+   "title": "Consigna",
+   "hint": "Nivel −1, desde 7 € por 24 h",
+   "text": "La consigna está en el nivel −1, entre Arrivals 1 y Arrivals 2; abre día y noche y guarda hasta 30 días. Por 24 horas: equipaje de mano (hasta 55×35×25 cm) 7 €, equipaje 9,50 €, bultos de gran tamaño 12 €, guardarropa 2,50 € por prenda. Por el resguardo perdido se cobra una tasa de 8 €. Tras el control, en la zona de tránsito junto a las puertas de embarque, hay taquillas de 40×40×70 cm por 8,50 €, hasta 7 días, día y noche."
+  },
+  "sleep": {
+   "title": "Dónde dormir",
+   "hint": "YOTELAIR y Mercure tras el control",
+   "text": "Tras el control funcionan dos hoteles, día y noche: Mercure Hotel en Lounge 3 y YOTELAIR en Lounge 2, ambos de camino a las puertas D1–D57, E, F, G y H. A YOTELAIR se puede acceder incluso sin visado para los Países Bajos."
+  },
+  "kids": {
+   "title": "Con niños",
+   "hint": "Parque con avión, gratis",
+   "text": "El parque infantil Kids Playground está tras el control, en el nivel 1 de Lounge 2, de camino a las puertas D1–D57, E, F, G y H, y abre día y noche. Los niños trepan por un avión de verdad; al lado hay una zona de restauración y la entrada es gratuita."
+  }
+ }
+}

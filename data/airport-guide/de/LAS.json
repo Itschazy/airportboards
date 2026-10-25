@@ -1,0 +1,25 @@
+{
+ "iata": "LAS",
+ "blocks": {
+  "transport": {
+   "title": "Anreise",
+   "hint": "RTC-Busse 108 und Red Line",
+   "text": "Die RTC-Stadtbusse halten an Terminal 1 auf der Ebene Level Zero: von der Gepäckausgabe mit Aufzug oder Rolltreppe hinunter, das Gebäude verlassen, den Fußgängerüberweg überqueren und rechts zur überdachten Haltestelle gehen. Hier halten die Linie 108 – Paradise und die Red Line (früher Linie 109 – Maryland Parkway). Von Terminal 3 erreicht man die Haltestelle mit dem kostenlosen Terminal-Shuttle ab der Gepäckausgabe."
+  },
+  "taxi": {
+   "title": "Taxi",
+   "hint": "Gepäckausgabe, Festpreis zum Strip",
+   "text": "In Terminal 1 warten Taxis am Ostende der Gepäckausgabe hinter den Ausgängen 1–4; in Terminal 3 an der Gepäckausgabe an Tür 52. Die Tarife legt die Nevada Taxicab Authority fest, alle Unternehmen akzeptieren Bankkarten. Vom Flughafen zu den Zonen am Strip gilt ein Festpreis nach Zonen."
+  },
+  "terminals": {
+   "title": "Terminals",
+   "hint": "Terminal 1 und Terminal 3",
+   "text": "Terminal 1 bedient die Gates A, B, C und D, daneben ein Parkhaus mit 6.000 Plätzen; der Satellit D ist mit Terminal 1 durch einen automatischen Zug verbunden. Terminal 3 – alle internationalen Fluggesellschaften und ein Teil der Inlandsairlines, mit eigenem Check-in, eigener Gepäckausgabe und Grenzkontrolle; auch von dort fährt ein Zug zu den D-Gates. Die Haltestelle des Terminal-Shuttles in Terminal 3 liegt auf Level Zero an Tür 55."
+  },
+  "parking": {
+   "title": "Parken",
+   "hint": "Über 17.000 Plätze, ab 14 $/24 Std.",
+   "text": "Mehr als 17.000 Plätze an beiden Terminals und auf einem entfernten Gelände, rund um die Uhr. Kurzzeit: 4 $ für die erste Stunde, 8 $ bis 2 Stunden, danach 5 $ pro Stunde, maximal 38 $ pro 24 Stunden. Langzeit: 12 $ für 2 Stunden, danach 4 $ pro Stunde, maximal 20 $ pro 24 Stunden; bei vorheriger Reservierung eines Parkplatzes an Terminal 3 von Samstag bis Mittwoch 16 $. Economy und das entfernte Gelände (zu Letzterem fährt ein kostenloser Shuttle): 6 $ für 2 Stunden, danach 2 $ pro Stunde, maximal 14 $ pro 24 Stunden; Valet 34 $ pro 24 Stunden. Der Warteparkplatz (Cell Phone Lot) ist kostenlos."
+  }
+ }
+}

@@ -1,0 +1,30 @@
+{
+ "iata": "AMS",
+ "blocks": {
+  "transport": {
+   "title": "Anreise",
+   "hint": "NS-Zug nach Amsterdam CS",
+   "text": "Der NS-Bahnhof liegt direkt unter dem Terminalgebäude, erreichbar per Rolltreppe oder Aufzug. Zwischen Amsterdam CS und dem Flughafen fährt der Zug 8-mal pro Stunde mit Halt in Sloterdijk und Lelylaan und fährt am Flughafen immer von Gleis 3 ab. Aus Amsterdam, Utrecht, Leiden, Den Haag, Delft und Rotterdam ist der Flughafen rund um die Uhr erreichbar, oft ohne Umsteigen. Das Ticket kauft man am Flughafen oder zahlt kontaktlos mit Karte oder Telefon und checkt an den gelben Validatoren oberhalb der Rolltreppen und Aufzüge auf der Schiphol Plaza ein."
+  },
+  "taxi": {
+   "title": "Taxi",
+   "hint": "Taxistand an der Schiphol Plaza",
+   "text": "Der offizielle Taxistand befindet sich vor der Schiphol Plaza, eine Vorabbuchung ist nicht nötig. Uber und Bolt holen Fahrgäste an einem eigenen Haltepunkt „App pick-up point“ ab, zu dem Schilder im Terminal führen; dort gibt es kostenloses Wi‑Fi. Kleinbusse von Schiphol Travel Taxi sind für Gruppen bis 8 Personen, man kann sich die Fahrt mit anderen Reisenden teilen."
+  },
+  "storage": {
+   "title": "Gepäckaufbewahrung",
+   "hint": "Ebene −1, ab 7 € pro 24 Std.",
+   "text": "Gepäckaufbewahrung auf Ebene −1 zwischen Arrivals 1 und Arrivals 2, rund um die Uhr, bis zu 30 Tage; pro 24 Stunden: Handgepäck (bis 55×35×25 cm) 7 €, Gepäck 9,50 €, Sperrgepäck 12 €, Garderobe 2,50 € pro Stück. Bei Verlust des Abholscheins wird eine Gebühr von 8 € erhoben. Nach der Sicherheitskontrolle im Transitbereich an den Gates Schließfächer 40×40×70 cm für 8,50 €, bis zu 7 Tage, rund um die Uhr."
+  },
+  "sleep": {
+   "title": "Schlafen",
+   "hint": "YOTELAIR, Mercure nach Kontrolle",
+   "text": "Nach der Sicherheitskontrolle gibt es zwei Hotels, rund um die Uhr geöffnet: Mercure Hotel in Lounge 3 und YOTELAIR in Lounge 2, beide auf dem Weg zu den Gates D1–D57, E, F, G und H. YOTELAIR ist sogar ohne Visum für die Niederlande zugänglich."
+  },
+  "kids": {
+   "title": "Mit Kind",
+   "hint": "Spielplatz mit Flugzeug, kostenlos",
+   "text": "Der Spielplatz Kids Playground liegt nach der Sicherheitskontrolle auf Ebene 1 in Lounge 2, auf dem Weg zu den Gates D1–D57, E, F, G und H, rund um die Uhr geöffnet. Kinder klettern in einem echten Flugzeug; daneben ein Foodcourt, Eintritt frei."
+  }
+ }
+}

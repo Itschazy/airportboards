@@ -1,0 +1,30 @@
+{
+ "iata": "CDG",
+ "blocks": {
+  "transport": {
+   "title": "가는 방법",
+   "hint": "RER B와 주·야간 버스",
+   "text": "RER B는 공항과 파리(특히 Gare du Nord와 Châtelet) 사이를 오가는 가장 간편한 방법으로, 약 35분 걸립니다. 열차는 4:50부터 23:00(공항 마지막 도착)까지 운행합니다. 9517번 버스(옛 RoissyBus)는 지하철 14호선과 연계해 Saint-Denis Pleyel까지 갑니다. 야간에는 Noctilien N143, N140 버스가 1, 2, 3터미널에서 Gare de l'Est까지 운행합니다. 모든 터미널은 무료 열차 CDGVAL로 연결되며, Navigo 정기권(1일 또는 1주, 전 구역)과 스마트폰에 내려받는 승차권을 사용할 수 있습니다."
+  },
+  "taxi": {
+   "title": "택시",
+   "hint": "파리까지 정액 €56 / €65",
+   "text": "경찰청이 정한 양방향 정액 요금: 파리 센강 우안까지 €56, 좌안까지 €65. 시내 중심까지는 교통 상황에 따라 35–60분 걸립니다. TAXI 표시등이 켜진 공식 택시는 1, 2, 3터미널 출구 앞 승강장에서만 승객을 태우며, 터미널 안에서 기사가 호객하면 거절해야 합니다. 교외와 장거리 운행은 미터 요금입니다."
+  },
+  "storage": {
+   "title": "수하물 보관소",
+   "hint": "보관소 7:00–21:00",
+   "text": "Bagages du Monde 수하물 보관소는 2터미널 0층, Aéroport Charles de Gaulle 2 TGV 역 환승 홀에 있으며 보안검색 전 구역입니다. 매일 7:00부터 21:00까지 운영하고, 짐은 X선으로 검사하며 보관실은 상시 CCTV로 감시합니다. 수하물 포장, 호텔 배송, 유모차와 카시트 대여, 자전거·보드 등 규격 외 수하물 보관 서비스도 제공합니다."
+  },
+  "sleep": {
+   "title": "잠잘 곳",
+   "hint": "2터미널과 주변 호텔",
+   "text": "2터미널에는 Sheraton 호텔이 있고, 2E터미널 승객을 위해 국제선 구역에 소형 객실 YotelAir가 있습니다(둘 다 CDGVAL Terminal 2 역 옆). CDGVAL Terminal 3 - Roissypôle 역 옆 Roissypôle 구역에는 citizenM, Hilton, ibis, ibis Styles, Novotel, Radisson Blu가 있습니다. 객실은 1박 또는 몇 시간 단위로 이용할 수 있습니다."
+  },
+  "wifi": {
+   "title": "Wi‑Fi",
+   "hint": "무료, WIFI-AIRPORT",
+   "text": "모든 터미널, 탑승 구역, 수하물 수취 구역에서 무료 Wi‑Fi를 이용할 수 있습니다. 네트워크 WIFI-AIRPORT에 연결하면 Paris Aéroport 시작 페이지가 자동으로 열립니다. 잠금식 무료 충전 보관함 ChargeBox는 1, 2D, 2E, 3터미널의 보안검색 후 구역에서 상시 운영합니다."
+  }
+ }
+}

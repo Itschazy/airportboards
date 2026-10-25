@@ -1,0 +1,5382 @@
+[
+  {
+    "lang": "ru",
+    "iata": "CAN",
+    "block": "transport",
+    "field": "text",
+    "old": "выхода",
+    "new": "двери",
+    "kind": "смысл",
+    "why": "Уточнение gate/door/exit по официальному источнику, таблица door-vs-gate.md"
+  },
+  {
+    "lang": "ru",
+    "iata": "CAN",
+    "block": "taxi",
+    "field": "hint",
+    "old": "выходы",
+    "new": "двери",
+    "kind": "смысл",
+    "why": "Уточнение gate/door/exit по официальному источнику, таблица door-vs-gate.md"
+  },
+  {
+    "lang": "ru",
+    "iata": "CAN",
+    "block": "taxi",
+    "field": "text",
+    "old": "выхода",
+    "new": "двери",
+    "kind": "смысл",
+    "why": "Уточнение gate/door/exit по официальному источнику, таблица door-vs-gate.md"
+  },
+  {
+    "lang": "ru",
+    "iata": "CAN",
+    "block": "storage",
+    "field": "text",
+    "old": "выхода",
+    "new": "двери",
+    "kind": "смысл",
+    "why": "Уточнение gate/door/exit по официальному источнику, таблица door-vs-gate.md"
+  },
+  {
+    "lang": "ru",
+    "iata": "CAN",
+    "block": "sleep",
+    "field": "text",
+    "old": "выхода",
+    "new": "двери",
+    "kind": "смысл",
+    "why": "Уточнение gate/door/exit по официальному источнику, таблица door-vs-gate.md"
+  },
+  {
+    "lang": "ru",
+    "iata": "CAN",
+    "block": "sleep",
+    "field": "text",
+    "old": "выходом",
+    "new": "дверью",
+    "kind": "смысл",
+    "why": "Уточнение gate/door/exit по официальному источнику, таблица door-vs-gate.md"
+  },
+  {
+    "lang": "ru",
+    "iata": "PEK",
+    "block": "taxi",
+    "field": "text",
+    "old": "выходов",
+    "new": "дверей",
+    "kind": "смысл",
+    "why": "Уточнение gate/door/exit по официальному источнику, таблица door-vs-gate.md"
+  },
+  {
+    "lang": "ru",
+    "iata": "PEK",
+    "block": "storage",
+    "field": "text",
+    "old": "выходов",
+    "new": "дверей",
+    "kind": "смысл",
+    "why": "Уточнение gate/door/exit по официальному источнику, таблица door-vs-gate.md"
+  },
+  {
+    "lang": "ru",
+    "iata": "PEK",
+    "block": "storage",
+    "field": "text",
+    "old": "выхода",
+    "new": "двери",
+    "kind": "смысл",
+    "why": "Уточнение gate/door/exit по официальному источнику, таблица door-vs-gate.md"
+  },
+  {
+    "lang": "ru",
+    "iata": "PVG",
+    "block": "taxi",
+    "field": "text",
+    "old": "выходов",
+    "new": "дверей",
+    "kind": "смысл",
+    "why": "Уточнение gate/door/exit по официальному источнику, таблица door-vs-gate.md"
+  },
+  {
+    "lang": "ru",
+    "iata": "PVG",
+    "block": "taxi",
+    "field": "text",
+    "old": "выхода",
+    "new": "двери",
+    "kind": "смысл",
+    "why": "Уточнение gate/door/exit по официальному источнику, таблица door-vs-gate.md"
+  },
+  {
+    "lang": "ru",
+    "iata": "BKK",
+    "block": "taxi",
+    "field": "hint",
+    "old": "выходы",
+    "new": "двери",
+    "kind": "смысл",
+    "why": "Уточнение gate/door/exit по официальному источнику, таблица door-vs-gate.md"
+  },
+  {
+    "lang": "ru",
+    "iata": "BKK",
+    "block": "taxi",
+    "field": "text",
+    "old": "выходами",
+    "new": "дверями",
+    "kind": "смысл",
+    "why": "Уточнение gate/door/exit по официальному источнику, таблица door-vs-gate.md"
+  },
+  {
+    "lang": "ru",
+    "iata": "BKK",
+    "block": "storage",
+    "field": "text",
+    "old": "выхода",
+    "new": "двери",
+    "kind": "смысл",
+    "why": "Уточнение gate/door/exit по официальному источнику, таблица door-vs-gate.md"
+  },
+  {
+    "lang": "ru",
+    "iata": "PVG",
+    "block": "storage",
+    "field": "text",
+    "old": "между выходами 4 и 5",
+    "new": "между дверями 4 и 5",
+    "kind": "смысл",
+    "why": "Уточнение gate/door/exit по официальному источнику, таблица door-vs-gate.md"
+  },
+  {
+    "lang": "ru",
+    "iata": "PVG",
+    "block": "storage",
+    "field": "text",
+    "old": "напротив выхода 7",
+    "new": "напротив двери 7",
+    "kind": "смысл",
+    "why": "Уточнение gate/door/exit по официальному источнику, таблица door-vs-gate.md"
+  },
+  {
+    "lang": "ru",
+    "iata": "PVG",
+    "block": "sleep",
+    "field": "text",
+    "old": "выхода 2 зала",
+    "new": "двери 2 зала",
+    "kind": "смысл",
+    "why": "Уточнение gate/door/exit по официальному источнику, таблица door-vs-gate.md"
+  },
+  {
+    "lang": "ru",
+    "iata": "PVG",
+    "block": "sleep",
+    "field": "text",
+    "old": "выхода 29 зала",
+    "new": "двери 29 зала",
+    "kind": "смысл",
+    "why": "Уточнение gate/door/exit по официальному источнику, таблица door-vs-gate.md"
+  },
+  {
+    "lang": "ru",
+    "iata": "PVG",
+    "block": "sleep",
+    "field": "text",
+    "old": "у выходов",
+    "new": "у выходов на посадку",
+    "kind": "смысл",
+    "why": "Уточнение gate/door/exit по официальному источнику, таблица door-vs-gate.md"
+  },
+  {
+    "lang": "ru",
+    "iata": "PVG",
+    "block": "sleep",
+    "field": "text",
+    "old": "у выхода D64",
+    "new": "у выхода на посадку D64",
+    "kind": "смысл",
+    "why": "Уточнение gate/door/exit по официальному источнику, таблица door-vs-gate.md"
+  },
+  {
+    "lang": "ru",
+    "iata": "PEK",
+    "block": "kids",
+    "field": "hint",
+    "old": "выходов",
+    "new": "выходов на посадку",
+    "kind": "смысл",
+    "why": "Уточнение gate/door/exit по официальному источнику, таблица door-vs-gate.md"
+  },
+  {
+    "lang": "ru",
+    "iata": "PEK",
+    "block": "kids",
+    "field": "text",
+    "old": "У выхода E21",
+    "new": "У выхода на посадку E21",
+    "kind": "смысл",
+    "why": "Уточнение gate/door/exit по официальному источнику, таблица door-vs-gate.md"
+  },
+  {
+    "lang": "ru",
+    "iata": "HND",
+    "block": "lounges",
+    "field": "text",
+    "old": "в зоне выходов",
+    "new": "в зоне выходов на посадку",
+    "kind": "смысл",
+    "why": "Уточнение gate/door/exit по официальному источнику, таблица door-vs-gate.md"
+  },
+  {
+    "lang": "en",
+    "iata": "CAN",
+    "block": "transport",
+    "field": "text",
+    "old": "exit",
+    "new": "door",
+    "kind": "смысл",
+    "why": "Уточнение gate/door/exit по официальному источнику, таблица door-vs-gate.md"
+  },
+  {
+    "lang": "en",
+    "iata": "CAN",
+    "block": "taxi",
+    "field": "hint",
+    "old": "exits",
+    "new": "doors",
+    "kind": "смысл",
+    "why": "Уточнение gate/door/exit по официальному источнику, таблица door-vs-gate.md"
+  },
+  {
+    "lang": "en",
+    "iata": "CAN",
+    "block": "taxi",
+    "field": "text",
+    "old": "exit",
+    "new": "door",
+    "kind": "смысл",
+    "why": "Уточнение gate/door/exit по официальному источнику, таблица door-vs-gate.md"
+  },
+  {
+    "lang": "en",
+    "iata": "CAN",
+    "block": "storage",
+    "field": "text",
+    "old": "exit",
+    "new": "door",
+    "kind": "смысл",
+    "why": "Уточнение gate/door/exit по официальному источнику, таблица door-vs-gate.md"
+  },
+  {
+    "lang": "en",
+    "iata": "CAN",
+    "block": "sleep",
+    "field": "text",
+    "old": "exit",
+    "new": "door",
+    "kind": "смысл",
+    "why": "Уточнение gate/door/exit по официальному источнику, таблица door-vs-gate.md"
+  },
+  {
+    "lang": "en",
+    "iata": "PEK",
+    "block": "taxi",
+    "field": "text",
+    "old": "exits",
+    "new": "doors",
+    "kind": "смысл",
+    "why": "Уточнение gate/door/exit по официальному источнику, таблица door-vs-gate.md"
+  },
+  {
+    "lang": "en",
+    "iata": "PEK",
+    "block": "storage",
+    "field": "text",
+    "old": "exit",
+    "new": "door",
+    "kind": "смысл",
+    "why": "Уточнение gate/door/exit по официальному источнику, таблица door-vs-gate.md"
+  },
+  {
+    "lang": "en",
+    "iata": "PVG",
+    "block": "taxi",
+    "field": "text",
+    "old": "exits",
+    "new": "doors",
+    "kind": "смысл",
+    "why": "Уточнение gate/door/exit по официальному источнику, таблица door-vs-gate.md"
+  },
+  {
+    "lang": "en",
+    "iata": "PVG",
+    "block": "taxi",
+    "field": "text",
+    "old": "exit",
+    "new": "door",
+    "kind": "смысл",
+    "why": "Уточнение gate/door/exit по официальному источнику, таблица door-vs-gate.md"
+  },
+  {
+    "lang": "en",
+    "iata": "BKK",
+    "block": "taxi",
+    "field": "hint",
+    "old": "exits",
+    "new": "doors",
+    "kind": "смысл",
+    "why": "Уточнение gate/door/exit по официальному источнику, таблица door-vs-gate.md"
+  },
+  {
+    "lang": "en",
+    "iata": "BKK",
+    "block": "taxi",
+    "field": "text",
+    "old": "exits",
+    "new": "doors",
+    "kind": "смысл",
+    "why": "Уточнение gate/door/exit по официальному источнику, таблица door-vs-gate.md"
+  },
+  {
+    "lang": "en",
+    "iata": "BKK",
+    "block": "storage",
+    "field": "text",
+    "old": "exit",
+    "new": "door",
+    "kind": "смысл",
+    "why": "Уточнение gate/door/exit по официальному источнику, таблица door-vs-gate.md"
+  },
+  {
+    "lang": "de",
+    "iata": "CAN",
+    "block": "transport",
+    "field": "text",
+    "old": "Ausgang",
+    "new": "Tür",
+    "kind": "смысл",
+    "why": "Уточнение gate/door/exit по официальному источнику, таблица door-vs-gate.md"
+  },
+  {
+    "lang": "de",
+    "iata": "CAN",
+    "block": "taxi",
+    "field": "hint",
+    "old": "Ausgänge",
+    "new": "Türen",
+    "kind": "смысл",
+    "why": "Уточнение gate/door/exit по официальному источнику, таблица door-vs-gate.md"
+  },
+  {
+    "lang": "de",
+    "iata": "CAN",
+    "block": "taxi",
+    "field": "text",
+    "old": "Ausgang",
+    "new": "Tür",
+    "kind": "смысл",
+    "why": "Уточнение gate/door/exit по официальному источнику, таблица door-vs-gate.md"
+  },
+  {
+    "lang": "de",
+    "iata": "CAN",
+    "block": "storage",
+    "field": "text",
+    "old": "Ausgang",
+    "new": "Tür",
+    "kind": "смысл",
+    "why": "Уточнение gate/door/exit по официальному источнику, таблица door-vs-gate.md"
+  },
+  {
+    "lang": "de",
+    "iata": "CAN",
+    "block": "sleep",
+    "field": "text",
+    "old": "Ausgang",
+    "new": "Tür",
+    "kind": "смысл",
+    "why": "Уточнение gate/door/exit по официальному источнику, таблица door-vs-gate.md"
+  },
+  {
+    "lang": "de",
+    "iata": "PEK",
+    "block": "taxi",
+    "field": "text",
+    "old": "den Ausgängen",
+    "new": "den Türen",
+    "kind": "смысл",
+    "why": "Уточнение gate/door/exit по официальному источнику, таблица door-vs-gate.md"
+  },
+  {
+    "lang": "de",
+    "iata": "PEK",
+    "block": "storage",
+    "field": "text",
+    "old": "Ausgang",
+    "new": "Tür",
+    "kind": "смысл",
+    "why": "Уточнение gate/door/exit по официальному источнику, таблица door-vs-gate.md"
+  },
+  {
+    "lang": "de",
+    "iata": "PVG",
+    "block": "taxi",
+    "field": "text",
+    "old": "den Ausgängen",
+    "new": "den Türen",
+    "kind": "смысл",
+    "why": "Уточнение gate/door/exit по официальному источнику, таблица door-vs-gate.md"
+  },
+  {
+    "lang": "de",
+    "iata": "PVG",
+    "block": "taxi",
+    "field": "text",
+    "old": "Ausgang",
+    "new": "Tür",
+    "kind": "смысл",
+    "why": "Уточнение gate/door/exit по официальному источнику, таблица door-vs-gate.md"
+  },
+  {
+    "lang": "de",
+    "iata": "BKK",
+    "block": "taxi",
+    "field": "hint",
+    "old": "Ausgänge",
+    "new": "Türen",
+    "kind": "смысл",
+    "why": "Уточнение gate/door/exit по официальному источнику, таблица door-vs-gate.md"
+  },
+  {
+    "lang": "de",
+    "iata": "BKK",
+    "block": "taxi",
+    "field": "text",
+    "old": "den Ausgängen",
+    "new": "den Türen",
+    "kind": "смысл",
+    "why": "Уточнение gate/door/exit по официальному источнику, таблица door-vs-gate.md"
+  },
+  {
+    "lang": "de",
+    "iata": "BKK",
+    "block": "storage",
+    "field": "text",
+    "old": "Ausgang",
+    "new": "Tür",
+    "kind": "смысл",
+    "why": "Уточнение gate/door/exit по официальному источнику, таблица door-vs-gate.md"
+  },
+  {
+    "lang": "es",
+    "iata": "CAN",
+    "block": "taxi",
+    "field": "text",
+    "old": "la salida",
+    "new": "la puerta",
+    "kind": "смысл",
+    "why": "Уточнение gate/door/exit по официальному источнику, таблица door-vs-gate.md"
+  },
+  {
+    "lang": "es",
+    "iata": "CAN",
+    "block": "storage",
+    "field": "text",
+    "old": "la salida",
+    "new": "la puerta",
+    "kind": "смысл",
+    "why": "Уточнение gate/door/exit по официальному источнику, таблица door-vs-gate.md"
+  },
+  {
+    "lang": "es",
+    "iata": "CAN",
+    "block": "sleep",
+    "field": "text",
+    "old": "la salida",
+    "new": "la puerta",
+    "kind": "смысл",
+    "why": "Уточнение gate/door/exit по официальному источнику, таблица door-vs-gate.md"
+  },
+  {
+    "lang": "es",
+    "iata": "PEK",
+    "block": "taxi",
+    "field": "text",
+    "old": "las salidas 5–9",
+    "new": "las puertas 5–9",
+    "kind": "смысл",
+    "why": "Уточнение gate/door/exit по официальному источнику, таблица door-vs-gate.md"
+  },
+  {
+    "lang": "es",
+    "iata": "PEK",
+    "block": "storage",
+    "field": "text",
+    "old": "la salida",
+    "new": "la puerta",
+    "kind": "смысл",
+    "why": "Уточнение gate/door/exit по официальному источнику, таблица door-vs-gate.md"
+  },
+  {
+    "lang": "es",
+    "iata": "PVG",
+    "block": "taxi",
+    "field": "text",
+    "old": "las salidas 4 u 8",
+    "new": "las puertas 4 u 8",
+    "kind": "смысл",
+    "why": "Уточнение gate/door/exit по официальному источнику, таблица door-vs-gate.md"
+  },
+  {
+    "lang": "es",
+    "iata": "PVG",
+    "block": "taxi",
+    "field": "text",
+    "old": "la salida",
+    "new": "la puerta",
+    "kind": "смысл",
+    "why": "Уточнение gate/door/exit по официальному источнику, таблица door-vs-gate.md"
+  },
+  {
+    "lang": "es",
+    "iata": "BKK",
+    "block": "taxi",
+    "field": "hint",
+    "old": "salidas 4–7",
+    "new": "puertas 4–7",
+    "kind": "смысл",
+    "why": "Уточнение gate/door/exit по официальному источнику, таблица door-vs-gate.md"
+  },
+  {
+    "lang": "es",
+    "iata": "BKK",
+    "block": "taxi",
+    "field": "text",
+    "old": "las salidas 4 y 7",
+    "new": "las puertas 4 y 7",
+    "kind": "смысл",
+    "why": "Уточнение gate/door/exit по официальному источнику, таблица door-vs-gate.md"
+  },
+  {
+    "lang": "es",
+    "iata": "BKK",
+    "block": "storage",
+    "field": "text",
+    "old": "la salida",
+    "new": "la puerta",
+    "kind": "смысл",
+    "why": "Уточнение gate/door/exit по официальному источнику, таблица door-vs-gate.md"
+  },
+  {
+    "lang": "it",
+    "iata": "CAN",
+    "block": "transport",
+    "field": "text",
+    "old": "dall’uscita",
+    "new": "dalla porta",
+    "kind": "смысл",
+    "why": "Уточнение gate/door/exit по официальному источнику, таблица door-vs-gate.md"
+  },
+  {
+    "lang": "it",
+    "iata": "CAN",
+    "block": "taxi",
+    "field": "text",
+    "old": "dall’uscita",
+    "new": "dalla porta",
+    "kind": "смысл",
+    "why": "Уточнение gate/door/exit по официальному источнику, таблица door-vs-gate.md"
+  },
+  {
+    "lang": "it",
+    "iata": "CAN",
+    "block": "storage",
+    "field": "text",
+    "old": "l’uscita",
+    "new": "la porta",
+    "kind": "смысл",
+    "why": "Уточнение gate/door/exit по официальному источнику, таблица door-vs-gate.md"
+  },
+  {
+    "lang": "it",
+    "iata": "CAN",
+    "block": "sleep",
+    "field": "text",
+    "old": "l’uscita",
+    "new": "la porta",
+    "kind": "смысл",
+    "why": "Уточнение gate/door/exit по официальному источнику, таблица door-vs-gate.md"
+  },
+  {
+    "lang": "it",
+    "iata": "PEK",
+    "block": "taxi",
+    "field": "text",
+    "old": "le uscite",
+    "new": "le porte",
+    "kind": "смысл",
+    "why": "Уточнение gate/door/exit по официальному источнику, таблица door-vs-gate.md"
+  },
+  {
+    "lang": "it",
+    "iata": "PEK",
+    "block": "storage",
+    "field": "text",
+    "old": "le uscite",
+    "new": "le porte",
+    "kind": "смысл",
+    "why": "Уточнение gate/door/exit по официальному источнику, таблица door-vs-gate.md"
+  },
+  {
+    "lang": "it",
+    "iata": "PEK",
+    "block": "storage",
+    "field": "text",
+    "old": "l’uscita",
+    "new": "la porta",
+    "kind": "смысл",
+    "why": "Уточнение gate/door/exit по официальному источнику, таблица door-vs-gate.md"
+  },
+  {
+    "lang": "it",
+    "iata": "PVG",
+    "block": "taxi",
+    "field": "text",
+    "old": "le uscite",
+    "new": "le porte",
+    "kind": "смысл",
+    "why": "Уточнение gate/door/exit по официальному источнику, таблица door-vs-gate.md"
+  },
+  {
+    "lang": "it",
+    "iata": "PVG",
+    "block": "taxi",
+    "field": "text",
+    "old": "dall’uscita",
+    "new": "dalla porta",
+    "kind": "смысл",
+    "why": "Уточнение gate/door/exit по официальному источнику, таблица door-vs-gate.md"
+  },
+  {
+    "lang": "it",
+    "iata": "BKK",
+    "block": "taxi",
+    "field": "hint",
+    "old": "uscite 4–7",
+    "new": "porte 4–7",
+    "kind": "смысл",
+    "why": "Уточнение gate/door/exit по официальному источнику, таблица door-vs-gate.md"
+  },
+  {
+    "lang": "it",
+    "iata": "BKK",
+    "block": "taxi",
+    "field": "text",
+    "old": "le uscite",
+    "new": "le porte",
+    "kind": "смысл",
+    "why": "Уточнение gate/door/exit по официальному источнику, таблица door-vs-gate.md"
+  },
+  {
+    "lang": "it",
+    "iata": "BKK",
+    "block": "storage",
+    "field": "text",
+    "old": "l’uscita",
+    "new": "la porta",
+    "kind": "смысл",
+    "why": "Уточнение gate/door/exit по официальному источнику, таблица door-vs-gate.md"
+  },
+  {
+    "lang": "tr",
+    "iata": "CAN",
+    "block": "transport",
+    "field": "text",
+    "old": "çıkışın",
+    "new": "kapının",
+    "kind": "смысл",
+    "why": "Уточнение gate/door/exit по официальному источнику, таблица door-vs-gate.md"
+  },
+  {
+    "lang": "tr",
+    "iata": "CAN",
+    "block": "taxi",
+    "field": "hint",
+    "old": "çıkış",
+    "new": "kapı",
+    "kind": "смысл",
+    "why": "Уточнение gate/door/exit по официальному источнику, таблица door-vs-gate.md"
+  },
+  {
+    "lang": "tr",
+    "iata": "CAN",
+    "block": "taxi",
+    "field": "text",
+    "old": "çıkışın",
+    "new": "kapının",
+    "kind": "смысл",
+    "why": "Уточнение gate/door/exit по официальному источнику, таблица door-vs-gate.md"
+  },
+  {
+    "lang": "tr",
+    "iata": "CAN",
+    "block": "storage",
+    "field": "text",
+    "old": "çıkışın",
+    "new": "kapının",
+    "kind": "смысл",
+    "why": "Уточнение gate/door/exit по официальному источнику, таблица door-vs-gate.md"
+  },
+  {
+    "lang": "tr",
+    "iata": "CAN",
+    "block": "sleep",
+    "field": "text",
+    "old": "çıkışın",
+    "new": "kapının",
+    "kind": "смысл",
+    "why": "Уточнение gate/door/exit по официальному источнику, таблица door-vs-gate.md"
+  },
+  {
+    "lang": "tr",
+    "iata": "PEK",
+    "block": "taxi",
+    "field": "text",
+    "old": "çıkışların",
+    "new": "kapıların",
+    "kind": "смысл",
+    "why": "Уточнение gate/door/exit по официальному источнику, таблица door-vs-gate.md"
+  },
+  {
+    "lang": "tr",
+    "iata": "PEK",
+    "block": "storage",
+    "field": "text",
+    "old": "çıkışının",
+    "new": "kapısının",
+    "kind": "смысл",
+    "why": "Уточнение gate/door/exit по официальному источнику, таблица door-vs-gate.md"
+  },
+  {
+    "lang": "tr",
+    "iata": "PVG",
+    "block": "taxi",
+    "field": "text",
+    "old": "çıkışının",
+    "new": "kapısının",
+    "kind": "смысл",
+    "why": "Уточнение gate/door/exit по официальному источнику, таблица door-vs-gate.md"
+  },
+  {
+    "lang": "tr",
+    "iata": "PVG",
+    "block": "taxi",
+    "field": "text",
+    "old": "çıkıştan",
+    "new": "kapıdan",
+    "kind": "смысл",
+    "why": "Уточнение gate/door/exit по официальному источнику, таблица door-vs-gate.md"
+  },
+  {
+    "lang": "tr",
+    "iata": "BKK",
+    "block": "taxi",
+    "field": "hint",
+    "old": "çıkış",
+    "new": "kapı",
+    "kind": "смысл",
+    "why": "Уточнение gate/door/exit по официальному источнику, таблица door-vs-gate.md"
+  },
+  {
+    "lang": "tr",
+    "iata": "BKK",
+    "block": "taxi",
+    "field": "text",
+    "old": "çıkışlar",
+    "new": "kapılar",
+    "kind": "смысл",
+    "why": "Уточнение gate/door/exit по официальному источнику, таблица door-vs-gate.md"
+  },
+  {
+    "lang": "tr",
+    "iata": "BKK",
+    "block": "storage",
+    "field": "text",
+    "old": "çıkışın",
+    "new": "kapının",
+    "kind": "смысл",
+    "why": "Уточнение gate/door/exit по официальному источнику, таблица door-vs-gate.md"
+  },
+  {
+    "lang": "ja",
+    "iata": "CAN",
+    "block": "transport",
+    "field": "text",
+    "old": "番出口",
+    "new": "番ドア",
+    "kind": "смысл",
+    "why": "Уточнение gate/door/exit по официальному источнику, таблица door-vs-gate.md"
+  },
+  {
+    "lang": "ja",
+    "iata": "CAN",
+    "block": "taxi",
+    "field": "hint",
+    "old": "番出口",
+    "new": "番ドア",
+    "kind": "смысл",
+    "why": "Уточнение gate/door/exit по официальному источнику, таблица door-vs-gate.md"
+  },
+  {
+    "lang": "ja",
+    "iata": "CAN",
+    "block": "taxi",
+    "field": "text",
+    "old": "番出口",
+    "new": "番ドア",
+    "kind": "смысл",
+    "why": "Уточнение gate/door/exit по официальному источнику, таблица door-vs-gate.md"
+  },
+  {
+    "lang": "ja",
+    "iata": "CAN",
+    "block": "storage",
+    "field": "text",
+    "old": "番出口",
+    "new": "番ドア",
+    "kind": "смысл",
+    "why": "Уточнение gate/door/exit по официальному источнику, таблица door-vs-gate.md"
+  },
+  {
+    "lang": "ja",
+    "iata": "CAN",
+    "block": "sleep",
+    "field": "text",
+    "old": "番出口",
+    "new": "番ドア",
+    "kind": "смысл",
+    "why": "Уточнение gate/door/exit по официальному источнику, таблица door-vs-gate.md"
+  },
+  {
+    "lang": "ja",
+    "iata": "PEK",
+    "block": "taxi",
+    "field": "text",
+    "old": "番出口",
+    "new": "番ドア",
+    "kind": "смысл",
+    "why": "Уточнение gate/door/exit по официальному источнику, таблица door-vs-gate.md"
+  },
+  {
+    "lang": "ja",
+    "iata": "PEK",
+    "block": "storage",
+    "field": "text",
+    "old": "番出口",
+    "new": "番ドア",
+    "kind": "смысл",
+    "why": "Уточнение gate/door/exit по официальному источнику, таблица door-vs-gate.md"
+  },
+  {
+    "lang": "ja",
+    "iata": "PVG",
+    "block": "taxi",
+    "field": "text",
+    "old": "番出口",
+    "new": "番ドア",
+    "kind": "смысл",
+    "why": "Уточнение gate/door/exit по официальному источнику, таблица door-vs-gate.md"
+  },
+  {
+    "lang": "ja",
+    "iata": "BKK",
+    "block": "taxi",
+    "field": "hint",
+    "old": "番出口",
+    "new": "番ドア",
+    "kind": "смысл",
+    "why": "Уточнение gate/door/exit по официальному источнику, таблица door-vs-gate.md"
+  },
+  {
+    "lang": "ja",
+    "iata": "BKK",
+    "block": "taxi",
+    "field": "text",
+    "old": "番出口",
+    "new": "番ドア",
+    "kind": "смысл",
+    "why": "Уточнение gate/door/exit по официальному источнику, таблица door-vs-gate.md"
+  },
+  {
+    "lang": "ja",
+    "iata": "BKK",
+    "block": "storage",
+    "field": "text",
+    "old": "番出口",
+    "new": "番ドア",
+    "kind": "смысл",
+    "why": "Уточнение gate/door/exit по официальному источнику, таблица door-vs-gate.md"
+  },
+  {
+    "lang": "ko",
+    "iata": "CAN",
+    "block": "transport",
+    "field": "text",
+    "old": "번 출구",
+    "new": "번 출입구",
+    "kind": "смысл",
+    "why": "Уточнение gate/door/exit по официальному источнику, таблица door-vs-gate.md"
+  },
+  {
+    "lang": "ko",
+    "iata": "CAN",
+    "block": "taxi",
+    "field": "hint",
+    "old": "번 출구",
+    "new": "번 출입구",
+    "kind": "смысл",
+    "why": "Уточнение gate/door/exit по официальному источнику, таблица door-vs-gate.md"
+  },
+  {
+    "lang": "ko",
+    "iata": "CAN",
+    "block": "taxi",
+    "field": "text",
+    "old": "번 출구",
+    "new": "번 출입구",
+    "kind": "смысл",
+    "why": "Уточнение gate/door/exit по официальному источнику, таблица door-vs-gate.md"
+  },
+  {
+    "lang": "ko",
+    "iata": "CAN",
+    "block": "storage",
+    "field": "text",
+    "old": "번 출구",
+    "new": "번 출입구",
+    "kind": "смысл",
+    "why": "Уточнение gate/door/exit по официальному источнику, таблица door-vs-gate.md"
+  },
+  {
+    "lang": "ko",
+    "iata": "CAN",
+    "block": "sleep",
+    "field": "text",
+    "old": "번 출구",
+    "new": "번 출입구",
+    "kind": "смысл",
+    "why": "Уточнение gate/door/exit по официальному источнику, таблица door-vs-gate.md"
+  },
+  {
+    "lang": "ko",
+    "iata": "CAN",
+    "block": "sleep",
+    "field": "text",
+    "old": "61번 게이트",
+    "new": "61번 출입구",
+    "kind": "смысл",
+    "why": "Уточнение gate/door/exit по официальному источнику, таблица door-vs-gate.md"
+  },
+  {
+    "lang": "ko",
+    "iata": "PEK",
+    "block": "taxi",
+    "field": "text",
+    "old": "번 출구",
+    "new": "번 출입구",
+    "kind": "смысл",
+    "why": "Уточнение gate/door/exit по официальному источнику, таблица door-vs-gate.md"
+  },
+  {
+    "lang": "ko",
+    "iata": "PEK",
+    "block": "storage",
+    "field": "text",
+    "old": "번 출구",
+    "new": "번 출입구",
+    "kind": "смысл",
+    "why": "Уточнение gate/door/exit по официальному источнику, таблица door-vs-gate.md"
+  },
+  {
+    "lang": "ko",
+    "iata": "PVG",
+    "block": "taxi",
+    "field": "text",
+    "old": "번 출구",
+    "new": "번 출입구",
+    "kind": "смысл",
+    "why": "Уточнение gate/door/exit по официальному источнику, таблица door-vs-gate.md"
+  },
+  {
+    "lang": "ko",
+    "iata": "BKK",
+    "block": "taxi",
+    "field": "hint",
+    "old": "번 출구",
+    "new": "번 출입구",
+    "kind": "смысл",
+    "why": "Уточнение gate/door/exit по официальному источнику, таблица door-vs-gate.md"
+  },
+  {
+    "lang": "ko",
+    "iata": "BKK",
+    "block": "taxi",
+    "field": "text",
+    "old": "번 출구",
+    "new": "번 출입구",
+    "kind": "смысл",
+    "why": "Уточнение gate/door/exit по официальному источнику, таблица door-vs-gate.md"
+  },
+  {
+    "lang": "ko",
+    "iata": "BKK",
+    "block": "storage",
+    "field": "text",
+    "old": "번 출구",
+    "new": "번 출입구",
+    "kind": "смысл",
+    "why": "Уточнение gate/door/exit по официальному источнику, таблица door-vs-gate.md"
+  },
+  {
+    "lang": "ar",
+    "iata": "CAN",
+    "block": "transport",
+    "field": "text",
+    "old": "المخرج",
+    "new": "الباب",
+    "kind": "смысл",
+    "why": "Уточнение gate/door/exit по официальному источнику, таблица door-vs-gate.md"
+  },
+  {
+    "lang": "ar",
+    "iata": "CAN",
+    "block": "taxi",
+    "field": "hint",
+    "old": "المخرج",
+    "new": "الباب",
+    "kind": "смысл",
+    "why": "Уточнение gate/door/exit по официальному источнику, таблица door-vs-gate.md"
+  },
+  {
+    "lang": "ar",
+    "iata": "CAN",
+    "block": "taxi",
+    "field": "text",
+    "old": "المخرج",
+    "new": "الباب",
+    "kind": "смысл",
+    "why": "Уточнение gate/door/exit по официальному источнику, таблица door-vs-gate.md"
+  },
+  {
+    "lang": "ar",
+    "iata": "CAN",
+    "block": "storage",
+    "field": "text",
+    "old": "المخرج",
+    "new": "الباب",
+    "kind": "смысл",
+    "why": "Уточнение gate/door/exit по официальному источнику, таблица door-vs-gate.md"
+  },
+  {
+    "lang": "ar",
+    "iata": "CAN",
+    "block": "sleep",
+    "field": "text",
+    "old": "المخرج",
+    "new": "الباب",
+    "kind": "смысл",
+    "why": "Уточнение gate/door/exit по официальному источнику, таблица door-vs-gate.md"
+  },
+  {
+    "lang": "ar",
+    "iata": "PEK",
+    "block": "taxi",
+    "field": "text",
+    "old": "المخارج",
+    "new": "الأبواب",
+    "kind": "смысл",
+    "why": "Уточнение gate/door/exit по официальному источнику, таблица door-vs-gate.md"
+  },
+  {
+    "lang": "ar",
+    "iata": "PEK",
+    "block": "storage",
+    "field": "text",
+    "old": "المخرجين",
+    "new": "البابين",
+    "kind": "смысл",
+    "why": "Уточнение gate/door/exit по официальному источнику, таблица door-vs-gate.md"
+  },
+  {
+    "lang": "ar",
+    "iata": "PEK",
+    "block": "storage",
+    "field": "text",
+    "old": "المخرج",
+    "new": "الباب",
+    "kind": "смысл",
+    "why": "Уточнение gate/door/exit по официальному источнику, таблица door-vs-gate.md"
+  },
+  {
+    "lang": "ar",
+    "iata": "PVG",
+    "block": "taxi",
+    "field": "text",
+    "old": "المخرجين",
+    "new": "البابين",
+    "kind": "смысл",
+    "why": "Уточнение gate/door/exit по официальному источнику, таблица door-vs-gate.md"
+  },
+  {
+    "lang": "ar",
+    "iata": "PVG",
+    "block": "taxi",
+    "field": "text",
+    "old": "المخرج",
+    "new": "الباب",
+    "kind": "смысл",
+    "why": "Уточнение gate/door/exit по официальному источнику, таблица door-vs-gate.md"
+  },
+  {
+    "lang": "ar",
+    "iata": "BKK",
+    "block": "taxi",
+    "field": "hint",
+    "old": "المخارج",
+    "new": "الأبواب",
+    "kind": "смысл",
+    "why": "Уточнение gate/door/exit по официальному источнику, таблица door-vs-gate.md"
+  },
+  {
+    "lang": "ar",
+    "iata": "BKK",
+    "block": "taxi",
+    "field": "text",
+    "old": "المخرجين",
+    "new": "البابين",
+    "kind": "смысл",
+    "why": "Уточнение gate/door/exit по официальному источнику, таблица door-vs-gate.md"
+  },
+  {
+    "lang": "ar",
+    "iata": "BKK",
+    "block": "storage",
+    "field": "text",
+    "old": "المخرج",
+    "new": "الباب",
+    "kind": "смысл",
+    "why": "Уточнение gate/door/exit по официальному источнику, таблица door-vs-gate.md"
+  },
+  {
+    "lang": "hi",
+    "iata": "BKK",
+    "block": "taxi",
+    "field": "hint",
+    "old": "निकास",
+    "new": "द्वार",
+    "kind": "смысл",
+    "why": "Уточнение gate/door/exit по официальному источнику, таблица door-vs-gate.md"
+  },
+  {
+    "lang": "hi",
+    "iata": "BKK",
+    "block": "taxi",
+    "field": "text",
+    "old": "निकास",
+    "new": "द्वार",
+    "kind": "смысл",
+    "why": "Уточнение gate/door/exit по официальному источнику, таблица door-vs-gate.md"
+  },
+  {
+    "lang": "hi",
+    "iata": "BKK",
+    "block": "storage",
+    "field": "text",
+    "old": "निकास",
+    "new": "द्वार",
+    "kind": "смысл",
+    "why": "Уточнение gate/door/exit по официальному источнику, таблица door-vs-gate.md"
+  },
+  {
+    "lang": "en",
+    "iata": "PVG",
+    "block": "storage",
+    "field": "text",
+    "old": "exit 7",
+    "new": "door 7",
+    "kind": "смысл",
+    "why": "Уточнение gate/door/exit по официальному источнику, таблица door-vs-gate.md"
+  },
+  {
+    "lang": "en",
+    "iata": "PVG",
+    "block": "sleep",
+    "field": "text",
+    "old": "exit 2 of",
+    "new": "door 2 of",
+    "kind": "смысл",
+    "why": "Уточнение gate/door/exit по официальному источнику, таблица door-vs-gate.md"
+  },
+  {
+    "lang": "en",
+    "iata": "PVG",
+    "block": "sleep",
+    "field": "text",
+    "old": "exit 29",
+    "new": "door 29",
+    "kind": "смысл",
+    "why": "Уточнение gate/door/exit по официальному источнику, таблица door-vs-gate.md"
+  },
+  {
+    "lang": "de",
+    "iata": "PVG",
+    "block": "storage",
+    "field": "text",
+    "old": "Ausgang 7",
+    "new": "Tür 7",
+    "kind": "смысл",
+    "why": "Уточнение gate/door/exit по официальному источнику, таблица door-vs-gate.md"
+  },
+  {
+    "lang": "de",
+    "iata": "PVG",
+    "block": "sleep",
+    "field": "text",
+    "old": "Ausgang 2 der",
+    "new": "Tür 2 der",
+    "kind": "смысл",
+    "why": "Уточнение gate/door/exit по официальному источнику, таблица door-vs-gate.md"
+  },
+  {
+    "lang": "de",
+    "iata": "PVG",
+    "block": "sleep",
+    "field": "text",
+    "old": "Ausgang 29",
+    "new": "Tür 29",
+    "kind": "смысл",
+    "why": "Уточнение gate/door/exit по официальному источнику, таблица door-vs-gate.md"
+  },
+  {
+    "lang": "es",
+    "iata": "PVG",
+    "block": "storage",
+    "field": "text",
+    "old": "la salida 7",
+    "new": "la puerta 7",
+    "kind": "смысл",
+    "why": "Уточнение gate/door/exit по официальному источнику, таблица door-vs-gate.md"
+  },
+  {
+    "lang": "es",
+    "iata": "PVG",
+    "block": "sleep",
+    "field": "text",
+    "old": "la salida 2 de",
+    "new": "la puerta 2 de",
+    "kind": "смысл",
+    "why": "Уточнение gate/door/exit по официальному источнику, таблица door-vs-gate.md"
+  },
+  {
+    "lang": "es",
+    "iata": "PVG",
+    "block": "sleep",
+    "field": "text",
+    "old": "la salida 29",
+    "new": "la puerta 29",
+    "kind": "смысл",
+    "why": "Уточнение gate/door/exit по официальному источнику, таблица door-vs-gate.md"
+  },
+  {
+    "lang": "it",
+    "iata": "PVG",
+    "block": "storage",
+    "field": "text",
+    "old": "le uscite 4 e 5",
+    "new": "le porte 4 e 5",
+    "kind": "смысл",
+    "why": "Уточнение gate/door/exit по официальному источнику, таблица door-vs-gate.md"
+  },
+  {
+    "lang": "it",
+    "iata": "PVG",
+    "block": "storage",
+    "field": "text",
+    "old": "all’uscita 7",
+    "new": "alla porta 7",
+    "kind": "смысл",
+    "why": "Уточнение gate/door/exit по официальному источнику, таблица door-vs-gate.md"
+  },
+  {
+    "lang": "it",
+    "iata": "PVG",
+    "block": "sleep",
+    "field": "text",
+    "old": "l’uscita 2 della",
+    "new": "la porta 2 della",
+    "kind": "смысл",
+    "why": "Уточнение gate/door/exit по официальному источнику, таблица door-vs-gate.md"
+  },
+  {
+    "lang": "it",
+    "iata": "PVG",
+    "block": "sleep",
+    "field": "text",
+    "old": "l’uscita 29",
+    "new": "la porta 29",
+    "kind": "смысл",
+    "why": "Уточнение gate/door/exit по официальному источнику, таблица door-vs-gate.md"
+  },
+  {
+    "lang": "tr",
+    "iata": "PVG",
+    "block": "storage",
+    "field": "text",
+    "old": "7 numaralı çıkışın",
+    "new": "7 numaralı kapının",
+    "kind": "смысл",
+    "why": "Уточнение gate/door/exit по официальному источнику, таблица door-vs-gate.md"
+  },
+  {
+    "lang": "tr",
+    "iata": "PVG",
+    "block": "sleep",
+    "field": "text",
+    "old": "2 numaralı çıkışının",
+    "new": "2 numaralı kapısının",
+    "kind": "смысл",
+    "why": "Уточнение gate/door/exit по официальному источнику, таблица door-vs-gate.md"
+  },
+  {
+    "lang": "tr",
+    "iata": "PVG",
+    "block": "sleep",
+    "field": "text",
+    "old": "29 numaralı çıkışının",
+    "new": "29 numaralı kapısının",
+    "kind": "смысл",
+    "why": "Уточнение gate/door/exit по официальному источнику, таблица door-vs-gate.md"
+  },
+  {
+    "lang": "ja",
+    "iata": "PVG",
+    "block": "storage",
+    "field": "text",
+    "old": "4番出口",
+    "new": "4番ドア",
+    "kind": "смысл",
+    "why": "Уточнение gate/door/exit по официальному источнику, таблица door-vs-gate.md"
+  },
+  {
+    "lang": "ja",
+    "iata": "PVG",
+    "block": "storage",
+    "field": "text",
+    "old": "5番出口",
+    "new": "5番ドア",
+    "kind": "смысл",
+    "why": "Уточнение gate/door/exit по официальному источнику, таблица door-vs-gate.md"
+  },
+  {
+    "lang": "ja",
+    "iata": "PVG",
+    "block": "storage",
+    "field": "text",
+    "old": "7番出口",
+    "new": "7番ドア",
+    "kind": "смысл",
+    "why": "Уточнение gate/door/exit по официальному источнику, таблица door-vs-gate.md"
+  },
+  {
+    "lang": "ja",
+    "iata": "PVG",
+    "block": "sleep",
+    "field": "text",
+    "old": "2番出口",
+    "new": "2番ドア",
+    "kind": "смысл",
+    "why": "Уточнение gate/door/exit по официальному источнику, таблица door-vs-gate.md"
+  },
+  {
+    "lang": "ja",
+    "iata": "PVG",
+    "block": "sleep",
+    "field": "text",
+    "old": "29番出口",
+    "new": "29番ドア",
+    "kind": "смысл",
+    "why": "Уточнение gate/door/exit по официальному источнику, таблица door-vs-gate.md"
+  },
+  {
+    "lang": "ko",
+    "iata": "PVG",
+    "block": "storage",
+    "field": "text",
+    "old": "7번 출구",
+    "new": "7번 출입구",
+    "kind": "смысл",
+    "why": "Уточнение gate/door/exit по официальному источнику, таблица door-vs-gate.md"
+  },
+  {
+    "lang": "ko",
+    "iata": "PVG",
+    "block": "sleep",
+    "field": "text",
+    "old": "2번 출구",
+    "new": "2번 출입구",
+    "kind": "смысл",
+    "why": "Уточнение gate/door/exit по официальному источнику, таблица door-vs-gate.md"
+  },
+  {
+    "lang": "ko",
+    "iata": "PVG",
+    "block": "sleep",
+    "field": "text",
+    "old": "29번 출구",
+    "new": "29번 출입구",
+    "kind": "смысл",
+    "why": "Уточнение gate/door/exit по официальному источнику, таблица door-vs-gate.md"
+  },
+  {
+    "lang": "ar",
+    "iata": "PVG",
+    "block": "storage",
+    "field": "text",
+    "old": "المخرجين 4 و5",
+    "new": "البابين 4 و5",
+    "kind": "смысл",
+    "why": "Уточнение gate/door/exit по официальному источнику, таблица door-vs-gate.md"
+  },
+  {
+    "lang": "ar",
+    "iata": "PVG",
+    "block": "storage",
+    "field": "text",
+    "old": "المخرج 7",
+    "new": "الباب 7",
+    "kind": "смысл",
+    "why": "Уточнение gate/door/exit по официальному источнику, таблица door-vs-gate.md"
+  },
+  {
+    "lang": "ar",
+    "iata": "PVG",
+    "block": "sleep",
+    "field": "text",
+    "old": "المخرج 2 في",
+    "new": "الباب 2 في",
+    "kind": "смысл",
+    "why": "Уточнение gate/door/exit по официальному источнику, таблица door-vs-gate.md"
+  },
+  {
+    "lang": "ar",
+    "iata": "PVG",
+    "block": "sleep",
+    "field": "text",
+    "old": "المخرج 29",
+    "new": "الباب 29",
+    "kind": "смысл",
+    "why": "Уточнение gate/door/exit по официальному источнику, таблица door-vs-gate.md"
+  },
+  {
+    "lang": "hi",
+    "iata": "PVG",
+    "block": "storage",
+    "field": "text",
+    "old": "द्वार 2A",
+    "new": "निकास 2A",
+    "kind": "смысл",
+    "why": "Уточнение gate/door/exit по официальному источнику, таблица door-vs-gate.md"
+  },
+  {
+    "lang": "zh",
+    "iata": "PVG",
+    "block": "storage",
+    "field": "text",
+    "old": "2A门",
+    "new": "2A出口",
+    "kind": "смысл",
+    "why": "Уточнение gate/door/exit по официальному источнику, таблица door-vs-gate.md"
+  },
+  {
+    "lang": "en",
+    "iata": "HND",
+    "block": "taxi",
+    "field": "text",
+    "old": "door 7",
+    "new": "exit 7",
+    "kind": "смысл",
+    "why": "Уточнение gate/door/exit по официальному источнику, таблица door-vs-gate.md"
+  },
+  {
+    "lang": "en",
+    "iata": "HND",
+    "block": "taxi",
+    "field": "text",
+    "old": "door 2",
+    "new": "exit 2",
+    "kind": "смысл",
+    "why": "Уточнение gate/door/exit по официальному источнику, таблица door-vs-gate.md"
+  },
+  {
+    "lang": "hi",
+    "iata": "HND",
+    "block": "taxi",
+    "field": "text",
+    "old": "द्वार 7",
+    "new": "निकास 7",
+    "kind": "смысл",
+    "why": "Уточнение gate/door/exit по официальному источнику, таблица door-vs-gate.md"
+  },
+  {
+    "lang": "hi",
+    "iata": "HND",
+    "block": "taxi",
+    "field": "text",
+    "old": "द्वार 2",
+    "new": "निकास 2",
+    "kind": "смысл",
+    "why": "Уточнение gate/door/exit по официальному источнику, таблица door-vs-gate.md"
+  },
+  {
+    "lang": "ko",
+    "iata": "HND",
+    "block": "taxi",
+    "field": "text",
+    "old": "7번 출입구",
+    "new": "7번 출구",
+    "kind": "смысл",
+    "why": "Уточнение gate/door/exit по официальному источнику, таблица door-vs-gate.md"
+  },
+  {
+    "lang": "ko",
+    "iata": "HND",
+    "block": "taxi",
+    "field": "text",
+    "old": "2번 출입구",
+    "new": "2번 출구",
+    "kind": "смысл",
+    "why": "Уточнение gate/door/exit по официальному источнику, таблица door-vs-gate.md"
+  },
+  {
+    "lang": "zh",
+    "iata": "HND",
+    "block": "taxi",
+    "field": "text",
+    "old": "7号门旁",
+    "new": "7号出口旁",
+    "kind": "смысл",
+    "why": "Уточнение gate/door/exit по официальному источнику, таблица door-vs-gate.md"
+  },
+  {
+    "lang": "zh",
+    "iata": "HND",
+    "block": "taxi",
+    "field": "text",
+    "old": "2号门旁",
+    "new": "2号出口旁",
+    "kind": "смысл",
+    "why": "Уточнение gate/door/exit по официальному источнику, таблица door-vs-gate.md"
+  },
+  {
+    "lang": "ar",
+    "iata": "CAN",
+    "block": "sleep",
+    "field": "text",
+    "old": "يسار الباب 61",
+    "new": "إلى اليسار بعد الباب 61",
+    "kind": "смысл",
+    "why": "Уточнение gate/door/exit по официальному источнику, таблица door-vs-gate.md"
+  },
+  {
+    "lang": "en",
+    "iata": "DEN",
+    "block": "transport",
+    "field": "text",
+    "old": "From here the A Line train runs to Denver Union Station, as do RTD buses AB, AT, 104L, 145X and 169L.",
+    "new": "The A Line train to Denver Union Station and RTD buses AB, AT, 104L, 145X and 169L depart from here.",
+    "kind": "смысл",
+    "why": "as do приписывало всем автобусам направление Denver Union Station; в оригинале только место отправления"
+  },
+  {
+    "lang": "en",
+    "iata": "LHR",
+    "block": "transport",
+    "field": "hint",
+    "old": "Heathrow Express, Elizabeth, Piccadilly",
+    "new": "Express, Elizabeth, Piccadilly",
+    "kind": "стиль",
+    "why": "Сокращение подписи до 35 символов, полный текст сохранён"
+  },
+  {
+    "lang": "en",
+    "iata": "MIA",
+    "block": "transport",
+    "field": "hint",
+    "old": "Metrorail, Metrobus, Tri-Rail, MIA Mover",
+    "new": "Metrorail, Tri-Rail, MIA Mover",
+    "kind": "стиль",
+    "why": "Сокращение подписи до 35 символов, Metrobus остаётся в тексте"
+  },
+  {
+    "lang": "en",
+    "iata": "MIA",
+    "block": "taxi",
+    "field": "text",
+    "old": "App-based rides",
+    "new": "Rideshare vehicles",
+    "kind": "стиль",
+    "why": "Английский термин для машин по приложению в US; условия и уровни сохранены"
+  },
+  {
+    "lang": "en",
+    "iata": "LAS",
+    "block": "parking",
+    "field": "text",
+    "old": "Economy and the remote lot (served by a free shuttle):",
+    "new": "Economy and the remote lot (the latter served by a free shuttle):",
+    "kind": "смысл",
+    "why": "Шаттл относится только к удалённой площадке, не Economy"
+  },
+  {
+    "lang": "de",
+    "iata": "LAS",
+    "block": "parking",
+    "field": "text",
+    "old": "Economy und das entfernte Gelände (mit kostenlosem Shuttle)",
+    "new": "Economy und das entfernte Gelände (zu Letzterem fährt ein kostenloser Shuttle)",
+    "kind": "смысл",
+    "why": "Бесплатный шаттл относится только к Remote Lot"
+  },
+  {
+    "lang": "de",
+    "iata": "ICN",
+    "block": "terminals",
+    "field": "text",
+    "old": "nur werktags",
+    "new": "nur montags bis freitags",
+    "kind": "смысл",
+    "why": "Werktags может включать субботу; оригинал «по будням»"
+  },
+  {
+    "lang": "de",
+    "iata": "SIN",
+    "block": "transport",
+    "field": "text",
+    "old": "unterirdischen Busbahnhöfen",
+    "new": "unterirdischen Bushaltestellen",
+    "kind": "смысл",
+    "why": "Автобусные площадки не автовокзалы"
+  },
+  {
+    "lang": "de",
+    "iata": "SIN",
+    "block": "storage",
+    "field": "text",
+    "old": "große und Sondergepäck über 10 kg",
+    "new": "große Gepäckstücke und Sondergepäck über 10 kg",
+    "kind": "стиль",
+    "why": "Согласование существительного и прилагательного"
+  },
+  {
+    "lang": "de",
+    "iata": "HKG",
+    "block": "storage",
+    "field": "text",
+    "old": "gelten als nicht abgeholt",
+    "new": "gelten als nicht beansprucht",
+    "kind": "смысл",
+    "why": "Unclaimed — статус невостребованного, не повтор факта неполучения"
+  },
+  {
+    "lang": "es",
+    "iata": "CAN",
+    "block": "taxi",
+    "field": "hint",
+    "old": "salidas 50",
+    "new": "puertas 50",
+    "kind": "смысл",
+    "why": "Двери терминала по шагу2"
+  },
+  {
+    "lang": "es",
+    "iata": "HND",
+    "block": "taxi",
+    "field": "text",
+    "old": "junto a la puerta 7",
+    "new": "junto a la salida 7",
+    "kind": "смысл",
+    "why": "Источник Exit7, не boardinggate"
+  },
+  {
+    "lang": "es",
+    "iata": "HND",
+    "block": "taxi",
+    "field": "text",
+    "old": "junto a la puerta 2",
+    "new": "junto a la salida 2",
+    "kind": "смысл",
+    "why": "Источник Exit2, не boardinggate"
+  },
+  {
+    "lang": "es",
+    "iata": "HND",
+    "block": "sleep",
+    "field": "text",
+    "old": "de la misma planta",
+    "new": "del mismo nivel",
+    "kind": "стиль",
+    "why": "Этаж по правилу nivelN"
+  },
+  {
+    "lang": "es",
+    "iata": "JFK",
+    "block": "sleep",
+    "field": "text",
+    "old": "por los pasarelas-tubo",
+    "new": "por las pasarelas tubulares",
+    "kind": "стиль",
+    "why": "Согласование рода и естественный термин"
+  },
+  {
+    "lang": "es",
+    "iata": "ICN",
+    "block": "kids",
+    "field": "text",
+    "old": "junto a las salidas B y E",
+    "new": "junto a las salas B y E",
+    "kind": "смысл",
+    "why": "В оригинале залыB/E, не выходы"
+  },
+  {
+    "lang": "es",
+    "iata": "LAS",
+    "block": "parking",
+    "field": "text",
+    "old": "Economy y el recinto remoto (con lanzadera gratuita)",
+    "new": "Economy y el recinto remoto (a este último llega una lanzadera gratuita)",
+    "kind": "смысл",
+    "why": "Шаттл только RemoteLot"
+  },
+  {
+    "lang": "es",
+    "iata": "LAS",
+    "block": "transport",
+    "field": "text",
+    "old": "en el nivel Level Zero",
+    "new": "en Level Zero",
+    "kind": "стиль",
+    "why": "Убрана тавтология"
+  },
+  {
+    "lang": "es",
+    "iata": "DFW",
+    "block": "lounges",
+    "field": "text",
+    "old": "dentro de la zona de control",
+    "new": "en la zona posterior al control",
+    "kind": "смысл",
+    "why": "Airside — после контроля, не внутри пункта досмотра"
+  },
+  {
+    "lang": "it",
+    "iata": "CAN",
+    "block": "taxi",
+    "field": "hint",
+    "old": "uscite 50",
+    "new": "porte 50",
+    "kind": "смысл",
+    "why": "Двери терминала по таблице шага2"
+  },
+  {
+    "lang": "it",
+    "iata": "LAS",
+    "block": "parking",
+    "field": "text",
+    "old": "Economy e area remota (servita da una navetta gratuita)",
+    "new": "Economy e area remota (quest’ultima servita da una navetta gratuita)",
+    "kind": "смысл",
+    "why": "Снять двусмысленное распространение шаттла на Economy"
+  },
+  {
+    "lang": "it",
+    "iata": "ICN",
+    "block": "terminals",
+    "field": "text",
+    "old": "solo nei giorni feriali",
+    "new": "solo dal lunedì al venerdì",
+    "kind": "смысл",
+    "why": "Giorni feriali может включать субботу; оригинал по будням"
+  },
+  {
+    "lang": "it",
+    "iata": "LHR",
+    "block": "transport",
+    "field": "hint",
+    "old": "Heathrow Express, Elizabeth line, Piccadilly",
+    "new": "Express, Elizabeth, Piccadilly",
+    "kind": "стиль",
+    "why": "Лимит35, полный текст сохранён"
+  },
+  {
+    "lang": "it",
+    "iata": "MIA",
+    "block": "transport",
+    "field": "hint",
+    "old": "Metrorail, Metrobus, Tri-Rail, MIA Mover",
+    "new": "Metrorail, Tri-Rail, MIA Mover",
+    "kind": "стиль",
+    "why": "Лимит35, полный текст сохранён"
+  },
+  {
+    "lang": "it",
+    "iata": "BKK",
+    "block": "terminals",
+    "field": "hint",
+    "old": "Terminal principale e satellite SAT-1",
+    "new": "Terminal principale e SAT-1",
+    "kind": "стиль",
+    "why": "Лимит35"
+  },
+  {
+    "lang": "tr",
+    "iata": "CAN",
+    "block": "transport",
+    "field": "text",
+    "old": "kapınından",
+    "new": "kapısından",
+    "kind": "стиль",
+    "why": "Правильный аффикс исходного падежа при двери42"
+  },
+  {
+    "lang": "tr",
+    "iata": "DEN",
+    "block": "transport",
+    "field": "text",
+    "old": "Buradan Denver Union Station'a A Line treni ile RTD AB, AT, 104L, 145X ve 169L otobüsleri kalkar.",
+    "new": "Buradan Denver Union Station'a giden A Line treni ve RTD AB, AT, 104L, 145X ve 169L otobüsleri kalkar.",
+    "kind": "смысл",
+    "why": "Направление UnionStation относится к поезду, не ко всем автобусам"
+  },
+  {
+    "lang": "tr",
+    "iata": "LAS",
+    "block": "parking",
+    "field": "text",
+    "old": "Economy ve uzak alan (ücretsiz servis gider)",
+    "new": "Economy ve uzak alan (ücretsiz servis yalnızca uzak alana gider)",
+    "kind": "смысл",
+    "why": "Шаттл только к RemoteLot, как в оригинале"
+  },
+  {
+    "lang": "tr",
+    "iata": "DFW",
+    "block": "lounges",
+    "field": "text",
+    "old": "güvenlik kontrolü alanının içinde",
+    "new": "güvenlik kontrolünden sonraki alanda",
+    "kind": "смысл",
+    "why": "Уточнена зона после контроля"
+  },
+  {
+    "lang": "tr",
+    "iata": "LAX",
+    "block": "taxi",
+    "field": "text",
+    "old": "dispeçer",
+    "new": "taksi sevk merkezi",
+    "kind": "стиль",
+    "why": "Убрана калька диспетчера"
+  },
+  {
+    "lang": "tr",
+    "iata": "LHR",
+    "block": "transport",
+    "field": "hint",
+    "old": "Heathrow Express, Elizabeth, Piccadilly",
+    "new": "Express, Elizabeth, Piccadilly",
+    "kind": "стиль",
+    "why": "Лимит35"
+  },
+  {
+    "lang": "tr",
+    "iata": "MIA",
+    "block": "transport",
+    "field": "hint",
+    "old": "Metrorail, Metrobus, Tri-Rail, MIA Mover",
+    "new": "Metrorail, Tri-Rail, MIA Mover",
+    "kind": "стиль",
+    "why": "Лимит35"
+  },
+  {
+    "lang": "zh",
+    "iata": "AMS",
+    "block": "storage",
+    "field": "text",
+    "old": "托运行李",
+    "new": "行李",
+    "kind": "смысл",
+    "why": "Оригинал не ограничивает хранение зарегистрированным багажом"
+  },
+  {
+    "lang": "zh",
+    "iata": "DEN",
+    "block": "kids",
+    "field": "text",
+    "old": "每个指廊安检后各有一处",
+    "new": "每个指廊的安检后区域均有",
+    "kind": "смысл",
+    "why": "Убрано придуманное точное количество комнат в каждом конкорсе"
+  },
+  {
+    "lang": "zh",
+    "iata": "DFW",
+    "block": "lounges",
+    "field": "text",
+    "old": "在安检区内",
+    "new": "在安检后区域内",
+    "kind": "смысл",
+    "why": "Skylink соединяет терминалы после досмотра"
+  },
+  {
+    "lang": "zh",
+    "iata": "HND",
+    "block": "kids",
+    "field": "text",
+    "old": "2楼安检前一处",
+    "new": "2楼安检前",
+    "kind": "смысл",
+    "why": "Оригинал не задаёт число площадок перед досмотром"
+  },
+  {
+    "lang": "zh",
+    "iata": "LAS",
+    "block": "parking",
+    "field": "text",
+    "old": "（有免费穿梭巴士）",
+    "new": "（后者有免费穿梭巴士）",
+    "kind": "смысл",
+    "why": "Бесплатный шаттл относится к Remote Lot"
+  },
+  {
+    "lang": "zh",
+    "iata": "ORD",
+    "block": "transport",
+    "field": "text",
+    "old": "8号和9号停车场",
+    "new": "8号和9号巴士停靠位",
+    "kind": "смысл",
+    "why": "Bus bays — остановочные места автобусов, не автостоянки"
+  },
+  {
+    "lang": "zh",
+    "iata": "PVG",
+    "block": "transport",
+    "field": "hint",
+    "old": "磁浮",
+    "new": "磁悬浮",
+    "kind": "имена",
+    "why": "Официальный китайский сайт аэропорта, раздел 磁悬浮: /pudong/cxf/index.html"
+  },
+  {
+    "lang": "zh",
+    "iata": "PVG",
+    "block": "transport",
+    "field": "text",
+    "old": "磁浮",
+    "new": "磁悬浮",
+    "kind": "имена",
+    "why": "Официальный китайский сайт аэропорта, раздел 磁悬浮: /pudong/cxf/index.html"
+  },
+  {
+    "lang": "ja",
+    "iata": "BCN",
+    "block": "transport",
+    "field": "text",
+    "old": "0階",
+    "new": "レベル0",
+    "kind": "смысл",
+    "why": "Уровень 0/2M сохраняет обозначение на указателе, не японский счёт этажей"
+  },
+  {
+    "lang": "ja",
+    "iata": "BCN",
+    "block": "taxi",
+    "field": "text",
+    "old": "0階",
+    "new": "レベル0",
+    "kind": "смысл",
+    "why": "Уровень 0/2M сохраняет обозначение на указателе, не японский счёт этажей"
+  },
+  {
+    "lang": "ja",
+    "iata": "CDG",
+    "block": "storage",
+    "field": "text",
+    "old": "0階",
+    "new": "レベル0",
+    "kind": "смысл",
+    "why": "Уровень 0/2M сохраняет обозначение на указателе, не японский счёт этажей"
+  },
+  {
+    "lang": "ja",
+    "iata": "DEL",
+    "block": "taxi",
+    "field": "text",
+    "old": "0階",
+    "new": "レベル0",
+    "kind": "смысл",
+    "why": "Уровень 0/2M сохраняет обозначение на указателе, не японский счёт этажей"
+  },
+  {
+    "lang": "ja",
+    "iata": "MAD",
+    "block": "taxi",
+    "field": "text",
+    "old": "0階",
+    "new": "レベル0",
+    "kind": "смысл",
+    "why": "Уровень 0/2M сохраняет обозначение на указателе, не японский счёт этажей"
+  },
+  {
+    "lang": "ja",
+    "iata": "SIN",
+    "block": "lounges",
+    "field": "text",
+    "old": "2M階",
+    "new": "レベル2M",
+    "kind": "смысл",
+    "why": "Уровень 0/2M сохраняет обозначение на указателе, не японский счёт этажей"
+  },
+  {
+    "lang": "ja",
+    "iata": "SIN",
+    "block": "sleep",
+    "field": "text",
+    "old": "2M階",
+    "new": "レベル2M",
+    "kind": "смысл",
+    "why": "Уровень 0/2M сохраняет обозначение на указателе, не японский счёт этажей"
+  },
+  {
+    "lang": "ja",
+    "iata": "FRA",
+    "block": "transport",
+    "field": "text",
+    "old": "0階",
+    "new": "レベル0",
+    "kind": "смысл",
+    "why": "Уровень 0/2M сохраняет обозначение на указателе, не японский счёт этажей"
+  },
+  {
+    "lang": "ja",
+    "iata": "LAS",
+    "block": "parking",
+    "field": "text",
+    "old": "離れた駐車場（無料シャトルが運行）",
+    "new": "離れた駐車場（後者には無料シャトルが運行）",
+    "kind": "смысл",
+    "why": "Шаттл в оригинале относится только к Remote Lot"
+  },
+  {
+    "lang": "ko",
+    "iata": "AMS",
+    "block": "storage",
+    "field": "text",
+    "old": "−1층",
+    "new": "지하 1층",
+    "kind": "стиль",
+    "why": "Корейское обозначение подземного этажа"
+  },
+  {
+    "lang": "ko",
+    "iata": "DFW",
+    "block": "lounges",
+    "field": "text",
+    "old": "보안 구역 안에서",
+    "new": "보안검색 후 구역 안에서",
+    "kind": "смысл",
+    "why": "Уточнена сторона досмотра"
+  },
+  {
+    "lang": "ko",
+    "iata": "DFW",
+    "block": "kids",
+    "field": "text",
+    "old": "실내 놀이 시설",
+    "new": "부드러운 소재의 놀이 시설",
+    "kind": "смысл",
+    "why": "Soft play описывает мягкое оборудование, не просто помещение"
+  },
+  {
+    "lang": "ko",
+    "iata": "MCO",
+    "block": "kids",
+    "field": "text",
+    "old": "실내 놀이 공간",
+    "new": "부드러운 소재의 놀이 공간",
+    "kind": "смысл",
+    "why": "Восстановлено значение мягкой игровой зоны"
+  },
+  {
+    "lang": "ko",
+    "iata": "HKG",
+    "block": "sleep",
+    "field": "text",
+    "old": "별도의 대기실 Bonded Bus Waiting Lounge",
+    "new": "보세버스 전용 대기실 Bonded Bus Waiting Lounge",
+    "kind": "смысл",
+    "why": "Сохранено назначение для автобусов под таможенным контролем"
+  },
+  {
+    "lang": "ko",
+    "iata": "LAX",
+    "block": "taxi",
+    "field": "text",
+    "old": "교통국 봉인",
+    "new": "교통국 스티커",
+    "kind": "смысл",
+    "why": "Seal здесь разрешительная наклейка на такси, не пломба"
+  },
+  {
+    "lang": "ko",
+    "iata": "MIA",
+    "block": "storage",
+    "field": "text",
+    "old": "여행 가방 용품",
+    "new": "여행용품",
+    "kind": "смысл",
+    "why": "Оригинал: дорожные товары, не только товары для чемоданов"
+  },
+  {
+    "lang": "ko",
+    "iata": "LAS",
+    "block": "parking",
+    "field": "text",
+    "old": "원격 주차장(무료 셔틀 운행)",
+    "new": "원격 주차장(후자는 무료 셔틀 운행)",
+    "kind": "смысл",
+    "why": "Шаттл только у Remote Lot"
+  },
+  {
+    "lang": "ko",
+    "iata": "ICN",
+    "block": "taxi",
+    "field": "text",
+    "old": "시계외 할증",
+    "new": "시계할증",
+    "kind": "имена",
+    "why": "Официальное название на airport.kr/ap_ko/986/subview.do"
+  },
+  {
+    "lang": "ko",
+    "iata": "ICN",
+    "block": "lounges",
+    "field": "text",
+    "old": "스카이허브 라운지",
+    "new": "스카이허브라운지",
+    "kind": "имена",
+    "why": "Официальное написание каталога airport.kr/ap_ko/1008/subview.do"
+  },
+  {
+    "lang": "ko",
+    "iata": "ICN",
+    "block": "lounges",
+    "field": "text",
+    "old": "탑승구",
+    "new": "게이트",
+    "kind": "имена",
+    "why": "В корейском каталоге удобств расположения подписаны 게이트"
+  },
+  {
+    "lang": "ko",
+    "iata": "ICN",
+    "block": "sleep",
+    "field": "text",
+    "old": "탑승구",
+    "new": "게이트",
+    "kind": "имена",
+    "why": "В корейском каталоге удобств расположения подписаны 게이트"
+  },
+  {
+    "lang": "ko",
+    "iata": "ICN",
+    "block": "kids",
+    "field": "text",
+    "old": "탑승구",
+    "new": "게이트",
+    "kind": "имена",
+    "why": "В корейском каталоге удобств расположения подписаны 게이트"
+  },
+  {
+    "lang": "ar",
+    "iata": "MIA",
+    "block": "lounges",
+    "field": "text",
+    "old": "بحسب المستوى وبتذكرة",
+    "new": "بحسب حالة العضوية أو بتذكرة",
+    "kind": "смысл",
+    "why": "Статус ИЛИ билет, не обязательное сочетание обоих условий"
+  },
+  {
+    "lang": "ar",
+    "iata": "MIA",
+    "block": "storage",
+    "field": "text",
+    "old": "إكسسوارات الأمتعة",
+    "new": "مستلزمات السفر",
+    "kind": "смысл",
+    "why": "Дорожные товары, не только принадлежности багажа"
+  },
+  {
+    "lang": "ar",
+    "iata": "DFW",
+    "block": "lounges",
+    "field": "text",
+    "old": "داخل المنطقة الآمنة",
+    "new": "داخل المنطقة بعد التفتيش الأمني",
+    "kind": "смысл",
+    "why": "Явно после досмотра"
+  },
+  {
+    "lang": "ar",
+    "iata": "DFW",
+    "block": "kids",
+    "field": "text",
+    "old": "مدينة ألعاب لينة وأماكن للبالغين",
+    "new": "تجهيزات لعب مبطنة ومقاعد للبالغين",
+    "kind": "стиль",
+    "why": "Естественное описание soft play и мест для взрослых"
+  },
+  {
+    "lang": "ar",
+    "iata": "DEN",
+    "block": "transport",
+    "field": "text",
+    "old": "من هنا يسير قطار A Line إلى Denver Union Station وحافلات RTD",
+    "new": "من هنا ينطلق قطار A Line إلى Denver Union Station، كما تنطلق حافلات RTD",
+    "kind": "смысл",
+    "why": "Направление Denver Union Station относится к поезду, не ко всем автобусам"
+  },
+  {
+    "lang": "ar",
+    "iata": "LAS",
+    "block": "parking",
+    "field": "text",
+    "old": "(تسير إليها حافلة نقل مجانية)",
+    "new": "(تسير إلى الأخيرة حافلة نقل مجانية)",
+    "kind": "смысл",
+    "why": "Шаттл только у Remote Lot"
+  },
+  {
+    "lang": "ar",
+    "iata": "BKK",
+    "block": "lounges",
+    "field": "text",
+    "old": "تقع صالات Miracle Lounge في المبنى الرئيسي في مناطق المغادرة في المستويات 2–4 عند الكونكورسات A وC وD وF وG، وكذلك في المبنى التابع SAT-1 في المستوى 4. في الصالة وجبات خفيفة ومشروبات ساخنة وباردة وWi‑Fi مجاني وصحف ومجلات. السعر التقريبي لساعتين للشخص: First Class — 1800 THB، وBusiness Class — 1500 THB.",
+    "new": "تقع صالات Miracle Lounge في المبنى الرئيسي في مناطق المغادرة في المستويات 2–4 عند أجنحة البوابات A وC وD وF وG، وكذلك في المبنى التابع SAT-1 في المستوى 4. في الصالة وجبات خفيفة ومشروبات ساخنة وباردة وWi‑Fi مجاني وصحف ومجلات. السعر التقريبي لساعتين للشخص: First Class — 1800 THB، وBusiness Class — 1500 THB.",
+    "kind": "стиль",
+    "why": "Единый естественный термин concourse: جناح البوابات, без транслитерации الكونكورس"
+  },
+  {
+    "lang": "ar",
+    "iata": "DEN",
+    "block": "lounges",
+    "field": "text",
+    "old": "الصالات في الطوابق النصفية للكونكورسات: American Airlines Admirals Club عند البوابة C-32، وAmerican Express Centurion Lounge عند C-46، وCapital One Lounge (Plaza Premium) عند A-34، وUnited Club عند A-25 وB-44 وB-32. United Club Fly عند البوابة B-60. Delta Sky Club بعد التفتيش الأمني في الطرف الشمالي للكونكورس A، على الجسر القادم من مبنى Jeppesen. منطقة الاستراحة المجانية Rest and Recharge بمقاعد قابلة للإمالة في الطابق النصفي للكونكورس A.",
+    "new": "الصالات في الطوابق النصفية لأجنحة البوابات: American Airlines Admirals Club عند البوابة C-32، وAmerican Express Centurion Lounge عند C-46، وCapital One Lounge (Plaza Premium) عند A-34، وUnited Club عند A-25 وB-44 وB-32. United Club Fly عند البوابة B-60. Delta Sky Club بعد التفتيش الأمني في الطرف الشمالي لجناح البوابات A، على الجسر القادم من مبنى Jeppesen. منطقة الاستراحة المجانية Rest and Recharge بمقاعد قابلة للإمالة في الطابق النصفي لجناح البوابات A.",
+    "kind": "стиль",
+    "why": "Единый естественный термин concourse: جناح البوابات, без транслитерации الكونكورس"
+  },
+  {
+    "lang": "ar",
+    "iata": "DEN",
+    "block": "kids",
+    "field": "text",
+    "old": "تعمل منطقتا لعب للأطفال على مدار الساعة عند البوابتين A25 وC54. غرف الرضاعة المجانية المزودة بطاولة لتغيير الحفاضات ومغسلة مفتوحة على مدار الساعة: بعد التفتيش الأمني في كل كونكورس، واثنتان في مبنى Jeppesen — في الوسط في المستوى 5 عند منطقة الوصول، وفي الجزء الشمالي الغربي عند الوصول الدولي.",
+    "new": "تعمل منطقتا لعب للأطفال على مدار الساعة عند البوابتين A25 وC54. غرف الرضاعة المجانية المزودة بطاولة لتغيير الحفاضات ومغسلة مفتوحة على مدار الساعة: بعد التفتيش الأمني في كل جناح للبوابات، واثنتان في مبنى Jeppesen — في الوسط في المستوى 5 عند منطقة الوصول، وفي الجزء الشمالي الغربي عند الوصول الدولي.",
+    "kind": "стиль",
+    "why": "Единый естественный термин concourse: جناح البوابات, без транслитерации الكونكورس"
+  },
+  {
+    "lang": "ar",
+    "iata": "DEN",
+    "block": "wifi",
+    "field": "text",
+    "old": "Wi‑Fi مجاني في جميع أنحاء المطار: الشبكات DEN Airport Free WiFi أو DEN Airport Free WiFi 2.4G أو DEN FREE WIFI 6E، اختر إحداها واضغط Connect. تتوفر مقابس كهربائية في جميع أنحاء مبنى Jeppesen وفي الكونكورسات الثلاثة، وكذلك محطات شحن مستقلة بمقاعد وأسطح طاولات.",
+    "new": "Wi‑Fi مجاني في جميع أنحاء المطار: الشبكات DEN Airport Free WiFi أو DEN Airport Free WiFi 2.4G أو DEN FREE WIFI 6E، اختر إحداها واضغط Connect. تتوفر مقابس كهربائية في جميع أنحاء مبنى Jeppesen وفي أجنحة البوابات الثلاثة، وكذلك محطات شحن مستقلة بمقاعد وأسطح طاولات.",
+    "kind": "стиль",
+    "why": "Единый естественный термин concourse: جناح البوابات, без транслитерации الكونكورس"
+  },
+  {
+    "lang": "ar",
+    "iata": "MIA",
+    "block": "kids",
+    "field": "text",
+    "old": "منطقة الأطفال التفاعلية Plane Fun في الكونكورس E عند البوابة E5، ويمكن الوصول إليها أيضًا من الكونكورس D. توجد غرف الرضاعة MIAmamas في كل كونكورس بعد التفتيش الأمني.",
+    "new": "منطقة الأطفال التفاعلية Plane Fun في جناح البوابات E عند البوابة E5، ويمكن الوصول إليها أيضًا من جناح البوابات D. توجد غرف الرضاعة MIAmamas في كل جناح للبوابات بعد التفتيش الأمني.",
+    "kind": "стиль",
+    "why": "Единый естественный термин concourse: جناح البوابات, без транслитерации الكونكورس"
+  },
+  {
+    "lang": "hi",
+    "iata": "LHR",
+    "block": "transport",
+    "field": "text",
+    "old": "पैडिंगटन",
+    "new": "Paddington",
+    "kind": "имена",
+    "why": "Все названия станций латиницей, единое Paddington"
+  },
+  {
+    "lang": "hi",
+    "iata": "CAN",
+    "block": "lounges",
+    "field": "text",
+    "old": "अंतरराष्ट्रीय जाँच के बाद",
+    "new": "अंतरराष्ट्रीय पासपोर्ट जाँच के बाद",
+    "kind": "смысл",
+    "why": "Оригинал: после паспортного контроля, а не неопределённой проверки"
+  },
+  {
+    "lang": "hi",
+    "iata": "CDG",
+    "block": "taxi",
+    "field": "text",
+    "old": "जलते हुए «TAXI» संकेत",
+    "new": "रोशन «TAXI» संकेत",
+    "kind": "стиль",
+    "why": "Световой знак, естественная формулировка"
+  },
+  {
+    "lang": "hi",
+    "iata": "DEN",
+    "block": "transport",
+    "field": "text",
+    "old": "यहाँ से Denver Union Station तक A Line ट्रेन और RTD बसें",
+    "new": "यहाँ से Denver Union Station जाने वाली A Line ट्रेन और RTD बसें",
+    "kind": "смысл",
+    "why": "Назначение Denver Union Station только у поезда"
+  },
+  {
+    "lang": "hi",
+    "iata": "DFW",
+    "block": "lounges",
+    "field": "text",
+    "old": "सुरक्षा क्षेत्र के अंदर",
+    "new": "सुरक्षा जाँच के बाद वाले क्षेत्र के अंदर",
+    "kind": "смысл",
+    "why": "Уточнена сторона досмотра"
+  },
+  {
+    "lang": "hi",
+    "iata": "MIA",
+    "block": "lounges",
+    "field": "text",
+    "old": "स्टेटस और American",
+    "new": "स्टेटस या American",
+    "kind": "смысл",
+    "why": "Статус ИЛИ билет, не оба одновременно"
+  },
+  {
+    "lang": "hi",
+    "iata": "MIA",
+    "block": "storage",
+    "field": "text",
+    "old": "सामान के सहायक उपकरण",
+    "new": "यात्रा के सामान",
+    "kind": "смысл",
+    "why": "Дорожные товары, не только аксессуары багажа"
+  },
+  {
+    "lang": "hi",
+    "iata": "ORD",
+    "block": "transport",
+    "field": "text",
+    "old": "भूतल की पैदल सुरंगों",
+    "new": "भूमिगत पैदल सुरंगों",
+    "kind": "смысл",
+    "why": "Оригинал: подземные тоннели, не наземный уровень"
+  },
+  {
+    "lang": "hi",
+    "iata": "ORD",
+    "block": "kids",
+    "field": "text",
+    "old": "शिशु आहार",
+    "new": "शिशु फ़ॉर्मूला दूध",
+    "kind": "смысл",
+    "why": "Оригинал: молочная смесь, не любое детское питание"
+  },
+  {
+    "lang": "hi",
+    "iata": "LAS",
+    "block": "parking",
+    "field": "text",
+    "old": "(वहाँ निःशुल्क शटल जाती है)",
+    "new": "(दूसरी पार्किंग तक निःशुल्क शटल जाती है)",
+    "kind": "смысл",
+    "why": "Шаттл относится только к Remote Lot"
+  },
+  {
+    "lang": "hi",
+    "iata": "JFK",
+    "block": "sleep",
+    "field": "text",
+    "old": "की ट्यूबनुमा गलियारे",
+    "new": "के ट्यूबनुमा गलियारे",
+    "kind": "стиль",
+    "why": "Грамматическое согласование"
+  },
+  {
+    "lang": "ar",
+    "iata": "MIA",
+    "block": "lounges",
+    "field": "text",
+    "old": "بحسب حالة العضوية أو بتذكرة",
+    "new": "بحسب حالة العضوية وبتذكرة",
+    "kind": "смысл",
+    "why": "Повторная проверка русского исходника: в нём «по статусу и билету», сохраняем И. Предыдущее изменение ar/hi на ИЛИ было ошибкой рецензента и отменено"
+  },
+  {
+    "lang": "hi",
+    "iata": "MIA",
+    "block": "lounges",
+    "field": "text",
+    "old": "स्टेटस या American",
+    "new": "स्टेटस और American",
+    "kind": "смысл",
+    "why": "Повторная проверка русского исходника: в нём «по статусу и билету», сохраняем И. Предыдущее изменение ar/hi на ИЛИ было ошибкой рецензента и отменено"
+  },
+  {
+    "lang": "ja",
+    "iata": "MIA",
+    "block": "lounges",
+    "field": "text",
+    "old": "ステータス、またはAmerican",
+    "new": "ステータスと、American",
+    "kind": "смысл",
+    "why": "Повторная проверка русского исходника: в нём «по статусу и билету», сохраняем И. Предыдущее изменение ar/hi на ИЛИ было ошибкой рецензента и отменено"
+  },
+  {
+    "lang": "ko",
+    "iata": "MIA",
+    "block": "lounges",
+    "field": "text",
+    "old": "등급 또는 American",
+    "new": "등급과 American",
+    "kind": "смысл",
+    "why": "Повторная проверка русского исходника: в нём «по статусу и билету», сохраняем И. Предыдущее изменение ar/hi на ИЛИ было ошибкой рецензента и отменено"
+  },
+  {
+    "lang": "ar",
+    "iata": "MIA",
+    "block": "storage",
+    "field": "text",
+    "old": "مستلزمات السفر",
+    "new": "إكسسوارات الأمتعة",
+    "kind": "смысл",
+    "why": "Отмена избыточной правки: русский оригинал говорит «багажные аксессуары», не дорожные товары; сохраняем исходный объём смысла"
+  },
+  {
+    "lang": "hi",
+    "iata": "MIA",
+    "block": "storage",
+    "field": "text",
+    "old": "यात्रा के सामान",
+    "new": "सामान के सहायक उपकरण",
+    "kind": "смысл",
+    "why": "Отмена избыточной правки: русский оригинал говорит «багажные аксессуары», не дорожные товары; сохраняем исходный объём смысла"
+  },
+  {
+    "lang": "ko",
+    "iata": "MIA",
+    "block": "storage",
+    "field": "text",
+    "old": "여행용품",
+    "new": "여행 가방 용품",
+    "kind": "смысл",
+    "why": "Отмена избыточной правки: русский оригинал говорит «багажные аксессуары», не дорожные товары; сохраняем исходный объём смысла"
+  },
+  {
+    "lang": "ko",
+    "iata": "HKG",
+    "block": "sleep",
+    "field": "text",
+    "old": "보세버스 전용 대기실 Bonded Bus Waiting Lounge",
+    "new": "별도의 대기실 Bonded Bus Waiting Lounge",
+    "kind": "смысл",
+    "why": "Отмена лишнего пояснения: оригинал оставляет Bonded Bus Waiting Lounge собственным именем"
+  },
+  {
+    "lang": "zh",
+    "iata": "AMS",
+    "block": "sleep",
+    "field": "hint",
+    "old": "安检后的YOTELAIR和Mercure",
+    "new": "安检后的两家酒店",
+    "kind": "стиль",
+    "why": "Краткая подпись ≤18 символов для CJK; полные имена и условия сохранены в text"
+  },
+  {
+    "lang": "zh",
+    "iata": "BKK",
+    "block": "lounges",
+    "field": "hint",
+    "old": "Miracle，2小时1,500 THB起",
+    "new": "Miracle，付费休息室",
+    "kind": "стиль",
+    "why": "Краткая подпись ≤18 символов для CJK; полные имена и условия сохранены в text"
+  },
+  {
+    "lang": "zh",
+    "iata": "CAN",
+    "block": "lounges",
+    "field": "hint",
+    "old": "Premium Lounge、Sky Pearl、L32",
+    "new": "T2、T3的休息室",
+    "kind": "стиль",
+    "why": "Краткая подпись ≤18 символов для CJK; полные имена и условия сохранены в text"
+  },
+  {
+    "lang": "zh",
+    "iata": "CAN",
+    "block": "wifi",
+    "field": "hint",
+    "old": "AIRPORT-FREE-WiFi，短信登录",
+    "new": "免费Wi‑Fi，短信登录",
+    "kind": "стиль",
+    "why": "Краткая подпись ≤18 символов для CJK; полные имена и условия сохранены в text"
+  },
+  {
+    "lang": "zh",
+    "iata": "CDG",
+    "block": "transport",
+    "field": "hint",
+    "old": "RER B、9517路、Noctilien",
+    "new": "RER B和日夜巴士",
+    "kind": "стиль",
+    "why": "Краткая подпись ≤18 символов для CJK; полные имена и условия сохранены в text"
+  },
+  {
+    "lang": "zh",
+    "iata": "CDG",
+    "block": "storage",
+    "field": "hint",
+    "old": "Bagages du Monde，7:00–21:00",
+    "new": "行李寄存，7:00–21:00",
+    "kind": "стиль",
+    "why": "Краткая подпись ≤18 символов для CJK; полные имена и условия сохранены в text"
+  },
+  {
+    "lang": "zh",
+    "iata": "CDG",
+    "block": "sleep",
+    "field": "hint",
+    "old": "2号航站楼Sheraton和YotelAir",
+    "new": "2号航站楼及附近的酒店",
+    "kind": "стиль",
+    "why": "Краткая подпись ≤18 символов для CJK; полные имена и условия сохранены в text"
+  },
+  {
+    "lang": "zh",
+    "iata": "DEL",
+    "block": "transport",
+    "field": "hint",
+    "old": "地铁：Airport Express和Magenta",
+    "new": "两条地铁线路",
+    "kind": "стиль",
+    "why": "Краткая подпись ≤18 символов для CJK; полные имена и условия сохранены в text"
+  },
+  {
+    "lang": "zh",
+    "iata": "DEN",
+    "block": "lounges",
+    "field": "hint",
+    "old": "United Club、Centurion、Sky Club",
+    "new": "各指廊的休息室",
+    "kind": "стиль",
+    "why": "Краткая подпись ≤18 символов для CJK; полные имена и условия сохранены в text"
+  },
+  {
+    "lang": "zh",
+    "iata": "DFW",
+    "block": "transport",
+    "field": "hint",
+    "old": "DART、TEXRail、TRE接驳巴士",
+    "new": "DART、TEXRail等",
+    "kind": "стиль",
+    "why": "Краткая подпись ≤18 символов для CJK; полные имена и условия сохранены в text"
+  },
+  {
+    "lang": "zh",
+    "iata": "DFW",
+    "block": "parking",
+    "field": "hint",
+    "old": "Terminal、Express、Remote、Valet",
+    "new": "航站楼及远程停车场",
+    "kind": "стиль",
+    "why": "Краткая подпись ≤18 символов для CJK; полные имена и условия сохранены в text"
+  },
+  {
+    "lang": "zh",
+    "iata": "FRA",
+    "block": "lounges",
+    "field": "hint",
+    "old": "T1 Lufthansa，T3 SkyTeam",
+    "new": "T1、T3的休息室",
+    "kind": "стиль",
+    "why": "Краткая подпись ≤18 символов для CJK; полные имена и условия сохранены в text"
+  },
+  {
+    "lang": "zh",
+    "iata": "FRA",
+    "block": "sleep",
+    "field": "hint",
+    "old": "napcabs睡眠舱，每小时12 €起",
+    "new": "napcabs，€12/小时起",
+    "kind": "стиль",
+    "why": "Краткая подпись ≤18 символов для CJK; полные имена и условия сохранены в text"
+  },
+  {
+    "lang": "zh",
+    "iata": "HKG",
+    "block": "lounges",
+    "field": "hint",
+    "old": "Plaza Premium、Kyra、Centurion",
+    "new": "付费休息室，登机口旁",
+    "kind": "стиль",
+    "why": "Краткая подпись ≤18 символов для CJK; полные имена и условия сохранены в text"
+  },
+  {
+    "lang": "zh",
+    "iata": "HND",
+    "block": "transport",
+    "field": "hint",
+    "old": "Keikyu和Tokyo Monorail",
+    "new": "京急线和东京单轨电车",
+    "kind": "стиль",
+    "why": "Краткая подпись ≤18 символов для CJK; полные имена и условия сохранены в text"
+  },
+  {
+    "lang": "zh",
+    "iata": "HND",
+    "block": "wifi",
+    "field": "hint",
+    "old": "免费网络HANEDA-FREE-WIFI",
+    "new": "免费Wi‑Fi",
+    "kind": "стиль",
+    "why": "Краткая подпись ≤18 символов для CJK; полные имена и условия сохранены в text"
+  },
+  {
+    "lang": "zh",
+    "iata": "LAS",
+    "block": "transport",
+    "field": "hint",
+    "old": "RTC 108路和Red Line巴士",
+    "new": "RTC巴士108路等",
+    "kind": "стиль",
+    "why": "Краткая подпись ≤18 символов для CJK; полные имена и условия сохранены в text"
+  },
+  {
+    "lang": "zh",
+    "iata": "LHR",
+    "block": "transport",
+    "field": "hint",
+    "old": "Heathrow Express、Elizabeth line、Piccadilly",
+    "new": "快线及地铁",
+    "kind": "стиль",
+    "why": "Краткая подпись ≤18 символов для CJK; полные имена и условия сохранены в text"
+  },
+  {
+    "lang": "zh",
+    "iata": "LHR",
+    "block": "storage",
+    "field": "hint",
+    "old": "Excess Baggage，£10起",
+    "new": "行李寄存，£10起",
+    "kind": "стиль",
+    "why": "Краткая подпись ≤18 символов для CJK; полные имена и условия сохранены в text"
+  },
+  {
+    "lang": "zh",
+    "iata": "LHR",
+    "block": "wifi",
+    "field": "hint",
+    "old": "免费，Heathrow Wi‑Fi网络",
+    "new": "免费，Heathrow Wi‑Fi",
+    "kind": "стиль",
+    "why": "Краткая подпись ≤18 символов для CJK; полные имена и условия сохранены в text"
+  },
+  {
+    "lang": "zh",
+    "iata": "MCO",
+    "block": "transport",
+    "field": "hint",
+    "old": "Brightline至迈阿密，SunRail",
+    "new": "迈阿密列车及SunRail",
+    "kind": "стиль",
+    "why": "Краткая подпись ≤18 символов для CJK; полные имена и условия сохранены в text"
+  },
+  {
+    "lang": "zh",
+    "iata": "MCO",
+    "block": "taxi",
+    "field": "hint",
+    "old": "International Drive $38–45",
+    "new": "出租车参考价格",
+    "kind": "стиль",
+    "why": "Краткая подпись ≤18 символов для CJK; полные имена и условия сохранены в text"
+  },
+  {
+    "lang": "zh",
+    "iata": "MCO",
+    "block": "sleep",
+    "field": "hint",
+    "old": "A/B航站楼内的Hyatt Regency",
+    "new": "A/B航站楼内的酒店",
+    "kind": "стиль",
+    "why": "Краткая подпись ≤18 символов для CJK; полные имена и условия сохранены в text"
+  },
+  {
+    "lang": "zh",
+    "iata": "MIA",
+    "block": "transport",
+    "field": "hint",
+    "old": "Metrorail、Metrobus、Tri-Rail、MIA Mover",
+    "new": "铁路、巴士及免费机场列车",
+    "kind": "стиль",
+    "why": "Краткая подпись ≤18 символов для CJK; полные имена и условия сохранены в text"
+  },
+  {
+    "lang": "zh",
+    "iata": "MIA",
+    "block": "lounges",
+    "field": "hint",
+    "old": "Flagship、Admirals Club、Centurion",
+    "new": "北航站楼的休息室",
+    "kind": "стиль",
+    "why": "Краткая подпись ≤18 символов для CJK; полные имена и условия сохранены в text"
+  },
+  {
+    "lang": "zh",
+    "iata": "MIA",
+    "block": "sleep",
+    "field": "hint",
+    "old": "E航站楼酒店，Wait n' rest",
+    "new": "E航站楼酒店及睡眠房",
+    "kind": "стиль",
+    "why": "Краткая подпись ≤18 символов для CJK; полные имена и условия сохранены в text"
+  },
+  {
+    "lang": "zh",
+    "iata": "ORD",
+    "block": "transport",
+    "field": "hint",
+    "old": "CTA Blue Line全天候，Metra",
+    "new": "全天候地铁及Metra",
+    "kind": "стиль",
+    "why": "Краткая подпись ≤18 символов для CJK; полные имена и условия сохранены в text"
+  },
+  {
+    "lang": "zh",
+    "iata": "ORD",
+    "block": "lounges",
+    "field": "hint",
+    "old": "United Club、Admirals Club、Sky Club",
+    "new": "各航站楼的休息室",
+    "kind": "стиль",
+    "why": "Краткая подпись ≤18 символов для CJK; полные имена и условия сохранены в text"
+  },
+  {
+    "lang": "zh",
+    "iata": "PVG",
+    "block": "wifi",
+    "field": "hint",
+    "old": "#AirportPVG-Free-WiFi，免费",
+    "new": "免费Wi‑Fi",
+    "kind": "стиль",
+    "why": "Краткая подпись ≤18 символов для CJK; полные имена и условия сохранены в text"
+  },
+  {
+    "lang": "zh",
+    "iata": "SIN",
+    "block": "transport",
+    "field": "hint",
+    "old": "MRT及24、27、36、858路巴士",
+    "new": "MRT及多条巴士线路",
+    "kind": "стиль",
+    "why": "Краткая подпись ≤18 символов для CJK; полные имена и условия сохранены в text"
+  },
+  {
+    "lang": "zh",
+    "iata": "SIN",
+    "block": "terminals",
+    "field": "hint",
+    "old": "Skytrain T1–T3，巴士至T4",
+    "new": "T1–T3列车，T4巴士",
+    "kind": "стиль",
+    "why": "Краткая подпись ≤18 символов для CJK; полные имена и условия сохранены в text"
+  },
+  {
+    "lang": "ja",
+    "iata": "AMS",
+    "block": "taxi",
+    "field": "hint",
+    "old": "Schiphol Plaza前の乗り場",
+    "new": "Plaza前の乗り場",
+    "kind": "стиль",
+    "why": "Краткая подпись ≤18 символов для CJK; полные имена и условия сохранены в text"
+  },
+  {
+    "lang": "ja",
+    "iata": "AMS",
+    "block": "sleep",
+    "field": "hint",
+    "old": "検査後にYOTELAIRとMercure",
+    "new": "検査後のホテル2軒",
+    "kind": "стиль",
+    "why": "Краткая подпись ≤18 символов для CJK; полные имена и условия сохранены в text"
+  },
+  {
+    "lang": "ja",
+    "iata": "BKK",
+    "block": "lounges",
+    "field": "hint",
+    "old": "Miracle、2時間1,500 THBから",
+    "new": "Miracle、有料ラウンジ",
+    "kind": "стиль",
+    "why": "Краткая подпись ≤18 символов для CJK; полные имена и условия сохранены в text"
+  },
+  {
+    "lang": "ja",
+    "iata": "BKK",
+    "block": "storage",
+    "field": "hint",
+    "old": "2階と4階、24時間150 THBから",
+    "new": "2・4階、24時間150 THB〜",
+    "kind": "стиль",
+    "why": "Краткая подпись ≤18 символов для CJK; полные имена и условия сохранены в text"
+  },
+  {
+    "lang": "ja",
+    "iata": "CAN",
+    "block": "transport",
+    "field": "hint",
+    "old": "地下鉄3号線 — Airport North",
+    "new": "地下鉄3号線",
+    "kind": "стиль",
+    "why": "Краткая подпись ≤18 символов для CJK; полные имена и условия сохранены в text"
+  },
+  {
+    "lang": "ja",
+    "iata": "CAN",
+    "block": "lounges",
+    "field": "hint",
+    "old": "Premium Lounge、Sky Pearl、L32",
+    "new": "T2・T3のラウンジ",
+    "kind": "стиль",
+    "why": "Краткая подпись ≤18 символов для CJK; полные имена и условия сохранены в text"
+  },
+  {
+    "lang": "ja",
+    "iata": "CAN",
+    "block": "wifi",
+    "field": "hint",
+    "old": "AIRPORT-FREE-WiFi、SMS認証",
+    "new": "無料Wi‑Fi、SMS認証",
+    "kind": "стиль",
+    "why": "Краткая подпись ≤18 символов для CJK; полные имена и условия сохранены в text"
+  },
+  {
+    "lang": "ja",
+    "iata": "CDG",
+    "block": "transport",
+    "field": "hint",
+    "old": "RER B、9517番バス、Noctilien",
+    "new": "RER Bと昼夜のバス",
+    "kind": "стиль",
+    "why": "Краткая подпись ≤18 символов для CJK; полные имена и условия сохранены в text"
+  },
+  {
+    "lang": "ja",
+    "iata": "CDG",
+    "block": "storage",
+    "field": "hint",
+    "old": "Bagages du Monde、7:00–21:00",
+    "new": "手荷物預かり7:00–21:00",
+    "kind": "стиль",
+    "why": "Краткая подпись ≤18 символов для CJK; полные имена и условия сохранены в text"
+  },
+  {
+    "lang": "ja",
+    "iata": "CDG",
+    "block": "sleep",
+    "field": "hint",
+    "old": "T2にSheratonとYotelAir",
+    "new": "T2と周辺のホテル",
+    "kind": "стиль",
+    "why": "Краткая подпись ≤18 символов для CJK; полные имена и условия сохранены в text"
+  },
+  {
+    "lang": "ja",
+    "iata": "DEL",
+    "block": "transport",
+    "field": "hint",
+    "old": "地下鉄Airport ExpressとMagenta",
+    "new": "地下鉄2路線",
+    "kind": "стиль",
+    "why": "Краткая подпись ≤18 символов для CJK; полные имена и условия сохранены в text"
+  },
+  {
+    "lang": "ja",
+    "iata": "DEN",
+    "block": "lounges",
+    "field": "hint",
+    "old": "United Club、Centurion、Sky Club",
+    "new": "各コンコースのラウンジ",
+    "kind": "стиль",
+    "why": "Краткая подпись ≤18 символов для CJK; полные имена и условия сохранены в text"
+  },
+  {
+    "lang": "ja",
+    "iata": "DFW",
+    "block": "transport",
+    "field": "hint",
+    "old": "DART、TEXRail、TRE行きバス",
+    "new": "DART・TEXRailなど",
+    "kind": "стиль",
+    "why": "Краткая подпись ≤18 символов для CJK; полные имена и условия сохранены в text"
+  },
+  {
+    "lang": "ja",
+    "iata": "DFW",
+    "block": "parking",
+    "field": "hint",
+    "old": "Terminal、Express、Remote、Valet",
+    "new": "ターミナル前と遠隔駐車場",
+    "kind": "стиль",
+    "why": "Краткая подпись ≤18 символов для CJK; полные имена и условия сохранены в text"
+  },
+  {
+    "lang": "ja",
+    "iata": "FRA",
+    "block": "lounges",
+    "field": "hint",
+    "old": "T1にLufthansa、T3にSkyTeam",
+    "new": "T1・T3のラウンジ",
+    "kind": "стиль",
+    "why": "Краткая подпись ≤18 символов для CJK; полные имена и условия сохранены в text"
+  },
+  {
+    "lang": "ja",
+    "iata": "HKG",
+    "block": "transport",
+    "field": "hint",
+    "old": "Airport Express、中環まで24分",
+    "new": "中環まで列車で24分",
+    "kind": "стиль",
+    "why": "Краткая подпись ≤18 символов для CJK; полные имена и условия сохранены в text"
+  },
+  {
+    "lang": "ja",
+    "iata": "HKG",
+    "block": "lounges",
+    "field": "hint",
+    "old": "Plaza Premium、Kyra、Centurion",
+    "new": "ゲート付近の有料ラウンジ",
+    "kind": "стиль",
+    "why": "Краткая подпись ≤18 символов для CJK; полные имена и условия сохранены в text"
+  },
+  {
+    "lang": "ja",
+    "iata": "ICN",
+    "block": "sleep",
+    "field": "hint",
+    "old": "カプセルDarakhyu、トランジットホテル",
+    "new": "カプセルとトランジットホテル",
+    "kind": "стиль",
+    "why": "Краткая подпись ≤18 символов для CJK; полные имена и условия сохранены в text"
+  },
+  {
+    "lang": "ja",
+    "iata": "KUL",
+    "block": "transport",
+    "field": "hint",
+    "old": "KLIA Ekspres、KL Sentralまで28分",
+    "new": "KL Sentralまで28分",
+    "kind": "стиль",
+    "why": "Краткая подпись ≤18 символов для CJK; полные имена и условия сохранены в text"
+  },
+  {
+    "lang": "ja",
+    "iata": "LAS",
+    "block": "parking",
+    "field": "hint",
+    "old": "17,000台以上、24時間$14から",
+    "new": "24時間$14から",
+    "kind": "стиль",
+    "why": "Краткая подпись ≤18 символов для CJK; полные имена и условия сохранены в text"
+  },
+  {
+    "lang": "ja",
+    "iata": "LHR",
+    "block": "transport",
+    "field": "hint",
+    "old": "Heathrow Express、Elizabeth line、Piccadilly",
+    "new": "急行列車と地下鉄",
+    "kind": "стиль",
+    "why": "Краткая подпись ≤18 символов для CJK; полные имена и условия сохранены в text"
+  },
+  {
+    "lang": "ja",
+    "iata": "LHR",
+    "block": "storage",
+    "field": "hint",
+    "old": "Excess Baggage、£10から",
+    "new": "手荷物預かり£10から",
+    "kind": "стиль",
+    "why": "Краткая подпись ≤18 символов для CJK; полные имена и условия сохранены в text"
+  },
+  {
+    "lang": "ja",
+    "iata": "MCO",
+    "block": "transport",
+    "field": "hint",
+    "old": "マイアミ行きBrightline、SunRail",
+    "new": "マイアミ行き列車など",
+    "kind": "стиль",
+    "why": "Краткая подпись ≤18 символов для CJK; полные имена и условия сохранены в text"
+  },
+  {
+    "lang": "ja",
+    "iata": "MCO",
+    "block": "taxi",
+    "field": "hint",
+    "old": "International Driveまで$38–45",
+    "new": "タクシーの目安運賃",
+    "kind": "стиль",
+    "why": "Краткая подпись ≤18 символов для CJK; полные имена и условия сохранены в text"
+  },
+  {
+    "lang": "ja",
+    "iata": "MCO",
+    "block": "sleep",
+    "field": "hint",
+    "old": "ターミナルA/BのHyatt Regency",
+    "new": "A/B館内のホテル",
+    "kind": "стиль",
+    "why": "Краткая подпись ≤18 символов для CJK; полные имена и условия сохранены в text"
+  },
+  {
+    "lang": "ja",
+    "iata": "MCO",
+    "block": "kids",
+    "field": "hint",
+    "old": "AとBにプレイエリア、Flybrary",
+    "new": "A・Bに遊び場、子ども図書館",
+    "kind": "стиль",
+    "why": "Краткая подпись ≤18 символов для CJK; полные имена и условия сохранены в text"
+  },
+  {
+    "lang": "ja",
+    "iata": "MIA",
+    "block": "transport",
+    "field": "hint",
+    "old": "Metrorail、Metrobus、Tri-Rail、MIA Mover",
+    "new": "鉄道・バスと空港内の無料列車",
+    "kind": "стиль",
+    "why": "Краткая подпись ≤18 символов для CJK; полные имена и условия сохранены в text"
+  },
+  {
+    "lang": "ja",
+    "iata": "MIA",
+    "block": "lounges",
+    "field": "hint",
+    "old": "Flagship、Admirals Club、Centurion",
+    "new": "北ターミナルのラウンジ",
+    "kind": "стиль",
+    "why": "Краткая подпись ≤18 символов для CJK; полные имена и условия сохранены в text"
+  },
+  {
+    "lang": "ja",
+    "iata": "MIA",
+    "block": "sleep",
+    "field": "hint",
+    "old": "ターミナルEのホテル、Wait n' rest",
+    "new": "Eのホテルと仮眠室",
+    "kind": "стиль",
+    "why": "Краткая подпись ≤18 символов для CJK; полные имена и условия сохранены в text"
+  },
+  {
+    "lang": "ja",
+    "iata": "ORD",
+    "block": "transport",
+    "field": "hint",
+    "old": "CTA Blue Line（24時間）、Metra",
+    "new": "地下鉄は24時間運行",
+    "kind": "стиль",
+    "why": "Краткая подпись ≤18 символов для CJK; полные имена и условия сохранены в text"
+  },
+  {
+    "lang": "ja",
+    "iata": "ORD",
+    "block": "lounges",
+    "field": "hint",
+    "old": "United Club、Admirals Club、Sky Club",
+    "new": "各ターミナルのラウンジ",
+    "kind": "стиль",
+    "why": "Краткая подпись ≤18 символов для CJK; полные имена и условия сохранены в text"
+  },
+  {
+    "lang": "ja",
+    "iata": "ORD",
+    "block": "sleep",
+    "field": "hint",
+    "old": "第1–3ターミナル向かいのHilton",
+    "new": "T1–T3向かいのHilton",
+    "kind": "стиль",
+    "why": "Краткая подпись ≤18 символов для CJK; полные имена и условия сохранены в text"
+  },
+  {
+    "lang": "ja",
+    "iata": "ORD",
+    "block": "kids",
+    "field": "hint",
+    "old": "第2ターミナルのFamily Lounge",
+    "new": "T2のキッズエリア",
+    "kind": "стиль",
+    "why": "Краткая подпись ≤18 символов для CJK; полные имена и условия сохранены в text"
+  },
+  {
+    "lang": "ja",
+    "iata": "PEK",
+    "block": "transport",
+    "field": "hint",
+    "old": "Airport Express、25元",
+    "new": "空港列車、片道25元",
+    "kind": "стиль",
+    "why": "Краткая подпись ≤18 символов для CJK; полные имена и условия сохранены в text"
+  },
+  {
+    "lang": "ja",
+    "iata": "PVG",
+    "block": "transport",
+    "field": "hint",
+    "old": "リニアでLongyang Roadへ、50元",
+    "new": "リニア、片道50元",
+    "kind": "стиль",
+    "why": "Краткая подпись ≤18 символов для CJK; полные имена и условия сохранены в text"
+  },
+  {
+    "lang": "ja",
+    "iata": "PVG",
+    "block": "wifi",
+    "field": "hint",
+    "old": "#AirportPVG-Free-WiFi、無料",
+    "new": "無料Wi‑Fi",
+    "kind": "стиль",
+    "why": "Краткая подпись ≤18 символов для CJK; полные имена и условия сохранены в text"
+  },
+  {
+    "lang": "ja",
+    "iata": "SIN",
+    "block": "transport",
+    "field": "hint",
+    "old": "MRTとバス24、27、36、858番",
+    "new": "MRTと複数のバス路線",
+    "kind": "стиль",
+    "why": "Краткая подпись ≤18 символов для CJK; полные имена и условия сохранены в text"
+  },
+  {
+    "lang": "ja",
+    "iata": "SIN",
+    "block": "terminals",
+    "field": "hint",
+    "old": "T1–T3はSkytrain、T4へはバス",
+    "new": "T1–T3列車、T4はバス",
+    "kind": "стиль",
+    "why": "Краткая подпись ≤18 символов для CJK; полные имена и условия сохранены в text"
+  },
+  {
+    "lang": "ko",
+    "iata": "AMS",
+    "block": "transport",
+    "field": "hint",
+    "old": "NS 열차, Amsterdam CS행",
+    "new": "NS 열차로 도심까지",
+    "kind": "стиль",
+    "why": "Краткая подпись ≤18 символов для CJK; полные имена и условия сохранены в text"
+  },
+  {
+    "lang": "ko",
+    "iata": "AMS",
+    "block": "taxi",
+    "field": "hint",
+    "old": "Schiphol Plaza 앞 승강장",
+    "new": "Plaza 앞 승강장",
+    "kind": "стиль",
+    "why": "Краткая подпись ≤18 символов для CJK; полные имена и условия сохранены в text"
+  },
+  {
+    "lang": "ko",
+    "iata": "AMS",
+    "block": "sleep",
+    "field": "hint",
+    "old": "보안검색 후 YOTELAIR·Mercure",
+    "new": "검색 후 호텔 두 곳",
+    "kind": "стиль",
+    "why": "Краткая подпись ≤18 символов для CJK; полные имена и условия сохранены в text"
+  },
+  {
+    "lang": "ko",
+    "iata": "BKK",
+    "block": "lounges",
+    "field": "hint",
+    "old": "Miracle, 2시간 1,500 THB~",
+    "new": "Miracle 유료 라운지",
+    "kind": "стиль",
+    "why": "Краткая подпись ≤18 символов для CJK; полные имена и условия сохранены в text"
+  },
+  {
+    "lang": "ko",
+    "iata": "BKK",
+    "block": "storage",
+    "field": "hint",
+    "old": "2·4층, 24시간 150 THB~",
+    "new": "24시간 150 THB부터",
+    "kind": "стиль",
+    "why": "Краткая подпись ≤18 символов для CJK; полные имена и условия сохранены в text"
+  },
+  {
+    "lang": "ko",
+    "iata": "CAN",
+    "block": "transport",
+    "field": "hint",
+    "old": "지하철 3호선 Airport North",
+    "new": "지하철 3호선",
+    "kind": "стиль",
+    "why": "Краткая подпись ≤18 символов для CJK; полные имена и условия сохранены в text"
+  },
+  {
+    "lang": "ko",
+    "iata": "CAN",
+    "block": "taxi",
+    "field": "hint",
+    "old": "T2 50·53번, T3 75번 출입구",
+    "new": "T2·T3 출입구 밖",
+    "kind": "стиль",
+    "why": "Краткая подпись ≤18 символов для CJK; полные имена и условия сохранены в text"
+  },
+  {
+    "lang": "ko",
+    "iata": "CAN",
+    "block": "lounges",
+    "field": "hint",
+    "old": "Premium, Sky Pearl, L32",
+    "new": "T2·T3 라운지",
+    "kind": "стиль",
+    "why": "Краткая подпись ≤18 символов для CJK; полные имена и условия сохранены в text"
+  },
+  {
+    "lang": "ko",
+    "iata": "CAN",
+    "block": "wifi",
+    "field": "hint",
+    "old": "AIRPORT-FREE-WiFi, SMS",
+    "new": "무료 Wi‑Fi, SMS",
+    "kind": "стиль",
+    "why": "Краткая подпись ≤18 символов для CJK; полные имена и условия сохранены в text"
+  },
+  {
+    "lang": "ko",
+    "iata": "CDG",
+    "block": "transport",
+    "field": "hint",
+    "old": "RER B, 9517번 버스, Noctilien",
+    "new": "RER B와 주·야간 버스",
+    "kind": "стиль",
+    "why": "Краткая подпись ≤18 символов для CJK; полные имена и условия сохранены в text"
+  },
+  {
+    "lang": "ko",
+    "iata": "CDG",
+    "block": "storage",
+    "field": "hint",
+    "old": "Bagages du Monde, 7:00–21:00",
+    "new": "보관소 7:00–21:00",
+    "kind": "стиль",
+    "why": "Краткая подпись ≤18 символов для CJK; полные имена и условия сохранены в text"
+  },
+  {
+    "lang": "ko",
+    "iata": "CDG",
+    "block": "sleep",
+    "field": "hint",
+    "old": "2터미널 Sheraton·YotelAir",
+    "new": "2터미널과 주변 호텔",
+    "kind": "стиль",
+    "why": "Краткая подпись ≤18 символов для CJK; полные имена и условия сохранены в text"
+  },
+  {
+    "lang": "ko",
+    "iata": "DEL",
+    "block": "transport",
+    "field": "hint",
+    "old": "지하철 Airport Express·Magenta",
+    "new": "지하철 두 노선",
+    "kind": "стиль",
+    "why": "Краткая подпись ≤18 символов для CJK; полные имена и условия сохранены в text"
+  },
+  {
+    "lang": "ko",
+    "iata": "DEN",
+    "block": "lounges",
+    "field": "hint",
+    "old": "United Club, Centurion 등",
+    "new": "콘코스별 라운지",
+    "kind": "стиль",
+    "why": "Краткая подпись ≤18 символов для CJK; полные имена и условия сохранены в text"
+  },
+  {
+    "lang": "ko",
+    "iata": "DFW",
+    "block": "transport",
+    "field": "hint",
+    "old": "DART, TEXRail, TRE행 버스",
+    "new": "DART·TEXRail 등",
+    "kind": "стиль",
+    "why": "Краткая подпись ≤18 символов для CJK; полные имена и условия сохранены в text"
+  },
+  {
+    "lang": "ko",
+    "iata": "DFW",
+    "block": "parking",
+    "field": "hint",
+    "old": "Terminal, Express, Remote, Valet",
+    "new": "터미널 옆 및 원격 주차장",
+    "kind": "стиль",
+    "why": "Краткая подпись ≤18 символов для CJK; полные имена и условия сохранены в text"
+  },
+  {
+    "lang": "ko",
+    "iata": "FRA",
+    "block": "transport",
+    "field": "hint",
+    "old": "S-Bahn S8·S9, 지역 열차",
+    "new": "S-Bahn S8·S9 등",
+    "kind": "стиль",
+    "why": "Краткая подпись ≤18 символов для CJK; полные имена и условия сохранены в text"
+  },
+  {
+    "lang": "ko",
+    "iata": "FRA",
+    "block": "lounges",
+    "field": "hint",
+    "old": "T1 Lufthansa, T3 SkyTeam",
+    "new": "T1·T3 라운지",
+    "kind": "стиль",
+    "why": "Краткая подпись ≤18 символов для CJK; полные имена и условия сохранены в text"
+  },
+  {
+    "lang": "ko",
+    "iata": "FRA",
+    "block": "sleep",
+    "field": "hint",
+    "old": "napcabs, 시간당 12 €부터",
+    "new": "napcabs, €12/시간~",
+    "kind": "стиль",
+    "why": "Краткая подпись ≤18 символов для CJK; полные имена и условия сохранены в text"
+  },
+  {
+    "lang": "ko",
+    "iata": "HKG",
+    "block": "transport",
+    "field": "hint",
+    "old": "Airport Express, 센트럴 24분",
+    "new": "센트럴까지 열차로 24분",
+    "kind": "стиль",
+    "why": "Краткая подпись ≤18 символов для CJK; полные имена и условия сохранены в text"
+  },
+  {
+    "lang": "ko",
+    "iata": "HKG",
+    "block": "lounges",
+    "field": "hint",
+    "old": "Plaza Premium, Kyra 등",
+    "new": "게이트 옆 유료 라운지",
+    "kind": "стиль",
+    "why": "Краткая подпись ≤18 символов для CJK; полные имена и условия сохранены в text"
+  },
+  {
+    "lang": "ko",
+    "iata": "HND",
+    "block": "transport",
+    "field": "hint",
+    "old": "Keikyu, Tokyo Monorail",
+    "new": "Keikyu·모노레일",
+    "kind": "стиль",
+    "why": "Краткая подпись ≤18 символов для CJK; полные имена и условия сохранены в text"
+  },
+  {
+    "lang": "ko",
+    "iata": "HND",
+    "block": "wifi",
+    "field": "hint",
+    "old": "무료 HANEDA-FREE-WIFI",
+    "new": "무료 Wi‑Fi",
+    "kind": "стиль",
+    "why": "Краткая подпись ≤18 символов для CJK; полные имена и условия сохранены в text"
+  },
+  {
+    "lang": "ko",
+    "iata": "KUL",
+    "block": "transport",
+    "field": "hint",
+    "old": "KLIA Ekspres, KL Sentral 28분",
+    "new": "도심까지 직통열차 28분",
+    "kind": "стиль",
+    "why": "Краткая подпись ≤18 символов для CJK; полные имена и условия сохранены в text"
+  },
+  {
+    "lang": "ko",
+    "iata": "LAS",
+    "block": "transport",
+    "field": "hint",
+    "old": "RTC 108번, Red Line 버스",
+    "new": "RTC 108번 등",
+    "kind": "стиль",
+    "why": "Краткая подпись ≤18 символов для CJK; полные имена и условия сохранены в text"
+  },
+  {
+    "lang": "ko",
+    "iata": "LAS",
+    "block": "parking",
+    "field": "hint",
+    "old": "17,000면 이상, 1일 $14부터",
+    "new": "24시간 $14부터",
+    "kind": "стиль",
+    "why": "Краткая подпись ≤18 символов для CJK; полные имена и условия сохранены в text"
+  },
+  {
+    "lang": "ko",
+    "iata": "LHR",
+    "block": "storage",
+    "field": "hint",
+    "old": "Excess Baggage, £10부터",
+    "new": "수하물 보관, £10부터",
+    "kind": "стиль",
+    "why": "Краткая подпись ≤18 символов для CJK; полные имена и условия сохранены в text"
+  },
+  {
+    "lang": "ko",
+    "iata": "MCO",
+    "block": "transport",
+    "field": "hint",
+    "old": "마이애미행 Brightline, SunRail",
+    "new": "마이애미행 열차 등",
+    "kind": "стиль",
+    "why": "Краткая подпись ≤18 символов для CJK; полные имена и условия сохранены в text"
+  },
+  {
+    "lang": "ko",
+    "iata": "MCO",
+    "block": "taxi",
+    "field": "hint",
+    "old": "International Drive $38–45",
+    "new": "택시 예상 요금",
+    "kind": "стиль",
+    "why": "Краткая подпись ≤18 символов для CJK; полные имена и условия сохранены в text"
+  },
+  {
+    "lang": "ko",
+    "iata": "MCO",
+    "block": "sleep",
+    "field": "hint",
+    "old": "터미널 A/B Hyatt Regency",
+    "new": "터미널 A/B 안 호텔",
+    "kind": "стиль",
+    "why": "Краткая подпись ≤18 символов для CJK; полные имена и условия сохранены в text"
+  },
+  {
+    "lang": "ko",
+    "iata": "MCO",
+    "block": "kids",
+    "field": "hint",
+    "old": "A·B 놀이 공간, Flybrary",
+    "new": "A·B 놀이 공간과 도서관",
+    "kind": "стиль",
+    "why": "Краткая подпись ≤18 символов для CJK; полные имена и условия сохранены в text"
+  },
+  {
+    "lang": "ko",
+    "iata": "MIA",
+    "block": "transport",
+    "field": "hint",
+    "old": "Metrorail, Tri-Rail, MIA Mover",
+    "new": "철도·버스와 무료 공항 열차",
+    "kind": "стиль",
+    "why": "Краткая подпись ≤18 символов для CJK; полные имена и условия сохранены в text"
+  },
+  {
+    "lang": "ko",
+    "iata": "MIA",
+    "block": "lounges",
+    "field": "hint",
+    "old": "Flagship, Admirals, Centurion",
+    "new": "North 터미널 라운지",
+    "kind": "стиль",
+    "why": "Краткая подпись ≤18 символов для CJK; полные имена и условия сохранены в text"
+  },
+  {
+    "lang": "ko",
+    "iata": "MIA",
+    "block": "sleep",
+    "field": "hint",
+    "old": "터미널 E 호텔, Wait n' rest",
+    "new": "터미널 E 호텔과 수면실",
+    "kind": "стиль",
+    "why": "Краткая подпись ≤18 символов для CJK; полные имена и условия сохранены в text"
+  },
+  {
+    "lang": "ko",
+    "iata": "MIA",
+    "block": "parking",
+    "field": "hint",
+    "old": "20분 $2, 24시간 최대 $25",
+    "new": "24시간 최대 $25",
+    "kind": "стиль",
+    "why": "Краткая подпись ≤18 символов для CJK; полные имена и условия сохранены в text"
+  },
+  {
+    "lang": "ko",
+    "iata": "ORD",
+    "block": "transport",
+    "field": "hint",
+    "old": "CTA Blue Line 상시, Metra",
+    "new": "지하철 상시 운행",
+    "kind": "стиль",
+    "why": "Краткая подпись ≤18 символов для CJK; полные имена и условия сохранены в text"
+  },
+  {
+    "lang": "ko",
+    "iata": "ORD",
+    "block": "lounges",
+    "field": "hint",
+    "old": "United, Admirals, Sky Club",
+    "new": "터미널별 라운지",
+    "kind": "стиль",
+    "why": "Краткая подпись ≤18 символов для CJK; полные имена и условия сохранены в text"
+  },
+  {
+    "lang": "ko",
+    "iata": "PEK",
+    "block": "transport",
+    "field": "hint",
+    "old": "Airport Express, 25위안",
+    "new": "공항 열차, 편도 25위안",
+    "kind": "стиль",
+    "why": "Краткая подпись ≤18 символов для CJK; полные имена и условия сохранены в text"
+  },
+  {
+    "lang": "ko",
+    "iata": "PEK",
+    "block": "parking",
+    "field": "hint",
+    "old": "2·3번 주차 건물, 24시간 100위안",
+    "new": "24시간 100위안",
+    "kind": "стиль",
+    "why": "Краткая подпись ≤18 символов для CJK; полные имена и условия сохранены в text"
+  },
+  {
+    "lang": "ko",
+    "iata": "PVG",
+    "block": "wifi",
+    "field": "hint",
+    "old": "#AirportPVG-Free-WiFi, 무료",
+    "new": "무료 Wi‑Fi",
+    "kind": "стиль",
+    "why": "Краткая подпись ≤18 символов для CJK; полные имена и условия сохранены в text"
+  },
+  {
+    "lang": "ko",
+    "iata": "SIN",
+    "block": "transport",
+    "field": "hint",
+    "old": "MRT, 버스 24·27·36·858",
+    "new": "MRT와 여러 버스 노선",
+    "kind": "стиль",
+    "why": "Краткая подпись ≤18 символов для CJK; полные имена и условия сохранены в text"
+  },
+  {
+    "lang": "ko",
+    "iata": "SIN",
+    "block": "terminals",
+    "field": "hint",
+    "old": "Skytrain T1–T3, T4행 버스",
+    "new": "T1–T3 열차, T4 버스",
+    "kind": "стиль",
+    "why": "Краткая подпись ≤18 символов для CJK; полные имена и условия сохранены в text"
+  },
+  {
+    "lang": "it",
+    "iata": "JFK",
+    "block": "transport",
+    "field": "hint",
+    "old": "AirTrain, Jamaica/Howard Beach, 8,75 $",
+    "new": "AirTrain, 8,75 $ a tratta",
+    "kind": "стиль",
+    "why": "Подпись ≤35 символов; полный перечень сохранён в text"
+  },
+  {
+    "lang": "it",
+    "iata": "ORD",
+    "block": "lounges",
+    "field": "hint",
+    "old": "United Club, Admirals Club, Sky Club",
+    "new": "United, Admirals Club, Sky Club",
+    "kind": "стиль",
+    "why": "Подпись ≤35 символов; полный перечень сохранён в text"
+  },
+  {
+    "lang": "tr",
+    "iata": "ORD",
+    "block": "lounges",
+    "field": "hint",
+    "old": "United Club, Admirals Club, Sky Club",
+    "new": "United, Admirals Club, Sky Club",
+    "kind": "стиль",
+    "why": "Подпись ≤35 символов; полный перечень сохранён в text"
+  },
+  {
+    "lang": "tr",
+    "iata": "PEK",
+    "block": "kids",
+    "field": "hint",
+    "old": "C09 ve E21 kapılarında oyun alanları",
+    "new": "C09 ve E21 yanında oyun alanları",
+    "kind": "стиль",
+    "why": "Подпись ≤35 символов; полный перечень сохранён в text"
+  },
+  {
+    "lang": "ar",
+    "iata": "FRA",
+    "block": "taxi",
+    "field": "hint",
+    "old": "على مدار الساعة، 20–30 دقيقة للمدينة",
+    "new": "للمدينة 20–30 دقيقة",
+    "kind": "стиль",
+    "why": "Подпись ≤35 символов; полный перечень сохранён в text"
+  },
+  {
+    "lang": "ar",
+    "iata": "JFK",
+    "block": "transport",
+    "field": "hint",
+    "old": "AirTrain إلى Jamaica وHoward Beach، $8.75",
+    "new": "AirTrain، $8.75 للاتجاه الواحد",
+    "kind": "стиль",
+    "why": "Подпись ≤35 символов; полный перечень сохранён в text"
+  },
+  {
+    "lang": "ar",
+    "iata": "KUL",
+    "block": "transport",
+    "field": "hint",
+    "old": "KLIA Ekspres، 28 دقيقة إلى KL Sentral",
+    "new": "KL Sentral خلال 28 دقيقة",
+    "kind": "стиль",
+    "why": "Подпись ≤35 символов; полный перечень сохранён в text"
+  },
+  {
+    "lang": "ar",
+    "iata": "LHR",
+    "block": "transport",
+    "field": "hint",
+    "old": "Heathrow Express وElizabeth line وPiccadilly",
+    "new": "قطارات سريعة ومترو",
+    "kind": "стиль",
+    "why": "Подпись ≤35 символов; полный перечень сохранён в text"
+  },
+  {
+    "lang": "ar",
+    "iata": "MIA",
+    "block": "transport",
+    "field": "hint",
+    "old": "Metrorail وMetrobus وTri-Rail وMIA Mover",
+    "new": "قطارات وحافلات وMIA Mover",
+    "kind": "стиль",
+    "why": "Подпись ≤35 символов; полный перечень сохранён в text"
+  },
+  {
+    "lang": "ar",
+    "iata": "ORD",
+    "block": "transport",
+    "field": "hint",
+    "old": "CTA Blue Line على مدار الساعة وMetra",
+    "new": "CTA Blue Line وMetra",
+    "kind": "стиль",
+    "why": "Подпись ≤35 символов; полный перечень сохранён в text"
+  },
+  {
+    "lang": "ar",
+    "iata": "ORD",
+    "block": "lounges",
+    "field": "hint",
+    "old": "United Club وAdmirals Club وSky Club",
+    "new": "United وAdmirals وSky Club",
+    "kind": "стиль",
+    "why": "Подпись ≤35 символов; полный перечень сохранён в text"
+  },
+  {
+    "lang": "hi",
+    "iata": "JFK",
+    "block": "transport",
+    "field": "hint",
+    "old": "Jamaica और Howard Beach तक AirTrain, $8.75",
+    "new": "AirTrain, $8.75 एक तरफ़",
+    "kind": "стиль",
+    "why": "Подпись ≤35 символов; полный перечень сохранён в text"
+  },
+  {
+    "lang": "hi",
+    "iata": "LHR",
+    "block": "transport",
+    "field": "hint",
+    "old": "Heathrow Express, Elizabeth line, Piccadilly",
+    "new": "एक्सप्रेस ट्रेन और मेट्रो",
+    "kind": "стиль",
+    "why": "Подпись ≤35 символов; полный перечень сохранён в text"
+  },
+  {
+    "lang": "hi",
+    "iata": "MIA",
+    "block": "transport",
+    "field": "hint",
+    "old": "Metrorail, Metrobus, Tri-Rail, MIA Mover",
+    "new": "रेल, बस और MIA Mover",
+    "kind": "стиль",
+    "why": "Подпись ≤35 символов; полный перечень сохранён в text"
+  },
+  {
+    "lang": "hi",
+    "iata": "ORD",
+    "block": "lounges",
+    "field": "hint",
+    "old": "United Club, Admirals Club, Sky Club",
+    "new": "United, Admirals, Sky Club",
+    "kind": "стиль",
+    "why": "Подпись ≤35 символов; полный перечень сохранён в text"
+  },
+  {
+    "lang": "tr",
+    "iata": "FRA",
+    "block": "sleep",
+    "field": "hint",
+    "old": "napcabs kabinleri, saati 12 €'dan",
+    "new": "napcabs kabinleri, saati €12'dan",
+    "kind": "стиль",
+    "why": "Единое расположение знака евро перед суммой в этом языке; значения сохранены"
+  },
+  {
+    "lang": "tr",
+    "iata": "FRA",
+    "block": "sleep",
+    "field": "text",
+    "old": "Yataklı, klimalı, çalar saatli ve çalışma masalı napcabs uyku kabinleri: Terminal 1'de güvenlik kontrolünden sonra Pier A Schengen'de 6 ve Kat 3'teki B transit alanında 3 (B42 kapısının yanındaki yürüyen merdiven); Terminal 3'te Pier H Schengen'de 3 ve Pier J Non-Schengen'de 5. 6:00–22:00 arası saati 17 € (en az 2 saat), 22:00–6:00 arası saati 12 € (en az 3 saat). Çevrimiçi rezervasyon kartla veya PayPal ile, yerinde yalnızca kartla. Kabinlerin yanında duşlar var.",
+    "new": "Yataklı, klimalı, çalar saatli ve çalışma masalı napcabs uyku kabinleri: Terminal 1'de güvenlik kontrolünden sonra Pier A Schengen'de 6 ve Kat 3'teki B transit alanında 3 (B42 kapısının yanındaki yürüyen merdiven); Terminal 3'te Pier H Schengen'de 3 ve Pier J Non-Schengen'de 5. 6:00–22:00 arası saati €17 (en az 2 saat), 22:00–6:00 arası saati €12 (en az 3 saat). Çevrimiçi rezervasyon kartla veya PayPal ile, yerinde yalnızca kartla. Kabinlerin yanında duşlar var.",
+    "kind": "стиль",
+    "why": "Единое расположение знака евро перед суммой в этом языке; значения сохранены"
+  },
+  {
+    "lang": "tr",
+    "iata": "FRA",
+    "block": "parking",
+    "field": "hint",
+    "old": "15.000 yer, 7 gün 99 €'dan",
+    "new": "15.000 yer, 7 gün €99'dan",
+    "kind": "стиль",
+    "why": "Единое расположение знака евро перед суммой в этом языке; значения сохранены"
+  },
+  {
+    "lang": "tr",
+    "iata": "FRA",
+    "block": "parking",
+    "field": "text",
+    "old": "Havalimanında toplam 15.000 park yeri var. Çevrimiçi rezervasyonda Terminal Parking 7 gün 99,00 €'dan, Weekend Special (cumadan pazara 2–3 gün) 55,00 €'dan; rezervasyon kalkıştan 9 ay ile 24 saat önce arasında, 1–44 günlük süre için yapılır. Terminal otoparklarına giriş yüksekliği en fazla 2,10 m; daha yüksek araçlar için P36 otobüs otoparkı. Otogazlı (LPG) araçlar Terminal 1 otoparklarına alınmaz, Terminal 3 otoparkına alınır.",
+    "new": "Havalimanında toplam 15.000 park yeri var. Çevrimiçi rezervasyonda Terminal Parking 7 gün €99,00'dan, Weekend Special (cumadan pazara 2–3 gün) €55,00'dan; rezervasyon kalkıştan 9 ay ile 24 saat önce arasında, 1–44 günlük süre için yapılır. Terminal otoparklarına giriş yüksekliği en fazla 2,10 m; daha yüksek araçlar için P36 otobüs otoparkı. Otogazlı (LPG) araçlar Terminal 1 otoparklarına alınmaz, Terminal 3 otoparkına alınır.",
+    "kind": "стиль",
+    "why": "Единое расположение знака евро перед суммой в этом языке; значения сохранены"
+  },
+  {
+    "lang": "zh",
+    "iata": "FRA",
+    "block": "sleep",
+    "field": "text",
+    "old": "napcabs睡眠舱配有床、空调、闹钟和办公桌，位于1号航站楼安检后：Pier A Schengen有6间，B区中转区3层有3间（B42登机口旁的自动扶梯）；3号航站楼：Pier H Schengen有3间，Pier J Non-Schengen有5间。6:00至22:00每小时17 €（至少2小时），22:00至6:00每小时12 €（至少3小时）。可在线用银行卡或PayPal预订，现场仅限刷卡。睡眠舱旁设有淋浴间。",
+    "new": "napcabs睡眠舱配有床、空调、闹钟和办公桌，位于1号航站楼安检后：Pier A Schengen有6间，B区中转区3层有3间（B42登机口旁的自动扶梯）；3号航站楼：Pier H Schengen有3间，Pier J Non-Schengen有5间。6:00至22:00每小时€17（至少2小时），22:00至6:00每小时€12（至少3小时）。可在线用银行卡或PayPal预订，现场仅限刷卡。睡眠舱旁设有淋浴间。",
+    "kind": "стиль",
+    "why": "Единое расположение знака евро перед суммой в этом языке; значения сохранены"
+  },
+  {
+    "lang": "zh",
+    "iata": "FRA",
+    "block": "parking",
+    "field": "hint",
+    "old": "15,000个车位，7天99 €起",
+    "new": "15,000个车位，7天€99起",
+    "kind": "стиль",
+    "why": "Единое расположение знака евро перед суммой в этом языке; значения сохранены"
+  },
+  {
+    "lang": "zh",
+    "iata": "FRA",
+    "block": "parking",
+    "field": "text",
+    "old": "机场共有15,000个停车位。在线预订Terminal Parking：7天99.00 €起，Weekend Special（周五至周日2–3天）55.00 €起；可在出发前9个月至24小时之间预订，停车期限1–44天。航站楼停车楼最大限高2.10米，更高的车辆请使用巴士停车场P36。使用液化石油气（LPG）的车辆不得进入1号航站楼停车楼，可进入3号航站楼停车楼。",
+    "new": "机场共有15,000个停车位。在线预订Terminal Parking：7天€99.00起，Weekend Special（周五至周日2–3天）€55.00起；可在出发前9个月至24小时之间预订，停车期限1–44天。航站楼停车楼最大限高2.10米，更高的车辆请使用巴士停车场P36。使用液化石油气（LPG）的车辆不得进入1号航站楼停车楼，可进入3号航站楼停车楼。",
+    "kind": "стиль",
+    "why": "Единое расположение знака евро перед суммой в этом языке; значения сохранены"
+  },
+  {
+    "lang": "ja",
+    "iata": "FRA",
+    "block": "sleep",
+    "field": "hint",
+    "old": "napcabs、1時間12 €から",
+    "new": "napcabs、1時間€12から",
+    "kind": "стиль",
+    "why": "Единое расположение знака евро перед суммой в этом языке; значения сохранены"
+  },
+  {
+    "lang": "ja",
+    "iata": "FRA",
+    "block": "sleep",
+    "field": "text",
+    "old": "ベッド、エアコン、目覚まし時計、ワークデスクを備えた就寝キャビンnapcabs：第1ターミナルの保安検査後、Pier A Schengenに6室、3階の乗り継ぎエリアBに3室（B42番ゲート付近のエスカレーター）。第3ターミナルではPier H Schengenに3室、Pier J Non-Schengenに5室。6:00から22:00までは1時間17 €（最低2時間）、22:00から6:00までは1時間12 €（最低3時間）。オンライン予約はカードまたはPayPal、現地ではカードのみ。キャビンの近くにシャワー室がある。",
+    "new": "ベッド、エアコン、目覚まし時計、ワークデスクを備えた就寝キャビンnapcabs：第1ターミナルの保安検査後、Pier A Schengenに6室、3階の乗り継ぎエリアBに3室（B42番ゲート付近のエスカレーター）。第3ターミナルではPier H Schengenに3室、Pier J Non-Schengenに5室。6:00から22:00までは1時間€17（最低2時間）、22:00から6:00までは1時間€12（最低3時間）。オンライン予約はカードまたはPayPal、現地ではカードのみ。キャビンの近くにシャワー室がある。",
+    "kind": "стиль",
+    "why": "Единое расположение знака евро перед суммой в этом языке; значения сохранены"
+  },
+  {
+    "lang": "ja",
+    "iata": "FRA",
+    "block": "parking",
+    "field": "hint",
+    "old": "15,000台、7日間99 €から",
+    "new": "15,000台、7日間€99から",
+    "kind": "стиль",
+    "why": "Единое расположение знака евро перед суммой в этом языке; значения сохранены"
+  },
+  {
+    "lang": "ja",
+    "iata": "FRA",
+    "block": "parking",
+    "field": "text",
+    "old": "空港の駐車スペースは合計15,000台。オンライン予約の場合、Terminal Parkingは7日間99.00 €から、Weekend Special（金曜から日曜の2–3日間）は55.00 €から。予約は出発の9か月前から24時間前まで、期間は1–44日。ターミナル付近の駐車場の高さ制限は2.10 mで、これより高い車はバス駐車場P36。LPG車は第1ターミナルの駐車場には入れないが、第3ターミナルの駐車場には入れる。",
+    "new": "空港の駐車スペースは合計15,000台。オンライン予約の場合、Terminal Parkingは7日間€99.00から、Weekend Special（金曜から日曜の2–3日間）は€55.00から。予約は出発の9か月前から24時間前まで、期間は1–44日。ターミナル付近の駐車場の高さ制限は2.10 mで、これより高い車はバス駐車場P36。LPG車は第1ターミナルの駐車場には入れないが、第3ターミナルの駐車場には入れる。",
+    "kind": "стиль",
+    "why": "Единое расположение знака евро перед суммой в этом языке; значения сохранены"
+  },
+  {
+    "lang": "ko",
+    "iata": "FRA",
+    "block": "sleep",
+    "field": "text",
+    "old": "침대, 에어컨, 알람, 업무용 책상을 갖춘 수면 캐빈 napcabs: 1터미널 보안검색 후 Pier A Schengen에 6개, 3층 B 환승 구역에 3개(B42 게이트 옆 에스컬레이터), 3터미널 Pier H Schengen에 3개, Pier J Non-Schengen에 5개. 6:00–22:00 시간당 17 €(최소 2시간), 22:00–6:00 시간당 12 €(최소 3시간). 온라인 예약은 카드나 PayPal로, 현장 결제는 카드만 가능합니다. 캐빈 옆에 샤워실이 있습니다.",
+    "new": "침대, 에어컨, 알람, 업무용 책상을 갖춘 수면 캐빈 napcabs: 1터미널 보안검색 후 Pier A Schengen에 6개, 3층 B 환승 구역에 3개(B42 게이트 옆 에스컬레이터), 3터미널 Pier H Schengen에 3개, Pier J Non-Schengen에 5개. 6:00–22:00 시간당 €17(최소 2시간), 22:00–6:00 시간당 €12(최소 3시간). 온라인 예약은 카드나 PayPal로, 현장 결제는 카드만 가능합니다. 캐빈 옆에 샤워실이 있습니다.",
+    "kind": "стиль",
+    "why": "Единое расположение знака евро перед суммой в этом языке; значения сохранены"
+  },
+  {
+    "lang": "ko",
+    "iata": "FRA",
+    "block": "parking",
+    "field": "hint",
+    "old": "15,000면, 7일 99 €부터",
+    "new": "15,000면, 7일 €99부터",
+    "kind": "стиль",
+    "why": "Единое расположение знака евро перед суммой в этом языке; значения сохранены"
+  },
+  {
+    "lang": "ko",
+    "iata": "FRA",
+    "block": "parking",
+    "field": "text",
+    "old": "공항 전체 주차면은 15,000면입니다. 온라인 예약 시 Terminal Parking은 7일 99.00 €부터, Weekend Special(금요일부터 일요일까지 2–3일)은 55.00 €부터입니다. 예약은 출발 9개월 전부터 24시간 전까지, 이용 기간 1–44일로 할 수 있습니다. 터미널 주차장의 진입 높이 제한은 2.10 m이며, 더 높은 차량은 버스 주차장 P36을 이용합니다. LPG 차량은 1터미널 주차장에 들어갈 수 없지만 3터미널 주차장에는 들어갈 수 있습니다.",
+    "new": "공항 전체 주차면은 15,000면입니다. 온라인 예약 시 Terminal Parking은 7일 €99.00부터, Weekend Special(금요일부터 일요일까지 2–3일)은 €55.00부터입니다. 예약은 출발 9개월 전부터 24시간 전까지, 이용 기간 1–44일로 할 수 있습니다. 터미널 주차장의 진입 높이 제한은 2.10 m이며, 더 높은 차량은 버스 주차장 P36을 이용합니다. LPG 차량은 1터미널 주차장에 들어갈 수 없지만 3터미널 주차장에는 들어갈 수 있습니다.",
+    "kind": "стиль",
+    "why": "Единое расположение знака евро перед суммой в этом языке; значения сохранены"
+  },
+  {
+    "lang": "ar",
+    "iata": "FRA",
+    "block": "sleep",
+    "field": "hint",
+    "old": "كبسولات napcabs، من 12 € للساعة",
+    "new": "كبسولات napcabs، من €12 للساعة",
+    "kind": "стиль",
+    "why": "Единое расположение знака евро перед суммой в этом языке; значения сохранены"
+  },
+  {
+    "lang": "ar",
+    "iata": "FRA",
+    "block": "sleep",
+    "field": "text",
+    "old": "كبائن النوم napcabs المزودة بسرير ومكيف هواء ومنبّه ومكتب عمل — في المبنى 1 بعد التفتيش الأمني: 6 في Pier A Schengen و3 في منطقة العبور B في المستوى 3 (السلم المتحرك عند البوابة B42)؛ وفي المبنى 3 — 3 في Pier H Schengen و5 في Pier J Non-Schengen. من 6:00 حتى 22:00 — 17 € للساعة (بحد أدنى 2 ساعة)، ومن 22:00 حتى 6:00 — 12 € للساعة (بحد أدنى 3 ساعات). الحجز عبر الإنترنت بالبطاقة أو PayPal، وفي الموقع بالبطاقة فقط. وبجوار الكبائن حمّامات للاستحمام.",
+    "new": "كبائن النوم napcabs المزودة بسرير ومكيف هواء ومنبّه ومكتب عمل — في المبنى 1 بعد التفتيش الأمني: 6 في Pier A Schengen و3 في منطقة العبور B في المستوى 3 (السلم المتحرك عند البوابة B42)؛ وفي المبنى 3 — 3 في Pier H Schengen و5 في Pier J Non-Schengen. من 6:00 حتى 22:00 — €17 للساعة (بحد أدنى 2 ساعة)، ومن 22:00 حتى 6:00 — €12 للساعة (بحد أدنى 3 ساعات). الحجز عبر الإنترنت بالبطاقة أو PayPal، وفي الموقع بالبطاقة فقط. وبجوار الكبائن حمّامات للاستحمام.",
+    "kind": "стиль",
+    "why": "Единое расположение знака евро перед суммой в этом языке; значения сохранены"
+  },
+  {
+    "lang": "ar",
+    "iata": "FRA",
+    "block": "parking",
+    "field": "hint",
+    "old": "15,000 مكان، 7 أيام من 99 €",
+    "new": "15,000 مكان، 7 أيام من €99",
+    "kind": "стиль",
+    "why": "Единое расположение знака евро перед суммой в этом языке; значения сохранены"
+  },
+  {
+    "lang": "ar",
+    "iata": "FRA",
+    "block": "parking",
+    "field": "text",
+    "old": "في المطار 15,000 مكان لوقوف السيارات إجمالًا. عند الحجز عبر الإنترنت: Terminal Parking — 7 أيام من 99.00 €، وWeekend Special (2–3 أيام من الجمعة إلى الأحد) — من 55.00 €؛ يُحجز قبل الإقلاع بمدة من 9 أشهر إلى 24 ساعة، لمدة 1–44 يومًا. أقصى ارتفاع للدخول إلى المواقف عند مباني الركاب 2.10 م، والسيارات الأعلى تذهب إلى موقف الحافلات P36. لا يُسمح بالسيارات العاملة بغاز البترول المسال (LPG) في مواقف المبنى 1، ويُسمح بها في موقف المبنى 3.",
+    "new": "في المطار 15,000 مكان لوقوف السيارات إجمالًا. عند الحجز عبر الإنترنت: Terminal Parking — 7 أيام من €99.00، وWeekend Special (2–3 أيام من الجمعة إلى الأحد) — من €55.00؛ يُحجز قبل الإقلاع بمدة من 9 أشهر إلى 24 ساعة، لمدة 1–44 يومًا. أقصى ارتفاع للدخول إلى المواقف عند مباني الركاب 2.10 م، والسيارات الأعلى تذهب إلى موقف الحافلات P36. لا يُسمح بالسيارات العاملة بغاز البترول المسال (LPG) في مواقف المبنى 1، ويُسمح بها في موقف المبنى 3.",
+    "kind": "стиль",
+    "why": "Единое расположение знака евро перед суммой в этом языке; значения сохранены"
+  },
+  {
+    "lang": "hi",
+    "iata": "FRA",
+    "block": "sleep",
+    "field": "hint",
+    "old": "napcabs कैप्सूल, 12 € प्रति घंटे से",
+    "new": "napcabs कैप्सूल, €12 प्रति घंटे से",
+    "kind": "стиль",
+    "why": "Единое расположение знака евро перед суммой в этом языке; значения сохранены"
+  },
+  {
+    "lang": "hi",
+    "iata": "FRA",
+    "block": "sleep",
+    "field": "text",
+    "old": "बिस्तर, एयर कंडीशनर, अलार्म घड़ी और काम की मेज़ वाले napcabs स्लीपिंग केबिन — टर्मिनल 1 में सुरक्षा जाँच के बाद: Pier A Schengen में 6 और ट्रांज़िट क्षेत्र B में लेवल 3 पर 3 (गेट B42 के पास एस्केलेटर); टर्मिनल 3 में — Pier H Schengen में 3 और Pier J Non-Schengen में 5। 6:00 से 22:00 तक — 17 € प्रति घंटा (न्यूनतम 2 घंटे), 22:00 से 6:00 तक — 12 € प्रति घंटा (न्यूनतम 3 घंटे)। ऑनलाइन बुकिंग कार्ड या PayPal से, मौक़े पर — केवल कार्ड से। केबिनों के पास शावर हैं।",
+    "new": "बिस्तर, एयर कंडीशनर, अलार्म घड़ी और काम की मेज़ वाले napcabs स्लीपिंग केबिन — टर्मिनल 1 में सुरक्षा जाँच के बाद: Pier A Schengen में 6 और ट्रांज़िट क्षेत्र B में लेवल 3 पर 3 (गेट B42 के पास एस्केलेटर); टर्मिनल 3 में — Pier H Schengen में 3 और Pier J Non-Schengen में 5। 6:00 से 22:00 तक — €17 प्रति घंटा (न्यूनतम 2 घंटे), 22:00 से 6:00 तक — €12 प्रति घंटा (न्यूनतम 3 घंटे)। ऑनलाइन बुकिंग कार्ड या PayPal से, मौक़े पर — केवल कार्ड से। केबिनों के पास शावर हैं।",
+    "kind": "стиль",
+    "why": "Единое расположение знака евро перед суммой в этом языке; значения сохранены"
+  },
+  {
+    "lang": "hi",
+    "iata": "FRA",
+    "block": "parking",
+    "field": "hint",
+    "old": "15,000 जगहें, 7 दिन 99 € से",
+    "new": "15,000 जगहें, 7 दिन €99 से",
+    "kind": "стиль",
+    "why": "Единое расположение знака евро перед суммой в этом языке; значения сохранены"
+  },
+  {
+    "lang": "hi",
+    "iata": "FRA",
+    "block": "parking",
+    "field": "text",
+    "old": "हवाई अड्डे में कुल 15,000 पार्किंग स्थान हैं। ऑनलाइन बुकिंग पर Terminal Parking — 7 दिन 99.00 € से, Weekend Special (शुक्रवार से रविवार तक 2–3 दिन) — 55.00 € से; प्रस्थान से 9 महीने से 24 घंटे पहले तक, 1–44 दिन की अवधि के लिए बुक करें। टर्मिनलों के पास पार्किंग में प्रवेश की अधिकतम ऊँचाई — 2.10 मी, ऊँची गाड़ियों के लिए — बस पार्किंग P36। ऑटो गैस (LPG) वाली गाड़ियाँ टर्मिनल 1 की पार्किंग में नहीं जा सकतीं, टर्मिनल 3 की पार्किंग में जा सकती हैं।",
+    "new": "हवाई अड्डे में कुल 15,000 पार्किंग स्थान हैं। ऑनलाइन बुकिंग पर Terminal Parking — 7 दिन €99.00 से, Weekend Special (शुक्रवार से रविवार तक 2–3 दिन) — €55.00 से; प्रस्थान से 9 महीने से 24 घंटे पहले तक, 1–44 दिन की अवधि के लिए बुक करें। टर्मिनलों के पास पार्किंग में प्रवेश की अधिकतम ऊँचाई — 2.10 मी, ऊँची गाड़ियों के लिए — बस पार्किंग P36। ऑटो गैस (LPG) वाली गाड़ियाँ टर्मिनल 1 की पार्किंग में नहीं जा सकतीं, टर्मिनल 3 की पार्किंग में जा सकती हैं।",
+    "kind": "стиль",
+    "why": "Единое расположение знака евро перед суммой в этом языке; значения сохранены"
+  },
+  {
+    "lang": "zh",
+    "iata": "LAS",
+    "block": "parking",
+    "field": "hint",
+    "old": "每天",
+    "new": "每24小时",
+    "kind": "смысл",
+    "why": "В русском «сутки» — период 24 часа, не календарный день"
+  },
+  {
+    "lang": "zh",
+    "iata": "LAS",
+    "block": "parking",
+    "field": "text",
+    "old": "每天",
+    "new": "每24小时",
+    "kind": "смысл",
+    "why": "В русском «сутки» — период 24 часа, не календарный день"
+  },
+  {
+    "lang": "zh",
+    "iata": "LAX",
+    "block": "parking",
+    "field": "hint",
+    "old": "每天",
+    "new": "每24小时",
+    "kind": "смысл",
+    "why": "В русском «сутки» — период 24 часа, не календарный день"
+  },
+  {
+    "lang": "zh",
+    "iata": "LAX",
+    "block": "parking",
+    "field": "text",
+    "old": "每天",
+    "new": "每24小时",
+    "kind": "смысл",
+    "why": "В русском «сутки» — период 24 часа, не календарный день"
+  },
+  {
+    "lang": "zh",
+    "iata": "MIA",
+    "block": "parking",
+    "field": "hint",
+    "old": "每天",
+    "new": "每24小时",
+    "kind": "смысл",
+    "why": "В русском «сутки» — период 24 часа, не календарный день"
+  },
+  {
+    "lang": "zh",
+    "iata": "MIA",
+    "block": "parking",
+    "field": "text",
+    "old": "每天",
+    "new": "每24小时",
+    "kind": "смысл",
+    "why": "В русском «сутки» — период 24 часа, не календарный день"
+  },
+  {
+    "lang": "zh",
+    "iata": "ORD",
+    "block": "parking",
+    "field": "hint",
+    "old": "每天",
+    "new": "每24小时",
+    "kind": "смысл",
+    "why": "В русском «сутки» — период 24 часа, не календарный день"
+  },
+  {
+    "lang": "zh",
+    "iata": "ORD",
+    "block": "parking",
+    "field": "text",
+    "old": "每天",
+    "new": "每24小时",
+    "kind": "смысл",
+    "why": "В русском «сутки» — период 24 часа, не календарный день"
+  },
+  {
+    "lang": "zh",
+    "iata": "PEK",
+    "block": "parking",
+    "field": "hint",
+    "old": "每天",
+    "new": "每24小时",
+    "kind": "смысл",
+    "why": "В русском «сутки» — период 24 часа, не календарный день"
+  },
+  {
+    "lang": "zh",
+    "iata": "PEK",
+    "block": "parking",
+    "field": "text",
+    "old": "每天",
+    "new": "每24小时",
+    "kind": "смысл",
+    "why": "В русском «сутки» — период 24 часа, не календарный день"
+  },
+  {
+    "lang": "zh",
+    "iata": "PVG",
+    "block": "storage",
+    "field": "text",
+    "old": "每天",
+    "new": "每24小时",
+    "kind": "смысл",
+    "why": "Срок суток/обозначение подземного этажа по оригиналу"
+  },
+  {
+    "lang": "ar",
+    "iata": "BKK",
+    "block": "storage",
+    "field": "hint",
+    "old": "يوميًا",
+    "new": "لكل 24 ساعة",
+    "kind": "смысл",
+    "why": "Срок суток/обозначение подземного этажа по оригиналу"
+  },
+  {
+    "lang": "ar",
+    "iata": "LAS",
+    "block": "parking",
+    "field": "hint",
+    "old": "يوميًا",
+    "new": "لكل 24 ساعة",
+    "kind": "смысл",
+    "why": "Срок суток/обозначение подземного этажа по оригиналу"
+  },
+  {
+    "lang": "ar",
+    "iata": "MIA",
+    "block": "parking",
+    "field": "hint",
+    "old": "يوميًا",
+    "new": "لكل 24 ساعة",
+    "kind": "смысл",
+    "why": "Срок суток/обозначение подземного этажа по оригиналу"
+  },
+  {
+    "lang": "ar",
+    "iata": "PEK",
+    "block": "parking",
+    "field": "hint",
+    "old": "يوميًا",
+    "new": "لكل 24 ساعة",
+    "kind": "смысл",
+    "why": "Срок суток/обозначение подземного этажа по оригиналу"
+  },
+  {
+    "lang": "ko",
+    "iata": "MAD",
+    "block": "transport",
+    "field": "text",
+    "old": "−1층",
+    "new": "지하 1층",
+    "kind": "смысл",
+    "why": "Срок суток/обозначение подземного этажа по оригиналу"
+  },
+  {
+    "lang": "es",
+    "iata": "DEL",
+    "block": "taxi",
+    "field": "text",
+    "old": "de varias plantas",
+    "new": "multinivel",
+    "kind": "стиль",
+    "why": "Этажи и многоуровневые объекты без planta по правилу проекта"
+  },
+  {
+    "lang": "es",
+    "iata": "DEL",
+    "block": "parking",
+    "field": "text",
+    "old": "de varias plantas",
+    "new": "multinivel",
+    "kind": "стиль",
+    "why": "Этажи и многоуровневые объекты без planta по правилу проекта"
+  },
+  {
+    "lang": "en",
+    "iata": "MIA",
+    "block": "lounges",
+    "field": "text",
+    "old": "a day pass",
+    "new": "a single-entry pass",
+    "kind": "смысл",
+    "why": "«Разовый пропуск» не задаёт срок действия целый день; сохраняем один вход"
+  },
+  {
+    "lang": "de",
+    "iata": "MIA",
+    "block": "lounges",
+    "field": "text",
+    "old": "ein Tagespass",
+    "new": "ein Einmalpass",
+    "kind": "смысл",
+    "why": "«Разовый пропуск» не задаёт срок действия целый день; сохраняем один вход"
+  },
+  {
+    "lang": "es",
+    "iata": "MIA",
+    "block": "lounges",
+    "field": "text",
+    "old": "pase de un día",
+    "new": "pase de una visita",
+    "kind": "смысл",
+    "why": "«Разовый пропуск» не задаёт срок действия целый день; сохраняем один вход"
+  },
+  {
+    "lang": "it",
+    "iata": "MIA",
+    "block": "lounges",
+    "field": "text",
+    "old": "il pass giornaliero",
+    "new": "il pass per un singolo accesso",
+    "kind": "смысл",
+    "why": "«Разовый пропуск» не задаёт срок действия целый день; сохраняем один вход"
+  },
+  {
+    "lang": "zh",
+    "iata": "LAS",
+    "block": "parking",
+    "field": "hint",
+    "old": "17,000多个车位，每24小时$14起",
+    "new": "每24小时$14起",
+    "kind": "стиль",
+    "why": "Краткая подпись с точным 24-часовым периодом"
+  },
+  {
+    "lang": "ar",
+    "iata": "BKK",
+    "block": "storage",
+    "field": "hint",
+    "old": "المستويان 2 و4، من 150 THB لكل 24 ساعة",
+    "new": "من 150 THB لكل 24 ساعة",
+    "kind": "стиль",
+    "why": "Краткая подпись с точным 24-часовым периодом"
+  },
+  {
+    "lang": "ar",
+    "iata": "LAS",
+    "block": "parking",
+    "field": "hint",
+    "old": "أكثر من 17,000 مكان، من $14 لكل 24 ساعة",
+    "new": "من $14 لكل 24 ساعة",
+    "kind": "стиль",
+    "why": "Краткая подпись с точным 24-часовым периодом"
+  },
+  {
+    "lang": "ar",
+    "iata": "MIA",
+    "block": "parking",
+    "field": "hint",
+    "old": "$2 لكل 20 دقيقة، حتى $25 لكل 24 ساعة",
+    "new": "$25 كحد أقصى لكل 24 ساعة",
+    "kind": "стиль",
+    "why": "Краткая подпись с точным 24-часовым периодом"
+  },
+  {
+    "lang": "en",
+    "iata": "MIA",
+    "block": "lounges",
+    "field": "text",
+    "old": "American lounges admit by status and with a business- or first-class ticket on American or oneworld",
+    "new": "Access to American lounges is based on status and a business- or first-class ticket on American or a oneworld airline",
+    "kind": "стиль",
+    "why": "Принято из независимой выборки ChatGPT: естественная формулировка при сохранении условий русского исходника"
+  },
+  {
+    "lang": "en",
+    "iata": "MIA",
+    "block": "lounges",
+    "field": "text",
+    "old": "a single-entry pass is sold if space is available",
+    "new": "single-entry passes are available for purchase if space is available",
+    "kind": "стиль",
+    "why": "Принято из независимой выборки ChatGPT: естественная формулировка при сохранении условий русского исходника"
+  },
+  {
+    "lang": "en",
+    "iata": "HND",
+    "block": "lounges",
+    "field": "text",
+    "old": "Entry with airline coupons or with an eligible card in your name and a boarding pass for the same day, otherwise paid",
+    "new": "Entry is available with airline coupons or an eligible card in your name together with a same-day boarding pass. Otherwise, admission is subject to a fee",
+    "kind": "стиль",
+    "why": "Принято из независимой выборки ChatGPT: естественная формулировка при сохранении условий русского исходника"
+  },
+  {
+    "lang": "en",
+    "iata": "PVG",
+    "block": "storage",
+    "field": "text",
+    "old": "All points are open from 06:00 to 24:00 and store items for up to 2 months",
+    "new": "All storage locations are open from 06:00 to 24:00 and accept items for storage for up to 2 months",
+    "kind": "стиль",
+    "why": "Принято из независимой выборки ChatGPT: естественная формулировка при сохранении условий русского исходника"
+  },
+  {
+    "lang": "en",
+    "iata": "PVG",
+    "block": "storage",
+    "field": "text",
+    "old": "an ID document is required on drop-off",
+    "new": "an identity document is required when depositing items",
+    "kind": "стиль",
+    "why": "Принято из независимой выборки ChatGPT: естественная формулировка при сохранении условий русского исходника"
+  },
+  {
+    "lang": "en",
+    "iata": "ICN",
+    "block": "terminals",
+    "field": "text",
+    "old": "about 6 minutes, ₩1,050, the fare is paid",
+    "new": "about 6 minutes, with a fare of ₩1,050",
+    "kind": "стиль",
+    "why": "Принято из независимой выборки ChatGPT: естественная формулировка при сохранении условий русского исходника"
+  },
+  {
+    "lang": "en",
+    "iata": "SIN",
+    "block": "terminals",
+    "field": "text",
+    "old": "you can also walk between them on travelators",
+    "new": "you can also travel between them using moving walkways",
+    "kind": "стиль",
+    "why": "Принято из независимой выборки ChatGPT: естественная формулировка при сохранении условий русского исходника"
+  },
+  {
+    "lang": "de",
+    "iata": "MIA",
+    "block": "lounges",
+    "field": "text",
+    "old": "mit Status und Business- oder First-Class-Ticket von American oder oneworld",
+    "new": "mit entsprechendem Status und einem Business- oder First-Class-Ticket von American oder einer oneworld-Fluggesellschaft",
+    "kind": "стиль",
+    "why": "Принято из независимой выборки ChatGPT: естественность без изменения фактов"
+  },
+  {
+    "lang": "de",
+    "iata": "MIA",
+    "block": "lounges",
+    "field": "text",
+    "old": "ein Einmalpass wird verkauft, wenn Plätze frei sind",
+    "new": "ein Pass für den einmaligen Zutritt kann gekauft werden, sofern Plätze verfügbar sind",
+    "kind": "стиль",
+    "why": "Принято из независимой выборки ChatGPT: естественность без изменения фактов"
+  },
+  {
+    "lang": "de",
+    "iata": "LAS",
+    "block": "parking",
+    "field": "text",
+    "old": "bei Vorabbuchung in Terminal 3 von Samstag bis Mittwoch 16 $",
+    "new": "bei vorheriger Reservierung eines Parkplatzes an Terminal 3 von Samstag bis Mittwoch 16 $",
+    "kind": "стиль",
+    "why": "Принято из независимой выборки ChatGPT: естественность без изменения фактов"
+  },
+  {
+    "lang": "de",
+    "iata": "HND",
+    "block": "lounges",
+    "field": "text",
+    "old": "mit einer passenden Karte auf den eigenen Namen und einer Bordkarte für denselben Tag",
+    "new": "mit einer entsprechenden, auf den eigenen Namen ausgestellten Karte und einer Bordkarte für denselben Tag",
+    "kind": "стиль",
+    "why": "Принято из независимой выборки ChatGPT: естественность без изменения фактов"
+  },
+  {
+    "lang": "de",
+    "iata": "PVG",
+    "block": "storage",
+    "field": "text",
+    "old": "Alle Stellen sind von 06:00 bis 24:00 geöffnet",
+    "new": "Alle Gepäckaufbewahrungsstellen sind von 06:00 bis 24:00 geöffnet",
+    "kind": "стиль",
+    "why": "Принято из независимой выборки ChatGPT: естественность без изменения фактов"
+  },
+  {
+    "lang": "de",
+    "iata": "SIN",
+    "block": "terminals",
+    "field": "text",
+    "old": "im Transitbereich kann man auch über Laufbänder gehen",
+    "new": "im Transitbereich kann man auch die Fahrsteige nutzen",
+    "kind": "стиль",
+    "why": "Принято из независимой выборки ChatGPT: естественность без изменения фактов"
+  },
+  {
+    "lang": "de",
+    "iata": "SIN",
+    "block": "terminals",
+    "field": "text",
+    "old": "von T2 und T3 5–10 Minuten zu Fuß über einen Übergang",
+    "new": "von T2 und T3 sind es 5–10 Minuten zu Fuß über einen Verbindungsgang",
+    "kind": "стиль",
+    "why": "Принято из независимой выборки ChatGPT: естественность без изменения фактов"
+  },
+  {
+    "lang": "ko",
+    "iata": "ICN",
+    "block": "sleep",
+    "field": "hint",
+    "old": "트랜짓 호텔",
+    "new": "Transit Hotel",
+    "kind": "имена",
+    "why": "Точное корейское название не подтверждено; латиница исходника по заданию владельца"
+  },
+  {
+    "lang": "ko",
+    "iata": "ICN",
+    "block": "sleep",
+    "field": "text",
+    "old": "트랜짓 호텔(Transit Hotel)",
+    "new": "Transit Hotel",
+    "kind": "имена",
+    "why": "Точное корейское название не подтверждено; латиница исходника по заданию владельца"
+  },
+  {
+    "lang": "ko",
+    "iata": "ICN",
+    "block": "sleep",
+    "field": "hint",
+    "old": "다락휴 캡슐, Transit Hotel",
+    "new": "다락휴 등 호텔",
+    "kind": "стиль",
+    "why": "Краткая подпись; полное имя Transit Hotel сохранено в text"
+  },
+  {
+    "lang": "es",
+    "iata": "MIA",
+    "block": "lounges",
+    "field": "text",
+    "old": "En las salas de American se entra por estatus y con billete de clase business o primera de American o de oneworld",
+    "new": "El acceso a las salas de American depende del estatus y de disponer de un billete de clase business o primera de American o de una aerolínea de oneworld",
+    "kind": "стиль",
+    "why": "Принято из выборки ChatGPT: естественность и точная пассажирская терминология"
+  },
+  {
+    "lang": "es",
+    "iata": "MIA",
+    "block": "lounges",
+    "field": "text",
+    "old": "se vende pase de una visita si hay plazas",
+    "new": "se puede comprar un pase de acceso para una sola visita si hay plazas disponibles",
+    "kind": "стиль",
+    "why": "Принято из выборки ChatGPT: естественность и точная пассажирская терминология"
+  },
+  {
+    "lang": "es",
+    "iata": "HND",
+    "block": "lounges",
+    "field": "text",
+    "old": "bebidas incluido alcohol",
+    "new": "bebidas, incluidas las alcohólicas",
+    "kind": "стиль",
+    "why": "Принято из выборки ChatGPT: естественность и точная пассажирская терминология"
+  },
+  {
+    "lang": "es",
+    "iata": "HND",
+    "block": "lounges",
+    "field": "text",
+    "old": "Se entra con cupones de aerolínea o con una tarjeta válida a nombre propio y tarjeta de embarque del mismo día; si no, de pago",
+    "new": "Se puede acceder con cupones de compañías aéreas o con una tarjeta admitida a nombre del pasajero y una tarjeta de embarque para ese mismo día; en caso contrario, hay que pagar la entrada",
+    "kind": "стиль",
+    "why": "Принято из выборки ChatGPT: естественность и точная пассажирская терминология"
+  },
+  {
+    "lang": "es",
+    "iata": "SIN",
+    "block": "terminals",
+    "field": "text",
+    "old": "en la zona de tránsito también se puede ir entre ellas por cintas transportadoras",
+    "new": "en la zona de tránsito también se puede ir de una terminal a otra utilizando pasillos rodantes",
+    "kind": "стиль",
+    "why": "Принято из выборки ChatGPT: естественность и точная пассажирская терминология"
+  },
+  {
+    "lang": "it",
+    "iata": "MIA",
+    "block": "lounges",
+    "field": "text",
+    "old": "Nelle sale American si entra per status e con biglietto in business o prima classe American o oneworld",
+    "new": "L’accesso alle lounge American è consentito in base allo status e al possesso di un biglietto di classe business o prima classe di American o di una compagnia oneworld",
+    "kind": "стиль",
+    "why": "Принято из ChatGPT: грамматика и естественность без изменения условий"
+  },
+  {
+    "lang": "it",
+    "iata": "HND",
+    "block": "lounges",
+    "field": "text",
+    "old": "nell’area gate al livello 4",
+    "new": "nell’area dei gate d’imbarco al livello 4",
+    "kind": "стиль",
+    "why": "Принято из ChatGPT: грамматика и естественность без изменения условий"
+  },
+  {
+    "lang": "it",
+    "iata": "HND",
+    "block": "lounges",
+    "field": "text",
+    "old": "con una carta idonea intestata al passeggero e carta d’imbarco dello stesso giorno",
+    "new": "con una carta idonea intestata al passeggero e una carta d’imbarco per lo stesso giorno",
+    "kind": "стиль",
+    "why": "Принято из ChatGPT: грамматика и естественность без изменения условий"
+  },
+  {
+    "lang": "ru",
+    "iata": "PEK",
+    "block": "taxi",
+    "field": "text",
+    "old": "На поездках длиннее 15 км добавляется 50% от суммы как доплата за обратный путь",
+    "new": "На участке поездки свыше 15 км к тарифу за километр добавляется 50% как доплата за обратный путь",
+    "kind": "смысл",
+    "why": "Официальная китайская версия bcia.com.cn/wljc.html: 单程载客15公里以上部分，每公里租价加收50%费用. Подтверждённая правка оригинала согласована владельцем 26.10"
+  },
+  {
+    "lang": "en",
+    "iata": "PEK",
+    "block": "taxi",
+    "field": "text",
+    "old": "On trips longer than 15 km, 50% of the fare is added as a return-trip surcharge",
+    "new": "For the portion of a trip beyond 15 km, a 50% return-trip surcharge is added to the per-km rate",
+    "kind": "смысл",
+    "why": "Официальная китайская версия bcia.com.cn/wljc.html: 单程载客15公里以上部分，每公里租价加收50%费用. Подтверждённая правка оригинала согласована владельцем 26.10"
+  },
+  {
+    "lang": "de",
+    "iata": "PEK",
+    "block": "taxi",
+    "field": "text",
+    "old": "Bei Fahrten über 15 km kommen 50 % des Betrags als Leerfahrtzuschlag hinzu",
+    "new": "Für den Streckenanteil über 15 km wird auf den Kilometertarif ein Leerfahrtzuschlag von 50 % erhoben",
+    "kind": "смысл",
+    "why": "Официальная китайская версия bcia.com.cn/wljc.html: 单程载客15公里以上部分，每公里租价加收50%费用. Подтверждённая правка оригинала согласована владельцем 26.10"
+  },
+  {
+    "lang": "fr",
+    "iata": "PEK",
+    "block": "taxi",
+    "field": "text",
+    "old": "Pour les courses de plus de 15 km, 50% du montant s'ajoutent au titre du trajet retour",
+    "new": "Pour la portion du trajet au-delà de 15 km, une majoration de 50% du tarif kilométrique s'applique au titre du retour à vide",
+    "kind": "смысл",
+    "why": "Официальная китайская версия bcia.com.cn/wljc.html: 单程载客15公里以上部分，每公里租价加收50%费用. Подтверждённая правка оригинала согласована владельцем 26.10"
+  },
+  {
+    "lang": "es",
+    "iata": "PEK",
+    "block": "taxi",
+    "field": "text",
+    "old": "En los trayectos de más de 15 km se añade un 50% del importe como suplemento por el viaje de vuelta",
+    "new": "En el tramo del trayecto que supera los 15 km se aplica un suplemento del 50% sobre la tarifa por kilómetro por el viaje de vuelta",
+    "kind": "смысл",
+    "why": "Официальная китайская версия bcia.com.cn/wljc.html: 单程载客15公里以上部分，每公里租价加收50%费用. Подтверждённая правка оригинала согласована владельцем 26.10"
+  },
+  {
+    "lang": "it",
+    "iata": "PEK",
+    "block": "taxi",
+    "field": "text",
+    "old": "Sulle corse oltre 15 km si aggiunge il 50% dell’importo come supplemento per il viaggio di ritorno",
+    "new": "Sul tratto oltre i 15 km si applica un supplemento del 50% alla tariffa chilometrica per il viaggio di ritorno",
+    "kind": "смысл",
+    "why": "Официальная китайская версия bcia.com.cn/wljc.html: 单程载客15公里以上部分，每公里租价加收50%费用. Подтверждённая правка оригинала согласована владельцем 26.10"
+  },
+  {
+    "lang": "tr",
+    "iata": "PEK",
+    "block": "taxi",
+    "field": "text",
+    "old": "15 km'den uzun yolculuklarda dönüş yolu farkı olarak tutarın %50'si eklenir",
+    "new": "Yolculuğun 15 km'yi aşan kısmında kilometre ücretine dönüş yolu farkı olarak %50 eklenir",
+    "kind": "смысл",
+    "why": "Официальная китайская версия bcia.com.cn/wljc.html: 单程载客15公里以上部分，每公里租价加收50%费用. Подтверждённая правка оригинала согласована владельцем 26.10"
+  },
+  {
+    "lang": "zh",
+    "iata": "PEK",
+    "block": "taxi",
+    "field": "text",
+    "old": "行程超过15公里的，加收车费的50%作为返程空驶费",
+    "new": "行程中超过15公里的部分，按每公里单价加收50%作为返程空驶费",
+    "kind": "смысл",
+    "why": "Официальная китайская версия bcia.com.cn/wljc.html: 单程载客15公里以上部分，每公里租价加收50%费用. Подтверждённая правка оригинала согласована владельцем 26.10"
+  },
+  {
+    "lang": "ja",
+    "iata": "PEK",
+    "block": "taxi",
+    "field": "text",
+    "old": "15 kmを超える乗車では帰路の追加料金として金額の50%が加算され",
+    "new": "走行距離が15 kmを超えた部分については、帰路の追加料金として1 kmあたりの料金に50%が加算され",
+    "kind": "смысл",
+    "why": "Официальная китайская версия bcia.com.cn/wljc.html: 单程载客15公里以上部分，每公里租价加收50%费用. Подтверждённая правка оригинала согласована владельцем 26.10"
+  },
+  {
+    "lang": "ko",
+    "iata": "PEK",
+    "block": "taxi",
+    "field": "text",
+    "old": "15 km를 넘는 운행에는 귀로 할증으로 금액의 50%가 추가되고",
+    "new": "운행 거리 중 15 km를 초과하는 구간에는 km당 요금의 50%가 귀로 할증으로 추가되고",
+    "kind": "смысл",
+    "why": "Официальная китайская версия bcia.com.cn/wljc.html: 单程载客15公里以上部分，每公里租价加收50%费用. Подтверждённая правка оригинала согласована владельцем 26.10"
+  },
+  {
+    "lang": "ar",
+    "iata": "PEK",
+    "block": "taxi",
+    "field": "text",
+    "old": "في الرحلات التي تزيد على 15 كم تُضاف 50% من المبلغ رسومًا لطريق العودة",
+    "new": "على الجزء من الرحلة الذي يتجاوز 15 كم تُضاف 50% إلى تعرفة الكيلومتر رسومًا لطريق العودة",
+    "kind": "смысл",
+    "why": "Официальная китайская версия bcia.com.cn/wljc.html: 单程载客15公里以上部分，每公里租价加收50%费用. Подтверждённая правка оригинала согласована владельцем 26.10"
+  },
+  {
+    "lang": "hi",
+    "iata": "PEK",
+    "block": "taxi",
+    "field": "text",
+    "old": "15 किमी से लंबी यात्राओं पर वापसी के लिए राशि का 50% अतिरिक्त जुड़ता है",
+    "new": "यात्रा के 15 किमी से आगे वाले हिस्से में प्रति किमी किराए पर वापसी के लिए 50% अतिरिक्त शुल्क जुड़ता है",
+    "kind": "смысл",
+    "why": "Официальная китайская версия bcia.com.cn/wljc.html: 单程载客15公里以上部分，每公里租价加收50%费用. Подтверждённая правка оригинала согласована владельцем 26.10"
+  },
+  {
+    "lang": "ru",
+    "iata": "ICN",
+    "block": "sleep",
+    "field": "text",
+    "old": "на этаже B1",
+    "new": "на этаже 1",
+    "kind": "смысл",
+    "why": "Официальный корейский каталог airport.kr/ap_ko/1008/subview.do: 캡슐호텔 다락휴(T1), 교통센터 1층 중앙. Исправление оригинала и 11 переводов согласовано владельцем 26.10"
+  },
+  {
+    "lang": "en",
+    "iata": "ICN",
+    "block": "sleep",
+    "field": "text",
+    "old": "on Level B1",
+    "new": "on Level 1",
+    "kind": "смысл",
+    "why": "Официальный корейский каталог airport.kr/ap_ko/1008/subview.do: 캡슐호텔 다락휴(T1), 교통센터 1층 중앙. Исправление оригинала и 11 переводов согласовано владельцем 26.10"
+  },
+  {
+    "lang": "de",
+    "iata": "ICN",
+    "block": "sleep",
+    "field": "text",
+    "old": "auf Ebene B1",
+    "new": "auf Ebene 1",
+    "kind": "смысл",
+    "why": "Официальный корейский каталог airport.kr/ap_ko/1008/subview.do: 캡슐호텔 다락휴(T1), 교통센터 1층 중앙. Исправление оригинала и 11 переводов согласовано владельцем 26.10"
+  },
+  {
+    "lang": "fr",
+    "iata": "ICN",
+    "block": "sleep",
+    "field": "text",
+    "old": "au niveau B1",
+    "new": "au niveau 1",
+    "kind": "смысл",
+    "why": "Официальный корейский каталог airport.kr/ap_ko/1008/subview.do: 캡슐호텔 다락휴(T1), 교통센터 1층 중앙. Исправление оригинала и 11 переводов согласовано владельцем 26.10"
+  },
+  {
+    "lang": "es",
+    "iata": "ICN",
+    "block": "sleep",
+    "field": "text",
+    "old": "nivel B1",
+    "new": "nivel 1",
+    "kind": "смысл",
+    "why": "Официальный корейский каталог airport.kr/ap_ko/1008/subview.do: 캡슐호텔 다락휴(T1), 교통센터 1층 중앙. Исправление оригинала и 11 переводов согласовано владельцем 26.10"
+  },
+  {
+    "lang": "it",
+    "iata": "ICN",
+    "block": "sleep",
+    "field": "text",
+    "old": "al livello B1",
+    "new": "al livello 1",
+    "kind": "смысл",
+    "why": "Официальный корейский каталог airport.kr/ap_ko/1008/subview.do: 캡슐호텔 다락휴(T1), 교통센터 1층 중앙. Исправление оригинала и 11 переводов согласовано владельцем 26.10"
+  },
+  {
+    "lang": "tr",
+    "iata": "ICN",
+    "block": "sleep",
+    "field": "text",
+    "old": "Kat B1",
+    "new": "Kat 1",
+    "kind": "смысл",
+    "why": "Официальный корейский каталог airport.kr/ap_ko/1008/subview.do: 캡슐호텔 다락휴(T1), 교통센터 1층 중앙. Исправление оригинала и 11 переводов согласовано владельцем 26.10"
+  },
+  {
+    "lang": "zh",
+    "iata": "ICN",
+    "block": "sleep",
+    "field": "text",
+    "old": "交通中心中央B1层",
+    "new": "交通中心中央1层",
+    "kind": "смысл",
+    "why": "Официальный корейский каталог airport.kr/ap_ko/1008/subview.do: 캡슐호텔 다락휴(T1), 교통센터 1층 중앙. Исправление оригинала и 11 переводов согласовано владельцем 26.10"
+  },
+  {
+    "lang": "ja",
+    "iata": "ICN",
+    "block": "sleep",
+    "field": "text",
+    "old": "交通センター地下1階",
+    "new": "交通センター1階",
+    "kind": "смысл",
+    "why": "Официальный корейский каталог airport.kr/ap_ko/1008/subview.do: 캡슐호텔 다락휴(T1), 교통센터 1층 중앙. Исправление оригинала и 11 переводов согласовано владельцем 26.10"
+  },
+  {
+    "lang": "ko",
+    "iata": "ICN",
+    "block": "sleep",
+    "field": "text",
+    "old": "교통센터 지하 1층",
+    "new": "교통센터 1층",
+    "kind": "смысл",
+    "why": "Официальный корейский каталог airport.kr/ap_ko/1008/subview.do: 캡슐호텔 다락휴(T1), 교통센터 1층 중앙. Исправление оригинала и 11 переводов согласовано владельцем 26.10"
+  },
+  {
+    "lang": "ar",
+    "iata": "ICN",
+    "block": "sleep",
+    "field": "text",
+    "old": "في المستوى B1",
+    "new": "في المستوى 1",
+    "kind": "смысл",
+    "why": "Официальный корейский каталог airport.kr/ap_ko/1008/subview.do: 캡슐호텔 다락휴(T1), 교통센터 1층 중앙. Исправление оригинала и 11 переводов согласовано владельцем 26.10"
+  },
+  {
+    "lang": "hi",
+    "iata": "ICN",
+    "block": "sleep",
+    "field": "text",
+    "old": "लेवल B1",
+    "new": "लेवल 1",
+    "kind": "смысл",
+    "why": "Официальный корейский каталог airport.kr/ap_ko/1008/subview.do: 캡슐호텔 다락휴(T1), 교통센터 1층 중앙. Исправление оригинала и 11 переводов согласовано владельцем 26.10"
+  },
+  {
+    "lang": "fr",
+    "iata": "MIA",
+    "block": "lounges",
+    "field": "text",
+    "old": "Les salons American sont accessibles selon le statut et avec un billet en classe affaires ou première d'American ou de oneworld",
+    "new": "L’accès aux salons American dépend du statut du passager et de son billet en classe affaires ou en première classe sur American ou une compagnie de l’alliance oneworld",
+    "kind": "стиль",
+    "why": "Подтверждённая ошибка французского: исправление дополнительно разрешено владельцем 26.10. Условия и числа сохранены"
+  },
+  {
+    "lang": "fr",
+    "iata": "MIA",
+    "block": "lounges",
+    "field": "text",
+    "old": "un pass à la journée est vendu s'il reste des places",
+    "new": "un pass pour un accès unique est vendu s'il reste des places",
+    "kind": "смысл",
+    "why": "Подтверждённая ошибка французского: исправление дополнительно разрешено владельцем 26.10. Условия и числа сохранены"
+  },
+  {
+    "lang": "fr",
+    "iata": "PVG",
+    "block": "storage",
+    "field": "text",
+    "old": "Tous les points sont ouverts de 06:00 à 24:00, garde jusqu'à 2 mois, pièce d'identité requise au dépôt, les objets sont passés aux rayons X.",
+    "new": "Tous les points de consigne sont ouverts de 06:00 à 24:00 ; la durée de garde est de 2 mois au maximum. Une pièce d'identité est requise au dépôt et les objets sont contrôlés aux rayons X.",
+    "kind": "стиль",
+    "why": "Подтверждённая ошибка французского: исправление дополнительно разрешено владельцем 26.10. Условия и числа сохранены"
+  },
+  {
+    "lang": "fr",
+    "iata": "PVG",
+    "block": "storage",
+    "field": "text",
+    "old": "pour une durée jusqu'à 4, 10 et 24 heures",
+    "new": "pour des durées allant jusqu'à 4, 10 et 24 heures, respectivement",
+    "kind": "стиль",
+    "why": "Подтверждённая ошибка французского: исправление дополнительно разрешено владельцем 26.10. Условия и числа сохранены"
+  },
+  {
+    "lang": "fr",
+    "iata": "SIN",
+    "block": "terminals",
+    "field": "text",
+    "old": "on peut aussi passer de l'un à l'autre par tapis roulants",
+    "new": "on peut aussi se déplacer entre ces terminaux en empruntant les trottoirs roulants",
+    "kind": "стиль",
+    "why": "Подтверждённая ошибка французского: исправление дополнительно разрешено владельцем 26.10. Условия и числа сохранены"
+  },
+  {
+    "lang": "tr",
+    "iata": "MIA",
+    "block": "lounges",
+    "field": "text",
+    "old": "Admirals Club D15 kapısının üstünde Kat 3'te",
+    "new": "Admirals Club, D15 kapısının üst tarafında, Kat 3'te",
+    "kind": "стиль",
+    "why": "Принято из ChatGPT: сохранение смысла и естественный турецкий; лишнее «только» у шаттла убрано"
+  },
+  {
+    "lang": "tr",
+    "iata": "MIA",
+    "block": "lounges",
+    "field": "text",
+    "old": "American salonlarına statüyle ve American veya oneworld business ya da birinci sınıf biletiyle girilir",
+    "new": "American salonlarına uygun statüye ve American'ın veya oneworld üyesi bir havayolunun business ya da birinci sınıf biletine sahip olanlar girebilir",
+    "kind": "стиль",
+    "why": "Принято из ChatGPT: сохранение смысла и естественный турецкий; лишнее «только» у шаттла убрано"
+  },
+  {
+    "lang": "tr",
+    "iata": "MIA",
+    "block": "lounges",
+    "field": "text",
+    "old": "yer varsa tek girişlik geçiş satılır",
+    "new": "yer varsa tek girişlik giriş kartı satın alınabilir",
+    "kind": "стиль",
+    "why": "Принято из ChatGPT: сохранение смысла и естественный турецкий; лишнее «только» у шаттла убрано"
+  },
+  {
+    "lang": "tr",
+    "iata": "LAS",
+    "block": "parking",
+    "field": "text",
+    "old": "ücretsiz servis yalnızca uzak alana gider",
+    "new": "uzak alana ücretsiz servis gider",
+    "kind": "смысл",
+    "why": "Принято из ChatGPT: сохранение смысла и естественный турецкий; лишнее «только» у шаттла убрано"
+  },
+  {
+    "lang": "tr",
+    "iata": "LAS",
+    "block": "parking",
+    "field": "text",
+    "old": "vale 24 saati $34",
+    "new": "vale park hizmeti 24 saat için $34",
+    "kind": "стиль",
+    "why": "Принято из ChatGPT: сохранение смысла и естественный турецкий; лишнее «только» у шаттла убрано"
+  },
+  {
+    "lang": "tr",
+    "iata": "PVG",
+    "block": "storage",
+    "field": "text",
+    "old": "28 inçten büyük bagaj parça başına 24 saati 60 yuan",
+    "new": "28 inçten büyük bagaj için parça başına 24 saatlik ücret 60 yuan",
+    "kind": "стиль",
+    "why": "Принято из ChatGPT: сохранение смысла и естественный турецкий; лишнее «только» у шаттла убрано"
+  },
+  {
+    "lang": "tr",
+    "iata": "ICN",
+    "block": "terminals",
+    "field": "text",
+    "old": "Tekerlekli sandalyeli yolculara",
+    "new": "Tekerlekli sandalye kullanan yolculara",
+    "kind": "стиль",
+    "why": "Принято из ChatGPT: сохранение смысла и естественный турецкий; лишнее «только» у шаттла убрано"
+  },
+  {
+    "lang": "tr",
+    "iata": "SIN",
+    "block": "terminals",
+    "field": "text",
+    "old": "transit alanda yalnızca bagaj son varış noktasına kadar kaydedilmişse",
+    "new": "transit alanda yalnızca bagajın son varış noktasına kadar check-in işlemi tamamlanmışsa",
+    "kind": "стиль",
+    "why": "Принято из ChatGPT: сохранение смысла и естественный турецкий; лишнее «только» у шаттла убрано"
+  },
+  {
+    "lang": "zh",
+    "iata": "MIA",
+    "block": "lounges",
+    "field": "text",
+    "old": "凭会员等级",
+    "new": "凭符合条件的会员身份",
+    "kind": "стиль",
+    "why": "Принято №2 ChatGPT: естественное обозначение статуса для доступа; союз 及 сохранён по оригиналу"
+  },
+  {
+    "lang": "ja",
+    "iata": "MIA",
+    "block": "lounges",
+    "field": "text",
+    "old": "Americanのラウンジには、ステータスと、Americanかoneworldのビジネスクラス・ファーストクラスの航空券で入室できる。",
+    "new": "Americanのラウンジには、対象となるステータスを持ち、American Airlinesまたはoneworld加盟航空会社のビジネスクラスまたはファーストクラスの航空券を所持している場合に入室できる。",
+    "kind": "стиль",
+    "why": "Принято из ChatGPT: ясная грамматика совместных условий исходника, oneworld — авиакомпания альянса"
+  },
+  {
+    "lang": "ja",
+    "iata": "PVG",
+    "block": "storage",
+    "field": "text",
+    "old": "20–28インチの手荷物は30元、40元、45元。",
+    "new": "20–28インチの手荷物は同じ時間区分でそれぞれ30元、40元、45元。",
+    "kind": "стиль",
+    "why": "Принята ясная связь трёх тарифов с уже перечисленными сроками, без добавления новых значений"
+  },
+  {
+    "lang": "ru",
+    "iata": "MIA",
+    "block": "parking",
+    "field": "text",
+    "old": "сбор за бронь 2.99",
+    "new": "сбор за бронь",
+    "kind": "числа",
+    "why": "Официальный источник miami-airport.com/airport-parking.asp даёт 2.99 без валюты; в условиях booking.mia-parking.com/terms-and-conditions суммы нет. Не придумываем валюту: неполную сумму убрали, невозвратность сбора сохранили. Правка подтверждённых проблем оригинала во всех языках разрешена владельцем 26.10"
+  },
+  {
+    "lang": "en",
+    "iata": "MIA",
+    "block": "parking",
+    "field": "text",
+    "old": "the 2.99 booking fee",
+    "new": "the booking fee",
+    "kind": "числа",
+    "why": "Официальный источник miami-airport.com/airport-parking.asp даёт 2.99 без валюты; в условиях booking.mia-parking.com/terms-and-conditions суммы нет. Не придумываем валюту: неполную сумму убрали, невозвратность сбора сохранили. Правка подтверждённых проблем оригинала во всех языках разрешена владельцем 26.10"
+  },
+  {
+    "lang": "de",
+    "iata": "MIA",
+    "block": "parking",
+    "field": "text",
+    "old": "die Buchungsgebühr von 2,99",
+    "new": "die Buchungsgebühr",
+    "kind": "числа",
+    "why": "Официальный источник miami-airport.com/airport-parking.asp даёт 2.99 без валюты; в условиях booking.mia-parking.com/terms-and-conditions суммы нет. Не придумываем валюту: неполную сумму убрали, невозвратность сбора сохранили. Правка подтверждённых проблем оригинала во всех языках разрешена владельцем 26.10"
+  },
+  {
+    "lang": "fr",
+    "iata": "MIA",
+    "block": "parking",
+    "field": "text",
+    "old": "frais de réservation de 2,99",
+    "new": "frais de réservation",
+    "kind": "числа",
+    "why": "Официальный источник miami-airport.com/airport-parking.asp даёт 2.99 без валюты; в условиях booking.mia-parking.com/terms-and-conditions суммы нет. Не придумываем валюту: неполную сумму убрали, невозвратность сбора сохранили. Правка подтверждённых проблем оригинала во всех языках разрешена владельцем 26.10"
+  },
+  {
+    "lang": "es",
+    "iata": "MIA",
+    "block": "parking",
+    "field": "text",
+    "old": "la tasa de reserva de 2,99",
+    "new": "la tasa de reserva",
+    "kind": "числа",
+    "why": "Официальный источник miami-airport.com/airport-parking.asp даёт 2.99 без валюты; в условиях booking.mia-parking.com/terms-and-conditions суммы нет. Не придумываем валюту: неполную сумму убрали, невозвратность сбора сохранили. Правка подтверждённых проблем оригинала во всех языках разрешена владельцем 26.10"
+  },
+  {
+    "lang": "it",
+    "iata": "MIA",
+    "block": "parking",
+    "field": "text",
+    "old": "la commissione di prenotazione di 2,99",
+    "new": "la commissione di prenotazione",
+    "kind": "числа",
+    "why": "Официальный источник miami-airport.com/airport-parking.asp даёт 2.99 без валюты; в условиях booking.mia-parking.com/terms-and-conditions суммы нет. Не придумываем валюту: неполную сумму убрали, невозвратность сбора сохранили. Правка подтверждённых проблем оригинала во всех языках разрешена владельцем 26.10"
+  },
+  {
+    "lang": "tr",
+    "iata": "MIA",
+    "block": "parking",
+    "field": "text",
+    "old": "2,99 rezervasyon ücreti",
+    "new": "rezervasyon ücreti",
+    "kind": "числа",
+    "why": "Официальный источник miami-airport.com/airport-parking.asp даёт 2.99 без валюты; в условиях booking.mia-parking.com/terms-and-conditions суммы нет. Не придумываем валюту: неполную сумму убрали, невозвратность сбора сохранили. Правка подтверждённых проблем оригинала во всех языках разрешена владельцем 26.10"
+  },
+  {
+    "lang": "zh",
+    "iata": "MIA",
+    "block": "parking",
+    "field": "text",
+    "old": "预订费2.99",
+    "new": "预订费",
+    "kind": "числа",
+    "why": "Официальный источник miami-airport.com/airport-parking.asp даёт 2.99 без валюты; в условиях booking.mia-parking.com/terms-and-conditions суммы нет. Не придумываем валюту: неполную сумму убрали, невозвратность сбора сохранили. Правка подтверждённых проблем оригинала во всех языках разрешена владельцем 26.10"
+  },
+  {
+    "lang": "ja",
+    "iata": "MIA",
+    "block": "parking",
+    "field": "text",
+    "old": "予約手数料2.99",
+    "new": "予約手数料",
+    "kind": "числа",
+    "why": "Официальный источник miami-airport.com/airport-parking.asp даёт 2.99 без валюты; в условиях booking.mia-parking.com/terms-and-conditions суммы нет. Не придумываем валюту: неполную сумму убрали, невозвратность сбора сохранили. Правка подтверждённых проблем оригинала во всех языках разрешена владельцем 26.10"
+  },
+  {
+    "lang": "ko",
+    "iata": "MIA",
+    "block": "parking",
+    "field": "text",
+    "old": "예약 수수료 2.99는",
+    "new": "예약 수수료는",
+    "kind": "числа",
+    "why": "Официальный источник miami-airport.com/airport-parking.asp даёт 2.99 без валюты; в условиях booking.mia-parking.com/terms-and-conditions суммы нет. Не придумываем валюту: неполную сумму убрали, невозвратность сбора сохранили. Правка подтверждённых проблем оригинала во всех языках разрешена владельцем 26.10"
+  },
+  {
+    "lang": "ar",
+    "iata": "MIA",
+    "block": "parking",
+    "field": "text",
+    "old": "رسوم الحجز 2.99",
+    "new": "رسوم الحجز",
+    "kind": "числа",
+    "why": "Официальный источник miami-airport.com/airport-parking.asp даёт 2.99 без валюты; в условиях booking.mia-parking.com/terms-and-conditions суммы нет. Не придумываем валюту: неполную сумму убрали, невозвратность сбора сохранили. Правка подтверждённых проблем оригинала во всех языках разрешена владельцем 26.10"
+  },
+  {
+    "lang": "hi",
+    "iata": "MIA",
+    "block": "parking",
+    "field": "text",
+    "old": "बुकिंग शुल्क 2.99",
+    "new": "बुकिंग शुल्क",
+    "kind": "числа",
+    "why": "Официальный источник miami-airport.com/airport-parking.asp даёт 2.99 без валюты; в условиях booking.mia-parking.com/terms-and-conditions суммы нет. Не придумываем валюту: неполную сумму убрали, невозвратность сбора сохранили. Правка подтверждённых проблем оригинала во всех языках разрешена владельцем 26.10"
+  },
+  {
+    "lang": "ko",
+    "iata": "MIA",
+    "block": "lounges",
+    "field": "text",
+    "old": "North 터미널",
+    "new": "북쪽 터미널",
+    "kind": "стиль",
+    "why": "Принято из ChatGPT: естественность; союз И, порядок валюты и факты сохранены"
+  },
+  {
+    "lang": "ko",
+    "iata": "MIA",
+    "block": "lounges",
+    "field": "text",
+    "old": "American 라운지는 등급과 American이나 oneworld의 비즈니스·일등석 항공권으로 입장하며",
+    "new": "American 라운지는 회원 등급 및 American 또는 oneworld 회원 항공사의 비즈니스석·일등석 항공권에 따라 입장할 수 있으며",
+    "kind": "стиль",
+    "why": "Принято из ChatGPT: естественность; союз И, порядок валюты и факты сохранены"
+  },
+  {
+    "lang": "ko",
+    "iata": "HND",
+    "block": "lounges",
+    "field": "text",
+    "old": "그 밖에는 유료입니다",
+    "new": "그 외의 경우에는 유료로 이용할 수 있습니다",
+    "kind": "стиль",
+    "why": "Принято из ChatGPT: естественность; союз И, порядок валюты и факты сохранены"
+  },
+  {
+    "lang": "ko",
+    "iata": "PVG",
+    "block": "storage",
+    "field": "text",
+    "old": "맡길 때 신분증이 필요하고",
+    "new": "짐을 맡길 때 신분 확인 서류가 필요하고",
+    "kind": "стиль",
+    "why": "Принято из ChatGPT: естественность; союз И, порядок валюты и факты сохранены"
+  },
+  {
+    "lang": "ko",
+    "iata": "ICN",
+    "block": "terminals",
+    "field": "text",
+    "old": "약 6분, ₩1,050의 유료입니다",
+    "new": "약 6분이 소요되며, 요금은 ₩1,050입니다",
+    "kind": "стиль",
+    "why": "Принято из ChatGPT: естественность; союз И, порядок валюты и факты сохранены"
+  },
+  {
+    "lang": "ru",
+    "iata": "ICN",
+    "block": "sleep",
+    "field": "text",
+    "old": "в центре транспортного центра на этаже 1",
+    "new": "в центре транспортного центра",
+    "kind": "смысл",
+    "why": "Повторная проверка: английский официальный каталог даёт Center of Transportation Center 1BF, корейский 교통센터 1층 중앙. По CLAUDE.md при противоречии факт не публикуется: убран только спорный этаж Darakhyu, центр транспортного центра сохранён"
+  },
+  {
+    "lang": "en",
+    "iata": "ICN",
+    "block": "sleep",
+    "field": "text",
+    "old": "in the centre of the Transportation Center on Level 1",
+    "new": "in the centre of the Transportation Center",
+    "kind": "смысл",
+    "why": "Повторная проверка: английский официальный каталог даёт Center of Transportation Center 1BF, корейский 교통센터 1층 중앙. По CLAUDE.md при противоречии факт не публикуется: убран только спорный этаж Darakhyu, центр транспортного центра сохранён"
+  },
+  {
+    "lang": "de",
+    "iata": "ICN",
+    "block": "sleep",
+    "field": "text",
+    "old": "in der Mitte des Verkehrszentrums auf Ebene 1",
+    "new": "in der Mitte des Verkehrszentrums",
+    "kind": "смысл",
+    "why": "Повторная проверка: английский официальный каталог даёт Center of Transportation Center 1BF, корейский 교통센터 1층 중앙. По CLAUDE.md при противоречии факт не публикуется: убран только спорный этаж Darakhyu, центр транспортного центра сохранён"
+  },
+  {
+    "lang": "fr",
+    "iata": "ICN",
+    "block": "sleep",
+    "field": "text",
+    "old": "au centre du pôle de transport au niveau 1",
+    "new": "au centre du pôle de transport",
+    "kind": "смысл",
+    "why": "Повторная проверка: английский официальный каталог даёт Center of Transportation Center 1BF, корейский 교통센터 1층 중앙. По CLAUDE.md при противоречии факт не публикуется: убран только спорный этаж Darakhyu, центр транспортного центра сохранён"
+  },
+  {
+    "lang": "es",
+    "iata": "ICN",
+    "block": "sleep",
+    "field": "text",
+    "old": "en el centro de transporte, nivel 1",
+    "new": "en el centro de transporte",
+    "kind": "смысл",
+    "why": "Повторная проверка: английский официальный каталог даёт Center of Transportation Center 1BF, корейский 교통센터 1층 중앙. По CLAUDE.md при противоречии факт не публикуется: убран только спорный этаж Darakhyu, центр транспортного центра сохранён"
+  },
+  {
+    "lang": "it",
+    "iata": "ICN",
+    "block": "sleep",
+    "field": "text",
+    "old": "nella parte centrale del centro di trasporto al livello 1",
+    "new": "nella parte centrale del centro di trasporto",
+    "kind": "смысл",
+    "why": "Повторная проверка: английский официальный каталог даёт Center of Transportation Center 1BF, корейский 교통센터 1층 중앙. По CLAUDE.md при противоречии факт не публикуется: убран только спорный этаж Darakhyu, центр транспортного центра сохранён"
+  },
+  {
+    "lang": "tr",
+    "iata": "ICN",
+    "block": "sleep",
+    "field": "text",
+    "old": "Darakhyu kapsül oteli Kat 1'de ulaşım merkezinin ortasında",
+    "new": "Darakhyu kapsül oteli ulaşım merkezinin ortasında",
+    "kind": "смысл",
+    "why": "Повторная проверка: английский официальный каталог даёт Center of Transportation Center 1BF, корейский 교통센터 1층 중앙. По CLAUDE.md при противоречии факт не публикуется: убран только спорный этаж Darakhyu, центр транспортного центра сохранён"
+  },
+  {
+    "lang": "zh",
+    "iata": "ICN",
+    "block": "sleep",
+    "field": "text",
+    "old": "交通中心中央1层的Darakhyu",
+    "new": "交通中心中央的Darakhyu",
+    "kind": "смысл",
+    "why": "Повторная проверка: английский официальный каталог даёт Center of Transportation Center 1BF, корейский 교통센터 1층 중앙. По CLAUDE.md при противоречии факт не публикуется: убран только спорный этаж Darakhyu, центр транспортного центра сохранён"
+  },
+  {
+    "lang": "ja",
+    "iata": "ICN",
+    "block": "sleep",
+    "field": "text",
+    "old": "交通センター1階の中央にある",
+    "new": "交通センター中央にある",
+    "kind": "смысл",
+    "why": "Повторная проверка: английский официальный каталог даёт Center of Transportation Center 1BF, корейский 교통센터 1층 중앙. По CLAUDE.md при противоречии факт не публикуется: убран только спорный этаж Darakhyu, центр транспортного центра сохранён"
+  },
+  {
+    "lang": "ko",
+    "iata": "ICN",
+    "block": "sleep",
+    "field": "text",
+    "old": "교통센터 1층 중앙의",
+    "new": "교통센터 중앙의",
+    "kind": "смысл",
+    "why": "Повторная проверка: английский официальный каталог даёт Center of Transportation Center 1BF, корейский 교통센터 1층 중앙. По CLAUDE.md при противоречии факт не публикуется: убран только спорный этаж Darakhyu, центр транспортного центра сохранён"
+  },
+  {
+    "lang": "ar",
+    "iata": "ICN",
+    "block": "sleep",
+    "field": "text",
+    "old": "Darakhyu في وسط مركز النقل في المستوى 1",
+    "new": "Darakhyu في وسط مركز النقل",
+    "kind": "смысл",
+    "why": "Повторная проверка: английский официальный каталог даёт Center of Transportation Center 1BF, корейский 교통센터 1층 중앙. По CLAUDE.md при противоречии факт не публикуется: убран только спорный этаж Darakhyu, центр транспортного центра сохранён"
+  },
+  {
+    "lang": "hi",
+    "iata": "ICN",
+    "block": "sleep",
+    "field": "text",
+    "old": "लेवल 1 पर परिवहन केंद्र के बीच में कैप्सूल होटल Darakhyu",
+    "new": "परिवहन केंद्र के बीच में कैप्सूल होटल Darakhyu",
+    "kind": "смысл",
+    "why": "Повторная проверка: английский официальный каталог даёт Center of Transportation Center 1BF, корейский 교통센터 1층 중앙. По CLAUDE.md при противоречии факт не публикуется: убран только спорный этаж Darakhyu, центр транспортного центра сохранён"
+  },
+  {
+    "lang": "ar",
+    "iata": "MIA",
+    "block": "lounges",
+    "field": "text",
+    "old": "بحسب حالة العضوية وبتذكرة",
+    "new": "بحسب فئة العضوية وبتذكرة",
+    "kind": "стиль",
+    "why": "Принято из ChatGPT: естественная арабская формулировка с сохранением условий оригинала"
+  },
+  {
+    "lang": "ar",
+    "iata": "LAS",
+    "block": "parking",
+    "field": "text",
+    "old": "المدة القصيرة:",
+    "new": "مواقف السيارات قصيرة المدة:",
+    "kind": "стиль",
+    "why": "Принято из ChatGPT: естественная арабская формулировка с сохранением условий оригинала"
+  },
+  {
+    "lang": "ar",
+    "iata": "LAS",
+    "block": "parking",
+    "field": "text",
+    "old": "المدة الطويلة:",
+    "new": "مواقف السيارات طويلة المدة:",
+    "kind": "стиль",
+    "why": "Принято из ChatGPT: естественная арабская формулировка с сохранением условий оригинала"
+  },
+  {
+    "lang": "ar",
+    "iata": "LAS",
+    "block": "parking",
+    "field": "text",
+    "old": "و$8 حتى ساعتين",
+    "new": "و$8 لمدة تصل إلى ساعتين",
+    "kind": "стиль",
+    "why": "Принято из ChatGPT: естественная арабская формулировка с сохранением условий оригинала"
+  },
+  {
+    "lang": "ar",
+    "iata": "HND",
+    "block": "lounges",
+    "field": "text",
+    "old": "وحمّام للاستحمام",
+    "new": "ومرافق للاستحمام",
+    "kind": "стиль",
+    "why": "Принято из ChatGPT: естественная арабская формулировка с сохранением условий оригинала"
+  },
+  {
+    "lang": "ar",
+    "iata": "PVG",
+    "block": "storage",
+    "field": "text",
+    "old": "ويلزم مستند عند الإيداع",
+    "new": "ويُطلب إبراز وثيقة عند تسليم الأمتعة للتخزين",
+    "kind": "стиль",
+    "why": "Принято из ChatGPT: естественная арабская формулировка с сохранением условий оригинала"
+  },
+  {
+    "lang": "ar",
+    "iata": "ICN",
+    "block": "terminals",
+    "field": "text",
+    "old": "للركاب على الكراسي المتحركة",
+    "new": "للركاب الذين يستخدمون الكراسي المتحركة",
+    "kind": "стиль",
+    "why": "Принято из ChatGPT: естественная арабская формулировка с сохранением условий оригинала"
+  },
+  {
+    "lang": "ar",
+    "iata": "SIN",
+    "block": "terminals",
+    "field": "text",
+    "old": "في المنطقة العامة ومنطقة العبور كلتيهما",
+    "new": "في كلٍّ من المنطقة العامة ومنطقة العبور",
+    "kind": "стиль",
+    "why": "Принято из ChatGPT: естественная арабская формулировка с сохранением условий оригинала"
+  },
+  {
+    "lang": "hi",
+    "iata": "MIA",
+    "block": "lounges",
+    "field": "text",
+    "old": "American के लाउंज में स्टेटस और American या oneworld के बिज़नेस या फ़र्स्ट क्लास टिकट से प्रवेश मिलता है",
+    "new": "American के लाउंज में उपयुक्त स्टेटस और American या oneworld के बिज़नेस या फ़र्स्ट क्लास टिकट के आधार पर प्रवेश मिलता है",
+    "kind": "стиль",
+    "why": "Принято из независимой выборки ChatGPT: естественность при сохранении смысла"
+  },
+  {
+    "lang": "hi",
+    "iata": "LAS",
+    "block": "parking",
+    "field": "text",
+    "old": "दूसरी पार्किंग तक निःशुल्क शटल जाती है",
+    "new": "दूरस्थ पार्किंग तक निःशुल्क शटल जाती है",
+    "kind": "стиль",
+    "why": "Принято из независимой выборки ChatGPT: естественность при сохранении смысла"
+  },
+  {
+    "lang": "hi",
+    "iata": "LAS",
+    "block": "parking",
+    "field": "text",
+    "old": "वैले $34 प्रति 24 घंटे",
+    "new": "वैले पार्किंग $34 प्रति 24 घंटे",
+    "kind": "стиль",
+    "why": "Принято из независимой выборки ChatGPT: естественность при сохранении смысла"
+  },
+  {
+    "lang": "hi",
+    "iata": "PVG",
+    "block": "storage",
+    "field": "text",
+    "old": "सभी केंद्र 06:00 से 24:00 तक खुले हैं",
+    "new": "सभी सामान भंडारण केंद्र 06:00 से 24:00 तक खुले हैं",
+    "kind": "стиль",
+    "why": "Принято из независимой выборки ChatGPT: естественность при сохранении смысла"
+  },
+  {
+    "lang": "hi",
+    "iata": "SIN",
+    "block": "terminals",
+    "field": "text",
+    "old": "केवल तभी जब सामान अंतिम गंतव्य तक बुक हो",
+    "new": "केवल तभी जब सामान अंतिम गंतव्य तक चेक-इन किया गया हो",
+    "kind": "стиль",
+    "why": "Принято из независимой выборки ChatGPT: естественность при сохранении смысла"
+  },
+  {
+    "lang": "zh",
+    "iata": "CAN",
+    "block": "transport",
+    "field": "text",
+    "old": "机场北站",
+    "new": "Airport North站",
+    "kind": "имена",
+    "why": "В доступной китайской версии gbiac.net название не подтверждено, точечный поиск официального домена не дал страницы. Сохранена латиница русского оригинала, а не неподтверждённое местное имя"
+  },
+  {
+    "lang": "zh",
+    "iata": "CAN",
+    "block": "transport",
+    "field": "hint",
+    "old": "地铁3号线机场北站",
+    "new": "地铁3号线",
+    "kind": "стиль",
+    "why": "Краткая подпись, полное название Airport North в text"
+  },
+  {
+    "lang": "ko",
+    "iata": "MIA",
+    "block": "lounges",
+    "field": "hint",
+    "old": "North 터미널 라운지",
+    "new": "북쪽 터미널 라운지",
+    "kind": "стиль",
+    "why": "Единое корейское обозначение Северного терминала с основным текстом"
+  },
+  {
+    "lang": "zh",
+    "iata": "HND",
+    "block": "transport",
+    "field": "hint",
+    "old": "京急线和东京单轨电车",
+    "new": "铁路与单轨电车",
+    "kind": "стиль",
+    "why": "Нейтральная короткая подпись: китайское официальное имя Keikyu не проверялось, латинские имена остаются в text"
+  },
+  {
+    "lang": "ja",
+    "iata": "AMS",
+    "block": "taxi",
+    "field": "hint",
+    "old": "Plaza前の乗り場",
+    "new": "公式タクシー乗り場",
+    "kind": "стиль",
+    "why": "Краткая подпись без неоднозначного сокращения имени Schiphol Plaza"
+  },
+  {
+    "lang": "ko",
+    "iata": "AMS",
+    "block": "taxi",
+    "field": "hint",
+    "old": "Plaza 앞 승강장",
+    "new": "공식 택시 승강장",
+    "kind": "стиль",
+    "why": "Краткая подпись без неоднозначного сокращения Schiphol Plaza"
+  }
+]

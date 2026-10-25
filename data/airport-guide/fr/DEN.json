@@ -1,0 +1,35 @@
+{
+ "iata": "DEN",
+ "blocks": {
+  "transport": {
+   "title": "Comment s'y rendre",
+   "hint": "Train A Line, bus RTD",
+   "text": "Le DEN Transit Center se trouve à l'extrémité sud du terminal Jeppesen : sortir par les portes vitrées et descendre par escalator ou ascenseur au niveau du sol. De là partent le train A Line vers Denver Union Station et les bus RTD AB, AT, 104L, 145X et 169L. Les transports fonctionnent environ de 3:30 à minuit, le dernier bus quitte l'aéroport à 1:28. Le pass journalier pour toutes les lignes RTD coûte 10 $."
+  },
+  "taxi": {
+   "title": "Taxi",
+   "hint": "Centre-ville : forfait 72,04 $",
+   "text": "Tarifs forfaitaires aller simple, taxe d'aéroport incluse : centre-ville de Denver (zone A) — 72,04 $, Denver Tech Center (zone B) — 80,04 $, Boulder (zone C) — 115,04 $, Tower Road (zone D) — 37,04 $. Vers les autres destinations — au compteur plus une taxe de 6,04 $. Station de taxis — terminal Jeppesen, niveau 5, Island 1, près des sorties 505, 507 et 511 (côté est) et 506, 510 et 512 (côté ouest)."
+  },
+  "lounges": {
+   "title": "Salons",
+   "hint": "United Club, Centurion, Sky Club",
+   "text": "Salons en mezzanine des halls : American Airlines Admirals Club près de la porte C-32, American Express Centurion Lounge près de C-46, Capital One Lounge (Plaza Premium) près de A-34, United Club près de A-25, B-44 et B-32. United Club Fly — près de la porte B-60. Delta Sky Club — après le contrôle, à l'extrémité nord du hall A, sur la passerelle depuis le terminal Jeppesen. L'espace de repos gratuit Rest and Recharge, avec fauteuils inclinables, se trouve en mezzanine du hall A."
+  },
+  "sleep": {
+   "title": "Où dormir",
+   "hint": "Westin près du terminal",
+   "text": "L'hôtel Westin Denver International Airport, de 519 chambres, est à quelques pas du terminal principal, juste au-dessus du DEN Transit Center — on y monte par escalator."
+  },
+  "kids": {
+   "title": "Avec un enfant",
+   "hint": "Aires de jeux près de A25 et C54",
+   "text": "Deux aires de jeux pour enfants sont ouvertes jour et nuit — près des portes A25 et C54. Des salles d'allaitement gratuites avec table à langer et lavabo sont ouvertes jour et nuit : après le contrôle dans chaque hall, et deux dans le terminal Jeppesen — au centre au niveau 5 près de la zone d'arrivée et dans la partie nord-ouest près des arrivées internationales."
+  },
+  "wifi": {
+   "title": "Wi‑Fi",
+   "hint": "Gratuit, dans tout l'aéroport",
+   "text": "Wi‑Fi gratuit dans tout l'aéroport : réseaux DEN Airport Free WiFi, DEN Airport Free WiFi 2.4G ou DEN FREE WIFI 6E, sélectionner et appuyer sur « Connect ». Des prises se trouvent dans tout le terminal Jeppesen et dans les trois halls, ainsi que des bornes de recharge dédiées avec sièges et plans de travail."
+  }
+ }
+}

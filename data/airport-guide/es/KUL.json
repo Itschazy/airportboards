@@ -1,0 +1,25 @@
+{
+ "iata": "KUL",
+ "blocks": {
+  "transport": {
+   "title": "Cómo llegar",
+   "hint": "KLIA Ekspres, 28 min a KL Sentral",
+   "text": "La forma más rápida de llegar al centro es el tren KLIA Ekspres: sin paradas hasta KL City Air Terminal (KL CAT), en la estación KL Sentral, en 28 minutos. El tren de tránsito, con tres paradas (Bandar Tasik Selatan, Putrajaya/Cyberjaya y Salak Tinggi), tarda 35 minutos. Los trenes tienen portaequipajes, plazas con anclaje para sillas de ruedas y un aseo accesible en silla de ruedas."
+  },
+  "taxi": {
+   "title": "Taxi",
+   "hint": "Con cupón o con taxímetro",
+   "text": "En la terminal 1 hay dos tipos de taxi oficial: con cupón (precio fijo según destino y categoría del vehículo, pago antes del viaje) y con taxímetro. Bajada de bandera del taxi con taxímetro: Budget, RM 3,00; Teks1M, RM 4,00; Executive, RM 6,00, más un cargo por servicio de RM 2,00; de 0:00 a 6:00, recargo del 50%. Los mostradores de Airport Taxi están en la sala de llegadas nacionales, en la zona de recogida de equipaje internacional y junto al bordillo, todo en el nivel 3 del edificio principal; también se puede pedir en gohub.com.my."
+  },
+  "terminals": {
+   "title": "Terminales",
+   "hint": "Lanzadera gratis, día y noche",
+   "text": "Entre las terminales 1 y 2 circula día y noche una lanzadera gratuita en circuito: terminal 1 – terminal 2 – aparcamiento de larga estancia (LTCP) – terminal 1. Paradas: en la terminal 1, puerta 4, nivel 1; en la terminal 2, dársena A10, nivel 1, nudo de transporte del centro comercial Gateway."
+  },
+  "parking": {
+   "title": "Aparcamiento",
+   "hint": "Junto a la terminal y LTCP",
+   "text": "Aparcamiento de la terminal 1: más de 5700 plazas, a unos 3 minutos a pie del edificio principal. Preferred Parking, en el nivel 2 de los bloques B y C: más de 300 plazas, a 2 minutos a pie. Aparcamiento de larga estancia LTCP: más de 5200 plazas, con lanzadera gratuita día y noche a las terminales 1 y 2. Videovigilancia día y noche, plazas para familias y para mujeres, sala de espera climatizada; la plaza se puede reservar en el sitio web."
+  }
+ }
+}

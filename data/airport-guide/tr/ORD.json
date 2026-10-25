@@ -1,0 +1,40 @@
+{
+ "iata": "ORD",
+ "blocks": {
+  "transport": {
+   "title": "Nasıl gidilir",
+   "hint": "CTA Blue Line gece gündüz, Metra",
+   "text": "CTA Blue Line treni gece gündüz çalışır, istasyon garajın alt katında: Terminal 1, 2 ve 3'ten bodrum katındaki yaya tünellerinden “Trains to City” tabelaları izlenir, Terminal 5'ten önce ATS ile Terminal 3'e veya 2'ye gidilir. Bilet istasyonun yanındaki otomatlardan nakit veya kartla alınır. Metra North Central Service banliyö trenleri, Multi-Modal Facility ulaşım merkezinin arkasındaki O'Hare Transfer istasyonundan kalkar; oraya her terminalden ATS gider; bilet kondüktörden alınır. Multi-Modal Facility'den (8 ve 9 numaralı duraklar) Pace 250 ve 330 otobüsleri kalkar."
+  },
+  "taxi": {
+   "title": "Taksi",
+   "hint": "Merkeze yaklaşık $50",
+   "text": "Taksi durakları her terminalin alt katında, bagaj teslim alanının çıkışında; taksiye yalnızca orada binilmeli, gidiş katındaki sürücülere değil. Taksi taksimetreyle çalışır, havalimanından Chicago merkezine ortalama $50. Banliyölere taksi önceden banliyö şirketinden telefonla çağrılır. Uber ve Lyft üst kattan yolcu alır: Terminal 2'de turuncu tabelalı 2A–2G alanları, Terminal 3'te yeşil tabelalı 3G, 3H, 3J ve 3K."
+  },
+  "lounges": {
+   "title": "Business salonları",
+   "hint": "United, Admirals Club, Sky Club",
+   "text": "Çoğu salona günlük geçiş satın alınabilir. United Club — Terminal 1'de B6, B18, C10 kapılarının yanında ve Terminal 2'de E7 ve F9'un yanında; United Polaris Lounge (yalnızca dış hatlar birinci ve business sınıfı) — Terminal 1, C18'in yanında. Admirals Club (American, JAL, Iberia) — Terminal 3, G8, L2A ve H6/K6'nın yanında; H6/K6'nın yanında ayrıca American Flagship Lounge. Terminal 5'te: M13'ün yanında Delta Sky Club, M17'nin yanında Air France salonu, M18'in yanında LOT Business Lounge ve Swissport Lounge (Priority Pass için de), M19'un yanında Wingtips Lounge."
+  },
+  "sleep": {
+   "title": "Nerede uyunur",
+   "hint": "Terminal 1–3 karşısında Hilton",
+   "text": "Hilton Chicago O'Hare Airport oteli Terminal 1, 2 ve 3'ün tam karşısında: iç terminallerden yeraltı geçitleriyle yürüyerek, Terminal 5'ten ATS ile gidilir. Otelden CTA Blue Line istasyonuna kapalı geçit var. Havalimanı yakınındaki diğer oteller misafirlerini ücretsiz servislerle taşır; servis geliş katında bagaj teslim alanının yanındaki Virtual Concierge kiosklarından çağrılabilir."
+  },
+  "kids": {
+   "title": "Çocukla",
+   "hint": "Terminal 2'de Family Lounge",
+   "text": "Family Lounge çocuk alanı Terminal 2'de güvenlik kontrolünün hemen ardından, ana salonda F1 kapısının yanında: oyun alanı, cihaz şarjı, bebek arabası park yeri. Anne-bebek odaları tüm terminallerde, Mamava emzirme kabinleri Terminal 1, 2 ve 3'te. Alt değiştirme masaları tuvaletlerin çoğunda. Bez, mama ve biberon Oops Diapers 2Go otomatlarında satılır."
+  },
+  "parking": {
+   "title": "Otopark",
+   "hint": "24 saati $16'dan",
+   "text": "Saatlik otopark ana garajın Kat 1'inde, ilk saat $3; günlük otopark garajın Kat 2–6'sında ve B ve C alanlarında, 24 saati $43, Terminal 5'in yanındaki D alanı 24 saati $43. Ekonomik alanlar: F $30, G ve H 24 saati $16, H'de ödeme yalnızca kartla. Tarifelere vergiler dahil, ödeme çıkışta. Otopark ofisiyle ((773) 686-7530) anlaşma olmadan 30 günden uzun kalan araç çekilebilir."
+  },
+  "wifi": {
+   "title": "Wi‑Fi",
+   "hint": "Ücretsiz, sınırsız",
+   "text": "Tüm terminallerde, güvenlik kontrolünden önce ve sonra ücretsiz sınırsız Wi‑Fi. Boingo Hotspot veya _Free_ORD _Wi-Fi ağı; bağlandıktan sonra tarayıcıda https olmayan herhangi bir adres açılır ve “Watch Ad to Connect” seçilir. 4–8 kişilik ücretsiz şarj istasyonları tüm terminallerde var."
+  }
+ }
+}

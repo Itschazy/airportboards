@@ -1,0 +1,30 @@
+{
+ "iata": "AMS",
+ "blocks": {
+  "transport": {
+   "title": "Nasıl gidilir",
+   "hint": "Amsterdam CS'ye NS treni",
+   "text": "NS istasyonu doğrudan terminal binasının altında; yürüyen merdiven veya asansörle inilir. Amsterdam CS ile havalimanı arasında tren saatte 8 kez sefer yapar, Sloterdijk ve Lelylaan'da durur ve havalimanından her zaman 3 numaralı perondan kalkar. Amsterdam, Utrecht, Leiden, Lahey, Delft ve Rotterdam'dan havalimanına gece gündüz, çoğu zaman aktarmasız ulaşılabilir. Bilet havalimanında alınır ya da Schiphol Plaza'da yürüyen merdivenlerin ve asansörlerin üst ucundaki sarı okuyuculara okutularak temassız kartla veya telefonla ödenir."
+  },
+  "taxi": {
+   "title": "Taksi",
+   "hint": "Schiphol Plaza önünde durak",
+   "text": "Resmî taksi durağı Schiphol Plaza'nın önünde; önceden rezervasyon gerekmez. Uber ve Bolt araçları ayrı bir duraktan, “App pick-up point”ten yolcu alır; oraya terminaldeki tabelalar yönlendirir, orada ücretsiz Wi‑Fi var. Schiphol Travel Taxi minibüsleri 8 kişiye kadar gruplar içindir; yol arkadaşlarıyla paylaşarak gidilebilir."
+  },
+  "storage": {
+   "title": "Emanet",
+   "hint": "Kat −1, 24 saati €7'den",
+   "text": "Emanet Kat −1'de, Arrivals 1 ile Arrivals 2 arasında, gece gündüz açık, 30 güne kadar; 24 saat için: el bagajı (55×35×25 cm'ye kadar) €7, bagaj €9,50, büyük boy bagaj €12, vestiyer parça başına €2,50. Kayıp makbuz için €8 ücret alınır. Güvenlik kontrolünden sonra transit alanda, kapıların yanında 40×40×70 cm dolaplar €8,50, 7 güne kadar, gece gündüz."
+  },
+  "sleep": {
+   "title": "Nerede uyunur",
+   "hint": "Kontrol sonrası YOTELAIR ve Mercure",
+   "text": "Güvenlik kontrolünden sonra iki otel gece gündüz çalışır: Lounge 3'te Mercure Hotel ve Lounge 2'de YOTELAIR, ikisi de D1–D57, E, F, G ve H kapılarına giden yolda. YOTELAIR'e Hollanda vizesi olmadan da girilebilir."
+  },
+  "kids": {
+   "title": "Çocukla",
+   "hint": "Uçaklı oyun alanı, ücretsiz",
+   "text": "Kids Playground çocuk oyun alanı güvenlik kontrolünden sonra, Lounge 2'de Kat 1'de, D1–D57, E, F, G ve H kapılarına giden yolda, gece gündüz açık. Çocuklar gerçek bir uçağın içinde tırmanır; yanında yemek alanı var, giriş ücretsiz."
+  }
+ }
+}

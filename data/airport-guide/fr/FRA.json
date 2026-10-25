@@ -1,0 +1,40 @@
+{
+ "iata": "FRA",
+ "blocks": {
+  "transport": {
+   "title": "Comment s'y rendre",
+   "hint": "S-Bahn S8, S9 et trains régionaux",
+   "text": "La gare régionale de l'aéroport le relie directement à Francfort, Offenbach, Hanau, Aschaffenbourg, Rüsselsheim, Mayence et Wiesbaden : lignes S-Bahn S8 et S9 et trains régionaux RB58, RE59, RE2 et RE3. La gare se trouve au niveau souterrain du terminal 1 (niveau 0), accès depuis toutes les zones A, B, C en suivant les panneaux « Train stations S T ». Les trains arrivent aux voies 1–3. Vers le terminal 3 — train SkyLine, environ 10–15 minutes, en suivant les panneaux « Terminal 3 G, H, J »."
+  },
+  "taxi": {
+   "title": "Taxi",
+   "hint": "24h/24, 20–30 minutes de la ville",
+   "text": "Des taxis stationnent jour et nuit devant les trois terminaux et devant la gare grandes lignes. Le trajet depuis Francfort prend de 20 à 30 minutes selon la circulation. Prise en charge et dépose Uber : au terminal 1 — parking courte durée P31 (niveau des départs) ; au terminal 3, prise en charge sur la voie des autocars charter P62, dépose au niveau des départs P63."
+  },
+  "terminals": {
+   "title": "Terminaux",
+   "hint": "SkyLine gratuit, bus la nuit",
+   "text": "Les terminaux 1 et 3 sont reliés par le train gratuit SkyLine : en service de 4:00 à 23:00, intervalle de 2–3 minutes, stations dans les deux terminaux. De 22:00 à 5:00, une navette en bus circule entre les terminaux ; arrêts devant les bâtiments des terminaux, sur l'esplanade devant la zone d'arrivée."
+  },
+  "lounges": {
+   "title": "Salons",
+   "hint": "Lufthansa en T1, SkyTeam en T3",
+   "text": "Au terminal 1, après le contrôle — salons Lufthansa (Business, Senator, First Class) dans les zones A, B et Z, Lufthansa Bistro Lounge (Non-Schengen) dans la zone C et Air Canada Lounge dans la zone B. Au terminal 3, après le contrôle — Air France Lounge dans la zone H, Emirates Lounge, Priority Lounge et SkyTeam Lounge dans la zone J. Avant le contrôle — Luxx Lounge au terminal 1, zone C."
+  },
+  "sleep": {
+   "title": "Où dormir",
+   "hint": "Cabines napcabs, dès 12 € l'heure",
+   "text": "Cabines de sommeil napcabs avec lit, climatisation, réveil et bureau — au terminal 1 après le contrôle : 6 dans le Pier A Schengen et 3 dans la zone de transit B au niveau 3 (escalator près de la porte B42) ; au terminal 3 — 3 dans le Pier H Schengen et 5 dans le Pier J Non-Schengen. De 6:00 à 22:00 — 17 € de l'heure (2 heures minimum), de 22:00 à 6:00 — 12 € de l'heure (3 heures minimum). Réservation en ligne par carte ou PayPal, sur place uniquement par carte. Des douches se trouvent à côté des cabines."
+  },
+  "parking": {
+   "title": "Parking",
+   "hint": "15 000 places, 7 jours dès 99 €",
+   "text": "L'aéroport compte au total 15 000 places de parking. En réservation en ligne, Terminal Parking — 7 jours à partir de 99,00 €, Weekend Special (2–3 jours du vendredi au dimanche) — à partir de 55,00 € ; réservation de 9 mois à 24 heures avant le départ, pour une durée de 1–44 jours. Hauteur maximale d'accès aux parkings des terminaux : 2,10 m ; les véhicules plus hauts vont au parking autocars P36. Les voitures au GPL (LPG) ne sont pas admises dans les parkings du terminal 1, elles le sont dans le parking du terminal 3."
+  },
+  "wifi": {
+   "title": "Wi‑Fi",
+   "hint": "Gratuit, sans inscription",
+   "text": "Wi‑Fi gratuit et illimité jour et nuit, plus de 300 points d'accès, sans inscription. Choisir le réseau « Airport-Frankfurt », puis Wi-Fi Free ou Wi-Fi Free+, et appuyer sur « Go online » en acceptant les conditions de Fraport AG."
+  }
+ }
+}

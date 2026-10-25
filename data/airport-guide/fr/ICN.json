@@ -1,0 +1,30 @@
+{
+ "iata": "ICN",
+ "blocks": {
+  "taxi": {
+   "title": "Taxi",
+   "hint": "Niveau 1, majoration de nuit",
+   "text": "Les stations de taxis sont au niveau 1, aux sorties du hall des arrivées ; chaque destination (Séoul, Incheon, Gyeonggi) a son propre numéro de station : vers Séoul depuis le terminal 1 — 5C, 6C, 6D, depuis le terminal 2 — 7C. De 22:00 à 4:00, une majoration de nuit s'applique, d'environ 20% à 40%. Vers Séoul, Incheon, Goyang, Gwangmyeong, Gimpo et Bucheon, aucun supplément de sortie de zone n'est perçu. L'aéroport demande de n'utiliser que les stations officielles : des call van illégaux à prix gonflés opèrent souvent sous l'apparence de taxis."
+  },
+  "terminals": {
+   "title": "Terminaux",
+   "hint": "Train AREX, 6 minutes",
+   "text": "Entre les terminaux 1 et 2, on peut prendre le train Airport Railroad — environ 6 minutes, 1 050 ₩, trajet payant. Pour les passagers en fauteuil roulant, sur appel au service des navettes (032-741-3217), un véhicule avec élévateur est mis à disposition gratuitement : uniquement en semaine, de 5:00 à 24:00, il vaut mieux réserver à l'avance."
+  },
+  "lounges": {
+   "title": "Salons",
+   "hint": "Terminal 1, niveau 4",
+   "text": "Au terminal 1, tous les salons sont au niveau 4. Ouverts jour et nuit, avec une pause de 21:30 à 22:00 : SKY HUB Lounge East (zone de transit, près de la porte 11) et West (près de la porte 42). Également Asiana Business Lounge (West, près de la porte 42, 6:00–0:30 ; Central, près de la porte 26 ; East, près de la porte 11), Oneworld Lounge près de la porte 28 (5:30–1:30), KE Lounge pour les passagers des compagnies étrangères près de la porte 28, Matina Lounge East et West, SilverKris Lounge près de la porte 29."
+  },
+  "sleep": {
+   "title": "Où dormir",
+   "hint": "Capsules Darakhyu, hôtel de transit",
+   "text": "Au terminal 1, sont ouverts jour et nuit l'hôtel capsule Darakhyu, au centre du pôle de transport, et le Transit Hotel près de la porte 11 au niveau 4. Les espaces de repos gratuits et ouverts jour et nuit NAP Zone, Cozy Zone et Refresh Zone se trouvent dans le hall de transit est au niveau 4, la Relax Zone dans le hall ouest. Les douches près des portes 25 et 29 au niveau 4 sont ouvertes de 5:00 à 23:00."
+  },
+  "kids": {
+   "title": "Avec un enfant",
+   "hint": "Aires de jeux et salles mère-enfant",
+   "text": "Au terminal 1, des aires de jeux ouvertes jour et nuit se trouvent près des portes 9, 11, 14, 41 et 45 au niveau 3 et dans les halls de transit est et ouest au niveau 4. Les salles mère-enfant (Baby Care Room) sont ouvertes jour et nuit : dans le hall des arrivées près des halls B et E au niveau 1, près des comptoirs d'enregistrement D et K au niveau 3, près des portes 11, 22, 25, 29, 33 et 45 au niveau 3 et dans les halls de transit est et ouest au niveau 4."
+  }
+ }
+}

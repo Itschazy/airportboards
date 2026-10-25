@@ -1,0 +1,45 @@
+{
+ "iata": "HND",
+ "blocks": {
+  "transport": {
+   "title": "Come arrivare",
+   "hint": "Keikyu e Tokyo Monorail",
+   "text": "L’aeroporto è collegato direttamente con la linea Keikyu e la monorotaia Tokyo Monorail. Tempi di percorrenza: per Shinagawa circa 15 minuti, per Hamamatsucho circa 20, per la stazione di Tokyo e Yokohama circa 30, per Ueno e Asakusa circa 40, per Shibuya circa 45, per Shinjuku circa 50 minuti. Nel Terminal 1 i binari di entrambe le linee sono al livello B1. Nel Terminal 3 i tornelli Keikyu in direzione del centro di Tokyo e di Yokohama si trovano nella sala arrivi al livello 2, quelli della Tokyo Monorail al livello 2 (arrivi) e al livello 3 (partenze)."
+  },
+  "taxi": {
+   "title": "Taxi",
+   "hint": "Livello 1, tariffa fissa",
+   "text": "I posteggi dei taxi si trovano al livello 1 (sala arrivi) dei terminal 1 e 2, con fermate separate per le corse verso Kawasaki, Yokohama, Yokosuka e Miura e per le altre destinazioni; nel Terminal 3 c’è la fermata 21, scendendo al livello 1 seguendo i cartelli. I taxi prenotati tramite app o in anticipo arrivano al livello 2 (partenze): nel Terminal 1 presso l’uscita 7, nel Terminal 2 presso l’uscita 2. Tra Haneda, Tokyo e la prefettura di Kanagawa, salvo alcune zone, vige una tariffa fissa; i pedaggi si pagano a parte."
+  },
+  "terminals": {
+   "title": "Terminal",
+   "hint": "Bus gratuito ogni 4 minuti",
+   "text": "Tra i terminal circola un bus navetta gratuito: dalle 5:00 alle 20:00 ogni 4 minuti, dalle 20:00 alle 0:00 ogni 8 minuti; le prime corse dalle 4:47 alle 5:04, le ultime dall’1:15 all’1:32 a seconda del terminal. Nel Terminal 1 la fermata è al livello 1 (sala arrivi), fermata 8. Ai passeggeri in transito tra voli nazionali e internazionali o tra voli internazionali, ai banchi informazioni (terminal 1 e 2: livello B1, Terminal 3: livello 2) vengono dati gratuitamente biglietti Keikyu o Tokyo Monorail tra i terminal 1 e 3 o 2 e 3, su presentazione di passaporto e carta d’imbarco."
+  },
+  "lounges": {
+   "title": "Sale business",
+   "hint": "TIAT LOUNGE, giorno e notte",
+   "text": "Nel Terminal 3 la sala TIAT LOUNGE nell’area dei gate d’imbarco al livello 4 è aperta giorno e notte, permanenza fino a 3 ore: buffet, bevande anche alcoliche, doccia. Ingresso con i coupon delle compagnie aeree o con una carta idonea intestata al passeggero e una carta d’imbarco per lo stesso giorno, altrimenti a pagamento: adulti 4.400 ¥, bambini 4–12 anni 2.200 ¥, da 0 a 3 anni gratis; con Priority Pass dall’1:00 alle 5:00. Nel Terminal 1, al livello 2 nell’area partenze nazionali: POWER LOUNGE SOUTH (6:00–21:00) e NORTH (6:00–20:30), adulti 1.320 ¥."
+  },
+  "storage": {
+   "title": "Deposito bagagli",
+   "hint": "Da 800 ¥, in T3 giorno e notte",
+   "text": "I bagagli si custodiscono fino a 2 settimane, somma delle tre dimensioni fino a 300 cm, peso fino a 30 kg. Prezzo per collo: S (fino a 120 cm) 800 ¥, M (120–199 cm) 1.000 ¥, L (200–300 cm) 2.000 ¥; si accettano anche sci e tavole da surf. Nel Terminal 3 il deposito bagagli nella sala arrivi al livello 2 è aperto giorno e notte (prezzo per 24 ore), nel Terminal 1 si trova al livello B1 (parte sud), dalle 8:00 alle 19:30 (prezzo al giorno)."
+  },
+  "sleep": {
+   "title": "Dove dormire",
+   "hint": "Hotel in ogni terminal",
+   "text": "In ogni terminal c’è un hotel aperto giorno e notte: nel Terminal 1 First Cabin Haneda Terminal 1 (livello 1, sala arrivi), nel Terminal 2 Haneda Excel Hotel Tokyu (livello 2, parte nord), nel Terminal 3 The Royal Park Hotel Tokyo Haneda nella sala partenze al livello 3 e la sua parte di transito nell’area dopo i controlli, allo stesso livello."
+  },
+  "kids": {
+   "title": "Con bambini",
+   "hint": "Angoli bimbi Kid’s Space",
+   "text": "Gli angoli per bambini Kid’s Space si trovano nelle sale partenze e presso i gate d’imbarco: nel Terminal 1 al livello 2 prima dei controlli e in tre punti dopo; nel Terminal 2 al livello 2 prima dei controlli, al livello 2 dopo i controlli (parte nord e parte internazionale) e al livello 1 nella sala d’imbarco con bus; nel Terminal 3 al livello 3 dopo i controlli, nelle parti nord e sud. Un adulto deve restare accanto al bambino."
+  },
+  "wifi": {
+   "title": "Wi‑Fi",
+   "hint": "Rete gratuita HANEDA-FREE-WIFI",
+   "text": "Wi‑Fi gratuito: scegliere la rete «HANEDA-FREE-WIFI», aprire il browser e seguire le istruzioni sullo schermo. Nei negozi la rete non funziona (tranne nelle sale business), in alcune zone la connessione può essere difficile; i servizi disponibili variano da terminal a terminal."
+  }
+ }
+}

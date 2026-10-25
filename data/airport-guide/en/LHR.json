@@ -1,0 +1,30 @@
+{
+ "iata": "LHR",
+ "blocks": {
+  "transport": {
+   "title": "Getting there",
+   "hint": "Express, Elizabeth, Piccadilly",
+   "text": "Heathrow Express runs to Paddington every 15 minutes; the trip between Paddington and terminals 2 and 3 takes 15 minutes. The Elizabeth line links the airport with Bond Street, Farringdon, Liverpool Street, Paddington, Stratford and Tottenham Court Road, under 40 minutes to central London; pay by contactless card or Oyster. The cheapest option is the Piccadilly line of the Underground from all terminals: under an hour to the centre, with trains stopping at King's Cross St. Pancras, Leicester Square and Piccadilly Circus."
+  },
+  "taxi": {
+   "title": "Taxi",
+   "hint": "Black cabs at every terminal",
+   "text": "London black cabs wait at the ranks at each terminal; the drivers are licensed and have passed the Knowledge of London exam, and all vehicles are wheelchair accessible. WeKnow electric transfers operate at fixed fares; their desks are in the arrivals areas of all terminals."
+  },
+  "lounges": {
+   "title": "Lounges",
+   "hint": "Paid lounges from £35",
+   "text": "Paid lounges after security, daily. Terminal 2: No.1 Lounges and Plaza Premium, both from 05:00 to 21:00, from £44 and from £40 per person. Terminal 5: Plaza Premium from 04:45 to 21:30, from £35 per person. Terminal 2 also has the airline lounges of Lufthansa, Singapore Airlines, Air Canada and United, Terminal 5 has British Airways lounges."
+  },
+  "storage": {
+   "title": "Left luggage",
+   "hint": "Excess Baggage, from £10",
+   "text": "Excess Baggage Company left luggage, under round-the-clock video surveillance; price per item: up to 3 hours £10, 3–24 hours £15, 24–48 hours £27.50, 48–72 hours £40. After 72 hours, £12.50 for each additional day; after 7 days, £10 per day. Can be booked online."
+  },
+  "wifi": {
+   "title": "Wi‑Fi",
+   "hint": "Free, Heathrow Wi‑Fi network",
+   "text": "Free Wi‑Fi in all terminals: choose the Heathrow Wi‑Fi network, follow the on-screen instructions and register. The network is Friendly WiFi certified and filters content unsuitable for children."
+  }
+ }
+}

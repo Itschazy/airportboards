@@ -1,0 +1,46 @@
+{
+ "iata": "LHR",
+ "checked": "2026-10-25",
+ "blocks": [
+  {
+   "id": "transport",
+   "title": "Как доехать",
+   "hint": "Heathrow Express, Elizabeth line, Piccadilly",
+   "text": "Heathrow Express идёт до Паддингтона каждые 15 минут, поездка между Паддингтоном и терминалами 2 и 3 занимает 15 минут. Elizabeth line связывает аэропорт с Bond Street, Farringdon, Liverpool Street, Paddington, Stratford и Tottenham Court Road, до центра Лондона меньше 40 минут; оплата бесконтактной картой или Oyster. Самый дешёвый вариант — линия метро Piccadilly от всех терминалов: до центра меньше часа, поезда останавливаются на King's Cross St. Pancras, Leicester Square и Piccadilly Circus.",
+   "source": "heathrow.com",
+   "url": "https://www.heathrow.com/transport-and-directions/by-rail-or-train"
+  },
+  {
+   "id": "taxi",
+   "title": "Такси",
+   "hint": "Чёрные кэбы у каждого терминала",
+   "text": "Лондонские чёрные такси ждут на стоянках у каждого терминала; водители лицензированы и сдали экзамен Knowledge of London, все машины приспособлены для инвалидной коляски. Электрические трансферы WeKnow работают по фиксированным тарифам, их стойки — в зонах прилёта всех терминалов.",
+   "source": "heathrow.com",
+   "url": "https://www.heathrow.com/transport-and-directions/by-taxi-or-mini-cab"
+  },
+  {
+   "id": "lounges",
+   "title": "Бизнес-залы",
+   "hint": "Платные залы от £35",
+   "text": "Платные залы после досмотра, ежедневно. Терминал 2: No.1 Lounges и Plaza Premium, оба с 05:00 до 21:00, от £44 и от £40 с человека. Терминал 5: Plaza Premium с 04:45 до 21:30, от £35 с человека. В терминале 2 есть также залы авиакомпаний Lufthansa, Singapore Airlines, Air Canada и United, в терминале 5 — залы British Airways.",
+   "source": "heathrow.com",
+   "url": "https://www.heathrow.com/at-the-airport/lounges-hotels-spas"
+  },
+  {
+   "id": "storage",
+   "title": "Камера хранения",
+   "hint": "Excess Baggage, от £10",
+   "text": "Камеры хранения Excess Baggage Company, под круглосуточным видеонаблюдением, цена за единицу багажа: до 3 часов £10, 3–24 часа £15, 24–48 часов £27.50, 48–72 часа £40. После 72 часов — £12.50 за каждый дополнительный день, после 7 суток — £10 в день. Можно забронировать онлайн.",
+   "source": "heathrow.com",
+   "url": "https://www.heathrow.com/at-the-airport/airport-services/left-luggage"
+  },
+  {
+   "id": "wifi",
+   "title": "Wi‑Fi",
+   "hint": "Бесплатно, сеть Heathrow Wi‑Fi",
+   "text": "Бесплатный Wi‑Fi во всех терминалах: выбрать сеть Heathrow Wi‑Fi, следовать инструкциям на экране и зарегистрироваться. Сеть сертифицирована Friendly WiFi и фильтрует неподходящий для детей контент.",
+   "source": "heathrow.com",
+   "url": "https://www.heathrow.com/at-the-airport/airport-services/internet-and-wifi"
+  }
+ ]
+}

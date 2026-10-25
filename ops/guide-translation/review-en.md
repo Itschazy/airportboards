@@ -196,3 +196,49 @@ parking — не входило в задачу, оставлено как «day
 ## Перекрёстная проверка ChatGPT (выборка 6 пар, 25.10)
 
 Принято: TBS «including transfers within 90 minutes» (было похоже на 90 минут пересадок), «food warmer» вместо «bottle warmer» (оригинал не уточняет), «after security screening», SVO/VKO порядок слов. Отклонено: Level → floor (этаж как на указателе, см. «Этажи как на указателях»).
+
+
+## Раунд 2 (26.10.2026)
+
+| Файл | Блок | Было | Стало | Тип | Почему |
+|---|---|---|---|---|---|
+| CAN | transport.text | exit | door | смысл | Уточнение gate/door/exit по официальному источнику, таблица door-vs-gate.md |
+| CAN | taxi.hint | exits | doors | смысл | Уточнение gate/door/exit по официальному источнику, таблица door-vs-gate.md |
+| CAN | taxi.text | exit | door | смысл | Уточнение gate/door/exit по официальному источнику, таблица door-vs-gate.md |
+| CAN | storage.text | exit | door | смысл | Уточнение gate/door/exit по официальному источнику, таблица door-vs-gate.md |
+| CAN | sleep.text | exit | door | смысл | Уточнение gate/door/exit по официальному источнику, таблица door-vs-gate.md |
+| PEK | taxi.text | exits | doors | смысл | Уточнение gate/door/exit по официальному источнику, таблица door-vs-gate.md |
+| PEK | storage.text | exit | door | смысл | Уточнение gate/door/exit по официальному источнику, таблица door-vs-gate.md |
+| PVG | taxi.text | exits | doors | смысл | Уточнение gate/door/exit по официальному источнику, таблица door-vs-gate.md |
+| PVG | taxi.text | exit | door | смысл | Уточнение gate/door/exit по официальному источнику, таблица door-vs-gate.md |
+| BKK | taxi.hint | exits | doors | смысл | Уточнение gate/door/exit по официальному источнику, таблица door-vs-gate.md |
+| BKK | taxi.text | exits | doors | смысл | Уточнение gate/door/exit по официальному источнику, таблица door-vs-gate.md |
+| BKK | storage.text | exit | door | смысл | Уточнение gate/door/exit по официальному источнику, таблица door-vs-gate.md |
+| PVG | storage.text | exit 7 | door 7 | смысл | Уточнение gate/door/exit по официальному источнику, таблица door-vs-gate.md |
+| PVG | sleep.text | exit 2 of | door 2 of | смысл | Уточнение gate/door/exit по официальному источнику, таблица door-vs-gate.md |
+| PVG | sleep.text | exit 29 | door 29 | смысл | Уточнение gate/door/exit по официальному источнику, таблица door-vs-gate.md |
+| HND | taxi.text | door 7 | exit 7 | смысл | Уточнение gate/door/exit по официальному источнику, таблица door-vs-gate.md |
+| HND | taxi.text | door 2 | exit 2 | смысл | Уточнение gate/door/exit по официальному источнику, таблица door-vs-gate.md |
+| DEN | transport.text | From here the A Line train runs to Denver Union Station, as do RTD buses AB, AT, 104L, 145X and 169L. | The A Line train to Denver Union Station and RTD buses AB, AT, 104L, 145X and 169L depart from here. | смысл | as do приписывало всем автобусам направление Denver Union Station; в оригинале только место отправления |
+| LHR | transport.hint | Heathrow Express, Elizabeth, Piccadilly | Express, Elizabeth, Piccadilly | стиль | Сокращение подписи до 35 символов, полный текст сохранён |
+| MIA | transport.hint | Metrorail, Metrobus, Tri-Rail, MIA Mover | Metrorail, Tri-Rail, MIA Mover | стиль | Сокращение подписи до 35 символов, Metrobus остаётся в тексте |
+| MIA | taxi.text | App-based rides | Rideshare vehicles | стиль | Английский термин для машин по приложению в US; условия и уровни сохранены |
+| LAS | parking.text | Economy and the remote lot (served by a free shuttle): | Economy and the remote lot (the latter served by a free shuttle): | смысл | Шаттл относится только к удалённой площадке, не Economy |
+
+Проверены заново все 24 файла (AMS BCN BKK CAN CDG DEL DEN DFW FRA HKG HND ICN JFK KUL LAS LAX LHR MAD MCO MIA ORD PEK PVG SIN), все title/hint/text и отсутствие about как в оригинале. Числа/валюты, возраст JFK under5, тарифы по24часа, бесплатность, зоны досмотра и имена сверены. Оригинальные названия Ground Transport Concierge, DEN Transit Center, Cell Phone Lot, LAX Economy Parking сохранены. Статус: ручная рецензия завершена; ChatGPT-выборка ещё впереди.
+| MIA | lounges.text | a day pass | a single-entry pass | смысл | «Разовый пропуск» не задаёт срок действия целый день; сохраняем один вход |
+| MIA | lounges.text | American lounges admit by status and with a business- or first-class ticket on American or oneworld | Access to American lounges is based on status and a business- or first-class ticket on American or a oneworld airline | стиль | Принято из независимой выборки ChatGPT: естественная формулировка при сохранении условий русского исходника |
+| MIA | lounges.text | a single-entry pass is sold if space is available | single-entry passes are available for purchase if space is available | стиль | Принято из независимой выборки ChatGPT: естественная формулировка при сохранении условий русского исходника |
+| HND | lounges.text | Entry with airline coupons or with an eligible card in your name and a boarding pass for the same day, otherwise paid | Entry is available with airline coupons or an eligible card in your name together with a same-day boarding pass. Otherwise, admission is subject to a fee | стиль | Принято из независимой выборки ChatGPT: естественная формулировка при сохранении условий русского исходника |
+| PVG | storage.text | All points are open from 06:00 to 24:00 and store items for up to 2 months | All storage locations are open from 06:00 to 24:00 and accept items for storage for up to 2 months | стиль | Принято из независимой выборки ChatGPT: естественная формулировка при сохранении условий русского исходника |
+| PVG | storage.text | an ID document is required on drop-off | an identity document is required when depositing items | стиль | Принято из независимой выборки ChatGPT: естественная формулировка при сохранении условий русского исходника |
+| ICN | terminals.text | about 6 minutes, ₩1,050, the fare is paid | about 6 minutes, with a fare of ₩1,050 | стиль | Принято из независимой выборки ChatGPT: естественная формулировка при сохранении условий русского исходника |
+| SIN | terminals.text | you can also walk between them on travelators | you can also travel between them using moving walkways | стиль | Принято из независимой выборки ChatGPT: естественная формулировка при сохранении условий русского исходника |
+
+### ChatGPT, выборка раунда 2
+https://chatgpt.com/c/6ade6bc7-a3f4-832d-9ebb-8f862baf536d — 6 пар MIA/lounges, LAS/parking, HND/lounges, PVG/storage, ICN/terminals, SIN/terminals; поиск запрещён в запросе. Ответ сначала не загружался, после перезагрузки чата прочитан полностью.
+Приняты замечания 2–7 о естественности, №1 — частично: access is based on и a oneworld airline. **Отклонена** замена and→or: это меняет условие исходника «по статусу и билету». Неоднозначность самого оригинала отмечена, перевод не исправляет факты от себя. LAS без ошибок по выборке.
+| PEK | taxi.text | On trips longer than 15 km, 50% of the fare is added as a return-trip surcharge | For the portion of a trip beyond 15 km, a 50% return-trip surcharge is added to the per-km rate | смысл | Официальная китайская версия bcia.com.cn/wljc.html: 单程载客15公里以上部分，每公里租价加收50%费用. Подтверждённая правка оригинала согласована владельцем 26.10 |
+| ICN | sleep.text | on Level B1 | on Level 1 | смысл | Официальный корейский каталог airport.kr/ap_ko/1008/subview.do: 캡슐호텔 다락휴(T1), 교통센터 1층 중앙. Исправление оригинала и 11 переводов согласовано владельцем 26.10 |
+| MIA | parking.text | the 2.99 booking fee | the booking fee | числа | Официальный источник miami-airport.com/airport-parking.asp даёт 2.99 без валюты; в условиях booking.mia-parking.com/terms-and-conditions суммы нет. Не придумываем валюту: неполную сумму убрали, невозвратность сбора сохранили. Правка подтверждённых проблем оригинала во всех языках разрешена владельцем 26.10 |
+| ICN | sleep.text | in the centre of the Transportation Center on Level 1 | in the centre of the Transportation Center | смысл | Повторная проверка: английский официальный каталог даёт Center of Transportation Center 1BF, корейский 교통센터 1층 중앙. По CLAUDE.md при противоречии факт не публикуется: убран только спорный этаж Darakhyu, центр транспортного центра сохранён |

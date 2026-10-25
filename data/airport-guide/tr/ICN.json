@@ -1,0 +1,30 @@
+{
+ "iata": "ICN",
+ "blocks": {
+  "taxi": {
+   "title": "Taksi",
+   "hint": "Kat 1'de duraklar, gece zammı",
+   "text": "Taksi durakları Kat 1'de geliş salonu çıkışlarının yanında; her yönün (Seul, Incheon, Gyeonggi-do) kendi durak numarası var: Seul'e Terminal 1'den 5C, 6C, 6D, Terminal 2'den 7C. 22:00'den 4:00'e kadar yaklaşık %20 ile %40 arası gece zammı uygulanır. Seul, Incheon, Goyang, Gwangmyeong, Gimpo ve Bucheon'a bölge dışı ek ücret alınmaz. Havalimanı yalnızca resmî durakların kullanılmasını ister: taksi kılığında sık sık yüksek fiyatlı kaçak call van'lar çalışır."
+  },
+  "terminals": {
+   "title": "Terminaller",
+   "hint": "AREX treni, 6 dakika",
+   "text": "Terminal 1 ile 2 arasında Airport Railroad treniyle gidilebilir — yaklaşık 6 dakika, 1.050 ₩, yolculuk ücretli. Tekerlekli sandalye kullanan yolculara servis otobüsü birimi aranarak (032-741-3217) ücretsiz asansörlü araç gönderilir: yalnızca hafta içi, 5:00'ten 24:00'e kadar; önceden rezervasyon yapmak daha iyi olur."
+  },
+  "lounges": {
+   "title": "Business salonları",
+   "hint": "Terminal 1, Kat 4",
+   "text": "Terminal 1'de tüm salonlar Kat 4'te. SKY HUB Lounge East (transit alan, 11 numaralı kapının yanında) ve West (42 numaralı kapının yanında) 21:30–22:00 arası mola ile gece gündüz açık. Ayrıca Asiana Business Lounge (West, 42 numaralı kapının yanında, 6:00–0:30; Central, 26 numaralı kapının yanında; East, 11 numaralı kapının yanında), 28 numaralı kapının yanında Oneworld Lounge (5:30–1:30), 28 numaralı kapının yanında yabancı havayolu yolcuları için KE Lounge, Matina Lounge East ve West, 29 numaralı kapının yanında SilverKris Lounge."
+  },
+  "sleep": {
+   "title": "Nerede uyunur",
+   "hint": "Darakhyu kapsülleri, transit otel",
+   "text": "Terminal 1'de gece gündüz açık Darakhyu kapsül oteli ulaşım merkezinin ortasında, Transit Hotel ise Kat 4'te 11 numaralı kapının yanında. Ücretsiz, gece gündüz açık NAP Zone, Cozy Zone ve Refresh Zone dinlenme alanları Kat 4'teki doğu transit salonunda, Relax Zone batı salonunda. Kat 4'te 25 ve 29 numaralı kapıların yanındaki duşlar 5:00'ten 23:00'e kadar açık."
+  },
+  "kids": {
+   "title": "Çocukla",
+   "hint": "Oyun alanları ve anne-bebek odaları",
+   "text": "Terminal 1'de gece gündüz açık çocuk oyun alanları Kat 3'te 9, 11, 14, 41 ve 45 numaralı kapıların yanında ve Kat 4'te doğu ve batı transit salonlarında. Anne-bebek odaları (Baby Care Room) gece gündüz açık: Kat 1'de geliş salonunda B ve E salonlarının yanında, Kat 3'te D ve K check-in kontuarlarının yanında, Kat 3'te 11, 22, 25, 29, 33 ve 45 numaralı kapıların yanında ve Kat 4'te doğu ve batı transit salonlarında."
+  }
+ }
+}

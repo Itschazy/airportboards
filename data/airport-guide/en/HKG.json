@@ -1,0 +1,35 @@
+{
+ "iata": "HKG",
+ "blocks": {
+  "transport": {
+   "title": "Getting there",
+   "hint": "Airport Express, 24 min to Central",
+   "text": "The Airport Express train gets from the airport to Central in 24 minutes; trains run about every 10 minutes from 05:54 to 00:48 daily. Single adult Smart Ticket: to Hong Kong station HK$130, Kowloon HK$115, Tsing Yi HK$80; with an Octopus card HK$120, HK$105 and HK$73. A child Smart Ticket to Hong Kong station is HK$65. In-Town Check-In is available at Hong Kong and Kowloon stations."
+  },
+  "taxi": {
+   "title": "Taxi",
+   "hint": "Red urban, to Central HK$375",
+   "text": "The taxi rank is at the left ramp outside the arrivals hall; pre-booked cars are brought to the Prebooked Taxi Pick-up Zone next to Car Park 1. Taxis differ by colour: red (Urban) operate across almost all of Hong Kong, green in the northeastern and northwestern New Territories, blue only on Lantau and Chek Lap Kok; all may serve the airport. Approximate red taxi fares: Central / Admiralty HK$375, Tsim Sha Tsui HK$290, Mong Kok HK$285; tolls are included in the fare, additional taxi surcharges are not. A charge may apply for luggage in the boot."
+  },
+  "lounges": {
+   "title": "Lounges",
+   "hint": "Plaza Premium, Kyra, Centurion",
+   "text": "Paid lounges are in Terminal 1 by the gates. Plaza Premium Lounge: by gate 1 (Level 6, round the clock), by gate 35 (Level 6, 06:00–01:00) and by gate 60 (Level 7, round the clock); Plaza Premium First — by gates 1 and 35; Kyra Lounge — by gate 23 (Level 6, 05:30–23:30). Refreshhh by Aerotel showers and massage — by gate 60, round the clock. The Centurion Lounge by gate 60 (06:00–00:00) is for eligible American Express cardholders."
+  },
+  "storage": {
+   "title": "Left luggage",
+   "hint": "Level 5, HK$14 an hour",
+   "text": "Left luggage is on Level 5 of Terminal 1, landside. An item weighing up to 30 kg with dimensions totalling up to 199 cm costs HK$14 per hour or HK$165 per 24 hours; less than an hour counts as an hour, and for 24 hours the lower of the two amounts is charged. Large and heavy luggage costs extra. Payment on collection: cash, Visa, Mastercard, UnionPay, Alipay, WeChat Pay, Apple Pay, Samsung Pay; items not collected within 30 days without notice from the passenger are deemed unclaimed."
+  },
+  "sleep": {
+   "title": "Where to sleep",
+   "hint": "Resting areas by the gates",
+   "text": "Resting Lounges for departing and transit passengers are on the departures level (L6) by gates 1, 5, 6, 7, 24, 26, 33, 44, 45, 47, 48, 64, 65, 66 and 69, and in the Terminal 1 Midfield Concourse by gates 205, 207, 213 and 215. A separate Bonded Bus Waiting Lounge is on departures level L4."
+  },
+  "wifi": {
+   "title": "Wi‑Fi",
+   "hint": "Free, no registration",
+   "text": "Free Wi‑Fi without registration in most waiting areas and public areas of the terminals. Networks #HKAirport Free WiFi and #HKAirport Hi-Speed WiFi: connect, open any address in the browser that does not start with https://, and tap Agree and Continue. If #HKAirport Free WiFi is not visible, choose Wi-Fi.HK via HKAirport. Helpline: 2188 7799."
+  }
+ }
+}

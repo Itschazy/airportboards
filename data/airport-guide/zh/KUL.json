@@ -1,0 +1,25 @@
+{
+ "iata": "KUL",
+ "blocks": {
+  "transport": {
+   "title": "交通方式",
+   "hint": "KLIA Ekspres，28分钟",
+   "text": "前往市中心最快的方式是乘KLIA Ekspres列车：中途不停，28分钟直达KL Sentral站的KL City Air Terminal（KL CAT）。停靠Bandar Tasik Selatan、Putrajaya/Cyberjaya和Salak Tinggi三站的中转列车需35分钟。列车上有行李架、轮椅固定位和无障碍洗手间。"
+  },
+  "taxi": {
+   "title": "出租车",
+   "hint": "凭券或按计价器",
+   "text": "1号航站楼有两种官方出租车：凭券出租车（按目的地和车型固定价格，乘车前付款）和计价器出租车。计价器出租车起步价：Budget RM 3.00，Teks1M RM 4.00，Executive RM 6.00，另加服务费RM 2.00；0:00至6:00加收50%。Airport Taxi柜台位于主楼3层的国内到达大厅、国际行李提取区和路边；也可在gohub.com.my预订。"
+  },
+  "terminals": {
+   "title": "航站楼",
+   "hint": "免费穿梭巴士，全天候",
+   "text": "1号和2号航站楼之间全天候有免费环线穿梭巴士：1号航站楼—2号航站楼—长期停车场（LTCP）—1号航站楼。站点：1号航站楼在1层4号门；2号航站楼在1层A10站台，即Gateway购物中心交通枢纽。"
+  },
+  "parking": {
+   "title": "停车",
+   "hint": "航站楼停车场和长期LTCP",
+   "text": "1号航站楼停车场有5,700多个车位，步行约3分钟到主楼。B区和C区2层的Preferred Parking有300多个车位，步行2分钟。长期停车场LTCP有5,200多个车位，有全天候免费穿梭巴士前往1号和2号航站楼。全天候视频监控，设有家庭和女性专用车位、空调候车室；可在网站预订车位。"
+  }
+ }
+}

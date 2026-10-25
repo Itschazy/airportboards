@@ -1,0 +1,35 @@
+{
+ "iata": "CAN",
+ "blocks": {
+  "transport": {
+   "title": "Nasıl gidilir",
+   "hint": "Metro 3 hattı, Airport North",
+   "text": "Terminal 2, 3 numaralı metro hattının kuzey uzantısındaki Airport North istasyonunun yanında. Terminal 3'e doğrudan metro yok: 3 numaralı hatla Airport North'a gidilir, ardından Terminal 2'nin 42 numaralı kapısından servisle veya Terminal 2'nin GTC ulaşım merkezinden şehirlerarası banliyö treniyle devam edilir. Guangzhou metrosunun çalışma saatleri değişebilir."
+  },
+  "taxi": {
+   "title": "Taksi",
+   "hint": "T2 — kapı 50 ve 53, T3 — 75",
+   "text": "Terminal 2'de taksiler GTC ulaşım merkezinden yolcu alır: doğu durağı 53 numaralı kapının dışında, batı durağı 50 numaralı kapının dışında. Terminal 3'te dış hatlar taksi durağı Kat 1'de geliş alanında, 75 numaralı kapının dışında."
+  },
+  "lounges": {
+   "title": "Business salonları",
+   "hint": "Premium Lounge, Sky Pearl, L32",
+   "text": "Premium Lounge — Terminal 2, Kat 4, dış hatlar pasaport kontrolünden sonra gümrüksüz mağazanın arkasında, gece gündüz açık. Easy Boarding Lounge — Terminal 2, China Southern birinci sınıf salonunun karşısında (güvenlik kontrolünden sonra sola 50 m), 04:45–21:30. Terminal 2'deki China Southern Sky Pearl salonları: iç hatlar salonu güvenlik kontrolünden sonra Kat 3'te (05:45–21:00), dış hatlar salonu duty free alanından sonra Kat 4'te (04:30'dan son uçuşa kadar). Terminal 3'te iç hatlar için ayrı güvenlik kontrolünün arkasında Kat 4'te L32 Lounge (K adasındaki 16 numaralı kontuarın karşısında), 05:00'ten son kalkışa kadar."
+  },
+  "storage": {
+   "title": "Emanet",
+   "hint": "Her terminalde, bazıları 24 saat",
+   "text": "Terminal 1: gidiş salonu, Kat 3, 16 numaralı kapının yanında — gece gündüz. Terminal 2: gidiş salonunda C check-in alanının arkasında (04:30–23:30), P/N check-in alanının arkasında (gece gündüz) ve geliş salonunda 53 numaralı kapının karşısında (05:30–23:30). Terminal 3: check-in salonunun batı kısmında C adasının arkasındaki tuvaletin yanında (gece gündüz) ve dış hatlar geliş salonunda Kat 1'de (05:30–21:30). Saatler yerindeki duruma göre değişebilir."
+  },
+  "sleep": {
+   "title": "Nerede uyunur",
+   "hint": "T2 ve T3'te kapsüller, gece gündüz",
+   "text": "Saatlik ücretli kapsüller — Terminal 2, Kat 1, dış hatlar geliş alanı, 53 numaralı kapının yanında, gece gündüz. NAPHUBS kapsülleri — Terminal 3, Kat 4: gece kalan yolcular için dinlenme alanında 61 numaralı kapının ilerisinde solda ve dış hatlar transit salonunda, onlar da gece gündüz."
+  },
+  "wifi": {
+   "title": "Wi‑Fi",
+   "hint": "AIRPORT-FREE-WiFi, SMS ile giriş",
+   "text": "Ücretsiz AIRPORT-FREE-WiFi ağı. Yetkilendirme sayfasında SMS kodlu telefon numarasıyla (yabancılar kendi ülke kodunu seçer) veya kimlik belgesinin fotoğrafıyla giriş yapılabilir. Terminal 2'nin dış hatlar gidiş ve geliş alanlarında Wi‑Fi kioskları var."
+  }
+ }
+}

@@ -1,0 +1,35 @@
+{
+ "iata": "HKG",
+ "blocks": {
+  "transport": {
+   "title": "アクセス",
+   "hint": "中環まで列車で24分",
+   "text": "列車Airport Expressは空港から中環（セントラル）地区まで24分で結び、毎日05:54から00:48まで約10分間隔で運行する。大人の片道乗車券Smart Ticket：Hong Kong駅までHK$130、KowloonまでHK$115、Tsing YiまでHK$80。Octopusカードの場合はそれぞれHK$120、HK$105、HK$73。Hong Kong駅までの子どものSmart TicketはHK$65。Hong Kong駅とKowloon駅では市内チェックイン（In-Town Check-In）ができる。"
+  },
+  "taxi": {
+   "title": "タクシー",
+   "hint": "赤の市街地タクシー、中環HK$375",
+   "text": "タクシー乗り場は到着ホールの外の左側のスロープにある。事前予約の車はCar Park 1の隣のPrebooked Taxi Pick-up Zoneに配車される。タクシーは色で区別される：赤（Urban）は香港のほぼ全域、緑は新界の北東部と北西部、青はランタオ島と赤鱲角のみで営業する。空港へはどのタクシーも乗り入れできる。赤いタクシーの目安運賃：中環／金鐘HK$375、尖沙咀HK$290、旺角HK$285。有料道路の料金は運賃に含まれるが、タクシーの追加料金は含まれない。トランクに入れる手荷物には料金がかかることがある。"
+  },
+  "lounges": {
+   "title": "ラウンジ",
+   "hint": "ゲート付近の有料ラウンジ",
+   "text": "有料ラウンジは第1ターミナルの搭乗ゲート付近にある。Plaza Premium Lounge：1番ゲート付近（6階、24時間）、35番ゲート付近（6階、06:00–01:00）、60番ゲート付近（7階、24時間）。Plaza Premium Firstは1番・35番ゲート付近。Kyra Loungeは23番ゲート付近（6階、05:30–23:30）。シャワーとマッサージのRefreshhh by Aerotelは60番ゲート付近、24時間営業。60番ゲート付近のThe Centurion Lounge（06:00–00:00）は、利用資格のあるAmerican Expressカード会員向け。"
+  },
+  "storage": {
+   "title": "手荷物預かり",
+   "hint": "5階、1時間HK$14",
+   "text": "手荷物預かり所は第1ターミナルの5階、一般エリアにある。重さ30 kgまで、縦・横・高さの合計199 cmまでの荷物1個につき1時間HK$14、または24時間HK$165。1時間未満は1時間として計算し、24時間の場合は2つの金額のうち安い方が適用される。大型・重量手荷物は追加料金。支払いは受け取り時：現金、Visa、Mastercard、UnionPay、Alipay、WeChat Pay、Apple Pay、Samsung Pay。旅客からの連絡なしに30日間引き取られなかった荷物は、引き取り手のないものとして扱われる。"
+  },
+  "sleep": {
+   "title": "仮眠・宿泊",
+   "hint": "ゲート付近の休憩エリア",
+   "text": "出発・乗り継ぎ旅客向けの休憩エリアResting Loungesは、出発階（L6）の1、5、6、7、24、26、33、44、45、47、48、64、65、66、69番ゲート付近と、第1ターミナルのMidfield Concourseの205、207、213、215番ゲート付近にある。保税バス専用の待合室Bonded Bus Waiting Loungeは出発階L4にある。"
+  },
+  "wifi": {
+   "title": "Wi‑Fi",
+   "hint": "無料、登録不要",
+   "text": "登録不要の無料Wi‑Fiは、ターミナルのほとんどの待合エリアと一般エリアで利用できる。ネットワーク#HKAirport Free WiFiと#HKAirport Hi-Speed WiFi：接続し、ブラウザでhttps://で始まらない任意のアドレスを開いて、Agree and Continueを押す。#HKAirport Free WiFiが表示されない場合は、Wi-Fi.HK via HKAirportを選ぶ。問い合わせ電話は2188 7799。"
+  }
+ }
+}

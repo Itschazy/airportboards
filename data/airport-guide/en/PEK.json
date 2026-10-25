@@ -1,0 +1,30 @@
+{
+ "iata": "PEK",
+ "blocks": {
+  "transport": {
+   "title": "Getting there",
+   "hint": "Airport Express, 25 yuan",
+   "text": "The Airport Express train runs every 10 minutes and stops at terminals T2 and T3 and at Sanyuanqiao and Dongzhimen stations. A one-way ticket costs 25 yuan. The station in T2 is on Level B2 of the terminal; in T3 it is on Level 2 of Car Park No. 3. At Sanyuanqiao you can transfer to metro lines 10 and 12, at Dongzhimen to lines 2 and 13."
+  },
+  "taxi": {
+   "title": "Taxi",
+   "hint": "From 13 yuan, T2 and T3",
+   "text": "The taxi rank at T2 is outside doors 5–9 on Level 1; at T3, follow the signs in the terminal. Flag fall including the first 3 km is 13 yuan, then 2.3 yuan per km, plus a 1 yuan fuel surcharge per trip. For the portion of a trip beyond 15 km, a 50% return-trip surcharge is added to the per-km rate; from 23:00 to 5:00 the per-km rate is 20% higher. The passenger pays road and bridge tolls."
+  },
+  "storage": {
+   "title": "Left luggage",
+   "hint": "T2 and T3, racks and lockers",
+   "text": "In T2 left luggage is by door 9 of the arrivals hall on Level 1 and by doors 8 and 10 of the departures hall on Level 2. In T3 it is in the east and west parts of the public area of the arrivals hall on Level 2 of building T3-C. Large luggage and sports equipment are accepted; separate lockers are available for small items. Phone: 17801096112."
+  },
+  "kids": {
+   "title": "With children",
+   "hint": "Playgrounds by gates C09 and E21",
+   "text": "Terminal T3 has two children's playgrounds. By gate C09 — car-themed: cartoon cars and turtles, a carpet with a racetrack pattern. By gate E21 — a playground with pandas."
+  },
+  "parking": {
+   "title": "Parking",
+   "hint": "Car Parks 2 and 3, 100 yuan/24 h",
+   "text": "Car Park No. 2 is in front of T2, about 4,300 spaces: hourly parking on levels F2, F1 and B1, long-term on B2, B3 and B4. Car Park No. 3 is south of T3, about 4,300 spaces, with the Airport Express station on its Level 2; hourly zones B and C on B1, long-term zones D and E on B1 and H on B2. In Car Park No. 2, vehicles with up to 19 seats pay 3 yuan per 10 minutes; long-term parking (more than 5.5 hours in a row, only in the B2–B4 area) is 100 yuan per 24 hours; under 10 minutes is free."
+  }
+ }
+}

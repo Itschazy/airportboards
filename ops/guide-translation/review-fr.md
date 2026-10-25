@@ -129,3 +129,82 @@ parking — не входило в задачу, оставлено как «day
 | PEE | parking.text | Toute heure ou journée entamée est due en entier. | Toute heure ou tranche de 24 heures entamée est due en entier. |
 
 GYD parking в fr уже был переведён как «jusqu'à 24 heures» — не трогали, поэтому блоков на один меньше.
+
+## Раунд 2 (25.10.2026): 24 аэропорта мирового топа
+
+Проверены блок за блоком против русских оригиналов: AMS BCN BKK CAN CDG DEL DEN DFW FRA HKG HND
+ICN JFK KUL LAS LAX LHR MAD MCO MIA ORD PEK PVG SIN. Числа, валюты (€, $, £, ¥, ₩, S$, HK$, RM, ₹,
+THB/bahts, yuans), часы, этажи (niveau N / B1 / L6 — как на указателе), «до N лет» (JFK: moins de
+5 ans), сутки = 24 heures, бесплатно/платно и «до/после досмотра» сверены вручную — расхождений
+по числам и условиям нет. Правок 25 в 15 файлах: смысл 9, числа 0, имена 3, стиль 13.
+
+Решения по вопросам переводчика:
+- **porte / sortie / entrée.** Посадочный выход в чистой зоне — `porte` (оставлено везде).
+  Двери у тротуара — `sortie` (прилёт, такси, остановки) или `entrée` (зал вылета, CAN T1/T3,
+  PEK, PVG); `porte N` для дверей снято, т. к. указатели там «Door/Exit», а не «Porte».
+- **Экзонимы** Leyde, La Haye, Mayence, Canton, Aschaffenbourg, Francfort, Séoul — стандартные
+  французские формы, оставлены.
+- **Сокращённые hint** проверены: потеря информации без искажения допустима (LHR без Piccadilly,
+  MIA без Metrobus, ICN без «стоянки»); исправлен только JFK, где выпадение Howard Beach
+  создавало впечатление единственной станции.
+- «Downtown Brooklyn» (JFK) оставлен — это название района; «Даунтаун Денвера/Орландо» → centre-ville.
+
+| Файл | Блок | Было | Стало | Почему |
+|---|---|---|---|---|
+| CAN | sleep.text | à gauche après la porte 61 | à gauche après l'entrée 61 | 61 — номер двери зала (как 50/53/75), не посадочный выход |
+| CAN | lounges.text | intérieur — … , international — … | celui des vols intérieurs …, celui des vols internationaux … | «salon intérieur» не по-французски, неясно |
+| DEL | transport.text | Distributeurs de billets | Automates de vente de billets | «distributeur de billets» = банкомат |
+| DEN | taxi.text | près des portes 505, 507 et 511 | près des sorties 505, 507 et 511 | двери у тротуара, не gate |
+| DEN | taxi.text | Downtown Denver (zone A) | centre-ville de Denver (zone A) | район — общепринятой формой языка |
+| DEN | taxi.hint | Downtown — forfait 72,04 $ | Centre-ville : forfait 72,04 $ | то же |
+| DEN | wifi.text | sièges et tablettes | sièges et plans de travail | «tablettes» читается как планшеты |
+| DFW | kids.hint | Aire de jeux D8, allaitement | Jeux en D8, salles d'allaitement | «allaitement» без «salles» — обрубок |
+| HKG | taxi.hint | Rouges urbains, Central 375 HK$ | Taxis rouges, Central 375 HK$ | калька «Urban» |
+| HND | lounges.text | boissons dont alcoolisées | boissons, y compris alcoolisées | грамматика |
+| JFK | transport.hint | AirTrain vers Jamaica, 8,75 $ | AirTrain : Jamaica, Howard Beach | потеряна вторая станция; цена есть в тексте, лимит 35 |
+| KUL | terminals.text | au terminal 1 — porte 4 | au terminal 1 — sortie 4 | дверь у тротуара (Door 4) |
+| LAS | taxi.text | près de la porte 52 | près de la sortie 52 | дверь у выдачи багажа |
+| LAS | terminals.text | près de la porte 55 | près de la sortie 55 | дверь на Level Zero |
+| LAS | transport.text | au niveau Level Zero | au Level Zero | тавтология |
+| LAS | transport.text | Ici s'arrêtent | S'y arrêtent | стиль |
+| LAS | parking.hint | 17 000+ places, dès 14 $/24 h | Plus de 17 000 places, dès 14 $ | «17 000+» — англицизм; ставка за 24 ч есть в тексте |
+| LAX | transport.text | circulent … entre chaque terminal et Van Nuys et la gare Union Station | relient … chaque terminal à Van Nuys et à la gare Union Station | двойное «et» неоднозначно |
+| MAD | taxi.text | il faut prendre une voiture uniquement à la station | ne prendre un taxi qu'à la station | калька |
+| MCO | taxi.text | Downtown Orlando | centre-ville d'Orlando | район — формой языка |
+| MIA | storage.text | accessoires de voyage | accessoires pour bagages | оригинал: багажные аксессуары |
+| ORD | lounges.hint | United, Admirals Club, Sky Club | United Club, Admirals, Sky Club | название зала — United Club |
+| ORD | kids.text | salles pour les mères | salles mère-enfant | единообразно с ICN, естественнее |
+| SIN | transport.text | gares routières souterraines | quais de bus en sous-sol | «gare routière» — автовокзал, а это площадки (bus bays) |
+
+Оставлено как есть (проверено): AMS BCN BKK CDG FRA ICN LHR PEK PVG — без правок; «garage»
+в названиях паркингов US/PEK (Garage C, garages Dolphin/Flamingo) — собственные имена.
+`node scripts/check-guide-fresh.mjs`: по fr провалов нет (остались чужие de/it — «переведено N из 100»).
+
+## Раунд 2 — независимая выборка Codex, 26.10.2026
+
+https://chatgpt.com/c/6ade6c54-86f8-8331-bfcc-6a259bb2153c — шесть пар MIA/lounges, LAS/parking, HND/lounges, PVG/storage, ICN/terminals, SIN/terminals; без поиска. Переводы fr не изменялись: владелец разрешил только правки дверей шага 2.
+
+- №2 **отклонено**: ChatGPT требует portes вместо entrées/sortie у PVG. Это нарушает согласованную таблицу терминов проекта (porte = выход на посадку, entrée/sortie = дверь). Двери и источник уже проверены.
+- №6 **отклонено как обязательная правка**: passerelle не является доказанной смысловой ошибкой; русский «переход» допускает это соответствие, утверждений об этажности перевод не добавляет.
+- №1 — стилистическая рекомендация, предлагается уточнить oneworld как авиакомпанию альянса, условия оставить с et. Пока не внесено.
+- №3 **подтверждено, ожидает разрешения владельца**: PVG/storage «Tous les points sont ouverts …, garde jusqu'à 2 mois …» → «Tous les points de consigne sont ouverts …; la durée de garde est de 2 mois au maximum …». Исходная конструкция грамматически несвязная.
+- №4 **подтверждено, ожидает разрешения**: «pour une durée jusqu'à 4, 10 et 24 heures» → «pour des durées allant jusqu'à 4, 10 et 24 heures, respectivement».
+- №5 **подтверждено, ожидает разрешения**: SIN/terminals «par tapis roulants» → «en empruntant les trottoirs roulants»; точнее пассажирские движущиеся дорожки.
+- LAS, HND, ICN — замечаний к смыслу, числам и условиям по выборке нет.
+
+
+## Раунд 2 (26.10.2026)
+
+| Файл | Блок | Было | Стало | Тип | Почему |
+|---|---|---|---|---|---|
+| PEK | taxi.text | Pour les courses de plus de 15 km, 50% du montant s'ajoutent au titre du trajet retour | Pour la portion du trajet au-delà de 15 km, une majoration de 50% du tarif kilométrique s'applique au titre du retour à vide | смысл | Официальная китайская версия bcia.com.cn/wljc.html: 单程载客15公里以上部分，每公里租价加收50%费用. Подтверждённая правка оригинала согласована владельцем 26.10 |
+| ICN | sleep.text | au niveau B1 | au niveau 1 | смысл | Официальный корейский каталог airport.kr/ap_ko/1008/subview.do: 캡슐호텔 다락휴(T1), 교통센터 1층 중앙. Исправление оригинала и 11 переводов согласовано владельцем 26.10 |
+| MIA | lounges.text | Les salons American sont accessibles selon le statut et avec un billet en classe affaires ou première d'American ou de oneworld | L’accès aux salons American dépend du statut du passager et de son billet en classe affaires ou en première classe sur American ou une compagnie de l’alliance oneworld | стиль | Подтверждённая ошибка французского: исправление дополнительно разрешено владельцем 26.10. Условия и числа сохранены |
+| MIA | lounges.text | un pass à la journée est vendu s'il reste des places | un pass pour un accès unique est vendu s'il reste des places | смысл | Подтверждённая ошибка французского: исправление дополнительно разрешено владельцем 26.10. Условия и числа сохранены |
+| PVG | storage.text | Tous les points sont ouverts de 06:00 à 24:00, garde jusqu'à 2 mois, pièce d'identité requise au dépôt, les objets sont passés aux rayons X. | Tous les points de consigne sont ouverts de 06:00 à 24:00 ; la durée de garde est de 2 mois au maximum. Une pièce d'identité est requise au dépôt et les objets sont contrôlés aux rayons X. | стиль | Подтверждённая ошибка французского: исправление дополнительно разрешено владельцем 26.10. Условия и числа сохранены |
+| PVG | storage.text | pour une durée jusqu'à 4, 10 et 24 heures | pour des durées allant jusqu'à 4, 10 et 24 heures, respectivement | стиль | Подтверждённая ошибка французского: исправление дополнительно разрешено владельцем 26.10. Условия и числа сохранены |
+| SIN | terminals.text | on peut aussi passer de l'un à l'autre par tapis roulants | on peut aussi se déplacer entre ces terminaux en empruntant les trottoirs roulants | стиль | Подтверждённая ошибка французского: исправление дополнительно разрешено владельцем 26.10. Условия и числа сохранены |
+
+Владелец 26.10 разрешил исправлять подтверждённые ошибки французского и синхронизировать подтверждённые ошибки оригинала. Ожидание снято: внесены №1,3–5 и исправлен дневной pass на разовый по межъязыковой сверке. №2 и6 остаются отклонены по причинам выше.
+| MIA | parking.text | frais de réservation de 2,99 | frais de réservation | числа | Официальный источник miami-airport.com/airport-parking.asp даёт 2.99 без валюты; в условиях booking.mia-parking.com/terms-and-conditions суммы нет. Не придумываем валюту: неполную сумму убрали, невозвратность сбора сохранили. Правка подтверждённых проблем оригинала во всех языках разрешена владельцем 26.10 |
+| ICN | sleep.text | au centre du pôle de transport au niveau 1 | au centre du pôle de transport | смысл | Повторная проверка: английский официальный каталог даёт Center of Transportation Center 1BF, корейский 교통센터 1층 중앙. По CLAUDE.md при противоречии факт не публикуется: убран только спорный этаж Darakhyu, центр транспортного центра сохранён |

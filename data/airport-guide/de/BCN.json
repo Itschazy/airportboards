@@ -1,0 +1,20 @@
+{
+ "iata": "BCN",
+ "blocks": {
+  "transport": {
+   "title": "Anreise",
+   "hint": "Metro, Linie 9",
+   "text": "Die Metrolinie 9 (University zone — Airport) hält an beiden Terminals: Station Aeroport T1 im Terminal T1 auf Ebene 0 und eine Station im Terminal T2 auf Ebene 0. Zwischen den Terminals fährt rund um die Uhr ein kostenloser Shuttle."
+  },
+  "taxi": {
+   "title": "Taxi",
+   "hint": "Schwarz-gelb, an der Ankunft",
+   "text": "Taxistände gibt es gegenüber den Ankunftsbereichen von Terminal T1, dem Korridor des Shuttles Barcelona–Madrid und den Terminals T2A, T2B und T2C; an jedem gibt es eine Warteschlange ohne Buchung und Plätze für bestellte Wagen. Im Terminal T1 steht das offizielle Taxi auf Ebene 0. Das einzige offizielle Taxi in Barcelona ist schwarz-gelb."
+  },
+  "wifi": {
+   "title": "Wi‑Fi",
+   "hint": "Kostenlos, ohne Zeitlimit",
+   "text": "Netz Airport Free Wifi Aena: Anmeldung auf der Startseite mit E-Mail-Adresse als Gast oder über ein Aena-Club-Konto. Zur Bestätigung der E-Mail gibt es 15 Minuten kostenloses Internet, nach der Bestätigung Zugang ohne Zeitlimit."
+  }
+ }
+}

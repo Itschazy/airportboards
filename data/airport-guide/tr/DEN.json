@@ -1,0 +1,35 @@
+{
+ "iata": "DEN",
+ "blocks": {
+  "transport": {
+   "title": "Nasıl gidilir",
+   "hint": "A Line treni, RTD otobüsleri",
+   "text": "DEN Transit Center, Jeppesen terminalinin güney ucunda: cam kapılardan çıkıp yürüyen merdiven veya asansörle zemin seviyesine inilir. Buradan Denver Union Station'a giden A Line treni ve RTD AB, AT, 104L, 145X ve 169L otobüsleri kalkar. Toplu taşıma yaklaşık 3:30'dan gece yarısına kadar çalışır, son otobüs havalimanından 1:28'de kalkar. Tüm RTD hatlarında geçerli günlük bilet $10."
+  },
+  "taxi": {
+   "title": "Taksi",
+   "hint": "Downtown — sabit $72,04",
+   "text": "Havalimanı ücreti dahil tek yön sabit tarifeler: Denver şehir merkezi (Downtown, A bölgesi) — $72,04, Denver Tech Center (B bölgesi) — $80,04, Boulder (C bölgesi) — $115,04, Tower Road (D bölgesi) — $37,04. Diğer yerlere taksimetre artı $6,04 ücret. Taksi durağı Jeppesen terminalinde, Kat 5, Island 1, 505, 507 ve 511 numaralı kapıların yanında (doğu tarafı) ve 506, 510 ve 512 numaralı kapıların yanında (batı tarafı)."
+  },
+  "lounges": {
+   "title": "Business salonları",
+   "hint": "United Club, Centurion, Sky Club",
+   "text": "Salonlar concourse'ların asma katında: American Airlines Admirals Club C-32 kapısının yanında, American Express Centurion Lounge C-46'nın yanında, Capital One Lounge (Plaza Premium) A-34'ün yanında, United Club A-25, B-44 ve B-32'nin yanında. United Club Fly — B-60 kapısının yanında. Delta Sky Club — güvenlik kontrolünden sonra A concourse'unun kuzey ucunda, Jeppesen terminalinden gelen köprüde. Yatar koltuklu ücretsiz Rest and Recharge dinlenme alanı — A concourse'unun asma katında."
+  },
+  "sleep": {
+   "title": "Nerede uyunur",
+   "hint": "Terminalin yanında Westin",
+   "text": "519 odalı Westin Denver International Airport oteli ana terminale birkaç adım mesafede, doğrudan DEN Transit Center'ın üstünde; yürüyen merdivenle çıkılır."
+  },
+  "kids": {
+   "title": "Çocukla",
+   "hint": "A25 ve C54'te oyun alanları",
+   "text": "İki çocuk oyun alanı gece gündüz açık — A25 ve C54 kapılarının yanında. Alt değiştirme masası ve lavabosu olan ücretsiz emzirme odaları gece gündüz açık: güvenlik kontrolünden sonra her concourse'ta ve Jeppesen terminalinde iki tane — ortada Kat 5'te geliş alanının yanında ve kuzeybatı kısmında dış hatlar geliş alanının yanında."
+  },
+  "wifi": {
+   "title": "Wi‑Fi",
+   "hint": "Ücretsiz, tüm havalimanında",
+   "text": "Tüm havalimanında ücretsiz Wi‑Fi: DEN Airport Free WiFi, DEN Airport Free WiFi 2.4G veya DEN FREE WIFI 6E ağlarından biri seçilip “Connect”e basılır. Prizler Jeppesen terminalinin her yerinde ve üç concourse'ta var; ayrıca oturma yerleri ve tezgâhları olan ayrı şarj istasyonları bulunur."
+  }
+ }
+}

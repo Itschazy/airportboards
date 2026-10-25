@@ -1,0 +1,25 @@
+{
+ "iata": "LAS",
+ "blocks": {
+  "transport": {
+   "title": "Comment s'y rendre",
+   "hint": "Bus RTC 108 et Red Line",
+   "text": "Les bus urbains RTC s'arrêtent au terminal 1 au Level Zero : depuis la livraison des bagages, descendre par ascenseur ou escalator, sortir du bâtiment, emprunter le passage piéton et prendre à droite vers l'arrêt couvert. S'y arrêtent la ligne 108 — Paradise et la Red Line (anciennement ligne 109 — Maryland Parkway). Depuis le terminal 3, on rejoint l'arrêt par la navette inter-terminaux gratuite partant de la livraison des bagages."
+  },
+  "taxi": {
+   "title": "Taxi",
+   "hint": "Aux bagages, forfait vers le Strip",
+   "text": "Au terminal 1, les taxis attendent à l'extrémité est de la zone de livraison des bagages, après les sorties 1–4 ; au terminal 3 — à la livraison des bagages près de la sortie 52. Les tarifs sont fixés par la Nevada Taxicab Authority, toutes les compagnies acceptent les cartes bancaires. Vers les zones du Strip, un tarif forfaitaire par zone s'applique depuis l'aéroport."
+  },
+  "terminals": {
+   "title": "Terminaux",
+   "hint": "Terminal 1 et terminal 3",
+   "text": "Le terminal 1 dessert les portes A, B, C et D, avec à côté un garage de 6 000 places ; le hall satellite D est relié au terminal 1 par un train automatique. Le terminal 3 accueille toutes les compagnies internationales et une partie des compagnies intérieures, avec son propre enregistrement, sa livraison des bagages et son contrôle aux frontières ; un train en part aussi vers les portes D. L'arrêt de la navette inter-terminaux au terminal 3 est au Level Zero près de la sortie 55."
+  },
+  "parking": {
+   "title": "Parking",
+   "hint": "Plus de 17 000 places, dès 14 $",
+   "text": "Plus de 17 000 places aux deux terminaux et sur un parking éloigné, jour et nuit. Courte durée : 4 $ la première heure, 8 $ jusqu'à 2 heures, puis 5 $ de l'heure, maximum 38 $ par 24 heures. Longue durée : 12 $ pour 2 heures, puis 4 $ de l'heure, maximum 20 $ par 24 heures ; sur réservation préalable au terminal 3 du samedi au mercredi — 16 $. Economy et parking éloigné (desservi par une navette gratuite) : 6 $ pour 2 heures, puis 2 $ de l'heure, maximum 14 $ par 24 heures ; voiturier 34 $ par 24 heures. L'aire d'attente (Cell Phone Lot) est gratuite."
+  }
+ }
+}

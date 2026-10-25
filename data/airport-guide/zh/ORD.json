@@ -1,0 +1,40 @@
+{
+ "iata": "ORD",
+ "blocks": {
+  "transport": {
+   "title": "交通方式",
+   "hint": "全天候地铁及Metra",
+   "text": "CTA Blue Line列车全天候运行，车站位于停车楼下层：从1、2、3号航站楼按“Trains to City”指示牌经地下层步行隧道前往，从5号航站楼需先乘ATS到3号或2号航站楼。车票在车站旁的自动售票机购买，可用现金或银行卡。Metra North Central Service通勤列车从Multi-Modal Facility交通枢纽后方的O'Hare Transfer站发车，从任一航站楼均可乘ATS前往；车票向列车员购买。Pace 250路和330路巴士从Multi-Modal Facility（8号和9号巴士停靠位）发车。"
+  },
+  "taxi": {
+   "title": "出租车",
+   "hint": "到市中心约$50",
+   "text": "出租车候车点位于各航站楼行李提取区出口外的下层；只在那里上车，不要搭乘出发层的司机。出租车按计价器收费，从机场到芝加哥市中心平均$50。前往郊区的出租车需提前致电郊区出租车公司预约。Uber和Lyft在上层接客：2号航站楼为2A–2G区，橙色指示牌；3号航站楼为3G、3H、3J和3K区，绿色指示牌。"
+  },
+  "lounges": {
+   "title": "商务休息室",
+   "hint": "各航站楼的休息室",
+   "text": "大多数休息室可购买日通行证。United Club——1号航站楼B6、B18、C10登机口旁和2号航站楼E7、F9旁；United Polaris Lounge（仅限国际头等舱和商务舱）——1号航站楼C18旁。Admirals Club（American、JAL、Iberia）——3号航站楼G8、L2A和H6/K6旁；H6/K6旁还有American Flagship Lounge。5号航站楼：M13旁的Delta Sky Club，M17旁的Air France休息室，M18旁的LOT Business Lounge和Swissport Lounge（也接待Priority Pass），M19旁的Wingtips Lounge。"
+  },
+  "sleep": {
+   "title": "休息住宿",
+   "hint": "1–3号航站楼对面的Hilton",
+   "text": "Hilton Chicago O'Hare Airport酒店就在1、2、3号航站楼正对面：从国内航站楼经地下通道步行前往，从5号航站楼乘ATS。酒店有有顶通道通往CTA Blue Line车站。机场附近的其他酒店用免费穿梭巴士接送客人；可在到达层行李提取区旁的Virtual Concierge自助终端叫车。"
+  },
+  "kids": {
+   "title": "携儿童出行",
+   "hint": "2号航站楼Family Lounge",
+   "text": "儿童区Family Lounge位于2号航站楼安检后，F1登机口旁的主厅：有游戏空间、设备充电处和婴儿车停放处。所有航站楼都有母婴室，1、2、3号航站楼有Mamava哺乳舱。大多数洗手间设有尿布台。Oops Diapers 2Go自动售货机出售尿布、配方奶粉和奶瓶。"
+  },
+  "parking": {
+   "title": "停车",
+   "hint": "每24小时$16起",
+   "text": "按小时停车——主停车楼1层，首小时$3；按天停车——停车楼2–6层及B、C停车场，每24小时$43，5号航站楼旁的D停车场每24小时$43。经济型停车场：F每24小时$30，G和H每24小时$16，H只能刷卡。价格含税，出场时付款。未与停车管理处（(773) 686-7530）协商而停放超过30天的车辆可能被拖走。"
+  },
+  "wifi": {
+   "title": "Wi‑Fi",
+   "hint": "免费，不限量",
+   "text": "所有航站楼安检前后均提供免费不限量Wi‑Fi。网络Boingo Hotspot或_Free_ORD _Wi-Fi；连接后在浏览器中打开任意不带https的网址，选择“Watch Ad to Connect”。所有航站楼都有4–8个座位的免费充电站。"
+  }
+ }
+}

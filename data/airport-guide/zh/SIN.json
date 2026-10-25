@@ -1,0 +1,40 @@
+{
+ "iata": "SIN",
+ "blocks": {
+  "transport": {
+   "title": "交通方式",
+   "hint": "MRT及多条巴士线路",
+   "text": "前往市中心：从Changi Airport MRT站（CG2）乘车到Tanah Merah（EW4），换乘East West线往Tuas Link（EW33）方向；或到Expo（CG1/DT35），换乘Downtown线。开往Tanah Merah的首班车周一至周六5:31，周日及公共假日5:59；可换乘往Tuas Link方向的末班车每天23:18。24、27、34、36、53、110和858路巴士从1、2、3号航站楼的地下巴士站发车。支付方式：Mastercard/Visa/NETS非接触式卡、移动钱包、EZ-Link卡；巴士上可付现金，不找零。"
+  },
+  "taxi": {
+   "title": "出租车",
+   "hint": "至市中心S$25–45，计价器",
+   "text": "出租车候车点位于1–4号航站楼到达区；到市中心约30分钟，计价器S$25–45。从机场出发加收附加费：17:00至23:59为S$8，其他时间S$6；0:00至5:59计价器总额加收50%夜间附加费。通过Grab、Gojek、Zig、Tada Mobility、Ryde或Geolah叫车——在Arrival and Ride-Hailing pick-up点上车。全天候Ground Transport Concierge柜台：前往新加坡任何地点的接送，4座车S$70，6座车S$75。"
+  },
+  "terminals": {
+   "title": "航站楼",
+   "hint": "T1–T3列车，T4巴士",
+   "text": "1、2、3号航站楼之间有免费Skytrain，公共区和中转区均有；中转区内也可经自动步道往来。前往4号航站楼乘免费穿梭巴士，6:00至0:00每5–9分钟一班，从T1/Jewel和T2/MRT发车：公共区约10分钟，中转区10–18分钟；中转区内仅限行李直挂至最终目的地的旅客乘坐。Jewel位于T2和T3之间的公共区：从T1到达大厅1层可直接进入，从T2和T3经连廊步行5–10分钟；中转旅客需通过护照检查。"
+  },
+  "lounges": {
+   "title": "商务休息室",
+   "hint": "T1、T2、T4付费休息室",
+   "text": "付费休息室：Plaza Premium Lounge——1号航站楼中转区3层，全天候；JetQuay Lounge——2号航站楼中转区2层，全天候；Blossom – SATS & Plaza Premium Lounge——4号航站楼中转区2M层，全天候。另有Ambassador Transit Lounge（2间）、Jewel 1层的Changi Lounge，以及2号航站楼公共区1层的Hub & Spoke。"
+  },
+  "storage": {
+   "title": "行李寄存",
+   "hint": "各航站楼均有，每天S$6起",
+   "text": "Smarte Carte行李寄存处全天候开放：公共区——Jewel（1层）、T2（North到达大厅）、T3（1层，Train to City旁）、T4（1层）；中转区——四座航站楼均有。每24小时价格（含GST）：单件物品S$6，10公斤以下小件S$11，10公斤以上大件和非标准物品S$16，超大物品S$19。所有寄存物品均需安检。"
+  },
+  "sleep": {
+   "title": "休息住宿",
+   "hint": "免费休息区，全天候",
+   "text": "中转区的免费休息区Snooze Lounge全天候开放：T1——3层Departure Transit Hall East；T2——2层的Sanctuary Lounge、Oasis Lounge和Pavilion Lounge；T3——2层两处（South和North）；T4——2M层。"
+  },
+  "kids": {
+   "title": "携儿童出行",
+   "hint": "免费婴儿车",
+   "text": "问讯柜台和Jewel礼宾柜台免费提供婴儿车，先到先得。携幼儿的旅客可走较宽的Special Assistance Lanes通道办理护照检查——最多四人同行。"
+  }
+ }
+}

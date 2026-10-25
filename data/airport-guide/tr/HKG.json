@@ -1,0 +1,35 @@
+{
+ "iata": "HKG",
+ "blocks": {
+  "transport": {
+   "title": "Nasıl gidilir",
+   "hint": "Airport Express: Central'a 24 dk",
+   "text": "Airport Express treni havalimanından Central semtine 24 dakikada ulaşır; trenler her gün 05:54'ten 00:48'e kadar yaklaşık 10 dakikada bir çalışır. Yetişkin için tek yön Smart Ticket: Hong Kong istasyonuna HK$130, Kowloon'a HK$115, Tsing Yi'ye HK$80; Octopus kartıyla HK$120, HK$105 ve HK$73. Hong Kong istasyonuna çocuk Smart Ticket HK$65. Hong Kong ve Kowloon istasyonlarında şehirde uçuş check-in'i (In-Town Check-In) yapılır."
+  },
+  "taxi": {
+   "title": "Taksi",
+   "hint": "Kırmızı taksi, Central'a HK$375",
+   "text": "Taksi durağı geliş salonunun dışında, sol rampada; önceden ayırtılan araçlar Car Park 1'in yanındaki Prebooked Taxi Pick-up Zone'a gelir. Taksiler renge göre ayrılır: kırmızılar (Urban) Hong Kong'un neredeyse her yerinde, yeşiller Yeni Bölgeler'in kuzeydoğu ve kuzeybatı kesimlerinde, maviler yalnızca Lantau ve Chek Lap Kok'ta çalışır; havalimanına hepsi gelebilir. Kırmızı taksinin yaklaşık tarifesi: Central / Admiralty HK$375, Tsim Sha Tsui HK$290, Mong Kok HK$285; ücretli yollar tarifeye dahil, taksinin ek ücretleri dahil değil. Bagajdaki eşyalar için ücret alınabilir."
+  },
+  "lounges": {
+   "title": "Business salonları",
+   "hint": "Plaza Premium, Kyra, Centurion",
+   "text": "Ücretli salonlar Terminal 1'de biniş kapılarının yanında. Plaza Premium Lounge: 1 numaralı kapının yanında (Kat 6, gece gündüz), 35 numaralı kapının yanında (Kat 6, 06:00–01:00) ve 60 numaralı kapının yanında (Kat 7, gece gündüz); Plaza Premium First 1 ve 35 numaralı kapıların yanında; Kyra Lounge 23 numaralı kapının yanında (Kat 6, 05:30–23:30). Refreshhh by Aerotel duş ve masajı 60 numaralı kapının yanında, gece gündüz. 60 numaralı kapının yanındaki The Centurion Lounge (06:00–00:00) giriş hakkı olan American Express kart sahipleri içindir."
+  },
+  "storage": {
+   "title": "Emanet",
+   "hint": "Kat 5, saati HK$14",
+   "text": "Emanet Terminal 1'in Kat 5'inde, genel alanda. 30 kg'a kadar ağırlıkta ve boyutları toplamı 199 cm'ye kadar olan bir parça saatlik HK$14 veya 24 saatlik HK$165; bir saatten kısa süre bir saat sayılır, 24 saat için iki tutardan düşük olanı alınır. Büyük ve ağır bagaj için ek ücret var. Ödeme teslim alırken: nakit, Visa, Mastercard, UnionPay, Alipay, WeChat Pay, Apple Pay, Samsung Pay; 30 gün içinde alınmayan ve yolcunun haber vermediği eşyalar sahipsiz sayılır."
+  },
+  "sleep": {
+   "title": "Nerede uyunur",
+   "hint": "Kapıların yanında dinlenme alanları",
+   "text": "Giden ve transit yolcular için Resting Lounges dinlenme alanları gidiş katında (L6) 1, 5, 6, 7, 24, 26, 33, 44, 45, 47, 48, 64, 65, 66 ve 69 numaralı kapıların yanında, ayrıca Terminal 1'in Midfield Concourse'unda 205, 207, 213 ve 215 numaralı kapıların yanında. Ayrı bir Bonded Bus Waiting Lounge bekleme salonu gidiş katında, L4'te."
+  },
+  "wifi": {
+   "title": "Wi‑Fi",
+   "hint": "Ücretsiz, kayıt gerekmez",
+   "text": "Kayıt gerektirmeyen ücretsiz Wi‑Fi terminallerin çoğu bekleme alanında ve genel alanında var. #HKAirport Free WiFi ve #HKAirport Hi-Speed WiFi ağları: bağlanıp tarayıcıda https:// ile başlamayan herhangi bir adres açılır ve Agree and Continue'ya basılır. #HKAirport Free WiFi ağı görünmüyorsa Wi-Fi.HK via HKAirport seçilir. Danışma hattı: 2188 7799."
+  }
+ }
+}

@@ -1,0 +1,25 @@
+{
+ "iata": "LAX",
+ "blocks": {
+  "transport": {
+   "title": "Cómo llegar",
+   "hint": "Autobuses FlyAway",
+   "text": "Los autobuses LAX FlyAway circulan con horario fijo los siete días de la semana entre cada terminal y Van Nuys y la estación Union Station. Desde el aeropuerto se suben en el nivel inferior de llegadas, delante de cada terminal, junto a las columnas azules de FlyAway."
+  },
+  "taxi": {
+   "title": "Taxi",
+   "hint": "Parada LAX-it junto a la T1",
+   "text": "Los taxis recogen pasajeros en tres lugares. La zona LAX-it, junto a la terminal 1: se llega a pie siguiendo las señales o en la lanzadera gratuita LAX-it, que pasa cada 3–5 minutos por las señales verdes del nivel inferior de llegadas. A los pasajeros de las terminales B y 3 los taxis los esperan dentro del aparcamiento P3, entre ambas; a los de las terminales 7 y 8, en el extremo de la terminal 7, junto a la recogida de equipajes. Solo pueden recoger pasajeros en el aeropuerto los taxis con el precinto del departamento de transporte de Los Ángeles; coordinador: 310-646-9177."
+  },
+  "parking": {
+   "title": "Aparcamiento",
+   "hint": "Desde 20 $ por 24 h",
+   "text": "Ocho aparcamientos frente a las terminales, más de 7000 plazas: los primeros 10 minutos, gratis; la primera hora, 9 $ (11 $ en P3 y P4); cada 30 minutos siguientes, 7 $ (9 $ en P3 y P4); máximo 60 $ por 24 horas; Premium en P1, P3 y P7, hasta 70 $ por 24 horas; aparcacoches, 75 $ por 24 horas. LAX Economy Parking (6100 W. 94th Street), máximo 35 $ por 24 horas; LAX Budget Parking (5455 West 111th Street), máximo 20 $; desde ambos circula día y noche una lanzadera gratuita a las zonas rosas LAX Shuttle del nivel de llegadas. Las tarifas incluyen un impuesto del 10%; la plaza se puede reservar con antelación."
+  },
+  "wifi": {
+   "title": "Wi‑Fi",
+   "hint": "Gratis, sesiones de 45 minutos",
+   "text": "Wi‑Fi gratuito e ilimitado en las zonas públicas de todas las terminales, en sesiones de 45 minutos. Red _LAX Free WiFi: hay que abrir el navegador, elegir Free Unlimited Wi-Fi y ver un anuncio. Un acceso más rápido, con la suscripción de pago de Boingo."
+  }
+ }
+}

@@ -1,0 +1,25 @@
+{
+ "iata": "BKK",
+ "blocks": {
+  "taxi": {
+   "title": "Taxi",
+   "hint": "Niveau 1, sorties 4–7, +50 bahts",
+   "text": "Le comptoir d'information taxis et les distributeurs de tickets se trouvent dans le terminal passagers au niveau 1, entre les sorties 4 et 7. Au tarif s'ajoute un supplément de 50 bahts au profit du chauffeur, sur décision du ministère des Transports ; les péages sont à la charge du passager. Il existe des courses courtes distances — autour de l'aéroport, 20 km au maximum ; pour les distances ordinaires, selon les règles du Département des transports terrestres, le prix peut être convenu avec le chauffeur."
+  },
+  "terminals": {
+   "title": "Terminaux",
+   "hint": "Principal et satellite SAT-1",
+   "text": "Outre le terminal principal (MTB), le satellite SAT-1 est en service — 28 passerelles, dont 8 accueillent les avions de classe F, comme l'A380 et le B747-8. SAT-1 est relié au terminal principal par un tunnel d'environ un kilomètre, parcouru par des trains automatiques APM ; le trajet, attente comprise, prend environ trois minutes. Dans SAT-1, le niveau 4 accueille les salles d'attente et les salons des compagnies, le niveau 3 les départs, le niveau 2 les arrivées et les correspondances ; la station APM est au niveau souterrain B2."
+  },
+  "lounges": {
+   "title": "Salons",
+   "hint": "Miracle, dès 1 500 THB les 2 h",
+   "text": "Les salons Miracle Lounge se trouvent dans le terminal principal, en zones de départ aux niveaux 2–4 près des halls A, C, D, F et G, ainsi que dans le satellite SAT-1 au niveau 4. Au salon : en-cas, boissons chaudes et froides, Wi‑Fi gratuit, journaux et magazines. Prix indicatif pour 2 heures par personne : First Class — 1 800 THB, Business Class — 1 500 THB."
+  },
+  "storage": {
+   "title": "Consigne à bagages",
+   "hint": "Niveaux 2 et 4, dès 150 THB/24 h",
+   "text": "Consigne Bellugg : en zone d'arrivée — niveau 2, près de la sortie 4, à côté de la police touristique ; en zone de départ — niveau 4, rangées P/Q. Prix par bagage pour 24 heures : taille S (35×56×22 cm) — 150 THB, M (45×65×28 cm) — 180 THB, L (plus grand que M) — 200 THB. Un reçu est remis au dépôt."
+  }
+ }
+}

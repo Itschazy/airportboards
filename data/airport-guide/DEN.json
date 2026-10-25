@@ -1,0 +1,54 @@
+{
+ "iata": "DEN",
+ "checked": "2026-10-25",
+ "blocks": [
+  {
+   "id": "transport",
+   "title": "Как доехать",
+   "hint": "Поезд A Line, автобусы RTD",
+   "text": "DEN Transit Center — у южного конца терминала Jeppesen: выйти через стеклянные двери и спуститься на эскалаторе или лифте на уровень земли. Отсюда идёт поезд A Line до Denver Union Station и автобусы RTD AB, AT, 104L, 145X и 169L. Транспорт работает примерно с 3:30 до полуночи, последний автобус уходит из аэропорта в 1:28. Дневной проездной на все маршруты RTD — $10.",
+   "source": "flydenver.com",
+   "url": "https://www.flydenver.com/parking-and-transportation/to-and-from/public-bus-or-train-rtd/"
+  },
+  {
+   "id": "taxi",
+   "title": "Такси",
+   "hint": "Даунтаун — $72.04 фиксировано",
+   "text": "Фиксированные тарифы в одну сторону, сбор аэропорта включён: Даунтаун Денвера (зона A) — $72.04, Denver Tech Center (зона B) — $80.04, Боулдер (зона C) — $115.04, Tower Road (зона D) — $37.04. В остальные места — по счётчику плюс сбор $6.04. Стоянка такси — терминал Jeppesen, уровень 5, Island 1, у дверей 505, 507 и 511 (восточная сторона) и 506, 510 и 512 (западная).",
+   "source": "flydenver.com",
+   "url": "https://www.flydenver.com/parking-and-transportation/to-and-from/taxi/"
+  },
+  {
+   "id": "lounges",
+   "title": "Бизнес-залы",
+   "hint": "United Club, Centurion, Sky Club",
+   "text": "Залы на мезонине конкорсов: American Airlines Admirals Club у выхода C-32, American Express Centurion Lounge у C-46, Capital One Lounge (Plaza Premium) у A-34, United Club у A-25, B-44 и B-32. United Club Fly — у выхода B-60. Delta Sky Club — после досмотра в северном конце конкорса A, на мосту из терминала Jeppesen. Бесплатная зона отдыха Rest and Recharge с креслами-реклайнерами — на мезонине конкорса A.",
+   "source": "flydenver.com",
+   "url": "https://www.flydenver.com/at-the-airport/lounge-areas/"
+  },
+  {
+   "id": "sleep",
+   "title": "Где поспать",
+   "hint": "Westin у терминала",
+   "text": "Отель Westin Denver International Airport на 519 номеров стоит в нескольких шагах от главного терминала, прямо над DEN Transit Center — подняться на эскалаторе.",
+   "source": "flydenver.com",
+   "url": "https://www.flydenver.com/at-the-airport/services-and-amenities/the-westin-hotel-at-den/"
+  },
+  {
+   "id": "kids",
+   "title": "С ребёнком",
+   "hint": "Игровые зоны у A25 и C54",
+   "text": "Две детские игровые зоны работают круглосуточно — у выходов A25 и C54. Бесплатные комнаты для кормления с пеленальным столиком и раковиной открыты круглосуточно: после досмотра на каждом конкорсе и две в терминале Jeppesen — в центре на уровне 5 у зоны прилёта и в северо-западной части у международного прилёта.",
+   "source": "flydenver.com",
+   "url": "https://www.flydenver.com/at-the-airport/services-and-amenities/children-and-families/"
+  },
+  {
+   "id": "wifi",
+   "title": "Wi‑Fi",
+   "hint": "Бесплатный, по всему аэропорту",
+   "text": "Бесплатный Wi‑Fi по всему аэропорту: сети DEN Airport Free WiFi, DEN Airport Free WiFi 2.4G или DEN FREE WIFI 6E, выбрать и нажать «Connect». Розетки есть по всему терминалу Jeppesen и на трёх конкорсах, а также отдельные зарядные станции с сиденьями и столешницами.",
+   "source": "flydenver.com",
+   "url": "https://www.flydenver.com/at-the-airport/services-and-amenities/wifi-and-technology/"
+  }
+ ]
+}

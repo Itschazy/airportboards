@@ -1,0 +1,40 @@
+{
+ "iata": "SIN",
+ "blocks": {
+  "transport": {
+   "title": "アクセス",
+   "hint": "MRTと複数のバス路線",
+   "text": "中心部へは、Changi Airport MRT駅（CG2）から列車でTanah Merah（EW4）まで行き、Tuas Link（EW33）方面のEast West線に乗り換えるか、Expo（CG1/DT35）まで行ってDowntown線に乗り換える。Tanah Merah行きの始発は月曜から土曜が5:31、日曜・祝日が5:59。Tuas Link方面に乗り換えられる終電は毎日23:18。バス24、27、34、36、53、110、858番は第1、第2、第3ターミナルの地下バス乗り場から発車する。支払いは非接触型のMastercard/Visa/NETSカード、モバイルウォレット、EZ-Linkカードで。バスでは現金でも支払えるが、おつりは出ない。"
+  },
+  "taxi": {
+   "title": "タクシー",
+   "hint": "中心部までS$25–45、メーター制",
+   "text": "タクシー乗り場は第1–4ターミナルの到着エリアにある。中心部までは約30分、メーターでS$25–45。空港発の乗車には、17:00から23:59まではS$8、それ以外の時間はS$6の追加料金がかかる。0:00から5:59まではメーター料金の合計に50%の深夜割増が加算される。Grab、Gojek、Zig、Tada Mobility、Ryde、Geolahで配車した場合は、Arrival and Ride-Hailing pick-upの乗車場所で乗る。24時間営業のGround Transport Conciergeカウンター：シンガポール国内のどこへでも、4人乗りでS$70、6人乗りでS$75で送迎する。"
+  },
+  "terminals": {
+   "title": "ターミナル",
+   "hint": "T1–T3列車、T4はバス",
+   "text": "第1、第2、第3ターミナルは、一般エリアと乗り継ぎエリアの両方で無料のSkytrainで結ばれている。乗り継ぎエリアでは動く歩道で歩いて移動することもできる。第4ターミナルへは、T1/JewelとT2/MRTから6:00から0:00まで5–9分間隔で無料シャトルバスが運行している：一般エリアでは約10分、乗り継ぎエリアでは10–18分。乗り継ぎエリアのシャトルは、手荷物が最終目的地までスルーで預けられている場合のみ利用できる。JewelはT2とT3の間の一般エリアにある：T1からは1階の到着ホールから直接入れ、T2とT3からは連絡通路を歩いて5–10分。乗り継ぎ旅客は出入国審査を通過する必要がある。"
+  },
+  "lounges": {
+   "title": "ラウンジ",
+   "hint": "T1、T2、T4に有料ラウンジ",
+   "text": "有料ラウンジ：Plaza Premium Loungeは第1ターミナルの乗り継ぎエリア3階、24時間営業。JetQuay Loungeは第2ターミナルの乗り継ぎエリア2階、24時間営業。Blossom – SATS & Plaza Premium Loungeは第4ターミナルの乗り継ぎエリアレベル2M、24時間営業。ほかにAmbassador Transit Lounge（2か所）、Jewelの1階にあるChangi Lounge、第2ターミナルの一般エリア1階にあるHub & Spokeがある。"
+  },
+  "storage": {
+   "title": "手荷物預かり",
+   "hint": "全ターミナル、24時間S$6から",
+   "text": "Smarte Carteの手荷物預かり所は24時間営業：一般エリアではJewel（1階）、T2（到着ホールNorth）、T3（1階、Train to City付近）、T4（1階）。乗り継ぎエリアでは4つのターミナルすべてにある。GST込みの24時間あたりの料金：単品S$6、10 kgまでの小さな荷物S$11、10 kgを超える大型・規格外の荷物S$16、特大の荷物S$19。預ける荷物はすべて検査される。"
+  },
+  "sleep": {
+   "title": "仮眠・宿泊",
+   "hint": "無料の休憩エリア、24時間",
+   "text": "乗り継ぎエリアにある無料の休憩エリアSnooze Loungeは24時間利用できる：T1は3階のDeparture Transit Hall East、T2は2階のSanctuary Lounge、Oasis Lounge、Pavilion Lounge、T3は2階の2か所（SouthとNorth）、T4はレベル2M。"
+  },
+  "kids": {
+   "title": "お子様連れ",
+   "hint": "無料ベビーカー",
+   "text": "ベビーカーは案内カウンターとJewelのコンシェルジュカウンターで、先着順に無料で貸し出される。小さな子ども連れの旅客は、幅の広いSpecial Assistance Lanesで出入国審査を受けることができ、一緒に通れるのは4人まで。"
+  }
+ }
+}

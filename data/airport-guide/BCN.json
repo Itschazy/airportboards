@@ -1,0 +1,30 @@
+{
+ "iata": "BCN",
+ "checked": "2026-10-25",
+ "blocks": [
+  {
+   "id": "transport",
+   "title": "Как доехать",
+   "hint": "Метро, линия 9",
+   "text": "Линия 9 метро (University zone — Airport) останавливается у обоих терминалов: станция Aeroport T1 в терминале T1 на этаже 0 и станция в терминале T2 на этаже 0. Между терминалами круглосуточно ходит бесплатный шаттл.",
+   "source": "aena.es",
+   "url": "https://www.aena.es/en/josep-tarradellas-barcelona-el-prat/getting-there/underground.html"
+  },
+  {
+   "id": "taxi",
+   "title": "Такси",
+   "hint": "Чёрно-жёлтые, у зон прилёта",
+   "text": "Стоянки такси — напротив зон прилёта терминала T1, коридора шаттла Barcelona–Madrid и терминалов T2A, T2B и T2C; у каждой есть очередь без брони и место для заказанных машин. В терминале T1 официальное такси — на этаже 0. Единственное официальное такси в Барселоне — чёрно-жёлтое.",
+   "source": "aena.es",
+   "url": "https://www.aena.es/en/josep-tarradellas-barcelona-el-prat/getting-there/taxi.html"
+  },
+  {
+   "id": "wifi",
+   "title": "Wi‑Fi",
+   "hint": "Бесплатно, без ограничения времени",
+   "text": "Сеть Airport Free Wifi Aena: вход на стартовой странице по адресу электронной почты как гость или через аккаунт Aena Club. На подтверждение почты даётся 15 минут бесплатного интернета, после подтверждения доступ без ограничения по времени.",
+   "source": "aena.es",
+   "url": "https://www.aena.es/en/josep-tarradellas-barcelona-el-prat/airport-services/wi-fi.html"
+  }
+ ]
+}

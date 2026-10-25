@@ -147,3 +147,48 @@ parking — не входило в задачу, оставлено как «day
 ## Перекрёстная проверка ChatGPT (выборка 5 пар, 25.10)
 
 Принято: VKO «(con discapacidad, hasta 12)» → «menores de 12» (и ASF «hasta 8» → «menores de 8»), «día y noche y gratis» → «abierta las 24 horas y gratuita», EVN прокат авто, VKO «un solo adulto». Отклонено: «nivel N» → «planta N» (в Испании «planta 1» — этаж над землёй, а российская «1» — первый от земли; оставлен знак-уровень), «ОВЗ» как «necesidades especiales» (принятый во всех языках перевод — инвалидность).
+
+
+## Раунд 2 (26.10.2026)
+
+| Файл | Блок | Было | Стало | Тип | Почему |
+|---|---|---|---|---|---|
+| CAN | taxi.text | la salida | la puerta | смысл | Уточнение gate/door/exit по официальному источнику, таблица door-vs-gate.md |
+| CAN | storage.text | la salida | la puerta | смысл | Уточнение gate/door/exit по официальному источнику, таблица door-vs-gate.md |
+| CAN | sleep.text | la salida | la puerta | смысл | Уточнение gate/door/exit по официальному источнику, таблица door-vs-gate.md |
+| PEK | taxi.text | las salidas 5–9 | las puertas 5–9 | смысл | Уточнение gate/door/exit по официальному источнику, таблица door-vs-gate.md |
+| PEK | storage.text | la salida | la puerta | смысл | Уточнение gate/door/exit по официальному источнику, таблица door-vs-gate.md |
+| PVG | taxi.text | las salidas 4 u 8 | las puertas 4 u 8 | смысл | Уточнение gate/door/exit по официальному источнику, таблица door-vs-gate.md |
+| PVG | taxi.text | la salida | la puerta | смысл | Уточнение gate/door/exit по официальному источнику, таблица door-vs-gate.md |
+| BKK | taxi.hint | salidas 4–7 | puertas 4–7 | смысл | Уточнение gate/door/exit по официальному источнику, таблица door-vs-gate.md |
+| BKK | taxi.text | las salidas 4 y 7 | las puertas 4 y 7 | смысл | Уточнение gate/door/exit по официальному источнику, таблица door-vs-gate.md |
+| BKK | storage.text | la salida | la puerta | смысл | Уточнение gate/door/exit по официальному источнику, таблица door-vs-gate.md |
+| PVG | storage.text | la salida 7 | la puerta 7 | смысл | Уточнение gate/door/exit по официальному источнику, таблица door-vs-gate.md |
+| PVG | sleep.text | la salida 2 de | la puerta 2 de | смысл | Уточнение gate/door/exit по официальному источнику, таблица door-vs-gate.md |
+| PVG | sleep.text | la salida 29 | la puerta 29 | смысл | Уточнение gate/door/exit по официальному источнику, таблица door-vs-gate.md |
+| CAN | taxi.hint | salidas 50 | puertas 50 | смысл | Двери терминала по шагу2 |
+| HND | taxi.text | junto a la puerta 7 | junto a la salida 7 | смысл | Источник Exit7, не boardinggate |
+| HND | taxi.text | junto a la puerta 2 | junto a la salida 2 | смысл | Источник Exit2, не boardinggate |
+| HND | sleep.text | de la misma planta | del mismo nivel | стиль | Этаж по правилу nivelN |
+| JFK | sleep.text | por los pasarelas-tubo | por las pasarelas tubulares | стиль | Согласование рода и естественный термин |
+| ICN | kids.text | junto a las salidas B y E | junto a las salas B y E | смысл | В оригинале залыB/E, не выходы |
+| LAS | parking.text | Economy y el recinto remoto (con lanzadera gratuita) | Economy y el recinto remoto (a este último llega una lanzadera gratuita) | смысл | Шаттл только RemoteLot |
+| LAS | transport.text | en el nivel Level Zero | en Level Zero | стиль | Убрана тавтология |
+| DFW | lounges.text | dentro de la zona de control | en la zona posterior al control | смысл | Airside — после контроля, не внутри пункта досмотра |
+
+Все24файла раунда2 проверены заново блок за блоком: факты, цены, интервалы, возрастJFK, бесплатность, зоны и имена. NivelN для этажей, planta не употребляется как обозначение этажа (varias plantas — тип паркинга). Ручная рецензия завершена, ChatGPT впереди.
+| DEL | taxi.text | de varias plantas | multinivel | стиль | Этажи и многоуровневые объекты без planta по правилу проекта |
+| DEL | parking.text | de varias plantas | multinivel | стиль | Этажи и многоуровневые объекты без planta по правилу проекта |
+| MIA | lounges.text | pase de un día | pase de una visita | смысл | «Разовый пропуск» не задаёт срок действия целый день; сохраняем один вход |
+| MIA | lounges.text | En las salas de American se entra por estatus y con billete de clase business o primera de American o de oneworld | El acceso a las salas de American depende del estatus y de disponer de un billete de clase business o primera de American o de una aerolínea de oneworld | стиль | Принято из выборки ChatGPT: естественность и точная пассажирская терминология |
+| MIA | lounges.text | se vende pase de una visita si hay plazas | se puede comprar un pase de acceso para una sola visita si hay plazas disponibles | стиль | Принято из выборки ChatGPT: естественность и точная пассажирская терминология |
+| HND | lounges.text | bebidas incluido alcohol | bebidas, incluidas las alcohólicas | стиль | Принято из выборки ChatGPT: естественность и точная пассажирская терминология |
+| HND | lounges.text | Se entra con cupones de aerolínea o con una tarjeta válida a nombre propio y tarjeta de embarque del mismo día; si no, de pago | Se puede acceder con cupones de compañías aéreas o con una tarjeta admitida a nombre del pasajero y una tarjeta de embarque para ese mismo día; en caso contrario, hay que pagar la entrada | стиль | Принято из выборки ChatGPT: естественность и точная пассажирская терминология |
+| SIN | terminals.text | en la zona de tránsito también se puede ir entre ellas por cintas transportadoras | en la zona de tránsito también se puede ir de una terminal a otra utilizando pasillos rodantes | стиль | Принято из выборки ChatGPT: естественность и точная пассажирская терминология |
+
+### ChatGPT, выборка раунда 2
+https://chatgpt.com/c/6ade6c7c-ca0c-8331-bb9a-0af1a528c956 — 6 пар MIA/lounges, LAS/parking, HND/lounges, PVG/storage, ICN/terminals, SIN/terminals, без поиска. Приняты №1–5, в №4 «a nombre del pasajero» явно сохраняет карту на своё имя. Отклонённых замечаний нет; срок дневного пропуска и этажи менять не предлагалось. Числа, цены и условия по выборке сохранены.
+| PEK | taxi.text | En los trayectos de más de 15 km se añade un 50% del importe como suplemento por el viaje de vuelta | En el tramo del trayecto que supera los 15 km se aplica un suplemento del 50% sobre la tarifa por kilómetro por el viaje de vuelta | смысл | Официальная китайская версия bcia.com.cn/wljc.html: 单程载客15公里以上部分，每公里租价加收50%费用. Подтверждённая правка оригинала согласована владельцем 26.10 |
+| ICN | sleep.text | nivel B1 | nivel 1 | смысл | Официальный корейский каталог airport.kr/ap_ko/1008/subview.do: 캡슐호텔 다락휴(T1), 교통센터 1층 중앙. Исправление оригинала и 11 переводов согласовано владельцем 26.10 |
+| MIA | parking.text | la tasa de reserva de 2,99 | la tasa de reserva | числа | Официальный источник miami-airport.com/airport-parking.asp даёт 2.99 без валюты; в условиях booking.mia-parking.com/terms-and-conditions суммы нет. Не придумываем валюту: неполную сумму убрали, невозвратность сбора сохранили. Правка подтверждённых проблем оригинала во всех языках разрешена владельцем 26.10 |
+| ICN | sleep.text | en el centro de transporte, nivel 1 | en el centro de transporte | смысл | Повторная проверка: английский официальный каталог даёт Center of Transportation Center 1BF, корейский 교통센터 1층 중앙. По CLAUDE.md при противоречии факт не публикуется: убран только спорный этаж Darakhyu, центр транспортного центра сохранён |

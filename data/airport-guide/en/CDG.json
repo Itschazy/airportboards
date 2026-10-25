@@ -1,0 +1,30 @@
+{
+ "iata": "CDG",
+ "blocks": {
+  "transport": {
+   "title": "Getting there",
+   "hint": "RER B, bus 9517, Noctilien",
+   "text": "RER B is the simplest way between the airport and Paris (above all Gare du Nord and Châtelet), about 35 minutes; trains run from 4:50 to 23:00 (last arrival at the airport). Bus 9517 (formerly RoissyBus), together with metro line 14, goes to Saint-Denis Pleyel. At night Noctilien buses N143 and N140 run from terminals 1, 2 and 3 to Gare de l'Est. All terminals are linked by the free CDGVAL train; Navigo passes (day or week, all zones) and tickets that can be downloaded to a smartphone are valid."
+  },
+  "taxi": {
+   "title": "Taxi",
+   "hint": "Flat €56 / €65 to Paris",
+   "text": "Flat fare in either direction, set by the Police Prefecture: €56 to the Right Bank of Paris, €65 to the Left Bank. The trip to the centre takes 35–60 minutes depending on traffic. Official taxis with an illuminated “TAXI” sign take passengers only at the ranks by the exits of terminals 1, 2 and 3; offers from drivers inside the terminal should be declined. Trips to the suburbs and farther are metered."
+  },
+  "storage": {
+   "title": "Left luggage",
+   "hint": "Bagages du Monde, 7:00–21:00",
+   "text": "Bagages du Monde left luggage is in Terminal 2, Level 0, in the connecting hall of the Aéroport Charles de Gaulle 2 TGV station, before security. Open daily from 7:00 to 21:00; luggage is X-rayed and the room is under constant video surveillance. Also available there: luggage wrapping, delivery to your hotel, pram and car seat rental, and storage for bikes, boards and other non-standard luggage."
+  },
+  "sleep": {
+   "title": "Where to sleep",
+   "hint": "Sheraton and YotelAir in Terminal 2",
+   "text": "Terminal 2 has the Sheraton hotel, and for Terminal 2E passengers there are compact YotelAir rooms in the international area (both by the CDGVAL station “Terminal 2”). In the Roissypôle area by the CDGVAL station “Terminal 3 - Roissypôle” there are citizenM, Hilton, ibis, ibis Styles, Novotel and Radisson Blu. A room can be taken for the night or for a few hours."
+  },
+  "wifi": {
+   "title": "Wi‑Fi",
+   "hint": "Free, WIFI-AIRPORT network",
+   "text": "Free Wi‑Fi in all terminals, boarding areas and baggage claim: the WIFI-AIRPORT network opens the Paris Aéroport start page automatically. Free lockable ChargeBox charging lockers work round the clock after security in terminals 1, 2D, 2E and 3."
+  }
+ }
+}

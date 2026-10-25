@@ -1,0 +1,40 @@
+{
+ "iata": "ORD",
+ "blocks": {
+  "transport": {
+   "title": "가는 방법",
+   "hint": "지하철 상시 운행",
+   "text": "CTA Blue Line 열차는 상시 운행하며, 역은 주차 건물 하층에 있습니다: 1, 2, 3터미널에서는 Trains to City 표지를 따라 지하층 보행 터널로 가고, 5터미널에서는 먼저 ATS로 3터미널이나 2터미널까지 갑니다. 승차권은 역 옆 발매기에서 현금이나 카드로 삽니다. Metra North Central Service 전철은 교통 허브 Multi-Modal Facility 뒤의 O'Hare Transfer 역에서 출발하며, 어느 터미널에서든 ATS로 갈 수 있습니다. 승차권은 차장에게 삽니다. Multi-Modal Facility(8·9번 승강장)에서는 Pace 250번, 330번 버스가 출발합니다."
+  },
+  "taxi": {
+   "title": "택시",
+   "hint": "시내까지 약 $50",
+   "text": "택시 승강장은 각 터미널 하층 수하물 수취 구역 출구 앞에 있으며, 반드시 그곳에서 타야 하고 출발층에서 기사를 따라가면 안 됩니다. 택시는 미터 요금이며, 공항에서 시카고 도심까지 평균 $50입니다. 교외행 택시는 교외 택시 회사에 전화로 미리 예약합니다. Uber와 Lyft는 상층에서 탑니다: 2터미널은 주황색 표지의 2A–2G 구역, 3터미널은 초록색 표지의 3G, 3H, 3J, 3K 구역입니다."
+  },
+  "lounges": {
+   "title": "비즈니스 라운지",
+   "hint": "터미널별 라운지",
+   "text": "대부분의 라운지에서 1일 이용권을 살 수 있습니다. United Club은 1터미널 B6, B18, C10 게이트 옆과 2터미널 E7, F9 옆에 있으며, United Polaris Lounge(국제선 일등석·비즈니스석 전용)는 1터미널 C18 옆에 있습니다. Admirals Club(American, JAL, Iberia)은 3터미널 G8, L2A, H6/K6 옆에 있으며, H6/K6 옆에는 American Flagship Lounge도 있습니다. 5터미널: M13 옆 Delta Sky Club, M17 옆 Air France 라운지, M18 옆 LOT Business Lounge와 Swissport Lounge(Priority Pass 이용 가능), M19 옆 Wingtips Lounge."
+  },
+  "sleep": {
+   "title": "잠잘 곳",
+   "hint": "1–3터미널 맞은편 Hilton",
+   "text": "Hilton Chicago O'Hare Airport 호텔은 1, 2, 3터미널 바로 맞은편에 있습니다. 국내선 터미널에서는 지하 통로로 걸어가고, 5터미널에서는 ATS로 갑니다. 호텔에서 CTA Blue Line 역까지 지붕 있는 통로가 있습니다. 공항 주변의 다른 호텔은 무료 셔틀로 투숙객을 실어 나르며, 도착층 수하물 수취 구역의 Virtual Concierge 키오스크에서 셔틀을 부를 수 있습니다."
+  },
+  "kids": {
+   "title": "아이와 함께",
+   "hint": "2터미널 Family Lounge",
+   "text": "어린이 공간 Family Lounge는 2터미널 보안검색 바로 뒤, 메인 홀 F1 게이트 옆에 있습니다: 놀이 공간, 기기 충전, 유모차 보관소. 수유실은 모든 터미널에 있고, 수유 캡슐 Mamava는 1, 2, 3터미널에 있습니다. 대부분의 화장실에 기저귀 교환대가 있습니다. 기저귀, 분유, 젖병은 Oops Diapers 2Go 자판기에서 판매합니다."
+  },
+  "parking": {
+   "title": "주차",
+   "hint": "24시간 $16부터",
+   "text": "시간제 주차: 메인 주차 건물 1층, 첫 1시간 $3. 일 단위 주차: 주차 건물 2–6층과 B·C 주차장, 24시간 $43이며, 5터미널 옆 D 주차장도 24시간 $43입니다. 이코노미 주차장: F는 $30, G와 H는 24시간 $16이며, H는 카드 결제만 가능합니다. 요금에는 세금이 포함되며, 출차할 때 결제합니다. 주차 사무소((773) 686-7530)와 협의 없이 30일을 넘기면 차량이 견인될 수 있습니다."
+  },
+  "wifi": {
+   "title": "Wi‑Fi",
+   "hint": "무료, 무제한",
+   "text": "모든 터미널의 보안검색 전후 구역에서 무료 무제한 Wi‑Fi를 이용할 수 있습니다. 네트워크 Boingo Hotspot 또는 _Free_ORD _Wi-Fi에 연결한 뒤 브라우저에서 https가 아닌 아무 주소나 열고 Watch Ad to Connect를 선택합니다. 4–8인용 무료 충전 스테이션이 모든 터미널에 있습니다."
+  }
+ }
+}

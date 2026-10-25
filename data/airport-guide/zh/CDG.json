@@ -1,0 +1,30 @@
+{
+ "iata": "CDG",
+ "blocks": {
+  "transport": {
+   "title": "交通方式",
+   "hint": "RER B和日夜巴士",
+   "text": "RER B是往返机场与巴黎（主要是Gare du Nord和Châtelet）最简便的方式，约35分钟；列车运营时间4:50至23:00（末班抵达机场时间）。9517路巴士（原RoissyBus）衔接地铁14号线，开往Saint-Denis Pleyel。夜间有Noctilien N143和N140路巴士从1、2、3号航站楼开往Gare de l'Est。所有航站楼之间有免费的CDGVAL列车；可使用Navigo通票（日票或周票，全区）以及可下载到智能手机的车票。"
+  },
+  "taxi": {
+   "title": "出租车",
+   "hint": "至巴黎固定价€56 / €65",
+   "text": "由警察局规定的双向固定价格：至巴黎右岸€56，至左岸€65。到市中心视交通状况需35–60分钟。带有发光“TAXI”顶灯的官方出租车只在1、2、3号航站楼出口处的候车点载客；航站楼内司机的揽客应予拒绝。前往郊区及远途按计价器收费。"
+  },
+  "storage": {
+   "title": "行李寄存",
+   "hint": "行李寄存，7:00–21:00",
+   "text": "Bagages du Monde行李寄存处位于2号航站楼0层，Aéroport Charles de Gaulle 2 TGV火车站换乘大厅内，安检前。每天7:00至21:00开放，行李经X光检查，场所全程视频监控。同处还提供行李打包、送行李到酒店、婴儿车和儿童安全座椅租赁，以及自行车、板类和其他非标准行李的寄存。"
+  },
+  "sleep": {
+   "title": "休息住宿",
+   "hint": "2号航站楼及附近的酒店",
+   "text": "2号航站楼有Sheraton酒店，2E航站楼的旅客还可入住国际区的YotelAir紧凑客房（两者均在CDGVAL“Terminal 2”站旁）。Roissypôle区CDGVAL“Terminal 3 - Roissypôle”站旁有citizenM、Hilton、ibis、ibis Styles、Novotel和Radisson Blu。客房可住一晚，也可按几小时入住。"
+  },
+  "wifi": {
+   "title": "Wi‑Fi",
+   "hint": "免费，WIFI-AIRPORT网络",
+   "text": "所有航站楼、登机区和行李提取区均提供免费Wi‑Fi：连接WIFI-AIRPORT网络后会自动打开Paris Aéroport首页。1、2D、2E和3号航站楼安检后设有免费的可上锁充电柜ChargeBox，全天候开放。"
+  }
+ }
+}

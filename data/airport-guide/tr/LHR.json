@@ -1,0 +1,30 @@
+{
+ "iata": "LHR",
+ "blocks": {
+  "transport": {
+   "title": "Nasıl gidilir",
+   "hint": "Express, Elizabeth, Piccadilly",
+   "text": "Heathrow Express 15 dakikada bir Paddington'a gider; Paddington ile Terminal 2 ve 3 arasındaki yolculuk 15 dakika sürer. Elizabeth line havalimanını Bond Street, Farringdon, Liverpool Street, Paddington, Stratford ve Tottenham Court Road'a bağlar, Londra merkezine 40 dakikadan az; ödeme temassız kartla veya Oyster ile. En ucuz seçenek tüm terminallerden kalkan Piccadilly metro hattı: merkeze bir saatten az, trenler King's Cross St. Pancras, Leicester Square ve Piccadilly Circus'ta durur."
+  },
+  "taxi": {
+   "title": "Taksi",
+   "hint": "Her terminalde siyah taksiler",
+   "text": "Londra'nın siyah taksileri her terminalin önündeki duraklarda bekler; sürücüler lisanslıdır ve Knowledge of London sınavını geçmiştir, tüm araçlar tekerlekli sandalyeye uygundur. WeKnow elektrikli transferleri sabit tarifelerle çalışır, kontuarları tüm terminallerin geliş alanlarında."
+  },
+  "lounges": {
+   "title": "Business salonları",
+   "hint": "Ücretli salonlar £35'ten",
+   "text": "Ücretli salonlar güvenlik kontrolünden sonra, her gün açık. Terminal 2: No.1 Lounges ve Plaza Premium, ikisi de 05:00'ten 21:00'e kadar, kişi başı £44'ten ve £40'tan. Terminal 5: Plaza Premium 04:45'ten 21:30'a kadar, kişi başı £35'ten. Terminal 2'de ayrıca Lufthansa, Singapore Airlines, Air Canada ve United havayolu salonları, Terminal 5'te British Airways salonları var."
+  },
+  "storage": {
+   "title": "Emanet",
+   "hint": "Excess Baggage, £10'dan",
+   "text": "Excess Baggage Company emanetleri gece gündüz kamera gözetiminde; bagaj parçası başına fiyat: 3 saate kadar £10, 3–24 saat £15, 24–48 saat £27,50, 48–72 saat £40. 72 saatten sonra her ek gün için £12,50, 7 günden sonra günlük £10. Çevrimiçi rezervasyon yapılabilir."
+  },
+  "wifi": {
+   "title": "Wi‑Fi",
+   "hint": "Ücretsiz, Heathrow Wi‑Fi ağı",
+   "text": "Tüm terminallerde ücretsiz Wi‑Fi: Heathrow Wi‑Fi ağı seçilir, ekrandaki talimatlar izlenir ve kayıt olunur. Ağ Friendly WiFi sertifikalıdır ve çocuklara uygun olmayan içeriği filtreler."
+  }
+ }
+}

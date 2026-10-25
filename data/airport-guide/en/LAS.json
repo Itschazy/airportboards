@@ -1,0 +1,25 @@
+{
+ "iata": "LAS",
+ "blocks": {
+  "transport": {
+   "title": "Getting there",
+   "hint": "RTC buses 108 and Red Line",
+   "text": "RTC city buses stop at Terminal 1 on Level Zero: from baggage claim go down by lift or escalator, exit the building, cross at the crosswalk and bear right to the covered stop. Route 108 — Paradise and the Red Line (formerly route 109 — Maryland Parkway) stop here. From Terminal 3 the stop is reached by the free inter-terminal shuttle from baggage claim."
+  },
+  "taxi": {
+   "title": "Taxi",
+   "hint": "At baggage claim, flat to the Strip",
+   "text": "At Terminal 1 taxis wait at the east end of baggage claim, outside doors 1–4; at Terminal 3, at baggage claim by door 52. Fares are set by the Nevada Taxicab Authority, and all companies accept bank cards. Zone-based flat fares apply from the airport to zones on the Strip."
+  },
+  "terminals": {
+   "title": "Terminals",
+   "hint": "Terminal 1 and Terminal 3",
+   "text": "Terminal 1 serves gates A, B, C and D and has a 6,000-space garage next to it; satellite concourse D is linked to Terminal 1 by an automated train. Terminal 3 handles all international airlines and some domestic ones, with its own check-in, baggage claim and border control; a train also runs from it to the D gates. The inter-terminal shuttle stop at Terminal 3 is on Level Zero by door 55."
+  },
+  "parking": {
+   "title": "Parking",
+   "hint": "17,000+ spaces, from $14 per 24 h",
+   "text": "More than 17,000 spaces at both terminals and at a remote lot, round the clock. Short-term: $4 for the first hour, $8 up to 2 hours, then $5 an hour, maximum $38 per 24 hours. Long-term: $12 for 2 hours, then $4 an hour, maximum $20 per 24 hours; with advance booking at Terminal 3, Saturday to Wednesday — $16. Economy and the remote lot (the latter served by a free shuttle): $6 for 2 hours, then $2 an hour, maximum $14 per 24 hours; valet $34 per 24 hours. The waiting lot (Cell Phone Lot) is free."
+  }
+ }
+}

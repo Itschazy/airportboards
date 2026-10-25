@@ -1,0 +1,35 @@
+{
+ "iata": "CAN",
+ "blocks": {
+  "transport": {
+   "title": "Cómo llegar",
+   "hint": "Metro, línea 3, Airport North",
+   "text": "La Terminal 2 está junto a la estación Airport North de la prolongación norte de la línea 3 del metro. A la Terminal 3 no llega el metro directamente: hay que ir por la línea 3 hasta Airport North y después tomar el autobús lanzadera desde la puerta 42 de la Terminal 2 o el tren interurbano desde el centro de transporte GTC de la Terminal 2. El horario del metro de Cantón puede cambiar."
+  },
+  "taxi": {
+   "title": "Taxi",
+   "hint": "T2: puertas 50 y 53; T3: 75",
+   "text": "En la Terminal 2 los taxis recogen junto al centro de transporte GTC: la parada este, en el exterior de la puerta 53; la oeste, en el exterior de la puerta 50. En la Terminal 3 la parada de taxis internacional está en el nivel 1, en la zona de llegadas, en el exterior de la puerta 75."
+  },
+  "lounges": {
+   "title": "Salas VIP",
+   "hint": "Premium Lounge, Sky Pearl, L32",
+   "text": "Premium Lounge: Terminal 2, nivel 4, detrás de la tienda libre de impuestos, tras el control internacional; día y noche. Easy Boarding Lounge: Terminal 2, frente al salón de primera clase de China Southern (tras el control, 50 m a la izquierda), 04:45–21:30. Salas Sky Pearl de China Southern en la Terminal 2: la nacional, en el nivel 3 tras el control (05:45–21:00); la internacional, en el nivel 4 después de la zona duty free (de 04:30 hasta el último vuelo). En la Terminal 3, L32 Lounge, en el nivel 4, tras un control aparte para vuelos nacionales (frente al mostrador 16 de la isla K), de 05:00 hasta la última salida."
+  },
+  "storage": {
+   "title": "Consigna",
+   "hint": "En todas las T, algunas 24 h",
+   "text": "Terminal 1: sala de salidas, nivel 3, junto a la puerta 16, día y noche. Terminal 2: detrás de la zona de facturación C de la sala de salidas (04:30–23:30), detrás de la zona de facturación P/N (día y noche) y frente a la puerta 53 de la sala de llegadas (05:30–23:30). Terminal 3: junto a los aseos detrás de la isla C, en la parte oeste de la sala de facturación (día y noche), y en la sala de llegadas internacionales, nivel 1 (05:30–21:30). El horario puede cambiar según la situación en el lugar."
+  },
+  "sleep": {
+   "title": "Dónde dormir",
+   "hint": "Cápsulas en T2 y T3, 24 h",
+   "text": "Cápsulas de pago por horas: Terminal 2, nivel 1, zona de llegadas internacionales, junto a la puerta 53, día y noche. Cápsulas NAPHUBS: Terminal 3, nivel 4, en la zona de descanso para pasajeros que pasan la noche, a la izquierda pasada la puerta 61, y en la sala de tránsito internacional, también día y noche."
+  },
+  "wifi": {
+   "title": "Wi‑Fi",
+   "hint": "AIRPORT-FREE-WiFi, acceso por SMS",
+   "text": "Red gratuita AIRPORT-FREE-WiFi. En la página de autenticación se puede entrar con el número de teléfono y un código por SMS (los extranjeros eligen el prefijo de su país) o con una foto del documento de identidad. En las zonas de salidas y llegadas internacionales de la Terminal 2 hay quioscos de Wi‑Fi."
+  }
+ }
+}

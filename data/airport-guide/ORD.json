@@ -1,0 +1,62 @@
+{
+ "iata": "ORD",
+ "checked": "2026-10-25",
+ "blocks": [
+  {
+   "id": "transport",
+   "title": "Как доехать",
+   "hint": "CTA Blue Line круглосуточно, Metra",
+   "text": "Поезд CTA Blue Line ходит круглосуточно, станция — на нижнем уровне гаража: из терминалов 1, 2 и 3 идти по указателям «Trains to City» через пешеходные тоннели цокольного этажа, из терминала 5 сначала доехать на ATS до терминала 3 или 2. Билет — в автоматах у станции, наличными или картой. Электрички Metra North Central Service отправляются со станции O'Hare Transfer за транспортным узлом Multi-Modal Facility, куда из любого терминала идёт ATS; билет покупают у кондуктора. От Multi-Modal Facility (стоянки 8 и 9) отходят автобусы Pace 250 и 330.",
+   "source": "flychicago.com",
+   "url": "https://www.flychicago.com/ohare/tofrom/publictransit/Pages/default.aspx"
+  },
+  {
+   "id": "taxi",
+   "title": "Такси",
+   "hint": "Около $50 до центра",
+   "text": "Стоянки такси — на нижнем уровне у выхода из зоны выдачи багажа каждого терминала; садиться только там, а не к водителям на уровне вылета. Такси едет по счётчику, в среднем от аэропорта до центра Чикаго $50. Такси в пригороды заказывают заранее по телефону у пригородной компании. Uber и Lyft забирают на верхнем уровне: в терминале 2 — зоны 2A–2G с оранжевыми указателями, в терминале 3 — 3G, 3H, 3J и 3K с зелёными.",
+   "source": "flychicago.com",
+   "url": "https://www.flychicago.com/ohare/tofrom/taxi/pages/default.aspx"
+  },
+  {
+   "id": "lounges",
+   "title": "Бизнес-залы",
+   "hint": "United Club, Admirals Club, Sky Club",
+   "text": "В большинство залов можно купить дневной пропуск. United Club — в терминале 1 у выходов B6, B18, C10 и в терминале 2 у E7 и F9; United Polaris Lounge (только международный первый и бизнес-класс) — терминал 1 у C18. Admirals Club (American, JAL, Iberia) — терминал 3 у G8, L2A и H6/K6; у H6/K6 также American Flagship Lounge. В терминале 5: Delta Sky Club у M13, зал Air France у M17, LOT Business Lounge и Swissport Lounge (в том числе для Priority Pass) у M18, Wingtips Lounge у M19.",
+   "source": "flychicago.com",
+   "url": "https://www.flychicago.com/ohare/ServicesAmenities/services/Pages/lounges.aspx"
+  },
+  {
+   "id": "sleep",
+   "title": "Где поспать",
+   "hint": "Hilton напротив терминалов 1–3",
+   "text": "Отель Hilton Chicago O'Hare Airport стоит прямо напротив терминалов 1, 2 и 3: до внутренних терминалов — пешком по подземным переходам, из терминала 5 — на ATS. Из отеля есть крытый проход к станции CTA Blue Line. Другие отели рядом с аэропортом возят гостей бесплатными шаттлами; вызвать шаттл можно с киосков Virtual Concierge на уровне прилёта у выдачи багажа.",
+   "source": "flychicago.com",
+   "url": "https://www.flychicago.com/ohare/ServicesAmenities/amenities/Pages/hotel.aspx"
+  },
+  {
+   "id": "kids",
+   "title": "С ребёнком",
+   "hint": "Family Lounge в терминале 2",
+   "text": "Детская зона Family Lounge — в терминале 2 сразу за досмотром, в главном зале у выхода F1: место для игр, зарядка устройств, стоянка для колясок. Комнаты матери есть во всех терминалах, а капсулы для кормления Mamava — в терминалах 1, 2 и 3. Пеленальные столики — в большинстве туалетов. Подгузники, смесь, бутылочки продают автоматы Oops Diapers 2Go.",
+   "source": "flychicago.com",
+   "url": "https://www.flychicago.com/ohare/ServicesAmenities/services/Pages/children.aspx"
+  },
+  {
+   "id": "parking",
+   "title": "Парковка",
+   "hint": "От $16 в сутки",
+   "text": "Почасовая парковка — уровень 1 главного гаража, $3 за первый час; суточная — уровни 2–6 гаража и площадки B и C, $43 в сутки, у терминала 5 площадка D — $43 в сутки. Экономичные площадки: F — $30, G и H — $16 в сутки, на H оплата только картой. Тарифы включают налоги, оплата на выезде. Больше 30 дней без договорённости с офисом парковки (773) 686-7530 машину могут эвакуировать.",
+   "source": "flychicago.com",
+   "url": "https://www.flychicago.com/ohare/tofrom/parking/pages/general.aspx"
+  },
+  {
+   "id": "wifi",
+   "title": "Wi‑Fi",
+   "hint": "Бесплатный, без лимита",
+   "text": "Бесплатный безлимитный Wi‑Fi во всех терминалах, до и после досмотра. Сеть Boingo Hotspot или _Free_ORD _Wi-Fi; после подключения открыть в браузере любой адрес без https и выбрать «Watch Ad to Connect». Бесплатные зарядные станции на 4–8 мест есть во всех терминалах.",
+   "source": "flychicago.com",
+   "url": "https://www.flychicago.com/ohare/ServicesAmenities/services/Pages/technology.aspx"
+  }
+ ]
+}

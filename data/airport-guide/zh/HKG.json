@@ -1,0 +1,35 @@
+{
+ "iata": "HKG",
+ "blocks": {
+  "transport": {
+   "title": "交通方式",
+   "hint": "机场快线，24分钟到中环",
+   "text": "机场快线从机场到中环仅需24分钟，每日05:54至00:48运行，约每10分钟一班。成人单程Smart Ticket：到香港站HK$130，到九龙站HK$115，到青衣站HK$80；使用八达通分别为HK$120、HK$105和HK$73。儿童Smart Ticket到香港站HK$65。香港站和九龙站提供市区预办登机服务（In-Town Check-In）。"
+  },
+  "taxi": {
+   "title": "出租车",
+   "hint": "红色市区的士，到中环HK$375",
+   "text": "的士站位于到达大堂外左侧坡道；预约的士在1号停车场旁的预约的士上客区（Prebooked Taxi Pick-up Zone）上车。的士按颜色区分：红色（市区）几乎可行驶全港，绿色行驶新界东北部和西北部，蓝色只行驶大屿山和赤鱲角；所有的士均可前往机场。红色的士参考车费：中环/金钟HK$375，尖沙咀HK$290，旺角HK$285；车费已含隧道及道路收费，的士附加费不含在内。后备箱行李可能另行收费。"
+  },
+  "lounges": {
+   "title": "商务休息室",
+   "hint": "付费休息室，登机口旁",
+   "text": "付费贵宾室位于1号客运大楼登机口旁。Plaza Premium Lounge：1号登机口旁（6楼，全天候）、35号登机口旁（6楼，06:00–01:00）和60号登机口旁（7楼，全天候）；Plaza Premium First在1号和35号登机口旁；Kyra Lounge在23号登机口旁（6楼，05:30–23:30）。Refreshhh by Aerotel淋浴和按摩服务在60号登机口旁，全天候。60号登机口旁的The Centurion Lounge（06:00–00:00）供有使用资格的American Express持卡人使用。"
+  },
+  "storage": {
+   "title": "行李寄存",
+   "hint": "5楼，每小时HK$14",
+   "text": "行李寄存处位于1号客运大楼5楼公众区域。每件重量不超过30公斤、三边之和不超过199厘米的行李每小时HK$14或每24小时HK$165；不足一小时按一小时计，满24小时按两者中较低的金额收费。大件和重型行李需另付费。取件时付款：现金、Visa、Mastercard、银联、支付宝、微信支付、Apple Pay、Samsung Pay；超过30天未取且旅客未事先告知的物品视为无人认领。"
+  },
+  "sleep": {
+   "title": "休息住宿",
+   "hint": "登机口旁的休息区",
+   "text": "供出发和转机旅客使用的休息区（Resting Lounges）位于出发层（L6）1、5、6、7、24、26、33、44、45、47、48、64、65、66和69号登机口旁，以及1号客运大楼中场客运廊205、207、213和215号登机口旁。另设保税巴士候车室（Bonded Bus Waiting Lounge），位于出发层L4。"
+  },
+  "wifi": {
+   "title": "Wi‑Fi",
+   "hint": "免费，无需注册",
+   "text": "客运大楼大部分候机区和公共区域提供免费Wi‑Fi，无需注册。网络#HKAirport Free WiFi和#HKAirport Hi-Speed WiFi：连接后在浏览器中打开任意不以https://开头的网址，点击Agree and Continue。如看不到#HKAirport Free WiFi网络，请选择Wi-Fi.HK via HKAirport。查询热线：2188 7799。"
+  }
+ }
+}

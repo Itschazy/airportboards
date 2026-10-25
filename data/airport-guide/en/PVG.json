@@ -1,0 +1,30 @@
+{
+ "iata": "PVG",
+ "blocks": {
+  "transport": {
+   "title": "Getting there",
+   "hint": "Maglev to Longyang Road, 50 yuan",
+   "text": "The magnetic levitation train (Maglev) runs from the airport to Longyang Road station at a top speed of 300 km/h. From the airport — from 07:02 to 21:42, to the airport — from 06:45 to 21:40. A standard one-way ticket is 50 yuan, return 80; VIP 100 and 160 yuan."
+  },
+  "taxi": {
+   "title": "Taxi",
+   "hint": "Round the clock, from 14 yuan",
+   "text": "Taxi ranks operate round the clock: at Terminal 1 — outside door 12 of the arrivals hall (from doors 4 or 8 walk south), at Terminal 2 — outside door 25 of the arrivals hall. Shanghai fare: flag fall including the first 3 km is 14 yuan, 16 for TuAn cars and Roewe Ei5 electric cars, then 2.7 yuan per km. On trips longer than 15 km the per-km rate beyond that distance is 50% higher; from 23:00 to 5:00 flag fall and the per-km rate are 30% higher."
+  },
+  "storage": {
+   "title": "Left luggage",
+   "hint": "Terminals 1 and 2, from 15 yuan",
+   "text": "Terminal 1: departure hall on Level 3 between doors 4 and 5, and arrival hall on Level 1 opposite door 7. Terminal 2: departure hall on Level 3 by island A, and international arrival hall by exit 2A. All storage locations are open from 06:00 to 24:00 and accept items for storage for up to 2 months; an identity document is required when depositing items, and items are X-rayed. Hand luggage up to 20 inches — 15, 20 and 25 yuan for up to 4, 10 and 24 hours; luggage from 20 to 28 inches — 30, 40 and 45 yuan; over 28 inches — 60 yuan per item per 24 hours."
+  },
+  "sleep": {
+   "title": "Where to sleep",
+   "hint": "Night rest areas, round the clock",
+   "text": "Rest areas for overnight passengers are open round the clock: in Terminal 1 — by door 2 of the arrivals hall and by domestic gates 6–7, in satellite S1 — by gates H105 and G139; in Terminal 2 — by gates C71 and C91–98 and by door 29 of the arrivals hall, in satellite S2 — by gates H177 and G148. Paid rest areas, also round the clock, are by gates 25–26 of international departures (Terminal 1) and by gate D64 of international departures (Terminal 2)."
+  },
+  "wifi": {
+   "title": "Wi‑Fi",
+   "hint": "#AirportPVG-Free-WiFi, free",
+   "text": "The free #AirportPVG-Free-WiFi network covers all public areas of the terminals. You can log in via the Shanghai Airports mini program in WeChat, with an SMS code sent to your phone number, or with a number issued by a kiosk after scanning your passport. Kiosks are in the domestic and international departure areas and the international arrival area of Terminal 1 and in satellite S1."
+  }
+ }
+}

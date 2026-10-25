@@ -1,0 +1,35 @@
+{
+ "iata": "DEN",
+ "blocks": {
+  "transport": {
+   "title": "Getting there",
+   "hint": "A Line train, RTD buses",
+   "text": "The DEN Transit Center is at the south end of the Jeppesen Terminal: go out through the glass doors and take the escalator or lift down to ground level. The A Line train to Denver Union Station and RTD buses AB, AT, 104L, 145X and 169L depart from here. Service runs roughly from 3:30 to midnight; the last bus leaves the airport at 1:28. A day pass for all RTD routes costs $10."
+  },
+  "taxi": {
+   "title": "Taxi",
+   "hint": "Downtown — $72.04 flat",
+   "text": "Flat one-way fares, airport fee included: Downtown Denver (zone A) $72.04, Denver Tech Center (zone B) $80.04, Boulder (zone C) $115.04, Tower Road (zone D) $37.04. Elsewhere — metered plus a $6.04 fee. The taxi rank is at the Jeppesen Terminal, Level 5, Island 1, by doors 505, 507 and 511 (east side) and 506, 510 and 512 (west side)."
+  },
+  "lounges": {
+   "title": "Lounges",
+   "hint": "United Club, Centurion, Sky Club",
+   "text": "Lounges are on the concourse mezzanines: American Airlines Admirals Club by gate C-32, American Express Centurion Lounge by C-46, Capital One Lounge (Plaza Premium) by A-34, United Club by A-25, B-44 and B-32. United Club Fly is by gate B-60. Delta Sky Club is after security at the north end of Concourse A, on the bridge from the Jeppesen Terminal. The free Rest and Recharge area with recliners is on the Concourse A mezzanine."
+  },
+  "sleep": {
+   "title": "Where to sleep",
+   "hint": "Westin by the terminal",
+   "text": "The 519-room Westin Denver International Airport hotel is a few steps from the main terminal, directly above the DEN Transit Center — go up by escalator."
+  },
+  "kids": {
+   "title": "With children",
+   "hint": "Play areas by A25 and C54",
+   "text": "Two children's play areas are open round the clock, by gates A25 and C54. Free nursing rooms with a changing table and sink are open round the clock: after security on each concourse, and two in the Jeppesen Terminal — in the centre on Level 5 by arrivals and in the northwest part by international arrivals."
+  },
+  "wifi": {
+   "title": "Wi‑Fi",
+   "hint": "Free, airport-wide",
+   "text": "Free Wi‑Fi throughout the airport: choose the DEN Airport Free WiFi, DEN Airport Free WiFi 2.4G or DEN FREE WIFI 6E network and tap “Connect”. Power outlets are throughout the Jeppesen Terminal and on the three concourses, as well as dedicated charging stations with seats and countertops."
+  }
+ }
+}

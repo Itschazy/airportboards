@@ -1,0 +1,35 @@
+{
+ "iata": "DFW",
+ "blocks": {
+  "transport": {
+   "title": "가는 방법",
+   "hint": "DART·TEXRail 등",
+   "text": "터미널에서 세 가지 대중교통이 출발합니다. 터미널 A에서는 댈러스 도심행 DART Orange Line이 출발합니다. 터미널 B에서는 댈러스 북부행 DART Silver Line과 포트워스 도심행 Trinity Metro의 TEXRail이 출발합니다. TRE LINK 버스는 댈러스와 포트워스를 잇는 TRE 노선의 CentrePort/DFW 역까지 갑니다."
+  },
+  "taxi": {
+   "title": "택시",
+   "hint": "19개 회사, 하층",
+   "text": "19개 회사의 택시가 터미널 A, B, C, D, E 하층에서 대기합니다. 8:00부터 자정까지는 승강장에 공항 직원이 있어 승객을 차량에 배정합니다. 자정 이후에는 전화 +1-972-973-4061로 택시를 부를 수 있습니다."
+  },
+  "lounges": {
+   "title": "비즈니스 라운지",
+   "hint": "20곳 이상, 전 터미널",
+   "text": "공항에는 라운지와 프리미엄 공간이 20곳 이상 있습니다. 다섯 터미널 모두 보안검색 후 구역 안에서 Skylink 열차로 연결되므로, 이용 자격이 있는 승객은 탑승 게이트와 관계없이 어느 터미널의 라운지든 이용할 수 있습니다. 운영사로는 American Airlines, American Express Centurion Lounge, Capital One Lounge, Chase Sapphire Lounge by The Club, The Club DFW, Plaza Premium Lounges, PS DFW 등이 있습니다."
+  },
+  "kids": {
+   "title": "아이와 함께",
+   "hint": "D8 놀이 공간, 수유실",
+   "text": "McDonald's Play Area 놀이 공간은 터미널 D의 D8 게이트 옆에 있으며, 부드러운 소재의 놀이 시설, 어른용 좌석, 콘센트가 있습니다. 수유실은 각 터미널의 보안검색 후 구역에 있습니다: A18, B40, C13/14, C36, D2, D36, E14, E26 게이트 옆."
+  },
+  "parking": {
+   "title": "주차",
+   "hint": "터미널 옆 및 원격 주차장",
+   "text": "Terminal 주차장은 각 터미널 옆에 있습니다. Express는 공항 북쪽 입구 옆의 실내 및 야외 주차장으로, 터미널까지 셔틀이 운행합니다. Remote는 공항에서 가장 저렴한 주차장으로, 모든 터미널까지 무료 셔틀이 운행합니다. Valet과 마중 나온 사람을 위한 무료 대기 주차장 Cell Phone Lots 두 곳도 있습니다. 공항 웹사이트나 앱에서 미리 예약할 수 있습니다."
+  },
+  "wifi": {
+   "title": "Wi‑Fi",
+   "hint": "무료, DFW Public",
+   "text": "무료 Wi‑Fi: DFW Public 5G Wi-Fi 또는 DFW Public 6E Wi-Fi 네트워크를 선택하고 약관에 동의합니다. USB 포트가 있는 충전 스테이션이 여러 탑승 게이트 옆에 있으며, 충전은 무료입니다."
+  }
+ }
+}

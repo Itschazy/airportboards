@@ -1,0 +1,40 @@
+{
+ "iata": "ORD",
+ "blocks": {
+  "transport": {
+   "title": "Comment s'y rendre",
+   "hint": "CTA Blue Line 24h/24, Metra",
+   "text": "Le train CTA Blue Line circule jour et nuit, la station est au niveau inférieur du garage : depuis les terminaux 1, 2 et 3, suivre les panneaux « Trains to City » par les tunnels piétons du sous-sol ; depuis le terminal 5, prendre d'abord l'ATS jusqu'au terminal 3 ou 2. Billet aux distributeurs près de la station, en espèces ou par carte. Les trains de banlieue Metra North Central Service partent de la gare O'Hare Transfer, derrière le pôle de transport Multi-Modal Facility, desservi par l'ATS depuis n'importe quel terminal ; le billet s'achète auprès du contrôleur. Depuis la Multi-Modal Facility (arrêts 8 et 9) partent les bus Pace 250 et 330."
+  },
+  "taxi": {
+   "title": "Taxi",
+   "hint": "Environ 50 $ vers le centre",
+   "text": "Les stations de taxis sont au niveau inférieur, à la sortie de la zone de livraison des bagages de chaque terminal ; ne monter qu'à ces stations, pas avec les chauffeurs au niveau des départs. Le taxi roule au compteur, en moyenne 50 $ de l'aéroport au centre de Chicago. Les taxis vers la banlieue se réservent à l'avance par téléphone auprès d'une compagnie de banlieue. Uber et Lyft prennent en charge au niveau supérieur : au terminal 2 — zones 2A–2G avec panneaux orange, au terminal 3 — 3G, 3H, 3J et 3K avec panneaux verts."
+  },
+  "lounges": {
+   "title": "Salons",
+   "hint": "United Club, Admirals, Sky Club",
+   "text": "Un pass à la journée peut être acheté pour la plupart des salons. United Club — au terminal 1 près des portes B6, B18, C10 et au terminal 2 près de E7 et F9 ; United Polaris Lounge (uniquement première et affaires internationales) — terminal 1 près de C18. Admirals Club (American, JAL, Iberia) — terminal 3 près de G8, L2A et H6/K6 ; près de H6/K6 également l'American Flagship Lounge. Au terminal 5 : Delta Sky Club près de M13, salon Air France près de M17, LOT Business Lounge et Swissport Lounge (y compris pour Priority Pass) près de M18, Wingtips Lounge près de M19."
+  },
+  "sleep": {
+   "title": "Où dormir",
+   "hint": "Hilton face aux terminaux 1–3",
+   "text": "L'hôtel Hilton Chicago O'Hare Airport se trouve juste en face des terminaux 1, 2 et 3 : vers les terminaux intérieurs — à pied par des passages souterrains, depuis le terminal 5 — en ATS. Un passage couvert relie l'hôtel à la station CTA Blue Line. Les autres hôtels proches de l'aéroport transportent leurs clients par navettes gratuites ; on peut appeler une navette depuis les bornes Virtual Concierge au niveau des arrivées, près de la livraison des bagages."
+  },
+  "kids": {
+   "title": "Avec un enfant",
+   "hint": "Family Lounge au terminal 2",
+   "text": "L'espace enfants Family Lounge se trouve au terminal 2, juste après le contrôle, dans le hall principal près de la porte F1 : espace de jeu, recharge des appareils, emplacement pour poussettes. Des salles mère-enfant existent dans tous les terminaux, et des cabines d'allaitement Mamava dans les terminaux 1, 2 et 3. Tables à langer dans la plupart des toilettes. Couches, lait infantile et biberons sont vendus aux distributeurs Oops Diapers 2Go."
+  },
+  "parking": {
+   "title": "Parking",
+   "hint": "Dès 16 $ par 24 h",
+   "text": "Parking à l'heure — niveau 1 du garage principal, 3 $ la première heure ; à la journée — niveaux 2–6 du garage et parkings B et C, 43 $ par 24 heures, près du terminal 5 parking D — 43 $ par 24 heures. Parkings économiques : F — 30 $, G et H — 16 $ par 24 heures, sur H paiement uniquement par carte. Les tarifs incluent les taxes, paiement à la sortie. Au-delà de 30 jours sans accord avec le bureau du parking (773) 686-7530, la voiture peut être enlevée."
+  },
+  "wifi": {
+   "title": "Wi‑Fi",
+   "hint": "Gratuit, illimité",
+   "text": "Wi‑Fi gratuit et illimité dans tous les terminaux, avant et après le contrôle. Réseau Boingo Hotspot ou _Free_ORD _Wi-Fi ; après connexion, ouvrir dans le navigateur n'importe quelle adresse sans https et choisir « Watch Ad to Connect ». Des bornes de recharge gratuites de 4–8 places se trouvent dans tous les terminaux."
+  }
+ }
+}

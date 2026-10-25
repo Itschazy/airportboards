@@ -1,0 +1,20 @@
+{
+ "iata": "MAD",
+ "blocks": {
+  "transport": {
+   "title": "Come arrivare",
+   "hint": "Metro, linea 8",
+   "text": "La linea 8 della metro Nuevos Ministerios — Aeropuerto T4 è in servizio dalle 06:05 alle 02:00 tutti i giorni, festivi compresi. In aeroporto ci sono due stazioni: Aeropuerto T1-T2-T3 nel Terminal 2 al livello 1 e Aeropuerto T4 nel terminal T4 al livello −1. Il biglietto singolo zona A costa da 1,50 € a 2 € a seconda del numero di stazioni, più il supplemento aeroportuale di 3 €."
+  },
+  "taxi": {
+   "title": "Taxi",
+   "hint": "Fisso 33 € entro la M-30",
+   "text": "I posteggi dei taxi si trovano presso le aree arrivi dei terminal T1, T2 e T4 al livello 0; il taxi va preso solo al posteggio. Tariffa 4: 33 € fissi giorno e notte per le corse dall’aeroporto o verso l’aeroporto con partenza o arrivo all’interno dell’anello M-30, senza supplementi. Tariffa 3 (minima per le corse dall’aeroporto): prezzo iniziale 22 €, distanza minima 9 km, 1,40 € al chilometro, 27,00 € l’ora."
+  },
+  "wifi": {
+   "title": "Wi‑Fi",
+   "hint": "Gratis, senza limiti di tempo",
+   "text": "Rete Airport Free Wifi Aena: accesso dalla pagina iniziale con l’indirizzo e-mail come ospite o con l’account Aena Club. Per confermare l’e-mail si hanno 15 minuti di internet gratuito; dopo la conferma l’accesso è senza limiti di tempo."
+  }
+ }
+}

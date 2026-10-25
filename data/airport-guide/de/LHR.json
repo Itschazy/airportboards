@@ -1,0 +1,30 @@
+{
+ "iata": "LHR",
+ "blocks": {
+  "transport": {
+   "title": "Anreise",
+   "hint": "Express, Elizabeth line, Piccadilly",
+   "text": "Der Heathrow Express fährt alle 15 Minuten nach Paddington, die Fahrt zwischen Paddington und den Terminals 2 und 3 dauert 15 Minuten. Die Elizabeth line verbindet den Flughafen mit Bond Street, Farringdon, Liverpool Street, Paddington, Stratford und Tottenham Court Road, ins Zentrum von London weniger als 40 Minuten; Bezahlung kontaktlos mit Karte oder mit Oyster. Am günstigsten ist die U-Bahn-Linie Piccadilly ab allen Terminals: ins Zentrum weniger als eine Stunde, die Züge halten an King's Cross St. Pancras, Leicester Square und Piccadilly Circus."
+  },
+  "taxi": {
+   "title": "Taxi",
+   "hint": "Black Cabs an jedem Terminal",
+   "text": "Die Londoner Black Cabs warten an den Taxiständen jedes Terminals; die Fahrer sind lizenziert und haben die Prüfung Knowledge of London bestanden, alle Wagen sind rollstuhlgerecht. Elektrische Transfers von WeKnow fahren zu Festpreisen, ihre Schalter befinden sich in den Ankunftsbereichen aller Terminals."
+  },
+  "lounges": {
+   "title": "Business-Lounges",
+   "hint": "Kostenpflichtige Lounges ab £35",
+   "text": "Kostenpflichtige Lounges nach der Sicherheitskontrolle, täglich. Terminal 2: No.1 Lounges und Plaza Premium, beide von 05:00 bis 21:00, ab £44 bzw. ab £40 pro Person. Terminal 5: Plaza Premium von 04:45 bis 21:30, ab £35 pro Person. In Terminal 2 gibt es außerdem Lounges der Fluggesellschaften Lufthansa, Singapore Airlines, Air Canada und United, in Terminal 5 Lounges von British Airways."
+  },
+  "storage": {
+   "title": "Gepäckaufbewahrung",
+   "hint": "Excess Baggage, ab £10",
+   "text": "Gepäckaufbewahrung der Excess Baggage Company, rund um die Uhr videoüberwacht, Preis pro Gepäckstück: bis 3 Stunden £10, 3–24 Stunden £15, 24–48 Stunden £27,50, 48–72 Stunden £40. Nach 72 Stunden £12,50 für jeden weiteren Tag, nach 7 Tagen £10 pro Tag. Online-Buchung möglich."
+  },
+  "wifi": {
+   "title": "Wi‑Fi",
+   "hint": "Kostenlos, Netz Heathrow Wi‑Fi",
+   "text": "Kostenloses Wi‑Fi in allen Terminals: Netz Heathrow Wi‑Fi wählen, den Anweisungen auf dem Bildschirm folgen und sich registrieren. Das Netz ist als Friendly WiFi zertifiziert und filtert für Kinder ungeeignete Inhalte."
+  }
+ }
+}

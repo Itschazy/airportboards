@@ -1,0 +1,25 @@
+{
+ "iata": "LAX",
+ "blocks": {
+  "transport": {
+   "title": "Anreise",
+   "hint": "FlyAway-Busse",
+   "text": "Die Busse LAX FlyAway fahren nach Fahrplan an sieben Tagen pro Woche zwischen jedem Terminal und Van Nuys sowie der Union Station. Am Flughafen steigt man auf der unteren Ankunftsebene vor jedem Terminal an den blauen FlyAway-Säulen ein."
+  },
+  "taxi": {
+   "title": "Taxi",
+   "hint": "LAX-it-Stand an Terminal 1",
+   "text": "Taxis holen Fahrgäste an drei Stellen ab. Der Platz LAX-it neben Terminal 1: zu Fuß nach der Beschilderung oder mit dem kostenlosen Shuttle LAX-it, der alle 3–5 Minuten an den grünen Schildern auf der unteren Ankunftsebene hält. Für Passagiere der Terminals B und 3 warten Taxis im Parkhaus P3 zwischen ihnen, für die Terminals 7 und 8 am hinteren Ende von Terminal 7 an der Gepäckausgabe. Vom Flughafen dürfen nur Taxis mit dem Siegel des Verkehrsamts von Los Angeles fahren; Disponent: 310-646-9177."
+  },
+  "parking": {
+   "title": "Parken",
+   "hint": "Ab 20 $ pro 24 Std.",
+   "text": "Acht Parkhäuser gegenüber den Terminals, mehr als 7.000 Plätze: die ersten 10 Minuten kostenlos, erste Stunde 9 $ (11 $ in P3 und P4), jede weitere 30 Minuten 7 $ (9 $ in P3 und P4), maximal 60 $ pro 24 Stunden; Premium in P1, P3 und P7 bis 70 $ pro 24 Stunden, Valet 75 $ pro 24 Stunden. LAX Economy Parking (6100 W. 94th Street) maximal 35 $ pro 24 Stunden, LAX Budget Parking (5455 West 111th Street) maximal 20 $; von beiden fährt rund um die Uhr ein kostenloser Shuttle zu den rosa LAX-Shuttle-Zonen auf der Ankunftsebene. Die Tarife enthalten 10 % Steuer, ein Platz kann vorab gebucht werden."
+  },
+  "wifi": {
+   "title": "Wi‑Fi",
+   "hint": "Kostenlos, Sitzungen à 45 Minuten",
+   "text": "Kostenloses unbegrenztes Wi‑Fi in den öffentlichen Bereichen aller Terminals, in Sitzungen à 45 Minuten. Netz _LAX Free WiFi: Browser öffnen, Free Unlimited Wi-Fi wählen und Werbung ansehen. Schnellerer Zugang mit einem kostenpflichtigen Boingo-Abonnement."
+  }
+ }
+}

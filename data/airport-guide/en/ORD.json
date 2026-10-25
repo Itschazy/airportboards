@@ -1,0 +1,40 @@
+{
+ "iata": "ORD",
+ "blocks": {
+  "transport": {
+   "title": "Getting there",
+   "hint": "Blue Line round the clock, Metra",
+   "text": "The CTA Blue Line runs round the clock; the station is on the lower level of the garage: from terminals 1, 2 and 3 follow the “Trains to City” signs through the pedestrian tunnels on the basement level; from Terminal 5 first take the ATS to Terminal 3 or 2. Tickets are sold at machines by the station, for cash or card. Metra North Central Service trains depart from O'Hare Transfer station behind the Multi-Modal Facility transport hub, which the ATS serves from every terminal; tickets are bought from the conductor. Pace buses 250 and 330 leave from the Multi-Modal Facility (bays 8 and 9)."
+  },
+  "taxi": {
+   "title": "Taxi",
+   "hint": "About $50 to downtown",
+   "text": "Taxi ranks are on the lower level by the baggage claim exit of each terminal; board only there, not with drivers on the departures level. Taxis are metered; on average $50 from the airport to downtown Chicago. Taxis to the suburbs are booked in advance by phone with a suburban company. Uber and Lyft pick up on the upper level: at Terminal 2 — zones 2A–2G with orange signs, at Terminal 3 — 3G, 3H, 3J and 3K with green ones."
+  },
+  "lounges": {
+   "title": "Lounges",
+   "hint": "United Club, Admirals, Sky Club",
+   "text": "Day passes can be bought for most lounges. United Club — in Terminal 1 by gates B6, B18, C10 and in Terminal 2 by E7 and F9; United Polaris Lounge (international first and business class only) — Terminal 1 by C18. Admirals Club (American, JAL, Iberia) — Terminal 3 by G8, L2A and H6/K6; by H6/K6 there is also the American Flagship Lounge. In Terminal 5: Delta Sky Club by M13, the Air France lounge by M17, LOT Business Lounge and Swissport Lounge (including for Priority Pass) by M18, Wingtips Lounge by M19."
+  },
+  "sleep": {
+   "title": "Where to sleep",
+   "hint": "Hilton opposite terminals 1–3",
+   "text": "The Hilton Chicago O'Hare Airport hotel stands directly opposite terminals 1, 2 and 3: from the domestic terminals walk through the underground passages, from Terminal 5 take the ATS. A covered walkway leads from the hotel to the CTA Blue Line station. Other hotels near the airport carry guests by free shuttle; the shuttle can be called from Virtual Concierge kiosks on the arrivals level by baggage claim."
+  },
+  "kids": {
+   "title": "With children",
+   "hint": "Family Lounge in Terminal 2",
+   "text": "The Family Lounge children's area is in Terminal 2 right after security, in the main hall by gate F1: play space, device charging, stroller parking. Mothers' rooms are in all terminals, and Mamava nursing pods in terminals 1, 2 and 3. Changing tables are in most restrooms. Oops Diapers 2Go vending machines sell diapers, formula and bottles."
+  },
+  "parking": {
+   "title": "Parking",
+   "hint": "From $16 per 24 hours",
+   "text": "Hourly parking — Level 1 of the main garage, $3 for the first hour; daily — Levels 2–6 of the garage and lots B and C, $43 per 24 hours; at Terminal 5, lot D — $43 per 24 hours. Economy lots: F — $30, G and H — $16 per 24 hours; at H, payment by card only. Rates include taxes; payment on exit. A car left for more than 30 days without arrangement with the parking office, (773) 686-7530, may be towed."
+  },
+  "wifi": {
+   "title": "Wi‑Fi",
+   "hint": "Free, unlimited",
+   "text": "Free unlimited Wi‑Fi in all terminals, before and after security. Network Boingo Hotspot or _Free_ORD _Wi-Fi; after connecting, open any address without https in the browser and choose “Watch Ad to Connect”. Free charging stations with 4–8 seats are in all terminals."
+  }
+ }
+}

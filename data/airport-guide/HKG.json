@@ -1,0 +1,54 @@
+{
+ "iata": "HKG",
+ "checked": "2026-10-25",
+ "blocks": [
+  {
+   "id": "transport",
+   "title": "Как доехать",
+   "hint": "Airport Express, 24 минуты до Сентрала",
+   "text": "Поезд Airport Express довозит из аэропорта в район Сентрал за 24 минуты, поезда ходят примерно каждые 10 минут с 05:54 до 00:48 ежедневно. Разовый билет Smart Ticket для взрослого: до станции Hong Kong — HK$130, Kowloon — HK$115, Tsing Yi — HK$80; по карте Octopus — HK$120, HK$105 и HK$73. Детский Smart Ticket до станции Hong Kong — HK$65. На станциях Hong Kong и Kowloon работает регистрация на рейс в городе (In-Town Check-In).",
+   "source": "hongkongairport.com",
+   "url": "https://www.hongkongairport.com/en/transport/to-from-airport/airport-express.page"
+  },
+  {
+   "id": "taxi",
+   "title": "Такси",
+   "hint": "Красные городские, до Сентрала HK$375",
+   "text": "Стоянка такси — у левого пандуса снаружи зала прилёта; заказанные заранее машины подают в зону Prebooked Taxi Pick-up Zone рядом с Car Park 1. Такси различаются цветом: красные (Urban) работают почти по всему Гонконгу, зелёные — в северо-восточной и северо-западной частях Новых Территорий, синие — только на Лантау и Чеклапкоке; в аэропорт могут ездить все. Ориентировочный тариф красного такси: Сентрал / Адмиралти — HK$375, Цимшатсуй — HK$290, Монгкок — HK$285; платные дороги в тариф включены, дополнительные сборы такси — не включены. За багаж в багажнике может взиматься плата.",
+   "source": "hongkongairport.com",
+   "url": "https://www.hongkongairport.com/en/transport/to-from-airport/taxis.page"
+  },
+  {
+   "id": "lounges",
+   "title": "Бизнес-залы",
+   "hint": "Plaza Premium, Kyra, Centurion",
+   "text": "Платные залы — в терминале 1 у выходов на посадку. Plaza Premium Lounge: у выхода 1 (уровень 6, круглосуточно), у выхода 35 (уровень 6, 06:00–01:00) и у выхода 60 (уровень 7, круглосуточно); Plaza Premium First — у выходов 1 и 35; Kyra Lounge — у выхода 23 (уровень 6, 05:30–23:30). Душ и массаж Refreshhh by Aerotel — у выхода 60, круглосуточно. The Centurion Lounge у выхода 60 (06:00–00:00) — для держателей карт American Express с правом доступа.",
+   "source": "hongkongairport.com",
+   "url": "https://www.hongkongairport.com/en/passenger-guide/airport-facilities-services/pay-in-corporate-lounges"
+  },
+  {
+   "id": "storage",
+   "title": "Камера хранения",
+   "hint": "Уровень 5, HK$14 в час",
+   "text": "Камера хранения — на уровне 5 терминала 1, в общедоступной зоне. Место весом до 30 кг и с суммой измерений до 199 см стоит HK$14 в час или HK$165 в сутки; меньше часа считается как час, за 24 часа берётся меньшая из двух сумм. За крупный и тяжёлый багаж — доплата. Оплата при получении: наличные, Visa, Mastercard, UnionPay, Alipay, WeChat Pay, Apple Pay, Samsung Pay; вещи, не забранные за 30 дней и без предупреждения от пассажира, считаются невостребованными.",
+   "source": "hongkongairport.com",
+   "url": "https://www.hongkongairport.com/en/passenger-guide/airport-facilities-services/baggage-storage"
+  },
+  {
+   "id": "sleep",
+   "title": "Где поспать",
+   "hint": "Зоны отдыха у выходов",
+   "text": "Зоны отдыха Resting Lounges для вылетающих и транзитных пассажиров — на уровне вылета (L6) у выходов 1, 5, 6, 7, 24, 26, 33, 44, 45, 47, 48, 64, 65, 66 и 69, а также в Midfield Concourse терминала 1 у выходов 205, 207, 213 и 215. Отдельный зал ожидания Bonded Bus Waiting Lounge — на уровне вылета L4.",
+   "source": "hongkongairport.com",
+   "url": "https://www.hongkongairport.com/en/passenger-guide/airport-facilities-services/resting-lounges"
+  },
+  {
+   "id": "wifi",
+   "title": "Wi‑Fi",
+   "hint": "Бесплатно, без регистрации",
+   "text": "Бесплатный Wi‑Fi без регистрации — в большинстве зон ожидания и общественных зон терминалов. Сети #HKAirport Free WiFi и #HKAirport Hi-Speed WiFi: подключиться, открыть в браузере любой адрес, не начинающийся с https://, и нажать Agree and Continue. Если сети #HKAirport Free WiFi не видно, выбрать Wi-Fi.HK via HKAirport. Справочная линия — 2188 7799.",
+   "source": "hongkongairport.com",
+   "url": "https://www.hongkongairport.com/en/passenger-guide/airport-facilities-services/wifi-and-internet-access"
+  }
+ ]
+}

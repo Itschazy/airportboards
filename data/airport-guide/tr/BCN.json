@@ -1,0 +1,20 @@
+{
+ "iata": "BCN",
+ "blocks": {
+  "transport": {
+   "title": "Nasıl gidilir",
+   "hint": "Metro, 9 numaralı hat",
+   "text": "9 numaralı metro hattı (University zone — Airport) her iki terminalde durur: T1 terminalinde Kat 0'da Aeroport T1 istasyonu ve T2 terminalinde Kat 0'da bir istasyon. Terminaller arasında gece gündüz ücretsiz servis çalışır."
+  },
+  "taxi": {
+   "title": "Taksi",
+   "hint": "Siyah-sarı, geliş alanlarında",
+   "text": "Taksi durakları T1 terminalinin geliş alanlarının, Barcelona–Madrid mekik seferleri koridorunun ve T2A, T2B ve T2C terminallerinin karşısında; her birinde rezervasyonsuz kuyruk ve rezerve edilmiş araçlar için yer var. T1 terminalinde resmî taksi Kat 0'da. Barselona'daki tek resmî taksi siyah-sarı taksidir."
+  },
+  "wifi": {
+   "title": "Wi‑Fi",
+   "hint": "Ücretsiz, süre sınırı yok",
+   "text": "Airport Free Wifi Aena ağı: giriş sayfasında e-posta adresiyle misafir olarak veya Aena Club hesabıyla giriş yapılır. E-postayı onaylamak için 15 dakika ücretsiz internet verilir, onaydan sonra erişim süre sınırı olmadan."
+  }
+ }
+}

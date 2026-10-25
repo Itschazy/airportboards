@@ -1,0 +1,35 @@
+{
+ "iata": "DEN",
+ "blocks": {
+  "transport": {
+   "title": "Anreise",
+   "hint": "Zug A Line, RTD-Busse",
+   "text": "Das DEN Transit Center liegt am Südende des Jeppesen-Terminals: durch die Glastüren hinausgehen und per Rolltreppe oder Aufzug zur Bodenebene hinunterfahren. Von hier fahren der Zug A Line zur Denver Union Station und die RTD-Busse AB, AT, 104L, 145X und 169L. Betrieb etwa von 3:30 bis Mitternacht, der letzte Bus verlässt den Flughafen um 1:28. Ein Tagespass für alle RTD-Linien kostet 10 $."
+  },
+  "taxi": {
+   "title": "Taxi",
+   "hint": "Downtown – 72,04 $ Festpreis",
+   "text": "Festpreise für die einfache Fahrt, Flughafengebühr inbegriffen: Downtown Denver (Zone A) 72,04 $, Denver Tech Center (Zone B) 80,04 $, Boulder (Zone C) 115,04 $, Tower Road (Zone D) 37,04 $. Zu anderen Zielen nach Taxameter plus 6,04 $ Gebühr. Taxistand – Jeppesen-Terminal, Ebene 5, Island 1, an den Türen 505, 507 und 511 (Ostseite) sowie 506, 510 und 512 (Westseite)."
+  },
+  "lounges": {
+   "title": "Business-Lounges",
+   "hint": "United Club, Centurion, Sky Club",
+   "text": "Lounges im Mezzanin der Concourses: American Airlines Admirals Club an Gate C-32, American Express Centurion Lounge an C-46, Capital One Lounge (Plaza Premium) an A-34, United Club an A-25, B-44 und B-32. United Club Fly – an Gate B-60. Delta Sky Club – nach der Sicherheitskontrolle am Nordende von Concourse A, auf der Brücke vom Jeppesen-Terminal. Die kostenlose Ruhezone Rest and Recharge mit Liegesesseln liegt im Mezzanin von Concourse A."
+  },
+  "sleep": {
+   "title": "Schlafen",
+   "hint": "Westin am Terminal",
+   "text": "Das Hotel Westin Denver International Airport mit 519 Zimmern steht wenige Schritte vom Hauptterminal entfernt, direkt über dem DEN Transit Center – mit der Rolltreppe hinauf."
+  },
+  "kids": {
+   "title": "Mit Kind",
+   "hint": "Spielbereiche an A25 und C54",
+   "text": "Zwei Spielbereiche für Kinder sind rund um die Uhr geöffnet – an den Gates A25 und C54. Kostenlose Stillräume mit Wickeltisch und Waschbecken sind rund um die Uhr offen: nach der Sicherheitskontrolle in jedem Concourse und zwei im Jeppesen-Terminal – in der Mitte auf Ebene 5 am Ankunftsbereich und im Nordwesten an der internationalen Ankunft."
+  },
+  "wifi": {
+   "title": "Wi‑Fi",
+   "hint": "Kostenlos, im ganzen Flughafen",
+   "text": "Kostenloses Wi‑Fi im ganzen Flughafen: Netz DEN Airport Free WiFi, DEN Airport Free WiFi 2.4G oder DEN FREE WIFI 6E auswählen und auf „Connect“ tippen. Steckdosen gibt es im gesamten Jeppesen-Terminal und in den drei Concourses, außerdem eigene Ladestationen mit Sitzen und Ablageflächen."
+  }
+ }
+}

@@ -1,0 +1,30 @@
+{
+ "iata": "CDG",
+ "blocks": {
+  "transport": {
+   "title": "Nasıl gidilir",
+   "hint": "RER B, 9517 otobüsü, Noctilien",
+   "text": "RER B, havalimanı ile Paris (özellikle Gare du Nord ve Châtelet) arasındaki en kolay yol, yaklaşık 35 dakika; trenler 4:50'den 23:00'e kadar çalışır (havalimanına son varış). 9517 numaralı otobüs (eski RoissyBus), 14 numaralı metro hattıyla bağlantılı olarak Saint-Denis Pleyel'e gider. Geceleri Noctilien N143 ve N140 otobüsleri Terminal 1, 2 ve 3'ten Gare de l'Est'e çalışır. Tüm terminalleri ücretsiz CDGVAL treni bağlar; Navigo abonmanları (günlük veya haftalık, tüm bölgeler) ve akıllı telefona indirilebilen biletler geçerlidir."
+  },
+  "taxi": {
+   "title": "Taksi",
+   "hint": "Paris'e sabit €56 / €65",
+   "text": "Emniyet müdürlüğünün belirlediği, her iki yönde geçerli sabit tarife: Paris'in sağ yakasına €56, sol yakasına €65. Merkeze yolculuk trafiğe göre 35–60 dakika sürer. Işıklı “TAXI” levhalı resmî taksiler yolcuyu yalnızca Terminal 1, 2 ve 3'ün çıkışlarındaki duraklardan alır; terminal içinde sürücülerin tekliflerini reddetmek gerekir. Banliyölere ve uzak yerlere yolculuklar taksimetreyle."
+  },
+  "storage": {
+   "title": "Emanet",
+   "hint": "Bagages du Monde, 7:00–21:00",
+   "text": "Bagages du Monde emaneti Terminal 2'de, Kat 0'da, Aéroport Charles de Gaulle 2 TGV garının aktarma salonunda, güvenlik kontrolünden önce. Her gün 7:00'den 21:00'e kadar açık, bagajlar röntgenden geçirilir, alan sürekli kamera gözetiminde. Aynı yerde bagaj ambalajlama, otele teslimat, bebek arabası ve oto koltuğu kiralama, bisiklet, sörf tahtası ve diğer standart dışı bagajlar için vestiyer var."
+  },
+  "sleep": {
+   "title": "Nerede uyunur",
+   "hint": "Terminal 2'de Sheraton ve YotelAir",
+   "text": "Terminal 2'de Sheraton oteli, Terminal 2E yolcuları için ise dış hatlar alanında kompakt YotelAir odaları var (ikisi de CDGVAL “Terminal 2” istasyonunun yanında). CDGVAL “Terminal 3 - Roissypôle” istasyonunun yanındaki Roissypôle bölgesinde citizenM, Hilton, ibis, ibis Styles, Novotel ve Radisson Blu. Oda bir gecelik veya birkaç saatlik alınabilir."
+  },
+  "wifi": {
+   "title": "Wi‑Fi",
+   "hint": "Ücretsiz, WIFI-AIRPORT ağı",
+   "text": "Tüm terminallerde, biniş ve bagaj teslim alanlarında ücretsiz Wi‑Fi: WIFI-AIRPORT ağı Paris Aéroport giriş sayfasını kendiliğinden açar. Ücretsiz kilitli ChargeBox şarj dolapları Terminal 1, 2D, 2E ve 3'te güvenlik kontrolünden sonra gece gündüz çalışır."
+  }
+ }
+}

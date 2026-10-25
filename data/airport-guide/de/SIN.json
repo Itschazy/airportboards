@@ -1,0 +1,40 @@
+{
+ "iata": "SIN",
+ "blocks": {
+  "transport": {
+   "title": "Anreise",
+   "hint": "MRT und Busse 24, 27, 36, 858",
+   "text": "Ins Zentrum mit dem Zug ab der Station Changi Airport MRT (CG2) bis Tanah Merah (EW4) mit Umstieg in die East West Line Richtung Tuas Link (EW33) oder bis Expo (CG1/DT35) mit Umstieg in die Downtown Line. Erster Zug nach Tanah Merah um 5:31 montags bis samstags, um 5:59 sonntags und an Feiertagen; letzter mit Anschluss nach Tuas Link täglich um 23:18. Die Busse 24, 27, 34, 36, 53, 110 und 858 fahren von den unterirdischen Bushaltestellen der Terminals 1, 2 und 3 ab. Bezahlung mit kontaktlosen Karten Mastercard/Visa/NETS, mobilen Wallets, EZ-Link-Karten; im Bus auch bar ohne Wechselgeld."
+  },
+  "taxi": {
+   "title": "Taxi",
+   "hint": "S$25–45 ins Zentrum, Taxameter",
+   "text": "Taxistände in den Ankunftsbereichen der Terminals 1–4; Fahrt ins Zentrum etwa 30 Minuten und S$25–45 nach Taxameter. Für Fahrten ab Flughafen Zuschlag S$8 von 17:00 bis 23:59 und S$6 zu anderen Zeiten; von 0:00 bis 5:59 gilt ein Nachtzuschlag von 50 % auf den Taxameterbetrag. Bestellung über Grab, Gojek, Zig, Tada Mobility, Ryde oder Geolah – Einstieg an den Punkten Arrival and Ride-Hailing pick-up. Schalter Ground Transport Concierge rund um die Uhr: Transfer zu jedem Ziel in Singapur S$70 im 4-Sitzer und S$75 im 6-Sitzer."
+  },
+  "terminals": {
+   "title": "Terminals",
+   "hint": "Skytrain T1–T3, Bus zu T4",
+   "text": "Die Terminals 1, 2 und 3 verbindet der kostenlose Skytrain – sowohl im öffentlichen als auch im Transitbereich; im Transitbereich kann man auch die Fahrsteige nutzen. Zu Terminal 4 fährt ein kostenloser Shuttlebus alle 5–9 Minuten von 6:00 bis 0:00 ab T1/Jewel und T2/MRT: etwa 10 Minuten im öffentlichen Bereich und 10–18 Minuten im Transitbereich; im Transitbereich nur, wenn das Gepäck bis zum Endziel durchgecheckt ist. Jewel liegt im öffentlichen Bereich zwischen T2 und T3: von T1 direkt aus der Ankunftshalle auf Ebene 1, von T2 und T3 sind es 5–10 Minuten zu Fuß über einen Verbindungsgang; Transitpassagiere müssen durch die Passkontrolle."
+  },
+  "lounges": {
+   "title": "Business-Lounges",
+   "hint": "Kostenpflichtig in T1, T2, T4",
+   "text": "Kostenpflichtige Lounges: Plaza Premium Lounge – Terminal 1, Transitbereich, Ebene 3, rund um die Uhr; JetQuay Lounge – Terminal 2, Transitbereich, Ebene 2, rund um die Uhr; Blossom – SATS & Plaza Premium Lounge – Terminal 4, Transitbereich, Ebene 2M, rund um die Uhr. Außerdem Ambassador Transit Lounge (2 Lounges), Changi Lounge im Jewel auf Ebene 1 und Hub & Spoke im öffentlichen Bereich von Terminal 2 auf Ebene 1."
+  },
+  "storage": {
+   "title": "Gepäckaufbewahrung",
+   "hint": "Alle Terminals, ab S$6 pro 24 Std.",
+   "text": "Die Gepäckaufbewahrungen von Smarte Carte sind rund um die Uhr geöffnet: im öffentlichen Bereich – Jewel (Ebene 1), T2 (Ankunftshalle North), T3 (Ebene 1, am Train to City), T4 (Ebene 1); im Transitbereich in allen vier Terminals. Preis für 24 Stunden inkl. GST: Einzelstücke S$6, kleine Gegenstände bis 10 kg S$11, große Gepäckstücke und Sondergepäck über 10 kg S$16, sehr große S$19. Alle abgegebenen Gegenstände werden kontrolliert."
+  },
+  "sleep": {
+   "title": "Schlafen",
+   "hint": "Gratis-Ruhezonen, rund um die Uhr",
+   "text": "Die kostenlosen Ruhezonen Snooze Lounge im Transitbereich sind rund um die Uhr geöffnet: T1 – Ebene 3, Departure Transit Hall East; T2 – Sanctuary Lounge, Oasis Lounge und Pavilion Lounge auf Ebene 2; T3 – zwei Bereiche auf Ebene 2 (South und North); T4 – Ebene 2M."
+  },
+  "kids": {
+   "title": "Mit Kind",
+   "hint": "Kostenlose Kinderwagen",
+   "text": "Kinderwagen werden kostenlos der Reihe nach an den Informationsschaltern und an den Concierge-Schaltern im Jewel ausgegeben. Passagiere mit kleinen Kindern können die Passkontrolle über die breiteren Special Assistance Lanes passieren – bis zu vier Personen zusammen."
+  }
+ }
+}

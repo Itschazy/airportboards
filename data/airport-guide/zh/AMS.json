@@ -1,0 +1,30 @@
+{
+ "iata": "AMS",
+ "blocks": {
+  "transport": {
+   "title": "交通方式",
+   "hint": "NS火车至Amsterdam CS",
+   "text": "NS火车站就在航站楼正下方，乘自动扶梯或电梯下行即可。Amsterdam CS与机场之间每小时8班火车，途经Sloterdijk和Lelylaan，从机场出发的列车始终在3站台发车。从阿姆斯特丹、乌得勒支、莱顿、海牙、代尔夫特和鹿特丹可全天候前往机场，通常无需换乘。车票可在机场购买，也可用非接触式银行卡或手机支付，在Schiphol Plaza自动扶梯和电梯上方的黄色验票机上刷卡。"
+  },
+  "taxi": {
+   "title": "出租车",
+   "hint": "Schiphol Plaza旁候车点",
+   "text": "官方出租车候车点位于Schiphol Plaza前，无需提前预订。Uber和Bolt车辆在单独的“App pick-up point”上车点接客，航站楼内有指示牌指引，那里提供免费Wi‑Fi。Schiphol Travel Taxi小巴供最多8人的团体乘坐，也可与同路旅客拼车。"
+  },
+  "storage": {
+   "title": "行李寄存",
+   "hint": "地下1层，每天€7起",
+   "text": "行李寄存处位于地下1层Arrivals 1和Arrivals 2之间，全天候开放，最长30天；每24小时：手提行李（不超过55×35×25厘米）€7，行李€9.50，超大行李€12，衣物寄存每件€2.50。遗失凭条收费€8。安检后中转区登机口旁设有40×40×70厘米的储物柜，€8.50，最长7天，全天候开放。"
+  },
+  "sleep": {
+   "title": "休息住宿",
+   "hint": "安检后的两家酒店",
+   "text": "安检后有两家酒店全天候营业：Lounge 3的Mercure Hotel和Lounge 2的YOTELAIR，均位于前往D1–D57、E、F、G和H登机口的途中。即使没有荷兰签证也可以入住YOTELAIR。"
+  },
+  "kids": {
+   "title": "携儿童出行",
+   "hint": "飞机游乐场，免费",
+   "text": "儿童游乐场Kids Playground位于安检后Lounge 2的1楼，在前往D1–D57、E、F、G和H登机口的途中，全天候开放。孩子们可以在一架真正的飞机里攀爬；旁边是美食广场，免费入场。"
+  }
+ }
+}

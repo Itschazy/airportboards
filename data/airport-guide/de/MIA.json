@@ -1,0 +1,45 @@
+{
+ "iata": "MIA",
+ "blocks": {
+  "transport": {
+   "title": "Anreise",
+   "hint": "Metrorail, Tri-Rail, MIA Mover",
+   "text": "Die Haltestellen von Metrorail, Metrobus und Tri-Rail liegen im Miami Intermodal Center (Station Miami International Airport); dorthin fährt vom Flughafen der kostenlose Zug MIA Mover ab der Station auf Ebene 3 zwischen den Parkhäusern Dolphin und Flamingo. Für die Fahrt braucht man eine EASY Card, Automaten gibt es im Miami Intermodal Center. Eine Fahrt mit Metrorail kostet 2,25 $ pro Richtung. Der Miami Beach Bus für 2,25 $ fährt täglich von 6:00 bis 23:40 alle 30 Minuten zwischen der Metrorail-Station des Flughafens und Miami Beach (von der 41st Street bis South Pointe Drive)."
+  },
+  "taxi": {
+   "title": "Taxi",
+   "hint": "Mindestens 15 $, Ankunftsebene",
+   "text": "Taxis auf der Ankunftsebene (Bodenebene) an den Ausgängen der Gepäckausgabe. Nach Taxameter: 2,95 $ für die erste 1/6 Meile, 0,85 $ für jede weitere 1/6 Meile bis zu einer Meile, danach 0,55 $ pro 1/6 Meile; Wartezeit 0,40 $ pro Minute. Flughafengebühr 2,00 $, Mindestfahrpreis ab MIA 15 $. Für SUV oder Minivan Aufschlag von 30 % auf den Taxameterpreis. App-Fahrzeuge holen auf Ebene 1 (Ankunft) und Ebene 2 (Abflug) ab."
+  },
+  "lounges": {
+   "title": "Business-Lounges",
+   "hint": "Flagship, Admirals Club, Centurion",
+   "text": "Im North Terminal D nach der Sicherheitskontrolle: American Airlines Flagship Lounge gegenüber Gate D-30 (täglich 5:00–23:00), Admirals Club über Gate D15 auf Ebene 3 (5:00–23:00) und gegenüber Gate D-30 (6:00–20:30). An Gate D-12 des North Terminal – American Express Centurion Lounge (5:00–22:00). Zutritt zu den American-Lounges mit entsprechendem Status und einem Business- oder First-Class-Ticket von American oder einer oneworld-Fluggesellschaft; ein Pass für den einmaligen Zutritt kann gekauft werden, sofern Plätze verfügbar sind."
+  },
+  "storage": {
+   "title": "Gepäckaufbewahrung",
+   "hint": "Terminal E, 5:00–21:00",
+   "text": "Die Gepäckaufbewahrung Communitel Baggage Storage liegt auf Ebene 2 des Central Terminal E, täglich von 5:00 bis 21:00, Abrechnung pro Tag. Dort auch Notardienste und Gepäckzubehör."
+  },
+  "sleep": {
+   "title": "Schlafen",
+   "hint": "Hotel im Terminal E, Wait n' rest",
+   "text": "Miami International Airport Hotel auf Ebene 2 des Central Terminal E: 260 schallisolierte Zimmer und das Restaurant Viena. Die Schlafräume Wait n' rest sind rund um die Uhr geöffnet: Zimmer für 1–4 Gäste mit Dusche, Handtüchern und Snacks."
+  },
+  "kids": {
+   "title": "Mit Kind",
+   "hint": "Kinderbereich Plane Fun",
+   "text": "Der interaktive Kinderbereich Plane Fun liegt in Concourse E an Gate E5, erreichbar auch aus Concourse D. Stillräume MIAmamas gibt es in jedem Concourse nach der Sicherheitskontrolle."
+  },
+  "parking": {
+   "title": "Parken",
+   "hint": "2 $ pro 20 Min., bis 25 $/24 Std.",
+   "text": "Parkhäuser Dolphin und Flamingo: 2,00 $ pro 20 Minuten, nach 4 Stunden gilt ein Höchstbetrag von 25,00 $ pro 24 Stunden. Ein Platz kann bis zu einem Jahr im Voraus bezahlt werden: Ein- und Ausfahrt per QR-Code aus der E-Mail, die Buchungsgebühr wird nicht erstattet, Änderung oder Stornierung spätestens 24 Stunden vorher. Bezahlung bar, mit Visa, MasterCard, American Express, Discover, Apple Pay und Samsung Pay."
+  },
+  "wifi": {
+   "title": "Wi‑Fi",
+   "hint": "Kostenlos mit Werbung",
+   "text": "Das Internet im Flughafennetz ist kostenlos, mit Werbung. Unterbrechungsfreier Zugang: Standard 4,95 $, Premium 7,95 $."
+  }
+ }
+}

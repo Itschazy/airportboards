@@ -1,0 +1,35 @@
+{
+ "iata": "HKG",
+ "blocks": {
+  "transport": {
+   "title": "Comment s'y rendre",
+   "hint": "Airport Express, 24 min à Central",
+   "text": "Le train Airport Express relie l'aéroport au quartier de Central en 24 minutes, les trains circulent environ toutes les 10 minutes de 05:54 à 00:48 tous les jours. Billet simple Smart Ticket adulte : jusqu'à la station Hong Kong — 130 HK$, Kowloon — 115 HK$, Tsing Yi — 80 HK$ ; avec la carte Octopus — 120 HK$, 105 HK$ et 73 HK$. Smart Ticket enfant jusqu'à la station Hong Kong — 65 HK$. Aux stations Hong Kong et Kowloon, l'enregistrement en ville (In-Town Check-In) est disponible."
+  },
+  "taxi": {
+   "title": "Taxi",
+   "hint": "Taxis rouges, Central 375 HK$",
+   "text": "La station de taxis est près de la rampe gauche, à l'extérieur du hall des arrivées ; les voitures réservées à l'avance se présentent à la Prebooked Taxi Pick-up Zone à côté du Car Park 1. Les taxis se distinguent par leur couleur : les rouges (Urban) circulent presque partout à Hong Kong, les verts dans le nord-est et le nord-ouest des Nouveaux Territoires, les bleus uniquement à Lantau et Chek Lap Kok ; tous peuvent desservir l'aéroport. Tarif indicatif du taxi rouge : Central / Admiralty — 375 HK$, Tsim Sha Tsui — 290 HK$, Mong Kok — 285 HK$ ; péages inclus dans le tarif, suppléments du taxi non inclus. Les bagages en coffre peuvent être facturés."
+  },
+  "lounges": {
+   "title": "Salons",
+   "hint": "Plaza Premium, Kyra, Centurion",
+   "text": "Les salons payants sont au terminal 1, près des portes d'embarquement. Plaza Premium Lounge : près de la porte 1 (niveau 6, jour et nuit), de la porte 35 (niveau 6, 06:00–01:00) et de la porte 60 (niveau 7, jour et nuit) ; Plaza Premium First — près des portes 1 et 35 ; Kyra Lounge — près de la porte 23 (niveau 6, 05:30–23:30). Douches et massages Refreshhh by Aerotel — près de la porte 60, jour et nuit. The Centurion Lounge près de la porte 60 (06:00–00:00) — pour les titulaires de cartes American Express ayant droit d'accès."
+  },
+  "storage": {
+   "title": "Consigne à bagages",
+   "hint": "Niveau 5, 14 HK$ l'heure",
+   "text": "La consigne se trouve au niveau 5 du terminal 1, en zone publique. Un bagage de 30 kg maximum et dont la somme des dimensions ne dépasse pas 199 cm coûte 14 HK$ l'heure ou 165 HK$ par 24 heures ; moins d'une heure compte comme une heure, et pour 24 heures le moins élevé des deux montants est facturé. Supplément pour les bagages volumineux et lourds. Paiement au retrait : espèces, Visa, Mastercard, UnionPay, Alipay, WeChat Pay, Apple Pay, Samsung Pay ; les objets non retirés sous 30 jours et sans avis du passager sont considérés comme abandonnés."
+  },
+  "sleep": {
+   "title": "Où dormir",
+   "hint": "Espaces de repos près des portes",
+   "text": "Les espaces de repos Resting Lounges pour les passagers au départ et en transit se trouvent au niveau des départs (L6) près des portes 1, 5, 6, 7, 24, 26, 33, 44, 45, 47, 48, 64, 65, 66 et 69, ainsi que dans le Midfield Concourse du terminal 1 près des portes 205, 207, 213 et 215. Une salle d'attente distincte, Bonded Bus Waiting Lounge, se trouve au niveau des départs L4."
+  },
+  "wifi": {
+   "title": "Wi‑Fi",
+   "hint": "Gratuit, sans inscription",
+   "text": "Wi‑Fi gratuit sans inscription dans la plupart des zones d'attente et des espaces publics des terminaux. Réseaux #HKAirport Free WiFi et #HKAirport Hi-Speed WiFi : se connecter, ouvrir dans le navigateur n'importe quelle adresse ne commençant pas par https://, puis appuyer sur Agree and Continue. Si le réseau #HKAirport Free WiFi n'apparaît pas, choisir Wi-Fi.HK via HKAirport. Ligne d'assistance — 2188 7799."
+  }
+ }
+}

@@ -1,0 +1,35 @@
+{
+ "iata": "HKG",
+ "blocks": {
+  "transport": {
+   "title": "가는 방법",
+   "hint": "센트럴까지 열차로 24분",
+   "text": "Airport Express 열차는 공항에서 센트럴까지 24분 걸리며, 매일 05:54부터 00:48까지 약 10분 간격으로 운행합니다. 성인 편도 Smart Ticket: Hong Kong 역까지 HK$130, Kowloon HK$115, Tsing Yi HK$80; Octopus 카드로는 HK$120, HK$105, HK$73입니다. Hong Kong 역까지 어린이 Smart Ticket은 HK$65입니다. Hong Kong 역과 Kowloon 역에서는 도심 체크인(In-Town Check-In)을 할 수 있습니다."
+  },
+  "taxi": {
+   "title": "택시",
+   "hint": "빨간 택시, 센트럴 HK$375",
+   "text": "택시 승강장은 도착 홀 밖 왼쪽 경사로에 있으며, 사전 예약 차량은 Car Park 1 옆 Prebooked Taxi Pick-up Zone에서 탑니다. 택시는 색으로 구분합니다: 빨간색(Urban)은 홍콩 대부분 지역, 초록색은 신계 북동부와 북서부, 파란색은 란타우와 첵랍콕에서만 운행하며, 모두 공항까지 올 수 있습니다. 빨간 택시 예상 요금: 센트럴 / 애드미럴티 HK$375, 침사추이 HK$290, 몽콕 HK$285. 유료 도로 요금은 포함되며, 택시 추가 요금은 포함되지 않습니다. 트렁크에 싣는 짐에는 요금이 부과될 수 있습니다."
+  },
+  "lounges": {
+   "title": "비즈니스 라운지",
+   "hint": "게이트 옆 유료 라운지",
+   "text": "유료 라운지는 1터미널 탑승 게이트 옆에 있습니다. Plaza Premium Lounge: 1번 게이트 옆(6층, 상시), 35번 게이트 옆(6층, 06:00–01:00), 60번 게이트 옆(7층, 상시); Plaza Premium First는 1번과 35번 게이트 옆; Kyra Lounge는 23번 게이트 옆(6층, 05:30–23:30). 샤워와 마사지 Refreshhh by Aerotel은 60번 게이트 옆에서 상시 운영합니다. 60번 게이트 옆 The Centurion Lounge(06:00–00:00)는 이용 자격이 있는 American Express 카드 소지자용입니다."
+  },
+  "storage": {
+   "title": "수하물 보관소",
+   "hint": "5층, 시간당 HK$14",
+   "text": "수하물 보관소는 1터미널 5층 일반 구역에 있습니다. 무게 30 kg 이하, 세 변의 합 199 cm 이하 짐은 시간당 HK$14 또는 24시간 HK$165이며, 1시간 미만도 1시간으로 계산하고 24시간 동안은 두 금액 중 적은 쪽을 받습니다. 대형·중량 수하물은 추가 요금이 있습니다. 결제는 찾을 때 합니다: 현금, Visa, Mastercard, UnionPay, Alipay, WeChat Pay, Apple Pay, Samsung Pay. 승객의 사전 연락 없이 30일 안에 찾아가지 않은 물품은 미청구 물품으로 처리됩니다."
+  },
+  "sleep": {
+   "title": "잠잘 곳",
+   "hint": "게이트 옆 휴식 공간",
+   "text": "출발 및 환승 승객용 휴식 공간 Resting Lounges는 출발층(L6)의 1, 5, 6, 7, 24, 26, 33, 44, 45, 47, 48, 64, 65, 66, 69번 게이트 옆과 1터미널 Midfield Concourse의 205, 207, 213, 215번 게이트 옆에 있습니다. 별도의 대기실 Bonded Bus Waiting Lounge는 출발층 L4에 있습니다."
+  },
+  "wifi": {
+   "title": "Wi‑Fi",
+   "hint": "무료, 가입 불필요",
+   "text": "터미널 대부분의 대기 구역과 공용 구역에서 가입 없이 무료 Wi‑Fi를 이용할 수 있습니다. 네트워크 #HKAirport Free WiFi와 #HKAirport Hi-Speed WiFi: 연결한 뒤 브라우저에서 https://로 시작하지 않는 아무 주소나 열고 Agree and Continue를 누릅니다. #HKAirport Free WiFi 네트워크가 보이지 않으면 Wi-Fi.HK via HKAirport를 선택합니다. 안내 전화: 2188 7799."
+  }
+ }
+}

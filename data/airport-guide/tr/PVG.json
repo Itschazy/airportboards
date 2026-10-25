@@ -1,0 +1,30 @@
+{
+ "iata": "PVG",
+ "blocks": {
+  "transport": {
+   "title": "Nasıl gidilir",
+   "hint": "Longyang Road'a Maglev, 50 yuan",
+   "text": "Manyetik raylı tren (Maglev) havalimanından Longyang Road istasyonuna en yüksek 300 km/sa hızla gider. Havalimanından 07:02–21:42, havalimanına 06:45–21:40 arası. Normal tek yön bilet 50 yuan, gidiş-dönüş 80; VIP 100 ve 160 yuan."
+  },
+  "taxi": {
+   "title": "Taksi",
+   "hint": "Gece gündüz, 14 yuan'dan",
+   "text": "Taksi durakları gece gündüz açık: Terminal 1'de geliş salonunun 12 numaralı kapısının dışında (4 veya 8 numaralı kapıdan güneye yürünür), Terminal 2'de geliş salonunun 25 numaralı kapısının dışında. Şanghay tarifesi: ilk 3 km dahil açılış ücreti 14 yuan, TuAn araçlarında ve Roewe Ei5 elektrikli araçlarında 16, sonrası km başına 2,7 yuan. 15 km'den uzun yolculuklarda bu mesafenin üzerindeki km tarifesi %50 daha yüksek, 23:00'ten 5:00'e kadar açılış ve kilometre %30 daha pahalı."
+  },
+  "storage": {
+   "title": "Emanet",
+   "hint": "Terminal 1 ve 2, 15 yuan'dan",
+   "text": "Terminal 1: Kat 3'teki gidiş salonunda 4 ile 5 numaralı kapılar arasında ve Kat 1'deki geliş salonunda 7 numaralı kapının karşısında. Terminal 2: Kat 3'teki gidiş salonunda A adasının yanında ve dış hatlar geliş salonunda 2A numaralı çıkışın yanında. Hepsi 06:00'dan 24:00'e kadar açık, 2 aya kadar saklar, teslimde kimlik belgesi gerekir, eşyalar röntgenden geçirilir. 20 inçe kadar el bagajı 4, 10 ve 24 saate kadar süre için 15, 20 ve 25 yuan; 20 ile 28 inç arası bagaj 30, 40 ve 45 yuan; 28 inçten büyük bagaj için parça başına 24 saatlik ücret 60 yuan."
+  },
+  "sleep": {
+   "title": "Nerede uyunur",
+   "hint": "Gece dinlenme alanları, gece gündüz",
+   "text": "Gece kalan yolcular için dinlenme alanları gece gündüz açık: Terminal 1'de geliş salonunun 2 numaralı kapısının yanında ve iç hatların 6–7 numaralı kapılarının yanında, S1 uydusunda H105 ve G139 kapılarının yanında; Terminal 2'de C71 ve C91–98 kapılarının yanında ve geliş salonunun 29 numaralı kapısının yanında, S2 uydusunda H177 ve G148 kapılarının yanında. Ücretli dinlenme alanları, onlar da gece gündüz açık, dış hatlar gidişinde 25–26 numaralı kapıların yanında (Terminal 1) ve dış hatlar gidişinde D64 kapısının yanında (Terminal 2)."
+  },
+  "wifi": {
+   "title": "Wi‑Fi",
+   "hint": "#AirportPVG-Free-WiFi, ücretsiz",
+   "text": "Ücretsiz #AirportPVG-Free-WiFi ağı terminallerin tüm genel alanlarını kapsar. Giriş WeChat'teki Shanghai Airports mini programıyla, telefon numarasına SMS ile gelen kodla veya pasaport tarandıktan sonra kioskun verdiği numarayla yapılabilir. Kiosklar Terminal 1'in iç ve dış hatlar gidiş ve dış hatlar geliş alanlarında ve S1 uydusunda."
+  }
+ }
+}

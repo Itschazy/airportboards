@@ -1,0 +1,30 @@
+{
+ "iata": "PEK",
+ "blocks": {
+  "transport": {
+   "title": "Comment s'y rendre",
+   "hint": "Airport Express, 25 yuans",
+   "text": "Le train Airport Express circule toutes les 10 minutes et s'arrête aux terminaux T2 et T3 et aux stations Sanyuanqiao et Dongzhimen. Billet aller simple — 25 yuans. La station de T2 est au niveau B2 du terminal, celle de T3 au niveau 2 du garage n° 3. À Sanyuanqiao, correspondance avec les lignes de métro 10 et 12, à Dongzhimen avec les lignes 2 et 13."
+  },
+  "taxi": {
+   "title": "Taxi",
+   "hint": "Dès 13 yuans, T2 et T3",
+   "text": "La station de taxis de T2 est devant les sorties 5–9 au niveau 1 ; à T3, suivre les panneaux dans le terminal. Prise en charge avec les 3 premiers km — 13 yuans, puis 2,3 yuans par km, plus 1 yuan de surcharge carburant par course. Pour la portion du trajet au-delà de 15 km, une majoration de 50% du tarif kilométrique s'applique au titre du retour à vide ; de 23:00 à 5:00, le kilomètre est 20% plus cher. Les péages des routes et des ponts sont à la charge du passager."
+  },
+  "storage": {
+   "title": "Consigne à bagages",
+   "hint": "T2 et T3, étagères et casiers",
+   "text": "À T2, les consignes se trouvent près de la sortie 9 du hall des arrivées au niveau 1 et près des entrées 8 et 10 du hall des départs au niveau 2. À T3 — dans les parties est et ouest de la zone publique du hall des arrivées, au niveau 2 du bâtiment T3-C. Les gros bagages et l'équipement sportif sont acceptés, des casiers séparés sont prévus pour les petits objets. Téléphone : 17801096112."
+  },
+  "kids": {
+   "title": "Avec un enfant",
+   "hint": "Aires près des portes C09 et E21",
+   "text": "Le terminal T3 compte deux aires de jeux pour enfants. Près de la porte d'embarquement C09 — sur le thème de l'automobile : petites voitures et tortues de dessin animé, tapis représentant un circuit routier. Près de la porte E21 — une aire avec des pandas."
+  },
+  "parking": {
+   "title": "Parking",
+   "hint": "Garages n° 2 et 3, 100 yuans/24 h",
+   "text": "Garage n° 2 — devant T2, environ 4 300 places : stationnement à l'heure aux niveaux F2, F1 et B1, longue durée aux niveaux B2, B3 et B4. Garage n° 3 — au sud de T3, environ 4 300 places, la station Airport Express est à son niveau 2 ; zones à l'heure B et C au niveau B1, longue durée D et E au niveau B1 et H au niveau B2. Au garage n° 2, véhicule jusqu'à 19 places — 3 yuans par 10 minutes, stationnement longue durée (plus de 5,5 heures d'affilée, uniquement dans la zone B2–B4) — 100 yuans par 24 heures ; moins de 10 minutes gratuit."
+  }
+ }
+}

@@ -1,0 +1,35 @@
+{
+ "iata": "MCO",
+ "blocks": {
+  "transport": {
+   "title": "交通方式",
+   "hint": "迈阿密列车及SunRail",
+   "text": "机场火车站位于C航站楼旁：这里还有开往A和B航站楼的Terminal Link列车站、出租车、穿梭巴士和市区巴士。从Brightline站有列车开往迈阿密，途经西棕榈滩、博卡拉顿、劳德代尔堡和阿文图拉。SunRail通勤列车从Sand Lake Road站发车，从机场有巴士前往该站。"
+  },
+  "taxi": {
+   "title": "出租车",
+   "hint": "出租车参考价格",
+   "text": "从机场出发的出租车参考价格：至机场周边酒店$14–18，至International Drive和奥兰多市中心$38–45，至温特帕克和梅特兰$45–55，至布埃纳维斯塔湖$47–55，至基西米$45–75，至Disney度假区$52–68，至卡纳维拉尔港$115。"
+  },
+  "sleep": {
+   "title": "休息住宿",
+   "hint": "A/B航站楼内的酒店",
+   "text": "Hyatt Regency Orlando International Airport有445间客房，位于A/B航站楼内、通往70–129号登机口的安检点上方，属安检前区域。提供不过夜的Day Stay日间休息：屋顶泳池、健身中心、餐厅和客房送餐服务。酒店电话：+1-407-825-1234。"
+  },
+  "kids": {
+   "title": "携儿童出行",
+   "hint": "A和B游乐区，Flybrary",
+   "text": "佛罗里达风格的软体游乐区——A航站楼1层，安检前。带体感游戏的互动区Interactive Family Zone——B航站楼3层美食广场旁，安检前。儿童图书馆Flybrary——C航站楼2层240号登机口旁，安检后。每座航站楼都有哺乳室和哺乳舱，每层都有家庭洗手间。"
+  },
+  "parking": {
+   "title": "停车",
+   "hint": "C停车楼预订每天$32",
+   "text": "A和B航站楼旁有A、B停车楼、Terminal Top Parking和代客泊车，C航站楼旁有C停车楼，火车站旁有Atlantis、Discovery和Endeavour露天停车场；经济型停车场有North Park Place、South Park Place和West Park。C停车楼车位可预订：每24小时$32，最长45天。高于7英尺或长度不超过25英尺的车辆可停South Park Place。停车楼内可通过专用车道用E-PASS/SunPass付费。"
+  },
+  "wifi": {
+   "title": "Wi‑Fi",
+   "hint": "免费，MCO Internet",
+   "text": "机场所有公共区域提供免费Wi‑Fi，网络“MCO Internet”；列表中的其他网络不属于机场。信号较弱时，机场建议远离他人开启的热点，并在不需要时关闭自己的热点。"
+  }
+ }
+}

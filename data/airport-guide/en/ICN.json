@@ -1,0 +1,30 @@
+{
+ "iata": "ICN",
+ "blocks": {
+  "taxi": {
+   "title": "Taxi",
+   "hint": "Level 1 ranks, night surcharge",
+   "text": "Taxi ranks are on Level 1 by the arrivals hall exits; each destination (Seoul, Incheon, Gyeonggi-do) has its own rank number: to Seoul from Terminal 1 — 5C, 6C, 6D, from Terminal 2 — 7C. From 22:00 to 4:00 a night surcharge of roughly 20% to 40% applies. No out-of-area surcharge is charged for Seoul, Incheon, Goyang, Gwangmyeong, Gimpo and Bucheon. The airport asks passengers to use only the official ranks: illegal call vans with inflated prices often pose as taxis."
+  },
+  "terminals": {
+   "title": "Terminals",
+   "hint": "AREX train, 6 minutes",
+   "text": "You can travel between terminals 1 and 2 on the Airport Railroad train — about 6 minutes, with a fare of ₩1,050. Wheelchair users can call the shuttle bus service (032-741-3217) for a free vehicle with a lift: weekdays only, from 5:00 to 24:00; it is best to book in advance."
+  },
+  "lounges": {
+   "title": "Lounges",
+   "hint": "Terminal 1, Level 4",
+   "text": "In Terminal 1 all lounges are on Level 4. SKY HUB Lounge East (transit area, by gate 11) and West (by gate 42) are open round the clock, with a break 21:30–22:00. Also Asiana Business Lounge (West, by gate 42, 6:00–0:30; Central, by gate 26; East, by gate 11), Oneworld Lounge by gate 28 (5:30–1:30), KE Lounge for passengers of foreign airlines by gate 28, Matina Lounge East and West, and SilverKris Lounge by gate 29."
+  },
+  "sleep": {
+   "title": "Where to sleep",
+   "hint": "Darakhyu capsules, transit hotel",
+   "text": "In Terminal 1 the Darakhyu capsule hotel in the centre of the Transportation Center and the Transit Hotel by gate 11 on Level 4 are open round the clock. The free round-the-clock rest areas NAP Zone, Cozy Zone and Refresh Zone are in the east transit lounge on Level 4, Relax Zone in the west one. Showers by gates 25 and 29 on Level 4 are open from 5:00 to 23:00."
+  },
+  "kids": {
+   "title": "With children",
+   "hint": "Playgrounds and baby care rooms",
+   "text": "In Terminal 1 round-the-clock children's playgrounds are by gates 9, 11, 14, 41 and 45 on Level 3 and in the east and west transit lounges on Level 4. Baby Care Rooms are open round the clock: in the arrivals hall by halls B and E on Level 1, by check-in counters D and K on Level 3, by gates 11, 22, 25, 29, 33 and 45 on Level 3 and in the east and west transit lounges on Level 4."
+  }
+ }
+}

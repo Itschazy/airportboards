@@ -1,0 +1,25 @@
+{
+ "iata": "BKK",
+ "blocks": {
+  "taxi": {
+   "title": "Taksi",
+   "hint": "Kat 1, kapı 4–7, +50 baht",
+   "text": "Taksi danışma kontuarı ve kupon otomatları yolcu terminalinde Kat 1'de, 4 ile 7 numaralı kapılar arasında. Ulaştırma Bakanlığı kararıyla ücrete sürücü lehine 50 baht ek ücret eklenir, ücretli yolları yolcu öder. Kısa mesafe yolculuklar da var — havalimanı çevresinde, en fazla 20 km; normal mesafelerde Kara Ulaştırması Dairesi kurallarına göre fiyat sürücüyle kararlaştırılabilir."
+  },
+  "terminals": {
+   "title": "Terminaller",
+   "hint": "Ana terminal ve SAT-1 uydusu",
+   "text": "Ana terminalin (MTB) yanı sıra SAT-1 uydu terminali çalışır — 28 yolcu köprüsü, bunlardan 8'i A380 ve B747-8 gibi F sınıfı uçakları kabul eder. SAT-1 ana terminale yaklaşık bir kilometre uzunluğunda bir tünelle bağlıdır, tünelde sürücüsüz APM trenleri çalışır; bekleme dahil yolculuk yaklaşık üç dakika sürer. SAT-1'de Kat 4 bekleme salonları ve havayolu salonları, Kat 3 gidiş, Kat 2 geliş ve aktarma; APM istasyonu yeraltındaki B2 katında."
+  },
+  "lounges": {
+   "title": "Business salonları",
+   "hint": "Miracle, 2 saati 1.500 THB'den",
+   "text": "Miracle Lounge salonları ana terminalde Kat 2–4'teki gidiş alanlarında A, C, D, F ve G concourse'larının yanında, ayrıca SAT-1 uydusunda Kat 4'te. Salonda atıştırmalıklar, sıcak ve soğuk içecekler, ücretsiz Wi‑Fi, gazete ve dergiler var. Kişi başı 2 saat için yaklaşık fiyat: First Class — 1.800 THB, Business Class — 1.500 THB."
+  },
+  "storage": {
+   "title": "Emanet",
+   "hint": "Kat 2 ve 4, 24 saati 150 THB'den",
+   "text": "Bellugg emaneti: geliş alanında — Kat 2, 4 numaralı kapının yanında, turizm polisinin yakınında; gidiş alanında — Kat 4, P/Q sıraları. 24 saat için parça başına fiyat: S boyutu (35×56×22 cm) — 150 THB, M (45×65×28 cm) — 180 THB, L (M'den büyük) — 200 THB. Teslimde makbuz verilir."
+  }
+ }
+}

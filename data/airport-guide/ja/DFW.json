@@ -1,0 +1,35 @@
+{
+ "iata": "DFW",
+ "blocks": {
+  "transport": {
+   "title": "アクセス",
+   "hint": "DART・TEXRailなど",
+   "text": "ターミナルからは3種類の公共交通機関が出ている。ターミナルAからはダラス中心部行きのDART Orange Line。ターミナルBからはダラス北部行きのDART Silver Lineと、フォートワース中心部行きのTrinity Metro運行のTEXRail。バスTRE LINKは、ダラスとフォートワースを結ぶTRE線のCentrePort/DFW駅まで行く。"
+  },
+  "taxi": {
+   "title": "タクシー",
+   "hint": "19社、下層階",
+   "text": "19社のタクシーがターミナルA、B、C、D、Eの下層階で待機している。8:00から真夜中までは乗り場に空港職員が常駐し、乗客を車に振り分ける。真夜中以降は電話+1-972-973-4061でタクシーを呼ぶことができる。"
+  },
+  "lounges": {
+   "title": "ラウンジ",
+   "hint": "全ターミナルに20以上",
+   "text": "空港には20以上のラウンジとプレミアムエリアがある。5つのターミナルはすべて保安検査後のエリア内で列車Skylinkによって結ばれているため、利用資格のある旅客は搭乗ゲートに関係なく、どのターミナルのラウンジでも利用できる。運営会社にはAmerican Airlines、American Express Centurion Lounge、Capital One Lounge、Chase Sapphire Lounge by The Club、The Club DFW、Plaza Premium Lounges、PS DFWなどがある。"
+  },
+  "kids": {
+   "title": "お子様連れ",
+   "hint": "D8にプレイエリア、授乳室",
+   "text": "プレイエリアMcDonald's Play AreaはターミナルDのD8番ゲート付近にあり、ソフト素材の遊具、大人用の座席、コンセントがある。授乳室は各ターミナルの保安検査後のエリアにあり、A18、B40、C13/14、C36、D2、D36、E14、E26番ゲートの付近。"
+  },
+  "parking": {
+   "title": "駐車場",
+   "hint": "ターミナル前と遠隔駐車場",
+   "text": "Terminal駐車場は各ターミナルの隣にある。Expressは空港北側入口付近の屋根付き・屋外の駐車場で、ターミナルまでシャトルが運行する。Remoteは空港で最も安い駐車場で、全ターミナルまで無料シャトルが運行する。Valetと、出迎え用の無料待機場Cell Phone Lotsが2か所ある。駐車スペースは空港のサイトまたはアプリで事前に予約できる。"
+  },
+  "wifi": {
+   "title": "Wi‑Fi",
+   "hint": "無料、DFW Public",
+   "text": "無料Wi‑Fi：ネットワーク「DFW Public 5G Wi-Fi」または「DFW Public 6E Wi-Fi」を選び、利用規約に同意する。USBポート付きの充電ステーションが多くの搭乗ゲート付近にあり、充電は無料。"
+  }
+ }
+}

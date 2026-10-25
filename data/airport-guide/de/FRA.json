@@ -1,0 +1,40 @@
+{
+ "iata": "FRA",
+ "blocks": {
+  "transport": {
+   "title": "Anreise",
+   "hint": "S-Bahn S8, S9 und Regionalzüge",
+   "text": "Der Regionalbahnhof des Flughafens verbindet ihn direkt mit Frankfurt, Offenbach, Hanau, Aschaffenburg, Rüsselsheim, Mainz und Wiesbaden: S-Bahn-Linien S8 und S9 sowie die Regionalzüge RB58, RE59, RE2 und RE3. Der Bahnhof liegt auf der unterirdischen Ebene von Terminal 1 (Ebene 0), Zugang aus allen Bereichen A, B, C nach der Beschilderung „Train stations S T“. Die Züge halten an den Gleisen 1–3. Zu Terminal 3 mit dem Zug SkyLine, etwa 10–15 Minuten, nach der Beschilderung „Terminal 3 G, H, J“."
+  },
+  "taxi": {
+   "title": "Taxi",
+   "hint": "Durchgehend, 20–30 Min. zur Stadt",
+   "text": "Taxis stehen rund um die Uhr an allen drei Terminals und am Fernbahnhof. Die Fahrt von Frankfurt dauert je nach Verkehr 20 bis 30 Minuten. Ein- und Ausstieg Uber: in Terminal 1 – Kurzzeitparkplatz P31 (Abflugebene); in Terminal 3 Einstieg auf der Charterbusspur P62, Ausstieg auf der Abflugebene P63."
+  },
+  "terminals": {
+   "title": "Terminals",
+   "hint": "Kostenloser SkyLine, nachts Bus",
+   "text": "Die Terminals 1 und 3 verbindet der kostenlose Zug SkyLine: Betrieb von 4:00 bis 23:00, Takt 2–3 Minuten, Stationen in beiden Terminals. Von 22:00 bis 5:00 fährt zwischen den Terminals ein Shuttlebus; Haltestellen vor den Terminalgebäuden, auf dem Vorplatz des Ankunftsbereichs."
+  },
+  "lounges": {
+   "title": "Business-Lounges",
+   "hint": "Lufthansa in T1, SkyTeam in T3",
+   "text": "In Terminal 1 nach der Sicherheitskontrolle: Lufthansa Lounges (Business, Senator, First Class) in den Bereichen A, B und Z, Lufthansa Bistro Lounge (Non-Schengen) im Bereich C und Air Canada Lounge im Bereich B. In Terminal 3 nach der Sicherheitskontrolle: Air France Lounge im Bereich H, Emirates Lounge, Priority Lounge und SkyTeam Lounge im Bereich J. Vor der Sicherheitskontrolle: Luxx Lounge in Terminal 1, Bereich C."
+  },
+  "sleep": {
+   "title": "Schlafen",
+   "hint": "Kapseln napcabs, ab 12 € pro Stunde",
+   "text": "Schlafkabinen napcabs mit Bett, Klimaanlage, Wecker und Arbeitstisch – in Terminal 1 nach der Sicherheitskontrolle: 6 im Pier A Schengen und 3 im Transitbereich B auf Ebene 3 (Rolltreppe an Gate B42); in Terminal 3 – 3 im Pier H Schengen und 5 im Pier J Non-Schengen. Von 6:00 bis 22:00 – 17 € pro Stunde (mindestens 2 Stunden), von 22:00 bis 6:00 – 12 € pro Stunde (mindestens 3 Stunden). Online-Buchung per Karte oder PayPal, vor Ort nur mit Karte. Neben den Kabinen gibt es Duschen."
+  },
+  "parking": {
+   "title": "Parken",
+   "hint": "15.000 Plätze, 7 Tage ab 99 €",
+   "text": "Insgesamt hat der Flughafen 15.000 Parkplätze. Bei Online-Buchung Terminal Parking: 7 Tage ab 99,00 €, Weekend Special (2–3 Tage von Freitag bis Sonntag) ab 55,00 €; Buchung 9 Monate bis 24 Stunden vor Abflug, für 1–44 Tage. Maximale Einfahrtshöhe in die Parkhäuser an den Terminals 2,10 m, höhere Fahrzeuge – Busparkplatz P36. Autos mit Autogas (LPG) sind in den Parkhäusern von Terminal 1 nicht zugelassen, im Parkhaus von Terminal 3 schon."
+  },
+  "wifi": {
+   "title": "Wi‑Fi",
+   "hint": "Kostenlos, ohne Registrierung",
+   "text": "Kostenloses unbegrenztes Wi‑Fi rund um die Uhr, mehr als 300 Zugangspunkte, keine Registrierung nötig. Netz „Airport-Frankfurt“ wählen, dann Wi-Fi Free oder Wi-Fi Free+, und nach Zustimmung zu den Bedingungen der Fraport AG auf „Go online“ tippen."
+  }
+ }
+}

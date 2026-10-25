@@ -1,0 +1,30 @@
+{
+ "iata": "ICN",
+ "blocks": {
+  "taxi": {
+   "title": "Taxi",
+   "hint": "Livello 1, supplemento notturno",
+   "text": "I posteggi dei taxi si trovano al livello 1 presso le uscite della sala arrivi; ogni direzione (Seul, Incheon, Gyeonggi-do) ha il suo numero di posteggio: per Seul dal Terminal 1 5C, 6C, 6D, dal Terminal 2 7C. Dalle 22:00 alle 4:00 vige un supplemento notturno, all’incirca dal 20% al 40%. Per Seul, Incheon, Goyang, Gwangmyeong, Gimpo e Bucheon non si paga il supplemento per l’uscita dalla zona. L’aeroporto chiede di usare solo i posteggi ufficiali: spesso call van abusivi operano come taxi a prezzi gonfiati."
+  },
+  "terminals": {
+   "title": "Terminal",
+   "hint": "Treno AREX, 6 minuti",
+   "text": "Tra i terminal 1 e 2 ci si può spostare con il treno Airport Railroad: circa 6 minuti, 1.050 ₩, il viaggio è a pagamento. Ai passeggeri in sedia a rotelle, chiamando il servizio bus navetta (032-741-3217), viene inviato gratuitamente un veicolo con sollevatore: solo dal lunedì al venerdì, dalle 5:00 alle 24:00; è meglio prenotare in anticipo."
+  },
+  "lounges": {
+   "title": "Sale business",
+   "hint": "Terminal 1, livello 4",
+   "text": "Nel Terminal 1 tutte le sale si trovano al livello 4. Aperte giorno e notte, con pausa 21:30–22:00: SKY HUB Lounge East (area transiti, presso il gate 11) e West (presso il gate 42). Inoltre Asiana Business Lounge (West, presso il gate 42, 6:00–0:30; Central, presso il gate 26; East, presso il gate 11), Oneworld Lounge presso il gate 28 (5:30–1:30), KE Lounge per i passeggeri delle compagnie aeree straniere presso il gate 28, Matina Lounge East e West, SilverKris Lounge presso il gate 29."
+  },
+  "sleep": {
+   "title": "Dove dormire",
+   "hint": "Capsule Darakhyu, hotel di transito",
+   "text": "Nel Terminal 1 sono aperti giorno e notte l’hotel a capsule Darakhyu, nella parte centrale del centro di trasporto, e il Transit Hotel presso il gate 11 al livello 4. Le aree di riposo gratuite aperte giorno e notte NAP Zone, Cozy Zone e Refresh Zone si trovano nella sala transiti est al livello 4, la Relax Zone in quella ovest. Le docce presso i gate 25 e 29 al livello 4 sono aperte dalle 5:00 alle 23:00."
+  },
+  "kids": {
+   "title": "Con bambini",
+   "hint": "Aree giochi e sale madre-bambino",
+   "text": "Nel Terminal 1 le aree giochi per bambini aperte giorno e notte si trovano presso i gate 9, 11, 14, 41 e 45 al livello 3 e nelle sale transiti est e ovest al livello 4. Le sale madre e bambino (Baby Care Room) sono aperte giorno e notte: nella sala arrivi presso le sale B ed E al livello 1, presso i banchi check-in D e K al livello 3, presso i gate 11, 22, 25, 29, 33 e 45 al livello 3 e nelle sale transiti est e ovest al livello 4."
+  }
+ }
+}

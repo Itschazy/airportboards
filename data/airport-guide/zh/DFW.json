@@ -1,0 +1,35 @@
+{
+ "iata": "DFW",
+ "blocks": {
+  "transport": {
+   "title": "交通方式",
+   "hint": "DART、TEXRail等",
+   "text": "航站楼有三种公共交通。A航站楼：DART Orange Line开往达拉斯市中心。B航站楼：DART Silver Line开往达拉斯北部，以及Trinity Metro运营的TEXRail开往沃斯堡市中心。TRE LINK巴士开往TRE线的CentrePort/DFW站，该线连接达拉斯和沃斯堡。"
+  },
+  "taxi": {
+   "title": "出租车",
+   "hint": "19家公司，下层",
+   "text": "19家公司的出租车在A、B、C、D和E航站楼下层候客。8:00至午夜，候车点有机场工作人员调度乘客上车。午夜后可致电+1-972-973-4061叫车。"
+  },
+  "lounges": {
+   "title": "商务休息室",
+   "hint": "20多个休息室，各航站楼均有",
+   "text": "机场有20多个休息室和高端区域。五座航站楼在安检后区域内由Skylink列车相连，因此有资格的旅客可以使用任意航站楼的休息室，与登机口无关。运营方包括American Airlines、American Express Centurion Lounge、Capital One Lounge、Chase Sapphire Lounge by The Club、The Club DFW、Plaza Premium Lounges和PS DFW。"
+  },
+  "kids": {
+   "title": "携儿童出行",
+   "hint": "D8游乐区，哺乳室",
+   "text": "McDonald's Play Area游乐区位于D航站楼D8登机口旁，有软体游乐设施、成人座位和电源插座。每座航站楼安检后都有哺乳室：位于A18、B40、C13/14、C36、D2、D36、E14和E26登机口旁。"
+  },
+  "parking": {
+   "title": "停车",
+   "hint": "航站楼及远程停车场",
+   "text": "Terminal停车场紧邻各航站楼。Express——机场北入口旁的室内和露天车位，有穿梭巴士往返航站楼。Remote——机场最便宜的停车场，有免费穿梭巴士前往所有航站楼。另有Valet代客泊车和两个供接机者使用的免费Cell Phone Lots等候停车场。可提前在机场网站或应用上预订车位。"
+  },
+  "wifi": {
+   "title": "Wi‑Fi",
+   "hint": "免费，DFW Public",
+   "text": "免费Wi‑Fi：选择“DFW Public 5G Wi-Fi”或“DFW Public 6E Wi-Fi”网络并接受条款。许多登机口旁设有带USB接口的充电站，免费充电。"
+  }
+ }
+}

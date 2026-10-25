@@ -1,0 +1,30 @@
+{
+ "iata": "AMS",
+ "blocks": {
+  "transport": {
+   "title": "Getting there",
+   "hint": "NS train to Amsterdam CS",
+   "text": "The NS station is directly beneath the terminal building; go down by escalator or lift. Trains run between Amsterdam CS and the airport 8 times an hour, stopping at Sloterdijk and Lelylaan, and always depart from the airport from platform 3. From Amsterdam, Utrecht, Leiden, The Hague, Delft and Rotterdam the airport can be reached round the clock, often without changing. Buy a ticket at the airport or pay with a contactless card or phone, checking in at the yellow card readers at the top of the escalators and lifts in Schiphol Plaza."
+  },
+  "taxi": {
+   "title": "Taxi",
+   "hint": "Rank at Schiphol Plaza",
+   "text": "The official taxi rank is in front of Schiphol Plaza; no advance booking is needed. Uber and Bolt cars pick up at a separate stop, the App pick-up point, signposted in the terminal; free Wi‑Fi is available there. Schiphol Travel Taxi minibuses take groups of up to 8 people, and you can share the ride with fellow passengers."
+  },
+  "storage": {
+   "title": "Left luggage",
+   "hint": "Level −1, from €7 per 24 h",
+   "text": "Left luggage is on Level −1 between Arrivals 1 and Arrivals 2, open round the clock, for up to 30 days; per 24 hours: hand luggage (up to 55×35×25 cm) €7, baggage €9.50, oversized items €12, cloakroom €2.50 per item. A lost receipt costs a fee of €8. After security, in the transit area by the gates, there are lockers of 40×40×70 cm for €8.50, for up to 7 days, round the clock."
+  },
+  "sleep": {
+   "title": "Where to sleep",
+   "hint": "YOTELAIR and Mercure airside",
+   "text": "Two hotels operate after security, round the clock: Mercure Hotel in Lounge 3 and YOTELAIR in Lounge 2, both on the way to gates D1–D57, E, F, G and H. YOTELAIR can be used even without a visa for the Netherlands."
+  },
+  "kids": {
+   "title": "With children",
+   "hint": "Plane playground, free",
+   "text": "The Kids Playground is after security, on Level 1 in Lounge 2, on the way to gates D1–D57, E, F, G and H, open round the clock. Children climb around a real aircraft; there is a food court nearby, and entry is free."
+  }
+ }
+}

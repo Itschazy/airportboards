@@ -1,0 +1,25 @@
+{
+ "iata": "KUL",
+ "blocks": {
+  "transport": {
+   "title": "Anreise",
+   "hint": "KLIA Ekspres, 28 Min. zu KL Sentral",
+   "text": "Am schnellsten ins Zentrum geht es mit dem Zug KLIA Ekspres: ohne Halt bis zum KL City Air Terminal (KL CAT) an der Station KL Sentral in 28 Minuten. Der Transitzug mit drei Halten – Bandar Tasik Selatan, Putrajaya/Cyberjaya und Salak Tinggi – braucht 35 Minuten. In den Zügen gibt es Gepäckablagen, Plätze zum Sichern von Rollstühlen und eine rollstuhlgerechte Toilette."
+  },
+  "taxi": {
+   "title": "Taxi",
+   "hint": "Coupon oder Taxameter",
+   "text": "In Terminal 1 gibt es zwei offizielle Taxiarten: Coupon-Taxi (Festpreis je nach Ziel und Wagenklasse, Bezahlung vor der Fahrt) und Taxameter-Taxi. Grundgebühr im Taxameter-Taxi: Budget RM 3,00, Teks1M RM 4,00, Executive RM 6,00, plus Servicegebühr RM 2,00; von 0:00 bis 6:00 Zuschlag 50 %. Schalter von Airport Taxi gibt es in der Inlandsankunftshalle, in der internationalen Gepäckausgabe und am Bordstein, alle auf Ebene 3 des Hauptgebäudes; buchen kann man auch über gohub.com.my."
+  },
+  "terminals": {
+   "title": "Terminals",
+   "hint": "Gratis-Shuttle, rund um die Uhr",
+   "text": "Zwischen den Terminals 1 und 2 fährt rund um die Uhr ein kostenloser Ringshuttle: Terminal 1 – Terminal 2 – Langzeitparkplatz (LTCP) – Terminal 1. Haltestellen: in Terminal 1 Tür 4, Ebene 1; in Terminal 2 Platz A10, Ebene 1, Verkehrsknoten des Einkaufszentrums Gateway."
+  },
+  "parking": {
+   "title": "Parken",
+   "hint": "Am Terminal und Langzeit-LTCP",
+   "text": "Parkplatz von Terminal 1 – mehr als 5.700 Plätze, etwa 3 Minuten zu Fuß zum Hauptgebäude. Preferred Parking auf Ebene 2 der Blöcke B und C – mehr als 300 Plätze, 2 Minuten zu Fuß. Langzeitparkplatz LTCP – mehr als 5.200 Plätze, mit kostenlosem Shuttle rund um die Uhr zu den Terminals 1 und 2. Videoüberwachung rund um die Uhr, Plätze für Familien und Frauen, klimatisierter Warteraum; ein Platz kann auf der Website gebucht werden."
+  }
+ }
+}

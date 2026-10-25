@@ -1,0 +1,30 @@
+{
+ "iata": "LHR",
+ "blocks": {
+  "transport": {
+   "title": "交通方式",
+   "hint": "快线及地铁",
+   "text": "Heathrow Express每15分钟一班开往Paddington，Paddington与2号和3号航站楼之间车程15分钟。Elizabeth line连接机场与Bond Street、Farringdon、Liverpool Street、Paddington、Stratford和Tottenham Court Road，到伦敦市中心不到40分钟；可用非接触式银行卡或Oyster卡支付。最便宜的方式是从各航站楼乘地铁Piccadilly线：到市中心不到一小时，列车停靠King's Cross St. Pancras、Leicester Square和Piccadilly Circus。"
+  },
+  "taxi": {
+   "title": "出租车",
+   "hint": "各航站楼均有黑色出租车",
+   "text": "伦敦黑色出租车在各航站楼的候车点候客；司机均持有执照并通过了Knowledge of London考试，所有车辆均可容纳轮椅。WeKnow电动接送车按固定价格运营，柜台位于各航站楼到达区。"
+  },
+  "lounges": {
+   "title": "商务休息室",
+   "hint": "付费休息室£35起",
+   "text": "付费休息室位于安检后，每天开放。2号航站楼：No.1 Lounges和Plaza Premium，均为05:00至21:00，每人分别£44起和£40起。5号航站楼：Plaza Premium，04:45至21:30，每人£35起。2号航站楼还有Lufthansa、Singapore Airlines、Air Canada和United的航空公司休息室，5号航站楼有British Airways休息室。"
+  },
+  "storage": {
+   "title": "行李寄存",
+   "hint": "行李寄存，£10起",
+   "text": "Excess Baggage Company行李寄存处，全天候视频监控，每件价格：3小时以内£10，3–24小时£15，24–48小时£27.50，48–72小时£40。超过72小时后每增加一天£12.50，超过7天后每天£10。可在线预订。"
+  },
+  "wifi": {
+   "title": "Wi‑Fi",
+   "hint": "免费，Heathrow Wi‑Fi",
+   "text": "所有航站楼提供免费Wi‑Fi：选择Heathrow Wi‑Fi网络，按屏幕提示操作并注册。该网络获得Friendly WiFi认证，会过滤不适合儿童的内容。"
+  }
+ }
+}

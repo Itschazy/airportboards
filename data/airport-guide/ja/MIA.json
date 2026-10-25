@@ -1,0 +1,45 @@
+{
+ "iata": "MIA",
+ "blocks": {
+  "transport": {
+   "title": "アクセス",
+   "hint": "鉄道・バスと空港内の無料列車",
+   "text": "Metrorail、Metrobus、Tri-Railの乗り場はMiami Intermodal Center（Miami International Airport駅）にあり、空港からは、ガレージDolphinとFlamingoの間の3階にある駅から無料の列車MIA Moverがそこまで運行している。乗車にはEASY Cardが必要で、券売機はMiami Intermodal Centerにある。Metrorailの運賃は片道$2.25。バスMiami Beach Busは$2.25で、毎日6:00から23:40まで30分間隔で、空港のMetrorail駅とマイアミビーチ（41丁目からSouth Pointe Driveまで）の間を運行している。"
+  },
+  "taxi": {
+   "title": "タクシー",
+   "hint": "最低$15、到着階",
+   "text": "タクシーは到着階（地上階）の手荷物受取エリアの出口前で乗車する。メーター料金：最初の1/6マイルが$2.95、1マイルまでは以降1/6マイルごとに$0.85、その後は1/6マイルごとに$0.55。待ち時間は1分あたり$0.40。空港使用料は$2.00で、MIA発の最低運賃は$15。SUVまたはミニバンはメーター料金に30%の割増。配車アプリの車は1階（到着）と2階（出発）で乗車する。"
+  },
+  "lounges": {
+   "title": "ラウンジ",
+   "hint": "北ターミナルのラウンジ",
+   "text": "ノースターミナルDの保安検査後：American Airlines Flagship LoungeはD-30番ゲートの向かい（毎日5:00–23:00）、Admirals ClubはD15番ゲートの上の3階（5:00–23:00）とD-30番ゲートの向かい（6:00–20:30）。ノースターミナルのD-12番ゲート付近にはAmerican Express Centurion Lounge（5:00–22:00）がある。Americanのラウンジには、対象となるステータスを持ち、American Airlinesまたはoneworld加盟航空会社のビジネスクラスまたはファーストクラスの航空券を所持している場合に入室できる。空きがあれば1回利用券も販売される。"
+  },
+  "storage": {
+   "title": "手荷物預かり",
+   "hint": "ターミナルE、5:00–21:00",
+   "text": "手荷物預かり所Communitel Baggage StorageはセントラルターミナルEの2階にあり、毎日5:00から21:00まで営業、料金は日単位。公証サービスと旅行用品の販売もある。"
+  },
+  "sleep": {
+   "title": "仮眠・宿泊",
+   "hint": "Eのホテルと仮眠室",
+   "text": "セントラルターミナルEの2階にあるMiami International Airport Hotel：防音仕様の客室260室とレストランViena。仮眠室Wait n' restは24時間営業：1–4人用の部屋で、シャワー、タオル、軽食付き。"
+  },
+  "kids": {
+   "title": "お子様連れ",
+   "hint": "キッズエリアPlane Fun",
+   "text": "体験型のキッズエリアPlane FunはコンコースEのE5番ゲート付近にあり、コンコースDからも行ける。授乳室MIAmamasは各コンコースの保安検査後にある。"
+  },
+  "parking": {
+   "title": "駐車場",
+   "hint": "20分$2、24時間最大$25",
+   "text": "ガレージDolphinとFlamingo：20分ごとに$2.00、4時間を超えると24時間の上限$25.00が適用される。駐車料金は1年先まで事前に支払うことができ、入出庫はメールで届くQRコードで行う。予約手数料は返金されず、予約の変更・キャンセルは24時間前まで。支払いは現金、Visa、MasterCard、American Express、Discover、Apple Pay、Samsung Payで。"
+  },
+  "wifi": {
+   "title": "Wi‑Fi",
+   "hint": "広告付きで無料",
+   "text": "空港のネットワークでのインターネットは広告付きで無料。連続接続：スタンダード$4.95、プレミアム$7.95。"
+  }
+ }
+}

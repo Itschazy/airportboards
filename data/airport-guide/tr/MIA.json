@@ -1,0 +1,45 @@
+{
+ "iata": "MIA",
+ "blocks": {
+  "transport": {
+   "title": "Nasıl gidilir",
+   "hint": "Metrorail, Tri-Rail, MIA Mover",
+   "text": "Metrorail, Metrobus ve Tri-Rail durakları Miami Intermodal Center'da (Miami International Airport istasyonu); oraya havalimanından, Kat 3'te Dolphin ve Flamingo garajları arasındaki istasyondan ücretsiz MIA Mover treni gider. Yolculuk için EASY Card gerekir, otomatlar Miami Intermodal Center'da. Metrorail tek yön ücreti $2,25. $2,25'lik Miami Beach Bus otobüsü her gün 6:00'dan 23:40'a kadar 30 dakikada bir havalimanının Metrorail istasyonu ile Miami Beach (41st Street'ten South Pointe Drive'a kadar) arasında çalışır."
+  },
+  "taxi": {
+   "title": "Taksi",
+   "hint": "En az $15, geliş katı",
+   "text": "Taksiler geliş katında (zemin seviyesi), bagaj teslim alanlarının çıkışlarında. Taksimetre: milin ilk 1/6'sı için $2,95, bir mile kadar sonraki her 1/6'sı için $0,85, ardından milin her 1/6'sı için $0,55; bekleme dakikası $0,40. Havalimanı ücreti $2,00, MIA'dan en düşük yolculuk ücreti $15. Arazi aracı veya minivan için taksimetreye %30 zam. Uygulama araçları Kat 1'den (geliş) ve Kat 2'den (gidiş) yolcu alır."
+  },
+  "lounges": {
+   "title": "Business salonları",
+   "hint": "Flagship, Admirals Club, Centurion",
+   "text": "Kuzey Terminal D'de güvenlik kontrolünden sonra: D-30 kapısının karşısında American Airlines Flagship Lounge (her gün 5:00–23:00), Admirals Club, D15 kapısının üst tarafında, Kat 3'te (5:00–23:00) ve D-30 kapısının karşısında (6:00–20:30). Kuzey Terminal'in D-12 kapısının yanında American Express Centurion Lounge (5:00–22:00). American salonlarına uygun statüye ve American'ın veya oneworld üyesi bir havayolunun business ya da birinci sınıf biletine sahip olanlar girebilir; yer varsa tek girişlik giriş kartı satın alınabilir."
+  },
+  "storage": {
+   "title": "Emanet",
+   "hint": "Terminal E, 5:00–21:00",
+   "text": "Communitel Baggage Storage emaneti Merkez Terminal E'nin Kat 2'sinde, her gün 5:00'ten 21:00'e kadar açık, ödeme gün hesabıyla. Aynı yerde noter hizmetleri ve bagaj aksesuarları var."
+  },
+  "sleep": {
+   "title": "Nerede uyunur",
+   "hint": "Terminal E'de otel, Wait n' rest",
+   "text": "Miami International Airport Hotel Merkez Terminal E'nin Kat 2'sinde: ses yalıtımlı 260 oda ve Viena restoranı. Wait n' rest uyku odaları gece gündüz açık: duşlu, havlulu ve atıştırmalıklı 1–4 kişilik odalar."
+  },
+  "kids": {
+   "title": "Çocukla",
+   "hint": "Plane Fun çocuk alanı",
+   "text": "Plane Fun interaktif çocuk alanı E salonunda E5 kapısının yanında; oraya D salonundan da geçilebilir. MIAmamas emzirme odaları güvenlik kontrolünden sonra her salonda var."
+  },
+  "parking": {
+   "title": "Otopark",
+   "hint": "20 dk $2, 24 saati en fazla $25",
+   "text": "Dolphin ve Flamingo garajları: her 20 dakika için $2,00, 4 saatten sonra 24 saat için en fazla $25,00. Yer bir yıla kadar önceden ödenebilir: giriş ve çıkış e-postadaki QR kodla, rezervasyon ücreti iade edilmez, rezervasyon en geç 24 saat önceden değiştirilebilir veya iptal edilebilir. Ödeme nakit, Visa, MasterCard, American Express, Discover kartları, Apple Pay ve Samsung Pay ile."
+  },
+  "wifi": {
+   "title": "Wi‑Fi",
+   "hint": "Reklamlı, ücretsiz",
+   "text": "Havalimanı ağında internet ücretsiz, reklamlı. Kesintisiz erişim: standart $4,95, premium $7,95."
+  }
+ }
+}

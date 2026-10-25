@@ -1,0 +1,25 @@
+{
+ "iata": "BKK",
+ "blocks": {
+  "taxi": {
+   "title": "Taxi",
+   "hint": "Level 1, doors 4–7, +50 baht",
+   "text": "The taxi information counter and ticket machines are in the passenger terminal on Level 1, between doors 4 and 7. A 50 baht fee for the driver is added to the fare by order of the Ministry of Transport; the passenger pays the tolls. Short-distance trips are available — around the airport, no farther than 20 km; for regular distances, under Department of Land Transport rules, the price can be agreed with the driver."
+  },
+  "terminals": {
+   "title": "Terminals",
+   "hint": "Main terminal and satellite SAT-1",
+   "text": "Besides the main terminal (MTB) there is the satellite SAT-1 — 28 jet bridges, 8 of which take class F aircraft such as the A380 and B747-8. SAT-1 is linked to the main terminal by a tunnel about a kilometre long served by driverless APM trains; the trip including waiting takes about three minutes. In SAT-1, Level 4 has waiting areas and airline lounges, Level 3 departures, Level 2 arrivals and connections; the APM station is on underground level B2."
+  },
+  "lounges": {
+   "title": "Lounges",
+   "hint": "Miracle, from 1,500 THB for 2 h",
+   "text": "Miracle Lounges are in the main terminal in the departure areas on Levels 2–4 by concourses A, C, D, F and G, and in satellite SAT-1 on Level 4. The lounges offer snacks, hot and cold drinks, free Wi‑Fi, newspapers and magazines. Approximate price for 2 hours per person: First Class 1,800 THB, Business Class 1,500 THB."
+  },
+  "storage": {
+   "title": "Left luggage",
+   "hint": "Levels 2 and 4, from 150 THB/24 h",
+   "text": "Bellugg left luggage: in the arrivals area — Level 2, by door 4, next to the tourist police; in the departures area — Level 4, rows P/Q. Price per item for 24 hours: size S (35×56×22 cm) 150 THB, M (45×65×28 cm) 180 THB, L (larger than M) 200 THB. A receipt is issued on drop-off."
+  }
+ }
+}

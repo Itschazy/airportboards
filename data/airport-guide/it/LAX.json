@@ -1,0 +1,25 @@
+{
+ "iata": "LAX",
+ "blocks": {
+  "transport": {
+   "title": "Come arrivare",
+   "hint": "Bus FlyAway",
+   "text": "I bus LAX FlyAway circolano secondo orario sette giorni su sette tra ogni terminal e Van Nuys e la stazione Union Station. Dall’aeroporto si sale al livello inferiore arrivi davanti a ogni terminal, presso le colonne blu FlyAway."
+  },
+  "taxi": {
+   "title": "Taxi",
+   "hint": "Area LAX-it presso il Terminal 1",
+   "text": "I taxi caricano i passeggeri in tre punti. Area LAX-it accanto al Terminal 1: a piedi seguendo i cartelli oppure con la navetta gratuita LAX-it, che passa ogni 3–5 minuti presso i cartelli verdi al livello inferiore arrivi. Per i passeggeri dei terminal B e 3 i taxi attendono all’interno del parcheggio P3, tra i due terminal; per i terminal 7 e 8, all’estremità del Terminal 7 presso il ritiro bagagli. Dall’aeroporto possono caricare solo i taxi con il sigillo del dipartimento dei trasporti di Los Angeles; centrale operativa: 310-646-9177."
+  },
+  "parking": {
+   "title": "Parcheggio",
+   "hint": "Da 20 $ per 24 ore",
+   "text": "Otto parcheggi di fronte ai terminal, oltre 7.000 posti: i primi 10 minuti gratis, la prima ora 9 $ (11 $ nei P3 e P4), ogni 30 minuti successivi 7 $ (9 $ nei P3 e P4), massimo 60 $ per 24 ore; Premium nei P1, P3 e P7 fino a 70 $ per 24 ore, valet 75 $ per 24 ore. LAX Economy Parking (6100 W. 94th Street): massimo 35 $ per 24 ore; LAX Budget Parking (5455 West 111th Street): massimo 20 $; da entrambi circola giorno e notte una navetta gratuita verso le zone rosa LAX Shuttle al livello arrivi. Le tariffe includono il 10% di tasse; il posto si può prenotare in anticipo."
+  },
+  "wifi": {
+   "title": "Wi‑Fi",
+   "hint": "Gratuito, sessioni da 45 minuti",
+   "text": "Wi‑Fi gratuito e illimitato nelle aree pubbliche di tutti i terminal, in sessioni da 45 minuti. Rete _LAX Free WiFi: aprire il browser, scegliere Free Unlimited Wi-Fi e guardare una pubblicità. Un accesso più veloce è disponibile con l’abbonamento a pagamento Boingo."
+  }
+ }
+}

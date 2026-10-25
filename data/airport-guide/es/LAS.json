@@ -1,0 +1,25 @@
+{
+ "iata": "LAS",
+ "blocks": {
+  "transport": {
+   "title": "Cómo llegar",
+   "hint": "Autobuses RTC 108 y Red Line",
+   "text": "Los autobuses urbanos de RTC paran en la terminal 1, en Level Zero: desde la recogida de equipajes hay que bajar en ascensor o escalera mecánica, salir del edificio, cruzar por el paso de peatones y girar a la derecha hacia la parada cubierta. Aquí paran la ruta 108 (Paradise) y la Red Line (antes ruta 109, Maryland Parkway). Desde la terminal 3 se llega a la parada en la lanzadera gratuita entre terminales, que sale de la recogida de equipajes."
+  },
+  "taxi": {
+   "title": "Taxi",
+   "hint": "En equipajes, tarifa fija al Strip",
+   "text": "En la terminal 1 los taxis esperan en la parte este de la zona de recogida de equipajes, pasadas las salidas 1–4; en la terminal 3, en la recogida de equipajes, junto a la puerta 52. Las tarifas las fija la Nevada Taxicab Authority y todas las compañías aceptan tarjetas bancarias. Desde el aeropuerto hasta las zonas del Strip rige una tarifa fija por zonas."
+  },
+  "terminals": {
+   "title": "Terminales",
+   "hint": "Terminal 1 y terminal 3",
+   "text": "La terminal 1 atiende las puertas A, B, C y D; junto a ella hay un garaje de 6000 plazas; el satélite D está unido a la terminal 1 por un tren automático. La terminal 3 acoge a todas las aerolíneas internacionales y parte de las nacionales, con su propia facturación, recogida de equipajes y control fronterizo; desde ella también va un tren a las puertas D. La parada de la lanzadera entre terminales en la terminal 3 está en Level Zero, junto a la puerta 55."
+  },
+  "parking": {
+   "title": "Aparcamiento",
+   "hint": "17.000+ plazas, desde 14 $/24 h",
+   "text": "Más de 17.000 plazas junto a las dos terminales y en un recinto remoto, día y noche. Corta estancia: 4 $ la primera hora, 8 $ hasta 2 horas, después 5 $ por hora, máximo 38 $ por 24 horas. Larga estancia: 12 $ por 2 horas, después 4 $ por hora, máximo 20 $ por 24 horas; con reserva previa en la terminal 3, de sábado a miércoles, 16 $. Economy y el recinto remoto (a este último llega una lanzadera gratuita): 6 $ por 2 horas, después 2 $ por hora, máximo 14 $ por 24 horas; aparcacoches, 34 $ por 24 horas. La zona de espera (Cell Phone Lot) es gratuita."
+  }
+ }
+}

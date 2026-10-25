@@ -1,0 +1,25 @@
+{
+ "iata": "BKK",
+ "blocks": {
+  "taxi": {
+   "title": "Taxi",
+   "hint": "Ebene 1, Türen 4–7, +50 Baht",
+   "text": "Der Taxi-Infoschalter und die Automaten für Taxischeine befinden sich im Passagierterminal auf Ebene 1 zwischen den Türen 4 und 7. Zum Fahrpreis kommt auf Anordnung des Verkehrsministeriums eine Gebühr von 50 Baht für den Fahrer hinzu, Mautstraßen zahlt der Fahrgast. Es gibt Kurzstreckenfahrten rund um den Flughafen, nicht weiter als 20 km; bei normalen Entfernungen kann der Preis nach den Regeln des Department of Land Transport mit dem Fahrer vereinbart werden."
+  },
+  "terminals": {
+   "title": "Terminals",
+   "hint": "Hauptterminal und Satellit SAT-1",
+   "text": "Neben dem Hauptterminal (MTB) ist der Satellit SAT-1 in Betrieb – 28 Fluggastbrücken, 8 davon für Flugzeuge der Klasse F wie A380 und B747-8. SAT-1 ist mit dem Hauptterminal durch einen etwa einen Kilometer langen Tunnel verbunden, in dem fahrerlose APM-Züge verkehren; die Fahrt einschließlich Wartezeit dauert etwa drei Minuten. In SAT-1: Ebene 4 – Wartebereiche und Airline-Lounges, Ebene 3 – Abflug, Ebene 2 – Ankunft und Umsteigen, die APM-Station liegt auf der unterirdischen Ebene B2."
+  },
+  "lounges": {
+   "title": "Business-Lounges",
+   "hint": "Miracle, ab 1.500 THB für 2 Std.",
+   "text": "Die Miracle Lounges liegen im Hauptterminal in den Abflugbereichen auf den Ebenen 2–4 an den Concourses A, C, D, F und G sowie im Satelliten SAT-1 auf Ebene 4. In der Lounge gibt es Snacks, warme und kalte Getränke, kostenloses Wi‑Fi, Zeitungen und Zeitschriften. Richtpreis für 2 Stunden pro Person: First Class 1.800 THB, Business Class 1.500 THB."
+  },
+  "storage": {
+   "title": "Gepäckaufbewahrung",
+   "hint": "Ebenen 2 und 4, ab 150 THB/24 Std.",
+   "text": "Gepäckaufbewahrung Bellugg: im Ankunftsbereich auf Ebene 2 an Tür 4 neben der Touristenpolizei; im Abflugbereich auf Ebene 4, Reihen P/Q. Preis pro Stück für 24 Stunden: Größe S (35×56×22 cm) 150 THB, M (45×65×28 cm) 180 THB, L (größer als M) 200 THB. Bei der Abgabe erhält man einen Beleg."
+  }
+ }
+}

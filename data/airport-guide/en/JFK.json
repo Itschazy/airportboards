@@ -1,0 +1,25 @@
+{
+ "iata": "JFK",
+ "blocks": {
+  "transport": {
+   "title": "Getting there",
+   "hint": "AirTrain to Jamaica/Howard Beach",
+   "text": "AirTrain runs free of charge between terminals, with trains every 5–15 minutes. To the New York subway, LIRR trains and city buses — take AirTrain to Jamaica or Howard Beach station, $8.75 one way, children under 5 free. Pay with a contactless card, a phone with Apple Pay or Google Pay, or an OMNY card. Group fare: first passenger $8.75, each additional one $4.50, up to 5 people."
+  },
+  "taxi": {
+   "title": "Taxi",
+   "hint": "To Manhattan $70 flat",
+   "text": "Taxi ranks are at all terminals; a dispatcher manages the queue, no booking needed. To Manhattan — a flat $70 plus tolls, tip and surcharges from $2.75 to $8.50 depending on time and destination. Approximate fares: to Flushing $60, Downtown Brooklyn $90, LaGuardia Airport $60, Newark Airport $160. No more than 4 passengers per car (5 in a minivan)."
+  },
+  "sleep": {
+   "title": "Where to sleep",
+   "hint": "TWA Hotel by Terminal 5",
+   "text": "The only hotel on airport grounds is the TWA Hotel next to Terminal 5. From Terminal 5 it is reached through the tube walkways of the old TWA Flight Center; from other terminals take AirTrain to Terminal 5 and follow the signs."
+  },
+  "wifi": {
+   "title": "Wi‑Fi",
+   "hint": "Free, unlimited",
+   "text": "Free unlimited Wi‑Fi: “_Free JFK WiFi” network. Support round the clock: +1 (800) 880-4117."
+  }
+ }
+}

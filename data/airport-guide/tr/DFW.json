@@ -1,0 +1,35 @@
+{
+ "iata": "DFW",
+ "blocks": {
+  "transport": {
+   "title": "Nasıl gidilir",
+   "hint": "DART, TEXRail, TRE'ye otobüs",
+   "text": "Terminallerden üç tür toplu taşıma kalkar. Terminal A'dan Dallas merkezine DART Orange Line. Terminal B'den kuzey Dallas'a DART Silver Line ve Trinity Metro işletmesinin Fort Worth merkezine giden TEXRail treni. TRE LINK otobüsü, Dallas ile Fort Worth'ü bağlayan TRE hattının CentrePort/DFW istasyonuna gider."
+  },
+  "taxi": {
+   "title": "Taksi",
+   "hint": "19 şirket, alt kat",
+   "text": "19 şirketin taksileri A, B, C, D ve E terminallerinin alt katında bekler. 8:00'den gece yarısına kadar duraklarda yolcuları araçlara dağıtan bir havalimanı görevlisi bulunur. Gece yarısından sonra taksi +1-972-973-4061 numaralı telefondan çağrılabilir."
+  },
+  "lounges": {
+   "title": "Business salonları",
+   "hint": "20'den fazla salon, tüm terminaller",
+   "text": "Havalimanında 20'den fazla salon ve premium alan var. Beş terminalin hepsi güvenlik kontrolünden sonraki alanda Skylink treniyle birbirine bağlıdır; bu yüzden giriş hakkı olan yolcular biniş kapısından bağımsız olarak her terminaldeki salonları kullanabilir. İşletmeciler arasında American Airlines, American Express Centurion Lounge, Capital One Lounge, Chase Sapphire Lounge by The Club, The Club DFW, Plaza Premium Lounges ve PS DFW var."
+  },
+  "kids": {
+   "title": "Çocukla",
+   "hint": "D8'de oyun alanı, emzirme odaları",
+   "text": "McDonald's Play Area oyun alanı Terminal D'de D8 kapısının yanında; yumuşak oyun parkı, yetişkinler için oturma yerleri ve prizler var. Emzirme odaları her terminalde, güvenlik kontrolünden sonraki alanda: A18, B40, C13/14, C36, D2, D36, E14 ve E26 kapılarının yanında."
+  },
+  "parking": {
+   "title": "Otopark",
+   "hint": "Terminal, Express, Remote, Valet",
+   "text": "Terminal otoparkı her terminalin yanında. Express — havalimanının kuzey girişinde kapalı ve açık yerler, terminale servisle. Remote — havalimanının en ucuz otoparkı, tüm terminallere ücretsiz servisle. Valet ve karşılayıcılar için iki ücretsiz Cell Phone Lots bekleme alanı da var. Yer havalimanının sitesinden veya uygulamasından önceden ayırtılabilir."
+  },
+  "wifi": {
+   "title": "Wi‑Fi",
+   "hint": "Ücretsiz, DFW Public",
+   "text": "Ücretsiz Wi‑Fi: “DFW Public 5G Wi-Fi” veya “DFW Public 6E Wi-Fi” ağı seçilip koşullar kabul edilir. USB girişli şarj istasyonları birçok biniş kapısının yanında, şarj ücretsiz."
+  }
+ }
+}

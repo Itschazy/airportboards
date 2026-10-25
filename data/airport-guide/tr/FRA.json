@@ -1,0 +1,40 @@
+{
+ "iata": "FRA",
+ "blocks": {
+  "transport": {
+   "title": "Nasıl gidilir",
+   "hint": "S-Bahn S8, S9 ve bölge trenleri",
+   "text": "Havalimanının bölgesel tren garı onu doğrudan Frankfurt, Offenbach, Hanau, Aschaffenburg, Rüsselsheim, Mainz ve Wiesbaden'e bağlar: S-Bahn S8 ve S9 hatları ile RB58, RE59, RE2 ve RE3 bölge trenleri. Gar Terminal 1'in yeraltı katında (Kat 0); A, B, C alanlarının hepsinden “Train stations S T” tabelalarını izleyerek ulaşılır. Trenler 1–3 numaralı perona gelir. Terminal 3'e SkyLine treniyle, yaklaşık 10–15 dakika, “Terminal 3 G, H, J” tabelalarını izleyerek gidilir."
+  },
+  "taxi": {
+   "title": "Taksi",
+   "hint": "Gece gündüz, şehre 20–30 dakika",
+   "text": "Taksiler gece gündüz üç terminalin hepsinin ve uzun mesafe tren garının önünde bekler. Frankfurt'tan yolculuk trafiğe göre 20 ila 30 dakika sürer. Uber ile biniş ve iniş: Terminal 1'de P31 kısa süreli otoparkı (gidiş katı); Terminal 3'te biniş P62 çarter otobüs şeridinde, iniş gidiş katında P63'te."
+  },
+  "terminals": {
+   "title": "Terminaller",
+   "hint": "Ücretsiz SkyLine, geceleri otobüs",
+   "text": "Terminal 1 ve 3'ü ücretsiz SkyLine treni bağlar: 4:00'ten 23:00'e kadar, 2–3 dakika arayla çalışır, her iki terminalde istasyon var. 22:00'den 5:00'e kadar terminaller arasında servis otobüsü çalışır; duraklar terminal binalarının önünde, geliş alanının önündeki meydanda."
+  },
+  "lounges": {
+   "title": "Business salonları",
+   "hint": "T1'de Lufthansa, T3'te SkyTeam",
+   "text": "Terminal 1'de güvenlik kontrolünden sonra A, B ve Z bölgelerinde Lufthansa salonları (Business, Senator, First Class), C bölgesinde Lufthansa Bistro Lounge (Non-Schengen) ve B bölgesinde Air Canada Lounge. Terminal 3'te güvenlik kontrolünden sonra H bölgesinde Air France Lounge, J bölgesinde Emirates Lounge, Priority Lounge ve SkyTeam Lounge. Güvenlik kontrolünden önce Terminal 1'in C bölgesinde Luxx Lounge."
+  },
+  "sleep": {
+   "title": "Nerede uyunur",
+   "hint": "napcabs kabinleri, saati €12'dan",
+   "text": "Yataklı, klimalı, çalar saatli ve çalışma masalı napcabs uyku kabinleri: Terminal 1'de güvenlik kontrolünden sonra Pier A Schengen'de 6 ve Kat 3'teki B transit alanında 3 (B42 kapısının yanındaki yürüyen merdiven); Terminal 3'te Pier H Schengen'de 3 ve Pier J Non-Schengen'de 5. 6:00–22:00 arası saati €17 (en az 2 saat), 22:00–6:00 arası saati €12 (en az 3 saat). Çevrimiçi rezervasyon kartla veya PayPal ile, yerinde yalnızca kartla. Kabinlerin yanında duşlar var."
+  },
+  "parking": {
+   "title": "Otopark",
+   "hint": "15.000 yer, 7 gün €99'dan",
+   "text": "Havalimanında toplam 15.000 park yeri var. Çevrimiçi rezervasyonda Terminal Parking 7 gün €99,00'dan, Weekend Special (cumadan pazara 2–3 gün) €55,00'dan; rezervasyon kalkıştan 9 ay ile 24 saat önce arasında, 1–44 günlük süre için yapılır. Terminal otoparklarına giriş yüksekliği en fazla 2,10 m; daha yüksek araçlar için P36 otobüs otoparkı. Otogazlı (LPG) araçlar Terminal 1 otoparklarına alınmaz, Terminal 3 otoparkına alınır."
+  },
+  "wifi": {
+   "title": "Wi‑Fi",
+   "hint": "Ücretsiz, kayıt gerekmez",
+   "text": "Gece gündüz ücretsiz sınırsız Wi‑Fi, 300'den fazla erişim noktası, kayıt gerekmez. “Airport-Frankfurt” ağı, ardından Wi-Fi Free veya Wi-Fi Free+ seçilir ve Fraport AG koşulları kabul edilerek “Go online”a basılır."
+  }
+ }
+}

@@ -1,0 +1,54 @@
+{
+ "iata": "DFW",
+ "checked": "2026-10-25",
+ "blocks": [
+  {
+   "id": "transport",
+   "title": "Как доехать",
+   "hint": "DART, TEXRail, автобус к TRE",
+   "text": "От терминалов отправляются три вида общественного транспорта. Из терминала A — DART Orange Line до центра Далласа. Из терминала B — DART Silver Line на север Далласа и TEXRail оператора Trinity Metro до центра Форт-Уэрта. Автобус TRE LINK везёт до станции CentrePort/DFW линии TRE, которая связывает Даллас и Форт-Уэрт.",
+   "source": "dfwairport.com",
+   "url": "https://www.dfwairport.com/explore/transportation/publictransit/schedules/"
+  },
+  {
+   "id": "taxi",
+   "title": "Такси",
+   "hint": "19 компаний, нижний уровень",
+   "text": "Такси 19 компаний ждут на нижнем уровне терминалов A, B, C, D и E. С 8:00 до полуночи на стоянках дежурит сотрудник аэропорта, который распределяет пассажиров по машинам. После полуночи такси можно вызвать по телефону +1-972-973-4061.",
+   "source": "dfwairport.com",
+   "url": "https://www.dfwairport.com/explore/transportation/transportation/"
+  },
+  {
+   "id": "lounges",
+   "title": "Бизнес-залы",
+   "hint": "Больше 20 залов, все терминалы",
+   "text": "В аэропорту больше 20 залов и премиальных зон. Все пять терминалов соединены внутри зоны досмотра поездом Skylink, поэтому пассажиры с правом доступа могут пользоваться залами в любом терминале, независимо от выхода на посадку. Среди операторов — American Airlines, American Express Centurion Lounge, Capital One Lounge, Chase Sapphire Lounge by The Club, The Club DFW, Plaza Premium Lounges и PS DFW.",
+   "source": "dfwairport.com",
+   "url": "https://www.dfwairport.com/explore/lounges/"
+  },
+  {
+   "id": "kids",
+   "title": "С ребёнком",
+   "hint": "Игровая зона D8, комнаты для кормления",
+   "text": "Игровая зона McDonald's Play Area — в терминале D у выхода D8, с мягким игровым городком, местами для взрослых и розетками. Комнаты для кормления есть в каждом терминале, в зоне после досмотра: у выходов A18, B40, C13/14, C36, D2, D36, E14 и E26.",
+   "source": "dfwairport.com",
+   "url": "https://www.dfwairport.com/explore/familyfriendly/"
+  },
+  {
+   "id": "parking",
+   "title": "Парковка",
+   "hint": "Terminal, Express, Remote, Valet",
+   "text": "Парковка Terminal — рядом с каждым терминалом. Express — крытые и открытые места у северного въезда в аэропорт с шаттлом до терминала. Remote — самая недорогая парковка аэропорта, с бесплатным шаттлом до всех терминалов. Есть Valet и две бесплатные стоянки Cell Phone Lots для встречающих. Место можно забронировать заранее на сайте или в приложении аэропорта.",
+   "source": "dfwairport.com",
+   "url": "https://www.dfwairport.com/park/"
+  },
+  {
+   "id": "wifi",
+   "title": "Wi‑Fi",
+   "hint": "Бесплатный, DFW Public",
+   "text": "Бесплатный Wi‑Fi: выбрать сеть «DFW Public 5G Wi-Fi» или «DFW Public 6E Wi-Fi» и принять условия. Зарядные станции с USB-портами стоят у многих выходов на посадку, зарядка бесплатная.",
+   "source": "dfwairport.com",
+   "url": "https://www.dfwairport.com/explore/wifi-tech/"
+  }
+ ]
+}

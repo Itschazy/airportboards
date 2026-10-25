@@ -1,0 +1,25 @@
+{
+ "iata": "LAX",
+ "blocks": {
+  "transport": {
+   "title": "Comment s'y rendre",
+   "hint": "Bus FlyAway",
+   "text": "Les bus LAX FlyAway relient selon un horaire, sept jours sur sept, chaque terminal à Van Nuys et à la gare Union Station. À l'aéroport, on monte au niveau inférieur des arrivées devant chaque terminal, près des colonnes bleues FlyAway."
+  },
+  "taxi": {
+   "title": "Taxi",
+   "hint": "Station LAX-it près du terminal 1",
+   "text": "Les taxis prennent les passagers à trois endroits. L'aire LAX-it à côté du terminal 1 : s'y rendre à pied en suivant les panneaux ou avec la navette gratuite LAX-it, qui passe toutes les 3–5 minutes aux panneaux verts du niveau inférieur des arrivées. Pour les passagers des terminaux B et 3, les taxis attendent à l'intérieur du parking P3 situé entre eux ; pour ceux des terminaux 7 et 8 — au fond du terminal 7, près de la livraison des bagages. Seuls les taxis portant le sceau du département des transports de Los Angeles peuvent prendre des passagers à l'aéroport ; régulateur : 310-646-9177."
+  },
+  "parking": {
+   "title": "Parking",
+   "hint": "Dès 20 $ par 24 h",
+   "text": "Huit parkings face aux terminaux, plus de 7 000 places : 10 premières minutes gratuites, première heure 9 $ (11 $ dans P3 et P4), chaque tranche suivante de 30 minutes 7 $ (9 $ dans P3 et P4), maximum 60 $ par 24 heures ; Premium dans P1, P3 et P7 — jusqu'à 70 $ par 24 heures, voiturier — 75 $ par 24 heures. LAX Economy Parking (6100 W. 94th Street) — maximum 35 $ par 24 heures, LAX Budget Parking (5455 West 111th Street) — maximum 20 $ ; depuis les deux, une navette gratuite circule jour et nuit vers les zones roses LAX Shuttle du niveau des arrivées. Les tarifs incluent une taxe de 10%, réservation possible à l'avance."
+  },
+  "wifi": {
+   "title": "Wi‑Fi",
+   "hint": "Gratuit, sessions de 45 minutes",
+   "text": "Wi‑Fi gratuit et illimité dans les espaces publics de tous les terminaux, par sessions de 45 minutes. Réseau _LAX Free WiFi : ouvrir le navigateur, choisir Free Unlimited Wi-Fi et regarder une publicité. Un accès plus rapide est proposé avec l'abonnement payant Boingo."
+  }
+ }
+}

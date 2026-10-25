@@ -1,0 +1,35 @@
+{
+ "iata": "MCO",
+ "blocks": {
+  "transport": {
+   "title": "Anreise",
+   "hint": "Brightline nach Miami, SunRail",
+   "text": "Der Bahnhof des Flughafens liegt neben Terminal C: hier sind auch die Station des Zugs Terminal Link zu den Terminals A und B, Taxis, Shuttles und Stadtbusse. Von der Brightline-Station fahren Züge nach Miami mit Halten in West Palm Beach, Boca Raton, Fort Lauderdale und Aventura. Die Nahverkehrszüge SunRail fahren ab der Station Sand Lake Road, zu der vom Flughafen ein Bus fährt."
+  },
+  "taxi": {
+   "title": "Taxi",
+   "hint": "International Drive – 38–45 $",
+   "text": "Richtpreise für Taxis ab Flughafen: zu Hotels am Flughafen 14–18 $, zum International Drive und nach Downtown Orlando 38–45 $, nach Winter Park und Maitland 45–55 $, nach Lake Buena Vista 47–55 $, nach Kissimmee 45–75 $, zu den Disney-Resorts 52–68 $, nach Port Canaveral 115 $."
+  },
+  "sleep": {
+   "title": "Schlafen",
+   "hint": "Hyatt Regency im Terminal A/B",
+   "text": "Das Hyatt Regency Orlando International Airport mit 445 Zimmern liegt im Terminal A/B über der Sicherheitskontrolle zu den Gates 70–129, im Bereich vor der Kontrolle. Es gibt den Tagesaufenthalt Day Stay ohne Übernachtung: Pool auf dem Dach, Fitnesscenter, Restaurant und Zimmerservice. Telefon des Hotels: +1-407-825-1234."
+  },
+  "kids": {
+   "title": "Mit Kind",
+   "hint": "Spielbereiche in A und B, Flybrary",
+   "text": "Ein Soft-Play-Bereich im Florida-Stil liegt in Terminal A auf Ebene 1, vor der Sicherheitskontrolle. Die Interactive Family Zone mit Bewegungsspielen befindet sich in Terminal B auf Ebene 3 am Foodcourt, vor der Sicherheitskontrolle. Die Kinderbibliothek Flybrary liegt in Terminal C auf Ebene 2 an Gate 240, nach der Sicherheitskontrolle. Stillräume und Stillkapseln gibt es in jedem Terminal, Familientoiletten auf jeder Ebene."
+  },
+  "parking": {
+   "title": "Parken",
+   "hint": "Parkhaus C, gebucht 32 $/24 Std.",
+   "text": "An den Terminals A und B – Parkhäuser A und B, Terminal Top Parking und Valet, an Terminal C – Parkhaus C, am Bahnhof die offenen Parkplätze Atlantis, Discovery und Endeavour; Sparparkplätze North Park Place, South Park Place und West Park. Ein Platz im Parkhaus C kann gebucht werden: 32 $ pro 24 Stunden, höchstens 45 Tage. Fahrzeuge über 7 Fuß Höhe oder bis 25 Fuß Länge nimmt South Park Place auf. In den Parkhäusern kann man auf eigenen Spuren mit E-PASS/SunPass bezahlen."
+  },
+  "wifi": {
+   "title": "Wi‑Fi",
+   "hint": "Kostenlos, MCO Internet",
+   "text": "Kostenloses Wi‑Fi in allen öffentlichen Bereichen des Flughafens, Netz „MCO Internet“; andere Netze in der Liste gehören nicht dem Flughafen. Bei schwachem Signal bittet der Flughafen, sich von fremden eingeschalteten Hotspots zu entfernen und eigene auszuschalten, wenn sie nicht gebraucht werden."
+  }
+ }
+}

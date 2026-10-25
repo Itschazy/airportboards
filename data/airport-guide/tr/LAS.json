@@ -1,0 +1,25 @@
+{
+ "iata": "LAS",
+ "blocks": {
+  "transport": {
+   "title": "Nasıl gidilir",
+   "hint": "RTC 108 otobüsü ve Red Line",
+   "text": "RTC şehir otobüsleri Terminal 1'de Level Zero katında durur: bagaj teslim alanından asansör veya yürüyen merdivenle inilir, binadan çıkılır, yaya geçidinden geçilir ve sağa doğru kapalı durağa gidilir. Burada 108 — Paradise hattı ve Red Line (eski 109 — Maryland Parkway hattı) durur. Terminal 3'ten durağa bagaj teslim alanından kalkan ücretsiz terminaller arası servisle gidilir."
+  },
+  "taxi": {
+   "title": "Taksi",
+   "hint": "Bagaj alanında, Strip'e sabit",
+   "text": "Terminal 1'de taksiler bagaj teslim alanının doğu kısmında, 1–4 numaralı çıkışların ilerisinde bekler; Terminal 3'te 52 numaralı kapının yanındaki bagaj teslim alanında. Tarifeleri Nevada Taxicab Authority belirler, tüm şirketler banka kartı kabul eder. Havalimanından Strip'teki bölgelere bölgeye göre sabit tarife uygulanır."
+  },
+  "terminals": {
+   "title": "Terminaller",
+   "hint": "Terminal 1 ve Terminal 3",
+   "text": "Terminal 1, A, B, C ve D kapılarına hizmet verir, yanında 6.000 araçlık bir garaj var; D uydu salonu Terminal 1'e otomatik trenle bağlıdır. Terminal 3'te tüm dış hat havayolları ve iç hat havayollarının bir kısmı bulunur; kendi check-in'i, bagaj teslim alanı ve pasaport kontrolü var; buradan da D kapılarına tren gider. Terminal 3'te terminaller arası servisin durağı Level Zero katında, 55 numaralı kapının yanında."
+  },
+  "parking": {
+   "title": "Otopark",
+   "hint": "17.000+ yer, 24 saati $14'tan",
+   "text": "Her iki terminalin yanında ve uzak alanda 17.000'den fazla yer, gece gündüz açık. Kısa süreli: ilk saat $4, 2 saate kadar $8, sonra saati $5, 24 saatte en fazla $38. Uzun süreli: 2 saat $12, sonra saati $4, 24 saatte en fazla $20; Terminal 3'te ön rezervasyonla cumartesiden çarşambaya $16. Economy ve uzak alan (uzak alana ücretsiz servis gider): 2 saat $6, sonra saati $2, 24 saatte en fazla $14; vale park hizmeti 24 saat için $34. Bekleyenler için alan (Cell Phone Lot) ücretsiz."
+  }
+ }
+}

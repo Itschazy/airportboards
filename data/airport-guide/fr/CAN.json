@@ -1,0 +1,35 @@
+{
+ "iata": "CAN",
+ "blocks": {
+  "transport": {
+   "title": "Comment s'y rendre",
+   "hint": "Métro, ligne 3 — Airport North",
+   "text": "Le terminal 2 est à côté de la station Airport North du prolongement nord de la ligne 3 du métro. Il n'y a pas de métro direct vers le terminal 3 : prendre la ligne 3 jusqu'à Airport North, puis la navette depuis la sortie 42 du terminal 2 ou le train interurbain depuis le centre de transport GTC du terminal 2. Les horaires du métro de Canton peuvent changer."
+  },
+  "taxi": {
+   "title": "Taxi",
+   "hint": "T2 — sorties 50 et 53, T3 — 75",
+   "text": "Au terminal 2, les taxis prennent en charge au centre de transport GTC : station est — devant la sortie 53, station ouest — devant la sortie 50. Au terminal 3, la station de taxis internationale est au niveau 1 en zone d'arrivée, devant la sortie 75."
+  },
+  "lounges": {
+   "title": "Salons",
+   "hint": "Premium Lounge, Sky Pearl, L32",
+   "text": "Premium Lounge — terminal 2, niveau 4, derrière la boutique hors taxes après le contrôle international, ouvert jour et nuit. Easy Boarding Lounge — terminal 2, face au salon première classe de China Southern (après le contrôle, à gauche, 50 m), 04:45–21:30. Salons China Southern Sky Pearl au terminal 2 : celui des vols intérieurs au niveau 3 après le contrôle (05:45–21:00), celui des vols internationaux au niveau 4 après la zone duty free (de 04:30 jusqu'au dernier vol). Au terminal 3 — L32 Lounge au niveau 4, derrière un contrôle séparé pour les vols intérieurs (face au comptoir 16 de l'îlot K), de 05:00 jusqu'au dernier départ."
+  },
+  "storage": {
+   "title": "Consigne à bagages",
+   "hint": "Tous terminaux, certaines 24h/24",
+   "text": "Terminal 1 : hall des départs, niveau 3, près de l'entrée 16 — jour et nuit. Terminal 2 : derrière la zone d'enregistrement C du hall des départs (04:30–23:30), derrière la zone d'enregistrement P/N (jour et nuit) et face à la sortie 53 du hall des arrivées (05:30–23:30). Terminal 3 : près des toilettes derrière l'îlot C dans la partie ouest du hall d'enregistrement (jour et nuit) et dans le hall des arrivées internationales au niveau 1 (05:30–21:30). Les horaires peuvent changer selon la situation sur place."
+  },
+  "sleep": {
+   "title": "Où dormir",
+   "hint": "Capsules en T2 et T3, 24h/24",
+   "text": "Capsules payées à l'heure — terminal 2, niveau 1, zone des arrivées internationales, près de la sortie 53, jour et nuit. Capsules NAPHUBS — terminal 3, niveau 4 : dans l'espace de repos pour les passagers de nuit, à gauche après l'entrée 61, et dans la salle de transit internationale, également jour et nuit."
+  },
+  "wifi": {
+   "title": "Wi‑Fi",
+   "hint": "AIRPORT-FREE-WiFi, par SMS",
+   "text": "Réseau gratuit AIRPORT-FREE-WiFi. Sur la page d'authentification, on peut se connecter avec un numéro de téléphone et un code reçu par SMS (les étrangers choisissent l'indicatif de leur pays) ou avec une photo de sa pièce d'identité. Des bornes Wi‑Fi sont installées dans les zones de départ et d'arrivée internationales du terminal 2."
+  }
+ }
+}

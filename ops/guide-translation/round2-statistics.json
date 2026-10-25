@@ -1,0 +1,2538 @@
+{
+  "en": {
+    "counts": {
+      "смысл": 18,
+      "стиль": 6,
+      "числа": 1
+    },
+    "total": 25,
+    "fields": [
+      {
+        "iata": "BKK",
+        "block": "taxi",
+        "field": "hint",
+        "kind": "смысл"
+      },
+      {
+        "iata": "BKK",
+        "block": "taxi",
+        "field": "text",
+        "kind": "смысл"
+      },
+      {
+        "iata": "BKK",
+        "block": "storage",
+        "field": "text",
+        "kind": "смысл"
+      },
+      {
+        "iata": "CAN",
+        "block": "transport",
+        "field": "text",
+        "kind": "смысл"
+      },
+      {
+        "iata": "CAN",
+        "block": "taxi",
+        "field": "hint",
+        "kind": "смысл"
+      },
+      {
+        "iata": "CAN",
+        "block": "taxi",
+        "field": "text",
+        "kind": "смысл"
+      },
+      {
+        "iata": "CAN",
+        "block": "storage",
+        "field": "text",
+        "kind": "смысл"
+      },
+      {
+        "iata": "CAN",
+        "block": "sleep",
+        "field": "text",
+        "kind": "смысл"
+      },
+      {
+        "iata": "DEN",
+        "block": "transport",
+        "field": "text",
+        "kind": "смысл"
+      },
+      {
+        "iata": "HND",
+        "block": "taxi",
+        "field": "text",
+        "kind": "смысл"
+      },
+      {
+        "iata": "HND",
+        "block": "lounges",
+        "field": "text",
+        "kind": "стиль"
+      },
+      {
+        "iata": "ICN",
+        "block": "terminals",
+        "field": "text",
+        "kind": "стиль"
+      },
+      {
+        "iata": "ICN",
+        "block": "sleep",
+        "field": "text",
+        "kind": "смысл"
+      },
+      {
+        "iata": "LAS",
+        "block": "parking",
+        "field": "text",
+        "kind": "смысл"
+      },
+      {
+        "iata": "LHR",
+        "block": "transport",
+        "field": "hint",
+        "kind": "стиль"
+      },
+      {
+        "iata": "MIA",
+        "block": "transport",
+        "field": "hint",
+        "kind": "стиль"
+      },
+      {
+        "iata": "MIA",
+        "block": "taxi",
+        "field": "text",
+        "kind": "стиль"
+      },
+      {
+        "iata": "MIA",
+        "block": "lounges",
+        "field": "text",
+        "kind": "смысл"
+      },
+      {
+        "iata": "MIA",
+        "block": "parking",
+        "field": "text",
+        "kind": "числа"
+      },
+      {
+        "iata": "PEK",
+        "block": "taxi",
+        "field": "text",
+        "kind": "смысл"
+      },
+      {
+        "iata": "PEK",
+        "block": "storage",
+        "field": "text",
+        "kind": "смысл"
+      },
+      {
+        "iata": "PVG",
+        "block": "taxi",
+        "field": "text",
+        "kind": "смысл"
+      },
+      {
+        "iata": "PVG",
+        "block": "storage",
+        "field": "text",
+        "kind": "смысл"
+      },
+      {
+        "iata": "PVG",
+        "block": "sleep",
+        "field": "text",
+        "kind": "смысл"
+      },
+      {
+        "iata": "SIN",
+        "block": "terminals",
+        "field": "text",
+        "kind": "стиль"
+      }
+    ]
+  },
+  "de": {
+    "counts": {
+      "смысл": 19,
+      "стиль": 3,
+      "числа": 2
+    },
+    "total": 24,
+    "fields": [
+      {
+        "iata": "BKK",
+        "block": "taxi",
+        "field": "hint",
+        "kind": "смысл"
+      },
+      {
+        "iata": "BKK",
+        "block": "taxi",
+        "field": "text",
+        "kind": "смысл"
+      },
+      {
+        "iata": "BKK",
+        "block": "storage",
+        "field": "text",
+        "kind": "смысл"
+      },
+      {
+        "iata": "CAN",
+        "block": "transport",
+        "field": "text",
+        "kind": "смысл"
+      },
+      {
+        "iata": "CAN",
+        "block": "taxi",
+        "field": "hint",
+        "kind": "смысл"
+      },
+      {
+        "iata": "CAN",
+        "block": "taxi",
+        "field": "text",
+        "kind": "смысл"
+      },
+      {
+        "iata": "CAN",
+        "block": "storage",
+        "field": "text",
+        "kind": "смысл"
+      },
+      {
+        "iata": "CAN",
+        "block": "sleep",
+        "field": "text",
+        "kind": "смысл"
+      },
+      {
+        "iata": "HKG",
+        "block": "storage",
+        "field": "text",
+        "kind": "смысл"
+      },
+      {
+        "iata": "HND",
+        "block": "lounges",
+        "field": "text",
+        "kind": "стиль"
+      },
+      {
+        "iata": "ICN",
+        "block": "terminals",
+        "field": "text",
+        "kind": "смысл"
+      },
+      {
+        "iata": "ICN",
+        "block": "sleep",
+        "field": "text",
+        "kind": "смысл"
+      },
+      {
+        "iata": "LAS",
+        "block": "parking",
+        "field": "text",
+        "kind": "смысл"
+      },
+      {
+        "iata": "MIA",
+        "block": "lounges",
+        "field": "text",
+        "kind": "смысл"
+      },
+      {
+        "iata": "MIA",
+        "block": "storage",
+        "field": "text",
+        "kind": "числа"
+      },
+      {
+        "iata": "MIA",
+        "block": "parking",
+        "field": "text",
+        "kind": "числа"
+      },
+      {
+        "iata": "PEK",
+        "block": "taxi",
+        "field": "text",
+        "kind": "смысл"
+      },
+      {
+        "iata": "PEK",
+        "block": "storage",
+        "field": "text",
+        "kind": "смысл"
+      },
+      {
+        "iata": "PVG",
+        "block": "taxi",
+        "field": "text",
+        "kind": "смысл"
+      },
+      {
+        "iata": "PVG",
+        "block": "storage",
+        "field": "text",
+        "kind": "смысл"
+      },
+      {
+        "iata": "PVG",
+        "block": "sleep",
+        "field": "text",
+        "kind": "смысл"
+      },
+      {
+        "iata": "SIN",
+        "block": "transport",
+        "field": "text",
+        "kind": "смысл"
+      },
+      {
+        "iata": "SIN",
+        "block": "terminals",
+        "field": "text",
+        "kind": "стиль"
+      },
+      {
+        "iata": "SIN",
+        "block": "storage",
+        "field": "text",
+        "kind": "стиль"
+      }
+    ]
+  },
+  "fr": {
+    "counts": {
+      "смысл": 3,
+      "числа": 1,
+      "стиль": 2
+    },
+    "total": 6,
+    "fields": [
+      {
+        "iata": "ICN",
+        "block": "sleep",
+        "field": "text",
+        "kind": "смысл"
+      },
+      {
+        "iata": "MIA",
+        "block": "lounges",
+        "field": "text",
+        "kind": "смысл"
+      },
+      {
+        "iata": "MIA",
+        "block": "parking",
+        "field": "text",
+        "kind": "числа"
+      },
+      {
+        "iata": "PEK",
+        "block": "taxi",
+        "field": "text",
+        "kind": "смысл"
+      },
+      {
+        "iata": "PVG",
+        "block": "storage",
+        "field": "text",
+        "kind": "стиль"
+      },
+      {
+        "iata": "SIN",
+        "block": "terminals",
+        "field": "text",
+        "kind": "стиль"
+      }
+    ]
+  },
+  "es": {
+    "counts": {
+      "смысл": 18,
+      "стиль": 7,
+      "числа": 1
+    },
+    "total": 26,
+    "fields": [
+      {
+        "iata": "BKK",
+        "block": "taxi",
+        "field": "hint",
+        "kind": "смысл"
+      },
+      {
+        "iata": "BKK",
+        "block": "taxi",
+        "field": "text",
+        "kind": "смысл"
+      },
+      {
+        "iata": "BKK",
+        "block": "storage",
+        "field": "text",
+        "kind": "смысл"
+      },
+      {
+        "iata": "CAN",
+        "block": "taxi",
+        "field": "hint",
+        "kind": "смысл"
+      },
+      {
+        "iata": "CAN",
+        "block": "taxi",
+        "field": "text",
+        "kind": "смысл"
+      },
+      {
+        "iata": "CAN",
+        "block": "storage",
+        "field": "text",
+        "kind": "смысл"
+      },
+      {
+        "iata": "CAN",
+        "block": "sleep",
+        "field": "text",
+        "kind": "смысл"
+      },
+      {
+        "iata": "DEL",
+        "block": "taxi",
+        "field": "text",
+        "kind": "стиль"
+      },
+      {
+        "iata": "DEL",
+        "block": "parking",
+        "field": "text",
+        "kind": "стиль"
+      },
+      {
+        "iata": "DFW",
+        "block": "lounges",
+        "field": "text",
+        "kind": "смысл"
+      },
+      {
+        "iata": "HND",
+        "block": "taxi",
+        "field": "text",
+        "kind": "смысл"
+      },
+      {
+        "iata": "HND",
+        "block": "lounges",
+        "field": "text",
+        "kind": "стиль"
+      },
+      {
+        "iata": "HND",
+        "block": "sleep",
+        "field": "text",
+        "kind": "стиль"
+      },
+      {
+        "iata": "ICN",
+        "block": "sleep",
+        "field": "text",
+        "kind": "смысл"
+      },
+      {
+        "iata": "ICN",
+        "block": "kids",
+        "field": "text",
+        "kind": "смысл"
+      },
+      {
+        "iata": "JFK",
+        "block": "sleep",
+        "field": "text",
+        "kind": "стиль"
+      },
+      {
+        "iata": "LAS",
+        "block": "transport",
+        "field": "text",
+        "kind": "стиль"
+      },
+      {
+        "iata": "LAS",
+        "block": "parking",
+        "field": "text",
+        "kind": "смысл"
+      },
+      {
+        "iata": "MIA",
+        "block": "lounges",
+        "field": "text",
+        "kind": "смысл"
+      },
+      {
+        "iata": "MIA",
+        "block": "parking",
+        "field": "text",
+        "kind": "числа"
+      },
+      {
+        "iata": "PEK",
+        "block": "taxi",
+        "field": "text",
+        "kind": "смысл"
+      },
+      {
+        "iata": "PEK",
+        "block": "storage",
+        "field": "text",
+        "kind": "смысл"
+      },
+      {
+        "iata": "PVG",
+        "block": "taxi",
+        "field": "text",
+        "kind": "смысл"
+      },
+      {
+        "iata": "PVG",
+        "block": "storage",
+        "field": "text",
+        "kind": "смысл"
+      },
+      {
+        "iata": "PVG",
+        "block": "sleep",
+        "field": "text",
+        "kind": "смысл"
+      },
+      {
+        "iata": "SIN",
+        "block": "terminals",
+        "field": "text",
+        "kind": "стиль"
+      }
+    ]
+  },
+  "it": {
+    "counts": {
+      "смысл": 17,
+      "стиль": 6,
+      "числа": 1
+    },
+    "total": 24,
+    "fields": [
+      {
+        "iata": "BKK",
+        "block": "taxi",
+        "field": "hint",
+        "kind": "смысл"
+      },
+      {
+        "iata": "BKK",
+        "block": "taxi",
+        "field": "text",
+        "kind": "смысл"
+      },
+      {
+        "iata": "BKK",
+        "block": "terminals",
+        "field": "hint",
+        "kind": "стиль"
+      },
+      {
+        "iata": "BKK",
+        "block": "storage",
+        "field": "text",
+        "kind": "смысл"
+      },
+      {
+        "iata": "CAN",
+        "block": "transport",
+        "field": "text",
+        "kind": "смысл"
+      },
+      {
+        "iata": "CAN",
+        "block": "taxi",
+        "field": "hint",
+        "kind": "смысл"
+      },
+      {
+        "iata": "CAN",
+        "block": "taxi",
+        "field": "text",
+        "kind": "смысл"
+      },
+      {
+        "iata": "CAN",
+        "block": "storage",
+        "field": "text",
+        "kind": "смысл"
+      },
+      {
+        "iata": "CAN",
+        "block": "sleep",
+        "field": "text",
+        "kind": "смысл"
+      },
+      {
+        "iata": "HND",
+        "block": "lounges",
+        "field": "text",
+        "kind": "стиль"
+      },
+      {
+        "iata": "ICN",
+        "block": "terminals",
+        "field": "text",
+        "kind": "смысл"
+      },
+      {
+        "iata": "ICN",
+        "block": "sleep",
+        "field": "text",
+        "kind": "смысл"
+      },
+      {
+        "iata": "JFK",
+        "block": "transport",
+        "field": "hint",
+        "kind": "стиль"
+      },
+      {
+        "iata": "LAS",
+        "block": "parking",
+        "field": "text",
+        "kind": "смысл"
+      },
+      {
+        "iata": "LHR",
+        "block": "transport",
+        "field": "hint",
+        "kind": "стиль"
+      },
+      {
+        "iata": "MIA",
+        "block": "transport",
+        "field": "hint",
+        "kind": "стиль"
+      },
+      {
+        "iata": "MIA",
+        "block": "lounges",
+        "field": "text",
+        "kind": "смысл"
+      },
+      {
+        "iata": "MIA",
+        "block": "parking",
+        "field": "text",
+        "kind": "числа"
+      },
+      {
+        "iata": "ORD",
+        "block": "lounges",
+        "field": "hint",
+        "kind": "стиль"
+      },
+      {
+        "iata": "PEK",
+        "block": "taxi",
+        "field": "text",
+        "kind": "смысл"
+      },
+      {
+        "iata": "PEK",
+        "block": "storage",
+        "field": "text",
+        "kind": "смысл"
+      },
+      {
+        "iata": "PVG",
+        "block": "taxi",
+        "field": "text",
+        "kind": "смысл"
+      },
+      {
+        "iata": "PVG",
+        "block": "storage",
+        "field": "text",
+        "kind": "смысл"
+      },
+      {
+        "iata": "PVG",
+        "block": "sleep",
+        "field": "text",
+        "kind": "смысл"
+      }
+    ]
+  },
+  "tr": {
+    "counts": {
+      "смысл": 17,
+      "стиль": 12,
+      "числа": 1
+    },
+    "total": 30,
+    "fields": [
+      {
+        "iata": "BKK",
+        "block": "taxi",
+        "field": "hint",
+        "kind": "смысл"
+      },
+      {
+        "iata": "BKK",
+        "block": "taxi",
+        "field": "text",
+        "kind": "смысл"
+      },
+      {
+        "iata": "BKK",
+        "block": "storage",
+        "field": "text",
+        "kind": "смысл"
+      },
+      {
+        "iata": "CAN",
+        "block": "transport",
+        "field": "text",
+        "kind": "смысл"
+      },
+      {
+        "iata": "CAN",
+        "block": "taxi",
+        "field": "hint",
+        "kind": "смысл"
+      },
+      {
+        "iata": "CAN",
+        "block": "taxi",
+        "field": "text",
+        "kind": "смысл"
+      },
+      {
+        "iata": "CAN",
+        "block": "storage",
+        "field": "text",
+        "kind": "смысл"
+      },
+      {
+        "iata": "CAN",
+        "block": "sleep",
+        "field": "text",
+        "kind": "смысл"
+      },
+      {
+        "iata": "DEN",
+        "block": "transport",
+        "field": "text",
+        "kind": "смысл"
+      },
+      {
+        "iata": "DFW",
+        "block": "lounges",
+        "field": "text",
+        "kind": "смысл"
+      },
+      {
+        "iata": "FRA",
+        "block": "sleep",
+        "field": "hint",
+        "kind": "стиль"
+      },
+      {
+        "iata": "FRA",
+        "block": "sleep",
+        "field": "text",
+        "kind": "стиль"
+      },
+      {
+        "iata": "FRA",
+        "block": "parking",
+        "field": "hint",
+        "kind": "стиль"
+      },
+      {
+        "iata": "FRA",
+        "block": "parking",
+        "field": "text",
+        "kind": "стиль"
+      },
+      {
+        "iata": "ICN",
+        "block": "terminals",
+        "field": "text",
+        "kind": "стиль"
+      },
+      {
+        "iata": "ICN",
+        "block": "sleep",
+        "field": "text",
+        "kind": "смысл"
+      },
+      {
+        "iata": "LAS",
+        "block": "parking",
+        "field": "text",
+        "kind": "смысл"
+      },
+      {
+        "iata": "LAX",
+        "block": "taxi",
+        "field": "text",
+        "kind": "стиль"
+      },
+      {
+        "iata": "LHR",
+        "block": "transport",
+        "field": "hint",
+        "kind": "стиль"
+      },
+      {
+        "iata": "MIA",
+        "block": "transport",
+        "field": "hint",
+        "kind": "стиль"
+      },
+      {
+        "iata": "MIA",
+        "block": "lounges",
+        "field": "text",
+        "kind": "стиль"
+      },
+      {
+        "iata": "MIA",
+        "block": "parking",
+        "field": "text",
+        "kind": "числа"
+      },
+      {
+        "iata": "ORD",
+        "block": "lounges",
+        "field": "hint",
+        "kind": "стиль"
+      },
+      {
+        "iata": "PEK",
+        "block": "taxi",
+        "field": "text",
+        "kind": "смысл"
+      },
+      {
+        "iata": "PEK",
+        "block": "storage",
+        "field": "text",
+        "kind": "смысл"
+      },
+      {
+        "iata": "PEK",
+        "block": "kids",
+        "field": "hint",
+        "kind": "стиль"
+      },
+      {
+        "iata": "PVG",
+        "block": "taxi",
+        "field": "text",
+        "kind": "смысл"
+      },
+      {
+        "iata": "PVG",
+        "block": "storage",
+        "field": "text",
+        "kind": "смысл"
+      },
+      {
+        "iata": "PVG",
+        "block": "sleep",
+        "field": "text",
+        "kind": "смысл"
+      },
+      {
+        "iata": "SIN",
+        "block": "terminals",
+        "field": "text",
+        "kind": "стиль"
+      }
+    ]
+  },
+  "zh": {
+    "counts": {
+      "смысл": 19,
+      "стиль": 36,
+      "имена": 3
+    },
+    "total": 58,
+    "fields": [
+      {
+        "iata": "AMS",
+        "block": "storage",
+        "field": "text",
+        "kind": "смысл"
+      },
+      {
+        "iata": "AMS",
+        "block": "sleep",
+        "field": "hint",
+        "kind": "стиль"
+      },
+      {
+        "iata": "BKK",
+        "block": "lounges",
+        "field": "hint",
+        "kind": "стиль"
+      },
+      {
+        "iata": "CAN",
+        "block": "transport",
+        "field": "hint",
+        "kind": "стиль"
+      },
+      {
+        "iata": "CAN",
+        "block": "transport",
+        "field": "text",
+        "kind": "имена"
+      },
+      {
+        "iata": "CAN",
+        "block": "lounges",
+        "field": "hint",
+        "kind": "стиль"
+      },
+      {
+        "iata": "CAN",
+        "block": "wifi",
+        "field": "hint",
+        "kind": "стиль"
+      },
+      {
+        "iata": "CDG",
+        "block": "transport",
+        "field": "hint",
+        "kind": "стиль"
+      },
+      {
+        "iata": "CDG",
+        "block": "storage",
+        "field": "hint",
+        "kind": "стиль"
+      },
+      {
+        "iata": "CDG",
+        "block": "sleep",
+        "field": "hint",
+        "kind": "стиль"
+      },
+      {
+        "iata": "DEL",
+        "block": "transport",
+        "field": "hint",
+        "kind": "стиль"
+      },
+      {
+        "iata": "DEN",
+        "block": "lounges",
+        "field": "hint",
+        "kind": "стиль"
+      },
+      {
+        "iata": "DEN",
+        "block": "kids",
+        "field": "text",
+        "kind": "смысл"
+      },
+      {
+        "iata": "DFW",
+        "block": "transport",
+        "field": "hint",
+        "kind": "стиль"
+      },
+      {
+        "iata": "DFW",
+        "block": "lounges",
+        "field": "text",
+        "kind": "смысл"
+      },
+      {
+        "iata": "DFW",
+        "block": "parking",
+        "field": "hint",
+        "kind": "стиль"
+      },
+      {
+        "iata": "FRA",
+        "block": "lounges",
+        "field": "hint",
+        "kind": "стиль"
+      },
+      {
+        "iata": "FRA",
+        "block": "sleep",
+        "field": "hint",
+        "kind": "стиль"
+      },
+      {
+        "iata": "FRA",
+        "block": "sleep",
+        "field": "text",
+        "kind": "стиль"
+      },
+      {
+        "iata": "FRA",
+        "block": "parking",
+        "field": "hint",
+        "kind": "стиль"
+      },
+      {
+        "iata": "FRA",
+        "block": "parking",
+        "field": "text",
+        "kind": "стиль"
+      },
+      {
+        "iata": "HKG",
+        "block": "lounges",
+        "field": "hint",
+        "kind": "стиль"
+      },
+      {
+        "iata": "HND",
+        "block": "transport",
+        "field": "hint",
+        "kind": "стиль"
+      },
+      {
+        "iata": "HND",
+        "block": "taxi",
+        "field": "text",
+        "kind": "смысл"
+      },
+      {
+        "iata": "HND",
+        "block": "kids",
+        "field": "text",
+        "kind": "смысл"
+      },
+      {
+        "iata": "HND",
+        "block": "wifi",
+        "field": "hint",
+        "kind": "стиль"
+      },
+      {
+        "iata": "ICN",
+        "block": "sleep",
+        "field": "text",
+        "kind": "смысл"
+      },
+      {
+        "iata": "LAS",
+        "block": "transport",
+        "field": "hint",
+        "kind": "стиль"
+      },
+      {
+        "iata": "LAS",
+        "block": "parking",
+        "field": "hint",
+        "kind": "смысл"
+      },
+      {
+        "iata": "LAS",
+        "block": "parking",
+        "field": "text",
+        "kind": "смысл"
+      },
+      {
+        "iata": "LAX",
+        "block": "parking",
+        "field": "hint",
+        "kind": "смысл"
+      },
+      {
+        "iata": "LAX",
+        "block": "parking",
+        "field": "text",
+        "kind": "смысл"
+      },
+      {
+        "iata": "LHR",
+        "block": "transport",
+        "field": "hint",
+        "kind": "стиль"
+      },
+      {
+        "iata": "LHR",
+        "block": "storage",
+        "field": "hint",
+        "kind": "стиль"
+      },
+      {
+        "iata": "LHR",
+        "block": "wifi",
+        "field": "hint",
+        "kind": "стиль"
+      },
+      {
+        "iata": "MCO",
+        "block": "transport",
+        "field": "hint",
+        "kind": "стиль"
+      },
+      {
+        "iata": "MCO",
+        "block": "taxi",
+        "field": "hint",
+        "kind": "стиль"
+      },
+      {
+        "iata": "MCO",
+        "block": "sleep",
+        "field": "hint",
+        "kind": "стиль"
+      },
+      {
+        "iata": "MIA",
+        "block": "transport",
+        "field": "hint",
+        "kind": "стиль"
+      },
+      {
+        "iata": "MIA",
+        "block": "lounges",
+        "field": "hint",
+        "kind": "стиль"
+      },
+      {
+        "iata": "MIA",
+        "block": "lounges",
+        "field": "text",
+        "kind": "стиль"
+      },
+      {
+        "iata": "MIA",
+        "block": "sleep",
+        "field": "hint",
+        "kind": "стиль"
+      },
+      {
+        "iata": "MIA",
+        "block": "parking",
+        "field": "hint",
+        "kind": "смысл"
+      },
+      {
+        "iata": "MIA",
+        "block": "parking",
+        "field": "text",
+        "kind": "смысл"
+      },
+      {
+        "iata": "ORD",
+        "block": "transport",
+        "field": "hint",
+        "kind": "стиль"
+      },
+      {
+        "iata": "ORD",
+        "block": "transport",
+        "field": "text",
+        "kind": "смысл"
+      },
+      {
+        "iata": "ORD",
+        "block": "lounges",
+        "field": "hint",
+        "kind": "стиль"
+      },
+      {
+        "iata": "ORD",
+        "block": "parking",
+        "field": "hint",
+        "kind": "смысл"
+      },
+      {
+        "iata": "ORD",
+        "block": "parking",
+        "field": "text",
+        "kind": "смысл"
+      },
+      {
+        "iata": "PEK",
+        "block": "taxi",
+        "field": "text",
+        "kind": "смысл"
+      },
+      {
+        "iata": "PEK",
+        "block": "parking",
+        "field": "hint",
+        "kind": "смысл"
+      },
+      {
+        "iata": "PEK",
+        "block": "parking",
+        "field": "text",
+        "kind": "смысл"
+      },
+      {
+        "iata": "PVG",
+        "block": "transport",
+        "field": "hint",
+        "kind": "имена"
+      },
+      {
+        "iata": "PVG",
+        "block": "transport",
+        "field": "text",
+        "kind": "имена"
+      },
+      {
+        "iata": "PVG",
+        "block": "storage",
+        "field": "text",
+        "kind": "смысл"
+      },
+      {
+        "iata": "PVG",
+        "block": "wifi",
+        "field": "hint",
+        "kind": "стиль"
+      },
+      {
+        "iata": "SIN",
+        "block": "transport",
+        "field": "hint",
+        "kind": "стиль"
+      },
+      {
+        "iata": "SIN",
+        "block": "terminals",
+        "field": "hint",
+        "kind": "стиль"
+      }
+    ]
+  },
+  "ja": {
+    "counts": {
+      "стиль": 42,
+      "смысл": 24,
+      "числа": 1
+    },
+    "total": 67,
+    "fields": [
+      {
+        "iata": "AMS",
+        "block": "taxi",
+        "field": "hint",
+        "kind": "стиль"
+      },
+      {
+        "iata": "AMS",
+        "block": "sleep",
+        "field": "hint",
+        "kind": "стиль"
+      },
+      {
+        "iata": "BCN",
+        "block": "transport",
+        "field": "text",
+        "kind": "смысл"
+      },
+      {
+        "iata": "BCN",
+        "block": "taxi",
+        "field": "text",
+        "kind": "смысл"
+      },
+      {
+        "iata": "BKK",
+        "block": "taxi",
+        "field": "hint",
+        "kind": "смысл"
+      },
+      {
+        "iata": "BKK",
+        "block": "taxi",
+        "field": "text",
+        "kind": "смысл"
+      },
+      {
+        "iata": "BKK",
+        "block": "lounges",
+        "field": "hint",
+        "kind": "стиль"
+      },
+      {
+        "iata": "BKK",
+        "block": "storage",
+        "field": "hint",
+        "kind": "стиль"
+      },
+      {
+        "iata": "BKK",
+        "block": "storage",
+        "field": "text",
+        "kind": "смысл"
+      },
+      {
+        "iata": "CAN",
+        "block": "transport",
+        "field": "hint",
+        "kind": "стиль"
+      },
+      {
+        "iata": "CAN",
+        "block": "transport",
+        "field": "text",
+        "kind": "смысл"
+      },
+      {
+        "iata": "CAN",
+        "block": "taxi",
+        "field": "hint",
+        "kind": "смысл"
+      },
+      {
+        "iata": "CAN",
+        "block": "taxi",
+        "field": "text",
+        "kind": "смысл"
+      },
+      {
+        "iata": "CAN",
+        "block": "lounges",
+        "field": "hint",
+        "kind": "стиль"
+      },
+      {
+        "iata": "CAN",
+        "block": "storage",
+        "field": "text",
+        "kind": "смысл"
+      },
+      {
+        "iata": "CAN",
+        "block": "sleep",
+        "field": "text",
+        "kind": "смысл"
+      },
+      {
+        "iata": "CAN",
+        "block": "wifi",
+        "field": "hint",
+        "kind": "стиль"
+      },
+      {
+        "iata": "CDG",
+        "block": "transport",
+        "field": "hint",
+        "kind": "стиль"
+      },
+      {
+        "iata": "CDG",
+        "block": "storage",
+        "field": "hint",
+        "kind": "стиль"
+      },
+      {
+        "iata": "CDG",
+        "block": "storage",
+        "field": "text",
+        "kind": "смысл"
+      },
+      {
+        "iata": "CDG",
+        "block": "sleep",
+        "field": "hint",
+        "kind": "стиль"
+      },
+      {
+        "iata": "DEL",
+        "block": "transport",
+        "field": "hint",
+        "kind": "стиль"
+      },
+      {
+        "iata": "DEL",
+        "block": "taxi",
+        "field": "text",
+        "kind": "смысл"
+      },
+      {
+        "iata": "DEN",
+        "block": "lounges",
+        "field": "hint",
+        "kind": "стиль"
+      },
+      {
+        "iata": "DFW",
+        "block": "transport",
+        "field": "hint",
+        "kind": "стиль"
+      },
+      {
+        "iata": "DFW",
+        "block": "parking",
+        "field": "hint",
+        "kind": "стиль"
+      },
+      {
+        "iata": "FRA",
+        "block": "transport",
+        "field": "text",
+        "kind": "смысл"
+      },
+      {
+        "iata": "FRA",
+        "block": "lounges",
+        "field": "hint",
+        "kind": "стиль"
+      },
+      {
+        "iata": "FRA",
+        "block": "sleep",
+        "field": "hint",
+        "kind": "стиль"
+      },
+      {
+        "iata": "FRA",
+        "block": "sleep",
+        "field": "text",
+        "kind": "стиль"
+      },
+      {
+        "iata": "FRA",
+        "block": "parking",
+        "field": "hint",
+        "kind": "стиль"
+      },
+      {
+        "iata": "FRA",
+        "block": "parking",
+        "field": "text",
+        "kind": "стиль"
+      },
+      {
+        "iata": "HKG",
+        "block": "transport",
+        "field": "hint",
+        "kind": "стиль"
+      },
+      {
+        "iata": "HKG",
+        "block": "lounges",
+        "field": "hint",
+        "kind": "стиль"
+      },
+      {
+        "iata": "ICN",
+        "block": "sleep",
+        "field": "hint",
+        "kind": "стиль"
+      },
+      {
+        "iata": "ICN",
+        "block": "sleep",
+        "field": "text",
+        "kind": "смысл"
+      },
+      {
+        "iata": "KUL",
+        "block": "transport",
+        "field": "hint",
+        "kind": "стиль"
+      },
+      {
+        "iata": "LAS",
+        "block": "parking",
+        "field": "hint",
+        "kind": "стиль"
+      },
+      {
+        "iata": "LAS",
+        "block": "parking",
+        "field": "text",
+        "kind": "смысл"
+      },
+      {
+        "iata": "LHR",
+        "block": "transport",
+        "field": "hint",
+        "kind": "стиль"
+      },
+      {
+        "iata": "LHR",
+        "block": "storage",
+        "field": "hint",
+        "kind": "стиль"
+      },
+      {
+        "iata": "MAD",
+        "block": "taxi",
+        "field": "text",
+        "kind": "смысл"
+      },
+      {
+        "iata": "MCO",
+        "block": "transport",
+        "field": "hint",
+        "kind": "стиль"
+      },
+      {
+        "iata": "MCO",
+        "block": "taxi",
+        "field": "hint",
+        "kind": "стиль"
+      },
+      {
+        "iata": "MCO",
+        "block": "sleep",
+        "field": "hint",
+        "kind": "стиль"
+      },
+      {
+        "iata": "MCO",
+        "block": "kids",
+        "field": "hint",
+        "kind": "стиль"
+      },
+      {
+        "iata": "MIA",
+        "block": "transport",
+        "field": "hint",
+        "kind": "стиль"
+      },
+      {
+        "iata": "MIA",
+        "block": "lounges",
+        "field": "hint",
+        "kind": "стиль"
+      },
+      {
+        "iata": "MIA",
+        "block": "lounges",
+        "field": "text",
+        "kind": "смысл"
+      },
+      {
+        "iata": "MIA",
+        "block": "sleep",
+        "field": "hint",
+        "kind": "стиль"
+      },
+      {
+        "iata": "MIA",
+        "block": "parking",
+        "field": "text",
+        "kind": "числа"
+      },
+      {
+        "iata": "ORD",
+        "block": "transport",
+        "field": "hint",
+        "kind": "стиль"
+      },
+      {
+        "iata": "ORD",
+        "block": "lounges",
+        "field": "hint",
+        "kind": "стиль"
+      },
+      {
+        "iata": "ORD",
+        "block": "sleep",
+        "field": "hint",
+        "kind": "стиль"
+      },
+      {
+        "iata": "ORD",
+        "block": "kids",
+        "field": "hint",
+        "kind": "стиль"
+      },
+      {
+        "iata": "PEK",
+        "block": "transport",
+        "field": "hint",
+        "kind": "стиль"
+      },
+      {
+        "iata": "PEK",
+        "block": "taxi",
+        "field": "text",
+        "kind": "смысл"
+      },
+      {
+        "iata": "PEK",
+        "block": "storage",
+        "field": "text",
+        "kind": "смысл"
+      },
+      {
+        "iata": "PVG",
+        "block": "transport",
+        "field": "hint",
+        "kind": "стиль"
+      },
+      {
+        "iata": "PVG",
+        "block": "taxi",
+        "field": "text",
+        "kind": "смысл"
+      },
+      {
+        "iata": "PVG",
+        "block": "storage",
+        "field": "text",
+        "kind": "смысл"
+      },
+      {
+        "iata": "PVG",
+        "block": "sleep",
+        "field": "text",
+        "kind": "смысл"
+      },
+      {
+        "iata": "PVG",
+        "block": "wifi",
+        "field": "hint",
+        "kind": "стиль"
+      },
+      {
+        "iata": "SIN",
+        "block": "transport",
+        "field": "hint",
+        "kind": "стиль"
+      },
+      {
+        "iata": "SIN",
+        "block": "terminals",
+        "field": "hint",
+        "kind": "стиль"
+      },
+      {
+        "iata": "SIN",
+        "block": "lounges",
+        "field": "text",
+        "kind": "смысл"
+      },
+      {
+        "iata": "SIN",
+        "block": "sleep",
+        "field": "text",
+        "kind": "смысл"
+      }
+    ]
+  },
+  "ko": {
+    "counts": {
+      "стиль": 47,
+      "смысл": 22,
+      "имена": 4,
+      "числа": 1
+    },
+    "total": 74,
+    "fields": [
+      {
+        "iata": "AMS",
+        "block": "transport",
+        "field": "hint",
+        "kind": "стиль"
+      },
+      {
+        "iata": "AMS",
+        "block": "taxi",
+        "field": "hint",
+        "kind": "стиль"
+      },
+      {
+        "iata": "AMS",
+        "block": "storage",
+        "field": "text",
+        "kind": "стиль"
+      },
+      {
+        "iata": "AMS",
+        "block": "sleep",
+        "field": "hint",
+        "kind": "стиль"
+      },
+      {
+        "iata": "BKK",
+        "block": "taxi",
+        "field": "hint",
+        "kind": "смысл"
+      },
+      {
+        "iata": "BKK",
+        "block": "taxi",
+        "field": "text",
+        "kind": "смысл"
+      },
+      {
+        "iata": "BKK",
+        "block": "lounges",
+        "field": "hint",
+        "kind": "стиль"
+      },
+      {
+        "iata": "BKK",
+        "block": "storage",
+        "field": "hint",
+        "kind": "стиль"
+      },
+      {
+        "iata": "BKK",
+        "block": "storage",
+        "field": "text",
+        "kind": "смысл"
+      },
+      {
+        "iata": "CAN",
+        "block": "transport",
+        "field": "hint",
+        "kind": "стиль"
+      },
+      {
+        "iata": "CAN",
+        "block": "transport",
+        "field": "text",
+        "kind": "смысл"
+      },
+      {
+        "iata": "CAN",
+        "block": "taxi",
+        "field": "hint",
+        "kind": "смысл"
+      },
+      {
+        "iata": "CAN",
+        "block": "taxi",
+        "field": "text",
+        "kind": "смысл"
+      },
+      {
+        "iata": "CAN",
+        "block": "lounges",
+        "field": "hint",
+        "kind": "стиль"
+      },
+      {
+        "iata": "CAN",
+        "block": "storage",
+        "field": "text",
+        "kind": "смысл"
+      },
+      {
+        "iata": "CAN",
+        "block": "sleep",
+        "field": "text",
+        "kind": "смысл"
+      },
+      {
+        "iata": "CAN",
+        "block": "wifi",
+        "field": "hint",
+        "kind": "стиль"
+      },
+      {
+        "iata": "CDG",
+        "block": "transport",
+        "field": "hint",
+        "kind": "стиль"
+      },
+      {
+        "iata": "CDG",
+        "block": "storage",
+        "field": "hint",
+        "kind": "стиль"
+      },
+      {
+        "iata": "CDG",
+        "block": "sleep",
+        "field": "hint",
+        "kind": "стиль"
+      },
+      {
+        "iata": "DEL",
+        "block": "transport",
+        "field": "hint",
+        "kind": "стиль"
+      },
+      {
+        "iata": "DEN",
+        "block": "lounges",
+        "field": "hint",
+        "kind": "стиль"
+      },
+      {
+        "iata": "DFW",
+        "block": "transport",
+        "field": "hint",
+        "kind": "стиль"
+      },
+      {
+        "iata": "DFW",
+        "block": "lounges",
+        "field": "text",
+        "kind": "смысл"
+      },
+      {
+        "iata": "DFW",
+        "block": "kids",
+        "field": "text",
+        "kind": "смысл"
+      },
+      {
+        "iata": "DFW",
+        "block": "parking",
+        "field": "hint",
+        "kind": "стиль"
+      },
+      {
+        "iata": "FRA",
+        "block": "transport",
+        "field": "hint",
+        "kind": "стиль"
+      },
+      {
+        "iata": "FRA",
+        "block": "lounges",
+        "field": "hint",
+        "kind": "стиль"
+      },
+      {
+        "iata": "FRA",
+        "block": "sleep",
+        "field": "hint",
+        "kind": "стиль"
+      },
+      {
+        "iata": "FRA",
+        "block": "sleep",
+        "field": "text",
+        "kind": "стиль"
+      },
+      {
+        "iata": "FRA",
+        "block": "parking",
+        "field": "hint",
+        "kind": "стиль"
+      },
+      {
+        "iata": "FRA",
+        "block": "parking",
+        "field": "text",
+        "kind": "стиль"
+      },
+      {
+        "iata": "HKG",
+        "block": "transport",
+        "field": "hint",
+        "kind": "стиль"
+      },
+      {
+        "iata": "HKG",
+        "block": "lounges",
+        "field": "hint",
+        "kind": "стиль"
+      },
+      {
+        "iata": "HND",
+        "block": "transport",
+        "field": "hint",
+        "kind": "стиль"
+      },
+      {
+        "iata": "HND",
+        "block": "taxi",
+        "field": "text",
+        "kind": "смысл"
+      },
+      {
+        "iata": "HND",
+        "block": "lounges",
+        "field": "text",
+        "kind": "стиль"
+      },
+      {
+        "iata": "HND",
+        "block": "wifi",
+        "field": "hint",
+        "kind": "стиль"
+      },
+      {
+        "iata": "ICN",
+        "block": "taxi",
+        "field": "text",
+        "kind": "имена"
+      },
+      {
+        "iata": "ICN",
+        "block": "terminals",
+        "field": "text",
+        "kind": "стиль"
+      },
+      {
+        "iata": "ICN",
+        "block": "lounges",
+        "field": "text",
+        "kind": "имена"
+      },
+      {
+        "iata": "ICN",
+        "block": "sleep",
+        "field": "hint",
+        "kind": "имена"
+      },
+      {
+        "iata": "ICN",
+        "block": "sleep",
+        "field": "text",
+        "kind": "смысл"
+      },
+      {
+        "iata": "ICN",
+        "block": "kids",
+        "field": "text",
+        "kind": "имена"
+      },
+      {
+        "iata": "KUL",
+        "block": "transport",
+        "field": "hint",
+        "kind": "стиль"
+      },
+      {
+        "iata": "LAS",
+        "block": "transport",
+        "field": "hint",
+        "kind": "стиль"
+      },
+      {
+        "iata": "LAS",
+        "block": "parking",
+        "field": "hint",
+        "kind": "стиль"
+      },
+      {
+        "iata": "LAS",
+        "block": "parking",
+        "field": "text",
+        "kind": "смысл"
+      },
+      {
+        "iata": "LAX",
+        "block": "taxi",
+        "field": "text",
+        "kind": "смысл"
+      },
+      {
+        "iata": "LHR",
+        "block": "storage",
+        "field": "hint",
+        "kind": "стиль"
+      },
+      {
+        "iata": "MAD",
+        "block": "transport",
+        "field": "text",
+        "kind": "смысл"
+      },
+      {
+        "iata": "MCO",
+        "block": "transport",
+        "field": "hint",
+        "kind": "стиль"
+      },
+      {
+        "iata": "MCO",
+        "block": "taxi",
+        "field": "hint",
+        "kind": "стиль"
+      },
+      {
+        "iata": "MCO",
+        "block": "sleep",
+        "field": "hint",
+        "kind": "стиль"
+      },
+      {
+        "iata": "MCO",
+        "block": "kids",
+        "field": "hint",
+        "kind": "стиль"
+      },
+      {
+        "iata": "MCO",
+        "block": "kids",
+        "field": "text",
+        "kind": "смысл"
+      },
+      {
+        "iata": "MIA",
+        "block": "transport",
+        "field": "hint",
+        "kind": "стиль"
+      },
+      {
+        "iata": "MIA",
+        "block": "lounges",
+        "field": "hint",
+        "kind": "стиль"
+      },
+      {
+        "iata": "MIA",
+        "block": "lounges",
+        "field": "text",
+        "kind": "смысл"
+      },
+      {
+        "iata": "MIA",
+        "block": "sleep",
+        "field": "hint",
+        "kind": "стиль"
+      },
+      {
+        "iata": "MIA",
+        "block": "parking",
+        "field": "hint",
+        "kind": "стиль"
+      },
+      {
+        "iata": "MIA",
+        "block": "parking",
+        "field": "text",
+        "kind": "числа"
+      },
+      {
+        "iata": "ORD",
+        "block": "transport",
+        "field": "hint",
+        "kind": "стиль"
+      },
+      {
+        "iata": "ORD",
+        "block": "lounges",
+        "field": "hint",
+        "kind": "стиль"
+      },
+      {
+        "iata": "PEK",
+        "block": "transport",
+        "field": "hint",
+        "kind": "стиль"
+      },
+      {
+        "iata": "PEK",
+        "block": "taxi",
+        "field": "text",
+        "kind": "смысл"
+      },
+      {
+        "iata": "PEK",
+        "block": "storage",
+        "field": "text",
+        "kind": "смысл"
+      },
+      {
+        "iata": "PEK",
+        "block": "parking",
+        "field": "hint",
+        "kind": "стиль"
+      },
+      {
+        "iata": "PVG",
+        "block": "taxi",
+        "field": "text",
+        "kind": "смысл"
+      },
+      {
+        "iata": "PVG",
+        "block": "storage",
+        "field": "text",
+        "kind": "смысл"
+      },
+      {
+        "iata": "PVG",
+        "block": "sleep",
+        "field": "text",
+        "kind": "смысл"
+      },
+      {
+        "iata": "PVG",
+        "block": "wifi",
+        "field": "hint",
+        "kind": "стиль"
+      },
+      {
+        "iata": "SIN",
+        "block": "transport",
+        "field": "hint",
+        "kind": "стиль"
+      },
+      {
+        "iata": "SIN",
+        "block": "terminals",
+        "field": "hint",
+        "kind": "стиль"
+      }
+    ]
+  },
+  "ar": {
+    "counts": {
+      "смысл": 21,
+      "стиль": 21,
+      "числа": 1
+    },
+    "total": 43,
+    "fields": [
+      {
+        "iata": "BKK",
+        "block": "taxi",
+        "field": "hint",
+        "kind": "смысл"
+      },
+      {
+        "iata": "BKK",
+        "block": "taxi",
+        "field": "text",
+        "kind": "смысл"
+      },
+      {
+        "iata": "BKK",
+        "block": "lounges",
+        "field": "text",
+        "kind": "стиль"
+      },
+      {
+        "iata": "BKK",
+        "block": "storage",
+        "field": "hint",
+        "kind": "смысл"
+      },
+      {
+        "iata": "BKK",
+        "block": "storage",
+        "field": "text",
+        "kind": "смысл"
+      },
+      {
+        "iata": "CAN",
+        "block": "transport",
+        "field": "text",
+        "kind": "смысл"
+      },
+      {
+        "iata": "CAN",
+        "block": "taxi",
+        "field": "hint",
+        "kind": "смысл"
+      },
+      {
+        "iata": "CAN",
+        "block": "taxi",
+        "field": "text",
+        "kind": "смысл"
+      },
+      {
+        "iata": "CAN",
+        "block": "storage",
+        "field": "text",
+        "kind": "смысл"
+      },
+      {
+        "iata": "CAN",
+        "block": "sleep",
+        "field": "text",
+        "kind": "смысл"
+      },
+      {
+        "iata": "DEN",
+        "block": "transport",
+        "field": "text",
+        "kind": "смысл"
+      },
+      {
+        "iata": "DEN",
+        "block": "lounges",
+        "field": "text",
+        "kind": "стиль"
+      },
+      {
+        "iata": "DEN",
+        "block": "kids",
+        "field": "text",
+        "kind": "стиль"
+      },
+      {
+        "iata": "DEN",
+        "block": "wifi",
+        "field": "text",
+        "kind": "стиль"
+      },
+      {
+        "iata": "DFW",
+        "block": "lounges",
+        "field": "text",
+        "kind": "смысл"
+      },
+      {
+        "iata": "DFW",
+        "block": "kids",
+        "field": "text",
+        "kind": "стиль"
+      },
+      {
+        "iata": "FRA",
+        "block": "taxi",
+        "field": "hint",
+        "kind": "стиль"
+      },
+      {
+        "iata": "FRA",
+        "block": "sleep",
+        "field": "hint",
+        "kind": "стиль"
+      },
+      {
+        "iata": "FRA",
+        "block": "sleep",
+        "field": "text",
+        "kind": "стиль"
+      },
+      {
+        "iata": "FRA",
+        "block": "parking",
+        "field": "hint",
+        "kind": "стиль"
+      },
+      {
+        "iata": "FRA",
+        "block": "parking",
+        "field": "text",
+        "kind": "стиль"
+      },
+      {
+        "iata": "HND",
+        "block": "lounges",
+        "field": "text",
+        "kind": "стиль"
+      },
+      {
+        "iata": "ICN",
+        "block": "terminals",
+        "field": "text",
+        "kind": "стиль"
+      },
+      {
+        "iata": "ICN",
+        "block": "sleep",
+        "field": "text",
+        "kind": "смысл"
+      },
+      {
+        "iata": "JFK",
+        "block": "transport",
+        "field": "hint",
+        "kind": "стиль"
+      },
+      {
+        "iata": "KUL",
+        "block": "transport",
+        "field": "hint",
+        "kind": "стиль"
+      },
+      {
+        "iata": "LAS",
+        "block": "parking",
+        "field": "hint",
+        "kind": "смысл"
+      },
+      {
+        "iata": "LAS",
+        "block": "parking",
+        "field": "text",
+        "kind": "смысл"
+      },
+      {
+        "iata": "LHR",
+        "block": "transport",
+        "field": "hint",
+        "kind": "стиль"
+      },
+      {
+        "iata": "MIA",
+        "block": "transport",
+        "field": "hint",
+        "kind": "стиль"
+      },
+      {
+        "iata": "MIA",
+        "block": "lounges",
+        "field": "text",
+        "kind": "стиль"
+      },
+      {
+        "iata": "MIA",
+        "block": "kids",
+        "field": "text",
+        "kind": "стиль"
+      },
+      {
+        "iata": "MIA",
+        "block": "parking",
+        "field": "hint",
+        "kind": "смысл"
+      },
+      {
+        "iata": "MIA",
+        "block": "parking",
+        "field": "text",
+        "kind": "числа"
+      },
+      {
+        "iata": "ORD",
+        "block": "transport",
+        "field": "hint",
+        "kind": "стиль"
+      },
+      {
+        "iata": "ORD",
+        "block": "lounges",
+        "field": "hint",
+        "kind": "стиль"
+      },
+      {
+        "iata": "PEK",
+        "block": "taxi",
+        "field": "text",
+        "kind": "смысл"
+      },
+      {
+        "iata": "PEK",
+        "block": "storage",
+        "field": "text",
+        "kind": "смысл"
+      },
+      {
+        "iata": "PEK",
+        "block": "parking",
+        "field": "hint",
+        "kind": "смысл"
+      },
+      {
+        "iata": "PVG",
+        "block": "taxi",
+        "field": "text",
+        "kind": "смысл"
+      },
+      {
+        "iata": "PVG",
+        "block": "storage",
+        "field": "text",
+        "kind": "смысл"
+      },
+      {
+        "iata": "PVG",
+        "block": "sleep",
+        "field": "text",
+        "kind": "смысл"
+      },
+      {
+        "iata": "SIN",
+        "block": "terminals",
+        "field": "text",
+        "kind": "стиль"
+      }
+    ]
+  },
+  "hi": {
+    "counts": {
+      "смысл": 13,
+      "стиль": 12,
+      "имена": 1,
+      "числа": 1
+    },
+    "total": 27,
+    "fields": [
+      {
+        "iata": "BKK",
+        "block": "taxi",
+        "field": "hint",
+        "kind": "смысл"
+      },
+      {
+        "iata": "BKK",
+        "block": "taxi",
+        "field": "text",
+        "kind": "смысл"
+      },
+      {
+        "iata": "BKK",
+        "block": "storage",
+        "field": "text",
+        "kind": "смысл"
+      },
+      {
+        "iata": "CAN",
+        "block": "lounges",
+        "field": "text",
+        "kind": "смысл"
+      },
+      {
+        "iata": "CDG",
+        "block": "taxi",
+        "field": "text",
+        "kind": "стиль"
+      },
+      {
+        "iata": "DEN",
+        "block": "transport",
+        "field": "text",
+        "kind": "смысл"
+      },
+      {
+        "iata": "DFW",
+        "block": "lounges",
+        "field": "text",
+        "kind": "смысл"
+      },
+      {
+        "iata": "FRA",
+        "block": "sleep",
+        "field": "hint",
+        "kind": "стиль"
+      },
+      {
+        "iata": "FRA",
+        "block": "sleep",
+        "field": "text",
+        "kind": "стиль"
+      },
+      {
+        "iata": "FRA",
+        "block": "parking",
+        "field": "hint",
+        "kind": "стиль"
+      },
+      {
+        "iata": "FRA",
+        "block": "parking",
+        "field": "text",
+        "kind": "стиль"
+      },
+      {
+        "iata": "HND",
+        "block": "taxi",
+        "field": "text",
+        "kind": "смысл"
+      },
+      {
+        "iata": "ICN",
+        "block": "sleep",
+        "field": "text",
+        "kind": "смысл"
+      },
+      {
+        "iata": "JFK",
+        "block": "transport",
+        "field": "hint",
+        "kind": "стиль"
+      },
+      {
+        "iata": "JFK",
+        "block": "sleep",
+        "field": "text",
+        "kind": "стиль"
+      },
+      {
+        "iata": "LAS",
+        "block": "parking",
+        "field": "text",
+        "kind": "смысл"
+      },
+      {
+        "iata": "LHR",
+        "block": "transport",
+        "field": "hint",
+        "kind": "стиль"
+      },
+      {
+        "iata": "LHR",
+        "block": "transport",
+        "field": "text",
+        "kind": "имена"
+      },
+      {
+        "iata": "MIA",
+        "block": "transport",
+        "field": "hint",
+        "kind": "стиль"
+      },
+      {
+        "iata": "MIA",
+        "block": "lounges",
+        "field": "text",
+        "kind": "стиль"
+      },
+      {
+        "iata": "MIA",
+        "block": "parking",
+        "field": "text",
+        "kind": "числа"
+      },
+      {
+        "iata": "ORD",
+        "block": "transport",
+        "field": "text",
+        "kind": "смысл"
+      },
+      {
+        "iata": "ORD",
+        "block": "lounges",
+        "field": "hint",
+        "kind": "стиль"
+      },
+      {
+        "iata": "ORD",
+        "block": "kids",
+        "field": "text",
+        "kind": "смысл"
+      },
+      {
+        "iata": "PEK",
+        "block": "taxi",
+        "field": "text",
+        "kind": "смысл"
+      },
+      {
+        "iata": "PVG",
+        "block": "storage",
+        "field": "text",
+        "kind": "смысл"
+      },
+      {
+        "iata": "SIN",
+        "block": "terminals",
+        "field": "text",
+        "kind": "стиль"
+      }
+    ]
+  }
+}

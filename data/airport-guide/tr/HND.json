@@ -1,0 +1,45 @@
+{
+ "iata": "HND",
+ "blocks": {
+  "transport": {
+   "title": "Nasıl gidilir",
+   "hint": "Keikyu ve Tokyo Monorail",
+   "text": "Havalimanı doğrudan Keikyu hattına ve Tokyo Monorail'e bağlıdır. Yolculuk süreleri: Shinagawa'ya yaklaşık 15 dakika, Hamamatsuchō'ya yaklaşık 20, Tokyo Garı'na ve Yokohama'ya yaklaşık 30, Ueno'ya ve Asakusa'ya yaklaşık 40, Shibuya'ya yaklaşık 45, Shinjuku'ya yaklaşık 50 dakika. Terminal 1'de iki hattın da peronları Kat B1'de. Terminal 3'te Tokyo merkezi ve Yokohama yönündeki Keikyu turnikeleri Kat 2'deki geliş salonunda, Tokyo Monorail turnikeleri Kat 2'de (geliş) ve Kat 3'te (gidiş)."
+  },
+  "taxi": {
+   "title": "Taksi",
+   "hint": "Kat 1, sabit tarife",
+   "text": "Taksi durakları Terminal 1 ve 2'de Kat 1'de (geliş salonu); Kawasaki, Yokohama, Yokosuka ve Miura yolculukları ile diğer yönler için ayrı duraklar var; Terminal 3'te 21 numaralı durak, tabelaları izleyerek Kat 1'e inilir. Uygulamayla veya önceden çağrılan taksiler Kat 2'ye (gidiş) gelir: Terminal 1'de 7 numaralı çıkışın önüne, Terminal 2'de 2 numaralı çıkışın önüne. Haneda, Tokyo ve Kanagawa prefektörlüğü arasında bazı bölgeler hariç sabit tarife uygulanır; ücretli yollar ayrıca ödenir."
+  },
+  "terminals": {
+   "title": "Terminaller",
+   "hint": "4 dakikada bir ücretsiz otobüs",
+   "text": "Terminaller arasında ücretsiz servis otobüsü çalışır: 5:00'ten 20:00'ye kadar 4 dakikada bir, 20:00'den 0:00'a kadar 8 dakikada bir; terminale göre ilk seferler 4:47–5:04, son seferler 1:15–1:32 arası. Terminal 1'de durak Kat 1'de (geliş salonu), 8 numaralı durak. İç hatlardan dış hatlara veya dış hatlar arasında aktarma yapan yolculara danışma kontuarlarında (Terminal 1 ve 2'de Kat B1, Terminal 3'te Kat 2) pasaport ve biniş kartı gösterilerek Terminal 1 ile 3 ve 2 ile 3 arasında Keikyu veya Tokyo Monorail için ücretsiz bilet verilir."
+  },
+  "lounges": {
+   "title": "Business salonları",
+   "hint": "TIAT LOUNGE, gece gündüz",
+   "text": "Terminal 3'te Kat 4'teki kapılar bölgesinde bulunan TIAT LOUNGE gece gündüz açık, en fazla 3 saat kalınabilir: açık büfe, alkollü dahil içecekler, duş. Giriş havayolu kuponlarıyla veya aynı günün biniş kartıyla birlikte kendi adına uygun bir kartla, aksi halde ücretli: yetişkinler 4.400 ¥, 4–12 yaş çocuklar 2.200 ¥, 0–3 yaş ücretsiz; Priority Pass ile 1:00'den 5:00'e kadar. Terminal 1'de Kat 2'de iç hatlar gidiş alanında POWER LOUNGE SOUTH (6:00–21:00) ve NORTH (6:00–20:30), yetişkinler 1.320 ¥."
+  },
+  "storage": {
+   "title": "Emanet",
+   "hint": "800 ¥'den, T3'te gece gündüz",
+   "text": "Bagaj 2 haftaya kadar saklanır; üç boyutun toplamı en fazla 300 cm, ağırlık en fazla 30 kg. Bagaj parçası başına fiyat: S (120 cm'ye kadar) 800 ¥, M (120–199 cm) 1.000 ¥, L (200–300 cm) 2.000 ¥; kayak ve sörf tahtası da kabul edilir. Terminal 3'te emanet Kat 2'deki geliş salonunda gece gündüz açık (fiyat 24 saat için), Terminal 1'de Kat B1'de (güney kısmı), 8:00'den 19:30'a kadar (fiyat günlük)."
+  },
+  "sleep": {
+   "title": "Nerede uyunur",
+   "hint": "Her terminalde otel",
+   "text": "Her terminalde gece gündüz açık bir otel var: Terminal 1'de First Cabin Haneda Terminal 1 (Kat 1, geliş salonu), Terminal 2'de Haneda Excel Hotel Tokyu (Kat 2, kuzey kısmı), Terminal 3'te Kat 3'teki gidiş salonunda The Royal Park Hotel Tokyo Haneda ve aynı kattaki güvenlik kontrolü sonrası alanda onun transit bölümü."
+  },
+  "kids": {
+   "title": "Çocukla",
+   "hint": "Kid’s Space çocuk köşeleri",
+   "text": "Kid’s Space çocuk köşeleri gidiş salonlarında ve biniş kapılarının yanında: Terminal 1'de Kat 2'de güvenlik kontrolünden önce ve kontrolden sonra üç yerde; Terminal 2'de Kat 2'de kontrolden önce, Kat 2'de kontrolden sonra (kuzey ve dış hatlar kısımları) ve Kat 1'deki otobüsle biniş salonunda; Terminal 3'te Kat 3'te kontrolden sonra, kuzey ve güney kısımlarında. Yetişkinin çocuğun yanında kalması gerekir."
+  },
+  "wifi": {
+   "title": "Wi‑Fi",
+   "hint": "Ücretsiz HANEDA-FREE-WIFI ağı",
+   "text": "Ücretsiz Wi‑Fi: “HANEDA-FREE-WIFI” ağı seçilir, tarayıcı açılır ve ekrandaki talimatlar izlenir. Ağ mağazalarda çalışmaz (business salonları hariç), bazı alanlarda bağlanmak zor olabilir; sunulan hizmetler terminale göre farklılık gösterir."
+  }
+ }
+}

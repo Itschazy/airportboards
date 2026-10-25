@@ -1,0 +1,20 @@
+{
+ "iata": "MAD",
+ "blocks": {
+  "transport": {
+   "title": "Nasıl gidilir",
+   "hint": "Metro, 8 numaralı hat",
+   "text": "Nuevos Ministerios — Aeropuerto T4 arasındaki 8 numaralı metro hattı bayramlar dahil her gün 06:05'ten 02:00'ye kadar çalışır. Havalimanında iki istasyon var: Terminal 2'de Kat 1'de Aeropuerto T1-T2-T3 ve T4 terminalinde Kat −1'de Aeropuerto T4. A bölgesi tek yolculuk bileti istasyon sayısına göre €1,50 ile €2 arası, artı €3 havalimanı ek ücreti."
+  },
+  "taxi": {
+   "title": "Taksi",
+   "hint": "M-30 içinde sabit €33",
+   "text": "Taksi durakları T1, T2 ve T4 terminallerinin geliş alanlarının önünde, Kat 0'da; taksiye yalnızca duraktan binilmelidir. Tarife 4: başlangıcı veya bitişi M-30 çevre yolunun içinde olan havalimanından veya havalimanına yolculuklar için gece gündüz sabit €33, ek ücret yok. Tarife 3 (havalimanından yolculuklar için asgari): açılış €22, asgari mesafe 9 km, kilometresi €1,40, saati €27,00."
+  },
+  "wifi": {
+   "title": "Wi‑Fi",
+   "hint": "Ücretsiz, süre sınırı yok",
+   "text": "Airport Free Wifi Aena ağı: giriş sayfasında e-posta adresiyle misafir olarak veya Aena Club hesabıyla giriş yapılır. E-postayı onaylamak için 15 dakika ücretsiz internet verilir, onaydan sonra erişim süre sınırı olmadan."
+  }
+ }
+}

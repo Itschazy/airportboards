@@ -1,0 +1,25 @@
+{
+ "iata": "LAX",
+ "blocks": {
+  "transport": {
+   "title": "Nasıl gidilir",
+   "hint": "FlyAway otobüsleri",
+   "text": "LAX FlyAway otobüsleri haftanın yedi günü tarifeli olarak her terminal ile Van Nuys ve Union Station garı arasında çalışır. Havalimanından otobüse her terminalin önünde, geliş alt katında, mavi FlyAway direklerinin yanında binilir."
+  },
+  "taxi": {
+   "title": "Taksi",
+   "hint": "Terminal 1 yanında LAX-it durağı",
+   "text": "Taksiler yolcuları üç yerden alır. Terminal 1'in yanındaki LAX-it alanı: tabelaları izleyerek yürüyerek ya da geliş alt katındaki yeşil tabelalara 3–5 dakikada bir gelen ücretsiz LAX-it servisiyle gidilir. Terminal B ve 3 yolcularını taksiler bu iki terminal arasındaki P3 otoparkının içinde, Terminal 7 ve 8 yolcularını Terminal 7'nin uzak ucunda bagaj teslim alanının yanında bekler. Havalimanından yalnızca Los Angeles ulaştırma dairesinin mührünü taşıyan taksiler yolcu taşıyabilir; taksi sevk merkezi: 310-646-9177."
+  },
+  "parking": {
+   "title": "Otopark",
+   "hint": "24 saati $20'den",
+   "text": "Terminallerin karşısında 7.000'den fazla yerli sekiz otopark: ilk 10 dakika ücretsiz, ilk saat $9 (P3 ve P4'te $11), sonraki her 30 dakika $7 (P3 ve P4'te $9), 24 saat için en fazla $60; P1, P3 ve P7'de Premium 24 saat için $70'e kadar, vale 24 saat için $75. LAX Economy Parking (6100 W. 94th Street) 24 saat için en fazla $35, LAX Budget Parking (5455 West 111th Street) en fazla $20; ikisinden de geliş katındaki pembe LAX Shuttle alanlarına gece gündüz ücretsiz servis çalışır. Tarifelere %10 vergi dahil, yer önceden ayırtılabilir."
+  },
+  "wifi": {
+   "title": "Wi‑Fi",
+   "hint": "Ücretsiz, 45 dakikalık oturumlar",
+   "text": "Tüm terminallerin genel alanlarında 45 dakikalık oturumlarla ücretsiz sınırsız Wi‑Fi. _LAX Free WiFi ağı: tarayıcı açılır, Free Unlimited Wi-Fi seçilir ve reklam izlenir. Daha hızlı erişim ücretli Boingo aboneliğiyle."
+  }
+ }
+}

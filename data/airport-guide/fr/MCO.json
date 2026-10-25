@@ -1,0 +1,35 @@
+{
+ "iata": "MCO",
+ "blocks": {
+  "transport": {
+   "title": "Comment s'y rendre",
+   "hint": "Brightline vers Miami, SunRail",
+   "text": "La gare ferroviaire de l'aéroport est à côté du terminal C : on y trouve aussi la station du train Terminal Link vers les terminaux A et B, les taxis, les navettes et les bus urbains. De la gare Brightline partent des trains vers Miami avec arrêts à West Palm Beach, Boca Raton, Fort Lauderdale et Aventura. Les trains de banlieue SunRail partent de la gare Sand Lake Road, desservie par un bus depuis l'aéroport."
+  },
+  "taxi": {
+   "title": "Taxi",
+   "hint": "International Drive — 38–45 $",
+   "text": "Tarifs indicatifs des taxis depuis l'aéroport : hôtels de l'aéroport 14–18 $, International Drive et centre-ville d'Orlando 38–45 $, Winter Park et Maitland 45–55 $, Lake Buena Vista 47–55 $, Kissimmee 45–75 $, complexes Disney 52–68 $, Port Canaveral 115 $."
+  },
+  "sleep": {
+   "title": "Où dormir",
+   "hint": "Hyatt Regency au terminal A/B",
+   "text": "Le Hyatt Regency Orlando International Airport, de 445 chambres, se trouve dans le terminal A/B, au-dessus du point de contrôle vers les portes 70–129, en zone avant contrôle. Une formule Day Stay sans nuitée est proposée : piscine sur le toit, salle de fitness, restaurant et service en chambre. Téléphone de l'hôtel : +1-407-825-1234."
+  },
+  "kids": {
+   "title": "Avec un enfant",
+   "hint": "Aires de jeux en A et B, Flybrary",
+   "text": "Une aire de jeux en mousse de style floridien se trouve au terminal A au niveau 1, avant le contrôle. L'Interactive Family Zone, avec des jeux de mouvement, est au terminal B au niveau 3 près de l'aire de restauration, avant le contrôle. La bibliothèque pour enfants Flybrary est au terminal C au niveau 2 près de la porte 240, après le contrôle. Des salles et des cabines d'allaitement existent dans chaque terminal, des toilettes familiales à chaque niveau."
+  },
+  "parking": {
+   "title": "Parking",
+   "hint": "Garage C réservé — 32 $/24 h",
+   "text": "Aux terminaux A et B — garages A et B, Terminal Top Parking et voiturier ; au terminal C — garage C ; près de la gare ferroviaire — parkings en plein air Atlantis, Discovery et Endeavour ; parkings économiques North Park Place, South Park Place et West Park. Une place au garage C peut être réservée : 32 $ pour 24 heures, 45 jours au maximum. Les véhicules de plus de 7 pieds de haut ou d'une longueur jusqu'à 25 pieds sont acceptés à South Park Place. Dans les garages, on peut payer par E-PASS/SunPass sur des voies dédiées."
+  },
+  "wifi": {
+   "title": "Wi‑Fi",
+   "hint": "Gratuit, MCO Internet",
+   "text": "Wi‑Fi gratuit dans tous les espaces publics de l'aéroport, réseau « MCO Internet » ; les autres réseaux de la liste n'appartiennent pas à l'aéroport. En cas de signal faible, l'aéroport demande de s'éloigner des points d'accès allumés d'autres personnes et d'éteindre les siens quand ils ne servent pas."
+  }
+ }
+}

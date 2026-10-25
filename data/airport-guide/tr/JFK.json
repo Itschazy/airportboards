@@ -1,0 +1,25 @@
+{
+ "iata": "JFK",
+ "blocks": {
+  "transport": {
+   "title": "Nasıl gidilir",
+   "hint": "AirTrain Jamaica/Howard Beach $8,75",
+   "text": "AirTrain terminaller arasında ücretsiz taşır, trenler 5–15 dakikada bir. New York metrosuna, LIRR banliyö trenlerine ve şehir otobüslerine AirTrain ile Jamaica veya Howard Beach istasyonlarına gidilir; tek yön ücreti $8,75, 5 yaşından küçük çocuklar ücretsiz. Ödeme temassız kartla, Apple Pay veya Google Pay'li telefonla ya da OMNY kartıyla. Grup tarifesi: ilk yolcu $8,75, sonraki her yolcu $4,50, 5 kişiye kadar."
+  },
+  "taxi": {
+   "title": "Taksi",
+   "hint": "Manhattan'a sabit $70",
+   "text": "Taksi durakları tüm terminallerin önünde, kuyruğu bir görevli düzenler, rezervasyon gerekmez. Manhattan'a sabit $70, artı ücretli yollar, bahşiş ve saate ve varış yerine göre $2,75 ile $8,50 arası ek ücretler. Yaklaşık olarak: Flushing'e $60, Downtown Brooklyn'e $90, LaGuardia Havalimanı'na $60, Newark Havalimanı'na $160. Araçta en fazla 4 yolcu (minivanda 5)."
+  },
+  "sleep": {
+   "title": "Nerede uyunur",
+   "hint": "Terminal 5'in yanında TWA Hotel",
+   "text": "Havalimanı arazisindeki tek otel Terminal 5'in yanındaki TWA Hotel. Terminal 5'ten otele eski TWA Flight Center'ın tüp geçitleri götürür; diğer terminallerden AirTrain ile Terminal 5'e gidilip tabelalar izlenir."
+  },
+  "wifi": {
+   "title": "Wi‑Fi",
+   "hint": "Ücretsiz, sınırsız",
+   "text": "Ücretsiz sınırsız Wi‑Fi: “_Free JFK WiFi” ağı. Gece gündüz destek: +1 (800) 880-4117."
+  }
+ }
+}

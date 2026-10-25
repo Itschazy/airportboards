@@ -1,0 +1,35 @@
+{
+ "iata": "MCO",
+ "blocks": {
+  "transport": {
+   "title": "Getting there",
+   "hint": "Brightline to Miami, SunRail",
+   "text": "The airport's train station is next to Terminal C; here too are the Terminal Link train station to terminals A and B, taxis, shuttles and city buses. From the Brightline station trains run to Miami, stopping at West Palm Beach, Boca Raton, Fort Lauderdale and Aventura. SunRail commuter trains depart from Sand Lake Road station, served by a bus from the airport."
+  },
+  "taxi": {
+   "title": "Taxi",
+   "hint": "International Drive — $38–45",
+   "text": "Approximate taxi fares from the airport: to airport-area hotels $14–18, to International Drive and Downtown Orlando $38–45, to Winter Park and Maitland $45–55, to Lake Buena Vista $47–55, to Kissimmee $45–75, to the Disney resorts $52–68, to Port Canaveral $115."
+  },
+  "sleep": {
+   "title": "Where to sleep",
+   "hint": "Hyatt Regency in Terminal A/B",
+   "text": "The 445-room Hyatt Regency Orlando International Airport is inside Terminal A/B, above the security checkpoint for gates 70–129, before security. A Day Stay without an overnight is available: rooftop pool, fitness centre, restaurant and room service. Hotel phone: +1-407-825-1234."
+  },
+  "kids": {
+   "title": "With children",
+   "hint": "Play areas in A and B, Flybrary",
+   "text": "A Florida-themed soft play area is in Terminal A on Level 1, before security. The Interactive Family Zone with movement games is in Terminal B on Level 3 by the food court, before security. The Flybrary children's library is in Terminal C on Level 2 by gate 240, after security. Every terminal has nursing rooms and pods, and every level has family restrooms."
+  },
+  "parking": {
+   "title": "Parking",
+   "hint": "Garage C, booked: $32 per 24 h",
+   "text": "Terminals A and B have Garages A and B, Terminal Top Parking and valet; Terminal C has Garage C; by the train station are the open lots Atlantis, Discovery and Endeavour; the economy lots are North Park Place, South Park Place and West Park. A space in Garage C can be booked: $32 per 24 hours, for no longer than 45 days. Vehicles over 7 feet tall or up to 25 feet long are accepted at South Park Place. In the garages you can pay with E-PASS/SunPass in dedicated lanes."
+  },
+  "wifi": {
+   "title": "Wi‑Fi",
+   "hint": "Free, MCO Internet",
+   "text": "Free Wi‑Fi in all public areas of the airport, network “MCO Internet”; other networks in the list do not belong to the airport. If the signal is weak, the airport asks you to move away from other people's active hotspots and to turn off your own when not needed."
+  }
+ }
+}

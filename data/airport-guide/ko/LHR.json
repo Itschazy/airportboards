@@ -1,0 +1,30 @@
+{
+ "iata": "LHR",
+ "blocks": {
+  "transport": {
+   "title": "가는 방법",
+   "hint": "Heathrow Express 등",
+   "text": "Heathrow Express는 15분 간격으로 패딩턴까지 운행하며, 패딩턴과 2·3터미널 사이는 15분 걸립니다. Elizabeth line은 공항과 Bond Street, Farringdon, Liverpool Street, Paddington, Stratford, Tottenham Court Road를 연결하며, 런던 중심까지 40분이 채 걸리지 않습니다. 결제는 비접촉 카드나 Oyster로 합니다. 가장 저렴한 방법은 모든 터미널에서 출발하는 지하철 Piccadilly 노선입니다: 중심까지 1시간이 채 걸리지 않으며, King's Cross St. Pancras, Leicester Square, Piccadilly Circus에 정차합니다."
+  },
+  "taxi": {
+   "title": "택시",
+   "hint": "터미널마다 블랙캡",
+   "text": "런던의 검은색 택시가 각 터미널 승강장에서 대기합니다. 기사는 면허를 받고 Knowledge of London 시험에 합격했으며, 모든 차량은 휠체어로 탑승할 수 있습니다. 전기차 이동 서비스 WeKnow는 정액 요금으로 운행하며, 카운터는 모든 터미널 도착 구역에 있습니다."
+  },
+  "lounges": {
+   "title": "비즈니스 라운지",
+   "hint": "유료 라운지 £35부터",
+   "text": "유료 라운지는 보안검색 후 구역에 있으며 매일 운영합니다. 2터미널: No.1 Lounges와 Plaza Premium, 둘 다 05:00–21:00, 1인당 £44부터와 £40부터. 5터미널: Plaza Premium, 04:45–21:30, 1인당 £35부터. 2터미널에는 Lufthansa, Singapore Airlines, Air Canada, United 항공사 라운지도 있고, 5터미널에는 British Airways 라운지가 있습니다."
+  },
+  "storage": {
+   "title": "수하물 보관소",
+   "hint": "수하물 보관, £10부터",
+   "text": "Excess Baggage Company 수하물 보관소는 상시 CCTV로 감시하며, 짐 1개당 요금: 3시간 이하 £10, 3–24시간 £15, 24–48시간 £27.50, 48–72시간 £40. 72시간 이후에는 추가 1일마다 £12.50, 7일 이후에는 1일 £10입니다. 온라인으로 예약할 수 있습니다."
+  },
+  "wifi": {
+   "title": "Wi‑Fi",
+   "hint": "무료, Heathrow Wi‑Fi",
+   "text": "모든 터미널에서 무료 Wi‑Fi: Heathrow Wi‑Fi 네트워크를 선택하고 화면 안내에 따라 가입합니다. 이 네트워크는 Friendly WiFi 인증을 받았으며 어린이에게 부적절한 콘텐츠를 차단합니다."
+  }
+ }
+}

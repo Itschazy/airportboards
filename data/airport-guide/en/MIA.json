@@ -1,0 +1,45 @@
+{
+ "iata": "MIA",
+ "blocks": {
+  "transport": {
+   "title": "Getting there",
+   "hint": "Metrorail, Tri-Rail, MIA Mover",
+   "text": "Metrorail, Metrobus and Tri-Rail stops are at the Miami Intermodal Center (Miami International Airport station), reached from the airport by the free MIA Mover train from the station on Level 3 between the Dolphin and Flamingo garages. You need an EASY Card to ride; the machines are at the Miami Intermodal Center. A Metrorail ride costs $2.25 one way. The Miami Beach Bus, $2.25, runs every 30 minutes from 6:00 to 23:40 daily between the airport Metrorail station and Miami Beach (from 41st Street to South Pointe Drive)."
+  },
+  "taxi": {
+   "title": "Taxi",
+   "hint": "Minimum $15, arrivals level",
+   "text": "Taxis are on the arrivals level (ground level), at the exits from the baggage claim areas. Metered: $2.95 for the first 1/6 mile, $0.85 for each additional 1/6 mile up to one mile, then $0.55 for each 1/6 mile; waiting $0.40 per minute. Airport fee $2.00, minimum fare from MIA $15. SUVs and minivans carry a 30% surcharge on the meter. Rideshare vehicles pick up on Level 1 (arrivals) and Level 2 (departures)."
+  },
+  "lounges": {
+   "title": "Lounges",
+   "hint": "Flagship, Admirals Club, Centurion",
+   "text": "In North Terminal D after security: American Airlines Flagship Lounge opposite gate D-30 (daily 5:00–23:00), Admirals Club above gate D15 on Level 3 (5:00–23:00) and opposite gate D-30 (6:00–20:30). By gate D-12 of the North Terminal is the American Express Centurion Lounge (5:00–22:00). Access to American lounges is based on status and a business- or first-class ticket on American or a oneworld airline; single-entry passes are available for purchase if space is available."
+  },
+  "storage": {
+   "title": "Left luggage",
+   "hint": "Terminal E, 5:00–21:00",
+   "text": "Communitel Baggage Storage left luggage is on Level 2 of Central Terminal E, daily from 5:00 to 21:00, charged per day. Notary services and luggage accessories are also available there."
+  },
+  "sleep": {
+   "title": "Where to sleep",
+   "hint": "Hotel in Terminal E, Wait n' rest",
+   "text": "Miami International Airport Hotel on Level 2 of Central Terminal E: 260 soundproofed rooms and the Viena restaurant. Wait n' rest sleep rooms are open round the clock: rooms for 1–4 guests with a shower, towels and snacks."
+  },
+  "kids": {
+   "title": "With children",
+   "hint": "Plane Fun kids' zone",
+   "text": "The interactive Plane Fun kids' zone is in Concourse E by gate E5; it can also be reached from Concourse D. MIAmamas nursing rooms are in every concourse after security."
+  },
+  "parking": {
+   "title": "Parking",
+   "hint": "$2 per 20 min, up to $25 per 24 h",
+   "text": "Dolphin and Flamingo garages: $2.00 for every 20 minutes; after 4 hours a maximum of $25.00 per 24 hours applies. A space can be paid for in advance, up to a year ahead: entry and exit by the QR code from the email; the booking fee is non-refundable, and a booking can be changed or cancelled no later than 24 hours before. Payment by cash, Visa, MasterCard, American Express, Discover, Apple Pay and Samsung Pay."
+  },
+  "wifi": {
+   "title": "Wi‑Fi",
+   "hint": "Free with ads",
+   "text": "Internet on the airport network is free, with ads. Uninterrupted access: standard $4.95, premium $7.95."
+  }
+ }
+}

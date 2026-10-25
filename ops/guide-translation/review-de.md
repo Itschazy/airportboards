@@ -125,3 +125,47 @@ parking — не входило в задачу, оставлено как «day
 ## Перекрёстная проверка ChatGPT (выборка 5 пар, 25.10)
 
 Принято: «Reisepass» → «Pass» в справочных российских аэропортов (оригинал — паспорт, у внутренних рейсов не заграничный); у зарубежных (AYT, IST, DLM…) оставлен Reisepass. Отклонено: Gate → Flugsteig (Gate — обычное слово в немецких аэропортах), Т1 (кириллица по правилам), «Gepäckverpackung» (так пишут на указателях).
+
+
+## Раунд 2 (26.10.2026)
+
+| Файл | Блок | Было | Стало | Тип | Почему |
+|---|---|---|---|---|---|
+| MIA | storage.text | Abrechnung pro 24 Stunden | Abrechnung pro Tag | числа | «посуточная» не содержит числа; не добавляем 24 |
+| CAN | transport.text | Ausgang | Tür | смысл | Уточнение gate/door/exit по официальному источнику, таблица door-vs-gate.md |
+| CAN | taxi.hint | Ausgänge | Türen | смысл | Уточнение gate/door/exit по официальному источнику, таблица door-vs-gate.md |
+| CAN | taxi.text | Ausgang | Tür | смысл | Уточнение gate/door/exit по официальному источнику, таблица door-vs-gate.md |
+| CAN | storage.text | Ausgang | Tür | смысл | Уточнение gate/door/exit по официальному источнику, таблица door-vs-gate.md |
+| CAN | sleep.text | Ausgang | Tür | смысл | Уточнение gate/door/exit по официальному источнику, таблица door-vs-gate.md |
+| PEK | taxi.text | den Ausgängen | den Türen | смысл | Уточнение gate/door/exit по официальному источнику, таблица door-vs-gate.md |
+| PEK | storage.text | Ausgang | Tür | смысл | Уточнение gate/door/exit по официальному источнику, таблица door-vs-gate.md |
+| PVG | taxi.text | den Ausgängen | den Türen | смысл | Уточнение gate/door/exit по официальному источнику, таблица door-vs-gate.md |
+| PVG | taxi.text | Ausgang | Tür | смысл | Уточнение gate/door/exit по официальному источнику, таблица door-vs-gate.md |
+| BKK | taxi.hint | Ausgänge | Türen | смысл | Уточнение gate/door/exit по официальному источнику, таблица door-vs-gate.md |
+| BKK | taxi.text | den Ausgängen | den Türen | смысл | Уточнение gate/door/exit по официальному источнику, таблица door-vs-gate.md |
+| BKK | storage.text | Ausgang | Tür | смысл | Уточнение gate/door/exit по официальному источнику, таблица door-vs-gate.md |
+| PVG | storage.text | Ausgang 7 | Tür 7 | смысл | Уточнение gate/door/exit по официальному источнику, таблица door-vs-gate.md |
+| PVG | sleep.text | Ausgang 2 der | Tür 2 der | смысл | Уточнение gate/door/exit по официальному источнику, таблица door-vs-gate.md |
+| PVG | sleep.text | Ausgang 29 | Tür 29 | смысл | Уточнение gate/door/exit по официальному источнику, таблица door-vs-gate.md |
+| LAS | parking.text | Economy und das entfernte Gelände (mit kostenlosem Shuttle) | Economy und das entfernte Gelände (zu Letzterem fährt ein kostenloser Shuttle) | смысл | Бесплатный шаттл относится только к Remote Lot |
+| ICN | terminals.text | nur werktags | nur montags bis freitags | смысл | Werktags может включать субботу; оригинал «по будням» |
+| SIN | transport.text | unterirdischen Busbahnhöfen | unterirdischen Bushaltestellen | смысл | Автобусные площадки не автовокзалы |
+| SIN | storage.text | große und Sondergepäck über 10 kg | große Gepäckstücke und Sondergepäck über 10 kg | стиль | Согласование существительного и прилагательного |
+| HKG | storage.text | gelten als nicht abgeholt | gelten als nicht beansprucht | смысл | Unclaimed — статус невостребованного, не повтор факта неполучения |
+
+Заново прочитаны все 24 файла раунда2, все блоки/подписи против оригинала. Подтверждены цена/единица, under5 у JFK, 24 Stunden у тарифов, доступ в залы и до/после контроля. Имена станций и бренды сохранены; Ebenen/Level Zero оставлены как указатели. Ручная рецензия завершена, ChatGPT впереди.
+| MIA | lounges.text | ein Tagespass | ein Einmalpass | смысл | «Разовый пропуск» не задаёт срок действия целый день; сохраняем один вход |
+| MIA | lounges.text | mit Status und Business- oder First-Class-Ticket von American oder oneworld | mit entsprechendem Status und einem Business- oder First-Class-Ticket von American oder einer oneworld-Fluggesellschaft | стиль | Принято из независимой выборки ChatGPT: естественность без изменения фактов |
+| MIA | lounges.text | ein Einmalpass wird verkauft, wenn Plätze frei sind | ein Pass für den einmaligen Zutritt kann gekauft werden, sofern Plätze verfügbar sind | стиль | Принято из независимой выборки ChatGPT: естественность без изменения фактов |
+| LAS | parking.text | bei Vorabbuchung in Terminal 3 von Samstag bis Mittwoch 16 $ | bei vorheriger Reservierung eines Parkplatzes an Terminal 3 von Samstag bis Mittwoch 16 $ | стиль | Принято из независимой выборки ChatGPT: естественность без изменения фактов |
+| HND | lounges.text | mit einer passenden Karte auf den eigenen Namen und einer Bordkarte für denselben Tag | mit einer entsprechenden, auf den eigenen Namen ausgestellten Karte und einer Bordkarte für denselben Tag | стиль | Принято из независимой выборки ChatGPT: естественность без изменения фактов |
+| PVG | storage.text | Alle Stellen sind von 06:00 bis 24:00 geöffnet | Alle Gepäckaufbewahrungsstellen sind von 06:00 bis 24:00 geöffnet | стиль | Принято из независимой выборки ChatGPT: естественность без изменения фактов |
+| SIN | terminals.text | im Transitbereich kann man auch über Laufbänder gehen | im Transitbereich kann man auch die Fahrsteige nutzen | стиль | Принято из независимой выборки ChatGPT: естественность без изменения фактов |
+| SIN | terminals.text | von T2 und T3 5–10 Minuten zu Fuß über einen Übergang | von T2 und T3 sind es 5–10 Minuten zu Fuß über einen Verbindungsgang | стиль | Принято из независимой выборки ChatGPT: естественность без изменения фактов |
+
+### ChatGPT, выборка раунда 2
+https://chatgpt.com/c/6ade6c0c-5c94-8329-a80e-b518cbd443bb — 6 пар MIA/lounges, LAS/parking, HND/lounges, PVG/storage, ICN/terminals, SIN/terminals, без поиска. Ответ прочитан после reload. Приняты №1, 3–7 и безопасная альтернатива №2 Pass für den einmaligen Zutritt. **Отклонено Tagespass**: добавляет дневной срок действия, отсутствующий в «разовом пропуске». Союз und сохранён по оригиналу; неоднозначность отмечена. Числа и тарифы замечаний не получили.
+| PEK | taxi.text | Bei Fahrten über 15 km kommen 50 % des Betrags als Leerfahrtzuschlag hinzu | Für den Streckenanteil über 15 km wird auf den Kilometertarif ein Leerfahrtzuschlag von 50 % erhoben | смысл | Официальная китайская версия bcia.com.cn/wljc.html: 单程载客15公里以上部分，每公里租价加收50%费用. Подтверждённая правка оригинала согласована владельцем 26.10 |
+| ICN | sleep.text | auf Ebene B1 | auf Ebene 1 | смысл | Официальный корейский каталог airport.kr/ap_ko/1008/subview.do: 캡슐호텔 다락휴(T1), 교통센터 1층 중앙. Исправление оригинала и 11 переводов согласовано владельцем 26.10 |
+| MIA | parking.text | die Buchungsgebühr von 2,99 | die Buchungsgebühr | числа | Официальный источник miami-airport.com/airport-parking.asp даёт 2.99 без валюты; в условиях booking.mia-parking.com/terms-and-conditions суммы нет. Не придумываем валюту: неполную сумму убрали, невозвратность сбора сохранили. Правка подтверждённых проблем оригинала во всех языках разрешена владельцем 26.10 |
+| ICN | sleep.text | in der Mitte des Verkehrszentrums auf Ebene 1 | in der Mitte des Verkehrszentrums | смысл | Повторная проверка: английский официальный каталог даёт Center of Transportation Center 1BF, корейский 교통센터 1층 중앙. По CLAUDE.md при противоречии факт не публикуется: убран только спорный этаж Darakhyu, центр транспортного центра сохранён |

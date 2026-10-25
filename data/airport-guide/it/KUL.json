@@ -1,0 +1,25 @@
+{
+ "iata": "KUL",
+ "blocks": {
+  "transport": {
+   "title": "Come arrivare",
+   "hint": "KLIA Ekspres, 28 min per KL Sentral",
+   "text": "Il modo più rapido per raggiungere il centro è il treno KLIA Ekspres: senza fermate fino al KL City Air Terminal (KL CAT) nella stazione KL Sentral in 28 minuti. Il treno di transito con tre fermate (Bandar Tasik Selatan, Putrajaya/Cyberjaya e Salak Tinggi) impiega 35 minuti. Sui treni ci sono portabagagli, posti per fissare la sedia a rotelle e un bagno accessibile in sedia a rotelle."
+  },
+  "taxi": {
+   "title": "Taxi",
+   "hint": "A coupon o a tassametro",
+   "text": "Nel Terminal 1 ci sono due tipi di taxi ufficiali: a coupon (prezzo fisso per destinazione e categoria dell’auto, pagamento prima della corsa) e a tassametro. Tariffa di partenza del taxi a tassametro: Budget 3,00 RM, Teks1M 4,00 RM, Executive 6,00 RM, più un supplemento di servizio di 2,00 RM; dalle 0:00 alle 6:00 maggiorazione del 50%. I banchi Airport Taxi si trovano nella sala arrivi nazionali, nell’area ritiro bagagli internazionali e al marciapiede, tutti al livello 3 dell’edificio principale; si può prenotare anche su gohub.com.my."
+  },
+  "terminals": {
+   "title": "Terminal",
+   "hint": "Navetta gratuita, giorno e notte",
+   "text": "Tra i terminal 1 e 2 circola giorno e notte una navetta gratuita ad anello: Terminal 1 — Terminal 2 — parcheggio a lungo termine (LTCP) — Terminal 1. Fermate: nel Terminal 1 porta 4, livello 1; nel Terminal 2 piazzola A10, livello 1, nodo dei trasporti del centro commerciale Gateway."
+  },
+  "parking": {
+   "title": "Parcheggio",
+   "hint": "Al terminal e a lungo termine LTCP",
+   "text": "Il parcheggio del Terminal 1 ha oltre 5.700 posti, a circa 3 minuti a piedi dall’edificio principale. Preferred Parking al livello 2 dei blocchi B e C: oltre 300 posti, a 2 minuti a piedi. Il parcheggio a lungo termine LTCP ha oltre 5.200 posti, con navetta gratuita giorno e notte per i terminal 1 e 2. Videosorveglianza giorno e notte, posti per famiglie e per donne, sala d’attesa climatizzata; il posto si può prenotare sul sito."
+  }
+ }
+}

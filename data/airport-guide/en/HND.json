@@ -1,0 +1,45 @@
+{
+ "iata": "HND",
+ "blocks": {
+  "transport": {
+   "title": "Getting there",
+   "hint": "Keikyu and Tokyo Monorail",
+   "text": "The airport is directly connected to the Keikyu line and the Tokyo Monorail. Travel times: to Shinagawa about 15 minutes, Hamamatsucho about 20, Tokyo Station and Yokohama about 30, Ueno and Asakusa about 40, Shibuya about 45, Shinjuku about 50 minutes. In Terminal 1 the platforms of both lines are on Level B1. In Terminal 3 the Keikyu ticket gates towards central Tokyo and Yokohama are in the arrivals hall on Level 2, Tokyo Monorail on Level 2 (arrivals) and Level 3 (departures)."
+  },
+  "taxi": {
+   "title": "Taxi",
+   "hint": "Level 1, flat fare",
+   "text": "Taxi ranks are on Level 1 (arrivals hall) of terminals 1 and 2, with separate stops for trips to Kawasaki, Yokohama, Yokosuka and Miura and for other destinations; in Terminal 3 — stop 21, go down to Level 1 following the signs. Taxis booked via an app or in advance pull up on Level 2 (departures): in Terminal 1 at exit 7, in Terminal 2 at exit 2. A flat fare applies between Haneda, Tokyo and Kanagawa Prefecture, except some areas; tolls are paid on top."
+  },
+  "terminals": {
+   "title": "Terminals",
+   "hint": "Free bus every 4 minutes",
+   "text": "A free shuttle bus runs between the terminals: from 5:00 to 20:00 every 4 minutes, from 20:00 to 0:00 every 8 minutes; first buses from 4:47 to 5:04, last from 1:15 to 1:32 depending on the terminal. In Terminal 1 the stop is on Level 1 (arrivals hall), stop 8. Passengers transferring between domestic and international flights or between international flights get free Keikyu or Tokyo Monorail tickets between terminals 1 and 3 or 2 and 3 at the information counters (terminals 1 and 2 — Level B1, Terminal 3 — Level 2), on presentation of a passport and boarding pass."
+  },
+  "lounges": {
+   "title": "Lounges",
+   "hint": "TIAT LOUNGE, round the clock",
+   "text": "In Terminal 3, TIAT LOUNGE in the gate area on Level 4 is open round the clock, for stays of up to 3 hours: buffet, drinks including alcohol, showers. Entry is available with airline coupons or an eligible card in your name together with a same-day boarding pass. Otherwise, admission is subject to a fee: adults ¥4,400, children 4–12 ¥2,200, ages 0 to 3 free; with Priority Pass — from 1:00 to 5:00. In Terminal 1 on Level 2 in the domestic departures area — POWER LOUNGE SOUTH (6:00–21:00) and NORTH (6:00–20:30), adults ¥1,320."
+  },
+  "storage": {
+   "title": "Left luggage",
+   "hint": "From ¥800, T3 round the clock",
+   "text": "Luggage is stored for up to 2 weeks; the sum of three dimensions up to 300 cm, weight up to 30 kg. Price per item: S (up to 120 cm) ¥800, M (120–199 cm) ¥1,000, L (200–300 cm) ¥2,000; skis and surfboards are also accepted. In Terminal 3 left luggage in the arrivals hall on Level 2 is open round the clock (price per 24 hours); in Terminal 1 it is on Level B1 (south side), from 8:00 to 19:30 (price per day)."
+  },
+  "sleep": {
+   "title": "Where to sleep",
+   "hint": "Hotels in every terminal",
+   "text": "Every terminal has a round-the-clock hotel: Terminal 1 — First Cabin Haneda Terminal 1 (Level 1, arrivals hall), Terminal 2 — Haneda Excel Hotel Tokyu (Level 2, north side), Terminal 3 — The Royal Park Hotel Tokyo Haneda in the departures hall on Level 3, with its transit section after security on the same level."
+  },
+  "kids": {
+   "title": "With children",
+   "hint": "Kid’s Space play corners",
+   "text": "Kid’s Space play corners are in the departure halls and by the gates: in Terminal 1 — on Level 2 before security and in three places after; in Terminal 2 — on Level 2 before security, on Level 2 after security (north and international sections) and on Level 1 in the bus boarding lounge; in Terminal 3 — on Level 3 after security, in the north and south sections. An adult must stay with the child."
+  },
+  "wifi": {
+   "title": "Wi‑Fi",
+   "hint": "Free HANEDA-FREE-WIFI network",
+   "text": "Free Wi‑Fi: choose the “HANEDA-FREE-WIFI” network, open a browser and follow the on-screen instructions. The network does not work in shops (except lounges), connecting can be difficult in some areas, and the services vary by terminal."
+  }
+ }
+}

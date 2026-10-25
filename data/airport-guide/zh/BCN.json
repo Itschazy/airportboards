@@ -1,0 +1,20 @@
+{
+ "iata": "BCN",
+ "blocks": {
+  "transport": {
+   "title": "交通方式",
+   "hint": "地铁9号线",
+   "text": "地铁9号线（University zone — Airport）在两座航站楼均设站：T1航站楼0层的Aeroport T1站和T2航站楼0层的车站。航站楼之间有全天候免费穿梭巴士。"
+  },
+  "taxi": {
+   "title": "出租车",
+   "hint": "黑黄色，在到达区旁",
+   "text": "出租车候车点位于T1航站楼到达区、Barcelona–Madrid穿梭航班通道以及T2A、T2B和T2C航站楼对面；每处都设有无需预约的排队区和预约车辆的停车位。T1航站楼的官方出租车在0层。巴塞罗那唯一的官方出租车是黑黄色的。"
+  },
+  "wifi": {
+   "title": "Wi‑Fi",
+   "hint": "免费，不限时",
+   "text": "Airport Free Wifi Aena网络：在首页用电子邮箱以访客身份登录，或通过Aena Club账户登录。确认邮箱期间提供15分钟免费上网，确认后不限时使用。"
+  }
+ }
+}

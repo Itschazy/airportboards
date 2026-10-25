@@ -200,3 +200,46 @@ parking — не входило в задачу, оставлено как «day
 ## Перекрёстная проверка ChatGPT (выборка 6 пар, 25.10)
 
 Принято: «zona di carico e scarico» → «zona di salita e discesa passeggeri» (без «passeggeri» читается как погрузка грузов), «Visita a pagamento» → «Ingresso a pagamento», «(a 10 minuti dai terminal)». Отклонено: Komfort/Premyer → Comfort/Premier (официальное латинское написание не подтверждено — транслитерация по правилам), Т1 (кириллица по правилам), «zona sterile» (термин ENAC).
+
+
+## Раунд 2 (26.10.2026)
+
+| Файл | Блок | Было | Стало | Тип | Почему |
+|---|---|---|---|---|---|
+| CAN | transport.text | dall’uscita | dalla porta | смысл | Уточнение gate/door/exit по официальному источнику, таблица door-vs-gate.md |
+| CAN | taxi.text | dall’uscita | dalla porta | смысл | Уточнение gate/door/exit по официальному источнику, таблица door-vs-gate.md |
+| CAN | storage.text | l’uscita | la porta | смысл | Уточнение gate/door/exit по официальному источнику, таблица door-vs-gate.md |
+| CAN | sleep.text | l’uscita | la porta | смысл | Уточнение gate/door/exit по официальному источнику, таблица door-vs-gate.md |
+| PEK | taxi.text | le uscite | le porte | смысл | Уточнение gate/door/exit по официальному источнику, таблица door-vs-gate.md |
+| PEK | storage.text | le uscite | le porte | смысл | Уточнение gate/door/exit по официальному источнику, таблица door-vs-gate.md |
+| PEK | storage.text | l’uscita | la porta | смысл | Уточнение gate/door/exit по официальному источнику, таблица door-vs-gate.md |
+| PVG | taxi.text | le uscite | le porte | смысл | Уточнение gate/door/exit по официальному источнику, таблица door-vs-gate.md |
+| PVG | taxi.text | dall’uscita | dalla porta | смысл | Уточнение gate/door/exit по официальному источнику, таблица door-vs-gate.md |
+| BKK | taxi.hint | uscite 4–7 | porte 4–7 | смысл | Уточнение gate/door/exit по официальному источнику, таблица door-vs-gate.md |
+| BKK | taxi.text | le uscite | le porte | смысл | Уточнение gate/door/exit по официальному источнику, таблица door-vs-gate.md |
+| BKK | storage.text | l’uscita | la porta | смысл | Уточнение gate/door/exit по официальному источнику, таблица door-vs-gate.md |
+| PVG | storage.text | le uscite 4 e 5 | le porte 4 e 5 | смысл | Уточнение gate/door/exit по официальному источнику, таблица door-vs-gate.md |
+| PVG | storage.text | all’uscita 7 | alla porta 7 | смысл | Уточнение gate/door/exit по официальному источнику, таблица door-vs-gate.md |
+| PVG | sleep.text | l’uscita 2 della | la porta 2 della | смысл | Уточнение gate/door/exit по официальному источнику, таблица door-vs-gate.md |
+| PVG | sleep.text | l’uscita 29 | la porta 29 | смысл | Уточнение gate/door/exit по официальному источнику, таблица door-vs-gate.md |
+| CAN | taxi.hint | uscite 50 | porte 50 | смысл | Двери терминала по таблице шага2 |
+| LAS | parking.text | Economy e area remota (servita da una navetta gratuita) | Economy e area remota (quest’ultima servita da una navetta gratuita) | смысл | Снять двусмысленное распространение шаттла на Economy |
+| ICN | terminals.text | solo nei giorni feriali | solo dal lunedì al venerdì | смысл | Giorni feriali может включать субботу; оригинал по будням |
+| LHR | transport.hint | Heathrow Express, Elizabeth line, Piccadilly | Express, Elizabeth, Piccadilly | стиль | Лимит35, полный текст сохранён |
+| MIA | transport.hint | Metrorail, Metrobus, Tri-Rail, MIA Mover | Metrorail, Tri-Rail, MIA Mover | стиль | Лимит35, полный текст сохранён |
+| BKK | terminals.hint | Terminal principale e satellite SAT-1 | Terminal principale e SAT-1 | стиль | Лимит35 |
+
+Все24файла, каждый блок title/hint/text и about проверены с оригиналом заново. Цены, интервалы, возрастunder5, 24ore, условия доступа, досмотр и имена сохранены; livelli без порядковых этажей. Ручная рецензия завершена; ChatGPT-выборка ещё впереди.
+| JFK | transport.hint | AirTrain, Jamaica/Howard Beach, 8,75 $ | AirTrain, 8,75 $ a tratta | стиль | Подпись ≤35 символов; полный перечень сохранён в text |
+| ORD | lounges.hint | United Club, Admirals Club, Sky Club | United, Admirals Club, Sky Club | стиль | Подпись ≤35 символов; полный перечень сохранён в text |
+| MIA | lounges.text | il pass giornaliero | il pass per un singolo accesso | смысл | «Разовый пропуск» не задаёт срок действия целый день; сохраняем один вход |
+| MIA | lounges.text | Nelle sale American si entra per status e con biglietto in business o prima classe American o oneworld | L’accesso alle lounge American è consentito in base allo status e al possesso di un biglietto di classe business o prima classe di American o di una compagnia oneworld | стиль | Принято из ChatGPT: грамматика и естественность без изменения условий |
+| HND | lounges.text | nell’area gate al livello 4 | nell’area dei gate d’imbarco al livello 4 | стиль | Принято из ChatGPT: грамматика и естественность без изменения условий |
+| HND | lounges.text | con una carta idonea intestata al passeggero e carta d’imbarco dello stesso giorno | con una carta idonea intestata al passeggero e una carta d’imbarco per lo stesso giorno | стиль | Принято из ChatGPT: грамматика и естественность без изменения условий |
+
+### ChatGPT, выборка раунда 2
+https://chatgpt.com/c/6ade6cad-eab8-832c-adda-76f0e9a42d50 — 6 пар MIA/lounges, LAS/parking, HND/lounges, PVG/storage, ICN/terminals, SIN/terminals, без поиска. Приняты №1–3. №4 è registrato→è stato registrato **отклонено как необходимая правка**: исходная форма корректно передаёт состояние «багаж оформлен», ошибки условия нет, изменение только предпочтение времени глагола. Числа, тарифы и временные интервалы замечаний не получили.
+| PEK | taxi.text | Sulle corse oltre 15 km si aggiunge il 50% dell’importo come supplemento per il viaggio di ritorno | Sul tratto oltre i 15 km si applica un supplemento del 50% alla tariffa chilometrica per il viaggio di ritorno | смысл | Официальная китайская версия bcia.com.cn/wljc.html: 单程载客15公里以上部分，每公里租价加收50%费用. Подтверждённая правка оригинала согласована владельцем 26.10 |
+| ICN | sleep.text | al livello B1 | al livello 1 | смысл | Официальный корейский каталог airport.kr/ap_ko/1008/subview.do: 캡슐호텔 다락휴(T1), 교통센터 1층 중앙. Исправление оригинала и 11 переводов согласовано владельцем 26.10 |
+| MIA | parking.text | la commissione di prenotazione di 2,99 | la commissione di prenotazione | числа | Официальный источник miami-airport.com/airport-parking.asp даёт 2.99 без валюты; в условиях booking.mia-parking.com/terms-and-conditions суммы нет. Не придумываем валюту: неполную сумму убрали, невозвратность сбора сохранили. Правка подтверждённых проблем оригинала во всех языках разрешена владельцем 26.10 |
+| ICN | sleep.text | nella parte centrale del centro di trasporto al livello 1 | nella parte centrale del centro di trasporto | смысл | Повторная проверка: английский официальный каталог даёт Center of Transportation Center 1BF, корейский 교통센터 1층 중앙. По CLAUDE.md при противоречии факт не публикуется: убран только спорный этаж Darakhyu, центр транспортного центра сохранён |

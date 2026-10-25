@@ -1,0 +1,20 @@
+{
+ "iata": "DEL",
+ "blocks": {
+  "transport": {
+   "title": "Nasıl gidilir",
+   "hint": "Metro: Airport Express ve Magenta",
+   "text": "Turuncu Airport Express metro hattı New Delhi Railway Station garından YASHOBHOOMI DWARKA SECTOR - 25'e gider ve Terminal 3'te durur; New Delhi'den yolculuk yaklaşık 25 dakika; ilk tren 4:45'te, son tren Dwarka Sector 21'den 23:15'te ve New Delhi'den 23:30'da kalkar. Terminal 2, Terminal 3'ün yanında; yürüyerek veya servisle gidilir. Terminal 1'e Magenta hattı gider: yeraltındaki Terminal 1‑IGI Airport istasyonu 5–7 dakika yürüme mesafesinde (yürüyen bantlı kapalı geçitten 300–400 m), trenler 5:30'dan 23:30'a kadar. Bilet otomatları Terminal 2 ve 3'ün geliş alanlarında ve Terminal 1 istasyonunda."
+  },
+  "taxi": {
+   "title": "Taksi",
+   "hint": "Ön ödemeli taksi, Uber, Ola",
+   "text": "Üç terminalin hepsinde gece gündüz sabit fiyatlı ön ödemeli taksi, Uber ve Ola ile araç kiralama var. Terminal 1 ve 2'de (yalnızca iç hatlar) biniş geliş alanının çıkışında, Terminal 1'de ayrıca Rapido çalışır. Terminal 3'te (dış ve iç hatlar) biniş katlı otoparkta, Kat 0'da; Evera EV elektrikli taksileri de orada."
+  },
+  "parking": {
+   "title": "Otopark",
+   "hint": "Katlı otopark, ₹160'tan",
+   "text": "Terminal 3'te binanın karşısında katlı otopark (MLCP), Terminal 1'de Park & Fly / Long Stay alanları; gece gündüz açık, kamera gözetimli. 15 Nisan 2025'ten itibaren özel araç tarifesi: 30 dakikaya kadar ₹160, 1 saate kadar ₹250, 1–2 saat ₹320, 2–3 saat ₹400, 3–4 saat ₹500, 4 ila 24 saat ₹600. Yer sitede önceden ayırtılabilir; rezervasyon en geç 12 saat önceden iptal edilebilir."
+  }
+ }
+}

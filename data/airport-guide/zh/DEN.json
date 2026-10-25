@@ -1,0 +1,35 @@
+{
+ "iata": "DEN",
+ "blocks": {
+  "transport": {
+   "title": "交通方式",
+   "hint": "A Line火车、RTD巴士",
+   "text": "DEN Transit Center位于Jeppesen航站楼南端：穿过玻璃门，乘自动扶梯或电梯下到地面层。从这里有A Line火车开往Denver Union Station，以及RTD AB、AT、104L、145X和169L路巴士。公共交通运营时间约为3:30至午夜，末班巴士1:28从机场发车。RTD全线日票$10。"
+  },
+  "taxi": {
+   "title": "出租车",
+   "hint": "丹佛市中心固定价$72.04",
+   "text": "单程固定价格，已含机场费：丹佛市中心（A区）$72.04，Denver Tech Center（B区）$80.04，博尔德（C区）$115.04，Tower Road（D区）$37.04。其他目的地按计价器收费，另加$6.04附加费。出租车候车点在Jeppesen航站楼5层Island 1，505、507和511号门旁（东侧）以及506、510和512号门旁（西侧）。"
+  },
+  "lounges": {
+   "title": "商务休息室",
+   "hint": "各指廊的休息室",
+   "text": "休息室位于各指廊夹层：American Airlines Admirals Club在C-32登机口旁，American Express Centurion Lounge在C-46旁，Capital One Lounge（Plaza Premium）在A-34旁，United Club在A-25、B-44和B-32旁。United Club Fly在B-60登机口旁。Delta Sky Club位于安检后A指廊北端、从Jeppesen航站楼过来的连桥上。带躺椅的免费休息区Rest and Recharge位于A指廊夹层。"
+  },
+  "sleep": {
+   "title": "休息住宿",
+   "hint": "航站楼旁的Westin",
+   "text": "Westin Denver International Airport酒店有519间客房，距主航站楼仅几步之遥，就在DEN Transit Center正上方——乘自动扶梯上楼即可。"
+  },
+  "kids": {
+   "title": "携儿童出行",
+   "hint": "A25和C54旁游乐区",
+   "text": "两处儿童游乐区全天候开放，位于A25和C54登机口旁。设有尿布台和洗手池的免费哺乳室全天候开放：每个指廊的安检后区域均有，Jeppesen航站楼有两处——中央5层到达区旁和西北侧国际到达区旁。"
+  },
+  "wifi": {
+   "title": "Wi‑Fi",
+   "hint": "免费，覆盖全机场",
+   "text": "全机场免费Wi‑Fi：选择DEN Airport Free WiFi、DEN Airport Free WiFi 2.4G或DEN FREE WIFI 6E网络，点击“Connect”。Jeppesen航站楼和三个指廊各处都有电源插座，另有带座椅和台面的充电站。"
+  }
+ }
+}

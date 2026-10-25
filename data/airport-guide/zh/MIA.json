@@ -1,0 +1,45 @@
+{
+ "iata": "MIA",
+ "blocks": {
+  "transport": {
+   "title": "交通方式",
+   "hint": "铁路、巴士及免费机场列车",
+   "text": "Metrorail、Metrobus和Tri-Rail站位于Miami Intermodal Center（Miami International Airport站），从机场乘免费MIA Mover列车前往，车站在3层Dolphin和Flamingo停车楼之间。乘车需EASY Card卡，自动售卡机在Miami Intermodal Center。Metrorail单程$2.25。Miami Beach Bus巴士票价$2.25，每天6:00至23:40每30分钟一班，往返机场Metrorail站与迈阿密海滩（41街至South Pointe Drive）之间。"
+  },
+  "taxi": {
+   "title": "出租车",
+   "hint": "最低$15，到达层",
+   "text": "出租车在到达层（地面层）行李提取区出口旁。计价器收费：首1/6英里$2.95，此后至一英里每1/6英里$0.85，之后每1/6英里$0.55；等候每分钟$0.40。机场费$2.00，从MIA出发最低车费$15。SUV或小型厢式车在计价器金额上加收30%。网约车在1层（到达）和2层（出发）接客。"
+  },
+  "lounges": {
+   "title": "商务休息室",
+   "hint": "北航站楼的休息室",
+   "text": "北航站楼D区安检后：American Airlines Flagship Lounge在D-30登机口对面（每天5:00–23:00），Admirals Club在D15登机口上方3楼（5:00–23:00）和D-30登机口对面（6:00–20:30）。北航站楼D-12登机口旁有American Express Centurion Lounge（5:00–22:00）。American的休息室凭符合条件的会员身份及American或oneworld商务舱或头等舱机票进入；有空位时出售单次通行证。"
+  },
+  "storage": {
+   "title": "行李寄存",
+   "hint": "E航站楼，5:00–21:00",
+   "text": "Communitel Baggage Storage行李寄存处位于中央航站楼E的2层，每天5:00至21:00开放，按天收费。同处提供公证服务和行李配件。"
+  },
+  "sleep": {
+   "title": "休息住宿",
+   "hint": "E航站楼酒店及睡眠房",
+   "text": "Miami International Airport Hotel位于中央航站楼E的2层：260间隔音客房和Viena餐厅。Wait n' rest睡眠室全天候开放：可住1–4人的房间，配有淋浴、毛巾和小吃。"
+  },
+  "kids": {
+   "title": "携儿童出行",
+   "hint": "Plane Fun儿童区",
+   "text": "互动儿童区Plane Fun位于E候机区E5登机口旁，也可从D候机区前往。每个候机区安检后都有MIAmamas哺乳室。"
+  },
+  "parking": {
+   "title": "停车",
+   "hint": "每20分钟$2，每24小时最高$25",
+   "text": "Dolphin和Flamingo停车楼：每20分钟$2.00，4小时后每24小时最高$25.00。可提前最多一年预付车位：凭邮件中的二维码进出，预订费不退，最晚提前24小时可修改或取消预订。支付方式：现金、Visa、MasterCard、American Express、Discover、Apple Pay和Samsung Pay。"
+  },
+  "wifi": {
+   "title": "Wi‑Fi",
+   "hint": "免费，含广告",
+   "text": "机场网络免费上网，含广告。不间断上网：标准版$4.95，高级版$7.95。"
+  }
+ }
+}

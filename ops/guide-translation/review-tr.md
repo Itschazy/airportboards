@@ -178,3 +178,54 @@ parking — не входило в задачу, оставлено как «day
 ## Перекрёстная проверка ChatGPT (выборка 4 пары, 25.10)
 
 Принято: возраст «до N лет» = младше N — «N yaşına kadar» → «N yaşından küçük» (122 мест, кроме LED «до 7 лет включительно»), «1195 numaralı otobüs», «geceleri seferlere ara verilir», «Başlanan gün tam gün olarak ücretlendirilir». Отклонено: Т1 → T1 (кириллица по правилам), «Bufetъ» (твёрдый знак в латинице нечитаем), «Kat 2» → «2. katta» (этаж как на указателе).
+
+
+## Раунд 2 (26.10.2026)
+
+| Файл | Блок | Было | Стало | Тип | Почему |
+|---|---|---|---|---|---|
+| CAN | transport.text | çıkışın | kapının | смысл | Уточнение gate/door/exit по официальному источнику, таблица door-vs-gate.md |
+| CAN | taxi.hint | çıkış | kapı | смысл | Уточнение gate/door/exit по официальному источнику, таблица door-vs-gate.md |
+| CAN | taxi.text | çıkışın | kapının | смысл | Уточнение gate/door/exit по официальному источнику, таблица door-vs-gate.md |
+| CAN | storage.text | çıkışın | kapının | смысл | Уточнение gate/door/exit по официальному источнику, таблица door-vs-gate.md |
+| CAN | sleep.text | çıkışın | kapının | смысл | Уточнение gate/door/exit по официальному источнику, таблица door-vs-gate.md |
+| PEK | taxi.text | çıkışların | kapıların | смысл | Уточнение gate/door/exit по официальному источнику, таблица door-vs-gate.md |
+| PEK | storage.text | çıkışının | kapısının | смысл | Уточнение gate/door/exit по официальному источнику, таблица door-vs-gate.md |
+| PVG | taxi.text | çıkışının | kapısının | смысл | Уточнение gate/door/exit по официальному источнику, таблица door-vs-gate.md |
+| PVG | taxi.text | çıkıştan | kapıdan | смысл | Уточнение gate/door/exit по официальному источнику, таблица door-vs-gate.md |
+| BKK | taxi.hint | çıkış | kapı | смысл | Уточнение gate/door/exit по официальному источнику, таблица door-vs-gate.md |
+| BKK | taxi.text | çıkışlar | kapılar | смысл | Уточнение gate/door/exit по официальному источнику, таблица door-vs-gate.md |
+| BKK | storage.text | çıkışın | kapının | смысл | Уточнение gate/door/exit по официальному источнику, таблица door-vs-gate.md |
+| PVG | storage.text | 7 numaralı çıkışın | 7 numaralı kapının | смысл | Уточнение gate/door/exit по официальному источнику, таблица door-vs-gate.md |
+| PVG | sleep.text | 2 numaralı çıkışının | 2 numaralı kapısının | смысл | Уточнение gate/door/exit по официальному источнику, таблица door-vs-gate.md |
+| PVG | sleep.text | 29 numaralı çıkışının | 29 numaralı kapısının | смысл | Уточнение gate/door/exit по официальному источнику, таблица door-vs-gate.md |
+| CAN | transport.text | kapınından | kapısından | стиль | Правильный аффикс исходного падежа при двери42 |
+| DEN | transport.text | Buradan Denver Union Station'a A Line treni ile RTD AB, AT, 104L, 145X ve 169L otobüsleri kalkar. | Buradan Denver Union Station'a giden A Line treni ve RTD AB, AT, 104L, 145X ve 169L otobüsleri kalkar. | смысл | Направление UnionStation относится к поезду, не ко всем автобусам |
+| LAS | parking.text | Economy ve uzak alan (ücretsiz servis gider) | Economy ve uzak alan (ücretsiz servis yalnızca uzak alana gider) | смысл | Шаттл только к RemoteLot, как в оригинале |
+| DFW | lounges.text | güvenlik kontrolü alanının içinde | güvenlik kontrolünden sonraki alanda | смысл | Уточнена зона после контроля |
+| LAX | taxi.text | dispeçer | taksi sevk merkezi | стиль | Убрана калька диспетчера |
+| LHR | transport.hint | Heathrow Express, Elizabeth, Piccadilly | Express, Elizabeth, Piccadilly | стиль | Лимит35 |
+| MIA | transport.hint | Metrorail, Metrobus, Tri-Rail, MIA Mover | Metrorail, Tri-Rail, MIA Mover | стиль | Лимит35 |
+
+Все24файла раунда2 заново сверены целиком. Термин concourse сохраняется единообразно (A concourse, Midfield Concourse), iskele не вводится. KatN и аффиксы, 5yaşındanküçük уJFK, 24saat тарифов, зоны/валюты/имена проверены. Ручная рецензия завершена; ChatGPT впереди.
+| ORD | lounges.hint | United Club, Admirals Club, Sky Club | United, Admirals Club, Sky Club | стиль | Подпись ≤35 символов; полный перечень сохранён в text |
+| PEK | kids.hint | C09 ve E21 kapılarında oyun alanları | C09 ve E21 yanında oyun alanları | стиль | Подпись ≤35 символов; полный перечень сохранён в text |
+| FRA | sleep.hint | napcabs kabinleri, saati 12 €'dan | napcabs kabinleri, saati €12'dan | стиль | Единое расположение знака евро перед суммой в этом языке; значения сохранены |
+| FRA | sleep.text | Yataklı, klimalı, çalar saatli ve çalışma masalı napcabs uyku kabinleri: Terminal 1'de güvenlik kontrolünden sonra Pier A Schengen'de 6 ve Kat 3'teki B transit alanında 3 (B42 kapısının yanındaki yürüyen merdiven); Terminal 3'te Pier H Schengen'de 3 ve Pier J Non-Schengen'de 5. 6:00–22:00 arası saati 17 € (en az 2 saat), 22:00–6:00 arası saati 12 € (en az 3 saat). Çevrimiçi rezervasyon kartla veya PayPal ile, yerinde yalnızca kartla. Kabinlerin yanında duşlar var. | Yataklı, klimalı, çalar saatli ve çalışma masalı napcabs uyku kabinleri: Terminal 1'de güvenlik kontrolünden sonra Pier A Schengen'de 6 ve Kat 3'teki B transit alanında 3 (B42 kapısının yanındaki yürüyen merdiven); Terminal 3'te Pier H Schengen'de 3 ve Pier J Non-Schengen'de 5. 6:00–22:00 arası saati €17 (en az 2 saat), 22:00–6:00 arası saati €12 (en az 3 saat). Çevrimiçi rezervasyon kartla veya PayPal ile, yerinde yalnızca kartla. Kabinlerin yanında duşlar var. | стиль | Единое расположение знака евро перед суммой в этом языке; значения сохранены |
+| FRA | parking.hint | 15.000 yer, 7 gün 99 €'dan | 15.000 yer, 7 gün €99'dan | стиль | Единое расположение знака евро перед суммой в этом языке; значения сохранены |
+| FRA | parking.text | Havalimanında toplam 15.000 park yeri var. Çevrimiçi rezervasyonda Terminal Parking 7 gün 99,00 €'dan, Weekend Special (cumadan pazara 2–3 gün) 55,00 €'dan; rezervasyon kalkıştan 9 ay ile 24 saat önce arasında, 1–44 günlük süre için yapılır. Terminal otoparklarına giriş yüksekliği en fazla 2,10 m; daha yüksek araçlar için P36 otobüs otoparkı. Otogazlı (LPG) araçlar Terminal 1 otoparklarına alınmaz, Terminal 3 otoparkına alınır. | Havalimanında toplam 15.000 park yeri var. Çevrimiçi rezervasyonda Terminal Parking 7 gün €99,00'dan, Weekend Special (cumadan pazara 2–3 gün) €55,00'dan; rezervasyon kalkıştan 9 ay ile 24 saat önce arasında, 1–44 günlük süre için yapılır. Terminal otoparklarına giriş yüksekliği en fazla 2,10 m; daha yüksek araçlar için P36 otobüs otoparkı. Otogazlı (LPG) araçlar Terminal 1 otoparklarına alınmaz, Terminal 3 otoparkına alınır. | стиль | Единое расположение знака евро перед суммой в этом языке; значения сохранены |
+| PEK | taxi.text | 15 km'den uzun yolculuklarda dönüş yolu farkı olarak tutarın %50'si eklenir | Yolculuğun 15 km'yi aşan kısmında kilometre ücretine dönüş yolu farkı olarak %50 eklenir | смысл | Официальная китайская версия bcia.com.cn/wljc.html: 单程载客15公里以上部分，每公里租价加收50%费用. Подтверждённая правка оригинала согласована владельцем 26.10 |
+| ICN | sleep.text | Kat B1 | Kat 1 | смысл | Официальный корейский каталог airport.kr/ap_ko/1008/subview.do: 캡슐호텔 다락휴(T1), 교통센터 1층 중앙. Исправление оригинала и 11 переводов согласовано владельцем 26.10 |
+| MIA | lounges.text | Admirals Club D15 kapısının üstünde Kat 3'te | Admirals Club, D15 kapısının üst tarafında, Kat 3'te | стиль | Принято из ChatGPT: сохранение смысла и естественный турецкий; лишнее «только» у шаттла убрано |
+| MIA | lounges.text | American salonlarına statüyle ve American veya oneworld business ya da birinci sınıf biletiyle girilir | American salonlarına uygun statüye ve American'ın veya oneworld üyesi bir havayolunun business ya da birinci sınıf biletine sahip olanlar girebilir | стиль | Принято из ChatGPT: сохранение смысла и естественный турецкий; лишнее «только» у шаттла убрано |
+| MIA | lounges.text | yer varsa tek girişlik geçiş satılır | yer varsa tek girişlik giriş kartı satın alınabilir | стиль | Принято из ChatGPT: сохранение смысла и естественный турецкий; лишнее «только» у шаттла убрано |
+| LAS | parking.text | ücretsiz servis yalnızca uzak alana gider | uzak alana ücretsiz servis gider | смысл | Принято из ChatGPT: сохранение смысла и естественный турецкий; лишнее «только» у шаттла убрано |
+| LAS | parking.text | vale 24 saati $34 | vale park hizmeti 24 saat için $34 | стиль | Принято из ChatGPT: сохранение смысла и естественный турецкий; лишнее «только» у шаттла убрано |
+| PVG | storage.text | 28 inçten büyük bagaj parça başına 24 saati 60 yuan | 28 inçten büyük bagaj için parça başına 24 saatlik ücret 60 yuan | стиль | Принято из ChatGPT: сохранение смысла и естественный турецкий; лишнее «только» у шаттла убрано |
+| ICN | terminals.text | Tekerlekli sandalyeli yolculara | Tekerlekli sandalye kullanan yolculara | стиль | Принято из ChatGPT: сохранение смысла и естественный турецкий; лишнее «только» у шаттла убрано |
+| SIN | terminals.text | transit alanda yalnızca bagaj son varış noktasına kadar kaydedilmişse | transit alanda yalnızca bagajın son varış noktasına kadar check-in işlemi tamamlanmışsa | стиль | Принято из ChatGPT: сохранение смысла и естественный турецкий; лишнее «только» у шаттла убрано |
+
+### ChatGPT, выборка раунда 2
+https://chatgpt.com/c/6ade6ce8-f17c-8325-aa9b-dc46acb13719 — 6 пар MIA/lounges, LAS/parking, HND/lounges, PVG/storage, ICN/terminals, SIN/terminals, без поиска. Приняты №1–5,7–9. №4 устраняет добавленное рецензентом «только» — оригинал говорит о шаттле к удалённой площадке, но не запрещает ему другие остановки. №6 **отклонено как необходимая правка**: повторять POWER LOUNGE перед NORTH необязательно, оригинал также сокращает общее имя. Условия доступа сохранены с ve.
+| MIA | parking.text | 2,99 rezervasyon ücreti | rezervasyon ücreti | числа | Официальный источник miami-airport.com/airport-parking.asp даёт 2.99 без валюты; в условиях booking.mia-parking.com/terms-and-conditions суммы нет. Не придумываем валюту: неполную сумму убрали, невозвратность сбора сохранили. Правка подтверждённых проблем оригинала во всех языках разрешена владельцем 26.10 |
+| ICN | sleep.text | Darakhyu kapsül oteli Kat 1'de ulaşım merkezinin ortasında | Darakhyu kapsül oteli ulaşım merkezinin ortasında | смысл | Повторная проверка: английский официальный каталог даёт Center of Transportation Center 1BF, корейский 교통센터 1층 중앙. По CLAUDE.md при противоречии факт не публикуется: убран только спорный этаж Darakhyu, центр транспортного центра сохранён |

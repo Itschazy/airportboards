@@ -1,0 +1,45 @@
+{
+ "iata": "MIA",
+ "blocks": {
+  "transport": {
+   "title": "가는 방법",
+   "hint": "철도·버스와 무료 공항 열차",
+   "text": "Metrorail, Metrobus, Tri-Rail 정류장은 Miami Intermodal Center(Miami International Airport 역)에 있으며, 공항에서 그곳까지 Dolphin 주차 건물과 Flamingo 주차 건물 사이 3층 역에서 무료 열차 MIA Mover가 운행합니다. 이용하려면 EASY Card가 필요하며, 발매기는 Miami Intermodal Center에 있습니다. Metrorail 편도 요금은 $2.25입니다. Miami Beach Bus는 요금 $2.25로 매일 6:00부터 23:40까지 30분 간격으로 공항 Metrorail 역과 마이애미비치(41번가부터 South Pointe Drive까지) 사이를 운행합니다."
+  },
+  "taxi": {
+   "title": "택시",
+   "hint": "최소 $15, 도착층",
+   "text": "택시는 도착층(지상층)의 수하물 수취 구역 출구 앞에 있습니다. 미터 요금: 첫 1/6마일 $2.95, 1마일까지 이후 1/6마일마다 $0.85, 그 뒤 1/6마일마다 $0.55; 대기 분당 $0.40. 공항 수수료 $2.00, MIA 출발 최소 요금 $15. SUV나 미니밴은 미터 요금에 30% 할증됩니다. 앱 호출 차량은 1층(도착)과 2층(출발)에서 탑니다."
+  },
+  "lounges": {
+   "title": "비즈니스 라운지",
+   "hint": "북쪽 터미널 라운지",
+   "text": "북쪽 터미널 D 보안검색 후: American Airlines Flagship Lounge는 D-30 게이트 맞은편(매일 5:00–23:00), Admirals Club은 3층 D15 게이트 위(5:00–23:00)와 D-30 게이트 맞은편(6:00–20:30)에 있습니다. 북쪽 터미널 D-12 게이트 옆에는 American Express Centurion Lounge(5:00–22:00)가 있습니다. American 라운지는 회원 등급 및 American 또는 oneworld 회원 항공사의 비즈니스석·일등석 항공권에 따라 입장할 수 있으며, 1회 이용권은 자리가 있을 때 판매합니다."
+  },
+  "storage": {
+   "title": "수하물 보관소",
+   "hint": "터미널 E, 5:00–21:00",
+   "text": "Communitel Baggage Storage 수하물 보관소는 Central 터미널 E 2층에 있으며, 매일 5:00부터 21:00까지 운영하고 요금은 일 단위입니다. 공증 서비스와 여행 가방 용품도 제공합니다."
+  },
+  "sleep": {
+   "title": "잠잘 곳",
+   "hint": "터미널 E 호텔과 수면실",
+   "text": "Central 터미널 E 2층의 Miami International Airport Hotel: 방음 객실 260개와 레스토랑 Viena. 수면실 Wait n' rest는 상시 운영합니다: 1–4인용 객실, 샤워, 수건, 간식 제공."
+  },
+  "kids": {
+   "title": "아이와 함께",
+   "hint": "어린이 공간 Plane Fun",
+   "text": "체험형 어린이 공간 Plane Fun은 콘코스 E의 E5 게이트 옆에 있으며, 콘코스 D에서도 갈 수 있습니다. 수유실 MIAmamas는 모든 콘코스의 보안검색 후 구역에 있습니다."
+  },
+  "parking": {
+   "title": "주차",
+   "hint": "24시간 최대 $25",
+   "text": "Dolphin·Flamingo 주차 건물: 20분마다 $2.00, 4시간 이후에는 24시간 최대 $25.00. 최대 1년 앞까지 미리 결제할 수 있습니다: 이메일로 받은 QR 코드로 입출차하며, 예약 수수료는 환불되지 않고, 예약 변경이나 취소는 24시간 전까지 가능합니다. 현금, Visa, MasterCard, American Express, Discover, Apple Pay, Samsung Pay로 결제합니다."
+  },
+  "wifi": {
+   "title": "Wi‑Fi",
+   "hint": "무료, 광고 포함",
+   "text": "공항 네트워크의 인터넷은 무료이며 광고가 나옵니다. 연속 접속: 스탠더드 $4.95, 프리미엄 $7.95."
+  }
+ }
+}

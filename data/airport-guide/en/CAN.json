@@ -1,0 +1,35 @@
+{
+ "iata": "CAN",
+ "blocks": {
+  "transport": {
+   "title": "Getting there",
+   "hint": "Metro line 3 — Airport North",
+   "text": "Terminal 2 is at Airport North station on the northern extension of metro line 3. There is no direct metro to Terminal 3: take line 3 to Airport North, then the shuttle from door 42 of Terminal 2 or the intercity train from the GTC transport centre of Terminal 2. Guangzhou metro hours may change."
+  },
+  "taxi": {
+   "title": "Taxi",
+   "hint": "T2 — doors 50 and 53, T3 — 75",
+   "text": "At Terminal 2 taxis pick up at the GTC transport centre: the east rank is outside door 53, the west rank outside door 50. At Terminal 3 the international taxi rank is on Level 1 in the arrivals area, outside door 75."
+  },
+  "lounges": {
+   "title": "Lounges",
+   "hint": "Premium Lounge, Sky Pearl, L32",
+   "text": "Premium Lounge — Terminal 2, Level 4, behind the duty-free shop after international controls, round the clock. Easy Boarding Lounge — Terminal 2, opposite the China Southern first-class lounge (after security turn left, 50 m), 04:45–21:30. China Southern Sky Pearl lounges in Terminal 2: domestic — on Level 3 after security (05:45–21:00), international — on Level 4 past the duty-free area (from 04:30 until the last flight). In Terminal 3 — L32 Lounge on Level 4 behind a separate security checkpoint for domestic flights (opposite counter 16 of island K), from 05:00 until the last departure."
+  },
+  "storage": {
+   "title": "Left luggage",
+   "hint": "All terminals, some round the clock",
+   "text": "Terminal 1: departure hall, Level 3, by door 16 — round the clock. Terminal 2: behind check-in area C of the departure hall (04:30–23:30), behind check-in area P/N (round the clock) and opposite door 53 of the arrival hall (05:30–23:30). Terminal 3: by the toilets behind island C in the west part of the check-in hall (round the clock) and in the international arrival hall on Level 1 (05:30–21:30). Hours may change depending on the situation on site."
+  },
+  "sleep": {
+   "title": "Where to sleep",
+   "hint": "Capsules in T2, T3, round the clock",
+   "text": "Pay-by-the-hour capsules — Terminal 2, Level 1, international arrivals area, by door 53, round the clock. NAPHUBS capsules — Terminal 3, Level 4: in the rest area for overnight passengers to the left behind door 61 and in the international transit hall, also round the clock."
+  },
+  "wifi": {
+   "title": "Wi‑Fi",
+   "hint": "AIRPORT-FREE-WiFi, SMS login",
+   "text": "Free AIRPORT-FREE-WiFi network. On the login page you can sign in with your phone number and a code from an SMS (foreigners select their country code) or with a photo of an identity document. There are Wi‑Fi kiosks in the international departure and arrival areas of Terminal 2."
+  }
+ }
+}

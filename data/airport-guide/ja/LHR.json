@@ -1,0 +1,30 @@
+{
+ "iata": "LHR",
+ "blocks": {
+  "transport": {
+   "title": "アクセス",
+   "hint": "急行列車と地下鉄",
+   "text": "Heathrow ExpressはPaddingtonまで15分間隔で運行し、Paddingtonと第2・第3ターミナルの間の所要時間は15分。Elizabeth lineは空港とBond Street、Farringdon、Liverpool Street、Paddington、Stratford、Tottenham Court Roadを結び、ロンドン中心部まで40分未満。支払いは非接触型カードまたはOysterで。最も安いのは全ターミナルから出ている地下鉄Piccadilly線で、中心部まで1時間未満、King's Cross St. Pancras、Leicester Square、Piccadilly Circusに停車する。"
+  },
+  "taxi": {
+   "title": "タクシー",
+   "hint": "各ターミナルにブラックキャブ",
+   "text": "ロンドンのブラックキャブは各ターミナルの乗り場で待機している。運転手は免許を持ち、Knowledge of Londonの試験に合格しており、すべての車両が車椅子に対応している。WeKnowの電気自動車による送迎は定額料金で、カウンターは全ターミナルの到着エリアにある。"
+  },
+  "lounges": {
+   "title": "ラウンジ",
+   "hint": "有料ラウンジ£35から",
+   "text": "有料ラウンジは保安検査後にあり、毎日営業。第2ターミナル：No.1 LoungesとPlaza Premiumで、どちらも05:00から21:00まで、料金は1人£44からと£40から。第5ターミナル：Plaza Premiumで04:45から21:30まで、1人£35から。第2ターミナルにはLufthansa、Singapore Airlines、Air Canada、Unitedの航空会社ラウンジもあり、第5ターミナルにはBritish Airwaysのラウンジがある。"
+  },
+  "storage": {
+   "title": "手荷物預かり",
+   "hint": "手荷物預かり£10から",
+   "text": "Excess Baggage Companyの手荷物預かり所は24時間監視カメラ付きで、荷物1個あたりの料金：3時間まで£10、3–24時間£15、24–48時間£27.50、48–72時間£40。72時間を超えると追加の日ごとに£12.50、7日を超えると日額£10。オンラインで予約できる。"
+  },
+  "wifi": {
+   "title": "Wi‑Fi",
+   "hint": "無料、Heathrow Wi‑Fi",
+   "text": "全ターミナルで無料Wi‑Fiが利用できる：ネットワークHeathrow Wi‑Fiを選び、画面の案内に従って登録する。このネットワークはFriendly WiFiの認証を受けており、子どもにふさわしくないコンテンツをフィルタリングしている。"
+  }
+ }
+}

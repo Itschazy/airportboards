@@ -1,0 +1,30 @@
+{
+ "iata": "ICN",
+ "blocks": {
+  "taxi": {
+   "title": "Taxi",
+   "hint": "Nivel 1, recargo nocturno",
+   "text": "Las paradas de taxi están en el nivel 1, junto a las salidas de la sala de llegadas; cada destino (Seúl, Incheon, Gyeonggi) tiene su número de parada: a Seúl desde la terminal 1, 5C, 6C, 6D; desde la terminal 2, 7C. De 22:00 a 4:00 se aplica un recargo nocturno, aproximadamente del 20% al 40%. Hasta Seúl, Incheon, Goyang, Gwangmyeong, Gimpo y Bucheon no se cobra suplemento por salir de la zona. El aeropuerto pide usar solo las paradas oficiales: con frecuencia operan como taxis call van ilegales con precios inflados."
+  },
+  "terminals": {
+   "title": "Terminales",
+   "hint": "Tren AREX, 6 minutos",
+   "text": "Entre las terminales 1 y 2 se puede ir en el tren Airport Railroad, unos 6 minutos, 1050 ₩; el trayecto es de pago. A los pasajeros en silla de ruedas, llamando al servicio de autobuses lanzadera (032-741-3217), se les envía gratis un vehículo con plataforma elevadora: solo en días laborables, de 5:00 a 24:00; conviene reservar con antelación."
+  },
+  "lounges": {
+   "title": "Salas VIP",
+   "hint": "Terminal 1, nivel 4",
+   "text": "En la terminal 1, todas las salas están en el nivel 4. Día y noche, con una pausa de 21:30 a 22:00, funcionan SKY HUB Lounge East (zona de tránsito, junto a la puerta 11) y West (junto a la puerta 42). Además, Asiana Business Lounge (West, junto a la puerta 42, 6:00–0:30; Central, junto a la puerta 26; East, junto a la puerta 11), Oneworld Lounge, junto a la puerta 28 (5:30–1:30), KE Lounge para pasajeros de aerolíneas extranjeras, junto a la puerta 28, Matina Lounge East y West, y SilverKris Lounge, junto a la puerta 29."
+  },
+  "sleep": {
+   "title": "Dónde dormir",
+   "hint": "Cápsulas Darakhyu, hotel tránsito",
+   "text": "En la terminal 1 funcionan día y noche el hotel de cápsulas Darakhyu, en el centro de transporte, y el Transit Hotel, junto a la puerta 11, nivel 4. Las zonas de descanso gratuitas y abiertas día y noche NAP Zone, Cozy Zone y Refresh Zone están en la sala de tránsito este del nivel 4; Relax Zone, en la oeste. Las duchas junto a las puertas 25 y 29 del nivel 4 abren de 5:00 a 23:00."
+  },
+  "kids": {
+   "title": "Con niños",
+   "hint": "Zonas de juego y salas madre e hijo",
+   "text": "En la terminal 1 hay zonas de juego infantiles abiertas día y noche junto a las puertas 9, 11, 14, 41 y 45 del nivel 3 y en las salas de tránsito este y oeste del nivel 4. Las salas madre e hijo (Baby Care Room) abren día y noche: en la sala de llegadas, junto a las salas B y E del nivel 1; junto a los mostradores de facturación D y K del nivel 3; junto a las puertas 11, 22, 25, 29, 33 y 45 del nivel 3, y en las salas de tránsito este y oeste del nivel 4."
+  }
+ }
+}
