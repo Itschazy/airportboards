@@ -1,0 +1,25 @@
+{
+  "iata": "ZRH",
+  "blocks": {
+    "transport": {
+      "title": "Tren a Zúrich",
+      "hint": "15 min hasta la estación central",
+      "text": "Los trenes SBB del aeropuerto a la estación central de Zúrich salen cada 10 minutos; el trayecto dura 15 minutos. También hay trenes regulares que conectan el aeropuerto con otras regiones de Suiza y los países vecinos."
+    },
+    "storage": {
+      "title": "Consigna de equipaje",
+      "hint": "Arrivals 2, nivel 0",
+      "text": "La consigna atendida está en Arrivals 2 de la terminal 2, en el nivel 0 junto al mostrador de información, y abre todos los días de 06:00 a 22:00. Por una pieza de hasta 25 kg y de un máximo de 90 × 60 × 35 cm, la tarifa es de 15 CHF hasta 4 horas, 18 CHF hasta 8 horas y 22 CHF hasta 24 horas; se paga por adelantado y el plazo máximo de depósito es de 3 meses. Las taquillas SBB junto a Check-in 3, en Airport Shopping, están disponibles las 24 horas."
+    },
+    "kids": {
+      "title": "Family Services",
+      "hint": "Zona de pasajeros A",
+      "text": "Family Services, en la zona de pasajeros A, es gratuito para las familias de todas las aerolíneas. Hay cambiadores, una sala tranquila para alimentar a los bebés con cunas, un espacio para gatear y una zona de comidas con microondas; para los niños mayores hay juguetes, juegos de ordenador y futbolín. No se ofrece servicio de cuidado infantil: el niño debe permanecer con un adulto."
+    },
+    "wifi": {
+      "title": "Wi-Fi gratuito",
+      "hint": "8 horas desde la primera conexión",
+      "text": "La red Zurich Airport ofrece 8 horas de acceso gratuito, contadas de forma continua desde la primera conexión. Puede registrarse por SMS introduciendo su número de teléfono y el código recibido, o con una tarjeta de embarque y un documento de identidad: el código se entrega en una WiFi Station o un mostrador de información. Los mostradores Service & Information ayudan si surge algún problema."
+    }
+  }
+}

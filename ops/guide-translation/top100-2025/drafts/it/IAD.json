@@ -1,0 +1,25 @@
+{
+  "iata": "IAD",
+  "blocks": {
+    "transport": {
+      "title": "Metro Silver Line",
+      "hint": "Passaggio dal terminal principale",
+      "text": "La stazione Silver Line è collegata al terminal principale da un tunnel pedonale coperto con tapis roulant; le indicazioni partono dai livelli check-in e ritiro bagagli. La linea raggiunge il centro di Washington e altre zone della regione. Ai tornelli si può pagare con carta bancaria contactless o portafoglio mobile: in entrata e in uscita va utilizzata la stessa carta o lo stesso dispositivo."
+    },
+    "terminals": {
+      "title": "AeroTrain",
+      "hint": "Dopo i controlli TSA",
+      "text": "L’AeroTrain automatico collega il terminal principale alle aree gate distaccate per partenze nazionali e internazionali e arrivi nazionali. La stazione del terminal principale si trova subito dopo i controlli di sicurezza TSA; il tragitto tra stazioni adiacenti dura meno di 2 minuti. La maggior parte dei passeggeri in arrivo su voli internazionali non usa l’AeroTrain perché deve prima completare le procedure doganali statunitensi."
+    },
+    "kids": {
+      "title": "Sale per l’allattamento",
+      "hint": "Prima e dopo i controlli",
+      "text": "Prima dei controlli di sicurezza, le sale per l’allattamento si trovano al livello arrivi presso i servizi igienici di fronte ai nastri bagagli 2, 6, 11 e 14. Dopo i controlli sono presso i gate A20, B70, C11 e D1; quella presso B70 ha un bagno privato, quella presso C11 un lavabo. Le sale sono chiuse a chiave: per accedere rivolgersi a un banco informazioni o chiamare +1 703 5722730."
+    },
+    "wifi": {
+      "title": "Wi-Fi gratuito",
+      "hint": "Rete #IAD Free WiFi",
+      "text": "Il Wi-Fi gratuito è disponibile nel terminal principale e nelle aree gate con il nome #IAD Free WiFi. Nella pagina di connessione vanno inseriti e-mail e codice postale; i visitatori stranieri possono scegliere Yes per saltare il codice postale. Dopo aver letto le condizioni, premere Connect."
+    }
+  }
+}

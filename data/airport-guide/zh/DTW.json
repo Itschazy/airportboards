@@ -1,0 +1,15 @@
+{
+  "iata": "DTW",
+  "blocks": {
+    "transport": {
+      "title": "FAST Michigan 261",
+      "hint": "前往底特律市中心",
+      "text": "FAST Michigan 261服务机场Evans及McNamara航站楼、Dearborn、Inkster、Corktown和底特律市中心。FAST巴士每日运行，晚间较晚时段及周末也有服务，高峰时段约每15–20分钟一班。仅可在有标识的FAST站点上下车，车内设有Wi-Fi。"
+    },
+    "sleep": {
+      "title": "McNamara内的The Westin",
+      "hint": "航站楼内酒店",
+      "text": "The Westin Detroit Metropolitan Airport位于McNamara航站楼内。酒店设有室内泳池、健身中心及餐厅；15:00起办理入住，12:00前退房。办理入住的最低年龄为21岁。"
+    }
+  }
+}

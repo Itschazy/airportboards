@@ -1,0 +1,30 @@
+{
+  "iata": "LGW",
+  "checked": "2026-10-26",
+  "blocks": [
+    {
+      "id": "transport",
+      "title": "Как доехать",
+      "hint": "Gatwick Express: 30 минут",
+      "text": "Gatwick Express без остановок связывает аэропорт с London Victoria за 30 минут и отправляется 2 раза в час. Southern обслуживает London Victoria, Clapham Junction, Brighton и другие города юго-востока; Thameslink — London Bridge, Blackfriars, City Thameslink, Farringdon и St Pancras International. Железнодорожная станция расположена у South Terminal примерно в 5 минутах ходьбы от зон прилёта и вылета. Для поездок в Лондон принимаются бесконтактные банковские карты и Oyster, кроме 60+ Oyster photocard.",
+      "source": "gatwickairport.com",
+      "url": "https://www.gatwickairport.com/transport-options/train.html"
+    },
+    {
+      "id": "kids",
+      "title": "С ребёнком",
+      "hint": "Бесплатные Kids Zones",
+      "text": "В обоих терминалах есть бесплатные игровые зоны Kids Zones в залах вылета. Для семей с маленькими детьми в колясках предусмотрены отдельные полосы досмотра Assisted Travel and family lanes. В аэропорту есть оборудованные комнаты для кормления малышей и смены подгузников, в том числе в зонах регистрации, пересадок и после паспортного контроля прилёта. Все рестораны обоих терминалов могут подогреть детскую бутылочку перед вылетом.",
+      "source": "gatwickairport.com",
+      "url": "https://www.gatwickairport.com/passenger-guides/travelling-with-children.html"
+    },
+    {
+      "id": "wifi",
+      "title": "Wi‑Fi",
+      "hint": "Бесплатно, без лимита времени",
+      "text": "Для бесплатного Wi‑Fi нужно выбрать Free Gatwick Wi-Fi Vinci Airports, затем Free Superfast Wi-Fi и указать действительный адрес электронной почты. Подключение бесплатное и без ограничения времени, со скоростью до 50 Мбит/с. Бесплатные точки зарядки есть в обоих терминалах до и после досмотра.",
+      "source": "gatwickairport.com",
+      "url": "https://www.gatwickairport.com/passenger-guides/wifi-charging.html"
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "iata": "CSX",
+  "blocks": {
+    "transport": {
+      "title": "Maglev vers la gare",
+      "hint": "20 CNY par trajet",
+      "text": "La station du maglev de l’aéroport se trouve entre T1 et T2, près de la tour de contrôle. Depuis les départs de T2, un passage près de l’entrée 1 y mène ; depuis les arrivées, il faut d’abord monter au niveau des départs. Le trajet jusqu’à la station près de la gare de Changsha-Sud coûte 20 CNY par personne. La gare possède une correspondance avec la ligne 2 du métro ; renseignements sur le maglev : +86 731 86859898."
+    },
+    "taxi": {
+      "title": "Taxis",
+      "hint": "Stations près de T1 et T2",
+      "text": "Les points officiels de prise en charge des taxis se trouvent à la porte d’accès 3 du hall des arrivées de T1 et à la porte d’accès 5 de celui de T2. Les tarifs indicatifs sont de 90 CNY vers le centre de Changsha, 120 CNY vers la gare routière de l’ouest et 110 CNY vers celle du sud ; ces montants comprennent les péages des routes et des ponts. En cas de refus d’utiliser le compteur, de refus de course ou de tarif excessif, l’aéroport recommande de s’adresser au personnel de la station de taxis."
+    },
+    "parking": {
+      "title": "Parking",
+      "hint": "Parkings près des deux terminaux",
+      "text": "Le parking P5 se trouve devant T1 : la zone A est directement près du terminal, la zone B à environ 300 m. À T2, P1 est au nord-ouest et permet notamment le stationnement de nuit, P2 est devant le terminal pour les arrêts courts, et P4 est dans le garage souterrain devant le terminal pour le stationnement de nuit. On peut payer en espèces, par carte bancaire, Alipay ou WeChat ; renseignements sur les parkings : +86 731 84798050."
+    }
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "iata": "GRU",
+  "blocks": {
+    "transport": {
+      "title": "Nasıl gidilir",
+      "hint": "13-Jade hattı",
+      "text": "Aeroporto-Guarulhos istasyonu, havalimanını Engenheiro Goulart istasyonuna bağlayan CPTM’nin 13-Jade hattındadır. Engenheiro Goulart’ta 12-Safira hattına aktarma yapılabilir. Havalimanı tarafındaki giriş, terminal 1 otoparkının yanındadır."
+    },
+    "storage": {
+      "title": "Emanet",
+      "hint": "Terminal 2 ve 3’te Malex",
+      "text": "Malex bagaj muhafazası, terminal 2 ve 3’te geliş alanının dışında, kaldırımda bulunur. Terminal 2’nin Arrival West noktası günün her saati açıktır. Terminal 2’deki Arrival East ve terminal 3’teki Arrival noktaları 07:00–19:00 arasında açıktır."
+    },
+    "wifi": {
+      "title": "Wi‑Fi",
+      "hint": ".GRU WIFI ağı",
+      "text": "Havalimanı BOINGO üzerinden ücretsiz Wi-Fi sunar. Bağlanmak için .GRU WIFI ağını seçip Connect düğmesine basın ve talimatları izleyin. BOINGO desteği 0800-095-9026 numarasında günün her saati hizmet verir."
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "iata": "MXP",
+  "checked": "2026-10-26",
+  "blocks": [
+    {
+      "id": "transport",
+      "title": "Malpensa Express",
+      "hint": "Около 51 минуты до Centrale",
+      "text": "Поезд Malpensa Express соединяет терминал 1 с Milano Centrale без пересадок примерно за 51 минуту. Билет в одну сторону стоит 15 EUR; его можно купить онлайн на trenord.it, в приложении Trenord, в автоматах и у уполномоченных продавцов.",
+      "source": "malpensaexpress.it",
+      "url": "https://www.malpensaexpress.it/en/lines-and-timetable/most-searched-lines/malpensa-aeroporto-t1-milano-centrale-route/"
+    },
+    {
+      "id": "sleep",
+      "title": "Sheraton Milan Malpensa",
+      "hint": "Прямой доступ к терминалу 1",
+      "text": "Sheraton Milan Malpensa Airport Hotel & Conference Centre имеет прямой доступ к терминалу 1. В отеле есть крытый бассейн, фитнес-центр, спа и рестораны; номера категории suite звукоизолированы.",
+      "source": "marriott.com",
+      "url": "https://www.marriott.com/en-us/hotels/milmp-sheraton-milan-malpensa-airport-hotel-and-conference-centre/overview/"
+    }
+  ]
+}

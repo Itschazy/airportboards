@@ -1,0 +1,25 @@
+{
+  "iata": "MSP",
+  "blocks": {
+    "transport": {
+      "title": "METRO Blue Line",
+      "hint": "To the city and between terminals",
+      "text": "METRO Blue Line stops at both terminals: Mall of America is about 12 minutes away, and Warehouse District in downtown Minneapolis about 25 minutes. The full route operates approximately from 05:00 to midnight, every 15–20 minutes; travel between the terminal stations is free round the clock and requires no ticket. City bus 54 departs from the Transit Center on Level 1 of Silver Ramp; there is no city bus boarding at Terminal 2."
+    },
+    "taxi": {
+      "title": "Taxi",
+      "hint": "Ranks at both terminals",
+      "text": "In Terminal 1, follow the taxi signs from Tram Level (Level T); in Terminal 2, the rank is at the Ground Transport Center on the ground level of Purple Ramp, opposite the terminal. Staff help find taxis daily from 06:00 to 01:00, while passengers can still board independently outside these hours. The airport quotes average fares of USD 39–49 to downtown Minneapolis and USD 31–38 to downtown St. Paul. The initial meter amount of USD 6.50 includes the USD 2.50 boarding charge and USD 4 airport fee."
+    },
+    "sleep": {
+      "title": "Quiet rest areas",
+      "hint": "After security in Terminal 1",
+      "text": "Terminal 1 has 2 quiet rest areas after security on the Mezzanine level overlooking Airport Mall. Reach them by going up 1 level using the stairs or lift near the entrances to Concourses E and F; the areas are suitable for reading, resting, meditation and prayer."
+    },
+    "wifi": {
+      "title": "Free Wi-Fi",
+      "hint": "4-hour sessions",
+      "text": "MSP Airport WiFi is available in all public areas of both terminals; the terms of use must be accepted on the first connection. Each free session lasts 4 hours, and another free session can be started after it ends. The number of such sessions is unlimited."
+    }
+  }
+}

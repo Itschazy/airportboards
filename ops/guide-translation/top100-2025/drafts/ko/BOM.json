@@ -1,0 +1,10 @@
+{
+  "iata": "BOM",
+  "blocks": {
+    "lounges": {
+      "title": "비즈니스 라운지",
+      "hint": "Aviserv West",
+      "text": "Aviserv West 라운지는 터미널 2 도착 구역에서 Gate A 방향에 있습니다. 음식과 음료, 샤워실, 수면 포드, 별도의 휴식 공간을 제공합니다."
+    }
+  }
+}

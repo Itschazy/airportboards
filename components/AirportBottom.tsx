@@ -311,8 +311,9 @@ export async function AirportBottom({ airport, locale, about, displayName, fligh
   const faqLd = {
     '@context': 'https://schema.org', '@type': 'FAQPage',
     // Ответы справочной идут в ту же FAQPage (одна на страницу): вопрос — тема плитки, ответ —
-    // видимый текст плитки с источником и датой проверки.
-    mainEntity: [...faq, ...(guide ? guideFaq(guide, name, (k, v) => tUi(k, v), numLocale(locale)) : [])].map(f => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })),
+    // дословно видимый текст плитки. Источники 26.10 скрыты по просьбе владельца,
+    // поэтому скрытого дополнения с доменами в acceptedAnswer тоже больше нет.
+    mainEntity: [...faq, ...(guide ? guideFaq(guide, name, (k, v) => tUi(k, v)) : [])].map(f => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })),
   };
 
   const H2 = ({ children, href, viewAll }: { children: React.ReactNode; href?: string; viewAll?: string }) => (
@@ -348,10 +349,7 @@ export async function AirportBottom({ airport, locale, about, displayName, fligh
             guide={guide}
             title={tUi('aguide_title', { iata: airport.iata })}
             numLocale={numLocale(locale)}
-            labels={{
-              leadOfficial: tUi('aguide_lead_official'), leadThird: tUi('aguide_lead_third'), checked: tUi('aguide_checked'),
-              src: tUi('aguide_src'), srcAnd: tUi('aguide_src_and'), srcMore: tUi('aguide_src_more'), srcThird: tUi('aguide_src_third'),
-            }}
+            labels={{ checked: tUi('aguide_checked') }}
           />
         )}
 

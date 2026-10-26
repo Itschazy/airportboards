@@ -1,0 +1,25 @@
+{
+  "iata": "CAI",
+  "blocks": {
+    "transport": {
+      "title": "Autobuses desde el aeropuerto",
+      "hint": "Estación frente a la terminal 1",
+      "text": "Los autobuses urbanos hacia destinos de El Cairo y los interurbanos salen únicamente de la estación del aparcamiento frente a la terminal 1. Desde allí hay salidas de West Delta, Upper Egypt, East Delta y Super Jet."
+    },
+    "terminals": {
+      "title": "Automated People Mover",
+      "hint": "Tren gratuito del aeropuerto",
+      "text": "El Automated People Mover gratuito conecta la terminal 1, Air Mall, el aparcamiento, la terminal 2 y la terminal 3; el recorrido completo dura como máximo 5 minutos. El tren está destinado tanto a pasajeros en tránsito como a visitantes de la parte pública del aeropuerto; funciona 18 horas al día y las otras 6 horas se dedican al mantenimiento."
+    },
+    "lounges": {
+      "title": "Ahlan VIP",
+      "hint": "Sala y acompañamiento",
+      "text": "Ahlan VIP incluye acompañamiento y acceso a la sala durante un máximo de 3 horas; es necesario reservar al menos 48 horas antes del vuelo. El precio VIP es de 220 USD para un pasajero extranjero y de 3.600 EGP para un ciudadano egipcio. Para vuelos de conexión el precio se duplica y se aceptan reservas si hay al menos 4 horas entre vuelos. Dos niños menores de 6 años reciben el servicio gratis; un tercer niño menor de 6 años se considera un pasajero adicional."
+    },
+    "wifi": {
+      "title": "Wi-Fi gratuito",
+      "hint": "Servicio de Orange Egypt",
+      "text": "Orange Egypt ofrece Wi-Fi gratuito a los pasajeros que llegan al aeropuerto de El Cairo o salen de él. El operador también proporciona estaciones de carga gratuitas para teléfonos y otros dispositivos electrónicos."
+    }
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "iata": "CLT",
+  "blocks": {
+    "taxi": {
+      "title": "Taxi",
+      "hint": "Uptown: USD 32 plus airport fee",
+      "text": "Taxis leave from the outer curb on the arrivals and baggage claim level in Zone 1. They primarily operate daily from 05:00 to midnight, but may also be available outside these hours. The flat fare to Uptown within the I 277 loop is USD 32; trips within a 3-mile radius of the airport cost USD 16, and a USD 2.50 airport fee is added to all trips. Major credit cards are accepted."
+    },
+    "kids": {
+      "title": "With children",
+      "hint": "Nursing rooms",
+      "text": "Mother’s Rooms are available to all nursing mothers, with individual curtained spaces, padded seats and power outlets. Each room has a changing table and a sink. They are in the Concourse A connector between gates A1–A13 and A21–A29, near A31, near security checkpoint 3 at the junction of Concourses D and E, and between gates E32 and E36. Changing tables are also available in all men’s, women’s and family restrooms in the terminal."
+    },
+    "parking": {
+      "title": "Parking",
+      "hint": "Round the clock, booking available",
+      "text": "CLT parking facilities are open round the clock all year. Spaces are available by reservation or on a first-come, first-served basis; Booked and Reservation Only mean that spaces are unavailable without a reservation, but existing bookings remain valid. All parking facilities have spaces for passengers with disabilities and continuously operating accessible shuttles. Valet must be booked at least 3 hours ahead."
+    },
+    "wifi": {
+      "title": "Wi‑Fi",
+      "hint": "CLT Free WiFi and charging",
+      "text": "The free CLT Free WiFi network is available to passengers throughout the terminal. Charging stations are in every concourse; seats with power outlets and USB are at gates A1–A39, B1–B16 and C2–C19. Additional outlets are in the Atrium and all concourses."
+    }
+  }
+}

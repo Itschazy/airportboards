@@ -1,0 +1,25 @@
+{
+  "iata": "FLL",
+  "blocks": {
+    "transport": {
+      "title": "BCT和Tri-Rail",
+      "hint": "1路公交车和列车",
+      "text": "BCT 1路公交车每日运营，机场车站位于Rental Car Center的Stop G。从航站楼前往Dania Beach的Tri-Rail车站有免费巴士，发车点位于下层到达区：1号航站楼西端的GTA-1、2号和3号航站楼之间的GTA-2，以及3号和4号航站楼之间的GTA-3。Tri-Rail每日服务Miami-Dade、Broward和Palm Beach三县。"
+    },
+    "terminals": {
+      "title": "航站楼之间通行",
+      "hint": "步行路线",
+      "text": "免费巴士全天运营，但仅往返于Rental Car Center和航站楼之间；下层到达区设有车站标识。航站楼之间可沿建筑旁的人行道步行，或走穿过停车场的步行路线，也可乘坐停车场电车。"
+    },
+    "storage": {
+      "title": "行李寄存",
+      "hint": "1号和3号航站楼",
+      "text": "1号航站楼的行李寄存处位于安检前的2楼，靠近B指廊出口；3号航站楼的寄存处位于下层行李提取区，靠近JetBlue行李办公室。两处均在周一至周五08:30–17:30、周六和周日08:30–18:30营业。4号航站楼的寄存处暂时关闭；服务详情可致电+1 954 359 5505咨询。"
+    },
+    "wifi": {
+      "title": "免费Wi-Fi",
+      "hint": "航站楼和租车中心",
+      "text": "所有航站楼、指廊和Rental Car Center均提供免费Wi-Fi。官方网络名称为Airport-Wifi-Terminal_1、Airport-Wifi-Terminal_2、Airport-Wifi-Terminal_3、Airport-Wifi-Terminal_4和Airport-Wifi-Rental_Car_Center。FLL连接无需付费；如果出现银行卡信息请求，可致电+1 866 435 9355向机场服务部门反映。"
+    }
+  }
+}

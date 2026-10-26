@@ -1,0 +1,20 @@
+{
+  "iata": "HAN",
+  "blocks": {
+    "terminals": {
+      "title": "Terminaller arasında",
+      "hint": "Ücretsiz NIA Shuttle Bus",
+      "text": "Ücretsiz NIA Shuttle Bus, iç hat terminali T1 ile dış hat terminali T2’yi bağlar. T1’de biniş yeri A kanadında Kat 1’dedir."
+    },
+    "kids": {
+      "title": "Aile hizmetleri",
+      "hint": "Bebek arabaları ve bakım odaları",
+      "text": "Ücretsiz bebek arabaları güvenlik kontrolünden sonra terminal T1 ve E salonunda Kat 2’de, terminal T2’de Kat 2 ve Kat 3’te bulunur. T2’de kontrol sonrasında Kat 3’te 2 bebek bakım odası vardır; terminallerin bazı tuvaletlerinde de alt değiştirme masaları bulunur."
+    },
+    "wifi": {
+      "title": "Ücretsiz Wi-Fi",
+      "hint": "T1 ve T2 bekleme alanları",
+      "text": "Ücretsiz Wi-Fi, iç ve dış hat terminallerinin yolcu bekleme alanlarında kullanılabilir. @Airport Free Wifi - Goldsun ağını seçip otomatik açılan sayfada Connect to the Internet düğmesine basın. T2’nin genişletilen kısmında ekipman kurulumu hâlâ sürmektedir."
+    }
+  }
+}

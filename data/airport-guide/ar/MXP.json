@@ -1,0 +1,15 @@
+{
+  "iata": "MXP",
+  "blocks": {
+    "transport": {
+      "title": "Malpensa Express",
+      "hint": "نحو 51 دقيقة إلى Centrale",
+      "text": "يربط قطار Malpensa Express المبنى 1 بمحطة Milano Centrale دون تبديل في نحو 51 دقيقة. تبلغ تذكرة الاتجاه الواحد 15 EUR، ويمكن شراؤها عبر trenord.it وتطبيق Trenord وآلات التذاكر والبائعين المعتمدين."
+    },
+    "sleep": {
+      "title": "Sheraton Milan Malpensa",
+      "hint": "وصول مباشر إلى المبنى 1",
+      "text": "يوفر Sheraton Milan Malpensa Airport Hotel & Conference Centre وصولًا مباشرًا إلى المبنى 1. يضم الفندق مسبحًا داخليًا ومركز لياقة وسبا ومطاعم، وتتميز الأجنحة بعزل الصوت."
+    }
+  }
+}

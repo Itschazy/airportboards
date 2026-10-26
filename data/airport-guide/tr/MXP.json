@@ -1,0 +1,15 @@
+{
+  "iata": "MXP",
+  "blocks": {
+    "transport": {
+      "title": "Malpensa Express",
+      "hint": "Centrale’ye yaklaşık 51 dakika",
+      "text": "Malpensa Express treni, terminal 1’i Milano Centrale’ye aktarmasız yaklaşık 51 dakikada bağlar. Tek yön bilet 15 EUR’dur; trenord.it üzerinden, Trenord uygulamasından, makinelerden ve yetkili satıcılardan alınabilir."
+    },
+    "sleep": {
+      "title": "Sheraton Milan Malpensa",
+      "hint": "Terminal 1’e doğrudan erişim",
+      "text": "Sheraton Milan Malpensa Airport Hotel & Conference Centre’ın terminal 1’e doğrudan erişimi vardır. Otelde kapalı havuz, fitness merkezi, spa ve restoranlar bulunur; süit odalar ses yalıtımlıdır."
+    }
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "iata": "LGA",
+  "blocks": {
+    "transport": {
+      "title": "Ücretsiz Q70 LGA Link",
+      "hint": "B ve C’den metroya",
+      "text": "Ücretsiz Q70 LGA Link otobüsü terminal B ve C’ye hizmet verir ve havalimanını Jackson Heights–Roosevelt Avenue ile 74 St–Broadway metro aktarma noktalarına bağlar. MTA otobüsleri tekerlekli sandalye kullanıcılarına uygundur ve rampalıdır."
+    },
+    "taxi": {
+      "title": "Taksi",
+      "hint": "Önceden rezervasyon gerekmez",
+      "text": "Tüm terminallerde önceden rezervasyon olmadan taksi bulunur; görevli, sıradaki yolcuları boş araca yönlendirir. Ücret mesafe ve süreye göre hesaplanır; taksimetre başlangıç tutarı 3 USD’dir. Havalimanından yolcu alımında ayrıca 2 USD PANYNJ ücreti uygulanır. Tekerlekli sandalyeye uygun taksiler normal taksilerle aynı ücrettedir; +1 646 599 9999 numarasından istenebilir."
+    },
+    "terminals": {
+      "title": "All Terminals Shuttle",
+      "hint": "Günün her saati ücretsiz",
+      "text": "Ücretsiz All Terminals Shuttle tüm terminaller arasında çalışır; ayrıca ön ödemeli Economy Lot (Parking Lot 7), Hangar 7 South ve 94th Street’te durur. Günün her saati çalışır: yoğun saatlerde 15 dakikada bir, diğer zamanlarda 20 dakikada bir."
+    },
+    "wifi": {
+      "title": "Ücretsiz Wi-Fi",
+      "hint": "_Free LGA WiFi ağı",
+      "text": "Ücretsiz bağlanmak için _Free LGA WiFi ağını seçin. Destek +1 800 880 4117 numarasında günün her saati hizmet verir."
+    }
+  }
+}

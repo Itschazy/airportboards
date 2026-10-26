@@ -1,0 +1,82 @@
+heading ChatGPT сказал:, Value: 4
+									152 text ChatGPT сказал:
+								153 container
+									154 text Проверил все 6 пар RU → ZH без обращения к интернету. Числа, валюты, возрастные ограничения, время работы и основные условия сохранены корректно. Обнаружено  1 обязательное замечание и 3 факультативных .
+								155 heading Обязательные исправления, Value: 2
+									156 text Обязательные исправления
+								157 container
+									158 text 1.  ATL / lounges — время допуска участников Priority Pass и LoungeKey
+								159 container
+									160 text Было: Priority Pass和LoungeKey会员可在起飞前2.5小时入场。
+								161 container
+									162 text Предлагается: Priority Pass和LoungeKey会员可在计划起飞前2.5小时入场。
+								163 container
+									164 text Причина:  В русском оригинале указано «за 2,5 часа» в контексте вылета по расписанию. В китайском предложении отсутствует  计划  («по расписанию»), хотя для Club Pass оно сохранено. Добавление устраняет неоднозначность относительно фактического и запланированного времени вылета.
+								165 heading Факультативные улучшения, Value: 2
+									166 text Факультативные улучшения
+								167 container
+									168 text 2.  ATL / lounges — расположение зала
+								169 container
+									170 text Было: The Club ATL位于F候机区的Mezzanine层，安检后
+								171 container
+									172 text Предлагается: The Club ATL位于安检后的F候机区Mezzanine层
+								173 container
+									174 text Причина:  Более естественная конструкция для китайской аэропортовой справки. Уточнение «после досмотра» непосредственно относится к расположению зала. Исходный вариант понятен и не искажает факты.
+								175 container
+									176 text 3.  STN / lounges — название нового зала
+								177 container
+									178 text Было: 新的Essence by Escape Lounges仅接待获准航空公司、从1–19登机口出发的旅客。
+								179 container
+									180 text Предлагается: 新的Essence by Escape Lounges仅接待乘坐获准航空公司航班、从1–19号登机口出发的旅客。
+								181 container
+									182 text Причина:  Конструкция  接待获准航空公司、从...出发的旅客  стилистически неуклюжа: создаёт впечатление, будто зал обслуживает сами авиакомпании.  乘坐获准航空公司航班  однозначно относит ограничение к пассажирам соответствующих рейсов.
+								183 container
+									184 text 4.  AUH / storage — неполный расчётный период
+								185 container
+									186 text Было: 不足一个计费时段按完整时段收费。
+								187 container
+									188 text Предлагается: 未满一个完整计费时段的，按完整计费时段收费。
+								189 container
+									190 text Причина:  Чуть более естественное выражение правила округления периода оплаты. Исходный вариант грамматически допустим и передаёт условие правильно.
+								191 heading Без замечаний, Value: 2
+									192 text Без замечаний
+								193 content list
+									194 container
+										195 AXListMarker •
+										196 text SHA / storage:  условия 240-часового безвизового транзита, бесплатные 72 часа, 1 место багажа, сроки и часы работы переданы верно.
+										197 text Gate 6
+										198 text  сохранено без неподтверждённой интерпретации.
+									199 container
+										200 AXListMarker •
+										201 text CAI / lounges:  тарифы 220 USD и 3 600 EGP, удвоение стоимости для стыковочных рейсов, 48 часов предварительного бронирования, минимум 4 часа между рейсами и условия для детей младше 6 лет сохранены.
+									202 container
+										203 AXListMarker •
+										204 text XMN / taxi:  двери 7 и 3, направление до западной парковки, расстояние 120 м, города и телефон переданы корректно.
+								205 container
+									206 text Итог:  перевод пригоден к публикации после небольшой редакторской правки. Критических ошибок в ценах, валютах, возрастных границах, длительности хранения или условиях доступа не обнаружено.
+								207 button Копировать
+									208 image
+								209 button Оценить ответ
+									210 image
+								211 checkbox Description: Прочитать вслух, Value: 0
+								212 button Поделиться
+								213 pop up button (collapsed) Description: Сгенерировать ответ заново, ID: radix-_r_9a_, Secondary Actions: Expand
+								214 pop up button (collapsed) Description: Ещё действия, ID: radix-_r_9e_, Secondary Actions: Expand
+							215 container
+								216 text ChatGPT может допускать ошибки. Проверяйте важную информацию.
+							217 container
+								218 heading Последний ответ, Value: 4
+									219 text Последний ответ
+								220 container
+									221 container
+										222 button (collapsed) Description: Добавить файлы и другое, Secondary Actions: Expand
+										223 text entry area (settable) Description: Спросить ChatGPT, Value:
+
+											224 container
+												225 text Спросить ChatGPT
+										226 pop up button (collapsed) Description: Выбрать модель ChatGPT, ID: radix-_r_9q_, Secondary Actions: Expand
+											227 text Средний
+										228 button Диктовать
+										229 button Начать голосовой разговор
+
+The focused UI element is 223 text entry area (settable) Description: Спросить ChatGPT, Value:

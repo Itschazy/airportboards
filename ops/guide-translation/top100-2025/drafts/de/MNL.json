@@ -1,0 +1,20 @@
+{
+  "iata": "MNL",
+  "blocks": {
+    "taxi": {
+      "title": "Taxi",
+      "hint": "Fahrtenbeleg aufbewahren",
+      "text": "Am NAIA verkehren Coupon Taxi, Yellow Metered Taxi und Regular Metered Taxi. Flughafenpersonal gibt Fahrgästen einen Fahrtenbeleg; diesen müssen sie selbst aufbewahren und dürfen ihn nicht dem Fahrer geben. Bei Fragen oder Beschwerden zur Fahrt können die Kontaktnummern auf dem Beleg genutzt werden."
+    },
+    "parking": {
+      "title": "Parken",
+      "hint": "Keine Vorabreservierung",
+      "text": "Die Terminalparkplätze werden ausschließlich nach dem Prinzip „Wer zuerst kommt, parkt zuerst“ vergeben, ohne Vorabreservierung. Fahrzeuge können über Nacht oder für mehrere Tage abgestellt werden; Langzeitparken wird für jeweils 24 Stunden berechnet. Akzeptiert werden Bargeld, GCash, PayMaya und Bankkarten."
+    },
+    "wifi": {
+      "title": "Wi‑Fi",
+      "hint": "Kostenlose Netze in den Terminals",
+      "text": "In allen NAIA-Terminals gibt es kostenloses WLAN: NAIA Free Go Wi-Fi von GLOBE für 3 Stunden pro Tag, Smart für 1 Stunde pro Tag und Converge für 2 Stunden pro Tag. Die Flughafenseite nennt Check-in-, Flugsteig-, Ankunfts- und Abflugbereiche. In den Terminals 1 und 2 befinden sich Ladestationen für Laptops im Abflugbereich nach der Sicherheitskontrolle; für Telefone gibt es sie auch im öffentlichen Bereich."
+    }
+  }
+}

@@ -1,0 +1,7 @@
+# Мобильная проверка финального дерева
+
+26.10.2026, локальныйproductionсервер3099, пустойAIRLABS_API_KEY и отдельные FLIGHT_STORE_PATH/AIRPORTSBOARD_DATA_DIR. ChromeResponsiveэмуляция375px; RU/TFU,EN/STN,DE/SFO,FR/OKA,ES/PHL,IT/ORY,TR/AUH,ZH/XMN,JA/FUK,KO/CJU,AR/LIM,HI/CAI. Все12блоков раскрыты/повторно закрыты нативнымэлементомChrome, overflow=false, bodyOverflow=false, sourceRows=0. Проверены скриншоты12языков, полныйтекст и отступы поDOM; отдельные моментальные Chromeзахваты IT/ES дали артефакт первыхбукв заголовка при автопрокрутке; DOMRange/rect(left24)/scrollX0 и повторныйESзахват подтвердили отсутствие обрезки в разметке. Из этого не сделано необоснованной правки CSS.
+
+Дополнительно HI/CAIlounges320px, AR/URCsleep320px (длинный адрес и телефон), KO/STNlounges430px; всё без горизонтального переполнения. AR/LIMwifi375px: начальнаяточкаSSID .FreeWifiJorgeChavez сохранена приRTLизоляции. RU/TFU375px в тёмнойтеме: читаемость и раскрытый блок, overflow=false. После теста localhost возвращён в светлую тему. Это дополнительная проверка существующего UI, оформление не менялось.
+
+JSONизмерения mobile-results.json; PNGв /Users/whereiszhenya/Documents/Codex/2026-10-18/airportsboard-live-12-next-js-15/outputs/guide-top100-20261026/. Проверка выполненаэмуляцией, физические iPhone/слабыйAndroid/ЯндексБраузер не подключались. Это не замер реальнойпроизводительности и не доказательство отсутствия всех браузерных багов.

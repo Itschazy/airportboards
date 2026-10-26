@@ -1,0 +1,30 @@
+{
+  "iata": "DMK",
+  "checked": "2026-10-26",
+  "blocks": [
+    {
+      "id": "transport",
+      "title": "Автобусы BMTA",
+      "hint": "Маршруты A1–A4",
+      "text": "A1 идёт к Mo Chit 2 с 05:45 до полуночи, A2 — к Victory Monument с 06:00 до 23:00; оба отправляются каждые 15 минут и стоят 30 THB. A3 до Lumpini Park и A4 до Sanam Luang работают с 06:00 до 23:00 с интервалом 30 минут, проезд стоит 50 THB. Пункты посадки находятся перед Service Hall и в общественной зоне прилёта терминала 1 на уровне 1.",
+      "source": "donmueang.airportthai.co.th",
+      "url": "https://donmueang.airportthai.co.th/service/transportation/detail/205"
+    },
+    {
+      "id": "taxi",
+      "title": "Такси по счётчику",
+      "hint": "Плюс аэропортовая доплата",
+      "text": "К стоимости по счётчику добавляется доплата 50 THB, а сборы за скоростные и специальные платные дороги оплачивает пассажир. Стойки такси находятся в общественной зоне прилёта на уровне 1 терминалов 1 и 2.",
+      "source": "donmueang.airportthai.co.th",
+      "url": "https://donmueang.airportthai.co.th/service/transportation/detail/211"
+    },
+    {
+      "id": "wifi",
+      "title": "Бесплатный Wi-Fi",
+      "hint": "60 минут после подключения",
+      "text": "Выберите сеть Airport Free Wi-Fi by NT, введите электронную почту и отметьте согласие с условиями использования. После успешного подключения нажмите OK: бесплатный доступ предоставляется на 60 минут.",
+      "source": "donmueang.airportthai.co.th",
+      "url": "https://donmueang.airportthai.co.th/service/airport-guide/detail/2025_Updated_Donmueang_Airport_Free_Wi-Fi_Access"
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "iata": "CGK",
+  "blocks": {
+    "sleep": {
+      "title": "Dónde dormir",
+      "hint": "Hotel sobre las salidas del T2",
+      "text": "Jakarta Airport Hotel está en el terminal 2, encima del vestíbulo de salidas. El hotel ofrece traslado gratuito a todos los terminales del aeropuerto y Wi-Fi gratuito. Las habitaciones tienen aire acondicionado, televisor, caja fuerte, utensilios para preparar té y café y baño con ducha. La recepción y el servicio de habitaciones funcionan las 24 horas; la consigna de equipajes figura entre los servicios."
+    }
+  }
+}

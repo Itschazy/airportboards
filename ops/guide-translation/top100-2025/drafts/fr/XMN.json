@@ -1,0 +1,25 @@
+{
+  "iata": "XMN",
+  "blocks": {
+    "taxi": {
+      "title": "Taxis",
+      "hint": "Porte 7 à T3, porte 3 à T4",
+      "text": "Les taxis urbains attendent au niveau des arrivées, à la porte automatique 7 de T3 et à la porte d’accès 3 de T4. Pour Quanzhou, Shishi et Zhangzhou, des taxis distincts se trouvent sur le parking ouest, à environ 120 m à l’ouest de la sortie du hall des arrivées intérieures de T3. Le numéro de réclamation disponible 24 heures sur 24 est le +86 592 5615610."
+    },
+    "storage": {
+      "title": "Consigne à bagages",
+      "hint": "Halls des arrivées de T3 et T4",
+      "text": "Les comptoirs de consigne se trouvent dans les halls des arrivées de T3 et T4 et sont ouverts de 05:30 jusqu’à la fin des vols à l’arrivée. La facturation se fait par périodes de 24 heures ; toute période de moins de 24 heures compte comme une période complète. Téléphones : T3 — +86 592 5706036, T4 — +86 592 5706016."
+    },
+    "wifi": {
+      "title": "Wi-Fi dans les terminaux",
+      "hint": "Réseaux gratuits et payants",
+      "text": "Les réseaux CMCC-XMAirport-free, ChinaUnicom et Chinanet sont disponibles dans les zones passagers des terminaux. L’accès par China Mobile et China Unicom est gratuit, celui de China Telecom est payant ; les conditions de paiement figurent sur la page de connexion de l’opérateur. Le Wi-Fi est disponible du début à la fin de l’activité des vols."
+    },
+    "lounges": {
+      "title": "Salons pour passagers premium",
+      "hint": "Accès selon la classe et le vol",
+      "text": "Le salon des vols intérieurs de T4 se trouve à gauche après le contrôle de sûreté, en suivant les panneaux. Il accueille gratuitement les passagers de première classe et de classe affaires des vols dont l’assistance au sol est assurée par l’aéroport. Repos, restauration et Internet sont inclus ; il ouvre à 06:00 et ferme après l’embarquement du dernier passager de première classe. Le salon international de l’aéroport se trouve à T3 près de la porte d’embarquement 17 et propose les mêmes services aux passagers de première classe et de classe affaires des vols pris en charge par l’aéroport."
+    }
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "iata": "BOG",
+  "checked": "2026-10-26",
+  "blocks": [
+    {
+      "id": "transport",
+      "title": "Как доехать",
+      "hint": "TransMilenio через Portal El Dorado",
+      "text": "При поездке системой TransMilenio нужно выйти на Portal El Dorado и пересесть на подвозящий автобус 16-14 Airport либо автобус K86. Оба маршрута, по информации аэропорта, идут непосредственно к терминалам.",
+      "source": "eldorado.aero",
+      "url": "https://eldorado.aero/en/transporte/como-llegar-al-aeropuerto"
+    },
+    {
+      "id": "terminals",
+      "title": "Терминалы",
+      "hint": "Бесплатный трансфер Т1–Т2",
+      "text": "Между терминалами 1 и 2 El Dorado действует бесплатный трансфер. Он работает ежедневно с 04:00 до полуночи и оборудован пандусом для маломобильных пассажиров.",
+      "source": "eldorado.aero",
+      "url": "https://eldorado.aero/en/transporte/como-llegar-al-aeropuerto"
+    },
+    {
+      "id": "parking",
+      "title": "Парковка",
+      "hint": "Короткая и длительная стоянка Т1",
+      "text": "Парковка Short Stay Parking — Center находится в центральной части терминала 1 с доступом к зонам внутренних и международных рейсов. Для стоянки на несколько дней предусмотрена Long Stay Parking — North возле Gate 1 терминала 1, часть её мест находится под крышей. На парковках есть места для автомобилей и велосипедов, а также выделенные места для маломобильных пассажиров.",
+      "source": "eldorado.aero",
+      "url": "https://eldorado.aero/en/servicios/parqueaderos/terminal-1"
+    },
+    {
+      "id": "wifi",
+      "title": "Wi‑Fi",
+      "hint": "Airport_El_Dorado бесплатно",
+      "text": "В аэропорту пассажирам и посетителям доступен бесплатный Wi‑Fi Airport_El_Dorado. Для подключения нужно выбрать сеть, указать данные на портале доступа и открыть браузер. Если соединение прервалось, можно бесплатно подключаться снова столько раз, сколько нужно. Дополнительно продаётся Premium WiFi с непрерывным подключением для 1 устройства.",
+      "source": "eldorado.aero",
+      "url": "https://eldorado.aero/en/servicios/internet-wifi"
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "iata": "STN",
+  "blocks": {
+    "transport": {
+      "title": "Treno per Londra",
+      "hint": "Stazione sotto il terminal",
+      "text": "La stazione ferroviaria si trova direttamente sotto il terminal, a circa 2 minuti a piedi; sono disponibili ascensori, scale mobili e rampe. Stansted Express raggiunge London Liverpool Street ogni 15 minuti, tutti i giorni, in circa 48 minuti; fino a Tottenham Hale il viaggio dura circa 36 minuti. Si può pagare con carta bancaria contactless o portafoglio mobile, ma Oyster non è valido per i viaggi da o per l’aeroporto."
+    },
+    "kids": {
+      "title": "Con i bambini",
+      "hint": "Cambio e allattamento",
+      "text": "I fasciatoi sono nei servizi igienici maschili e femminili presso il check-in nella zona A e, dopo i controlli di sicurezza, vicino ai gate 13, 33/34, 43 e 59. Nel ritiro bagagli internazionale ci sono cabine per il cambio presso il nastro 9; sono presenti anche nella sala principale di accoglienza degli arrivi. L’allattamento è consentito in tutto l’aeroporto; per la privacy sono previste cabine separate nella Family Room della sala principale delle partenze."
+    },
+    "lounges": {
+      "title": "Essence Lounge",
+      "hint": "Solo per determinate compagnie",
+      "text": "Il precedente Escape Lounge nel terminal principale è chiuso; il nuovo Essence by Escape Lounges accoglie solo passeggeri di compagnie ammesse in partenza dai gate 1–19. I passeggeri Ryanair ed easyJet non possono accedervi; dopo essersi recati ai gate 1–19 non è possibile tornare al terminal principale. Si può entrare a partire da 3 ore prima della partenza prevista; l’ingresso senza prenotazione costa da 35 GBP e i bambini di età inferiore a 3 anni entrano gratis. Sono inclusi piatti freddi, bevande calde e analcoliche, vino, birra in bottiglia e Wi-Fi; si paga solo con carta."
+    },
+    "wifi": {
+      "title": "Wi-Fi gratuito",
+      "hint": "2 ore nel terminal",
+      "text": "Nel terminal di Stansted e nelle lounge è disponibile il Wi-Fi gratuito per 2 ore. Per connettersi occorre selezionare la rete Wi-Fi dell’aeroporto su telefono, tablet o portatile."
+    }
+  }
+}

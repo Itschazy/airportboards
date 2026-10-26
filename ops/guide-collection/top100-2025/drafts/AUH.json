@@ -1,0 +1,38 @@
+{
+  "iata": "AUH",
+  "checked": "2026-10-26",
+  "blocks": [
+    {
+      "id": "transport",
+      "title": "Городские автобусы",
+      "hint": "Карта Hafilat обязательна",
+      "text": "Остановки городских автобусов находятся снаружи зоны прилёта; маршруты серии A работают круглосуточно. A1 идёт в Al Zahiyah, A2 — к Khalifa Street, A10 — к MBZ City Bus Station, A40 — к Al Shahama Bus Station. Для проезда нужна карта Hafilat, которую можно купить и пополнить в автоматах рядом с остановками аэропорта; наличные в автобусе не принимаются.",
+      "source": "zayedinternationalairport.ae",
+      "url": "https://www.zayedinternationalairport.ae/en/parking-and-transport/transport/city-bus-routes-and-timetables"
+    },
+    {
+      "id": "storage",
+      "title": "Камера хранения",
+      "hint": "Круглосуточно",
+      "text": "Хранение одного места багажа стоит 35 AED до 3 часов, 55 AED до 12 часов, 75 AED до 24 часов, 105 AED до 48 часов и 140 AED до 72 часов. После 72 часов к уже начисленным 140 AED добавляется 25 AED за каждый следующий день; неполный период оплачивается как полный. Камера хранения работает круглосуточно, точные условия аэропорт предлагает уточнять у стойки.",
+      "source": "zayedinternationalairport.ae",
+      "url": "https://www.zayedinternationalairport.ae/en/plan-and-prepare/at-the-airport/baggage-services"
+    },
+    {
+      "id": "kids",
+      "title": "Услуги для семей",
+      "hint": "Коляски и комнаты кормления",
+      "text": "Бесплатные коляски доступны в зоне вылета от регистрации до посадки и со стороны выхода прилёта. Комнаты для смены подгузников и кормления предусмотрены во всех зонах аэропорта и обеспечивают уединение и места для сидения. Тихое пространство Sensory Space находится рядом с выходом на посадку D43.",
+      "source": "zayedinternationalairport.ae",
+      "url": "https://www.zayedinternationalairport.ae/en/plan-and-prepare/passenger-assistance/family-services"
+    },
+    {
+      "id": "wifi",
+      "title": "Бесплатный Wi-Fi",
+      "hint": "Без ограничения времени",
+      "text": "На территории аэропорта доступен бесплатный Wi-Fi без ограничения времени. Выберите сеть Zayed International Airport Free Wifi и нажмите Connect в приветственном окне; после перехода на сайт аэропорта откроется полный доступ в интернет.",
+      "source": "zayedinternationalairport.ae",
+      "url": "https://www.zayedinternationalairport.ae/en/general/wifi"
+    }
+  ]
+}

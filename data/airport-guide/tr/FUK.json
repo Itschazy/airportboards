@@ -1,0 +1,25 @@
+{
+  "iata": "FUK",
+  "blocks": {
+    "transport": {
+      "title": "Metro",
+      "hint": "İç hatlar terminalindeki istasyon",
+      "text": "Fukuoka-kuko istasyonu, iç hatlar terminalinin güney bölümüne doğrudan bağlıdır. Geliş salonundan güney asansörü ve yürüyen merdivenlerle B2 katındaki Access Hall turnikelerine ulaşılır. Şehir içi aktarmalar için hat, JR Kyushu bağlantısı bulunan Hakata’ya ve Nishitetsu Fukuoka (Tenjin) bağlantısı bulunan Tenjin’e gider."
+    },
+    "terminals": {
+      "title": "Terminaller arasında",
+      "hint": "Ücretsiz otobüs",
+      "text": "İç ve dış hatlar terminalleri arasında havalimanı kullanıcıları için ücretsiz otobüs çalışır. İç hatlar terminalinin yayımlanan tarifesinin gündüz bölümünde seferler 5–6 dakikada bir planlanmıştır; saatler değişebilir. Tüm otobüslerde tekerlekli sandalye rampası vardır; ön ve arka kapılardan binilip inilebilir."
+    },
+    "kids": {
+      "title": "Emzirme odaları",
+      "hint": "Her iki terminalde",
+      "text": "Emzirme odalarındaki ayrı kabinler perdelerle ayrılmıştır; su ısıtıcıları ve çocuk koltukları vardır. İç hatlar terminalinde Kat 1, 2, 3 ve 4’te, dış hatlar terminalinde Kat 1 ve 3’te bulunurlar. Kat planlarında özel simgelerle gösterilirler."
+    },
+    "wifi": {
+      "title": "Ücretsiz Wi-Fi",
+      "hint": "İki AirportFreeWiFi ağı",
+      "text": "Ücretsiz internet AirportFreeWiFi-2.4G ve AirportFreeWiFi-5.0G ağlarından sağlanır; bazı cihazlarda yalnızca ilk ağ görünür. Ağı seçtikten sonra tarayıcı açılmalı, bağlantı sayfasındaki koşullar kabul edilmeli ve belirtilen bağlantı izlenmelidir. Bazı mağaza, restoran ve kapsama dışı alanlarda bağlantı çalışmayabilir; yoğun kullanımda da erişim zorlaşabilir."
+    }
+  }
+}

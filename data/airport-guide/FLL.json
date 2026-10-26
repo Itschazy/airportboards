@@ -1,0 +1,38 @@
+{
+  "iata": "FLL",
+  "checked": "2026-10-26",
+  "blocks": [
+    {
+      "id": "transport",
+      "title": "BCT и Tri-Rail",
+      "hint": "Автобус 1 и поезд",
+      "text": "Автобус BCT 1 работает ежедневно; остановка аэропорта находится у Rental Car Center, Stop G. К станции Tri-Rail в Dania Beach из терминалов ходят бесплатные автобусы с нижнего уровня прилёта: от GTA-1 у западного конца терминала 1, GTA-2 между терминалами 2 и 3 и GTA-3 между терминалами 3 и 4. Tri-Rail ежедневно обслуживает округа Miami-Dade, Broward и Palm Beach.",
+      "source": "broward.org",
+      "url": "https://www.broward.org/airport/Passengers/Transportation"
+    },
+    {
+      "id": "terminals",
+      "title": "Между терминалами",
+      "hint": "Пешеходные маршруты",
+      "text": "Бесплатные автобусы курсируют круглосуточно только между Rental Car Center и терминалами; остановки обозначены на нижнем уровне прилёта. Между терминалами можно пройти по тротуарам у здания или по пешеходному маршруту через парковку либо воспользоваться трамваем парковки.",
+      "source": "broward.org",
+      "url": "https://www.broward.org/airport/Passengers/Transportation"
+    },
+    {
+      "id": "storage",
+      "title": "Хранение багажа",
+      "hint": "Терминалы 1 и 3",
+      "text": "В терминале 1 камера хранения расположена до досмотра на уровне 2 рядом с выходом из пассажирской галереи B; в терминале 3 — на нижнем уровне получения багажа рядом с офисом багажа JetBlue. Оба пункта работают по будням 08:30–17:30, по субботам и воскресеньям 08:30–18:30. Пункт терминала 4 временно закрыт; сведения о сервисе можно уточнить по телефону +1 954 359 5505.",
+      "source": "broward.org",
+      "url": "https://www.broward.org/airport/Passengers/Services"
+    },
+    {
+      "id": "wifi",
+      "title": "Бесплатный Wi-Fi",
+      "hint": "Терминалы и Rental Car Center",
+      "text": "Бесплатный Wi-Fi доступен во всех терминалах, пассажирских галереях и Rental Car Center. Официальные сети называются Airport-Wifi-Terminal_1, Airport-Wifi-Terminal_2, Airport-Wifi-Terminal_3, Airport-Wifi-Terminal_4 и Airport-Wifi-Rental_Car_Center. Подключение FLL не требует оплаты; если появляется запрос банковской карты, служба аэропорта принимает обращения по номеру +1 866 435 9355.",
+      "source": "broward.org",
+      "url": "https://www.broward.org/airport/Passengers/Services"
+    }
+  ]
+}

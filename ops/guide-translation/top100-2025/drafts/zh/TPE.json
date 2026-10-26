@@ -1,0 +1,20 @@
+{
+  "iata": "TPE",
+  "blocks": {
+    "transport": {
+      "title": "交通方式",
+      "hint": "两座航站楼均有MRT站",
+      "text": "A12 Terminal 1和A13 Terminal 2站有Taoyuan Airport MRT快车及普通列车停靠。快车与普通列车交替到站，整体约每7.5分钟一班。巴士从1号航站楼到达大厅B1区，以及2号航站楼1楼到达大厅东侧的室外廊道发车。"
+    },
+    "storage": {
+      "title": "行李寄存",
+      "hint": "Pelican，公共区域",
+      "text": "Taiwan Pelican Express在航站楼公共区域提供行李寄存及配送服务。1号及2号航站楼1楼均设有24小时营业点。2号航站楼3楼营业点的时间为06:00至23:30；1号航站楼1楼另一个营业点的时间为09:00至17:00。"
+    },
+    "wifi": {
+      "title": "Wi‑Fi",
+      "hint": "Airport Free WiFi",
+      "text": "机场在航站楼公共区域提供免费Wi-Fi。连接时在设备设置中选择Airport Free WiFi网络并打开浏览器。"
+    }
+  }
+}

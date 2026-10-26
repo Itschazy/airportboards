@@ -1,0 +1,25 @@
+{
+  "iata": "BLR",
+  "blocks": {
+    "transport": {
+      "title": "Nasıl gidilir",
+      "hint": "BMTC Vayu Vajra otobüsleri",
+      "text": "Klimalı BMTC Vayu Vajra otobüsleri havalimanını şehre bağlar. Binişte nakit ve UPI ödemeleri kabul edilir. BMTC danışmaya +91 7760991250 ve +91 7760991269 numaralarından ulaşılabilir."
+    },
+    "taxi": {
+      "title": "Taksi",
+      "hint": "KSTDC ve kadın sürücülü taksiler",
+      "text": "Havalimanında klimalı ve klimasız taksiler sunulur; klimasız araçları yalnızca KSTDC işletir. KSTDC’nin kadın sürücülerin kullandığı klimalı sedanları da vardır. KSTDC taksilerinde GPS, GPRS ve ödeme belgeleri için yazıcı bulunur."
+    },
+    "parking": {
+      "title": "Otopark",
+      "hint": "Ücretsiz kısa duraklamalar",
+      "text": "Terminal 1’in P3 ve P4 otomobil otoparklarında ilk 15 dakika, terminal 2’nin P2 otoparkında ilk 10 dakika ücretsizdir. Elektrikli araçlar için terminal 1’de ücretli yavaş şarj, terminal 2’de ücretli hızlı şarj vardır. Her iki terminalin gelen yolcu alma alanlarında 4W kategorisindeki araçların ücretsiz kalış süresi 8 dakika ile sınırlıdır."
+    },
+    "wifi": {
+      "title": "Wi‑Fi",
+      "hint": "BLR_FREE_WIFI: SIM veya kupon",
+      "text": "Yerel SIM kart veya uluslararası dolaşım ile BLR_FREE_WIFI’ye erişmek için giriş sayfasında Local Phone Number seçilip bilgiler ve tek kullanımlık OTP kodu girilir. Böyle bir SIM kartı olmayanlar, uluslararası geliş alanındaki WiFi Voucher Kiosk’ta pasaportun fotoğraflı sayfasını ve biniş kartını taratarak kupon alabilir. Biniş kartı yoksa havalimanı, Wi-Fi PIN’i için sanal danışma noktasına yönlendirir. Kupon kodu ağın giriş sayfasına yazılır."
+    }
+  }
+}

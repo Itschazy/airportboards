@@ -1,0 +1,30 @@
+{
+  "iata": "MEX",
+  "checked": "2026-10-26",
+  "blocks": [
+    {
+      "id": "transport",
+      "title": "Как доехать",
+      "hint": "Metrobús из обоих терминалов",
+      "text": "Metrobús связывает аэропорт с центром Мехико. Посадка — у двери 7 терминала 1 и у двери 2 терминала 2. Оплата производится картой Metrobús, которую можно приобрести и пополнить в автоматах в зонах посадки и высадки обоих терминалов. Режим работы — с 04:30 до полуночи с понедельника по субботу и с 05:00 до полуночи по воскресеньям и праздникам.",
+      "source": "aicm.com.mx",
+      "url": "https://www.aicm.com.mx/pasajeros/servicios/prestadores-de-servicios/transportes/metrobus"
+    },
+    {
+      "id": "terminals",
+      "title": "Терминалы",
+      "hint": "Бесплатный Aerotrén, 05:00–23:00",
+      "text": "Бесплатный Aerotrén перевозит пассажиров между терминалами 1 и 2 ежедневно с 05:00 до 23:00. Для поездки необходимо предъявить посадочный талон. Перевозить собак разрешено только в клетках и в пустых вагонах; в поезде нельзя есть, пить и курить.",
+      "source": "aicm.com.mx",
+      "url": "https://www.aicm.com.mx/pasajeros/servicios/servicios-aicm/aerotren"
+    },
+    {
+      "id": "storage",
+      "title": "Камера хранения",
+      "hint": "Круглосуточно в Т1 и Т2",
+      "text": "В терминале 1 на наземном уровне работает круглосуточная камера хранения MEXICANA DE LOCKERS, помещение E-41. В терминале 2 на наземном уровне круглосуточно доступны пункты VIAJES KOKAI в помещениях ALL45 и ALL46.",
+      "source": "aicm.com.mx",
+      "url": "https://www.aicm.com.mx/pasajeros/servicios/prestadores-de-servicios/locker"
+    }
+  ]
+}

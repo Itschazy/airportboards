@@ -1,0 +1,10 @@
+{
+  "iata": "BOM",
+  "blocks": {
+    "lounges": {
+      "title": "Sale business",
+      "hint": "Aviserv West, arrivi terminal 2",
+      "text": "La lounge Aviserv West si trova nell’area arrivi del terminal 2, in direzione di Gate A. Offre cibi e bevande, docce, capsule per dormire e una zona relax separata."
+    }
+  }
+}

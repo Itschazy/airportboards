@@ -1,0 +1,10 @@
+{
+  "iata": "SLC",
+  "blocks": {
+    "transport": {
+      "title": "TRAX Green Line",
+      "hint": "ターミナル付近の駅",
+      "text": "TRAX Green Lineは空港に直接乗り入れ、Airport Stationはターミナルのすぐ外にあります。UTAによると毎日05:21–23:21に運行し、City Centerへ行けます。North TempleではOgdenまたはProvo方面のFrontRunnerへ乗り換えられますが、FrontRunnerは日曜には運行しません。UTAの問い合わせ先は+1 801 7433882です。"
+    }
+  }
+}

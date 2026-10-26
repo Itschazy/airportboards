@@ -1,0 +1,25 @@
+{
+  "iata": "CTU",
+  "blocks": {
+    "transport": {
+      "title": "Métro",
+      "hint": "Lignes 10, 19 et 30",
+      "text": "La ligne de métro 10 dessert les deux terminaux ; au terminal 2, l’accès se trouve au niveau B2 par les passages L2, L3 et L4. La station Shuangliu Airport Terminal 2 East est desservie par les lignes 19 et 30, avec accès par le passage L3 au niveau B2 du terminal 2. La ligne 19 la relie à Tianfu Airport Terminal 1 & 2 et Tianfu Airport North."
+    },
+    "taxi": {
+      "title": "Taxi",
+      "hint": "À l’extérieur des arrivées",
+      "text": "Au terminal 1, la station de taxis se trouve à environ 50 m au sud à l’extérieur de la porte d’accès 6, au niveau des arrivées. Au terminal 2, l’embarquement se fait près du passage piéton au niveau des arrivées ; le numéro du contrôle des transports est le 12328."
+    },
+    "terminals": {
+      "title": "Entre les terminaux",
+      "hint": "Bus gratuit",
+      "text": "Un bus gratuit circule entre les terminaux 1 et 2 ; le trajet à pied dure environ 8–10 minutes. L’arrêt du terminal 1 est sur l’esplanade sud à l’extérieur de la porte d’accès 3, celui du terminal 2 sur l’esplanade nord à l’extérieur de la porte d’accès 9."
+    },
+    "storage": {
+      "title": "Consigne à bagages",
+      "hint": "Pièce d’identité et contrôle",
+      "text": "La consigne du terminal 1 est au nord de la zone de contrôle B, celle du terminal 2 derrière l’îlot d’enregistrement P. Les deux ouvrent 2 heures avant le premier départ de leur terminal et ferment après la fin de ses départs. Un petit casier coûte 8 CNY jusqu’à 6 heures, 13 CNY jusqu’à 12 heures et 18 CNY jusqu’à 24 heures, puis 2 CNY par tranche supplémentaire de 6 heures ; toute durée inférieure à 6 heures est facturée comme 6 heures. Une pièce d’identité valide est nécessaire au dépôt et les bagages sont contrôlés ; au retrait, il faut le reçu et la même pièce d’identité. Les batteries externes et au lithium ne sont pas acceptées en consigne."
+    }
+  }
+}

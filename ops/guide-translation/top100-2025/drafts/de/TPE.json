@@ -1,0 +1,20 @@
+{
+  "iata": "TPE",
+  "blocks": {
+    "transport": {
+      "title": "Anreise",
+      "hint": "MRT an beiden Terminals",
+      "text": "Die Stationen A12 Terminal 1 und A13 Terminal 2 werden von Express- und Nahverkehrszügen der Taoyuan Airport MRT bedient. Express- und Nahverkehrszüge kommen abwechselnd ungefähr alle 7,5 Minuten. Busse fahren im Bereich B1 der Ankunftshalle von Terminal 1 und am Außengang an der Ostseite der Ankunftshalle auf Ebene 1 von Terminal 2 ab."
+    },
+    "storage": {
+      "title": "Gepäckaufbewahrung",
+      "hint": "Pelican im öffentlichen Bereich",
+      "text": "Taiwan Pelican Express bietet Gepäckaufbewahrung und -zustellung in den öffentlichen Bereichen der Terminals. Auf Ebene 1 der Terminals 1 und 2 gibt es rund um die Uhr geöffnete Schalter. In Terminal 2 ist der Schalter auf Ebene 3 von 06:00 bis 23:30 geöffnet; ein weiterer Schalter auf Ebene 1 von Terminal 1 von 09:00 bis 17:00."
+    },
+    "wifi": {
+      "title": "Wi‑Fi",
+      "hint": "Netz Airport Free WiFi",
+      "text": "In den öffentlichen Terminalbereichen stellt der Flughafen kostenloses WLAN bereit. In den Geräteeinstellungen Airport Free WiFi wählen und einen Browser öffnen."
+    }
+  }
+}

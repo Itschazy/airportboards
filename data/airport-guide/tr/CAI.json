@@ -1,0 +1,25 @@
+{
+  "iata": "CAI",
+  "blocks": {
+    "transport": {
+      "title": "Havalimanından otobüsler",
+      "hint": "Terminal 1 önündeki istasyon",
+      "text": "Kahire içindeki noktalara giden şehir otobüsleri ve şehirlerarası otobüsler yalnızca terminal 1 önündeki otoparkta bulunan istasyondan kalkar. West Delta, Upper Egypt, East Delta ve Super Jet seferleri buradan hareket eder."
+    },
+    "terminals": {
+      "title": "Automated People Mover",
+      "hint": "Ücretsiz havalimanı treni",
+      "text": "Ücretsiz Automated People Mover; terminal 1, Air Mall, otopark, terminal 2 ve terminal 3’ü birbirine bağlar; tüm yolculuk en fazla 5 dakika sürer. Tren hem transit yolcular hem de havalimanının halka açık bölümünü ziyaret edenler içindir; günde 18 saat çalışır, diğer 6 saat bakım için ayrılmıştır."
+    },
+    "lounges": {
+      "title": "Ahlan VIP",
+      "hint": "Salon ve refakat hizmeti",
+      "text": "Ahlan VIP, refakat hizmeti ve en fazla 3 saatlik salon kullanımını içerir; uçuştan en az 48 saat önce rezervasyon gerekir. VIP ücreti yabancı yolcu için 220 USD, Mısır vatandaşı için 3.600 EGP’dir. Aktarmalı uçuşlarda ücret iki katına çıkar ve uçuşlar arasında en az 4 saat varsa rezervasyon kabul edilir. 6 yaşından küçük iki çocuk ücretsiz hizmet alır; 6 yaşından küçük üçüncü çocuk ayrı bir yolcu sayılır."
+    },
+    "wifi": {
+      "title": "Ücretsiz Wi-Fi",
+      "hint": "Orange Egypt hizmeti",
+      "text": "Orange Egypt, Kahire Havalimanı’na gelen ve buradan uçan yolculara ücretsiz Wi-Fi sağlar. İşletmeci ayrıca telefonlar ve diğer elektronik cihazlar için ücretsiz şarj istasyonları sunar."
+    }
+  }
+}

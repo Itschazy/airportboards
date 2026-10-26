@@ -1,0 +1,25 @@
+{
+  "iata": "ZRH",
+  "blocks": {
+    "transport": {
+      "title": "Treno per Zurigo",
+      "hint": "15 minuti alla stazione centrale",
+      "text": "I treni SBB dall’aeroporto alla stazione centrale di Zurigo partono ogni 10 minuti; il viaggio dura 15 minuti. Treni regolari collegano inoltre l’aeroporto con altre regioni della Svizzera e con i paesi vicini."
+    },
+    "storage": {
+      "title": "Deposito bagagli",
+      "hint": "Arrivals 2, livello 0",
+      "text": "Il deposito bagagli con personale si trova in Arrivals 2 del terminal 2, al livello 0 accanto al banco informazioni, ed è aperto ogni giorno dalle 06:00 alle 22:00. Per un bagaglio fino a 25 kg e di dimensioni non superiori a 90 × 60 × 35 cm, la tariffa è di 15 CHF fino a 4 ore, 18 CHF fino a 8 ore e 22 CHF fino a 24 ore; il pagamento è anticipato e il periodo massimo di deposito è di 3 mesi. Gli armadietti SBB presso Check-in 3 in Airport Shopping sono accessibili 24 ore su 24."
+    },
+    "kids": {
+      "title": "Family Services",
+      "hint": "Area passeggeri A",
+      "text": "Family Services nell’area passeggeri A è gratuito per le famiglie di tutte le compagnie aeree. Sono disponibili fasciatoi, una stanza tranquilla per nutrire i bambini con lettini, uno spazio per gattonare e una zona pasti con microonde; per i più grandi ci sono giocattoli, giochi per computer e calcio balilla. Non è previsto un servizio di custodia: il bambino deve restare con un adulto."
+    },
+    "wifi": {
+      "title": "Wi-Fi gratuito",
+      "hint": "8 ore dal primo accesso",
+      "text": "La rete Zurich Airport offre 8 ore di accesso gratuito, conteggiate ininterrottamente dal primo accesso. Ci si può registrare tramite SMS inserendo il numero di telefono e il codice ricevuto, oppure con carta d’imbarco e documento d’identità: il codice viene rilasciato presso una WiFi Station o un banco informazioni. In caso di problemi ci si può rivolgere ai banchi Service & Information."
+    }
+  }
+}

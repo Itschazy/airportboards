@@ -1,0 +1,25 @@
+{
+  "iata": "OKA",
+  "blocks": {
+    "transport": {
+      "title": "Monorail Yui Rail",
+      "hint": "13 minutes vers Prefectural Office",
+      "text": "Depuis la station Naha Airport, le monorail met environ 13 minutes jusqu’à Prefectural Office, 16 minutes jusqu’à Makishi et 27 minutes jusqu’à Shuri. Les billets à code QR pour un trajet sont vendus aux automates et valables pour un trajet le jour de l’achat. Le tarif enfant s’applique aux moins de 12 ans ; au maximum deux enfants de moins de 6 ans peuvent voyager gratuitement avec un adulte, le tarif enfant étant dû à partir du troisième."
+    },
+    "storage": {
+      "title": "Consigne à bagages",
+      "hint": "Yamato aux niveaux 1 et 2",
+      "text": "Les comptoirs Okinawa Yamato Transport se trouvent dans le hall des arrivées intérieures au niveau 1 et près du contrôle de sûreté C au niveau 2. Le premier est ouvert de 07:30 à 20:00, le second de 09:00 à 19:00 ; les objets sont généralement acceptés pour une durée maximale d’un mois. Le prix par objet et par jour, taxes comprises, est de 600 JPY en taille S, 800 JPY en M et 1000 JPY en L ; la taille correspond à la somme de la longueur, de la largeur et de la hauteur."
+    },
+    "kids": {
+      "title": "Salles de soins pour bébés",
+      "hint": "Change et eau chaude",
+      "text": "Les salles de soins pour bébés sont près des toilettes aux niveaux 1, 2 et 3 et de l’espace restauration international au niveau 4. Elles disposent d’une table à langer, d’un lavabo et d’un distributeur d’eau chaude ; hommes et femmes peuvent utiliser l’espace commun. Les hommes ne doivent pas entrer dans les salles d’allaitement séparées."
+    },
+    "wifi": {
+      "title": "Wi-Fi gratuit",
+      "hint": "Free_Wi-Fi_NAHA_Airport",
+      "text": "Le réseau Free_Wi-Fi_NAHA_Airport est gratuit et disponible dans les espaces publics du terminal, sauf dans certains magasins et locaux. Les zones couvertes sont indiquées aux niveaux 1–4 : arrivées, départs, attente d’embarquement, enregistrement et restaurants. Il faut lire et accepter les conditions d’utilisation avant de se connecter."
+    }
+  }
+}

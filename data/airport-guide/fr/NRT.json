@@ -1,0 +1,25 @@
+{
+  "iata": "NRT",
+  "blocks": {
+    "terminals": {
+      "title": "Entre les terminaux",
+      "hint": "Bus gratuits",
+      "text": "Avant le contrôle de sûreté, des bus gratuits circulent entre les terminaux ; les terminaux 2 et 3 sont aussi reliés par un passage piéton. La ligne circulaire suit l’ordre terminal 1 → terminal 3 → terminal 2 : le trajet de 1 à 3 dure environ 14 minutes, de 3 à 2 environ 3 minutes et de 2 à 1 environ 10 minutes. Des lignes distinctes relient aussi les terminaux 1 et 2 ainsi que les terminaux 2 et 3."
+    },
+    "storage": {
+      "title": "Consignes automatiques",
+      "hint": "Tarif selon l’emplacement",
+      "text": "L’aéroport dispose de casiers facturés à la journée ou selon la durée. Pour le tarif journalier, les petits, moyens et grands casiers coûtent respectivement 400 JPY, 600 JPY et 800 JPY par jour d’utilisation ; une nouvelle journée payante commence à minuit et la durée maximale est de 8 jours. Un tarif à la durée s’applique au niveau B1 du bâtiment principal du terminal 2 et au niveau 2 du bâtiment principal du terminal 3 : jusqu’à 6 heures, un petit casier coûte 300 JPY, un moyen 500 JPY et un grand 600 JPY ; chaque tranche supplémentaire de 24 heures coûte respectivement 400 JPY, 600 JPY et 800 JPY."
+    },
+    "kids": {
+      "title": "Salles pour bébés",
+      "hint": "Dans tous les terminaux",
+      "text": "Tous les terminaux ont des salles pour bébés avec cabine d’allaitement, table à langer, lavabo et eau chaude. Les hommes peuvent utiliser tous les équipements sauf la cabine d’allaitement."
+    },
+    "wifi": {
+      "title": "Wi-Fi et prises",
+      "hint": "Dans les terminaux et navettes",
+      "text": "Le Wi-Fi gratuit est disponible dans tous les terminaux et les bus interterminaux : sélectionner FreeWiFi-NARITA et accepter les conditions d’utilisation et l’avertissement de sécurité sur la page de connexion. Aucune configuration préalable des paramètres de sécurité n’est requise ; l’aéroport recommande un VPN à ceux qui ont besoin d’une connexion sécurisée. L’utilisation des prises dans les terminaux est gratuite."
+    }
+  }
+}

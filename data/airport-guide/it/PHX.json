@@ -1,0 +1,20 @@
+{
+  "iata": "PHX",
+  "blocks": {
+    "terminals": {
+      "title": "Terminal",
+      "hint": "PHX Sky Train gratuito",
+      "text": "Il PHX Sky Train automatico e gratuito collega la stazione Valley Metro Rail a 44th Street e Washington, i parcheggi East Economy e 24th Street Economy, i terminal e il Rental Car Center. Funziona 24 ore su 24; dalle 05:00 alle 22:00 l’attesa è solitamente di circa 3,5–7 minuti. Di notte, la manutenzione quotidiana può comportare attese di 15 minuti o più, ritardi e cambi di treno. Nel terminal 3 la banchina è al livello 5, con accesso dal livello 4; nel terminal 4 la stazione è al livello 3."
+    },
+    "kids": {
+      "title": "Con bambini",
+      "hint": "Sale e cabine per l’allattamento",
+      "text": "Ogni terminal dispone di sale per l’allattamento prima e dopo i controlli di sicurezza. Ciascuna ha lavabo, piano d’appoggio, sapone e disinfettante, salviette di carta, fasciatoio, sedute e presa elettrica. Nel terminal 3, le sale dopo i controlli sono di fronte al gate F5 e vicino a E5. Nel terminal 4 sono presenti cabine Mamava dopo i controlli con panca, tavolino ribaltabile e presa; quelle al gate A22 e al controllo D sono accessibili ai passeggeri con disabilità."
+    },
+    "wifi": {
+      "title": "Wi‑Fi",
+      "hint": "Free PHX Boingo WiFi",
+      "text": "L’aeroporto offre la rete gratuita Free PHX Boingo WiFi di Boingo Wireless. Per collegarsi, scegliere la rete sul dispositivo, aprire un browser e selezionare l’accesso gratuito oppure accedere con un account esistente. L’assistenza Boingo risponde al numero 1-800-880-4117."
+    }
+  }
+}

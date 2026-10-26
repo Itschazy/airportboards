@@ -1,0 +1,20 @@
+{
+  "iata": "PHX",
+  "blocks": {
+    "terminals": {
+      "title": "航站楼",
+      "hint": "免费PHX Sky Train",
+      "text": "免费的自动列车PHX Sky Train连接44th Street与Washington的Valley Metro Rail车站、East Economy及24th Street Economy停车场、航站楼和Rental Car Center。列车24小时运行，05:00至22:00通常约等候3.5–7分钟。夜间因日常维护，等候可能达15分钟或以上，也可能延误或需要换乘。3号航站楼站台位于5楼，经4楼进入；4号航站楼车站位于3楼。"
+    },
+    "kids": {
+      "title": "携儿童出行",
+      "hint": "哺乳室及哺乳舱",
+      "text": "各航站楼安检前后均设哺乳室。每间均配有洗手池、台面、肥皂和消毒液、纸巾、尿布更换台、座椅及插座。3号航站楼安检后哺乳室位于F5登机口对面及E5附近。4号航站楼安检后设Mamava哺乳舱，配有长椅、折叠桌及插座；A22登机口和D安检点附近的舱可供残障旅客使用。"
+    },
+    "wifi": {
+      "title": "Wi‑Fi",
+      "hint": "免费Boingo Wi-Fi",
+      "text": "机场提供Boingo Wireless运营的免费Free PHX Boingo WiFi网络。连接时在设备上选择该网络、打开浏览器，再选择免费连接或使用现有账户登录。Boingo支持电话为1-800-880-4117。"
+    }
+  }
+}

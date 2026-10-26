@@ -1,0 +1,25 @@
+{
+  "iata": "STN",
+  "blocks": {
+    "transport": {
+      "title": "Zug nach London",
+      "hint": "Bahnhof unter dem Terminal",
+      "text": "Der Bahnhof liegt direkt unter dem Terminal, etwa 2 Gehminuten entfernt; Aufzüge, Rolltreppen und Rampen sind vorhanden. Der Stansted Express fährt täglich alle 15 Minuten nach London Liverpool Street, die Fahrt dauert etwa 48 Minuten; bis Tottenham Hale sind es etwa 36 Minuten. Im Stansted Express kann man mit kontaktloser Bankkarte oder mobiler Wallet bezahlen, Oyster gilt jedoch nicht für Fahrten zum oder vom Flughafen."
+    },
+    "kids": {
+      "title": "Mit Kindern reisen",
+      "hint": "Wickeln und Stillen",
+      "text": "Wickelmöglichkeiten gibt es in den Herren- und Damentoiletten beim Check-in in Zone A sowie nach der Sicherheitskontrolle bei den Gates 13, 33/34, 43 und 59. In der internationalen Gepäckausgabe liegen Wickelkabinen bei Band 9; weitere gibt es in der Haupthalle zum Empfang ankommender Reisender. Stillen ist im gesamten Flughafen erlaubt; für Privatsphäre gibt es separate Kabinen im Family Room der Hauptabflughalle."
+    },
+    "lounges": {
+      "title": "Essence Lounge",
+      "hint": "Nur für ausgewählte Airlines",
+      "text": "Die frühere Escape Lounge im Hauptterminal ist geschlossen; die neue Essence by Escape Lounges steht nur Passagieren zugelassener Fluggesellschaften mit Abflug von den Gates 1–19 offen. Passagiere von Ryanair und easyJet haben keinen Zutritt; nach der Fahrt zu den Gates 1–19 kann man nicht ins Hauptterminal zurückkehren. Der Zutritt ist ab 3 Stunden vor dem planmäßigen Abflug möglich; ohne Vorabbuchung kostet er ab 35 GBP, Kinder unter 3 Jahren haben freien Eintritt. Kalte Speisen, Heißgetränke, alkoholfreie Getränke, Wein, Flaschenbier und WLAN sind enthalten; bezahlt wird ausschließlich mit Karte."
+    },
+    "wifi": {
+      "title": "Kostenloses WLAN",
+      "hint": "2 Stunden im Terminal",
+      "text": "Im Terminal von Stansted und in den Lounges steht kostenloses WLAN für 2 Stunden zur Verfügung. Wählen Sie zum Verbinden das WLAN-Netzwerk des Flughafens auf Telefon, Tablet oder Laptop."
+    }
+  }
+}

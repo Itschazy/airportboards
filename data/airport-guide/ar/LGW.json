@@ -1,0 +1,20 @@
+{
+  "iata": "LGW",
+  "blocks": {
+    "transport": {
+      "title": "كيفية الوصول",
+      "hint": "Gatwick Express: ‏30 دقيقة",
+      "text": "يربط Gatwick Express المطار بـLondon Victoria دون توقف خلال 30 دقيقة، وعدد رحلاته في الساعة 2. تخدم Southern وجهات London Victoria وClapham Junction وBrighton ومدنًا أخرى في الجنوب الشرقي؛ وتخدم Thameslink وجهات London Bridge وBlackfriars وCity Thameslink وFarringdon وSt Pancras International. تقع محطة القطارات عند South Terminal على بعد نحو 5 دقائق مشيًا من منطقتي الوصول والمغادرة. تُقبل البطاقات البنكية اللاتلامسية وOyster للرحلات إلى لندن، باستثناء 60+ Oyster photocard."
+    },
+    "kids": {
+      "title": "مع طفل",
+      "hint": "Kids Zones مجانية",
+      "text": "توجد مناطق لعب Kids Zones مجانية في صالات المغادرة بكلا المبنيين. وتتوفر مسارات تفتيش منفصلة Assisted Travel and family lanes للعائلات مع أطفال صغار في عربات أطفال. توجد في المطار غرف مجهزة لإطعام الصغار وتغيير حفاضاتهم، بما فيها مناطق تسجيل الوصول والانتقال وبعد مراقبة الجوازات عند الوصول. يمكن لجميع المطاعم في كلا المبنيين تدفئة زجاجة رضاعة قبل المغادرة."
+    },
+    "wifi": {
+      "title": "Wi‑Fi",
+      "hint": "مجاني دون حد زمني",
+      "text": "لخدمة Wi-Fi المجانية، اختر Free Gatwick Wi-Fi Vinci Airports ثم Free Superfast Wi-Fi وأدخل عنوان بريد إلكتروني صالحًا. الاتصال مجاني ودون حد زمني، بسرعة تصل إلى 50 ميغابت/ثانية. توجد نقاط شحن مجانية قبل التفتيش الأمني وبعده في كلا المبنيين."
+    }
+  }
+}

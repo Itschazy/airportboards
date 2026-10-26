@@ -1,0 +1,20 @@
+{
+  "iata": "DMK",
+  "blocks": {
+    "transport": {
+      "title": "BMTA公交车",
+      "hint": "A1–A4线路",
+      "text": "A1前往Mo Chit 2，运营时间为05:45至午夜；A2前往Victory Monument，运营时间为06:00–23:00。两条线路均每15分钟一班，票价30 THB。A3前往Lumpini Park，A4前往Sanam Luang，均在06:00–23:00每30分钟一班，票价50 THB。上车点位于Service Hall前方，以及1号航站楼1楼的公共到达区。"
+    },
+    "taxi": {
+      "title": "打表出租车",
+      "hint": "另收机场附加费",
+      "text": "计价器费用之外另加50 THB附加费，高速公路及特殊收费道路的通行费由乘客支付。出租车柜台位于1号和2号航站楼1楼的公共到达区。"
+    },
+    "wifi": {
+      "title": "免费Wi-Fi",
+      "hint": "连接后可用60分钟",
+      "text": "选择Airport Free Wi-Fi by NT网络，输入电子邮箱并勾选同意使用条款。成功连接后点击OK，即可免费上网60分钟。"
+    }
+  }
+}

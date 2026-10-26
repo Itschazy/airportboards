@@ -1,0 +1,20 @@
+{
+  "iata": "HAN",
+  "blocks": {
+    "terminals": {
+      "title": "航站楼间交通",
+      "hint": "免费NIA Shuttle Bus",
+      "text": "免费NIA Shuttle Bus连接国内航站楼T1及国际航站楼T2。T1乘车点位于A翼1楼。"
+    },
+    "kids": {
+      "title": "家庭服务",
+      "hint": "婴儿车及护理室",
+      "text": "安检后提供免费婴儿车：T1及E候机厅2楼，以及T2的2楼及3楼。T2安检后3楼设有2间婴幼儿护理室，部分航站楼洗手间也设有尿布更换台。"
+    },
+    "wifi": {
+      "title": "免费Wi-Fi",
+      "hint": "T1及T2旅客候机区",
+      "text": "国内及国际航站楼的旅客候机区提供免费Wi-Fi。选择@Airport Free Wifi - Goldsun，并在自动打开的页面点击Connect to the Internet。T2扩建部分的设备仍在安装。"
+    }
+  }
+}

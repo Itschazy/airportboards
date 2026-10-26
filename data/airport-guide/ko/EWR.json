@@ -1,0 +1,25 @@
+{
+  "iata": "EWR",
+  "blocks": {
+    "transport": {
+      "title": "가는 방법",
+      "hint": "AirTrain으로 철도 연결",
+      "text": "AirTrain은 터미널과 Newark Liberty International Airport Train Station을 연결하며, 이 역에 NJ Transit과 Amtrak이 정차합니다. NJ Transit 또는 Amtrak 승차권이 아직 없다면 철도역을 통과하는 AirTrain 편도 이용 요금은 8.75 USD입니다. PATH로 환승할 때는 PATH 요금을 별도로 내야 합니다."
+    },
+    "taxi": {
+      "title": "택시",
+      "hint": "각 터미널의 공식 택시 승강장",
+      "text": "모든 터미널에 택시가 있으며 예약은 필요하지 않습니다. 제복을 입은 배차 직원이 빈 차량으로 안내합니다. 승강장은 터미널 A의 1층 출입문 5, 터미널 B의 2층 출입문 8과 1층 출입문 2, 터미널 C의 1층 출입문 6에 있습니다. 일반 택시는 최대 4명, 미니밴은 최대 5명까지 탈 수 있으며 같은 목적지로 가는 모든 승객에게 하나의 요금이 적용됩니다. 기내 휴대 수하물을 포함해 수하물 1개마다 1 USD가 부과됩니다."
+    },
+    "terminals": {
+      "title": "터미널",
+      "hint": "AirTrain과 터미널 A 연결",
+      "text": "터미널, 주차장, 렌터카, 호텔 셔틀 정류장 사이의 AirTrain 이용은 무료입니다. AirTrain은 터미널 A에 직접 연결되지 않아 지붕이 있는 통로로 약 15분 걷거나 셔틀로 약 5분 이동해야 합니다. 미국 동부 시간 23:00–05:00에는 AirTrain이 터미널 B와 C에 15분 간격으로 도착하며, 터미널 A로 추가 환승할 수 있는 셔틀이 마련됩니다. 공사 중 AirTrain이 일시 운행 중단될 수 있으며 이때 버스가 제공됩니다."
+    },
+    "wifi": {
+      "title": "Wi‑Fi",
+      "hint": "_Free EWR WiFi",
+      "text": "공항에서 무료 Wi-Fi를 이용하려면 _Free EWR WiFi 네트워크를 선택하세요. 기술 지원은 +1 (800) 880-4117에서 24시간 이용할 수 있습니다."
+    }
+  }
+}

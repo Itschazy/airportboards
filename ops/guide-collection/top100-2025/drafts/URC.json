@@ -1,0 +1,14 @@
+{
+  "iata": "URC",
+  "checked": "2026-10-26",
+  "blocks": [
+    {
+      "id": "sleep",
+      "title": "Hampton by Hilton",
+      "hint": "Отель на Beijing North Road",
+      "text": "Hampton by Hilton Urumqi International Airport расположен по адресу 5 Silk Road Global Harbor Phase II, 2888 Beijing N Rd, Xinshi District. Гостям предоставляются бесплатный горячий завтрак, Wi-Fi и парковка; есть ресторан и фитнес-центр. Заселение начинается в 14:00, выезд — до 12:00; телефон: +86 991 3535555.",
+      "source": "hilton.com",
+      "url": "https://www.hilton.com/en/hotels/urcurhx-hampton-urumqi-international-airport/"
+    }
+  ]
+}

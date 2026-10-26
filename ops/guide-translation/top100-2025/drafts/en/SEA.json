@@ -1,0 +1,10 @@
+{
+  "iata": "SEA",
+  "blocks": {
+    "transport": {
+      "title": "Getting there",
+      "hint": "Link: 38 minutes to downtown",
+      "text": "Link light rail connects the airport with downtown Seattle in 38 minutes, running every 8–10 minutes for most of the day. From baggage carousel 16, go up to the skybridge level, cross Skybridge Six and turn left through the parking garage towards SeaTac/Airport station. Free electric carts, available to all passengers, run between the station and the bridge daily from 05:00 to midnight. Sound Transit’s Night Bus connects the airport with downtown about every 30 minutes, starting about 15 minutes after the last train."
+    }
+  }
+}

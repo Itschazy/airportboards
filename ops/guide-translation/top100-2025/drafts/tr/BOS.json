@@ -1,0 +1,25 @@
+{
+  "iata": "BOS",
+  "blocks": {
+    "transport": {
+      "title": "Nasıl gidilir",
+      "hint": "Silver Line SL1 ile South Station",
+      "text": "MBTA Silver Line 1 (SL1) otobüsü tüm terminallerde durur ve havalimanını South Station’a bağlar. Havalimanından şehir merkezine yolculuk ücretsizdir ve Red Line’a ücretsiz aktarmayı da içerir. Blue Line’a, terminallere ücretsiz havalimanı servisleriyle bağlı Airport Station üzerinden ulaşılır."
+    },
+    "terminals": {
+      "title": "Terminaller",
+      "hint": "Ücretsiz Massport servisleri",
+      "text": "Ücretsiz Massport servisleri terminalleri Rental Car Center’a, deniz ulaşımı iskelesine ve Blue Line’ın Airport Station istasyonuna bağlar. Otobüsler alçak tabanlıdır; bagaj rafları ve tekerlekli sandalye liftleri vardır. Terminallere, metro istasyonuna ve araç kiralamaya giden ana seferler genellikle 5–6 dakikada bir kalkar. 11 numaralı hat her gün 09:00–22:00 arasında A, B, C ve E terminallerini bağlar. Duraklar her terminalin alt seviyesinde yol kenarındadır ve Shuttle Bus tabelasıyla belirtilir."
+    },
+    "kids": {
+      "title": "Çocukla",
+      "hint": "Kontrolden sonra Kidport",
+      "text": "Kidport oyun alanları güvenlik kontrolünden sonradır: terminal A’nın uydu binasında A18 numaralı kapı yakınında, terminal B’de B16 yanında ve B30–B36 kapılarına giden alışveriş koridorunda, terminal C’de ise C25 önündedir. Her terminalde emzirme ve bebek bakım odaları vardır. Tüm terminallerde kontrol öncesi ve sonrası aile tuvaletleri bulunur; içlerinde tuvalet, lavabo ve katlanır alt değiştirme masası vardır."
+    },
+    "wifi": {
+      "title": "Wi‑Fi",
+      "hint": "Ücretsiz BOSWifi ağı",
+      "text": "Havalimanı ücretsiz Wi-Fi sunar. Bağlanmak için BOSWifi ağını seçip kullanım koşullarını kabul edin."
+    }
+  }
+}

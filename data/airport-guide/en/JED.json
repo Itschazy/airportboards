@@ -1,0 +1,10 @@
+{
+  "iata": "JED",
+  "blocks": {
+    "sleep": {
+      "title": "Where to sleep",
+      "hint": "Aerotel, international flights T1",
+      "text": "Aerotel Jeddah is in the restricted international departures area of Terminal 1 on Level 2, beside Duty Free, after the transit passenger security checkpoint. Passengers travelling only on domestic flights cannot access the hotel; for a combination of domestic and international flights, the operator asks passengers to confirm access with the airline or customer service. Transit passengers should not clear arrivals immigration: they cannot return to the restricted area without a valid boarding pass for their next flight. The hotel has 120 rooms and offers hourly bookings; rooms for guests with reduced mobility are provided on request."
+    }
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "iata": "ZRH",
+  "checked": "2026-10-26",
+  "blocks": [
+    {
+      "id": "transport",
+      "title": "Поезд в Цюрих",
+      "hint": "15 минут до главного вокзала",
+      "text": "Поезда SBB из аэропорта до главного вокзала Цюриха отправляются каждые 10 минут, поездка занимает 15 минут. Аэропорт также связан регулярными поездами с другими регионами Швейцарии и соседними странами.",
+      "source": "flughafen-zuerich.ch",
+      "url": "https://www.flughafen-zuerich.ch/en/passengers/practical/parking-and-transport/train-tram-and-bus"
+    },
+    {
+      "id": "storage",
+      "title": "Хранение багажа",
+      "hint": "Arrivals 2, уровень 0",
+      "text": "Камера хранения с сотрудником находится в Arrivals 2 терминала 2 на уровне 0 рядом с информационной стойкой и работает ежедневно 06:00–22:00. За одно место багажа до 25 кг и размером не более 90 × 60 × 35 см тариф составляет 15 CHF до 4 часов, 18 CHF до 8 часов и 22 CHF до 24 часов; оплата вносится заранее, максимальный срок хранения — 3 месяца. Автоматические камеры SBB у Check-in 3 в Airport Shopping доступны круглосуточно.",
+      "source": "flughafen-zuerich.ch",
+      "url": "https://www.flughafen-zuerich.ch/en/passengers/practical/services/services-for-travellers/baggageservices"
+    },
+    {
+      "id": "kids",
+      "title": "Family Services",
+      "hint": "Пассажирская зона A",
+      "text": "Family Services в пассажирской зоне A бесплатно доступны семьям всех авиакомпаний. Есть пеленальные столы, тихая комната для кормления с детскими кроватками, место для ползания и зона питания с микроволновой печью; для старших детей — игрушки, компьютерные игры и настольный футбол. Присмотр за детьми не предоставляется: ребёнок должен оставаться со взрослым.",
+      "source": "flughafen-zuerich.ch",
+      "url": "https://www.flughafen-zuerich.ch/en/passengers/practical/services/services-for-travellers/family-services"
+    },
+    {
+      "id": "wifi",
+      "title": "Бесплатный Wi-Fi",
+      "hint": "8 часов с первого входа",
+      "text": "Сеть Zurich Airport предоставляет 8 часов бесплатного доступа, отсчитываемых непрерывно с первого входа. Зарегистрироваться можно по SMS, введя номер телефона и полученный код, либо по посадочному талону и удостоверению личности: код выдаётся на WiFi Station или информационной стойке. Если возникли проблемы, помогают стойки Service & Information.",
+      "source": "flughafen-zuerich.ch",
+      "url": "https://www.flughafen-zuerich.ch/en/passengers/practical/services/wifi-and-internet"
+    }
+  ]
+}

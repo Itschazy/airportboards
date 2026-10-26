@@ -1,0 +1,25 @@
+{
+  "iata": "DOH",
+  "blocks": {
+    "transport": {
+      "title": "Nasıl gidilir",
+      "hint": "Her gün metro",
+      "text": "Hamad International Airport’taki metro istasyonu, havalimanını haftanın 7 günü Doha’nın semtlerine bağlar. İstasyonlar klimalıdır ve hareket kabiliyeti kısıtlı yolcuların erişimine uygundur; çalışma saatleri ve son trenlerin kalkış saatleri istasyon ekranlarında gösterilir."
+    },
+    "taxi": {
+      "title": "Taksi",
+      "hint": "Karwa, Taxi Pavilion",
+      "text": "Taksi pavyonu gelen yolcu salonunun sol tarafındadır; tüm havalimanı taksileri Mowasalat tarafından işletilir. Sedan ve minivan araçlar ile MasterCard, VISA, Apple Pay, Google Pay ve NAPS üzerinden nakitsiz ödeme seçenekleri mevcuttur. Karwa, +974 800 8294 numarasından, Karwa uygulamasından veya karwa.qa üzerinden önceden rezerve edilebilir. Hareket kabiliyeti kısıtlı yolculara özel taksi için Mowasalat ile +974 4458 8888 numarasından önceden iletişime geçilmelidir."
+    },
+    "sleep": {
+      "title": "Nerede uyunur",
+      "hint": "Koltuklu dinlenme odaları",
+      "text": "Yolcu terminalinde erkekler, kadınlar ve aileler için ayrı sessiz odalar vardır. Odalarda dinlenmek, okumak veya kısa süre uyumak için koltuklar bulunur; konumları havalimanı haritasında ve yönlendirme levhalarında gösterilir."
+    },
+    "wifi": {
+      "title": "Wi‑Fi",
+      "hint": "Ücretsiz, #HIAQatar",
+      "text": "Yolcu terminalinin tamamında ücretsiz kablosuz internet vardır: #HIAQatar ağını seçip giriş yapın. Ekran ve klavyeli internet kioskları da ücretsiz web gezintisi sağlar; biniş kapılarının bulunduğu alanlar dahil terminal genelinde yer alır."
+    }
+  }
+}

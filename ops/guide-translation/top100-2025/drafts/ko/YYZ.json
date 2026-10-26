@@ -1,0 +1,25 @@
+{
+  "iata": "YYZ",
+  "blocks": {
+    "transport": {
+      "title": "가는 방법",
+      "hint": "UP Express: 28분",
+      "text": "UP Express는 Pearson과 토론토 도심의 Union Station을 28분 만에 연결하며 매일 15분 간격으로 출발합니다. 성인 편도 요금은 12.35 $, PRESTO 이용 시 9.25 $이며 12세 미만 어린이는 무료입니다. 역은 터미널 1의 Terminal Link 근처에 있습니다. 터미널 3에서는 먼저 무료 Terminal Link로 터미널 1까지 이동한 뒤 Train to City 표지판을 따라가야 합니다. 열차와 역에서 무료 Wi-Fi를 이용할 수 있으며 열차에는 콘센트와 수하물 선반이 있습니다."
+    },
+    "terminals": {
+      "title": "터미널",
+      "hint": "무료 Terminal Link",
+      "text": "무료 Terminal Link는 터미널 1·3과 Viscount역 사이를 24시간 운행합니다. Sheraton Gateway Hotel, ALT Hotel, Value Park Garage와 Value Park Lot 주차장으로도 이동할 수 있습니다. 역 사이 소요 시간은 2–8분입니다. 접을 수 없는 이동 보조기구를 사용하는 승객도 이용할 수 있습니다."
+    },
+    "kids": {
+      "title": "아이와 함께",
+      "hint": "보안검색 후 수유실과 포드",
+      "text": "수유실과 수유 포드는 보안검색 후 구역에 있습니다. Mamava 포드에는 접이식 테이블, 벤치 2개, 거울, 손잡이, USB가 있는 콘센트가 있으며, 문을 열려면 Mamava 앱 또는 공항 고객 지원에서 받은 코드가 필요합니다. 터미널 1에서는 D22, E80/E81, F59번 게이트 근처에, 터미널 3에서는 C30/C31, B22, A12/A13번 게이트 근처에 있습니다. 터미널 1 출발 홀의 D24번 게이트 근처에는 어린이 놀이 공간이 있습니다."
+    },
+    "wifi": {
+      "title": "Wi‑Fi",
+      "hint": "공항 무료 Wi-Fi",
+      "text": "공항에서는 Pearson과 CIBC가 제공하는 무료 Wi-Fi를 이용할 수 있습니다. Toronto Pearson Public Wi-Fi를 선택하고 환영 페이지를 열어 이용 약관에 동의한 뒤 Connect를 누르세요. 도움이 필요하면 1-866-207-1690 또는 안내 데스크로 문의할 수 있습니다."
+    }
+  }
+}

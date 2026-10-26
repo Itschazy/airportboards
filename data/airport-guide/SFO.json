@@ -1,0 +1,62 @@
+{
+  "iata": "SFO",
+  "checked": "2026-10-25",
+  "blocks": [
+    {
+      "id": "transport",
+      "title": "Как доехать",
+      "hint": "BART и AirTrain",
+      "text": "Станция BART находится в международном терминале. От станции BART можно пересесть на AirTrain, который соединяет внутренние и международные терминалы. Центр проката автомобилей доступен по синей линии AirTrain.",
+      "source": "flysfo.com",
+      "url": "https://www.flysfo.com/passengers/ground-transportation"
+    },
+    {
+      "id": "taxi",
+      "title": "Такси",
+      "hint": "Счётчик, сбор за выезд $6",
+      "text": "Стоянки такси находятся на центральных островках проезжей части у уровня прилёта и выдачи багажа всех терминалов. Координаторы в форме работают с 07:00 до 02:00. Поездки оплачиваются по счётчику; для поездок на такси Сан-Франциско из SFO в сумму включён сбор за выезд $6, который не взимается при поездке в аэропорт. Доступны такси для пассажиров на инвалидных колясках; заказать такую машину можно у координатора или по номеру *1107 с бесплатного телефона аэропорта.",
+      "source": "flysfo.com",
+      "url": "https://www.flysfo.com/passengers/ground-transportation/taxis"
+    },
+    {
+      "id": "storage",
+      "title": "Камера хранения",
+      "hint": "Airport Travel Agency, уровень 3",
+      "text": "Хранение доступно только в Airport Travel Agency в Dianne Feinstein International Terminal G на уровне 3. Принимаются багаж, переноски для собак и спортивное снаряжение, в том числе лыжи, велосипеды и каноэ; цена зависит от размера предмета.",
+      "source": "flysfo.com",
+      "url": "https://www.flysfo.com/passengers/services/baggage-storage-facilities"
+    },
+    {
+      "id": "sleep",
+      "title": "Где поспать",
+      "hint": "Grand Hyatt at SFO",
+      "text": "Grand Hyatt at SFO находится у въезда в аэропорт. До отеля можно добраться из всех терминалов на AirTrain или по дороге.",
+      "source": "flysfo.com",
+      "url": "https://www.flysfo.com/passengers/services-amenities/grand-hyatt-sfo"
+    },
+    {
+      "id": "kids",
+      "title": "С ребёнком",
+      "hint": "7 игровых зон после досмотра",
+      "text": "Все 7 игровых зон Kids’ Spots находятся после досмотра. В Harvey Milk Terminal 1 зоны расположены у выходов на посадку B2 и B18, в терминале 2 — у D15 и D7. В терминале 3 они находятся у F17 и E7, а также на фуд-корте рядом с выходами на посадку F11–F22.",
+      "source": "flysfo.com",
+      "url": "https://www.flysfo.com/kids-spots"
+    },
+    {
+      "id": "parking",
+      "title": "Парковка",
+      "hint": "Long-Term: до $27 за 24 часа",
+      "text": "На Long-Term Parking есть крытые и открытые места; тариф составляет $4 за 30 минут, максимум $27 за 24 часа, включая налоги и сборы. Синяя линия AirTrain соединяет парковку со всеми терминалами круглосуточно; интервал движения может составлять 4 минуты. Станция AirTrain находится на уровне 5 парковочного комплекса. Тарифы могут меняться.",
+      "source": "flysfo.com",
+      "url": "https://www.flysfo.com/passengers/parking/long-term"
+    },
+    {
+      "id": "wifi",
+      "title": "Wi-Fi",
+      "hint": "Бесплатно, #SFO FREE WIFI",
+      "text": "Бесплатный Wi-Fi доступен во всех терминалах. Для подключения выберите сеть #SFO FREE WIFI и откройте браузер; использование сети означает принятие её условий.",
+      "source": "flysfo.com",
+      "url": "https://www.flysfo.com/passengers/services-amenities/wi-fi"
+    }
+  ]
+}

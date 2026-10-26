@@ -1,0 +1,25 @@
+{
+  "iata": "LIM",
+  "blocks": {
+    "taxi": {
+      "title": "Taxis",
+      "hint": "Mostradores en llegadas",
+      "text": "Los mostradores de taxis están en las zonas de llegadas nacionales e internacionales. El personal dirige al pasajero y al conductor a un aparcamiento designado dentro del aeropuerto; uno de los teléfonos publicados del servicio es el +51 1 4844001."
+    },
+    "lounges": {
+      "title": "The Club LIM Internacional",
+      "hint": "Nivel 2, salidas internacionales",
+      "text": "La sala The Club LIM Internacional está en el nivel 2 de la zona de salidas internacionales. Dispone de espacios de descanso, bar, duchas y salas de reuniones. El aeropuerto indica que abre las 24 horas todos los días."
+    },
+    "sleep": {
+      "title": "Sleepover",
+      "hint": "Nivel 2 de Perú Plaza",
+      "text": "Sleepover está en el nivel 2 de Perú Plaza, junto a Starbucks y Dunkin Donuts, y abre las 24 horas. Ofrece duchas, cápsulas para una siesta breve, cabinas con literas, zona de trabajo compartido y bebidas incluidas."
+    },
+    "wifi": {
+      "title": "Wi-Fi gratuito",
+      "hint": "Red .FreeWifiJorgeChavez",
+      "text": "Puede conectarse gratis a la red .FreeWifiJorgeChavez con un teléfono o portátil. Para acceder hay que aceptar las condiciones de uso en la página de conexión."
+    }
+  }
+}

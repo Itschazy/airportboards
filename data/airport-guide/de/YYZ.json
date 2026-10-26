@@ -1,0 +1,25 @@
+{
+  "iata": "YYZ",
+  "blocks": {
+    "transport": {
+      "title": "Anreise",
+      "hint": "UP Express: 28 Minuten",
+      "text": "UP Express verbindet Pearson mit Union Station im Zentrum von Toronto in 28 Minuten und fährt täglich alle 15 Minuten. Ein einfaches Erwachsenenticket kostet 12,35 $, mit PRESTO 9,25 $; Kinder unter 12 Jahren fahren kostenlos. Die Station liegt in Terminal 1 neben Terminal Link: Von Terminal 3 zunächst den kostenlosen Terminal Link nach Terminal 1 nehmen und den Schildern Train to City folgen. Im Zug und an der Station gibt es kostenloses WLAN, im Zug auch Steckdosen und Gepäckregale."
+    },
+    "terminals": {
+      "title": "Terminals",
+      "hint": "Kostenloser Terminal Link",
+      "text": "Der kostenlose Terminal Link fährt rund um die Uhr zwischen den Terminals 1 und 3 und der Station Viscount. Er erschließt auch das Sheraton Gateway Hotel, das ALT Hotel sowie Value Park Garage und Value Park Lot. Die Fahrt zwischen den Stationen dauert 2 bis 8 Minuten. Der Zug ist für Fahrgäste mit nicht zusammenklappbaren Mobilitätshilfen zugänglich."
+    },
+    "kids": {
+      "title": "Mit Kind",
+      "hint": "Stillbereiche nach der Kontrolle",
+      "text": "Stillräume und Stillkabinen befinden sich nach der Sicherheitskontrolle. Mamava-Kabinen haben einen Klapptisch, 2 Sitzbänke, einen Spiegel, Haltegriffe und eine Steckdose mit USB; zum Öffnen ist ein Code aus der Mamava-App oder vom Flughafenservice nötig. In Terminal 1 liegen die Kabinen bei den Gates D22, E80/E81 und F59, in Terminal 3 bei C30/C31, B22 und A12/A13. Ein Kinderspielbereich liegt in der Abflughalle von Terminal 1 bei Gate D24."
+    },
+    "wifi": {
+      "title": "Wi‑Fi",
+      "hint": "Toronto Pearson Public Wi-Fi",
+      "text": "Pearson und CIBC stellen kostenloses WLAN bereit. Toronto Pearson Public Wi-Fi wählen, die Begrüßungsseite öffnen, die Bedingungen akzeptieren und Connect drücken. Hilfe gibt es unter 1-866-207-1690 oder am Informationsschalter."
+    }
+  }
+}

@@ -1,0 +1,144 @@
+heading ChatGPT сказал:, Value: 4
+									152 text ChatGPT сказал:
+								153 container
+									154 text Проверил все 6 пар русский → хинди без внешних источников.  Критических ошибок в числах, валютах, возрастных ограничениях, тарифах, времени работы и условиях доступа не обнаружено.  Есть несколько замечаний к точности формулировок и естественности хинди.
+								155 heading Обязательные исправления, Value: 2
+									156 text Обязательные исправления
+								157 text 1. CAI / lounges — неточная передача услуги сопровождения
+								158 content list
+									159 container
+										160 AXListMarker •
+										161 text Было:
+										162 text लाउंज और साथ ले जाने की सेवा
+									163 container
+										164 AXListMarker •
+										165 text Предлагаю:
+										166 text लाउंज और एस्कॉर्ट सेवा
+									167 container
+										168 AXListMarker •
+										169 text Также в тексте:
+										170 content list
+											171 container
+												172 AXListMarker •
+												173 text Было:
+												174 text Ahlan VIP में साथ ले जाने की सेवा
+											175 container
+												176 AXListMarker •
+												177 text Предлагаю:
+												178 text Ahlan VIP में एस्कॉर्ट सेवा
+									179 container
+										180 AXListMarker •
+										181 text Причина:
+										182 text साथ ले जाने की सेवा
+										183 text  буквально звучит как «услуга взять с собой / отвести с собой», что неестественно для аэропортового VIP-сопровождения.
+										184 text एस्कॉर्ट सेवा
+										185 text  точнее обозначает сопровождение пассажира, не добавляя новых услуг.
+								186 heading Факультативные улучшения, Value: 2
+									187 text Факультативные улучшения
+								188 text 2. SZX / sleep — неестественное обозначение верхнего этажа
+								189 content list
+									190 container
+										191 AXListMarker •
+										192 text Было:
+										193 text सबसे ऊपरी लेवल पर रेस्तराँ है
+									194 container
+										195 AXListMarker •
+										196 text Предлагаю:
+										197 text सबसे ऊपरी स्तर पर रेस्तराँ है
+									198 container
+										199 AXListMarker •
+										200 text Причина:  Заимствованное
+										201 text लेवल
+										202 text  без номера звучит здесь менее естественно, чем
+										203 text स्तर
+										204 text . Русский оригинал говорит о верхнем этаже без указания номера. Правило проекта о сохранении обозначений Level N не нарушается.
+								205 text 3. STN / lounges — двусмысленная формулировка начала допуска
+								206 content list
+									207 container
+										208 AXListMarker •
+										209 text Было:
+										210 text निर्धारित प्रस्थान से 3 घंटे पहले से प्रवेश मिलता है
+									211 container
+										212 AXListMarker •
+										213 text Предлагаю:
+										214 text निर्धारित प्रस्थान समय से 3 घंटे पहले लाउंज में प्रवेश की अनुमति मिलती है
+									215 container
+										216 AXListMarker •
+										217 text Причина:  Текущий вариант понятен, но повторное
+										218 text से
+										219 text  делает конструкцию тяжеловесной. Исправление яснее передаёт допуск за 3 часа до вылета по расписанию.
+								220 text 4. AUH / storage — неестественное описание неполного периода
+								221 content list
+									222 container
+										223 AXListMarker •
+										224 text Было:
+										225 text अधूरी अवधि का शुल्क पूरी अवधि जितना लगता है
+									226 container
+										227 AXListMarker •
+										228 text Предлагаю:
+										229 text अधूरी अवधि के लिए भी पूरी अवधि का शुल्क लिया जाता है
+									230 container
+										231 AXListMarker •
+										232 text Причина:  Второй вариант естественнее и однозначнее передаёт правило: неполный период оплачивается как полный.
+								233 text 5. XMN / taxi — транслитерация географических названий
+								234 content list
+									235 container
+										236 AXListMarker •
+										237 text Было:
+										238 text च्वानझोउ, शिशी और झांगझोउ
+									239 container
+										240 AXListMarker •
+										241 text Предлагаю:
+										242 text Quanzhou, Shishi और Zhangzhou
+									243 container
+										244 AXListMarker •
+										245 text Причина:  Латинские названия удобнее для сопоставления с международными указателями и картами. Это редакционное предпочтение, а не доказанная ошибка: текущая передача названий на хинди не меняет географический смысл.
+								246 heading Блоки без содержательных ошибок, Value: 2
+									247 text Блоки без содержательных ошибок
+								248 content list
+									249 container
+										250 AXListMarker •
+										251 text ATL / lounges:  корректно сохранены 50 USD, обе программы, интервалы 3 и 2,5 часа, бесплатный вход строго младше 2 лет и сопровождение до 17 лет включительно.
+									252 container
+										253 AXListMarker •
+										254 text SZX / sleep:  корректны расстояние, адрес, бесплатность Wi-Fi и парковки, время 15:00/12:00 и телефон.
+									255 container
+										256 AXListMarker •
+										257 text STN / lounges:  корректны ограничения по авиакомпаниям, выходы 1–19, запрет возвращения, цена от 35 GBP, возраст младше 3 лет и оплата картой.
+									258 container
+										259 AXListMarker •
+										260 text CAI / lounges:  сохранены 220 USD, 3 600 EGP, удвоение тарифа для стыковок, минимальные 4 часа, бронирование за 48 часов и правило для третьего ребёнка.
+									261 container
+										262 AXListMarker •
+										263 text AUH / storage:  все пять тарифов и интервалы, добавочные 25 AED, круглосуточный режим и правило округления сохранены.
+									264 container
+										265 AXListMarker •
+										266 text XMN / taxi:  корректны T3/T4, номера дверей, автоматическая дверь 7, направление на запад, расстояние 120 м и телефон.
+								267 container
+									268 text Итог:  1 обязательная терминологическая правка и 4 факультативные. Переводы в целом точные; фактические условия обслуживания сохранены.
+								269 button Копировать
+									270 image
+								271 button Оценить ответ
+									272 image
+								273 checkbox Description: Прочитать вслух, Value: 0
+								274 button Поделиться
+								275 pop up button (collapsed) Description: Сгенерировать ответ заново, ID: radix-_r_99_, Secondary Actions: Expand
+								276 pop up button (collapsed) Description: Ещё действия, ID: radix-_r_9d_, Secondary Actions: Expand
+							277 container
+								278 text ChatGPT может допускать ошибки. Проверяйте важную информацию.
+							279 container
+								280 heading Последний ответ, Value: 4
+									281 text Последний ответ
+								282 container
+									283 container
+										284 button (collapsed) Description: Добавить файлы и другое, Secondary Actions: Expand
+										285 text entry area (settable) Description: Спросить ChatGPT, Value:
+
+											286 container
+												287 text Спросить ChatGPT
+										288 pop up button (collapsed) Description: Выбрать модель ChatGPT, ID: radix-_r_9m_, Secondary Actions: Expand
+											289 text Средний
+										290 button Диктовать
+										291 button Начать голосовой разговор
+
+The focused UI element is 285 text entry area (settable) Description: Спросить ChatGPT, Value:

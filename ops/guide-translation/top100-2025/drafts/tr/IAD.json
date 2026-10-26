@@ -1,0 +1,25 @@
+{
+  "iata": "IAD",
+  "blocks": {
+    "transport": {
+      "title": "Silver Line metrosu",
+      "hint": "Ana terminalden geçiş",
+      "text": "Silver Line istasyonu ana terminale yürüyen bantlı, üstü kapalı bir yaya tüneliyle bağlanır; check-in ve bagaj alım katlarından tabelalarla ulaşılır. Hat Washington merkezine ve bölgenin diğer kesimlerine gider. Turnikelerde temassız banka kartı veya mobil cüzdanla ödeme yapılabilir; giriş ve çıkışta aynı kart ya da cihaz okutulmalıdır."
+    },
+    "terminals": {
+      "title": "AeroTrain",
+      "hint": "TSA güvenlik kontrolünden sonra",
+      "text": "Otomatik AeroTrain, ana terminali iç ve dış hatlar gidişleri ile iç hatlar gelişleri için uzak biniş kapısı bölgelerine bağlar. Ana terminal istasyonu TSA güvenlik kontrolünün hemen sonrasındadır; komşu istasyonlar arasındaki yolculuk 2 dakikadan az sürer. Dış hatlardan gelen yolcuların çoğu, önce ABD gümrük işlemlerini tamamlamaları gerektiği için AeroTrain’i kullanmaz."
+    },
+    "kids": {
+      "title": "Emzirme odaları",
+      "hint": "Güvenlik öncesi ve sonrası",
+      "text": "Güvenlik kontrolünden önce emzirme odaları geliş katında, 2, 6, 11 ve 14 numaralı bagaj bantlarının karşısındaki tuvaletlerin yanındadır. Güvenlikten sonra A20, B70, C11 ve D1 biniş kapıları yakınındadır; B70’teki odada ayrı tuvalet, C11’dekinde lavabo vardır. Odalar kilitlidir; erişim için bilgi masasına başvurun veya +1 703 5722730 numarasını arayın."
+    },
+    "wifi": {
+      "title": "Ücretsiz Wi-Fi",
+      "hint": "#IAD Free WiFi ağı",
+      "text": "Ana terminal ve biniş kapısı bölgelerinde #IAD Free WiFi adlı ücretsiz Wi-Fi vardır. Bağlantı sayfasında e-posta ve posta kodu girilmelidir; yabancı ziyaretçiler posta kodunu atlamak için Yes’i seçebilir. Koşulları okuduktan sonra Connect’e basın."
+    }
+  }
+}

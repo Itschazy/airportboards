@@ -1,0 +1,25 @@
+{
+  "iata": "CAI",
+  "blocks": {
+    "transport": {
+      "title": "机场出发的公交车",
+      "hint": "1号航站楼前的车站",
+      "text": "前往开罗各处的市区公交车及城际巴士仅从1号航站楼前停车场内的车站发车。West Delta、Upper Egypt、East Delta和Super Jet均在此发车。"
+    },
+    "terminals": {
+      "title": "Automated People Mover",
+      "hint": "免费机场列车",
+      "text": "免费的Automated People Mover连接1号航站楼、Air Mall、停车场、2号航站楼和3号航站楼，全程不超过5分钟。该列车供中转旅客及机场公共区域的访客使用，每日运营18小时，另6小时用于维护。"
+    },
+    "lounges": {
+      "title": "Ahlan VIP",
+      "hint": "休息室及陪同服务",
+      "text": "Ahlan VIP包括陪同服务及最多3小时的休息室使用，须至少在航班起飞前48小时预订。VIP价格为外国旅客220 USD、埃及公民3,600 EGP。中转航班价格加倍，且两班航班间隔至少4小时才可预订。两名未满6岁的儿童可免费使用服务，第三名未满6岁的儿童按独立旅客计算。"
+    },
+    "wifi": {
+      "title": "免费Wi-Fi",
+      "hint": "Orange Egypt提供",
+      "text": "Orange Egypt为开罗机场的到达和出发旅客提供免费Wi-Fi，也提供手机及其他电子设备的免费充电站。"
+    }
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "iata": "IAD",
+  "blocks": {
+    "transport": {
+      "title": "Metro Silver Line",
+      "hint": "Verbindung vom Hauptterminal",
+      "text": "Die Station der Silver Line ist durch einen überdachten Fussgängertunnel mit Fahrsteigen mit dem Hauptterminal verbunden; Schilder führen von der Check-in- und Gepäckausgabeebene dorthin. Die Linie fährt ins Zentrum von Washington und in weitere Teile der Region. An den Zugangssperren kann man mit kontaktloser Bankkarte oder mobiler Wallet bezahlen: Beim Ein- und Ausgang muss dieselbe Karte oder dasselbe Gerät verwendet werden."
+    },
+    "terminals": {
+      "title": "AeroTrain",
+      "hint": "Nach der TSA-Sicherheitskontrolle",
+      "text": "Der automatische AeroTrain verbindet das Hauptterminal mit den entfernten Gatebereichen für Inlands- und internationale Abflüge sowie Inlandsankünfte. Die Station im Hauptterminal liegt direkt nach der TSA-Sicherheitskontrolle; zwischen benachbarten Stationen dauert die Fahrt weniger als 2 Minuten. Die meisten international ankommenden Passagiere nutzen den AeroTrain nicht, da sie zunächst die US-Zollformalitäten erledigen müssen."
+    },
+    "kids": {
+      "title": "Stillräume",
+      "hint": "Vor und nach der Kontrolle",
+      "text": "Vor der Sicherheitskontrolle liegen Stillräume auf der Ankunftsebene bei den Toiletten gegenüber den Gepäckbändern 2, 6, 11 und 14. Nach der Sicherheitskontrolle befinden sie sich bei den Gates A20, B70, C11 und D1; bei B70 gibt es eine eigene Toilette, bei C11 ein Waschbecken. Die Räume sind verschlossen: Für den Zugang wendet man sich an einen Informationsschalter oder ruft +1 703 5722730 an."
+    },
+    "wifi": {
+      "title": "Kostenloses WLAN",
+      "hint": "Netzwerk #IAD Free WiFi",
+      "text": "Kostenloses WLAN steht im Hauptterminal und in den Gatebereichen unter dem Namen #IAD Free WiFi bereit. Auf der Verbindungsseite werden E-Mail-Adresse und Postleitzahl eingegeben; ausländische Besucher können Yes wählen, um die Postleitzahl zu überspringen. Nach dem Lesen der Bedingungen auf Connect klicken."
+    }
+  }
+}

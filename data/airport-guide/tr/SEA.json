@@ -1,0 +1,10 @@
+{
+  "iata": "SEA",
+  "blocks": {
+    "transport": {
+      "title": "Nasıl gidilir",
+      "hint": "Link: merkeze 38 dakika",
+      "text": "Link light rail, havalimanını Seattle merkezine 38 dakikada bağlar; günün büyük bölümünde sefer aralığı 8–10 dakikadır. Bagaj bandı 16’dan yaya köprüleri katına çıkıp Skybridge Six’i geçtikten sonra sola dönüp otopark binasından geçerek SeaTac/Airport istasyonuna gidilir. Tüm yolculara açık ücretsiz elektrikli araçlar, istasyon ile köprü arasında her gün 05:00’ten gece yarısına kadar çalışır. Sound Transit Night Bus, son trenden yaklaşık 15 dakika sonra başlayarak havalimanı ile şehir merkezini yaklaşık 30 dakikada bir bağlar."
+    }
+  }
+}

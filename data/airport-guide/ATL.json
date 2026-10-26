@@ -1,0 +1,38 @@
+{
+  "iata": "ATL",
+  "checked": "2026-10-26",
+  "blocks": [
+    {
+      "id": "transport",
+      "title": "Как доехать",
+      "hint": "Линии Red и Gold",
+      "text": "Станция MARTA Airport Station находится в Domestic Terminal между зонами выдачи багажа North и South. До аэропорта идут линии Red и Gold. После 20:30 для поездки из аэропорта к станциям Buckhead, Medical Center, Dunwoody, Sandy Springs и North Springs может потребоваться пересадка на Red Line на станции Lindbergh Center.",
+      "source": "itsmarta.com",
+      "url": "https://itsmarta.com/getting-to-airport.aspx"
+    },
+    {
+      "id": "terminals",
+      "title": "Терминалы",
+      "hint": "Бесплатный шаттл круглосуточно",
+      "text": "От уровня прилёта International Terminal к зоне выдачи багажа Domestic Terminal ходит бесплатный шаттл. Он работает круглосуточно, поездка между терминалами занимает 15 минут. В Domestic Terminal остановка находится снаружи зоны выдачи багажа.",
+      "source": "itsmarta.com",
+      "url": "https://itsmarta.com/getting-to-airport.aspx"
+    },
+    {
+      "id": "lounges",
+      "title": "Бизнес-залы",
+      "hint": "The Club ATL, 06:00–22:00",
+      "text": "The Club ATL находится в зале F на уровне Mezzanine после досмотра и открыт ежедневно с 06:00 до 22:00. Вход по Club Pass стоит 50 USD; доступны также подходящие программы Priority Pass и LoungeKey. Владельцы Club Pass могут войти за 3 часа до вылета по расписанию, участники Priority Pass и LoungeKey — за 2,5 часа. Дети до 2 лет проходят бесплатно; с 2 лет нужен отдельный пропуск, до 17 лет включительно — сопровождение взрослого от 18 лет.",
+      "source": "theclubairportlounges.com",
+      "url": "https://theclubairportlounges.com/lounges/atl-the-club-concourse-f"
+    },
+    {
+      "id": "sleep",
+      "title": "Где поспать",
+      "hint": "Minute Suites после досмотра",
+      "text": "Minute Suites находятся после досмотра TSA: в зале B у выхода на посадку B24, в зале E у атриума и эскалаторов и в зале F у выхода на посадку F6. В комнатах есть диван-кровать с выдвижным спальным местом, Smart TV, бесплатный Wi‑Fi, рабочая поверхность и зарядные разъёмы. Подушки и одеяла предоставляются по запросу. Бронирование начинается от 1 часа; душевые доступны только в зале E.",
+      "source": "minutesuites.com",
+      "url": "https://minutesuites.com/locations/atlanta-airport/"
+    }
+  ]
+}

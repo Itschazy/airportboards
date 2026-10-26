@@ -1,0 +1,20 @@
+{
+  "iata": "MEX",
+  "blocks": {
+    "transport": {
+      "title": "Nasıl gidilir",
+      "hint": "İki terminalden Metrobús",
+      "text": "Metrobús, havalimanını Meksiko merkezine bağlar. Biniş noktaları terminal 1’de 7 numaralı kapı ve terminal 2’de 2 numaralı kapıdır. Ödeme, her iki terminalin biniş ve iniş alanlarındaki makinelerden satın alınabilen ve yükleme yapılabilen Metrobús kartıyla yapılır. Seferler pazartesi–cumartesi 04:30’dan gece yarısına, pazar ve resmî tatillerde 05:00’ten gece yarısına kadar sürer."
+    },
+    "terminals": {
+      "title": "Terminaller",
+      "hint": "Ücretsiz Aerotrén, 05:00–23:00",
+      "text": "Ücretsiz Aerotrén, her gün 05:00–23:00 arasında terminal 1 ve 2 arasında yolcu taşır. Yolculuk için biniş kartı göstermek gerekir. Köpeklere yalnızca kafes içinde ve boş vagonlarda izin verilir; trende yemek, içmek ve sigara içmek yasaktır."
+    },
+    "storage": {
+      "title": "Emanet",
+      "hint": "T1 ve T2’de 24 saat muhafaza",
+      "text": "Terminal 1’de MEXICANA DE LOCKERS, zemin seviyesinde E-41 numaralı yerde günün her saati bagaj muhafazası sunar. Terminal 2’de zemin seviyesindeki ALL45 ve ALL46 numaralı VIAJES KOKAI noktaları günün her saati açıktır."
+    }
+  }
+}

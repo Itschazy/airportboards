@@ -5,8 +5,10 @@ import { guideDate, type AirportGuide as Guide } from '@/lib/airport-guide';
  *
  * Без клиентского JS: каждая плитка — нативный <details>, открытая растягивается на всю ширину
  * сетки (CSS .ag-tile[open]). Текст всех блоков лежит в SSR HTML даже в свёрнутом виде —
- * поисковик и читатель без JS видят то же самое. Источник и дата проверки — под каждым текстом:
- * это не украшение, а то, что отличает справку от сгенерированного абзаца (см. lib/airport-guide.ts).
+ * поисковик и читатель без JS видят то же самое. Дата проверки остаётся над плитками.
+ * 26.10.2026 владелец попросил убрать публичные строки «По данным …» и ссылки под блоками.
+ * Точные источники сохраняются в исходных JSON для повторной проверки фактов; их удаление
+ * с экрана не меняет текст справочной и не превращает сторонние сведения в собственные.
  */
 
 // Порядок — по тому, что спрашивают чаще: дорога и терминал раньше залов и Wi‑Fi.
@@ -24,11 +26,8 @@ const ICONS: Record<string, string> = {
   wifi: 'M5 12a10 10 0 0 1 14 0M8.5 15.5a5 5 0 0 1 7 0M12 19h.01M2 8.8a15 15 0 0 1 20 0',
 };
 
-/** Строки интерфейса — из messages (ui.aguide_*), чтобы справочная говорила на языке страницы. */
-export type GuideLabels = {
-  leadOfficial: string; leadThird: string; checked: string;
-  src: string; srcAnd: string; srcMore: string; srcThird: string;
-};
+/** Дата сопровождается существующей строкой ui.aguide_checked на языке страницы. */
+export type GuideLabels = { checked: string };
 
 export function AirportGuide({ guide, title, labels, numLocale }: { guide: Guide; title: string; labels: GuideLabels; numLocale: string }) {
   const blocks = [...guide.blocks].sort((a, b) => (ORDER.indexOf(a.id) + 99) % 99 - (ORDER.indexOf(b.id) + 99) % 99);
@@ -36,9 +35,9 @@ export function AirportGuide({ guide, title, labels, numLocale }: { guide: Guide
   return (
     <section style={{ marginTop: 36 }} aria-labelledby="ag-title">
       <h2 id="ag-title" style={{ margin: '0 0 14px', fontSize: 13, fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.12em', color: 'var(--ab-8a8a8a)' }}>{title}</h2>
-      {/* Откуда факты — одной строкой, до плиток: так читатель и answer-engine видят метод, а
-          не только результат (skill seo-aeo-geo, «methodology disclosure»). */}
-      <p className="ag-lead">{guide.basis === 'third-party' ? labels.leadThird : labels.leadOfficial} {labels.checked} <time dateTime={guide.checked}>{checked}</time>.</p>
+      {/* Дату не скрываем вместе со ссылками: цены и расписания стареют. Источники и basis
+          остаются в данных и проходят тот же сторож, хотя публичной подписи больше нет. */}
+      <p className="ag-lead">{labels.checked} <time dateTime={guide.checked}>{checked}</time>.</p>
       <div className="ag-grid">
         {blocks.map((b) => (
           <details key={b.id} className="ag-tile">
@@ -51,16 +50,6 @@ export function AirportGuide({ guide, title, labels, numLocale }: { guide: Guide
             </summary>
             <div className="ag-body">
               <p>{b.text}</p>
-              {guide.basis === 'third-party' ? (
-                <p className="ag-src">
-                  {labels.srcThird} <a href={b.url} target="_blank" rel="noopener noreferrer">{b.source}</a> {labels.srcAnd} <a href={b.url2} target="_blank" rel="noopener noreferrer">{b.source2}</a>
-                </p>
-              ) : (
-                <p className="ag-src">
-                  {labels.src} <a href={b.url} target="_blank" rel="noopener noreferrer">{b.source}</a>
-                  {b.url2 ? <> {labels.srcAnd} <a href={b.url2} target="_blank" rel="noopener noreferrer">{labels.srcMore}</a></> : null}
-                </p>
-              )}
             </div>
           </details>
         ))}

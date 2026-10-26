@@ -1,0 +1,15 @@
+{
+  "iata": "SHA",
+  "blocks": {
+    "storage": {
+      "title": "Gepäckaufbewahrung",
+      "hint": "Aufbewahrung bis zu 1 Monat",
+      "text": "In Terminal 1 liegt die Gepäckaufbewahrung gegenüber Gate 6 in der Abflughalle und ist von 07:00 bis 20:30 geöffnet; die tatsächlichen Öffnungszeiten vor Ort sind maßgeblich. Gepäck kann gegen Gebühr bis zu 1 Monat aufbewahrt werden. Reisende, deren Reisepass zum visumfreien Transit von 240 Stunden berechtigt, können 1 Gepäckstück für 72 Stunden kostenlos aufbewahren lassen. Für Abgabe und Abholung ist ein gültiges Ausweisdokument nötig; die Gegenstände werden geröntgt."
+    },
+    "kids": {
+      "title": "Mit Kind",
+      "hint": "Spielbereiche in Terminal 1",
+      "text": "In Terminal 1 liegen die Kinderspielbereiche auf der Abflugebene: bei Gate T10 im Bereich für internationale Flüge sowie Flüge nach Hongkong, Macau und Taiwan und bei Gate T26 im Inlandsbereich. Die Öffnungszeiten richten sich nach den abgehenden Flügen."
+    }
+  }
+}

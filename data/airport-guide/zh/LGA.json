@@ -1,0 +1,25 @@
+{
+  "iata": "LGA",
+  "blocks": {
+    "transport": {
+      "title": "免费Q70 LGA Link",
+      "hint": "从B及C航站楼前往地铁",
+      "text": "免费Q70 LGA Link巴士服务B及C航站楼，连接机场与地铁换乘枢纽Jackson Heights–Roosevelt Avenue和74 St–Broadway。MTA巴士可供轮椅乘客使用，并配备坡道。"
+    },
+    "taxi": {
+      "title": "出租车",
+      "hint": "无需提前预订",
+      "text": "所有航站楼均可无需提前预订乘坐出租车，调度员会引导排队乘客前往空车。车费按距离和时间计算，计价器起始金额为3 USD；从机场上车另收2 USD的PANYNJ费用。无障碍出租车与普通出租车同价，可拨打+1 646 599 9999叫车。"
+    },
+    "terminals": {
+      "title": "All Terminals Shuttle",
+      "hint": "24小时免费",
+      "text": "免费All Terminals Shuttle往返所有航站楼，也停靠预付费Economy Lot（Parking Lot 7）、Hangar 7 South及94th Street。全天24小时运行，高峰时段每15分钟一班，其他时间每20分钟一班。"
+    },
+    "wifi": {
+      "title": "免费Wi-Fi",
+      "hint": "_Free LGA WiFi",
+      "text": "免费连接时选择_Free LGA WiFi网络。支持电话+1 800 880 4117全天24小时提供服务。"
+    }
+  }
+}

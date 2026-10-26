@@ -1,0 +1,25 @@
+{
+  "iata": "CTU",
+  "blocks": {
+    "transport": {
+      "title": "Metro",
+      "hint": "Líneas 10, 19 y 30",
+      "text": "La línea de metro 10 da servicio a ambos terminales; en el terminal 2 se accede por los pasos L2, L3 y L4 del nivel B2. La estación Shuangliu Airport Terminal 2 East tiene las líneas 19 y 30, con acceso por el paso L3 del nivel B2 del terminal 2. La línea 19 la conecta con Tianfu Airport Terminal 1 & 2 y Tianfu Airport North."
+    },
+    "taxi": {
+      "title": "Taxi",
+      "hint": "Fuera de llegadas",
+      "text": "En el terminal 1, la parada está a unos 50 m al sur, fuera de la puerta 6 del nivel de llegadas. En el terminal 2 se sube junto al paso de peatones del nivel de llegadas; el teléfono de supervisión del transporte es 12328."
+    },
+    "terminals": {
+      "title": "Entre terminales",
+      "hint": "Autobús gratuito",
+      "text": "Hay un autobús gratuito entre los terminales 1 y 2; caminar entre ellos lleva unos 8–10 minutos. La parada del terminal 1 está en la explanada sur fuera de la puerta 3, y la del terminal 2 en la explanada norte fuera de la puerta 9."
+    },
+    "storage": {
+      "title": "Consigna de equipajes",
+      "hint": "Documento y control obligatorios",
+      "text": "La consigna del terminal 1 está al norte del control de seguridad B y la del terminal 2 detrás de la isla de facturación P. Ambas abren 2 horas antes del primer vuelo de salida de su terminal y cierran al terminar sus salidas. Una taquilla pequeña cuesta 8 CNY hasta 6 horas, 13 CNY hasta 12 horas y 18 CNY hasta 24 horas; después se añaden 2 CNY por cada 6 horas adicionales. Los periodos de menos de 6 horas se cobran como 6 horas. Al depositar se necesita un documento válido y el equipaje se inspecciona; para recogerlo hacen falta el recibo y el mismo documento. No se aceptan baterías externas ni baterías de litio."
+    }
+  }
+}

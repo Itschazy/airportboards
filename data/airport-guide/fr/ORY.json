@@ -1,0 +1,25 @@
+{
+  "iata": "ORY",
+  "blocks": {
+    "transport": {
+      "title": "Métro depuis Paris",
+      "hint": "Ligne 14 sans correspondance",
+      "text": "La ligne de métro 14 dessert directement la station Orly Airport depuis Châtelet, Gare de Lyon, Bercy et Saint-Lazare ; le trajet depuis le centre de Paris dure environ 25–35 minutes. Le billet Paris Région <> Airports coûte 14 EUR pour un aller simple : il peut être acheté à un automate pour Navigo Easy ou via l’application Île-de-France Mobilités. Une autre solution est le RER B jusqu’à Antony puis Orlyval ; depuis le centre, le trajet dure environ 35–45 minutes et coûte aussi 14 EUR."
+    },
+    "storage": {
+      "title": "Consigne à bagages",
+      "hint": "Orly 3, niveau 0",
+      "text": "Bagages du Monde se trouve à Orly 3 au niveau 0 avant le contrôle de sûreté, près des arrivées, et est ouvert tous les jours de 07:00 à 21:00. Les bagages sont contrôlés aux rayons X et conservés sous vidéosurveillance ; le tarif dépend de leur taille et de la durée de garde. Un vestiaire pour accessoires et bagages spéciaux ainsi que la location de poussettes ou de sièges auto sont aussi proposés."
+    },
+    "kids": {
+      "title": "Salles pour bébés",
+      "hint": "Après le contrôle à Orly 3 et 4",
+      "text": "Les salles de change dans les blocs sanitaires sont ouvertes 24 heures sur 24 et disposent de tables à langer et de toilettes pour enfants. Des salles séparées pour bébés après le contrôle à Orly 3 et Orly 4 au niveau 1 sont accessibles gratuitement 24 heures sur 24 ; elles comprennent des alcôves individuelles avec lits, sièges, chaises hautes, chauffe-biberons et micro-ondes."
+    },
+    "wifi": {
+      "title": "Wi-Fi et recharge",
+      "hint": "Dans tous les terminaux",
+      "text": "Le réseau gratuit WIFI-AIRPORT est disponible dans tous les terminaux, les zones d’embarquement et de livraison des bagages ; après l’avoir sélectionné, ouvrir un navigateur pour accéder à la page de connexion. Les terminaux disposent de ports USB et de prises européennes de types C, E et F. Des casiers verrouillables ChargeBox pour recharger un téléphone sont disponibles gratuitement 24 heures sur 24."
+    }
+  }
+}

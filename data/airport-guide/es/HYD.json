@@ -1,0 +1,25 @@
+{
+  "iata": "HYD",
+  "blocks": {
+    "transport": {
+      "title": "Pushpak Airport Liner",
+      "hint": "Autobuses eléctricos por la ciudad",
+      "text": "Los autobuses eléctricos Pushpak tienen aire acondicionado, cargadores de teléfono y rampa para sillas de ruedas con un mecanismo de descenso de la carrocería. La línea AL a JBS vía LB Nagar, Tarnaka y Sangeeth sale cada 20 minutos; AC a JBS vía Aramghar, NMDC y Punjagutta, cada 30 minutos; AJ a Miyapur vía ORR, Gachibowli y JNTU, cada 15 minutos. Hay información en el +91 40 6944 0000 y el +91 73829 25981."
+    },
+    "taxi": {
+      "title": "Taxis y aplicaciones",
+      "hint": "Recogida en el aparcamiento",
+      "text": "Alyte y Sky Cabs aceptan reservas en los mostradores, con recogida en la rampa de llegadas y en Carpark Zone D. Los vehículos pedidos por aplicaciones tienen zonas asignadas: Uber en D1 y D2, Rapido en D3 y D4, y Ola en D6 y D7. Los taxis prepagados del mostrador salen de Carpark Zone E con una tarifa fija según el destino."
+    },
+    "kids": {
+      "title": "Salas de cuidado para bebés",
+      "hint": "Siga la señalización",
+      "text": "En zonas clave de la terminal hay salas de cuidado para bebés que ofrecen privacidad, aire acondicionado y sillas para dar el pecho. Las señales indican la sala más cercana; los mostradores de información también ayudan a encontrarla."
+    },
+    "wifi": {
+      "title": "Wi-Fi gratuito",
+      "hint": "Hasta 4 horas de acceso",
+      "text": "Conéctese a Hyderabad Airport-Free-WiFi, elija el prefijo del país, introduzca su número de móvil, acepte las condiciones de uso y reciba un SMS-OTP; al introducir el código obtiene hasta 4 horas de acceso. Otra opción es escanear el pasaporte en una pantalla de información virtual y usar el código de cupón mostrado. En salidas internacionales, el Wi-Fi Kiosk está junto a la puerta de embarque 23B; en llegadas internacionales puede obtener un cupón con el pasaporte junto a la cinta 12."
+    }
+  }
+}

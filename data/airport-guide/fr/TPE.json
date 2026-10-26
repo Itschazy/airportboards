@@ -1,0 +1,20 @@
+{
+  "iata": "TPE",
+  "blocks": {
+    "transport": {
+      "title": "Comment s'y rendre",
+      "hint": "MRT aux deux terminaux",
+      "text": "Les stations A12 Terminal 1 et A13 Terminal 2 sont desservies par les trains express et omnibus de Taoyuan Airport MRT. Les trains express et omnibus arrivent en alternance, environ toutes les 7,5 minutes. Les bus partent de la zone B1 du hall des arrivées du terminal 1 et de la galerie extérieure du côté est du hall des arrivées au niveau 1 du terminal 2."
+    },
+    "storage": {
+      "title": "Consigne à bagages",
+      "hint": "Pelican en zone publique",
+      "text": "Taiwan Pelican Express propose la consigne et la livraison des bagages dans les zones publiques des terminaux. Des comptoirs ouverts 24 heures sur 24 se trouvent au niveau 1 des terminaux 1 et 2. Dans le terminal 2, le comptoir du niveau 3 est ouvert de 06:00 à 23:30 ; un autre comptoir du niveau 1 du terminal 1 est ouvert de 09:00 à 17:00."
+    },
+    "wifi": {
+      "title": "Wi‑Fi",
+      "hint": "Réseau Airport Free WiFi",
+      "text": "L’aéroport fournit le Wi-Fi gratuit dans les zones publiques des terminaux. Pour se connecter, sélectionner Airport Free WiFi dans les paramètres de l’appareil et ouvrir un navigateur."
+    }
+  }
+}

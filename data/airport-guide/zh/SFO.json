@@ -1,0 +1,40 @@
+{
+  "iata": "SFO",
+  "blocks": {
+    "transport": {
+      "title": "交通方式",
+      "hint": "BART与AirTrain",
+      "text": "BART车站位于国际航站楼。从BART车站可换乘AirTrain，前往国内及国际航站楼。租车中心可乘AirTrain蓝线到达。"
+    },
+    "taxi": {
+      "title": "出租车",
+      "hint": "按表计费，出机场附加费$6",
+      "text": "出租车乘车点位于各航站楼到达及行李提取层的道路中央安全岛。穿制服的协调员工作时间为07:00至02:00。车费按计价器计算；乘坐旧金山出租车从SFO出发时，车费已含$6出机场附加费，前往机场的行程不收取该费用。提供无障碍出租车，可向协调员申请，或使用机场免费电话拨打*1107。"
+    },
+    "storage": {
+      "title": "行李寄存",
+      "hint": "行李寄存，3楼",
+      "text": "行李寄存服务仅在Dianne Feinstein International Terminal G的3楼Airport Travel Agency提供。可寄存行李、犬用运输笼及运动器材，包括滑雪板、自行车和独木舟；价格取决于物品尺寸。"
+    },
+    "sleep": {
+      "title": "休息住宿",
+      "hint": "Grand Hyatt at SFO",
+      "text": "Grand Hyatt at SFO位于机场入口处。从各航站楼均可乘AirTrain或经公路抵达酒店。"
+    },
+    "kids": {
+      "title": "携儿童出行",
+      "hint": "安检后7处儿童游乐区",
+      "text": "7处Kids’ Spots游乐区均位于安检后。Harvey Milk Terminal 1的游乐区在B2和B18登机口附近，2号航站楼的在D15和D7附近。3号航站楼的游乐区在F17和E7附近，以及F11–F22登机口附近的美食广场。"
+    },
+    "parking": {
+      "title": "停车",
+      "hint": "长期停车每24小时最高$27",
+      "text": "Long-Term Parking提供室内及露天车位，收费为每30分钟$4，每24小时最高$27，含税费。AirTrain蓝线24小时连接停车场与各航站楼，发车间隔可短至4分钟。AirTrain车站位于停车楼5楼。费率可能调整。"
+    },
+    "wifi": {
+      "title": "Wi‑Fi",
+      "hint": "#SFO FREE WIFI",
+      "text": "所有航站楼均提供免费Wi-Fi。连接时选择#SFO FREE WIFI网络并打开浏览器；使用网络即表示接受其条款。"
+    }
+  }
+}

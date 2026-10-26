@@ -1,0 +1,15 @@
+{
+  "iata": "KMG",
+  "blocks": {
+    "transport": {
+      "title": "Comment s'y rendre",
+      "hint": "Métro 6, station Airport Center",
+      "text": "La ligne de métro 6 relie Tangzixiang à la station Airport Center de l’aéroport ; elle offre des correspondances avec les lignes 2, 3 et 4. La station Airport Center se trouve au niveau B2 du terminal."
+    },
+    "taxi": {
+      "title": "Taxi",
+      "hint": "Porte d’accès 3, niveau B1",
+      "text": "La station de taxis se trouve face à la porte d’accès 3 au niveau B1. Pour les destinations situées dans les limites administratives de Kunming, la course est facturée au compteur, sans supplément pour le retour à vide."
+    }
+  }
+}

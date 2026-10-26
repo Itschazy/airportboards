@@ -1,0 +1,25 @@
+{
+  "iata": "CTU",
+  "blocks": {
+    "transport": {
+      "title": "Metropolitana",
+      "hint": "Linee 10, 19 e 30",
+      "text": "La linea 10 della metropolitana serve entrambi i terminal; nel terminal 2 l’accesso è al livello B2 nei passaggi L2, L3 e L4. La stazione Shuangliu Airport Terminal 2 East è servita dalle linee 19 e 30, con accesso dal passaggio L3 al livello B2 del terminal 2. La linea 19 la collega a Tianfu Airport Terminal 1 & 2 e Tianfu Airport North."
+    },
+    "taxi": {
+      "title": "Taxi",
+      "hint": "All’esterno degli arrivi",
+      "text": "Presso il terminal 1, la postazione taxi si trova circa 50 m a sud, all’esterno della porta 6 del livello arrivi. Presso il terminal 2 si sale vicino all’attraversamento pedonale del livello arrivi; il numero della vigilanza sui trasporti è 12328."
+    },
+    "terminals": {
+      "title": "Tra i terminal",
+      "hint": "Autobus gratuito",
+      "text": "Un autobus gratuito collega i terminal 1 e 2; il tragitto a piedi dura circa 8–10 minuti. La fermata del terminal 1 è sul piazzale sud all’esterno della porta 3, quella del terminal 2 sul piazzale nord all’esterno della porta 9."
+    },
+    "storage": {
+      "title": "Deposito bagagli",
+      "hint": "Documento e controllo obbligatori",
+      "text": "Il deposito del terminal 1 è a nord del controllo di sicurezza B, quello del terminal 2 dietro l’isola check-in P. Entrambi aprono 2 ore prima della prima partenza del proprio terminal e chiudono dopo la fine delle sue partenze. Un armadietto piccolo costa 8 CNY fino a 6 ore, 13 CNY fino a 12 ore e 18 CNY fino a 24 ore; poi si aggiungono 2 CNY per ogni ulteriore periodo di 6 ore. Le durate inferiori a 6 ore sono addebitate come 6 ore. Al deposito serve un documento valido e il bagaglio viene controllato; al ritiro occorrono ricevuta e lo stesso documento. Power bank e batterie al litio non sono accettati in deposito."
+    }
+  }
+}

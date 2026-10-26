@@ -1,0 +1,25 @@
+{
+  "iata": "KIX",
+  "blocks": {
+    "terminals": {
+      "title": "Zwischen den Terminals",
+      "hint": "Kostenloser Bus",
+      "text": "Die Terminals 1 und 2 liegen etwa 4 km auseinander. Zwischen Aeroplaza und Terminal 2 fährt ein kostenloser Bus; die Fahrt dauert 7–9 Minuten."
+    },
+    "storage": {
+      "title": "Gepäckaufbewahrung",
+      "hint": "Vor der Kontrolle in Terminal 1",
+      "text": "Auf Ebene 4 von Terminal 1 vor der Sicherheitskontrolle liegen die Gepäckaufbewahrung von Yamato Transport im Norden und JAL ABC im Süden. Yamato Transport ist von 06:30 bis 22:30 geöffnet, JAL ABC von 06:30 bis 23:00 mit letzter Gepäckannahme um 22:30."
+    },
+    "kids": {
+      "title": "Babyräume",
+      "hint": "Für die ganze Familie",
+      "text": "Die Babyräume stehen der ganzen Familie offen; der Bereich zum Stillen und Abpumpen ist nur für Frauen bestimmt. Die Räume bieten Wickelmöglichkeiten, spezielle Windelbehälter und heißes Wasser zur Zubereitung von Säuglingsnahrung; die meisten Räume haben Mikrowellen."
+    },
+    "wifi": {
+      "title": "Kostenloses WLAN",
+      "hint": "Keine vorherige Anmeldung",
+      "text": "Das kostenlose Netz ist in Terminal 1 außer auf Teilen der Wege für internationale Ankünfte, am Busbahnhof von Terminal 1, am Bahnhof sowie in Aeroplaza und Terminal 2 verfügbar. #AirportFreeWiFi-Kansai oder #AirportFreeWiFi-Kansai2.4G wählen. Eine vorherige Anmeldung ist nicht nötig, die Nutzungsbedingungen müssen aber akzeptiert werden. Daten zwischen Gerät und Zugangspunkt werden nicht verschlüsselt."
+    }
+  }
+}

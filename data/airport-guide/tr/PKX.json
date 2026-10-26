@@ -1,0 +1,25 @@
+{
+  "iata": "PKX",
+  "blocks": {
+    "transport": {
+      "title": "Nasıl gidilir",
+      "hint": "Daxing Airport Express, Kat B1",
+      "text": "Daxing Airport Express, Caoqiao, Daxing Xincheng ve Daxing Airport istasyonlarında durur; Caoqiao’da metro hatları 10 ve 19’a aktarma yapılabilir. Havalimanında trene terminalin Kat B1 bölümünden binilir. Caoqiao’dan havalimanına trenler 05:30–22:30 arasında, havalimanından Caoqiao’ya ise pazartesi-cumartesi 06:00–23:00 arasında ve pazar günleri 23:30’a kadar çalışır. Boyu 1,3 m ve altında olan çocuklar, ücret ödeyen bir yetişkin eşliğinde ücretsiz seyahat eder."
+    },
+    "storage": {
+      "title": "Emanet",
+      "hint": "1–90 gün bagaj muhafazası",
+      "text": "Bagajlar 1 ila 90 gün muhafaza edilebilir. Kat 2’deki nokta, iç hatlar gelen yolcu salonunun doğu çıkışından 30 m doğuda bulunur ve günün her saati açıktır; Kat 4’teki nokta, giden yolcu salonunun doğu kısmında H adasının sonundadır ve 07:00–22:00 arasında açıktır. Ücret, bagajın boyutuna göre parça ve gün başına alınır. 240 saatlik vizesiz transit hakkına sahip yolcular 1 parça bagajı ücretsiz bırakabilir."
+    },
+    "kids": {
+      "title": "Çocukla",
+      "hint": "A10 numaralı kapıda oyun alanı",
+      "text": "Havacılık temalı çocuk oyun alanında uçak modelleri, kaydıraklar ve başka oyun ekipmanları vardır. Salon A’da A10 numaralı biniş kapısının yanında bulunur ve 08:00–21:00 arasında açıktır."
+    },
+    "wifi": {
+      "title": "Wi‑Fi",
+      "hint": "BDIA-FREE-WiFi, pasaportla giriş",
+      "text": "Havalimanında ücretsiz BDIA-FREE-WiFi ağı vardır. Havalimanının görsel yönergesinde pasaportla giriş anlatılır: doğrulama sayfasında ID Login seçilir, belge türü belirlenir ve belgenin fotoğrafı çekilir."
+    }
+  }
+}

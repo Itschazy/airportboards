@@ -1,0 +1,14 @@
+{
+  "iata": "HGH",
+  "checked": "2026-10-26",
+  "blocks": [
+    {
+      "id": "sleep",
+      "title": "Где поспать",
+      "hint": "Отель у станции Xingang",
+      "text": "Holiday Inn Express Hangzhou Airport находится в Dexin Airport City рядом со станцией Xingang линии метро 7, в 1 остановке от аэропорта. В отеле 132 номера, предоставляется бесплатный завтрак и есть Wi‑Fi. Заезд — с 14:00, выезд — до 12:00.",
+      "source": "ihg.com",
+      "url": "https://www.ihg.com/holidayinnexpress/hotels/ru/ru/hangzhou/hghap/hoteldetail"
+    }
+  ]
+}

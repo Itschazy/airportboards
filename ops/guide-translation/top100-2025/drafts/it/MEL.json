@@ -1,0 +1,30 @@
+{
+  "iata": "MEL",
+  "blocks": {
+    "transport": {
+      "title": "Autobus per la città",
+      "hint": "SkyBus e autobus pubblici",
+      "text": "SkyBus Melbourne City Express collega l’aeroporto alla stazione Southern Cross ogni giorno dalle 04:00 alle 01:00, con fermate presso i terminal 1, 3 e 4. I biglietti si acquistano online e alle macchine presso le fermate; per il pagamento in contanti sono disponibili Prosegur e Smart Carte nella sala arrivi del terminal 2. Gli autobus pubblici PTV partono dal nodo del trasporto terrestre del terminal 4."
+    },
+    "storage": {
+      "title": "Deposito bagagli",
+      "hint": "Terminal 2 e 4",
+      "text": "Gli armadietti automatici si trovano al livello del suolo del parcheggio del terminal 4, sotto le scale mobili. Il servizio Smartecarte al livello del suolo della sala arrivi del terminal 2 è aperto tutti i giorni dalle 06:00 a mezzanotte e offre anche stampa e invio di fax."
+    },
+    "sleep": {
+      "title": "Hotel presso i terminal",
+      "hint": "Passerelle e trasferimenti",
+      "text": "PARKROYAL Melbourne Airport è collegato ai terminal nazionali e al terminal internazionale da passerelle pedonali sopraelevate. Holiday Inn Melbourne Airport si trova a 400 m dai terminal e offre ai propri ospiti, su richiesta, un autobus gratuito da e per il terminal."
+    },
+    "kids": {
+      "title": "Sale per genitori",
+      "hint": "In tutti i terminal",
+      "text": "In tutti i terminal sono presenti spazi per cambiare i pannolini. Nel terminal 2 si trovano prima dei controlli al livello 1 vicino alle aree check-in M e F, e dopo i controlli al livello 1, dopo Duty Free e di fronte ai gate 3 e 16. La sala al livello del suolo dell’area arrivi del terminal 2 si trova di fronte al deposito Smartcarte."
+    },
+    "wifi": {
+      "title": "Wi-Fi gratuito",
+      "hint": "Terminal 2, 3 e 4",
+      "text": "La rete gratuita Airport Free Wi-Fi è disponibile nei terminal 2, 3 e 4, comprese le aree pubbliche e le sale d’attesa. Nel terminal 1, gestito da Qantas, questa rete non è disponibile. La connessione gratuita non è crittografata."
+    }
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "iata": "HYD",
+  "blocks": {
+    "transport": {
+      "title": "Pushpak Airport Liner",
+      "hint": "Şehir içi elektrikli otobüsler",
+      "text": "Pushpak elektrikli otobüslerinde klima, telefon şarj cihazları ve gövde alçaltma mekanizmalı tekerlekli sandalye rampası vardır. LB Nagar, Tarnaka ve Sangeeth üzerinden JBS’ye giden AL hattı 20 dakikada bir; Aramghar, NMDC ve Punjagutta üzerinden JBS’ye giden AC 30 dakikada bir; ORR, Gachibowli ve JNTU üzerinden Miyapur’a giden AJ 15 dakikada bir kalkar. Bilgi için +91 40 6944 0000 ve +91 73829 25981 aranabilir."
+    },
+    "taxi": {
+      "title": "Taksiler ve uygulamalar",
+      "hint": "Otoparktaki biniş alanları",
+      "text": "Alyte ve Sky Cabs masalardan sipariş alır; biniş geliş rampasında ve Carpark Zone D’dedir. Uygulamayla çağrılan araçlara ayrılmış alanlar: Uber için D1 ve D2, Rapido için D3 ve D4, Ola için D6 ve D7. Masadan ön ödemesi yapılan taksiler, varış noktasına göre sabit ücretle Carpark Zone E’den kalkar."
+    },
+    "kids": {
+      "title": "Bebek bakım odaları",
+      "hint": "Tabelaları takip edin",
+      "text": "Terminalin önemli bölgelerinde mahremiyet sunan, klimalı ve emzirme koltuklu bebek bakım odaları vardır. Tabelalar en yakın odayı gösterir; bilgi masaları da bulmanıza yardımcı olur."
+    },
+    "wifi": {
+      "title": "Ücretsiz Wi-Fi",
+      "hint": "4 saate kadar erişim",
+      "text": "Hyderabad Airport-Free-WiFi ağına bağlanın, ülke kodunu seçin, cep telefonu numaranızı girin, kullanım koşullarını kabul edin ve SMS-OTP alın; kod girildikten sonra 4 saate kadar erişim sağlanır. Alternatif olarak sanal bilgi ekranında pasaportunuzu taratıp gösterilen kupon kodunu kullanabilirsiniz. Dış hatlar gidiş alanında Wi-Fi Kiosk, 23B biniş kapısının yanındadır; dış hatlar geliş alanında 12 numaralı bant yakınında pasaportla kupon alınabilir."
+    }
+  }
+}

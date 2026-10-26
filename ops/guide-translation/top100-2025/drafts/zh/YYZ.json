@@ -1,0 +1,25 @@
+{
+  "iata": "YYZ",
+  "blocks": {
+    "transport": {
+      "title": "交通方式",
+      "hint": "UP Express：28分钟",
+      "text": "UP Express连接Pearson与多伦多市中心的Union Station，车程28分钟，每日每15分钟发车。成人单程票价12.35 $，使用PRESTO为9.25 $；未满12岁的儿童免费。车站位于1号航站楼，靠近Terminal Link。从3号航站楼出发，须先乘免费Terminal Link到1号航站楼，再按Train to City标志前往。列车和车站均提供免费Wi-Fi，列车上设有插座和行李架。"
+    },
+    "terminals": {
+      "title": "航站楼",
+      "hint": "免费Terminal Link",
+      "text": "免费Terminal Link全天24小时连接1号、3号航站楼及Viscount站，也可前往Sheraton Gateway Hotel、ALT Hotel、Value Park Garage和Value Park Lot停车场。站间车程为2至8分钟。使用不可折叠行动辅助器具的旅客也可乘车。"
+    },
+    "kids": {
+      "title": "携儿童出行",
+      "hint": "安检后的哺乳室及舱",
+      "text": "哺乳室和哺乳舱均位于安检后。Mamava舱内设有折叠桌、2张长椅、镜子、扶手及带USB的插座；开启舱门需要从Mamava应用或机场客服取得的代码。1号航站楼的舱位于D22、E80/E81和F59登机口附近，3号航站楼的位于C30/C31、B22及A12/A13附近。1号航站楼出发候机厅D24登机口附近设有儿童游乐区。"
+    },
+    "wifi": {
+      "title": "Wi‑Fi",
+      "hint": "机场免费Wi-Fi",
+      "text": "机场提供由Pearson及CIBC支持的免费Wi-Fi。选择Toronto Pearson Public Wi-Fi，打开欢迎页面，接受条款并点击Connect。如需帮助，可拨打1-866-207-1690或前往信息服务台。"
+    }
+  }
+}

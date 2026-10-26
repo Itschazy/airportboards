@@ -1,0 +1,418 @@
+[
+  {
+    "locale": "en",
+    "iata": "DOH",
+    "block": "taxi",
+    "field": "text",
+    "before": "at the left end of the arrivals hall",
+    "after": "on the left side of the arrivals hall"
+  },
+  {
+    "locale": "de",
+    "iata": "DOH",
+    "block": "taxi",
+    "field": "text",
+    "before": "am linken Ende der Ankunftshalle",
+    "after": "im linken Teil der Ankunftshalle"
+  },
+  {
+    "locale": "fr",
+    "iata": "DOH",
+    "block": "taxi",
+    "field": "text",
+    "before": "à l’extrémité gauche du hall des arrivées",
+    "after": "dans la partie gauche du hall des arrivées"
+  },
+  {
+    "locale": "es",
+    "iata": "DOH",
+    "block": "taxi",
+    "field": "text",
+    "before": "en el extremo izquierdo del vestíbulo de llegadas",
+    "after": "en la parte izquierda del vestíbulo de llegadas"
+  },
+  {
+    "locale": "it",
+    "iata": "DOH",
+    "block": "taxi",
+    "field": "text",
+    "before": "all’estremità sinistra della sala arrivi",
+    "after": "nella parte sinistra della sala arrivi"
+  },
+  {
+    "locale": "tr",
+    "iata": "DOH",
+    "block": "taxi",
+    "field": "text",
+    "before": "gelen yolcu salonunun sol ucundadır",
+    "after": "gelen yolcu salonunun sol tarafındadır"
+  },
+  {
+    "locale": "zh",
+    "iata": "DOH",
+    "block": "taxi",
+    "field": "text",
+    "before": "到达大厅左端",
+    "after": "到达大厅左侧"
+  },
+  {
+    "locale": "ja",
+    "iata": "DOH",
+    "block": "taxi",
+    "field": "text",
+    "before": "到着ホールの左端",
+    "after": "到着ホールの左側"
+  },
+  {
+    "locale": "ko",
+    "iata": "DOH",
+    "block": "taxi",
+    "field": "text",
+    "before": "도착 홀 왼쪽 끝",
+    "after": "도착 홀 왼쪽"
+  },
+  {
+    "locale": "ar",
+    "iata": "DOH",
+    "block": "taxi",
+    "field": "text",
+    "before": "في الطرف الأيسر من صالة الوصول",
+    "after": "في الجزء الأيسر من صالة الوصول"
+  },
+  {
+    "locale": "hi",
+    "iata": "DOH",
+    "block": "taxi",
+    "field": "text",
+    "before": "आगमन हॉल के बाएँ छोर",
+    "after": "आगमन हॉल के बाएँ हिस्से"
+  },
+  {
+    "locale": "fr",
+    "iata": "DOH",
+    "block": "taxi",
+    "field": "text",
+    "before": "Des berlines et minibus",
+    "after": "Des berlines et monospaces"
+  },
+  {
+    "locale": "tr",
+    "iata": "DOH",
+    "block": "taxi",
+    "field": "text",
+    "before": "Sedan ve minibüsler",
+    "after": "Sedan ve minivan araçlar"
+  },
+  {
+    "locale": "zh",
+    "iata": "DOH",
+    "block": "taxi",
+    "field": "text",
+    "before": "轿车及小型客车",
+    "after": "轿车及小型厢式客车"
+  },
+  {
+    "locale": "en",
+    "iata": "MUC",
+    "block": "transport",
+    "field": "text",
+    "before": "about every 40 minutes from 01:00 to 04:00",
+    "after": "every 40 minutes from approximately 01:00 to 04:00"
+  },
+  {
+    "locale": "fr",
+    "iata": "MUC",
+    "block": "transport",
+    "field": "text",
+    "before": "toutes les 40 minutes environ de 01:00 à 04:00",
+    "after": "toutes les 40 minutes, approximativement de 01:00 à 04:00"
+  },
+  {
+    "locale": "en",
+    "iata": "SFO",
+    "block": "storage",
+    "field": "title",
+    "before": "Left luggage",
+    "after": "Baggage storage"
+  },
+  {
+    "locale": "tr",
+    "iata": "SFO",
+    "block": "storage",
+    "field": "text",
+    "before": "Dianne Feinstein International Terminal G’nin Kat 3 bölümündeki",
+    "after": "Dianne Feinstein International Terminal G’de Kat 3’teki"
+  },
+  {
+    "locale": "tr",
+    "iata": "SFO",
+    "block": "parking",
+    "field": "text",
+    "before": "otopark binasının Kat 5 bölümündedir",
+    "after": "otopark binasında Kat 5’tedir"
+  },
+  {
+    "locale": "tr",
+    "iata": "MUC",
+    "block": "storage",
+    "field": "text",
+    "before": "Munich Airport Center’ın Kat 03 bölümündeki halka açık alandadır",
+    "after": "Munich Airport Center’da Kat 03’te, halka açık alandadır"
+  },
+  {
+    "locale": "tr",
+    "iata": "MUC",
+    "block": "kids",
+    "field": "text",
+    "before": "Munich Airport Center’ın Kat 03 bölümündeki oyun alanı",
+    "after": "Munich Airport Center’da Kat 03’teki oyun alanı"
+  },
+  {
+    "locale": "fr",
+    "iata": "DOH",
+    "block": "transport",
+    "field": "text",
+    "before": "La station de métro de l’aéroport Hamad International Airport",
+    "after": "La station de métro située à Hamad International Airport"
+  },
+  {
+    "locale": "es",
+    "iata": "DOH",
+    "block": "transport",
+    "field": "text",
+    "before": "La estación de metro del aeropuerto Hamad International Airport",
+    "after": "La estación de metro de Hamad International Airport"
+  },
+  {
+    "locale": "it",
+    "iata": "DOH",
+    "block": "transport",
+    "field": "text",
+    "before": "La stazione della metropolitana nell’aeroporto Hamad International Airport",
+    "after": "La stazione della metropolitana presso Hamad International Airport"
+  },
+  {
+    "locale": "zh",
+    "iata": "MUC",
+    "block": "storage",
+    "field": "hint",
+    "before": "Munich Airport Center",
+    "after": "MAC，03楼"
+  },
+  {
+    "locale": "ja",
+    "iata": "MUC",
+    "block": "storage",
+    "field": "hint",
+    "before": "Munich Airport Center",
+    "after": "MAC・レベル03"
+  },
+  {
+    "locale": "ko",
+    "iata": "MUC",
+    "block": "storage",
+    "field": "hint",
+    "before": "Munich Airport Center",
+    "after": "MAC 03층"
+  },
+  {
+    "locale": "ja",
+    "iata": "DOH",
+    "block": "taxi",
+    "field": "hint",
+    "before": "Karwa・Taxi Pavilion",
+    "after": "Karwaタクシー"
+  },
+  {
+    "locale": "ko",
+    "iata": "DOH",
+    "block": "taxi",
+    "field": "hint",
+    "before": "Karwa, Taxi Pavilion",
+    "after": "Karwa 택시"
+  },
+  {
+    "locale": "ar",
+    "iata": "SFO",
+    "block": "kids",
+    "field": "text",
+    "before": "تقع مناطق اللعب Kids’ Spots السبع، وعددها 7،",
+    "after": "تقع مناطق اللعب Kids’ Spots وعددها 7"
+  },
+  {
+    "locale": "ja",
+    "iata": "SFO",
+    "block": "taxi",
+    "field": "text",
+    "before": "San Francisco",
+    "after": "サンフランシスコ"
+  },
+  {
+    "locale": "ko",
+    "iata": "SFO",
+    "block": "taxi",
+    "field": "text",
+    "before": "San Francisco",
+    "after": "샌프란시스코"
+  },
+  {
+    "locale": "ar",
+    "iata": "SFO",
+    "block": "taxi",
+    "field": "text",
+    "before": "San Francisco",
+    "after": "سان فرانسيسكو"
+  },
+  {
+    "locale": "hi",
+    "iata": "SFO",
+    "block": "taxi",
+    "field": "text",
+    "before": "San Francisco",
+    "after": "सैन फ़्रांसिस्को"
+  },
+  {
+    "locale": "zh",
+    "iata": "DOH",
+    "block": "transport",
+    "field": "text",
+    "before": "车站设有空调及无障碍设施",
+    "after": "车站设有空调，行动不便的乘客也可使用"
+  },
+  {
+    "locale": "ja",
+    "iata": "DOH",
+    "block": "transport",
+    "field": "text",
+    "before": "駅には空調と移動に制約のある利用者向けの設備があり",
+    "after": "駅には空調があり、移動に制約のある利用者も利用でき"
+  },
+  {
+    "locale": "ar",
+    "iata": "MUC",
+    "block": "transport",
+    "field": "text",
+    "before": "كل 40 دقيقة تقريبًا من 01:00 إلى 04:00",
+    "after": "كل 40 دقيقة خلال الفترة من نحو 01:00 إلى 04:00"
+  },
+  {
+    "locale": "ar",
+    "iata": "MUC",
+    "block": "transport",
+    "field": "text",
+    "before": "يعمل S1 كل 20 دقيقة تقريبًا من 03:00 حتى منتصف الليل",
+    "after": "يعمل S1 كل 20 دقيقة من نحو 03:00 حتى منتصف الليل"
+  },
+  {
+    "locale": "ko",
+    "iata": "SFO",
+    "block": "taxi",
+    "field": "hint",
+    "before": "미터 요금, 출발 시 $6 추가",
+    "after": "미터제, 출발 요금 $6"
+  },
+  {
+    "locale": "ja",
+    "iata": "SFO",
+    "block": "parking",
+    "field": "text",
+    "before": "終日結び",
+    "after": "24時間結び"
+  },
+  {
+    "locale": "ja",
+    "iata": "MUC",
+    "block": "transport",
+    "field": "text",
+    "before": "終日運行",
+    "after": "24時間運行"
+  },
+  {
+    "locale": "ja",
+    "iata": "MUC",
+    "block": "kids",
+    "field": "text",
+    "before": "終日利用できます",
+    "after": "24時間利用できます"
+  },
+  {
+    "locale": "ko",
+    "iata": "SFO",
+    "block": "parking",
+    "field": "text",
+    "before": "하루 종일 연결하며",
+    "after": "24시간 연결하며"
+  },
+  {
+    "locale": "ko",
+    "iata": "MUC",
+    "block": "transport",
+    "field": "text",
+    "before": "하루 종일 운행",
+    "after": "24시간 운행"
+  },
+  {
+    "locale": "ko",
+    "iata": "MUC",
+    "block": "kids",
+    "field": "text",
+    "before": "하루 종일 개방됩니다",
+    "after": "24시간 개방됩니다"
+  },
+  {
+    "locale": "zh",
+    "iata": "SFO",
+    "block": "parking",
+    "field": "text",
+    "before": "全天连接",
+    "after": "24小时连接"
+  },
+  {
+    "locale": "zh",
+    "iata": "MUC",
+    "block": "transport",
+    "field": "text",
+    "before": "全天运营",
+    "after": "24小时运营"
+  },
+  {
+    "locale": "zh",
+    "iata": "MUC",
+    "block": "kids",
+    "field": "text",
+    "before": "全天开放",
+    "after": "24小时开放"
+  },
+  {
+    "locale": "zh",
+    "iata": "SFO",
+    "block": "storage",
+    "field": "text",
+    "before": "寄存服务仅由位于Dianne Feinstein International Terminal G的3楼的Airport Travel Agency提供",
+    "after": "行李寄存服务仅在Dianne Feinstein International Terminal G的3楼Airport Travel Agency提供"
+  },
+  {
+    "locale": "hi",
+    "iata": "SFO",
+    "block": "transport",
+    "field": "text",
+    "before": "BART स्टेशन से AirTrain में बदला जा सकता है",
+    "after": "BART स्टेशन पर AirTrain के लिए ट्रेन बदल सकते हैं"
+  },
+  {
+    "locale": "ar",
+    "iata": "MUC",
+    "block": "sleep",
+    "field": "text",
+    "before": "تبلغ تعرفة napcabs مقدار 17 EUR",
+    "after": "تبلغ تعرفة napcabs 17 EUR"
+  },
+  {
+    "locale": "ar",
+    "iata": "DOH",
+    "block": "transport",
+    "field": "text",
+    "before": "محطة المترو الموجودة في مطار Hamad International Airport",
+    "after": "محطة المترو الموجودة في Hamad International Airport"
+  }
+]

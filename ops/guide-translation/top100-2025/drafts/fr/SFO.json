@@ -1,0 +1,40 @@
+{
+  "iata": "SFO",
+  "blocks": {
+    "transport": {
+      "title": "Comment s'y rendre",
+      "hint": "BART et AirTrain",
+      "text": "La station BART se trouve dans le terminal international. Depuis cette station, vous pouvez prendre l’AirTrain, qui relie les terminaux des vols intérieurs et internationaux. Le centre de location de voitures est accessible par la ligne bleue de l’AirTrain."
+    },
+    "taxi": {
+      "title": "Taxi",
+      "hint": "Compteur, supplément de sortie 6 $",
+      "text": "Les stations de taxis se trouvent sur les îlots centraux de la chaussée, au niveau des arrivées et de la livraison des bagages de tous les terminaux. Des coordinateurs en uniforme sont présents de 07:00 à 02:00. Les courses sont facturées au compteur ; pour les courses au départ de SFO en taxi de San Francisco, un supplément de sortie de 6 $ est inclus dans le prix et ne s’applique pas aux courses vers l’aéroport. Des taxis accessibles aux personnes en fauteuil roulant sont disponibles ; ils peuvent être demandés au coordinateur ou au *1107 depuis un téléphone gratuit de l’aéroport."
+    },
+    "storage": {
+      "title": "Consigne à bagages",
+      "hint": "Airport Travel Agency, niveau 3",
+      "text": "La consigne est proposée uniquement par Airport Travel Agency, dans le Dianne Feinstein International Terminal G, au niveau 3. Elle accepte les bagages, les cages de transport pour chiens et les équipements sportifs, notamment les skis, vélos et canoës ; le prix dépend de la taille de l’objet."
+    },
+    "sleep": {
+      "title": "Où dormir",
+      "hint": "Grand Hyatt at SFO",
+      "text": "Le Grand Hyatt at SFO se trouve à l’entrée de l’aéroport. Il est accessible depuis tous les terminaux par l’AirTrain ou par la route."
+    },
+    "kids": {
+      "title": "Avec un enfant",
+      "hint": "7 aires après le contrôle",
+      "text": "Les 7 aires de jeux Kids’ Spots se trouvent après le contrôle de sûreté. Dans le Harvey Milk Terminal 1, elles sont près des portes B2 et B18 ; dans le terminal 2, près de D15 et D7. Dans le terminal 3, elles se trouvent près de F17 et E7, ainsi que dans l’espace de restauration près des portes F11–F22."
+    },
+    "parking": {
+      "title": "Parking",
+      "hint": "Long-Term : max. 27 $ par 24 h",
+      "text": "Long-Term Parking propose des places couvertes et à ciel ouvert ; le tarif est de 4 $ par 30 minutes, avec un maximum de 27 $ par 24 heures, taxes et frais compris. La ligne bleue de l’AirTrain relie le parking à tous les terminaux 24 heures sur 24 ; l’intervalle entre les départs peut être de 4 minutes. La station AirTrain se trouve au niveau 5 du parking couvert. Les tarifs peuvent changer."
+    },
+    "wifi": {
+      "title": "Wi‑Fi",
+      "hint": "Gratuit, #SFO FREE WIFI",
+      "text": "Le Wi-Fi est gratuit dans tous les terminaux. Pour vous connecter, sélectionnez le réseau #SFO FREE WIFI et ouvrez un navigateur ; l’utilisation du réseau vaut acceptation de ses conditions."
+    }
+  }
+}

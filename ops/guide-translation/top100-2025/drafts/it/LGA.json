@@ -1,0 +1,25 @@
+{
+  "iata": "LGA",
+  "blocks": {
+    "transport": {
+      "title": "Q70 LGA Link gratuito",
+      "hint": "Alla metro dai terminal B e C",
+      "text": "L’autobus gratuito Q70 LGA Link serve i terminal B e C e collega l’aeroporto agli interscambi della metropolitana Jackson Heights–Roosevelt Avenue e 74 St–Broadway. Gli autobus MTA sono accessibili in sedia a rotelle e dotati di rampe."
+    },
+    "taxi": {
+      "title": "Taxi",
+      "hint": "Senza prenotazione anticipata",
+      "text": "I taxi sono disponibili presso tutti i terminal senza prenotazione anticipata: un addetto indirizza i passeggeri in coda verso un’auto disponibile. La tariffa è calcolata in base a distanza e tempo, con un importo iniziale del tassametro di 3 USD; per il prelievo in aeroporto si applica anche un supplemento PANYNJ di 2 USD. I taxi accessibili in sedia a rotelle costano quanto quelli ordinari e si possono richiedere al +1 646 599 9999."
+    },
+    "terminals": {
+      "title": "All Terminals Shuttle",
+      "hint": "Gratuito 24 ore su 24",
+      "text": "All Terminals Shuttle è gratuito e collega tutti i terminal, fermandosi anche presso Economy Lot (Parking Lot 7), con pagamento anticipato, Hangar 7 South e 94th Street. Funziona 24 ore su 24: ogni 15 minuti nelle ore di punta e ogni 20 minuti negli altri orari."
+    },
+    "wifi": {
+      "title": "Wi-Fi gratuito",
+      "hint": "Rete _Free LGA WiFi",
+      "text": "Per collegarsi gratuitamente, scegliere _Free LGA WiFi. L’assistenza è disponibile 24 ore su 24 al +1 800 880 4117."
+    }
+  }
+}

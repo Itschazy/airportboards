@@ -1,0 +1,38 @@
+{
+  "iata": "DUB",
+  "checked": "2026-10-26",
+  "blocks": [
+    {
+      "id": "transport",
+      "title": "Автобусы в Дублин",
+      "hint": "Зоны посадки у терминалов",
+      "text": "Dublin Express отправляется из зон 1 и 21 к остановкам в центре Дублина, включая Temple Bar, Trinity College, O’Connell Street и станцию Heuston. Aircoach отправляется из зон 2 и 20 в Дублин, другие районы графства и Северную Ирландию. Маршруты Transport for Ireland обслуживаются из зон 11, 13 и 15.",
+      "source": "dublinairport.com",
+      "url": "https://www.dublinairport.com/to-from-the-airport/by-bus/dublin-buses"
+    },
+    {
+      "id": "taxi",
+      "title": "Такси",
+      "hint": "У обоих терминалов",
+      "text": "Такси доступны круглосуточно снаружи обоих терминалов; на стоянках работают диспетчеры. Стоимость определяется счётчиком с учётом расстояния, дня и времени поездки, а пассажир имеет право получить чек таксометра. Аэропорт указывает ориентир 30–45 EUR до центра Дублина.",
+      "source": "dublinairport.com",
+      "url": "https://www.dublinairport.com/to-from-the-airport/by-taxi"
+    },
+    {
+      "id": "storage",
+      "title": "Сервисы багажа",
+      "hint": "Smarte Carte",
+      "text": "Smarte Carte предлагает хранение и упаковку багажа, продажу дорожных принадлежностей и пересылку багажа. Пункты находятся в зале прилёта терминала 1 слева после главного входа и в зоне вылета терминала 2 у стойки регистрации American Airlines; часы работы офиса — ежедневно 05:00–21:00. Багажные тележки в обоих терминалах предоставляются бесплатно.",
+      "source": "dublinairport.com",
+      "url": "https://www.dublinairport.com/at-the-airport/facilities/luggage-facilities"
+    },
+    {
+      "id": "wifi",
+      "title": "Wi-Fi и печать",
+      "hint": "Без регистрации в сети",
+      "text": "Бесплатная сеть Dublin Airport Wi-Fi не требует регистрации: выберите её в настройках устройства и нажмите Connect во всплывающем окне. Печать доступна в Smarte Carte Baggage Services в зале прилёта терминала 1 с 06:00 до 19:00; стоимость — 10 EUR за объём до 20 страниц.",
+      "source": "dublinairport.com",
+      "url": "https://www.dublinairport.com/at-the-airport/facilities/wifi-printing-services"
+    }
+  ]
+}

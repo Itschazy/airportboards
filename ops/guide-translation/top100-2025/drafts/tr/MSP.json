@@ -1,0 +1,25 @@
+{
+  "iata": "MSP",
+  "blocks": {
+    "transport": {
+      "title": "METRO Blue Line",
+      "hint": "Şehre ve terminaller arasında",
+      "text": "METRO Blue Line her iki terminalde durur: Mall of America’ya yolculuk yaklaşık 12 dakika, Minneapolis merkezindeki Warehouse District’e ise yaklaşık 25 dakikadır. Tam güzergâh yaklaşık 05:00’ten gece yarısına kadar 15–20 dakika arayla çalışır; terminal istasyonları arasında günün her saati ücretsiz ve biletsiz yolculuk yapılabilir. Şehir otobüsü 54, Silver Ramp otoparkının Kat 1’indeki Transit Center’dan kalkar; terminal 2’de şehir otobüslerine biniş noktası yoktur."
+    },
+    "taxi": {
+      "title": "Taksi",
+      "hint": "Her iki terminalde duraklar",
+      "text": "Terminal 1’de Tram Level’dan (Kat T) tabelalar taksilere yönlendirir; terminal 2’de durak, terminalin karşısındaki Purple Ramp’ın zemin seviyesinde Ground Transport Center’dadır. Görevliler her gün 06:00–01:00 arasında taksi bulmaya yardımcı olur; diğer saatlerde de yolcular kendi başlarına taksiye binebilir. Havalimanı Minneapolis merkezine ortalama 39–49 USD, St. Paul merkezine 31–38 USD ücret belirtir. Taksimetredeki başlangıç tutarı 6,50 USD, 2,50 USD açılış ücreti ile 4 USD havalimanı ücretini içerir."
+    },
+    "sleep": {
+      "title": "Sessiz dinlenme alanları",
+      "hint": "Terminal 1’de kontrol sonrası",
+      "text": "Terminal 1’de güvenlik kontrolünden sonra Mezzanine seviyesinde Airport Mall manzaralı 2 sessiz dinlenme alanı vardır. E ve F salonlarının girişleri yakınındaki merdiven veya asansörle 1 seviye yukarı çıkılarak ulaşılır; alanlar okuma, dinlenme, meditasyon ve dua için uygundur."
+    },
+    "wifi": {
+      "title": "Ücretsiz Wi-Fi",
+      "hint": "4 saatlik oturumlar",
+      "text": "MSP Airport WiFi her iki terminalin halka açık tüm alanlarında kullanılabilir; ilk bağlantıda kullanım koşulları kabul edilmelidir. Ücretsiz oturum 4 saat sürer, ardından başka bir ücretsiz oturum başlatılabilir. Bu oturumların sayısı sınırlı değildir."
+    }
+  }
+}

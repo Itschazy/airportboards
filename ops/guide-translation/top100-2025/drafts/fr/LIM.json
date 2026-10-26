@@ -1,0 +1,25 @@
+{
+  "iata": "LIM",
+  "blocks": {
+    "taxi": {
+      "title": "Taxis",
+      "hint": "Comptoirs dans les zones d’arrivée",
+      "text": "Les comptoirs de taxis sont dans les zones des arrivées intérieures et internationales. Le personnel dirige le passager et le conducteur vers un parking réservé à cet effet dans l’aéroport ; l’un des numéros publiés du service est le +51 1 4844001."
+    },
+    "lounges": {
+      "title": "The Club LIM Internacional",
+      "hint": "Niveau 2, départs internationaux",
+      "text": "Le salon The Club LIM Internacional se trouve au niveau 2 dans la zone des départs internationaux. Il possède des espaces de repos, un bar, des douches et des salles de réunion. L’aéroport indique une ouverture quotidienne 24 heures sur 24."
+    },
+    "sleep": {
+      "title": "Sleepover",
+      "hint": "Niveau 2 de Perú Plaza",
+      "text": "Sleepover se trouve au niveau 2 de Perú Plaza, près de Starbucks et Dunkin Donuts, et est ouvert 24 heures sur 24. Il propose des douches, des capsules pour une courte sieste, des cabines avec lits superposés, un espace de travail partagé et des boissons incluses."
+    },
+    "wifi": {
+      "title": "Wi-Fi gratuit",
+      "hint": "Réseau .FreeWifiJorgeChavez",
+      "text": "On peut se connecter gratuitement au réseau .FreeWifiJorgeChavez sur un téléphone ou un ordinateur portable. Il faut accepter les conditions d’utilisation sur la page de connexion pour y accéder."
+    }
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "iata": "HAN",
+  "blocks": {
+    "terminals": {
+      "title": "Zwischen den Terminals",
+      "hint": "Kostenloser NIA Shuttle Bus",
+      "text": "Der kostenlose NIA Shuttle Bus verbindet das Inlandsterminal T1 mit dem internationalen Terminal T2. In T1 liegt der Einstieg in Flügel A auf Ebene 1."
+    },
+    "kids": {
+      "title": "Familienangebote",
+      "hint": "Kinderwagen und Babyräume",
+      "text": "Kostenlose Kinderwagen gibt es nach der Sicherheitskontrolle in Terminal T1 und Halle E auf Ebene 2 sowie in Terminal T2 auf den Ebenen 2 und 3. In T2 gibt es nach der Kontrolle auf Ebene 3 insgesamt 2 Babypflegeräume; Wickeltische sind auch in einigen Toiletten der Terminals vorhanden."
+    },
+    "wifi": {
+      "title": "Kostenloses WLAN",
+      "hint": "Wartebereiche T1 und T2",
+      "text": "Kostenloses WLAN steht in den Passagierwartebereichen der nationalen und internationalen Terminals zur Verfügung. @Airport Free Wifi - Goldsun wählen und auf der automatisch geöffneten Seite Connect to the Internet drücken. Im erweiterten Teil von T2 wird die Ausrüstung noch installiert."
+    }
+  }
+}

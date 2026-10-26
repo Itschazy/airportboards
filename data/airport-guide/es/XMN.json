@@ -1,0 +1,25 @@
+{
+  "iata": "XMN",
+  "blocks": {
+    "taxi": {
+      "title": "Taxis",
+      "hint": "Puerta 7 en T3, puerta 3 en T4",
+      "text": "Los taxis urbanos esperan en el nivel de llegadas, junto a la puerta automática 7 de T3 y la puerta 3 de T4. Para ir a Quanzhou, Shishi y Zhangzhou hay taxis específicos en el aparcamiento oeste, a unos 120 m al oeste de la salida del vestíbulo de llegadas nacionales de T3. El teléfono de reclamaciones, disponible las 24 horas, es el +86 592 5615610."
+    },
+    "storage": {
+      "title": "Consigna de equipaje",
+      "hint": "Vestíbulos de llegadas de T3 y T4",
+      "text": "Los mostradores de consigna están en los vestíbulos de llegadas de T3 y T4 y abren desde las 05:30 hasta que finalizan los vuelos de llegada. Se cobra por períodos de 24 horas; cualquier período inferior a 24 horas se cuenta como completo. Teléfonos: T3 — +86 592 5706036, T4 — +86 592 5706016."
+    },
+    "wifi": {
+      "title": "Wi-Fi en las terminales",
+      "hint": "Redes gratuitas y de pago",
+      "text": "En las zonas de pasajeros de las terminales están disponibles las redes CMCC-XMAirport-free, ChinaUnicom y Chinanet. El acceso de China Mobile y China Unicom es gratuito, y el de China Telecom es de pago; las condiciones de pago aparecen en la página de inicio de sesión del operador. El Wi-Fi funciona desde el inicio hasta el final de la actividad de vuelos."
+    },
+    "lounges": {
+      "title": "Salas para pasajeros prémium",
+      "hint": "Acceso según clase y vuelo",
+      "text": "La sala de vuelos nacionales de T4 está a la izquierda después del control de seguridad, siguiendo las señales, y atiende gratis a pasajeros de primera clase y clase ejecutiva de vuelos cuya asistencia en tierra presta el aeropuerto. Incluye descanso, comida e Internet; abre a las 06:00 y cierra después de embarcar el último pasajero de primera clase. La sala internacional del aeropuerto está en T3 junto a la puerta de embarque 17 y ofrece los mismos servicios a pasajeros de primera clase y clase ejecutiva de vuelos atendidos por el aeropuerto."
+    }
+  }
+}

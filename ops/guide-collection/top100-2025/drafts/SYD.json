@@ -1,0 +1,30 @@
+{
+  "iata": "SYD",
+  "checked": "2026-10-26",
+  "blocks": [
+    {
+      "id": "terminals",
+      "title": "Терминалы",
+      "hint": "Бесплатный автобус каждые 15 минут",
+      "text": "Между T1 International и внутренними терминалами T2 и T3 нельзя пройти пешком. Бесплатный Terminal Transfer Bus курсирует каждые 15 минут с 05:30 до 22:30; поездка занимает 10 минут. У T1 остановка находится на уровне прилёта снаружи зала Arrival Hall B, у T2 и T3 — снаружи каждого терминала на уровне прилёта.",
+      "source": "sydneyairport.com.au",
+      "url": "https://www.sydneyairport.com.au/parking-and-transport/arriving/international/get-to-your-next-flight"
+    },
+    {
+      "id": "kids",
+      "title": "С ребёнком",
+      "hint": "Игровые зоны T1",
+      "text": "В T1 International детская интерактивная зона с сенсорными экранами находится у выхода на посадку 10, игровая площадка McDonalds — у выхода 50, цифровая зона совместно с Museum of Applied Arts and Science — у выхода 53. Рядом с зонами выдачи багажа есть туалеты, родительские комнаты и места для кормления.",
+      "source": "sydneyairport.com.au",
+      "url": "https://www.sydneyairport.com.au/info-sheet/travelling-with-children"
+    },
+    {
+      "id": "wifi",
+      "title": "Wi‑Fi",
+      "hint": "Sydney Airport Free WiFi в T1",
+      "text": "Бесплатный Wi‑Fi доступен по всему T1 International. Нужно выбрать Sydney Airport Free WiFi, ответить на вопросы, прочитать условия и нажать Proceed. Затем показывается рекламное сообщение и открывается веб-сайт.",
+      "source": "sydneyairport.com.au",
+      "url": "https://www.sydneyairport.com.au/info-sheet/T1-facilities-and-services"
+    }
+  ]
+}

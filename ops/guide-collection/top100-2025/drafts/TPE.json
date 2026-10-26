@@ -1,0 +1,30 @@
+{
+  "iata": "TPE",
+  "checked": "2026-10-26",
+  "blocks": [
+    {
+      "id": "transport",
+      "title": "Как доехать",
+      "hint": "MRT у обоих терминалов",
+      "text": "Станции A12 Terminal 1 и A13 Terminal 2 обслуживают экспрессные и обычные поезда Taoyuan Airport MRT. Экспрессные и обычные поезда прибывают поочерёдно, примерно каждые 7,5 минуты. Автобусы отправляются из зоны B1 зала прилёта терминала 1 и с наружной галереи у восточной стороны зала прилёта на уровне 1 терминала 2.",
+      "source": "taoyuan-airport.com",
+      "url": "https://www.taoyuan-airport.com/transportation?lang=en"
+    },
+    {
+      "id": "storage",
+      "title": "Камера хранения",
+      "hint": "Pelican в общедоступной зоне",
+      "text": "Taiwan Pelican Express предоставляет хранение и доставку багажа в общедоступных зонах терминалов. Круглосуточные пункты есть на уровне 1 терминалов 1 и 2. В терминале 2 пункт на уровне 3 работает с 06:00 до 23:30; ещё один пункт на уровне 1 терминала 1 — с 09:00 до 17:00.",
+      "source": "taoyuan-airport.com",
+      "url": "https://www.taoyuan-airport.com/services_facilities/B68BD5D9-EE87-EC11-80F5-000C29A1B907"
+    },
+    {
+      "id": "wifi",
+      "title": "Wi‑Fi",
+      "hint": "Сеть Airport Free WiFi",
+      "text": "В общедоступных зонах терминалов аэропорт предоставляет бесплатный Wi‑Fi. Для подключения нужно выбрать сеть Airport Free WiFi в настройках устройства и открыть браузер.",
+      "source": "taoyuan-airport.com",
+      "url": "https://www.taoyuan-airport.com/wifi?lang=en"
+    }
+  ]
+}

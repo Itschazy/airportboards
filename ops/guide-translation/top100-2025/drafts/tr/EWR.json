@@ -1,0 +1,25 @@
+{
+  "iata": "EWR",
+  "blocks": {
+    "transport": {
+      "title": "Nasıl gidilir",
+      "hint": "AirTrain: NJ Transit ve Amtrak",
+      "text": "AirTrain, terminalleri NJ Transit ve Amtrak trenlerinin durduğu Newark Liberty International Airport Train Station’a bağlar. Henüz NJ Transit veya Amtrak bileti yoksa tren istasyonundan geçiş içeren AirTrain yolculuğu tek yön 8,75 USD’dir. PATH’e aktarma yapılırsa onun ücreti ayrıca ödenir."
+    },
+    "taxi": {
+      "title": "Taksi",
+      "hint": "Tüm terminallerde resmî duraklar",
+      "text": "Tüm terminallerde rezervasyonsuz taksi bulunur; üniformalı görevli yolcuları boş bir araca yönlendirir. Terminal A’da durak Kat 1’de 5 numaralı kapıda, terminal B’de Kat 2’de 8 numaralı kapıda ve Kat 1’de 2 numaralı kapıda, terminal C’de Kat 1’de 6 numaralı kapıdadır. Normal taksi en fazla 4, minivan en fazla 5 yolcu alır; aynı yere giden tüm yolcular için tek ücret uygulanır. El bagajı dâhil her parça bagaj için 1 USD alınır."
+    },
+    "terminals": {
+      "title": "Terminaller",
+      "hint": "AirTrain ve terminal A bağlantısı",
+      "text": "AirTrain ile terminaller, otoparklar, araç kiralama ve otel servis durakları arasındaki yolculuklar ücretsizdir. AirTrain doğrudan terminal A’ya ulaşmaz: kapalı geçitten yaklaşık 15 dakika yürümek veya servisle yaklaşık 5 dakika gitmek gerekir. ABD Doğu Saati ile 23:00–05:00 arasında AirTrain, B ve C terminallerine 15 dakikada bir gelir; terminal A’ya ek bağlantıyı servis sağlar. İnşaat sırasında AirTrain seferleri geçici olarak durabilir; bu durumda otobüsler sağlanır."
+    },
+    "wifi": {
+      "title": "Wi‑Fi",
+      "hint": "_Free EWR WiFi ağı",
+      "text": "Havalimanında ücretsiz Wi-Fi vardır: _Free EWR WiFi ağını seçin. Teknik destek +1 (800) 880-4117 numarasında günün her saati verilir."
+    }
+  }
+}

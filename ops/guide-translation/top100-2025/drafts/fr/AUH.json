@@ -1,0 +1,25 @@
+{
+  "iata": "AUH",
+  "blocks": {
+    "transport": {
+      "title": "Bus urbains",
+      "hint": "Carte Hafilat obligatoire",
+      "text": "Les arrêts des bus urbains se trouvent à l’extérieur de la zone des arrivées ; les lignes de la série A circulent 24 heures sur 24. A1 dessert Al Zahiyah, A2 Khalifa Street, A10 MBZ City Bus Station et A40 Al Shahama Bus Station. Une carte Hafilat est nécessaire pour voyager ; elle peut être achetée et rechargée aux automates près des arrêts de l’aéroport. Les espèces ne sont pas acceptées à bord."
+    },
+    "storage": {
+      "title": "Consigne à bagages",
+      "hint": "Ouverte 24 heures sur 24",
+      "text": "La garde d’un bagage coûte 35 AED jusqu’à 3 heures, 55 AED jusqu’à 12 heures, 75 AED jusqu’à 24 heures, 105 AED jusqu’à 48 heures et 140 AED jusqu’à 72 heures. Au-delà de 72 heures, 25 AED s’ajoutent aux 140 AED déjà facturés pour chaque jour supplémentaire ; toute période entamée est facturée en entier. La consigne est ouverte 24 heures sur 24 ; l’aéroport invite à vérifier les conditions précises au comptoir."
+    },
+    "kids": {
+      "title": "Services aux familles",
+      "hint": "Poussettes et salles pour les bébés",
+      "text": "Des poussettes gratuites sont disponibles dans la zone des départs, de l’enregistrement à l’embarquement, et du côté de la sortie des arrivées. Des salles pour changer les couches des bébés et les nourrir sont prévues dans toutes les zones de l’aéroport et offrent de l’intimité et des sièges. L’espace calme Sensory Space se trouve près de la porte d’embarquement D43."
+    },
+    "wifi": {
+      "title": "Wi-Fi gratuit",
+      "hint": "Sans limite de temps",
+      "text": "Un Wi-Fi gratuit sans limite de temps est disponible dans l’aéroport. Sélectionnez le réseau Zayed International Airport Free Wifi et appuyez sur Connect dans la fenêtre d’accueil ; l’accès complet à Internet s’ouvre après la redirection vers le site de l’aéroport."
+    }
+  }
+}

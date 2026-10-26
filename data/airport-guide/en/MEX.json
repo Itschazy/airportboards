@@ -1,0 +1,20 @@
+{
+  "iata": "MEX",
+  "blocks": {
+    "transport": {
+      "title": "Getting there",
+      "hint": "Metrobús from both terminals",
+      "text": "Metrobús connects the airport with central Mexico City. Boarding is at door 7 of Terminal 1 and door 2 of Terminal 2. Payment is by Metrobús card, which can be bought and topped up at machines in the boarding and drop-off areas of both terminals. Services run from 04:30 to midnight Monday to Saturday, and from 05:00 to midnight on Sundays and public holidays."
+    },
+    "terminals": {
+      "title": "Terminals",
+      "hint": "Free Aerotrén, 05:00–23:00",
+      "text": "The free Aerotrén carries passengers between Terminals 1 and 2 daily from 05:00 to 23:00. A boarding pass must be presented to travel. Dogs are allowed only in cages and in empty carriages; eating, drinking and smoking are prohibited on the train."
+    },
+    "storage": {
+      "title": "Left luggage",
+      "hint": "Round-the-clock storage in T1/T2",
+      "text": "In Terminal 1, MEXICANA DE LOCKERS offers round-the-clock luggage storage on the ground level, unit E-41. In Terminal 2, VIAJES KOKAI locations in units ALL45 and ALL46 are available round the clock on the ground level."
+    }
+  }
+}

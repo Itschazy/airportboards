@@ -1,0 +1,25 @@
+{
+  "iata": "YYZ",
+  "blocks": {
+    "transport": {
+      "title": "Comment s'y rendre",
+      "hint": "UP Express : 28 minutes",
+      "text": "UP Express relie Pearson à Union Station, au centre de Toronto, en 28 minutes, avec un départ toutes les 15 minutes chaque jour. L’aller simple adulte coûte 12,35 $, ou 9,25 $ avec PRESTO ; les enfants de moins de 12 ans voyagent gratuitement. La gare est dans le terminal 1, près de Terminal Link : depuis le terminal 3, prendre d’abord Terminal Link gratuitement jusqu’au terminal 1, puis suivre les panneaux Train to City. Le Wi-Fi est gratuit dans le train et à la gare ; le train dispose aussi de prises et de porte-bagages."
+    },
+    "terminals": {
+      "title": "Terminaux",
+      "hint": "Terminal Link gratuit",
+      "text": "Terminal Link circule gratuitement 24 heures sur 24 entre les terminaux 1 et 3 et la station Viscount. Il dessert aussi Sheraton Gateway Hotel, ALT Hotel, Value Park Garage et Value Park Lot. Le trajet entre les stations dure de 2 à 8 minutes. Le train est accessible aux voyageurs utilisant des aides à la mobilité non pliables."
+    },
+    "kids": {
+      "title": "Avec un enfant",
+      "hint": "Allaitement après le contrôle",
+      "text": "Les salles et cabines d’allaitement sont après le contrôle de sûreté. Les cabines Mamava disposent d’une tablette rabattable, de 2 banquettes, d’un miroir, de barres d’appui et d’une prise avec USB ; un code obtenu dans l’application Mamava ou auprès du service d’assistance de l’aéroport est nécessaire pour les ouvrir. Dans le terminal 1, les cabines sont près des portes D22, E80/E81 et F59 ; dans le terminal 3, près de C30/C31, B22 et A12/A13. Une aire de jeux est dans le hall des départs du terminal 1 près de la porte D24."
+    },
+    "wifi": {
+      "title": "Wi‑Fi",
+      "hint": "Toronto Pearson Public Wi-Fi",
+      "text": "Pearson et CIBC fournissent le Wi-Fi gratuit. Sélectionner Toronto Pearson Public Wi-Fi, ouvrir la page d’accueil, accepter les conditions et appuyer sur Connect. Une assistance est disponible au 1-866-207-1690 ou à un comptoir d’information."
+    }
+  }
+}

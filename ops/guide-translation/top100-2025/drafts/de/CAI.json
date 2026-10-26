@@ -1,0 +1,25 @@
+{
+  "iata": "CAI",
+  "blocks": {
+    "transport": {
+      "title": "Busse ab dem Flughafen",
+      "hint": "Station vor Terminal 1",
+      "text": "Stadtbusse zu Zielen in Kairo und Überlandbusse fahren ausschliesslich vom Busbahnhof auf dem Parkplatz vor Terminal 1 ab. Von dort gibt es Abfahrten der Anbieter West Delta, Upper Egypt, East Delta und Super Jet."
+    },
+    "terminals": {
+      "title": "Automated People Mover",
+      "hint": "Kostenloser Flughafenzug",
+      "text": "Der kostenlose Automated People Mover verbindet Terminal 1, Air Mall, den Parkplatz, Terminal 2 und Terminal 3; die gesamte Fahrt dauert höchstens 5 Minuten. Der Zug ist sowohl für Transitpassagiere als auch für Besucher des öffentlichen Flughafenbereichs gedacht; er verkehrt 18 Stunden täglich, weitere 6 Stunden sind für Wartung vorgesehen."
+    },
+    "lounges": {
+      "title": "Ahlan VIP",
+      "hint": "Lounge und Begleitservice",
+      "text": "Ahlan VIP umfasst einen Begleitservice und einen Loungeaufenthalt von bis zu 3 Stunden; die Buchung muss mindestens 48 Stunden vor dem Flug erfolgen. Der VIP-Preis beträgt 220 USD für ausländische Reisende und 3.600 EGP für ägyptische Staatsangehörige. Bei Anschlussflügen verdoppelt sich der Preis; Buchungen werden bei mindestens 4 Stunden zwischen den Flügen angenommen. Für zwei Kinder unter 6 Jahren ist der Service kostenlos, ein drittes Kind unter 6 Jahren zählt als eigener Passagier."
+    },
+    "wifi": {
+      "title": "Kostenloses WLAN",
+      "hint": "Service von Orange Egypt",
+      "text": "Orange Egypt stellt ankommenden und abfliegenden Passagieren am Flughafen Kairo kostenloses WLAN bereit. Der Anbieter stellt ausserdem kostenlose Ladestationen für Telefone und andere elektronische Geräte zur Verfügung."
+    }
+  }
+}

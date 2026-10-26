@@ -1,0 +1,25 @@
+{
+  "iata": "LGA",
+  "blocks": {
+    "transport": {
+      "title": "Kostenloser Q70 LGA Link",
+      "hint": "Zur U-Bahn ab Terminal B und C",
+      "text": "Der kostenlose Bus Q70 LGA Link bedient die Terminals B und C und verbindet den Flughafen mit den U-Bahn-Umsteigepunkten Jackson Heights–Roosevelt Avenue und 74 St–Broadway. MTA-Busse sind rollstuhlgerecht und mit Rampen ausgestattet."
+    },
+    "taxi": {
+      "title": "Taxi",
+      "hint": "Ohne Vorbestellung",
+      "text": "Taxis stehen an allen Terminals ohne Vorbestellung bereit: Ein Disponent weist Fahrgästen aus der Warteschlange ein verfügbares Auto zu. Der Fahrpreis richtet sich nach Entfernung und Zeit, der Taxameter startet bei 3 USD; bei Abholung am Flughafen fällt zusätzlich eine PANYNJ-Gebühr von 2 USD an. Rollstuhlgerechte Taxis kosten genauso viel wie reguläre und können unter +1 646 599 9999 angefordert werden."
+    },
+    "terminals": {
+      "title": "All Terminals Shuttle",
+      "hint": "Kostenlos rund um die Uhr",
+      "text": "Der kostenlose All Terminals Shuttle fährt zwischen allen Terminals und hält auch am im Voraus bezahlten Economy Lot (Parking Lot 7), an Hangar 7 South und an 94th Street. Er fährt rund um die Uhr, zu Stoßzeiten alle 15 Minuten und sonst alle 20 Minuten."
+    },
+    "wifi": {
+      "title": "Kostenloses WLAN",
+      "hint": "Netz _Free LGA WiFi",
+      "text": "Für kostenlosen Zugang das Netz _Free LGA WiFi wählen. Der Support ist rund um die Uhr unter +1 800 880 4117 erreichbar."
+    }
+  }
+}

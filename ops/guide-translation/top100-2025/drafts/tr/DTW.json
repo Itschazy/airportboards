@@ -1,0 +1,15 @@
+{
+  "iata": "DTW",
+  "blocks": {
+    "transport": {
+      "title": "FAST Michigan 261",
+      "hint": "Detroit merkezine",
+      "text": "FAST Michigan 261, havalimanının Evans ve McNamara terminallerine, Dearborn, Inkster, Corktown ve Detroit merkezine hizmet verir. FAST otobüsleri geç akşam saatleri ve hafta sonları dahil her gün çalışır; yoğun saatlerde sefer aralığı yaklaşık 15–20 dakikadır. Biniş ve iniş yalnızca işaretli FAST duraklarında yapılır; otobüslerde Wi-Fi vardır."
+    },
+    "sleep": {
+      "title": "McNamara’da The Westin",
+      "hint": "Terminalin içinde otel",
+      "text": "The Westin Detroit Metropolitan Airport, McNamara terminalinin içindedir. Otelde kapalı havuz, fitness merkezi ve restoranlar vardır; giriş 15:00’ten itibaren, çıkış 12:00’ye kadardır. Giriş işlemi için asgari yaş 21’dir."
+    }
+  }
+}

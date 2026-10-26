@@ -1,0 +1,25 @@
+{
+  "iata": "ATL",
+  "blocks": {
+    "transport": {
+      "title": "가는 방법",
+      "hint": "Red·Gold 노선",
+      "text": "MARTA Airport Station은 Domestic Terminal의 North와 South 수하물 수취 구역 사이에 있습니다. Red와 Gold 노선이 공항을 운행합니다. 20:30 이후 공항에서 Buckhead, Medical Center, Dunwoody, Sandy Springs, North Springs역으로 가려면 Lindbergh Center역에서 Red Line으로 갈아타야 할 수 있습니다."
+    },
+    "terminals": {
+      "title": "터미널",
+      "hint": "무료 셔틀 24시간 운행",
+      "text": "International Terminal 도착 층에서 Domestic Terminal 수하물 수취 구역으로 무료 셔틀이 운행됩니다. 24시간 운행하며 터미널 간 소요 시간은 15분입니다. Domestic Terminal의 정류장은 수하물 수취 구역 밖에 있습니다."
+    },
+    "lounges": {
+      "title": "비즈니스 라운지",
+      "hint": "The Club ATL",
+      "text": "The Club ATL은 보안검색 후 Concourse F의 Mezzanine 층에 있으며 매일 06:00–22:00에 운영합니다. Club Pass 입장료는 50 USD이며, 이용 자격이 있는 Priority Pass와 LoungeKey 프로그램으로도 입장할 수 있습니다. Club Pass 소지자는 예정 출발 시각 3시간 전부터, Priority Pass와 LoungeKey 회원은 2.5시간 전부터 입장할 수 있습니다. 2세 미만은 무료이고 2세부터는 별도 패스가 필요하며, 17세 이하는 18세 이상 성인과 동반해야 합니다."
+    },
+    "sleep": {
+      "title": "잠잘 곳",
+      "hint": "Minute Suites",
+      "text": "Minute Suites는 TSA 보안검색 후 구역에 있습니다. 위치는 Concourse B의 B24번 게이트 근처, Concourse E의 아트리움 및 에스컬레이터 근처, Concourse F의 F6번 게이트 근처입니다. 객실에는 인출식 침상이 있는 소파베드, Smart TV, 무료 Wi-Fi, 작업대, 충전 단자가 있습니다. 베개와 담요는 요청 시 제공됩니다. 예약은 1시간부터 가능하며 샤워실은 Concourse E에만 있습니다."
+    }
+  }
+}

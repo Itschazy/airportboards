@@ -1,0 +1,20 @@
+{
+  "iata": "SYD",
+  "blocks": {
+    "terminals": {
+      "title": "Terminals",
+      "hint": "Kostenloser Bus alle 15 Minuten",
+      "text": "Zwischen T1 International und den Inlandsterminals T2 und T3 kann man nicht zu Fuß gehen. Der kostenlose Terminal Transfer Bus fährt von 05:30 bis 22:30 alle 15 Minuten; die Fahrt dauert 10 Minuten. An T1 liegt die Haltestelle auf der Ankunftsebene außerhalb von Arrival Hall B, an T2 und T3 jeweils außerhalb des Terminals auf der Ankunftsebene."
+    },
+    "kids": {
+      "title": "Mit Kind",
+      "hint": "Spielbereiche in T1",
+      "text": "In T1 International liegt ein interaktiver Kinderbereich mit Touchscreens bei Gate 10, der McDonalds-Spielplatz bei Gate 50 und ein gemeinsam mit dem Museum of Applied Arts and Science gestalteter Digitalbereich bei Gate 53. Toiletten, Elternräume und Bereiche zum Füttern befinden sich bei der Gepäckausgabe."
+    },
+    "wifi": {
+      "title": "Wi‑Fi",
+      "hint": "Sydney Airport Free WiFi in T1",
+      "text": "Kostenloses WLAN ist in ganz T1 International verfügbar. Sydney Airport Free WiFi wählen, die Fragen beantworten, die Bedingungen lesen und Proceed drücken. Danach wird eine Werbemitteilung gezeigt und eine Website geöffnet."
+    }
+  }
+}

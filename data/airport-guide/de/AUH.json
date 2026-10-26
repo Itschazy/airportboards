@@ -1,0 +1,25 @@
+{
+  "iata": "AUH",
+  "blocks": {
+    "transport": {
+      "title": "Stadtbusse",
+      "hint": "Hafilat-Karte erforderlich",
+      "text": "Die Haltestellen der Stadtbusse liegen ausserhalb des Ankunftsbereichs; die Linien der Reihe A verkehren rund um die Uhr. A1 fährt nach Al Zahiyah, A2 zur Khalifa Street, A10 zur MBZ City Bus Station und A40 zur Al Shahama Bus Station. Für die Fahrt ist eine Hafilat-Karte erforderlich, die an Automaten bei den Flughafenhaltestellen gekauft und aufgeladen werden kann. Im Bus wird kein Bargeld angenommen."
+    },
+    "storage": {
+      "title": "Gepäckaufbewahrung",
+      "hint": "Rund um die Uhr geöffnet",
+      "text": "Die Aufbewahrung eines Gepäckstücks kostet 35 AED für bis zu 3 Stunden, 55 AED für bis zu 12 Stunden, 75 AED für bis zu 24 Stunden, 105 AED für bis zu 48 Stunden und 140 AED für bis zu 72 Stunden. Nach 72 Stunden kommen zu den bereits berechneten 140 AED für jeden weiteren Tag 25 AED hinzu; angefangene Zeiträume werden voll berechnet. Die Gepäckaufbewahrung ist rund um die Uhr geöffnet; die genauen Bedingungen sollen laut Flughafen am Schalter erfragt werden."
+    },
+    "kids": {
+      "title": "Services für Familien",
+      "hint": "Kinderwagen und Babyräume",
+      "text": "Kostenlose Kinderwagen stehen im Abflugbereich vom Check-in bis zum Boarding und auf der Seite des Ankunftsausgangs zur Verfügung. Räume zum Wickeln und Füttern gibt es in allen Flughafenbereichen; sie bieten Privatsphäre und Sitzplätze. Der ruhige Sensory Space befindet sich beim Gate D43."
+    },
+    "wifi": {
+      "title": "Kostenloses WLAN",
+      "hint": "Ohne Zeitlimit",
+      "text": "Auf dem Flughafengelände steht kostenloses WLAN ohne Zeitlimit zur Verfügung. Wählen Sie das Netzwerk Zayed International Airport Free Wifi und klicken Sie im Begrüssungsfenster auf Connect; nach der Weiterleitung zur Flughafenwebsite ist der volle Internetzugang verfügbar."
+    }
+  }
+}

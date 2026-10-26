@@ -1,0 +1,14 @@
+{
+  "iata": "ATH",
+  "checked": "2026-10-26",
+  "blocks": [
+    {
+      "id": "sleep",
+      "title": "Sofitel Athens Airport",
+      "hint": "В 2 минутах пешком от аэропорта",
+      "text": "Отель Sofitel Athens Airport находится в 2 минутах пешком от международного аэропорта Афин. В отеле есть крытый бассейн, фитнес-центр, ресторан, бар и Wi-Fi; заезд начинается в 13:00, выезд — до 11:00.",
+      "source": "all.accor.com",
+      "url": "https://all.accor.com/hotel/3167/index.en.shtml"
+    }
+  ]
+}

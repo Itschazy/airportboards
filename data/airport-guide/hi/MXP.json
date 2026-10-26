@@ -1,0 +1,15 @@
+{
+  "iata": "MXP",
+  "blocks": {
+    "transport": {
+      "title": "Malpensa Express",
+      "hint": "Centrale तक लगभग 51 मिनट",
+      "text": "Malpensa Express ट्रेन टर्मिनल 1 को Milano Centrale से बिना ट्रेन बदले लगभग 51 मिनट में जोड़ती है। एकतरफ़ा टिकट 15 EUR का है; इसे trenord.it, Trenord ऐप, टिकट मशीनों और अधिकृत विक्रेताओं से खरीद सकते हैं।"
+    },
+    "sleep": {
+      "title": "Sheraton Milan Malpensa",
+      "hint": "टर्मिनल 1 तक सीधा प्रवेश",
+      "text": "Sheraton Milan Malpensa Airport Hotel & Conference Centre से टर्मिनल 1 तक सीधा प्रवेश है। होटल में इनडोर पूल, फ़िटनेस सेंटर, स्पा और रेस्तराँ हैं; सुइट श्रेणी के कमरे ध्वनिरोधी हैं।"
+    }
+  }
+}

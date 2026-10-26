@@ -1,0 +1,30 @@
+{
+  "iata": "MEL",
+  "blocks": {
+    "transport": {
+      "title": "Busse in die Stadt",
+      "hint": "SkyBus und öffentliche Busse",
+      "text": "SkyBus Melbourne City Express verbindet den Flughafen täglich von 04:00 bis 01:00 mit dem Bahnhof Southern Cross; Haltestellen befinden sich an den Terminals 1, 3 und 4. Tickets gibt es online und an Automaten bei den Haltestellen; Barzahlung ist bei Prosegur und Smart Carte in der Ankunftshalle von Terminal 2 möglich. Öffentliche PTV-Busse fahren vom Verkehrsknotenpunkt für den Landverkehr an Terminal 4 ab."
+    },
+    "storage": {
+      "title": "Gepäckaufbewahrung",
+      "hint": "Terminals 2 und 4",
+      "text": "Automatische Schließfächer befinden sich im ebenerdigen Bereich des Parkplatzes von Terminal 4 unter den Rolltreppen. Smartecarte im Erdgeschoss der Ankunftshalle von Terminal 2 ist täglich von 06:00 bis Mitternacht geöffnet und bietet auch Drucken und Faxversand."
+    },
+    "sleep": {
+      "title": "Hotels bei den Terminals",
+      "hint": "Fußwege und Transfers",
+      "text": "PARKROYAL Melbourne Airport ist über erhöhte Fußgängerbrücken mit den nationalen und internationalen Terminals verbunden. Holiday Inn Melbourne Airport liegt 400 m von den Terminals entfernt und bietet seinen Gästen auf Anfrage einen kostenlosen Bus zum Terminal und zurück."
+    },
+    "kids": {
+      "title": "Elternräume",
+      "hint": "In allen Terminals",
+      "text": "Wickelmöglichkeiten gibt es in allen Terminals. In Terminal 2 liegen sie vor der Sicherheitskontrolle auf Ebene 1 bei den Check-in-Bereichen M und F sowie nach der Kontrolle auf Ebene 1 hinter Duty Free und gegenüber den Gates 3 und 16. Der Raum im Erdgeschoss der Ankunftshalle von Terminal 2 liegt gegenüber der Gepäckaufbewahrung Smartcarte."
+    },
+    "wifi": {
+      "title": "Kostenloses WLAN",
+      "hint": "Terminals 2, 3 und 4",
+      "text": "Das kostenlose Netz Airport Free Wi-Fi ist in den Terminals 2, 3 und 4 einschließlich öffentlicher Bereiche und Wartehallen verfügbar. In Terminal 1, das Qantas betreibt, steht dieses Netz nicht zur Verfügung. Die kostenlose Verbindung ist unverschlüsselt."
+    }
+  }
+}

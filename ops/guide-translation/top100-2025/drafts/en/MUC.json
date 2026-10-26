@@ -1,0 +1,30 @@
+{
+  "iata": "MUC",
+  "blocks": {
+    "transport": {
+      "title": "Getting there",
+      "hint": "S1, S8 and Lufthansa Express Bus",
+      "text": "The S1 and S8 S-Bahn lines connect the airport to central Munich; the journey to the main railway station takes about 40 minutes. S8 runs round the clock: every 40 minutes from approximately 01:00 to 04:00 and every 20 minutes at other times. S1 runs every 20 minutes from about 03:00 to midnight, with round-the-clock service on weekends and holidays. Lufthansa Express Bus between the airport and the main railway station via Munich North (Schwabing) leaves every 20 minutes; the journey between the station and the airport takes 45 minutes."
+    },
+    "storage": {
+      "title": "Left luggage",
+      "hint": "Munich Airport Center, Level 03",
+      "text": "Left luggage is in the public area of Munich Airport Center on Level 03. It is open daily from 05:00 to 23:30; telephone +49 89 975 214 75."
+    },
+    "sleep": {
+      "title": "Where to sleep",
+      "hint": "napcabs and napcabsXL",
+      "text": "napcabs pods are available after security in Terminal 2 and in the public area, with a separate workspace and free internet inside. napcabsXL with a queen-size bed for two, a table and an armchair are in Terminal 2 near gate G06. napcabs cost EUR 17 per hour from 06:00 to 22:00 and EUR 12 per hour from 22:00 to 06:00, with a minimum charge of EUR 34. The corresponding napcabsXL rates are EUR 24.50 and EUR 18 per hour, with a minimum charge of EUR 49."
+    },
+    "kids": {
+      "title": "With children",
+      "hint": "Play areas, MAC Level 03",
+      "text": "Play areas are available in public and restricted-access areas. The play area in Munich Airport Center on Level 03 is in the public area and open round the clock. The airport asks parents and accompanying adults to supervise children while they play and accompany them when they leave the play area."
+    },
+    "wifi": {
+      "title": "Wi‑Fi",
+      "hint": "Free Wifi – Munich Airport",
+      "text": "The airport offers free Wi-Fi through the Free Wifi – Munich Airport network. Access requires an email address and acceptance of the terms of use."
+    }
+  }
+}

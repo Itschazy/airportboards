@@ -1,0 +1,147 @@
+heading ChatGPT сказал:, Value: 4
+									196 text ChatGPT сказал:
+								197 container
+									198 text Проверены  все  6  пар  RU  →  DE  без  поиска  в  интернете.  Обязательных  смысловых  ошибок  не  обнаружено. Числа,  валюты,  возрастные  ограничения,  условия  доступа  и  оплаты,  время  работы  и  названия  сохранены  корректно.
+								199 heading Обязательные исправления, Value: 2
+									200 text Обязательные  исправления
+								201 container
+									202 text Нет.  Все  шесть  переводов  передают  факты  оригинала  без  выявленных  искажений.
+								203 heading Факультативные исправления, Value: 2
+									204 text Факультативные  исправления
+								205 container
+									206 text 1.  STN  /  lounges  —  орфография  немецкого  языка
+								207 container
+									208 text Было:  planmässigen ,  Heissgetränke ,  ausschliesslich
+								209 container
+									210 text Предлагается:  planmäßigen ,  Heißgetränke ,  ausschließlich
+								211 container
+									212 text Причина:  в  стандартной  орфографии  Германии  и  Австрии  используется  ß .  Исходные  варианты  корректны  в  швейцарском  немецком.  Если  локаль  проекта  de-DE ,  желательно  унифицировать.
+								213 container
+									214 text 2.  SZX  /  sleep  —  орфография
+								215 container
+									216 text Было:  ausserdem
+								217 container
+									218 text Предлагается:  außerdem
+								219 container
+									220 text Причина:  аналогично  предыдущему  пункту.  Для  de-CH исправление  не  требуется.
+								221 container
+									222 text 3.  SZX  /  sleep  —  естественность  обозначения  расположения
+								223 container
+									224 text Было:  liegt  im  Gebiet  Fuyong
+								225 container
+									226 text Предлагается:  liegt  im  Stadtteil  Fuyong
+								227 container
+									228 text Причина:  im  Gebiet понятно,  но  звучит  несколько  неопределённо.  im  Stadtteil естественнее,  если  Fuyong  действительно  обозначает  соответствующий  городской  район.  Без  такого  подтверждения  исходную  формулировку  можно  оставить.
+								229 container
+									230 text 4.  SHA  /  storage  —  естественность  формулировки
+								231 container
+									232 text Было:  maßgeblich  sind  die  tatsächlichen  Betriebszeiten  vor  Ort
+								233 container
+									234 text Предлагается:  die  tatsächlichen  Öffnungszeiten  vor  Ort  sind  maßgeblich
+								235 container
+									236 text Причина:  для  камеры  хранения  Öffnungszeiten звучит  естественнее,  чем  Betriebszeiten .  Смысл  полностью  совпадает.
+								237 heading Итог по аэропортам, Value: 2
+									238 text Итог  по  аэропортам
+								239 table
+									240 row
+										241 cell
+											242 text Аэропорт
+										243 cell
+											244 text Блок
+										245 cell
+											246 text Обязательные
+										247 cell
+											248 text Факультативные
+									249 row
+										250 cell
+											251 text ATL
+										252 cell
+											253 text lounges
+										254 cell
+											255 text 0
+										256 cell
+											257 text 0
+									258 row
+										259 cell
+											260 text SHA
+										261 cell
+											262 text storage
+										263 cell
+											264 text 0
+										265 cell
+											266 text 1
+									267 row
+										268 cell
+											269 text STN
+										270 cell
+											271 text lounges
+										272 cell
+											273 text 0
+										274 cell
+											275 text 1
+									276 row
+										277 cell
+											278 text CAI
+										279 cell
+											280 text lounges
+										281 cell
+											282 text 0
+										283 cell
+											284 text 0
+									285 row
+										286 cell
+											287 text AUH
+										288 cell
+											289 text storage
+										290 cell
+											291 text 0
+										292 cell
+											293 text 0
+									294 row
+										295 cell
+											296 text SZX
+										297 cell
+											298 text sleep
+										299 cell
+											300 text 0
+										301 cell
+											302 text 2
+									303 row
+										304 cell
+											305 text Всего
+										306 cell
+											307 text 0
+										308 cell
+											309 text 4
+								310 container
+									311 text Особо  проверено: в  ATL  правильно  разграничены  3  и  2,5  часа  до  вылета,  а  также  возрастные  пороги  2,  17  и  18  лет;  в  SHA  сохранены  240-часовой  транзит  и  72  часа  бесплатного  хранения;  в  STN  не  перепутаны  допущенные  авиакомпании  и  запрет  для  Ryanair/easyJet;  в  CAI  сохранены  удвоение  стоимости  и  правило  третьего  ребёнка;  в  AUH  корректно  передана  доплата  25  AED  после  72  часов.
+								363 container
+									364 text Вердикт: все  6  переводов  можно  использовать  без  обязательных  исправлений.  Для  единой  локали  de-DE стоит  лишь  привести  написание  ss/ß к  немецкому  стандарту.
+								365 button Копировать
+									366 image
+								367 button Оценить ответ
+									368 image
+								369 checkbox Description: Прочитать вслух, Value: 0
+								370 button Поделиться
+								371 pop up button (collapsed) Description: Сгенерировать ответ заново, ID: radix-_r_cc_, Secondary Actions: Expand
+								372 pop up button (collapsed) Description: Ещё действия, ID: radix-_r_cg_, Secondary Actions: Expand
+							168 container
+								169 text ChatGPT может допускать ошибки. Проверяйте важную информацию.
+							170 container
+								312 button Прокрутить вниз
+								171 heading Последний ответ, Value: 4
+									172 text Последний ответ
+								173 container
+									174 container
+										175 button (collapsed) Description: Добавить файлы и другое, Secondary Actions: Expand
+										176 text entry area (settable) Description: Спросить ChatGPT, Value:
+
+											177 container
+												373 text Спросить ChatGPT
+										374 pop up button (collapsed) Description: Выбрать модель ChatGPT, ID: radix-_r_cm_, Secondary Actions: Expand
+											375 text Medium
+										181 button Диктовать
+										376 button Начать голосовой разговор
+		377 text Ответ готов
+
+The focused UI element is 176 text entry area (settable) Description: Спросить ChatGPT, Value:

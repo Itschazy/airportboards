@@ -1,0 +1,25 @@
+{
+  "iata": "CJU",
+  "blocks": {
+    "transport": {
+      "title": "600路公交车",
+      "hint": "经Jungmun至西归浦",
+      "text": "600路公交车连接济州机场、Jungmun和Seogwipo KAL Hotel。机场首班车06:00发车，末班车22:40发车，间隔16–40分钟。运营商Samyeong Transportation的联系电话为+82 64 713 7000。"
+    },
+    "taxi": {
+      "title": "出租车",
+      "hint": "参考价格",
+      "text": "据机场估计，乘普通出租车前往Jeju City Hall约需30分钟、9,000 KRW，前往Jungmun Tourism Complex约需80分钟、35,000 KRW。同样两条路线乘坐Deluxe出租车，参考价格分别为16,200 KRW和63,000 KRW。"
+    },
+    "kids": {
+      "title": "育婴室和婴儿车",
+      "hint": "国内航站楼3楼",
+      "text": "国内航站楼3楼、Domestic Departure B左侧设有育婴室，配有尿布更换区、洗手池、沙发和喂养室。出示身份证件，可在国内航站楼3楼公共候机大厅中央的Comprehensive Information Counter借用婴儿车；可在公共大厅内使用，用后须归还。"
+    },
+    "wifi": {
+      "title": "Wi-Fi和充电",
+      "hint": "KAC免费网络",
+      "text": "Korea Airports Corporation在机场航站楼提供免费Wi-Fi。如需了解济州机场的设备充电服务，可致电+82 64 797 2566联系Customer Service Team；KAC提醒，充电服务可能免费，也可能收费。"
+    }
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "iata": "PMI",
+  "blocks": {
+    "transport": {
+      "title": "Buses to Palma",
+      "hint": "Routes A1, A2 and 34",
+      "text": "Route A1 connects the airport with central Palma, A2 with S’Arenal, and 34 with Hospital Son Espases. Airport stops for A1 are on Level 0 at arrivals and Level 2 at departures."
+    },
+    "taxi": {
+      "title": "Taxi",
+      "hint": "Rank on Level 0",
+      "text": "The marked taxi rank is at arrivals on Level 0 of the terminal. The taxi service number for passengers with reduced mobility is +34 971 703 529."
+    },
+    "lounges": {
+      "title": "Valldemossa VIP Lounge",
+      "hint": "Departures area, Level 4",
+      "text": "Valldemossa VIP Lounge is on Level 4 in the commercial part of the boarding area, which is accessible only to passengers on Schengen and non-Schengen flights. The lounge is open from 05:00 to midnight; the maximum stay is 3 hours immediately before scheduled departure. It offers catering, workspaces, a printer and flight information."
+    },
+    "wifi": {
+      "title": "Free Wi-Fi",
+      "hint": "Confirm your email",
+      "text": "Connect to Airport Free Wifi Aena and open the welcome page as a guest with an email address, or sign in to Aena Club. You receive 15 minutes of free access to confirm your email; after confirmation there is no time limit."
+    }
+  }
+}

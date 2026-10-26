@@ -1,0 +1,20 @@
+{
+  "iata": "CSX",
+  "blocks": {
+    "transport": {
+      "title": "Tren istasyonuna maglev",
+      "hint": "Yolculuk başına 20 CNY",
+      "text": "Havalimanı maglev istasyonu, T1 ile T2 arasında kontrol kulesinin yakınındadır. T2 gidiş alanından 1 numaralı giriş yanındaki geçitle ulaşılır; geliş alanından önce gidiş katına çıkılmalıdır. Changsha Güney Tren İstasyonu yanındaki istasyona yolculuk kişi başına 20 CNY’dir. Tren istasyonunda metro hattı 2’ye geçiş vardır; maglev danışma: +86 731 86859898."
+    },
+    "taxi": {
+      "title": "Taksi",
+      "hint": "T1 ve T2 yanındaki duraklar",
+      "text": "Resmî taksi biniş yerleri, T1 geliş salonunun 3 numaralı kapısı ve T2 geliş salonunun 5 numaralı kapısındadır. Yaklaşık ücretler Changsha merkezine 90 CNY, Batı Otogarı’na 120 CNY, Güney Otogarı’na 110 CNY’dir; ücretli yol ve köprü geçişleri bu tutarlara dahildir. Taksimetre kullanmayı ya da yolculuğu reddetme veya fazla ücret isteme durumunda havalimanı, duraktaki personele başvurulmasını önerir."
+    },
+    "parking": {
+      "title": "Otopark",
+      "hint": "Her iki terminalde otoparklar",
+      "text": "T1 önünde P5 otoparkı bulunur: A bölgesi terminalin hemen yanında, B bölgesi yaklaşık 300 m uzağındadır. T2’de P1 kuzeybatıdadır ve gece parkı için de kullanılır; P2 terminal önünde kısa duraklamalar içindir, P4 ise terminal önündeki yer altı garajında gece parkı içindir. Nakit, banka kartı, Alipay veya WeChat ile ödeme yapılabilir; otopark danışma: +86 731 84798050."
+    }
+  }
+}

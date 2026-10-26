@@ -1,0 +1,25 @@
+{
+  "iata": "BOS",
+  "blocks": {
+    "transport": {
+      "title": "交通方式",
+      "hint": "Silver Line SL1巴士",
+      "text": "MBTA Silver Line 1（SL1）巴士在各航站楼停靠，连接机场与South Station。从机场前往市中心免费，并可免费换乘Red Line。可经Airport Station前往Blue Line，该站与航站楼之间有免费机场接驳车。"
+    },
+    "terminals": {
+      "title": "航站楼",
+      "hint": "免费Massport接驳车",
+      "text": "免费Massport接驳车连接各航站楼与Rental Car Center、水运码头及Blue Line的Airport Station。车辆配备低地板、行李架及轮椅升降设备；前往航站楼、地铁站及租车中心的主要服务通常每5–6分钟一班。11号线路每日09:00至22:00连接A、B、C及E航站楼。站点位于各航站楼下层路缘，标有Shuttle Bus。"
+    },
+    "kids": {
+      "title": "携儿童出行",
+      "hint": "安检后的Kidport",
+      "text": "Kidport游乐区位于安检后：A航站楼卫星楼A18登机口附近；B航站楼B16附近及通往B30–B36登机口的商业通道；C航站楼C25前方。每座航站楼都有哺乳及婴幼儿护理室。各航站楼安检前后均有家庭洗手间，配备马桶、洗手池和折叠式尿布更换台。"
+    },
+    "wifi": {
+      "title": "Wi‑Fi",
+      "hint": "免费BOSWifi网络",
+      "text": "机场提供免费Wi-Fi。连接时选择BOSWifi网络并接受使用条款。"
+    }
+  }
+}

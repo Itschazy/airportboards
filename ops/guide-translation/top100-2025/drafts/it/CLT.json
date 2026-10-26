@@ -1,0 +1,25 @@
+{
+  "iata": "CLT",
+  "blocks": {
+    "taxi": {
+      "title": "Taxi",
+      "hint": "Uptown: 32 USD più supplemento",
+      "text": "I taxi partono dal marciapiede esterno al livello arrivi e ritiro bagagli, nella zona 1. Il servizio opera principalmente tutti i giorni dalle 05:00 a mezzanotte, ma possono esserci veicoli anche fuori da questi orari. La tariffa fissa per Uptown all’interno dell’anello I 277 è di 32 USD, mentre per le corse entro un raggio di 3 miglia dall’aeroporto è di 16 USD; a tutte le corse si aggiunge un supplemento aeroportuale di 2,50 USD. Si accettano le principali carte di credito."
+    },
+    "kids": {
+      "title": "Con bambini",
+      "hint": "Sale per l’allattamento",
+      "text": "Le Mother’s Rooms sono disponibili per tutte le madri che allattano, con spazi individuali separati da tende, sedute imbottite e prese elettriche. Ogni sala ha un fasciatoio e un lavabo. Si trovano nel passaggio del settore A tra i gate A1–A13 e A21–A29, vicino ad A31, presso il controllo di sicurezza 3 all’incrocio dei settori D ed E e tra i gate E32 ed E36. Sono inoltre presenti fasciatoi in tutti i servizi igienici maschili, femminili e per famiglie del terminal."
+    },
+    "parking": {
+      "title": "Parcheggio",
+      "hint": "24 ore su 24, con prenotazione",
+      "text": "I parcheggi CLT sono aperti 24 ore su 24 tutto l’anno. I posti sono disponibili su prenotazione o in ordine di arrivo; gli stati Booked e Reservation Only indicano l’assenza di posti senza prenotazione, ma non impediscono l’accesso a chi ha già prenotato. Tutti i parcheggi dispongono di posti per persone con disabilità e di navette accessibili in servizio continuo. Il servizio Valet deve essere prenotato con almeno 3 ore di anticipo."
+    },
+    "wifi": {
+      "title": "Wi‑Fi",
+      "hint": "CLT Free WiFi e ricarica",
+      "text": "La rete gratuita CLT Free WiFi è disponibile ai passeggeri in tutto il terminal. Le stazioni di ricarica sono presenti in tutti i settori; le sedute con prese e USB si trovano ai gate A1–A39, B1–B16 e C2–C19. Altre prese sono disponibili nell’Atrium e in tutti i settori."
+    }
+  }
+}

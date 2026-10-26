@@ -1,0 +1,25 @@
+{
+  "iata": "IAH",
+  "blocks": {
+    "transport": {
+      "title": "Come arrivare",
+      "hint": "Downtown Direct: 4,50 USD",
+      "text": "L’autobus METRO 500 IAH Downtown Direct collega senza fermate l’aeroporto al George R. Brown Convention Center. Si sale nel terminal E, al livello 2, presso la porta E201 vicino all’area Ride App Pick-Up. La corsa di sola andata costa 4,50 USD; il servizio è giornaliero dalle 05:30 alle 20:00 ogni 30 minuti. Sono previsti spazio bagagli, accessibilità per passeggeri a mobilità ridotta e Wi-Fi gratuito."
+    },
+    "sleep": {
+      "title": "Dove dormire",
+      "hint": "Minute Suites dopo i controlli",
+      "text": "Minute Suites si trova nel terminal C vicino al gate C14 dopo i controlli di sicurezza. Offre ai passeggeri uno spazio privato per dormire, riposare e lavorare, oltre a una doccia."
+    },
+    "kids": {
+      "title": "Con bambini",
+      "hint": "Mother’s Rooms e Mamava",
+      "text": "IAH dispone di sale e cabine Mamava per allattare ed estrarre il latte, sale per bambini e fasciatoi. Le Mother’s Rooms si trovano nel terminal A presso i gate A1 e A17 e nel terminal C presso C5. Le cabine Mamava sono nel terminal B presso B21, nel terminal C presso C34 e nel terminal E presso E12; la sala per bambini del terminal D è presso D15."
+    },
+    "wifi": {
+      "title": "Wi‑Fi",
+      "hint": "Free Airport WIFI",
+      "text": "Il Wi-Fi gratuito è disponibile in tutti i terminal di IAH, compresi i parcheggi multipiano. Selezionare Free Airport WIFI, attendere la pagina di accesso, accettare le condizioni e premere Submit. Assistenza: 1-844-831-0999."
+    }
+  }
+}

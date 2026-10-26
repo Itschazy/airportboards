@@ -1,0 +1,38 @@
+{
+  "iata": "PHL",
+  "checked": "2026-10-26",
+  "blocks": [
+    {
+      "id": "transport",
+      "title": "Поезд в центр",
+      "hint": "SEPTA Airport Regional Rail",
+      "text": "Поезда SEPTA Airport Regional Rail связывают аэропорт с центром Филадельфии каждые 30 минут. Остановки аэропорта обслуживают терминалы A, B, C/D и E/F; все станции этой линии доступны для пассажиров на колясках. На станции William H. Gray III 30th Street можно пересесть на Amtrak и NJ Transit Atlantic City Line. Для оплаты SEPTA принимает бесконтактные карты Visa, Mastercard, Discover и AMEX, а также мобильные платежи.",
+      "source": "phl.org",
+      "url": "https://www.phl.org/getting-around/public-transportation"
+    },
+    {
+      "id": "taxi",
+      "title": "Такси",
+      "hint": "Зона 5 после выдачи багажа",
+      "text": "К такси ведут указатели Ground Transportation / Taxis / Zone 5 после выдачи багажа; прибывшим в A-West нужно спуститься на Ground Floor. Поездка из аэропорта в установленную зону Center City стоит 32 USD за первого пассажира, плюс 1 USD за каждого дополнительного пассажира старше 12 лет. Сбор за выезд из аэропорта к этому фиксированному тарифу не добавляется; чаевые в стоимость не входят. Все такси принимают кредитные карты.",
+      "source": "phl.org",
+      "url": "https://www.phl.org/getting-around/taxis-and-limousines"
+    },
+    {
+      "id": "kids",
+      "title": "Кормление ребёнка",
+      "hint": "Mamava после досмотра",
+      "text": "Бесплатные кабины Mamava после досмотра есть в A-West, переходе B/C, терминалах E и F; внутри предусмотрены скамьи, откидной столик, розетка и запираемая дверь. Приложение Mamava позволяет открыть кабину и посмотреть её доступность. В Minute Suites на переходе между A-East и B после досмотра кормящие матери могут бесплатно пользоваться отдельной комнатой первые 30 минут; телефон: +1 215 9371076.",
+      "source": "phl.org",
+      "url": "https://www.phl.org/at-phl/services-and-amenities/nursing-stations"
+    },
+    {
+      "id": "wifi",
+      "title": "Бесплатный Wi-Fi",
+      "hint": "Без ограничения трафика",
+      "text": "Аэропорт предоставляет всем посетителям бесплатный Wi-Fi от AT&T без ограничения трафика. В настройках устройства нужно включить Wi-Fi и выбрать бесплатную сеть аэропорта PHL; для подключения требуется устройство с поддержкой Wi-Fi.",
+      "source": "phl.org",
+      "url": "https://www.phl.org/at-phl/services-and-amenities/free-wifi"
+    }
+  ]
+}

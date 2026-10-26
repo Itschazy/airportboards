@@ -1,0 +1,25 @@
+{
+  "iata": "IAH",
+  "blocks": {
+    "transport": {
+      "title": "交通方式",
+      "hint": "直达巴士单程4.50 USD",
+      "text": "METRO 500 IAH Downtown Direct巴士直达连接机场与George R. Brown Convention Center。乘车点位于E航站楼2楼E201号门，靠近Ride App Pick-Up区域。单程票价4.50 USD，每日05:30至20:00每30分钟一班。车辆设有行李空间，行动不便的旅客可使用，并提供免费Wi-Fi。"
+    },
+    "sleep": {
+      "title": "休息住宿",
+      "hint": "Minute Suites，安检后",
+      "text": "Minute Suites位于C航站楼安检后C14登机口附近。为旅客提供可供睡眠、休息和工作的独立空间，以及淋浴。"
+    },
+    "kids": {
+      "title": "携儿童出行",
+      "hint": "哺乳室及Mamava哺乳舱",
+      "text": "IAH设有供哺乳和吸乳使用的房间及Mamava哺乳舱，也有育婴室和尿布更换台。Mother’s Rooms位于A航站楼A1及A17登机口附近，以及C航站楼C5登机口附近。Mamava哺乳舱位于B航站楼B21附近、C航站楼C34附近及E航站楼E12附近；D航站楼育婴室位于D15附近。"
+    },
+    "wifi": {
+      "title": "Wi‑Fi",
+      "hint": "Free Airport WIFI",
+      "text": "IAH所有航站楼及停车楼均提供免费Wi-Fi。选择Free Airport WIFI网络，等待登录页面出现，接受使用条款并点击Submit。支持电话：1-844-831-0999。"
+    }
+  }
+}

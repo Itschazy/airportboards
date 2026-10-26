@@ -1,0 +1,46 @@
+{
+  "iata": "MEL",
+  "checked": "2026-10-26",
+  "blocks": [
+    {
+      "id": "transport",
+      "title": "Автобусы в город",
+      "hint": "SkyBus и общественные маршруты",
+      "text": "SkyBus Melbourne City Express ежедневно соединяет аэропорт со станцией Southern Cross с 04:00 до 01:00; остановки находятся у терминалов 1, 3 и 4. Билеты продаются онлайн, в автоматах у остановок, а за наличные — в Prosegur и Smart Carte в зале прилёта терминала 2. Общественные автобусы PTV отправляются из наземного транспортного узла терминала 4.",
+      "source": "melbourneairport.com.au",
+      "url": "https://www.melbourneairport.com.au/bus-services"
+    },
+    {
+      "id": "storage",
+      "title": "Хранение багажа",
+      "hint": "Терминалы 2 и 4",
+      "text": "Автоматические камеры хранения находятся на наземном уровне парковки терминала 4 под эскалаторами. Сервис Smartecarte на наземном уровне зала прилёта терминала 2 работает ежедневно с 06:00 до полуночи и также предлагает печать и отправку факсов.",
+      "source": "melbourneairport.com.au",
+      "url": "https://www.melbourneairport.com.au/facilities-services"
+    },
+    {
+      "id": "sleep",
+      "title": "Отели у терминалов",
+      "hint": "Переходы и трансфер",
+      "text": "PARKROYAL Melbourne Airport соединён с внутренними и международным терминалами надземными пешеходными переходами. Holiday Inn Melbourne Airport находится в 400 метрах от терминалов и по запросу предоставляет своим гостям бесплатный автобус до терминала и обратно.",
+      "source": "melbourneairport.com.au",
+      "url": "https://www.melbourneairport.com.au/facilities-services"
+    },
+    {
+      "id": "kids",
+      "title": "Комнаты для родителей",
+      "hint": "Во всех терминалах",
+      "text": "Места для смены подгузников есть во всех терминалах. В терминале 2 до досмотра на уровне 1 они расположены у зон регистрации M и F, а после досмотра на уровне 1 — после Duty Free и напротив выходов на посадку 3 и 16. В зале прилёта терминала 2 на наземном уровне комната находится напротив камеры хранения Smartcarte.",
+      "source": "melbourneairport.com.au",
+      "url": "https://www.melbourneairport.com.au/facilities-services"
+    },
+    {
+      "id": "wifi",
+      "title": "Бесплатный Wi-Fi",
+      "hint": "Терминалы 2, 3 и 4",
+      "text": "Бесплатная сеть Airport Free Wi-Fi доступна в терминалах 2, 3 и 4, включая общественные зоны и залы ожидания. В терминале 1, которым управляет Qantas, эта сеть недоступна. Бесплатное подключение не зашифровано.",
+      "source": "melbourneairport.com.au",
+      "url": "https://www.melbourneairport.com.au/wi-fi"
+    }
+  ]
+}

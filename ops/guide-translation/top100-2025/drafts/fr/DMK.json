@@ -1,0 +1,20 @@
+{
+  "iata": "DMK",
+  "blocks": {
+    "transport": {
+      "title": "Bus BMTA",
+      "hint": "Lignes A1–A4",
+      "text": "A1 dessert Mo Chit 2 de 05:45 à minuit, A2 Victory Monument de 06:00 à 23:00 ; les deux partent toutes les 15 minutes et coûtent 30 THB. A3 vers Lumpini Park et A4 vers Sanam Luang circulent de 06:00 à 23:00 toutes les 30 minutes, au tarif de 50 THB. Les points d’embarquement se trouvent devant Service Hall et dans la zone publique des arrivées du terminal 1, au niveau 1."
+    },
+    "taxi": {
+      "title": "Taxis au compteur",
+      "hint": "Supplément aéroportuaire en plus",
+      "text": "Un supplément de 50 THB s’ajoute au prix au compteur ; les péages des voies express et des routes à péage spéciales sont à la charge du passager. Les comptoirs de taxis se trouvent dans les zones publiques des arrivées, au niveau 1 des terminaux 1 et 2."
+    },
+    "wifi": {
+      "title": "Wi-Fi gratuit",
+      "hint": "60 minutes après connexion",
+      "text": "Sélectionnez Airport Free Wi-Fi by NT, saisissez votre adresse e-mail et cochez l’acceptation des conditions d’utilisation. Une fois la connexion établie, appuyez sur OK : l’accès gratuit est accordé pour 60 minutes."
+    }
+  }
+}

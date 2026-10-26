@@ -1,0 +1,25 @@
+{
+  "iata": "AUH",
+  "blocks": {
+    "transport": {
+      "title": "Autobus urbani",
+      "hint": "Carta Hafilat obbligatoria",
+      "text": "Le fermate degli autobus urbani si trovano all’esterno dell’area arrivi; le linee della serie A operano 24 ore su 24. A1 va ad Al Zahiyah, A2 a Khalifa Street, A10 a MBZ City Bus Station e A40 ad Al Shahama Bus Station. Per viaggiare serve una carta Hafilat, acquistabile e ricaricabile alle macchine vicino alle fermate dell’aeroporto; a bordo non si accettano contanti."
+    },
+    "storage": {
+      "title": "Deposito bagagli",
+      "hint": "Aperto 24 ore su 24",
+      "text": "Il deposito di un bagaglio costa 35 AED fino a 3 ore, 55 AED fino a 12 ore, 75 AED fino a 24 ore, 105 AED fino a 48 ore e 140 AED fino a 72 ore. Dopo 72 ore, ai 140 AED già addebitati si aggiungono 25 AED per ogni giorno successivo; ogni periodo iniziato viene addebitato per intero. Il deposito è aperto 24 ore su 24; l’aeroporto invita a verificare le condizioni precise al banco."
+    },
+    "kids": {
+      "title": "Servizi per famiglie",
+      "hint": "Passeggini e stanze per la poppata",
+      "text": "I passeggini gratuiti sono disponibili nell’area partenze dal check-in all’imbarco e sul lato dell’uscita arrivi. In tutte le aree dell’aeroporto sono previste stanze per cambiare i pannolini e nutrire i bambini, con privacy e posti a sedere. Lo spazio tranquillo Sensory Space si trova vicino al gate D43."
+    },
+    "wifi": {
+      "title": "Wi-Fi gratuito",
+      "hint": "Senza limiti di tempo",
+      "text": "Nell’area dell’aeroporto è disponibile il Wi-Fi gratuito senza limiti di tempo. Selezionare la rete Zayed International Airport Free Wifi e premere Connect nella finestra di benvenuto; dopo il reindirizzamento al sito dell’aeroporto si attiva l’accesso completo a Internet."
+    }
+  }
+}

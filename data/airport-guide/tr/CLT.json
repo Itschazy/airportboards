@@ -1,0 +1,25 @@
+{
+  "iata": "CLT",
+  "blocks": {
+    "taxi": {
+      "title": "Taksi",
+      "hint": "Uptown: 32 USD ve ek ücret",
+      "text": "Taksiler gelen yolcu ve bagaj teslim katının dış kaldırımındaki bölge 1’den hareket eder. Esas çalışma saatleri her gün 05:00 ile gece yarısı arasındadır; bu saatler dışında da araç bulunabilir. I 277 çevre yolu içindeki Uptown’a sabit ücret 32 USD, havalimanının 3 millik yarıçapı içindeki yolculuklar için 16 USD’dir; tüm yolculuklara 2,50 USD havalimanı ücreti eklenir. Başlıca kredi kartları kabul edilir."
+    },
+    "kids": {
+      "title": "Çocukla",
+      "hint": "Emzirme odaları",
+      "text": "Mother’s Rooms, emziren tüm annelere açıktır; perdelerle ayrılmış bireysel alanlarda yumuşak koltuklar ve prizler vardır. Her odada alt değiştirme masası ve lavabo bulunur. Odalar, Salon A bağlantısında A1–A13 ve A21–A29 kapı grupları arasında, A31’in yanında, D ve E salonlarının birleşimindeki güvenlik kontrol noktası 3’ün yanında ve E32 ile E36 kapıları arasındadır. Terminalin tüm erkek, kadın ve aile tuvaletlerinde de alt değiştirme masaları vardır."
+    },
+    "parking": {
+      "title": "Otopark",
+      "hint": "Günün her saati, rezervasyonlu",
+      "text": "CLT otoparkları yıl boyunca günün her saati açıktır. Yerler önceden rezervasyonla veya giriş sırasına göre kullanılabilir; Booked ve Reservation Only, rezervasyonsuz yer bulunmadığını belirtir ancak mevcut rezervasyonların giriş hakkını kaldırmaz. Tüm otoparklarda engelli yolcular için yerler ve sürekli çalışan, engelli yolculara uygun servisler vardır. Valet hizmeti en az 3 saat önceden rezerve edilmelidir."
+    },
+    "wifi": {
+      "title": "Wi‑Fi",
+      "hint": "CLT Free WiFi ve şarj",
+      "text": "Ücretsiz CLT Free WiFi ağı terminalin tamamında yolculara sunulur. Tüm salonlarda şarj istasyonları vardır; priz ve USB bulunan koltuklar A1–A39, B1–B16 ve C2–C19 numaralı kapılardadır. Atrium’da ve tüm salonlarda ek prizler bulunur."
+    }
+  }
+}

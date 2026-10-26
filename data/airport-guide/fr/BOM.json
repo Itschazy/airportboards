@@ -1,0 +1,10 @@
+{
+  "iata": "BOM",
+  "blocks": {
+    "lounges": {
+      "title": "Salons",
+      "hint": "Aviserv West, arrivées terminal 2",
+      "text": "Le salon Aviserv West se trouve dans la zone des arrivées du terminal 2, en direction de Gate A. Il propose de la nourriture et des boissons, des douches, des capsules de sommeil et un espace de repos séparé."
+    }
+  }
+}

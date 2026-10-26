@@ -1,0 +1,22 @@
+{
+  "iata": "CKG",
+  "checked": "2026-10-26",
+  "blocks": [
+    {
+      "id": "lounges",
+      "title": "Бизнес-залы",
+      "hint": "Зал China Southern в Т3A",
+      "text": "Зал China Southern находится у входа в зал G терминала T3A. Он разделён на зоны для участников программы и пассажиров двух премиальных классов, всего предусмотрено 187 мест. В зале есть хранение багажа, деловая зона, массажная зона отдыха, комната матери и ребёнка и душевые.",
+      "source": "csair.com",
+      "url": "https://www.csair.com/cn/tourguide/airport_service/priority_pass/domestic/18h9nnvi3sef0.shtml"
+    },
+    {
+      "id": "sleep",
+      "title": "Где поспать",
+      "hint": "Holiday Inn Express Airport Zone",
+      "text": "Holiday Inn Express Chongqing Airport Zone находится по адресу No.199 Lianggang Avenue в районе Yubei. В отеле предоставляют бесплатный завтрак, есть Wi‑Fi, парковка и ресторан. Минимальный возраст для самостоятельной регистрации — 18 лет, выезд — до 12:00.",
+      "source": "ihg.com",
+      "url": "https://www.ihg.com/holidayinnexpress/hotels/ru/ru/chongqing/ckgap/hoteldetail"
+    }
+  ]
+}

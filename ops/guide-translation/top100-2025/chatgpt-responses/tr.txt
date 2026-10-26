@@ -1,0 +1,122 @@
+heading ChatGPT сказал:, Value: 4
+									152 text ChatGPT сказал:
+								153 container
+									154 text Проверены все 6 пар RU → TR без внешних источников.  Критических ошибок в числах, валютах, возрастных ограничениях, времени работы и условиях оплаты нет.  Найдены 2 обязательных исправления и 4 факультативных стилистических замечания.
+								155 heading Обязательные исправления, Value: 2
+									156 text Обязательные исправления
+								157 container
+									158 text 1.  ATL / lounges — неточность условия доступа
+								159 container
+									160 text Было: uygun Priority Pass ve LoungeKey programlarıyla da erişim mümkündür.
+								161 container
+									162 text Предлагается: geçerli Priority Pass ve LoungeKey üyelikleriyle de giriş mümkündür.
+								163 container
+									164 text Причина: uygun ... programlarıyla  звучит неопределённо и не вполне естественно. В оригинале речь о доступе через подходящие программы Priority Pass и LoungeKey. Формулировка с  geçerli ... üyelikleriyle  точнее передаёт условие наличия соответствующего права доступа.
+								165 container
+									166 text 2.  SHA / storage — грамматическая ошибка
+								167 container
+									168 text Было: Pasaportu 240 saatlik vizesiz transit hakkı veren yolcular
+								169 container
+									170 text Предлагается: 240 saatlik vizesiz transit hakkı tanıyan pasaporta sahip yolcular
+								171 container
+									172 text Причина:  исходная конструкция неестественна грамматически:  pasaportu ... veren yolcular  может читаться как «пассажиры, выдающие паспорт». Исправление однозначно указывает, что пассажиры обладают паспортом, предоставляющим право на безвизовый транзит.
+								173 heading Факультативные улучшения, Value: 2
+									174 text Факультативные улучшения
+								175 container
+									176 text 3.  STN / lounges — неудачный заголовок
+								177 container
+									178 text Было: Yalnızca belirli hava yollarına
+								179 container
+									180 text Предлагается: Yalnızca belirli hava yollarının yolcularına
+								181 container
+									182 text Причина:  заголовок буквально означает «только определённым авиакомпаниям». В оригинале ограничение относится к пассажирам этих авиакомпаний. Полная формулировка естественнее и точнее. В основном тексте условие уже раскрыто правильно.
+								183 container
+									184 text 4.  STN / lounges — естественность выражения
+								185 container
+									186 text Было: ön rezervasyonsuz giriş
+								187 container
+									188 text Предлагается: önceden rezervasyon yapmadan giriş
+								189 container
+									190 text Причина: ön rezervasyonsuz  звучит тяжеловесно. Предложенная конструкция привычнее для турецкого языка, значение «без предварительного бронирования» сохраняется.
+								191 container
+									192 text 5.  AUH / storage — канцеляризм
+								193 container
+									194 text Было: tahakkuk eden 140 AED’ye sonraki her gün için 25 AED eklenir
+								195 container
+									196 text Предлагается: ilk 72 saat için hesaplanan 140 AED’ye sonraki her gün için 25 AED eklenir
+								197 container
+									198 text Причина: tahakkuk eden  корректно, но излишне официально. Новая формулировка яснее показывает, что 25 AED добавляются к уже начисленным 140 AED, не заменяя их.
+								199 container
+									200 text 6.  XMN / taxi — стилистика
+								201 container
+									202 text Было: Günün her saati açık şikâyet hattı
+								203 container
+									204 text Предлагается: 24 saat hizmet veren şikâyet hattı
+								205 container
+									206 text Причина:  выражение  açık  обычно используется для работающих учреждений и сервисов. Для телефонной линии естественнее  hizmet veren . Круглосуточный режим сохраняется.
+								207 heading Проверка остальных условий, Value: 2
+									208 text Проверка остальных условий
+								209 table
+									210 row
+										211 cell
+											212 text Аэропорт
+										213 cell
+											214 text Результат
+									215 row
+										216 cell
+											217 text ATL
+										218 cell
+											219 text 50 USD, 3/2,5 часа, возрастные ограничения, Mezzanine и доступ после досмотра переданы верно
+									220 row
+										221 cell
+											222 text SHA
+										223 cell
+											224 text 07:00–20:30, срок до 1 месяца, 240 часов, бесплатные 72 часа и 1 место багажа сохранены
+									225 row
+										226 cell
+											227 text STN
+										228 cell
+											229 text Ограничения для Ryanair/easyJet, выходы 1–19, 3 часа, 35 GBP, дети младше 3 лет и оплата картой переданы верно
+									230 row
+										231 cell
+											232 text CAI
+										233 cell
+											234 text 220 USD, 3 600 EGP, 48 часов, 4 часа, удвоенная стоимость и правила для детей сохранены
+									235 row
+										236 cell
+											237 text AUH
+										238 cell
+											239 text Все пять тарифов, доплата 25 AED и округление неполного периода переданы верно
+									240 row
+										241 cell
+											242 text XMN
+										243 cell
+											244 text Двери 7/3, расстояние 120 м, направления и телефон сохранены
+								245 container
+									246 text Итог:  перевод в целом качественный, без существенных фактических и числовых искажений. Перед публикацией рекомендую исправить прежде всего формулировку SHA; замечание ATL желательно учесть для однозначности условия доступа. Остальные изменения не критичны.
+								247 button Копировать
+									248 image
+								249 button Оценить ответ
+									250 image
+								251 checkbox Description: Прочитать вслух, Value: 0
+								252 button Поделиться
+								253 pop up button (collapsed) Description: Сгенерировать ответ заново, ID: radix-_r_9q_, Secondary Actions: Expand
+								254 pop up button (collapsed) Description: Ещё действия, ID: radix-_r_9a_, Secondary Actions: Expand
+							255 container
+								256 text ChatGPT может допускать ошибки. Проверяйте важную информацию.
+							257 container
+								258 heading Последний ответ, Value: 4
+									259 text Последний ответ
+								260 container
+									261 container
+										262 button (collapsed) Description: Добавить файлы и другое, Secondary Actions: Expand
+										263 text entry area (settable) Description: Спросить ChatGPT, Value:
+
+											264 container
+												265 text Спросить ChatGPT
+										266 pop up button (collapsed) Description: Выбрать модель ChatGPT, ID: radix-_r_9u_, Secondary Actions: Expand
+											267 text Средний
+										268 button Диктовать
+										269 button Начать голосовой разговор
+
+The focused UI element is 263 text entry area (settable) Description: Спросить ChatGPT, Value:

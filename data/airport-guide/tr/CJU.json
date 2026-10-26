@@ -1,0 +1,25 @@
+{
+  "iata": "CJU",
+  "blocks": {
+    "transport": {
+      "title": "600 numaralı otobüs",
+      "hint": "Jungmun üzerinden Seogwipo’ya",
+      "text": "600 numaralı otobüs, Jeju Havalimanı’nı Jungmun ve Seogwipo KAL Hotel’e bağlar. Havalimanından ilk sefer 06:00’da, son sefer 22:40’ta kalkar; sefer aralığı 16–40 dakikadır. İşletmeci Samyeong Transportation’a +82 64 713 7000 numarasından ulaşılabilir."
+    },
+    "taxi": {
+      "title": "Taksi",
+      "hint": "Yaklaşık ücretler",
+      "text": "Havalimanı, standart taksiyle Jeju City Hall’a yolculuğu yaklaşık 30 dakika ve 9.000 KRW, Jungmun Tourism Complex’e yolculuğu 80 dakika ve 35.000 KRW olarak belirtir. Aynı güzergâhlardaki Deluxe taksiler için yaklaşık ücretler sırasıyla 16.200 KRW ve 63.000 KRW’dir."
+    },
+    "kids": {
+      "title": "Bebek bakım odası ve arabaları",
+      "hint": "İç hatlar terminali, Kat 3",
+      "text": "İç hatlar terminalinde Kat 3’te, Domestic Departure B’nin solunda alt değiştirme alanı, lavabo, kanepe ve besleme odası bulunan bir bebek bakım odası vardır. İç hatlar terminalinde Kat 3’teki halka açık bekleme salonunun merkezindeki Comprehensive Information Counter’dan kimlik göstererek bebek arabası alınabilir; araba halka açık salonda kullanılabilir ve kullanım sonrası iade edilmelidir."
+    },
+    "wifi": {
+      "title": "Wi-Fi ve şarj",
+      "hint": "Ücretsiz KAC ağı",
+      "text": "Korea Airports Corporation, havalimanı terminallerinde ücretsiz Wi-Fi sağlar. Jeju’daki cihaz şarj hizmetleriyle ilgili bilgi için Customer Service Team’e +82 64 797 2566 numarasından ulaşılabilir; KAC, şarj hizmetlerinin ücretsiz veya ücretli olabileceğini belirtir."
+    }
+  }
+}

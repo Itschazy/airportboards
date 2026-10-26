@@ -1,0 +1,38 @@
+{
+  "iata": "ORY",
+  "checked": "2026-10-26",
+  "blocks": [
+    {
+      "id": "transport",
+      "title": "Метро из Парижа",
+      "hint": "Линия 14 без пересадок",
+      "text": "Линия метро 14 идёт до станции Orly Airport без пересадки от Châtelet, Gare de Lyon, Bercy и Saint-Lazare; поездка из центра Парижа занимает около 25–35 минут. Билет Paris Région <> Airports стоит 14 EUR в одну сторону: его можно приобрести в автомате для Navigo Easy либо через приложение Île-de-France Mobilités. Альтернатива — RER B до Antony и далее Orlyval, поездка из центра занимает около 35–45 минут и также стоит 14 EUR.",
+      "source": "parisaeroport.fr",
+      "url": "https://www.parisaeroport.fr/en/passengers/transport-parking/public-transport-paris/best-way-to-get-there/ory"
+    },
+    {
+      "id": "storage",
+      "title": "Хранение багажа",
+      "hint": "Orly 3, уровень 0",
+      "text": "Bagages du Monde находится в Orly 3 на уровне 0 до досмотра рядом с зоной прилёта и работает ежедневно 07:00–21:00. Багаж проверяют рентгеном и хранят под видеонаблюдением; тариф зависит от размера и срока хранения. Также доступны гардероб для аксессуаров и специального багажа и аренда коляски или автокресла.",
+      "source": "parisaeroport.fr",
+      "url": "https://www.parisaeroport.fr/en/passengers/at-the-airport/services/luggage-storage/ory"
+    },
+    {
+      "id": "kids",
+      "title": "Комнаты для младенцев",
+      "hint": "После досмотра в Orly 3 и 4",
+      "text": "Пеленальные комнаты в туалетных блоках работают круглосуточно и оснащены пеленальными столами и детскими туалетами. Отдельные комнаты для младенцев после досмотра в Orly 3 и Orly 4 на уровне 1 доступны бесплатно круглосуточно: там есть индивидуальные ниши с кроватками, сиденьями, высокими стульчиками, подогревателями бутылочек и микроволновыми печами.",
+      "source": "parisaeroport.fr",
+      "url": "https://www.parisaeroport.fr/en/passengers/at-the-airport/services/family-areas/ory"
+    },
+    {
+      "id": "wifi",
+      "title": "Wi-Fi и зарядка",
+      "hint": "Во всех терминалах",
+      "text": "Бесплатная сеть WIFI-AIRPORT доступна во всех терминалах, зонах посадки и получения багажа; после выбора сети откройте браузер для перехода на страницу подключения. В терминалах есть USB и розетки европейских типов C, E и F. Бесплатные запираемые ячейки ChargeBox для зарядки телефона доступны круглосуточно.",
+      "source": "parisaeroport.fr",
+      "url": "https://www.parisaeroport.fr/en/passengers/at-the-airport/services/wifi/ory"
+    }
+  ]
+}

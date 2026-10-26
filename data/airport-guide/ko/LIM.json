@@ -1,0 +1,25 @@
+{
+  "iata": "LIM",
+  "blocks": {
+    "taxi": {
+      "title": "택시",
+      "hint": "도착 구역 카운터",
+      "text": "택시 카운터는 국내선 및 국제선 도착 구역에 있습니다. 직원이 승객과 운전자를 공항 내 지정 주차장으로 안내합니다. 공개된 서비스 전화번호 중 하나는 +51 1 4844001입니다."
+    },
+    "lounges": {
+      "title": "The Club LIM Internacional",
+      "hint": "국제선 출발 구역 2층",
+      "text": "The Club LIM Internacional 라운지는 국제선 출발 구역 2층에 있습니다. 휴식 공간, 바, 샤워실, 회의실을 갖추고 있습니다. 공항은 라운지가 매일 24시간 운영한다고 안내합니다."
+    },
+    "sleep": {
+      "title": "Sleepover",
+      "hint": "Perú Plaza 2층",
+      "text": "Sleepover는 Perú Plaza 2층의 Starbucks와 Dunkin Donuts 근처에 있으며 24시간 운영합니다. 샤워실, 짧은 수면을 위한 캡슐, 2층 침대가 있는 개별 공간, 공동 업무 공간, 포함된 음료를 제공합니다."
+    },
+    "wifi": {
+      "title": "무료 Wi-Fi",
+      "hint": "공항 무료 네트워크",
+      "text": "휴대전화나 노트북으로 .FreeWifiJorgeChavez 네트워크에 무료로 연결할 수 있습니다. 접속하려면 연결 페이지에서 이용 약관에 동의해야 합니다."
+    }
+  }
+}

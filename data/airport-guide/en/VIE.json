@@ -1,0 +1,25 @@
+{
+  "iata": "VIE",
+  "blocks": {
+    "transport": {
+      "title": "Trains to Vienna",
+      "hint": "S7 and Railjet",
+      "text": "The S7 takes about 25 minutes to Wien Mitte and runs every 30 minutes; Railjet takes about 15 minutes to Wien Hauptbahnhof and runs every 30 minutes. The ÖBB ticket office is in the arrivals hall; ticket machines are also there, along the passages to the platforms and on the platforms. A short, weather-protected, step-free route leads from the arrivals hall to the platforms."
+    },
+    "lounges": {
+      "title": "VIENNA Lounge",
+      "hint": "Terminal 1, Level 2",
+      "text": "VIENNA Lounge is in Terminal 1 on Level 2, after security and before passport control; it is open daily from 04:30 to 22:00. With a valid boarding pass, entry on the day of departure is available from 3.5 hours before departure, with a maximum stay of 3 hours. The regular price is 59 EUR, children aged 4–14 pay 31 EUR, and children aged 0–3 enter free. Facilities include food, Wi-Fi, workspaces, a relaxation area, showers with towels and a family bathroom with a changing table."
+    },
+    "sleep": {
+      "title": "Hotels near the airport",
+      "hint": "NH and Moxy, a walk from terminal",
+      "text": "NH Vienna Airport Conference Center and Moxy Vienna Airport are in AirportCity, near the terminal and within walking distance. NH has Wi-Fi and soundproof windows; Moxy offers snacks and drinks around the clock, free use of computers and the fitness centre, and free Wi-Fi."
+    },
+    "kids": {
+      "title": "Play areas and strollers",
+      "hint": "Near gates F, C and D",
+      "text": "The free Entertainment Gate near F03 includes a two-storey play structure, a separate toddler area and table football; there are also children’s areas near C42 and D31–36. If your own stroller was checked in, the airport provides a free stroller for the route from security to the boarding gate; hand it to the gate agent when boarding. Changing tables are available in almost all accessible toilets, family toilets and large passenger toilets."
+    }
+  }
+}

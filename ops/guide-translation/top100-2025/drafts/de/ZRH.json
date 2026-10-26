@@ -1,0 +1,25 @@
+{
+  "iata": "ZRH",
+  "blocks": {
+    "transport": {
+      "title": "Zug nach Zürich",
+      "hint": "15 Minuten zum Hauptbahnhof",
+      "text": "SBB-Züge vom Flughafen zum Zürcher Hauptbahnhof fahren alle 10 Minuten; die Fahrt dauert 15 Minuten. Regelmässige Zugverbindungen verbinden den Flughafen auch mit anderen Regionen der Schweiz und den Nachbarländern."
+    },
+    "storage": {
+      "title": "Gepäckaufbewahrung",
+      "hint": "Arrivals 2, Ebene 0",
+      "text": "Die bediente Gepäckaufbewahrung befindet sich in Arrivals 2 von Terminal 2 auf Ebene 0 neben dem Informationsschalter und ist täglich 06:00–22:00 geöffnet. Für ein Gepäckstück bis 25 kg und mit höchstens 90 × 60 × 35 cm betragen die Gebühren 15 CHF für bis zu 4 Stunden, 18 CHF für bis zu 8 Stunden und 22 CHF für bis zu 24 Stunden; bezahlt wird im Voraus, die maximale Aufbewahrungsdauer beträgt 3 Monate. Die SBB-Schliessfächer bei Check-in 3 im Airport Shopping sind rund um die Uhr zugänglich."
+    },
+    "kids": {
+      "title": "Family Services",
+      "hint": "Passagierbereich A",
+      "text": "Family Services im Passagierbereich A stehen Familien aller Fluggesellschaften kostenlos zur Verfügung. Es gibt Wickeltische, einen ruhigen Raum zum Füttern von Babys mit Babybetten, einen Krabbelbereich und einen Essbereich mit Mikrowelle; für ältere Kinder gibt es Spielzeug, Computerspiele und Tischfussball. Eine Kinderbetreuung wird nicht angeboten: Kinder müssen bei einer erwachsenen Begleitperson bleiben."
+    },
+    "wifi": {
+      "title": "Kostenloses WLAN",
+      "hint": "8 Stunden ab der ersten Anmeldung",
+      "text": "Das Netzwerk Zurich Airport bietet 8 Stunden kostenlosen Zugang, die ab der ersten Anmeldung durchgehend gezählt werden. Die Registrierung erfolgt per SMS durch Eingabe der Telefonnummer und des erhaltenen Codes oder mit Bordkarte und Ausweisdokument: Den Code erhält man an einer WiFi Station oder einem Informationsschalter. Bei Problemen helfen die Schalter Service & Information."
+    }
+  }
+}

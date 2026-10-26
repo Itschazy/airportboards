@@ -1,0 +1,14 @@
+{
+  "iata": "SAW",
+  "checked": "2026-10-26",
+  "blocks": [
+    {
+      "id": "sleep",
+      "title": "Где поспать",
+      "hint": "ISG Airport Hotel",
+      "text": "ISG Airport Hotel указан по адресу аэропорта Sabiha Gökçen в районе Pendik. В отеле есть фитнес-центр, 2 сауны и отдельные мужская и женская раздевалки. Гости могут пользоваться компьютером в лобби; доступны услуги прачечной и химчистки, утюг и гладильную доску можно запросить на стойке регистрации.",
+      "source": "isgairporthotel.com",
+      "url": "https://isgairporthotel.com/en/services/"
+    }
+  ]
+}

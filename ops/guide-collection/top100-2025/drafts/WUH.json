@@ -1,0 +1,14 @@
+{
+  "iata": "WUH",
+  "checked": "2026-10-26",
+  "blocks": [
+    {
+      "id": "sleep",
+      "title": "Fliport Garden Hotel",
+      "hint": "У терминалов T2 и T3",
+      "text": "Wuhan Tianhe Airport Fliport Garden Hotel расположен рядом с терминалами T2 и T3 и предлагает гостям короткий трансфер к аэропорту. В отеле есть Wi-Fi, ресторан, фитнес-зал, прачечная и камера хранения; парковка бесплатна. Для связи с отелем указан телефон +86 27 5018 9888.",
+      "source": "fliport.com",
+      "url": "https://www.fliport.com/fliport_garden/Wuhanhuayuan/about"
+    }
+  ]
+}

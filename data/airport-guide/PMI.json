@@ -1,0 +1,38 @@
+{
+  "iata": "PMI",
+  "checked": "2026-10-26",
+  "blocks": [
+    {
+      "id": "transport",
+      "title": "Автобусы в Пальму",
+      "hint": "Маршруты A1, A2 и 34",
+      "text": "Маршрут A1 связывает аэропорт с центром Пальмы, A2 — с S’Arenal, а 34 — с Hospital Son Espases. Остановки A1 в аэропорту находятся на уровне 0 у прилёта и на уровне 2 у вылета.",
+      "source": "aena.es",
+      "url": "https://www.aena.es/en/palma-de-mallorca/getting-there/bus.html"
+    },
+    {
+      "id": "taxi",
+      "title": "Такси",
+      "hint": "Стоянка на уровне 0",
+      "text": "Обозначенная стоянка такси находится у прилёта на уровне 0 терминала. Номер службы такси для пассажиров с ограниченной подвижностью — +34 971 703 529.",
+      "source": "aena.es",
+      "url": "https://www.aena.es/en/palma-de-mallorca/getting-there/taxi.html"
+    },
+    {
+      "id": "lounges",
+      "title": "Valldemossa VIP Lounge",
+      "hint": "Зона вылета, уровень 4",
+      "text": "Valldemossa VIP Lounge находится на уровне 4 в торговой части зоны посадки, доступной только пассажирам шенгенских и нешенгенских рейсов. Зал работает с 05:00 до полуночи; максимальное посещение — 3 часа непосредственно перед вылетом по расписанию. В зале есть питание, рабочие места, принтер и информация о рейсах.",
+      "source": "aena.es",
+      "url": "https://www.aena.es/en/palma-de-mallorca/vip-services/vip-lounge/sala-vip-valldemossa.html&p=1575049752114"
+    },
+    {
+      "id": "wifi",
+      "title": "Бесплатный Wi-Fi",
+      "hint": "Подтвердите электронную почту",
+      "text": "Подключитесь к сети Airport Free Wifi Aena и откройте приветственную страницу как гость с адресом электронной почты либо войдите в Aena Club. На подтверждение электронной почты предоставляются 15 минут бесплатного доступа; после подтверждения ограничений по времени нет.",
+      "source": "aena.es",
+      "url": "https://www.aena.es/en/palma-de-mallorca/airport-services/wi-fi.html"
+    }
+  ]
+}

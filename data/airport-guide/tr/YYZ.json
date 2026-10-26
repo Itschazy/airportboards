@@ -1,0 +1,25 @@
+{
+  "iata": "YYZ",
+  "blocks": {
+    "transport": {
+      "title": "Nasıl gidilir",
+      "hint": "UP Express: 28 dakika",
+      "text": "UP Express, Pearson ile Toronto merkezindeki Union Station arasında 28 dakikada yolculuk sağlar; her gün 15 dakikada bir kalkar. Yetişkin tek yön bileti 12,35 $, PRESTO ile 9,25 $’dır; 12 yaşından küçük çocuklar ücretsiz seyahat eder. İstasyon terminal 1’de Terminal Link’in yanındadır: terminal 3’ten önce ücretsiz Terminal Link ile terminal 1’e gidip Train to City tabelalarını izlemek gerekir. Trende ve istasyonda ücretsiz Wi-Fi, trende ayrıca prizler ve bagaj rafları vardır."
+    },
+    "terminals": {
+      "title": "Terminaller",
+      "hint": "Ücretsiz Terminal Link",
+      "text": "Ücretsiz Terminal Link, terminal 1 ve 3 ile Viscount istasyonu arasında günün her saati çalışır. Sheraton Gateway Hotel, ALT Hotel, Value Park Garage ve Value Park Lot’a da erişim sağlar. İstasyonlar arası yolculuk 2–8 dakika sürer. Katlanmayan hareket yardımcıları kullanan yolcular trene erişebilir."
+    },
+    "kids": {
+      "title": "Çocukla",
+      "hint": "Kontrol sonrası emzirme alanları",
+      "text": "Emzirme odaları ve kabinleri güvenlik kontrolünden sonradır. Mamava kabinlerinde katlanır masa, 2 oturma sırası, ayna, tutunma barları ve USB’li priz vardır; açmak için Mamava uygulamasından veya havalimanı destek hizmetinden kod alınır. Kabinler terminal 1’de D22, E80/E81 ve F59 numaralı kapıların; terminal 3’te C30/C31, B22 ve A12/A13’ün yakınındadır. Terminal 1’in gidiş salonunda D24 numaralı kapı yakınında çocuk oyun alanı vardır."
+    },
+    "wifi": {
+      "title": "Wi‑Fi",
+      "hint": "Toronto Pearson Public Wi-Fi",
+      "text": "Pearson ve CIBC ücretsiz Wi-Fi sunar. Toronto Pearson Public Wi-Fi ağını seçin, karşılama sayfasını açın, koşulları kabul edin ve Connect düğmesine basın. Gerektiğinde 1-866-207-1690 numarasından veya danışma masasından yardım alınabilir."
+    }
+  }
+}

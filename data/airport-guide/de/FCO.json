@@ -1,0 +1,25 @@
+{
+  "iata": "FCO",
+  "blocks": {
+    "transport": {
+      "title": "Anreise",
+      "hint": "Leonardo express: 32 Minuten",
+      "text": "Leonardo express verbindet den Flughafen Fiumicino ohne Zwischenhalt in 32 Minuten mit Roma Termini; Abfahrten sind alle 15 Minuten vorgesehen. Der Bahnhof liegt im Flughafen. Ein Ticket kostet 14 €; mit dem Tarif Mini-groups können 4 Tickets in einem Kauf für 40 € statt 56 € erworben werden."
+    },
+    "storage": {
+      "title": "Gepäckaufbewahrung",
+      "hint": "10 € pro Gepäckstück je 24 Stunden",
+      "text": "Die Gepäckaufbewahrung liegt in Terminal 3 im internationalen Ankunftsbereich nahe dem Busbahnhof und ist von 07:00 bis 23:00 geöffnet. Der Preis beträgt 10 € einschließlich MwSt. pro Gepäckstück und 24 Stunden. Bezahlt wird bei der Abholung; eine Vorabreservierung ist nicht erforderlich."
+    },
+    "kids": {
+      "title": "Mit Kind",
+      "hint": "Kostenlose Kinderwagen",
+      "text": "Am Flughafen gibt es mehr als 700 kostenlose Kinderwagen; abfliegende Reisende, die ihren eigenen Kinderwagen beim Check-in aufgeben, können einen in den Boardingbereichen A und E bei den Gates A31 und A61 sowie an den Rolltreppen zu den Gates E1–E4 nehmen. Die Family Lane ist eine eigene Sicherheitskontrollspur für Familien mit Kindern und Schwangere. Es gibt 4 Babyräume mit Kinderbetten und Wickeltischen: hinter den Check-in-Schaltern 312–327 in Terminal 3, in der Einkaufsgalerie von Bereich A vor den Gates A61–A83 sowie bei E11 und E44. In Gastronomiebetrieben kann darum gebeten werden, ein Fläschchen oder Babynahrung aufzuwärmen und einen Schnuller zu sterilisieren."
+    },
+    "wifi": {
+      "title": "Wi‑Fi",
+      "hint": "AIRPORT FREE WIFI ohne Zeitlimit",
+      "text": "Der Flughafen bietet kostenloses WLAN ohne Zeitlimit. AIRPORT FREE WIFI ist in Check-in-, Flugsteig- und Ankunftsbereichen verfügbar. Zum Verbinden das Netzwerk wählen und einen Browser öffnen; das Gerät wird automatisch zur Begrüßungsseite weitergeleitet."
+    }
+  }
+}

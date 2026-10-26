@@ -1,0 +1,15 @@
+{
+  "iata": "CKG",
+  "blocks": {
+    "lounges": {
+      "title": "Sale business",
+      "hint": "Lounge China Southern nel T3A",
+      "text": "La lounge China Southern si trova all’ingresso della sala G del terminal T3A. È suddivisa in aree per i membri del programma e i passeggeri delle due classi premium, con 187 posti complessivi. Sono disponibili deposito bagagli, area business, zona relax e massaggi, sala madre e bambino e docce."
+    },
+    "sleep": {
+      "title": "Dove dormire",
+      "hint": "Holiday Inn Express Airport Zone",
+      "text": "Holiday Inn Express Chongqing Airport Zone si trova all’indirizzo No.199 Lianggang Avenue, nel distretto di Yubei. L’hotel offre la colazione gratuita e dispone di Wi-Fi, parcheggio e ristorante. L’età minima per effettuare il check-in autonomamente è 18 anni; check-out entro le 12:00."
+    }
+  }
+}

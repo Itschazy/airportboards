@@ -1,0 +1,25 @@
+{
+  "iata": "CTU",
+  "blocks": {
+    "transport": {
+      "title": "Metro",
+      "hint": "10, 19 ve 30 hatları",
+      "text": "Metro hattı 10 her iki terminale hizmet verir; terminal 2’de giriş Kat B2’de L2, L3 ve L4 geçitlerindedir. Shuangliu Airport Terminal 2 East istasyonuna 19 ve 30 hatları hizmet verir; giriş terminal 2’de Kat B2’de L3 geçidindendir. Hat 19 burayı Tianfu Airport Terminal 1 & 2 ve Tianfu Airport North’a bağlar."
+    },
+    "taxi": {
+      "title": "Taksi",
+      "hint": "Gelen yolcu alanının dışında",
+      "text": "Terminal 1’de taksi durağı gelen yolcu katındaki 6 numaralı kapının dışında, yaklaşık 50 m güneyde bulunur. Terminal 2’de biniş gelen yolcu katındaki yaya geçidinin yanındadır; ulaşım denetimi telefonu 12328’dir."
+    },
+    "terminals": {
+      "title": "Terminaller arasında",
+      "hint": "Ücretsiz otobüs",
+      "text": "Terminal 1 ve 2 arasında ücretsiz otobüs vardır; yürüyerek geçiş yaklaşık 8–10 dakika sürer. Terminal 1 durağı 3 numaralı kapının dışındaki güney alanında, terminal 2 durağı 9 numaralı kapının dışındaki kuzey alanındadır."
+    },
+    "storage": {
+      "title": "Bagaj muhafazası",
+      "hint": "Kimlik ve kontrol gerekli",
+      "text": "Terminal 1 muhafaza noktası B güvenlik kontrolünün kuzeyinde, terminal 2 noktası P check-in adasının arkasındadır. Her ikisi kendi terminalinin ilk kalkışından 2 saat önce açılır ve kalkışları sona erdikten sonra kapanır. Küçük dolap 6 saate kadar 8 CNY, 12 saate kadar 13 CNY, 24 saate kadar 18 CNY’dir; sonraki her 6 saat için 2 CNY eklenir. 6 saatten kısa süreler 6 saat olarak ücretlendirilir. Teslimde geçerli kimlik gerekir ve bagaj kontrol edilir; geri alırken makbuz ile teslimde gösterilen kimlik gerekir. Taşınabilir şarj cihazları ve lityum piller kabul edilmez."
+    }
+  }
+}

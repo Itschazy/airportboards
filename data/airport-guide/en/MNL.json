@@ -1,0 +1,20 @@
+{
+  "iata": "MNL",
+  "blocks": {
+    "taxi": {
+      "title": "Taxi",
+      "hint": "Keep your dispatch slip",
+      "text": "Coupon Taxi, Yellow Metered Taxi and Regular Metered Taxi operate at NAIA. An airport staff member gives passengers a dispatch slip: keep it yourself and do not hand it to the driver. For questions or complaints about the ride, use the contact numbers on the slip."
+    },
+    "parking": {
+      "title": "Parking",
+      "hint": "No advance reservations",
+      "text": "Terminal parking is first come, first served, without advance reservations. Cars can be left overnight or for several days; long-term parking is charged for each 24-hour period. Cash, GCash, PayMaya and bank cards are accepted."
+    },
+    "wifi": {
+      "title": "Wi‑Fi",
+      "hint": "Free terminal networks",
+      "text": "Free Wi-Fi is available in all NAIA terminals: GLOBE’s NAIA Free Go Wi-Fi for 3 hours a day, Smart for 1 hour a day and Converge for 2 hours a day. The airport page lists check-in, boarding gate, arrivals and departures areas. In Terminals 1 and 2, laptop charging is in the departures area after security; phone charging is also available in the public area."
+    }
+  }
+}

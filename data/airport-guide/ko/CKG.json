@@ -1,0 +1,15 @@
+{
+  "iata": "CKG",
+  "blocks": {
+    "lounges": {
+      "title": "비즈니스 라운지",
+      "hint": "China Southern T3A",
+      "text": "China Southern 라운지는 터미널 T3A의 G 구역 입구에 있습니다. 회원 구역과 두 프리미엄 클래스 승객 구역으로 나뉘며, 좌석은 총 187석입니다. 수하물 보관 공간, 비즈니스 구역, 마사지 휴게 구역, 모자실, 샤워실이 있습니다."
+    },
+    "sleep": {
+      "title": "잠잘 곳",
+      "hint": "Airport Zone 호텔",
+      "text": "Holiday Inn Express Chongqing Airport Zone은 Yubei 구역의 No.199 Lianggang Avenue에 있습니다. 호텔은 무료 조식을 제공하며 Wi-Fi, 주차장, 레스토랑이 있습니다. 단독 체크인 최소 연령은 18세이며 체크아웃은 12:00까지입니다."
+    }
+  }
+}

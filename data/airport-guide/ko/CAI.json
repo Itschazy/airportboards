@@ -1,0 +1,25 @@
+{
+  "iata": "CAI",
+  "blocks": {
+    "transport": {
+      "title": "공항 출발 버스",
+      "hint": "터미널 1 앞 정류장",
+      "text": "카이로 시내 방면 버스와 시외버스는 터미널 1 앞 주차장에 있는 버스 정류장에서만 출발합니다. West Delta, Upper Egypt, East Delta, Super Jet의 버스가 이곳에서 출발합니다."
+    },
+    "terminals": {
+      "title": "Automated People Mover",
+      "hint": "무료 공항 열차",
+      "text": "무료 Automated People Mover는 터미널 1, Air Mall, 주차장, 터미널 2, 터미널 3을 연결하며 전 구간 이동 시간은 5분 이내입니다. 환승객과 공항 일반 구역 방문객 모두를 위한 열차로 하루 18시간 운행하며 나머지 6시간은 정비에 사용합니다."
+    },
+    "lounges": {
+      "title": "Ahlan VIP",
+      "hint": "라운지 및 에스코트 서비스",
+      "text": "Ahlan VIP에는 에스코트 서비스와 최대 3시간의 라운지 이용이 포함되며 항공편 출발 최소 48시간 전에 예약해야 합니다. VIP 요금은 외국인 승객 220 USD, 이집트 국민 3,600 EGP입니다. 연결 항공편은 요금이 두 배이며 항공편 사이 간격이 최소 4시간일 때 예약할 수 있습니다. 6세 미만 어린이 두 명은 무료이며, 세 번째 6세 미만 어린이는 별도의 승객으로 계산합니다."
+    },
+    "wifi": {
+      "title": "무료 Wi-Fi",
+      "hint": "Orange Egypt 서비스",
+      "text": "Orange Egypt는 카이로공항 도착 및 출발 승객에게 무료 Wi-Fi를 제공합니다. 휴대전화와 기타 전자기기용 무료 충전 스테이션도 제공합니다."
+    }
+  }
+}

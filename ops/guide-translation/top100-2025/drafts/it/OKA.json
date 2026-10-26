@@ -1,0 +1,25 @@
+{
+  "iata": "OKA",
+  "blocks": {
+    "transport": {
+      "title": "Monorotaia Yui Rail",
+      "hint": "13 minuti fino a Prefectural Office",
+      "text": "Dalla stazione Naha Airport, la monorotaia impiega circa 13 minuti fino a Prefectural Office, 16 minuti fino a Makishi e 27 minuti fino a Shuri. I biglietti QR di corsa semplice sono venduti alle macchine e valgono per un viaggio nel giorno dell’acquisto. La tariffa bambini si applica ai passeggeri di età inferiore a 12 anni; con un adulto possono viaggiare gratis al massimo due bambini di età inferiore a 6 anni, dal terzo si paga la tariffa bambini."
+    },
+    "storage": {
+      "title": "Deposito bagagli",
+      "hint": "Yamato ai livelli 1 e 2",
+      "text": "I banchi Okinawa Yamato Transport si trovano nella sala arrivi nazionali al livello 1 e presso i controlli di sicurezza C al livello 2. Il primo è aperto dalle 07:30 alle 20:00, il secondo dalle 09:00 alle 19:00; di norma gli oggetti vengono accettati per un massimo di un mese. Il prezzo per pezzo al giorno, tasse incluse, è di 600 JPY per la taglia S, 800 JPY per M e 1000 JPY per L; la taglia è determinata dalla somma di lunghezza, larghezza e altezza."
+    },
+    "kids": {
+      "title": "Stanze per la cura dei bambini",
+      "hint": "Cambio e acqua calda",
+      "text": "Le stanze per la cura dei bambini si trovano presso i servizi igienici ai livelli 1, 2 e 3 e presso l’area ristorazione internazionale al livello 4. Dispongono di fasciatoio, lavabo e distributore di acqua calda; uomini e donne possono utilizzare la parte comune. Gli uomini non devono entrare nelle stanze separate per l’allattamento."
+    },
+    "wifi": {
+      "title": "Wi-Fi gratuito",
+      "hint": "Free_Wi-Fi_NAHA_Airport",
+      "text": "La rete Free_Wi-Fi_NAHA_Airport è gratuita e disponibile nelle aree pubbliche del terminal, tranne alcuni negozi e locali. Le aree coperte sono indicate ai livelli 1–4: arrivi, partenze, attesa dell’imbarco, check-in e ristoranti. Prima della connessione occorre leggere e accettare le condizioni d’uso."
+    }
+  }
+}

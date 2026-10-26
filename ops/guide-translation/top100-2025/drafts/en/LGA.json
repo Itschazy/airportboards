@@ -1,0 +1,25 @@
+{
+  "iata": "LGA",
+  "blocks": {
+    "transport": {
+      "title": "Free Q70 LGA Link",
+      "hint": "To the subway from B and C",
+      "text": "The free Q70 LGA Link bus serves Terminals B and C and connects the airport with the subway interchanges Jackson Heights–Roosevelt Avenue and 74 St–Broadway. MTA buses are wheelchair accessible and equipped with ramps."
+    },
+    "taxi": {
+      "title": "Taxi",
+      "hint": "No advance booking",
+      "text": "Taxis are available at all terminals without advance booking: a dispatcher directs passengers from the queue to an available car. Fares are based on distance and time, with an initial meter amount of USD 3; a USD 2 PANYNJ fee also applies to airport pick-ups. Wheelchair-accessible taxis cost the same as regular taxis and can be requested on +1 646 599 9999."
+    },
+    "terminals": {
+      "title": "All Terminals Shuttle",
+      "hint": "Free round the clock",
+      "text": "The free All Terminals Shuttle runs between all terminals and also stops at the prepaid Economy Lot (Parking Lot 7), Hangar 7 South and 94th Street. It operates round the clock: every 15 minutes during peak periods and every 20 minutes at other times."
+    },
+    "wifi": {
+      "title": "Free Wi-Fi",
+      "hint": "_Free LGA WiFi network",
+      "text": "For free access, select _Free LGA WiFi. Support is available round the clock on +1 800 880 4117."
+    }
+  }
+}

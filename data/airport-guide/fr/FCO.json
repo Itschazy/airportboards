@@ -1,0 +1,25 @@
+{
+  "iata": "FCO",
+  "blocks": {
+    "transport": {
+      "title": "Comment s'y rendre",
+      "hint": "Leonardo express : 32 minutes",
+      "text": "Leonardo express relie sans arrêt l’aéroport Fiumicino à Roma Termini en 32 minutes, avec des départs prévus toutes les 15 minutes. La gare se trouve dans l’aéroport. Le billet coûte 14 € ; le tarif Mini-groups permet d’acheter 4 billets en une seule transaction pour 40 € au lieu de 56 €."
+    },
+    "storage": {
+      "title": "Consigne à bagages",
+      "hint": "10 € par bagage et par 24 h",
+      "text": "La consigne se trouve au terminal 3, dans la zone des arrivées internationales près de la gare routière, et ouvre de 07:00 à 23:00. Le prix est de 10 € TVA comprise par bagage et par 24 heures. Le paiement s’effectue à la récupération du bagage ; aucune réservation préalable n’est nécessaire."
+    },
+    "kids": {
+      "title": "Avec un enfant",
+      "hint": "Poussettes et espaces pour enfants",
+      "text": "L’aéroport dispose de plus de 700 poussettes gratuites ; les passagers au départ qui choisissent d’enregistrer leur propre poussette peuvent en prendre une dans les zones d’embarquement A et E, aux portes A31 et A61 et près des escalators vers E1–E4. La Family Lane est une file de contrôle de sûreté dédiée aux familles avec enfants et aux femmes enceintes. L’aéroport compte 4 salles pour bébés avec lits et tables à langer : derrière les comptoirs d’enregistrement 312–327 du terminal 3, dans la galerie commerciale de la zone A avant les portes A61–A83, et près de E11 et E44. Dans les points de restauration, il est possible de demander de réchauffer un biberon ou un repas pour bébé et de stériliser une sucette."
+    },
+    "wifi": {
+      "title": "Wi‑Fi",
+      "hint": "AIRPORT FREE WIFI sans limite",
+      "text": "L’aéroport propose le Wi-Fi gratuit sans limite de temps. Le réseau AIRPORT FREE WIFI est disponible dans les zones d’enregistrement, des portes d’embarquement et des arrivées. Pour se connecter, choisir le réseau et ouvrir un navigateur : l’appareil affiche automatiquement la page d’accueil."
+    }
+  }
+}

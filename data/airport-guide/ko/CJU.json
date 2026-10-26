@@ -1,0 +1,25 @@
+{
+  "iata": "CJU",
+  "blocks": {
+    "transport": {
+      "title": "600번 버스",
+      "hint": "Jungmun 경유 서귀포행",
+      "text": "600번 버스는 제주공항을 Jungmun 및 Seogwipo KAL Hotel과 연결합니다. 공항 출발 첫차는 06:00, 막차는 22:40이며 운행 간격은 16–40분입니다. 운영사 Samyeong Transportation의 연락처는 +82 64 713 7000입니다."
+    },
+    "taxi": {
+      "title": "택시",
+      "hint": "예상 요금",
+      "text": "공항 안내에 따르면 일반 택시로 Jeju City Hall까지 약 30분, 9,000 KRW이며 Jungmun Tourism Complex까지는 80분, 35,000 KRW입니다. 같은 경로의 Deluxe 택시 예상 요금은 각각 16,200 KRW와 63,000 KRW입니다."
+    },
+    "kids": {
+      "title": "유아 휴게실 및 유모차",
+      "hint": "국내선 터미널 3층",
+      "text": "국내선 터미널 3층 Domestic Departure B 왼쪽에 기저귀 교환 공간, 세면대, 소파, 수유실이 있는 유아 휴게실이 있습니다. 신분증을 제시하면 국내선 터미널 3층 일반 대합실 중앙의 Comprehensive Information Counter에서 유모차를 빌릴 수 있습니다. 일반 대합실에서 사용할 수 있으며 이용 후 반납해야 합니다."
+    },
+    "wifi": {
+      "title": "Wi-Fi 및 충전",
+      "hint": "KAC 무료 네트워크",
+      "text": "Korea Airports Corporation은 공항 터미널에 무료 Wi-Fi를 제공합니다. 제주의 기기 충전 서비스에 관한 자세한 사항은 Customer Service Team에 +82 64 797 2566으로 문의할 수 있습니다. KAC는 충전 서비스가 무료 또는 유료일 수 있다고 안내합니다."
+    }
+  }
+}

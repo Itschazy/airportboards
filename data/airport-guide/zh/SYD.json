@@ -1,0 +1,20 @@
+{
+  "iata": "SYD",
+  "blocks": {
+    "terminals": {
+      "title": "航站楼",
+      "hint": "免费巴士每15分钟一班",
+      "text": "T1 International与国内航站楼T2、T3之间不能步行。免费Terminal Transfer Bus于05:30至22:30每15分钟一班，车程10分钟。T1站点位于到达层Arrival Hall B外，T2及T3站点分别位于各航站楼到达层外。"
+    },
+    "kids": {
+      "title": "携儿童出行",
+      "hint": "T1儿童游乐区",
+      "text": "T1 International的儿童互动区设有触摸屏，位于10号登机口附近；McDonalds游乐场位于50号登机口附近，与Museum of Applied Arts and Science合作的数字互动区位于53号登机口附近。行李提取区附近有洗手间、家长护理室及哺乳区。"
+    },
+    "wifi": {
+      "title": "Wi‑Fi",
+      "hint": "T1免费Wi-Fi",
+      "text": "整个T1 International均可使用免费Wi-Fi。选择Sydney Airport Free WiFi，回答问题，阅读条款并点击Proceed。随后会显示广告消息并打开网站。"
+    }
+  }
+}

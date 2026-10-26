@@ -1,0 +1,90 @@
+{
+  "en": {
+    "replacements": 3,
+    "fields": 3,
+    "meaning": 1,
+    "numbers": 0,
+    "names": 0,
+    "style": 2
+  },
+  "de": {
+    "replacements": 5,
+    "fields": 3,
+    "meaning": 0,
+    "numbers": 0,
+    "names": 0,
+    "style": 3
+  },
+  "fr": {
+    "replacements": 5,
+    "fields": 3,
+    "meaning": 0,
+    "numbers": 0,
+    "names": 0,
+    "style": 3
+  },
+  "es": {
+    "replacements": 3,
+    "fields": 3,
+    "meaning": 2,
+    "numbers": 0,
+    "names": 0,
+    "style": 1
+  },
+  "it": {
+    "replacements": 2,
+    "fields": 2,
+    "meaning": 0,
+    "numbers": 0,
+    "names": 0,
+    "style": 2
+  },
+  "tr": {
+    "replacements": 4,
+    "fields": 4,
+    "meaning": 2,
+    "numbers": 0,
+    "names": 0,
+    "style": 2
+  },
+  "zh": {
+    "replacements": 3,
+    "fields": 2,
+    "meaning": 1,
+    "numbers": 0,
+    "names": 0,
+    "style": 1
+  },
+  "ja": {
+    "replacements": 3,
+    "fields": 3,
+    "meaning": 0,
+    "numbers": 0,
+    "names": 0,
+    "style": 3
+  },
+  "ko": {
+    "replacements": 4,
+    "fields": 4,
+    "meaning": 0,
+    "numbers": 0,
+    "names": 0,
+    "style": 4
+  },
+  "ar": {
+    "replacements": 1,
+    "fields": 1,
+    "meaning": 0,
+    "numbers": 0,
+    "names": 0,
+    "style": 1
+  },
+  "hi": {
+    "replacements": 3,
+    "fields": 3,
+    "meaning": 2,
+    "numbers": 0,
+    "names": 0,
+    "style": 1
+  }
+}

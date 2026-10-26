@@ -1,0 +1,30 @@
+{
+  "iata": "MEL",
+  "blocks": {
+    "transport": {
+      "title": "Autobuses a la ciudad",
+      "hint": "SkyBus y autobuses públicos",
+      "text": "SkyBus Melbourne City Express conecta el aeropuerto con la estación Southern Cross todos los días de 04:00 a 01:00, con paradas en los terminales 1, 3 y 4. Los billetes se venden por Internet y en máquinas junto a las paradas; se pueden comprar en efectivo en Prosegur y Smart Carte, en el vestíbulo de llegadas del terminal 2. Los autobuses públicos PTV salen del centro de transporte terrestre del terminal 4."
+    },
+    "storage": {
+      "title": "Consigna de equipajes",
+      "hint": "Terminales 2 y 4",
+      "text": "Las taquillas automáticas están a nivel del suelo en el aparcamiento del terminal 4, debajo de las escaleras mecánicas. Smartecarte, a nivel del suelo en el vestíbulo de llegadas del terminal 2, abre todos los días de 06:00 a medianoche y también ofrece impresión y envío de faxes."
+    },
+    "sleep": {
+      "title": "Hoteles junto a los terminales",
+      "hint": "Pasarelas y traslado",
+      "text": "PARKROYAL Melbourne Airport está conectado con los terminales nacionales y con el terminal internacional mediante pasarelas peatonales elevadas. Holiday Inn Melbourne Airport está a 400 m de los terminales y ofrece a sus huéspedes, bajo petición, un autobús gratuito al terminal y de vuelta."
+    },
+    "kids": {
+      "title": "Salas para padres",
+      "hint": "En todos los terminales",
+      "text": "Hay zonas para cambiar pañales en todos los terminales. En el terminal 2 están antes del control de seguridad en el nivel 1, junto a las zonas de facturación M y F, y después del control en el nivel 1, tras Duty Free y frente a las puertas de embarque 3 y 16. La sala a nivel del suelo en el vestíbulo de llegadas del terminal 2 está frente a la consigna Smartcarte."
+    },
+    "wifi": {
+      "title": "Wi-Fi gratuito",
+      "hint": "Terminales 2, 3 y 4",
+      "text": "La red gratuita Airport Free Wi-Fi está disponible en los terminales 2, 3 y 4, incluidas las zonas públicas y las salas de espera. Esta red no está disponible en el terminal 1, operado por Qantas. La conexión gratuita no está cifrada."
+    }
+  }
+}

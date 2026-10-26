@@ -1,0 +1,20 @@
+{
+  "iata": "MNL",
+  "blocks": {
+    "taxi": {
+      "title": "Taxi",
+      "hint": "Conservare il tagliando della corsa",
+      "text": "A NAIA operano Coupon Taxi, Yellow Metered Taxi e Regular Metered Taxi. Un addetto dell’aeroporto consegna al passeggero un tagliando di assegnazione, che va conservato e non dato all’autista. Per domande o reclami sulla corsa si possono contattare i numeri riportati sul tagliando."
+    },
+    "parking": {
+      "title": "Parcheggio",
+      "hint": "Senza prenotazione anticipata",
+      "text": "I parcheggi dei terminal funzionano esclusivamente in ordine di arrivo, senza prenotazione anticipata. L’auto può restare di notte o per più giorni; la sosta lunga è addebitata per ogni 24 ore. Si accettano contanti, GCash, PayMaya e carte bancarie."
+    },
+    "wifi": {
+      "title": "Wi‑Fi",
+      "hint": "Reti gratuite nei terminal",
+      "text": "In tutti i terminal di NAIA è disponibile il Wi-Fi gratuito: NAIA Free Go Wi-Fi di GLOBE per 3 ore al giorno, Smart per 1 ora al giorno e Converge per 2 ore al giorno. La pagina dell’aeroporto elenca le aree check-in, gate d’imbarco, arrivi e partenze. Nei terminal 1 e 2, la ricarica dei portatili è nell’area partenze dopo i controlli di sicurezza; quella dei telefoni è disponibile anche nell’area pubblica."
+    }
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "iata": "RUH",
+  "checked": "2026-10-26",
+  "blocks": [
+    {
+      "id": "sleep",
+      "title": "Riyadh Airport Marriott",
+      "hint": "Отель на Airport Road",
+      "text": "Riyadh Airport Marriott Hotel расположен на Airport Road у King Khalid International Airport. В отеле есть рестораны, открытый бассейн, фитнес-центр и прачечная; парковка на территории бесплатна. Заселение начинается в 15:00 с минимального возраста 18 лет, выезд — до 12:00; телефон: +966 11 8356300. По собственному FAQ отеля трансфер в аэропорт не предоставляется.",
+      "source": "marriott.com",
+      "url": "https://www.marriott.com/en-us/hotels/ruhap-riyadh-airport-marriott-hotel/overview/"
+    }
+  ]
+}

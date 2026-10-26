@@ -1,0 +1,25 @@
+{
+  "iata": "DUB",
+  "blocks": {
+    "transport": {
+      "title": "더블린행 버스",
+      "hint": "터미널 인근 승차 구역",
+      "text": "Dublin Express는 구역 1과 21에서 출발해 Temple Bar, Trinity College, O’Connell Street, Heuston역 등 더블린 도심 정류장으로 갑니다. Aircoach는 구역 2와 20에서 더블린, 카운티의 다른 지역, 북아일랜드로 출발합니다. Transport for Ireland 노선은 구역 11·13·15에서 운행합니다."
+    },
+    "taxi": {
+      "title": "택시",
+      "hint": "두 터미널 바깥",
+      "text": "두 터미널 바깥에서 24시간 택시를 이용할 수 있으며 승강장에는 배차 직원이 있습니다. 요금은 거리와 승차 날짜 및 시간에 따라 미터기로 결정되며, 승객은 미터기 영수증을 받을 권리가 있습니다. 공항이 제시한 더블린 도심까지의 참고 요금은 30–45 EUR입니다."
+    },
+    "storage": {
+      "title": "수하물 서비스",
+      "hint": "Smarte Carte",
+      "text": "Smarte Carte는 수하물 보관과 포장, 여행용품 판매, 수하물 발송을 제공합니다. 지점은 터미널 1 도착 홀의 정문을 지나 왼쪽과 터미널 2 출발 구역의 American Airlines 체크인 카운터 근처에 있습니다. 사무실 운영 시간은 매일 05:00–21:00입니다. 두 터미널의 수하물 카트는 무료입니다."
+    },
+    "wifi": {
+      "title": "Wi-Fi와 인쇄",
+      "hint": "네트워크 등록 불필요",
+      "text": "무료 Dublin Airport Wi-Fi 네트워크는 등록이 필요하지 않습니다. 기기 설정에서 선택하고 팝업 창에서 Connect를 누르세요. 인쇄는 터미널 1 도착 홀의 Smarte Carte Baggage Services에서 06:00–19:00에 이용할 수 있으며 최대 20페이지까지 10 EUR입니다."
+    }
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "iata": "FLL",
+  "blocks": {
+    "transport": {
+      "title": "BCT and Tri-Rail",
+      "hint": "Bus 1 and train",
+      "text": "BCT bus 1 runs daily; the airport stop is at Rental Car Center, Stop G. Free buses from the terminals to the Tri-Rail station in Dania Beach leave from the lower arrivals level: GTA-1 at the west end of Terminal 1, GTA-2 between Terminals 2 and 3, and GTA-3 between Terminals 3 and 4. Tri-Rail serves Miami-Dade, Broward and Palm Beach counties daily."
+    },
+    "terminals": {
+      "title": "Between terminals",
+      "hint": "Walking routes",
+      "text": "Free buses run around the clock only between Rental Car Center and the terminals; stops are marked on the lower arrivals level. Between terminals, you can use the sidewalks alongside the building, the pedestrian route through the parking area or the parking tram."
+    },
+    "storage": {
+      "title": "Baggage storage",
+      "hint": "Terminals 1 and 3",
+      "text": "In Terminal 1, baggage storage is before security on Level 2 near the exit from Concourse B; in Terminal 3, it is on the lower baggage claim level near the JetBlue baggage office. Both locations are open Monday to Friday 08:30–17:30 and Saturdays and Sundays 08:30–18:30. The Terminal 4 location is temporarily closed; service information is available on +1 954 359 5505."
+    },
+    "wifi": {
+      "title": "Free Wi-Fi",
+      "hint": "Terminals and Rental Car Center",
+      "text": "Free Wi-Fi is available in all terminals, concourses and Rental Car Center. The official networks are Airport-Wifi-Terminal_1, Airport-Wifi-Terminal_2, Airport-Wifi-Terminal_3, Airport-Wifi-Terminal_4 and Airport-Wifi-Rental_Car_Center. FLL access requires no payment; if you are asked for a bank card, the airport service accepts reports on +1 866 435 9355."
+    }
+  }
+}

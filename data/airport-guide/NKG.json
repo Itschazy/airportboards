@@ -1,0 +1,14 @@
+{
+  "iata": "NKG",
+  "checked": "2026-10-26",
+  "blocks": [
+    {
+      "id": "sleep",
+      "title": "Pullman Nanjing Lukou Airport",
+      "hint": "Между терминалами 1 и 2",
+      "text": "Pullman Nanjing Lukou Airport находится в здании аэропорта и соединяет терминалы 1 и 2, до каждого из них около 2 минут пешком. В отеле есть подогреваемый бассейн под стеклянной крышей, фитнес-центр, рестораны и табло рейсов в номерах. Заезд начинается в 14:00, выезд — до 12:00.",
+      "source": "all.accor.com",
+      "url": "https://all.accor.com/hotel/8737/index.en.shtml"
+    }
+  ]
+}

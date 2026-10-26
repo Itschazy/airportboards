@@ -1,0 +1,25 @@
+{
+  "iata": "DUB",
+  "blocks": {
+    "transport": {
+      "title": "Busse nach Dublin",
+      "hint": "Einstiegszonen an den Terminals",
+      "text": "Dublin Express fährt von den Zonen 1 und 21 zu Haltestellen im Zentrum von Dublin, darunter Temple Bar, Trinity College, O’Connell Street und der Bahnhof Heuston. Aircoach fährt von den Zonen 2 und 20 nach Dublin, in andere Teile des Countys und nach Nordirland. Die Linien von Transport for Ireland nutzen die Zonen 11, 13 und 15."
+    },
+    "taxi": {
+      "title": "Taxi",
+      "hint": "Vor beiden Terminals",
+      "text": "Taxis sind rund um die Uhr vor beiden Terminals verfügbar; an den Taxiständen sind Disponenten im Einsatz. Der Fahrpreis richtet sich nach Taxameter, Entfernung sowie Tag und Uhrzeit der Fahrt; Fahrgäste haben Anspruch auf eine Taxameterquittung. Als Richtwert ins Zentrum von Dublin nennt der Flughafen 30–45 EUR."
+    },
+    "storage": {
+      "title": "Gepäckservice",
+      "hint": "Smarte Carte",
+      "text": "Smarte Carte bietet Gepäckaufbewahrung und -verpackung, Reisezubehör zum Kauf sowie Gepäckversand. Die Stellen liegen in der Ankunftshalle von Terminal 1 links nach dem Haupteingang und im Abflugbereich von Terminal 2 beim Check-in-Schalter von American Airlines. Das Büro ist täglich von 05:00 bis 21:00 geöffnet. Gepäckwagen sind in beiden Terminals kostenlos."
+    },
+    "wifi": {
+      "title": "WLAN und Drucken",
+      "hint": "Keine Netzregistrierung",
+      "text": "Das kostenlose Netz Dublin Airport Wi-Fi erfordert keine Registrierung: in den Geräteeinstellungen wählen und im Pop-up Connect drücken. Drucken ist bei Smarte Carte Baggage Services in der Ankunftshalle von Terminal 1 von 06:00 bis 19:00 möglich; bis zu 20 Seiten kosten 10 EUR."
+    }
+  }
+}

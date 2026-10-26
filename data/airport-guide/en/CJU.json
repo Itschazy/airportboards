@@ -1,0 +1,25 @@
+{
+  "iata": "CJU",
+  "blocks": {
+    "transport": {
+      "title": "Bus 600",
+      "hint": "Via Jungmun to Seogwipo",
+      "text": "Bus 600 connects Jeju Airport with Jungmun and Seogwipo KAL Hotel. The first departure from the airport is at 06:00 and the last at 22:40, with intervals of 16–40 minutes. The operator, Samyeong Transportation, can be reached on +82 64 713 7000."
+    },
+    "taxi": {
+      "title": "Taxis",
+      "hint": "Indicative fares",
+      "text": "The airport estimates a regular taxi journey to Jeju City Hall at about 30 minutes and 9,000 KRW, and to Jungmun Tourism Complex at 80 minutes and 35,000 KRW. For Deluxe taxis on the same routes, the indicative fares are 16,200 KRW and 63,000 KRW respectively."
+    },
+    "kids": {
+      "title": "Baby care room and strollers",
+      "hint": "Domestic terminal, Level 3",
+      "text": "On Level 3 of the domestic terminal, to the left of Domestic Departure B, there is a baby care room with a changing area, washbasin, sofa and feeding room. A stroller can be borrowed from the Comprehensive Information Counter in the centre of the public waiting hall on Level 3 of the domestic terminal upon presentation of ID; it may be used in the public hall and must be returned after use."
+    },
+    "wifi": {
+      "title": "Wi-Fi and charging",
+      "hint": "Free KAC network",
+      "text": "Korea Airports Corporation provides free Wi-Fi in airport terminals. For details of device-charging services in Jeju, contact the Customer Service Team on +82 64 797 2566; KAC notes that charging services may be free or paid."
+    }
+  }
+}

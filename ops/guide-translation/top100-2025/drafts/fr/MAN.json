@@ -1,0 +1,25 @@
+{
+  "iata": "MAN",
+  "blocks": {
+    "transport": {
+      "title": "Train pour Manchester",
+      "hint": "Environ 20 minutes vers Piccadilly",
+      "text": "Les trains TransPennine Express et Northern Rail pour Manchester Piccadilly mettent environ 20 minutes et partent toutes les 10 minutes, tous les jours. La gare se trouve entre les terminaux 2 et 3 : à environ 10 minutes à pied du terminal 2 et 5 minutes du terminal 3. Des ascenseurs, escaliers mécaniques et tapis roulants relient les terminaux à la gare ; les billets sont vendus en ligne, aux automates et au comptoir d’information ferroviaire."
+    },
+    "storage": {
+      "title": "Consigne à bagages",
+      "hint": "Départs du terminal 2",
+      "text": "Excess Baggage Company propose une consigne à courte et longue durée dans la zone des départs du terminal 2. Les passagers au départ du terminal 2 peuvent aussi faire emballer leurs bagages et organiser leur livraison dans le pays ou à l’étranger."
+    },
+    "kids": {
+      "title": "Espaces à langer",
+      "hint": "Dans les toilettes ou à proximité",
+      "text": "Les espaces à langer se trouvent dans les toilettes pour femmes ou à proximité et sont équipés de chaises pour allaiter. L’allaitement est autorisé dans tout l’aéroport et ne se limite pas à ces salles."
+    },
+    "wifi": {
+      "title": "Wi-Fi gratuit",
+      "hint": "Jusqu’à 2 heures par 24 heures",
+      "text": "Le réseau gratuit _FreeWifi offre jusqu’à 2 heures de connexion par période de 24 heures. On peut s’y connecter avec un téléphone, une tablette ou un ordinateur portable ; le service est également disponible dans les salons et Runway Visitor Park."
+    }
+  }
+}

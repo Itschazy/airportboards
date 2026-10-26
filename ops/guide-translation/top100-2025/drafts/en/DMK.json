@@ -1,0 +1,20 @@
+{
+  "iata": "DMK",
+  "blocks": {
+    "transport": {
+      "title": "BMTA buses",
+      "hint": "Routes A1–A4",
+      "text": "A1 goes to Mo Chit 2 from 05:45 to midnight and A2 to Victory Monument from 06:00 to 23:00; both depart every 15 minutes and cost 30 THB. A3 to Lumpini Park and A4 to Sanam Luang run from 06:00 to 23:00 every 30 minutes, with a fare of 50 THB. Boarding points are in front of Service Hall and in the public arrivals area of Terminal 1 on Level 1."
+    },
+    "taxi": {
+      "title": "Metered taxis",
+      "hint": "Airport surcharge applies",
+      "text": "A surcharge of 50 THB is added to the metered fare, and passengers pay the expressway and special toll-road charges. Taxi counters are in the public arrivals areas on Level 1 of Terminals 1 and 2."
+    },
+    "wifi": {
+      "title": "Free Wi-Fi",
+      "hint": "60 minutes after connecting",
+      "text": "Select Airport Free Wi-Fi by NT, enter your email address and tick the box agreeing to the terms of use. After connecting successfully, click OK: free access is provided for 60 minutes."
+    }
+  }
+}

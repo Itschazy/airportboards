@@ -1,0 +1,25 @@
+{
+  "iata": "BOG",
+  "blocks": {
+    "transport": {
+      "title": "Nasıl gidilir",
+      "hint": "TransMilenio: Portal El Dorado",
+      "text": "TransMilenio ile gelirken Portal El Dorado’da inip 16-14 Airport besleme otobüsüne veya K86 otobüsüne aktarma yapılır. Havalimanının bilgisine göre her iki hat da doğrudan terminallere gider."
+    },
+    "terminals": {
+      "title": "Terminaller",
+      "hint": "T1–T2 ücretsiz transfer",
+      "text": "El Dorado’nun terminal 1 ve 2’si arasında ücretsiz transfer vardır. Her gün 04:00’ten gece yarısına kadar çalışır; hareket kabiliyeti kısıtlı yolcular için rampası bulunur."
+    },
+    "parking": {
+      "title": "Otopark",
+      "hint": "T1’de kısa ve uzun süreli otopark",
+      "text": "Short Stay Parking — Center, terminal 1’in merkez bölümünde, iç ve dış hat alanlarına erişim sağlayan konumdadır. Birkaç günlük park için terminal 1’deki Gate 1 yakınında Long Stay Parking — North bulunur; park yerlerinin bir bölümünün üstü kapalıdır. Otoparklarda otomobil ve bisiklet yerleri ile hareket kabiliyeti kısıtlı yolculara ayrılmış yerler vardır."
+    },
+    "wifi": {
+      "title": "Wi‑Fi",
+      "hint": "Airport_El_Dorado ücretsiz",
+      "text": "Havalimanında yolcu ve ziyaretçilere ücretsiz Airport_El_Dorado Wi-Fi sunulur. Bağlanmak için ağ seçilir, erişim portalına bilgiler girilir ve tarayıcı açılır. Bağlantı kesilirse gerektiği kadar ücretsiz yeniden bağlanılabilir. Ayrıca 1 cihaz için kesintisiz bağlantı sağlayan Premium WiFi satılır."
+    }
+  }
+}

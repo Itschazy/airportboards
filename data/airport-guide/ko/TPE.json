@@ -1,0 +1,20 @@
+{
+  "iata": "TPE",
+  "blocks": {
+    "transport": {
+      "title": "가는 방법",
+      "hint": "두 터미널의 MRT역",
+      "text": "A12 Terminal 1역과 A13 Terminal 2역에는 Taoyuan Airport MRT의 급행 및 일반 열차가 정차합니다. 급행과 일반 열차가 번갈아 약 7.5분마다 도착합니다. 버스는 터미널 1 도착 홀 B1 구역과 터미널 2의 1층 도착 홀 동쪽 야외 통로에서 출발합니다."
+    },
+    "storage": {
+      "title": "수하물 보관소",
+      "hint": "일반 구역 Pelican",
+      "text": "Taiwan Pelican Express는 터미널 일반 구역에서 수하물 보관 및 배송 서비스를 제공합니다. 터미널 1과 2의 1층에는 24시간 운영하는 지점이 있습니다. 터미널 2의 3층 지점은 06:00–23:30에, 터미널 1의 1층에 있는 다른 지점은 09:00–17:00에 운영합니다."
+    },
+    "wifi": {
+      "title": "Wi‑Fi",
+      "hint": "Airport Free WiFi",
+      "text": "공항은 터미널 일반 구역에서 무료 Wi-Fi를 제공합니다. 기기 설정에서 Airport Free WiFi 네트워크를 선택하고 브라우저를 열어 연결하세요."
+    }
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "iata": "OKA",
+  "blocks": {
+    "transport": {
+      "title": "Yui Rail monorail",
+      "hint": "13 minutes to Prefectural Office",
+      "text": "From Naha Airport station, the monorail takes about 13 minutes to Prefectural Office, 16 minutes to Makishi and 27 minutes to Shuri. Single-journey QR tickets are sold at machines and are valid for one journey on the day of purchase. Child fares apply to passengers under 12; up to two children under 6 may travel free with one adult, with child fares charged from the third child onward."
+    },
+    "storage": {
+      "title": "Baggage storage",
+      "hint": "Yamato on Levels 1 and 2",
+      "text": "Okinawa Yamato Transport counters are in domestic arrivals on Level 1 and near security checkpoint C on Level 2. The first is open from 07:30 to 20:00 and the second from 09:00 to 19:00; items are generally accepted for up to one month. The tax-inclusive price per item per day is 600 JPY for size S, 800 JPY for M and 1000 JPY for L; size is determined by the sum of length, width and height."
+    },
+    "kids": {
+      "title": "Baby care rooms",
+      "hint": "Changing facilities and hot water",
+      "text": "Baby care rooms are near toilets on Levels 1, 2 and 3 and by the international food court on Level 4. They have a changing table, a sink and a hot-water dispenser; men and women may use the shared area. Men should not enter the separate nursing rooms."
+    },
+    "wifi": {
+      "title": "Free Wi-Fi",
+      "hint": "Free_Wi-Fi_NAHA_Airport",
+      "text": "Free_Wi-Fi_NAHA_Airport is free and available in the terminal’s public areas, except for some shops and rooms. Coverage areas are listed on Levels 1–4: arrivals, departures and boarding waiting areas, check-in and restaurants. Read and agree to the terms of use before connecting."
+    }
+  }
+}

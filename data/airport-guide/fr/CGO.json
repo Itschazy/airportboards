@@ -1,0 +1,10 @@
+{
+  "iata": "CGO",
+  "blocks": {
+    "transport": {
+      "title": "Métro de l’aéroport",
+      "hint": "Station Xinzheng Airport",
+      "text": "La station Xinzheng Airport est desservie par les lignes Chengjiao et Zhengxu ; la sortie G est indiquée pour T2 et la sortie E pour T1. Sur la ligne Chengjiao vers Jiahe/Liuzhuang, le premier train part à 06:00 et le dernier à 22:15, avec les mêmes horaires les jours ouvrés et fériés. Sur la ligne Zhengxu vers Xuchang East, le premier train part à 06:14 et le dernier à 21:14. Renseignements métro : +86 371 55166166."
+    }
+  }
+}

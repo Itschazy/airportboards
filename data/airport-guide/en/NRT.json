@@ -1,0 +1,25 @@
+{
+  "iata": "NRT",
+  "blocks": {
+    "terminals": {
+      "title": "Between terminals",
+      "hint": "Free buses",
+      "text": "Free buses run between terminals before security; Terminals 2 and 3 are also connected by a pedestrian walkway. The circular route runs Terminal 1 → Terminal 3 → Terminal 2: journeys take approximately 14 minutes from 1 to 3, 3 minutes from 3 to 2 and 10 minutes from 2 to 1. Separate routes also connect Terminals 1 and 2, and Terminals 2 and 3."
+    },
+    "storage": {
+      "title": "Self-service luggage lockers",
+      "hint": "Rates depend on location",
+      "text": "The airport has lockers charged by the day and by time used. For daily-rate lockers, small, medium and large sizes cost JPY 400, JPY 600 and JPY 800 respectively per day of use; a new chargeable day starts at midnight, and the maximum stay is 8 days. Time-based rates apply in the Terminal 2 main building on Level B1 and the Terminal 3 main building on Level 2: up to 6 hours costs JPY 300 for a small locker, JPY 500 for medium and JPY 600 for large; each subsequent 24 hours costs JPY 400, JPY 600 and JPY 800 respectively."
+    },
+    "kids": {
+      "title": "Baby care rooms",
+      "hint": "In every terminal",
+      "text": "Baby care rooms are available in every terminal, with a breastfeeding booth, changing table, washbasin and hot water. Men can use all facilities except the breastfeeding booth."
+    },
+    "wifi": {
+      "title": "Wi-Fi and power outlets",
+      "hint": "In terminals and shuttle buses",
+      "text": "Free Wi-Fi is available in every terminal and on inter-terminal buses: select FreeWiFi-NARITA and agree to the terms of use and security caution on the connection page. The service does not require advance configuration of security settings; the airport recommends a VPN for those who need a secure connection. Power outlets in the terminals are free to use."
+    }
+  }
+}

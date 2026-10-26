@@ -1,0 +1,10 @@
+{
+  "iata": "SLC",
+  "blocks": {
+    "transport": {
+      "title": "TRAX Green Line",
+      "hint": "터미널 근처 역",
+      "text": "TRAX Green Line은 공항을 직접 운행하며 Airport Station은 터미널 바로 밖에 있습니다. UTA에 따르면 매일 05:21–23:21에 운행하며 City Center로 갈 수 있습니다. North Temple에서 Ogden 또는 Provo 방면 FrontRunner로 환승할 수 있지만 FrontRunner는 일요일에 운행하지 않습니다. UTA 문의 전화는 +1 801 7433882입니다."
+    }
+  }
+}

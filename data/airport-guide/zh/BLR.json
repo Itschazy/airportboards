@@ -1,0 +1,25 @@
+{
+  "iata": "BLR",
+  "blocks": {
+    "transport": {
+      "title": "交通方式",
+      "hint": "BMTC Vayu Vajra巴士",
+      "text": "配备空调的BMTC Vayu Vajra巴士连接机场与市区。上车时可用现金或UPI付款。BMTC咨询电话为+91 7760991250及+91 7760991269。"
+    },
+    "taxi": {
+      "title": "出租车",
+      "hint": "KSTDC及女司机出租车",
+      "text": "机场提供有空调及无空调出租车，无空调车辆仅由KSTDC运营。KSTDC也提供由女性驾驶的空调轿车。KSTDC出租车配备GPS、GPRS及收据打印机。"
+    },
+    "parking": {
+      "title": "停车",
+      "hint": "短暂停留免费",
+      "text": "1号航站楼P3及P4汽车停车场前15分钟免费，2号航站楼P2停车场前10分钟免费。1号航站楼提供电动车付费慢充，2号航站楼提供付费快充。两座航站楼到达旅客上车区的4W类车辆免费停留时间均限8分钟。"
+    },
+    "wifi": {
+      "title": "Wi‑Fi",
+      "hint": "BLR_FREE_WIFI",
+      "text": "使用本地SIM卡或国际漫游登录BLR_FREE_WIFI时，须在登录页面选择Local Phone Number，并输入资料及一次性验证码OTP。没有这类SIM卡时，可在国际到达区的WiFi Voucher Kiosk扫描护照照片页和登机牌，领取上网凭券。没有登机牌时，机场建议向虚拟信息服务台索取Wi-Fi PIN。凭券代码须在网络登录页面输入。"
+    }
+  }
+}

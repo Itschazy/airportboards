@@ -1,0 +1,25 @@
+{
+  "iata": "ATL",
+  "blocks": {
+    "transport": {
+      "title": "Getting there",
+      "hint": "Red and Gold lines",
+      "text": "MARTA Airport Station is in the Domestic Terminal between the North and South baggage claim areas. The Red and Gold lines serve the airport. After 20:30, travel from the airport to Buckhead, Medical Center, Dunwoody, Sandy Springs and North Springs may require a transfer to the Red Line at Lindbergh Center station."
+    },
+    "terminals": {
+      "title": "Terminals",
+      "hint": "Free shuttle round the clock",
+      "text": "A free shuttle runs from the arrivals level of the International Terminal to the Domestic Terminal baggage claim. It operates round the clock, and travel between the terminals takes 15 minutes. At the Domestic Terminal, the stop is outside baggage claim."
+    },
+    "lounges": {
+      "title": "Lounges",
+      "hint": "The Club ATL, 06:00–22:00",
+      "text": "The Club ATL is in Concourse F on the Mezzanine level after security and is open daily from 06:00 to 22:00. A Club Pass costs USD 50; access is also available through eligible Priority Pass and LoungeKey memberships. Club Pass holders can enter 3 hours before scheduled departure; Priority Pass and LoungeKey members can enter 2.5 hours before. Children under 2 enter free; a separate pass is required from age 2, and children aged 17 and under must be accompanied by an adult aged 18 or over."
+    },
+    "sleep": {
+      "title": "Where to sleep",
+      "hint": "Minute Suites after security",
+      "text": "Minute Suites are after TSA security: in Concourse B near gate B24, in Concourse E near the atrium and escalators, and in Concourse F near gate F6. Rooms have a sofa bed with a pull-out sleeping space, a Smart TV, free Wi-Fi, a work surface and charging ports. Pillows and blankets are provided on request. Bookings start at 1 hour; showers are available only in Concourse E."
+    }
+  }
+}

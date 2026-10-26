@@ -1,0 +1,25 @@
+{
+  "iata": "LIM",
+  "blocks": {
+    "taxi": {
+      "title": "Taxis",
+      "hint": "Schalter in den Ankunftsbereichen",
+      "text": "Taxischalter befinden sich in den inländischen und internationalen Ankunftsbereichen. Das Personal weist Fahrgast und Fahrer den Weg zu einem ausgewiesenen Parkplatz innerhalb des Flughafens; eine der veröffentlichten Servicenummern ist +51 1 4844001."
+    },
+    "lounges": {
+      "title": "The Club LIM Internacional",
+      "hint": "Ebene 2, internationale Abflüge",
+      "text": "Die Lounge The Club LIM Internacional befindet sich auf Ebene 2 im internationalen Abflugbereich. Sie bietet Ruheplätze, eine Bar, Duschen und Besprechungsräume. Laut Flughafen ist die Lounge täglich rund um die Uhr geöffnet."
+    },
+    "sleep": {
+      "title": "Sleepover",
+      "hint": "Ebene 2, Perú Plaza",
+      "text": "Sleepover befindet sich auf Ebene 2 der Perú Plaza neben Starbucks und Dunkin Donuts und ist rund um die Uhr geöffnet. Angeboten werden Duschen, Schlafkapseln für kurze Ruhepausen, Kabinen mit Etagenbetten, ein Coworkingbereich und inbegriffene Getränke."
+    },
+    "wifi": {
+      "title": "Kostenloses WLAN",
+      "hint": "Netzwerk .FreeWifiJorgeChavez",
+      "text": "Mit Telefon oder Laptop kann man sich kostenlos mit dem Netzwerk .FreeWifiJorgeChavez verbinden. Für den Zugang müssen die Nutzungsbedingungen auf der Verbindungsseite akzeptiert werden."
+    }
+  }
+}

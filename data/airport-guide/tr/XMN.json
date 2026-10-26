@@ -1,0 +1,25 @@
+{
+  "iata": "XMN",
+  "blocks": {
+    "taxi": {
+      "title": "Taksi",
+      "hint": "T3’te kapı 7, T4’te kapı 3",
+      "text": "Şehir taksileri geliş katında, T3’te 7 numaralı otomatik kapı ve T4’te 3 numaralı kapı yanında bekler. Quanzhou, Shishi ve Zhangzhou yolculukları için ayrı taksiler, T3 iç hatlar geliş salonu çıkışının yaklaşık 120 m batısındaki batı otoparkında bulunabilir. Günün her saati açık şikâyet hattı: +86 592 5615610."
+    },
+    "storage": {
+      "title": "Bagaj emaneti",
+      "hint": "T3 ve T4 geliş salonları",
+      "text": "Bagaj emanet masaları T3 ve T4 geliş salonlarındadır ve 05:30’dan gelen uçuşlar sona erene kadar açıktır. Ücret her 24 saat için hesaplanır; 24 saati tamamlamayan süreler tam dönem sayılır. Telefonlar: T3 — +86 592 5706036, T4 — +86 592 5706016."
+    },
+    "wifi": {
+      "title": "Terminallerde Wi-Fi",
+      "hint": "Ücretsiz ve ücretli ağlar",
+      "text": "Terminallerin yolcu alanlarında CMCC-XMAirport-free, ChinaUnicom ve Chinanet ağları vardır. China Mobile ve China Unicom bağlantıları ücretsiz, China Telecom ücretlidir; ödeme koşulları işletmecinin giriş sayfasında gösterilir. Wi-Fi, uçuş hizmetlerinin başlangıcından bitimine kadar kullanılabilir."
+    },
+    "lounges": {
+      "title": "Üst sınıf yolcular için salonlar",
+      "hint": "Sınıfa ve uçuşa göre erişim",
+      "text": "T4 iç hatlar salonu güvenlik kontrolünden sonra solda, tabelalar takip edilerek bulunur; yer hizmetlerini havalimanının verdiği uçuşların first ve business sınıfı yolcularına ücretsiz hizmet verir. Dinlenme, yiyecek ve internet dahildir; salon 06:00’da açılır ve son first sınıfı yolcunun binişinden sonra kapanır. Havalimanının dış hatlar salonu T3’te 17 numaralı biniş kapısının yanındadır ve havalimanının hizmet verdiği uçuşların first ve business sınıfı yolcularına aynı hizmetleri sunar."
+    }
+  }
+}

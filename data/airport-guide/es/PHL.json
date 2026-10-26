@@ -1,0 +1,25 @@
+{
+  "iata": "PHL",
+  "blocks": {
+    "transport": {
+      "title": "Tren al centro",
+      "hint": "SEPTA Airport Regional Rail",
+      "text": "Los trenes SEPTA Airport Regional Rail conectan el aeropuerto con el centro de Filadelfia cada 30 minutos. Las paradas del aeropuerto sirven a las terminales A, B, C/D y E/F; todas las estaciones de esta línea son accesibles para personas en silla de ruedas. En William H. Gray III 30th Street se puede hacer transbordo a Amtrak y NJ Transit Atlantic City Line. SEPTA acepta tarjetas sin contacto Visa, Mastercard, Discover y AMEX, además de pagos móviles."
+    },
+    "taxi": {
+      "title": "Taxis",
+      "hint": "Zona 5 tras recoger el equipaje",
+      "text": "Tras recoger el equipaje, siga las señales Ground Transportation / Taxis / Zone 5; quienes llegan a A-West deben bajar a Ground Floor. El trayecto del aeropuerto a la zona Center City definida cuesta 32 USD para el primer pasajero, más 1 USD por cada pasajero adicional mayor de 12 años. No se añade la tasa de salida del aeropuerto a esta tarifa fija; las propinas no están incluidas. Todos los taxis aceptan tarjetas de crédito."
+    },
+    "kids": {
+      "title": "Alimentación del bebé",
+      "hint": "Mamava después de seguridad",
+      "text": "Hay cabinas Mamava gratuitas después del control de seguridad en A-West, en el paso B/C y en las terminales E y F; cuentan con bancos, mesa abatible, enchufe y puerta con cierre. La aplicación Mamava permite abrir la cabina y consultar su disponibilidad. En Minute Suites, en el paso entre A-East y B después de seguridad, las madres lactantes pueden usar una habitación privada gratis durante los primeros 30 minutos; teléfono: +1 215 9371076."
+    },
+    "wifi": {
+      "title": "Wi-Fi gratuito",
+      "hint": "Sin límite de datos",
+      "text": "El aeropuerto ofrece Wi-Fi gratuito de AT&T sin límite de datos a todos los visitantes. Active el Wi-Fi en los ajustes del dispositivo y seleccione la red gratuita del aeropuerto PHL; para conectarse se necesita un dispositivo compatible con Wi-Fi."
+    }
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "iata": "IAH",
+  "checked": "2026-10-26",
+  "blocks": [
+    {
+      "id": "transport",
+      "title": "Как доехать",
+      "hint": "Downtown Direct — 4,50 USD",
+      "text": "Автобус METRO 500 IAH Downtown Direct без остановок связывает аэропорт с George R. Brown Convention Center. Посадка — в терминале E на уровне 2 у двери E201 рядом с зоной посадки Ride App Pick-Up. Поездка в одну сторону стоит 4,50 USD; автобус ходит ежедневно с 05:30 до 20:00 каждые 30 минут. Предусмотрены места для багажа, доступность для маломобильных пассажиров и бесплатный Wi‑Fi.",
+      "source": "fly2houston.com",
+      "url": "https://www.fly2houston.com/iah/ground-transportation/metro-downtown-direct/"
+    },
+    {
+      "id": "sleep",
+      "title": "Где поспать",
+      "hint": "Minute Suites после досмотра",
+      "text": "Minute Suites находится в терминале C у выхода на посадку C14 после досмотра. Пассажирам предлагают отдельное пространство для сна, отдыха и работы, а также душ.",
+      "source": "fly2houston.com",
+      "url": "https://www.fly2houston.com/iah/visitor-information/services/"
+    },
+    {
+      "id": "kids",
+      "title": "С ребёнком",
+      "hint": "Mother’s Rooms и Mamava",
+      "text": "В IAH предусмотрены комнаты и капсулы Mamava для кормления и сцеживания, детские комнаты и пеленальные столики. Mother’s Rooms находятся в терминале A у выходов на посадку A1 и A17 и в терминале C у C5. Капсулы Mamava есть в терминале B у B21, в терминале C у C34 и в терминале E у E12; детская комната в терминале D — у D15.",
+      "source": "fly2houston.com",
+      "url": "https://www.fly2houston.com/iah/visitor-information/services/"
+    },
+    {
+      "id": "wifi",
+      "title": "Wi‑Fi",
+      "hint": "Free Airport WIFI",
+      "text": "Бесплатный Wi‑Fi доступен во всех терминалах IAH, включая парковочные здания. Нужно выбрать сеть Free Airport WIFI, дождаться страницы входа, принять условия и нажать Submit. Телефон поддержки — 1-844-831-0999.",
+      "source": "fly2houston.com",
+      "url": "https://www.fly2houston.com/iah/visitor-information/services/"
+    }
+  ]
+}

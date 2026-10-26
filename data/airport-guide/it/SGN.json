@@ -1,0 +1,20 @@
+{
+  "iata": "SGN",
+  "blocks": {
+    "lounges": {
+      "title": "Sale business",
+      "hint": "Dopo i controlli nel T2",
+      "text": "Apricot Business Lounge si trova dopo i controlli di sicurezza nell’area partenze internazionali del terminal 2 ed è aperta 24 ore su 24. La visita dura al massimo 4 ore consecutive: il prezzo per i passeggeri di più di 12 anni è 945.000 VND, per i bambini da 5 a 12 anni inclusi 472.500 VND. La lounge offre buffet, bevande, poltrone massaggianti, docce e Wi-Fi."
+    },
+    "sleep": {
+      "title": "Dove dormire",
+      "hint": "Vicino al gate 27",
+      "text": "SASCO Sleep Zone si trova dopo i controlli di sicurezza nella sala partenze internazionali del terminal 2, vicino al gate 27, ed è aperta 24 ore su 24. Una camera costa 180.000 VND all’ora; l’utilizzo minimo è di 2 ore. La camera ha letto singolo, ventilatore e presa elettrica; vengono forniti un asciugamano rinfrescante e una bottiglia d’acqua minerale."
+    },
+    "wifi": {
+      "title": "Wi‑Fi",
+      "hint": "Nelle aree pubbliche",
+      "text": "La rete gratuita FreeWifi TanSonNhat AirPort è disponibile nelle aree pubbliche dei terminal nazionali e internazionale. La connessione funziona 24 ore su 24 senza limiti di tempo."
+    }
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "iata": "XMN",
+  "blocks": {
+    "taxi": {
+      "title": "Taxis",
+      "hint": "Tür 7 in T3, Tür 3 in T4",
+      "text": "Stadttaxis warten auf der Ankunftsebene an der automatischen Tür 7 in T3 und an Tür 3 in T4. Für Fahrten nach Quanzhou, Shishi und Zhangzhou gibt es separate Taxis auf dem westlichen Parkplatz, etwa 120 m westlich des Ausgangs aus der Inlandsankunftshalle von T3. Die Beschwerdehotline ist rund um die Uhr unter +86 592 5615610 erreichbar."
+    },
+    "storage": {
+      "title": "Gepäckaufbewahrung",
+      "hint": "Ankunftshallen von T3 und T4",
+      "text": "Die Gepäckaufbewahrungsschalter liegen in den Ankunftshallen von T3 und T4 und sind von 05:30 bis zum Ende der ankommenden Flüge geöffnet. Abgerechnet wird je 24 Stunden; angefangene 24 Stunden zählen als voller Zeitraum. Telefon: T3 — +86 592 5706036, T4 — +86 592 5706016."
+    },
+    "wifi": {
+      "title": "WLAN in den Terminals",
+      "hint": "Kostenloses und bezahltes WLAN",
+      "text": "In den Passagierbereichen der Terminals sind die Netzwerke CMCC-XMAirport-free, ChinaUnicom und Chinanet verfügbar. Der Zugang über China Mobile und China Unicom ist kostenlos, China Telecom ist kostenpflichtig; die Zahlungsbedingungen werden auf der Anmeldeseite des Anbieters angezeigt. WLAN steht vom Beginn bis zum Ende des Flugbetriebs zur Verfügung."
+    },
+    "lounges": {
+      "title": "Lounges für Premiumreisende",
+      "hint": "Zugang nach Reiseklasse und Flug",
+      "text": "Die Inlandslounge in T4 liegt links nach der Sicherheitskontrolle und ist ausgeschildert. Sie steht First- und Business-Class-Passagieren von Flügen, deren Bodenabfertigung der Flughafen übernimmt, kostenlos zur Verfügung. Ruhegelegenheiten, Speisen und Internet sind enthalten; sie öffnet um 06:00 und schliesst nach dem Boarding des letzten First-Class-Passagiers. Die internationale Lounge des Flughafens liegt in T3 beim Gate 17 und bietet dieselben Leistungen für First- und Business-Class-Passagiere der vom Flughafen abgefertigten Flüge."
+    }
+  }
+}

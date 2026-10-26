@@ -1,0 +1,30 @@
+{
+  "iata": "MUC",
+  "blocks": {
+    "transport": {
+      "title": "Nasıl gidilir",
+      "hint": "S1, S8 ve Lufthansa Express Bus",
+      "text": "S-Bahn S1 ve S8 hatları havalimanını Münih merkezine bağlar; ana tren istasyonuna yolculuk yaklaşık 40 dakika sürer. S8 günün her saati çalışır: yaklaşık 01:00–04:00 arasında 40 dakikada bir, diğer saatlerde 20 dakikada bir sefer yapar. S1 yaklaşık 03:00’ten gece yarısına kadar 20 dakikada bir, hafta sonları ve tatil günlerinde ise günün her saati çalışır. Havalimanı ile ana tren istasyonu arasında Munich North (Schwabing) üzerinden çalışan Lufthansa Express Bus, 20 dakikada bir kalkar; istasyon ile havalimanı arasındaki yolculuk 45 dakika sürer."
+    },
+    "storage": {
+      "title": "Emanet",
+      "hint": "Munich Airport Center, Kat 03",
+      "text": "Bagaj muhafazası Munich Airport Center’da Kat 03’te, halka açık alandadır. Her gün 05:00–23:30 arasında açıktır; telefon +49 89 975 214 75."
+    },
+    "sleep": {
+      "title": "Nerede uyunur",
+      "hint": "napcabs ve napcabsXL",
+      "text": "napcabs uyku kabinleri terminal 2’de güvenlik kontrolünden sonra ve halka açık alanda bulunur; içlerinde ayrı bir çalışma alanı ve ücretsiz internet vardır. İki kişilik queen-size yatak, masa ve koltuk bulunan napcabsXL, terminal 2’de G06 numaralı kapının yanındadır. napcabs ücreti 06:00–22:00 arasında saatte 17 EUR, 22:00–06:00 arasında saatte 12 EUR’dur; asgari ücret 34 EUR’dur. napcabsXL için aynı saatlerdeki ücretler saatte 24,50 EUR ve 18 EUR, asgari ücret ise 49 EUR’dur."
+    },
+    "kids": {
+      "title": "Çocukla",
+      "hint": "Oyun alanları, MAC Kat 03",
+      "text": "Halka açık ve erişimi kısıtlı bölümlerde oyun alanları vardır. Munich Airport Center’da Kat 03’teki oyun alanı halka açık alandadır ve günün her saati açıktır. Havalimanı, ebeveynlerden ve refakatçilerden çocukları oyun sırasında gözetmelerini ve oyun alanından ayrılırken onlara eşlik etmelerini ister."
+    },
+    "wifi": {
+      "title": "Wi‑Fi",
+      "hint": "Free Wifi – Munich Airport",
+      "text": "Havalimanında Free Wifi – Munich Airport ağı üzerinden ücretsiz Wi-Fi sunulur. Erişim için e-posta adresi ve kullanım koşullarının kabulü gerekir."
+    }
+  }
+}

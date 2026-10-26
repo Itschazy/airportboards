@@ -1,0 +1,20 @@
+{
+  "iata": "HAN",
+  "blocks": {
+    "terminals": {
+      "title": "터미널 간 이동",
+      "hint": "무료 NIA Shuttle Bus",
+      "text": "무료 NIA Shuttle Bus는 국내선 터미널 T1과 국제선 터미널 T2를 연결합니다. T1 승차장은 A윙의 1층에 있습니다."
+    },
+    "kids": {
+      "title": "가족 서비스",
+      "hint": "유모차와 아기 돌봄실",
+      "text": "보안검색 후 무료 유모차는 T1과 E 홀의 2층, T2의 2층과 3층에서 이용할 수 있습니다. T2 보안검색 후 3층에는 아기 돌봄실 2곳이 있으며 터미널 내 일부 화장실에도 기저귀 교환대가 있습니다."
+    },
+    "wifi": {
+      "title": "무료 Wi-Fi",
+      "hint": "T1·T2 대기 구역",
+      "text": "국내선 및 국제선 터미널의 승객 대기 구역에서 무료 Wi-Fi를 이용할 수 있습니다. @Airport Free Wifi - Goldsun을 선택하고 자동으로 열리는 페이지에서 Connect to the Internet을 누르세요. T2 확장 구역의 장비 설치는 아직 진행 중입니다."
+    }
+  }
+}

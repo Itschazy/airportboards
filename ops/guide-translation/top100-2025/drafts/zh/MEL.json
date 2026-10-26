@@ -1,0 +1,30 @@
+{
+  "iata": "MEL",
+  "blocks": {
+    "transport": {
+      "title": "前往市区的巴士",
+      "hint": "SkyBus及公共巴士",
+      "text": "SkyBus Melbourne City Express每日04:00至01:00连接机场与Southern Cross站，站点位于1号、3号及4号航站楼。可在线或在站点自动售票机购票；现金购票可前往2号航站楼到达大厅的Prosegur及Smart Carte。PTV公共巴士从4号航站楼地面交通枢纽发车。"
+    },
+    "storage": {
+      "title": "行李寄存",
+      "hint": "2号及4号航站楼",
+      "text": "自助行李寄存柜位于4号航站楼停车场地面层、自动扶梯下方。2号航站楼到达大厅地面层的Smartecarte服务点每日06:00至午夜营业，也提供打印及传真发送服务。"
+    },
+    "sleep": {
+      "title": "航站楼附近酒店",
+      "hint": "步行通道及接送",
+      "text": "PARKROYAL Melbourne Airport通过高架步行通道连接国内及国际航站楼。Holiday Inn Melbourne Airport距航站楼400米，可应住客要求提供免费往返航站楼巴士。"
+    },
+    "kids": {
+      "title": "家长护理室",
+      "hint": "各航站楼均有",
+      "text": "各航站楼均有尿布更换设施。2号航站楼安检前1楼的设施位于M及F值机区附近，安检后1楼的设施位于Duty Free之后及3号、16号登机口对面。2号航站楼到达大厅地面层的护理室位于Smartcarte行李寄存处对面。"
+    },
+    "wifi": {
+      "title": "免费Wi-Fi",
+      "hint": "2号、3号及4号航站楼",
+      "text": "免费Airport Free Wi-Fi网络覆盖2号、3号及4号航站楼，包括公共区域和候机厅。Qantas运营的1号航站楼不提供此网络。免费连接未加密。"
+    }
+  }
+}

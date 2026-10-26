@@ -1,0 +1,25 @@
+{
+  "iata": "PMI",
+  "blocks": {
+    "transport": {
+      "title": "Autobuses a Palma",
+      "hint": "Líneas A1, A2 y 34",
+      "text": "La línea A1 conecta el aeropuerto con el centro de Palma, A2 con S’Arenal y 34 con Hospital Son Espases. Las paradas A1 del aeropuerto están en el nivel 0 de llegadas y en el nivel 2 de salidas."
+    },
+    "taxi": {
+      "title": "Taxi",
+      "hint": "Parada en el nivel 0",
+      "text": "La parada señalizada de taxis está en llegadas, nivel 0 del terminal. El teléfono del servicio de taxis para pasajeros con movilidad reducida es +34 971 703 529."
+    },
+    "lounges": {
+      "title": "Valldemossa VIP Lounge",
+      "hint": "Salidas, nivel 4",
+      "text": "Valldemossa VIP Lounge está en el nivel 4, en la zona comercial del área de embarque, accesible solo a pasajeros de vuelos Schengen y no Schengen. La sala abre de 05:00 a medianoche; la estancia máxima es de 3 horas inmediatamente antes de la salida programada. Ofrece comida, puestos de trabajo, impresora e información de vuelos."
+    },
+    "wifi": {
+      "title": "Wi-Fi gratuito",
+      "hint": "Confirme su correo electrónico",
+      "text": "Conéctese a Airport Free Wifi Aena y abra la página de bienvenida como invitado con un correo electrónico, o acceda a Aena Club. Dispone de 15 minutos de acceso gratuito para confirmar el correo; tras confirmarlo no hay límite de tiempo."
+    }
+  }
+}

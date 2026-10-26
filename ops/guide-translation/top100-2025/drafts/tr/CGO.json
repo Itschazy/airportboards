@@ -1,0 +1,10 @@
+{
+  "iata": "CGO",
+  "blocks": {
+    "transport": {
+      "title": "Havalimanı metrosu",
+      "hint": "Xinzheng Airport istasyonu",
+      "text": "Xinzheng Airport istasyonuna Chengjiao ve Zhengxu hatları hizmet verir; G çıkışı T2, E çıkışı T1 için işaretlidir. Chengjiao hattında Jiahe/Liuzhuang yönüne ilk tren 06:00’da, son tren 22:15’te kalkar; iş günleri ve tatil günlerindeki saatler aynıdır. Zhengxu hattında Xuchang East yönüne ilk tren 06:14’te, son tren 21:14’te kalkar. Metro danışma: +86 371 55166166."
+    }
+  }
+}

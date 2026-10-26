@@ -1,0 +1,10 @@
+{
+  "iata": "BOM",
+  "blocks": {
+    "lounges": {
+      "title": "Business salonları",
+      "hint": "Aviserv West, terminal 2 geliş",
+      "text": "Aviserv West salonu, terminal 2 gelen yolcu alanında Gate A yönündedir. Yiyecek ve içecekler, duşlar, uyku kapsülleri ve ayrı bir dinlenme alanı sunar."
+    }
+  }
+}

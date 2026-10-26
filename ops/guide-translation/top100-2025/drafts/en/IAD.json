@@ -1,0 +1,25 @@
+{
+  "iata": "IAD",
+  "blocks": {
+    "transport": {
+      "title": "Silver Line metro",
+      "hint": "Walkway from the main terminal",
+      "text": "The Silver Line station is linked to the main terminal by a covered pedestrian tunnel with moving walkways; signs lead there from the check-in and baggage claim levels. The line serves central Washington and other parts of the region. At the fare gates, you can pay with a contactless bank card or mobile wallet: use the same card or device to tap in and out."
+    },
+    "terminals": {
+      "title": "AeroTrain",
+      "hint": "After TSA security",
+      "text": "The automated AeroTrain links the main terminal with remote gate areas for domestic and international departures and domestic arrivals. The main terminal station is immediately after TSA security; travel between neighbouring stations takes less than 2 minutes. Most international arriving passengers do not use AeroTrain because they must first complete US customs procedures."
+    },
+    "kids": {
+      "title": "Nursing rooms",
+      "hint": "Before and after security",
+      "text": "Before security, nursing rooms are on the arrivals level near the toilets opposite baggage belts 2, 6, 11 and 14. After security they are near boarding gates A20, B70, C11 and D1; the room at B70 has a private toilet, and the one at C11 has a sink. The rooms are locked: contact an information desk or call +1 703 5722730 for access."
+    },
+    "wifi": {
+      "title": "Free Wi-Fi",
+      "hint": "#IAD Free WiFi network",
+      "text": "Free Wi-Fi is available in the main terminal and gate areas under the name #IAD Free WiFi. Enter your email address and ZIP code on the connection page; international visitors can select Yes to skip the ZIP code. After reviewing the terms, click Connect."
+    }
+  }
+}

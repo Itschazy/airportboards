@@ -1,0 +1,25 @@
+{
+  "iata": "CTU",
+  "blocks": {
+    "transport": {
+      "title": "Metro",
+      "hint": "Lines 10, 19 and 30",
+      "text": "Metro line 10 serves both terminals; in Terminal 2, access is on Level B2 through passages L2, L3 and L4. Shuangliu Airport Terminal 2 East station is served by lines 19 and 30, with access through passage L3 on Level B2 of Terminal 2. Line 19 connects it with Tianfu Airport Terminal 1 & 2 and Tianfu Airport North."
+    },
+    "taxi": {
+      "title": "Taxi",
+      "hint": "Outside arrivals",
+      "text": "At Terminal 1, the taxi rank is about 50 m south, outside door 6 on the arrivals level. At Terminal 2, boarding is near the pedestrian crossing on the arrivals level; the transport supervision telephone number is 12328."
+    },
+    "terminals": {
+      "title": "Between terminals",
+      "hint": "Free bus",
+      "text": "A free bus operates between Terminals 1 and 2, while the walk takes about 8–10 minutes. The Terminal 1 stop is on the south forecourt outside door 3; the Terminal 2 stop is on the north forecourt outside door 9."
+    },
+    "storage": {
+      "title": "Baggage storage",
+      "hint": "ID and screening required",
+      "text": "Terminal 1 baggage storage is north of security area B; Terminal 2 storage is behind check-in island P. Both open 2 hours before their terminal’s first departure and close after its departures finish. A small locker costs CNY 8 for up to 6 hours, CNY 13 for up to 12 hours and CNY 18 for up to 24 hours, then an additional CNY 2 for each subsequent 6 hours; periods under 6 hours are charged as 6 hours. Valid ID is required at drop-off and baggage is screened; collection requires the receipt and the same ID presented at drop-off. Power banks and lithium batteries are not accepted for storage."
+    }
+  }
+}

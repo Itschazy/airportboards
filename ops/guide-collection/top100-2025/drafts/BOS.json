@@ -1,0 +1,38 @@
+{
+  "iata": "BOS",
+  "checked": "2026-10-26",
+  "blocks": [
+    {
+      "id": "transport",
+      "title": "Как доехать",
+      "hint": "Silver Line SL1 до South Station",
+      "text": "Автобус MBTA Silver Line 1 (SL1) останавливается у всех терминалов и связывает аэропорт с South Station. Поездка из аэропорта в центр бесплатна и включает бесплатную пересадку на Red Line. До Blue Line можно добраться через Airport Station, от которой к терминалам ходят бесплатные аэропортовые шаттлы.",
+      "source": "massport.com",
+      "url": "https://www.massport.com/logan-airport/getting-to-logan/public-transportation"
+    },
+    {
+      "id": "terminals",
+      "title": "Терминалы",
+      "hint": "Бесплатные шаттлы Massport",
+      "text": "Бесплатные шаттлы Massport связывают терминалы с Rental Car Center, причалом водного транспорта и Airport Station линии Blue Line. Автобусы оборудованы низким полом, багажными полками и подъёмниками для инвалидных колясок; основные рейсы к терминалам, станции метро и прокату обычно идут каждые 5–6 минут. Маршрут 11 соединяет терминалы A, B, C и E ежедневно с 09:00 до 22:00. Остановки находятся у бордюра на нижнем уровне каждого терминала и обозначены Shuttle Bus.",
+      "source": "massport.com",
+      "url": "https://www.massport.com/logan-airport/getting-to-logan/on-airport-shuttle"
+    },
+    {
+      "id": "kids",
+      "title": "С ребёнком",
+      "hint": "Kidport после досмотра",
+      "text": "Игровые зоны Kidport находятся после досмотра: в спутниковом здании терминала A у выхода на посадку A18, в терминале B у B16 и в торговом переходе к выходам B30–B36, в терминале C перед C25. В каждом терминале есть комнаты для кормления и ухода за малышами. Семейные туалеты доступны до и после досмотра во всех терминалах; в них есть туалет, раковина и откидной пеленальный столик.",
+      "source": "massport.com",
+      "url": "https://www.massport.com/logan-airport/at-the-airport/passenger-services"
+    },
+    {
+      "id": "wifi",
+      "title": "Wi‑Fi",
+      "hint": "Бесплатная сеть BOSWifi",
+      "text": "В аэропорту предоставляется бесплатный Wi‑Fi. Для подключения нужно выбрать сеть BOSWifi и принять условия использования.",
+      "source": "massport.com",
+      "url": "https://www.massport.com/logan-airport/at-the-airport/passenger-services"
+    }
+  ]
+}

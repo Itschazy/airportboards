@@ -1,0 +1,150 @@
+[
+  {
+    "bodyOverflow": false,
+    "dir": "ltr",
+    "open": true,
+    "overflow": false,
+    "sourceRows": 0,
+    "url": "/ru/airport/TFU",
+    "width": 375,
+    "closed": true
+  },
+  {
+    "bodyOverflow": false,
+    "dir": "ltr",
+    "open": true,
+    "overflow": false,
+    "sourceRows": 0,
+    "url": "/en/airport/STN",
+    "width": 375,
+    "closed": true
+  },
+  {
+    "bodyOverflow": false,
+    "dir": "ltr",
+    "open": true,
+    "overflow": false,
+    "sourceRows": 0,
+    "url": "/de/airport/SFO",
+    "width": 375,
+    "closed": true
+  },
+  {
+    "bodyOverflow": false,
+    "dir": "ltr",
+    "open": true,
+    "overflow": false,
+    "sourceRows": 0,
+    "url": "/fr/airport/OKA",
+    "width": 375,
+    "closed": true
+  },
+  {
+    "bodyOverflow": false,
+    "dir": "ltr",
+    "open": true,
+    "overflow": false,
+    "sourceRows": 0,
+    "url": "/es/airport/PHL",
+    "width": 375,
+    "closed": true
+  },
+  {
+    "bodyOverflow": false,
+    "dir": "ltr",
+    "open": true,
+    "overflow": false,
+    "sourceRows": 0,
+    "url": "/it/airport/ORY",
+    "width": 375,
+    "closed": true
+  },
+  {
+    "bodyOverflow": false,
+    "dir": "ltr",
+    "open": true,
+    "overflow": false,
+    "sourceRows": 0,
+    "url": "/tr/airport/AUH",
+    "width": 375,
+    "closed": true
+  },
+  {
+    "bodyOverflow": false,
+    "dir": "ltr",
+    "open": true,
+    "overflow": false,
+    "sourceRows": 0,
+    "url": "/zh/airport/XMN",
+    "width": 375,
+    "closed": true
+  },
+  {
+    "bodyOverflow": false,
+    "dir": "ltr",
+    "open": true,
+    "overflow": false,
+    "sourceRows": 0,
+    "url": "/ja/airport/FUK",
+    "width": 375,
+    "closed": true
+  },
+  {
+    "bodyOverflow": false,
+    "dir": "ltr",
+    "open": true,
+    "overflow": false,
+    "sourceRows": 0,
+    "url": "/ko/airport/CJU",
+    "width": 375,
+    "closed": true
+  },
+  {
+    "bodyOverflow": false,
+    "dir": "rtl",
+    "open": true,
+    "overflow": false,
+    "sourceRows": 0,
+    "url": "/ar/airport/LIM",
+    "width": 375,
+    "closed": true
+  },
+  {
+    "bodyOverflow": false,
+    "dir": "ltr",
+    "open": true,
+    "overflow": false,
+    "sourceRows": 0,
+    "url": "/hi/airport/CAI",
+    "width": 375,
+    "closed": true
+  },
+  {
+    "bodyOverflow": false,
+    "open": true,
+    "overflow": false,
+    "route": "/hi/airport/CAI",
+    "width": 320
+  },
+  {
+    "bodyOverflow": false,
+    "open": true,
+    "overflow": false,
+    "route": "/ar/airport/URC",
+    "width": 320
+  },
+  {
+    "bodyOverflow": false,
+    "open": true,
+    "overflow": false,
+    "route": "/ko/airport/STN",
+    "width": 430
+  },
+  {
+    "bodyOverflow": false,
+    "open": true,
+    "overflow": false,
+    "route": "/it/airport/ORY",
+    "width": 375
+  }
+]

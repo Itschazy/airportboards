@@ -1,0 +1,25 @@
+{
+  "iata": "FLL",
+  "blocks": {
+    "transport": {
+      "title": "BCT y Tri-Rail",
+      "hint": "Autobús 1 y tren",
+      "text": "El autobús BCT 1 circula a diario; la parada del aeropuerto está en Rental Car Center, Stop G. Desde los terminales salen autobuses gratuitos hacia la estación Tri-Rail de Dania Beach desde el nivel inferior de llegadas: GTA-1 en el extremo oeste de la terminal 1, GTA-2 entre las terminales 2 y 3 y GTA-3 entre las terminales 3 y 4. Tri-Rail presta servicio diario a los condados de Miami-Dade, Broward y Palm Beach."
+    },
+    "terminals": {
+      "title": "Entre terminales",
+      "hint": "Rutas peatonales",
+      "text": "Los autobuses gratuitos circulan las 24 horas únicamente entre Rental Car Center y las terminales; las paradas están señalizadas en el nivel inferior de llegadas. Entre terminales se puede ir por las aceras junto al edificio, por la ruta peatonal a través del aparcamiento o en el tranvía del aparcamiento."
+    },
+    "storage": {
+      "title": "Consigna de equipaje",
+      "hint": "Terminales 1 y 3",
+      "text": "En la terminal 1, la consigna está antes del control de seguridad, en el nivel 2, cerca de la salida de la zona de embarque B; en la terminal 3, en el nivel inferior de recogida de equipaje, cerca de la oficina de equipajes de JetBlue. Ambos puntos abren de lunes a viernes de 08:30 a 17:30 y los sábados y domingos de 08:30 a 18:30. El punto de la terminal 4 está temporalmente cerrado; se puede consultar el servicio en el +1 954 359 5505."
+    },
+    "wifi": {
+      "title": "Wi-Fi gratuito",
+      "hint": "Terminales y Rental Car Center",
+      "text": "Hay Wi-Fi gratuito en todas las terminales, zonas de embarque y Rental Car Center. Las redes oficiales se llaman Airport-Wifi-Terminal_1, Airport-Wifi-Terminal_2, Airport-Wifi-Terminal_3, Airport-Wifi-Terminal_4 y Airport-Wifi-Rental_Car_Center. La conexión FLL no requiere pago; si se solicita una tarjeta bancaria, el servicio del aeropuerto recibe avisos en el +1 866 435 9355."
+    }
+  }
+}

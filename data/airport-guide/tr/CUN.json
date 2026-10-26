@@ -1,0 +1,15 @@
+{
+  "iata": "CUN",
+  "blocks": {
+    "transport": {
+      "title": "ADO otobüsleri",
+      "hint": "Cancún, Playa del Carmen ve Tulum",
+      "text": "ADO Aeropuerto, Cancún Havalimanı’nı Cancún Centro, Playa del Carmen ve Tulum otogarlarına bağlar. Sefer sıklığı güzergâha göre değişir ve 15 dakika olabilir. Biletler internetten ve normal satış noktalarından alınabilir; işletmeci, bilet koşullarına göre kalkıştan 30 dakika öncesine kadar tarih, saat ve varış noktası değişikliğine izin verir."
+    },
+    "sleep": {
+      "title": "Terminal 2 yakınındaki otel",
+      "hint": "Hilton Garden Inn",
+      "text": "Hilton Garden Inn Cancun Airport, havalimanı alanında terminal 2’nin karşısındadır; ücretsiz otel servisi konukları birkaç dakikada terminallere götürür. Otelde restoran, çatıda açık havuz, fitness merkezi ve ücretsiz Wi-Fi vardır. Giriş 15:00’ten itibaren, çıkış en geç 11:00’dedir; telefon: +52 998 3729860."
+    }
+  }
+}

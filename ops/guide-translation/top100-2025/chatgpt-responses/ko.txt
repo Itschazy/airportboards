@@ -1,0 +1,125 @@
+heading ChatGPT сказал:, Value: 4
+									192 text ChatGPT сказал:
+								193 container
+									194 text Проверены  все  6  пар  RU→KO  без  обращения  к  интернету.  Сверены  смысл,  суммы,  валюты,  возрастные  ограничения,  условия  доступа,  время,  названия  и  естественность  корейского  языка.
+								195 container
+									196 text Итог:  1  обязательная  правка  и  3  факультативные. Критических  ошибок  в  числах,  валютах,  возрастных  границах  и  условиях  оплаты  не  обнаружено.
+								197 heading Обязательные исправления, Value: 2
+									198 text Обязательные  исправления
+								199 container
+									200 text 1.  STN  /  lounges  —  искажение  перечня  включённых  услуг.
+								201 container
+									202 text Было: 차가운  음식,  따뜻한  음료와  무알코올  음료,  와인,  병맥주,  Wi-Fi가  포함되며
+								203 container
+									204 text Предлагается: 차가운  음식과  뜨거운  음료,  무알코올  음료,  와인,  병맥주,  Wi-Fi가  포함되며
+								205 container
+									206 text Причина: в  оригинале  перечислены  «холодные  блюда,  горячие  и  безалкогольные  напитки».  Текущий  перевод  может  восприниматься  как  единая  категория  тёплых  безалкогольных  напитков,  а  не  два  самостоятельных  пункта.  Предлагаемая  пунктуация  и  соединение  устраняют  неоднозначность.
+								207 heading Факультативные улучшения, Value: 2
+									208 text Факультативные  улучшения
+								209 container
+									210 text 2.  ATL  /  lounges  —  не  вполне  естественная  формулировка  программы  доступа.
+								211 container
+									212 text Было: 이용  자격이  있는  Priority  Pass와  LoungeKey  프로그램으로도  입장할  수  있습니다.
+								213 container
+									214 text Предлагается: 이용  자격에  해당하는  Priority  Pass  및  LoungeKey  프로그램으로도  입장할  수  있습니다.
+								215 container
+									216 text Причина: исходный  вариант  понятен  и  не  меняет  условия,  однако  предложенная  формулировка  немного  яснее  связывает  право  доступа  с  соответствующими  программами.
+								217 container
+									218 text 3.  CAI  /  lounges  —  термин  для  сопровождения  пассажира.
+								219 container
+									220 text Было: 라운지  및  동행  서비스
+								221 container
+									222 text Предлагается: 라운지  및  에스코트  서비스
+								223 container
+									224 text Причина: 동행  서비스 буквально  означает  услугу  совместного  сопровождения  и  допустимо,  но  에스코트  서비스 в  контексте  VIP-обслуживания  аэропорта  точнее  передаёт  профессиональное  сопровождение  пассажира.  Изменение  необязательное.
+								225 container
+									226 text 4.  AUH  /  storage  —  естественность  описания  дополнительной  тарификации.
+								227 container
+									228 text Было: 72시간  이후에는  이미  부과된  140  AED에  추가되는  날마다  25  AED가  더해지며
+								229 container
+									230 text Предлагается: 72시간이  지나면  기존  요금  140  AED에  이후  하루마다  25  AED가  추가되며
+								231 container
+									232 text Причина: 추가되는  날마다 звучит  несколько  неестественно.  Исправление  сохраняет  исходный  принцип:  140  AED  за  первые  72  часа  плюс  25  AED  за  каждый  последующий  день.  Правило  оплаты  неполного  периода  уже  правильно  передано  следующим  предложением.
+								233 heading Блоки без обязательных замечаний, Value: 2
+									234 text Блоки  без  обязательных  замечаний
+								235 table
+									236 row
+										237 cell
+											238 container
+												239 text Аэропорт  /  блок
+										240 cell
+											241 text Результат
+									242 row
+										243 cell
+											244 container
+												245 text ATL  /  lounges
+										246 cell
+											247 container
+												248 text Время,  50  USD,  ограничения  3/2,5  часа,  возрастные  правила  и  расположение  переданы  правильно.
+									249 row
+										250 cell
+											251 container
+												252 text SHA  /  storage
+										253 cell
+											254 container
+												255 text Gate  6,  часы  работы,  1  месяц,  240-часовой  транзит,  72  часа  бесплатного  хранения  и  проверка  документов  сохранены.
+									256 row
+										257 cell
+											258 container
+												259 text STN  /  lounges
+										260 cell
+											261 container
+												262 text Помимо  отмеченной  неоднозначности  перечня  услуг,  условия  допуска,  ограничения  Ryanair/easyJet,  35  GBP  и  оплата  картой  переданы  правильно.
+									263 row
+										264 cell
+											265 container
+												266 text CAI  /  lounges
+										267 cell
+											268 container
+												269 text 220  USD,  3  600  EGP,  удвоение  тарифа,  48  часов,  4  часа  и  правила  для  детей  младше  6  лет  переданы  правильно.
+									270 row
+										271 cell
+											272 container
+												273 text AUH  /  storage
+										274 cell
+											275 container
+												276 text Все  тарифные  ступени,  140  AED  +  25  AED  и  круглосуточная  работа  сохранены.
+									277 row
+										278 cell
+											279 container
+												280 text CJU  /  kids
+										281 cell
+											282 container
+												283 text Расположение,  3층,  оснащение,  выдача  коляски  по  документу,  ограничение  зоны  использования  и  возврат  переданы  правильно.
+								284 container
+									285 text Дополнительно: написание  3층 в  CJU  соответствует  разрешённому  формату  CJK.  Названия  The  Club  ATL ,  Essence  by  Escape  Lounges ,  Domestic  Departure  B ,  Comprehensive  Information  Counter ,  а  также  метка  Gate  6 сохранены.
+								286 container
+									287 text Вердикт: перевод  в  целом  качественный.  Для  публикации  рекомендую  устранить  неоднозначность  в  STN;  остальные  улучшения  можно  оставить  на  усмотрение  редактора.
+								288 button Копировать
+									289 image
+								290 button Оценить ответ
+									291 image
+								292 checkbox Description: Прочитать вслух, Value: 0
+								293 button Поделиться
+								294 pop up button (collapsed) Description: Сгенерировать ответ заново, ID: radix-_r_bh_, Secondary Actions: Expand
+								295 pop up button (collapsed) Description: Ещё действия, ID: radix-_r_bl_, Secondary Actions: Expand
+							148 container
+								149 text ChatGPT может допускать ошибки. Проверяйте важную информацию.
+							150 container
+								296 button Прокрутить вниз
+								151 heading Последний ответ, Value: 4
+									152 text Последний ответ
+								153 container
+									154 container
+										155 button (collapsed) Description: Добавить файлы и другое, Secondary Actions: Expand
+										156 text entry area (settable) Description: Спросить ChatGPT, Value:
+
+											157 container
+												297 text Спросить ChatGPT
+										298 pop up button (collapsed) Description: Выбрать модель ChatGPT, ID: radix-_r_cd_, Secondary Actions: Expand
+											299 text Medium
+										161 button Диктовать
+										300 button Начать голосовой разговор
+		301 text Ответ готов
+
+The focused UI element is 156 text entry area (settable) Description: Спросить ChatGPT, Value:

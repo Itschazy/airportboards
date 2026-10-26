@@ -1,0 +1,20 @@
+{
+  "iata": "SYD",
+  "blocks": {
+    "terminals": {
+      "title": "ターミナル",
+      "hint": "無料バス・15分間隔",
+      "text": "T1 Internationalと国内線ターミナルT2・T3の間は徒歩で移動できません。無料のTerminal Transfer Busが05:30～22:30に15分間隔で運行し、所要時間は10分です。T1の停留所は到着階のArrival Hall Bの外、T2・T3の停留所はそれぞれのターミナルの到着階の外にあります。"
+    },
+    "kids": {
+      "title": "お子様連れ",
+      "hint": "T1の子どもの遊び場",
+      "text": "T1 Internationalには、10番ゲート付近にタッチパネル付きの子ども向けインタラクティブエリア、50番ゲート付近にMcDonaldsの遊び場、53番ゲート付近にMuseum of Applied Arts and Scienceと共同のデジタルエリアがあります。手荷物受取エリア付近にはトイレ、保護者用の部屋、授乳スペースがあります。"
+    },
+    "wifi": {
+      "title": "Wi‑Fi",
+      "hint": "T1の無料Wi-Fi",
+      "text": "T1 International全域で無料Wi-Fiを利用できます。Sydney Airport Free WiFiを選び、質問に回答し、利用条件を読んでProceedを押してください。その後、広告メッセージが表示され、ウェブサイトが開きます。"
+    }
+  }
+}

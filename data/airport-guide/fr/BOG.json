@@ -1,0 +1,25 @@
+{
+  "iata": "BOG",
+  "blocks": {
+    "transport": {
+      "title": "Comment s'y rendre",
+      "hint": "TransMilenio via Portal El Dorado",
+      "text": "Avec TransMilenio, descendre à Portal El Dorado et prendre le bus de rabattement 16-14 Airport ou le bus K86. Selon l’aéroport, les deux lignes desservent directement les terminaux."
+    },
+    "terminals": {
+      "title": "Terminaux",
+      "hint": "Navette gratuite entre T1 et T2",
+      "text": "Une navette gratuite relie les terminaux 1 et 2 d’El Dorado. Elle circule tous les jours de 04:00 à minuit et dispose d’une rampe pour les personnes à mobilité réduite."
+    },
+    "parking": {
+      "title": "Parking",
+      "hint": "Courte et longue durée au T1",
+      "text": "Short Stay Parking — Center se trouve dans la partie centrale du terminal 1, avec accès aux zones des vols intérieurs et internationaux. Pour plusieurs jours, Long Stay Parking — North se situe près de Gate 1 du terminal 1 ; une partie des places est couverte. Les parkings ont des places pour voitures et vélos ainsi que des places réservées aux personnes à mobilité réduite."
+    },
+    "wifi": {
+      "title": "Wi‑Fi",
+      "hint": "Airport_El_Dorado gratuit",
+      "text": "Le Wi-Fi gratuit Airport_El_Dorado est accessible aux passagers et visiteurs. Pour se connecter, sélectionner le réseau, saisir ses données sur le portail d’accès et ouvrir un navigateur. En cas de coupure, il est possible de se reconnecter gratuitement autant de fois que nécessaire. Premium WiFi est également vendu, avec une connexion continue pour 1 appareil."
+    }
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "iata": "KMG",
+  "blocks": {
+    "transport": {
+      "title": "Nasıl gidilir",
+      "hint": "Metro 6, Airport Center istasyonu",
+      "text": "6 numaralı metro hattı Tangzixiang ile havalimanındaki Airport Center istasyonunu bağlar; hat üzerinde 2, 3 ve 4 numaralı hatlara aktarma yapılabilir. Airport Center istasyonu terminalin B2 katındadır."
+    },
+    "taxi": {
+      "title": "Taksi",
+      "hint": "B1 katında 3 numaralı kapı",
+      "text": "Taksi durağı B1 katında 3 numaralı kapının karşısındadır. Kunming’in idari sınırları içindeki noktalara yapılan yolculuklarda taksimetreye göre ödeme yapılır; boş dönüş için ek ücret alınmaz."
+    }
+  }
+}

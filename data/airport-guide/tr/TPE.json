@@ -1,0 +1,20 @@
+{
+  "iata": "TPE",
+  "blocks": {
+    "transport": {
+      "title": "Nasıl gidilir",
+      "hint": "Her iki terminalde MRT",
+      "text": "A12 Terminal 1 ve A13 Terminal 2 istasyonlarına Taoyuan Airport MRT’nin ekspres ve normal trenleri uğrar. Ekspres ve normal trenler dönüşümlü olarak yaklaşık 7,5 dakikada bir gelir. Otobüsler terminal 1 geliş salonunun B1 alanından ve terminal 2 geliş salonunun doğu tarafında Kat 1’deki dış galeriden kalkar."
+    },
+    "storage": {
+      "title": "Emanet",
+      "hint": "Halka açık alanda Pelican",
+      "text": "Taiwan Pelican Express, terminallerin halka açık alanlarında bagaj muhafazası ve teslimat hizmeti sunar. Terminal 1 ve 2’nin Kat 1’inde günün her saati açık noktalar vardır. Terminal 2’nin Kat 3’ündeki nokta 06:00–23:30 arasında, terminal 1’in Kat 1’indeki diğer nokta 09:00–17:00 arasında açıktır."
+    },
+    "wifi": {
+      "title": "Wi‑Fi",
+      "hint": "Airport Free WiFi ağı",
+      "text": "Havalimanı, terminallerin halka açık alanlarında ücretsiz Wi-Fi sağlar. Bağlanmak için cihaz ayarlarından Airport Free WiFi ağını seçip tarayıcı açın."
+    }
+  }
+}

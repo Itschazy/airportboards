@@ -1,0 +1,14 @@
+{
+  "iata": "CGO",
+  "checked": "2026-10-26",
+  "blocks": [
+    {
+      "id": "transport",
+      "title": "Метро аэропорта",
+      "hint": "Станция Xinzheng Airport",
+      "text": "Станция Xinzheng Airport обслуживается линиями Chengjiao и Zhengxu; выход G обозначен для T2, выход E — для T1. По линии Chengjiao в направлении Jiahe/Liuzhuang первый поезд отправляется в 06:00, последний — в 22:15, одинаково в рабочие и праздничные дни. По линии Zhengxu в сторону Xuchang East первый поезд отправляется в 06:14, последний — в 21:14. Справочная метро: +86 371 55166166.",
+      "source": "zzmetro.com",
+      "url": "https://www.zzmetro.com/lines/query/station/zid/11733"
+    }
+  ]
+}

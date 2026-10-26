@@ -1,0 +1,25 @@
+{
+  "iata": "NRT",
+  "blocks": {
+    "terminals": {
+      "title": "Entre terminales",
+      "hint": "Autobuses gratuitos",
+      "text": "Antes del control de seguridad hay autobuses gratuitos entre terminales; los terminales 2 y 3 también están unidos por un paso peatonal. La ruta circular sigue el orden terminal 1 → terminal 3 → terminal 2: el viaje de 1 a 3 dura unos 14 minutos, de 3 a 2 unos 3 minutos y de 2 a 1 unos 10 minutos. También hay rutas independientes entre los terminales 1 y 2 y entre los terminales 2 y 3."
+    },
+    "storage": {
+      "title": "Taquillas automáticas",
+      "hint": "Tarifa según la ubicación",
+      "text": "El aeropuerto tiene taquillas con tarifa diaria y por tiempo. En las de tarifa diaria, las pequeñas, medianas y grandes cuestan respectivamente 400 JPY, 600 JPY y 800 JPY por día de uso; a medianoche empieza un nuevo día de pago y el máximo es de 8 días. En el edificio principal del terminal 2, nivel B1, y en el edificio principal del terminal 3, nivel 2, se aplica una tarifa por tiempo: hasta 6 horas cuestan 300 JPY la taquilla pequeña, 500 JPY la mediana y 600 JPY la grande; cada 24 horas adicionales cuestan respectivamente 400 JPY, 600 JPY y 800 JPY."
+    },
+    "kids": {
+      "title": "Salas para bebés",
+      "hint": "En todos los terminales",
+      "text": "Todos los terminales tienen salas para bebés con cabina de lactancia, cambiador, lavabo y agua caliente. Los hombres pueden utilizar todas las instalaciones salvo la cabina de lactancia."
+    },
+    "wifi": {
+      "title": "Wi-Fi y enchufes",
+      "hint": "En terminales y autobuses",
+      "text": "Hay Wi-Fi gratuito en todos los terminales y autobuses entre terminales: selecciona FreeWiFi-NARITA y acepta las condiciones de uso y la advertencia de seguridad de la página de conexión. El servicio no requiere configurar previamente los ajustes de seguridad; el aeropuerto recomienda una VPN a quienes necesitan una conexión segura. Los enchufes de los terminales se pueden usar gratis."
+    }
+  }
+}

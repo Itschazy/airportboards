@@ -1,0 +1,25 @@
+{
+  "iata": "HYD",
+  "blocks": {
+    "transport": {
+      "title": "Pushpak Airport Liner",
+      "hint": "Electric city buses",
+      "text": "Pushpak electric buses have air conditioning, phone chargers and a wheelchair ramp with a kneeling mechanism. Route AL to JBS via LB Nagar, Tarnaka and Sangeeth departs every 20 minutes, AC to JBS via Aramghar, NMDC and Punjagutta every 30 minutes, and AJ to Miyapur via ORR, Gachibowli and JNTU every 15 minutes. Information is available on +91 40 6944 0000 and +91 73829 25981."
+    },
+    "taxi": {
+      "title": "Taxis and apps",
+      "hint": "Pickup areas in the car park",
+      "text": "Alyte and Sky Cabs take bookings at counters, with pickup on the arrivals ramp and in Carpark Zone D. App-based rides have designated areas: Uber in D1 and D2, Rapido in D3 and D4, and Ola in D6 and D7. Prepaid taxis booked at the counter depart from Carpark Zone E at a fixed fare based on the destination."
+    },
+    "kids": {
+      "title": "Baby care rooms",
+      "hint": "Follow the signs",
+      "text": "Private baby care rooms with air conditioning and chairs for breastfeeding are provided in key terminal areas. Signs lead to the nearest room; information desks can also help you find it."
+    },
+    "wifi": {
+      "title": "Free Wi-Fi",
+      "hint": "Up to 4 hours of access",
+      "text": "Connect to Hyderabad Airport-Free-WiFi, select your country code, enter your mobile number, accept the terms of use and receive an SMS-OTP; entering the code provides up to 4 hours of access. Alternatively, scan your passport at a virtual information screen and use the displayed coupon code. In international departures, the Wi-Fi Kiosk is near boarding gate 23B; in international arrivals, a coupon can be obtained with a passport near belt 12."
+    }
+  }
+}

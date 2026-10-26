@@ -1,0 +1,98 @@
+[
+  {
+    "route": "/ru/airport/HRG",
+    "errors": []
+  },
+  {
+    "route": "/en/airport/HRG",
+    "errors": []
+  },
+  {
+    "route": "/de/airport/HRG",
+    "errors": []
+  },
+  {
+    "route": "/fr/airport/HRG",
+    "errors": []
+  },
+  {
+    "route": "/es/airport/HRG",
+    "errors": []
+  },
+  {
+    "route": "/it/airport/HRG",
+    "errors": []
+  },
+  {
+    "route": "/tr/airport/HRG",
+    "errors": []
+  },
+  {
+    "route": "/zh/airport/HRG",
+    "errors": []
+  },
+  {
+    "route": "/ja/airport/HRG",
+    "errors": []
+  },
+  {
+    "route": "/ko/airport/HRG",
+    "errors": []
+  },
+  {
+    "route": "/ar/airport/HRG",
+    "errors": []
+  },
+  {
+    "route": "/hi/airport/HRG",
+    "errors": []
+  },
+  {
+    "route": "/ru/airport/SSH",
+    "errors": []
+  },
+  {
+    "route": "/en/airport/SSH",
+    "errors": []
+  },
+  {
+    "route": "/de/airport/SSH",
+    "errors": []
+  },
+  {
+    "route": "/fr/airport/SSH",
+    "errors": []
+  },
+  {
+    "route": "/es/airport/SSH",
+    "errors": []
+  },
+  {
+    "route": "/it/airport/SSH",
+    "errors": []
+  },
+  {
+    "route": "/tr/airport/SSH",
+    "errors": []
+  },
+  {
+    "route": "/zh/airport/SSH",
+    "errors": []
+  },
+  {
+    "route": "/ja/airport/SSH",
+    "errors": []
+  },
+  {
+    "route": "/ko/airport/SSH",
+    "errors": []
+  },
+  {
+    "route": "/ar/airport/SSH",
+    "errors": []
+  },
+  {
+    "route": "/hi/airport/SSH",
+    "errors": []
+  }
+]

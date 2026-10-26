@@ -1,0 +1,25 @@
+{
+  "iata": "PHL",
+  "blocks": {
+    "transport": {
+      "title": "Treno per il centro",
+      "hint": "SEPTA Airport Regional Rail",
+      "text": "I treni SEPTA Airport Regional Rail collegano l’aeroporto al centro di Filadelfia ogni 30 minuti. Le fermate aeroportuali servono i terminal A, B, C/D ed E/F; tutte le stazioni della linea sono accessibili alle persone in sedia a rotelle. Alla stazione William H. Gray III 30th Street si può cambiare per Amtrak e NJ Transit Atlantic City Line. SEPTA accetta carte contactless Visa, Mastercard, Discover e AMEX e pagamenti mobili."
+    },
+    "taxi": {
+      "title": "Taxi",
+      "hint": "Zona 5 dopo il ritiro bagagli",
+      "text": "Dopo il ritiro bagagli seguire le indicazioni Ground Transportation / Taxis / Zone 5; chi arriva ad A-West deve scendere al Ground Floor. Il viaggio dall’aeroporto alla zona Center City definita costa 32 USD per il primo passeggero, più 1 USD per ogni passeggero aggiuntivo di età superiore a 12 anni. La tassa di uscita dall’aeroporto non si aggiunge a questa tariffa fissa; le mance non sono incluse. Tutti i taxi accettano carte di credito."
+    },
+    "kids": {
+      "title": "Nutrire il bambino",
+      "hint": "Mamava dopo i controlli",
+      "text": "Le cabine Mamava gratuite si trovano dopo i controlli di sicurezza ad A-West, nel collegamento B/C e nei terminal E e F; dispongono di panche, tavolino ribaltabile, presa elettrica e porta chiudibile a chiave. L’app Mamava consente di aprire la cabina e verificarne la disponibilità. Presso Minute Suites, nel collegamento tra A-East e B dopo i controlli, le madri che allattano possono usare gratuitamente una stanza separata per i primi 30 minuti; telefono: +1 215 9371076."
+    },
+    "wifi": {
+      "title": "Wi-Fi gratuito",
+      "hint": "Senza limiti di dati",
+      "text": "L’aeroporto offre a tutti i visitatori il Wi-Fi gratuito di AT&T senza limiti di dati. Attivare il Wi-Fi nelle impostazioni del dispositivo e selezionare la rete gratuita dell’aeroporto PHL; per connettersi occorre un dispositivo con supporto Wi-Fi."
+    }
+  }
+}

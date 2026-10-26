@@ -1,0 +1,25 @@
+{
+  "iata": "CPH",
+  "blocks": {
+    "transport": {
+      "title": "Metro a Copenhague",
+      "hint": "15 minutos hasta Nørreport",
+      "text": "La estación de metro está junto a la terminal 3; el trayecto hasta Nørreport dura 15 minutos. El metro pasa cada 4–6 minutos durante el día y la tarde-noche, y cada 15–20 minutos por la noche. Los billetes se venden en la estación y en la taquilla DSB de la terminal 3; las máquinas aceptan monedas y tarjetas bancarias, pero no billetes de banco."
+    },
+    "terminals": {
+      "title": "Terminal bus gratuito",
+      "hint": "Terminales y aparcamientos",
+      "text": "El autobús gratuito entre terminales conecta la zona del aparcamiento P1 y Car Rental con las terminales 2 y 3, la estación de metro y tren de la terminal 3 y los aparcamientos P15, P17 y P19 en Kystvejen. Pasa cada 10 minutos de 07:00 a 18:00, cada 15 minutos de 04:00 a 07:00 y de 18:00 a medianoche, y cada 20 minutos de medianoche a 04:00."
+    },
+    "sleep": {
+      "title": "Zonas de descanso",
+      "hint": "Zona tranquila junto a puertas C",
+      "text": "Hay asientos antes y después del control de seguridad y en todas las puertas de embarque. Para los pasajeros que salen de la zona C hay una zona tranquila al final de la escalera mecánica, en la parte superior, cerca del 7-Eleven del nivel 2. La mayoría de las mesas del área de restauración entre las puertas A y B y cerca de C tienen enchufes."
+    },
+    "wifi": {
+      "title": "Wi-Fi gratuito",
+      "hint": "Antes y después de seguridad",
+      "text": "La red CPH Airport Free Wi-Fi está disponible antes y después del control de seguridad y en todas las puertas de embarque. La conexión es gratuita y no requiere contraseña; hay estaciones de carga y enchufes en muchas zonas del aeropuerto y en la mayoría de las puertas."
+    }
+  }
+}

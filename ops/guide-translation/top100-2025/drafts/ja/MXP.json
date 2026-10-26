@@ -1,0 +1,15 @@
+{
+  "iata": "MXP",
+  "blocks": {
+    "transport": {
+      "title": "Malpensa Express",
+      "hint": "Centraleまで約51分",
+      "text": "Malpensa Expressはターミナル1とMilano Centraleを乗り換えなしで結び、所要時間は約51分です。片道切符は15 EURで、trenord.it、Trenordアプリ、券売機、正規販売店で購入できます。"
+    },
+    "sleep": {
+      "title": "Sheraton Milan Malpensa",
+      "hint": "ターミナル1へ直接アクセス",
+      "text": "Sheraton Milan Malpensa Airport Hotel & Conference Centreからはターミナル1へ直接アクセスできます。ホテルには屋内プール、フィットネスセンター、スパ、レストランがあり、スイート客室には防音設備があります。"
+    }
+  }
+}

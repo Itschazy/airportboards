@@ -1,0 +1,20 @@
+{
+  "iata": "MEX",
+  "blocks": {
+    "transport": {
+      "title": "Cómo llegar",
+      "hint": "Metrobús desde ambos terminales",
+      "text": "Metrobús conecta el aeropuerto con el centro de Ciudad de México. Se sube en la puerta 7 del terminal 1 y en la puerta 2 del terminal 2. Se paga con tarjeta Metrobús, que se puede comprar y recargar en las máquinas de las zonas de ascenso y descenso de ambos terminales. El horario es de 04:30 a medianoche de lunes a sábado y de 05:00 a medianoche los domingos y festivos."
+    },
+    "terminals": {
+      "title": "Terminales",
+      "hint": "Aerotrén gratis, 05:00–23:00",
+      "text": "El Aerotrén gratuito transporta pasajeros entre los terminales 1 y 2 todos los días de 05:00 a 23:00. Para viajar hay que presentar la tarjeta de embarque. Solo se permiten perros en jaulas y en vagones vacíos; está prohibido comer, beber y fumar en el tren."
+    },
+    "storage": {
+      "title": "Consigna",
+      "hint": "Consigna las 24 horas en T1 y T2",
+      "text": "En el terminal 1, MEXICANA DE LOCKERS ofrece consigna las 24 horas en el nivel de calle, local E-41. En el terminal 2, los puntos VIAJES KOKAI de los locales ALL45 y ALL46 están disponibles las 24 horas en el nivel de calle."
+    }
+  }
+}

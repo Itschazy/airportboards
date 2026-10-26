@@ -1,0 +1,25 @@
+{
+  "iata": "VIE",
+  "blocks": {
+    "transport": {
+      "title": "前往维也纳的列车",
+      "hint": "S7和Railjet",
+      "text": "S7前往Wien Mitte约需25分钟，每30分钟一班；Railjet前往Wien Hauptbahnhof约需15分钟，每30分钟一班。ÖBB售票处位于到达大厅；大厅内、通往站台的通道中和站台上均设有自动售票机。从到达大厅前往站台有一条较短、可遮风避雨的无障碍通道。"
+    },
+    "lounges": {
+      "title": "VIENNA Lounge",
+      "hint": "1号航站楼2楼",
+      "text": "VIENNA Lounge位于1号航站楼2楼，安检后、护照检查前，每日04:30–22:00开放。凭有效登机牌，可于出发当天、起飞前3.5小时起入内，最长停留3小时。普通价格为59 EUR，4–14岁儿童31 EUR，0–3岁儿童免费。提供餐食、Wi-Fi、工作区、休息区、配毛巾的淋浴间，以及配有尿布更换台的家庭浴室。"
+    },
+    "sleep": {
+      "title": "机场附近的酒店",
+      "hint": "NH和Moxy可从航站楼步行前往",
+      "text": "NH Vienna Airport Conference Center和Moxy Vienna Airport位于航站楼附近的AirportCity，可步行前往。NH提供Wi-Fi和隔音窗；Moxy全天供应小吃和饮品，可免费使用电脑及健身中心，并提供免费Wi-Fi。"
+    },
+    "kids": {
+      "title": "游乐区和婴儿车",
+      "hint": "F、C和D登机口附近",
+      "text": "F03附近的免费Entertainment Gate设有双层游乐设施、独立幼儿区和桌上足球；C42和D31–36附近也有儿童区。如果已在值机时托运自带婴儿车，机场可免费提供婴儿车，供从安检处前往登机口使用；登机时需交还登机口工作人员。几乎所有无障碍卫生间、家庭卫生间和大型旅客卫生间均设有尿布更换台。"
+    }
+  }
+}

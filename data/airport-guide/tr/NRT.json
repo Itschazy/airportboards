@@ -1,0 +1,25 @@
+{
+  "iata": "NRT",
+  "blocks": {
+    "terminals": {
+      "title": "Terminaller arası",
+      "hint": "Ücretsiz otobüsler",
+      "text": "Güvenlik kontrolünden önce terminaller arasında ücretsiz otobüsler çalışır; terminal 2 ve 3 arasında yaya geçidi de vardır. Ring hattı terminal 1 → terminal 3 → terminal 2 sırasını izler: 1’den 3’e yaklaşık 14 dakika, 3’ten 2’ye yaklaşık 3 dakika ve 2’den 1’e yaklaşık 10 dakika sürer. Terminal 1 ve 2 ile terminal 2 ve 3 arasında ayrı hatlar da vardır."
+    },
+    "storage": {
+      "title": "Otomatik bagaj dolapları",
+      "hint": "Ücret konuma göre değişir",
+      "text": "Havalimanında günlük ve süreye göre ücretlendirilen bagaj dolapları vardır. Günlük tarifede küçük, orta ve büyük dolaplar kullanım günü başına sırasıyla 400 JPY, 600 JPY ve 800 JPY’dir; yeni ücretli gün gece yarısında başlar ve en uzun kullanım süresi 8 gündür. Terminal 2 ana binasında Kat B1’de ve terminal 3 ana binasında Kat 2’de süre tarifesi geçerlidir: 6 saate kadar küçük dolap 300 JPY, orta 500 JPY, büyük 600 JPY; sonraki her 24 saat sırasıyla 400 JPY, 600 JPY ve 800 JPY’dir."
+    },
+    "kids": {
+      "title": "Bebek odaları",
+      "hint": "Tüm terminallerde",
+      "text": "Tüm terminallerde emzirme kabini, alt değiştirme masası, lavabo ve sıcak su bulunan bebek odaları vardır. Erkekler emzirme kabini dışında tüm olanakları kullanabilir."
+    },
+    "wifi": {
+      "title": "Wi-Fi ve prizler",
+      "hint": "Terminallerde ve otobüslerde",
+      "text": "Tüm terminallerde ve terminaller arası otobüslerde ücretsiz Wi-Fi vardır: FreeWiFi-NARITA ağını seçip bağlantı sayfasındaki kullanım koşullarını ve güvenlik uyarısını kabul edin. Önceden güvenlik ayarı yapmak gerekmez; havalimanı güvenli bağlantıya ihtiyaç duyanlara VPN önerir. Terminallerdeki prizler ücretsiz kullanılabilir."
+    }
+  }
+}

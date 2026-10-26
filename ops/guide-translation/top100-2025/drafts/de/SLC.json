@@ -1,0 +1,10 @@
+{
+  "iata": "SLC",
+  "blocks": {
+    "transport": {
+      "title": "TRAX Green Line",
+      "hint": "Station beim Terminal",
+      "text": "Die TRAX Green Line bedient den Flughafen direkt: Airport Station liegt unmittelbar ausserhalb des Terminals. Laut UTA verkehrt die Linie täglich von 05:21 bis 23:21 und führt nach City Center. An North Temple kann man zum FrontRunner Richtung Ogden oder Provo umsteigen; der FrontRunner fährt jedoch sonntags nicht. UTA-Auskunft: +1 801 7433882."
+    }
+  }
+}

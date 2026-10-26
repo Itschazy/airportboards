@@ -1,0 +1,25 @@
+{
+  "iata": "LIM",
+  "blocks": {
+    "taxi": {
+      "title": "出租车",
+      "hint": "到达区柜台",
+      "text": "出租车柜台位于国内和国际到达区。工作人员引导乘客和司机前往机场内的专用停车场；服务部门公布的联系电话之一为+51 1 4844001。"
+    },
+    "lounges": {
+      "title": "The Club LIM Internacional",
+      "hint": "国际出发区2楼",
+      "text": "The Club LIM Internacional休息室位于国际出发区2楼，设有休息空间、酒吧、淋浴间和会议室。机场公布该休息室每日全天营业。"
+    },
+    "sleep": {
+      "title": "Sleepover",
+      "hint": "Perú Plaza的2楼",
+      "text": "Sleepover位于Perú Plaza的2楼，靠近Starbucks和Dunkin Donuts，全天营业。提供淋浴、短时睡眠舱、双层床隔间、共享工作区及包含在服务内的饮品。"
+    },
+    "wifi": {
+      "title": "免费Wi-Fi",
+      "hint": "机场免费网络",
+      "text": "手机或笔记本电脑可免费连接.FreeWifiJorgeChavez网络。使用前须在连接页面同意使用条款。"
+    }
+  }
+}

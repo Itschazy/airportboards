@@ -1,0 +1,25 @@
+{
+  "iata": "EWR",
+  "blocks": {
+    "transport": {
+      "title": "Comment s'y rendre",
+      "hint": "AirTrain vers NJ Transit et Amtrak",
+      "text": "AirTrain relie les terminaux à Newark Liberty International Airport Train Station, desservie par NJ Transit et Amtrak. Sans billet NJ Transit ou Amtrak déjà acheté, un trajet AirTrain passant par la gare coûte 8,75 USD pour un aller simple. En cas de correspondance avec PATH, son trajet est payé séparément."
+    },
+    "taxi": {
+      "title": "Taxi",
+      "hint": "Stations officielles aux terminaux",
+      "text": "Des taxis sont disponibles à tous les terminaux sans réservation : un régulateur en uniforme oriente les passagers vers une voiture libre. Au terminal A, la station est au niveau 1 à la porte d’accès 5 ; au terminal B, au niveau 2 à la porte d’accès 8 et au niveau 1 à la porte d’accès 2 ; au terminal C, au niveau 1 à la porte d’accès 6. Un taxi classique accueille jusqu’à 4 passagers, un minivan jusqu’à 5 ; un seul tarif s’applique à tous les passagers allant au même endroit. Chaque bagage, y compris à main, entraîne un supplément de 1 USD."
+    },
+    "terminals": {
+      "title": "Terminaux",
+      "hint": "AirTrain et accès au terminal A",
+      "text": "Les trajets AirTrain entre les terminaux, parkings, locations de voitures et arrêts des navettes hôtelières sont gratuits. AirTrain ne rejoint pas directement le terminal A : il faut marcher environ 15 minutes par une passerelle couverte ou prendre une navette pendant environ 5 minutes. De 23:00 à 05:00, heure de l’Est des États-Unis, AirTrain dessert les terminaux B et C toutes les 15 minutes ; une navette assure la correspondance supplémentaire vers le terminal A. Pendant les travaux, des interruptions temporaires d’AirTrain sont possibles, avec des bus de remplacement."
+    },
+    "wifi": {
+      "title": "Wi‑Fi",
+      "hint": "Réseau _Free EWR WiFi",
+      "text": "L’aéroport dispose du Wi-Fi gratuit : sélectionner _Free EWR WiFi. L’assistance technique est disponible 24 heures sur 24 au +1 (800) 880-4117."
+    }
+  }
+}

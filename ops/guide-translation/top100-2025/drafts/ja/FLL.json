@@ -1,0 +1,25 @@
+{
+  "iata": "FLL",
+  "blocks": {
+    "transport": {
+      "title": "BCTとTri-Rail",
+      "hint": "バス1番と列車",
+      "text": "BCTの1番バスは毎日運行し、空港の停留所はRental Car CenterのStop Gにあります。各ターミナルからDania BeachのTri-Rail駅へ向かう無料バスは、下層の到着階から出発します。乗り場はターミナル1の西端のGTA-1、ターミナル2と3の間のGTA-2、ターミナル3と4の間のGTA-3です。Tri-RailはMiami-Dade、Broward、Palm Beachの各郡を毎日運行します。"
+    },
+    "terminals": {
+      "title": "ターミナル間の移動",
+      "hint": "徒歩ルート",
+      "text": "無料バスはRental Car Centerと各ターミナルの間に限り24時間運行し、停留所は下層の到着階に表示されています。ターミナル間は建物沿いの歩道や駐車場を通る歩行者用ルートを歩くか、駐車場のトラムを利用できます。"
+    },
+    "storage": {
+      "title": "手荷物預かり",
+      "hint": "ターミナル1と3",
+      "text": "ターミナル1の手荷物預かり所は保安検査前の2階、コンコースBの出口付近にあります。ターミナル3では下層の手荷物受取階、JetBlueの手荷物事務所付近にあります。両方とも月曜から金曜は08:30–17:30、土曜・日曜は08:30–18:30に営業します。ターミナル4の預かり所は一時休業中です。サービスについては+1 954 359 5505で確認できます。"
+    },
+    "wifi": {
+      "title": "無料Wi-Fi",
+      "hint": "ターミナルとレンタカーセンター",
+      "text": "すべてのターミナル、コンコース、Rental Car Centerで無料Wi-Fiを利用できます。公式ネットワーク名はAirport-Wifi-Terminal_1、Airport-Wifi-Terminal_2、Airport-Wifi-Terminal_3、Airport-Wifi-Terminal_4、Airport-Wifi-Rental_Car_Centerです。FLLの接続に支払いは不要です。銀行カードの入力を求められた場合は、空港のサービス窓口が+1 866 435 9355で報告を受け付けています。"
+    }
+  }
+}

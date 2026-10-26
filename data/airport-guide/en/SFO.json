@@ -1,0 +1,40 @@
+{
+  "iata": "SFO",
+  "blocks": {
+    "transport": {
+      "title": "Getting there",
+      "hint": "BART and AirTrain",
+      "text": "The BART station is in the International Terminal. From the BART station, you can transfer to AirTrain, which connects the domestic and international terminals. The Rental Car Center is reached by the AirTrain Blue Line."
+    },
+    "taxi": {
+      "title": "Taxi",
+      "hint": "Metered, $6 exit surcharge",
+      "text": "Taxi ranks are on the roadway center islands at the arrivals and baggage claim level of all terminals. Uniformed coordinators work from 07:00 to 02:00. Fares are metered; for rides from SFO in San Francisco taxicabs, a $6 exit surcharge is included in the fare and does not apply to rides to the airport. Wheelchair-accessible taxis are available; request one from a coordinator or dial *1107 from an airport courtesy phone."
+    },
+    "storage": {
+      "title": "Baggage storage",
+      "hint": "Airport Travel Agency, Level 3",
+      "text": "Storage is available only at Airport Travel Agency in Dianne Feinstein International Terminal G on Level 3. Baggage, dog kennels and sports equipment, including skis, bicycles and canoes, are accepted; the price depends on the size of the item."
+    },
+    "sleep": {
+      "title": "Where to sleep",
+      "hint": "Grand Hyatt at SFO",
+      "text": "Grand Hyatt at SFO is at the airport entrance. It can be reached from all terminals by AirTrain or by road."
+    },
+    "kids": {
+      "title": "With children",
+      "hint": "7 play areas after security",
+      "text": "All 7 Kids’ Spots play areas are after security. In Harvey Milk Terminal 1, they are near gates B2 and B18; in Terminal 2, near D15 and D7. In Terminal 3, they are near F17 and E7 and in the food court near gates F11–F22."
+    },
+    "parking": {
+      "title": "Parking",
+      "hint": "Long-Term: up to $27 per 24 h",
+      "text": "Long-Term Parking has covered and surface spaces; the rate is $4 per 30 minutes, up to $27 per 24 hours, including taxes and fees. The AirTrain Blue Line connects the parking facility to all terminals round the clock, with departures that can be as frequent as every 4 minutes. The AirTrain station is on Level 5 of the parking garage. Rates are subject to change."
+    },
+    "wifi": {
+      "title": "Wi‑Fi",
+      "hint": "Free, #SFO FREE WIFI",
+      "text": "Free Wi-Fi is available in all terminals. To connect, select #SFO FREE WIFI and open a browser; using the network means accepting its terms."
+    }
+  }
+}

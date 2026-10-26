@@ -1,0 +1,25 @@
+{
+  "iata": "STN",
+  "blocks": {
+    "transport": {
+      "title": "Tren a Londres",
+      "hint": "Estación bajo la terminal",
+      "text": "La estación de tren está justo debajo de la terminal, a unos 2 minutos a pie; hay ascensores, escaleras mecánicas y rampas. Stansted Express va a London Liverpool Street cada 15 minutos todos los días; el viaje dura unos 48 minutos y hasta Tottenham Hale, unos 36 minutos. Se puede pagar con tarjeta bancaria sin contacto o monedero móvil, pero Oyster no es válido para ir o volver del aeropuerto."
+    },
+    "kids": {
+      "title": "Con niños",
+      "hint": "Cambio de pañales y lactancia",
+      "text": "Hay cambiadores en los aseos de hombres y mujeres junto a facturación en la zona A y, después del control de seguridad, cerca de las puertas de embarque 13, 33/34, 43 y 59. En recogida de equipaje internacional hay cabinas para cambiar pañales junto a la cinta 9; también las hay en el vestíbulo principal de encuentro de llegadas. La lactancia está permitida en todo el aeropuerto; para mayor privacidad hay cabinas individuales en la Family Room del vestíbulo principal de salidas."
+    },
+    "lounges": {
+      "title": "Essence Lounge",
+      "hint": "Solo para determinadas aerolíneas",
+      "text": "El antiguo Escape Lounge de la terminal principal está cerrado; el nuevo Essence by Escape Lounges solo atiende a pasajeros de aerolíneas admitidas que salen de las puertas de embarque 1–19. Los pasajeros de Ryanair y easyJet no pueden entrar; después de desplazarse a las puertas 1–19 no se puede volver a la terminal principal. Se permite acceder desde 3 horas antes de la salida programada; la entrada sin reserva cuesta desde 35 GBP y los menores de 3 años entran gratis. Incluye platos fríos, bebidas calientes, bebidas sin alcohol, vino, cerveza embotellada y Wi-Fi; solo se acepta pago con tarjeta."
+    },
+    "wifi": {
+      "title": "Wi-Fi gratuito",
+      "hint": "2 horas en la terminal",
+      "text": "En la terminal de Stansted y las salas VIP hay Wi-Fi gratuito durante 2 horas. Para conectarse, seleccione la red Wi-Fi del aeropuerto en su teléfono, tableta o portátil."
+    }
+  }
+}

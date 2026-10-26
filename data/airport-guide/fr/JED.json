@@ -1,0 +1,10 @@
+{
+  "iata": "JED",
+  "blocks": {
+    "sleep": {
+      "title": "Où dormir",
+      "hint": "Aerotel, départ international T1",
+      "text": "Aerotel Jeddah se trouve dans la zone réservée des départs internationaux du terminal 1, au niveau 2, à côté de Duty Free, après le contrôle de sûreté des passagers en transit. Il n’est pas accessible aux voyageurs ayant uniquement des vols intérieurs ; pour un trajet combinant vol intérieur et international, l’opérateur demande de vérifier l’accès auprès de la compagnie aérienne ou du service clients. Les passagers en transit ne doivent pas franchir le contrôle des passeports à l’arrivée : sans carte d’embarquement valable pour le vol suivant, ils ne peuvent pas revenir dans la zone réservée. L’hôtel dispose de 120 chambres et propose des réservations à l’heure ; des chambres pour personnes à mobilité réduite sont fournies sur demande."
+    }
+  }
+}

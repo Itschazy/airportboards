@@ -1,0 +1,15 @@
+{
+  "iata": "MXP",
+  "blocks": {
+    "transport": {
+      "title": "Malpensa Express",
+      "hint": "Circa 51 minuti fino a Centrale",
+      "text": "Il treno Malpensa Express collega il terminal 1 a Milano Centrale senza cambi in circa 51 minuti. Il biglietto di sola andata costa 15 EUR e può essere acquistato online su trenord.it, nell’app Trenord, alle biglietterie automatiche e presso i rivenditori autorizzati."
+    },
+    "sleep": {
+      "title": "Sheraton Milan Malpensa",
+      "hint": "Accesso diretto al terminal 1",
+      "text": "Sheraton Milan Malpensa Airport Hotel & Conference Centre dispone di accesso diretto al terminal 1. L’hotel offre piscina coperta, centro fitness, spa e ristoranti; le suite sono insonorizzate."
+    }
+  }
+}

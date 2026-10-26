@@ -1,0 +1,10 @@
+{
+  "iata": "CGO",
+  "blocks": {
+    "transport": {
+      "title": "Flughafenmetro",
+      "hint": "Station Xinzheng Airport",
+      "text": "Die Station Xinzheng Airport wird von den Linien Chengjiao und Zhengxu bedient; Ausgang G ist für T2 und Ausgang E für T1 ausgeschildert. Auf der Linie Chengjiao Richtung Jiahe/Liuzhuang fährt der erste Zug um 06:00 und der letzte um 22:15, an Arbeits- und Feiertagen zu denselben Zeiten. Auf der Linie Zhengxu Richtung Xuchang East fährt der erste Zug um 06:14 und der letzte um 21:14. Metroauskunft: +86 371 55166166."
+    }
+  }
+}

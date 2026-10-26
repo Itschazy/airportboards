@@ -1,0 +1,25 @@
+{
+  "iata": "CPH",
+  "blocks": {
+    "transport": {
+      "title": "Kopenhag’a metro",
+      "hint": "Nørreport’a 15 dakika",
+      "text": "Metro istasyonu terminal 3’ün hemen yanındadır; Nørreport’a yolculuk 15 dakika sürer. Metro gündüz ve akşam 4–6 dakikada bir, gece 15–20 dakikada bir çalışır. Biletler istasyonda ve terminal 3’teki DSB gişesinde satılır; makineler madeni para ve banka kartı kabul eder, banknot kabul etmez."
+    },
+    "terminals": {
+      "title": "Ücretsiz Terminal bus",
+      "hint": "Terminaller ve otoparklar",
+      "text": "Ücretsiz terminal otobüsü, P1 otoparkı bölgesi ve Car Rental’ı terminal 2 ve 3’e, terminal 3’teki metro ve tren istasyonuna ve Kystvejen üzerindeki P15, P17 ve P19 otoparklarına bağlar. Sefer aralığı 07:00–18:00 arasında 10 dakika, 04:00–07:00 ve 18:00–gece yarısı arasında 15 dakika, gece yarısı–04:00 arasında 20 dakikadır."
+    },
+    "sleep": {
+      "title": "Dinlenme alanları",
+      "hint": "C kapıları yakınında sessiz alan",
+      "text": "Güvenlik kontrolünden önce ve sonra ve tüm biniş kapılarında oturma yerleri vardır. C bölgesinden uçan yolcular için Kat 2’de, 7-Eleven yakınındaki yürüyen merdivenin üst tarafında sessiz bir alan bulunur. A ve B kapıları arasındaki yemek alanında ve C yakınında masaların çoğunda priz vardır."
+    },
+    "wifi": {
+      "title": "Ücretsiz Wi-Fi",
+      "hint": "Güvenlik öncesi ve sonrası",
+      "text": "CPH Airport Free Wi-Fi ağı, güvenlik kontrolünden önce ve sonra ve tüm biniş kapılarında kullanılabilir. Bağlantı ücretsizdir ve parola gerektirmez; havalimanının birçok bölgesinde ve kapıların çoğunda şarj istasyonları ve prizler bulunur."
+    }
+  }
+}

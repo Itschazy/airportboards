@@ -1,0 +1,135 @@
+heading ChatGPT сказал:, Value: 4
+									152 text ChatGPT сказал:
+								153 text Проверены все 6 пар RU → AR без поиска в интернете. Сопоставлены смысл, числа, валюты, условия доступа и оплаты, названия, обозначения и естественность арабского языка.
+								154 container
+									155 text Результат: 0 обязательных исправлений, 2 факультативных замечания.  Существенных искажений исходных фактов не обнаружено.
+								156 heading Обязательные исправления, Value: 2
+									157 text Обязательные исправления
+								158 text Нет. Во всех шести блоках корректно сохранены числовые значения, валюты, возрастные ограничения, время работы, условия бесплатного и платного обслуживания.
+								159 heading Факультативные улучшения, Value: 2
+									160 text Факультативные улучшения
+								161 container
+									162 text 1.  ATL / lounges — естественность заголовка
+								163 container
+									164 text Было: صالات رجال الأعمال
+								165 container
+									166 text Предлагается: صالات الأعمال
+								167 container
+									168 text Причина: صالات رجال الأعمال  буквально означает «залы бизнесменов». Это употребимое выражение, но  صالات الأعمال  более нейтрально и компактно для аэропортовой справочной. Не обязательная замена.
+								169 container
+									170 text 2.  STN / lounges — формулировка стоимости входа
+								171 container
+									172 text Было: ويبدأ الدخول دون حجز مسبق من 35 GBP
+								173 container
+									174 text Предлагается: وتبدأ رسوم الدخول دون حجز مسبق من 35 GBP
+								175 container
+									176 text Причина:  исходная конструкция «вход начинается от 35 GBP» понятна, но стилистически неудачна. Уточнение  رسوم الدخول  («стоимость входа») делает формулировку естественнее, не меняя цену или условия.
+								177 heading Проверка по аэропортам, Value: 2
+									178 text Проверка по аэропортам
+								179 table
+									180 row
+										181 cell
+											182 text Аэропорт
+										183 cell
+											184 text Блок
+										185 cell
+											186 text Результат
+									187 row
+										188 cell
+											189 text ATL
+										190 cell
+											191 text lounges
+										192 cell
+											193 text Факультативная стилистика
+									194 row
+										195 cell
+											196 text SHA
+										197 cell
+											198 text storage
+										199 cell
+											200 text Ошибок нет
+									201 row
+										202 cell
+											203 text STN
+										204 cell
+											205 text lounges
+										206 cell
+											207 text Факультативная стилистика
+									208 row
+										209 cell
+											210 text LIM
+										211 cell
+											212 text wifi
+										213 cell
+											214 text Ошибок нет
+									215 row
+										216 cell
+											217 text AUH
+										218 cell
+											219 text storage
+										220 cell
+											221 text Ошибок нет
+									222 row
+										223 cell
+											224 text XMN
+										225 cell
+											226 text taxi
+										227 cell
+											228 text Ошибок нет
+								229 text Отдельно проверены потенциально критичные места:
+								230 content list
+									231 container
+										232 AXListMarker •
+										233 text ATL:  младше 2 лет, отдельный пропуск с 2 лет, сопровождение до 17 лет включительно; интервалы 3 и 2,5 часа перед вылетом — корректно.
+									234 container
+										235 AXListMarker •
+										236 text SHA:  240-часовой безвизовый транзит, бесплатное хранение 1 места на 72 часа и платное хранение до 1 месяца — корректно.
+										237 text Gate 6
+										238 text  сохранено.
+									239 container
+										240 AXListMarker •
+										241 text STN:  запрет для пассажиров Ryanair и easyJet, отсутствие возврата в главный терминал, возраст младше 3 лет, цена от 35 GBP и оплата только картой — корректно.
+									242 container
+										243 AXListMarker •
+										244 text LIM:  SSID
+										245 text .FreeWifiJorgeChavez
+										246 text  сохранён полностью, включая начальную точку и допустимую RTL-изоляцию.
+									247 container
+										248 AXListMarker •
+										249 text AUH:  все пять тарифов, дополнительные 25 AED после 72 часов и округление неполного периода — корректно.
+									250 container
+										251 AXListMarker •
+										252 text XMN:  двери 7 и 3 не перепутаны с посадочными выходами, расстояние 120 м и западное направление сохранены, телефон корректно изолирован для RTL.
+								253 container
+									254 text Итог:  арабский перевод можно использовать без обязательных исправлений. Два предложенных изменения относятся исключительно к стилю.
+								255 button Копировать
+									256 image
+								257 button Оценить ответ
+									258 image
+								259 checkbox Description: Прочитать вслух, Value: 0
+								260 button Поделиться
+								261 pop up button (collapsed) Description: Сгенерировать ответ заново, ID: radix-_r_9p_, Secondary Actions: Expand
+								262 pop up button (collapsed) Description: Ещё действия, ID: radix-_r_9b_, Secondary Actions: Expand
+								263 container Как вам разговор? Пригодился?
+									264 text Как вам разговор? Пригодился?
+									265 checkbox Description: Да, Value: 0
+									266 checkbox Description: Нет, Value: 0
+									267 button Скрыть запрос на оценку
+							268 container
+								269 text ChatGPT может допускать ошибки. Проверяйте важную информацию.
+							270 container
+								271 heading Последний ответ, Value: 4
+									272 text Последний ответ
+								273 container
+									274 container
+										275 button (collapsed) Description: Добавить файлы и другое, Secondary Actions: Expand
+										276 text entry area (settable) Description: Спросить ChatGPT, Value:
+
+											277 container
+												278 text Спросить ChatGPT
+										279 pop up button (collapsed) Description: Выбрать модель ChatGPT, ID: radix-_r_9u_, Secondary Actions: Expand
+											280 text Средний
+										281 button Диктовать
+										282 button Начать голосовой разговор
+
+The focused UI element is 276 text entry area (settable) Description: Спросить ChatGPT, Value:

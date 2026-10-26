@@ -1,0 +1,25 @@
+{
+  "iata": "ORY",
+  "blocks": {
+    "transport": {
+      "title": "从巴黎乘地铁",
+      "hint": "14号线无需换乘",
+      "text": "地铁14号线从Châtelet、Gare de Lyon、Bercy及Saint-Lazare直达Orly Airport站，从巴黎市中心出发约需25–35分钟。Paris Région <> Airports单程票价14 EUR，可在自动售票机购买用于Navigo Easy的车票，或通过Île-de-France Mobilités应用购买。另一选择是乘RER B至Antony后换乘Orlyval，从市中心约需35–45分钟，价格同为14 EUR。"
+    },
+    "storage": {
+      "title": "行李寄存",
+      "hint": "Orly 3，0层",
+      "text": "Bagages du Monde位于Orly 3的0层，安检前、靠近到达区，每日07:00至21:00营业。行李须经X光检查，并在视频监控下存放，收费取决于尺寸及寄存时间。另有配饰及特殊行李寄存服务，并可租用婴儿车或儿童汽车座椅。"
+    },
+    "kids": {
+      "title": "婴儿护理室",
+      "hint": "Orly 3及4安检后",
+      "text": "洗手间区的尿布更换室24小时开放，配有尿布更换台及儿童厕所。Orly 3及Orly 4安检后1楼的独立婴儿护理室24小时免费开放，设有配备婴儿床、座椅、高脚椅、奶瓶加热器及微波炉的独立小间。"
+    },
+    "wifi": {
+      "title": "Wi-Fi及充电",
+      "hint": "各航站楼均提供",
+      "text": "免费WIFI-AIRPORT网络覆盖所有航站楼、登机及行李提取区。选择网络后打开浏览器进入连接页面。航站楼配有USB和欧洲C、E、F型插座。可上锁的ChargeBox手机充电柜24小时免费提供。"
+    }
+  }
+}

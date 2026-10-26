@@ -1,0 +1,20 @@
+{
+  "iata": "CSX",
+  "blocks": {
+    "transport": {
+      "title": "Magnetschwebebahn zum Bahnhof",
+      "hint": "20 CNY pro Fahrt",
+      "text": "Die Flughafenstation der Magnetschwebebahn liegt zwischen T1 und T2 beim Kontrollturm. Vom Abflugbereich in T2 führt ein Übergang bei Eingang 1 dorthin; vom Ankunftsbereich muss man zunächst zur Abflugebene hinaufgehen. Die Fahrt zur Station am Südbahnhof von Changsha kostet 20 CNY pro Person. Am Bahnhof gibt es einen Übergang zur Metrolinie 2; Auskunft zur Magnetschwebebahn: +86 731 86859898."
+    },
+    "taxi": {
+      "title": "Taxis",
+      "hint": "Taxistände bei T1 und T2",
+      "text": "Die offiziellen Taxieinstiege liegen an Tür 3 der Ankunftshalle von T1 und Tür 5 der Ankunftshalle von T2. Die Richtpreise betragen 90 CNY ins Zentrum von Changsha, 120 CNY zum westlichen Busbahnhof und 110 CNY zum südlichen Busbahnhof; Strassen- und Brückenmaut ist darin enthalten. Wenn ein Fahrer das Taxameter oder eine Fahrt verweigert oder einen überhöhten Preis verlangt, empfiehlt der Flughafen, das Personal am Taxistand anzusprechen."
+    },
+    "parking": {
+      "title": "Parken",
+      "hint": "Parkplätze an beiden Terminals",
+      "text": "Vor T1 liegt der Parkplatz P5: Bereich A direkt am Terminal, Bereich B etwa 300 m davon entfernt. Bei T2 liegt P1 nordwestlich und dient unter anderem dem Parken über Nacht; P2 befindet sich vor dem Terminal für kurze Stopps, P4 in der Tiefgarage vor dem Terminal zum Parken über Nacht. Die Zahlung ist bar, mit Bankkarte, Alipay oder WeChat möglich; Parkplatzauskunft: +86 731 84798050."
+    }
+  }
+}

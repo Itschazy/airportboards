@@ -1,0 +1,22 @@
+{
+  "iata": "DTW",
+  "checked": "2026-10-26",
+  "blocks": [
+    {
+      "id": "transport",
+      "title": "FAST Michigan 261",
+      "hint": "В центр Детройта",
+      "text": "Маршрут FAST Michigan 261 обслуживает терминалы Evans и McNamara аэропорта, Dearborn, Inkster, Corktown и центр Детройта. Автобусы FAST работают ежедневно, включая поздний вечер и выходные, а в часы пик интервал составляет примерно 15–20 минут. Посадка и высадка выполняются только на обозначенных остановках FAST; в автобусах есть Wi-Fi.",
+      "source": "smartbus.org",
+      "url": "https://www.smartbus.org/ridesmart-fast"
+    },
+    {
+      "id": "sleep",
+      "title": "The Westin в McNamara",
+      "hint": "Отель внутри терминала",
+      "text": "The Westin Detroit Metropolitan Airport находится внутри терминала McNamara. В отеле есть крытый бассейн, фитнес-центр и рестораны; заезд с 15:00, выезд до 12:00. Минимальный возраст для оформления заезда — 21 год.",
+      "source": "marriott.com",
+      "url": "https://www.marriott.com/en-us/hotels/dtwma-the-westin-detroit-metropolitan-airport/overview/"
+    }
+  ]
+}

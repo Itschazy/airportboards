@@ -1,0 +1,25 @@
+{
+  "iata": "PMI",
+  "blocks": {
+    "transport": {
+      "title": "Palma’ya otobüsler",
+      "hint": "A1, A2 ve 34 hatları",
+      "text": "A1 hattı havalimanını Palma merkezine, A2 S’Arenal’a ve 34 Hospital Son Espases’e bağlar. Havalimanındaki A1 durakları Kat 0’da gelen yolcu ve Kat 2’de giden yolcu alanındadır."
+    },
+    "taxi": {
+      "title": "Taksi",
+      "hint": "Kat 0’da taksi durağı",
+      "text": "İşaretli taksi durağı terminalin gelen yolcu alanında Kat 0’dadır. Hareket kabiliyeti kısıtlı yolcular için taksi hizmeti numarası +34 971 703 529’dur."
+    },
+    "lounges": {
+      "title": "Valldemossa VIP Lounge",
+      "hint": "Giden yolcu alanı, Kat 4",
+      "text": "Valldemossa VIP Lounge, yalnızca Schengen ve Schengen dışı uçuşların yolcularına açık biniş alanının alışveriş bölümünde Kat 4’tedir. Salon 05:00’ten gece yarısına kadar açıktır; planlanan kalkıştan hemen önce en fazla 3 saat kalınabilir. Yiyecek, çalışma alanları, yazıcı ve uçuş bilgileri sunulur."
+    },
+    "wifi": {
+      "title": "Ücretsiz Wi-Fi",
+      "hint": "E-postanızı doğrulayın",
+      "text": "Airport Free Wifi Aena ağına bağlanıp e-posta adresiyle misafir olarak karşılama sayfasını açın veya Aena Club’a giriş yapın. E-postayı doğrulamak için 15 dakika ücretsiz erişim verilir; doğrulama sonrasında süre sınırı yoktur."
+    }
+  }
+}

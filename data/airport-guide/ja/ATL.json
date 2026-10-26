@@ -1,0 +1,25 @@
+{
+  "iata": "ATL",
+  "blocks": {
+    "transport": {
+      "title": "アクセス",
+      "hint": "Red・Gold線",
+      "text": "MARTA Airport StationはDomestic TerminalのNorth・South手荷物受取エリアの間にあります。空港にはRed・Gold線が乗り入れています。20:30以降に空港からBuckhead、Medical Center、Dunwoody、Sandy Springs、North Springs各駅へ向かう場合、Lindbergh Center駅でRed Lineへの乗り換えが必要なことがあります。"
+    },
+    "terminals": {
+      "title": "ターミナル",
+      "hint": "無料シャトル24時間運行",
+      "text": "International Terminalの到着階からDomestic Terminalの手荷物受取エリアへ無料シャトルが運行しています。24時間運行で、ターミナル間の所要時間は15分です。Domestic Terminalの停留所は手荷物受取エリアの外にあります。"
+    },
+    "lounges": {
+      "title": "ラウンジ",
+      "hint": "The Club ATL",
+      "text": "The Club ATLはコンコースFのMezzanineレベル、保安検査後にあり、毎日06:00～22:00に営業しています。Club Passでの入場は50 USDで、対象のPriority PassおよびLoungeKeyプログラムでも利用できます。Club Passの利用者は出発予定時刻の3時間前から、Priority Pass・LoungeKey会員は2.5時間前から入場できます。2歳未満は無料で、2歳以上は個別のパスが必要です。17歳以下は18歳以上の大人の同伴が必要です。"
+    },
+    "sleep": {
+      "title": "仮眠・宿泊",
+      "hint": "Minute Suites",
+      "text": "Minute SuitesはTSA保安検査後にあり、コンコースBのB24番ゲート付近、コンコースEのアトリウムとエスカレーター付近、コンコースFのF6番ゲート付近にあります。客室には引き出し式の寝台付きソファベッド、Smart TV、無料Wi-Fi、作業台、充電ポートがあります。枕と毛布はリクエストに応じて提供されます。予約は1時間から可能で、シャワーはコンコースEのみで利用できます。"
+    }
+  }
+}

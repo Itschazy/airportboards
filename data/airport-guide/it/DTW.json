@@ -1,0 +1,15 @@
+{
+  "iata": "DTW",
+  "blocks": {
+    "transport": {
+      "title": "FAST Michigan 261",
+      "hint": "Verso il centro di Detroit",
+      "text": "FAST Michigan 261 serve i terminal aeroportuali Evans e McNamara, Dearborn, Inkster, Corktown e il centro di Detroit. Gli autobus FAST circolano tutti i giorni, anche in tarda serata e nei fine settimana, con intervalli di circa 15–20 minuti nelle ore di punta. Si sale e si scende solo alle fermate FAST segnalate; gli autobus dispongono di Wi-Fi."
+    },
+    "sleep": {
+      "title": "The Westin a McNamara",
+      "hint": "Hotel dentro il terminal",
+      "text": "The Westin Detroit Metropolitan Airport si trova all’interno del terminal McNamara. L’hotel dispone di piscina coperta, centro fitness e ristoranti; il check-in è dalle 15:00 e il check-out entro le 12:00. L’età minima per effettuare il check-in è di 21 anni."
+    }
+  }
+}

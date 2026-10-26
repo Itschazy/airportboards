@@ -1,0 +1,20 @@
+{
+  "iata": "MEX",
+  "blocks": {
+    "transport": {
+      "title": "Come arrivare",
+      "hint": "Metrobús da entrambi i terminal",
+      "text": "Metrobús collega l’aeroporto al centro di Città del Messico. Si sale presso la porta 7 del terminal 1 e la porta 2 del terminal 2. Si paga con la carta Metrobús, acquistabile e ricaricabile alle macchine nelle aree di salita e discesa di entrambi i terminal. Il servizio opera dalle 04:30 a mezzanotte dal lunedì al sabato e dalle 05:00 a mezzanotte la domenica e i festivi."
+    },
+    "terminals": {
+      "title": "Terminal",
+      "hint": "Aerotrén gratuito, 05:00–23:00",
+      "text": "L’Aerotrén gratuito trasporta i passeggeri tra i terminal 1 e 2 tutti i giorni dalle 05:00 alle 23:00. Per viaggiare occorre presentare una carta d’imbarco. I cani sono ammessi soltanto in gabbia e in carrozze vuote; sul treno è vietato mangiare, bere e fumare."
+    },
+    "storage": {
+      "title": "Deposito bagagli",
+      "hint": "Deposito bagagli 24 ore al T1 e T2",
+      "text": "Nel terminal 1 MEXICANA DE LOCKERS offre deposito bagagli 24 ore su 24 a livello strada, locale E-41. Nel terminal 2 i punti VIAJES KOKAI nei locali ALL45 e ALL46 sono disponibili 24 ore su 24 a livello strada."
+    }
+  }
+}

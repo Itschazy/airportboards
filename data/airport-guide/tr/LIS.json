@@ -1,0 +1,25 @@
+{
+  "iata": "LIS",
+  "blocks": {
+    "transport": {
+      "title": "Lizbon’a metro",
+      "hint": "Aeroporto — Saldanha",
+      "text": "Havalimanında metro istasyonu vardır; Aeroporto — Saldanha hattıyla Lizbon merkezine yolculuk yaklaşık 20 dakika sürer. Yolculuk için 0,50 EUR karşılığında yüklenebilir elektronik Navegante kartı alınabilir; kart metro ve Carris otobüslerinde geçerlidir."
+    },
+    "terminals": {
+      "title": "Terminal 2",
+      "hint": "T1’den ücretsiz otobüs",
+      "text": "Terminal 2 yalnızca giden uçuşlara hizmet verir ve 00:30–03:30 arasında kapalıdır. Terminal 1’den buraya 03:30’dan ertesi gün 00:30’a kadar ücretsiz otobüs çalışır; her terminalin gidiş alanından 12 dakikada bir kalkar ve yolculuk yaklaşık 3 dakika sürer."
+    },
+    "kids": {
+      "title": "Aile hizmetleri",
+      "hint": "Odalar ve alt değiştirme masaları",
+      "text": "Terminal 1’deki bez değiştirme odaları hem halka açık hem de erişimi kısıtlı alanlardadır; lavabo, alt değiştirme masası ve tezgâh bulunur. Terminal 1’in halka açık aile odasında ve güvenlik kontrolünden sonra 15 numaralı biniş kapısının yanında emzirme alanları vardır."
+    },
+    "wifi": {
+      "title": "Ücretsiz Wi-Fi",
+      "hint": "Süre sınırı yok",
+      "text": "Havalimanında süre sınırı olmayan ücretsiz Wi-Fi vardır. _VINCI Airports WiFi ağını seçip tarayıcı açın, kullanım koşullarını kabul edin ve Connect düğmesine basın."
+    }
+  }
+}

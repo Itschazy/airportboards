@@ -1,0 +1,30 @@
+{
+  "iata": "MUC",
+  "blocks": {
+    "transport": {
+      "title": "Comment s'y rendre",
+      "hint": "S1, S8 et Lufthansa Express Bus",
+      "text": "Les lignes de S-Bahn S1 et S8 relient l’aéroport au centre de Munich ; le trajet jusqu’à la gare centrale dure environ 40 minutes. La S8 circule 24 heures sur 24 : toutes les 40 minutes, approximativement de 01:00 à 04:00, et toutes les 20 minutes le reste du temps. La S1 circule toutes les 20 minutes, environ de 03:00 à minuit, et 24 heures sur 24 les week-ends et jours fériés. Le Lufthansa Express Bus entre l’aéroport et la gare centrale via Munich North (Schwabing) part toutes les 20 minutes ; le trajet entre la gare et l’aéroport dure 45 minutes."
+    },
+    "storage": {
+      "title": "Consigne à bagages",
+      "hint": "Munich Airport Center, niveau 03",
+      "text": "La consigne à bagages se trouve dans la zone publique du Munich Airport Center, au niveau 03. Elle est ouverte tous les jours de 05:00 à 23:30 ; téléphone : +49 89 975 214 75."
+    },
+    "sleep": {
+      "title": "Où dormir",
+      "hint": "napcabs et napcabsXL",
+      "text": "Des cabines napcabs sont disponibles après le contrôle de sûreté dans le terminal 2 et dans la zone publique ; elles disposent d’un espace de travail séparé et d’un accès gratuit à Internet. Les napcabsXL avec un lit queen-size pour deux personnes, une table et un fauteuil se trouvent dans le terminal 2, près de la porte G06. Les napcabs coûtent 17 EUR par heure de 06:00 à 22:00 et 12 EUR par heure de 22:00 à 06:00, avec un montant minimum de 34 EUR. Pour les napcabsXL, les tarifs correspondants sont de 24,50 EUR et 18 EUR par heure, avec un montant minimum de 49 EUR."
+    },
+    "kids": {
+      "title": "Avec un enfant",
+      "hint": "Aires de jeux, MAC niveau 03",
+      "text": "Des aires de jeux sont disponibles dans les zones publiques et à accès restreint. Celle du Munich Airport Center, au niveau 03, se trouve dans la zone publique et reste ouverte 24 heures sur 24. L’aéroport demande aux parents et accompagnateurs de surveiller les enfants pendant qu’ils jouent et de les accompagner lorsqu’ils quittent l’aire de jeux."
+    },
+    "wifi": {
+      "title": "Wi‑Fi",
+      "hint": "Free Wifi – Munich Airport",
+      "text": "L’aéroport propose un Wi-Fi gratuit sur le réseau Free Wifi – Munich Airport. L’accès nécessite une adresse électronique et l’acceptation des conditions d’utilisation."
+    }
+  }
+}

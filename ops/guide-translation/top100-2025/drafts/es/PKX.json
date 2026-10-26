@@ -1,0 +1,25 @@
+{
+  "iata": "PKX",
+  "blocks": {
+    "transport": {
+      "title": "Cómo llegar",
+      "hint": "Daxing Airport Express, nivel B1",
+      "text": "Daxing Airport Express para en Caoqiao, Daxing Xincheng y Daxing Airport; en Caoqiao hay conexiones con las líneas de metro 10 y 19. En el aeropuerto se sube al tren en el nivel B1 del terminal. Los trenes de Caoqiao al aeropuerto circulan de 05:30 a 22:30; del aeropuerto a Caoqiao, de 06:00 a 23:00 de lunes a sábado y hasta las 23:30 los domingos. Los niños de hasta 1,3 m de altura inclusive viajan gratis acompañados de un adulto que pague el trayecto."
+    },
+    "storage": {
+      "title": "Consigna",
+      "hint": "Consigna de 1 a 90 días",
+      "text": "El equipaje se puede guardar de 1 a 90 días. El punto del nivel 2 está a 30 m al este de la salida este del vestíbulo de llegadas nacionales y abre las 24 horas; el del nivel 4 está en la parte este del vestíbulo de salidas, al final de la isla H, y abre de 07:00 a 22:00. Se cobra por pieza y día, según el tamaño del equipaje. Los pasajeros con derecho al tránsito sin visado de 240 horas pueden dejar 1 pieza gratis."
+    },
+    "kids": {
+      "title": "Con niños",
+      "hint": "Zona infantil junto a A10",
+      "text": "La zona infantil está dedicada a la aviación y tiene modelos de aviones, toboganes y otros juegos. Está en el vestíbulo A, junto a la puerta de embarque A10, y abre de 08:00 a 21:00."
+    },
+    "wifi": {
+      "title": "Wi‑Fi",
+      "hint": "BDIA-FREE-WiFi, con pasaporte",
+      "text": "El aeropuerto dispone de la red gratuita BDIA-FREE-WiFi. Sus instrucciones ilustradas describen el acceso con pasaporte: en la página de autenticación hay que seleccionar ID Login, elegir el tipo de documento y fotografiarlo."
+    }
+  }
+}

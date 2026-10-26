@@ -1,0 +1,10 @@
+{
+  "iata": "SEA",
+  "blocks": {
+    "transport": {
+      "title": "交通方式",
+      "hint": "Link：市中心38分钟",
+      "text": "Link light rail连接机场与西雅图市中心，车程38分钟，大部分时段每8–10分钟一班。从16号行李转盘上到人行天桥层，经Skybridge Six后左转，穿过停车楼前往SeaTac/Airport站。车站与天桥之间有面向所有旅客的免费电动车，每日05:00至午夜运行。Sound Transit的Night Bus约每30分钟连接机场与市中心，约在末班列车后15分钟开始运行。"
+    }
+  }
+}

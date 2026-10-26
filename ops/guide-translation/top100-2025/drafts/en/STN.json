@@ -1,0 +1,25 @@
+{
+  "iata": "STN",
+  "blocks": {
+    "transport": {
+      "title": "Train to London",
+      "hint": "Station below the terminal",
+      "text": "The railway station is directly below the terminal, about a 2-minute walk away; lifts, escalators and ramps are available. Stansted Express runs to London Liverpool Street every 15 minutes daily, taking about 48 minutes; Tottenham Hale is about 36 minutes away. You can pay for Stansted Express with a contactless bank card or mobile wallet, but Oyster is not valid for travel to or from the airport."
+    },
+    "kids": {
+      "title": "Travelling with children",
+      "hint": "Changing and breastfeeding",
+      "text": "Baby-changing facilities are in the men’s and women’s toilets by check-in in Zone A, and after security near boarding gates 13, 33/34, 43 and 59. In international baggage reclaim, changing cubicles are near belt 9; there are also facilities in the main arrivals meeting hall. Breastfeeding is permitted throughout the airport, with private cubicles in the Family Room in the main departures hall."
+    },
+    "lounges": {
+      "title": "Essence Lounge",
+      "hint": "Only for selected airlines",
+      "text": "The former Escape Lounge in the main terminal is closed; the new Essence by Escape Lounges serves only passengers of eligible airlines departing from boarding gates 1–19. Ryanair and easyJet passengers cannot enter; after travelling to gates 1–19, you cannot return to the main terminal. Lounge entry is allowed from 3 hours before scheduled departure; walk-in entry costs from 35 GBP, and children under 3 enter free. Cold dishes, hot drinks, soft drinks, wine, bottled beer and Wi-Fi are included; payment is by card only."
+    },
+    "wifi": {
+      "title": "Free Wi-Fi",
+      "hint": "2 hours in the terminal",
+      "text": "Free Wi-Fi is available for 2 hours in Stansted’s terminal and lounges. To connect, select the airport Wi-Fi network on your phone, tablet or laptop."
+    }
+  }
+}

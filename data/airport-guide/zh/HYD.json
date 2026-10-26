@@ -1,0 +1,25 @@
+{
+  "iata": "HYD",
+  "blocks": {
+    "transport": {
+      "title": "Pushpak Airport Liner",
+      "hint": "市区电动巴士",
+      "text": "Pushpak电动巴士配备空调、手机充电设备，以及带车身降低装置的轮椅坡道。经LB Nagar、Tarnaka和Sangeeth前往JBS的AL线每20分钟发车；经Aramghar、NMDC和Punjagutta前往JBS的AC线每30分钟发车；经ORR、Gachibowli和JNTU前往Miyapur的AJ线每15分钟发车。咨询电话为+91 40 6944 0000和+91 73829 25981。"
+    },
+    "taxi": {
+      "title": "出租车和叫车应用",
+      "hint": "停车场上车区",
+      "text": "Alyte和Sky Cabs在柜台受理预订，上车地点为到达层坡道和Carpark Zone D。应用叫车的专用区域为：Uber在D1、D2，Rapido在D3、D4，Ola在D6、D7。在柜台预付费的出租车从Carpark Zone E出发，按目的地收取固定费用。"
+    },
+    "kids": {
+      "title": "婴儿护理室",
+      "hint": "请按指示牌前往",
+      "text": "航站楼主要区域设有私密婴儿护理室，配备空调和哺乳座椅。指示牌标明最近的护理室，问讯柜台也可帮助寻找。"
+    },
+    "wifi": {
+      "title": "免费Wi-Fi",
+      "hint": "最多4小时上网",
+      "text": "连接Hyderabad Airport-Free-WiFi，选择国家代码，输入手机号码，同意使用条款并接收SMS-OTP；输入验证码后，最多可上网4小时。也可在虚拟问讯屏幕扫描护照，使用屏幕显示的优惠券代码。国际出发区的Wi-Fi Kiosk位于23B登机口附近；国际到达区可在12号行李转盘附近凭护照领取优惠券。"
+    }
+  }
+}

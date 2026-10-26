@@ -1,0 +1,25 @@
+{
+  "iata": "IAD",
+  "blocks": {
+    "transport": {
+      "title": "Métro Silver Line",
+      "hint": "Passage du terminal principal",
+      "text": "La station Silver Line est reliée au terminal principal par un tunnel piéton couvert avec tapis roulants ; des panneaux y mènent depuis les niveaux d’enregistrement et de récupération des bagages. La ligne dessert le centre de Washington et d’autres secteurs de la région. Aux portillons, on peut payer par carte bancaire sans contact ou portefeuille mobile : il faut utiliser la même carte ou le même appareil à l’entrée et à la sortie."
+    },
+    "terminals": {
+      "title": "AeroTrain",
+      "hint": "Après le contrôle de sûreté TSA",
+      "text": "L’AeroTrain automatique relie le terminal principal aux zones de portes éloignées pour les départs intérieurs et internationaux ainsi que les arrivées intérieures. La station du terminal principal se trouve juste après le contrôle de sûreté TSA ; le trajet entre deux stations voisines dure moins de 2 minutes. La plupart des passagers arrivant de l’international ne prennent pas l’AeroTrain, car ils doivent d’abord effectuer les formalités douanières américaines."
+    },
+    "kids": {
+      "title": "Salles d’allaitement",
+      "hint": "Avant et après le contrôle",
+      "text": "Avant le contrôle de sûreté, les salles d’allaitement se trouvent au niveau des arrivées près des toilettes, en face des tapis à bagages 2, 6, 11 et 14. Après le contrôle, elles sont près des portes d’embarquement A20, B70, C11 et D1 ; celle de B70 possède des toilettes privées, celle de C11 un lavabo. Les salles sont verrouillées : pour y accéder, adressez-vous à un comptoir d’information ou appelez le +1 703 5722730."
+    },
+    "wifi": {
+      "title": "Wi-Fi gratuit",
+      "hint": "Réseau #IAD Free WiFi",
+      "text": "Le Wi-Fi gratuit est disponible dans le terminal principal et les zones de portes sous le nom #IAD Free WiFi. La page de connexion demande une adresse e-mail et un code postal ; les visiteurs étrangers peuvent choisir Yes pour ne pas saisir de code postal. Après avoir lu les conditions, appuyez sur Connect."
+    }
+  }
+}

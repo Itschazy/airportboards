@@ -1,0 +1,20 @@
+{
+  "iata": "GRU",
+  "blocks": {
+    "transport": {
+      "title": "가는 방법",
+      "hint": "13-Jade 노선",
+      "text": "Aeroporto-Guarulhos역은 CPTM의 13-Jade 노선에 있으며, 이 노선은 공항과 Engenheiro Goulart역을 연결합니다. Engenheiro Goulart에서 12-Safira 노선으로 환승할 수 있습니다. 공항 쪽 입구는 터미널 1 주차장 근처에 있습니다."
+    },
+    "storage": {
+      "title": "수하물 보관소",
+      "hint": "Malex, 터미널 2·3",
+      "text": "Malex 수하물 보관소는 터미널 2와 3의 도착 구역 밖 보도에 있습니다. 터미널 2의 Arrival West 보관소는 24시간 운영합니다. 터미널 2의 Arrival East와 터미널 3의 Arrival 보관소는 07:00–19:00에 운영합니다."
+    },
+    "wifi": {
+      "title": "Wi‑Fi",
+      "hint": ".GRU WIFI 네트워크",
+      "text": "공항은 BOINGO를 통해 무료 Wi-Fi를 제공합니다. .GRU WIFI 네트워크를 선택하고 Connect를 누른 뒤 안내에 따르세요. BOINGO 지원은 0800-095-9026으로 24시간 이용할 수 있습니다."
+    }
+  }
+}

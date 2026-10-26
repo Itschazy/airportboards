@@ -1,0 +1,30 @@
+{
+  "iata": "MUC",
+  "blocks": {
+    "transport": {
+      "title": "Anreise",
+      "hint": "S1, S8 und Lufthansa Express Bus",
+      "text": "Die S-Bahn-Linien S1 und S8 verbinden den Flughafen mit der Münchner Innenstadt; die Fahrt zum Hauptbahnhof dauert etwa 40 Minuten. Die S8 fährt rund um die Uhr: etwa von 01:00 bis 04:00 alle 40 Minuten, sonst alle 20 Minuten. Die S1 fährt etwa von 03:00 bis Mitternacht alle 20 Minuten, an Wochenenden und Feiertagen rund um die Uhr. Der Lufthansa Express Bus zwischen Flughafen und Hauptbahnhof über Munich North (Schwabing) fährt alle 20 Minuten; die Fahrt zwischen Bahnhof und Flughafen dauert 45 Minuten."
+    },
+    "storage": {
+      "title": "Gepäckaufbewahrung",
+      "hint": "Munich Airport Center, Ebene 03",
+      "text": "Die Gepäckaufbewahrung befindet sich im öffentlichen Bereich des Munich Airport Center auf Ebene 03. Sie ist täglich von 05:00 bis 23:30 geöffnet; Telefon +49 89 975 214 75."
+    },
+    "sleep": {
+      "title": "Schlafen",
+      "hint": "napcabs und napcabsXL",
+      "text": "napcabs-Schlafkabinen gibt es nach der Sicherheitskontrolle in Terminal 2 und im öffentlichen Bereich; sie verfügen über einen separaten Arbeitsplatz und kostenlosen Internetzugang. napcabsXL mit einem Queensize-Bett für zwei Personen, Tisch und Sessel befinden sich in Terminal 2 nahe Gate G06. napcabs kosten von 06:00 bis 22:00 17 EUR pro Stunde und von 22:00 bis 06:00 12 EUR pro Stunde, bei einem Mindestpreis von 34 EUR. Für napcabsXL betragen die entsprechenden Tarife 24,50 EUR und 18 EUR pro Stunde, bei einem Mindestpreis von 49 EUR."
+    },
+    "kids": {
+      "title": "Mit Kind",
+      "hint": "Spielbereiche, MAC Ebene 03",
+      "text": "Spielbereiche gibt es in öffentlichen und zugangsbeschränkten Bereichen. Der Spielbereich im Munich Airport Center auf Ebene 03 liegt im öffentlichen Bereich und ist rund um die Uhr geöffnet. Der Flughafen bittet Eltern und Begleitpersonen, Kinder beim Spielen zu beaufsichtigen und sie beim Verlassen des Spielbereichs zu begleiten."
+    },
+    "wifi": {
+      "title": "Wi‑Fi",
+      "hint": "Free Wifi – Munich Airport",
+      "text": "Der Flughafen bietet kostenloses WLAN über das Netzwerk Free Wifi – Munich Airport. Für den Zugang sind eine E-Mail-Adresse und die Zustimmung zu den Nutzungsbedingungen erforderlich."
+    }
+  }
+}

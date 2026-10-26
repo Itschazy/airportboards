@@ -1,0 +1,15 @@
+{
+  "iata": "CKG",
+  "blocks": {
+    "lounges": {
+      "title": "Salons",
+      "hint": "Salon China Southern au T3A",
+      "text": "Le salon China Southern se trouve à l’entrée du hall G du terminal T3A. Il est divisé en espaces pour les membres du programme et les passagers des deux classes premium, avec 187 places au total. Il comprend une consigne à bagages, un espace de travail, une zone de repos et de massage, une salle mère-enfant et des douches."
+    },
+    "sleep": {
+      "title": "Où dormir",
+      "hint": "Holiday Inn Express Airport Zone",
+      "text": "Holiday Inn Express Chongqing Airport Zone se trouve à l’adresse No.199 Lianggang Avenue, dans le district de Yubei. L’hôtel propose un petit-déjeuner gratuit et dispose du Wi-Fi, d’un parking et d’un restaurant. L’âge minimum pour s’enregistrer seul est de 18 ans ; le départ doit se faire avant 12:00."
+    }
+  }
+}

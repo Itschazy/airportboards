@@ -1,0 +1,30 @@
+{
+  "iata": "MEL",
+  "blocks": {
+    "transport": {
+      "title": "Buses to the city",
+      "hint": "SkyBus and public bus routes",
+      "text": "SkyBus Melbourne City Express connects the airport with Southern Cross station daily from 04:00 to 01:00, with stops at Terminals 1, 3 and 4. Tickets are sold online and at machines by the stops; cash purchases are available at Prosegur and Smart Carte in Terminal 2 arrivals. PTV public buses depart from the Terminal 4 ground transport hub."
+    },
+    "storage": {
+      "title": "Baggage storage",
+      "hint": "Terminals 2 and 4",
+      "text": "Self-service lockers are on the ground level of the Terminal 4 car park, beneath the escalators. Smartecarte on the ground level of Terminal 2 arrivals is open daily from 06:00 to midnight and also offers printing and faxing."
+    },
+    "sleep": {
+      "title": "Hotels near the terminals",
+      "hint": "Walkways and transfers",
+      "text": "PARKROYAL Melbourne Airport is connected to the domestic and international terminals by elevated pedestrian walkways. Holiday Inn Melbourne Airport is 400 m from the terminals and provides its guests with a free bus to and from the terminal on request."
+    },
+    "kids": {
+      "title": "Parents’ rooms",
+      "hint": "In all terminals",
+      "text": "Nappy-changing facilities are available in all terminals. In Terminal 2, they are on Level 1 before security near check-in areas M and F, and on Level 1 after security beyond Duty Free and opposite gates 3 and 16. The room on the ground level of Terminal 2 arrivals is opposite Smartcarte baggage storage."
+    },
+    "wifi": {
+      "title": "Free Wi-Fi",
+      "hint": "Terminals 2, 3 and 4",
+      "text": "The free Airport Free Wi-Fi network is available in Terminals 2, 3 and 4, including public areas and waiting lounges. This network is not available in Terminal 1, which is operated by Qantas. The free connection is not encrypted."
+    }
+  }
+}

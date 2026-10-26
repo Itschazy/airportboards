@@ -1,0 +1,25 @@
+{
+  "iata": "BOS",
+  "blocks": {
+    "transport": {
+      "title": "Cómo llegar",
+      "hint": "Silver Line SL1 a South Station",
+      "text": "El autobús MBTA Silver Line 1 (SL1) para en todos los terminales y conecta el aeropuerto con South Station. El viaje desde el aeropuerto al centro es gratuito e incluye un transbordo gratuito a Red Line. Se accede a Blue Line por Airport Station, conectada con los terminales mediante lanzaderas gratuitas del aeropuerto."
+    },
+    "terminals": {
+      "title": "Terminales",
+      "hint": "Lanzaderas Massport gratuitas",
+      "text": "Las lanzaderas gratuitas Massport conectan los terminales con Rental Car Center, el muelle de transporte acuático y Airport Station de Blue Line. Los autobuses tienen piso bajo, portaequipajes y elevadores para sillas de ruedas; los principales servicios a los terminales, el metro y el alquiler de coches suelen pasar cada 5–6 minutos. La ruta 11 une los terminales A, B, C y E a diario de 09:00 a 22:00. Las paradas están junto al bordillo en el nivel inferior de cada terminal, señalizadas como Shuttle Bus."
+    },
+    "kids": {
+      "title": "Con niños",
+      "hint": "Kidport después del control",
+      "text": "Las zonas de juegos Kidport están después del control de seguridad: en el edificio satélite del terminal A junto a la puerta de embarque A18, en el terminal B junto a B16 y en el pasillo comercial hacia las puertas B30–B36, y en el terminal C antes de C25. Todos los terminales tienen salas de lactancia y cuidado de bebés. Hay aseos familiares antes y después del control en todos los terminales, con inodoro, lavabo y cambiador abatible."
+    },
+    "wifi": {
+      "title": "Wi‑Fi",
+      "hint": "Red BOSWifi gratuita",
+      "text": "El aeropuerto ofrece Wi-Fi gratuito. Para conectarse, selecciona BOSWifi y acepta las condiciones de uso."
+    }
+  }
+}

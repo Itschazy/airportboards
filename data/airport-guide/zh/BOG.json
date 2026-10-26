@@ -1,0 +1,25 @@
+{
+  "iata": "BOG",
+  "blocks": {
+    "transport": {
+      "title": "交通方式",
+      "hint": "Portal El Dorado",
+      "text": "乘坐TransMilenio时，须在Portal El Dorado下车，换乘16-14 Airport接驳巴士或K86巴士。根据机场提供的信息，两条线路均直达航站楼。"
+    },
+    "terminals": {
+      "title": "航站楼",
+      "hint": "T1–T2免费接驳",
+      "text": "El Dorado的1号和2号航站楼之间设有免费接驳服务，每日04:00至午夜运行，车辆配备方便行动不便旅客使用的坡道。"
+    },
+    "parking": {
+      "title": "停车",
+      "hint": "T1短期及长期停车",
+      "text": "Short Stay Parking — Center位于1号航站楼中央，可前往国内及国际航班区域。停放数日可使用1号航站楼Gate 1附近的Long Stay Parking — North，部分车位有顶棚。停车场设有汽车和自行车车位，以及供行动不便旅客使用的专用车位。"
+    },
+    "wifi": {
+      "title": "Wi‑Fi",
+      "hint": "机场免费Wi-Fi",
+      "text": "机场向旅客和访客提供免费的Airport_El_Dorado Wi-Fi。连接时选择网络，在接入门户填写资料并打开浏览器。如连接中断，可按需要免费重新连接，不限重新连接次数。此外，还出售供1台设备连续连接使用的Premium WiFi。"
+    }
+  }
+}

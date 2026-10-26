@@ -1,0 +1,25 @@
+{
+  "iata": "AUH",
+  "blocks": {
+    "transport": {
+      "title": "市区公交车",
+      "hint": "须使用Hafilat卡",
+      "text": "市区公交车站位于到达区外，A系列线路全天运营。A1前往Al Zahiyah，A2前往Khalifa Street，A10前往MBZ City Bus Station，A40前往Al Shahama Bus Station。乘车须使用Hafilat卡，可在机场车站旁的机器上购买和充值；车上不收现金。"
+    },
+    "storage": {
+      "title": "行李寄存",
+      "hint": "全天开放",
+      "text": "每件行李寄存不超过3小时收费35 AED，不超过12小时55 AED，不超过24小时75 AED，不超过48小时105 AED，不超过72小时140 AED。超过72小时后，在已计收的140 AED基础上，每多一天加收25 AED；不足一个计费时段按完整时段收费。寄存处全天开放，机场建议向柜台了解具体条件。"
+    },
+    "kids": {
+      "title": "家庭服务",
+      "hint": "婴儿车和喂养室",
+      "text": "出发区从值机至登机的路段及到达出口一侧提供免费婴儿车。机场各区均设有尿布更换及喂养室，提供私密空间和座位。安静的Sensory Space位于D43登机口附近。"
+    },
+    "wifi": {
+      "title": "免费Wi-Fi",
+      "hint": "不限使用时间",
+      "text": "机场范围内提供不限时的免费Wi-Fi。选择Zayed International Airport Free Wifi网络，在欢迎窗口点击Connect；跳转至机场网站后即可完整访问互联网。"
+    }
+  }
+}

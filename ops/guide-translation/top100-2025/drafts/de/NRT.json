@@ -1,0 +1,25 @@
+{
+  "iata": "NRT",
+  "blocks": {
+    "terminals": {
+      "title": "Zwischen den Terminals",
+      "hint": "Kostenlose Busse",
+      "text": "Vor der Sicherheitskontrolle fahren kostenlose Busse zwischen den Terminals; die Terminals 2 und 3 sind auch über einen Fußweg verbunden. Die Ringlinie fährt in der Reihenfolge Terminal 1 → Terminal 3 → Terminal 2: Die Fahrt von 1 nach 3 dauert etwa 14 Minuten, von 3 nach 2 etwa 3 Minuten und von 2 nach 1 etwa 10 Minuten. Es gibt auch separate Linien zwischen Terminal 1 und 2 sowie zwischen Terminal 2 und 3."
+    },
+    "storage": {
+      "title": "Schließfächer",
+      "hint": "Tarif abhängig vom Standort",
+      "text": "Am Flughafen gibt es Schließfächer mit Tages- und Zeittarifen. Beim Tagestarif kosten kleine, mittlere und große Fächer entsprechend 400 JPY, 600 JPY und 800 JPY pro Nutzungstag; um Mitternacht beginnt ein neuer kostenpflichtiger Tag, die Höchstdauer beträgt 8 Tage. Im Hauptgebäude von Terminal 2 auf Ebene B1 und im Hauptgebäude von Terminal 3 auf Ebene 2 gilt ein Zeittarif: Bis zu 6 Stunden kosten kleine Fächer 300 JPY, mittlere 500 JPY und große 600 JPY; für jeweils weitere 24 Stunden werden entsprechend 400 JPY, 600 JPY und 800 JPY berechnet."
+    },
+    "kids": {
+      "title": "Babyräume",
+      "hint": "In allen Terminals",
+      "text": "Babyräume gibt es in allen Terminals; sie haben eine Stillkabine, einen Wickeltisch, ein Waschbecken und warmes Wasser. Männer können alle Einrichtungen außer der Stillkabine nutzen."
+    },
+    "wifi": {
+      "title": "WLAN und Steckdosen",
+      "hint": "In Terminals und Shuttle-Bussen",
+      "text": "Kostenloses WLAN gibt es in allen Terminals und in den Bussen zwischen den Terminals: FreeWiFi-NARITA wählen und auf der Verbindungsseite den Nutzungsbedingungen und dem Sicherheitshinweis zustimmen. Eine vorherige Konfiguration der Sicherheitseinstellungen ist nicht nötig; der Flughafen empfiehlt für eine sichere Verbindung ein VPN. Steckdosen in den Terminals können kostenlos genutzt werden."
+    }
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "iata": "PHL",
+  "blocks": {
+    "transport": {
+      "title": "도심행 열차",
+      "hint": "SEPTA 공항 철도",
+      "text": "SEPTA Airport Regional Rail 열차는 공항과 필라델피아 중심부를 30분 간격으로 연결합니다. 공항 정차역은 터미널 A, B, C/D, E/F를 담당하며 이 노선의 모든 역은 휠체어 이용이 가능합니다. William H. Gray III 30th Street역에서 Amtrak 및 NJ Transit Atlantic City Line으로 환승할 수 있습니다. SEPTA는 Visa, Mastercard, Discover, AMEX 비접촉식 카드와 모바일 결제를 받습니다."
+    },
+    "taxi": {
+      "title": "택시",
+      "hint": "수하물 수취 후 Zone 5",
+      "text": "수하물 수취 후 Ground Transportation / Taxis / Zone 5 표지를 따라가세요. A-West에 도착한 승객은 Ground Floor로 내려가야 합니다. 공항에서 지정된 Center City 구역까지 첫 승객 요금은 32 USD이며 12세를 초과하는 추가 승객마다 1 USD가 더해집니다. 이 고정 요금에는 별도의 공항 출구 이용료가 추가되지 않으며 팁은 포함되지 않습니다. 모든 택시가 신용카드를 받습니다."
+    },
+    "kids": {
+      "title": "아기 수유",
+      "hint": "보안검색 후 Mamava",
+      "text": "보안검색 후 A-West, B/C 연결 통로, 터미널 E와 F에 무료 Mamava 공간이 있습니다. 내부에는 벤치, 접이식 테이블, 콘센트, 잠금장치가 있는 문이 있습니다. Mamava 앱으로 문을 열고 이용 가능 여부를 확인할 수 있습니다. 보안검색 후 A-East와 B 사이 연결 통로의 Minute Suites에서는 수유 중인 어머니가 별도 객실을 처음 30분간 무료로 이용할 수 있습니다. 전화는 +1 215 9371076입니다."
+    },
+    "wifi": {
+      "title": "무료 Wi-Fi",
+      "hint": "데이터 제한 없음",
+      "text": "공항은 모든 방문객에게 데이터 제한 없는 AT&T 무료 Wi-Fi를 제공합니다. 기기 설정에서 Wi-Fi를 켜고 공항의 무료 PHL 네트워크를 선택하세요. 연결하려면 Wi-Fi 지원 기기가 필요합니다."
+    }
+  }
+}

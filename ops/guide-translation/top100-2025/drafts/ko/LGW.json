@@ -1,0 +1,20 @@
+{
+  "iata": "LGW",
+  "blocks": {
+    "transport": {
+      "title": "가는 방법",
+      "hint": "직통열차: 30분",
+      "text": "Gatwick Express는 공항과 London Victoria를 무정차로 30분 만에 연결하며 시간당 2회 출발합니다. Southern은 London Victoria, Clapham Junction, Brighton 및 남동부의 다른 도시를, Thameslink는 London Bridge, Blackfriars, City Thameslink, Farringdon, St Pancras International을 운행합니다. 철도역은 South Terminal에 있으며 도착 및 출발 구역에서 걸어서 약 5분입니다. 런던으로 가는 승차에는 비접촉식 은행 발급 결제 카드와 Oyster를 사용할 수 있으나 60+ Oyster photocard는 제외됩니다."
+    },
+    "kids": {
+      "title": "아이와 함께",
+      "hint": "무료 Kids Zones",
+      "text": "두 터미널의 출발 홀에 무료 Kids Zones 놀이 공간이 있습니다. 유모차에 탄 어린 자녀를 동반한 가족을 위한 별도 보안검색 통로인 Assisted Travel and family lanes가 있습니다. 공항에는 시설을 갖춘 수유 및 아기 기저귀 교환용 방이 있으며, 체크인 구역과 환승 구역, 도착 여권 심사 후 구역에도 있습니다. 두 터미널의 모든 레스토랑에서 출발 전에 젖병을 데울 수 있습니다."
+    },
+    "wifi": {
+      "title": "Wi‑Fi",
+      "hint": "무료 Wi-Fi, 시간 제한 없음",
+      "text": "무료 Wi-Fi를 이용하려면 Free Gatwick Wi-Fi Vinci Airports를 선택한 다음 Free Superfast Wi-Fi를 선택하고 유효한 이메일 주소를 입력해야 합니다. 연결은 무료이며 시간 제한이 없고 속도는 최대 50 Mbps입니다. 두 터미널의 보안검색 전후에 무료 충전 지점이 있습니다."
+    }
+  }
+}

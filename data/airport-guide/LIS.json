@@ -1,0 +1,38 @@
+{
+  "iata": "LIS",
+  "checked": "2026-10-26",
+  "blocks": [
+    {
+      "id": "transport",
+      "title": "Метро в Лиссабон",
+      "hint": "Aeroporto — Saldanha",
+      "text": "В аэропорту есть станция метро: поездка по линии Aeroporto — Saldanha в центр Лиссабона занимает около 20 минут. Для проезда можно приобрести электронную пополняемую карту Navegante за 0,50 EUR; она подходит для метро и автобусов Carris.",
+      "source": "lisbonairport.pt",
+      "url": "https://www.lisbonairport.pt/en/lis/access-parking/getting-to-and-from-the-airport/public-transportation"
+    },
+    {
+      "id": "terminals",
+      "title": "Терминал 2",
+      "hint": "Бесплатный автобус от T1",
+      "text": "Терминал 2 предназначен только для вылетов и закрыт с 00:30 до 03:30. Из терминала 1 до него ходит бесплатный автобус с 03:30 до 00:30 следующего дня: отправление из зоны вылета каждого терминала каждые 12 минут, дорога занимает около 3 минут.",
+      "source": "lisbonairport.pt",
+      "url": "https://www.lisbonairport.pt/en/lis/access-parking/getting-to-and-from-the-airport/terminal-2"
+    },
+    {
+      "id": "kids",
+      "title": "Семейные услуги",
+      "hint": "Комнаты и пеленальные столы",
+      "text": "Пеленальные комнаты терминала 1 находятся как в общественной зоне, так и в зоне ограниченного доступа; в них есть раковина, пеленальный стол и столешница. В терминале 1 предусмотрены места для кормления грудью в общественной семейной комнате и после досмотра рядом с выходом на посадку 15.",
+      "source": "lisbonairport.pt",
+      "url": "https://www.lisbonairport.pt/en/lis/services-shopping/essential-services/family-services"
+    },
+    {
+      "id": "wifi",
+      "title": "Бесплатный Wi-Fi",
+      "hint": "Без ограничения времени",
+      "text": "В аэропорту доступен бесплатный Wi-Fi без ограничения времени. Выберите сеть _VINCI Airports WiFi, откройте браузер, примите условия использования и нажмите Connect.",
+      "source": "lisbonairport.pt",
+      "url": "https://www.lisbonairport.pt/en/lis/services-shopping/essential-services/free-wifi"
+    }
+  ]
+}

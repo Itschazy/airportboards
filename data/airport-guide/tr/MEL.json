@@ -1,0 +1,30 @@
+{
+  "iata": "MEL",
+  "blocks": {
+    "transport": {
+      "title": "Şehre otobüsler",
+      "hint": "SkyBus ve toplu taşıma hatları",
+      "text": "SkyBus Melbourne City Express her gün 04:00–01:00 arasında havalimanını Southern Cross istasyonuna bağlar; duraklar terminal 1, 3 ve 4’tedir. Biletler çevrimiçi ve duraklardaki makinelerde, nakit ödemeyle ise terminal 2 gelen yolcu salonundaki Prosegur ve Smart Carte’ta satılır. PTV toplu taşıma otobüsleri terminal 4 kara ulaşım merkezinden kalkar."
+    },
+    "storage": {
+      "title": "Bagaj muhafazası",
+      "hint": "Terminal 2 ve 4",
+      "text": "Otomatik emanet dolapları terminal 4 otoparkının zemin seviyesinde yürüyen merdivenlerin altındadır. Terminal 2 gelen yolcu salonunun zemin seviyesindeki Smartecarte her gün 06:00’dan gece yarısına kadar açıktır; baskı ve faks gönderimi de sunar."
+    },
+    "sleep": {
+      "title": "Terminallerin yanındaki oteller",
+      "hint": "Yaya geçitleri ve transfer",
+      "text": "PARKROYAL Melbourne Airport, yükseltilmiş yaya geçitleriyle iç hat ve dış hat terminallerine bağlıdır. Holiday Inn Melbourne Airport terminallerden 400 m uzaktadır ve talep üzerine kendi misafirlerine terminale gidiş-dönüş ücretsiz otobüs sunar."
+    },
+    "kids": {
+      "title": "Ebeveyn odaları",
+      "hint": "Tüm terminallerde",
+      "text": "Tüm terminallerde bez değiştirme alanları vardır. Terminal 2’de güvenlik kontrolünden önce Kat 1’de check-in alanları M ve F’nin yanında, kontrol sonrasında Kat 1’de Duty Free’den sonra ve 3 ile 16 numaralı biniş kapılarının karşısındadır. Terminal 2 gelen yolcu salonunun zemin seviyesindeki oda Smartcarte bagaj muhafazasının karşısındadır."
+    },
+    "wifi": {
+      "title": "Ücretsiz Wi-Fi",
+      "hint": "Terminal 2, 3 ve 4",
+      "text": "Ücretsiz Airport Free Wi-Fi ağı terminal 2, 3 ve 4’te halka açık alanlar ve bekleme salonları dahil kullanılabilir. Qantas’ın işlettiği terminal 1’de bu ağ yoktur. Ücretsiz bağlantı şifrelenmemiştir."
+    }
+  }
+}

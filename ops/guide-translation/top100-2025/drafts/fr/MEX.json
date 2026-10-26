@@ -1,0 +1,20 @@
+{
+  "iata": "MEX",
+  "blocks": {
+    "transport": {
+      "title": "Comment s'y rendre",
+      "hint": "Metrobús aux deux terminaux",
+      "text": "Metrobús relie l’aéroport au centre de Mexico. L’embarquement se fait à la porte d’accès 7 du terminal 1 et à la porte d’accès 2 du terminal 2. Le paiement se fait avec une carte Metrobús, achetable et rechargeable aux automates des zones de montée et de descente des deux terminaux. Le service fonctionne de 04:30 à minuit du lundi au samedi, et de 05:00 à minuit les dimanches et jours fériés."
+    },
+    "terminals": {
+      "title": "Terminaux",
+      "hint": "Aerotrén gratuit, 05:00–23:00",
+      "text": "L’Aerotrén gratuit transporte les passagers entre les terminaux 1 et 2 tous les jours de 05:00 à 23:00. Une carte d’embarquement doit être présentée pour voyager. Les chiens ne sont admis qu’en cage et dans des voitures vides ; il est interdit de manger, de boire et de fumer dans le train."
+    },
+    "storage": {
+      "title": "Consigne à bagages",
+      "hint": "Consigne 24 h sur 24 au T1 et T2",
+      "text": "Dans le terminal 1, MEXICANA DE LOCKERS propose une consigne ouverte 24 heures sur 24 au rez-de-chaussée, local E-41. Dans le terminal 2, les points VIAJES KOKAI des locaux ALL45 et ALL46 sont accessibles 24 heures sur 24 au rez-de-chaussée."
+    }
+  }
+}

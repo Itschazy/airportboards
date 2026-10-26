@@ -1,0 +1,38 @@
+{
+  "iata": "BLR",
+  "checked": "2026-10-26",
+  "blocks": [
+    {
+      "id": "transport",
+      "title": "Как доехать",
+      "hint": "Автобусы BMTC Vayu Vajra",
+      "text": "Автобусы BMTC Vayu Vajra с кондиционером связывают аэропорт с городом. При посадке принимаются наличные и платежи UPI. Справочная BMTC доступна по телефонам +91 7760991250 и +91 7760991269.",
+      "source": "bengaluruairport.com",
+      "url": "https://www.bengaluruairport.com/travellers/transport-parking/airport-VayuVajra"
+    },
+    {
+      "id": "taxi",
+      "title": "Такси",
+      "hint": "KSTDC и машины с водителями-женщинами",
+      "text": "В аэропорту предлагаются такси с кондиционером и без него; машины без кондиционера обслуживает только KSTDC. У KSTDC также есть седаны с кондиционером, которыми управляют женщины. Такси KSTDC оснащены GPS, GPRS и принтерами для расчётных документов.",
+      "source": "bengaluruairport.com",
+      "url": "https://www.bengaluruairport.com/travellers/transport-parking/airport-taxi"
+    },
+    {
+      "id": "parking",
+      "title": "Парковка",
+      "hint": "Бесплатные короткие остановки",
+      "text": "На автомобильных парковках P3 и P4 терминала 1 первые 15 минут бесплатны, на P2 терминала 2 — первые 10 минут. Для электромобилей у терминала 1 предусмотрена платная медленная зарядка, у терминала 2 — платная быстрая. Для автомобилей категории 4W в зонах посадки прибывающих пассажиров обоих терминалов бесплатное пребывание ограничено 8 минутами.",
+      "source": "bengaluruairport.com",
+      "url": "https://www.bengaluruairport.com/travellers/transport-parking/parking"
+    },
+    {
+      "id": "wifi",
+      "title": "Wi‑Fi",
+      "hint": "BLR_FREE_WIFI, SIM или ваучер",
+      "text": "Для входа в BLR_FREE_WIFI с местной SIM-картой либо международным роумингом нужно выбрать Local Phone Number на странице входа и указать данные и одноразовый код OTP. Без такой SIM-карты можно получить ваучер в WiFi Voucher Kiosk в зоне международных прилётов, отсканировав страницу паспорта с фотографией и посадочный талон. При отсутствии посадочного талона аэропорт предлагает обратиться к виртуальной информационной стойке за PIN Wi‑Fi. Код ваучера вводится на странице входа в сеть.",
+      "source": "bengaluruairport.com",
+      "url": "https://www.bengaluruairport.com/travellers/services/all-facilities/wifi-services"
+    }
+  ]
+}

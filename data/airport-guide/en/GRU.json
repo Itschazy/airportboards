@@ -1,0 +1,20 @@
+{
+  "iata": "GRU",
+  "blocks": {
+    "transport": {
+      "title": "Getting there",
+      "hint": "Line 13-Jade",
+      "text": "Aeroporto-Guarulhos station is on CPTM line 13-Jade, which connects the airport with Engenheiro Goulart station. At Engenheiro Goulart, passengers can transfer to line 12-Safira. The airport-side entrance is next to the Terminal 1 car park."
+    },
+    "storage": {
+      "title": "Left luggage",
+      "hint": "Malex in Terminals 2 and 3",
+      "text": "Malex luggage storage is available in Terminals 2 and 3 outside the arrivals area, on the sidewalk. The Terminal 2 Arrival West location is open round the clock. The Terminal 2 Arrival East and Terminal 3 Arrival locations are open from 07:00 to 19:00."
+    },
+    "wifi": {
+      "title": "Wi‑Fi",
+      "hint": ".GRU WIFI network",
+      "text": "The airport offers free Wi-Fi through BOINGO. To connect, select .GRU WIFI, press Connect and follow the instructions. BOINGO support is available round the clock on 0800-095-9026."
+    }
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "iata": "HYD",
+  "blocks": {
+    "transport": {
+      "title": "Pushpak Airport Liner",
+      "hint": "Autobus elettrici in città",
+      "text": "Gli autobus elettrici Pushpak sono dotati di aria condizionata, caricabatterie per telefoni e rampa per sedie a rotelle con meccanismo di abbassamento della carrozzeria. La linea AL per JBS via LB Nagar, Tarnaka e Sangeeth parte ogni 20 minuti, AC per JBS via Aramghar, NMDC e Punjagutta ogni 30 minuti, AJ per Miyapur via ORR, Gachibowli e JNTU ogni 15 minuti. Informazioni ai numeri +91 40 6944 0000 e +91 73829 25981."
+    },
+    "taxi": {
+      "title": "Taxi e app",
+      "hint": "Aree di prelievo nel parcheggio",
+      "text": "Alyte e Sky Cabs accettano prenotazioni ai banchi, con prelievo sulla rampa degli arrivi e in Carpark Zone D. Per le auto richieste tramite app sono previste zone dedicate: Uber in D1 e D2, Rapido in D3 e D4, Ola in D6 e D7. I taxi prepagati al banco partono da Carpark Zone E con tariffa fissa in base alla destinazione."
+    },
+    "kids": {
+      "title": "Stanze per la cura dei neonati",
+      "hint": "Seguire le indicazioni",
+      "text": "Nelle principali aree del terminal sono disponibili stanze riservate per la cura dei neonati, con aria condizionata e poltrone per allattare. Le indicazioni conducono alla stanza più vicina; anche i banchi informazioni aiutano a trovarla."
+    },
+    "wifi": {
+      "title": "Wi-Fi gratuito",
+      "hint": "Fino a 4 ore di accesso",
+      "text": "Collegarsi a Hyderabad Airport-Free-WiFi, scegliere il prefisso del paese, inserire il numero di cellulare, accettare le condizioni d’uso e ricevere un SMS-OTP; inserendo il codice si ottengono fino a 4 ore di accesso. In alternativa si può scansionare il passaporto su uno schermo informativo virtuale e usare il codice del coupon visualizzato. Nell’area partenze internazionali, il Wi-Fi Kiosk si trova presso il gate 23B; negli arrivi internazionali si può ottenere un coupon con il passaporto presso il nastro 12."
+    }
+  }
+}

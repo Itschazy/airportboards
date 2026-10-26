@@ -1,0 +1,25 @@
+{
+  "iata": "LIS",
+  "blocks": {
+    "transport": {
+      "title": "Metro nach Lissabon",
+      "hint": "Aeroporto — Saldanha",
+      "text": "Der Flughafen hat eine Metrostation; die Fahrt auf der Linie Aeroporto — Saldanha ins Zentrum von Lissabon dauert etwa 20 Minuten. Für die Fahrt kann eine aufladbare elektronische Navegante-Karte für 0,50 EUR gekauft werden; sie gilt für die Metro und Carris-Busse."
+    },
+    "terminals": {
+      "title": "Terminal 2",
+      "hint": "Kostenloser Bus ab T1",
+      "text": "Terminal 2 dient nur Abflügen und ist von 00:30 bis 03:30 geschlossen. Ein kostenloser Bus fährt von Terminal 1 dorthin, von 03:30 bis 00:30 am Folgetag. Die Abfahrten erfolgen alle 12 Minuten aus dem Abflugbereich des jeweiligen Terminals; die Fahrt dauert etwa 3 Minuten."
+    },
+    "kids": {
+      "title": "Familienangebote",
+      "hint": "Räume und Wickeltische",
+      "text": "Wickelräume in Terminal 1 liegen sowohl im öffentlichen als auch im zugangsbeschränkten Bereich und bieten Waschbecken, Wickeltisch und Arbeitsplatte. Stillmöglichkeiten gibt es in Terminal 1 im öffentlichen Familienraum sowie nach der Sicherheitskontrolle bei Gate 15."
+    },
+    "wifi": {
+      "title": "Kostenloses WLAN",
+      "hint": "Ohne Zeitlimit",
+      "text": "Am Flughafen gibt es kostenloses WLAN ohne Zeitlimit. Das Netz _VINCI Airports WiFi wählen, einen Browser öffnen, die Nutzungsbedingungen akzeptieren und Connect drücken."
+    }
+  }
+}

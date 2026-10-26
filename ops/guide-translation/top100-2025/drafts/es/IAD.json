@@ -1,0 +1,25 @@
+{
+  "iata": "IAD",
+  "blocks": {
+    "transport": {
+      "title": "Metro Silver Line",
+      "hint": "Paso desde la terminal principal",
+      "text": "La estación de Silver Line está conectada con la terminal principal por un túnel peatonal cubierto con pasillos rodantes; las señales conducen desde los niveles de facturación y recogida de equipaje. La línea llega al centro de Washington y a otras zonas de la región. En los tornos puede pagar con tarjeta bancaria sin contacto o monedero móvil: debe usar la misma tarjeta o dispositivo al entrar y salir."
+    },
+    "terminals": {
+      "title": "AeroTrain",
+      "hint": "Después del control TSA",
+      "text": "El AeroTrain automático conecta la terminal principal con las zonas alejadas de puertas para salidas nacionales e internacionales y llegadas nacionales. La estación de la terminal principal está justo después del control de seguridad TSA; el viaje entre estaciones contiguas tarda menos de 2 minutos. La mayoría de los pasajeros que llegan en vuelos internacionales no usa AeroTrain porque primero debe realizar los trámites aduaneros de Estados Unidos."
+    },
+    "kids": {
+      "title": "Salas de lactancia",
+      "hint": "Antes y después de seguridad",
+      "text": "Antes del control de seguridad, las salas de lactancia están en el nivel de llegadas, junto a los aseos frente a las cintas 2, 6, 11 y 14. Después del control están junto a las puertas de embarque A20, B70, C11 y D1; la de B70 tiene aseo privado y la de C11 lavabo. Las salas están cerradas con llave: para acceder, acuda a un mostrador de información o llame al +1 703 5722730."
+    },
+    "wifi": {
+      "title": "Wi-Fi gratuito",
+      "hint": "Red #IAD Free WiFi",
+      "text": "Hay Wi-Fi gratuito en la terminal principal y las zonas de puertas con el nombre #IAD Free WiFi. En la página de conexión se pide correo electrónico y código postal; los visitantes extranjeros pueden seleccionar Yes para omitir el código postal. Tras leer las condiciones, pulse Connect."
+    }
+  }
+}

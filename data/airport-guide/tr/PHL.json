@@ -1,0 +1,25 @@
+{
+  "iata": "PHL",
+  "blocks": {
+    "transport": {
+      "title": "Şehir merkezine tren",
+      "hint": "SEPTA Airport Regional Rail",
+      "text": "SEPTA Airport Regional Rail trenleri, havalimanını Philadelphia merkezine 30 dakikada bir bağlar. Havalimanı durakları A, B, C/D ve E/F terminallerine hizmet verir; hattaki tüm istasyonlar tekerlekli sandalye kullanan yolcular için erişilebilirdir. William H. Gray III 30th Street istasyonunda Amtrak ve NJ Transit Atlantic City Line’a aktarma yapılabilir. SEPTA, temassız Visa, Mastercard, Discover ve AMEX kartlarının yanı sıra mobil ödemeleri kabul eder."
+    },
+    "taxi": {
+      "title": "Taksi",
+      "hint": "Bagaj alımından sonra Zone 5",
+      "text": "Bagaj alımından sonra Ground Transportation / Taxis / Zone 5 tabelalarını izleyin; A-West’e gelenler Ground Floor’a inmelidir. Havalimanından belirlenen Center City bölgesine yolculuk ilk yolcu için 32 USD, 12 yaşından büyük her ek yolcu için ilave 1 USD’dir. Bu sabit ücrete havalimanından çıkış harcı eklenmez; bahşiş dahil değildir. Tüm taksiler kredi kartı kabul eder."
+    },
+    "kids": {
+      "title": "Bebeği besleme",
+      "hint": "Güvenlik sonrası Mamava",
+      "text": "Güvenlik kontrolünden sonra A-West’te, B/C bağlantısında ve E ile F terminallerinde ücretsiz Mamava kabinleri vardır; içlerinde banklar, katlanır masa, priz ve kilitlenebilir kapı bulunur. Mamava uygulaması kabini açmayı ve müsaitliğini görmeyi sağlar. Güvenlik sonrası A-East ile B arasındaki bağlantıda bulunan Minute Suites’te emziren anneler ayrı bir odayı ilk 30 dakika ücretsiz kullanabilir; telefon: +1 215 9371076."
+    },
+    "wifi": {
+      "title": "Ücretsiz Wi-Fi",
+      "hint": "Veri sınırı yok",
+      "text": "Havalimanı tüm ziyaretçilere AT&T’nin veri sınırı olmayan ücretsiz Wi-Fi hizmetini sunar. Cihaz ayarlarından Wi-Fi’yi açıp havalimanının ücretsiz PHL ağını seçin; bağlanmak için Wi-Fi destekli cihaz gerekir."
+    }
+  }
+}

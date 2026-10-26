@@ -1,0 +1,25 @@
+{
+  "iata": "EWR",
+  "blocks": {
+    "transport": {
+      "title": "Getting there",
+      "hint": "AirTrain to NJ Transit and Amtrak",
+      "text": "AirTrain connects the terminals with Newark Liberty International Airport Train Station, served by NJ Transit and Amtrak. If you do not yet have an NJ Transit or Amtrak ticket, an AirTrain journey through the train station costs USD 8.75 one way. A connecting PATH journey is paid for separately."
+    },
+    "taxi": {
+      "title": "Taxi",
+      "hint": "Official ranks at every terminal",
+      "text": "Taxis are available at every terminal without a reservation: a uniformed dispatcher directs passengers to an available vehicle. At Terminal A, the rank is on Level 1 at door 5; at Terminal B, on Level 2 at door 8 and Level 1 at door 2; at Terminal C, on Level 1 at door 6. A regular taxi accommodates up to 4 passengers and a minivan up to 5; one fare covers all passengers travelling to the same destination. Each piece of baggage, including hand luggage, incurs a USD 1 charge."
+    },
+    "terminals": {
+      "title": "Terminals",
+      "hint": "AirTrain and Terminal A access",
+      "text": "AirTrain trips between terminals, parking areas, car rental and hotel shuttle stops are free. AirTrain does not reach Terminal A directly: access requires an approximately 15-minute walk along a covered walkway or an approximately 5-minute shuttle ride. From 23:00 to 05:00 US Eastern Time, AirTrain serves Terminals B and C every 15 minutes; a shuttle provides the additional connection to Terminal A. Temporary AirTrain suspensions may occur during construction, with replacement buses provided."
+    },
+    "wifi": {
+      "title": "Wi‑Fi",
+      "hint": "_Free EWR WiFi network",
+      "text": "The airport has free Wi-Fi: select _Free EWR WiFi. Technical support is available round the clock on +1 (800) 880-4117."
+    }
+  }
+}

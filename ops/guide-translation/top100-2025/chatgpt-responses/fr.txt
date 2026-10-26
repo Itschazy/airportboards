@@ -1,0 +1,93 @@
+heading ChatGPT сказал:, Value: 4
+									176 text ChatGPT сказал:
+								177 container
+									178 text Проверены  все  6  пар  RU  →  FR  без  поиска  в  интернете.  Существенных  ошибок  смысла,  чисел,  валют,  возрастных  ограничений,  времени  работы  и  условий  доступа  не  обнаружено. Есть  одна  обязательная  правка  для  устранения  неоднозначности  и  несколько  факультативных  стилистических  улучшений.
+								179 heading Обязательные правки, Value: 2
+									180 text Обязательные  правки
+								181 container
+									182 text 1.  STN  /  lounges  —  условие  оплаты  без  предварительного  бронирования
+								183 container
+									184 text Было: sans  réservation  préalable,  l’entrée  coûte  à  partir  de  35  GBP
+								185 container
+									186 text Предлагается: le  tarif  d’entrée  sans  réservation  préalable  commence  à  35  GBP
+								187 container
+									188 text Причина: исходная  формулировка  в  целом  корректна,  но  предложенная  явно  связывает  минимальную  цену  35  GBP  именно  со  входом  без  бронирования.  Убирает  возможную  неоднозначность  при  чтении  длинного  предложения.
+								189 heading Факультативные правки, Value: 2
+									190 text Факультативные  правки
+								191 container
+									192 text 1.  SHA  /  storage  —  неестественная  формулировка  срока  хранения
+								193 container
+									194 text Было: Les  bagages  sont  gardés  moyennant  paiement  jusqu’à  1  mois.
+								195 container
+									196 text Предлагается: Les  bagages  peuvent  être  conservés  moyennant  paiement  pendant  une  durée  maximale  de  1  mois.
+								197 container
+									198 text Причина: более  естественная  формулировка  для  справочной  информации.  Срок  и  платность  сохраняются.
+								199 container
+									200 text 2.  SHA  /  storage  —  стилистика  рентгеновского  досмотра
+								247 container
+									248 text Было: les  objets  passent  aux  rayons  X.
+								249 container
+									250 text Предлагается: les  objets  sont  contrôlés  aux  rayons  X.
+								251 container
+									252 text Причина: точнее  передаёт  именно  проверку  вещей,  а  не  просто  прохождение  через  рентгеновский  аппарат.
+								253 container
+									254 text 3.  STN  /  lounges  —  неестественное  описание  перемещения  к  выходам
+								255 container
+									256 text Было: après  le  trajet  vers  les  portes  1–19
+								257 container
+									258 text Предлагается: après  s’être  rendu  aux  portes  1–19
+								259 container
+									260 text Причина: французский  вариант  звучит  естественнее,  не  меняя  запрет  на  возвращение  в  главный  терминал.
+								261 container
+									262 text 4.  OKA  /  transport  —  более  естественное  описание  билета
+								263 container
+									264 text Было: Les  billets  QR  pour  un  trajet
+								265 container
+									266 text Предлагается: Les  billets  à  code  QR  pour  un  trajet
+								267 container
+									268 text Причина: billets  à  code  QR —  более  привычная  французская  конструкция.
+								269 heading Без замечаний, Value: 2
+									270 text Без  замечаний
+								271 content list
+									272 container
+										273 AXListMarker •
+										274 text ATL  /  lounges: правильно  сохранены  50  USD,  интервалы  3  и  2,5  часа,  бесплатный  вход  младше  2  лет,  необходимость  отдельного  пропуска  с  2  лет  и  сопровождение  до  17  лет  включительно.
+									275 container
+										276 AXListMarker •
+										277 text CAI  /  lounges: правильно  сохранены  220  USD,  3  600  EGP,  48  часов,  3  часа,  удвоение  стоимости,  минимум  4  часа  между  рейсами  и  условия  для  трёх  детей  младше  6  лет.
+									278 container
+										279 AXListMarker •
+										280 text AUH  /  storage: все  пять  тарифов,  25  AED  за  дополнительный  день,  правило  округления  неполного  периода  и  круглосуточная  работа  переданы  верно.
+									281 container
+										282 AXListMarker •
+										283 text OKA  /  transport: время  поездок,  срок  действия  билета,  возрастные  ограничения  и  бесплатный  проезд  максимум  двух  детей  младше  6  лет  с  одним  взрослым  переданы  верно.
+								284 container
+									285 text Итог: 0  критических  фактических  ошибок,  1  необязательная  по  смыслу,  но  рекомендуемая  для  ясности  правка  и  4  стилистических  улучшения.  Все  6  переводов  пригодны  к  публикации  в  текущем  виде.
+								286 button Копировать
+									287 image
+								288 button Оценить ответ
+									289 image
+								290 checkbox Description: Прочитать вслух, Value: 0
+								291 button Поделиться
+								292 pop up button (collapsed) Description: Сгенерировать ответ заново, ID: radix-_r_9p_, Secondary Actions: Expand
+								293 pop up button (collapsed) Description: Ещё действия, ID: radix-_r_9t_, Secondary Actions: Expand
+							148 container
+								149 text ChatGPT может допускать ошибки. Проверяйте важную информацию.
+							150 container
+								201 button Прокрутить вниз
+								151 heading Последний ответ, Value: 4
+									152 text Последний ответ
+								153 container
+									154 container
+										155 button (collapsed) Description: Добавить файлы и другое, Secondary Actions: Expand
+										156 text entry area (settable) Description: Спросить ChatGPT, Value:
+
+											157 container
+												294 text Спросить ChatGPT
+										295 pop up button (collapsed) Description: Выбрать модель ChatGPT, ID: radix-_r_a3_, Secondary Actions: Expand
+											296 text Medium
+										161 button Диктовать
+										297 button Начать голосовой разговор
+		298 text Ответ готов
+
+The focused UI element is 156 text entry area (settable) Description: Спросить ChatGPT, Value:

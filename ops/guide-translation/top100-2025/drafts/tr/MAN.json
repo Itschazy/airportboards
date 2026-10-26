@@ -1,0 +1,25 @@
+{
+  "iata": "MAN",
+  "blocks": {
+    "transport": {
+      "title": "Manchester’a tren",
+      "hint": "Piccadilly’ye yaklaşık 20 dakika",
+      "text": "Manchester Piccadilly’ye giden TransPennine Express ve Northern Rail trenleri yaklaşık 20 dakikada ulaşır ve her gün 10 dakikada bir kalkar. İstasyon terminal 2 ile 3 arasındadır: terminal 2’ye yaklaşık 10, terminal 3’e yaklaşık 5 dakika yürüme mesafesindedir. Terminaller istasyona asansörler, yürüyen merdivenler ve yürüyen bantlarla bağlanır; biletler internetten, makinelerden ve demiryolu bilgi masasından alınabilir."
+    },
+    "storage": {
+      "title": "Bagaj emaneti",
+      "hint": "Terminal 2 gidiş alanı",
+      "text": "Excess Baggage Company, terminal 2 gidiş alanında kısa ve uzun süreli bagaj saklama hizmeti sunar. Terminal 2’den uçan yolcular için bagaj sarma ve bagajın ülke içinde veya yurt dışına teslimatını düzenleme hizmetleri de vardır."
+    },
+    "kids": {
+      "title": "Alt değiştirme odaları",
+      "hint": "Tuvaletlerde veya yakınlarında",
+      "text": "Alt değiştirme alanları kadın tuvaletlerinde veya yakınlarında yer alır ve emzirme sandalyeleriyle donatılmıştır. Havalimanının her yerinde emzirmeye izin verilir; emzirme bu odalarla sınırlı değildir."
+    },
+    "wifi": {
+      "title": "Ücretsiz Wi-Fi",
+      "hint": "Her 24 saatte 2 saate kadar",
+      "text": "Ücretsiz _FreeWifi ağı, her 24 saatlik dönemde 2 saate kadar erişim sağlar. Telefon, tablet veya dizüstü bilgisayardan bağlanabilirsiniz; hizmet dinlenme salonlarında ve Runway Visitor Park’ta da vardır."
+    }
+  }
+}

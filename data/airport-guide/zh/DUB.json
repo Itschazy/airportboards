@@ -1,0 +1,25 @@
+{
+  "iata": "DUB",
+  "blocks": {
+    "transport": {
+      "title": "前往都柏林的巴士",
+      "hint": "航站楼附近乘车区",
+      "text": "Dublin Express从1区及21区发车，前往都柏林市中心站点，包括Temple Bar、Trinity College、O’Connell Street和Heuston站。Aircoach从2区及20区发车，前往都柏林、该郡其他地区及北爱尔兰。Transport for Ireland线路在11区、13区及15区发车。"
+    },
+    "taxi": {
+      "title": "出租车",
+      "hint": "两座航站楼外",
+      "text": "两座航站楼外均24小时提供出租车，乘车站点有调度员。车费按计价器计算，取决于距离、日期和乘车时间，乘客有权索取计价器收据。机场提供的前往都柏林市中心参考价格为30–45 EUR。"
+    },
+    "storage": {
+      "title": "行李服务",
+      "hint": "Smarte Carte",
+      "text": "Smarte Carte提供行李寄存及包装、旅行用品销售和行李寄送服务。服务点位于1号航站楼到达大厅主入口后左侧，以及2号航站楼出发区American Airlines值机柜台附近，办公室每日05:00至21:00营业。两座航站楼均免费提供行李推车。"
+    },
+    "wifi": {
+      "title": "Wi-Fi及打印",
+      "hint": "连接无需注册",
+      "text": "免费Dublin Airport Wi-Fi网络无需注册，在设备设置中选择该网络，并在弹出窗口点击Connect。打印服务位于1号航站楼到达大厅的Smarte Carte Baggage Services，时间为06:00至19:00，最多20页收费10 EUR。"
+    }
+  }
+}

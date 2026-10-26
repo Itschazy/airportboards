@@ -1,0 +1,25 @@
+{
+  "iata": "FUK",
+  "blocks": {
+    "transport": {
+      "title": "Metro",
+      "hint": "Station by the domestic terminal",
+      "text": "Fukuoka-kuko station is directly connected to the southern part of the domestic terminal. From the arrivals hall, the south lift and escalators lead to the fare gates in Access Hall on Level B2. For city connections, the line goes to Hakata for JR Kyushu and Tenjin for Nishitetsu Fukuoka (Tenjin)."
+    },
+    "terminals": {
+      "title": "Between terminals",
+      "hint": "Free bus",
+      "text": "A free bus for airport users runs between the domestic and international terminals. During the daytime portion of the published domestic terminal timetable, departures are every 5–6 minutes; times may change. All buses have wheelchair ramps, and passengers can board and alight through the front and rear doors."
+    },
+    "kids": {
+      "title": "Nursing rooms",
+      "hint": "In both terminals",
+      "text": "Nursing rooms have individual cubicles separated by curtains, water heaters and child seats. They are on Levels 1, 2, 3 and 4 in the domestic terminal and Levels 1 and 3 in the international terminal. They are marked with special symbols on the floor maps."
+    },
+    "wifi": {
+      "title": "Free Wi-Fi",
+      "hint": "Two AirportFreeWiFi networks",
+      "text": "Free internet is available through AirportFreeWiFi-2.4G and AirportFreeWiFi-5.0G; some devices show only the first network. After selecting a network, open a browser, accept the terms on the connection page and follow the indicated link. Connectivity may not work in some shops, restaurants and areas outside coverage; access may also be difficult during heavy usage."
+    }
+  }
+}

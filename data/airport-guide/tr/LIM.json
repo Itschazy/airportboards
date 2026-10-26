@@ -1,0 +1,25 @@
+{
+  "iata": "LIM",
+  "blocks": {
+    "taxi": {
+      "title": "Taksi",
+      "hint": "Geliş alanlarındaki masalar",
+      "text": "Taksi masaları iç ve dış hatlar geliş alanlarındadır. Görevliler yolcuyu ve sürücüyü havalimanı içindeki ayrılmış otoparka yönlendirir; hizmetin yayımlanan telefonlarından biri +51 1 4844001’dir."
+    },
+    "lounges": {
+      "title": "The Club LIM Internacional",
+      "hint": "Dış hatlar gidiş, Kat 2",
+      "text": "The Club LIM Internacional salonu, dış hatlar gidiş alanında Kat 2’dedir. Dinlenme yerleri, bar, duşlar ve toplantı odaları vardır. Havalimanı, salonun her gün günün her saati açık olduğunu belirtir."
+    },
+    "sleep": {
+      "title": "Sleepover",
+      "hint": "Perú Plaza, Kat 2",
+      "text": "Sleepover, Perú Plaza’da Kat 2’de Starbucks ve Dunkin Donuts yanındadır ve günün her saati açıktır. Duşlar, kısa uyku kapsülleri, ranzalı kabinler, ortak çalışma alanı ve dahil olan içecekler sunar."
+    },
+    "wifi": {
+      "title": "Ücretsiz Wi-Fi",
+      "hint": ".FreeWifiJorgeChavez ağı",
+      "text": "Telefon veya dizüstü bilgisayarla .FreeWifiJorgeChavez ağına ücretsiz bağlanabilirsiniz. Erişim için bağlantı sayfasındaki kullanım koşullarını kabul etmek gerekir."
+    }
+  }
+}

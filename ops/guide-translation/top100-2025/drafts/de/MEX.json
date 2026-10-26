@@ -1,0 +1,20 @@
+{
+  "iata": "MEX",
+  "blocks": {
+    "transport": {
+      "title": "Anreise",
+      "hint": "Metrobús von beiden Terminals",
+      "text": "Metrobús verbindet den Flughafen mit dem Zentrum von Mexiko-Stadt. Einstieg an Tür 7 von Terminal 1 und Tür 2 von Terminal 2. Bezahlt wird mit einer Metrobús-Karte, die an Automaten in den Ein- und Ausstiegsbereichen beider Terminals gekauft und aufgeladen werden kann. Der Betrieb läuft montags bis samstags von 04:30 bis Mitternacht, an Sonn- und Feiertagen von 05:00 bis Mitternacht."
+    },
+    "terminals": {
+      "title": "Terminals",
+      "hint": "Aerotrén kostenlos, 05:00–23:00",
+      "text": "Der kostenlose Aerotrén befördert täglich von 05:00 bis 23:00 Fahrgäste zwischen den Terminals 1 und 2. Für die Fahrt muss eine Bordkarte vorgelegt werden. Hunde dürfen nur in Käfigen und in leeren Wagen mitgenommen werden; Essen, Trinken und Rauchen sind im Zug verboten."
+    },
+    "storage": {
+      "title": "Gepäckaufbewahrung",
+      "hint": "Gepäckaufbewahrung in T1/T2, 24 h",
+      "text": "In Terminal 1 bietet MEXICANA DE LOCKERS im Erdgeschoss in Einheit E-41 rund um die Uhr Gepäckaufbewahrung an. In Terminal 2 sind die Standorte von VIAJES KOKAI in den Einheiten ALL45 und ALL46 im Erdgeschoss rund um die Uhr verfügbar."
+    }
+  }
+}

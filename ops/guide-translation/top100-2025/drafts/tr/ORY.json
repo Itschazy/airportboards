@@ -1,0 +1,25 @@
+{
+  "iata": "ORY",
+  "blocks": {
+    "transport": {
+      "title": "Paris’ten metro",
+      "hint": "14 hattıyla aktarmasız",
+      "text": "Metro hattı 14, Châtelet, Gare de Lyon, Bercy ve Saint-Lazare’dan Orly Airport istasyonuna aktarmasız gider; Paris merkezinden yolculuk yaklaşık 25–35 dakika sürer. Paris Région <> Airports bileti tek yön için 14 EUR’dur; Navigo Easy için bilet makinesinden veya Île-de-France Mobilités uygulaması üzerinden satın alınabilir. Diğer seçenek Antony’ye kadar RER B ve ardından Orlyval’dır; merkezden yolculuk yaklaşık 35–45 dakika sürer ve yine 14 EUR’dur."
+    },
+    "storage": {
+      "title": "Bagaj muhafazası",
+      "hint": "Orly 3, Kat 0",
+      "text": "Bagages du Monde, Orly 3’te Kat 0’da güvenlik kontrolünden önce, gelen yolcu alanının yanındadır ve her gün 07:00–21:00 arasında açıktır. Bagajlar röntgenle kontrol edilip kamera gözetiminde saklanır; ücret boyuta ve muhafaza süresine bağlıdır. Aksesuar ve özel bagaj vestiyeri ile bebek arabası veya çocuk oto koltuğu kiralama da sunulur."
+    },
+    "kids": {
+      "title": "Bebek odaları",
+      "hint": "Orly 3 ve 4’te kontrol sonrası",
+      "text": "Tuvalet bloklarındaki bez değiştirme odaları günün her saati açıktır; alt değiştirme masaları ve çocuk tuvaletleri bulunur. Orly 3 ve Orly 4’te Kat 1’de güvenlik kontrolünden sonraki ayrı bebek odaları ücretsiz ve günün her saati kullanılabilir; bebek yatağı, oturma yeri, mama sandalyesi, biberon ısıtıcısı ve mikrodalga bulunan bireysel bölmeler vardır."
+    },
+    "wifi": {
+      "title": "Wi-Fi ve şarj",
+      "hint": "Tüm terminallerde",
+      "text": "Ücretsiz WIFI-AIRPORT ağı tüm terminallerde, biniş ve bagaj teslim alanlarında kullanılabilir; ağı seçtikten sonra bağlantı sayfasına gitmek için tarayıcı açın. Terminallerde USB ve Avrupa tipi C, E ve F prizleri vardır. Telefon şarjı için kilitlenebilir ChargeBox bölmeleri ücretsiz ve günün her saati kullanılabilir."
+    }
+  }
+}

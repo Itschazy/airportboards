@@ -1,0 +1,25 @@
+{
+  "iata": "FCO",
+  "blocks": {
+    "transport": {
+      "title": "Nasıl gidilir",
+      "hint": "Leonardo express: 32 dakika",
+      "text": "Leonardo express, Fiumicino Havalimanı’nı Roma Termini’ye duraksız 32 dakikada bağlar; kalkışlar 15 dakikada bir planlanır. Tren istasyonu havalimanının içindedir. Bilet 14 €’dur; Mini-groups tarifesiyle tek alışverişte 4 bilet 56 € yerine 40 €’ya alınabilir."
+    },
+    "storage": {
+      "title": "Emanet",
+      "hint": "Parça başına 24 saatte 10 €",
+      "text": "Bagaj muhafazası terminal 3’ün dış hatlar gelen yolcu alanında, otobüs istasyonunun yanındadır ve 07:00–23:00 arasında açıktır. Ücret KDV dahil her bagaj parçası için 24 saatte 10 €’dur. Ödeme bagaj teslim alınırken yapılır; önceden rezervasyon gerekmez."
+    },
+    "kids": {
+      "title": "Çocukla",
+      "hint": "Ücretsiz bebek arabaları",
+      "text": "Havalimanında 700’den fazla ücretsiz bebek arabası vardır; kendi arabasını check-in sırasında teslim etmeyi seçen giden yolcular, A ve E biniş alanlarında A31 ve A61 numaralı kapılardan ve E1–E4 kapılarına giden yürüyen merdivenlerin yanından birini alabilir. Family Lane, çocuklu aileler ve hamileler için ayrı bir güvenlik şerididir. Bebek yatağı ve alt değiştirme masası bulunan 4 bebek odası vardır: terminal 3’te check-in kontuarları 312–327’nin arkasında, A alanının alışveriş galerisinde A61–A83 kapılarının önünde ve E11 ile E44’ün yanında. Yeme-içme noktalarından biberon veya bebek maması ısıtılması ve emzik sterilizasyonu istenebilir."
+    },
+    "wifi": {
+      "title": "Wi‑Fi",
+      "hint": "AIRPORT FREE WIFI, süre sınırı yok",
+      "text": "Havalimanı süre sınırı olmayan ücretsiz Wi-Fi sağlar. AIRPORT FREE WIFI ağı check-in, biniş kapıları ve gelen yolcu alanlarında mevcuttur. Bağlanmak için ağı seçip tarayıcı açmak gerekir; cihaz otomatik olarak karşılama sayfasına yönlendirilir."
+    }
+  }
+}

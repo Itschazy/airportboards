@@ -1,0 +1,15 @@
+{
+  "iata": "CUN",
+  "blocks": {
+    "transport": {
+      "title": "ADO 버스",
+      "hint": "칸쿤·플라야델카르멘·툴룸",
+      "text": "ADO Aeropuerto는 칸쿤공항과 Cancún Centro, Playa del Carmen, Tulum 버스터미널을 연결합니다. 출발 간격은 노선에 따라 다르며 15분일 수 있습니다. 승차권은 온라인과 일반 판매처에서 판매합니다. 운영사는 승차권 조건에 따라 출발 30분 전까지 날짜, 시간, 목적지 변경을 허용합니다."
+    },
+    "sleep": {
+      "title": "터미널 2 근처 호텔",
+      "hint": "Hilton Garden Inn",
+      "text": "Hilton Garden Inn Cancun Airport는 공항 부지 내 터미널 2 맞은편에 있으며 무료 호텔 셔틀이 투숙객을 몇 분 만에 터미널로 데려다줍니다. 호텔에는 레스토랑, 옥상 야외 수영장, 피트니스 센터, 무료 Wi-Fi가 있습니다. 체크인은 15:00부터, 체크아웃은 11:00까지입니다. 전화는 +52 998 3729860입니다."
+    }
+  }
+}

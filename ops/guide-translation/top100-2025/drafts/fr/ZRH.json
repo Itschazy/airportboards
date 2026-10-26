@@ -1,0 +1,25 @@
+{
+  "iata": "ZRH",
+  "blocks": {
+    "transport": {
+      "title": "Train pour Zurich",
+      "hint": "15 minutes jusqu’à la gare centrale",
+      "text": "Les trains SBB de l’aéroport à la gare centrale de Zurich partent toutes les 10 minutes ; le trajet dure 15 minutes. Des trains réguliers relient également l’aéroport à d’autres régions de Suisse et aux pays voisins."
+    },
+    "storage": {
+      "title": "Consigne à bagages",
+      "hint": "Arrivals 2, niveau 0",
+      "text": "La consigne avec personnel se trouve dans Arrivals 2 du terminal 2, au niveau 0 près du comptoir d’information, et ouvre tous les jours de 06:00 à 22:00. Pour un bagage de 25 kg maximum et ne dépassant pas 90 × 60 × 35 cm, le tarif est de 15 CHF jusqu’à 4 heures, 18 CHF jusqu’à 8 heures et 22 CHF jusqu’à 24 heures ; le paiement se fait à l’avance et la durée maximale de garde est de 3 mois. Les casiers SBB près de Check-in 3, dans Airport Shopping, sont accessibles 24 heures sur 24."
+    },
+    "kids": {
+      "title": "Family Services",
+      "hint": "Zone passagers A",
+      "text": "Family Services, dans la zone passagers A, est accessible gratuitement aux familles de toutes les compagnies aériennes. On y trouve des tables à langer, une salle calme pour nourrir les bébés avec des lits bébé, un espace pour ramper et un espace repas avec micro-ondes ; les plus grands disposent de jouets, de jeux vidéo et d’un baby-foot. Aucun service de garde n’est proposé : l’enfant doit rester avec un adulte."
+    },
+    "wifi": {
+      "title": "Wi-Fi gratuit",
+      "hint": "8 heures dès la première connexion",
+      "text": "Le réseau Zurich Airport offre 8 heures d’accès gratuit, décomptées sans interruption à partir de la première connexion. L’inscription est possible par SMS, en saisissant son numéro de téléphone et le code reçu, ou avec une carte d’embarquement et une pièce d’identité : le code est délivré à une WiFi Station ou à un comptoir d’information. En cas de problème, les comptoirs Service & Information peuvent aider."
+    }
+  }
+}

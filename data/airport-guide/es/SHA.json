@@ -1,0 +1,15 @@
+{
+  "iata": "SHA",
+  "blocks": {
+    "storage": {
+      "title": "Consigna",
+      "hint": "Consigna hasta 1 mes",
+      "text": "En el terminal 1, la consigna está frente a Gate 6 en el vestíbulo de salidas y abre de 07:00 a 20:30, sujeta al horario real aplicado en el lugar. El servicio de consigna es de pago y permite guardar el equipaje durante un máximo de 1 mes. Los pasajeros cuyo pasaporte permite el tránsito sin visado de 240 horas pueden guardar gratis 1 bulto durante 72 horas. Se requiere un documento de identidad válido para entregar y recoger el equipaje; los objetos pasan por rayos X."
+    },
+    "kids": {
+      "title": "Con niños",
+      "hint": "Zonas infantiles del terminal 1",
+      "text": "En el terminal 1, las zonas de juegos infantiles están en el nivel de salidas: junto a la puerta de embarque T10 en la zona de vuelos internacionales y vuelos a Hong Kong, Macao y Taiwán, y junto a la puerta de embarque T26 en la zona nacional. Su horario se ajusta a los vuelos de salida."
+    }
+  }
+}

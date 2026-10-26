@@ -1,0 +1,25 @@
+{
+  "iata": "MSP",
+  "blocks": {
+    "transport": {
+      "title": "METRO Blue Line",
+      "hint": "In die Stadt und zwischen Terminals",
+      "text": "METRO Blue Line hält an beiden Terminals: Die Fahrt zur Mall of America dauert etwa 12 Minuten, zum Warehouse District in der Innenstadt von Minneapolis etwa 25 Minuten. Die gesamte Strecke wird ungefähr von 05:00 bis Mitternacht alle 15–20 Minuten bedient; zwischen den Terminalstationen sind Fahrten rund um die Uhr kostenlos und ohne Ticket möglich. Stadtbus 54 fährt vom Transit Center auf Ebene 1 von Silver Ramp ab; an Terminal 2 gibt es keinen Einstieg in Stadtbusse."
+    },
+    "taxi": {
+      "title": "Taxi",
+      "hint": "Taxistände an beiden Terminals",
+      "text": "In Terminal 1 führen Schilder von Tram Level (Ebene T) zu den Taxis; in Terminal 2 liegt der Taxistand im Ground Transport Center im ebenerdigen Bereich von Purple Ramp gegenüber dem Terminal. Mitarbeitende helfen täglich von 06:00 bis 01:00 bei der Taxisuche; außerhalb dieser Zeiten können Fahrgäste weiterhin selbstständig einsteigen. Der Flughafen nennt Durchschnittspreise von 39–49 USD ins Zentrum von Minneapolis und 31–38 USD ins Zentrum von St. Paul. Der anfängliche Taxameterbetrag von 6,50 USD umfasst die Grundgebühr von 2,50 USD und die Flughafengebühr von 4 USD."
+    },
+    "sleep": {
+      "title": "Ruhige Erholungsbereiche",
+      "hint": "Nach der Kontrolle in Terminal 1",
+      "text": "In Terminal 1 gibt es nach der Sicherheitskontrolle 2 ruhige Erholungsbereiche auf Ebene Mezzanine mit Blick auf Airport Mall. Sie sind über Treppe oder Aufzug bei den Eingängen zu den Hallen E und F 1 Ebene höher erreichbar und eignen sich zum Lesen, Ausruhen, Meditieren und Beten."
+    },
+    "wifi": {
+      "title": "Kostenloses WLAN",
+      "hint": "Sitzungen von 4 Stunden",
+      "text": "MSP Airport WiFi ist in allen öffentlichen Bereichen beider Terminals verfügbar; bei der ersten Verbindung müssen die Nutzungsbedingungen akzeptiert werden. Eine kostenlose Sitzung dauert 4 Stunden; danach kann eine weitere kostenlose Sitzung gestartet werden. Die Anzahl dieser Sitzungen ist unbegrenzt."
+    }
+  }
+}

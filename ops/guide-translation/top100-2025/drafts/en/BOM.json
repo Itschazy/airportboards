@@ -1,0 +1,10 @@
+{
+  "iata": "BOM",
+  "blocks": {
+    "lounges": {
+      "title": "Lounges",
+      "hint": "Aviserv West, Terminal 2 arrivals",
+      "text": "Aviserv West lounge is in the Terminal 2 arrivals area, towards Gate A. It offers food and drinks, showers, sleeping pods and a separate relaxation area."
+    }
+  }
+}

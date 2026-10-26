@@ -1,0 +1,20 @@
+{
+  "iata": "HAN",
+  "blocks": {
+    "terminals": {
+      "title": "Between terminals",
+      "hint": "Free NIA Shuttle Bus",
+      "text": "The free NIA Shuttle Bus connects domestic Terminal T1 and international Terminal T2. At T1, boarding is in Wing A on Level 1."
+    },
+    "kids": {
+      "title": "Family services",
+      "hint": "Strollers and baby care rooms",
+      "text": "Free strollers are available after security: in Terminal T1 and Hall E on Level 2, and in Terminal T2 on Levels 2 and 3. T2 has 2 baby care rooms after security on Level 3; changing tables are also provided in some terminal toilets."
+    },
+    "wifi": {
+      "title": "Free Wi-Fi",
+      "hint": "T1 and T2 waiting areas",
+      "text": "Free Wi-Fi is available in passenger waiting areas of the domestic and international terminals. Select @Airport Free Wifi - Goldsun and press Connect to the Internet on the page that opens automatically. Equipment installation is still ongoing in the expanded part of T2."
+    }
+  }
+}

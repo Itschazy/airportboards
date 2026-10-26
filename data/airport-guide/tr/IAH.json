@@ -1,0 +1,25 @@
+{
+  "iata": "IAH",
+  "blocks": {
+    "transport": {
+      "title": "Nasıl gidilir",
+      "hint": "Downtown Direct: 4,50 USD",
+      "text": "METRO 500 IAH Downtown Direct otobüsü, havalimanı ile George R. Brown Convention Center arasında duraksız çalışır. Biniş noktası terminal E’de Kat 2’de, Ride App Pick-Up alanı yakınındaki E201 numaralı kapıdadır. Tek yön ücreti 4,50 USD’dir; otobüs her gün 05:30–20:00 arasında 30 dakikada bir kalkar. Bagaj alanı, hareket kabiliyeti kısıtlı yolcular için erişilebilirlik ve ücretsiz Wi-Fi sunulur."
+    },
+    "sleep": {
+      "title": "Nerede uyunur",
+      "hint": "Kontrolden sonra Minute Suites",
+      "text": "Minute Suites, güvenlik kontrolünden sonra terminal C’de C14 numaralı kapının yakınındadır. Yolculara uyumak, dinlenmek ve çalışmak için özel bir alanın yanı sıra duş sunulur."
+    },
+    "kids": {
+      "title": "Çocukla",
+      "hint": "Mother’s Rooms ve Mamava",
+      "text": "IAH’de emzirme ve süt sağma için odalar ve Mamava kabinleri, çocuk odaları ve alt değiştirme masaları vardır. Mother’s Rooms, terminal A’da A1 ve A17 numaralı kapıların, terminal C’de C5’in yakınındadır. Mamava kabinleri terminal B’de B21, terminal C’de C34 ve terminal E’de E12 yakınındadır; terminal D’deki çocuk odası D15 yakınındadır."
+    },
+    "wifi": {
+      "title": "Wi‑Fi",
+      "hint": "Free Airport WIFI",
+      "text": "IAH’nin tüm terminallerinde ve otopark binalarında ücretsiz Wi-Fi vardır. Free Airport WIFI ağını seçip giriş sayfasını bekleyin, koşulları kabul edin ve Submit düğmesine basın. Destek telefonu: 1-844-831-0999."
+    }
+  }
+}

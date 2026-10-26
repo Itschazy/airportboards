@@ -1,0 +1,77 @@
+heading ChatGPT сказал:, Value: 4
+									152 text ChatGPT сказал:
+								153 text Проверены все 6 пар RU→EN без обращения к интернету. Существенных ошибок в числах, валютах, возрастных ограничениях, условиях доступа, оплаты, времени работы и расположении не обнаружено.
+								154 heading Обязательные исправления, Value: 2
+									155 text Обязательные исправления
+								156 container
+									157 text Нет.  Все шесть переводов корректно передают факты русского оригинала. Оснований требовать обязательных исправлений нет.
+								158 heading Факультативные улучшения, Value: 2
+									159 text Факультативные улучшения
+								160 container
+									161 text 1.  ATL / lounges — естественность формулировки
+								162 container
+									163 text Было:  eligible Priority Pass and LoungeKey access is also available
+								164 container
+									165 text Предлагается:  access is also available through eligible Priority Pass and LoungeKey memberships
+								166 container
+									167 text Причина: исходная конструкция  eligible ... access  немного неестественна. Предложенный вариант яснее передаёт доступ по подходящим программам. Смысл не меняется.
+								168 container
+									169 text 2.  SHA / storage — точность формулировки о документе
+								170 container
+									171 text Было:  A valid identity document is required
+								172 container
+									173 text Предлагается:  A valid document is required
+								174 text Причина: оригинал говорит «действительный документ», не уточняя, что это обязательно удостоверение личности. Текущий перевод потенциально сужает перечень принимаемых документов. Правка точнее следует оригиналу.
+								175 container
+									176 text 3.  STN / lounges — естественность
+								177 container
+									178 text Было:  Cold food, hot and soft drinks, wine, bottled beer and Wi-Fi are included
+								179 container
+									180 text Предлагается:  Cold dishes, hot drinks, soft drinks, wine, bottled beer and Wi-Fi are included
+								181 container
+									182 text Причина:  Cold dishes  точнее передаёт «холодные блюда», а раздельное перечисление  hot drinks, soft drinks  легче воспринимается. Текущий вариант тоже понятен и допустим.
+								183 heading Без замечаний, Value: 2
+									184 text Без замечаний
+								185 content list
+									186 container
+										187 AXListMarker •
+										188 text CAI / lounges  — корректно переданы цены 220 USD и 3,600 EGP, удвоение стоимости при стыковке, ограничение минимум 4 часа, бронирование за 48 часов и правила для детей младше 6 лет.
+									189 container
+										190 AXListMarker •
+										191 text AUH / storage  — все тарифы, интервалы, начисление 25 AED после 72 часов и округление неполного периода переданы корректно.
+									192 container
+										193 AXListMarker •
+										194 text XMN / taxi  — правильно сохранены различия между дверями и выходом, расположение, расстояние 120 м и телефон жалоб.
+								195 container
+									196 text Итог:  0 обязательных исправлений, 3 факультативных улучшения. Переводы можно использовать без обязательной переработки.
+								197 button Копировать
+									198 image
+								199 button Оценить ответ
+									200 image
+								201 checkbox Description: Прочитать вслух, Value: 0
+								202 button Поделиться
+								203 pop up button (collapsed) Description: Сгенерировать ответ заново, ID: radix-_r_91_, Secondary Actions: Expand
+								204 pop up button (collapsed) Description: Ещё действия, ID: radix-_r_95_, Secondary Actions: Expand
+								205 container Как вам разговор? Пригодился?
+									206 text Как вам разговор? Пригодился?
+									207 checkbox Description: Да, Value: 0
+									208 checkbox Description: Нет, Value: 0
+									209 button Скрыть запрос на оценку
+							210 container
+								211 text ChatGPT может допускать ошибки. Проверяйте важную информацию.
+							212 container
+								213 heading Последний ответ, Value: 4
+									214 text Последний ответ
+								215 container
+									216 container
+										217 button (collapsed) Description: Добавить файлы и другое, Secondary Actions: Expand
+										218 text entry area (settable) Description: Спросить ChatGPT, Value:
+
+											219 container
+												225 text Спросить ChatGPT
+										221 pop up button (collapsed) Description: Выбрать модель ChatGPT, ID: radix-_r_9h_, Secondary Actions: Expand
+											222 text Средний
+										223 button Диктовать
+										224 button Начать голосовой разговор
+
+The focused UI element is 218 text entry area (settable) Description: Спросить ChatGPT, Value:

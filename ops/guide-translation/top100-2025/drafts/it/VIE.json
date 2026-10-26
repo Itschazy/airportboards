@@ -1,0 +1,25 @@
+{
+  "iata": "VIE",
+  "blocks": {
+    "transport": {
+      "title": "Treni per Vienna",
+      "hint": "S7 e Railjet",
+      "text": "La S7 impiega circa 25 minuti per Wien Mitte e passa ogni 30 minuti; il Railjet impiega circa 15 minuti per Wien Hauptbahnhof e passa ogni 30 minuti. La biglietteria ÖBB si trova nella sala arrivi; le biglietterie automatiche sono presenti anche nella sala, nei passaggi verso i binari e sui marciapiedi dei binari. Dalla sala arrivi un breve percorso privo di barriere e riparato dalle intemperie conduce ai binari."
+    },
+    "lounges": {
+      "title": "VIENNA Lounge",
+      "hint": "Terminal 1, livello 2",
+      "text": "VIENNA Lounge si trova nel terminal 1 al livello 2, dopo i controlli di sicurezza e prima del controllo passaporti; è aperta ogni giorno dalle 04:30 alle 22:00. Con una carta d’imbarco valida si può accedere il giorno della partenza a partire da 3,5 ore prima della partenza, per un soggiorno massimo di 3 ore. Il prezzo ordinario è di 59 EUR, i bambini di 4–14 anni pagano 31 EUR e quelli di 0–3 anni entrano gratis. Sono disponibili cibo, Wi-Fi, postazioni di lavoro, area relax, docce con asciugamani e un bagno per famiglie con fasciatoio."
+    },
+    "sleep": {
+      "title": "Hotel vicino all’aeroporto",
+      "hint": "NH e Moxy a piedi dal terminal",
+      "text": "NH Vienna Airport Conference Center e Moxy Vienna Airport si trovano in AirportCity, vicino al terminal e raggiungibili a piedi. NH dispone di Wi-Fi e finestre insonorizzate; Moxy offre snack e bevande 24 ore su 24, uso gratuito di computer e centro fitness e Wi-Fi gratuito."
+    },
+    "kids": {
+      "title": "Aree gioco e passeggini",
+      "hint": "Presso i gate F, C e D",
+      "text": "L’Entertainment Gate gratuito presso F03 comprende una struttura gioco su due livelli, un’area separata per i più piccoli e un calcio balilla; altre aree per bambini si trovano presso C42 e D31–36. Se il proprio passeggino è stato consegnato al check-in, l’aeroporto ne fornisce gratuitamente uno per il percorso dai controlli di sicurezza al gate; va riconsegnato al personale del gate al momento dell’imbarco. I fasciatoi si trovano in quasi tutti i servizi igienici accessibili, nei bagni per famiglie e nei grandi servizi igienici per passeggeri."
+    }
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "iata": "BOS",
+  "blocks": {
+    "transport": {
+      "title": "アクセス",
+      "hint": "Silver Line SL1バス",
+      "text": "MBTA Silver Line 1（SL1）バスはすべてのターミナルに停車し、空港とSouth Stationを結びます。空港から市内中心部への乗車は無料で、Red Lineへの無料乗り換えも含まれます。Blue LineへはAirport Station経由でアクセスでき、同駅とターミナルの間には無料の空港シャトルがあります。"
+    },
+    "terminals": {
+      "title": "ターミナル",
+      "hint": "無料Massportシャトル",
+      "text": "無料のMassportシャトルはターミナルとRental Car Center、水上交通の船着き場、Blue LineのAirport Stationを結びます。バスは低床で、荷物棚と車いす用リフトを備えています。ターミナル、地下鉄駅、レンタカーを結ぶ主要便は通常5～6分間隔です。ルート11は毎日09:00～22:00にターミナルA・B・C・Eを結びます。停留所は各ターミナル下層階の車寄せにあり、Shuttle Busの表示があります。"
+    },
+    "kids": {
+      "title": "お子様連れ",
+      "hint": "保安検査後のKidport",
+      "text": "Kidportの遊び場は保安検査後にあり、ターミナルAのサテライト棟のA18番ゲート付近、ターミナルBのB16付近とB30～B36番ゲートへ向かう商業通路、ターミナルCのC25手前にあります。各ターミナルに授乳・ベビーケアルームがあります。すべてのターミナルの保安検査前後に家族用トイレがあり、便器、洗面台、折り畳み式おむつ替え台を備えています。"
+    },
+    "wifi": {
+      "title": "Wi‑Fi",
+      "hint": "無料BOSWifi",
+      "text": "空港では無料Wi-Fiを提供しています。BOSWifiを選び、利用規約に同意して接続します。"
+    }
+  }
+}

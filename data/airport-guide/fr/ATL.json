@@ -1,0 +1,25 @@
+{
+  "iata": "ATL",
+  "blocks": {
+    "transport": {
+      "title": "Comment s'y rendre",
+      "hint": "Lignes Red et Gold",
+      "text": "La station MARTA Airport Station se trouve dans le Domestic Terminal, entre les zones de livraison des bagages North et South. Les lignes Red et Gold desservent l’aéroport. Après 20:30, un changement pour la Red Line à la station Lindbergh Center peut être nécessaire pour rejoindre Buckhead, Medical Center, Dunwoody, Sandy Springs ou North Springs depuis l’aéroport."
+    },
+    "terminals": {
+      "title": "Terminaux",
+      "hint": "Navette gratuite 24 h sur 24",
+      "text": "Une navette gratuite relie le niveau des arrivées de l’International Terminal à la livraison des bagages du Domestic Terminal. Elle circule 24 heures sur 24 et le trajet entre les terminaux dure 15 minutes. Au Domestic Terminal, l’arrêt se trouve à l’extérieur de la zone de livraison des bagages."
+    },
+    "lounges": {
+      "title": "Salons",
+      "hint": "The Club ATL, 06:00–22:00",
+      "text": "The Club ATL se trouve dans le hall F, au niveau Mezzanine, après le contrôle de sûreté, et ouvre tous les jours de 06:00 à 22:00. L’entrée avec Club Pass coûte 50 USD ; l’accès est aussi possible avec les programmes Priority Pass et LoungeKey éligibles. Les détenteurs d’un Club Pass peuvent entrer 3 heures avant le départ prévu, et les membres Priority Pass ou LoungeKey 2,5 heures avant. L’entrée est gratuite pour les enfants de moins de 2 ans ; à partir de 2 ans, un pass distinct est nécessaire, et les enfants de 17 ans ou moins doivent être accompagnés d’un adulte d’au moins 18 ans."
+    },
+    "sleep": {
+      "title": "Où dormir",
+      "hint": "Minute Suites après le contrôle",
+      "text": "Minute Suites se trouve après le contrôle TSA : dans le hall B près de la porte B24, dans le hall E près de l’atrium et des escalators, et dans le hall F près de la porte F6. Les chambres disposent d’un canapé-lit avec couchage coulissant, d’une Smart TV, du Wi-Fi gratuit, d’un plan de travail et de prises de recharge. Oreillers et couvertures sont fournis sur demande. La réservation est possible à partir de 1 heure ; les douches sont disponibles uniquement dans le hall E."
+    }
+  }
+}

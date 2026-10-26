@@ -1,0 +1,10 @@
+{
+  "iata": "JED",
+  "blocks": {
+    "sleep": {
+      "title": "Dónde dormir",
+      "hint": "Aerotel, salidas internacionales T1",
+      "text": "Aerotel Jeddah está en la zona restringida de salidas internacionales del terminal 1, nivel 2, junto a Duty Free, después del control de seguridad de pasajeros en tránsito. No es accesible para pasajeros que solo toman vuelos nacionales; en itinerarios que combinan un vuelo nacional y otro internacional, el operador pide confirmar el acceso con la aerolínea o atención al cliente. Los pasajeros en tránsito no deben pasar el control de pasaportes de entrada: no pueden volver a la zona restringida sin una tarjeta de embarque válida para el siguiente vuelo. El hotel tiene 120 habitaciones y permite reservas por horas; ofrece habitaciones para personas con movilidad reducida bajo petición."
+    }
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "iata": "PHL",
+  "blocks": {
+    "transport": {
+      "title": "Zug ins Zentrum",
+      "hint": "SEPTA Airport Regional Rail",
+      "text": "Die Züge der SEPTA Airport Regional Rail verbinden den Flughafen alle 30 Minuten mit dem Zentrum von Philadelphia. Die Flughafenhalte bedienen die Terminals A, B, C/D und E/F; alle Stationen dieser Linie sind für Rollstuhlfahrende zugänglich. Am Bahnhof William H. Gray III 30th Street kann man zu Amtrak und NJ Transit Atlantic City Line umsteigen. SEPTA akzeptiert kontaktlose Visa-, Mastercard-, Discover- und AMEX-Karten sowie mobile Zahlungen."
+    },
+    "taxi": {
+      "title": "Taxis",
+      "hint": "Zone 5 nach der Gepäckausgabe",
+      "text": "Nach der Gepäckausgabe führen die Schilder Ground Transportation / Taxis / Zone 5 zu den Taxis; wer in A-West ankommt, muss zum Ground Floor hinuntergehen. Die Fahrt vom Flughafen in die festgelegte Center City Zone kostet 32 USD für den ersten Fahrgast zuzüglich 1 USD für jeden weiteren Fahrgast über 12 Jahre. Die Flughafenausfahrtsgebühr wird auf diesen Festpreis nicht aufgeschlagen; Trinkgeld ist nicht enthalten. Alle Taxis akzeptieren Kreditkarten."
+    },
+    "kids": {
+      "title": "Babys füttern",
+      "hint": "Mamava nach der Kontrolle",
+      "text": "Kostenlose Mamava-Kabinen gibt es nach der Sicherheitskontrolle in A-West, im Verbindungsgang B/C sowie in Terminal E und F; sie bieten Bänke, einen Klapptisch, eine Steckdose und eine abschliessbare Tür. Mit der Mamava-App kann man eine Kabine öffnen und ihre Verfügbarkeit prüfen. Bei Minute Suites im Verbindungsgang zwischen A-East und B nach der Sicherheitskontrolle können stillende Mütter einen separaten Raum für die ersten 30 Minuten kostenlos nutzen; Telefon: +1 215 9371076."
+    },
+    "wifi": {
+      "title": "Kostenloses WLAN",
+      "hint": "Ohne Datenlimit",
+      "text": "Der Flughafen bietet allen Besuchern kostenloses WLAN von AT&T ohne Datenlimit. Aktivieren Sie WLAN in den Geräteeinstellungen und wählen Sie das kostenlose PHL-Flughafennetzwerk; zum Verbinden ist ein WLAN-fähiges Gerät erforderlich."
+    }
+  }
+}

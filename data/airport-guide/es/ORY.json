@@ -1,0 +1,25 @@
+{
+  "iata": "ORY",
+  "blocks": {
+    "transport": {
+      "title": "Metro desde París",
+      "hint": "Línea 14 sin transbordo",
+      "text": "La línea de metro 14 llega a la estación Orly Airport sin transbordos desde Châtelet, Gare de Lyon, Bercy y Saint-Lazare; desde el centro de París se tarda unos 25–35 minutos. El billete Paris Région <> Airports cuesta 14 EUR por trayecto: se puede comprar en una máquina para Navigo Easy o mediante la aplicación Île-de-France Mobilités. Otra opción es RER B hasta Antony y después Orlyval; el trayecto desde el centro dura unos 35–45 minutos y también cuesta 14 EUR."
+    },
+    "storage": {
+      "title": "Consigna de equipajes",
+      "hint": "Orly 3, nivel 0",
+      "text": "Bagages du Monde está en Orly 3, nivel 0, antes del control de seguridad junto a llegadas, y abre todos los días de 07:00 a 21:00. El equipaje pasa por rayos X y se guarda bajo videovigilancia; la tarifa depende del tamaño y del tiempo de depósito. También hay guardarropa para accesorios y equipaje especial y alquiler de cochecitos o sillas infantiles de coche."
+    },
+    "kids": {
+      "title": "Salas para bebés",
+      "hint": "Tras el control en Orly 3 y 4",
+      "text": "Las salas para cambiar pañales de los bloques de aseos abren las 24 horas y tienen cambiadores y aseos infantiles. Las salas independientes para bebés después del control en Orly 3 y Orly 4, nivel 1, son gratuitas y están abiertas las 24 horas; cuentan con espacios individuales con cunas, asientos, tronas, calientabiberones y microondas."
+    },
+    "wifi": {
+      "title": "Wi-Fi y carga",
+      "hint": "En todos los terminales",
+      "text": "La red gratuita WIFI-AIRPORT está disponible en todos los terminales, zonas de embarque y recogida de equipajes; tras seleccionarla, abra un navegador para acceder a la página de conexión. En los terminales hay USB y enchufes europeos de tipos C, E y F. Los compartimentos ChargeBox con cerradura para cargar teléfonos son gratuitos y están disponibles las 24 horas."
+    }
+  }
+}

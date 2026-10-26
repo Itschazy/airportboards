@@ -1,0 +1,74 @@
+{
+  "airportCodes": 172,
+  "locales": 12,
+  "variants": 2064,
+  "blocks": 8604,
+  "thirdPartyVariants": 24,
+  "sourceLinksAbsent": true,
+  "datePresent": true,
+  "faqExactlyEqualsVisibleText": true,
+  "amenityVariantsChecked": 60,
+  "amenity": [
+    {
+      "iata": "MSP",
+      "features": [
+        "Wi‑Fi"
+      ],
+      "blocks": [
+        "transport",
+        "taxi",
+        "sleep",
+        "wifi"
+      ]
+    },
+    {
+      "iata": "SHA",
+      "features": [
+        "Камера хранения"
+      ],
+      "blocks": [
+        "storage",
+        "kids"
+      ]
+    },
+    {
+      "iata": "BLR",
+      "features": [
+        "Парковка",
+        "Wi‑Fi"
+      ],
+      "blocks": [
+        "transport",
+        "taxi",
+        "parking",
+        "wifi"
+      ]
+    },
+    {
+      "iata": "MEL",
+      "features": [
+        "Камера хранения",
+        "Wi‑Fi"
+      ],
+      "blocks": [
+        "transport",
+        "storage",
+        "sleep",
+        "kids",
+        "wifi"
+      ]
+    },
+    {
+      "iata": "SGN",
+      "features": [
+        "Бизнес-зал",
+        "Wi‑Fi"
+      ],
+      "blocks": [
+        "lounges",
+        "sleep",
+        "wifi"
+      ]
+    }
+  ]
+}

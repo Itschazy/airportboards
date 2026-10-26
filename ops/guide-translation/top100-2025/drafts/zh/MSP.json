@@ -1,0 +1,25 @@
+{
+  "iata": "MSP",
+  "blocks": {
+    "transport": {
+      "title": "METRO Blue Line",
+      "hint": "前往市区及往返航站楼",
+      "text": "METRO Blue Line在两座航站楼均停靠：到Mall of America约12分钟，到明尼阿波利斯市中心Warehouse District约25分钟。全线约05:00至午夜运营，每15–20分钟一班；航站楼车站之间可24小时免费乘车，无需车票。54路市区巴士从Silver Ramp停车楼1楼Transit Center发车，2号航站楼不提供市区巴士上车点。"
+    },
+    "taxi": {
+      "title": "出租车",
+      "hint": "两座航站楼出租车站",
+      "text": "在1号航站楼，从Tram Level（T层）按指示前往出租车站；2号航站楼出租车站位于航站楼对面Purple Ramp地面层的Ground Transport Center。工作人员每日06:00至01:00协助寻找出租车，其他时间仍可自行乘车。机场提供的平均价格为：到明尼阿波利斯市中心39–49 USD，到圣保罗市中心31–38 USD。计价器起始金额6.50 USD包含2.50 USD起步费和4 USD机场费。"
+    },
+    "sleep": {
+      "title": "安静休息区",
+      "hint": "1号航站楼安检后",
+      "text": "1号航站楼安检后，设有2处位于Mezzanine层、可眺望Airport Mall的安静休息区。可从E及F旅客廊厅入口附近经楼梯或电梯上1层前往，适合阅读、休息、冥想及祈祷。"
+    },
+    "wifi": {
+      "title": "免费Wi-Fi",
+      "hint": "每次连接4小时",
+      "text": "MSP Airport WiFi覆盖两座航站楼所有公共区域，首次连接时须接受使用条款。每个免费会话持续4小时，结束后可开始另一个免费会话，次数不限。"
+    }
+  }
+}

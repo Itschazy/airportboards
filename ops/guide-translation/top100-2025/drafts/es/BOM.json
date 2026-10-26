@@ -1,0 +1,10 @@
+{
+  "iata": "BOM",
+  "blocks": {
+    "lounges": {
+      "title": "Salas VIP",
+      "hint": "Aviserv West, llegadas terminal 2",
+      "text": "La sala Aviserv West está en la zona de llegadas del terminal 2, en dirección a Gate A. Ofrece comida y bebida, duchas, cápsulas para dormir y una zona de descanso separada."
+    }
+  }
+}

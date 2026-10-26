@@ -1,0 +1,38 @@
+{
+  "iata": "MAN",
+  "checked": "2026-10-26",
+  "blocks": [
+    {
+      "id": "transport",
+      "title": "Поезд в Манчестер",
+      "hint": "Около 20 минут до Piccadilly",
+      "text": "Поезда TransPennine Express и Northern Rail до Manchester Piccadilly идут около 20 минут и отправляются каждые 10 минут ежедневно. Станция находится между терминалами 2 и 3: до терминала 2 около 10 минут пешком, до терминала 3 — около 5 минут. Терминалы связаны со станцией лифтами, эскалаторами и движущимися дорожками; билеты продаются онлайн, в автоматах и на железнодорожной информационной стойке.",
+      "source": "manchesterairport.co.uk",
+      "url": "https://www.manchesterairport.co.uk/getting-to-and-from/by-train/"
+    },
+    {
+      "id": "storage",
+      "title": "Хранение багажа",
+      "hint": "Зона вылета терминала 2",
+      "text": "Excess Baggage Company предлагает краткосрочное и длительное хранение багажа в зоне вылета терминала 2. Для вылетающих из терминала 2 также доступны упаковка багажа и организация его доставки по стране и за границу.",
+      "source": "manchesterairport.co.uk",
+      "url": "https://www.manchesterairport.co.uk/at-the-airport/airport-facilities/"
+    },
+    {
+      "id": "kids",
+      "title": "Пеленальные комнаты",
+      "hint": "В туалетах или рядом с ними",
+      "text": "Пеленальные помещения находятся в женских туалетах или рядом с ними и оснащены стульями для кормления грудью. Кормление разрешено на всей территории аэропорта, оно не ограничивается этими комнатами.",
+      "source": "manchesterairport.co.uk",
+      "url": "https://www.manchesterairport.co.uk/at-the-airport/airport-facilities/"
+    },
+    {
+      "id": "wifi",
+      "title": "Бесплатный Wi-Fi",
+      "hint": "До 2 часов за 24 часа",
+      "text": "Бесплатная сеть _FreeWifi предоставляет до 2 часов доступа за каждые 24 часа. Подключаться можно с телефона, планшета или ноутбука; услуга также доступна в залах ожидания и Runway Visitor Park.",
+      "source": "manchesterairport.co.uk",
+      "url": "https://www.manchesterairport.co.uk/at-the-airport/airport-facilities/"
+    }
+  ]
+}

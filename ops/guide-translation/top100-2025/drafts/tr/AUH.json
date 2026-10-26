@@ -1,0 +1,25 @@
+{
+  "iata": "AUH",
+  "blocks": {
+    "transport": {
+      "title": "Şehir otobüsleri",
+      "hint": "Hafilat kartı gerekli",
+      "text": "Şehir otobüsü durakları geliş alanının dışındadır; A serisi hatlar günün her saati çalışır. A1 Al Zahiyah’a, A2 Khalifa Street’e, A10 MBZ City Bus Station’a ve A40 Al Shahama Bus Station’a gider. Yolculuk için Hafilat kartı gerekir; kart havalimanı duraklarının yanındaki makinelerden alınabilir ve yüklenebilir. Otobüste nakit kabul edilmez."
+    },
+    "storage": {
+      "title": "Bagaj emaneti",
+      "hint": "Günün her saati açık",
+      "text": "Bir bagajın saklama ücreti 3 saate kadar 35 AED, 12 saate kadar 55 AED, 24 saate kadar 75 AED, 48 saate kadar 105 AED ve 72 saate kadar 140 AED’dir. 72 saatten sonra, tahakkuk eden 140 AED’ye sonraki her gün için 25 AED eklenir; tamamlanmamış dönem tam dönem olarak ücretlendirilir. Bagaj emaneti günün her saati açıktır; havalimanı kesin koşulların gişeden öğrenilmesini önerir."
+    },
+    "kids": {
+      "title": "Aile hizmetleri",
+      "hint": "Bebek arabaları ve besleme odaları",
+      "text": "Ücretsiz bebek arabaları, gidiş alanında check-in’den binişe kadar ve geliş çıkışı tarafında bulunur. Alt değiştirme ve bebek besleme odaları havalimanının tüm bölgelerinde yer alır; mahremiyet ve oturma yerleri sunar. Sessiz Sensory Space, D43 biniş kapısının yakınındadır."
+    },
+    "wifi": {
+      "title": "Ücretsiz Wi-Fi",
+      "hint": "Süre sınırı yok",
+      "text": "Havalimanı alanında süre sınırı olmayan ücretsiz Wi-Fi vardır. Zayed International Airport Free Wifi ağını seçin ve karşılama penceresinde Connect’e basın; havalimanının web sitesine yönlendirildikten sonra tam internet erişimi açılır."
+    }
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "iata": "LGA",
+  "blocks": {
+    "transport": {
+      "title": "無料Q70 LGA Link",
+      "hint": "B・Cから地下鉄へ",
+      "text": "無料のQ70 LGA LinkバスはターミナルB・Cに停車し、空港と地下鉄乗り換え拠点Jackson Heights–Roosevelt Avenue、74 St–Broadwayを結びます。MTAバスは車いすで利用でき、スロープを備えています。"
+    },
+    "taxi": {
+      "title": "タクシー",
+      "hint": "事前予約不要",
+      "text": "全ターミナルで事前予約なしでタクシーを利用できます。配車係が列の乗客を空車へ案内します。運賃は距離と時間で計算され、メーターの初期額は3 USDです。空港での乗車には別途2 USDのPANYNJ料金もかかります。車いす対応タクシーは通常のタクシーと同料金で、+1 646 599 9999で手配できます。"
+    },
+    "terminals": {
+      "title": "All Terminals Shuttle",
+      "hint": "24時間無料",
+      "text": "無料のAll Terminals Shuttleはすべてのターミナル間を運行し、事前払いのEconomy Lot（Parking Lot 7）、Hangar 7 South、94th Streetにも停車します。24時間運行で、ピーク時は15分間隔、それ以外は20分間隔です。"
+    },
+    "wifi": {
+      "title": "無料Wi-Fi",
+      "hint": "_Free LGA WiFi",
+      "text": "無料接続には_Free LGA WiFiを選んでください。サポートは+1 800 880 4117で24時間対応しています。"
+    }
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "iata": "BOM",
+  "blocks": {
+    "lounges": {
+      "title": "ラウンジ",
+      "hint": "Aviserv West・到着エリア",
+      "text": "Aviserv Westラウンジはターミナル2の到着エリア、Gate Aへ向かう方向にあります。飲食物、シャワー、睡眠ポッド、独立した休憩エリアがあります。"
+    }
+  }
+}

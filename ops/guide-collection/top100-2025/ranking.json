@@ -1,0 +1,806 @@
+{
+  "source": "https://wais.world/267-2/",
+  "year": 2025,
+  "rows": [
+    [
+      "1",
+      "Atlanta Hartsfield-Jackson International Airport",
+      "ATL",
+      "USA",
+      "106,302,208",
+      "нужно собрать"
+    ],
+    [
+      "2",
+      "Dubai International Airport",
+      "DXB",
+      "ARE",
+      "95,192,160",
+      "готово"
+    ],
+    [
+      "3",
+      "Tokyo Haneda International Airport",
+      "HND",
+      "JPN",
+      "91,679,814",
+      "готово"
+    ],
+    [
+      "4",
+      "Dallas Fort Worth International Airport",
+      "DFW",
+      "USA",
+      "85,660,127",
+      "готово"
+    ],
+    [
+      "5",
+      "Shanghai Pudong International Airport",
+      "PVG",
+      "CHN",
+      "84,994,548",
+      "готово"
+    ],
+    [
+      "6",
+      "Chicago O’Hare International Airport",
+      "ORD",
+      "USA",
+      "84,851,825",
+      "готово"
+    ],
+    [
+      "7",
+      "London Heathrow Airport",
+      "LHR",
+      "GBR",
+      "84,482,126",
+      "готово"
+    ],
+    [
+      "8",
+      "Istanbul Airport",
+      "IST",
+      "TUR",
+      "84,437,710",
+      "готово"
+    ],
+    [
+      "9",
+      "Guangzhou Baiyun International Airport",
+      "CAN",
+      "CHN",
+      "83,582,952",
+      "готово"
+    ],
+    [
+      "10",
+      "Denver International Airport",
+      "DEN",
+      "USA",
+      "82,427,962",
+      "готово"
+    ],
+    [
+      "11",
+      "Delhi Indira Gandhi International Airport",
+      "DEL",
+      "IND",
+      "78,148,081",
+      "готово"
+    ],
+    [
+      "12",
+      "Seoul Incheon International Airport",
+      "ICN",
+      "KOR",
+      "74,071,475",
+      "готово"
+    ],
+    [
+      "13",
+      "Los Angeles International Airport",
+      "LAX",
+      "USA",
+      "73,709,594",
+      "готово"
+    ],
+    [
+      "14",
+      "Paris Charles de Gaulle Airport",
+      "CDG",
+      "FRA",
+      "72,029,407",
+      "готово"
+    ],
+    [
+      "15",
+      "Beijing Capital International Airport",
+      "PEK",
+      "CHN",
+      "70,742,712",
+      "готово"
+    ],
+    [
+      "16",
+      "Singapore Changi Airport",
+      "SIN",
+      "SGP",
+      "69,980,000",
+      "готово"
+    ],
+    [
+      "17",
+      "Amsterdam Schiphol Airport",
+      "AMS",
+      "NLD",
+      "68,770,805",
+      "готово"
+    ],
+    [
+      "18",
+      "Madrid Barajas Airport",
+      "MAD",
+      "ESP",
+      "68,179,054",
+      "готово"
+    ],
+    [
+      "19",
+      "Shenzhen Bao’an International Airport",
+      "SZX",
+      "CHN",
+      "66,485,213",
+      "нужно собрать"
+    ],
+    [
+      "20",
+      "Kuala Lumpur International Airport",
+      "KUL",
+      "MYS",
+      "63,326,064",
+      "готово"
+    ],
+    [
+      "21",
+      "Frankfurt Airport",
+      "FRA",
+      "DEU",
+      "63,186,114",
+      "готово"
+    ],
+    [
+      "22",
+      "Bangkok Suvarnabhumi Airport",
+      "BKK",
+      "THA",
+      "62,902,056",
+      "готово"
+    ],
+    [
+      "23",
+      "New York John F. Kennedy International Airport",
+      "JFK",
+      "USA",
+      "62,629,455",
+      "готово"
+    ],
+    [
+      "24",
+      "Hong Kong International Airport",
+      "HKG",
+      "HKG",
+      "60,992,000",
+      "готово"
+    ],
+    [
+      "25",
+      "Orlando International Airport",
+      "MCO",
+      "USA",
+      "57,675,573",
+      "готово"
+    ],
+    [
+      "26",
+      "Barcelona El Prat Airport",
+      "BCN",
+      "ESP",
+      "57,483,036",
+      "готово"
+    ],
+    [
+      "27",
+      "Chengdu Tianfu International Airport",
+      "TFU",
+      "CHN",
+      "56,686,738",
+      "нужно собрать"
+    ],
+    [
+      "28",
+      "Mumbai Chhatrapati Shivaji International Airport",
+      "BOM",
+      "IND",
+      "55,492,394",
+      "нужно собрать"
+    ],
+    [
+      "29",
+      "Miami International Airport",
+      "MIA",
+      "USA",
+      "55,314,661",
+      "готово"
+    ],
+    [
+      "30",
+      "Las Vegas Harry Reid International Airport",
+      "LAS",
+      "USA",
+      "54,989,185",
+      "готово"
+    ],
+    [
+      "31",
+      "Jakarta Soekarno Hatta International Airport",
+      "CGK",
+      "IDN",
+      "54,940,134",
+      "нужно собрать"
+    ],
+    [
+      "32",
+      "San Francisco International Airport",
+      "SFO",
+      "USA",
+      "54,532,613",
+      "нужно собрать"
+    ],
+    [
+      "33",
+      "Doha Hamad International Airport",
+      "DOH",
+      "QAT",
+      "54,351,133",
+      "нужно собрать"
+    ],
+    [
+      "34",
+      "Beijing Daxing International Airport",
+      "PKX",
+      "CHN",
+      "53,618,949",
+      "нужно собрать"
+    ],
+    [
+      "35",
+      "Charlotte Douglas International Airport",
+      "CLT",
+      "USA",
+      "53,574,392",
+      "нужно собрать"
+    ],
+    [
+      "36",
+      "Jeddah King Abdulaziz International Airport",
+      "JED",
+      "SAU",
+      "53,538,280",
+      "нужно собрать"
+    ],
+    [
+      "37",
+      "Seattle Tacoma International Airport",
+      "SEA",
+      "USA",
+      "52,715,181",
+      "нужно собрать"
+    ],
+    [
+      "38",
+      "Manila Ninoy Aquino International Airport",
+      "MNL",
+      "PHL",
+      "52,020,551",
+      "нужно собрать"
+    ],
+    [
+      "39",
+      "Phoenix Sky Harbor International Airport",
+      "PHX",
+      "USA",
+      "51,620,420",
+      "нужно собрать"
+    ],
+    [
+      "40",
+      "Rome Leonardo da Vinci Fiumicino Airport",
+      "FCO",
+      "ITA",
+      "50,987,924",
+      "нужно собрать"
+    ],
+    [
+      "41",
+      "Hangzhou Xiaoshan International Airport",
+      "HGH",
+      "CHN",
+      "50,459,018",
+      "нужно собрать"
+    ],
+    [
+      "42",
+      "Shanghai Hongqiao International Airport",
+      "SHA",
+      "CHN",
+      "50,151,025",
+      "нужно собрать"
+    ],
+    [
+      "43",
+      "Chongqing Jiangbei International Airport",
+      "CKG",
+      "CHN",
+      "50,094,770",
+      "нужно собрать"
+    ],
+    [
+      "44",
+      "Kunming Changshui International Airport",
+      "KMG",
+      "CHN",
+      "49,705,725",
+      "нужно собрать"
+    ],
+    [
+      "45",
+      "Xi’an Xianyang International Airport",
+      "XIY",
+      "CHN",
+      "48,535,594",
+      "нужно собрать"
+    ],
+    [
+      "46",
+      "Istanbul Sabiha Gokcen International Airport",
+      "SAW",
+      "TUR",
+      "48,407,318",
+      "нужно собрать"
+    ],
+    [
+      "47",
+      "Houston George Bush Intercontinental Airport",
+      "IAH",
+      "USA",
+      "48,131,213",
+      "нужно собрать"
+    ],
+    [
+      "48",
+      "Taipei Taoyuan International Airport",
+      "TPE",
+      "TWN",
+      "47,795,969",
+      "нужно собрать"
+    ],
+    [
+      "49",
+      "Toronto Pearson International Airport",
+      "YYZ",
+      "CAN",
+      "47,300,000",
+      "нужно собрать"
+    ],
+    [
+      "50",
+      "Sao Paulo Guarulhos International Airport",
+      "GRU",
+      "BRA",
+      "47,188,085",
+      "нужно собрать"
+    ],
+    [
+      "51",
+      "New York Newark Liberty International Airport",
+      "EWR",
+      "USA",
+      "47,000,085",
+      "нужно собрать"
+    ],
+    [
+      "52",
+      "Bogota El Dorado International Airport",
+      "BOG",
+      "COL",
+      "45,470,707",
+      "нужно собрать"
+    ],
+    [
+      "53",
+      "Mexico City International Airport",
+      "MEX",
+      "MEX",
+      "44,605,800",
+      "нужно собрать"
+    ],
+    [
+      "54",
+      "Bengaluru Kempegowda International Airport",
+      "BLR",
+      "IND",
+      "43,817,465",
+      "нужно собрать"
+    ],
+    [
+      "55",
+      "Moscow Sheremetyevo International Airport",
+      "SVO",
+      "RUS",
+      "43,427,591",
+      "готово"
+    ],
+    [
+      "56",
+      "Munich Airport",
+      "MUC",
+      "DEU",
+      "43,394,442",
+      "нужно собрать"
+    ],
+    [
+      "57",
+      "Boston Logan International Airport",
+      "BOS",
+      "USA",
+      "43,236,013",
+      "нужно собрать"
+    ],
+    [
+      "58",
+      "London Gatwick Airport",
+      "LGW",
+      "GBR",
+      "42,771,000",
+      "нужно собрать"
+    ],
+    [
+      "59",
+      "Sydney Kingsford Smith Airport",
+      "SYD",
+      "AUS",
+      "42,566,527",
+      "нужно собрать"
+    ],
+    [
+      "60",
+      "Ho Chi Minh City International Airport",
+      "SGN",
+      "VNM",
+      "42,413,299",
+      "нужно собрать"
+    ],
+    [
+      "61",
+      "Tokyo Narita International Airport",
+      "NRT",
+      "JPN",
+      "42,255,291",
+      "нужно собрать"
+    ],
+    [
+      "62",
+      "Riyadh King Khalid International Airport",
+      "RUH",
+      "SAU",
+      "40,078,594",
+      "нужно собрать"
+    ],
+    [
+      "63",
+      "Antalya Airport",
+      "AYT",
+      "TUR",
+      "39,000,177",
+      "готово"
+    ],
+    [
+      "64",
+      "Melbourne Airport",
+      "MEL",
+      "AUS",
+      "36,694,074",
+      "нужно собрать"
+    ],
+    [
+      "65",
+      "Dublin Airport",
+      "DUB",
+      "IRL",
+      "36,402,926",
+      "нужно собрать"
+    ],
+    [
+      "66",
+      "Lisbon Humberto Delgado Airport",
+      "LIS",
+      "PRT",
+      "36,126,000",
+      "нужно собрать"
+    ],
+    [
+      "67",
+      "Minneapolis Saint Paul International Airport",
+      "MSP",
+      "USA",
+      "36,071,627",
+      "нужно собрать"
+    ],
+    [
+      "68",
+      "Paris Orly Airport",
+      "ORY",
+      "FRA",
+      "34,928,909",
+      "нужно собрать"
+    ],
+    [
+      "69",
+      "Osaka Kansai International Airport",
+      "KIX",
+      "JPN",
+      "34,096,882",
+      "нужно собрать"
+    ],
+    [
+      "70",
+      "Athens Eleftherios Venizelos",
+      "ATH",
+      "GRC",
+      "33,993,746",
+      "нужно собрать"
+    ],
+    [
+      "71",
+      "Hanoi Noi Bai International Airport",
+      "HAN",
+      "VNM",
+      "33,901,329",
+      "нужно собрать"
+    ],
+    [
+      "72",
+      "Palma de Mallorca Airport",
+      "PMI",
+      "ESP",
+      "33,806,427",
+      "нужно собрать"
+    ],
+    [
+      "73",
+      "Chengdu Shuangliu International Airport",
+      "CTU",
+      "CHN",
+      "33,518,945",
+      "нужно собрать"
+    ],
+    [
+      "74",
+      "Detroit Metropolitan Wayne County Airport",
+      "DTW",
+      "USA",
+      "33,370,000",
+      "нужно собрать"
+    ],
+    [
+      "75",
+      "New York LaGuardia Airport",
+      "LGA",
+      "USA",
+      "32,791,050",
+      "нужно собрать"
+    ],
+    [
+      "76",
+      "Zurich Airport",
+      "ZRH",
+      "CHE",
+      "32,593,966",
+      "нужно собрать"
+    ],
+    [
+      "77",
+      "Vienna International Airport",
+      "VIE",
+      "AUT",
+      "32,559,115",
+      "нужно собрать"
+    ],
+    [
+      "78",
+      "Abu Dhabi Zayed International Airport",
+      "AUH",
+      "ARE",
+      "32,488,724",
+      "нужно собрать"
+    ],
+    [
+      "79",
+      "Copenhagen Airport",
+      "CPH",
+      "DNK",
+      "32,433,694",
+      "нужно собрать"
+    ],
+    [
+      "80",
+      "Fort Lauderdale Hollywood International Airport",
+      "FLL",
+      "USA",
+      "32,208,419",
+      "нужно собрать"
+    ],
+    [
+      "81",
+      "Manchester Airport",
+      "MAN",
+      "GBR",
+      "32,117,556",
+      "нужно собрать"
+    ],
+    [
+      "82",
+      "Jeju International Airport",
+      "CJU",
+      "KOR",
+      "31,648,915",
+      "нужно собрать"
+    ],
+    [
+      "83",
+      "Bangkok Don Mueang International Airport",
+      "DMK",
+      "THA",
+      "31,644,453",
+      "нужно собрать"
+    ],
+    [
+      "84",
+      "Nanjing Lukou International Airport",
+      "NKG",
+      "CHN",
+      "31,378,166",
+      "нужно собрать"
+    ],
+    [
+      "85",
+      "Milan Malpensa Airport",
+      "MXP",
+      "ITA",
+      "31,372,691",
+      "нужно собрать"
+    ],
+    [
+      "86",
+      "Wuhan Tianhe International Airport",
+      "WUH",
+      "CHN",
+      "31,339,277",
+      "нужно собрать"
+    ],
+    [
+      "87",
+      "Cairo International Airport",
+      "CAI",
+      "EGY",
+      "31,137,557",
+      "нужно собрать"
+    ],
+    [
+      "88",
+      "Hyderabad Rajiv Gandhi International Airport",
+      "HYD",
+      "IND",
+      "30,993,603",
+      "нужно собрать"
+    ],
+    [
+      "89",
+      "Changsha Huanghua International Airport",
+      "CSX",
+      "CHN",
+      "30,253,675",
+      "нужно собрать"
+    ],
+    [
+      "90",
+      "Philadelphia International Airport",
+      "PHL",
+      "USA",
+      "30,136,790",
+      "нужно собрать"
+    ],
+    [
+      "91",
+      "London Stansted Airport",
+      "STN",
+      "GBR",
+      "30,047,146",
+      "нужно собрать"
+    ],
+    [
+      "92",
+      "Cancun International Airport",
+      "CUN",
+      "MEX",
+      "29,478,653",
+      "нужно собрать"
+    ],
+    [
+      "93",
+      "Xiamen Gaoqi International Airport",
+      "XMN",
+      "CHN",
+      "29,193,712",
+      "нужно собрать"
+    ],
+    [
+      "94",
+      "Zhengzhou Xinzheng International Airport",
+      "CGO",
+      "CHN",
+      "29,191,990",
+      "нужно собрать"
+    ],
+    [
+      "95",
+      "Urumqi Tianshan International Airport",
+      "URC",
+      "CHN",
+      "29,179,737",
+      "нужно собрать"
+    ],
+    [
+      "96",
+      "Washington Dulles International Airport",
+      "IAD",
+      "USA",
+      "29,008,830",
+      "нужно собрать"
+    ],
+    [
+      "97",
+      "Okinawa Naha Airport",
+      "OKA",
+      "JPN",
+      "28,962,160",
+      "нужно собрать"
+    ],
+    [
+      "98",
+      "Fukuoka Airport",
+      "FUK",
+      "JPN",
+      "28,384,582",
+      "нужно собрать"
+    ],
+    [
+      "99",
+      "Salt Lake City International Airport",
+      "SLC",
+      "USA",
+      "28,158,007",
+      "нужно собрать"
+    ],
+    [
+      "100",
+      "Lima Jorge Chavez International Airport",
+      "LIM",
+      "PER",
+      "27,420,159",
+      "нужно собрать"
+    ]
+  ]
+}

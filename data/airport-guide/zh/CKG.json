@@ -1,0 +1,15 @@
+{
+  "iata": "CKG",
+  "blocks": {
+    "lounges": {
+      "title": "商务休息室",
+      "hint": "T3A的China Southern",
+      "text": "China Southern休息室位于T3A航站楼G候机区入口处。休息室分为会员区和两舱旅客区，共有187个座位。设有行李存放处、商务区、按摩休息区、母婴室和淋浴间。"
+    },
+    "sleep": {
+      "title": "休息住宿",
+      "hint": "Airport Zone酒店",
+      "text": "Holiday Inn Express Chongqing Airport Zone位于Yubei区No.199 Lianggang Avenue。酒店提供免费早餐，并设有Wi-Fi、停车场和餐厅。独立办理入住的最低年龄为18岁，12:00前退房。"
+    }
+  }
+}

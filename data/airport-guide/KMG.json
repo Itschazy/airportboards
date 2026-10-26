@@ -1,0 +1,22 @@
+{
+  "iata": "KMG",
+  "checked": "2026-10-26",
+  "blocks": [
+    {
+      "id": "transport",
+      "title": "Как доехать",
+      "hint": "Метро 6, станция Airport Center",
+      "text": "Линия метро 6 связывает Tangzixiang со станцией Airport Center у аэропорта; на линии предусмотрены пересадки на линии 2, 3 и 4. Станция Airport Center находится на уровне B2 терминала.",
+      "source": "km.ynairport.com",
+      "url": "https://km.ynairport.com/zhjt/5749.jhtml"
+    },
+    {
+      "id": "taxi",
+      "title": "Такси",
+      "hint": "У двери 3 на уровне B1",
+      "text": "Стоянка такси находится напротив двери 3 на уровне B1. Для поездок с пунктом назначения в административных границах Куньмина оплата идёт по счётчику, без доплаты за обратный порожний пробег.",
+      "source": "km.ynairport.com",
+      "url": "https://km.ynairport.com/zhjt/5752.jhtml"
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "iata": "SHA",
+  "blocks": {
+    "storage": {
+      "title": "Consigne à bagages",
+      "hint": "Consigne jusqu’à 1 mois",
+      "text": "Dans le terminal 1, la consigne se trouve face à Gate 6 dans le hall des départs et est ouverte de 07:00 à 20:30, sous réserve des horaires effectivement appliqués sur place. Les bagages peuvent être conservés moyennant paiement pendant une durée maximale de 1 mois. Les passagers dont le passeport donne droit au transit sans visa de 240 heures bénéficient de l’entreposage gratuit de 1 bagage pendant 72 heures. Une pièce d’identité valide est nécessaire pour le dépôt et le retrait ; les objets sont contrôlés aux rayons X."
+    },
+    "kids": {
+      "title": "Avec un enfant",
+      "hint": "Aires de jeux du terminal 1",
+      "text": "Dans le terminal 1, les aires de jeux pour enfants se trouvent au niveau des départs : près de la porte T10 dans la zone des vols internationaux et des vols pour Hong Kong, Macao et Taïwan, et près de la porte T26 dans la zone des vols intérieurs. Leurs horaires suivent ceux des vols au départ."
+    }
+  }
+}

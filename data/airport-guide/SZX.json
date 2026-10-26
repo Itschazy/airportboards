@@ -1,0 +1,14 @@
+{
+  "iata": "SZX",
+  "checked": "2026-10-26",
+  "blocks": [
+    {
+      "id": "sleep",
+      "title": "Отель в 10 км от аэропорта",
+      "hint": "Hilton Garden Inn",
+      "text": "Hilton Garden Inn Shenzhen Airport находится в районе Fuyong примерно в 10 км от аэропорта, по адресу Cuigang West Road 9. Гостям доступны бесплатные Wi-Fi и парковка, фитнес-центр и ресторан на верхнем этаже. Заселение начинается в 15:00, выезд — до 12:00; телефон: +86 755 29993999.",
+      "source": "hilton.com",
+      "url": "https://www.hilton.com/en/hotels/szxhdgi-hilton-garden-inn-shenzhen-airport/"
+    }
+  ]
+}

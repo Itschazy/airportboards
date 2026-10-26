@@ -1,0 +1,25 @@
+{
+  "iata": "MAN",
+  "blocks": {
+    "transport": {
+      "title": "前往曼彻斯特的火车",
+      "hint": "约20分钟到Piccadilly",
+      "text": "TransPennine Express和Northern Rail开往Manchester Piccadilly的列车车程约20分钟，每日每10分钟一班。车站位于2号和3号航站楼之间：距2号航站楼步行约10分钟，距3号航站楼约5分钟。航站楼与车站之间设有电梯、扶梯和自动步道；车票可在线、在自动售票机或铁路问讯柜台购买。"
+    },
+    "storage": {
+      "title": "行李寄存",
+      "hint": "2号航站楼出发区",
+      "text": "Excess Baggage Company在2号航站楼出发区提供短期及长期行李寄存。从2号航站楼出发的旅客还可使用行李打包服务，并安排将行李运往国内或国外。"
+    },
+    "kids": {
+      "title": "尿布更换室",
+      "hint": "位于女厕内或附近",
+      "text": "尿布更换设施位于女厕内或附近，并设有供哺乳使用的座椅。整个机场均允许哺乳，并不限于这些房间。"
+    },
+    "wifi": {
+      "title": "免费Wi-Fi",
+      "hint": "每24小时最多2小时",
+      "text": "免费网络_FreeWifi每24小时提供最多2小时上网。可用手机、平板电脑或笔记本电脑连接；候机休息室和Runway Visitor Park也提供此服务。"
+    }
+  }
+}

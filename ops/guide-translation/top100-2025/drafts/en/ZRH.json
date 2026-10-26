@@ -1,0 +1,25 @@
+{
+  "iata": "ZRH",
+  "blocks": {
+    "transport": {
+      "title": "Train to Zurich",
+      "hint": "15 minutes to the main station",
+      "text": "SBB trains from the airport to Zurich main station depart every 10 minutes; the journey takes 15 minutes. Regular trains also connect the airport with other regions of Switzerland and neighbouring countries."
+    },
+    "storage": {
+      "title": "Baggage storage",
+      "hint": "Arrivals 2, Level 0",
+      "text": "The staffed baggage storage facility is in Arrivals 2 of Terminal 2, on Level 0 next to the information desk, and is open daily from 06:00 to 22:00. For one bag weighing up to 25 kg and measuring no more than 90 × 60 × 35 cm, the charge is 15 CHF for up to 4 hours, 18 CHF for up to 8 hours and 22 CHF for up to 24 hours; payment is in advance and the maximum storage period is 3 months. SBB lockers near Check-in 3 in Airport Shopping are available around the clock."
+    },
+    "kids": {
+      "title": "Family Services",
+      "hint": "Passenger area A",
+      "text": "Family Services in passenger area A are free for families travelling with any airline. Facilities include changing tables, a quiet feeding room with cots, a crawling area and a dining area with a microwave; older children have toys, computer games and table football. Childcare is not provided: children must stay with an adult."
+    },
+    "wifi": {
+      "title": "Free Wi-Fi",
+      "hint": "8 hours from the first login",
+      "text": "The Zurich Airport network offers 8 hours of free access, counted continuously from the first login. You can register by SMS, entering your phone number and the code received, or with a boarding pass and identity document: a code is issued at a WiFi Station or information desk. Service & Information desks can help with problems."
+    }
+  }
+}

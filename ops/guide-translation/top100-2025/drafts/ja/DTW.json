@@ -1,0 +1,15 @@
+{
+  "iata": "DTW",
+  "blocks": {
+    "transport": {
+      "title": "FAST Michigan 261",
+      "hint": "デトロイト中心部へ",
+      "text": "FAST Michigan 261は空港のEvans・McNamaraターミナル、Dearborn、Inkster、Corktown、デトロイト中心部を結びます。FASTバスは毎日、夜遅くや週末も運行し、ピーク時は約15～20分間隔です。乗り降りは案内表示のあるFAST停留所に限られ、車内にはWi-Fiがあります。"
+    },
+    "sleep": {
+      "title": "McNamaraのThe Westin",
+      "hint": "ターミナル内のホテル",
+      "text": "The Westin Detroit Metropolitan AirportはMcNamaraターミナル内にあります。ホテルには屋内プール、フィットネスセンター、レストランがあり、チェックインは15:00から、チェックアウトは12:00までです。チェックイン手続きの最低年齢は21歳です。"
+    }
+  }
+}

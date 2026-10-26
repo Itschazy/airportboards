@@ -1,0 +1,20 @@
+{
+  "iata": "MNL",
+  "blocks": {
+    "taxi": {
+      "title": "Taksi",
+      "hint": "Sevk fişini saklayın",
+      "text": "NAIA’da Coupon Taxi, Yellow Metered Taxi ve Regular Metered Taxi hizmet verir. Havalimanı görevlisi yolcuya sevk fişi verir; fişi yolcu saklamalı ve sürücüye vermemelidir. Yolculukla ilgili soru veya şikâyetler için fişteki numaralar aranabilir."
+    },
+    "parking": {
+      "title": "Otopark",
+      "hint": "Önceden rezervasyon yok",
+      "text": "Terminal otoparkları yalnızca geliş sırasına göre çalışır; önceden rezervasyon yapılmaz. Araç gece boyunca veya birkaç gün bırakılabilir; uzun süreli park, her 24 saat için ücretlendirilir. Nakit, GCash, PayMaya ve banka kartları kabul edilir."
+    },
+    "wifi": {
+      "title": "Wi‑Fi",
+      "hint": "Terminallerde ücretsiz ağlar",
+      "text": "NAIA’nın tüm terminallerinde ücretsiz Wi-Fi vardır: GLOBE’un NAIA Free Go Wi-Fi ağı günde 3 saat, Smart günde 1 saat, Converge günde 2 saat kullanılabilir. Havalimanının sayfasında check-in, biniş kapısı, gelen ve giden yolcu alanları listelenir. Terminal 1 ve 2’de dizüstü bilgisayar şarjı güvenlik kontrolünden sonraki giden yolcu alanındadır; telefon şarjı halka açık alanda da bulunur."
+    }
+  }
+}

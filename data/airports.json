@@ -59192,6 +59192,18 @@
     "tz": "Atlantic/Canary"
   },
   {
+    "iata": "TFU",
+    "icao": "ZUTF",
+    "name": "Chengdu Tianfu International Airport",
+    "city": "Chengdu",
+    "country": "China",
+    "iso2": "CN",
+    "lat": 30.31252,
+    "lon": 104.441284,
+    "elev": 1440,
+    "tz": "Asia/Shanghai"
+  },
+  {
     "iata": "TGA",
     "icao": "WSAT",
     "name": "Tengah Air Base",

@@ -1,0 +1,82 @@
+heading ChatGPT сказал:, Value: 4
+									152 text ChatGPT сказал:
+								153 container
+									154 text Проверены все 6 пар RU → ES без внешних источников.  Существенных ошибок смысла, чисел, валют, возрастных ограничений и условий доступа не обнаружено.  Есть одно замечание по точности формулировки и несколько факультативных стилистических улучшений.
+								155 heading Обязательные исправления, Value: 2
+									156 text Обязательные исправления
+								157 container
+									158 text Нет.  Все ключевые факты оригиналов сохранены корректно.
+								159 heading Факультативные исправления, Value: 2
+									160 text Факультативные исправления
+								161 container
+									162 text 1.  SHA / storage — уточнение условия работы
+								163 container
+									164 text Было: sujeta al horario real aplicado en el lugar
+								165 container
+									166 text Предлагается: aunque debe tenerse en cuenta el horario de funcionamiento efectivo en el lugar
+								167 container
+									168 text Причина:  Исходная формулировка понятна, но  horario real aplicado  звучит несколько искусственно. Предложенный вариант естественнее передаёт оговорку о фактическом режиме работы на месте.
+								169 container
+									170 text 2.  STN / lounges — естественность описания услуг
+								171 container
+									172 text Было: Incluye platos fríos, bebidas calientes y sin alcohol, vino, cerveza embotellada y Wi-Fi
+								173 container
+									174 text Предлагается: Se incluyen platos fríos, bebidas calientes, refrescos, vino, cerveza embotellada y Wi-Fi
+								175 container
+									176 text Причина: bebidas calientes y sin alcohol  может восприниматься как две пересекающиеся категории напитков. Предложенная формулировка стилистически разделяет горячие и безалкогольные напитки. При этом  refrescos  несколько уже русского «безалкогольные напитки», поэтому для максимальной точности лучше:  bebidas calientes, bebidas sin alcohol, vino...
+								177 container
+									178 text 3.  CAI / lounges — естественность обозначения ребёнка
+								179 container
+									180 text Было: un tercer niño menor de 6 años cuenta como pasajero independiente
+								181 container
+									182 text Предлагается: un tercer niño menor de 6 años se considera un pasajero adicional
+								183 container
+									184 text Причина: pasajero independiente  может создавать оттенок самостоятельного путешествия. Оригинал говорит лишь о том, что третий ребёнок учитывается как отдельный пассажир.
+								185 container
+									186 text 4.  AUH / storage — точность финансовой формулировки
+								187 container
+									188 text Было: a los 140 AED ya cobrados se añaden 25 AED
+								189 container
+									190 text Предлагается: a los 140 AED ya acumulados se añaden 25 AED
+								191 container
+									192 text Причина: ya cobrados  буквально означает «уже взысканных/списанных», тогда как оригинал сообщает о начисленной сумме.  acumulados  точнее и не предполагает состоявшуюся оплату.
+								193 heading Без замечаний, Value: 2
+									194 text Без замечаний
+								195 content list
+									196 container
+										197 AXListMarker •
+										198 text ATL / lounges:  корректны 50 USD, интервалы 3 и 2,5 часа, бесплатный вход строго младше 2 лет, отдельный пропуск с 2 лет, сопровождение до 17 лет включительно.
+									199 container
+										200 AXListMarker •
+										201 text XMN / taxi:  корректны номера дверей, терминалы, направления, расстояние 120 м, круглосуточность телефона и сам номер.
+									202 container
+										203 AXListMarker •
+										204 text SHA, STN, CAI, AUH:  числовые значения, валюты, условия и временные ограничения сохранены.
+								205 container
+									206 text Итог:  0 обязательных исправлений, 4 факультативных. Переводы можно публиковать без обязательных правок.
+								207 button Копировать
+									208 image
+								209 button Оценить ответ
+									210 image
+								211 checkbox Description: Прочитать вслух, Value: 0
+								212 button Поделиться
+								213 pop up button (collapsed) Description: Сгенерировать ответ заново, ID: radix-_r_9e_, Secondary Actions: Expand
+								214 pop up button (collapsed) Description: Ещё действия, ID: radix-_r_9i_, Secondary Actions: Expand
+							215 container
+								216 text ChatGPT может допускать ошибки. Проверяйте важную информацию.
+							217 container
+								218 heading Последний ответ, Value: 4
+									219 text Последний ответ
+								220 container
+									221 container
+										222 button (collapsed) Description: Добавить файлы и другое, Secondary Actions: Expand
+										223 text entry area (settable) Description: Спросить ChatGPT, Value:
+
+											224 container
+												225 text Спросить ChatGPT
+										226 pop up button (collapsed) Description: Выбрать модель ChatGPT, ID: radix-_r_9r_, Secondary Actions: Expand
+											227 text Средний
+										228 button Диктовать
+										229 button Начать голосовой разговор
+
+The focused UI element is 223 text entry area (settable) Description: Спросить ChatGPT, Value:

@@ -1,0 +1,40 @@
+{
+  "iata": "SFO",
+  "blocks": {
+    "transport": {
+      "title": "Nasıl gidilir",
+      "hint": "BART ve AirTrain",
+      "text": "BART istasyonu dış hatlar terminalindedir. BART istasyonundan iç ve dış hat terminallerini birbirine bağlayan AirTrain’e aktarma yapılabilir. Araç kiralama merkezine AirTrain Blue Line ile ulaşılır."
+    },
+    "taxi": {
+      "title": "Taksi",
+      "hint": "Taksimetre, $6 çıkış ek ücreti",
+      "text": "Taksi durakları, tüm terminallerin gelen yolcu ve bagaj teslim katında yolun orta adalarındadır. Üniformalı görevliler 07:00–02:00 arasında hizmet verir. Ücret taksimetreyle hesaplanır; SFO’dan başlayan San Francisco taksisi yolculuklarında $6 çıkış ek ücreti tutara dahildir ve havalimanına giden yolculuklarda alınmaz. Tekerlekli sandalyeye uygun taksiler mevcuttur; görevliye başvurarak veya havalimanının ücretsiz telefonundan *1107’yi arayarak istenebilir."
+    },
+    "storage": {
+      "title": "Emanet",
+      "hint": "Airport Travel Agency, Kat 3",
+      "text": "Bagaj muhafazası yalnızca Dianne Feinstein International Terminal G’de Kat 3’teki Airport Travel Agency’de sunulur. Bagaj, köpek taşıma kafesleri ve kayak, bisiklet, kano gibi spor ekipmanları kabul edilir; fiyat eşyanın boyutuna bağlıdır."
+    },
+    "sleep": {
+      "title": "Nerede uyunur",
+      "hint": "Grand Hyatt at SFO",
+      "text": "Grand Hyatt at SFO, havalimanının girişindedir. Otele tüm terminallerden AirTrain ile veya karayoluyla ulaşılabilir."
+    },
+    "kids": {
+      "title": "Çocukla",
+      "hint": "Güvenlikten sonra 7 oyun alanı",
+      "text": "7 Kids’ Spots oyun alanının tamamı güvenlik kontrolünden sonradır. Harvey Milk Terminal 1’de B2 ve B18 numaralı kapıların, terminal 2’de D15 ve D7 numaralı kapıların yanındadır. Terminal 3’te F17 ve E7 numaralı kapıların yanında ve F11–F22 numaralı kapıların yakınındaki yemek alanında bulunur."
+    },
+    "parking": {
+      "title": "Otopark",
+      "hint": "Long-Term: 24 saatte en çok $27",
+      "text": "Long-Term Parking’de kapalı ve açık park yerleri vardır; ücret 30 dakika için $4, vergi ve harçlar dahil 24 saat için en fazla $27’dir. AirTrain Blue Line otoparkı tüm terminallere günün her saati bağlar; sefer aralığı 4 dakika olabilir. AirTrain istasyonu otopark binasında Kat 5’tedir. Ücretler değişebilir."
+    },
+    "wifi": {
+      "title": "Wi‑Fi",
+      "hint": "Ücretsiz, #SFO FREE WIFI",
+      "text": "Tüm terminallerde ücretsiz Wi-Fi vardır. Bağlanmak için #SFO FREE WIFI ağını seçip bir tarayıcı açın; ağı kullanmak, kullanım koşullarını kabul etmek anlamına gelir."
+    }
+  }
+}

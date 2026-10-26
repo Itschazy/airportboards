@@ -1,0 +1,14 @@
+{
+  "iata": "BOM",
+  "checked": "2026-10-26",
+  "blocks": [
+    {
+      "id": "lounges",
+      "title": "Бизнес-залы",
+      "hint": "Aviserv West, зона прилёта Т2",
+      "text": "Зал Aviserv West находится в зоне прилёта терминала 2 в направлении Gate A. В нём есть еда и напитки, душевые, капсулы для сна и отдельная зона отдыха.",
+      "source": "aviserv.co",
+      "url": "https://www.aviserv.co/lounge-west-pier/"
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "iata": "HAN",
+  "checked": "2026-10-26",
+  "blocks": [
+    {
+      "id": "terminals",
+      "title": "Между терминалами",
+      "hint": "Бесплатный NIA Shuttle Bus",
+      "text": "Бесплатный NIA Shuttle Bus связывает внутренний терминал T1 и международный терминал T2. В терминале T1 посадка находится в крыле A на уровне 1.",
+      "source": "noibaiairport.vn",
+      "url": "https://noibaiairport.vn/en/passenger-amenities-at-noi-bai-international-airport-nid21337.html"
+    },
+    {
+      "id": "kids",
+      "title": "Услуги для семей",
+      "hint": "Коляски и комнаты ухода",
+      "text": "Бесплатные детские коляски доступны после досмотра: в терминале T1 и зале E на уровне 2, в терминале T2 на уровнях 2 и 3. В T2 после досмотра на уровне 3 есть две комнаты ухода за младенцами; пеленальные столы также предусмотрены в некоторых туалетах терминалов.",
+      "source": "noibaiairport.vn",
+      "url": "https://noibaiairport.vn/en/passenger-amenities-at-noi-bai-international-airport-nid21337.html"
+    },
+    {
+      "id": "wifi",
+      "title": "Бесплатный Wi-Fi",
+      "hint": "Зоны ожидания T1 и T2",
+      "text": "Бесплатный Wi-Fi доступен в пассажирских зонах ожидания внутренних и международного терминалов. Выберите сеть @Airport Free Wifi - Goldsun и нажмите Connect to the Internet на автоматически открывшейся странице. В расширенной части T2 установка оборудования ещё продолжается.",
+      "source": "noibaiairport.vn",
+      "url": "https://noibaiairport.vn/en/free-internet-wifi-nid60.html"
+    }
+  ]
+}

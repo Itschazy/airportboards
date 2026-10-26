@@ -1,0 +1,20 @@
+{
+  "iata": "SGN",
+  "blocks": {
+    "lounges": {
+      "title": "Business salonları",
+      "hint": "T2’de kontrolden sonra",
+      "text": "Apricot Business Lounge, terminal 2’nin dış hat gidiş alanında güvenlik kontrolünden sonradır ve günün her saati açıktır. Ziyaret en fazla art arda 4 saat sürer: 12 yaşından büyük yolcular için ücret 945.000 VND, 5–12 yaş arası çocuklar için 12 yaş dâhil 472.500 VND’dir. Salonda açık büfe, içecekler, masaj koltukları, duşlar ve Wi-Fi vardır."
+    },
+    "sleep": {
+      "title": "Nerede uyunur",
+      "hint": "27 numaralı kapı yakınında",
+      "text": "SASCO Sleep Zone, güvenlik kontrolünden sonra terminal 2’nin dış hat gidiş salonunda, 27 numaralı kapı yakınındadır ve günün her saati açıktır. Oda saat başına 180.000 VND’dir; en az 2 saat kullanım gerekir. Odada tek kişilik yatak, vantilatör ve priz vardır; serinletici havlu ve bir şişe mineralli su verilir."
+    },
+    "wifi": {
+      "title": "Wi‑Fi",
+      "hint": "Halka açık alanlarda",
+      "text": "İç hat ve dış hat terminallerinin halka açık alanlarında ücretsiz FreeWifi TanSonNhat AirPort ağı vardır. Bağlantı günün her saati süre sınırı olmadan çalışır."
+    }
+  }
+}

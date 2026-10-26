@@ -1,0 +1,38 @@
+{
+  "iata": "CJU",
+  "checked": "2026-10-26",
+  "blocks": [
+    {
+      "id": "transport",
+      "title": "Автобус 600",
+      "hint": "Через Jungmun в Согвипхо",
+      "text": "Автобус 600 связывает аэропорт Чеджу с Jungmun и Seogwipo KAL Hotel. Из аэропорта первый рейс отправляется в 06:00, последний — в 22:40, интервал составляет 16–40 минут. Оператор Samyeong Transportation отвечает по телефону +82 64 713 7000.",
+      "source": "airport.co.kr",
+      "url": "https://www.airport.co.kr/jejueng/cms/frCon/index.do?MENU_ID=90"
+    },
+    {
+      "id": "taxi",
+      "title": "Такси",
+      "hint": "Ориентировочные цены",
+      "text": "Аэропорт оценивает поездку обычным такси до Jeju City Hall примерно в 30 минут и 9 000 KRW, до Jungmun Tourism Complex — в 80 минут и 35 000 KRW. Для такси Deluxe на тех же направлениях указаны ориентиры 16 200 KRW и 63 000 KRW соответственно.",
+      "source": "airport.co.kr",
+      "url": "https://www.airport.co.kr/jejueng/cms/frCon/index.do?MENU_ID=90"
+    },
+    {
+      "id": "kids",
+      "title": "Комната ухода и коляски",
+      "hint": "Внутренние рейсы, уровень 3",
+      "text": "В терминале внутренних рейсов на уровне 3 слева от Domestic Departure B есть комната ухода за детьми с пеленальным местом, умывальником, диваном и комнатой кормления. Коляску можно взять на стойке Comprehensive Information Counter в центре общественного зала ожидания на уровне 3 терминала внутренних рейсов, предъявив удостоверение личности; пользоваться ею можно в общественном зале, после использования её нужно вернуть.",
+      "source": "airport.co.kr",
+      "url": "https://www.airport.co.kr/jejueng/cms/frCon/index.do?MENU_ID=200"
+    },
+    {
+      "id": "wifi",
+      "title": "Wi-Fi и зарядка",
+      "hint": "Бесплатная сеть KAC",
+      "text": "Korea Airports Corporation предоставляет бесплатный Wi-Fi в аэропортовых терминалах. За уточнением услуг зарядки устройств в Чеджу можно обратиться в Customer Service Team по телефону +82 64 797 2566; KAC предупреждает, что зарядные сервисы могут быть бесплатными или платными.",
+      "source": "airport.co.kr",
+      "url": "https://www.airport.co.kr/jejueng/cms/frCon/index.do?MENU_ID=300&CONTENTS_NO=8&acd=A1103"
+    }
+  ]
+}

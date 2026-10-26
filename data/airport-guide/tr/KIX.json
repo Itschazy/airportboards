@@ -1,0 +1,25 @@
+{
+  "iata": "KIX",
+  "blocks": {
+    "terminals": {
+      "title": "Terminaller arasında",
+      "hint": "Ücretsiz otobüs",
+      "text": "Terminal 1 ve 2 birbirinden yaklaşık 4 km uzaktadır. Aeroplaza ile terminal 2 arasında ücretsiz otobüs çalışır; yolculuk 7–9 dakika sürer."
+    },
+    "storage": {
+      "title": "Bagaj muhafazası",
+      "hint": "Terminal 1’de kontrol öncesi",
+      "text": "Terminal 1’de Kat 4’te güvenlik kontrolünden önce, kuzeyde Yamato Transport ve güneyde JAL ABC bagaj muhafaza noktaları vardır. Yamato Transport 06:30–22:30, JAL ABC ise son bagaj kabulü 22:30 olmak üzere 06:30–23:00 arasında açıktır."
+    },
+    "kids": {
+      "title": "Bebek odaları",
+      "hint": "Tüm aile için",
+      "text": "Bebek odalarını tüm aile kullanabilir; emzirme ve süt sağma alanı yalnızca kadınlara ayrılmıştır. Odalarda bez değiştirme alanları, bezler için özel atık kutuları ve mama hazırlamak için sıcak su vardır; odaların çoğunda mikrodalga bulunur."
+    },
+    "wifi": {
+      "title": "Ücretsiz Wi-Fi",
+      "hint": "Önceden başvuru gerekmiyor",
+      "text": "Ücretsiz ağ, dış hat geliş güzergâhlarının bazı kısımları dışında terminal 1’de, terminal 1 otobüs istasyonunda, tren istasyonunda, Aeroplaza’da ve terminal 2’de kullanılabilir. #AirportFreeWiFi-Kansai veya #AirportFreeWiFi-Kansai2.4G ağını seçin. Önceden başvuru gerekmez ancak kullanım kuralları kabul edilmelidir. Cihaz ile erişim noktası arasındaki veriler şifrelenmez."
+    }
+  }
+}

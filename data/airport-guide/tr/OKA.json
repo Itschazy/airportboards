@@ -1,0 +1,25 @@
+{
+  "iata": "OKA",
+  "blocks": {
+    "transport": {
+      "title": "Yui Rail monorayı",
+      "hint": "Prefectural Office’e 13 dakika",
+      "text": "Naha Airport istasyonundan monorayla Prefectural Office’e yaklaşık 13, Makishi’ye 16, Shuri’ye 27 dakika sürer. Tek kullanımlık QR biletler makinelerden satılır ve satın alındığı gün bir yolculuk için geçerlidir. Çocuk tarifesi 12 yaşından küçük yolcular içindir; bir yetişkinle en fazla iki 6 yaşından küçük çocuk ücretsiz seyahat edebilir, üçüncü çocuktan itibaren çocuk tarifesi ödenir."
+    },
+    "storage": {
+      "title": "Bagaj emaneti",
+      "hint": "Kat 1 ve 2’de Yamato",
+      "text": "Okinawa Yamato Transport masaları, Kat 1’deki iç hatlar geliş salonunda ve Kat 2’de C güvenlik kontrolü yakınındadır. İlki 07:30–20:00, ikincisi 09:00–19:00 açıktır; eşyalar genellikle en fazla bir ay için kabul edilir. Vergi dahil parça başına günlük ücret S boyutu için 600 JPY, M için 800 JPY, L için 1000 JPY’dir; boyut uzunluk, genişlik ve yüksekliğin toplamıyla belirlenir."
+    },
+    "kids": {
+      "title": "Bebek bakım odaları",
+      "hint": "Alt değiştirme ve sıcak su",
+      "text": "Bebek bakım odaları Kat 1, 2 ve 3’te tuvaletlerin yanında ve Kat 4’te dış hatlar yemek alanı yakınındadır. Alt değiştirme masası, lavabo ve sıcak su cihazı vardır; ortak alanı kadınlar ve erkekler kullanabilir. Erkekler ayrı emzirme odalarına girmemelidir."
+    },
+    "wifi": {
+      "title": "Ücretsiz Wi-Fi",
+      "hint": "Free_Wi-Fi_NAHA_Airport",
+      "text": "Free_Wi-Fi_NAHA_Airport ağı ücretsizdir ve bazı mağaza ve odalar dışında terminalin halka açık alanlarında kullanılabilir. Kapsama bölgeleri Kat 1–4’te belirtilmiştir: geliş, gidiş, biniş bekleme alanları, check-in ve restoranlar. Bağlanmadan önce kullanım koşulları okunmalı ve kabul edilmelidir."
+    }
+  }
+}

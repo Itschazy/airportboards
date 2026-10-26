@@ -1,0 +1,25 @@
+{
+  "iata": "CJU",
+  "blocks": {
+    "transport": {
+      "title": "600番バス",
+      "hint": "Jungmun経由で西帰浦へ",
+      "text": "600番バスは済州空港とJungmun、Seogwipo KAL Hotelを結びます。空港発の始発は06:00、最終は22:40で、16–40分間隔で運行します。運行会社Samyeong Transportationへの問い合わせは+82 64 713 7000です。"
+    },
+    "taxi": {
+      "title": "タクシー",
+      "hint": "料金の目安",
+      "text": "空港によると、一般タクシーでJeju City Hallまでは約30分・9,000 KRW、Jungmun Tourism Complexまでは80分・35,000 KRWが目安です。同じ区間のDeluxeタクシー料金の目安は、それぞれ16,200 KRWと63,000 KRWです。"
+    },
+    "kids": {
+      "title": "ベビーケアルームとベビーカー",
+      "hint": "国内線ターミナル3階",
+      "text": "国内線ターミナル3階のDomestic Departure Bの左側に、おむつ交換スペース、洗面台、ソファ、授乳室を備えたベビーケアルームがあります。国内線ターミナル3階の一般待合ホール中央にあるComprehensive Information Counterで、身分証明書を提示してベビーカーを借りられます。一般ホール内で使用でき、使用後は返却が必要です。"
+    },
+    "wifi": {
+      "title": "Wi-Fiと充電",
+      "hint": "KACの無料ネットワーク",
+      "text": "Korea Airports Corporationは空港ターミナルで無料Wi-Fiを提供しています。済州での機器充電サービスの詳細はCustomer Service Team（+82 64 797 2566）に問い合わせられます。KACは、充電サービスには無料と有料の場合があると案内しています。"
+    }
+  }
+}

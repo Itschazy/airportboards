@@ -1,0 +1,25 @@
+{
+  "iata": "VIE",
+  "blocks": {
+    "transport": {
+      "title": "Trenes a Viena",
+      "hint": "S7 y Railjet",
+      "text": "El S7 tarda unos 25 minutos hasta Wien Mitte y pasa cada 30 minutos; el Railjet tarda unos 15 minutos hasta Wien Hauptbahnhof y pasa cada 30 minutos. La taquilla ÖBB está en el vestíbulo de llegadas; también hay máquinas de billetes allí, en los pasillos hacia los andenes y en los propios andenes. Desde el vestíbulo de llegadas hay un recorrido corto, sin barreras y protegido de la intemperie hasta los andenes."
+    },
+    "lounges": {
+      "title": "VIENNA Lounge",
+      "hint": "Terminal 1, nivel 2",
+      "text": "VIENNA Lounge está en la terminal 1, nivel 2, después del control de seguridad y antes del control de pasaportes; abre todos los días de 04:30 a 22:00. Con una tarjeta de embarque válida se puede entrar el día de salida desde 3,5 horas antes de la salida, con una estancia máxima de 3 horas. El precio normal es de 59 EUR, los niños de 4–14 años pagan 31 EUR y los de 0–3 años entran gratis. Hay comida, Wi-Fi, puestos de trabajo, zona de descanso, duchas con toallas y un baño familiar con cambiador."
+    },
+    "sleep": {
+      "title": "Hoteles cerca del aeropuerto",
+      "hint": "NH y Moxy, a pie desde la terminal",
+      "text": "NH Vienna Airport Conference Center y Moxy Vienna Airport están en AirportCity, cerca de la terminal y a poca distancia a pie. NH tiene Wi-Fi y ventanas insonorizantes; Moxy ofrece aperitivos y bebidas las 24 horas, uso gratuito de ordenadores y del gimnasio, y Wi-Fi gratuito."
+    },
+    "kids": {
+      "title": "Zonas de juegos y cochecitos",
+      "hint": "Junto a las puertas F, C y D",
+      "text": "El Entertainment Gate gratuito junto a F03 incluye una estructura de juegos de dos niveles, una zona separada para los más pequeños y futbolín; también hay zonas infantiles junto a C42 y D31–36. Si ha entregado su propio cochecito al facturar, el aeropuerto ofrece uno gratuito para ir del control de seguridad a la puerta de embarque; debe entregarlo al personal de la puerta al embarcar. Hay cambiadores en casi todos los aseos accesibles, familiares y los aseos grandes para pasajeros."
+    }
+  }
+}

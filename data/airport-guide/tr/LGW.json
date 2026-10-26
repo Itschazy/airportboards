@@ -1,0 +1,20 @@
+{
+  "iata": "LGW",
+  "blocks": {
+    "transport": {
+      "title": "Nasıl gidilir",
+      "hint": "Gatwick Express: 30 dakika",
+      "text": "Gatwick Express, havalimanı ile London Victoria arasında duraksız 30 dakikada yolculuk sağlar ve saatte 2 kez kalkar. Southern, London Victoria, Clapham Junction, Brighton ve güneydoğudaki diğer şehirlere; Thameslink ise London Bridge, Blackfriars, City Thameslink, Farringdon ve St Pancras International’a hizmet verir. Tren istasyonu South Terminal’de, geliş ve gidiş alanlarından yaklaşık 5 dakikalık yürüyüş mesafesindedir. Londra yolculuklarında temassız banka kartları ve Oyster kabul edilir; 60+ Oyster photocard hariçtir."
+    },
+    "kids": {
+      "title": "Çocukla",
+      "hint": "Ücretsiz Kids Zones",
+      "text": "Her iki terminalin gidiş salonlarında ücretsiz Kids Zones oyun alanları vardır. Pusette küçük çocuğu olan aileler için Assisted Travel and family lanes adlı ayrı güvenlik kontrol şeritleri sunulur. Havalimanında check-in, aktarma ve geliş pasaport kontrolü sonrası alanlar dâhil donanımlı bebek besleme ve bez değiştirme odaları vardır. Her iki terminalin tüm restoranları uçuş öncesi biberon ısıtabilir."
+    },
+    "wifi": {
+      "title": "Wi‑Fi",
+      "hint": "Ücretsiz, süre sınırı yok",
+      "text": "Ücretsiz Wi-Fi için Free Gatwick Wi-Fi Vinci Airports, ardından Free Superfast Wi-Fi seçilir ve geçerli e-posta adresi girilir. Bağlantı ücretsiz ve süre sınırı olmadan, en fazla 50 Mbit/s hızında sunulur. Her iki terminalde kontrol öncesi ve sonrası ücretsiz şarj noktaları vardır."
+    }
+  }
+}

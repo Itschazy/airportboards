@@ -1,0 +1,10 @@
+{
+  "iata": "SLC",
+  "blocks": {
+    "transport": {
+      "title": "TRAX Green Line",
+      "hint": "Terminal yakınındaki istasyon",
+      "text": "TRAX Green Line havalimanına doğrudan hizmet verir: Airport Station terminalin hemen dışındadır. UTA’ya göre hat her gün 05:21–23:21 arasında çalışır ve City Center’a ulaşım sağlar. North Temple’da Ogden veya Provo yönündeki FrontRunner’a aktarma yapılabilir; ancak FrontRunner pazar günleri çalışmaz. UTA danışma: +1 801 7433882."
+    }
+  }
+}

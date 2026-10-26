@@ -1,0 +1,25 @@
+{
+  "iata": "DOH",
+  "blocks": {
+    "transport": {
+      "title": "Comment s'y rendre",
+      "hint": "Métro tous les jours",
+      "text": "La station de métro située à Hamad International Airport relie l’aéroport aux quartiers de Doha 7 jours sur 7. Les stations sont climatisées et accessibles aux personnes à mobilité réduite ; les horaires d’ouverture et de départ des derniers trains sont affichés sur les écrans en station."
+    },
+    "taxi": {
+      "title": "Taxi",
+      "hint": "Karwa, Taxi Pavilion",
+      "text": "Le pavillon des taxis se trouve dans la partie gauche du hall des arrivées ; tous les taxis de l’aéroport sont exploités par Mowasalat. Des berlines et monospaces sont disponibles, ainsi que le paiement sans espèces par MasterCard, VISA, Apple Pay, Google Pay et NAPS. Karwa peut être réservé à l’avance au +974 800 8294, dans l’application Karwa ou sur karwa.qa. Pour réserver un taxi adapté aux personnes à mobilité réduite, contactez Mowasalat à l’avance au +974 4458 8888."
+    },
+    "sleep": {
+      "title": "Où dormir",
+      "hint": "Salles de repos avec sièges",
+      "text": "Le terminal passagers dispose de salles de repos séparées pour les hommes, les femmes et les familles. Elles sont équipées de sièges pour se reposer, lire ou faire une courte sieste ; leur emplacement est indiqué sur le plan de l’aéroport et par des panneaux."
+    },
+    "wifi": {
+      "title": "Wi‑Fi",
+      "hint": "Gratuit, #HIAQatar",
+      "text": "L’accès sans fil à Internet est gratuit dans tout le terminal passagers : sélectionnez #HIAQatar et connectez-vous. Des bornes Internet équipées d’écrans et de claviers permettent aussi de naviguer gratuitement sur le Web ; elles sont réparties dans le terminal, y compris dans les zones des portes d’embarquement."
+    }
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "iata": "CGO",
+  "blocks": {
+    "transport": {
+      "title": "مترو المطار",
+      "hint": "محطة Xinzheng Airport",
+      "text": "تخدم محطة Xinzheng Airport خطوط Chengjiao وZhengxu؛ والمخرج G محدد لـT2 والمخرج E لـT1. على خط Chengjiao باتجاه Jiahe/Liuzhuang، يغادر أول قطار في 06:00 والأخير في 22:15، بالمواعيد نفسها في أيام العمل والعطلات. على خط Zhengxu باتجاه Xuchang East، يغادر أول قطار في 06:14 والأخير في 21:14. استعلامات المترو: ⁦+86 371 55166166⁩."
+    }
+  }
+}

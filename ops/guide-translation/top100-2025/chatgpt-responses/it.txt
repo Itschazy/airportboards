@@ -1,0 +1,84 @@
+heading ChatGPT сказал:, Value: 4
+									207 text ChatGPT сказал:
+								208 container
+									209 text Проверены  все  6  пар  RU  →  IT  без  поиска  в  интернете.  Существенных  ошибок  смысла,  чисел,  валют,  возрастных  ограничений,  условий  оплаты  или  доступа  не  обнаружено. Есть  одно  замечание  к  точности  формулировки  и  несколько  необязательных  стилистических  улучшений.
+								210 heading Обязательные исправления, Value: 2
+									211 text Обязательные  исправления
+								212 container
+									213 text Нет. Все  фактические  условия  исходных  текстов  сохранены.
+								214 heading Факультативные исправления, Value: 2
+									215 text Факультативные  исправления
+								216 container
+									217 text 1.  ATL  /  lounges  —  уточнение  названия  зоны
+								218 container
+									219 text Было: nel  settore  F
+								220 container
+									221 text Предлагаю: nell'atrio  F
+								222 container
+									223 text Причина: Русское  «в  зале  F»  точнее  передаётся  как  nell'atrio  F (Concourse  F),  чем  более  общее  settore  F .  Текущий  вариант  не  создаёт  критической  ошибки  навигации.
+								224 container
+									225 text 2.  SHA  /  storage  —  естественность  выражения
+								226 container
+									227 text Было: salvo  gli  orari  effettivamente  applicati  sul  posto
+								228 container
+									229 text Предлагаю: fermo  restando  l'orario  effettivamente  osservato  sul  posto
+								230 container
+									231 text Причина: Нынешняя  конструкция  несколько  тяжеловесна.  Предложенный  вариант  естественнее  передаёт  оговорку  о  фактическом  режиме  работы  на  месте.
+								232 container
+									233 text 3.  CAI  /  lounges  —  уточнение  условия  стыковки
+								234 container
+									235 text Было: le  prenotazioni  sono  accettate  con  almeno  4  ore  tra  i  voli
+								236 container
+									237 text Предлагаю: le  prenotazioni  sono  accettate  se  l'intervallo  tra  i  voli  è  di  almeno  4  ore
+								238 container
+									239 text Причина: Условная  конструкция  точнее  и  естественнее  подчёркивает  минимальный  интервал  для  принятия  бронирования.  Смысл  текущего  перевода  правильный.
+								240 container
+									241 text 4.  AUH  /  storage  —  ясность  тарификации
+								242 container
+									243 text Было: le  frazioni  di  periodo  vengono  conteggiate  per  intero
+								244 container
+									245 text Предлагаю: ogni  periodo  iniziato  viene  addebitato  per  intero
+								246 container
+									247 text Причина: Более  привычная  итальянская  формулировка  для  оплаты  неполного  тарифного  периода  как  полного.  Числа  и  порядок  начисления  стоимости  не  меняются.
+								248 heading Без замечаний, Value: 2
+									249 text Без  замечаний
+								250 content list
+									251 container
+										252 AXListMarker •
+										253 text STN  /  lounges: корректно  сохранены  ограничения  по  авиакомпаниям,  зона  выходов  1–19,  невозможность  возврата,  3  часа  до  вылета,  35  GBP,  бесплатный  вход  для  детей  младше  3  лет  и  оплата  только  картой.
+									254 container
+										255 AXListMarker •
+										256 text XMN  /  taxi: правильно  различаются  двери  и  выход  из  зала  прилёта,  сохранены  T3/T4,  расстояние  120  м,  направления  и  телефон.
+									257 container
+										258 AXListMarker •
+										259 text ATL,  SHA,  CAI,  AUH: кроме  факультативных  уточнений  выше,  фактических  расхождений  нет.
+								260 container
+									261 text Итог:  0  обязательных  исправлений,  4  факультативных. Все  6  переводов  можно  использовать  без  обязательной  корректировки.
+								262 button Копировать
+									263 image
+								264 button Оценить ответ
+									265 image
+								266 checkbox Description: Прочитать вслух, Value: 0
+								267 button Поделиться
+								268 pop up button (collapsed) Description: Сгенерировать ответ заново, ID: radix-_r_bi_, Secondary Actions: Expand
+								269 pop up button (collapsed) Description: Ещё действия, ID: radix-_r_bm_, Secondary Actions: Expand
+							148 container
+								149 text ChatGPT может допускать ошибки. Проверяйте важную информацию.
+							150 container
+								270 button Прокрутить вниз
+								151 heading Последний ответ, Value: 4
+									152 text Последний ответ
+								153 container
+									154 container
+										155 button (collapsed) Description: Добавить файлы и другое, Secondary Actions: Expand
+										156 text entry area (settable) Description: Спросить ChatGPT, Value:
+
+											157 container
+												271 text Спросить ChatGPT
+										272 pop up button (collapsed) Description: Выбрать модель ChatGPT, ID: radix-_r_bs_, Secondary Actions: Expand
+											273 text Medium
+										161 button Диктовать
+										274 button Начать голосовой разговор
+		275 text Ответ готов
+
+The focused UI element is 156 text entry area (settable) Description: Спросить ChatGPT, Value:

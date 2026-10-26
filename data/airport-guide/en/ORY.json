@@ -1,0 +1,25 @@
+{
+  "iata": "ORY",
+  "blocks": {
+    "transport": {
+      "title": "Metro from Paris",
+      "hint": "Line 14 without changing",
+      "text": "Metro line 14 runs directly to Orly Airport station from Châtelet, Gare de Lyon, Bercy and Saint-Lazare; the journey from central Paris takes about 25–35 minutes. A one-way Paris Région <> Airports ticket costs EUR 14: it can be bought from a ticket machine for Navigo Easy or through the Île-de-France Mobilités app. Alternatively, take RER B to Antony and then Orlyval; the journey from the centre takes about 35–45 minutes and also costs EUR 14."
+    },
+    "storage": {
+      "title": "Baggage storage",
+      "hint": "Orly 3, Level 0",
+      "text": "Bagages du Monde is in Orly 3 on Level 0 before security, near arrivals, and is open daily from 07:00 to 21:00. Baggage is X-rayed and stored under video surveillance; the price depends on size and storage duration. A cloakroom for accessories and special baggage, and stroller or child car seat rental, are also available."
+    },
+    "kids": {
+      "title": "Baby rooms",
+      "hint": "After security in Orly 3 and 4",
+      "text": "Baby-changing rooms in toilet facilities are open round the clock and have changing tables and children’s toilets. Separate baby rooms after security in Orly 3 and Orly 4 on Level 1 are free and open round the clock, with individual alcoves containing cots, seats, high chairs, bottle warmers and microwaves."
+    },
+    "wifi": {
+      "title": "Wi-Fi and charging",
+      "hint": "In all terminals",
+      "text": "The free WIFI-AIRPORT network is available in all terminals, boarding areas and baggage reclaim; after selecting it, open a browser to reach the connection page. Terminals have USB ports and European Type C, E and F sockets. Free lockable ChargeBox phone-charging compartments are available round the clock."
+    }
+  }
+}

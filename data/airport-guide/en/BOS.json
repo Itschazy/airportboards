@@ -1,0 +1,25 @@
+{
+  "iata": "BOS",
+  "blocks": {
+    "transport": {
+      "title": "Getting there",
+      "hint": "Silver Line SL1 to South Station",
+      "text": "MBTA Silver Line 1 (SL1) buses stop at every terminal and connect the airport with South Station. The journey from the airport to downtown is free and includes a free transfer to the Red Line. The Blue Line is reached via Airport Station, connected to the terminals by free airport shuttles."
+    },
+    "terminals": {
+      "title": "Terminals",
+      "hint": "Free Massport shuttles",
+      "text": "Free Massport shuttles connect the terminals with the Rental Car Center, the water transportation dock and Airport Station on the Blue Line. Buses have low floors, luggage racks and wheelchair lifts; main services to the terminals, subway station and rental cars usually run every 5–6 minutes. Route 11 connects Terminals A, B, C and E daily from 09:00 to 22:00. Stops are at the curb on the lower level of each terminal and marked Shuttle Bus."
+    },
+    "kids": {
+      "title": "With children",
+      "hint": "Kidport after security",
+      "text": "Kidport play areas are after security: in the Terminal A satellite building near gate A18, in Terminal B near B16 and in the retail corridor towards gates B30–B36, and in Terminal C before C25. Every terminal has rooms for nursing and baby care. Family restrooms are available before and after security in all terminals, with a toilet, sink and fold-down changing table."
+    },
+    "wifi": {
+      "title": "Wi‑Fi",
+      "hint": "Free BOSWifi network",
+      "text": "The airport provides free Wi-Fi. Select BOSWifi and accept the terms of use to connect."
+    }
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "iata": "CGO",
+  "blocks": {
+    "transport": {
+      "title": "공항 지하철",
+      "hint": "Xinzheng Airport역",
+      "text": "Xinzheng Airport역에는 Chengjiao선과 Zhengxu선이 운행하며 G 출구는 T2, E 출구는 T1 방면으로 표시되어 있습니다. Chengjiao선 Jiahe/Liuzhuang 방면 첫차는 06:00, 막차는 22:15이며 평일과 공휴일 시간이 같습니다. Zhengxu선 Xuchang East 방면 첫차는 06:14, 막차는 21:14입니다. 지하철 문의 전화는 +86 371 55166166입니다."
+    }
+  }
+}

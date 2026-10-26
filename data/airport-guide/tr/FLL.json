@@ -1,0 +1,25 @@
+{
+  "iata": "FLL",
+  "blocks": {
+    "transport": {
+      "title": "BCT ve Tri-Rail",
+      "hint": "1 numaralı otobüs ve tren",
+      "text": "BCT 1 otobüsü her gün çalışır; havalimanı durağı Rental Car Center, Stop G’dedir. Terminallerden Dania Beach’teki Tri-Rail istasyonuna giden ücretsiz otobüsler alt geliş katından kalkar: terminal 1’in batı ucundaki GTA-1, terminal 2 ile 3 arasındaki GTA-2 ve terminal 3 ile 4 arasındaki GTA-3. Tri-Rail, Miami-Dade, Broward ve Palm Beach ilçelerine her gün hizmet verir."
+    },
+    "terminals": {
+      "title": "Terminaller arasında",
+      "hint": "Yürüyüş yolları",
+      "text": "Ücretsiz otobüsler günün her saati yalnızca Rental Car Center ile terminaller arasında çalışır; duraklar alt geliş katında işaretlidir. Terminaller arasında bina yanındaki kaldırımlardan veya otopark içinden geçen yaya yolundan yürüyebilir ya da otopark tramvayını kullanabilirsiniz."
+    },
+    "storage": {
+      "title": "Bagaj emaneti",
+      "hint": "Terminal 1 ve 3",
+      "text": "Terminal 1’de bagaj emaneti, güvenlik kontrolünden önce Kat 2’de, B yolcu iskelesinin çıkışı yakınındadır; terminal 3’te ise alt bagaj alım katında, JetBlue bagaj ofisinin yanındadır. Her iki nokta hafta içi 08:30–17:30, cumartesi ve pazar 08:30–18:30 açıktır. Terminal 4’teki nokta geçici olarak kapalıdır; hizmet bilgisi +1 954 359 5505 numarasından alınabilir."
+    },
+    "wifi": {
+      "title": "Ücretsiz Wi-Fi",
+      "hint": "Terminaller ve Rental Car Center",
+      "text": "Tüm terminallerde, yolcu iskelelerinde ve Rental Car Center’da ücretsiz Wi-Fi vardır. Resmî ağların adları Airport-Wifi-Terminal_1, Airport-Wifi-Terminal_2, Airport-Wifi-Terminal_3, Airport-Wifi-Terminal_4 ve Airport-Wifi-Rental_Car_Center’dır. FLL bağlantısı ödeme gerektirmez; banka kartı istenirse havalimanı hizmetine +1 866 435 9355 numarasından bildirim yapılabilir."
+    }
+  }
+}

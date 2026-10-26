@@ -1,0 +1,25 @@
+{
+  "iata": "CLT",
+  "blocks": {
+    "taxi": {
+      "title": "Taxi",
+      "hint": "Uptown : 32 USD plus frais",
+      "text": "Les taxis partent du trottoir extérieur au niveau des arrivées et de la livraison des bagages, zone 1. Ils circulent principalement tous les jours de 05:00 à minuit, mais des véhicules peuvent aussi être disponibles en dehors de ces horaires. Le forfait vers Uptown à l’intérieur de la boucle I 277 est de 32 USD, et celui pour un trajet dans un rayon de 3 miles de l’aéroport de 16 USD ; des frais aéroportuaires de 2,50 USD s’ajoutent à toutes les courses. Les principales cartes de crédit sont acceptées."
+    },
+    "kids": {
+      "title": "Avec un enfant",
+      "hint": "Salles d’allaitement",
+      "text": "Les Mother’s Rooms sont accessibles à toutes les mères allaitantes : des espaces individuels sont séparés par des rideaux et équipés de sièges rembourrés et de prises. Chaque salle possède une table à langer et un lavabo. Elles se trouvent dans le passage du hall A entre les portes A1–A13 et A21–A29, près de A31, près du contrôle de sûreté 3 à la jonction des halls D et E, et entre les portes E32 et E36. Des tables à langer sont aussi présentes dans tous les sanitaires pour hommes, femmes et familles du terminal."
+    },
+    "parking": {
+      "title": "Parking",
+      "hint": "24 h sur 24, avec réservation",
+      "text": "Les parkings CLT ouvrent 24 heures sur 24 toute l’année. Les places sont disponibles sur réservation ou par ordre d’arrivée ; les statuts Booked et Reservation Only signifient qu’il n’y a pas de place sans réservation, sans annuler l’accès des personnes ayant réservé. Tous les parkings ont des places pour les personnes handicapées et des navettes adaptées circulent en continu. Le service Valet doit être réservé au moins 3 heures à l’avance."
+    },
+    "wifi": {
+      "title": "Wi‑Fi",
+      "hint": "CLT Free WiFi et recharge",
+      "text": "Le réseau gratuit CLT Free WiFi est disponible dans tout le terminal. Des stations de recharge sont présentes dans tous les halls ; les sièges avec prises et USB se trouvent aux portes A1–A39, B1–B16 et C2–C19. D’autres prises sont disponibles dans l’Atrium et tous les halls."
+    }
+  }
+}

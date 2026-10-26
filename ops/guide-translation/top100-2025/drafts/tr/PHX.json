@@ -1,0 +1,20 @@
+{
+  "iata": "PHX",
+  "blocks": {
+    "terminals": {
+      "title": "Terminaller",
+      "hint": "Ücretsiz PHX Sky Train",
+      "text": "Ücretsiz otomatik PHX Sky Train; 44th Street ve Washington’daki Valley Metro Rail istasyonunu, East Economy ve 24th Street Economy otoparklarını, terminalleri ve Rental Car Center’ı birbirine bağlar. Günün her saati çalışır; 05:00–22:00 arasında bekleme genellikle yaklaşık 3,5–7 dakikadır. Gece günlük bakım nedeniyle 15 dakika veya daha uzun bekleme, gecikmeler ve aktarmalar olabilir. Terminal 3’te platform Kat 5’tedir ve Kat 4’ten ulaşılır; terminal 4’te istasyon Kat 3’tedir."
+    },
+    "kids": {
+      "title": "Çocukla",
+      "hint": "Emzirme odaları ve kabinleri",
+      "text": "Her terminalde güvenlik kontrolünden önce ve sonra emzirme odaları vardır. Her odada lavabo, tezgâh, sabun ve dezenfektan, kâğıt havlu, alt değiştirme masası, oturma yerleri ve priz bulunur. Terminal 3’te güvenlik kontrolünden sonraki odalar F5 numaralı kapının karşısında ve E5’in yanındadır. Terminal 4’te güvenlik kontrolünden sonra bank, açılır masa ve priz bulunan Mamava kabinleri vardır; A22 kapısı ve D güvenlik kontrolündeki kabinler engelli yolculara uygundur."
+    },
+    "wifi": {
+      "title": "Wi‑Fi",
+      "hint": "Free PHX Boingo WiFi",
+      "text": "Havalimanında Boingo Wireless’ın ücretsiz Free PHX Boingo WiFi ağı vardır. Bağlanmak için cihazdan bu ağı seçip tarayıcı açmak ve ücretsiz bağlantıyı seçmek ya da mevcut hesapla giriş yapmak gerekir. Boingo desteğine 1-800-880-4117 numarasından ulaşılır."
+    }
+  }
+}

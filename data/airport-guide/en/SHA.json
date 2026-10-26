@@ -1,0 +1,15 @@
+{
+  "iata": "SHA",
+  "blocks": {
+    "storage": {
+      "title": "Left luggage",
+      "hint": "Storage for up to 1 month",
+      "text": "In Terminal 1, the left-luggage facility is opposite Gate 6 in the departures hall and is open from 07:00 to 20:30, subject to actual operating hours on site. Baggage can be stored for a fee for up to 1 month. Passengers whose passports qualify for 240-hour visa-free transit can store 1 piece of baggage free for 72 hours. A valid document is required to deposit and collect baggage; items undergo X-ray screening."
+    },
+    "kids": {
+      "title": "With children",
+      "hint": "Play areas in Terminal 1",
+      "text": "In Terminal 1, children’s play areas are on the departures level: near gate T10 in the area for international, Hong Kong, Macao and Taiwan flights, and near gate T26 in the domestic area. Their opening hours follow the departing flight schedule."
+    }
+  }
+}

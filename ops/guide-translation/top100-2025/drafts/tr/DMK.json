@@ -1,0 +1,20 @@
+{
+  "iata": "DMK",
+  "blocks": {
+    "transport": {
+      "title": "BMTA otobüsleri",
+      "hint": "A1–A4 hatları",
+      "text": "A1, 05:45’ten gece yarısına kadar Mo Chit 2’ye; A2, 06:00–23:00 arasında Victory Monument’a gider. Her ikisi de 15 dakikada bir kalkar ve 30 THB tutar. Lumpini Park’a giden A3 ve Sanam Luang’a giden A4, 06:00–23:00 arasında 30 dakikada bir çalışır; ücret 50 THB’dir. Biniş noktaları Service Hall önünde ve terminal 1’de Kat 1’deki halka açık geliş alanındadır."
+    },
+    "taxi": {
+      "title": "Taksimetreli taksiler",
+      "hint": "Havalimanı ek ücreti alınır",
+      "text": "Taksimetre ücretine 50 THB eklenir; otoyol ve özel ücretli yol geçiş bedellerini yolcu öder. Taksi masaları, terminal 1 ve 2’de Kat 1’deki halka açık geliş alanlarında bulunur."
+    },
+    "wifi": {
+      "title": "Ücretsiz Wi-Fi",
+      "hint": "Bağlantıdan sonra 60 dakika",
+      "text": "Airport Free Wi-Fi by NT ağını seçin, e-posta adresinizi girin ve kullanım koşullarını kabul ettiğinizi işaretleyin. Başarıyla bağlandıktan sonra OK’e basın: ücretsiz erişim 60 dakika sağlanır."
+    }
+  }
+}

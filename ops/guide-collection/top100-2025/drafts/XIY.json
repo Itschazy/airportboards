@@ -1,0 +1,14 @@
+{
+  "iata": "XIY",
+  "checked": "2026-10-26",
+  "blocks": [
+    {
+      "id": "sleep",
+      "title": "Mercure Xi’an International Airport",
+      "hint": "Отель в районе Вэйчэн",
+      "text": "Mercure Xi’an International Airport расположен по адресу Yingbin Road 15 в районе Вэйчэн города Сяньян. В отеле 104 номера, фитнес-центр, помещение для стирки, ресторан и бесплатная парковка. Заселение начинается в 12:00, выезд — до 12:00; телефон: +86 29 38195566.",
+      "source": "all.accor.com",
+      "url": "https://all.accor.com/hotel/C0E4/index.en.shtml"
+    }
+  ]
+}

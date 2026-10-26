@@ -1,0 +1,38 @@
+{
+  "iata": "LIM",
+  "checked": "2026-10-26",
+  "blocks": [
+    {
+      "id": "taxi",
+      "title": "Такси",
+      "hint": "Стойки в зонах прилёта",
+      "text": "Стойки такси находятся в зонах внутренних и международных прилётов. Сотрудники направляют пассажира и водителя к выделенной парковке внутри аэропорта; один из опубликованных телефонов службы — +51 1 4844001.",
+      "source": "lima-airport.com",
+      "url": "https://www.lima-airport.com/en/pasajeros/transporte/taxi"
+    },
+    {
+      "id": "lounges",
+      "title": "The Club LIM Internacional",
+      "hint": "Уровень 2 международных вылетов",
+      "text": "Зал The Club LIM Internacional расположен на уровне 2 в зоне международных вылетов. В нём предусмотрены места для отдыха, бар, душевые и помещения для встреч. Аэропорт указывает ежедневную круглосуточную работу зала.",
+      "source": "lima-airport.com",
+      "url": "https://www.lima-airport.com/en/pasajeros/establecimientos/ver/354"
+    },
+    {
+      "id": "sleep",
+      "title": "Sleepover",
+      "hint": "Уровень 2 Perú Plaza",
+      "text": "Sleepover находится на уровне 2 Perú Plaza рядом со Starbucks и Dunkin Donuts и работает круглосуточно. Здесь предлагаются душевые, капсулы для короткого сна, кабины с двухъярусными кроватями, зона совместной работы и включённые напитки.",
+      "source": "lima-airport.com",
+      "url": "https://www.lima-airport.com/en/pasajeros/establecimientos/ver/355"
+    },
+    {
+      "id": "wifi",
+      "title": "Бесплатный Wi-Fi",
+      "hint": "Сеть .FreeWifiJorgeChavez",
+      "text": "На телефоне или ноутбуке можно бесплатно подключиться к сети .FreeWifiJorgeChavez. Для доступа нужно принять условия использования на странице подключения.",
+      "source": "lima-airport.com",
+      "url": "https://www.lima-airport.com/en/pasajeros/servicios/wifi"
+    }
+  ]
+}

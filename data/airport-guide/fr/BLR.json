@@ -1,0 +1,25 @@
+{
+  "iata": "BLR",
+  "blocks": {
+    "transport": {
+      "title": "Comment s'y rendre",
+      "hint": "Bus BMTC Vayu Vajra",
+      "text": "Les bus climatisés BMTC Vayu Vajra relient l’aéroport à la ville. Le paiement à la montée se fait en espèces ou par UPI. Le service d’information BMTC est joignable au +91 7760991250 et au +91 7760991269."
+    },
+    "taxi": {
+      "title": "Taxi",
+      "hint": "KSTDC et taxis avec conductrices",
+      "text": "L’aéroport propose des taxis climatisés ou non ; seuls les véhicules KSTDC sont proposés sans climatisation. KSTDC dispose aussi de berlines climatisées conduites par des femmes. Ses taxis sont équipés de GPS, de GPRS et d’imprimantes pour les justificatifs de paiement."
+    },
+    "parking": {
+      "title": "Parking",
+      "hint": "Arrêts courts gratuits",
+      "text": "Sur les parkings automobiles P3 et P4 du terminal 1, les premières 15 minutes sont gratuites ; sur P2 du terminal 2, ce sont les premières 10 minutes. La recharge lente des véhicules électriques est payante au terminal 1, comme la recharge rapide au terminal 2. Pour les véhicules de la catégorie 4W, le stationnement gratuit dans les zones de prise en charge des passagers à l’arrivée des deux terminaux est limité à 8 minutes."
+    },
+    "wifi": {
+      "title": "Wi‑Fi",
+      "hint": "BLR_FREE_WIFI : SIM ou bon",
+      "text": "Pour accéder à BLR_FREE_WIFI avec une carte SIM locale ou l’itinérance internationale, sélectionner Local Phone Number sur la page de connexion et saisir ses données ainsi qu’un code OTP à usage unique. Sans une telle carte SIM, un bon peut être obtenu à un WiFi Voucher Kiosk dans la zone des arrivées internationales en scannant la page du passeport avec la photo et la carte d’embarquement. Sans carte d’embarquement, l’aéroport invite à demander un PIN Wi-Fi au comptoir d’information virtuel. Le code du bon est saisi sur la page de connexion au réseau."
+    }
+  }
+}

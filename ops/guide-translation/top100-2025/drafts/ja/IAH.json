@@ -1,0 +1,25 @@
+{
+  "iata": "IAH",
+  "blocks": {
+    "transport": {
+      "title": "アクセス",
+      "hint": "直行バス・片道4.50 USD",
+      "text": "METRO 500 IAH Downtown Directは空港とGeorge R. Brown Convention Centerをノンストップで結びます。乗り場はターミナルEのレベル2、Ride App Pick-Up付近のドアE201のそばです。片道4.50 USDで、毎日05:30～20:00に30分間隔で運行します。荷物用スペースがあり、移動に制約のある利用者も利用でき、無料Wi-Fiを提供しています。"
+    },
+    "sleep": {
+      "title": "仮眠・宿泊",
+      "hint": "Minute Suites・検査後",
+      "text": "Minute SuitesはターミナルCの保安検査後、C14番ゲート付近にあります。睡眠、休息、仕事のための専用スペースとシャワーを利用できます。"
+    },
+    "kids": {
+      "title": "お子様連れ",
+      "hint": "授乳室とMamavaポッド",
+      "text": "IAHには授乳・搾乳用の部屋とMamavaポッド、ベビーケアルーム、おむつ替え台があります。Mother’s RoomsはターミナルAのA1・A17番ゲート付近とターミナルCのC5付近にあります。MamavaポッドはターミナルBのB21付近、ターミナルCのC34付近、ターミナルEのE12付近にあり、ターミナルDのベビーケアルームはD15付近です。"
+    },
+    "wifi": {
+      "title": "Wi‑Fi",
+      "hint": "Free Airport WIFI",
+      "text": "IAHでは駐車場建物を含むすべてのターミナルで無料Wi-Fiを利用できます。Free Airport WIFIを選び、ログインページを待ち、利用規約に同意してSubmitを押してください。サポート電話番号は1-844-831-0999です。"
+    }
+  }
+}

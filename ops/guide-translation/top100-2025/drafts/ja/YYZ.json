@@ -1,0 +1,25 @@
+{
+  "iata": "YYZ",
+  "blocks": {
+    "transport": {
+      "title": "アクセス",
+      "hint": "UP Express・28分",
+      "text": "UP ExpressはPearsonとトロント中心部のUnion Stationを28分で結び、毎日15分間隔で出発します。大人の片道運賃は12.35 $、PRESTO利用時は9.25 $で、12歳未満の子どもは無料です。駅はターミナル1のTerminal Link付近にあります。ターミナル3からは、まず無料のTerminal Linkでターミナル1へ移動し、Train to Cityの案内に従ってください。列車と駅には無料Wi-Fiがあり、車内にはコンセントと荷物棚があります。"
+    },
+    "terminals": {
+      "title": "ターミナル",
+      "hint": "無料Terminal Link",
+      "text": "無料のTerminal Linkはターミナル1・3とViscount駅の間を24時間運行します。Sheraton Gateway Hotel、ALT Hotel、Value Park Garage・Value Park Lot駐車場へもアクセスできます。駅間の所要時間は2～8分です。折り畳めない移動補助具を使用する利用者も乗車できます。"
+    },
+    "kids": {
+      "title": "お子様連れ",
+      "hint": "保安検査後の授乳室・ポッド",
+      "text": "授乳室と授乳ポッドは保安検査後にあります。Mamavaポッドには折り畳みテーブル、ベンチ2台、鏡、手すり、USB付きコンセントがあります。開錠にはMamavaアプリまたは空港カスタマーサービスから取得するコードが必要です。ターミナル1ではD22・E80/E81・F59番ゲート付近、ターミナル3ではC30/C31・B22・A12/A13番ゲート付近にあります。ターミナル1の出発ロビー、D24番ゲート付近には子どもの遊び場があります。"
+    },
+    "wifi": {
+      "title": "Wi‑Fi",
+      "hint": "空港内の無料Wi-Fi",
+      "text": "空港ではPearsonとCIBCが提供する無料Wi-Fiを利用できます。Toronto Pearson Public Wi-Fiを選び、ウェルカムページを開き、利用規約に同意してConnectを押してください。必要な場合は1-866-207-1690または案内カウンターでサポートを受けられます。"
+    }
+  }
+}

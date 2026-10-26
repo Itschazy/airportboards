@@ -1,0 +1,15 @@
+{
+  "iata": "SHA",
+  "blocks": {
+    "storage": {
+      "title": "Emanet",
+      "hint": "1 aya kadar bagaj muhafazası",
+      "text": "Terminal 1’deki bagaj muhafazası, gidiş salonunda Gate 6’nın karşısındadır; yerinde uygulanan fiilî saatler esas olmak üzere 07:00–20:30 arasında açıktır. Bagaj en fazla 1 ay ücretli olarak saklanır. 240 saatlik vizesiz transit hakkı tanıyan pasaporta sahip yolcular, 1 parça bagajını 72 saat ücretsiz bırakabilir. Teslim ve teslim alma için geçerli kimlik belgesi gerekir; eşyalar X-ray kontrolünden geçirilir."
+    },
+    "kids": {
+      "title": "Çocukla",
+      "hint": "Terminal 1’de çocuk oyun alanları",
+      "text": "Terminal 1’deki çocuk oyun alanları gidiş katındadır: dış hatlar ile Hong Kong, Makao ve Tayvan uçuşları alanında T10 numaralı kapının, iç hatlar alanında T26 numaralı kapının yakınındadır. Açılış saatleri giden uçuşların saatlerine göre belirlenir."
+    }
+  }
+}

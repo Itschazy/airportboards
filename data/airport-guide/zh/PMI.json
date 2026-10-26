@@ -1,0 +1,25 @@
+{
+  "iata": "PMI",
+  "blocks": {
+    "transport": {
+      "title": "前往帕尔马的巴士",
+      "hint": "A1、A2及34路",
+      "text": "A1路连接机场与帕尔马市中心，A2路前往S’Arenal，34路前往Hospital Son Espases。机场A1站点位于到达区0层及出发区2楼。"
+    },
+    "taxi": {
+      "title": "出租车",
+      "hint": "0层出租车站",
+      "text": "有标识的出租车站位于航站楼0层到达区。行动不便旅客的出租车服务电话为+34 971 703 529。"
+    },
+    "lounges": {
+      "title": "Valldemossa VIP Lounge",
+      "hint": "出发区4楼",
+      "text": "Valldemossa VIP Lounge位于4楼登机区的商业区域，该登机区仅供申根及非申根航班旅客进入。休息室营业时间为05:00至午夜，最多可在计划起飞前的3小时内停留。提供餐饮、工作位、打印机及航班信息。"
+    },
+    "wifi": {
+      "title": "免费Wi-Fi",
+      "hint": "确认电子邮箱",
+      "text": "连接Airport Free Wifi Aena网络，使用电子邮箱以访客身份打开欢迎页面，或登录Aena Club。可免费使用15分钟用于确认电子邮箱，确认后无时间限制。"
+    }
+  }
+}

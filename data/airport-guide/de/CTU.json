@@ -1,0 +1,25 @@
+{
+  "iata": "CTU",
+  "blocks": {
+    "transport": {
+      "title": "Metro",
+      "hint": "Linien 10, 19 und 30",
+      "text": "Die Metrolinie 10 bedient beide Terminals; in Terminal 2 liegt der Zugang auf Ebene B2 in den Durchgängen L2, L3 und L4. Die Station Shuangliu Airport Terminal 2 East wird von den Linien 19 und 30 bedient; der Zugang erfolgt durch L3 auf Ebene B2 von Terminal 2. Linie 19 verbindet sie mit Tianfu Airport Terminal 1 & 2 und Tianfu Airport North."
+    },
+    "taxi": {
+      "title": "Taxi",
+      "hint": "Außerhalb der Ankunft",
+      "text": "An Terminal 1 liegt der Taxistand etwa 50 m südlich außerhalb von Tür 6 auf der Ankunftsebene. An Terminal 2 ist der Einstieg beim Fußgängerüberweg auf der Ankunftsebene; die Telefonnummer der Verkehrsaufsicht lautet 12328."
+    },
+    "terminals": {
+      "title": "Zwischen den Terminals",
+      "hint": "Kostenloser Bus",
+      "text": "Zwischen den Terminals 1 und 2 fährt ein kostenloser Bus; der Fußweg dauert etwa 8–10 Minuten. Die Haltestelle an Terminal 1 liegt auf dem südlichen Vorplatz außerhalb von Tür 3, die an Terminal 2 auf dem nördlichen Vorplatz außerhalb von Tür 9."
+    },
+    "storage": {
+      "title": "Gepäckaufbewahrung",
+      "hint": "Ausweis und Kontrolle erforderlich",
+      "text": "Die Gepäckaufbewahrung von Terminal 1 liegt nördlich der Sicherheitskontrolle B, die von Terminal 2 hinter der Check-in-Insel P. Beide öffnen 2 Stunden vor dem ersten Abflug ihres Terminals und schließen nach Ende seiner Abflüge. Ein kleines Fach kostet 8 CNY für bis zu 6 Stunden, 13 CNY für bis zu 12 Stunden und 18 CNY für bis zu 24 Stunden, danach zusätzlich 2 CNY je weitere 6 Stunden; weniger als 6 Stunden werden als 6 Stunden berechnet. Bei der Abgabe ist ein gültiger Ausweis nötig und das Gepäck wird kontrolliert; bei der Abholung sind die Quittung und derselbe Ausweis vorzulegen. Powerbanks und Lithiumbatterien werden nicht zur Aufbewahrung angenommen."
+    }
+  }
+}

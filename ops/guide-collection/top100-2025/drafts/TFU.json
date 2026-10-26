@@ -1,0 +1,14 @@
+{
+  "iata": "TFU",
+  "checked": "2026-10-26",
+  "blocks": [
+    {
+      "id": "sleep",
+      "title": "Где поспать",
+      "hint": "Отель с трансфером TFU",
+      "text": "Holiday Inn Express Chengdu Tianfu Airport Zone находится в Wanhui Center в городе Цзяньян напротив станции Jianyang South. В отеле 316 номеров; в них предусмотрены розетки, USB-порты и душ. На странице оператора указан трансфер от аэропорта TFU и обратно. Заезд и выезд — в 14:00, минимальный возраст для самостоятельной регистрации — 18 лет.",
+      "source": "ihg.com",
+      "url": "https://www.ihg.com/holidayinnexpress/hotels/ru/ru/chengdu/ctuta/hoteldetail"
+    }
+  ]
+}

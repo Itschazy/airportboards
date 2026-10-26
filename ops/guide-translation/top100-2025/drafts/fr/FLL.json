@@ -1,0 +1,25 @@
+{
+  "iata": "FLL",
+  "blocks": {
+    "transport": {
+      "title": "BCT et Tri-Rail",
+      "hint": "Bus 1 et train",
+      "text": "Le bus BCT 1 circule tous les jours ; l’arrêt de l’aéroport se trouve à Rental Car Center, Stop G. Des bus gratuits relient les terminaux à la gare Tri-Rail de Dania Beach depuis le niveau inférieur des arrivées : GTA-1 à l’extrémité ouest du terminal 1, GTA-2 entre les terminaux 2 et 3 et GTA-3 entre les terminaux 3 et 4. Tri-Rail dessert chaque jour les comtés de Miami-Dade, Broward et Palm Beach."
+    },
+    "terminals": {
+      "title": "Entre les terminaux",
+      "hint": "Parcours à pied",
+      "text": "Des bus gratuits circulent 24 heures sur 24 uniquement entre Rental Car Center et les terminaux ; les arrêts sont indiqués au niveau inférieur des arrivées. Pour aller d’un terminal à l’autre, on peut emprunter les trottoirs le long du bâtiment, le parcours piéton à travers le parking ou le tram du parking."
+    },
+    "storage": {
+      "title": "Consigne à bagages",
+      "hint": "Terminaux 1 et 3",
+      "text": "Au terminal 1, la consigne se trouve avant le contrôle de sûreté, au niveau 2, près de la sortie de la jetée B ; au terminal 3, elle est au niveau inférieur de récupération des bagages, près du bureau bagages JetBlue. Les deux points sont ouverts du lundi au vendredi de 08:30 à 17:30 et les samedis et dimanches de 08:30 à 18:30. Le point du terminal 4 est temporairement fermé ; des renseignements sont disponibles au +1 954 359 5505."
+    },
+    "wifi": {
+      "title": "Wi-Fi gratuit",
+      "hint": "Terminaux et Rental Car Center",
+      "text": "Le Wi-Fi gratuit est disponible dans tous les terminaux, les jetées et Rental Car Center. Les réseaux officiels sont Airport-Wifi-Terminal_1, Airport-Wifi-Terminal_2, Airport-Wifi-Terminal_3, Airport-Wifi-Terminal_4 et Airport-Wifi-Rental_Car_Center. La connexion FLL ne nécessite aucun paiement ; si une carte bancaire est demandée, le service de l’aéroport recueille les signalements au +1 866 435 9355."
+    }
+  }
+}

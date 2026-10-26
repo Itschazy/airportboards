@@ -1,0 +1,25 @@
+{
+  "iata": "FUK",
+  "blocks": {
+    "transport": {
+      "title": "Metro",
+      "hint": "Estación en la terminal nacional",
+      "text": "La estación Fukuoka-kuko está conectada directamente con la parte sur de la terminal nacional. Desde el vestíbulo de llegadas, el ascensor sur y las escaleras mecánicas llevan a los tornos de Access Hall, en el nivel B2. Para hacer transbordos en la ciudad, la línea llega a Hakata, con conexión a JR Kyushu, y a Tenjin, con conexión a Nishitetsu Fukuoka (Tenjin)."
+    },
+    "terminals": {
+      "title": "Entre terminales",
+      "hint": "Autobús gratuito",
+      "text": "Un autobús gratuito para usuarios del aeropuerto circula entre las terminales nacional e internacional. En el tramo diurno del horario publicado de la terminal nacional hay salidas cada 5–6 minutos; los horarios pueden cambiar. Todos los autobuses tienen rampas para sillas de ruedas y se puede subir y bajar por las puertas delanteras y traseras."
+    },
+    "kids": {
+      "title": "Salas de lactancia",
+      "hint": "En ambas terminales",
+      "text": "Las salas de lactancia tienen cabinas individuales separadas por cortinas, calentadores de agua y asientos infantiles. Están en los niveles 1, 2, 3 y 4 de la terminal nacional y en los niveles 1 y 3 de la internacional. Se identifican con símbolos específicos en los planos por niveles."
+    },
+    "wifi": {
+      "title": "Wi-Fi gratuito",
+      "hint": "Dos redes AirportFreeWiFi",
+      "text": "Hay Internet gratuito en las redes AirportFreeWiFi-2.4G y AirportFreeWiFi-5.0G; algunos dispositivos solo muestran la primera. Tras seleccionar la red, hay que abrir un navegador, aceptar las condiciones de la página de conexión y seguir el enlace indicado. En algunas tiendas, restaurantes y zonas fuera de cobertura la conexión puede no funcionar; también puede resultar difícil acceder cuando hay mucha demanda."
+    }
+  }
+}

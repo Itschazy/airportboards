@@ -1,0 +1,25 @@
+{
+  "iata": "BOS",
+  "blocks": {
+    "transport": {
+      "title": "가는 방법",
+      "hint": "Silver Line SL1 버스",
+      "text": "MBTA Silver Line 1(SL1) 버스는 모든 터미널에 정차하며 공항과 South Station을 연결합니다. 공항에서 도심으로 가는 승차는 무료이며 Red Line 무료 환승도 포함됩니다. Blue Line은 Airport Station을 통해 이용할 수 있으며, 이 역과 터미널 사이에는 무료 공항 셔틀이 운행합니다."
+    },
+    "terminals": {
+      "title": "터미널",
+      "hint": "무료 Massport 셔틀",
+      "text": "무료 Massport 셔틀은 터미널과 Rental Car Center, 수상 교통 선착장, Blue Line의 Airport Station을 연결합니다. 버스는 저상형이며 수하물 선반과 휠체어 리프트가 있습니다. 터미널, 지하철역, 렌터카를 연결하는 주요 노선은 보통 5–6분 간격입니다. 11번 노선은 매일 09:00–22:00에 터미널 A·B·C·E를 연결합니다. 정류장은 각 터미널의 아래층 도로변에 있으며 Shuttle Bus로 표시되어 있습니다."
+    },
+    "kids": {
+      "title": "아이와 함께",
+      "hint": "보안검색 후 Kidport",
+      "text": "Kidport 놀이 공간은 보안검색 후에 있습니다. 터미널 A 위성 건물의 A18번 게이트 근처, 터미널 B의 B16 근처와 B30–B36번 게이트로 가는 상업 통로, 터미널 C의 C25 앞에 있습니다. 각 터미널에 수유 및 아기 돌봄실이 있습니다. 모든 터미널의 보안검색 전후에 가족 화장실이 있으며 변기, 세면대, 접이식 기저귀 교환대가 있습니다."
+    },
+    "wifi": {
+      "title": "Wi‑Fi",
+      "hint": "무료 BOSWifi",
+      "text": "공항은 무료 Wi-Fi를 제공합니다. BOSWifi 네트워크를 선택하고 이용 약관에 동의하면 연결할 수 있습니다."
+    }
+  }
+}

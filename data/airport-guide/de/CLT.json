@@ -1,0 +1,25 @@
+{
+  "iata": "CLT",
+  "blocks": {
+    "taxi": {
+      "title": "Taxi",
+      "hint": "Uptown: 32 USD plus Gebühr",
+      "text": "Taxis fahren am äußeren Bordstein auf der Ankunfts- und Gepäckausgabeebene in Zone 1 ab. Die regulären Betriebszeiten sind täglich von 05:00 bis Mitternacht; Fahrzeuge können auch außerhalb dieser Zeiten verfügbar sein. Der Festpreis nach Uptown innerhalb des I 277-Rings beträgt 32 USD, für Fahrten im Umkreis von 3 Meilen um den Flughafen 16 USD; auf alle Fahrten wird eine Flughafengebühr von 2,50 USD aufgeschlagen. Gängige Kreditkarten werden akzeptiert."
+    },
+    "kids": {
+      "title": "Mit Kind",
+      "hint": "Stillräume",
+      "text": "Mother’s Rooms stehen allen stillenden Müttern zur Verfügung; einzelne Plätze sind durch Vorhänge getrennt und mit gepolsterten Sitzen und Steckdosen ausgestattet. Jeder Raum hat einen Wickeltisch und ein Waschbecken. Die Räume liegen im Verbindungsgang von Halle A zwischen den Gates A1–A13 und A21–A29, bei A31, bei Sicherheitskontrolle 3 am Übergang zwischen den Hallen D und E sowie zwischen den Gates E32 und E36. Wickeltische gibt es außerdem in allen Herren-, Damen- und Familientoiletten des Terminals."
+    },
+    "parking": {
+      "title": "Parken",
+      "hint": "Ganzjährig rund um die Uhr",
+      "text": "Die CLT-Parkplätze sind ganzjährig rund um die Uhr geöffnet. Stellplätze gibt es mit Reservierung oder bei der Einfahrt in der Reihenfolge des Eintreffens; Booked und Reservation Only bedeuten, dass ohne Reservierung keine Plätze verfügbar sind, bestehende Buchungen bleiben jedoch gültig. Alle Parkplätze bieten Stellplätze für Reisende mit Behinderungen und durchgehend verkehrende barrierefreie Shuttlebusse. Valet muss mindestens 3 Stunden im Voraus gebucht werden."
+    },
+    "wifi": {
+      "title": "Wi‑Fi",
+      "hint": "CLT Free WiFi und Ladestationen",
+      "text": "Das kostenlose Netzwerk CLT Free WiFi steht Reisenden im gesamten Terminal zur Verfügung. Ladestationen gibt es in allen Hallen; Sitze mit Steckdosen und USB befinden sich an den Gates A1–A39, B1–B16 und C2–C19. Weitere Steckdosen gibt es im Atrium und in allen Hallen."
+    }
+  }
+}

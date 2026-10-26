@@ -1,0 +1,20 @@
+{
+  "iata": "GRU",
+  "blocks": {
+    "transport": {
+      "title": "Comment s'y rendre",
+      "hint": "Ligne 13-Jade",
+      "text": "La gare Aeroporto-Guarulhos fait partie de la ligne 13-Jade de CPTM, qui relie l’aéroport à la gare Engenheiro Goulart. Une correspondance avec la ligne 12-Safira est possible à Engenheiro Goulart. L’entrée côté aéroport est près du parking du terminal 1."
+    },
+    "storage": {
+      "title": "Consigne à bagages",
+      "hint": "Malex aux terminaux 2 et 3",
+      "text": "La consigne Malex est disponible aux terminaux 2 et 3, à l’extérieur de la zone des arrivées, sur le trottoir. Le point Arrival West du terminal 2 est ouvert 24 heures sur 24. Les points Arrival East du terminal 2 et Arrival du terminal 3 sont ouverts de 07:00 à 19:00."
+    },
+    "wifi": {
+      "title": "Wi‑Fi",
+      "hint": "Réseau .GRU WIFI",
+      "text": "L’aéroport propose le Wi-Fi gratuit via BOINGO. Pour se connecter, choisir .GRU WIFI, appuyer sur Connect et suivre les instructions. L’assistance BOINGO est disponible 24 heures sur 24 au 0800-095-9026."
+    }
+  }
+}

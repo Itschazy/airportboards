@@ -1,0 +1,25 @@
+{
+  "iata": "DUB",
+  "blocks": {
+    "transport": {
+      "title": "Dublin’e otobüsler",
+      "hint": "Terminallerin yanındaki alanlar",
+      "text": "Dublin Express, 1 ve 21 numaralı bölgelerden Temple Bar, Trinity College, O’Connell Street ve Heuston istasyonu dahil Dublin merkezindeki duraklara gider. Aircoach, 2 ve 20 numaralı bölgelerden Dublin’e, kontluğun diğer bölgelerine ve Kuzey İrlanda’ya hareket eder. Transport for Ireland hatları 11, 13 ve 15 numaralı bölgelerden hizmet verir."
+    },
+    "taxi": {
+      "title": "Taksi",
+      "hint": "Her iki terminalin dışında",
+      "text": "Her iki terminalin dışında günün her saati taksi bulunur; duraklarda görevliler çalışır. Ücret mesafe, yolculuğun günü ve saatine göre taksimetreyle belirlenir; yolcunun taksimetre fişi alma hakkı vardır. Havalimanı Dublin merkezi için 30–45 EUR tutarında yaklaşık bir ücret belirtir."
+    },
+    "storage": {
+      "title": "Bagaj hizmetleri",
+      "hint": "Smarte Carte",
+      "text": "Smarte Carte bagaj muhafazası, paketleme ve gönderim ile seyahat aksesuarı satışı sunar. Noktalar terminal 1 gelen yolcu salonunda ana girişten sonra solda ve terminal 2 giden yolcu alanında American Airlines check-in kontuarının yanındadır. Ofis her gün 05:00–21:00 arasında açıktır. Her iki terminalde bagaj arabaları ücretsizdir."
+    },
+    "wifi": {
+      "title": "Wi-Fi ve baskı",
+      "hint": "Ağ kaydı gerekmiyor",
+      "text": "Ücretsiz Dublin Airport Wi-Fi ağı kayıt gerektirmez: cihaz ayarlarından seçip açılır pencerede Connect düğmesine basın. Terminal 1 gelen yolcu salonundaki Smarte Carte Baggage Services’te 06:00–19:00 arasında baskı alınabilir; 20 sayfaya kadar toplam ücret 10 EUR’dur."
+    }
+  }
+}

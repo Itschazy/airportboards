@@ -1,0 +1,25 @@
+{
+  "iata": "NRT",
+  "blocks": {
+    "terminals": {
+      "title": "Tra i terminal",
+      "hint": "Autobus gratuiti",
+      "text": "Prima dei controlli di sicurezza circolano autobus gratuiti tra i terminal; i terminal 2 e 3 sono collegati anche da un passaggio pedonale. La linea circolare segue l’ordine terminal 1 → terminal 3 → terminal 2: il viaggio da 1 a 3 dura circa 14 minuti, da 3 a 2 circa 3 minuti e da 2 a 1 circa 10 minuti. Ci sono anche linee separate tra i terminal 1 e 2 e tra i terminal 2 e 3."
+    },
+    "storage": {
+      "title": "Armadietti automatici",
+      "hint": "Tariffe secondo la posizione",
+      "text": "L’aeroporto dispone di armadietti con tariffe giornaliere e a tempo. Con la tariffa giornaliera, quelli piccoli, medi e grandi costano rispettivamente 400 JPY, 600 JPY e 800 JPY per giorno di utilizzo; un nuovo giorno a pagamento inizia a mezzanotte e la durata massima è di 8 giorni. Nell’edificio principale del terminal 2 al livello B1 e nell’edificio principale del terminal 3 al livello 2 si applica una tariffa a tempo: fino a 6 ore costano 300 JPY per l’armadietto piccolo, 500 JPY per il medio e 600 JPY per il grande; ogni successivo periodo di 24 ore costa rispettivamente 400 JPY, 600 JPY e 800 JPY."
+    },
+    "kids": {
+      "title": "Sale per neonati",
+      "hint": "In tutti i terminal",
+      "text": "Tutti i terminal hanno sale per neonati con cabina per l’allattamento, fasciatoio, lavabo e acqua calda. Gli uomini possono usare tutte le strutture tranne la cabina per l’allattamento."
+    },
+    "wifi": {
+      "title": "Wi-Fi e prese",
+      "hint": "Nei terminal e sugli autobus",
+      "text": "Il Wi-Fi gratuito è disponibile in tutti i terminal e sugli autobus tra terminal: selezionare FreeWiFi-NARITA e accettare le condizioni d’uso e l’avvertenza di sicurezza nella pagina di connessione. Il servizio non richiede la configurazione preventiva delle impostazioni di sicurezza; l’aeroporto consiglia una VPN a chi necessita di una connessione sicura. Le prese nei terminal sono utilizzabili gratuitamente."
+    }
+  }
+}

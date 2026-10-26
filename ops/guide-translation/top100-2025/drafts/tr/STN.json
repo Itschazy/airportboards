@@ -1,0 +1,25 @@
+{
+  "iata": "STN",
+  "blocks": {
+    "transport": {
+      "title": "Londra’ya tren",
+      "hint": "Terminalin altındaki istasyon",
+      "text": "Tren istasyonu terminalin hemen altında, yaklaşık 2 dakika yürüme mesafesindedir; asansörler, yürüyen merdivenler ve rampalar vardır. Stansted Express, London Liverpool Street’e her gün 15 dakikada bir çalışır; yolculuk yaklaşık 48 dakika, Tottenham Hale’e ise yaklaşık 36 dakika sürer. Temassız banka kartı veya mobil cüzdanla ödeme yapılabilir; Oyster, havalimanına gidiş veya dönüşte geçerli değildir."
+    },
+    "kids": {
+      "title": "Çocuklarla seyahat",
+      "hint": "Alt değiştirme ve emzirme",
+      "text": "Alt değiştirme alanları, A bölgesindeki check-in yakınında erkek ve kadın tuvaletlerinde, güvenlik kontrolünden sonra ise 13, 33/34, 43 ve 59 numaralı biniş kapıları yakınındadır. Dış hatlar bagaj alımında 9 numaralı bant yakınında ve ana gelen yolcu karşılama salonunda da alt değiştirme kabinleri vardır. Havalimanının her yerinde emzirmeye izin verilir; mahremiyet için ana gidiş salonundaki Family Room’da ayrı kabinler bulunur."
+    },
+    "lounges": {
+      "title": "Essence Lounge",
+      "hint": "Belirli hava yolu yolcularına",
+      "text": "Ana terminaldeki eski Escape Lounge kapalıdır; yeni Essence by Escape Lounges yalnızca uygun hava yollarıyla 1–19 numaralı biniş kapılarından uçan yolculara hizmet verir. Ryanair ve easyJet yolcuları giremez; 1–19 numaralı kapılara gittikten sonra ana terminale dönülemez. Salona planlanan kalkış saatinden 3 saat önce giriş yapılabilir; önceden rezervasyon yapmadan giriş 35 GBP’den başlar, 3 yaşından küçük çocuklar ücretsizdir. Soğuk yiyecekler, sıcak ve alkolsüz içecekler, şarap, şişe bira ve Wi-Fi dahildir; yalnızca kartla ödeme kabul edilir."
+    },
+    "wifi": {
+      "title": "Ücretsiz Wi-Fi",
+      "hint": "Terminalde 2 saat",
+      "text": "Stansted terminalinde ve dinlenme salonlarında 2 saatlik ücretsiz Wi-Fi vardır. Bağlanmak için telefon, tablet veya dizüstü bilgisayardan havalimanının Wi-Fi ağını seçmek gerekir."
+    }
+  }
+}

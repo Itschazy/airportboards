@@ -1,0 +1,20 @@
+{
+  "iata": "MNL",
+  "blocks": {
+    "taxi": {
+      "title": "Taxi",
+      "hint": "Conservez le bordereau de course",
+      "text": "Coupon Taxi, Yellow Metered Taxi et Regular Metered Taxi circulent à NAIA. Un agent de l’aéroport remet un bordereau de course au passager : il faut le garder et ne pas le donner au chauffeur. Les numéros inscrits sur le bordereau permettent de poser des questions ou de déposer une réclamation concernant la course."
+    },
+    "parking": {
+      "title": "Parking",
+      "hint": "Sans réservation préalable",
+      "text": "Les parkings des terminaux fonctionnent uniquement par ordre d’arrivée, sans réservation préalable. Les voitures peuvent rester la nuit ou plusieurs jours ; le stationnement longue durée est facturé par période de 24 heures. Les espèces, GCash, PayMaya et cartes bancaires sont acceptés."
+    },
+    "wifi": {
+      "title": "Wi‑Fi",
+      "hint": "Réseaux gratuits dans les terminaux",
+      "text": "Le Wi-Fi gratuit est disponible dans tous les terminaux de NAIA : NAIA Free Go Wi-Fi de GLOBE pendant 3 heures par jour, Smart pendant 1 heure par jour et Converge pendant 2 heures par jour. La page de l’aéroport mentionne les zones d’enregistrement, des portes d’embarquement, des arrivées et des départs. Dans les terminaux 1 et 2, la recharge des ordinateurs portables se trouve dans la zone des départs après le contrôle de sûreté ; la recharge des téléphones est aussi disponible dans la zone publique."
+    }
+  }
+}

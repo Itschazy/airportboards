@@ -1,0 +1,20 @@
+{
+  "iata": "MNL",
+  "blocks": {
+    "taxi": {
+      "title": "出租车",
+      "hint": "保留派车单",
+      "text": "NAIA提供Coupon Taxi、Yellow Metered Taxi和Regular Metered Taxi服务。机场工作人员会向乘客发放派车单，乘客须自行保留，不要交给司机。如对行程有疑问或投诉，可拨打单上的联系电话。"
+    },
+    "parking": {
+      "title": "停车",
+      "hint": "不可提前预订",
+      "text": "航站楼停车场仅按先到先得原则提供车位，不接受提前预订。可过夜或停放数日，长期停车按每24小时收费。接受现金、GCash、PayMaya和银行卡。"
+    },
+    "wifi": {
+      "title": "Wi‑Fi",
+      "hint": "航站楼免费网络",
+      "text": "NAIA各航站楼均提供免费Wi-Fi：GLOBE的NAIA Free Go Wi-Fi每日3小时、Smart每日1小时、Converge每日2小时。机场页面列出了值机区、登机口、到达及出发大厅。在1号和2号航站楼，笔记本电脑充电点位于安检后的出发区，手机充电点也设在公共区域。"
+    }
+  }
+}

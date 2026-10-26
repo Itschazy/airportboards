@@ -1,0 +1,25 @@
+{
+  "iata": "ATL",
+  "blocks": {
+    "transport": {
+      "title": "Anreise",
+      "hint": "Linien Red und Gold",
+      "text": "Die MARTA Airport Station liegt im Domestic Terminal zwischen den Gepäckausgaben North und South. Die Linien Red und Gold fahren zum Flughafen. Nach 20:30 kann für Fahrten vom Flughafen zu den Stationen Buckhead, Medical Center, Dunwoody, Sandy Springs und North Springs ein Umstieg in die Red Line an der Station Lindbergh Center erforderlich sein."
+    },
+    "terminals": {
+      "title": "Terminals",
+      "hint": "Kostenloser Shuttle rund um die Uhr",
+      "text": "Ein kostenloser Shuttle fährt von der Ankunftsebene des International Terminal zur Gepäckausgabe des Domestic Terminal. Er verkehrt rund um die Uhr; die Fahrt zwischen den Terminals dauert 15 Minuten. Am Domestic Terminal befindet sich die Haltestelle außerhalb der Gepäckausgabe."
+    },
+    "lounges": {
+      "title": "Business-Lounges",
+      "hint": "The Club ATL, 06:00–22:00",
+      "text": "The Club ATL liegt in Concourse F auf der Ebene Mezzanine nach der Sicherheitskontrolle und ist täglich von 06:00 bis 22:00 geöffnet. Der Eintritt mit Club Pass kostet 50 USD; Zugang ist auch mit berechtigten Priority-Pass- und LoungeKey-Mitgliedschaften möglich. Mit Club Pass ist der Zutritt ab 3 Stunden vor dem planmäßigen Abflug möglich, mit Priority Pass oder LoungeKey ab 2,5 Stunden vorher. Kinder unter 2 Jahren haben freien Eintritt; ab 2 Jahren ist ein eigener Pass erforderlich, und Kinder bis einschließlich 17 Jahre müssen von einem Erwachsenen ab 18 Jahren begleitet werden."
+    },
+    "sleep": {
+      "title": "Schlafen",
+      "hint": "Minute Suites nach der Kontrolle",
+      "text": "Minute Suites befinden sich nach der TSA-Sicherheitskontrolle: in Concourse B bei Gate B24, in Concourse E beim Atrium und den Rolltreppen sowie in Concourse F bei Gate F6. Die Zimmer haben ein Schlafsofa mit ausziehbarer Schlafgelegenheit, Smart TV, kostenloses WLAN, eine Arbeitsfläche und Ladeanschlüsse. Kissen und Decken werden auf Anfrage bereitgestellt. Buchungen beginnen bei 1 Stunde; Duschen gibt es nur in Concourse E."
+    }
+  }
+}

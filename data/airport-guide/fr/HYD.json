@@ -1,0 +1,25 @@
+{
+  "iata": "HYD",
+  "blocks": {
+    "transport": {
+      "title": "Pushpak Airport Liner",
+      "hint": "Bus électriques en ville",
+      "text": "Les bus électriques Pushpak disposent de la climatisation, de chargeurs de téléphone et d’une rampe pour fauteuils roulants avec dispositif d’abaissement de la caisse. La ligne AL vers JBS via LB Nagar, Tarnaka et Sangeeth part toutes les 20 minutes, AC vers JBS via Aramghar, NMDC et Punjagutta toutes les 30 minutes, et AJ vers Miyapur via ORR, Gachibowli et JNTU toutes les 15 minutes. Des renseignements sont disponibles au +91 40 6944 0000 et au +91 73829 25981."
+    },
+    "taxi": {
+      "title": "Taxis et applications",
+      "hint": "Prise en charge sur le parking",
+      "text": "Alyte et Sky Cabs prennent les réservations aux comptoirs, avec prise en charge sur la rampe des arrivées et dans Carpark Zone D. Des zones sont réservées aux voitures commandées par application : Uber en D1 et D2, Rapido en D3 et D4, Ola en D6 et D7. Les taxis prépayés au comptoir partent de Carpark Zone E à un tarif fixe selon la destination."
+    },
+    "kids": {
+      "title": "Salles de soins pour bébés",
+      "hint": "Suivre les panneaux",
+      "text": "Des salles préservant l’intimité pour les soins aux bébés, avec climatisation et fauteuils d’allaitement, sont prévues dans les principales zones du terminal. Des panneaux indiquent la salle la plus proche ; les comptoirs d’information peuvent aussi aider à la trouver."
+    },
+    "wifi": {
+      "title": "Wi-Fi gratuit",
+      "hint": "Jusqu’à 4 heures d’accès",
+      "text": "Connectez-vous à Hyderabad Airport-Free-WiFi, choisissez l’indicatif du pays, saisissez votre numéro de mobile, acceptez les conditions d’utilisation et recevez un SMS-OTP ; après saisie du code, l’accès est accordé pour un maximum de 4 heures. Il est aussi possible de scanner son passeport sur un écran d’information virtuel et d’utiliser le code du coupon affiché. Dans la zone des départs internationaux, le Wi-Fi Kiosk se trouve près de la porte d’embarquement 23B ; aux arrivées internationales, un coupon peut être obtenu avec un passeport près du tapis 12."
+    }
+  }
+}

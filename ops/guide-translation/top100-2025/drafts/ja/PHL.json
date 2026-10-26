@@ -1,0 +1,25 @@
+{
+  "iata": "PHL",
+  "blocks": {
+    "transport": {
+      "title": "中心部への列車",
+      "hint": "SEPTAの空港鉄道",
+      "text": "SEPTA Airport Regional Railは空港とフィラデルフィア中心部を30分間隔で結びます。空港の停車駅はターミナルA、B、C/D、E/Fに対応し、この路線の全駅は車いすで利用できます。William H. Gray III 30th Street駅ではAmtrakとNJ Transit Atlantic City Lineに乗り換えられます。SEPTAはVisa、Mastercard、Discover、AMEXのタッチ決済対応カードとモバイル決済を受け付けます。"
+    },
+    "taxi": {
+      "title": "タクシー",
+      "hint": "手荷物受取後、Zone 5へ",
+      "text": "手荷物受取後はGround Transportation / Taxis / Zone 5の案内に従います。A-Westに到着した場合はGround Floorへ下ります。空港から指定のCenter City区域への料金は、最初の乗客が32 USDで、12歳を超える追加乗客1人につき1 USDが加算されます。この定額料金に空港退出料は追加されず、チップは含まれません。すべてのタクシーでクレジットカードを利用できます。"
+    },
+    "kids": {
+      "title": "赤ちゃんの授乳",
+      "hint": "保安検査後のMamava",
+      "text": "保安検査後のA-West、B/C連絡通路、ターミナルE・Fに無料のMamavaポッドがあります。内部にはベンチ、折りたたみテーブル、コンセント、施錠できるドアが備わっています。Mamavaアプリでドアの解錠と空き状況の確認ができます。保安検査後のA-EastとBの間の連絡通路にあるMinute Suitesでは、授乳中の母親が個室を最初の30分間無料で利用できます。電話は+1 215 9371076です。"
+    },
+    "wifi": {
+      "title": "無料Wi-Fi",
+      "hint": "データ量の制限なし",
+      "text": "空港はすべての来訪者にAT&Tの無料Wi-Fiをデータ量の制限なしで提供しています。端末の設定でWi-Fiをオンにし、空港の無料PHLネットワークを選びます。接続にはWi-Fi対応端末が必要です。"
+    }
+  }
+}

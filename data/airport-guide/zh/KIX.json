@@ -1,0 +1,25 @@
+{
+  "iata": "KIX",
+  "blocks": {
+    "terminals": {
+      "title": "航站楼间交通",
+      "hint": "免费巴士",
+      "text": "1号和2号航站楼相距约4公里。Aeroplaza与2号航站楼之间有免费巴士，车程7–9分钟。"
+    },
+    "storage": {
+      "title": "行李寄存",
+      "hint": "1号航站楼安检前",
+      "text": "1号航站楼4楼安检前的北侧设有Yamato Transport寄存点，南侧设有JAL ABC。Yamato Transport营业时间为06:30至22:30；JAL ABC为06:30至23:00，最后接收行李时间为22:30。"
+    },
+    "kids": {
+      "title": "婴儿护理室",
+      "hint": "全家均可使用",
+      "text": "全家均可使用婴儿护理室，但母乳喂养和吸乳区域仅供女性使用。室内设有尿布更换区、专用尿布垃圾桶和冲调配方奶的热水，大多数护理室配有微波炉。"
+    },
+    "wifi": {
+      "title": "免费Wi-Fi",
+      "hint": "无需提前申请",
+      "text": "免费网络覆盖1号航站楼（部分国际到达通行路线除外）、1号航站楼巴士站、火车站、Aeroplaza及2号航站楼。选择#AirportFreeWiFi-Kansai或#AirportFreeWiFi-Kansai2.4G，无需提前申请，但须接受使用规则。设备与接入点之间的数据未加密。"
+    }
+  }
+}

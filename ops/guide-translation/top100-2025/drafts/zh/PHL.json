@@ -1,0 +1,25 @@
+{
+  "iata": "PHL",
+  "blocks": {
+    "transport": {
+      "title": "前往市中心的列车",
+      "hint": "SEPTA机场铁路",
+      "text": "SEPTA Airport Regional Rail列车每30分钟连接机场与费城市中心。机场各站服务A、B、C/D和E/F航站楼，该线所有车站均可供轮椅旅客使用。在William H. Gray III 30th Street站可换乘Amtrak及NJ Transit Atlantic City Line。SEPTA接受Visa、Mastercard、Discover和AMEX非接触式银行卡及移动支付。"
+    },
+    "taxi": {
+      "title": "出租车",
+      "hint": "提取行李后前往Zone 5",
+      "text": "提取行李后，按Ground Transportation / Taxis / Zone 5标识前往出租车候车点；到达A-West的旅客须下楼至Ground Floor。从机场前往规定的Center City区域，第一名乘客32 USD，每增加一名超过12岁的乘客加收1 USD。该固定价格不另加机场出场费，小费不含在内。所有出租车均接受信用卡。"
+    },
+    "kids": {
+      "title": "婴儿喂养",
+      "hint": "安检后的Mamava",
+      "text": "安检后的A-West、B/C连接通道及E、F航站楼均设有免费Mamava舱，内有长椅、折叠桌、电源插座和可锁门。Mamava应用可解锁舱门并查看是否可用。在安检后A-East和B之间连接通道的Minute Suites，哺乳母亲可免费使用独立房间，限前30分钟；联系电话为+1 215 9371076。"
+    },
+    "wifi": {
+      "title": "免费Wi-Fi",
+      "hint": "不限流量",
+      "text": "机场为所有访客提供AT&T免费Wi-Fi，不限流量。在设备设置中开启Wi-Fi，选择机场免费的PHL网络；连接须使用支持Wi-Fi的设备。"
+    }
+  }
+}

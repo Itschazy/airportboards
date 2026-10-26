@@ -1,0 +1,25 @@
+{
+  "iata": "ORY",
+  "blocks": {
+    "transport": {
+      "title": "Metro ab Paris",
+      "hint": "Linie 14 ohne Umstieg",
+      "text": "Die Metrolinie 14 fährt von Châtelet, Gare de Lyon, Bercy und Saint-Lazare ohne Umstieg zur Station Orly Airport; vom Zentrum von Paris dauert die Fahrt etwa 25–35 Minuten. Das Ticket Paris Région <> Airports kostet 14 EUR für eine einfache Fahrt: Es kann am Automaten für Navigo Easy oder über die App Île-de-France Mobilités gekauft werden. Alternativ fährt RER B bis Antony und anschließend Orlyval; vom Zentrum dauert die Fahrt etwa 35–45 Minuten und kostet ebenfalls 14 EUR."
+    },
+    "storage": {
+      "title": "Gepäckaufbewahrung",
+      "hint": "Orly 3, Ebene 0",
+      "text": "Bagages du Monde liegt in Orly 3 auf Ebene 0 vor der Sicherheitskontrolle nahe dem Ankunftsbereich und ist täglich von 07:00 bis 21:00 geöffnet. Das Gepäck wird geröntgt und videoüberwacht aufbewahrt; der Tarif richtet sich nach Größe und Aufbewahrungsdauer. Außerdem gibt es eine Garderobe für Zubehör und Sondergepäck sowie einen Verleih von Kinderwagen oder Kindersitzen fürs Auto."
+    },
+    "kids": {
+      "title": "Babyräume",
+      "hint": "Nach der Kontrolle in Orly 3 und 4",
+      "text": "Wickelräume in den Toilettenanlagen sind rund um die Uhr geöffnet und mit Wickeltischen und Kindertoiletten ausgestattet. Separate Babyräume nach der Sicherheitskontrolle in Orly 3 und Orly 4 auf Ebene 1 sind kostenlos rund um die Uhr zugänglich; sie bieten einzelne Nischen mit Kinderbetten, Sitzen, Hochstühlen, Flaschenwärmern und Mikrowellen."
+    },
+    "wifi": {
+      "title": "WLAN und Laden",
+      "hint": "In allen Terminals",
+      "text": "Das kostenlose Netz WIFI-AIRPORT ist in allen Terminals, Boardingbereichen und an der Gepäckausgabe verfügbar; nach der Netzwahl einen Browser öffnen, um zur Verbindungsseite zu gelangen. In den Terminals gibt es USB und europäische Steckdosentypen C, E und F. Kostenlose abschließbare ChargeBox-Fächer zum Laden von Telefonen sind rund um die Uhr verfügbar."
+    }
+  }
+}

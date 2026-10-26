@@ -1,0 +1,20 @@
+{
+  "iata": "LGW",
+  "blocks": {
+    "transport": {
+      "title": "Anreise",
+      "hint": "Gatwick Express: 30 Minuten",
+      "text": "Gatwick Express verbindet den Flughafen ohne Zwischenhalt mit London Victoria in 30 Minuten und fährt 2-mal pro Stunde. Southern bedient London Victoria, Clapham Junction, Brighton und weitere Städte im Südosten; Thameslink bedient London Bridge, Blackfriars, City Thameslink, Farringdon und St Pancras International. Der Bahnhof liegt am South Terminal, etwa 5 Gehminuten von Ankunft und Abflug entfernt. Für Fahrten nach London werden kontaktlose Bankkarten und Oyster akzeptiert, ausgenommen die 60+ Oyster photocard."
+    },
+    "kids": {
+      "title": "Mit Kind",
+      "hint": "Kostenlose Kids Zones",
+      "text": "Beide Terminals haben kostenlose Kids Zones in den Abflughallen. Für Familien mit kleinen Kindern im Kinderwagen gibt es bei der Sicherheitskontrolle eigene Assisted Travel and family lanes. Der Flughafen hat ausgestattete Räume zum Füttern und Wickeln, unter anderem im Check-in-Bereich, im Umsteigebereich und nach der Passkontrolle für Ankommende. Alle Restaurants in beiden Terminals können vor dem Abflug ein Babyfläschchen aufwärmen."
+    },
+    "wifi": {
+      "title": "Wi‑Fi",
+      "hint": "Kostenlos, ohne Zeitlimit",
+      "text": "Für kostenloses WLAN Free Gatwick Wi-Fi Vinci Airports wählen, danach Free Superfast Wi-Fi und eine gültige E-Mail-Adresse angeben. Die Verbindung ist kostenlos und ohne Zeitlimit, mit bis zu 50 Mbit/s. Kostenlose Ladestationen gibt es in beiden Terminals vor und nach der Sicherheitskontrolle."
+    }
+  }
+}

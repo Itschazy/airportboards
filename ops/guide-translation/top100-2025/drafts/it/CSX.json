@@ -1,0 +1,20 @@
+{
+  "iata": "CSX",
+  "blocks": {
+    "transport": {
+      "title": "Maglev per la stazione",
+      "hint": "20 CNY a tratta",
+      "text": "La stazione del maglev dell’aeroporto si trova tra T1 e T2, vicino alla torre di controllo. Dall’area partenze di T2 vi si accede tramite un passaggio presso l’ingresso 1; dagli arrivi occorre prima salire al livello partenze. Il viaggio fino alla stazione presso la stazione ferroviaria di Changsha Sud costa 20 CNY a persona. Alla stazione ferroviaria c’è un collegamento con la linea 2 della metro; informazioni sul maglev: +86 731 86859898."
+    },
+    "taxi": {
+      "title": "Taxi",
+      "hint": "Posteggi presso T1 e T2",
+      "text": "I punti ufficiali di salita sui taxi si trovano alla porta 3 della sala arrivi di T1 e alla porta 5 della sala arrivi di T2. I prezzi indicativi sono 90 CNY per il centro di Changsha, 120 CNY per l’autostazione occidentale e 110 CNY per quella meridionale; includono i pedaggi stradali e dei ponti. Se il conducente rifiuta il tassametro, rifiuta la corsa o chiede una tariffa eccessiva, l’aeroporto consiglia di rivolgersi al personale del posteggio."
+    },
+    "parking": {
+      "title": "Parcheggio",
+      "hint": "Parcheggi presso i due terminal",
+      "text": "Davanti a T1 si trova P5: l’area A è direttamente presso il terminal, l’area B a circa 300 m. Presso T2, P1 è a nord-ovest ed è destinato anche alla sosta notturna, P2 è davanti al terminal per soste brevi e P4 è nel garage sotterraneo davanti al terminal per la sosta notturna. Si può pagare in contanti, con carta bancaria, Alipay o WeChat; informazioni sui parcheggi: +86 731 84798050."
+    }
+  }
+}

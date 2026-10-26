@@ -1,0 +1,46 @@
+{
+  "iata": "MUC",
+  "checked": "2026-10-25",
+  "blocks": [
+    {
+      "id": "transport",
+      "title": "Как доехать",
+      "hint": "S1, S8 и Lufthansa Express Bus",
+      "text": "Линии S-Bahn S1 и S8 соединяют аэропорт с центром Мюнхена; поездка до главного вокзала занимает примерно 40 минут. S8 работает круглосуточно: примерно с 01:00 до 04:00 — каждые 40 минут, в остальное время — каждые 20 минут. S1 ходит каждые 20 минут примерно с 03:00 до полуночи, а в выходные и праздники — круглосуточно. Lufthansa Express Bus между аэропортом и главным вокзалом через Munich North (Schwabing) отправляется каждые 20 минут; время поездки между вокзалом и аэропортом — 45 минут.",
+      "source": "munich-airport.com",
+      "url": "https://www.munich-airport.com/public-transport-260822"
+    },
+    {
+      "id": "storage",
+      "title": "Камера хранения",
+      "hint": "Munich Airport Center, уровень 03",
+      "text": "Камера хранения расположена в общедоступной зоне Munich Airport Center на уровне 03. Она работает ежедневно с 05:00 до 23:30; телефон +49 89 975 214 75.",
+      "source": "munich-airport.com",
+      "url": "https://www.munich-airport.com/left-luggage-851650"
+    },
+    {
+      "id": "sleep",
+      "title": "Где поспать",
+      "hint": "napcabs и napcabsXL",
+      "text": "Кабины napcabs есть после досмотра в терминале 2 и в общедоступной зоне; внутри предусмотрены отдельное рабочее место и бесплатный интернет. napcabsXL с кроватью queen-size для двоих, столом и креслом находятся в терминале 2 рядом с выходом на посадку G06. napcabs стоят 17 EUR в час с 06:00 до 22:00 и 12 EUR в час с 22:00 до 06:00, минимальная стоимость — 34 EUR. Для napcabsXL соответствующие тарифы составляют 24,50 EUR и 18 EUR в час, минимальная стоимость — 49 EUR.",
+      "source": "munich-airport.com",
+      "url": "https://www.munich-airport.com/napcabs-napcabsxl-524609"
+    },
+    {
+      "id": "kids",
+      "title": "С ребёнком",
+      "hint": "Игровые зоны, MAC уровень 03",
+      "text": "Игровые зоны есть в общедоступных зонах и зонах ограниченного доступа. В Munich Airport Center на уровне 03 игровая зона находится в общедоступной части и открыта круглосуточно. Аэропорт просит родителей и сопровождающих следить за детьми во время игры и сопровождать их при выходе из игровой зоны.",
+      "source": "munich-airport.com",
+      "url": "https://www.munich-airport.com/children-s-play-areas-813266"
+    },
+    {
+      "id": "wifi",
+      "title": "Wi-Fi",
+      "hint": "Free Wifi – Munich Airport",
+      "text": "В аэропорту есть бесплатный Wi-Fi через сеть Free Wifi – Munich Airport. Для доступа нужно указать электронную почту и принять условия использования.",
+      "source": "munich-airport.com",
+      "url": "https://www.munich-airport.com/wi-fi-848044"
+    }
+  ]
+}

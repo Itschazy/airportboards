@@ -1,0 +1,25 @@
+{
+  "iata": "PKX",
+  "blocks": {
+    "transport": {
+      "title": "Anreise",
+      "hint": "Daxing Airport Express, Ebene B1",
+      "text": "Der Daxing Airport Express hält an den Stationen Caoqiao, Daxing Xincheng und Daxing Airport; in Caoqiao besteht Anschluss an die Metrolinien 10 und 19. Der Einstieg am Flughafen liegt auf Ebene B1 des Terminals. Die Züge von Caoqiao zum Flughafen fahren von 05:30 bis 22:30; vom Flughafen nach Caoqiao montags bis samstags von 06:00 bis 23:00 und sonntags bis 23:30. Kinder bis einschließlich 1,3 m Körpergröße fahren in Begleitung eines zahlenden Erwachsenen kostenlos."
+    },
+    "storage": {
+      "title": "Gepäckaufbewahrung",
+      "hint": "Aufbewahrung für 1–90 Tage",
+      "text": "Gepäck kann für 1 bis 90 Tage aufbewahrt werden. Die Stelle auf Ebene 2 liegt 30 m östlich des östlichen Ausgangs der nationalen Ankunftshalle und ist rund um die Uhr geöffnet; die Stelle auf Ebene 4 liegt im östlichen Teil der Abflughalle am Ende der Insel H und öffnet von 07:00 bis 22:00. Abgerechnet wird pro Gepäckstück und Tag, abhängig von der Gepäckgröße. Reisende mit Anspruch auf den 240-stündigen visumfreien Transit können 1 Gepäckstück kostenlos hinterlegen."
+    },
+    "kids": {
+      "title": "Mit Kind",
+      "hint": "Spielbereich bei Gate A10",
+      "text": "Der Kinderspielbereich zum Thema Luftfahrt bietet Flugzeugmodelle, Rutschen und weitere Spielgeräte. Er liegt in Halle A bei Gate A10 und ist von 08:00 bis 21:00 geöffnet."
+    },
+    "wifi": {
+      "title": "Wi‑Fi",
+      "hint": "BDIA-FREE-WiFi, Reisepass-Login",
+      "text": "Am Flughafen gibt es das kostenlose Netzwerk BDIA-FREE-WiFi. Die bebilderte Flughafenanleitung beschreibt die Anmeldung per Reisepass: Auf der Anmeldeseite ID Login auswählen, die Dokumentenart wählen und das Dokument fotografieren."
+    }
+  }
+}

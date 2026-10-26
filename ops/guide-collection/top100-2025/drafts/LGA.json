@@ -1,0 +1,38 @@
+{
+  "iata": "LGA",
+  "checked": "2026-10-26",
+  "blocks": [
+    {
+      "id": "transport",
+      "title": "Бесплатный Q70 LGA Link",
+      "hint": "К метро от терминалов B и C",
+      "text": "Бесплатный автобус Q70 LGA Link обслуживает терминалы B и C и соединяет аэропорт с пересадочными узлами метро Jackson Heights–Roosevelt Avenue и 74 St–Broadway. Автобусы MTA доступны для пассажиров на инвалидных колясках и оборудованы пандусами.",
+      "source": "laguardiaairport.com",
+      "url": "https://www.laguardiaairport.com/transportation/public-transport"
+    },
+    {
+      "id": "taxi",
+      "title": "Такси",
+      "hint": "Без предварительного заказа",
+      "text": "Такси доступны у всех терминалов без предварительного заказа: диспетчер направляет пассажиров из очереди к свободному автомобилю. Стоимость рассчитывается по расстоянию и времени, начальная сумма на счётчике — 3 USD; при посадке в аэропорту также действует сбор PANYNJ 2 USD. Доступные для инвалидных колясок такси стоят столько же, сколько обычные; вызвать их можно по телефону +1 646 599 9999.",
+      "source": "laguardiaairport.com",
+      "url": "https://www.laguardiaairport.com/transportation/taxi-service"
+    },
+    {
+      "id": "terminals",
+      "title": "All Terminals Shuttle",
+      "hint": "Бесплатно круглосуточно",
+      "text": "Бесплатный All Terminals Shuttle курсирует между всеми терминалами и также останавливается у предварительно оплачиваемой Economy Lot (Parking Lot 7), Hangar 7 South и 94th Street. Он работает круглосуточно: каждые 15 минут в часы пик и каждые 20 минут в остальное время.",
+      "source": "laguardiaairport.com",
+      "url": "https://www.laguardiaairport.com/transportation/all-terminals-shuttle"
+    },
+    {
+      "id": "wifi",
+      "title": "Бесплатный Wi-Fi",
+      "hint": "Сеть _Free LGA WiFi",
+      "text": "Для бесплатного подключения выберите сеть _Free LGA WiFi. Поддержка работает круглосуточно по телефону +1 800 880 4117.",
+      "source": "laguardiaairport.com",
+      "url": "https://www.laguardiaairport.com/explore-lga/services"
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "iata": "FLL",
+  "blocks": {
+    "transport": {
+      "title": "BCT e Tri-Rail",
+      "hint": "Autobus 1 e treno",
+      "text": "L’autobus BCT 1 circola ogni giorno; la fermata dell’aeroporto si trova a Rental Car Center, Stop G. Dai terminal partono autobus gratuiti per la stazione Tri-Rail di Dania Beach dal livello inferiore degli arrivi: GTA-1 all’estremità ovest del terminal 1, GTA-2 tra i terminal 2 e 3 e GTA-3 tra i terminal 3 e 4. Tri-Rail serve ogni giorno le contee di Miami-Dade, Broward e Palm Beach."
+    },
+    "terminals": {
+      "title": "Tra i terminal",
+      "hint": "Percorsi pedonali",
+      "text": "Gli autobus gratuiti circolano 24 ore su 24 solo tra Rental Car Center e i terminal; le fermate sono segnalate al livello inferiore degli arrivi. Tra i terminal si può camminare sui marciapiedi lungo l’edificio o sul percorso pedonale attraverso il parcheggio, oppure utilizzare il tram del parcheggio."
+    },
+    "storage": {
+      "title": "Deposito bagagli",
+      "hint": "Terminal 1 e 3",
+      "text": "Nel terminal 1 il deposito bagagli si trova prima dei controlli di sicurezza, al livello 2, vicino all’uscita dal molo B; nel terminal 3 è al livello inferiore del ritiro bagagli, vicino all’ufficio bagagli JetBlue. Entrambi i punti sono aperti dal lunedì al venerdì dalle 08:30 alle 17:30 e il sabato e la domenica dalle 08:30 alle 18:30. Il punto del terminal 4 è temporaneamente chiuso; informazioni sul servizio sono disponibili al +1 954 359 5505."
+    },
+    "wifi": {
+      "title": "Wi-Fi gratuito",
+      "hint": "Terminal e Rental Car Center",
+      "text": "Il Wi-Fi gratuito è disponibile in tutti i terminal, nei moli e in Rental Car Center. Le reti ufficiali si chiamano Airport-Wifi-Terminal_1, Airport-Wifi-Terminal_2, Airport-Wifi-Terminal_3, Airport-Wifi-Terminal_4 e Airport-Wifi-Rental_Car_Center. La connessione FLL non richiede pagamenti; se viene richiesta una carta bancaria, il servizio dell’aeroporto riceve segnalazioni al +1 866 435 9355."
+    }
+  }
+}

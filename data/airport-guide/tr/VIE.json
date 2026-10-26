@@ -1,0 +1,25 @@
+{
+  "iata": "VIE",
+  "blocks": {
+    "transport": {
+      "title": "Viyana’ya trenler",
+      "hint": "S7 ve Railjet",
+      "text": "S7 ile Wien Mitte’ye yolculuk yaklaşık 25 dakika sürer ve trenler 30 dakikada bir kalkar; Railjet ile Wien Hauptbahnhof’a yolculuk yaklaşık 15 dakika sürer ve sefer aralığı 30 dakikadır. ÖBB bilet gişesi geliş salonundadır; bilet makineleri de bu salonda, peronlara giden geçitlerde ve peronlarda bulunur. Geliş salonundan peronlara kısa, hava koşullarından korunaklı ve engelsiz bir yol uzanır."
+    },
+    "lounges": {
+      "title": "VIENNA Lounge",
+      "hint": "Terminal 1, Kat 2",
+      "text": "VIENNA Lounge, terminal 1’de Kat 2’de güvenlik kontrolünden sonra ve pasaport kontrolünden önce yer alır; her gün 04:30–22:00 açıktır. Geçerli bir biniş kartıyla uçuş günü kalkıştan 3,5 saat öncesinden itibaren giriş yapılabilir; azami kalış süresi 3 saattir. Normal ücret 59 EUR, 4–14 yaşındaki çocuklar için 31 EUR’dur; 0–3 yaşındaki çocuklar ücretsizdir. Yiyecek, Wi-Fi, çalışma alanları, dinlenme alanı, havlulu duşlar ve alt değiştirme masalı aile banyosu vardır."
+    },
+    "sleep": {
+      "title": "Havalimanı yakınındaki oteller",
+      "hint": "NH ve Moxy yürüyüş mesafesinde",
+      "text": "NH Vienna Airport Conference Center ve Moxy Vienna Airport, terminal yakınındaki AirportCity’de, yürüme mesafesinde yer alır. NH’de Wi-Fi ve ses yalıtımlı pencereler vardır; Moxy günün her saati atıştırmalık ve içecek, ücretsiz bilgisayar ve fitness merkezi kullanımı ve ücretsiz Wi-Fi sunar."
+    },
+    "kids": {
+      "title": "Oyun alanları ve bebek arabaları",
+      "hint": "F, C ve D kapıları yakınında",
+      "text": "F03 yakınındaki ücretsiz Entertainment Gate, iki katlı oyun yapısı, ayrı bir küçük çocuk alanı ve langırt içerir; C42 ve D31–36 yakınında da çocuk alanları vardır. Kendi bebek arabanızı check-in sırasında teslim ettiyseniz havalimanı, güvenlik kontrolünden biniş kapısına kadar kullanmanız için ücretsiz bebek arabası sağlar; binişte kapı görevlisine teslim edilir. Alt değiştirme masaları, erişilebilir tuvaletlerin, aile tuvaletlerinin ve büyük yolcu tuvaletlerinin hemen hepsinde bulunur."
+    }
+  }
+}

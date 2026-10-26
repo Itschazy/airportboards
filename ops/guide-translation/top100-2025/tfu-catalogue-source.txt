@@ -1,0 +1,165 @@
+Browser tab: 95838373, Title: "Chengdu Tianfu International Airport (TFU) @ OurAirports", URL: "https://ourairports.com/airports/ZUTF/".
+0 AXWebArea Chengdu Tianfu International Airport (TFU) @ OurAirports, URL: ourairports.com/airports/ZUTF/
+	1 container
+		2 link Description: OurAirports home OurAirports, Help: OurAirports home, Value: ourairports.com/
+		3 container navbar-collapse
+			4 content list
+				5 container Main page for Chengdu Tianfu International Airport
+					6 link Description:  TFU, Value: ourairports.com/airports/ZUTF/
+				7 container Arrivals and departures at TFU
+					8 link Description:  Flights, Value: ourairports.com/airports/ZUTF/flights.html
+				9 container Weather reports and forecasts for Chengdu Tianfu International Airport
+					10 link Description: ☁ Weather, Value: ourairports.com/airports/ZUTF/weather.html
+				11 container Information for pilots flying to/from Chengdu Tianfu International Airport
+					12 pop up button (collapsed)  Pilots, Secondary Actions: Expand
+						13 text 
+						14 text Pilots
+			15 content list
+				16 link Description:  Login , Value: ourairports.com/airports/ZUTF/#
+				17 link Description:  Help, Value: ourairports.com/help/
+				18 container
+					19 search text field (settable)
+					20 button Search
+	21 container
+		22 container breadcrumb
+			23 content list
+				24 link Description: Asia, Value: ourairports.com/continents/AS/
+				25 container
+					26 text / 
+					27 link Description: China, Value: ourairports.com/countries/CN/
+				28 container
+					29 text / 
+					30 link Description: Sichuan Province, Value: ourairports.com/countries/CN/51/
+				31 container
+					32 text /  Chengdu (Jianyang)
+		33 heading  Chengdu Tianfu International Airport (TFU, ZUTF), Value: 1
+			34 link ourairports.com/countries/CN/
+			35 text  Chengdu Tianfu International Airport  (TFU, ZUTF)
+		36 container Have you visited?
+			37 button Been here? Tap the star.
+				38 text Been here? Tap the star.
+	39 container top
+		40 container
+			41 text See a problem with the data?  Create an account, log in and fix it, or
+			42 link Description: report it here., Value: ourairports.com/airports/ZUTF/problem-reports/
+		43 container
+			44 toolbar
+				45 link Description:  No open problem reports, Value: ourairports.com/airports/ZUTF/problem-reports/
+				46 link Description: Report a data problem, Value: ourairports.com/airports/ZUTF/problem-reports/create.html
+			47 container map
+				48 text Loading map...
+				49 container
+					50 image
+				51 container
+					52 container
+						53 button Zoom in
+						54 button Zoom out
+					55 link Description: Layers, Value: ourairports.com/airports/ZUTF/#
+					56 text 
+					57 container
+						58 text 3 km 2 mi
+					59 text 
+					60 container
+						61 link Description: Leaflet, Help: A JS library for interactive maps, Value: leafletjs.com/
+						62 text  | Source: Esri, DigitalGlobe, GeoEye, Earthstar Geographics, CNES/Airbus DS, USDA, USGS, AeroGRID, IGN, and the GIS User Community
+		63 container Extra information
+			64 link Description:  Flights, Value: ourairports.com/airports/ZUTF/flights.html
+			65 link Description: ☁ Weather, Value: ourairports.com/airports/ZUTF/weather.html
+			66 link Description:  NOTAM, Value: ourairports.com/airports/ZUTF/notams.html
+			67 link Description:  Radio, Value: ourairports.com/airports/ZUTF/frequencies.html
+			68 link Description:  Runways, Value: ourairports.com/airports/ZUTF/runways.html
+			69 link Description:  Nearby, Value: ourairports.com/airports/ZUTF/closest.html
+		70 container visitors
+			71 heading OurAirports members at TFU, Value: 2
+				72 text OurAirports members at TFU
+			73 container
+				74 text Chengdu Tianfu International Airport is the home base for
+				75 link Description: 3 OurAirports members, Value: ourairports.com/airports/ZUTF/members.html
+				76 text . It has had
+				77 link Description: 9 visitors, Value: ourairports.com/airports/ZUTF/visitors.html
+				78 text .
+		79 container post-comment
+			80 container
+				81 link Description: Log in, Value: ourairports.com/login?from=/airports/ZUTF/
+				82 text  to leave a comment
+	83 container
+		84 heading Facility data, Value: 2
+			85 text Facility data
+		86 table
+			87 row
+				88 cell
+					89 text Tags
+				90 cell
+					91 container
+						92 text [
+						93 link Description: Add or edit tags, Value: ourairports.com/airports/ZUTF/tags
+						94 text ]
+			95 row
+				96 cell
+					97 text Name
+				98 cell
+					99 text Chengdu Tianfu International Airport
+			100 row
+				101 cell
+					102 text Location
+				103 cell
+					104 text Chengdu (Jianyang),
+					105 link Description: Sichuan Province, Value: ourairports.com/countries/CN/51/
+					106 text ,
+					107 link Description: CHINA, Value: ourairports.com/countries/CN/
+			108 row
+				109 cell
+					110 text IATA code
+				111 cell
+					112 text TFU
+			113 row
+				114 cell
+					115 text ICAO code
+				116 cell
+					117 text ZUTF
+			118 row
+				119 cell
+					120 text Facility type
+				121 cell
+					122 text large_airport
+			123 row
+				124 cell
+					125 text Airline service?
+				126 cell
+					127 link Description: yes, Value: ourairports.com/airports/ZUTF/flights.html
+			128 row
+				129 cell
+					130 text Coordinates
+				131 cell
+					132 text 30.312520,104.441284
+					133 link Description: SkyVector logo chart, Help: Aviation chart, Value: skyvector.com/?ll=30.312520,104.441284&chart=301&zoom=2
+			134 row
+				135 cell
+					136 text Field elevation
+				137 cell
+					138 text 1,440 ft / 439 m MSL
+			139 row
+				140 cell
+					141 text Members
+				142 cell
+					143 text Home base for
+					144 link Description: 3 members, Value: ourairports.com/airports/ZUTF/members.html
+			145 row
+				146 cell
+					147 text Wikipedia page
+				148 cell
+					149 link Description: https://en.wikipedia.org/wiki/Chengdu_Tianfu_International_Airport, Value: en.wikipedia.org/wiki/Chengdu_Tianfu_International_Airport
+			150 row
+				151 cell
+					152 text Keywords
+				153 cell
+					154 text Airports in Sichuan Province
+					155 text 中国的机场
+					156 text Asian airports
+			157 row
+				158 cell
+					159 text Last updated
+				160 cell
+					161 link Description: 2022-08-29 14:18:03, Value: ourairports.com/airports/ZUTF/changes.html
+
+The focused UI element is 0 AXWebArea Chengdu Tianfu International Airport (TFU) @ OurAirports, URL: ourairports.com/airports/ZUTF/

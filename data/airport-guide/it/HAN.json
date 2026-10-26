@@ -1,0 +1,20 @@
+{
+  "iata": "HAN",
+  "blocks": {
+    "terminals": {
+      "title": "Tra i terminal",
+      "hint": "NIA Shuttle Bus gratuito",
+      "text": "Il NIA Shuttle Bus gratuito collega il terminal nazionale T1 e quello internazionale T2. Nel T1 il punto di salita è nell’ala A al livello 1."
+    },
+    "kids": {
+      "title": "Servizi per famiglie",
+      "hint": "Passeggini e sale per bambini",
+      "text": "Passeggini gratuiti sono disponibili dopo i controlli di sicurezza nel terminal T1 e nel settore E al livello 2, e nel terminal T2 ai livelli 2 e 3. Nel T2 ci sono 2 sale per la cura dei bambini piccoli dopo i controlli al livello 3; fasciatoi sono presenti anche in alcuni servizi igienici dei terminal."
+    },
+    "wifi": {
+      "title": "Wi-Fi gratuito",
+      "hint": "Aree d’attesa T1 e T2",
+      "text": "Il Wi-Fi gratuito è disponibile nelle aree d’attesa dei passeggeri dei terminal nazionali e internazionale. Scegliere @Airport Free Wifi - Goldsun e premere Connect to the Internet nella pagina che si apre automaticamente. Nella parte ampliata del T2 l’installazione delle apparecchiature è ancora in corso."
+    }
+  }
+}

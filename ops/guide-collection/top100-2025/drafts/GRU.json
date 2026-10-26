@@ -1,0 +1,30 @@
+{
+  "iata": "GRU",
+  "checked": "2026-10-26",
+  "blocks": [
+    {
+      "id": "transport",
+      "title": "Как доехать",
+      "hint": "Линия 13-Jade",
+      "text": "Станция Aeroporto-Guarulhos входит в линию 13-Jade CPTM, которая связывает аэропорт со станцией Engenheiro Goulart. На Engenheiro Goulart можно пересесть на линию 12-Safira. Вход со стороны аэропорта расположен рядом с парковкой терминала 1.",
+      "source": "gru.com.br",
+      "url": "https://www.gru.com.br/pt/passageiro/como-chegar-sair/trem/"
+    },
+    {
+      "id": "storage",
+      "title": "Камера хранения",
+      "hint": "Malex в терминалах 2 и 3",
+      "text": "Хранение багажа Malex доступно в терминалах 2 и 3 снаружи зоны прилёта, на тротуаре. Пункт Arrival West терминала 2 работает круглосуточно. Пункты Arrival East терминала 2 и Arrival терминала 3 открыты с 07:00 до 19:00.",
+      "source": "gru.com.br",
+      "url": "https://www.gru.com.br/en/passenger/discover-gru/services-and-facilities/luggage-storage"
+    },
+    {
+      "id": "wifi",
+      "title": "Wi‑Fi",
+      "hint": "Сеть .GRU WIFI",
+      "text": "Аэропорт предоставляет бесплатный Wi‑Fi через BOINGO. Для подключения нужно выбрать сеть .GRU WIFI, нажать Connect и следовать инструкциям. Поддержка BOINGO работает круглосуточно по телефону 0800-095-9026.",
+      "source": "gru.com.br",
+      "url": "https://www.gru.com.br/en/passenger/discover-gru/services-and-facilities/wifi"
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "iata": "ZRH",
+  "blocks": {
+    "transport": {
+      "title": "Zürih’e tren",
+      "hint": "Ana istasyona 15 dakika",
+      "text": "Havalimanından Zürih ana tren istasyonuna giden SBB trenleri 10 dakikada bir kalkar; yolculuk 15 dakika sürer. Havalimanından İsviçre’nin diğer bölgelerine ve komşu ülkelere de düzenli tren seferleri vardır."
+    },
+    "storage": {
+      "title": "Bagaj emaneti",
+      "hint": "Arrivals 2, Kat 0",
+      "text": "Görevli bulunan bagaj emanet noktası terminal 2’de, Kat 0’daki Arrivals 2 bölümünde bilgi masasının yanındadır ve her gün 06:00–22:00 saatlerinde açıktır. En fazla 25 kg ağırlığında ve 90 × 60 × 35 cm boyutlarını aşmayan bir bagaj için ücret 4 saate kadar 15 CHF, 8 saate kadar 18 CHF ve 24 saate kadar 22 CHF’dir; ödeme peşin alınır ve azami saklama süresi 3 aydır. Airport Shopping’de Check-in 3 yakınındaki SBB kilitli dolapları günün her saati kullanılabilir."
+    },
+    "kids": {
+      "title": "Family Services",
+      "hint": "A yolcu bölgesi",
+      "text": "A yolcu bölgesindeki Family Services, tüm hava yollarıyla seyahat eden aileler için ücretsizdir. Alt değiştirme masaları, bebek yatakları bulunan sessiz bir besleme odası, emekleme alanı ve mikrodalga fırınlı yemek alanı vardır; daha büyük çocuklar için oyuncaklar, bilgisayar oyunları ve langırt bulunur. Çocuk bakım hizmeti verilmez: çocuk bir yetişkinin yanında kalmalıdır."
+    },
+    "wifi": {
+      "title": "Ücretsiz Wi-Fi",
+      "hint": "İlk girişten itibaren 8 saat",
+      "text": "Zurich Airport ağı, ilk girişten itibaren kesintisiz olarak sayılan 8 saatlik ücretsiz erişim sağlar. Telefon numaranızı ve gelen kodu girerek SMS yoluyla veya biniş kartı ve kimlik belgesiyle kayıt olabilirsiniz: kod WiFi Station ya da bilgi masasından verilir. Sorun yaşanırsa Service & Information masaları yardımcı olur."
+    }
+  }
+}

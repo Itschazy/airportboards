@@ -1,0 +1,25 @@
+{
+  "iata": "FCO",
+  "blocks": {
+    "transport": {
+      "title": "Cómo llegar",
+      "hint": "Leonardo express: 32 minutos",
+      "text": "Leonardo express conecta sin paradas el aeropuerto Fiumicino con Roma Termini en 32 minutos, con salidas programadas cada 15 minutos. La estación de tren está dentro del aeropuerto. El billete cuesta 14 €; la tarifa Mini-groups permite comprar 4 billetes en una sola operación por 40 € en lugar de 56 €."
+    },
+    "storage": {
+      "title": "Consigna",
+      "hint": "10 € por bulto y por 24 horas",
+      "text": "La consigna está en el terminal 3, en la zona de llegadas internacionales junto a la estación de autobuses, y abre de 07:00 a 23:00. El precio es de 10 € con IVA por cada bulto y por 24 horas. Se paga al recoger el equipaje; no hace falta reserva previa."
+    },
+    "kids": {
+      "title": "Con niños",
+      "hint": "Cochecitos gratis, zonas infantiles",
+      "text": "El aeropuerto tiene más de 700 cochecitos gratuitos; los pasajeros de salida que decidan facturar el suyo pueden tomar uno en las zonas de embarque A y E, en las puertas A31 y A61 y junto a las escaleras mecánicas hacia E1–E4. Family Lane es una fila de seguridad específica para familias con niños y embarazadas. Hay 4 salas para bebés con cunas y cambiadores: detrás de los mostradores 312–327 del terminal 3, en la galería comercial de la zona A antes de las puertas A61–A83 y junto a E11 y E44. En los locales de restauración se puede pedir que calienten un biberón o comida infantil y esterilicen un chupete."
+    },
+    "wifi": {
+      "title": "Wi‑Fi",
+      "hint": "AIRPORT FREE WIFI sin límite",
+      "text": "El aeropuerto ofrece Wi-Fi gratuito sin límite de tiempo. La red AIRPORT FREE WIFI está disponible en las zonas de facturación, puertas de embarque y llegadas. Para conectarse, seleccione la red y abra un navegador: el dispositivo accederá automáticamente a la página de bienvenida."
+    }
+  }
+}

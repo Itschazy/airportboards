@@ -1,0 +1,25 @@
+{
+  "iata": "MAN",
+  "blocks": {
+    "transport": {
+      "title": "Zug nach Manchester",
+      "hint": "Etwa 20 Minuten bis Piccadilly",
+      "text": "Die Züge von TransPennine Express und Northern Rail nach Manchester Piccadilly benötigen etwa 20 Minuten und fahren täglich alle 10 Minuten. Der Bahnhof liegt zwischen Terminal 2 und 3: Von Terminal 2 sind es etwa 10 Minuten zu Fuss, von Terminal 3 etwa 5 Minuten. Aufzüge, Rolltreppen und Fahrsteige verbinden die Terminals mit dem Bahnhof; Fahrkarten gibt es online, an Automaten und am Bahninformationsschalter."
+    },
+    "storage": {
+      "title": "Gepäckaufbewahrung",
+      "hint": "Abflugbereich von Terminal 2",
+      "text": "Excess Baggage Company bietet kurz- und langfristige Gepäckaufbewahrung im Abflugbereich von Terminal 2. Für Reisende mit Abflug von Terminal 2 werden auch das Einwickeln von Gepäck und die Organisation eines Gepäckversands im Inland und ins Ausland angeboten."
+    },
+    "kids": {
+      "title": "Wickelräume",
+      "hint": "In oder bei den Toiletten",
+      "text": "Wickelmöglichkeiten befinden sich in oder bei den Damentoiletten und sind mit Stühlen zum Stillen ausgestattet. Stillen ist im gesamten Flughafen erlaubt und nicht auf diese Räume beschränkt."
+    },
+    "wifi": {
+      "title": "Kostenloses WLAN",
+      "hint": "Bis zu 2 Stunden je 24 Stunden",
+      "text": "Das kostenlose Netzwerk _FreeWifi bietet bis zu 2 Stunden Zugang innerhalb von jeweils 24 Stunden. Die Verbindung ist mit Telefon, Tablet oder Laptop möglich; der Service ist auch in den Lounges und im Runway Visitor Park verfügbar."
+    }
+  }
+}

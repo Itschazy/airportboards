@@ -1,0 +1,10 @@
+{
+  "iata": "JED",
+  "blocks": {
+    "sleep": {
+      "title": "Nerede uyunur",
+      "hint": "Aerotel, terminal 1 dış hat gidiş",
+      "text": "Aerotel Jeddah, terminal 1’in dış hatlar giden yolcu kısıtlı alanında, Kat 2’de Duty Free’nin yanında, transit yolcu güvenlik kontrolünden sonra bulunur. Yalnızca iç hat uçuşlarıyla seyahat eden yolcular otele erişemez; iç ve dış hat uçuşlarının birlikte olduğu yolculuklarda işletmeci, erişimin havayolu veya müşteri hizmetleriyle teyit edilmesini ister. Transit yolcular ülkeye giriş pasaport kontrolünden geçmemelidir; sonraki uçuş için geçerli biniş kartı olmadan kısıtlı alana dönülemez. Otelde 120 oda vardır ve saatlik rezervasyon sunulur; hareket kabiliyeti kısıtlı misafirlere uygun odalar istek üzerine verilir."
+    }
+  }
+}

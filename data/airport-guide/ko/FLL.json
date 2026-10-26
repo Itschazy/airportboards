@@ -1,0 +1,25 @@
+{
+  "iata": "FLL",
+  "blocks": {
+    "transport": {
+      "title": "BCT와 Tri-Rail",
+      "hint": "1번 버스와 열차",
+      "text": "BCT 1번 버스는 매일 운행하며 공항 정류장은 Rental Car Center의 Stop G에 있습니다. 터미널에서 Dania Beach의 Tri-Rail역으로 가는 무료 버스는 아래쪽 도착 층에서 출발합니다. 터미널 1 서쪽 끝의 GTA-1, 터미널 2와 3 사이의 GTA-2, 터미널 3과 4 사이의 GTA-3에서 탈 수 있습니다. Tri-Rail은 Miami-Dade, Broward, Palm Beach 카운티를 매일 운행합니다."
+    },
+    "terminals": {
+      "title": "터미널 간 이동",
+      "hint": "도보 경로",
+      "text": "무료 버스는 Rental Car Center와 터미널 사이에서만 24시간 운행하며 정류장은 아래쪽 도착 층에 표시되어 있습니다. 터미널 사이는 건물 옆 보도나 주차장을 통과하는 보행 경로로 걸어가거나 주차장 트램을 이용할 수 있습니다."
+    },
+    "storage": {
+      "title": "수하물 보관",
+      "hint": "터미널 1 및 3",
+      "text": "터미널 1의 수하물 보관소는 보안검색 전 2층, 탑승동 B 출구 근처에 있습니다. 터미널 3에서는 아래쪽 수하물 수취 층의 JetBlue 수하물 사무소 근처에 있습니다. 두 곳 모두 월요일부터 금요일까지 08:30–17:30, 토요일과 일요일 08:30–18:30에 운영합니다. 터미널 4 보관소는 임시 휴업 중입니다. 서비스 문의는 +1 954 359 5505로 할 수 있습니다."
+    },
+    "wifi": {
+      "title": "무료 Wi-Fi",
+      "hint": "터미널 및 렌터카 센터",
+      "text": "모든 터미널과 탑승동, Rental Car Center에서 무료 Wi-Fi를 이용할 수 있습니다. 공식 네트워크 이름은 Airport-Wifi-Terminal_1, Airport-Wifi-Terminal_2, Airport-Wifi-Terminal_3, Airport-Wifi-Terminal_4, Airport-Wifi-Rental_Car_Center입니다. FLL 접속은 결제가 필요하지 않습니다. 은행 카드를 요구하는 화면이 나타나면 공항 서비스 부서에서 +1 866 435 9355로 신고를 받습니다."
+    }
+  }
+}

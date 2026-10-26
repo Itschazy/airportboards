@@ -1,0 +1,25 @@
+{
+  "iata": "ORY",
+  "blocks": {
+    "transport": {
+      "title": "Metro da Parigi",
+      "hint": "Linea 14 senza cambi",
+      "text": "La linea 14 della metropolitana raggiunge la stazione Orly Airport senza cambi da Châtelet, Gare de Lyon, Bercy e Saint-Lazare; il viaggio dal centro di Parigi dura circa 25–35 minuti. Il biglietto Paris Région <> Airports costa 14 EUR per una corsa di sola andata: si può acquistare presso un distributore automatico per Navigo Easy oppure tramite l’app Île-de-France Mobilités. In alternativa si prende RER B fino ad Antony e poi Orlyval; il tragitto dal centro dura circa 35–45 minuti e costa anch’esso 14 EUR."
+    },
+    "storage": {
+      "title": "Deposito bagagli",
+      "hint": "Orly 3, livello 0",
+      "text": "Bagages du Monde si trova a Orly 3 al livello 0, prima dei controlli di sicurezza vicino agli arrivi, ed è aperto ogni giorno dalle 07:00 alle 21:00. I bagagli sono controllati ai raggi X e custoditi con videosorveglianza; la tariffa dipende dalle dimensioni e dalla durata del deposito. Sono disponibili anche guardaroba per accessori e bagagli speciali e noleggio di passeggini o seggiolini auto."
+    },
+    "kids": {
+      "title": "Sale per bambini piccoli",
+      "hint": "Dopo i controlli a Orly 3 e 4",
+      "text": "Le sale per il cambio dei pannolini nei blocchi dei servizi igienici sono aperte 24 ore su 24 e dotate di fasciatoi e servizi igienici per bambini. Le sale separate per bambini piccoli dopo i controlli a Orly 3 e Orly 4 al livello 1 sono gratuite e aperte 24 ore su 24; hanno nicchie individuali con lettini, sedute, seggioloni, scaldabiberon e microonde."
+    },
+    "wifi": {
+      "title": "Wi-Fi e ricarica",
+      "hint": "In tutti i terminal",
+      "text": "La rete gratuita WIFI-AIRPORT è disponibile in tutti i terminal, nelle aree d’imbarco e di ritiro bagagli; dopo averla selezionata, aprire un browser per accedere alla pagina di connessione. Nei terminal sono presenti USB e prese europee di tipo C, E e F. I vani chiudibili ChargeBox per ricaricare il telefono sono gratuiti e disponibili 24 ore su 24."
+    }
+  }
+}

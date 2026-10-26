@@ -1,0 +1,25 @@
+{
+  "iata": "FCO",
+  "blocks": {
+    "transport": {
+      "title": "Getting there",
+      "hint": "Leonardo express: 32 minutes",
+      "text": "Leonardo express connects Fiumicino Airport with Roma Termini non-stop in 32 minutes, with departures scheduled every 15 minutes. The railway station is inside the airport. A ticket costs €14; the Mini-groups fare lets you buy 4 tickets in one transaction for €40 instead of €56."
+    },
+    "storage": {
+      "title": "Left luggage",
+      "hint": "€10 per bag per 24 hours",
+      "text": "Left luggage is in the international arrivals area of Terminal 3 near the bus station and is open from 07:00 to 23:00. The price is €10 including VAT per piece of baggage per 24 hours. Payment is made when collecting the baggage; no advance reservation is required."
+    },
+    "kids": {
+      "title": "With children",
+      "hint": "Free strollers and family areas",
+      "text": "The airport has more than 700 free strollers; departing passengers who choose to check in their own stroller can collect one in boarding areas A and E, at gates A31 and A61 and at the escalators to gates E1–E4. Family Lane is a dedicated security lane for families with children and pregnant passengers. The airport has 4 baby rooms with cots and changing tables: behind check-in desks 312–327 in Terminal 3, in the shopping gallery in area A before gates A61–A83, and near E11 and E44. Food outlets can be asked to warm a bottle or baby food and sterilize a pacifier."
+    },
+    "wifi": {
+      "title": "Wi‑Fi",
+      "hint": "AIRPORT FREE WIFI, no time limit",
+      "text": "The airport provides free Wi-Fi with no time limit. AIRPORT FREE WIFI is available in check-in, boarding gate and arrivals areas. Select the network and open a browser to connect: the device automatically redirects to the welcome page."
+    }
+  }
+}

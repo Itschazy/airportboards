@@ -1,0 +1,30 @@
+{
+  "iata": "MUC",
+  "blocks": {
+    "transport": {
+      "title": "交通方式",
+      "hint": "S1、S8及机场快巴",
+      "text": "S-Bahn的S1和S8线连接机场与慕尼黑市中心，前往中央火车站约需40分钟。S8 24小时运营：约01:00至04:00每40分钟一班，其余时间每20分钟一班。S1约03:00至午夜每20分钟一班，周末及节假日24小时运营。Lufthansa Express Bus经Munich North (Schwabing)往返机场与中央火车站，每20分钟发车，车站与机场之间的车程为45分钟。"
+    },
+    "storage": {
+      "title": "行李寄存",
+      "hint": "MAC，03楼",
+      "text": "行李寄存处位于Munich Airport Center的03楼公共区域。每日05:00至23:30开放，电话为+49 89 975 214 75。"
+    },
+    "sleep": {
+      "title": "休息住宿",
+      "hint": "napcabs及napcabsXL",
+      "text": "napcabs睡眠舱设于2号航站楼安检后及公共区域，舱内提供独立工作空间和免费互联网。配有双人queen-size床、桌子及扶手椅的napcabsXL位于2号航站楼G06登机口附近。napcabs在06:00至22:00收费为每小时17 EUR，22:00至06:00为每小时12 EUR，最低收费34 EUR。napcabsXL在对应时段的收费为每小时24.50 EUR及18 EUR，最低收费49 EUR。"
+    },
+    "kids": {
+      "title": "携儿童出行",
+      "hint": "游乐区，MAC的03楼",
+      "text": "公共区域及限制进入区域均设有游乐区。Munich Airport Center的03楼游乐区位于公共区域，24小时开放。机场请家长及陪同成人在儿童玩耍时予以照看，并在离开游乐区时陪同。"
+    },
+    "wifi": {
+      "title": "Wi‑Fi",
+      "hint": "免费Wi-Fi",
+      "text": "机场通过Free Wifi – Munich Airport网络提供免费Wi-Fi。使用时须提供电子邮箱地址并接受使用条款。"
+    }
+  }
+}

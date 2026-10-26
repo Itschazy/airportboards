@@ -1,0 +1,25 @@
+{
+  "iata": "VIE",
+  "blocks": {
+    "transport": {
+      "title": "Züge nach Wien",
+      "hint": "S7 und Railjet",
+      "text": "Die S7 fährt etwa 25 Minuten bis Wien Mitte und verkehrt alle 30 Minuten; der Railjet benötigt etwa 15 Minuten bis Wien Hauptbahnhof und verkehrt alle 30 Minuten. Der ÖBB-Fahrkartenschalter befindet sich in der Ankunftshalle; Automaten stehen dort ebenfalls sowie in den Zugängen zu den Bahnsteigen und auf den Bahnsteigen. Ein kurzer, wettergeschützter, barrierefreier Weg führt von der Ankunftshalle zu den Bahnsteigen."
+    },
+    "lounges": {
+      "title": "VIENNA Lounge",
+      "hint": "Terminal 1, Ebene 2",
+      "text": "Die VIENNA Lounge liegt in Terminal 1 auf Ebene 2 nach der Sicherheitskontrolle und vor der Passkontrolle; sie ist täglich 04:30–22:00 geöffnet. Mit gültiger Bordkarte ist der Zutritt am Abflugtag ab 3,5 Stunden vor dem Abflug möglich, die maximale Aufenthaltsdauer beträgt 3 Stunden. Der reguläre Preis liegt bei 59 EUR, Kinder von 4–14 Jahren zahlen 31 EUR, Kinder von 0–3 Jahren haben freien Eintritt. Es gibt Speisen, WLAN, Arbeitsplätze, einen Ruhebereich, Duschen mit Handtüchern und ein Familienbad mit Wickeltisch."
+    },
+    "sleep": {
+      "title": "Hotels am Flughafen",
+      "hint": "NH und Moxy zu Fuss erreichbar",
+      "text": "NH Vienna Airport Conference Center und Moxy Vienna Airport befinden sich in der AirportCity nahe dem Terminal und sind zu Fuss erreichbar. Das NH bietet WLAN und schallisolierende Fenster; das Moxy bietet rund um die Uhr Snacks und Getränke, die kostenlose Nutzung von Computern und Fitnesscenter sowie kostenloses WLAN."
+    },
+    "kids": {
+      "title": "Spielbereiche und Kinderwagen",
+      "hint": "Bei den Gates F, C und D",
+      "text": "Das kostenlose Entertainment Gate bei F03 umfasst ein zweistöckiges Spielgerüst, einen separaten Kleinkindbereich und Tischfussball; weitere Kinderbereiche gibt es bei C42 und D31–36. Wurde der eigene Kinderwagen beim Check-in aufgegeben, stellt der Flughafen kostenlos einen Kinderwagen für den Weg von der Sicherheitskontrolle zum Gate bereit; beim Einsteigen wird er dem Gatepersonal übergeben. Wickeltische gibt es in fast allen barrierefreien Toiletten, Familientoiletten und grossen Passagiertoiletten."
+    }
+  }
+}

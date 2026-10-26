@@ -1,0 +1,25 @@
+{
+  "iata": "CLT",
+  "blocks": {
+    "taxi": {
+      "title": "Taxi",
+      "hint": "Uptown: 32 USD más tasa",
+      "text": "Los taxis salen del bordillo exterior del nivel de llegadas y recogida de equipajes, zona 1. Operan principalmente todos los días de 05:00 a medianoche, aunque puede haber vehículos fuera de ese horario. La tarifa fija a Uptown dentro del anillo I 277 es de 32 USD, y para trayectos en un radio de 3 millas del aeropuerto, de 16 USD; a todos los viajes se añade una tasa aeroportuaria de 2,50 USD. Se aceptan las principales tarjetas de crédito."
+    },
+    "kids": {
+      "title": "Con niños",
+      "hint": "Salas de lactancia",
+      "text": "Las Mother’s Rooms están abiertas a todas las madres lactantes: tienen espacios individuales separados por cortinas, asientos acolchados y enchufes. Cada sala tiene cambiador y lavabo. Están en el pasillo del vestíbulo A entre las puertas de embarque A1–A13 y A21–A29, junto a A31, cerca del control de seguridad 3 en la unión de los vestíbulos D y E, y entre las puertas E32 y E36. También hay cambiadores en todos los aseos masculinos, femeninos y familiares del terminal."
+    },
+    "parking": {
+      "title": "Aparcamiento",
+      "hint": "24 horas, con reserva",
+      "text": "Los aparcamientos de CLT funcionan las 24 horas todo el año. Hay plazas con reserva o por orden de llegada; Booked y Reservation Only indican que no hay plazas sin reserva, pero permiten el acceso de quienes ya reservaron. Todos los aparcamientos tienen plazas para pasajeros con discapacidad y autobuses lanzadera adaptados que circulan continuamente. El servicio Valet debe reservarse con al menos 3 horas de antelación."
+    },
+    "wifi": {
+      "title": "Wi‑Fi",
+      "hint": "CLT Free WiFi y carga",
+      "text": "La red gratuita CLT Free WiFi está disponible para los pasajeros en todo el terminal. Hay estaciones de carga en todos los vestíbulos; los asientos con enchufes y USB están en las puertas de embarque A1–A39, B1–B16 y C2–C19. Hay más enchufes en el Atrium y todos los vestíbulos."
+    }
+  }
+}

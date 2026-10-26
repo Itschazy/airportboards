@@ -1,0 +1,15 @@
+{
+  "iata": "CUN",
+  "blocks": {
+    "transport": {
+      "title": "ADO巴士",
+      "hint": "坎昆、卡门海滩和图卢姆",
+      "text": "ADO Aeropuerto连接坎昆机场与Cancún Centro、Playa del Carmen和Tulum巴士总站。发车间隔因路线而异，可能为15分钟。车票可在线或在常规销售点购买；运营商允许按车票条款，在发车前最迟30分钟更改日期、时间和目的地。"
+    },
+    "sleep": {
+      "title": "2号航站楼附近的酒店",
+      "hint": "Hilton Garden Inn",
+      "text": "Hilton Garden Inn Cancun Airport位于机场范围内、2号航站楼对面；酒店免费接驳车可在几分钟内将住客送至航站楼。酒店设有餐厅、屋顶室外泳池、健身中心和免费Wi-Fi。15:00起办理入住，最迟11:00退房；电话为+52 998 3729860。"
+    }
+  }
+}

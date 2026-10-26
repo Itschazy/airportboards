@@ -1,0 +1,38 @@
+{
+  "iata": "CAI",
+  "checked": "2026-10-26",
+  "blocks": [
+    {
+      "id": "transport",
+      "title": "Автобусы из аэропорта",
+      "hint": "Станция перед терминалом 1",
+      "text": "Городские автобусы по направлениям Каира и междугородние автобусы отправляются только со станции на парковке перед терминалом 1. Оттуда есть отправления перевозчиков West Delta, Upper Egypt, East Delta и Super Jet.",
+      "source": "cairo-airport.com",
+      "url": "https://www.cairo-airport.com/en-us/Services/Passenger-Guide/Move-From-To-Airport"
+    },
+    {
+      "id": "terminals",
+      "title": "Automated People Mover",
+      "hint": "Бесплатный поезд по аэропорту",
+      "text": "Бесплатный Automated People Mover связывает терминал 1, Air Mall, парковку, терминал 2 и терминал 3; полный путь занимает не более 5 минут. Поезд предназначен как для транзитных пассажиров, так и для посетителей общественной части аэропорта; работает 18 часов в сутки, ещё 6 часов отведены на обслуживание.",
+      "source": "cairo-airport.com",
+      "url": "https://www.cairo-airport.com/Automated-People-Mover"
+    },
+    {
+      "id": "lounges",
+      "title": "Ahlan VIP",
+      "hint": "Зал и сопровождение",
+      "text": "Сервис Ahlan VIP включает сопровождение и зал ожидания с пребыванием до 3 часов; бронирование требуется не менее чем за 48 часов до рейса. Цена VIP для иностранного пассажира — 220 USD, для гражданина Египта — 3 600 EGP. Для стыковочных рейсов стоимость удваивается, а бронирование принимают при интервале между рейсами не менее 4 часов. Двое детей младше 6 лет обслуживаются бесплатно, третий ребёнок младше 6 лет считается отдельным пассажиром.",
+      "source": "cairo-airport.com",
+      "url": "https://www.cairo-airport.com/Services/Ahlan-Service/Service-Information"
+    },
+    {
+      "id": "wifi",
+      "title": "Бесплатный Wi-Fi",
+      "hint": "Услуга Orange Egypt",
+      "text": "Orange Egypt предоставляет бесплатный Wi-Fi прибывающим и вылетающим пассажирам Каирского аэропорта. Оператор также предоставляет бесплатные станции зарядки телефонов и других электронных устройств.",
+      "source": "orange.eg",
+      "url": "https://www.orange.eg/en/about/media-center/press-kit/launching-advanced-technological-services-at-cairo-airport-861-event"
+    }
+  ]
+}

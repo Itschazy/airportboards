@@ -1,0 +1,25 @@
+{
+  "iata": "IAH",
+  "blocks": {
+    "transport": {
+      "title": "가는 방법",
+      "hint": "직행버스 편도4.50 USD",
+      "text": "METRO 500 IAH Downtown Direct 버스는 공항과 George R. Brown Convention Center를 무정차로 연결합니다. 승차 장소는 터미널 E의 2층, Ride App Pick-Up 구역 근처 출입문 E201 옆입니다. 편도 요금은 4.50 USD이며 매일 05:30–20:00에 30분 간격으로 운행합니다. 수하물 공간이 있고 이동이 불편한 승객도 이용할 수 있으며 무료 Wi-Fi를 제공합니다."
+    },
+    "sleep": {
+      "title": "잠잘 곳",
+      "hint": "Minute Suites 보안 후",
+      "text": "Minute Suites는 터미널 C의 보안검색 후 C14번 게이트 근처에 있습니다. 승객에게 수면, 휴식, 업무를 위한 별도 공간과 샤워 시설을 제공합니다."
+    },
+    "kids": {
+      "title": "아이와 함께",
+      "hint": "수유실과 Mamava 포드",
+      "text": "IAH에는 수유와 유축을 위한 방과 Mamava 포드, 아기 휴게실, 기저귀 교환대가 있습니다. Mother’s Rooms는 터미널 A의 A1·A17번 게이트 근처와 터미널 C의 C5 근처에 있습니다. Mamava 포드는 터미널 B의 B21 근처, 터미널 C의 C34 근처, 터미널 E의 E12 근처에 있으며, 터미널 D의 아기 휴게실은 D15 근처에 있습니다."
+    },
+    "wifi": {
+      "title": "Wi‑Fi",
+      "hint": "Free Airport WIFI",
+      "text": "IAH의 모든 터미널과 주차장 건물에서 무료 Wi-Fi를 이용할 수 있습니다. Free Airport WIFI 네트워크를 선택하고 로그인 페이지가 뜨면 이용 약관에 동의한 뒤 Submit을 누르세요. 지원 전화번호는 1-844-831-0999입니다."
+    }
+  }
+}

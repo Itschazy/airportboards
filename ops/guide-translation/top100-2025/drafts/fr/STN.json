@@ -1,0 +1,25 @@
+{
+  "iata": "STN",
+  "blocks": {
+    "transport": {
+      "title": "Train pour Londres",
+      "hint": "Gare sous le terminal",
+      "text": "La gare se trouve directement sous le terminal, à environ 2 minutes à pied ; des ascenseurs, escaliers mécaniques et rampes sont disponibles. Le Stansted Express dessert London Liverpool Street toutes les 15 minutes, tous les jours ; le trajet dure environ 48 minutes, et environ 36 minutes jusqu’à Tottenham Hale. Le paiement est possible avec une carte bancaire sans contact ou un portefeuille mobile, mais Oyster n’est pas valable pour les trajets vers ou depuis l’aéroport."
+    },
+    "kids": {
+      "title": "Avec des enfants",
+      "hint": "Change et allaitement",
+      "text": "Des espaces à langer se trouvent dans les toilettes pour hommes et femmes près de l’enregistrement en zone A, puis après le contrôle de sûreté près des portes d’embarquement 13, 33/34, 43 et 59. Dans la zone de récupération des bagages internationaux, des cabines à langer sont près du tapis 9 ; il y en a aussi dans le hall principal d’accueil des arrivants. L’allaitement est autorisé dans tout l’aéroport ; des cabines individuelles dans la Family Room du hall principal des départs permettent de s’isoler."
+    },
+    "lounges": {
+      "title": "Essence Lounge",
+      "hint": "Pour certaines compagnies seulement",
+      "text": "L’ancien Escape Lounge du terminal principal est fermé ; le nouvel Essence by Escape Lounges accueille uniquement les passagers de compagnies éligibles partant des portes d’embarquement 1–19. Les passagers de Ryanair et easyJet ne peuvent pas y accéder ; après s’être rendu aux portes 1–19, il n’est plus possible de revenir au terminal principal. L’accès est autorisé à partir de 3 heures avant le départ prévu ; le tarif d’entrée sans réservation préalable commence à 35 GBP et les enfants de moins de 3 ans entrent gratuitement. Les plats froids, boissons chaudes et sans alcool, vin, bière en bouteille et Wi-Fi sont inclus ; paiement par carte uniquement."
+    },
+    "wifi": {
+      "title": "Wi-Fi gratuit",
+      "hint": "2 heures dans le terminal",
+      "text": "Un Wi-Fi gratuit est disponible pendant 2 heures dans le terminal de Stansted et les salons. Pour se connecter, il faut sélectionner le réseau Wi-Fi de l’aéroport sur son téléphone, sa tablette ou son ordinateur portable."
+    }
+  }
+}

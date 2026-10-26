@@ -1,0 +1,15 @@
+{
+  "iata": "MXP",
+  "blocks": {
+    "transport": {
+      "title": "Malpensa Express",
+      "hint": "约51分钟到Centrale",
+      "text": "Malpensa Express列车连接1号航站楼与Milano Centrale，无需换乘，车程约51分钟。单程票价15 EUR，可在trenord.it网站、Trenord应用程序、自动售票机或授权销售点购买。"
+    },
+    "sleep": {
+      "title": "Sheraton Milan Malpensa",
+      "hint": "直通1号航站楼",
+      "text": "Sheraton Milan Malpensa Airport Hotel & Conference Centre可直接通往1号航站楼。酒店设有室内泳池、健身中心、水疗中心和餐厅；套房配有隔音设施。"
+    }
+  }
+}

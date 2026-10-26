@@ -1,0 +1,25 @@
+{
+  "iata": "VIE",
+  "blocks": {
+    "transport": {
+      "title": "Trains pour Vienne",
+      "hint": "S7 et Railjet",
+      "text": "Le S7 rejoint Wien Mitte en environ 25 minutes, avec un départ toutes les 30 minutes ; le Railjet rejoint Wien Hauptbahnhof en environ 15 minutes, toutes les 30 minutes. Le guichet ÖBB se trouve dans le hall des arrivées ; des automates sont également disponibles dans ce hall, dans les passages vers les quais et sur les quais. Un court parcours sans obstacle et protégé des intempéries relie le hall des arrivées aux quais."
+    },
+    "lounges": {
+      "title": "VIENNA Lounge",
+      "hint": "Terminal 1, niveau 2",
+      "text": "VIENNA Lounge se trouve au terminal 1, au niveau 2, après le contrôle de sûreté et avant le contrôle des passeports ; il est ouvert tous les jours de 04:30 à 22:00. Avec une carte d’embarquement valide, l’accès est possible le jour du départ à partir de 3,5 heures avant le départ, pour une durée maximale de 3 heures. Le tarif normal est de 59 EUR, de 31 EUR pour les enfants de 4–14 ans et gratuit pour ceux de 0–3 ans. On y trouve de la restauration, le Wi-Fi, des espaces de travail et de repos, des douches avec serviettes et une salle de bains familiale avec table à langer."
+    },
+    "sleep": {
+      "title": "Hôtels près de l’aéroport",
+      "hint": "NH et Moxy à pied du terminal",
+      "text": "NH Vienna Airport Conference Center et Moxy Vienna Airport se trouvent dans AirportCity, à proximité du terminal et accessibles à pied. NH dispose du Wi-Fi et de fenêtres insonorisantes ; Moxy propose des collations et boissons 24 heures sur 24, l’utilisation gratuite d’ordinateurs et de la salle de sport, ainsi que le Wi-Fi gratuit."
+    },
+    "kids": {
+      "title": "Espaces de jeux et poussettes",
+      "hint": "Près des portes F, C et D",
+      "text": "L’Entertainment Gate gratuit près de F03 comprend une structure de jeux sur deux niveaux, un espace séparé pour les tout-petits et un baby-foot ; d’autres espaces pour enfants se trouvent près de C42 et D31–36. Si votre poussette a été remise à l’enregistrement, l’aéroport fournit gratuitement une poussette pour aller du contrôle de sûreté à la porte d’embarquement ; elle doit être remise à l’agent de la porte lors de l’embarquement. Des tables à langer sont disponibles dans presque toutes les toilettes accessibles, les toilettes familiales et les grandes toilettes pour passagers."
+    }
+  }
+}

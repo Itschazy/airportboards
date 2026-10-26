@@ -1,0 +1,15 @@
+{
+  "iata": "CUN",
+  "blocks": {
+    "transport": {
+      "title": "ADO-Busse",
+      "hint": "Cancún, Playa del Carmen und Tulum",
+      "text": "ADO Aeropuerto verbindet den Flughafen Cancún mit den Busbahnhöfen Cancún Centro, Playa del Carmen und Tulum. Je nach Strecke können die Busse alle 15 Minuten fahren. Fahrkarten gibt es online und an regulären Verkaufsstellen; der Anbieter erlaubt Änderungen von Datum, Uhrzeit und Fahrziel bis 30 Minuten vor Abfahrt gemäss den Ticketbedingungen."
+    },
+    "sleep": {
+      "title": "Hotel bei Terminal 2",
+      "hint": "Hilton Garden Inn",
+      "text": "Hilton Garden Inn Cancun Airport liegt auf dem Flughafengelände gegenüber Terminal 2; der kostenlose Hotelshuttle bringt Gäste in wenigen Minuten zu den Terminals. Das Hotel bietet ein Restaurant, einen Aussenpool auf dem Dach, ein Fitnesscenter und kostenloses WLAN. Der Check-in beginnt um 15:00, der Check-out ist bis 11:00; Telefon: +52 998 3729860."
+    }
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "iata": "DOH",
+  "checked": "2026-10-25",
+  "blocks": [
+    {
+      "id": "transport",
+      "title": "Как доехать",
+      "hint": "Метро ежедневно",
+      "text": "Станция метро в аэропорту Hamad International Airport соединяет аэропорт с районами Дохи 7 дней в неделю. Станции оборудованы кондиционерами и доступны для маломобильных пассажиров; время работы и отправления последних поездов показывают на станционных экранах.",
+      "source": "dohahamadairport.com",
+      "url": "https://dohahamadairport.com/airport-guide/to-from-the-airport/metro"
+    },
+    {
+      "id": "taxi",
+      "title": "Такси",
+      "hint": "Karwa, Taxi Pavilion",
+      "text": "Павильон такси расположен в левой части зала прилёта; все аэропортовые такси обслуживает Mowasalat. Доступны седаны и минивэны, а также безналичная оплата MasterCard, VISA, Apple Pay, Google Pay и NAPS. Заказать Karwa заранее можно по телефону +974 800 8294, через приложение Karwa или сайт karwa.qa. Для заказа специального такси для маломобильных пассажиров нужно заранее обратиться в Mowasalat по номеру +974 4458 8888.",
+      "source": "dohahamadairport.com",
+      "url": "https://dohahamadairport.com/airport-guide/to-from-the-airport/Taxi"
+    },
+    {
+      "id": "sleep",
+      "title": "Где поспать",
+      "hint": "Комнаты отдыха с креслами",
+      "text": "В пассажирском терминале есть отдельные тихие комнаты для мужчин, женщин и семей. В них установлены кресла для отдыха, чтения или короткого сна; расположение указано на карте аэропорта и обозначено указателями.",
+      "source": "dohahamadairport.com",
+      "url": "https://dohahamadairport.com/relax/quiet-rooms"
+    },
+    {
+      "id": "wifi",
+      "title": "Wi-Fi",
+      "hint": "Бесплатно, #HIAQatar",
+      "text": "Бесплатный беспроводной интернет доступен по всему пассажирскому терминалу: выберите сеть #HIAQatar и войдите в систему. Интернет-киоски с экранами и клавиатурами также дают бесплатный доступ к сайтам и расположены по терминалу, включая зоны выходов на посадку.",
+      "source": "dohahamadairport.com",
+      "url": "https://dohahamadairport.com/airport-guide/facilities-services/connectivity"
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "iata": "LIS",
+  "blocks": {
+    "transport": {
+      "title": "Metro per Lisbona",
+      "hint": "Aeroporto — Saldanha",
+      "text": "L’aeroporto ha una stazione della metropolitana: la linea Aeroporto — Saldanha raggiunge il centro di Lisbona in circa 20 minuti. È possibile acquistare la carta elettronica ricaricabile Navegante a 0,50 EUR, utilizzabile sulla metropolitana e sugli autobus Carris."
+    },
+    "terminals": {
+      "title": "Terminal 2",
+      "hint": "Autobus gratuito dal T1",
+      "text": "Il terminal 2 è riservato alle partenze ed è chiuso dalle 00:30 alle 03:30. Un autobus gratuito lo collega al terminal 1 dalle 03:30 alle 00:30 del giorno seguente, con partenze ogni 12 minuti dall’area partenze di ciascun terminal. Il tragitto dura circa 3 minuti."
+    },
+    "kids": {
+      "title": "Servizi per famiglie",
+      "hint": "Sale e fasciatoi",
+      "text": "Le sale per il cambio dei pannolini del terminal 1 si trovano nelle aree pubbliche e ad accesso limitato e dispongono di lavabo, fasciatoio e piano d’appoggio. Nel terminal 1 ci sono spazi per l’allattamento nella sala famiglie dell’area pubblica e dopo i controlli di sicurezza vicino al gate 15."
+    },
+    "wifi": {
+      "title": "Wi-Fi gratuito",
+      "hint": "Senza limiti di tempo",
+      "text": "L’aeroporto offre Wi-Fi gratuito senza limiti di tempo. Scegliere _VINCI Airports WiFi, aprire un browser, accettare le condizioni d’uso e premere Connect."
+    }
+  }
+}

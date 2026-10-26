@@ -1,0 +1,20 @@
+{
+  "iata": "SYD",
+  "blocks": {
+    "terminals": {
+      "title": "Terminaller",
+      "hint": "15 dakikada bir ücretsiz otobüs",
+      "text": "T1 International ile iç hat terminalleri T2 ve T3 arasında yürümek mümkün değildir. Ücretsiz Terminal Transfer Bus, 05:30–22:30 arasında 15 dakikada bir çalışır; yolculuk 10 dakika sürer. T1’de durak geliş katında Arrival Hall B’nin dışında, T2 ve T3’te her terminalin dışında geliş katındadır."
+    },
+    "kids": {
+      "title": "Çocukla",
+      "hint": "T1 oyun alanları",
+      "text": "T1 International’da dokunmatik ekranlı etkileşimli çocuk alanı 10 numaralı kapı, McDonalds oyun alanı 50 numaralı kapı, Museum of Applied Arts and Science ile hazırlanan dijital alan ise 53 numaralı kapı yakınındadır. Bagaj teslim alanları yakınında tuvaletler, ebeveyn odaları ve besleme alanları vardır."
+    },
+    "wifi": {
+      "title": "Wi‑Fi",
+      "hint": "T1’de Sydney Airport Free WiFi",
+      "text": "T1 International’ın tamamında ücretsiz Wi-Fi vardır. Sydney Airport Free WiFi ağını seçin, soruları yanıtlayın, koşulları okuyun ve Proceed düğmesine basın. Ardından reklam mesajı gösterilir ve web sitesi açılır."
+    }
+  }
+}

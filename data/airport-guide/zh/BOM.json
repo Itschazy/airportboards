@@ -1,0 +1,10 @@
+{
+  "iata": "BOM",
+  "blocks": {
+    "lounges": {
+      "title": "商务休息室",
+      "hint": "Aviserv West，2号航站楼",
+      "text": "Aviserv West休息室位于2号航站楼到达区，朝Gate A方向。提供餐饮、淋浴、睡眠舱和独立休息区。"
+    }
+  }
+}

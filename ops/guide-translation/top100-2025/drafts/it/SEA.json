@@ -1,0 +1,10 @@
+{
+  "iata": "SEA",
+  "blocks": {
+    "transport": {
+      "title": "Come arrivare",
+      "hint": "Link: 38 minuti fino al centro",
+      "text": "Link light rail collega l’aeroporto al centro di Seattle in 38 minuti, con corse ogni 8–10 minuti per gran parte della giornata. Dal nastro bagagli 16 bisogna salire al livello delle passerelle, attraversare Skybridge Six e girare a sinistra nel parcheggio coperto verso la stazione SeaTac/Airport. Veicoli elettrici gratuiti, disponibili a tutti i passeggeri, fanno la spola tra la stazione e la passerella ogni giorno dalle 05:00 a mezzanotte. Il Night Bus di Sound Transit collega aeroporto e centro circa ogni 30 minuti, a partire da circa 15 minuti dopo l’ultimo treno."
+    }
+  }
+}

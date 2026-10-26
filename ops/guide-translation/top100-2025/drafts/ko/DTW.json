@@ -1,0 +1,15 @@
+{
+  "iata": "DTW",
+  "blocks": {
+    "transport": {
+      "title": "FAST Michigan 261",
+      "hint": "디트로이트 도심행",
+      "text": "FAST Michigan 261은 공항의 Evans·McNamara 터미널과 Dearborn, Inkster, Corktown, 디트로이트 도심을 운행합니다. FAST 버스는 늦은 저녁과 주말을 포함해 매일 운행하며 혼잡 시간대에는 약 15–20분 간격입니다. 승하차는 표지판이 있는 FAST 정류장에서만 가능하며 버스에 Wi-Fi가 있습니다."
+    },
+    "sleep": {
+      "title": "McNamara의 The Westin",
+      "hint": "터미널 내부 호텔",
+      "text": "The Westin Detroit Metropolitan Airport는 McNamara 터미널 안에 있습니다. 호텔에는 실내 수영장, 피트니스 센터, 레스토랑이 있으며 체크인은 15:00부터, 체크아웃은 12:00까지입니다. 체크인 최소 연령은 21세입니다."
+    }
+  }
+}

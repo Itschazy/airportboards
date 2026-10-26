@@ -1,0 +1,25 @@
+{
+  "iata": "ATL",
+  "blocks": {
+    "transport": {
+      "title": "Nasıl gidilir",
+      "hint": "Red ve Gold hatları",
+      "text": "MARTA Airport Station, Domestic Terminal’de North ve South bagaj teslim alanları arasındadır. Red ve Gold hatları havalimanına gider. Saat 20:30’dan sonra havalimanından Buckhead, Medical Center, Dunwoody, Sandy Springs ve North Springs istasyonlarına giderken Lindbergh Center istasyonunda Red Line’a aktarma gerekebilir."
+    },
+    "terminals": {
+      "title": "Terminaller",
+      "hint": "Günün her saati ücretsiz servis",
+      "text": "International Terminal’in gelen yolcu katından Domestic Terminal’in bagaj teslim alanına ücretsiz servis vardır. Servis günün her saati çalışır ve terminaller arasındaki yolculuk 15 dakika sürer. Domestic Terminal’de durak, bagaj teslim alanının dışındadır."
+    },
+    "lounges": {
+      "title": "Business salonları",
+      "hint": "The Club ATL, 06:00–22:00",
+      "text": "The Club ATL, Concourse F’te Mezzanine seviyesinde, güvenlik kontrolünden sonra bulunur ve her gün 06:00–22:00 arasında açıktır. Club Pass ile giriş 50 USD’dir; uygun Priority Pass ve LoungeKey üyelikleriyle de giriş mümkündür. Club Pass sahipleri planlanan kalkıştan 3 saat önce, Priority Pass veya LoungeKey üyeleri ise 2,5 saat önce girebilir. 2 yaşından küçük çocuklar ücretsiz girer; 2 yaşından itibaren ayrı geçiş kartı gerekir ve 17 yaşındaki ve daha küçük çocuklara 18 yaş ve üzeri bir yetişkin eşlik etmelidir."
+    },
+    "sleep": {
+      "title": "Nerede uyunur",
+      "hint": "Güvenlikten sonra Minute Suites",
+      "text": "Minute Suites, TSA güvenlik kontrolünden sonra bulunur: Concourse B’de B24 numaralı kapının, Concourse E’de atriyum ve yürüyen merdivenlerin, Concourse F’te F6 numaralı kapının yanındadır. Odalarda ek çekilebilir yataklı bir çekyat, Smart TV, ücretsiz Wi-Fi, çalışma yüzeyi ve şarj bağlantıları vardır. Yastık ve battaniyeler istek üzerine verilir. Rezervasyonlar en az 1 saattir; duşlar yalnızca Concourse E’de vardır."
+    }
+  }
+}

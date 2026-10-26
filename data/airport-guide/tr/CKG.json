@@ -1,0 +1,15 @@
+{
+  "iata": "CKG",
+  "blocks": {
+    "lounges": {
+      "title": "Business salonları",
+      "hint": "T3A’da China Southern salonu",
+      "text": "China Southern salonu, T3A terminalinin G salonu girişindedir. Program üyeleri ve iki premium sınıfın yolcuları için bölümlere ayrılmıştır; toplam 187 oturma yeri vardır. Bagaj muhafazası, iş alanı, masaj ve dinlenme alanı, anne-çocuk odası ve duşlar bulunur."
+    },
+    "sleep": {
+      "title": "Nerede uyunur",
+      "hint": "Holiday Inn Express Airport Zone",
+      "text": "Holiday Inn Express Chongqing Airport Zone, Yubei bölgesinde No.199 Lianggang Avenue adresindedir. Otelde ücretsiz kahvaltı sunulur; ayrıca Wi-Fi, otopark ve restoran vardır. Tek başına giriş yapabilmek için en az 18 yaşında olmak gerekir; çıkış en geç 12:00’dedir."
+    }
+  }
+}

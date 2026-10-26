@@ -1,0 +1,25 @@
+{
+  "iata": "FLL",
+  "blocks": {
+    "transport": {
+      "title": "BCT und Tri-Rail",
+      "hint": "Bus 1 und Zug",
+      "text": "Der BCT-Bus 1 fährt täglich; die Flughafenhaltestelle befindet sich am Rental Car Center, Stop G. Kostenlose Busse von den Terminals zum Tri-Rail-Bahnhof in Dania Beach fahren von der unteren Ankunftsebene ab: von GTA-1 am westlichen Ende von Terminal 1, GTA-2 zwischen Terminal 2 und 3 sowie GTA-3 zwischen Terminal 3 und 4. Tri-Rail bedient täglich die Countys Miami-Dade, Broward und Palm Beach."
+    },
+    "terminals": {
+      "title": "Zwischen den Terminals",
+      "hint": "Wege zu Fuss",
+      "text": "Kostenlose Busse verkehren rund um die Uhr ausschliesslich zwischen Rental Car Center und den Terminals; die Haltestellen sind auf der unteren Ankunftsebene ausgeschildert. Zwischen den Terminals kann man die Gehwege am Gebäude oder den Fussweg durch den Parkplatz nutzen oder mit der Parkplatztram fahren."
+    },
+    "storage": {
+      "title": "Gepäckaufbewahrung",
+      "hint": "Terminal 1 und 3",
+      "text": "In Terminal 1 liegt die Gepäckaufbewahrung vor der Sicherheitskontrolle auf Ebene 2 beim Ausgang aus Concourse B; in Terminal 3 auf der unteren Gepäckausgabeebene beim Gepäckbüro von JetBlue. Beide Stellen sind montags bis freitags von 08:30 bis 17:30 und samstags und sonntags 08:30–18:30 geöffnet. Die Stelle in Terminal 4 ist vorübergehend geschlossen; Informationen zum Service gibt es unter +1 954 359 5505."
+    },
+    "wifi": {
+      "title": "Kostenloses WLAN",
+      "hint": "Terminals und Rental Car Center",
+      "text": "Kostenloses WLAN steht in allen Terminals, Flugsteigen und im Rental Car Center zur Verfügung. Die offiziellen Netzwerke heissen Airport-Wifi-Terminal_1, Airport-Wifi-Terminal_2, Airport-Wifi-Terminal_3, Airport-Wifi-Terminal_4 und Airport-Wifi-Rental_Car_Center. Der FLL-Zugang erfordert keine Zahlung; bei einer Aufforderung zur Eingabe einer Bankkarte nimmt der Flughafenservice Meldungen unter +1 866 435 9355 entgegen."
+    }
+  }
+}

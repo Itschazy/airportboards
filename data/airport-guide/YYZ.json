@@ -1,0 +1,38 @@
+{
+  "iata": "YYZ",
+  "checked": "2026-10-26",
+  "blocks": [
+    {
+      "id": "transport",
+      "title": "Как доехать",
+      "hint": "UP Express: 28 минут",
+      "text": "Поезд UP Express связывает Pearson с Union Station в центре Торонто за 28 минут, отправления — каждые 15 минут ежедневно. Взрослый билет в одну сторону стоит 12,35 $, с PRESTO — 9,25 $; дети до 12 лет едут бесплатно. Станция находится в терминале 1 рядом с Terminal Link: из терминала 3 нужно сначала доехать бесплатным Terminal Link до терминала 1 и следовать указателям Train to City. В поезде и на станции есть бесплатный Wi‑Fi, а в поезде — розетки и багажные полки.",
+      "source": "torontopearson.com",
+      "url": "https://www.torontopearson.com/en/transportation-and-parking/up-express"
+    },
+    {
+      "id": "terminals",
+      "title": "Терминалы",
+      "hint": "Бесплатный Terminal Link",
+      "text": "Бесплатный Terminal Link работает круглосуточно между терминалами 1 и 3 и станцией Viscount. Он также обеспечивает доступ к Sheraton Gateway Hotel, ALT Hotel и парковкам Value Park Garage и Value Park Lot. Время поездки между станциями составляет от 2 до 8 минут. Поезд доступен для пассажиров с нескладными средствами мобильности.",
+      "source": "torontopearson.com",
+      "url": "https://www.torontopearson.com/en/transportation-and-parking/terminal-link-train"
+    },
+    {
+      "id": "kids",
+      "title": "С ребёнком",
+      "hint": "Комнаты и капсулы после досмотра",
+      "text": "Комнаты и капсулы для кормления расположены после досмотра. В капсулах Mamava есть откидной столик, 2 скамьи, зеркало, поручни и розетка с USB; для открытия нужен код из приложения Mamava либо службы поддержки аэропорта. В терминале 1 капсулы находятся у выходов на посадку D22, E80/E81 и F59, в терминале 3 — у C30/C31, B22 и A12/A13. Детская игровая зона есть в зале вылета терминала 1 у выхода D24.",
+      "source": "torontopearson.com",
+      "url": "https://www.torontopearson.com/en/while-you-are-here/family-travel"
+    },
+    {
+      "id": "wifi",
+      "title": "Wi‑Fi",
+      "hint": "Toronto Pearson Public Wi-Fi",
+      "text": "В аэропорту доступен бесплатный Wi‑Fi, предоставляемый Pearson и CIBC. Нужно выбрать Toronto Pearson Public Wi-Fi, открыть приветственную страницу, принять условия и нажать Connect. При необходимости помощь доступна по телефону 1-866-207-1690 или на информационной стойке.",
+      "source": "torontopearson.com",
+      "url": "https://www.torontopearson.com/en/while-you-are-here/free-wifi"
+    }
+  ]
+}

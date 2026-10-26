@@ -1,0 +1,46 @@
+{
+  "iata": "SVO",
+  "about": "谢列梅捷沃机场位于莫斯科州希姆基。航站楼分为两个综合体：北区（B和C）和南区（D、E、F及Aeroexpress航站楼），两者之间有航站楼间捷运列车。机场运营方：MASH股份公司。",
+  "blocks": {
+    "lounges": {
+      "title": "商务休息室",
+      "hint": "B、C、D区共8个休息室",
+      "text": "国内航班：Rublyov（B，3楼，105–106号登机口旁），Kandinsky和A-klub（B，2楼），Sochi（D，2楼）。国际航班：Malevich（C，3楼，入口在143号登机口旁），Shagal、Alfa Only和Sber（C，3楼）。优先舱位旅客以及Aeroflot Bonus的Gold、Platinum、Infinite和Infinite Pro级别会员可免费进入Rublyov和Malevich。其他旅客每4小时4500 ₽，2岁以下儿童免费。"
+    },
+    "storage": {
+      "title": "行李寄存",
+      "hint": "B、D和Aeroexpress",
+      "text": "收费行李寄存处位于B航站楼（1楼）、D航站楼（−1层）和Aeroexpress航站楼，均在公共区。B航站楼和Aeroexpress航站楼的寄存处全天候开放。首24小时每件700 ₽，之后每天300 ₽。每件重量不超过32公斤，最长存放6个月。"
+    },
+    "sleep": {
+      "title": "休息住宿",
+      "hint": "B、C及列车站旁的胶囊",
+      "text": "B航站楼的GettSleep：3楼公共区，货币兑换点旁，无需登机牌。C航站楼的GettSleep：3楼国际隔离区，Orion休息室旁，仅限持国际航班登机牌的旅客。另一家GettSleep位于Aeroexpress航站楼3楼。均全天候营业，按小时收费，4小时起。"
+    },
+    "kids": {
+      "title": "携儿童出行",
+      "hint": "B、C、D：全天候",
+      "text": "母婴室位于B航站楼（1楼）、C航站楼（3楼）和D航站楼（2楼），均在公共区。全天候免费开放。接待携7岁以下儿童（残障儿童为14岁以下）的旅客和孕妇。需携带机票或登机牌以及成人和儿童的证件。"
+    },
+    "transport": {
+      "title": "交通方式",
+      "hint": "Aeroexpress和公交",
+      "text": "Aeroexpress从Belorussky火车站、Savyolovskaya、Okruzhnaya和Lianozovo出发，每30分钟一班，夜间停运。从Belorussky火车站到B和C航站楼46分钟，到D、E、F航站楼61分钟。Aeroexpress快线大巴从Khovrino地铁站（2号出口）发车：1195路开往B和C，1195D路开往D。间隔10–15分钟，车程约20分钟，票价450 ₽。"
+    },
+    "parking": {
+      "title": "停车",
+      "hint": "B、C旁免费10分钟",
+      "text": "驶入B和C航站楼的“到达”和“出发”区免费10分钟，D、E、F前广场免费15分钟。超时每小时罚款4000 ₽。车辆在B和C停车楼旁的“出发”区下客，从那里经有顶连廊步行2分钟到航站楼。两小时内最多可免费进入两次。"
+    },
+    "wifi": {
+      "title": "Wi‑Fi",
+      "hint": "免费Wi-Fi",
+      "text": "免费网络_Sheremetyevo Wi-Fi覆盖整个机场区域。连接时需通过电话号码验证身份：拨打屏幕上的号码，接听回拨电话并输入该号码的最后4位数字，或输入短信验证码。"
+    },
+    "terminals": {
+      "title": "航站楼",
+      "hint": "北区B、C，南区D、E、F",
+      "text": "机场由两个综合体组成：北区（B和C航站楼）和南区（D、E、F航站楼及Aeroexpress航站楼）。两者之间有航站楼间捷运列车，于2024年6月1日恢复运行。也可以按时刻表乘817路和851路公交车或开车往返。"
+    }
+  }
+}

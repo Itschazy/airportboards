@@ -1,0 +1,25 @@
+{
+  "iata": "XMN",
+  "blocks": {
+    "taxi": {
+      "title": "Taxi",
+      "hint": "Porta 7 a T3, porta 3 a T4",
+      "text": "I taxi urbani attendono al livello arrivi, presso la porta automatica 7 di T3 e la porta 3 di T4. Per Quanzhou, Shishi e Zhangzhou sono disponibili taxi dedicati nel parcheggio ovest, circa 120 m a ovest dell’uscita dalla sala arrivi nazionali di T3. Il numero per i reclami, attivo 24 ore su 24, è +86 592 5615610."
+    },
+    "storage": {
+      "title": "Deposito bagagli",
+      "hint": "Sale arrivi di T3 e T4",
+      "text": "I banchi deposito bagagli sono nelle sale arrivi di T3 e T4 e sono aperti dalle 05:30 fino al termine dei voli in arrivo. Il costo è calcolato per periodi di 24 ore; un periodo inferiore a 24 ore viene conteggiato per intero. Telefoni: T3 — +86 592 5706036, T4 — +86 592 5706016."
+    },
+    "wifi": {
+      "title": "Wi-Fi nei terminal",
+      "hint": "Reti gratuite e a pagamento",
+      "text": "Nelle aree passeggeri dei terminal sono disponibili le reti CMCC-XMAirport-free, ChinaUnicom e Chinanet. Il collegamento tramite China Mobile e China Unicom è gratuito, quello tramite China Telecom è a pagamento; le condizioni di pagamento compaiono nella pagina di accesso dell’operatore. Il Wi-Fi è disponibile dall’inizio alla fine dell’attività dei voli."
+    },
+    "lounges": {
+      "title": "Lounge per passeggeri premium",
+      "hint": "Accesso secondo classe e volo",
+      "text": "La lounge dei voli nazionali di T4 si trova a sinistra dopo i controlli, seguendo le indicazioni, ed è gratuita per i passeggeri di prima classe e business dei voli la cui assistenza a terra è svolta dall’aeroporto. Sono inclusi riposo, cibo e Internet; apre alle 06:00 e chiude dopo l’imbarco dell’ultimo passeggero di prima classe. La lounge internazionale dell’aeroporto si trova a T3 presso il gate 17 e offre gli stessi servizi ai passeggeri di prima classe e business dei voli assistiti dall’aeroporto."
+    }
+  }
+}

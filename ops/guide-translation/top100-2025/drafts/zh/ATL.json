@@ -1,0 +1,25 @@
+{
+  "iata": "ATL",
+  "blocks": {
+    "transport": {
+      "title": "交通方式",
+      "hint": "Red与Gold线",
+      "text": "MARTA Airport Station位于Domestic Terminal内，在North与South行李提取区之间。Red线和Gold线通往机场。20:30后，从机场前往Buckhead、Medical Center、Dunwoody、Sandy Springs和North Springs站，可能需要在Lindbergh Center站换乘Red Line。"
+    },
+    "terminals": {
+      "title": "航站楼",
+      "hint": "免费接驳车24小时运营",
+      "text": "免费接驳车从International Terminal到达层前往Domestic Terminal行李提取区。接驳车24小时运营，航站楼之间的车程为15分钟。在Domestic Terminal，乘车点位于行李提取区外。"
+    },
+    "lounges": {
+      "title": "商务休息室",
+      "hint": "The Club ATL",
+      "text": "The Club ATL位于安检后的F候机区Mezzanine层，每日06:00至22:00开放。Club Pass入场费为50 USD，也可通过符合条件的Priority Pass和LoungeKey计划入场。Club Pass持有人可在计划起飞前3小时入场，Priority Pass和LoungeKey会员可在计划起飞前2.5小时入场。未满2岁的儿童免费，2岁起须单独购买通行证；17岁及以下儿童须由年满18岁的成人陪同。"
+    },
+    "sleep": {
+      "title": "休息住宿",
+      "hint": "安检后的Minute Suites",
+      "text": "Minute Suites位于TSA安检后：B候机区B24登机口附近、E候机区中庭及自动扶梯附近，以及F候机区F6登机口附近。房间内有带抽拉睡位的沙发床、Smart TV、免费Wi-Fi、工作台面及充电接口。可按需提供枕头和毯子。预订时长从1小时起，淋浴仅在E候机区提供。"
+    }
+  }
+}

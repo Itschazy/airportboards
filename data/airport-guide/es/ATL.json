@@ -1,0 +1,25 @@
+{
+  "iata": "ATL",
+  "blocks": {
+    "transport": {
+      "title": "Cómo llegar",
+      "hint": "Líneas Red y Gold",
+      "text": "La estación MARTA Airport Station está en Domestic Terminal, entre las zonas de recogida de equipajes North y South. Las líneas Red y Gold llegan al aeropuerto. Después de las 20:30, para viajar desde el aeropuerto a Buckhead, Medical Center, Dunwoody, Sandy Springs y North Springs puede ser necesario cambiar a Red Line en la estación Lindbergh Center."
+    },
+    "terminals": {
+      "title": "Terminales",
+      "hint": "Traslado gratuito las 24 horas",
+      "text": "Un autobús gratuito conecta el nivel de llegadas de International Terminal con la recogida de equipajes de Domestic Terminal. Funciona las 24 horas y el trayecto entre terminales dura 15 minutos. En Domestic Terminal, la parada está fuera de la zona de recogida de equipajes."
+    },
+    "lounges": {
+      "title": "Salas VIP",
+      "hint": "The Club ATL, 06:00–22:00",
+      "text": "The Club ATL está en el vestíbulo F, en el nivel Mezzanine, después del control de seguridad, y abre todos los días de 06:00 a 22:00. La entrada con Club Pass cuesta 50 USD; también se puede acceder con los programas Priority Pass y LoungeKey que cumplan los requisitos. Los titulares de Club Pass pueden entrar 3 horas antes de la salida programada, y los miembros de Priority Pass o LoungeKey, 2,5 horas antes. Los menores de 2 años entran gratis; a partir de los 2 años se necesita un pase propio, y los niños de hasta 17 años inclusive deben ir acompañados de un adulto de 18 años o más."
+    },
+    "sleep": {
+      "title": "Dónde dormir",
+      "hint": "Minute Suites tras el control",
+      "text": "Minute Suites está después del control de seguridad de TSA: en el vestíbulo B, junto a la puerta de embarque B24; en el vestíbulo E, junto al atrio y las escaleras mecánicas; y en el vestíbulo F, junto a la puerta de embarque F6. Las habitaciones tienen sofá cama con una plaza de descanso extraíble, Smart TV, Wi-Fi gratuito, superficie de trabajo y puertos de carga. Las almohadas y mantas se facilitan bajo petición. Las reservas son de un mínimo de 1 hora; solo hay duchas en el vestíbulo E."
+    }
+  }
+}

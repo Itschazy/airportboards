@@ -1,0 +1,25 @@
+{
+  "iata": "DUB",
+  "blocks": {
+    "transport": {
+      "title": "ダブリン行きバス",
+      "hint": "ターミナル付近の乗り場",
+      "text": "Dublin Expressはゾーン1・21からダブリン中心部の停留所へ向かい、Temple Bar、Trinity College、O’Connell Street、Heuston駅などに停車します。Aircoachはゾーン2・20からダブリン、郡内のほかの地域、北アイルランドへ向かいます。Transport for Irelandの路線はゾーン11・13・15から運行します。"
+    },
+    "taxi": {
+      "title": "タクシー",
+      "hint": "両ターミナルの外",
+      "text": "両ターミナルの外で24時間タクシーを利用でき、乗り場には配車係がいます。料金は距離、乗車する日と時刻に応じてメーターで決まり、乗客はメーターの領収書を受け取る権利があります。空港が示すダブリン中心部までの目安は30～45 EURです。"
+    },
+    "storage": {
+      "title": "手荷物サービス",
+      "hint": "Smarte Carte",
+      "text": "Smarte Carteは手荷物保管・包装、旅行用品の販売、手荷物発送を提供しています。窓口はターミナル1到着ロビーの正面入口を入った左側と、ターミナル2出発エリアのAmerican Airlinesチェックインカウンター付近にあります。オフィスの営業時間は毎日05:00～21:00です。両ターミナルの手荷物カートは無料です。"
+    },
+    "wifi": {
+      "title": "Wi-Fiと印刷",
+      "hint": "ネットワーク登録不要",
+      "text": "無料のDublin Airport Wi-Fiは登録不要です。端末の設定で選び、ポップアップ画面のConnectを押してください。印刷はターミナル1到着ロビーのSmarte Carte Baggage Servicesで06:00～19:00に利用でき、20ページまで10 EURです。"
+    }
+  }
+}

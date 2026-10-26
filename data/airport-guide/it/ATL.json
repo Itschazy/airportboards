@@ -1,0 +1,25 @@
+{
+  "iata": "ATL",
+  "blocks": {
+    "transport": {
+      "title": "Come arrivare",
+      "hint": "Linee Red e Gold",
+      "text": "La stazione MARTA Airport Station si trova nel Domestic Terminal, tra le aree ritiro bagagli North e South. Le linee Red e Gold servono l’aeroporto. Dopo le 20:30, per raggiungere dall’aeroporto le stazioni Buckhead, Medical Center, Dunwoody, Sandy Springs e North Springs può essere necessario cambiare sulla Red Line alla stazione Lindbergh Center."
+    },
+    "terminals": {
+      "title": "Terminal",
+      "hint": "Navetta gratuita 24 ore su 24",
+      "text": "Una navetta gratuita collega il livello arrivi dell’International Terminal al ritiro bagagli del Domestic Terminal. Funziona 24 ore su 24 e il viaggio tra i terminal dura 15 minuti. Nel Domestic Terminal la fermata si trova all’esterno dell’area ritiro bagagli."
+    },
+    "lounges": {
+      "title": "Sale business",
+      "hint": "The Club ATL, 06:00–22:00",
+      "text": "The Club ATL si trova nel settore F, al livello Mezzanine, dopo i controlli di sicurezza, ed è aperto tutti i giorni dalle 06:00 alle 22:00. L’ingresso con Club Pass costa 50 USD; è possibile accedere anche con programmi Priority Pass e LoungeKey idonei. I titolari di Club Pass possono entrare 3 ore prima della partenza prevista, mentre i membri Priority Pass o LoungeKey possono entrare 2,5 ore prima. I bambini sotto i 2 anni entrano gratis; dai 2 anni serve un pass separato e fino a 17 anni inclusi occorre essere accompagnati da un adulto di almeno 18 anni."
+    },
+    "sleep": {
+      "title": "Dove dormire",
+      "hint": "Minute Suites dopo i controlli",
+      "text": "Minute Suites si trova dopo i controlli TSA: nel settore B vicino al gate B24, nel settore E vicino all’atrio e alle scale mobili, e nel settore F vicino al gate F6. Le camere hanno divano letto con posto letto estraibile, Smart TV, Wi-Fi gratuito, piano di lavoro e prese di ricarica. Cuscini e coperte sono forniti su richiesta. Le prenotazioni partono da 1 ora; le docce sono disponibili solo nel settore E."
+    }
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "iata": "MSP",
+  "blocks": {
+    "transport": {
+      "title": "METRO Blue Line",
+      "hint": "In città e tra i terminal",
+      "text": "METRO Blue Line ferma presso entrambi i terminal: la corsa per Mall of America dura circa 12 minuti e quella per Warehouse District, nel centro di Minneapolis, circa 25 minuti. Il percorso completo funziona approssimativamente dalle 05:00 a mezzanotte, con corse ogni 15–20 minuti; la tratta tra le stazioni dei terminal è gratuita 24 ore su 24 e non richiede biglietto. L’autobus urbano 54 parte dal Transit Center al livello 1 di Silver Ramp; presso il terminal 2 non ci sono punti di salita sugli autobus urbani."
+    },
+    "taxi": {
+      "title": "Taxi",
+      "hint": "Postazioni in entrambi i terminal",
+      "text": "Nel terminal 1, i cartelli da Tram Level (livello T) indicano i taxi; nel terminal 2 la postazione è nel Ground Transport Center al livello del suolo di Purple Ramp, di fronte al terminal. Il personale aiuta a trovare un taxi ogni giorno dalle 06:00 alle 01:00, mentre negli altri orari resta possibile salire autonomamente. L’aeroporto indica costi medi di 39–49 USD per il centro di Minneapolis e 31–38 USD per il centro di Saint Paul. L’importo iniziale del tassametro, 6,50 USD, comprende lo scatto iniziale di 2,50 USD e il supplemento aeroportuale di 4 USD."
+    },
+    "sleep": {
+      "title": "Aree tranquille per il riposo",
+      "hint": "Dopo i controlli nel terminal 1",
+      "text": "Nel terminal 1, dopo i controlli di sicurezza, ci sono 2 aree tranquille per il riposo al livello Mezzanine con vista su Airport Mall. Si raggiungono salendo di 1 livello tramite scale o ascensore presso gli ingressi dei settori E ed F; sono adatte alla lettura, al riposo, alla meditazione e alla preghiera."
+    },
+    "wifi": {
+      "title": "Wi-Fi gratuito",
+      "hint": "Sessioni di 4 ore",
+      "text": "MSP Airport WiFi è disponibile in tutte le aree pubbliche di entrambi i terminal; al primo collegamento occorre accettare le condizioni d’uso. La sessione gratuita dura 4 ore, poi è possibile avviarne un’altra gratuita. Il numero di sessioni non è limitato."
+    }
+  }
+}

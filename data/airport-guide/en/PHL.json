@@ -1,0 +1,25 @@
+{
+  "iata": "PHL",
+  "blocks": {
+    "transport": {
+      "title": "Train to the city centre",
+      "hint": "SEPTA Airport Regional Rail",
+      "text": "SEPTA Airport Regional Rail trains connect the airport with central Philadelphia every 30 minutes. Airport stops serve Terminals A, B, C/D and E/F; all stations on this line are wheelchair-accessible. At William H. Gray III 30th Street station, you can transfer to Amtrak and NJ Transit Atlantic City Line. SEPTA accepts contactless Visa, Mastercard, Discover and AMEX cards, as well as mobile payments."
+    },
+    "taxi": {
+      "title": "Taxis",
+      "hint": "Zone 5 after baggage claim",
+      "text": "Follow the Ground Transportation / Taxis / Zone 5 signs after baggage claim; passengers arriving in A-West need to go down to Ground Floor. A journey from the airport to the defined Center City zone costs 32 USD for the first passenger, plus 1 USD for each additional passenger over 12. The airport egress fee is not added to this flat rate; tips are not included. All taxis accept credit cards."
+    },
+    "kids": {
+      "title": "Feeding your baby",
+      "hint": "Mamava after security",
+      "text": "Free Mamava pods are available after security in A-West, the B/C connector and Terminals E and F; they have benches, a fold-down table, a power socket and a lockable door. The Mamava app lets you unlock a pod and check its availability. At Minute Suites in the A-East/B connector after security, nursing mothers can use a private room free for the first 30 minutes; phone: +1 215 9371076."
+    },
+    "wifi": {
+      "title": "Free Wi-Fi",
+      "hint": "No data limit",
+      "text": "The airport provides free Wi-Fi from AT&T with no data limit for all visitors. Turn on Wi-Fi in your device settings and select the free PHL airport network; a Wi-Fi-capable device is required to connect."
+    }
+  }
+}
