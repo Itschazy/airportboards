@@ -98,10 +98,11 @@ input::-webkit-search-cancel-button { display: none; }
   overflow: hidden;
   cursor: pointer;
   -webkit-tap-highlight-color: transparent;
-  /* Цвет статуса обведён по всему периметру, а не полосой слева. Контур —
-     внутренняя тень, а не рамка: рамка добавила бы строке 3px высоты и
-     сдвинула бы весь список. Цвет приходит из --row, его ставит строка. */
-  box-shadow: var(--glass-rim), var(--glass-scatter-short), inset 0 0 0 1.5px var(--row, transparent);
+  /* Цвет статуса — полоса слева, как было до редизайна (решение владельца
+     27.10.2026). Полосу рисует flex-ребёнок в разметке строки, а не тень и не
+     рамка: ребёнок слушает направление письма, поэтому на арабском полоса сама
+     уезжает вправо — у box-shadow и border-left логических вариантов нет. */
+  box-shadow: var(--glass-rim), var(--glass-scatter-short);
   transition: background 0.16s ease, box-shadow 0.16s ease;
 }
 /* Размытие у строк включено на всех ширинах. Раньше оно было только с 700px:
@@ -118,7 +119,7 @@ input::-webkit-search-cancel-button { display: none; }
 @media (hover: hover) {
   .frow:hover {
     background: var(--glass);
-    box-shadow: var(--glass-rim), var(--glass-scatter-short), var(--glass-lift-sm), inset 0 0 0 1.5px var(--row, transparent);
+    box-shadow: var(--glass-rim), var(--glass-scatter-short), var(--glass-lift-sm);
   }
 }
 .frow:active { background: var(--glass-dense); }

@@ -1325,11 +1325,12 @@ export function FlightBoard({ airport, locale, defaultMode = 'departures', displ
               className="frow"
               onClick={() => { haptic(); track(GOALS.flightCard, { from: 'row', past: !!f.ts && f.ts * 1000 < Date.now() }); setSelected(f); }}
               onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); haptic(); track(GOALS.flightCard, { from: 'keyboard' }); setSelected(f); } }}
-              /* Цвет статуса передаётся переменной, а сам контур рисует CSS.
-                 Инлайновая тень перебила бы правило :hover — у строки пропал
-                 бы подъём под курсором. */
-              style={{ opacity: isPast ? 0.82 : 1, ['--row' as string]: color } as React.CSSProperties}
+              style={{ opacity: isPast ? 0.82 : 1 }}
             >
+              {/* Полоса статуса. Ширина 4px и flexShrink: 0 — у строки
+                  overflow: hidden, и скругление строки обрезает полосу по
+                  своему радиусу, отдельного скругления ей не нужно. */}
+              <div style={{ width: 4, background: color, flexShrink: 0 }} />
 
               {/* Row content */}
               <div style={{ display: 'flex', alignItems: 'center', flex: 1, padding: '18px 16px', gap: 12, minWidth: 0 }}>
