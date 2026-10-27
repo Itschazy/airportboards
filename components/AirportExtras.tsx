@@ -1,9 +1,10 @@
 'use client';
 
 import { useEffect, useState, useRef } from 'react';
+import { DisclosureArrow } from '@/components/DisclosureArrow';
 import Link from 'next/link';
 
-const C = { card: 'var(--ab-0b0b0b)', border: '1px solid var(--ab-1a1a1a)', sub: 'var(--ab-8a8a8a)', green: 'var(--ab-34c759)', blue: 'var(--ab-0a84ff)' };
+const C = { card: 'var(--glass-soft)', border: 'none', sub: 'var(--ab-8a8a8a)', green: 'var(--ab-34c759)', blue: 'var(--ab-0a84ff)' };
 
 // Раньше кнопка исчезала после открытия, и длинную навигацию нельзя было свернуть.
 // Native details работает до гидратации; ссылки и текст всегда остаются в SSR HTML.
@@ -16,7 +17,7 @@ export function MoreInfo({ label, collapseLabel, children }: { label: string; co
         border: '1px solid rgba(var(--ab-ink),0.08)', background: 'rgba(var(--ab-ink),0.03)',
         borderRadius: 14, color: 'var(--ab-ffffff)', fontSize: 15, fontWeight: 600, cursor: 'pointer',
       }}>
-        <span className="disclosure-more">{label}</span><span className="disclosure-less">{collapseLabel}</span><span className="disclosure-arrow" aria-hidden="true">⌄</span>
+        <span className="disclosure-more">{label}</span><span className="disclosure-less">{collapseLabel}</span><DisclosureArrow />
       </summary>
       {children}
     </details>

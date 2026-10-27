@@ -82,10 +82,10 @@ function SearchSection({ label, items, startIndex = 0, active, query, pending = 
             style={{
               width: '100%',
               display: 'flex', alignItems: 'center',
-              gap: 12,
-              padding: '10px 14px',
+              gap: 10,
+              padding: '7px 14px',
               border: 'none',
-              borderBottom: i < items.length - 1 ? '1px solid var(--ab-161616)' : 'none',
+              borderBottom: i < items.length - 1 ? '1px solid rgba(var(--ab-ink),0.06)' : 'none',
               background: isActive ? 'var(--ab-1c1c1e)' : 'transparent',
               color: 'var(--ab-ffffff)',
               cursor: pending ? 'progress' : 'pointer',
@@ -94,8 +94,8 @@ function SearchSection({ label, items, startIndex = 0, active, query, pending = 
             }}
           >
             {/* Flag */}
-            <span style={{ fontSize: 18, flexShrink: 0, width: 24, textAlign: 'center', lineHeight: 1 }}>
-              {flag(a.iso2)}
+            <span style={{ fontSize: 16, flexShrink: 0, width: 22, textAlign: 'center', lineHeight: 1 }}>
+              <span className="locale-flag">{flag(a.iso2)}</span>
             </span>
 
             {/* IATA */}
@@ -103,12 +103,14 @@ function SearchSection({ label, items, startIndex = 0, active, query, pending = 
               {highlight(a.iata, query)}
             </span>
 
-            {/* City + name */}
-            <span style={{ flex: 1, minWidth: 0 }}>
-              <span style={{ fontSize: 14, color: 'var(--ab-e4e4e7)', display: 'block', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>
+            {/* Город и название — в одну строку, а не столбиком: строка выдачи
+                вдвое ниже, и на экран помещается вдвое больше аэропортов.
+                Название приглушено и сжимается первым, город не обрезается. */}
+            <span style={{ flex: 1, minWidth: 0, display: 'flex', alignItems: 'baseline', gap: 8, overflow: 'hidden' }}>
+              <span style={{ fontSize: 14, color: 'var(--ab-e4e4e7)', whiteSpace: 'nowrap', flexShrink: 0 }}>
                 {highlight(a.city, query)}
               </span>
-              <span style={{ fontSize: 11, color: 'var(--ab-6a6a6a)', display: 'block', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>
+              <span className="srch-name" style={{ fontSize: 11.5, color: 'var(--ab-6a6a6a)', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis', minWidth: 0 }}>
                 {highlight(a.name, query)}
               </span>
             </span>
@@ -281,8 +283,8 @@ export function AirportSearch({ locale, placeholder }: { locale: string; placeho
       {/* Input */}
       <div style={{ position: 'relative' }}>
         <svg
-          width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"
-          style={{ position: 'absolute', insetInlineStart: 14, top: '50%', transform: 'translateY(-50%)', pointerEvents: 'none' }}
+          width="19" height="19" viewBox="0 0 16 16" fill="none" aria-hidden="true"
+          style={{ position: 'absolute', insetInlineStart: 20, top: '50%', transform: 'translateY(-50%)', pointerEvents: 'none', zIndex: 1 }}
         >
           <circle cx="6.5" cy="6.5" r="4" stroke={focused ? 'var(--ab-8a8a8a)' : 'var(--ab-4a4a4a)'} strokeWidth="1.5"/>
           <path d="M10 10L13.5 13.5" stroke={focused ? 'var(--ab-8a8a8a)' : 'var(--ab-4a4a4a)'} strokeWidth="1.5" strokeLinecap="round"/>
@@ -309,18 +311,7 @@ export function AirportSearch({ locale, placeholder }: { locale: string; placeho
           onKeyDown={onKey}
           onFocus={onFocus}
           onBlur={onBlur}
-          style={{
-            width: '100%',
-            padding: '14px 40px 14px 40px',
-            fontSize: 16,
-            border: `1px solid ${focused ? 'var(--ab-333333)' : 'var(--ab-1a1a1a)'}`,
-            borderRadius: 16,
-            outline: 'none',
-            background: 'var(--ab-0b0b0b)',
-            color: 'var(--ab-ffffff)',
-            WebkitAppearance: 'none',
-            transition: 'border-color 0.15s',
-          }}
+          className="glass search-pill"
         />
 
         {query && (
@@ -332,7 +323,7 @@ export function AirportSearch({ locale, placeholder }: { locale: string; placeho
             onMouseDown={e => e.preventDefault()}
             onClick={() => { setQuery(''); setActive(-1); inputRef.current?.focus(); }}
             style={{
-              position: 'absolute', insetInlineEnd: 4, top: '50%', transform: 'translateY(-50%)',
+              position: 'absolute', insetInlineEnd: 8, top: '50%', transform: 'translateY(-50%)', zIndex: 1,
               background: 'transparent', border: 'none', borderRadius: '50%',
               width: 44, height: 44, cursor: 'pointer',
               display: 'flex', alignItems: 'center', justifyContent: 'center', padding: 0,
@@ -351,7 +342,7 @@ export function AirportSearch({ locale, placeholder }: { locale: string; placeho
         // её договора — список с ролью listbox, строки с ролью option и указатель на
         // активную — отсутствовала целиком. Программа чтения слышала «поле со списком»
         // и не находила списка.
-        <div id="ap-listbox" role="listbox" aria-label={placeholder} aria-busy={pending} style={{
+        <div id="ap-listbox" className="srch-list" role="listbox" aria-label={placeholder} aria-busy={pending} style={{
           position: 'absolute',
           top: 'calc(100% + 6px)',
           left: 0, right: 0,
@@ -364,6 +355,9 @@ export function AirportSearch({ locale, placeholder }: { locale: string; placeho
           // ни одного доступного города. Минимум88px вмещает заголовок и строку;
           // длинная выдача всё ещё прокручивается внутри, страница — снаружи.
           maxHeight: 'min(480px, max(88px, calc(100dvh - 220px)))',
+          /* Прокрутка не уходит на страницу, когда список кончился: иначе
+             колесо «пробивало» выдачу и уводило страницу под ней. */
+          overscrollBehavior: 'contain',
           zIndex: 100,
           boxShadow: '0 20px 60px rgba(0,0,0,0.8)',
         }}>

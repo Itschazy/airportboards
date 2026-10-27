@@ -126,7 +126,7 @@ export default async function EventPage({ params }: Props) {
 
   const sub = { fontSize: 15, lineHeight: 1.65, color: 'var(--ab-b4b4b4)' } as const;
   const h2s = { margin: '0 0 12px', fontSize: 13, fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.12em', color: 'var(--ab-8a8a8a)' } as const;
-  const card = { background: 'var(--ab-0b0b0b)', border: '1px solid var(--ab-1a1a1a)', borderRadius: 16, padding: '16px 18px' } as const;
+  const card = { background: 'var(--glass-soft)', boxShadow: 'var(--glass-rim)', borderRadius: 16, padding: '16px 18px' } as const;
 
   const notice =
     status === 'cancelled' ? { text: tE('cancelled'), color: 'var(--ab-ff453a)' }

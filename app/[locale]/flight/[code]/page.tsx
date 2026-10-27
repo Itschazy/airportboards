@@ -91,7 +91,7 @@ export default async function FlightPage({ params }: Props) {
   };
 
   const Card = ({ label, value }: { label: string; value: string }) => (
-    <div style={{ background: 'var(--ab-0b0b0b)', border: '1px solid var(--ab-1a1a1a)', borderRadius: 14, padding: '14px 16px', minWidth: 0 }}>
+    <div style={{ background: 'var(--glass-soft)', boxShadow: 'var(--glass-rim)', borderRadius: 16, padding: '14px 16px', minWidth: 0 }}>
       <div style={{ fontSize: 11, fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--ab-8a8a8a)' }}>{label}</div>
       <div style={{ fontSize: 22, fontWeight: 700, color: 'var(--ab-ffffff)', marginTop: 6, whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>{value}</div>
     </div>

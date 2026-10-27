@@ -29,7 +29,7 @@ export default async function NotFound() {
       <div style={{ fontSize: 12, fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.12em', color: 'var(--ab-8a8a8a)', margin: '32px 0 12px' }}>{tNav('popular')}</div>
       <div style={{ display: 'flex', flexWrap: 'wrap', gap: 8 }}>
         {popular.map(a => (
-          <Link key={a.iata} href={`/${locale}/airport/${a.iata}`} style={{ background: '#0B0B0B', border: '1px solid var(--ab-1a1a1a)', borderRadius: 12, padding: '9px 14px', fontSize: 14, color: 'var(--ab-e4e4e7)', textDecoration: 'none', display: 'flex', gap: 8 }}>
+          <Link key={a.iata} href={`/${locale}/airport/${a.iata}`} style={{ background: 'var(--glass-soft)', boxShadow: 'var(--glass-rim)', borderRadius: 999, padding: '9px 14px', fontSize: 14, color: 'var(--ab-e4e4e7)', textDecoration: 'none', display: 'flex', gap: 8 }}>
             <span style={{ fontWeight: 700, color: 'var(--ab-0a84ff)' }}>{a.iata}</span>
             {/* Город ПЕРЕВЕДЁННЫЙ: на русской странице чипы были подписаны «New York»,
                 «London», «Paris», хотя переводы в data/city-names.json есть и главная

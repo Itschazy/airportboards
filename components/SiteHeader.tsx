@@ -4,13 +4,19 @@ import { ThemeSwitcher } from './ThemeSwitcher';
 import { usePathname } from 'next/navigation';
 import { useState, useRef, useEffect } from 'react';
 import { useTranslations } from 'next-intl';
-import { locales, localeNames, type Locale } from '@/lib/i18n';
+import { locales, localeNames, localeFlags, type Locale } from '@/lib/i18n';
 
 export function SiteHeader({ locale }: { locale: Locale }) {
   const pathname = usePathname();
   const tNav = useTranslations('nav');
   const [open, setOpen] = useState(false);
   const ref = useRef<HTMLDivElement>(null);
+
+  /* На главной логотип в шапке не нужен: прямо под ней стоит крупная подпись
+     с тем же названием, и ссылка вела бы на страницу, где мы уже находимся.
+     Место всё равно занимается пустышкой — сетка шапки рассчитана на три
+     ячейки, и без неё выбор языка переехал бы в середину. */
+  const isHome = pathname === `/${locale}` || pathname === `/${locale}/`;
 
   const getLocalePath = (l: string) =>
     pathname.replace(new RegExp(`^/${locale}(?=/|$)`), `/${l}`);
@@ -30,55 +36,49 @@ export function SiteHeader({ locale }: { locale: Locale }) {
     };
   }, []);
 
+  // Геометрия и стекло — в .site-header/.glass-bar (globals.css): нужны
+  // @supports и медиазапросы доступности, инлайновый стиль их не умеет.
   return (
-    <header style={{
-      position: 'sticky', top: 0, zIndex: 50,
-      background: 'var(--ab-050505)',
-      borderBottom: '1px solid var(--ab-1a1a1a)',
-    }}>
-      <div style={{
-        maxWidth: 960, margin: '0 auto',
-        padding: '0 16px', height: 48,
-        display: 'flex', alignItems: 'center',
-      }}>
-        {/* alignSelf stretch, not padding: the link is itself a centred flex box, so filling
-            the 48px bar moves the target from 22.5px to 48px and the wordmark not at all. */}
-        <Link href={`/${locale}`} style={{
-          fontSize: 14, fontWeight: 700,
-          color: 'var(--ab-ffffff)', letterSpacing: '-0.01em',
-          display: 'flex', alignItems: 'center', gap: 6, alignSelf: 'stretch',
-        }}>
-          <span style={{ fontSize: 15 }} aria-hidden="true">✈</span>
-          airportsboard
-        </Link>
-
-        <div style={{ flex: 1 }} />
-
+    <header className="site-header">
+      <div className="hdr-row">
         <ThemeSwitcher />
+        {isHome ? <span /> : (
+          <Link href={`/${locale}`} className="hdr-pill glass" style={{
+            fontSize: 17, fontWeight: 700,
+            color: 'var(--ab-ffffff)', letterSpacing: '-0.01em',
+            gap: 8, padding: '0 20px',
+          }}>
+            <span style={{ fontSize: 19 }} aria-hidden="true">✈</span>
+            airportsboard
+          </Link>
+        )}
+
         {/* Globe language selector */}
-        <div ref={ref} style={{ position: 'relative' }}>
+        <div ref={ref} style={{ position: 'relative', flexShrink: 0 }}>
           <button
             onClick={() => setOpen(o => !o)}
             aria-haspopup="menu"
             aria-expanded={open}
             aria-label={`${tNav('language')}: ${localeNames[locale]}`}
+            className="hdr-pill hdr-pill-btn glass"
             style={{
-              display: 'flex', alignItems: 'center', gap: 5,
+              gap: 7,
               // 44, а не 40: шапка высотой 48, поднять можно бесплатно и ничего не сдвигая.
-          // Меню ниже ограничено видимой высотой и прокручивается: все 12 языков
-          // доступны даже на телефоне в альбомной ориентации.
-          padding: '11px 12px', minHeight: 44,
-              borderRadius: 8,
-              border: `1px solid ${open ? 'var(--ab-3a3a3c)' : 'var(--ab-1a1a1a)'}`,
-              background: open ? 'var(--ab-1c1c1e)' : 'transparent',
+              // Меню ниже ограничено видимой высотой и прокручивается: все 12 языков
+              // доступны даже на телефоне в альбомной ориентации.
+              padding: '0 18px',
               color: 'var(--ab-8a8a8a)',
-              fontSize: 12, fontWeight: 600,
-              cursor: 'pointer', letterSpacing: '0.02em',
+              fontSize: 14, fontWeight: 600,
+              letterSpacing: '0.02em',
             }}
           >
-            <span style={{ fontSize: 13 }} aria-hidden="true">🌐</span>
+            {/* Флаг текущего языка вместо глобуса: глобус говорит лишь «здесь
+                языки», а флаг сразу показывает, какой выбран. Для скринридера
+                он скрыт — выбранный язык уже назван в aria-label кнопки. */}
+            <span aria-hidden="true" className="locale-flag" style={{ fontSize: 21, lineHeight: 1 }}>
+              {localeFlags[locale]}
+            </span>
             {locale.toUpperCase()}
-            <span style={{ fontSize: 10, opacity: 0.6, marginInlineStart: 1 }} aria-hidden="true">▾</span>
           </button>
 
           {/* Rendered whether or not the menu is open, hidden with CSS instead of omitted.
@@ -86,18 +86,14 @@ export function SiteHeader({ locale }: { locale: Locale }) {
               half of why eleven language trees had no inbound link anywhere (see the note on
               the language row in SiteFooter). A crawler reads the markup, not the click. */}
           {(
-            <div role="menu" aria-hidden={!open} style={{
+            <div role="menu" aria-hidden={!open} className="glass-menu glass-dense" style={{
               display: open ? 'block' : 'none',
-              position: 'absolute', top: 'calc(100% + 6px)', insetInlineEnd: 0,
-              background: 'var(--ab-111111)',
-              border: '1px solid var(--ab-1a1a1a)',
-              borderRadius: 12,
+              position: 'absolute', top: 'calc(100% + 10px)', insetInlineEnd: 0,
               // На экране 667×375 меню заканчивалось на539px: нижние языки
               // были недоступны. Скроллер сохраняет размер пунктов для пальца.
-              maxHeight: 'calc(100dvh - 64px)', overflowY: 'auto', overscrollBehavior: 'contain',
+              maxHeight: 'calc(100dvh - 84px)', overflowY: 'auto', overscrollBehavior: 'contain',
               zIndex: 100,
               minWidth: 168,
-              boxShadow: '0 12px 40px rgba(0,0,0,0.7)',
             }}>
               {locales.map((loc, i) => (
                 <Link
@@ -108,13 +104,20 @@ export function SiteHeader({ locale }: { locale: Locale }) {
                     display: 'flex', alignItems: 'center', justifyContent: 'space-between',
                     padding: '10px 14px', minHeight: 44,
                     fontSize: 13,
-                    borderBottom: i < locales.length - 1 ? '1px solid var(--ab-1a1a1a)' : 'none',
+                    borderBottom: i < locales.length - 1 ? '1px solid rgba(var(--ab-ink),0.07)' : 'none',
                     color: loc === locale ? 'var(--ab-ffffff)' : 'var(--ab-8a8a8a)',
                     fontWeight: loc === locale ? 600 : 400,
                     background: loc === locale ? 'rgba(10,132,255,0.08)' : 'transparent',
                   }}
                 >
-                  <span>{localeNames[loc]}</span>
+                  <span style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
+                    {/* Флаг — метка для глаза; для скринридера он лишний шум,
+                        название языка рядом и так читается. */}
+                    <span aria-hidden="true" className="locale-flag" style={{ fontSize: 15, lineHeight: 1, width: 20 }}>
+                      {localeFlags[loc]}
+                    </span>
+                    {localeNames[loc]}
+                  </span>
                   {loc === locale && (
                     <span style={{ color: 'var(--ab-0a84ff)', fontSize: 13 }}>✓</span>
                   )}

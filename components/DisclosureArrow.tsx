@@ -1,0 +1,27 @@
+/** Стрелка «развернуть» у <details>.
+ *
+ * Была символом «⌄»: шрифт рисует его мелким, смещённым от базовой линии и
+ * по-разному на разных системах — рядом с подписью он выглядел случайной
+ * галочкой. Вектор даёт одинаковый шеврон везде, его толщину и размер видно
+ * в коде, а цвет наследуется от подписи.
+ *
+ * Поворот на 180° при открытии и цвет задаёт .disclosure-arrow в globals.css.
+ */
+export function DisclosureArrow() {
+  return (
+    <svg
+      className="disclosure-arrow"
+      width="14"
+      height="14"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1.9"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      aria-hidden="true"
+    >
+      <path d="M6 9.5 12 15.5 18 9.5" />
+    </svg>
+  );
+}

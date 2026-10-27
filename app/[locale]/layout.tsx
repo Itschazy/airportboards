@@ -7,6 +7,7 @@ import { clientMessages } from '@/lib/client-messages';
 import { notFound } from 'next/navigation';
 import { locales, rtlLocales, numLocale, type Locale } from '@/lib/i18n';
 import { SiteHeader } from '@/components/SiteHeader';
+import { RowScroll } from '@/components/RowScroll';
 import { SiteFooter } from '@/components/SiteFooter';
 import { YandexMetrica } from '@/components/YandexMetrica';
 import { Analytics, GA_ID } from '@/components/Analytics';
@@ -103,6 +104,7 @@ export default async function LocaleLayout({
             восточными. Одна страница — две системы счисления. */}
         <NextIntlClientProvider locale={numLocale(locale)} messages={clientMessages(messages)}>
           <SiteHeader locale={locale as Locale} />
+          <RowScroll />
           <main style={{ flex: '1 0 auto', width: '100%' }}>{children}</main>
           <SiteFooter locale={locale as Locale} />
           {/* Both overlays are OFF while AdSense review is pending (2026-08-03 rejection:

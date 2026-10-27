@@ -56,7 +56,7 @@ const FRESH_WINDOW_MS = 10 * 60 * 1000;
 
 const C = {
   bg:        'var(--ab-050505)',
-  surface:   'var(--ab-0b0b0b)',
+  surface:   'var(--glass-soft)',
   border:    'var(--ab-1a1a1a)',
   text:      'var(--ab-ffffff)',
   secondary: 'var(--ab-8a8a8a)',
@@ -522,43 +522,62 @@ function BottomSheet({ flight: selectedFlight, mode, onClose, tz, locale, clockM
       status === 'delayed' ? t('notice_delayed') :
       (status === 'ontime' || status === 'scheduled') ? t('notice_ontime') : null;
 
-    const heroMainSize = hero.medium ? 30 : (hero.main.length > 8 ? 36 : hero.main.length > 5 ? 44 : 52);
+    const heroMainSize = hero.medium ? 24 : (hero.main.length > 8 ? 28 : hero.main.length > 5 ? 34 : 40);
 
     body = (
-      <div style={{ padding: '4px 24px calc(28px + env(safe-area-inset-bottom))' }}>
+      <div style={{ padding: '2px 20px calc(18px + env(safe-area-inset-bottom))' }}>
 
         {/* Header — status pill on its own line above the (large) flight number,
             so long localized labels (ПОСЛЕДНИЙ ВЫЗОВ…) never collide with it */}
-        <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start', gap: 14 }}>
-          <div style={{ display: 'inline-flex', alignItems: 'center', gap: 6, padding: '7px 13px', borderRadius: 999, background: `color-mix(in srgb, ${color} 12.156862745098039%, transparent)`, border: `1px solid color-mix(in srgb, ${color} 34.90196078431372%, transparent)`, maxWidth: '100%' }}>
-            <div style={{ width: 7, height: 7, borderRadius: '50%', background: color, flexShrink: 0 }} />
-            <span style={{ fontSize: 12, fontWeight: 700, color, letterSpacing: '0.08em', textTransform: 'uppercase' }}>{statusLabel}</span>
+        <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start', gap: 10 }}>
+          {/* Крестик стоит в одной строке со статусом, а не в отдельной
+              полосе сверху: та держала пустое стекло высотой 60px над
+              содержимым. Полоса осталась только как область перетаскивания
+              пальцем — жесты висят на ней, поэтому перенос кнопки их не
+              затрагивает. */}
+          <div style={{ display: 'flex', alignItems: 'center', gap: 10, width: '100%' }}>
+            <div style={{ display: 'inline-flex', alignItems: 'center', gap: 6, padding: '7px 13px', borderRadius: 999, background: `color-mix(in srgb, ${color} 12.156862745098039%, transparent)`, border: `1px solid color-mix(in srgb, ${color} 34.90196078431372%, transparent)`, minWidth: 0 }}>
+              <div style={{ width: 7, height: 7, borderRadius: '50%', background: color, flexShrink: 0 }} />
+              <span style={{ fontSize: 12, fontWeight: 700, color, letterSpacing: '0.08em', textTransform: 'uppercase', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>{statusLabel}</span>
+            </div>
+            <button type="button" onClick={onClose} aria-label={tNav('close')}
+              style={{ display: 'flex', alignItems: 'center', justifyContent: 'center',
+                width: 40, height: 40, flexShrink: 0, marginInlineStart: 'auto', padding: 0, color: C.text,
+                borderRadius: 999, background: 'var(--glass-soft)', boxShadow: 'var(--glass-rim)',
+                border: 'none', cursor: 'pointer' }}>
+              {/* Вектор вместо знака «×»: у шрифтового крестика нет ни толщины,
+                  ни выравнивания — он висел выше базовой линии. */}
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                   strokeWidth="1.7" strokeLinecap="round" aria-hidden="true">
+                <path d="M6.5 6.5 17.5 17.5M17.5 6.5 6.5 17.5" />
+              </svg>
+            </button>
           </div>
           <div style={{ minWidth: 0, width: '100%' }}>
-            <div style={{ fontSize: 'clamp(46px, 14vw, 66px)', fontWeight: 800, letterSpacing: '-0.04em', color: C.text, lineHeight: 0.95, wordBreak: 'break-word' }}>{flight.flight}</div>
-            <div style={{ fontSize: 'clamp(22px, 6.5vw, 30px)', color: 'var(--ab-a1a1a1)', marginTop: 12, lineHeight: 1.15 }}>{flight.destination || flight.origin}</div>
-            <div style={{ fontSize: 22, color: C.text, fontWeight: 600, marginTop: 6 }}>{flight.airline}</div>
+            <div style={{ fontSize: 'clamp(32px, 9vw, 42px)', fontWeight: 800, letterSpacing: '-0.04em', color: C.text, lineHeight: 0.95, wordBreak: 'break-word' }}>{flight.flight}</div>
+            <div style={{ fontSize: 'clamp(17px, 4.6vw, 21px)', color: 'var(--ab-a1a1a1)', marginTop: 6, lineHeight: 1.15 }}>{flight.destination || flight.origin}</div>
+            <div style={{ fontSize: 15, color: C.text, fontWeight: 600, marginTop: 3 }}>{flight.airline}</div>
           </div>
         </div>
 
-        <div style={{ height: 1, background: 'rgba(var(--ab-ink),0.08)', margin: '18px 0' }} />
+        <div style={{ height: 1, background: 'rgba(var(--ab-ink),0.08)', margin: '14px 0' }} />
 
         {/* Hero card */}
-        <div style={{ background: `color-mix(in srgb, ${color} 10.196078431372548%, transparent)`, border: `1px solid color-mix(in srgb, ${color} 25.098039215686274%, transparent)`, borderRadius: 18, padding: '18px 20px 20px' }}>
+        <div style={{ background: `color-mix(in srgb, ${color} 10.196078431372548%, transparent)`, border: `1px solid color-mix(in srgb, ${color} 25.098039215686274%, transparent)`, borderRadius: 16, padding: '13px 16px 15px' }}>
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', gap: 12 }}>
             <div style={{ minWidth: 0 }}>
-              <div style={{ ...L, marginBottom: 10 }}>{hero.label}</div>
+              <div style={{ ...L, marginBottom: 7 }}>{hero.label}</div>
               <div style={{ fontSize: heroMainSize, fontWeight: 800, letterSpacing: '-0.03em', lineHeight: 1, color, fontVariantNumeric: 'tabular-nums' }}>{hero.main}</div>
-              {hero.sub && <div style={{ fontSize: 15, color: C.secondary, marginTop: 10, textDecoration: hero.subStrike ? 'line-through' : 'none' }}>{hero.sub}</div>}
-              {timeInHero && <div style={{ fontSize: 12, color: C.secondary, opacity: 0.7, marginTop: 8 }}>{dateStr}</div>}
+              {hero.sub && <div style={{ fontSize: 14, color: C.secondary, marginTop: 7, textDecoration: hero.subStrike ? 'line-through' : 'none' }}>{hero.sub}</div>}
+              {timeInHero && <div style={{ fontSize: 12, color: C.secondary, opacity: 0.7, marginTop: 5 }}>{dateStr}</div>}
             </div>
             {hero.icon && <Icon name={hero.icon} />}
           </div>
           {hero.bottom && (
             <>
-              <div style={{ height: 1, background: 'rgba(var(--ab-ink),0.08)', margin: '16px 0' }} />
+              <div style={{ height: 1, background: 'rgba(var(--ab-ink),0.08)', margin: '12px 0' }} />
               <div style={{ ...L, marginBottom: 4 }}>{isDep ? t('departure') : t('arrival')}</div>
-              <div style={{ fontSize: 24, fontWeight: 700, color: C.text, fontVariantNumeric: 'tabular-nums' }}>{hero.bottom}</div>
+              <div style={{ fontSize: 20, fontWeight: 700, color: C.text, fontVariantNumeric: 'tabular-nums' }}>{hero.bottom}</div>
             </>
           )}
         </div>
@@ -567,12 +586,12 @@ function BottomSheet({ flight: selectedFlight, mode, onClose, tz, locale, clockM
             space-between прижимал весь блок значения к низу: дата под временем
             поднимала время выше выхода и терминала (снимок владельца, 18.10.2026).
             Свободное место оставляем снизу, чтобы необязательная дата не двигала цифры. */}
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(92px, 1fr))', gap: 12, marginTop: 24 }}>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(92px, 1fr))', gap: 10, marginTop: 14 }}>
           {blocks.map((b, i) => (
-            <div key={i} style={{ background: 'rgba(var(--ab-ink),0.04)', border: '1px solid rgba(var(--ab-ink),0.08)', borderRadius: 14, padding: '16px', minHeight: 104, display: 'flex', flexDirection: 'column', gap: 10 }}>
+            <div key={i} style={{ background: 'var(--glass-soft)', boxShadow: 'var(--glass-rim)', borderRadius: 'var(--r-card)', padding: '12px 13px', minHeight: 78, display: 'flex', flexDirection: 'column', gap: 6 }}>
               <div style={L}>{b.label}</div>
               <div>
-                <div style={{ fontSize: 24, fontWeight: 700, color: b.valueColor || C.text, lineHeight: 1.05, letterSpacing: '-0.02em', fontVariantNumeric: 'tabular-nums', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>{b.value}</div>
+                <div style={{ fontSize: 20, fontWeight: 700, color: b.valueColor || C.text, lineHeight: 1.05, letterSpacing: '-0.02em', fontVariantNumeric: 'tabular-nums', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>{b.value}</div>
                 {b.strike && <div style={{ fontSize: 12, color: C.secondary, textDecoration: 'line-through', marginTop: 2 }}>{b.strike}</div>}
                 {b.sub && <div style={{ fontSize: 12, color: 'var(--ab-6a6a6a)', marginTop: 4 }}>{b.sub}</div>}
               </div>
@@ -635,7 +654,7 @@ function BottomSheet({ flight: selectedFlight, mode, onClose, tz, locale, clockM
               </div>
             </>
           );
-          const box = { display: 'flex', alignItems: 'center', gap: 12, margin: '18px 0 0', padding: '14px 16px', background: 'rgba(var(--ab-ink),0.03)', border: '1px solid rgba(var(--ab-ink),0.07)', borderRadius: 16 } as const;
+          const box = { display: 'flex', alignItems: 'center', gap: 12, margin: '14px 0 0', padding: '11px 15px', background: 'var(--glass-soft)', boxShadow: 'var(--glass-rim)', borderRadius: 'var(--r-card)' } as const;
           const pair = /^[A-Z]{3}$/i.test(routeFrom.code) && /^[A-Z]{3}$/i.test(routeTo.code);
           if (!pair) return <div style={box}>{strip}</div>;
           return (
@@ -659,7 +678,7 @@ function BottomSheet({ flight: selectedFlight, mode, onClose, tz, locale, clockM
 
         {/* Info notice */}
         {notice && (
-          <div style={{ display: 'flex', gap: 11, alignItems: 'flex-start', marginTop: 18, padding: '14px 16px', background: `color-mix(in srgb, ${color} 5.098039215686274%, transparent)`, border: `1px solid color-mix(in srgb, ${color} 25.098039215686274%, transparent)`, borderRadius: 14 }}>
+          <div style={{ display: 'flex', gap: 11, alignItems: 'flex-start', marginTop: 14, padding: '12px 14px', background: `color-mix(in srgb, ${color} 5.098039215686274%, transparent)`, border: `1px solid color-mix(in srgb, ${color} 25.098039215686274%, transparent)`, borderRadius: 14 }}>
             <svg width="18" height="18" viewBox="0 0 18 18" fill="none" style={{ flexShrink: 0, marginTop: 1 }}><circle cx="9" cy="9" r="8" stroke={color} strokeWidth="1.5" /><path d="M9 5.5v.5M9 8v4" stroke={color} strokeWidth="1.6" strokeLinecap="round" /></svg>
             <span style={{ fontSize: 14, lineHeight: 1.45, color: 'var(--ab-c4c4c4)' }}>{notice}</span>
           </div>
@@ -695,13 +714,18 @@ function BottomSheet({ flight: selectedFlight, mode, onClose, tz, locale, clockM
         style={{
           position: 'fixed', bottom: 0, left: 0, right: 0, zIndex: 201,
           outline: 'none',
-          background: 'var(--ab-111111)', borderTop: '1px solid rgba(var(--ab-ink),0.08)', borderRadius: '32px 32px 0 0',
+          /* Плотное стекло: поверх карточки идёт текст, и на пёстрых обоях
+             лёгкая заливка его не держит. Шва сверху нет — скругление и тень
+             и так отделяют панель от страницы. */
+          background: 'var(--glass-dense)', WebkitBackdropFilter: 'var(--blur)', backdropFilter: 'var(--blur)',
+          boxShadow: 'var(--glass-rim), var(--glass-lift)',
+          borderRadius: '28px 28px 0 0',
           // Drag offsets are written straight to el.style by the rAF handler; the
           // declared transform only encodes open/closed.
           transform: vis ? 'translateY(0)' : 'translateY(100%)',
           transition: 'transform 0.34s cubic-bezier(0.32, 0.72, 0, 1)',
           willChange: vis ? 'transform' : undefined,
-          paddingBottom: 'calc(40px + env(safe-area-inset-bottom))',
+          paddingBottom: 'calc(20px + env(safe-area-inset-bottom))',
           maxHeight: '90dvh', overflowY: 'auto',
           maxWidth: 640, margin: '0 auto',
         }}>
@@ -719,16 +743,10 @@ function BottomSheet({ flight: selectedFlight, mode, onClose, tz, locale, clockM
             if (raf.current) { cancelAnimationFrame(raf.current); raf.current = 0; }
             settleBack();
           }}
-          style={{ position: 'sticky', top: 0, zIndex: 2, background: 'var(--ab-111111)',
-            padding: '8px 16px', touchAction: 'none', borderRadius: '32px 32px 0 0' }}
+          style={{ position: 'sticky', top: 0, zIndex: 2, background: 'var(--glass-dense)',
+            WebkitBackdropFilter: 'var(--blur)', backdropFilter: 'var(--blur)',
+            height: 14, touchAction: 'none', borderRadius: '28px 28px 0 0' }}
         >
-          <button type="button" onClick={onClose} aria-label={tNav('close')}
-            style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between',
-              width: '100%', minHeight: 44, padding: '0 8px', color: C.text,
-              background: 'none', border: 'none', cursor: 'pointer', fontSize: 14 }}>
-            <span aria-hidden="true" style={{ width: 48, height: 5, borderRadius: 3, background: 'rgba(var(--ab-ink),0.22)' }} />
-            <span>{tNav('close')} <span aria-hidden="true" style={{ fontSize: 22, marginInlineStart: 8 }}>×</span></span>
-          </button>
         </div>
         {body}
       </div>
@@ -1307,10 +1325,11 @@ export function FlightBoard({ airport, locale, defaultMode = 'departures', displ
               className="frow"
               onClick={() => { haptic(); track(GOALS.flightCard, { from: 'row', past: !!f.ts && f.ts * 1000 < Date.now() }); setSelected(f); }}
               onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); haptic(); track(GOALS.flightCard, { from: 'keyboard' }); setSelected(f); } }}
-              style={{ opacity: isPast ? 0.7 : 1 }}
+              /* Цвет статуса передаётся переменной, а сам контур рисует CSS.
+                 Инлайновая тень перебила бы правило :hover — у строки пропал
+                 бы подъём под курсором. */
+              style={{ opacity: isPast ? 0.82 : 1, ['--row' as string]: color } as React.CSSProperties}
             >
-              {/* Status bar */}
-              <div style={{ width: 4, background: color, flexShrink: 0 }} />
 
               {/* Row content */}
               <div style={{ display: 'flex', alignItems: 'center', flex: 1, padding: '18px 16px', gap: 12, minWidth: 0 }}>
@@ -1439,16 +1458,25 @@ export function FlightBoard({ airport, locale, defaultMode = 'departures', displ
     // 100dvh keeps the footer from jumping up while a real board loads. With no scheduled
     // service nothing will ever fill it, so reserving a screenful leaves a dead gap between
     // the notice and the rest of the page.
-    <div style={{ background: C.bg, minHeight: bare ? undefined : '100dvh', paddingBottom: bare ? 16 : 'calc(48px + env(safe-area-inset-bottom))' }}>
+    // Обёртка прозрачна: под ней лежат слои фона (пятна + узор), и непрозрачная
+    // заливка их перекрывала. Во встраиваемом виджете (bare) фон остаётся: там
+    // под ним чужая страница, а не наша.
+    <div style={{ background: bare ? C.bg : 'transparent', minHeight: bare ? undefined : '100dvh', paddingBottom: bare ? 16 : 'calc(48px + env(safe-area-inset-bottom))' }}>
 
       {/* ── Airport header — compact. The identity is one line: code + name + clock. The old
           header spent ~380px (a 76px IATA glyph, an always-open search field, two control
           rows and two meta lines) before the first flight row; on a 812px phone the board the
           visitor searched for showed exactly one row. Premium here means the content leads. */}
-      <div style={{ padding: '14px 20px 6px', maxWidth: 960, margin: '0 auto' }}>
+      {/* Шапка аэропорта — стеклянная панель, а не текст прямо на обоях: на
+          пёстром фоне серые вторичные строки читались плохо, а блок не имел
+          границ и сливался с табло под ним. */}
+      {/* Нижний отступ 6, а не 12: у блока вкладок свой отступ сверху, и
+          вместе они давали 18 против 10 у соседних стыков. */}
+      <div style={{ padding: '10px 16px 6px' }}>
+      <div className="ap-head glass">
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', gap: 12 }}>
           <h1 style={{ margin: 0, display: 'flex', alignItems: 'baseline', gap: 10, minWidth: 0, flex: 1 }}>
-            <span style={{ fontSize: 'clamp(30px, 9vw, 38px)', fontWeight: 800, letterSpacing: '-0.03em', lineHeight: 1, color: C.text }}>{airport.iata}</span>
+            <span style={{ fontSize: 'clamp(28px, 8vw, 36px)', fontWeight: 800, letterSpacing: '-0.03em', lineHeight: 1, color: C.text }}>{airport.iata}</span>
             {/* Leading space, deliberately.
                 The two spans are separated visually by the flex `gap`, which is layout only —
                 nothing separates them in the text. So the h1 read as "AERСочи" / "MADMadrid"
@@ -1464,14 +1492,23 @@ export function FlightBoard({ airport, locale, defaultMode = 'departures', displ
             )}
           </h1>
           <div style={{ textAlign: 'end', flexShrink: 0 }}>
-            <div style={{ fontSize: 17, fontWeight: 600, letterSpacing: '-0.01em', fontVariantNumeric: 'tabular-nums', color: C.text, lineHeight: 1 }}>{time}</div>
-            <div style={{ fontSize: 10, color: C.secondary, marginTop: 3, letterSpacing: '0.03em', opacity: 0.55 }}>{t('local_time')}</div>
+            {/* Время — второй по важности элемент шапки после кода аэропорта:
+                по нему сверяются с расписанием. Моноширинные цифры, чтобы
+                строка не дёргалась каждую минуту при смене знаков. */}
+            <div style={{ fontSize: 'clamp(24px, 6.5vw, 30px)', fontWeight: 700, letterSpacing: '-0.02em', fontVariantNumeric: 'tabular-nums', color: C.text, lineHeight: 1 }}>{time}</div>
           </div>
         </div>
 
-        {lead && (
-          <p style={{ fontSize: 13, lineHeight: 1.45, color: C.secondary, margin: '8px 0 0', maxWidth: 620 }}>{lead}</p>
-        )}
+        {/* Подпись «Местное время» ушла из блока с часами на строку описания:
+            под крупными цифрами она висела отдельной мелкой строкой и ломала
+            правый край панели. Здесь она читается как подпись к той же строке,
+            а описание и подпись делят одну линию. */}
+        <div style={{ display: 'flex', alignItems: 'baseline', justifyContent: 'space-between', gap: 14, margin: '10px 0 0' }}>
+          {lead
+            ? <p style={{ fontSize: 13, lineHeight: 1.45, color: C.secondary, margin: 0, maxWidth: 620 }}>{lead}</p>
+            : <span />}
+          <span style={{ fontSize: 11, color: C.secondary, letterSpacing: '0.03em', opacity: 0.6, flexShrink: 0, whiteSpace: 'nowrap' }}>{t('local_time')}</span>
+        </div>
         {statusLine && (
           <p style={{ fontSize: 12.5, lineHeight: 1.45, color: C.text, margin: '5px 0 0', maxWidth: 620, fontVariantNumeric: 'tabular-nums' }}>{statusLine}</p>
         )}
@@ -1504,6 +1541,7 @@ export function FlightBoard({ airport, locale, defaultMode = 'departures', displ
           )}
         </div>}
       </div>
+      </div>
 
       {/* ── Controls: mode tabs + search icon in ONE row; the input expands in place ── */}
       {!bare && <>
@@ -1513,18 +1551,26 @@ export function FlightBoard({ airport, locale, defaultMode = 'departures', displ
             При закрытии фильтр сбрасывается, чтобы не оставлять невидимый запрос. */}
         <div ref={searchControlsRef} className="board-search-controls" data-open={searchOpen}>
           <div className="board-search-modes" inert={searchOpen}>
-            <div style={{ flex: 1, display: 'flex', background: C.surface, border: `1px solid ${C.border}`, borderRadius: 13, padding: 3, gap: 2 }}>
+            <div className="glass" style={{ flex: 1, display: 'flex', borderRadius: 999, padding: 4, gap: 2 }}>
               {(['departures', 'arrivals'] as Mode[]).map(m => {
                 const active = mode === m;
                 return (
                   <button key={m} type="button" aria-pressed={active} className="press" onClick={() => { haptic(); track(GOALS.boardMode, { mode: m }); switchMode(m); }} style={{
                     flex: 1, padding: '10px 0', minHeight: 40, fontSize: 14, fontWeight: 600,
-                    border: 'none', borderRadius: 10, cursor: 'pointer',
-                    background: active ? 'var(--ab-1c1c1e)' : 'transparent', color: active ? C.text : C.secondary,
+                    border: 'none', borderRadius: 999, cursor: 'pointer',
+                    background: active ? 'var(--glass-dense)' : 'transparent', color: active ? C.text : C.secondary,
                     transition: 'all 0.18s ease', letterSpacing: '-0.01em',
                     display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 6,
                   }}>
-                    <span style={{ fontSize: 15 }} aria-hidden="true">{m === 'departures' ? '✈' : '🛬'}</span>
+                    {/* Вектор вместо знаков ✈ и 🛬: второй — цветной эмодзи, он
+                        выбивался из тонкой графики остального интерфейса, а его
+                        вид зависел от системы. */}
+                    <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                         strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                      {m === 'departures'
+                        ? <><path d="M3 21h18" /><path d="M6.5 16.5 4 10.5l2.2-.7 2.2 2.6 3.1.7-2-7.4 2.4-.8 4.2 8.6 4.1 1c1.1.3 1.6 1.2 1.3 2l-15-2.6z" /></>
+                        : <><path d="M3 21h18" /><path d="M20.6 16.2 4.6 12.5l-1-6.3 2.3-.3 2.2 3.6 3.1.8-1-7.6 2.5-.4 3.6 9.1 4 1c1.1.3 1.6 1.2 1.3 2z" /></>}
+                    </svg>
                     {m === 'departures' ? t('departures') : t('arrivals')}
                   </button>
                 );
@@ -1535,11 +1581,11 @@ export function FlightBoard({ airport, locale, defaultMode = 'departures', displ
               aria-label={t('search_placeholder')}
               aria-expanded={searchOpen}
               ref={searchToggleRef}
-              className="press"
+              className="press glass"
               onClick={() => setSearchOpen(true)}
               style={{
-                width: 48, height: 48, flexShrink: 0, display: 'flex', alignItems: 'center', justifyContent: 'center',
-                background: C.surface, border: `1px solid ${C.border}`, borderRadius: 13, cursor: 'pointer',
+                width: 52, height: 52, flexShrink: 0, display: 'flex', alignItems: 'center', justifyContent: 'center',
+                borderRadius: 999, border: 'none', cursor: 'pointer',
               }}
             >
               <IconSearch color={C.secondary} />
@@ -1594,9 +1640,9 @@ export function FlightBoard({ airport, locale, defaultMode = 'departures', displ
           const active = filter === key;
           return (
             <button key={key} type="button" aria-pressed={active} className="press" onClick={() => { haptic(); track(GOALS.boardFilter, { filter: key }); setFilter(key); }} style={{
-              padding: '7px 13px', minHeight: 44, fontSize: 13, fontWeight: active ? 600 : 400,
-              border: active ? 'none' : `1px solid ${C.border}`, borderRadius: 999, cursor: 'pointer',
-              background: active ? C.text : 'transparent', color: active ? 'var(--ab-000000)' : C.secondary,
+              padding: '8px 15px', minHeight: 44, fontSize: 13, fontWeight: active ? 600 : 400,
+              border: 'none', borderRadius: 999, cursor: 'pointer',
+              background: active ? C.text : 'var(--glass-soft)', color: active ? 'var(--ab-000000)' : C.secondary,
               whiteSpace: 'nowrap', flexShrink: 0, transition: 'all 0.15s ease',
             }}>
               {t(`filter_${key}`)}
@@ -1669,9 +1715,15 @@ export function FlightBoard({ airport, locale, defaultMode = 'departures', displ
             Признак вычислялся внутри lib/flights.ts и наружу не отдавался. */}
         {allPast && (
           <div style={{
-            maxWidth: 960, margin: '0 auto 10px', padding: '11px 14px',
-            borderRadius: 12, background: 'rgba(255,159,10,.10)',
-            border: `1px solid color-mix(in srgb, ${C.orange} 26.666666666666668%, transparent)`, color: 'var(--ab-e4e4e7)',
+            maxWidth: 960, margin: '0 auto 10px', padding: '13px 18px',
+            borderRadius: 'var(--r-card)',
+            /* Стекло, как у остальных блоков, плюс янтарный оттенок. Было:
+               плоская заливка без размытия и жёсткая рамка — на обоях
+               предупреждение выглядело наклейкой поверх страницы. */
+            background: 'color-mix(in srgb, rgba(255,159,10,.14) 55%, var(--glass))',
+            WebkitBackdropFilter: 'var(--blur)', backdropFilter: 'var(--blur)',
+            boxShadow: `var(--glass-rim), inset 0 0 0 1px color-mix(in srgb, ${C.orange} 22%, transparent)`,
+            color: 'var(--ab-e4e4e7)',
             fontSize: 14, lineHeight: 1.45,
           }}>
             {t(mode === 'arrivals' ? 'board_all_past_arr' : 'board_all_past_dep', {

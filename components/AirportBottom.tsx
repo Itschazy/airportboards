@@ -328,7 +328,7 @@ export async function AirportBottom({ airport, locale, about, displayName, fligh
   const sec: React.CSSProperties = { marginTop: 36 };
 
   return (
-    <div style={{ background: 'var(--ab-050505)', padding: '0 24px 8px' }}>
+    <div style={{ background: 'transparent', padding: '0 24px 8px' }}>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqLd) }} />
       <div style={{ maxWidth: 720, margin: '0 auto' }}>
 
@@ -384,7 +384,7 @@ export async function AirportBottom({ airport, locale, about, displayName, fligh
                 <p style={{ fontSize: 13, lineHeight: 1.5, color: SUB, margin: '0 0 12px' }}>{t('wiki_routes_note')}</p>
                 <ul style={{ listStyle: 'none', margin: 0, padding: 0, display: 'grid', gap: 10 }}>
                   {wiki.airlines.map(row => (
-                    <li key={row.airline} style={{ background: 'var(--ab-0b0b0b)', border: '1px solid var(--ab-1a1a1a)', borderRadius: 14, padding: '12px 16px' }}>
+                    <li key={row.airline} style={{ background: 'var(--glass-soft)', boxShadow: 'var(--glass-rim)', borderRadius: 'var(--r-card)', padding: '12px 16px' }}>
                       <div style={{ fontSize: 15, fontWeight: 600, color: 'var(--ab-ffffff)' }}>{row.airline}</div>
                       <div style={{ fontSize: 14, color: 'var(--ab-b4b4b4)', marginTop: 4, lineHeight: 1.5 }}>{row.destinations.join(' · ')}</div>
                     </li>
@@ -431,7 +431,7 @@ export async function AirportBottom({ airport, locale, about, displayName, fligh
                 return ' ' + sentence.charAt(0).toLocaleUpperCase(locale) + sentence.slice(1);
               })()}
             </p>
-            <div style={{ overflowX: 'auto', background: 'var(--ab-0b0b0b)', border: '1px solid var(--ab-1a1a1a)', borderRadius: 16, padding: '4px 18px 8px' }}>
+            <div style={{ overflowX: 'auto', background: 'var(--glass-soft)', boxShadow: 'var(--glass-rim)', borderRadius: 'var(--r-card)', padding: '4px 18px 8px' }}>
               <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: 15 }}>
                 <thead>
                   <tr style={{ color: 'var(--ab-8a8a8a)', fontSize: 12, textTransform: 'uppercase', letterSpacing: '0.06em' }}>
@@ -442,7 +442,7 @@ export async function AirportBottom({ airport, locale, about, displayName, fligh
                 </thead>
                 <tbody>
                   {sched.rows.map(r => (
-                    <tr key={r.iata} style={{ borderTop: '1px solid var(--ab-1a1a1a)' }}>
+                    <tr key={r.iata} style={{ borderTop: '1px solid rgba(var(--ab-ink),0.08)' }}>
                       <td style={{ paddingBlock: 11, paddingInlineEnd: 8, paddingInlineStart: 0 }}>
                         {/* Links to an airport page that already exists and is already
                             indexed — this section adds no URLs of its own. */}
@@ -496,7 +496,7 @@ export async function AirportBottom({ airport, locale, about, displayName, fligh
             {ext.guide.transfers.length > 0 && (
               <>
                 <H2>{tUi('guide_transfers')}</H2>
-                <div style={{ overflowX: 'auto', background: 'var(--ab-0b0b0b)', border: '1px solid var(--ab-1a1a1a)', borderRadius: 16, padding: '4px 18px 8px', marginBottom: ext.guide.transit.length ? 22 : 10 }}>
+                <div style={{ overflowX: 'auto', background: 'var(--glass-soft)', boxShadow: 'var(--glass-rim)', borderRadius: 'var(--r-card)', padding: '4px 18px 8px', marginBottom: ext.guide.transit.length ? 22 : 10 }}>
                   <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: 15 }}>
                     <thead>
                       <tr style={{ color: 'var(--ab-8a8a8a)', fontSize: 12, textTransform: 'uppercase', letterSpacing: '0.06em' }}>
@@ -506,7 +506,7 @@ export async function AirportBottom({ airport, locale, about, displayName, fligh
                     </thead>
                     <tbody>
                       {ext.guide.transfers.map((r) => (
-                        <tr key={r.dest} style={{ borderTop: '1px solid var(--ab-1a1a1a)' }}>
+                        <tr key={r.dest} style={{ borderTop: '1px solid rgba(var(--ab-ink),0.08)' }}>
                           <td style={{ paddingBlock: 11, paddingInlineEnd: 8, paddingInlineStart: 0, color: 'var(--ab-e4e4e4)' }}>{r.dest}</td>
                           <td style={{ padding: '11px 0 11px 8px', textAlign: 'end', color: 'var(--ab-b4b4b4)', whiteSpace: 'nowrap', fontVariantNumeric: 'tabular-nums' }}>{r.km} {tUi('guide_km')} · {r.min} {tUi('guide_min')}</td>
                         </tr>
@@ -519,7 +519,7 @@ export async function AirportBottom({ airport, locale, about, displayName, fligh
             {ext.guide.transit.length > 0 && (
               <>
                 <H2>{tUi('guide_transit')}</H2>
-                <div style={{ overflowX: 'auto', background: 'var(--ab-0b0b0b)', border: '1px solid var(--ab-1a1a1a)', borderRadius: 16, padding: '4px 18px 8px' }}>
+                <div style={{ overflowX: 'auto', background: 'var(--glass-soft)', boxShadow: 'var(--glass-rim)', borderRadius: 'var(--r-card)', padding: '4px 18px 8px' }}>
                   <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: 15 }}>
                     <thead>
                       <tr style={{ color: 'var(--ab-8a8a8a)', fontSize: 12, textTransform: 'uppercase', letterSpacing: '0.06em' }}>
@@ -530,7 +530,7 @@ export async function AirportBottom({ airport, locale, about, displayName, fligh
                     </thead>
                     <tbody>
                       {ext.guide.transit.map((r, i) => (
-                        <tr key={`${r.line}:${i}`} style={{ borderTop: '1px solid var(--ab-1a1a1a)' }}>
+                        <tr key={`${r.line}:${i}`} style={{ borderTop: '1px solid rgba(var(--ab-ink),0.08)' }}>
                           {/* The code is the line; the operator is a footnote. Rendering the
                               full signage ("EMT Palma A1 Aeroport–Ciutat") ate the whole
                               width on a phone and pushed the destination — the reason anyone
@@ -579,12 +579,12 @@ export async function AirportBottom({ airport, locale, about, displayName, fligh
             nothing when there's no extended content file for this airport). */}
         {ext?.transport && !(ext.guide && (ext.guide.transfers.length || ext.guide.transit.length)) && (
           <SeoSection title={extLabels.transport}>
-            <div style={{ background: 'var(--ab-0b0b0b)', border: '1px solid var(--ab-1a1a1a)', borderRadius: 16, padding: '16px 18px', fontSize: 15, lineHeight: 1.6, color: 'var(--ab-b4b4b4)' }}>{ext.transport}</div>
+            <div style={{ background: 'var(--glass-soft)', boxShadow: 'var(--glass-rim)', borderRadius: 'var(--r-card)', padding: '16px 18px', fontSize: 15, lineHeight: 1.6, color: 'var(--ab-b4b4b4)' }}>{ext.transport}</div>
           </SeoSection>
         )}
         {ext?.terminals && (
           <SeoSection title={extLabels.terminals}>
-            <div style={{ background: 'var(--ab-0b0b0b)', border: '1px solid var(--ab-1a1a1a)', borderRadius: 16, padding: '16px 18px', fontSize: 15, lineHeight: 1.6, color: 'var(--ab-b4b4b4)' }}>{ext.terminals}</div>
+            <div style={{ background: 'var(--glass-soft)', boxShadow: 'var(--glass-rim)', borderRadius: 'var(--r-card)', padding: '16px 18px', fontSize: 15, lineHeight: 1.6, color: 'var(--ab-b4b4b4)' }}>{ext.terminals}</div>
           </SeoSection>
         )}
         {/* Советы — только на табло ВЫЛЕТА. Текст этого блока весь про отправление: приезжайте
@@ -598,7 +598,7 @@ export async function AirportBottom({ airport, locale, about, displayName, fligh
             его подстраницей: замер 14.08 давал схожесть 0.36 по 12 парам, и она станет ниже. */}
         {ext?.tips && !inbound && (
           <SeoSection title={extLabels.tips}>
-            <div style={{ background: 'var(--ab-0b0b0b)', border: '1px solid var(--ab-1a1a1a)', borderRadius: 16, padding: '16px 18px', fontSize: 15, lineHeight: 1.6, color: 'var(--ab-b4b4b4)' }}>{ext.tips}</div>
+            <div style={{ background: 'var(--glass-soft)', boxShadow: 'var(--glass-rim)', borderRadius: 'var(--r-card)', padding: '16px 18px', fontSize: 15, lineHeight: 1.6, color: 'var(--ab-b4b4b4)' }}>{ext.tips}</div>
           </SeoSection>
         )}
 
@@ -621,7 +621,7 @@ export async function AirportBottom({ airport, locale, about, displayName, fligh
 
           {/* 2. OVERVIEW */}
           <section style={{ marginTop: 24 }}>
-            <div style={{ background: 'var(--ab-0b0b0b)', border: '1px solid var(--ab-1a1a1a)', borderRadius: 20, padding: '20px 22px' }}>
+            <div style={{ background: 'var(--glass-soft)', boxShadow: 'var(--glass-rim)', borderRadius: 'var(--r-card)', padding: '20px 22px' }}>
               <div style={{ fontSize: 30, fontWeight: 800, letterSpacing: '-0.03em', color: 'var(--ab-ffffff)', lineHeight: 1 }}>{airport.iata}{GENERIC_LOCALES.has(locale) ? '' : ` ${t('airport_word')}`}</div>
               <div style={{ fontSize: 16, color: 'var(--ab-b4b4b4)', marginTop: 8 }}>{name}</div>
               <div style={{ fontSize: 14, color: SUB, marginTop: 4 }}>{city}{listSeparator(locale)}{country}{offset ? ` · ${offset}` : ''}</div>
@@ -635,7 +635,7 @@ export async function AirportBottom({ airport, locale, about, displayName, fligh
                 {(['departures', 'arrivals'] as const).map(d => (
                   <Link key={d} href={`/${locale}/airport/${airport.iata}/${d}`} style={{
                     flex: 1, textAlign: 'center', padding: '10px 0', borderRadius: 12,
-                    background: 'var(--ab-0b0b0b)', border: '1px solid var(--ab-1a1a1a)', textDecoration: 'none',
+                    background: 'var(--glass-soft)', boxShadow: 'var(--glass-rim)', textDecoration: 'none',
                     color: 'var(--ab-b4b4b4)', fontSize: 14, fontWeight: 600,
                   }}>
                     {d === 'departures' ? tNav('departures') : tNav('arrivals')}
@@ -653,7 +653,7 @@ export async function AirportBottom({ airport, locale, about, displayName, fligh
                 {routes.map(r => (
                   /* Direction matters in the URL too: /route/A-B is "flights from A to B",
                      so an arrivals board must link origin→here, not here→origin. */
-                  <Link key={r.iata} href={`/${locale}/route/${inbound ? `${r.iata}-${airport.iata}` : `${airport.iata}-${r.iata}`}`} style={{ flexShrink: 0, width: 160, textDecoration: 'none', color: 'inherit', background: 'var(--ab-0b0b0b)', border: '1px solid var(--ab-1a1a1a)', borderRadius: 16, padding: '14px 16px' }}>
+                  <Link key={r.iata} href={`/${locale}/route/${inbound ? `${r.iata}-${airport.iata}` : `${airport.iata}-${r.iata}`}`} style={{ flexShrink: 0, width: 160, textDecoration: 'none', color: 'inherit', background: 'var(--glass-soft)', boxShadow: 'var(--glass-rim)', borderRadius: 'var(--r-card)', padding: '14px 16px' }}>
                     <div style={{ fontSize: 22, fontWeight: 700, color: 'var(--ab-ffffff)', letterSpacing: '-0.02em' }}>{r.iata}</div>
                     <div style={{ fontSize: 13, color: SUB, marginTop: 3, whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>{r.label.replace(/\s*\([A-Z]{3}\)\s*$/, '')}</div>
                     <div style={{ fontSize: 12, color: 'var(--ab-34c759)', marginTop: 10, fontWeight: 600 }}>{t('per_day', { n: r.n })}</div>
@@ -676,7 +676,7 @@ export async function AirportBottom({ airport, locale, about, displayName, fligh
               <H2>{t('airlines_title')}</H2>
               <div style={{ display: 'flex', flexWrap: 'wrap', gap: 8 }}>
                 {airlines.map(al => (
-                  <span key={al.iata} style={{ color: 'var(--ab-e4e4e7)', background: 'var(--ab-0b0b0b)', border: '1px solid var(--ab-1a1a1a)', borderRadius: 12, padding: '9px 14px', fontSize: 14, display: 'flex', alignItems: 'center', gap: 8 }}>
+                  <span key={al.iata} style={{ color: 'var(--ab-e4e4e7)', background: 'var(--glass-soft)', boxShadow: 'var(--glass-rim)', borderRadius: 'var(--r-card)', padding: '9px 14px', fontSize: 14, display: 'flex', alignItems: 'center', gap: 8 }}>
                     <span style={{ fontSize: 12, fontWeight: 700, color: 'var(--ab-0a84ff)' }}>{al.iata}</span>
                     <span style={{ whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis', maxWidth: 180 }}>{al.name}</span>
                   </span>
@@ -692,7 +692,7 @@ export async function AirportBottom({ airport, locale, about, displayName, fligh
               <ul style={{ listStyle: 'none', margin: 0, padding: 0, display: 'flex', flexDirection: 'column', gap: 8 }}>
                 {nearby.map(a => (
                   <li key={a.iata}>
-                    <Link href={`/${locale}/airport/${a.iata}`} style={{ display: 'flex', alignItems: 'center', gap: 12, textDecoration: 'none', color: 'inherit', background: 'var(--ab-0b0b0b)', border: '1px solid var(--ab-1a1a1a)', borderRadius: 14, padding: '12px 16px' }}>
+                    <Link href={`/${locale}/airport/${a.iata}`} style={{ display: 'flex', alignItems: 'center', gap: 12, textDecoration: 'none', color: 'inherit', background: 'var(--glass-soft)', boxShadow: 'var(--glass-rim)', borderRadius: 'var(--r-card)', padding: '12px 16px' }}>
                       <span style={{ fontSize: 16, fontWeight: 700, color: 'var(--ab-0a84ff)', width: 44, flexShrink: 0 }}>{a.iata}</span>
                       <span style={{ flex: 1, minWidth: 0, fontSize: 14, color: 'var(--ab-e4e4e7)', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>{getAirportName(a.iata, locale, a.name)}</span>
                       <span style={{ fontSize: 12, color: SUB, flexShrink: 0 }}>{t('km_away', { km: a.km, iata: airport.iata, deIata })}</span>
@@ -710,7 +710,7 @@ export async function AirportBottom({ airport, locale, about, displayName, fligh
               <H2 href={`/${locale}/airports/${countryInfo.slug}`} viewAll={t('view_all')}>{t('country_air_title', { country, countryIn: esCountryIn(country, locale) })}</H2>
               <div style={{ display: 'flex', gap: 10, overflowX: 'auto', paddingBottom: 4, scrollbarWidth: 'none' }}>
                 {countryAirports.map(a => (
-                  <Link key={a.iata} href={`/${locale}/airport/${a.iata}`} style={{ flexShrink: 0, textDecoration: 'none', color: 'inherit', background: 'var(--ab-0b0b0b)', border: '1px solid var(--ab-1a1a1a)', borderRadius: 16, padding: '12px 16px', minWidth: 96 }}>
+                  <Link key={a.iata} href={`/${locale}/airport/${a.iata}`} style={{ flexShrink: 0, textDecoration: 'none', color: 'inherit', background: 'var(--glass-soft)', boxShadow: 'var(--glass-rim)', borderRadius: 'var(--r-card)', padding: '12px 16px', minWidth: 96 }}>
                     <div style={{ fontSize: 18, fontWeight: 700, color: 'var(--ab-ffffff)' }}>{a.iata}</div>
                     <div style={{ fontSize: 12, color: SUB, marginTop: 3, whiteSpace: 'nowrap' }}>{getCityName(a.city, locale)}</div>
                   </Link>
@@ -724,13 +724,13 @@ export async function AirportBottom({ airport, locale, about, displayName, fligh
             <H2 href={`/${locale}/az/a`} viewAll={t('view_all')}>{t('az_all')}</H2>
             <div style={{ display: 'flex', gap: 7, flexWrap: 'wrap' }}>
               {LETTERS.map(L => (
-                <Link key={L} href={`/${locale}/az/${L.toLowerCase()}`} style={{ width: 36, height: 36, display: 'flex', alignItems: 'center', justifyContent: 'center', borderRadius: 10, border: '1px solid var(--ab-1a1a1a)', background: 'var(--ab-0b0b0b)', textDecoration: 'none', color: 'var(--ab-8a8a8a)', fontSize: 14, fontWeight: 600 }}>{L}</Link>
+                <Link key={L} href={`/${locale}/az/${L.toLowerCase()}`} style={{ width: 36, height: 36, display: 'flex', alignItems: 'center', justifyContent: 'center', background: 'var(--glass-soft)', boxShadow: 'var(--glass-rim)', borderRadius: 'var(--r-card)', textDecoration: 'none', color: 'var(--ab-8a8a8a)', fontSize: 14, fontWeight: 600 }}>{L}</Link>
               ))}
             </div>
           </section>
 
           {/* 9. FOOTER */}
-          <footer style={{ marginTop: 44, paddingTop: 24, borderTop: '1px solid var(--ab-1a1a1a)' }}>
+          <footer style={{ marginTop: 44, paddingTop: 24 }}>
             <div style={{ fontSize: 15, fontWeight: 700, color: 'var(--ab-ffffff)' }}>airportsboard</div>
             <p style={{ fontSize: 13, color: SUB, lineHeight: 1.5, marginTop: 8, maxWidth: 340 }}>{t('footer_tagline', { served: worldServiceCounts().withService })}</p>
             <div style={{ display: 'flex', flexWrap: 'wrap', gap: '10px 18px', marginTop: 16, fontSize: 13 }}>

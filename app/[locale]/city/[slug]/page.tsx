@@ -107,7 +107,7 @@ export default async function CityPage({ params }: Props) {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(itemList) }} />
       <Breadcrumb label={tNav('aria_breadcrumb')} trail={crumbs} />
       <h1 style={{ fontSize: 'clamp(28px, 7vw, 40px)', fontWeight: 800, letterSpacing: '-0.03em', color: 'var(--ab-ffffff)', margin: '0 0 6px' }}>
-        {flag(c.iso2)} {t('city_title', { city, deCity })}
+        <span className="locale-flag">{flag(c.iso2)}</span> {t('city_title', { city, deCity })}
       </h1>
       {/* The honest variant was applied to the <meta> only, so the page carried both claims at
           once: a description saying we have no scheduled-service data, above a paragraph
@@ -123,7 +123,7 @@ export default async function CityPage({ params }: Props) {
           <li key={a.iata}>
             <Link href={`/${locale}/airport/${a.iata}`} style={{
               display: 'flex', alignItems: 'center', gap: 14, textDecoration: 'none', color: 'inherit',
-              background: 'var(--ab-0b0b0b)', border: '1px solid var(--ab-1a1a1a)', borderRadius: 14, padding: '14px 18px',
+              background: 'var(--glass-soft)', boxShadow: 'var(--glass-rim)', borderRadius: 16, padding: '14px 18px',
             }}>
               <span style={{ fontSize: 17, fontWeight: 800, color: 'var(--ab-0a84ff)', width: 48, flexShrink: 0, letterSpacing: '-0.02em' }}>{a.iata}</span>
               <span style={{ flex: 1, minWidth: 0 }}>

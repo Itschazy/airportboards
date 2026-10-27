@@ -22,25 +22,30 @@ export function Breadcrumb({ trail, extra, label }: { trail: Crumb[]; extra?: { 
   const path = trail.slice(0, -1);
   const current = trail[trail.length - 1];
   return (
-    <nav aria-label={label} style={{ maxWidth: 960, margin: '0 auto', padding: '10px 16px 0' }}>
-      <ol style={{
-        display: 'flex', flexWrap: 'wrap', alignItems: 'center', gap: 6,
-        listStyle: 'none', margin: 0, padding: 0, fontSize: 12, color: 'var(--ab-8a8a8a)',
-      }}>
+    /* Крошки — стеклянная капсула, как остальные элементы управления. Прежде
+       это была строка серого текста прямо на обоях: на пёстром фоне она едва
+       читалась, а разделителем служил символ «›», который рисуется шрифтом и
+       висит выше базовой линии. Теперь разделитель векторный, а текущая
+       страница выделена цветом и весом, а не только оттенком. */
+    <nav aria-label={label} className="crumbs-wrap">
+      <ol className="crumbs glass">
         {path.map(c => (
-          <li key={c.item} style={{ display: 'flex', alignItems: 'center', gap: 6 }}>
-            <Link href={c.item} style={{ color: 'var(--ab-8a8a8a)', textDecoration: 'none', minHeight: 24 }}>{c.name}</Link>
-            <span aria-hidden="true">›</span>
+          <li key={c.item}>
+            <Link href={c.item}>{c.name}</Link>
+            <svg data-flip width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                 strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+              <path d="M9.5 5.5 16 12l-6.5 6.5" />
+            </svg>
           </li>
         ))}
-        <li aria-current="page" style={{ color: 'var(--ab-c7c7c7)' }}>{current.name}</li>
-        {/* The sibling link flows inline after the current crumb. marginInlineStart:auto
-            pushed it to the far edge, which on a phone wrapped it onto its own line as a
-            right-aligned orphan — it read as broken layout, not as navigation. */}
+        <li aria-current="page" className="crumbs-current">{current.name}</li>
+        {/* Соседняя ссылка идёт в строке после текущей крошки. marginInlineStart:auto
+            уводил её к дальнему краю, и на телефоне она переносилась на свою
+            строку одинокой справа — это читалось как сломанная вёрстка. */}
         {extra && (
-          <li style={{ display: 'flex', alignItems: 'center', gap: 6 }}>
-            <span aria-hidden="true" style={{ opacity: 0.6 }}>·</span>
-            <Link href={extra.href} style={{ color: 'var(--ab-8a8a8a)', minHeight: 24 }}>{extra.label}</Link>
+          <li>
+            <span aria-hidden="true" style={{ opacity: 0.45 }}>·</span>
+            <Link href={extra.href}>{extra.label}</Link>
           </li>
         )}
       </ol>

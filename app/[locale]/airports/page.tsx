@@ -123,9 +123,9 @@ export default async function AirportsIndexPage({ params }: Props) {
           <li key={c.slug}>
             <Link href={`/${locale}/airports/${c.slug}`} style={{
               display: 'flex', alignItems: 'center', gap: 12, textDecoration: 'none', color: 'inherit',
-              background: 'var(--ab-0b0b0b)', border: '1px solid var(--ab-1a1a1a)', borderRadius: 14, padding: '12px 16px',
+              background: 'var(--glass-soft)', boxShadow: 'var(--glass-rim)', borderRadius: 16, padding: '12px 16px',
             }}>
-              <span style={{ fontSize: 20, flexShrink: 0, width: 26, textAlign: 'center', lineHeight: 1 }}>{flag(c.iso2)}</span>
+              <span className="locale-flag" style={{ fontSize: 20, flexShrink: 0, width: 26, textAlign: 'center', lineHeight: 1 }}>{flag(c.iso2)}</span>
               <span style={{ flex: 1, minWidth: 0, fontSize: 15, color: 'var(--ab-e4e4e7)', fontWeight: 600, whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>{c.name}</span>
               <span style={{ fontSize: 13, color: 'var(--ab-8a8a8a)', flexShrink: 0, fontVariantNumeric: 'tabular-nums' }}>{c.count.toLocaleString(numLocale(locale))}</span>
             </Link>

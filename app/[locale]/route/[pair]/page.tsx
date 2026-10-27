@@ -195,7 +195,7 @@ export default async function RoutePage({ params }: Props) {
         <ul style={{ listStyle: 'none', margin: 0, padding: 0, display: 'flex', flexDirection: 'column', gap: 8 }}>
           {flights.map((f, i) => {
             return (
-            <li key={i} style={{ display: 'flex', alignItems: 'center', gap: 14, background: 'var(--ab-0b0b0b)', border: '1px solid var(--ab-1a1a1a)', borderRadius: 14, padding: '14px 16px', overflow: 'hidden' }}>
+            <li key={i} style={{ display: 'flex', alignItems: 'center', gap: 14, background: 'var(--glass-soft)', boxShadow: 'var(--glass-rim)', borderRadius: 16, padding: '14px 16px', overflow: 'hidden' }}>
               <span style={{ width: 4, alignSelf: 'stretch', background: STATUS_COLOR[f.status] || 'var(--ab-48484a)', borderRadius: 2, flexShrink: 0 }} />
               <span style={{ fontSize: 22, fontWeight: 700, color: f.actual ? 'var(--ab-ff9f0a)' : 'var(--ab-ffffff)', fontVariantNumeric: 'tabular-nums', width: 64, flexShrink: 0 }}>{f.actual || f.scheduled}</span>
               <span style={{ flex: 1, minWidth: 0 }}>

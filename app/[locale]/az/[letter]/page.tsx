@@ -95,8 +95,9 @@ export default async function LetterPage({ params }: Props) {
         {LETTERS.map(x => (
           <Link key={x} href={`/${locale}/az/${x}`} style={{
             width: 34, height: 34, display: 'flex', alignItems: 'center', justifyContent: 'center',
-            borderRadius: 10, border: '1px solid var(--ab-1a1a1a)', textDecoration: 'none',
-            background: x === letter.toLowerCase() ? 'var(--ab-ffffff)' : 'var(--ab-0b0b0b)',
+            borderRadius: 999, textDecoration: 'none',
+            background: x === letter.toLowerCase() ? 'var(--ab-ffffff)' : 'var(--glass-soft)',
+            boxShadow: x === letter.toLowerCase() ? undefined : 'var(--glass-rim)',
             color: x === letter.toLowerCase() ? 'var(--ab-000000)' : 'var(--ab-8a8a8a)', fontSize: 13, fontWeight: 600,
           }}>
             {x.toUpperCase()}
@@ -110,7 +111,7 @@ export default async function LetterPage({ params }: Props) {
         {airports.map(a => (
           <Link key={a.iata} href={`/${locale}/airport/${a.iata}`} style={{
             display: 'flex', alignItems: 'center', gap: 14, textDecoration: 'none', color: 'inherit',
-            background: 'var(--ab-0b0b0b)', border: '1px solid var(--ab-1a1a1a)', borderRadius: 14, padding: '11px 16px',
+            background: 'var(--glass-soft)', boxShadow: 'var(--glass-rim)', borderRadius: 16, padding: '11px 16px',
           }}>
             <span style={{ width: 50, flexShrink: 0, fontSize: 18, fontWeight: 700, color: 'var(--ab-0a84ff)', letterSpacing: '-0.02em' }}>{a.iata}</span>
             <span style={{ flex: 1, minWidth: 0 }}>

@@ -90,17 +90,18 @@ export async function SiteFooter({ locale }: { locale: Locale }) {
 
   return (
     <SiteFooterFrame locale={locale} label={tLegal('about')}>
+      <div className="foot-panel glass">
       <nav style={{ maxWidth: 1000, margin: '0 auto', display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: 28 }} aria-label={tNav('aria_footer')}>
         <div>
           <p style={headStyle}>{t('sec_countries')}</p>
           <ul style={{ listStyle: 'none', margin: 0, padding: 0, display: 'flex', flexWrap: 'wrap', gap: '8px 16px' }}>
             {topCountries.map(c => (
               <li key={c.slug}>
-                <a href={`/${locale}/airports/${c.slug}`} style={linkStyle}>{getCountryName(c.country, locale)}</a>
+                <a href={`/${locale}/airports/${c.slug}`} className="foot-chip">{getCountryName(c.country, locale)}</a>
               </li>
             ))}
             <li>
-              <a href={`/${locale}/airports`} style={{ ...linkStyle, color: 'var(--ab-0a84ff)' }}>{tNav('all_airports')} {forwardArrow(locale)}</a>
+              <a href={`/${locale}/airports`} className="foot-chip foot-chip--accent">{tNav('all_airports')} {forwardArrow(locale)}</a>
             </li>
           </ul>
         </div>
@@ -112,7 +113,7 @@ export async function SiteFooter({ locale }: { locale: Locale }) {
                 {/* A single letter is about 9px wide, so this is the one place in the footer
                     that also fails on the horizontal axis; centring inside 24px keeps the
                     existing 12px column gap and the row reads the same. */}
-                <a href={`/${locale}/az/${x}`} style={{ ...linkStyle, fontWeight: 600, minWidth: 24, textAlign: 'center' }}>{x.toUpperCase()}</a>
+                <a href={`/${locale}/az/${x}`} className="foot-chip foot-chip--letter">{x.toUpperCase()}</a>
               </li>
             ))}
           </ul>
@@ -144,13 +145,7 @@ export async function SiteFooter({ locale }: { locale: Locale }) {
             // набор букв. Для арабского нужен ещё и dir, иначе слово встраивается в LTR-поток.
             lang={loc}
             dir={rtlLocales.includes(loc) ? 'rtl' : 'ltr'}
-            style={{
-              color: loc === locale ? 'var(--ab-ffffff)' : 'var(--ab-8a8a8a)',
-              fontWeight: loc === locale ? 600 : 400,
-              textDecoration: 'none',
-              fontSize: 13,
-              display: 'inline-block', minHeight: 24,   // 24px tap target; see linkStyle above
-            }}
+            className={loc === locale ? 'foot-chip foot-chip--current' : 'foot-chip'}
           >
             {localeNames[loc]}
           </a>
@@ -158,12 +153,13 @@ export async function SiteFooter({ locale }: { locale: Locale }) {
       </nav>
       <nav aria-label={tLegal('legal')} style={{ maxWidth: 1000, margin: '18px auto 0', display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: '8px 20px' }}>
         {legalLinks.map(l => (
-          <a key={l.href} href={l.href} style={{ color: 'var(--ab-8a8a8a)', textDecoration: 'none', fontSize: 13, display: 'inline-block', minHeight: 24 }}>{l.label}</a>
+          <a key={l.href} href={l.href} className="foot-chip">{l.label}</a>
         ))}
       </nav>
       <p style={{ maxWidth: 1000, margin: '20px auto 0', textAlign: 'center', fontSize: 12, color: 'var(--ab-6a6a6a)', lineHeight: 1.5 }}>
         {t('data_note')}
       </p>
+      </div>
     </SiteFooterFrame>
   );
 }

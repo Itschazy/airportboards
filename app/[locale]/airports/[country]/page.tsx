@@ -127,34 +127,49 @@ export default async function CountryPage({ params }: Props) {
     })),
   };
 
+  // Ширина и поля как на остальных страницах: было 720 и 18, из-за чего
+  // колонка не совпадала ни с табло, ни с главной.
   return (
-    <div style={{ maxWidth: 720, margin: '0 auto', padding: '36px 18px 64px' }}>
+    <div style={{ maxWidth: 960, margin: '0 auto', padding: '0 16px 64px' }}>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(itemList) }} />
-      <div style={{ fontSize: 13, color: 'var(--ab-8a8a8a)', marginBottom: 8 }}>
-        <Link href={`/${locale}`} style={{ color: 'var(--ab-6a6a6a)', textDecoration: 'none', display: 'inline-block', minHeight: 24 }}>airportsboard</Link>
-        {' / '}
-        <Link href={`/${locale}/airports`} style={{ color: 'var(--ab-6a6a6a)', textDecoration: 'none', display: 'inline-block', minHeight: 24 }}>{t('sec_countries')}</Link>
-      </div>
-      <h1 style={{ fontSize: 'clamp(30px, 8vw, 42px)', fontWeight: 800, letterSpacing: '-0.03em', color: 'var(--ab-ffffff)', lineHeight: 1.05, margin: 0 }}>
-        <span style={{ marginInlineEnd: 12 }}>{flag(c.iso2)}</span>{t('country_title', { country: countryName, countryIn: esCountryIn(countryName, locale) })}
+      {/* Крошки той же стеклянной капсулой, что на странице аэропорта: здесь
+          они были отдельной строкой серого текста с разделителем «/». */}
+      <nav aria-label={t('sec_countries')} className="crumbs-wrap" style={{ padding: '20px 0 0' }}>
+        <ol className="crumbs glass">
+          <li>
+            <Link href={`/${locale}`}>airportsboard</Link>
+            <svg data-flip width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                 strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+              <path d="M9.5 5.5 16 12l-6.5 6.5" />
+            </svg>
+          </li>
+          <li aria-current="page" className="crumbs-current">{t('sec_countries')}</li>
+        </ol>
+      </nav>
+      {/* Заголовок, счётчик и вводная фраза — одна стеклянная панель, как
+          шапка страницы аэропорта. */}
+      <div className="ap-head glass" style={{ marginTop: 10 }}>
+      <h1 style={{ fontSize: 'clamp(26px, 7vw, 36px)', fontWeight: 800, letterSpacing: '-0.03em', color: 'var(--ab-ffffff)', lineHeight: 1.1, margin: 0 }}>
+        <span className="locale-flag" style={{ marginInlineEnd: 12 }}>{flag(c.iso2)}</span>{t('country_title', { country: countryName, countryIn: esCountryIn(countryName, locale) })}
       </h1>
-      <p style={{ fontSize: 15, color: 'var(--ab-8a8a8a)', marginTop: 12 }}>{t('airports_count', { count: c.count })}</p>
+      <p style={{ fontSize: 14, color: 'var(--ab-8a8a8a)', marginTop: 8 }}>{t('airports_count', { count: c.count })}</p>
       {/* One self-contained, dated sentence — the unit an answer engine lifts verbatim. */}
       {showSplit && (
-        <p style={{ fontSize: 15, lineHeight: 1.55, color: 'var(--ab-c7c7cc)', marginTop: 14, maxWidth: 640 }}>
+        <p style={{ fontSize: 14, lineHeight: 1.55, color: 'var(--ab-c7c7cc)', marginTop: 12, maxWidth: 640 }}>
           {unknown.length
             ? t('country_split_partial', { country: countryName, countryIn: esCountryIn(countryName, locale), count: c.count, served: served.length, date: localizedMeasuredOn(measuredOn!, locale) })
             : t('country_split', { country: countryName, countryIn: esCountryIn(countryName, locale), count: c.count, served: served.length, rest: unserved.length, date: localizedMeasuredOn(measuredOn!, locale) })}
         </p>
       )}
+      </div>
 
       {showSplit && <SectionLabel>{t('grid_served')}</SectionLabel>}
       <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(260px, 1fr))', gap: 8, marginTop: 28 }}>
         {(showSplit ? served : airports).map(a => (
           <Link key={a.iata} href={`/${locale}/airport/${a.iata}`} style={{
             display: 'flex', alignItems: 'center', gap: 14, textDecoration: 'none', color: 'inherit',
-            background: 'var(--ab-0b0b0b)', border: '1px solid var(--ab-1a1a1a)', borderRadius: 14, padding: '11px 16px',
+            background: 'var(--glass-soft)', boxShadow: 'var(--glass-rim)', borderRadius: 16, padding: '10px 14px',
           }}>
             <span style={{ width: 50, flexShrink: 0, fontSize: 18, fontWeight: 700, color: 'var(--ab-0a84ff)', letterSpacing: '-0.02em' }}>{a.iata}</span>
             <span style={{ flex: 1, minWidth: 0 }}>
@@ -178,7 +193,7 @@ export default async function CountryPage({ params }: Props) {
             {unserved.map(a => (
               <Link key={a.iata} href={`/${locale}/airport/${a.iata}`} style={{
                 display: 'flex', alignItems: 'center', gap: 14, textDecoration: 'none', color: 'inherit',
-                background: 'var(--ab-0b0b0b)', border: '1px solid var(--ab-1a1a1a)', borderRadius: 14, padding: '11px 16px',
+                background: 'var(--glass-soft)', boxShadow: 'var(--glass-rim)', borderRadius: 16, padding: '10px 14px',
               }}>
                 <span style={{ width: 50, flexShrink: 0, fontSize: 18, fontWeight: 700, color: 'var(--ab-6a6a6a)', letterSpacing: '-0.02em' }}>{a.iata}</span>
                 <span style={{ flex: 1, minWidth: 0 }}>

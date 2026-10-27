@@ -85,7 +85,7 @@ export function WidgetBuilder({ locale, labels }: { locale: string; labels: Widg
   };
 
   const label = { display: 'block', fontSize: 12, fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.08em', color: 'var(--ab-8a8a8a)', margin: '18px 0 8px' } as const;
-  const input = { width: '100%', background: 'var(--ab-0b0b0b)', border: '1px solid var(--ab-1a1a1a)', borderRadius: 12, padding: '12px 14px', fontSize: 15, color: 'var(--ab-ffffff)' } as const;
+  const input = { width: '100%', background: 'var(--glass-soft)', boxShadow: 'var(--glass-rim)', borderRadius: 'var(--r-card)', padding: '12px 14px', fontSize: 15, color: 'var(--ab-ffffff)' } as const;
 
   return (
     <div>
@@ -95,10 +95,10 @@ export function WidgetBuilder({ locale, labels }: { locale: string; labels: Widg
         onFocus={() => { if (sel) { setSel(null); setQ(''); } }}
         placeholder="LHR, Antalya, Палма…" autoComplete="off" />
       {!sel && hits.length > 0 && (
-        <div style={{ border: '1px solid var(--ab-1a1a1a)', borderRadius: 12, marginTop: 6, overflow: 'hidden' }}>
+        <div style={{ boxShadow: 'var(--glass-rim)', borderRadius: 14, marginTop: 6, overflow: 'hidden' }}>
           {hits.map(h => (
             <button key={h.iata} type="button" onClick={() => { setSel(h); setHits([]); }}
-              style={{ display: 'flex', gap: 10, alignItems: 'baseline', width: '100%', textAlign: 'start', background: 'var(--ab-0b0b0b)', border: 0, borderBottom: '1px solid var(--ab-151515)', padding: '10px 14px', color: 'var(--ab-ffffff)', fontSize: 14, cursor: 'pointer' }}>
+              style={{ display: 'flex', gap: 10, alignItems: 'baseline', width: '100%', textAlign: 'start', background: 'var(--glass-soft)', border: 0, borderBottom: '1px solid rgba(var(--ab-ink),0.07)', padding: '10px 14px', color: 'var(--ab-ffffff)', fontSize: 14, cursor: 'pointer' }}>
               <span style={{ fontWeight: 700 }}>{h.iata}</span>
               <span style={{ color: 'var(--ab-b4b4b4)', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>{h.name}</span>
               <span style={{ color: 'var(--ab-6a6a6a)', marginInlineStart: 'auto', flexShrink: 0 }}>{h.city}</span>
