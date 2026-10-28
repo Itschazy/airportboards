@@ -1,0 +1,34 @@
+// A versioned, independent prototype key never touches production favourites.
+// Commit before updating the UI: quota/private-mode failures must not masquerade
+// as a saved flight. Compare the previous value to reject stale edits in another
+// tab. Imports are validated in full and merged by stable ID, never replacing
+// the current journal. Browser clearing still requires an external JSON backup.
+export const KEY='airportsboard-flight-prototype-v1';
+export const FORMAT='airportsboard-flight-history';
+export const LIMIT=5000, MAX_BYTES=2*1024*1024;
+export function newId(){return 'f_'+Array.from(crypto.getRandomValues(new Uint8Array(16)),x=>x.toString(16).padStart(2,'0')).join('');}
+function today(){const d=new Date();return `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`;}
+export function validate(data,codes){
+ if(!data||data.format!==FORMAT||data.version!==1||!Array.isArray(data.flights))throw Error('Это не резервная копия AirportsBoard поддерживаемой версии.');
+ if(data.flights.length>LIMIT)throw Error('В файле больше 5000 перелётов.');
+ const ids=new Set();return data.flights.map((f,i)=>{
+  const fail=()=>{throw Error(`Перелёт ${i+1}: неверные данные. История не изменена.`);};
+  if(!f||typeof f.id!=='string'||!/^f_[a-zA-Z0-9_-]{1,76}$/.test(f.id)||ids.has(f.id))fail();
+  if(!codes.has(f.from)||!codes.has(f.to)||f.from===f.to||typeof f.number!=='string'||f.number.length>24||/[\x00-\x1f]/.test(f.number))fail();
+  if(typeof f.date!=='string')fail();
+  if(f.date&&(!/^\d{4}-\d{2}-\d{2}$/.test(f.date)||!Number.isFinite(Date.parse(f.date))||new Date(f.date).toISOString().slice(0,10)!==f.date||f.date>today()))fail();
+  ids.add(f.id);return {id:f.id,from:f.from,to:f.to,date:f.date,number:f.number};
+ });
+}
+export function parse(text,codes){if(typeof text!=='string'||new Blob([text]).size>MAX_BYTES)throw Error('Файл слишком большой: максимум 2 МБ.');let d;try{d=JSON.parse(text);}catch{throw Error('Не удалось прочитать JSON. История не изменена.');}return validate(d,codes);}
+export function backup(flights){return JSON.stringify({format:FORMAT,version:1,exportedAt:new Date().toISOString(),flights},null,2);}
+export function merge(current,incoming){const byId=new Map(current.map(f=>[f.id,f]));let added=0,existing=0,conflicts=0;const flights=[...current];for(const f of incoming){const old=byId.get(f.id);if(!old){flights.push(f);byId.set(f.id,f);added++;}else if(['from','to','date','number'].every(k=>old[k]===f[k]))existing++;else conflicts++;}if(flights.length>LIMIT)throw Error('После объединения будет больше 5000 перелётов.');return{flights,added,existing,conflicts};}
+export function createStore(storage,codes){let observed,unreadable=false;
+ return {read(){try{const raw=storage.getItem(KEY);const flights=raw===null?[]:parse(raw,codes);observed=raw;unreadable=false;return flights;}catch(e){unreadable=true;throw e;}},
+ write(flights){if(unreadable)throw Error('Сохранённую историю не удалось прочитать. Она не перезаписана. Сохраните исходный файл в настройках.');
+  let current;try{current=storage.getItem(KEY);}catch{throw Error('Браузер запретил сохранение. Перелёт пока не сохранён.');}
+  if(current!==observed)throw Error('История изменилась в другой вкладке. Закройте форму и откройте её снова.');
+  const clean=validate({format:FORMAT,version:1,flights},codes),raw=backup(clean);
+  try{storage.setItem(KEY,raw);}catch{throw Error('Не удалось сохранить: память браузера недоступна или заполнена. Освободите место и повторите.');}observed=raw;return clean;
+ }};
+}

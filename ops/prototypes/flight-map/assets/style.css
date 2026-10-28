@@ -24,3 +24,13 @@ button:disabled{opacity:.35;cursor:default}select,textarea{font:inherit;color:va
 @media(max-height:650px){#sharePreview svg,#sharePreview img{height:29dvh}#shareDialog .sheet-head h2{font-size:18px}.share-tabs{margin-bottom:6px}.share-options:has(select:not([hidden])){margin-bottom:6px}}
 
 #sharePreview[aria-busy="true"]{position:relative;min-height:160px}#sharePreview[aria-busy="true"]:after{content:'Готовим картинку…';position:absolute;inset:0;display:grid;place-items:center;background:var(--glass-dense);border-radius:14px;color:var(--muted);font-size:13px}
+
+/* Backup actions reuse the existing sheet and controls. A file input covers its
+   visible label to keep keyboard and native mobile file pickers accessible. */
+.backup-entry{text-align:center}.backup-entry button{text-decoration:underline;text-underline-offset:4px}.backup-section{padding-top:0}.backup-section h3{font-size:16px}.backup-section .form-note{text-align:left}.file-label{position:relative;overflow:hidden;cursor:pointer}.file-label input{position:absolute;inset:0;opacity:0;margin:0;cursor:pointer}.file-label:focus-within{outline:2px solid var(--blue)}.restore-summary{font-size:14px;line-height:1.7}#restoreList{padding:14px 0;list-style:none}#restoreList li{font-size:13px;padding:10px 0;border-bottom:1px solid var(--line)}#restoreList small{display:block;color:var(--muted);margin-top:4px}#restoreError,.storage-error{color:var(--ab-ff453a)!important;font-size:13px;line-height:1.5}
+
+/* Only the map surface changes: quieter coastlines, readable city labels and
+   a consistent route hierarchy. The page's existing glass system is untouched. */
+.map-wrap,#fullMapCanvas{background:radial-gradient(ellipse at 45% 45%,rgba(47,100,165,.08),transparent 75%)}
+.land{fill:rgba(var(--ab-ink),.055);stroke:rgba(var(--ab-ink),.15);stroke-width:.6;stroke-linejoin:round}
+.flight-path{stroke-width:1.7;opacity:.95;stroke-linecap:round}.route-halo{fill:none;stroke:var(--glass-solid);stroke-width:5;opacity:.7;vector-effect:non-scaling-stroke;pointer-events:none}.airport-ring{fill:var(--blue);opacity:.12;pointer-events:none}.airport-dot{fill:var(--blue);stroke:var(--glass-solid);stroke-width:1.4}.airport-label{font-weight:650;stroke:var(--glass-solid);pointer-events:none}.airport-city{font-weight:400;fill:var(--ab-e4e4e7)}
