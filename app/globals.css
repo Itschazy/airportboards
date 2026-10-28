@@ -1454,31 +1454,14 @@ body::after {
    по которой на clamp переведены шапка и строка рейса — ступенька на 560px
    давала скачок на промежуточных ширинах, а на 320px выталкивала соседей. */
 
-/* Сердечко в шапке аэропорта. Цель нажатия 44 при значке 22: пустое поле вокруг
-   значка и есть цель, уменьшать её нельзя даже на 320px. */
-.fav-heart {
-  width: clamp(38px, 11vw, 44px);
-  height: clamp(38px, 11vw, 44px);
-  flex-shrink: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border: none;
-  border-radius: var(--r-pill);
-  background: var(--glass-soft);
-  box-shadow: var(--glass-rim);
-  color: var(--ab-8a8a8a);
-  cursor: pointer;
-  -webkit-tap-highlight-color: transparent;
-  transition: color 0.16s ease, background 0.16s ease, transform 0.12s ease;
-}
-/* Включённое состояние — цветом, а не только заливкой: залитое серым по серому
-   отличается от контура слишком слабо, чтобы по нему судить о состоянии. Красный,
-   а не оранжевый прежней звезды: сердце читается красным, и ни одна строка рейса
-   рядом не окрашена — спутать с «отменён» негде, тот цвет живёт только в табло. */
+/* Сердце «в избранное» живёт на кнопке шапки (.hdr-act), поэтому своей геометрии
+   у него нет — только цвет включённого состояния.
+
+   Красный, а не оранжевый: сердце читается красным, и ни одна строка рейса рядом
+   не окрашена — спутать с «отменён» негде, тот цвет живёт только в табло. */
 .fav-heart--on { color: var(--ab-ff453a); }
 @media (hover: hover) {
-  .fav-heart:hover { background: var(--glass-dense); color: var(--ab-ff453a); }
+  .fav-heart:hover { color: var(--ab-ff453a); }
 }
 
 /* ── Страница избранного ──

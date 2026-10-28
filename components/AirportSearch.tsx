@@ -368,18 +368,17 @@ export function AirportSearch({ locale, placeholder }: { locale: string; placeho
    * поставщику не ходит (см. lib/flights.ts). Платный запрос делает уже само табло
    * после открытия.
    *
-   * saveData и 2g пропускаем: там предзагрузка отнимает канал у того, что человек
-   * действительно открыл.
+   * Проверки navigator.connection здесь НЕТ, хотя на медленной связи она была бы
+   * кстати: Safari считает Network Information API отпечатком браузера и при
+   * включённой расширенной защите показывает поверх страницы своё предупреждение.
+   * Ради одного необязательного условия пугать читателя не стоит; греется и так
+   * ровно один адрес.
    */
   const warmed = useRef(new Set<string>());
   useEffect(() => {
     if (!showList) return;
     const pick = navList[active] ?? navList[0];
     if (!pick) return;
-    try {
-      const c = (navigator as unknown as { connection?: { saveData?: boolean; effectiveType?: string } }).connection;
-      if (c?.saveData || (c?.effectiveType && /2g/.test(c.effectiveType))) return;
-    } catch { /* нет Network Information API — греем как обычно */ }
     const href = `/${locale}/airport/${pick.iata}`;
     if (warmed.current.has(href)) return;
     warmed.current.add(href);

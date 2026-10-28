@@ -1,7 +1,9 @@
 'use client';
 
 import Link from 'next/link';
-import { useCallback, useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
+import { usePathname } from 'next/navigation';
+import { isFavorite, toggleFavorite, subscribeFavorites } from '@/lib/favorites';
 import { useTranslations } from 'next-intl';
 import { GOALS, track } from '@/lib/track';
 import type { Locale } from '@/lib/i18n';
@@ -9,12 +11,19 @@ import type { Locale } from '@/lib/i18n';
 /**
  * Две круглые кнопки по бокам названия в шапке: «Поделиться» слева, избранное справа.
  *
- * Клиентский компонент только ради «Поделиться» — оно трогает navigator.share и буфер
- * обмена. Сердце рядом с ним обычная ссылка и могло бы остаться серверной, но тогда
- * пришлось бы заводить второй компонент ради одной строки разметки.
+ * Сердце ЗНАЕТ, где оно стоит. На странице аэропорта это переключатель: добавляет
+ * именно этот аэропорт и заливается, когда он уже в списке. На всех остальных —
+ * ссылка на сам список. Иначе пришлось бы держать две одинаковые на вид кнопки в
+ * двух сантиметрах друг от друга (так и было до 28.10.2026: одна в шапке, другая в
+ * карточке аэропорта), и человек нажимал бы не ту.
  *
- * Для поиска это +1 ссылка на страницу, и НАБОР адресов не меняется: на /favorites уже
- * ведёт нижняя панель. То есть вес страницы распределяется между теми же адресами.
+ * Код аэропорта берётся из адреса, а не из пропса: шапка живёт в раскладке и о
+ * странице ничего не знает. Город и название подтягиваются одним бесплатным запросом
+ * в каталог В МОМЕНТ ДОБАВЛЕНИЯ — без них список показывал бы «KZN KZN» вместо
+ * «KZN Казань». К поставщику рейсов этот путь не ходит.
+ *
+ * Для поиска это +1 ссылка на страницу (и только там, где сердце — ссылка), а НАБОР
+ * адресов не меняется: на /favorites уже ведёт нижняя панель.
  */
 /** slot: какую из двух кнопок рисовать. Две отдельные вставки, а не одна пара,
  *  потому что между ними в сетке стоит название сайта. */
@@ -22,6 +31,37 @@ export function HeaderActions({ locale, slot }: { locale: Locale; slot: 'share' 
   const t = useTranslations('ui');
   const tNav = useTranslations('nav');
   const [copied, setCopied] = useState(false);
+  const pathname = usePathname();
+  // Строгое совпадение с адресом борта: /<язык>/airport/<КОД>, без подстраниц
+  // прилётов и вылетов — там сердце тоже уместно, поэтому хвост разрешён.
+  const iata = pathname.match(new RegExp(`^/${locale}/airport/([A-Z0-9]{3})(?:/|$)`))?.[1] ?? null;
+  const [on, setOn] = useState(false);
+
+  useEffect(() => {
+    if (!iata) return;
+    const sync = () => setOn(isFavorite(iata));
+    sync();
+    return subscribeFavorites(sync);
+  }, [iata]);
+
+  const toggleFav = useCallback(async () => {
+    if (!iata) return;
+    const next = toggleFavorite({ iata });
+    setOn(next);
+    try { (navigator as unknown as { vibrate?: (ms: number) => void }).vibrate?.(6); } catch { /* нет мотора */ }
+    track(GOALS.favoriteToggle, { on: next });
+    if (!next) return;
+    // Дополняем запись городом и названием. Запрос в каталог аэропортов бесплатный
+    // (см. app/api/airports/search): он читает справочник, а не борт.
+    try {
+      const r = await fetch(`/api/airports/search?locale=${locale}&q=${iata}`);
+      const a = (await r.json())?.airports?.find((x: { iata: string }) => x.iata === iata);
+      if (a && isFavorite(iata)) {
+        toggleFavorite({ iata });
+        toggleFavorite({ iata, name: a.name, city: a.city, iso2: a.iso2 });
+      }
+    } catch { /* остался код — список покажет его одного */ }
+  }, [iata, locale]);
 
   /**
    * Телефон отдаёт системное меню, компьютер копирует ссылку. Запасной путь через
@@ -54,12 +94,23 @@ export function HeaderActions({ locale, slot }: { locale: Locale; slot: 'share' 
   }, [tNav]);
 
   if (slot === 'fav') {
-    return (
-      <Link href={`/${locale}/favorites`} className="press hdr-act" aria-label={tNav('favorites')} title={tNav('favorites')}>
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-             strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-          <path d="M12 21C12 21 3 14.6 3 8.9C3 6.1 5.2 4 8 4c1.7 0 3.2 0.9 4 2.3C12.8 4.9 14.3 4 16 4c2.8 0 5 2.1 5 4.9c0 5.7-9 12.1-9 12.1z" />
-        </svg>
+    const label = iata ? (on ? t('fav_remove') : t('fav_add')) : tNav('favorites');
+    const heart = (
+      <svg width="20" height="20" viewBox="0 0 24 24" fill={on ? 'currentColor' : 'none'} stroke="currentColor"
+           strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+        <path d="M12 21C12 21 3 14.6 3 8.9C3 6.1 5.2 4 8 4c1.7 0 3.2 0.9 4 2.3C12.8 4.9 14.3 4 16 4c2.8 0 5 2.1 5 4.9c0 5.7-9 12.1-9 12.1z" />
+      </svg>
+    );
+    // fav-heart и data-iata — те же имена, по которым скрипт в <head> заливает
+    // сердце ещё до первой отрисовки (см. layout.tsx).
+    return iata ? (
+      <button type="button" onClick={toggleFav} aria-pressed={on} aria-label={label} title={label}
+              data-iata={iata} className={`press hdr-act fav-heart${on ? ' fav-heart--on' : ''}`}>
+        {heart}
+      </button>
+    ) : (
+      <Link href={`/${locale}/favorites`} className="press hdr-act" aria-label={label} title={label}>
+        {heart}
       </Link>
     );
   }

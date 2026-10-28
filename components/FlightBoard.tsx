@@ -9,7 +9,6 @@ import Link from 'next/link';
 import { useTranslations } from 'next-intl';
 import { initialRowCount } from '@/lib/board-window';
 import { track, GOALS } from '@/lib/track';
-import { FavoriteHeart } from './FavoriteHeart';
 import { DisclosureArrow } from '@/components/DisclosureArrow';
 import type { Airport } from '@/lib/airports';
 
@@ -1563,13 +1562,9 @@ export function FlightBoard({ airport, locale, defaultMode = 'departures', displ
             )}
           </h1>
           <div style={{ display: 'flex', alignItems: 'center', gap: 'clamp(6px, 2.5vw, 12px)', flexShrink: 0 }}>
-            {/* Сердечко СЛЕВА от часов, в одной строке с ними: собственной строки ему не
-                нужно, а под часами оно добавляло шапке высоты там, где её и так
-                выгадывали. Закрытый аэропорт избранным не бывает — его борт не
-                обновится никогда, и ярлык на него только обманывал бы. */}
-            {!airport.closed && (
-              <FavoriteHeart entry={{ iata: airport.iata, name: displayName || airport.name, city: airport.city, iso2: airport.iso2 }} />
-            )}
+            {/* Сердца здесь больше нет: оно переехало в шапку сайта и там же стало
+                переключателем. Две одинаковые на вид кнопки в двух сантиметрах друг
+                от друга — верный способ заставить человека нажать не ту. */}
             {/* Время — второй по важности элемент шапки после кода аэропорта:
                 по нему сверяются с расписанием. Моноширинные цифры, чтобы
                 строка не дёргалась каждую минуту при смене знаков. */}
