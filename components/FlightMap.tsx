@@ -18,7 +18,9 @@ export function FlightMap({ html }: { html: string }) {
       export: GOALS.flightMapExport, backup: GOALS.flightMapBackup,
       restore: GOALS.flightMapRestore,
     };
-    const moduleURL = '/flight-map/v1/app.js';
+    // v1 сохраняется для старого SSR/открытых вкладок. Новая форма и async
+    // экспорт выпускаются вместе, иначе старый HTML получил бы новые DOM-ID.
+    const moduleURL = '/flight-map/v2/app.js';
     import(/* webpackIgnore: true */ moduleURL)
       .then(m => {
         if (controller.signal.aborted) return;

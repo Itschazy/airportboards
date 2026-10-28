@@ -1,10 +1,10 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
-import {createMap,uniqueRoutes} from '../../public/flight-map/v1/map.js';
-import {buildCard,cityLines} from '../../public/flight-map/v1/share.js';
-import {latestJob} from '../../public/flight-map/v1/jobs.js';
-const airports=JSON.parse(fs.readFileSync(new URL('../../public/flight-map/v1/airports.json',import.meta.url))),land=JSON.parse(fs.readFileSync(new URL('../../public/flight-map/v1/land.json',import.meta.url)));
+import {createMap,uniqueRoutes} from '../../public/flight-map/v2/map.js';
+import {buildCard,cityLines} from '../../public/flight-map/v2/share.js';
+import {latestJob} from '../../public/flight-map/v2/jobs.js';
+const airports=JSON.parse(fs.readFileSync(new URL('../../public/flight-map/v1/airports.json',import.meta.url))),land=JSON.parse(fs.readFileSync(new URL('../../public/flight-map/v1/land-v2.json',import.meta.url)));
 const model=createMap(airports,land),fonts=['',''];
 const flights=[{id:'private-id-123',from:'NRT',to:'SFO',date:'2025-01-14',number:'PRIVATE 765'},{id:'second',from:'SVX',to:'IST',date:'2026-05-11',number:'AB123'}];
 test('all 12 export combinations have correct dimensions, readable typography and no private fields',()=>{

@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import {createStore,backup,parse,merge,KEY,FORMAT} from '../../public/flight-map/v1/storage.js';
+import {createStore,backup,parse,merge,KEY,FORMAT} from '../../public/flight-map/v2/storage.js';
 const codes=new Set(['CEK','AYT','SVX','IST']);
 const f={id:'f_test1',from:'CEK',to:'AYT',date:'2025-09-12',number:'TK 123'};
 function memory(){const m=new Map();return{getItem:k=>m.get(k)??null,setItem:(k,v)=>m.set(k,v)};}

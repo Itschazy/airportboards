@@ -16,6 +16,7 @@ assert.match(html,/<meta name="robots" content="index, follow"/);
 assert.match(html,/<meta property="og:image" content="https:\/\/airportsboard.live\/images\/flight-map-demo.jpg"/);
 assert.match(visible,/<a[^>]+href="\/ru\/flight-map"/);
 assert.ok(!visible.includes('my-flights-prototype'));
+assert.match(html,/id=\"saveMore\"/);assert.match(html,/id=\"shareService\"/);
 assert.ok(!visible.includes('f_restore_test_20261028'));
 const json=[...html.matchAll(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/g)].map(m=>JSON.parse(m[1]));
 assert.ok(json.some(d=>d['@graph']?.some(n=>n['@type']==='WebPage'&&n.url===url)));
@@ -23,7 +24,7 @@ for(const m of html.matchAll(/<script\b([^>]*)>([\s\S]*?)<\/script>/g)){
  if(!m[1].includes('ld+json')&&!m[1].includes('src='))new vm.Script(m[2]);
 }
 for(const locale of ['en','de','fr','es','it','tr','zh','ja','ko','ar','hi'])assert.equal((await get(`/${locale}/flight-map`)).status,404,locale);
-for(const path of ['/flight-map/v1/app.js','/flight-map/v1/map.js','/flight-map/v1/share.js','/flight-map/v1/storage.js','/flight-map/v1/jobs.js','/flight-map/v1/airports.json','/flight-map/v1/land.json','/images/flight-map-demo.jpg']){
+for(const path of ['/flight-map/v2/app.js','/flight-map/v2/map.js','/flight-map/v2/share.js','/flight-map/v2/storage.js','/flight-map/v2/jobs.js','/flight-map/v2/entry.js','/flight-map/v2/sharing.js','/flight-map/v1/land-v2.json','/flight-map/v1/flags/ru.svg','/flight-map/v1/flags/jp.svg','/flight-map/v1/app.js','/flight-map/v1/share.js','/flight-map/v1/airports.json','/flight-map/v1/land.json','/images/flight-map-demo.jpg']){
  const r=await get(path);assert.equal(r.status,200,path);
  if(path.endsWith('.jpg')){assert.match(r.headers.get('content-type'),/image\/jpeg/);const b=new Uint8Array(await r.arrayBuffer());assert.equal(b[0],255);assert.equal(b[1],216);}
 }
@@ -31,6 +32,6 @@ for(const path of ['/flight-map/v1/app.js','/flight-map/v1/map.js','/flight-map/
 for(const path of ['/ru','/ru/settings','/ru/favorites','/en']){
  const r=await get(path);assert.equal(r.status,200,path);const h=await r.text();
  assert.ok(!h.includes('.flight-map-root'),path+' scoped CSS leaked');
- assert.ok(!h.includes('/flight-map/v1/app.js'),path+' tool code leaked');
+ assert.ok(!/\/flight-map\/v[12]\/app\.js/.test(h),path+' tool code leaked');
 }
-console.log('Flight map: SSR/SEO, inline JS, RU navigation, 11 honest 404s, 8 assets and 4 adjacent pages OK');
+console.log('Flight map: SSR/SEO, inline JS, RU navigation, 11 honest 404s, 15 assets and 4 adjacent pages OK');
