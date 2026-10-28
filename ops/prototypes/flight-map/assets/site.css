@@ -1,0 +1,2009 @@
+/* Snapshot of app/globals.css at e904f92e; Tailwind utilities not used by this prototype. */
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+/* `overflow-x: hidden` делает элемент контейнером прокрутки по ОБЕИМ осям: вторая
+   ось получает `auto`. Из-за этого ближайшим скроллпортом для шапки оказывался
+   <body>, который сам не прокручивается, и `position: sticky` не срабатывал —
+   шапка уезжала вверх вместе со страницей на всех страницах сайта.
+   `overflow-x: clip` режет горизонтальный вылет так же, но контейнер прокрутки НЕ
+   создаёт, поэтому sticky работает. Старым Safari (<16) достаётся прежнее
+   `hidden`: там шапка не липнет, но и горизонтальной полосы не появляется. */
+html, body {
+  overflow-x: hidden;
+  max-width: 100vw;
+}
+@supports (overflow: clip) {
+  html, body { overflow-x: clip; }
+}
+
+/* ── Inter: основной шрифт интерфейса ─────────────────────────────────────────
+ *
+ * Раньше здесь стоял системный стек: на Mac это SF Pro, на Windows Segoe UI, на
+ * Android Roboto. Три разных шрифта с разной шириной и ростом строчных — одна и
+ * та же вёрстка выглядела у людей по-разному, и подгонять clamp приходилось по
+ * худшему из трёх. Inter заменяет все три и ближе всего к SF Pro, под который
+ * интерфейс и рисовался.
+ *
+ * ЛЕЖИТ У НАС, а не на чужом CDN — по той же причине, что и шрифт флагов ниже:
+ * сторонний запрос с каждой страницы это и лишняя задержка, и утечка адреса
+ * посетителя. Переменное начертание, один файл на все веса от 400 до 800.
+ *
+ * Четыре куска с unicode-range, а не один файл: браузер скачивает ТОЛЬКО те,
+ * чьи буквы на странице есть. Русской странице достаются latin (47 КБ) и
+ * cyrillic (18 КБ); latin-ext в 83 КБ подтягивается лишь там, где встретилось
+ * «Kraków» или «Timișoara».
+ *
+ * Арабского, хинди, японского, корейского и китайского здесь НЕТ и быть не
+ * может: такие наборы весят мегабайты. Их диапазоны не попадают ни в один
+ * unicode-range, поэтому браузер сам берёт для них системный шрифт — ровно то,
+ * что было до этой правки.
+ */
+@font-face {
+  font-family: 'Inter';
+  src: url('/assets/inter-latin.woff2') format('woff2');
+  font-weight: 400 800;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'Inter';
+  src: url('/assets/inter-latin-ext.woff2') format('woff2');
+  font-weight: 400 800;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: 'Inter';
+  src: url('/assets/inter-cyrillic.woff2') format('woff2');
+  font-weight: 400 800;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+@font-face {
+  font-family: 'Inter';
+  src: url('/assets/inter-cyrillic-ext.woff2') format('woff2');
+  font-weight: 400 800;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+
+/* Базовый цвет ушёл на <html>, а <body> стал прозрачным — иначе слои фона не
+   видно. Отрицательный z-index рисуется после фона СТЕКОВОГО КОНТЕКСТА, а его
+   создаёт корневой элемент, не body: при непрозрачном body его фон ложился бы
+   поверх body::before и body::after, и пятна с узором пропадали. */
+html { background: var(--ab-050505); }
+body {
+  background: transparent;
+  color: var(--ab-ffffff);
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'SF Pro Text', 'Segoe UI', system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Full-bleed horizontal card rows that never expand the page */
+/* Начало ряда выровнено по колонке содержимого и ничем не притушено: первая
+   карточка должна читаться целиком. Растянут ряд только ВПРАВО — до края
+   окна, чтобы в кадр попадало больше карточек, — и там же растворяется, иначе
+   у границы окна карточка обрубалась бы жёсткой вертикалью.
+   Свойства логические, поэтому на арабской странице стороны меняются сами. */
+.scroll-row {
+  display: flex;
+  gap: 12px;
+  overflow-x: auto;
+  margin-inline-end: -24px;
+  padding-inline-end: 24px;
+  /* Поля сверху и снизу — место для теней карточек. Горизонтальная прокрутка
+     делает ряд контейнером обрезки по ОБЕИМ осям, и тень, выходящая за
+     содержимое, срезалась ровно по краю ряда. Отрицательные внешние поля
+     возвращают прежнюю высоту блока: тень получает место, раскладка нет. */
+  padding-block: 12px;
+  margin-block: -12px;
+  scroll-snap-type: x proximity;
+  -webkit-overflow-scrolling: touch;
+  -webkit-mask-image: linear-gradient(to right, #000 calc(100% - 30px), transparent 100%);
+          mask-image: linear-gradient(to right, #000 calc(100% - 30px), transparent 100%);
+}
+[dir='rtl'] .scroll-row {
+  -webkit-mask-image: linear-gradient(to left, #000 calc(100% - 30px), transparent 100%);
+          mask-image: linear-gradient(to left, #000 calc(100% - 30px), transparent 100%);
+}
+.scroll-row > * { flex: 0 0 auto; scroll-snap-align: start; }
+
+a { color: inherit; text-decoration: none; }
+input, button { font-family: inherit; }
+input::-webkit-search-cancel-button { display: none; }
+::-webkit-scrollbar { display: none; }
+/* `scrollbar-width` намеренно НЕ задаётся горизонтальным рядам: в Chrome это
+   свойство отключает всё оформление ::-webkit-scrollbar, и нарисованный
+   ползунок просто не появляется. Остальной сайт полосы по-прежнему прячет. */
+*:not(.scroll-row):not(.srch-list) { scrollbar-width: none; }
+
+@keyframes pulse-live {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50%       { opacity: 0.35; transform: scale(0.8); }
+}
+.live-dot {
+  animation: pulse-live 2.4s ease-in-out infinite;
+}
+
+/* ── Micro-interactions ─────────────────────────────────────────────────────
+   One shared system: rows/cards get a hover lift (pointer devices only) and a
+   press scale; interactive pills/buttons get the press scale. transform/opacity
+   only — compositor-friendly, no layout/paint work. */
+/* Строка рейса — «стекло полегче» по гайду: заливка --glass-soft, короткий blur,
+   одна светлая кромка. Строк на табло до восьмидесяти, поэтому размытие включается
+   только на широких экранах с указателем: на телефоне восемьдесят backdrop-слоёв
+   стоят дороже, чем выглядят, и заливка там остаётся просто полупрозрачной —
+   узор фона сквозь неё всё равно виден.
+
+   Нажатие НЕ масштабируется: строка лежит ПОД стеклянной шапкой, а элемент,
+   который двигают через transform, уходит в свой слой, и backdrop-filter шапки
+   перестаёт его видеть — под шапкой на время анимации становится пусто
+   (правило гайда, выучено на багах). Отклик даёт заливка. */
+.frow {
+  display: flex;
+  background: var(--glass-soft);
+  border-radius: var(--r-card);
+  margin-bottom: 12px;
+  overflow: hidden;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  /* Цвет статуса — полоса слева, как было до редизайна (решение владельца
+     27.10.2026). Полосу рисует flex-ребёнок в разметке строки, а не тень и не
+     рамка: ребёнок слушает направление письма, поэтому на арабском полоса сама
+     уезжает вправо — у box-shadow и border-left логических вариантов нет. */
+  box-shadow: var(--glass-rim), var(--glass-scatter-short);
+  transition: background 0.16s ease, box-shadow 0.16s ease;
+}
+/* Размытие у строк включено на всех ширинах. Раньше оно было только с 700px:
+   на телефоне восемьдесят backdrop-слоёв стоили дорого. Цену снимает
+   content-visibility — строки за пределами экрана не отрисовываются вовсе,
+   поэтому размытие считается только для видимых. contain-intrinsic-size
+   держит высоту неотрисованных, иначе полоса прокрутки скакала бы. */
+.frow {
+  -webkit-backdrop-filter: var(--blur-soft);
+          backdrop-filter: var(--blur-soft);
+  content-visibility: auto;
+  contain-intrinsic-size: auto 72px;
+}
+@media (hover: hover) {
+  .frow:hover {
+    background: var(--glass);
+    box-shadow: var(--glass-rim), var(--glass-scatter-short), var(--glass-lift-sm);
+  }
+}
+.frow:active { background: var(--glass-dense); }
+
+/* «Об аэропорте» в шапке табло — кнопка-капсула, раскрывающая абзац на месте.
+ *
+ * Кнопка идёт во всю ширину панели, а не слева: шапка уже разделена на левую
+ * колонку с именем и правую с часами, и третий левый элемент читался бы как
+ * продолжение имени. Заголовок второго уровня живёт внутри summary и выглядит
+ * как подпись кнопки — в структуре документа он остаётся заголовком. */
+.ap-about { margin-top: 14px; }
+.ap-about > summary {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  min-height: 38px;
+  padding: 0 14px;
+  border-radius: var(--r-pill);
+  background: var(--glass-soft);
+  box-shadow: var(--glass-rim);
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+.ap-about > summary::-webkit-details-marker { display: none; }
+.ap-about > summary h2 {
+  margin: 0;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--ab-c7c7cc);
+  letter-spacing: 0;
+  text-transform: none;
+}
+.ap-about[open] > summary { background: var(--glass); }
+.ap-about > p {
+  margin: 12px 2px 2px;
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--ab-b4b4b4);
+}
+/* Справочная и «Частые вопросы» приходят сюда своими секциями. Их собственный
+   верхний отступ в 36px рассчитан на ленту страницы, где секции разделяют целые
+   разделы; внутри одной панели он читается как провал. */
+.ap-about > section { margin-top: 22px !important; }
+
+/* ── Внутренности строки рейса ────────────────────────────────────────────────
+ *
+ * Три логические части, и границы между ними видны по отступам: КОГДА (время,
+ * прежнее время, номер рейса) — КУДА (город, код, авиакомпания) — ЧТО С НИМ
+ * (выход и статус). Раньше всё это задавалось инлайновыми стилями с одними и
+ * теми же числами на любой ширине: на телефоне строка была тесной, а на
+ * мониторе те же 88px под статус рвали «ЗАДЕРЖКА 45 МИН» на «ЗАДЕРЖКА 45» и
+ * одинокое «МИН».
+ *
+ * Ширины колонок остаются ФИКСИРОВАННЫМИ внутри каждой ширины экрана, а не
+ * зависят от текста: иначе обновление борта меняло бы ширину статуса, город
+ * сжимался бы, и в WebKit появлялся новый кандидат в LCP уже после гидратации
+ * (разобрано на строке SSH). Меняется только то, какое число фиксировано. */
+.frow-in { display: flex; align-items: center; flex: 1; min-width: 0; gap: clamp(8px, 3vw, 16px); padding: clamp(14px, 3vw, 16px) clamp(10px, 3.5vw, 18px); }
+.frow-when { flex-shrink: 0; width: clamp(62px, 19vw, 86px); }
+.frow-time { font-size: clamp(21px, 6.6vw, 28px); font-weight: 700; line-height: 1; letter-spacing: -0.02em; font-variant-numeric: tabular-nums; }
+.frow-was { font-size: 12px; line-height: 1.3; margin-top: 2px; text-decoration: line-through; }
+.frow-no { font-size: 12px; font-weight: 500; line-height: 1.2; margin-top: 5px; font-variant-numeric: tabular-nums; }
+.frow-where { flex: 1; min-width: 0; }
+/* Один кегль на все строки. hyphens: manual, а не auto: auto рвал короткие
+   имена без пользы («Анта-лья», «Мурман-ск»). overflow-wrap остаётся на случай
+   слова шире колонки — такое перенесётся, но без выдуманного переноса внутри
+   названия города. Три строки максимум: больше имён такой длины в сети нет. */
+.frow-city {
+  display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 3; overflow: hidden;
+  /* Кегль пропорционален ширине экрана, а не стоит ступенькой. Фиксированные
+     16px на 320px не вмещали «Хабаровск», и слово рвалось посередине —
+     «Хабар/овск». Это хуже многоточия: обрывок читается как ошибка данных.
+     3.9vw даёт 12.5px на 320, 14.6 на 375 и упирается в 17 на широком. */
+  font-size: clamp(12.5px, 3.9vw, 17px);
+  font-weight: 700; letter-spacing: -0.01em; line-height: 1.25;
+  /* break-word убран: слово шире колонки теперь обрезается многоточием (ниже),
+     а не разрывается. hyphens: manual оставлен — он переносит только там, где в
+     самом названии стоит дефис («Шарм-эш-Шейх»), и ничего не выдумывает. */
+  text-overflow: ellipsis;
+  hyphens: manual; -webkit-hyphens: manual;
+}
+/* Код ИАТА в строке подробностей — чуть плотнее остального, чтобы читался как
+   код, а не как слово. Цвет наследуется от строки подробностей. */
+.frow-code { font-weight: 600; letter-spacing: 0.02em; white-space: nowrap; }
+/* Многоточие, а не обрыв по букве. Каждая часть внутри идёт nowrap (переносим
+   только по разделителю «·»), поэтому длинное название авиакомпании не
+   переносится вовсе и упиралось в край: «Уральские авиалини» обрывалось без
+   всякого знака и читалось как ошибка данных. */
+.frow-meta { font-size: clamp(11px, 3.1vw, 12px); margin-top: 4px; line-height: 1.35; display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2; overflow: hidden; text-overflow: ellipsis; }
+.frow-what { flex-shrink: 0; display: flex; align-items: center; gap: 8px; }
+.frow-gate { line-height: 1.1; white-space: nowrap; margin-bottom: 5px; }
+/* text-wrap: balance делит статус на две РОВНЫЕ строки вместо «длинная + хвост».
+   Там, где его нет, строка переносится как раньше — ничего не ломается. */
+/* Верх 124px: столько нужно «ЗАДЕРЖКА 45 МИН» на две ровные строки и
+   «ПОСЛЕДНИЙ ВЫЗОВ» — два самых длинных статуса из каталога на 12 языках. */
+.frow-status { width: clamp(76px, 23vw, 124px); max-width: clamp(76px, 23vw, 124px); text-align: end; text-wrap: balance; }
+/* Медиазапроса на 560px здесь больше НЕТ: он переназначал те же свойства
+   фиксированными числами и тем самым отменял clamp выше. Ступенька давала
+   скачок посреди диапазона и ничего не решала на краях — на 320px значения
+   всё равно оставались «широкими». Теперь один clamp покрывает весь диапазон,
+   а верхние границы те же, что были за медиазапросом. */
+/* Узкий экран: размытия у строк нет (см. выше), читаемость держит плотность
+   заливки. Прежние 0.94 ставились при вчетверо более ярких обоях и делали
+   строку почти непрозрачной — стекла в ней не оставалось. Обои с тех пор
+   ослаблены, и 0.80 снова хватает. */
+@media (max-width: 699px) {
+  .frow { background: var(--glass); }
+}
+
+.press {
+  transition: transform 0.12s ease, background 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+}
+.press:active { transform: scale(0.96); }
+@media (hover: hover) {
+  a.press:hover, button.press:hover { filter: brightness(1.18); }
+}
+
+/* List swap: new rows rise in when the user switches mode/filter (applied only
+   after first paint, so SSR/LCP is never delayed). */
+@keyframes rise-in {
+  from { opacity: 0; transform: translateY(6px); }
+  to   { opacity: 1; transform: none; }
+}
+.rise { animation: rise-in 0.22s cubic-bezier(0.2, 0.7, 0.2, 1); }
+
+/* Below-the-fold sections: skip rendering work until scrolled near the viewport.
+   contain-intrinsic-size keeps the scrollbar stable while unrendered. */
+.cv-auto {
+  content-visibility: auto;
+  contain-intrinsic-size: auto 320px;
+}
+
+/* Bottom sheet scroller: don't chain overscroll into the page behind it. */
+.sheet-scroll { overscroll-behavior: contain; }
+
+/* Filter pills scroll sideways, and on a phone that was invisible: measured at 375px the row
+   is 663px wide, so 288px of it — including whole filters like "Вылетел" — sat past a hard
+   edge with nothing to suggest it existed. Fading the right edge is the affordance, and it is
+   CSS-only on purpose: when the pills do fit, they stop short of the 16px padding and the mask
+   has nothing to act on, so no state or measurement is needed. Right edge only — a symmetric
+   mask would dim the selected "All" pill at rest. */
+.pillrow {
+  -webkit-mask-image: linear-gradient(to right, #000 calc(100% - 30px), transparent);
+          mask-image: linear-gradient(to right, #000 calc(100% - 30px), transparent);
+  scrollbar-width: none;
+}
+/* Арабская страница листает пилюли в другую сторону, а маска остаётся физической: у
+   `linear-gradient` нет логического аналога `to inline-end`, поэтому направление
+   переопределяется здесь. Без этого затухание гасило НАЧАЛО строки — то есть выбранную
+   пилюлю, стоящую в RTL справа, — а обрезанный край слева оставался без всякого намёка. */
+[dir='rtl'] .pillrow {
+  -webkit-mask-image: linear-gradient(to left, #000 calc(100% - 30px), transparent);
+          mask-image: linear-gradient(to left, #000 calc(100% - 30px), transparent);
+}
+.pillrow::-webkit-scrollbar { display: none; }
+
+/* Visible keyboard focus (WCAG 2.4.7). :focus-visible so mouse users see nothing. */
+:focus-visible {
+  outline: 2px solid var(--ab-0a84ff);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* Respect reduced-motion preference (WCAG 2.3.3): stop the pulse + heavy transitions. */
+@media (prefers-reduced-motion: reduce) {
+  .live-dot { animation: none; }
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* PWA install card: rises once, gently. Motion-sensitive users get a plain appear. */
+@keyframes pwa-rise { from { transform: translateY(24px); opacity: 0; } to { transform: none; opacity: 1; } }
+.pwa-rise { animation: pwa-rise 0.45s cubic-bezier(0.22, 1, 0.36, 1) both; }
+@media (prefers-reduced-motion: reduce) { .pwa-rise { animation: none; } }
+
+/* The route strip's arrow points in the reading direction. Flex order flips itself in RTL;
+   the glyph does not, so an Arabic page would show DXB → MRV with the arrow aimed at the
+   origin. scaleX(-1) keeps the arrow travelling from origin to destination in both scripts. */
+[dir='rtl'] .route-arrow { transform: scaleX(-1); }
+
+/* Letter-spacing is a Latin typographic device, and on two of our scripts it is destructive.
+ *
+ * Arabic is a CONNECTED script: letters join along a baseline, and any tracking — negative or
+ * positive — pulls those joins apart, so words stop reading as words. Devanagari hangs its
+ * letters from a continuous headline stroke (shirorekha) that tracking breaks into dashes.
+ * Neither degrades gracefully; both simply look wrong to a reader of that language.
+ *
+ * The site sets tracking inline in 44 places, tuned for Latin display type: -0.04em on the big
+ * IATA glyph, -0.03em on headings, -0.01em on the city line, +0.12em on uppercase labels. On
+ * /ar and /hi every one of those lands on native text.
+ *
+ * `!important` because those are inline styles and nothing else outranks them. The cost is the
+ * tight tracking on the handful of Latin elements that appear inside an Arabic or Hindi page —
+ * airport codes, clock digits. Losing a little polish there beats breaking the script the page
+ * is written in. CJK is deliberately not included: those are not connected scripts and tracking
+ * on them is ordinary practice.
+ */
+[lang='ar'] *,
+[lang='hi'] * { letter-spacing: normal !important; }
+
+/* Значок «дальше» указывает в сторону чтения, а не всегда вправо.
+ *
+ * На арабской странице одиннадцать шевронов и стрелок смотрели вправо — то есть НАЗАД, — и
+ * ссылка «перейти» визуально вела к началу строки. Зеркалятся только помеченные `data-flip`:
+ * шеврон аккордеона смотрит вниз и зеркалить его не нужно, значок поиска и колокольчик — тем
+ * более. Признак ставится на сам <svg>, поэтому в разметке видно, какая иконка направленная. */
+[dir='rtl'] svg[data-flip] { transform: scaleX(-1); }
+
+/* Справку можно открыть и закрыть без JS; стрелка отражает нативное состояние. */
+.airport-disclosure > summary { list-style: none; }
+.airport-disclosure > summary::-webkit-details-marker { display: none; }
+.airport-disclosure > summary .disclosure-arrow { color: var(--ab-8a8a8a); flex-shrink: 0; transition: transform 0.18s ease; }
+.airport-disclosure[open] > summary .disclosure-arrow { transform: rotate(180deg); }
+
+.airport-disclosure > summary .disclosure-less { display: none; }
+.airport-disclosure[open] > summary .disclosure-more { display: none; }
+.airport-disclosure[open] > summary .disclosure-less { display: inline; }
+
+/* Главная — поисковый вход, без большой простыни до поля. Только её классы:
+   табло и каталоги сохраняют оформление. svh не прыгает при скрытии браузерных
+   панелей; на низком экране верхний отступ уменьшается, оставляя место выдаче. */
+/* Блок центрируется по вертикали, а не прижимается к верху: раньше заголовок
+   с поиском стоял в верхней трети, а под ним оставалось полэкрана пустоты.
+   svh, а не vh: на телефоне высота не прыгает при скрытии панелей браузера. */
+.home-search-page { width: 100%; max-width: 720px; margin: 0 auto; padding: clamp(24px, 6svh, 64px) 24px 48px; min-height: calc(100svh - 92px); display: flex; flex-direction: column; justify-content: center; }
+/* Запас 92 — это высота плавающей панели навигации вместе с её отступом снизу
+   (та же величина, что в padding-bottom у body). Поиск центрируется в том, что
+   человек ВИДИТ, а не в полном окне: панель висит поверх нижней кромки, и без
+   вычета блок оказывался смещён под неё. Прежняя константа 160 вычитала шапку и
+   подвал; шапки на главной больше нет, а подвал ушёл под сгиб. */
+.home-search-heading { text-align: center; }
+.home-wordmark { text-shadow: var(--text-halo); font-size: clamp(25px, 6.2vw, 37px); font-weight: 750; /* -0.02em, а не -0.045: прежнее сжатие бралось под системный шрифт, а у Inter
+     межбуквенное расстояние и так плотнее. Вместе выходило слипшееся слово. */
+  letter-spacing: -0.02em; line-height: 1.1; display: flex; align-items: center; justify-content: center; gap: 0.26em; }
+/* Самолётик перед названием — тот же знак, что в шапке. Размер и отступ в em,
+   поэтому он следует за названием при любой ширине экрана, а не отстаёт от
+   него на узком. Чуть мельче самого текста: на равной высоте глиф выглядит
+   крупнее букв, у него нет выносных элементов. */
+.home-wordmark-plane { font-size: 0.74em; line-height: 1; }
+/* Подзаголовок держится в ОДНУ строку. Прежние max-width: 32ch и
+   text-wrap: balance ломали его надвое уже на узком экране. Вместо переноса
+   текст уменьшается: 3.2vw на телефоне, но не мельче 11px и не крупнее 14.
+   Потолок снижен с 17 по просьбе владельца 28.10.2026: подпись спорила по весу
+   с названием сайта над ней, хотя это пояснение к нему, а не второй заголовок.
+   Запас взят с расчётом на самые длинные из двенадцати переводов. */
+.home-search-heading h1 { text-shadow: var(--text-halo); margin: 5px auto 0; max-width: none; white-space: nowrap; font-size: clamp(11px, 3.2vw, 14px); font-weight: 400; line-height: 1.45; color: var(--ab-8a8a8a); }
+/* Отступы вокруг подписи малы намеренно: это пояснение к названию над ней, и
+   вместе они должны читаться одним блоком. При прежних 12 сверху и 28 снизу
+   строка висела сама по себе между названием и полем поиска.
+   z-index выше соседей: подсказки поиска висят абсолютно, и их собственный
+   z-index действует только внутри слоя самого поля. Все дети .home-search-page
+   получают z-index 1, поэтому ссылка «Читать далее», идущая следом по разметке,
+   проступала поверх выпавшего списка. */
+/* Поле уже колонки: 480 против 720 у заголовка. Во всю ширину оно читалось полосой
+   поперёк экрана, а не местом, куда вводят два-три слова; строка набора при этом
+   начиналась у левого края и уходила в пустоту. Ширина ограничена у обёртки, а не у
+   самого input: выдача подсказок лежит в той же обёртке и должна совпадать с полем
+   краями. */
+/* Телефон: при открытой клавиатуре блок поднимается.
+
+   Клавиатура съедает нижнюю половину экрана, а вёрстка про это не знает: svh — это
+   МАЛАЯ высота окна, она не меняется от клавиатуры, поэтому поле остаётся на месте,
+   и выдача уходит под клавиши. Видно две строки из десяти.
+
+   Поднимаем ВЕСЬ блок на 16svh переносом (transform), а не отступом: перенос не
+   вызывает перекомпоновку, его можно плавно анимировать, и выдача едет вместе с
+   полем, оставаясь приклеенной к нему.
+
+   Только (pointer: coarse): на компьютере клавиатура не всплывает, и прыжок блока
+   при щелчке по полю был бы бессмысленным. :has() — чтобы правило жило в CSS и не
+   зависело от состояния React: поле получает фокус раньше, чем успевает отработать
+   обработчик. Там, где :has() не поддержан, останется нынешнее поведение. */
+@media (pointer: coarse) {
+  .home-search-page { transition: transform 0.22s ease; }
+  .home-search-page:has(.home-search-input input:focus) { transform: translateY(-16svh); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .home-search-page { transition: none; }
+}
+.home-search-page .home-search-input { margin: 18px auto 0; width: 100%; max-width: 480px; position: relative; z-index: 5; }
+.home-reference { margin-top: 12px; }
+/* 15px, а не 13: это единственная подпись на стартовом экране, и 13 рядом с
+   полем высотой 52 читались как сноска. Высота цели нажатия прежняя — её
+   держит min-height, а не кегль, так что строка не подвинулась. */
+.home-reference > summary { display: flex; align-items: center; justify-content: center; gap: 8px; min-height: 44px; cursor: pointer; color: var(--ab-8a8a8a); font-size: 15px; }
+/* Открытая справка не сдвигает подпись влево: «Свернуть» наследует
+   раскладку «Читать далее» и остаётся по центру. */
+@media (max-height: 450px) {
+  .home-search-page { padding-top: 20px; }
+  .home-wordmark { font-size: 22px; }
+  .home-search-heading h1 { margin-top: 3px; font-size: clamp(10px, 3vw, 12.5px); }
+  .home-search-input { margin-top: 12px; }
+}
+
+/* Тёмные значения точно повторяют прежнюю палитру. Только цвета зависят от темы;
+   системный выбор работает без JS, ручной data-theme имеет приоритет. Нельзя применять
+   filter к странице: он меняет цвета флагов и создаёт новый containing block карточки. */
+:root{--ab-050505:#090A0D;--ab-ffffff:#FFFFFF;--ab-111111:#111111;--ab-1a1a1a:#1A1A1A;--ab-1c1c1e:#1C1C1E;--ab-3a3a3c:#3A3A3C;--ab-8a8a8a:#8A8A8A;--ab-a1a1a1:#A1A1A1;--ab-e4e4e7:#E4E4E7;--ab-0b1220:#0B1220;--ab-30d158:#30D158;--ab-0a84ff:#0A84FF;--ab-ff9f0a:#FF9F0A;--ab-ff453a:#FF453A;--ab-636366:#636366;--ab-ink:255,255,255;color-scheme:dark;}
+@media(prefers-color-scheme:light){:root:not([data-theme="dark"]){--ab-050505:#ffffff;--ab-ffffff:#171717;--ab-111111:#f5f5f5;--ab-1a1a1a:#dedede;--ab-1c1c1e:#ededed;--ab-3a3a3c:#b8b8ba;--ab-8a8a8a:#595959;--ab-a1a1a1:#555555;--ab-e4e4e7:#242426;--ab-0b1220:#edf4ff;--ab-30d158:#147a32;--ab-0a84ff:#0664c7;--ab-ff9f0a:#955000;--ab-ff453a:#b72b23;--ab-636366:#59595c;--ab-ink:23,23,23;color-scheme:light;}}
+:root[data-theme="light"]{--ab-050505:#ffffff;--ab-ffffff:#171717;--ab-111111:#f5f5f5;--ab-1a1a1a:#dedede;--ab-1c1c1e:#ededed;--ab-3a3a3c:#b8b8ba;--ab-8a8a8a:#595959;--ab-a1a1a1:#555555;--ab-e4e4e7:#242426;--ab-0b1220:#edf4ff;--ab-30d158:#147a32;--ab-0a84ff:#0664c7;--ab-ff9f0a:#955000;--ab-ff453a:#b72b23;--ab-636366:#59595c;--ab-ink:23,23,23;color-scheme:light;}
+
+:root{--ab-0b0b0b:#0B0B0B;--ab-6a6a6a:#6A6A6A;--ab-b4b4b4:#B4B4B4;--ab-48484a:#48484A;--ab-34c759:#34C759;--ab-c7c7cc:#C7C7CC;--ab-4a4a4a:#4A4A4A;--ab-e4e4e4:#E4E4E4;--ab-bfbfc4:#BFBFC4;--ab-333333:#333333;--ab-2c2c2e:#2C2C2E;--ab-adadb2:#ADADB2;--ab-c4c4c4:#C4C4C4;--ab-000000:#000000;--ab-5a5a5a:#5A5A5A;--ab-d0d0d4:#D0D0D4;--ab-9a9aa0:#9A9AA0;--ab-6a6a6e:#6A6A6E;--ab-2a2a2a:#2A2A2A;--ab-151515:#151515;--ab-c7c7c7:#C7C7C7;--ab-161616:#161616;--ab-1e1e1e:#1E1E1E;--ab-a1a1aa:#A1A1AA;}
+@media(prefers-color-scheme:light){:root:not([data-theme="dark"]){--ab-0b0b0b:#f5f5f5;--ab-6a6a6a:#666666;--ab-b4b4b4:#494949;--ab-48484a:#777777;--ab-34c759:#147a32;--ab-c7c7cc:#444448;--ab-4a4a4a:#666666;--ab-e4e4e4:#242424;--ab-bfbfc4:#46464a;--ab-333333:#cccccc;--ab-2c2c2e:#dddddf;--ab-adadb2:#4c4c50;--ab-c4c4c4:#454545;--ab-000000:#ffffff;--ab-5a5a5a:#666666;--ab-d0d0d4:#353539;--ab-9a9aa0:#505056;--ab-6a6a6e:#555559;--ab-2a2a2a:#dddddd;--ab-151515:#f1f1f1;--ab-c7c7c7:#444444;--ab-161616:#f0f0f0;--ab-1e1e1e:#eaeaea;--ab-a1a1aa:#50505a;}}
+:root[data-theme="light"]{--ab-0b0b0b:#f5f5f5;--ab-6a6a6a:#666666;--ab-b4b4b4:#494949;--ab-48484a:#777777;--ab-34c759:#147a32;--ab-c7c7cc:#444448;--ab-4a4a4a:#666666;--ab-e4e4e4:#242424;--ab-bfbfc4:#46464a;--ab-333333:#cccccc;--ab-2c2c2e:#dddddf;--ab-adadb2:#4c4c50;--ab-c4c4c4:#454545;--ab-000000:#ffffff;--ab-5a5a5a:#666666;--ab-d0d0d4:#353539;--ab-9a9aa0:#505056;--ab-6a6a6e:#555559;--ab-2a2a2a:#dddddd;--ab-151515:#f1f1f1;--ab-c7c7c7:#444444;--ab-161616:#f0f0f0;--ab-1e1e1e:#eaeaea;--ab-a1a1aa:#50505a;}
+
+/* Лупа раскрывается в пределах прежней строки: соседние строки не сдвигаются.
+   Анимируется только локальная ширина, без масштабирования текста и тяжёлого blur.
+   Направление inset-inline-end работает и для арабского. */
+.board-search-controls { position: relative; height: 48px; }
+.board-search-modes { display: flex; gap: 8px; height: 48px; transition: opacity 180ms ease; }
+.board-search-panel {
+  position: absolute; inset-inline-end: 0; top: 1px; width: 48px;
+  opacity: 0; visibility: hidden; pointer-events: none; overflow: hidden;
+  transition: width 240ms cubic-bezier(.2,.8,.2,1), opacity 180ms ease, visibility 0s 240ms;
+}
+.board-search-controls[data-open="true"] .board-search-modes { opacity: 0; }
+.board-search-controls[data-open="true"] .board-search-panel {
+  width: 100%; opacity: 1; visibility: visible; pointer-events: auto;
+  transition-delay: 0s;
+}
+@media (prefers-reduced-motion: reduce) {
+  .board-search-panel, .board-search-modes { transition: none; }
+}
+
+/* Справочная по аэропорту (components/AirportGuide.tsx, 25.10.2026). Нативные <details> в сетке
+   на две колонки; открытая плитка занимает всю строку, чтобы текст не жался в половину ширины. */
+.ag-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+@media(min-width:640px){.ag-grid{grid-template-columns:repeat(4,minmax(0,1fr))}}
+/* overflow:hidden здесь, а не на summary: водяной знак торчит за край плитки, и
+   обрезать его должна ЕЁ скруглённая форма. На summary скругления нет, и знак
+   срезался по прямому углу — угол плитки выглядел надломленным. */
+.ag-tile{background:var(--glass-soft);box-shadow:var(--glass-rim);border-radius:var(--r-card);min-width:0;overflow:hidden}
+.ag-tile[open]{grid-column:1/-1;background:var(--glass);box-shadow:var(--glass-rim),0 0 0 1px rgba(10,132,255,.35)}
+.ag-tile>summary{list-style:none;cursor:pointer;padding:14px 16px 15px;display:flex;flex-direction:column;gap:3px;min-height:86px;position:relative;-webkit-tap-highlight-color:transparent}
+.ag-tile>summary::-webkit-details-marker{display:none}
+.ag-tile>summary:focus-visible{outline:2px solid var(--ab-0a84ff);outline-offset:2px;border-radius:var(--r-card)}
+/* Значок — крупный водяной знак в нижнем углу, как у плиток охвата на главной:
+   мелкая иконка над заголовком отнимала строку высоты и при этом не читалась.
+   inset-inline-end, а не right: на арабской локали угол должен смениться на
+   левый, иначе знак встанет в начало строки и будет спорить с текстом.
+   Текст ограничен по ширине, а не обрезан — он просто до знака не доходит. */
+.ag-ico{position:absolute;inset-inline-end:-8px;bottom:-10px;width:58px;height:58px;color:var(--ab-8a8a8a);opacity:.26;pointer-events:none}
+.ag-tile[open] .ag-ico{opacity:.2}
+.ag-t{margin:0;font-size:14.5px;font-weight:600;color:var(--ab-ffffff);line-height:1.25;max-width:76%}
+.ag-lead{margin:-6px 0 12px;font-size:12px;line-height:1.45;color:var(--ab-8a8a8a)}
+/* Подсказка в две строки, а не в одну с многоточием: знак в углу забрал
+   четверть ширины, и «Гараж C по брони — $32 в сутки» обрывалось на «в сут…».
+   Высоты плитки на две строки хватает, перенос ничего не двигает. */
+.ag-h{font-size:12px;color:var(--ab-8a8a8a);line-height:1.35;max-width:76%;display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;overflow:hidden}
+.ag-tile[open] .ag-h{-webkit-line-clamp:none;max-width:100%}
+.ag-body{padding:0 14px 14px}
+.ag-body p{margin:0;font-size:14px;line-height:1.55;color:var(--ab-c7c7cc)}
+.ag-body .ag-src{margin-top:10px;font-size:12px;color:var(--ab-8a8a8a)}
+.ag-src a{color:var(--ab-0a84ff);text-decoration:none}
+
+/* ═══ СТЕКЛО ═════════════════════════════════════════════════════════════════
+ *
+ * Система по гайду «Отложки», перенесённая на механику тем этого проекта
+ * (prefers-color-scheme + ручной data-theme, без JS до гидратации).
+ *
+ * Порядок слоёв снизу вверх:
+ *   1. body background — базовый цвет темы (остаётся как был);
+ *   2. body::before   — мягкие цветные пятна (--sky);
+ *   3. body::after    — обои из рисунков (--pat-url), плитка 1800×1800;
+ *   4. содержимое страницы;
+ *   5. стеклянные панели, которые размывают всё перечисленное.
+ *
+ * Псевдоэлементы с `position: fixed` НЕ становятся флекс-элементами <body>
+ * (абсолютно позиционированный потомок флекс-контейнера выпадает из потока),
+ * поэтому раскладка не меняется. Фиксация заодно избавляет от перерисовки
+ * фона при прокрутке.
+ */
+
+:root {
+  /* Цветных пятен под стеклом НЕТ: по решению владельца фон остаётся чистым
+     чёрным в тёмной теме и чистым белым в светлой, а весь цвет живёт в узоре.
+     Токен оставлен пустым, чтобы слой можно было вернуть одной строкой. */
+  --sky: none;
+  /* Плитка работает МАСКОЙ: один файл на обе темы, цвет задаёт --pat-ink.
+     Собирается scripts/gen-pattern.mjs — 26 глифов, 273 расстановки. */
+  /* Своя плитка на каждую тему: цвет теперь зашит в контуры рисунков, одним
+     файлом обе темы не обслужить. В тёмной линии ярче, в светлой — глубже. */
+  --pat-url: url('/assets/pattern-dark.svg');
+
+  --blur: saturate(1.8) blur(18px);
+  --blur-soft: saturate(1.4) blur(12px);
+
+  /* Заливки. 28.10.2026 разжижены: при 0.80 за панелью не было видно НИЧЕГО, и
+     стекло отличалось от крашеной доски только кромкой. Теперь обои сквозь
+     панель читаются — ради этого их заодно и подняли вдвое по яркости.
+     Плотность по-прежнему растёт там, где поверх лежит текст: панель → строка →
+     меню. Правило «меню не ниже .88» остаётся в силе и ограничивает только
+     --glass-dense: за ним лежит СОДЕРЖИМОЕ страницы, а не обои, и при меньшей
+     плотности сквозь названия пунктов читался текст под ними. */
+  --glass: rgba(16,18,24,0.48);
+  --glass-soft: rgba(18,20,27,0.55);
+  --glass-dense: rgba(14,16,21,0.90);
+  --glass-solid: #15171c;
+
+  /* Кромка: в тёмной теме свет падает сверху-слева. */
+  --glass-rim:
+    inset 0 1px 0 rgba(255,255,255,0.14),
+    inset 1px 0 0 rgba(255,255,255,0.07),
+    inset 0 -1px 0 rgba(255,255,255,0.04),
+    0 0 0 0.5px rgba(255,255,255,0.08);
+  /* Блики преломления. Два НАПРОТИВ друг друга: яркая полоса под верхней
+     кромкой — прямой свет, слабая над нижней — тот же свет, прошедший сквозь
+     толщу и отражённый изнутри. Именно пара, а не одна полоса, читается как
+     объём: у плоской заливки низ всегда темнее верха, у стекла — нет.
+     Отдельным токеном, а не в --glass-rim: кромка стоит на КАЖДОЙ строке
+     рейса (их на борту до сорока), а блики — только на крупных панелях. */
+  /* Отсвет по поверхности: свет скользит по выпуклому стеклу, поэтому ярче
+     всего верхний левый край, и к середине блик гаснет. Это ГРАДИЕНТ ФОНА, а
+     не ещё один слой: лишний слой пришлось бы рисовать и накладывать, а здесь
+     краска та же самая. 42% — там, где заканчивается скруглённая часть и
+     начинается плоскость. */
+  --sheen: linear-gradient(152deg, rgba(255,255,255,0.075) 0%, rgba(255,255,255,0.02) 32%, rgba(255,255,255,0) 58%);
+  /* Затемнение под карточкой рейса. Оно не украшение: карточка — модальное
+     окно, и без разницы в яркости страница за ней спорит с её текстом, а
+     одно размытие этой разницы не даёт. Но 0.55 чёрного — вес тёмной темы;
+     в светлой то же число превращало белую страницу в серую. Поэтому своё
+     значение на тему: в тёмной гасим заметно, в светлой почти не трогаем,
+     там работу делает размытие. */
+  --sheet-scrim: rgba(0,0,0,0.45);
+  /* Неактивные пункты нижней панели. В тёмной теме серый --ab-8a8a8a лежит на
+     тёмном стекле и выглядит спокойным; в светлой тот же токен становится
+     #595959, то есть почти чёрным, и неактивные пункты читались такими же
+     важными, как текущий. Поэтому для светлой темы цвет задан прямо: #76767B
+     даёт на белом стекле 4.6:1 — мельче порога 4.5 для мелкого текста не
+     уходим, а разница с активным (#171717) видна сразу. Значок приглушён
+     отдельно: он не текст, и к нему порог 3:1. */
+  --bn-idle: #8A8A8A;
+  --bn-idle-ico: 1;
+  /* Ореол под текстом, лежащим прямо на обоях. Узор подняли вдвое по яркости, и
+     контуры рисунков стали проходить сквозь буквы: на светлой теме самолётик
+     из обоев читался частью слова. Это НЕ тень в обычном смысле — смещения у
+     неё нет, она ровным кольцом по контуру буквы отодвигает фон. Цвет — цвет
+     фона темы, поэтому ореол не виден как пятно, а просто гасит рисунок
+     вплотную к тексту. Два радиуса: ближний даёт плотность, дальний растушёвку. */
+  --text-halo: 0 0 9px rgba(0,0,0,0.85), 0 0 20px rgba(0,0,0,0.60);
+  /* Поле поиска — отдельная порода стекла: заливки почти нет, работа ложится
+     на преломление кромки. Отсюда и своя заливка, и своё размытие (8 против 18:
+     сильное размытие съедает ту самую картинку, которую кромка преломляет). */
+  --lens-fill: rgba(16,18,24,0.07);
+  --lens-blur: saturate(1.25) blur(2.5px);
+  /* Свой отсвет, слабее панельного: на панели он лежит поверх плотной заливки и
+     почти не виден, а на прозрачной линзе та же сила читалась белым налётом. */
+  --lens-sheen: linear-gradient(152deg, rgba(255,255,255,0.06) 0%, rgba(255,255,255,0.015) 34%, rgba(255,255,255,0) 56%);
+  /* Нижняя панель — то же прозрачное стекло, но плотнее линзы поиска: под ней
+     проезжает СОДЕРЖИМОЕ страницы, а не обои, и при 7% подписи «Поиск» и
+     «Настройки» читались бы поверх строк рейсов. Работу держит размытие в 14px:
+     оно превращает текст под панелью в ровный фон, а не в разборчивые буквы. */
+  --bar-fill: rgba(16,18,24,0.26);
+  --bar-blur: saturate(1.35) blur(9px);
+  --lens-rim:
+    inset 0 1px 0 rgba(255,255,255,0.34),
+    inset 0 -1px 0 rgba(255,255,255,0.16),
+    inset 1px 0 0 rgba(255,255,255,0.12),
+    inset -1px 0 0 rgba(255,255,255,0.12),
+    0 0 0 0.5px rgba(255,255,255,0.14),
+    0 10px 28px rgba(0,0,0,0.42);
+  --glass-spec:
+    inset 0 7px 14px -9px rgba(255,255,255,0.22),
+    inset 0 -9px 16px -11px rgba(255,255,255,0.12);
+  --glass-scatter:
+    inset 0 0 10px 4px rgba(255,255,255,0.025),
+    inset 0 0 40px 5px rgba(255,255,255,0.025);
+  --glass-scatter-short: inset 0 0 10px 3px rgba(255,255,255,0.025);
+  --glass-lift: 0 12px 34px rgba(0,0,0,0.55);
+  --glass-lift-sm: 0 6px 18px rgba(0,0,0,0.40);
+
+  --r-panel: 28px;
+  --r-card: 20px;
+  --r-pill: 999px;
+}
+
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme="dark"]) {
+    --sky: none;
+    --pat-url: url('/assets/pattern-light.svg');
+    --glass: rgba(255,255,255,0.58);
+    --glass-soft: rgba(255,255,255,0.64);
+    --glass-dense: rgba(252,252,253,0.90);
+    --glass-solid: #f6f7f9;
+    /* Светлая тема: яркая кромка снизу-справа, тусклая сверху-слева. */
+    /* В светлой теме кромка не только обводит, но и отбрасывает короткую тень:
+       белое стекло на белом фоне иначе сливается, и у карточек не видно краёв.
+       Тень вшита в саму кромку, потому что половина поверхностей использует
+       только её, без --glass-lift. */
+    --glass-rim:
+      inset 0 -1px 0 rgba(255,255,255,0.85),
+      inset -1px 0 0 rgba(255,255,255,0.60),
+      inset 0 1px 0 rgba(255,255,255,0.35),
+      0 0 0 1px rgba(16,24,40,0.10),
+      0 1px 2px rgba(16,24,40,0.07),
+      0 4px 12px rgba(16,24,40,0.06);
+    --sheen: linear-gradient(152deg, rgba(255,255,255,0.85) 0%, rgba(255,255,255,0.35) 30%, rgba(255,255,255,0) 58%);
+    --sheet-scrim: rgba(16,24,40,0.10);
+    --bn-idle: #76767B;
+    --bn-idle-ico: 0.85;
+    --text-halo:
+    0 0 6px rgba(255,255,255,1),
+    0 0 14px rgba(255,255,255,1),
+    0 0 28px rgba(255,255,255,0.92),
+    0 0 46px rgba(255,255,255,0.75);
+    --lens-fill: rgba(255,255,255,0.12);
+    --lens-blur: saturate(1.25) blur(2.5px);
+    --lens-sheen: linear-gradient(152deg, rgba(255,255,255,0.24) 0%, rgba(255,255,255,0.06) 34%, rgba(255,255,255,0) 56%);
+    --bar-fill: rgba(255,255,255,0.38);
+    --bar-blur: saturate(1.35) blur(9px);
+    --lens-rim:
+      inset 0 1px 0 rgba(255,255,255,0.95),
+      inset 0 -1px 0 rgba(255,255,255,0.70),
+      inset 1px 0 0 rgba(255,255,255,0.60),
+      inset -1px 0 0 rgba(255,255,255,0.60),
+      0 0 0 1px rgba(16,24,40,0.12),
+      0 10px 28px rgba(16,24,40,0.12);
+    --glass-spec:
+      inset 0 7px 14px -9px rgba(255,255,255,0.90),
+      inset 0 -9px 16px -11px rgba(16,24,40,0.07);
+    --glass-scatter:
+      inset 0 0 10px 4px rgba(255,255,255,0.35),
+      inset 0 0 40px 5px rgba(255,255,255,0.18);
+    --glass-scatter-short: inset 0 0 10px 3px rgba(255,255,255,0.35);
+    --glass-lift: 0 14px 34px rgba(16,24,40,0.16);
+    --glass-lift-sm: 0 6px 18px rgba(16,24,40,0.12);
+  }
+}
+:root[data-theme="light"] {
+  --sky: none;
+  --pat-url: url('/assets/pattern-light.svg');
+  --glass: rgba(255,255,255,0.58);
+  --glass-soft: rgba(255,255,255,0.64);
+  --glass-dense: rgba(252,252,253,0.90);
+  --glass-solid: #f6f7f9;
+  --glass-rim:
+    inset 0 -1px 0 rgba(255,255,255,0.85),
+    inset -1px 0 0 rgba(255,255,255,0.60),
+    inset 0 1px 0 rgba(255,255,255,0.35),
+    0 0 0 1px rgba(16,24,40,0.10),
+    0 1px 2px rgba(16,24,40,0.07),
+    0 4px 12px rgba(16,24,40,0.06);
+  --sheen: linear-gradient(152deg, rgba(255,255,255,0.85) 0%, rgba(255,255,255,0.35) 30%, rgba(255,255,255,0) 58%);
+  --sheet-scrim: rgba(16,24,40,0.10);
+  --bn-idle: #76767B;
+  --bn-idle-ico: 0.85;
+  --text-halo:
+    0 0 6px rgba(255,255,255,1),
+    0 0 14px rgba(255,255,255,1),
+    0 0 28px rgba(255,255,255,0.92),
+    0 0 46px rgba(255,255,255,0.75);
+  --lens-fill: rgba(255,255,255,0.12);
+  --lens-blur: saturate(1.25) blur(2.5px);
+  --lens-sheen: linear-gradient(152deg, rgba(255,255,255,0.24) 0%, rgba(255,255,255,0.06) 34%, rgba(255,255,255,0) 56%);
+  --bar-fill: rgba(255,255,255,0.38);
+  --bar-blur: saturate(1.35) blur(9px);
+  --lens-rim:
+    inset 0 1px 0 rgba(255,255,255,0.95),
+    inset 0 -1px 0 rgba(255,255,255,0.70),
+    inset 1px 0 0 rgba(255,255,255,0.60),
+    inset -1px 0 0 rgba(255,255,255,0.60),
+    0 0 0 1px rgba(16,24,40,0.12),
+    0 10px 28px rgba(16,24,40,0.12);
+  --glass-spec:
+    inset 0 7px 14px -9px rgba(255,255,255,0.90),
+    inset 0 -9px 16px -11px rgba(16,24,40,0.07);
+  --glass-scatter:
+    inset 0 0 10px 4px rgba(255,255,255,0.35),
+    inset 0 0 40px 5px rgba(255,255,255,0.18);
+  --glass-scatter-short: inset 0 0 10px 3px rgba(255,255,255,0.35);
+  --glass-lift: 0 14px 34px rgba(16,24,40,0.16);
+  --glass-lift-sm: 0 6px 18px rgba(16,24,40,0.12);
+}
+
+body::before,
+body::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+}
+body::before { z-index: -2; background: var(--sky); }
+/* Отдельными свойствами, а не сокращением `background: var(--…)`: сокращение
+   с переменной, несущей позицию и размер, у Chromium молча разваливается —
+   слой пропадает целиком, без единой ошибки в консоли. */
+body::after {
+  z-index: -1;
+  background-image: var(--pat-url);
+  background-repeat: repeat;
+  background-size: var(--pat-size, 1800px 1800px);
+  /* Растворения обоев у нижнего края БОЛЬШЕ НЕТ. Маска гасила рисунок на последней
+     паре сотен пикселей окна, и граница этого угасания читалась швом поперёк экрана —
+     тем заметнее, чем ярче узор, а его подняли вдвое. Рисунок идёт до самого края.
+     Размытую полосу у низа пробовали вместо маски и тоже убрали: решением владельца
+     28.10.2026 низ страницы остаётся как есть, без обработки. */
+}
+/* Телефон: плитка меньше, иначе в экран попадает треть рисунка и обои
+   читаются как случайные обрезки. Широкий монитор, наоборот, получает её
+   крупнее, чтобы рисунки не мельчили. */
+@media (max-width: 700px) {
+  :root { --pat-size: 1150px 1150px; }
+}
+@media (min-width: 1900px) {
+  :root { --pat-size: 2100px 2100px; }
+}
+
+
+/* ── Сборка стеклянного элемента ─────────────────────────────────────────── */
+.glass {
+  background: var(--sheen), var(--glass);
+  -webkit-backdrop-filter: var(--blur);
+          backdrop-filter: var(--blur);
+  box-shadow: var(--glass-spec), var(--glass-rim), var(--glass-scatter), var(--glass-lift);
+}
+.glass-soft {
+  background: var(--glass-soft);
+  -webkit-backdrop-filter: var(--blur-soft);
+          backdrop-filter: var(--blur-soft);
+  box-shadow: var(--glass-rim), var(--glass-scatter-short), var(--glass-lift-sm);
+}
+.glass-dense {
+  background: var(--sheen), var(--glass-dense);
+  -webkit-backdrop-filter: var(--blur);
+          backdrop-filter: var(--blur);
+  box-shadow: var(--glass-spec), var(--glass-rim), var(--glass-scatter-short), var(--glass-lift);
+}
+
+/* Телефон: рассеяние только короткое — широкое свечение на слабых аппаратах
+   перерисовывается каждый кадр и стоит дорого (правило гайда). */
+@media (max-width: 600px) {
+  .glass { box-shadow: var(--glass-rim), var(--glass-scatter-short), var(--glass-lift); }
+}
+
+/* Откаты. Без них стекло превращается в нечитаемый текст поверх текста. */
+@supports not ((-webkit-backdrop-filter: blur(1px)) or (backdrop-filter: blur(1px))) {
+  .glass, .glass-soft, .glass-dense { background: var(--glass-solid); }
+}
+@media (prefers-reduced-transparency: reduce) {
+  .glass, .glass-soft, .glass-dense {
+    background: var(--glass-solid);
+    -webkit-backdrop-filter: none;
+            backdrop-filter: none;
+  }
+  body::before, body::after { display: none; }
+}
+@media (prefers-contrast: more) {
+  .glass, .glass-soft, .glass-dense {
+    background: var(--glass-solid);
+    box-shadow: 0 0 0 1px var(--ab-e4e4e7);
+  }
+  body::after { display: none; }
+}
+
+/* ── Шапка ───────────────────────────────────────────────────────────────── */
+.site-header {
+  /* НЕ прилипает. Прежде шапка висела над содержимым всю прокрутку: на телефоне
+     она съедала полоску экрана у табло, ради которого страницу и открыли, а
+     название сайта — не то, к чему возвращаются по десять раз. Теперь она просто
+     стоит вверху страницы и уезжает вместе с ней; обратно наверх ведёт «Поиск» в
+     нижней панели, которая никуда не девается.
+     z-index остаётся: меню языков тут больше нет, но слой выше обоев нужен,
+     чтобы капсула не оказалась под фоновым узором. */
+  position: relative;
+  z-index: 50;
+  /* 16 по бокам, как у всего остального содержимого: при 12 шапка была на
+     4px шире колонки и её левый край не совпадал ни с крошками, ни с табло. */
+  /* 4 сверху, а не 8: подпись в шапке выросла до 24px, и прежний отступ вместе с
+     её собственной высотой отодвигал содержимое страницы заметно вниз. */
+  padding: 4px 16px 0;
+  background: transparent;
+}
+/* Шапка — три отдельные стеклянные пилюли, а не одна общая плашка: логотип,
+   переключатель темы и выбор языка. Ряд между ними прозрачен, сквозь него
+   видны обои.
+   `overflow` на пилюлях НЕ ставить: меню языков висит абсолютно и будет
+   обрезано. */
+.hdr-row {
+  /* 928 = 960 колонка минус поля по 16. Табло и карточки занимают именно
+     столько, и шапка должна совпадать с ними краями, а не быть шире.
+
+     Флекс с одним элементом по центру. Сетка из трёх ячеек стояла здесь, пока
+     по бокам названия были кнопки темы и языка: при флексе название сдвигала бы
+     разница в их ширине, которая меняется от локали к локали. Кнопки переехали
+     на /settings, боковых ячеек не осталось, и считать 320px больше не нужно —
+     одна пилюля помещается на любом экране. */
+  max-width: 928px;
+  margin: 0 auto;
+  /* Снова сетка из трёх ячеек: по бокам названия стоят кнопки, и при флексе
+     название сдвигала бы разница в их ширине. minmax(0, 1fr) по краям, чтобы на
+     узком экране сжимались колонки, а не выталкивались кнопки. */
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, auto) minmax(0, 1fr);
+  align-items: center;
+  gap: clamp(4px, 1.6vw, 10px);
+}
+.hdr-row > :first-child { justify-self: start; }
+.hdr-row > :last-child { justify-self: end; }
+
+/* Круглые стеклянные кнопки по бокам названия: «Поделиться» и избранное.
+   Размер следует за шириной экрана, но не меньше 40: это цель нажатия, и
+   ужимать её ниже нельзя даже на 320px, где на обе кнопки и название всего
+   288 пикселей. */
+.hdr-act {
+  display: grid;
+  place-items: center;
+  width: clamp(40px, 11.5vw, 46px);
+  height: clamp(40px, 11.5vw, 46px);
+  flex-shrink: 0;
+  border: none;
+  border-radius: 50%;
+  background: var(--sheen), var(--glass-soft);
+  -webkit-backdrop-filter: var(--blur-soft);
+          backdrop-filter: var(--blur-soft);
+  box-shadow: var(--glass-spec), var(--glass-rim);
+  color: var(--ab-e4e4e7);
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  transition: color 0.16s ease, box-shadow 0.16s ease, transform 0.12s ease;
+}
+@media (hover: hover) {
+  .hdr-act:hover { color: var(--ab-ffffff); }
+}
+.hdr-pill {
+  /* Высота и поля следуют за шириной экрана, а не стоят ступенькой: 62px на
+     широком, 48 на 320. Цель нажатия остаётся не меньше 44. */
+  height: clamp(48px, 14vw, 62px);
+  /* Ореол цвета темы — название лежит прямо на обоях с тех пор, как у капсулы
+     убрали стеклянную подложку. Без него контуры рисунка проходят сквозь буквы,
+     и на светлой теме чужой самолётик из узора читается частью слова. Тот же
+     токен, что у заголовка главной: белый в светлой теме, чёрный в тёмной. */
+  text-shadow: var(--text-halo);
+  padding-inline: clamp(12px, 4vw, 20px);
+  border-radius: var(--r-pill);
+  display: flex;
+  align-items: center;
+  min-width: 0;
+  flex-shrink: 1;
+}
+/* Название сайта: кегль пропорционален ширине, а на совсем узком экране
+   обрезается многоточием. Крупнее прежнего: пока по бокам стояли кнопки темы
+   и языка, подпись делила ряд на троих и сидела на 17px; теперь она в шапке
+   одна, и мельчить незачем. */
+.hdr-pill > .hdr-wordmark {
+  font-size: clamp(19px, 5.8vw, 24px);
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.hdr-pill > .hdr-plane { font-size: clamp(20px, 6.2vw, 26px); }
+
+/* Маски под заголовком БОЛЬШЕ НЕТ.
+
+   Здесь лежал радиальный градиент цвета фона: он гасил обои за крупным текстом,
+   чтобы рисунок с ним не спорил. Пока поле поиска было непрозрачной пилюлей, это
+   ничему не мешало. Теперь поле — линза, и маска стирала под ним ровно ту картинку,
+   которую линза должна преломлять: стекло оказывалось приложено к сплошной заливке.
+   Ослабление не спасало — любая заметная маска видна как блёклое пятно под полем.
+   Заголовок обходится без подложки: название набрано 37px с весом 750, подпись
+   лежит на 14px поверх рисунка, чья прозрачность в светлой теме 0.10–0.25.
+
+   position: relative и z-index у детей остаются: на них держится порядок слоёв
+   выдачи поиска, которая всплывает над соседями. */
+.home-search-page { position: relative; }
+.home-search-page > * { position: relative; z-index: 1; }
+
+
+/* Флаги стран в переключателе языков.
+ *
+ * Эмодзи-флаг — это пара region indicator symbols, которую шрифт должен
+ * распознать и заменить картинкой. В системном эмодзи-шрифте Windows флагов
+ * нет, поэтому там вместо флага показывались две буквы: GB, RU, CN. Это
+ * поведение ОС, вёрсткой оно не лечится — нужен свой шрифт.
+ *
+ * Файл лежит у нас, а не на чужом CDN: сторонний запрос с каждой страницы —
+ * это и лишняя задержка, и утечка адреса посетителя. 78 КБ, кэшируется
+ * навсегда. `unicode-range` ограничивает его диапазоном флагов, так что на
+ * обычный текст шрифт не влияет и подменить его не может.
+ *
+ * Шрифт основан на Twemoji (CC BY 4.0) — лицензия требует указания автора.
+ */
+@font-face {
+  font-family: 'Twemoji Country Flags';
+  src: url('/assets/TwemojiCountryFlags.woff2') format('woff2');
+  font-display: swap;
+  unicode-range: U+1F1E6-1F1FF;
+}
+.locale-flag {
+  font-family: 'Twemoji Country Flags', system-ui, sans-serif;
+}
+
+/* Поле поиска — стеклянная капсула. Раньше это был прямоугольник со
+   скруглением 16 и рамкой: среди круглых пилюль шапки он выбивался. Рамки нет,
+   состояние фокуса показывает уплотнение стекла, а не смена цвета границы. */
+.search-pill {
+  width: 100%;
+  /* 13 по вертикали, а не 18: при высоте строки 18px поле выходило под 60px и
+     выглядело раздутым рядом с пилюлями шапки в 56.
+     По горизонтали поля РАЗНЫЕ и логические: слева 60 под лупу в 24px, справа 52
+     под кнопку очистки. Прежние общие 52 оставляли между лупой и текстом шесть
+     пикселей, и строка липла к значку. padding-inline, а не padding-left: в
+     арабской локали лупа стоит справа, и жёсткая сторона увела бы её под текст. */
+  padding-block: 13px;
+  padding-inline: 60px 52px;
+  font-size: 18px;
+  border: none;
+  border-radius: var(--r-pill);
+  outline: none;
+  color: var(--ab-ffffff);
+  -webkit-appearance: none;
+  transition: background 0.16s ease;
+}
+/* Фокус не заливает поле плотным стеклом: при 0.90 узор под ним исчезал ровно
+   в тот момент, когда человек на поле смотрит. Вместо заливки — светящаяся
+   кромка: так ведёт себя подсвеченный край стекла, и видно её лучше. */
+.search-pill:focus {
+  box-shadow:
+    var(--glass-spec),
+    var(--lens-rim),
+    0 0 0 1.5px color-mix(in srgb, var(--ab-0a84ff) 70%, transparent);
+}
+.search-pill::placeholder { color: var(--ab-6a6a6a); }
+/* Подсказка, которая печатается сама.
+
+   Пока идёт анимация, родной placeholder делается прозрачным — но остаётся в
+   разметке: его читает программа чтения с экрана и видит тот, у кого выключены
+   скрипты. Прозрачный, а не удалённый, ещё и потому, что он держит ширину поля
+   от схлопывания в редких раскладках.
+
+   Сама строка — абсолютная, поверх поля, мимо нажатий. Отступ и кегль повторяют
+   поле буква в букву, иначе текст прыгнет в момент, когда человек начнёт печатать.
+   Логический inset-inline-start: в арабской локали строка должна идти справа. */
+.search-pill[data-typing]::placeholder { color: transparent; }
+.srch-typer {
+  position: absolute;
+  inset-inline-start: 60px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1;
+  pointer-events: none;
+  display: flex;
+  align-items: center;
+  font-size: 18px;
+  line-height: 1;
+  color: var(--ab-6a6a6a);
+  white-space: nowrap;
+}
+/* Курсор — полоска цвета текста, мигает ровно, без исчезновения ширины: иначе
+   строка дёргалась бы на пиксель вместе с ним. */
+.srch-caret {
+  display: inline-block;
+  width: 1.5px;
+  height: 1.05em;
+  margin-inline-start: 2px;
+  background: var(--ab-8a8a8a);
+  animation: srch-blink 1.05s steps(1, end) infinite;
+}
+@keyframes srch-blink { 0%, 50% { opacity: 1; } 50.01%, 100% { opacity: 0; } }
+@media (prefers-reduced-motion: reduce) {
+  .srch-caret { animation: none; }
+}
+
+/* ── Линза поля поиска ────────────────────────────────────────────────────────
+   Поле — единственное место на сайте, где стекло ПРОЗРАЧНО по-настоящему: заливки
+   16% в тёмной теме и 22% в светлой вместо 48–58% у панелей. Так и выглядит
+   «жидкое стекло» у Apple: не матовая пластина, а линза, которая почти ничего не
+   закрывает, а преломляет.
+
+   Работу держит кромка. Карта смещения (public/glass-lens-map.svg) открывает
+   градиент полосой вдоль края и оставляет середину нейтральной, поэтому картинка
+   под полем изгибается у бортов и остаётся спокойной в центре — ровно так ведёт
+   себя утолщённый край стекла. Фильтр (public/glass-lens.svg) смещает красный,
+   зелёный и синий каналы разной силой: у настоящего стекла показатель преломления
+   зависит от длины волны, и кромка слегка расходится в цвете.
+
+   ОБЪЯВЛЕНО ДВУМЯ ШАГАМИ, и это не стиль, а защита. Движок, не знающий url() в
+   backdrop-filter, отбрасывает ВСЁ объявление целиком — вместе с размытием. Первое
+   объявление даёт обычную линзу без преломления и остаётся в силе всегда; второе
+   добавляет преломление там, где оно работает. Худший случай — поле без изгиба
+   кромки, а не поле без стекла.
+
+   Только Chromium: Safari и Firefox url() в backdrop-filter не поддерживают
+   (это написано и у автора приёма). Только мышь и широкий экран: смещение
+   считается при каждой перерисовке фона под полем. */
+.search-lens {
+  background: var(--lens-sheen), var(--lens-fill);
+  -webkit-backdrop-filter: var(--lens-blur);
+          backdrop-filter: var(--lens-blur);
+  box-shadow: var(--glass-spec), var(--lens-rim);
+}
+@supports ((backdrop-filter: url("#x")) or (-webkit-backdrop-filter: url("#x"))) {
+  @media (min-width: 700px) and (pointer: fine) {
+    .search-lens {
+      -webkit-backdrop-filter: var(--lens-blur) url("/glass-lens.svg#lens");
+              backdrop-filter: var(--lens-blur) url("/glass-lens.svg#lens");
+    }
+  }
+}
+/* Откаты те же, что у остального стекла: без них поле превращается в текст
+   поверх текста. */
+@supports not ((-webkit-backdrop-filter: blur(1px)) or (backdrop-filter: blur(1px))) {
+  .search-lens { background: var(--glass-solid); }
+}
+@media (prefers-reduced-transparency: reduce), (prefers-contrast: more) {
+  .search-lens {
+    background: var(--glass-solid);
+    -webkit-backdrop-filter: none;
+            backdrop-filter: none;
+  }
+}
+
+
+/* Справка на главной: стекло не одной общей панелью, а под каждым блоком —
+   абзацем и каждой из трёх плиток с показателями. Общая панель накрывала и
+   подпись «Свернуть», и промежутки между плитками: получалось большое пустое
+   окно, в котором содержимое терялось. */
+.home-intro-card {
+  margin-top: 12px;
+  padding: 16px 20px;
+  border-radius: var(--r-card);
+  background: var(--glass);
+  -webkit-backdrop-filter: var(--blur);
+          backdrop-filter: var(--blur);
+  box-shadow: var(--glass-rim), var(--glass-scatter-short);
+}
+.home-metric {
+  position: relative;
+  overflow: hidden;
+  min-width: 0;
+  /* 72, а не 108: подписи укорочены до одной строки, и прежняя высота закладывала
+     место под сноску из трёх строк, которой больше нет. Высота нужна только для
+     того, чтобы три плитки стояли вровень при разной длине подписи. */
+  min-height: 72px;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  padding: 12px 14px;
+  border-radius: var(--r-card);
+  background: var(--glass);
+  -webkit-backdrop-filter: var(--blur);
+          backdrop-filter: var(--blur);
+  box-shadow: var(--glass-rim), var(--glass-scatter-short);
+}
+@supports not ((-webkit-backdrop-filter: blur(1px)) or (backdrop-filter: blur(1px))) {
+  .home-intro-card, .home-metric { background: var(--glass-solid); }
+}
+@media (prefers-reduced-transparency: reduce) {
+  .home-intro-card, .home-metric {
+    background: var(--glass-solid);
+    -webkit-backdrop-filter: none;
+            backdrop-filter: none;
+  }
+}
+
+/* Плавное раскрытие справки на главной.
+ *
+ * Нативный <details> открывается рывком: содержимое возникает целиком, и
+ * блок над ним прыжком уезжает вверх. Высоту «auto» обычная анимация не
+ * берёт, поэтому включаем `interpolate-size: allow-keywords` — он разрешает
+ * переход между 0 и auto — и анимируем псевдоэлемент ::details-content.
+ *
+ * Содержимое при этом проявляется прозрачностью, а не сдвигом: элемент,
+ * который двигают через transform, уходит в отдельный слой и пропадает из
+ * размытия стеклянной шапки над ним (правило гайда). Ощущение «снизу» даёт
+ * сам рост высоты — верхний блок едет вверх, нижний открывается из-под него.
+ *
+ * Chromium анимирует; Safari и Firefox пока не знают ::details-content и
+ * открывают как раньше, мгновенно. Это именно деградация, а не поломка.
+ * Для prefers-reduced-motion длительности обнуляет общее правило выше. */
+:root { interpolate-size: allow-keywords; }
+
+.home-reference::details-content,
+.home-footer-reference::details-content {
+  block-size: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition:
+    /* Та же кривая, что у выдвижной карточки рейса: движение в проекте
+       должно читаться как одно, а не как набор разных анимаций. */
+    block-size 0.38s cubic-bezier(0.32, 0.72, 0, 1),
+    opacity 0.3s ease,
+    content-visibility 0.38s allow-discrete;
+  transition-behavior: allow-discrete;
+}
+.home-reference[open]::details-content,
+.home-footer-reference[open]::details-content {
+  block-size: auto;
+  opacity: 1;
+}
+
+/* Значок «i» у заголовка «Популярные аэропорты»: под ним справка об охвате.
+   Нативный маркер <summary> убран, кружок — обычная стеклянная плашка. */
+/* Отступ снизу задаёт то, что идёт следом (плитки показателей), иначе у
+   закрытой справки он складывается с их собственным и зияет. */
+/* Заголовок стоит прямо над списком, поэтому отбивка снизу небольшая: раньше
+   он шёл перед плитками, и расстояние держали их собственные отступы. */
+.pop-info { margin-bottom: 10px; }
+.pop-info > summary {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 32px;
+  cursor: pointer;
+  list-style: none;
+  -webkit-tap-highlight-color: transparent;
+}
+.pop-info > summary::-webkit-details-marker { display: none; }
+.pop-info > summary:focus-visible { outline: 2px solid var(--ab-0a84ff); outline-offset: 4px; border-radius: 8px; }
+.pop-info-title {
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  color: var(--ab-8a8a8a);
+}
+.pop-info-badge {
+  width: 22px;
+  height: 22px;
+  flex-shrink: 0;
+  border-radius: var(--r-pill);
+  display: grid;
+  place-items: center;
+  font-size: 13px;
+  font-weight: 700;
+  font-family: Georgia, 'Times New Roman', serif;
+  color: var(--ab-8a8a8a);
+  background: var(--glass-soft);
+  box-shadow: var(--glass-rim);
+  transition: background 0.16s ease, color 0.16s ease;
+}
+@media (hover: hover) {
+  .pop-info > summary:hover .pop-info-badge { background: var(--glass-dense); color: var(--ab-ffffff); }
+}
+.pop-info[open] .pop-info-badge { background: var(--glass-dense); color: var(--ab-ffffff); }
+.pop-info::details-content {
+  block-size: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition:
+    block-size 0.38s cubic-bezier(0.32, 0.72, 0, 1),
+    opacity 0.3s ease,
+    content-visibility 0.38s allow-discrete;
+  transition-behavior: allow-discrete;
+}
+.pop-info[open]::details-content { block-size: auto; opacity: 1; }
+
+/* Каталог стран — таблица в три колонки, все 237 стран сразу.
+   На узком экране колонок две: при трёх на 375px на ячейку остаётся около
+   110px, и «Соединённые Штаты» обрезались бы до двух слов с многоточием —
+   ровно та страна, по которой чаще всего и кликают из англоязычных локалей. */
+.country-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 8px;
+}
+@media (max-width: 560px) {
+  .country-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+/* Популярные аэропорты — две колонки. Порог тот же, что у каталога стран, чтобы
+   оба блока перестраивались на одной ширине и не расходились по вёрстке. */
+.popular-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 6px;
+}
+@media (max-width: 560px) {
+  .popular-grid { grid-template-columns: minmax(0, 1fr); }
+}
+
+/* Выход к полному каталогу под таблицей. Капсула во всю ширину, а не ячейка
+   шириной в треть: это не шестнадцатая страна, а другое действие, и ряд из
+   пятнадцати должен читаться как законченный. */
+.country-more {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 8px;
+  min-height: 44px;
+  border-radius: var(--r-pill);
+  font-size: 13.5px;
+  color: var(--ab-e4e4e7);
+  text-decoration: none;
+}
+.country-more svg { color: var(--ab-8a8a8a); flex-shrink: 0; }
+
+/* Название аэропорта в строке списка прячется на узком экране: там его теснят
+   код, город и счётчики, и оно обрезается до двух букв — пользы от такого
+   обрезка нет, а строку оно сужает.
+   Порог поднят с 560 до 900: строка теперь живёт в половине ширины, и место
+   кончается вдвое раньше, чем когда список шёл в одну колонку. Ниже 560 колонка
+   снова одна, но там строка и без того узкая — правило остаётся верным для обеих
+   раскладок. */
+@media (max-width: 900px) {
+  .pl-name { display: none; }
+}
+
+/* Плитка показателя: число сверху, подпись под ним, крупный рисунок в нижнем
+   углу. Подпись не заходит под рисунок — ширина ограничена, а не обрезана
+   многоточием: обрезанная подпись теряет смысл, перенос — нет. */
+.home-metric-value {
+  font-size: clamp(16px, 4.8vw, 19px);
+  font-weight: 700;
+  color: var(--ab-ffffff);
+  line-height: 1.15;
+  letter-spacing: -0.01em;
+}
+.home-metric-label {
+  /* Кегль за шириной экрана: на 320px двенадцатый не вмещал «с регулярными
+     рейсами» в 74% колонки, и слово рвалось — «с регулярн/ыми». */
+  font-size: clamp(10.5px, 3.2vw, 12px);
+  line-height: 1.3;
+  color: var(--ab-6a6a6a);
+  max-width: 74%;
+  /* Без break-word: слово шире колонки лучше обрезать, чем разорвать. */
+  hyphens: manual; -webkit-hyphens: manual;
+}
+.home-metric-art {
+  position: absolute;
+  inset-inline-end: -10px;
+  bottom: -12px;
+  color: var(--ab-8a8a8a);
+  opacity: 0.26;
+  pointer-events: none;
+}
+/* До 700px колонка узкая: подпись в 74% ширины ломается на три-четыре строки
+   и вылезает на рисунок. Там она занимает всю ширину, а рисунок уменьшается. */
+@media (max-width: 700px) {
+  .home-metric { min-height: 92px; }
+  .home-metric-art { width: 46px; height: 46px; inset-inline-end: -8px; bottom: -10px; opacity: 0.2; }
+  .home-metric-label { max-width: 100%; }
+  .home-metric-value { font-size: 17px; }
+}
+
+
+/* ── Ползунок горизонтальных рядов ─────────────────────────────────────────
+ * Приём из «Отложки»: место под ползунок остаётся 9px, чтобы за него было
+ * удобно хвататься, но видна только тонкая скруглённая таблетка — её даёт
+ * прозрачная рамка 3px вместе с background-clip: content-box.
+ *
+ * Цвет меняется плавно не через background (его браузер анимировать не умеет),
+ * а через зарегистрированное свойство --sbc, которым залита внутренняя тень.
+ * Появляется быстро, гаснет медленно — класс .sc-on ставит RowScroll.
+ *
+ * scrollbar-width и scrollbar-color заданы ТОЛЬКО под @supports для Firefox:
+ * в Chrome они отключают всё оформление ::-webkit-scrollbar и возвращают
+ * системные стрелки. Это правило из гайда, проверять на себе незачем. */
+@property --sbc {
+  syntax: '<color>';
+  inherits: true;
+  initial-value: transparent;
+}
+
+.scroll-row {
+  --sbc: rgba(var(--ab-ink), 0);
+  transition: --sbc 0.45s ease;
+}
+.scroll-row.sc-on { --sbc: rgba(var(--ab-ink), 0.30); transition: --sbc 0.15s ease; }
+
+:is(.scroll-row, .srch-list)::-webkit-scrollbar { width: 9px; height: 9px; display: block; }
+:is(.scroll-row, .srch-list)::-webkit-scrollbar-track,
+:is(.scroll-row, .srch-list)::-webkit-scrollbar-corner { background: transparent; }
+:is(.scroll-row, .srch-list)::-webkit-scrollbar-button { display: none; }
+:is(.scroll-row, .srch-list)::-webkit-scrollbar-thumb {
+  border-radius: 999px;
+  border: 3px solid transparent;
+  background: transparent;
+  background-clip: content-box;
+  box-shadow: inset 0 0 0 10px var(--sbc);
+}
+:is(.scroll-row, .srch-list)::-webkit-scrollbar-thumb:hover {
+  box-shadow: inset 0 0 0 10px rgba(var(--ab-ink), 0.46);
+}
+
+@supports (-moz-appearance: none) {
+  .scroll-row, .srch-list {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(var(--ab-ink), 0.30) transparent;
+  }
+}
+
+/* Ряд можно тянуть мышью: курсор показывает это заранее. Во время
+   перетаскивания снап выключен — иначе он тянет ряд назад под курсором, —
+   и запрещено выделение текста, иначе вместо прокрутки выделяются подписи. */
+@media (hover: hover) {
+  .scroll-row { cursor: grab; }
+  .scroll-row.sc-drag { cursor: grabbing; }
+}
+.scroll-row.sc-drag {
+  scroll-snap-type: none;
+  user-select: none;
+  -webkit-user-select: none;
+}
+/* Ссылки внутри ряда не перетаскиваются как ссылки: иначе браузер уводит жест
+   в своё drag-and-drop, и ряд тянется только за промежутки между карточками. */
+.scroll-row a, .scroll-row img { -webkit-user-drag: none; }
+
+/* Шапка страницы аэропорта. Панель во всю колонку: код, название, время,
+   описание и строка свежести — один блок, а не пять строк россыпью. */
+.ap-head {
+  max-width: 928px;
+  margin: 0 auto;
+  padding: 16px 20px 14px;
+  border-radius: var(--r-panel);
+}
+@media (max-width: 560px) {
+  .ap-head { padding: 14px 16px 12px; border-radius: var(--r-card); }
+}
+
+/* Хлебные крошки. Капсула не растягивается на всю ширину: она облегает
+   содержимое, иначе на широком экране пустая полоса тянулась бы через весь
+   блок. На телефоне длинная цепочка прокручивается внутри капсулы, а не
+   переносится — перенос ломал бы её форму. */
+/* 16px по бокам — как у табло, крошек и карточек ниже. При 12 левые края
+   блоков расходились на 4px, и колонка выглядела рваной. */
+/* Сверху 20, а не 10: крошки — первое, что идёт под плавающей шапкой, и
+   при малом отступе капсула почти касалась её. */
+.crumbs-wrap { max-width: 960px; margin: 0 auto; padding: 20px 16px 0; }
+/* Внизу страницы крошки стоят по центру, как языковой ряд под ними: слева они
+   читались бы обрывком следующего раздела, а не концом страницы. */
+.crumbs-wrap--foot { display: flex; justify-content: center; padding-top: 32px; }
+.crumbs {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  max-width: 100%;
+  margin: 0;
+  padding: 7px 14px;
+  list-style: none;
+  border-radius: var(--r-pill);
+  font-size: 12px;
+  color: var(--ab-8a8a8a);
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+.crumbs::-webkit-scrollbar { display: none; }
+.crumbs > li { display: flex; align-items: center; gap: 7px; white-space: nowrap; }
+.crumbs a { color: var(--ab-8a8a8a); text-decoration: none; min-height: 22px; display: inline-flex; align-items: center; }
+@media (hover: hover) { .crumbs a:hover { color: var(--ab-e4e4e7); } }
+.crumbs svg { opacity: 0.45; flex-shrink: 0; }
+.crumbs-current { color: var(--ab-ffffff); font-weight: 600; }
+
+/* На узком экране название аэропорта в выдаче прячется: рядом уже стоят флаг,
+   код, город и страна, и на две-три буквы от названия толку нет. */
+@media (max-width: 460px) {
+  .srch-name { display: none; }
+}
+
+/* Выдача поиска: ползунок виден всегда, а не только пока ею пользуются.
+   Список перекрывает страницу, и единственный намёк на то, что под ним есть
+   ещё аэропорты, — это полоса. Скрывать её тут незачем. */
+.srch-list { --sbc: rgba(var(--ab-ink), 0.22); }
+
+/* Подвал: содержимое на стеклянной панели, ссылки — пилюлями.
+   Шестьдесят с лишним ссылок простым текстом на пёстрых обоях читались как
+   сплошная серая сыпь; пилюли дают каждой границы и попадание пальцем. */
+.foot-panel {
+  max-width: 928px;
+  margin: 0 auto;
+  padding: 20px 20px 18px;
+  border-radius: var(--r-panel);
+}
+.foot-chip {
+  display: inline-flex;
+  align-items: center;
+  min-height: 30px;
+  padding: 0 12px;
+  border-radius: var(--r-pill);
+  background: var(--glass-soft);
+  box-shadow: var(--glass-rim);
+  color: var(--ab-8a8a8a);
+  font-size: 13px;
+  text-decoration: none;
+  transition: background 0.16s ease, color 0.16s ease;
+}
+@media (hover: hover) {
+  .foot-chip:hover { background: var(--glass-dense); color: var(--ab-e4e4e7); }
+}
+/* Одна буква — около 9px, поэтому ей задаётся ширина: иначе пилюли указателя
+   выходили бы разной ширины и ряд читался бы рваным. */
+.foot-chip--letter { min-width: 34px; padding: 0; justify-content: center; font-weight: 600; }
+.foot-chip--accent { color: var(--ab-0a84ff); }
+.foot-chip--current { color: var(--ab-ffffff); font-weight: 600; background: var(--glass-dense); }
+@media (max-width: 560px) {
+  .foot-panel { padding: 16px 14px 14px; border-radius: var(--r-card); }
+  .foot-chip { font-size: 12.5px; padding: 0 10px; }
+}
+
+/* ─── Избранное (28.10.2026) ───────────────────────────────────────────────────
+   Личный список аэропортов читателя: звезда в шапке аэропорта, пилюля со
+   счётчиком в шапке сайта, плитки на главной и на /favorites.
+
+   Размеры пропорциональные (clamp), а не ступеньками: ровно по той же причине,
+   по которой на clamp переведены шапка и строка рейса — ступенька на 560px
+   давала скачок на промежуточных ширинах, а на 320px выталкивала соседей. */
+
+/* Сердце «в избранное» живёт на кнопке шапки (.hdr-act), поэтому своей геометрии
+   у него нет — только цвет включённого состояния.
+
+   Красный, а не оранжевый: сердце читается красным, и ни одна строка рейса рядом
+   не окрашена — спутать с «отменён» негде, тот цвет живёт только в табло. */
+.fav-heart--on { color: var(--ab-ff453a); }
+@media (hover: hover) {
+  .fav-heart:hover { color: var(--ab-ff453a); }
+}
+
+/* ── Страница избранного ──
+   Строки того же вида, что «Популярные аэропорты» на главной: код, город,
+   счётчики рейсов. Прежде это были мелкие капсулы вроде «недавних», и на
+   собственной странице один избранный аэропорт выглядел потерянной крошкой. */
+.fav-page { max-width: 960px; margin: 0 auto; padding: 18px 16px 40px; width: 100%; }
+.fav-grid {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 6px;
+}
+/* Одна колонка на телефоне — по той же границе, что у списка популярных: при
+   двух на 375px строке остаётся около 170px, и город со счётчиком не умещаются. */
+@media (max-width: 560px) {
+  .fav-grid { grid-template-columns: minmax(0, 1fr); }
+}
+.fav-item {
+  display: flex;
+  align-items: center;
+  min-width: 0;
+  border-radius: 16px;
+  background: var(--glass-soft);
+  box-shadow: var(--glass-rim);
+  overflow: hidden;
+}
+.fav-link {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex: 1;
+  min-width: 0;
+  /* Высота на ссылке, а не на плитке: цель нажатия должна принадлежать самой
+     ссылке, иначе её верхние и нижние пиксели не нажимаются. */
+  min-height: 48px;
+  padding: 0 4px 0 14px;
+  text-decoration: none;
+  color: inherit;
+}
+.fav-iata {
+  width: 44px;
+  flex-shrink: 0;
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1;
+  color: var(--ab-ffffff);
+}
+.fav-city {
+  flex: 1;
+  min-width: 0;
+  font-size: 14px;
+  color: var(--ab-e4e4e7);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.fav-counts {
+  flex-shrink: 0;
+  font-size: 12px;
+  color: var(--ab-8a8a8a);
+  white-space: nowrap;
+}
+.fav-dep { color: var(--ab-34c759); font-weight: 700; }
+.fav-arr { color: var(--ab-0a84ff); font-weight: 700; }
+.fav-del {
+  width: 42px;
+  min-height: 48px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  background: transparent;
+  color: var(--ab-8a8a8a);
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  transition: color 0.16s ease, transform 0.12s ease;
+}
+@media (hover: hover) {
+  .fav-del:hover { color: var(--ab-ff453a); }
+}
+
+/* Пустая страница избранного: сердце, заголовок, строка объяснения — по центру.
+
+   Строка прижатая к верху читалась как недогрузившаяся страница, поэтому блок
+   центрируется по высоте окна. 220px — шапка сверху и запас под плавающую панель
+   снизу; svh, а не vh, чтобы на телефоне ничего не уезжало при скрытии панелей
+   браузера.
+
+   text-wrap: balance у обеих строк: браузер сам выравнивает длину строк, и вместо
+   длинной первой и короткого хвоста получается ровный столбик. Ширина ограничена
+   по той же причине — на широком экране строка иначе растягивается через весь
+   экран и читается тяжело. */
+.fav-blank {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+  min-height: calc(100svh - 220px);
+  max-width: 420px;
+  margin: 0 auto;
+  text-align: center;
+}
+.fav-blank-ico {
+  display: grid;
+  place-items: center;
+  width: 104px;
+  height: 104px;
+  margin-bottom: 20px;
+  border-radius: 50%;
+  background: var(--sheen), var(--glass-soft);
+  /* Размытия не хватало: заливка без него — просто полупрозрачный круг, сквозь
+     который узор виден резким, и читается он плашкой, а не стеклом. Со стеклом
+     рисунок под кругом размыт, как под остальными панелями сайта. */
+  -webkit-backdrop-filter: var(--blur-soft);
+          backdrop-filter: var(--blur-soft);
+  box-shadow: var(--glass-spec), var(--glass-rim);
+  /* Серое, а не красное: красным на этом сайте помечено ВКЛЮЧЁННОЕ
+     избранное, и на пустой странице тот же цвет обещал бы, что там
+     уже что-то есть. Здесь значок — иллюстрация, а не состояние. */
+  color: var(--ab-8a8a8a);
+}
+.fav-blank-t {
+  margin: 0;
+  font-size: clamp(20px, 5.4vw, 24px);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--ab-ffffff);
+  text-wrap: balance;
+  text-shadow: var(--text-halo);
+}
+.fav-blank-p {
+  margin: 8px 0 0;
+  max-width: 34ch;
+  font-size: clamp(14px, 3.9vw, 15.5px);
+  line-height: 1.5;
+  color: var(--ab-8a8a8a);
+  text-wrap: balance;
+  text-shadow: var(--text-halo);
+}
+
+/* ─── Нижняя панель навигации (28.10.2026) ────────────────────────────────────
+   Поиск · Избранное · Настройки. Плавающая пилюля, а не плашка во всю ширину:
+   сайт собран из стеклянных капсул, и панель во всю ширину с прямыми углами
+   была бы в нём единственным элементом иной породы. */
+
+/* Место под панель держит ТЕЛО СТРАНИЦЫ, а не сама панель: она рисуется только
+   после гидратации, и без этого резерва подвал в момент её появления уходил бы
+   под стекло. Высота: 66 на пилюлю + 12 снизу + 14 воздуха. */
+body { padding-bottom: calc(92px + env(safe-area-inset-bottom)); }
+
+.bottomnav {
+  position: fixed;
+  inset-inline: 0;
+  bottom: calc(12px + env(safe-area-inset-bottom));
+  /* Ниже карточки рейса (200) и её подложки (201): открытая карточка перекрывает
+     панель целиком, иначе «Настройки» висели бы поверх расписания. */
+  z-index: 90;
+  display: flex;
+  justify-content: center;
+  padding-inline: 16px;
+  pointer-events: none;
+}
+.bn-pill {
+  pointer-events: auto;
+  display: flex;
+  /* Своё стекло, а не .glass-dense: панель должна читаться линзой, как поле
+     поиска, — та же кромка, тот же отсвет, только заливка плотнее. */
+  background: var(--lens-sheen), var(--bar-fill);
+  -webkit-backdrop-filter: var(--bar-blur);
+          backdrop-filter: var(--bar-blur);
+  box-shadow: var(--glass-spec), var(--lens-rim);
+  width: 100%;
+  /* Уже, чем раньше: на 480px пилюля тянулась почти во всю ширину окна и читалась
+     полосой, а не капсулой. 380 хватает трём подписям даже в немецком
+     («Einstellungen» — около 85px при доступных 120). */
+  max-width: 380px;
+  border-radius: var(--r-pill);
+  padding: 6px;
+  gap: 2px;
+}
+.bn-item {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  /* 54 + 6 + 6 полей пилюли = 66. Цель нажатия шире подписи на всю ячейку. */
+  min-height: 54px;
+  padding: 5px 2px;
+  border: none;
+  background: transparent;
+  border-radius: var(--r-pill);
+  color: var(--bn-idle);
+  text-decoration: none;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  transition: color 0.16s ease, transform 0.12s ease;
+}
+/* Текущий раздел — цветом значка И подписи сразу. Одного значка мало: на
+   глаз он отличается от соседей слабее, чем строка под ним.
+
+   Белым, а не синим (решение владельца 28.10.2026). --ab-ffffff — это основной
+   цвет текста темы: белый на тёмной, почти чёрный на светлой. Синий на сайте
+   означает ссылку и прилёт на табло, и третьим значением «вы здесь» он спорил
+   сам с собой. Отличие от соседей держится не оттенком, а разницей с серым
+   --ab-8a8a8a у неактивных и весом подписи в 600. */
+.bn-item--on { color: var(--ab-ffffff); }
+.bn-item--on .bn-label { font-weight: 600; }
+.bn-item:not(.bn-item--on) svg { opacity: var(--bn-idle-ico, 1); }
+
+/* Откаты те же, что у остального стекла. */
+@supports not ((-webkit-backdrop-filter: blur(1px)) or (backdrop-filter: blur(1px))) {
+  .bn-pill { background: var(--glass-solid); }
+}
+@media (prefers-reduced-transparency: reduce), (prefers-contrast: more) {
+  .bn-pill {
+    background: var(--glass-solid);
+    -webkit-backdrop-filter: none;
+            backdrop-filter: none;
+  }
+}
+.bn-label {
+  font-size: clamp(11px, 3.2vw, 12.5px);
+  line-height: 1.1;
+  letter-spacing: -0.01em;
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+@media (hover: hover) {
+  .bn-item:hover { color: var(--ab-e4e4e7); }
+  .bn-item--on:hover { color: var(--ab-ffffff); }
+  .set-lang:hover, .set-seg-btn:hover { color: var(--ab-e4e4e7); }
+}
+
+/* ─── Страница настроек ───────────────────────────────────────────────────────
+   Тема и язык. Прежде то и другое стояло пилюлями в шапке; у настроек появился
+   свой адрес, на который можно вернуться кнопкой «назад». */
+.set-sec {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--ab-8a8a8a);
+  margin: 26px 0 10px;
+}
+.set-sec:first-of-type { margin-top: 0; }
+.set-seg { display: flex; gap: 8px; }
+.set-seg-btn {
+  flex: 1;
+  min-height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border: none;
+  border-radius: var(--r-pill);
+  background: var(--glass-soft);
+  box-shadow: var(--glass-rim);
+  color: var(--ab-8a8a8a);
+  font-size: 14px;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  transition: color 0.16s ease, box-shadow 0.16s ease, transform 0.12s ease;
+}
+/* Выбранная тема — обводкой цветом, как у фильтров табло: заливка здесь спорила
+   бы со стеклом самой кнопки. */
+.set-seg-btn--on {
+  color: var(--ab-ffffff);
+  font-weight: 600;
+  box-shadow: var(--glass-rim), inset 0 0 0 1.5px var(--ab-0a84ff);
+}
+.set-langs {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(clamp(140px, 44vw, 200px), 1fr));
+  gap: 6px;
+}
+.set-lang {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 48px;
+  padding: 0 14px;
+  border-radius: var(--r-pill);
+  background: var(--glass-soft);
+  box-shadow: var(--glass-rim);
+  font-size: 13.5px;
+  color: var(--ab-8a8a8a);
+  text-decoration: none;
+  transition: color 0.16s ease, box-shadow 0.16s ease;
+}
+.set-lang--on {
+  color: var(--ab-ffffff);
+  font-weight: 600;
+  box-shadow: var(--glass-rim), inset 0 0 0 1.5px var(--ab-0a84ff);
+}
+
+/* Ряд «эта страница на других языках». Стоит последним элементом содержимого,
+   прямо над подвалом, и нарочно тих: это не раздел сайта, а служебный ряд.
+   Подписи над ним нет — двенадцать названий языков подряд не нуждаются в
+   заголовке «Язык», а для программы чтения с экрана он есть в aria-label. */
+.page-langs {
+  max-width: 1000px;
+  margin: 34px auto 0;
+  padding: 0 16px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px 14px;
+}
+
+/* Подвал — НИЖЕ первого экрана.
+   «Дополнительно» и строка об авторских правах видны сразу при заходе только
+   потому, что короткая страница (избранное с одной плиткой, настройки) не
+   доходит до низа окна, а подвал прижат к нему margin-top: auto. Человек,
+   открывший борт, первым делом читает служебную подпись — она же в этот
+   момент самая заметная строка экрана.
+
+   Чинится не подвалом, а содержимым: если ВСЁ, что стоит выше подвала, не
+   ниже одного окна, подвал по определению начинается за сгибом. min-height
+   на <main> ничего не меняет на длинных страницах — там содержимое и так
+   выше окна, — и действует ровно там, где проблема.
+
+   svh, а не vh: на телефоне высота окна скачет при скрытии панелей браузера,
+   и vh считался бы по БОЛЬШЕЙ из них, оставляя подвал в кадре. */
+.site-main { min-height: 100svh; }
+
+/* Ореол для ВСЕГО, что лежит прямо на обоях.
+
+   Стеклянные панели в нём не нуждаются — у них своя заливка. Нуждаются подписи,
+   набранные поверх рисунка: раскрывашки каталога и подвала, заголовки служебных
+   страниц, названия разделов. После того как узор подняли вдвое по яркости, его
+   контуры стали проходить сквозь буквы, и мелкая серая строка в 13px путалась с
+   линиями рисунка сильнее, чем крупный заголовок.
+
+   Класс, а не перечисление селекторов: половина этих подписей сверстана
+   инлайновыми стилями в компонентах, и общий класс — единственный способ задать
+   им одно и то же в одном месте. */
+.wall-text,
+.home-reference > summary,
+.home-footer-reference > summary,
+.fav-hint,
+.set-sec {
+  text-shadow: var(--text-halo);
+}
+
+/* ─── Список настроек: группы и раскрывающиеся строки ─────────────────────────
+   Раскладка взята из «Кабинета отложки» (css/07-ios-forms.css): группа — одна
+   карточка со скруглением, строки внутри разделены волосяной линией, подпись
+   группы мелкими прописными сверху, пояснение — под карточкой. Это привычный
+   строй списка настроек, и спорить с ним незачем.
+
+   Перенесены именно правила раскладки, а не внешний вид: там карточка белая и
+   непрозрачная, здесь — стекло сайта; там разделитель --i-sep, здесь он от
+   цвета текста темы. Разворачивается строка через <details>: содержимое
+   остаётся в разметке и в закрытом виде, никакого JS. */
+.sg {
+  border-radius: var(--r-card);
+  overflow: hidden;
+  background: var(--sheen), var(--glass-soft);
+  -webkit-backdrop-filter: var(--blur-soft);
+          backdrop-filter: var(--blur-soft);
+  box-shadow: var(--glass-spec), var(--glass-rim);
+}
+/* Воздух над подписью раздела. Он же отделяет разделы друг от друга: внутри
+   группы строки идут вплотную, поэтому промежуток между группами должен быть
+   заметно больше высоты строки, иначе список читается одной сплошной лентой.
+   Правило нужно и после ряда плиток — у него своей нижней границы нет. */
+.sg + .sg-h,
+.set-tiles + .sg-h { margin-top: 26px; }
+.sg-h {
+  margin: 0 16px 5px;
+  font-size: 11.5px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ab-8a8a8a);
+  text-shadow: var(--text-halo);
+}
+.sg-f {
+  margin: 8px 16px 0;
+  font-size: 12.5px;
+  line-height: 1.45;
+  color: var(--ab-8a8a8a);
+  text-shadow: var(--text-halo);
+}
+
+/* Строка. Разделитель рисуется псевдоэлементом у ВТОРОЙ и далее, а не рамкой
+   снизу у каждой: рамка у последней строки упиралась бы в край карточки. */
+.srow { position: relative; }
+.srow + .srow::before,
+.srow + .sdet::before,
+.sdet + .srow::before,
+.sdet + .sdet::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  inset-inline: 16px 0;
+  height: 1px;
+  background: rgba(var(--ab-ink), 0.10);
+}
+.srow, .sdet > summary {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  min-height: 52px;
+  padding: 10px 16px;
+  font-size: 15px;
+  color: var(--ab-ffffff);
+  text-decoration: none;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  text-align: start;
+  -webkit-tap-highlight-color: transparent;
+}
+.sdet > summary { list-style: none; }
+.sdet > summary::-webkit-details-marker { display: none; }
+.srow-t { flex: 1; min-width: 0; }
+.srow-v {
+  flex-shrink: 0;
+  font-size: 14px;
+  color: var(--ab-8a8a8a);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 50%;
+}
+/* Стрелка раскрывашки поворачивается; у ссылки она смотрит вперёд и зеркалится
+   в арабском по data-flip, как остальные направленные значки сайта. */
+.srow-chev { flex-shrink: 0; color: var(--ab-6a6a6a); transition: transform 0.18s ease; }
+.sdet[open] > summary .srow-chev { transform: rotate(180deg); }
+@media (hover: hover) {
+  .srow:hover, .sdet > summary:hover { background: rgba(var(--ab-ink), 0.05); }
+}
+.sdet-body { padding: 2px 16px 16px; }
+.sdet-body p { margin: 0; font-size: 13.5px; line-height: 1.5; color: var(--ab-8a8a8a); }
+
+/* ── Плитки темы и языка ──
+   Два самых частых действия страницы настроек. Значок посередине говорит о
+   состоянии быстрее подписи: солнце или луна — какая тема, флаг — какой язык.
+   Ряд языков раскрывается ПОД обеими плитками во всю ширину — отсюда сетка в
+   две колонки и grid-column: 1 / -1 у списка. */
+.set-tiles {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+.set-tile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  /* Высоту задаёт содержимое, а не пропорция. Квадрат при ширине колонки в
+     340px давал плитку в 340 высотой, и значок плавал в пустоте: между ним и
+     подписями оставалось по сотне пикселей ни на чём. Пол в 132px держит цель
+     нажатия на узком экране. */
+  min-height: 132px;
+  padding: 16px 14px;
+  border: none;
+  border-radius: var(--r-card);
+  background: var(--sheen), var(--glass-soft);
+  -webkit-backdrop-filter: var(--blur-soft);
+          backdrop-filter: var(--blur-soft);
+  box-shadow: var(--glass-spec), var(--glass-rim);
+  color: var(--ab-ffffff);
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  transition: box-shadow 0.16s ease, transform 0.12s ease;
+}
+.set-tile-ico {
+  display: block;
+  /* Сверху меньше, чем снизу, и это НЕ опечатка: у крупного глифа (флаг —
+     эмодзи) своя верхняя выносная часть внутри строки, поэтому при равных
+     полях он выглядит прижатым книзу. Равными смотрятся 2 и 8. */
+  margin: 2px 0 8px;
+  font-size: 72px;
+  line-height: 1;
+  color: var(--ab-e4e4e7);
+}
+.set-tile-t { font-size: clamp(17px, 4.6vw, 20px); font-weight: 700; letter-spacing: -0.02em; }
+.set-tile-v {
+  font-size: clamp(13.5px, 3.8vw, 15.5px);
+  color: var(--ab-8a8a8a);
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.set-tile[aria-expanded="true"] {
+  box-shadow: var(--glass-spec), var(--glass-rim), inset 0 0 0 1.5px var(--ab-0a84ff);
+}
+/* Ряд языков — отдельная строка сетки во всю ширину, под обеими плитками. */
+.set-tiles-wide { grid-column: 1 / -1; }
+
+/* Какой вариант показать — решает ТЕМА СТРАНИЦЫ, а не React.
+   .tv-dark видно в тёмной теме, .tv-light — в светлой. Обе пары (значок и
+   подпись) лежат в разметке, и выбор делается до первого кадра: data-theme
+   ставит скрипт в <head>, а при отсутствии ручного выбора работает
+   prefers-color-scheme. Так подпись «Тёмная» не появляется с опозданием. */
+.tv-light { display: none; }
+:root[data-theme="light"] .tv-dark { display: none; }
+:root[data-theme="light"] .tv-light { display: block; }
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme="dark"]) .tv-dark { display: none; }
+  :root:not([data-theme="dark"]) .tv-light { display: block; }
+}
