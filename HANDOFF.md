@@ -1429,3 +1429,15 @@ node_modules перенесены в /tmp/ab-flight-map-builds-20261028/polish-7
 ## Codex, 28.10.2026 — быстрое добавление, нативная отправка, флаги
 
 Подготовлен v2 runtime карты: локальные подсказки/недавние, повтор/обратно, вставка двух IATA, save-more и защита double-tap. Экспорт с локальными SVG-флагами и границами, без «А как выглядит твоя карта». Web Share получает готовый PNG; официальные ссылки TG/MAX/WhatsApp/X отправляют отдельно приглашение на сервис. Старый v1 сохранён для открытых вкладок. Подробности, исследования, проверки и ограничения: ops/prototypes/flight-map/qa/QUICK-SHARE-20261028.md и MAP-FLAGS-20261028.md. 28tests, fixturebuild, tsc,12локалей,18PNG×3браузера,320/375px, SEO/index20/20 и guards прошли. Исправлены первый потерянный tap на подсказках и XMLnamespace гербов. Реальные мобильные share-targets не проверены; публикаций от имени владельца нет. Следующий шаг — ранее разрешённый выкат вне окна прогрева и проверка CI/сервера/HTTP.
+
+## Codex, 28.10.2026 —85c1a22c выкачен и проверен
+
+Push main16:08CET вне прогрева. Actions40712952887 success:
+https://github.com/Itschazy/airportboards/actions/runs/40712952887
+ProductionHEAD85c1a22c2021ec2d60e291ddafce3e81d9d980d7, BUILD_ID i6OCjmQvvq2BILjeqNwcA, pm2:3online (PID391095/391083/391106),61ГБсвободно. Health200;10публичныхassets совпали SHA256 с локальными, max-age=0;legacyv1 сохранён.
+
+Первый check-flight-map обнаружил старую ISR-оболочку с предыдущимBUILD_ID. Выполнен штатный /api/revalidate только для /ru/flight-map с операторским токеном внутри SSH (секрет не печатался). Ответ200ok. Повторный check-flight-map завершилсяexit0: новаяформа/SEO/SSR/15assets/11иностранных404/4соседниестраницы. Остальныеpostdeploy: index20/20, sitemap-hreflang, live-refresh, adsense —exit0. Все обращенияaudit-bot, без /api/flights/* и /api/cron/warm.
+
+На локальномSafari при дополнительном открытии страницы также наблюдалась прежняя оболочка; её работоспособность подтверждает совместимость v1, но не считается проверкой новогоnativeменю. Новые18PNGсценариев в Safari проверялись напрямую сv2. Физические телефоны и публикации в соцсетях не проверены; nativeсписок зависит от ОС/приложений. DNS/остальнойдизайн/SEOне менялись.
+
+Собственные3110/3111/3112 остановлены; generatedTS восстановлены, builddirs и node_modules symlink перенесены в /tmp/ab-flight-map-builds-20261028/quick-85c1a22c. Старый прототип3103 не трогали: актуальная фича /ru/flight-map, не /my-flights-prototype/. Отчёт QUICK-SHARE-20261028.md, исследования native-sharing-20261028.md, PNG/логи outputs/flight-map-quick-share-20261028. Следующийшаг: пользовательская проверка реального меню на iOS/Android.
