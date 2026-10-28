@@ -5,6 +5,27 @@
    "title": "Getting there",
    "hint": "Havaş shuttle to bus station",
    "text": "The Havaş shuttle meets all arriving domestic flights and runs from the airport to Bodrum central bus station via Güvercinlik and Torba bus station. The timetable by date is on the Havaş website (Bodrum Airport — Bodrum Center). From 7 August 2026 the shuttle between the airport and Didim does not run."
+  },
+  "lounges": {
+   "title": "Lounges",
+   "hint": "Primeclass: March–November",
+   "text": "The international Primeclass Lounge is on the mezzanine after passport control; the escalator is behind Costa Coffee. The lounge is open around the clock from March to November and closed in winter. Entry costs €70, with a stay limited to 3 hours. Children under 2 enter free."
+  },
+  "kids": {
+   "title": "With children",
+   "hint": "Feeding and changing rooms",
+   "text": "In the domestic terminal, feeding and changing rooms are available before security beside check-in and in arrivals beside the area for people meeting passengers. Another room is after security near the boarding gates. In the international terminal, rooms are available after security in the east and west sections of the departures level and mezzanine."
+  },
+  "parking": {
+   "title": "Parking",
+   "hint": "First 5 minutes free",
+   "text": "The first 5 minutes of parking are free. For cars in the international terminal car park, 0–1 hour costs ₺140 and 12–24 hours costs ₺480. Rates include VAT. Parking is ticketless; only credit cards are accepted at the exit."
+  },
+  "wifi": {
+   "title": "Wi‑Fi",
+   "hint": "TAV-FREE-WIFI in both terminals",
+   "text": "The free TAV-FREE-WIFI network is available in the domestic and international terminals. To connect, enter your country code and phone number, followed by the SMS code. Passengers without roaming can obtain a free password with an identity document at kiosks in the terminals."
   }
- }
+ },
+ "about": "Milas-Bodrum Airport serves domestic and international flights. Free TAV-FREE-WIFI is available in both terminals."
 }

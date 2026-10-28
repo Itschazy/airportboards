@@ -5,6 +5,27 @@
    "title": "Cómo llegar",
    "hint": "Lanzadera Havaş a la estación",
    "text": "La lanzadera Havaş recibe todos los vuelos nacionales que llegan y va del aeropuerto a la estación central de autobuses de Bodrum pasando por Güvercinlik y la estación de autobuses de Torba. El horario por fecha está en el sitio web de Havaş (trayecto Bodrum Airport — Bodrum Center). Desde el 7 de agosto de 2026, la lanzadera entre el aeropuerto y Didim no circula."
+  },
+  "lounges": {
+   "title": "Salas VIP",
+   "hint": "Primeclass: marzo–noviembre",
+   "text": "La sala internacional Primeclass Lounge está después del control de pasaportes, en la entreplanta; la escalera mecánica se encuentra detrás de Costa Coffee. De marzo a noviembre, la sala abre las 24 horas; en invierno permanece cerrada. La entrada cuesta 70 € y la estancia está limitada a 3 horas. Los menores de 2 años entran gratis."
+  },
+  "kids": {
+   "title": "Con niños",
+   "hint": "Salas de lactancia y cambiadores",
+   "text": "En la terminal de vuelos nacionales hay salas de lactancia y cambiadores antes del control de seguridad, junto a facturación, y en llegadas, junto a la zona de espera para quienes reciben a los pasajeros. Hay otra sala después del control de seguridad, cerca de las puertas de embarque. En la terminal internacional, las salas están después del control de seguridad, en las zonas este y oeste del nivel de salidas y de la entreplanta."
+  },
+  "parking": {
+   "title": "Aparcamiento",
+   "hint": "Primeros 5 minutos gratis",
+   "text": "Los primeros 5 minutos de aparcamiento son gratuitos. Para turismos en el aparcamiento de la terminal internacional, 0–1 hora cuesta 140 ₺ y 12–24 horas cuestan 480 ₺. Las tarifas incluyen el IVA. El aparcamiento funciona sin ticket; en la salida solo se aceptan tarjetas de crédito."
+  },
+  "wifi": {
+   "title": "Wi‑Fi",
+   "hint": "TAV-FREE-WIFI en ambas terminales",
+   "text": "La red gratuita TAV-FREE-WIFI está disponible en las terminales de vuelos nacionales e internacionales. Para conectarse, introduzca el prefijo de su país y su número de teléfono, y después el código recibido por SMS. Sin itinerancia, puede obtener una contraseña gratuita con un documento de identidad en los quioscos de las terminales."
   }
- }
+ },
+ "about": "El aeropuerto de Milas-Bodrum atiende vuelos nacionales e internacionales. Ambas terminales disponen de Wi-Fi gratuito TAV-FREE-WIFI."
 }

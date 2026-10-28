@@ -5,6 +5,27 @@
    "title": "Anreise",
    "hint": "Havaş-Shuttle zum Busbahnhof",
    "text": "Der Havaş-Shuttle bedient alle ankommenden Inlandsflüge und fährt vom Flughafen zum zentralen Busbahnhof von Bodrum über Güvercinlik und den Busbahnhof Torba. Fahrplan nach Datum auf der Havaş-Website (Richtung Bodrum Airport – Bodrum Center). Seit dem 7. August 2026 verkehrt kein Shuttle zwischen Flughafen und Didim."
+  },
+  "lounges": {
+   "title": "Business-Lounges",
+   "hint": "Primeclass: März–November",
+   "text": "Die internationale Primeclass Lounge befindet sich nach der Passkontrolle auf der Zwischenebene; die Rolltreppe liegt hinter Costa Coffee. Von März bis November ist die Lounge rund um die Uhr geöffnet, im Winter geschlossen. Der Eintritt kostet 70 €, der Aufenthalt ist auf 3 Stunden begrenzt. Kinder unter 2 Jahren haben freien Eintritt."
+  },
+  "kids": {
+   "title": "Mit Kind",
+   "hint": "Still- und Wickelräume",
+   "text": "Im Inlandsterminal gibt es Still- und Wickelräume vor der Sicherheitskontrolle neben dem Check-in sowie im Ankunftsbereich neben dem Wartebereich für Abholer. Ein weiterer Raum liegt nach der Sicherheitskontrolle bei den Flugsteigen. Im internationalen Terminal befinden sich die Räume nach der Sicherheitskontrolle im östlichen und westlichen Teil der Abflugebene und der Zwischenebene."
+  },
+  "parking": {
+   "title": "Parken",
+   "hint": "Erste 5 Minuten kostenlos",
+   "text": "Die ersten 5 Minuten Parken sind kostenlos. Für Pkw kostet das Parken am internationalen Terminal 140 ₺ für 0–1 Stunde und 480 ₺ für 12–24 Stunden. Die Tarife enthalten die Mehrwertsteuer. Das Parksystem funktioniert ohne Parkticket; an der Ausfahrt werden nur Kreditkarten akzeptiert."
+  },
+  "wifi": {
+   "title": "Wi‑Fi",
+   "hint": "TAV-FREE-WIFI in beiden Terminals",
+   "text": "Das kostenlose Netz TAV-FREE-WIFI ist im Inlandsterminal und im internationalen Terminal verfügbar. Zum Verbinden geben Sie die Landesvorwahl und Ihre Telefonnummer ein, danach den Code aus der SMS. Ohne Roaming erhalten Sie an den Kiosken in den Terminals mit einem Ausweisdokument ein kostenloses Passwort."
   }
- }
+ },
+ "about": "Der Flughafen Milas-Bodrum bedient Inlands- und internationale Flüge. In beiden Terminals steht das kostenlose WLAN TAV-FREE-WIFI zur Verfügung."
 }

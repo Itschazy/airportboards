@@ -5,6 +5,27 @@
    "title": "Nasıl gidilir",
    "hint": "Otogara Havaş servisi",
    "text": "Havaş servisi gelen tüm iç hat uçuşlarını karşılar ve havalimanından Güvercinlik ve Torba otogarı üzerinden Bodrum merkez otogarına gider. Tarihe göre tarife Havaş sitesinde (Bodrum Airport — Bodrum Center yönü). 7 Ağustos 2026'dan itibaren havalimanı ile Didim arasında servis çalışmıyor."
+  },
+  "lounges": {
+   "title": "Business salonları",
+   "hint": "Primeclass: mart–kasım",
+   "text": "Dış hatlar Primeclass Lounge, pasaport kontrolünden sonra asma kattadır; yürüyen merdiven Costa Coffee’nin arkasındadır. Salon mart–kasım arasında 24 saat açıktır, kışın kapalıdır. Giriş ücreti 70 € olup kalış süresi 3 saatle sınırlıdır. 2 yaşından küçük çocuklar ücretsiz girebilir."
+  },
+  "kids": {
+   "title": "Çocukla",
+   "hint": "Emzirme ve alt değiştirme odaları",
+   "text": "İç hatlar terminalinde emzirme ve alt değiştirme odaları, güvenlik kontrolünden önce check-in alanının yanında ve geliş bölümünde yolcu karşılayanların bekleme alanının yanındadır. Bir oda da güvenlik kontrolünden sonra biniş kapılarının yakınındadır. Dış hatlar terminalindeki odalar, güvenlik kontrolünden sonra gidiş katının ve asma katın doğu ve batı bölümlerindedir."
+  },
+  "parking": {
+   "title": "Otopark",
+   "hint": "İlk 5 dakika ücretsiz",
+   "text": "Otoparkta ilk 5 dakika ücretsizdir. Dış hatlar terminali otoparkında otomobiller için 0–1 saat 140 ₺, 12–24 saat 480 ₺ tutarındadır. Ücretlere KDV dahildir. Otopark biletsiz sistemle çalışır; çıkışta yalnızca kredi kartı kabul edilir."
+  },
+  "wifi": {
+   "title": "Wi‑Fi",
+   "hint": "Her iki terminalde TAV-FREE-WIFI",
+   "text": "Ücretsiz TAV-FREE-WIFI ağı iç ve dış hatlar terminallerinde kullanılabilir. Bağlanmak için ülke kodunuzu ve telefon numaranızı, ardından SMS ile gelen kodu girin. Dolaşım hizmeti olmayan yolcular, terminallerdeki kiosklardan kimlik belgesiyle ücretsiz şifre alabilir."
   }
- }
+ },
+ "about": "Milas-Bodrum Havalimanı iç ve dış hat uçuşlarına hizmet verir. Her iki terminalde de ücretsiz TAV-FREE-WIFI ağı kullanılabilir."
 }

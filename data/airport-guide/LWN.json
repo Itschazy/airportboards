@@ -1,0 +1,16 @@
+{
+ "iata": "LWN",
+ "checked": "2026-10-28",
+ "about": "Аэропорт Ширак расположен в 5 км от Гюмри и в 120 км от Еревана. Новый зал прилёта открыт в 2021 году.",
+ "about_url": "https://www.zvartnots.aero/RU/Content/ShirakAirport",
+ "blocks": [
+  {
+   "id": "transport",
+   "title": "Как доехать",
+   "hint": "Подъезд и получение авто SIXT",
+   "text": "На машине из Гюмри: на отметке 3,5 км трассы Yerevanyan сверните к аэропорту Ширак, затем проедьте ещё 2 км. SIXT выдаёт машины по услуге Meet & Greet: офиса проката в аэропорту нет, сотрудник встречает в зале прилёта с табличкой SIXT. Парковка SIXT находится перед главным зданием аэропорта.",
+   "source": "sixt.com",
+   "url": "https://www.sixt.com/car-rental/armenia/gyumri/gyumri-shirak-airport/"
+  }
+ ]
+}

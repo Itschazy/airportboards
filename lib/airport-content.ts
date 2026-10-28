@@ -35,13 +35,15 @@ const DIR = path.join(process.cwd(), 'data/airport-content');
 export const GENERATED_PROSE_LOCALES: ReadonlySet<string> = new Set(['ru']);
 
 export function getAirportContent(iata: string, locale: string): string | null {
+  // Проверенную справку читаем ДО ограничения сгенерированной прозы. Раньше early return
+  // для нерусских локалей скрывал даже готовый перевод официального about (найдено на LWN
+  // при проверке серверного HTML 28.10.2026). getAirportGuide не подставляет русский текст
+  // вместо отсутствующего перевода. Старая сгенерированная проза ниже по-прежнему только RU.
+  const verified = getAirportGuide(iata, locale)?.about;
+  if (verified && verified.length > 20) return verified;
   // Никакого фолбэка на английский для снятых языков: прежний `obj[locale] || obj.en` отдал
   // бы английский сгенерированный текст на любой локали, где своего нет.
   if (!GENERATED_PROSE_LOCALES.has(locale)) return null;
-  // Абзац из справочной (официальные источники, 25.10.2026) важнее сгенерированного: в старых
-  // были ошибки вроде несуществующего «Terminal S» у SVO.
-  const verified = getAirportGuide(iata, locale)?.about;
-  if (verified && verified.length > 20) return verified;
   try {
     const raw = fs.readFileSync(path.join(DIR, `${iata.toUpperCase()}.json`), 'utf8');
     const obj = JSON.parse(raw) as Record<string, string>;

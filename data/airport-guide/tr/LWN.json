@@ -1,0 +1,11 @@
+{
+ "iata": "LWN",
+ "about": "Şirak Havalimanı, Gümrü’ye 5 km, Erivan’a 120 km uzaklıktadır. Yeni gelen yolcu salonu 2021 yılında açılmıştır.",
+ "blocks": {
+  "transport": {
+   "title": "Nasıl gidilir",
+   "hint": "Araçla ulaşım ve SIXT teslimi",
+   "text": "Gümrü’den araçla gelirken Yerevanyan yolunun 3,5 km noktasından Şirak Havalimanı yönüne dönün ve 2 km daha ilerleyin. SIXT, Meet & Greet hizmeti sunar: havalimanında kiralama ofisi yoktur; görevli, gelen yolcu salonunda SIXT tabelasıyla karşılar. SIXT otoparkı, havalimanının ana binasının önündedir."
+  }
+ }
+}
