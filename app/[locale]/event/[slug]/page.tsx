@@ -1,3 +1,5 @@
+import { LocaleLinks } from '@/components/LocaleLinks';
+import type { Locale } from '@/lib/i18n';
 import type { Metadata } from 'next';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { notFound } from 'next/navigation';
@@ -224,6 +226,11 @@ export default async function EventPage({ params }: Props) {
       <p style={{ fontSize: 12, color: 'var(--ab-6a6a6a)', lineHeight: 1.5, marginTop: 26 }}>
         {tE('disclaimer')}
       </p>
+    {/* Эта же страница на остальных одиннадцати языках. Ряд стоит в странице,
+        а не в подвале, потому что подвал рисует раскладка, а она своего адреса
+        не знает: узнать его можно только заголовком из middleware, и тогда
+        каждая страница сайта стала бы динамической. Подробности — в LocaleLinks. */}
+    <LocaleLinks locale={locale as Locale} path={`/event/${slug}`} only={locales.filter(l => ev.locales[l])} />
     </div>
   );
 }

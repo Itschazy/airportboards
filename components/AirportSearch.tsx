@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect, useRef, useCallback } from 'react';
+import { useState, useEffect, useRef, useCallback, useMemo } from 'react';
 import { useRouter } from 'next/navigation';
 import { useTranslations } from 'next-intl';
 import { track, GOALS } from '@/lib/track';
@@ -86,7 +86,10 @@ function SearchSection({ label, items, startIndex = 0, active, query, pending = 
               padding: '7px 14px',
               border: 'none',
               borderBottom: i < items.length - 1 ? '1px solid rgba(var(--ab-ink),0.06)' : 'none',
-              background: isActive ? 'var(--ab-1c1c1e)' : 'transparent',
+              // Подсветка строки — полупрозрачная краска по стеклу, а не плашка
+              // цвета --ab-1c1c1e: непрозрачный прямоугольник внутри стеклянной выдачи
+              // читался заплаткой и спорил с её собственной заливкой.
+              background: isActive ? 'rgba(var(--ab-ink),0.09)' : 'transparent',
               color: 'var(--ab-ffffff)',
               cursor: pending ? 'progress' : 'pointer',
               textAlign: 'start',
@@ -274,7 +277,115 @@ export function AirportSearch({ locale, placeholder }: { locale: string; placeho
     if (e.key === 'Escape') { setOpen(false); inputRef.current?.blur(); }
   };
 
+
+  /* Подсказка, которая печатается сама.
+   *
+   * Настоящий placeholder НИКУДА НЕ ДЕВАЕТСЯ: он остаётся в разметке полной фразой,
+   * его читает программа чтения с экрана, он же работает без скриптов. Анимация —
+   * отдельная строка поверх поля, помеченная aria-hidden, а сам placeholder на время
+   * анимации делается прозрачным стилем. Подменять атрибут посимвольно нельзя: каждое
+   * изменение placeholder программа чтения объявляет заново, и поле «говорило» бы
+   * без умолку.
+   *
+   * Крутится, только пока поле пустое и не в фокусе. Как только человек нажал на поле,
+   * анимация останавливается: мигающая чужая строка рядом с собственным курсором сбивает.
+   *
+   * prefers-reduced-motion: анимации нет вовсе, видна обычная подсказка. Это не
+   * украшение, от которого можно отмахнуться, — печатающийся текст относится ровно к
+   * тому роду движения, от которого людям с вестибулярными расстройствами плохо.
+   */
+  /* ПРИМЕРЫ, а не названия видов. «Аэропорт · Город · Код ИАТА» называет виды
+   * того, что принимает поиск, но не показывает, как это выглядит набранным.
+   * «Казань · Шереметьево · KZN» показывает ровно те же три вида и заодно
+   * снимает главный вопрос — «а код-то трёхбуквенный или четырёх?».
+   *
+   * Все 108 примеров (девять на каждом из двенадцати языков) проверены настоящим
+   * поиском: подсказка,
+   * которая ничего не находит, хуже отсутствия подсказки. На этой проверке отсеялись
+   * 首都 (находит Гаррисберг в США), حمد (Ахмадабад) и немецкий Tegel — он закрыт.
+   * Первым всюду стоит город: по замеру Метрики именно с города начинают.
+   */
+  const typeWords = useMemo(
+    // Девять примеров, а не три, и идут они ПО КРУГУ вида: город → название
+    // аэропорта → код, и так трижды. Сгруппированные по виду (три города подряд,
+    // потом три названия) они читались как перечень городов: человек, глянувший
+    // на поле дважды, видел два города и решал, что кроме городов ничего нельзя.
+    // Чередование показывает все три вида ввода за первые секунды, а трёх кругов
+    // хватает примерно на минуту — короткий круг превращался в мигающую надпись.
+    () => Array.from({ length: 9 }, (_, i) => tNav(`ph_ex${i + 1}` as 'ph_ex1')),
+    [tNav],
+  );
+  const [typed, setTyped] = useState('');
+  const [typing, setTyping] = useState(false);
+
+  useEffect(() => {
+    if (query || focused) { setTyping(false); setTyped(''); return; }
+    try {
+      if (matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    } catch { return; }
+
+    let word = 0, ch = 0, erasing = false, timer: ReturnType<typeof setTimeout>;
+    setTyping(true);
+
+    const step = () => {
+      const w = typeWords[word % typeWords.length] || '';
+      if (!erasing) {
+        ch++;
+        setTyped(w.slice(0, ch));
+        // Добрав слово до конца, держим его на полторы секунды: подсказку надо
+        // успеть прочитать, а не поймать взглядом.
+        timer = setTimeout(step, ch >= w.length ? 1500 : 85);
+        if (ch >= w.length) erasing = true;
+      } else {
+        ch--;
+        setTyped(w.slice(0, Math.max(0, ch)));
+        if (ch <= 0) { erasing = false; word++; timer = setTimeout(step, 320); }
+        else timer = setTimeout(step, 40);   // стирается вдвое быстрее, чем пишется
+      }
+    };
+    // Начинаем сразу, без паузы: пауза в полсекунды читалась как «сначала одна
+    // подсказка, потом вдруг другая», то есть ровно как подгрузка. Первый кадр
+    // анимации приходит в том же такте, что и гидратация.
+    timer = setTimeout(step, 0);
+    return () => { clearTimeout(timer); setTyping(false); };
+  }, [query, focused, typeWords]);
+
   const showList = open && (query.trim() ? visibleResults.length > 0 : emptyFlat.length > 0);
+
+  /* Предзагрузка выбранной строки.
+   *
+   * Замер: сама страница аэропорта отдаётся за 5–370 мс, то есть сервер тут ни при чём.
+   * Долгой навигация была потому, что строки выдачи — обычные <button> с router.push, а
+   * Next подгружает маршрут заранее только у <Link>. Значит, вся RSC-нагрузка страницы
+   * (для KZN это 151 КБ) начинала качаться ТОЛЬКО в момент нажатия, и на телефоне это
+   * заметная пауза ещё до того, как страница начнёт рисоваться.
+   *
+   * Греем РОВНО ОДИН адрес — тот, что под курсором или под стрелкой, а при открытии
+   * выдачи первый в списке. Греть всю выдачу нельзя: десять строк это полтора мегабайта
+   * у человека, который выберет одну.
+   *
+   * Денег это не стоит: предзагружается страница, а она рендерится с live:false и к
+   * поставщику не ходит (см. lib/flights.ts). Платный запрос делает уже само табло
+   * после открытия.
+   *
+   * saveData и 2g пропускаем: там предзагрузка отнимает канал у того, что человек
+   * действительно открыл.
+   */
+  const warmed = useRef(new Set<string>());
+  useEffect(() => {
+    if (!showList) return;
+    const pick = navList[active] ?? navList[0];
+    if (!pick) return;
+    try {
+      const c = (navigator as unknown as { connection?: { saveData?: boolean; effectiveType?: string } }).connection;
+      if (c?.saveData || (c?.effectiveType && /2g/.test(c.effectiveType))) return;
+    } catch { /* нет Network Information API — греем как обычно */ }
+    const href = `/${locale}/airport/${pick.iata}`;
+    if (warmed.current.has(href)) return;
+    warmed.current.add(href);
+    router.prefetch(href);
+  }, [showList, active, navList, locale, router]);
+
 
 
 
@@ -282,18 +393,29 @@ export function AirportSearch({ locale, placeholder }: { locale: string; placeho
     <div ref={wrapRef} style={{ position: 'relative', width: '100%' }}>
       {/* Input */}
       <div style={{ position: 'relative' }}>
+        {/* Лупа 24px вместо 19: на стеклянном поле тонкий мелкий значок терялся
+            в узоре, просвечивающем сквозь линзу. Толщина штриха поднята до 1.7 по
+            той же причине — 1.5 на 24px выглядит тоньше, чем 1.5 на 19. */}
         <svg
-          width="19" height="19" viewBox="0 0 16 16" fill="none" aria-hidden="true"
+          width="24" height="24" viewBox="0 0 16 16" fill="none" aria-hidden="true"
           style={{ position: 'absolute', insetInlineStart: 20, top: '50%', transform: 'translateY(-50%)', pointerEvents: 'none', zIndex: 1 }}
         >
-          <circle cx="6.5" cy="6.5" r="4" stroke={focused ? 'var(--ab-8a8a8a)' : 'var(--ab-4a4a4a)'} strokeWidth="1.5"/>
-          <path d="M10 10L13.5 13.5" stroke={focused ? 'var(--ab-8a8a8a)' : 'var(--ab-4a4a4a)'} strokeWidth="1.5" strokeLinecap="round"/>
+          <circle cx="6.5" cy="6.5" r="4" stroke={focused ? 'var(--ab-e4e4e7)' : 'var(--ab-8a8a8a)'} strokeWidth="1.7"/>
+          <path d="M10 10L13.5 13.5" stroke={focused ? 'var(--ab-e4e4e7)' : 'var(--ab-8a8a8a)'} strokeWidth="1.7" strokeLinecap="round"/>
         </svg>
 
         {/* Договор роли combobox выполняется целиком: aria-controls указывает на список,
             aria-activedescendant — на строку под выделением. Раньше роль была объявлена, а
             списка с ролью listbox и строк с ролью option не существовало: программа чтения
             слышала «поле со списком» и не находила списка. */}
+        {/* Строка набора. Левый отступ совпадает с padding-inline поля, кегль — с его
+            собственным, иначе буквы «прыгнут» в момент, когда человек начнёт печатать. */}
+        {typing && (
+          <span className="srch-typer" aria-hidden="true">
+            {typed}<i className="srch-caret" />
+          </span>
+        )}
+
         <input
           ref={inputRef}
           type="text"
@@ -311,7 +433,8 @@ export function AirportSearch({ locale, placeholder }: { locale: string; placeho
           onKeyDown={onKey}
           onFocus={onFocus}
           onBlur={onBlur}
-          className="glass search-pill"
+          data-typing={typing || undefined}
+          className="search-pill search-lens"
         />
 
         {query && (
@@ -342,13 +465,17 @@ export function AirportSearch({ locale, placeholder }: { locale: string; placeho
         // её договора — список с ролью listbox, строки с ролью option и указатель на
         // активную — отсутствовала целиком. Программа чтения слышала «поле со списком»
         // и не находила списка.
-        <div id="ap-listbox" className="srch-list" role="listbox" aria-label={placeholder} aria-busy={pending} style={{
+        // Выдача — то же стекло, что у остального интерфейса. Прежде это была
+        // глухая плашка цвета --ab-111111 с рамкой и чёрной тенью: единственная
+        // непрозрачная поверхность на всей главной, и она висела ровно под
+        // стеклянным полем. Плотность берёт glass-dense (0.90): под выдачей лежит
+        // СОДЕРЖИМОЕ страницы, а не обои, и при меньшей сквозь названия городов
+        // читался бы текст под ними — это уже меряли на меню языков.
+        <div id="ap-listbox" className="srch-list glass-dense" role="listbox" aria-label={placeholder} aria-busy={pending} style={{
           position: 'absolute',
           top: 'calc(100% + 6px)',
           left: 0, right: 0,
-          background: 'var(--ab-111111)',
-          border: '1px solid var(--ab-1e1e1e)',
-          borderRadius: 16,
+          borderRadius: 'var(--r-card)',
           overflow: 'hidden',
           overflowY: 'auto',
           // На высоте240px прежние 100dvh−220px оставляли20px: только заголовок,
@@ -359,7 +486,6 @@ export function AirportSearch({ locale, placeholder }: { locale: string; placeho
              колесо «пробивало» выдачу и уводило страницу под ней. */
           overscrollBehavior: 'contain',
           zIndex: 100,
-          boxShadow: '0 20px 60px rgba(0,0,0,0.8)',
         }}>
           {query.trim() ? (
             <SearchSection active={active} query={query} go={go} setActive={setActive} label={tNav('results')} items={visibleResults} pending={pending} />

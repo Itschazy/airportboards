@@ -9,6 +9,7 @@ import Link from 'next/link';
 import { useTranslations } from 'next-intl';
 import { initialRowCount } from '@/lib/board-window';
 import { track, GOALS } from '@/lib/track';
+import { FavoriteHeart } from './FavoriteHeart';
 import { DisclosureArrow } from '@/components/DisclosureArrow';
 import type { Airport } from '@/lib/airports';
 
@@ -715,7 +716,7 @@ function BottomSheet({ flight: selectedFlight, mode, onClose, tz, locale, clockM
     <>
       <div onClick={onClose} style={{
         position: 'fixed', inset: 0, zIndex: 200,
-        background: 'rgba(0,0,0,0.55)', backdropFilter: 'blur(16px)', WebkitBackdropFilter: 'blur(16px)',
+        background: 'var(--sheet-scrim)', backdropFilter: 'blur(16px)', WebkitBackdropFilter: 'blur(16px)',
         opacity: vis ? 1 : 0, pointerEvents: vis ? 'auto' : 'none', transition: 'opacity 0.28s ease',
       }} />
       <div
@@ -1557,7 +1558,14 @@ export function FlightBoard({ airport, locale, defaultMode = 'departures', displ
               <span style={{ fontSize: 14, fontWeight: 600, color: C.secondary, lineHeight: 1.25, flexShrink: 0, opacity: 0.85 }}>{' · '}{headingNote}</span>
             )}
           </h1>
-          <div style={{ textAlign: 'end', flexShrink: 0 }}>
+          <div style={{ display: 'flex', alignItems: 'center', gap: 'clamp(6px, 2.5vw, 12px)', flexShrink: 0 }}>
+            {/* Сердечко СЛЕВА от часов, в одной строке с ними: собственной строки ему не
+                нужно, а под часами оно добавляло шапке высоты там, где её и так
+                выгадывали. Закрытый аэропорт избранным не бывает — его борт не
+                обновится никогда, и ярлык на него только обманывал бы. */}
+            {!airport.closed && (
+              <FavoriteHeart entry={{ iata: airport.iata, name: displayName || airport.name, city: airport.city, iso2: airport.iso2 }} />
+            )}
             {/* Время — второй по важности элемент шапки после кода аэропорта:
                 по нему сверяются с расписанием. Моноширинные цифры, чтобы
                 строка не дёргалась каждую минуту при смене знаков. */}

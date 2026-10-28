@@ -1,3 +1,5 @@
+import { LocaleLinks } from '@/components/LocaleLinks';
+import type { Locale } from '@/lib/i18n';
 import type { Metadata } from 'next';
 import { getTranslations , setRequestLocale } from 'next-intl/server';
 import { notFound, permanentRedirect } from 'next/navigation';
@@ -253,7 +255,6 @@ export default async function DeparturesPage({ params }: Props) {
       {jsonLd.map((schema, i) => (
         <script key={i} type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
       ))}
-      <Breadcrumb label={tNav('aria_breadcrumb')} trail={trail} extra={{ href: `/${locale}/airport/${airport.iata}/arrivals`, label: tNav('arrivals') }} />
       {/* The visible <h1> now lives in FlightBoard's airport header (single semantic h1). */}
       <FlightBoard airport={airport} locale={locale} defaultMode="departures" displayName={getAirportName(airport.iata, locale, airport.name)} initialFlights={board.rows} initialAllPast={board.allPast} initialFetchedAt={getBoardFetchedAt(airport.iata, 'departures')} boardTotal={initialFlights.length} about={about} aboutTitle={tHome('about_title', { iata: airport.iata })} aboutExtra={<AirportBottom part="reference" airport={airport} locale={locale} displayName={getAirportName(airport.iata, locale, airport.name)} flights={initialFlights} noService={noService} nearestServed={nearestWithFlights} direction="departures" />} />
       <div style={{ maxWidth: 720, margin: '0 auto', padding: '0 24px 8px' }}>
@@ -261,7 +262,7 @@ export default async function DeparturesPage({ params }: Props) {
       </div>
       {/* See the twin comment in arrivals/page.tsx: this subpage carried 208 visible words
           against 903 on the parent, and Google indexed none of them. */}
-      <AirportBottom airport={airport} locale={locale} about={about} displayName={getAirportName(airport.iata, locale, airport.name)} flights={initialFlights} noService={noService} nearestServed={nearestWithFlights} direction="departures" />
+      <AirportBottom airport={airport} locale={locale} about={about} displayName={getAirportName(airport.iata, locale, airport.name)} flights={initialFlights} noService={noService} nearestServed={nearestWithFlights} direction="departures" tail={<><Breadcrumb label={tNav('aria_breadcrumb')} trail={trail} extra={{ href: `/${locale}/airport/${airport.iata}/arrivals`, label: tNav('arrivals') }} foot /><LocaleLinks locale={locale as Locale} path={`/airport/${airport.iata}/departures`} /></>} />
     </>
   );
 }

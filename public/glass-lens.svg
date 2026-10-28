@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="0" height="0">
+  <!-- Фильтр преломления для поля поиска. Лежит отдельным файлом, а не в разметке
+       страницы, потому что CSS ссылается на него адресом: backdrop-filter берёт
+       url('/glass-lens.svg#lens'). Внешний файл кэшируется браузером и не висит
+       в HTML каждой из 72 000 страниц ради одного элемента на главной.
+
+       Хроматическая аберрация: красный и синий каналы смещаются РАЗНОЙ силой
+       (38 против 30), как в настоящем стекле, где показатель преломления зависит
+       от длины волны. Зелёный берётся средним. Три прохода вместо одного стоят
+       дороже, но элемент на странице один.
+
+       ТОЛЬКО CHROMIUM. Safari и Firefox не умеют url() в backdrop-filter — у них
+       останется обычное размытие, объявленное в CSS отдельной строкой выше. -->
+  <defs>
+    <filter id="lens" x="0" y="0" width="100%" height="100%" color-interpolation-filters="sRGB">
+      <feImage href="/glass-lens-map.svg" preserveAspectRatio="none" result="map"/>
+
+      <feDisplacementMap in="SourceGraphic" in2="map" scale="38"
+                         xChannelSelector="R" yChannelSelector="G" result="red"/>
+      <feColorMatrix in="red" type="matrix" result="red"
+        values="1 0 0 0 0
+                0 0 0 0 0
+                0 0 0 0 0
+                0 0 0 1 0"/>
+
+      <feDisplacementMap in="SourceGraphic" in2="map" scale="34"
+                         xChannelSelector="R" yChannelSelector="G" result="green"/>
+      <feColorMatrix in="green" type="matrix" result="green"
+        values="0 0 0 0 0
+                0 1 0 0 0
+                0 0 0 0 0
+                0 0 0 1 0"/>
+
+      <feDisplacementMap in="SourceGraphic" in2="map" scale="30"
+                         xChannelSelector="R" yChannelSelector="G" result="blue"/>
+      <feColorMatrix in="blue" type="matrix" result="blue"
+        values="0 0 0 0 0
+                0 0 0 0 0
+                0 0 1 0 0
+                0 0 0 1 0"/>
+
+      <feBlend in="red" in2="green" mode="screen" result="rg"/>
+      <feBlend in="rg" in2="blue" mode="screen" result="rgb"/>
+      <!-- Полпикселя размытия снимают ступеньки: у фильтра смещения нет
+           сверхсэмплирования, и без этого кромка выглядит рваной. -->
+      <feGaussianBlur in="rgb" stdDeviation="0.4"/>
+    </filter>
+  </defs>
+</svg>

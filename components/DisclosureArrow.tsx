@@ -7,10 +7,12 @@
  *
  * Поворот на 180° при открытии и цвет задаёт .disclosure-arrow в globals.css.
  */
-export function DisclosureArrow() {
+/** className переопределяется там, где у стрелки своя геометрия поворота:
+ *  в списке настроек это .srow-chev, и правило поворота там своё. */
+export function DisclosureArrow({ className = 'disclosure-arrow' }: { className?: string } = {}) {
   return (
     <svg
-      className="disclosure-arrow"
+      className={className}
       width="14"
       height="14"
       viewBox="0 0 24 24"

@@ -1,3 +1,5 @@
+import { LocaleLinks } from '@/components/LocaleLinks';
+import type { Locale } from '@/lib/i18n';
 import { airportSchema } from '@/lib/airport-schema';
 import type { Metadata } from 'next';
 import { getTranslations , setRequestLocale } from 'next-intl/server';
@@ -466,7 +468,6 @@ export default async function AirportPage({ params }: Props) {
       {jsonLd.map((schema, i) => (
         <script key={i} type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
       ))}
-      <Breadcrumb label={tNav('aria_breadcrumb')} trail={crumbs} />
       {predecessors.length > 0 && (
         <aside style={{
           margin: '12px 16px 0', padding: '12px 14px', borderRadius: 10,
@@ -539,7 +540,7 @@ export default async function AirportPage({ params }: Props) {
       {/* SSR only the first 40 rows to keep the HTML light (the client refetches the full
           board on mount); AirportBottom still gets the full set to aggregate routes/airlines. */}
       <FlightBoard airport={airport} locale={locale} displayName={name} initialFlights={board.rows} initialAllPast={board.allPast} initialFetchedAt={getBoardFetchedAt(airport.iata, 'departures')} boardTotal={initialFlights.length} lead={tHome(fold(name) === fold(city) ? 'airport_lead_same' : 'airport_lead', { name, iata: airport.iata, city, country })} statusLine={delayLine} noService={noService} infoOnly={infoOnly} pendingNote={pendingNote} about={about} aboutTitle={tHome('about_title', { iata: airport.iata })} aboutExtra={<AirportBottom part="reference" airport={airport} locale={locale} displayName={name} flights={initialFlights} noService={noService} nearestServed={nearestWithFlights} schedule />} />
-      <AirportBottom airport={airport} locale={locale} about={about} displayName={name} flights={initialFlights} noService={noService} nearestServed={nearestWithFlights} schedule />
+      <AirportBottom airport={airport} locale={locale} about={about} displayName={name} flights={initialFlights} noService={noService} nearestServed={nearestWithFlights} schedule tail={<><Breadcrumb label={tNav('aria_breadcrumb')} trail={crumbs} foot /><LocaleLinks locale={locale as Locale} path={`/airport/${airport.iata}`} /></>} />
     </>
   );
 }

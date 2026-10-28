@@ -1,3 +1,4 @@
+import { LocaleLinks } from '@/components/LocaleLinks';
 import type { Metadata } from 'next';
 import { setRequestLocale } from 'next-intl/server';
 import { LegalArticle } from '@/components/LegalArticle';
@@ -61,6 +62,14 @@ export function legalPage(kind: LegalKind) {
   return async function Page({ params }: Props) {
     const { locale } = await params;
     setRequestLocale(locale);
-    return <LegalArticle kind={kind} locale={locale as Locale} />;
+    return (
+      <>
+        <LegalArticle kind={kind} locale={locale as Locale} />
+        {/* Правовые тексты переведены только на английский и русский (LEGAL_LOCALES),
+            поэтому ряд короче, чем на остальных страницах: предлагать читателю
+            двенадцать языков там, где их два, значит обещать несуществующее. */}
+        <LocaleLinks locale={locale as Locale} path={`/${kind}`} only={LEGAL_LOCALES} />
+      </>
+    );
   };
 }

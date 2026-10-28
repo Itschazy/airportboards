@@ -35,7 +35,7 @@ export function SiteFooterFrame({ label, children }: { label: string; children: 
           используется, — то есть на странице, а не в комментарии к стилям.
           Строка намеренно без перевода: это имя и код лицензии, они одинаковы
           на всех двенадцати языках, и новых ключей каталога не заводится. */}
-      <p style={{ maxWidth: 1000, margin: '0 auto', textAlign: 'center', fontSize: 11, color: 'var(--ab-5a5a5a)', letterSpacing: '0.02em' }}>
+      <p className="wall-text" style={{ maxWidth: 1000, margin: '0 auto', textAlign: 'center', fontSize: 11, color: 'var(--ab-5a5a5a)', letterSpacing: '0.02em' }}>
         airportsboard.live · © 2026 · <span style={{ whiteSpace: 'nowrap' }}>Twemoji · CC BY 4.0</span>
       </p>
     </footer>

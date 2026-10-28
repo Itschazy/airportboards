@@ -65,8 +65,24 @@ function Chevron() {
   return <svg data-flip width="6" height="11" viewBox="0 0 6 11" fill="none" style={{ flexShrink: 0 }}><path d="M1 1L5 5.5L1 10" stroke="var(--ab-3a3a3c)" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" /></svg>;
 }
 
-export async function AirportBottom({ airport, locale, about = null, displayName, flights = [], noService = false, nearestServed = null, direction = 'departures', schedule = false, part = 'all' }: {
+export async function AirportBottom({ airport, locale, about = null, displayName, flights = [], noService = false, nearestServed = null, direction = 'departures', schedule = false, part = 'all', tail = null }: {
   airport: Airport; locale: string; displayName?: string;
+  /**
+   * Хвост страницы — хлебные крошки и ряд языков — внутрь «Полезной информации».
+   *
+   * Обе строки нужны поиску и почти не нужны читателю: крошки делают честной
+   * разметку BreadcrumbList и ведут вверх по дереву, языковой ряд — единственные
+   * ссылки на эту же страницу в других языках. Удалять их нельзя, а занимать ими
+   * конец экрана незачем, поэтому они переезжают под ту же кнопку, что и остальная
+   * справка.
+   *
+   * <details> ничего не удаляет из разметки: в закрытом виде ссылки остаются в
+   * серверном HTML и доступны обходчику — ровно так здесь устроен весь подвал.
+   * Это важное отличие от display:none, которым прятать крошки при живой разметке
+   * BreadcrumbList нельзя: содержимое раскрывашки поиск считает показанным, а
+   * скрытое стилем — нет.
+   */
+  tail?: React.ReactNode;
   /** Абзац «Об аэропорте». Часть 'reference' его не печатает: он уже стоит в шапке табло
    *  отдельной строкой над справочной, и дублировать его под той же кнопкой незачем. */
   about?: string | null; flights?: FlightRow[];
@@ -774,6 +790,8 @@ export async function AirportBottom({ airport, locale, about = null, displayName
             </div>
             <div style={{ fontSize: 12, color: 'var(--ab-3a3a3c)', marginTop: 18 }}>© 2026 airportsboard.live</div>
           </footer>
+
+          {tail}
 
         </MoreInfo>
       </div>

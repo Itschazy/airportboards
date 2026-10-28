@@ -17,7 +17,19 @@ export type Crumb = { name: string; item: string };
  *
  * The last crumb is the current page, so it is text rather than a link.
  */
-export function Breadcrumb({ trail, extra, label }: { trail: Crumb[]; extra?: { href: string; label: string } | null; label: string }) {
+/**
+ * `foot` — крошки внизу страницы, а не вверху.
+ *
+ * Наверху они занимали первый экран ради строки, которую почти никто не нажимает:
+ * человек приходит на борт из поиска и смотрит на табло, а не на путь к нему.
+ * УДАЛИТЬ их при этом нельзя — они не украшение. Ровно эти ссылки делают честной
+ * разметку BreadcrumbList (см. комментарий выше) и остаются единственным путём
+ * вверх по дереву со страницы прилётов или вылетов. Прятать стилем тоже нельзя:
+ * невидимые крошки при живой разметке BreadcrumbList — это ровно то расхождение
+ * между заявленным и показанным, которое здесь однажды уже чинили. Поэтому они
+ * не спрятаны, а перенесены: видимые, нажимаемые, но внизу.
+ */
+export function Breadcrumb({ trail, extra, label, foot }: { trail: Crumb[]; extra?: { href: string; label: string } | null; label: string; foot?: boolean }) {
   if (trail.length < 2) return null;
   const path = trail.slice(0, -1);
   const current = trail[trail.length - 1];
@@ -27,7 +39,7 @@ export function Breadcrumb({ trail, extra, label }: { trail: Crumb[]; extra?: { 
        читалась, а разделителем служил символ «›», который рисуется шрифтом и
        висит выше базовой линии. Теперь разделитель векторный, а текущая
        страница выделена цветом и весом, а не только оттенком. */
-    <nav aria-label={label} className="crumbs-wrap">
+    <nav aria-label={label} className={foot ? 'crumbs-wrap crumbs-wrap--foot' : 'crumbs-wrap'}>
       <ol className="crumbs glass">
         {path.map(c => (
           <li key={c.item}>

@@ -9,6 +9,7 @@ import { locales, rtlLocales, numLocale, type Locale } from '@/lib/i18n';
 import { SiteHeader } from '@/components/SiteHeader';
 import { RowScroll } from '@/components/RowScroll';
 import { SiteFooter } from '@/components/SiteFooter';
+import { BottomNav } from '@/components/BottomNav';
 import { YandexMetrica } from '@/components/YandexMetrica';
 import { Analytics, GA_ID } from '@/components/Analytics';
 import { GaRouteTracker } from '@/components/GaRouteTracker';
@@ -79,7 +80,7 @@ export default async function LocaleLayout({
   const dir = rtlLocales.includes(locale as Locale) ? 'rtl' : 'ltr';
   return (
     <html lang={locale} dir={dir} className="h-full antialiased" suppressHydrationWarning>
-      <head><script id="ab-rum-gate" dangerouslySetInnerHTML={{ __html: rumBootstrap }} /><script dangerouslySetInnerHTML={{__html: `try{var t=localStorage.getItem('ab_theme');if(t==='light'||t==='dark')document.documentElement.dataset.theme=t}catch(e){}`}} /></head>
+      <head><script id="ab-rum-gate" dangerouslySetInnerHTML={{ __html: rumBootstrap }} /><script dangerouslySetInnerHTML={{__html: `try{var t=localStorage.getItem('ab_theme');if(t==='light'||t==='dark')document.documentElement.dataset.theme=t}catch(e){}try{var f=JSON.parse(localStorage.getItem('ab_fav')||'[]');var c=[];for(var i=0;i<f.length;i++){var k=f[i]&&f[i].iata;if(typeof k==='string'&&/^[A-Z0-9]{3}$/.test(k))c.push(k)}if(c.length){var r=document.documentElement;r.dataset.fav='1';var st=document.createElement('style');st.textContent=c.map(function(k){return ':root:not([data-hydrated]) .fav-heart[data-iata=\''+k+'\']{color:var(--ab-ff453a)}:root:not([data-hydrated]) .fav-heart[data-iata=\''+k+'\'] svg{fill:currentColor}'}).join('');document.head.appendChild(st)}}catch(e){}`}} /></head>
       <body className="min-h-full flex flex-col">
         {/* React hoists resource links into <head>. Browsers honour only a handful of
             preconnects, so they go to the origins that actually run on every locale: the
@@ -105,7 +106,7 @@ export default async function LocaleLayout({
         <NextIntlClientProvider locale={numLocale(locale)} messages={clientMessages(messages)}>
           <SiteHeader locale={locale as Locale} />
           <RowScroll />
-          <main style={{ flex: '1 0 auto', width: '100%' }}>{children}</main>
+          <main className="site-main" style={{ flex: '1 0 auto', width: '100%' }}>{children}</main>
           <SiteFooter locale={locale as Locale} />
           {/* Both overlays are OFF while AdSense review is pending (2026-08-03 rejection:
               "low value content"). Nothing may cover the content a reviewer came to read.
@@ -123,6 +124,10 @@ export default async function LocaleLayout({
           <CookieNotice locale={locale as Locale} />
           <InstallPrompt />
           */}
+          {/* Нижняя панель навигации. Стоит ПОСЛЕ подвала и рисуется только в браузере
+              (см. комментарий в BottomNav): в серверном HTML её нет, поэтому число
+              ссылок на странице не меняется ни на одну. */}
+          <BottomNav locale={locale as Locale} />
           {GA_ID && <GaRouteTracker gaId={GA_ID} />}
         </NextIntlClientProvider>
       </body>

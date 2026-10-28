@@ -1,3 +1,5 @@
+import { LocaleLinks } from '@/components/LocaleLinks';
+import type { Locale } from '@/lib/i18n';
 import type { Metadata } from 'next';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { WidgetBuilder } from '@/components/WidgetBuilder';
@@ -91,6 +93,11 @@ export default async function WidgetsPage({ params }: Props) {
       <p style={{ fontSize: 13, lineHeight: 1.5, color: 'var(--ab-8a8a8a)', marginTop: 26 }}>
         {t('widgets_note')}
       </p>
+    {/* Эта же страница на остальных одиннадцати языках. Ряд стоит в странице,
+        а не в подвале, потому что подвал рисует раскладка, а она своего адреса
+        не знает: узнать его можно только заголовком из middleware, и тогда
+        каждая страница сайта стала бы динамической. Подробности — в LocaleLinks. */}
+    <LocaleLinks locale={locale as Locale} path="/widgets" />
     </main>
   );
 }

@@ -1,3 +1,5 @@
+import { LocaleLinks } from '@/components/LocaleLinks';
+import type { Locale } from '@/lib/i18n';
 import { airportSchema } from '@/lib/airport-schema';
 import type { Metadata } from 'next';
 import { getTranslations , setRequestLocale } from 'next-intl/server';
@@ -227,7 +229,6 @@ export default async function ArrivalsPage({ params }: Props) {
       {jsonLd.map((schema, i) => (
         <script key={i} type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
       ))}
-      <Breadcrumb label={tNav('aria_breadcrumb')} trail={trail} extra={{ href: `/${locale}/airport/${airport.iata}/departures`, label: tNav('departures') }} />
       {/* The visible <h1> now lives in FlightBoard's airport header (single semantic h1). */}
       {/* boardTotal is the full board, not the SSR slice: passing nothing here made the page
           publish "40 arrivals" on airports whose board holds 80 — the same slice-vs-total
@@ -247,7 +248,7 @@ export default async function ArrivalsPage({ params }: Props) {
           travel guides and the FAQ already exist per airport; withholding them here bought
           nothing. direction="arrivals" makes the routes section aggregate ORIGINS, so the
           section genuinely differs from the parent rather than duplicating it. */}
-      <AirportBottom airport={airport} locale={locale} about={about} displayName={getAirportName(airport.iata, locale, airport.name)} flights={initialFlights} noService={noService} nearestServed={nearestWithFlights} direction="arrivals" />
+      <AirportBottom airport={airport} locale={locale} about={about} displayName={getAirportName(airport.iata, locale, airport.name)} flights={initialFlights} noService={noService} nearestServed={nearestWithFlights} direction="arrivals" tail={<><Breadcrumb label={tNav('aria_breadcrumb')} trail={trail} extra={{ href: `/${locale}/airport/${airport.iata}/departures`, label: tNav('departures') }} foot /><LocaleLinks locale={locale as Locale} path={`/airport/${airport.iata}/arrivals`} /></>} />
     </>
   );
 }

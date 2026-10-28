@@ -1,3 +1,5 @@
+import { LocaleLinks } from '@/components/LocaleLinks';
+import type { Locale } from '@/lib/i18n';
 import type { Metadata } from 'next';
 import { withBrand } from '@/lib/title';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
@@ -218,6 +220,11 @@ export default async function RoutePage({ params }: Props) {
         {' · '}
         <Link href={`/${locale}/airport/${b.iata}`} style={link}>{toName} ({b.iata})</Link>
       </p>
+    {/* Эта же страница на остальных одиннадцати языках. Ряд стоит в странице,
+        а не в подвале, потому что подвал рисует раскладка, а она своего адреса
+        не знает: узнать его можно только заголовком из middleware, и тогда
+        каждая страница сайта стала бы динамической. Подробности — в LocaleLinks. */}
+    <LocaleLinks locale={locale as Locale} path={`/route/${p.from}-${p.to}`} />
     </div>
   );
 }

@@ -1,3 +1,5 @@
+import { LocaleLinks } from '@/components/LocaleLinks';
+import type { Locale } from '@/lib/i18n';
 import type { Metadata } from 'next';
 import { withBrand } from '@/lib/title';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
@@ -105,7 +107,6 @@ export default async function CityPage({ params }: Props) {
     <div style={{ maxWidth: 760, margin: '0 auto', padding: '36px 18px 64px' }}>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(itemList) }} />
-      <Breadcrumb label={tNav('aria_breadcrumb')} trail={crumbs} />
       <h1 style={{ fontSize: 'clamp(28px, 7vw, 40px)', fontWeight: 800, letterSpacing: '-0.03em', color: 'var(--ab-ffffff)', margin: '0 0 6px' }}>
         <span className="locale-flag">{flag(c.iso2)}</span> {t('city_title', { city, deCity })}
       </h1>
@@ -135,6 +136,12 @@ export default async function CityPage({ params }: Props) {
           </li>
         ))}
       </ul>
+    <Breadcrumb label={tNav('aria_breadcrumb')} trail={crumbs} foot />
+    {/* Эта же страница на остальных одиннадцати языках. Ряд стоит в странице,
+        а не в подвале, потому что подвал рисует раскладка, а она своего адреса
+        не знает: узнать его можно только заголовком из middleware, и тогда
+        каждая страница сайта стала бы динамической. Подробности — в LocaleLinks. */}
+    <LocaleLinks locale={locale as Locale} path={`/city/${c.slug}`} />
     </div>
   );
 }

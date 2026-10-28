@@ -51,7 +51,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
 function Title({ children }: { children: React.ReactNode }) {
   return (
-    <div style={{ fontSize: 13, fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.16em', color: 'var(--ab-8a8a8a)', marginBottom: 10 }}>
+    <div className="wall-text" style={{ fontSize: 13, fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.16em', color: 'var(--ab-8a8a8a)', marginBottom: 10 }}>
       {children}
     </div>
   );
@@ -120,6 +120,7 @@ export default async function HomePage({ params }: Props) {
         <AirportSearch locale={locale} placeholder={tNav('search_placeholder')} />
         <StandaloneResume locale={locale} />
       </div>
+
 
       {/* Вся справка находится ПОСЛЕ поиска, в одном нативном аккордеоне.
           Текст, метрики и каталоги входят в исходный серверный HTML и одинаковы

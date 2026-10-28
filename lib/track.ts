@@ -65,6 +65,8 @@ export const GOALS = {
   searchPick: 'search_pick',
   /** «Поделиться рейсом» из карточки (18.10.2026). Параметр: via — share | copy | prompt. */
   flightShare: 'flight_share',
+  /** Сердечко «в избранное» на странице аэропорта (28.10.2026). Параметр: on — включили или сняли. */
+  favoriteToggle: 'favorite_toggle',
 } as const;
 
 export type Goal = (typeof GOALS)[keyof typeof GOALS];
