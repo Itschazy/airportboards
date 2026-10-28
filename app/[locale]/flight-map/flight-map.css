@@ -29,3 +29,8 @@
 .flight-map-root .country-border{fill:none;stroke:rgba(var(--ab-ink),.16);stroke-width:.6;vector-effect:non-scaling-stroke;pointer-events:none}
 
 @media(max-width:700px){.flight-map-root #addDialog{bottom:var(--entry-bottom,0px);max-height:min(90dvh,calc(var(--entry-height,100dvh) - 8px))}}
+/* Поиск нужен длинной истории, но не занимает первый экран пустой карты.
+   Подсказки и одна прокручиваемая строка недавних маршрутов сохраняют место
+   второму аэропорту на 320 px. Панель сохранения остаётся доступна при скролле. */
+.flight-map-root .journal-tools{margin:0 0 14px}.flight-map-root .journal-tools summary{min-height:44px;padding:12px 4px;font-size:13px;cursor:pointer}.flight-map-root .journal-search-label{font-size:12px;color:var(--muted)}.flight-map-root .journal-filters{display:flex;align-items:center;justify-content:space-between;gap:8px}.flight-map-root .journal-filters label{display:flex;align-items:center;gap:8px;min-height:44px;font-size:13px}.flight-map-root .journal-filters input{width:18px;min-height:18px;height:18px;padding:0;margin:0;accent-color:var(--blue)}.flight-map-root #journalResults{font-size:12px;line-height:1.5;color:var(--muted)}.flight-map-root #journalResults:empty{display:none}.flight-map-root #fullMapCanvas:focus-visible{outline:2px solid var(--blue);outline-offset:-2px}
+@media(max-width:700px){.flight-map-root #addDialog .suggestions{max-height:clamp(56px,calc(var(--entry-height,100dvh) * .16),112px)}.flight-map-root #addDialog .quick-routes{margin-bottom:6px;flex-wrap:nowrap;overflow-x:auto;padding:2px}.flight-map-root #addDialog .quick-route{flex-shrink:0}.flight-map-root #addDialog .extra-fields{margin:8px 0}.flight-map-root #addDialog .sheet-head{padding-bottom:10px}}
