@@ -1402,3 +1402,26 @@ OpenFlights/AppintheAir без полноценной актуальной visua
 
 
 Подготовлено обновление экспорта и карты: крупные подписи, обе композиции/темы, очередь PNG, дедупликация геометрии и журнал по50. Полный отчёт и ограничения: `ops/prototypes/flight-map/qa/POLISH-20261028.md`. ChatGPT-концепция создана через браузер, реальные PNG построены из данных. 18tests, productionfixturebuild, tsc,12локалей, SSR/SEO, index20/20 и guards пройдены; 17PNGсценариев в Chrome/desktopSafari/desktopЯндекс,320/375/430px и CPU×6. Физические телефоны не проверены. DNS/прежние настройки/SEO не менялись. Дальше: разрешённый ранее выкат вне прогрева, CI+сервер+postdeploy. До этого production09605f8d.
+
+## Codex, 28.10.2026 —735052a6 выкачен и проверен
+
+
+28.10.2026 в15:07Europe/Amsterdam (вне окна прогрева) опубликован
+735052a60bd498d373d5ecd9313109bff51c9c75. Actions40702840157 success:
+https://github.com/Itschazy/airportboards/actions/runs/40702840157 .
+На сервере217.149.26.240 /var/www/airportsboard тот же HEAD, новая сборка
+BUILD_ID tXPhNaF6pHvtM2JCA2ieo, все3pm2online (PID388498/388499/388521),63ГБсвободно.
+/api/health200. Внешние app.js,map.js,share.js,jobs.js совпадают SHA256 с локальными;
+Cache-Control public,max-age=0 — файлы не закреплены долгим неизменяемым кэшем.
+
+После выката, исключительно audit-bot: check-flight-map OK (SSR/SEO,RUнавигация,
+11×404,8assets,4соседние); check-index20/20; sitemap-hreflang; live-refresh;
+adsense —exit0. Live-refresh проверяет исходники и безопасное наблюдение, не
+имитирует платное обновление живым посетителем. Снимки и PNG получены локально.
+Продукт остаётся русскоязычным, физические телефоны не проверены. DNS, настройки
+основного сайта и SEO-оболочка не менялись. Откат при необходимости — отдельный
+revert735052a6 с повторным штатным выкатом, не reset чужого main.
+
+QA3110/3111/3112 остановлены; generatedTS восстановлены. Временныеbuilds и symlink
+node_modules перенесены в /tmp/ab-flight-map-builds-20261028/polish-735052a6.
+Документация результата фиксируется локальным коммитом без нового пуша/пересборки.
