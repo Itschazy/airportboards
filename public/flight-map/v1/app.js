@@ -1,4 +1,5 @@
 import{createMap,distance,plural}from'./map.js';
+import{latestJob}from'./jobs.js';
 
 import{KEY,newId,createStore,backup,parse,merge,MAX_BYTES}from'./storage.js';
 // DOM остров принадлежит только карте: Next монтирует/размонтирует оболочку,
@@ -16,7 +17,8 @@ const search=airports.map(a=>({a,q:norm(`${a.city} ${a.code} ${a.name}`)}));
 let exporterPromise;
 const demo=[['SVX','IST','2025-09-14','TK 476'],['IST','CDG','2025-09-18','TK 1823'],['CDG','IST','2026-02-21','TK 1828'],['IST','SVX','2026-02-22','TK 475'],['SVX','DXB','2026-09-03','FZ 980'],['DXB','BKK','2026-09-04','EK 372']].map((f,id)=>({id:'demo_'+id,from:f[0],to:f[1],date:f[2],number:f[3]}));
 let flights=[],personal=[],isDemo=false,period='',selected=null,editing=null,choice={from:null,to:null},box=null,fullBox=null;
-let shareKind='map',shareFormat='story',shareLight=false,shareCard=null,shareBlob=null,shareRevision=0,previewURL=null;
+let shareKind='map',shareFormat='story',shareLight=false,shareCard=null,shareBlob=null,previewURL=null;
+let journalLimit=50;
 let store,storageError='',pendingRestore=null,restoreRevision=0;
 try{store=createStore(localStorage,new Set(airports.map(a=>a.code)));flights=personal=store.read();}catch(e){storageError='Не удалось прочитать сохранение. Оно не перезаписано. '+e.message;}
 if(new URLSearchParams(location.search).has('demo')){flights=structuredClone(demo);isDemo=true;}
@@ -31,13 +33,16 @@ function map(){const svg=$('#map');svg.setAttribute('viewBox',`${box.x} ${box.y}
 function bindRoutes(svg){svg.querySelectorAll('[data-route]').forEach(p=>p.onclick=()=>{selected=p.dataset.route;render(false);});}
 function renderSelection(el){const f=visible().find(x=>x.id===selected);el.hidden=!f;if(!f){el.innerHTML='';return;}el.innerHTML=`<div><strong>${esc(airport[f.from].city)} → ${esc(airport[f.to].city)}</strong><small>≈ ${fmt(km(f))} км между аэропортами</small></div><button class="icon" aria-label="Поделиться этим перелётом" data-route-share>↗</button><button class="icon" aria-label="Снять выделение" data-unselect>×</button>`;el.querySelector('[data-unselect]').onclick=()=>{selected=null;render(false);};el.querySelector('[data-route-share]').onclick=()=>{if($('#fullMapDialog').open){close($('#fullMapDialog'),()=>makeShare('flight'));return;}makeShare('flight');};}
 function drawFull(){const fs=visible(),wrap=$('#fullMapCanvas');if(!fullBox)fullBox=model.fit(fs,wrap.clientWidth/wrap.clientHeight);wrap.innerHTML=`<svg viewBox="${fullBox.x} ${fullBox.y} ${fullBox.w} ${fullBox.h}" aria-label="Карта маршрутов">${model.body(fs,fullBox,wrap.clientWidth,selected)}</svg>`;bindRoutes(wrap);renderSelection($('#fullMapSelection'));}
-function render(reset=true){$('#storageStatus').textContent=storageError||(isDemo?'Пример не сохраняется. Ваши перелёты хранятся отдельно.':'Сохранено на этом устройстве · '+personal.length+' '+plural(personal.length,['перелёт','перелёта','перелётов']));$('#storageStatus').classList.toggle('storage-error',!!storageError);let t=totals();$('.atlas').classList.toggle('is-empty',t.flights===0);if(reset||!box)fit();map();$('#stats').innerHTML=`<div class="stat"><b>${t.flights}</b><span>${plural(t.flights,['перелёт','перелёта','перелётов'])}</span></div><div class="stat"><b>${t.countries}</b><span>${plural(t.countries,['страна','страны','стран'])} на карте</span></div><div class="stat"><b>${fmt(t.km)}</b><span>км по прямой ≈</span></div>`;
+function render(reset=true){if(reset)journalLimit=50;$('#storageStatus').textContent=storageError||(isDemo?'Пример не сохраняется. Ваши перелёты хранятся отдельно.':'Сохранено на этом устройстве · '+personal.length+' '+plural(personal.length,['перелёт','перелёта','перелётов']));$('#storageStatus').classList.toggle('storage-error',!!storageError);let t=totals();$('.atlas').classList.toggle('is-empty',t.flights===0);if(reset||!box)fit();map();$('#stats').innerHTML=`<div class="stat"><b>${t.flights}</b><span>${plural(t.flights,['перелёт','перелёта','перелётов'])}</span></div><div class="stat"><b>${t.countries}</b><span>${plural(t.countries,['страна','страны','стран'])} на карте</span></div><div class="stat"><b>${fmt(t.km)}</b><span>км по прямой ≈</span></div>`;
  $('#journalCount').textContent=period||'Все годы';
  const years=[...new Set(flights.map(f=>f.date?.slice(0,4)).filter(Boolean))].sort().reverse();$('#period').innerHTML='<option value="">За всё время</option>'+years.map(y=>`<option value="${y}">${y}</option>`).join('');$('#period').value=period;
  $('#shareNudge').hidden=flights.length===0;$$('[data-action="share"]').forEach(b=>b.disabled=!flights.length);
  $('.demo-bar').querySelector('span').textContent=isDemo?'Демонстрационная карта':'Локальная карта · без регистрации';$('#clearDemo').textContent=isDemo?'Вернуться к своей':'Посмотреть пример';
- $('#flightList').innerHTML=visible().slice().sort((a,b)=>(b.date||'').localeCompare(a.date||'')).map(f=>`<article class="flight${selected===f.id?' selected':''}" tabindex="0" role="button" aria-label="${esc(airport[f.from].city+' — '+airport[f.to].city)}" data-id="${f.id}"><div class="flight-top"><span>${f.date?new Date(f.date+'T12:00:00').toLocaleDateString('ru-RU',{day:'numeric',month:'short',year:'numeric'}):'Дата не указана'}${f.number?' · '+esc(f.number):''}</span><button aria-label="Изменить перелёт ${esc(f.from+' — '+f.to)}" data-edit="${f.id}">···</button></div><div class="route"><div><strong>${f.from}</strong><small>${esc(airport[f.from].city)}</small></div><div class="route-line"><span>✈</span></div><div><strong>${f.to}</strong><small>${esc(airport[f.to].city)}</small></div></div></article>`).join('')||'<div class="empty-list">Перелётов пока нет.</div>';
+ $('#flightList').innerHTML=visible().slice().sort((a,b)=>(b.date||'').localeCompare(a.date||'')).slice(0,journalLimit).map(f=>`<article class="flight${selected===f.id?' selected':''}" tabindex="0" role="button" aria-label="${esc(airport[f.from].city+' — '+airport[f.to].city)}" data-id="${f.id}"><div class="flight-top"><span>${f.date?new Date(f.date+'T12:00:00').toLocaleDateString('ru-RU',{day:'numeric',month:'short',year:'numeric'}):'Дата не указана'}${f.number?' · '+esc(f.number):''}</span><button aria-label="Изменить перелёт ${esc(f.from+' — '+f.to)}" data-edit="${f.id}">···</button></div><div class="route"><div><strong>${f.from}</strong><small>${esc(airport[f.from].city)}</small></div><div class="route-line"><span>✈</span></div><div><strong>${f.to}</strong><small>${esc(airport[f.to].city)}</small></div></div></article>`).join('')||'<div class="empty-list">Перелётов пока нет.</div>';
  $('#flightList').querySelectorAll('[data-id]').forEach(el=>{const choose=()=>{selected=el.dataset.id;render(false);$('.atlas').scrollIntoView({behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth',block:'start'});};el.onclick=e=>{if(!e.target.closest('[data-edit]'))choose();};el.onkeydown=e=>{if(e.key==='Enter'&&!e.target.closest('[data-edit]'))choose();};});
+ // Журнал раскрывается порциями: 5000 записей не создают сразу 50 000 DOM-узлов.
+ // Карта, статистика, backup и экспорт всегда используют полный набор.
+ $('#moreFlights')?.remove();if(visible().length>journalLimit){const more=document.createElement('button');more.id='moreFlights';more.className='primary';more.style.width='100%';more.textContent='Показать ещё '+Math.min(50,visible().length-journalLimit);more.onclick=()=>{journalLimit+=50;render(false);$('#flightList [data-id]:nth-child('+Math.max(1,journalLimit-49)+')')?.focus({preventScroll:true});};$('#flightList').after(more);}
  $$('[data-edit]').forEach(el=>el.onclick=()=>openForm(el.dataset.edit));
 }
 let toastTimer;function toast(s){$('#toast').onclick=null;$('#toast').style.pointerEvents='none';$('#toast').textContent=s;$('#toast').classList.add('show');clearTimeout(toastTimer);toastTimer=setTimeout(()=>$('#toast').classList.remove('show'),3200);}
@@ -63,26 +68,48 @@ $('#period').onchange=()=>{period=$('#period').value;selected=null;fullBox=null;
 $('#fit').onclick=()=>{fit();map();};for(const [id,f] of [['zoomIn',.8],['zoomOut',1.25]])$('#'+id).onclick=()=>{if(box.w*f<50||box.w*f>1100)return;box={...box,x:box.x+box.w*(1-f)/2,y:box.y+box.h*(1-f)/2,w:box.w*f,h:box.h*f};map();};
 // Резервная копия относится к журналу. Тема и язык остаются в настоящих настройках сайта.
 $('#openBackup').onclick=()=>open($('#backupDialog'));
-// Generate PNG before the share gesture: iOS must receive navigator.share
-// directly from a tap, not after awaiting font loading or a long rasterisation.
-async function refreshShare(){const rev=++shareRevision;shareBlob=null;$('#sharePreview').setAttribute('aria-busy','true');$('#nativeShare').disabled=true;$('#download').disabled=true;$('#copyCaption').disabled=true;$('#shareStatus').textContent='Готовим изображение…';
+// PNG готов до пользовательского tap: iOS требует navigator.share прямо
+// из жеста. Очередь коалесцирует быстрые переключения, старый результат не
+// перетирает новую карточку или ошибку; при сетевой ошибке загрузку можно повторить.
+const shareJobs=latestJob({
+ async run(options,current){
+  exporterPromise??=import('./share.js').then(m=>m.createExporter(model)).catch(e=>{exporterPromise=null;throw e;});
+  const exp=await exporterPromise;if(!current()||signal.aborted)return;
+  const card=exp.build(options);if(!current()||signal.aborted)return;
+  const blob=await exp.png(card);return {card,blob};
+ },
+ done(result,options){if(!result||signal.aborted||!$('#shareDialog').open)return;
+  const {card,blob}=result;shareCard=card;shareBlob=blob;$('#caption').value=card.caption;
+  $('#sharePreview').setAttribute('aria-busy','false');if(previewURL)URL.revokeObjectURL(previewURL);previewURL=URL.createObjectURL(blob);
+  $('#sharePreview').innerHTML=`<img src="${previewURL}" alt="Готовая карточка: ${options.kind==='flight'?'один перелёт':options.kind==='year'?'итоги года':'вся карта'}" width="${card.width}" height="${card.height}">`;
+  $('#download').disabled=false;$('#copyCaption').disabled=false;
+  const file=new File([blob],'airportsboard-my-flights.png',{type:'image/png'});let can=false;try{can=!!navigator.canShare?.({files:[file]});}catch{}
+  $('#nativeShare').hidden=!can;$('#nativeShare').disabled=!can;
+  $('#shareStatus').textContent=can?'Готово · выберите приложение после нажатия «Поделиться»':'Сохраните PNG и прикрепите в любимом приложении.';
+  track('export',{export_kind:options.kind,format:options.format});
+ },
+ error(){if(signal.aborted||!$('#shareDialog').open)return;$('#sharePreview').setAttribute('aria-busy','false');$('#shareStatus').textContent='Не получилось создать PNG. Закройте окно и попробуйте снова.';}
+});
+function refreshShare(){shareBlob=null;shareCard=null;$('#sharePreview').setAttribute('aria-busy','true');$('#nativeShare').disabled=true;$('#download').disabled=true;$('#copyCaption').disabled=true;$('#shareStatus').textContent='Готовим изображение…';
  $$('.share-tabs button').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.shareKind===shareKind)));$$('[data-format]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.format===shareFormat)));
  $('#shareYear').hidden=shareKind!=='year';$('#shareFlight').hidden=shareKind!=='flight';$('#caption').hidden=true;
- try{exporterPromise??=import('./share.js').then(m=>m.createExporter(model));const exp=await exporterPromise;const card=exp.build({flights,kind:shareKind,year:$('#shareYear').value,flightId:$('#shareFlight').value,format:shareFormat,light:shareLight,demo:isDemo});if(signal.aborted||rev!==shareRevision)return;
- shareCard=card;$('#caption').value=card.caption;$('#copyCaption').disabled=false;const blob=await exp.png(card);if(signal.aborted||rev!==shareRevision)return;shareBlob=blob;track('export',{export_kind:shareKind,format:shareFormat});$('#sharePreview').setAttribute('aria-busy','false');if(previewURL)URL.revokeObjectURL(previewURL);previewURL=URL.createObjectURL(blob);$('#sharePreview').innerHTML=`<img src="${previewURL}" alt="Готовая карточка: ${shareKind==='flight'?'один перелёт':shareKind==='year'?'итоги года':'вся карта'}" width="${card.width}" height="${card.height}">`;$('#download').disabled=false;
- const file=new File([blob],'airportsboard-my-flights.png',{type:'image/png'}),can=!!navigator.canShare?.({files:[file]});$('#nativeShare').hidden=!can;$('#nativeShare').disabled=!can;$('#shareStatus').textContent=can?'Готово · выберите приложение после нажатия «Поделиться»':'Сохраните PNG и прикрепите в любимом приложении.';
- }catch(e){$('#sharePreview').setAttribute('aria-busy','false');$('#shareStatus').textContent='Не получилось создать PNG. Закройте окно и попробуйте снова.';}}
+ shareJobs.push({flights,kind:shareKind,year:$('#shareYear').value,flightId:$('#shareFlight').value,format:shareFormat,light:shareLight,demo:isDemo});
+}
+listen($('#shareDialog'),'close',()=>{shareJobs.cancel();shareBlob=null;shareCard=null;if(previewURL){URL.revokeObjectURL(previewURL);previewURL=null;}$('#sharePreview').innerHTML='';});
 function makeShare(kind='map'){if(!flights.length){toast('Сначала добавьте перелёт');return;}shareKind=kind==='map'&&period?'year':kind;shareLight=document.documentElement.dataset.theme==='light'||(!document.documentElement.dataset.theme&&matchMedia('(prefers-color-scheme: light)').matches);
  const years=[...new Set(flights.map(f=>f.date?.slice(0,4)).filter(Boolean))].sort().reverse();$('#shareYear').innerHTML=years.map(y=>`<option>${y}</option>`).join('');$('[data-share-kind="year"]').disabled=!years.length;if(period&&years.includes(period))$('#shareYear').value=period;
  $('#shareFlight').innerHTML=flights.map(f=>`<option value="${f.id}">${f.from} → ${f.to}${f.date?' · '+f.date:''}</option>`).join('');$('#shareFlight').value=selected??flights[flights.length-1].id;$('#sharePreview').innerHTML='';open($('#shareDialog'));refreshShare();}
 $$('[data-share-kind]').forEach(b=>b.onclick=()=>{shareKind=b.dataset.shareKind;refreshShare();});$$('[data-format]').forEach(b=>b.onclick=()=>{shareFormat=b.dataset.format;refreshShare();});$('#shareYear').onchange=$('#shareFlight').onchange=refreshShare;$('#exportTheme').onclick=()=>{shareLight=!shareLight;refreshShare();};
 $('#download').onclick=()=>{if(!shareBlob)return;const a=document.createElement('a'),u=URL.createObjectURL(shareBlob);a.href=u;a.download=`airportsboard-${shareKind}-${shareFormat}.png`;a.click();setTimeout(()=>URL.revokeObjectURL(u),60000);$('#shareStatus').textContent='PNG передан браузеру для сохранения.';};
-$('#nativeShare').onclick=()=>{if(!shareBlob)return;navigator.share({files:[new File([shareBlob],'airportsboard-my-flights.png',{type:'image/png'})],title:'Мои перелёты'}).then(()=>{$('#shareStatus').textContent='Изображение передано выбранному приложению.';}).catch(e=>{if(e.name!=='AbortError')$('#shareStatus').textContent='Не удалось поделиться. Сохраните PNG.';});};
-$('#copyCaption').onclick=async()=>{try{await Promise.race([navigator.clipboard.writeText(shareCard.caption),new Promise((_,reject)=>setTimeout(()=>reject(new Error('clipboard-timeout')),1500))]);$('#shareStatus').textContent='Подпись скопирована. Можно добавить к картинке.';}catch{$('#caption').hidden=false;$('#caption').select();$('#shareStatus').textContent='Выделите и скопируйте подпись ниже.';}};
+$('#nativeShare').onclick=()=>{if(!shareBlob)return;navigator.share({files:[new File([shareBlob],'airportsboard-my-flights.png',{type:'image/png'})],title:'Мои перелёты'}).then(()=>{$('#shareStatus').textContent='Изображение передано выбранному приложению.';}).catch(e=>{$('#shareStatus').textContent=e.name==='AbortError'?'Отправка отменена. Картинка готова к сохранению.':'Не удалось поделиться. Сохраните PNG.';});};
+$('#copyCaption').onclick=async()=>{if(!shareCard)return;try{await Promise.race([navigator.clipboard.writeText(shareCard.caption),new Promise((_,reject)=>setTimeout(()=>reject(new Error('clipboard-timeout')),1500))]);$('#shareStatus').textContent='Подпись скопирована. Можно добавить к картинке.';}catch{$('#caption').hidden=false;$('#caption').select();$('#shareStatus').textContent='Выделите и скопируйте подпись ниже.';}};
 $('#expandMap').onclick=()=>{if(!visible().length)return;fullBox=null;open($('#fullMapDialog'));drawFull();};
 function zoomFull(f){if(!fullBox||fullBox.w*f<60||fullBox.w*f>1500)return;fullBox={...fullBox,x:fullBox.x+fullBox.w*(1-f)/2,y:fullBox.y+fullBox.h*(1-f)/2,w:fullBox.w*f,h:fullBox.h*f};drawFull();}
 $('#fullZoomIn').onclick=()=>zoomFull(.8);$('#fullZoomOut').onclick=()=>zoomFull(1.25);$('#fullFit').onclick=()=>{fullBox=null;drawFull();};
-let drag=null,moved=false;const full=$('#fullMapCanvas');full.onpointerdown=e=>{drag={x:e.clientX,y:e.clientY,box:{...fullBox}};moved=false;};full.onpointermove=e=>{if(!drag)return;let dx=e.clientX-drag.x,dy=e.clientY-drag.y;if(Math.hypot(dx,dy)>6)moved=true;if(!moved)return;full.setPointerCapture(e.pointerId);fullBox={...drag.box,x:drag.box.x-dx*drag.box.w/full.clientWidth,y:drag.box.y-dy*drag.box.h/full.clientHeight};drawFull();};full.onpointerup=full.onpointercancel=()=>{drag=null;};full.addEventListener('click',e=>{if(moved){e.preventDefault();e.stopPropagation();moved=false;}},true);
+// Во время перетаскивания меняется только viewBox. Прежний drawFull на каждом
+// pointermove заново разбирал береговую линию и тысячи узлов. Подписи обновляются
+// один раз в конце жеста; RAF ограничивает изменения частотой экрана.
+let panFrame=0,drag=null,moved=false;const full=$('#fullMapCanvas');full.onpointerdown=e=>{drag={x:e.clientX,y:e.clientY,box:{...fullBox}};moved=false;};full.onpointermove=e=>{if(!drag)return;let dx=e.clientX-drag.x,dy=e.clientY-drag.y;if(Math.hypot(dx,dy)>6)moved=true;if(!moved)return;full.setPointerCapture(e.pointerId);fullBox={...drag.box,x:drag.box.x-dx*drag.box.w/full.clientWidth,y:drag.box.y-dy*drag.box.h/full.clientHeight};if(!panFrame)panFrame=requestAnimationFrame(()=>{panFrame=0;full.querySelector('svg')?.setAttribute('viewBox',`${fullBox.x} ${fullBox.y} ${fullBox.w} ${fullBox.h}`);});};full.onpointerup=full.onpointercancel=()=>{const wasDragging=!!drag&&moved;drag=null;if(panFrame){cancelAnimationFrame(panFrame);panFrame=0;}if(wasDragging)drawFull();};full.addEventListener('click',e=>{if(moved){e.preventDefault();e.stopPropagation();moved=false;}},true);
 $$('[data-action]').forEach(b=>b.onclick=e=>{e.preventDefault();switch(b.dataset.action){case'add':openForm();break;case'share':makeShare('map');break;}});
 
 // Import preview and saving share the same validation path, so a corrupt backup
@@ -98,7 +125,7 @@ $('#restoreConfirm').onclick=async()=>{if(!pendingRestore)return;try{const resul
 $$('button').forEach(b=>b.disabled=false);root.removeAttribute('aria-busy');render();track('open');let resize;listen(window,'resize',()=>{clearTimeout(resize);resize=setTimeout(()=>render(),100);});
 
 signal.addEventListener('abort',()=>{
- clearTimeout(toastTimer);clearTimeout(resize);shareRevision++;restoreRevision++;
+ clearTimeout(toastTimer);clearTimeout(resize);shareJobs.cancel();restoreRevision++;if(panFrame)cancelAnimationFrame(panFrame);
  document.body.style.overflow=beforeOverflow;
  for(const d of $$('dialog[open]')){delete d.dataset.history;d.close();}
  if(previewURL)URL.revokeObjectURL(previewURL);

@@ -23,7 +23,7 @@ for(const m of html.matchAll(/<script\b([^>]*)>([\s\S]*?)<\/script>/g)){
  if(!m[1].includes('ld+json')&&!m[1].includes('src='))new vm.Script(m[2]);
 }
 for(const locale of ['en','de','fr','es','it','tr','zh','ja','ko','ar','hi'])assert.equal((await get(`/${locale}/flight-map`)).status,404,locale);
-for(const path of ['/flight-map/v1/app.js','/flight-map/v1/map.js','/flight-map/v1/share.js','/flight-map/v1/storage.js','/flight-map/v1/airports.json','/flight-map/v1/land.json','/images/flight-map-demo.jpg']){
+for(const path of ['/flight-map/v1/app.js','/flight-map/v1/map.js','/flight-map/v1/share.js','/flight-map/v1/storage.js','/flight-map/v1/jobs.js','/flight-map/v1/airports.json','/flight-map/v1/land.json','/images/flight-map-demo.jpg']){
  const r=await get(path);assert.equal(r.status,200,path);
  if(path.endsWith('.jpg')){assert.match(r.headers.get('content-type'),/image\/jpeg/);const b=new Uint8Array(await r.arrayBuffer());assert.equal(b[0],255);assert.equal(b[1],216);}
 }
@@ -33,4 +33,4 @@ for(const path of ['/ru','/ru/settings','/ru/favorites','/en']){
  assert.ok(!h.includes('.flight-map-root'),path+' scoped CSS leaked');
  assert.ok(!h.includes('/flight-map/v1/app.js'),path+' tool code leaked');
 }
-console.log('Flight map: SSR/SEO, inline JS, RU navigation, 11 honest 404s, 7 assets and 4 adjacent pages OK');
+console.log('Flight map: SSR/SEO, inline JS, RU navigation, 11 honest 404s, 8 assets and 4 adjacent pages OK');
