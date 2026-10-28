@@ -1,0 +1,43 @@
+{
+  "title": "Free Personal Flight Map & Flight Log — AirportsBoard",
+  "description": "Create a map of your flights. Add airports, view routes and approximate distances, keep your flight log, back it up and export a PNG to share.",
+  "heading": "My flight map",
+  "summary": "About the flight map",
+  "intro": "The AirportsBoard flight map is a free personal flight log in your browser. Manually add departure and arrival airports to see your routes, flight count and approximate distances between airports.",
+  "stepsHeading": "How to create your flight map",
+  "steps": [
+    "Choose Add flight and find both airports by city, name or IATA code.",
+    "Add a date and flight number if you remember them. Both fields are optional.",
+    "View all your flights or filter by year. Save a PNG to share and a JSON backup to restore your log."
+  ],
+  "faqHeading": "Flight map questions",
+  "faq": [
+    {
+      "question": "Is the flight map free?",
+      "answer": "Yes. You can add flights and save images without payment or registration."
+    },
+    {
+      "question": "Will my flights remain after refreshing?",
+      "answer": "Yes, in the same browser at the same address. Clearing browser data removes the local log. There is no automatic syncing between devices."
+    },
+    {
+      "question": "How do I move my log to another phone?",
+      "answer": "Open Save and backup, save the JSON file and restore it on the other device. A preview appears before adding records. Matching records are not duplicated; conflicting records do not replace your current ones."
+    },
+    {
+      "question": "Is this a live aircraft tracking map?",
+      "answer": "No. It shows past flights that you enter manually. It does not track aircraft or import flight history from your email."
+    },
+    {
+      "question": "How are distance and countries counted?",
+      "answer": "Distance is an estimate of the shortest path over a sphere between airports, not the aircraft’s actual track. The country count refers to airports on your map and does not prove that you entered those countries."
+    },
+    {
+      "question": "What is visible in the image I share?",
+      "answer": "Routes, cities, airport codes and statistics. Exact dates and flight numbers are not shown in the PNG. The JSON backup includes your log and any dates and flight numbers you entered."
+    }
+  ],
+  "cta": "Open the flight map",
+  "previewNote": "Local prototype in Russian. Nothing is published automatically.",
+  "imageAlt": "Example flight map made with AirportsBoard"
+}

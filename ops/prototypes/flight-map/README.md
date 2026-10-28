@@ -71,3 +71,14 @@ https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_50m_land.
 «Включить светлую» удалена. Backup — отдельное действие новой карты; нижняя навигация
 остаётся визуальным макетом с заглушками, а не заменой реальных страниц настроек.
 Реальные SettingsControls.tsx, страница settings, globals.css, сообщения не менялись.
+
+## SEO-подготовка (28.10.2026)
+
+Под картой добавлен статический аккордеон с объяснением,3шагами и6вопросами.
+12переводов и метаданные: `seo/*.json`; генератор `seo/build.mjs`.
+Команда: `node ops/prototypes/flight-map/seo/build.mjs`.
+Локальная вычитка: `/seo-preview/ru/` и другие11локалей; все остаются noindex.
+Будущий release-адаптер canonical/hreflang/JSON-LD/sitemap: `seo/metadata.mjs`.
+Он не подключён к production и по умолчанию не разрешает индексацию.
+План интеграции/измерения и гейты: `seo/RELEASE.md`; проверки: `seo/QA.md`.
+Это подготовка SEO12языков, не заявление о готовности12язычного UI инструмента.

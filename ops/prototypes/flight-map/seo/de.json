@@ -1,0 +1,43 @@
+{
+  "title": "Kostenlose Karte deiner Flüge und Flugtagebuch — AirportsBoard",
+  "description": "Erstelle deine persönliche Flugkarte: Flughäfen hinzufügen, Routen und Entfernungen ansehen, Flüge speichern, sichern und als PNG teilen.",
+  "heading": "Meine Flugkarte",
+  "summary": "Über die Flugkarte",
+  "intro": "Die Flugkarte von AirportsBoard ist ein kostenloses persönliches Flugtagebuch im Browser. Trage Abflug- und Zielflughäfen selbst ein, um Routen, die Anzahl deiner Flüge und ungefähre Entfernungen zwischen Flughäfen zu sehen.",
+  "stepsHeading": "So erstellst du deine Flugkarte",
+  "steps": [
+    "Wähle „Flug hinzufügen“ und suche beide Flughäfen nach Stadt, Name oder IATA-Code.",
+    "Ergänze Datum und Flugnummer, falls du sie weißt. Beide Angaben sind freiwillig.",
+    "Sieh dir alle Flüge oder ein bestimmtes Jahr an. Speichere ein PNG zum Teilen und eine JSON-Sicherung zur Wiederherstellung."
+  ],
+  "faqHeading": "Fragen zur Flugkarte",
+  "faq": [
+    {
+      "question": "Ist die Flugkarte kostenlos?",
+      "answer": "Ja. Du kannst ohne Bezahlung oder Registrierung Flüge hinzufügen und Bilder speichern."
+    },
+    {
+      "question": "Bleiben meine Flüge nach dem Neuladen erhalten?",
+      "answer": "Ja, im selben Browser unter derselben Adresse. Beim Löschen der Browserdaten wird das lokale Tagebuch gelöscht. Es gibt keine automatische Synchronisierung zwischen Geräten."
+    },
+    {
+      "question": "Wie übertrage ich meine Flüge auf ein anderes Handy?",
+      "answer": "Öffne „Speichern und Sicherung“, speichere die JSON-Datei und stelle sie auf dem anderen Gerät wieder her. Vor dem Hinzufügen erscheint eine Vorschau. Gleiche Einträge werden nicht doppelt angelegt; abweichende Einträge überschreiben die vorhandenen nicht."
+    },
+    {
+      "question": "Zeigt die Karte Flugzeuge in Echtzeit?",
+      "answer": "Nein. Sie zeigt vergangene Flüge, die du selbst einträgst. Sie verfolgt keine Flugzeuge und importiert keine Flüge aus deinen E-Mails."
+    },
+    {
+      "question": "Wie werden Entfernungen und Länder gezählt?",
+      "answer": "Die Entfernung entspricht ungefähr dem kürzesten Weg auf einer Kugel zwischen Flughäfen, nicht dem tatsächlich geflogenen Weg. Gezählt werden die Länder der Flughäfen auf der Karte, unabhängig davon, ob du eingereist bist."
+    },
+    {
+      "question": "Was sieht man auf dem Bild zum Teilen?",
+      "answer": "Routen, Städte, Flughafencodes und Statistiken. Genaue Daten und Flugnummern erscheinen nicht im PNG. Die JSON-Sicherung enthält dagegen auch die eingegebenen Daten und Flugnummern."
+    }
+  ],
+  "cta": "Flugkarte öffnen",
+  "previewNote": "Lokaler Prototyp auf Russisch. Es wird nichts automatisch veröffentlicht.",
+  "imageAlt": "Beispiel einer Flugkarte von AirportsBoard"
+}
