@@ -1448,3 +1448,14 @@ ProductionHEAD85c1a22c2021ec2d60e291ddafce3e81d9d980d7, BUILD_ID i6OCjmQvvq2BILj
 В собственной копии runwayboard-flight-map-prototype-20261028 подготовлен runtime v3: сворачиваемый поиск истории, фильтр «Без даты», pinch/клавиши полноэкранной карты, компактная форма на 320 px. v1/v2 и формат хранилища сохранены. Независимая рецензия выявила скачок масштаба при широком fit; исправлен, добавлен regression test. Видимые 8 FAQ и JSON-LD берутся из единого источника; WebApplication описывает работающие возможности. Исследование 12 языков и RU Wordstat: ops/prototypes/flight-map/research/search-demand-12-20261028.md. Иностранная частотность не измерена, 11 переводов инструмента ещё нет, пустые страницы не создавались.
 
 Проверки: 31 тест PASS, production build на фикстуре, tsc, ключи 12 локалей, scripts/client-messages/boardreg/track/live-refresh, local index 20/20, sitemap, adsense, flight-map. Chrome/Safari/Яндекс desktop на 375 px, Chrome на 320 px; поиск не перерисовывает карту, PNG preview готов. Физические телефоны, pinch и экранная клавиатура не тестировались. Отчёт: ops/prototypes/flight-map/qa/UX-DEMAND-20261028.md. Выкат ещё не подтверждён; следующий шаг — commit/push вне прогрева, CI и postdeploy. Дизайн остального сайта, DNS и платные данные не затронуты.
+
+
+## Codex, 29.10.2026 — be767ad4 выкачен и проверен
+
+Production и origin/main: be767ad4f89f49535b65d31858318d7a0f2f5303. Push 28.10 в 20:06 CET вне прогрева. Actions 40751320423 success: https://github.com/Itschazy/airportboards/actions/runs/40751320423 . BUILD_ID 3zLAAUFeDAtjRV9s2jp-Y; три pm2 online (399309/399310/399332), свободно 59 ГБ.
+
+Первый guard обнаружил старый ISR. Штатный revalidate только /ru/flight-map вернул 200, purged1. После него check-flight-map подтвердил новый поиск, 8 одинаковых FAQ в HTML/JSON-LD, 18 assets, 11 иностранных404 и отсутствие утечки кода на 4 соседние страницы. Индексация20/20, sitemap-hreflang, live-refresh, adsense PASS. SHA256 всех трёх runtime v3 файлов совпадает с локальным. Все прод-запросы audit-bot; платных ручек и браузера не было.
+
+Финальная форма 320 px: недавние маршруты в одной прокручиваемой строке, подсказки до112px; второе поле стало видно до панели сохранения. Снимок mobile-320-add-final.png. Свои QA-вкладки/сервер3111 закрыты, временный iframe-файл удалён, generated TS восстановлен. Сборка и symlink node_modules перенесены в /tmp/ab-flight-map-builds-20261028/ux-be767ad4. Старый3103-прототип не обновлялся. Актуальная фича /ru/flight-map.
+
+Исследование не доказывает международную частотность: 12 языков — запросы/намерения/редакционные предложения; числовой Wordstat только RU с явными ограничениями. Следующие возможности: полный перевод инструмента и RTL до публикации иностранных страниц; физическая проверка pinch/клавиатуры/системного sharing на iOS/Android. Рост поискового трафика и улучшение реального LCP пока не измерены. DNS и дизайн других экранов сохранены.
