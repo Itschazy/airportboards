@@ -1,3 +1,4 @@
+import { siteBootstrap } from '@/lib/site-bootstrap';
 import { WebVitals } from '@/components/WebVitals';
 import { rumBootstrap } from '@/lib/rum-bootstrap';
 import type { Metadata, Viewport } from 'next';
@@ -80,7 +81,7 @@ export default async function LocaleLayout({
   const dir = rtlLocales.includes(locale as Locale) ? 'rtl' : 'ltr';
   return (
     <html lang={locale} dir={dir} className="h-full antialiased" suppressHydrationWarning>
-      <head><script id="ab-rum-gate" dangerouslySetInnerHTML={{ __html: rumBootstrap }} /><script dangerouslySetInnerHTML={{__html: `try{var t=localStorage.getItem('ab_theme');if(t==='light'||t==='dark')document.documentElement.dataset.theme=t}catch(e){}try{var f=JSON.parse(localStorage.getItem('ab_fav')||'[]');var c=[];for(var i=0;i<f.length;i++){var k=f[i]&&f[i].iata;if(typeof k==='string'&&/^[A-Z0-9]{3}$/.test(k))c.push(k)}if(c.length){var r=document.documentElement;r.dataset.fav='1';var st=document.createElement('style');st.textContent=c.map(function(k){return ':root:not([data-hydrated]) .fav-heart[data-iata=\''+k+'\']{color:var(--ab-ff453a)}:root:not([data-hydrated]) .fav-heart[data-iata=\''+k+'\'] svg{fill:currentColor}'}).join('');document.head.appendChild(st)}}catch(e){}`}} /></head>
+      <head><script id="ab-rum-gate" dangerouslySetInnerHTML={{ __html: rumBootstrap }} /><script dangerouslySetInnerHTML={{ __html: siteBootstrap }} /></head>
       <body className="min-h-full flex flex-col">
         {/* React hoists resource links into <head>. Browsers honour only a handful of
             preconnects, so they go to the origins that actually run on every locale: the
@@ -132,9 +133,8 @@ export default async function LocaleLayout({
           <CookieNotice locale={locale as Locale} />
           <InstallPrompt />
           */}
-          {/* Нижняя панель навигации. Стоит ПОСЛЕ подвала и рисуется только в браузере
-              (см. комментарий в BottomNav): в серверном HTML её нет, поэтому число
-              ссылок на странице не меняется ни на одну. */}
+          {/* Панель присутствует в серверном HTML. RU также содержит ссылку на
+              личную карту; остальные локали сохраняют три прежних раздела. */}
           <BottomNav locale={locale as Locale} />
           {GA_ID && <GaRouteTracker gaId={GA_ID} />}
         </NextIntlClientProvider>
