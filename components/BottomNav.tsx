@@ -63,15 +63,17 @@ export function BottomNav({ locale }: { locale: Locale }) {
         </Link>
 
         <Link href={`/${locale}/settings`} className={`press bn-item${isSet ? ' bn-item--on' : ''}`} aria-current={isSet ? 'page' : undefined}>
-          {/* Настоящая шестерня: замкнутый обод с восемью зубцами. Внутренний круг
-              входит в ТУ ЖЕ фигуру вторым контуром, а не отдельным элементом: только
-              так при заливке в середине остаётся отверстие (fill-rule="evenodd"), и
-              выбранная шестерня выглядит шестернёй, а не монетой. */}
+          {/* Ползунки вместо шестерни. Шестерня на 26px разваливалась: с мелкими
+              зубцами залитая читалась кругом, с крупными — колючей звездой. У
+              ползунков нет мелких деталей вовсе — две линии и две точки, поэтому
+              значок узнаётся и в 26px, и в 18. Залитое состояние тоже выходит само
+              собой: заливка попадает в кружки, а полозья остаются линиями. */}
           <svg width="26" height="26" viewBox="0 0 24 24" fill={isSet ? 'currentColor' : 'none'}
-               stroke="currentColor" strokeWidth="1.4" strokeLinejoin="round" strokeLinecap="round"
-               fillRule="evenodd" aria-hidden="true">
-            <path d="M9.62 5.95 L9.98 3.23 L14.02 3.23 L14.38 5.95 L14.59 6.04 L16.77 4.37 L19.63 7.23 L17.96 9.41 L18.05 9.62 L20.77 9.98 L20.77 14.02 L18.05 14.38 L17.96 14.59 L19.63 16.77 L16.77 19.63 L14.59 17.96 L14.38 18.05 L14.02 20.77 L9.98 20.77 L9.62 18.05 L9.41 17.96 L7.23 19.63 L4.37 16.77 L6.04 14.59 L5.95 14.38 L3.23 14.02 L3.23 9.98 L5.95 9.62 L6.04 9.41 L4.37 7.23 L7.23 4.37 L9.41 6.04 Z
-                     M15.2 12 A3.2 3.2 0 1 0 8.8 12 A3.2 3.2 0 1 0 15.2 12 Z" />
+               stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" aria-hidden="true">
+            <path d="M3.5 8.5h4.2M12.3 8.5h8.2" />
+            <path d="M3.5 15.5h8.2M16.3 15.5h4.2" />
+            <circle cx="10" cy="8.5" r="2.3" />
+            <circle cx="14" cy="15.5" r="2.3" />
           </svg>
           <span className="bn-label">{t('settings')}</span>
         </Link>

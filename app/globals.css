@@ -412,7 +412,9 @@ input::-webkit-search-cancel-button { display: none; }
    вычета блок оказывался смещён под неё. Прежняя константа 160 вычитала шапку и
    подвал; шапки на главной больше нет, а подвал ушёл под сгиб. */
 .home-search-heading { text-align: center; }
-.home-wordmark { text-shadow: var(--text-halo); font-size: clamp(25px, 6.2vw, 37px); font-weight: 750; letter-spacing: -0.045em; line-height: 1.1; display: flex; align-items: center; justify-content: center; gap: 0.26em; }
+.home-wordmark { text-shadow: var(--text-halo); font-size: clamp(25px, 6.2vw, 37px); font-weight: 750; /* -0.02em, а не -0.045: прежнее сжатие бралось под системный шрифт, а у Inter
+     межбуквенное расстояние и так плотнее. Вместе выходило слипшееся слово. */
+  letter-spacing: -0.02em; line-height: 1.1; display: flex; align-items: center; justify-content: center; gap: 0.26em; }
 /* Самолётик перед названием — тот же знак, что в шапке. Размер и отступ в em,
    поэтому он следует за названием при любой ширине экрана, а не отстаёт от
    него на узком. Чуть мельче самого текста: на равной высоте глиф выглядит

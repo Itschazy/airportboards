@@ -1,6 +1,5 @@
 'use client';
 
-import Link from 'next/link';
 import { useCallback, useEffect, useState } from 'react';
 import { usePathname } from 'next/navigation';
 import { isFavorite, toggleFavorite, subscribeFavorites } from '@/lib/favorites';
@@ -93,8 +92,13 @@ export function HeaderActions({ locale, slot }: { locale: Locale; slot: 'share' 
     setTimeout(() => setCopied(false), 2000);
   }, [tNav]);
 
+  // Обе кнопки относятся к ОТКРЫТОМУ аэропорту, поэтому вне его страницы их нет.
+  // Пустышка, а не null: сетка шапки рассчитана на три ячейки, и без боковых
+  // название перестало бы стоять по центру.
+  if (!iata) return <span />;
+
   if (slot === 'fav') {
-    const label = iata ? (on ? t('fav_remove') : t('fav_add')) : tNav('favorites');
+    const label = on ? t('fav_remove') : t('fav_add');
     const heart = (
       <svg width="20" height="20" viewBox="0 0 24 24" fill={on ? 'currentColor' : 'none'} stroke="currentColor"
            strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
@@ -103,15 +107,11 @@ export function HeaderActions({ locale, slot }: { locale: Locale; slot: 'share' 
     );
     // fav-heart и data-iata — те же имена, по которым скрипт в <head> заливает
     // сердце ещё до первой отрисовки (см. layout.tsx).
-    return iata ? (
+    return (
       <button type="button" onClick={toggleFav} aria-pressed={on} aria-label={label} title={label}
               data-iata={iata} className={`press hdr-act fav-heart${on ? ' fav-heart--on' : ''}`}>
         {heart}
       </button>
-    ) : (
-      <Link href={`/${locale}/favorites`} className="press hdr-act" aria-label={label} title={label}>
-        {heart}
-      </Link>
     );
   }
 
