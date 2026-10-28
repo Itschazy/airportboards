@@ -93,6 +93,14 @@ export default async function LocaleLayout({
         {/* The ad server's preconnect is tied to the ad tag, not hardcoded: with AdSense off
             it opened a TLS connection to an origin nothing would ever request. */}
         {adsenseClient && <link rel="preconnect" href="https://pagead2.googlesyndication.com" />}
+        {/* Шрифт интерфейса — свой, и его стоит начать качать до того, как браузер
+            доберётся до стилей. Латиница нужна на любой странице: коды ИАТА, номера
+            рейсов и названия авиакомпаний набраны ею везде. Кириллица — только там,
+            где она на странице есть; грузить её, скажем, японцу значит отнять канал
+            у того, что он открыл. Остальные куски (latin-ext, cyrillic-ext) браузер
+            возьмёт сам, если встретит их буквы. */}
+        <link rel="preload" as="font" type="font/woff2" href="/fonts/inter-latin.woff2" crossOrigin="anonymous" />
+        {locale === 'ru' && <link rel="preload" as="font" type="font/woff2" href="/fonts/inter-cyrillic.woff2" crossOrigin="anonymous" />}
         {locale === 'ru' && <link rel="preconnect" href="https://mc.yandex.ru" />}
         {/* Consent defaults first — every Google tag below reads them as it parses. */}
         <Analytics />
