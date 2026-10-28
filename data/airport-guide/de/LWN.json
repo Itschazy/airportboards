@@ -1,0 +1,11 @@
+{
+ "iata": "LWN",
+ "about": "Der Flughafen Schirak liegt 5 km von Gjumri und 120 km von Jerewan entfernt. Die neue Ankunftshalle wurde 2021 eröffnet.",
+ "blocks": {
+  "transport": {
+   "title": "Anreise",
+   "hint": "Anfahrt und SIXT-Abholung",
+   "text": "Mit dem Auto ab Gjumri: Bei Kilometer 3,5 der Yerevanyan-Straße zum Flughafen Schirak abbiegen und weitere 2 km fahren. SIXT bietet einen Meet & Greet-Service an: Am Flughafen gibt es kein Mietwagenbüro; ein Mitarbeiter empfängt Sie in der Ankunftshalle mit einem SIXT-Schild. Die SIXT-Parkplätze befinden sich vor dem Hauptgebäude des Flughafens."
+  }
+ }
+}

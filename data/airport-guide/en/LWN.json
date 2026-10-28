@@ -1,0 +1,11 @@
+{
+ "iata": "LWN",
+ "about": "Shirak Airport is 5 km from Gyumri and 120 km from Yerevan. The new arrivals hall opened in 2021.",
+ "blocks": {
+  "transport": {
+   "title": "Getting there",
+   "hint": "Driving directions and SIXT pickup",
+   "text": "By car from Gyumri: turn towards Shirak Airport at the 3.5 km mark on Yerevanyan highway, then continue for another 2 km. SIXT provides a Meet & Greet service: there is no rental office at the airport, and a staff member meets you in the arrivals hall with a SIXT sign. SIXT parking is in front of the main airport building."
+  }
+ }
+}

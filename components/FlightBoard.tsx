@@ -401,6 +401,8 @@ function BottomSheet({ flight: selectedFlight, mode, onClose, tz, locale, clockM
   useEffect(() => () => { if (raf.current) cancelAnimationFrame(raf.current); }, []);
 
   const onTouchStart = (e: React.TouchEvent) => {
+    // Касание кнопки закрытия не начинает перетаскивание панели.
+    if ((e.target as HTMLElement).closest('button')) return;
     if ((sheetRef.current?.scrollTop ?? 0) <= 0) {
       dragStart.current = e.touches[0].clientY;
       dragY.current = 0;
@@ -555,28 +557,15 @@ function BottomSheet({ flight: selectedFlight, mode, onClose, tz, locale, clockM
         {/* Header — status pill on its own line above the (large) flight number,
             so long localized labels (ПОСЛЕДНИЙ ВЫЗОВ…) never collide with it */}
         <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start', gap: 10 }}>
-          {/* Крестик стоит в одной строке со статусом, а не в отдельной
-              полосе сверху: та держала пустое стекло высотой 60px над
-              содержимым. Полоса осталась только как область перетаскивания
-              пальцем — жесты висят на ней, поэтому перенос кнопки их не
-              затрагивает. */}
-          <div style={{ display: 'flex', alignItems: 'center', gap: 10, width: '100%' }}>
+          {/* Место крестика сохранено справа от статуса. Сама кнопка живёт в sticky-панели:
+              внутри прокручиваемого body она уходила за экран и мешала закрыть карточку.
+              Резерв справа сохраняет прежнее расположение и не даёт статусу перекрыть кнопку. */}
+          <div style={{ display: 'flex', alignItems: 'center', gap: 10, width: '100%', minHeight: 40, paddingInlineEnd: 50, boxSizing: 'border-box' }}>
             <div style={{ display: 'inline-flex', alignItems: 'center', gap: 6, padding: '7px 13px', borderRadius: 999, background: `color-mix(in srgb, ${color} 12.156862745098039%, transparent)`, border: `1px solid color-mix(in srgb, ${color} 34.90196078431372%, transparent)`, minWidth: 0 }}>
               <div style={{ width: 7, height: 7, borderRadius: '50%', background: color, flexShrink: 0 }} />
               <span style={{ fontSize: 12, fontWeight: 700, color, letterSpacing: '0.08em', textTransform: 'uppercase', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>{statusLabel}</span>
             </div>
-            <button type="button" onClick={onClose} aria-label={tNav('close')}
-              style={{ display: 'flex', alignItems: 'center', justifyContent: 'center',
-                width: 40, height: 40, flexShrink: 0, marginInlineStart: 'auto', padding: 0, color: C.text,
-                borderRadius: 999, background: 'var(--glass-soft)', boxShadow: 'var(--glass-rim)',
-                border: 'none', cursor: 'pointer' }}>
-              {/* Вектор вместо знака «×»: у шрифтового крестика нет ни толщины,
-                  ни выравнивания — он висел выше базовой линии. */}
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                   strokeWidth="1.7" strokeLinecap="round" aria-hidden="true">
-                <path d="M6.5 6.5 17.5 17.5M17.5 6.5 6.5 17.5" />
-              </svg>
-            </button>
+
           </div>
           <div style={{ minWidth: 0, width: '100%' }}>
             <div style={{ fontSize: 'clamp(32px, 9vw, 42px)', fontWeight: 800, letterSpacing: '-0.04em', color: C.text, lineHeight: 0.95, wordBreak: 'break-word' }}>{flight.flight}</div>
@@ -779,6 +768,21 @@ function BottomSheet({ flight: selectedFlight, mode, onClose, tz, locale, clockM
           style={{ position: 'sticky', top: 0, zIndex: 2,
             height: 14, touchAction: 'none' }}
         >
+          {/* Кнопка остаётся в прежней позиции при открытии, но больше не уезжает вместе
+              с содержимым. Sticky-панель не находится внутри короткого заголовка: поэтому
+              закрепление действует на всю высоту прокрутки, включая длинные переводы. */}
+            <button type="button" onClick={onClose} aria-label={tNav('close')}
+              style={{ display: 'flex', alignItems: 'center', justifyContent: 'center',
+                position: 'absolute', top: 16, insetInlineEnd: 20, width: 40, height: 40, padding: 0, color: C.text, touchAction: 'manipulation',
+                borderRadius: 999, background: 'var(--glass-soft)', boxShadow: 'var(--glass-rim)',
+                border: 'none', cursor: 'pointer' }}>
+              {/* Вектор вместо знака «×»: у шрифтового крестика нет ни толщины,
+                  ни выравнивания — он висел выше базовой линии. */}
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                   strokeWidth="1.7" strokeLinecap="round" aria-hidden="true">
+                <path d="M6.5 6.5 17.5 17.5M17.5 6.5 6.5 17.5" />
+              </svg>
+            </button>
         </div>
         {body}
       </div>

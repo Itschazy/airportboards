@@ -1,6 +1,6 @@
 {
  "iata": "BJV",
- "checked": "2026-10-25",
+ "checked": "2026-10-28",
  "blocks": [
   {
    "id": "transport",
@@ -9,6 +9,40 @@
    "text": "Шаттл Havaş встречает все прибывающие внутренние рейсы и идёт из аэропорта до центрального автовокзала Бодрума через Гювердженлик и автостанцию Торба. Расписание по дате — на сайте Havaş (направление Bodrum Airport — Bodrum Center). С 7 августа 2026 года шаттл между аэропортом и Дидимом не ходит.",
    "source": "havas.net",
    "url": "https://www.havas.net/en/bus-services"
+  },
+  {
+   "id": "lounges",
+   "title": "Бизнес-залы",
+   "hint": "Primeclass: март–ноябрь",
+   "text": "Международный Primeclass Lounge находится после паспортного контроля, на антресоли; эскалатор — за Costa Coffee. С марта по ноябрь зал работает круглосуточно, зимой закрыт. Вход стоит 70 €, пребывание ограничено 3 часами. Дети до 2 лет проходят бесплатно.",
+   "source": "milas-bodrumairport.com",
+   "url": "https://milas-bodrumairport.com/en/facility-and-services/primeclass-lounge-international-terminal"
+  },
+  {
+   "id": "kids",
+   "title": "С ребёнком",
+   "hint": "Комнаты для кормления и пеленания",
+   "text": "В терминале внутренних рейсов комнаты для кормления и пеленания есть до досмотра рядом с регистрацией и в зоне прилёта рядом с местом ожидания встречающих. Ещё одна находится после досмотра у выходов на посадку. В международном терминале комнаты есть после досмотра в восточной и западной частях уровня вылета и антресоли.",
+   "source": "milas-bodrumairport.com",
+   "url": "https://milas-bodrumairport.com/en/facility-and-services/mother-and-child-rooms"
+  },
+  {
+   "id": "parking",
+   "title": "Парковка",
+   "hint": "Первые 5 минут бесплатно",
+   "text": "Первые 5 минут парковки бесплатны. На парковке международного терминала для легкового автомобиля 0–1 час стоит 140 ₺, 12–24 часа — 480 ₺. Тарифы включают НДС. Парковка работает без билетов; на выезде принимают только кредитные карты.",
+   "source": "milas-bodrumairport.com",
+   "url": "https://milas-bodrumairport.com/en/transports/car-parking"
+  },
+  {
+   "id": "wifi",
+   "title": "Wi‑Fi",
+   "hint": "TAV-FREE-WIFI в обоих терминалах",
+   "text": "Бесплатная сеть TAV-FREE-WIFI доступна в терминалах внутренних и международных рейсов. Для подключения введите код страны и номер телефона, затем код из SMS. Без роуминга бесплатный пароль можно получить по удостоверению личности в киосках в терминалах.",
+   "source": "milas-bodrumairport.com",
+   "url": "https://milas-bodrumairport.com/en/facility-and-services/wifi"
   }
- ]
+ ],
+ "about": "Аэропорт Миляс-Бодрум обслуживает внутренние и международные рейсы. В обоих терминалах доступен бесплатный Wi‑Fi TAV-FREE-WIFI.",
+ "about_url": "https://milas-bodrumairport.com/en/facility-and-services/wifi"
 }

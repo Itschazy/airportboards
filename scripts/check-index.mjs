@@ -25,6 +25,9 @@ function starGroupBlocksAll(body) {
 }
 
 const BASE = (process.env.BASE || 'https://airportsboard.live').replace(/\/$/, '');
+// Адрес тестового сервера и публичный canonical — разные вещи. На fixture localhost
+// canonical намеренно ведёт на production, иначе локальная проверка даёт 4 ложных провала.
+const CANONICAL_BASE = (process.env.CANONICAL_BASE || 'https://airportsboard.live').replace(/\/$/, '');
 const HOST = new URL(BASE).hostname;
 const RESOLVE_IP = process.env.RESOLVE_IP || ''; // e.g. 95.81.103.82 when DNS doesn't resolve
 
@@ -72,15 +75,15 @@ const isIndexable = (r) => r.robots ? r.robots.includes('index') && !r.robots.in
 const isNoindex   = (r) => (r.robots && r.robots.includes('noindex')) || (r.xRobots && /noindex/i.test(r.xRobots));
 
 const CASES = [
-  { path: '/en/airport/JFK', label: 'valid airport JFK', check: r => [r.status === 200 && isIndexable(r) && r.canonical === `${BASE}/en/airport/JFK`, `status=${r.status} robots=${r.robots} canon=${r.canonical}`] },
-  { path: '/en/airport/JFK/arrivals', label: 'arrivals subpage', check: r => [r.status === 200 && isIndexable(r) && r.canonical === `${BASE}/en/airport/JFK/arrivals`, `status=${r.status} robots=${r.robots} canon=${r.canonical}`] },
+  { path: '/en/airport/JFK', label: 'valid airport JFK', check: r => [r.status === 200 && isIndexable(r) && r.canonical === `${CANONICAL_BASE}/en/airport/JFK`, `status=${r.status} robots=${r.robots} canon=${r.canonical}`] },
+  { path: '/en/airport/JFK/arrivals', label: 'arrivals subpage', check: r => [r.status === 200 && isIndexable(r) && r.canonical === `${CANONICAL_BASE}/en/airport/JFK/arrivals`, `status=${r.status} robots=${r.robots} canon=${r.canonical}`] },
   // Canonical = the parent: it opens on the same departures board (departures/page.tsx).
-  { path: '/en/airport/JFK/departures', label: 'departures subpage (canonical -> parent)', check: r => [r.status === 200 && isIndexable(r) && r.canonical === `${BASE}/en/airport/JFK`, `status=${r.status} robots=${r.robots} canon=${r.canonical}`] },
+  { path: '/en/airport/JFK/departures', label: 'departures subpage (canonical -> parent)', check: r => [r.status === 200 && isIndexable(r) && r.canonical === `${CANONICAL_BASE}/en/airport/JFK`, `status=${r.status} robots=${r.robots} canon=${r.canonical}`] },
   { path: '/en/airport/ZZZZ', label: 'nonexistent airport ZZZZ', check: r => [r.status === 404, `status=${r.status} (want 404)`] },
   { path: '/en/airport/XYZ', label: 'nonexistent airport XYZ', check: r => [r.status === 404, `status=${r.status} (want 404)`] },
   { path: '/en/airport/jfk', label: 'lowercase iata jfk', check: r => {
       if (r.status === 301 || r.status === 308) return [/\/airport\/JFK$/.test(r.location || ''), `redirect ${r.status} -> ${r.location}`];
-      return [r.status === 200 && r.canonical === `${BASE}/en/airport/JFK`, `status=${r.status} canon=${r.canonical}`]; } },
+      return [r.status === 200 && r.canonical === `${CANONICAL_BASE}/en/airport/JFK`, `status=${r.status} canon=${r.canonical}`]; } },
   { path: '/en/route/AAA-BBB', label: 'route bad airports', check: r => [r.status === 404, `status=${r.status} (want 404)`] },
   { path: '/en/route/JFK-JFK', label: 'route same airport', check: r => [r.status === 404, `status=${r.status} (want 404)`] },
   { path: '/en/route/JFK-LAX', label: 'route valid (no-data soft-404 guard)', check: r => [r.status === 404 || isNoindex(r) || isIndexable(r), `status=${r.status} robots=${r.robots} (noindex when no flights)`] },

@@ -101,7 +101,9 @@ const RU_NUMWORDS = [
 function months(s) {
   const out = new Set();
   for (const [re, n] of RU_NUMWORDS) if (re.test(String(s ?? ''))) out.add(String(n));
-  RU_MONTHS.forEach((re, i) => { if (new RegExp(`\\d\\s+${re}`, 'i').test(String(s ?? ''))) out.add(String(i + 1)); });
+  // В CJK месяцы записываются цифрами и без дня: «март–ноябрь» → «3月–11月».
+  // Раньше разрешались только даты с числом перед месяцем: корректный сезон давал ложный провал.
+  RU_MONTHS.forEach((re, i) => { if (new RegExp(`(^|[^а-яё])${re}(?:ь|я|е|ю|а|у|ом|ём)?(?=$|[^а-яё])`, 'i').test(String(s ?? ''))) out.add(String(i + 1)); });
   return out;
 }
 function nums(s) {
