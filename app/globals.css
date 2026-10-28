@@ -602,16 +602,16 @@ input::-webkit-search-cancel-button { display: none; }
      на преломление кромки. Отсюда и своя заливка, и своё размытие (8 против 18:
      сильное размытие съедает ту самую картинку, которую кромка преломляет). */
   --lens-fill: rgba(16,18,24,0.07);
-  --lens-blur: saturate(1.5) blur(4px);
+  --lens-blur: saturate(1.25) blur(2.5px);
   /* Свой отсвет, слабее панельного: на панели он лежит поверх плотной заливки и
      почти не виден, а на прозрачной линзе та же сила читалась белым налётом. */
-  --lens-sheen: linear-gradient(152deg, rgba(255,255,255,0.10) 0%, rgba(255,255,255,0.02) 34%, rgba(255,255,255,0) 56%);
+  --lens-sheen: linear-gradient(152deg, rgba(255,255,255,0.06) 0%, rgba(255,255,255,0.015) 34%, rgba(255,255,255,0) 56%);
   /* Нижняя панель — то же прозрачное стекло, но плотнее линзы поиска: под ней
      проезжает СОДЕРЖИМОЕ страницы, а не обои, и при 7% подписи «Поиск» и
      «Настройки» читались бы поверх строк рейсов. Работу держит размытие в 14px:
      оно превращает текст под панелью в ровный фон, а не в разборчивые буквы. */
-  --bar-fill: rgba(16,18,24,0.34);
-  --bar-blur: saturate(1.6) blur(14px);
+  --bar-fill: rgba(16,18,24,0.26);
+  --bar-blur: saturate(1.35) blur(9px);
   --lens-rim:
     inset 0 1px 0 rgba(255,255,255,0.34),
     inset 0 -1px 0 rgba(255,255,255,0.16),
@@ -664,10 +664,10 @@ input::-webkit-search-cancel-button { display: none; }
     0 0 28px rgba(255,255,255,0.92),
     0 0 46px rgba(255,255,255,0.75);
     --lens-fill: rgba(255,255,255,0.12);
-    --lens-blur: saturate(1.5) blur(4px);
-    --lens-sheen: linear-gradient(152deg, rgba(255,255,255,0.40) 0%, rgba(255,255,255,0.10) 34%, rgba(255,255,255,0) 56%);
-    --bar-fill: rgba(255,255,255,0.46);
-    --bar-blur: saturate(1.6) blur(14px);
+    --lens-blur: saturate(1.25) blur(2.5px);
+    --lens-sheen: linear-gradient(152deg, rgba(255,255,255,0.24) 0%, rgba(255,255,255,0.06) 34%, rgba(255,255,255,0) 56%);
+    --bar-fill: rgba(255,255,255,0.38);
+    --bar-blur: saturate(1.35) blur(9px);
     --lens-rim:
       inset 0 1px 0 rgba(255,255,255,0.95),
       inset 0 -1px 0 rgba(255,255,255,0.70),
@@ -710,10 +710,10 @@ input::-webkit-search-cancel-button { display: none; }
     0 0 28px rgba(255,255,255,0.92),
     0 0 46px rgba(255,255,255,0.75);
   --lens-fill: rgba(255,255,255,0.12);
-  --lens-blur: saturate(1.5) blur(4px);
-  --lens-sheen: linear-gradient(152deg, rgba(255,255,255,0.40) 0%, rgba(255,255,255,0.10) 34%, rgba(255,255,255,0) 56%);
-  --bar-fill: rgba(255,255,255,0.46);
-  --bar-blur: saturate(1.6) blur(14px);
+  --lens-blur: saturate(1.25) blur(2.5px);
+  --lens-sheen: linear-gradient(152deg, rgba(255,255,255,0.24) 0%, rgba(255,255,255,0.06) 34%, rgba(255,255,255,0) 56%);
+  --bar-fill: rgba(255,255,255,0.38);
+  --bar-blur: saturate(1.35) blur(9px);
   --lens-rim:
     inset 0 1px 0 rgba(255,255,255,0.95),
     inset 0 -1px 0 rgba(255,255,255,0.70),
