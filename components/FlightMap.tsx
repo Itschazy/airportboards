@@ -18,9 +18,9 @@ export function FlightMap({ html, locale, messages }: { html: string; locale: st
       export: GOALS.flightMapExport, backup: GOALS.flightMapBackup,
       restore: GOALS.flightMapRestore,
     };
-    // Каждый runtime связан со своей HTML-оболочкой. v1/v2/v3 остаются доступны
-    // старому ISR и открытым вкладкам; v4 получает только текущий словарь.
-    const moduleURL = '/flight-map/v4/app.js';
+    // Каждый runtime связан со своей HTML-оболочкой. v1/v2/v3/v4 остаются доступны
+    // старому ISR и открытым вкладкам; v5 сокращает ожидание сети и сохраняет масштаб при закрытии формы.
+    const moduleURL = '/flight-map/v5/runtime.js';
     import(/* webpackIgnore: true */ moduleURL)
       .then(m => {
         if (controller.signal.aborted) return;

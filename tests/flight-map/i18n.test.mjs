@@ -2,9 +2,9 @@ import test from 'node:test';import assert from 'node:assert/strict';import fs f
 import {createI18n} from '../../public/flight-map/v4/i18n.js';
 import {createStorage} from '../../public/flight-map/v4/storage.js';
 import {createSharing} from '../../public/flight-map/v4/sharing.js';
-import {createAirportSearch,normalize} from '../../public/flight-map/v4/entry.js';
+import {createAirportSearch,normalize} from '../../public/flight-map/v5/entry.js';
 import {createMap} from '../../public/flight-map/v2/map.js';
-import {buildCard} from '../../public/flight-map/v4/share.js';
+import {buildCard} from '../../public/flight-map/v5/exporter.js';
 const read=p=>JSON.parse(fs.readFileSync(new URL('../../'+p,import.meta.url))),locales=['ru','en','de','fr','es','it','tr','zh','ja','ko','ar','hi'];
 const ru=read('lib/flight-map/locales/ru.json'),land=read('public/flight-map/v1/land-v2.json');
 const params=s=>[...s.matchAll(/\{(\w+)\}/g)].map(m=>m[1]).sort();

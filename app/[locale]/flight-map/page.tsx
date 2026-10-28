@@ -53,6 +53,15 @@ export default async function FlightMapPage({ params }: Props) {
   const html = shell.replace(/\{\{(\w+)\}\}/g, (_, key) => escapeHTML(key === 'locale' ? locale : messages[key]))
     .replace(/<!-- flight-map-seo:start -->[\s\S]*?<!-- flight-map-seo:end -->/, renderInfo(copy));
   return <>
+    {/* Только эта страница заранее загружает свой runtime и каталог текущего
+        языка. Раньше они ждали hydration → import → дочерние modules → fetch,
+        добавляя несколько RTT на Slow 4G. runtime — единый ESM из исходников v5;
+        экспорт остаётся отдельным ленивым bundle. crossorigin совпадает с fetch:
+        браузер повторно использует ответ preload, а не качает каталог дважды.
+        Низкий приоритет данных не вытесняет JS гидратации из очереди сети. */}
+    <link rel="modulepreload" href="/flight-map/v5/runtime.js" />
+    <link rel="preload" as="fetch" fetchPriority="low" href={`/flight-map/v4/airports-${locale}.json`} crossOrigin="anonymous" />
+    <link rel="preload" as="fetch" fetchPriority="low" href="/flight-map/v1/land-v2.json" crossOrigin="anonymous" />
     <FlightMap key={locale} html={html} locale={locale} messages={messages} />
     <noscript><p style={{ textAlign: 'center', padding: 16 }}>{String(messages.noscript)}</p></noscript>
     <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(data).replace(/</g, '\\u003c') }} />
