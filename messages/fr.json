@@ -38,7 +38,8 @@
     "aria_breadcrumb": "Fil d’Ariane",
     "aria_footer": "Pied de page",
     "theme_light": "Clair",
-    "theme_dark": "Sombre"
+    "theme_dark": "Sombre",
+    "my_flights": "Vols"
   },
   "board": {
     "flight": "Vol",

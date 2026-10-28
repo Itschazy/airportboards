@@ -38,7 +38,8 @@
     "aria_breadcrumb": "Brotkrümelnavigation",
     "aria_footer": "Fußzeile",
     "theme_light": "Hell",
-    "theme_dark": "Dunkel"
+    "theme_dark": "Dunkel",
+    "my_flights": "Flüge"
   },
   "board": {
     "flight": "Flug",

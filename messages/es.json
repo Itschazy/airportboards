@@ -38,7 +38,8 @@
     "aria_breadcrumb": "Migas de pan",
     "aria_footer": "Pie de página",
     "theme_light": "Claro",
-    "theme_dark": "Oscuro"
+    "theme_dark": "Oscuro",
+    "my_flights": "Vuelos"
   },
   "board": {
     "flight": "Vuelo",

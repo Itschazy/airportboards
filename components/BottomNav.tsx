@@ -6,7 +6,7 @@ import { useTranslations } from 'next-intl';
 import type { Locale } from '@/lib/i18n';
 
 /**
- * Нижняя панель навигации: поиск, избранное, настройки.
+ * Нижняя панель навигации: поиск, избранное, перелёты (пока RU), настройки.
  *
  * ЕСТЬ В СЕРВЕРНОМ HTML с первого кадра. Прежде она ждала чтения localStorage и до
  * него не рисовалась вовсе: избранного на сервере не знают, а значок «Избранное»
@@ -15,7 +15,7 @@ import type { Locale } from '@/lib/i18n';
  * сразу, пустым сердцем, и после гидратации оно наливается у того, у кого избранное
  * не пусто. Ни один размер при этом не меняется, поэтому вёрстка не дёргается.
  *
- * ЧЕГО ЭТО СТОИТ ДЛЯ ПОИСКА. Три ссылки в HTML каждой страницы, две из которых ведут
+ * ЧЕГО ЭТО СТОИТ ДЛЯ ПОИСКА. Три исходные ссылки в HTML каждой страницы, две из которых ведут
  * на /favorites и /settings — адреса с noindex. Обходчик сходит туда по одному разу
  * на локаль (24 адреса на весь сайт), увидит noindex и перестанет; доля веса, уходящая
  * в эти две ссылки из примерно ста тридцати на странице, — около полутора процентов.
@@ -36,6 +36,7 @@ export function BottomNav({ locale }: { locale: Locale }) {
 
   const isHome = pathname === `/${locale}` || pathname === `/${locale}/`;
   const isFav = pathname === `/${locale}/favorites`;
+  const isMap = pathname === `/${locale}/flight-map`;
   const isSet = pathname === `/${locale}/settings`;
 
   return (
@@ -61,6 +62,18 @@ export function BottomNav({ locale }: { locale: Locale }) {
           </svg>
           <span className="bn-label">{t('favorites')}</span>
         </Link>
+
+        {/* Личный журнал пока переведён только на русский. Не ведём остальные
+            локали на заглушки; подпись заранее есть во всех каталогах. Иконки,
+            цвета и поведение прежних трёх разделов сохранены. */}
+        {locale === 'ru' && <Link href={`/${locale}/flight-map`} prefetch={false}
+          className={`press bn-item${isMap ? ' bn-item--on' : ''}`} aria-current={isMap ? 'page' : undefined}>
+          <svg width="26" height="26" viewBox="0 0 24 24" fill={isMap ? 'currentColor' : 'none'}
+            stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+            <path d="m22 16-8-5V4.5a2 2 0 0 0-4 0V11l-8 5v2l8-2.5V20l-2 1v1l4-1 4 1v-1l-2-1v-4.5l8 2.5Z" />
+          </svg>
+          <span className="bn-label">{t('my_flights')}</span>
+        </Link>}
 
         <Link href={`/${locale}/settings`} className={`press bn-item${isSet ? ' bn-item--on' : ''}`} aria-current={isSet ? 'page' : undefined}>
           {/* Шестерня: шесть зубцов, а не восемь. Восемь на 26px сливались в круг,

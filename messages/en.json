@@ -38,7 +38,8 @@
     "aria_breadcrumb": "Breadcrumb",
     "aria_footer": "Footer",
     "theme_light": "Light",
-    "theme_dark": "Dark"
+    "theme_dark": "Dark",
+    "my_flights": "Flights"
   },
   "board": {
     "flight": "Flight",

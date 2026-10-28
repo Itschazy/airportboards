@@ -53,6 +53,12 @@ declare global {
  * отчёта.
  */
 export const GOALS = {
+  /** Личный журнал: только тип действия/экспорта, без маршрутов и номеров. */
+  flightMapOpen: 'flight_map_open',
+  flightMapSaved: 'flight_map_saved',
+  flightMapExport: 'flight_map_export',
+  flightMapBackup: 'flight_map_backup',
+  flightMapRestore: 'flight_map_restore',
   /** Открыта карточка рейса — главное действие страницы. */
   flightCard: 'flight_card',
   /** Переключена вкладка вылет/прилёт. Параметр: mode. */

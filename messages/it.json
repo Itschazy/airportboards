@@ -38,7 +38,8 @@
     "aria_breadcrumb": "Percorso di navigazione",
     "aria_footer": "Piè di pagina",
     "theme_light": "Chiaro",
-    "theme_dark": "Scuro"
+    "theme_dark": "Scuro",
+    "my_flights": "Voli"
   },
   "board": {
     "flight": "Volo",

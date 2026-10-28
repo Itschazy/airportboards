@@ -38,7 +38,8 @@
     "aria_breadcrumb": "面包屑导航",
     "aria_footer": "页脚",
     "theme_light": "浅色",
-    "theme_dark": "深色"
+    "theme_dark": "深色",
+    "my_flights": "飞行记录"
   },
   "board": {
     "flight": "航班",

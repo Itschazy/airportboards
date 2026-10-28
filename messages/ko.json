@@ -38,7 +38,8 @@
     "aria_breadcrumb": "이동 경로",
     "aria_footer": "바닥글",
     "theme_light": "라이트",
-    "theme_dark": "다크"
+    "theme_dark": "다크",
+    "my_flights": "항공편"
   },
   "board": {
     "flight": "항공편",

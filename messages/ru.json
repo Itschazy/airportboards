@@ -38,7 +38,8 @@
     "aria_breadcrumb": "Навигационная цепочка",
     "aria_footer": "Нижний колонтитул",
     "theme_light": "Светлая",
-    "theme_dark": "Тёмная"
+    "theme_dark": "Тёмная",
+    "my_flights": "Перелёты"
   },
   "board": {
     "flight": "Рейс",
