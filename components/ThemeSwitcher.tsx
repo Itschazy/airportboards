@@ -15,7 +15,9 @@ export function ThemeSwitcher() {
     root.dataset.theme = next;
     try { localStorage.setItem('ab_theme', next); } catch {}
   }
-  return <button type="button" onClick={toggle} className="hdr-pill hdr-pill-btn glass" style={{width:52,justifyContent:'center',color:'var(--ab-ffffff)'}}>
+  return <button type="button" onClick={toggle} /* Квадратная кнопка: ширина равна высоте, а высота в .hdr-pill задана через
+       clamp. Жёсткие 52px на 320px не оставляли места соседям. */
+    className="hdr-pill hdr-pill-btn glass" style={{width:'clamp(44px, 13vw, 52px)',padding:0,justifyContent:'center',color:'var(--ab-ffffff)'}}>
     {/* Тонкая векторная графика вместо символов ☀ и ☾: текстовые знаки
         рисуются шрифтом, поэтому их толщину и размер не задать, а вид
         отличается от системы к системе. */}

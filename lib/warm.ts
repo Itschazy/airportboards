@@ -202,7 +202,9 @@ export type Due = { iata: string; tier: WarmTier; overdue: number; pinned: boole
  * airports lifted from 24h to 6h ≈ +72 requests/day ≈ 2.2k/month, ~3% of the warm budget.
  * Revisit against fresh Webmaster data, not by feel.
  */
-const DEMAND_PINNED = new Set([
+/** Экспортируется для lib/country-demand.ts: это единственный в репозитории список
+ *  аэропортов с ИЗМЕРЕННЫМ спросом шире шестнадцати строк главной. */
+export const DEMAND_PINNED = new Set([
   // Были с самого начала. HOR, LWN, PES и CAN держатся НАМЕРЕННО, хотя в русском спросе их
   // нет: Яндекс.Метрика стоит только на русской локали (components/YandexMetrica.tsx:21), а
   // Search Console по этому сайту не отдаёт ничего. Их аудитория просто не видна ни одному

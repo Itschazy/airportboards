@@ -88,8 +88,12 @@ export async function SiteFooter({ locale }: { locale: Locale }) {
   const linkStyle = { color: 'var(--ab-8a8a8a)', textDecoration: 'none', fontSize: 13, display: 'inline-block', minHeight: 24 } as const;
   const headStyle = { color: 'var(--ab-6a6a6a)', fontSize: 11, fontWeight: 700, letterSpacing: '0.06em', textTransform: 'uppercase', margin: '0 0 10px' } as const;
 
+  // Подпись раскрывашки — свой ключ nav.more, а не legal.about. Тот же legal.about
+  // подписывает ССЫЛКУ на страницу /about в списке выше, и общий ключ переименовал бы
+  // заодно и её. Смысл разный: раскрывашка прячет весь подвал целиком — языки,
+  // правовые страницы, каталоги, — а не рассказ о проекте.
   return (
-    <SiteFooterFrame locale={locale} label={tLegal('about')}>
+    <SiteFooterFrame label={tNav('more')}>
       <div className="foot-panel glass">
       <nav style={{ maxWidth: 1000, margin: '0 auto', display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: 28 }} aria-label={tNav('aria_footer')}>
         <div>

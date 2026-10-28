@@ -24,14 +24,17 @@ export function PopularList({ airports, locale, depLabel, arrLabel }: {
   }, []);
 
   return (
-    // Строки плотнее прежнего: список длинный, и каждый лишний пиксель
-    // высоты стоит одного видимого аэропорта на экран.
-    <div style={{ display: 'flex', flexDirection: 'column', gap: 6 }}>
+    // Две колонки вместо одной: шестнадцать строк в столбик занимали экран
+    // целиком, и ряд стран над ними вместе со списком не помещался. Строки
+    // плотнее прежнего по той же причине — каждый лишний пиксель высоты стоит
+    // одного видимого аэропорта. На узком экране колонка снова одна: при двух
+    // на 375px на строку остаётся около 170px, и город с кодом уже не умещаются.
+    <div className="popular-grid">
       {airports.map(a => {
         const c = counts[a.iata];
         return (
           <Link key={a.iata} href={`/${locale}/airport/${a.iata}`} style={{
-            display: 'flex', alignItems: 'center', gap: 10,
+            display: 'flex', alignItems: 'center', gap: 10, minWidth: 0,
             textDecoration: 'none', color: 'inherit',
             background: 'var(--glass-soft)', boxShadow: 'var(--glass-rim)', borderRadius: 16,
             padding: '10px 14px',

@@ -5,6 +5,7 @@ import Link from 'next/link';
 import {
   POPULAR_AIRPORTS, POPULAR_AIRPORTS_RU, POPULAR_CITIES, getAirport, getCountries, slugify,
 } from '@/lib/airports';
+import { getCountriesByDemand } from '@/lib/country-demand';
 import { numLocale, locales } from '@/lib/i18n';
 import { getCityName, getCountryName } from '@/lib/places';
 import { getAirportName } from '@/lib/airport-names';
@@ -76,7 +77,13 @@ export default async function HomePage({ params }: Props) {
     } : null;
   }).filter(Boolean) as { iata: string; city: string; name: string }[];
 
-  const countries = getCountries().slice(0, 16);
+  // Пятнадцать стран, а остальные — за кнопкой «Другая страна» на /airports, где
+  // лежит полный каталог. Все 237 в таблице давали на главной 368 ссылок вместо
+  // 147: до каждой страны действительно один клик, но вес главной размазывался
+  // по хвосту, который почти никто не открывает.
+  // Порядок — по измеренному спросу (см. getCountriesByDemand), а не по числу
+  // аэропортов: по нему первой шла Канада с 379 полосами и почти нулём визитов.
+  const countries = getCountriesByDemand(locale).slice(0, 15);
   const totalCountries = getCountries().length;
 
   const depShort = t('departures_short');
@@ -120,7 +127,11 @@ export default async function HomePage({ params }: Props) {
           без доступной кнопки. Недавние аэропорты уже есть при фокусе поиска. */}
       <details className="airport-disclosure home-reference" data-home-intro>
         <summary>
-          <span className="disclosure-more">{t('read_more')}</span><span className="disclosure-less">{t('read_less')}</span>
+          {/* Свой ключ, а не read_more: тот же read_more подписывает раскрытие
+              текста «Об аэропорте» и значок «i» у заголовка ниже, где речь
+              действительно про «читать дальше». Здесь за подписью не текст, а
+              каталоги аэропортов, стран и городов — выбирают из них, а не читают. */}
+          <span className="disclosure-more">{t('browse_list')}</span><span className="disclosure-less">{t('read_less')}</span>
           <DisclosureArrow />
         </summary>
 
@@ -131,32 +142,23 @@ export default async function HomePage({ params }: Props) {
           13 пустых пикселей внутри самой подписи — её высота 44 держит цель
           нажатия, а текст в ней всего 17. Вместе это читалось как провал. */}
       <section style={{ marginTop: 6 }}>
-        {/* Описание спрятано под значком «i» у заголовка: это
-            справка о охвате, а не то, за чем человек пришёл. Остаются в
-            серверном HTML — <details> ничего не удаляет из разметки. */}
-        <details className="pop-info">
-          <summary>
-            <span className="pop-info-title">{t('sec_airports')}</span>
-            <span className="pop-info-badge" aria-hidden="true">i</span>
-            <span className="sr-only">{t('read_more')}</span>
-          </summary>
-          <p className="home-intro-card" style={{ fontSize: 16, color: 'var(--ab-8a8a8a)', lineHeight: 1.5, overflowWrap: 'break-word' }}>
-            {t('subline', worldCounts())}
-          </p>
-        </details>
-
         {/* TRUST METRICS — на виду, а не под значком: это не справка, а
-            характеристика охвата, ради которой блок и существует. */}
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, minmax(0, 1fr))', gap: 12, marginTop: 14, marginBottom: 18 }}>
+            характеристика охвата, ради которой блок и существует.
+            Плитки идут ПЕРВЫМИ, до заголовка: заголовок называет список
+            аэропортов, а не их, и стоя над плитками подписывал собой чужой
+            блок. Своего заголовка плиткам не нужно — числа говорят сами. */}
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, minmax(0, 1fr))', gap: 12, marginBottom: 18 }}>
           {[
             // The tile used to read "6,000+ airports", which is true about coverage and false about
             // boards — and next to a headline promising live boards it reads as the latter. It now
             // shows the same number the headline does, from the same measurement.
             { art: 'plane', value: worldCounts().served.toLocaleString(numLocale(locale)),
-              // Подпись согласуется с числом над ней. Была статичной строкой в родительном
-              // множественного, и на 2801 выходило «2 801 аэропортов» вместо «2 801 аэропорт»:
-              // русское числительное на 1 (кроме 11) требует единственного числа. Само число
-              // в подписи не печатается — оно стоит выше, — поэтому «#» в шаблоне нет.
+              // count передаётся по-прежнему, хотя часть языков его больше не
+              // склоняет: подпись укорочена до «с регулярными рейсами» — без
+              // существительного склонять нечего. Там, где подпись осталась с
+              // существительным (турецкий, японский, корейский, хинди, китайский),
+              // множественное число решает каталог, и аргумент ему нужен. Прежняя
+              // статичная строка давала «2 801 аэропортов» вместо «2 801 аэропорт».
               label: t('m_airports_served', { count: worldCounts().served }) },
             // Число через toLocaleString, а не через шаблонную строку: у арабского по CLDR
             // восточноарабские цифры, и соседняя плитка печатала «٢٬٨٠١», а эта — «237+»,
@@ -179,20 +181,29 @@ export default async function HomePage({ params }: Props) {
             </div>
           ))}
         </div>
-        <PopularList airports={popularList} locale={locale} depLabel={depShort} arrLabel={arrShort} />
       </section>
 
-      {/* SECTION 2 — BY COUNTRY */}
+      {/* SECTION 2 — BY COUNTRY.
+          Страны идут перед популярными аэропортами: каталог стран — это выбор
+          направления, с которого начинают, а список популярных отвечает уже на
+          «куда все летят». Ссылки те же и все остаются в серверном HTML —
+          меняется только порядок разделов. */}
       <section style={{ marginTop: 30 }}>
         <Title>{t('sec_countries')}</Title>
-        <div className="scroll-row">
+        {/* Таблица вместо ряда с прокруткой вправо. У ряда было два изъяна: он
+            показывал шестнадцать стран из двухсот тридцати семи, а остальные не
+            показывал никак, и за край экрана уезжало то, о существовании чего
+            посетитель не знал. Таблица держит все страны сразу, а порядок берёт
+            из замера спроса. Ширину колонок задаёт сетка, поэтому фиксированные
+            186px у карточки больше не нужны. */}
+        <div className="country-grid">
           {countries.map(c => (
             <Link key={c.slug} href={`/${locale}/airports/${c.slug}`} style={{
-              width: 186, height: 64, textDecoration: 'none', color: 'inherit',
-              background: 'var(--glass-soft)', boxShadow: 'var(--glass-rim)', borderRadius: 16, padding: '0 14px',
+              minWidth: 0, textDecoration: 'none', color: 'inherit',
+              background: 'var(--glass-soft)', boxShadow: 'var(--glass-rim)', borderRadius: 14, padding: '9px 12px',
               display: 'flex', flexDirection: 'column', justifyContent: 'center',
             }}>
-              <div style={{ fontSize: 14, color: 'var(--ab-e4e4e7)', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>
+              <div style={{ fontSize: 13.5, color: 'var(--ab-e4e4e7)', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>
                 {/* Localised: c.country is the English source name, and printing it raw put
                     "🇷🇺 Russia" on the Russian homepage directly above a correctly declined
                     "178 аэропортов", with "Россия" in the footer of the same page. The anchor
@@ -200,12 +211,40 @@ export default async function HomePage({ params }: Props) {
                     the biggest navigation block on the site links by a name the destination
                     never uses. data/country-names.json covers all 235 countries in 12 locales,
                     so this needs no new data. */}
-                <span className="locale-flag" style={{ marginInlineEnd: 7, fontSize: 15 }}>{flag(c.iso2)}</span>{getCountryName(c.country, locale)}
+                <span className="locale-flag" style={{ marginInlineEnd: 7, fontSize: 14 }}>{flag(c.iso2)}</span>{getCountryName(c.country, locale)}
               </div>
-              <div style={{ fontSize: 11.5, color: 'var(--ab-6a6a6a)', marginTop: 3 }}>{t('airports_count', { count: c.count })}</div>
+              <div style={{ fontSize: 11, color: 'var(--ab-6a6a6a)', marginTop: 2 }}>{t('airports_count', { count: c.count })}</div>
             </Link>
           ))}
         </div>
+        {/* Выход к полному каталогу. Обычная ссылка, а не <button> с переходом по
+            скрипту: это навигация, и поисковик с программой чтения должны видеть
+            её как ссылку. Страница /airports существует давно — здесь только
+            видимый вход в неё с главной. */}
+        <Link href={`/${locale}/airports`} className="country-more glass">
+          {t('other_country')}
+          <svg data-flip width="7" height="12" viewBox="0 0 8 14" fill="none" aria-hidden="true">
+            <path d="M1 1L7 7L1 13" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" />
+          </svg>
+        </Link>
+      </section>
+
+      {/* SECTION 1b — POPULAR AIRPORTS.
+          Заголовок стоит вплотную над своим списком. Описание по-прежнему под
+          значком «i»: это справка о охвате, а не то, за чем человек пришёл, и
+          она остаётся в серверном HTML — <details> ничего не удаляет из разметки. */}
+      <section style={{ marginTop: 30 }}>
+        <details className="pop-info">
+          <summary>
+            <span className="pop-info-title">{t('sec_airports')}</span>
+            <span className="pop-info-badge" aria-hidden="true">i</span>
+            <span className="sr-only">{t('read_more')}</span>
+          </summary>
+          <p className="home-intro-card" style={{ fontSize: 16, color: 'var(--ab-8a8a8a)', lineHeight: 1.5, overflowWrap: 'break-word' }}>
+            {t('subline', worldCounts())}
+          </p>
+        </details>
+        <PopularList airports={popularList} locale={locale} depLabel={depShort} arrLabel={arrShort} />
       </section>
 
       {/* SECTION 3 — POPULAR CITIES */}

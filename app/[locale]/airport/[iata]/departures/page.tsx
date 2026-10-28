@@ -171,6 +171,7 @@ export default async function DeparturesPage({ params }: Props) {
   initialFlights = (await boardForVisitor(airport.iata, 'departures', locale)).rows;
   const t = await getTranslations({ locale, namespace: 'meta' });
   const tNav = await getTranslations({ locale, namespace: 'nav' });
+  const tHome = await getTranslations({ locale, namespace: 'home' });
   const name = getAirportName(airport.iata, locale, airport.name);
   const city = getCityName(airport.city, locale);
   const country = getCountryName(airport.country, locale);
@@ -254,7 +255,7 @@ export default async function DeparturesPage({ params }: Props) {
       ))}
       <Breadcrumb label={tNav('aria_breadcrumb')} trail={trail} extra={{ href: `/${locale}/airport/${airport.iata}/arrivals`, label: tNav('arrivals') }} />
       {/* The visible <h1> now lives in FlightBoard's airport header (single semantic h1). */}
-      <FlightBoard airport={airport} locale={locale} defaultMode="departures" displayName={getAirportName(airport.iata, locale, airport.name)} initialFlights={board.rows} initialAllPast={board.allPast} initialFetchedAt={getBoardFetchedAt(airport.iata, 'departures')} boardTotal={initialFlights.length} />
+      <FlightBoard airport={airport} locale={locale} defaultMode="departures" displayName={getAirportName(airport.iata, locale, airport.name)} initialFlights={board.rows} initialAllPast={board.allPast} initialFetchedAt={getBoardFetchedAt(airport.iata, 'departures')} boardTotal={initialFlights.length} about={about} aboutTitle={tHome('about_title', { iata: airport.iata })} aboutExtra={<AirportBottom part="reference" airport={airport} locale={locale} displayName={getAirportName(airport.iata, locale, airport.name)} flights={initialFlights} noService={noService} nearestServed={nearestWithFlights} direction="departures" />} />
       <div style={{ maxWidth: 720, margin: '0 auto', padding: '0 24px 8px' }}>
         <EventBanner iata={airport.iata} locale={locale} />
       </div>

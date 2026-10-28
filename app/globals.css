@@ -123,6 +123,106 @@ input::-webkit-search-cancel-button { display: none; }
   }
 }
 .frow:active { background: var(--glass-dense); }
+
+/* «Об аэропорте» в шапке табло — кнопка-капсула, раскрывающая абзац на месте.
+ *
+ * Кнопка идёт во всю ширину панели, а не слева: шапка уже разделена на левую
+ * колонку с именем и правую с часами, и третий левый элемент читался бы как
+ * продолжение имени. Заголовок второго уровня живёт внутри summary и выглядит
+ * как подпись кнопки — в структуре документа он остаётся заголовком. */
+.ap-about { margin-top: 14px; }
+.ap-about > summary {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  min-height: 38px;
+  padding: 0 14px;
+  border-radius: var(--r-pill);
+  background: var(--glass-soft);
+  box-shadow: var(--glass-rim);
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+.ap-about > summary::-webkit-details-marker { display: none; }
+.ap-about > summary h2 {
+  margin: 0;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--ab-c7c7cc);
+  letter-spacing: 0;
+  text-transform: none;
+}
+.ap-about[open] > summary { background: var(--glass); }
+.ap-about > p {
+  margin: 12px 2px 2px;
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--ab-b4b4b4);
+}
+/* Справочная и «Частые вопросы» приходят сюда своими секциями. Их собственный
+   верхний отступ в 36px рассчитан на ленту страницы, где секции разделяют целые
+   разделы; внутри одной панели он читается как провал. */
+.ap-about > section { margin-top: 22px !important; }
+
+/* ── Внутренности строки рейса ────────────────────────────────────────────────
+ *
+ * Три логические части, и границы между ними видны по отступам: КОГДА (время,
+ * прежнее время, номер рейса) — КУДА (город, код, авиакомпания) — ЧТО С НИМ
+ * (выход и статус). Раньше всё это задавалось инлайновыми стилями с одними и
+ * теми же числами на любой ширине: на телефоне строка была тесной, а на
+ * мониторе те же 88px под статус рвали «ЗАДЕРЖКА 45 МИН» на «ЗАДЕРЖКА 45» и
+ * одинокое «МИН».
+ *
+ * Ширины колонок остаются ФИКСИРОВАННЫМИ внутри каждой ширины экрана, а не
+ * зависят от текста: иначе обновление борта меняло бы ширину статуса, город
+ * сжимался бы, и в WebKit появлялся новый кандидат в LCP уже после гидратации
+ * (разобрано на строке SSH). Меняется только то, какое число фиксировано. */
+.frow-in { display: flex; align-items: center; flex: 1; min-width: 0; gap: clamp(8px, 3vw, 16px); padding: clamp(14px, 3vw, 16px) clamp(10px, 3.5vw, 18px); }
+.frow-when { flex-shrink: 0; width: clamp(62px, 19vw, 86px); }
+.frow-time { font-size: clamp(21px, 6.6vw, 28px); font-weight: 700; line-height: 1; letter-spacing: -0.02em; font-variant-numeric: tabular-nums; }
+.frow-was { font-size: 12px; line-height: 1.3; margin-top: 2px; text-decoration: line-through; }
+.frow-no { font-size: 12px; font-weight: 500; line-height: 1.2; margin-top: 5px; font-variant-numeric: tabular-nums; }
+.frow-where { flex: 1; min-width: 0; }
+/* Один кегль на все строки. hyphens: manual, а не auto: auto рвал короткие
+   имена без пользы («Анта-лья», «Мурман-ск»). overflow-wrap остаётся на случай
+   слова шире колонки — такое перенесётся, но без выдуманного переноса внутри
+   названия города. Три строки максимум: больше имён такой длины в сети нет. */
+.frow-city {
+  display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 3; overflow: hidden;
+  /* Кегль пропорционален ширине экрана, а не стоит ступенькой. Фиксированные
+     16px на 320px не вмещали «Хабаровск», и слово рвалось посередине —
+     «Хабар/овск». Это хуже многоточия: обрывок читается как ошибка данных.
+     3.9vw даёт 12.5px на 320, 14.6 на 375 и упирается в 17 на широком. */
+  font-size: clamp(12.5px, 3.9vw, 17px);
+  font-weight: 700; letter-spacing: -0.01em; line-height: 1.25;
+  /* break-word убран: слово шире колонки теперь обрезается многоточием (ниже),
+     а не разрывается. hyphens: manual оставлен — он переносит только там, где в
+     самом названии стоит дефис («Шарм-эш-Шейх»), и ничего не выдумывает. */
+  text-overflow: ellipsis;
+  hyphens: manual; -webkit-hyphens: manual;
+}
+/* Код ИАТА в строке подробностей — чуть плотнее остального, чтобы читался как
+   код, а не как слово. Цвет наследуется от строки подробностей. */
+.frow-code { font-weight: 600; letter-spacing: 0.02em; white-space: nowrap; }
+/* Многоточие, а не обрыв по букве. Каждая часть внутри идёт nowrap (переносим
+   только по разделителю «·»), поэтому длинное название авиакомпании не
+   переносится вовсе и упиралось в край: «Уральские авиалини» обрывалось без
+   всякого знака и читалось как ошибка данных. */
+.frow-meta { font-size: clamp(11px, 3.1vw, 12px); margin-top: 4px; line-height: 1.35; display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2; overflow: hidden; text-overflow: ellipsis; }
+.frow-what { flex-shrink: 0; display: flex; align-items: center; gap: 8px; }
+.frow-gate { line-height: 1.1; white-space: nowrap; margin-bottom: 5px; }
+/* text-wrap: balance делит статус на две РОВНЫЕ строки вместо «длинная + хвост».
+   Там, где его нет, строка переносится как раньше — ничего не ломается. */
+/* Верх 124px: столько нужно «ЗАДЕРЖКА 45 МИН» на две ровные строки и
+   «ПОСЛЕДНИЙ ВЫЗОВ» — два самых длинных статуса из каталога на 12 языках. */
+.frow-status { width: clamp(76px, 23vw, 124px); max-width: clamp(76px, 23vw, 124px); text-align: end; text-wrap: balance; }
+/* Медиазапроса на 560px здесь больше НЕТ: он переназначал те же свойства
+   фиксированными числами и тем самым отменял clamp выше. Ступенька давала
+   скачок посреди диапазона и ничего не решала на краях — на 320px значения
+   всё равно оставались «широкими». Теперь один clamp покрывает весь диапазон,
+   а верхние границы те же, что были за медиазапросом. */
 /* Узкий экран: размытия у строк нет (см. выше), читаемость держит плотность
    заливки. Прежние 0.94 ставились при вчетверо более ярких обоях и делали
    строку почти непрозрачной — стекла в ней не оставалось. Обои с тех пор
@@ -273,7 +373,10 @@ input::-webkit-search-cancel-button { display: none; }
    проступала поверх выпавшего списка. */
 .home-search-page .home-search-input { margin-top: 28px; width: 100%; position: relative; z-index: 5; }
 .home-reference { margin-top: 12px; }
-.home-reference > summary { display: flex; align-items: center; justify-content: center; gap: 8px; min-height: 44px; cursor: pointer; color: var(--ab-8a8a8a); font-size: 13px; }
+/* 15px, а не 13: это единственная подпись на стартовом экране, и 13 рядом с
+   полем высотой 52 читались как сноска. Высота цели нажатия прежняя — её
+   держит min-height, а не кегль, так что строка не подвинулась. */
+.home-reference > summary { display: flex; align-items: center; justify-content: center; gap: 8px; min-height: 44px; cursor: pointer; color: var(--ab-8a8a8a); font-size: 15px; }
 /* Открытая справка не сдвигает подпись влево: «Свернуть» наследует
    раскладку «Читать далее» и остаётся по центру. */
 @media (max-height: 450px) {
@@ -321,16 +424,28 @@ input::-webkit-search-cancel-button { display: none; }
    на две колонки; открытая плитка занимает всю строку, чтобы текст не жался в половину ширины. */
 .ag-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
 @media(min-width:640px){.ag-grid{grid-template-columns:repeat(4,minmax(0,1fr))}}
-.ag-tile{background:var(--glass-soft);box-shadow:var(--glass-rim);border-radius:var(--r-card);min-width:0}
+/* overflow:hidden здесь, а не на summary: водяной знак торчит за край плитки, и
+   обрезать его должна ЕЁ скруглённая форма. На summary скругления нет, и знак
+   срезался по прямому углу — угол плитки выглядел надломленным. */
+.ag-tile{background:var(--glass-soft);box-shadow:var(--glass-rim);border-radius:var(--r-card);min-width:0;overflow:hidden}
 .ag-tile[open]{grid-column:1/-1;background:var(--glass);box-shadow:var(--glass-rim),0 0 0 1px rgba(10,132,255,.35)}
-.ag-tile>summary{list-style:none;cursor:pointer;padding:12px 12px 13px;display:flex;flex-direction:column;gap:2px;min-height:76px;-webkit-tap-highlight-color:transparent}
+.ag-tile>summary{list-style:none;cursor:pointer;padding:14px 16px 15px;display:flex;flex-direction:column;gap:3px;min-height:86px;position:relative;-webkit-tap-highlight-color:transparent}
 .ag-tile>summary::-webkit-details-marker{display:none}
 .ag-tile>summary:focus-visible{outline:2px solid var(--ab-0a84ff);outline-offset:2px;border-radius:var(--r-card)}
-.ag-ico{color:var(--ab-0a84ff);margin-bottom:6px}
-.ag-t{margin:0;font-size:14px;font-weight:600;color:var(--ab-ffffff);line-height:1.25}
+/* Значок — крупный водяной знак в нижнем углу, как у плиток охвата на главной:
+   мелкая иконка над заголовком отнимала строку высоты и при этом не читалась.
+   inset-inline-end, а не right: на арабской локали угол должен смениться на
+   левый, иначе знак встанет в начало строки и будет спорить с текстом.
+   Текст ограничен по ширине, а не обрезан — он просто до знака не доходит. */
+.ag-ico{position:absolute;inset-inline-end:-8px;bottom:-10px;width:58px;height:58px;color:var(--ab-8a8a8a);opacity:.26;pointer-events:none}
+.ag-tile[open] .ag-ico{opacity:.2}
+.ag-t{margin:0;font-size:14.5px;font-weight:600;color:var(--ab-ffffff);line-height:1.25;max-width:76%}
 .ag-lead{margin:-6px 0 12px;font-size:12px;line-height:1.45;color:var(--ab-8a8a8a)}
-.ag-h{font-size:12px;color:var(--ab-8a8a8a);line-height:1.3;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
-.ag-tile[open] .ag-h{white-space:normal}
+/* Подсказка в две строки, а не в одну с многоточием: знак в углу забрал
+   четверть ширины, и «Гараж C по брони — $32 в сутки» обрывалось на «в сут…».
+   Высоты плитки на две строки хватает, перенос ничего не двигает. */
+.ag-h{font-size:12px;color:var(--ab-8a8a8a);line-height:1.35;max-width:76%;display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;overflow:hidden}
+.ag-tile[open] .ag-h{-webkit-line-clamp:none;max-width:100%}
 .ag-body{padding:0 14px 14px}
 .ag-body p{margin:0;font-size:14px;line-height:1.55;color:var(--ab-c7c7cc)}
 .ag-body .ag-src{margin-top:10px;font-size:12px;color:var(--ab-8a8a8a)}
@@ -557,19 +672,41 @@ body::after {
   max-width: 928px;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: 1fr auto 1fr;
+  /* minmax(0, 1fr) по краям, а не голый 1fr: 1fr имеет минимум auto, то есть
+     колонка не может стать уже своего содержимого. На 320px три пилюли вместе
+     требовали 310px при доступных 288, и сетка не сжималась — выбор языка
+     уезжал за правый край на 26px, «RU» обрезалось. С minmax(0, …) колонка
+     сжимается, а пилюли ужимаются сами (ниже).
+     Колонка середины — minmax(0, auto): логотип по-прежнему стоит ровно по
+     центру, но на узком экране отдаёт лишнее соседям, а не выталкивает их. */
+  grid-template-columns: minmax(0, 1fr) minmax(0, auto) minmax(0, 1fr);
   align-items: center;
-  gap: 10px;
+  /* Зазор тоже пропорциональный: 10px на широком экране и 6 на 320. */
+  gap: clamp(6px, 2vw, 10px);
 }
 .hdr-row > :first-child { justify-self: start; }
 .hdr-row > :last-child { justify-self: end; }
 .hdr-pill {
-  height: 52px;
+  /* Высота и поля следуют за шириной экрана, а не стоят ступенькой: 52px на
+     широком, 44 на 320. Цель нажатия остаётся не меньше 44. */
+  height: clamp(44px, 13vw, 52px);
+  padding-inline: clamp(12px, 4vw, 20px);
   border-radius: var(--r-pill);
   display: flex;
   align-items: center;
-  flex-shrink: 0;
+  min-width: 0;
+  flex-shrink: 1;
 }
+/* Название сайта: кегль пропорционален ширине, а на совсем узком экране
+   обрезается многоточием, а не выталкивает соседние кнопки. */
+.hdr-pill > .hdr-wordmark {
+  font-size: clamp(14px, 4.4vw, 17px);
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.hdr-pill > .hdr-plane { font-size: clamp(16px, 5vw, 19px); }
 .hdr-pill-btn {
   border: none;
   cursor: pointer;
@@ -665,11 +802,14 @@ body::after {
   position: relative;
   overflow: hidden;
   min-width: 0;
-  min-height: 108px;
+  /* 72, а не 108: подписи укорочены до одной строки, и прежняя высота закладывала
+     место под сноску из трёх строк, которой больше нет. Высота нужна только для
+     того, чтобы три плитки стояли вровень при разной длине подписи. */
+  min-height: 72px;
   display: flex;
   flex-direction: column;
   gap: 3px;
-  padding: 14px 16px;
+  padding: 12px 14px;
   border-radius: var(--r-card);
   background: var(--glass);
   -webkit-backdrop-filter: var(--blur);
@@ -727,7 +867,9 @@ body::after {
    Нативный маркер <summary> убран, кружок — обычная стеклянная плашка. */
 /* Отступ снизу задаёт то, что идёт следом (плитки показателей), иначе у
    закрытой справки он складывается с их собственным и зияет. */
-.pop-info { margin-bottom: 0; }
+/* Заголовок стоит прямо над списком, поэтому отбивка снизу небольшая: раньше
+   он шёл перед плитками, и расстояние держали их собственные отступы. */
+.pop-info { margin-bottom: 10px; }
 .pop-info > summary {
   display: flex;
   align-items: center;
@@ -777,10 +919,54 @@ body::after {
 }
 .pop-info[open]::details-content { block-size: auto; opacity: 1; }
 
+/* Каталог стран — таблица в три колонки, все 237 стран сразу.
+   На узком экране колонок две: при трёх на 375px на ячейку остаётся около
+   110px, и «Соединённые Штаты» обрезались бы до двух слов с многоточием —
+   ровно та страна, по которой чаще всего и кликают из англоязычных локалей. */
+.country-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 8px;
+}
+@media (max-width: 560px) {
+  .country-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+/* Популярные аэропорты — две колонки. Порог тот же, что у каталога стран, чтобы
+   оба блока перестраивались на одной ширине и не расходились по вёрстке. */
+.popular-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 6px;
+}
+@media (max-width: 560px) {
+  .popular-grid { grid-template-columns: minmax(0, 1fr); }
+}
+
+/* Выход к полному каталогу под таблицей. Капсула во всю ширину, а не ячейка
+   шириной в треть: это не шестнадцатая страна, а другое действие, и ряд из
+   пятнадцати должен читаться как законченный. */
+.country-more {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 8px;
+  min-height: 44px;
+  border-radius: var(--r-pill);
+  font-size: 13.5px;
+  color: var(--ab-e4e4e7);
+  text-decoration: none;
+}
+.country-more svg { color: var(--ab-8a8a8a); flex-shrink: 0; }
+
 /* Название аэропорта в строке списка прячется на узком экране: там его теснят
    код, город и счётчики, и оно обрезается до двух букв — пользы от такого
-   обрезка нет, а строку оно сужает. */
-@media (max-width: 560px) {
+   обрезка нет, а строку оно сужает.
+   Порог поднят с 560 до 900: строка теперь живёт в половине ширины, и место
+   кончается вдвое раньше, чем когда список шёл в одну колонку. Ниже 560 колонка
+   снова одна, но там строка и без того узкая — правило остаётся верным для обеих
+   раскладок. */
+@media (max-width: 900px) {
   .pl-name { display: none; }
 }
 
@@ -788,18 +974,21 @@ body::after {
    углу. Подпись не заходит под рисунок — ширина ограничена, а не обрезана
    многоточием: обрезанная подпись теряет смысл, перенос — нет. */
 .home-metric-value {
-  font-size: 19px;
+  font-size: clamp(16px, 4.8vw, 19px);
   font-weight: 700;
   color: var(--ab-ffffff);
   line-height: 1.15;
   letter-spacing: -0.01em;
 }
 .home-metric-label {
-  font-size: 12px;
+  /* Кегль за шириной экрана: на 320px двенадцатый не вмещал «с регулярными
+     рейсами» в 74% колонки, и слово рвалось — «с регулярн/ыми». */
+  font-size: clamp(10.5px, 3.2vw, 12px);
   line-height: 1.3;
   color: var(--ab-6a6a6a);
   max-width: 74%;
-  overflow-wrap: break-word;
+  /* Без break-word: слово шире колонки лучше обрезать, чем разорвать. */
+  hyphens: manual; -webkit-hyphens: manual;
 }
 .home-metric-art {
   position: absolute;

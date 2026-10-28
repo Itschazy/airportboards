@@ -43,13 +43,18 @@ export function SiteHeader({ locale }: { locale: Locale }) {
       <div className="hdr-row">
         <ThemeSwitcher />
         {isHome ? <span /> : (
-          <Link href={`/${locale}`} className="hdr-pill glass" style={{
-            fontSize: 17, fontWeight: 700,
-            color: 'var(--ab-ffffff)', letterSpacing: '-0.01em',
-            gap: 8, padding: '0 20px',
+          /* Без стекла: это название сайта, а не кнопка в ряду кнопок. Капсула
+             под ним спорила с двумя настоящими — темой и языком, — и в центре
+             шапки получалось три одинаковых стеклянных пятна вместо подписи
+             между двумя кнопками. Размер цели нажатия держит .hdr-pill. */
+          /* Кегли и поля заданы в CSS через clamp: на 320px три пилюли в сумме
+             требовали 310px при доступных 288, и выбор языка уезжал за край. */
+          <Link href={`/${locale}`} className="hdr-pill" style={{
+            fontWeight: 700, color: 'var(--ab-ffffff)', letterSpacing: '-0.01em',
+            gap: 'clamp(5px, 2vw, 8px)', minWidth: 0,
           }}>
-            <span style={{ fontSize: 19 }} aria-hidden="true">✈</span>
-            airportsboard
+            <span className="hdr-plane" aria-hidden="true">✈</span>
+            <span className="hdr-wordmark">airportsboard</span>
           </Link>
         )}
 
@@ -62,20 +67,19 @@ export function SiteHeader({ locale }: { locale: Locale }) {
             aria-label={`${tNav('language')}: ${localeNames[locale]}`}
             className="hdr-pill hdr-pill-btn glass"
             style={{
-              gap: 7,
-              // 44, а не 40: шапка высотой 48, поднять можно бесплатно и ничего не сдвигая.
-              // Меню ниже ограничено видимой высотой и прокручивается: все 12 языков
+              gap: 'clamp(5px, 1.8vw, 7px)',
+              // Высота и поля — в .hdr-pill, пропорционально ширине экрана. Меню
+              // ниже ограничено видимой высотой и прокручивается: все 12 языков
               // доступны даже на телефоне в альбомной ориентации.
-              padding: '0 18px',
               color: 'var(--ab-8a8a8a)',
-              fontSize: 14, fontWeight: 600,
+              fontSize: 'clamp(12px, 3.8vw, 14px)', fontWeight: 600,
               letterSpacing: '0.02em',
             }}
           >
             {/* Флаг текущего языка вместо глобуса: глобус говорит лишь «здесь
                 языки», а флаг сразу показывает, какой выбран. Для скринридера
                 он скрыт — выбранный язык уже назван в aria-label кнопки. */}
-            <span aria-hidden="true" className="locale-flag" style={{ fontSize: 21, lineHeight: 1 }}>
+            <span aria-hidden="true" className="locale-flag" style={{ fontSize: 'clamp(17px, 5.5vw, 21px)', lineHeight: 1 }}>
               {localeFlags[locale]}
             </span>
             {locale.toUpperCase()}

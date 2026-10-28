@@ -97,28 +97,46 @@ export default async function AirportsIndexPage({ params }: Props) {
   } : null;
 
   return (
-    <div style={{ maxWidth: 760, margin: '0 auto', padding: '36px 18px 64px' }}>
+    // Ширина и отступы как у страницы страны и страницы аэропорта: 760 выбивались
+    // из общей колонки, и при переходе с главной страница заметно сужалась.
+    <div style={{ maxWidth: 960, margin: '0 auto', padding: '0 16px 64px' }}>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(itemList) }} />
       {dataset && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(dataset) }} />}
-      <div style={{ fontSize: 13, color: 'var(--ab-8a8a8a)', marginBottom: 10 }}>
-        <Link href={`/${locale}`} style={{ color: 'var(--ab-6a6a6a)', textDecoration: 'none', display: 'inline-block', minHeight: 24 }}>airportsboard</Link>
-      </div>
-      <h1 style={{ fontSize: 'clamp(28px, 7vw, 40px)', fontWeight: 800, letterSpacing: '-0.03em', color: 'var(--ab-ffffff)', margin: '0 0 6px' }}>
-        {t('sec_countries')}
-      </h1>
-      <p style={{ fontSize: 15, color: 'var(--ab-8a8a8a)', margin: '0 0 14px' }}>
-        {countries.length.toLocaleString(numLocale(locale))} {t('m_countries')}
-      </p>
-      {world.generated && world.withService > 0 && (
-        <p style={{ fontSize: 15, lineHeight: 1.55, color: 'var(--ab-c7c7cc)', margin: '0 0 28px', maxWidth: 660 }}>
-          {world.probed > world.withService + world.empty
-            ? t('world_split_partial', { total: world.probed, date: localizedMeasuredOn(world.generated!, locale), served: world.withService })
-            : t('world_split', { total: world.probed, date: localizedMeasuredOn(world.generated!, locale), served: world.withService, rest: world.empty })}
+      {/* Крошки той же стеклянной капсулой, что на странице страны. Здесь была
+          одинокая серая ссылка «airportsboard» без указания текущей страницы —
+          то есть след навигации, который ничего не сообщал о том, где человек. */}
+      <nav aria-label={t('sec_countries')} className="crumbs-wrap" style={{ padding: '20px 0 0' }}>
+        <ol className="crumbs glass">
+          <li>
+            <Link href={`/${locale}`}>airportsboard</Link>
+            <svg data-flip width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                 strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+              <path d="M9.5 5.5 16 12l-6.5 6.5" />
+            </svg>
+          </li>
+          <li aria-current="page" className="crumbs-current">{t('sec_countries')}</li>
+        </ol>
+      </nav>
+      {/* Заголовок, счётчик и вводная фраза — одна стеклянная панель, как шапка
+          страницы аэропорта и страны. Прежде они лежали прямо на обоях. */}
+      <div className="ap-head glass" style={{ marginTop: 10 }}>
+        <h1 style={{ fontSize: 'clamp(26px, 7vw, 36px)', fontWeight: 800, letterSpacing: '-0.03em', color: 'var(--ab-ffffff)', lineHeight: 1.1, margin: 0 }}>
+          {t('sec_countries')}
+        </h1>
+        <p style={{ fontSize: 14, color: 'var(--ab-8a8a8a)', marginTop: 8 }}>
+          {countries.length.toLocaleString(numLocale(locale))} {t('m_countries')}
         </p>
-      )}
+        {world.generated && world.withService > 0 && (
+          <p style={{ fontSize: 14, lineHeight: 1.55, color: 'var(--ab-c7c7cc)', marginTop: 12, maxWidth: 640 }}>
+            {world.probed > world.withService + world.empty
+              ? t('world_split_partial', { total: world.probed, date: localizedMeasuredOn(world.generated!, locale), served: world.withService })
+              : t('world_split', { total: world.probed, date: localizedMeasuredOn(world.generated!, locale), served: world.withService, rest: world.empty })}
+          </p>
+        )}
+      </div>
 
-      <ul style={{ listStyle: 'none', margin: 0, padding: 0, display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(220px, 1fr))', gap: 8 }}>
+      <ul style={{ listStyle: 'none', margin: 0, padding: 0, display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(220px, 1fr))', gap: 8, marginTop: 28 }}>
         {countries.map(c => (
           <li key={c.slug}>
             <Link href={`/${locale}/airports/${c.slug}`} style={{

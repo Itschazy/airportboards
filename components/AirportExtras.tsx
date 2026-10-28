@@ -11,11 +11,14 @@ const C = { card: 'var(--glass-soft)', border: 'none', sub: 'var(--ab-8a8a8a)', 
 export function MoreInfo({ label, collapseLabel, children }: { label: string; collapseLabel: string; children: React.ReactNode }) {
   return (
     <details className="airport-disclosure">
+      {/* Без подложки и рамки: ниже, в подвале, точно такая же по смыслу подпись
+          «Дополнительно» идёт просто текстом, и две одинаковые кнопки подряд — одна
+          в рамке, другая без — читались как разные по важности. Высота 44 вместо 52
+          держит цель нажатия и заодно убирает лишний зазор между ними. */}
       <summary style={{
-        width: '100%', minHeight: 52, marginTop: 8,
+        width: '100%', minHeight: 44, marginTop: 4,
         display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 8,
-        border: '1px solid rgba(var(--ab-ink),0.08)', background: 'rgba(var(--ab-ink),0.03)',
-        borderRadius: 14, color: 'var(--ab-ffffff)', fontSize: 15, fontWeight: 600, cursor: 'pointer',
+        color: 'var(--ab-c7c7cc)', fontSize: 14, fontWeight: 600, cursor: 'pointer',
       }}>
         <span className="disclosure-more">{label}</span><span className="disclosure-less">{collapseLabel}</span><DisclosureArrow />
       </summary>

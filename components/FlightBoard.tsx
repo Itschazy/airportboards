@@ -4,10 +4,12 @@ import { numLocale } from '@/lib/i18n';
 import { localAirlineName } from '@/lib/airline-ru';
 
 import { useEffect, useState, useCallback, useRef, useMemo } from 'react';
+import type { ReactNode } from 'react';
 import Link from 'next/link';
 import { useTranslations } from 'next-intl';
 import { initialRowCount } from '@/lib/board-window';
 import { track, GOALS } from '@/lib/track';
+import { DisclosureArrow } from '@/components/DisclosureArrow';
 import type { Airport } from '@/lib/airports';
 
 type T = (key: string, values?: Record<string, string | number>) => string;
@@ -463,7 +465,7 @@ function BottomSheet({ flight: selectedFlight, mode, onClose, tz, locale, clockM
     };
 
     // ── Hero card (status-specific, action-oriented) ──
-    type Hero = { label: string; main: string; sub?: string; subStrike?: boolean; bottom?: string; icon?: string; medium?: boolean };
+    type Hero = { label: string; main: string; sub?: string; subStrike?: boolean; icon?: string };
     let hero: Hero;
     if (status === 'departed' || status === 'arrived') {
       // dispTime, not scheduled: with an actual time present the hero showed the SCHEDULED
@@ -472,12 +474,22 @@ function BottomSheet({ flight: selectedFlight, mode, onClose, tz, locale, clockM
       hero = { label: t('flight_departed'), main: dispTime, sub: t('actual_dep') };
     } else if (status === 'baggage') {
       hero = { label: t('st_baggage'), main: flight.baggage || dispTime };
+    /* Статус больше НЕ повторяется внутри карточки.
+     *
+     * На рейсе в посадке он стоял трижды: плашка сверху «Посадка», подпись карточки
+     * «Посадка идёт» и крупной строкой «Идёт посадка» — буквально одно предложение,
+     * переставленное местами. Под ним шла ещё отдельная секция «ВЫЛЕТ 05:50», то есть
+     * самое нужное число пряталось четвёртым.
+     *
+     * Теперь во всех состояниях одинаково: крупно — ВРЕМЯ, подписью сверху — что это за
+     * время, снизу — что с ним делать. Слово статуса живёт ровно в одном месте, в
+     * цветной плашке над номером рейса. */
     } else if (status === 'cancelled') {
-      hero = { label: t('h_cancel_label'), main: t('h_cancel_main'), sub: t('h_cancel_sub'), icon: 'bell', medium: true };
+      hero = { label: isDep ? t('departure') : t('arrival'), main: dispTime, sub: t('h_cancel_main'), icon: 'bell' };
     } else if (status === 'boarding' && !past) {
-      hero = { label: t('h_board_label'), main: t('h_board_main'), sub: t('gate_closes', { m: Math.max(1, mins ?? 0) }), bottom: dispTime, icon: 'plane', medium: true };
+      hero = { label: isDep ? t('departure') : t('arrival'), main: dispTime, sub: t('gate_closes', { d: fmtDur(Math.max(1, mins ?? 0), locale) }), icon: 'plane' };
     } else if (status === 'finalcall' && !past) {
-      hero = { label: t('h_final_label'), main: t('h_final_main'), sub: t('gate_closes', { m: Math.max(1, mins ?? 0) }), bottom: dispTime, icon: 'bell', medium: true };
+      hero = { label: isDep ? t('departure') : t('arrival'), main: dispTime, sub: t('gate_closes', { d: fmtDur(Math.max(1, mins ?? 0), locale) }), icon: 'bell' };
     } else if (status === 'delayed') {
       // Известная задержка остаётся фактом и после времени рейса. Неизвестная
       // показывается без числа: время до рейса не является длительностью задержки.
@@ -492,18 +504,30 @@ function BottomSheet({ flight: selectedFlight, mode, onClose, tz, locale, clockM
     }
 
     // ── Detail grid: only fields with data, never the status (already in hero) ──
-    // The time card is skipped when the hero already displays the same time (boarding and
-    // final-call put it in hero.bottom; delayed and departed put it in hero.main) — the sheet
-    // used to show "ВЫЛЕТ 23:05" twice in a row, which reads as a rendering bug, not design.
+    // Время не печатается дважды: отдельная плитка со временем заводится только тогда,
+    // когда крупное число в карточке — НЕ оно (так бывает у выдачи багажа). Раньше шторка
+    // показывала «ВЫЛЕТ 23:05» два раза подряд, и это читалось как сбой отрисовки.
     type Block = { label: string; value: string; valueColor?: string; strike?: string; sub?: string };
-    const timeInHero = hero.bottom != null || hero.main === dispTime;
+
+    /* Справа в карточке стоит ВЫХОД — на месте, где раньше была одна декоративная
+       иконка и пустота в половину ширины. При посадке это второе по важности число
+       после времени, и стоять оно должно рядом с ним.
+       
+       Время туда НЕ уезжает (пробовали 28.10.2026, владелец вернул обратно): плиток
+       под карточкой обычно несколько — вылет, терминал, в пути, — и вынутое из этого
+       ряда время рвало ровную сетку ради экономии одной строки.
+       
+       Терминал идёт под выходом мелкой строкой, но только когда выход есть: сам по
+       себе он отдельной плитки стоит, а рядом с выходом читается как его уточнение. */
+    const timeInHero = hero.main === dispTime;
+    const gateInHero = !!flight.gate;
     const blocks: Block[] = [];
     if (!timeInHero) blocks.push({
       label: isDep ? t('departure') : t('arrival'), value: dispTime,
       valueColor: flight.actual ? C.orange : C.text, strike: flight.actual ? flight.scheduled : undefined, sub: dateStr,
     });
-    if (flight.gate)     blocks.push({ label: t('gate'), value: flight.gate });
-    if (flight.terminal) blocks.push({ label: t('terminal'), value: flight.terminal });
+    if (flight.gate && !gateInHero) blocks.push({ label: t('gate'), value: flight.gate });
+    if (flight.terminal && !gateInHero) blocks.push({ label: t('terminal'), value: flight.terminal });
     if (flight.baggage && status !== 'baggage') blocks.push({ label: t('baggage'), value: flight.baggage, valueColor: C.green });
     if (flight.durationMin) blocks.push({ label: t('flight_duration'), value: fmtDur(flight.durationMin, locale) });
     if (flight.aircraft) blocks.push({ label: t('aircraft_type'), value: AIRCRAFT[flight.aircraft] ?? flight.aircraft });
@@ -522,7 +546,7 @@ function BottomSheet({ flight: selectedFlight, mode, onClose, tz, locale, clockM
       status === 'delayed' ? t('notice_delayed') :
       (status === 'ontime' || status === 'scheduled') ? t('notice_ontime') : null;
 
-    const heroMainSize = hero.medium ? 24 : (hero.main.length > 8 ? 28 : hero.main.length > 5 ? 34 : 40);
+    const heroMainSize = hero.main.length > 8 ? 28 : hero.main.length > 5 ? 34 : 40;
 
     body = (
       <div style={{ padding: '2px 20px calc(18px + env(safe-area-inset-bottom))' }}>
@@ -571,22 +595,21 @@ function BottomSheet({ flight: selectedFlight, mode, onClose, tz, locale, clockM
               {hero.sub && <div style={{ fontSize: 14, color: C.secondary, marginTop: 7, textDecoration: hero.subStrike ? 'line-through' : 'none' }}>{hero.sub}</div>}
               {timeInHero && <div style={{ fontSize: 12, color: C.secondary, opacity: 0.7, marginTop: 5 }}>{dateStr}</div>}
             </div>
-            {hero.icon && <Icon name={hero.icon} />}
+            {gateInHero ? (
+              <div style={{ textAlign: 'end', flexShrink: 0 }}>
+                <div style={{ ...L, marginBottom: 7 }}>{t('gate')}</div>
+                <bdi style={{ display: 'block', fontSize: 28, fontWeight: 800, letterSpacing: '-0.02em', lineHeight: 1, color: C.text }}>{flight.gate}</bdi>
+                {flight.terminal && <div style={{ fontSize: 12, color: C.secondary, marginTop: 6 }}>{t('terminal')} {flight.terminal}</div>}
+              </div>
+            ) : hero.icon ? <Icon name={hero.icon} /> : null}
           </div>
-          {hero.bottom && (
-            <>
-              <div style={{ height: 1, background: 'rgba(var(--ab-ink),0.08)', margin: '12px 0' }} />
-              <div style={{ ...L, marginBottom: 4 }}>{isDep ? t('departure') : t('arrival')}</div>
-              <div style={{ fontSize: 20, fontWeight: 700, color: C.text, fontVariantNumeric: 'tabular-nums' }}>{hero.bottom}</div>
-            </>
-          )}
         </div>
 
         {/* Значения начинаются сразу под подписью с одинаковым отступом.
             space-between прижимал весь блок значения к низу: дата под временем
             поднимала время выше выхода и терминала (снимок владельца, 18.10.2026).
             Свободное место оставляем снизу, чтобы необязательная дата не двигала цифры. */}
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(92px, 1fr))', gap: 10, marginTop: 14 }}>
+        {blocks.length > 0 && <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(104px, 1fr))', gap: 10, marginTop: 14 }}>
           {blocks.map((b, i) => (
             <div key={i} style={{ background: 'var(--glass-soft)', boxShadow: 'var(--glass-rim)', borderRadius: 'var(--r-card)', padding: '12px 13px', minHeight: 78, display: 'flex', flexDirection: 'column', gap: 6 }}>
               <div style={L}>{b.label}</div>
@@ -597,7 +620,7 @@ function BottomSheet({ flight: selectedFlight, mode, onClose, tz, locale, clockM
               </div>
             </div>
           ))}
-        </div>
+        </div>}
 
         {/* Время, выход и терминал раньше действий — согласовано владельцем 19.10.2026.
             Раньше закрепление и маршрут отодвигали эти данные за первый экран телефона.
@@ -717,7 +740,12 @@ function BottomSheet({ flight: selectedFlight, mode, onClose, tz, locale, clockM
           /* Плотное стекло: поверх карточки идёт текст, и на пёстрых обоях
              лёгкая заливка его не держит. Шва сверху нет — скругление и тень
              и так отделяют панель от страницы. */
-          background: 'var(--glass-dense)', WebkitBackdropFilter: 'var(--blur)', backdropFilter: 'var(--blur)',
+          /* Плотная заливка снята (решение владельца 28.10.2026): шторка была почти
+             непрозрачной — 0.94 в тёмной теме и 0.93 в светлой — и выглядела сплошной
+             панелью, а не стеклом. Теперь обычное стекло 0.80/0.86: обои под ней
+             просматриваются, размытие остаётся, и текст по-прежнему лежит на своей
+             подложке, а не прямо на узоре. */
+          background: 'var(--glass)', WebkitBackdropFilter: 'var(--blur)', backdropFilter: 'var(--blur)',
           boxShadow: 'var(--glass-rim), var(--glass-lift)',
           borderRadius: '28px 28px 0 0',
           // Drag offsets are written straight to el.style by the rAF handler; the
@@ -743,9 +771,12 @@ function BottomSheet({ flight: selectedFlight, mode, onClose, tz, locale, clockM
             if (raf.current) { cancelAnimationFrame(raf.current); raf.current = 0; }
             settleBack();
           }}
-          style={{ position: 'sticky', top: 0, zIndex: 2, background: 'var(--glass-dense)',
-            WebkitBackdropFilter: 'var(--blur)', backdropFilter: 'var(--blur)',
-            height: 14, touchAction: 'none', borderRadius: '28px 28px 0 0' }}
+          /* Полоса перетаскивания БЕЗ своей заливки и без своего размытия. Она лежит
+             поверх шторки, и второй слой стекла поверх первого давал светлую полосу
+             вдоль верха: два раза по 0.86 — это уже не 0.86. Шторка под ней своя
+             заливка и так, а полосе нужна только область для жеста. */
+          style={{ position: 'sticky', top: 0, zIndex: 2,
+            height: 14, touchAction: 'none' }}
         >
         </div>
         {body}
@@ -756,7 +787,7 @@ function BottomSheet({ flight: selectedFlight, mode, onClose, tz, locale, clockM
 
 // ─── Main Component ───────────────────────────────────────────────────────────
 
-export function FlightBoard({ airport, locale, defaultMode = 'departures', displayName, headingNote, initialFlights, initialFetchedAt, boardTotal, lead, statusLine = null, noService = false, pendingNote = null, infoOnly = false, initialAllPast = false }: {
+export function FlightBoard({ airport, locale, defaultMode = 'departures', displayName, headingNote, initialFlights, initialFetchedAt, boardTotal, lead, statusLine = null, noService = false, pendingNote = null, infoOnly = false, initialAllPast = false, about = null, aboutTitle, aboutExtra = null }: {
   airport: Airport;
   locale: string;
   defaultMode?: Mode;
@@ -818,6 +849,26 @@ export function FlightBoard({ airport, locale, defaultMode = 'departures', displ
    * объявления `allPast` ниже.
    */
   initialAllPast?: boolean;
+  /**
+   * Абзац «Об аэропорте» и его заголовок.
+   *
+   * Жил отдельным разделом ПОД табло, справочной и расписанием — то есть примерно на
+   * третьем экране. Это справка о том, что это за аэропорт вообще, и читают её до
+   * рейсов, а не после; владелец попросил поднять её в шапку (28.10.2026).
+   *
+   * Текст и заголовок второго уровня остаются в серверном HTML: details ничего из
+   * разметки не удаляет, меняется только место на экране.
+   */
+  about?: string | null;
+  aboutTitle?: string;
+  /**
+   * Что ещё показывать под той же кнопкой: справочная и «Частые вопросы».
+   *
+   * Приходит готовой разметкой с сервера (AirportBottom part="reference") — табло
+   * клиентское, и считать там состав FAQ нечем и незачем. Для React это обычный
+   * ReactNode: серверные узлы спокойно передаются клиентскому компоненту пропом.
+   */
+  aboutExtra?: ReactNode;
 }) {
   const t = useTranslations('ui');
   const tNav = useTranslations('nav');
@@ -1292,17 +1343,16 @@ export function FlightBoard({ airport, locale, defaultMode = 'departures', displ
           const dm = place.match(/^(.*?)\s*\(([A-Z0-9]{2,4})\)\s*$/);
           const city = dm ? dm[1] : place;
           const code = dm ? dm[2] : '';
-          // A name whose LONGEST WORD is wider than the column has no legal place to break, so
-          // it snaps mid-word with no hyphen — "Минеральны/е Воды" — which reads as a typo and
-          // is the one case hyphens:manual cannot help with. Stepping the type down buys the
-          // 11-17% that makes those names fit. Thresholds are calibrated on the 115px column at
-          // 375px, where 18px bold Cyrillic runs about 11.5px per character: 11 characters
-          // (Калининград, Новосибирск) overflow by a little, 12+ (Екатеринбург) by a lot.
-          // Everything shorter — which is most of the network — keeps the full 18px.
-          const longestWord = city.split(/[\s‐-―-]+/).reduce((a, w) => Math.max(a, w.length), 0);
-          // Пороги сдвинуты на букву 18.10.2026: спокойный статус в одну строку взял у колонки 8px, и
-          // «Новосибирск» (11) на 16px рвался посреди слова.
-          const cityFs = longestWord >= 11 ? 15 : longestWord >= 10 ? 16 : 18;
+          // Кегль города БОЛЬШЕ НЕ ПОДБИРАЕТСЯ под длину имени.
+          //
+          // Раньше он шагал 18 → 16 → 15 по длине самого длинного слова, чтобы имя влезло в
+          // колонку. Но соседние строки получали разный кегль — «Сочи» 18, «Новосибирск» 15, —
+          // и табло выглядело набранным вразнобой, а влезать имя всё равно переставало:
+          // уменьшение покупало 11-17% ширины, а «Санкт-Петербург (LED)» требовало больше.
+          //
+          // Вместо этого имя переносится по словам, а код ИАТА приклеен к последнему слову
+          // неразрывным пробелом (ниже): код больше не остаётся сиротой на своей строке, ради
+          // чего подбор кегля и затевался. Размер один на все строки и задан в CSS.
           const meta = rowMeta(f, locale);
 
           return (
@@ -1332,21 +1382,21 @@ export function FlightBoard({ airport, locale, defaultMode = 'departures', displ
                   своему радиусу, отдельного скругления ей не нужно. */}
               <div style={{ width: 4, background: color, flexShrink: 0 }} />
 
-              {/* Row content */}
-              <div style={{ display: 'flex', alignItems: 'center', flex: 1, padding: '18px 16px', gap: 12, minWidth: 0 }}>
-                {/* Left: time + flight number — fixed type scale (26 / 12) */}
-                <div style={{ flexShrink: 0, width: 72 }}>
-                  <div style={{ fontSize: 26, fontWeight: 700, fontVariantNumeric: 'tabular-nums', color: f.actual ? (isPast ? C.past : C.orange) : (isPast ? C.past : C.text), lineHeight: 1, letterSpacing: '-0.02em' }}>
+              {/* Row content. Размеры, отступы и ширины колонок — в CSS
+                  (.frow-in и соседние), чтобы они менялись с шириной экрана.
+                  Инлайн остаётся только то, что зависит от данных: цвета. */}
+              <div className="frow-in">
+                {/* КОГДА: время, прежнее время, номер рейса */}
+                <div className="frow-when">
+                  <div className="frow-time" style={{ color: f.actual ? (isPast ? C.past : C.orange) : (isPast ? C.past : C.text) }}>
                     {f.actual || f.scheduled}
                   </div>
-                  {f.actual && (
-                    <div style={{ fontSize: 12, color: C.secondary, textDecoration: 'line-through', lineHeight: 1.3, marginTop: 2 }}>{f.scheduled}</div>
-                  )}
+                  {f.actual && <div className="frow-was" style={{ color: C.secondary }}>{f.scheduled}</div>}
                   {/* 0.65, а не 0.42: на фоне строки это давало 4.06:1 при норме AA 4.5, а на прошедшей
                       строке, где сверху лежит групповая opacity 0.7, — 2.50:1. Для сравнения город и
                       время в той же строке идут 19.65:1. Номер рейса — ровно то, по чему человек ищет
                       свою строку, и он был самым тусклым текстом на экране. Стало 8.47:1 и 4.68:1. */}
-                  <div style={{ fontSize: 12, color: 'rgba(var(--ab-ink),0.65)', marginTop: 5, fontVariantNumeric: 'tabular-nums', fontWeight: 500 }}>{f.flight}</div>
+                  <div className="frow-no" style={{ color: 'rgba(var(--ab-ink),0.65)' }}>{f.flight}</div>
                 </div>
 
                 {/* Center: destination — the primary datum on a board, so it gets the room it
@@ -1361,20 +1411,23 @@ export function FlightBoard({ airport, locale, defaultMode = 'departures', displ
                     hyphens: manual, not auto: auto broke short names mid-word for no gain
                     ("Анта-лья", "Мурман-ск"). overflowWrap still rescues a word genuinely wider
                     than the column, just without inventing a hyphen inside a place name. */}
-                <div style={{ flex: 1, minWidth: 0 }}>
-                  <div style={{
-                    display: '-webkit-box', WebkitLineClamp: 3, WebkitBoxOrient: 'vertical',
-                    overflow: 'hidden', lineHeight: 1.2, overflowWrap: 'break-word',
-                    hyphens: 'manual' as const, WebkitHyphens: 'manual' as const,
-                  }}>
-                    <span style={{ fontSize: cityFs, fontWeight: 700, color: C.text, letterSpacing: '-0.01em' }}>{city}</span>
-                    {code && <bdi style={{ fontSize: 12, fontWeight: 500, color: C.secondary, marginInlineStart: 6, whiteSpace: 'nowrap' }}>({code})</bdi>}
-                  </div>
+                {/* КУДА: город с кодом, под ними авиакомпания и длительность */}
+                <div className="frow-where">
+                  {/* Только имя города. Код ИАТА ушёл строкой ниже, к авиакомпании.
+                      Рядом с именем он не помещался принципиально: на 375px под эту
+                      колонку остаётся ~120px, а «Petersburg (LED)» жирным шестнадцатым
+                      требует ~130. Отсюда росли оба прежних костыля — подбор кегля по
+                      длине имени и зажим в три строки, — и оба проигрывали: код всё
+                      равно оставался сиротой на своей строке. Теперь строка разбита по
+                      смыслу: крупно то, КУДА летит рейс, мелко — чем и как долго. */}
+                  <div className="frow-city" style={{ color: C.text }}>{city}</div>
                   {/* Не больше двух строк и перенос ТОЛЬКО по разделителю: каждая часть nowrap. На 375px
                       колонка ~125px, и в одну строку с многоточием авиакомпания съедалась целиком
                       («1 ч 30 мин · Nor…»). Теперь «1 ч 30 мин ·» / «Nordwind», на десктопе — одна строка. */}
-                  {meta.length > 0 && (
-                    <div style={{ fontSize: 12, color: C.secondary, marginTop: 4, lineHeight: 1.3, display: '-webkit-box', WebkitLineClamp: 2, WebkitBoxOrient: 'vertical', overflow: 'hidden' }}>
+                  {(code || meta.length > 0) && (
+                    <div className="frow-meta" style={{ color: C.secondary }}>
+                      {code && <bdi className="frow-code">{code}</bdi>}
+                      {code && meta.length > 0 && <span>{' · '}<wbr /></span>}
                       {meta.map((m, k) => <span key={k} style={{ whiteSpace: 'nowrap' }}>{m}{k < meta.length - 1 ? ' · ' : ''}{k < meta.length - 1 ? <wbr /> : null}</span>)}
                     </div>
                   )}
@@ -1394,19 +1447,23 @@ export function FlightBoard({ airport, locale, defaultMode = 'departures', displ
                     самый частый статус: на экран телефона входило 4.5 рейса. Тревожные статусы
                     (задержка, посадка, последний вызов, отмена) остаются заглавными и жирными —
                     они и должны бросаться в глаза, а «всё по плану» — нет. */}
-                <div style={{ flexShrink: 0, textAlign: 'end', display: 'flex', alignItems: 'center', gap: 6 }}>
-                  <div style={{ width: 88, maxWidth: 88 }}>
+                {/* ЧТО С НИМ: выход и статус */}
+                <div className="frow-what">
+                  <div className="frow-status">
                     {f.gate && (
-                      <div style={{ lineHeight: 1.1, whiteSpace: 'nowrap', marginBottom: 5 }}>
+                      <div className="frow-gate">
                         <span style={{ fontSize: 12, color: C.secondary }}>{t('gate')} </span>
                         <bdi style={{ fontSize: 18, fontWeight: 700, color: C.text, letterSpacing: '-0.01em' }}>{f.gate}</bdi>
                       </div>
                     )}
+                    {/* nowrap у спокойного статуса снят: в 124px колонке он и так
+                        в одну строку, а на телефоне «По расписанию» упиралось в
+                        88px и вылезало за край вместо переноса. */}
                     <div style={(f.status === 'ontime' || f.status === 'scheduled') ? {
-                      fontSize: 11, fontWeight: 600, color, whiteSpace: 'nowrap', lineHeight: 1.25,
+                      fontSize: 11.5, fontWeight: 600, color, lineHeight: 1.3,
                     } : {
                       fontSize: 12, fontWeight: 700, color, letterSpacing: '0.03em', textTransform: 'uppercase',
-                      lineHeight: 1.25,
+                      lineHeight: 1.3,
                       textShadow: !isPast && f.status === 'finalcall' ? '0 0 10px rgba(255,69,58,0.15)' : 'none',
                     }}>
                       {label}
@@ -1459,10 +1516,18 @@ export function FlightBoard({ airport, locale, defaultMode = 'departures', displ
     // 100dvh keeps the footer from jumping up while a real board loads. With no scheduled
     // service nothing will ever fill it, so reserving a screenful leaves a dead gap between
     // the notice and the rest of the page.
+    //
+    // Резерв снимается, КАК ТОЛЬКО на борту есть хоть одна строка. Прыгать нечему:
+    // строки пришли уже в серверном HTML, и высоту дальше задаёт содержимое. А вот
+    // когда строк мало — поздней ночью, или когда всё уже вылетело, — экран резерва
+    // оставался пустым: между последним рейсом и справочной зияло 293px пустоты
+    // (замер на IST). Резерв нужен ровно в тот момент, ради которого он заведён:
+    // пока показывать нечего.
+    //
     // Обёртка прозрачна: под ней лежат слои фона (пятна + узор), и непрозрачная
     // заливка их перекрывала. Во встраиваемом виджете (bare) фон остаётся: там
     // под ним чужая страница, а не наша.
-    <div style={{ background: bare ? C.bg : 'transparent', minHeight: bare ? undefined : '100dvh', paddingBottom: bare ? 16 : 'calc(48px + env(safe-area-inset-bottom))' }}>
+    <div style={{ background: bare ? C.bg : 'transparent', minHeight: bare || shown.length > 0 ? undefined : '100dvh', paddingBottom: bare ? 16 : 'calc(48px + env(safe-area-inset-bottom))' }}>
 
       {/* ── Airport header — compact. The identity is one line: code + name + clock. The old
           header spent ~380px (a 76px IATA glyph, an always-open search field, two control
@@ -1485,7 +1550,7 @@ export function FlightBoard({ airport, locale, defaultMode = 'departures', displ
                 the AEO work is aimed at. A space as the first child of a flex item is stripped
                 for layout but kept in textContent, so this changes the read text and not a
                 single rendered pixel. */}
-            <span style={{ fontSize: 14, fontWeight: 500, color: C.secondary, lineHeight: 1.25, minWidth: 0, overflow: 'hidden', textOverflow: 'ellipsis', display: '-webkit-box', WebkitLineClamp: 2, WebkitBoxOrient: 'vertical' }}>{' '}{displayName || airport.name}</span>
+            <span style={{ fontSize: 15, fontWeight: 500, color: C.secondary, lineHeight: 1.3, minWidth: 0, overflow: 'hidden', textOverflow: 'ellipsis', display: '-webkit-box', WebkitLineClamp: 2, WebkitBoxOrient: 'vertical' }}>{' '}{displayName || airport.name}</span>
             {/* Пробел перед разделителем — по той же причине, что и у имени выше: между
                 flex-элементами текста нет, и без него h1 читался бы «УфаПрилёты». */}
             {headingNote && (
@@ -1496,7 +1561,7 @@ export function FlightBoard({ airport, locale, defaultMode = 'departures', displ
             {/* Время — второй по важности элемент шапки после кода аэропорта:
                 по нему сверяются с расписанием. Моноширинные цифры, чтобы
                 строка не дёргалась каждую минуту при смене знаков. */}
-            <div style={{ fontSize: 'clamp(24px, 6.5vw, 30px)', fontWeight: 700, letterSpacing: '-0.02em', fontVariantNumeric: 'tabular-nums', color: C.text, lineHeight: 1 }}>{time}</div>
+            <div style={{ fontSize: 'clamp(30px, 8vw, 40px)', fontWeight: 700, letterSpacing: '-0.03em', fontVariantNumeric: 'tabular-nums', color: C.text, lineHeight: 1 }}>{time}</div>
           </div>
         </div>
 
@@ -1504,18 +1569,18 @@ export function FlightBoard({ airport, locale, defaultMode = 'departures', displ
             под крупными цифрами она висела отдельной мелкой строкой и ломала
             правый край панели. Здесь она читается как подпись к той же строке,
             а описание и подпись делят одну линию. */}
-        <div style={{ display: 'flex', alignItems: 'baseline', justifyContent: 'space-between', gap: 14, margin: '10px 0 0' }}>
+        <div style={{ display: 'flex', alignItems: 'baseline', justifyContent: 'space-between', gap: 16, margin: '6px 0 0' }}>
           {lead
-            ? <p style={{ fontSize: 13, lineHeight: 1.45, color: C.secondary, margin: 0, maxWidth: 620 }}>{lead}</p>
+            ? <p style={{ fontSize: 13.5, lineHeight: 1.5, color: C.secondary, margin: 0, maxWidth: 620 }}>{lead}</p>
             : <span />}
-          <span style={{ fontSize: 11, color: C.secondary, letterSpacing: '0.03em', opacity: 0.6, flexShrink: 0, whiteSpace: 'nowrap' }}>{t('local_time')}</span>
+          <span style={{ fontSize: 11.5, color: C.secondary, letterSpacing: '0.03em', opacity: 0.75, flexShrink: 0, whiteSpace: 'nowrap' }}>{t('local_time')}</span>
         </div>
         {statusLine && (
           <p style={{ fontSize: 12.5, lineHeight: 1.45, color: C.text, margin: '5px 0 0', maxWidth: 620, fontVariantNumeric: 'tabular-nums' }}>{statusLine}</p>
         )}
 
         {/* One meta line: freshness + row count. These were two separate rows. */}
-        {!bare && <div role="status" aria-live="polite" style={{ display: 'flex', alignItems: 'center', gap: 7, marginTop: 8, minHeight: 18 }}>
+        {!bare && <div role="status" aria-live="polite" style={{ display: 'flex', alignItems: 'center', gap: 7, marginTop: 10, minHeight: 18 }}>
           <div
             aria-hidden="true"
             className={isLive ? 'live-dot' : ''}
@@ -1530,17 +1595,33 @@ export function FlightBoard({ airport, locale, defaultMode = 'departures', displ
               читателя, причём без всякой пометки, чей это пояс. Всё остальное табло
               показано во времени аэропорта. */}
           <time suppressHydrationWarning dateTime={lastUpdated?.toISOString()} title={lastUpdated ? lastUpdated.toLocaleString(numLocale(locale), { timeZone: airport.tz || 'UTC', timeZoneName: 'short' }) : undefined} style={{ fontSize: 12, color: C.secondary, opacity: 0.85 }}>{updLabel || '—'}</time>
+          {isStale && <span aria-hidden="true" style={{ fontSize: 12, color: C.secondary, opacity: 0.5 }}>·</span>}
           {isStale && (
             <span style={{ fontSize: 12, fontWeight: 700, color: C.orange, letterSpacing: '0.02em' }}>
-              {' · '}{t('board_stale')}
+              {t('board_stale')}
             </span>
           )}
+          {!loading && flights.length > 0 && <span aria-hidden="true" style={{ fontSize: 12, color: C.secondary, opacity: 0.5 }}>·</span>}
           {!loading && flights.length > 0 && (
             <span style={{ fontSize: 12, color: C.secondary, opacity: 0.85 }}>
-              {' · '}{(() => { const n = flights === initialFlights && boardTotal != null ? boardTotal : flights.length; return mode === 'departures' ? t('departures_on_board', { count: n }) : t('arrivals_on_board', { count: n }); })()}
+              {(() => { const n = flights === initialFlights && boardTotal != null ? boardTotal : flights.length; return mode === 'departures' ? t('departures_on_board', { count: n }) : t('arrivals_on_board', { count: n }); })()}
             </span>
           )}
         </div>}
+
+        {/* «Об аэропорте» — под аккуратной кнопкой в самой шапке. Заголовок
+            второго уровня сохранён внутри summary: он остаётся в структуре
+            документа и в серверном HTML, как и сам абзац. */}
+        {(about || aboutExtra) && aboutTitle && (
+          <details className="ap-about">
+            <summary>
+              <h2>{aboutTitle}</h2>
+              <DisclosureArrow />
+            </summary>
+            {about && <p>{about}</p>}
+            {aboutExtra}
+          </details>
+        )}
       </div>
       </div>
 
@@ -1640,11 +1721,19 @@ export function FlightBoard({ airport, locale, defaultMode = 'departures', displ
         {FILTERS.map(key => {
           const active = filter === key;
           return (
-            <button key={key} type="button" aria-pressed={active} className="press" onClick={() => { haptic(); track(GOALS.boardFilter, { filter: key }); setFilter(key); }} style={{
-              padding: '8px 15px', minHeight: 44, fontSize: 13, fontWeight: active ? 600 : 400,
+            /* Выбранный фильтр — плотное стекло с рамкой, а не сплошная заливка
+               цветом текста. Белый круг посреди стеклянных капсул читался как
+               чужеродный элемент: во всём остальном интерфейсе выбранное
+               состояние показывается плотностью стекла (вкладки табло, пункт
+               меню языка, раскрытая плитка справочной), и фильтры были
+               единственным местом с инверсией. */
+            <button key={key} type="button" aria-pressed={active} className={`press${active ? ' glass-dense' : ' glass-soft'}`} onClick={() => { haptic(); track(GOALS.boardFilter, { filter: key }); setFilter(key); }} style={{
+              padding: '8px clamp(12px, 4vw, 15px)', minHeight: 44,
+              fontSize: 'clamp(12px, 3.6vw, 13px)', fontWeight: active ? 600 : 400,
               border: 'none', borderRadius: 999, cursor: 'pointer',
-              background: active ? C.text : 'var(--glass-soft)', color: active ? 'var(--ab-000000)' : C.secondary,
-              whiteSpace: 'nowrap', flexShrink: 0, transition: 'all 0.15s ease',
+              boxShadow: active ? 'var(--glass-rim), inset 0 0 0 1.5px var(--ab-0a84ff)' : 'var(--glass-rim)',
+              color: active ? C.text : C.secondary,
+              whiteSpace: 'nowrap', flexShrink: 0, transition: 'color 0.15s ease, box-shadow 0.15s ease',
             }}>
               {t(`filter_${key}`)}
             </button>

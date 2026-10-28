@@ -65,8 +65,11 @@ function Chevron() {
   return <svg data-flip width="6" height="11" viewBox="0 0 6 11" fill="none" style={{ flexShrink: 0 }}><path d="M1 1L5 5.5L1 10" stroke="var(--ab-3a3a3c)" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" /></svg>;
 }
 
-export async function AirportBottom({ airport, locale, about, displayName, flights = [], noService = false, nearestServed = null, direction = 'departures', schedule = false }: {
-  airport: Airport; locale: string; about: string | null; displayName?: string; flights?: FlightRow[];
+export async function AirportBottom({ airport, locale, about = null, displayName, flights = [], noService = false, nearestServed = null, direction = 'departures', schedule = false, part = 'all' }: {
+  airport: Airport; locale: string; displayName?: string;
+  /** Абзац «Об аэропорте». Часть 'reference' его не печатает: он уже стоит в шапке табло
+   *  отдельной строкой над справочной, и дублировать его под той же кнопкой незачем. */
+  about?: string | null; flights?: FlightRow[];
   /**
    * Which board the caller rendered. Controls which end of each flight the routes section
    * aggregates, and therefore whether /route links point out of or into this airport.
@@ -82,6 +85,22 @@ export async function AirportBottom({ airport, locale, about, displayName, fligh
    * the wrong way. Opt-in, so a new caller cannot get it by accident.
    */
   schedule?: boolean;
+  /**
+   * Какую половину этого блока отрисовать.
+   *
+   * Справочная и «Частые вопросы» переехали под кнопку «Об аэропорте» в шапке табло
+   * (28.10.2026, просьба владельца), а всё остальное — маршруты, соседние аэропорты,
+   * популярное — осталось внизу страницы. Разные места в разметке, один и тот же набор
+   * вычислений: состав FAQ зависит от рейсов, расписания, авиакомпаний, направлений и
+   * ближайшего обслуживаемого аэропорта, то есть ровно от того, что считает этот компонент.
+   *
+   * Поэтому делится ВЫВОД, а не логика: страница вызывает компонент дважды и берёт от
+   * каждого вызова свою половину. Вычисления прогоняются дважды, но они локальные — чтение
+   * каталога из JSON и арифметика по уже полученному борту, без единого запроса наружу.
+   * Альтернатива, вынести сборку FAQ в отдельный модуль, означала бы переписать полторы
+   * сотни строк, от которых зависит разметка FAQPage в выдаче.
+   */
+  part?: 'all' | 'reference' | 'rest';
 }) {
   const t = await getTranslations({ locale, namespace: 'home' });
   const tNav = await getTranslations({ locale, namespace: 'nav' });
@@ -327,9 +346,32 @@ export async function AirportBottom({ airport, locale, about, displayName, fligh
   );
   const sec: React.CSSProperties = { marginTop: 36 };
 
+  /* Справочная и FAQ едут в шапку табло: там их показывает кнопка «Об аэропорте».
+     Внешней подложки и полей нет — они уже внутри стеклянной панели шапки.
+     Разметка FAQPage уезжает вместе с вопросами: она описывает именно их. */
+  if (part === 'reference') {
+    return (
+      <>
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqLd) }} />
+        {guide && (
+          <AirportGuide
+            guide={guide}
+            title={tUi('aguide_title', { iata: airport.iata })}
+            numLocale={numLocale(locale)}
+            labels={{ checked: tUi('aguide_checked') }}
+          />
+        )}
+        <section style={{ marginTop: 28 }}>
+          <H2>{t('faq_title')}</H2>
+          <Faq items={faq} />
+        </section>
+      </>
+    );
+  }
+
   return (
     <div style={{ background: 'transparent', padding: '0 24px 8px' }}>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqLd) }} />
+      {/* Разметка FAQPage ушла вместе с вопросами — в часть 'reference'. */}
       <div style={{ maxWidth: 720, margin: '0 auto' }}>
 
         {/* Live-event banner (e.g. World Cup final): visible above the fold-out,
@@ -344,22 +386,13 @@ export async function AirportBottom({ airport, locale, about, displayName, fligh
             остальные — переводы из data/airport-guide/<locale>/), только для
             аэропортов с файлом data/airport-guide/<IATA>.json. Выше «Об аэропорте»: это то, за чем
             человек пришёл после табло (как доехать, где залы), а абзац — справка о справке. */}
-        {guide && (
-          <AirportGuide
-            guide={guide}
-            title={tUi('aguide_title', { iata: airport.iata })}
-            numLocale={numLocale(locale)}
-            labels={{ checked: tUi('aguide_checked') }}
-          />
-        )}
+        {/* Справочная переехала в шапку табло — см. часть 'reference' выше. */}
 
-        {/* 6. ABOUT */}
-        {about && (
-          <section className="cv-auto" style={sec}>
-            <H2>{t('about_title', { iata: airport.iata })}</H2>
-            <AboutCard text={about} readMore={t('read_more')} readLess={t('read_less')} />
-          </section>
-        )}
+        {/* 6. ABOUT — переехал в шапку табло (FlightBoard, .ap-about) 28.10.2026.
+            Здесь он шёл после справочной и расписания, то есть примерно на третьем
+            экране, хотя отвечает на вопрос «что это за аэропорт» — его задают до
+            рейсов, а не после. Текст и заголовок второго уровня никуда не делись,
+            сменилось только место: страницы передают `about` в FlightBoard. */}
 
         {/* 6a. PUBLISHED ROUTES — the answer for airports with no live board.
             1,060 airports return no schedule from the provider under any code, so their board
@@ -602,11 +635,7 @@ export async function AirportBottom({ airport, locale, about, displayName, fligh
           </SeoSection>
         )}
 
-        {/* 5. FAQ */}
-        <section className="cv-auto" style={sec}>
-          <H2>{t('faq_title')}</H2>
-          <Faq items={faq} />
-        </section>
+        {/* 5. FAQ переехал в шапку табло — см. часть 'reference' выше. */}
 
         {/* 5b. RECENTLY VIEWED — the return loop, on the page people actually land on.
             The visit itself is recorded by FlightBoard on mount; these chips render the list
@@ -617,6 +646,11 @@ export async function AirportBottom({ airport, locale, about, displayName, fligh
             never sees. */}
         <RecentlyViewed locale={locale} title={t('sec_recent')} exclude={airport.iata} />
 
+        {/* Ключ называется show_more, а подпись читается «Полезная информация» (решение
+            владельца 28.10.2026). Прежнее «Показать больше» не отвечало на вопрос «больше
+            чего», и кнопку не открывали — владелец сам сказал, что не понимает, зачем она.
+            Имя ключа оставлено: он используется ровно здесь, а переименование означало бы
+            правку двенадцати каталогов ради внутреннего слова. */}
         <MoreInfo label={t('show_more')} collapseLabel={t('read_less')}>
 
           {/* 2. OVERVIEW */}

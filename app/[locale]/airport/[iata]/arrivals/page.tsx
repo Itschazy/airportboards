@@ -156,6 +156,7 @@ export default async function ArrivalsPage({ params }: Props) {
   const initialFlights = visitorBoard.rows;
   const t = await getTranslations({ locale, namespace: 'meta' });
   const tNav = await getTranslations({ locale, namespace: 'nav' });
+  const tHome = await getTranslations({ locale, namespace: 'home' });
   const name = getAirportName(airport.iata, locale, airport.name);
   const city = getCityName(airport.city, locale);
   const country = getCountryName(airport.country, locale);
@@ -236,7 +237,7 @@ export default async function ArrivalsPage({ params }: Props) {
           уровня прыгал бы под рукой. До этой строки h1 у родителя и здесь был один и тот же
           («UFA Уфа»), хотя заголовки вкладок различаются, а класс запросов «прилёт» даёт
           лучший CTR на сайте. Слово берётся из каталога, новых строк не заводится. */}
-      <FlightBoard airport={airport} locale={locale} defaultMode="arrivals" displayName={getAirportName(airport.iata, locale, airport.name)} headingNote={tNav('arrivals')} initialFlights={board.rows} initialAllPast={board.allPast} initialFetchedAt={getBoardFetchedAt(airport.iata, 'arrivals')} boardTotal={initialFlights.length} />
+      <FlightBoard airport={airport} locale={locale} defaultMode="arrivals" displayName={getAirportName(airport.iata, locale, airport.name)} headingNote={tNav('arrivals')} initialFlights={board.rows} initialAllPast={board.allPast} initialFetchedAt={getBoardFetchedAt(airport.iata, 'arrivals')} boardTotal={initialFlights.length} about={about} aboutTitle={tHome('about_title', { iata: airport.iata })} aboutExtra={<AirportBottom part="reference" airport={airport} locale={locale} displayName={getAirportName(airport.iata, locale, airport.name)} flights={initialFlights} noService={noService} nearestServed={nearestWithFlights} direction="arrivals" />} />
       <div style={{ maxWidth: 720, margin: '0 auto', padding: '0 24px 8px' }}>
         <EventBanner iata={airport.iata} locale={locale} />
       </div>

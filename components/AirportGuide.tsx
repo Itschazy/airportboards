@@ -17,12 +17,21 @@ const ORDER = ['transport', 'taxi', 'terminals', 'lounges', 'storage', 'sleep', 
 const ICONS: Record<string, string> = {
   transport: 'M6 17h12M7 4h10a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2zM5 10h14M8 20l1-3m7 3-1-3',
   taxi: 'M5 16V11l2-5h10l2 5v5M5 16h14v3h-3v-3M5 16v3h3v-3M3 11h18M9 4h6M7.5 13.5h.01M16.5 13.5h.01',
-  terminals: 'M3 21h18M5 21V8l7-4 7 4v13M9 21v-6h6v6',
+  // Был сарай: острый двускатный конёк во всю высоту и ворота. Теперь здание с
+  // плоским верхом, рядами окон и козырьком — на 58px читается как терминал.
+  terminals: 'M3 21h18M5 21V10.5h14V21M4 10.5 12 6l8 4.5M8.5 14h2m3 0h2M8.5 17.5h2m3 0h2',
   lounges: 'M5 11V8a3 3 0 0 1 3-3h8a3 3 0 0 1 3 3v3M3 13a2 2 0 0 1 4 0v2h10v-2a2 2 0 0 1 4 0v4H3zM6 17v3m12-3v3',
   storage: 'M4 8h16v12H4zM9 8V5h6v3M4 13h16',
-  sleep: 'M3 18V8m0 6h18v4M21 18v-4a3 3 0 0 0-3-3h-7v3M7 11.5a1.5 1.5 0 1 0 0-.01',
-  kids: 'M12 4a2 2 0 1 0 0 .01M8 21l1-7-3-3 3-3h6l3 3-3 3 1 7',
-  parking: 'M5 3h14v18H5zM10 17V8h3a2.5 2.5 0 0 1 0 5h-3',
+  // У кровати и ребёнка кружок рисовался вырожденной дугой «a1.5 1.5 0 1 0 0-.01»:
+  // дуга в ноль длиной, которую браузеры дорисовывают по-разному, а при обводке
+  // 1.1 на 58px она выходила кляксой. Заменена двумя полудугами — настоящий круг.
+  sleep: 'M3 18V8m0 6h18v4M21 18v-4a3 3 0 0 0-3-3h-7v3M5.4 12a1.6 1.6 0 1 0 3.2 0 1.6 1.6 0 1 0-3.2 0',
+  // Коляска, а не фигура человека: прежняя читалась как взрослый с широко
+  // расставленными ногами и к подписи «С ребёнком» отношения не имела.
+  kids: 'M4.5 13.5a5.5 5.5 0 0 1 11 0zM6 13.5 7.1 18.2M14.6 13.5 15.3 18.2M15.5 13.5 19.5 6.2M5.75 19.55a1.35 1.35 0 1 0 2.7 0 1.35 1.35 0 1 0-2.7 0M13.95 19.55a1.35 1.35 0 1 0 2.7 0 1.35 1.35 0 1 0-2.7 0',
+  // Углы таблички скруглены: прямоугольник с острыми углами был единственной
+  // такой формой среди скруглённых плиток и выбивался из общего вида.
+  parking: 'M7 3h10a4 4 0 0 1 4 4v10a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4V7a4 4 0 0 1 4-4zM10.5 17V8h3a2.5 2.5 0 0 1 0 5h-3',
   wifi: 'M5 12a10 10 0 0 1 14 0M8.5 15.5a5 5 0 0 1 7 0M12 19h.01M2 8.8a15 15 0 0 1 20 0',
 };
 
@@ -42,11 +51,15 @@ export function AirportGuide({ guide, title, labels, numLocale }: { guide: Guide
         {blocks.map((b) => (
           <details key={b.id} className="ag-tile">
             <summary>
-              <svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" className="ag-ico">
-                <path d={ICONS[b.id] ?? ICONS.terminals} />
-              </svg>
               <h3 className="ag-t">{b.title}</h3>
               <span className="ag-h">{b.hint}</span>
+              {/* Значок идёт ПОСЛЕ текста и стоит в нижнем углу (CSS .ag-ico).
+                  Раньше он был первой строкой плитки: отнимал строку высоты и
+                  при 20px всё равно не читался. Обводка 1.1 вместо 1.8 — на
+                  58px прежняя толщина выглядела бы жирным пятном. */}
+              <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.1" strokeLinecap="round" strokeLinejoin="round" className="ag-ico">
+                <path d={ICONS[b.id] ?? ICONS.terminals} />
+              </svg>
             </summary>
             <div className="ag-body">
               <p>{b.text}</p>
