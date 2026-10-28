@@ -2,6 +2,7 @@
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import type { Locale } from '@/lib/i18n';
+import { HeaderActions } from './HeaderActions';
 
 /**
  * Шапка сайта: только название.
@@ -30,6 +31,12 @@ export function SiteHeader({ locale }: { locale: Locale }) {
   return (
     <header className="site-header">
       <div className="hdr-row">
+        {/* Слева «Поделиться», справа избранное — обе круглыми стеклянными кнопками.
+            Ряд снова сеткой из трёх ячеек, а не флексом: название должно стоять ровно
+            по центру независимо от того, что по бокам, а боковые кнопки разной ширины
+            (у одной значок, у другой тоже, но подписи для screen reader разной длины
+            на разных языках) при флексе сдвигали бы его. */}
+        <HeaderActions locale={locale} slot="share" />
         {/* Кегли и поля заданы в CSS через clamp: размер следует за шириной экрана. */}
         <Link href={`/${locale}`} className="hdr-pill" style={{
           fontWeight: 700, color: 'var(--ab-ffffff)', letterSpacing: '-0.01em',
@@ -38,6 +45,7 @@ export function SiteHeader({ locale }: { locale: Locale }) {
           <span className="hdr-plane" aria-hidden="true">✈</span>
           <span className="hdr-wordmark">airportsboard</span>
         </Link>
+        <HeaderActions locale={locale} slot="fav" />
       </div>
     </header>
   );

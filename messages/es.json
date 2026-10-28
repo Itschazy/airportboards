@@ -1,5 +1,6 @@
 {
   "nav": {
+    "share": "Compartir",
     "timezone": "Zona horaria",
     "documents": "Documentos",
     "tz_rule": "Todas las horas del panel son locales del aeropuerto de salida o de llegada. Tu zona no las modifica.",

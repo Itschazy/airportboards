@@ -1,5 +1,6 @@
 {
   "nav": {
+    "share": "Partager",
     "timezone": "Fuseau horaire",
     "documents": "Documents",
     "tz_rule": "Toutes les heures du tableau sont locales à l'aéroport de départ ou d'arrivée. Votre fuseau ne les modifie pas.",

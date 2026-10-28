@@ -845,9 +845,40 @@ body::after {
      одна пилюля помещается на любом экране. */
   max-width: 928px;
   margin: 0 auto;
-  display: flex;
-  justify-content: center;
+  /* Снова сетка из трёх ячеек: по бокам названия стоят кнопки, и при флексе
+     название сдвигала бы разница в их ширине. minmax(0, 1fr) по краям, чтобы на
+     узком экране сжимались колонки, а не выталкивались кнопки. */
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, auto) minmax(0, 1fr);
   align-items: center;
+  gap: clamp(4px, 1.6vw, 10px);
+}
+.hdr-row > :first-child { justify-self: start; }
+.hdr-row > :last-child { justify-self: end; }
+
+/* Круглые стеклянные кнопки по бокам названия: «Поделиться» и избранное.
+   Размер следует за шириной экрана, но не меньше 40: это цель нажатия, и
+   ужимать её ниже нельзя даже на 320px, где на обе кнопки и название всего
+   288 пикселей. */
+.hdr-act {
+  display: grid;
+  place-items: center;
+  width: clamp(40px, 11.5vw, 46px);
+  height: clamp(40px, 11.5vw, 46px);
+  flex-shrink: 0;
+  border: none;
+  border-radius: 50%;
+  background: var(--sheen), var(--glass-soft);
+  -webkit-backdrop-filter: var(--blur-soft);
+          backdrop-filter: var(--blur-soft);
+  box-shadow: var(--glass-spec), var(--glass-rim);
+  color: var(--ab-e4e4e7);
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  transition: color 0.16s ease, box-shadow 0.16s ease, transform 0.12s ease;
+}
+@media (hover: hover) {
+  .hdr-act:hover { color: var(--ab-ffffff); }
 }
 .hdr-pill {
   /* Высота и поля следуют за шириной экрана, а не стоят ступенькой: 62px на

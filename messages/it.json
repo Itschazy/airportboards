@@ -1,5 +1,6 @@
 {
   "nav": {
+    "share": "Condividi",
     "timezone": "Fuso orario",
     "documents": "Documenti",
     "tz_rule": "Tutti gli orari del tabellone sono locali dell'aeroporto di partenza o di arrivo. Il tuo fuso non li cambia.",

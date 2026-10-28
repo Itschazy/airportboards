@@ -1,5 +1,6 @@
 {
   "nav": {
+    "share": "Paylaş",
     "timezone": "Saat dilimi",
     "documents": "Belgeler",
     "tz_rule": "Tablodaki tüm saatler kalkış veya varış havalimanının yerel saatidir. Sizin saat diliminiz bunları değiştirmez.",

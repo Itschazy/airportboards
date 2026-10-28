@@ -1,5 +1,6 @@
 {
   "nav": {
+    "share": "Share",
     "timezone": "Time zone",
     "documents": "Documents",
     "tz_rule": "All times on the board are local to the departure or arrival airport. Your own zone does not change them.",
