@@ -1351,3 +1351,44 @@ post-deploy audit-bot. Точный статус/коммиты и резуль�
 shared-context HANDOFF и итоговом отчёте. Исследователь параллельно готовит
 research/sharing-visual-comparison.md по новому запросу; его идеи не являются
 разрешением менять текущий согласованный дизайн.
+
+
+## Codex, 28.10.2026 — карта опубликована, сравнение конкурентов завершено
+
+Рабочая копия /Users/whereiszhenya/projects/runwayboard-flight-map-prototype-20261028,
+ветка codex/flight-map-prototype-20261028. Опубликован 09605f8d2bfdba5ad91bdab94f67c164e35ce308
+(заменяет промежуточный feb44120: copy-caption выключен до готовности картинки).
+Пуш в main 28.10 в 14:07:58 Europe/Amsterdam, вне прогрева. Actions40693677182 success:
+https://github.com/Itschazy/airportboards/actions/runs/40693677182.
+Сервер217.149.26.240 /var/www/airportsboard подтвердил тот же HEAD, BUILD_ID
+p52MwwbIzJ24npnnS3N5Q, новые3pm2 PID386095/386094/386117,63ГБ свободно.
+
+Опубликована https://airportsboard.live/ru/flight-map: четвёртая RUвкладка «Перелёты»,
+сохранение истории в этом браузере, JSONbackup/preview/merge, PNGи системная отправка
+при поддержке браузером. Это первый русский выпуск, не12язычный инструмент.
+Остальные11локалей честно404 без ссылки в навигации. Прежние настройки/кнопки сохранены.
+
+Финальная fixtureproductionbuild на09605f8d —2461страница, tsc0,14runtime tests,
+379ключей×12, scripts/client-messages/track/board-regressions пройдены.
+Postdeploy audit-bot: check-flight-map OK (SSR/SEO/RUnav/11×404/7assets/4соседних),
+check-index20/20, sitemap-hreflang, live-refresh, adsense —exit0. Live-refresh —
+исходники и безопасное наблюдение, не имитация платного живого посетителя.
+Chrome mobile320/375/430: ввод/поиск/сохранение/reload/SPA/Back/тема/импорт/отмена,
+реально скачанные PNG1080×1920 иJSONbackup; безoverflow320, цели4табов67.5×54px.
+Физические Safari/Яндекс/Android и отправка третьим лицам не проверялись.
+Платные ручки, браузер прода, DNS не тронуты.
+
+Серверы QA3110/3111 остановлены, generatedTS восстановлены; buildдиректории
+перемещены в /tmp/ab-flight-map-builds-20261028. Старый прототип3102/3103 оставлен.
+Артефакты/логи/снимки: /Users/whereiszhenya/Documents/Codex/2026-10-18/airportsboard-live-12-next-js-15/outputs/flight-map-release-20261028.
+
+Параллельное сравнение14продуктов: ops/prototypes/flight-map/research/sharing-visual-comparison.md.
+Просмотрены официальные изображения/страницы; нативные приложения не тестировались.
+Flighty — субъективный ориентир карточки, AirTrail — ясности карты, FlightMapper —
+аналитической географии, AirJourneys — бесплатногоstoryэкспорта, Polarsteps — фотоисторий.
+OpenFlights/AppintheAir без полноценной актуальной visualоценки, ограничения указаны.
+Конкретное улучшение: увеличить подписи18px и домен21px наPNG1080, ныне6.25/7.3px
+при375px. Проверить отдельные композиции1рейс/плотнаясеть, поляStories, не добавлять
+обязательныевидео/аккаунты/новуюстатистикубезданных. Это рекомендации, кодэкспорта
+после согласованного релиза не меняли. Документация завершения сохранена отдельным
+локальным коммитом без нового пуша/пересборки прода; productionостаётся09605f8d.
