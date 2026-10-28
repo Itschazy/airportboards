@@ -44,7 +44,7 @@ export async function GET(_req: Request, { params }: { params: Promise<{ locale:
     background_color: '#050505',
     theme_color: '#050505',
     icons: [
-      { src: '/icon', sizes: '48x48', type: 'image/png' },
+      { src: '/icon', sizes: '120x120', type: 'image/png' },
       { src: '/apple-icon', sizes: '180x180', type: 'image/png' },
       { src: '/icon1', sizes: '192x192', type: 'image/png' },
       { src: '/icon2', sizes: '512x512', type: 'image/png', purpose: 'maskable' },
