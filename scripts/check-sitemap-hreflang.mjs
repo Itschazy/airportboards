@@ -90,7 +90,7 @@ const missingLang = [], noSelf = [], asym = [], badXdef = [], badCode = [];
 for (const [rest, langs] of byPath) {
   // Первый выпуск журнала — только RU. Требовать EN здесь значило бы
   // заставлять публиковать неготовый интерфейс ради зелёного сторожа.
-  const expected = rest === '/flight-map' ? ['ru'] : LEGAL_PATHS.has(rest) ? LEGAL_LOCALES : LOCALES;
+  const expected = LEGAL_PATHS.has(rest) ? LEGAL_LOCALES : LOCALES;
   const absent = expected.filter((l) => !langs.has(l));
   if (absent.length) missingLang.push(`${rest || '/'} без ${absent.join(',')}`);
   let reference = null;
@@ -100,7 +100,7 @@ for (const [rest, langs] of byPath) {
     if (reference === null) reference = key;
     else if (key !== reference) asym.push(rest || '/');
     const xdef = [...alts].find((a) => a.startsWith('x-default='));
-    if (!xdef || !xdef.endsWith(`/${rest === '/flight-map' ? 'ru' : 'en'}${rest}`)) badXdef.push(loc);
+    if (!xdef || !xdef.endsWith(`/en${rest}`)) badXdef.push(loc);
     for (const a of alts) {
       const code = a.split('=')[0];
       if (code !== 'x-default' && !LOCALES.includes(code)) badCode.push(`${loc}: ${code}`);
@@ -115,7 +115,7 @@ say(missingLang.length === 0, missingLang.length
   : `каждый из ${byPath.size.toLocaleString('ru-RU')} путей заявлен на всех своих языках`);
 say(noSelf.length === 0, noSelf.length ? `нет ссылки на себя среди альтернатив: ${show(noSelf)}` : 'каждая запись ссылается на себя');
 say(asym.length === 0, asym.length ? `альтернативы НЕ взаимны: ${show(asym)}` : 'альтернативы взаимны у всех языковых версий');
-say(badXdef.length === 0, badXdef.length ? `неверный x-default: ${show(badXdef)}` : 'x-default ведёт на готовую версию (RU у карты, EN у остальных)');
+say(badXdef.length === 0, badXdef.length ? `неверный x-default: ${show(badXdef)}` : 'x-default ведёт на английскую версию');
 say(badCode.length === 0, badCode.length ? `неизвестные коды языков: ${show(badCode)}` : 'коды языков только из тех, что сайт отдаёт');
 
 // ── Доставка: только против прода, где стоит nginx ───────────────────────────────────────

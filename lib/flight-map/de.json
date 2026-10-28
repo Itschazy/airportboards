@@ -1,0 +1,51 @@
+{
+  "title": "Persönliche Flugkarte — kostenlos, ohne Anmeldung",
+  "description": "Trage vergangene Flüge ein, speichere sie in diesem Browser und lade deine Karte als PNG herunter. Datum und Flugnummer sind optional. Sicherung als JSON.",
+  "heading": "Meine Flüge auf einer Karte",
+  "summary": "Über die Flugkarte",
+  "intro": "Die Flugkarte von AirportsBoard ist ein kostenloses persönliches Flugtagebuch im Browser. Trage Abflug- und Zielflughäfen selbst ein, um Routen, die Anzahl deiner Flüge und ungefähre Entfernungen zwischen Flughäfen zu sehen.",
+  "stepsHeading": "So erstellst du deine Flugkarte",
+  "steps": [
+    "Wähle „Flug hinzufügen“ und suche beide Flughäfen nach Stadt, Name oder IATA-Code.",
+    "Ergänze Datum und Flugnummer, falls du sie weißt. Beide Angaben sind freiwillig.",
+    "Sieh dir alle Flüge oder ein bestimmtes Jahr an. Speichere ein PNG zum Teilen und eine JSON-Sicherung zur Wiederherstellung."
+  ],
+  "faqHeading": "Fragen zur Flugkarte",
+  "faq": [
+    {
+      "question": "Ist die Flugkarte kostenlos?",
+      "answer": "Ja. Du kannst ohne Bezahlung oder Registrierung Flüge hinzufügen und Bilder speichern."
+    },
+    {
+      "question": "Kann ich einen Flug ohne Datum und Flugnummer hinzufügen?",
+      "answer": "Ja. Wähle den Abflug- und den Ankunftsflughafen. Datum und Flugnummer kannst du leer lassen. Flüge ohne Datum erscheinen unter Alle Jahre. Du findest sie im Verlauf mit dem Filter Ohne Datum."
+    },
+    {
+      "question": "Wo werden meine Flüge gespeichert?",
+      "answer": "In diesem Browser auf diesem Gerät. Lade eine JSON-Sicherung herunter und stelle sie auf einem anderen Gerät wieder her. Beim Löschen der Browserdaten kann die Flugliste verloren gehen. Der private Modus eignet sich nicht zur dauerhaften Speicherung. Es gibt keine automatische Synchronisierung zwischen Geräten. Speichere eine JSON-Sicherung."
+    },
+    {
+      "question": "Wie übertrage ich meine Flüge auf ein anderes Handy?",
+      "answer": "Öffne „Speichern und sichern“, speichere die JSON-Datei und stelle sie auf dem anderen Gerät wieder her. Vor dem Hinzufügen erscheint eine Vorschau. Gleiche Einträge werden nicht doppelt angelegt; abweichende Einträge überschreiben die vorhandenen nicht."
+    },
+    {
+      "question": "Zeigt die Karte Flugzeuge in Echtzeit?",
+      "answer": "Nein. Sie zeigt vergangene Flüge, die du selbst einträgst. Sie verfolgt keine Flugzeuge und importiert keine Flüge aus deinen E-Mails."
+    },
+    {
+      "question": "Wie werden Entfernungen und Länder gezählt?",
+      "answer": "Die Entfernung entspricht ungefähr dem kürzesten Weg auf einer Kugel zwischen Flughäfen, nicht dem tatsächlich geflogenen Weg. Gezählt werden die Länder der Flughäfen auf der Karte, unabhängig davon, ob du eingereist bist."
+    },
+    {
+      "question": "Was sieht man auf dem Bild zum Teilen?",
+      "answer": "Routen, Städte, Flughafencodes und Statistiken. Genaue Daten und Flugnummern erscheinen nicht im PNG. Die JSON-Sicherung enthält dagegen auch die eingegebenen Daten und Flugnummern."
+    },
+    {
+      "question": "Wie teile ich meine Karte in Telegram, Instagram oder einer anderen App?",
+      "answer": "Wähle Teilen und speichere ein PNG oder öffne das Teilen-Menü des Geräts. Welche Apps angezeigt werden, hängt von Handy und Browser ab. Fehlt eine App, speichere das Bild und lade es selbst hoch. Der Link zum Tool enthält deinen persönlichen Flugverlauf nicht."
+    }
+  ],
+  "cta": "Flugkarte öffnen",
+  "previewNote": "",
+  "imageAlt": "Beispiel einer Flugkarte von AirportsBoard"
+}

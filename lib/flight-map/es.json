@@ -1,0 +1,51 @@
+{
+  "title": "Mapa de mis vuelos — gratis y sin registro",
+  "description": "Añade vuelos anteriores, guarda tu historial en este navegador y descarga el mapa en PNG. Fecha y número opcionales. Copia de seguridad en JSON.",
+  "heading": "Mis vuelos en el mapa",
+  "summary": "Acerca del mapa de vuelos",
+  "intro": "El mapa de vuelos de AirportsBoard es un diario personal gratuito en el navegador. Añade manualmente los aeropuertos de salida y llegada para ver tus rutas, el número de vuelos y las distancias aproximadas entre aeropuertos.",
+  "stepsHeading": "Cómo crear tu mapa de vuelos",
+  "steps": [
+    "Pulsa «Añadir vuelo» y busca ambos aeropuertos por ciudad, nombre o código IATA.",
+    "Introduce la fecha y el número de vuelo si los recuerdas. Ambos datos son opcionales.",
+    "Consulta todos tus vuelos o filtra por año. Guarda un PNG para compartir y una copia JSON para restaurar tu historial."
+  ],
+  "faqHeading": "Preguntas sobre el mapa de vuelos",
+  "faq": [
+    {
+      "question": "¿El mapa de vuelos es gratuito?",
+      "answer": "Sí. Puedes añadir vuelos y guardar imágenes sin pagar ni registrarte."
+    },
+    {
+      "question": "¿Puedo añadir un vuelo sin fecha ni número?",
+      "answer": "Sí. Elige los aeropuertos de salida y llegada. La fecha y el número de vuelo son opcionales. Los vuelos sin fecha aparecen en Todos los años. Puedes encontrarlos en el historial con el filtro Sin fecha."
+    },
+    {
+      "question": "¿Dónde se guarda mi historial?",
+      "answer": "En este navegador y en este dispositivo. Descarga una copia JSON y restáurala en otro dispositivo para trasladarlo. Borrar los datos del navegador puede eliminar el historial. El modo privado no es adecuado para guardar datos de forma permanente. No hay sincronización automática entre dispositivos. Guarda una copia JSON."
+    },
+    {
+      "question": "¿Cómo traslado mi historial a otro teléfono?",
+      "answer": "Abre «Guardar y hacer copia», guarda el archivo JSON y restáuralo en el otro dispositivo. Verás una vista previa antes de añadir registros. Los registros iguales no se duplican; los que presentan conflictos no sustituyen a los actuales."
+    },
+    {
+      "question": "¿Es un mapa de aviones en tiempo real?",
+      "answer": "No. Muestra los vuelos realizados que introduces manualmente. No rastrea aviones ni importa vuelos desde tu correo electrónico."
+    },
+    {
+      "question": "¿Cómo se calculan las distancias y los países?",
+      "answer": "La distancia es una estimación del trayecto más corto sobre una esfera entre aeropuertos, no de la ruta real del avión. El número de países corresponde a los aeropuertos del mapa y no demuestra que hayas entrado en esos países."
+    },
+    {
+      "question": "¿Qué aparece en la imagen para compartir?",
+      "answer": "Rutas, ciudades, códigos de aeropuertos y estadísticas. El PNG no muestra fechas exactas ni números de vuelo. La copia JSON incluye el historial con las fechas y los números que hayas introducido."
+    },
+    {
+      "question": "¿Cómo comparto mi mapa en Telegram, Instagram u otra aplicación?",
+      "answer": "Pulsa Compartir y guarda un PNG o abre el menú de compartir del sistema. Las aplicaciones disponibles dependen del teléfono y del navegador. Si falta una, guarda la imagen y súbela tú. El enlace a la herramienta no contiene tu historial personal."
+    }
+  ],
+  "cta": "Abrir el mapa de vuelos",
+  "previewNote": "",
+  "imageAlt": "Ejemplo de mapa de vuelos de AirportsBoard"
+}

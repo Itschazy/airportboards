@@ -1,0 +1,51 @@
+{
+  "title": "Carte de mes vols — gratuite, sans inscription",
+  "description": "Ajoutez vos vols passés, gardez votre historique dans ce navigateur et exportez la carte en PNG. Date et numéro facultatifs. Sauvegarde JSON disponible.",
+  "heading": "Mes vols sur une carte",
+  "summary": "À propos de la carte de vols",
+  "intro": "La carte de vols AirportsBoard est un carnet personnel gratuit dans votre navigateur. Ajoutez manuellement les aéroports de départ et d’arrivée pour voir vos trajets, le nombre de vols et les distances approximatives entre aéroports.",
+  "stepsHeading": "Comment créer votre carte de vols",
+  "steps": [
+    "Choisissez « Ajouter un vol » et recherchez les deux aéroports par ville, nom ou code IATA.",
+    "Indiquez la date et le numéro de vol si vous les connaissez. Ces deux champs sont facultatifs.",
+    "Affichez tous vos vols ou une année précise. Enregistrez un PNG à partager et une sauvegarde JSON pour restaurer votre carnet."
+  ],
+  "faqHeading": "Questions sur la carte de vols",
+  "faq": [
+    {
+      "question": "La carte de vols est-elle gratuite ?",
+      "answer": "Oui. Vous pouvez ajouter des vols et enregistrer des images sans paiement ni inscription."
+    },
+    {
+      "question": "Puis-je ajouter un vol sans date ni numéro ?",
+      "answer": "Oui. Choisissez les aéroports de départ et d’arrivée. La date et le numéro de vol sont facultatifs. Les vols sans date apparaissent dans Toutes les années. Pour les retrouver dans l’historique, utilisez le filtre Sans date."
+    },
+    {
+      "question": "Où mon historique de vols est-il enregistré ?",
+      "answer": "Dans ce navigateur, sur cet appareil. Téléchargez une sauvegarde JSON pour la restaurer sur un autre appareil. Effacer les données du navigateur peut supprimer votre historique. La navigation privée ne convient pas au stockage durable. Il n’y a pas de synchronisation automatique entre appareils. Enregistrez une sauvegarde JSON."
+    },
+    {
+      "question": "Comment transférer mon carnet sur un autre téléphone ?",
+      "answer": "Ouvrez « Enregistrement et sauvegarde », enregistrez le fichier JSON et restaurez-le sur l’autre appareil. Un aperçu s’affiche avant l’ajout. Les entrées identiques ne sont pas dupliquées ; les entrées en conflit ne remplacent pas les entrées actuelles."
+    },
+    {
+      "question": "Est-ce une carte de suivi des avions en temps réel ?",
+      "answer": "Non. Elle affiche les vols passés que vous saisissez manuellement. Elle ne suit pas les avions et n’importe pas votre historique depuis vos e-mails."
+    },
+    {
+      "question": "Comment calcule-t-on les distances et le nombre de pays ?",
+      "answer": "La distance est une estimation du plus court trajet sur une sphère entre aéroports, pas la trajectoire réelle de l’avion. Les pays comptés sont ceux des aéroports de la carte, sans prouver que vous y êtes entré."
+    },
+    {
+      "question": "Que montre l’image à partager ?",
+      "answer": "Les trajets, les villes, les codes des aéroports et les statistiques. Les dates exactes et les numéros de vol ne figurent pas dans le PNG. La sauvegarde JSON contient le carnet, y compris les dates et numéros saisis."
+    },
+    {
+      "question": "Comment partager ma carte dans Telegram, Instagram ou une autre application ?",
+      "answer": "Choisissez Partager, puis enregistrez un PNG ou ouvrez le menu de partage du système. Les applications disponibles dépendent du téléphone et du navigateur. Si une application manque, enregistrez l’image et importez-la vous-même. Le lien de l’outil ne contient pas votre historique personnel."
+    }
+  ],
+  "cta": "Ouvrir la carte de vols",
+  "previewNote": "",
+  "imageAlt": "Exemple de carte de vols AirportsBoard"
+}

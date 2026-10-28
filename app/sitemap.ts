@@ -178,11 +178,8 @@ async function buildAll(): Promise<MetadataRoute.Sitemap> {
   {
     entries.push(...entry('', 'daily', 0.8));               // home
     entries.push(...entry('/airports', 'weekly', 0.7));     // countries index
-    // Журнал пока работает только на русском. Не заявляем 11 переводов
-    // описания как готовые инструменты; x-default ведёт на реальный RU URL.
-    entries.push({ url: `${BASE}/ru/flight-map`, changeFrequency: 'monthly', priority: 0.6,
-      lastModified: new Date('2026-10-28T00:00:00Z'),
-      alternates: { languages: { ru: `${BASE}/ru/flight-map`, 'x-default': `${BASE}/ru/flight-map` } } });
+    // Все 12 вариантов переводят сам инструмент, а не только SEO-описание.
+    entries.push(...entry('/flight-map', 'monthly', 0.6));
     // Legal / info pages — low priority but crawlable (AdSense reviewers & Googlebot
     // must be able to reach the Privacy Policy et al.).
     for (const p of ['/privacy', '/terms', '/about', '/contact']) entries.push(...entry(p, 'yearly', 0.3, LEGAL_LOCALES));

@@ -1,0 +1,51 @@
+{
+  "title": "Kişisel uçuş haritası — ücretsiz, üyelik gerektirmez",
+  "description": "Geçmiş uçuşlarınızı ekleyin, bu tarayıcıda saklayın ve haritanızı PNG olarak indirin. Tarih ve uçuş numarası isteğe bağlıdır. JSON yedekleme sunulur.",
+  "heading": "Uçuşlarım haritada",
+  "summary": "Uçuş haritası hakkında",
+  "intro": "AirportsBoard uçuş haritası, tarayıcınızda çalışan ücretsiz bir kişisel uçuş günlüğüdür. Rotalarınızı, uçuş sayısını ve havalimanları arasındaki yaklaşık mesafeleri görmek için kalkış ve varış havalimanlarını elle ekleyin.",
+  "stepsHeading": "Uçuş haritası nasıl oluşturulur?",
+  "steps": [
+    "«Uçuş ekle» seçeneğine dokunun; iki havalimanını şehir, ad veya IATA koduyla bulun.",
+    "Hatırlıyorsanız tarih ve uçuş numarasını ekleyin. İki alan da isteğe bağlıdır.",
+    "Tüm uçuşları veya seçtiğiniz yılı görüntüleyin. Paylaşmak için PNG, geçmişi geri yüklemek için JSON yedeği kaydedin."
+  ],
+  "faqHeading": "Uçuş haritasıyla ilgili sorular",
+  "faq": [
+    {
+      "question": "Uçuş haritası ücretsiz mi?",
+      "answer": "Evet. Ödeme yapmadan veya kayıt olmadan uçuş ekleyebilir ve görsel kaydedebilirsiniz."
+    },
+    {
+      "question": "Tarih ve uçuş numarası olmadan uçuş ekleyebilir miyim?",
+      "answer": "Evet. Kalkış ve varış havalimanlarını seçin. Tarihi ve uçuş numarasını boş bırakabilirsiniz. Tarihsiz uçuşlar Tüm yıllar görünümünde yer alır. Geçmişte Tarihsiz filtresiyle bulabilirsin."
+    },
+    {
+      "question": "Uçuş geçmişim nerede saklanır?",
+      "answer": "Bu cihazdaki bu tarayıcıda. Başka bir cihaza taşımak için JSON yedeğini indirip orada geri yükleyin. Tarayıcı verilerini silmek uçuş geçmişinizi silebilir. Gizli mod, kalıcı saklama için uygun değildir. Cihazlar arasında otomatik eşitleme yoktur. JSON yedeği kaydet."
+    },
+    {
+      "question": "Geçmişimi başka bir telefona nasıl aktarırım?",
+      "answer": "«Kayıt ve yedekleme» bölümünü açın, JSON dosyasını kaydedin ve diğer cihazda geri yükleyin. Kayıtlar eklenmeden önce önizleme gösterilir. Aynı kayıtlar çoğaltılmaz; çakışan kayıtlar mevcut kayıtların yerini almaz."
+    },
+    {
+      "question": "Bu, uçakları canlı takip eden bir harita mı?",
+      "answer": "Hayır. Elle eklediğiniz geçmiş uçuşları gösterir. Uçakları takip etmez ve e-postanızdaki uçuş geçmişini içe aktarmaz."
+    },
+    {
+      "question": "Mesafe ve ülke sayısı nasıl hesaplanır?",
+      "answer": "Mesafe, havalimanları arasında bir küre üzerindeki en kısa yolun yaklaşık uzunluğudur; uçağın gerçek rotası değildir. Ülke sayısı haritadaki havalimanlarının ülkelerini gösterir ve bu ülkelere giriş yaptığınız anlamına gelmez."
+    },
+    {
+      "question": "Paylaşılacak görselde neler görünür?",
+      "answer": "Rotalar, şehirler, havalimanı kodları ve istatistikler. Kesin tarihler ve uçuş numaraları PNG dosyasında gösterilmez. JSON yedeği, girdiğiniz tarih ve numaralar dahil geçmişinizi içerir."
+    },
+    {
+      "question": "Haritamı Telegram, Instagram veya başka bir uygulamada nasıl paylaşırım?",
+      "answer": "Paylaş’a dokunup PNG kaydet veya sistemin paylaşım menüsünü aç. Uygulama listesi telefona ve tarayıcıya bağlıdır. İstediğin uygulama yoksa görseli kaydedip kendin yükle. Aracın bağlantısı kişisel uçuş geçmişini içermez."
+    }
+  ],
+  "cta": "Uçuş haritasını aç",
+  "previewNote": "",
+  "imageAlt": "AirportsBoard örnek uçuş haritası"
+}

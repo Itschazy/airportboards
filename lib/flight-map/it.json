@@ -1,0 +1,51 @@
+{
+  "title": "Mappa dei miei voli — gratis, senza registrazione",
+  "description": "Aggiungi i voli passati, conserva lo storico in questo browser e scarica la mappa in PNG. Data e numero sono facoltativi. Backup in formato JSON.",
+  "heading": "I miei voli sulla mappa",
+  "summary": "Informazioni sulla mappa dei voli",
+  "intro": "La mappa dei voli di AirportsBoard è un diario personale gratuito nel browser. Aggiungi manualmente gli aeroporti di partenza e arrivo per vedere le rotte, il numero di voli e le distanze approssimative tra aeroporti.",
+  "stepsHeading": "Come creare la tua mappa dei voli",
+  "steps": [
+    "Scegli «Aggiungi volo» e cerca entrambi gli aeroporti per città, nome o codice IATA.",
+    "Inserisci la data e il numero del volo, se li ricordi. Entrambi i campi sono facoltativi.",
+    "Visualizza tutti i voli o filtra per anno. Salva un PNG da condividere e un backup JSON per ripristinare il diario."
+  ],
+  "faqHeading": "Domande sulla mappa dei voli",
+  "faq": [
+    {
+      "question": "La mappa dei voli è gratuita?",
+      "answer": "Sì. Puoi aggiungere voli e salvare immagini senza pagare né registrarti."
+    },
+    {
+      "question": "Posso aggiungere un volo senza data o numero?",
+      "answer": "Sì. Scegli gli aeroporti di partenza e arrivo. Puoi lasciare vuoti la data e il numero del volo. I voli senza data compaiono in Tutti gli anni. Puoi trovarli nella cronologia con il filtro Senza data."
+    },
+    {
+      "question": "Dove viene salvato lo storico?",
+      "answer": "In questo browser, su questo dispositivo. Scarica un backup JSON e ripristinalo su un altro dispositivo per trasferirlo. Cancellare i dati del browser può eliminare lo storico. La navigazione privata non è adatta alla conservazione permanente. Non c’è sincronizzazione automatica tra dispositivi. Salva un backup JSON."
+    },
+    {
+      "question": "Come trasferisco il diario su un altro telefono?",
+      "answer": "Apri «Salvataggio e backup», salva il file JSON e ripristinalo sull’altro dispositivo. Prima di aggiungere i dati appare un’anteprima. Le voci identiche non vengono duplicate; quelle in conflitto non sostituiscono le voci attuali."
+    },
+    {
+      "question": "È una mappa degli aerei in tempo reale?",
+      "answer": "No. Mostra i voli già effettuati che inserisci manualmente. Non segue gli aerei e non importa la cronologia dalle e-mail."
+    },
+    {
+      "question": "Come si calcolano le distanze e il numero di paesi?",
+      "answer": "La distanza è una stima del percorso più breve su una sfera tra aeroporti, non della rotta effettiva dell’aereo. Il numero di paesi riguarda gli aeroporti sulla mappa e non dimostra che tu sia entrato in quei paesi."
+    },
+    {
+      "question": "Cosa appare nell’immagine da condividere?",
+      "answer": "Rotte, città, codici degli aeroporti e statistiche. Il PNG non mostra date esatte né numeri di volo. Il backup JSON contiene il diario, comprese le date e i numeri inseriti."
+    },
+    {
+      "question": "Come condivido la mappa su Telegram, Instagram o un’altra app?",
+      "answer": "Scegli Condividi e salva un PNG oppure apri il menu di condivisione del sistema. Le app disponibili dipendono dal telefono e dal browser. Se un’app non compare, salva l’immagine e caricala manualmente. Il link allo strumento non contiene la tua cronologia personale."
+    }
+  ],
+  "cta": "Apri la mappa dei voli",
+  "previewNote": "",
+  "imageAlt": "Esempio di mappa dei voli AirportsBoard"
+}

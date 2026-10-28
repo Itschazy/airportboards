@@ -13,7 +13,7 @@ assert.equal((visible.match(/<h1[ >]/g)||[]).length,1);
 assert.match(visible,/О карте перелётов/);assert.match(visible,/Автоматической синхронизации между устройствами нет/);
 assert.match(html,new RegExp(`<link rel="canonical" href="${url}"`));
 assert.match(html,/<meta name="robots" content="index, follow"/);
-assert.match(html,/<meta property="og:image" content="https:\/\/airportsboard.live\/images\/flight-map-demo.jpg"/);
+assert.match(html,/<meta property="og:image" content="https:\/\/airportsboard.live\/images\/flight-map-ru.jpg"/);
 assert.match(visible,/<a[^>]+href="\/ru\/flight-map"/);
 assert.ok(!visible.includes('my-flights-prototype'));
 assert.match(html,/id=\"journalSearch\"/);assert.match(html,/id=\"undatedOnly\"/);assert.match(html,/id=\"saveMore\"/);assert.match(html,/id=\"shareService\"/);
@@ -28,8 +28,20 @@ for(const q of faq.mainEntity){assert.ok(decode(visible).includes(q.name));asser
 for(const m of html.matchAll(/<script\b([^>]*)>([\s\S]*?)<\/script>/g)){
  if(!m[1].includes('ld+json')&&!m[1].includes('src='))new vm.Script(m[2]);
 }
-for(const locale of ['en','de','fr','es','it','tr','zh','ja','ko','ar','hi'])assert.equal((await get(`/${locale}/flight-map`)).status,404,locale);
-for(const path of ['/flight-map/v3/app.js','/flight-map/v3/journal.js','/flight-map/v3/gestures.js','/flight-map/v2/app.js','/flight-map/v2/map.js','/flight-map/v2/share.js','/flight-map/v2/storage.js','/flight-map/v2/jobs.js','/flight-map/v2/entry.js','/flight-map/v2/sharing.js','/flight-map/v1/land-v2.json','/flight-map/v1/flags/ru.svg','/flight-map/v1/flags/jp.svg','/flight-map/v1/app.js','/flight-map/v1/share.js','/flight-map/v1/airports.json','/flight-map/v1/land.json','/images/flight-map-demo.jpg']){
+for(const locale of ['ru','en','de','fr','es','it','tr','zh','ja','ko','ar','hi']){
+ const r=await get(`/${locale}/flight-map`);assert.equal(r.status,200,locale);const h=await r.text();
+ const v=decode(h.replace(/<script\b[^>]*>[\s\S]*?<\/script>/g,'').replace(/<style\b[^>]*>[\s\S]*?<\/style>/g,''));
+ assert.equal((v.match(/<h1[ >]/g)||[]).length,1,locale);assert.ok(h.includes(`rel="canonical" href="https://airportsboard.live/${locale}/flight-map"`));
+ for(const l of ['ru','en','de','fr','es','it','tr','zh','ja','ko','ar','hi'])assert.ok(h.includes(`hrefLang="${l}" href="https://airportsboard.live/${l}/flight-map"`),locale+'/'+l);
+ if(locale!=='ru')assert.doesNotMatch(v.replace(/<a[^>]*lang="ru"[^>]*>[\s\S]*?<\/a>/g,''),/[А-Яа-яЁё]/,locale+' leaked Russian');
+ assert.doesNotMatch(v,/undefined|\{\{m\d+\}\}/);assert.ok(v.includes(`lang="${locale}" dir="${locale==='ar'?'rtl':'ltr'}"`));
+ const graph=[...h.matchAll(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/g)].map(m=>JSON.parse(m[1])).flatMap(d=>d['@graph']||[]);
+ const f=graph.find(n=>n['@type']==='FAQPage');assert.equal(f.mainEntity.length,8,locale);assert.equal(f.inLanguage,locale);
+ for(const q of f.mainEntity){assert.ok(v.includes(q.name),locale+' question');assert.ok(v.includes(q.acceptedAnswer.text),locale+' answer');}
+ assert.equal((await get(`/flight-map/v4/airports-${locale}.json`)).status,200);
+ const image=await get(`/images/flight-map-${locale}.jpg`);assert.equal(image.status,200);assert.match(image.headers.get('content-type'),/image\/jpeg/);
+}
+for(const path of ['/flight-map/v4/app.js','/flight-map/v4/entry.js','/flight-map/v4/journal.js','/flight-map/v4/share.js','/flight-map/v4/i18n.js','/flight-map/v4/storage.js','/flight-map/v4/sharing.js','/flight-map/v3/app.js','/flight-map/v3/journal.js','/flight-map/v3/gestures.js','/flight-map/v2/app.js','/flight-map/v2/map.js','/flight-map/v2/share.js','/flight-map/v2/storage.js','/flight-map/v2/jobs.js','/flight-map/v2/entry.js','/flight-map/v2/sharing.js','/flight-map/v1/land-v2.json','/flight-map/v1/flags/ru.svg','/flight-map/v1/flags/jp.svg','/flight-map/v1/app.js','/flight-map/v1/share.js','/flight-map/v1/airports.json','/flight-map/v1/land.json','/images/flight-map-demo.jpg']){
  const r=await get(path);assert.equal(r.status,200,path);
  if(path.endsWith('.jpg')){assert.match(r.headers.get('content-type'),/image\/jpeg/);const b=new Uint8Array(await r.arrayBuffer());assert.equal(b[0],255);assert.equal(b[1],216);}
 }
@@ -37,6 +49,6 @@ for(const path of ['/flight-map/v3/app.js','/flight-map/v3/journal.js','/flight-
 for(const path of ['/ru','/ru/settings','/ru/favorites','/en']){
  const r=await get(path);assert.equal(r.status,200,path);const h=await r.text();
  assert.ok(!h.includes('.flight-map-root'),path+' scoped CSS leaked');
- assert.ok(!/\/flight-map\/v[123]\/app\.js/.test(h),path+' tool code leaked');
+ assert.ok(!/\/flight-map\/v[1234]\/app\.js/.test(h),path+' tool code leaked');
 }
-console.log('Flight map: SSR/SEO, inline JS, RU navigation, 11 honest 404s, 18 assets and 4 adjacent pages OK');
+console.log('Flight map: SSR/SEO, inline JS, 12 localized pages/navigation/catalogues/OG images, compatible old and new assets and 4 adjacent pages OK');

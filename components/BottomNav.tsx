@@ -63,17 +63,17 @@ export function BottomNav({ locale }: { locale: Locale }) {
           <span className="bn-label">{t('favorites')}</span>
         </Link>
 
-        {/* Личный журнал пока переведён только на русский. Не ведём остальные
-            локали на заглушки; подпись заранее есть во всех каталогах. Иконки,
-            цвета и поведение прежних трёх разделов сохранены. */}
-        {locale === 'ru' && <Link href={`/${locale}/flight-map`} prefetch={false}
+        {/* Журнал и его помощь теперь переведены на все 12 языков. Ссылка
+            появляется после проверки полного инструмента, а не SEO-заглушек.
+            Прежние иконки, цвета и поведение соседних разделов сохранены. */}
+        <Link href={`/${locale}/flight-map`} prefetch={false}
           className={`press bn-item${isMap ? ' bn-item--on' : ''}`} aria-current={isMap ? 'page' : undefined}>
           <svg width="26" height="26" viewBox="0 0 24 24" fill={isMap ? 'currentColor' : 'none'}
             stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
             <path d="m22 16-8-5V4.5a2 2 0 0 0-4 0V11l-8 5v2l8-2.5V20l-2 1v1l4-1 4 1v-1l-2-1v-4.5l8 2.5Z" />
           </svg>
           <span className="bn-label">{t('my_flights')}</span>
-        </Link>}
+        </Link>
 
         <Link href={`/${locale}/settings`} className={`press bn-item${isSet ? ' bn-item--on' : ''}`} aria-current={isSet ? 'page' : undefined}>
           {/* Шестерня: шесть зубцов, а не восемь. Восемь на 26px сливались в круг,
