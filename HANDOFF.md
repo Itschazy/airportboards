@@ -1635,3 +1635,16 @@ Postdeploy:index20/20,sitemap-hreflang,live-refresh,adsense,flight-map PASS. Д�
 Cwd /Users/whereiszhenya/projects/runwayboard-flight-map-prototype-20261028, веткаcodex/flight-map-prototype-20261028. СобственныеQAпроцессы/вкладкизакрыты, сборки/node_modules symlinkперенесеныв/tmp/ab-flight-map-builds-20261029/v9-final, generatedTSвосстановлены. Старый3103/чужиекопии не тронуты. CPU6× сохранённыйпрофильChrome не сбрасывался через чужую активную вкладку; собственная эмуляция закончена закрытием своей вкладки, при следующемQA проверитьпрофиль. DNS/SEO/дизайнсоседнихстраниц/историясохранены. V9теперьimmutable.
 
 Отчёт ops/prototypes/flight-map/qa/FULL-SEARCH-V9-20261029.md; артефактыoutputs/flight-map-v9-20261029 основногоCodexworkspace.
+
+
+## Codex, 29.10.2026 — пакет по Метрике подготовлен, выкат ждёт решения
+
+Рабочая копия `/Users/whereiszhenya/projects/runwayboard-flight-map-prototype-20261028`, ветка `codex/flight-map-prototype-20261028`. Пакет перенесён поверх `origin/main fba7779a` без конфликтов; шесть новых коммитов другого участника сохранены. Кодовый HEAD `a6a7d5d4`. Push/выката этого пакета не было.
+
+Сделано: 13 точных JS-целей Метрики добавлены после отдельного согласия (14 вместе с прежней автоцелью, повторный dry-run добавить0); три полезных FAQ по отсутствующему рейсу, дате и терминалу на12языках; согласованы amenityFeature Airport на прилётах; устранено обрезание длительности в карточке; поиск принимает видимое русское и исходное английское имя авиакомпании, карточка показывает то же имя. Коммиты: 67d0f547, f165aba9, a534e289, 52b865dc, a6a7d5d4.
+
+Проверки: fixture build2461, tsc, track, board-interactions/regressions, live-refresh, ICU, scripts, client-messages, guide-fresh177/177, SEO metadata/facts/generated-prose, arrivals, sitemap/hreflang, AdSense и локальный index20/20 — PASS. check-board-help: все12локалей, совпадение видимых FAQ и JSON-LD, пустой DME/закрытый TXL/без регулярного сообщения LBG. Ручной Chromium375/320, FAQ12локалей, SSH3плитки/LWN/DME; настоящий Safari на Mac375: поиск, открытие/закрытие и Escape. Финальный поиск «Уральские» и карточка проверены в обоих движках. Физических телефонов и нового CPU/LCP-бенчмарка не было.
+
+Вебмастер подтвердил сбой: API и UI показывают статистику только до06.10, причина падения15–28.10 не установлена. RUM22–28.10:10100 первых мобильных навигаций; DME/приложение Яндекса213, из них25 LCP>4с, все на старых релизах. Медленная подгруппа: медианы LCP10292мс/TTFB509мс/render delay9728мс; эти распределения не вычитать как один визит. По категории text нельзя установить конкретный элемент. Сегодняшнее улучшение скорости/трафика не доказано.
+
+Отчёт и снимки: `/Users/whereiszhenya/Documents/Codex/2026-10-18/airportsboard-live-12-next-js-15/outputs/metrika-implementation-20261029/report.html`. План и воспроизводимые проверки: ops/metrika-growth-20261029. Следующее: показать пакет владельцу, получить подтверждение, затем сверить свежий main и выкатить вне окна прогрева с production audit-bot checks. Цели уже живые; код пока локальный. DNS/дизайн/платные данные не тронуты.
