@@ -137,18 +137,20 @@ export function SettingsControls({ locale }: { locale: Locale }) {
           <ul className="set-langs">
             {locales.map(loc => (
               <li key={loc}>
-                {/* lang и dir на самой ссылке: «العربية» внутри русской страницы иначе
-                    читается программой чтения с экрана правилами русского языка. */}
+                {/* lang и dir стоят на САМОМ НАЗВАНИИ, а не на плитке: «العربية» внутри
+                    русской страницы иначе читается программой чтения с экрана правилами
+                    русского языка. На плитке dir="rtl" ещё и переворачивал раскладку —
+                    у одной строки из двенадцати флаг уезжал к правому краю, и столбец
+                    флагов ломался. Направление нужно тексту, а не коробке. */}
                 <Link
                   href={`/${loc}/settings`}
                   hrefLang={loc}
                   lang={loc}
-                  dir={rtlLocales.includes(loc) ? 'rtl' : 'ltr'}
                   className={`set-lang${loc === locale ? ' set-lang--on' : ''}`}
                   aria-current={loc === locale ? 'true' : undefined}
                 >
                   <span aria-hidden="true" className="locale-flag">{localeFlags[loc]}</span>
-                  {localeNames[loc]}
+                  <bdi lang={loc} dir={rtlLocales.includes(loc) ? 'rtl' : 'ltr'}>{localeNames[loc]}</bdi>
                 </Link>
               </li>
             ))}
