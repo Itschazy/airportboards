@@ -151,7 +151,7 @@ for(const side of ['from','to']){
   list.querySelectorAll('button').forEach((b,i)=>{b.onclick=()=>choose(b.dataset.code);b.onkeydown=e=>{const bs=[...list.querySelectorAll('button')];if(e.key==='ArrowDown'||e.key==='ArrowUp'){e.preventDefault();bs[(i+(e.key==='ArrowDown'?1:bs.length-1))%bs.length].focus();}if(e.key==='Escape'){e.preventDefault();e.stopPropagation();input.focus();hideSuggestions();}};});
  };
  input.oninput=()=>{choice[side]=null;$('#formError').textContent='';const pair=routePair(input.value,airportCodes);if(pair){setAirport('from',pair.from);setAirport('to',pair.to);hideSuggestions();$('#saveFlight').focus();return;}show();};
- input.onfocus=()=>{input.placeholder=hint;if(choice[side])input.select();};
+ input.onfocus=()=>{input.placeholder=hint;if(!choice[side])return;if(matchMedia('(pointer:fine)').matches)input.select();else input.setSelectionRange(input.value.length,input.value.length);};
  input.onblur=()=>{input.placeholder=label;};
  input.onkeydown=e=>{if((e.key==='ArrowDown'||e.key==='Enter')&&!e.isComposing&&list.querySelector('[data-code]')){e.preventDefault();if(e.key==='Enter')choose(list.querySelector('[data-code]').dataset.code);else list.querySelector('[data-code]').focus();}if(e.key==='Escape'&&list.childElementCount){e.preventDefault();e.stopPropagation();hideSuggestions();}};
 }
