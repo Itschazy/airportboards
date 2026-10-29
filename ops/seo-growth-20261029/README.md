@@ -56,3 +56,7 @@ python3 ops/seo-growth-20261029/cohort.py /tmp/ab-cohort https://airportsboard.l
 - Справочные не добавляют клиентский JS: это существующий SSR-компонент с нативным details. Новых зависимостей/сетевых запросов нет. Показатели LCP реальных пользователей в этом этапе не измерялись.
 
 Скриншоты и исходные AX/CSV/HTML: `outputs/seo-implementation-20261029` в рабочей папке чата. Точные SHA, статус публикации и оставшиеся действия — в HANDOFF.md. PASS локальной проверки не заменяет post-deploy.
+
+## Результат согласованного выката
+
+Production `0d96b00a`, Actions40851665586 success. 29.10.2026, push10:41 Europe/Amsterdam. Post-deploy: index20/20; sitemap22352URL/hreflang/gzip; arrivals5пар; live-refresh; adsense; карта12языков; справочные96/96 — PASS. Группа30URL self-canonical/indexable/oneH1,29вsitemap (LBAarrivals прежний gate).17страниц иFAQкарты сначала отдавались из старогоISR, повторная проверка успешна. Все обращенияaudit-bot, безплатныхручек. Подробности и ограничения — актуальный HANDOFF.md и outputs/seo-implementation-20261029/postdeploy.
