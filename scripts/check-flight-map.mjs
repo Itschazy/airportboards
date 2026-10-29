@@ -16,7 +16,7 @@ assert.match(html,/<meta name="robots" content="index, follow"/);
 assert.match(html,/<meta property="og:image" content="https:\/\/airportsboard.live\/images\/flight-map-ru.jpg"/);
 assert.match(visible,/<a[^>]+href="\/ru\/flight-map"/);
 assert.ok(!visible.includes('my-flights-prototype'));
-assert.match(html,/id=\"journalSearch\"/);assert.match(html,/id=\"undatedOnly\"/);assert.match(html,/id=\"saveMore\"/);assert.match(html,/id=\"shareService\"/);
+assert.match(html,/id=\"shareService\"/);
 assert.ok(!visible.includes('f_restore_test_20261028'));
 const json=[...html.matchAll(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/g)].map(m=>JSON.parse(m[1]));
 assert.ok(json.some(d=>d['@graph']?.some(n=>n['@type']==='WebPage'&&n.url===url)));

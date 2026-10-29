@@ -35,6 +35,7 @@ export function HeaderActions({ locale, slot }: { locale: Locale; slot: 'share' 
   // прилётов и вылетов — там сердце тоже уместно, поэтому хвост разрешён.
   const iata = pathname.match(new RegExp(`^/${locale}/airport/([A-Z0-9]{3})(?:/|$)`))?.[1] ?? null;
   const [on, setOn] = useState(false);
+  const onMap = pathname === `/${locale}/flight-map`;
 
   useEffect(() => {
     if (!iata) return;
@@ -91,6 +92,43 @@ export function HeaderActions({ locale, slot }: { locale: Locale; slot: 'share' 
     setCopied(true);
     setTimeout(() => setCopied(false), 2000);
   }, [tNav]);
+
+  /**
+   * Карта перелётов отдаёт шапке свои два действия: «Ваша история» слева и «+»
+   * справа. Своей строки заголовка у страницы больше нет — она занимала экран
+   * ради слов, которые и так написаны во вкладке и в нижней панели.
+   *
+   * Нажатие ПЕРЕАДРЕСУЕТСЯ кнопке внутри страницы, а не вызывает движок карты
+   * напрямую: он связывает обработчики только внутри своего корня, и шапка,
+   * которая живёт в раскладке, ему не видна. Пока движок не поднялся, кнопка
+   * внутри страницы выключена — нажатие просто ничего не делает, как и раньше.
+   */
+  if (onMap) {
+    const fire = (action: 'share' | 'add') =>
+      document.querySelector<HTMLButtonElement>(`.flight-map-root [data-action="${action}"]`)?.click();
+    if (slot === 'share') {
+      return (
+        <button type="button" onClick={() => fire('share')} className="press hdr-act"
+                aria-label={tNav('map_share')} title={tNav('map_share')}>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+               strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+            <path d="M12 15.5V3.5" />
+            <path d="M8 7.2 12 3.2l4 4" />
+            <path d="M5 13v5.6A1.4 1.4 0 0 0 6.4 20h11.2a1.4 1.4 0 0 0 1.4-1.4V13" />
+          </svg>
+        </button>
+      );
+    }
+    return (
+      <button type="button" onClick={() => fire('add')} className="press hdr-act"
+              aria-label={tNav('map_add')} title={tNav('map_add')}>
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+             strokeWidth="1.8" strokeLinecap="round" aria-hidden="true">
+          <path d="M12 5v14M5 12h14" />
+        </svg>
+      </button>
+    );
+  }
 
   // Обе кнопки относятся к ОТКРЫТОМУ аэропорту, поэтому вне его страницы их нет.
   // Пустышка, а не null: сетка шапки рассчитана на три ячейки, и без боковых

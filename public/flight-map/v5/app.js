@@ -1,5 +1,4 @@
 import{sameFlights,resizeBox}from'./state.js';
-import{createJournalSearch}from'../v4/journal.js';
 import{gestureBox}from'../v3/gestures.js';
 import{createMap,distance}from'../v2/map.js';
 import{latestJob}from'../v2/jobs.js';
@@ -18,6 +17,15 @@ const {canShareImage,shareImage,serviceLinks,INVITE,SHARE_URL}=createSharing(t,l
 const $=s=>root.querySelector(s), $$=s=>[...root.querySelectorAll(s)];
 const listen=(target,event,handler)=>target.addEventListener(event,handler,{signal});
 const beforeOverflow=document.body.style.overflow;
+// Главное действие не ждёт каталога. Остальные кнопки включаются в конце
+// mount, и правильно: без данных им нечего делать. Но «Добавить перелёт» —
+// единственное, ради чего сюда приходят с пустой картой, и приглушённой она
+// стояла до конца загрузки, а потом на глазах оживала. Теперь она активна
+// сразу и помнит нажатие: форму откроет, как только каталог приедет —
+// раньше её всё равно нечем наполнить.
+let earlyAdd=false;
+const addButtons=$$('[data-action="add"]');
+addButtons.forEach(b=>{b.disabled=false;b.onclick=e=>{e.preventDefault();earlyAdd=true;b.setAttribute('aria-busy','true');};});
 const [airports,land]=await Promise.all([fetch('/flight-map/v4/airports-'+locale+'.json',{signal}).then(r=>{if(!r.ok)throw Error('catalogue');return r.json();}),fetch('/flight-map/v1/land-v2.json',{signal}).then(r=>{if(!r.ok)throw Error('catalogue');return r.json();})]);
 if(signal.aborted)return;
 const model=createMap(airports,land),airport=model.airport;
@@ -26,7 +34,8 @@ let exporterPromise;
 const demo=[['SVX','IST','2025-09-14','TK 476'],['IST','CDG','2025-09-18','TK 1823'],['CDG','IST','2026-02-21','TK 1828'],['IST','SVX','2026-02-22','TK 475'],['SVX','DXB','2026-09-03','FZ 980'],['DXB','BKK','2026-09-04','EK 372']].map((f,id)=>({id:'demo_'+id,from:f[0],to:f[1],date:f[2],number:f[3]}));
 let flights=[],personal=[],isDemo=false,period='',selected=null,editing=null,choice={from:null,to:null},box=null,fullBox=null;
 let shareKind='map',shareFormat='story',shareLight=false,shareCard=null,shareBlob=null,previewURL=null;
-let journalQuery='',journalUndated=false,journalSearch=()=>[];
+// Строка состояния осталась ТОЛЬКО для сбоя: про удачное сохранение человеку
+// сообщать нечего, он видит свой перелёт на карте.
 let journalLimit=50,shareFile=null,sharingBusy=false;
 let store,storageError='',pendingRestore=null,restoreRevision=0;
 try{store=createStore(localStorage,new Set(airports.map(a=>a.code)));flights=personal=store.read();}catch(e){storageError=t("m080")+e.message;}
@@ -43,27 +52,20 @@ function map(){lastMapWidth=$('#mapWrap').clientWidth;lastMapHeight=$('#mapWrap'
 function bindRoutes(svg){svg.querySelectorAll('[data-route]').forEach(p=>p.onclick=()=>{selected=p.dataset.route;render(false);});}
 function renderSelection(el){const f=visible().find(x=>x.id===selected);el.hidden=!f;if(!f){el.innerHTML='';return;}el.innerHTML=`<div><strong>${esc(airport[f.from].city)} → ${esc(airport[f.to].city)}</strong><small>${t("m081",{p2:(fmt(km(f)))})}</small></div><button class="icon" aria-label="${esc(t("m082"))}" data-route-share>↗</button><button class="icon" aria-label="${esc(t("m083"))}" data-unselect>×</button>`;el.querySelector('[data-unselect]').onclick=()=>{selected=null;render(false);};el.querySelector('[data-route-share]').onclick=()=>{if($('#fullMapDialog').open){close($('#fullMapDialog'),()=>makeShare('flight'));return;}makeShare('flight');};}
 function drawFull(){const fs=visible(),wrap=$('#fullMapCanvas');if(!fullBox)fullBox=model.fit(fs,wrap.clientWidth/wrap.clientHeight);wrap.innerHTML=`<svg viewBox="${fullBox.x} ${fullBox.y} ${fullBox.w} ${fullBox.h}" aria-label="${esc(t("m084"))}">${model.body(fs,fullBox,wrap.clientWidth,selected)}</svg>`;bindRoutes(wrap);renderSelection($('#fullMapSelection'));}
-function render(reset=true){if(reset)journalLimit=50;$('#storageStatus').textContent=storageError||(isDemo?t("m085"):t("m086")+personal.length+' '+countLabel('flights',personal.length));$('#storageStatus').classList.toggle('storage-error',!!storageError);const stats=totals();$('.atlas').classList.toggle('is-empty',stats.flights===0);if(reset||!box)fit();map();$('#stats').innerHTML=`<div class="stat"><b>${stats.flights}</b><span>${statLabel('flights',stats.flights)}</span></div><div class="stat"><b>${stats.countries}</b><span>${statLabel('countries',stats.countries)}</span></div><div class="stat"><b>${fmt(stats.km)}</b><span>${t("m088")}</span></div>`;
- $('#journalCount').textContent=period||t("m089");
- const years=[...new Set(flights.map(f=>f.date?.slice(0,4)).filter(Boolean))].sort().reverse();$('#period').innerHTML=`<option value="">${t("m007")}</option>`+years.map(y=>`<option value="${y}">${y}</option>`).join('');$('#period').value=period;
- $('#shareNudge').hidden=flights.length===0;$$('[data-action="share"]').forEach(b=>b.disabled=!flights.length);
- $('.demo-bar').querySelector('span').textContent=isDemo?t("m090"):t("m091");$('#clearDemo').textContent=isDemo?t("m092"):t("m004");
- journalSearch=createJournalSearch(visible(),airport);renderJournal();
+function render(reset=true){if(reset)journalLimit=50;$('#storageStatus').textContent=storageError;$('#storageStatus').classList.toggle('storage-error',!!storageError);const stats=totals();$('.atlas').classList.toggle('is-empty',stats.flights===0);if(reset||!box)fit();map();$('#stats').innerHTML=`<div class="stat"><b>${stats.flights}</b><span>${statLabel('flights',stats.flights)}</span></div><div class="stat"><b>${stats.countries}</b><span>${statLabel('countries',stats.countries)}</span></div><div class="stat"><b>${fmt(stats.km)}</b><span>${t("m088")}</span></div>`;
+ const years=[...new Set(flights.map(f=>f.date?.slice(0,4)).filter(Boolean))].sort().reverse();const periods=[['',t("m007")],...years.map(y=>[y,y])];$('#periodValue').textContent=(periods.find(([v])=>v===period)??periods[0])[1];$('#periodList').innerHTML=periods.map(([v,l])=>`<li><button type="button" class="period-item${v===period?' is-on':''}" aria-current="${v===period}" data-period="${esc(v)}">${esc(l)}</button></li>`).join('');$('#periodList').querySelectorAll('button').forEach(b=>b.onclick=()=>{period=b.dataset.period;selected=null;fullBox=null;$('#periodMenu').open=false;render();});
+ $$('[data-action="share"]').forEach(b=>b.disabled=!flights.length);
+ renderJournal();
 }
 function renderJournal(){
- const results=journalSearch(journalQuery).filter(f=>!journalUndated||!f.date);
- $('#journalTools').hidden=!flights.length;$('#clearJournal').hidden=!journalQuery&&!journalUndated;
- $('#journalResults').textContent=(journalQuery||journalUndated)?`${t("m093",{p0:(results.length),p1:(visible().length)})}`:'';
- $('#flightList').innerHTML=results.slice(0,journalLimit).map(f=>`<article class="flight${selected===f.id?' selected':''}" tabindex="0" role="button" aria-label="${esc(airport[f.from].city+' — '+airport[f.to].city)}" data-id="${f.id}"><div class="flight-top"><span>${f.date?new Date(f.date+'T12:00:00').toLocaleDateString(locale,{day:'numeric',month:'short',year:'numeric'}):t("m094")}${f.number?' · '+esc(f.number):''}</span><button aria-label="${esc(t("m095",{p5:f.from+' — '+f.to}))}" data-edit="${f.id}">···</button></div><div class="route"><div><strong>${f.from}</strong><small>${esc(airport[f.from].city)}</small></div><div class="route-line"><span>✈</span></div><div><strong>${f.to}</strong><small>${esc(airport[f.to].city)}</small></div></div></article>`).join('')||`<div class="empty-list">${journalQuery||journalUndated?t("m096"):t("m097")}</div>`;
+ const results=visible();
+ $('#flightList').innerHTML=results.slice(0,journalLimit).map(f=>`<article class="flight${selected===f.id?' selected':''}" tabindex="0" role="button" aria-label="${esc(airport[f.from].city+' — '+airport[f.to].city)}" data-id="${f.id}"><div class="flight-top"><span>${f.date?new Date(f.date+'T12:00:00').toLocaleDateString(locale,{day:'numeric',month:'short',year:'numeric'}):t("m094")}${f.number?' · '+esc(f.number):''}</span><button aria-label="${esc(t("m095",{p5:f.from+' — '+f.to}))}" data-edit="${f.id}">···</button></div><div class="route"><div><strong>${f.from}</strong><small>${esc(airport[f.from].city)}</small></div><div class="route-line"><span>✈</span></div><div><strong>${f.to}</strong><small>${esc(airport[f.to].city)}</small></div></div></article>`).join('')||`<div class="empty-list">${t("m097")}</div>`;
  $('#flightList').querySelectorAll('[data-id]').forEach(el=>{const choose=()=>{selected=el.dataset.id;render(false);$('.atlas').scrollIntoView({behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth',block:'start'});};el.onclick=e=>{if(!e.target.closest('[data-edit]'))choose();};el.onkeydown=e=>{if((e.key==='Enter'||e.key===' ')&&!e.target.closest('[data-edit]')){e.preventDefault();choose();}};});
  // Журнал раскрывается порциями: 5000 записей не создают сразу 50 000 DOM-узлов.
  // Карта, статистика, backup и экспорт всегда используют полный набор.
  $('#moreFlights')?.remove();if(results.length>journalLimit){const more=document.createElement('button');more.id='moreFlights';more.className='primary';more.style.width='100%';more.textContent=t("m098")+Math.min(50,results.length-journalLimit);more.onclick=()=>{journalLimit+=50;renderJournal();$('#flightList [data-id]:nth-child('+Math.max(1,journalLimit-49)+')')?.focus({preventScroll:true});};$('#flightList').after(more);}
  $$('[data-edit]').forEach(el=>el.onclick=()=>openForm(el.dataset.edit));
 }
-listen($('#journalSearch'),'input',()=>{journalQuery=$('#journalSearch').value;journalLimit=50;renderJournal();});
-listen($('#undatedOnly'),'change',()=>{journalUndated=$('#undatedOnly').checked;journalLimit=50;renderJournal();});
-$('#clearJournal').onclick=()=>{journalQuery='';journalUndated=false;$('#journalSearch').value='';$('#undatedOnly').checked=false;journalLimit=50;renderJournal();$('#journalSearch').focus();};
 let toastTimer;function toast(s){$('#toast').onclick=null;$('#toast').style.pointerEvents='none';$('#toast').textContent=s;$('#toast').classList.add('show');clearTimeout(toastTimer);toastTimer=setTimeout(()=>$('#toast').classList.remove('show'),3200);}
 // A local history entry lets Android/browser Back close a sheet instead of
 // leaving the map. Closing by Escape/cross removes the same entry exactly once.
@@ -84,6 +86,9 @@ const today=new Date(),todayString=[today.getFullYear(),String(today.getMonth()+
 // Старая форма каждый раз начиналась с нуля и оставляла клавиатуру поверх Save.
 // Недавние аэропорты и обратный маршрут берём только из личной локальной истории.
 // Дату/номер не копируем в новый рейс: это незаметно создавало бы ложные записи.
+// Подсказки раскрываются только с первой буквы. Список висит НАД формой, и на
+// пустом поле он закрывал бы её прежде, чем человек что-то сделал, — а при
+// открытии окна фокус в «Откуда» ставится кодом, без всякого его участия.
 let formRevision=0,saving=false;
 // На 320×568 второй список оказывался за закреплённой кнопкой Save.
 // Прокручиваем только sheet и только после раскладки: сохраняем место для
@@ -97,20 +102,21 @@ function revealSuggestions(){requestAnimationFrame(()=>{
 });}
 function hideSuggestions(){for(const side of ['from','to']){$('#'+side+'Results').innerHTML='';$('#'+side).setAttribute('aria-expanded','false');}}
 function setAirport(side,code){choice[side]=code;const a=airport[code];$('#'+side).value=a?`${a.city} · ${a.code}`:'';$('#formError').textContent='';}
-function quickRoutes(){const last=personal.at(-1),area=$('#quickRoutes');area.hidden=editing!==null||!last;area.innerHTML='';if(area.hidden)return;
- for(const [label,from,to] of [[t("m099"),last.from,last.to],[t("m100"),last.to,last.from]]){const b=document.createElement('button');b.type='button';b.className='quick-route';b.textContent=`${label} \u2066${from} → ${to}\u2069`;b.setAttribute('aria-label',`${label}: ${airport[from].city} → ${airport[to].city}`);b.onclick=()=>{setAirport('from',from);setAirport('to',to);hideSuggestions();$('#saveFlight').focus();};area.append(b);}
-}
-function resetForm(f=null,from=null){$('#flightForm').reset();$('.extra-fields').open=!!f;$('#formError').textContent='';$('#formStatus').textContent='';hideSuggestions();setAirport('from',f?.from||from);setAirport('to',f?.to||null);$('#date').value=f?.date||'';$('#number').value=f?.number||'';$('#saveFlight').textContent=f?t("m101"):t("m015");$('#saveMore').hidden=!!f;$('#saveFlight').disabled=$('#saveMore').disabled=false;quickRoutes();}
-function openForm(id=null){if(saving)return;if(id===null&&isDemo){syncStored();flights=personal;isDemo=false;selected=null;period='';const url=new URL(location.href);url.searchParams.delete('demo');history.replaceState(history.state,'',url);render();}formRevision++;editing=id;const f=flights.find(f=>f.id===id);resetForm(f);$('#formTitle').textContent=f?(isDemo?t("m102"):t("m103")):t("m015");$('#deleteFlight')?.remove();if(f){const b=document.createElement('button');b.id='deleteFlight';b.type='button';b.textContent=t("m104");b.className='delete-flight';b.onclick=async()=>{if(saving)return;saving=true;try{const saved=f;if(!await applyFlights(flights.filter(x=>x.id!==f.id)))return;const deletedDemo=isDemo;close($('#addDialog'));render();toast(t("m105"));$('#toast').style.pointerEvents='auto';$('#toast').onclick=async()=>{if(isDemo!==deletedDemo)return;if(!await applyFlights([...flights,saved]))return;render();toast(t("m106"));$('#toast').onclick=null;$('#toast').style.pointerEvents='none';};}finally{saving=false;}};$('#flightForm').append(b);}open($('#addDialog'));if(!f)$('#from').focus();}
+function resetForm(f=null,from=null){$('#flightForm').reset();$('.extra-fields').open=!!f;$('#formError').textContent='';hideSuggestions();setAirport('from',f?.from||from);setAirport('to',f?.to||null);$('#date').value=f?.date||'';$('#number').value=f?.number||'';$('#saveFlight').textContent=f?t("m101"):t("m015");$('#saveFlight').disabled=false;}
+function openForm(id=null){if(saving)return;if(id===null&&isDemo){syncStored();flights=personal;isDemo=false;selected=null;period='';const url=new URL(location.href);url.searchParams.delete('demo');history.replaceState(history.state,'',url);render();}formRevision++;editing=id;const f=flights.find(f=>f.id===id);resetForm(f);$('#formTitle').textContent=f?(isDemo?t("m102"):t("m103")):t("m015");$('#deleteFlight')?.remove();if(f){const b=document.createElement('button');b.id='deleteFlight';b.type='button';b.textContent=t("m104");b.className='delete-flight';b.onclick=async()=>{if(saving)return;saving=true;try{const saved=f;if(!await applyFlights(flights.filter(x=>x.id!==f.id)))return;const deletedDemo=isDemo;close($('#addDialog'));render();toast(t("m105"));$('#toast').style.pointerEvents='auto';$('#toast').onclick=async()=>{if(isDemo!==deletedDemo)return;if(!await applyFlights([...flights,saved]))return;render();toast(t("m106"));$('#toast').onclick=null;$('#toast').style.pointerEvents='none';};}finally{saving=false;}};$('#flightForm').append(b);}open($('#addDialog'));}
 for(const side of ['from','to']){
  const input=$('#'+side),list=$('#'+side+'Results');
+ // В покое в поле стоит его название («Откуда»), по фокусу — что именно сюда
+ // вводят. Исходные строки берём из разметки: переводов в коде нет.
+ const label=input.placeholder,hint=input.dataset.hint||label;
  const choose=code=>{setAirport(side,code);hideSuggestions();if(side==='from')$('#to').focus();else $('#saveFlight').focus();};
- const show=()=>{hideSuggestions();const rows=search(input.value,{recent:recentAirports(personal),exclude:choice[side==='from'?'to':'from']});
+ const show=()=>{hideSuggestions();if(!input.value.trim())return;const rows=search(input.value,{recent:recentAirports(personal),exclude:choice[side==='from'?'to':'from']});
   list.innerHTML=rows.map(a=>`<button type="button" role="option" aria-selected="false" data-code="${a.code}"><span>${esc(a.city)}${a.name!==a.city?`<small>${esc(a.name)}</small>`:''}</span><b>${a.code}</b></button>`).join('')||`<p class="search-empty">${t("m107")}</p>`;input.setAttribute('aria-expanded','true');revealSuggestions();
   list.querySelectorAll('button').forEach((b,i)=>{b.onclick=()=>choose(b.dataset.code);b.onkeydown=e=>{const bs=[...list.querySelectorAll('button')];if(e.key==='ArrowDown'||e.key==='ArrowUp'){e.preventDefault();bs[(i+(e.key==='ArrowDown'?1:bs.length-1))%bs.length].focus();}if(e.key==='Escape'){e.preventDefault();e.stopPropagation();input.focus();hideSuggestions();}};});
  };
  input.oninput=()=>{choice[side]=null;$('#formError').textContent='';const pair=routePair(input.value,airportCodes);if(pair){setAirport('from',pair.from);setAirport('to',pair.to);hideSuggestions();$('#saveFlight').focus();return;}show();};
- input.onfocus=()=>{if(choice[side])input.select();else show();};
+ input.onfocus=()=>{input.placeholder=hint;if(choice[side])input.select();};
+ input.onblur=()=>{input.placeholder=label;};
  input.onkeydown=e=>{if((e.key==='ArrowDown'||e.key==='Enter')&&!e.isComposing&&list.querySelector('button')){e.preventDefault();if(e.key==='Enter')choose(list.querySelector('button').dataset.code);else list.querySelector('button').focus();}if(e.key==='Escape'&&list.childElementCount){e.preventDefault();e.stopPropagation();hideSuggestions();}};
 }
 // Закрываем после click, не pointerdown: исчезновение списка сдвигает нижний
@@ -120,21 +126,20 @@ listen(root,'click',e=>{const path=e.composedPath();if(path.includes($('#addDial
 $('.swap').onclick=()=>{const from=choice.from,to=choice.to,fromText=$('#from').value,toText=$('#to').value;choice={from:to,to:from};$('#from').value=toText;$('#to').value=fromText;hideSuggestions();};
 $('#flightForm').onsubmit=async e=>{e.preventDefault();if(saving)return;
  if($('#date').value>todayString){$('#formError').textContent=t("m108");return;}
- if(!choice.from||!choice.to){$('#formError').textContent=t("m109");$('#'+(!choice.from?'from':'to')).focus();return;}
+ if(!choice.from||!choice.to){$('#formError').textContent=t(!choice.from&&!choice.to?"m109":!choice.from?"m164":"m165");$('#'+(!choice.from?'from':'to')).focus();return;}
  if(choice.from===choice.to){$('#formError').textContent=t("m110");return;}
- const revision=formRevision,wasNew=editing===null,more=wasNew&&e.submitter?.id==='saveMore';
+ const revision=formRevision,wasNew=editing===null;
  const f={id:editing??(isDemo?'demo_'+newId():newId()),from:choice.from,to:choice.to,date:$('#date').value,number:$('#number').value.trim()};
  // Блокировка ставится до await Web Locks: двойной tap не создаёт две записи.
- saving=true;$('#saveFlight').disabled=$('#saveMore').disabled=true;
+ saving=true;$('#saveFlight').disabled=true;
  try{if(!await applyFlights(wasNew?[...flights,f]:flights.map(x=>x.id===editing?f:x)))return;if(signal.aborted)return;
   period='';selected=f.id;if(!isDemo)track('saved');render();
   if(revision!==formRevision||!$('#addDialog').open)return;
-  if(more){editing=null;resetForm(null,f.to);$('#formStatus').textContent=`${t("m111",{p0:(f.from),p1:(f.to)})}`;$('#addDialog').scrollTop=0;$('#to').focus();}
-  else{close($('#addDialog'));toast(wasNew?t("m112"):t("m113"));}
- }finally{saving=false;if(!signal.aborted){$('#saveFlight').disabled=$('#saveMore').disabled=false;}}
+  close($('#addDialog'));toast(wasNew?t("m112"):t("m113"));
+ }finally{saving=false;if(!signal.aborted)$('#saveFlight').disabled=false;}
 };
-$('#clearDemo').onclick=()=>{syncStored();if(isDemo){flights=personal;isDemo=false;}else{personal=flights;flights=structuredClone(demo);isDemo=true;}selected=null;period='';const url=new URL(location.href);if(isDemo)url.searchParams.set('demo','');else url.searchParams.delete('demo');history.replaceState(history.state,'',url);render();};
-$('#period').onchange=()=>{period=$('#period').value;selected=null;fullBox=null;render();};
+// Список закрывается щелчком мимо него — как любое меню на сайте.
+listen(root,'click',e=>{const m=$('#periodMenu');if(m.open&&!e.composedPath().includes(m))m.open=false;});
 $('#fit').onclick=()=>{fit();map();};for(const [id,f] of [['zoomIn',.8],['zoomOut',1.25]])$('#'+id).onclick=()=>{if(box.w*f<50||box.w*f>1100)return;box={...box,x:box.x+box.w*(1-f)/2,y:box.y+box.h*(1-f)/2,w:box.w*f,h:box.h*f};map();};
 // Резервная копия относится к журналу. Тема и язык остаются в настоящих настройках сайта.
 $('#openBackup').onclick=()=>open($('#backupDialog'));
@@ -215,7 +220,7 @@ $('#backup').onclick=()=>{syncStored();if(storageError){try{const raw=localStora
 $('#restoreFile').onchange=async e=>{const revision=++restoreRevision,file=e.target.files?.[0];e.target.value='';if(!file)return;$('#backupStatus').textContent=t("m136");try{if(file.size>MAX_BYTES)throw Error(t("m137"));const text=await file.text();if(revision!==restoreRevision||!$('#backupDialog').open)return;const incoming=parse(text,new Set(airports.map(a=>a.code)));syncStored();if(storageError)throw Error(storageError);const result=merge(personal,incoming);pendingRestore=incoming;$('#restoreSummary').textContent=`${t("m138",{p0:(result.added),p1:(result.existing),p2:(result.conflicts)})}`;$('#restoreError').textContent='';$('#restoreConfirm').disabled=!result.added;$('#restoreList').innerHTML=incoming.slice(0,5).map(f=>`<li>${esc(airport[f.from].city)} → ${esc(airport[f.to].city)} <small>${esc(f.date||t("m020"))}</small></li>`).join('');$('#backupStatus').textContent='';close($('#backupDialog'),()=>open($('#restoreDialog')));}catch(e){$('#backupStatus').textContent=e.message;}};
 $('#restoreConfirm').onclick=async()=>{if(!pendingRestore)return;try{const result=merge(personal,pendingRestore);if(!store)throw Error(t("m139"));personal=await store.writeAsync(result.flights);if(signal.aborted)return;flights=personal;isDemo=false;period='';selected=null;const url=new URL(location.href);url.searchParams.delete('demo');history.replaceState(history.state,'',url);pendingRestore=null;storageError='';close($('#restoreDialog'));render();track('restore');toast(t("m140")+result.added);}catch(e){$('#restoreError').textContent=e.message;}};
 
-$$('button').forEach(b=>b.disabled=false);root.removeAttribute('aria-busy');render();track('open');let resize;
+$$('button').forEach(b=>b.disabled=false);addButtons.forEach(b=>b.removeAttribute('aria-busy'));document.documentElement.removeAttribute('data-flights');root.removeAttribute('aria-busy');render();track('open');if(earlyAdd)openForm();let resize;
 // Клавиатура меняет viewport, но обычно не размеры карты. Не пересоздаём
 // журнал/географию и не сбрасываем zoom на каждый resize. При повороте экрана
 // сохраняем центр и ширину видимой области, меняя только её пропорции.

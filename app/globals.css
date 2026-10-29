@@ -891,10 +891,12 @@ body::after {
   flex-shrink: 0;
   border: none;
   border-radius: 50%;
-  background: var(--sheen), var(--glass-soft);
-  -webkit-backdrop-filter: var(--blur-soft);
-          backdrop-filter: var(--blur-soft);
-  box-shadow: var(--glass-spec), var(--glass-rim);
+  /* То же стекло, что у нижней панели: обе пилюли лежат поверх обоев, и
+     кромка с отсветом у них должна быть одна. */
+  background: var(--lens-sheen), var(--bar-fill);
+  -webkit-backdrop-filter: var(--bar-blur);
+          backdrop-filter: var(--bar-blur);
+  box-shadow: var(--glass-spec), var(--lens-rim);
   color: var(--ab-e4e4e7);
   cursor: pointer;
   -webkit-tap-highlight-color: transparent;
@@ -904,9 +906,10 @@ body::after {
   .hdr-act:hover { color: var(--ab-ffffff); }
 }
 .hdr-pill {
-  /* Высота и поля следуют за шириной экрана, а не стоят ступенькой: 62px на
-     широком, 48 на 320. Цель нажатия остаётся не меньше 44. */
-  height: clamp(48px, 14vw, 62px);
+  /* Высота и поля следуют за шириной экрана, а не стоят ступенькой: 56px на
+     широком, 44 на 320. Ниже 44 нельзя — это ссылка на главную, то есть цель
+     нажатия. Прежние 48–62 оставляли под названием заметную пустоту. */
+  height: var(--hdr-pill-h);
   /* Ореол цвета темы — название лежит прямо на обоях с тех пор, как у капсулы
      убрали стеклянную подложку. Без него контуры рисунка проходят сквозь буквы,
      и на светлой теме чужой самолётик из узора читается частью слова. Тот же
@@ -1492,6 +1495,9 @@ body::after {
    счётчики рейсов. Прежде это были мелкие капсулы вроде «недавних», и на
    собственной странице один избранный аэропорт выглядел потерянной крошкой. */
 .fav-page { max-width: 960px; margin: 0 auto; padding: 18px 16px 40px; width: 100%; }
+/* У пустой страницы своих отступов сверху и снизу нет: высоту задаёт
+   --empty-area, и лишние поля сдвинули бы блок с середины. */
+.fav-page:has(.fav-blank) { padding-block: 0; }
 .fav-grid {
   list-style: none;
   margin: 0;
@@ -1588,7 +1594,7 @@ body::after {
   align-items: center;
   justify-content: center;
   gap: 2px;
-  min-height: calc(100svh - 220px);
+  min-height: var(--empty-area);
   max-width: 420px;
   margin: 0 auto;
   text-align: center;
@@ -1596,9 +1602,10 @@ body::after {
 .fav-blank-ico {
   display: grid;
   place-items: center;
-  width: 104px;
-  height: 104px;
-  margin-bottom: 20px;
+  /* Тот же размер, что у медальона на карте перелётов. */
+  width: clamp(120px, 34vw, 150px);
+  height: clamp(120px, 34vw, 150px);
+  margin-bottom: 14px;
   border-radius: 50%;
   background: var(--sheen), var(--glass-soft);
   /* Размытия не хватало: заливка без него — просто полупрозрачный круг, сквозь
@@ -1612,6 +1619,9 @@ body::after {
      уже что-то есть. Здесь значок — иллюстрация, а не состояние. */
   color: var(--ab-8a8a8a);
 }
+/* Значок следует за кругом, а не стоит в 54px: на карте перелётов рисунок
+   занимает около 60% медальона, и сердце должно читаться так же. */
+.fav-blank-ico svg { width: 56%; height: 56%; }
 .fav-blank-t {
   margin: 0;
   font-size: clamp(20px, 5.4vw, 24px);
@@ -1621,7 +1631,143 @@ body::after {
   text-wrap: balance;
   text-shadow: var(--text-halo);
 }
+/* Заглушка стоит в серверной разметке, поэтому у человека с избранным её надо
+   убрать ДО первой отрисовки — иначе она мигнёт перед появлением списка. */
+:root[data-fav]:not([data-hydrated]) .fav-blank { display: none; }
+
+/* Синяя кнопка — та же, что на карте перелётов: главное действие пустой
+   страницы должно читаться как действие, а не как ссылка в тексте. */
+.fav-blank-go {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 50px;
+  min-width: min(240px, 100%);
+  margin-top: 14px;
+  padding-inline: 24px;
+  border-radius: 12px;
+  background: var(--ab-0a84ff);
+  color: var(--ab-ffffff);
+  font-size: 16px;
+  font-weight: 600;
+  text-decoration: none;
+}
 .fav-blank-p {
+  margin: 6px 0 0;
+  max-width: 34ch;
+  font-size: clamp(14px, 3.9vw, 15.5px);
+  line-height: 1.5;
+  color: var(--ab-8a8a8a);
+  text-wrap: balance;
+  text-shadow: var(--text-halo);
+}
+
+
+/* ─── Окно выбора языка ───────────────────────────────────────────────────────
+   На широком экране — окно по центру, на телефоне — шторка снизу. Те же правила,
+   что у окна «Добавить перелёт» на карте: один и тот же жест на всём сайте.
+   Полоска-протяжка показывается только там, где окно действительно шторка. */
+.lang-dialog {
+  margin: auto;
+  padding: 18px 20px 24px;
+  width: min(460px, 100%);
+  max-height: 90dvh;
+  overflow: auto;
+  border: 0;
+  border-radius: var(--r-panel);
+  color: var(--ab-ffffff);
+  background: var(--sheen), var(--glass-dense);
+  -webkit-backdrop-filter: var(--blur);
+          backdrop-filter: var(--blur);
+  box-shadow: var(--glass-spec), var(--glass-rim), var(--glass-lift);
+}
+.lang-dialog::backdrop { background: var(--sheet-scrim); backdrop-filter: blur(4px); }
+.lang-dialog .sheet-handle {
+  display: none;
+  width: 34px;
+  height: 4px;
+  border-radius: 4px;
+  background: rgba(var(--ab-ink), 0.12);
+  margin: -6px auto 9px;
+}
+.lang-head { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding-bottom: 14px; }
+.lang-head h2 { margin: 0; font-size: 22px; font-weight: 700; letter-spacing: -0.02em; line-height: 1.2; }
+.lang-close {
+  display: inline-grid;
+  place-items: center;
+  width: 44px;
+  min-width: 44px;
+  height: 44px;
+  border: 0;
+  border-radius: 50%;
+  font-size: 24px;
+  line-height: 1;
+  color: var(--ab-e4e4e7);
+  background: var(--glass-soft);
+  box-shadow: var(--glass-rim);
+  cursor: pointer;
+}
+.lang-dialog .set-langs { display: grid; gap: 6px; margin: 0; padding: 0; list-style: none; }
+@media (max-width: 700px) {
+  .lang-dialog {
+    position: fixed;
+    inset: auto 0 0;
+    margin: 0;
+    width: 100%;
+    max-width: 100%;
+    border-radius: var(--r-panel) var(--r-panel) 0 0;
+    padding-bottom: max(24px, env(safe-area-inset-bottom));
+  }
+  .lang-dialog .sheet-handle { display: block; }
+}
+
+/* ─── Страница 404 ────────────────────────────────────────────────────────────
+   Говорит на том же языке, что пустые страницы избранного и карты перелётов:
+   круглое стекло со значком, заголовок, строка объяснения, одно синее действие.
+   Прежде здесь стояла огромная серая цифра в левом верхнем углу — единственный
+   элемент такого рода на сайте, и страница выглядела чужой.
+
+   Цифра осталась, но внутри медальона: это по-прежнему честный ответ сервера,
+   и человеку, который пришёл по битой ссылке, полезно его видеть. */
+.nf-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  min-height: var(--empty-area);
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 24px 16px 40px;
+  width: 100%;
+}
+.nf-ico {
+  display: grid;
+  place-items: center;
+  width: clamp(120px, 34vw, 150px);
+  height: clamp(120px, 34vw, 150px);
+  margin-bottom: 14px;
+  border-radius: 50%;
+  background: var(--sheen), var(--glass-soft);
+  -webkit-backdrop-filter: var(--blur-soft);
+          backdrop-filter: var(--blur-soft);
+  box-shadow: var(--glass-spec), var(--glass-rim);
+  color: var(--ab-8a8a8a);
+  font-size: clamp(30px, 8vw, 38px);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  line-height: 1;
+}
+.nf-t {
+  margin: 0;
+  font-size: clamp(20px, 5.4vw, 24px);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--ab-ffffff);
+  text-wrap: balance;
+  text-shadow: var(--text-halo);
+}
+.nf-p {
   margin: 8px 0 0;
   max-width: 34ch;
   font-size: clamp(14px, 3.9vw, 15.5px);
@@ -1629,6 +1775,48 @@ body::after {
   color: var(--ab-8a8a8a);
   text-wrap: balance;
   text-shadow: var(--text-halo);
+}
+.nf-search { width: 100%; max-width: 420px; margin-top: 18px; }
+.nf-pop-t {
+  margin: 26px 0 10px;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--ab-8a8a8a);
+  text-shadow: var(--text-halo);
+}
+.nf-chips { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; }
+/* 44 по высоте — это цель нажатия, а не просто подпись. */
+.nf-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 44px;
+  padding: 0 14px;
+  border-radius: var(--r-pill);
+  background: var(--glass-soft);
+  box-shadow: var(--glass-rim);
+  font-size: 14px;
+  color: var(--ab-e4e4e7);
+  text-decoration: none;
+}
+.nf-chip b { font-weight: 700; color: var(--ab-0a84ff); }
+/* Та же синяя кнопка, что на пустых страницах избранного и карты. */
+.nf-go {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 50px;
+  min-width: min(240px, 100%);
+  margin-top: 22px;
+  padding-inline: 24px;
+  border-radius: 12px;
+  background: var(--ab-0a84ff);
+  color: var(--ab-ffffff);
+  font-size: 16px;
+  font-weight: 600;
+  text-decoration: none;
 }
 
 /* ─── Нижняя панель навигации (28.10.2026) ────────────────────────────────────
@@ -1640,6 +1828,11 @@ body::after {
    после гидратации, и без этого резерва подвал в момент её появления уходил бы
    под стекло. Высота: 66 на пилюлю + 12 снизу + 14 воздуха. */
 body { padding-bottom: calc(92px + env(safe-area-inset-bottom)); }
+/* Шапка и видимая область — общие константы. 92 — высота плавающей панели
+   навигации вместе с её отступом (та же величина, что в padding-bottom выше).
+   --empty-area: ровно то, что человек видит между шапкой и панелью; по нему
+   центрируются пустые страницы избранного и карты перелётов. */
+:root { --hdr-pill-h: clamp(44px, 12vw, 56px); --hdr-h: calc(var(--hdr-pill-h) + 4px); --empty-area: calc(100svh - 92px - var(--hdr-h)); }
 
 .bottomnav {
   position: fixed;

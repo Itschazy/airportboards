@@ -2,8 +2,30 @@
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+import { useEffect, useState } from 'react';
 import { useTranslations } from 'next-intl';
 import type { Locale } from '@/lib/i18n';
+
+/**
+ * Память вкладок: какой адрес человек смотрел последним в каждом разделе.
+ *
+ * Лежит в sessionStorage, а не в localStorage, намеренно: это память ОДНОЙ
+ * сессии просмотра. Вернуть человека завтра на вчерашнее табло — не услуга:
+ * он уже не помнит, почему там оказался, а рейсы там давно другие.
+ *
+ * Разделов четыре, и всё, что не избранное, не карта и не настройки, — это
+ * «Поиск»: аэропорт, маршрут, город, рейс и указатель открываются именно оттуда.
+ */
+const TAB_KEY = 'ab_tab_memory';
+type Tab = 'search' | 'favorites' | 'map' | 'settings';
+
+function tabOf(pathname: string): Tab {
+  const rest = pathname.replace(/^\/[^/]+/, '') || '/';
+  if (rest === '/favorites' || rest.startsWith('/favorites/')) return 'favorites';
+  if (rest === '/flight-map' || rest.startsWith('/flight-map/')) return 'map';
+  if (rest === '/settings' || rest.startsWith('/settings/')) return 'settings';
+  return 'search';
+}
 
 /**
  * Нижняя панель навигации: поиск, избранное, перелёты (пока RU), настройки.
@@ -32,8 +54,48 @@ import type { Locale } from '@/lib/i18n';
 export function BottomNav({ locale }: { locale: Locale }) {
   const t = useTranslations('nav');
   const pathname = usePathname();
+  const [memory, setMemory] = useState<Partial<Record<Tab, string>>>({});
+  const current = tabOf(pathname);
+
+  // Запоминаем адрес ПОСЛЕ отрисовки: на сервере sessionStorage нет, и читать его
+  // в теле компонента значило бы разойтись с серверной разметкой. Ссылки панели
+  // в исходном HTML остаются корнями разделов — их и видит обходчик.
+  useEffect(() => {
+    try {
+      const raw = sessionStorage.getItem(TAB_KEY);
+      const map = raw ? JSON.parse(raw) as Record<string, string> : {};
+      map[current] = pathname + location.search;
+      sessionStorage.setItem(TAB_KEY, JSON.stringify(map));
+      setMemory(map);
+    } catch { /* приватный режим — просто живём без памяти */ }
+  }, [pathname, current]);
+
+  /**
+   * Адрес вкладки: запомненный — только для ЧУЖОЙ вкладки. Нажатие на вкладку,
+   * в которой человек уже находится, всегда возвращает в её начало: иначе из
+   * глубокой страницы наверх не выбраться вовсе.
+   *
+   * Чужую память другого языка не берём: после смены локали путь из прошлой
+   * увёл бы на страницу не на том языке.
+   */
+  const hrefFor = (tab: Tab, root: string) => {
+    if (tab === current) return root;
+    const saved = memory[tab];
+    if (!saved || (saved !== `/${locale}` && !saved.startsWith(`/${locale}/`))) return root;
+    return saved;
+  };
 
 
+  // Подсвечен РАЗДЕЛ, а не один адрес: со страницы аэропорта, маршрута или
+  // города человек пришёл из «Поиска», и панель обязана показывать, где он
+  // находится. Прежде на всех этих страницах не горело ни одного пункта.
+  const onSearch = current === 'search';
+  const onFav = current === 'favorites';
+  const onMap = current === 'map';
+  const onSet = current === 'settings';
+  // aria-current="page" — только на самой странице: для программы чтения с
+  // экрана «текущая страница» и «текущий раздел» — разные утверждения, и
+  // ставить первое на ссылку, ведущую в другое место, нельзя.
   const isHome = pathname === `/${locale}` || pathname === `/${locale}/`;
   const isFav = pathname === `/${locale}/favorites`;
   const isMap = pathname === `/${locale}/flight-map`;
@@ -42,7 +104,7 @@ export function BottomNav({ locale }: { locale: Locale }) {
   return (
     <nav className="bottomnav" aria-label={t('aria_bottom')}>
       <div className="bn-pill">
-        <Link href={`/${locale}`} className={`press bn-item${isHome ? ' bn-item--on' : ''}`} aria-current={isHome ? 'page' : undefined}>
+        <Link href={hrefFor('search', `/${locale}`)} prefetch={false} className={`press bn-item${onSearch ? ' bn-item--on' : ''}`} aria-current={isHome ? 'page' : undefined}>
           <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                strokeWidth="1.6" strokeLinecap="round" aria-hidden="true">
             <circle cx="11" cy="11" r="7" />
@@ -51,12 +113,12 @@ export function BottomNav({ locale }: { locale: Locale }) {
           <span className="bn-label">{t('search')}</span>
         </Link>
 
-        <Link href={`/${locale}/favorites`} className={`press bn-item${isFav ? ' bn-item--on' : ''}`} aria-current={isFav ? 'page' : undefined}>
+        <Link href={hrefFor('favorites', `/${locale}/favorites`)} prefetch={false} className={`press bn-item${onFav ? ' bn-item--on' : ''}`} aria-current={isFav ? 'page' : undefined}>
           {/* Залито у ВЫБРАННОГО пункта, у остальных — контур. Прежде сердце
               заливалось при непустом избранном, и на любой странице сайта горели
               сразу два «выбранных» значка. Заодно исчезла единственная причина
               мигания: выбранность знает сервер, а содержимое хранилища — нет. */}
-          <svg width="26" height="26" viewBox="0 0 24 24" fill={isFav ? 'currentColor' : 'none'}
+          <svg width="26" height="26" viewBox="0 0 24 24" fill={onFav ? 'currentColor' : 'none'}
                stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
             <path d="M12 21C12 21 3 14.6 3 8.9C3 6.1 5.2 4 8 4c1.7 0 3.2 0.9 4 2.3C12.8 4.9 14.3 4 16 4c2.8 0 5 2.1 5 4.9c0 5.7-9 12.1-9 12.1z" />
           </svg>
@@ -66,23 +128,23 @@ export function BottomNav({ locale }: { locale: Locale }) {
         {/* Журнал и его помощь теперь переведены на все 12 языков. Ссылка
             появляется после проверки полного инструмента, а не SEO-заглушек.
             Прежние иконки, цвета и поведение соседних разделов сохранены. */}
-        <Link href={`/${locale}/flight-map`} prefetch={false}
-          className={`press bn-item${isMap ? ' bn-item--on' : ''}`} aria-current={isMap ? 'page' : undefined}>
-          <svg width="26" height="26" viewBox="0 0 24 24" fill={isMap ? 'currentColor' : 'none'}
+        <Link href={hrefFor('map', `/${locale}/flight-map`)} prefetch={false}
+          className={`press bn-item${onMap ? ' bn-item--on' : ''}`} aria-current={isMap ? 'page' : undefined}>
+          <svg width="26" height="26" viewBox="0 0 24 24" fill={onMap ? 'currentColor' : 'none'}
             stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
             <path d="m22 16-8-5V4.5a2 2 0 0 0-4 0V11l-8 5v2l8-2.5V20l-2 1v1l4-1 4 1v-1l-2-1v-4.5l8 2.5Z" />
           </svg>
           <span className="bn-label">{t('my_flights')}</span>
         </Link>
 
-        <Link href={`/${locale}/settings`} className={`press bn-item${isSet ? ' bn-item--on' : ''}`} aria-current={isSet ? 'page' : undefined}>
+        <Link href={hrefFor('settings', `/${locale}/settings`)} prefetch={false} className={`press bn-item${onSet ? ' bn-item--on' : ''}`} aria-current={isSet ? 'page' : undefined}>
           {/* Шестерня: шесть зубцов, а не восемь. Восемь на 26px сливались в круг,
               когда значок залит, и в колючую звезду, когда зазор увеличивали. Шесть
               крупных зубцов глубиной 3.2 с зазором в 18° читаются шестернёй при любом
               размере, а скруглённые стыки (stroke-linejoin) снимают остроту вершин.
               Отверстие — вторым контуром той же фигуры, иначе при заливке середина
               затекает и выходит монета. */}
-          <svg width="26" height="26" viewBox="0 0 24 24" fill={isSet ? 'currentColor' : 'none'}
+          <svg width="26" height="26" viewBox="0 0 24 24" fill={onSet ? 'currentColor' : 'none'}
                stroke="currentColor" strokeWidth="1.7" strokeLinejoin="round" strokeLinecap="round"
                fillRule="evenodd" aria-hidden="true">
             <path d="M9.63 5.84 L9.63 2.49 L14.37 2.49 L14.37 5.84 L16.15 6.87 L19.05 5.19 L21.42 9.30 L18.52 10.97 L18.52 13.03 L21.42 14.70 L19.05 18.81 L16.15 17.13 L14.37 18.16 L14.37 21.51 L9.63 21.51 L9.63 18.16 L7.85 17.13 L4.95 18.81 L2.58 14.70 L5.48 13.03 L5.48 10.97 L2.58 9.30 L4.95 5.19 L7.85 6.87 Z M15.7 12 A3.7 3.7 0 1 0 8.3 12 A3.7 3.7 0 1 0 15.7 12 Z" />

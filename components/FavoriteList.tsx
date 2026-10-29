@@ -22,7 +22,7 @@ type Counts = Record<string, { dep: number | null; arr: number | null }>;
  * Строки подписей приходят пропсами, а не из useTranslations: заголовки живут в
  * пространстве `home`, а его на клиент не передают (lib/client-messages.ts).
  */
-export function FavoriteList({ locale, title, empty, depLabel, arrLabel }: {
+export function FavoriteList({ locale, title, empty, find, depLabel, arrLabel }: {
   locale: string;
   /** Заголовок пустой страницы — «Избранные аэропорты». */
   title: string;
@@ -33,6 +33,8 @@ export function FavoriteList({ locale, title, empty, depLabel, arrLabel }: {
    * стояла здесь до 28.10.2026, занимала строку на пустом месте у всех.
    */
   empty: string;
+  /** Подпись кнопки, уводящей к поиску на главной. */
+  find: string;
   depLabel: string;
   arrLabel: string;
 }) {
@@ -55,14 +57,17 @@ export function FavoriteList({ locale, title, empty, depLabel, arrLabel }: {
     return () => { alive = false; };
   }, [codes]);
 
-  // До чтения хранилища не рисуем ничего: иначе у человека, у которого в избранном
-  // десять аэропортов, успевает мигнуть «пока пусто».
-  if (!ready) return null;
-
+  // Заглушку рисуем СРАЗУ, ещё до чтения хранилища: она есть и в серверной
+  // разметке, поэтому у человека с пустым избранным кнопка видна с первого кадра,
+  // а не появляется спустя треть секунды. Тому, у кого избранное есть, она не
+  // мигнёт: скрипт в <head> уже поставил на <html> признак data-fav, и правило
+  // `:root[data-fav]:not([data-hydrated]) .fav-blank` прячет её до того, как
+  // React подставит список.
+  //
   // Пустая страница: сердце, заголовок, одна строка объяснения — по центру экрана.
   // Кнопки «Все аэропорты» здесь нет намеренно: она уводила туда, где избранное всё
   // равно не добавляют, — добавляют с борта конкретного аэропорта.
-  if (favorites.length === 0) {
+  if (!ready || favorites.length === 0) {
     return (
       <div className="fav-blank">
         {/* Контурное сердце тонкой линией: заливка на пустой странице читалась бы
@@ -75,6 +80,9 @@ export function FavoriteList({ locale, title, empty, depLabel, arrLabel }: {
         </span>
         <h2 className="fav-blank-t">{title}</h2>
         <p className="fav-blank-p">{empty}</p>
+        {/* Единственное действие пустой страницы: добавляют избранное с борта
+            аэропорта, а попасть на борт можно только через поиск на главной. */}
+        <Link href={`/${locale}`} className="fav-blank-go press">{find}</Link>
       </div>
     );
   }

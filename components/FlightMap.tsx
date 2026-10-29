@@ -41,8 +41,20 @@ export function FlightMap({ html, locale, messages }: { html: string; locale: st
       .catch(() => {
         if (controller.signal.aborted) return;
         root.removeAttribute('aria-busy');
+        // Кнопку «Добавить перелёт» runtime включает до загрузки каталога,
+        // чтобы она не моргала. Раз загрузка не удалась, открывать нечего —
+        // гасим её обратно, иначе нажатие молча не делало бы ничего.
+        root.querySelectorAll('[data-action="add"]').forEach(b => {
+          (b as HTMLButtonElement).disabled = true;
+          b.removeAttribute('aria-busy');
+        });
         const status = root.querySelector('#storageStatus');
-        if (status) status.textContent = String(messages.loadError);
+        if (status) {
+          status.textContent = String(messages.loadError);
+          // До первого перелёта служебные строки спрятаны стилем, а про сбой
+          // человеку сказать обязаны: по этой пометке правило перестаёт совпадать.
+          (status as HTMLElement).dataset.error = 'true';
+        }
         const retry = document.createElement('a');
         retry.href = `/${locale}/flight-map`;
         retry.dataset.retry = 'true';

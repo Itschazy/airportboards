@@ -82,8 +82,8 @@ function SearchSection({ label, items, startIndex = 0, active, query, pending = 
             style={{
               width: '100%',
               display: 'flex', alignItems: 'center',
-              gap: 10,
-              padding: '7px 14px',
+              gap: 12,
+              padding: '13px 16px',
               border: 'none',
               borderBottom: i < items.length - 1 ? '1px solid rgba(var(--ab-ink),0.06)' : 'none',
               // Подсветка строки — полупрозрачная краска по стеклу, а не плашка
@@ -97,12 +97,12 @@ function SearchSection({ label, items, startIndex = 0, active, query, pending = 
             }}
           >
             {/* Flag */}
-            <span style={{ fontSize: 16, flexShrink: 0, width: 22, textAlign: 'center', lineHeight: 1 }}>
+            <span style={{ fontSize: 18, flexShrink: 0, width: 24, textAlign: 'center', lineHeight: 1 }}>
               <span className="locale-flag">{flag(a.iso2)}</span>
             </span>
 
             {/* IATA */}
-            <span style={{ fontSize: 13, fontWeight: 800, color: 'var(--ab-0a84ff)', flexShrink: 0, width: 34, letterSpacing: '-0.02em' }}>
+            <span style={{ fontSize: 14, fontWeight: 800, color: 'var(--ab-0a84ff)', flexShrink: 0, width: 38, letterSpacing: '-0.02em' }}>
               {highlight(a.iata, query)}
             </span>
 
@@ -110,17 +110,12 @@ function SearchSection({ label, items, startIndex = 0, active, query, pending = 
                 вдвое ниже, и на экран помещается вдвое больше аэропортов.
                 Название приглушено и сжимается первым, город не обрезается. */}
             <span style={{ flex: 1, minWidth: 0, display: 'flex', alignItems: 'baseline', gap: 8, overflow: 'hidden' }}>
-              <span style={{ fontSize: 14, color: 'var(--ab-e4e4e7)', whiteSpace: 'nowrap', flexShrink: 0 }}>
+              <span style={{ fontSize: 16, color: 'var(--ab-e4e4e7)', whiteSpace: 'nowrap', flexShrink: 0 }}>
                 {highlight(a.city, query)}
               </span>
-              <span className="srch-name" style={{ fontSize: 11.5, color: 'var(--ab-6a6a6a)', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis', minWidth: 0 }}>
+              <span className="srch-name" style={{ fontSize: 13, color: 'var(--ab-6a6a6a)', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis', minWidth: 0 }}>
                 {highlight(a.name, query)}
               </span>
-            </span>
-
-            {/* Country */}
-            <span style={{ fontSize: 11, color: 'var(--ab-8a8a8a)', flexShrink: 0, maxWidth: 80, textAlign: 'end', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>
-              {a.country}
             </span>
           </button>
         );
@@ -135,7 +130,7 @@ export function AirportSearch({ locale, placeholder }: { locale: string; placeho
   const [response, setResponse] = useState<{ query: string; locale: string; airports: Result[]; failed?: boolean } | null>(null);
   // Результаты принадлежат конкретному запросу: даже до запуска effect старый
   // список нельзя выбрать быстрым Enter или касанием после изменения поля.
-  const [bootstrap, setBootstrap] = useState<{ locale: string; popular: Result[]; index: ReturnType<typeof prepareQuick> } | null>(null);
+  const [bootstrap, setBootstrap] = useState<{ locale: string; index: ReturnType<typeof prepareQuick> } | null>(null);
   const cache = useRef(new Map<string, Result[]>());
   const currentQuery = query.trim();
   const cacheKey = `${locale}:${currentQuery.toLowerCase()}`;
@@ -189,7 +184,7 @@ export function AirportSearch({ locale, placeholder }: { locale: string; placeho
     fetch(`/api/airports/search?locale=${locale}&bootstrap=1`, { signal: controller.signal })
       .then(res => { if (!res.ok) throw new Error('Search bootstrap'); return res.json(); })
       .then(data => {
-        if (!controller.signal.aborted) setBootstrap({ locale, popular: data.airports || [], index: prepareQuick((data.quick || []) as QuickTuple[]) });
+        if (!controller.signal.aborted) setBootstrap({ locale, index: prepareQuick((data.quick || []) as QuickTuple[]) });
       }).catch(() => { /* Полный поиск остаётся доступным при ошибке словаря. */ });
     return () => controller.abort();
   }, [locale]);
@@ -252,13 +247,12 @@ export function AirportSearch({ locale, placeholder }: { locale: string; placeho
     setQuery('');
   };
 
-  // Sections rendered in the empty state, and the flat list keyboard nav walks.
-  // De-dupe across sections (an airport can be in recent AND popular)
-  // so there are no duplicate React keys and arrow-keys + Enter hit the right row.
+  // На пустом поле показываем ТОЛЬКО то, что человек искал сам: популярные
+  // аэропорты закрывали половину экрана ещё до первой буквы. Истории нет —
+  // список не раскрывается вовсе.
   const seen = new Set<string>();
   const recentF = recent.filter(a => !seen.has(a.iata) && seen.add(a.iata));
-  const popularItems = (bootstrap?.locale === locale ? bootstrap.popular : []).slice(0, 6).filter(a => !seen.has(a.iata) && seen.add(a.iata));
-  const emptyFlat = [...recentF, ...popularItems];
+  const emptyFlat = recentF;
   const navList = query.trim() ? results : emptyFlat;
 
   const onKey = (e: React.KeyboardEvent) => {
@@ -489,10 +483,7 @@ export function AirportSearch({ locale, placeholder }: { locale: string; placeho
           {query.trim() ? (
             <SearchSection active={active} query={query} go={go} setActive={setActive} label={tNav('results')} items={visibleResults} pending={pending} />
           ) : (
-            <>
-              {recentF.length > 0 && <SearchSection active={active} query={query} go={go} setActive={setActive} label={tNav('recent')} items={recentF} startIndex={0} />}
-              {popularItems.length > 0 && <SearchSection active={active} query={query} go={go} setActive={setActive} label={tNav('popular')} items={popularItems} startIndex={recentF.length} />}
-            </>
+            recentF.length > 0 && <SearchSection active={active} query={query} go={go} setActive={setActive} label={tNav('recent')} items={recentF} startIndex={0} />
           )}
         </div>
       )}

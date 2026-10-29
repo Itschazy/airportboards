@@ -1,7 +1,7 @@
 'use client';
 
 import Link from 'next/link';
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { useTranslations } from 'next-intl';
 import { DisclosureArrow } from './DisclosureArrow';
 import { locales, localeNames, localeFlags, rtlLocales, type Locale } from '@/lib/i18n';
@@ -23,7 +23,11 @@ export function SettingsControls({ locale }: { locale: Locale }) {
   const t = useTranslations('nav');
   const tLegal = useTranslations('legal');
   const [zone, setZone] = useState<string | null>(null);
-  const [langOpen, setLangOpen] = useState(false);
+  // Список языков живёт в <dialog>: на телефоне это шторка снизу, на широком
+  // экране — окно по центру. Раскрытие прямо в плитке раздвигало страницу и
+  // уводило нижние разделы за край, а на широком экране список из двенадцати
+  // строк занимал пол-страницы.
+  const langRef = useRef<HTMLDialogElement>(null);
 
   // Пояс читателя и его смещение. Только для показа: ни одно время на сайте от него
   // не зависит, и в этом весь смысл раздела — снять вопрос, не обманув.
@@ -105,17 +109,32 @@ export function SettingsControls({ locale }: { locale: Locale }) {
         <button
           type="button"
           className="press set-tile"
-          aria-expanded={langOpen}
+          aria-haspopup="dialog"
           aria-controls="set-langs"
-          onClick={() => setLangOpen(o => !o)}
+          onClick={() => langRef.current?.showModal()}
         >
           <span className="set-tile-t">{t('language')}</span>
           <span className="set-tile-ico locale-flag" aria-hidden="true">{localeFlags[locale]}</span>
           <span className="set-tile-v">{localeNames[locale]}</span>
         </button>
 
-        {langOpen && (
-          <ul className="set-langs set-tiles-wide" id="set-langs">
+        {/* Окно есть в разметке всегда, закрытым: ссылки на двенадцать языков
+            остаются в исходном HTML, как и было при раскрытии на месте.
+            Закрытие по фону — свой обработчик: клик по ::backdrop приходит самому
+            <dialog>, и отличить его от клика по содержимому можно только так. */}
+        <dialog
+          ref={langRef}
+          id="set-langs"
+          className="lang-dialog"
+          aria-label={t('language')}
+          onClick={e => { if (e.target === langRef.current) langRef.current?.close(); }}
+        >
+          <div className="sheet-handle" aria-hidden="true" />
+          <div className="lang-head">
+            <h2>{t('language')}</h2>
+            <button type="button" className="lang-close" aria-label={t('close')} onClick={() => langRef.current?.close()}>×</button>
+          </div>
+          <ul className="set-langs">
             {locales.map(loc => (
               <li key={loc}>
                 {/* lang и dir на самой ссылке: «العربية» внутри русской страницы иначе
@@ -134,7 +153,7 @@ export function SettingsControls({ locale }: { locale: Locale }) {
               </li>
             ))}
           </ul>
-        )}
+        </dialog>
       </div>
 
       <div className="sg-h">{t('timezone')}</div>

@@ -8,29 +8,33 @@ import { getCityName } from '@/lib/places';
 // Localized 404 — replaces Next's English default. Renders inside the [locale] layout
 // (header/footer), so it just supplies helpful body content: a search box, popular
 // airports, and a home link, in the visitor's language.
+//
+// Вид — тот же, что у пустых страниц избранного и карты перелётов: круг со
+// значком, заголовок, строка объяснения, одно синее действие. Разметка целиком
+// в классах (.nf-*), а не в inline-стилях: правки размеров идут в одном месте с
+// остальными пустыми страницами, иначе они снова разъедутся.
 export default async function NotFound() {
   let locale = 'en';
   try { locale = baseLocale(await getLocale()); } catch { /* fall back to en */ }
   const t = await getTranslations({ locale, namespace: 'notfound' });
   const tNav = await getTranslations({ locale, namespace: 'nav' });
-  const tHome = await getTranslations({ locale, namespace: 'home' });
   const popular = POPULAR_AIRPORTS.slice(0, 8).map(i => getAirport(i)).filter(Boolean) as NonNullable<ReturnType<typeof getAirport>>[];
 
   return (
-    <div style={{ maxWidth: 640, margin: '0 auto', padding: '56px 24px 80px' }}>
-      <div style={{ fontSize: 'clamp(64px, 18vw, 104px)', fontWeight: 800, letterSpacing: '-0.05em', color: 'var(--ab-1a1a1a)', lineHeight: 1 }}>404</div>
-      <h1 style={{ fontSize: 'clamp(24px, 6vw, 32px)', fontWeight: 800, letterSpacing: '-0.02em', color: 'var(--ab-ffffff)', margin: '12px 0 0' }}>{t('title')}</h1>
-      <p style={{ fontSize: 15, color: 'var(--ab-8a8a8a)', marginTop: 10, lineHeight: 1.5 }}>{t('text')}</p>
+    <div className="nf-page">
+      <span className="nf-ico" aria-hidden="true">404</span>
+      <h1 className="nf-t">{t('title')}</h1>
+      <p className="nf-p">{t('text')}</p>
 
-      <div style={{ marginTop: 24 }}>
+      <div className="nf-search">
         <NotFoundSearch locale={locale} placeholder={tNav('search_placeholder')} />
       </div>
 
-      <div style={{ fontSize: 12, fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.12em', color: 'var(--ab-8a8a8a)', margin: '32px 0 12px' }}>{tNav('popular')}</div>
-      <div style={{ display: 'flex', flexWrap: 'wrap', gap: 8 }}>
+      <div className="nf-pop-t">{tNav('popular')}</div>
+      <div className="nf-chips">
         {popular.map(a => (
-          <Link key={a.iata} href={`/${locale}/airport/${a.iata}`} style={{ background: 'var(--glass-soft)', boxShadow: 'var(--glass-rim)', borderRadius: 999, padding: '9px 14px', fontSize: 14, color: 'var(--ab-e4e4e7)', textDecoration: 'none', display: 'flex', gap: 8 }}>
-            <span style={{ fontWeight: 700, color: 'var(--ab-0a84ff)' }}>{a.iata}</span>
+          <Link key={a.iata} href={`/${locale}/airport/${a.iata}`} className="nf-chip">
+            <b>{a.iata}</b>
             {/* Город ПЕРЕВЕДЁННЫЙ: на русской странице чипы были подписаны «New York»,
                 «London», «Paris», хотя переводы в data/city-names.json есть и главная
                 со внутренним поиском их применяют. */}
@@ -39,7 +43,7 @@ export default async function NotFound() {
         ))}
       </div>
 
-      <Link href={`/${locale}`} style={{ display: 'inline-block', marginTop: 32, color: 'var(--ab-0a84ff)', fontSize: 15, fontWeight: 600, textDecoration: 'none' }}>← {t('home')}</Link>
+      <Link href={`/${locale}`} className="nf-go">{t('home')}</Link>
     </div>
   );
 }

@@ -57,6 +57,7 @@ export default async function FavoritesPage({ params }: Props) {
         locale={locale}
         title={tNav('favorites_title')}
         empty={tNav('favorites_empty')}
+        find={tNav('favorites_find')}
         depLabel={tHome('departures_short')}
         arrLabel={tHome('arrivals_short')}
       />

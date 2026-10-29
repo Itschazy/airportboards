@@ -13,10 +13,11 @@ const hooks={
   useState(init){const i=cursor++;slots[i]??={value:typeof init==='function'?init():init};return [slots[i].value,v=>{const n=typeof v==='function'?v(slots[i].value):v;if(!Object.is(n,slots[i].value)){slots[i].value=n;dirty=true;}}];},
   useRef(v){const i=cursor++;slots[i]??={current:v};return slots[i];},
   useCallback(fn,deps){const i=cursor++;if(!depsEqual(slots[i]?.deps,deps))slots[i]={fn,deps};return slots[i].fn;},
+  useMemo(fn,deps){const i=cursor++;if(!depsEqual(slots[i]?.deps,deps))slots[i]={deps,value:fn()};return slots[i].value;},
   useEffect(fn,deps){const i=cursor++;if(!depsEqual(slots[i]?.deps,deps)){const prev=slots[i];slots[i]={deps};effects.push(()=>{prev?.cleanup?.();slots[i].cleanup=fn();});}},
 };
 const calls=[], routes=[];
-const context={exports:{},require(name){if(name==='@/lib/quick-search'){const m={exports:{}};vm.runInNewContext(ts.transpileModule(fs.readFileSync('lib/quick-search.ts','utf8'),{compilerOptions:{target:ts.ScriptTarget.ES2020,module:ts.ModuleKind.CommonJS}}).outputText,m);return m.exports;}if(name==='react')return hooks;if(name==='react/jsx-runtime')return {jsx:(type,props)=>({type,props}),jsxs:(type,props)=>({type,props}),Fragment:'fragment'};if(name==='next/navigation')return {useRouter:()=>({push:p=>routes.push(p)})};if(name==='next-intl')return {useTranslations:()=>x=>x};if(name==='@/lib/track')return {track(){},GOALS:{}};throw Error(name);},
+const context={exports:{},require(name){if(name==='@/lib/quick-search'){const m={exports:{}};vm.runInNewContext(ts.transpileModule(fs.readFileSync('lib/quick-search.ts','utf8'),{compilerOptions:{target:ts.ScriptTarget.ES2020,module:ts.ModuleKind.CommonJS}}).outputText,m);return m.exports;}if(name==='react')return hooks;if(name==='react/jsx-runtime')return {jsx:(type,props)=>({type,props}),jsxs:(type,props)=>({type,props}),Fragment:'fragment'};if(name==='next/navigation')return {useRouter:()=>({push:p=>routes.push(p),prefetch(){}})};if(name==='next-intl')return {useTranslations:()=>x=>x};if(name==='@/lib/track')return {track(){},GOALS:{}};throw Error(name);},
   setTimeout,clearTimeout,AbortController,document:{addEventListener(){},removeEventListener(){}},localStorage:{getItem(){return '[]';},setItem(){}},fetch(url,options){return new Promise((resolve,reject)=>calls.push({url,options,resolve:data=>resolve({ok:true,json:async()=>Array.isArray(data)?{airports:data}:data}),reject}));}};
 vm.runInNewContext(js,context);
 function render(){do{dirty=false;cursor=0;tree=context.exports.AirportSearch({locale:currentLocale,placeholder:'search'});for(const f of effects.splice(0))f();}while(dirty);}
@@ -77,5 +78,13 @@ render();await tick();const delayedDictionary=calls[0];input().props.onFocus();r
 calls.at(-1).reject(new Error('offline'));await tick();
 delayedDictionary.resolve({airports:[],quick:[['CEK','Челябинск','Челябинск','Россия','RU']]});await tick();
 enter();assert.equal(routes.at(-1),'/ru/airport/CEK','Поздний словарь помогает даже после ошибки полного поиска');
+// Пустое поле не раскрывает список: истории в этом прогоне нет (localStorage
+// отдаёт []), а популярные направления на пустом поле больше не показываем.
+for(const s of slots)s?.cleanup?.();slots=[];effects=[];dirty=false;calls.length=0;routes.length=0;currentLocale='ru';
+render();await tick();calls[0].resolve({airports:[airport('JFK')],quick:[['CEK','Челябинск','Челябинск','Россия','RU']]});await tick();
+input().props.onFocus();render();
+const options=(node=tree,found=[])=>{if(!node||typeof node!=='object')return found;if(node.props?.role==='option')found.push(node);for(const child of [node.props?.children].flat(Infinity))if(child!=null)options(child,found);return found;};
+assert.equal(options().length,0,'Пустое поле без истории не показывает ни одной подсказки');
+assert.equal(input().props['aria-expanded'],false,'Пустое поле не объявляет раскрытый список');
 for(const s of slots)s?.cleanup?.();
-console.log('PASS: ранний Enter, поздний популярный ответ, обратный порядок ответов, ошибка сети, непрерывные подсказки, быстрый Челябинск, повтор без сети, поздний словарь, IME, смена локали, offline fallback');
+console.log('PASS: ранний Enter, поздний популярный ответ, обратный порядок ответов, ошибка сети, непрерывные подсказки, быстрый Челябинск, повтор без сети, поздний словарь, IME, смена локали, offline fallback, пустое поле без подсказок');
