@@ -9,8 +9,8 @@ import { getAirport, distanceKm } from '@/lib/airports';
 import { getAirportName } from '@/lib/airport-names';
 import { getCityName } from '@/lib/places';
 import { localAirlineName } from '@/lib/airline-ru';
-import { getRoute, getRouteStats, getBoardStampWithRows, airlineName, type FlightRow } from '@/lib/flights';
-import { locales, forwardArrow } from '@/lib/i18n';
+import { getRoute, getRouteStats, airlineName } from '@/lib/flights';
+import { locales, forwardArrow, numLocale } from '@/lib/i18n';
 import { joinList } from '@/lib/list-separator';
 import { routeFacts } from '@/lib/route-facts';
 import { assertLocale } from '@/lib/locale-guard';
@@ -73,7 +73,7 @@ export default async function RoutePage({ params }: Props) {
   const from = getCityName(a.city, locale), to = getCityName(b.city, locale);
   const fromName = getAirportName(a.iata, locale, a.name), toName = getAirportName(b.iata, locale, b.name);
 
-  let flights: FlightRow[] = [];
+  let flights: Awaited<ReturnType<typeof getRoute>> = [];
   try { flights = await getRoute(p.from, p.to, locale); } catch {}
 
   // Перевозчика русский читатель знает по-русски: под этим же маршрутом табло
@@ -113,7 +113,24 @@ export default async function RoutePage({ params }: Props) {
   // существующий заголовок каталога, и попади она в разметку с пустым name, вся сущность
   // стала бы невалидной.
   const faq = facts.filter(f => f.q);
-  const stamp = getBoardStampWithRows(p.from, 'departures');
+  const stamp = stats.fetchedAtMs;
+  // Часы строк — вылет, не прилёт. Показываем рядом аэропорт и дату снимка,
+  // чтобы часовые пояса/вчерашний кэш не превращались в ложное «сегодня».
+  const stampLabel = stamp ? (() => {
+    try { return new Intl.DateTimeFormat(numLocale(locale), {
+      timeZone: a.tz || 'UTC', year: 'numeric', month: 'short', day: 'numeric',
+      hour: '2-digit', minute: '2-digit', hourCycle: 'h23', timeZoneName: 'short',
+    }).format(new Date(stamp)); } catch { return new Date(stamp).toISOString(); }
+  })() : null;
+
+  // Нет подтверждённого IANA-пояса — не выдаём дату UTC за местную.
+  // Форматтер один на страницу, не на каждую строку; битая зона не ломает SSR.
+  let departureDateFormatter: Intl.DateTimeFormat | null = null;
+  try {
+    if (a.tz) departureDateFormatter = new Intl.DateTimeFormat(numLocale(locale), {
+      timeZone: a.tz, day: 'numeric', month: 'short', year: 'numeric',
+    });
+  } catch { /* неизвестный пояс: строка остаётся без предполагаемой даты */ }
 
   const canonicalUrl = `${BASE}/${locale}/route/${p.from}-${p.to}`;
   const jsonLd: object[] = [{
@@ -168,6 +185,11 @@ export default async function RoutePage({ params }: Props) {
         <Link href={`/${locale}/airport/${b.iata}/arrivals`} style={link}>{toName}</Link>
       </p>
 
+      <p style={{ fontSize: 14, lineHeight: 1.55, color: 'var(--ab-8a8a8a)', margin: '0 0 16px' }}>
+        {t('route_departure_time', { iata1: p.from })}
+        {stamp && stampLabel && <><br /><time dateTime={new Date(stamp).toISOString()}>{t('route_updated', { date: stampLabel })}</time></>}
+      </p>
+
       {airlines.length > 0 && (
         <p style={{ fontSize: 14, color: 'var(--ab-6a6a6a)', margin: '0 0 24px' }}>
           {t('route_airlines')}: <span style={{ color: 'var(--ab-b4b4b4)' }}>{airlines.join(' · ')}</span>
@@ -202,6 +224,11 @@ export default async function RoutePage({ params }: Props) {
       ) : (
         <ul style={{ listStyle: 'none', margin: 0, padding: 0, display: 'flex', flexDirection: 'column', gap: 8 }}>
           {flights.map((f, i) => {
+            // Дата снимка не является датой каждого рейса: после полуночи HH:MM
+            // неоднозначно. Подписываем дату вылета в существующей строке номера,
+            // в том же поясе отправления, без новых блоков или клиентского JS.
+            const departureDate = departureDateFormatter && f.departureDateTs && f.departureDateTs > 0 ? new Date(f.departureDateTs * 1000) : null;
+            const departureLabel = departureDate ? departureDateFormatter?.format(departureDate) : null;
             return (
             <li key={i} style={{ display: 'flex', alignItems: 'center', gap: 14, background: 'var(--glass-soft)', boxShadow: 'var(--glass-rim)', borderRadius: 16, padding: '14px 16px', overflow: 'hidden' }}>
               <span style={{ width: 4, alignSelf: 'stretch', background: STATUS_COLOR[f.status] || 'var(--ab-48484a)', borderRadius: 2, flexShrink: 0 }} />
@@ -213,7 +240,7 @@ export default async function RoutePage({ params }: Props) {
                     answered 200 with "not found" under noindex — a soft-404, for humans as
                     much as crawlers, since the page has no client-side refresh either.
                     ~13,000 such links across 484 route pairs and 12 locales. */}
-                <span style={{ display: 'block', fontSize: 12, color: 'var(--ab-6a6a6a)', marginTop: 2 }}>{f.flight}</span>
+                <span style={{ display: 'block', fontSize: 12, color: 'var(--ab-6a6a6a)', marginTop: 2 }}><bdi>{f.flight}</bdi>{departureDate && departureLabel && <> · <time dateTime={departureDate.toISOString()}>{departureLabel}</time></>}</span>
               </span>
             </li>
             );

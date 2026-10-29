@@ -45,7 +45,7 @@ for (const loc of LOCALES) {
   if (!seg) { problems.push(`${loc}: нет записи`); continue; }
   for (const k of KEYS) if (!new RegExp(`\\b${k}:`).test(seg)) problems.push(`${loc}.${k}: нет ключа`);
   // Подстановки: какие обязаны быть в каждом ключе.
-  const need = { duration_q: ['from', 'to'], duration_a: ['d'], distance_q: ['a', 'b'], distance_a: ['km'], airlines_a: ['list'] };
+  const need = { duration_q: ['from', 'to', 'a', 'b'], duration_a: ['d', 'a', 'b'], distance_q: ['a', 'b'], distance_a: ['km', 'a', 'b'], airlines_a: ['list', 'a', 'b'] };
   for (const [k, vars] of Object.entries(need)) {
     const line = new RegExp(`\\b${k}:\\s*'([^']*)'`).exec(seg)?.[1] ?? '';
     for (const v of vars) if (!line.includes(`{${v}}`)) problems.push(`${loc}.${k}: потеряна подстановка {${v}}`);

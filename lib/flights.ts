@@ -590,7 +590,7 @@ export function getBoardStampWithRows(iata: string, direction: 'departures' | 'a
   return ts;
 }
 
-export async function getRoute(from: string, to: string, locale: string, live = false): Promise<FlightRow[]> {
+export async function getRoute(from: string, to: string, locale: string, live = false): Promise<(FlightRow & { departureDateTs: number | null })[]> {
   const F = from.toUpperCase(), T = to.toUpperCase();
   let raw = await fetchRaw(`dep_iata=${F}&arr_iata=${T}`, 'departures', { live });
   // The pair query has its own store key ("dep_iata=LHR&arr_iata=JFK") which the warmer
@@ -604,7 +604,14 @@ export async function getRoute(from: string, to: string, locale: string, live = 
     raw = board.filter(f => f.arr_iata === T);
   }
   const own = raw.filter(f => f.dep_iata === F && f.arr_iata === T);
-  return own.map(f => mapFlight(f, 'departures', locale));
+  return own.map(f => {
+    const row = mapFlight(f, 'departures', locale);
+    // Дата должна относиться к ПОКАЗАННЫМ часам. f.ts выбирает estimated_ts
+    // независимо от наличия текстового estimated; при частичном ответе он мог
+    // назвать другую дату. Нет парной отметки — не угадываем день рейса.
+    const departureDateTs = row.actual ? f.dep_estimated_ts : f.dep_time_ts;
+    return { ...row, departureDateTs: departureDateTs && Number.isFinite(new Date(departureDateTs * 1000).getTime()) ? departureDateTs : null };
+  });
 }
 
 /**
@@ -615,8 +622,10 @@ export async function getRoute(from: string, to: string, locale: string, live = 
  * Считать его можно лишь по сырой записи, где есть обе отметки.
  *
  * Продолжительность — МЕДИАНА, а не среднее. У пары городов рейсы разных авиакомпаний и типов
- * судна расходятся на десятки минут, а один рейс с многочасовой задержкой в отметке прибытия
- * утащил бы среднее в бессмыслицу. Медиана к такому выбросу равнодушна.
+ * судна расходятся на десятки минут; выброс в плановых отметках может утащить
+ * среднее в бессмыслицу. Используем плановые dep_time_ts/arr_time_ts, не время в воздухе.
+ * 29.10 исправлена чётная выборка: раньше брали верхний средний элемент, теперь
+ * среднее двух центральных. Проверено на 60/120 → 90 мин и нечётной выборке.
  *
  * Записи без обеих отметок пропускаются молча: лучше не ответить, чем ответить наугад. Если
  * годных не осталось, durationMin равен null, и страница просто не задаёт этого вопроса.
@@ -625,30 +634,42 @@ export async function getRoute(from: string, to: string, locale: string, live = 
  * провайдеру нет ни одного, платить нечем.
  */
 export async function getRouteStats(from: string, to: string): Promise<{
-  count: number; firstTs: number | null; lastTs: number | null; durationMin: number | null;
+  count: number; firstTs: number | null; lastTs: number | null; durationMin: number | null; fetchedAtMs: number | null;
 }> {
   const F = from.toUpperCase(), T = to.toUpperCase();
-  let raw = await fetchRaw(`dep_iata=${F}&arr_iata=${T}`, 'departures', { live: false });
+  let sourceQuery = `dep_iata=${F}&arr_iata=${T}`;
+  let raw = await fetchRaw(sourceQuery, 'departures', { live: false });
   if (!raw.length) {
-    const board = await fetchRaw(`dep_iata=${F}`, 'departures', { live: false });
+    sourceQuery = `dep_iata=${F}`;
+    const board = await fetchRaw(sourceQuery, 'departures', { live: false });
     raw = board.filter(f => f.arr_iata === T);
   }
   const own = raw.filter(f => f.dep_iata === F && f.arr_iata === T);
-  if (!own.length) return { count: 0, firstTs: null, lastTs: null, durationMin: null };
+  if (!own.length) return { count: 0, firstTs: null, lastTs: null, durationMin: null, fetchedAtMs: null };
 
   const deps = own.map(f => f.dep_time_ts || 0).filter(Boolean).sort((a, b) => a - b);
   const spans = own
+    // Не подменяем отсутствующую отметку нулём: иначе один timestamp мог
+    // случайно пройти порог длительности. Оба значения должны быть пригодны.
+    .filter(f => Number.isFinite(f.dep_time_ts) && Number.isFinite(f.arr_time_ts) && (f.dep_time_ts || 0) > 0 && (f.arr_time_ts || 0) > 0)
     .map(f => (f.arr_time_ts || 0) - (f.dep_time_ts || 0))
     // Отсечка снизу и сверху: отрицательная разница означает битые отметки, а сутки с
     // лишним — почти наверняка сдвиг даты в источнике, а не настоящий рейс.
     .filter(s => s > 15 * 60 && s < 20 * 3600)
     .sort((a, b) => a - b);
 
+  // 29.10: метаданные маршрута раньше брали дату полного борта даже при наличии
+  // отдельного снимка пары. Сохраняем ключ реально использованных записей: дата
+  // подписи и dateModified относятся к нему. Пустому набору дату не приписываем.
+  // Только чтение хранилища; live:false и вся политика платного обновления прежние.
+  const stamp = getStaleTs(`departures:${sourceQuery}`);
+  const fetchedAtMs = typeof stamp === 'number' && Number.isFinite(stamp) && stamp > 0 && stamp <= Date.now() ? stamp : null;
   return {
+    fetchedAtMs,
     count: own.length,
     firstTs: deps[0] ?? null,
     lastTs: deps[deps.length - 1] ?? null,
-    durationMin: spans.length ? Math.round(spans[spans.length >> 1] / 60) : null,
+    durationMin: spans.length ? Math.round((spans[(spans.length - 1) >> 1] + spans[spans.length >> 1]) / 120) : null,
   };
 }
 

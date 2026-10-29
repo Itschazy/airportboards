@@ -2,17 +2,17 @@
   "en": {
     "title": "About airportsboard.live",
     "intro": [
-      "airportsboard.live is a free service that shows live flight boards — arrivals and departures — for more than 6,000 airports around the world, available in 12 languages. There is nothing to install and no account to create: open the board for the airport you care about and read it the way you would read the screens in a terminal.",
+      "airportsboard.live is a free airport directory and arrivals and departures board in 12 languages. Boards show received flight data; an airport being in the directory does not guarantee a current snapshot. No app installation or account is required.",
       "Our goal is simple: give travelers and the people waiting for them a fast, clean, up-to-date view of what is landing and taking off, wherever they are."
     ],
     "sections": [
       {
         "heading": "What you can do here",
         "body": [
-          "- Look up any of 6,000+ airports worldwide and see its current arrivals and departures.",
+          "- Find an airport by city, name or IATA code and open its board when data is available.",
           "- Check flight status, scheduled and estimated times, and gate or terminal details where available.",
           "- Read the boards in 12 languages, so the information is clear whether you are at home or abroad.",
-          "Boards refresh frequently throughout the day so the picture stays close to real time."
+          "Each board shows the age of its data. A saved snapshot can lag behind the current situation."
         ]
       },
       {
@@ -25,10 +25,10 @@
       {
         "heading": "How it works",
         "body": [
-          "We aggregate flight information from third-party flight-data providers and present it in a single, consistent board for each airport. That data is collected, formatted, and displayed automatically.",
+          "Flight data comes from the third-party provider AirLabs (airlabs.co). We save received snapshots and display them in a consistent board format for each airport.",
           "Because the information comes from external sources, it can occasionally be delayed, incomplete, or inaccurate. Please always verify critical details — final gate, boarding time, and any schedule change — directly with your airline or the official airport before you travel. airportsboard.live is an information tool, not an official source, and should not be your only reference for time-sensitive decisions.",
-          "How the data is refreshed: boards are updated on a schedule matched to how busy an airport is — the busiest hubs several times a day, smaller airports at least daily. Every board displays the age of its own data, and a page never claims to be live when it is not.",
-          "How we know which airports have flights: we probed published flight schedules for every one of the roughly 6,000 airports that hold an IATA code. About {served} have scheduled passenger service; the rest are airfields, military bases and private strips with no airline flights. Those pages say so plainly and name the nearest airport you can actually fly from, with the distance, instead of showing an empty board.",
+          "When a visitor opens a board whose data is at least 10 minutes old, the site requests an update. A newer snapshot is reused without another provider request. If an update is delayed or unavailable, the last received snapshot remains visible. Check its age: an automatic page refresh does not guarantee new data.",
+          "Our measurements confirm scheduled passenger service at about {served} airports. The directory also contains airports without confirmed scheduled service and airports with insufficient data. An unknown status does not mean there is no service. Where the absence of scheduled service is confirmed, the page explains this and identifies the nearest airport with such service.",
           "Airports that have closed are marked as closed, with the year and the airport that took over their traffic, rather than being quietly left to look operational."
         ]
       },
@@ -44,17 +44,17 @@
   "ru": {
     "title": "О проекте airportsboard.live",
     "intro": [
-      "airportsboard.live — это бесплатный сервис, который показывает онлайн-табло рейсов — прилёты и вылеты — для более чем 6000 аэропортов по всему миру на 12 языках. Ничего не нужно устанавливать и не нужно создавать аккаунт: просто откройте табло нужного аэропорта и читайте его так же, как читали бы экраны в терминале.",
+      "airportsboard.live — бесплатный каталог аэропортов и онлайн-табло прилётов и вылетов на 12 языках. Табло показывает полученные данные о рейсах; наличие аэропорта в каталоге не гарантирует наличие текущего снимка. Устанавливать приложение или создавать аккаунт не нужно.",
       "Наша цель проста — дать путешественникам и тем, кто их встречает, быстрый, аккуратный и актуальный обзор того, что садится и вылетает, где бы вы ни находились."
     ],
     "sections": [
       {
         "heading": "Что здесь можно сделать",
         "body": [
-          "- Найти любой из 6000+ аэропортов мира и увидеть его текущие прилёты и вылеты.",
+          "- Найти аэропорт по городу, названию или коду IATA и открыть его табло, если данные получены.",
           "- Проверить статус рейса, плановое и расчётное время, а также гейт или терминал, где эти данные доступны.",
           "- Читать табло на 12 языках, чтобы информация была понятна и дома, и за границей.",
-          "Табло обновляются в течение дня, поэтому картина остаётся близкой к реальному времени."
+          "На табло указана давность данных. Сохранённый снимок может отставать от текущей ситуации."
         ]
       },
       {
@@ -67,10 +67,10 @@
       {
         "heading": "Как это работает",
         "body": [
-          "Мы агрегируем информацию о рейсах от сторонних поставщиков авиационных данных и представляем её в едином, понятном табло для каждого аэропорта. Эти данные собираются, форматируются и отображаются автоматически.",
+          "Данные рейсов поступают от стороннего поставщика AirLabs (airlabs.co). Мы сохраняем полученные снимки и показываем их в едином формате для каждого аэропорта.",
           "Поскольку информация поступает из внешних источников, она иногда может запаздывать, быть неполной или неточной. Пожалуйста, всегда проверяйте важные детали — итоговый гейт, время посадки и любые изменения расписания — напрямую у вашей авиакомпании или на официальном ресурсе аэропорта перед поездкой. airportsboard.live — это информационный инструмент, а не официальный источник, и он не должен быть вашим единственным ориентиром при решениях, зависящих от времени.",
-          "Как обновляются данные: табло обновляются по расписанию, подобранному под загруженность аэропорта — самые крупные узлы несколько раз в день, небольшие аэропорты не реже раза в сутки. На каждом табло показан возраст его собственных данных, и страница никогда не выдаёт себя за онлайн-табло, если это не так.",
-          "Откуда мы знаем, где есть рейсы: мы проверили опубликованные расписания по каждому из примерно 6 000 аэропортов, имеющих код IATA. Регулярные пассажирские рейсы есть примерно у {served}; остальные — аэродромы, военные базы и частные полосы без авиасообщения. На их страницах об этом сказано прямо и указан ближайший аэропорт, откуда действительно можно улететь, с расстоянием — вместо пустого табло.",
+          "При открытии табло посетителем сайт запрашивает обновление, если данным 10 минут или больше. Более свежий снимок используется без нового запроса к поставщику. Если обновление задерживается или недоступно, остаётся последний полученный снимок. Проверяйте его давность: автоматическое обновление страницы не гарантирует новые данные.",
+          "По нашим измерениям регулярные пассажирские рейсы подтверждены примерно у {served} аэропортов. Каталог также содержит аэропорты без подтверждённых регулярных рейсов и аэропорты, по которым данных недостаточно. Неизвестный статус не означает отсутствие авиасообщения. Если отсутствие регулярных рейсов подтверждено, страница сообщает об этом и указывает ближайший аэропорт с таким сообщением.",
           "Закрытые аэропорты помечены как закрытые, с годом закрытия и аэропортом, принявшим их трафик, а не оставлены выглядеть работающими."
         ]
       },

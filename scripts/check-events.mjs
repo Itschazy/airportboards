@@ -9,6 +9,10 @@
 import fs from 'fs';
 
 const BASE = process.env.BASE || 'https://airportsboard.live';
+// Локальная фикстура проверяет тот же canonical, что production: localhost
+// служит транспортом теста, а не новым SEO-доменом. Иначе 26 правильных ссылок
+// давали ложный провал только из-за BASE=http://localhost (29.10.2026).
+const CANONICAL_BASE = 'https://airportsboard.live';
 const LOCALES = ['en', 'ru', 'zh', 'ar', 'de', 'ko', 'ja', 'fr', 'es', 'it', 'hi', 'tr'];
 const REQUIRED = ['title', 'description', 'h1', 'banner', 'intro', 'getting', 'leaving', 'tips'];
 const PROD = process.argv.includes('--prod');
@@ -116,7 +120,7 @@ if (PROD) {
             }
           } catch { fail(`${url}: unparseable JSON-LD block`); }
         }
-        if (!html.includes(`<link rel="canonical" href="${url}"`)) fail(`${url}: canonical missing or not self-referencing`);
+        if (!html.includes(`<link rel="canonical" href="${CANONICAL_BASE}/${loc}/event/${slug}"`)) fail(`${url}: canonical missing or not self-referencing`);
       } catch (e) { fail(`${url}: fetch failed (${e.message})`); }
     }
     const hub = `${BASE}/ru/events`;

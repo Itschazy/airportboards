@@ -3,6 +3,7 @@ import { worldServiceCounts } from '@/lib/warm';
 import terms from '@/data/legal/terms.json';
 import about from '@/data/legal/about.json';
 import contact from '@/data/legal/contact.json';
+import { numLocale } from '@/lib/i18n';
 import type { Locale } from '@/lib/i18n';
 
 // Static legal / info page copy. Authored in English + Russian; every other locale
@@ -28,12 +29,13 @@ const DOCS: Record<LegalKind, DocByLocale> = {
 export const DATED_KINDS: ReadonlySet<LegalKind> = new Set<LegalKind>(['privacy', 'terms']);
 
 // ISO date the legal docs were last revised — surfaced as a localized line under the H1.
-export const LEGAL_UPDATED_ISO = '2026-07-19';
+// 29.10.2026: уточнено описание охвата сервиса, правовые условия не менялись.
+export const LEGAL_UPDATED_ISO = '2026-10-29';
 
 export function getLegalDoc(kind: LegalKind, locale: Locale): LegalDoc {
   const byLocale = DOCS[kind];
   const doc = (byLocale[locale] ?? byLocale.en) as LegalDoc;
-  return substituteCounts(doc);
+  return substituteCounts(doc, legalContentLocale(locale));
 }
 
 /**
@@ -44,8 +46,8 @@ export function getLegalDoc(kind: LegalKind, locale: Locale): LegalDoc {
  * и это ровно тот тип расхождения, из-за которого страницу отклоняет проверяющий. Замер
  * меняется при каждом прогреве, поэтому в прозе стоит {served}.
  */
-function substituteCounts<T>(doc: T): T {
-  const served = worldServiceCounts().withService.toLocaleString('en-US');
+function substituteCounts<T>(doc: T, locale: Locale): T {
+  const served = worldServiceCounts().withService.toLocaleString(numLocale(locale));
   const walk = (v: unknown): unknown => {
     if (typeof v === 'string') return v.replace(/\{served\}/g, served);
     if (Array.isArray(v)) return v.map(walk);

@@ -109,6 +109,10 @@ export default async function CountryPage({ params }: Props) {
   const { served, unserved, unknown } = splitByService(airports);
   const measuredOn = serviceMeasuredOn();
   const showSplit = !!measuredOn && served.length > 0 && unserved.length > 0;
+  // 29.10: unknown — не отсутствие рейсов. Эта группа выпадала из двух
+  // видимых списков, оставаясь в ItemList (например, 17 аэропортов UK).
+  // Показываем её отдельно теми же карточками; порядок разметки совпадает с UI.
+  const listedAirports = showSplit ? [...served, ...unserved, ...unknown] : airports;
 
   /* Разметка и видимый след строятся из ОДНОГО массива. Прежде разметка
      обещала три уровня и заканчивалась страной, а на экране стояли два:
@@ -130,8 +134,8 @@ export default async function CountryPage({ params }: Props) {
     '@context': 'https://schema.org',
     '@type': 'ItemList',
     name: t('country_title', { country: countryName, countryIn: esCountryIn(countryName, locale) }),
-    numberOfItems: airports.length,
-    itemListElement: airports.map((a, i) => ({
+    numberOfItems: listedAirports.length,
+    itemListElement: listedAirports.map((a, i) => ({
       '@type': 'ListItem', position: i + 1,
       name: getAirportName(a.iata, locale, a.name),
       item: `${BASE}/${locale}/airport/${a.iata}`,
@@ -191,6 +195,25 @@ export default async function CountryPage({ params }: Props) {
           <SectionLabel>{t('grid_unserved')}</SectionLabel>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(260px, 1fr))', gap: 8, marginTop: 28, opacity: 0.72 }}>
             {unserved.map(a => (
+              <Link key={a.iata} href={`/${locale}/airport/${a.iata}`} style={{
+                display: 'flex', alignItems: 'center', gap: 14, textDecoration: 'none', color: 'inherit',
+                background: 'var(--glass-soft)', boxShadow: 'var(--glass-rim)', borderRadius: 16, padding: '10px 14px',
+              }}>
+                <span style={{ width: 50, flexShrink: 0, fontSize: 18, fontWeight: 700, color: 'var(--ab-6a6a6a)', letterSpacing: '-0.02em' }}>{a.iata}</span>
+                <span style={{ flex: 1, minWidth: 0 }}>
+                  <span style={{ fontSize: 15, color: 'var(--ab-a1a1aa)', display: 'block', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>{getCityName(a.city, locale)}</span>
+                  <span style={{ fontSize: 12, color: 'var(--ab-6a6a6a)', display: 'block', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>{getAirportName(a.iata, locale, a.name)}</span>
+                </span>
+              </Link>
+            ))}
+          </div>
+        </>
+      )}
+      {showSplit && unknown.length > 0 && (
+        <>
+          <SectionLabel>{t('grid_unknown')}</SectionLabel>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(260px, 1fr))', gap: 8, marginTop: 28, opacity: 0.72 }}>
+            {unknown.map(a => (
               <Link key={a.iata} href={`/${locale}/airport/${a.iata}`} style={{
                 display: 'flex', alignItems: 'center', gap: 14, textDecoration: 'none', color: 'inherit',
                 background: 'var(--glass-soft)', boxShadow: 'var(--glass-rim)', borderRadius: 16, padding: '10px 14px',

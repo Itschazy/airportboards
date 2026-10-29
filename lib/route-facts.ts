@@ -43,103 +43,107 @@ import { numLocale } from '@/lib/i18n';
  * языке, сохраняет их в заголовке (а значит и совпадение с запросом), и повторяет форму
  * заголовка первого уровня, который и так читается «Москва (SVO) → Санкт-Петербург (LED)».
  */
+// 29.10: прежние ответы «357 км»/«1 ч — медиана сегодня» теряли маршрут
+// вне заголовка. Код обоих аэропортов теперь входит и в ответ, и в вопрос
+// о длительности. «Сегодня» убрано: используемый снимок может быть старым.
+// Метрика/единицы и правила пропуска отсутствующих данных не изменились.
 type Labels = {
   /** «{from} — {to}: сколько лететь?» */
   duration_q: string;
-  /** «{d} — медиана по сегодняшнему расписанию.» */
+  /** «{a} — {b}: {d}, медиана плановых длительностей доступного снимка.» */
   duration_a: string;
   /** «Какое расстояние между {a} и {b}?» */
   distance_q: string;
-  /** «{km} по прямой.» */
+  /** «Между {a} и {b} около {km} по прямой.» */
   distance_a: string;
-  /** «На маршруте работают: {list}.» — заголовком служит существующий ключ home.route_airlines. */
+  /** «В сохранённом табло {a} — {b} указаны: {list}.» — заголовок home.route_airlines. */
   airlines_a: string;
 };
 
 const LABELS: Record<string, Labels> = {
   en: {
-    duration_q: '{from} — {to}: how long is the flight?',
-    duration_a: '{d} — the median of today’s schedule.',
+    duration_q: '{from} ({a}) — {to} ({b}): how long is the flight?',
+    duration_a: '{a} — {b}: scheduled duration in the saved data is {d}, the median of available flights.',
     distance_q: '{a} — {b}: what is the distance?',
-    distance_a: '{km} in a straight line.',
-    airlines_a: 'On today’s board this route is operated by {list}.',
+    distance_a: 'The straight-line distance between airports {a} and {b} is about {km}, not the actual flight path.',
+    airlines_a: 'The saved board for {a} — {b} lists these airlines: {list}.',
   },
   ru: {
-    duration_q: '{from} — {to}: сколько лететь?',
-    duration_a: '{d} — медиана по сегодняшнему расписанию.',
+    duration_q: '{from} ({a}) — {to} ({b}): сколько лететь?',
+    duration_a: '{a} — {b}: плановая длительность по сохранённым данным — {d}, медиана доступных рейсов.',
     distance_q: '{a} — {b}: какое расстояние?',
-    distance_a: '{km} по прямой.',
-    airlines_a: 'По сегодняшнему табло маршрут выполняют: {list}.',
+    distance_a: 'Расстояние между аэропортами {a} и {b} — около {km} по прямой, не фактический трек рейса.',
+    airlines_a: 'В сохранённом табло {a} — {b} указаны авиакомпании: {list}.',
   },
   zh: {
-    duration_q: '{from} — {to}：飞行时间多久？',
-    duration_a: '{d}，为今日时刻表的中位数。',
+    duration_q: '{from} ({a}) — {to} ({b})：飞行时间多久？',
+    duration_a: '{a} — {b}：已保存数据中的计划时长为{d}，这是可用航班时长的中位数。',
     distance_q: '{a} — {b}：直线距离多远？',
-    distance_a: '直线距离{km}。',
-    airlines_a: '根据今日航班动态，执飞该航线的航空公司为：{list}。',
+    distance_a: '机场{a}与{b}之间的直线距离约为{km}，并非飞机实际飞行距离。',
+    airlines_a: '{a} — {b}的已保存航班信息板列出了以下航空公司：{list}。',
   },
   ar: {
-    duration_q: '{from} — {to}: كم تستغرق الرحلة؟',
-    duration_a: '{d} — الوسيط وفق جدول اليوم.',
+    duration_q: '{from} ({a}) — {to} ({b}): كم تستغرق الرحلة؟',
+    duration_a: '{a} — {b}: المدة المجدولة في البيانات المحفوظة هي {d}، وهي وسيط مدد الرحلات المتاحة.',
     distance_q: '{a} — {b}: كم المسافة؟',
-    distance_a: '{km} بخط مستقيم.',
-    airlines_a: 'وفق لوحة اليوم، تُشغّل هذا المسار: {list}.',
+    distance_a: 'تبلغ المسافة بخط مستقيم بين المطارين {a} و{b} نحو {km}، وليست مسافة المسار الفعلي للطائرة.',
+    airlines_a: 'تعرض اللوحة المحفوظة للمسار {a} — {b} شركات الطيران التالية: {list}.',
   },
   de: {
-    duration_q: '{from} — {to}: Wie lange dauert der Flug?',
-    duration_a: '{d} — der Median des heutigen Flugplans.',
+    duration_q: '{from} ({a}) — {to} ({b}): Wie lange dauert der Flug?',
+    duration_a: '{a} — {b}: Die geplante Dauer beträgt laut gespeicherten Daten {d}, der Median der verfügbaren Flüge.',
     distance_q: '{a} — {b}: Wie groß ist die Entfernung?',
-    distance_a: '{km} Luftlinie.',
-    airlines_a: 'Laut heutiger Anzeigetafel wird die Strecke von {list} bedient.',
+    distance_a: 'Die Luftlinie zwischen den Flughäfen {a} und {b} beträgt etwa {km}, nicht die tatsächliche Flugstrecke.',
+    airlines_a: 'Die gespeicherte Tafel für {a} — {b} nennt diese Fluggesellschaften: {list}.',
   },
   ko: {
-    duration_q: '{from} — {to}: 비행 시간은 얼마나 되나요?',
-    duration_a: '{d}이며, 오늘 시간표의 중앙값입니다.',
+    duration_q: '{from} ({a}) — {to} ({b}): 비행 시간은 얼마나 되나요?',
+    duration_a: '{a} — {b}: 저장된 데이터의 예정 소요 시간은 {d}이며, 확인 가능한 항공편의 중앙값입니다.',
     distance_q: '{a} — {b}: 거리는 얼마인가요?',
-    distance_a: '직선거리로 {km}입니다.',
-    airlines_a: '오늘 운항 정보 기준으로 이 노선은 {list}이(가) 운항합니다.',
+    distance_a: '공항 {a}와 {b} 사이의 직선거리는 약 {km}이며, 실제 비행 경로의 거리는 아닙니다.',
+    airlines_a: '{a} — {b}의 저장된 운항 안내에는 다음 항공사가 표시됩니다: {list}.',
   },
   ja: {
-    duration_q: '{from} — {to}：飛行時間は？',
-    duration_a: '{d}（本日の時刻表の中央値）。',
+    duration_q: '{from} ({a}) — {to} ({b})：飛行時間は？',
+    duration_a: '{a} — {b}：保存済みデータの予定所要時間は{d}で、取得できた便の中央値です。',
     distance_q: '{a} — {b}：距離は？',
-    distance_a: '直線距離で{km}。',
-    airlines_a: '本日の発着案内では、この路線を{list}が運航しています。',
+    distance_a: '空港{a}と{b}の直線距離は約{km}です。実際の飛行経路の距離ではありません。',
+    airlines_a: '{a} — {b}の保存済み発着案内には、次の航空会社が表示されています：{list}。',
   },
   fr: {
-    duration_q: '{from} — {to} : combien de temps dure le vol ?',
-    duration_a: '{d} — la médiane des horaires du jour.',
+    duration_q: '{from} ({a}) — {to} ({b}) : combien de temps dure le vol ?',
+    duration_a: '{a} — {b} : la durée prévue dans les données enregistrées est de {d}, médiane des vols disponibles.',
     distance_q: '{a} — {b} : quelle est la distance ?',
-    distance_a: '{km} à vol d’oiseau.',
-    airlines_a: 'D’après le tableau du jour, la liaison est assurée par {list}.',
+    distance_a: 'La distance à vol d’oiseau entre les aéroports {a} et {b} est d’environ {km}, et non la distance réellement parcourue par l’avion.',
+    airlines_a: 'Le tableau enregistré pour {a} — {b} indique les compagnies suivantes : {list}.',
   },
   es: {
-    duration_q: '{from} — {to}: ¿cuánto dura el vuelo?',
-    duration_a: '{d}, la mediana del horario de hoy.',
+    duration_q: '{from} ({a}) — {to} ({b}): ¿cuánto dura el vuelo?',
+    duration_a: '{a} — {b}: la duración prevista en los datos guardados es de {d}, la mediana de los vuelos disponibles.',
     distance_q: '{a} — {b}: ¿qué distancia hay?',
-    distance_a: '{km} en línea recta.',
-    airlines_a: 'Según el panel de hoy, la ruta la operan {list}.',
+    distance_a: 'La distancia en línea recta entre los aeropuertos {a} y {b} es de unos {km}, no la distancia real del vuelo.',
+    airlines_a: 'El panel guardado de {a} — {b} muestra estas aerolíneas: {list}.',
   },
   it: {
-    duration_q: '{from} — {to}: quanto dura il volo?',
-    duration_a: '{d}, la mediana degli orari di oggi.',
+    duration_q: '{from} ({a}) — {to} ({b}): quanto dura il volo?',
+    duration_a: '{a} — {b}: la durata prevista nei dati salvati è di {d}, la mediana dei voli disponibili.',
     distance_q: '{a} — {b}: qual è la distanza?',
-    distance_a: '{km} in linea d’aria.',
-    airlines_a: 'Secondo la bacheca di oggi, la rotta è operata da {list}.',
+    distance_a: 'La distanza in linea d’aria tra gli aeroporti {a} e {b} è di circa {km}, non la distanza effettivamente percorsa dal volo.',
+    airlines_a: 'Il tabellone salvato per {a} — {b} riporta queste compagnie aeree: {list}.',
   },
   hi: {
-    duration_q: '{from} — {to}: उड़ान में कितना समय लगता है?',
-    duration_a: '{d} — आज के शेड्यूल का माध्यक।',
+    duration_q: '{from} ({a}) — {to} ({b}): उड़ान में कितना समय लगता है?',
+    duration_a: '{a} — {b}: सहेजे गए डेटा में निर्धारित अवधि {d} है, जो उपलब्ध उड़ानों की अवधि का माध्यक है।',
     distance_q: '{a} — {b}: दूरी कितनी है?',
-    distance_a: 'सीधी रेखा में {km}।',
-    airlines_a: 'आज के बोर्ड के अनुसार यह मार्ग {list} संचालित करती हैं।',
+    distance_a: 'हवाई अड्डों {a} और {b} के बीच सीधी दूरी लगभग {km} है, न कि विमान के वास्तविक मार्ग की दूरी।',
+    airlines_a: '{a} — {b} के सहेजे गए बोर्ड में ये एयरलाइनें दिखाई गई हैं: {list}।',
   },
   tr: {
-    duration_q: '{from} — {to}: uçuş ne kadar sürer?',
-    duration_a: '{d} — bugünkü tarifenin ortancası.',
+    duration_q: '{from} ({a}) — {to} ({b}): uçuş ne kadar sürer?',
+    duration_a: '{a} — {b}: kayıtlı verilere göre planlanan süre {d}; bu, mevcut uçuşların medyanıdır.',
     distance_q: '{a} — {b}: mesafe ne kadar?',
-    distance_a: 'Kuş uçuşu {km}.',
-    airlines_a: 'Bugünkü tabloya göre bu hattı {list} işletiyor.',
+    distance_a: '{a} ve {b} havalimanları arasındaki kuş uçuşu mesafe yaklaşık {km}; bu, uçağın gerçek uçuş rotası değildir.',
+    airlines_a: '{a} — {b} için kayıtlı panoda şu havayolları yer alır: {list}.',
   },
 };
 
@@ -179,20 +183,21 @@ export function routeFacts(opts: {
 }): RouteFact[] {
   const L = LABELS[opts.locale] ?? LABELS.en;
   const out: RouteFact[] = [];
+  const codes = { a: opts.fromIata, b: opts.toIata };
   if (opts.durationMin != null) {
     out.push({
-      q: fill(L.duration_q, { from: opts.fromCity, to: opts.toCity }),
-      a: fill(L.duration_a, { d: formatDuration(opts.durationMin, opts.locale) }),
+      q: fill(L.duration_q, { from: opts.fromCity, to: opts.toCity, ...codes }),
+      a: fill(L.duration_a, { d: formatDuration(opts.durationMin, opts.locale), ...codes }),
     });
   }
   if (opts.km != null) {
     out.push({
-      q: fill(L.distance_q, { a: opts.fromIata, b: opts.toIata }),
-      a: fill(L.distance_a, { km: formatKm(opts.km, opts.locale) }),
+      q: fill(L.distance_q, codes),
+      a: fill(L.distance_a, { km: formatKm(opts.km, opts.locale), ...codes }),
     });
   }
   if (opts.airlines.length) {
-    out.push({ q: '', a: fill(L.airlines_a, { list: opts.airlineList }) });
+    out.push({ q: '', a: fill(L.airlines_a, { list: opts.airlineList, ...codes }) });
   }
   return out;
 }
