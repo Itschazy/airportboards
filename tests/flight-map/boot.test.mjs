@@ -1,5 +1,5 @@
 import test from 'node:test';import assert from 'node:assert/strict';
-import {createBoot} from '../../public/flight-map/v7/boot.js';
+import {createBoot} from '../../public/flight-map/v8/boot.js';
 const root=()=>({dataset:{mapConfig:JSON.stringify({locale:'ru',messages:{}})}});
 test('SSR boot and React adoption mount once, replay events once and abort on navigation',async()=>{
  const calls=[],events=[],node=root();

@@ -23,8 +23,8 @@ export function FlightMap({ html, locale, messages }: { html: string; locale: st
     };
     // SSR мог уже запустить карту: boot принимает существующий остров.
     // Каждый runtime связан со своей HTML-оболочкой. v1/v2/v3/v4/v5/v6 остаются доступны
-    // старому ISR и открытым вкладкам; v7 отделяет поисковые алиасы от первого экрана, сохраняя все аэропорты.
-    const moduleURL = '/flight-map/v7/runtime.js';
+    // старому ISR и открытым вкладкам; v8 начинает локальный поиск до английских алиасов; опубликованные v1–v7 неизменяемы.
+    const moduleURL = '/flight-map/v8/runtime.js';
     import(/* webpackIgnore: true */ moduleURL)
       .then(m => {
         // Поздний import старого effect не должен отменять новый effect того же DOM.
@@ -58,6 +58,6 @@ export function FlightMap({ html, locale, messages }: { html: string; locale: st
     return () => { cancelled = true; session?.dispose(); };
   }, [locale, messages]);
   return <div ref={ref} suppressHydrationWarning lang={locale} dir={locale === 'ar' ? 'rtl' : 'ltr'} className="flight-map-root ym-hide-content" aria-busy="true"
-    data-flight-map-version="7" data-map-config={JSON.stringify({ locale, messages })}
+    data-flight-map-version="8" data-map-config={JSON.stringify({ locale, messages })}
     dangerouslySetInnerHTML={{ __html: html }} />;
 }
