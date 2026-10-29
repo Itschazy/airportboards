@@ -235,8 +235,8 @@ export async function AirportBottom({ airport, locale, about = null, displayName
 
   // Answers are full sentences, not bare values. "LHR" answers nothing out of context; an
   // answer engine can only quote a fragment that still means something on its own.
-  // The board's Arrivals/Departures toggle is a <button>, so the two subpages are invisible
-  // to crawlers from here. Real anchors fix the orphaning found in the sitemap audit.
+  // Верхние вкладки с 29.10.2026 тоже имеют href. Ссылки внизу остаются полезны после
+  // чтения справочной; это дополнительные входы в табло, а не единственный путь для бота.
   const subpageLinks = !noService && !airport.closed;
 
   // Locale-aware list joining; the try covers locales Node's ICU build might not know.
@@ -342,6 +342,14 @@ export async function AirportBottom({ airport, locale, about = null, displayName
     // успешный ответ провайдера или обновление каждую минуту. При пустом табло
     // вопрос по-прежнему отсутствует. Проверки: check-live-refresh и check-seo-facts.
     ...(flights.length ? [{ q: t('faq_live_q', { ...N }), a: t('faq_live_a', { ...N, iata: airport.iata }) }] : []),
+    // Метрика 01–28.10.2026: реальные вопросы о пропавшем рейсе, завтрашней дате и
+    // терминале. Объясняем ограничения полученного снимка, а не обещаем полный день
+    // или новый запрос к поставщику. Эти ответы нужны и при временно пустом табло,
+    // но не на закрытых аэродромах/объектах без регулярного сообщения. Один массив
+    // используется для видимых ответов и FAQPage; проверяется check-board-help.
+    ...(!noService && !airport.closed ? ['missing', 'tomorrow', 'terminal'].map(topic => ({
+      q: t(`faq_${topic}_q`, { iata: airport.iata }), a: t(`faq_${topic}_a`),
+    })) : []),
   ];
   const faqLd = {
     '@context': 'https://schema.org', '@type': 'FAQPage',
