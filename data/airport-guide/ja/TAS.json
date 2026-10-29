@@ -1,0 +1,15 @@
+{
+  "iata": "TAS",
+  "blocks": {
+    "taxi": {
+      "title": "タクシー",
+      "hint": "到着ロビーで予約",
+      "text": "公認タクシー会社への予約は到着ロビーの共通配車窓口で受け付けています。Yandex Goはアプリで配車を依頼します。Taxi Millennium、Let’s Trip、Uzviptranservice、Sixt、Taxi Airport Tashkent、Yandex Goの乗車場所は、到着ターミナル出口そばの第1車線です。その他の出迎え車両やタクシー会社は第2車線を利用し、停車時間は10分までです。"
+    },
+    "lounges": {
+      "title": "ラウンジ",
+      "hint": "CIP Lounge：出発・到着",
+      "text": "出発旅客向けのCIP Loungeには、専用のチェックイン・手荷物預け入れカウンター、パスポート審査・税関検査、Wi-Fi、子ども用の部屋、シャワーがあります。到着時のサービスには、専用車両または搭乗橋による航空機から到着ロビーへの移動、パスポート審査、手荷物受け取り、税関検査が含まれます。料金は空港の会計窓口またはTelegramボット@uzairportsBotで支払えます。"
+    }
+  }
+}

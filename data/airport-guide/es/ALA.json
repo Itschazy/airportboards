@@ -1,0 +1,20 @@
+{
+  "iata": "ALA",
+  "blocks": {
+    "transport": {
+      "title": "Cómo llegar",
+      "hint": "Autobuses 92 y 3",
+      "text": "El autobús 92 va desde las terminales 1 y 2 hasta la parada Mamyr 2 de 06:00 a 23:00. El autobús nocturno 3 conecta el aeropuerto con la parada Orbita-2 de 23:00 a 06:00. El viaje cuesta 120 tenges en cada línea; se puede pagar con una tarjeta ONAY. La tarjeta se vende en el nivel 1 de la zona de llegadas de la terminal internacional."
+    },
+    "storage": {
+      "title": "Consigna de equipaje",
+      "hint": "NOMAD: abierto las 24 horas",
+      "text": "Las consignas NOMAD están abiertas las 24 horas en la zona pública de la terminal nacional 1. El equipaje se entrega en el mostrador y se emite un recibo; el precio depende del tamaño del equipaje y del tiempo de almacenamiento. No se aceptan artículos peligrosos, inflamables ni prohibidos."
+    },
+    "wifi": {
+      "title": "Wi-Fi",
+      "hint": "AIRPORT_Almaty, código por SMS",
+      "text": "Hay Wi-Fi gratuito en toda la terminal de pasajeros para clientes de operadores móviles kazajos y extranjeros. Seleccione la red AIRPORT_Almaty e introduzca su número de teléfono y el código recibido por SMS. Para volver a conectarse, hay que olvidar la red guardada y repetir el proceso de conexión."
+    }
+  }
+}

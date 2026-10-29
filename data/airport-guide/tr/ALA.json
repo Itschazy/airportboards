@@ -1,0 +1,20 @@
+{
+  "iata": "ALA",
+  "blocks": {
+    "transport": {
+      "title": "Ulaşım",
+      "hint": "92 ve 3 numaralı otobüsler",
+      "text": "92 numaralı otobüs, terminal 1 ve 2’den Mamyr 2 durağına 06:00–23:00 saatleri arasında çalışır. 3 numaralı gece otobüsü, havalimanı ile Orbita-2 durağını 23:00–06:00 saatleri arasında bağlar. Her iki hatta da yolculuk ücreti 120 tengedir; ONAY kartıyla ödeme yapılabilir. Kart, dış hatlar terminalinin geliş bölümünde, Kat 1’de satılır."
+    },
+    "storage": {
+      "title": "Bagaj emaneti",
+      "hint": "NOMAD: günün her saati açık",
+      "text": "NOMAD bagaj emanet noktaları, iç hatlar terminali 1’in halka açık bölümünde günün her saati hizmet verir. Bagaj kontuarda teslim alınır ve makbuz verilir; fiyat, bagajın boyutuna ve saklama süresine bağlıdır. Tehlikeli, kolay tutuşan ve yasaklı eşyalar kabul edilmez."
+    },
+    "wifi": {
+      "title": "Wi-Fi",
+      "hint": "AIRPORT_Almaty, SMS kodu",
+      "text": "Yolcu terminalinin tamamında, Kazakistan’daki ve yabancı mobil operatörlerin aboneleri için ücretsiz Wi-Fi mevcuttur. AIRPORT_Almaty ağını seçin, telefon numaranızı ve SMS ile gelen kodu girin. Yeniden bağlanmak için kayıtlı ağı unutmanız ve bağlantı işlemini tekrarlamanız gerekir."
+    }
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "iata": "HKT",
+  "blocks": {
+    "transport": {
+      "title": "Accès",
+      "hint": "Smart Bus : sortie 3",
+      "text": "L’arrêt du Phuket Smart Bus se trouve à l’extérieur du terminal des vols intérieurs, à la sortie 3. La ligne aéroport–Rawai passe par Surin, Kamala, Patong, Karon et Kata."
+    },
+    "wifi": {
+      "title": "Wi-Fi",
+      "hint": "60 minutes gratuites",
+      "text": "Le réseau gratuit s’appelle « @ Airport Free Wi-Fi by NT ». Pour se connecter, il faut saisir une adresse e-mail et accepter les conditions d’utilisation. L’accès à Internet est disponible pendant 60 minutes après confirmation de la connexion."
+    }
+  }
+}

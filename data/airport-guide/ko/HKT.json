@@ -1,0 +1,15 @@
+{
+  "iata": "HKT",
+  "blocks": {
+    "transport": {
+      "title": "교통편",
+      "hint": "Smart Bus: 출구 3",
+      "text": "Phuket Smart Bus 정류장은 국내선 터미널 밖 출구 3 옆에 있습니다. 공항과 라와이를 잇는 노선은 수린, 카말라, 파통, 카론, 카타를 경유합니다."
+    },
+    "wifi": {
+      "title": "Wi-Fi",
+      "hint": "60분 무료",
+      "text": "무료 네트워크 이름은 “@ Airport Free Wi-Fi by NT”입니다. 연결하려면 이메일 주소를 입력하고 이용약관에 동의해야 합니다. 연결이 확인되면 60분 동안 인터넷을 이용할 수 있습니다."
+    }
+  }
+}

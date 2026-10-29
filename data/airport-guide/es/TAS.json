@@ -1,0 +1,15 @@
+{
+  "iata": "TAS",
+  "blocks": {
+    "taxi": {
+      "title": "Taxis",
+      "hint": "Reserva en la sala de llegadas",
+      "text": "Los servicios oficiales de taxi aceptan reservas en una central de despacho en la sala de llegadas; Yandex Go se solicita a través de la aplicación. Taxi Millennium, Let’s Trip, Uzviptranservice, Sixt, Taxi Airport Tashkent y Yandex Go recogen pasajeros en el primer carril de acceso, junto a la salida de la terminal de llegadas. Los demás vehículos que recogen pasajeros y otros servicios de taxi utilizan el segundo carril, donde la parada está limitada a 10 minutos."
+    },
+    "lounges": {
+      "title": "Salas VIP",
+      "hint": "CIP Lounge: salidas y llegadas",
+      "text": "Para los pasajeros que salen, CIP Lounge ofrece mostradores separados de facturación y entrega de equipaje, control de pasaportes y aduanas, Wi-Fi, una sala infantil y duchas. A la llegada, el servicio incluye el traslado desde el avión hasta la sala de llegadas en un vehículo separado o por una pasarela, el control de pasaportes, la recogida de equipaje y el control de aduanas. El servicio se puede pagar en la caja del aeropuerto o a través del bot de Telegram @uzairportsBot."
+    }
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "iata": "CXR",
+  "blocks": {
+    "kids": {
+      "title": "With children",
+      "hint": "Baby care rooms and play area",
+      "text": "The international terminal has a children’s play area and baby care rooms open around the clock. The baby care rooms provide changing facilities, seating and privacy."
+    },
+    "parking": {
+      "title": "Parking",
+      "hint": "From 9,000 VND per 30 minutes",
+      "text": "The car park in front of the international terminal is open around the clock, with payment on exit. For passenger cars with up to 9 seats inclusive, the first 30 minutes cost 9,000 VND and each subsequent 30 minutes cost 4,000 VND. These rates apply from 1 June 2025 until further notice."
+    },
+    "wifi": {
+      "title": "Wi-Fi",
+      "hint": "Free Wi-Fi and charging",
+      "text": "Free Wi-Fi is available in all areas of the international terminal around the clock. Free device charging stations also operate around the clock in various parts of the terminal."
+    }
+  }
+}

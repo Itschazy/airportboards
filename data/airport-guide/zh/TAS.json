@@ -1,0 +1,15 @@
+{
+  "iata": "TAS",
+  "blocks": {
+    "taxi": {
+      "title": "出租车",
+      "hint": "到达大厅内预约",
+      "text": "官方出租车服务在到达大厅的统一调度处接受预订；Yandex Go需通过应用叫车。Taxi Millennium、Let’s Trip、Uzviptranservice、Sixt、Taxi Airport Tashkent和Yandex Go的上车点位于到达航站楼出口旁的第一条接客车道。其他接机车辆和其他出租车服务使用第二条车道，停车时间限10分钟。"
+    },
+    "lounges": {
+      "title": "贵宾休息室",
+      "hint": "CIP Lounge：出发及到达",
+      "text": "CIP Lounge为出发旅客提供专用值机及行李托运柜台、护照检查和海关检查、Wi-Fi、儿童室及淋浴设施。到达服务包括乘坐专用车辆或经登机桥从飞机前往到达大厅、护照检查、行李领取及海关检查。可在机场收银处或通过Telegram机器人@uzairportsBot支付服务费用。"
+    }
+  }
+}

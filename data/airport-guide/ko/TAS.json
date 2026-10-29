@@ -1,0 +1,15 @@
+{
+  "iata": "TAS",
+  "blocks": {
+    "taxi": {
+      "title": "택시",
+      "hint": "도착 홀에서 예약",
+      "text": "공식 택시 업체는 도착 홀의 통합 배차 창구에서 예약을 받으며, Yandex Go는 앱으로 호출합니다. Taxi Millennium, Let’s Trip, Uzviptranservice, Sixt, Taxi Airport Tashkent, Yandex Go의 승차 장소는 도착 터미널 출구 옆 첫 번째 진입 차로입니다. 그 밖의 마중 차량과 다른 택시 업체는 두 번째 차로를 이용하며, 정차 시간은 10분으로 제한됩니다."
+    },
+    "lounges": {
+      "title": "라운지",
+      "hint": "CIP Lounge: 출발·도착",
+      "text": "출발 승객용 CIP Lounge에는 전용 체크인 및 수하물 위탁 카운터, 여권 심사와 세관 검사, Wi-Fi, 어린이실, 샤워 시설이 마련되어 있습니다. 도착 서비스에는 전용 차량 또는 탑승교를 통한 항공기에서 도착 홀까지의 이동, 여권 심사, 수하물 수취, 세관 검사가 포함됩니다. 이용료는 공항 수납 창구 또는 Telegram 봇 @uzairportsBot을 통해 결제할 수 있습니다."
+    }
+  }
+}

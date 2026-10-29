@@ -1,0 +1,20 @@
+{
+  "iata": "ALA",
+  "blocks": {
+    "transport": {
+      "title": "Anreise",
+      "hint": "Busse 92 und 3",
+      "text": "Bus 92 fährt von den Terminals 1 und 2 zur Haltestelle Mamyr 2 von 06:00 bis 23:00. Der Nachtbus 3 verbindet den Flughafen mit der Haltestelle Orbita-2 von 23:00 bis 06:00. Auf beiden Linien kostet die Fahrt jeweils 120 Tenge; bezahlt werden kann mit einer ONAY-Karte. Die Karte wird auf Ebene 1 im Ankunftsbereich des internationalen Terminals verkauft."
+    },
+    "storage": {
+      "title": "Gepäckaufbewahrung",
+      "hint": "NOMAD: rund um die Uhr",
+      "text": "Die Gepäckaufbewahrungen von NOMAD sind rund um die Uhr im öffentlich zugänglichen Bereich des Inlandsterminals 1 geöffnet. Das Gepäck wird am Schalter abgegeben und eine Quittung ausgestellt; der Preis richtet sich nach Gepäckgröße und Aufbewahrungsdauer. Gefährliche, leicht entzündliche und verbotene Gegenstände werden nicht angenommen."
+    },
+    "wifi": {
+      "title": "WLAN",
+      "hint": "AIRPORT_Almaty, Code per SMS",
+      "text": "Kostenloses WLAN steht im gesamten Passagierterminal für Kunden kasachischer und ausländischer Mobilfunkanbieter zur Verfügung. Wählen Sie das Netz AIRPORT_Almaty, geben Sie Ihre Telefonnummer und den per SMS erhaltenen Code ein. Für eine erneute Verbindung müssen Sie das gespeicherte Netz entfernen und den Verbindungsvorgang wiederholen."
+    }
+  }
+}

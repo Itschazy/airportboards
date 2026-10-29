@@ -1,0 +1,20 @@
+{
+  "iata": "CXR",
+  "blocks": {
+    "kids": {
+      "title": "Çocuklarla",
+      "hint": "Bebek bakım odaları ve oyun alanı",
+      "text": "Dış hatlar terminalindeki çocuk oyun alanı ve bebek bakım odaları günün her saati açıktır. Bakım odalarında alt değiştirme alanları ve oturma yerleri bulunur; mahremiyet sağlanır."
+    },
+    "parking": {
+      "title": "Otopark",
+      "hint": "30 dakika için 9.000 VND’den",
+      "text": "Dış hatlar terminalinin önündeki otopark günün her saati açıktır; ödeme çıkışta yapılır. En fazla 9 koltuklu binek otomobiller için ilk 30 dakika 9.000 VND, sonraki her 30 dakika 4.000 VND’dir. Tarifeler 1 Haziran 2025 tarihinden yeni bir duyuruya kadar geçerlidir."
+    },
+    "wifi": {
+      "title": "Wi-Fi",
+      "hint": "Ücretsiz Wi-Fi ve şarj",
+      "text": "Dış hatlar terminalinin tüm alanlarında günün her saati ücretsiz Wi-Fi mevcuttur. Terminalin farklı bölümlerindeki ücretsiz cihaz şarj istasyonları da günün her saati hizmet verir."
+    }
+  }
+}

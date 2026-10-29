@@ -1,0 +1,15 @@
+{
+  "iata": "TAS",
+  "blocks": {
+    "taxi": {
+      "title": "Taksi",
+      "hint": "Geliş salonunda rezervasyon",
+      "text": "Resmî taksi hizmetleri, geliş salonundaki ortak taksi koordinasyon merkezinde rezervasyon kabul eder; Yandex Go ise uygulamadan çağrılır. Taxi Millennium, Let’s Trip, Uzviptranservice, Sixt, Taxi Airport Tashkent ve Yandex Go, geliş terminalinin çıkışındaki ilk yaklaşım şeridinden yolcu alır. Yolcu karşılayan diğer araçlar ve diğer taksi hizmetleri için ikinci şerit ayrılmıştır; burada duraklama süresi 10 dakika ile sınırlıdır."
+    },
+    "lounges": {
+      "title": "Dinlenme salonları",
+      "hint": "CIP Lounge: gidiş ve geliş",
+      "text": "CIP Lounge, giden yolcular için ayrı check-in ve bagaj teslim kontuarları, pasaport ve gümrük kontrolü, Wi-Fi, çocuk odası ve duşlar sunar. Gelişte hizmet; uçaktan geliş salonuna ayrı bir araçla veya yolcu köprüsü üzerinden ulaşımı, pasaport kontrolünü, bagajın teslim alınmasını ve gümrük kontrolünü kapsar. Hizmet ücreti havalimanı veznesinde veya @uzairportsBot Telegram botu üzerinden ödenebilir."
+    }
+  }
+}

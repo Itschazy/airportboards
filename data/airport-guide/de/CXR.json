@@ -1,0 +1,20 @@
+{
+  "iata": "CXR",
+  "blocks": {
+    "kids": {
+      "title": "Mit Kindern",
+      "hint": "Wickelräume und Spielbereich",
+      "text": "Im internationalen Terminal sind ein Kinderspielbereich und Babypflegeräume rund um die Uhr geöffnet. Die Babypflegeräume bieten Wickelmöglichkeiten, Sitzgelegenheiten und Privatsphäre."
+    },
+    "parking": {
+      "title": "Parken",
+      "hint": "Ab 9.000 VND je 30 Minuten",
+      "text": "Der Parkplatz vor dem internationalen Terminal ist rund um die Uhr geöffnet; bezahlt wird bei der Ausfahrt. Für Pkw mit bis zu einschließlich 9 Sitzplätzen kosten die ersten 30 Minuten 9.000 VND und jede weitere halbe Stunde 4.000 VND. Die Tarife gelten ab dem 1. Juni 2025 bis auf Weiteres."
+    },
+    "wifi": {
+      "title": "WLAN",
+      "hint": "Kostenloses WLAN und Laden",
+      "text": "Kostenloses WLAN steht in allen Bereichen des internationalen Terminals rund um die Uhr zur Verfügung. Kostenlose Ladestationen für Geräte sind ebenfalls rund um die Uhr an verschiedenen Stellen im Terminal verfügbar."
+    }
+  }
+}

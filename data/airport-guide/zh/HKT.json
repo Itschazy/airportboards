@@ -1,0 +1,15 @@
+{
+  "iata": "HKT",
+  "blocks": {
+    "transport": {
+      "title": "交通",
+      "hint": "Smart Bus：3号出口",
+      "text": "Phuket Smart Bus站点位于国内航站楼外的3号出口旁。机场至拉威的线路途经苏林、卡马拉、芭东、卡伦和卡塔。"
+    },
+    "wifi": {
+      "title": "Wi-Fi",
+      "hint": "免费60分钟",
+      "text": "免费网络名称为“@ Airport Free Wi-Fi by NT”。连接时需输入电子邮箱地址并接受使用条款。确认连接后，可使用互联网60分钟。"
+    }
+  }
+}

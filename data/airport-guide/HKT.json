@@ -1,0 +1,22 @@
+{
+  "iata": "HKT",
+  "checked": "2026-10-29",
+  "blocks": [
+    {
+      "id": "transport",
+      "title": "Как доехать",
+      "hint": "Smart Bus: выход 3",
+      "text": "Остановка Phuket Smart Bus находится снаружи внутреннего терминала у выхода 3. Маршрут аэропорт — Раваи проходит через Сурин, Камала, Патонг, Карон и Ката.",
+      "source": "phuketsmartbus.com",
+      "url": "https://phuketsmartbus.com/ru/blog/phuket-smart-bus-stop-at-phuket-airport"
+    },
+    {
+      "id": "wifi",
+      "title": "Wi-Fi",
+      "hint": "Бесплатно 60 минут",
+      "text": "Бесплатная сеть называется «@ Airport Free Wi-Fi by NT». Для подключения нужно ввести адрес электронной почты и принять условия использования. После подтверждения подключения интернет доступен 60 минут.",
+      "source": "phuket.airportthai.co.th",
+      "url": "https://phuket.airportthai.co.th/service/facility/detail/276"
+    }
+  ]
+}

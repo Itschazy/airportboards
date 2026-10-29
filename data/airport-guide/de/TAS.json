@@ -1,0 +1,15 @@
+{
+  "iata": "TAS",
+  "blocks": {
+    "taxi": {
+      "title": "Taxis",
+      "hint": "Buchung in der Ankunftshalle",
+      "text": "Offizielle Taxidienste nehmen Buchungen an einer zentralen Vermittlungsstelle in der Ankunftshalle entgegen; Yandex Go wird über die App bestellt. Taxi Millennium, Let’s Trip, Uzviptranservice, Sixt, Taxi Airport Tashkent und Yandex Go holen Fahrgäste auf der ersten Zufahrtsspur am Ausgang des Ankunftsterminals ab. Für andere Fahrzeuge, die Reisende abholen, und weitere Taxidienste ist die zweite Spur vorgesehen; dort ist das Halten auf 10 Minuten begrenzt."
+    },
+    "lounges": {
+      "title": "Lounges",
+      "hint": "CIP Lounge: Abflug und Ankunft",
+      "text": "Für abfliegende Passagiere bietet die CIP Lounge separate Schalter für Check-in und Gepäckaufgabe, Pass- und Zollkontrolle, WLAN, einen Kinderraum und Duschen. Bei der Ankunft umfasst der Service den Transfer vom Flugzeug zur Ankunftshalle mit einem separaten Fahrzeug oder über eine Fluggastbrücke, die Passkontrolle, Gepäckausgabe und Zollkontrolle. Der Service kann an der Flughafenkasse oder über den Telegram-Bot @uzairportsBot bezahlt werden."
+    }
+  }
+}

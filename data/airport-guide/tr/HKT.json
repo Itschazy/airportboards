@@ -1,0 +1,15 @@
+{
+  "iata": "HKT",
+  "blocks": {
+    "transport": {
+      "title": "Ulaşım",
+      "hint": "Smart Bus: çıkış 3",
+      "text": "Phuket Smart Bus durağı, iç hatlar terminalinin dışında, çıkış 3’te bulunur. Havalimanı–Rawai güzergâhı Surin, Kamala, Patong, Karon ve Kata’dan geçer."
+    },
+    "wifi": {
+      "title": "Wi-Fi",
+      "hint": "60 dakika ücretsiz",
+      "text": "Ücretsiz ağın adı “@ Airport Free Wi-Fi by NT”dir. Bağlanmak için e-posta adresi girilmesi ve kullanım koşullarının kabul edilmesi gerekir. Bağlantı onaylandıktan sonra 60 dakika internet erişimi sağlanır."
+    }
+  }
+}

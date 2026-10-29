@@ -1,0 +1,20 @@
+{
+  "iata": "ALA",
+  "blocks": {
+    "transport": {
+      "title": "Getting there",
+      "hint": "Buses 92 and 3",
+      "text": "Bus 92 runs from terminals 1 and 2 to the Mamyr 2 stop from 06:00 to 23:00. Night bus 3 connects the airport with the Orbita-2 stop from 23:00 to 06:00. The fare on each route is 120 tenge; payment is possible with an ONAY card. The card is sold on Level 1 in the arrivals area of the international terminal."
+    },
+    "storage": {
+      "title": "Luggage storage",
+      "hint": "NOMAD: open around the clock",
+      "text": "NOMAD luggage storage facilities are open around the clock in the public area of domestic terminal 1. Luggage is accepted at the counter and a receipt is issued; the price depends on the size of the luggage and the storage duration. Dangerous, flammable and prohibited items are not accepted."
+    },
+    "wifi": {
+      "title": "Wi-Fi",
+      "hint": "AIRPORT_Almaty, code by SMS",
+      "text": "Free Wi-Fi is available throughout the passenger terminal to subscribers of Kazakhstani and foreign mobile operators. Select the AIRPORT_Almaty network, enter your phone number and the code received by SMS. To reconnect, forget the saved network and repeat the connection process."
+    }
+  }
+}

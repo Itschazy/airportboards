@@ -1,0 +1,20 @@
+{
+  "iata": "ALA",
+  "blocks": {
+    "transport": {
+      "title": "Come arrivare",
+      "hint": "Autobus 92 e 3",
+      "text": "L’autobus 92 collega i terminal 1 e 2 alla fermata Mamyr 2 dalle 06:00 alle 23:00. L’autobus notturno 3 collega l’aeroporto alla fermata Orbita-2 dalle 23:00 alle 06:00. Il viaggio costa 120 tenge su ciascuna linea; è possibile pagare con la carta ONAY. La carta è in vendita al livello 1, nell’area arrivi del terminal internazionale."
+    },
+    "storage": {
+      "title": "Deposito bagagli",
+      "hint": "NOMAD: aperto 24 ore su 24",
+      "text": "I depositi bagagli NOMAD sono aperti 24 ore su 24 nell’area pubblica del terminal nazionale 1. I bagagli vengono consegnati al banco e viene rilasciata una ricevuta; il prezzo dipende dalle dimensioni dei bagagli e dalla durata del deposito. Non sono accettati oggetti pericolosi, infiammabili o vietati."
+    },
+    "wifi": {
+      "title": "Wi-Fi",
+      "hint": "AIRPORT_Almaty, codice via SMS",
+      "text": "Il Wi-Fi gratuito è disponibile in tutto il terminal passeggeri per gli utenti di operatori mobili kazaki e stranieri. Selezionare la rete AIRPORT_Almaty, inserire il numero di telefono e il codice ricevuto via SMS. Per riconnettersi, occorre dimenticare la rete salvata e ripetere la procedura di connessione."
+    }
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "iata": "CXR",
+  "blocks": {
+    "kids": {
+      "title": "Con bambini",
+      "hint": "Sale per bebè e area giochi",
+      "text": "Nel terminal internazionale sono aperte 24 ore su 24 un’area giochi per bambini e sale per la cura dei bebè. Le sale dispongono di spazi per il cambio e posti a sedere, e garantiscono la privacy."
+    },
+    "parking": {
+      "title": "Parcheggio",
+      "hint": "Da 9.000 VND per 30 minuti",
+      "text": "Il parcheggio davanti al terminal internazionale è aperto 24 ore su 24; si paga all’uscita. Per le autovetture fino a 9 posti inclusi, i primi 30 minuti costano 9.000 VND e ogni successivo periodo di 30 minuti costa 4.000 VND. Le tariffe si applicano dal 1 giugno 2025 fino a nuovo avviso."
+    },
+    "wifi": {
+      "title": "Wi-Fi",
+      "hint": "Wi-Fi e ricarica gratuiti",
+      "text": "Il Wi-Fi gratuito è disponibile in tutte le aree del terminal internazionale 24 ore su 24. Anche le postazioni gratuite di ricarica dei dispositivi sono disponibili 24 ore su 24 in varie parti del terminal."
+    }
+  }
+}

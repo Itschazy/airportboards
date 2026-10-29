@@ -1,0 +1,15 @@
+{
+  "iata": "TAS",
+  "blocks": {
+    "taxi": {
+      "title": "Taxis",
+      "hint": "Book in the arrivals hall",
+      "text": "Official taxi services take bookings at a single dispatch desk in the arrivals hall; Yandex Go is booked through the app. Taxi Millennium, Let’s Trip, Uzviptranservice, Sixt, Taxi Airport Tashkent and Yandex Go pick up passengers in the first access lane by the arrivals terminal exit. Other vehicles meeting passengers and other taxi services use the second lane, where stops are limited to 10 minutes."
+    },
+    "lounges": {
+      "title": "Lounges",
+      "hint": "CIP Lounge: departures and arrivals",
+      "text": "For departing passengers, CIP Lounge provides dedicated check-in and bag-drop counters, passport and customs control, Wi-Fi, a children’s room and showers. On arrival, the service includes transfer from the aircraft to the arrivals hall by dedicated transport or via a boarding bridge, passport control, baggage collection and customs control. The service can be paid for at the airport cashier’s desk or through the Telegram bot @uzairportsBot."
+    }
+  }
+}
