@@ -1,0 +1,135 @@
+{
+  "counter": 110112198,
+  "goals": [
+    {
+      "name": "Карта: открытие",
+      "type": "action",
+      "conditions": [
+        {
+          "type": "exact",
+          "url": "flight_map_open"
+        }
+      ]
+    },
+    {
+      "name": "Карта: сохранение перелёта",
+      "type": "action",
+      "conditions": [
+        {
+          "type": "exact",
+          "url": "flight_map_saved"
+        }
+      ]
+    },
+    {
+      "name": "Карта: экспорт",
+      "type": "action",
+      "conditions": [
+        {
+          "type": "exact",
+          "url": "flight_map_export"
+        }
+      ]
+    },
+    {
+      "name": "Карта: резервная копия",
+      "type": "action",
+      "conditions": [
+        {
+          "type": "exact",
+          "url": "flight_map_backup"
+        }
+      ]
+    },
+    {
+      "name": "Карта: восстановление",
+      "type": "action",
+      "conditions": [
+        {
+          "type": "exact",
+          "url": "flight_map_restore"
+        }
+      ]
+    },
+    {
+      "name": "Табло: открытие карточки рейса",
+      "type": "action",
+      "conditions": [
+        {
+          "type": "exact",
+          "url": "flight_card"
+        }
+      ]
+    },
+    {
+      "name": "Табло: переключение направления",
+      "type": "action",
+      "conditions": [
+        {
+          "type": "exact",
+          "url": "board_mode"
+        }
+      ]
+    },
+    {
+      "name": "Табло: фильтр статуса",
+      "type": "action",
+      "conditions": [
+        {
+          "type": "exact",
+          "url": "board_filter"
+        }
+      ]
+    },
+    {
+      "name": "Табло: показать ещё",
+      "type": "action",
+      "conditions": [
+        {
+          "type": "exact",
+          "url": "board_more"
+        }
+      ]
+    },
+    {
+      "name": "Поиск: выбор аэропорта",
+      "type": "action",
+      "conditions": [
+        {
+          "type": "exact",
+          "url": "search_pick"
+        }
+      ]
+    },
+    {
+      "name": "Рейс: поделиться",
+      "type": "action",
+      "conditions": [
+        {
+          "type": "exact",
+          "url": "flight_share"
+        }
+      ]
+    },
+    {
+      "name": "Страница: поделиться",
+      "type": "action",
+      "conditions": [
+        {
+          "type": "exact",
+          "url": "page_share"
+        }
+      ]
+    },
+    {
+      "name": "Аэропорт: избранное",
+      "type": "action",
+      "conditions": [
+        {
+          "type": "exact",
+          "url": "favorite_toggle"
+        }
+      ]
+    }
+  ]
+}
