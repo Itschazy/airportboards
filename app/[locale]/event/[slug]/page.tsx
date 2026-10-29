@@ -10,6 +10,7 @@ import {
 import { getAirport } from '@/lib/airports';
 import { getAirportName } from '@/lib/airport-names';
 import { numLocale, locales } from '@/lib/i18n';
+import { getCityName } from '@/lib/places';
 import { assertLocale } from '@/lib/locale-guard';
 
 const BASE = 'https://airportsboard.live';
@@ -150,7 +151,9 @@ export default async function EventPage({ params }: Props) {
         <span aria-hidden="true">{TYPE_EMOJI[m.type] || '📍'}</span> {c.h1}
       </h1>
       <p style={{ fontSize: 14, color: 'var(--ab-8a8a8a)', margin: '0 0 6px' }}>
-        {m.venue} · {m.venueCity}
+        {/* Город — на языке страницы, тем же справочником, что и везде на сайте:
+            карточка с русским заголовком печатала «Abu Dhabi» в подписи под ним. */}
+        {m.venue} · {getCityName(m.venueCity, locale)}
       </p>
       <p style={{ fontSize: 14, color: 'var(--ab-8a8a8a)', margin: '0 0 22px' }}>
         {tE('when')}: <time dateTime={m.startDate}>{whenText}</time>

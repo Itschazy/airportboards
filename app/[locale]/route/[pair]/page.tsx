@@ -8,6 +8,7 @@ import Link from 'next/link';
 import { getAirport, distanceKm } from '@/lib/airports';
 import { getAirportName } from '@/lib/airport-names';
 import { getCityName } from '@/lib/places';
+import { localAirlineName } from '@/lib/airline-ru';
 import { getRoute, getRouteStats, getBoardStampWithRows, airlineName, type FlightRow } from '@/lib/flights';
 import { locales, forwardArrow } from '@/lib/i18n';
 import { joinList } from '@/lib/list-separator';
@@ -75,7 +76,12 @@ export default async function RoutePage({ params }: Props) {
   let flights: FlightRow[] = [];
   try { flights = await getRoute(p.from, p.to, locale); } catch {}
 
-  const airlines = [...new Set(flights.map(f => f.airlineIata).filter(Boolean))].map(airlineName);
+  // Перевозчика русский читатель знает по-русски: под этим же маршрутом табло
+  // аэропорта печатает «Россия» и «Аэрофлот», а страница маршрута печатала
+  // «Rossiya Airlines» — справочник data/airlines.json латиницей. Разнобой
+  // виден на одном экране, и ищут по-русски именно «Россию».
+  const airlines = [...new Set(flights.map(f => f.airlineIata).filter(Boolean))]
+    .map(code => localAirlineName(airlineName(code), locale));
 
   /**
    * Измеримые ответы вместо пустоты.
@@ -201,7 +207,7 @@ export default async function RoutePage({ params }: Props) {
               <span style={{ width: 4, alignSelf: 'stretch', background: STATUS_COLOR[f.status] || 'var(--ab-48484a)', borderRadius: 2, flexShrink: 0 }} />
               <span style={{ fontSize: 22, fontWeight: 700, color: f.actual ? 'var(--ab-ff9f0a)' : 'var(--ab-ffffff)', fontVariantNumeric: 'tabular-nums', width: 64, flexShrink: 0 }}>{f.actual || f.scheduled}</span>
               <span style={{ flex: 1, minWidth: 0 }}>
-                <span style={{ display: 'block', fontSize: 15, color: 'var(--ab-e4e4e7)', fontWeight: 600 }}>{f.airline}</span>
+                <span style={{ display: 'block', fontSize: 15, color: 'var(--ab-e4e4e7)', fontWeight: 600 }}>{localAirlineName(f.airline, locale)}</span>
                 {/* The flight number used to link to /flight/<CODE>. getFlightByNumber() reads
                     a store key ("flight_iata=") the warmer never writes, so that page always
                     answered 200 with "not found" under noindex — a soft-404, for humans as

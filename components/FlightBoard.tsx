@@ -791,11 +791,13 @@ function BottomSheet({ flight: selectedFlight, mode, onClose, tz, locale, clockM
 
 // ─── Main Component ───────────────────────────────────────────────────────────
 
-export function FlightBoard({ airport, locale, defaultMode = 'departures', displayName, headingNote, initialFlights, initialFetchedAt, boardTotal, lead, statusLine = null, noService = false, pendingNote = null, infoOnly = false, initialAllPast = false, about = null, aboutTitle, aboutExtra = null }: {
+export function FlightBoard({ airport, locale, defaultMode = 'departures', displayName, cityName, headingNote, initialFlights, initialFetchedAt, boardTotal, lead, statusLine = null, noService = false, pendingNote = null, infoOnly = false, initialAllPast = false, about = null, aboutTitle, aboutExtra = null }: {
   airport: Airport;
   locale: string;
   defaultMode?: Mode;
   displayName?: string;
+  /** Город на языке страницы: в каталоге он латиницей, а чип «недавних» печатает его как есть. */
+  cityName?: string;
   /**
    * Хвост к заголовку первого уровня: «UFA Уфа · Прилёты».
    *
@@ -1060,11 +1062,14 @@ export function FlightBoard({ airport, locale, defaultMode = 'departures', displ
     if (airport.closed) return;   // a chip inviting a return visit to Tegel helps nobody
     try {
       const KEY = 'ab_recent';
-      const entry = { iata: airport.iata, name: displayName || airport.name, city: airport.city, country: airport.country, iso2: airport.iso2 };
+      // Город — на языке страницы. Поиск сохраняет в тот же список локализованный
+      // (API отдаёт localizeResults), а отсюда уезжал сырой каталожный: на русской
+      // странице «недавние» подписывались «SVX Yekaterinburg» рядом с «KZN Казань».
+      const entry = { iata: airport.iata, name: displayName || airport.name, city: cityName || airport.city, country: airport.country, iso2: airport.iso2 };
       const prev = (JSON.parse(localStorage.getItem(KEY) || '[]') as { iata: string }[]).filter(r => r.iata !== airport.iata);
       localStorage.setItem(KEY, JSON.stringify([entry, ...prev].slice(0, 5)));
     } catch { /* storage unavailable — the loop simply stays open */ }
-  }, [airport.iata, airport.name, airport.city, airport.country, airport.iso2, displayName]);
+  }, [airport.iata, airport.name, airport.city, airport.country, airport.iso2, displayName, cityName]);
   // Gate for the list "rise" animation: never on the initial (SSR/LCP) paint —
   // only once the user actually changes mode/filter. Key-based (not effect-based)
   // so a data refresh on the initial combination can't retrigger it.

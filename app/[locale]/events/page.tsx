@@ -6,6 +6,7 @@ import { getTranslations, setRequestLocale } from 'next-intl/server';
 import Link from 'next/link';
 import { getEventsForHub, type EventData, type EventType } from '@/lib/event-content';
 import { numLocale, locales } from '@/lib/i18n';
+import { getCityName } from '@/lib/places';
 import { assertLocale } from '@/lib/locale-guard';
 
 const BASE = 'https://airportsboard.live';
@@ -71,7 +72,7 @@ export default async function EventsHubPage({ params }: Props) {
           <span style={{ flex: 1, minWidth: 0 }}>
             <span style={{ display: 'block', fontSize: 15, fontWeight: 600, color: 'var(--ab-e4e4e7)', lineHeight: 1.3 }}>{c?.h1 || e.meta.name}</span>
             <span style={{ display: 'block', fontSize: 12, color: 'var(--ab-8a8a8a)', marginTop: 3 }}>
-              {dateFmt.format(new Date(e.meta.startDate))} · {e.meta.venueCity} · {e.meta.airports.map(a => a.iata).join(' · ')}
+              {dateFmt.format(new Date(e.meta.startDate))} · {getCityName(e.meta.venueCity, locale)} · {e.meta.airports.map(a => a.iata).join(' · ')}
             </span>
           </span>
           <svg data-flip width="8" height="14" viewBox="0 0 8 14" fill="none" aria-hidden="true" style={{ flexShrink: 0 }}>
