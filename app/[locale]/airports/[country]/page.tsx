@@ -14,6 +14,7 @@ import { numLocale, locales } from '@/lib/i18n';
 import { splitByService, serviceMeasuredOn } from '@/lib/warm';
 import { localizedMeasuredOn } from '@/lib/measured-date';
 import { assertLocale } from '@/lib/locale-guard';
+import { Breadcrumb } from '@/components/Breadcrumb';
 
 // See app/[locale]/airports/page.tsx — ICU renders a bare placeholder ungrouped.
 const fmt = (n: number, locale: string) => n.toLocaleString(numLocale(locale));
@@ -100,6 +101,7 @@ export default async function CountryPage({ params }: Props) {
     notFound();
   }
   const t = await getTranslations({ locale, namespace: 'home' });
+  const tNav = await getTranslations({ locale, namespace: 'nav' });
   const airports = getAirportsByCountry(country);
   const countryName = getCountryName(c.country, locale);
   // The exclusive fact: of every IATA-coded airport in this country, how many actually have
@@ -108,14 +110,21 @@ export default async function CountryPage({ params }: Props) {
   const measuredOn = serviceMeasuredOn();
   const showSplit = !!measuredOn && served.length > 0 && unserved.length > 0;
 
+  /* Разметка и видимый след строятся из ОДНОГО массива. Прежде разметка
+     обещала три уровня и заканчивалась страной, а на экране стояли два:
+     «airportsboard › Аэропорты по странам», причём второй — не ссылка, да
+     ещё и помеченный aria-current="page" на странице страны. То есть путь
+     наверх со страницы страны отсутствовал, а программе чтения с экрана
+     текущей объявлялась чужая страница. */
+  const crumbs = [
+    { name: tNav('home'), item: `${BASE}/${locale}` },
+    { name: t('sec_countries'), item: `${BASE}/${locale}/airports` },
+    { name: countryName, item: `${BASE}/${locale}/airports/${c.slug}` },
+  ];
   const breadcrumb = {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
-    itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'airportsboard', item: `${BASE}/${locale}` },
-      { '@type': 'ListItem', position: 2, name: t('sec_countries'), item: `${BASE}/${locale}/airports` },
-      { '@type': 'ListItem', position: 3, name: countryName, item: `${BASE}/${locale}/airports/${c.slug}` },
-    ],
+    itemListElement: crumbs.map((cr, i) => ({ '@type': 'ListItem', position: i + 1, name: cr.name, item: cr.item })),
   };
   const itemList = {
     '@context': 'https://schema.org',
@@ -135,20 +144,9 @@ export default async function CountryPage({ params }: Props) {
     <div style={{ maxWidth: 960, margin: '0 auto', padding: '0 16px 64px' }}>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(itemList) }} />
-      {/* Крошки той же стеклянной капсулой, что на странице аэропорта: здесь
-          они были отдельной строкой серого текста с разделителем «/». */}
-      <nav aria-label={t('sec_countries')} className="crumbs-wrap" style={{ padding: '20px 0 0' }}>
-        <ol className="crumbs glass">
-          <li>
-            <Link href={`/${locale}`}>airportsboard</Link>
-            <svg data-flip width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                 strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-              <path d="M9.5 5.5 16 12l-6.5 6.5" />
-            </svg>
-          </li>
-          <li aria-current="page" className="crumbs-current">{t('sec_countries')}</li>
-        </ol>
-      </nav>
+      {/* Крошки той же стеклянной капсулой, что на странице аэропорта и города —
+          и тем же компонентом, который строит их из массива выше. */}
+      <Breadcrumb label={tNav('aria_breadcrumb')} trail={crumbs} />
       {/* Заголовок, счётчик и вводная фраза — одна стеклянная панель, как
           шапка страницы аэропорта. */}
       <div className="ap-head glass" style={{ marginTop: 10 }}>

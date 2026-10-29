@@ -1430,6 +1430,17 @@ body::after {
 @media (hover: hover) { .crumbs a:hover { color: var(--ab-e4e4e7); } }
 .crumbs svg { opacity: 0.45; flex-shrink: 0; }
 .crumbs-current { color: var(--ab-ffffff); font-weight: 600; }
+/* На телефоне три уровня в строку не входят. Капсула прокручиваемая, но
+   о прокрутке ничто не сообщает: «Аэропорты: Казань» вставало в неё как
+   «Аэропорт», обрезанное ровно по краю стекла, — это читается как сломанная
+   вёрстка. Теперь сжимается ПРОМЕЖУТОЧНОЕ звено: «Главная» коротка, а
+   текущая страница — единственное, ради чего след вообще читают. Все три
+   уровня остаются на месте и нажимаются: прятать их нельзя, разметка
+   BreadcrumbList обещает ровно этот путь. */
+.crumbs > li { min-width: 0; }
+.crumbs > li > a { display: block; min-width: 0; overflow: hidden; text-overflow: ellipsis; line-height: 22px; }
+.crumbs > li:first-child { flex: none; }
+.crumbs > li.crumbs-current { display: block; flex: none; max-width: 70%; overflow: hidden; text-overflow: ellipsis; }
 
 /* На узком экране название аэропорта в выдаче прячется: рядом уже стоят флаг,
    код, город и страна, и на две-три буквы от названия толку нет. */

@@ -111,7 +111,9 @@ export default async function AirportsIndexPage({ params }: Props) {
       <nav aria-label={t('sec_countries')} className="crumbs-wrap" style={{ padding: '20px 0 0' }}>
         <ol className="crumbs glass">
           <li>
-            <Link href={`/${locale}`}>airportsboard</Link>
+            {/* Та же строка, что в BreadcrumbList ниже: разметка обещала «Главная»,
+                на экране стояло «airportsboard». */}
+            <Link href={`/${locale}`}>{tNav('home')}</Link>
             <svg data-flip width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                  strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
               <path d="M9.5 5.5 16 12l-6.5 6.5" />
