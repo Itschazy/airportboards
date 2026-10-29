@@ -1,17 +1,18 @@
+import {decodeAirports,decodeGeography} from '../../public/flight-map/v6/data.js';
 import test from 'node:test';import assert from 'node:assert/strict';import fs from 'node:fs';
 import {createI18n} from '../../public/flight-map/v4/i18n.js';
 import {createStorage} from '../../public/flight-map/v4/storage.js';
 import {createSharing} from '../../public/flight-map/v4/sharing.js';
 import {createAirportSearch,normalize} from '../../public/flight-map/v5/entry.js';
-import {createMap} from '../../public/flight-map/v2/map.js';
+import {createMap} from '../../public/flight-map/v6/map.js';
 import {buildCard} from '../../public/flight-map/v5/exporter.js';
 const read=p=>JSON.parse(fs.readFileSync(new URL('../../'+p,import.meta.url))),locales=['ru','en','de','fr','es','it','tr','zh','ja','ko','ar','hi'];
-const ru=read('lib/flight-map/locales/ru.json'),land=read('public/flight-map/v1/land-v2.json');
+const ru=read('lib/flight-map/locales/ru.json'),land=decodeGeography(read('public/flight-map/v6/geography.json'));
 const params=s=>[...s.matchAll(/\{(\w+)\}/g)].map(m=>m[1]).sort();
 const flight={id:'f_private123',from:'LHR',to:'HND',date:'2025-01-14',number:'PRIVATE 765'};
 const shared=new Map(),memory={getItem:k=>shared.get(k)??null,setItem:(k,v)=>shared.set(k,v)};
 for(const locale of locales)test(locale+': complete messages, search, cross-language storage and private export',()=>{
- const messages=read(`lib/flight-map/locales/${locale}.json`),i18n=createI18n(locale,messages),airports=read(`public/flight-map/v4/airports-${locale}.json`),codes=new Set(airports.map(a=>a.code));
+ const messages=read(`lib/flight-map/locales/${locale}.json`),i18n=createI18n(locale,messages),airports=decodeAirports(read(`public/flight-map/v6/airports-${locale}.json`)),codes=new Set(airports.map(a=>a.code));
  assert.deepEqual(Object.keys(messages).sort(),Object.keys(ru).sort());
  for(const [key,value]of Object.entries(messages))if(typeof value==='string'){
   assert.deepEqual(params(value),params(ru[key]),key);assert.ok(value.trim().length,key);

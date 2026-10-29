@@ -6,6 +6,8 @@ import shell from '@/lib/flight-map/shell-i18n.json';
 import { flightMapCopy, flightMapMessages, locales, escapeHTML } from '@/lib/flight-map/localization';
 import { renderInfo } from '@/lib/flight-map/content';
 import './flight-map.css';
+import { initialMapLayoutScript } from '@/lib/flight-map/layout-hint';
+import { createI18n } from '@/public/flight-map/v4/i18n';
 
 type Props = { params: Promise<{ locale: string }> };
 const base = 'https://airportsboard.live';
@@ -50,19 +52,26 @@ export default async function FlightMapPage({ params }: Props) {
       { '@type': 'ListItem', position: 2, name: copy.heading, item: url },
     ] },
   ] };
+  const { statLabel } = createI18n(locale, messages);
+  const stats = `<div class="stat"><b>0</b><span>${escapeHTML(statLabel('flights',0))}</span></div><div class="stat"><b>0</b><span>${escapeHTML(statLabel('countries',0))}</span></div><div class="stat"><b>0</b><span>${escapeHTML(messages.m088)}</span></div>`;
   const html = shell.replace(/\{\{(\w+)\}\}/g, (_, key) => escapeHTML(key === 'locale' ? locale : messages[key]))
+    .replace('<div class="stats" id="stats"></div>', `<div class="stats" id="stats">${stats}</div>`)
+    .replace('<div id="flightList"></div>', `<div id="flightList"><div class="empty-list">${escapeHTML(messages.m097)}</div></div>`)
     .replace(/<!-- flight-map-seo:start -->[\s\S]*?<!-- flight-map-seo:end -->/, renderInfo(copy));
   return <>
     {/* Только эта страница заранее загружает свой runtime и каталог текущего
         языка. Раньше они ждали hydration → import → дочерние modules → fetch,
-        добавляя несколько RTT на Slow 4G. runtime — единый ESM из исходников v5;
+        добавляя несколько RTT на Slow 4G. runtime — единый ESM из исходников v6;
         экспорт остаётся отдельным ленивым bundle. crossorigin совпадает с fetch:
         браузер повторно использует ответ preload, а не качает каталог дважды.
-        Низкий приоритет данных не вытесняет JS гидратации из очереди сети. */}
-    <link rel="modulepreload" href="/flight-map/v5/runtime.js" />
-    <link rel="preload" as="fetch" fetchPriority="low" href={`/flight-map/v4/airports-${locale}.json`} crossOrigin="anonymous" />
-    <link rel="preload" as="fetch" fetchPriority="low" href="/flight-map/v1/land-v2.json" crossOrigin="anonymous" />
+        После lossless-сжатия v6 критические данные получили высокий приоритет:
+        в повторных холодных замерах CPU6×/Slow4G готовность 6,3→5,1с, LCP ~1,4с.
+        JS гидратации остаётся нужен, поэтому измеряем обе метрики, не только SVG. */}
+    <link rel="modulepreload" href="/flight-map/v6/runtime.js" />
+    <link rel="preload" as="fetch" fetchPriority="high" href={`/flight-map/v6/airports-${locale}.json`} crossOrigin="anonymous" />
+    <link rel="preload" as="fetch" fetchPriority="high" href="/flight-map/v6/geography.json" crossOrigin="anonymous" />
     <FlightMap key={locale} html={html} locale={locale} messages={messages} />
+    <script data-flight-map-layout="true" dangerouslySetInnerHTML={{ __html: initialMapLayoutScript }} />
     <noscript><p style={{ textAlign: 'center', padding: 16 }}>{String(messages.noscript)}</p></noscript>
     <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(data).replace(/</g, '\\u003c') }} />
   </>;

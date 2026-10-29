@@ -1,6 +1,7 @@
 'use client';
 
-import { useEffect, useRef } from 'react';
+import { useEffect, useLayoutEffect, useRef } from 'react';
+import { applyInitialMapLayout } from '@/lib/flight-map/layout-hint';
 import { track, GOALS } from '@/lib/track';
 
 /** Сервер отдаёт готовые подписи и FAQ, клиент подключает только журнал.
@@ -10,6 +11,7 @@ import { track, GOALS } from '@/lib/track';
  */
 export function FlightMap({ html, locale, messages }: { html: string; locale: string; messages: Record<string, unknown> }) {
   const ref = useRef<HTMLDivElement>(null);
+  useLayoutEffect(() => { applyInitialMapLayout(ref.current); }, [locale]);
   useEffect(() => {
     const root = ref.current!;
     const controller = new AbortController();
@@ -18,9 +20,9 @@ export function FlightMap({ html, locale, messages }: { html: string; locale: st
       export: GOALS.flightMapExport, backup: GOALS.flightMapBackup,
       restore: GOALS.flightMapRestore,
     };
-    // Каждый runtime связан со своей HTML-оболочкой. v1/v2/v3/v4 остаются доступны
-    // старому ISR и открытым вкладкам; v5 сокращает ожидание сети и сохраняет масштаб при закрытии формы.
-    const moduleURL = '/flight-map/v5/runtime.js';
+    // Каждый runtime связан со своей HTML-оболочкой. v1/v2/v3/v4/v5 остаются доступны
+    // старому ISR и открытым вкладкам; v6 использует компактные данные с той же географией и названиями.
+    const moduleURL = '/flight-map/v6/runtime.js';
     import(/* webpackIgnore: true */ moduleURL)
       .then(m => {
         if (controller.signal.aborted) return;
@@ -51,6 +53,6 @@ export function FlightMap({ html, locale, messages }: { html: string; locale: st
       });
     return () => controller.abort();
   }, [locale, messages]);
-  return <div ref={ref} lang={locale} dir={locale === 'ar' ? 'rtl' : 'ltr'} className="flight-map-root ym-hide-content" aria-busy="true"
+  return <div ref={ref} suppressHydrationWarning lang={locale} dir={locale === 'ar' ? 'rtl' : 'ltr'} className="flight-map-root ym-hide-content" aria-busy="true"
     dangerouslySetInnerHTML={{ __html: html }} />;
 }
