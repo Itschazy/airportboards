@@ -125,3 +125,12 @@ main:has(.flight-map-root)~footer .home-footer-reference>summary{display:none!im
 /* Пустая строка состояния не занимает места: писать в неё теперь нечего,
    кроме сообщения о сбое. */
 .flight-map-root #storageStatus:empty{display:none}
+
+/* До первого кадра локальный hint резервирует те же размеры, что у карты
+   с историей. Значения/маршруты не подделываем: пустые подписи и controls
+   скрыты visibility, а место уже занято. После mount действует прежний CSS. */
+.flight-map-root[data-initial-history=yes][aria-busy=true] .atlas.is-empty .map-wrap{height:320px}
+.flight-map-root[data-initial-history=yes][aria-busy=true] .atlas.is-empty .stats{display:grid;visibility:hidden}
+.flight-map-root[data-initial-history=yes][aria-busy=true] .atlas.is-empty .map-controls{display:flex;visibility:hidden}
+.flight-map-root[data-initial-history=yes][aria-busy=true] .map-empty{visibility:hidden}
+@media(max-width:700px){.flight-map-root[data-initial-history=yes][aria-busy=true] .atlas.is-empty .map-wrap{height:240px}}

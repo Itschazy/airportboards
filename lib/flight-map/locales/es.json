@@ -154,5 +154,7 @@
       "one": "país",
       "other": "países"
     }
-  }
+  },
+  "searchLoading": "Cargando la búsqueda de aeropuertos…",
+  "searchLoadError": "No se pudo cargar la búsqueda. Inténtalo de nuevo."
 }

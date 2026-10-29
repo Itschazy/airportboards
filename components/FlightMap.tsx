@@ -1,6 +1,7 @@
 'use client';
 
-import { useEffect, useRef } from 'react';
+import { useEffect, useLayoutEffect, useRef } from 'react';
+import { applyInitialMapLayout } from '@/lib/flight-map/layout-hint';
 import { track, GOALS } from '@/lib/track';
 
 /** Сервер отдаёт готовые подписи и FAQ, клиент подключает только журнал.
@@ -10,36 +11,41 @@ import { track, GOALS } from '@/lib/track';
  */
 export function FlightMap({ html, locale, messages }: { html: string; locale: string; messages: Record<string, unknown> }) {
   const ref = useRef<HTMLDivElement>(null);
+  useLayoutEffect(() => { applyInitialMapLayout(ref.current); }, [locale]);
   useEffect(() => {
     const root = ref.current!;
-    const controller = new AbortController();
+    let cancelled = false;
+    let session: { dispose: () => void } | null = null;
     const events = {
       open: GOALS.flightMapOpen, saved: GOALS.flightMapSaved,
       export: GOALS.flightMapExport, backup: GOALS.flightMapBackup,
       restore: GOALS.flightMapRestore,
     };
-    // Каждый runtime связан со своей HTML-оболочкой. v1/v2/v3/v4 остаются доступны
-    // старому ISR и открытым вкладкам; v5 сокращает ожидание сети и сохраняет масштаб при закрытии формы.
-    const moduleURL = '/flight-map/v5/runtime.js';
+    // SSR мог уже запустить карту: boot принимает существующий остров.
+    // Каждый runtime связан со своей HTML-оболочкой. v1/v2/v3/v4/v5/v6 остаются доступны
+    // старому ISR и открытым вкладкам; v9 загружает полный словарь одним сжатым ответом; опубликованные v1–v8 неизменяемы.
+    const moduleURL = '/flight-map/v9/runtime.js';
     import(/* webpackIgnore: true */ moduleURL)
       .then(m => {
-        if (controller.signal.aborted) return;
-        return m.mount(root, {
-          signal: controller.signal, locale, messages,
+        // Поздний import старого effect не должен отменять новый effect того же DOM.
+        if (cancelled) { if (!root.isConnected) m.stop(root); return; }
+        const active = m.boot(root);
+        session = active;
+        active.attachTrack(
           // Явный allowlist: номера, аэропорты, даты, ID и содержимое файлов
           // не попадают в аналитику даже при расширении клиентского модуля.
-          track: (event: keyof typeof events, data?: Record<string, string>) => {
+          (event: keyof typeof events, data?: Record<string, string>) => {
             if (!events[event]) return;
             track(events[event], {
               locale, release: process.env.NEXT_PUBLIC_RUM_RELEASE || 'unknown',
               ...(data?.export_kind && ['map', 'year', 'flight'].includes(data.export_kind) ? { export_kind: data.export_kind } : {}),
               ...(data?.format && ['story', 'square'].includes(data.format) ? { format: data.format } : {}),
             });
-          },
-        });
+          }
+        );
       })
       .catch(() => {
-        if (controller.signal.aborted) return;
+        if (cancelled) return;
         root.removeAttribute('aria-busy');
         // Кнопку «Добавить перелёт» runtime включает до загрузки каталога,
         // чтобы она не моргала. Раз загрузка не удалась, открывать нечего —
@@ -61,8 +67,9 @@ export function FlightMap({ html, locale, messages }: { html: string; locale: st
         retry.textContent = String(messages.retry);
         status?.after(retry);
       });
-    return () => controller.abort();
+    return () => { cancelled = true; session?.dispose(); };
   }, [locale, messages]);
-  return <div ref={ref} lang={locale} dir={locale === 'ar' ? 'rtl' : 'ltr'} className="flight-map-root ym-hide-content" aria-busy="true"
+  return <div ref={ref} suppressHydrationWarning lang={locale} dir={locale === 'ar' ? 'rtl' : 'ltr'} className="flight-map-root ym-hide-content" aria-busy="true"
+    data-flight-map-version="9" data-map-config={JSON.stringify({ locale, messages })}
     dangerouslySetInnerHTML={{ __html: html }} />;
 }

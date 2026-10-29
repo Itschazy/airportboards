@@ -79,6 +79,15 @@ const nextConfig: NextConfig = {
   async headers() {
     return [
       {
+        // Только документ карты: браузер начинает полный каталог до разбора
+        // HTML. Не повторяем fetch-preload в React: при холодном кэше он мог
+        // запускать второй запрос после потребления раннего ответа. RSC и
+        // prefetch соседних страниц не должны скачивать словари пользователя.
+        source: '/:locale(ru|en|de|fr|es|it|tr|zh|ja|ko|ar|hi)/flight-map',
+        missing: [{ type: 'header', key: 'rsc' }, { type: 'header', key: 'next-router-prefetch' }],
+        headers: [{ key: 'Link', value: '</flight-map/v9/catalogue-:locale.js.br>; rel=modulepreload; crossorigin; fetchpriority=high, </flight-map/v9/geography.js.br>; rel=modulepreload; crossorigin; fetchpriority=low' }],
+      },
+      {
         source: '/:path*',
         headers: [
           { key: 'Strict-Transport-Security', value: 'max-age=31536000; includeSubDomains' },
@@ -235,6 +244,36 @@ const nextConfig: NextConfig = {
           { key: 'Cache-Control', value: 'public, max-age=3600, s-maxage=86400, stale-while-revalidate=604800' },
         ],
       },
+      {
+        // Каталог и география v6 неизменяемы: следующие правки требуют нового v7 URL.
+        // Раньше max-age=0 заставлял повторный визит ждать сеть даже с сохранёнными
+        // перелётами. Кэшируем только новую версию, без личной истории и HTML;
+        // старые v1–v5 продолжают работать. Заголовок проверяет check-flight-map.
+        source: '/flight-map/v6/:path*',
+        headers: [{ key: 'Cache-Control', value: 'public, max-age=31536000, immutable' }],
+      },
+      {
+        // Новая версия отделяет поисковые алиасы от карты; v6 остаётся immutable.
+        // После публикации любое изменение данных/runtime требует нового URL.
+        source: '/flight-map/v7/:path*',
+        headers: [{ key: 'Cache-Control', value: 'public, max-age=31536000, immutable' }],
+      },
+      {
+        // Локальный поиск v8 независим от алиасов; старые версии сохраняем для ISR.
+        source: '/flight-map/v8/:path*',
+        headers: [{ key: 'Cache-Control', value: 'public, max-age=31536000, immutable' }],
+      },
+      {
+        source: '/flight-map/v9/:file.js.br',
+        headers: [{ key: 'Content-Encoding', value: 'br' }, { key: 'Content-Type', value: 'application/javascript; charset=utf-8' }],
+      },
+      {
+        // Уже сжатые JSON распаковывает браузер. Отдельный URL исключает
+        // смешивание кодировок в кэше; обычный JSON остаётся fallback.
+        source: '/flight-map/v9/:file.json.br',
+        headers: [{ key: 'Content-Encoding', value: 'br' }, { key: 'Content-Type', value: 'application/json; charset=utf-8' }],
+      },
+      { source: '/flight-map/v9/:path*', headers: [{ key: 'Cache-Control', value: 'public, max-age=31536000, immutable' }] },
       {
         // Иконка. Раньше — дефолт create-next-app на 25 931 Б с `max-age=0,
         // must-revalidate`: качалась целиком на КАЖДЫЙ показ страницы и весила больше, чем

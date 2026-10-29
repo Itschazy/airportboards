@@ -154,5 +154,7 @@
       "one": "ülke",
       "other": "ülke"
     }
-  }
+  },
+  "searchLoading": "Havalimanı araması yükleniyor…",
+  "searchLoadError": "Arama yüklenemedi. Lütfen tekrar deneyin."
 }
