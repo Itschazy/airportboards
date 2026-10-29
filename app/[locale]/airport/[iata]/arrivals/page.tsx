@@ -1,6 +1,7 @@
 import { LocaleLinks } from '@/components/LocaleLinks';
 import type { Locale } from '@/lib/i18n';
 import { airportSchema } from '@/lib/airport-schema';
+import { getAirportGuide, guideAmenities } from '@/lib/airport-guide';
 import type { Metadata } from 'next';
 import { getTranslations , setRequestLocale } from 'next-intl/server';
 import { notFound, permanentRedirect } from 'next/navigation';
@@ -191,7 +192,11 @@ export default async function ArrivalsPage({ params }: Props) {
     : null;
 
   const jsonLd = [
-    airportSchema(airport, name, city, `${BASE}/${locale}/airport/${airport.iata}`, BASE),
+    // Справочная видна и на прилётах, но после её добавления amenityFeature остался
+    // только у родительской страницы. Оба URL описывают один Airport с общим @id:
+    // дополняем его теми же подтверждёнными категориями, без вывода новых услуг.
+    // Равенство сущности на всех 12 языках проверяет check-seo-facts.
+    { ...airportSchema(airport, name, city, `${BASE}/${locale}/airport/${airport.iata}`, BASE), ...guideAmenities(getAirportGuide(airport.iata, locale)) },
     {
       '@context': 'https://schema.org',
       '@type': 'BreadcrumbList',
