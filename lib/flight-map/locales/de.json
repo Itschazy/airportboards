@@ -175,5 +175,7 @@
       "one": "Land",
       "other": "Länder"
     }
-  }
+  },
+  "searchLoading": "Flughafensuche wird geladen…",
+  "searchLoadError": "Die Flughafensuche konnte nicht geladen werden. Bitte erneut versuchen."
 }

@@ -173,5 +173,7 @@
     "countries": {
       "other": "か国"
     }
-  }
+  },
+  "searchLoading": "空港検索を読み込み中…",
+  "searchLoadError": "検索を読み込めませんでした。もう一度お試しください。"
 }

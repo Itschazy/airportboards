@@ -173,5 +173,7 @@
     "countries": {
       "other": "国家"
     }
-  }
+  },
+  "searchLoading": "正在加载机场搜索…",
+  "searchLoadError": "无法加载搜索，请重试。"
 }

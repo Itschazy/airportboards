@@ -244,6 +244,12 @@ const nextConfig: NextConfig = {
         headers: [{ key: 'Cache-Control', value: 'public, max-age=31536000, immutable' }],
       },
       {
+        // Новая версия отделяет поисковые алиасы от карты; v6 остаётся immutable.
+        // После публикации любое изменение данных/runtime требует нового URL.
+        source: '/flight-map/v7/:path*',
+        headers: [{ key: 'Cache-Control', value: 'public, max-age=31536000, immutable' }],
+      },
+      {
         // Иконка. Раньше — дефолт create-next-app на 25 931 Б с `max-age=0,
         // must-revalidate`: качалась целиком на КАЖДЫЙ показ страницы и весила больше, чем
         // весь сжатый HTML главной. Файл заменён на 761 Б (scripts/gen-favicon.mjs), но

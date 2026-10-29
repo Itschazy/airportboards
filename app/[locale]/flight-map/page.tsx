@@ -61,17 +61,21 @@ export default async function FlightMapPage({ params }: Props) {
   return <>
     {/* Только эта страница заранее загружает свой runtime и каталог текущего
         языка. Раньше они ждали hydration → import → дочерние modules → fetch,
-        добавляя несколько RTT на Slow 4G. runtime — единый ESM из исходников v6;
+        добавляя несколько RTT на Slow 4G. runtime — единый ESM из исходников v7;
         экспорт остаётся отдельным ленивым bundle. crossorigin совпадает с fetch:
         браузер повторно использует ответ preload, а не качает каталог дважды.
-        После lossless-сжатия v6 критические данные получили высокий приоритет:
-        в повторных холодных замерах CPU6×/Slow4G готовность 6,3→5,1с, LCP ~1,4с.
-        JS гидратации остаётся нужен, поэтому измеряем обе метрики, не только SVG. */}
-    <link rel="modulepreload" href="/flight-map/v6/runtime.js" />
-    <link rel="preload" as="fetch" fetchPriority="high" href={`/flight-map/v6/airports-${locale}.json`} crossOrigin="anonymous" />
+        V7 загружает основную карту раньше поисковых алиасов. Имена и координаты
+        всех аэропортов полные; алиасы получают пониженный приоритет после данных первого экрана.
+        Поиск текста ждёт весь индекс и защищён от устаревших ответов. */}
+    <link rel="modulepreload" href="/flight-map/v7/runtime.js" />
+    <link rel="preload" as="fetch" fetchPriority="high" href={`/flight-map/v7/core-${locale}.json`} crossOrigin="anonymous" />
     <link rel="preload" as="fetch" fetchPriority="high" href="/flight-map/v6/geography.json" crossOrigin="anonymous" />
+    <link rel="preload" as="fetch" fetchPriority="low" href={`/flight-map/v7/aliases-${locale}.json`} crossOrigin="anonymous" />
     <FlightMap key={locale} html={html} locale={locale} messages={messages} />
     <script data-flight-map-layout="true" dangerouslySetInnerHTML={{ __html: initialMapLayoutScript }} />
+    {/* Модуль ждёт разбора HTML, но не общей гидратации Next. При SPA-переходе
+        тот же boot вызывает React; повторный вызов сохраняет готовый остров. */}
+    <script type="module" data-flight-map-boot="true" dangerouslySetInnerHTML={{ __html: `import {boot} from '/flight-map/v7/runtime.js';boot(document.querySelector('[data-flight-map-version="7"]'));` }} />
     <noscript><p style={{ textAlign: 'center', padding: 16 }}>{String(messages.noscript)}</p></noscript>
     <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(data).replace(/</g, '\\u003c') }} />
   </>;
