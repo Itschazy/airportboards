@@ -68,3 +68,12 @@ SEOтексты/метаданные/переводы иDNS не изменял�
 СкриптQA не включён вproduction. Логи/JSON/снимки сохранены тамже.
 
 Выкат разрешён пользователем; CI/server/postdeploy фиксируются после публикации.
+
+## Выкат подтверждён
+
+Кодca7e8bf2974fabd8ef7de6a2c062b9aebb979f54, push29.10.2026 02:16:32CET.
+Actions40799426349success, серверSHAсовпадает, BUILD_IDFsiR_L8UwSQ8HSI61TOTS,
+3pm2online,63ГБсвободно.17/17v6assetsSHA256/headerPASS. Revalidate12/12OK.
+Postdeploy:index20/20,sitemap-hreflang,live-refresh,adsense,flight-mapPASS.
+Толькоaudit-bot. Никаких productionбраузерныхвизитов/покупокрейсов.
+Логиab-load-prod-* находятсярядомсизмерениями.
