@@ -1,3 +1,20 @@
+## 29.10.2026 — SEO-пакет подготовлен и проверен, НЕ опубликован (Codex)
+
+Рабочая копия `/Users/whereiszhenya/projects/runwayboard-flight-map-prototype-20261028`, ветка `codex/flight-map-prototype-20261028`. Последний fetch: origin/main `d9d7c653`, база актуальна. Предыдущий docs-коммит v9 после rebase — `88543f75`.
+
+Новые коммиты:
+- `9200f76b` — FAQ карты на12языках: убраны удалённый фильтр и старое название общего периода, сторож сверяет действующий m007. Опечатки AYT/ALA исправлены без новых фактов.
+- `4648beb9` — реальные canonical ссылки верхних режимов табло при прежнем оформлении/быстром переключении; описания arrivals fresh/stale на12языках без вылетных обещаний.
+- `533d350c` — TAS/HKT/CXR/ALA:10блоков×12языков,9официальных страниц, независимый фактчек91утверждения, перекрёстная рецензия110переведённых блоков (3смысловые+4стилевыеправки). Все агенты одной модели; проверка носителями не заявляется. Источник TAS CIP датирован2021: цены/возраста исключены, checked означает чтение.
+
+Проверки этой итерации: tsc0;382ключа в12messages,плейсхолдеры;guideguard177×11;check:scripts;board-interactions/regressions;fixture production build2461страница;check-index20/20;check-arrivals-page;check-sitemap-hreflang;check-flight-map;check-live-refresh;check-adsense. Новый check-pages.py проверил96/96страниц (4×12×base/arrivals):полныеблокиSSRиFAQ,selfcanonical,indexable,13hreflang,одинH1,безповторов. Мобильный viewport375px:все12языков;AR320px;клик/Enter/Space/middle/Cmd и переходы без JS проверены. Это Chromium viewport, не физическиеSafari/Android и не RUM/LCPзамер. Финальная сборка после найденной RU-опечатки ALA повторена, исправление проверено HTTP.
+
+Google: GSC Smartphone22–27.10 —202/273/250/193/132/130запросов,против11/39/20за19–21.10. Обход вырос,индексациянеобъявляетсяисправленной.199Kобщихза90дней —77%AdsBot. Originлоги сGooglebotUA/IPофициальныхдиапазонов дают существенно больше,ноHostнепишется; не приравнивать19862уникальныхпути киндексирующемуобходуapex. Подготовленыbaseline30URL,CSVипланповторногоизмерения. LBAнерасширяли вsitemapпротивгейтачастотыпрогрева.
+
+Подробности: `ops/seo-growth-20261029/README.md`; факты/переводы — журналы growth-20261029 в ops/guide-collection и ops/guide-translation. Отчёт и скриншоты: `outputs/seo-implementation-20261029/report.html` в папке чата. Локальный сервер3119остановлен, .next-seo-growth и временныйHTMLharnessудалены, generatedTSвосстановлены, symlinknode_modulesудалён (сами зависимости сохранены). Дизайн/DNS/покупки/cron/переобход/сообщениянеизменялись. Пушей0.
+
+Следующее: показать владельцу готовый пакет. Для публикации после подтверждения: из этой копии `git fetch origin`, проверить отставание и при необходимости rebase с повторными релевантными проверками; вне :00–:05/:30–:35 Europe/Amsterdam выполнить `git push origin HEAD:main`. Дождаться success Actions и сверить serverHEAD. Затем check-index, check-sitemap-hreflang https://airportsboard.live, check-live-refresh, check-adsense и audit-bot новые справочные/FAQ/arrivals. Не выполнять платные ручки или productionбраузер. Индексациюоцениватьпообновлённымданнымпослепубликации,необещатьмгновенныйэффект.
+
 ## 28.10.2026 — SEO-пакет локальной карты (Codex)
 
 Поверх3e354375 подготовлены SEO-тексты12языков, статический RU-аккордеон под картой,

@@ -1,0 +1,302 @@
+[
+  {
+    "path": "/ru/airport/IST",
+    "title": "Онлайн-табло аэропорта Стамбул (IST) — прилеты и вылеты сегодня",
+    "description": "Время вылетов и прилётов, задержки, гейты и терминалы на табло Стамбул (IST) — данные, которые проверяют перед поездкой в аэропорт.",
+    "h1Count": 1,
+    "canonical": "https://airportsboard.live/ru/airport/IST",
+    "robots": "index, follow",
+    "inSitemap": true,
+    "guide": true
+  },
+  {
+    "path": "/ru/airport/IST/arrivals",
+    "title": "Табло прилета Стамбул (IST) сегодня — онлайн",
+    "description": "Табло прилетов Стамбул (IST) сегодня: рейсы онлайн, время прибытия, статусы, задержки и вылеты в реальном времени.",
+    "h1Count": 1,
+    "canonical": "https://airportsboard.live/ru/airport/IST/arrivals",
+    "robots": "index, follow",
+    "inSitemap": true,
+    "guide": true
+  },
+  {
+    "path": "/ru/airport/DME",
+    "title": "Онлайн-табло аэропорта Домодедово, Москва (DME) — прилеты и вылеты сегодня",
+    "description": "Время вылетов и прилётов, задержки, гейты и терминалы на табло Домодедово (DME) — данные, которые проверяют перед поездкой в аэропорт.",
+    "h1Count": 1,
+    "canonical": "https://airportsboard.live/ru/airport/DME",
+    "robots": "index, follow",
+    "inSitemap": true,
+    "guide": true
+  },
+  {
+    "path": "/ru/airport/DME/arrivals",
+    "title": "Табло прилета Домодедово, Москва (DME) сегодня — онлайн",
+    "description": "Табло прилетов Домодедово (DME) сегодня: рейсы онлайн, время прибытия, статусы, задержки и вылеты в реальном времени.",
+    "h1Count": 1,
+    "canonical": "https://airportsboard.live/ru/airport/DME/arrivals",
+    "robots": "index, follow",
+    "inSitemap": true,
+    "guide": true
+  },
+  {
+    "path": "/ru/airport/AYT",
+    "title": "Онлайн-табло аэропорта Анталия (AYT) — прилеты и вылеты сегодня",
+    "description": "Время вылетов и прилётов, задержки, гейты и терминалы на табло Анталия (AYT) — данные, которые проверяют перед поездкой в аэропорт.",
+    "h1Count": 1,
+    "canonical": "https://airportsboard.live/ru/airport/AYT",
+    "robots": "index, follow",
+    "inSitemap": true,
+    "guide": true
+  },
+  {
+    "path": "/ru/airport/AYT/arrivals",
+    "title": "Табло прилета Анталия (AYT) сегодня — онлайн",
+    "description": "Табло прилетов Анталия (AYT) сегодня: рейсы онлайн, время прибытия, статусы, задержки и вылеты в реальном времени.",
+    "h1Count": 1,
+    "canonical": "https://airportsboard.live/ru/airport/AYT/arrivals",
+    "robots": "index, follow",
+    "inSitemap": true,
+    "guide": true
+  },
+  {
+    "path": "/ru/airport/SSH",
+    "title": "Онлайн-табло аэропорта Шарм-эш-Шейх (SSH) — прилеты и вылеты сегодня",
+    "description": "Время вылетов и прилётов, задержки, гейты и терминалы на табло Шарм-эш-Шейх (SSH) — данные, которые проверяют перед поездкой в аэропорт.",
+    "h1Count": 1,
+    "canonical": "https://airportsboard.live/ru/airport/SSH",
+    "robots": "index, follow",
+    "inSitemap": true,
+    "guide": true
+  },
+  {
+    "path": "/ru/airport/SSH/arrivals",
+    "title": "Табло прилета Шарм-эш-Шейх (SSH) сегодня — онлайн",
+    "description": "Табло прилетов Шарм-эш-Шейх (SSH) сегодня: рейсы онлайн, время прибытия, статусы, задержки и вылеты в реальном времени.",
+    "h1Count": 1,
+    "canonical": "https://airportsboard.live/ru/airport/SSH/arrivals",
+    "robots": "index, follow",
+    "inSitemap": true,
+    "guide": true
+  },
+  {
+    "path": "/ru/airport/HRG",
+    "title": "Онлайн-табло аэропорта Хургада (HRG) — прилеты и вылеты сегодня",
+    "description": "Время вылетов и прилётов, задержки, гейты и терминалы на табло Хургада (HRG) — данные, которые проверяют перед поездкой в аэропорт.",
+    "h1Count": 1,
+    "canonical": "https://airportsboard.live/ru/airport/HRG",
+    "robots": "index, follow",
+    "inSitemap": true,
+    "guide": true
+  },
+  {
+    "path": "/ru/airport/HRG/arrivals",
+    "title": "Табло прилета Хургада (HRG) сегодня — онлайн",
+    "description": "Табло прилетов Хургада (HRG) сегодня: рейсы онлайн, время прибытия, статусы, задержки и вылеты в реальном времени.",
+    "h1Count": 1,
+    "canonical": "https://airportsboard.live/ru/airport/HRG/arrivals",
+    "robots": "index, follow",
+    "inSitemap": true,
+    "guide": true
+  },
+  {
+    "path": "/ru/airport/KZN",
+    "title": "Онлайн-табло аэропорта Казань (KZN) — прилеты и вылеты сегодня",
+    "description": "Время вылетов и прилётов, задержки, гейты и терминалы на табло Казань (KZN) — данные, которые проверяют перед поездкой в аэропорт.",
+    "h1Count": 1,
+    "canonical": "https://airportsboard.live/ru/airport/KZN",
+    "robots": "index, follow",
+    "inSitemap": true,
+    "guide": true
+  },
+  {
+    "path": "/ru/airport/KZN/arrivals",
+    "title": "Табло прилета Казань (KZN) сегодня — онлайн",
+    "description": "Табло прилетов Казань (KZN) сегодня: рейсы онлайн, время прибытия, статусы, задержки и вылеты в реальном времени.",
+    "h1Count": 1,
+    "canonical": "https://airportsboard.live/ru/airport/KZN/arrivals",
+    "robots": "index, follow",
+    "inSitemap": true,
+    "guide": true
+  },
+  {
+    "path": "/ru/airport/UFA",
+    "title": "Онлайн-табло аэропорта Уфа (UFA) — прилеты и вылеты сегодня",
+    "description": "Время вылетов и прилётов, задержки, гейты и терминалы на табло Уфа (UFA) — данные, которые проверяют перед поездкой в аэропорт.",
+    "h1Count": 1,
+    "canonical": "https://airportsboard.live/ru/airport/UFA",
+    "robots": "index, follow",
+    "inSitemap": true,
+    "guide": true
+  },
+  {
+    "path": "/ru/airport/UFA/arrivals",
+    "title": "Табло прилета Уфа (UFA) сегодня — онлайн",
+    "description": "Табло прилетов Уфа (UFA) сегодня: рейсы онлайн, время прибытия, статусы, задержки и вылеты в реальном времени.",
+    "h1Count": 1,
+    "canonical": "https://airportsboard.live/ru/airport/UFA/arrivals",
+    "robots": "index, follow",
+    "inSitemap": true,
+    "guide": true
+  },
+  {
+    "path": "/ru/airport/OVB",
+    "title": "Онлайн-табло аэропорта Толмачёво, Новосибирск (OVB) — прилеты и вылеты сегодня",
+    "description": "Время вылетов и прилётов, задержки, гейты и терминалы на табло Толмачёво (OVB) — данные, которые проверяют перед поездкой в аэропорт.",
+    "h1Count": 1,
+    "canonical": "https://airportsboard.live/ru/airport/OVB",
+    "robots": "index, follow",
+    "inSitemap": true,
+    "guide": true
+  },
+  {
+    "path": "/ru/airport/OVB/arrivals",
+    "title": "Табло прилета Толмачёво, Новосибирск (OVB) сегодня — онлайн",
+    "description": "Табло прилетов Толмачёво (OVB) сегодня: рейсы онлайн, время прибытия, статусы, задержки и вылеты в реальном времени.",
+    "h1Count": 1,
+    "canonical": "https://airportsboard.live/ru/airport/OVB/arrivals",
+    "robots": "index, follow",
+    "inSitemap": true,
+    "guide": true
+  },
+  {
+    "path": "/en/airport/LHR",
+    "title": "London Heathrow Airport (LHR) Live Arrivals & Departures",
+    "description": "Departure and arrival times, delays, gates and terminals at London Heathrow Airport (LHR) — the details you check before leaving for the airport.",
+    "h1Count": 1,
+    "canonical": "https://airportsboard.live/en/airport/LHR",
+    "robots": "index, follow",
+    "inSitemap": true,
+    "guide": true
+  },
+  {
+    "path": "/en/airport/LHR/arrivals",
+    "title": "London Heathrow Airport (LHR) Live Arrivals",
+    "description": "Live arrivals board at London Heathrow Airport (LHR) today: real-time arrivals and departures, flight status, times, delays and gates.",
+    "h1Count": 1,
+    "canonical": "https://airportsboard.live/en/airport/LHR/arrivals",
+    "robots": "index, follow",
+    "inSitemap": true,
+    "guide": true
+  },
+  {
+    "path": "/en/airport/NCL/arrivals",
+    "title": "Newcastle Airport (NCL) Live Arrivals",
+    "description": "Live arrivals board at Newcastle Airport (NCL) today: real-time arrivals and departures, flight status, times, delays and gates.",
+    "h1Count": 1,
+    "canonical": "https://airportsboard.live/en/airport/NCL/arrivals",
+    "robots": "index, follow",
+    "inSitemap": true,
+    "guide": false
+  },
+  {
+    "path": "/en/airport/LBA/arrivals",
+    "title": "Leeds Bradford Airport (LBA) Live Arrivals",
+    "description": "Live arrivals board at Leeds Bradford Airport (LBA) today: real-time arrivals and departures, flight status, times, delays and gates.",
+    "h1Count": 1,
+    "canonical": "https://airportsboard.live/en/airport/LBA/arrivals",
+    "robots": "index, follow",
+    "inSitemap": false,
+    "guide": false
+  },
+  {
+    "path": "/en/airport/DMM/arrivals",
+    "title": "King Fahd International Airport, Dammam (DMM) Live Arrivals",
+    "description": "Live arrivals board at King Fahd International Airport (DMM) today: real-time arrivals and departures, flight status, times, delays and gates.",
+    "h1Count": 1,
+    "canonical": "https://airportsboard.live/en/airport/DMM/arrivals",
+    "robots": "index, follow",
+    "inSitemap": true,
+    "guide": false
+  },
+  {
+    "path": "/en/airport/EDI/arrivals",
+    "title": "Edinburgh Airport (EDI) Live Arrivals",
+    "description": "Live arrivals board at Edinburgh Airport (EDI) today: real-time arrivals and departures, flight status, times, delays and gates.",
+    "h1Count": 1,
+    "canonical": "https://airportsboard.live/en/airport/EDI/arrivals",
+    "robots": "index, follow",
+    "inSitemap": true,
+    "guide": false
+  },
+  {
+    "path": "/en/airport/MAN/arrivals",
+    "title": "Manchester Airport (MAN) Live Arrivals",
+    "description": "Live arrivals board at Manchester Airport (MAN) today: real-time arrivals and departures, flight status, times, delays and gates.",
+    "h1Count": 1,
+    "canonical": "https://airportsboard.live/en/airport/MAN/arrivals",
+    "robots": "index, follow",
+    "inSitemap": true,
+    "guide": true
+  },
+  {
+    "path": "/ru/airport/TAS",
+    "title": "Онлайн-табло аэропорта Ташкент (TAS) — прилеты и вылеты сегодня",
+    "description": "Время вылетов и прилётов, задержки, гейты и терминалы на табло Ташкент (TAS) — данные, которые проверяют перед поездкой в аэропорт.",
+    "h1Count": 1,
+    "canonical": "https://airportsboard.live/ru/airport/TAS",
+    "robots": "index, follow",
+    "inSitemap": true,
+    "guide": false
+  },
+  {
+    "path": "/ru/airport/HKT",
+    "title": "Онлайн-табло аэропорта Пхукет (HKT) — прилеты и вылеты сегодня",
+    "description": "Время вылетов и прилётов, задержки, гейты и терминалы на табло Пхукет (HKT) — данные, которые проверяют перед поездкой в аэропорт.",
+    "h1Count": 1,
+    "canonical": "https://airportsboard.live/ru/airport/HKT",
+    "robots": "index, follow",
+    "inSitemap": true,
+    "guide": false
+  },
+  {
+    "path": "/ru/airport/CXR",
+    "title": "Онлайн-табло аэропорта Камрань, Нячанг (CXR) — прилеты и вылеты сегодня",
+    "description": "Время вылетов и прилётов, задержки, гейты и терминалы на табло Камрань (CXR) — данные, которые проверяют перед поездкой в аэропорт.",
+    "h1Count": 1,
+    "canonical": "https://airportsboard.live/ru/airport/CXR",
+    "robots": "index, follow",
+    "inSitemap": true,
+    "guide": false
+  },
+  {
+    "path": "/ru/airport/ALA",
+    "title": "Онлайн-табло аэропорта Алма‑Ата (ALA) — прилеты и вылеты сегодня",
+    "description": "Время вылетов и прилётов, задержки, гейты и терминалы на табло Алма‑Ата (ALA) — данные, которые проверяют перед поездкой в аэропорт.",
+    "h1Count": 1,
+    "canonical": "https://airportsboard.live/ru/airport/ALA",
+    "robots": "index, follow",
+    "inSitemap": true,
+    "guide": false
+  },
+  {
+    "path": "/ru/airport/LWN",
+    "title": "Онлайн-табло аэропорта Гюмри (LWN) — прилеты и вылеты сегодня",
+    "description": "Время вылетов и прилётов, задержки, гейты и терминалы на табло Гюмри (LWN) — данные, которые проверяют перед поездкой в аэропорт.",
+    "h1Count": 1,
+    "canonical": "https://airportsboard.live/ru/airport/LWN",
+    "robots": "index, follow",
+    "inSitemap": true,
+    "guide": true
+  },
+  {
+    "path": "/ru/airport/BJV",
+    "title": "Онлайн-табло аэропорта Бодрум (BJV) — прилеты и вылеты сегодня",
+    "description": "Время вылетов и прилётов, задержки, гейты и терминалы на табло Бодрум (BJV) — данные, которые проверяют перед поездкой в аэропорт.",
+    "h1Count": 1,
+    "canonical": "https://airportsboard.live/ru/airport/BJV",
+    "robots": "index, follow",
+    "inSitemap": true,
+    "guide": true
+  },
+  {
+    "path": "/en/flight-map",
+    "title": "Personal flight map — free, no account needed",
+    "description": "Add past flights, keep your history in this browser and export your map as a PNG. Dates and flight numbers are optional. Back up your flights as JSON.",
+    "h1Count": 1,
+    "canonical": "https://airportsboard.live/en/flight-map",
+    "robots": "index, follow",
+    "inSitemap": true,
+    "guide": false
+  }
+]
