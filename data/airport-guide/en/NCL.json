@@ -1,0 +1,26 @@
+{
+  "iata": "NCL",
+  "blocks": {
+    "transport": {
+      "title": "Getting there",
+      "hint": "Metro to the centre: about 25 min",
+      "text": "There is a Metro station at the airport. The journey to Haymarket, Monument or Central Station in central Newcastle takes around 25 minutes. Trains run from approximately 05:30, or 06:20 on Sundays, until midnight."
+    },
+    "taxi": {
+      "title": "Taxis",
+      "hint": "Arrow Cars office open 24 hours",
+      "text": "The Arrow Cars desk in the arrivals hall is staffed around the clock. Pick-up and drop-off points are immediately outside arrivals and departures. Fares are fixed and include all charges; major credit cards are accepted."
+    },
+    "kids": {
+      "title": "Travelling with children",
+      "hint": "4 baby-changing stations",
+      "text": "There are 4 baby-changing stations at the airport: 2 before security and 2 in the departure lounge. They are signposted and located beside the toilets."
+    },
+    "wifi": {
+      "title": "Wi-Fi",
+      "hint": "Free _NCLFreeWiFi",
+      "text": "The free _NCLFreeWiFi network is available throughout the terminal. Faster paid access is provided through _NCLPremiumWiFi and costs £5."
+    }
+  },
+  "about": "Newcastle Airport has a Metro station with connections to the city centre."
+}

@@ -1,0 +1,26 @@
+{
+  "iata": "DMM",
+  "blocks": {
+    "transport": {
+      "title": "アクセス",
+      "hint": "ダンマーム行きバス",
+      "text": "バスは05:30〜23:30に30分間隔で出発します。カウンターと乗り場は到着階のGround Transportation Centerにあります。ダンマーム中心部への直行バスの運賃はSAR 3.45で、案内されている所要時間は約1時間です。"
+    },
+    "taxi": {
+      "title": "タクシー",
+      "hint": "到着階から乗車",
+      "text": "タクシーは到着階のGround Transportation Centerにあります。料金は前払いです。この階にはSATCOとSIXTがあります。"
+    },
+    "lounges": {
+      "title": "ラウンジ",
+      "hint": "国際線エリアと国内線エリア",
+      "text": "Plaza Premium Loungeは国際線出発階、Alfursan Golden Loungeは国際線搭乗ゲートエリアにあります。NaSmiles Loungeは国内線搭乗ゲートエリアにあります。"
+    },
+    "parking": {
+      "title": "駐車場",
+      "hint": "長期駐車場とシャトル",
+      "text": "Long-Term Parkingはダンマーム方面からのKing Fahd Road沿い、ターミナルビルの向かいにあります。駐車場とターミナル間のシャトル、警備、防犯カメラは終日稼働しています。"
+    }
+  },
+  "about": "ダンマーム空港では、バスとタクシーは到着階のGround Transportation Centerにあります。"
+}

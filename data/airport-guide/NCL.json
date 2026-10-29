@@ -1,0 +1,40 @@
+{
+  "iata": "NCL",
+  "checked": "2026-10-29",
+  "blocks": [
+    {
+      "id": "transport",
+      "title": "Как доехать",
+      "hint": "Метро до центра: около 25 минут",
+      "text": "Станция метро находится в аэропорту. Поездка до Haymarket, Monument или Central Station в центре Ньюкасла занимает около 25 минут. Поезда ходят примерно с 05:30, по воскресеньям с 06:20, до полуночи.",
+      "source": "newcastleairport.com",
+      "url": "https://www.newcastleairport.com/getting-to-and-from/getting-to-the-airport/by-metro/"
+    },
+    {
+      "id": "taxi",
+      "title": "Такси",
+      "hint": "Arrow Cars, офис круглосуточно",
+      "text": "Стойка Arrow Cars в зале прилёта работает круглосуточно. Места посадки и высадки находятся непосредственно снаружи зон прилёта и вылета. Стоимость поездки фиксированная и включает все сборы; принимаются основные кредитные карты.",
+      "source": "newcastleairport.com",
+      "url": "https://www.newcastleairport.com/getting-to-and-from/getting-to-the-airport/by-taxi/"
+    },
+    {
+      "id": "kids",
+      "title": "С ребёнком",
+      "hint": "4 места для пеленания",
+      "text": "В аэропорту есть 4 места для пеленания: 2 до досмотра и 2 в зоне вылета. Они обозначены указателями и расположены рядом с туалетами.",
+      "source": "newcastleairport.com",
+      "url": "https://www.newcastleairport.com/at-the-airport/travelling-with-children/"
+    },
+    {
+      "id": "wifi",
+      "title": "Wi-Fi",
+      "hint": "_NCLFreeWiFi бесплатно",
+      "text": "Бесплатная сеть _NCLFreeWiFi доступна по всему терминалу. Более быстрый платный доступ предоставляется через _NCLPremiumWiFi и стоит £5.",
+      "source": "newcastleairport.com",
+      "url": "https://www.newcastleairport.com/at-the-airport/airport-facilities/"
+    }
+  ],
+  "about": "В аэропорту Ньюкасла есть станция метро, откуда можно доехать до центра города.",
+  "about_url": "https://www.newcastleairport.com/getting-to-and-from/getting-to-the-airport/by-metro/"
+}

@@ -1,0 +1,26 @@
+{
+  "iata": "GLA",
+  "blocks": {
+    "transport": {
+      "title": "Cómo llegar",
+      "hint": "Autobús Airport Express 500",
+      "text": "El Glasgow Airport Express 500 de First Glasgow conecta el aeropuerto con el centro de la ciudad en un mínimo de 15 minutos. Sale de la parada 1 del aeropuerto y de la dársena 46 de Buchanan Bus Station."
+    },
+    "taxi": {
+      "title": "Taxis",
+      "hint": "Taxis blancos frente a la terminal",
+      "text": "Los taxis blancos oficiales esperan justo delante de la terminal. No hace falta reservar con antelación para viajar desde el aeropuerto."
+    },
+    "parking": {
+      "title": "Aparcamiento",
+      "hint": "Long Stay: hasta 1 hora gratis",
+      "text": "El aparcamiento Long Stay permite estacionar gratis hasta 1 hora para recoger o dejar a un pasajero. Un autobús lanzadera gratuito lo conecta con la terminal."
+    },
+    "wifi": {
+      "title": "Wi-Fi",
+      "hint": "1 hora gratis con registro",
+      "text": "Glasgow_Airport_WiFi ofrece 1 hora de acceso gratuito con velocidad limitada; es necesario registrarse. Al conectarse hay que seleccionar la duración del acceso."
+    }
+  },
+  "about": "El Glasgow Airport Express de First Glasgow conecta el aeropuerto de Glasgow con el centro de la ciudad."
+}

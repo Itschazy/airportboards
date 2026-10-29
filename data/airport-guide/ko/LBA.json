@@ -1,0 +1,26 @@
+{
+  "iata": "LBA",
+  "blocks": {
+    "transport": {
+      "title": "교통편",
+      "hint": "FLYER 버스",
+      "text": "Transdev의 FLYER 버스는 매일 공항과 리즈, 브래드퍼드, 해러게이트를 연결합니다. 기차역에서 터미널까지는 버스나 택시로 갈아타야 합니다. FLYER는 공항과 Leeds역, Bradford Interchange역을 연결합니다."
+    },
+    "taxi": {
+      "title": "택시",
+      "hint": "터미널 앞 Arrow Cars",
+      "text": "공식 제휴사 Arrow Cars는 터미널 바로 앞에서 승객을 태우고 내려줍니다. 터미널 앞 사무소나 국제선 도착 구역의 터치스크린 키오스크에서 예약할 수 있습니다. 다른 택시 업체는 Pick Up & Drop Off 주차장 또는 One Hour Free 구역을 이용합니다."
+    },
+    "kids": {
+      "title": "어린이 동반",
+      "hint": "보안 검색 전후 기저귀 교환실",
+      "text": "터미널에는 보안 검색 전과 후에 모두 전용 기저귀 교환실이 있습니다."
+    },
+    "parking": {
+      "title": "주차",
+      "hint": "Mid Stay 무료 구역",
+      "text": "One Hour Free 구역은 Mid Stay 주차장 안에 있으며, 터미널까지 약간의 오르막이 있는 길로 도보 약 5분이 걸립니다. 1회 방문 시 최대 1시간까지 무료입니다. 이 시간을 넘기거나 한 시간 이내에 재입차하면 총 주차 시간이 한 시간 미만이어도 Mid Stay의 일반 시간당 요금이 적용됩니다."
+    }
+  },
+  "about": "FLYER 버스는 리즈 브래드퍼드 공항과 리즈, 브래드퍼드, 해러게이트를 연결합니다."
+}

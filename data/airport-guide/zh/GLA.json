@@ -1,0 +1,26 @@
+{
+  "iata": "GLA",
+  "blocks": {
+    "transport": {
+      "title": "交通",
+      "hint": "机场快线500",
+      "text": "First Glasgow运营的Glasgow Airport Express 500连接机场和市中心，最快约15分钟。机场乘车点为1号站台，Buchanan Bus Station乘车点为46号站台。"
+    },
+    "taxi": {
+      "title": "出租车",
+      "hint": "航站楼前的白色出租车",
+      "text": "官方白色出租车在航站楼正前方候客。从机场出发无需提前预约。"
+    },
+    "parking": {
+      "title": "停车",
+      "hint": "Long Stay免费最多1小时",
+      "text": "在Long Stay停车场接送旅客，可免费停车最多1小时。免费接驳巴士连接停车场与航站楼。"
+    },
+    "wifi": {
+      "title": "Wi-Fi",
+      "hint": "注册后免费使用1小时",
+      "text": "Glasgow_Airport_WiFi提供1小时限速免费上网，须注册。连接时须选择使用时长。"
+    }
+  },
+  "about": "First Glasgow的Glasgow Airport Express连接格拉斯哥机场和市中心。"
+}

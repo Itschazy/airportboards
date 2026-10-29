@@ -1,0 +1,26 @@
+{
+  "iata": "DMM",
+  "blocks": {
+    "transport": {
+      "title": "交通",
+      "hint": "前往达曼的巴士",
+      "text": "巴士在05:30–23:30之间每30分钟发车。柜台和上车点位于到达层的Ground Transportation Center。直达达曼市中心的线路票价为SAR 3.45，公布的车程约为1小时。"
+    },
+    "taxi": {
+      "title": "出租车",
+      "hint": "到达层乘车",
+      "text": "出租车位于到达层的Ground Transportation Center。车费须预付。SATCO和SIXT均在该层提供服务。"
+    },
+    "lounges": {
+      "title": "休息室",
+      "hint": "国际区和国内区",
+      "text": "Plaza Premium Lounge位于国际出发层，Alfursan Golden Lounge位于国际登机口区域。NaSmiles Lounge位于国内登机口区域。"
+    },
+    "parking": {
+      "title": "停车",
+      "hint": "长期停车场及接驳巴士",
+      "text": "Long-Term Parking位于从达曼方向进入的King Fahd Road沿线，在航站楼对面。停车场与航站楼之间的接驳巴士、安保和视频监控全天运行。"
+    }
+  },
+  "about": "达曼机场的巴士和出租车位于到达层的Ground Transportation Center。"
+}

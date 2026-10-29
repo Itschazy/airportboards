@@ -1,0 +1,26 @@
+{
+  "iata": "LBA",
+  "blocks": {
+    "transport": {
+      "title": "Getting there",
+      "hint": "FLYER buses",
+      "text": "Transdev's FLYER buses connect the airport with Leeds, Bradford and Harrogate daily. Reaching the terminal from railway stations requires an onward bus or taxi connection. FLYER links the airport with Leeds and Bradford Interchange stations."
+    },
+    "taxi": {
+      "title": "Taxis",
+      "hint": "Arrow Cars outside the terminal",
+      "text": "Official partner Arrow Cars picks up and drops off passengers directly outside the terminal. Cars can be booked at the terminal-front office or the touchscreen kiosk in International Arrivals. Other taxi services use the Pick Up & Drop Off car park or the One Hour Free zone."
+    },
+    "kids": {
+      "title": "Travelling with children",
+      "hint": "Baby changing on both sides",
+      "text": "Dedicated baby-changing rooms are available in the terminal both before and after security."
+    },
+    "parking": {
+      "title": "Parking",
+      "hint": "One Hour Free in Mid Stay",
+      "text": "The One Hour Free zone is in the Mid Stay car park, about a 5-minute walk from the terminal with a slight incline along the way. One visit of up to 1 hour is free. Staying longer or re-entering within an hour incurs the standard Mid Stay hourly tariff, even if the total stay is less than an hour."
+    }
+  },
+  "about": "FLYER buses link Leeds Bradford Airport with Leeds, Bradford and Harrogate."
+}

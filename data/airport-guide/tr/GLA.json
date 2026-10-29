@@ -1,0 +1,26 @@
+{
+  "iata": "GLA",
+  "blocks": {
+    "transport": {
+      "title": "Ulaşım",
+      "hint": "Airport Express 500 otobüsü",
+      "text": "First Glasgow’un Glasgow Airport Express 500 hattı havalimanını şehir merkezine en az 15 dakikalık yolculukla bağlar. Otobüs havalimanında 1 numaralı duraktan, Buchanan Bus Station’da 46 numaralı perondan kalkar."
+    },
+    "taxi": {
+      "title": "Taksi",
+      "hint": "Terminal önünde beyaz taksiler",
+      "text": "Resmî beyaz taksiler terminalin hemen önünde bekler. Havalimanından yapılacak yolculuklar için önceden rezervasyon gerekmez."
+    },
+    "parking": {
+      "title": "Otopark",
+      "hint": "Long Stay: 1 saate kadar ücretsiz",
+      "text": "Long Stay otoparkında yolcu almak veya bırakmak için 1 saate kadar ücretsiz park edilebilir. Ücretsiz servis otobüsü otoparkı terminale bağlar."
+    },
+    "wifi": {
+      "title": "Wi-Fi",
+      "hint": "Kayıtla 1 saat ücretsiz",
+      "text": "Glasgow_Airport_WiFi, sınırlı hızda 1 saat ücretsiz erişim sunar; kayıt gerekir. Bağlanırken erişim süresi seçilmelidir."
+    }
+  },
+  "about": "First Glasgow’un Glasgow Airport Express hizmeti Glasgow Havalimanı’nı şehir merkezine bağlar."
+}

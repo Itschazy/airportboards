@@ -1,0 +1,26 @@
+{
+  "iata": "DMM",
+  "blocks": {
+    "transport": {
+      "title": "Ulaşım",
+      "hint": "Dammam otobüsü",
+      "text": "Otobüsler 05:30–23:30 arasında her 30 dakikada bir kalkar. Kontuarlar ve biniş noktaları varış seviyesindeki Ground Transportation Center’dadır. Dammam merkezine doğrudan hat SAR 3,45 tutarındadır; belirtilen yolculuk süresi yaklaşık 1 saattir."
+    },
+    "taxi": {
+      "title": "Taksi",
+      "hint": "Varış seviyesinde",
+      "text": "Taksiler varış seviyesindeki Ground Transportation Center’dadır. Yolculuk ücreti önceden ödenir. SATCO ve SIXT bu seviyede hizmet verir."
+    },
+    "lounges": {
+      "title": "Yolcu salonları",
+      "hint": "Dış ve iç hat alanları",
+      "text": "Plaza Premium Lounge uluslararası gidiş seviyesinde, Alfursan Golden Lounge uluslararası biniş kapıları alanındadır. NaSmiles Lounge iç hat biniş kapıları alanında yer alır."
+    },
+    "parking": {
+      "title": "Otopark",
+      "hint": "Long-Term Parking ve servis",
+      "text": "Long-Term Parking, Dammam yönünden gelen King Fahd Road üzerinde, terminal binasının karşısındadır. Otopark ile terminal arasındaki servis, güvenlik ve kamera gözetimi gece gündüz çalışır."
+    }
+  },
+  "about": "Dammam Havalimanı’nda otobüsler ve taksiler varış seviyesindeki Ground Transportation Center’dadır."
+}

@@ -1,0 +1,40 @@
+{
+  "iata": "LBA",
+  "checked": "2026-10-29",
+  "blocks": [
+    {
+      "id": "transport",
+      "title": "Как доехать",
+      "hint": "Автобусы FLYER",
+      "text": "Автобусы FLYER компании Transdev ежедневно связывают аэропорт с Лидсом, Брадфордом и Харрогитом. От железнодорожных станций до терминала нужна пересадка на автобус или такси. FLYER связывает аэропорт со станциями Leeds и Bradford Interchange.",
+      "source": "leedsbradfordairport.co.uk",
+      "url": "https://www.leedsbradfordairport.co.uk/getting-to-and-from"
+    },
+    {
+      "id": "taxi",
+      "title": "Такси",
+      "hint": "Arrow Cars у терминала",
+      "text": "Официальный партнёр Arrow Cars забирает и высаживает пассажиров прямо перед терминалом. Заказать машину можно в офисе у терминала или через сенсорный киоск в международной зоне прилёта. Другие службы такси используют парковку Pick Up & Drop Off либо зону One Hour Free.",
+      "source": "leedsbradfordairport.co.uk",
+      "url": "https://www.leedsbradfordairport.co.uk/getting-to-and-from"
+    },
+    {
+      "id": "kids",
+      "title": "С ребёнком",
+      "hint": "Пеленание до и после досмотра",
+      "text": "Специальные комнаты для пеленания есть в терминале как до, так и после досмотра.",
+      "source": "leedsbradfordairport.co.uk",
+      "url": "https://www.leedsbradfordairport.co.uk/help/travelling-with-children"
+    },
+    {
+      "id": "parking",
+      "title": "Парковка",
+      "hint": "One Hour Free в Mid Stay",
+      "text": "Зона One Hour Free находится на парковке Mid Stay, примерно в 5 минутах ходьбы от терминала, с небольшим подъёмом по пути. Бесплатен один въезд на срок до 1 часа. При превышении этого времени или повторном въезде в течение часа применяется обычный почасовой тариф Mid Stay, даже если суммарная стоянка была меньше часа.",
+      "source": "leedsbradfordairport.co.uk",
+      "url": "https://www.leedsbradfordairport.co.uk/help/parking"
+    }
+  ],
+  "about": "Автобусы FLYER связывают аэропорт Лидс-Брадфорд с Лидсом, Брадфордом и Харрогитом.",
+  "about_url": "https://www.leedsbradfordairport.co.uk/getting-to-and-from"
+}

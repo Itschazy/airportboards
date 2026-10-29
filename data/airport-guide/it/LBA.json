@@ -1,0 +1,26 @@
+{
+  "iata": "LBA",
+  "blocks": {
+    "transport": {
+      "title": "Come arrivare",
+      "hint": "Autobus FLYER",
+      "text": "Gli autobus FLYER di Transdev collegano ogni giorno l’aeroporto con Leeds, Bradford e Harrogate. Dalle stazioni ferroviarie occorre proseguire in autobus o taxi per raggiungere il terminal. FLYER collega l’aeroporto alle stazioni Leeds e Bradford Interchange."
+    },
+    "taxi": {
+      "title": "Taxi",
+      "hint": "Arrow Cars davanti al terminal",
+      "text": "Il partner ufficiale Arrow Cars fa salire e scendere i passeggeri direttamente davanti al terminal. Si può prenotare all’ufficio davanti al terminal o al chiosco touchscreen degli arrivi internazionali. Gli altri servizi taxi utilizzano il parcheggio Pick Up & Drop Off oppure l’area One Hour Free."
+    },
+    "kids": {
+      "title": "Con bambini",
+      "hint": "Cambio prima e dopo i controlli",
+      "text": "Nel terminal sono disponibili apposite stanze per il cambio dei bambini, sia prima sia dopo i controlli di sicurezza."
+    },
+    "parking": {
+      "title": "Parcheggio",
+      "hint": "One Hour Free nel Mid Stay",
+      "text": "L’area One Hour Free si trova nel parcheggio Mid Stay, a circa 5 minuti a piedi dal terminal, con una lieve salita lungo il percorso. Una sola visita fino a 1 ora è gratuita. Se si supera questo tempo o si rientra entro un’ora, si applica la normale tariffa oraria Mid Stay, anche se la sosta complessiva è inferiore a un’ora."
+    }
+  },
+  "about": "Gli autobus FLYER collegano l’aeroporto di Leeds Bradford con Leeds, Bradford e Harrogate."
+}

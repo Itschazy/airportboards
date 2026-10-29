@@ -1,0 +1,26 @@
+{
+  "iata": "NCL",
+  "blocks": {
+    "transport": {
+      "title": "Ulaşım",
+      "hint": "Metroyla merkeze yaklaşık 25 dk",
+      "text": "Havalimanında bir metro istasyonu vardır. Newcastle merkezindeki Haymarket, Monument veya Central Station’a yolculuk yaklaşık 25 dakika sürer. Trenler yaklaşık 05:30’dan, pazar günleri 06:20’den gece yarısına kadar çalışır."
+    },
+    "taxi": {
+      "title": "Taksi",
+      "hint": "Arrow Cars ofisi gün boyu açık",
+      "text": "Varış salonundaki Arrow Cars kontuarı gece gündüz hizmet verir. Yolcu alma ve bırakma noktaları varış ve gidiş alanlarının hemen dışındadır. Ücretler sabittir ve tüm masrafları içerir; başlıca kredi kartları kabul edilir."
+    },
+    "kids": {
+      "title": "Çocukla seyahat",
+      "hint": "4 alt değiştirme noktası",
+      "text": "Havalimanında 4 bebek alt değiştirme noktası vardır: 2’si güvenlik kontrolünden önce, 2’si gidiş alanındadır. Tabelalarla gösterilirler ve tuvaletlerin yanındadırlar."
+    },
+    "wifi": {
+      "title": "Wi-Fi",
+      "hint": "Ücretsiz _NCLFreeWiFi",
+      "text": "Ücretsiz _NCLFreeWiFi ağı terminal genelinde kullanılabilir. Daha hızlı ücretli erişim _NCLPremiumWiFi üzerinden sağlanır ve £5 tutarındadır."
+    }
+  },
+  "about": "Newcastle Havalimanı’nda şehir merkezine ulaşım sağlayan bir metro istasyonu vardır."
+}

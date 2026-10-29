@@ -1,0 +1,26 @@
+{
+  "iata": "DMM",
+  "blocks": {
+    "transport": {
+      "title": "교통편",
+      "hint": "담맘행 버스",
+      "text": "버스는 05:30~23:30에 30분 간격으로 출발합니다. 카운터와 승차 지점은 도착층의 Ground Transportation Center에 있습니다. 담맘 도심 직행 노선은 SAR 3.45이며 안내된 소요 시간은 약 1시간입니다."
+    },
+    "taxi": {
+      "title": "택시",
+      "hint": "도착층에서 승차",
+      "text": "택시는 도착층의 Ground Transportation Center에 있습니다. 요금은 미리 지불합니다. 이 층에 SATCO와 SIXT가 있습니다."
+    },
+    "lounges": {
+      "title": "라운지",
+      "hint": "국제선 및 국내선 구역",
+      "text": "Plaza Premium Lounge는 국제선 출발층에, Alfursan Golden Lounge는 국제선 탑승구 구역에 있습니다. NaSmiles Lounge는 국내선 탑승구 구역에 있습니다."
+    },
+    "parking": {
+      "title": "주차",
+      "hint": "장기 주차장과 셔틀",
+      "text": "Long-Term Parking은 담맘 방향에서 오는 King Fahd Road를 따라 터미널 건물 맞은편에 있습니다. 주차장과 터미널 사이의 셔틀, 경비 및 영상 감시는 밤낮으로 운영됩니다."
+    }
+  },
+  "about": "담맘 공항의 버스와 택시는 도착층의 Ground Transportation Center에 있습니다."
+}

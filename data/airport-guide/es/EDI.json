@@ -1,0 +1,26 @@
+{
+  "iata": "EDI",
+  "blocks": {
+    "transport": {
+      "title": "Cómo llegar",
+      "hint": "Tranvía al centro: 30 minutos",
+      "text": "La parada de tranvía está delante de la terminal principal, junto a la plaza y el letrero Edinburgh. El trayecto al centro de Edimburgo dura unos 30 minutos. Los billetes se compran antes de subir, también en las máquinas de la parada."
+    },
+    "storage": {
+      "title": "Consigna de equipaje",
+      "hint": "Excess Baggage, antes del control",
+      "text": "Excess Baggage está en la zona de facturación, frente a los mostradores de Jet2, antes del control de seguridad. Abre todos los días de 03:00 a 23:00. La consigna cuesta £10 por bulto hasta 3 horas o £15 hasta 24 horas."
+    },
+    "kids": {
+      "title": "Con niños",
+      "hint": "Fila familiar: menores de 12 años",
+      "text": "Las familias con niños menores de 12 años disponen de una fila específica en el control de seguridad. En la zona de salidas hay cambiadores y cabinas de aseo para niños. Hay un aseo familiar junto a la puerta de embarque 21."
+    },
+    "parking": {
+      "title": "Aparcamiento",
+      "hint": "30 minutos gratis",
+      "text": "La zona gratuita de recogida y bajada de pasajeros está a unos 10 minutos a pie de la terminal. Permite estancias gratuitas de hasta 30 minutos; no hay autobús lanzadera. La zona de pago Pickup & Dropoff está en el nivel a ras de suelo del aparcamiento de varios niveles."
+    }
+  },
+  "about": "El tranvía conecta el aeropuerto de Edimburgo con el centro de la ciudad. La parada está junto a la terminal principal."
+}

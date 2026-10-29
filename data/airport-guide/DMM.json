@@ -1,0 +1,40 @@
+{
+  "iata": "DMM",
+  "checked": "2026-10-29",
+  "blocks": [
+    {
+      "id": "transport",
+      "title": "Как доехать",
+      "hint": "Автобус до Даммама",
+      "text": "Автобусы отправляются каждые 30 минут с 05:30 до 23:30. Стойки и места посадки находятся в Ground Transportation Center на уровне прилёта. Прямой маршрут до центра Даммама стоит SAR 3,45; указанное время в пути — около 1 часа.",
+      "source": "kfia.sa",
+      "url": "https://kfia.sa/Parking-Transport#Shuttle%20Bus"
+    },
+    {
+      "id": "taxi",
+      "title": "Такси",
+      "hint": "На уровне прилёта",
+      "text": "Такси находятся в Ground Transportation Center на уровне прилёта. Поездку оплачивают заранее. На этом уровне представлены SATCO и SIXT.",
+      "source": "kfia.sa",
+      "url": "https://kfia.sa/Parking-Transport#Taxi%20Car%20Service"
+    },
+    {
+      "id": "lounges",
+      "title": "Бизнес-залы",
+      "hint": "Международная и внутренняя зоны",
+      "text": "Plaza Premium Lounge находится на уровне международного вылета, Alfursan Golden Lounge — в зоне международных выходов на посадку. NaSmiles Lounge расположен в зоне выходов на посадку внутренних рейсов.",
+      "source": "kfia.sa",
+      "url": "https://kfia.sa/Facilities/Lounges"
+    },
+    {
+      "id": "parking",
+      "title": "Парковка",
+      "hint": "Long-Term Parking и шаттл",
+      "text": "Long-Term Parking находится вдоль King Fahd Road со стороны Даммама, напротив здания терминала. Шаттл между парковкой и терминалом, охрана и видеонаблюдение работают круглосуточно.",
+      "source": "kfia.sa",
+      "url": "https://kfia.sa/Parking-Transport#Parking%20and%20Vale"
+    }
+  ],
+  "about": "В аэропорту Даммама автобусы и такси находятся в Ground Transportation Center на уровне прилёта.",
+  "about_url": "https://kfia.sa/Parking-Transport#Shuttle%20Bus"
+}

@@ -1,0 +1,26 @@
+{
+  "iata": "EDI",
+  "blocks": {
+    "transport": {
+      "title": "Come arrivare",
+      "hint": "Tram per il centro: 30 minuti",
+      "text": "La fermata del tram si trova davanti al terminal principale, accanto al piazzale e alla scritta Edinburgh. Il viaggio verso il centro di Edimburgo dura circa 30 minuti. I biglietti vanno acquistati prima di salire, anche alle macchinette della fermata."
+    },
+    "storage": {
+      "title": "Deposito bagagli",
+      "hint": "Excess Baggage, prima dei controlli",
+      "text": "Excess Baggage si trova nell’area check-in, di fronte ai banchi Jet2, prima dei controlli di sicurezza. È aperto tutti i giorni dalle 03:00 alle 23:00. Il deposito costa £10 per bagaglio fino a 3 ore oppure £15 fino a 24 ore."
+    },
+    "kids": {
+      "title": "Con bambini",
+      "hint": "Corsia famiglie: minori di 12 anni",
+      "text": "Le famiglie con bambini di età inferiore a 12 anni possono usare una corsia dedicata ai controlli di sicurezza. Nell’area partenze ci sono spazi per il cambio e cabine dei servizi igienici per bambini. Un bagno per famiglie si trova presso il gate 21."
+    },
+    "parking": {
+      "title": "Parcheggio",
+      "hint": "30 minuti gratuiti",
+      "text": "L’area gratuita per far salire e scendere i passeggeri si trova a circa 10 minuti a piedi dal terminal. La sosta è gratuita fino a 30 minuti; non c’è una navetta. L’area a pagamento Pickup & Dropoff si trova al livello stradale del parcheggio multipiano."
+    }
+  },
+  "about": "Il tram collega l’aeroporto di Edimburgo al centro città. La fermata si trova presso il terminal principale."
+}

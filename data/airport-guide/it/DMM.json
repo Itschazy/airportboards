@@ -1,0 +1,26 @@
+{
+  "iata": "DMM",
+  "blocks": {
+    "transport": {
+      "title": "Come arrivare",
+      "hint": "Autobus per Dammam",
+      "text": "Gli autobus partono ogni 30 minuti dalle 05:30 alle 23:30. I banchi e i punti di imbarco si trovano nel Ground Transportation Center, al livello degli arrivi. Il collegamento diretto con il centro di Dammam costa SAR 3,45; il tempo di percorrenza indicato è di circa 1 ora."
+    },
+    "taxi": {
+      "title": "Taxi",
+      "hint": "Al livello arrivi",
+      "text": "I taxi si trovano nel Ground Transportation Center, al livello degli arrivi. Il viaggio si paga in anticipo. SATCO e SIXT sono presenti a questo livello."
+    },
+    "lounges": {
+      "title": "Lounge",
+      "hint": "Aree internazionali e nazionali",
+      "text": "Plaza Premium Lounge si trova al livello delle partenze internazionali e Alfursan Golden Lounge nell’area dei gate internazionali. NaSmiles Lounge si trova nell’area dei gate dei voli nazionali."
+    },
+    "parking": {
+      "title": "Parcheggio",
+      "hint": "Long-Term Parking e navetta",
+      "text": "Long-Term Parking si trova lungo King Fahd Road provenendo da Dammam, di fronte al terminal. La navetta tra il parcheggio e il terminal, la sicurezza e la videosorveglianza sono attive a qualsiasi ora."
+    }
+  },
+  "about": "All’aeroporto di Dammam, autobus e taxi si trovano nel Ground Transportation Center, al livello degli arrivi."
+}

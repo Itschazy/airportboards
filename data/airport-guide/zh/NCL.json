@@ -1,0 +1,26 @@
+{
+  "iata": "NCL",
+  "blocks": {
+    "transport": {
+      "title": "交通",
+      "hint": "乘地铁到市中心约25分钟",
+      "text": "机场设有地铁站。前往纽卡斯尔市中心的Haymarket、Monument或Central Station约需25分钟。列车大约从05:30运行至午夜，星期日从06:20开始。"
+    },
+    "taxi": {
+      "title": "出租车",
+      "hint": "Arrow Cars全天服务",
+      "text": "到达大厅的Arrow Cars柜台全天有人值守。上下车点紧邻到达区和出发区外侧。车费为固定价格，包含所有费用；接受主要信用卡。"
+    },
+    "kids": {
+      "title": "携儿童出行",
+      "hint": "4处婴儿护理设施",
+      "text": "机场共有4处婴儿换尿布设施：2处在安检前，2处在出发区。均设有标志，位于卫生间旁。"
+    },
+    "wifi": {
+      "title": "Wi-Fi",
+      "hint": "免费_NCLFreeWiFi",
+      "text": "免费网络_NCLFreeWiFi覆盖整个航站楼。速度更快的付费网络为_NCLPremiumWiFi，费用为£5。"
+    }
+  },
+  "about": "纽卡斯尔机场设有地铁站，可乘车前往市中心。"
+}

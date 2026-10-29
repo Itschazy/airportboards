@@ -1,0 +1,40 @@
+{
+  "iata": "GLA",
+  "checked": "2026-10-29",
+  "blocks": [
+    {
+      "id": "transport",
+      "title": "Как доехать",
+      "hint": "Автобус Glasgow Airport Express 500",
+      "text": "Glasgow Airport Express 500 компании First Glasgow связывает аэропорт с центром города; время в пути — от 15 минут. В аэропорту автобус отправляется с остановки 1, на Buchanan Bus Station — с остановки 46.",
+      "source": "glasgowairport.com",
+      "url": "https://www.glasgowairport.com/to-and-from/glasgow-airport-express-service-500/"
+    },
+    {
+      "id": "taxi",
+      "title": "Такси",
+      "hint": "Белые такси у терминала",
+      "text": "Официальные белые такси ждут пассажиров непосредственно перед терминалом. Для поездки из аэропорта предварительное бронирование не требуется.",
+      "source": "glasgowairport.com",
+      "url": "https://www.glasgowairport.com/to-and-from/taxi/"
+    },
+    {
+      "id": "parking",
+      "title": "Парковка",
+      "hint": "Long Stay: до 1 часа бесплатно",
+      "text": "На парковке Long Stay можно бесплатно оставить автомобиль на срок до 1 часа для встречи или высадки пассажира. Оттуда до терминала ходит бесплатный шаттл.",
+      "source": "glasgowairport.com",
+      "url": "https://www.glasgowairport.com/to-and-from/pick-up-and-drop-off/"
+    },
+    {
+      "id": "wifi",
+      "title": "Wi-Fi",
+      "hint": "1 час бесплатно с регистрацией",
+      "text": "Сеть Glasgow_Airport_WiFi предоставляет 1 час бесплатного доступа с ограниченной скоростью; требуется регистрация. При подключении нужно выбрать длительность доступа.",
+      "source": "glasgowairport.com",
+      "url": "https://www.glasgowairport.com/at-the-airport/airport-services/free-wifi/"
+    }
+  ],
+  "about": "Glasgow Airport Express компании First Glasgow связывает аэропорт Глазго с центром города.",
+  "about_url": "https://www.glasgowairport.com/to-and-from/glasgow-airport-express-service-500/"
+}

@@ -1,0 +1,40 @@
+{
+  "iata": "EDI",
+  "checked": "2026-10-29",
+  "blocks": [
+    {
+      "id": "transport",
+      "title": "Как доехать",
+      "hint": "Трамвай до центра: 30 минут",
+      "text": "Трамвайная остановка находится перед главным терминалом, рядом с площадью и надписью Edinburgh. Поездка до центра Эдинбурга занимает около 30 минут. Билеты покупают до посадки, в том числе в автоматах на остановке.",
+      "source": "edinburghairport.com",
+      "url": "https://www.edinburghairport.com/transport-links/trams"
+    },
+    {
+      "id": "storage",
+      "title": "Камера хранения",
+      "hint": "Excess Baggage, до досмотра",
+      "text": "Excess Baggage находится в зоне регистрации напротив стоек Jet2, до досмотра. Пункт работает ежедневно с 03:00 до 23:00. Хранение одного места багажа стоит £10 на срок до 3 часов или £15 на срок до 24 часов.",
+      "source": "edinburghairport.com",
+      "url": "https://www.edinburghairport.com/shopping-and-eating/shops/excess-baggage"
+    },
+    {
+      "id": "kids",
+      "title": "С ребёнком",
+      "hint": "Семейная полоса: дети до 12 лет",
+      "text": "Для семей с детьми младше 12 лет предусмотрена отдельная полоса на досмотре. В зоне вылета есть пеленальные помещения и детские туалетные кабинки. Семейный туалет расположен у выхода на посадку 21.",
+      "source": "edinburghairport.com",
+      "url": "https://www.edinburghairport.com/prepare/services-and-facilities"
+    },
+    {
+      "id": "parking",
+      "title": "Парковка",
+      "hint": "30 минут бесплатно",
+      "text": "Бесплатная зона встречи и высадки находится примерно в 10 минутах ходьбы от терминала. Пользоваться ей без оплаты можно до 30 минут; шаттл не ходит. Платная зона Pickup & Dropoff находится на наземном уровне многоэтажной парковки.",
+      "source": "edinburghairport.com",
+      "url": "https://www.edinburghairport.com/transport-links/pickup-and-dropoff-zones"
+    }
+  ],
+  "about": "Аэропорт Эдинбурга связан с центром города трамвайной линией. Остановка находится у главного терминала.",
+  "about_url": "https://www.edinburghairport.com/transport-links/trams"
+}

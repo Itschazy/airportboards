@@ -1,0 +1,26 @@
+{
+  "iata": "EDI",
+  "blocks": {
+    "transport": {
+      "title": "Ulaşım",
+      "hint": "Tramvayla merkeze 30 dakika",
+      "text": "Tramvay durağı ana terminalin önünde, meydanın ve Edinburgh yazısının yanındadır. Edinburgh şehir merkezine yolculuk yaklaşık 30 dakika sürer. Biletlerin binmeden önce alınması gerekir; duraktaki makinelerden de satın alınabilir."
+    },
+    "storage": {
+      "title": "Bagaj emaneti",
+      "hint": "Excess Baggage, güvenlik öncesi",
+      "text": "Excess Baggage, güvenlik kontrolünden önce, check-in alanında Jet2 kontuarlarının karşısındadır. Her gün 03:00–23:00 saatlerinde açıktır. Bagaj başına emanet ücreti 3 saate kadar £10, 24 saate kadar £15’tir."
+    },
+    "kids": {
+      "title": "Çocukla seyahat",
+      "hint": "12 yaş altı için aile sırası",
+      "text": "12 yaşından küçük çocukları olan aileler güvenlik kontrolünde ayrı bir sırayı kullanabilir. Gidiş alanında bebek alt değiştirme alanları ve çocuk tuvalet kabinleri vardır. Aile tuvaleti 21 numaralı biniş kapısının yanındadır."
+    },
+    "parking": {
+      "title": "Otopark",
+      "hint": "30 dakika ücretsiz",
+      "text": "Ücretsiz yolcu alma ve bırakma alanı terminale yaklaşık 10 dakikalık yürüme mesafesindedir. 30 dakikaya kadar ücretsiz kullanılabilir; servis otobüsü yoktur. Ücretli Pickup & Dropoff alanı çok katlı otoparkın zemin seviyesindedir."
+    }
+  },
+  "about": "Edinburgh Havalimanı tramvay hattıyla şehir merkezine bağlanır. Durak ana terminalin yanındadır."
+}

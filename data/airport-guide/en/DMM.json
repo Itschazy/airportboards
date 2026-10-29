@@ -1,0 +1,26 @@
+{
+  "iata": "DMM",
+  "blocks": {
+    "transport": {
+      "title": "Getting there",
+      "hint": "Bus to Dammam",
+      "text": "Buses leave every 30 minutes from 05:30 to 23:30. Counters and boarding points are at the Ground Transportation Center on the Arrivals Level. The direct route to central Dammam costs SAR 3.45; the stated journey time is about 1 hour."
+    },
+    "taxi": {
+      "title": "Taxis",
+      "hint": "On the Arrivals Level",
+      "text": "Taxis are at the Ground Transportation Center on the Arrivals Level. Fares are paid in advance. SATCO and SIXT operate on this level."
+    },
+    "lounges": {
+      "title": "Lounges",
+      "hint": "International and domestic areas",
+      "text": "Plaza Premium Lounge is on the International Departure Level, and Alfursan Golden Lounge is in the international boarding gates area. NaSmiles Lounge is in the domestic gate area."
+    },
+    "parking": {
+      "title": "Parking",
+      "hint": "Long-Term Parking and shuttle",
+      "text": "Long-Term Parking is along King Fahd Road on the approach from Dammam, opposite the terminal building. The shuttle between the car park and terminal, security and surveillance operate around the clock."
+    }
+  },
+  "about": "At Dammam Airport, buses and taxis are at the Ground Transportation Center on the Arrivals Level."
+}

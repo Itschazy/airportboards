@@ -1,0 +1,26 @@
+{
+  "iata": "EDI",
+  "blocks": {
+    "transport": {
+      "title": "Anreise",
+      "hint": "Straßenbahn: 30 Min. ins Zentrum",
+      "text": "Die Straßenbahnhaltestelle liegt vor dem Hauptterminal, neben dem Vorplatz und dem Edinburgh-Schriftzug. Die Fahrt ins Zentrum von Edinburgh dauert etwa 30 Minuten. Fahrkarten müssen vor dem Einsteigen gekauft werden, etwa an den Automaten an der Haltestelle."
+    },
+    "storage": {
+      "title": "Gepäckaufbewahrung",
+      "hint": "Excess Baggage vor der Kontrolle",
+      "text": "Excess Baggage liegt im Check-in-Bereich gegenüber den Jet2-Schaltern, vor der Sicherheitskontrolle. Die Annahmestelle ist täglich von 03:00 bis 23:00 geöffnet. Die Aufbewahrung kostet pro Gepäckstück £10 für bis zu 3 Stunden oder £15 für bis zu 24 Stunden."
+    },
+    "kids": {
+      "title": "Mit Kindern",
+      "hint": "Familienspur: Kinder unter 12",
+      "text": "Familien mit Kindern unter 12 Jahren können eine eigene Spur an der Sicherheitskontrolle nutzen. Im Abflugbereich gibt es Wickelräume und Toilettenkabinen für Kinder. Eine Familientoilette befindet sich bei Gate 21."
+    },
+    "parking": {
+      "title": "Parken",
+      "hint": "30 Minuten kostenlos",
+      "text": "Die kostenlose Abhol- und Absetzzone liegt etwa 10 Gehminuten vom Terminal entfernt. Bis zu 30 Minuten sind kostenlos; es fährt kein Shuttlebus. Die kostenpflichtige Zone Pickup & Dropoff liegt auf der ebenerdigen Parkebene des Parkhauses."
+    }
+  },
+  "about": "Eine Straßenbahn verbindet den Flughafen Edinburgh mit dem Stadtzentrum. Die Haltestelle liegt am Hauptterminal."
+}

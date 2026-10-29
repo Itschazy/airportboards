@@ -1,0 +1,26 @@
+{
+  "iata": "LBA",
+  "blocks": {
+    "transport": {
+      "title": "Ulaşım",
+      "hint": "FLYER otobüsleri",
+      "text": "Transdev’in FLYER otobüsleri havalimanını her gün Leeds, Bradford ve Harrogate’e bağlar. Tren istasyonlarından terminale ulaşmak için otobüs veya taksiyle devam etmek gerekir. FLYER, havalimanı ile Leeds ve Bradford Interchange istasyonları arasında bağlantı sağlar."
+    },
+    "taxi": {
+      "title": "Taksi",
+      "hint": "Terminal önünde Arrow Cars",
+      "text": "Resmî ortak Arrow Cars yolcuları doğrudan terminalin önünden alır ve burada indirir. Terminal önündeki ofisten veya uluslararası varış alanındaki dokunmatik kiosktan rezervasyon yapılabilir. Diğer taksi hizmetleri Pick Up & Drop Off otoparkını ya da One Hour Free alanını kullanır."
+    },
+    "kids": {
+      "title": "Çocukla seyahat",
+      "hint": "Güvenlik öncesi ve sonrası bakım",
+      "text": "Terminalde güvenlik kontrolünden hem önce hem sonra özel bebek alt değiştirme odaları vardır."
+    },
+    "parking": {
+      "title": "Otopark",
+      "hint": "Mid Stay’de One Hour Free",
+      "text": "One Hour Free alanı Mid Stay otoparkındadır; hafif bir yokuş içeren yürüyüşle terminale yaklaşık 5 dakikada ulaşılır. 1 saate kadar tek giriş ücretsizdir. Bu süre aşılırsa veya bir saat içinde yeniden giriş yapılırsa, toplam park süresi bir saatten kısa olsa bile standart Mid Stay saatlik tarifesi uygulanır."
+    }
+  },
+  "about": "FLYER otobüsleri Leeds Bradford Havalimanı’nı Leeds, Bradford ve Harrogate’e bağlar."
+}

@@ -1,0 +1,26 @@
+{
+  "iata": "EDI",
+  "blocks": {
+    "transport": {
+      "title": "Getting there",
+      "hint": "Tram to the centre: 30 minutes",
+      "text": "The tram stop is outside the main terminal, beside the plaza and the Edinburgh sign. The journey to Edinburgh city centre takes around 30 minutes. Tickets must be bought before boarding, including from machines at the stop."
+    },
+    "storage": {
+      "title": "Luggage storage",
+      "hint": "Excess Baggage, before security",
+      "text": "Excess Baggage is in the check-in area opposite the Jet2 desks, before security. It opens daily from 03:00 to 23:00. Storage costs £10 per item for up to 3 hours or £15 for up to 24 hours."
+    },
+    "kids": {
+      "title": "Travelling with children",
+      "hint": "Family lane: children under 12",
+      "text": "Families with children under 12 can use a dedicated security lane. Baby-changing facilities and children's toilet cubicles are available in the departure lounge. A family washroom is beside gate 21."
+    },
+    "parking": {
+      "title": "Parking",
+      "hint": "30 minutes free",
+      "text": "The free pick-up and drop-off area is about a 10-minute walk from the terminal. It allows stays of up to 30 minutes without charge; there is no shuttle bus. The paid Pickup & Dropoff zone is on the ground level of the multi-storey car park."
+    }
+  },
+  "about": "Edinburgh Airport is linked to the city centre by tram. The stop is by the main terminal."
+}

@@ -1,0 +1,26 @@
+{
+  "iata": "EDI",
+  "blocks": {
+    "transport": {
+      "title": "Accès",
+      "hint": "Tram : 30 minutes vers le centre",
+      "text": "L’arrêt de tram se trouve devant le terminal principal, à côté de l’esplanade et de l’inscription Edinburgh. Le trajet jusqu’au centre d’Édimbourg dure environ 30 minutes. Les billets s’achètent avant de monter, notamment aux distributeurs de l’arrêt."
+    },
+    "storage": {
+      "title": "Consigne à bagages",
+      "hint": "Excess Baggage, avant le contrôle",
+      "text": "Excess Baggage se trouve dans la zone d’enregistrement, en face des comptoirs Jet2, avant le contrôle de sûreté. Le comptoir est ouvert tous les jours de 03:00 à 23:00. La consigne coûte £10 par bagage pour une durée maximale de 3 heures ou £15 pour une durée maximale de 24 heures."
+    },
+    "kids": {
+      "title": "Avec des enfants",
+      "hint": "File famille : moins de 12 ans",
+      "text": "Les familles avec des enfants de moins de 12 ans disposent d’une file dédiée au contrôle de sûreté. La zone de départ comprend des espaces à langer et des cabines de toilettes pour enfants. Des toilettes familiales se trouvent près de la porte d’embarquement 21."
+    },
+    "parking": {
+      "title": "Parking",
+      "hint": "30 minutes gratuites",
+      "text": "La zone gratuite de prise en charge et de dépose se trouve à environ 10 minutes à pied du terminal. Le stationnement y est gratuit jusqu’à 30 minutes ; aucune navette ne circule. La zone payante Pickup & Dropoff se situe au niveau du sol du parking à étages."
+    }
+  },
+  "about": "Le tram relie l’aéroport d’Édimbourg au centre-ville. L’arrêt se trouve près du terminal principal."
+}

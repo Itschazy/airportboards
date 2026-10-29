@@ -1,0 +1,26 @@
+{
+  "iata": "NCL",
+  "blocks": {
+    "transport": {
+      "title": "Cómo llegar",
+      "hint": "Metro al centro: unos 25 minutos",
+      "text": "Hay una estación de metro en el aeropuerto. El trayecto a Haymarket, Monument o Central Station, en el centro de Newcastle, dura unos 25 minutos. Los trenes circulan aproximadamente desde las 05:30, o las 06:20 los domingos, hasta medianoche."
+    },
+    "taxi": {
+      "title": "Taxis",
+      "hint": "Oficina Arrow Cars las 24 horas",
+      "text": "El mostrador de Arrow Cars en el vestíbulo de llegadas atiende a cualquier hora. Los puntos de recogida y bajada están justo fuera de las zonas de llegadas y salidas. Las tarifas son fijas e incluyen todos los cargos; se aceptan las principales tarjetas de crédito."
+    },
+    "kids": {
+      "title": "Con niños",
+      "hint": "4 cambiadores",
+      "text": "El aeropuerto tiene 4 cambiadores: 2 antes del control de seguridad y 2 en la zona de salidas. Están señalizados y se encuentran junto a los aseos."
+    },
+    "wifi": {
+      "title": "Wi-Fi",
+      "hint": "_NCLFreeWiFi gratis",
+      "text": "La red gratuita _NCLFreeWiFi está disponible en toda la terminal. El acceso de pago, más rápido, se ofrece a través de _NCLPremiumWiFi y cuesta £5."
+    }
+  },
+  "about": "El aeropuerto de Newcastle tiene una estación de metro que permite llegar al centro de la ciudad."
+}
