@@ -61,22 +61,17 @@ export default async function FlightMapPage({ params }: Props) {
   return <>
     {/* Только эта страница заранее загружает свой runtime и каталог текущего
         языка. Раньше они ждали hydration → import → дочерние modules → fetch,
-        добавляя несколько RTT на Slow 4G. runtime — единый ESM из исходников v8;
+        добавляя несколько RTT на Slow 4G. runtime — единый ESM из исходников v9;
         экспорт остаётся отдельным ленивым bundle. crossorigin совпадает с fetch:
-        браузер повторно использует ответ preload, а не качает каталог дважды.
-        Основной каталог v7 и география v6 сохранены. Имена и координаты
-        всех аэропортов полные; алиасы получают пониженный приоритет после данных первого экрана.
-        V8 ищет локальные названия сразу; только запрос без локальных совпадений
-        ждёт английские алиасы. Фоновое дополнение не перерисовывает открытый список. */}
-    <link rel="modulepreload" href="/flight-map/v8/runtime.js" />
-    <link rel="preload" as="fetch" fetchPriority="high" href={`/flight-map/v7/core-${locale}.json`} crossOrigin="anonymous" />
-    <link rel="preload" as="fetch" fetchPriority="high" href="/flight-map/v6/geography.json" crossOrigin="anonymous" />
-    <link rel="preload" as="fetch" fetchPriority="low" href={`/flight-map/v7/aliases-${locale}.json`} crossOrigin="anonymous" />
+        каталог приходит по HTTP modulepreload из next.config и общий ESM-кэш.
+        V9 передаёт полный каталог одним Brotli-ответом; браузер распаковывает
+        его нативно. Это устраняет дубль незавершённого fetch-preload в Safari. JSON fallback остаётся в loadPayload. Старые v1–v8 неизменны. */}
+    <link rel="modulepreload" href="/flight-map/v9/runtime.js" />
     <FlightMap key={locale} html={html} locale={locale} messages={messages} />
     <script data-flight-map-layout="true" dangerouslySetInnerHTML={{ __html: initialMapLayoutScript }} />
     {/* Модуль ждёт разбора HTML, но не общей гидратации Next. При SPA-переходе
         тот же boot вызывает React; повторный вызов сохраняет готовый остров. */}
-    <script type="module" data-flight-map-boot="true" dangerouslySetInnerHTML={{ __html: `import {boot} from '/flight-map/v8/runtime.js';boot(document.querySelector('[data-flight-map-version="8"]'));` }} />
+    <script type="module" data-flight-map-boot="true" dangerouslySetInnerHTML={{ __html: `import {boot} from '/flight-map/v9/runtime.js';boot(document.querySelector('[data-flight-map-version="9"]'));` }} />
     <noscript><p style={{ textAlign: 'center', padding: 16 }}>{String(messages.noscript)}</p></noscript>
     <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(data).replace(/</g, '\\u003c') }} />
   </>;
