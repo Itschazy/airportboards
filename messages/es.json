@@ -218,7 +218,9 @@
     "faq_dest_a": "Los destinos que figuran en el panel de salidas actual de {name} ({iata}) incluyen {list}.",
     "country_none": "{count, plural, one {# aeropuerto} other {# aeropuertos}} con códigos IATA en {countryIn}. No tenemos datos actuales de vuelos regulares de ninguno, así que esta página recoge códigos, ubicaciones y husos horarios en lugar de paneles en vivo.",
     "city_none": "{count, plural, one {# aeropuerto} other {# aeropuertos}} en {city}. No tenemos datos actuales de vuelos regulares de ninguno, así que esta página recoge códigos, ubicaciones y husos horarios en lugar de paneles en vivo.",
-    "m_airports_served": "con vuelos regulares"
+    "m_airports_served": "con vuelos regulares",
+    "faq_meeting_q": "¿Cuándo saldrá el pasajero de la zona de llegadas en {iata}?",
+    "faq_meeting_a": "El estado «Aterrizado» se refiere al avión, no a la salida del pasajero de la zona de llegadas. La recogida de equipaje y el control de pasaportes pueden llevar más tiempo. El panel no indica cuándo saldrá el pasajero."
   },
   "ui": {
     "fav_add": "Añadir a favoritos",

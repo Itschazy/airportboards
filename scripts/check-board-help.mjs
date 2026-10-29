@@ -28,6 +28,14 @@ for (const file of locales) {
   const actual = JSON.stringify(keys(messages)); signature ??= actual; assert.equal(actual,signature);
   for (const suffix of ['', '/arrivals']) {
     const {faq,visible} = await page(`/${locale}/airport/AYT${suffix}`);
+    const meeting=messages.home.faq_meeting_q.replace('{iata}','AYT');
+    assert.equal(faq.some(f=>f.name===meeting),Boolean(suffix),locale+': помощь встречающим только на arrivals');
+    if(suffix) {
+      assert.equal(faq[0].name,meeting);
+      assert.equal(faq[0].acceptedAnswer.text,messages.home.faq_meeting_a);
+      assert.ok(visible.includes(meeting)&&visible.includes(messages.home.faq_meeting_a));
+      assert.ok(!faq.some(f=>f.acceptedAnswer.text===messages.home.faq_arrive_a));
+    }
     for (const topic of topics) {
       const q = messages.home[`faq_${topic}_q`].replace('{iata}', 'AYT');
       const a = messages.home[`faq_${topic}_a`];

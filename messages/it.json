@@ -218,7 +218,9 @@
     "faq_dest_a": "Le destinazioni presenti sull'attuale tabellone delle partenze di {name} ({iata}) includono {list}.",
     "country_none": "{country}: {count, plural, one {# aeroporto} other {# aeroporti}} con codici IATA. Non disponiamo di dati aggiornati sui voli di linea per nessuno di essi, quindi questa pagina riporta codici, posizioni e fusi orari anziché tabelloni in tempo reale.",
     "city_none": "{count, plural, one {# aeroporto} other {# aeroporti}} a {city}. Non abbiamo dati aggiornati sui voli di linea per nessuno di essi, quindi questa pagina riporta codici, posizioni e fusi orari anziché tabelloni in tempo reale.",
-    "m_airports_served": "con voli di linea"
+    "m_airports_served": "con voli di linea",
+    "faq_meeting_q": "Quando uscirà il passeggero dalla zona arrivi di {iata}?",
+    "faq_meeting_a": "Lo stato «Atterrato» si riferisce all’aereo, non all’uscita del passeggero dalla zona arrivi. Il ritiro dei bagagli e il controllo passaporti possono richiedere altro tempo. Il tabellone non indica quando uscirà il passeggero."
   },
   "ui": {
     "fav_add": "Aggiungi ai preferiti",

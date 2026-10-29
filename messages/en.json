@@ -218,7 +218,9 @@
     "faq_dest_a": "Destinations on the current departures board at {name} ({iata}) include {list}.",
     "country_none": "{count, plural, one {# airport} other {# airports}} with IATA codes in {country}. We have no current scheduled-service data for {count, plural, one {it} other {any of them}}, so this page carries codes, locations and time zones rather than live boards.",
     "city_none": "{count, plural, one {# airport} other {# airports}} in {city}. We have no current scheduled-service data for {count, plural, one {it} other {any of them}}, so this page carries codes, locations and time zones rather than live boards.",
-    "m_airports_served": "with scheduled flights"
+    "m_airports_served": "with scheduled flights",
+    "faq_meeting_q": "When will the passenger leave arrivals at {iata}?",
+    "faq_meeting_a": "The “Landed” status refers to the aircraft, not to the passenger leaving the arrivals area. Baggage collection and passport control may take additional time. The board does not show when a passenger will come out."
   },
   "ui": {
     "fav_add": "Add to favourites",

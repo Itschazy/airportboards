@@ -218,7 +218,9 @@
     "faq_dest_a": "{name} ({iata}) güncel kalkış panosundaki varış noktaları arasında {list} yer alır.",
     "country_none": "{country} içinde IATA koduna sahip {count, number} havalimanı. Hiçbiri için güncel tarifeli uçuş verimiz yok; bu sayfa canlı pano yerine kodları, konumları ve saat dilimlerini içeriyor.",
     "city_none": "{city} şehrinde {count, number} havalimanı. Hiçbiri için güncel tarifeli uçuş verimiz yok; bu sayfa canlı pano yerine kodları, konumları ve saat dilimlerini listeler.",
-    "m_airports_served": "tarifeli seferli havalimanı"
+    "m_airports_served": "tarifeli seferli havalimanı",
+    "faq_meeting_q": "Yolcu {iata} varış alanından ne zaman çıkar?",
+    "faq_meeting_a": "“İndi” durumu uçağı ifade eder; yolcunun varış alanından çıktığı anlamına gelmez. Bagaj teslimi ve pasaport kontrolü ek zaman alabilir. Uçuş panosu yolcunun ne zaman çıkacağını göstermez."
   },
   "ui": {
     "fav_add": "Favorilere ekle",

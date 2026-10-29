@@ -245,7 +245,19 @@ export async function AirportBottom({ airport, locale, about = null, displayName
     catch { return joinList(items, locale); }
   };
 
+  // Bing 25–26.10: сильный спрос на arrivals, но первые ответы объясняли вылет.
+  // Встречающему сначала нужны ограничения табло и время выхода пассажира.
+  // Совет прибыть заранее и статистику вылетов сохраняем на вылетной странице.
+  // Единый массив ниже питает и SSR, и FAQPage; check-board-help проверяет обе стороны.
+  const boardHelp = !noService && !airport.closed
+    ? ['missing', 'tomorrow', 'terminal'].map(topic => ({
+        q: t(`faq_${topic}_q`, { iata: airport.iata }), a: t(`faq_${topic}_a`),
+      })) : [];
   const faq: { q: string; a: string }[] = [
+    ...(inbound && !noService && !airport.closed ? [
+      { q: t('faq_meeting_q', { iata: airport.iata }), a: t('faq_meeting_a') },
+      ...boardHelp,
+    ] : []),
     { q: t('faq_iata_q', { ...N }), a: t('faq_iata_a', { ...N, code: airport.iata }) },
     ...(airport.icao ? [{ q: t('faq_icao_q', { ...N }), a: t('faq_icao_a', { ...N, code: airport.icao }) }] : []),
     { q: t('faq_where_q', { ...N }), a: t('faq_where_a', { ...N, iata: airport.iata, city, country }) },
@@ -254,14 +266,14 @@ export async function AirportBottom({ airport, locale, about = null, displayName
     ...(airport.tz ? [{ q: t('faq_tz_q', { ...N }), a: t('faq_tz_a', { ...N, iata: airport.iata, tz: `${airport.tz}${offset ? ` (${offset})` : ''}` }) }] : []),
     // How busy an airport is, from our own measurement — a question every other flight site
     // answers with marketing copy or not at all.
-    ...(deps && deps > 0 && measuredOn
+    ...(!inbound && deps && deps > 0 && measuredOn
       ? [{ q: t('faq_deps_q', { ...N }), a: t('faq_deps_a', { ...N, n: deps, iata: airport.iata, date: localizedMeasuredOn(measuredOn, locale) }) }]
       : []),
     // "Arrive 3 hours before departure" is advice for a place you can fly from. On the 3,789
     // airfields with no airline service and on closed airports it was being asserted as
     // FAQPage markup directly under a notice saying no flights exist — a self-contradiction
     // an answer engine reads as an unreliable source.
-    ...(noService || airport.closed ? [] : [{ q: t('faq_arrive_q', { ...N }), a: t('faq_arrive_a') }]),
+    ...(inbound || noService || airport.closed ? [] : [{ q: t('faq_arrive_q', { ...N }), a: t('faq_arrive_a') }]),
     // Data-driven pairs from the board itself: which airlines operate here, where you can fly
     // nonstop. Genuinely unique per airport, derived from rows we already aggregated above,
     // and worded as sourced from the CURRENT departures board — a claim we can always stand
@@ -347,9 +359,7 @@ export async function AirportBottom({ airport, locale, about = null, displayName
     // или новый запрос к поставщику. Эти ответы нужны и при временно пустом табло,
     // но не на закрытых аэродромах/объектах без регулярного сообщения. Один массив
     // используется для видимых ответов и FAQPage; проверяется check-board-help.
-    ...(!noService && !airport.closed ? ['missing', 'tomorrow', 'terminal'].map(topic => ({
-      q: t(`faq_${topic}_q`, { iata: airport.iata }), a: t(`faq_${topic}_a`),
-    })) : []),
+    ...(!inbound ? boardHelp : []),
   ];
   const faqLd = {
     '@context': 'https://schema.org', '@type': 'FAQPage',

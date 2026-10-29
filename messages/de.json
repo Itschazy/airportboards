@@ -218,7 +218,9 @@
     "faq_dest_a": "Zu den Zielen auf der aktuellen Abflugtafel von {name} ({iata}) gehören {list}.",
     "country_none": "{count, plural, one {# Flughafen} other {# Flughäfen}} mit IATA-Codes in {country}. Zu keinem davon liegen uns aktuelle Linienflugdaten vor; diese Seite führt daher Codes, Lage und Zeitzonen statt Live-Anzeigetafeln.",
     "city_none": "{count, plural, one {# Flughafen} other {# Flughäfen}} in {city}. Zu keinem davon liegen uns aktuelle Linienflugdaten vor; diese Seite führt daher Codes, Lage und Zeitzonen statt Live-Anzeigetafeln.",
-    "m_airports_served": "mit Linienflügen"
+    "m_airports_served": "mit Linienflügen",
+    "faq_meeting_q": "Wann kommt der Fluggast in {iata} aus dem Ankunftsbereich?",
+    "faq_meeting_a": "Der Status „Gelandet“ bezieht sich auf das Flugzeug, nicht auf das Verlassen des Ankunftsbereichs durch den Fluggast. Gepäckausgabe und Passkontrolle können zusätzliche Zeit beanspruchen. Die Anzeigetafel zeigt nicht, wann der Fluggast herauskommt."
   },
   "ui": {
     "fav_add": "Zu Favoriten hinzufügen",
