@@ -134,3 +134,13 @@ main:has(.flight-map-root)~footer .home-footer-reference>summary{display:none!im
 .flight-map-root[data-initial-history=yes][aria-busy=true] .atlas.is-empty .map-controls{display:flex;visibility:hidden}
 .flight-map-root[data-initial-history=yes][aria-busy=true] .map-empty{visibility:hidden}
 @media(max-width:700px){.flight-map-root[data-initial-history=yes][aria-busy=true] .atlas.is-empty .map-wrap{height:240px}}
+
+/* Материки лежат в <defs> и попадают на экран только копиями <use>. Теневое
+   дерево <use> не видит предков, поэтому селектор `.flight-map-root .land`
+   не совпадает с клоном НИ РАЗУ: материки красились чёрным по умолчанию —
+   `fill` наследуется от <use>, а он ничего не задаёт. На тёмной подложке это
+   читалось как задумка, на светлой карта превращалась в чёрное пятно.
+   Правило без префикса совпадает (ровно так устроена картинка «поделиться»:
+   у неё в своём <style> лежит такой же `.land` без предков, и там материки
+   всегда красились верно). Значения — те же, что у правила выше. */
+.land{fill:rgba(var(--ab-ink),.055);stroke:rgba(var(--ab-ink),.15);stroke-width:.6;stroke-linejoin:round;vector-effect:non-scaling-stroke}
