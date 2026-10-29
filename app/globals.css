@@ -968,7 +968,12 @@ body::after {
 @font-face {
   font-family: 'Twemoji Country Flags';
   src: url('/fonts/TwemojiCountryFlags.woff2') format('woff2');
-  font-display: swap;
+  /* block, а не swap: запасной шрифт для этого диапазона печатает «RU», «US»,
+     «CN» — ровно ту беду, ради которой шрифт и заведён. swap показывал буквы
+     на первых кадрах каждой страницы со списком стран и в подсказках поиска,
+     а потом подменял их флагами. block держит место пустым (у Chrome это
+     3 секунды), и читатель видит либо флаг, либо ничего — но не код страны. */
+  font-display: block;
   unicode-range: U+1F1E6-1F1FF;
 }
 .locale-flag {
