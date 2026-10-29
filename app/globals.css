@@ -477,8 +477,14 @@ input::-webkit-search-cancel-button { display: none; }
 
 /* Тёмные значения точно повторяют прежнюю палитру. Только цвета зависят от темы;
    системный выбор работает без JS, ручной data-theme имеет приоритет. Нельзя применять
-   filter к странице: он меняет цвета флагов и создаёт новый containing block карточки. */
-:root{--ab-050505:#090A0D;--ab-ffffff:#FFFFFF;--ab-111111:#111111;--ab-1a1a1a:#1A1A1A;--ab-1c1c1e:#1C1C1E;--ab-3a3a3c:#3A3A3C;--ab-8a8a8a:#8A8A8A;--ab-a1a1a1:#A1A1A1;--ab-e4e4e7:#E4E4E7;--ab-0b1220:#0B1220;--ab-30d158:#30D158;--ab-0a84ff:#0A84FF;--ab-ff9f0a:#FF9F0A;--ab-ff453a:#FF453A;--ab-636366:#636366;--ab-ink:255,255,255;color-scheme:dark;}
+   filter к странице: он меняет цвета флагов и создаёт новый containing block карточки.
+
+   --on-accent стоит ОТДЕЛЬНО от палитры и не переворачивается. Имена вида
+   --ab-ffffff означают «самый светлый цвет темы», и на светлой теме это #171717 —
+   верно для текста на подложке страницы и неверно для текста на цветной заливке:
+   синий у кнопки остаётся синим в обеих темах, а подпись на нём уходила в почти
+   чёрный. Цвет текста на синем/зелёном/красном берётся отсюда. */
+:root{--on-accent:#FFFFFF;--ab-050505:#090A0D;--ab-ffffff:#FFFFFF;--ab-111111:#111111;--ab-1a1a1a:#1A1A1A;--ab-1c1c1e:#1C1C1E;--ab-3a3a3c:#3A3A3C;--ab-8a8a8a:#8A8A8A;--ab-a1a1a1:#A1A1A1;--ab-e4e4e7:#E4E4E7;--ab-0b1220:#0B1220;--ab-30d158:#30D158;--ab-0a84ff:#0A84FF;--ab-ff9f0a:#FF9F0A;--ab-ff453a:#FF453A;--ab-636366:#636366;--ab-ink:255,255,255;color-scheme:dark;}
 @media(prefers-color-scheme:light){:root:not([data-theme="dark"]){--ab-050505:#ffffff;--ab-ffffff:#171717;--ab-111111:#f5f5f5;--ab-1a1a1a:#dedede;--ab-1c1c1e:#ededed;--ab-3a3a3c:#b8b8ba;--ab-8a8a8a:#595959;--ab-a1a1a1:#555555;--ab-e4e4e7:#242426;--ab-0b1220:#edf4ff;--ab-30d158:#147a32;--ab-0a84ff:#0664c7;--ab-ff9f0a:#955000;--ab-ff453a:#b72b23;--ab-636366:#59595c;--ab-ink:23,23,23;color-scheme:light;}}
 :root[data-theme="light"]{--ab-050505:#ffffff;--ab-ffffff:#171717;--ab-111111:#f5f5f5;--ab-1a1a1a:#dedede;--ab-1c1c1e:#ededed;--ab-3a3a3c:#b8b8ba;--ab-8a8a8a:#595959;--ab-a1a1a1:#555555;--ab-e4e4e7:#242426;--ab-0b1220:#edf4ff;--ab-30d158:#147a32;--ab-0a84ff:#0664c7;--ab-ff9f0a:#955000;--ab-ff453a:#b72b23;--ab-636366:#59595c;--ab-ink:23,23,23;color-scheme:light;}
 
@@ -1663,7 +1669,7 @@ body::after {
   padding-inline: 24px;
   border-radius: 12px;
   background: var(--ab-0a84ff);
-  color: var(--ab-ffffff);
+  color: var(--on-accent);
   font-size: 16px;
   font-weight: 600;
   text-decoration: none;
@@ -1829,7 +1835,7 @@ body::after {
   padding-inline: 24px;
   border-radius: 12px;
   background: var(--ab-0a84ff);
-  color: var(--ab-ffffff);
+  color: var(--on-accent);
   font-size: 16px;
   font-weight: 600;
   text-decoration: none;

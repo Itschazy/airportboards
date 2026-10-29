@@ -142,7 +142,7 @@ export function InstallPrompt() {
         ) : (
           <button type="button" onClick={install} className="press" style={{
             flexShrink: 0, height: 36, padding: '0 16px', borderRadius: 999, border: 'none', cursor: 'pointer',
-            background: 'var(--ab-0a84ff)', color: 'var(--ab-ffffff)', fontSize: 13, fontWeight: 650,
+            background: 'var(--ab-0a84ff)', color: 'var(--on-accent)', fontSize: 13, fontWeight: 650,
           }}>{t('pwa_install')}</button>
         )}
         <button type="button" onClick={dismiss} aria-label={t('pwa_got_it')} style={{

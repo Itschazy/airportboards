@@ -106,7 +106,7 @@ export function CookieNotice({ locale }: { locale: Locale }) {
   const btn = (primary: boolean) => ({
     flexShrink: 0,
     background: primary ? 'var(--ab-0a84ff)' : 'transparent',
-    color: primary ? 'var(--ab-ffffff)' : 'var(--ab-c7c7cc)',
+    color: primary ? 'var(--on-accent)' : 'var(--ab-c7c7cc)',
     border: primary ? 'none' : '1px solid var(--ab-3a3a3c)',
     borderRadius: 8,
     padding: '8px 16px',

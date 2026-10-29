@@ -140,7 +140,7 @@ export function WidgetBuilder({ locale, labels }: { locale: string; labels: Widg
             style={{ ...input, fontFamily: 'ui-monospace, SFMono-Regular, Menlo, monospace', fontSize: 12.5, lineHeight: 1.5, resize: 'vertical' }}
             onFocus={e => e.currentTarget.select()} />
           <button type="button" onClick={copy}
-            style={{ marginTop: 10, background: copied ? 'var(--ab-34c759)' : 'var(--ab-0a84ff)', color: 'var(--ab-ffffff)', border: 0, borderRadius: 999, padding: '10px 22px', fontSize: 14, fontWeight: 600, cursor: 'pointer' }}>
+            style={{ marginTop: 10, background: copied ? 'var(--ab-34c759)' : 'var(--ab-0a84ff)', color: 'var(--on-accent)', border: 0, borderRadius: 999, padding: '10px 22px', fontSize: 14, fontWeight: 600, cursor: 'pointer' }}>
             {copied ? labels.copied : labels.copy}
           </button>
 
