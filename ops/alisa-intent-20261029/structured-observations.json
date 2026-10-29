@@ -1,0 +1,67 @@
+[
+  {
+    "id": "q02",
+    "query": "анталья прилеты сегодня",
+    "observedAt": "2026-10-29T14:35:56.215Z",
+    "expansionsAvailable": true,
+    "expansions": [
+      {
+        "query": "аэропорт Анталья arrivals today October 29 2026",
+        "domain": "WebSearch",
+        "isOnlyPotential": null
+      },
+      {
+        "query": "прилеты в Анталью сегодня 29 октября 2026 расписание",
+        "domain": "WebSearch",
+        "isOnlyPotential": null
+      }
+    ],
+    "sourceCandidates": [
+      {
+        "url": "https://rasp.yandex.ru/station/9623581/?event=arrival",
+        "title": "Табло аэропорта Анталья. Прибытие – Яндекс Расписания",
+        "reportedFootnoteCount": 6
+      },
+      {
+        "url": "https://tjmport.ru/passengers/information/schedule/",
+        "title": "Расписание | Официальный сайт аэропорта Тюмень (Рощино)",
+        "reportedFootnoteCount": null
+      },
+      {
+        "url": "https://www.antalya-airport.aero/passengers-visitors/flight-info/international-arrivals",
+        "title": "International Arrivals",
+        "reportedFootnoteCount": 9
+      },
+      {
+        "url": "https://ura.news/news/1053139910",
+        "title": "Задержки и отмены рейсов 29 октября 2026 года: онлайн-табло",
+        "reportedFootnoteCount": null
+      },
+      {
+        "url": "https://news.ru/society/situaciya-v-aeroportah-rossii-segodnya-29-oktyabrya-zaderzhki-chto-v-moskve",
+        "title": "Ситуация в аэропортах России сегодня, 29 октября: задержки, что в Москве",
+        "reportedFootnoteCount": null
+      },
+      {
+        "url": "https://ru.trip.com/flights/status-2s001/",
+        "title": "Статус рейса Southwind на сегодня — проверьте рейс 2S001 | Trip.com",
+        "reportedFootnoteCount": null
+      },
+      {
+        "url": "https://www.antalya-airport.aero/passengers-visitors/flight-info/domestic-arrivals",
+        "title": "Domestic Arrivals",
+        "reportedFootnoteCount": null
+      },
+      {
+        "url": "https://www.flightradar24.com/data/airports/ayt/arrivals",
+        "title": "Antalya (AYT) (LTAI) live arrivals | Flightradar24",
+        "reportedFootnoteCount": 2
+      },
+      {
+        "url": "https://www.tourprom.ru/news/90038/",
+        "title": "Драма в Антальи: туристов накрыла волна задержек рейсов в Россию после ночного закрытия неба | ТУРПРОМ новости",
+        "reportedFootnoteCount": 1
+      }
+    ]
+  }
+]

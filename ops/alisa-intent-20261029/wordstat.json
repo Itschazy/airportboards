@@ -1,0 +1,82 @@
+[
+  {
+    "file": "antalya-arrivals-phone.txt",
+    "query": "анталья прилеты сегодня",
+    "periodFrom": "08.09.2026",
+    "periodTo": "07.10.2026",
+    "count": 3497,
+    "devices": "smartphones",
+    "regions": "all",
+    "warning": "Service reports some data temporarily unavailable; broad phrase counts overlap and do not equal visitors."
+  },
+  {
+    "file": "flight-map-phone.txt",
+    "query": "карта перелетов",
+    "periodFrom": "08.09.2026",
+    "periodTo": "07.10.2026",
+    "count": 4452,
+    "devices": "smartphones",
+    "regions": "all",
+    "warning": "Service reports some data temporarily unavailable; broad phrase counts overlap and do not equal visitors."
+  },
+  {
+    "file": "local-time-all-devices.txt",
+    "query": "время прилета местное или московское",
+    "periodFrom": "08.09.2026",
+    "periodTo": "07.10.2026",
+    "count": 123,
+    "devices": "all",
+    "regions": "all",
+    "warning": "Service reports some data temporarily unavailable; broad phrase counts overlap and do not equal visitors."
+  },
+  {
+    "file": "local-time-phone.txt",
+    "query": "время прилета местное или московское",
+    "periodFrom": "08.09.2026",
+    "periodTo": "07.10.2026",
+    "count": 100,
+    "devices": "smartphones",
+    "regions": "all",
+    "warning": "Service reports some data temporarily unavailable; broad phrase counts overlap and do not equal visitors."
+  },
+  {
+    "file": "meeting-plane-phone.txt",
+    "query": "когда встречать самолет",
+    "periodFrom": "28.09.2026",
+    "periodTo": "28.10.2026",
+    "count": 469,
+    "devices": "smartphones",
+    "regions": "all",
+    "warning": "Service reports some data temporarily unavailable; broad phrase counts overlap and do not equal visitors."
+  },
+  {
+    "file": "missing-flight-phone.txt",
+    "query": "рейса нет на табло",
+    "periodFrom": "08.09.2026",
+    "periodTo": "07.10.2026",
+    "count": 425,
+    "devices": "smartphones",
+    "regions": "all",
+    "warning": "Service reports some data temporarily unavailable; broad phrase counts overlap and do not equal visitors."
+  },
+  {
+    "file": "my-flights-phone.txt",
+    "query": "мои перелеты",
+    "periodFrom": "28.09.2026",
+    "periodTo": "28.10.2026",
+    "count": 520,
+    "devices": "smartphones",
+    "regions": "all",
+    "warning": "Service reports some data temporarily unavailable; broad phrase counts overlap and do not equal visitors."
+  },
+  {
+    "file": "history-flights-phone.txt",
+    "query": "история перелетов",
+    "periodFrom": "08.09.2026",
+    "periodTo": "07.10.2026",
+    "count": 594,
+    "devices": "smartphones",
+    "regions": "all",
+    "warning": "Service reports some data temporarily unavailable; broad phrase counts overlap and do not equal visitors."
+  }
+]

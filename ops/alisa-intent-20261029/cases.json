@@ -1,0 +1,382 @@
+[
+  {
+    "id": "q01",
+    "query": "Как узнать, во сколько прилетает рейс в Анталью сегодня и когда встречать пассажира?",
+    "entry": "alice.yandex.ru Auto",
+    "airportsboardLinked": false,
+    "evidenceKind": "links observed in answer body; individual footnote/selection not inferred from URL presence",
+    "visibleAnswerLinks": [
+      "https://antalya-airport.aero/passengers-visitors/flight-info/international-arrivals",
+      "https://kupibilet.ru/gid/turtsiia/antalia/aeroport-antalia/raspisanie",
+      "https://rasp.yandex.ru/station/9623581/?event=arrival"
+    ],
+    "objectCardLinks": []
+  },
+  {
+    "id": "q02",
+    "query": "анталья прилеты сегодня",
+    "entry": "ya.ru SERP → Alice",
+    "airportsboardLinked": false,
+    "evidenceKind": "links observed in answer body; individual footnote/selection not inferred from URL presence",
+    "visibleAnswerLinks": [
+      "https://antalya-airport.aero/passengers-visitors/flight-info/international-arrivals",
+      "https://flightradar24.com/data/airports/ayt/arrivals",
+      "https://rasp.yandex.ru/station/9623581/?event=arrival"
+    ],
+    "objectCardLinks": []
+  },
+  {
+    "id": "q03",
+    "query": "Хургада прилеты сегодня",
+    "observedAt": "2026-10-29T14:40:23.952Z",
+    "entry": "new-chat-from-serp",
+    "answerSaved": true,
+    "airportsboardLinked": false,
+    "evidenceKind": "links observed in answer body; individual footnote/selection not inferred from URL presence",
+    "visibleAnswerLinks": [
+      "https://flightradar24.com/data/airports/hrg/arrivals",
+      "https://rasp.yandex.ru/station/9623785/?event=arrival",
+      "https://ru.trip.com/flights/status/hrg/"
+    ],
+    "objectCardLinks": []
+  },
+  {
+    "id": "q04",
+    "query": "Шарм-эш-Шейх прилеты сегодня",
+    "observedAt": "2026-10-29T14:40:35.014Z",
+    "entry": "ya.ru/alice",
+    "answerSaved": true,
+    "airportsboardLinked": false,
+    "evidenceKind": "links observed in answer body; individual footnote/selection not inferred from URL presence",
+    "visibleAnswerLinks": [
+      "https://airportinformation.com/SSH/arrivals",
+      "https://flightradar24.com/data/airports/ssh/arrivals",
+      "https://rasp.yandex.ru/station/9623561/?event=arrival"
+    ],
+    "objectCardLinks": []
+  },
+  {
+    "id": "q05",
+    "query": "Баку прилеты сегодня",
+    "observedAt": "2026-10-29T14:41:55.196Z",
+    "entry": "ya.ru/alice",
+    "answerSaved": true,
+    "airportsboardLinked": false,
+    "evidenceKind": "links observed in answer body; individual footnote/selection not inferred from URL presence",
+    "visibleAnswerLinks": [
+      "https://flightera.net/ru/airport/Baku/UBBB/arrival",
+      "https://flightradar24.com/data/airports/gyd/arrivals",
+      "https://kupibilet.ru/gid/azerbaidzhan/baku/mezhdunarodnyi-aeroport-geidara-alieva/raspisanie",
+      "https://ru.trip.com/flights/status/gyd/",
+      "https://uralairlines.ru/airports/gyd/"
+    ],
+    "objectCardLinks": []
+  },
+  {
+    "id": "q06",
+    "query": "Бодрум прилеты сегодня",
+    "observedAt": "2026-10-29T14:42:03.083Z",
+    "entry": "ya.ru/alice",
+    "answerSaved": true,
+    "airportsboardLinked": true,
+    "evidenceKind": "links observed in answer body; individual footnote/selection not inferred from URL presence",
+    "visibleAnswerLinks": [
+      "https://airportsboard.live/ru/airport/BJV",
+      "https://rasp.yandex.ru/station/9600415/?event=arrival",
+      "https://ru.trip.com/flights/status-pc1457/"
+    ],
+    "objectCardLinks": []
+  },
+  {
+    "id": "q07",
+    "query": "Уфа прилеты сегодня",
+    "observedAt": "2026-10-29T14:42:09.529Z",
+    "entry": "ya.ru/alice",
+    "answerSaved": true,
+    "airportsboardLinked": false,
+    "evidenceKind": "links observed in answer body; individual footnote/selection not inferred from URL presence",
+    "visibleAnswerLinks": [
+      "https://avia.tutu.ru/airport/a81670/timetable/arrival/",
+      "https://aviasales.ru/airports/ufa",
+      "https://avticket.ru/airports/ufa/prilet",
+      "https://kupibilet.ru/gid/rossiia/ufa/ufa/raspisanie",
+      "https://ru.trip.com/flights/status/ufa/"
+    ],
+    "objectCardLinks": []
+  },
+  {
+    "id": "q08",
+    "query": "Казань прилеты сегодня",
+    "observedAt": "2026-10-29T14:42:15.376Z",
+    "entry": "ya.ru/alice",
+    "answerSaved": true,
+    "airportsboardLinked": false,
+    "evidenceKind": "links observed in answer body; individual footnote/selection not inferred from URL presence",
+    "visibleAnswerLinks": [
+      "https://avia.tutu.ru/airport/3018a1/timetable/arrival/",
+      "https://aviasales.ru/airports/kazan",
+      "https://kupibilet.ru/gid/rossiia/kazan/aeroport-kazan/raspisanie",
+      "https://ru.trip.com/flights/status/kzn/"
+    ],
+    "objectCardLinks": []
+  },
+  {
+    "id": "q09",
+    "query": "Домодедово прилеты сегодня",
+    "observedAt": "2026-10-29T14:42:31.927Z",
+    "entry": "ya.ru/alice",
+    "answerSaved": true,
+    "airportsboardLinked": false,
+    "evidenceKind": "links observed in answer body; individual footnote/selection not inferred from URL presence",
+    "visibleAnswerLinks": [
+      "https://avia.tutu.ru/airport/27db84/timetable/arrival/",
+      "https://dme.ru/flight/live-board/",
+      "https://rasp.yandex.ru/station/9600216/?event=arrival"
+    ],
+    "objectCardLinks": []
+  },
+  {
+    "id": "q10",
+    "query": "Толмачево прилеты сегодня",
+    "observedAt": "2026-10-29T14:42:40.170Z",
+    "entry": "ya.ru/alice",
+    "answerSaved": true,
+    "airportsboardLinked": false,
+    "evidenceKind": "links observed in answer body; individual footnote/selection not inferred from URL presence",
+    "visibleAnswerLinks": [
+      "https://avia.tutu.ru/airport/74c3f6/timetable/arrival/",
+      "https://kupibilet.ru/gid/rossiia/novosibirsk/tolmachevo/raspisanie",
+      "https://rasp.yandex.ru/station/9600374/?event=arrival",
+      "https://tolmachevo.ru/passengers/information/timetable/"
+    ],
+    "objectCardLinks": []
+  },
+  {
+    "id": "q11",
+    "query": "Почему рейса нет на онлайн-табло аэропорта?",
+    "observedAt": "2026-10-29T14:42:50.759Z",
+    "entry": "ya.ru/alice",
+    "answerSaved": true,
+    "airportsboardLinked": false,
+    "evidenceKind": "links observed in answer body; individual footnote/selection not inferred from URL presence",
+    "visibleAnswerLinks": [
+      "https://dme.ru/book/live-board/",
+      "https://know.travel/ru/blog/how-to-read-airport-board/",
+      "https://meridiantt.com/klientam/faq/pochemu_ja_ne_vizhu_svoj_rejs_/"
+    ],
+    "objectCardLinks": []
+  },
+  {
+    "id": "q12",
+    "query": "Время прилета самолета местное или московское?",
+    "observedAt": "2026-10-29T14:42:59.782Z",
+    "entry": "ya.ru/alice",
+    "answerSaved": true,
+    "airportsboardLinked": false,
+    "evidenceKind": "links observed in answer body; individual footnote/selection not inferred from URL presence",
+    "visibleAnswerLinks": [],
+    "objectCardLinks": []
+  },
+  {
+    "id": "q13",
+    "query": "Самолет приземлился: когда выйдет пассажир?",
+    "observedAt": "2026-10-29T14:43:40.350Z",
+    "entry": "ya.ru/alice",
+    "answerSaved": true,
+    "airportsboardLinked": false,
+    "evidenceKind": "links observed in answer body; individual footnote/selection not inferred from URL presence",
+    "visibleAnswerLinks": [
+      "https://media.utair.ru/blog/pochemu-passazhirov-srazu-ne-vipuskayut-iz-samoleta"
+    ],
+    "objectCardLinks": []
+  },
+  {
+    "id": "q14",
+    "query": "Рейс задержан: когда ехать встречать пассажира?",
+    "observedAt": "2026-10-29T14:43:50.093Z",
+    "entry": "ya.ru/alice",
+    "answerSaved": true,
+    "airportsboardLinked": false,
+    "evidenceKind": "links observed in answer body; individual footnote/selection not inferred from URL presence",
+    "visibleAnswerLinks": [
+      "https://aviasales.ru/psgr/article/opozdal-na-stykovochnyj-rejs",
+      "https://s7.ru/ru/media/blog/kover/"
+    ],
+    "objectCardLinks": []
+  },
+  {
+    "id": "q15",
+    "query": "Как узнать терминал прилета в Анталье?",
+    "observedAt": "2026-10-29T14:43:59.184Z",
+    "entry": "ya.ru/alice",
+    "answerSaved": true,
+    "airportsboardLinked": false,
+    "evidenceKind": "links observed in answer body; individual footnote/selection not inferred from URL presence",
+    "visibleAnswerLinks": [
+      "https://antalya-airport.aero/passengers-visitors/flight-info/terminals",
+      "https://antalya-ayt-airport.com/",
+      "https://dzen.ru/a/ad6uJ_RYhF8uQ1kU",
+      "https://tourister.ru/world/asia/turkey/city/antalya/airports/1923"
+    ],
+    "objectCardLinks": [
+      "https://yandex.ru/maps/"
+    ]
+  },
+  {
+    "id": "q16",
+    "query": "Шарм-эш-Шейх: где встречать пассажиров в аэропорту?",
+    "observedAt": "2026-10-29T14:44:10.593Z",
+    "entry": "ya.ru/alice",
+    "answerSaved": true,
+    "airportsboardLinked": false,
+    "evidenceKind": "links observed in answer body; individual footnote/selection not inferred from URL presence",
+    "visibleAnswerLinks": [
+      "https://ekskursii-sharm-el-sheikh.com/aeroport-sharm-el-sheyha-prilyot-kontrol-bagazh-i-vyhod-v-gorod/",
+      "https://selfietravel.kz/wp-content/uploads/2024/04/pamyatka-turistu-ot-selfie-travel-sharm-1.pdf"
+    ],
+    "objectCardLinks": [
+      "https://yandex.ru/maps/",
+      "https://sharmelsheikh-airport.com/ru/"
+    ]
+  },
+  {
+    "id": "q17",
+    "query": "Как добраться из аэропорта Хургады до города?",
+    "observedAt": "2026-10-29T14:44:27.267Z",
+    "entry": "ya.ru/alice",
+    "answerSaved": true,
+    "airportsboardLinked": false,
+    "evidenceKind": "links observed in answer body; individual footnote/selection not inferred from URL presence",
+    "visibleAnswerLinks": [
+      "https://intui.travel/transfer-hurgada-aeroport/"
+    ],
+    "objectCardLinks": []
+  },
+  {
+    "id": "q18",
+    "query": "Как добраться из аэропорта Бодрума в центр на автобусе?",
+    "observedAt": "2026-10-29T14:44:39.113Z",
+    "entry": "ya.ru/alice",
+    "answerSaved": true,
+    "airportsboardLinked": false,
+    "evidenceKind": "links observed in answer body; individual footnote/selection not inferred from URL presence",
+    "visibleAnswerLinks": [
+      "https://milas-bodrumairport.com/en-EN/passenger-guide/to-from-the-airport/page/public-buses",
+      "https://milasbodrumhavalimani.com/ru/avtobus-havas-bodrum/",
+      "https://muttas.com.tr/iletisim/",
+      "https://turk-trip.ru/kak-dobratsja-iz-ajeroporta-bodruma.html"
+    ],
+    "objectCardLinks": [
+      "https://yandex.ru/maps/"
+    ]
+  },
+  {
+    "id": "q19",
+    "query": "Карта моих перелетов бесплатно",
+    "observedAt": "2026-10-29T14:44:48.768Z",
+    "entry": "ya.ru/alice",
+    "answerSaved": true,
+    "airportsboardLinked": true,
+    "evidenceKind": "links observed in answer body; individual footnote/selection not inferred from URL presence",
+    "visibleAnswerLinks": [
+      "https://airportsboard.live/en/flight-map",
+      "https://airportsboard.live/ru/flight-map"
+    ],
+    "objectCardLinks": []
+  },
+  {
+    "id": "q20",
+    "query": "Как сохранить историю перелетов без регистрации?",
+    "observedAt": "2026-10-29T14:44:59.349Z",
+    "entry": "ya.ru/alice",
+    "answerSaved": true,
+    "airportsboardLinked": false,
+    "evidenceKind": "links observed in answer body; individual footnote/selection not inferred from URL presence",
+    "visibleAnswerLinks": [
+      "https://forum.awd.ru/viewtopic.php?t=206131",
+      "https://travel.yandex.ru/journal/raspechatat-elektronnyy-bilet-na-samolyot/"
+    ],
+    "objectCardLinks": []
+  },
+  {
+    "id": "q21",
+    "query": "Как сделать карту своих перелетов и поделиться картинкой?",
+    "observedAt": "2026-10-29T14:45:26.754Z",
+    "entry": "ya.ru/alice",
+    "answerSaved": true,
+    "airportsboardLinked": false,
+    "evidenceKind": "links observed in answer body; individual footnote/selection not inferred from URL presence",
+    "visibleAnswerLinks": [],
+    "objectCardLinks": []
+  },
+  {
+    "id": "q22",
+    "query": "free personal flight map flight history",
+    "observedAt": "2026-10-29T14:45:39.451Z",
+    "entry": "ya.ru/alice",
+    "answerSaved": true,
+    "airportsboardLinked": false,
+    "evidenceKind": "links observed in answer body; individual footnote/selection not inferred from URL presence",
+    "visibleAnswerLinks": [
+      "https://apps.apple.com/us/app/flighty-live-flight-tracker/id1358823008",
+      "https://flightmemory.com/",
+      "https://myflightroutes.com/",
+      "https://rjtravelagency.com/flight-mapper/"
+    ],
+    "objectCardLinks": []
+  },
+  {
+    "id": "q23",
+    "query": "Бесплатная карта перелетов с сохранением и экспортом",
+    "observedAt": "2026-10-29T14:45:50.719Z",
+    "entry": "ya.ru/alice",
+    "answerSaved": true,
+    "airportsboardLinked": true,
+    "evidenceKind": "links observed in answer body; individual footnote/selection not inferred from URL presence",
+    "visibleAnswerLinks": [
+      "https://airportsboard.live/ru/flight-map",
+      "https://openflights.org/?lang=ru_RU"
+    ],
+    "objectCardLinks": []
+  },
+  {
+    "id": "q24",
+    "query": "анталья прилеты сегодня",
+    "observedAt": "2026-10-29T14:46:00.143Z",
+    "entry": "ya.ru/alice",
+    "answerSaved": true,
+    "airportsboardLinked": false,
+    "evidenceKind": "links observed in answer body; individual footnote/selection not inferred from URL presence",
+    "visibleAnswerLinks": [
+      "https://antalyaairportayt.com/ru/arrivals/",
+      "https://flightradar24.com/data/airports/ayt/arrivals",
+      "https://rasp.yandex.ru/station/9623581/?event=arrival"
+    ],
+    "objectCardLinks": []
+  },
+  {
+    "id": "q25",
+    "query": "Время прилета самолета местное или московское?",
+    "observedAt": "2026-10-29T14:46:12.707Z",
+    "entry": "ya.ru/alice",
+    "answerSaved": true,
+    "airportsboardLinked": false,
+    "evidenceKind": "links observed in answer body; individual footnote/selection not inferred from URL presence",
+    "visibleAnswerLinks": [],
+    "objectCardLinks": []
+  },
+  {
+    "id": "q26",
+    "query": "Карта моих перелетов бесплатно",
+    "observedAt": "2026-10-29T14:46:23.434Z",
+    "entry": "ya.ru/alice",
+    "answerSaved": true,
+    "airportsboardLinked": true,
+    "evidenceKind": "links observed in answer body; individual footnote/selection not inferred from URL presence",
+    "visibleAnswerLinks": [
+      "https://airportsboard.live/ru/flight-map",
+      "https://aviasales.ru/statistika-poletov"
+    ],
+    "objectCardLinks": []
+  }
+]
