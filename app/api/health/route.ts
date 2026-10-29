@@ -28,6 +28,9 @@ export function GET() {
   const mem = process.memoryUsage();
   const body = {
     at: new Date().toISOString(),
+    // SHA встроен Next во время build: очередь IndexNow проверяет именно запущенный
+    // релиз после pm2 restart, а не обновлённый git HEAD перед завершением сборки.
+    release: process.env.NEXT_PUBLIC_RUM_RELEASE ?? 'unknown',
     pid: process.pid,
     instance: process.env.NODE_APP_INSTANCE ?? process.env.pm_id ?? null,
     execMode: process.env.exec_mode ?? null,

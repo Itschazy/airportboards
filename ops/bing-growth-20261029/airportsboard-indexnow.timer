@@ -1,0 +1,11 @@
+[Unit]
+Description=Check published content for IndexNow every ten minutes
+
+[Timer]
+OnBootSec=5min
+OnUnitActiveSec=10min
+RandomizedDelaySec=30s
+Unit=airportsboard-indexnow.service
+
+[Install]
+WantedBy=timers.target

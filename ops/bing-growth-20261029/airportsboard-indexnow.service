@@ -1,0 +1,20 @@
+[Unit]
+Description=AirportsBoard incremental IndexNow queue
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+User=deploy
+Group=deploy
+WorkingDirectory=/var/www/airportsboard
+Environment=HOME=/home/deploy
+# node устанавливается в /usr/bin на production; проверить command -v перед установкой.
+ExecStart=/usr/bin/node /var/www/airportsboard/scripts/indexnow.mjs --worker
+TimeoutStartSec=110
+Nice=10
+UMask=0077
+NoNewPrivileges=true
+ProtectSystem=full
+ProtectHome=read-only
+ReadWritePaths=/home/deploy/airportsboard-data /var/tmp
