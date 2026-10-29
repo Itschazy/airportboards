@@ -4,6 +4,7 @@ import { setRequestLocale } from 'next-intl/server';
 import { FlightMap } from '@/components/FlightMap';
 import shell from '@/lib/flight-map/shell-i18n.json';
 import { flightMapCopy, flightMapMessages, locales, escapeHTML } from '@/lib/flight-map/localization';
+import { runtimeUrl } from '@/lib/flight-map/runtime-url';
 import { renderInfo } from '@/lib/flight-map/content';
 import './flight-map.css';
 import { initialMapLayoutScript } from '@/lib/flight-map/layout-hint';
@@ -66,12 +67,12 @@ export default async function FlightMapPage({ params }: Props) {
         каталог приходит по HTTP modulepreload из next.config и общий ESM-кэш.
         V9 передаёт полный каталог одним Brotli-ответом; браузер распаковывает
         его нативно. Это устраняет дубль незавершённого fetch-preload в Safari. JSON fallback остаётся в loadPayload. Старые v1–v8 неизменны. */}
-    <link rel="modulepreload" href="/flight-map/v9/runtime.js" />
-    <FlightMap key={locale} html={html} locale={locale} messages={messages} />
+    <link rel="modulepreload" href={runtimeUrl} />
+    <FlightMap key={locale} html={html} locale={locale} messages={messages} runtimeUrl={runtimeUrl} />
     <script data-flight-map-layout="true" dangerouslySetInnerHTML={{ __html: initialMapLayoutScript }} />
     {/* Модуль ждёт разбора HTML, но не общей гидратации Next. При SPA-переходе
         тот же boot вызывает React; повторный вызов сохраняет готовый остров. */}
-    <script type="module" data-flight-map-boot="true" dangerouslySetInnerHTML={{ __html: `import {boot} from '/flight-map/v9/runtime.js';boot(document.querySelector('[data-flight-map-version="9"]'));` }} />
+    <script type="module" data-flight-map-boot="true" dangerouslySetInnerHTML={{ __html: `import {boot} from '${runtimeUrl}';boot(document.querySelector('[data-flight-map-version="9"]'));` }} />
     <noscript><p style={{ textAlign: 'center', padding: 16 }}>{String(messages.noscript)}</p></noscript>
     <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(data).replace(/</g, '\\u003c') }} />
   </>;

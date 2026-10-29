@@ -26,7 +26,7 @@ const faq=graph.find(n=>n['@type']==='FAQPage');assert.equal(faq.mainEntity.leng
 const decode=s=>s.replace(/&quot;/g,'"').replace(/&#39;/g,"'").replace(/&amp;/g,'&').replace(/&lt;/g,'<').replace(/&gt;/g,'>');
 for(const q of faq.mainEntity){assert.ok(decode(visible).includes(q.name));assert.ok(decode(visible).includes(q.acceptedAnswer.text));}
 for(const m of html.matchAll(/<script\b([^>]*)>([\s\S]*?)<\/script>/g)){
- if(!m[1].includes('ld+json')&&!m[1].includes('src='))new vm.Script(m[2].replace("import {boot} from '/flight-map/v9/runtime.js';",''));
+ if(!m[1].includes('ld+json')&&!m[1].includes('src='))new vm.Script(m[2].replace(/import \{boot\} from '[^']*';/,''));
 }
 for(const locale of ['ru','en','de','fr','es','it','tr','zh','ja','ko','ar','hi']){
  const r=await get(`/${locale}/flight-map`);assert.equal(r.status,200,locale);const h=await r.text();
@@ -34,7 +34,7 @@ for(const locale of ['ru','en','de','fr','es','it','tr','zh','ja','ko','ar','hi'
  assert.equal((v.match(/<h1[ >]/g)||[]).length,1,locale);assert.ok(h.includes(`rel="canonical" href="https://airportsboard.live/${locale}/flight-map"`));
  for(const l of ['ru','en','de','fr','es','it','tr','zh','ja','ko','ar','hi'])assert.ok(h.includes(`hrefLang="${l}" href="https://airportsboard.live/${l}/flight-map"`),locale+'/'+l);
  if(locale!=='ru')assert.doesNotMatch(v.replace(/<a[^>]*lang="ru"[^>]*>[\s\S]*?<\/a>/g,''),/[А-Яа-яЁё]/,locale+' leaked Russian');
- assert.doesNotMatch(v,/undefined|\{\{m\d+\}\}/);assert.ok(h.includes('rel="modulepreload" href="/flight-map/v9/runtime.js"'),locale+' runtime preload');assert.ok(r.headers.get('link')?.includes(`/flight-map/v9/catalogue-${locale}.js.br`),locale+' early catalogue preload');assert.ok(!/rel="preload"[^>]*catalogue-/.test(h),locale+' duplicate fetch preload');assert.ok(v.includes(`lang="${locale}" dir="${locale==='ar'?'rtl':'ltr'}"`));
+ assert.doesNotMatch(v,/undefined|\{\{m\d+\}\}/);assert.ok(/rel="modulepreload" href="\/flight-map\/v9\/runtime\.js(\?[^"]*)?"/.test(h),locale+' runtime preload');assert.ok(r.headers.get('link')?.includes(`/flight-map/v9/catalogue-${locale}.js.br`),locale+' early catalogue preload');assert.ok(!/rel="preload"[^>]*catalogue-/.test(h),locale+' duplicate fetch preload');assert.ok(v.includes(`lang="${locale}" dir="${locale==='ar'?'rtl':'ltr'}"`));
  const graph=[...h.matchAll(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/g)].map(m=>JSON.parse(m[1])).flatMap(d=>d['@graph']||[]);
  const f=graph.find(n=>n['@type']==='FAQPage');assert.equal(f.mainEntity.length,8,locale);assert.equal(f.inLanguage,locale);
  for(const q of f.mainEntity){assert.ok(v.includes(q.name),locale+' question');assert.ok(v.includes(q.acceptedAnswer.text),locale+' answer');}

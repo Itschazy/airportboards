@@ -9,7 +9,7 @@ import { track, GOALS } from '@/lib/track';
  * маршрута; abort снимает обработчики при переходе назад/в другой раздел.
  * HTML — наш проверенный шаблон, не содержимое backup или пользовательский ввод.
  */
-export function FlightMap({ html, locale, messages }: { html: string; locale: string; messages: Record<string, unknown> }) {
+export function FlightMap({ html, locale, messages, runtimeUrl }: { html: string; locale: string; messages: Record<string, unknown>; runtimeUrl: string }) {
   const ref = useRef<HTMLDivElement>(null);
   useLayoutEffect(() => { applyInitialMapLayout(ref.current); }, [locale]);
   useEffect(() => {
@@ -24,7 +24,9 @@ export function FlightMap({ html, locale, messages }: { html: string; locale: st
     // SSR мог уже запустить карту: boot принимает существующий остров.
     // Каждый runtime связан со своей HTML-оболочкой. v1/v2/v3/v4/v5/v6 остаются доступны
     // старому ISR и открытым вкладкам; v9 загружает полный словарь одним сжатым ответом; опубликованные v1–v8 неизменяемы.
-    const moduleURL = '/flight-map/v9/runtime.js';
+    // Адрес с отпечатком сборки приходит со страницы: оба обращения к движку
+    // должны идти по одному адресу, иначе браузер скачает его дважды.
+    const moduleURL = runtimeUrl;
     import(/* webpackIgnore: true */ moduleURL)
       .then(m => {
         // Поздний import старого effect не должен отменять новый effect того же DOM.
