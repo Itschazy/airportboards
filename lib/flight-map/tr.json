@@ -18,7 +18,7 @@
     },
     {
       "question": "Tarih ve uçuş numarası olmadan uçuş ekleyebilir miyim?",
-      "answer": "Evet. Kalkış ve varış havalimanlarını seçin. Tarihi ve uçuş numarasını boş bırakabilirsiniz. Tarihsiz uçuşlar Tüm yıllar görünümünde yer alır. Geçmişte Tarihsiz filtresiyle bulabilirsin."
+      "answer": "Evet. Kalkış ve varış havalimanlarını seçin. Tarihi ve uçuş numarasını boş bırakabilirsiniz. Tarihsiz uçuşlar Tüm zamanlar görünümünde yer alır."
     },
     {
       "question": "Uçuş geçmişim nerede saklanır?",

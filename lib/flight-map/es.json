@@ -18,7 +18,7 @@
     },
     {
       "question": "¿Puedo añadir un vuelo sin fecha ni número?",
-      "answer": "Sí. Elige los aeropuertos de salida y llegada. La fecha y el número de vuelo son opcionales. Los vuelos sin fecha aparecen en Todos los años. Puedes encontrarlos en el historial con el filtro Sin fecha."
+      "answer": "Sí. Elige los aeropuertos de salida y llegada. La fecha y el número de vuelo son opcionales. Los vuelos sin fecha aparecen en Todo el historial."
     },
     {
       "question": "¿Dónde se guarda mi historial?",

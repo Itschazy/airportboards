@@ -2,6 +2,7 @@
 // на проде исключительно audit-bot, без платных ручек и браузера.
 import assert from 'node:assert/strict';
 import vm from 'node:vm';
+import { readFileSync } from 'node:fs';
 const base=(process.argv[2]||'http://localhost:3111').replace(/\/$/,'');
 const ua={'user-agent':'audit-bot'};
 // Даже проверки только заголовков дочитывают ответ: иначе большие каталоги
@@ -39,6 +40,12 @@ for(const locale of ['ru','en','de','fr','es','it','tr','zh','ja','ko','ar','hi'
  assert.doesNotMatch(v,/undefined|\{\{m\d+\}\}/);assert.ok(/rel="modulepreload" href="\/flight-map\/v9\/runtime\.js(\?[^"]*)?"/.test(h),locale+' runtime preload');assert.ok(r.headers.get('link')?.includes(`/flight-map/v9/catalogue-${locale}.js.br`),locale+' early catalogue preload');assert.ok(!/rel="preload"[^>]*catalogue-/.test(h),locale+' duplicate fetch preload');assert.ok(v.includes(`lang="${locale}" dir="${locale==='ar'?'rtl':'ltr'}"`));
  const graph=[...h.matchAll(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/g)].map(m=>JSON.parse(m[1])).flatMap(d=>d['@graph']||[]);
  const f=graph.find(n=>n['@type']==='FAQPage');assert.equal(f.mainEntity.length,8,locale);assert.equal(f.inLanguage,locale);
+ // FAQ раньше отправлял к удалённому фильтру и старой подписи «Все годы».
+ // Сверяем инструкцию с действующим названием периода, а не только HTML с JSON-LD:
+ // одинаково неверные видимый текст и разметка тоже проходили прежнюю проверку.
+ const labels=JSON.parse(readFileSync(new URL(`../lib/flight-map/locales/${locale}.json`,import.meta.url),'utf8'));
+ assert.ok(f.mainEntity[1].acceptedAnswer.text.includes(labels.m007),locale+' FAQ uses current all-time label');
+
  for(const q of f.mainEntity){assert.ok(v.includes(q.name),locale+' question');assert.ok(v.includes(q.acceptedAnswer.text),locale+' answer');}
  assert.equal((await get(`/flight-map/v4/airports-${locale}.json`)).status,200);
  const catalogue=await get(`/flight-map/v6/airports-${locale}.json`);assert.equal(catalogue.status,200);assert.match(catalogue.headers.get('cache-control'),/max-age=31536000.*immutable/);

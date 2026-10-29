@@ -18,7 +18,7 @@
     },
     {
       "question": "Kann ich einen Flug ohne Datum und Flugnummer hinzufügen?",
-      "answer": "Ja. Wähle den Abflug- und den Ankunftsflughafen. Datum und Flugnummer kannst du leer lassen. Flüge ohne Datum erscheinen unter Alle Jahre. Du findest sie im Verlauf mit dem Filter Ohne Datum."
+      "answer": "Ja. Wähle den Abflug- und den Ankunftsflughafen. Datum und Flugnummer kannst du leer lassen. Flüge ohne Datum erscheinen unter Gesamter Zeitraum."
     },
     {
       "question": "Wo werden meine Flüge gespeichert?",

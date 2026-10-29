@@ -18,7 +18,7 @@
     },
     {
       "question": "Can I add a flight without a date or flight number?",
-      "answer": "Yes. Choose the departure and arrival airports; both the date and flight number are optional. Flights without dates appear under All years. Use the No date filter in your history to find them."
+      "answer": "Yes. Choose the departure and arrival airports; both the date and flight number are optional. Flights without dates appear under All time."
     },
     {
       "question": "Where is my flight history saved?",
