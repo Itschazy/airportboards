@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="ru">
+<meta charset="utf-8">
+<meta name="robots" content="noindex">
+<title>Локальная проверка 375 px</title>
+<style>body{margin:16px;background:#333;color:#fff;font:16px system-ui}iframe{width:375px;height:812px;border:0;display:block}a{color:white;margin-right:14px}</style>
+<nav>
+<a href="/ru/airport/AYT" target="phone">RU</a>
+<a href="/en/airport/AYT" target="phone">EN</a>
+<a href="/de/airport/AYT" target="phone">DE</a>
+<a href="/fr/airport/AYT" target="phone">FR</a>
+<a href="/es/airport/AYT" target="phone">ES</a>
+<a href="/it/airport/AYT" target="phone">IT</a>
+<a href="/tr/airport/AYT" target="phone">TR</a>
+<a href="/zh/airport/AYT" target="phone">ZH</a>
+<a href="/ja/airport/AYT" target="phone">JA</a>
+<a href="/ko/airport/AYT" target="phone">KO</a>
+<a href="/ar/airport/AYT" target="phone">AR</a>
+<a href="/hi/airport/AYT" target="phone">HI</a>
+<a href="/ru/airport/DME" target="phone">DME</a>
+<a href="/ru/airport/LWN" target="phone">LWN</a>
+<a href="/ru/airport/SSH" target="phone">SSH</a>
+</nav>
+<label>Ширина <select aria-label="Ширина" onchange="document.querySelector('iframe').style.width=this.value+'px'">
+<option value="375">375</option>
+<option value="320">320</option>
+<option value="414">414</option>
+</select>
+</label>
+<button id="check">Проверить карточку</button>
+<output id="result">
+</output>
+<iframe name="phone" title="Мобильное табло 375 px" src="/ru/airport/AYT">
+</iframe>
+</html>
+<script>document.querySelector('#check').onclick=()=>{const d=document.querySelector('iframe').contentDocument;const dialog=d.querySelector('[role="dialog"]');const clipped=dialog?[...dialog.querySelectorAll('[data-flight-detail-value]')].filter(e=>e.scrollWidth>e.clientWidth+1||e.scrollHeight>e.clientHeight+1).map(e=>e.textContent):[];document.querySelector('#result').textContent=dialog?.querySelector('[data-flight-detail-value]')?(clipped.length?'FAIL clipped: '+clipped.join(' / '):'PASS no clipped values; width '+document.querySelector('iframe').contentWindow.innerWidth):'FAIL no open dialog with detail values';};</script>

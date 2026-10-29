@@ -597,13 +597,18 @@ function BottomSheet({ flight: selectedFlight, mode, onClose, tz, locale, clockM
         {/* Значения начинаются сразу под подписью с одинаковым отступом.
             space-between прижимал весь блок значения к низу: дата под временем
             поднимала время выше выхода и терминала (снимок владельца, 18.10.2026).
-            Свободное место оставляем снизу, чтобы необязательная дата не двигала цифры. */}
-        {blocks.length > 0 && <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(104px, 1fr))', gap: 10, marginTop: 14 }}>
+            Свободное место оставляем снизу, чтобы необязательная дата не двигала цифры.
+            29.10.2026: auto-fill резервировал третий пустой столбец при двух плитках
+            на 375 px, а nowrap/ellipsis превращал «1 ч 30 мин» в «1 ч 3…».
+            auto-fit отдаёт пустое место имеющимся плиткам; длинные значения переносятся,
+            чтобы при трёх плитках не исчезали минуты, модель самолёта или номер выхода.
+            Проверка: локальный mobile-check.html на 375/320 px, открытая карточка. */}
+        {blocks.length > 0 && <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(104px, 1fr))', gap: 10, marginTop: 14 }}>
           {blocks.map((b, i) => (
             <div key={i} style={{ background: 'var(--glass-soft)', boxShadow: 'var(--glass-rim)', borderRadius: 'var(--r-card)', padding: '12px 13px', minHeight: 78, display: 'flex', flexDirection: 'column', gap: 6 }}>
               <div style={L}>{b.label}</div>
               <div>
-                <div style={{ fontSize: 20, fontWeight: 700, color: b.valueColor || C.text, lineHeight: 1.05, letterSpacing: '-0.02em', fontVariantNumeric: 'tabular-nums', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>{b.value}</div>
+                <div data-flight-detail-value style={{ fontSize: 20, fontWeight: 700, color: b.valueColor || C.text, lineHeight: 1.05, letterSpacing: '-0.02em', fontVariantNumeric: 'tabular-nums', whiteSpace: 'normal', overflowWrap: 'anywhere' }}>{b.value}</div>
                 {b.strike && <div style={{ fontSize: 12, color: C.secondary, textDecoration: 'line-through', marginTop: 2 }}>{b.strike}</div>}
                 {b.sub && <div style={{ fontSize: 12, color: 'var(--ab-6a6a6a)', marginTop: 4 }}>{b.sub}</div>}
               </div>
