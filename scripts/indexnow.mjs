@@ -7,7 +7,7 @@ import fs from 'node:fs';
 import os from 'node:os';
 import path from 'node:path';
 import {execFileSync,spawnSync} from 'node:child_process';
-import {readState,writeState,contentManifest,reconcile,drain,locales,validPath,discoverPaths,assertPublished,readyEntries} from './indexnow-queue.mjs';
+import {readState,writeState,contentManifest,reconcile,drain,validPath,discoverPaths,assertPublished,readyEntries} from './indexnow-queue.mjs';
 const dry=process.argv.includes('--dry');
 const worker=process.argv.includes('--worker')||process.argv.includes('--no-fresh');
 const file=path.join(os.homedir(),'airportsboard-data','seo','indexnow-v2.json');
@@ -28,12 +28,16 @@ if(!dry) {
   assertPublished(sha,config.config?.env?.NEXT_PUBLIC_RUM_RELEASE,(await response.json()).release);
 }
 const state=readState(file);
-if(!worker&&!dry) {
+// У нового v2 worker catalogue оказался пустым до следующего daily. Поэтому
+// страницы вне 4548 специализированных URL не получали даже первого discovery.
+// Один bounded bootstrap при пустом каталоге, далее прежний daily. --dry всё
+// ещё не делает сети/записи; ошибка сохраняет предыдущую очередь и даёт drain.
+if(!dry&&(!worker||state.catalogue.length===0)) {
   try {
     const discovered=await discoverPaths();
-    // sitemap использует en + hreflang: уведомление каждого канонического перевода.
-    const expanded=discovered.flatMap(p=>p.startsWith('/en')?locales.map(l=>p.replace(/^\/en(?=\/|$)/,'/'+l)):[p]);
-    state.catalogue=[...new Set([...state.catalogue,...expanded.filter(validPath)])];
+    // Sitemap уже содержит каждый настоящий перевод. Раскрытие /en→12
+    // создавало несуществующие переводы legal с noindex и лишние уведомления.
+    state.catalogue=[...new Set([...state.catalogue,...discovered.filter(validPath)])];
   } catch(e) { console.log('IndexNow: sitemap недоступна; сохранённая очередь продолжается:',e.message); }
 }
 reconcile(state,contentManifest(process.cwd(),state.catalogue));

@@ -6,7 +6,7 @@ import os from 'node:os';
 import path from 'node:path';
 import {emptyState,reconcile,drain,readState,writeState,validPath,contentManifest} from './indexnow-queue.mjs';
 const now=1000000, s=emptyState();
-const paths=Array.from({length:120},(_,i)=>'/en/airport/X'+String(i).padStart(2,'0'));
+const paths=Array.from({length:120},(_,i)=>'/en/airport/X'+i.toString(36).toUpperCase().padStart(2,'0'));
 const manifest=Object.fromEntries(paths.map(p=>[p,'v1']));
 reconcile(s,manifest,now);
 reconcile(s,manifest,now+1);

@@ -6,6 +6,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import {createHash} from 'node:crypto';
+import {pageFamily,pageContentManifest} from './indexnow-page-content.mjs';
 export const hash = value => createHash('sha256').update(value).digest('hex');
 export const locales = ['ru','en','de','fr','es','it','tr','zh','ja','ko','ar','hi'];
 export const endpoints = ['https://api.indexnow.org/indexnow','https://yandex.com/indexnow'];
@@ -36,8 +37,14 @@ export function writeState(file,state) {
   fs.renameSync(tmp,file);
 }
 export function reconcile(state, manifest, now=Date.now()) {
+  // Старый daily раскрывал /en/about на 12 языков, включая 10 постоянных
+  // noindex fallback. Исключаем лишь производную pending-работу неподдерживаемых
+  // семейств; sent/fingerprints/runs остаются как история, документы не удаляем.
+  // Исчезновение из сегодняшней sitemap само по себе ничего здесь не удаляет.
+  for(const p of Object.keys(state.pending))if(!pageFamily(p))delete state.pending[p];
   for(const [p,fingerprint] of Object.entries(manifest)) {
     if(!validPath(p)) throw new Error('Недопустимый путь: '+p);
+    if(!pageFamily(p))continue;
     if(state.fingerprints[p]===fingerprint) continue;
     // Новый содержательный апдейт не должен ждать за тысячами URL первого discovery.
     const code=/\/airport\/([A-Z]{3})(?:\/|$)/.exec(p)?.[1];
@@ -53,7 +60,7 @@ export function reconcile(state, manifest, now=Date.now()) {
 export function assertPublished(sha, built, running) {
   if(!/^[0-9a-f]{12}$/.test(sha)||built!==sha||running!==sha) throw new Error('IndexNow: новая версия ещё не опубликована целиком');
 }
-export function readyEntries(state,now=Date.now()) { return Object.entries(state.pending).filter(([,v])=>v.nextAt<=now).sort((a,b)=>(a[1].priority??2)-(b[1].priority??2)||a[1].queuedAt-b[1].queuedAt); }
+export function readyEntries(state,now=Date.now()) { return Object.entries(state.pending).filter(([p,v])=>pageFamily(p)&&v.nextAt<=now).sort((a,b)=>(a[1].priority??2)-(b[1].priority??2)||a[1].queuedAt-b[1].queuedAt); }
 export async function drain(state, {key, persist, fetcher=fetch, now=Date.now(), limit=100, batchSize=50}={}) {
   if(!Number.isInteger(limit)||limit<1||limit>100||!Number.isInteger(batchSize)||batchSize<1||batchSize>50) throw new Error('Лимит очереди');
   const due=readyEntries(state,now).slice(0,limit);
@@ -146,11 +153,13 @@ export function contentManifest(root, catalogue=[]) {
       for(const suffix of ['','/arrivals']) result[`/${locale}/airport/${code}${suffix}`]=hash(airportCode+text+guide);
     }
   }
-  // Новые адреса из sitemap включаются daily-вызовом. Общие изменения шаблонов
-  // отслеживаем для аэропортов; остальные URL уведомляются при появлении в карте.
-  for(const p of catalogue.filter(validPath)) if(!result[p]) {
+  // 30.10: постоянный 'discovered' пропускал все следующие изменения route,
+  // country/city/widgets/legal/home. Новые hashes только для известных URL;
+  // нет живых рейсов/времени сборки и нет расширения индексируемого пространства.
+  Object.assign(result,pageContentManifest(root,catalogue.filter(validPath)));
+  for(const p of catalogue.filter(validPath)) if(!result[p]&&pageFamily(p)==='airport') {
     const locale=p.split('/')[1];
-    result[p]=hash(p+(/\/airport\//.test(p)?airportCode+read(`messages/${locale}.json`):'discovered'));
+    result[p]=hash(p+airportCode+read(`messages/${locale}.json`));
   }
   return result;
 }
