@@ -100,6 +100,12 @@ const input=nodes().find(n=>n.type==='input');input.props.onChange({target:{valu
 check(rows().length===0,'поиск по рейсам всё ещё пересчитывает список');
 input.props.onChange({target:{value:'ARR'}});render();
 check(rows().length===1,'очистка/уточнение поиска возвращает актуальную строку');
+// FAQ обещает номер с пробелом или без: проверяем настоящий компонент,
+// включая регистр и дефис, а не отдельную копию функции нормализации.
+for (const query of ['ARR1', 'arr 1', 'AR-R1']) {
+ input.props.onChange({target:{value:query}});render();
+ check(rows().length===1&&rows()[0].props['aria-label'].includes('ARR1'),'номер рейса: '+query);
+}
 // На экране имя локализовано, поиск обязан находить именно видимую строку,
 // сохраняя возможность вводить исходное международное название перевозчика.
 for (const query of ['Уральские', 'Ural Airlines']) {

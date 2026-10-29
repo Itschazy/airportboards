@@ -21,7 +21,7 @@
       "answer": "Sì. Scegli gli aeroporti di partenza e arrivo. Puoi lasciare vuoti la data e il numero del volo. I voli senza data compaiono in Tutto il periodo."
     },
     {
-      "question": "Dove viene salvato lo storico?",
+      "question": "Come posso salvare lo storico dei voli senza registrarmi?",
       "answer": "In questo browser, su questo dispositivo. Scarica un backup JSON e ripristinalo su un altro dispositivo per trasferirlo. Cancellare i dati del browser può eliminare lo storico. La navigazione privata non è adatta alla conservazione permanente. Non c’è sincronizzazione automatica tra dispositivi. Salva un backup JSON."
     },
     {

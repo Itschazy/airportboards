@@ -21,7 +21,7 @@
       "answer": "Oui. Choisissez les aéroports de départ et d’arrivée. La date et le numéro de vol sont facultatifs. Les vols sans date apparaissent dans Toutes les périodes."
     },
     {
-      "question": "Où mon historique de vols est-il enregistré ?",
+      "question": "Comment enregistrer mon historique de vols sans inscription ?",
       "answer": "Dans ce navigateur, sur cet appareil. Téléchargez une sauvegarde JSON pour la restaurer sur un autre appareil. Effacer les données du navigateur peut supprimer votre historique. La navigation privée ne convient pas au stockage durable. Il n’y a pas de synchronisation automatique entre appareils. Enregistrez une sauvegarde JSON."
     },
     {

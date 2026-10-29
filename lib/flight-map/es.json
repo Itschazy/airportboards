@@ -21,7 +21,7 @@
       "answer": "Sí. Elige los aeropuertos de salida y llegada. La fecha y el número de vuelo son opcionales. Los vuelos sin fecha aparecen en Todo el historial."
     },
     {
-      "question": "¿Dónde se guarda mi historial?",
+      "question": "¿Cómo puedo guardar mi historial de vuelos sin registrarme?",
       "answer": "En este navegador y en este dispositivo. Descarga una copia JSON y restáurala en otro dispositivo para trasladarlo. Borrar los datos del navegador puede eliminar el historial. El modo privado no es adecuado para guardar datos de forma permanente. No hay sincronización automática entre dispositivos. Guarda una copia JSON."
     },
     {

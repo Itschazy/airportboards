@@ -40,6 +40,10 @@ for(const locale of ['ru','en','de','fr','es','it','tr','zh','ja','ko','ar','hi'
  assert.doesNotMatch(v,/undefined|\{\{m\d+\}\}/);assert.ok(/rel="modulepreload" href="\/flight-map\/v9\/runtime\.js(\?[^"]*)?"/.test(h),locale+' runtime preload');assert.ok(r.headers.get('link')?.includes(`/flight-map/v9/catalogue-${locale}.js.br`),locale+' early catalogue preload');assert.ok(!/rel="preload"[^>]*catalogue-/.test(h),locale+' duplicate fetch preload');assert.ok(v.includes(`lang="${locale}" dir="${locale==='ar'?'rtl':'ltr'}"`));
  const graph=[...h.matchAll(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/g)].map(m=>JSON.parse(m[1])).flatMap(d=>d['@graph']||[]);
  const f=graph.find(n=>n['@type']==='FAQPage');assert.equal(f.mainEntity.length,8,locale);assert.equal(f.inLanguage,locale);
+ // Старые SSG/ISR HTML и JSON-LD могут совпадать друг с другом, но не с новым текстом.
+ // Сверяем весь FAQ с текущей локалью, включая хранение без регистрации.
+ const copy=JSON.parse(readFileSync(new URL(`../lib/flight-map/${locale}.json`,import.meta.url),'utf8'));
+ assert.deepEqual(f.mainEntity.map(q=>({question:q.name,answer:q.acceptedAnswer.text})),copy.faq,locale+' current FAQ copy');
  // FAQ раньше отправлял к удалённому фильтру и старой подписи «Все годы».
  // Сверяем инструкцию с действующим названием периода, а не только HTML с JSON-LD:
  // одинаково неверные видимый текст и разметка тоже проходили прежнюю проверку.

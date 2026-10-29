@@ -36,6 +36,14 @@ for (const file of locales) {
       assert.ok(visible.includes(meeting)&&visible.includes(messages.home.faq_meeting_a));
       assert.ok(!faq.some(f=>f.acceptedAnswer.text===messages.home.faq_arrive_a));
     }
+    // IANA-зона вычисляется сервером; продолжение должно совпадать с актуальным
+    // переводом и начальным HTML, а не только с другой старой копией в JSON-LD.
+    const timezone = faq.filter(f => f.acceptedAnswer.text.includes('Europe/Istanbul'));
+    assert.equal(timezone.length, 1, locale + ': один ответ с известной зоной');
+    const timezoneAnswer = timezone[0].acceptedAnswer.text;
+    assert.ok(timezoneAnswer.endsWith(messages.home.faq_tz_a.split('{tz}')[1]), locale + ': актуальное объяснение местного времени');
+    assert.ok(visible.includes(timezoneAnswer), locale + ': время в видимом HTML = FAQPage');
+    assert.ok(!/\{(?:name|iata|tz)\}/.test(timezoneAnswer), locale + ': параметры времени заполнены');
     for (const topic of topics) {
       const q = messages.home[`faq_${topic}_q`].replace('{iata}', 'AYT');
       const a = messages.home[`faq_${topic}_a`];

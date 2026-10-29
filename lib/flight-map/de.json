@@ -21,7 +21,7 @@
       "answer": "Ja. Wähle den Abflug- und den Ankunftsflughafen. Datum und Flugnummer kannst du leer lassen. Flüge ohne Datum erscheinen unter Gesamter Zeitraum."
     },
     {
-      "question": "Wo werden meine Flüge gespeichert?",
+      "question": "Wie kann ich meinen Flugverlauf ohne Registrierung speichern?",
       "answer": "In diesem Browser auf diesem Gerät. Lade eine JSON-Sicherung herunter und stelle sie auf einem anderen Gerät wieder her. Beim Löschen der Browserdaten kann die Flugliste verloren gehen. Der private Modus eignet sich nicht zur dauerhaften Speicherung. Es gibt keine automatische Synchronisierung zwischen Geräten. Speichere eine JSON-Sicherung."
     },
     {

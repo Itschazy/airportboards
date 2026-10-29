@@ -21,7 +21,7 @@
       "answer": "Yes. Choose the departure and arrival airports; both the date and flight number are optional. Flights without dates appear under All time."
     },
     {
-      "question": "Where is my flight history saved?",
+      "question": "How can I save my flight history without registering?",
       "answer": "In this browser on this device. Download a JSON backup and restore it on another device to move your history. Clearing browser data can delete it. Private browsing is unsuitable for long-term storage. There is no automatic syncing between devices. Save a JSON backup."
     },
     {

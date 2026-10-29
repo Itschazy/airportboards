@@ -1,0 +1,75 @@
+{
+  "id": "airportsboard-alisa-ru-intents-v1",
+  "frozenOn": "2026-10-29",
+  "language": "ru",
+  "regionSetting": "Chelyabinsk",
+  "entry": "new conversation from https://ya.ru/alice; Auto mode",
+  "comparableBaseline": false,
+  "queries": [
+    {
+      "id": "q04",
+      "query": "Шарм-эш-Шейх прилеты сегодня",
+      "target": "/ru/airport/SSH/arrivals"
+    },
+    {
+      "id": "q06",
+      "query": "Бодрум прилеты сегодня",
+      "target": "/ru/airport/BJV/arrivals"
+    },
+    {
+      "id": "q11",
+      "query": "Почему рейса нет на онлайн-табло аэропорта?",
+      "target": "/ru/airport/AYT/arrivals"
+    },
+    {
+      "id": "q12",
+      "query": "Время прилета самолета местное или московское?",
+      "target": "/ru/airport/AYT/arrivals"
+    },
+    {
+      "id": "q13",
+      "query": "Самолет приземлился: когда выйдет пассажир?",
+      "target": "/ru/airport/AYT/arrivals"
+    },
+    {
+      "id": "q14",
+      "query": "Рейс задержан: когда ехать встречать пассажира?",
+      "target": "/ru/airport/AYT/arrivals"
+    },
+    {
+      "id": "q16",
+      "query": "Шарм-эш-Шейх: где встречать пассажиров в аэропорту?",
+      "target": "/ru/airport/SSH/arrivals"
+    },
+    {
+      "id": "q17",
+      "query": "Как добраться из аэропорта Хургады до города?",
+      "target": "/ru/airport/HRG/arrivals"
+    },
+    {
+      "id": "q18",
+      "query": "Как добраться из аэропорта Бодрума в центр на автобусе?",
+      "target": "/ru/airport/BJV/arrivals"
+    },
+    {
+      "id": "q19",
+      "query": "Карта моих перелетов бесплатно",
+      "target": "/ru/flight-map"
+    },
+    {
+      "id": "q20",
+      "query": "Как сохранить историю перелетов без регистрации?",
+      "target": "/ru/flight-map"
+    },
+    {
+      "id": "q21",
+      "query": "Как сделать карту своих перелетов и поделиться картинкой?",
+      "target": "/ru/flight-map"
+    },
+    {
+      "id": "q23",
+      "query": "Бесплатная карта перелетов с сохранением и экспортом",
+      "target": "/ru/flight-map"
+    }
+  ]
+}

@@ -21,7 +21,7 @@
       "answer": "Evet. Kalkış ve varış havalimanlarını seçin. Tarihi ve uçuş numarasını boş bırakabilirsiniz. Tarihsiz uçuşlar Tüm zamanlar görünümünde yer alır."
     },
     {
-      "question": "Uçuş geçmişim nerede saklanır?",
+      "question": "Kayıt olmadan uçuş geçmişimi nasıl kaydedebilirim?",
       "answer": "Bu cihazdaki bu tarayıcıda. Başka bir cihaza taşımak için JSON yedeğini indirip orada geri yükleyin. Tarayıcı verilerini silmek uçuş geçmişinizi silebilir. Gizli mod, kalıcı saklama için uygun değildir. Cihazlar arasında otomatik eşitleme yoktur. JSON yedeği kaydet."
     },
     {
