@@ -569,7 +569,9 @@ function BottomSheet({ flight: selectedFlight, mode, onClose, tz, locale, clockM
           <div style={{ minWidth: 0, width: '100%' }}>
             <div style={{ fontSize: 'clamp(32px, 9vw, 42px)', fontWeight: 800, letterSpacing: '-0.04em', color: C.text, lineHeight: 0.95, wordBreak: 'break-word' }}>{flight.flight}</div>
             <div style={{ fontSize: 'clamp(17px, 4.6vw, 21px)', color: 'var(--ab-a1a1a1)', marginTop: 6, lineHeight: 1.15 }}>{flight.destination || flight.origin}</div>
-            <div style={{ fontSize: 15, color: C.text, fontWeight: 600, marginTop: 3 }}>{flight.airline}</div>
+            {/* То же имя, что в строке табло и поиске: карточка не должна внезапно
+                менять «Уральские авиалинии» на Ural Airlines после нажатия. */}
+            <div style={{ fontSize: 15, color: C.text, fontWeight: 600, marginTop: 3 }}>{localAirlineName(flight.airline || '', locale)}</div>
           </div>
         </div>
 
@@ -1238,8 +1240,12 @@ export function FlightBoard({ airport, locale, defaultMode = 'departures', displ
     return f.flight.toLowerCase().includes(q)
       || (qCode.length > 1 && f.flight.toLowerCase().replace(/[\s-]+/g, '').includes(qCode))
       || (f.destination || f.origin || '').toLowerCase().includes(q)
-      || (f.airline || '').toLowerCase().includes(q);
-  }), [flights, filter, trimSearch]);
+      || (f.airline || '').toLowerCase().includes(q)
+      // Строка уже показывает русское имя, но фильтр раньше проверял только
+      // английское от поставщика. Сохраняем оба варианта, без загрузки словарей
+      // или запросов. Регрессия: «Уральские» и «Ural Airlines» находят один рейс.
+      || localAirlineName(f.airline || '', locale).toLowerCase().includes(q);
+  }), [flights, filter, trimSearch, locale]);
   // Twelve rows is right for a hub with eighty flights and wrong for an airport with thirty:
   // Kazan's header says "33 departures on the board" directly above twelve of them, and the
   // fifteen still to come that evening — 20:55 Novosibirsk through 01:50 Sheremetyevo — sat

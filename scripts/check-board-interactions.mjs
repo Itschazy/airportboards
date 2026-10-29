@@ -41,7 +41,7 @@ const context={exports:{},Intl:intl,Date,AbortController,
 };
 vm.runInNewContext(compile(source+"\nexport { fmtDur };"),context);
 const now=Date.now();
-const flight=(id,status='delayed')=>({flight:id,airline:'Test Air',destination:'Москва (SVO)',origin:'Москва (SVO)',scheduled:'12:00',status,delay:20,ts:Math.round(now/1000)+3600});
+const flight=(id,status='delayed')=>({flight:id,airline:'Ural Airlines',destination:'Москва (SVO)',origin:'Москва (SVO)',scheduled:'12:00',status,delay:20,ts:Math.round(now/1000)+3600});
 const props={airport:{iata:'AYT',name:'Antalya',city:'Antalya',country:'Turkey',iso2:'TR',tz:'Europe/Istanbul'},locale:'ru',initialFetchedAt:now,initialFlights:Array.from({length:30},(_,i)=>flight('DEP'+i))};
 function render(){let n=0;do{assert.ok(n++<20,'render loop');dirty=false;cursor=0;tree=context.exports.FlightBoard(props);for(const f of effects.splice(0))f();}while(dirty);}
 function nodes(node=tree){if(!node||typeof node!=='object')return [];return [node,...[node.props?.children].flat(Infinity).filter(n=>n!=null).flatMap(n=>nodes(n))];}
@@ -100,6 +100,13 @@ const input=nodes().find(n=>n.type==='input');input.props.onChange({target:{valu
 check(rows().length===0,'поиск по рейсам всё ещё пересчитывает список');
 input.props.onChange({target:{value:'ARR'}});render();
 check(rows().length===1,'очистка/уточнение поиска возвращает актуальную строку');
+// На экране имя локализовано, поиск обязан находить именно видимую строку,
+// сохраняя возможность вводить исходное международное название перевозчика.
+for (const query of ['Уральские', 'Ural Airlines']) {
+ input.props.onChange({target:{value:query}});render();
+ check(rows().length===1, 'поиск по названию авиакомпании: '+query);
+}
+input.props.onChange({target:{value:''}});render();
 for(const locale of load('i18n').locales){
  for(const mins of [0,1,21,60,61,125]){
   const l=load('i18n').numLocale(locale);const fmt=(n,unit)=>new Intl.NumberFormat(l,{style:'unit',unit,unitDisplay:'short'}).format(n);
