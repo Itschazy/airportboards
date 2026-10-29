@@ -1,3 +1,13 @@
+## Codex, 30.10.2026 — a9a002b8 опубликован и проверен
+
+Владелец явно подтвердил выкат. Push HEAD:main выполнен 29.10 в 21:37:38 Europe/Amsterdam / 30.10 в 01:37:38 Asia/Yekaterinburg, вне окон прогрева. Fresh fetch до push: behind0/ahead2, дерево чистое. Actions40950726057 — success. Production/origin-main a9a002b8fbf8422417b03fc52b9a39cfffc930f3; BUILD_ID1EAQ7Zac1XR2dXNVq5h_N, health.releasea9a002b8fbf8. Три pm2 PID462228/462229/462261 online, restart81 без роста на повторном контроле20:45:23UTC (uptime286сек), свободно62ГБ. Дизайн/DNS/данные рейсов/платная политика не менялись.
+
+Production: index20/20; sitemap/hreflang22388loc/1869путей/gzip; live-refresh; AdSense; route; facts12; boardhelp12; embed; metadata; generated-prose —PASS. Целевые67/67:12локалей route/country/city/widgets/event и7дополнительныхстраниц. Events13/26SSR —0ошибок,6прежнихCJKпредупреждений. Толькоaudit-bot,безбраузераи /api/flights/* /api/cron/warm. НовогоRUM/LCP/физическихтелефоновнебыло.
+
+Штатная revalidate:829изменённыхпутей ×12=9948,42последовательныхпакета. Токен прочитан внутриNodeнасервере,непечатался/непередавалсяаргументамиshell. Первыйнеавторизованныйзапрос404;авторизованныйok. НачальныйSSR65/67показалстарыеzh/UK(91из108)иes/widgets;повтортолькоих2/2PASS. Одинпервичный404en/event/f1-abu-dhabiповтором200,полныйeventsповторPASS;причинаединичного404недоказана,логи сохранены. Данные/кэшфайлывручнуюнеудалялись.
+
+Подробно ops/alisa-sitewide-20261029/POSTDEPLOY.md; outputs/alisa-sitewide-20261029/report.html иpostdeploy/папкичата. Послеa9a002b8фиксируетсятольколокальнаядокументация,повторногопуша/выкатанет. Дальше —наблюдатьиндексацию/цитирование/переходыпопрежнемуPROTOCOL,безгарантийроста. Новыеоперациипоисторическимразрешениямнеповторять.
+
 ## Codex, 30.10.2026 — расширение ответов по исследованию Алисы готово локально
 
 Новый пакет НЕ опубликован. Рабочая копия `/Users/whereiszhenya/projects/runwayboard-flight-map-prototype-20261028`, ветка `codex/flight-map-prototype-20261028`, база `37b64b47`. Коммит пакета — текущий HEAD после фиксации этого раздела. Последний fetch: origin/main `852f3afb`, behind 0; production не менялся.
