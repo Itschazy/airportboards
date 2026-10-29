@@ -70,7 +70,7 @@
     "main_description": "Orari di partenze e arrivi, ritardi, gate e terminal a {airport} ({iata}) sul tabellone: dettagli da controllare prima di partire.",
     "arrivals_title": "Arrivi {airport}{showCity, select, yes {, {city}} other {}} ({iata}) | voli in tempo reale",
     "departures_title": "Partenze {airport}{showCity, select, yes {, {city}} other {}} ({iata}) | voli in tempo reale",
-    "arrivals_description": "Tabellone arrivi in tempo reale di {airport} ({iata}): voli di oggi, orari, ritardi e partenze aggiornate.",
+    "arrivals_description": "Arrivi a {airport} ({iata}) oggi: aeroporti di provenienza, orari di arrivo, stato dei voli, ritardi e cancellazioni.",
     "departures_description": "Tabellone partenze in tempo reale di {airport} ({iata}): voli di oggi, orari, ritardi, gate e arrivi aggiornati.",
     "routes_title": "{airport} ({iata}) — Compagnie aeree e destinazioni",
     "routes_description": "{airport} ({iata}) a {city}, {country}: quali compagnie aeree operano qui e dove puoi volare senza scalo, oltre agli aeroporti più vicini con voli di linea.",
@@ -79,7 +79,7 @@
     "main_title_stale": "Voli {airport}{showCity, select, yes {, {city}} other {}} ({iata}) | arrivi e partenze",
     "arrivals_title_stale": "Arrivi {airport}{showCity, select, yes {, {city}} other {}} ({iata}) | tabellone voli",
     "departures_title_stale": "Partenze {airport}{showCity, select, yes {, {city}} other {}} ({iata}) | tabellone voli",
-    "arrivals_description_stale": "Tabellone arrivi di {airport} ({iata}): voli, orari, ritardi e partenze.",
+    "arrivals_description_stale": "Tabellone arrivi di {airport} ({iata}): aeroporti di provenienza, orari di arrivo, stato dei voli, ritardi e cancellazioni.",
     "departures_description_stale": "Tabellone partenze di {airport} ({iata}): voli, orari, ritardi, gate e arrivi."
   },
   "airport_info": {

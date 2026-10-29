@@ -70,7 +70,7 @@
     "main_description": "Horaires des départs et arrivées, retards, portes et terminaux à {airport} ({iata}) dans le tableau, à vérifier avant de partir.",
     "arrivals_title": "Arrivées {airport}{showCity, select, yes {, {city}} other {}} ({iata}) – vols en direct",
     "departures_title": "Départs {airport}{showCity, select, yes {, {city}} other {}} ({iata}) – vols en direct",
-    "arrivals_description": "Arrivées {airport} aujourd’hui en direct : tableau des vols, horaires, retards et départs de l’aéroport ({iata}).",
+    "arrivals_description": "Arrivées à {airport} ({iata}) aujourd’hui : aéroports de provenance, horaires d’arrivée, statut des vols, retards et annulations.",
     "departures_description": "Départs {airport} aujourd’hui en direct : tableau des vols, horaires, retards et arrivées de l’aéroport ({iata}).",
     "routes_title": "{airport} ({iata}) — Compagnies aériennes et destinations",
     "routes_description": "{airport} ({iata}) à {city}, {country} : quelles compagnies aériennes y opèrent, où vous pouvez voler sans escale, ainsi que les aéroports les plus proches avec des vols réguliers.",
@@ -79,7 +79,7 @@
     "main_title_stale": "Vols {airport}{showCity, select, yes {, {city}} other {}} ({iata}) – arrivées et départs",
     "arrivals_title_stale": "Arrivées {airport}{showCity, select, yes {, {city}} other {}} ({iata}) – tableau des vols",
     "departures_title_stale": "Départs {airport}{showCity, select, yes {, {city}} other {}} ({iata}) – tableau des vols",
-    "arrivals_description_stale": "Arrivées {airport} : tableau des vols, horaires, retards et départs de l’aéroport ({iata}).",
+    "arrivals_description_stale": "Tableau des arrivées à {airport} ({iata}) : aéroports de provenance, horaires d’arrivée, statut des vols, retards et annulations.",
     "departures_description_stale": "Départs {airport} : tableau des vols, horaires, retards et arrivées de l’aéroport ({iata})."
   },
   "airport_info": {

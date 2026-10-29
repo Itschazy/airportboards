@@ -1644,7 +1644,26 @@ export function FlightBoard({ airport, locale, defaultMode = 'departures', displ
               {(['departures', 'arrivals'] as Mode[]).map(m => {
                 const active = mode === m;
                 return (
-                  <button key={m} type="button" aria-pressed={active} className="press" onClick={() => { haptic(); track(GOALS.boardMode, { mode: m }); switchMode(m); }} style={{
+                  // Сохраняем переключение без перезагрузки, но даём настоящий href:
+                  // раньше верхние кнопки не связывали табло с /arrivals для краулера
+                  // и не позволяли открыть нужный режим в новой вкладке. Вылеты ведут
+                  // сразу на canonical родителя, не на дубль /departures. Обычный клик
+                  // обслуживает прежний switchMode; модификаторы/средняя кнопка и
+                  // отключённый JS используют URL. role=button сохраняет семантику
+                  // выбранного режима и Space для клавиатуры; оформление прежнее.
+                  <a key={m} href={`/${locale}/airport/${airport.iata}${m === 'arrivals' ? '/arrivals' : ''}`} role="button" aria-pressed={active} className="press"
+                    onClick={e => {
+                      if (e.button !== 0 || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
+                      e.preventDefault();
+                      haptic(); track(GOALS.boardMode, { mode: m }); switchMode(m);
+                    }}
+                    onKeyDown={e => {
+                      if (e.key === ' ') e.preventDefault();
+                    }}
+                    onKeyUp={e => {
+                      if (e.key === ' ') { e.preventDefault(); e.currentTarget.click(); }
+                    }} style={{
+                    textDecoration: 'none', fontFamily: 'inherit', lineHeight: 'normal',
                     flex: 1, padding: '10px 0', minHeight: 40, fontSize: 14, fontWeight: 600,
                     border: 'none', borderRadius: 999, cursor: 'pointer',
                     background: active ? 'var(--glass-dense)' : 'transparent', color: active ? C.text : C.secondary,
@@ -1661,7 +1680,7 @@ export function FlightBoard({ airport, locale, defaultMode = 'departures', displ
                         : <><path d="M3 21h18" /><path d="M20.6 16.2 4.6 12.5l-1-6.3 2.3-.3 2.2 3.6 3.1.8-1-7.6 2.5-.4 3.6 9.1 4 1c1.1.3 1.6 1.2 1.3 2z" /></>}
                     </svg>
                     {m === 'departures' ? t('departures') : t('arrivals')}
-                  </button>
+                  </a>
                 );
               })}
             </div>

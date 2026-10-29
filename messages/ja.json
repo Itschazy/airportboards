@@ -70,7 +70,7 @@
     "main_description": "出発・到着便の時刻、遅延、ゲート、ターミナルを{airport} ({iata})のフライトボードで確認。",
     "arrivals_title": "{airport}{showCity, select, yes {（{city}）} other {}}（{iata}）到着便｜リアルタイム",
     "departures_title": "{airport}{showCity, select, yes {（{city}）} other {}}（{iata}）出発便｜リアルタイム",
-    "arrivals_description": "{airport}（{iata}）の本日の到着便案内。到着・出発の運航状況をリアルタイムで確認できます。",
+    "arrivals_description": "本日の{airport}（{iata}）到着便案内。出発空港、到着時刻、運航状況、遅延・欠航情報を確認できます。",
     "departures_description": "{airport}（{iata}）の本日の出発便案内。出発・到着の運航状況をリアルタイムで確認できます。",
     "routes_title": "{airport}（{iata}）— 航空会社と就航地",
     "routes_description": "{city}、{country}の{airport}（{iata}）：就航航空会社、直行便で行ける目的地、定期便のある最寄り空港を紹介します。",
@@ -79,7 +79,7 @@
     "main_title_stale": "{airport}{showCity, select, yes {（{city}）} other {}}（{iata}）発着情報",
     "arrivals_title_stale": "{airport}{showCity, select, yes {（{city}）} other {}}（{iata}）到着便｜運航掲示板",
     "departures_title_stale": "{airport}{showCity, select, yes {（{city}）} other {}}（{iata}）出発便｜運航掲示板",
-    "arrivals_description_stale": "{airport}（{iata}）の到着便案内。到着・出発の運航状況を確認できます。",
+    "arrivals_description_stale": "{airport}（{iata}）の到着便案内。出発空港、到着時刻、運航状況、遅延・欠航情報を確認できます。",
     "departures_description_stale": "{airport}（{iata}）の出発便案内。出発・到着の運航状況を確認できます。"
   },
   "airport_info": {

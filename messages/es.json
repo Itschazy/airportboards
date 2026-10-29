@@ -70,7 +70,7 @@
     "main_description": "Horarios de salidas y llegadas, retrasos, puertas y terminales en {airport} ({iata}); datos del panel antes de ir al aeropuerto.",
     "arrivals_title": "Llegadas {airport}{showCity, select, yes {, {city}} other {}} ({iata}) | vuelos en vivo",
     "departures_title": "Salidas {airport}{showCity, select, yes {, {city}} other {}} ({iata}) | vuelos en vivo",
-    "arrivals_description": "Panel de llegadas del aeropuerto {airport} ({iata}) hoy en tiempo real: horarios, retrasos y cancelaciones. Consulte también salidas.",
+    "arrivals_description": "Llegadas a {airport} ({iata}) hoy: aeropuertos de origen, horas de llegada, estado de los vuelos, retrasos y cancelaciones.",
     "departures_description": "Panel de salidas del aeropuerto {airport} ({iata}) hoy en tiempo real: horarios, retrasos, cancelaciones y puertas. Consulte también llegadas.",
     "routes_title": "{airport} ({iata}) — Aerolíneas y destinos",
     "routes_description": "{airport} ({iata}) en {city}, {country}: qué aerolíneas operan aquí y a dónde puedes volar sin escalas, además de los aeropuertos más cercanos con vuelos programados.",
@@ -79,7 +79,7 @@
     "main_title_stale": "Vuelos {airport}{showCity, select, yes {, {city}} other {}} ({iata}) | llegadas y salidas",
     "arrivals_title_stale": "Llegadas {airport}{showCity, select, yes {, {city}} other {}} ({iata}) | panel de vuelos",
     "departures_title_stale": "Salidas {airport}{showCity, select, yes {, {city}} other {}} ({iata}) | panel de vuelos",
-    "arrivals_description_stale": "Panel de llegadas del aeropuerto {airport} ({iata}): horarios, retrasos y cancelaciones. Consulte también salidas.",
+    "arrivals_description_stale": "Panel de llegadas de {airport} ({iata}): aeropuertos de origen, horas de llegada, estado de los vuelos, retrasos y cancelaciones.",
     "departures_description_stale": "Panel de salidas del aeropuerto {airport} ({iata}): horarios, retrasos, cancelaciones y puertas. Consulte también llegadas."
   },
   "airport_info": {

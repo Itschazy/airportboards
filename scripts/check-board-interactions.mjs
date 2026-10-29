@@ -26,6 +26,8 @@ const context={exports:{},Intl:intl,Date,AbortController,
  require(name){
   if(name==='react')return hooks;
   if(name==='react/jsx-runtime')return {jsx:(type,props)=>({type,props}),jsxs:(type,props)=>({type,props}),Fragment:'fragment'};
+  // Иконка не участвует в сценариях табло; появился отдельный импорт в main.
+  if(name==='@/components/DisclosureArrow')return {DisclosureArrow:'svg'};
   if(name==='next/link')return {default:'a'};
   if(name==='next-intl')return {useTranslations:namespace=>{if(!translations.has(namespace))translations.set(namespace,(key,values)=>key+ (values?' '+JSON.stringify(values):''));return translations.get(namespace);}};
   if(name==='@/lib/track')return {track(){},GOALS:{}};
@@ -45,10 +47,25 @@ function render(){let n=0;do{assert.ok(n++<20,'render loop');dirty=false;cursor=
 function nodes(node=tree){if(!node||typeof node!=='object')return [];return [node,...[node.props?.children].flat(Infinity).filter(n=>n!=null).flatMap(n=>nodes(n))];}
 const rows=()=>nodes().filter(n=>n.props?.className==='frow');
 const sheet=()=>nodes().find(n=>n.type?.name==='BottomSheet');
-const button=key=>nodes().find(n=>n.type==='button'&&[n.props.children].flat(Infinity).includes(key));
+const button=key=>nodes().find(n=>(n.type==='button'||n.props.role==='button')&&[n.props.children].flat(Infinity).includes(key));
 async function settle(){await new Promise(setImmediate);render();}
 let failures=0;function check(ok,label){console.log((ok?'PASS ':'FAIL ')+label);if(!ok)failures++;}
 render();assert.equal(rows().length,30);
+// Верхняя ссылка видна краулеру и работает нативно с модификатором. Обычный
+// клик ниже по-прежнему проверяется реальными гонками ответов двух направлений.
+assert.equal(button('arrivals').props.href, '/ru/airport/AYT/arrivals');
+assert.equal(button('departures').props.href, '/ru/airport/AYT');
+const nativeCalls=calls.length;
+for(const modifier of ['metaKey','ctrlKey','shiftKey','altKey']) {
+  button('arrivals').props.onClick({button:0,[modifier]:true,preventDefault(){throw Error('modified link intercepted');}});
+}
+assert.equal(calls.length,nativeCalls,'modified link must not start a background board request');
+let spaceClicked=false, spacePrevented=false;
+button('arrivals').props.onKeyDown({key:' ',preventDefault(){spacePrevented=true;},currentTarget:{click(){spaceClicked=true;}}});
+assert.ok(!spaceClicked&&spacePrevented,'Space down prevents scrolling without repeat activation');
+button('arrivals').props.onKeyUp({key:' ',preventDefault(){},currentTarget:{click(){spaceClicked=true;}}});
+assert.ok(spaceClicked,'Space up activates the mode');
+
 if (process.env.BOARD_BENCH) {
   const times=[];
   for(let i=0;i<100;i++){
@@ -61,19 +78,19 @@ check(sheet().props.flight.flight==='DEP0','карточка открывает 
 check(formatters===0,'открытие карточки не пересчитывает длительности всех строк (создано '+formatters+' форматтеров)');
 check(rows()[0]===before[0],'DOM-описание строк переиспользуется при открытии карточки');
 sheet().props.onClose();render();
-const dep=calls.at(-1);button('arrivals').props.onClick();render();const arr=calls.at(-1);
+const dep=calls.at(-1);button('arrivals').props.onClick({button:0,preventDefault(){}});render();const arr=calls.at(-1);
 check(rows().every(n=>!n.props['aria-label'].includes('DEP')),'в ожидании прилётов не показаны вылеты');
 arr.resolve({flights:[flight('ARR1')],fetchedAt:now});await settle();
 check(rows()[0]?.props['aria-label'].includes('ARR1'),'получены прилёты');
 dep.resolve({flights:[flight('LATE_DEP')],fetchedAt:now});await settle();
 check(rows()[0]?.props['aria-label'].includes('ARR1'),'поздний ответ вылетов не подменяет прилёты');
 // Возврат показывает свой снимок сразу, но сохраняет запрос проверки свежести.
-const beforeReturn=calls.length;button('departures').props.onClick();render();
+const beforeReturn=calls.length;button('departures').props.onClick({button:0,preventDefault(){}});render();
 check(rows()[0]?.props['aria-label'].includes('DEP0'),'возврат к вылетам немедленно показывает их сохранённый снимок');
 check(calls.length===beforeReturn+1,'при возврате всё равно проверяется свежесть через API');
 const refresh=calls.at(-1);refresh.resolve({flights:[flight('NEW_DEP','cancelled')],fetchedAt:now+1000});await settle();
 check(rows().length===1&&rows()[0].props['aria-label'].includes('NEW_DEP'),'новые данные заменяют кэш и пересчитывают строки');
-button('arrivals').props.onClick();render();const failed=calls.at(-1);
+button('arrivals').props.onClick({button:0,preventDefault(){}});render();const failed=calls.at(-1);
 check(rows()[0]?.props['aria-label'].includes('ARR1'),'возврат к прилётам не ждёт сети');
 failed.reject(new Error('offline'));await settle();
 check(rows()[0]?.props['aria-label'].includes('ARR1'),'ошибка сети сохраняет снимок правильного направления');
@@ -94,7 +111,7 @@ check(true,'длительности идентичны прежнему Intl н
 // Новый компонент без ранее загруженных прилётов: ошибка не должна утверждать,
 // будто рейсов нет, и не должна оставлять вечное «Обновляем…».
 for(const s of slots)s?.cleanup?.();slots=[];effects=[];dirty=false;calls.length=0;
-render();button('arrivals').props.onClick();render();calls.at(-1).reject(new Error('offline'));await settle();
+render();button('arrivals').props.onClick({button:0,preventDefault(){}});render();calls.at(-1).reject(new Error('offline'));await settle();
 const text=JSON.stringify(tree);
 check(text.includes('board_pending')&&!text.includes('no_flights'),'пустой offline-ответ объясняет недоступность данных, а не отсутствие рейсов');
 check(!text.includes('updating_now'),'ошибка сети завершает подпись «Обновляем…»');

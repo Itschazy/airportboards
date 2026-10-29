@@ -70,7 +70,7 @@
     "main_description": "Abflüge und Ankünfte mit Zeiten, Verspätungen, Gates und Terminals: Prüfen Sie vor der Fahrt die Flugtafel für {airport} ({iata}).",
     "arrivals_title": "{airport}{showCity, select, yes {, {city}} other {}} ({iata}) – Ankunft live",
     "departures_title": "{airport}{showCity, select, yes {, {city}} other {}} ({iata}) – Abflug live",
-    "arrivals_description": "Ankünfte am Flughafen {airport} ({iata}) heute live: Landungen in Echtzeit, Status, Verspätungen sowie Abflüge im Überblick.",
+    "arrivals_description": "Ankünfte am Flughafen {airport} ({iata}) heute: Herkunftsflughäfen, Ankunftszeiten, Flugstatus, Verspätungen und Ausfälle.",
     "departures_description": "Abflüge am Flughafen {airport} ({iata}) heute live: Starts in Echtzeit, Gates, Status und Verspätungen plus aktuelle Ankünfte.",
     "routes_title": "{airport} ({iata}) — Fluggesellschaften und Reiseziele",
     "routes_description": "{airport} ({iata}) in {city}, {country}: welche Fluggesellschaften hier verkehren und wohin Sie nonstop fliegen können, plus die nächstgelegenen Flughäfen mit Linienflügen.",
@@ -79,7 +79,7 @@
     "main_title_stale": "{airport}{showCity, select, yes {, {city}} other {}} ({iata}) – Ankunft & Abflug",
     "arrivals_title_stale": "{airport}{showCity, select, yes {, {city}} other {}} ({iata}) – Ankunftstafel",
     "departures_title_stale": "{airport}{showCity, select, yes {, {city}} other {}} ({iata}) – Abflugtafel",
-    "arrivals_description_stale": "Ankunftstafel am Flughafen {airport} ({iata}): Landungen, Status, Verspätungen sowie Abflüge im Überblick.",
+    "arrivals_description_stale": "Ankunftstafel für {airport} ({iata}): Herkunftsflughäfen, Ankunftszeiten, Flugstatus, Verspätungen und Ausfälle.",
     "departures_description_stale": "Abflugtafel am Flughafen {airport} ({iata}): Starts, Gates, Status und Verspätungen plus Ankünfte."
   },
   "airport_info": {
