@@ -44,3 +44,19 @@ Fetch-preload дал дубль в Safari; независимая догрузк
 Разрешён владельцем после проверок. На момент подготовки отчёта ещё не выполнен. После push нужны Actions, SHA/BUILD_ID/pm2 и index/sitemap/live-refresh/adsense/flight-map; production только audit-bot без платных ручек и браузера.
 
 Артефакты: outputs/flight-map-v9-20261029 в основном Codex workspace (логи, JSON измерений, payload-sizes.json, снимки chrome-ru-search.png, chrome-ru-share-final.png, safari-ja-share.png).
+
+
+## Codex, 29.10.2026 — v9 опубликована и проверена
+Production/origin/main **60a940c97902bea7080277fa15c5834e54c59ce8**. Push08:42:01 Europe/Amsterdam вне прогрева. Actions40837121159 success: https://github.com/Itschazy/airportboards/actions/runs/40837121159 . Сервер тот же SHA, BUILD_IDuNeOWWIJREGIDyMWAu6V4, три pm2online428521/428522/428544,63ГБ свободно.
+
+Postdeploy:index20/20,sitemap-hreflang,live-refresh,adsense,flight-map PASS. Два обхода12/12HTMLv9+moduleLink;45/45assets rawSHA256/immutable, все br MIME/encoding правильные. Адресный revalidate не потребовался. Production толькоaudit-bot, без браузера/платныхручек; live-refresh не доказывает покупку свежести.
+
+Первый guard ошибочно ожидал отсутствие document Link у одиночного next-router-prefetch без RSC: nginx HTML-микрокэш может вернуть/сохранить обычный HTML этого синтетического запроса. Установленный Next всегда добавляет RSC:1; реальные RSC и RSC+prefetch даютtext/x-component/BYPASSбезLink. Локально уточнён guard под оба настоящих запроса; ответы дочитываются, чтобы undici не задерживал завершение. Финальный полный productionguardPASS. Начальный неудачный лог сохранён отдельно; это исправление проверки, серверные настройки не менялись. Guard+итоговаядокументация фиксируются отдельным локальным коммитом без дополнительного выката.
+
+Итог: словарь−17–22%, Safari без дубля, Paris/CDGполныйпоиск, Escape/historyисправлен. Все12локалей проверены автоматически,115тестов,build2461,tscPASS; два независимых агента **той же модели**, не несколько разных моделей/носители. Ручной Chrome320CPU6×/Safari375JA добавление/сохранение/PNG/systemshare/отменаPASS; физическихтелефонов/отправкиадресату нет.
+
+Последняяпара fullsearch5592→5314мс (~5%, не статистически доказано), map4792→4927, maxlong352→426,CLS0,000224. Цель<4с не достигнута; ранние локальные совпаденияv8 могли появляться раньше. Не сообщать об ускорении всех запросов или снижении CPU. Следующий резерв — стоимость полногоиндекса/карты на главномпотоке, отдельное измеримое worker/compact-index исследование и реальные устройства/RUM.
+
+Cwd /Users/whereiszhenya/projects/runwayboard-flight-map-prototype-20261028, веткаcodex/flight-map-prototype-20261028. СобственныеQAпроцессы/вкладкизакрыты, сборки/node_modules symlinkперенесеныв/tmp/ab-flight-map-builds-20261029/v9-final, generatedTSвосстановлены. Старый3103/чужиекопии не тронуты. CPU6× сохранённыйпрофильChrome не сбрасывался через чужую активную вкладку; собственная эмуляция закончена закрытием своей вкладки, при следующемQA проверитьпрофиль. DNS/SEO/дизайнсоседнихстраниц/историясохранены. V9теперьimmutable.
+
+Отчёт ops/prototypes/flight-map/qa/FULL-SEARCH-V9-20261029.md; артефактыoutputs/flight-map-v9-20261029 основногоCodexworkspace.

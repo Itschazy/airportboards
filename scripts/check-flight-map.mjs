@@ -4,7 +4,9 @@ import assert from 'node:assert/strict';
 import vm from 'node:vm';
 const base=(process.argv[2]||'http://localhost:3111').replace(/\/$/,'');
 const ua={'user-agent':'audit-bot'};
-const get=path=>fetch(base+path,{headers:ua});
+// Даже проверки только заголовков дочитывают ответ: иначе большие каталоги
+// остаются в сокетах undici и сторож долго не завершается после всех assert.
+const get=async(path,extra={})=>{const r=await fetch(base+path,{headers:{...ua,...extra},signal:AbortSignal.timeout(45000)});return new Response(await r.arrayBuffer(),{status:r.status,statusText:r.statusText,headers:r.headers});};
 const url='https://airportsboard.live/ru/flight-map';
 const response=await get('/ru/flight-map');assert.equal(response.status,200);
 const html=await response.text();
@@ -62,6 +64,12 @@ for(const path of ['/ru','/ru/settings','/ru/favorites','/en']){
  assert.ok(!h.includes('data-flight-map-layout'),path+' pre-paint script leaked');
  assert.ok(!/\/flight-map\/v[123456789]\/app\.js/.test(h),path+' tool code leaked');
 }
-console.log('Flight map: SSR/SEO, inline JS, 12 localized pages/navigation/catalogues/OG images, compatible old and new assets and 4 adjacent pages OK');
 
-for(const extra of [{'rsc':'1'},{'next-router-prefetch':'1'}]){const r=await fetch(base+'/ru/flight-map',{headers:{...ua,...extra}});assert.ok(!r.headers.get('link')?.includes('catalogue-'),'document hint leaked to RSC/prefetch');}
+// Next добавляет RSC:1 к любому fetch-server-response, включая prefetch.
+// Проверяем реальные клиентские запросы: nginx обходит HTML-микрокэш по RSC.
+// Одиночный next-router-prefetch без RSC — синтетический HTML-запрос: он мог
+// получить закэшированный document Link либо закэшировать HTML без Link.
+// Это воспроизведено после v9; оба настоящих RSC-варианта дают BYPASS без hint.
+for(const extra of [{'rsc':'1'},{'rsc':'1','next-router-prefetch':'1'}]){const r=await get('/ru/flight-map',extra);assert.match(r.headers.get('content-type')||'',/text\/x-component/);assert.ok(!r.headers.get('link')?.includes('catalogue-'),'document hint leaked to RSC/prefetch');}
+
+console.log('Flight map: SSR/SEO, 12 locales, catalogues/assets, 4 adjacent pages and real RSC/prefetch OK');
