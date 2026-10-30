@@ -1,5 +1,3 @@
-import { LocaleLinks } from '@/components/LocaleLinks';
-import type { Locale } from '@/lib/i18n';
 import type { Metadata } from 'next';
 import { withBrand } from '@/lib/title';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
@@ -133,13 +131,25 @@ export default async function RoutePage({ params }: Props) {
   } catch { /* неизвестный пояс: строка остаётся без предполагаемой даты */ }
 
   const canonicalUrl = `${BASE}/${locale}/route/${p.from}-${p.to}`;
+  /* Крошки — только разметкой, без своего ряда внизу (30.10.2026, решение владельца:
+     ряд убран со страницы маршрута).
+
+     Расхождения между заявленным и показанным это не создаёт, и вот почему. В списке
+     два звена: «Главная» и сама страница. Первое — живая видимая ссылка в шапке сайта
+     (логотип ведёт на /{locale}, см. SiteHeader), второе — страница, на которой читатель
+     уже стоит. Заявлять нечего сверх того, что на экране и так есть; отдельная капсула
+     повторяла бы эти два звена третий раз подряд под именем маршрута.
+
+     Массив по-прежнему один: если звеньев станет больше, разметка и вид разойтись не
+     смогут — расходиться будет нечему. */
+  const crumbs = [
+    { name: tNav('home'), item: `${BASE}/${locale}` },
+    { name: t('route_h1', { from, to, iata1: p.from, iata2: p.to }), item: canonicalUrl },
+  ];
   const jsonLd: object[] = [{
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
-    itemListElement: [
-      { '@type': 'ListItem', position: 1, name: tNav('home'), item: `${BASE}/${locale}` },
-      { '@type': 'ListItem', position: 2, name: t('route_h1', { from, to, iata1: p.from, iata2: p.to }), item: canonicalUrl },
-    ],
+    itemListElement: crumbs.map((cr, i) => ({ '@type': 'ListItem', position: i + 1, name: cr.name, item: cr.item })),
   }, {
     '@context': 'https://schema.org',
     '@type': 'WebPage',
@@ -168,59 +178,73 @@ export default async function RoutePage({ params }: Props) {
   // not apply. The taller box grows into the paragraph margins that are already there.
   const link: React.CSSProperties = { color: 'var(--ab-0a84ff)', textDecoration: 'none', display: 'inline-block', minHeight: 24 };
 
+  /* Страница маршрута — в общем стиле сайта (30.10.2026, решение владельца). Прежде весь
+     её текст лежал прямо на обоях: заголовок, две ссылки, три абзаца и список. На пёстром
+     фоне серые вторичные строки читались плохо, а у страницы не было ни одной границы —
+     ровно та же беда, из-за которой шапку аэропорта когда-то убрали под стекло.
+
+     Теперь то же самое, что на странице аэропорта: стеклянная панель с именем маршрута и
+     его данными, карточки «вопрос — ответ», стеклянные строки рейсов, пилюли ссылок и
+     крошки внизу. Ни одного нового текста: переставлены только оболочки. */
   return (
-    <div style={{ maxWidth: 760, margin: '0 auto', padding: '36px 18px 64px' }}>
+    <div style={{ maxWidth: 760, margin: '0 auto', padding: '10px 16px 48px' }}>
       {jsonLd.map((schema, i) => (
         <script key={i} type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
       ))}
-      <div style={{ fontSize: 13, color: 'var(--ab-8a8a8a)', marginBottom: 10 }}>
-        <Link href={`/${locale}`} style={{ color: 'var(--ab-6a6a6a)', textDecoration: 'none', display: 'inline-block', minHeight: 24 }}>airportsboard</Link>
-      </div>
-      <h1 style={{ fontSize: 'clamp(26px, 6.4vw, 38px)', fontWeight: 800, letterSpacing: '-0.03em', color: 'var(--ab-ffffff)', margin: '0 0 8px', lineHeight: 1.1 }}>
-        {t('route_h1', { from, to, iata1: p.from, iata2: p.to })}
-      </h1>
-      <p style={{ fontSize: 15, color: 'var(--ab-8a8a8a)', margin: '0 0 8px' }}>
-        <Link href={`/${locale}/airport/${a.iata}/departures`} style={link}>{fromName}</Link>
-        {` ${forwardArrow(locale)} `}
-        <Link href={`/${locale}/airport/${b.iata}/arrivals`} style={link}>{toName}</Link>
-      </p>
 
-      <p style={{ fontSize: 14, lineHeight: 1.55, color: 'var(--ab-8a8a8a)', margin: '0 0 16px' }}>
-        {t('route_departure_time', { iata1: p.from })}
-        {stamp && stampLabel && <><br /><time dateTime={new Date(stamp).toISOString()}>{t('route_updated', { date: stampLabel })}</time></>}
-      </p>
-
-      {airlines.length > 0 && (
-        <p style={{ fontSize: 14, color: 'var(--ab-6a6a6a)', margin: '0 0 24px' }}>
-          {t('route_airlines')}: <span style={{ color: 'var(--ab-b4b4b4)' }}>{airlines.join(' · ')}</span>
+      {/* Шапка маршрута — та же стеклянная панель и те же поля, что у .ap-head. */}
+      <div className="glass" style={{ borderRadius: 'var(--r-panel)', padding: '16px 20px 15px' }}>
+        <h1 style={{ fontSize: 'clamp(23px, 5.6vw, 32px)', fontWeight: 800, letterSpacing: '-0.03em', color: 'var(--ab-ffffff)', margin: 0, lineHeight: 1.12 }}>
+          {t('route_h1', { from, to, iata1: p.from, iata2: p.to })}
+        </h1>
+        <p style={{ fontSize: 15, color: 'var(--ab-8a8a8a)', margin: '8px 0 0' }}>
+          <Link href={`/${locale}/airport/${a.iata}/departures`} style={link}>{fromName}</Link>
+          {` ${forwardArrow(locale)} `}
+          <Link href={`/${locale}/airport/${b.iata}/arrivals`} style={link}>{toName}</Link>
         </p>
-      )}
 
-      {/* Вопросы, на которые страница теперь отвечает. Заголовок обязан быть ВОПРОСОМ, а
+        <p style={{ fontSize: 13, lineHeight: 1.5, color: 'var(--ab-8a8a8a)', margin: '8px 0 0' }}>
+          {t('route_departure_time', { iata1: p.from })}
+        </p>
+        {/* Возраст данных — точкой и мелкой строкой, как на шапке аэропорта. Живой
+            точки здесь нет: страница показывает снимок, а не опрашивает борт. */}
+        {stamp && stampLabel && (
+          <div style={{ display: 'flex', alignItems: 'center', gap: 7, marginTop: 9 }}>
+            <div aria-hidden="true" style={{ width: 6, height: 6, borderRadius: '50%', background: 'var(--ab-8a8a8a)', opacity: 0.7, flexShrink: 0 }} />
+            <time dateTime={new Date(stamp).toISOString()} style={{ fontSize: 12, color: 'var(--ab-8a8a8a)', opacity: 0.85 }}>{t('route_updated', { date: stampLabel })}</time>
+          </div>
+        )}
+      </div>
+
+      {/* Вопросы, на которые страница отвечает. Заголовок обязан быть ВОПРОСОМ, а
           ответ — целым предложением: отвечающая машина цитирует фрагмент, и «357 км» вне
           контекста не значит ничего, тогда как «Расстояние от AMS до LHR — 357 км по прямой»
-          значит. Ровно та же конструкция, что у FAQ страницы аэропорта.
-          Пары без вопроса (строка про авиакомпании) рисуются абзацем без заголовка — она уже
-          озаглавлена выше существующим ключом каталога. */}
+          значит. Ровно та же конструкция, что у FAQ страницы аэропорта, и теперь те же
+          карточки: подложка стеклянная, вопрос — пятнадцатым кеглем обычным регистром,
+          ответ — мелкой строкой под ним.
+
+          Пара без вопроса — строка про авиакомпании. Её заголовок берётся из существующего
+          ключа каталога и стоит ТУТ ЖЕ, в той же карточке. Прежде он печатался отдельным
+          абзацем наверху страницы («Авиакомпании на маршруте: Turkish Airlines»), а сам
+          ответ — внизу, среди фактов («В сохранённом табло CEK — IST указаны авиакомпании:
+          Turkish Airlines»), и читатель видел одно и то же дважды в разных местах. */}
       {facts.length > 0 && (
-        <div style={{ margin: '0 0 28px' }}>
+        <div style={{ display: 'flex', flexDirection: 'column', gap: 10, marginTop: 12 }}>
           {facts.map((f, i) => (
-            <div key={i} style={{ marginTop: i ? 18 : 0 }}>
-              {f.q && (
-                <h2 style={{ margin: '0 0 6px', fontSize: 13, fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.12em', color: 'var(--ab-8a8a8a)' }}>{f.q}</h2>
-              )}
-              <p style={{ margin: 0, fontSize: 15, lineHeight: 1.55, color: 'var(--ab-b4b4b4)' }}>{f.a}</p>
+            <div key={i} style={{ background: 'var(--glass-soft)', boxShadow: 'var(--glass-rim)', borderRadius: 'var(--r-card)', padding: '14px 16px' }}>
+              <h2 style={{ margin: 0, fontSize: 15, fontWeight: 600, color: 'var(--ab-ffffff)', lineHeight: 1.35 }}>{f.q || t('route_airlines')}</h2>
+              <p style={{ margin: '7px 0 0', fontSize: 14, lineHeight: 1.55, color: 'var(--ab-8a8a8a)' }}>{f.a}</p>
             </div>
           ))}
         </div>
       )}
 
-      <h2 style={{ margin: '16px 0 14px', fontSize: 13, fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.12em', color: 'var(--ab-8a8a8a)' }}>
+      <h2 style={{ margin: '26px 0 12px', fontSize: 13, fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.12em', color: 'var(--ab-8a8a8a)' }}>
         {t('route_flights_today')}
       </h2>
 
       {flights.length === 0 ? (
-        <div style={{ fontSize: 15, color: 'var(--ab-8a8a8a)', padding: '24px 0' }}>{t('route_none')}</div>
+        <div style={{ fontSize: 15, color: 'var(--ab-8a8a8a)', background: 'var(--glass-soft)', boxShadow: 'var(--glass-rim)', borderRadius: 'var(--r-card)', padding: '18px 16px' }}>{t('route_none')}</div>
       ) : (
         <ul style={{ listStyle: 'none', margin: 0, padding: 0, display: 'flex', flexDirection: 'column', gap: 8 }}>
           {flights.map((f, i) => {
@@ -230,7 +254,7 @@ export default async function RoutePage({ params }: Props) {
             const departureDate = departureDateFormatter && f.departureDateTs && f.departureDateTs > 0 ? new Date(f.departureDateTs * 1000) : null;
             const departureLabel = departureDate ? departureDateFormatter?.format(departureDate) : null;
             return (
-            <li key={i} style={{ display: 'flex', alignItems: 'center', gap: 14, background: 'var(--glass-soft)', boxShadow: 'var(--glass-rim)', borderRadius: 16, padding: '14px 16px', overflow: 'hidden' }}>
+            <li key={i} style={{ display: 'flex', alignItems: 'center', gap: 14, background: 'var(--glass-soft)', boxShadow: 'var(--glass-rim)', borderRadius: 'var(--r-card)', padding: '14px 16px', overflow: 'hidden' }}>
               <span style={{ width: 4, alignSelf: 'stretch', background: STATUS_COLOR[f.status] || 'var(--ab-48484a)', borderRadius: 2, flexShrink: 0 }} />
               <span style={{ fontSize: 22, fontWeight: 700, color: f.actual ? 'var(--ab-ff9f0a)' : 'var(--ab-ffffff)', fontVariantNumeric: 'tabular-nums', width: 64, flexShrink: 0 }}>{f.actual || f.scheduled}</span>
               <span style={{ flex: 1, minWidth: 0 }}>
@@ -248,16 +272,30 @@ export default async function RoutePage({ params }: Props) {
         </ul>
       )}
 
-      <p style={{ fontSize: 14, color: 'var(--ab-6a6a6a)', marginTop: 32 }}>
-        <Link href={`/${locale}/airport/${a.iata}`} style={link}>{fromName} ({a.iata})</Link>
-        {' · '}
-        <Link href={`/${locale}/airport/${b.iata}`} style={link}>{toName} ({b.iata})</Link>
-      </p>
-    {/* Эта же страница на остальных одиннадцати языках. Ряд стоит в странице,
-        а не в подвале, потому что подвал рисует раскладка, а она своего адреса
-        не знает: узнать его можно только заголовком из middleware, и тогда
-        каждая страница сайта стала бы динамической. Подробности — в LocaleLinks. */}
-    <LocaleLinks locale={locale as Locale} path={`/route/${p.from}-${p.to}`} />
+      {/* Два аэропорта маршрута — пилюлями, как ссылки в подвале: строка
+          «ссылка · ссылка» серым по обоям была наименее заметным элементом
+          страницы, хотя ведёт она в самое полезное её продолжение. Теперь это
+          и последнее, что на странице есть: ни крошек, ни языкового ряда под
+          ними больше нет. */}
+      <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: 8, marginTop: 26 }}>
+        <Link href={`/${locale}/airport/${a.iata}`} className="foot-chip">{fromName} ({a.iata})</Link>
+        <Link href={`/${locale}/airport/${b.iata}`} className="foot-chip">{toName} ({b.iata})</Link>
+      </div>
+
+    {/* Языкового ряда (LocaleLinks) на странице маршрута НЕТ — снят 30.10.2026 по решению
+        владельца: язык меняется в подвале, под «Дополнительно».
+
+        Чем это оплачено и почему здесь допустимо. Ряд заведён 28.10 потому, что после
+        переезда выбора языка на /settings внутренние страницы перестали ссылаться на свои
+        же одиннадцать переводов, а hreflang — не средство обнаружения. Для ЭТОГО типа
+        страниц обнаружение закрыто иначе: app/sitemap.ts печатает ОТДЕЛЬНЫЙ <loc> на
+        каждый язык каждого пути, включая /route/{pair} (см. там же «ОДНА ЗАПИСЬ НА КАЖДЫЙ
+        ЯЗЫК»), а generateMetadata ниже отдаёт полный набор alternates. Теряется внутренний
+        вес ссылки, а не видимость — на классе страниц, который даёт 42 визита в месяц из
+        всех двенадцати языков.
+
+        На остальных типах страниц ряд остаётся. Если снимать и там — сначала проверить,
+        что карта заявляет их так же подробно. */}
     </div>
   );
 }
