@@ -176,7 +176,10 @@ $('#flightForm').onsubmit=async e=>{e.preventDefault();if(saving)return;
 };
 // Список закрывается щелчком мимо него — как любое меню на сайте.
 listen(root,'click',e=>{const m=$('#periodMenu');if(m.open&&!e.composedPath().includes(m))m.open=false;});
-$('#fit').onclick=()=>{fit();map();};for(const [id,f] of [['zoomIn',.8],['zoomOut',1.25]])$('#'+id).onclick=()=>{if(box.w*f<50||box.w*f>1100)return;box={...box,x:box.x+box.w*(1-f)/2,y:box.y+box.h*(1-f)/2,w:box.w*f,h:box.h*f};map();};
+// Кнопки #fit на малой карте больше нет (30.10.2026): рядом стоит «на весь экран»,
+// и два похожих значка подряд читались как одна и та же кнопка. Сама функция fit()
+// осталась — ею открывается карта и ею же работает сброс в полноэкранном окне.
+for(const [id,f] of [['zoomIn',.8],['zoomOut',1.25]])$('#'+id).onclick=()=>{if(box.w*f<50||box.w*f>1100)return;box={...box,x:box.x+box.w*(1-f)/2,y:box.y+box.h*(1-f)/2,w:box.w*f,h:box.h*f};map();};
 // Резервная копия относится к журналу. Тема и язык остаются в настоящих настройках сайта.
 $('#openBackup').onclick=()=>open($('#backupDialog'));
 // PNG готов до пользовательского tap: iOS требует navigator.share прямо
