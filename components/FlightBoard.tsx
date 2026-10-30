@@ -207,11 +207,21 @@ function calcDeparture(
 
 // ─── SVG Icons ────────────────────────────────────────────────────────────────
 
-function IconSearch({ color = 'var(--ab-8a8a8a)' }) {
+/**
+ * Лупа. Размер задаётся снаружи, потому что мест два и они разного масштаба:
+ * строка поиска (16) и круглая кнопка рядом с переключателем режима (22).
+ *
+ * Толщина линии СЧИТАЕТСЯ от размера, а не задаётся числом. viewBox здесь 16, и
+ * strokeWidth="1.5" при отрисовке в 22px дал бы на экране 2.06px — вдвое толще
+ * самолётиков на соседних вкладках (1.6 в клетке 24 при размере 17 — это 1.13px).
+ * Формула держит на экране одни и те же полтора пикселя при любом размере.
+ */
+function IconSearch({ color = 'var(--ab-8a8a8a)', size = 16 }) {
+  const stroke = 1.5 * 16 / size;
   return (
-    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <circle cx="6.5" cy="6.5" r="4" stroke={color} strokeWidth="1.5"/>
-      <path d="M10 10L13.5 13.5" stroke={color} strokeWidth="1.5" strokeLinecap="round"/>
+    <svg width={size} height={size} viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="6.5" cy="6.5" r="4" stroke={color} strokeWidth={stroke}/>
+      <path d="M10 10L13.5 13.5" stroke={color} strokeWidth={stroke} strokeLinecap="round"/>
     </svg>
   );
 }
@@ -1595,10 +1605,20 @@ export function FlightBoard({ airport, locale, defaultMode = 'departures', displ
                 {/* ЧТО С НИМ: выход и статус */}
                 <div className="frow-what">
                   <div className="frow-status">
+                    {/* Подпись и номер выхода разрешено разнести по строкам, а сам номер —
+                        нет (30.10.2026). «Выход A12-B14» одной неразрывной строкой занимал
+                        112px в колонке шириной 86 и вылезал прямо на стрелку справа: nowrap
+                        на всей строке означал, что выравнивание по краю уже не работает —
+                        строка шире коробки просто растёт вправо. Теперь перенос возможен
+                        только по пробелу между словом и номером, а номер с дефисом остаётся
+                        целым, как написан на табличке. Ровно та же поправка, что строкой
+                        ниже сделана для спокойного статуса.
+                        Кегль у длинного номера на ступень меньше: «A12-B14» восемнадцатым
+                        занимает 72px при колонке 76 на 320px — впритык. */}
                     {f.gate && (
                       <div className="frow-gate">
                         <span style={{ fontSize: 12, color: C.secondary }}>{t('gate')} </span>
-                        <bdi style={{ fontSize: 18, fontWeight: 700, color: C.text, letterSpacing: '-0.01em' }}>{f.gate}</bdi>
+                        <bdi style={{ fontSize: f.gate.length > 4 ? 15 : 18, fontWeight: 700, color: C.text, letterSpacing: '-0.01em', whiteSpace: 'nowrap' }}>{f.gate}</bdi>
                       </div>
                     )}
                     {/* nowrap у спокойного статуса снят: в 124px колонке он и так
@@ -1805,10 +1825,19 @@ export function FlightBoard({ airport, locale, defaultMode = 'departures', displ
                       if (e.key === ' ') { e.preventDefault(); e.currentTarget.click(); }
                     }} style={{
                     textDecoration: 'none', fontFamily: 'inherit', lineHeight: 'normal',
-                    flex: 1, padding: '10px 0', minHeight: 40, fontSize: 14, fontWeight: 600,
+                    flex: 1, padding: '10px 0', minHeight: 40, fontSize: 14,
                     border: 'none', borderRadius: 999, cursor: 'pointer',
-                    background: active ? 'var(--glass-dense)' : 'transparent', color: active ? C.text : C.secondary,
-                    transition: 'all 0.18s ease', letterSpacing: '-0.01em',
+                    /* Подложки у выбранной вкладки больше нет (30.10.2026, решение
+                       владельца): var(--glass-dense) внутри стеклянной капсулы давал
+                       второй слой стекла поверх первого — светлую плашку в оправе.
+                       Выбранную вкладку теперь отличают цвет и насыщенность начертания.
+                       Насыщенность здесь не для красоты: цвет остался бы единственным
+                       признаком состояния, а 700 против 600 — признак нецветовой, и он
+                       ничего не двигает, потому что ширину вкладки задаёт flex, а не
+                       текст. Программе чтения состояние и так сообщает aria-pressed. */
+                    background: 'transparent', color: active ? C.text : C.secondary,
+                    fontWeight: active ? 700 : 600,
+                    transition: 'color 0.18s ease', letterSpacing: '-0.01em',
                     display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 6,
                   }}>
                     {/* Вектор вместо знаков ✈ и 🛬: второй — цветной эмодзи, он
@@ -1837,7 +1866,10 @@ export function FlightBoard({ airport, locale, defaultMode = 'departures', displ
                 borderRadius: 999, border: 'none', cursor: 'pointer',
               }}
             >
-              <IconSearch color={C.secondary} />
+              {/* 22 в кнопке 52px: прежние 16 занимали меньше трети её поперечника,
+                  и лупа тонула в подложке. Соседние круглые кнопки сайта держат
+                  около половины: 20 в сорока у карточки рейса, 20–22 в шапке. */}
+              <IconSearch color={C.secondary} size={22} />
             </button>
 
           </div>

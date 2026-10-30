@@ -267,7 +267,11 @@ input::-webkit-search-cancel-button { display: none; }
    всякого знака и читалось как ошибка данных. */
 .frow-meta { font-size: clamp(11px, 3.1vw, 12px); margin-top: 4px; line-height: 1.35; display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2; overflow: hidden; text-overflow: ellipsis; }
 .frow-what { flex-shrink: 0; display: flex; align-items: center; gap: 8px; }
-.frow-gate { line-height: 1.1; white-space: nowrap; margin-bottom: 5px; }
+/* nowrap снят (30.10.2026): «Выход A12-B14» одной строкой был шире колонки и
+   вылезал на стрелку справа — строка шире коробки растёт вправо, и text-align
+   её уже не держит. Перенос возможен только по пробелу перед номером: сам номер
+   объявлен nowrap в разметке. */
+.frow-gate { line-height: 1.15; margin-bottom: 5px; }
 /* text-wrap: balance делит статус на две РОВНЫЕ строки вместо «длинная + хвост».
    Там, где его нет, строка переносится как раньше — ничего не ломается. */
 /* Верх 124px: столько нужно «ЗАДЕРЖКА 45 МИН» на две ровные строки и
