@@ -33,10 +33,10 @@ export function PopularList({ airports, locale, depLabel, arrLabel }: {
       {airports.map(a => {
         const c = counts[a.iata];
         return (
-          <Link key={a.iata} href={`/${locale}/airport/${a.iata}`} style={{
+          <Link key={a.iata} href={`/${locale}/airport/${a.iata}`} className="glass-soft" style={{
             display: 'flex', alignItems: 'center', gap: 10, minWidth: 0,
             textDecoration: 'none', color: 'inherit',
-            background: 'var(--glass-soft)', boxShadow: 'var(--glass-rim)', borderRadius: 16,
+            borderRadius: 16,
             padding: '10px 14px',
           }}>
             {/* Строка в одну линию: код слева, город за ним, название аэропорта

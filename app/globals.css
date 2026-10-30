@@ -1156,10 +1156,14 @@ body::after {
   margin-top: 12px;
   padding: 16px 20px;
   border-radius: var(--r-card);
-  background: var(--glass);
-  -webkit-backdrop-filter: var(--blur);
-          backdrop-filter: var(--blur);
-  box-shadow: var(--glass-rim), var(--glass-scatter-short);
+  /* Материал тот же, что у каталогов ниже (класс .glass-soft): плотная заливка
+     --glass и размытие 18px делали эти блоки третьим материалом подряд на одном
+     экране. Рецепт расписан здесь, а не взят классом, потому что у них своя
+     пара откатов строкой ниже. */
+  background: var(--glass-soft);
+  -webkit-backdrop-filter: var(--blur-soft);
+          backdrop-filter: var(--blur-soft);
+  box-shadow: var(--glass-rim), var(--glass-scatter-short), var(--glass-lift-sm);
 }
 .home-metric {
   position: relative;
@@ -1174,10 +1178,14 @@ body::after {
   gap: 3px;
   padding: 12px 14px;
   border-radius: var(--r-card);
-  background: var(--glass);
-  -webkit-backdrop-filter: var(--blur);
-          backdrop-filter: var(--blur);
-  box-shadow: var(--glass-rim), var(--glass-scatter-short);
+  /* Материал тот же, что у каталогов ниже (класс .glass-soft): плотная заливка
+     --glass и размытие 18px делали эти блоки третьим материалом подряд на одном
+     экране. Рецепт расписан здесь, а не взят классом, потому что у них своя
+     пара откатов строкой ниже. */
+  background: var(--glass-soft);
+  -webkit-backdrop-filter: var(--blur-soft);
+          backdrop-filter: var(--blur-soft);
+  box-shadow: var(--glass-rim), var(--glass-scatter-short), var(--glass-lift-sm);
 }
 @supports not ((-webkit-backdrop-filter: blur(1px)) or (backdrop-filter: blur(1px))) {
   .home-intro-card, .home-metric { background: var(--glass-solid); }
@@ -1293,6 +1301,15 @@ body::after {
 }
 @media (max-width: 560px) {
   .country-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+/* Карточек каталога на главной порядка сорока, и теперь у каждой свой слой
+   размытия. Цену снимает то же, чем она снята у строк табло: за пределами
+   экрана карточка не отрисовывается вовсе, поэтому размытие считается только у
+   видимых. contain-intrinsic-size держит высоту неотрисованных, иначе полоса
+   прокрутки скакала бы. */
+.country-grid > a, .popular-grid > a {
+  content-visibility: auto;
+  contain-intrinsic-size: auto 46px;
 }
 /* Популярные аэропорты — две колонки. Порог тот же, что у каталога стран, чтобы
    оба блока перестраивались на одной ширине и не расходились по вёрстке. */

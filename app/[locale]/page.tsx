@@ -199,9 +199,9 @@ export default async function HomePage({ params }: Props) {
             186px у карточки больше не нужны. */}
         <div className="country-grid">
           {countries.map(c => (
-            <Link key={c.slug} href={`/${locale}/airports/${c.slug}`} style={{
+            <Link key={c.slug} href={`/${locale}/airports/${c.slug}`} className="glass-soft" style={{
               minWidth: 0, textDecoration: 'none', color: 'inherit',
-              background: 'var(--glass-soft)', boxShadow: 'var(--glass-rim)', borderRadius: 14, padding: '9px 12px',
+              borderRadius: 16, padding: '9px 12px',
               display: 'flex', flexDirection: 'column', justifyContent: 'center',
             }}>
               <div style={{ fontSize: 13.5, color: 'var(--ab-e4e4e7)', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>
@@ -222,7 +222,7 @@ export default async function HomePage({ params }: Props) {
             скрипту: это навигация, и поисковик с программой чтения должны видеть
             её как ссылку. Страница /airports существует давно — здесь только
             видимый вход в неё с главной. */}
-        <Link href={`/${locale}/airports`} className="country-more glass">
+        <Link href={`/${locale}/airports`} className="country-more glass-soft">
           {t('other_country')}
           <svg data-flip width="7" height="12" viewBox="0 0 8 14" fill="none" aria-hidden="true">
             <path d="M1 1L7 7L1 13" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" />
@@ -253,9 +253,9 @@ export default async function HomePage({ params }: Props) {
         <Title>{t('sec_cities')}</Title>
         <div className="scroll-row">
           {POPULAR_CITIES.map(c => (
-            <Link key={c.code} href={`/${locale}/city/${slugify(getAirport(c.iata)?.city || c.name)}`} style={{
+            <Link key={c.code} href={`/${locale}/city/${slugify(getAirport(c.iata)?.city || c.name)}`} className="glass-soft" style={{
               width: 148, height: 66, textDecoration: 'none', color: 'inherit',
-              background: 'var(--glass-soft)', boxShadow: 'var(--glass-rim)', borderRadius: 16, padding: '0 14px',
+              borderRadius: 16, padding: '0 14px',
               display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', textAlign: 'center',
             }}>
               <div style={{ fontSize: 15, color: 'var(--ab-e4e4e7)', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis', maxWidth: '100%' }}>{getCityName(getAirport(c.iata)?.city || c.name, locale, c.name)}</div>
