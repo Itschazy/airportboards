@@ -204,9 +204,55 @@ const shareJobs=latestJob({
  },
  error(){if(signal.aborted||!$('#shareDialog').open)return;$('#sharePreview').setAttribute('aria-busy','false');$('#shareStatus').textContent=t("m120");}
 });
+// Свой выпадающий список вместо системного.
+//
+// Системный список рисует браузер, и задать в нём можно только цвет пунктов —
+// на десктопе это серое окно операционной системы посреди стеклянной шторки.
+// Поэтому список заменён, а нативный <select> ОСТАВЛЕН в разметке: он хранит
+// значение и по-прежнему шлёт change, так что остальной код про подмену не
+// знает. Из дерева доступности он убран, вместо него кнопка role=combobox и
+// список role=listbox с клавиатурой: стрелки, Home/End, Enter, Esc.
+function enhanceSelect(select){
+ const wrap=document.createElement('div');wrap.className='ab-select';
+ const btn=document.createElement('button');btn.type='button';btn.className='ab-select-btn';
+ btn.setAttribute('aria-haspopup','listbox');btn.setAttribute('aria-expanded','false');
+ const label=select.getAttribute('aria-label');if(label){btn.setAttribute('aria-label',label);}
+ const value=document.createElement('span');value.className='ab-select-value';btn.append(value);
+ btn.insertAdjacentHTML('beforeend','<svg class="ab-select-chev" viewBox="0 0 12 8" aria-hidden="true"><path d="M1 1.6 6 6.4 11 1.6"/></svg>');
+ const pop=document.createElement('div');pop.className='ab-select-pop';pop.setAttribute('role','listbox');pop.hidden=true;
+ if(label)pop.setAttribute('aria-label',label);
+ select.after(wrap);wrap.append(btn,pop);
+ select.classList.add('ab-select-native');select.setAttribute('aria-hidden','true');select.tabIndex=-1;
+ const render=()=>{pop.innerHTML='';
+  [...select.options].forEach((o,i)=>{const item=document.createElement('div');
+   item.className='ab-select-item';item.setAttribute('role','option');item.tabIndex=-1;
+   item.dataset.index=String(i);item.setAttribute('aria-selected',String(i===select.selectedIndex));
+   item.textContent=o.text;pop.append(item);});
+  value.textContent=select.options[select.selectedIndex]?.text??'';};
+ const shut=focus=>{if(pop.hidden)return;pop.hidden=true;btn.setAttribute('aria-expanded','false');if(focus)btn.focus();};
+ const show=()=>{if(!pop.hidden)return;render();pop.hidden=false;btn.setAttribute('aria-expanded','true');
+  const cur=pop.children[Math.max(0,select.selectedIndex)];if(cur){cur.focus();cur.scrollIntoView({block:'nearest'});}};
+ // change шлём ВРУЧНУЮ: программная смена selectedIndex события не рождает.
+ const pick=i=>{if(i<0||i>=select.options.length)return;select.selectedIndex=i;render();shut(true);
+  select.dispatchEvent(new Event('change',{bubbles:true}));};
+ btn.onclick=()=>{if(pop.hidden)show();else shut(true);};
+ btn.onkeydown=e=>{if(e.key==='ArrowDown'||e.key==='ArrowUp'){e.preventDefault();show();}};
+ pop.onclick=e=>{const it=e.target.closest('.ab-select-item');if(it)pick(Number(it.dataset.index));};
+ pop.onkeydown=e=>{const items=[...pop.children],i=items.indexOf(document.activeElement);
+  if(e.key==='Escape'){e.preventDefault();shut(true);}
+  else if(e.key==='ArrowDown'){e.preventDefault();(items[Math.min(items.length-1,i+1)]||items[0]).focus();}
+  else if(e.key==='ArrowUp'){e.preventDefault();(items[Math.max(0,i-1)]||items[0]).focus();}
+  else if(e.key==='Home'){e.preventDefault();items[0].focus();}
+  else if(e.key==='End'){e.preventDefault();items[items.length-1].focus();}
+  else if(e.key==='Enter'||e.key===' '){e.preventDefault();pick(i);}
+  else if(e.key==='Tab'){shut(false);}};
+ listen(document,'pointerdown',e=>{if(!wrap.contains(e.target))shut(false);});
+ return {sync(){shut(false);render();wrap.hidden=select.hidden;}};
+}
+const shareSelects=[enhanceSelect($('#shareYear')),enhanceSelect($('#shareFlight'))];
 function refreshShare(){shareBlob=null;shareCard=null;shareFile=null;$('#sharePreview').setAttribute('aria-busy','true');$('#nativeShare').disabled=true;$('#download').disabled=true;$('#copyCaption').disabled=true;$('#shareStatus').textContent=t("m121");
  $$('.share-tabs button').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.shareKind===shareKind)));$$('[data-format]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.format===shareFormat)));
- $('#shareYear').hidden=shareKind!=='year';$('#shareFlight').hidden=shareKind!=='flight';$('#caption').hidden=true;
+ $('#shareYear').hidden=shareKind!=='year';$('#shareFlight').hidden=shareKind!=='flight';$('#caption').hidden=true;shareSelects.forEach(s=>s.sync());
  shareJobs.push({flights,kind:shareKind,year:$('#shareYear').value,flightId:$('#shareFlight').value,format:shareFormat,light:shareLight,demo:isDemo});
 }
 listen($('#shareDialog'),'close',()=>{shareJobs.cancel();shareBlob=null;shareCard=null;shareFile=null;if(previewURL){URL.revokeObjectURL(previewURL);previewURL=null;}$('#sharePreview').innerHTML='';});
