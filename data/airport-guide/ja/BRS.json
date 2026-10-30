@@ -1,0 +1,26 @@
+{
+  "iata": "BRS",
+  "blocks": {
+    "transport": {
+      "title": "アクセス",
+      "hint": "A1バス：£9.50",
+      "text": "Airport Flyer A1バスはBedminster、Bristol Temple Meads、Bristol Bus Stationを経由してブリストルへ向かいます。クリスマス当日を除き終日運行し、祝祭期間は時刻表が変わります。大人の片道運賃は£9.50です。乗車券はオンラインまたは乗車時に運転手から購入できます。"
+    },
+    "lounges": {
+      "title": "ラウンジ",
+      "hint": "保安検査後のEscape Lounge",
+      "text": "Escape Loungeは保安検査とDuty Freeを通過した先、出発エリアの中間階にあります。毎日03:30～19:30に営業し、事前予約はお一人£39.99からです。温かい料理と冷たい料理、飲み物、Wi-Fiが含まれます。利用は出発予定時刻前の3時間までで、チェックイン、手荷物預け入れ、ラウンジの営業時間による制限があります。"
+    },
+    "sleep": {
+      "title": "宿泊",
+      "hint": "ターミナル近くのHampton by Hilton",
+      "text": "Hampton by Hiltonは空港敷地内にあり、チェックインエリアまで徒歩数分で、ターミナルへの歩道があります。ホテルでは温かい朝食とWi-Fiを無料で利用できます。チェックインは15:00から、チェックアウトは11:00までです。"
+    },
+    "parking": {
+      "title": "駐車場",
+      "hint": "Waiting Zone：1時間無料",
+      "text": "Waiting Zoneでは送迎や旅客の到着待ちのために最長1時間無料で駐車できます。別のDrop Off & Pick Up駐車場は有料です。30分以内にWaiting Zoneへ再入場することは禁止されており、再入場すると駐車規則違反に伴う支払い通知が自動的に発行されます。"
+    }
+  },
+  "about": "Airport Flyer A1バスがブリストル空港と市内を結びます。Bristol Temple MeadsとBristol Bus Stationを経由します。"
+}

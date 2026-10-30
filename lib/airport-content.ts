@@ -40,7 +40,13 @@ export function getAirportContent(iata: string, locale: string): string | null {
   // при проверке серверного HTML 28.10.2026). getAirportGuide не подставляет русский текст
   // вместо отсутствующего перевода. Старая сгенерированная проза ниже по-прежнему только RU.
   const verified = getAirportGuide(iata, locale)?.about;
-  if (verified && verified.length > 20) return verified;
+  // 30.10.2026: порог >20 молча скрывал проверенный китайский about GCI
+  // ровно из 20 знаков. Смысл и источник проверяет редакционная справочная,
+  // длина в буквах разных языков качество не измеряет. Здесь нужен только
+  // непустой текст; ниже граница старой сгенерированной прозы не меняется.
+  // Проверено короткими ZH/JA, пустым текстом и RU/EN fallback в unit-тесте,
+  // затем видимым SSR и FAQ всех 12 локалей BRS/GCI/JER.
+  if (verified?.trim()) return verified;
   // Никакого фолбэка на английский для снятых языков: прежний `obj[locale] || obj.en` отдал
   // бы английский сгенерированный текст на любой локали, где своего нет.
   if (!GENERATED_PROSE_LOCALES.has(locale)) return null;

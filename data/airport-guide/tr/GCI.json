@@ -1,0 +1,26 @@
+{
+  "iata": "GCI",
+  "blocks": {
+    "transport": {
+      "title": "Ulaşım",
+      "hint": "St Peter Port otobüsleri",
+      "text": "93, 94 ve 95 numaralı otobüsler havalimanını doğrudan St Peter Port Bus Terminus’a bağlar. 71 numaralı hat, Princess Elizabeth Hospital üzerinden St Peter Port’a gider. Nakit kabul edilmez; temassız ödeme veya Concession/Student kartları kullanılır."
+    },
+    "taxi": {
+      "title": "Taksi",
+      "hint": "Terminalin önünde taksi durağı",
+      "text": "Lisanslı taksi durağı terminalin hemen önündedir. Önceden rezervasyon yapılan araçlar için durağın arkasında ayrı bir alan vardır. Tekerlekli sandalye kullanan yolcular için düşük eğimli rampalara sahip lisanslı taksiler de mevcuttur."
+    },
+    "storage": {
+      "title": "Bagaj emaneti",
+      "hint": "Her gün 09:00–17:00",
+      "text": "Bagaj emanet hizmeti, check-in öncesinde havalimanından ayrılmak isteyen yolcular için her gün 09:00–17:00 saatlerinde açıktır. Bagajlar güvenlik kontrolünden geçirilir; tesiste personel ve kamera gözetimi bulunur. Bilgi, Customer Services Information bankosundan alınabilir."
+    },
+    "parking": {
+      "title": "Otopark",
+      "hint": "İlk 30 dakika ücretsiz",
+      "text": "Her iki otopark da terminale yakındır; ilk 30 dakika ücretsizdir. Yolcu indirme ve alma alanları terminalin hemen önündedir. Otopark bileti girişte verilir; çıkmadan önce ana terminaldeki makinelerden nakit veya temassız dahil kartla ödeme yapılır."
+    }
+  },
+  "about": "Guernsey Havalimanı, adanın güneyindeki Forest bölgesindedir."
+}

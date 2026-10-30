@@ -1,0 +1,26 @@
+{
+  "iata": "GCI",
+  "blocks": {
+    "transport": {
+      "title": "Come arrivare",
+      "hint": "Autobus per St Peter Port",
+      "text": "Gli autobus 93, 94 e 95 collegano direttamente l’aeroporto con St Peter Port Bus Terminus. La linea 71 raggiunge St Peter Port passando per il Princess Elizabeth Hospital. Non si accettano contanti: si paga contactless oppure con carte Concession/Student."
+    },
+    "taxi": {
+      "title": "Taxi",
+      "hint": "Posteggio davanti al terminal",
+      "text": "Il posteggio dei taxi autorizzati si trova direttamente davanti al terminal. I veicoli prenotati in anticipo dispongono di un’area separata dietro il posteggio. Sono disponibili anche taxi autorizzati accessibili alle sedie a rotelle, dotati di rampe a bassa pendenza."
+    },
+    "storage": {
+      "title": "Deposito bagagli",
+      "hint": "Ogni giorno, 09:00–17:00",
+      "text": "Il deposito bagagli è aperto ogni giorno dalle 09:00 alle 17:00 per i passeggeri che desiderano lasciare l’aeroporto prima del check-in. I bagagli sono sottoposti a controlli di sicurezza; il locale è presidiato dal personale e videosorvegliato. Per informazioni è disponibile lo sportello Customer Services Information."
+    },
+    "parking": {
+      "title": "Parcheggio",
+      "hint": "Primi 30 minuti gratuiti",
+      "text": "Entrambi i parcheggi sono vicini al terminal; i primi 30 minuti sono gratuiti. Le zone per accompagnare e prelevare i passeggeri si trovano direttamente davanti al terminal. Il biglietto viene emesso all’ingresso; prima di uscire si paga alle casse automatiche nel terminal principale, in contanti o con carta, anche contactless."
+    }
+  },
+  "about": "L’aeroporto di Guernsey si trova nella parrocchia di Forest, nel sud dell’isola."
+}

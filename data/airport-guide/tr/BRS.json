@@ -1,0 +1,26 @@
+{
+  "iata": "BRS",
+  "blocks": {
+    "transport": {
+      "title": "Ulaşım",
+      "hint": "A1 otobüsü: £9.50",
+      "text": "Airport Flyer A1 otobüsü, Bedminster, Bristol Temple Meads ve Bristol Bus Station üzerinden Bristol’e gider. Noel Günü dışında gece gündüz çalışır; bayram döneminde tarifeler değişir. Yetişkin tek yön bileti £9.50 tutarındadır. Bilet internetten veya binerken şoförden alınabilir."
+    },
+    "lounges": {
+      "title": "Dinlenme salonları",
+      "hint": "Güvenlik sonrası Escape Lounge",
+      "text": "Escape Lounge, güvenlik kontrolü ve Duty Free sonrasında, gidiş alanının asma katındadır. Her gün 03:30–19:30 saatlerinde açıktır; ön rezervasyon kişi başı £39.99’dan başlar. Sıcak ve soğuk yemekler, içecekler ve Wi-Fi dahildir. Kalış süresi, tarifeli kalkıştan önceki 3 saatle sınırlıdır ve check-in, bagaj teslimi ile salonun açılış saatlerine bağlıdır."
+    },
+    "sleep": {
+      "title": "Nerede kalınır",
+      "hint": "Terminal yakınında Hampton by Hilton",
+      "text": "Hampton by Hilton havalimanı arazisinde, check-in alanına birkaç dakikalık yürüme mesafesindedir; terminale bir yaya yolu uzanır. Otelde sıcak kahvaltı ve Wi-Fi ücretsizdir. Giriş 15:00’ten itibaren, çıkış en geç 11:00’dedir."
+    },
+    "parking": {
+      "title": "Otopark",
+      "hint": "Waiting Zone: 1 saat ücretsiz",
+      "text": "Waiting Zone’da yolcu almak, bırakmak veya beklemek için 1 saate kadar ücretsiz park edilebilir. Ayrı bir otopark olan Drop Off & Pick Up ücretlidir. Waiting Zone’a 30 dakika içinde tekrar giriş yasaktır; tekrar giriş otomatik olarak park ihlali ödeme bildirimine yol açar."
+    }
+  },
+  "about": "Airport Flyer A1 otobüsü Bristol Havalimanı’nı şehre bağlar. Güzergâh Bristol Temple Meads ve Bristol Bus Station üzerinden geçer."
+}

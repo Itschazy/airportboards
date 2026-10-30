@@ -1,0 +1,26 @@
+{
+  "iata": "BRS",
+  "blocks": {
+    "transport": {
+      "title": "Come arrivare",
+      "hint": "Autobus A1: £9.50",
+      "text": "L’autobus Airport Flyer A1 raggiunge Bristol passando per Bedminster, Bristol Temple Meads e Bristol Bus Station. Circola giorno e notte, tranne il giorno di Natale; gli orari cambiano durante le festività. Un biglietto di sola andata per adulti costa £9.50. Si può acquistare online o dal conducente al momento di salire."
+    },
+    "lounges": {
+      "title": "Lounge",
+      "hint": "Escape Lounge dopo i controlli",
+      "text": "L’Escape Lounge si trova al livello ammezzato dell’area partenze, dopo i controlli di sicurezza e Duty Free. È aperta tutti i giorni dalle 03:30 alle 19:30; la prenotazione anticipata costa da £39.99 a persona. Sono inclusi piatti caldi e freddi, bevande e Wi-Fi. La permanenza è limitata a 3 ore prima della partenza prevista ed è soggetta agli orari di apertura del check-in, della consegna bagagli e della lounge."
+    },
+    "sleep": {
+      "title": "Dove dormire",
+      "hint": "Hampton by Hilton presso il terminal",
+      "text": "L’Hampton by Hilton si trova nell’area aeroportuale, a pochi minuti a piedi dal check-in; un percorso pedonale conduce al terminal. L’hotel offre colazione calda e Wi-Fi gratuiti. Il check-in è dalle 15:00, il check-out entro le 11:00."
+    },
+    "parking": {
+      "title": "Parcheggio",
+      "hint": "Waiting Zone: 1 ora gratuita",
+      "text": "La Waiting Zone consente di parcheggiare gratuitamente fino a 1 ora per accompagnare, prelevare o attendere un passeggero. Il parcheggio separato Drop Off & Pick Up è a pagamento. È vietato rientrare nella Waiting Zone entro 30 minuti: il rientro genera automaticamente un avviso di pagamento per violazione delle regole di parcheggio."
+    }
+  },
+  "about": "L’autobus Airport Flyer A1 collega l’aeroporto di Bristol alla città. Il percorso passa per Bristol Temple Meads e Bristol Bus Station."
+}

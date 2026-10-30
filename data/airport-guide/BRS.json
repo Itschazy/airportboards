@@ -1,0 +1,40 @@
+{
+  "iata": "BRS",
+  "checked": "2026-10-30",
+  "blocks": [
+    {
+      "id": "transport",
+      "title": "Как доехать",
+      "hint": "Автобус A1: £9.50",
+      "text": "Автобус Airport Flyer A1 идёт в Бристоль через Bedminster, Bristol Temple Meads и автовокзал Bristol Bus Station. Он работает круглосуточно, кроме Рождества; в праздничный период расписание меняется. Взрослый билет в одну сторону стоит £9.50. Билет можно купить онлайн или у водителя при посадке.",
+      "url": "https://www.bristolairport.co.uk/to-and-from-the-airport/by-airport-flyer/",
+      "source": "bristolairport.co.uk"
+    },
+    {
+      "id": "lounges",
+      "title": "Бизнес-залы",
+      "hint": "Escape Lounge после досмотра",
+      "text": "Escape Lounge расположен на антресольном уровне зоны вылета, после досмотра и Duty Free. Он открыт ежедневно с 03:30 до 19:30; предварительное бронирование стоит от £39.99 на человека. Включены горячие и холодные блюда, напитки и Wi-Fi. Пребывание ограничено 3 часами до вылета по расписанию и зависит от времени открытия регистрации, сдачи багажа и самого зала.",
+      "url": "https://www.bristolairport.co.uk/at-the-airport/airport-lounge/",
+      "source": "bristolairport.co.uk"
+    },
+    {
+      "id": "sleep",
+      "title": "Где поспать",
+      "hint": "Hampton by Hilton у терминала",
+      "text": "Hampton by Hilton находится на территории аэропорта, в нескольких минутах ходьбы от регистрации; к терминалу ведёт пешеходная дорожка. В отеле есть бесплатные горячий завтрак и Wi-Fi. Заселение — с 15:00, выезд — до 11:00.",
+      "url": "https://www.bristolairport.co.uk/at-the-airport/hotels/",
+      "source": "bristolairport.co.uk"
+    },
+    {
+      "id": "parking",
+      "title": "Парковка",
+      "hint": "Waiting Zone: 1 час бесплатно",
+      "text": "В зоне Waiting Zone можно бесплатно парковаться до 1 часа для встречи, высадки или ожидания пассажира. Отдельная парковка Drop Off & Pick Up платная. Повторный въезд в Waiting Zone в течение 30 минут запрещён: за него автоматически выписывают требование об оплате за нарушение правил парковки.",
+      "url": "https://www.bristolairport.co.uk/parking/waiting-zone/",
+      "source": "bristolairport.co.uk"
+    }
+  ],
+  "about": "Аэропорт Бристоля связан с городом автобусом Airport Flyer A1. Маршрут проходит через Bristol Temple Meads и Bristol Bus Station.",
+  "about_url": "https://www.bristolairport.co.uk/to-and-from-the-airport/by-airport-flyer/"
+}

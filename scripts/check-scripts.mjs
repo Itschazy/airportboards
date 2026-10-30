@@ -73,7 +73,7 @@ let checked = 0;
 const problems = [];
 
 /**
- * Files to walk: data/*.json PLUS data/airport-content/*.json.
+ * Files to walk: data/*.json PLUS data/airport-content/*.json и airport-guide.
  *
  * readdirSync('data') only lists the top level, so the airport prose — 6,072 files, 72,864
  * localised paragraphs, 99.9% of the localised corpus by volume and the ONLY unique text on
@@ -82,7 +82,18 @@ const problems = [];
  * "arrivals (arrivals)" tautology, without anything failing. A validator that skips the
  * corpus it exists to protect is worse than no validator, because it reports success.
  */
+// 30.10.2026: справочные имели другую JSON-форму и вообще не проверялись.
+// Нормализуем только видимые about/title/hint/text; URL, source, IATA и даты
+// не являются переводом. Как и другой prose, проверяем алфавит без эвристики
+// склеек: китайский текст законно примыкает к латинскому имени Escape Lounge.
+const GUIDE_DIR = path.join('data','airport-guide');
+const GUIDE_FILES = fs.readdirSync(GUIDE_DIR,{withFileTypes:true}).flatMap(entry => {
+  if(entry.isFile() && /^[A-Z]{3}\.json$/.test(entry.name))return [path.join(GUIDE_DIR,entry.name)];
+  if(entry.isDirectory() && ALLOWED[entry.name])return fs.readdirSync(path.join(GUIDE_DIR,entry.name)).filter(f=>/^[A-Z]{3}\.json$/.test(f)).map(f=>path.join(GUIDE_DIR,entry.name,f));
+  return [];
+});
 const FILES = [
+  ...GUIDE_FILES,
   ...fs.readdirSync('data').filter(f => f.endsWith('.json')).map(f => path.join('data', f)),
   ...(fs.existsSync(path.join('data', 'airport-content'))
     ? fs.readdirSync(path.join('data', 'airport-content'))
@@ -101,10 +112,26 @@ for (const p of FILES) {
   // city-names and so on. The prose files are flat {locale: text}, one file per airport. Wrap
   // the flat ones so a single loop handles both; without this the nested walk below hits a
   // string where it expects an object and `continue`s past the entire prose corpus.
-  const isFlat = Object.values(json).every(v => typeof v === 'string');
-  const entries = isFlat
+  const isGuide = p.startsWith(GUIDE_DIR+path.sep);
+  const guideLocale = path.dirname(p)===GUIDE_DIR?'ru':path.basename(path.dirname(p));
+  const guideEntries = isGuide ? [
+    ...(typeof json.about==='string'?[['about',{[guideLocale]:json.about}]]:[]),
+    ...Object.entries(json.blocks||{}).flatMap(([key,b])=>['title','hint','text'].filter(field=>typeof b[field]==='string').map(field=>[`${b.id||key}.${field}`,{[guideLocale]:b[field]}])),
+  ] : null;
+  // Кириллический индекс на настоящем указателе сохраняем (106н, Р1, 1А).
+  // Разрешение узкое: только буквенно-цифровые подписи, подтверждённые
+  // в РУССКОМ оригинале того же аэропорта, не любые кириллические слова.
+  // Запись индекса в скобках (101 (к)) равнозначна слитной 101к.
+  // Сверяем весь буквенно-цифровой токен: разрешённый Р1 не разрешает Р12
+  // или 106н внутри неизвестного 2106н. CJK/арабский/хангыль вокруг подписи
+  // не входят в токен и не требуют искусственного пробела в переводе.
+  const originalGuide = isGuide ? JSON.parse(fs.readFileSync(path.join(GUIDE_DIR,path.basename(p)),'utf8')) : null;
+  const sourceLabels = isGuide ? [...new Set(JSON.stringify(originalGuide).match(/[А-Яа-яЁё]{1,2}-?[0-9]+[А-Яа-яЁё]?|[0-9]+-?[А-Яа-яЁё]{1,2}/g)||[])] : [];
+  if(isGuide)for(const label of JSON.stringify(originalGuide).match(/[0-9]+\s*\([А-Яа-яЁё]{1,2}\)/g)||[])sourceLabels.push(label.replace(/[\s()]/g,''));
+  const isFlat = isGuide || Object.values(json).every(v => typeof v === 'string');
+  const entries = guideEntries ?? (isFlat
     ? [[path.basename(p, '.json'), json]]
-    : Object.entries(json);
+    : Object.entries(json));
 
   for (const [key, value] of entries) {
     if (!value || typeof value !== 'object' || Array.isArray(value)) continue;
@@ -113,7 +140,8 @@ for (const p of FILES) {
       if (!allowed || typeof text !== 'string' || !text) continue;
       checked++;
       const found = new Set();
-      for (const ch of text) {
+      const alphabetText = isGuide ? text.replace(/[0-9]+\s*\([А-Яа-яЁё]{1,2}\)/g,label=>label.replace(/[\s()]/g,'')).replace(/[\p{Script=Latin}\p{Script=Cyrillic}0-9-]+/gu,token=>sourceLabels.includes(token)?'':token) : text;
+      for (const ch of alphabetText) {
         const s = scriptOf(ch.codePointAt(0));
         if (s && !allowed.includes(s)) found.add(s);
       }
@@ -161,7 +189,7 @@ for (const p of FILES) {
   }
 }
 
-console.log(`checked ${checked} localised strings across ${FILES.length} files (data/*.json + data/airport-content/*.json)`);
+console.log(`checked ${checked} localised strings across ${FILES.length} files (data/*.json + airport-content + airport-guide)`);
 
 if (!problems.length) {
   console.log('no foreign-script contamination found');

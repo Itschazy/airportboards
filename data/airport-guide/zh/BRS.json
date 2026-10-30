@@ -1,0 +1,26 @@
+{
+  "iata": "BRS",
+  "blocks": {
+    "transport": {
+      "title": "交通",
+      "hint": "A1巴士：£9.50",
+      "text": "Airport Flyer A1巴士经Bedminster、Bristol Temple Meads和Bristol Bus Station前往布里斯托尔。除圣诞节当天外全天运行；节日期间时刻表会有调整。成人单程票价为£9.50。可在线购票，也可上车时向司机购买。"
+    },
+    "lounges": {
+      "title": "贵宾休息室",
+      "hint": "安检后的Escape Lounge",
+      "text": "Escape Lounge位于出发区夹层，在安检和Duty Free之后。每天03:30至19:30开放，提前预订每人£39.99起。包含冷热餐食、饮品和Wi-Fi。最多可在计划起飞前停留3小时，具体还受值机、行李托运及休息室开放时间限制。"
+    },
+    "sleep": {
+      "title": "住宿",
+      "hint": "航站楼旁的Hampton by Hilton",
+      "text": "Hampton by Hilton位于机场内，步行几分钟即可到达值机区，并有步行道通往航站楼。酒店提供免费热早餐和Wi-Fi。15:00起可办理入住，须在11:00前退房。"
+    },
+    "parking": {
+      "title": "停车",
+      "hint": "Waiting Zone：免费1小时",
+      "text": "在Waiting Zone接送或等候旅客可免费停车最多1小时。独立的Drop Off & Pick Up停车场收费。禁止在30分钟内再次驶入Waiting Zone；再次驶入会自动收到违反停车规定的缴费通知。"
+    }
+  },
+  "about": "Airport Flyer A1巴士连接布里斯托尔机场与市区，途经Bristol Temple Meads和Bristol Bus Station。"
+}

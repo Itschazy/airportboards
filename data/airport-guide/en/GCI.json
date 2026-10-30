@@ -1,0 +1,26 @@
+{
+  "iata": "GCI",
+  "blocks": {
+    "transport": {
+      "title": "Getting there",
+      "hint": "Buses to St Peter Port",
+      "text": "Buses 93, 94 and 95 connect the airport directly with St Peter Port Bus Terminus. Route 71 runs to St Peter Port via Princess Elizabeth Hospital. Cash is not accepted: payment is contactless or with Concession/Student cards."
+    },
+    "taxi": {
+      "title": "Taxis",
+      "hint": "Rank outside the terminal",
+      "text": "The licensed taxi rank is directly outside the terminal. Pre-booked vehicles have a separate area behind the rank. Licensed wheelchair-accessible taxis with shallow ramps are also available."
+    },
+    "storage": {
+      "title": "Left luggage",
+      "hint": "Daily, 09:00–17:00",
+      "text": "The left luggage service opens daily from 09:00 to 17:00 for passengers who want to leave the airport before check-in. Luggage is security screened, and the facility is staffed and monitored by CCTV. Information is available at the Customer Services Information desk."
+    },
+    "parking": {
+      "title": "Parking",
+      "hint": "First 30 minutes free",
+      "text": "Both car parks are close to the terminal; the first 30 minutes are free. Drop-off and pick-up zones are directly outside the terminal. A parking ticket is issued on entry; payment before leaving is at machines in the main terminal, by cash or card, including contactless."
+    }
+  },
+  "about": "Guernsey Airport is in the parish of the Forest, in the south of the island."
+}

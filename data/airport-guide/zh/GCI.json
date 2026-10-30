@@ -1,0 +1,26 @@
+{
+  "iata": "GCI",
+  "blocks": {
+    "transport": {
+      "title": "交通",
+      "hint": "前往St Peter Port的巴士",
+      "text": "93、94和95路巴士将机场与St Peter Port Bus Terminus直接相连。71路经Princess Elizabeth Hospital前往St Peter Port。不接受现金，须使用非接触式支付或Concession/Student卡。"
+    },
+    "taxi": {
+      "title": "出租车",
+      "hint": "航站楼前的出租车站",
+      "text": "持牌出租车候车点就在航站楼正前方。提前预约的车辆在候车点后方的独立区域等候。另有配备低坡度坡道的持牌无障碍出租车，供轮椅使用者乘坐。"
+    },
+    "storage": {
+      "title": "行李寄存",
+      "hint": "每天09:00至17:00",
+      "text": "行李寄存服务每天09:00至17:00开放，供希望在值机前离开机场的旅客使用。行李须接受安检，寄存设施有工作人员值守并设有视频监控。可向Customer Services Information服务台咨询。"
+    },
+    "parking": {
+      "title": "停车",
+      "hint": "前30分钟免费",
+      "text": "两座停车场都靠近航站楼，前30分钟免费。接送旅客区域就在航站楼正前方。驶入时领取停车票；离场前在主航站楼内的机器上支付，可用现金、银行卡或非接触式支付。"
+    }
+  },
+  "about": "根西机场位于岛屿南部的Forest教区。"
+}

@@ -1,0 +1,26 @@
+{
+  "iata": "JER",
+  "blocks": {
+    "transport": {
+      "title": "Getting there",
+      "hint": "Buses to St Helier",
+      "text": "The bus stop is directly outside the arrivals terminal, with services to Liberation Station in St Helier. Route 15 via Red Houses and St Aubin takes about 30 minutes, while express route 22 takes about 20 minutes. The next departure is shown on the display at the stop; buses are accessible to passengers with reduced mobility."
+    },
+    "taxi": {
+      "title": "Taxis",
+      "hint": "Rank outside arrivals",
+      "text": "The taxi rank is directly outside the arrivals terminal; journeys from this rank are metered. Pre-booked vehicles wait in a separate area at the rear of the arrivals car park. All taxis accept bank cards."
+    },
+    "kids": {
+      "title": "Travelling with children",
+      "hint": "Family area by Gate 3",
+      "text": "There is a family area with books and space for drawing by Gate 3. Baby changing facilities are next to the coffee shop in the check-in area, in the departure lounge and in the arrivals terminal. For nappies or baby food, ask at the Assisted Travel desk in the departures terminal after security."
+    },
+    "parking": {
+      "title": "Parking",
+      "hint": "Arrivals: £1 per 15 minutes",
+      "text": "Short-stay parking is directly outside the arrivals terminal and costs £1 per 15 minutes. You can pay by card or contactless on exit, or at machines in the terminal. Vehicles must not be left unattended except in Departures and Long Stay parking. The drop-off zone outside the departures terminal must not be used for parking."
+    }
+  },
+  "about": "Jersey Airport is linked to St Helier by bus. The stop is outside the arrivals terminal."
+}

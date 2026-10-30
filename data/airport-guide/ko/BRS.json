@@ -1,0 +1,26 @@
+{
+  "iata": "BRS",
+  "blocks": {
+    "transport": {
+      "title": "교통",
+      "hint": "A1 버스: £9.50",
+      "text": "Airport Flyer A1 버스는 Bedminster, Bristol Temple Meads, Bristol Bus Station을 거쳐 브리스틀로 갑니다. 크리스마스 당일을 제외하고 밤낮으로 운행하며, 휴일 기간에는 시간표가 달라집니다. 성인 편도 요금은 £9.50입니다. 승차권은 온라인 또는 탑승할 때 기사에게 구매할 수 있습니다."
+    },
+    "lounges": {
+      "title": "라운지",
+      "hint": "보안검색 후 Escape Lounge",
+      "text": "Escape Lounge는 보안검색과 Duty Free를 지난 출발 구역의 중간층에 있습니다. 매일 03:30~19:30에 운영하며, 사전 예약 요금은 한 사람당 £39.99부터입니다. 따뜻한 음식과 찬 음식, 음료, Wi-Fi가 포함됩니다. 이용은 예정된 출발 시각 전 최대 3시간으로 제한되며, 체크인·수하물 위탁·라운지 운영 시간에 따라 달라집니다."
+    },
+    "sleep": {
+      "title": "숙박",
+      "hint": "터미널 인근 Hampton by Hilton",
+      "text": "Hampton by Hilton은 공항 부지 안에 있으며 체크인 구역까지 걸어서 몇 분 거리입니다. 터미널로 이어지는 보행로가 있고, 호텔은 따뜻한 조식과 Wi-Fi를 무료로 제공합니다. 체크인은 15:00부터, 체크아웃은 11:00까지입니다."
+    },
+    "parking": {
+      "title": "주차",
+      "hint": "Waiting Zone: 1시간 무료",
+      "text": "Waiting Zone에서는 승객을 태우거나 내려 주거나 기다리기 위해 최대 1시간 무료로 주차할 수 있습니다. 별도의 Drop Off & Pick Up 주차장은 유료입니다. 30분 이내에 Waiting Zone으로 다시 들어가는 것은 금지되며, 재진입하면 주차 규정 위반에 따른 납부 통지서가 자동 발급됩니다."
+    }
+  },
+  "about": "Airport Flyer A1 버스가 브리스틀 공항과 시내를 연결합니다. Bristol Temple Meads와 Bristol Bus Station을 거칩니다."
+}

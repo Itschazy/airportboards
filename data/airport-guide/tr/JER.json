@@ -1,0 +1,26 @@
+{
+  "iata": "JER",
+  "blocks": {
+    "transport": {
+      "title": "Ulaşım",
+      "hint": "St Helier otobüsleri",
+      "text": "Durak, geliş terminalinin hemen önündedir; otobüsler St Helier’deki Liberation Station’a gider. Red Houses ve St Aubin üzerinden giden 15 numaralı hat yaklaşık 30 dakika, 22 numaralı ekspres hat yaklaşık 20 dakika sürer. Sonraki kalkış duraktaki ekranda gösterilir; otobüsler hareket kabiliyeti kısıtlı yolculara uygundur."
+    },
+    "taxi": {
+      "title": "Taksi",
+      "hint": "Geliş terminalinin önünde durak",
+      "text": "Taksi durağı geliş terminalinin hemen önündedir; bu duraktan yapılan yolculuklarda taksimetre kullanılır. Önceden rezervasyon yapılan araçlar geliş otoparkının arka tarafındaki ayrı bir alanda bekler. Tüm taksiler banka kartı kabul eder."
+    },
+    "kids": {
+      "title": "Çocukla seyahat",
+      "hint": "3 numaralı kapıda aile alanı",
+      "text": "3 numaralı biniş kapısının yanında kitapların ve çizim alanının bulunduğu bir aile alanı vardır. Bebek bakım odaları check-in alanındaki kafenin yanında, gidiş alanında ve geliş terminalindedir. Bebek bezi veya maması için güvenlik kontrolünden sonra gidiş terminalindeki Assisted Travel bankosuna başvurulabilir."
+    },
+    "parking": {
+      "title": "Otopark",
+      "hint": "Geliş: 15 dakika için £1",
+      "text": "Kısa süreli otopark geliş terminalinin hemen önündedir ve 15 dakika için £1 tutarındadır. Çıkışta kartla veya temassız, ayrıca terminaldeki makinelerden ödeme yapılabilir. Departures ve Long Stay otoparkları dışında araçlar gözetimsiz bırakılamaz. Gidiş terminalinin önündeki yolcu indirme alanında park edilmez."
+    }
+  },
+  "about": "Otobüsler Jersey Havalimanı’nı St Helier’e bağlar. Durak geliş terminalinin önündedir."
+}

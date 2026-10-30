@@ -1,0 +1,26 @@
+{
+  "iata": "JER",
+  "blocks": {
+    "transport": {
+      "title": "Come arrivare",
+      "hint": "Autobus per St Helier",
+      "text": "La fermata si trova direttamente davanti al terminal arrivi; gli autobus raggiungono Liberation Station a St Helier. La linea 15 via Red Houses e St Aubin impiega circa 30 minuti, mentre la linea express 22 circa 20 minuti. La prossima partenza è indicata sul display alla fermata; gli autobus sono accessibili ai passeggeri a mobilità ridotta."
+    },
+    "taxi": {
+      "title": "Taxi",
+      "hint": "Posteggio davanti agli arrivi",
+      "text": "Il posteggio dei taxi è direttamente davanti al terminal arrivi; le corse da questo posteggio sono a tassametro. I veicoli prenotati in anticipo attendono in un’area separata sul retro del parcheggio arrivi. Tutti i taxi accettano carte bancarie."
+    },
+    "kids": {
+      "title": "Con bambini",
+      "hint": "Area famiglie presso il gate 3",
+      "text": "Presso il gate d’imbarco 3 si trova un’area famiglie con libri e spazio per disegnare. I fasciatoi sono accanto alla caffetteria nell’area check-in, nell’area partenze e nel terminal arrivi. Per pannolini o alimenti per neonati, rivolgersi allo sportello Assisted Travel nel terminal partenze dopo i controlli di sicurezza."
+    },
+    "parking": {
+      "title": "Parcheggio",
+      "hint": "Arrivi: £1 ogni 15 minuti",
+      "text": "Il parcheggio per soste brevi si trova direttamente davanti al terminal arrivi e costa £1 ogni 15 minuti. È possibile pagare con carta o contactless all’uscita, oppure alle casse automatiche nel terminal. I veicoli non possono essere lasciati incustoditi, tranne nei parcheggi Departures e Long Stay. La zona di discesa passeggeri davanti al terminal partenze non consente la sosta."
+    }
+  },
+  "about": "Gli autobus collegano l’aeroporto di Jersey con St Helier. La fermata è davanti al terminal arrivi."
+}
