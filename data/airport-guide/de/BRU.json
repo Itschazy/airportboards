@@ -1,0 +1,21 @@
+{
+  "iata": "BRU",
+  "about": "Der Bahnhof Brussels Airport-Zaventem liegt unter dem Terminal des Flughafens Brüssel. Die Zugfahrt zwischen dem Flughafen und Brussels-Central dauert etwa 18 Minuten.",
+  "blocks": {
+    "transport": {
+      "title": "Anreise",
+      "hint": "Zug unter dem Terminal",
+      "text": "Der Bahnhof Brussels Airport-Zaventem liegt auf Ebene -1 unter dem Terminal; Rolltreppe und Aufzug führen zu den Hallen. Die Fahrt nach Brussels-Central dauert etwa 18 Minuten. Für Fahrten zum und vom Flughafen fällt in der Regel der Brussels Airport Supplement von 6,90 € an; er ist häufig bereits im Ticket enthalten."
+    },
+    "storage": {
+      "title": "Gepäckaufbewahrung",
+      "hint": "Schließfach M: 10 € je 24 Stunden",
+      "text": "Die Gepäckschließfächer außerhalb des Terminals auf Ebene 0 sind rund um die Uhr zugänglich. Ein Fach der Größe M kostet 10 € je 24 Stunden; berechnet werden mindestens 24 Stunden. Zusätzliche Stunden kosten 2 € pro Stunde."
+    },
+    "wifi": {
+      "title": "Wi‑Fi",
+      "hint": "Kostenlos vor/nach der Kontrolle",
+      "text": "Kostenloses WLAN ist im gesamten Terminal verfügbar, auch im Ankunftsbereich, vor und nach der Sicherheitskontrolle sowie an den Flugsteigen. In einigen Bereichen, etwa den Lounges, gibt es ein separates kostenloses Netz. Mit der Verbindung werden die Nutzungsbedingungen des Netzes akzeptiert."
+    }
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "iata": "LCY",
+  "about": "London City机场由Docklands Light Railway（DLR）提供服务。机场位于伦敦公共交通票价第3区。",
+  "blocks": {
+    "transport": {
+      "title": "交通方式",
+      "hint": "DLR：每4–10分钟一班",
+      "text": "London City位于票价第3区。DLR列车根据目的地每4–10分钟一班，将机场与伦敦交通网络相连。车费可通过非接触式支付或移动设备支付。电梯连接DLR站台与主航站楼。"
+    },
+    "taxi": {
+      "title": "出租车",
+      "hint": "航站楼外出租车站",
+      "text": "航站楼外设有持牌London Black Taxis出租车站。车费取决于时段和交通状况，详情可向司机查询。也可提前预订持牌minicab或专职司机车辆，在Short Stay停车场的接客区接车。"
+    },
+    "parking": {
+      "title": "停车",
+      "hint": "Pick-Up：前20分钟£10",
+      "text": "接客区Pick-Up位于航站楼附近。前20分钟收费£10。仅支持非现金支付，接受主要信用卡，但不接受American Express。若需超过20分钟，机场建议使用Main Stay停车场。"
+    }
+  }
+}

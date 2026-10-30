@@ -12,6 +12,20 @@ export const locales = ['ru','en','de','fr','es','it','tr','zh','ja','ko','ar','
 export const endpoints = ['https://api.indexnow.org/indexnow','https://yandex.com/indexnow'];
 export const base = 'https://airportsboard.live';
 export const priorityCodes=['EDI','LBA','NCL','GLA','DMM','MAN','LHR','RUH','DUB','LGW','STN','MUC'];
+// 30.10.2026: Bing-лидеры выше остаются приоритетными, но в очереди общего
+// обновления 12,8 тыс. URL русские посадки из Метрики ждали наравне с каталогами.
+// Основание — смартфоны из поиска 23–29.10: AYT/SSH/HRG/DME/GYD/IST и следующие
+// востребованные табло; BRU/fr и LCY/en — подтверждённые показы Bing и новые справочные.
+// Спрос привязан к локали: популярность HRG/ru не означает приоритет HRG на всех языках.
+// Лимиты транспорта не меняются. Регрессия проверяет также уже сохранённую очередь.
+const ruDemandCodes=['AYT','SSH','HRG','DME','GYD','IST','OVB','UFA','EVN','TAS','LWN','HKT','KZN','DXB'];
+function priorityPath(p) {
+  const match=/^\/(ru|en|de|fr|es|it|tr|zh|ja|ko|ar|hi)\/airport\/([A-Z]{3})(?:\/arrivals)?$/.exec(p);
+  if(!match) return false;
+  const [,locale,code]=match;
+  return priorityCodes.includes(code) || (locale==='ru' && ruDemandCodes.includes(code))
+    || (locale==='fr' && code==='BRU') || (locale==='en' && code==='LCY');
+}
 export function validPath(p) {
   return typeof p === 'string' && /^\/(ru|en|de|fr|es|it|tr|zh|ja|ko|ar|hi)(?:\/[a-zA-Z0-9-]+)*$/.test(p)
     && !p.endsWith('/departures'); // canonical родителя; индексируемые старые URL не редиректим
@@ -41,14 +55,19 @@ export function reconcile(state, manifest, now=Date.now()) {
   // noindex fallback. Исключаем лишь производную pending-работу неподдерживаемых
   // семейств; sent/fingerprints/runs остаются как история, документы не удаляем.
   // Исчезновение из сегодняшней sitemap само по себе ничего здесь не удаляет.
-  for(const p of Object.keys(state.pending))if(!pageFamily(p))delete state.pending[p];
+  for(const p of Object.keys(state.pending)) {
+    if(!pageFamily(p)) { delete state.pending[p]; continue; }
+    // Приоритет — производная политика, а не новая редакция документа. Повышаем
+    // существующую запись даже при той же fingerprint; queuedAt/attempts/nextAt
+    // сохраняем, иначе обходили бы backoff или омолаживали старую работу.
+    if(priorityPath(p)) state.pending[p].priority=0;
+  }
   for(const [p,fingerprint] of Object.entries(manifest)) {
     if(!validPath(p)) throw new Error('Недопустимый путь: '+p);
     if(!pageFamily(p))continue;
     if(state.fingerprints[p]===fingerprint) continue;
     // Новый содержательный апдейт не должен ждать за тысячами URL первого discovery.
-    const code=/\/airport\/([A-Z]{3})(?:\/|$)/.exec(p)?.[1];
-    const priority=priorityCodes.includes(code)?0:state.fingerprints[p]?1:2;
+    const priority=priorityPath(p)?0:state.fingerprints[p]?1:2;
     state.pending[p]={fingerprint, queuedAt:now, attempts:0, nextAt:now, priority};
     state.fingerprints[p]=fingerprint;
   }

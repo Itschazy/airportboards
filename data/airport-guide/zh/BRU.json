@@ -1,0 +1,21 @@
+{
+  "iata": "BRU",
+  "about": "Brussels Airport-Zaventem火车站位于布鲁塞尔机场航站楼下方。机场与Brussels-Central之间的火车车程约为18分钟。",
+  "blocks": {
+    "transport": {
+      "title": "交通方式",
+      "hint": "航站楼下方乘火车",
+      "text": "Brussels Airport-Zaventem站位于航站楼地下1层，可乘扶梯或电梯前往大厅。到Brussels-Central的车程约为18分钟。往返机场的火车行程通常需支付€6.90的Brussels Airport Supplement附加费，这笔费用往往已包含在车票内。"
+    },
+    "storage": {
+      "title": "行李寄存",
+      "hint": "M号柜：每24小时€10",
+      "text": "航站楼外0层的行李储物柜全天开放。M号柜每24小时收费€10，最低按24小时计费；超出部分每小时收费€2。"
+    },
+    "wifi": {
+      "title": "Wi‑Fi",
+      "hint": "安检前后均免费",
+      "text": "整个航站楼均提供免费Wi-Fi，包括到达区、安检前后区域及登机口。部分区域（如休息室）提供独立的免费网络。连接即表示接受网络使用条款。"
+    }
+  }
+}

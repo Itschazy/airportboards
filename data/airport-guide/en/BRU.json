@@ -1,0 +1,21 @@
+{
+  "iata": "BRU",
+  "about": "Brussels Airport-Zaventem railway station is beneath the Brussels Airport terminal. Trains connect the airport with Brussels-Central in about 18 minutes.",
+  "blocks": {
+    "transport": {
+      "title": "Getting there",
+      "hint": "Train beneath the terminal",
+      "text": "Brussels Airport-Zaventem station is on Level -1 beneath the terminal, with escalator and lift access to the halls. The journey to Brussels-Central takes about 18 minutes. Journeys to and from the airport usually carry a €6.90 Brussels Airport Supplement, often already included in the ticket."
+    },
+    "storage": {
+      "title": "Left luggage",
+      "hint": "Size M locker: €10 per 24 hours",
+      "text": "Luggage lockers outside the terminal on Level 0 are accessible around the clock. A size M locker costs €10 per 24 hours, with a minimum charge of 24 hours; additional hours cost €2 per hour."
+    },
+    "wifi": {
+      "title": "Wi‑Fi",
+      "hint": "Free before and after security",
+      "text": "Free Wi-Fi is available throughout the terminal, including arrivals, before and after security, and at boarding gates. Some areas, such as lounges, have a separate free network. Connecting means accepting the network’s terms of use."
+    }
+  }
+}

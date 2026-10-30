@@ -1,0 +1,32 @@
+{
+  "iata": "LCY",
+  "checked": "2026-10-30",
+  "about": "London City обслуживает линия Docklands Light Railway (DLR). Аэропорт находится в тарифной зоне 3 лондонского транспорта.",
+  "about_url": "https://www.londoncityairport.com/getting-to-and-from",
+  "blocks": [
+    {
+      "id": "transport",
+      "title": "Как доехать",
+      "hint": "DLR: интервал 4–10 минут",
+      "text": "London City находится в тарифной зоне 3. Поезда DLR отправляются каждые 4–10 минут в зависимости от направления и связывают аэропорт с сетью лондонского транспорта. Проезд можно оплачивать бесконтактно или мобильным устройством. Лифт соединяет платформы DLR с главным терминалом.",
+      "url": "https://www.londoncityairport.com/getting-to-and-from",
+      "source": "londoncityairport.com"
+    },
+    {
+      "id": "taxi",
+      "title": "Такси",
+      "hint": "Стоянка у терминала",
+      "text": "У терминала находится стоянка лицензированных London Black Taxis. Стоимость поездки зависит от времени суток и дорожной обстановки; подробности можно уточнить у водителя. Лицензированный minicab или автомобиль с водителем можно заказать заранее для встречи в зоне посадки пассажиров на парковке Short Stay.",
+      "url": "https://www.londoncityairport.com/getting-to-and-from/taxi-rank",
+      "source": "londoncityairport.com"
+    },
+    {
+      "id": "parking",
+      "title": "Парковка",
+      "hint": "Pick-Up: £10 за первые 20 минут",
+      "text": "Зона Pick-Up для встречи пассажиров находится рядом с терминалом. Первые 20 минут стоят £10. Оплата безналичная; принимаются основные кредитные карты, кроме American Express. Если нужно больше 20 минут, аэропорт предлагает воспользоваться парковкой Main Stay.",
+      "url": "https://www.londoncityairport.com/parking/pick-up",
+      "source": "londoncityairport.com"
+    }
+  ]
+}

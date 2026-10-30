@@ -1,0 +1,21 @@
+{
+  "iata": "LCY",
+  "about": "London City is served by the Docklands Light Railway (DLR). The airport is in London transport fare Zone 3.",
+  "blocks": {
+    "transport": {
+      "title": "Getting there",
+      "hint": "DLR: every 4–10 minutes",
+      "text": "London City is in fare Zone 3. DLR trains depart every 4–10 minutes depending on destination and connect the airport to London’s transport network. Contactless and mobile payments are accepted for travel. A lift connects the DLR platforms with the main terminal."
+    },
+    "taxi": {
+      "title": "Taxi",
+      "hint": "Taxi rank outside the terminal",
+      "text": "There is a rank for licensed London Black Taxis outside the terminal. Fares vary with the time of day and traffic conditions; ask the driver for details. A licensed minicab or chauffeur-driven car can be pre-booked to meet you in the pick-up area of the Short Stay car park."
+    },
+    "parking": {
+      "title": "Parking",
+      "hint": "Pick-Up: £10 for first 20 minutes",
+      "text": "The Pick-Up area for collecting passengers is close to the terminal. The first 20 minutes cost £10. Payment is cashless; major credit cards are accepted except American Express. If you need more than 20 minutes, the airport suggests using the Main Stay car park."
+    }
+  }
+}

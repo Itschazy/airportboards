@@ -1,0 +1,21 @@
+{
+  "iata": "LCY",
+  "about": "London City está conectado con el Docklands Light Railway (DLR). El aeropuerto se encuentra en la zona tarifaria 3 del transporte de Londres.",
+  "blocks": {
+    "transport": {
+      "title": "Cómo llegar",
+      "hint": "DLR: cada 4–10 minutos",
+      "text": "London City está en la zona tarifaria 3. Los trenes DLR salen cada 4–10 minutos según el destino y conectan el aeropuerto con la red de transporte de Londres. El viaje se puede pagar sin contacto o con un dispositivo móvil. Un ascensor conecta los andenes del DLR con la terminal principal."
+    },
+    "taxi": {
+      "title": "Taxi",
+      "hint": "Parada de taxis junto a la terminal",
+      "text": "Fuera de la terminal hay una parada de London Black Taxis con licencia. El precio depende de la hora y del tráfico; se pueden consultar los detalles al conductor. Se puede reservar un minicab con licencia o un coche con chófer para la recogida en la zona correspondiente del aparcamiento Short Stay."
+    },
+    "parking": {
+      "title": "Aparcamiento",
+      "hint": "Pick-Up: 10 £ por primeros 20 min",
+      "text": "La zona Pick-Up para recoger pasajeros está cerca de la terminal. Los primeros 20 minutos cuestan 10 £. El pago es sin efectivo; se aceptan las principales tarjetas de crédito, excepto American Express. Para estancias de más de 20 minutos, el aeropuerto propone utilizar el aparcamiento Main Stay."
+    }
+  }
+}

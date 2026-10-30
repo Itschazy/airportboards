@@ -1,0 +1,21 @@
+{
+  "iata": "BRU",
+  "about": "Brussels Airport-Zaventem tren istasyonu Brüksel Havalimanı terminalinin altındadır. Tren, havalimanını yaklaşık 18 dakikada Brussels-Central istasyonuna bağlar.",
+  "blocks": {
+    "transport": {
+      "title": "Nasıl gidilir",
+      "hint": "Terminalin altında tren",
+      "text": "Brussels Airport-Zaventem istasyonu terminalin altında Kat -1’dedir; salonlara yürüyen merdiven ve asansörle ulaşılır. Brussels-Central yolculuğu yaklaşık 18 dakika sürer. Havalimanına gidiş ve dönüş yolculuklarında genellikle 6,90 € tutarında Brussels Airport Supplement uygulanır; bu ek ücret çoğu zaman bilete dâhildir."
+    },
+    "storage": {
+      "title": "Emanet",
+      "hint": "M dolap: 24 saat için 10 €",
+      "text": "Terminalin dışında, Kat 0’daki bagaj dolaplarına günün her saati erişilebilir. M boy dolap 24 saat için 10 € tutarındadır; en az 24 saatlik ücret alınır. Ek saatler için saat başına 2 € ödenir."
+    },
+    "wifi": {
+      "title": "Wi‑Fi",
+      "hint": "Güvenlik öncesi ve sonrası ücretsiz",
+      "text": "Terminalin tamamında; varış alanında, güvenlik kontrolünden önce ve sonra, biniş kapılarında ücretsiz Wi-Fi vardır. Dinlenme salonları gibi bazı alanlarda ayrı bir ücretsiz ağ bulunur. Bağlantı kurmak, ağın kullanım koşullarını kabul etmek anlamına gelir."
+    }
+  }
+}

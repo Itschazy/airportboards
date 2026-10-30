@@ -1,0 +1,32 @@
+{
+  "iata": "BRU",
+  "checked": "2026-10-30",
+  "about": "Железнодорожная станция Brussels Airport-Zaventem находится под терминалом аэропорта Брюсселя. Поезд связывает аэропорт с Brussels-Central примерно за 18 минут.",
+  "about_url": "https://www.brusselsairport.be/en/passenger/mobility/public-transport/train",
+  "blocks": [
+    {
+      "id": "transport",
+      "title": "Как доехать",
+      "hint": "Поезд под терминалом",
+      "text": "Станция Brussels Airport-Zaventem находится на уровне -1 под терминалом; к залам ведут эскалатор и лифт. Поездка до Brussels-Central занимает примерно 18 минут. Для поездок в аэропорт и обратно обычно действует доплата Brussels Airport Supplement €6,90; она часто уже включена в билет.",
+      "url": "https://www.brusselsairport.be/en/passenger/mobility/public-transport/train",
+      "source": "brusselsairport.be"
+    },
+    {
+      "id": "storage",
+      "title": "Камера хранения",
+      "hint": "Ячейка M: €10 за 24 часа",
+      "text": "Багажные ячейки снаружи терминала на уровне 0 доступны круглосуточно. Ячейка размера M стоит €10 за 24 часа, минимальная оплата — за 24 часа; дополнительные часы стоят €2 в час.",
+      "url": "https://www.brusselsairport.be/en/passenger/at-the-airport/services/lockers",
+      "source": "brusselsairport.be"
+    },
+    {
+      "id": "wifi",
+      "title": "Wi-Fi",
+      "hint": "Бесплатно до и после досмотра",
+      "text": "Бесплатный Wi-Fi доступен по всему терминалу, в том числе в зоне прилёта, до и после досмотра и у выходов на посадку. В некоторых зонах, например в лаунжах, действует отдельная бесплатная сеть. Подключение означает принятие условий использования сети.",
+      "url": "https://www.brusselsairport.be/en/passenger/at-the-airport/services/free-wifi",
+      "source": "brusselsairport.be"
+    }
+  ]
+}

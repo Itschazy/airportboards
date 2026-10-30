@@ -1,0 +1,21 @@
+{
+  "iata": "LCY",
+  "about": "London City wird von der Docklands Light Railway (DLR) bedient. Der Flughafen liegt in der Londoner Tarifzone 3.",
+  "blocks": {
+    "transport": {
+      "title": "Anreise",
+      "hint": "DLR: alle 4–10 Minuten",
+      "text": "London City liegt in Tarifzone 3. DLR-Züge fahren je nach Ziel alle 4–10 Minuten und verbinden den Flughafen mit dem Londoner Verkehrsnetz. Fahrten können kontaktlos oder mit einem Mobilgerät bezahlt werden. Ein Aufzug verbindet die DLR-Bahnsteige mit dem Hauptterminal."
+    },
+    "taxi": {
+      "title": "Taxi",
+      "hint": "Taxistand am Terminal",
+      "text": "Vor dem Terminal befindet sich ein Stand für lizenzierte London Black Taxis. Der Fahrpreis hängt von Tageszeit und Verkehr ab; Einzelheiten können beim Fahrer erfragt werden. Ein lizenziertes Minicab oder ein Wagen mit Chauffeur kann zur Abholung im Abholbereich des Parkhauses Short Stay vorbestellt werden."
+    },
+    "parking": {
+      "title": "Parken",
+      "hint": "Pick-Up: 10 £ für erste 20 Minuten",
+      "text": "Der Abholbereich Pick-Up liegt nahe am Terminal. Die ersten 20 Minuten kosten 10 £. Die Zahlung erfolgt bargeldlos; gängige Kreditkarten werden akzeptiert, außer American Express. Für einen Aufenthalt von mehr als 20 Minuten verweist der Flughafen auf den Parkplatz Main Stay."
+    }
+  }
+}

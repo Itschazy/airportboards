@@ -1,0 +1,21 @@
+{
+  "iata": "LCY",
+  "about": "London City’ye Docklands Light Railway (DLR) hizmet verir. Havalimanı Londra ulaşımının 3 numaralı ücret bölgesindedir.",
+  "blocks": {
+    "transport": {
+      "title": "Nasıl gidilir",
+      "hint": "DLR: 4–10 dakikada bir",
+      "text": "London City, 3 numaralı ücret bölgesindedir. DLR trenleri varış noktasına göre 4–10 dakikada bir kalkar ve havalimanını Londra ulaşım ağına bağlar. Yolculuk ücreti temassız veya mobil cihazla ödenebilir. Bir asansör DLR peronlarını ana terminale bağlar."
+    },
+    "taxi": {
+      "title": "Taksi",
+      "hint": "Terminal önünde taksi durağı",
+      "text": "Terminalin önünde lisanslı London Black Taxis durağı bulunur. Ücret, günün saatine ve trafik durumuna göre değişir; ayrıntılar sürücüden öğrenilebilir. Short Stay otoparkındaki yolcu alma alanında karşılanmak için lisanslı bir minicab veya şoförlü araç önceden rezerve edilebilir."
+    },
+    "parking": {
+      "title": "Otopark",
+      "hint": "Pick-Up: ilk 20 dakika 10 £",
+      "text": "Yolcu karşılama alanı Pick-Up terminalin yakınındadır. İlk 20 dakika 10 £ tutarındadır. Nakit kabul edilmez; American Express dışındaki başlıca kredi kartları geçerlidir. 20 dakikadan fazla süreye ihtiyaç varsa havalimanı Main Stay otoparkını kullanmayı önerir."
+    }
+  }
+}

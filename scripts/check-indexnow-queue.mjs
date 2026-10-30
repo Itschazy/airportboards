@@ -85,3 +85,21 @@ assert.equal(firstUrl,base+'/en/airport/LBA');
 await drain(priorityState,{key:'test',now:now+1,limit:1,persist:async()=>{},fetcher:async(_,o)=>{firstUrl=JSON.parse(o.body).urlList[0];return {status:200};}});
 assert.equal(firstUrl,base+'/en/airport/BBB');
 console.log('PASS new content outranks first-discovery backlog; Bing priority retained.');
+// 30.10: живые RU-посадки и BRU/LCY не должны ждать общего обновления тысяч URL.
+// В состоянии уже может лежать та же fingerprint с priority=1: одной смены списка
+// для новых записей недостаточно. Проверяем настоящий reconcile + drain, без сети.
+const demandState=emptyState();
+const hotPaths=['/ru/airport/HRG','/ru/airport/SSH/arrivals','/ru/airport/AYT','/ru/airport/DME','/fr/airport/BRU/arrivals','/en/airport/LCY'];
+reconcile(demandState,{'/en/city/example':'cold',...Object.fromEntries(hotPaths.map(p=>[p,'same']))},now);
+for(const p of hotPaths) demandState.pending[p]={fingerprint:'same',priority:1,queuedAt:now-100,attempts:2,nextAt:now+100};
+const savedSent=JSON.stringify(demandState.sent),savedRuns=JSON.stringify(demandState.runs);
+reconcile(demandState,Object.fromEntries(hotPaths.map(p=>[p,'same'])),now+1);
+for(const p of hotPaths) assert.deepEqual(demandState.pending[p],{fingerprint:'same',priority:0,queuedAt:now-100,attempts:2,nextAt:now+100},p);
+assert.equal(JSON.stringify(demandState.sent),savedSent);assert.equal(JSON.stringify(demandState.runs),savedRuns);
+const {readyEntries}=await import('./indexnow-queue.mjs');
+assert.equal(readyEntries(demandState,now+1).some(([p])=>hotPaths.includes(p)),false,'backoff не обходим');
+assert.ok(hotPaths.includes(readyEntries(demandState,now+100)[0][0]));
+for(const p of ['/de/airport/HRG','/en/airport/BRU','/fr/airport/LCY']) {
+ const scoped=emptyState();reconcile(scoped,{[p]:'new'},now);assert.equal(scoped.pending[p].priority,2,'RU/FR/EN спрос не переносим на остальные языки');
+}
+console.log('PASS: существующая очередь повышает приоритет реального спроса, сохраняя fingerprint, возраст, backoff и историю; приоритет ограничен локалью.');
