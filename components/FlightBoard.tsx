@@ -1441,7 +1441,17 @@ export function FlightBoard({ airport, locale, defaultMode = 'departures', displ
   const INITIAL = initialRowCount(flights, nowMs);
   // На мёртвом борту список идёт по возрастанию и самое ценное стоит В КОНЦЕ — это
   // последнее, что улетело. Срез с головы показывал бы самое старое из имеющегося.
-  const shown = useMemo(() => showAll ? visible : (allPast ? visible.slice(-INITIAL) : visible.slice(0, INITIAL)), [showAll, visible, allPast, INITIAL]);
+  const shown = useMemo(() => {
+    const base = showAll ? visible : (allPast ? visible.slice(-INITIAL) : visible.slice(0, INITIAL));
+    // Закреплённый рейс поднимается наверх уже ПОСЛЕ среза, а не сортировкой `visible`.
+    // Сортировать сам список нельзя: на мёртвом борту срез идёт с КОНЦА (строкой выше), и
+    // закреплённое утро в него не попало бы вовсе — а это ровно то, за чем человек вернулся.
+    // Поднимается только то, что прошло фильтр и поиск: иначе на запрос «SU» сверху висела
+    // бы строка, которой в выдаче нет. Своё место в хронологии строка при этом освобождает —
+    // иначе один рейс был бы на борту дважды.
+    if (!pinnedFlight || !visible.includes(pinnedFlight)) return base;
+    return [pinnedFlight, ...base.filter(f => f !== pinnedFlight)];
+  }, [showAll, visible, allPast, INITIAL, pinnedFlight]);
   /**
    * С какой стороны списка лежит скрытое — и, значит, где должна стоять кнопка.
    *
@@ -1498,11 +1508,14 @@ export function FlightBoard({ airport, locale, defaultMode = 'departures', displ
           // неразрывным пробелом (ниже): код больше не остаётся сиротой на своей строке, ради
           // чего подбор кегля и затевался. Размер один на все строки и задан в CSS.
           const meta = rowMeta(f, locale);
+          // Закреплённая строка. Разделитель не нужен, когда она на борту одна: черта
+          // под единственной строкой отделяла бы её от пустоты.
+          const isPinnedRow = f === pinnedFlight;
 
           return (
             // <li> carries the list semantics; the inner div stays the button, so both roles
             // survive (an li with role="button" would erase the list for assistive tech).
-            <li key={i}>
+            <li key={i} className={isPinnedRow && shown.length > 1 ? 'fpin' : undefined}>
             <div
               role="button"
               tabIndex={0}
@@ -1515,9 +1528,9 @@ export function FlightBoard({ airport, locale, defaultMode = 'departures', displ
               // на проде 150 строк из 352 (42.6%) объявляли не то, что видно, а у 97 из них
               // статус вообще без числа («По расписанию»), то есть показанное время
               // восстановить было нечем. Худший случай — LED: крупно 00:47, в ярлыке 22:10.
-              aria-label={`${f.actual || f.scheduled}, ${f.flight}, ${city}, ${[...meta, label].join(', ')}`}
+              aria-label={`${isPinnedRow ? t('pinned_flight') + ', ' : ''}${f.actual || f.scheduled}, ${f.flight}, ${city}, ${[...meta, label].join(', ')}`}
               className="frow"
-              onClick={() => { haptic(); track(GOALS.flightCard, { from: 'row', past: !!f.ts && f.ts * 1000 < Date.now() }); setSelected(f); }}
+              onClick={() => { haptic(); track(GOALS.flightCard, { from: isPinnedRow ? 'pinned' : 'row', past: !!f.ts && f.ts * 1000 < Date.now() }); setSelected(f); }}
               onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); haptic(); track(GOALS.flightCard, { from: 'keyboard' }); setSelected(f); } }}
               style={{ opacity: isPast ? 0.82 : 1 }}
             >
@@ -1564,7 +1577,23 @@ export function FlightBoard({ airport, locale, defaultMode = 'departures', displ
                       длине имени и зажим в три строки, — и оба проигрывали: код всё
                       равно оставался сиротой на своей строке. Теперь строка разбита по
                       смыслу: крупно то, КУДА летит рейс, мелко — чем и как долго. */}
-                  <div className="frow-city" style={{ color: C.text }}>{city}</div>
+                  {/* Значок закрепления стоит ПЕРЕД именем города и обязан остаться с ним на
+                      одной строке. Поэтому он не инлайновый внутри имени, а отдельный элемент
+                      флексовой обоймы: имя переносится внутри СВОЕЙ коробки, и значок не может
+                      остаться один на первой строке — а именно так и вышло бы, окажись первое
+                      слово шире остатка колонки («Екатеринбург» занимает 101px из 117 на 375px).
+                      Имя города при этом сохраняет свой зажим в три строки и многоточие. */}
+                  {isPinnedRow ? (
+                    <div className="frow-city-pin">
+                      <svg viewBox="5 2 14 20" fill="none" stroke={C.blue} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                        <path d="M7.8 3.2h8.4v3.2h-2.6v5l4 3H6.4l4-3v-5H7.8z" fill={C.blue} />
+                        <path d="M12 14.4v6.4" />
+                      </svg>
+                      <div className="frow-city" style={{ color: C.text }}>{city}</div>
+                    </div>
+                  ) : (
+                    <div className="frow-city" style={{ color: C.text }}>{city}</div>
+                  )}
                   {/* Не больше двух строк и перенос ТОЛЬКО по разделителю: каждая часть nowrap. На 375px
                       колонка ~125px, и в одну строку с многоточием авиакомпания съедалась целиком
                       («1 ч 30 мин · Nor…»). Теперь «1 ч 30 мин ·» / «Nordwind», на десктопе — одна строка.
@@ -1642,7 +1671,7 @@ export function FlightBoard({ airport, locale, defaultMode = 'departures', displ
             </div>
             </li>
           );
-        }), [shown, realNow, nowMs, t, locale]);
+        }), [shown, realNow, nowMs, t, locale, pinnedFlight]);
 
   const moreAbove = allPast && !showAll;
   const moreButton = !loading && visible.length > shown.length ? (
@@ -1971,32 +2000,11 @@ export function FlightBoard({ airport, locale, defaultMode = 'departures', displ
           </div>
         )}
 
-        {/* Pinned flight card — the landing pad for the return visit. Sticky above the list,
-            styled as "yours" (blue ring + label), opens the same sheet on tap. Renders only
-            when the pinned flight is present in the CURRENT list, so a stale or cross-mode
-            pin silently shows nothing rather than an orphaned card. */}
-        {pinnedFlight && (
-          <button
-            onClick={() => { haptic(); track(GOALS.flightCard, { from: 'pinned' }); setSelected(pinnedFlight); }}
-            style={{
-              position: 'sticky', top: 8, zIndex: 5, display: 'flex', width: '100%',
-              alignItems: 'center', gap: 12, padding: '12px 16px', marginBottom: 10,
-              borderRadius: 14, border: `1.5px solid ${C.blue}`, background: 'var(--ab-0b1220)',
-              color: 'inherit', textAlign: 'start', cursor: 'pointer',
-              boxShadow: '0 6px 24px rgba(0,0,0,0.5)',
-            }}
-          >
-            <div style={{ minWidth: 0, flex: 1 }}>
-              <div style={{ fontSize: 10, fontWeight: 700, letterSpacing: '0.08em', textTransform: 'uppercase', color: C.blue }}>{t('pinned_flight')}</div>
-              <div style={{ display: 'flex', alignItems: 'baseline', gap: 8, marginTop: 3 }}>
-                <span style={{ fontSize: 17, fontWeight: 700, color: C.text, fontVariantNumeric: 'tabular-nums' }}>{pinnedFlight.actual || pinnedFlight.scheduled}</span>
-                <span style={{ fontSize: 14, fontWeight: 600, color: C.text }}>{pinnedFlight.flight}</span>
-                <span style={{ fontSize: 13, color: C.secondary, overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>{pinnedFlight.destination || pinnedFlight.origin || ''}</span>
-              </div>
-            </div>
-            <span style={{ fontSize: 11, fontWeight: 700, color: STATUS_COLOR[pinnedFlight.status] || C.gray, flexShrink: 0 }}>●</span>
-          </button>
-        )}
+        {/* Закреплённый рейс отдельной карточкой БОЛЬШЕ НЕ рисуется (30.10.2026).
+            Сжатая полоска сверху показывала время, номер, город и точку статуса — то есть
+            теряла и формат строки табло, и половину сведений: прежнее время, авиакомпанию,
+            длительность, выход, подпись статуса словами. Вместо неё закреплённый рейс стоит
+            первой строкой списка в своём обычном виде (см. `shown` и класс .fpin). */}
 
         {/* Прямая констатация, когда впереди не осталось ничего.
             Раньше страница молча показывала вчерашнее как сегодняшнее: борт выглядел
