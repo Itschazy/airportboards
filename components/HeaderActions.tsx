@@ -110,11 +110,14 @@ export function HeaderActions({ locale, slot }: { locale: Locale; slot: 'share' 
       return (
         <button type="button" onClick={() => fire('share')} className="press hdr-act"
                 aria-label={tNav('map_share')} title={tNav('map_share')}>
+          {/* Стрелка пересылки, а не коробка со стрелкой вверх: коробка — системный
+              знак iOS, и за его пределами она читается как «выгрузить», а не
+              «поделиться». Стрелка знакома по Телеграму и ВК, откуда пересылка
+              ссылок и приходит. Второй экземпляр глифа — у кнопки страницы ниже. */}
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-            <path d="M12 15.5V3.5" />
-            <path d="M8 7.2 12 3.2l4 4" />
-            <path d="M5 13v5.6A1.4 1.4 0 0 0 6.4 20h11.2a1.4 1.4 0 0 0 1.4-1.4V13" />
+            <path d="M14.5 6.5 20 11.5l-5.5 5" />
+            <path d="M20 11.5H10.8C7 11.5 4 14.6 4 18.4" />
           </svg>
         </button>
       );
@@ -171,9 +174,8 @@ export function HeaderActions({ locale, slot }: { locale: Locale; slot: 'share' 
       ) : (
         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
              strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-          <path d="M12 15.5V3.5" />
-          <path d="M8 7.2 12 3.2l4 4" />
-          <path d="M5 13v5.6A1.4 1.4 0 0 0 6.4 20h11.2a1.4 1.4 0 0 0 1.4-1.4V13" />
+          <path d="M14.5 6.5 20 11.5l-5.5 5" />
+          <path d="M20 11.5H10.8C7 11.5 4 14.6 4 18.4" />
         </svg>
       )}
     </button>
