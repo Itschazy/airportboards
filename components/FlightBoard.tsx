@@ -373,7 +373,7 @@ function BottomSheet({ flight: selectedFlight, mode, onClose, tz, locale, clockM
     return diff;
   };
 
-  const L = { fontSize: 12, color: C.secondary, textTransform: 'uppercase' as const, letterSpacing: '0.12em' };
+  const L = { fontSize: 11, fontWeight: 600 as const, color: C.secondary, textTransform: 'uppercase' as const, letterSpacing: '0.07em', lineHeight: 1 };
   const dragStart = useRef<number | null>(null);
   const dragY = useRef(0);
   const raf = useRef(0);
@@ -502,7 +502,12 @@ function BottomSheet({ flight: selectedFlight, mode, onClose, tz, locale, clockM
         // утверждения, что рейс ушёл. Строку «По расписанию HH:MM» оставляем только
         // когда показанное время от расписания отличается, иначе она дублирует главное.
         ? { label: isDep ? t('departure') : t('arrival'), main: dispTime, sub: flight.actual && flight.actual !== flight.scheduled ? t('on_schedule', { time: flight.scheduled }) : undefined, subStrike: !!flight.actual, icon: 'clock' }
-        : { label: isDep ? t('departs_in') : t('arrives_in'), main: mins != null && mins > 0 ? fmtDur(mins, locale) : t('now'), sub: t('on_schedule', { time: flight.scheduled }), icon: 'clock' };
+        // Строки «По расписанию HH:MM» здесь больше нет (30.10.2026). Крупно в карточке
+        // стоит обратный отсчёт, значит время рейса уходит плиткой ниже — и это ровно то же
+        // число: на рейсе без переноса карточка печатала «По расписанию 10:56», а под ней
+        // плитка «ВЫЛЕТ 10:56». Плитка остаётся единственным местом времени: она же несёт
+        // дату и зачёркнутое расписание, когда время перенесли.
+        : { label: isDep ? t('departs_in') : t('arrives_in'), main: mins != null && mins > 0 ? fmtDur(mins, locale) : t('now'), icon: 'clock' };
     }
 
     // ── Detail grid: only fields with data, never the status (already in hero) ──
@@ -514,25 +519,60 @@ function BottomSheet({ flight: selectedFlight, mode, onClose, tz, locale, clockM
     /* Справа в карточке стоит ВЫХОД — на месте, где раньше была одна декоративная
        иконка и пустота в половину ширины. При посадке это второе по важности число
        после времени, и стоять оно должно рядом с ним.
-       
+
        Время туда НЕ уезжает (пробовали 28.10.2026, владелец вернул обратно): плиток
        под карточкой обычно несколько — вылет, терминал, в пути, — и вынутое из этого
        ряда время рвало ровную сетку ради экономии одной строки.
-       
-       Терминал идёт под выходом мелкой строкой, но только когда выход есть: сам по
-       себе он отдельной плитки стоит, а рядом с выходом читается как его уточнение. */
+
+       Терминал идёт под выходом мелкой строкой, когда выход есть, и занимает правую
+       колонку сам, когда выхода нет (30.10.2026): отдельной плитки он не стоит, а
+       половина карточки с одной декоративной иконкой — тем более. Своих плиток у выхода
+       и терминала после этого не остаётся вовсе, поэтому прежние две ветки сняты: при
+       `gateInHero = !!flight.gate` плитка выхода не могла построиться ни разу. */
     const timeInHero = hero.main === dispTime;
-    const gateInHero = !!flight.gate;
+    const heroAside: { label: string; value: string; sub?: string } | null = flight.gate
+      // Неразрывный пробел, а не обычный: «Терминал A» в узкой правой колонке ломался
+      // на «Терминал» и «A» под ним. Разрыв внутри длинного имени терминала остаётся
+      // возможным — там он по словам и читается нормально.
+      ? { label: t('gate'), value: flight.gate, sub: flight.terminal ? `${t('terminal')}\u00A0${flight.terminal}` : undefined }
+      : flight.terminal
+        ? { label: t('terminal'), value: flight.terminal }
+        : null;
+    /* Номер выхода НЕ переносится (30.10.2026). «A12-B14» вставал как «A12-» / «B14»:
+       дефис — законная точка переноса, а `overflow-wrap: anywhere` вдобавок разрешал
+       колонке сжаться уже номера. Вместо переноса уменьшается кегль — номер остаётся
+       одним куском, как он написан на табличке в терминале. Ступени подобраны по самым
+       длинным значениям поставщика: «A12-B14» (7) и «12» (2). */
+    const asideSize = !heroAside ? 24
+      : heroAside.value.length > 8 ? 16
+      : heroAside.value.length > 6 ? 19
+      : heroAside.value.length > 4 ? 21 : 24;
+
+    /* Плитки идут строго по две в ряд (30.10.2026, решение владельца). Раньше ряд строился
+       `auto-fit, minmax(104px, 1fr)` и на 375 px давал то три колонки, то одну: у вылетевшего
+       рейса единственная плитка «В пути» растягивалась во всю ширину — полоса с одним числом
+       посреди пустоты.
+
+       Сами по себе две колонки ряд не заполняют: при нечётном числе плиток последняя осталась
+       бы половинкой с дырой справа. Отсюда две поправки. Первая — дата. Когда время уже стоит
+       крупно в карточке, дата лежала там же мелкой строкой под ним; теперь она выходит в плитку
+       ровно тогда, когда этим достраивает ряд до пары, и остаётся в карточке, когда ряд и без
+       неё чётный. Вторая — последняя плитка нечётного набора занимает обе колонки. Дыр в сетке
+       не остаётся ни при одном наборе полей. */
+    const extras: Block[] = [];
+    if (flight.baggage && status !== 'baggage') extras.push({ label: t('baggage'), value: flight.baggage, valueColor: C.green });
+    if (flight.durationMin) extras.push({ label: t('flight_duration'), value: fmtDur(flight.durationMin, locale) });
+    if (flight.aircraft) extras.push({ label: t('aircraft_type'), value: AIRCRAFT[flight.aircraft] ?? flight.aircraft });
+
+    const dateAsTile = timeInHero && extras.length % 2 === 1;
     const blocks: Block[] = [];
     if (!timeInHero) blocks.push({
       label: isDep ? t('departure') : t('arrival'), value: dispTime,
       valueColor: flight.actual ? C.orange : C.text, strike: flight.actual ? flight.scheduled : undefined, sub: dateStr,
     });
-    if (flight.gate && !gateInHero) blocks.push({ label: t('gate'), value: flight.gate });
-    if (flight.terminal && !gateInHero) blocks.push({ label: t('terminal'), value: flight.terminal });
-    if (flight.baggage && status !== 'baggage') blocks.push({ label: t('baggage'), value: flight.baggage, valueColor: C.green });
-    if (flight.durationMin) blocks.push({ label: t('flight_duration'), value: fmtDur(flight.durationMin, locale) });
-    if (flight.aircraft) blocks.push({ label: t('aircraft_type'), value: AIRCRAFT[flight.aircraft] ?? flight.aircraft });
+    if (dateAsTile) blocks.push({ label: t('flight_date'), value: dateStr });
+    blocks.push(...extras);
+    const lastSpansRow = blocks.length % 2 === 1;
 
     // ── Route strip: origin → destination, so the sheet carries its own context ──
     const otherPlace = (flight.destination || flight.origin || '').replace(/\s*\([A-Z0-9]{2,4}\)\s*$/, '');
@@ -548,108 +588,181 @@ function BottomSheet({ flight: selectedFlight, mode, onClose, tz, locale, clockM
       status === 'delayed' ? t('notice_delayed') :
       (status === 'ontime' || status === 'scheduled') ? t('notice_ontime') : null;
 
-    const heroMainSize = hero.main.length > 8 ? 28 : hero.main.length > 5 ? 34 : 40;
+    const heroMainSize = hero.main.length > 8 ? 25 : hero.main.length > 5 ? 29 : 34;
 
     body = (
-      <div style={{ padding: '2px 20px calc(18px + env(safe-area-inset-bottom))' }}>
+      <div style={{ padding: '2px 18px calc(16px + env(safe-area-inset-bottom))' }}>
+        {/* Вся карточка — одна сетка в две колонки. Во всю ширину остаются только блоки,
+            которым половины не хватает физически: шапка с крупным номером рейса, карточка
+            статуса (у неё свои две колонки внутри), полоса маршрута, подсказка и отметка
+            свежести. Плитки и кнопки встают по две в ряд. Расстояния между блоками держит
+            один gap, а не marginTop у каждого: прежние 14px у одних блоков и 10 у других
+            давали разные промежутки на соседних строках одной карточки. */}
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, minmax(0, 1fr))', gap: 8 }}>
 
-        {/* Header — status pill on its own line above the (large) flight number,
-            so long localized labels (ПОСЛЕДНИЙ ВЫЗОВ…) never collide with it */}
-        <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start', gap: 10 }}>
-          {/* Место крестика сохранено справа от статуса. Сама кнопка живёт в sticky-панели:
-              внутри прокручиваемого body она уходила за экран и мешала закрыть карточку.
-              Резерв справа сохраняет прежнее расположение и не даёт статусу перекрыть кнопку. */}
-          <div style={{ display: 'flex', alignItems: 'center', gap: 10, width: '100%', minHeight: 40, paddingInlineEnd: 50, boxSizing: 'border-box' }}>
-            <div style={{ display: 'inline-flex', alignItems: 'center', gap: 6, padding: '7px 13px', borderRadius: 999, background: `color-mix(in srgb, ${color} 12.156862745098039%, transparent)`, border: `1px solid color-mix(in srgb, ${color} 34.90196078431372%, transparent)`, minWidth: 0 }}>
-              <div style={{ width: 7, height: 7, borderRadius: '50%', background: color, flexShrink: 0 }} />
-              <span style={{ fontSize: 12, fontWeight: 700, color, letterSpacing: '0.08em', textTransform: 'uppercase', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>{statusLabel}</span>
+        {/* Шапка. Статус стоит В ОДНОЙ СТРОКЕ с номером рейса, справа от него (30.10.2026,
+            решение владельца): своей строкой выше он занимал сорок пикселей ради одного
+            слова. Перенос строки разрешён — на 320px самые длинные ярлыки («ПОСЛЕДНИЙ
+            ВЫЗОВ») рядом с номером не помещаются и опускаются под него целиком; обрезать
+            их многоточием нельзя, статус — единственное место, где слово состояния вообще
+            печатается.
+
+            Место крестика сохранено справа. Сама кнопка живёт в sticky-панели: внутри
+            прокручиваемого body она уходила за экран и мешала закрыть карточку. Резерв
+            справа не даёт строке заехать под неё. */}
+        <div style={{ gridColumn: '1 / -1', position: 'relative', minHeight: 88, display: 'flex', flexDirection: 'column', alignItems: 'flex-start', gap: 6 }}>
+          <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: 10, width: '100%', minHeight: 40, paddingInlineEnd: 54, boxSizing: 'border-box' }}>
+            <div style={{ fontSize: 'clamp(26px, 7vw, 32px)', fontWeight: 800, letterSpacing: '-0.04em', color: C.text, lineHeight: 1, wordBreak: 'break-word', minWidth: 0 }}>{flight.flight}</div>
+            <div style={{ display: 'inline-flex', alignItems: 'center', gap: 5, padding: '6px 11px', borderRadius: 999, background: `color-mix(in srgb, ${color} 12.156862745098039%, transparent)`, border: `1px solid color-mix(in srgb, ${color} 34.90196078431372%, transparent)`, minWidth: 0 }}>
+              <div style={{ width: 6, height: 6, borderRadius: '50%', background: color, flexShrink: 0 }} />
+              <span style={{ fontSize: 11, fontWeight: 700, color, letterSpacing: '0.07em', textTransform: 'uppercase', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>{statusLabel}</span>
             </div>
-
           </div>
-          <div style={{ minWidth: 0, width: '100%' }}>
-            <div style={{ fontSize: 'clamp(32px, 9vw, 42px)', fontWeight: 800, letterSpacing: '-0.04em', color: C.text, lineHeight: 0.95, wordBreak: 'break-word' }}>{flight.flight}</div>
-            <div style={{ fontSize: 'clamp(17px, 4.6vw, 21px)', color: 'var(--ab-a1a1a1)', marginTop: 6, lineHeight: 1.15 }}>{flight.destination || flight.origin}</div>
+          {/* Отступ справа 98 — ширина пары круглых кнопок под крестиком (две по 40 и
+              зазоры). Без него длинное имя города заезжало бы под них. */}
+          <div style={{ minWidth: 0, width: '100%', paddingInlineEnd: 98, boxSizing: 'border-box' }}>
+            <div style={{ fontSize: 'clamp(15px, 4vw, 18px)', color: 'var(--ab-a1a1a1)', lineHeight: 1.2 }}>{flight.destination || flight.origin}</div>
             {/* То же имя, что в строке табло и поиске: карточка не должна внезапно
                 менять «Уральские авиалинии» на Ural Airlines после нажатия. */}
-            <div style={{ fontSize: 15, color: C.text, fontWeight: 600, marginTop: 3 }}>{localAirlineName(flight.airline || '', locale)}</div>
+            <div style={{ fontSize: 13, color: C.text, fontWeight: 600, marginTop: 2 }}>{localAirlineName(flight.airline || '', locale)}</div>
+          </div>
+
+          {/* Закрепить и поделиться — круглые кнопки под крестиком (30.10.2026, решение
+              владельца). Прежде это были две подписанные пилюли во всю ширину карточки:
+              ряд в 52px ради двух действий, которые человек совершает один раз за визит,
+              стоял между данными и маршрутом и отодвигал их вниз.
+
+              Кнопки лежат в ШАПКЕ, а не в липкой полосе с крестиком: та висит над
+              содержимым всё время прокрутки, и два лишних кружка в ней перекрывали бы
+              карточку статуса и плитки. Крестику это положено — закрыть шторку нужно из
+              любого места, — а этим двум нет.
+
+              Подписи остались в aria-label и title: слова не потеряны, их просто больше
+              не рисуют. Внешний вид взят у крестика ровно — то же стекло, та же кромка,
+              тот же размер: три кнопки стоят в одном углу и обязаны выглядеть роднёй.
+
+              The one persistent action this sheet has: watching a flight means coming back
+              three to five times; before this button every return started with re-finding
+              the row in an 80-row list. Pin state lives in localStorage (ab_pinned), scoped
+              to today — see the pinned card in FlightBoard. */}
+          <div style={{ position: 'absolute', top: 48, insetInlineEnd: 2, display: 'flex', gap: 8 }}>
+            {/* Класса press у этих двух кнопок НЕТ, и это намеренно (30.10.2026). Он даёт
+                `transform: scale(0.96)` на :active — на круглой кнопке в 40px это читается
+                как «кнопка сжалась», а не как нажатие. Крестик рядом его тоже не носит:
+                три кнопки стоят в одном углу и должны вести себя одинаково. Отклик у них
+                свой и более внятный, чем сжатие: отдача (haptic), а дальше сразу новое
+                состояние — синяя заливка у закрепления, галочка у ссылки. */}
+            <button
+              type="button"
+              onClick={() => { haptic(); onTogglePin(); }}
+              aria-pressed={isPinned}
+              aria-label={isPinned ? t('unpin_flight') : t('pin_flight')}
+              title={isPinned ? t('unpin_flight') : t('pin_flight')}
+              style={{
+                display: 'flex', alignItems: 'center', justifyContent: 'center',
+                width: 40, height: 40, padding: 0, borderRadius: 999, border: 'none', cursor: 'pointer',
+                touchAction: 'manipulation',
+                background: isPinned ? 'rgba(10,132,255,0.16)' : 'var(--glass-soft)',
+                boxShadow: isPinned ? 'var(--glass-rim), 0 0 0 1px rgba(10,132,255,0.45)' : 'var(--glass-rim)',
+                color: isPinned ? C.blue : C.text,
+              }}>
+              {/* Канцелярская кнопка одним замкнутым контуром: шляпка, узкий корпус,
+                  опорная юбка, игла отдельной линией. Прежний глиф был из трёх кусков —
+                  отдельная палочка шляпки висела над трапецией и не стыковалась с ней,
+                  отчего на 18px кнопка выглядела собранной из обрезков. Скруглять углы
+                  руками не нужно: контур обводится с strokeLinejoin="round".
+                  Сердце занято избранными аэропортами в шапке сайта, флажок читается
+                  как «пожаловаться», поэтому именно кнопка. */}
+              {/* Кегль 20, а не 18 как у крестика: тот рисует крест во всю клетку, а кнопка
+                  узкая и высокая и занимает чуть больше половины ширины — при равном размере
+                  она выглядела бы вдвое мельче соседей. */}
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                   strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                <path d="M7.8 3.2h8.4v3.2h-2.6v5l4 3H6.4l4-3v-5H7.8z" fill={isPinned ? 'currentColor' : 'none'} />
+                <path d="M12 14.4v6.4" />
+              </svg>
+            </button>
+            <button
+              type="button"
+              onClick={() => { haptic(); share(); }}
+              aria-label={copied ? t('link_copied') : t('share_flight')}
+              title={copied ? t('link_copied') : t('share_flight')}
+              style={{
+                display: 'flex', alignItems: 'center', justifyContent: 'center',
+                width: 40, height: 40, padding: 0, borderRadius: 999, border: 'none', cursor: 'pointer',
+                touchAction: 'manipulation',
+                background: 'var(--glass-soft)', boxShadow: 'var(--glass-rim)',
+                color: copied ? C.green : C.text,
+              }}>
+              {/* Та же стрелка пересылки, что на кнопке репоста в шапке сайта: один знак
+                  на оба места. После копирования — галочка: подписи, которая раньше
+                  менялась на «Ссылка скопирована», на кнопке больше нет. */}
+              {copied ? (
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                     strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                  <path d="M5 12.5 9.5 17 19 7.5" />
+                </svg>
+              ) : (
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                     strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                  <path d="M14.5 6.5 20 11.5l-5.5 5" />
+                  <path d="M20 11.5H10.8C7 11.5 4 14.6 4 18.4" />
+                </svg>
+              )}
+            </button>
           </div>
         </div>
 
-        <div style={{ height: 1, background: 'rgba(var(--ab-ink),0.08)', margin: '14px 0' }} />
+        <div style={{ gridColumn: '1 / -1', height: 1, background: 'rgba(var(--ab-ink),0.08)', margin: '1px 0' }} />
 
         {/* Hero card */}
-        <div style={{ background: `color-mix(in srgb, ${color} 10.196078431372548%, transparent)`, border: `1px solid color-mix(in srgb, ${color} 25.098039215686274%, transparent)`, borderRadius: 16, padding: '13px 16px 15px' }}>
-          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', gap: 12 }}>
+        <div style={{ gridColumn: '1 / -1', background: `color-mix(in srgb, ${color} 10.196078431372548%, transparent)`, border: `1px solid color-mix(in srgb, ${color} 25.098039215686274%, transparent)`, borderRadius: 'var(--r-card)', padding: '11px 14px 13px' }}>
+          {/* Правая колонка шире своего содержимого не становится: `auto` отдаёт весь запас
+              левой, иначе длинный отсчёт («1 ч 30 мин» кеглем 25) упирался бы в номер
+              выхода на 320px. Потолка ширины у правой колонки нет: при нерастяжимом
+              номере выхода он только обрезал бы его («A12-B14» вылезал за свою
+              половину), а сжимается колонка и так — по самому длинному слову подписи. */}
+          <div style={{ display: 'grid', gridTemplateColumns: 'minmax(0, 1fr) auto', gap: 10, alignItems: 'start' }}>
             <div style={{ minWidth: 0 }}>
-              <div style={{ ...L, marginBottom: 7 }}>{hero.label}</div>
-              <div style={{ fontSize: heroMainSize, fontWeight: 800, letterSpacing: '-0.03em', lineHeight: 1, color, fontVariantNumeric: 'tabular-nums' }}>{hero.main}</div>
-              {hero.sub && <div style={{ fontSize: 14, color: C.secondary, marginTop: 7, textDecoration: hero.subStrike ? 'line-through' : 'none' }}>{hero.sub}</div>}
-              {timeInHero && <div style={{ fontSize: 12, color: C.secondary, opacity: 0.7, marginTop: 5 }}>{dateStr}</div>}
+              <div style={{ ...L, marginBottom: 6 }}>{hero.label}</div>
+              <div data-flight-detail-value style={{ fontSize: heroMainSize, fontWeight: 800, letterSpacing: '-0.03em', lineHeight: 1.05, color, fontVariantNumeric: 'tabular-nums', overflowWrap: 'anywhere' }}>{hero.main}</div>
+              {hero.sub && <div style={{ fontSize: 13, color: C.secondary, marginTop: 5, textDecoration: hero.subStrike ? 'line-through' : 'none' }}>{hero.sub}</div>}
+              {timeInHero && !dateAsTile && <div style={{ fontSize: 11, color: C.secondary, opacity: 0.75, marginTop: 4 }}>{dateStr}</div>}
             </div>
-            {gateInHero ? (
-              <div style={{ textAlign: 'end', flexShrink: 0 }}>
-                <div style={{ ...L, marginBottom: 7 }}>{t('gate')}</div>
-                <bdi style={{ display: 'block', fontSize: 28, fontWeight: 800, letterSpacing: '-0.02em', lineHeight: 1, color: C.text }}>{flight.gate}</bdi>
-                {flight.terminal && <div style={{ fontSize: 12, color: C.secondary, marginTop: 6 }}>{t('terminal')} {flight.terminal}</div>}
+            {heroAside ? (
+              <div style={{ textAlign: 'end', minWidth: 0 }}>
+                <div style={{ ...L, marginBottom: 6 }}>{heroAside.label}</div>
+                <bdi data-flight-detail-value style={{ display: 'block', fontSize: asideSize, fontWeight: 800, letterSpacing: '-0.02em', lineHeight: 1.05, color: C.text, whiteSpace: 'nowrap' }}>{heroAside.value}</bdi>
+                {heroAside.sub && <div style={{ fontSize: 11, color: C.secondary, marginTop: 5 }}>{heroAside.sub}</div>}
               </div>
             ) : hero.icon ? <Icon name={hero.icon} /> : null}
           </div>
         </div>
 
-        {/* Значения начинаются сразу под подписью с одинаковым отступом.
-            space-between прижимал весь блок значения к низу: дата под временем
+        {/* Плитки. Значение начинается сразу под подписью с одинаковым отступом:
+            space-between прижимал весь блок значения к низу, и дата под временем
             поднимала время выше выхода и терминала (снимок владельца, 18.10.2026).
-            Свободное место оставляем снизу, чтобы необязательная дата не двигала цифры.
-            29.10.2026: auto-fill резервировал третий пустой столбец при двух плитках
-            на 375 px, а nowrap/ellipsis превращал «1 ч 30 мин» в «1 ч 3…».
-            auto-fit отдаёт пустое место имеющимся плиткам; длинные значения переносятся,
-            чтобы при трёх плитках не исчезали минуты, модель самолёта или номер выхода.
-            Проверка: локальный mobile-check.html на 375/320 px, открытая карточка. */}
-        {blocks.length > 0 && <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(104px, 1fr))', gap: 10, marginTop: 14 }}>
-          {blocks.map((b, i) => (
-            <div key={i} style={{ background: 'var(--glass-soft)', boxShadow: 'var(--glass-rim)', borderRadius: 'var(--r-card)', padding: '12px 13px', minHeight: 78, display: 'flex', flexDirection: 'column', gap: 6 }}>
-              <div style={L}>{b.label}</div>
-              <div>
-                <div data-flight-detail-value style={{ fontSize: 20, fontWeight: 700, color: b.valueColor || C.text, lineHeight: 1.05, letterSpacing: '-0.02em', fontVariantNumeric: 'tabular-nums', whiteSpace: 'normal', overflowWrap: 'anywhere' }}>{b.value}</div>
-                {b.strike && <div style={{ fontSize: 12, color: C.secondary, textDecoration: 'line-through', marginTop: 2 }}>{b.strike}</div>}
-                {b.sub && <div style={{ fontSize: 12, color: 'var(--ab-6a6a6a)', marginTop: 4 }}>{b.sub}</div>}
-              </div>
+            Свободное место остаётся снизу, чтобы необязательная дата не двигала цифры.
+            Длинные значения переносятся, а не обрезаются многоточием: на 320px
+            «1 ч 30 мин» превращалось в «1 ч 3…». Проверка — ops/metrika-growth-20261029/
+            mobile-check.html на 375 и 320px с открытой карточкой. */}
+        {blocks.map((b, i) => (
+          <div key={i} style={{ gridColumn: lastSpansRow && i === blocks.length - 1 ? '1 / -1' : undefined, background: 'var(--glass-soft)', boxShadow: 'var(--glass-rim)', borderRadius: 'var(--r-card)', padding: '10px 12px', minHeight: 58, display: 'flex', flexDirection: 'column', gap: 5 }}>
+            <div style={L}>{b.label}</div>
+            <div>
+              <div data-flight-detail-value style={{ fontSize: 18, fontWeight: 700, color: b.valueColor || C.text, lineHeight: 1.05, letterSpacing: '-0.02em', fontVariantNumeric: 'tabular-nums', whiteSpace: 'normal', overflowWrap: 'anywhere' }}>{b.value}</div>
+              {b.strike && <div style={{ fontSize: 11, color: C.secondary, textDecoration: 'line-through', marginTop: 2 }}>{b.strike}</div>}
+              {b.sub && <div style={{ fontSize: 11, color: 'var(--ab-6a6a6a)', marginTop: 3 }}>{b.sub}</div>}
             </div>
-          ))}
-        </div>}
+          </div>
+        ))}
 
         {/* Время, выход и терминал раньше действий — согласовано владельцем 19.10.2026.
             Раньше закрепление и маршрут отодвигали эти данные за первый экран телефона.
-            Размеры, цвета и состав информации сохранены; изменён только порядок.
-            Проверено на локальной фикстуре: снимок 375 px, закрытие и закрепление на 320 px. */}
-        <div style={{ marginTop: 14 }}>
-            {/* The one persistent action this sheet has. Watching a flight means coming back
-                three to five times; before this button every return started with re-finding
-                the row in an 80-row list. Pin state lives in localStorage (ab_pinned), scoped
-                to today — see the pinned card in FlightBoard. */}
-            <button
-              onClick={() => { haptic(); onTogglePin(); }}
-              style={{
-                marginTop: 10, padding: '8px 14px', borderRadius: 999, fontSize: 13, fontWeight: 600,
-                border: `1px solid ${isPinned ? C.blue : C.border}`,
-                background: isPinned ? 'rgba(10,132,255,0.12)' : 'transparent',
-                color: isPinned ? C.blue : C.secondary, cursor: 'pointer',
-              }}
-            >
-              {isPinned ? t('unpin_flight') : t('pin_flight')}
-            </button>
-            <button
-              onClick={() => { haptic(); share(); }}
-              style={{
-                marginTop: 10, marginInlineStart: 8, padding: '8px 14px', borderRadius: 999, fontSize: 13, fontWeight: 600,
-                border: `1px solid ${C.border}`, background: 'transparent',
-                color: copied ? C.green : C.secondary, cursor: 'pointer',
-              }}
-            >
-              {copied ? t('link_copied') : t('share_flight')}
-            </button>
-        </div>
-        {/* Route strip — where from, where to. The sheet is shareable context on its own.
+            С 30.10.2026 действий в потоке карточки нет вовсе: закрепить и поделиться —
+            круглые кнопки в шапке, под крестиком (см. там же).
+
+            Route strip — where from, where to. The sheet is shareable context on its own.
             It is also the sheet's only way OUT. Everything else here ends the journey: one
             action (pin), a close button, and a board the visitor already came from — which is
             most of why a session is 1.79 pages deep, since neither the mode tabs nor this sheet
@@ -663,17 +776,17 @@ function BottomSheet({ flight: selectedFlight, mode, onClose, tz, locale, clockM
           const strip = (
             <>
               <div style={{ flex: 1, minWidth: 0 }}>
-                <div style={{ fontSize: 20, fontWeight: 800, letterSpacing: '-0.02em', color: C.text, lineHeight: 1 }}>{routeFrom.code}</div>
-                <div style={{ fontSize: 11.5, color: C.secondary, marginTop: 4, overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>{routeFrom.name}</div>
+                <div style={{ fontSize: 18, fontWeight: 800, letterSpacing: '-0.02em', color: C.text, lineHeight: 1 }}>{routeFrom.code}</div>
+                <div style={{ fontSize: 11.5, color: C.secondary, marginTop: 3, overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>{routeFrom.name}</div>
               </div>
               <svg data-flip width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true" className="route-arrow" style={{ flexShrink: 0, opacity: 0.45 }}><path d="M3 12h16m0 0-6-6m6 6-6 6" stroke="var(--ab-ffffff)" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" /></svg>
               <div style={{ flex: 1, minWidth: 0, textAlign: 'end' }}>
-                <div style={{ fontSize: 20, fontWeight: 800, letterSpacing: '-0.02em', color: C.text, lineHeight: 1 }}>{routeTo.code}</div>
-                <div style={{ fontSize: 11.5, color: C.secondary, marginTop: 4, overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>{routeTo.name}</div>
+                <div style={{ fontSize: 18, fontWeight: 800, letterSpacing: '-0.02em', color: C.text, lineHeight: 1 }}>{routeTo.code}</div>
+                <div style={{ fontSize: 11.5, color: C.secondary, marginTop: 3, overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>{routeTo.name}</div>
               </div>
             </>
           );
-          const box = { display: 'flex', alignItems: 'center', gap: 12, margin: '14px 0 0', padding: '11px 15px', background: 'var(--glass-soft)', boxShadow: 'var(--glass-rim)', borderRadius: 'var(--r-card)' } as const;
+          const box = { gridColumn: '1 / -1', display: 'flex', alignItems: 'center', gap: 10, padding: '10px 14px', background: 'var(--glass-soft)', boxShadow: 'var(--glass-rim)', borderRadius: 'var(--r-card)' } as const;
           const pair = /^[A-Z]{3}$/i.test(routeFrom.code) && /^[A-Z]{3}$/i.test(routeTo.code);
           if (!pair) return <div style={box}>{strip}</div>;
           return (
@@ -693,16 +806,17 @@ function BottomSheet({ flight: selectedFlight, mode, onClose, tz, locale, clockM
         })()}
 
         {/* Age of the data — the sheet inherits the board's honest freshness label. */}
-        {updLabel && <div style={{ fontSize: 12, color: C.secondary, opacity: 0.75, marginTop: 14, textAlign: 'end' }}>{updLabel}</div>}
+        {updLabel && <div style={{ gridColumn: '1 / -1', fontSize: 11, color: C.secondary, opacity: 0.75, textAlign: 'end' }}>{updLabel}</div>}
 
         {/* Info notice */}
         {notice && (
-          <div style={{ display: 'flex', gap: 11, alignItems: 'flex-start', marginTop: 14, padding: '12px 14px', background: `color-mix(in srgb, ${color} 5.098039215686274%, transparent)`, border: `1px solid color-mix(in srgb, ${color} 25.098039215686274%, transparent)`, borderRadius: 14 }}>
+          <div style={{ gridColumn: '1 / -1', display: 'flex', gap: 9, alignItems: 'flex-start', padding: '10px 13px', background: `color-mix(in srgb, ${color} 5.098039215686274%, transparent)`, border: `1px solid color-mix(in srgb, ${color} 25.098039215686274%, transparent)`, borderRadius: 'var(--r-card)' }}>
             <svg width="18" height="18" viewBox="0 0 18 18" fill="none" style={{ flexShrink: 0, marginTop: 1 }}><circle cx="9" cy="9" r="8" stroke={color} strokeWidth="1.5" /><path d="M9 5.5v.5M9 8v4" stroke={color} strokeWidth="1.6" strokeLinecap="round" /></svg>
-            <span style={{ fontSize: 14, lineHeight: 1.45, color: 'var(--ab-c4c4c4)' }}>{notice}</span>
+            <span style={{ fontSize: 13, lineHeight: 1.4, color: 'var(--ab-c4c4c4)' }}>{notice}</span>
           </div>
         )}
 
+        </div>
       </div>
     );
   }
@@ -1443,14 +1557,25 @@ export function FlightBoard({ airport, locale, defaultMode = 'departures', displ
                   <div className="frow-city" style={{ color: C.text }}>{city}</div>
                   {/* Не больше двух строк и перенос ТОЛЬКО по разделителю: каждая часть nowrap. На 375px
                       колонка ~125px, и в одну строку с многоточием авиакомпания съедалась целиком
-                      («1 ч 30 мин · Nor…»). Теперь «1 ч 30 мин ·» / «Nordwind», на десктопе — одна строка. */}
-                  {(code || meta.length > 0) && (
-                    <div className="frow-meta" style={{ color: C.secondary }}>
-                      {code && <bdi className="frow-code">{code}</bdi>}
-                      {code && meta.length > 0 && <span>{' · '}<wbr /></span>}
-                      {meta.map((m, k) => <span key={k} style={{ whiteSpace: 'nowrap' }}>{m}{k < meta.length - 1 ? ' · ' : ''}{k < meta.length - 1 ? <wbr /> : null}</span>)}
-                    </div>
-                  )}
+                      («1 ч 30 мин · Nor…»). Теперь «1 ч 30 мин ·» / «Nordwind», на десктопе — одна строка.
+
+                      Видимых частей не больше двух (30.10.2026). Третья в две строки не влезала и
+                      обрезалась на самом разделителе: «IST · 7 ч ·» / «Turkish Airlines · …» —
+                      две висящие точки и многоточие вместо сведений. Поставщик отдаёт все три
+                      части разом редко (тип самолёта — 11 строк из 6 180 на 20.10), поэтому
+                      обрезка снимает почти всегда ничего; когда снимает, снимается самое
+                      последнее по важности, а в карточке рейса тип самолёта остаётся целиком.
+                      В aria-label идёт ПОЛНЫЙ список: там ширины нет и терять нечего. */}
+                  {(code || meta.length > 0) && (() => {
+                    const shown = meta.slice(0, 2);
+                    return (
+                      <div className="frow-meta" style={{ color: C.secondary }}>
+                        {code && <bdi className="frow-code">{code}</bdi>}
+                        {code && shown.length > 0 && <span>{' · '}<wbr /></span>}
+                        {shown.map((m, k) => <span key={k} style={{ whiteSpace: 'nowrap' }}>{m}{k < shown.length - 1 ? ' · ' : ''}{k < shown.length - 1 ? <wbr /> : null}</span>)}
+                      </div>
+                    );
+                  })()}
                 </div>
 
                 {/* Ширина статуса не зависит от его текста. Раньше maxWidth 80/88

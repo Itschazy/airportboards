@@ -301,6 +301,7 @@
     "airline_label": "Fluggesellschaft",
     "aircraft_type": "Flugzeugtyp",
     "flight_duration": "Flugzeit",
+    "flight_date": "Datum",
     "flight_no": "Flugnummer",
     "flight_details": "Flugdetails",
     "notice_board": "Bitte seien Sie frühzeitig am Gate. Das Gate schließt pünktlich.",

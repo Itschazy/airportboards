@@ -301,6 +301,7 @@
     "airline_label": "航空会社",
     "aircraft_type": "機種",
     "flight_duration": "飛行時間",
+    "flight_date": "日付",
     "flight_no": "便名",
     "flight_details": "便の詳細",
     "notice_board": "時間厳守でゲートにお越しください。ゲートは定刻に確実に閉まります。",
