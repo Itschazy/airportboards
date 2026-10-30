@@ -554,10 +554,18 @@ export function getAirportsByLetter(letter: string): Airport[] {
 
 // Быстрый словарь главной: 1000 обслуживаемых аэропортов покрывают частые города,
 // но не заставляют слабый телефон загружать все 6069 записей и алиасы 12 языков.
-// Список строится один раз в процессе по тем же измерениям сервиса, что и табло.
+// Список строится один раз в процессе. Одного числа рейсов недостаточно:
+// CEK выпал за границу тысячи и «чел» снова ждал сетевой ответ, хотя это
+// контрольный пользовательский сценарий. Закрепляем его и востребованные
+// аэропорты по мобильному поисковому трафику 23–29.10 (ops/metrika-bing-20261030).
+// Остальные места — по прежней частоте сервиса; закрытые/необслуживаемые не
+// добавляются. Размер остаётся 1000 для всех языков, каталог/алиасы не едут в JS.
+// Проверка: check-search-bootstrap на fixture-сборке, 12 локалей и лимит gzip.
+const QUICK_DEMAND_CODES = new Set(['CEK','AYT','SSH','HRG','DME','GYD','IST','OVB','UFA','EVN','TAS','LWN','HKT','KZN','DXB','SVO']);
 let QUICK_AIRPORTS: Airport[] | null = null;
 export function getQuickAirports(): Airport[] {
   if (!QUICK_AIRPORTS) QUICK_AIRPORTS = airports.filter(a => !a.closed && serviceOf(a.iata) > 0)
-    .sort((a, b) => serviceOf(b.iata) - serviceOf(a.iata) || a.iata.localeCompare(b.iata)).slice(0, 1000);
+    .sort((a, b) => Number(QUICK_DEMAND_CODES.has(b.iata)) - Number(QUICK_DEMAND_CODES.has(a.iata))
+      || serviceOf(b.iata) - serviceOf(a.iata) || a.iata.localeCompare(b.iata)).slice(0, 1000);
   return QUICK_AIRPORTS;
 }

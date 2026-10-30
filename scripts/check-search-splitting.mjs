@@ -38,7 +38,10 @@ for (const [path, needsSearch, status] of [
       cache.set(url, await r.text());
     }
     const js = cache.get(url);
-    search ||= js.includes('/api/airports/search');
+    // Короткий запрос FavoriteToggle к тому же API не означает загрузку
+    // AirportSearch. Отличаем настоящий компонент по его bootstrap-ошибке;
+    // endpoint проверяем вместе с ней, чтобы не считать посторонний текст.
+    search ||= js.includes('/api/airports/search') && js.includes('Search bootstrap');
     bytes += gzipSync(js).length;
   }
   assert.equal(search, needsSearch, path + ': JS поиска только там, где есть поиск');

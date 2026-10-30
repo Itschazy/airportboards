@@ -87,4 +87,34 @@ const options=(node=tree,found=[])=>{if(!node||typeof node!=='object')return fou
 assert.equal(options().length,0,'Пустое поле без истории не показывает ни одной подсказки');
 assert.equal(input().props['aria-expanded'],false,'Пустое поле не объявляет раскрытый список');
 for(const s of slots)s?.cleanup?.();
-console.log('PASS: ранний Enter, поздний популярный ответ, обратный порядок ответов, ошибка сети, непрерывные подсказки, быстрый Челябинск, повтор без сети, поздний словарь, IME, смена локали, offline fallback, пустое поле без подсказок');
+// Повреждённая или устаревшая история не должна ломать настоящее поле поиска.
+// Проверяем не отдельный parser, а фокус, рендер опций и выбор через Enter.
+for (const stored of ['null', '{}', '[null,42,{}]', 'invalid JSON', ' '.repeat(16_385), JSON.stringify([
+  null, {...airport('BAD/../../api'), city:'Broken'},
+  {...airport('CEK'), city:'Челябинск'}, {...airport('CEK'), city:'Duplicate'},
+  ...['AYT','KZN','UFA','SVO','OVB','JFK'].map(airport),
+])]) {
+  slots=[];effects=[];dirty=false;calls.length=0;routes.length=0;
+  context.localStorage.getItem=()=>stored;
+  render();input().props.onFocus();render();
+  const list=findRole('listbox');
+  if (stored.includes('Челябинск')) {
+    assert.ok(list, 'Валидные строки сохраняются среди повреждённых');
+    function collectOptions(node=tree, found=[]) {
+      if(!node || typeof node!=='object') return found;
+      if(typeof node.type==='function') return collectOptions(node.type(node.props),found);
+      if(node.props?.role==='option') found.push(node);
+      for(const child of [node.props?.children].flat(Infinity)) if(child!=null) collectOptions(child,found);
+      return found;
+    }
+    assert.equal(collectOptions().length,5,'История ограничена пятью уникальными аэропортами');
+    input().props.onKeyDown({key:'ArrowDown',nativeEvent:{isComposing:false},preventDefault(){}});render();
+    enter();assert.equal(routes.at(-1),'/ru/airport/CEK','Первый валидный аэропорт выбирается');
+  } else {
+    assert.equal(list,null,'Некорректная история не даёт опций');
+    change('челя');await tick();calls.at(-1).resolve([airport('CEK')]);await tick();
+    enter();assert.equal(routes.at(-1),'/ru/airport/CEK','Поиск работает после некорректной истории');
+  }
+  for(const s of slots)s?.cleanup?.();
+}
+console.log('PASS: ранний Enter, поздний популярный ответ, обратный порядок ответов, ошибка сети, непрерывные подсказки, быстрый Челябинск, повтор без сети, поздний словарь, IME, смена локали, offline fallback, пустое поле без подсказок, повреждённая и ограниченная история');

@@ -34,7 +34,33 @@ function highlight(text: string, query: string) {
 }
 
 function getRecent(): Result[] {
-  try { return JSON.parse(localStorage.getItem(RECENT_KEY) || '[]'); } catch { return []; }
+  // localStorage переживает обновления сайта: корректный JSON ещё не означает
+  // массив подсказок. null/старый формат раньше падали на recent.filter при
+  // фокусе и ломали поиск. Читаем только пять уникальных корректных строк;
+  // чужие/повреждённые значения игнорируем, само хранилище не удаляем.
+  // Ограничение сырой строки не даёт испорченной истории блокировать слабый
+  // телефон большим JSON.parse. Проверено настоящим компонентом в check-search-race.
+  try {
+    const raw = localStorage.getItem(RECENT_KEY);
+    if (!raw || raw.length > 16_384) return [];
+    const rows: unknown = JSON.parse(raw);
+    if (!Array.isArray(rows)) return [];
+    const seen = new Set<string>();
+    const valid: Result[] = [];
+    for (const row of rows) {
+      if (!row || typeof row !== 'object') continue;
+      const a = row as Record<string, unknown>;
+      if (typeof a.iata !== 'string' || !/^[A-Z]{3}$/.test(a.iata) || seen.has(a.iata)) continue;
+      if (!['name', 'city', 'country', 'iso2'].every(key => typeof a[key] === 'string')) continue;
+      if (![a.name, a.city, a.country].every(value => (value as string).length <= 256)) continue;
+      if (!/^(?:[A-Z]{2})?$/.test(a.iso2 as string)) continue;
+      seen.add(a.iata);
+      valid.push({ iata: a.iata, name: a.name as string, city: a.city as string,
+        country: a.country as string, iso2: a.iso2 as string });
+      if (valid.length === MAX_RECENT) break;
+    }
+    return valid;
+  } catch { return []; }
 }
 
 function saveRecent(a: Result) {

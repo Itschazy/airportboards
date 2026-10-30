@@ -17,7 +17,7 @@ for(const file of fs.readdirSync('messages').filter(f=>f.endsWith('.json'))){
  assert.equal(data.quick.length,1000);assert.equal(new Set(data.quick.map(r=>r[0])).size,1000);
  const bytes=gzipSync(raw).length;assert.ok(bytes<40000,`${locale}: компактный словарь ${bytes}B`);
  const index=prepareQuick(data.quick);
- for(const code of ['CEK','KZN','UFA','AYT','SVO','HRG','SSH','GYD'])assert.equal(quickSearch(index,code)[0]?.iata,code,`${locale}: ${code} без ожидания API`);
+ for(const code of ['CEK','AYT','SSH','HRG','DME','GYD','IST','OVB','UFA','EVN','TAS','LWN','HKT','KZN','DXB','SVO'])assert.equal(quickSearch(index,code)[0]?.iata,code,`${locale}: ${code} без ожидания API`);
  assert.equal(quickSearch(index,'zzzznosuchairport').length,0);
  if(locale==='ru'){
   for(const [q,code]of [['чел','CEK'],['челя','CEK'],['моск','SVO'],['каз','KZN'],['уфа','UFA']])assert.equal(quickSearch(index,q)[0]?.iata,code,q);
