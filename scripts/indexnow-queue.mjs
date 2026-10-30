@@ -19,7 +19,11 @@ export const priorityCodes=['EDI','LBA','NCL','GLA','DMM','MAN','LHR','RUH','DUB
 // Спрос привязан к локали: популярность HRG/ru не означает приоритет HRG на всех языках.
 // Лимиты транспорта не меняются. Регрессия проверяет также уже сохранённую очередь.
 const ruDemandCodes=['AYT','SSH','HRG','DME','GYD','IST','OVB','UFA','EVN','TAS','LWN','HKT','KZN','DXB'];
+// Только локали, в которых Bing запросил эти canonical маршруты; discovery
+// по-прежнему берёт их из sitemap, а не безусловно добавляет пустые страницы.
+const demandRoutePaths=['/en/route/MEL-PER','/de/route/BER-AYT','/en/route/BRS-PMI'];
 function priorityPath(p) {
+  if(demandRoutePaths.includes(p))return true;
   const match=/^\/(ru|en|de|fr|es|it|tr|zh|ja|ko|ar|hi)\/airport\/([A-Z]{3})(?:\/arrivals)?$/.exec(p);
   if(!match) return false;
   const [,locale,code]=match;
@@ -139,7 +143,7 @@ export async function discoverPaths(fetcher=fetch) {
 // включены: подтверждённое обновление справочной тоже содержательное изменение.
 export function contentManifest(root, catalogue=[]) {
   const read=f=>fs.readFileSync(path.join(root,f),'utf8');
-  const airportCode=hash(['components/AirportBottom.tsx','lib/airport-guide.ts','lib/airport-content.ts',
+  const airportCode=hash(['components/AirportBottom.tsx','lib/airport-title.ts','lib/airport-guide.ts','lib/airport-content.ts',
     'app/[locale]/airport/[iata]/page.tsx','app/[locale]/airport/[iata]/arrivals/page.tsx'].map(read).join('\n'));
   const guides=fs.readdirSync(path.join(root,'data/airport-guide')).filter(f=>/^[A-Z]{3}\.json$/.test(f)).sort();
   const eventCode=hash(['lib/event-content.ts','app/[locale]/event/[slug]/page.tsx','app/[locale]/events/page.tsx'].map(read).join('\n'));
@@ -151,7 +155,7 @@ export function contentManifest(root, catalogue=[]) {
   const codes=[...new Set([...priorityCodes,...guides.map(f=>f.slice(0,3))])];
   for(const locale of ['en','de',...locales.filter(l=>l!=='en'&&l!=='de')]) {
     const messages=JSON.parse(read(`messages/${locale}.json`));
-    const text=hash(JSON.stringify([messages.home,messages.ui,messages.nav]));
+    const text=hash(JSON.stringify([messages.home,messages.meta,messages.ui,messages.nav]));
     // Не теряем обновления событий/карты, которые раньше попадали в дневной пакет.
     // Временной статус события меняет хеш ровно один раз, а не ежедневно.
     for(const event of events) {

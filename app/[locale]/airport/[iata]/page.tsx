@@ -1,3 +1,4 @@
+import { compactAirportTitle } from '@/lib/airport-title';
 import { LocaleLinks } from '@/components/LocaleLinks';
 import type { Locale } from '@/lib/i18n';
 import { airportSchema } from '@/lib/airport-schema';
@@ -252,7 +253,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   // сюда каждый цикл прогрева. Возраст такого хлопанья не даёт: он растёт монотонно и
   // сбрасывается ровно тогда, когда обещание снова становится правдой.
   const titleKey = boardAge <= STALE_TITLE_AFTER ? 'main_title' : 'main_title_stale';
-  const title = descTitle ?? t(titleKey, { airport: name, city, showCity, iata: airport.iata });
+  const title = descTitle ?? compactAirportTitle(t(titleKey, { airport: name, city, showCity, iata: airport.iata }), locale);
   const canonical = `${BASE}/${locale}/airport/${airport.iata}`;
 
   const languages: Record<string, string> = {};

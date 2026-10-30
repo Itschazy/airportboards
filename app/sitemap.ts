@@ -1,3 +1,4 @@
+import searchDemandRoutes from '@/data/search-demand-routes.json';
 import { sitemapShard } from '@/lib/sitemap-shard';
 import type { MetadataRoute } from 'next';
 import { getAllIataCodes, getSitemapCount, getCountries, getStaticIataCodes, getCities, getAirportsByCountry, getAirportsByCity } from '@/lib/airports';
@@ -256,7 +257,11 @@ async function buildAll(): Promise<MetadataRoute.Sitemap> {
     // sitemap regeneration (revalidate = 86400), not per request.
     const seenPair = new Set<string>();
     const pairList: string[] = [];
-    for (const pairs of Object.values(getTopRoutes())) {
+    // Bing обнаружил три самостоятельных маршрута вне top-8 по числу рейсов.
+    // Спрос — отдельный сигнал отбора, но НЕ обход проверки наличия рейсов:
+    // ниже тот же getRoute.length > 0 исключает пустые/noindex страницы.
+    // Добавляются только проверенные пары, все языки остаются одной hreflang-группой.
+    for (const pairs of [...Object.values(getTopRoutes()), Object.keys(searchDemandRoutes)]) {
       for (const pair of pairs) {
         if (seenPair.has(pair)) continue;
         seenPair.add(pair);

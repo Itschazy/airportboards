@@ -1,3 +1,4 @@
+import { compactAirportTitle } from '@/lib/airport-title';
 import { LocaleLinks } from '@/components/LocaleLinks';
 import type { Locale } from '@/lib/i18n';
 import { airportSchema } from '@/lib/airport-schema';
@@ -99,7 +100,7 @@ async function arrivalsCopy(airport: NonNullable<ReturnType<typeof getAirport>>,
     ? `${tNav('arrivals')}: ${name} (${airport.iata}) — ${tHome('ns_title')}`
     : infoOnly
       ? `${tNav('arrivals')}: ${t('info_title', { airport: name, iata: airport.iata })}`
-      : t(fresh ? 'arrivals_title' : 'arrivals_title_stale', { airport: name, iata: airport.iata, city: cityName, showCity });
+      : compactAirportTitle(t(fresh ? 'arrivals_title' : 'arrivals_title_stale', { airport: name, iata: airport.iata, city: cityName, showCity }), locale);
   const description = boardless
     ? `${tNav('arrivals')}: ${tHome('ns_meta', { airport: name, iata: airport.iata, city: cityName, country })}`
     : infoOnly

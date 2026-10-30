@@ -70,11 +70,17 @@ assertPublished('abcdef012345','abcdef012345','abcdef012345');
 for(const values of [['abcdef012345','111111111111','111111111111'],['abcdef012345','abcdef012345','111111111111'],['unknown','unknown','unknown']])assert.throws(()=>assertPublished(...values));
 const copyRoot=fs.mkdtempSync(path.join(os.tmpdir(),'ab-manifest-'));
 for(const entry of ['data/airport-guide','data/events','messages','lib/flight-map'])fs.cpSync(entry,path.join(copyRoot,entry),{recursive:true});
-for(const entry of ['components/AirportBottom.tsx','lib/airport-guide.ts','lib/airport-content.ts','lib/event-content.ts','app/[locale]/airport/[iata]/page.tsx','app/[locale]/airport/[iata]/arrivals/page.tsx','app/[locale]/event/[slug]/page.tsx','app/[locale]/events/page.tsx','app/[locale]/flight-map/page.tsx']){fs.mkdirSync(path.dirname(path.join(copyRoot,entry)),{recursive:true});fs.copyFileSync(entry,path.join(copyRoot,entry));}
+for(const entry of ['components/AirportBottom.tsx','lib/airport-title.ts','lib/airport-guide.ts','lib/airport-content.ts','lib/event-content.ts','app/[locale]/airport/[iata]/page.tsx','app/[locale]/airport/[iata]/arrivals/page.tsx','app/[locale]/event/[slug]/page.tsx','app/[locale]/events/page.tsx','app/[locale]/flight-map/page.tsx']){fs.mkdirSync(path.dirname(path.join(copyRoot,entry)),{recursive:true});fs.copyFileSync(entry,path.join(copyRoot,entry));}
 const before=contentManifest(copyRoot);
 fs.appendFileSync(path.join(copyRoot,'data/airport-guide/de/LBA.json'),'\n');
 const after=contentManifest(copyRoot);
 assert.deepEqual(Object.keys(after).filter(p=>before[p]!==after[p]),['/de/airport/LBA','/de/airport/LBA/arrivals']);
+const metaFile=path.join(copyRoot,'messages/en.json');
+const meta=JSON.parse(fs.readFileSync(metaFile,'utf8'));
+meta.meta.main_title+=' updated';fs.writeFileSync(metaFile,JSON.stringify(meta));
+const withMeta=contentManifest(copyRoot);
+assert.notEqual(withMeta['/en/airport/LHR'],after['/en/airport/LHR']);
+assert.equal(withMeta['/de/airport/LHR'],after['/de/airport/LHR']);
 fs.rmSync(copyRoot,{recursive:true});
 console.log('PASS publication guard (before build / before restart / unknown), isolated translation fingerprint.');
 const priorityState=emptyState();reconcile(priorityState,{'/en/airport/AAA':'1','/en/airport/BBB':'1'},now);
