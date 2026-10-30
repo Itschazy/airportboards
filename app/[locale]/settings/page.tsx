@@ -41,8 +41,11 @@ export default async function SettingsPage({ params }: Props) {
   setRequestLocale(assertLocale(locale));
   const tNav = await getTranslations({ locale, namespace: 'nav' });
 
+  // Сверху 6, а не 18: заголовок страницы скрыт, поэтому под шапкой не стоит ни
+  // строки — весь отступ читается как пустая полоса между пилюлей шапки и
+  // плитками. На других страницах те же 18px держат первый заголовок.
   return (
-    <main style={{ maxWidth: 720, margin: '0 auto', padding: '18px 16px 40px', width: '100%' }}>
+    <main style={{ maxWidth: 720, margin: '0 auto', padding: '6px 16px 40px', width: '100%' }}>
       {/* Скрыт визуально, но остался в разметке — см. тот же приём на /favorites. */}
       <h1 className="sr-only">{tNav('settings')}</h1>
       <SettingsControls locale={locale as Locale} />
