@@ -90,6 +90,12 @@ function SearchSection({ label, items, startIndex = 0, active, query, pending = 
       {items.map((a, i) => {
         const globalIdx = startIndex + i;
         const isActive = !pending && active === globalIdx;
+        // Локализованное название аэропорта иногда совпадает с городом (CEK).
+        // Раньше два поля рисовали «Челябинск Челябинск» и отнимали место на
+        // телефоне. Сравниваем подписи без различий регистра/пробелов/Unicode,
+        // но не меняем данные и сохраняем отличающиеся имена вроде Шереметьево.
+        const labelKey = (value: string) => value.normalize('NFC').trim().replace(/\s+/gu, ' ').toLowerCase();
+        const showName = !!a.name.trim() && labelKey(a.name) !== labelKey(a.city);
         return (
           <button
             key={a.iata}
@@ -139,9 +145,9 @@ function SearchSection({ label, items, startIndex = 0, active, query, pending = 
               <span style={{ fontSize: 16, color: 'var(--ab-e4e4e7)', whiteSpace: 'nowrap', flexShrink: 0 }}>
                 {highlight(a.city, query)}
               </span>
-              <span className="srch-name" style={{ fontSize: 13, color: 'var(--ab-6a6a6a)', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis', minWidth: 0 }}>
+              {showName && <span className="srch-name" style={{ fontSize: 13, color: 'var(--ab-6a6a6a)', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis', minWidth: 0 }}>
                 {highlight(a.name, query)}
-              </span>
+              </span>}
             </span>
           </button>
         );
