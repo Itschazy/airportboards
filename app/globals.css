@@ -217,11 +217,15 @@ input::-webkit-search-cancel-button { display: none; }
   min-height: 38px;
   padding: 0 14px;
   border-radius: var(--r-pill);
-  background: var(--glass-soft);
+  background: transparent;
   box-shadow: var(--glass-rim);
   cursor: pointer;
   -webkit-tap-highlight-color: transparent;
 }
+/* Отклик на нажатие — лёгкая заливка на время касания. Без неё у кнопки не
+   осталось бы вообще никакого отклика: заливки нет, а transform здесь нельзя,
+   кнопка лежит под стеклянной шапкой (правило разобрано у .frow). */
+.ap-about > summary:active { background: var(--glass-soft); }
 .ap-about > summary::-webkit-details-marker { display: none; }
 .ap-about > summary h2 {
   margin: 0;
@@ -231,7 +235,8 @@ input::-webkit-search-cancel-button { display: none; }
   letter-spacing: 0;
   text-transform: none;
 }
-.ap-about[open] > summary { background: var(--glass); }
+.ap-about > summary .disclosure-arrow { transition: transform 0.18s ease; }
+.ap-about[open] > summary .disclosure-arrow { transform: rotate(180deg); }
 .ap-about > p {
   margin: 12px 2px 2px;
   font-size: 14px;
