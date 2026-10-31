@@ -27,6 +27,7 @@ import { currentIata } from '@/lib/iata-aliases';
 import { showCityFlag, fold } from '@/lib/show-city';
 import { assertLocale } from '@/lib/locale-guard';
 import { getAirportGuide, guideAmenities } from '@/lib/airport-guide';
+import { ldScript } from '@/lib/json-ld';
 
 /**
  * Срез борта для показа и признак «всё уже в прошлом».
@@ -467,7 +468,7 @@ export default async function AirportPage({ params }: Props) {
   return (
     <>
       {jsonLd.map((schema, i) => (
-        <script key={i} type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
+        <script key={i} type="application/ld+json" dangerouslySetInnerHTML={ldScript(schema)} />
       ))}
       {predecessors.length > 0 && (
         <aside style={{

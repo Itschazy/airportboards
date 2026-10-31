@@ -8,6 +8,7 @@ import { getAirport } from '@/lib/airports';
 import { getCityName } from '@/lib/places';
 import { getAirline, getAirlineFlights, type FlightRow } from '@/lib/flights';
 import { assertLocale } from '@/lib/locale-guard';
+import { ldScript } from '@/lib/json-ld';
 
 const BASE = 'https://airportsboard.live';
 type Props = { params: Promise<{ locale: string; code: string }> };
@@ -67,7 +68,7 @@ export default async function AirlinePage({ params }: Props) {
 
   return (
     <div style={{ maxWidth: 720, margin: '0 auto', padding: '36px 18px 64px' }}>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={ldScript(jsonLd)} />
       <div style={{ fontSize: 13, color: 'var(--ab-8a8a8a)', marginBottom: 12 }}>
         <Link href={`/${locale}`} style={{ color: 'var(--ab-6a6a6a)', textDecoration: 'none', display: 'inline-block', minHeight: 24 }}>airportsboard</Link>
       </div>

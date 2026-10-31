@@ -9,6 +9,7 @@ import { renderInfo } from '@/lib/flight-map/content';
 import './flight-map.css';
 import { initialMapLayoutScript } from '@/lib/flight-map/layout-hint';
 import { createI18n } from '@/public/flight-map/v4/i18n';
+import { ldScript } from '@/lib/json-ld';
 
 type Props = { params: Promise<{ locale: string }> };
 const base = 'https://airportsboard.live';
@@ -74,6 +75,6 @@ export default async function FlightMapPage({ params }: Props) {
         тот же boot вызывает React; повторный вызов сохраняет готовый остров. */}
     <script type="module" data-flight-map-boot="true" dangerouslySetInnerHTML={{ __html: `import {boot} from '${runtimeUrl}';boot(document.querySelector('[data-flight-map-version="9"]'));` }} />
     <noscript><p style={{ textAlign: 'center', padding: 16 }}>{String(messages.noscript)}</p></noscript>
-    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(data).replace(/</g, '\\u003c') }} />
+    <script type="application/ld+json" dangerouslySetInnerHTML={ldScript(data)} />
   </>;
 }

@@ -10,6 +10,7 @@ import { numLocale, locales } from '@/lib/i18n';
 import { localizedMeasuredOn } from '@/lib/measured-date';
 import { worldServiceCounts } from '@/lib/warm';
 import { assertLocale } from '@/lib/locale-guard';
+import { ldScript } from '@/lib/json-ld';
 
 // Counts are passed to ICU pre-formatted for the locale: a bare placeholder renders 6069,
 // while German expects 6.069 and French 6 069.
@@ -102,9 +103,9 @@ export default async function AirportsIndexPage({ params }: Props) {
     // Ширина и отступы как у страницы страны и страницы аэропорта: 760 выбивались
     // из общей колонки, и при переходе с главной страница заметно сужалась.
     <div style={{ maxWidth: 960, margin: '0 auto', padding: '0 16px 64px' }}>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(itemList) }} />
-      {dataset && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(dataset) }} />}
+      <script type="application/ld+json" dangerouslySetInnerHTML={ldScript(jsonLd)} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={ldScript(itemList)} />
+      {dataset && <script type="application/ld+json" dangerouslySetInnerHTML={ldScript(dataset)} />}
       {/* Крошки той же стеклянной капсулой, что на странице страны. Здесь была
           одинокая серая ссылка «airportsboard» без указания текущей страницы —
           то есть след навигации, который ничего не сообщал о том, где человек. */}

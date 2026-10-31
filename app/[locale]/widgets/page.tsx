@@ -5,6 +5,7 @@ import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { WidgetBuilder } from '@/components/WidgetBuilder';
 import { locales } from '@/lib/i18n';
 import { assertLocale } from '@/lib/locale-guard';
+import { ldScript } from '@/lib/json-ld';
 
 const BASE = 'https://airportsboard.live';
 
@@ -71,7 +72,7 @@ export default async function WidgetsPage({ params }: Props) {
 
   return (
     <main style={{ maxWidth: 720, margin: '0 auto', padding: '28px 20px 60px' }}>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={ldScript(jsonLd)} />
       <h1 style={{ fontSize: 'clamp(26px, 6vw, 36px)', fontWeight: 800, letterSpacing: '-0.03em', color: 'var(--ab-ffffff)', margin: 0 }}>
         {t('widgets_title')}
       </h1>

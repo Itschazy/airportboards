@@ -13,6 +13,7 @@ import { deName as withDe } from '@/lib/fr-elision';
 import { getAirportName } from '@/lib/airport-names';
 import { locales } from '@/lib/i18n';
 import { assertLocale } from '@/lib/locale-guard';
+import { ldScript } from '@/lib/json-ld';
 
 const BASE = 'https://airportsboard.live';
 type Props = { params: Promise<{ locale: string; slug: string }> };
@@ -105,8 +106,8 @@ export default async function CityPage({ params }: Props) {
 
   return (
     <div style={{ maxWidth: 760, margin: '0 auto', padding: '36px 18px 64px' }}>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(itemList) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={ldScript(jsonLd)} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={ldScript(itemList)} />
       <h1 style={{ fontSize: 'clamp(28px, 7vw, 40px)', fontWeight: 800, letterSpacing: '-0.03em', color: 'var(--ab-ffffff)', margin: '0 0 6px' }}>
         <span className="locale-flag">{flag(c.iso2)}</span> {t('city_title', { city, deCity })}
       </h1>

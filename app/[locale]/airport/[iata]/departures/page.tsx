@@ -20,6 +20,7 @@ import { EventBanner } from '@/components/EventBanner';
 import { currentIata } from '@/lib/iata-aliases';
 import { showCityFlag } from '@/lib/show-city';
 import { assertLocale } from '@/lib/locale-guard';
+import { ldScript } from '@/lib/json-ld';
 
 /**
  * Срез борта для показа и признак «всё уже в прошлом».
@@ -253,7 +254,7 @@ export default async function DeparturesPage({ params }: Props) {
   return (
     <>
       {jsonLd.map((schema, i) => (
-        <script key={i} type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
+        <script key={i} type="application/ld+json" dangerouslySetInnerHTML={ldScript(schema)} />
       ))}
       {/* The visible <h1> now lives in FlightBoard's airport header (single semantic h1). */}
       <FlightBoard airport={airport} locale={locale} defaultMode="departures" displayName={getAirportName(airport.iata, locale, airport.name)} cityName={city} initialFlights={board.rows} initialAllPast={board.allPast} initialFetchedAt={getBoardFetchedAt(airport.iata, 'departures')} boardTotal={initialFlights.length} aboutTitle={tHome('about_title', { iata: airport.iata })} aboutExtra={<AirportBottom part="reference" about={about} airport={airport} locale={locale} displayName={getAirportName(airport.iata, locale, airport.name)} flights={initialFlights} noService={noService} nearestServed={nearestWithFlights} direction="departures" />} />

@@ -2,6 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 import { getTranslations } from 'next-intl/server';
 import { numLocale, rtlLocales, type Locale } from '@/lib/i18n';
+import { ldScript } from '@/lib/json-ld';
 import {
   getLegalDoc,
   legalContentLocale,
@@ -102,7 +103,7 @@ export async function LegalArticle({ kind, locale }: { kind: LegalKind; locale: 
         : undefined}
       style={{ maxWidth: 760, margin: '0 auto', padding: '36px 18px 64px' }}
     >
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={ldScript(jsonLd)} />
       <div style={{ fontSize: 13, color: 'var(--ab-8a8a8a)', marginBottom: 10 }}>
         <Link href={`/${locale}`} style={{ color: 'var(--ab-6a6a6a)', textDecoration: 'none', display: 'inline-block', minHeight: 24 }}>airportsboard</Link>
       </div>

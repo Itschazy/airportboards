@@ -12,6 +12,7 @@ import { locales, forwardArrow, numLocale } from '@/lib/i18n';
 import { joinList } from '@/lib/list-separator';
 import { routeFacts } from '@/lib/route-facts';
 import { assertLocale } from '@/lib/locale-guard';
+import { ldScript } from '@/lib/json-ld';
 
 const BASE = 'https://airportsboard.live';
 type Props = { params: Promise<{ locale: string; pair: string }> };
@@ -189,7 +190,7 @@ export default async function RoutePage({ params }: Props) {
   return (
     <div style={{ maxWidth: 760, margin: '0 auto', padding: '10px 16px 48px' }}>
       {jsonLd.map((schema, i) => (
-        <script key={i} type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
+        <script key={i} type="application/ld+json" dangerouslySetInnerHTML={ldScript(schema)} />
       ))}
 
       {/* Шапка маршрута — та же стеклянная панель и те же поля, что у .ap-head. */}

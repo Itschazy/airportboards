@@ -15,6 +15,7 @@ import { splitByService, serviceMeasuredOn } from '@/lib/warm';
 import { localizedMeasuredOn } from '@/lib/measured-date';
 import { assertLocale } from '@/lib/locale-guard';
 import { Breadcrumb } from '@/components/Breadcrumb';
+import { ldScript } from '@/lib/json-ld';
 
 // See app/[locale]/airports/page.tsx — ICU renders a bare placeholder ungrouped.
 const fmt = (n: number, locale: string) => n.toLocaleString(numLocale(locale));
@@ -146,8 +147,8 @@ export default async function CountryPage({ params }: Props) {
   // колонка не совпадала ни с табло, ни с главной.
   return (
     <div style={{ maxWidth: 960, margin: '0 auto', padding: '0 16px 64px' }}>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(itemList) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={ldScript(breadcrumb)} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={ldScript(itemList)} />
       {/* Крошки той же стеклянной капсулой, что на странице аэропорта и города —
           и тем же компонентом, который строит их из массива выше. */}
       <Breadcrumb label={tNav('aria_breadcrumb')} trail={crumbs} />

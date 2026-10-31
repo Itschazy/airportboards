@@ -23,6 +23,7 @@ import { joinList, listSeparator } from '@/lib/list-separator';
 import { deName as withDe } from '@/lib/fr-elision';
 import { EventBanner } from '@/components/EventBanner';
 import { RecentlyViewed } from '@/components/RecentlyViewed';
+import { ldScript } from '@/lib/json-ld';
 
 const LETTERS = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('');
 const SUB = 'var(--ab-8a8a8a)';
@@ -391,7 +392,7 @@ export async function AirportBottom({ airport, locale, about = null, displayName
   if (part === 'reference') {
     return (
       <>
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqLd) }} />
+        <script type="application/ld+json" dangerouslySetInnerHTML={ldScript(faqLd)} />
         {guide && (
           <AirportGuide guide={guide} title={tUi('aguide_title', { iata: airport.iata })} />
         )}

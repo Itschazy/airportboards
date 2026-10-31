@@ -8,6 +8,7 @@ import { getEventsForHub, type EventData, type EventType } from '@/lib/event-con
 import { numLocale, locales } from '@/lib/i18n';
 import { getCityName } from '@/lib/places';
 import { assertLocale } from '@/lib/locale-guard';
+import { ldScript } from '@/lib/json-ld';
 
 const BASE = 'https://airportsboard.live';
 type Props = { params: Promise<{ locale: string }> };
@@ -85,8 +86,8 @@ export default async function EventsHubPage({ params }: Props) {
 
   return (
     <div style={{ maxWidth: 760, margin: '0 auto', padding: '36px 18px 64px' }}>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(itemList) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={ldScript(breadcrumb)} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={ldScript(itemList)} />
       <div style={{ fontSize: 13, color: 'var(--ab-8a8a8a)', marginBottom: 10 }}>
         <Link href={`/${locale}`} style={{ color: 'var(--ab-6a6a6a)', textDecoration: 'none', display: 'inline-block', minHeight: 24 }}>airportsboard</Link>
       </div>

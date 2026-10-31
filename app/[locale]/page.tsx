@@ -24,6 +24,7 @@ const worldCounts = () => {
 import { StandaloneResume } from '@/components/StandaloneResume';
 import { PopularList } from '@/components/PopularList';
 import { assertLocale } from '@/lib/locale-guard';
+import { ldScript } from '@/lib/json-ld';
 
 type Props = { params: Promise<{ locale: string }> };
 
@@ -104,7 +105,7 @@ export default async function HomePage({ params }: Props) {
   return (
     <div className="home-search-page" data-home-page>
       {jsonLd.map((s, i) => (
-        <script key={i} type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(s) }} />
+        <script key={i} type="application/ld+json" dangerouslySetInnerHTML={ldScript(s)} />
       ))}
 
       {/* По просьбе владельца главная стала поисковым входом: бренд, короткий

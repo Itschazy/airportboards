@@ -32,6 +32,7 @@
     "check:pastcard": "node scripts/check-past-flight-card.mjs",
     "check:warmtick": "node scripts/check-warm-tick.mjs",
     "check:warmauth": "node scripts/check-warm-auth.mjs",
+    "check:jsonld": "node scripts/check-json-ld.mjs",
     "check:track": "node scripts/check-track.mjs",
     "check:status": "node scripts/check-status-codes.mjs",
     "check:boardreg": "node scripts/check-board-regressions.mjs",
