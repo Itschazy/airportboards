@@ -3,6 +3,16 @@
 // Только audit-bot, без API рейсов. Холодный сценарий проверять на фикстуре.
 import fs from 'node:fs';
 import assert from 'node:assert/strict';
+// Формы имени берутся ИЗ КОДА, а не подставляются руками.
+//
+// 🔴 31.10.2026. Ожидаемый ответ собирался заменой {name} и {iata} в шаблоне, и этого
+// хватало, пока во французском стояло «de {name}». Элизия обязательна и перед именами
+// собственными («le tableau d’Antalya»), поэтому предлог приезжает готовым в {deName} —
+// и наивная подстановка перестала совпадать с отрисованной страницей. Проверка обязана
+// повторять предикат кода, а не изобретать свой: берём ту же функцию, что и страница.
+const { deName } = await import('data:text/javascript;base64,' + Buffer.from(
+  fs.readFileSync('lib/fr-elision.ts', 'utf8').replaceAll(': string', ''),
+).toString('base64'));
 const base = process.argv[2] || 'http://localhost:3099';
 const decode = s => s.replace(/&quot;/g, '"').replace(/&#x27;|&#39;/g, "'").replace(/&amp;/g, '&').replace(/&lt;/g, '<').replace(/&gt;/g, '>');
 async function read(p) {
@@ -31,7 +41,9 @@ for (const file of files) {
   for (const page of [parent,arrivals]) {
     assert.equal(page.graph.find(s=>s['@type']==='WebPage').mainEntity['@id'],airport['@id']);
     const faq = page.graph.find(s=>s['@type']==='FAQPage').mainEntity;
-    const answer = messages.home.faq_live_a.replaceAll('{name}',airport.name).replaceAll('{iata}','AYT');
+    const answer = messages.home.faq_live_a
+      .replaceAll('{deName}',deName(airport.name,locale))
+      .replaceAll('{name}',airport.name).replaceAll('{iata}','AYT');
     assert.ok(answer.includes('10'),locale+': порог');
     assert.ok(faq.some(q=>q.acceptedAnswer.text===answer),locale+': JSON-LD FAQ');
     assert.ok(page.visible.includes(answer),locale+': тот же ответ в видимом HTML');

@@ -143,7 +143,7 @@
     "faq_terminal_q": "{iata} : où trouver le terminal et la porte d’embarquement ?",
     "faq_terminal_a": "Ouvrez la fiche du vol. Le terminal et la porte d’embarquement sont affichés lorsque les données reçues les précisent. Un champ vide ne signifie pas qu’aucun terminal n’a été attribué. Vérifiez les informations auprès de la compagnie avant de partir, puis sur les tableaux de l’aéroport une fois sur place.",
     "faq_live_q": "Comment voir les vols en direct à {name} ?",
-    "faq_live_a": "Choisissez les départs ou les arrivées sur le tableau de {name} ({iata}). Les horaires sont en heure locale et l’ancienneté des données est indiquée. À l’ouverture de la page, une mise à jour est demandée si les données ont au moins 10 minutes. Si elle tarde, les dernières données enregistrées restent affichées : vérifiez leur ancienneté.",
+    "faq_live_a": "Choisissez les départs ou les arrivées sur le tableau {deName} ({iata}). Les horaires sont en heure locale et l’ancienneté des données est indiquée. À l’ouverture de la page, une mise à jour est demandée si les données ont au moins 10 minutes. Si elle tarde, les dernières données enregistrées restent affichées : vérifiez leur ancienneté.",
     "footer_tagline": "Tableaux d’aéroport en direct pour {served, number} aéroports assurant des vols réguliers. Arrivées et départs, avec l’ancienneté des données.",
     "footer_countries": "Pays populaires",
     "footer_cities": "Villes populaires",
