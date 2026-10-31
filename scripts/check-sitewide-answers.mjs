@@ -7,7 +7,15 @@ import fs from 'node:fs';
 import vm from 'node:vm';
 import ts from 'typescript';
 const base = process.argv[2] || 'http://localhost:3128';
-assert(['localhost','127.0.0.1'].includes(new URL(base).hostname), 'тест синтетических снимков — только локально');
+// Отказ ВСЛУХ, а не падение: проверка строит синтетические снимки и смотрит, что сайт
+// отвечает по ним, — против прода она бессмысленна, но «бессмысленна» и «сломана» это
+// разные вещи. Падение красит суточную сводку там, где измерять было нечего, а к
+// вечному красному привыкают, и настоящая поломка в нём тонет (31.10.2026).
+if (!['localhost', '127.0.0.1', '[::1]'].includes(new URL(base).hostname)) {
+  console.log(`НЕ ИЗМЕРЕНО: ${base} — тест синтетических снимков работает только против`
+    + ' локальной сборки на фикстуре: node scripts/check-sitewide-answers.mjs http://localhost:3099');
+  process.exit(0);
+}
 const compile = source => ts.transpileModule(source, {compilerOptions:{module:ts.ModuleKind.CommonJS,target:ts.ScriptTarget.ES2020}}).outputText;
 const i18n = {exports:{}};
 vm.runInNewContext(compile(fs.readFileSync('lib/i18n.ts','utf8')), i18n);

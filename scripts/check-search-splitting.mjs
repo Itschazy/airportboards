@@ -7,7 +7,14 @@ import assert from 'node:assert/strict';
 import { gzipSync } from 'node:zlib';
 
 const base = new URL(process.argv[2] || 'http://localhost:3099');
-assert.ok(['localhost', '127.0.0.1'].includes(base.hostname), 'Только локальная fixture-сборка');
+// Отказ ВСЛУХ, а не падение — по той же причине, что в check-sitewide-answers:
+// проверка разбирает вывод компилятора на локальной сборке, и против прода ей нечего
+// мерить. Красный по построению хуже отсутствующего (31.10.2026).
+if (!['localhost', '127.0.0.1', '[::1]'].includes(base.hostname)) {
+  console.log(`НЕ ИЗМЕРЕНО: ${base} — разбор разделения бандла идёт только по локальной`
+    + ' сборке: node scripts/check-search-splitting.mjs http://localhost:3099');
+  process.exit(0);
+}
 const cache = new Map();
 async function read(path) {
   const url = new URL(path, base);
