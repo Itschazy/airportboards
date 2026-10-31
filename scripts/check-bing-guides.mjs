@@ -12,7 +12,9 @@ for(const locale of locales) for(const code of codes) for(const suffix of ['','/
  const response=await fetch(base+route,{headers:{'user-agent':'audit-bot'},signal:AbortSignal.timeout(30000)});
  assert.equal(response.status,200,route);const html=await response.text();
  const visible=decode(html.replace(/<script\b[^>]*>[\s\S]*?<\/script>/gi,'').replace(/<style\b[^>]*>[\s\S]*?<\/style>/gi,'').replace(/<[^>]+>/g,''));
- assert.ok(html.includes('class="ag-lead"'),route+': lead');
+ // Строки «Проверено …» (class="ag-lead") на странице больше нет: снята по решению
+ // владельца 31.10.2026 вместе с подписями источников под блоками. Дата проверки
+ // осталась в данных — её стережёт check:guidefresh, которому она и нужна.
  assert.ok(html.includes(`rel="canonical" href="https://airportsboard.live${route}"`),route+': canonical');
  for(const l of locales) assert.ok(html.includes(`hrefLang="${l}" href="https://airportsboard.live/${l}/airport/${code}${suffix}"`),route+': hreflang '+l);
  const schemas=[...html.matchAll(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/g)].flatMap(m=>JSON.parse(m[1]));
