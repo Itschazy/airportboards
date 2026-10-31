@@ -21,7 +21,8 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { getAirport } from '@/lib/airports';
-import { getStaleTs, usage, canSpend, humanReserve, monthlyCap } from '@/lib/flightStore';
+import { getStaleTs, usage, canSpend, humanReserve } from '@/lib/flightStore';
+import { warmBudget } from '@/lib/warm-budget';
 import { hasWikiAirlines, getWikiRoutes } from '@/lib/wiki-routes';
 
 export type WarmTier = {
@@ -559,53 +560,11 @@ export function dueAirports(now = Date.now()): Due[] {
   return out;
 }
 
-/**
- * How many airlabs requests this run may spend.
- *
- * Spreads whatever is left of the monthly budget evenly across the days remaining, then
- * across the runs expected in a day. Deliberately derived rather than configured: if the
- * plan doubles, every tier simply gets refreshed more often.
- */
-/**
- * Сколько тиков в сутки делает крон. ОБЯЗАНО совпадать с крон-строкой на боксе:
- * tickBudget() делит дневную долю на это число, и расхождение бьёт в обе стороны — при
- * заниженном значении сутки тратят больше дневной доли, при завышенном прогрев недобирает.
- * 21.09.2026 крон переведён с двухчасового шага на часовой (см. TIERS): 24, не 12.
- */
+/** Частота должна совпадать с cron; на проде WARM_RUNS_PER_DAY=48. */
 const RUNS_PER_DAY = Number(process.env.WARM_RUNS_PER_DAY || 12);
 
 export function tickBudget(runsPerDay = RUNS_PER_DAY, now = new Date()): number {
-  const u = usage();
-  // Split the plan between the warmer and live human traffic. /api/flights fetches live for
-  // a real browser off the same quota, so a warmer that drained the plan would leave every
-  // visitor on a stale board for the rest of the month.
-  //
-  // See humanReserve() for why this is a share of the cap rather than a fixed number. It is
-  // the same figure live-budget.ts holds visitors to, so neither side can outgrow the other.
-  const reserve = humanReserve();
-  // Warming simply stops once only the reserve is left, which guarantees that many requests
-  // remain available to visitors no matter how the month went.
-  /**
-   * Прогреву гарантирована СВОЯ доля, а не остаток после людей.
-   *
-   * `u.remaining - reserve` — это «сколько осталось всего минус людской резерв», и такой
-   * счёт молча отдаёт прогрев на милость живого пути: он тратит из того же общего счётчика,
-   * поэтому активный трафик обнуляет прогреву бюджет задолго до конца месяца. 04.09 разбор
-   * показал, что это достижимо не в теории: заслон freshnessWorthBuying пропускает 392 борта,
-   * а окно TTL в 600 с даёт до 2 352 покупок в час.
-   *
-   * Второй множитель считает по СОБСТВЕННОМУ счётчику прогрева: сколько он уже потратил
-   * против своей доли. Минимум из двух оставляет прежнюю защиту людского резерва и добавляет
-   * симметричную защиту прогреву.
-   */
-  const warmShare = Math.round(monthlyCap() * (1 - Number(process.env.AIRLABS_HUMAN_RESERVE_PCT ?? 35) / 100));
-  const spendable = Math.max(0, Math.min(u.remaining - reserve, warmShare - u.warm));
-  const daysInMonth = new Date(now.getFullYear(), now.getMonth() + 1, 0).getDate();
-  const daysLeft = Math.max(1, daysInMonth - now.getDate() + 1);
-  const perDay = Math.floor(spendable / daysLeft);
-  // Floor so a nearly-exhausted month still refreshes the busiest boards; ceiling so one
-  // run cannot swallow a whole day's allowance and leave the rest of the day cold.
-  return Math.max(40, Math.min(Math.floor(perDay / runsPerDay), Math.floor(perDay / 2)));
+  return warmBudget(usage(), humanReserve(), runsPerDay, now).requests;
 }
 
 /**

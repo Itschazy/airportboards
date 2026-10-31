@@ -399,10 +399,10 @@ export function canSpend(): boolean {
  * 100k plan the same 35% keeps the ratio instead of starving the warmer down to 25k.
  * AIRLABS_HUMAN_RESERVE still overrides with an absolute figure if that is wanted.
  *
- * Both directions of the split read this one function, because they have to agree: warm.ts
- * stops warming once only the reserve is left, and lib/live-budget.ts stops serving live
- * fetches once visitors have spent it. Only the first half of that existed for a long time —
- * `canSpend()` looks at the total alone — so live traffic was free to eat the warmer's 88%.
+ * Это базовый месячный ориентир для live-budget. С 01.11.2026 прогрев использует
+ * его суточную норму и фактический человеческий расход для прогноза ОСТАВШЕГОСЯ
+ * спроса (warm-budget.ts), а не удерживает всю сумму до последней минуты месяца.
+ * Право посетителя обновить устаревшее табло сверх этой доли остаётся в freshnessOverride.
  */
 export function humanReserve(): number {
   const abs = process.env.AIRLABS_HUMAN_RESERVE;
