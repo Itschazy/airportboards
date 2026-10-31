@@ -16,12 +16,25 @@
 // Провайдерские эндпоинты не трогаются: страница читается обычным GET с не-браузерным UA,
 // что по построению не тратит платную квоту (см. lib/live-budget.ts, слой 1).
 //
+// 🔴 ОТКУДА СПРОС, 31.10.2026. Путь к файлу спроса был вписан как
+// /tmp/claude-501/demand.json — временный каталог другой машины, которого нет нигде и
+// никогда не будет. Сторож падал ENOENT ВСЕГДА: красный по построению, то есть хуже
+// отсутствующего — к вечному красному привыкают, и настоящая просрочка в нём тонет.
+//
+// Теперь спрос берётся оттуда, откуда его берёт сам сайт: airportsByDemand() из
+// scripts/seo-priority.mjs — посадочные страницы из Метрики, только органика. Это
+// единственный честный источник приоритета в этом проекте (см. CLAUDE.md), и он уже
+// отфильтрован от фермы обходчиков. Файл по-прежнему можно передать аргументом:
+// выгрузка Вебмастера меряет ПОКАЗЫ, а не визиты, и это другой, тоже полезный срез.
+// Нет ни файла, ни токена — отказ измерять вслух, а не провал.
+//
 // Usage:  node scripts/check-freshness-by-demand.mjs [base] [путь-к-demand.json]
 
 import fs from 'node:fs';
+import { airportsByDemand } from './seo-priority.mjs';
 
 const BASE = process.argv[2] || 'https://airportsboard.live';
-const DEMAND = process.argv[3] || '/tmp/claude-501/demand.json';
+const DEMAND = process.argv[3] || process.env.DEMAND_JSON || '';
 
 const read = (f) => JSON.parse(fs.readFileSync(f, 'utf8'));
 const svcRaw = read('data/airport-service.json');
@@ -79,11 +92,28 @@ function upcomingRows(html, tz) {
   return { rows: rows.length, upcoming };
 }
 
-const demand = read(DEMAND);
+const { shows, source } = await (async () => {
+  if (DEMAND) return { shows: read(DEMAND).shows, source: `выгрузка ${DEMAND}` };
+  const byVisits = await airportsByDemand(30);
+  return byVisits.length
+    ? {
+      shows: Object.fromEntries(byVisits.map((a) => [a.code, a.visits])),
+      source: 'Метрика: визиты из органики за 30 дней',
+    }
+    : { shows: null, source: null };
+})();
+if (!shows) {
+  console.log('НЕ ИЗМЕРЕНО: спрос взять негде — токена Метрики нет (~/.env.yandex-metrika),'
+    + ' выгрузка не передана. Взвешивать возраст бортов без спроса нечем:'
+    + ` node scripts/check-freshness-by-demand.mjs ${BASE} путь-к-demand.json`);
+  process.exit(0);
+}
+const demand = { shows };
 const ranked = Object.entries(demand.shows).sort((a, b) => b[1] - a[1]).slice(0, 25);
 const totalShows = Object.values(demand.shows).reduce((a, b) => a + b, 0);
 
-console.log(`возраст данных на страницах, взвешенно по спросу (${BASE})\n`);
+console.log(`возраст данных на страницах, взвешенно по спросу (${BASE})`);
+console.log(`источник спроса: ${source}\n`);
 console.log(`${'код'.padEnd(5)}${'показы'.padStart(8)}${'доля'.padStart(7)}${'ярус'.padStart(7)}${'цель'.padStart(6)}${'возраст'.padStart(9)}  борт`);
 
 let staleShows = 0, uselessShows = 0, measured = 0;
@@ -108,7 +138,13 @@ for (const [iata, shows] of ranked) {
   if (useless) uselessShows += shows;
 
   const share = (100 * shows / totalShows).toFixed(1);
-  const ageStr = age == null ? '—' : age >= 24 ? `${(age / 24).toFixed(0)} дн` : `${age} ч`;
+  // Возраст приходит в ЧАСАХ и бывает дробным: борт, обновлённый двадцать минут назад, давал
+  // «0.3333333333333333 ч» и разъезжал всю таблицу. Минуты — не косметика: для закреплённых
+  // аэропортов норматив шесть часов, и разница между «20 мин» и «0 ч» это и есть измерение.
+  const ageStr = age == null ? '—'
+    : age >= 24 ? `${(age / 24).toFixed(1)} дн`
+      : age < 1 ? `${Math.round(age * 60)} мин`
+        : `${age.toFixed(1)} ч`;
   const board = rows === 0 ? 'пусто' : `${upcoming} из ${rows} впереди`;
   const flag = overdue ? '  ⚠ просрочен' : useless ? '  ⚠ весь в прошлом' : '';
   console.log(`${iata.padEnd(5)}${String(shows).padStart(8)}${(share + '%').padStart(7)}${(PINNED.has(iata) ? 'закр.' : '').padStart(7)}${(target + 'ч').padStart(6)}${ageStr.padStart(9)}  ${board}${flag}`);

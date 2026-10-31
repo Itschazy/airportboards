@@ -26,6 +26,16 @@
 import fs from 'node:fs';
 
 const BASE = process.argv[2] || 'https://airportsboard.live';
+/**
+ * ⚠️ ТОЛЬКО ПРОТИВ ПРОДА — как и check-service-freshness, и по той же причине.
+ *
+ * Проверка меряет ВОЗРАСТ БОРТОВ на страницах, а локальный стенд поднимается на фикстуре в
+ * два десятка ключей: у всего остального корпуса борта нет вовсе, и медиана яруса выходит
+ * бесконечной. Это не находка, а свойство стенда. Против localhost она отказывается измерять
+ * вслух, а не краснеет молча: красный по построению хуже отсутствующего, потому что к нему
+ * привыкают и настоящая просрочка в нём тонет.
+ */
+const LOCAL = /^https?:\/\/(localhost|127\.0\.0\.1|\[::1\])(:|\/|$)/.test(BASE);
 /** Тик прогрева идёт раз в два часа; борт законно проводит часть цикла просроченным. */
 const TICK_MIN = 120;
 /** Во сколько раз медиана яруса может превысить норматив, прежде чем это систематический сбой. */
@@ -47,6 +57,15 @@ const TIERS = [...SRC.matchAll(/\{ name: '(\w+)', minFlights: (\d+), intervalMin
   .map((m) => ({ name: m[1], min: +m[2], interval: +m[3], night: m[4] === 'true' }));
 say(TIERS.length === 5, `из lib/warm.ts прочитано ярусов: ${TIERS.length}`);
 if (TIERS.length !== 5) process.exit(1);
+
+// Утверждение о ярусах от адреса не зависит и проверено выше. Всё остальное меряет борта,
+// которых у стенда нет, — дальше идти незачем.
+if (LOCAL) {
+  console.log(`\nНЕ ИЗМЕРЕНО: ${BASE} — локальная сборка на фикстуре, борта есть у двух десятков`
+    + ' ключей из тысяч. Возраст бортов имеет смысл только против прода:'
+    + ' node scripts/check-warm-throughput.mjs https://airportsboard.live');
+  process.exit(fails ? 1 : 0);
+}
 
 const svc = JSON.parse(fs.readFileSync('data/airport-service.json', 'utf8')).airports ?? {};
 const serviced = Object.keys(svc).filter((c) => svc[c] > 0);

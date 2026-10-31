@@ -44,10 +44,30 @@ const DAILY_SPEND = 29_000;
 let fails = 0;
 const say = (ok, msg) => { if (!ok) fails++; console.log(`  ${ok ? '✓' : '✗'} ${msg}`); };
 
-const env = fs.readFileSync('.env.local', 'utf8');
-const key = (/^AIRLABS_API_KEY=(.+)$/m.exec(env) || [])[1]?.trim();
-say(!!key, key ? 'ключ найден в .env.local' : 'AIRLABS_API_KEY не найден в .env.local');
-if (!key) process.exit(1);
+/**
+ * Ключ — из окружения или из .env.local, и его отсутствие НЕ провал.
+ *
+ * 🔴 31.10.2026. Раньше файл читался без проверки, и на машине без ключа сторож падал
+ * ENOENT — то есть был красным по построению, что хуже отсутствующего: к вечному красному
+ * привыкают, и настоящий отказ тонет в нём же. Ключа нет ни в репозитории, ни на машине
+ * разработчика; он есть на боксе, где эта проверка и живёт в суточном кроне.
+ *
+ * Отказ измерять говорится вслух и возвращает ноль: единственная альтернатива — красить
+ * сводку там, где измерять было нечем. Окружение проверяется первым, потому что на боксе
+ * секреты приходят именно оттуда (~/airportsboard.env), а не из файла в рабочей копии.
+ */
+const fromFile = () => {
+  try {
+    return (/^AIRLABS_API_KEY=(.+)$/m.exec(fs.readFileSync('.env.local', 'utf8')) || [])[1]?.trim();
+  } catch { return undefined; }
+};
+const key = process.env.AIRLABS_API_KEY?.trim() || fromFile();
+if (!key) {
+  console.log('НЕ ИЗМЕРЕНО: ключа нет ни в AIRLABS_API_KEY, ни в .env.local.'
+    + ' Срок и остаток знает только поставщик, спросить его без ключа нечем.');
+  process.exit(0);
+}
+say(true, `ключ найден (${process.env.AIRLABS_API_KEY?.trim() ? 'окружение' : '.env.local'})`);
 
 const r = await fetch(`https://airlabs.co/api/v9/schedules?dep_iata=SVO&api_key=${key}`);
 const j = await r.json();
