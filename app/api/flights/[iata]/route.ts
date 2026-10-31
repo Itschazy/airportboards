@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { getBoard, getBoardFetchedAt, OUTBOUND_ROWS } from '@/lib/flights';
 import { mayFetchLive } from '@/lib/live-budget';
+import { getAirport } from '@/lib/airports';
 
 /**
  * Ответ борта НЕ КЭШИРУЕТСЯ общим кэшем — по той же причине, что и сама страница табло.
@@ -22,6 +23,27 @@ export async function GET(
 ) {
   const { iata } = await params;
   const code = iata.toUpperCase();
+  /**
+   * Код аэропорта ПРОВЕРЯЕТСЯ по каталогу — ровно по той причине, что разобрана ниже про
+   * direction, и даже с двумя отягчающими.
+   *
+   * Неизвестный код заводит новый ключ хранилища, getFresh по нему пуст, и каждый такой
+   * запрос уходит к поставщику за деньги. Но вдобавок: у несуществующего кода НЕТ отметки
+   * времени, то есть `fetchedAt == null` — а это право покупать сверх людской доли плана
+   * (freshnessOverride в lib/live-budget.ts), задуманное для читателя с устаревшим табло.
+   * Мусорные коды шли по привилегированному пути. И каждый оседал отдельным файлом в
+   * хранилище, вытесняя настоящие оплаченные борта.
+   *
+   * Страницы каталог проверяли всегда: /ru/airport/ZZZ отдаёт 404. Ручка — нет, хотя
+   * клиент берёт код только со страницы (components/FlightBoard.tsx, AirportExtras.tsx),
+   * то есть сузить до каталога не ломает ни одного своего вызывающего.
+   */
+  if (!getAirport(code)) {
+    return NextResponse.json(
+      { error: 'unknown airport', iata: code },
+      { status: 404, headers: { 'Cache-Control': BOARD_CACHE_CONTROL } },
+    );
+  }
   /**
    * direction ПРОВЕРЯЕТСЯ, а не приводится типом.
    *
