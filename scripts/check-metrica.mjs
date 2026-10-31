@@ -15,13 +15,21 @@
 //       Transpiles lib/metrica-snippet.ts with the project's TypeScript and checks the result.
 //       Fast, catches authoring mistakes, runs anywhere.
 //
-//   node scripts/check-metrica.mjs <url|file.html>
+//   node scripts/check-metrica.mjs <url|file.html|--built>
 //       Pulls the snippet out of a page the REAL build produced and checks that instead.
+//       `--built` берёт пререндеренную русскую страницу прямо из каталога сборки
+//       (NEXT_DIST_DIR, по умолчанию .next) — ни сервера, ни порта не нужно.
 //
 // The second mode exists because the first one is not sufficient, and that was learned by
 // shipping: the folding bug lives in SWC inside `next build`, not in tsc, so the source-mode
 // check went green while the built page carried a snippet that could not parse. Whatever
 // verifies a deploy has to read what the build emitted.
+//
+// 🔴 31.10.2026. У режима сборки в package.json был вписан адрес http://localhost:3002, то
+// есть порт, которого нет ни в одном описанном рабочем процессе (стенд поднимается на 3099).
+// Проверка падала ECONNREFUSED ВСЕГДА — и красная по построению она хуже отсутствующей:
+// к вечному красному привыкают, и настоящая поломка тонет в нём же. Теперь страница берётся
+// из каталога сборки: читается ровно то, что выдал build, и без запущенного сервера.
 
 import fs from 'node:fs';
 import path from 'node:path';
@@ -35,16 +43,73 @@ const SRC = path.join('lib', 'metrica-snippet.ts');
 const YM_ID = 110112198;
 const target = process.argv[2];
 
-/** Pull the counter bootstrap out of a rendered page. */
+/**
+ * Pull the counter bootstrap out of a rendered page.
+ *
+ * 🔴 RSC-нагрузка отбрасывается, и без этого режим сборки не работал вовсе. Next кладёт тот же
+ * сниппет ВТОРОЙ раз — экранированной строкой внутри `self.__next_f.push([1,"…"])`, — и на
+ * странице 404 только так: настоящего инлайнового скрипта там нет. Выборка брала эту строку,
+ * отдавала её парсеру, и все семнадцать измерений падали с «self is not defined», то есть на
+ * собственной обёртке. Это та самая ловушка, из-за которой в CLAUDE.md записано «греп по
+ * полному HTML врёт»: в RSC-нагрузке лежит всё, и поиск по странице отвечает «да» на любой
+ * вопрос.
+ */
+function pickSnippet(html) {
+  return [...html.matchAll(/<script[^>]*>([\s\S]*?)<\/script>/g)]
+    .map((m) => m[1])
+    .find((s) => s.includes('mc.yandex.ru/metrika/tag.js') && !s.includes('self.__next_f')) ?? null;
+}
+
 function fromHtml(html) {
-  const hit = [...html.matchAll(/<script[^>]*>([\s\S]*?)<\/script>/g)]
-    .map(m => m[1]).find(s => s.includes('mc.yandex.ru/metrika/tag.js'));
-  if (!hit) throw new Error('в этой странице нет инлайнового скрипта Метрики');
+  const hit = pickSnippet(html);
+  if (!hit) {
+    throw new Error(html.includes('mc.yandex.ru/metrika/tag.js')
+      ? 'сниппет на странице есть только внутри RSC-нагрузки (self.__next_f) — это не исполняемый скрипт'
+      : 'в этой странице нет инлайнового скрипта Метрики');
+  }
   return hit;
 }
 
+/**
+ * Пререндеренная РУССКАЯ страница из каталога сборки.
+ *
+ * Русская — потому что счётчик стоит только на ней (components/YandexMetrica.tsx), на
+ * остальных одиннадцати локалях сниппета нет по построению, и искать его там бессмысленно.
+ * Берётся первая подходящая: сниппет на всех страницах один и тот же, а склейку SWC надо
+ * ловить в выданном сборкой байте, а не в источнике.
+ */
+function fromBuild() {
+  const dist = process.env.NEXT_DIST_DIR || '.next';
+  const root = path.join(dist, 'server', 'app', 'ru');
+  if (!fs.existsSync(root)) return null;
+  const stack = [root];
+  while (stack.length) {
+    const dir = stack.pop();
+    for (const e of fs.readdirSync(dir, { withFileTypes: true })) {
+      const p = path.join(dir, e.name);
+      if (e.isDirectory()) { stack.push(p); continue; }
+      if (!e.name.endsWith('.html')) continue;
+      const html = fs.readFileSync(p, 'utf8');
+      // Именно pickSnippet, а не поиск по странице: на 404 сниппет есть только в RSC-нагрузке.
+      if (pickSnippet(html)) return { path: p, html };
+    }
+  }
+  return null;
+}
+
 let snippet, source;
-if (target) {
+if (target === '--built') {
+  const built = fromBuild();
+  if (!built) {
+    // Отказ вслух, а не красный на пустом месте: без сборки проверять нечего, и сказать об
+    // этом надо так, чтобы в суточной сводке было видно, что измерения НЕ БЫЛО.
+    console.log(`НЕ ИЗМЕРЕНО: в ${process.env.NEXT_DIST_DIR || '.next'} нет пререндеренной русской страницы`
+      + ' со счётчиком. Собери стенд (NEXT_DIST_DIR=…) или передай адрес страницы аргументом.');
+    process.exit(0);
+  }
+  snippet = fromHtml(built.html);
+  source = `собранная страница ${built.path}`;
+} else if (target) {
   const html = /^https?:/.test(target)
     ? await (await fetch(target, { headers: { 'user-agent': 'metrica-check' } })).text()
     : fs.readFileSync(target, 'utf8');
