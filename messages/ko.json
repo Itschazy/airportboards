@@ -127,6 +127,7 @@
     "km_away": "{iata}에서 {km}km",
     "faq_title": "자주 묻는 질문",
     "about_title": "{iata} 공항 정보",
+    "about_faq_title": "기본 정보",
     "country_air_title": "{country}의 인기 공항",
     "az_all": "모든 공항 A–Z",
     "faq_iata_q": "{name}의 IATA 코드는 무엇인가요?",

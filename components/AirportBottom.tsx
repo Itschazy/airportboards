@@ -1,4 +1,5 @@
 import { AirportGuide } from '@/components/AirportGuide';
+import { DisclosureArrow } from '@/components/DisclosureArrow';
 import { getAirportGuide, guideFaq } from '@/lib/airport-guide';
 import { SeoSection } from '@/components/SeoSection';
 import { numLocale } from '@/lib/i18n';
@@ -392,16 +393,34 @@ export async function AirportBottom({ airport, locale, about = null, displayName
       <>
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqLd) }} />
         {guide && (
-          <AirportGuide
-            guide={guide}
-            title={tUi('aguide_title', { iata: airport.iata })}
-            numLocale={numLocale(locale)}
-            labels={{ checked: tUi('aguide_checked') }}
-          />
+          <AirportGuide guide={guide} title={tUi('aguide_title', { iata: airport.iata })} />
         )}
+        {/* Вопросы спрятаны под свою кнопку внутри «Об аэропорте» (31.10.2026).
+            Раскрытая справка уходила на два с лишним экрана, и половину её занимали
+            вопросы, которые читают последними. Текст и разметка FAQPage никуда не
+            делись: <details> держит содержимое в отданном HTML, меняется только то,
+            сколько места оно занимает до нажатия. Заголовок второго уровня живёт
+            внутри summary — в структуре документа он остаётся заголовком, как и у
+            кнопки «Об аэропорте» выше. */}
         <section style={{ marginTop: 28 }}>
-          <H2>{t('faq_title')}</H2>
-          <Faq items={faq} />
+          <details className="ap-faq">
+            <summary>
+              <h2>{t('faq_title')}</h2>
+              <DisclosureArrow />
+            </summary>
+            {/* Абзац «Об аэропорте» идёт первым пунктом вопросов, а не отдельным
+                текстом над справочной (решение владельца 31.10.2026): он отвечает
+                на тот же вопрос «что это за аэропорт», что и остальные пункты, и
+                занимал лучшее место в панели, хотя читают его редко.
+
+                В faqLd он НЕ добавляется намеренно. Разметка FAQPage описывает
+                пары «вопрос — ответ», а «Общая информация» вопросом не является;
+                к тому же check-board-help требует, чтобы первым в JSON-LD на
+                /arrivals стоял вопрос про встречающих. Видимый список от этого
+                длиннее разметки на один пункт — это нормально: проверка идёт от
+                разметки к тексту, а не наоборот. */}
+            <Faq items={about ? [{ q: t('about_faq_title'), a: about }, ...faq] : faq} />
+          </details>
         </section>
       </>
     );

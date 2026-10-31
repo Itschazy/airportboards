@@ -127,6 +127,7 @@
     "km_away": "على بعد {km} كم من {iata}",
     "faq_title": "الأسئلة الشائعة",
     "about_title": "عن مطار {iata}",
+    "about_faq_title": "معلومات عامة",
     "country_air_title": "المطارات الشهيرة في {country}",
     "az_all": "جميع المطارات أ–ي",
     "faq_iata_q": "ما هو رمز IATA الخاص بـ{arAirport}؟",

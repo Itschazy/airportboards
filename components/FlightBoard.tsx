@@ -922,7 +922,7 @@ function BottomSheet({ flight: selectedFlight, mode, onClose, tz, locale, clockM
 
 // ─── Main Component ───────────────────────────────────────────────────────────
 
-export function FlightBoard({ airport, locale, defaultMode = 'departures', displayName, cityName, headingNote, initialFlights, initialFetchedAt, boardTotal, lead, statusLine = null, noService = false, pendingNote = null, infoOnly = false, initialAllPast = false, about = null, aboutTitle, aboutExtra = null }: {
+export function FlightBoard({ airport, locale, defaultMode = 'departures', displayName, cityName, headingNote, initialFlights, initialFetchedAt, boardTotal, lead, statusLine = null, noService = false, pendingNote = null, infoOnly = false, initialAllPast = false, aboutTitle, aboutExtra = null }: {
   airport: Airport;
   locale: string;
   defaultMode?: Mode;
@@ -996,7 +996,6 @@ export function FlightBoard({ airport, locale, defaultMode = 'departures', displ
    * Текст и заголовок второго уровня остаются в серверном HTML: details ничего из
    * разметки не удаляет, меняется только место на экране.
    */
-  about?: string | null;
   aboutTitle?: string;
   /**
    * Что ещё показывать под той же кнопкой: справочная и «Частые вопросы».
@@ -1809,13 +1808,12 @@ export function FlightBoard({ airport, locale, defaultMode = 'departures', displ
         {/* «Об аэропорте» — под аккуратной кнопкой в самой шапке. Заголовок
             второго уровня сохранён внутри summary: он остаётся в структуре
             документа и в серверном HTML, как и сам абзац. */}
-        {(about || aboutExtra) && aboutTitle && (
+        {aboutExtra && aboutTitle && (
           <details className="ap-about">
             <summary>
               <h2>{aboutTitle}</h2>
               <DisclosureArrow />
             </summary>
-            {about && <p>{about}</p>}
             {aboutExtra}
           </details>
         )}

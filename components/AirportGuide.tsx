@@ -1,4 +1,4 @@
-import { guideDate, type AirportGuide as Guide } from '@/lib/airport-guide';
+import { type AirportGuide as Guide } from '@/lib/airport-guide';
 
 /**
  * Справочная по аэропорту — плитки, раскрываются на месте (25.10.2026, макет согласован).
@@ -35,18 +35,16 @@ const ICONS: Record<string, string> = {
   wifi: 'M5 12a10 10 0 0 1 14 0M8.5 15.5a5 5 0 0 1 7 0M12 19h.01M2 8.8a15 15 0 0 1 20 0',
 };
 
-/** Дата сопровождается существующей строкой ui.aguide_checked на языке страницы. */
-export type GuideLabels = { checked: string };
-
-export function AirportGuide({ guide, title, labels, numLocale }: { guide: Guide; title: string; labels: GuideLabels; numLocale: string }) {
+export function AirportGuide({ guide, title }: { guide: Guide; title: string }) {
   const blocks = [...guide.blocks].sort((a, b) => (ORDER.indexOf(a.id) + 99) % 99 - (ORDER.indexOf(b.id) + 99) % 99);
-  const checked = guideDate(guide.checked, numLocale);
   return (
     <section style={{ marginTop: 36 }} aria-labelledby="ag-title">
       <h2 id="ag-title" style={{ margin: '0 0 14px', fontSize: 13, fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.12em', color: 'var(--ab-8a8a8a)' }}>{title}</h2>
-      {/* Дату не скрываем вместе со ссылками: цены и расписания стареют. Источники и basis
-          остаются в данных и проходят тот же сторож, хотя публичной подписи больше нет. */}
-      <p className="ag-lead">{labels.checked} <time dateTime={guide.checked}>{checked}</time>.</p>
+      {/* Строка «Проверено …» снята по решению владельца 31.10.2026 — вслед за
+          ссылками на источники, убранными 26.10. Сама дата никуда не делась: поле
+          checked остаётся в data/airport-guide/<IATA>.json, и check:guidefresh
+          по-прежнему роняет сборку на проверке старше 180 дней. То есть свежесть
+          продолжает стеречься, просто больше не объявляется читателю. */}
       <div className="ag-grid">
         {blocks.map((b) => (
           <details key={b.id} className="ag-tile">

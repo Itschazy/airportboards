@@ -127,6 +127,7 @@
     "km_away": "{iata} noktasından {km} km",
     "faq_title": "Sıkça sorulan sorular",
     "about_title": "{iata} Havalimanı hakkında",
+    "about_faq_title": "Genel bilgiler",
     "country_air_title": "{country} içindeki popüler havalimanları",
     "az_all": "A–Z Tüm havalimanları",
     "faq_iata_q": "{name} için IATA kodu nedir?",

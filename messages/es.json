@@ -127,6 +127,7 @@
     "km_away": "{km} km de {iata}",
     "faq_title": "Preguntas frecuentes",
     "about_title": "Acerca del aeropuerto {iata}",
+    "about_faq_title": "Información general",
     "country_air_title": "Aeropuertos populares en {countryIn}",
     "az_all": "Todos los aeropuertos A–Z",
     "faq_iata_q": "¿Cuál es el código IATA de {name}?",

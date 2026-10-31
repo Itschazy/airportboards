@@ -127,6 +127,7 @@
     "km_away": "{iata}から{km} km",
     "faq_title": "よくある質問",
     "about_title": "{iata}空港について",
+    "about_faq_title": "基本情報",
     "country_air_title": "{country}の人気空港",
     "az_all": "A–Zですべての空港",
     "faq_iata_q": "{name}のIATAコードは何ですか？",

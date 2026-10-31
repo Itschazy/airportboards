@@ -256,7 +256,7 @@ export default async function DeparturesPage({ params }: Props) {
         <script key={i} type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
       ))}
       {/* The visible <h1> now lives in FlightBoard's airport header (single semantic h1). */}
-      <FlightBoard airport={airport} locale={locale} defaultMode="departures" displayName={getAirportName(airport.iata, locale, airport.name)} cityName={city} initialFlights={board.rows} initialAllPast={board.allPast} initialFetchedAt={getBoardFetchedAt(airport.iata, 'departures')} boardTotal={initialFlights.length} about={about} aboutTitle={tHome('about_title', { iata: airport.iata })} aboutExtra={<AirportBottom part="reference" airport={airport} locale={locale} displayName={getAirportName(airport.iata, locale, airport.name)} flights={initialFlights} noService={noService} nearestServed={nearestWithFlights} direction="departures" />} />
+      <FlightBoard airport={airport} locale={locale} defaultMode="departures" displayName={getAirportName(airport.iata, locale, airport.name)} cityName={city} initialFlights={board.rows} initialAllPast={board.allPast} initialFetchedAt={getBoardFetchedAt(airport.iata, 'departures')} boardTotal={initialFlights.length} aboutTitle={tHome('about_title', { iata: airport.iata })} aboutExtra={<AirportBottom part="reference" about={about} airport={airport} locale={locale} displayName={getAirportName(airport.iata, locale, airport.name)} flights={initialFlights} noService={noService} nearestServed={nearestWithFlights} direction="departures" />} />
       <div style={{ maxWidth: 720, margin: '0 auto', padding: '0 24px 8px' }}>
         <EventBanner iata={airport.iata} locale={locale} />
       </div>

@@ -207,7 +207,39 @@ input::-webkit-search-cancel-button { display: none; }
  * колонку с именем и правую с часами, и третий левый элемент читался бы как
  * продолжение имени. Заголовок второго уровня живёт внутри summary и выглядит
  * как подпись кнопки — в структуре документа он остаётся заголовком. */
-.ap-about { margin-top: 14px; }
+/* Оправа принадлежит ВСЕЙ раскрывашке, а не кнопке внутри неё (31.10.2026).
+   Прежде она висела на summary, и раскрытое содержимое лежало СНАРУЖИ неё —
+   текст, плитки справочной и вопросы читались как провал под кнопкой, ничем
+   не связанный с ней. Теперь кнопка — это и есть оболочка: при нажатии она
+   растёт вниз вместе со своей обводкой, и всё содержимое оказывается внутри.
+
+   Скругление НЕ анимируется: у капсулы радиус в половину высоты, и пока панель
+   растёт или схлопывается, промежуточный радиус рисуется гигантской дугой
+   поперёк текста. При раскрытии форма меняется сразу. При закрытии — наоборот,
+   ПОСЛЕ того как высота доехала до нуля: задержка ровно в длительность роста
+   высоты, иначе капсула успевает нарисоваться по ещё не схлопнувшемуся блоку.
+   Задержку (не длительность) глобальное правило prefers-reduced-motion не
+   обнуляет, поэтому для него она снимается отдельно, ниже.
+
+   overflow: hidden обязателен: без него заливка нажатия и содержимое
+   вылезают за скруглённые углы. */
+.ap-about {
+  margin-top: 14px;
+  border-radius: var(--r-pill);
+  box-shadow: var(--glass-rim);
+  overflow: hidden;
+  transition: border-radius 0s linear 0.38s;
+}
+.ap-about[open] { border-radius: var(--r-card); transition: border-radius 0s; }
+/* Поля — у содержимого, а не у самой раскрывашки: отступ на ней появился бы
+   рывком в момент открытия, а внутри он растёт вместе с высотой. */
+/* 12px, а не больше: каждый пиксель поля отнимает ширину у плиток справочной,
+   а они идут в две колонки. На 375px при поле 12 два заголовка плиток («Как
+   доехать», «С ребёнком») переносятся на вторую строку — высота плитки это
+   держит (min-height 86 против 101 у двухстрочной), а вот при поле 0 текст
+   был бы впритык к оправе. */
+.ap-about > :not(summary) { padding-inline: 12px; }
+.ap-about > :last-child { margin-bottom: 16px; }
 .ap-about > summary {
   list-style: none;
   display: flex;
@@ -216,9 +248,6 @@ input::-webkit-search-cancel-button { display: none; }
   gap: 7px;
   min-height: 38px;
   padding: 0 14px;
-  border-radius: var(--r-pill);
-  background: transparent;
-  box-shadow: var(--glass-rim);
   cursor: pointer;
   -webkit-tap-highlight-color: transparent;
 }
@@ -238,7 +267,7 @@ input::-webkit-search-cancel-button { display: none; }
 .ap-about > summary .disclosure-arrow { transition: transform 0.18s ease; }
 .ap-about[open] > summary .disclosure-arrow { transform: rotate(180deg); }
 .ap-about > p {
-  margin: 12px 2px 2px;
+  margin: 12px 0 0;
   font-size: 14px;
   line-height: 1.6;
   color: var(--ab-b4b4b4);
@@ -247,6 +276,55 @@ input::-webkit-search-cancel-button { display: none; }
    верхний отступ в 36px рассчитан на ленту страницы, где секции разделяют целые
    разделы; внутри одной панели он читается как провал. */
 .ap-about > section { margin-top: 22px !important; }
+/* Первая секция (справочная) идёт сразу под кнопкой, и 22px над её заголовком
+   читались как провал: прежде это расстояние отбивало её от абзаца «Об
+   аэропорте», а абзац уехал в вопросы. Нижним секциям отбивка нужна — они
+   разделяют разделы. */
+.ap-about > section:first-of-type { margin-top: 10px !important; }
+
+/* «Частые вопросы» — своя кнопка внутри раскрытой справки, устроенная так же:
+   оправа у всей раскрывашки, растёт вниз при нажатии. Вопросы читают
+   последними, а занимали они больше половины раскрытой справки.
+   Своих полей у секции-обёртки нет: их задаёт .ap-about > :not(summary). */
+.ap-faq {
+  border-radius: var(--r-pill);
+  box-shadow: var(--glass-rim);
+  overflow: hidden;
+  transition: border-radius 0s linear 0.38s;
+}
+.ap-faq[open] { border-radius: var(--r-card); transition: border-radius 0s; }
+.ap-faq > summary {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  min-height: 38px;
+  padding: 0 14px;
+  color: var(--ab-c7c7cc);
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+.ap-faq > summary::-webkit-details-marker { display: none; }
+.ap-faq > summary:active { background: var(--glass-soft); }
+.ap-faq > summary h2 {
+  margin: 0;
+  font-size: 13px;
+  font-weight: 600;
+  color: inherit;
+  letter-spacing: 0;
+  text-transform: none;
+}
+.ap-faq > summary .disclosure-arrow { color: var(--ab-8a8a8a); flex-shrink: 0; transition: transform 0.18s ease; }
+.ap-faq[open] > summary .disclosure-arrow { transform: rotate(180deg); }
+.ap-faq > :not(summary) { padding-inline: 12px; }
+.ap-faq > :last-child { margin-bottom: 14px; }
+/* Задержку смены формы глобальное правило reduced-motion не трогает — оно
+   обнуляет только длительности. Без этого при выключенной анимации форма
+   менялась бы через 380 мс после мгновенного схлопывания. */
+@media (prefers-reduced-motion: reduce) {
+  .ap-about, .ap-faq { transition-delay: 0s; }
+}
 
 /* ── Внутренности строки рейса ────────────────────────────────────────────────
  *
@@ -554,8 +632,12 @@ input::-webkit-search-cancel-button { display: none; }
 
 /* Справочная по аэропорту (components/AirportGuide.tsx, 25.10.2026). Нативные <details> в сетке
    на две колонки; открытая плитка занимает всю строку, чтобы текст не жался в половину ширины. */
-.ag-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
-@media(min-width:640px){.ag-grid{grid-template-columns:repeat(4,minmax(0,1fr))}}
+/* По одной плитке в строку (решение владельца 31.10.2026). В две колонки на
+   375px на плитку оставалось около 140px, и заголовки «Как доехать», «Бизнес-залы»,
+   «С ребёнком» ломались на две строки, а подсказки упирались в водяной знак.
+   Во всю ширину заголовок и подсказка встают в строку каждый. */
+.ag-grid{display:grid;grid-template-columns:minmax(0,1fr);gap:8px}
+
 /* overflow:hidden здесь, а не на summary: водяной знак торчит за край плитки, и
    обрезать его должна ЕЁ скруглённая форма. На summary скругления нет, и знак
    срезался по прямому углу — угол плитки выглядел надломленным. */
@@ -572,7 +654,6 @@ input::-webkit-search-cancel-button { display: none; }
 .ag-ico{position:absolute;inset-inline-end:-8px;bottom:-10px;width:58px;height:58px;color:var(--ab-8a8a8a);opacity:.26;pointer-events:none}
 .ag-tile[open] .ag-ico{opacity:.2}
 .ag-t{margin:0;font-size:14.5px;font-weight:600;color:var(--ab-ffffff);line-height:1.25;max-width:76%}
-.ag-lead{margin:-6px 0 12px;font-size:12px;line-height:1.45;color:var(--ab-8a8a8a)}
 /* Подсказка в две строки, а не в одну с многоточием: знак в углу забрал
    четверть ширины, и «Гараж C по брони — $32 в сутки» обрывалось на «в сут…».
    Высоты плитки на две строки хватает, перенос ничего не двигает. */
@@ -1216,7 +1297,9 @@ body::after {
 :root { interpolate-size: allow-keywords; }
 
 .home-reference::details-content,
-.home-footer-reference::details-content {
+.home-footer-reference::details-content,
+.ap-about::details-content,
+.ap-faq::details-content {
   block-size: 0;
   overflow: hidden;
   opacity: 0;
@@ -1229,7 +1312,9 @@ body::after {
   transition-behavior: allow-discrete;
 }
 .home-reference[open]::details-content,
-.home-footer-reference[open]::details-content {
+.home-footer-reference[open]::details-content,
+.ap-about[open]::details-content,
+.ap-faq[open]::details-content {
   block-size: auto;
   opacity: 1;
 }

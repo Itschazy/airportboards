@@ -127,6 +127,7 @@
     "km_away": "距 {iata} {km} 公里",
     "faq_title": "常见问题",
     "about_title": "关于 {iata} 机场",
+    "about_faq_title": "基本信息",
     "country_air_title": "{country}的热门机场",
     "az_all": "按字母排序的所有机场",
     "faq_iata_q": "{name}的 IATA 代码是什么？",

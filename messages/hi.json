@@ -127,6 +127,7 @@
     "km_away": "{iata} से {km} किमी दूर",
     "faq_title": "अक्सर पूछे जाने वाले प्रश्न",
     "about_title": "{iata} हवाई अड्डा के बारे में",
+    "about_faq_title": "सामान्य जानकारी",
     "country_air_title": "{country} के लोकप्रिय हवाई अड्डे",
     "az_all": "A–Z सभी हवाई अड्डे",
     "faq_iata_q": "{name} का IATA कोड क्या है?",
