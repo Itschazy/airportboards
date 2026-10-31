@@ -1,6 +1,19 @@
 import type { NextRequest } from 'next/server';
 
-/** Did this request reach us through nginx rather than from the box itself? */
+/**
+ * Did this request reach us through nginx rather than from the box itself?
+ *
+ * 🔴 ИЗМЕРЕНО 31.10.2026: эта функция истинна ВСЕГДА, то есть «с бокса» не бывает никогда.
+ * Next сам дописывает отсутствующие x-forwarded-* перед тем, как отдать запрос приложению
+ * (node_modules/next/dist/server/base-server.js, «Update the `x-forwarded-*` headers»:
+ * x-forwarded-host получает значение из Host и потому не пуст никогда). Замер на стенде:
+ * петлевой curl без токена к /api/airlabs-usage получает публичную заглушку, а не цифры.
+ *
+ * Значит isOperatorRequest сводится к «только по предъявленному токену», а обещание «on-box,
+ * from the VDS itself, no token is needed» из комментариев и CLAUDE.md не работает и, судя по
+ * всему, не работало никогда. Оставлено как есть НАМЕРЕННО: строже — лучше, а токен для
+ * операторских команд в CLAUDE.md и так указан. Исправлены комментарии, а не поведение.
+ */
 function cameThroughProxy(req: NextRequest): boolean {
   return !!(req.headers.get('x-forwarded-for')
     || req.headers.get('x-forwarded-host')
@@ -35,21 +48,53 @@ export function isOperatorRequest(req: NextRequest): boolean {
   return isLoopbackHost(req);
 }
 
+/** Кто пришёл за прогревом. null — никто, кому можно. */
+export type Warmer = 'token' | 'unconfigured';
+
 /**
- * Looser check, used only by /api/cron/warm.
+ * Право запустить прогрев — строгая проверка с одним заслоном от собственной ошибки.
  *
- * Deliberately NOT the strict rule above. The two comments in this repo disagree about how the
- * VDS actually invokes the warmer — the route says `curl https://airportsboard.live/...?token=`
- * while the auth note says it curls 127.0.0.1:3000 — and there is no VDS access here to settle
- * it. If the cron uses the public URL and CRON_TOKEN is unset on the box, tightening this would
- * silently stop all warming, which is the core of the site's indexing strategy. Breaking that is
- * far worse than the exposure: warmHubs() is idempotent within the store TTL, refuses to exceed
- * the monthly cap, and each call is bounded by tickBudget, so an attacker can at most pull the
- * day's warming earlier — not overspend the plan.
+ * 'token' — крон: предъявил CRON_TOKEN. Только ему позволено задавать число тиков в сутки и
+ * обходить минимальный интервал между прогревами (см. app/api/cron/warm/route.ts).
  *
- * OWNER ACTION to close this properly: confirm how the crontab line calls the endpoint, make
- * sure CRON_TOKEN is set in the pm2 environment, then switch this to isOperatorRequest.
+ * 🔴 'unconfigured' и есть тот самый заслон, и он тут не из осторожности. Если CRON_TOKEN в
+ * окружении процесса НЕ задан, токен не сможет предъявить НИКТО, включая крон, — а другого
+ * пути нет: «петлевой» вход строгой проверки недостижим, Next дописывает x-forwarded-*
+ * каждому запросу (разбор у cameThroughProxy, измерено). Прогрев встал бы молча — ровно та
+ * катастрофа, из-за которой прежний автор и не стал закрывать ручку: ответы 200, страницы
+ * целые, борт стареет до первого числа.
+ *
+ * Поэтому при НЕнастроенном токене поведение остаётся прежним, открытым, — но перестаёт быть
+ * невидимым: исход возвращается наружу, попадает в ответ ручки и в крон-лог, а /api/health
+ * показывает `cronToken: "missing"` бесплатно и без токена. Выбор здесь не между «дыра» и
+ * «нет дыры», а между дырой видимой и дырой молчащей. В этом же исходе работает минимальный
+ * интервал между тиками — единственный тормоз, когда ручка открыта всем.
  */
-export function isCronRequest(req: NextRequest): boolean {
-  return hasToken(req) || isLoopbackHost(req);
+export function warmerVerdict(req: NextRequest): Warmer | null {
+  if (hasToken(req)) return 'token';
+  return cronTokenConfigured() ? null : 'unconfigured';
 }
+
+/** Задан ли токен прогрева в окружении процесса. Наружу — чтобы /api/health это показывал. */
+export function cronTokenConfigured(): boolean {
+  return !!(process.env.CRON_TOKEN || '');
+}
+
+/**
+ * 🔴 ЗДЕСЬ БЫЛ isCronRequest — `hasToken(req) || isLoopbackHost(req)`, то есть ОТКРЫТАЯ РУЧКА.
+ *
+ * Снят 31.10.2026 по аудиту. Он задумывался как «петля или токен», но за nginx петлёй
+ * выглядит КАЖДЫЙ запрос из интернета: `next start` строит nextUrl из адреса, на котором
+ * слушает сам. Это не рассуждение, а измеренное — ровно по этой причине 18.10 живая покупка
+ * не срабатывала ни разу (`refused.localhost` на каждого читателя, см. lib/live-budget.ts), и
+ * ровно по этой причине /api/revalidate с самого начала стоит на строгой проверке.
+ *
+ * Оставлять было нельзя: прогрев — единственный путь, который тратит деньги по собственной
+ * воле, и его тик берёт до половины дневной доли плана (tickBudget в lib/warm.ts). Прежняя
+ * оговорка «идемпотентен внутри TTL и ограничен потолком месяца» верна, но защищает не от
+ * того: потолок не даёт превысить ПЛАН, а не вытянуть его вперёд.
+ *
+ * Условие, при котором автор не стал закрывать ручку — «неизвестно, как крон её зовёт» —
+ * выполнено: CLAUDE.md и ecosystem.config.cjs говорят одно и то же. Крон на боксе ходит
+ * с токеном из /root/.airportsboard-cron-token, без CRON_TOKEN прогрев встаёт и так.
+ */

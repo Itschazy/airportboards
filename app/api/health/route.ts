@@ -2,6 +2,7 @@ import os from 'node:os';
 import { monitorEventLoopDelay } from 'node:perf_hooks';
 import { NextResponse } from 'next/server';
 import { persistStats } from '@/lib/flightStore';
+import { cronTokenConfigured } from '@/lib/api-auth';
 
 export const dynamic = 'force-dynamic';
 
@@ -36,6 +37,10 @@ export function GET() {
     execMode: process.env.exec_mode ?? null,
     uptimeSec: Math.round(process.uptime()),
     cpus: os.cpus().length,
+    // Настроен ли токен прогрева. Без него /api/cron/warm остаётся открытым всему миру
+    // (намеренный заслон от молчаливой остановки прогрева, разбор в lib/api-auth.ts), и
+    // это единственное место, где такое состояние видно бесплатно и без токена.
+    cronToken: cronTokenConfigured() ? 'set' : 'missing',
     loadavg: os.loadavg().map(n => Math.round(n * 100) / 100),
     memMB: {
       rss: Math.round(mem.rss / 1048576),

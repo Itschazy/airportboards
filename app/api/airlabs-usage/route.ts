@@ -19,7 +19,11 @@ export const dynamic = 'force-dynamic';
 //
 //   GET /api/airlabs-usage                  -> { ok: true }
 //   GET /api/airlabs-usage?token=CRON_TOKEN -> full usage figures
-//   (on-box, from the VDS itself, no token is needed)
+//
+// 🔴 Токен нужен ВСЕГДА, в том числе с самого бокса. Здесь стояло обратное обещание — «on-box,
+// from the VDS itself, no token is needed», — и оно неверно: петлевой вход строгой проверки
+// недостижим, потому что Next дописывает x-forwarded-* каждому запросу (разбор и замер —
+// у cameThroughProxy в lib/api-auth.ts). Команда из CLAUDE.md токен и так передаёт.
 export function GET(req: NextRequest) {
   if (!isOperatorRequest(req)) {
     return NextResponse.json({ ok: true }, { headers: { 'Cache-Control': 'no-store' } });
