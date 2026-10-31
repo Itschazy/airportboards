@@ -2276,14 +2276,30 @@ body { padding-bottom: calc(92px + env(safe-area-inset-bottom)); }
 .sdet > summary { list-style: none; }
 .sdet > summary::-webkit-details-marker { display: none; }
 .srow-t { flex: 1; min-width: 0; }
+/* Подпись строки с ЗНАЧЕНИЕМ не переносится и не ужимается: она короткая и
+   постоянная («Ваш пояс»), а переносить надо длинное значение. Иначе на 320px
+   обе части ломались пополам: замерено — подписи нужно 69.5px, значению 184.4,
+   а на обе есть 256. Процентного потолка у значения больше нет, оно просто
+   забирает остаток: так подбирать магическое число под одну строку не нужно.
+   Где :has() не поддержан, всё остаётся как было — это деградация, не поломка. */
+.srow-t:has(+ .srow-v) { flex: 0 0 auto; white-space: nowrap; }
+.srow-t:has(+ .srow-v) + .srow-v { flex: 1 1 auto; max-width: none; }
+/* Значение строки настроек переносится, а не обрезается многоточием.
+   «Asia/Yekaterinburg · UTC+5» при потолке в половину ширины не влезало на
+   телефоне и превращалось в «Asia/Yekaterinburg · …» — то есть пропадало ровно
+   смещение, ради которого строка и нужна. Переносится по пробелам вокруг «·»,
+   поэтому имя пояса остаётся целым; anywhere — страховка для пояса без
+   пробелов вроде America/Argentina/Buenos_Aires. Высоту строки это чаще всего
+   не меняет: min-height 52 держит две строки по 14px. */
 .srow-v {
-  flex-shrink: 0;
+  flex: 0 1 auto;
+  min-width: 0;
+  max-width: 62%;
   font-size: 14px;
+  line-height: 1.35;
   color: var(--ab-8a8a8a);
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  max-width: 50%;
+  text-align: end;
+  overflow-wrap: anywhere;
 }
 /* Стрелка раскрывашки поворачивается; у ссылки она смотрит вперёд и зеркалится
    в арабском по data-flip, как остальные направленные значки сайта. */
