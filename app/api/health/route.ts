@@ -2,6 +2,7 @@ import os from 'node:os';
 import { monitorEventLoopDelay } from 'node:perf_hooks';
 import { NextResponse } from 'next/server';
 import { persistStats } from '@/lib/flightStore';
+import { instanceInfo } from '@/lib/live-budget';
 import { cronTokenConfigured } from '@/lib/api-auth';
 
 export const dynamic = 'force-dynamic';
@@ -37,6 +38,10 @@ export function GET() {
     execMode: process.env.exec_mode ?? null,
     uptimeSec: Math.round(process.uptime()),
     cpus: os.cpus().length,
+    // Сколько процессов делят лимиты и откуда это известно. Нужно здесь потому, что
+    // lib/live-budget.ts делит на это число потолок «разных бортов в час на адрес», а
+    // проверить само число было нечем: ошибка в имени переменной тихо утраивала потолок.
+    instances: instanceInfo(),
     // Настроен ли токен прогрева. Без него /api/cron/warm остаётся открытым всему миру
     // (намеренный заслон от молчаливой остановки прогрева, разбор в lib/api-auth.ts), и
     // это единственное место, где такое состояние видно бесплатно и без токена.

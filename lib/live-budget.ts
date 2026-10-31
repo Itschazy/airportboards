@@ -1,3 +1,4 @@
+import os from 'node:os';
 import type { NextRequest } from 'next/server';
 import { usage, humanReserve, monthlyCap } from '@/lib/flightStore';
 
@@ -57,12 +58,47 @@ const ENGINE_TOKEN = /\b(?:AppleWebKit|Gecko|Chrome|CriOS|Chromium|Firefox|FxiOS
 
 const WINDOW_MS = 60 * 60 * 1000;
 /**
- * Таблица perIp живёт в памяти процесса. С 18.10.2026 процессов несколько (pm2 cluster, число —
- * в process.env.instances, его выставляет pm2), запросы одного адреса раскладываются по ним
- * примерно поровну — значит, каждому достаётся своя доля лимита, а не весь лимит целиком.
+ * Таблица perIp живёт в памяти процесса. С 18.10.2026 процессов несколько (pm2 cluster),
+ * запросы одного адреса раскладываются по ним примерно поровну — значит, каждому достаётся
+ * своя доля лимита, а не весь лимит целиком.
+ *
+ * 🔴 Число бралось ТОЛЬКО из `process.env.instances` — ключа конфига pm2 в нижнем регистре.
+ * Аудит 31.10.2026 засомневался, выставляет ли pm2 такую переменную вообще: номер экземпляра
+ * он даёт точно (NODE_APP_INSTANCE, pm_id — их уже читают app/api/health/route.ts и
+ * lib/rum-store.ts), а вот количество нигде не обещано. Проверить это без бокса нечем, зато
+ * цена ошибки измерима: при отсутствующей переменной число выходит единицей, потолок стоит
+ * 40 на процесс, и втроём они пропускают ~120 разных бортов в час на адрес вместо 40 — втрое
+ * слабее заявленного и так же невидимо снаружи, как и всё в этом файле.
+ *
+ * Поэтому не одна догадка, а три источника по очереди, и ни один не обязателен:
+ *   1. WEB_INSTANCES — его кладёт ecosystem.config.cjs тем самым числом, с которым запускает;
+ *   2. instances — ключ pm2, если он всё-таки экспортируется (прод отдаёт exec_mode, то есть
+ *      ключи конфига в окружение попадают, и этот может быть среди них);
+ *   3. номер экземпляра есть, а количества нет — значит кластер поднят мимо файла, и число
+ *      считается его же формулой: ядра минус одно, но не меньше двух.
+ * Ни того, ни другого — один процесс, полный лимит ему.
+ *
+ * Какой источник ответил, видно в /api/health: догадка в этом файле больше не непроверяема.
  */
-const INSTANCES = Math.max(1, Number(process.env.instances) || 1);
+const INSTANCES = Math.max(1, Number(process.env.WEB_INSTANCES)
+  || Number(process.env.instances)
+  || (process.env.NODE_APP_INSTANCE !== undefined ? Math.max(2, os.cpus().length - 1) : 1));
 const PER_IP_BOARDS = Math.max(1, Math.ceil((Number(process.env.LIVE_BOARDS_PER_IP_HOUR) || 40) / INSTANCES));
+/**
+ * Сколько процессов делят лимит и откуда это известно.
+ *
+ * Наружу — для /api/health. Прежнее число было догадкой об имени переменной, и прожило оно
+ * именно потому, что проверить его было нечем: ошибись в имени — и потолок молча вырастет
+ * втрое. Теперь источник называется вслух, бесплатно и без токена.
+ */
+export function instanceInfo() {
+  const source = Number(process.env.WEB_INSTANCES) ? 'WEB_INSTANCES'
+    : Number(process.env.instances) ? 'pm2:instances'
+    : process.env.NODE_APP_INSTANCE !== undefined ? 'cpus-1'
+    : 'single';
+  return { count: INSTANCES, source };
+}
+
 /** Bound on the table itself, so rotating addresses cannot grow it without limit. */
 const MAX_TRACKED_IPS = 4000;
 

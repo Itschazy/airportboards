@@ -48,6 +48,11 @@ module.exports = {
     max_memory_restart: '1800M',
     env: {
       NODE_ENV: 'production',
+      // Число процессов — приложению. pm2 отдаёт процессу его НОМЕР (NODE_APP_INSTANCE),
+      // но не количество, а lib/live-budget.ts делит на количество потолок «разных бортов
+      // в час на адрес»: таблица решений живёт в памяти процесса, и без деления каждый
+      // отдаёт полный лимит, то есть втроём они пропускают втрое больше заявленного.
+      WEB_INSTANCES: String(instances),
       ...readEnv(path.join(os.homedir(), 'airportsboard.env')),
     },
   }],
