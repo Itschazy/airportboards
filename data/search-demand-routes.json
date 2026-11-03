@@ -1,5 +1,11 @@
 {
   "MEL-PER": "Bing Recommendations 2026-10-30: /en/route/MEL-PER",
   "BER-AYT": "Bing Recommendations 2026-10-30: /de/route/BER-AYT",
-  "BRS-PMI": "Bing Recommendations 2026-10-30: /en/route/BRS-PMI"
+  "BRS-PMI": "Bing Recommendations 2026-10-30: /en/route/BRS-PMI",
+  "MEL-HBA": "Bing Recommendations 2026-11-01, canonical/index verified 2026-11-03: /en/route/MEL-HBA",
+  "COK-DOH": "Bing Recommendations 2026-11-01, canonical/index verified 2026-11-03: /en/route/COK-DOH",
+  "DOH-KTM": "Bing Recommendations 2026-11-01, canonical/index verified 2026-11-03: /en/route/DOH-KTM",
+  "SIN-SGN": "Bing Recommendations 2026-11-01, canonical/index verified 2026-11-03: /en/route/SIN-SGN",
+  "ZRH-PRN": "Bing Recommendations 2026-11-01, canonical/index verified 2026-11-03: /en/route/ZRH-PRN",
+  "DUS-ZRH": "Bing Recommendations 2026-11-01, canonical/index verified 2026-11-03: /de/route/DUS-ZRH"
 }

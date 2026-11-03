@@ -21,7 +21,8 @@ export const priorityCodes=['EDI','LBA','NCL','GLA','DMM','MAN','LHR','RUH','DUB
 const ruDemandCodes=['AYT','SSH','HRG','DME','GYD','IST','OVB','UFA','EVN','TAS','LWN','HKT','KZN','DXB'];
 // Только локали, в которых Bing запросил эти canonical маршруты; discovery
 // по-прежнему берёт их из sitemap, а не безусловно добавляет пустые страницы.
-const demandRoutePaths=['/en/route/MEL-PER','/de/route/BER-AYT','/en/route/BRS-PMI'];
+const demandRoutes=JSON.parse(fs.readFileSync(new URL('../data/search-demand-routes.json',import.meta.url),'utf8'));
+const demandRoutePaths=Object.values(demandRoutes).flatMap(note=>note.match(/\/(?:ru|en|de|fr|es|it|tr|zh|ja|ko|ar|hi)\/route\/[A-Z]{3}-[A-Z]{3}/g)??[]);
 function priorityPath(p) {
   if(demandRoutePaths.includes(p))return true;
   const match=/^\/(ru|en|de|fr|es|it|tr|zh|ja|ko|ar|hi)\/airport\/([A-Z]{3})(?:\/arrivals)?$/.exec(p);
