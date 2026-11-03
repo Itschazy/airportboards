@@ -1,0 +1,12 @@
+{
+  "before": {
+    "busy": "true",
+    "preview": 341.0390625,
+    "regionY": 639.765625
+  },
+  "after": {
+    "busy": "false",
+    "preview": 341.0390625,
+    "regionY": 639.765625
+  }
+}

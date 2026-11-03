@@ -38,5 +38,14 @@
   "xSearchHistory": "Verlauf durchsuchen",
   "xHistorySearchHint": "Stadt, Flughafen oder Flugnummer",
   "xNoMatches": "Keine Treffer",
-  "xHelp": "Hilfe zur Flughistorie"
+  "xHelp": "Hilfe zur Flughistorie",
+  "xShareTo": "Karte teilen",
+  "xShareRegion": "App-Auswahl",
+  "xShareRussia": "Russland",
+  "xShareWorld": "Andere Länder",
+  "xShareOther": "Weitere",
+  "xShareHint": "Wähle eine App im Menü deines Smartphones. Fehlt sie? Speichere die PNG-Datei und füge sie manuell hinzu.",
+  "xShareChoose": "Wähle {app} im geöffneten Menü.",
+  "xShareSaveFor": "Speichere die PNG-Datei und füge das Bild in {app} hinzu.",
+  "xShareUnavailable": "Dieser Browser kann keine Bilder teilen. Speichere die PNG-Datei und füge sie in der gewünschten App hinzu."
 }

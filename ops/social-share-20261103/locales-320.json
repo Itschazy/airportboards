@@ -1,0 +1,194 @@
+[
+  {
+    "close": 52.40625,
+    "lang": "ru",
+    "region": "ru",
+    "scroll": 320,
+    "targets": 4,
+    "width": 320
+  },
+  {
+    "close": 52.40625,
+    "lang": "ru",
+    "region": "world",
+    "scroll": 320,
+    "targets": 6,
+    "width": 320
+  },
+  {
+    "close": 52.40625,
+    "lang": "en",
+    "region": "ru",
+    "scroll": 320,
+    "targets": 4,
+    "width": 320
+  },
+  {
+    "close": 52.40625,
+    "lang": "en",
+    "region": "world",
+    "scroll": 320,
+    "targets": 6,
+    "width": 320
+  },
+  {
+    "close": 52.40625,
+    "lang": "de",
+    "region": "ru",
+    "scroll": 320,
+    "targets": 4,
+    "width": 320
+  },
+  {
+    "close": 52.40625,
+    "lang": "de",
+    "region": "world",
+    "scroll": 320,
+    "targets": 6,
+    "width": 320
+  },
+  {
+    "close": 52.40625,
+    "lang": "fr",
+    "region": "ru",
+    "scroll": 320,
+    "targets": 4,
+    "width": 320
+  },
+  {
+    "close": 52.40625,
+    "lang": "fr",
+    "region": "world",
+    "scroll": 320,
+    "targets": 6,
+    "width": 320
+  },
+  {
+    "close": 52.40625,
+    "lang": "es",
+    "region": "ru",
+    "scroll": 320,
+    "targets": 4,
+    "width": 320
+  },
+  {
+    "close": 52.40625,
+    "lang": "es",
+    "region": "world",
+    "scroll": 320,
+    "targets": 6,
+    "width": 320
+  },
+  {
+    "close": 52.40625,
+    "lang": "it",
+    "region": "ru",
+    "scroll": 320,
+    "targets": 4,
+    "width": 320
+  },
+  {
+    "close": 52.40625,
+    "lang": "it",
+    "region": "world",
+    "scroll": 320,
+    "targets": 6,
+    "width": 320
+  },
+  {
+    "close": 52.40625,
+    "lang": "tr",
+    "region": "ru",
+    "scroll": 320,
+    "targets": 4,
+    "width": 320
+  },
+  {
+    "close": 52.40625,
+    "lang": "tr",
+    "region": "world",
+    "scroll": 320,
+    "targets": 6,
+    "width": 320
+  },
+  {
+    "close": 52.40625,
+    "lang": "zh",
+    "region": "ru",
+    "scroll": 320,
+    "targets": 4,
+    "width": 320
+  },
+  {
+    "close": 52.40625,
+    "lang": "zh",
+    "region": "world",
+    "scroll": 320,
+    "targets": 6,
+    "width": 320
+  },
+  {
+    "close": 52.40625,
+    "lang": "ja",
+    "region": "ru",
+    "scroll": 320,
+    "targets": 4,
+    "width": 320
+  },
+  {
+    "close": 52.40625,
+    "lang": "ja",
+    "region": "world",
+    "scroll": 320,
+    "targets": 6,
+    "width": 320
+  },
+  {
+    "close": 52.40625,
+    "lang": "ko",
+    "region": "ru",
+    "scroll": 320,
+    "targets": 4,
+    "width": 320
+  },
+  {
+    "close": 52.40625,
+    "lang": "ko",
+    "region": "world",
+    "scroll": 320,
+    "targets": 6,
+    "width": 320
+  },
+  {
+    "close": 52.40625,
+    "lang": "ar",
+    "region": "ru",
+    "scroll": 320,
+    "targets": 4,
+    "width": 320
+  },
+  {
+    "close": 52.40625,
+    "lang": "ar",
+    "region": "world",
+    "scroll": 320,
+    "targets": 6,
+    "width": 320
+  },
+  {
+    "close": 52.40625,
+    "lang": "hi",
+    "region": "ru",
+    "scroll": 320,
+    "targets": 4,
+    "width": 320
+  },
+  {
+    "close": 52.40625,
+    "lang": "hi",
+    "region": "world",
+    "scroll": 320,
+    "targets": 6,
+    "width": 320
+  }
+]

@@ -38,5 +38,14 @@
   "xSearchHistory": "Geçmişte ara",
   "xHistorySearchHint": "Şehir, havalimanı veya uçuş numarası",
   "xNoMatches": "Sonuç bulunamadı",
-  "xHelp": "Uçuş geçmişi yardımı"
+  "xHelp": "Uçuş geçmişi yardımı",
+  "xShareTo": "Haritanı paylaş",
+  "xShareRegion": "Uygulama seçimi",
+  "xShareRussia": "Rusya",
+  "xShareWorld": "Diğer ülkeler",
+  "xShareOther": "Diğer",
+  "xShareHint": "Telefonunun menüsünden bir uygulama seç. Görünmüyorsa PNG’yi kaydet ve kendin ekle.",
+  "xShareChoose": "Açılan menüden {app} uygulamasını seç.",
+  "xShareSaveFor": "PNG’yi kaydet ve görseli {app} uygulamasına ekle.",
+  "xShareUnavailable": "Bu tarayıcı görsel paylaşımını desteklemiyor. PNG’yi kaydet ve istediğin uygulamaya ekle."
 }

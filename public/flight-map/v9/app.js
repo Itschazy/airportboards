@@ -9,6 +9,7 @@ import{createMap,distance}from'../v10/map.js';
 import{latestJob}from'../v2/jobs.js';
 import{recentAirports,routePair}from'../v8/entry.js';
 import{createSharing}from'../v4/sharing.js';
+import{REGION_KEY,initialShareRegion,socialGroups,socialApps,moreIcon}from'../v10/social.js';
 
 import{createStorage}from'../v10/storage.js';
 import{validateDate,formatHistoryDate}from'../v10/history.js';
@@ -237,8 +238,8 @@ const shareJobs=latestJob({
   $('#sharePreview').innerHTML=`<img src="${previewURL}" alt="${esc(t("m117",{p1:(options.kind==='flight'?t("m114"):options.kind==='year'?t("m115"):t("m116"))}))}" width="${card.width}" height="${card.height}">`;
   $('#download').disabled=false;$('#copyCaption').disabled=false;
   shareFile=new File([blob],'airportsboard-my-flights.png',{type:'image/png'});const can=canShareImage(navigator,shareFile);
-  $('#nativeShare').hidden=!can;$('#nativeShare').disabled=!can||sharingBusy;
-  $('#shareStatus').textContent=can?t("m118"):t("m119");
+  syncShareTargets();
+  $('#shareStatus').textContent=can?'':t('xShareUnavailable');
   track('export',{export_kind:options.kind,format:options.format});
  },
  error(){if(signal.aborted||!$('#shareDialog').open)return;$('#sharePreview').setAttribute('aria-busy','false');$('#shareStatus').textContent=t("m120");}
@@ -290,7 +291,7 @@ function enhanceSelect(select){
 }
 const precisionSelect=enhanceSelect($('#datePrecision'));precisionSelect.sync();
 const shareSelects=[enhanceSelect($('#shareYear')),enhanceSelect($('#shareFlight'))];
-function refreshShare(){shareBlob=null;shareCard=null;shareFile=null;$('#sharePreview').setAttribute('aria-busy','true');$('#nativeShare').disabled=true;$('#download').disabled=true;$('#copyCaption').disabled=true;$('#shareStatus').textContent=t("m121");
+function refreshShare(){shareBlob=null;shareCard=null;shareFile=null;$('#sharePreview').setAttribute('aria-busy','true');syncShareTargets();$('#download').disabled=true;$('#copyCaption').disabled=true;$('#shareStatus').textContent=t("m121");
  $$('.share-tabs button').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.shareKind===shareKind)));$$('[data-format]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.format===shareFormat)));
  $('#shareYear').hidden=shareKind!=='year';$('#shareFlight').hidden=shareKind!=='flight';$('#caption').hidden=true;shareSelects.forEach(s=>s.sync());
  shareJobs.push({flights,kind:shareKind,year:$('#shareYear').value,flightId:$('#shareFlight').value,format:shareFormat,light:shareLight,demo:isDemo,showStats:$('#showStats').checked,showFlags:$('#showFlags').checked});
@@ -301,12 +302,32 @@ function makeShare(kind='map'){$('#sharePreview').classList.remove('is-enlarged'
  $('#shareFlight').innerHTML=flights.map(f=>`<option value="${f.id}">${f.from} → ${f.to}${f.date?' · '+f.date:''}</option>`).join('');$('#shareFlight').value=selected??flights[flights.length-1].id;$('#sharePreview').innerHTML='';open($('#shareDialog'),refreshShare);}
 $$('[data-share-kind]').forEach(b=>b.onclick=()=>{shareKind=b.dataset.shareKind;refreshShare();});$$('[data-format]').forEach(b=>b.onclick=()=>{shareFormat=b.dataset.format;refreshShare();});$('#shareYear').onchange=$('#shareFlight').onchange=refreshShare;$('#exportTheme').onclick=()=>{shareLight=!shareLight;refreshShare();};
 $('#download').onclick=()=>{if(!shareBlob)return;const a=document.createElement('a'),u=URL.createObjectURL(shareBlob);a.href=u;a.download=`airportsboard-${shareKind}-${shareFormat}.png`;a.click();setTimeout(()=>URL.revokeObjectURL(u),60000);$('#shareStatus').textContent=t("m123");};
-// Двойной tap не запускает второе системное окно. После закрытия/смены
-// картинки старый promise не меняет статус нового предпросмотра.
-$('#nativeShare').onclick=()=>{if(!shareFile||sharingBusy)return;const file=shareFile;sharingBusy=true;$('#nativeShare').disabled=true;
- try{Promise.resolve(shareImage(navigator,file)).then(()=>{if(!signal.aborted&&shareFile===file&&$('#shareDialog').open)$('#shareStatus').textContent=t("m124");}).catch(e=>{if(!signal.aborted&&shareFile===file&&$('#shareDialog').open)$('#shareStatus').textContent=e.name==='AbortError'?t("m125"):t("m126");}).finally(()=>{sharingBusy=false;if(!signal.aborted)$('#nativeShare').disabled=!shareFile||!canShareImage(navigator,shareFile);});}
- catch{sharingBusy=false;$('#nativeShare').disabled=false;$('#shareStatus').textContent=t("m127");}
-};
+// Иконки подсказывают назначение, но Web Share не умеет выбирать target.
+// Всегда передаём настоящий PNG, не заменяем его ссылкой на пустую карту.
+// Меню открывается синхронно из tap (Safari activation); никакого await
+// перед navigator.share. На неподдерживаемом браузере доступен download.
+let socialRegion;
+try{socialRegion=initialShareRegion(localStorage.getItem(REGION_KEY),Intl.DateTimeFormat().resolvedOptions().timeZone,locale);}catch{socialRegion=initialShareRegion(null,null,locale);}
+function syncShareTargets(){$$('[data-social],#nativeShare').forEach(b=>b.disabled=!shareFile||sharingBusy);}
+function renderShareTargets(){
+ const svg=icon=>`<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">${icon}</svg>`;
+ $('#socialTargets').dataset.region=socialRegion;
+ $('#socialTargets').innerHTML=socialGroups[socialRegion].map(id=>{const app=socialApps[id];return `<button type="button" class="social-target" data-social="${id}" aria-describedby="socialHint"><span class="social-symbol" style="--social-color:${app.color}">${svg(app.icon)}</span><span dir="ltr">${app.name}</span></button>`;}).join('')+`<button type="button" class="social-target" id="nativeShare" aria-describedby="socialHint"><span class="social-symbol social-other">${svg(moreIcon)}</span><span>${esc(t('xShareOther'))}</span></button>`;
+ $$('[data-share-region]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.shareRegion===socialRegion)));
+ $$('[data-social]').forEach(b=>b.onclick=()=>sendImage(socialApps[b.dataset.social].name));
+ $('#nativeShare').onclick=()=>sendImage();syncShareTargets();
+}
+function sendImage(app){
+ if(!shareFile||sharingBusy)return;
+ if(!canShareImage(navigator,shareFile)){$('#shareStatus').textContent=app?t('xShareSaveFor',{app}):t('xShareUnavailable');$('#download').focus();return;}
+ const file=shareFile;sharingBusy=true;syncShareTargets();
+ $('#shareStatus').textContent=app?t('xShareChoose',{app}):t('xShareHint');
+ const current=()=>!signal.aborted&&shareFile===file&&$('#shareDialog').open;
+ try{Promise.resolve(shareImage(navigator,file)).then(()=>{if(current())$('#shareStatus').textContent=t("m124");}).catch(e=>{if(current())$('#shareStatus').textContent=e.name==='AbortError'?t("m125"):t("m126");}).finally(()=>{sharingBusy=false;if(!signal.aborted)syncShareTargets();});}
+ catch{sharingBusy=false;syncShareTargets();if(current())$('#shareStatus').textContent=t("m127");}
+}
+$$('[data-share-region]').forEach(b=>b.onclick=()=>{socialRegion=b.dataset.shareRegion;try{localStorage.setItem(REGION_KEY,socialRegion);}catch{}renderShareTargets();});
+renderShareTargets();
 $('#serviceLinks').innerHTML=serviceLinks().map(x=>`<a href="${esc(x.url)}" target="_blank" rel="noopener noreferrer">${x.name}</a>`).join('');
 $('#shareService').hidden=typeof navigator.share!=='function';
 $('#shareService').onclick=()=>{try{Promise.resolve(navigator.share({title:t("m128"),text:INVITE,url:SHARE_URL})).catch(e=>{if(!signal.aborted&&e.name!=='AbortError')$('#linkStatus').textContent=t("m129");});}catch{$('#linkStatus').textContent=t("m129");}};
@@ -404,7 +425,7 @@ $('#backup').onclick=()=>{syncStored();if(storageError){try{const raw=localStora
 $('#restoreFile').onchange=async e=>{const revision=++restoreRevision,file=e.target.files?.[0];e.target.value='';if(!file)return;$('#backupStatus').textContent=t("m136");try{if(file.size>MAX_BYTES)throw Error(t("m137"));const text=await file.text();if(revision!==restoreRevision||!$('#backupDialog').open)return;const incoming=parse(text,new Set(airports.map(a=>a.code)));syncStored();if(storageError)throw Error(storageError);const result=merge(personal,incoming);pendingRestore=incoming;$('#restoreSummary').textContent=`${t("m138",{p0:(result.added),p1:(result.existing),p2:(result.conflicts)})}`;$('#restoreError').textContent='';$('#restoreConfirm').disabled=!result.added;$('#restoreList').innerHTML=incoming.slice(0,5).map(f=>`<li>${esc(airport[f.from].city)} → ${esc(airport[f.to].city)} <small>${esc(f.date||t("m020"))}</small></li>`).join('');$('#backupStatus').textContent='';close($('#backupDialog'),()=>open($('#restoreDialog')));}catch(e){$('#backupStatus').textContent=e.message;}};
 $('#restoreConfirm').onclick=async()=>{if(!pendingRestore)return;try{const result=merge(personal,pendingRestore);if(!store)throw Error(t("m139"));personal=await store.writeAsync(result.flights);if(signal.aborted)return;flights=personal;isDemo=false;period='';selected=null;const url=new URL(location.href);url.searchParams.delete('demo');history.replaceState(history.state,'',url);pendingRestore=null;storageError='';close($('#restoreDialog'));render();track('restore');toast(t("m140")+result.added);}catch(e){$('#restoreError').textContent=e.message;}};
 
-$$('button').forEach(b=>b.disabled=false);$('#confirmImport').disabled=true;addButtons.forEach(b=>b.removeAttribute('aria-busy'));document.documentElement.removeAttribute('data-flights');root.removeAttribute('aria-busy');render();root.dataset.mapReady='true';track('open');
+$$('button').forEach(b=>b.disabled=false);syncShareTargets();$('#confirmImport').disabled=true;addButtons.forEach(b=>b.removeAttribute('aria-busy'));document.documentElement.removeAttribute('data-flights');root.removeAttribute('aria-busy');render();root.dataset.mapReady='true';track('open');
 if(earlyAdd)openForm();
 // Не создаём длинную задачу индекса внутри mount. Ошибка фоновой загрузки
 

@@ -1,3 +1,11 @@
+## Codex, 03.11.2026 — панель соцсетей готова локально
+
+Пакет поверх 9ec751a7 в /Users/whereiszhenya/projects/runwayboard-flight-map-prototype-20261028, ветка codex/flight-map-prototype-20261028. Россия: Telegram/VK/MAX/Другие; другие страны: Instagram/Facebook/Threads/X/WhatsApp/Другие. Набор выбирается вручную и запоминается; начальная подсказка — часовой пояс, не IP. 9 новых строк на 12 языках. Web Share не умеет назначать приложение: PNG передаётся в системное меню с честной подсказкой. Без поддержки — PNG вручную. Закреплён крестик, устранён скачок превью при подготовке.
+
+162/162 тестов, fixture build, tsc, runtime --check, ICU/client messages, HTTP/SSR/SEO карты и справки12 — PASS. Финальный Chrome320: 24 проверки наборов × локалей без overflow, крестик виден; RU375 снимки; Safari native PNG306КБ/отмена. Физические телефоны/доставка в приложения не проверялись. Runtime +1586 байт gzip, без SDK. Внешнего ChatGPT/агентского review 9 строк в этом проходе не было. Прежние дефекты истории остаются отдельной задачей.
+
+НЕ запушен/НЕ выкачен. Другие страницы, DNS, реальные истории и платные API не менялись. Серверы/сборки убраны, generatedTS восстановлен. Отчёт ops/social-share-20261103/REPORT.md; снимки /Users/whereiszhenya/Documents/Codex/2026-10-18/airportsboard-live-12-next-js-15/outputs/social-share-20261103/report.html. Далее — показать владельцу результат и ограничение выбора приложения, выкат после подтверждения.
+
 ## Codex, 03.11.2026 — аудит карты перелётов, без изменений продукта
 
 По поручению владельца проверен опубликованный код 31cd0f14. Рабочая копия `/Users/whereiszhenya/projects/runwayboard-flight-map-prototype-20261028`, ветка `codex/flight-map-prototype-20261028`, исходный локальный HEAD f7d58dde. Fresh fetch подтвердил origin/main 31cd0f14; production в этом аудите не запрашивался. Новый выкат не выполнялся.

@@ -38,5 +38,14 @@
   "xSearchHistory": "搜索历史记录",
   "xHistorySearchHint": "城市、机场或航班号",
   "xNoMatches": "未找到结果",
-  "xHelp": "飞行记录帮助"
+  "xHelp": "飞行记录帮助",
+  "xShareTo": "分享航线地图",
+  "xShareRegion": "应用选择",
+  "xShareRussia": "俄罗斯",
+  "xShareWorld": "其他国家",
+  "xShareOther": "更多",
+  "xShareHint": "在手机菜单中选择应用。没有所需应用？请保存 PNG 图片后手动添加。",
+  "xShareChoose": "在打开的菜单中选择 {app}。",
+  "xShareSaveFor": "保存 PNG 图片，然后添加到 {app}。",
+  "xShareUnavailable": "此浏览器不支持分享图片。请保存 PNG 图片后在所需应用中添加。"
 }

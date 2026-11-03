@@ -38,5 +38,14 @@
   "xSearchHistory": "履歴を検索",
   "xHistorySearchHint": "都市、空港、便名",
   "xNoMatches": "見つかりませんでした",
-  "xHelp": "フライト履歴のヘルプ"
+  "xHelp": "フライト履歴のヘルプ",
+  "xShareTo": "フライトマップを共有",
+  "xShareRegion": "アプリの選択",
+  "xShareRussia": "ロシア",
+  "xShareWorld": "その他の国",
+  "xShareOther": "その他",
+  "xShareHint": "スマートフォンのメニューでアプリを選んでください。見つからない場合は、PNGを保存して手動で添付してください。",
+  "xShareChoose": "開いたメニューで{app}を選んでください。",
+  "xShareSaveFor": "PNGを保存して、{app}に画像を添付してください。",
+  "xShareUnavailable": "このブラウザでは画像を共有できません。PNGを保存して、使いたいアプリで添付してください。"
 }

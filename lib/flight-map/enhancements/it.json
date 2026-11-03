@@ -38,5 +38,14 @@
   "xSearchHistory": "Cerca nella cronologia",
   "xHistorySearchHint": "Città, aeroporto o numero di volo",
   "xNoMatches": "Nessun risultato",
-  "xHelp": "Guida alla cronologia dei voli"
+  "xHelp": "Guida alla cronologia dei voli",
+  "xShareTo": "Condividi la mappa",
+  "xShareRegion": "Selezione delle app",
+  "xShareRussia": "Russia",
+  "xShareWorld": "Altri paesi",
+  "xShareOther": "Altro",
+  "xShareHint": "Scegli un’app nel menu del telefono. Non c’è? Salva il PNG e allegalo manualmente.",
+  "xShareChoose": "Scegli {app} nel menu che si apre.",
+  "xShareSaveFor": "Salva il PNG e aggiungi l’immagine in {app}.",
+  "xShareUnavailable": "Questo browser non supporta la condivisione di immagini. Salva il PNG e allegalo nella tua app."
 }

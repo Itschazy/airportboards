@@ -38,5 +38,14 @@
   "xSearchHistory": "기록 검색",
   "xHistorySearchHint": "도시, 공항 또는 항공편 번호",
   "xNoMatches": "검색 결과 없음",
-  "xHelp": "비행 기록 도움말"
+  "xHelp": "비행 기록 도움말",
+  "xShareTo": "비행 지도 공유",
+  "xShareRegion": "앱 선택",
+  "xShareRussia": "러시아",
+  "xShareWorld": "기타 국가",
+  "xShareOther": "더 보기",
+  "xShareHint": "휴대폰 메뉴에서 앱을 선택하세요. 원하는 앱이 없으면 PNG를 저장한 뒤 직접 첨부하세요.",
+  "xShareChoose": "열린 메뉴에서 {app} 앱을 선택하세요.",
+  "xShareSaveFor": "PNG를 저장한 뒤 {app} 앱에 이미지를 첨부하세요.",
+  "xShareUnavailable": "이 브라우저는 이미지 공유를 지원하지 않습니다. PNG를 저장한 뒤 원하는 앱에 첨부하세요."
 }
