@@ -59,7 +59,7 @@ export default async function FlightMapPage({ params }: Props) {
   const html = shell.replace(/\{\{(\w+)\}\}/g, (_, key) => escapeHTML(key === 'locale' ? locale : messages[key]))
     .replace('<div class="stats" id="stats"></div>', `<div class="stats" id="stats">${stats}</div>`)
     .replace('<div id="flightList"></div>', `<div id="flightList"><div class="empty-list">${escapeHTML(messages.m097)}</div></div>`)
-    .replace(/<!-- flight-map-seo:start -->[\s\S]*?<!-- flight-map-seo:end -->/, renderInfo(copy, { note: String(messages.m028 ?? '') }));
+    .replace(/<!-- flight-map-seo:start -->[\s\S]*?<!-- flight-map-seo:end -->/, renderInfo(copy, { note: String(messages.m028 ?? ''), helpLink: { href: `/${locale}/flight-map/help`, label: String(messages.xHelp) } }));
   return <>
     {/* Только эта страница заранее загружает свой runtime и каталог текущего
         языка. Раньше они ждали hydration → import → дочерние modules → fetch,

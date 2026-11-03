@@ -1,0 +1,41 @@
+{
+  "title": "Flughistorie rekonstruieren und übertragen — AirportsBoard",
+  "description": "Vergangene Flüge erfassen, Routen oder CSV-Dateien hinzufügen, ein JSON-Backup speichern und die Flugkarte teilen. Ohne Registrierung.",
+  "heading": "Hilfe zur Flughistorie",
+  "intro": "Sammle deine vergangenen Flüge, prüfe die Einträge und speichere eine Sicherung. Dein Verlauf liegt im Browser. Diese Anleitung erklärt, wie du ihn überträgst und eine Karte zum Teilen vorbereitest.",
+  "backLabel": "Zurück zu meiner Karte",
+  "sections": [
+    {
+      "id": "rebuild",
+      "title": "Vergangene Flüge rekonstruieren",
+      "paragraphs": [
+        "Sieh dir alte Tickets, Buchungs-E-Mails, Bordkarten und Fotos an. Gleiche diese mit deinen tatsächlich geflogenen Strecken ab: Ein Ticket kann zu einer abgesagten Reise oder einer später geänderten Route gehören. Die Karte liest keine E-Mails und stellt deinen Verlauf nicht automatisch wieder her.",
+        "Zum Hinzufügen wählst du Abflug- und Ankunftsflughafen. Datum und Flugnummer sind optional. Erinnerst du dich nur an das Jahr, wähle „Nur Jahr“. Weißt du auch das Jahr nicht mehr, lasse den Eintrag ohne Datum. Erfinde kein genaues Datum, nur um das Feld auszufüllen."
+      ]
+    },
+    {
+      "id": "import",
+      "title": "Mehrere Flüge oder eine CSV-Datei hinzufügen",
+      "paragraphs": [
+        "Füge pro Zeile eine Route ein, etwa SVX–IST–CDG. Daraus entstehen zwei Flüge: SVX–IST und IST–CDG. Alternativ wählst du eine CSV-Datei mit den Spaltenüberschriften from,to,date,number. Verwende in from und to die IATA-Codes der Flughäfen; Datum und Flugnummer können leer bleiben. Das Datumsformat ist YYYY oder YYYY-MM-DD, etwa 2024 oder 2024-07-18. Zukünftige Datumsangaben sind für die Historie vergangener Flüge nicht zulässig.",
+        "Prüfe vor dem Hinzufügen die Vorschau, korrigiere Fehler und entscheide, ob mögliche Duplikate übernommen werden sollen. Sie werden nicht automatisch entfernt. Nicht gespeicherte Felder werden gesondert aufgeführt. Die Grenze liegt bei 5000 Flügen und 2 MB. Beim Rückgängigmachen werden nur unveränderte Einträge des letzten Imports entfernt. Bearbeitete Einträge bleiben erhalten."
+      ]
+    },
+    {
+      "id": "backup",
+      "title": "Historie sichern und übertragen",
+      "paragraphs": [
+        "Flüge werden in diesem Browser gespeichert. Sie erscheinen nicht automatisch auf einem anderen Gerät. Beim Löschen der Websitedaten kann der Verlauf verloren gehen. Speichere vor dem Löschen der Browserdaten oder einem Gerätewechsel ein JSON-Backup und stelle es auf dem Zielgerät im Bereich zum Speichern und Sichern wieder her.",
+        "JSON sichert den Flugverlauf mit seinen Feldern. CSV dient dem Austausch der Angaben from,to,date,number und ersetzt keine vollständige JSON-Sicherung. Prüfe den wiederhergestellten Verlauf, bevor du die ursprüngliche Sicherung löschst. Die Dateien können Datumsangaben und Flugnummern enthalten. Bewahre sie getrennt von dem Bild auf, das du teilen möchtest."
+      ]
+    },
+    {
+      "id": "share",
+      "title": "Karte oder Jahresrückblick teilen",
+      "paragraphs": [
+        "Wähle den gesamten Verlauf, ein einzelnes Jahr oder einen Flug und erstelle ein PNG. Verfügbar sind die Formate 9:16, 1:1 und 4:5. Prüfe Routen und Beschriftungen in der Vorschau und blende Statistiken oder Flaggen bei Bedarf aus. Das Bild lässt sich auf dem Gerät speichern.",
+        "„Teilen“ öffnet das Teilen-Menü des Betriebssystems, sofern der Browser das Teilen von Dateien unterstützt. Die angebotenen Apps hängen vom Gerät ab. Das Öffnen des Menüs veröffentlicht noch nichts. Prüfe Bild und Empfänger in der gewählten App. Ein Link zum Dienst allein übermittelt deinen persönlichen Flugverlauf nicht."
+      ]
+    }
+  ]
+}

@@ -166,3 +166,25 @@ main:has(.flight-map-root)~footer .home-footer-reference>summary{display:none!im
    у неё в своём <style> лежит такой же `.land` без предков, и там материки
    всегда красились верно). Значения — те же, что у правила выше. */
 .land{fill:rgba(var(--ab-ink),.055);stroke:rgba(var(--ab-ink),.15);stroke-width:.6;stroke-linejoin:round;vector-effect:non-scaling-stroke}
+/* Новые инструменты используют прежние glass/fg/radius токены. На первом
+   экране они свёрнуты: массовый импорт не должен затруднять один перелёт. */
+.flight-map-root .entry-more{margin:10px 0;color:var(--muted);font-size:13px}
+.flight-map-root .entry-more>summary{cursor:pointer;min-height:44px;display:flex;align-items:center}
+.flight-map-root .entry-more-actions{display:flex;flex-direction:column;align-items:flex-start}
+.flight-map-root .text-action{min-height:44px}
+.flight-map-root .check-option{display:flex;align-items:center;gap:10px;min-height:44px;font-size:13px;color:var(--fg)}
+.flight-map-root .check-option input{width:20px;height:20px;min-height:20px;padding:0;margin:0;flex:none;accent-color:var(--blue)}
+.flight-map-root #importDialog{max-height:calc(var(--entry-height,90dvh) - 24px);overscroll-behavior:contain}
+.flight-map-root #importText{width:100%;min-height:100px;resize:vertical;font:inherit;font-size:16px;padding:12px;border:1px solid var(--line);border-radius:14px;background:var(--glass-soft);color:var(--fg);box-sizing:border-box}
+.flight-map-root #importRows{padding-inline-start:20px;max-height:180px;overflow:auto;font-size:13px;line-height:1.7}
+.flight-map-root #importError{color:var(--ab-ff453a);font-size:13px;line-height:1.5;overflow-wrap:anywhere}
+.flight-map-root #importWarnings,.flight-map-root #importSummary{font-size:13px;line-height:1.5;overflow-wrap:anywhere}
+.flight-map-root #datePrecision{width:100%;margin:8px 0 12px;font:inherit;font-size:16px;color:var(--fg);background:var(--glass-solid);border:1px solid var(--line);border-radius:14px;padding:12px}
+.flight-map-root #sharePreview.is-enlarged{height:auto;max-height:none;overflow:visible}
+.flight-map-root #sharePreview.is-enlarged img{width:100%;height:auto;max-width:100%;max-height:none}
+.flight-map-root #enlargePreview{display:block;margin:0 auto}
+.flight-map-root .format-tabs{flex-wrap:wrap}
+.flight-map-root .format-tabs button{min-height:44px}
+.flight-map-root #journalSearch input{width:100%;box-sizing:border-box;margin-bottom:10px;font-size:16px}
+.flight-map-root .backup-entry{flex-wrap:wrap}
+@media(max-width:760px){.flight-map-root #importDialog{bottom:var(--entry-bottom,0px);margin-bottom:0}.flight-map-root #importDialog .form-actions{position:sticky;bottom:0;background:var(--glass-solid);padding:12px 0}}

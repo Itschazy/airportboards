@@ -181,6 +181,10 @@ async function buildAll(): Promise<MetadataRoute.Sitemap> {
     entries.push(...entry('/airports', 'weekly', 0.7));     // countries index
     // Все 12 вариантов переводят сам инструмент, а не только SEO-описание.
     entries.push(...entry('/flight-map', 'monthly', 0.6));
+    // Справка переведена целиком на 12 языков и объясняет готовые операции
+    // импорта/резервной копии. Отдельные URL нужны для обнаружения каждой
+    // версии, а фиктивный lastmod при очередной сборке здесь не появляется.
+    entries.push(...entry('/flight-map/help', 'monthly', 0.4));
     // Legal / info pages — low priority but crawlable (AdSense reviewers & Googlebot
     // must be able to reach the Privacy Policy et al.).
     for (const p of ['/privacy', '/terms', '/about', '/contact']) entries.push(...entry(p, 'yearly', 0.3, LEGAL_LOCALES));

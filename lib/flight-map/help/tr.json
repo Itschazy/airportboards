@@ -1,0 +1,41 @@
+{
+  "title": "Uçuş geçmişinizi yeniden oluşturun ve aktarın — AirportsBoard",
+  "description": "Geçmiş uçuşlarınızı kaydedin, rota veya CSV ekleyin, JSON yedeği alın ve uçuş haritanızı paylaşın. Kayıt olmanız gerekmez.",
+  "heading": "Uçuş geçmişi yardımı",
+  "intro": "Geçmiş uçuşlarınızı bir araya getirin, kayıtları kontrol edin ve bir yedek saklayın. Geçmişiniz tarayıcınızda tutulur. Bu kılavuz, geçmişinizi aktarmayı ve paylaşmak için bir harita hazırlamayı açıklar.",
+  "backLabel": "Haritama dön",
+  "sections": [
+    {
+      "id": "rebuild",
+      "title": "Geçmiş uçuşlarınızı hatırlayın",
+      "paragraphs": [
+        "Eski biletlerinizi, rezervasyon e-postalarınızı, biniş kartlarınızı ve fotoğraflarınızı inceleyin. Bunları gerçekten yaptığınız uçuşlarla karşılaştırın: bir bilet iptal edilen bir seyahate veya sonradan değişen bir rotaya ait olabilir. Harita e-postalarınızı okumaz ve geçmişinizi otomatik olarak oluşturmaz.",
+        "Uçuş eklemek için kalkış ve varış havalimanlarını seçin. Tarih ve uçuş numarası isteğe bağlıdır. Yalnızca yılı hatırlıyorsanız “Yalnızca yıl” seçeneğini kullanın. Yılı da hatırlamıyorsanız uçuşu tarihsiz bırakın. Sırf alanı doldurmak için kesin bir tarih uydurmayın."
+      ]
+    },
+    {
+      "id": "import",
+      "title": "Birden fazla uçuş veya CSV dosyası ekleyin",
+      "paragraphs": [
+        "Her satıra SVX–IST–CDG gibi bir rota yapıştırın. Bu örnek, SVX–IST ve IST–CDG olmak üzere iki uçuş oluşturur. Alternatif olarak from,to,date,number başlıklarını içeren bir CSV seçin. from ve to alanlarına havalimanlarının IATA kodlarını yazın; tarih ve numara boş bırakılabilir. Tarih biçimi YYYY veya YYYY-MM-DD olmalıdır; örneğin 2024 veya 2024-07-18. Geçmiş uçuş kayıtları için gelecekteki tarihler kabul edilmez.",
+        "Uçuşları eklemeden önce önizlemeyi kontrol edin, hataları düzeltin ve olası yinelenen kayıtları dahil edip etmeyeceğinize karar verin. Bunlar otomatik olarak silinmez. Kaydedilmeyecek alanlar ayrıca listelenir. Sınır 5000 uçuş ve 2 MB’tır. Geri alma, yalnızca son içe aktarma işlemindeki düzenlenmemiş kayıtları siler. Düzenlenen kayıtlar korunur."
+      ]
+    },
+    {
+      "id": "backup",
+      "title": "Geçmişinizi yedekleyin ve aktarın",
+      "paragraphs": [
+        "Uçuşlar bu tarayıcıda kaydedilir. Başka bir cihazda otomatik olarak görünmezler ve site verilerini temizlemek geçmişinizi silebilir. Tarayıcı verilerini temizlemeden veya başka bir cihaza geçmeden önce JSON yedeği kaydedin. Ardından diğer cihazda kayıt ve yedekleme bölümünden geri yükleyin.",
+        "JSON, geçmişinizi alanlarıyla birlikte yedekler. CSV, from,to,date,number kayıtlarını aktarmak içindir ve tam JSON yedeğinin yerini tutmaz. İlk yedeği silmeden önce geri yüklenen geçmişi kontrol edin. Dosyalar tarih ve uçuş numarası içerebilir; bunları paylaşmak istediğiniz görselden ayrı saklayın."
+      ]
+    },
+    {
+      "id": "share",
+      "title": "Haritanızı veya yıl özetinizi paylaşın",
+      "paragraphs": [
+        "Tüm geçmişinizi, belirli bir yılı veya bir uçuşu seçerek PNG hazırlayın. 9:16, 1:1 ve 4:5 biçimleri kullanılabilir. Önizlemede rotaları ve etiketleri kontrol edin; gerekirse istatistikleri veya bayrakları gizleyin. Görseli cihazınıza kaydedebilirsiniz.",
+        "Tarayıcınız dosya paylaşımını destekliyorsa “Paylaş” düğmesi sistemin paylaşım menüsünü açar. Uygulama listesi cihazınıza bağlıdır; menünün açılması içeriğin yayımlandığı anlamına gelmez. Seçtiğiniz uygulamada görseli ve alıcıyı kontrol edin. Hizmete ait bir bağlantı, tek başına kişisel uçuş geçmişinizi aktarmaz."
+      ]
+    }
+  ]
+}

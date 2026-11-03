@@ -1,0 +1,41 @@
+{
+  "title": "Ricostruisci e trasferisci la cronologia dei voli — AirportsBoard",
+  "description": "Ricostruisci i voli passati, aggiungi rotte o file CSV, salva un backup JSON e condividi la tua mappa dei voli. Senza registrazione.",
+  "heading": "Guida alla cronologia dei voli",
+  "intro": "Raccogli i dati dei voli passati, controlla le voci e conserva un backup. La cronologia è salvata nel browser: questa guida spiega come trasferirla e preparare una mappa da condividere.",
+  "backLabel": "Torna alla mia mappa",
+  "sections": [
+    {
+      "id": "rebuild",
+      "title": "Ricostruire i voli passati",
+      "paragraphs": [
+        "Consulta vecchi biglietti, e-mail di prenotazione, carte d’imbarco e foto. Confrontali con i voli che hai effettivamente preso: un biglietto potrebbe riferirsi a un viaggio annullato o a una rotta modificata. La mappa non legge la tua posta e non ricostruisce automaticamente la cronologia.",
+        "Per aggiungere un volo, scegli gli aeroporti di partenza e arrivo. Data e numero di volo sono facoltativi. Se ricordi solo l’anno, scegli «Solo anno»; se non ricordi nemmeno l’anno, lascia il volo senza data. Non inventare una data precisa solo per compilare il campo."
+      ]
+    },
+    {
+      "id": "import",
+      "title": "Aggiungere più voli o un file CSV",
+      "paragraphs": [
+        "Incolla una rotta per riga, ad esempio SVX–IST–CDG: verranno creati due voli, SVX–IST e IST–CDG. In alternativa, scegli un CSV con le intestazioni from,to,date,number. Usa i codici IATA degli aeroporti in from e to; data e numero possono restare vuoti. Il formato della data è YYYY o YYYY-MM-DD, ad esempio 2024 o 2024-07-18. Le date future non sono ammesse nella cronologia dei voli passati.",
+        "Prima di aggiungere i voli, controlla l’anteprima, correggi gli errori e decidi se includere i possibili duplicati. Non vengono rimossi automaticamente. I campi che non saranno salvati sono elencati separatamente. Il limite è di 5000 voli e 2 MB. L’annullamento rimuove solo le voci dell’ultima importazione che non sono state modificate. Le voci modificate vengono conservate."
+      ]
+    },
+    {
+      "id": "backup",
+      "title": "Salvare una copia e trasferire la cronologia",
+      "paragraphs": [
+        "I voli vengono salvati in questo browser. Non appariranno automaticamente su un altro dispositivo e cancellare i dati del sito può eliminare la cronologia. Salva un backup JSON prima di cancellare i dati del browser o cambiare dispositivo, quindi ripristinalo sul nuovo dispositivo dalla sezione di salvataggio e backup.",
+        "Il JSON salva la cronologia con i suoi campi. Il CSV serve per scambiare i dati from,to,date,number e non sostituisce un backup JSON completo. Controlla la cronologia ripristinata prima di eliminare la copia originale. I file possono contenere date e numeri di volo: conservali separatamente dall’immagine che vuoi condividere."
+      ]
+    },
+    {
+      "id": "share",
+      "title": "Condividere la mappa o il riepilogo dell’anno",
+      "paragraphs": [
+        "Scegli l’intera cronologia, un anno o un volo e prepara un PNG. I formati disponibili sono 9:16, 1:1 e 4:5. Controlla rotte ed etichette nell’anteprima e, se necessario, nascondi statistiche o bandiere. Puoi salvare l’immagine sul dispositivo.",
+        "«Condividi» apre il menu di condivisione del sistema se il browser supporta la condivisione di file. Le app disponibili dipendono dal dispositivo; aprire il menu non pubblica nulla. Controlla l’immagine e il destinatario nell’app scelta. Un link al servizio, da solo, non trasmette la tua cronologia personale."
+      ]
+    }
+  ]
+}

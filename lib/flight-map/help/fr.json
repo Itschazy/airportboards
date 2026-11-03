@@ -1,0 +1,41 @@
+{
+  "title": "Reconstituer et transférer votre historique de vols — AirportsBoard",
+  "description": "Retrouvez vos anciens vols, ajoutez des itinéraires ou un CSV, sauvegardez en JSON et partagez votre carte. Sans inscription.",
+  "heading": "Aide sur l’historique des vols",
+  "intro": "Rassemblez vos anciens vols, vérifiez les entrées et gardez une sauvegarde. Votre historique est stocké dans votre navigateur. Ce guide explique comment le transférer et préparer une carte à partager.",
+  "backLabel": "Retour à ma carte",
+  "sections": [
+    {
+      "id": "rebuild",
+      "title": "Reconstituer vos anciens vols",
+      "paragraphs": [
+        "Consultez vos anciens billets, e-mails de réservation, cartes d’embarquement et photos. Comparez-les aux vols réellement effectués : un billet peut correspondre à un voyage annulé ou à un itinéraire modifié. La carte ne lit pas vos e-mails et ne reconstitue pas automatiquement votre historique.",
+        "Pour ajouter un vol, choisissez les aéroports de départ et d’arrivée. La date et le numéro de vol sont facultatifs. Si vous ne connaissez que l’année, choisissez « Année seulement ». Si vous ne vous souvenez pas non plus de l’année, laissez le vol sans date. N’inventez pas une date précise pour remplir le champ."
+      ]
+    },
+    {
+      "id": "import",
+      "title": "Ajouter plusieurs vols ou un fichier CSV",
+      "paragraphs": [
+        "Collez un itinéraire par ligne, par exemple SVX–IST–CDG : cela crée deux vols, SVX–IST et IST–CDG. Vous pouvez aussi choisir un CSV avec les en-têtes from,to,date,number. Dans from et to, indiquez les codes IATA des aéroports ; la date et le numéro peuvent rester vides. Utilisez le format YYYY ou YYYY-MM-DD, par exemple 2024 ou 2024-07-18. Les dates futures ne sont pas acceptées dans l’historique des vols passés.",
+        "Avant d’ajouter les vols, vérifiez l’aperçu, corrigez les erreurs et décidez d’inclure ou non les doublons possibles. Ils ne sont pas supprimés automatiquement. Les champs qui ne seront pas enregistrés sont signalés séparément. La limite est de 5000 vols et 2 Mo. L’annulation supprime uniquement les entrées non modifiées de la dernière importation. Les entrées modifiées sont conservées."
+      ]
+    },
+    {
+      "id": "backup",
+      "title": "Sauvegarder et transférer l’historique",
+      "paragraphs": [
+        "Les vols sont enregistrés dans ce navigateur. Ils n’apparaissent pas automatiquement sur un autre appareil, et l’effacement des données du site peut supprimer l’historique. Enregistrez une sauvegarde JSON avant de nettoyer le navigateur ou de changer d’appareil, puis restaurez-la sur l’autre appareil dans la section d’enregistrement et de sauvegarde.",
+        "Le JSON sauvegarde l’historique avec ses champs. Le CSV sert à échanger les données from,to,date,number et ne remplace pas une sauvegarde JSON complète. Vérifiez l’historique restauré avant de supprimer la sauvegarde d’origine. Les fichiers peuvent contenir des dates et des numéros de vol : conservez-les séparément de l’image à partager."
+      ]
+    },
+    {
+      "id": "share",
+      "title": "Partager une carte ou un bilan annuel",
+      "paragraphs": [
+        "Choisissez tout l’historique, une année ou un vol, puis préparez un PNG. Les formats disponibles sont 9:16, 1:1 et 4:5. Vérifiez les itinéraires et les libellés dans l’aperçu, et masquez les statistiques ou les drapeaux si nécessaire. Vous pouvez enregistrer l’image sur votre appareil.",
+        "« Partager » ouvre le menu de partage du système si votre navigateur prend en charge le partage de fichiers. Les applications proposées dépendent de l’appareil ; ouvrir ce menu ne publie rien. Vérifiez l’image et le destinataire dans l’application choisie. Un lien vers le service ne transmet pas à lui seul votre historique personnel."
+      ]
+    }
+  ]
+}

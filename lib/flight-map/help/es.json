@@ -1,0 +1,41 @@
+{
+  "title": "Reconstruye y traslada tu historial de vuelos — AirportsBoard",
+  "description": "Reconstruye tu historial de vuelos, añade rutas o archivos CSV, guarda una copia JSON y comparte tu mapa de vuelos. Sin registro.",
+  "heading": "Ayuda sobre el historial de vuelos",
+  "intro": "Reúne tus vuelos pasados, revisa los registros y guarda una copia de seguridad. Tu historial se almacena en el navegador: esta guía explica cómo trasladarlo y preparar un mapa para compartir.",
+  "backLabel": "Volver a mi mapa",
+  "sections": [
+    {
+      "id": "rebuild",
+      "title": "Reconstruir tus vuelos pasados",
+      "paragraphs": [
+        "Consulta billetes antiguos, correos de reserva, tarjetas de embarque y fotos. Contrástalos con los vuelos que realmente hiciste: un billete puede corresponder a un viaje cancelado o a una ruta modificada. El mapa no lee tu correo ni reconstruye el historial automáticamente.",
+        "Para añadir un vuelo, elige los aeropuertos de salida y llegada. La fecha y el número de vuelo son opcionales. Si solo recuerdas el año, elige «Solo el año»; si tampoco recuerdas el año, deja el vuelo sin fecha. No inventes una fecha exacta solo para rellenar el campo."
+      ]
+    },
+    {
+      "id": "import",
+      "title": "Añadir varios vuelos o un archivo CSV",
+      "paragraphs": [
+        "Pega una ruta por línea, por ejemplo SVX–IST–CDG: se crearán dos vuelos, SVX–IST e IST–CDG. También puedes elegir un CSV con los encabezados from,to,date,number. Usa los códigos IATA de los aeropuertos en from y to; la fecha y el número pueden quedar vacíos. El formato de fecha es YYYY o YYYY-MM-DD, por ejemplo 2024 o 2024-07-18. No se admiten fechas futuras en el historial de vuelos pasados.",
+        "Antes de añadir los vuelos, revisa la vista previa, corrige los errores y decide si incluir los posibles duplicados. No se eliminan automáticamente. Los campos que no se guardarán se indican por separado. El límite es de 5000 vuelos y 2 MB. Al deshacer, solo se eliminan los registros de la última importación que no se hayan modificado. Los registros modificados se conservan."
+      ]
+    },
+    {
+      "id": "backup",
+      "title": "Guardar una copia y trasladar el historial",
+      "paragraphs": [
+        "Los vuelos se guardan en este navegador. No aparecerán automáticamente en otro dispositivo, y borrar los datos del sitio puede eliminar el historial. Guarda una copia JSON antes de limpiar el navegador o cambiar de dispositivo y restáurala allí desde la sección de guardado y copia de seguridad.",
+        "El JSON guarda una copia del historial con sus campos. El CSV sirve para intercambiar registros from,to,date,number y no sustituye una copia JSON completa. Comprueba el historial restaurado antes de borrar la copia original. Los archivos pueden incluir fechas y números de vuelo: guárdalos por separado de la imagen que quieras compartir."
+      ]
+    },
+    {
+      "id": "share",
+      "title": "Compartir el mapa o el resumen del año",
+      "paragraphs": [
+        "Elige todo el historial, un año o un vuelo y prepara un PNG. Puedes usar los formatos 9:16, 1:1 y 4:5. Comprueba las rutas y los textos en la vista previa y oculta las estadísticas o las banderas si lo necesitas. Puedes guardar la imagen en tu dispositivo.",
+        "«Compartir» abre el menú del sistema si el navegador permite compartir archivos. Las aplicaciones disponibles dependen del dispositivo; abrir el menú no publica nada. Revisa la imagen y el destinatario en la aplicación elegida. Un enlace al servicio no transmite por sí solo tu historial personal."
+      ]
+    }
+  ]
+}

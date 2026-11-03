@@ -1,0 +1,41 @@
+{
+  "title": "Restore and transfer your flight history — AirportsBoard",
+  "description": "Rebuild past flights, add routes or CSV files, save a JSON backup and share your flight map. No account needed.",
+  "heading": "Flight history help",
+  "intro": "Collect your past flights, review the records and keep a backup. Your history is stored in your browser: this guide explains how to transfer it and prepare a map to share.",
+  "backLabel": "Back to my map",
+  "sections": [
+    {
+      "id": "rebuild",
+      "title": "Rebuild your past flight history",
+      "paragraphs": [
+        "Check old tickets, booking emails, boarding passes and photos. Compare them with the flights you actually took: a ticket may be for a cancelled trip or a route that changed. The map does not read your email or recover your history automatically.",
+        "To add a flight, choose the departure and arrival airports. The date and flight number are optional. If you only remember the year, choose “Year only”; if you cannot remember the year either, leave the flight undated. Do not invent an exact date just to fill in the field."
+      ]
+    },
+    {
+      "id": "import",
+      "title": "Add multiple flights or a CSV file",
+      "paragraphs": [
+        "Paste one route per line, such as SVX–IST–CDG: this creates two flights, SVX–IST and IST–CDG. Or choose a CSV with the headers from,to,date,number. Use airport IATA codes in from and to; the date and number can be blank. Use YYYY or YYYY-MM-DD for dates, such as 2024 or 2024-07-18. Future dates are not accepted for past flight history.",
+        "Review the preview before adding flights, fix any errors and decide whether to include possible duplicates. They are not removed automatically. Fields that will not be saved are listed separately. The limit is 5000 flights and 2 MB. Undo removes only unedited records from the most recent import. Edited records are kept."
+      ]
+    },
+    {
+      "id": "backup",
+      "title": "Back up and transfer your history",
+      "paragraphs": [
+        "Flights are saved in this browser. They will not appear automatically on another device, and clearing site data may delete your history. Save a JSON backup before clearing your browser or moving to another device, then restore it there using the save and backup section.",
+        "JSON backs up your flight history and its fields. CSV is for exchanging from,to,date,number records and does not replace a full JSON backup. Check the restored history before deleting the original backup. Files may include dates and flight numbers: store them separately from the image you want to share."
+      ]
+    },
+    {
+      "id": "share",
+      "title": "Share your map or year in review",
+      "paragraphs": [
+        "Choose your whole history, a particular year or a flight and prepare a PNG. The available formats are 9:16, 1:1 and 4:5. Check the routes and labels in the preview and hide statistics or flags if needed. You can save the image to your device.",
+        "“Share” opens the system share menu if your browser supports sharing files. The available apps depend on your device; opening the menu does not publish anything. Check the image and recipient in your chosen app. A link to the service alone does not share your personal flight history."
+      ]
+    }
+  ]
+}
