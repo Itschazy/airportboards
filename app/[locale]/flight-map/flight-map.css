@@ -219,7 +219,12 @@ main:has(.flight-map-root)~footer .home-footer-reference>summary{display:none!im
 @media(max-height:650px){.flight-map-root #sharePreview{height:29dvh}}
 .flight-map-root #sharePreview.is-enlarged{height:auto}
 
-/* Белая подложка — часть площадки для оригинальных цветных/чёрных знаков,
-   одинаковая в обеих темах. Геометрия и цвета брендов не перекрашиваются. */
-.flight-map-root .social-logo{overflow:hidden;background:#fff;box-shadow:0 0 0 1px rgba(0,0,0,.06)}
+/* Белые плитки v1 выглядели чужеродно на тёмном стекле. Теперь знаки
+   имеют прозрачный фон и чуть больший оптический размер. Только чёрные
+   X/Threads инвертируются в тёмной теме; цветные бренды не перекрашиваем.
+   Правила совпадают с системным/ручным выбором темы самого сайта. */
+.flight-map-root .social-logo{overflow:visible;background:transparent;box-shadow:none}
 .flight-map-root .social-logo img{display:block;width:56px;height:56px;max-width:none;object-fit:contain}
+.flight-map-root [data-social="threads"] img,.flight-map-root [data-social="x"] img{filter:invert(1)}
+:root[data-theme="light"] .flight-map-root [data-social="threads"] img,:root[data-theme="light"] .flight-map-root [data-social="x"] img{filter:none}
+@media(prefers-color-scheme:light){:root:not([data-theme="dark"]) .flight-map-root [data-social="threads"] img,:root:not([data-theme="dark"]) .flight-map-root [data-social="x"] img{filter:none}}

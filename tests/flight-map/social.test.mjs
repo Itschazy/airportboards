@@ -37,9 +37,9 @@ test('all twelve languages have matching keys, valid placeholders and honest des
 });
 
 test('brand files are local, present and match the reviewed sources',()=>{
- const manifest=JSON.parse(fs.readFileSync(new URL('../../ops/social-share-20261103/brand-sources.json',import.meta.url)));
+ const manifest=JSON.parse(fs.readFileSync(new URL('../../ops/social-share-20261103/brand-sources-transparent.json',import.meta.url)));
  for(const [id,app] of Object.entries(socialApps)){
-  assert.match(app.src,/^\/flight-map\/brands-v1\/[a-z]+\.webp$/);
+  assert.match(app.src,/^\/flight-map\/brands-v3\/[a-z]+\.webp$/);
   const bytes=fs.readFileSync(new URL('../../public'+app.src,import.meta.url));
   assert.equal(createHash('sha256').update(bytes).digest('hex'),manifest.sources[id].sha256);
   assert.equal(bytes.length,manifest.sources[id].bytes);assert.ok(bytes.length<15000);

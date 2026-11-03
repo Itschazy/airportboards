@@ -10,5 +10,5 @@ export const socialGroups={ru:['telegram','vk','max'],world:['instagram','facebo
 export const socialApps=Object.fromEntries([
  ['telegram','Telegram'],['vk','VK'],['max','MAX'],['instagram','Instagram'],
  ['facebook','Facebook'],['threads','Threads'],['x','X'],['whatsapp','WhatsApp']
-].map(([id,name])=>[id,{name,src:'/flight-map/brands-v1/'+id+'.webp'}]));
+].map(([id,name])=>[id,{name,src:'/flight-map/brands-v3/'+id+'.webp'}]));
 export const moreIcon='<circle cx="5" cy="12" r="1.8"/><circle cx="12" cy="12" r="1.8"/><circle cx="19" cy="12" r="1.8"/>';

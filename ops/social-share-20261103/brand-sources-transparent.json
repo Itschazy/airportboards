@@ -1,0 +1,71 @@
+{
+  "checked": "2026-11-03",
+  "processing": "Transparent brand glyphs, 96x96 within 112x112 canvas. SVGs preserve source alpha. White reference canvas removed from near-white pixels; colored pixels preserved. Facebook keeps the white f inside its circular mark. Lossless WebP, CSS56px. X/Threads rendered white in dark theme via CSS invert, black in light theme. Original v1 kept for cache compatibility.",
+  "sources": {
+    "telegram": {
+      "url": "https://telegram.org/img/website_icon.svg?4",
+      "sourceSha256": "0019255c610cb0843c524d7995905fa5201651fcc393846bee8414f0610097f5",
+      "file": "public/flight-map/brands-v3/telegram.webp",
+      "bytes": 4724,
+      "sha256": "16e0b6027c30bd2b0354c6899fd67db8a4c78154dca536030e4671dd3e36cb6c",
+      "previousFile": "public/flight-map/brands-v1/telegram.webp"
+    },
+    "vk": {
+      "url": "https://raw.githubusercontent.com/VKCOM/icons/741b341f3106d46ecf9f1225c4bb3c87dfaf377f/packages/icons/src/svg/56/logo_vk_color_56.svg",
+      "sourceSha256": "4552b7fae09400aabc328aab26a19faabb16ab5a80454ce35484fa5a82ef1a92",
+      "file": "public/flight-map/brands-v3/vk.webp",
+      "bytes": 2596,
+      "sha256": "79d43b4dbe6229d2b3cc5c43b390f4addb1e29eb94f1dd14b64749f061e841f3",
+      "previousFile": "public/flight-map/brands-v1/vk.webp"
+    },
+    "max": {
+      "url": "https://st.max.ru/brandbook/max-colored.zip",
+      "sourceSha256": "5caa61a4b0731d0d89421b4fb24f41433025e5aea59155a14cf3a3fada6c9174",
+      "file": "public/flight-map/brands-v3/max.webp",
+      "bytes": 8820,
+      "sha256": "c071e7983622a52dfda6ed624e5d838988dc5bf083a792bd1bc7df6b96f7510c",
+      "previousFile": "public/flight-map/brands-v1/max.webp"
+    },
+    "instagram": {
+      "url": "https://lookaside.fbsbx.com/elementpath/media/?media_id=1695254501677636&version=1782938342",
+      "sourceSha256": "00b17640a68bbe849c747f1cb6f8c8203e6ae1a813916dd96a21b454da31e1ed",
+      "file": "public/flight-map/brands-v3/instagram.webp",
+      "bytes": 10666,
+      "sha256": "6d915a9e07d11be02da85f8bd8df5b5a68f28259d78041d7fdd4861653b89835",
+      "previousFile": "public/flight-map/brands-v1/instagram.webp"
+    },
+    "facebook": {
+      "url": "https://lookaside.fbsbx.com/elementpath/media/?media_id=264184529902911&version=1782938342",
+      "sourceSha256": "30ca53fea58d85a5fe32cdc0e7d0724a7de0037b0e8b52b81aea778fb6824b2b",
+      "file": "public/flight-map/brands-v3/facebook.webp",
+      "bytes": 6028,
+      "sha256": "2094832148cc14e0931790bed1bcb63d49ed8a138c07f3187a77bfed8937d76f",
+      "previousFile": "public/flight-map/brands-v1/facebook.webp"
+    },
+    "threads": {
+      "url": "https://lookaside.fbsbx.com/elementpath/media/?media_id=1331420402240215&version=1782938342",
+      "sourceSha256": "e504e7e265f0dd328fd07398fe86befffa4663fb617b8578705fcf4b40cee4a3",
+      "file": "public/flight-map/brands-v3/threads.webp",
+      "bytes": 4766,
+      "sha256": "7039ff39784bbb594156610a39ca62fbd0b78eb3abb53eb007283a70e33b3a16",
+      "previousFile": "public/flight-map/brands-v1/threads.webp"
+    },
+    "x": {
+      "url": "https://raw.githubusercontent.com/simple-icons/simple-icons/16.0.0/icons/x.svg",
+      "sourceSha256": "693e68863eceb8dc9f72e2acd386ab9c20a10858dab2c076212f7084cb7a32fe",
+      "file": "public/flight-map/brands-v3/x.webp",
+      "bytes": 2222,
+      "sha256": "c367b5feaa7b1a7e28ba005f50370f43f34e9051a3ef0b6088deb954a2b6f5f2",
+      "previousFile": "public/flight-map/brands-v1/x.webp"
+    },
+    "whatsapp": {
+      "url": "https://lookaside.fbsbx.com/elementpath/media/?media_id=2135446317382047&version=1782938342",
+      "sourceSha256": "4b642c40271191bfb89274883a5fe863206efef8331e2e7852bf13c73534a28e",
+      "file": "public/flight-map/brands-v3/whatsapp.webp",
+      "bytes": 6112,
+      "sha256": "e43ddb9a17522a69b50513981c9ae40d0ff352202032b718083652cde30ad21d",
+      "previousFile": "public/flight-map/brands-v1/whatsapp.webp"
+    }
+  },
+  "notes": "MAX: Max colored.svg from official archive. Meta: original marks from official Brand Resource Center. VK: official VKCOM/icons repository (MIT). X official download returned 403; used exact published X mark from Simple Icons 16.0.0 (CC0), not a hand-drawn substitute. Trademarks remain with their owners."
+}
