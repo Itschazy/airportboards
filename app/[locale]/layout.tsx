@@ -17,7 +17,7 @@ import { GaRouteTracker } from '@/components/GaRouteTracker';
 import { AdSense } from '@/components/AdSense';
 import { CookieNotice } from '@/components/CookieNotice';
 import { InstallPrompt } from '@/components/InstallPrompt';
-import { adsenseClient } from '@/lib/adsense';
+import { adsenseClient, adsenseVerificationClient } from '@/lib/adsense';
 import '../globals.css';
 
 // viewportFit:'cover' activates the env(safe-area-inset-*) padding used across the board
@@ -48,8 +48,9 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
     // during the initial check.
     verification: { yandex: 'ea6daa0845815656', other: { 'msvalidate.01': 'B98E7EB91E5D0100462CA06CD39AA4D7' } },
     // AdSense site-verification meta tag (Google reads <meta name="google-adsense-account">
-    // in <head>). Emitted only when the publisher id is configured.
-    ...(adsenseClient ? { other: { 'google-adsense-account': adsenseClient } } : {}),
+    // in <head>). Отдельная настройка позволяет пройти повторную проверку
+    // без возврата рекламного JS и его затрат на мобильную загрузку.
+    ...(adsenseVerificationClient ? { other: { 'google-adsense-account': adsenseVerificationClient } } : {}),
     // Site-wide social defaults — every page inherits these (og:image/twitter:image come
     // automatically from app/opengraph-image.tsx); child pages add their own title/desc.
     openGraph: {

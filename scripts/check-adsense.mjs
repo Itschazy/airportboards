@@ -19,6 +19,8 @@
 // Поэтому загрузчик у нас `defer` и идёт ПОСЛЕ настройки согласия. Проверка меряет это
 // байтовыми позициями в выданном HTML, а не доверием к коду компонента.
 //
+// С 03.11.2026 meta допускается отдельно от рекламы для повторной заявки.
+// Сторож обязан проверять обе настройки: верификация не должна тихо включать JS.
 // Провайдерских запросов ноль: страницы читаются под audit-bot, то есть из хранилища.
 //
 // Usage:  node scripts/check-adsense.mjs [base]
@@ -36,6 +38,7 @@ const say = (ok, msg) => { if (!ok) fails++; console.log(`  ${ok ? '✓' : '✗'
 const ENV = fs.readFileSync('.env.production', 'utf8');
 const m = /^NEXT_PUBLIC_ADSENSE_CLIENT=(ca-pub-\d+)\s*$/m.exec(ENV);
 const expected = m ? m[1] : null;
+const verification = expected || /^NEXT_PUBLIC_ADSENSE_VERIFICATION_CLIENT=(ca-pub-\d+)\s*$/m.exec(ENV)?.[1] || null;
 console.log(`AdSense: в .env.production ${expected ? `включён (${expected})` : 'ВЫКЛЮЧЕН'} · проверяем ${BASE}\n`);
 
 const get = async (path) => {
@@ -52,10 +55,18 @@ say(pages.length === PAGES.length && pages.every((p) => p.status === 200),
   `страниц снято: ${pages.length} из ${PAGES.length}`);
 
 const adsTxt = await get('/ads.txt').catch(() => ({ status: 0, html: '' }));
+// Проверяем ровно один тег в head: SSR body или другой publisher не годятся.
+for (const p of pages) {
+  const head = p.html.match(/<head>[\s\S]*?<\/head>/)?.[0] || '';
+  const metas = [...head.matchAll(/<meta[^>]+name="google-adsense-account"[^>]*>/g)];
+  say(verification ? metas.length === 1 && metas[0][0].includes(`content="${verification}"`) : metas.length === 0,
+    `${p.path}: проверочный meta ${verification || 'выключен'} соответствует настройке`);
+}
+
 
 if (!expected) {
-  // Симметрия: выключено в репозитории — значит и на сайте ничего быть не должно.
-  const leaked = pages.filter((p) => /adsbygoogle\.js|google-adsense-account/.test(p.html));
+  // Реклама выключена: meta может остаться, но скрипт и preconnect недопустимы.
+  const leaked = pages.filter((p) => /adsbygoogle\.js|<link[^>]+href="https:\/\/pagead2\.googlesyndication\.com"/.test(p.html));
   say(leaked.length === 0, leaked.length
     ? `AdSense выключен в репозитории, но ЖИВ на сайте: ${leaked.map((p) => p.path).join(', ')}`
     : 'на сайте рекламного кода тоже нет — репозиторий и прод сходятся');
