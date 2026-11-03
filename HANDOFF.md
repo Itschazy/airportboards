@@ -1,3 +1,11 @@
+## Codex, 03.11.2026 — панель шейринга и аудит ВЫКАЧЕНЫ: ef48386f
+
+Владелец явно разрешил «выкатывай всё со всеми проверками». Push ef48386fde201ce201530bb487917b13620f3470 в main в13:36:11 Europe/Amsterdam, вне прогрева. Fresh fetch: ahead7/behind0, конфликтов/правок кода нет. GitHub Actions41637117520 success; prod HEAD/health.release совпали, BUILD_ID By4MqQYuA1N1plbzk5ybx. PM2 триonline PID720069/720053/720080, restarts96 стабилен при повторе, свободно58ГБ.
+
+Повторные169тестов/tsc/runtime/exporter/ICU/client-messages/ключи12языков — PASS. После выката index20/20; sitemap/hreflang; live-refresh; AdSense; карта12языков/ассеты/RSC; справка12языков+sitemap; SHA256новогоruntime/8логотипов и текстов12языков — PASS. Только audit-bot, без платных API и браузера на проде. Дизайн остальных страниц и DNS не тронуты.
+
+Протокол ops/social-share-20261103/POSTDEPLOY.md, логи/HTML outputs/social-share-20261103/deploy папки чата. Документация фиксируется локально поверх опубликованногоef48386f без второго выката. Остаточные проблемы аудита НЕ исправлены: fallbackбезWebLocks, тяжёлые большие карты, импорт даты после смены пояса; физические соцприложения/AndroidLCP не проверены. Далее исправлять их отдельным проверенным пакетом.
+
 ## Codex, 03.11.2026 — полный аудит карты и пять исправлений (локально)
 
 База c344cc49; текущий коммит — пакет с этим разделом, ветка codex/flight-map-prototype-20261028, рабочая копия /Users/whereiszhenya/projects/runwayboard-flight-map-prototype-20261028. Нового push/deploy нет. Сверка: последние коммиты c344cc49 → e70554d1 → 1b1c4e12; прежняя запись аудита шейринга относится к c344cc49. Дизайн остальных страниц, DNS, SEO и production не менялись.
