@@ -21,9 +21,9 @@ import { readFileSync, readdirSync } from 'node:fs';
 
 const LOCALES = ['ru', 'en', 'de', 'fr', 'es', 'it', 'tr', 'zh', 'ja', 'ko', 'ar', 'hi'];
 const IDS = ['rebuild', 'import', 'backup', 'share'];
-// Каталог расширен панелью соцсетей: сохраняем строгий список, чтобы новый
+// Каталог включает панель соцсетей без выбора региона: сохраняем строгий список, чтобы новый
 // ключ не мог незаметно остаться без перевода или попасть только в один язык.
-const KEYS = `xDatePrecision xExactDate xYearOnly xYear xUnknownDate xImport xImportHint xRoutes xChooseCSV xPreview xImportPreview xImportSummary xImportErrors xRow xUnknownAirport xInvalidRoute xInvalidDate xAmbiguousDate xInvalidCSV xTooLarge xIgnoredFields xPossibleDuplicates xKeepDuplicates xConfirmImport xImportDone xUndoImport xUndoUnavailable xCSVExport xCSVTemplate xReturnFlight xNextLeg xMore xPortrait xShowStats xShowFlags xEnlarge xSearchHistory xHistorySearchHint xNoMatches xHelp xShareTo xShareRegion xShareRussia xShareWorld xShareOther xShareHint xShareChoose xShareSaveFor xShareUnavailable`.split(' ');
+const KEYS = `xDatePrecision xExactDate xYearOnly xYear xUnknownDate xImport xImportHint xRoutes xChooseCSV xPreview xImportPreview xImportSummary xImportErrors xRow xUnknownAirport xInvalidRoute xInvalidDate xAmbiguousDate xInvalidCSV xTooLarge xIgnoredFields xPossibleDuplicates xKeepDuplicates xConfirmImport xImportDone xUndoImport xUndoUnavailable xCSVExport xCSVTemplate xReturnFlight xNextLeg xMore xPortrait xShowStats xShowFlags xEnlarge xSearchHistory xHistorySearchHint xNoMatches xHelp xShareTo xShareOther xShareHint xShareChoose xShareSaveFor xShareUnavailable`.split(' ');
 const PUBLIC = 'https://airportsboard.live';
 const PATH = '/flight-map/help';
 const args = process.argv.slice(2);

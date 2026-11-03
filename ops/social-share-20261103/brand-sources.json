@@ -1,0 +1,63 @@
+{
+  "checked": "2026-11-03",
+  "processing": "Unmodified brand geometry and colors. Flatten onto white, remove empty outer canvas, fit 120×120 within a 168×168 white tile, WebP lossless. CSS displays at 56×56 (3x). No generative artwork.",
+  "sources": {
+    "telegram": {
+      "url": "https://telegram.org/img/website_icon.svg?4",
+      "sourceSha256": "0019255c610cb0843c524d7995905fa5201651fcc393846bee8414f0610097f5",
+      "file": "public/flight-map/brands-v1/telegram.webp",
+      "bytes": 5226,
+      "sha256": "d96a7431ec1804af3cd5ad9d651afc83e99c5948c0fca7f36c81f225ed09036b"
+    },
+    "vk": {
+      "url": "https://raw.githubusercontent.com/VKCOM/icons/741b341f3106d46ecf9f1225c4bb3c87dfaf377f/packages/icons/src/svg/56/logo_vk_color_56.svg",
+      "sourceSha256": "4552b7fae09400aabc328aab26a19faabb16ab5a80454ce35484fa5a82ef1a92",
+      "file": "public/flight-map/brands-v1/vk.webp",
+      "bytes": 3098,
+      "sha256": "758367a604cd78acdfd2496c6ac36f5f9198484ec5d5acf263fc41220a08abb0"
+    },
+    "max": {
+      "url": "https://st.max.ru/brandbook/max-colored.zip",
+      "sourceSha256": "5caa61a4b0731d0d89421b4fb24f41433025e5aea59155a14cf3a3fada6c9174",
+      "file": "public/flight-map/brands-v1/max.webp",
+      "bytes": 10624,
+      "sha256": "f701ef96a3ee4c9990d661966a5a7da38f1b59cf03072a8ea16c1a45e6f8544c"
+    },
+    "instagram": {
+      "url": "https://lookaside.fbsbx.com/elementpath/media/?media_id=1695254501677636&version=1782938342",
+      "sourceSha256": "00b17640a68bbe849c747f1cb6f8c8203e6ae1a813916dd96a21b454da31e1ed",
+      "file": "public/flight-map/brands-v1/instagram.webp",
+      "bytes": 9610,
+      "sha256": "bf8f2a59578082e1c50632575563d40f4046b4e73e566f5f5d5a5c77b6dd7802"
+    },
+    "facebook": {
+      "url": "https://lookaside.fbsbx.com/elementpath/media/?media_id=264184529902911&version=1782938342",
+      "sourceSha256": "30ca53fea58d85a5fe32cdc0e7d0724a7de0037b0e8b52b81aea778fb6824b2b",
+      "file": "public/flight-map/brands-v1/facebook.webp",
+      "bytes": 3458,
+      "sha256": "b606560c72b1f94d309bdb9f1dff5fbbdf0259cfa823116734ef43937f6397d7"
+    },
+    "threads": {
+      "url": "https://lookaside.fbsbx.com/elementpath/media/?media_id=1331420402240215&version=1782938342",
+      "sourceSha256": "e504e7e265f0dd328fd07398fe86befffa4663fb617b8578705fcf4b40cee4a3",
+      "file": "public/flight-map/brands-v1/threads.webp",
+      "bytes": 3632,
+      "sha256": "a8ec55186c62fce4ab6f3e339bc2eab284fa70cee86697c6e254dea3b0672544"
+    },
+    "x": {
+      "url": "https://raw.githubusercontent.com/simple-icons/simple-icons/16.0.0/icons/x.svg",
+      "sourceSha256": "693e68863eceb8dc9f72e2acd386ab9c20a10858dab2c076212f7084cb7a32fe",
+      "file": "public/flight-map/brands-v1/x.webp",
+      "bytes": 2798,
+      "sha256": "cc1086654e869c5f9675737683ad0ff88b82dc6a46f3c982c071461e98a6aed6"
+    },
+    "whatsapp": {
+      "url": "https://lookaside.fbsbx.com/elementpath/media/?media_id=2135446317382047&version=1782938342",
+      "sourceSha256": "4b642c40271191bfb89274883a5fe863206efef8331e2e7852bf13c73534a28e",
+      "file": "public/flight-map/brands-v1/whatsapp.webp",
+      "bytes": 5436,
+      "sha256": "8f42d5fc52562a2084354b50a49290f686107c3fc1f233700400b17b3ef133bd"
+    }
+  },
+  "notes": "MAX: Max colored.svg from official archive. Meta: original marks from official Brand Resource Center. VK: official VKCOM/icons repository (MIT). X official download returned 403; used exact published X mark from Simple Icons 16.0.0 (CC0), not a hand-drawn substitute. Trademarks remain with their owners."
+}

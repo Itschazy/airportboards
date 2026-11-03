@@ -1,18 +1,14 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
-import {initialShareRegion,socialGroups,socialApps} from '../../public/flight-map/v10/social.js';
+import {createHash} from 'node:crypto';
+import {socialGroupForLocale,socialGroups,socialApps} from '../../public/flight-map/v10/social.js';
 import {createSharing} from '../../public/flight-map/v4/sharing.js';
 import {createI18n} from '../../public/flight-map/v4/i18n.js';
 
-test('region is an overridable preference, not the page language or claimed IP location',()=>{
- assert.equal(initialShareRegion(null,'Europe/London','ru'),'world');
- assert.equal(initialShareRegion(null,'Asia/Yekaterinburg','en'),'ru');
- assert.equal(initialShareRegion('world','Europe/Moscow','ru'),'world');
- assert.equal(initialShareRegion('ru','America/New_York','en'),'ru');
- assert.equal(initialShareRegion('invalid','Asia/Tokyo','ru'),'world');
- assert.equal(initialShareRegion(null,null,'ru'),'ru');
- assert.equal(initialShareRegion(null,null,'ar'),'world');
+test('current page language alone selects the social apps for all 12 locales',()=>{
+ assert.equal(socialGroupForLocale('ru'),'ru');
+ for(const locale of ['en','de','fr','es','it','tr','zh','ja','ko','ar','hi'])assert.equal(socialGroupForLocale(locale),'world');
  assert.deepEqual(socialGroups.ru,['telegram','vk','max']);
  assert.deepEqual(socialGroups.world,['instagram','facebook','threads','x','whatsapp']);
  for(const id of [...socialGroups.ru,...socialGroups.world])assert.ok(socialApps[id]?.name);
@@ -35,7 +31,20 @@ test('all twelve languages have matching keys, valid placeholders and honest des
   const messages=JSON.parse(fs.readFileSync(new URL(`../../lib/flight-map/enhancements/${lang}.json`,import.meta.url)));
   const current=Object.keys(messages).sort();if(keys)assert.deepEqual(current,keys);else keys=current;
   const {t}=createI18n(lang,messages);
-  for(const key of ['xShareTo','xShareRegion','xShareRussia','xShareWorld','xShareOther','xShareHint','xShareUnavailable'])assert.ok(t(key).length);
+  for(const key of ['xShareTo','xShareOther','xShareHint','xShareUnavailable'])assert.ok(t(key).length);
   for(const key of ['xShareChoose','xShareSaveFor']){assert.deepEqual(messages[key].match(/\{\w+\}/g),['{app}']);assert.ok(t(key,{app:'Telegram'}).includes('Telegram'));}
  }
+});
+
+test('brand files are local, present and match the reviewed sources',()=>{
+ const manifest=JSON.parse(fs.readFileSync(new URL('../../ops/social-share-20261103/brand-sources.json',import.meta.url)));
+ for(const [id,app] of Object.entries(socialApps)){
+  assert.match(app.src,/^\/flight-map\/brands-v1\/[a-z]+\.webp$/);
+  const bytes=fs.readFileSync(new URL('../../public'+app.src,import.meta.url));
+  assert.equal(createHash('sha256').update(bytes).digest('hex'),manifest.sources[id].sha256);
+  assert.equal(bytes.length,manifest.sources[id].bytes);assert.ok(bytes.length<15000);
+  assert.equal(bytes.subarray(0,4).toString(),'RIFF');
+ }
+ const source=fs.readFileSync(new URL('../../public/flight-map/v9/app.js',import.meta.url),'utf8');
+ assert.doesNotMatch(source,/REGION_KEY|initialShareRegion|data-share-region/);
 });

@@ -9,7 +9,7 @@ import{createMap,distance}from'../v10/map.js';
 import{latestJob}from'../v2/jobs.js';
 import{recentAirports,routePair}from'../v8/entry.js';
 import{createSharing}from'../v4/sharing.js';
-import{REGION_KEY,initialShareRegion,socialGroups,socialApps,moreIcon}from'../v10/social.js';
+import{socialGroupForLocale,socialGroups,socialApps,moreIcon}from'../v10/social.js';
 
 import{createStorage}from'../v10/storage.js';
 import{validateDate,formatHistoryDate}from'../v10/history.js';
@@ -297,7 +297,7 @@ function refreshShare(){shareBlob=null;shareCard=null;shareFile=null;$('#sharePr
  shareJobs.push({flights,kind:shareKind,year:$('#shareYear').value,flightId:$('#shareFlight').value,format:shareFormat,light:shareLight,demo:isDemo,showStats:$('#showStats').checked,showFlags:$('#showFlags').checked});
 }
 listen($('#shareDialog'),'close',()=>{shareJobs.cancel();shareBlob=null;shareCard=null;shareFile=null;if(previewURL){URL.revokeObjectURL(previewURL);previewURL=null;}$('#sharePreview').innerHTML='';});
-function makeShare(kind='map'){$('#sharePreview').classList.remove('is-enlarged');$('#enlargePreview').setAttribute('aria-expanded','false');if(!flights.length){toast(t("m122"));return;}shareKind=kind==='map'&&period?'year':kind;shareLight=document.documentElement.dataset.theme==='light'||(!document.documentElement.dataset.theme&&matchMedia('(prefers-color-scheme: light)').matches);
+function makeShare(kind='map'){if(!$('#socialTargets').children.length)renderShareTargets();$('#sharePreview').classList.remove('is-enlarged');$('#enlargePreview').setAttribute('aria-expanded','false');if(!flights.length){toast(t("m122"));return;}shareKind=kind==='map'&&period?'year':kind;shareLight=document.documentElement.dataset.theme==='light'||(!document.documentElement.dataset.theme&&matchMedia('(prefers-color-scheme: light)').matches);
  const years=[...new Set(flights.map(f=>f.date?.slice(0,4)).filter(Boolean))].sort().reverse();$('#shareYear').innerHTML=years.map(y=>`<option>${y}</option>`).join('');$('[data-share-kind="year"]').disabled=!years.length;if(period&&years.includes(period))$('#shareYear').value=period;
  $('#shareFlight').innerHTML=flights.map(f=>`<option value="${f.id}">${f.from} → ${f.to}${f.date?' · '+f.date:''}</option>`).join('');$('#shareFlight').value=selected??flights[flights.length-1].id;$('#sharePreview').innerHTML='';open($('#shareDialog'),refreshShare);}
 $$('[data-share-kind]').forEach(b=>b.onclick=()=>{shareKind=b.dataset.shareKind;refreshShare();});$$('[data-format]').forEach(b=>b.onclick=()=>{shareFormat=b.dataset.format;refreshShare();});$('#shareYear').onchange=$('#shareFlight').onchange=refreshShare;$('#exportTheme').onclick=()=>{shareLight=!shareLight;refreshShare();};
@@ -306,14 +306,12 @@ $('#download').onclick=()=>{if(!shareBlob)return;const a=document.createElement(
 // Всегда передаём настоящий PNG, не заменяем его ссылкой на пустую карту.
 // Меню открывается синхронно из tap (Safari activation); никакого await
 // перед navigator.share. На неподдерживаемом браузере доступен download.
-let socialRegion;
-try{socialRegion=initialShareRegion(localStorage.getItem(REGION_KEY),Intl.DateTimeFormat().resolvedOptions().timeZone,locale);}catch{socialRegion=initialShareRegion(null,null,locale);}
+const socialGroup=socialGroupForLocale(locale);
 function syncShareTargets(){$$('[data-social],#nativeShare').forEach(b=>b.disabled=!shareFile||sharingBusy);}
 function renderShareTargets(){
  const svg=icon=>`<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">${icon}</svg>`;
- $('#socialTargets').dataset.region=socialRegion;
- $('#socialTargets').innerHTML=socialGroups[socialRegion].map(id=>{const app=socialApps[id];return `<button type="button" class="social-target" data-social="${id}" aria-describedby="socialHint"><span class="social-symbol" style="--social-color:${app.color}">${svg(app.icon)}</span><span dir="ltr">${app.name}</span></button>`;}).join('')+`<button type="button" class="social-target" id="nativeShare" aria-describedby="socialHint"><span class="social-symbol social-other">${svg(moreIcon)}</span><span>${esc(t('xShareOther'))}</span></button>`;
- $$('[data-share-region]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.shareRegion===socialRegion)));
+ $('#socialTargets').dataset.group=socialGroup;
+ $('#socialTargets').innerHTML=socialGroups[socialGroup].map(id=>{const app=socialApps[id];return `<button type="button" class="social-target" data-social="${id}" aria-describedby="socialHint"><span class="social-symbol social-logo"><img src="${app.src}" alt="" width="56" height="56" decoding="async"></span><span dir="ltr">${app.name}</span></button>`;}).join('')+`<button type="button" class="social-target" id="nativeShare" aria-describedby="socialHint"><span class="social-symbol social-other">${svg(moreIcon)}</span><span>${esc(t('xShareOther'))}</span></button>`;
  $$('[data-social]').forEach(b=>b.onclick=()=>sendImage(socialApps[b.dataset.social].name));
  $('#nativeShare').onclick=()=>sendImage();syncShareTargets();
 }
@@ -326,8 +324,7 @@ function sendImage(app){
  try{Promise.resolve(shareImage(navigator,file)).then(()=>{if(current())$('#shareStatus').textContent=t("m124");}).catch(e=>{if(current())$('#shareStatus').textContent=e.name==='AbortError'?t("m125"):t("m126");}).finally(()=>{sharingBusy=false;if(!signal.aborted)syncShareTargets();});}
  catch{sharingBusy=false;syncShareTargets();if(current())$('#shareStatus').textContent=t("m127");}
 }
-$$('[data-share-region]').forEach(b=>b.onclick=()=>{socialRegion=b.dataset.shareRegion;try{localStorage.setItem(REGION_KEY,socialRegion);}catch{}renderShareTargets();});
-renderShareTargets();
+
 $('#serviceLinks').innerHTML=serviceLinks().map(x=>`<a href="${esc(x.url)}" target="_blank" rel="noopener noreferrer">${x.name}</a>`).join('');
 $('#shareService').hidden=typeof navigator.share!=='function';
 $('#shareService').onclick=()=>{try{Promise.resolve(navigator.share({title:t("m128"),text:INVITE,url:SHARE_URL})).catch(e=>{if(!signal.aborted&&e.name!=='AbortError')$('#linkStatus').textContent=t("m129");});}catch{$('#linkStatus').textContent=t("m129");}};
