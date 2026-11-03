@@ -13,3 +13,14 @@ test('SSR boot and React adoption mount once, replay events once and abort on na
 test('unmount before module microtask does not start or report a late session',async()=>{
  let calls=0;const {boot}=createBoot(()=>{calls++;});const a=boot(root());a.dispose();await a.ready;assert.equal(calls,0);
 });
+
+// Сбой каталога после раннего нажатия Add оставлял активную кнопку и скрытый
+// статус. Проверяем реальный boot, а не независимую копию обработчика ошибки.
+test('failed mount exposes recovery and disables the queued add action',async()=>{
+ const status={dataset:{},textContent:'',after(link){this.link=link;}},button={disabled:false,removeAttribute(k){delete this[k];},'aria-busy':'true'};
+ const node={dataset:{mapConfig:JSON.stringify({locale:'ru',messages:{loadError:'Error',retry:'Retry'}})},removeAttribute(){},querySelector:s=>s==='#storageStatus'?status:null,querySelectorAll:()=>[button]};
+ const before=globalThis.document;globalThis.document={createElement:()=>({dataset:{}})};
+ try{const {boot}=createBoot(async()=>{throw Error('catalogue offline');});await boot(node).ready;
+ assert.equal(status.dataset.error,'true');assert.equal(status.textContent,'Error');assert.equal(button.disabled,true);assert.equal(button['aria-busy'],undefined);assert.equal(status.link.href,'/ru/flight-map');
+ }finally{globalThis.document=before;}
+});

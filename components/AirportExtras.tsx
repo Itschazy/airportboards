@@ -132,34 +132,31 @@ export function AboutCard({ text, readMore, readLess }: { text: string; readMore
 }
 
 // ── FAQ accordion (answers stay in the DOM for SEO/schema) ──
-export function Faq({ items }: { items: { q: string; a: string }[] }) {
-  const [open, setOpen] = useState<number | null>(0);
+/** Вопросы раскрываются до гидратации React, в том числе на слабом телефоне.
+ * Геометрия/шрифт сохранены. Ответ и ссылка остаются в SSR, JSON-LD строится
+ * из того же текста в AirportBottom. name группирует вопросы в новых браузерах;
+ * старый Safari разрешает раскрыть несколько, не блокируя чтение справки.
+ */
+export function Faq({ items }: { items: { q: string; a: string; action?: { href: string; label: string } }[] }) {
   return (
     <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
       {items.map((it, i) => (
-        <div key={i} style={{ background: C.card, border: C.border, borderRadius: 16, overflow: 'hidden' }}>
-          {/* Раскрывающийся блок по ARIA APG: без aria-expanded программа чтения не сообщает
-            СОСТОЯНИЕ — человек слышит вопрос, но не знает, раскрыт ли ответ и что кнопка
-            вообще что-то раскрывает. Девять ответов из десяти на странице свёрнуты. */}
-        <button
-          onClick={() => setOpen(open === i ? null : i)}
-          aria-expanded={open === i}
-          aria-controls={`faq-a-${i}`}
-          id={`faq-q-${i}`}
-          style={{
+        <details key={i} name="airport-faq" open={i === 0} className="airport-faq-item" style={{ background: C.card, border: C.border, borderRadius: 16, overflow: 'hidden' }}>
+          <summary style={{
             width: '100%', display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 12,
             padding: '14px 16px', background: 'none', border: 'none', color: 'var(--ab-ffffff)', fontSize: 15, fontWeight: 600,
-            textAlign: 'start', cursor: 'pointer',
+            textAlign: 'start', cursor: 'pointer', listStyle: 'none',
           }}>
             <h3 style={{ margin: 0, fontSize: 15, fontWeight: 600 }}>{it.q}</h3>
-            <svg width="13" height="13" viewBox="0 0 13 13" fill="none" style={{ flexShrink: 0, transform: open === i ? 'rotate(180deg)' : 'none', transition: 'transform 0.2s' }}>
+            <svg className="airport-faq-arrow" width="13" height="13" viewBox="0 0 13 13" fill="none" aria-hidden="true" style={{ flexShrink: 0 }}>
               <path d="M3 5L6.5 8.5L10 5" stroke="var(--ab-8a8a8a)" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" />
             </svg>
-          </button>
-          <p id={`faq-a-${i}`} role="region" aria-labelledby={`faq-q-${i}`} style={{ display: open === i ? 'block' : 'none', margin: 0, padding: '0 16px 16px', fontSize: 14, lineHeight: 1.55, color: C.sub }}>
+          </summary>
+          <p style={{ margin: 0, padding: '0 16px 16px', fontSize: 14, lineHeight: 1.55, color: C.sub }}>
             {it.a}
+            {it.action && <> <a href={it.action.href} style={{ color: C.blue }}>{it.action.label}</a></>}
           </p>
-        </div>
+        </details>
       ))}
     </div>
   );

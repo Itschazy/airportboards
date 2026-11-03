@@ -98,3 +98,20 @@ export function track(goal: Goal, params?: Record<string, string | number | bool
     window.gtag?.('event', goal, params);
   } catch { /* то же */ }
 }
+
+/** Этапы карты измеряем параметрами визита, а не новыми целями или notBounce.
+ * Существующие конверсии не раздуваются фоновыми событиями. В Метрике это
+ * отчёт «Параметры визитов», в GA4 — flight_map_step. Allowlist не пропускает
+ * поисковые фразы, маршруты, даты, имена файлов или тексты исключений.
+ */
+const MAP_STEPS = new Set([
+  'entry', 'loading', 'ready', 'load_error', 'form_open', 'from_selected', 'to_selected',
+  'save_attempt', 'validation_error', 'save_error', 'first_saved', 'new_saved', 'edited',
+  'search_error', 'share_attempt', 'share_resolved', 'share_cancelled', 'share_error', 'download',
+]);
+export function trackMapStep(step: string, locale: string): void {
+  if (typeof window === 'undefined' || !MAP_STEPS.has(step)) return;
+  const release = process.env.NEXT_PUBLIC_RUM_RELEASE || 'unknown';
+  try { if (locale === 'ru') window.ym?.(YM_ID, 'params', { flight_map_steps: { [release]: { [step]: true } } }); } catch {}
+  try { window.gtag?.('event', 'flight_map_step', { step, locale, release }); } catch {}
+}

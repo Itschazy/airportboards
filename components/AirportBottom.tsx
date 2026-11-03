@@ -258,8 +258,15 @@ export async function AirportBottom({ airport, locale, about = null, displayName
   const boardHelp = !noService && !airport.closed
     ? ['missing', 'tomorrow', 'terminal'].map(topic => ({
         q: t(`faq_${topic}_q`, { iata: airport.iata }), a: t(`faq_${topic}_a`),
+        // 03.11: 63% входов по запросам о прилёте приходят не на /arrivals.
+        // В ответе про пропавший рейс даём явный путь на другое направление,
+        // не меняя режим по referrer и не создавая копии существующих страниц.
+        ...(topic === 'missing' ? { action: {
+          href: `/${locale}/airport/${airport.iata}${inbound ? '' : '/arrivals'}`,
+          label: `${tNav(inbound ? 'departures' : 'arrivals')} · ${airport.iata}`,
+        } } : {}),
       })) : [];
-  const faq: { q: string; a: string }[] = [
+  const faq: { q: string; a: string; action?: { href: string; label: string } }[] = [
     ...(inbound && !noService && !airport.closed ? [
       { q: t('faq_meeting_q', { iata: airport.iata }), a: t('faq_meeting_a') },
       ...boardHelp,

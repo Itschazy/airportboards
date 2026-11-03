@@ -20,7 +20,12 @@ export function createBoot(mountMap){
   session.ready=Promise.resolve().then(()=>controller.signal.aborted?undefined:mountMap(root,{locale,messages,signal:controller.signal,track:(...args)=>{if(controller.signal.aborted)return;if(consumer)consumer(...args);else if(queue.length<20)queue.push(args);}})).catch(()=>{
    if(controller.signal.aborted)return;
    root.removeAttribute('aria-busy');
-   const status=root.querySelector('#storageStatus');if(status)status.textContent=String(messages.loadError);
+   // Ошибка после загрузки runtime (например, каталог offline) раньше попадала
+   // в скрытую до первого рейса строку. Ранний Add также оставался активным.
+   // Теперь тот же видимый путь восстановления, что при ошибке самого ESM.
+   root.querySelectorAll('[data-action="add"]').forEach(button=>{button.disabled=true;button.removeAttribute('aria-busy');});
+   const status=root.querySelector('#storageStatus');if(status){status.textContent=String(messages.loadError);status.dataset.error='true';}
+   const args=['progress',{step:'load_error'}];if(consumer)consumer(...args);else queue.push(args);
    const retry=document.createElement('a');retry.href=`/${locale}/flight-map`;retry.dataset.retry='true';retry.textContent=String(messages.retry);status?.after(retry);
   });
   return session;

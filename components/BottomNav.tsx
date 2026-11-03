@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import { trackMapStep } from '@/lib/track';
 import { usePathname } from 'next/navigation';
 import { useEffect, useState } from 'react';
 import { useTranslations } from 'next-intl';
@@ -129,6 +130,7 @@ export function BottomNav({ locale }: { locale: Locale }) {
             появляется после проверки полного инструмента, а не SEO-заглушек.
             Прежние иконки, цвета и поведение соседних разделов сохранены. */}
         <Link href={hrefFor('map', `/${locale}/flight-map`)} prefetch={false}
+          onClick={() => { if (!onMap) trackMapStep('entry', locale); }}
           className={`press bn-item${onMap ? ' bn-item--on' : ''}`} aria-current={isMap ? 'page' : undefined}>
           <svg width="26" height="26" viewBox="0 0 24 24" fill={onMap ? 'currentColor' : 'none'}
             stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">

@@ -167,16 +167,16 @@ function syncDatePrecision(){const precision=$('#datePrecision').value;$('#dayFi
 // HTML max тоже должен разрешать уже сохранённую дату после смены пояса.
 // Новая запись ограничена сегодняшним днём; при каждом открытии обновляем max.
 function resetForm(f=null,from=null){const now=localToday();$('#date').max=f?.date?.length===10&&f.date>now?f.date:now;$('#flightForm').reset();$('.extra-fields').open=false;$('#formError').textContent='';hideSuggestions();setAirport('from',f?.from||from);setAirport('to',f?.to||null);$('#datePrecision').value=f?.date?.length===4?'year':f&&!f.date?'unknown':'day';$('#date').value=f?.date?.length===10?f.date:'';$('#flightYear').value=f?.date?.length===4?f.date:'';syncDatePrecision();$('#addDialog .entry-more').open=false;$('#returnFlight').hidden=$('#nextLeg').hidden=!f;$('#number').value=f?.number||'';$('#saveFlight').textContent=f?t("m101"):t("m015");$('#saveFlight').disabled=false;}
-function openForm(id=null){if(saving)return;if(id===null&&isDemo){syncStored();flights=personal;isDemo=false;selected=null;period='';const url=new URL(location.href);url.searchParams.delete('demo');history.replaceState(history.state,'',url);render();}formRevision++;editing=id;const f=flights.find(f=>f.id===id);resetForm(f);$('#formTitle').textContent=f?(isDemo?t("m102"):t("m103")):t("m015");$('#deleteFlight')?.remove();if(f){const b=document.createElement('button');b.id='deleteFlight';b.type='button';b.textContent=t("m104");b.className='delete-flight';b.onclick=async()=>{if(saving)return;saving=true;try{const saved=f;if(!await applyFlights(flights.filter(x=>x.id!==f.id)))return;const deletedDemo=isDemo;close($('#addDialog'));render();toast(t("m105"));$('#toast').style.pointerEvents='auto';$('#toast').onclick=async()=>{if(isDemo!==deletedDemo)return;if(!await applyFlights([...flights,saved]))return;render();toast(t("m106"));$('#toast').onclick=null;$('#toast').style.pointerEvents='none';};}finally{saving=false;}};$('#flightForm').append(b);}open($('#addDialog'));}
+function openForm(id=null){if(saving)return;track('progress',{step:'form_open'});if(id===null&&isDemo){syncStored();flights=personal;isDemo=false;selected=null;period='';const url=new URL(location.href);url.searchParams.delete('demo');history.replaceState(history.state,'',url);render();}formRevision++;editing=id;const f=flights.find(f=>f.id===id);resetForm(f);$('#formTitle').textContent=f?(isDemo?t("m102"):t("m103")):t("m015");$('#deleteFlight')?.remove();if(f){const b=document.createElement('button');b.id='deleteFlight';b.type='button';b.textContent=t("m104");b.className='delete-flight';b.onclick=async()=>{if(saving)return;saving=true;try{const saved=f;if(!await applyFlights(flights.filter(x=>x.id!==f.id)))return;const deletedDemo=isDemo;close($('#addDialog'));render();toast(t("m105"));$('#toast').style.pointerEvents='auto';$('#toast').onclick=async()=>{if(isDemo!==deletedDemo)return;if(!await applyFlights([...flights,saved]))return;render();toast(t("m106"));$('#toast').onclick=null;$('#toast').style.pointerEvents='none';};}finally{saving=false;}};$('#flightForm').append(b);}open($('#addDialog'));}
 for(const side of ['from','to']){
  const input=$('#'+side),list=$('#'+side+'Results');
  // В покое в поле стоит его название («Откуда»), по фокусу — что именно сюда
  // вводят. Исходные строки берём из разметки: переводов в коде нет.
  const label=input.placeholder,hint=input.dataset.hint||label;
- const choose=code=>{setAirport(side,code);hideSuggestions();if(side==='from')$('#to').focus();else $('#saveFlight').focus();};
+ const choose=code=>{track('progress',{step:side+'_selected'});setAirport(side,code);hideSuggestions();if(side==='from')$('#to').focus();else $('#saveFlight').focus();};
  const show=async()=>{
 
-  hideSuggestions();if(!input.value.trim())return;const revision=suggestionRevision,value=input.value,options={recent:recentAirports(personal),exclude:choice[side==='from'?'to':'from']};
+  hideSuggestions();const revision=suggestionRevision,value=input.value,options={recent:recentAirports(personal),exclude:choice[side==='from'?'to':'from']};
 
   const active=()=>!signal.aborted&&revision===suggestionRevision&&$('#addDialog').open&&document.activeElement===input;
 
@@ -190,7 +190,7 @@ for(const side of ['from','to']){
    // до нового ввода. Проверка исполняет этот обработчик и считает запросы.
    try{rows=await search.query(value,options);}catch{
 
-    if(!active())return;input.removeAttribute('aria-busy');input.setAttribute('aria-expanded','true');list.innerHTML=`<p class="search-empty" role="status">${esc(t('searchLoadError'))}</p><button type="button">${esc(t('retry'))}</button>`;list.querySelector('button').onclick=()=>{input.focus();show();};return;
+    if(!active())return;track('progress',{step:'search_error'});input.removeAttribute('aria-busy');input.setAttribute('aria-expanded','true');list.innerHTML=`<p class="search-empty" role="status">${esc(t('searchLoadError'))}</p><button type="button">${esc(t('retry'))}</button>`;list.querySelector('button').onclick=()=>{input.focus();show();};return;
 
    }
 
@@ -202,8 +202,11 @@ for(const side of ['from','to']){
   list.innerHTML=rows.map(a=>`<button type="button" role="option" aria-selected="false" data-code="${a.code}"><span>${esc(a.city)}${a.name!==a.city?`<small>${esc(a.name)}</small>`:''}</span><b>${a.code}</b></button>`).join('')||`<p class="search-empty">${t("m107")}</p>`;input.setAttribute('aria-expanded','true');revealSuggestions();
   list.querySelectorAll('button').forEach((b,i)=>{b.onclick=()=>choose(b.dataset.code);b.onkeydown=e=>{const bs=[...list.querySelectorAll('button')];if(e.key==='ArrowDown'||e.key==='ArrowUp'){e.preventDefault();bs[(i+(e.key==='ArrowDown'?1:bs.length-1))%bs.length].focus();}if(e.key==='Escape'){e.preventDefault();e.stopPropagation();input.focus();hideSuggestions();}};});
  };
- input.oninput=()=>{choice[side]=null;$('#formError').textContent='';const pair=routePair(input.value,airportCodes);if(pair){setAirport('from',pair.from);setAirport('to',pair.to);hideSuggestions();$('#saveFlight').focus();return;}show();};
- input.onfocus=()=>{input.placeholder=hint;if(!choice[side])return;if(matchMedia('(pointer:fine)').matches)input.select();else input.setSelectionRange(input.value.length,input.value.length);};
+ input.oninput=()=>{choice[side]=null;$('#formError').textContent='';const pair=routePair(input.value,airportCodes);if(pair){track('progress',{step:'from_selected'});track('progress',{step:'to_selected'});setAirport('from',pair.from);setAirport('to',pair.to);hideSuggestions();$('#saveFlight').focus();return;}show();};
+ // Пустое поле сразу предлагает недавние аэропорты/локальный стартовый
+ // набор: первый перелёт можно добавить двумя выборами, без ввода кодов.
+ // Это тот же instant-поиск, без ожидания индекса и без сетевого запроса.
+ input.onfocus=()=>{input.placeholder=hint;if(!choice[side]){show();return;}if(matchMedia('(pointer:fine)').matches)input.select();else input.setSelectionRange(input.value.length,input.value.length);};
 
  input.onblur=()=>{input.placeholder=label;};
 
@@ -214,17 +217,17 @@ for(const side of ['from','to']){
 // composedPath сохраняет исходное поле даже после перерисовки его подсказок.
 listen(root,'click',e=>{const path=e.composedPath();if(path.includes($('#addDialog'))&&!path.some(el=>el.classList?.contains('airport-field')))hideSuggestions();});
 $('.swap').onclick=()=>{const from=choice.from,to=choice.to,fromText=$('#from').value,toText=$('#to').value;choice={from:to,to:from};$('#from').value=toText;$('#to').value=fromText;hideSuggestions();};
-$('#flightForm').onsubmit=async e=>{e.preventDefault();if(saving)return;
+$('#flightForm').onsubmit=async e=>{e.preventDefault();if(saving)return;track('progress',{step:'save_attempt'});
  const date=$('#datePrecision').value==='unknown'?'':$('#datePrecision').value==='year'?$('#flightYear').value.trim():$('#date').value;
- if(!validateDate(date,{today:localToday(),allowFuture:!!editing&&flights.some(f=>f.id===editing&&f.date===date)}).valid){$('#formError').textContent=t('xInvalidDate');return;}
- if(!choice.from||!choice.to){$('#formError').textContent=t(!choice.from&&!choice.to?"m109":!choice.from?"m164":"m165");$('#'+(!choice.from?'from':'to')).focus();return;}
- if(choice.from===choice.to){$('#formError').textContent=t("m110");return;}
- const revision=formRevision,wasNew=editing===null;
+ if(!validateDate(date,{today:localToday(),allowFuture:!!editing&&flights.some(f=>f.id===editing&&f.date===date)}).valid){track('progress',{step:'validation_error'});$('#formError').textContent=t('xInvalidDate');return;}
+ if(!choice.from||!choice.to){track('progress',{step:'validation_error'});$('#formError').textContent=t(!choice.from&&!choice.to?"m109":!choice.from?"m164":"m165");$('#'+(!choice.from?'from':'to')).focus();return;}
+ if(choice.from===choice.to){track('progress',{step:'validation_error'});$('#formError').textContent=t("m110");return;}
+ const revision=formRevision,wasNew=editing===null,wasEmpty=personal.length===0;
  const f={id:editing??(isDemo?'demo_'+newId():newId()),from:choice.from,to:choice.to,date,number:$('#number').value.trim()};
  // Блокировка ставится до await Web Locks: двойной tap не создаёт две записи.
  saving=true;$('#saveFlight').disabled=true;
  try{if(!await applyFlights(wasNew?[...flights,f]:flights.map(x=>x.id===editing?f:x)))return;if(signal.aborted)return;
-  period='';selected=f.id;if(!isDemo)track('saved');render();
+  period='';selected=f.id;if(!isDemo){track('saved');track('progress',{step:wasNew?(wasEmpty?'first_saved':'new_saved'):'edited'});}render();
   if(revision!==formRevision||!$('#addDialog').open)return;
   close($('#addDialog'));toast(wasNew?t("m112"):t("m113"));
  }finally{saving=false;if(!signal.aborted)$('#saveFlight').disabled=false;}
@@ -316,7 +319,7 @@ function makeShare(kind='map'){if(!$('#socialTargets').children.length)renderSha
  const years=[...new Set(flights.map(f=>f.date?.slice(0,4)).filter(Boolean))].sort().reverse();$('#shareYear').innerHTML=years.map(y=>`<option>${y}</option>`).join('');$('[data-share-kind="year"]').disabled=!years.length;if(period&&years.includes(period))$('#shareYear').value=period;
  $('#shareFlight').innerHTML=flights.map(f=>`<option value="${f.id}">${f.from} → ${f.to}${f.date?' · '+f.date:''}</option>`).join('');$('#shareFlight').value=selected??flights[flights.length-1].id;$('#sharePreview').innerHTML='';open($('#shareDialog'),refreshShare);}
 $$('[data-share-kind]').forEach(b=>b.onclick=()=>{shareKind=b.dataset.shareKind;refreshShare();});$$('[data-format]').forEach(b=>b.onclick=()=>{shareFormat=b.dataset.format;refreshShare();});$('#shareYear').onchange=$('#shareFlight').onchange=refreshShare;$('#exportTheme').onclick=()=>{shareLight=!shareLight;refreshShare();};
-$('#download').onclick=()=>{if(!shareBlob)return;const a=document.createElement('a'),u=URL.createObjectURL(shareBlob);a.href=u;a.download=`airportsboard-${shareKind}-${shareFormat}.png`;a.click();setTimeout(()=>URL.revokeObjectURL(u),60000);$('#shareStatus').textContent=t("m123");};
+$('#download').onclick=()=>{if(!shareBlob)return;track('progress',{step:'download'});const a=document.createElement('a'),u=URL.createObjectURL(shareBlob);a.href=u;a.download=`airportsboard-${shareKind}-${shareFormat}.png`;a.click();setTimeout(()=>URL.revokeObjectURL(u),60000);$('#shareStatus').textContent=t("m123");};
 // Иконки подсказывают назначение, но Web Share не умеет выбирать target.
 // Всегда передаём настоящий PNG, не заменяем его ссылкой на пустую карту.
 // Меню открывается синхронно из tap (Safari activation); никакого await
@@ -333,11 +336,11 @@ function renderShareTargets(){
 function sendImage(app){
  if(!shareFile||sharingBusy)return;
  if(!canShareImage(navigator,shareFile)){$('#shareStatus').textContent=app?t('xShareSaveFor',{app}):t('xShareUnavailable');$('#download').focus();return;}
- const file=shareFile;sharingBusy=true;syncShareTargets();
+ track('progress',{step:'share_attempt'});const file=shareFile;sharingBusy=true;syncShareTargets();
  $('#shareStatus').textContent=app?t('xShareChoose',{app}):t('xShareHint');
  const current=()=>!signal.aborted&&shareFile===file&&$('#shareDialog').open;
- try{Promise.resolve(shareImage(navigator,file)).then(()=>{if(current())$('#shareStatus').textContent=t("m124");}).catch(e=>{if(current())$('#shareStatus').textContent=e.name==='AbortError'?t("m125"):t("m126");}).finally(()=>{sharingBusy=false;if(!signal.aborted)syncShareTargets();});}
- catch{sharingBusy=false;syncShareTargets();if(current())$('#shareStatus').textContent=t("m127");}
+ try{Promise.resolve(shareImage(navigator,file)).then(()=>{track('progress',{step:'share_resolved'});if(current())$('#shareStatus').textContent=t("m124");}).catch(e=>{track('progress',{step:e.name==='AbortError'?'share_cancelled':'share_error'});if(current())$('#shareStatus').textContent=e.name==='AbortError'?t("m125"):t("m126");}).finally(()=>{sharingBusy=false;if(!signal.aborted)syncShareTargets();});}
+ catch{track('progress',{step:'share_error'});sharingBusy=false;syncShareTargets();if(current())$('#shareStatus').textContent=t("m127");}
 }
 
 $('#serviceLinks').innerHTML=serviceLinks().map(x=>`<a href="${esc(x.url)}" target="_blank" rel="noopener noreferrer">${x.name}</a>`).join('');
@@ -426,7 +429,7 @@ $('#exportCSV').onclick=async()=>{try{syncStored();if(storageError)throw Error(s
 
 // Import preview and saving share the same validation path, so a corrupt backup
 // cannot silently turn a complete journal into a partial one.
-async function applyFlights(next){try{if(isDemo){flights=next;return true;}if(!store)throw Error(t("m134"));personal=await store.writeAsync(next);flights=personal;storageError='';return !signal.aborted;}catch(e){storageError=e.message;$('#formError').textContent=e.message;$('#restoreError').textContent=e.message;$('#storageStatus').textContent=e.message;toast(e.message);return false;}}
+async function applyFlights(next){try{if(isDemo){flights=next;return true;}if(!store)throw Error(t("m134"));personal=await store.writeAsync(next);flights=personal;storageError='';return !signal.aborted;}catch(e){track('progress',{step:'save_error'});storageError=e.message;$('#formError').textContent=e.message;$('#restoreError').textContent=e.message;$('#storageStatus').textContent=e.message;toast(e.message);return false;}}
 // Закрытие sheet раньше всегда делало render+fit: теряло пользовательский zoom
 // и повторно рисовало SVG после каждого сохранения. Перечитываем хранилище для
 // межвкладочных изменений, но перерисовываем только действительно новые записи.

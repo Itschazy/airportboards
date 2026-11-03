@@ -2,7 +2,7 @@
 
 import { useEffect, useLayoutEffect, useRef } from 'react';
 import { applyInitialMapLayout } from '@/lib/flight-map/layout-hint';
-import { track, GOALS } from '@/lib/track';
+import { track, trackMapStep, GOALS } from '@/lib/track';
 
 /** Сервер отдаёт готовые подписи и FAQ, клиент подключает только журнал.
  * Карта не добавляет свой JS/каталог к табло. Модуль загружается при открытии
@@ -27,6 +27,10 @@ export function FlightMap({ html, locale, messages, runtimeUrl }: { html: string
     // Адрес с отпечатком сборки приходит со страницы: оба обращения к движку
     // должны идти по одному адресу, иначе браузер скачает его дважды.
     const moduleURL = runtimeUrl;
+    // Once per DOM island, also under StrictMode adoption. Captures runtime
+    // download failure separately from a catalogue failure inside boot.
+    if (!root.dataset.loadingTracked) { root.dataset.loadingTracked = 'true'; trackMapStep('loading', locale); }
+    const seenSteps = new Set<string>();
     import(/* webpackIgnore: true */ moduleURL)
       .then(m => {
         // Поздний import старого effect не должен отменять новый effect того же DOM.
@@ -36,18 +40,24 @@ export function FlightMap({ html, locale, messages, runtimeUrl }: { html: string
         active.attachTrack(
           // Явный allowlist: номера, аэропорты, даты, ID и содержимое файлов
           // не попадают в аналитику даже при расширении клиентского модуля.
-          (event: keyof typeof events, data?: Record<string, string>) => {
+          (event: keyof typeof events | 'progress', data?: Record<string, string>) => {
+            if (event === 'progress') {
+              if (data?.step && !seenSteps.has(data.step)) { seenSteps.add(data.step); trackMapStep(data.step, locale); }
+              return;
+            }
+            if (event === 'open') trackMapStep('ready', locale);
             if (!events[event]) return;
             track(events[event], {
               locale, release: process.env.NEXT_PUBLIC_RUM_RELEASE || 'unknown',
               ...(data?.export_kind && ['map', 'year', 'flight'].includes(data.export_kind) ? { export_kind: data.export_kind } : {}),
-              ...(data?.format && ['story', 'square'].includes(data.format) ? { format: data.format } : {}),
+              ...(data?.format && ['story', 'square', 'portrait'].includes(data.format) ? { format: data.format } : {}),
             });
           }
         );
       })
       .catch(() => {
         if (cancelled) return;
+        trackMapStep('load_error', locale);
         root.removeAttribute('aria-busy');
         // Кнопку «Добавить перелёт» runtime включает до загрузки каталога,
         // чтобы она не моргала. Раз загрузка не удалась, открывать нечего —

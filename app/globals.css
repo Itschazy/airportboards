@@ -2381,3 +2381,9 @@ body { padding-bottom: calc(92px + env(safe-area-inset-bottom)); }
   :root:not([data-theme="dark"]) .tv-dark { display: none; }
   :root:not([data-theme="dark"]) .tv-light { display: block; }
 }
+
+/* FAQ остаётся прежним визуально, но раскрывается нативно до загрузки React. */
+.airport-faq-item > summary::-webkit-details-marker { display: none; }
+.airport-faq-arrow { transition: transform 0.2s; }
+.airport-faq-item[open] > summary > .airport-faq-arrow { transform: rotate(180deg); }
+@media (prefers-reduced-motion: reduce) { .airport-faq-arrow { transition: none; } }
