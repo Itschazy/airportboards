@@ -1,0 +1,254 @@
+[
+  {
+    "f": "ar-portrait.png",
+    "width": 1080,
+    "height": 1350,
+    "bytes": 229748,
+    "opaque": true
+  },
+  {
+    "f": "ar-square.png",
+    "width": 1080,
+    "height": 1080,
+    "bytes": 186696,
+    "opaque": true
+  },
+  {
+    "f": "ar-story.png",
+    "width": 1080,
+    "height": 1920,
+    "bytes": 254017,
+    "opaque": true
+  },
+  {
+    "f": "de-portrait.png",
+    "width": 1080,
+    "height": 1350,
+    "bytes": 234806,
+    "opaque": true
+  },
+  {
+    "f": "de-square.png",
+    "width": 1080,
+    "height": 1080,
+    "bytes": 189825,
+    "opaque": true
+  },
+  {
+    "f": "de-story.png",
+    "width": 1080,
+    "height": 1920,
+    "bytes": 259393,
+    "opaque": true
+  },
+  {
+    "f": "en-portrait.png",
+    "width": 1080,
+    "height": 1350,
+    "bytes": 236988,
+    "opaque": true
+  },
+  {
+    "f": "en-square.png",
+    "width": 1080,
+    "height": 1080,
+    "bytes": 191833,
+    "opaque": true
+  },
+  {
+    "f": "en-story.png",
+    "width": 1080,
+    "height": 1920,
+    "bytes": 261112,
+    "opaque": true
+  },
+  {
+    "f": "es-portrait.png",
+    "width": 1080,
+    "height": 1350,
+    "bytes": 241763,
+    "opaque": true
+  },
+  {
+    "f": "es-square.png",
+    "width": 1080,
+    "height": 1080,
+    "bytes": 196558,
+    "opaque": true
+  },
+  {
+    "f": "es-story.png",
+    "width": 1080,
+    "height": 1920,
+    "bytes": 266845,
+    "opaque": true
+  },
+  {
+    "f": "fr-portrait.png",
+    "width": 1080,
+    "height": 1350,
+    "bytes": 240639,
+    "opaque": true
+  },
+  {
+    "f": "fr-square.png",
+    "width": 1080,
+    "height": 1080,
+    "bytes": 195941,
+    "opaque": true
+  },
+  {
+    "f": "fr-story.png",
+    "width": 1080,
+    "height": 1920,
+    "bytes": 265873,
+    "opaque": true
+  },
+  {
+    "f": "hi-portrait.png",
+    "width": 1080,
+    "height": 1350,
+    "bytes": 232957,
+    "opaque": true
+  },
+  {
+    "f": "hi-square.png",
+    "width": 1080,
+    "height": 1080,
+    "bytes": 188667,
+    "opaque": true
+  },
+  {
+    "f": "hi-story.png",
+    "width": 1080,
+    "height": 1920,
+    "bytes": 257197,
+    "opaque": true
+  },
+  {
+    "f": "it-portrait.png",
+    "width": 1080,
+    "height": 1350,
+    "bytes": 238096,
+    "opaque": true
+  },
+  {
+    "f": "it-square.png",
+    "width": 1080,
+    "height": 1080,
+    "bytes": 194450,
+    "opaque": true
+  },
+  {
+    "f": "it-story.png",
+    "width": 1080,
+    "height": 1920,
+    "bytes": 262724,
+    "opaque": true
+  },
+  {
+    "f": "ja-portrait.png",
+    "width": 1080,
+    "height": 1350,
+    "bytes": 253496,
+    "opaque": true
+  },
+  {
+    "f": "ja-square.png",
+    "width": 1080,
+    "height": 1080,
+    "bytes": 204305,
+    "opaque": true
+  },
+  {
+    "f": "ja-story.png",
+    "width": 1080,
+    "height": 1920,
+    "bytes": 277849,
+    "opaque": true
+  },
+  {
+    "f": "ko-portrait.png",
+    "width": 1080,
+    "height": 1350,
+    "bytes": 220902,
+    "opaque": true
+  },
+  {
+    "f": "ko-square.png",
+    "width": 1080,
+    "height": 1080,
+    "bytes": 184882,
+    "opaque": true
+  },
+  {
+    "f": "ko-story.png",
+    "width": 1080,
+    "height": 1920,
+    "bytes": 244068,
+    "opaque": true
+  },
+  {
+    "f": "ru-portrait.png",
+    "width": 1080,
+    "height": 1350,
+    "bytes": 245846,
+    "opaque": true
+  },
+  {
+    "f": "ru-square.png",
+    "width": 1080,
+    "height": 1080,
+    "bytes": 201037,
+    "opaque": true
+  },
+  {
+    "f": "ru-story.png",
+    "width": 1080,
+    "height": 1920,
+    "bytes": 272277,
+    "opaque": true
+  },
+  {
+    "f": "tr-portrait.png",
+    "width": 1080,
+    "height": 1350,
+    "bytes": 234118,
+    "opaque": true
+  },
+  {
+    "f": "tr-square.png",
+    "width": 1080,
+    "height": 1080,
+    "bytes": 188968,
+    "opaque": true
+  },
+  {
+    "f": "tr-story.png",
+    "width": 1080,
+    "height": 1920,
+    "bytes": 258227,
+    "opaque": true
+  },
+  {
+    "f": "zh-portrait.png",
+    "width": 1080,
+    "height": 1350,
+    "bytes": 245462,
+    "opaque": true
+  },
+  {
+    "f": "zh-square.png",
+    "width": 1080,
+    "height": 1080,
+    "bytes": 208996,
+    "opaque": true
+  },
+  {
+    "f": "zh-story.png",
+    "width": 1080,
+    "height": 1920,
+    "bytes": 270439,
+    "opaque": true
+  }
+]

@@ -1,0 +1,62 @@
+[
+  {
+    "label": "Telegram",
+    "png": true,
+    "payload": "text airportsboard-my-flights Формат PNG · 306 КБ",
+    "chooser": true
+  },
+  {
+    "label": "VK",
+    "png": true,
+    "payload": "text airportsboard-my-flights Формат PNG · 306 КБ",
+    "chooser": true
+  },
+  {
+    "label": "MAX",
+    "png": true,
+    "payload": "text airportsboard-my-flights Формат PNG · 306 КБ",
+    "chooser": true
+  },
+  {
+    "label": "Другие",
+    "png": true,
+    "payload": "text airportsboard-my-flights Формат PNG · 306 КБ",
+    "chooser": true
+  },
+  {
+    "label": "Instagram",
+    "png": true,
+    "payload": "text airportsboard-my-flights Формат PNG · 301 КБ",
+    "chooser": true
+  },
+  {
+    "label": "Facebook",
+    "png": true,
+    "payload": "text airportsboard-my-flights Формат PNG · 301 КБ",
+    "chooser": true
+  },
+  {
+    "label": "Threads",
+    "png": true,
+    "payload": "text airportsboard-my-flights Формат PNG · 301 КБ",
+    "chooser": true
+  },
+  {
+    "label": "X",
+    "png": true,
+    "payload": "text airportsboard-my-flights Формат PNG · 301 КБ",
+    "chooser": true
+  },
+  {
+    "label": "WhatsApp",
+    "png": true,
+    "payload": "text airportsboard-my-flights Формат PNG · 301 КБ",
+    "chooser": true
+  },
+  {
+    "label": "More",
+    "png": true,
+    "payload": "text airportsboard-my-flights Формат PNG · 301 КБ",
+    "chooser": true
+  }
+]

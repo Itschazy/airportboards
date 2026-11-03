@@ -1,0 +1,332 @@
+[
+  {
+    "lang": "en",
+    "format": "story",
+    "buttonsEnabled": true,
+    "caption": "My flight map: 6 flights, 5 countries on the map, approximately 18,578 km.\nhttps://airportsboard.live/en/flight-map\nExample map.",
+    "clientWidth": 375,
+    "h": 1920,
+    "scrollWidth": 375,
+    "w": 1080
+  },
+  {
+    "lang": "en",
+    "format": "square",
+    "buttonsEnabled": true,
+    "caption": "My flight map: 6 flights, 5 countries on the map, approximately 18,578 km.\nhttps://airportsboard.live/en/flight-map\nExample map.",
+    "clientWidth": 375,
+    "h": 1080,
+    "scrollWidth": 375,
+    "w": 1080
+  },
+  {
+    "lang": "en",
+    "format": "portrait",
+    "buttonsEnabled": true,
+    "caption": "My flight map: 6 flights, 5 countries on the map, approximately 18,578 km.\nhttps://airportsboard.live/en/flight-map\nExample map.",
+    "clientWidth": 375,
+    "h": 1350,
+    "scrollWidth": 375,
+    "w": 1080
+  },
+  {
+    "lang": "de",
+    "format": "story",
+    "buttonsEnabled": true,
+    "caption": "Meine Flugkarte: 6 Flüge, 5 Länder auf der Karte, ungefähr 18.578 km.\nhttps://airportsboard.live/de/flight-map\nBeispielkarte.",
+    "clientWidth": 375,
+    "h": 1920,
+    "scrollWidth": 375,
+    "w": 1080
+  },
+  {
+    "lang": "de",
+    "format": "square",
+    "buttonsEnabled": true,
+    "caption": "Meine Flugkarte: 6 Flüge, 5 Länder auf der Karte, ungefähr 18.578 km.\nhttps://airportsboard.live/de/flight-map\nBeispielkarte.",
+    "clientWidth": 375,
+    "h": 1080,
+    "scrollWidth": 375,
+    "w": 1080
+  },
+  {
+    "lang": "de",
+    "format": "portrait",
+    "buttonsEnabled": true,
+    "caption": "Meine Flugkarte: 6 Flüge, 5 Länder auf der Karte, ungefähr 18.578 km.\nhttps://airportsboard.live/de/flight-map\nBeispielkarte.",
+    "clientWidth": 375,
+    "h": 1350,
+    "scrollWidth": 375,
+    "w": 1080
+  },
+  {
+    "lang": "fr",
+    "format": "story",
+    "buttonsEnabled": true,
+    "caption": "Ma carte de vols : 6 vols, 5 pays sur la carte, environ 18 578 km.\nhttps://airportsboard.live/fr/flight-map\nCarte d’exemple.",
+    "clientWidth": 375,
+    "h": 1920,
+    "scrollWidth": 375,
+    "w": 1080
+  },
+  {
+    "lang": "fr",
+    "format": "square",
+    "buttonsEnabled": true,
+    "caption": "Ma carte de vols : 6 vols, 5 pays sur la carte, environ 18 578 km.\nhttps://airportsboard.live/fr/flight-map\nCarte d’exemple.",
+    "clientWidth": 375,
+    "h": 1080,
+    "scrollWidth": 375,
+    "w": 1080
+  },
+  {
+    "lang": "fr",
+    "format": "portrait",
+    "buttonsEnabled": true,
+    "caption": "Ma carte de vols : 6 vols, 5 pays sur la carte, environ 18 578 km.\nhttps://airportsboard.live/fr/flight-map\nCarte d’exemple.",
+    "clientWidth": 375,
+    "h": 1350,
+    "scrollWidth": 375,
+    "w": 1080
+  },
+  {
+    "lang": "es",
+    "format": "story",
+    "buttonsEnabled": true,
+    "caption": "Mi mapa de vuelos: 6 vuelos, 5 países en el mapa, aproximadamente 18.578 km.\nhttps://airportsboard.live/es/flight-map\nMapa de ejemplo.",
+    "clientWidth": 375,
+    "h": 1920,
+    "scrollWidth": 375,
+    "w": 1080
+  },
+  {
+    "lang": "es",
+    "format": "square",
+    "buttonsEnabled": true,
+    "caption": "Mi mapa de vuelos: 6 vuelos, 5 países en el mapa, aproximadamente 18.578 km.\nhttps://airportsboard.live/es/flight-map\nMapa de ejemplo.",
+    "clientWidth": 375,
+    "h": 1080,
+    "scrollWidth": 375,
+    "w": 1080
+  },
+  {
+    "lang": "es",
+    "format": "portrait",
+    "buttonsEnabled": true,
+    "caption": "Mi mapa de vuelos: 6 vuelos, 5 países en el mapa, aproximadamente 18.578 km.\nhttps://airportsboard.live/es/flight-map\nMapa de ejemplo.",
+    "clientWidth": 375,
+    "h": 1350,
+    "scrollWidth": 375,
+    "w": 1080
+  },
+  {
+    "lang": "it",
+    "format": "story",
+    "buttonsEnabled": true,
+    "caption": "La mia mappa dei voli: 6 voli, 5 paesi sulla mappa, circa 18.578 km.\nhttps://airportsboard.live/it/flight-map\nMappa di esempio.",
+    "clientWidth": 375,
+    "h": 1920,
+    "scrollWidth": 375,
+    "w": 1080
+  },
+  {
+    "lang": "it",
+    "format": "square",
+    "buttonsEnabled": true,
+    "caption": "La mia mappa dei voli: 6 voli, 5 paesi sulla mappa, circa 18.578 km.\nhttps://airportsboard.live/it/flight-map\nMappa di esempio.",
+    "clientWidth": 375,
+    "h": 1080,
+    "scrollWidth": 375,
+    "w": 1080
+  },
+  {
+    "lang": "it",
+    "format": "portrait",
+    "buttonsEnabled": true,
+    "caption": "La mia mappa dei voli: 6 voli, 5 paesi sulla mappa, circa 18.578 km.\nhttps://airportsboard.live/it/flight-map\nMappa di esempio.",
+    "clientWidth": 375,
+    "h": 1350,
+    "scrollWidth": 375,
+    "w": 1080
+  },
+  {
+    "lang": "tr",
+    "format": "story",
+    "buttonsEnabled": true,
+    "caption": "Uçuş haritam: 6 uçuş, haritada 5 ülke, yaklaşık 18.578 km.\nhttps://airportsboard.live/tr/flight-map\nÖrnek harita.",
+    "clientWidth": 375,
+    "h": 1920,
+    "scrollWidth": 375,
+    "w": 1080
+  },
+  {
+    "lang": "tr",
+    "format": "square",
+    "buttonsEnabled": true,
+    "caption": "Uçuş haritam: 6 uçuş, haritada 5 ülke, yaklaşık 18.578 km.\nhttps://airportsboard.live/tr/flight-map\nÖrnek harita.",
+    "clientWidth": 375,
+    "h": 1080,
+    "scrollWidth": 375,
+    "w": 1080
+  },
+  {
+    "lang": "tr",
+    "format": "portrait",
+    "buttonsEnabled": true,
+    "caption": "Uçuş haritam: 6 uçuş, haritada 5 ülke, yaklaşık 18.578 km.\nhttps://airportsboard.live/tr/flight-map\nÖrnek harita.",
+    "clientWidth": 375,
+    "h": 1350,
+    "scrollWidth": 375,
+    "w": 1080
+  },
+  {
+    "lang": "zh",
+    "format": "story",
+    "buttonsEnabled": true,
+    "caption": "我的飞行地图：6 次飞行，地图上有 5 个国家，约 18,578 公里。\nhttps://airportsboard.live/zh/flight-map\n示例地图。",
+    "clientWidth": 375,
+    "h": 1920,
+    "scrollWidth": 375,
+    "w": 1080
+  },
+  {
+    "lang": "zh",
+    "format": "square",
+    "buttonsEnabled": true,
+    "caption": "我的飞行地图：6 次飞行，地图上有 5 个国家，约 18,578 公里。\nhttps://airportsboard.live/zh/flight-map\n示例地图。",
+    "clientWidth": 375,
+    "h": 1080,
+    "scrollWidth": 375,
+    "w": 1080
+  },
+  {
+    "lang": "zh",
+    "format": "portrait",
+    "buttonsEnabled": true,
+    "caption": "我的飞行地图：6 次飞行，地图上有 5 个国家，约 18,578 公里。\nhttps://airportsboard.live/zh/flight-map\n示例地图。",
+    "clientWidth": 375,
+    "h": 1350,
+    "scrollWidth": 375,
+    "w": 1080
+  },
+  {
+    "lang": "ja",
+    "format": "story",
+    "buttonsEnabled": true,
+    "caption": "自分のフライトマップ：フライト6回、地図上の国5か国、約18,578 km。\nhttps://airportsboard.live/ja/flight-map\nサンプルマップ。",
+    "clientWidth": 375,
+    "h": 1920,
+    "scrollWidth": 375,
+    "w": 1080
+  },
+  {
+    "lang": "ja",
+    "format": "square",
+    "buttonsEnabled": true,
+    "caption": "自分のフライトマップ：フライト6回、地図上の国5か国、約18,578 km。\nhttps://airportsboard.live/ja/flight-map\nサンプルマップ。",
+    "clientWidth": 375,
+    "h": 1080,
+    "scrollWidth": 375,
+    "w": 1080
+  },
+  {
+    "lang": "ja",
+    "format": "portrait",
+    "buttonsEnabled": true,
+    "caption": "自分のフライトマップ：フライト6回、地図上の国5か国、約18,578 km。\nhttps://airportsboard.live/ja/flight-map\nサンプルマップ。",
+    "clientWidth": 375,
+    "h": 1350,
+    "scrollWidth": 375,
+    "w": 1080
+  },
+  {
+    "lang": "ko",
+    "format": "story",
+    "buttonsEnabled": true,
+    "caption": "나의 비행 지도: 비행 6회, 지도에 5개국, 약 18,578 km.\nhttps://airportsboard.live/ko/flight-map\n예시 지도입니다.",
+    "clientWidth": 375,
+    "h": 1920,
+    "scrollWidth": 375,
+    "w": 1080
+  },
+  {
+    "lang": "ko",
+    "format": "square",
+    "buttonsEnabled": true,
+    "caption": "나의 비행 지도: 비행 6회, 지도에 5개국, 약 18,578 km.\nhttps://airportsboard.live/ko/flight-map\n예시 지도입니다.",
+    "clientWidth": 375,
+    "h": 1080,
+    "scrollWidth": 375,
+    "w": 1080
+  },
+  {
+    "lang": "ko",
+    "format": "portrait",
+    "buttonsEnabled": true,
+    "caption": "나의 비행 지도: 비행 6회, 지도에 5개국, 약 18,578 km.\nhttps://airportsboard.live/ko/flight-map\n예시 지도입니다.",
+    "clientWidth": 375,
+    "h": 1350,
+    "scrollWidth": 375,
+    "w": 1080
+  },
+  {
+    "lang": "ar",
+    "format": "story",
+    "buttonsEnabled": true,
+    "caption": "خريطة رحلاتي: الرحلات: 6، دول على الخريطة: 5، نحو 18,578 كم.\nhttps://airportsboard.live/ar/flight-map\nخريطة تجريبية.",
+    "clientWidth": 375,
+    "h": 1920,
+    "scrollWidth": 375,
+    "w": 1080
+  },
+  {
+    "lang": "ar",
+    "format": "square",
+    "buttonsEnabled": true,
+    "caption": "خريطة رحلاتي: الرحلات: 6، دول على الخريطة: 5، نحو 18,578 كم.\nhttps://airportsboard.live/ar/flight-map\nخريطة تجريبية.",
+    "clientWidth": 375,
+    "h": 1080,
+    "scrollWidth": 375,
+    "w": 1080
+  },
+  {
+    "lang": "ar",
+    "format": "portrait",
+    "buttonsEnabled": true,
+    "caption": "خريطة رحلاتي: الرحلات: 6، دول على الخريطة: 5، نحو 18,578 كم.\nhttps://airportsboard.live/ar/flight-map\nخريطة تجريبية.",
+    "clientWidth": 375,
+    "h": 1350,
+    "scrollWidth": 375,
+    "w": 1080
+  },
+  {
+    "lang": "hi",
+    "format": "story",
+    "buttonsEnabled": true,
+    "caption": "मेरी उड़ानों का नक्शा: 6 उड़ानें, नक्शे पर 5 देश, लगभग 18,578 किमी।\nhttps://airportsboard.live/hi/flight-map\nउदाहरण नक्शा।",
+    "clientWidth": 375,
+    "h": 1920,
+    "scrollWidth": 375,
+    "w": 1080
+  },
+  {
+    "lang": "hi",
+    "format": "square",
+    "buttonsEnabled": true,
+    "caption": "मेरी उड़ानों का नक्शा: 6 उड़ानें, नक्शे पर 5 देश, लगभग 18,578 किमी।\nhttps://airportsboard.live/hi/flight-map\nउदाहरण नक्शा।",
+    "clientWidth": 375,
+    "h": 1080,
+    "scrollWidth": 375,
+    "w": 1080
+  },
+  {
+    "lang": "hi",
+    "format": "portrait",
+    "buttonsEnabled": true,
+    "caption": "मेरी उड़ानों का नक्शा: 6 उड़ानें, नक्शे पर 5 देश, लगभग 18,578 किमी।\nhttps://airportsboard.live/hi/flight-map\nउदाहरण नक्शा।",
+    "clientWidth": 375,
+    "h": 1350,
+    "scrollWidth": 375,
+    "w": 1080
+  }
+]
