@@ -1,0 +1,23 @@
+[
+  {
+    "flights": 100,
+    "fitMs": 5.5,
+    "bodyMs": 22.8,
+    "bytes": 657687,
+    "nodes": 729
+  },
+  {
+    "flights": 1000,
+    "fitMs": 25.5,
+    "bodyMs": 54.1,
+    "bytes": 3005255,
+    "nodes": 7027
+  },
+  {
+    "flights": 4999,
+    "fitMs": 62.8,
+    "bodyMs": 247.4,
+    "bytes": 13155896,
+    "nodes": 29518
+  }
+]
