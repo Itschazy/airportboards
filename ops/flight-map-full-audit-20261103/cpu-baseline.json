@@ -1,0 +1,95 @@
+{
+  "kind": "Node CPU only; no network, DOM or LCP",
+  "map": [
+    {
+      "count": 6,
+      "fitMs": 0.247792000000004,
+      "bodyMs": 1.0377499999999955,
+      "bytes": 409675,
+      "nodes": 60
+    },
+    {
+      "count": 100,
+      "fitMs": 2.144874999999999,
+      "bodyMs": 3.4730829999999955,
+      "bytes": 648890,
+      "nodes": 638
+    },
+    {
+      "count": 1000,
+      "fitMs": 8.349292000000005,
+      "bodyMs": 25.765417,
+      "bytes": 2911405,
+      "nodes": 6040
+    },
+    {
+      "count": 4999,
+      "fitMs": 41.03108400000008,
+      "bodyMs": 122.10783300000003,
+      "bytes": 12966571,
+      "nodes": 30032
+    }
+  ],
+  "search": [
+    {
+      "locale": "ru",
+      "prepareMs": 25.548541,
+      "queryMedianMs": 0.46012499999994816
+    },
+    {
+      "locale": "en",
+      "prepareMs": 7.4688750000000255,
+      "queryMedianMs": 0.50100000000009
+    },
+    {
+      "locale": "de",
+      "prepareMs": 7.487250000000017,
+      "queryMedianMs": 0.43604199999992943
+    },
+    {
+      "locale": "fr",
+      "prepareMs": 6.251790999999912,
+      "queryMedianMs": 0.4415000000000191
+    },
+    {
+      "locale": "es",
+      "prepareMs": 5.992250000000013,
+      "queryMedianMs": 0.4345409999999674
+    },
+    {
+      "locale": "it",
+      "prepareMs": 5.659334000000058,
+      "queryMedianMs": 0.43966599999998834
+    },
+    {
+      "locale": "tr",
+      "prepareMs": 5.769374999999968,
+      "queryMedianMs": 0.44029199999999946
+    },
+    {
+      "locale": "zh",
+      "prepareMs": 7.035708,
+      "queryMedianMs": 0.5786659999999983
+    },
+    {
+      "locale": "ja",
+      "prepareMs": 8.232582999999977,
+      "queryMedianMs": 0.5232080000000678
+    },
+    {
+      "locale": "ko",
+      "prepareMs": 8.810541000000057,
+      "queryMedianMs": 0.4836670000000822
+    },
+    {
+      "locale": "ar",
+      "prepareMs": 8.292083000000048,
+      "queryMedianMs": 0.4995840000000271
+    },
+    {
+      "locale": "hi",
+      "prepareMs": 8.738375000000019,
+      "queryMedianMs": 0.5030839999999444
+    }
+  ]
+}

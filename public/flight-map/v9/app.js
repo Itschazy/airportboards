@@ -12,7 +12,7 @@ import{createSharing}from'../v4/sharing.js';
 import{socialGroupForLocale,socialGroups,socialApps,moreIcon}from'../v10/social.js';
 
 import{createStorage}from'../v10/storage.js';
-import{validateDate,formatHistoryDate}from'../v10/history.js';
+import{validateDate,formatHistoryDate,localToday}from'../v10/history.js';
 import{createI18n}from'../v4/i18n.js';
 // DOM остров принадлежит только карте: Next монтирует/размонтирует оболочку,
 // а обработчики, запросы и таймеры живут до abort. Повторный переход через
@@ -86,7 +86,14 @@ function drawFull(){const fs=visible(),wrap=$('#fullMapCanvas'),frame=mapFrame(m
 
 function fitStats(){for(const b of $$('#stats .stat b')){b.style.fontSize='';const available=b.parentElement.clientWidth-8, width=b.getBoundingClientRect().width;if(width>available&&available>0)b.style.fontSize=Math.max(14,Math.floor(parseFloat(getComputedStyle(b).fontSize)*available/width))+'px';}}
 
-function render(reset=true){if(reset)journalLimit=50;$('#storageStatus').textContent=storageError;$('#storageStatus').classList.toggle('storage-error',!!storageError);const stats=totals();$('.atlas').classList.toggle('is-empty',stats.flights===0);if(reset||!box)fit();map();$('#stats').innerHTML=`<div class="stat"><b>${stats.flights}</b><span>${statLabel('flights',stats.flights)}</span></div><div class="stat"><b>${stats.countries}</b><span>${statLabel('countries',stats.countries)}</span></div><div class="stat"><b>${fmt(stats.km)}</b><span>${t("m088")}</span></div>`;
+function render(reset=true){
+ // Удаление последнего перелёта года раньше рисовало пустую историю до reload:
+ // period сбрасывался лишь при закрытии sheet, уже после render. Нормализуем
+ // фильтр ДО totals/map; при исчезнувшем периоде сбрасываем и старый масштаб.
+ // Проверяется активным render в audit-regressions и удалением через UI.
+ if(period&&!flights.some(f=>f.date?.startsWith(period))){period='';box=null;fullBox=null;}
+ if(selected&&!visible().some(f=>f.id===selected))selected=null;
+ if(reset)journalLimit=50;$('#storageStatus').textContent=storageError;$('#storageStatus').classList.toggle('storage-error',!!storageError);const stats=totals();$('.atlas').classList.toggle('is-empty',stats.flights===0);if(reset||!box)fit();map();$('#stats').innerHTML=`<div class="stat"><b>${stats.flights}</b><span>${statLabel('flights',stats.flights)}</span></div><div class="stat"><b>${stats.countries}</b><span>${statLabel('countries',stats.countries)}</span></div><div class="stat"><b>${fmt(stats.km)}</b><span>${t("m088")}</span></div>`;
 
  fitStats();
  const years=[...new Set(flights.map(f=>f.date?.slice(0,4)).filter(Boolean))].sort().reverse();const periods=[['',t("m007")],...years.map(y=>[y,y])];$('#periodValue').textContent=(periods.find(([v])=>v===period)??periods[0])[1];$('#periodList').innerHTML=periods.map(([v,l])=>`<li><button type="button" class="period-item${v===period?' is-on':''}" aria-current="${v===period}" data-period="${esc(v)}">${esc(l)}</button></li>`).join('');$('#periodList').querySelectorAll('button').forEach(b=>b.onclick=()=>{period=b.dataset.period;selected=null;fullBox=null;$('#periodMenu').open=false;render();});
@@ -98,8 +105,12 @@ function render(reset=true){if(reset)journalLimit=50;$('#storageStatus').textCon
 function renderJournal(){
  // Поиск относится только к журналу: карта и экспорт сохраняют выбранный период.
  const query=$('#historyQuery').value.trim().toLocaleLowerCase(locale);
+ // Номер на билете бывает «TK 476», а вводят «tk476». Пробелы/регистр не
+ // меняют его смысл. IATA сравниваем независимо от турецкого lowercase I→ı;
+ // названия городов по-прежнему используют правила текущего языка.
+ const compact=query.replace(/\s+/g,'').toUpperCase();
  $('#journalSearch').hidden=flights.length<20&&!query;
- const results=visible().filter(f=>!query||[f.from,f.to,f.number,airport[f.from].city,airport[f.to].city,airport[f.from].name||'',airport[f.to].name||''].some(v=>v.toLocaleLowerCase(locale).includes(query))).sort((a,b)=>(b.date||'').localeCompare(a.date||''));
+ const results=visible().filter(f=>!query||[f.from,f.to,f.number].some(v=>v.replace(/\s+/g,'').toUpperCase().includes(compact))||[airport[f.from].city,airport[f.to].city,airport[f.from].name||'',airport[f.to].name||''].some(v=>v.toLocaleLowerCase(locale).includes(query))).sort((a,b)=>(b.date||'').localeCompare(a.date||''));
  $('#flightList').innerHTML=results.slice(0,journalLimit).map(f=>`<article class="flight${selected===f.id?' selected':''}" tabindex="0" role="button" aria-label="${esc(airport[f.from].city+' — '+airport[f.to].city)}" data-id="${f.id}"><div class="flight-top"><span>${f.date?formatHistoryDate(f.date,locale):t("m094")}${f.number?' · '+esc(f.number):''}</span><button aria-label="${esc(t("m095",{p5:f.from+' — '+f.to}))}" data-edit="${f.id}">···</button></div><div class="route"><div><strong>${f.from}</strong><small>${esc(airport[f.from].city)}</small></div><div class="route-line"><span>✈</span></div><div><strong>${f.to}</strong><small>${esc(airport[f.to].city)}</small></div></div></article>`).join('')||`<div class="empty-list">${query?t("xNoMatches"):t("m097")}</div>`;
  $('#flightList').querySelectorAll('[data-id]').forEach(el=>{const choose=()=>{selected=el.dataset.id;render(false);$('.atlas').scrollIntoView({behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth',block:'start'});};el.onclick=e=>{if(!e.target.closest('[data-edit]'))choose();};el.onkeydown=e=>{if((e.key==='Enter'||e.key===' ')&&!e.target.closest('[data-edit]')){e.preventDefault();choose();}};});
  // Журнал раскрывается порциями: 5000 записей не создают сразу 50 000 DOM-узлов.
@@ -153,7 +164,9 @@ function setAirport(side,code){choice[side]=code;const a=airport[code];$('#'+sid
 // введённые дату и номер; теперь их видно только после раскрытия — зато окно
 // правки открывается тем же коротким видом, что и окно добавления.
 function syncDatePrecision(){const precision=$('#datePrecision').value;$('#dayField').hidden=precision!=='day';$('#yearField').hidden=precision!=='year';precisionSelect.sync();}
-function resetForm(f=null,from=null){$('#flightForm').reset();$('.extra-fields').open=false;$('#formError').textContent='';hideSuggestions();setAirport('from',f?.from||from);setAirport('to',f?.to||null);$('#datePrecision').value=f?.date?.length===4?'year':f&&!f.date?'unknown':'day';$('#date').value=f?.date?.length===10?f.date:'';$('#flightYear').value=f?.date?.length===4?f.date:'';syncDatePrecision();$('#addDialog .entry-more').open=false;$('#returnFlight').hidden=$('#nextLeg').hidden=!f;$('#number').value=f?.number||'';$('#saveFlight').textContent=f?t("m101"):t("m015");$('#saveFlight').disabled=false;}
+// HTML max тоже должен разрешать уже сохранённую дату после смены пояса.
+// Новая запись ограничена сегодняшним днём; при каждом открытии обновляем max.
+function resetForm(f=null,from=null){const now=localToday();$('#date').max=f?.date?.length===10&&f.date>now?f.date:now;$('#flightForm').reset();$('.extra-fields').open=false;$('#formError').textContent='';hideSuggestions();setAirport('from',f?.from||from);setAirport('to',f?.to||null);$('#datePrecision').value=f?.date?.length===4?'year':f&&!f.date?'unknown':'day';$('#date').value=f?.date?.length===10?f.date:'';$('#flightYear').value=f?.date?.length===4?f.date:'';syncDatePrecision();$('#addDialog .entry-more').open=false;$('#returnFlight').hidden=$('#nextLeg').hidden=!f;$('#number').value=f?.number||'';$('#saveFlight').textContent=f?t("m101"):t("m015");$('#saveFlight').disabled=false;}
 function openForm(id=null){if(saving)return;if(id===null&&isDemo){syncStored();flights=personal;isDemo=false;selected=null;period='';const url=new URL(location.href);url.searchParams.delete('demo');history.replaceState(history.state,'',url);render();}formRevision++;editing=id;const f=flights.find(f=>f.id===id);resetForm(f);$('#formTitle').textContent=f?(isDemo?t("m102"):t("m103")):t("m015");$('#deleteFlight')?.remove();if(f){const b=document.createElement('button');b.id='deleteFlight';b.type='button';b.textContent=t("m104");b.className='delete-flight';b.onclick=async()=>{if(saving)return;saving=true;try{const saved=f;if(!await applyFlights(flights.filter(x=>x.id!==f.id)))return;const deletedDemo=isDemo;close($('#addDialog'));render();toast(t("m105"));$('#toast').style.pointerEvents='auto';$('#toast').onclick=async()=>{if(isDemo!==deletedDemo)return;if(!await applyFlights([...flights,saved]))return;render();toast(t("m106"));$('#toast').onclick=null;$('#toast').style.pointerEvents='none';};}finally{saving=false;}};$('#flightForm').append(b);}open($('#addDialog'));}
 for(const side of ['from','to']){
  const input=$('#'+side),list=$('#'+side+'Results');
@@ -173,9 +186,11 @@ for(const side of ['from','to']){
 
    {list.innerHTML=`<p class="search-empty" role="status">${esc(t('searchLoading'))}</p>`;input.setAttribute('aria-expanded','true');input.setAttribute('aria-busy','true');revealSuggestions();}
 
+   // Retry должен повторить запрос: один focus раньше оставлял ошибку навсегда
+   // до нового ввода. Проверка исполняет этот обработчик и считает запросы.
    try{rows=await search.query(value,options);}catch{
 
-    if(!active())return;input.removeAttribute('aria-busy');input.setAttribute('aria-expanded','true');list.innerHTML=`<p class="search-empty" role="status">${esc(t('searchLoadError'))}</p><button type="button">${esc(t('retry'))}</button>`;list.querySelector('button').onclick=()=>{input.focus();};return;
+    if(!active())return;input.removeAttribute('aria-busy');input.setAttribute('aria-expanded','true');list.innerHTML=`<p class="search-empty" role="status">${esc(t('searchLoadError'))}</p><button type="button">${esc(t('retry'))}</button>`;list.querySelector('button').onclick=()=>{input.focus();show();};return;
 
    }
 
@@ -201,7 +216,7 @@ listen(root,'click',e=>{const path=e.composedPath();if(path.includes($('#addDial
 $('.swap').onclick=()=>{const from=choice.from,to=choice.to,fromText=$('#from').value,toText=$('#to').value;choice={from:to,to:from};$('#from').value=toText;$('#to').value=fromText;hideSuggestions();};
 $('#flightForm').onsubmit=async e=>{e.preventDefault();if(saving)return;
  const date=$('#datePrecision').value==='unknown'?'':$('#datePrecision').value==='year'?$('#flightYear').value.trim():$('#date').value;
- if(!validateDate(date,{today:todayString}).valid){$('#formError').textContent=t('xInvalidDate');return;}
+ if(!validateDate(date,{today:localToday(),allowFuture:!!editing&&flights.some(f=>f.id===editing&&f.date===date)}).valid){$('#formError').textContent=t('xInvalidDate');return;}
  if(!choice.from||!choice.to){$('#formError').textContent=t(!choice.from&&!choice.to?"m109":!choice.from?"m164":"m165");$('#'+(!choice.from?'from':'to')).focus();return;}
  if(choice.from===choice.to){$('#formError').textContent=t("m110");return;}
  const revision=formRevision,wasNew=editing===null;
@@ -415,7 +430,7 @@ async function applyFlights(next){try{if(isDemo){flights=next;return true;}if(!s
 // Закрытие sheet раньше всегда делало render+fit: теряло пользовательский zoom
 // и повторно рисовало SVG после каждого сохранения. Перечитываем хранилище для
 // межвкладочных изменений, но перерисовываем только действительно новые записи.
-function syncStored(){if(!store||signal.aborted)return;try{const next=store.read(),changed=!sameFlights(personal,next),hadError=!!storageError;personal=next;if(!isDemo)flights=personal;storageError='';if(period&&!flights.some(f=>f.date.startsWith(period)))period='';if(changed||hadError)render();}catch(e){storageError=e.message;$('#storageStatus').textContent=e.message;}}
+function syncStored(){if(!store||signal.aborted)return;try{const next=store.read(),changed=!sameFlights(personal,next),hadError=!!storageError;personal=next;if(!isDemo)flights=personal;storageError='';if(changed||hadError||(period&&!flights.some(f=>f.date?.startsWith(period))))render();}catch(e){storageError=e.message;$('#storageStatus').textContent=e.message;}}
 listen(window,'storage',e=>{if(e.key!==KEY&&e.key!==null)return;if($('dialog[open]'))return;syncStored();});
 function downloadText(text,name,type='application/json'){const a=document.createElement('a'),u=URL.createObjectURL(new Blob([text],{type}));a.href=u;a.download=name;a.click();setTimeout(()=>URL.revokeObjectURL(u),60000);}
 $('#backup').onclick=()=>{syncStored();if(storageError){try{const raw=localStorage.getItem(KEY);if(raw!==null)downloadText(raw,'airportsboard-unreadable-original.json');else toast(storageError);}catch{toast(storageError);}return;}track('backup');downloadText(backup(personal),'airportsboard-backup-'+todayString+'.json');$('#backupStatus').textContent=t("m135");};

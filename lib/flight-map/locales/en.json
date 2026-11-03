@@ -101,7 +101,7 @@
   "m123": "PNG sent to the browser for saving.",
   "m124": "Image passed to the selected app.",
   "m125": "Sharing cancelled. The image is ready to save.",
-  "m126": "The app didn't accept the image. Save the PNG and attach it manually.",
+  "m126": "Could not share the image. Save the PNG and attach it manually.",
   "m127": "Couldn't open the share menu. Save the PNG and attach it manually.",
   "m128": "Flight map — AirportsBoard",
   "m129": "Copy the link and send it in your app.",

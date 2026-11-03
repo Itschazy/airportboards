@@ -1,0 +1,390 @@
+[
+  {
+    "locale": "ru",
+    "closeVisible": true,
+    "preview": "Готовая карточка: вся карта",
+    "scrollWidth": 320,
+    "targets": [
+      {
+        "enabled": true,
+        "label": "Telegram"
+      },
+      {
+        "enabled": true,
+        "label": "VK"
+      },
+      {
+        "enabled": true,
+        "label": "MAX"
+      },
+      {
+        "enabled": true,
+        "label": "Другие"
+      }
+    ],
+    "width": 320
+  },
+  {
+    "locale": "en",
+    "closeVisible": true,
+    "preview": "Image ready: whole map",
+    "scrollWidth": 320,
+    "targets": [
+      {
+        "enabled": true,
+        "label": "Instagram"
+      },
+      {
+        "enabled": true,
+        "label": "Facebook"
+      },
+      {
+        "enabled": true,
+        "label": "Threads"
+      },
+      {
+        "enabled": true,
+        "label": "X"
+      },
+      {
+        "enabled": true,
+        "label": "WhatsApp"
+      },
+      {
+        "enabled": true,
+        "label": "More"
+      }
+    ],
+    "width": 320
+  },
+  {
+    "locale": "de",
+    "closeVisible": true,
+    "preview": "Bild fertig: gesamte Karte",
+    "scrollWidth": 320,
+    "targets": [
+      {
+        "enabled": true,
+        "label": "Instagram"
+      },
+      {
+        "enabled": true,
+        "label": "Facebook"
+      },
+      {
+        "enabled": true,
+        "label": "Threads"
+      },
+      {
+        "enabled": true,
+        "label": "X"
+      },
+      {
+        "enabled": true,
+        "label": "WhatsApp"
+      },
+      {
+        "enabled": true,
+        "label": "Weitere"
+      }
+    ],
+    "width": 320
+  },
+  {
+    "locale": "fr",
+    "closeVisible": true,
+    "preview": "Image prête : carte entière",
+    "scrollWidth": 320,
+    "targets": [
+      {
+        "enabled": true,
+        "label": "Instagram"
+      },
+      {
+        "enabled": true,
+        "label": "Facebook"
+      },
+      {
+        "enabled": true,
+        "label": "Threads"
+      },
+      {
+        "enabled": true,
+        "label": "X"
+      },
+      {
+        "enabled": true,
+        "label": "WhatsApp"
+      },
+      {
+        "enabled": true,
+        "label": "Autres"
+      }
+    ],
+    "width": 320
+  },
+  {
+    "locale": "es",
+    "closeVisible": true,
+    "preview": "Imagen lista: mapa completo",
+    "scrollWidth": 320,
+    "targets": [
+      {
+        "enabled": true,
+        "label": "Instagram"
+      },
+      {
+        "enabled": true,
+        "label": "Facebook"
+      },
+      {
+        "enabled": true,
+        "label": "Threads"
+      },
+      {
+        "enabled": true,
+        "label": "X"
+      },
+      {
+        "enabled": true,
+        "label": "WhatsApp"
+      },
+      {
+        "enabled": true,
+        "label": "Más"
+      }
+    ],
+    "width": 320
+  },
+  {
+    "locale": "it",
+    "closeVisible": true,
+    "preview": "Immagine pronta: mappa completa",
+    "scrollWidth": 320,
+    "targets": [
+      {
+        "enabled": true,
+        "label": "Instagram"
+      },
+      {
+        "enabled": true,
+        "label": "Facebook"
+      },
+      {
+        "enabled": true,
+        "label": "Threads"
+      },
+      {
+        "enabled": true,
+        "label": "X"
+      },
+      {
+        "enabled": true,
+        "label": "WhatsApp"
+      },
+      {
+        "enabled": true,
+        "label": "Altro"
+      }
+    ],
+    "width": 320
+  },
+  {
+    "locale": "tr",
+    "closeVisible": true,
+    "preview": "Görsel hazır: tüm harita",
+    "scrollWidth": 320,
+    "targets": [
+      {
+        "enabled": true,
+        "label": "Instagram"
+      },
+      {
+        "enabled": true,
+        "label": "Facebook"
+      },
+      {
+        "enabled": true,
+        "label": "Threads"
+      },
+      {
+        "enabled": true,
+        "label": "X"
+      },
+      {
+        "enabled": true,
+        "label": "WhatsApp"
+      },
+      {
+        "enabled": true,
+        "label": "Diğer"
+      }
+    ],
+    "width": 320
+  },
+  {
+    "locale": "zh",
+    "closeVisible": true,
+    "preview": "图片已生成：完整地图",
+    "scrollWidth": 320,
+    "targets": [
+      {
+        "enabled": true,
+        "label": "Instagram"
+      },
+      {
+        "enabled": true,
+        "label": "Facebook"
+      },
+      {
+        "enabled": true,
+        "label": "Threads"
+      },
+      {
+        "enabled": true,
+        "label": "X"
+      },
+      {
+        "enabled": true,
+        "label": "WhatsApp"
+      },
+      {
+        "enabled": true,
+        "label": "更多"
+      }
+    ],
+    "width": 320
+  },
+  {
+    "locale": "ja",
+    "closeVisible": true,
+    "preview": "画像ができました：地図全体",
+    "scrollWidth": 320,
+    "targets": [
+      {
+        "enabled": true,
+        "label": "Instagram"
+      },
+      {
+        "enabled": true,
+        "label": "Facebook"
+      },
+      {
+        "enabled": true,
+        "label": "Threads"
+      },
+      {
+        "enabled": true,
+        "label": "X"
+      },
+      {
+        "enabled": true,
+        "label": "WhatsApp"
+      },
+      {
+        "enabled": true,
+        "label": "その他"
+      }
+    ],
+    "width": 320
+  },
+  {
+    "locale": "ko",
+    "closeVisible": true,
+    "preview": "이미지 준비 완료: 전체 지도",
+    "scrollWidth": 320,
+    "targets": [
+      {
+        "enabled": true,
+        "label": "Instagram"
+      },
+      {
+        "enabled": true,
+        "label": "Facebook"
+      },
+      {
+        "enabled": true,
+        "label": "Threads"
+      },
+      {
+        "enabled": true,
+        "label": "X"
+      },
+      {
+        "enabled": true,
+        "label": "WhatsApp"
+      },
+      {
+        "enabled": true,
+        "label": "더 보기"
+      }
+    ],
+    "width": 320
+  },
+  {
+    "locale": "ar",
+    "closeVisible": true,
+    "preview": "الصورة جاهزة: الخريطة كاملة",
+    "scrollWidth": 320,
+    "targets": [
+      {
+        "enabled": true,
+        "label": "Instagram"
+      },
+      {
+        "enabled": true,
+        "label": "Facebook"
+      },
+      {
+        "enabled": true,
+        "label": "Threads"
+      },
+      {
+        "enabled": true,
+        "label": "X"
+      },
+      {
+        "enabled": true,
+        "label": "WhatsApp"
+      },
+      {
+        "enabled": true,
+        "label": "المزيد"
+      }
+    ],
+    "width": 320
+  },
+  {
+    "locale": "hi",
+    "closeVisible": true,
+    "preview": "तस्वीर तैयार है: पूरा नक्शा",
+    "scrollWidth": 320,
+    "targets": [
+      {
+        "enabled": true,
+        "label": "Instagram"
+      },
+      {
+        "enabled": true,
+        "label": "Facebook"
+      },
+      {
+        "enabled": true,
+        "label": "Threads"
+      },
+      {
+        "enabled": true,
+        "label": "X"
+      },
+      {
+        "enabled": true,
+        "label": "WhatsApp"
+      },
+      {
+        "enabled": true,
+        "label": "अन्य"
+      }
+    ],
+    "width": 320
+  }
+]

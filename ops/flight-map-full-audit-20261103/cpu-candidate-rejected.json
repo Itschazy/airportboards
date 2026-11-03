@@ -1,0 +1,95 @@
+{
+  "kind": "Node CPU only; no network, DOM or LCP",
+  "map": [
+    {
+      "count": 6,
+      "fitMs": 0.24058300000000088,
+      "bodyMs": 0.942458000000002,
+      "bytes": 409675,
+      "nodes": 60
+    },
+    {
+      "count": 100,
+      "fitMs": 2.265749999999997,
+      "bodyMs": 3.327791000000005,
+      "bytes": 514246,
+      "nodes": 838
+    },
+    {
+      "count": 1000,
+      "fitMs": 12.308582999999999,
+      "bodyMs": 23.961667000000006,
+      "bytes": 1568019,
+      "nodes": 8040
+    },
+    {
+      "count": 4999,
+      "fitMs": 42.511292,
+      "bodyMs": 124.77658300000007,
+      "bytes": 6269240,
+      "nodes": 40030
+    }
+  ],
+  "search": [
+    {
+      "locale": "ru",
+      "prepareMs": 22.215749999999957,
+      "queryMedianMs": 0.4299590000000535
+    },
+    {
+      "locale": "en",
+      "prepareMs": 8.226584000000003,
+      "queryMedianMs": 0.49541599999997743
+    },
+    {
+      "locale": "de",
+      "prepareMs": 6.565582999999947,
+      "queryMedianMs": 0.4443750000000364
+    },
+    {
+      "locale": "fr",
+      "prepareMs": 5.712582999999995,
+      "queryMedianMs": 0.4724159999999529
+    },
+    {
+      "locale": "es",
+      "prepareMs": 5.860708000000045,
+      "queryMedianMs": 0.4496249999999691
+    },
+    {
+      "locale": "it",
+      "prepareMs": 6.28245800000002,
+      "queryMedianMs": 0.4386250000000018
+    },
+    {
+      "locale": "tr",
+      "prepareMs": 6.560917000000018,
+      "queryMedianMs": 0.44974999999999454
+    },
+    {
+      "locale": "zh",
+      "prepareMs": 8.208208000000013,
+      "queryMedianMs": 0.5939170000000331
+    },
+    {
+      "locale": "ja",
+      "prepareMs": 8.30483300000003,
+      "queryMedianMs": 0.5684999999999718
+    },
+    {
+      "locale": "ko",
+      "prepareMs": 9.43004099999996,
+      "queryMedianMs": 0.49433399999998073
+    },
+    {
+      "locale": "ar",
+      "prepareMs": 8.53950000000009,
+      "queryMedianMs": 0.5125830000000633
+    },
+    {
+      "locale": "hi",
+      "prepareMs": 9.093625000000088,
+      "queryMedianMs": 0.5084590000000162
+    }
+  ]
+}

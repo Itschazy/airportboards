@@ -3,15 +3,15 @@
 // одинаково для YYYY и YYYY-MM-DD. Не используем Date.parse для исправления
 // несуществующего 30 февраля и не угадываем порядок дня/месяца в чужом CSV.
 export function localToday(){const d=new Date();return `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`;}
-export function validateDate(value,{today=localToday()}={}){
+export function validateDate(value,{today=localToday(),allowFuture=false}={}){
  if(typeof value!=='string')return {valid:false,code:'date_format'};
  if(value==='')return {valid:true,precision:'unknown'};
  if(!/^\d{4}(?:-\d{2}-\d{2})?$/.test(value))return {valid:false,code:'date_format'};
  const year=Number(value.slice(0,4));if(year<1)return {valid:false,code:'date_range'};
- if(value.length===4)return year<=Number(today.slice(0,4))?{valid:true,precision:'year'}:{valid:false,code:'date_future'};
+ if(value.length===4)return allowFuture||year<=Number(today.slice(0,4))?{valid:true,precision:'year'}:{valid:false,code:'date_future'};
  const date=new Date(`${value}T12:00:00Z`);
  if(!Number.isFinite(date.getTime())||date.toISOString().slice(0,10)!==value)return {valid:false,code:'date_invalid'};
- return value<=today?{valid:true,precision:'day'}:{valid:false,code:'date_future'};
+ return allowFuture||value<=today?{valid:true,precision:'day'}:{valid:false,code:'date_future'};
 }
 export function formatHistoryDate(value,locale){
  if(!value)return '';

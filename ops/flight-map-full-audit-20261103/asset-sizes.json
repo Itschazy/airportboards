@@ -1,0 +1,57 @@
+{
+  "runtime": {
+    "raw": 51224,
+    "gzip": 18343
+  },
+  "catalogues": [
+    {
+      "locale": "ru",
+      "bytes": 159952
+    },
+    {
+      "locale": "en",
+      "bytes": 117740
+    },
+    {
+      "locale": "de",
+      "bytes": 142919
+    },
+    {
+      "locale": "fr",
+      "bytes": 143267
+    },
+    {
+      "locale": "es",
+      "bytes": 143415
+    },
+    {
+      "locale": "it",
+      "bytes": 142991
+    },
+    {
+      "locale": "tr",
+      "bytes": 143704
+    },
+    {
+      "locale": "zh",
+      "bytes": 162866
+    },
+    {
+      "locale": "ja",
+      "bytes": 159746
+    },
+    {
+      "locale": "ko",
+      "bytes": 161813
+    },
+    {
+      "locale": "ar",
+      "bytes": 159903
+    },
+    {
+      "locale": "hi",
+      "bytes": 169576
+    }
+  ],
+  "geography": 75471
+}
