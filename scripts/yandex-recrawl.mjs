@@ -21,6 +21,8 @@
 
 import { BASE, readEnvFile, priorityPaths, loadState, saveState, knownPaths } from './seo-priority.mjs';
 
+import {stopRecrawl} from './recrawl-delivery.mjs';
+
 const STATE = '.yandex-recrawl-state.json';
 const USER = 712865004;
 const HOST_ID = 'https:airportsboard.live:443';
@@ -62,7 +64,7 @@ if (dry) { console.log('\n--dry: ничего не отправлено'); proce
 // ── Отправка ─────────────────────────────────────────────────────────────────────────────
 // Ручка принимает ОДИН адрес за запрос. Идём последовательно: параллельные запросы к этому
 // API отвечают 429 и сжигают квоту впустую.
-let ok = 0, fail = 0;
+let ok = 0, fail = 0, consecutiveFailures = 0;
 for (const p of paths) {
   const url = BASE + p;
   try {
@@ -70,23 +72,31 @@ for (const p of paths) {
       method: 'POST',
       headers: { ...auth, 'Content-Type': 'application/json' },
       body: JSON.stringify({ url }),
+      signal: AbortSignal.timeout(15000),
     });
     const body = await res.text();
     if (res.ok) {
       ok++;
+      consecutiveFailures = 0;
       state.sent[p] = new Date().toISOString();
     } else {
       fail++;
+      consecutiveFailures++;
       // Квота могла кончиться посреди прогона — тогда останавливаемся, а не долбим впустую.
       if (/quota/i.test(body)) { console.log(`  квота исчерпана на ${ok + fail}-м адресе`); break; }
       if (fail <= 3) console.log(`  ✗ ${p} → HTTP ${res.status} ${body.slice(0, 120)}`);
+      if (stopRecrawl(res.status,consecutiveFailures)) { console.log("  остановка после отказов API; неотправленные URL остаются на следующий запуск"); break; }
     }
   } catch (e) {
     fail++;
+    consecutiveFailures++;
     if (fail <= 3) console.log(`  ✗ ${p} → ${e.message}`);
+    if (stopRecrawl(0,consecutiveFailures)) break;
   }
 }
 
 state.runs = [...(state.runs ?? []), { at: new Date().toISOString(), ok, fail }].slice(-30);
 saveState(STATE, state);
 console.log(`\nотправлено ${ok}, отказов ${fail} | всего в состоянии: ${Object.keys(state.sent).length}`);
+
+if (fail > 0) process.exitCode = 1;

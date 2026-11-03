@@ -22,11 +22,13 @@
 import fs from 'node:fs';
 import os from 'node:os';
 import path from 'node:path';
+import {deliveryHealth} from './automation-health.mjs';
 
 const MAX_SILENCE_DAYS = 5;
+const indexNowFile = path.join(os.homedir(),'airportsboard-data','seo','indexnow-v2.json');
 const STATES = [
   ['.yandex-recrawl-state.json', 'переобход Вебмастера'],
-  ['.indexnow-state.json', 'IndexNow'],
+  [indexNowFile, 'IndexNow v2'],
 ];
 
 /**
@@ -59,30 +61,35 @@ let known = 0;
 for (const [file, label] of STATES) {
   let st;
   try { st = JSON.parse(fs.readFileSync(file, 'utf8')); }
-  catch { console.log(`  · ${label}: файла состояния нет — на этой машине толкатель не запускался, пропуск`); continue; }
+  catch {
+    if(ON_THE_BOX) say(false,`${label}: актуальный файл состояния отсутствует или повреждён`);
+    else console.log(`  · ${label}: файла состояния нет — на этой машине толкатель не запускался, пропуск`);
+    continue;
+  }
   known++;
   const runs = st.runs ?? [];
   if (!runs.length) { say(false, `${label}: состояние есть, но ни одного прогона не записано`); continue; }
   const last = runs[runs.length - 1];
   const days = (Date.now() - Date.parse(last.at)) / 86400_000;
+  const maxDays = st.version===2 ? 1/24 : MAX_SILENCE_DAYS;
   const when = `последний прогон ${last.at.slice(0, 16)} — ${days < 1 ? 'сегодня' : Math.round(days) + ' дн назад'}`;
   if (!ON_THE_BOX) {
     // Не на боксе: состояние здесь историческое. Печатаем, но не судим — срок мерить нечем.
     console.log(`  · ${label}: ${when}; толкатели идут на боксе (${DAILY_RUNNER}), здешнее состояние заморожено — срок не проверяется`);
   } else {
-    say(days <= MAX_SILENCE_DAYS, when
-      + (days > MAX_SILENCE_DAYS ? ` (порог ${MAX_SILENCE_DAYS} дн — похоже, задача не идёт)` : ''));
+    say(days <= maxDays, when
+      + (days > maxDays ? ` (порог ${st.version===2 ? "1 час" : MAX_SILENCE_DAYS+" дн"} — похоже, задача не идёт)` : ''));
   }
   // Отказы при отправке — отдельный сигнал: прогон может «идти» и ничего не доставлять.
   const recent = runs.slice(-5);
-  const ok = recent.reduce((s, r) => s + (r.ok ?? r.n ?? 0), 0);
-  const bad = recent.reduce((s, r) => s + (r.fail ?? 0), 0);
-  say(ok > 0, `${label}: за последние ${recent.length} прогонов доставлено ${ok}, отказов ${bad}`);
+  const {accepted,failed,idle,ok}=deliveryHealth(st);
+  say(ok, `${label}: за последние ${recent.length} прогонов принято ${accepted}, отказов ${failed}`
+    + (idle ? '; очередь пуста, отправка не требуется' : ''));
 }
 
 if (!known) {
   console.log('\nни одного файла состояния — проверять нечего (это не провал)');
-  process.exit(0);
+  process.exit(fails ? 1 : 0);
 }
 
 // Квота Вебмастера: косвенное, но независимое подтверждение. Толкатель выбирает её досуха,
