@@ -1,0 +1,149 @@
+{
+  "since": "2026-10-28",
+  "until": "2026-11-03",
+  "counts": {
+    "slow": 94,
+    "dns_over_2s": 29,
+    "dns_connect_over_half_lcp": 44,
+    "connect_over_2s": 23
+  },
+  "invalid": 0,
+  "groups": [
+    {
+      "memory": "high",
+      "phase": "after_resource_ready",
+      "n": 1,
+      "lcpMedian": 4636,
+      "ttfbMedian": 2038,
+      "renderMedian": 2598,
+      "longTasksMedian": 561,
+      "airports": {
+        "QQT": 1
+      }
+    },
+    {
+      "memory": "high",
+      "phase": "before_first_byte",
+      "n": 51,
+      "lcpMedian": 5952,
+      "ttfbMedian": 5402,
+      "renderMedian": 391,
+      "longTasksMedian": 0,
+      "airports": {
+        "SSH": 2,
+        "KZN": 1,
+        "HBE": 3,
+        "HRG": 7,
+        "LHE": 1,
+        "MRV": 1,
+        "HRB": 1,
+        "GYD": 1,
+        "IST": 1,
+        "GEG": 1,
+        "home": 6,
+        "SAW": 2,
+        "JNB": 1,
+        "PVG": 1,
+        "SYD": 1,
+        "KUL": 1,
+        "AYT": 1,
+        "ALA": 2,
+        "NSK": 1,
+        "DMM": 4,
+        "KTM": 1,
+        "BKK": 1,
+        "IXB": 1,
+        "NGB": 1,
+        "SHA": 1,
+        "TAS": 1,
+        "HND": 1,
+        "TPE": 2,
+        "DLA": 1,
+        "ARN": 1,
+        "PEK": 1
+      }
+    },
+    {
+      "memory": "low",
+      "phase": "after_resource_ready",
+      "n": 9,
+      "lcpMedian": 4796,
+      "ttfbMedian": 1285,
+      "renderMedian": 3747,
+      "longTasksMedian": 861,
+      "airports": {
+        "ATL": 1,
+        "LCA": 2,
+        "PIA": 1,
+        "MDT": 1,
+        "HNL": 1,
+        "UFA": 1,
+        "MSQ": 1,
+        "GEO": 1
+      }
+    },
+    {
+      "memory": "low",
+      "phase": "before_first_byte",
+      "n": 6,
+      "lcpMedian": 6889.5,
+      "ttfbMedian": 6057.0,
+      "renderMedian": 914.0,
+      "longTasksMedian": 218.5,
+      "airports": {
+        "home": 1,
+        "PVG": 1,
+        "AYT": 1,
+        "BDL": 1,
+        "DME": 1,
+        "ALG": 1
+      }
+    },
+    {
+      "memory": "mid",
+      "phase": "after_resource_ready",
+      "n": 5,
+      "lcpMedian": 5852,
+      "ttfbMedian": 1044,
+      "renderMedian": 3851,
+      "longTasksMedian": 1362,
+      "airports": {
+        "EVN": 1,
+        "TAS": 1,
+        "home": 1,
+        "FLL": 1,
+        "MBA": 1
+      }
+    },
+    {
+      "memory": "mid",
+      "phase": "before_first_byte",
+      "n": 22,
+      "lcpMedian": 5362.0,
+      "ttfbMedian": 4498.0,
+      "renderMedian": 792.0,
+      "longTasksMedian": 134.5,
+      "airports": {
+        "BUD": 1,
+        "SSH": 1,
+        "HRG": 3,
+        "HBE": 1,
+        "DEN": 1,
+        "KZN": 1,
+        "NSK": 1,
+        "CPT": 1,
+        "RUH": 2,
+        "AYT": 1,
+        "NKM": 1,
+        "TBS": 1,
+        "DMM": 2,
+        "JFK": 1,
+        "home": 1,
+        "FEG": 1,
+        "OVB": 1,
+        "IKA": 1
+      }
+    }
+  ],
+  "note": "Phase shares are paired per record; medians must not be added. Small subgroups are descriptive only."
+}

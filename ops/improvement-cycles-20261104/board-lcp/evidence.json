@@ -1,0 +1,95 @@
+{
+  "measuredHead": "6a8bf93bdc62074028ab5222bf41e0e28739a56e",
+  "production": "056ee8433deba0ccd83a43ee47464dfe754f2c91",
+  "profile": {
+    "output": "json",
+    "maxWaitForFcp": 30000,
+    "maxWaitForLoad": 45000,
+    "pauseAfterFcpMs": 5250,
+    "pauseAfterLoadMs": 5250,
+    "networkQuietThresholdMs": 5250,
+    "cpuQuietThresholdMs": 5250,
+    "formFactor": "mobile",
+    "throttling": {
+      "rttMs": 150,
+      "throughputKbps": 1638.4,
+      "requestLatencyMs": 562.5,
+      "downloadThroughputKbps": 1474.5600000000002,
+      "uploadThroughputKbps": 675,
+      "cpuSlowdownMultiplier": 4
+    },
+    "throttlingMethod": "devtools",
+    "screenEmulation": {
+      "mobile": true,
+      "width": 412,
+      "height": 823,
+      "deviceScaleFactor": 1.75,
+      "disabled": true
+    },
+    "emulatedUserAgent": "Mozilla/5.0 (Linux; Android 11; moto g power (2022)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Mobile Safari/537.36",
+    "auditMode": false,
+    "gatherMode": false,
+    "clearStorageTypes": [
+      "file_systems",
+      "shader_cache",
+      "service_workers",
+      "cache_storage"
+    ],
+    "disableStorageReset": false,
+    "debugNavigation": false,
+    "channel": "devtools",
+    "usePassiveGathering": false,
+    "disableFullPageScreenshot": false,
+    "skipAboutBlank": false,
+    "blankPage": "about:blank",
+    "ignoreStatusCode": true,
+    "locale": "en-US",
+    "blockedUrlPatterns": null,
+    "additionalTraceCategories": "",
+    "extraHeaders": null,
+    "precomputedLanternData": null,
+    "onlyAudits": null,
+    "onlyCategories": [
+      "performance"
+    ],
+    "skipAudits": null
+  },
+  "samples": [
+    {
+      "file": "ayt-mobile-1.json",
+      "sha256": "28e5db92191657c1fa314086048fee01b3619707579daaa5c406a016bbed6298",
+      "fetchTime": "2026-11-04T20:39:05.529Z",
+      "lcp": 1332.383,
+      "fcp": 1332.383,
+      "tbt": 75.06299999999965,
+      "cls": 0.0013660814160710959,
+      "node": "header.site-header > div.hdr-row > a.hdr-pill > span.hdr-wordmark",
+      "nodeLabel": "airportsboard",
+      "runWarnings": []
+    },
+    {
+      "file": "ayt-mobile-2.json",
+      "sha256": "69c3286f584bc17e235dd7fae9b12e97ae75818e6ead9294bfb012a92157aecf",
+      "fetchTime": "2026-11-04T20:40:52.220Z",
+      "lcp": 1351.746,
+      "fcp": 1351.746,
+      "tbt": 65.83199999999988,
+      "cls": 0.0013660814160710959,
+      "node": "header.site-header > div.hdr-row > a.hdr-pill > span.hdr-wordmark",
+      "nodeLabel": "airportsboard",
+      "runWarnings": []
+    },
+    {
+      "file": "ayt-mobile-3.json",
+      "sha256": "68ac8cdca3090488f589dbcefe182f3a666a875b5de7fd0fb60429d17a761da5",
+      "fetchTime": "2026-11-04T20:42:00.804Z",
+      "lcp": 1342.542,
+      "fcp": 1342.542,
+      "tbt": 62.31700000000001,
+      "cls": 0.0013660814160710959,
+      "node": "header.site-header > div.hdr-row > a.hdr-pill > span.hdr-wordmark",
+      "nodeLabel": "airportsboard",
+      "runWarnings": []
+    }
+  ]
+}
