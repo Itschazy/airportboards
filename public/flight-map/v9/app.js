@@ -19,7 +19,7 @@ import{createI18n}from'../v4/i18n.js';
 // таббар не должен оставлять старые listeners или сбрасывать настройки темы.
 export async function mount(root,{signal,locale='ru',messages,track=()=>{}}){
 const i18n=createI18n(locale,messages),{t,countLabel,statLabel}=i18n;
-const {KEY,newId,createStore,backup,parse,merge,MAX_BYTES}=createStorage(t);
+const {KEY,newId,createStore,backup,parseBackup,merge,MAX_BYTES}=createStorage(t);
 const {canShareImage,shareImage,serviceLinks,INVITE,SHARE_URL}=createSharing(t,locale);
 const $=s=>root.querySelector(s), $$=s=>[...root.querySelectorAll(s)];
 const listen=(target,event,handler)=>target.addEventListener(event,handler,{signal});
@@ -240,6 +240,9 @@ listen(root,'click',e=>{const m=$('#periodMenu');if(m.open&&!e.composedPath().in
 for(const [id,f] of [['zoomIn',.8],['zoomOut',1.25]])$('#'+id).onclick=()=>{if(!validMapBox(box)||box.w*f<50||box.w*f>1100)return;box={...box,x:box.x+box.w*(1-f)/2,y:box.y+box.h*(1-f)/2,w:box.w*f,h:box.h*f};map();};
 // Резервная копия относится к журналу. Тема и язык остаются в настоящих настройках сайта.
 $('#openBackup').onclick=()=>open($('#backupDialog'));
+// На новом устройстве backup-entry скрыт пустым состоянием: без этого пути
+// пришлось бы сначала создавать фиктивный перелёт ради восстановления копии.
+$('#restoreFromForm').onclick=()=>close($('#addDialog'),()=>open($('#backupDialog')));
 // PNG готов до пользовательского tap: iOS требует navigator.share прямо
 // из жеста. Очередь коалесцирует быстрые переключения, старый результат не
 // перетирает новую карточку или ошибку; при сетевой ошибке загрузку можно повторить.
@@ -437,8 +440,8 @@ function syncStored(){if(!store||signal.aborted)return;try{const next=store.read
 listen(window,'storage',e=>{if(e.key!==KEY&&e.key!==null)return;if($('dialog[open]'))return;syncStored();});
 function downloadText(text,name,type='application/json'){const a=document.createElement('a'),u=URL.createObjectURL(new Blob([text],{type}));a.href=u;a.download=name;a.click();setTimeout(()=>URL.revokeObjectURL(u),60000);}
 $('#backup').onclick=()=>{syncStored();if(storageError){try{const raw=localStorage.getItem(KEY);if(raw!==null)downloadText(raw,'airportsboard-unreadable-original.json');else toast(storageError);}catch{toast(storageError);}return;}track('backup');downloadText(backup(personal),'airportsboard-backup-'+todayString+'.json');$('#backupStatus').textContent=t("m135");};
-$('#restoreFile').onchange=async e=>{const revision=++restoreRevision,file=e.target.files?.[0];e.target.value='';if(!file)return;$('#backupStatus').textContent=t("m136");try{if(file.size>MAX_BYTES)throw Error(t("m137"));const text=await file.text();if(revision!==restoreRevision||!$('#backupDialog').open)return;const incoming=parse(text,new Set(airports.map(a=>a.code)));syncStored();if(storageError)throw Error(storageError);const result=merge(personal,incoming);pendingRestore=incoming;$('#restoreSummary').textContent=`${t("m138",{p0:(result.added),p1:(result.existing),p2:(result.conflicts)})}`;$('#restoreError').textContent='';$('#restoreConfirm').disabled=!result.added;$('#restoreList').innerHTML=incoming.slice(0,5).map(f=>`<li>${esc(airport[f.from].city)} → ${esc(airport[f.to].city)} <small>${esc(f.date||t("m020"))}</small></li>`).join('');$('#backupStatus').textContent='';close($('#backupDialog'),()=>open($('#restoreDialog')));}catch(e){$('#backupStatus').textContent=e.message;}};
-$('#restoreConfirm').onclick=async()=>{if(!pendingRestore)return;try{const result=merge(personal,pendingRestore);if(!store)throw Error(t("m139"));personal=await store.writeAsync(result.flights);if(signal.aborted)return;flights=personal;isDemo=false;period='';selected=null;const url=new URL(location.href);url.searchParams.delete('demo');history.replaceState(history.state,'',url);pendingRestore=null;storageError='';close($('#restoreDialog'));render();track('restore');toast(t("m140")+result.added);}catch(e){$('#restoreError').textContent=e.message;}};
+$('#restoreFile').onchange=async e=>{const revision=++restoreRevision,file=e.target.files?.[0];e.target.value='';if(!file)return;$('#backupStatus').textContent=t("m136");try{if(file.size>MAX_BYTES)throw Error(t("m137"));const text=await file.text();if(revision!==restoreRevision||!$('#backupDialog').open)return;const incoming=parseBackup(text,new Set(airports.map(a=>a.code)));syncStored();if(storageError)throw Error(storageError);const result=merge(personal,incoming);pendingRestore=incoming;$('#restoreSummary').textContent=`${t("m138",{p0:(result.added),p1:(result.existing),p2:(result.conflicts)})}`;$('#restoreError').textContent='';$('#restoreConfirm').disabled=!result.added;$('#restoreList').innerHTML=incoming.slice(0,5).map(f=>`<li>${esc(airport[f.from].city)} → ${esc(airport[f.to].city)} <small>${esc(f.date||t("m020"))}</small></li>`).join('');$('#backupStatus').textContent='';close($('#backupDialog'),()=>open($('#restoreDialog')));}catch(e){$('#backupStatus').textContent=e.message;}};
+$('#restoreConfirm').onclick=async()=>{if(!pendingRestore)return;try{if(!store)throw Error(t("m139"));const result=await store.restoreAsync(pendingRestore);personal=result.flights;if(signal.aborted)return;flights=personal;isDemo=false;period='';selected=null;const url=new URL(location.href);url.searchParams.delete('demo');history.replaceState(history.state,'',url);pendingRestore=null;storageError='';close($('#restoreDialog'));render();track('restore');toast(t("m140")+result.added);}catch(e){$('#restoreError').textContent=e.message;}};
 
 $$('button').forEach(b=>b.disabled=false);syncShareTargets();$('#confirmImport').disabled=true;addButtons.forEach(b=>b.removeAttribute('aria-busy'));document.documentElement.removeAttribute('data-flights');root.removeAttribute('aria-busy');render();root.dataset.mapReady='true';track('open');
 if(earlyAdd)openForm();

@@ -27,30 +27,47 @@ function validate(data,codes,{allowFuture=false}={}){
  });
 }
 function parse(text,codes,options){if(typeof text!=='string'||new Blob([text]).size>MAX_BYTES)throw Error(t("m137"));let d;try{d=JSON.parse(text);}catch{throw Error(t("m144"));}return validate(d,codes,options);}
+// Восстановление — перенос сохранённых календарных дат, а не ввод новых.
+// Часы устройства и exportedAt не доказывают, когда состоялся рейс: после
+// смены пояса (включая Новый год) корректная дата может выглядеть будущей.
+// Поэтому отдельный путь backup проверяет календарь/структуру/лимиты, но не
+// сравнивает с сегодня. Обычный parse и CSV остаются строгими.
+function parseBackup(text,codes){return parse(text,codes,{allowFuture:true});}
 function backup(flights){return JSON.stringify({format:FORMAT,version:1,exportedAt:new Date().toISOString(),flights},null,2);}
 function merge(current,incoming){const byId=new Map(current.map(f=>[f.id,f]));let added=0,existing=0,conflicts=0;const flights=[...current];for(const f of incoming){const old=byId.get(f.id);if(!old){flights.push(f);byId.set(f.id,f);added++;}else if(['from','to','date','number'].every(k=>old[k]===f[k]))existing++;else conflicts++;}if(flights.length>LIMIT)throw Error(t("m145"));return{flights,added,existing,conflicts};}
 function createStore(storage,codes){let observed,unreadable=false;
  const store={read(){try{const raw=storage.getItem(KEY);const flights=raw===null?[]:parse(raw,codes,{allowFuture:true});observed=raw;unreadable=false;return flights;}catch(e){unreadable=true;throw e;}},
- write(flights,expected=observed){if(unreadable)throw Error(t("m146"));
+ write(flights,expected=observed){return commit(flights,expected);}
+ };
+ function commit(flights,expected=observed,restoring=false){if(unreadable)throw Error(t("m146"));
   let current;try{current=storage.getItem(KEY);}catch{throw Error(t("m147"));}
   if(current!==expected)throw Error(t("m148"));
   // Сохранённая календарная дата не становится повреждённой после перелёта
   // на запад/смены часов. Для чтения проверяем структуру и календарь; запрет
   // будущего относится к новой или изменённой дате. Старые строки можно
-  // удалить/исправить по номеру, не блокируя весь журнал. JSON-импорт остаётся
-  // строгим. Регрессия: Tokyo → Los_Angeles в один момент времени.
+  // удалить/исправить по номеру, не блокируя весь журнал. Только явное
+  // восстановление JSON пропускает проверку «сегодня» для добавленных строк.
+  // Регрессии: Tokyo → Los_Angeles, Kiritimati → Pago_Pago через Новый год.
   const clean=validate({format:FORMAT,version:1,flights},codes,{allowFuture:true});
   const previous=new Map((current===null?[]:parse(current,codes,{allowFuture:true})).map(f=>[f.id,f]));
-  for(const [i,f] of clean.entries())if(previous.get(f.id)?.date!==f.date&&!validateDate(f.date).valid)throw Error(t('m143',{p0:i+1}));
+  for(const [i,f] of clean.entries())if(!restoring&&previous.get(f.id)?.date!==f.date&&!validateDate(f.date).valid)throw Error(t('m143',{p0:i+1}));
   const raw=backup(clean);
   try{storage.setItem(KEY,raw);}catch{throw Error(t("m149"));}observed=raw;return clean;
- }};
+ }
  // Ожидаемый снимок фиксируем ДО ожидания Web Lock. Раньше другая операция
  // того же store могла прочитать/импортировать данные и обновить observed:
  // устаревшая форма после этого проходила проверку и стирала новый импорт.
  // Regression: queued import → queued save; старый save обязан отклониться.
  const transaction=run=>withHistoryLock(KEY,run,()=>Error(t('m149')));
  store.writeAsync=flights=>{const expected=observed;return transaction(()=>store.write(flights,expected));};
+ // Повторно читаем журнал внутри блокировки: между превью JSON и согласием
+ // пользователь мог сохранить рейс в соседней вкладке. Merge по ID сохраняет
+ // текущие записи при конфликте, повторное восстановление не создаёт дублей.
+ store.restoreAsync=incoming=>transaction(()=>{
+  const clean=validate({format:FORMAT,version:1,flights:incoming},codes,{allowFuture:true});
+  const current=store.read(),result=merge(current,clean);
+  return {...result,flights:result.added?commit(result.flights,observed,true):current};
+ });
  // Массовый импорт перечитывает актуальную историю ВНУТРИ той же блокировки,
  // что обычное сохранение. Отмена не восстанавливает старый снимок всего журнала:
  // удаляет только записи этой партии, которые с тех пор никто не изменял.
@@ -67,7 +84,9 @@ function createStore(storage,codes){let observed,unreadable=false;
  });
  store.undoImportAsync=receipt=>transaction(()=>{
   if(!receipt||!Array.isArray(receipt.records))throw Error(t('m144'));
-  const originals=validate({format:FORMAT,version:1,flights:receipt.records},codes),current=store.read();
+  // Отмена удаляет только неизменённые записи, уже принятые импортом.
+  // Повторный запрет будущего после смены пояса ошибочно блокировал удаление.
+  const originals=validate({format:FORMAT,version:1,flights:receipt.records},codes,{allowFuture:true}),current=store.read();
   const byId=new Map(originals.map(f=>[f.id,f]));let removed=0,preserved=0;
   const remaining=current.filter(f=>{const original=byId.get(f.id);if(!original)return true;if(sameFlight(f,original)){removed++;return false;}preserved++;return true;});
   return {flights:removed?store.write(remaining):current,removed,preserved};
@@ -75,5 +94,5 @@ function createStore(storage,codes){let observed,unreadable=false;
  return store;
 }
 
-return {KEY,FORMAT,LIMIT,MAX_BYTES,newId,validate,parse,backup,merge,createStore};
+return {KEY,FORMAT,LIMIT,MAX_BYTES,newId,validate,parse,parseBackup,backup,merge,createStore};
 }
