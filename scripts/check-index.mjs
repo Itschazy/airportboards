@@ -3,6 +3,7 @@
 // Indexability / HTTP-status audit for airportsboard.live.
 // Usage:
 //   node scripts/check-index.mjs
+//   node scripts/check-index.mjs http://localhost:3156
 //   RESOLVE_IP=95.81.103.82 node scripts/check-index.mjs      # local DNS workaround
 //   BASE=https://airportsboard.live node scripts/check-index.mjs
 //
@@ -24,7 +25,18 @@ function starGroupBlocksAll(body) {
   return false;
 }
 
-const BASE = (process.env.BASE || 'https://airportsboard.live').replace(/\/$/, '');
+// Другие локальные SEO-проверки принимают URL первым аргументом. Здесь он раньше
+// молча игнорировался: запуск с localhost фактически проверял production и давал
+// ложное доказательство для новой сборки. Явный аргумент теперь имеет приоритет
+// над BASE; ошибочный ввод останавливает проверку ДО первого сетевого запроса.
+const args = process.argv.slice(2);
+if (args.length > 1) throw new Error('Usage: node scripts/check-index.mjs [http(s)://host[:port]]');
+const BASE = (args[0] || process.env.BASE || 'https://airportsboard.live').replace(/\/$/, '');
+const target = new URL(BASE);
+if (!['http:', 'https:'].includes(target.protocol) || target.username || target.password ||
+    target.search || target.hash || target.pathname !== '/') {
+  throw new Error('BASE must be an HTTP(S) origin without credentials, path, query or fragment');
+}
 // Адрес тестового сервера и публичный canonical — разные вещи. На fixture localhost
 // canonical намеренно ведёт на production, иначе локальная проверка даёт 4 ложных провала.
 const CANONICAL_BASE = (process.env.CANONICAL_BASE || 'https://airportsboard.live').replace(/\/$/, '');

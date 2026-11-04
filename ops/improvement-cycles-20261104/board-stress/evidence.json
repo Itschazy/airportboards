@@ -1,0 +1,268 @@
+{
+  "measuredCommit": "e7babef47544f9c1c6497c8485a7883e8ecc9878",
+  "applicationEquivalent": "056ee8433deba0ccd83a43ee47464dfe754f2c91",
+  "runs": [
+    {
+      "file": "/Users/whereiszhenya/Documents/Codex/2026-10-18/airportsboard-live-12-next-js-15/outputs/improvement-cycles-20261104/board-stress/ufa-stress-1.json.gz",
+      "sha256": "71aff8a00897070d07b2268186bd366a7cab2d0487c1a9b5a5be6799b27bcf68",
+      "profile": {
+        "startTime": "2026-11-04T21:42:15.294Z",
+        "cpuThrottling": 20,
+        "networkThrottling": "Slow 4G",
+        "networkThrottlingConditions": {
+          "download": 180000,
+          "upload": 84375,
+          "latency": 562.5,
+          "targetLatency": 150,
+          "key": "SPEED_SLOW_4G"
+        }
+      },
+      "viewportCSS": [
+        375,
+        812
+      ],
+      "navigationId": "5F6CC643F3FE8910C47AD1903640C98F",
+      "frame": "E2268C1AF1183F525E023AB12C178305",
+      "pid": 4005,
+      "tid": 81391649,
+      "lcpMs": 1749.759,
+      "candidate": "SPAN class='hdr-wordmark'",
+      "beforeLcpMainDocumentLayout": [
+        {
+          "event": "UpdateLayoutTree",
+          "startMs": 25.262,
+          "durationMs": 2.789,
+          "frame": "E2268C1AF1183F525E023AB12C178305",
+          "url": null
+        },
+        {
+          "event": "UpdateLayoutTree",
+          "startMs": 1002.707,
+          "durationMs": 92.783,
+          "frame": "E2268C1AF1183F525E023AB12C178305",
+          "url": null
+        },
+        {
+          "event": "Layout",
+          "startMs": 1096.825,
+          "durationMs": 341.755,
+          "frame": "E2268C1AF1183F525E023AB12C178305",
+          "url": null
+        },
+        {
+          "event": "Layout",
+          "startMs": 1438.615,
+          "durationMs": 5.065,
+          "frame": "E2268C1AF1183F525E023AB12C178305",
+          "url": null
+        },
+        {
+          "event": "UpdateLayoutTree",
+          "startMs": 1473.634,
+          "durationMs": 6.206,
+          "frame": "E2268C1AF1183F525E023AB12C178305",
+          "url": null
+        },
+        {
+          "event": "Layout",
+          "startMs": 1479.844,
+          "durationMs": 160.072,
+          "frame": "E2268C1AF1183F525E023AB12C178305",
+          "url": null
+        }
+      ],
+      "longScriptTasks": [
+        {
+          "event": "EvaluateScript",
+          "startMs": 3786.211,
+          "durationMs": 363.684,
+          "frame": null,
+          "url": "http://localhost:3156/_next/static/chunks/main-app-3ad30d9f0b9f588e.js"
+        },
+        {
+          "event": "EvaluateScript",
+          "startMs": 4197.823,
+          "durationMs": 53.552,
+          "frame": null,
+          "url": "http://localhost:3156/_next/static/chunks/app/%5Blocale%5D/layout-52e6bf80c25a2e20.js"
+        },
+        {
+          "event": "FunctionCall",
+          "startMs": 4708.525,
+          "durationMs": 243.182,
+          "frame": null,
+          "url": "http://localhost:3156/_next/static/chunks/1255-dc3ddf72a1dc71a7.js"
+        },
+        {
+          "event": "FunctionCall",
+          "startMs": 5317.391,
+          "durationMs": 70.398,
+          "frame": null,
+          "url": "http://localhost:3156/_next/static/chunks/1255-dc3ddf72a1dc71a7.js"
+        },
+        {
+          "event": "FunctionCall",
+          "startMs": 5403.59,
+          "durationMs": 113.648,
+          "frame": null,
+          "url": "http://localhost:3156/_next/static/chunks/1255-dc3ddf72a1dc71a7.js"
+        },
+        {
+          "event": "FunctionCall",
+          "startMs": 5604.15,
+          "durationMs": 121.78,
+          "frame": null,
+          "url": "http://localhost:3156/_next/static/chunks/1255-dc3ddf72a1dc71a7.js"
+        },
+        {
+          "event": "FunctionCall",
+          "startMs": 6149.481,
+          "durationMs": 77.153,
+          "frame": null,
+          "url": "http://localhost:3156/_next/static/chunks/1255-dc3ddf72a1dc71a7.js"
+        }
+      ],
+      "otherDocumentLayout": [
+        {
+          "event": "UpdateLayoutTree",
+          "startMs": 2843.891,
+          "durationMs": 495.229,
+          "frame": "D0D61B201F25AD8E19B79592B93431F6",
+          "url": null,
+          "elements": 11209
+        }
+      ]
+    },
+    {
+      "file": "/Users/whereiszhenya/Documents/Codex/2026-10-18/airportsboard-live-12-next-js-15/outputs/improvement-cycles-20261104/board-stress/ufa-stress-2.json.gz",
+      "sha256": "d8079c1d4897a0e9c9bf123d210b7f09634179cd2a0f44696bd905049d17cb15",
+      "profile": {
+        "startTime": "2026-11-04T21:46:08.810Z",
+        "cpuThrottling": 20,
+        "networkThrottling": "Slow 4G",
+        "networkThrottlingConditions": {
+          "download": 180000,
+          "upload": 84375,
+          "latency": 562.5,
+          "targetLatency": 150,
+          "key": "SPEED_SLOW_4G"
+        }
+      },
+      "viewportCSS": [
+        375,
+        812
+      ],
+      "navigationId": "18E4A5F844528159F8374A73063CB3B8",
+      "frame": "E2268C1AF1183F525E023AB12C178305",
+      "pid": 6355,
+      "tid": 81406200,
+      "lcpMs": 2024.362,
+      "candidate": "SPAN class='hdr-wordmark'",
+      "beforeLcpMainDocumentLayout": [
+        {
+          "event": "UpdateLayoutTree",
+          "startMs": 23.653,
+          "durationMs": 4.842,
+          "frame": "E2268C1AF1183F525E023AB12C178305",
+          "url": null
+        },
+        {
+          "event": "UpdateLayoutTree",
+          "startMs": 1048.754,
+          "durationMs": 131.695,
+          "frame": "E2268C1AF1183F525E023AB12C178305",
+          "url": null
+        },
+        {
+          "event": "Layout",
+          "startMs": 1180.461,
+          "durationMs": 406.797,
+          "frame": "E2268C1AF1183F525E023AB12C178305",
+          "url": null
+        },
+        {
+          "event": "Layout",
+          "startMs": 1587.273,
+          "durationMs": 0.048,
+          "frame": "E2268C1AF1183F525E023AB12C178305",
+          "url": null
+        },
+        {
+          "event": "UpdateLayoutTree",
+          "startMs": 1643.348,
+          "durationMs": 0.119,
+          "frame": "E2268C1AF1183F525E023AB12C178305",
+          "url": null
+        },
+        {
+          "event": "Layout",
+          "startMs": 1643.471,
+          "durationMs": 202.611,
+          "frame": "E2268C1AF1183F525E023AB12C178305",
+          "url": null
+        }
+      ],
+      "longScriptTasks": [
+        {
+          "event": "EvaluateScript",
+          "startMs": 3895.179,
+          "durationMs": 386.982,
+          "frame": null,
+          "url": "http://localhost:3156/_next/static/chunks/main-app-3ad30d9f0b9f588e.js"
+        },
+        {
+          "event": "EvaluateScript",
+          "startMs": 4320.3,
+          "durationMs": 56.515,
+          "frame": null,
+          "url": "http://localhost:3156/_next/static/chunks/1567-a248f50d8c2095b0.js"
+        },
+        {
+          "event": "FunctionCall",
+          "startMs": 5320.441,
+          "durationMs": 276.379,
+          "frame": null,
+          "url": "http://localhost:3156/_next/static/chunks/1255-dc3ddf72a1dc71a7.js"
+        },
+        {
+          "event": "FunctionCall",
+          "startMs": 6014.379,
+          "durationMs": 87.493,
+          "frame": null,
+          "url": "http://localhost:3156/_next/static/chunks/1255-dc3ddf72a1dc71a7.js"
+        },
+        {
+          "event": "FunctionCall",
+          "startMs": 6112.565,
+          "durationMs": 120.348,
+          "frame": null,
+          "url": "http://localhost:3156/_next/static/chunks/1255-dc3ddf72a1dc71a7.js"
+        },
+        {
+          "event": "FunctionCall",
+          "startMs": 6401.463,
+          "durationMs": 124.525,
+          "frame": null,
+          "url": "http://localhost:3156/_next/static/chunks/1255-dc3ddf72a1dc71a7.js"
+        },
+        {
+          "event": "FunctionCall",
+          "startMs": 6858.04,
+          "durationMs": 56.719,
+          "frame": null,
+          "url": "http://localhost:3156/_next/static/chunks/1255-dc3ddf72a1dc71a7.js"
+        }
+      ],
+      "otherDocumentLayout": [
+        {
+          "event": "UpdateLayoutTree",
+          "startMs": 2947.243,
+          "durationMs": 512.301,
+          "frame": "F07B360A918C256920E13EA698C820F8",
+          "url": null,
+          "elements": 11209
+        }
+      ]
+    }
+  ]
+}

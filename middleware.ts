@@ -2,6 +2,7 @@ import createMiddleware from 'next-intl/middleware';
 import { NextResponse, type NextRequest } from 'next/server';
 import { routing } from './i18n/routing';
 import { locales, defaultLocale } from '@/lib/i18n';
+import { currentIata } from '@/lib/iata-aliases';
 
 const intlMiddleware = createMiddleware(routing);
 const LOCALES = locales as readonly string[];
@@ -39,6 +40,26 @@ export default function middleware(req: NextRequest): NextResponse {
     // не зависит (см. выше), поэтому кэшировать его можно жёстко и общим кэшем в том числе.
     res.headers.set('Cache-Control', 'public, max-age=86400');
     return res;
+  }
+
+  // Нормализация должна происходить ДО ISR страницы. На production build Next
+  // 15.5.28 повторный запрос /en/airport/jfk воспроизвёл 308 без Location из кэша.
+  // permanentRedirect внутри страницы остаётся страховкой, но HTTP-переход теперь
+  // не зависит от сохранённых заголовков ISR. Старый код сразу заменяем актуальным:
+  // /ru/airport/tse/arrivals → /ru/airport/NQZ/arrivals за один переход, не два.
+  // Только три существующих вида табло: незнакомые пути/локали не нормализуем.
+  // Query сохраняется (в том числе ссылка на выбранный рейс), хост — из nextUrl.
+  // Проверено повторными GET/HEAD всех 12 локалей на fixture production build.
+  const boardPath = pathname.match(/^\/([^/]+)\/airport\/([a-zA-Z]{3})(\/(?:arrivals|departures))?$/);
+  if (boardPath && LOCALES.includes(boardPath[1])) {
+    const code = currentIata(boardPath[2]) || boardPath[2].toUpperCase();
+    if (code !== boardPath[2]) {
+      const url = req.nextUrl.clone();
+      url.pathname = `/${boardPath[1]}/airport/${code}${boardPath[3] || ''}`;
+      const res = NextResponse.redirect(url, 308);
+      res.headers.set('Cache-Control', 'public, max-age=86400');
+      return res;
+    }
   }
 
   const res = intlMiddleware(req) as NextResponse;
