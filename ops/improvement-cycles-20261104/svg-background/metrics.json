@@ -1,0 +1,272 @@
+{
+  "dark": {
+    "profile": {
+      "source": "DevTools",
+      "startTime": "2026-11-04T22:46:29.775Z",
+      "emulatedDeviceTitle": "Responsive",
+      "cpuThrottling": 20,
+      "networkThrottling": "Slow 4G",
+      "networkThrottlingConditions": {
+        "download": 180000,
+        "upload": 84375,
+        "latency": 562.5,
+        "targetLatency": 150,
+        "key": "SPEED_SLOW_4G"
+      },
+      "dataOrigin": "TraceEvents",
+      "hostDPR": 2,
+      "modifications": {
+        "entriesModifications": {
+          "hiddenEntries": [],
+          "expandableEntries": []
+        },
+        "initialBreadcrumb": {
+          "window": {
+            "min": 1143072700044,
+            "max": 1143098616988,
+            "range": 25916944
+          },
+          "child": null
+        },
+        "annotations": {
+          "entryLabels": [],
+          "labelledTimeRanges": [],
+          "linksBetweenEntries": []
+        }
+      }
+    },
+    "rows": [
+      {
+        "phase": "before",
+        "pair": 1,
+        "elapsedMs": 837.428,
+        "svgStyleMs": 398.627,
+        "nodes": 11209
+      },
+      {
+        "phase": "after",
+        "pair": 1,
+        "elapsedMs": 965.05,
+        "svgStyleMs": 369.007,
+        "nodes": 7644
+      },
+      {
+        "phase": "after",
+        "pair": 2,
+        "elapsedMs": 914.995,
+        "svgStyleMs": 494.843,
+        "nodes": 7644
+      },
+      {
+        "phase": "before",
+        "pair": 2,
+        "elapsedMs": 801.311,
+        "svgStyleMs": 411.12,
+        "nodes": 11209
+      },
+      {
+        "phase": "before",
+        "pair": 3,
+        "elapsedMs": 788.178,
+        "svgStyleMs": 407.246,
+        "nodes": 11209
+      },
+      {
+        "phase": "after",
+        "pair": 3,
+        "elapsedMs": 623.839,
+        "svgStyleMs": 266.039,
+        "nodes": 7644
+      },
+      {
+        "phase": "after",
+        "pair": 4,
+        "elapsedMs": 672.661,
+        "svgStyleMs": 259.996,
+        "nodes": 7644
+      },
+      {
+        "phase": "before",
+        "pair": 4,
+        "elapsedMs": 829.498,
+        "svgStyleMs": 397.279,
+        "nodes": 11209
+      },
+      {
+        "phase": "before",
+        "pair": 5,
+        "elapsedMs": 769.619,
+        "svgStyleMs": 386.091,
+        "nodes": 11209
+      },
+      {
+        "phase": "after",
+        "pair": 5,
+        "elapsedMs": 639.379,
+        "svgStyleMs": 269.1,
+        "nodes": 7644
+      },
+      {
+        "phase": "after",
+        "pair": 6,
+        "elapsedMs": 688.937,
+        "svgStyleMs": 274.48,
+        "nodes": 7644
+      },
+      {
+        "phase": "before",
+        "pair": 6,
+        "elapsedMs": 777.309,
+        "svgStyleMs": 390.072,
+        "nodes": 11209
+      }
+    ],
+    "medians": {
+      "before": {
+        "elapsedMs": 794.7445,
+        "svgStyleMs": 397.953,
+        "nodes": 11209.0
+      },
+      "after": {
+        "elapsedMs": 680.799,
+        "svgStyleMs": 271.79,
+        "nodes": 7644.0
+      }
+    }
+  },
+  "light": {
+    "profile": {
+      "source": "DevTools",
+      "startTime": "2026-11-04T22:47:28.523Z",
+      "emulatedDeviceTitle": "Responsive",
+      "cpuThrottling": 20,
+      "networkThrottling": "Slow 4G",
+      "networkThrottlingConditions": {
+        "download": 180000,
+        "upload": 84375,
+        "latency": 562.5,
+        "targetLatency": 150,
+        "key": "SPEED_SLOW_4G"
+      },
+      "dataOrigin": "TraceEvents",
+      "hostDPR": 2,
+      "modifications": {
+        "entriesModifications": {
+          "hiddenEntries": [],
+          "expandableEntries": []
+        },
+        "initialBreadcrumb": {
+          "window": {
+            "min": 1143131441714,
+            "max": 1143169399832,
+            "range": 37958118
+          },
+          "child": null
+        },
+        "annotations": {
+          "entryLabels": [],
+          "labelledTimeRanges": [],
+          "linksBetweenEntries": []
+        }
+      }
+    },
+    "rows": [
+      {
+        "phase": "before",
+        "pair": 1,
+        "elapsedMs": 1080.234,
+        "svgStyleMs": 511.62,
+        "nodes": 11011
+      },
+      {
+        "phase": "after",
+        "pair": 1,
+        "elapsedMs": 710.803,
+        "svgStyleMs": 316.952,
+        "nodes": 7446
+      },
+      {
+        "phase": "after",
+        "pair": 2,
+        "elapsedMs": 616.437,
+        "svgStyleMs": 267.722,
+        "nodes": 7446
+      },
+      {
+        "phase": "before",
+        "pair": 2,
+        "elapsedMs": 804.677,
+        "svgStyleMs": 370.93,
+        "nodes": 11011
+      },
+      {
+        "phase": "before",
+        "pair": 3,
+        "elapsedMs": 762.907,
+        "svgStyleMs": 389.206,
+        "nodes": 11011
+      },
+      {
+        "phase": "after",
+        "pair": 3,
+        "elapsedMs": 603.022,
+        "svgStyleMs": 261.13,
+        "nodes": 7446
+      },
+      {
+        "phase": "after",
+        "pair": 4,
+        "elapsedMs": 668.535,
+        "svgStyleMs": 265.65,
+        "nodes": 7446
+      },
+      {
+        "phase": "before",
+        "pair": 4,
+        "elapsedMs": 872.755,
+        "svgStyleMs": 446.192,
+        "nodes": 11011
+      },
+      {
+        "phase": "before",
+        "pair": 5,
+        "elapsedMs": 739.457,
+        "svgStyleMs": 375.071,
+        "nodes": 11011
+      },
+      {
+        "phase": "after",
+        "pair": 5,
+        "elapsedMs": 630.412,
+        "svgStyleMs": 265.87,
+        "nodes": 7446
+      },
+      {
+        "phase": "after",
+        "pair": 6,
+        "elapsedMs": 666.405,
+        "svgStyleMs": 258.053,
+        "nodes": 7446
+      },
+      {
+        "phase": "before",
+        "pair": 6,
+        "elapsedMs": 871.596,
+        "svgStyleMs": 392.796,
+        "nodes": 11011
+      }
+    ],
+    "medians": {
+      "before": {
+        "elapsedMs": 838.1365000000001,
+        "svgStyleMs": 391.001,
+        "nodes": 11011.0
+      },
+      "after": {
+        "elapsedMs": 648.4085,
+        "svgStyleMs": 265.76,
+        "nodes": 7446.0
+      }
+    }
+  }
+}

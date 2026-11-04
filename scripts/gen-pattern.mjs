@@ -627,9 +627,15 @@ function render(themeName) {
     gr.uses.join('') + `</g>`
   );
 
+  // Раньше каждое определение было <g transform><path/></g>. <use> клонирует
+  // и эту группу: 3512 расстановок раздували SVG-документ до 11209 элементов.
+  // Перенос того же transform на сам path сохраняет геометрию и наследование,
+  // но убирает по одному узлу на клон. В Chrome CPU ×20 медиана style пересчёта
+  // упала ~398→272 мс (dark), ~391→266 мс (light); это не замер Android LCP.
+  // Проверка обеих тем в 1150/1800/2300/3450/4200px дала одинаковые RGBA пиксели.
   const defs = [...defsMap.values()]
-    .map(v => `<g id="${v.id}" transform="translate(${(-v.cx).toFixed(1)} ${(-v.cy).toFixed(1)})">` +
-      `<path d="${v.d}"${v.fill ? ' stroke="none"' : ''}/></g>`)
+    .map(v => `<path id="${v.id}" transform="translate(${(-v.cx).toFixed(1)} ${(-v.cy).toFixed(1)})" ` +
+      `d="${v.d}"${v.fill ? ' stroke="none"' : ''}/>`)
     .join('');
 
   return {
