@@ -76,3 +76,26 @@ release/CI и обязательные index/sitemap/live-refresh/AdSense.
 Далее: холодная готовность карточки в изолированном Chrome, сетевой RUM,
 индивидуальная URL Inspection Google и справочная ORK. Новых фактов, строк
 перевода, SEO-разметки, DNS или пользовательских данных этот пакет не меняет.
+
+## Выкат и итог
+
+Runtime-коммит **870f52bca2a3b9fb0e6a3dd6d442e2a5178a4158**.
+Push 05.11.2026 00:06:23 Amsterdam вне окна прогрева; перед ним fresh fetch,
+origin/main был предком HEAD, tracked дерево чистое. Actions **41931007755**:
+success, завершился 04.11 23:08:38 UTC. Серверный HEAD совпал, health.release
+870f52bca2a3 (4 ответа, instances 0/2), все 3 pm2 online, restart102.
+
+Оба SVG с обычных production URL совпали по SHA256 и размеру с локальными.
+Index20/20, sitemap/hreflang/gzip, live-refresh, AdSense PASS. Первый shell-wrapper
+проверок использовал read-only переменную zsh status; это ошибка обёртки, а не
+сайта. Повторная последовательная команда set -e без этой переменной завершилась0;
+логи в артефактах относятся к завершённому повтору. Production только audit-bot,
+платные API не вызывались. Ни дизайн/DNS, ни реклама, ни данные не менялись.
+
+Для повторения изолированного стенда: в отдельную временную папку положить
+bench.html, экспортированные через git show 8b8027e5:public/pattern-{dark,light}.svg
+под именами pattern-{dark,light}-before.svg и текущие SVG с суффиксом -after.svg.
+Запустить python3 -m http.server 3157 --bind 127.0.0.1 --directory ПАПКА,
+открыть localhost:3157/bench.html. Проверить 375 px и CPU×20 в DevTools, записать
+Performance trace отдельно для кнопки «Измерить 6 пар» каждой темы. Не использовать
+production, не считать результаты SVG временем загрузки страницы.
