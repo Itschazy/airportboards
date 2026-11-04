@@ -8,6 +8,7 @@ import type { ReactNode } from 'react';
 import Link from 'next/link';
 import { useTranslations } from 'next-intl';
 import { initialRowCount } from '@/lib/board-window';
+import { boardIntentBootstrap, boardFlightKey, claimBoardIntent } from '@/lib/board-intent';
 import { track, GOALS } from '@/lib/track';
 import { DisclosureArrow } from '@/components/DisclosureArrow';
 import type { Airport } from '@/lib/airports';
@@ -1072,6 +1073,7 @@ export function FlightBoard({ airport, locale, defaultMode = 'departures', displ
   const [updLabel, setUpdLabel]   = useState(() =>
     initialFetchedAt ? relTime(new Date(initialFetchedAt), t) : '');
   const [selected, setSelected]   = useState<Flight | null>(null);
+  const boardRef = useRef<HTMLDivElement>(null);
   const [isLive, setIsLive]       = useState(!!initialFetchedAt && Date.now() - initialFetchedAt < 90_000);
   const [showAll, setShowAll]     = useState(false);
   // Search starts as an icon and expands in place of the mode tabs. The full-width input cost
@@ -1288,6 +1290,16 @@ export function FlightBoard({ airport, locale, defaultMode = 'departures', displ
    */
   const deepLink = useRef<{ flight: string; dir: Mode } | null>(null);
   useEffect(() => {
+    // Живое нажатие до загрузки React важнее параметра старой ссылки. Берём
+    // именно строку первоначального снимка, на которую нажали, до live-refresh.
+    // Это единственный handoff inline-обработчика; обычные клики дальше — React.
+    const intent = claimBoardIntent(boardRef.current);
+    const earlyFlight = intent && initialFlights?.find(f => boardFlightKey(f) === intent.key);
+    if (earlyFlight) {
+      track(GOALS.flightCard, { from: intent.keyboard ? 'keyboard' : 'row', past: !!earlyFlight.ts && earlyFlight.ts * 1000 < Date.now() });
+      setSelected(earlyFlight);
+      return;
+    }
     try {
       const q = new URLSearchParams(location.search);
       const fl = q.get('flight');
@@ -1529,6 +1541,7 @@ export function FlightBoard({ airport, locale, defaultMode = 'departures', displ
               // восстановить было нечем. Худший случай — LED: крупно 00:47, в ярлыке 22:10.
               aria-label={`${isPinnedRow ? t('pinned_flight') + ', ' : ''}${f.actual || f.scheduled}, ${f.flight}, ${city}, ${[...meta, label].join(', ')}`}
               className="frow"
+              data-board-flight={boardFlightKey(f)}
               onClick={() => { haptic(); track(GOALS.flightCard, { from: isPinnedRow ? 'pinned' : 'row', past: !!f.ts && f.ts * 1000 < Date.now() }); setSelected(f); }}
               onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); haptic(); track(GOALS.flightCard, { from: 'keyboard' }); setSelected(f); } }}
               style={{ opacity: isPast ? 0.82 : 1 }}
@@ -1726,7 +1739,8 @@ export function FlightBoard({ airport, locale, defaultMode = 'departures', displ
     // Обёртка прозрачна: под ней лежат слои фона (пятна + узор), и непрозрачная
     // заливка их перекрывала. Во встраиваемом виджете (bare) фон остаётся: там
     // под ним чужая страница, а не наша.
-    <div style={{ background: bare ? C.bg : 'transparent', minHeight: bare || shown.length > 0 ? undefined : '100dvh', paddingBottom: bare ? 16 : 'calc(48px + env(safe-area-inset-bottom))' }}>
+    <div ref={boardRef} data-board-intent="" style={{ background: bare ? C.bg : 'transparent', minHeight: bare || shown.length > 0 ? undefined : '100dvh', paddingBottom: bare ? 16 : 'calc(48px + env(safe-area-inset-bottom))' }}>
+      <script data-board-intent-bootstrap="" dangerouslySetInnerHTML={{ __html: boardIntentBootstrap }} />
 
       {/* ── Airport header — compact. The identity is one line: code + name + clock. The old
           header spent ~380px (a 76px IATA glyph, an always-open search field, two control
