@@ -1,0 +1,33 @@
+<!doctype html><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Большая карта: сравнение до и после</title>
+<style>body{font:15px system-ui;margin:16px;background:#101318;color:#eee}button{font:inherit;padding:14px;margin:8px 0}pre{white-space:pre-wrap;overflow-wrap:anywhere}#map{width:100%;max-width:375px;height:280px}.land{fill:#27303a;stroke:#344353;stroke-width:.5;vector-effect:non-scaling-stroke}.flight-path{fill:none;stroke:#399cff;stroke-width:1.4;vector-effect:non-scaling-stroke}.route-halo{fill:none;stroke:#13171c;stroke-width:3;vector-effect:non-scaling-stroke}.route-hit{fill:none;stroke:transparent;stroke-width:12;vector-effect:non-scaling-stroke}.airport-ring{fill:#399cff;opacity:.15}.airport-dot{fill:#399cff}.airport-label{fill:white;paint-order:stroke;stroke:#101318}.airport-city{fill:#abb3be}</style>
+<h1>Большая карта — локальный замер</h1><p>Chromium/Safari на Mac. Это не замер слабого Android или LCP.</p>
+<button id="run" disabled>Сравнить 1000 маршрутов</button>
+<pre id="result">Загрузка локальных данных</pre><svg id="map"></svg>
+<script type="module">
+import {createMap as before} from '/before.js';
+import {createMap as after} from '/after.js';
+import {decodeCatalogue} from '/data.js';
+import {decodeGeography} from '/geo-data.js';
+const [airports,land]=await Promise.all([fetch('/catalogue.json').then(r=>r.json()).then(decodeCatalogue),fetch('/geography.json').then(r=>r.json()).then(decodeGeography)]);
+const flights=Array.from({length:1000},(_,i)=>({id:'f_'+i,from:airports[0].code,to:airports[i+1].code,date:'2024',number:''}));
+const out=document.querySelector('#result'),button=document.querySelector('#run'),svg=document.querySelector('#map');
+out.textContent='Готово';button.disabled=false;
+button.onclick=async()=>{
+ button.disabled=true;out.textContent='Сравнение…';
+ const samples={before:[],after:[]},bytes={},median=a=>a.toSorted((a,b)=>a-b)[Math.floor(a.length/2)];
+ for(let round=0;round<9;round++)for(const name of round%2?['after','before']:['before','after']){
+  const map=(name==='before'?before:after)(airports,land),box=map.fit(flights,375/280);
+  const start=performance.now(),body=map.body(flights,box,375),generated=performance.now();
+  svg.setAttribute('viewBox',`${box.x} ${box.y} ${box.w} ${box.h}`);svg.innerHTML=body;
+  const inserted=performance.now();svg.getBoundingClientRect();
+  await new Promise(resolve=>requestAnimationFrame(()=>requestAnimationFrame(resolve)));
+  const painted=performance.now();
+  if(round>=2)samples[name].push({generate:generated-start,insert:inserted-generated,throughFrames:painted-start});
+  bytes[name]=new Blob([body]).size;
+ }
+ const summary=Object.fromEntries(Object.entries(samples).map(([key,list])=>[key,Object.fromEntries(['generate','insert','throughFrames'].map(field=>[field,+median(list.map(x=>x[field])).toFixed(2)]))]));
+ out.textContent=JSON.stringify({kind:'Desktop browser, 1000 distinct routes, 7 samples after 2 warmups. throughFrames includes frame scheduling; not LCP.',userAgent:navigator.userAgent,bytes,medianMs:summary,samples},null,2);
+ button.disabled=false;
+};
+</script>

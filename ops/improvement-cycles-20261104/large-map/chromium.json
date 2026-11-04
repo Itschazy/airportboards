@@ -1,0 +1,96 @@
+{
+  "kind": "Desktop browser, 1000 distinct routes, 7 samples after 2 warmups. throughFrames includes frame scheduling; not LCP.",
+  "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36",
+  "bytes": {
+    "before": 2911425,
+    "after": 1373220
+  },
+  "medianMs": {
+    "before": {
+      "generate": 18.3,
+      "insert": 14.2,
+      "throughFrames": 51.4
+    },
+    "after": {
+      "generate": 20.2,
+      "insert": 9.5,
+      "throughFrames": 52.8
+    }
+  },
+  "samples": {
+    "before": [
+      {
+        "generate": 19.700000047683716,
+        "insert": 14.899999856948853,
+        "throughFrames": 56.89999985694885
+      },
+      {
+        "generate": 22.40000009536743,
+        "insert": 14.199999809265137,
+        "throughFrames": 55.59999990463257
+      },
+      {
+        "generate": 17.200000047683716,
+        "insert": 12.200000047683716,
+        "throughFrames": 46.90000009536743
+      },
+      {
+        "generate": 23.5,
+        "insert": 14.5,
+        "throughFrames": 62
+      },
+      {
+        "generate": 18.300000190734863,
+        "insert": 12.399999856948853,
+        "throughFrames": 46.30000019073486
+      },
+      {
+        "generate": 17.399999856948853,
+        "insert": 14.400000095367432,
+        "throughFrames": 47
+      },
+      {
+        "generate": 17.799999952316284,
+        "insert": 12.700000047683716,
+        "throughFrames": 51.40000009536743
+      }
+    ],
+    "after": [
+      {
+        "generate": 22.700000047683716,
+        "insert": 9.400000095367432,
+        "throughFrames": 53
+      },
+      {
+        "generate": 20.200000047683716,
+        "insert": 9.5,
+        "throughFrames": 52.80000019073486
+      },
+      {
+        "generate": 16.200000047683716,
+        "insert": 9.400000095367432,
+        "throughFrames": 39.5
+      },
+      {
+        "generate": 23.700000047683716,
+        "insert": 9.599999904632568,
+        "throughFrames": 55.700000047683716
+      },
+      {
+        "generate": 15.5,
+        "insert": 9.200000047683716,
+        "throughFrames": 47
+      },
+      {
+        "generate": 15.800000190734863,
+        "insert": 9.899999856948853,
+        "throughFrames": 50.30000019073486
+      },
+      {
+        "generate": 20.5,
+        "insert": 9.700000047683716,
+        "throughFrames": 54.30000019073486
+      }
+    ]
+  }
+}

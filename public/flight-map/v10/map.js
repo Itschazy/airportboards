@@ -14,6 +14,29 @@ export function uniqueRoutes(flights,selected=null){
  }
  return [...routes.values()];
 }
+// Большая история раньше сериализовала все 49 точек каждой дуги трижды:
+// 1000 разных маршрутов давали 2.91 МБ SVG, 4999 — 12.97 МБ. Не скрываем
+// маршруты и не меняем контуры/статистику: удаляем только избыточные точки
+// линии с отклонением <=0.08px при текущем масштабе. При zoom точность растёт.
+// Исходные arc, fit и проверки подписей остаются прежними. В PNG масштаб
+// 320→960 даёт <=0.24px; обычные карты <=100 маршрутов вообще не упрощаем.
+// Итеративный Douglas–Peucker сохраняет концы и не меняет кэшированные массивы.
+function compactArc(points,tolerance){
+ const keep=new Uint8Array(points.length),last=points.length-1,stack=[0,last];
+ keep[0]=keep[last]=1;const limit=tolerance*tolerance;
+ while(stack.length){
+  const end=stack.pop(),start=stack.pop(),a=points[start],b=points[end];
+  const dx=b[0]-a[0],dy=b[1]-a[1],length=dx*dx+dy*dy;let far=-1,max=limit;
+  for(let i=start+1;i<end;i++){
+   const px=points[i][0]-a[0],py=points[i][1]-a[1];
+   const t=length?Math.max(0,Math.min(1,(px*dx+py*dy)/length)):0;
+   const x=px-t*dx,y=py-t*dy,distance=x*x+y*y;
+   if(distance>max){max=distance;far=i;}
+  }
+  if(far!==-1){keep[far]=1;stack.push(start,far,far,end);}
+ }
+ return points.filter((_,i)=>keep[i]);
+}
 export function createMap(airports,land){
  const airport=Object.fromEntries(airports.map(a=>[a.code,a]));
  // Mercator preserves familiar local shapes; clamp polar data to keep every
@@ -50,7 +73,8 @@ export function createMap(airports,land){
     const [baseX,baseY]=point(code,box.c),offset=Math.round((end[0]-baseX)/1000);
     if(!copies.has(code))copies.set(code,new Map());copies.get(code).set(offset,[baseX+offset*1000,baseY]);
    }
-   let d='M'+pts.map(p=>p.map(n=>n.toFixed(2)).join(',')).join('L');out+=`<path class="route-halo" d="${d}"/><path class="flight-path${f.id===selected?' selected':''}" d="${d}"/>`;if(interactive)out+=`<path class="route-hit" data-route="${escapeXML(f.id)}" d="${d}"><title>${escapeXML(f.from+' — '+f.to)}</title></path>`;}
+   const drawn=fs.length>100?compactArc(pts,0.08*s):pts;
+   let d='M'+drawn.map(p=>p.map(n=>n.toFixed(2)).join(',')).join('L');out+=`<path class="route-halo" d="${d}"/><path class="flight-path${f.id===selected?' selected':''}" d="${d}"/>`;if(interactive)out+=`<path class="route-hit" data-route="${escapeXML(f.id)}" d="${d}"><title>${escapeXML(f.from+' — '+f.to)}</title></path>`;}
   // Cities make a personal map readable without knowing IATA codes. Place
   // the selected route first and try both sides; omit colliding labels rather
   // than layering text over neighbouring airports on narrow phones.
