@@ -1,3 +1,26 @@
+## Codex, 05.11.2026 — запуск 6/20 завершён: production c3e7dea4
+
+Выкат c3e7dea462a04b75a6135c44ea041f45ee3d68bd, push22:54:00Amsterdam,
+Actions41920358232success. СерверныйHEAD и health.release совпали, 3pm2online,
+restart101. После выката: редиректы434/434 на12языках, index20/20,
+sitemap/hreflang/gzip, live-refresh, AdSense PASS. Дизайн/DNS/данные не менялись.
+
+Исправлены HTTP-переходы lowercase IATA и TSE→NQZ до ISR; параметры рейса
+сохраняются, старый lowercaseкод теперь сразу ведёт на актуальный. Локально
+воспроизводился308безLocation изкэша; наproduction дофикса не повторился.
+check-index больше не игнорирует позиционныйlocalhost;9контролейCLI PASS.
+Build2473,tscдо/послеочистки,ключи12/scripts/cache/first-paint PASS.
+
+Стресс CPU×20 Slow4G375×812: LCP1.75/2.02с, не физическийAndroid и не выигрыш
+этогофикса. Следующий шаг: изолированный A/B SVGобоев (style~0.5с послеLCP),
+готовность карточки после холодной загрузки; затем сетевые задержкиRUM,
+URLInspectionGoogle/справочнаяORK. Касания×20 не завершены из-за недоступного
+nativeChrome; не заявлять PASS. Сервер3156остановлен,.next-cycle6удалён,TSвосстановлены.
+Своеинкогнитоокно закрывалось при проверенномURL, но конечное состояние
+не подтверждено (noWindowsAvailable); не трогать чужие окна.
+Подробности ops/improvement-cycles-20261104/board-stress/RESULT.md.
+Документация после выката остаётся локально, не делать лишний deployрадиотчёта.
+
 ## Codex, 05.11.2026 — запуск 6/20: защита HTTP-редиректов перед ISR
 
 Локально воспроизведён 308 без Location на повторном /en/airport/jfk; на production
