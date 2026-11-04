@@ -1,8 +1,11 @@
 import {validateDate,markDuplicates,sameFlight} from './history.js';
+import {withHistoryLock} from './storage-lock.js';
 // Язык ошибок задаётся экземпляром, формат и ключ истории общие для всех локалей.
 export function createStorage(t){
 // Независимый ключ журнала не затрагивает избранное. Формат backup совместим с прототипом.
-// Web Locks сериализует конкурирующие записи вкладок, сравнение observed отклоняет устаревшую форму.
+// Web Locks / IndexedDB сериализуют конкурирующие записи вкладок; observed
+// отклоняет устаревшую форму. Без обеих блокировок запись запрещена: прежний
+// небезопасный fallback терял данные. Проверено storage-lock.test и браузерами.
 // Commit before updating the UI: quota/private-mode failures must not masquerade
 // as a saved flight. Compare the previous value to reject stale edits in another
 // tab. Imports are validated in full and merged by stable ID, never replacing
@@ -46,17 +49,12 @@ function createStore(storage,codes){let observed,unreadable=false;
  // того же store могла прочитать/импортировать данные и обновить observed:
  // устаревшая форма после этого проходила проверку и стирала новый импорт.
  // Regression: queued import → queued save; старый save обязан отклониться.
- store.writeAsync=flights=>{const expected=observed;
-  return globalThis.navigator?.locks
-   ?navigator.locks.request(KEY,()=>store.write(flights,expected))
-   :Promise.resolve().then(()=>store.write(flights,expected));
- };
+ const transaction=run=>withHistoryLock(KEY,run,()=>Error(t('m149')));
+ store.writeAsync=flights=>{const expected=observed;return transaction(()=>store.write(flights,expected));};
  // Массовый импорт перечитывает актуальную историю ВНУТРИ той же блокировки,
  // что обычное сохранение. Отмена не восстанавливает старый снимок всего журнала:
  // удаляет только записи этой партии, которые с тех пор никто не изменял.
  // Благодаря сравнению полей правки соседней вкладки и новые перелёты сохраняются.
- const transaction=run=>globalThis.navigator?.locks
-  ?navigator.locks.request(KEY,run):Promise.resolve().then(run);
  store.importAsync=(incoming,{allowDuplicates=false}={})=>transaction(()=>{
   const clean=validate({format:FORMAT,version:1,flights:incoming},codes),current=store.read();
   const result=merge(current,clean),existingIds=new Set(current.map(f=>f.id));

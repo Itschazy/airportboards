@@ -1,4 +1,5 @@
 import test from 'node:test';
+import 'fake-indexeddb/auto';
 import assert from 'node:assert/strict';
 import {validateDate,formatHistoryDate,markDuplicates} from '../../public/flight-map/v10/history.js';
 import {createTransfer,exportCSV} from '../../public/flight-map/v10/transfer.js';

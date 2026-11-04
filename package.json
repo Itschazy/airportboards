@@ -81,6 +81,7 @@
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
+    "fake-indexeddb": "6.2.7",
     "tailwindcss": "^4",
     "typescript": "^5"
   },

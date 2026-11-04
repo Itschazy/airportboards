@@ -1,0 +1,51 @@
+<!doctype html><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Проверка блокировки истории — только локально</title>
+<style>body{font:16px system-ui;max-width:680px;margin:24px auto;padding:16px}button{font:inherit;padding:16px}pre{white-space:pre-wrap;overflow-wrap:anywhere}</style>
+<h1>Проверка сохранения перелётов</h1><p>Тестовая история на отдельном локальном порту. Web Locks намеренно отключён только на этой странице.</p>
+<button id="run">Проверить IndexedDB</button><pre id="result">Ожидание</pre>
+<script type="module">
+import {createStorage} from '/flight-map/v10/storage.js';
+const button=document.querySelector('#run'),out=document.querySelector('#result');
+const api=createStorage(key=>key),codes=new Set(['LHR','CDG','JFK']);
+const f=id=>({id,from:'LHR',to:'CDG',date:'2024',number:id});
+const assert=(ok,message)=>{if(!ok)throw Error(message);};
+button.onclick=async()=>{
+ button.disabled=true;out.textContent='Проверка…';let owned=false,db,hold=false;
+ const original=Object.getOwnPropertyDescriptor(navigator,'locks');
+ try{
+  assert(localStorage.getItem(api.KEY)===null,'На этом порту уже есть история — не изменяем её.');
+  owned=true;Object.defineProperty(navigator,'locks',{configurable:true,value:undefined});
+  // Держим чужую readwrite-транзакцию открытой: старая реализация без
+  // настоящей блокировки запишет localStorage ДО её освобождения и упадёт.
+  db=await new Promise((resolve,reject)=>{
+   const r=indexedDB.open(`${api.KEY}-lock`,1);
+   r.onupgradeneeded=()=>r.result.createObjectStore('mutex');
+   r.onsuccess=()=>resolve(r.result);r.onerror=()=>reject(r.error);
+  });
+  const tx=db.transaction('mutex','readwrite'),store=tx.objectStore('mutex');hold=true;
+  const keep=()=>{const r=store.get('hold');r.onsuccess=()=>{if(hold)keep();};};keep();
+  const a=api.createStore(localStorage,codes),b=api.createStore(localStorage,codes);a.read();b.read();
+  const start=performance.now();
+  const saving=Promise.allSettled([a.writeAsync([f('f_a')]),b.writeAsync([f('f_b')])]);
+  await new Promise(r=>setTimeout(r,150));
+  assert(localStorage.getItem(api.KEY)===null,'FAIL: запись обошла занятую транзакцию');hold=false;
+  const results=await saving;
+  assert(results.filter(r=>r.status==='fulfilled').length===1,'FAIL: два устаревших редактора записали данные');
+  assert(results.find(r=>r.status==='rejected').reason.message==='m148','FAIL: ошибка не обозначает конфликт');
+  assert(a.read().length===1,'FAIL: победивший перелёт потерян');
+  const total=performance.now()-start;
+  const imported=await Promise.all([a.importAsync([f('f_c')]),b.importAsync([f('f_d')])]);
+  assert(a.read().length===3,'FAIL: параллельные импорты потеряли данные');
+  await a.undoImportAsync(imported[0].receipt);
+  assert(b.read().length===2&&b.read().some(f=>f.id==='f_d'),'FAIL: отмена удалила чужой импорт');
+  const times=[];for(let i=0;i<20;i++){const begin=performance.now();await a.importAsync([f('f_perf_'+i)]);times.push(performance.now()-begin);}
+  times.sort((a,b)=>a-b);
+  out.textContent=`PASS: ожидание занятой транзакции; один успешный редактор + один конфликт; оба импорта сохранены; отмена не затрагивает чужую запись.\n20 сохранений: медиана ${times[10].toFixed(1)} мс; максимум ${times[19].toFixed(1)} мс.\nКонкурентная проверка с искусственным ожиданием 150 мс: ${total.toFixed(1)} мс.\nЭто настольный браузер, не замер слабого Android.\n${navigator.userAgent}`;
+ }catch(error){out.textContent='FAIL: '+error.message;}
+ finally{
+  hold=false;db?.close();
+  if(original)Object.defineProperty(navigator,'locks',original);else delete navigator.locks;
+  if(owned)localStorage.removeItem(api.KEY);button.disabled=false;
+ }
+};
+</script>
