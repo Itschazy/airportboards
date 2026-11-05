@@ -14,7 +14,7 @@ export const RUM_CATEGORIES = {
 } as const;
 export type RumRecord = { schema: 1; release: string; airport: string; browserMajor: number;
   longTasksSupported: boolean; longTasksTruncated: boolean;
-  edgeHeader: number; originHeader: number; serverCache: string;
+  edgeHeader: number; originHeader: number; serverCache: string; tls: number;
 } & Record<keyof typeof RUM_CATEGORIES, string> & Record<typeof RUM_METRICS[number], number>;
 export function parseRum(input: unknown): RumRecord | null {
   if (!input || typeof input !== 'object' || Array.isArray(input)) return null;
@@ -35,8 +35,8 @@ export function parseRum(input: unknown): RumRecord | null {
     out[key] = Math.round(n);
   }
   // Additive v1 extension: old tabs and the bounded historical journal remain
-  // readable. Absence is unknown, never a zero-duration server response.
-  for (const key of ['edgeHeader', 'originHeader']) {
+  // readable. Absence is unknown, never a zero-duration server response or TLS.
+  for (const key of ['edgeHeader', 'originHeader', 'tls']) {
     const n = x[key] === undefined ? -1 : x[key];
     if (typeof n !== 'number' || !Number.isFinite(n) || n < -1 || n > 300000) return null;
     out[key] = Math.round(n);

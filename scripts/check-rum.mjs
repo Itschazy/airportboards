@@ -31,13 +31,16 @@ test('строгая схема отбрасывает идентификато�
  for(const patch of [{lcp:NaN},{lcp:-1},{lcp:0},{release:'unknown'},{airport:'../../secret'},{longTasksSupported:'yes'},{browserMajor:1.5},{page:'home'}])assert.equal(schema.parseRum({...valid,...patch}),null);
  assert.equal(schema.parseRum({...valid,longTaskTotal:-1}).longTaskTotal,-1);
  assert.equal(schema.parseRum(valid).edgeHeader,-1);
+ assert.equal(schema.parseRum(valid).tls,-1);
+ assert.equal(schema.parseRum({...valid,tls:17.4}).tls,17);
+ for(const tls of [NaN,Infinity,-2,300001,'secret',null])assert.equal(schema.parseRum({...valid,tls}),null);
  assert.equal(schema.parseRum(valid).serverCache,'unknown');
  assert.equal(schema.parseRum({...valid,edgeHeader:12,originHeader:10,serverCache:'MISS'}).originHeader,10);
  for(const patch of [{edgeHeader:NaN},{originHeader:-2},{serverCache:'secret'}])assert.equal(schema.parseRum({...valid,...patch}),null);
 });
-function harness({denied=false,restored=false,firstHidden=Infinity,unsupported=false,failImport=false,longSupported=true,navType='navigate',activationStart=0,libraryOld=false,serverTiming=undefined,transferSize=0,workerStart=0}={}) {
+function harness({denied=false,restored=false,firstHidden=Infinity,unsupported=false,failImport=false,longSupported=true,navType='navigate',activationStart=0,libraryOld=false,serverTiming=undefined,transferSize=0,workerStart=0,secureConnectionStart=15}={}) {
  let callback,imports=0,disconnected=0;const posts=[];let consent=denied?'denied':null;
- const nav={serverTiming,transferSize,workerStart,type:navType,activationStart,nextHopProtocol:'h2',domainLookupEnd:10,domainLookupStart:0,connectEnd:20,connectStart:10,responseStart:500,requestStart:30,responseEnd:700};
+ const nav={serverTiming,transferSize,workerStart,secureConnectionStart,type:navType,activationStart,nextHopProtocol:'h2',domainLookupEnd:10,domainLookupStart:0,connectEnd:20,connectStart:10,responseStart:500,requestStart:30,responseEnd:700};
  const gate={path:'/ru/airport/AYT',firstHidden,restored};
  class PO {static supportedEntryTypes=unsupported?[]:['largest-contentful-paint',...(longSupported?['longtask']:[])];constructor(cb){this.cb=cb;}observe(){}takeRecords(){return [{startTime:100,duration:200},{startTime:1900,duration:400},{startTime:3000,duration:100}];}disconnect(){disconnected++;}}
  const w={__abRumGate:gate};const loc={hostname:'airportsboard.live',origin:'https://airportsboard.live',pathname:gate.path};
@@ -56,6 +59,10 @@ for(const metric of [{navigationType:'back-forward-cache'},{navigationType:'rest
 const timed=harness({transferSize:500,serverTiming:[{name:'ab-edge',duration:40,description:''},{name:'ab-origin',duration:30,description:''},{name:'ab-cache',duration:0,description:'MISS'}]});await timed.mod.startRum();timed.fire();assert.equal(timed.posts[0].payload.edgeHeader,40);assert.equal(timed.posts[0].payload.originHeader,30);assert.equal(timed.posts[0].payload.serverCache,'MISS');
 const cached=harness({transferSize:0,serverTiming:[{name:'ab-edge',duration:40,description:''},{name:'ab-cache',duration:0,description:'HIT'}]});await cached.mod.startRum();cached.fire();assert.equal(cached.posts[0].payload.edgeHeader,-1);assert.equal(cached.posts[0].payload.serverCache,'unknown');
 console.log('PASS actual collector propagates fresh server timings and ignores browser-cache headers');passed++;
+assert.equal(timed.posts[0].payload.tls,5);assert.equal(cached.posts[0].payload.tls,-1);
+const noTls=harness({transferSize:500,secureConnectionStart:0});await noTls.mod.startRum();noTls.fire();assert.equal(noTls.posts[0].payload.tls,-1);
+assert.equal(timed.posts.length,1);assert.ok(JSON.stringify(timed.posts[0].payload).length<4096);
+console.log('PASS TLS duration uses the existing anonymous post; hidden or cached timings remain unknown');passed++;
 const denied=harness();await denied.mod.startRum();denied.deny();denied.fire();assert.equal(denied.posts.length,0);
 const noLong=harness({longSupported:false});await noLong.mod.startRum();noLong.fire();assert.equal(noLong.posts[0].payload.longTaskTotal,-1);
 const offline=harness({failImport:true});await offline.mod.startRum();assert.equal(offline.posts.length,0);assert.equal(offline.disconnected(),1);console.log('PASS hidden/BFCache/prerender/расширения исключены; отзыв согласия, offline и отсутствие API безопасны');passed++;
@@ -69,7 +76,7 @@ assert.equal((await route.POST(request('x'.repeat(4097)))).status,413);
 assert.equal((await route.POST(request('{'))).status,400);
 assert.equal((await route.POST(request(JSON.stringify({...valid,lcp:-1})))).status,400);
 assert.equal((await route.POST(request(undefined,{'user-agent':'audit-bot'}))).status,204);assert.equal(saved.length,0);
-const ok=await route.POST(request(JSON.stringify({...valid,ip:'secret',query:'secret'})));assert.equal(ok.status,204);assert.equal(ok.headers.get('cache-control'),'no-store');assert.equal(saved.length,1);assert.equal(saved[0].ip,undefined);
+const ok=await route.POST(request(JSON.stringify({...valid,tls:75,ip:'secret',query:'secret'})));assert.equal(ok.status,204);assert.equal(ok.headers.get('cache-control'),'no-store');assert.equal(saved.length,1);assert.equal(saved[0].ip,undefined);assert.equal(saved[0].tls,75);
 let limited=false;for(let i=0;i<121;i++)if((await route.POST(request())).status===429)limited=true;assert.ok(limited);console.log('PASS endpoint: origin, потоковый предел, схема, no-store, bot-ignore и общий rate limit');passed++;
 const dir=await fsp.mkdtemp(path.join(os.tmpdir(),'ab-rum-check-')), day=new Date('2026-10-24T12:20:00Z'), bucket=Math.floor(+day/86400000)%14, file=path.join(dir,`rum-${bucket}-0.jsonl`);
 assert.equal(await store.storeRum(valid,day,dir,'0'),true);assert.equal(await store.storeRum(valid,day,dir,'8'),false);
@@ -87,6 +94,10 @@ assert.equal((await reportRum({dir:reportDir,since:'2026-10-24',until:'2026-10-2
 await store.storeRum({...valid,edgeHeader:140,originHeader:100,serverCache:'MISS'},day,reportDir,'2');
 const measured=await reportRum({dir:reportDir,since:'2026-10-24',until:'2026-10-24',by:['serverCache'],filters:{serverCache:'MISS'}});
 assert.equal(measured.records,1);assert.equal(measured.groups[0].metrics.edgeHeader.p75,140);assert.equal(measured.groups[0].metrics.originHeader.n,1);
+assert.equal(measured.groups[0].metrics.tls.n,0);
+await store.storeRum({...valid,tls:75,serverCache:'HIT'},day,reportDir,'3');
+const tlsReport=await reportRum({dir:reportDir,since:'2026-10-24',until:'2026-10-24',by:['serverCache'],filters:{serverCache:'HIT'}});
+assert.equal(tlsReport.groups[0].metrics.tls.p75,75);
 console.log('PASS historical RUM remains unknown; new server durations aggregate separately');passed++;
 // Удаляются только созданные этим тестом случайные временные каталоги, не данные проекта.
 await fsp.rm(dir,{recursive:true});await fsp.rm(reportDir,{recursive:true});

@@ -1,3 +1,16 @@
+## Codex, 05.11.2026 — запуск 12/20: TLS диагностика подготовлена
+
+В111 мобильных navigate прежнегоSHA:6 медленных,4DNS/connect,1render,1прочееTTFB.
+Добавлено необязательное поле tls в прежний RUM POST, старые вкладки совместимы.
+Кэш/worker/reuse/нетAPI/QUIC→unknown, не0; connect и TLS сравниваются внутри записи.
+Новых запросов/идентификаторов нет; это диагностика, не измеренное ускорение.
+13 группRUM,23server+19TLS,48analyzer,tsc,keys12×395,scripts231968/8338,
+build2473,localindex20/20,first-paint5/5,sitemap/AdSense PASS.
+Helper gzip473→606B; не называть этот размер routebundle/LCP.
+3165 остановлен,.next-cycle12 удалён,TS восстановлены; UI не менялся.
+Следом разрешённый push вне прогрева, CI/release/postchecks.
+Протокол ops/improvement-cycles-20261104/tls-timing/RESULT.md.
+
 ## Codex, 05.11.2026 — запуск 11/20: живые тайминги подтверждены
 
 Production остаётся 81b58bfe6b29209a417056b995c1fedf8405b582; fresh origin/main

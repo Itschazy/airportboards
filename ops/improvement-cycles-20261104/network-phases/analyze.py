@@ -124,6 +124,38 @@ def server_summary(rows):
             'requestOutsideNginx': metric(residuals), 'slowRequestOutsideNginx': metric(slow_residuals)}
 
 
+def connection_summary(rows):
+    """TLS is a subset of connect on known HTTP/1.1 or h2 connections only.
+
+    Compare within each row; the pre-TLS remainder is not an exact TCP RTT and
+    may include proxies or coarsened clocks. Older/reused/cache/QUIC timings stay
+    unknown. Count invalid pairs instead of silently turning them into zero.
+    """
+    coverage, slow = collections.Counter(), collections.Counter()
+    tls_values, before_values = [], []
+    for r in rows:
+        tls, connect = r.get('tls', -1), r.get('connect')
+        if tls is None or tls == -1:
+            state = 'unknown'
+        elif not number(tls) or not number(connect) or tls > connect or connect > 300000 or r.get('protocol') not in ('h2', 'http/1.1'):
+            state = 'invalid'
+        else:
+            state = 'paired'
+            tls_values.append(tls)
+            before_values.append(connect - tls)
+        coverage[state] += 1
+        if r['lcp'] > 4000:
+            main, detail = classify(r)
+            if state != 'paired':
+                slow[state] += 1
+            elif main in ('invalid', 'inconsistent', 'unknown') or detail in ('inconsistent', 'unknown'):
+                slow['unusable_browser_phases'] += 1
+            else:
+                slow['tls' if tls > r['lcp'] / 2 else 'before_tls' if connect - tls > r['lcp'] / 2 else 'neither_dominates'] += 1
+    metric = lambda v: {'n': len(v), 'p50': quantile(v, .5), 'p75': quantile(v, .75), 'p90': quantile(v, .9)}
+    return {'coverage': dict(coverage), 'tls': metric(tls_values), 'connectBeforeTls': metric(before_values), 'slowDominant': dict(slow)}
+
+
 def read_rows(root, since, until, navigation='navigate'):
     files, rows = [], []
     invalid = oversized = 0
@@ -179,7 +211,8 @@ def summarize(rows):
     return {'n': len(rows), 'smallSample': len(rows) < 50, 'slow': len(slow),
             'slowPercent': round(100 * len(slow) / len(rows), 2) if rows else None,
             'slowPhases': dict(phases), 'preByteDetails': dict(network),
-            'renderMemory': dict(render_memory), 'metrics': metrics, 'serverTiming': server_summary(rows)}
+            'renderMemory': dict(render_memory), 'metrics': metrics, 'serverTiming': server_summary(rows),
+            'connectionTiming': connection_summary(rows)}
 
 
 def report(root, since, until, navigation='navigate', release=None):

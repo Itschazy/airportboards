@@ -26,3 +26,23 @@ export function readServerTiming(nav: TimingNav): { edgeHeader: number; originHe
   const hasOrigin = ['MISS', 'BYPASS', 'EXPIRED', 'REVALIDATED'].includes(state);
   return { edgeHeader: Math.round(edge), originHeader: hasOrigin && valid(origin) && origin <= edge + 10 ? Math.round(origin) : -1, serverCache: state };
 }
+
+/** Field samples showed multi-second connect durations with fast nginx headers.
+ * connectEnd-connectStart includes TLS; it cannot tell whether waiting happened
+ * before or during the secure handshake. Keep this one duration in the existing
+ * anonymous report, not timestamps or another request. Cached/worker responses,
+ * reused connections, missing API and invalid order remain unknown (-1). QUIC
+ * combines transport and security, so do not give HTTP/3 the TCP/TLS interpretation.
+ * The remainder before TLS may include proxies/clock coarsening; it is not an RTT.
+ */
+export function readTlsTiming(nav: Pick<PerformanceNavigationTiming,
+  'connectStart' | 'secureConnectionStart' | 'connectEnd' | 'requestStart' |
+  'nextHopProtocol' | 'transferSize' | 'workerStart'>): number {
+  const { connectStart: start, secureConnectionStart: secure, connectEnd: end } = nav;
+  if (!(nav.transferSize > 0) || nav.workerStart !== 0
+    || !['h2', 'http/1.1'].includes(nav.nextHopProtocol)
+    || ![start, secure, end, nav.requestStart].every(Number.isFinite)
+    || start < 0 || secure <= 0 || end <= start || secure < start || secure > end
+    || end > nav.requestStart || end - start > 300000) return -1;
+  return Math.round(end - secure);
+}

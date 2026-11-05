@@ -5,7 +5,7 @@ import path from 'node:path';
 import os from 'node:os';
 import { pathToFileURL } from 'node:url';
 export const dimensions = ['release', 'browser', 'browserMajor', 'device', 'platform', 'page', 'locale', 'airport', 'network', 'memory', 'protocol', 'navigation', 'target', 'serverCache'];
-const metrics = ['lcp', 'ttfb', 'fcp', 'dns', 'connect', 'request', 'html', 'resourceLoadDelay', 'resourceLoadDuration', 'elementRenderDelay', 'longTaskTotal', 'longTaskMax', 'scriptBytes', 'edgeHeader', 'originHeader'];
+const metrics = ['lcp', 'ttfb', 'fcp', 'dns', 'connect', 'tls', 'request', 'html', 'resourceLoadDelay', 'resourceLoadDuration', 'elementRenderDelay', 'longTaskTotal', 'longTaskMax', 'scriptBytes', 'edgeHeader', 'originHeader'];
 const quantile = (values, p) => values.length ? values.slice().sort((a,b) => a-b)[Math.ceil(values.length*p)-1] : null;
 export async function reportRum({dir, since = new Date(Date.now()-6*86400000).toISOString().slice(0,10), until = new Date().toISOString().slice(0,10), by = ['release','browser','device','page','navigation'], filters = {}, minLcp = 0}) {
   if (![since,until].every(v => /^\d{4}-\d{2}-\d{2}$/.test(v)) || since > until) throw Error('Неверный интервал дат UTC');

@@ -25,3 +25,22 @@ check('arbitrary description rejected',{...nav,serverTiming:[timing('ab-edge',5)
 check('inconsistent origin is omitted',{...nav,serverTiming:[timing('ab-edge',20),timing('ab-origin',100),timing('ab-cache',0,'MISS')]},{edgeHeader:20,originHeader:-1,serverCache:'MISS'});
 check('edge cannot exceed browser request by seconds',{...nav,serverTiming:[timing('ab-edge',2000),timing('ab-cache',0,'MISS')]},unknown);
 console.log(`PASS ${passed} server timing controls`);
+
+const tls=ctx.exports.readTlsTiming;
+const connection={transferSize:500,workerStart:0,nextHopProtocol:'h2',connectStart:10,secureConnectionStart:30,connectEnd:90,requestStart:100};
+let tlsPassed=0;
+for(const [name,patch,expected] of [
+ ['new h2 connection',{},60],['HTTP/1.1',{nextHopProtocol:'http/1.1'},60],
+ ['TLS includes entire measured connection',{secureConnectionStart:10},80],
+ ['zero rounded TLS is measured',{secureConnectionStart:90},0],
+ ['fractional clocks',{secureConnectionStart:30.3,connectEnd:90.8},61],
+ ['reused connection',{connectStart:30,connectEnd:30},-1],
+ ['unavailable TLS',{secureConnectionStart:0},-1],['missing API',{secureConnectionStart:undefined},-1],
+ ['unknown protocol',{nextHopProtocol:''},-1],['QUIC overlap',{nextHopProtocol:'h3'},-1],
+ ['cached document',{transferSize:0},-1],['worker',{workerStart:1},-1],
+ ['TLS before connect',{secureConnectionStart:9},-1],['TLS after connect',{secureConnectionStart:91},-1],
+ ['connect after request',{requestStart:89},-1],['negative start',{connectStart:-1},-1],
+ ['infinite clock',{connectEnd:Infinity},-1],['NaN clock',{secureConnectionStart:NaN},-1],
+ ['too long',{connectEnd:300011,requestStart:300012},-1],
+]) { assert.equal(tls({...connection,...patch}),expected,name);tlsPassed++; }
+console.log(`PASS ${tlsPassed} TLS controls: new/reused/cache/worker/QUIC, clock ordering, unknown is not zero`);

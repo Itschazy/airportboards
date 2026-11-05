@@ -2,7 +2,7 @@
 import json
 from pathlib import Path
 import tempfile
-from analyze import classify, report, summarize, server_pair, server_summary
+from analyze import classify, report, summarize, server_pair, server_summary, connection_summary
 
 base = dict(schema=1, hour='2026-11-04T13', release='123456789abc', browser='chrome',
             device='mobile', navigation='navigate', page='departures', memory='low',
@@ -100,4 +100,21 @@ assert s['coverage'] == {'paired': 4, 'unknown': 1}
 assert s['requestOutsideNginx']['p75'] == 100  # Not p75(request)-p75(edge) = 50.
 assert s['originHeader']['n'] == 0 and s['edgeHeader']['n'] == 4
 n += 1
-print(f'PASS {n} controls: paired phases/server clocks, old records, stale cache, rounding, missing API, invalid sums, sample scope, bounded files')
+for patch, coverage, cause in [
+    ({}, 'unknown', 'unknown'),
+    ({'tls': 3500, 'connect': 4000, 'dns': 100, 'request': 500, 'protocol': 'h2'}, 'paired', 'tls'),
+    ({'tls': 100, 'connect': 4000, 'dns': 100, 'request': 500, 'protocol': 'http/1.1'}, 'paired', 'before_tls'),
+    ({'tls': 0, 'protocol': 'h2'}, 'paired', 'neither_dominates'),
+    ({'tls': 1501, 'protocol': 'h2'}, 'invalid', 'invalid'),
+    ({'tls': 100, 'protocol': 'h3'}, 'invalid', 'invalid'),
+    ({'tls': float('nan'), 'protocol': 'h2'}, 'invalid', 'invalid'),
+    ({'tls': True, 'protocol': 'h2'}, 'invalid', 'invalid'),
+    ({'tls': 100, 'protocol': 'h2', 'request': 9999}, 'paired', 'unusable_browser_phases'),
+]:
+    s = connection_summary([{**base, **patch}])
+    assert s['coverage'] == {coverage: 1} and s['slowDominant'] == {cause: 1}, s
+    n += 1
+s = connection_summary([base, {**base, 'tls': 100, 'protocol': 'h2'}])
+assert s['tls']['n'] == 1 and s['connectBeforeTls']['p75'] == 1400
+n += 1
+print(f'PASS {n} controls: paired phases/server/TLS clocks, old records, stale cache, rounding, missing API, invalid sums, sample scope, bounded files')
