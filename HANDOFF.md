@@ -1,3 +1,22 @@
+## Codex, 05.11.2026 — запуск 14/20: справочная ORK готова к выкату
+
+Worktree runwayboard-flight-map-prototype-20261028, codex/flight-map-prototype-20261028;
+исходный6d518eb0, production/origin/main2cde8bd734ac99e1f2b10c4d788d2ac231025c2e.
+Пять официальных блоков Корка ×12языков, ChatGPT проверил55 переводных блоков;
+7языковых уточнений приняты. Факты/источники в collection/log-ork-20261105.md,
+рецензия в translation/review-ork-20261105.md. Дизайн/DNS/клиентскийJS не менялись.
+
+Guidefresh188×12 PASS, scripts232148/8350, keys12×395, tsc, fixturebuild2473,
+localindex20/20,paint5/5,sitemap/AdSense PASS. 24страницы:5текстов и5FAQответов,
+canonical/robots/hreflang; пустые arrivals ожидаемоnoindex. Mobile375:RU/DE/JA/AR,
+RTL/переносы/раскрытие/закрытие, снимки. Не физический Safari/Android.
+Local3166 остановлен, свой build/TS очищены. Данные/аккаунты/реклама сохранены.
+
+RUM прежнегоSHA:128mobile navigate,p75LCP1544,3slow;TLS62known/66unknown,
+один slowChrome доTLS. Недостаточно для изменения серверной конфигурации.
+Следом разрешённый выкат вне прогрева,CI/фактическийrelease/postchecks.
+Протокол ops/improvement-cycles-20261104/ork-guide/RESULT.md. Серию не продлевать.
+
 ## Codex, 05.11.2026 — запуск 13/20: Google Inspection и мобильный TLS
 
 Production/origin/main остаётся 2cde8bd734ac99e1f2b10c4d788d2ac231025c2e.

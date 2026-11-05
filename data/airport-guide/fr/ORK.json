@@ -1,0 +1,30 @@
+{
+  "iata": "ORK",
+  "blocks": {
+    "transport": {
+      "title": "Accès",
+      "hint": "Bus 225 et 226",
+      "text": "Les bus 225 et 226 de Bus Éireann partent de l’arrêt A vers Parnell Place Bus Station et Kent Train Station. Le trajet de l’aéroport à Parnell Place Bus Station dure en moyenne 25 minutes. Les billets s’achètent auprès du conducteur uniquement en espèces, au distributeur dans le terminal ou dans l’application TFI Go."
+    },
+    "taxi": {
+      "title": "Taxis",
+      "hint": "Centre-ville : environ 20 €",
+      "text": "La station de taxis se trouve juste devant le terminal. Le trajet entre l’aéroport et le centre-ville de Cork coûte environ 20 €. Le prix est calculé au taximètre ; les passagers ont droit à un reçu imprimé lors du paiement."
+    },
+    "terminals": {
+      "title": "Terminal",
+      "hint": "Contrôle de sûreté dès 04:00",
+      "text": "Les passagers au départ peuvent accéder au terminal à toute heure, sauf le jour de Noël, où l’aéroport est fermé au public. Le contrôle de sûreté ouvre tous les jours à 04:00."
+    },
+    "parking": {
+      "title": "Parking",
+      "hint": "Parking : 15 minutes gratuites",
+      "text": "Au parking de courte durée, les 15 premières minutes sont gratuites ; le tarif sans réservation pour un stationnement allant jusqu’à 1 heure est de 2,50 €. Un cheminement piéton couvert relie le parking au terminal. Sur la voie distincte Set Down Lane pour déposer ou récupérer des passagers, seules les 10 premières minutes sont gratuites ; des frais s’appliquent ensuite."
+    },
+    "wifi": {
+      "title": "Wi-Fi",
+      "hint": "Gratuit, sans inscription",
+      "text": "Le Wi-Fi gratuit est disponible dans tout le terminal sur le réseau Cork Airport Wi-Fi. Aucune inscription n’est nécessaire et la durée d’utilisation est illimitée. Des bornes internet permettant d’imprimer des documents se trouvent près de l’escalator, avant le contrôle de sûreté."
+    }
+  }
+}

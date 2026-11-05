@@ -1,0 +1,30 @@
+{
+  "iata": "ORK",
+  "blocks": {
+    "transport": {
+      "title": "Ulaşım",
+      "hint": "225 ve 226 numaralı otobüsler",
+      "text": "Bus Éireann’ın 225 ve 226 numaralı otobüsleri A durağından Parnell Place Bus Station ve Kent Train Station yönüne hareket eder. Havalimanından Parnell Place Bus Station’a yolculuk ortalama 25 dakika sürer. Biletler şoförden yalnızca nakit ödemeyle, terminal içindeki bilet makinesinden veya TFI Go uygulamasından alınabilir."
+    },
+    "taxi": {
+      "title": "Taksi",
+      "hint": "Şehir merkezine yaklaşık 20 €",
+      "text": "Taksi durağı terminal binasının hemen dışındadır. Havalimanı ile Cork şehir merkezi arasındaki yolculuk yaklaşık 20 € tutar. Ücret taksimetreyle hesaplanır; yolcular ödeme sırasında basılı makbuz alma hakkına sahiptir."
+    },
+    "terminals": {
+      "title": "Terminal",
+      "hint": "Güvenlik kontrolü 04:00’te açılır",
+      "text": "Giden yolcular, havalimanının halka kapalı olduğu Noel Günü dışında terminale günün her saatinde girebilir. Yolcu güvenlik kontrolü her gün 04:00’te açılır."
+    },
+    "parking": {
+      "title": "Otopark",
+      "hint": "Otopark: ilk 15 dakika ücretsiz",
+      "text": "Kısa süreli otoparkta ilk 15 dakika ücretsizdir; rezervasyonsuz girişte 1 saate kadar park ücreti 2,50 €’dur. Üstü kapalı bir yaya yolu otoparkı terminale bağlar. Yolcu indirme ve bindirme için ayrılmış Set Down Lane şeridinde yalnızca ilk 10 dakika ücretsizdir; sonrasında ücret alınır."
+    },
+    "wifi": {
+      "title": "Wi-Fi",
+      "hint": "Ücretsiz, kayıt gerektirmez",
+      "text": "Terminalin tamamında Cork Airport Wi-Fi ağı üzerinden ücretsiz Wi-Fi sunulur. Kayıt gerekmez ve süre sınırı yoktur. Belge yazdırılabilen internet kioskları, güvenlik kontrolünden önce yürüyen merdivenin yanındadır."
+    }
+  }
+}

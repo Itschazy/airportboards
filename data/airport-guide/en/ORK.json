@@ -1,0 +1,30 @@
+{
+  "iata": "ORK",
+  "blocks": {
+    "transport": {
+      "title": "Getting there",
+      "hint": "Buses 225 and 226",
+      "text": "Bus Éireann services 225 and 226 leave Stop A for Parnell Place Bus Station and Kent Train Station. The journey from the airport to Parnell Place Bus Station takes an average of 25 minutes. Tickets can be bought from the driver with cash only, at the ticket machine inside the terminal or through the TFI Go app."
+    },
+    "taxi": {
+      "title": "Taxis",
+      "hint": "City centre: around €20",
+      "text": "The taxi rank is directly outside the terminal building. A journey between the airport and Cork city centre costs approximately €20. Fares are calculated on the meter; passengers are entitled to a printed receipt when paying."
+    },
+    "terminals": {
+      "title": "Terminal",
+      "hint": "Security opens at 04:00",
+      "text": "Departing passengers can access the terminal around the clock, except on Christmas Day, when the airport is closed to the public. Passenger security opens daily at 04:00."
+    },
+    "parking": {
+      "title": "Parking",
+      "hint": "Parking: 15 minutes free",
+      "text": "The first 15 minutes in the short-term car park are free; the drive-up rate for a stay of up to 1 hour is €2.50. A covered walkway connects the car park to the terminal. In the separate Set Down Lane for dropping off and collecting passengers, only the first 10 minutes are free; charges apply after that."
+    },
+    "wifi": {
+      "title": "Wi-Fi",
+      "hint": "Free, no registration",
+      "text": "Free Wi-Fi is available throughout the terminal on the Cork Airport Wi-Fi network. No registration is required and there is no time limit. Internet kiosks with document printing are beside the escalator before security."
+    }
+  }
+}

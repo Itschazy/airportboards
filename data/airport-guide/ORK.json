@@ -1,0 +1,46 @@
+{
+  "iata": "ORK",
+  "checked": "2026-11-05",
+  "blocks": [
+    {
+      "id": "transport",
+      "title": "Как доехать",
+      "hint": "Автобусы 225 и 226",
+      "text": "Автобусы Bus Éireann 225 и 226 отправляются от остановки A к Parnell Place Bus Station и Kent Train Station. Поездка от аэропорта до Parnell Place Bus Station занимает в среднем 25 минут. Билет можно купить у водителя только за наличные, в автомате внутри терминала или в приложении TFI Go.",
+      "source": "corkairport.com",
+      "url": "https://www.corkairport.com/to-from-the-airport/by-bus"
+    },
+    {
+      "id": "taxi",
+      "title": "Такси",
+      "hint": "До центра — около €20",
+      "text": "Стоянка такси находится непосредственно у здания терминала. Поездка между аэропортом и центром Корка стоит примерно €20. Стоимость рассчитывается по таксометру; при оплате пассажир имеет право получить распечатанный чек.",
+      "source": "corkairport.com",
+      "url": "https://www.corkairport.com/to-from-the-airport/by-taxi"
+    },
+    {
+      "id": "terminals",
+      "title": "Терминал",
+      "hint": "Досмотр с 04:00",
+      "text": "Терминал доступен вылетающим пассажирам круглосуточно, кроме Рождества, когда аэропорт закрыт для посетителей. Досмотр пассажиров открывается ежедневно в 04:00.",
+      "source": "corkairport.com",
+      "url": "https://www.corkairport.com/at-the-airport/contacts-services"
+    },
+    {
+      "id": "parking",
+      "title": "Парковка",
+      "hint": "Парковка: 15 минут бесплатно",
+      "text": "На краткосрочной парковке первые 15 минут бесплатны; тариф при въезде без бронирования за стоянку до 1 часа — €2.50. Парковка соединена с терминалом крытым пешеходным переходом. В отдельной полосе Set Down Lane для высадки и встречи пассажиров бесплатно только первые 10 минут; затем взимается плата.",
+      "source": "corkairport.com",
+      "url": "https://www.corkairport.com/parking/short-term-car-parking"
+    },
+    {
+      "id": "wifi",
+      "title": "Wi-Fi",
+      "hint": "Бесплатно, без регистрации",
+      "text": "Бесплатный Wi-Fi доступен во всём терминале: сеть Cork Airport Wi-Fi. Подключение не требует регистрации, время пользования не ограничено. Интернет-киоски с возможностью печати документов расположены у эскалатора до досмотра.",
+      "source": "corkairport.com",
+      "url": "https://www.corkairport.com/at-the-airport/contacts-services/wi-fi-printing-services"
+    }
+  ]
+}

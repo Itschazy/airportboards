@@ -1,0 +1,30 @@
+{
+  "iata": "ORK",
+  "blocks": {
+    "transport": {
+      "title": "Anreise",
+      "hint": "Busse 225 und 226",
+      "text": "Die Busse 225 und 226 von Bus Éireann fahren von Haltestelle A zur Parnell Place Bus Station und zur Kent Train Station. Die Fahrt vom Flughafen zur Parnell Place Bus Station dauert durchschnittlich 25 Minuten. Fahrkarten sind beim Fahrer nur gegen Bargeld, am Automaten im Terminal oder über die App TFI Go erhältlich."
+    },
+    "taxi": {
+      "title": "Taxi",
+      "hint": "Ins Zentrum: etwa 20 €",
+      "text": "Der Taxistand liegt direkt vor dem Terminalgebäude. Eine Fahrt zwischen dem Flughafen und dem Stadtzentrum von Cork kostet etwa 20 €. Der Fahrpreis wird mit dem Taxameter berechnet; bei der Zahlung haben Fahrgäste Anspruch auf eine ausgedruckte Quittung."
+    },
+    "terminals": {
+      "title": "Terminal",
+      "hint": "Sicherheitskontrolle ab 04:00",
+      "text": "Abfliegende Passagiere haben rund um die Uhr Zugang zum Terminal, außer am ersten Weihnachtstag, an dem der Flughafen für die Öffentlichkeit geschlossen ist. Die Sicherheitskontrolle öffnet täglich um 04:00."
+    },
+    "parking": {
+      "title": "Parken",
+      "hint": "Parken: 15 Minuten kostenlos",
+      "text": "Auf dem Kurzzeitparkplatz sind die ersten 15 Minuten kostenlos; ohne Vorabbuchung kostet ein Aufenthalt von bis zu 1 Stunde 2,50 €. Ein überdachter Fußweg verbindet den Parkplatz mit dem Terminal. In der separaten Set Down Lane zum Bringen und Abholen von Reisenden sind nur die ersten 10 Minuten kostenlos; danach fallen Gebühren an."
+    },
+    "wifi": {
+      "title": "WLAN",
+      "hint": "Kostenlos, ohne Registrierung",
+      "text": "Kostenloses WLAN ist im gesamten Terminal über das Netzwerk Cork Airport Wi-Fi verfügbar. Eine Registrierung ist nicht erforderlich, die Nutzung ist zeitlich unbegrenzt. Internetterminals mit Druckfunktion befinden sich neben der Rolltreppe vor der Sicherheitskontrolle."
+    }
+  }
+}
