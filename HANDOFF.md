@@ -1,3 +1,28 @@
+## Codex, 05.11.2026 — запуск 18/20: уточнены RUH/Safari и сетевые задержки
+
+Копия /Users/whereiszhenya/projects/runwayboard-flight-map-prototype-20261028,
+ветка codex/flight-map-prototype-20261028, базаbaafcc89; freshmain57c5af40.
+Продукт не менялся, push/CI/deploy нет. Документацию отдельно не пушить.
+Профиль6× запуска17 не удалось экспортировать/повторить: CUA noWindowsAvailable,
+привязка вкладки timeoutMs даже послеreset; foreground занят другой задачей.
+После «продолжай» владельца появилась форма Save, но файла/валидного повтора нет.
+Не принимать AXsession#2 со старой screenshot#1 за новый замер. Обхода CUA нет.
+
+Свежий RUM currentrelease:115mobileNavigate,p75LCP1812мс,6slow:
+4DNS/connect,1requestoutside nginx,1render. Поздний отдельный срез7slow:
+RUH/Safari/n1 LCP5330,TTFB2623,render2707; это следующий сценарий воспроизведения.
+TAS/Samsung/n1 LCP24644,TTFB23910,request15615,edge56:15559мс вне nginx;
+не диагноз оператора или React. LWN/ЯндексСтарт/n3 доминируетDNS.
+Разные часы/сети/страницы, не before/after; малые подгруппы не обобщать.
+
+Fixturebuild2473,tscпослеbuild,keys12×395,index20/20 PASS;UI не менялся.
+Свой3169остановлен,.next-cycle18удалён,generatedTSвосстановлены.
+Дизайн/DNS/SEO/данные/прогрев/аккаунты/реклама сохранены, платных запросов нет.
+Протокол ops/improvement-cycles-20261104/chrome-profile-cycle18/RESULT.md;
+артефакты одноимённой папки outputs/improvement-cycles-20261104 в папке чата.
+Следующий19/20: восстановить стабильный ввод CUA,6×/20× повторы,LCP/CLS,RUH/Safari.
+Серию не продлевать; не начинать спекулятивные правки при недоступном измерении.
+
 ## Codex, 05.11.2026 — запуск 17/20: первый профиль Chrome, повторение заблокировано
 
 Worktree /Users/whereiszhenya/projects/runwayboard-flight-map-prototype-20261028,
