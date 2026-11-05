@@ -1,3 +1,36 @@
+## Codex, 05.11.2026 — запуск 17/20: первый профиль Chrome, повторение заблокировано
+
+Worktree /Users/whereiszhenya/projects/runwayboard-flight-map-prototype-20261028,
+ветка codex/flight-map-prototype-20261028. База локально1d9235a0,
+свежий origin/main57c5af40ff29123263734070c8fbbd856ff34137. Продукт не менялся,
+нового push/CI/deploy нет. Документацию отдельно не пушить.
+
+Получена одна настоящая Chrome Performance запись localhost:3169/ru/airport/KZN
+на fixture production build:375×812,Slow4G,CPU6×,cache disabled подтверждены AX.
+В диапазоне0–4,944с Rendering582/Scripting517/Paint190мс; это НЕ LCP.
+Точный LCP/CLS не извлечён, повторяемость не доказана, расширения участвуют
+в профиле. Не считать физическим Android или доказательством ускорения.
+CUA перестал выполнять экспорт/переключение; координатный клик -10005
+noWindowsAvailable. Переподключение не помогло; запрос владельцу вывести окно
+на передний план отправлен. AX и screenshot сохранены, rawtrace не экспортирован.
+Не обходить CUA через CDP/Playwright. По diagnosing-bugs без повторяемого
+воспроизведения продукт не править. Следующий18/20: экспорт +3повтора6×,
+отдельно20×, затем LCP-element/phase/CLS и лишь подтверждённая гипотеза.
+
+Свежий агрегат RUM05.11UTC/runtime57c5:57mobileNavigate,LCPp75=1812мс,
+3slow>4с; все3 классифицированы DNS/connect до первого байта. ServerTiming
+56пар/1unknown,edgep75=117;TLS32known/25unknown. Chrome13/p752308/1slow,
+Safari12/865/0,Яндекс11/1272/0,ЯндексСтарт20/1876/2. Группы малы, источники
+все; не сравнение до/после и не доказанная причина операторов или React.
+
+Build2473,tsc послеbuild,keys12×395,index20/20 PASS. UI/SEO/DNS/данные/прогрев
+не менялись; платных запросов и действий аккаунтов нет,AdSenseне повторяли.
+Свой3169остановлен,.next-cycle17удалён,generatedTSвосстановлены;профильChrome
+оставлен для экспорта, повтор загрузки требует старта локального сервера.
+Протокол ops/improvement-cycles-20261104/chrome-profile-cycle17/RESULT.md,
+артефакты outputs/improvement-cycles-20261104/chrome-profile-cycle17 папки чата.
+Серию не продлевать. Без действующего браузерного ввода не заявлять новый замер.
+
 ## Codex, 05.11.2026 — запуск 16/20 завершён: Джерси в sitemap
 
 Runtime/origin/main: 57c5af40ff29123263734070c8fbbd856ff34137.
