@@ -1,3 +1,36 @@
+## Codex, 05.11.2026 — запуск 12/20 завершён: TLS выкачен
+
+Runtime/origin/main 2cde8bd734ac99e1f2b10c4d788d2ac231025c2e.
+Push04:56:04 Amsterdam вне прогрева; CI41964652663 success03:58:54UTC.
+Серверный HEAD/health совпали,3pm2online,restart105. Публичный layoutJS совпал
+SHA256 с серверной сборкой; новый helper точно доставляется.
+
+В существующий анонимный RUM добавлено одно необязательное число tls.
+Данные отличают защищённое согласование от остального connect; старые вкладки
+совместимы. Cache/reuse/worker/нетAPI/QUIC остаются unknown, не нулём.
+Причина: до выката111 мобильных navigate,6 медленных,4DNS/connect,1render,1прочееTTFB.
+Это диагностика, ускорениеLCP не заявлено. Никаких новых запросов/ID/cookies/URL.
+
+Проверки:13 группRUM,23server+19TLS,48analyzer,tscдо/после/послеочистки,
+keys12×395,scripts231968/8338,build2473,localindex20/20,paint5/5,sitemap/AdSense PASS.
+Production index20/20,sitemap/hreflang/gzip,live-refresh,AdSense PASS.
+Первый liveRefresh2/7<10мин, платная покупка не инициировалась.
+Helpergzip473→606B (+133); это не routebundle/AndroidLCP.
+3165 остановлен,.next-cycle12 удалён,TS восстановлены; UI не менялся.
+
+Первые2живыеRUM новогоSHA:desktopSafari TLS334мс, mobileЯндекс unknown.
+Мобильныйnavigate пока1unknown. Не заявлять полевую мобильнуюTLSвыборку/ускорение.
+Оператора/страну/причинуunknown не знаем. Сырые RUM не копировались.
+Дизайн/DNS/SEO/данные/аккаунты/реклама/nginx не менялись,AdSense03.11неповторяли.
+Наproduction толькоaudit-bot, браузера и платныхAPIнебыло.
+
+Протокол:ops/improvement-cycles-20261104/tls-timing/RESULT.md.
+Артефакты:outputs/improvement-cycles-20261104/tls-timing в папке чата.
+Следующий13/20:собрать мобильныеTLSпары в активныечасы и использовать имеющиесяполя,
+не добавлять телеметрию без подтверждённойнужды. GoogleURLInspection/ORK остаются
+в очереди,в этомзапускене проверялись. Сериюиз20не продлевать.
+Документационныйкоммитпослевыката отдельнонепушить.
+
 ## Codex, 05.11.2026 — запуск 12/20: TLS диагностика подготовлена
 
 В111 мобильных navigate прежнегоSHA:6 медленных,4DNS/connect,1render,1прочееTTFB.
