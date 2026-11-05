@@ -1,3 +1,31 @@
+## Codex, 05.11.2026 — запуск 16/20 завершён: Джерси в sitemap
+
+Runtime/origin/main: 57c5af40ff29123263734070c8fbbd856ff34137.
+Рабочая копия /Users/whereiszhenya/projects/runwayboard-flight-map-prototype-20261028;
+ветка codex/flight-map-prototype-20261028.
+Push09:06:20 Amsterdam вне окна, CI41991951580 success08:08:57UTC.
+ServerHEAD/health совпали;3pm2online/restarts108.
+
+Добавлены только12 основных JER; ORK сохранён. Прилёты, прогрев, UI/JS,
+дизайн, DNS, тексты и checked30.10 не менялись. История фактчека/переводов
+прочитана, новый фактчек официальных сайтов05.11 не заявлен.
+Локально: fixturebuild2473,tscдо/после/cleanup,guidefresh188×12,
+scripts232148/8351,keys12×395,regressionотбора,sitemap-shards/routes,
+index20/20,scope/hreflang,AdSense,24HTMLJER PASS. Свой3168/build очищен.
+Production: index20/20,sitemap/hreflang/gzip,live-refresh3/6<10мин,AdSense,
+scope21296URL/513parents/500arrivals PASS. JER12/12(shard7),ORK12/12(shard12).
+24HTMLJER:about,4видимыхблока,4FAQответа,metadata PASS. Все24index наprod.
+
+RUM текущего на старте SHA487d:53mobileNavigate,p75LCP1812мс,2slow.
+05.11UTC все релизы:493,p751775,18slow;Chrome94/7slow,изних2render.
+Это разные сети/страницы/релизы, не эксперимент до/после; ускорение не заявлено.
+RawRUM не копировался. Аккаунты/реклама/данные сохранены,AdSense03.11не повторяли.
+Следующий17/20: воспроизводимый профиль Chrome на локальной фикстуре с
+проверенным CPU/network throttling. Не называть NodeCPU замером AndroidLCP.
+Протокол ops/improvement-cycles-20261104/jersey-discovery/RESULT.md,
+артефакты outputs/improvement-cycles-20261104/jersey-discovery папки чата.
+Серию не продлевать. Документацию отдельно не пушить.
+
 ## Codex, 05.11.2026 — запуск 16/20: Джерси готов к выкату
 
 Worktree runwayboard-flight-map-prototype-20261028, ветка codex/flight-map-prototype-20261028.
