@@ -1,3 +1,22 @@
+## Codex, 05.11.2026 — запуск 9/20: реальные сетевые задержки
+
+Runtime остаётся fed2653cb8fbee542fef9d06442cac93f9541973; origin/main и health проверены.
+Приложение не менялось, новый выкат не нужен. Добавлены только ops/network-phases
+анализатор, 16 контрольных сценариев, безопасный audit-bot HTTP sample и отчёт.
+За 04.11: 1933 мобильных navigate на табло, 69 LCP>4с; у57 преобладает TTFB,
+из них22 DNS/connect,13 request-roundtrip,15 неразделённое время,7 смешанных.
+У12 преобладает render. На новомSHA только37замеров, Chrome5: эффектавыката
+не доказывает. Неделя теперь исключает главную:85 медленныхChrome, не прежние94.
+12HTTPS origin TTFB33–224мс,12сMac541–1276мс; это не T2/Android/нагрузочный тест.
+RUM raw не выгружался, фильтры/неполныеAPI/ограничения описаны в RESULT.md.
+Build2473,tscдо/после,keys12×395,scripts231968,RUM10групп,localindex20/20,
+first-paint5/5,sitemap/hreflang,AdSense PASS. UI не менялся; Chrome binding снова
+timeoutMs, Android PASS не заявлен. Сервер3162 остановлен,build/TS/pycache очищены.
+Следующий10/20: Server-Timing для разделения backend/cache и сети (сначала локальный
+HIT/MISS/STALE тест), либо SEO URLInspection/ORK при доступном браузере. DNS не менять.
+Документационные коммиты отдельно не пушить. Полный протокол:
+ops/improvement-cycles-20261104/network-phases/RESULT.md.
+
 ## Codex, 05.11.2026 — запуск 8/20 завершён: production fed2653c
 
 Runtime fed2653cb8fbee542fef9d06442cac93f9541973, push00:56:36Amsterdam вне прогрева.
