@@ -1,3 +1,15 @@
+## Codex, 05.11.2026 — запуск 10/20 завершён: Server-Timing выкачен
+
+Runtime81b58bfe6b29209a417056b995c1fedf8405b582; push02:49:48Amsterdam вне прогрева,
+CI41951148853success,серверHEAD/healthсовпали,3pm2online/restart104.
+nginx-t/reload01:53:55UTC успешны; backup в sites-available/airportsboard.before-timing-20261105T015355Z.
+Заголовки/canonical12локалей,STALE→HITбезorigin,APIбезновогозаголовка PASS.
+Postchecksindex20/20,sitemap/hreflang,live-refresh,AdSense PASS. Дизайн/DNS/данные сохранены.
+Пока0живыхRUMновогоSHA; не заявлять доказанный сбор живых таймингов или ускорениеLCP.
+Следующий11/20: проверить реальные edge/origin/cache, затем GoogleURLInspection/ORK.
+Документацию отдельно не пушить. Полный протокол/хэши/откат:
+ops/improvement-cycles-20261104/server-timing/RESULT.md.
+
 ## Codex, 05.11.2026 — запуск 10/20: Server-Timing подготовлен
 
 RUM получает edgeHeader/originHeader/serverCache из заголовков nginx. Это разделение

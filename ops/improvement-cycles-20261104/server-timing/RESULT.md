@@ -76,4 +76,29 @@ cache policy, API locations не менять. На root запускать inst
 https://nginx.org/en/docs/http/ngx_http_headers_module.html
 https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Server-Timing
 
-Результаты выката дописываются после проверки фактического релиза.
+Результаты выката и его ограничения ниже.
+
+## Фактический выкат
+
+Runtime 81b58bfe6b29209a417056b995c1fedf8405b582. Push05.11 02:49:48Amsterdam,
+вне прогрева. Actions41951148853success (01:52:08UTC). Серверный HEAD и health
+81b58bfe6b29 совпали; три pm2 online, restart104.
+
+nginx применён 01:53:55UTC (02:53:55Amsterdam), nginx -t/reload успешны.
+Исходный SHA256:063213d205c869a34ca42db9c1b9f56f236be0894d7afe2ca802f4d4a08ce681.
+Установленный SHA256:9b227387fe203070aad88414c846ecd6ae39d149331e4196f214faf8d7f3137a.
+Backup:/etc/nginx/sites-available/airportsboard.before-timing-20261105T015355Z.
+
+После выката: index20/20,sitemap/hreflang/gzip,live-refresh,AdSense PASS.
+12AYTлокалей: Server-Timing/X-Cache/canonical PASS. MISS origin85–118мс;
+RU/EN STALE edge0 без origin. Отдельный последовательный RU проход дал
+STALE→HIT, оба без старого origin. /api/health не получил новый заголовок.
+Это контроль конфигурации, не измеренный эффект скорости посетителей.
+
+Первый read-only RUM после установки:0 записей этого релиза,0 некорректных.
+Синтетические записи на production не создавались. Следующий запуск11/20 должен
+проверить появление edgeHeader/originHeader и реальные статусы; до этого нельзя
+утверждать, что новый сбор уже подтверждён живыми посещениями. Старые schema1
+проверены локально; первые реальные данные помогут разделить сеть и backend.
+Далее прежние задачи Google URLInspection/ORK и Chrome cold-click при доступном UI.
+Документационный коммит после выката отдельно не пушить. Серию не продлевать.
