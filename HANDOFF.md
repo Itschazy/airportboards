@@ -1,3 +1,14 @@
+## Codex, 05.11.2026 — запуск 8/20 завершён: production fed2653c
+
+Runtime fed2653cb8fbee542fef9d06442cac93f9541973, push00:56:36Amsterdam вне прогрева.
+CI41937607699success; серверныйHEAD и health совпали,3pm2online/restarts103.
+Postchecks index20/20,sitemap/hreflang/gzip,live-refresh,AdSense PASS.
+12/12локалейAYT: точныйbootstrap,30ключейстрок,canonicalPASS. ПервыйRUещёбыл
+старымкэшем; послеегообновленияполныйповтор12/12,обапроходасохранены.
+РаннийclickWebKit375работает; Chrome/физическийAndroidполностьюнеподтверждены.
+Далее9/20:изолированныйChrome cold-click,сетевойRUM,GoogleURLInspection/ORK.
+Сериюнепродлевать. Документациюпослевыкатаотдельнонепушить.
+
 ## Codex, 05.11.2026 — запуск 8/20: сохранение раннего нажатия на рейс
 
 Воспроизведено в WebKit375 на настоящем SSR: NextJS задержан, ранний SU112 click
@@ -9,7 +20,7 @@
 keys12,index20/20,first-paint5,sitemap/AdSense,SSR12 PASS. WebKitRU/AR375: первый
 click,последнийвыбор,Escape,закрытие/фокус и shared-link PASS. Chrome×20 не засчитан:
 другой процесс переключал окна. Не называть SVG/Node/данный стенд AndroidLCP.
-HTMLgzip+774B (~1.3%),видимыйSSRтекстсовпадает. Готовится разрешённый выкат.
+HTMLgzip+774B (~1.3%),видимыйSSRтекстсовпадает. Выкат завершён, результаты выше.
 Серверы3159/3160/3161остановлены,build/TSочищены,IABзакрыты. СвойChromeстенд/blank
 моглиостаться,throttleпроверитьприэксклюзивномдоступе. Подробности:
 ops/improvement-cycles-20261104/early-card/RESULT.md.
