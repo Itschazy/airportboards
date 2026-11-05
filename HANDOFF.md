@@ -1,3 +1,31 @@
+## Codex, 05.11.2026 — запуск 13/20: Google Inspection и мобильный TLS
+
+Production/origin/main остаётся 2cde8bd734ac99e1f2b10c4d788d2ac231025c2e.
+Рабочая копия runwayboard-flight-map-prototype-20261028, ветка
+codex/flight-map-prototype-20261028. Runtime не менялся, выката нет.
+
+Получен рабочий доступ к GSC через native Chrome, ресурс URL-prefix https.
+LHR/en, flight-map/en и ORK/en: unknown to Google; KZN/ru: crawled-not-indexed,
+последний обход18.10, smartphone, fetch/index/canonical корректны.
+Общий отчёт всё ещё23.10 (437/24223), но sitemap-14/-16 прочитаны04.11,
+sitemap-3 прочитан05.11. Старые20 отправок /sitemap/N.xml с ошибкой относятся
+к10.10; текущие20 корневых и индекс имеют Success. Ничего не переотправляли.
+
+Три URL реально есть в sitemap; ORK нет: service35 → mid180мин > порога120,
+не закреплён. Это действующее ограничение, не ошибка генерации. Все4 HTML:
+self canonical, index/follow, 12hreflang+x-default. Production index20/20 PASS.
+
+RUM нового релиза:55 mobile navigate, LCPp75=1680мс,1slow; TLS18paired/37unknown,
+p75TLS144мс. Медленный случай TLSunknown: причинаTLS не доказана. Все источники,
+короткая ночная выборка; ускорение и физический AndroidLCP не заявлены.
+Сырые RUM не копировались. Runtime/дизайн/DNS/аккаунты/реклама/данные сохранены.
+Сборка/tsc/UI не повторялись — код не менялся. Своя вкладкаGSC закрыта.
+
+Протокол ops/improvement-cycles-20261104/google-inspection/RESULT.md.
+Следующий14/20: дневная TLS-выборка и официальные факты для справочной ORK
+на12 языках. Не расширять sitemap/платный прогрев без обоснования;
+не повторять старые переобходы. Документацию отдельно не пушить. Серию не продлевать.
+
 ## Codex, 05.11.2026 — запуск 12/20 завершён: TLS выкачен
 
 Runtime/origin/main 2cde8bd734ac99e1f2b10c4d788d2ac231025c2e.
