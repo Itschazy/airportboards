@@ -1,3 +1,18 @@
+## Codex, 05.11.2026 — запуск 15/20: sitemap Корка готов
+
+Worktree runwayboard-flight-map-prototype-20261028, ветка codex/flight-map-prototype-20261028.
+База 77f42efc; свежий origin/main 10dc05178177. Добавлен отдельный список
+спроса на справочные: только ORK, +12 канонических основных страниц в sitemap.
+Прогрев/бюджет/robots/arrivals/JS/UI/DNS не меняются. Контроли полного цикла,
+guidefresh188×12, scripts232148/8351, keys12×395, build2473, tsc после сборки
+и очистки, local index20/20, scope/hreflang, 24HTML ORK, AdSense PASS.
+Baseline prod0 ORK → local12. Новый mobile UI не заявлен — его код не менялся.
+RUM текущего SHA:71 mobile navigate, p75LCP1640мс, 3slow до первого байта;
+TLS32known/39unknown, у всех slowunknown. Причина TLS/оператор не доказана.
+Свой3167/build остановлен/очищен, generated TS восстановлены, чужой outputs сохранён.
+Следом разрешённый выкат вне окна и CI/фактический SHA/postchecks.
+Протокол ops/improvement-cycles-20261104/guide-discovery/RESULT.md.
+
 ## Codex, 05.11.2026 — запуск 14/20 завершён: Корк выкачен
 
 Runtime/origin/main10dc05178177280637ef9bfaa469970e1f69717a.

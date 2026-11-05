@@ -57,6 +57,9 @@ const LEVEL = svcRaw.airports ?? svcRaw;
  * ради трёх констант дороже, чем разобрать объявление, которое ломается заметно: если регэксп
  * ничего не найдёт, проверка падает здесь и сразу, а не молча считает по пустому множеству.
  */
+// Узкое дополнение только основных страниц со справочной; не меняет прогрев.
+// Содержимое и переводы списка отдельно проверяет check-guide-sitemap.mjs.
+const GUIDE_DEMAND = new Set(Object.keys(JSON.parse(fs.readFileSync('data/search-demand-guides.json', 'utf8'))));
 const WARM_SRC = fs.readFileSync('lib/warm.ts', 'utf8');
 const mustMatch = (re, what) => {
   const m = WARM_SRC.match(re);
@@ -228,10 +231,13 @@ say(missing.length <= expected.length * 0.05,
  * промолчит, потому что первое утверждение «всё ожидаемое на месте» от лишнего не краснеет.
  * Ровно так сужение и откатывается молча при следующем рефакторинге.
  */
-const extra = [...inMap].filter((c) => (LEVEL[c] ?? 0) > 0 && !advertised(c));
+const extra = [...inMap].filter((c) => (LEVEL[c] ?? 0) > 0 && !advertised(c) && !GUIDE_DEMAND.has(c));
 say(extra.length === 0, extra.length
   ? `карта заявляет ${extra.length} аэропортов за границей свежести: ${extra.slice(0, 8).join(', ')}…`
-  : 'за границей свежести в карте никого');
+  : 'за границей свежести только выбранные основные страницы со справочной');
+for (const code of GUIDE_DEMAND) {
+  say(inMap.has(code), `${code}: основная страница со справочной заявлена`);
+}
 
 /**
  * Отдельно и строго: самые маленькие из тех, что реально кормят трафиком.
@@ -307,18 +313,20 @@ if (!arrivals.size) {
   }
   // Обратная граница: ниже порога прилётов быть не должно. Если появились — сломался ярус, и
   // карта снова потащит за собой хвост пустых «рейсов нет», за который уже прилетало.
+  const beyondBoardScope = [...arrivals].filter(c => !advertised(c));
+  say(beyondBoardScope.length === 0, `прилёты вне допуска табло: ${beyondBoardScope.join(', ') || 'нет'}`);
   const belowTier = [...arrivals].filter((c) => (LEVEL[c] ?? 0) < ARRIVALS_MIN_DAILY);
   say(belowTier.length === 0, belowTier.length
     ? `прилёты заявлены ниже яруса ${ARRIVALS_MIN_DAILY}: ${belowTier.slice(0, 6).join(', ')}…`
     : `ни одной подстраницы прилётов ниже яруса ${ARRIVALS_MIN_DAILY}`);
   // Все устойчивые кандидаты остаются в карте даже при пустом ночном снимке.
   // 23.10: robots прилётов больше не меняется вместе с числом строк.
-  const candidates = Object.entries(LEVEL).filter(([c, n]) => (n ?? 0) >= ARRIVALS_MIN_DAILY && inMap.has(c)).length;
+  const candidates = Object.entries(LEVEL).filter(([c, n]) => (n ?? 0) >= ARRIVALS_MIN_DAILY && advertised(c) && inMap.has(c)).length;
   say(arrivals.size === candidates,
     `прилётов ${arrivals.size} при ${candidates} кандидатах яруса — устойчивый набор совпадает`);
 }
 
 console.log(fails
   ? `\nПРОВАЛОВ: ${fails}`
-  : '\nкарта предлагает ровно свежее: ничего пустого, ничего из хвоста, и всё, что внутри границы');
+  : '\nкарта соблюдает допуск табло и отдельный список основных страниц со справочной');
 process.exit(fails ? 1 : 0);

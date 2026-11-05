@@ -1,4 +1,5 @@
 import searchDemandRoutes from '@/data/search-demand-routes.json';
+import searchDemandGuides from '@/data/search-demand-guides.json';
 import { sitemapShard } from '@/lib/sitemap-shard';
 import type { MetadataRoute } from 'next';
 import { getAllIataCodes, getSitemapCount, getCountries, getStaticIataCodes, getCities, getAirportsByCountry, getAirportsByCity } from '@/lib/airports';
@@ -332,10 +333,20 @@ async function buildAll(): Promise<MetadataRoute.Sitemap> {
      * 72 020 заявленных адресов. Заявлять больше, чем он способен обойти, — значит отдать
      * бюджет хвосту, борт которого он всё равно застанет вчерашним.
      */
-    if (!advertisedInSitemap(iata)) continue;
+    // 05.11.2026: Корк имеет измеренный спрос Bing и пять проверенных разделов
+    // на 12 языках, но mid/180 мин исключал даже основную страницу со справочной.
+    // Отдельный проверяемый список добавляет только канонический родительский URL:
+    // частота прогрева, robots прилётов и общий хвост остаются прежними.
+    // Источники решения — search-demand-guides.json; полноту справочных и точную
+    // прибавку проверяет check-guide-sitemap.mjs, границы — check-sitemap-scope.
+    const boardAdvertised = advertisedInSitemap(iata);
+    if (!boardAdvertised && !Object.hasOwn(searchDemandGuides, iata)) continue;
     const hub = HUBS.has(iata);
     const cf: Freq = hub ? 'hourly' : 'daily';
     entries.push(...entry(`/airport/${iata}`, cf, hub ? 1.0 : 0.6, locales, boardStamp(iata, 'departures')));
+    // Справочная не доказывает устойчивость борта прилётов. Даже если текущий
+    // снимок непустой, добавление основной страницы не расширяет его допуск.
+    if (!boardAdvertised) continue;
     // Подстраница прилётов заявляется от яруса ARRIVALS_MIN_DAILY и ниже — не только у хабов
     // (см. разбор у самой константы). Хвост ниже порога остаётся достижимым по ссылкам из
     // подвала и с табло и индексируемым, когда рейсы ЕСТЬ (гейт robots на самой подстранице),
