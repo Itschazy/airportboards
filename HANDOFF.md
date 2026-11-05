@@ -1,3 +1,20 @@
+## Codex, 05.11.2026 — серия завершена, запуск20/20
+
+Автоматизация airportsboard-20 удалена инструментом (deleteStatus=deleted), не продлевать.
+Продукт/origin/main/serverHEAD57c5af40ff29123263734070c8fbbd856ff34137;
+ветка codex/flight-map-prototype-20261028, cwd /Users/whereiszhenya/projects/runwayboard-flight-map-prototype-20261028.
+В этом запуске продукт не менялся, push/CI/deploy нет. Итог ops/improvement-cycles-20261104/FINAL.md.
+Финальные production index20/20,sitemap/hreflang/gzip,live-refresh,AdSense PASS(4exit0).
+269mobile navigate currentrelease:p75LCP1804мс,p902703,14>4с;12до первого байта,2render.
+Это агрегат всех источников/языков, не causal before/after. Подробности/логи final20 в outputs папки чата.
+Chrome binding снова timeoutMs; точный повторный LCP/CLS и слабые физические телефоны не проверены.
+Серия дала защиту хранения/восстановления карты, меньшие SVG, надёжные редиректы,
+сохранение раннего касания, ServerTiming/TLS RUM, справочную ORK12языков и ORK/JER sitemap.
+Следующий шаг при новом поручении: рабочий CUA/изолированное окно, fixture и повторяемый
+профиль RUH/Safari/Chrome; наблюдение новых обходов Google и сетевых медленных загрузок.
+Не выдавать итог за отсутствие всех багов. Дизайн/DNS/SEO/данные/аккаунты сохранены.
+Документацию отдельно не пушить. Старый untracked outputs/ сохранён.
+
 ## Codex, 05.11.2026 — запуск 18/20: уточнены RUH/Safari и сетевые задержки
 
 Копия /Users/whereiszhenya/projects/runwayboard-flight-map-prototype-20261028,
