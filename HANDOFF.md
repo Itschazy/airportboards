@@ -1,3 +1,19 @@
+## Codex, 05.11.2026 — запуск 16/20: Джерси готов к выкату
+
+Worktree runwayboard-flight-map-prototype-20261028, ветка codex/flight-map-prototype-20261028.
+База3f096b40, freshmain487d134a. В списоксамостоятельныхсправочных добавленJER:
++12каноническихстраниц,ORK/другиеURL сохранены; arrivals/прогрев/JS/UI/DNSнеизменны.
+СпросBing≈1300цитирований,4раздела+about/12языков опубликованы30.10.
+Тексты/датыфактчекане менялись. Проверки:реальныйциклsitemap,отрицательные
+сценарии,JER/ORK12/12,guidefresh188×12,scripts232148/8351,keys12×395,
+build2473,tscдо/после/cleanup,localindex20/20,scope/hreflang,24HTMLJER,AdSensePASS.
+Свой3168/buildочищены,TSвосстановлены. СвежийmobileUI/AndroidLCPне заявлен.
+RUMновогоSHA53/p75LCP1812мс/2slow;сегоднявсерелизы493/p751775/18slow;
+Chrome94/7slow(2render),Safari142/4,Yandex140/4. Причинностьвыкатане доказана.
+Следомразрешённыйpushвнеокна,CIиproductionпроверки. Протокол:
+ops/improvement-cycles-20261104/jersey-discovery/RESULT.md. Следующий17/20 —
+воспроизводимыйпрофильChrome;сериюнепродлевать. Данные/аккаунты/рекламасохранены.
+
 ## Codex, 05.11.2026 — запуск 15/20 завершён: sitemap Корка выкачен
 
 Runtime/origin/main 487d134a2cca2c9aa70812f6c4cb7cee1b2f999b.

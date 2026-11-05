@@ -1,8 +1,10 @@
-"""Read only audit-bot: every canonical ORK locale appears once in its stable shard."""
+"""Read only audit-bot: every canonical airport locale appears once in its stable shard."""
 import sys, subprocess, xml.etree.ElementTree as ET, json
 base=sys.argv[1].rstrip('/')
 expected=0 if '--absent' in sys.argv else 12
-path='/airport/ORK'; h=2166136261
+iata=next((x for x in sys.argv[2:] if not x.startswith('--')), 'ORK')
+assert len(iata)==3 and iata.isascii() and iata.isalpha() and iata.isupper()
+path=f'/airport/{iata}'; h=2166136261
 for c in path: h=((h^ord(c))*16777619)&0xffffffff
 shard=h%20
 # Системный curl использует рабочее хранилище CA macOS; проверку TLS не отключаем.
@@ -21,4 +23,4 @@ if expected:
   assert set(links)==locales|{'x-default'}
   assert {links[l] for l in locales}==urls
   assert links['x-default']==f'https://airportsboard.live/en{path}'
-print(json.dumps({'base':base,'shard':shard,'ORK_loc_count':len(rows),'expected':expected,'result':'PASS'}))
+print(json.dumps({'base':base,'shard':shard,'iata':iata,'loc_count':len(rows),'expected':expected,'result':'PASS'}))

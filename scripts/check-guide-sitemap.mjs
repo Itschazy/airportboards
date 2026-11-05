@@ -4,11 +4,11 @@ import fs from 'node:fs';
 import assert from 'node:assert/strict';
 import ts from 'typescript';
 const demand = JSON.parse(fs.readFileSync('data/search-demand-guides.json', 'utf8'));
-const locales = JSON.parse(JSON.stringify(
+const locales = (
   [...fs.readFileSync('lib/i18n.ts', 'utf8').match(/export const locales = \[([^\]]+)\]/)[1].matchAll(/'([a-z]{2})'/g)].map(m => m[1])
-));
+);
 assert.equal(locales.length, 12);
-assert.deepEqual(Object.keys(demand), ['ORK'], 'расширение списка требует проверки спроса и границ');
+assert.deepEqual(Object.keys(demand), ['ORK', 'JER'], 'расширение списка требует проверки спроса и границ');
 for (const [code, evidence] of Object.entries(demand)) {
   assert.match(code, /^[A-Z]{3}$/);
   assert.ok(evidence.length > 40);
@@ -18,8 +18,9 @@ for (const [code, evidence] of Object.entries(demand)) {
   const age = (Date.now() - Date.parse(base.checked + 'T00:00:00Z')) / 86400000;
   assert.ok(age >= 0 && age < 181, 'справочная должна пройти проверку свежести');
   for (const loc of locales) {
-    const blocks = loc === 'ru' ? Object.fromEntries(base.blocks.map(b => [b.id, b]))
-      : JSON.parse(fs.readFileSync(`data/airport-guide/${loc}/${code}.json`, 'utf8')).blocks;
+    const translated = loc === 'ru' ? base : JSON.parse(fs.readFileSync(`data/airport-guide/${loc}/${code}.json`, 'utf8'));
+    if (base.about) assert.ok(translated.about?.trim(), `${loc}/${code}/about`);
+    const blocks = loc === 'ru' ? Object.fromEntries(base.blocks.map(b => [b.id, b])) : translated.blocks;
     assert.deepEqual(Object.keys(blocks).sort(), base.blocks.map(b => b.id).sort());
     for (const block of Object.values(blocks)) for (const key of ['title', 'hint', 'text']) assert.ok(block[key]?.trim(), `${loc}/${code}/${key}`);
   }
@@ -36,16 +37,24 @@ const execute = new Function('searchDemandGuides', 'isUnfillable', 'hasNoService
  ${body}
  return entries;
 `);
-const run = (list, closed = () => false, noService = () => false, warm = c => c === 'LHR') => execute(list, closed, noService, warm, ['LHR', 'ORK', 'GCI', 'ZZZ'], locales);
-const before = run({}), after = run(demand);
-assert.equal(before.length, 24);
-assert.equal(after.length, 36);
-assert.deepEqual(after.filter(u => !before.includes(u)), locales.map(l => `/${l}/airport/ORK`));
+const run = (list, closed = () => false, noService = () => false, warm = c => c === 'LHR') => execute(list, closed, noService, warm, ['LHR', 'ORK', 'JER', 'GCI', 'ZZZ'], locales);
+// На одинаковых данных новый список добавляет только JER, а ранее добавленный
+// ORK остаётся на месте. Отдельно проверяем каждый справочный допуск против robots.
+const before = run({ORK: demand.ORK}), after = run(demand);
+assert.equal(before.length, 36);
+assert.equal(after.length, 48);
+assert.deepEqual(after.filter(u => !before.includes(u)), locales.map(l => `/${l}/airport/JER`));
 assert.ok(before.every(u => after.includes(u)));
-assert.deepEqual(run(demand, c => c === 'ORK'), before);
-assert.deepEqual(run(demand, () => false, c => c === 'ORK'), before);
-assert.equal(run(demand, () => false, () => false, c => c === 'LHR' || c === 'ORK').length, 48, 'переход ORK в обычный ярус не дублирует URL');
-assert.ok(!after.some(u => /\/arrivals$/.test(u) && u.includes('ORK')));
+assert.equal(new Set(after).size, after.length);
+for (const code of Object.keys(demand)) {
+  const without = after.filter(u => !u.endsWith('/airport/' + code));
+  assert.deepEqual(run(demand, c => c === code), without);
+  assert.deepEqual(run(demand, () => false, c => c === code), without);
+  const promoted = run(demand, () => false, () => false, c => c === 'LHR' || c === code);
+  assert.equal(promoted.length, 60, `переход ${code} в обычный ярус не дублирует URL`);
+  assert.equal(new Set(promoted).size, promoted.length);
+  assert.ok(!after.some(u => u.endsWith(`/airport/${code}/arrivals`)));
+}
 assert.ok(!after.some(u => /\/departures$/.test(u)));
 assert.ok(!after.some(u => /GCI|ZZZ/.test(u)));
-console.log('PASS: +12 ORK, прежние URL сохранены; закрытое/без рейсов/прилёты/aliases/хвост исключены; переход яруса без дублей; 12 полных переводов');
+console.log('PASS: +12 JER, ORK и прежние URL сохранены; отрицательные сценарии обоих справочных допусков, переход яруса без дублей; 12 полных переводов и about');
