@@ -1,3 +1,29 @@
+## Codex, 05.11.2026 — запуск 15/20 завершён: sitemap Корка выкачен
+
+Runtime/origin/main 487d134a2cca2c9aa70812f6c4cb7cee1b2f999b.
+Worktree /Users/whereiszhenya/projects/runwayboard-flight-map-prototype-20261028;
+ветка codex/flight-map-prototype-20261028. Push08:06:03Amsterdam вне окна;
+CI41984860132success07:08:19UTC, serverHEAD/health совпали,3pm2online/restart107.
+
+Sitemap теперь заявляет12основных ORK с полной группой языков. Прежний допуск
+табло/arrivals и платный прогрев не менялись. Все local проверки перечислены
+ниже/в протоколе: +12на одинаковых входах, отрицательные сценарии, guidefresh,
+12×395ключей, scripts,fixturebuild2473,tsc,scope/hreflang,index20/20,24HTML.
+Production: index20/20,sitemap/hreflang/gzip,live-refresh,AdSense,scope PASS;
+12ORK вshard12;24HTML с5текстами/FAQ каждый PASS. Live-refresh2/6<10мин,
+без покупки данных. UI не изменён, новых mobileUI/AndroidLCPзамеров не заявлено.
+
+RUM предыдущего runtime10dc:71mobileNavigate,p75LCP1640мс,3slowдо первого байта;
+TLS32known/39unknown,все3slowunknown. Улучшение/оператор/TLS-причина не доказаны.
+До выката56из188справочных внеsitemap, включаяORK/JER/GCI/LBA. Корк добавлен
+точечно по спросу; полный объём sitemap зависит также от текущих маршрутов.
+Следующий16/20: дневнойRUM,адресныйдопускJERсоспросомBing;не расширять хвост
+или прогрев автоматически. Сериюнепродлевать. Документацию отдельнонепушить.
+Протокол ops/improvement-cycles-20261104/guide-discovery/RESULT.md;
+артефакты outputs/improvement-cycles-20261104/guide-discovery папки чата.
+Свой3167/buildочищен,TSвосстановлены,старыйoutputsсохранён;DNS/дизайн/данные/
+аккаунты/реклама неизменны;AdSense03.11неповторяли.
+
 ## Codex, 05.11.2026 — запуск 15/20: sitemap Корка готов
 
 Worktree runwayboard-flight-map-prototype-20261028, ветка codex/flight-map-prototype-20261028.
