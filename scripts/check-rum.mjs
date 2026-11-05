@@ -30,10 +30,14 @@ test('строгая схема отбрасывает идентификато�
  assert.ok(schema.parseRum(valid));assert.equal(schema.parseRum({...valid,ua:'secret',url:'secret',clientId:'secret'}).ua,undefined);
  for(const patch of [{lcp:NaN},{lcp:-1},{lcp:0},{release:'unknown'},{airport:'../../secret'},{longTasksSupported:'yes'},{browserMajor:1.5},{page:'home'}])assert.equal(schema.parseRum({...valid,...patch}),null);
  assert.equal(schema.parseRum({...valid,longTaskTotal:-1}).longTaskTotal,-1);
+ assert.equal(schema.parseRum(valid).edgeHeader,-1);
+ assert.equal(schema.parseRum(valid).serverCache,'unknown');
+ assert.equal(schema.parseRum({...valid,edgeHeader:12,originHeader:10,serverCache:'MISS'}).originHeader,10);
+ for(const patch of [{edgeHeader:NaN},{originHeader:-2},{serverCache:'secret'}])assert.equal(schema.parseRum({...valid,...patch}),null);
 });
-function harness({denied=false,restored=false,firstHidden=Infinity,unsupported=false,failImport=false,longSupported=true,navType='navigate',activationStart=0,libraryOld=false}={}) {
+function harness({denied=false,restored=false,firstHidden=Infinity,unsupported=false,failImport=false,longSupported=true,navType='navigate',activationStart=0,libraryOld=false,serverTiming=undefined,transferSize=0,workerStart=0}={}) {
  let callback,imports=0,disconnected=0;const posts=[];let consent=denied?'denied':null;
- const nav={type:navType,activationStart,nextHopProtocol:'h2',domainLookupEnd:10,domainLookupStart:0,connectEnd:20,connectStart:10,responseStart:500,requestStart:30,responseEnd:700};
+ const nav={serverTiming,transferSize,workerStart,type:navType,activationStart,nextHopProtocol:'h2',domainLookupEnd:10,domainLookupStart:0,connectEnd:20,connectStart:10,responseStart:500,requestStart:30,responseEnd:700};
  const gate={path:'/ru/airport/AYT',firstHidden,restored};
  class PO {static supportedEntryTypes=unsupported?[]:['largest-contentful-paint',...(longSupported?['longtask']:[])];constructor(cb){this.cb=cb;}observe(){}takeRecords(){return [{startTime:100,duration:200},{startTime:1900,duration:400},{startTime:3000,duration:100}];}disconnect(){disconnected++;}}
  const w={__abRumGate:gate};const loc={hostname:'airportsboard.live',origin:'https://airportsboard.live',pathname:gate.path};
@@ -41,7 +45,7 @@ function harness({denied=false,restored=false,firstHidden=Infinity,unsupported=f
  ...(libraryOld?{Array:{prototype:{}}}:{}),
  performance:{getEntriesByType:t=>t==='navigation'?[nav]:[{name:'https://airportsboard.live/_next/app.js',responseEnd:900,duration:400,initiatorType:'script',transferSize:2048}],getEntriesByName:()=>[{startTime:800}]},
  fetch:async(url,opts)=>{posts.push({url,opts,payload:JSON.parse(opts.body)});return new Response(null,{status:204});},
- require:n=>n==='./rum-policy'?policy:n==='./rum-schema'?schema:n==='web-vitals/attribution'?(()=>{imports++;if(failImport)throw Error('chunk offline');return {onLCP:cb=>{callback=cb;}};})():require(n)});
+ require:n=>n==='./rum-policy'?policy:n==='./rum-schema'?schema:n==='./rum-server-timing'?load('lib/rum-server-timing.ts'):n==='web-vitals/attribution'?(()=>{imports++;if(failImport)throw Error('chunk offline');return {onLCP:cb=>{callback=cb;}};})():require(n)});
  return {mod,w,loc,gate,posts,imports:()=>imports,disconnected:()=>disconnected,deny:()=>consent='denied',fire:(patch={})=>callback?.({value:2000,navigationType:'navigate',attribution:{timeToFirstByte:500,resourceLoadDelay:0,resourceLoadDuration:0,elementRenderDelay:1500,lcpEntry:{element:{tagName:'SPAN',closest:s=>s==='h1,h2,h3'?{}:null}}},...patch})};
 }
 for(const opts of [{denied:true},{restored:true},{firstHidden:0},{unsupported:true},{libraryOld:true}]){const h=harness(opts);await h.mod.startRum();assert.equal(h.imports(),0);assert.equal(h.posts.length,0);}console.log('PASS запрещённые/неподдерживаемые загрузки не скачивают библиотеку');passed++;
@@ -49,6 +53,9 @@ const h=harness();await h.mod.startRum();await h.mod.startRum();assert.equal(h.i
 assert.equal(p.airport,'AYT');assert.equal(p.page,'departures');assert.equal(p.release,valid.release);assert.equal(p.longTaskTotal,300);assert.equal(p.longTaskCount,2);assert.equal(p.target,'heading');assert.equal(p.network,'unknown');assert.equal(p.slowestResource,'next');assert.equal(h.posts[0].opts.credentials,'omit');assert.equal(h.posts[0].opts.referrerPolicy,'no-referrer');assert.equal(h.posts[0].opts.keepalive,true);console.log('PASS один финальный LCP, исходная страница/релиз, обрезка long tasks по LCP, без cookies/referrer');passed++;
 for(const opts of [{firstHidden:1000},{activationStart:10},{navType:'other'}]){const h=harness(opts);await h.mod.startRum();h.fire();assert.equal(h.posts.length,0);}
 for(const metric of [{navigationType:'back-forward-cache'},{navigationType:'restore'},{attribution:{url:'chrome-extension://id/overlay.png'}}]){const h=harness();await h.mod.startRum();h.fire(metric);assert.equal(h.posts.length,0);}
+const timed=harness({transferSize:500,serverTiming:[{name:'ab-edge',duration:40,description:''},{name:'ab-origin',duration:30,description:''},{name:'ab-cache',duration:0,description:'MISS'}]});await timed.mod.startRum();timed.fire();assert.equal(timed.posts[0].payload.edgeHeader,40);assert.equal(timed.posts[0].payload.originHeader,30);assert.equal(timed.posts[0].payload.serverCache,'MISS');
+const cached=harness({transferSize:0,serverTiming:[{name:'ab-edge',duration:40,description:''},{name:'ab-cache',duration:0,description:'HIT'}]});await cached.mod.startRum();cached.fire();assert.equal(cached.posts[0].payload.edgeHeader,-1);assert.equal(cached.posts[0].payload.serverCache,'unknown');
+console.log('PASS actual collector propagates fresh server timings and ignores browser-cache headers');passed++;
 const denied=harness();await denied.mod.startRum();denied.deny();denied.fire();assert.equal(denied.posts.length,0);
 const noLong=harness({longSupported:false});await noLong.mod.startRum();noLong.fire();assert.equal(noLong.posts[0].payload.longTaskTotal,-1);
 const offline=harness({failImport:true});await offline.mod.startRum();assert.equal(offline.posts.length,0);assert.equal(offline.disconnected(),1);console.log('PASS hidden/BFCache/prerender/расширения исключены; отзыв согласия, offline и отсутствие API безопасны');passed++;
@@ -75,6 +82,12 @@ for(const lcp of [1000,2000,3000,5000])await store.storeRum({...valid,lcp,longTa
 await store.storeRum({...valid,release:'abcdefabcdef',lcp:9000},day,reportDir,'1');
 const report=await reportRum({dir:reportDir,since:'2026-10-24',until:'2026-10-24'});assert.equal(report.records,5);assert.equal(report.groups.length,2);assert.equal(report.groups[0].metrics.lcp.p75,3000);assert.equal(report.groups[0].metrics.lcp.p90,5000);assert.equal(report.groups[0].poorPercent,25);assert.equal(report.groups[0].metrics.longTaskTotal.p75,null);assert.equal(report.groups[0].smallSample,true);
 assert.equal((await reportRum({dir:reportDir,since:'2026-10-24',until:'2026-10-24',filters:{browser:'safari'}})).records,0);assert.equal((await reportRum({dir:reportDir,since:'2026-10-24',until:'2026-10-24',minLcp:4000})).records,2);console.log('PASS отчёт: релизы отдельно, p75/p90 по визитам, неизвестное не ноль, малая выборка и фильтры');passed++;
+assert.equal((await reportRum({dir:reportDir,since:'2026-10-24',until:'2026-10-24',by:['serverCache'],filters:{serverCache:'unknown'}})).records,5);
+assert.equal((await reportRum({dir:reportDir,since:'2026-10-24',until:'2026-10-24'})).groups[0].metrics.edgeHeader.n,0);
+await store.storeRum({...valid,edgeHeader:140,originHeader:100,serverCache:'MISS'},day,reportDir,'2');
+const measured=await reportRum({dir:reportDir,since:'2026-10-24',until:'2026-10-24',by:['serverCache'],filters:{serverCache:'MISS'}});
+assert.equal(measured.records,1);assert.equal(measured.groups[0].metrics.edgeHeader.p75,140);assert.equal(measured.groups[0].metrics.originHeader.n,1);
+console.log('PASS historical RUM remains unknown; new server durations aggregate separately');passed++;
 // Удаляются только созданные этим тестом случайные временные каталоги, не данные проекта.
 await fsp.rm(dir,{recursive:true});await fsp.rm(reportDir,{recursive:true});
 console.log(`PASS ${passed} групп RUM-проверок`);

@@ -1,6 +1,7 @@
 import type { LCPMetricWithAttribution } from 'web-vitals/attribution';
 import { rumAllowed, rumBrowser, rumPage } from './rum-policy';
 import { parseRum } from './rum-schema';
+import { readServerTiming } from './rum-server-timing';
 
 declare global {
   interface Window {
@@ -95,7 +96,7 @@ export async function startRum(): Promise<void> {
           memory: n.deviceMemory ? n.deviceMemory <= 2 ? 'low' : n.deviceMemory <= 4 ? 'mid' : 'high' : 'unknown',
           protocol: ['h2', 'h3', 'http/1.1'].includes(nav.nextHopProtocol) ? nav.nextHopProtocol : 'unknown',
           navigation: nav.type, target: target === 'img' ? 'image' : target === 'video' ? 'video' : a.url ? 'other' : textTarget,
-          lcp, fcp, ttfb: a.timeToFirstByte,
+          lcp, fcp, ttfb: a.timeToFirstByte, ...readServerTiming(nav),
           dns: nav.domainLookupEnd - nav.domainLookupStart, connect: nav.connectEnd - nav.connectStart,
           request: nav.responseStart - nav.requestStart, html: nav.responseEnd - nav.responseStart,
           resourceLoadDelay: a.resourceLoadDelay, resourceLoadDuration: a.resourceLoadDuration,

@@ -1,3 +1,14 @@
+## Codex, 05.11.2026 — запуск 10/20: Server-Timing подготовлен
+
+RUM получает edgeHeader/originHeader/serverCache из заголовков nginx. Это разделение
+задержек, не обещание ускорения. HIT/STALE без старого origin; browser cache/worker
+не принимаются как текущие измерения. schema1/старые записи совместимы, неизвестное−1.
+23 helper-сценария,12 групп RUM, реальный nginx6cache-сценариев, WebKit MISS/STALE PASS.
+Build2473,tscдо/после,keys12×395,scripts231968,localindex20/20,paint5/5,sitemap/AdSense PASS.
+Дизайн/DNS/SEO/данные не меняются. Следом разрешённый push вне прогрева, CI/release,
+установка проверенного nginx candidate с SHA guard/backup/nginx-t и postchecks.
+Протокол: ops/improvement-cycles-20261104/server-timing/RESULT.md.
+
 ## Codex, 05.11.2026 — запуск 9/20: реальные сетевые задержки
 
 Runtime остаётся fed2653cb8fbee542fef9d06442cac93f9541973; origin/main и health проверены.

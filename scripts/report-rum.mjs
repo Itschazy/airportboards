@@ -4,8 +4,8 @@ import fs from 'node:fs/promises';
 import path from 'node:path';
 import os from 'node:os';
 import { pathToFileURL } from 'node:url';
-export const dimensions = ['release', 'browser', 'browserMajor', 'device', 'platform', 'page', 'locale', 'airport', 'network', 'memory', 'protocol', 'navigation', 'target'];
-const metrics = ['lcp', 'ttfb', 'fcp', 'dns', 'connect', 'request', 'html', 'resourceLoadDelay', 'resourceLoadDuration', 'elementRenderDelay', 'longTaskTotal', 'longTaskMax', 'scriptBytes'];
+export const dimensions = ['release', 'browser', 'browserMajor', 'device', 'platform', 'page', 'locale', 'airport', 'network', 'memory', 'protocol', 'navigation', 'target', 'serverCache'];
+const metrics = ['lcp', 'ttfb', 'fcp', 'dns', 'connect', 'request', 'html', 'resourceLoadDelay', 'resourceLoadDuration', 'elementRenderDelay', 'longTaskTotal', 'longTaskMax', 'scriptBytes', 'edgeHeader', 'originHeader'];
 const quantile = (values, p) => values.length ? values.slice().sort((a,b) => a-b)[Math.ceil(values.length*p)-1] : null;
 export async function reportRum({dir, since = new Date(Date.now()-6*86400000).toISOString().slice(0,10), until = new Date().toISOString().slice(0,10), by = ['release','browser','device','page','navigation'], filters = {}, minLcp = 0}) {
   if (![since,until].every(v => /^\d{4}-\d{2}-\d{2}$/.test(v)) || since > until) throw Error('Неверный интервал дат UTC');
@@ -26,8 +26,8 @@ export async function reportRum({dir, since = new Date(Date.now()-6*86400000).to
       let r; try {r = JSON.parse(line);} catch {invalid++;continue;}
       if(r.schema !== 1 || !/^[a-f0-9]{12,40}$/.test(r.release) || !Number.isFinite(r.lcp) || r.lcp<=0 || !r.hour?.startsWith(day+'T')) {invalid++;continue;}
       if(r.lcp < minLcp) continue;
-      if(Object.entries(filters).some(([k,v])=>String(r[k])!==v)) continue;
-      const tags = Object.fromEntries(by.map(k=>[k,r[k]])), key=JSON.stringify(tags);
+      if(Object.entries(filters).some(([k,v])=>String(k==='serverCache' ? r[k] || 'unknown' : r[k])!==v)) continue;
+      const tags = Object.fromEntries(by.map(k=>[k,k==='serverCache' ? r[k] || 'unknown' : r[k]])), key=JSON.stringify(tags);
       if(!groups.has(key)) groups.set(key,{...tags,n:0,slow:0,firstHour:r.hour,lastHour:r.hour,values:Object.fromEntries(metrics.map(k=>[k,[]])),targets:{},slowestResources:{}});
       const g=groups.get(key); g.n++;records++;if(r.lcp>4000)g.slow++;
       if(r.longTasksTruncated)truncatedLongTasks++;

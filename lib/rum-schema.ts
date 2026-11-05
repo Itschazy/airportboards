@@ -14,6 +14,7 @@ export const RUM_CATEGORIES = {
 } as const;
 export type RumRecord = { schema: 1; release: string; airport: string; browserMajor: number;
   longTasksSupported: boolean; longTasksTruncated: boolean;
+  edgeHeader: number; originHeader: number; serverCache: string;
 } & Record<keyof typeof RUM_CATEGORIES, string> & Record<typeof RUM_METRICS[number], number>;
 export function parseRum(input: unknown): RumRecord | null {
   if (!input || typeof input !== 'object' || Array.isArray(input)) return null;
@@ -33,6 +34,16 @@ export function parseRum(input: unknown): RumRecord | null {
     if (typeof n !== 'number' || !Number.isFinite(n) || n < -1 || n > max) return null;
     out[key] = Math.round(n);
   }
+  // Additive v1 extension: old tabs and the bounded historical journal remain
+  // readable. Absence is unknown, never a zero-duration server response.
+  for (const key of ['edgeHeader', 'originHeader']) {
+    const n = x[key] === undefined ? -1 : x[key];
+    if (typeof n !== 'number' || !Number.isFinite(n) || n < -1 || n > 300000) return null;
+    out[key] = Math.round(n);
+  }
+  const serverCache = x.serverCache === undefined ? 'unknown' : x.serverCache;
+  if (typeof serverCache !== 'string' || !['unknown', 'MISS', 'BYPASS', 'EXPIRED', 'REVALIDATED', 'HIT', 'STALE', 'UPDATING'].includes(serverCache)) return null;
+  out.serverCache = serverCache;
   if ((out.lcp as number) <= 0) return null;
   if (!Number.isInteger(x.browserMajor) || Number(x.browserMajor) < 0 || Number(x.browserMajor) > 999) return null;
   out.browserMajor = x.browserMajor;
