@@ -1,3 +1,34 @@
+## Codex, 05.11.2026 — запуск 11/20: живые тайминги подтверждены
+
+Production остаётся 81b58bfe6b29209a417056b995c1fedf8405b582; fresh origin/main
+и health 02:52:46 UTC совпали. Приложение/конфигурация не менялись, нового выката нет.
+Расширен ops/network-phases/analyze.py: проверка пар browser/nginx внутри замера,
+coverage unknown/invalid, отдельные navigate/reload и точный --release.
+38 контролей PASS; нельзя вычитать p75 разных фаз и называть остаток точной сетью.
+
+Новый SHA, мобильные табло: 61 navigate + 19 reload, все 80 пар согласованы.
+33 HIT/STALE без старого origin, 47 MISS с текущим origin; unknown/invalid 0.
+Navigate LCP p75 1872 мс, server header p75 94 мс; короткая ночная выборка,
+все браузерные подгруппы <50 — улучшение относительно прошлых дней не доказано.
+Три LCP>4с: один Яндекс navigate и два Chrome reload. Во всех внутри замера
+больше половины LCP занимает DNS/connect; Chrome connect 7312/15316 мс при
+server header 0/22 мс. Оператора/страну/VPN не знаем, TLS отдельно не измерен.
+Это не измерение физического слабого Android и не сегмент поиска Метрики.
+
+Проверки: 38 analyzer,12 групп RUM,23 Server-Timing,keys12×395,scripts231968/8338,
+build2473,tscдо/после/послеочистки,local index20/20,first-paint5/5,sitemap/AdSense PASS.
+UI не менялся; visual PASS не заявлен.3164 остановлен,.next-cycle11 удалён,
+TS восстановлены, старый untracked outputs/ сохранён. Сырые RUM не копировались.
+DNS/дизайн/SEO/данные/аккаунты/реклама сохранены, платных запросов не было.
+Search Console не проверен: createBrowserTab Chrome снова timeoutMs binding error.
+Не обходили, на production браузером не заходили. AdSense03.11 не повторяли.
+
+Протокол: ops/improvement-cycles-20261104/network-phases/FIELD-SERVER-TIMING.md.
+Артефакты: outputs/improvement-cycles-20261104/field-server-timing в папке чата.
+Ops/docs отдельно не пушить ради restart. Следующий12/20: более активные часы RUM,
+если connect-проблема сохраняется — минимальное разделение TLS/connect, затем
+Google URL Inspection/ORK при доступном браузере. Серию из20 запусков не продлевать.
+
 ## Codex, 05.11.2026 — запуск 10/20 завершён: Server-Timing выкачен
 
 Runtime81b58bfe6b29209a417056b995c1fedf8405b582; push02:49:48Amsterdam вне прогрева,

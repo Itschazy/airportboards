@@ -55,7 +55,76 @@ def quantile(values, fraction):
     return sorted(values)[math.ceil(len(values) * fraction) - 1] if values else None
 
 
-def read_rows(root, since, until):
+def server_pair(row):
+    """Validate timings of ONE navigation before comparing browser and nginx clocks.
+
+    Older records have no server fields. Never impute zero, or interpret replayed
+    origin time on HIT/STALE as current backend work. A residual is outside the
+    measured nginx header interval, not proven network/carrier latency: browser
+    scheduling, proxies and clock precision can also contribute. Negative residuals
+    within the client's 100ms tolerance are counted, not clamped into a fast sample.
+    """
+    state = row.get('serverCache', 'unknown')
+    edge, origin, request = (row.get(k) for k in ('edgeHeader', 'originHeader', 'request'))
+    if state not in ('MISS', 'BYPASS', 'EXPIRED', 'REVALIDATED', 'HIT', 'STALE', 'UPDATING'):
+        return 'unknown', None
+    if not number(edge) or edge > 300000 or not number(request):
+        return 'invalid', None
+    if edge > request + 100:
+        return 'invalid', None
+    if state in ('HIT', 'STALE', 'UPDATING'):
+        if origin not in (None, -1):
+            return 'invalid', None
+    elif origin is not None and origin != -1 and (not number(origin) or origin > edge + 10):
+        return 'invalid', None
+    if edge > request:
+        return 'negative_within_tolerance', None
+    return 'paired', request - edge
+
+
+def server_summary(rows):
+    coverage, cache, causes = collections.Counter(), collections.Counter(), collections.Counter()
+    residuals, slow_residuals, edges, origins = [], [], [], []
+    for r in rows:
+        state, residual = server_pair(r)
+        coverage[state] += 1
+        cache[r.get('serverCache', 'unknown')] += 1
+        if state == 'paired':
+            residuals.append(residual)
+            edges.append(r['edgeHeader'])
+            if number(r.get('originHeader')):
+                origins.append(r['originHeader'])
+        if r['lcp'] <= 4000:
+            continue
+        main, detail = classify(r)
+        if state != 'paired':
+            cause = state
+        elif main in ('invalid', 'inconsistent', 'unknown') or detail in ('inconsistent', 'unknown'):
+            cause = 'unusable_browser_phases'
+        else:
+            slow_residuals.append(residual)
+            # No subtraction of population percentiles. Only a phase occupying
+            # MORE THAN half this navigation's LCP is called dominant.
+            if r['edgeHeader'] > r['lcp'] / 2:
+                cause = 'nginx_header_interval'
+            elif r['dns'] + r['connect'] > r['lcp'] / 2:
+                cause = 'dns_connect'
+            elif residual > r['lcp'] / 2:
+                cause = 'request_outside_nginx'
+            elif main == 'before_first_byte' and detail == 'other_before_byte':
+                cause = 'other_before_byte'
+            elif main == 'render':
+                cause = 'render'
+            else:
+                cause = 'mixed'
+        causes[cause] += 1
+    metric = lambda v: {'n': len(v), 'p50': quantile(v, .5), 'p75': quantile(v, .75), 'p90': quantile(v, .9)}
+    return {'coverage': dict(coverage), 'cache': dict(cache), 'slowDominant': dict(causes),
+            'edgeHeader': metric(edges), 'originHeader': metric(origins),
+            'requestOutsideNginx': metric(residuals), 'slowRequestOutsideNginx': metric(slow_residuals)}
+
+
+def read_rows(root, since, until, navigation='navigate'):
     files, rows = [], []
     invalid = oversized = 0
     for file in sorted(root.iterdir()):
@@ -86,7 +155,7 @@ def read_rows(root, since, until):
             except (ValueError, TypeError):
                 invalid += 1
                 continue
-            if r.get('device') == 'mobile' and r.get('navigation') == 'navigate' and r.get('page') in ('departures', 'arrivals'):
+            if r.get('device') == 'mobile' and r.get('navigation') == navigation and r.get('page') in ('departures', 'arrivals'):
                 rows.append(r)
     return rows, {'files': files, 'invalid': invalid, 'oversizedFiles': oversized}
 
@@ -110,22 +179,30 @@ def summarize(rows):
     return {'n': len(rows), 'smallSample': len(rows) < 50, 'slow': len(slow),
             'slowPercent': round(100 * len(slow) / len(rows), 2) if rows else None,
             'slowPhases': dict(phases), 'preByteDetails': dict(network),
-            'renderMemory': dict(render_memory), 'metrics': metrics}
+            'renderMemory': dict(render_memory), 'metrics': metrics, 'serverTiming': server_summary(rows)}
 
 
-def report(root, since, until):
-    rows, audit = read_rows(root, since, until)
+def report(root, since, until, navigation='navigate', release=None):
+    if navigation not in ('navigate', 'reload'):
+        raise ValueError('Expected navigate or reload')
+    if release is not None and not re.fullmatch('[a-f0-9]{12,40}', release):
+        raise ValueError('Expected exact release')
+    rows, audit = read_rows(root, since, until, navigation)
+    if release is not None:
+        rows = [r for r in rows if r['release'] == release]
     by_browser, by_release = collections.defaultdict(list), collections.defaultdict(list)
     for r in rows:
         by_browser[r['browser']].append(r)
         by_release[(r['release'], r['browser'])].append(r)
-    return {'since': since, 'until': until, 'scope': 'mobile/navigate/arrivals+departures; all eligible sources and locales',
+    return {'since': since, 'until': until, 'release': release,
+            'scope': f'mobile/{navigation}/arrivals+departures; all eligible sources and locales',
             **audit, 'total': summarize(rows),
             'browsers': {k: summarize(v) for k, v in sorted(by_browser.items())},
             'releases': [{'release': k[0], 'browser': k[1], 'firstHour': min(r['hour'] for r in v),
                           'lastHour': max(r['hour'] for r in v), **summarize(v)} for k, v in sorted(by_release.items())],
             'limitations': ['No user identity, carrier, geography or search-referrer linkage.',
                             'request roundtrip does not isolate backend time.',
+                            'Paired request minus edgeHeader is outside the nginx header interval, not proven network latency.',
                             'Different releases and hours are not a controlled experiment.',
                             'No LCP API, rejected consent, early exits or undelivered reports are absent.']}
 
@@ -142,7 +219,11 @@ if __name__ == '__main__':
     parser.add_argument('--dir', type=Path, default=Path.home() / 'airportsboard-data/rum')
     parser.add_argument('--since', required=True, type=date_arg)
     parser.add_argument('--until', required=True, type=date_arg)
+    # Reloads can have a slow new connection too, but must not silently change the
+    # baseline navigate denominator. Report them explicitly as a separate cohort.
+    parser.add_argument('--navigation', choices=('navigate', 'reload'), default='navigate')
+    parser.add_argument('--release')
     args = parser.parse_args()
     if args.since > args.until:
         parser.error('since must not be after until')
-    print(json.dumps(report(args.dir, args.since, args.until), indent=2))
+    print(json.dumps(report(args.dir, args.since, args.until, args.navigation, args.release), indent=2))
