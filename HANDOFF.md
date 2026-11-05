@@ -1,3 +1,31 @@
+## Codex, 05.11.2026 — запуск 14/20 завершён: Корк выкачен
+
+Runtime/origin/main10dc05178177280637ef9bfaa469970e1f69717a.
+Push07:06:19Amsterdam вне прогрева, CI41978200746success06:08:53UTC.
+СерверHEAD/healthсовпали;3pm2online,restart106.
+
+Справочная ORK:5 официальных разделов ×12языков, включая разницу бесплатной
+остановки10мин и парковки15мин. Все55 переводных блоков проверены в ChatGPT,
+приняты7 языковых замечаний. Источники/рецензия сохранены. Дизайн/JS/DNS неизменны.
+
+Перед выкатом guidefresh188×12, scripts232148/8350,keys12×395,tscдо/после/cleanup,
+fixturebuild2473,localindex20/20,paint5/5,sitemap/AdSense PASS.
+375px RU/DE/JA/AR:раскрытие/переносы/RTL/закрытие,снимки. Не физические телефоны.
+24local HTML:тексты/FAQ/canonical/robots/hreflang; пустыеarrivals ожидаемоnoindex.
+После выката24productionHTMLPASS (всеindex),index20/20,sitemap/hreflang/gzip,
+live-refresh3/7<10мин,AdSensePASS. ПлатныхAPI/браузеранаproductionнебыло.
+
+ORK не добавлялся в sitemap, частота/расход прогрева не менялись.
+RUMдоэтоговыката128mobileNavigate,p75LCP1544,3slow,TLS62known/66unknown;
+1slowChromeдоTLS,не доказательствообщегосетевогодиагноза/ускорения.
+Local3166остановлен,.next-cycle14удалён,TSвосстановлены,вкладказакрыта.
+Аккаунты/реклама/данныепользователейсохранены,AdSense03.11недублировали.
+
+Протокол ops/improvement-cycles-20261104/ork-guide/RESULT.md.
+Следующий15/20:дневнойRUM;оценить полезныестраницы внеsitemap отдельно от
+платногопрогрева. Не расширять весьхвост бездоказательств. Сериюнепродлевать.
+Документацию послевыката отдельнонепушить.
+
 ## Codex, 05.11.2026 — запуск 14/20: справочная ORK готова к выкату
 
 Worktree runwayboard-flight-map-prototype-20261028, codex/flight-map-prototype-20261028;
