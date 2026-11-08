@@ -16,6 +16,14 @@ export function routePair(value,codes){const m=String(value).trim().toUpperCase(
 // внутри alias; на CPU6× подготовка core растягивалась до1.6с. Кэш действует
 // только во время сборки индекса. Состав строки и ранжирование сохраняются;
 // дифференциальные тесты сравнивают результат со старым индексом на12языках.
+// Строка совпадений неизменна после загрузки каталога. Сборка её на каждом
+// вводе создавала 6074 временных строки (и повторное выравнивание строк
+// движком). Готовим один раз внутри тех же коротких порций индекса,
+// сохраняя порядок полей, пробелы и прежнее ранжирование.
+function indexedRow(a,city,name,latin=''){
+ const code=a.code.toLowerCase();
+ return {a,code,city,name,latin,hay:code+' '+city+' '+name+' '+latin};
+}
 function rowBuilder(){
  const normalized=new Map(),transliterated=new Map();
  const norm=s=>{if(!normalized.has(s))normalized.set(s,normalize(s));return normalized.get(s);};
@@ -23,7 +31,7 @@ function rowBuilder(){
  return a=>{
   const city=norm(a.city),name=norm(a.name);
   const alias=a.alias===a.city+' '+a.name?[city,name].filter(Boolean).join(' '):norm(a.alias||'');
-  return {a,code:a.code.toLowerCase(),city,name,latin:[city,name,alias].filter(Boolean).map(translit).join(' ')};
+  return indexedRow(a,city,name,[city,name,alias].filter(Boolean).map(translit).join(' '));
  };
 }
 export const createAirportSearch=(airports,locale='ru')=>searchFromRows(airports,locale,airports.map(rowBuilder()));
@@ -33,7 +41,7 @@ export const createAirportSearch=(airports,locale='ru')=>searchFromRows(airports
 // Запрос без совпадений ожидает полный асинхронный индекс, а не ложный zero.
 export function createLocalAirportSearch(airports,locale='ru'){
  const cache=new Map(),norm=s=>{if(!cache.has(s))cache.set(s,normalize(s));return cache.get(s);};
- return searchFromRows(airports,locale,airports.map(a=>({a,code:a.code.toLowerCase(),city:norm(a.city),name:norm(a.name),latin:''})));
+ return searchFromRows(airports,locale,airports.map(a=>indexedRow(a,norm(a.city),norm(a.name))));
 }
 export async function createAirportSearchAsync(airports,locale='ru',signal){
  // Safari растягивал цепочку setTimeout(0): после 28с готово лишь 1600
@@ -62,7 +70,7 @@ function searchFromRows(airports,locale,rows){
  return (value,{recent=[],exclude='',limit=6}={})=>{
   const q=normalize(value);if(!q)return [...new Set([...recent,...defaults])].filter(c=>c!==exclude&&byCode.has(c)).slice(0,limit).map(c=>byCode.get(c));
   const terms=q.split(' '),rank=new Map(recent.map((c,i)=>[c,i])),out=[];
-  for(const row of rows){if(row.a.code===exclude)continue;const hay=row.code+' '+row.city+' '+row.name+' '+row.latin;if(!terms.every(t=>hay.includes(t)))continue;
+  for(const row of rows){if(row.a.code===exclude)continue;if(!terms.every(t=>row.hay.includes(t)))continue;
    const score=row.code===q?0:row.city===q?1:row.city.startsWith(q)?2:row.code.startsWith(q)?3:row.city.includes(q)?4:row.latin.startsWith(q)?5:6;
    out.push({a:row.a,score,recent:rank.get(row.a.code)??9999});
   }
