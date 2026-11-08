@@ -1,0 +1,170 @@
+[
+  {
+    "locale": "ru",
+    "open": {
+      "first": "visible",
+      "modal": 1,
+      "scroll": 375,
+      "tail": "auto",
+      "width": 375
+    },
+    "close": {
+      "focused": "frow",
+      "modal": 0
+    }
+  },
+  {
+    "locale": "en",
+    "open": {
+      "first": "visible",
+      "modal": 1,
+      "scroll": 375,
+      "tail": "auto",
+      "width": 375
+    },
+    "close": {
+      "focused": "frow",
+      "modal": 0
+    }
+  },
+  {
+    "locale": "de",
+    "open": {
+      "first": "visible",
+      "modal": 1,
+      "scroll": 375,
+      "tail": "auto",
+      "width": 375
+    },
+    "close": {
+      "focused": "frow",
+      "modal": 0
+    }
+  },
+  {
+    "locale": "fr",
+    "open": {
+      "first": "visible",
+      "modal": 1,
+      "scroll": 375,
+      "tail": "auto",
+      "width": 375
+    },
+    "close": {
+      "focused": "frow",
+      "modal": 0
+    }
+  },
+  {
+    "locale": "es",
+    "open": {
+      "first": "visible",
+      "modal": 1,
+      "scroll": 375,
+      "tail": "auto",
+      "width": 375
+    },
+    "close": {
+      "focused": "frow",
+      "modal": 0
+    }
+  },
+  {
+    "locale": "it",
+    "open": {
+      "first": "visible",
+      "modal": 1,
+      "scroll": 375,
+      "tail": "auto",
+      "width": 375
+    },
+    "close": {
+      "focused": "frow",
+      "modal": 0
+    }
+  },
+  {
+    "locale": "tr",
+    "open": {
+      "first": "visible",
+      "modal": 1,
+      "scroll": 375,
+      "tail": "auto",
+      "width": 375
+    },
+    "close": {
+      "focused": "frow",
+      "modal": 0
+    }
+  },
+  {
+    "locale": "zh",
+    "open": {
+      "first": "visible",
+      "modal": 1,
+      "scroll": 375,
+      "tail": "auto",
+      "width": 375
+    },
+    "close": {
+      "focused": "frow",
+      "modal": 0
+    }
+  },
+  {
+    "locale": "ja",
+    "open": {
+      "first": "visible",
+      "modal": 1,
+      "scroll": 375,
+      "tail": "auto",
+      "width": 375
+    },
+    "close": {
+      "focused": "frow",
+      "modal": 0
+    }
+  },
+  {
+    "locale": "ko",
+    "open": {
+      "first": "visible",
+      "modal": 1,
+      "scroll": 375,
+      "tail": "auto",
+      "width": 375
+    },
+    "close": {
+      "focused": "frow",
+      "modal": 0
+    }
+  },
+  {
+    "locale": "ar",
+    "open": {
+      "first": "visible",
+      "modal": 1,
+      "scroll": 375,
+      "tail": "auto",
+      "width": 375
+    },
+    "close": {
+      "focused": "frow",
+      "modal": 0
+    }
+  },
+  {
+    "locale": "hi",
+    "open": {
+      "first": "visible",
+      "modal": 1,
+      "scroll": 375,
+      "tail": "auto",
+      "width": 375
+    },
+    "close": {
+      "focused": "frow",
+      "modal": 0
+    }
+  }
+]

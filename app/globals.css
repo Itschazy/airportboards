@@ -171,6 +171,12 @@ input::-webkit-search-cancel-button { display: none; }
   content-visibility: auto;
   contain-intrinsic-size: auto 72px;
 }
+/* Первый экран нельзя начинать с условной высоты 72px: у длинного города,
+   статуса или перевода строка выше. Chromium сначала показывал эти заглушки,
+   затем сдвигал уже видимые строки (CLS 0.038 на DXB при 375px). Первые 12
+   рассчитываются сразу; дальние строки сохраняют отложенную отрисовку.
+   Это не фиксированная высота: переносы, масштаб текста и дизайн не меняются. */
+ul > li:nth-child(-n + 12) > .frow { content-visibility: visible; }
 @media (hover: hover) {
   .frow:hover {
     background: var(--glass);
