@@ -1,7 +1,7 @@
 {
   "automationId": "airportsboard-8",
   "totalRuns": 8,
-  "completedRuns": 4,
+  "completedRuns": 5,
   "runs": [
     {
       "number": 1,
@@ -33,6 +33,14 @@
       "runtime": "5625ffd19a5510275d78f6200ef9fa23cf960607",
       "ci": 42447488552,
       "report": "cycle4.md"
+    },
+    {
+      "number": 5,
+      "trigger": "2026-11-08T05:05:17.536Z",
+      "result": "Prevent malformed recent-history React crash; 30 new scenarios, 12 locales and production checks pass; stale HTML asset404 reproduced, queued for run6",
+      "runtime": "c841da913860a17440d8fc3ca60fb273dd334767",
+      "ci": 42450185689,
+      "report": "cycle5.md"
     }
   ]
 }
