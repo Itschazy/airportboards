@@ -1,7 +1,7 @@
 {
   "automationId": "airportsboard-8",
   "totalRuns": 8,
-  "completedRuns": 1,
+  "completedRuns": 2,
   "runs": [
     {
       "number": 1,
@@ -9,6 +9,14 @@
       "result": "Baseline RUM and local regression checks; no product changes",
       "runtime": "57c5af40ff29123263734070c8fbbd856ff34137",
       "report": "cycle1.md"
+    },
+    {
+      "number": 2,
+      "trigger": "2026-11-08T02:50:16.661Z",
+      "result": "Prepared search rows deployed; 46–56% less CPU in paired desktop WebKit; 200 tests and production checks pass",
+      "runtime": "1d350e2b5e93455da614ed53e2bf80edf89dbacb",
+      "ci": 42441281464,
+      "report": "cycle2.md"
     }
   ]
 }

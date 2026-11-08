@@ -1,3 +1,26 @@
+## Codex, 08.11.2026 — airportsboard-8, запуск 2/8: поиск карты ускорен и выкачен
+
+Релиз/origin/main/serverHEAD: 1d350e2b5e93455da614ed53e2bf80edf89dbacb.
+Рабочая копия /Users/whereiszhenya/projects/runwayboard-flight-map-prototype-20261028,
+ветка codex/flight-map-prototype-20261028. Push 04:06 Amsterdam вне прогрева;
+CI42441281464 success, health.release совпал, runtime из SSR побайтно проверен.
+Поиск больше не склеивает 6074 строки при каждой букве: готовит один раз в
+порциях индекса. Парный desktop WebKit: CPU поиска −46–56% на 12 языках;
+это НЕ Android LCP и не двукратное ускорение страницы. Дополнительный heap
+в Node около1.2MiB; подготовка+первый запрос без заметной регрессии.
+200/200 тестов, tsc, keys12×395, scripts, fixturebuild2473, SSR/SEO карты/help,
+index20/20, firstpaint5/5 PASS. Реальный UI WebKit375: чел→челя, IATA, add/reload,
+EN Paris, AR دبي; console errors0. Физические телефоны/доставка соцсетям не проверены.
+Production audit-bot index/sitemap-hreflang/live-refresh/adsense:4 exit0.
+Дизайн/DNS/SEO/12языков/личные данные/аккаунты сохранены. AdSenseJS выключен.
+Следующий подтверждённый дефект: RU латинский Paris выдаёт ALE/BVA раньше CDG
+из-за совпадения подстроки Casparis; EN выдаёт CDG первым. Исправлять отдельным
+пакетом, со сравнением всех языков. RUM-профиль BKK/DXB/BCN/DOH также остаётся.
+Журнал ops/improvement-cycles-20261108/progress.json:2/8, осталось6; не продлевать.
+Логи/микрозамеры/скриншоты в outputs/improvement-cycles-20261108/cycle2 папки чата.
+Свои серверы3172/3173/build очищены, generatedTS восстановлены, IAB закрыт/reset.
+Старый untracked outputs/ сохранён. Итоговые docs отдельно не пушить.
+
 ## Codex,08.11.2026 — airportsboard-8, запуск1/8 завершён
 
 Свежий main/serverHEAD/health57c5af40ff29123263734070c8fbbd856ff34137;

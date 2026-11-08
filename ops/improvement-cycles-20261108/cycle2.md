@@ -71,3 +71,19 @@ Casparis совпадает подстрокой); это существующе
 Нужно отдельное воспроизведение/решение ранжирования, не менять вместе с CPU fix.
 Также остаётся профиль BKK/DXB/BCN/DOH по RUM предыдущего запуска.
 Выкат и postchecks фиксируются после фактического результата, не заранее.
+
+## Выкат и итог
+
+Push08.11.2026 04:06:06 Europe/Amsterdam вне окна прогрева. Fresh origin/main
+перед push оставался57c5af40. Релиз1d350e2b5e93455da614ed53e2bf80edf89dbacb.
+CI42441281464 completed/success. Серверный HEAD и health.release совпадают.
+Ссылка runtime из production SSR имеет новый cache key; 53422B побайтно совпали
+с локальным проверенным bundle, SHA25604125ff42ed5b758e63743fea894eefc57e0eb10579327c99b75a23ec10d9524.
+Production audit-bot: index20/20, sitemap-hreflang+gzip, live-refresh, adsense —
+все exit0. Рекламный JS не включён. Платные API не запрашивались.
+Дизайн/DNS/12локалей/SEO/данные пользователей сохранены.
+Свои3172/3173 остановлены, .next-cycle82 удалён, generatedTS восстановлены,
+post-cleanup tscPASS. IAB-тестовые вкладки закрыты, viewport сброшен.
+Старый untracked outputs/ сохранён. Локальный журнал серии:2/8, осталось6.
+Итоговую документацию отдельно не выкатывать.
+Артефакты: outputs/improvement-cycles-20261108/cycle2 в папке чата.
