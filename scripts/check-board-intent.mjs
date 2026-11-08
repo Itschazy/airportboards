@@ -14,7 +14,12 @@ function setup() {
  const board={isConnected:true,attrs:new Map(),setAttribute(k,v){this.attrs.set(k,v);},hasAttribute(k){return this.attrs.has(k);}};
  const context={exports:{},window:target(windowListeners),document:target(listeners),location:{pathname:'/ru/airport/AYT',search:''},Date:{now:()=>now}};
  vm.runInNewContext(compiled,context);vm.runInNewContext(context.exports.boardIntentBootstrap,context);
- const row=key=>({closest:s=>s==='[data-board-flight]'?{closest:()=>board,getAttribute:()=>key,focus:options=>{assert.equal(options.preventScroll,true);context.focusedKey=key;}}:null});
+ const row=key=>({closest:s=>s===(key==='@search'?'[data-board-search]':'[data-board-flight]')?{
+  closest:()=>board,
+  hasAttribute:attr=>attr===(key==='@search'?'data-board-search':'data-board-flight'),
+  getAttribute:attr=>attr===(key==='@search'?'data-board-search':'data-board-flight')?(key==='@search'?'':key):null,
+  focus:options=>{assert.equal(options.preventScroll,true);context.focusedKey=key;}
+ }:null});
  const dispatch=(type,key='SU112',keyboard)=>{let prevented=false,stopped=false;const event={type,key:keyboard,target:key===null?{closest:()=>null}:row(key),preventDefault(){prevented=true;},stopPropagation(){stopped=true;}};listeners.get(type)?.(event);return {prevented,stopped};};
  return {context,board,listeners,windowListeners,dispatch,claim:()=>context.exports.claimBoardIntent(board),advance:n=>now+=n};
 }
@@ -35,4 +40,19 @@ check('через минуту намерение протухает',()=>{const
 check('готовое табло не перехватывается, даже до снятия обработчика',()=>{const s=setup();s.board.setAttribute('data-board-ready','');assert.deepEqual(s.dispatch('click'),{prevented:false,stopped:false});assert.equal(s.claim(),null);});
 check('один script не устанавливает второй комплект обработчиков',()=>{const s=setup();const capture=s.listeners.get('click');vm.runInNewContext(s.context.exports.boardIntentBootstrap,s.context);assert.equal(s.listeners.get('click'),capture);});
 check('ключ различает повтор номера в соседний день',()=>{const s=setup(),key=s.context.exports.boardFlightKey;assert.notEqual(key({flight:'SU112',ts:1,scheduled:'12:00'}),key({flight:'SU112',ts:86401,scheduled:'12:00'}));assert.equal(key({flight:'SU112',scheduled:'12:00'}),'["SU112",null,"12:00"]');});
+check('ранний поиск сохраняется один раз вместо потерянного click',()=>{
+ const s=setup();assert.deepEqual(s.dispatch('click','@search'),{prevented:true,stopped:true});
+ assert.equal(s.context.focusedKey,'@search');const intent=s.claim();assert.equal(intent.search,true);assert.equal(intent.key,null);assert.equal(s.claim(),null);
+});
+check('последний поиск заменяет раннюю карточку и наоборот',()=>{
+ const s=setup();s.dispatch('click','SU112');s.dispatch('click','@search');assert.equal(s.claim().search,true);
+ const r=setup();r.dispatch('click','@search');r.dispatch('click','SU112');const intent=r.claim();assert.equal(intent.search,false);assert.equal(intent.key,'SU112');
+});
+for(const key of ['Enter',' '])check('ранний поиск с клавиатуры '+JSON.stringify(key),()=>{
+ const s=setup();s.dispatch('keydown','@search',key);assert.equal(s.claim().search,true);
+});
+check('Escape и другой клик отменяют ранний поиск',()=>{
+ const s=setup();s.dispatch('click','@search');s.dispatch('keydown',null,'Escape');assert.equal(s.claim(),null);
+ const r=setup();r.dispatch('click','@search');r.dispatch('click',null);assert.equal(r.claim(),null);
+});
 const s=setup();console.log(`${count} scenarios; bootstrap ${Buffer.byteLength(s.context.exports.boardIntentBootstrap)} B / ${gzipSync(s.context.exports.boardIntentBootstrap).length} B gzip`);

@@ -1294,6 +1294,12 @@ export function FlightBoard({ airport, locale, defaultMode = 'departures', displ
     // именно строку первоначального снимка, на которую нажали, до live-refresh.
     // Это единственный handoff inline-обработчика; обычные клики дальше — React.
     const intent = claimBoardIntent(boardRef.current);
+    if (intent?.search) {
+      // Открываем обычную панель; её эффект выставляет фокус после снятия inert.
+      // Последнее живое действие важнее старого ?flight, как и для карточки.
+      setSearchOpen(true);
+      return;
+    }
     const earlyFlight = intent && initialFlights?.find(f => boardFlightKey(f) === intent.key);
     if (earlyFlight) {
       track(GOALS.flightCard, { from: intent.keyboard ? 'keyboard' : 'row', past: !!earlyFlight.ts && earlyFlight.ts * 1000 < Date.now() });
@@ -1908,6 +1914,7 @@ export function FlightBoard({ airport, locale, defaultMode = 'departures', displ
               type="button"
               aria-label={t('search_placeholder')}
               aria-expanded={searchOpen}
+              data-board-search=""
               ref={searchToggleRef}
               className="press glass"
               onClick={() => setSearchOpen(true)}

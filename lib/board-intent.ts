@@ -1,10 +1,12 @@
 /**
- * Раннее нажатие на SSR-строку, пока Next ещё загружает JavaScript.
+ * Раннее нажатие на SSR-строку или поиск, пока Next ещё загружает JavaScript.
  *
  * Воспроизведение: задержать чанки Next, нажать SU112, отпустить чанки. Раньше
  * карточка не открывалась даже после гидратации: до запуска React некому было
  * запомнить событие. Теперь маленький inline-script перед строками хранит только
- * последнее намерение в памяти документа. Он не рисует вторую карточку, не
+ * последнее намерение в памяти документа. Поиск использует ту же очередь:
+ * его кнопка уже видна в SSR, но до React её обычный click тоже теряется.
+ * Он не рисует вторую карточку, не
  * меняет URL/хранилище и не делает запросов. React забирает намерение один раз.
  *
  * Capture + stopPropagation нужны именно ДО готовности табло: иначе при
@@ -20,19 +22,19 @@ var s={pending:null};
 function clear(){s.pending=null}
 function capture(e){
  if(e.type==='keydown'&&e.key!=='Enter'&&e.key!==' '){clear();return}
- var row=e.target&&e.target.closest?e.target.closest('[data-board-flight]'):null;
+ var row=e.target&&e.target.closest?(e.target.closest('[data-board-flight]')||e.target.closest('[data-board-search]')):null;
  var board=row&&row.closest('[data-board-intent]');
  if(!board||board.hasAttribute('data-board-ready')){clear();return}
  e.preventDefault();e.stopPropagation();
  row.focus({preventScroll:true});
- s.pending={board:board,key:row.getAttribute('data-board-flight'),url:location.pathname+location.search,at:Date.now(),keyboard:e.type==='keydown'};
+ s.pending={board:board,key:row.getAttribute('data-board-flight'),search:row.hasAttribute('data-board-search'),url:location.pathname+location.search,at:Date.now(),keyboard:e.type==='keydown'};
 }
 s.stop=function(){document.removeEventListener('click',capture,true);document.removeEventListener('keydown',capture,true);window.removeEventListener('pagehide',clear)};
 document.addEventListener('click',capture,true);document.addEventListener('keydown',capture,true);window.addEventListener('pagehide',clear);
 window.__abBoardIntent=s;
 })()`;
 
-type Pending = { board: HTMLElement; key: string; url: string; at: number; keyboard: boolean };
+type Pending = { board: HTMLElement; key: string | null; search: boolean; url: string; at: number; keyboard: boolean };
 declare global {
   interface Window {
     __abBoardIntent?: { pending: Pending | null; stop: () => void };
