@@ -26,6 +26,7 @@
 
 import fs from 'node:fs';
 import path from 'node:path';
+import {retainStaticAssets} from './retain-static-assets.mjs';
 
 const STAGE = process.env.NEXT_DIST_DIR || '.next-build';
 const LIVE = '.next';
@@ -55,6 +56,10 @@ if (missing.length) {
   console.error(`swap-build: сборка в ${STAGE} неполная — нет ${missing.join(', ')}. Подмену НЕ делаю.`);
   process.exit(1);
 }
+
+// Cached nginx HTML and open tabs may still request previous hashed JS/CSS.
+// Prepare bounded retention BEFORE touching live/rollback; a failure leaves both intact.
+say('старые статические ресурсы: ' + JSON.stringify(retainStaticAssets(STAGE, [LIVE, PREV])));
 
 // Carry the build/fetch cache forward. Moved, not copied: it can be hundreds of megabytes, and a
 // rename is instant on the same filesystem. If the staged build already made its own cache

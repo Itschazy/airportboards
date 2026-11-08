@@ -1,0 +1,416 @@
+[
+  {
+    "path": "css/c4971437a0289a64.css",
+    "status": 200,
+    "bytesMatch": true,
+    "cache": "public, max-age=31536000, immutable"
+  },
+  {
+    "path": "css/1cee0be73a85536f.css",
+    "status": 200,
+    "bytesMatch": true,
+    "cache": "public, max-age=31536000, immutable"
+  },
+  {
+    "path": "fuMOkvsb9iTE-hXid7VAi/_ssgManifest.js",
+    "status": 200,
+    "bytesMatch": true,
+    "cache": "public, max-age=31536000, immutable"
+  },
+  {
+    "path": "fuMOkvsb9iTE-hXid7VAi/_buildManifest.js",
+    "status": 200,
+    "bytesMatch": true,
+    "cache": "public, max-age=31536000, immutable"
+  },
+  {
+    "path": "chunks/webpack-56b6a307c27a8674.js",
+    "status": 200,
+    "bytesMatch": true,
+    "cache": "public, max-age=31536000, immutable"
+  },
+  {
+    "path": "chunks/main-app-3ad30d9f0b9f588e.js",
+    "status": 200,
+    "bytesMatch": true,
+    "cache": "public, max-age=31536000, immutable"
+  },
+  {
+    "path": "chunks/4bd1b696-f785427dddbba9fb.js",
+    "status": 200,
+    "bytesMatch": true,
+    "cache": "public, max-age=31536000, immutable"
+  },
+  {
+    "path": "chunks/1567-a248f50d8c2095b0.js",
+    "status": 200,
+    "bytesMatch": true,
+    "cache": "public, max-age=31536000, immutable"
+  },
+  {
+    "path": "chunks/6858-433478ec97418355.js",
+    "status": 200,
+    "bytesMatch": true,
+    "cache": "public, max-age=31536000, immutable"
+  },
+  {
+    "path": "chunks/main-e764b8294e8dd086.js",
+    "status": 200,
+    "bytesMatch": true,
+    "cache": "public, max-age=31536000, immutable"
+  },
+  {
+    "path": "chunks/2619-3c9e02e22d10480a.js",
+    "status": 200,
+    "bytesMatch": true,
+    "cache": "public, max-age=31536000, immutable"
+  },
+  {
+    "path": "chunks/3244-b33a25d31681c112.js",
+    "status": 200,
+    "bytesMatch": true,
+    "cache": "public, max-age=31536000, immutable"
+  },
+  {
+    "path": "chunks/framework-e60c938074ff7136.js",
+    "status": 200,
+    "bytesMatch": true,
+    "cache": "public, max-age=31536000, immutable"
+  },
+  {
+    "path": "chunks/1255-dc3ddf72a1dc71a7.js",
+    "status": 200,
+    "bytesMatch": true,
+    "cache": "public, max-age=31536000, immutable"
+  },
+  {
+    "path": "chunks/4659.8da0cbc63d7fbbcd.js",
+    "status": 200,
+    "bytesMatch": true,
+    "cache": "public, max-age=31536000, immutable"
+  },
+  {
+    "path": "chunks/polyfills-42372ed130431b0a.js",
+    "status": 200,
+    "bytesMatch": true,
+    "cache": "public, max-age=31536000, immutable"
+  },
+  {
+    "path": "chunks/app/layout-9da0364284d91e16.js",
+    "status": 200,
+    "bytesMatch": true,
+    "cache": "public, max-age=31536000, immutable"
+  },
+  {
+    "path": "chunks/app/page-20f809d11003d3ed.js",
+    "status": 200,
+    "bytesMatch": true,
+    "cache": "public, max-age=31536000, immutable"
+  },
+  {
+    "path": "chunks/pages/_error-94812ad32cad7365.js",
+    "status": 200,
+    "bytesMatch": true,
+    "cache": "public, max-age=31536000, immutable"
+  },
+  {
+    "path": "chunks/pages/_app-6c8c2371b16a04b8.js",
+    "status": 200,
+    "bytesMatch": true,
+    "cache": "public, max-age=31536000, immutable"
+  },
+  {
+    "path": "chunks/app/llms.txt/route-20f809d11003d3ed.js",
+    "status": 200,
+    "bytesMatch": true,
+    "cache": "public, max-age=31536000, immutable"
+  },
+  {
+    "path": "chunks/app/opengraph-image/route-20f809d11003d3ed.js",
+    "status": 200,
+    "bytesMatch": true,
+    "cache": "public, max-age=31536000, immutable"
+  },
+  {
+    "path": "chunks/app/icon2/route-20f809d11003d3ed.js",
+    "status": 200,
+    "bytesMatch": true,
+    "cache": "public, max-age=31536000, immutable"
+  },
+  {
+    "path": "chunks/app/[locale]/not-found-a6ff7981bdffe87e.js",
+    "status": 200,
+    "bytesMatch": true,
+    "cache": "public, max-age=31536000, immutable"
+  },
+  {
+    "path": "chunks/app/[locale]/layout-567f046d3a8db3b9.js",
+    "status": 200,
+    "bytesMatch": true,
+    "cache": "public, max-age=31536000, immutable"
+  },
+  {
+    "path": "chunks/app/[locale]/page-48010c5fc009be37.js",
+    "status": 200,
+    "bytesMatch": true,
+    "cache": "public, max-age=31536000, immutable"
+  },
+  {
+    "path": "chunks/app/apple-icon/route-20f809d11003d3ed.js",
+    "status": 200,
+    "bytesMatch": true,
+    "cache": "public, max-age=31536000, immutable"
+  },
+  {
+    "path": "chunks/app/ads.txt/route-20f809d11003d3ed.js",
+    "status": 200,
+    "bytesMatch": true,
+    "cache": "public, max-age=31536000, immutable"
+  },
+  {
+    "path": "chunks/app/icon1/route-20f809d11003d3ed.js",
+    "status": 200,
+    "bytesMatch": true,
+    "cache": "public, max-age=31536000, immutable"
+  },
+  {
+    "path": "chunks/app/sitemap.xml/route-20f809d11003d3ed.js",
+    "status": 200,
+    "bytesMatch": true,
+    "cache": "public, max-age=31536000, immutable"
+  },
+  {
+    "path": "chunks/app/_not-found/page-7cbdabf2838df386.js",
+    "status": 200,
+    "bytesMatch": true,
+    "cache": "public, max-age=31536000, immutable"
+  },
+  {
+    "path": "chunks/app/robots.txt/route-20f809d11003d3ed.js",
+    "status": 200,
+    "bytesMatch": true,
+    "cache": "public, max-age=31536000, immutable"
+  },
+  {
+    "path": "chunks/app/icon/route-20f809d11003d3ed.js",
+    "status": 200,
+    "bytesMatch": true,
+    "cache": "public, max-age=31536000, immutable"
+  },
+  {
+    "path": "chunks/app/manifest.webmanifest/route-20f809d11003d3ed.js",
+    "status": 200,
+    "bytesMatch": true,
+    "cache": "public, max-age=31536000, immutable"
+  },
+  {
+    "path": "chunks/app/[locale]/settings/page-88bc66c17f7fd659.js",
+    "status": 200,
+    "bytesMatch": true,
+    "cache": "public, max-age=31536000, immutable"
+  },
+  {
+    "path": "chunks/app/[locale]/contact/page-d785de9303039284.js",
+    "status": 200,
+    "bytesMatch": true,
+    "cache": "public, max-age=31536000, immutable"
+  },
+  {
+    "path": "chunks/app/[locale]/privacy/page-d785de9303039284.js",
+    "status": 200,
+    "bytesMatch": true,
+    "cache": "public, max-age=31536000, immutable"
+  },
+  {
+    "path": "chunks/app/[locale]/favorites/page-19eee3a2693afea9.js",
+    "status": 200,
+    "bytesMatch": true,
+    "cache": "public, max-age=31536000, immutable"
+  },
+  {
+    "path": "chunks/app/[locale]/terms/page-d785de9303039284.js",
+    "status": 200,
+    "bytesMatch": true,
+    "cache": "public, max-age=31536000, immutable"
+  },
+  {
+    "path": "chunks/app/[locale]/flight-map/page-94129ecbaf746908.js",
+    "status": 200,
+    "bytesMatch": true,
+    "cache": "public, max-age=31536000, immutable"
+  },
+  {
+    "path": "chunks/app/[locale]/about/page-d785de9303039284.js",
+    "status": 200,
+    "bytesMatch": true,
+    "cache": "public, max-age=31536000, immutable"
+  },
+  {
+    "path": "chunks/app/[locale]/[...rest]/page-20f809d11003d3ed.js",
+    "status": 200,
+    "bytesMatch": true,
+    "cache": "public, max-age=31536000, immutable"
+  },
+  {
+    "path": "chunks/app/[locale]/manifest.webmanifest/route-20f809d11003d3ed.js",
+    "status": 200,
+    "bytesMatch": true,
+    "cache": "public, max-age=31536000, immutable"
+  },
+  {
+    "path": "chunks/app/[locale]/events/page-d785de9303039284.js",
+    "status": 200,
+    "bytesMatch": true,
+    "cache": "public, max-age=31536000, immutable"
+  },
+  {
+    "path": "chunks/app/[locale]/widgets/page-41088857d571e17e.js",
+    "status": 200,
+    "bytesMatch": true,
+    "cache": "public, max-age=31536000, immutable"
+  },
+  {
+    "path": "chunks/app/[locale]/airports/page-d785de9303039284.js",
+    "status": 200,
+    "bytesMatch": true,
+    "cache": "public, max-age=31536000, immutable"
+  },
+  {
+    "path": "chunks/app/[locale]/city/[slug]/page-e7d1a8062f0f04d5.js",
+    "status": 200,
+    "bytesMatch": true,
+    "cache": "public, max-age=31536000, immutable"
+  },
+  {
+    "path": "chunks/app/[locale]/route/[pair]/page-d785de9303039284.js",
+    "status": 200,
+    "bytesMatch": true,
+    "cache": "public, max-age=31536000, immutable"
+  },
+  {
+    "path": "chunks/app/[locale]/flight/[code]/page-d785de9303039284.js",
+    "status": 200,
+    "bytesMatch": true,
+    "cache": "public, max-age=31536000, immutable"
+  },
+  {
+    "path": "chunks/app/[locale]/flight-map/help/page-20f809d11003d3ed.js",
+    "status": 200,
+    "bytesMatch": true,
+    "cache": "public, max-age=31536000, immutable"
+  },
+  {
+    "path": "chunks/app/[locale]/airport/[iata]/page-13cf813067566d44.js",
+    "status": 200,
+    "bytesMatch": true,
+    "cache": "public, max-age=31536000, immutable"
+  },
+  {
+    "path": "chunks/app/[locale]/airport/[iata]/opengraph-image/route-20f809d11003d3ed.js",
+    "status": 200,
+    "bytesMatch": true,
+    "cache": "public, max-age=31536000, immutable"
+  },
+  {
+    "path": "chunks/app/[locale]/airport/[iata]/departures/page-34cf83ff58d99259.js",
+    "status": 200,
+    "bytesMatch": true,
+    "cache": "public, max-age=31536000, immutable"
+  },
+  {
+    "path": "chunks/app/[locale]/airport/[iata]/arrivals/page-fa2a8c73119c94f3.js",
+    "status": 200,
+    "bytesMatch": true,
+    "cache": "public, max-age=31536000, immutable"
+  },
+  {
+    "path": "chunks/app/[locale]/az/[letter]/page-d785de9303039284.js",
+    "status": 200,
+    "bytesMatch": true,
+    "cache": "public, max-age=31536000, immutable"
+  },
+  {
+    "path": "chunks/app/[locale]/airline/[code]/page-d785de9303039284.js",
+    "status": 200,
+    "bytesMatch": true,
+    "cache": "public, max-age=31536000, immutable"
+  },
+  {
+    "path": "chunks/app/[locale]/event/[slug]/page-d785de9303039284.js",
+    "status": 200,
+    "bytesMatch": true,
+    "cache": "public, max-age=31536000, immutable"
+  },
+  {
+    "path": "chunks/app/[locale]/event/[slug]/opengraph-image/route-20f809d11003d3ed.js",
+    "status": 200,
+    "bytesMatch": true,
+    "cache": "public, max-age=31536000, immutable"
+  },
+  {
+    "path": "chunks/app/[locale]/airports/[country]/page-e7d1a8062f0f04d5.js",
+    "status": 200,
+    "bytesMatch": true,
+    "cache": "public, max-age=31536000, immutable"
+  },
+  {
+    "path": "chunks/app/embed/[iata]/route-b62aac286bc81006.js",
+    "status": 200,
+    "bytesMatch": true,
+    "cache": "public, max-age=31536000, immutable"
+  },
+  {
+    "path": "chunks/app/sitemap/[__metadata_id__]/route-20f809d11003d3ed.js",
+    "status": 200,
+    "bytesMatch": true,
+    "cache": "public, max-age=31536000, immutable"
+  },
+  {
+    "path": "chunks/app/api/health/route-20f809d11003d3ed.js",
+    "status": 200,
+    "bytesMatch": true,
+    "cache": "public, max-age=31536000, immutable"
+  },
+  {
+    "path": "chunks/app/api/rum/route-20f809d11003d3ed.js",
+    "status": 200,
+    "bytesMatch": true,
+    "cache": "public, max-age=31536000, immutable"
+  },
+  {
+    "path": "chunks/app/api/airlabs-usage/route-20f809d11003d3ed.js",
+    "status": 200,
+    "bytesMatch": true,
+    "cache": "public, max-age=31536000, immutable"
+  },
+  {
+    "path": "chunks/app/api/revalidate/route-20f809d11003d3ed.js",
+    "status": 200,
+    "bytesMatch": true,
+    "cache": "public, max-age=31536000, immutable"
+  },
+  {
+    "path": "chunks/app/api/flights/[iata]/route-20f809d11003d3ed.js",
+    "status": 200,
+    "bytesMatch": true,
+    "cache": "public, max-age=31536000, immutable"
+  },
+  {
+    "path": "chunks/app/api/cron/warm/route-20f809d11003d3ed.js",
+    "status": 200,
+    "bytesMatch": true,
+    "cache": "public, max-age=31536000, immutable"
+  },
+  {
+    "path": "chunks/app/api/airports/search/route-20f809d11003d3ed.js",
+    "status": 200,
+    "bytesMatch": true,
+    "cache": "public, max-age=31536000, immutable"
+  },
+  {
+    "path": "chunks/app/api/airports/counts/route-20f809d11003d3ed.js",
+    "status": 200,
+    "bytesMatch": true,
+    "cache": "public, max-age=31536000, immutable"
+  }
+]

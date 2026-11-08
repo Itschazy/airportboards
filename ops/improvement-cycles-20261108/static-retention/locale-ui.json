@@ -1,0 +1,110 @@
+[
+  {
+    "locale": "ru",
+    "dialogs": 0,
+    "error": false,
+    "focus": true,
+    "rows": 20,
+    "scrollWidth": 375,
+    "width": 375
+  },
+  {
+    "locale": "en",
+    "dialogs": 0,
+    "error": false,
+    "focus": true,
+    "rows": 20,
+    "scrollWidth": 375,
+    "width": 375
+  },
+  {
+    "locale": "de",
+    "dialogs": 0,
+    "error": false,
+    "focus": true,
+    "rows": 20,
+    "scrollWidth": 375,
+    "width": 375
+  },
+  {
+    "locale": "fr",
+    "dialogs": 0,
+    "error": false,
+    "focus": true,
+    "rows": 20,
+    "scrollWidth": 375,
+    "width": 375
+  },
+  {
+    "locale": "es",
+    "dialogs": 0,
+    "error": false,
+    "focus": true,
+    "rows": 20,
+    "scrollWidth": 375,
+    "width": 375
+  },
+  {
+    "locale": "it",
+    "dialogs": 0,
+    "error": false,
+    "focus": true,
+    "rows": 20,
+    "scrollWidth": 375,
+    "width": 375
+  },
+  {
+    "locale": "tr",
+    "dialogs": 0,
+    "error": false,
+    "focus": true,
+    "rows": 20,
+    "scrollWidth": 375,
+    "width": 375
+  },
+  {
+    "locale": "zh",
+    "dialogs": 0,
+    "error": false,
+    "focus": true,
+    "rows": 20,
+    "scrollWidth": 375,
+    "width": 375
+  },
+  {
+    "locale": "ja",
+    "dialogs": 0,
+    "error": false,
+    "focus": true,
+    "rows": 20,
+    "scrollWidth": 375,
+    "width": 375
+  },
+  {
+    "locale": "ko",
+    "dialogs": 0,
+    "error": false,
+    "focus": true,
+    "rows": 20,
+    "scrollWidth": 375,
+    "width": 375
+  },
+  {
+    "locale": "ar",
+    "dialogs": 0,
+    "error": false,
+    "focus": true,
+    "rows": 20,
+    "scrollWidth": 375,
+    "width": 375
+  },
+  {
+    "locale": "hi",
+    "dialogs": 0,
+    "error": false,
+    "focus": true,
+    "rows": 20,
+    "scrollWidth": 375,
+    "width": 375
+  }
+]
