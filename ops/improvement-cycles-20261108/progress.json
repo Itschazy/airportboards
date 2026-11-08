@@ -1,7 +1,7 @@
 {
   "automationId": "airportsboard-8",
   "totalRuns": 8,
-  "completedRuns": 3,
+  "completedRuns": 4,
   "runs": [
     {
       "number": 1,
@@ -25,6 +25,14 @@
       "runtime": "815101aa3ae6aac5565903d4a2efa906d6b37c64",
       "ci": 42443892355,
       "report": "cycle3.md"
+    },
+    {
+      "number": 4,
+      "trigger": "2026-11-08T04:20:17.443Z",
+      "result": "Reduced first-screen row CLS on four fixture pages; 12 locales and production checks pass; desktop Chromium measurements, not Android LCP",
+      "runtime": "5625ffd19a5510275d78f6200ef9fa23cf960607",
+      "ci": 42447488552,
+      "report": "cycle4.md"
     }
   ]
 }

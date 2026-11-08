@@ -85,3 +85,18 @@ p75LCP1696ms,2>4s; обе преимущественно DNS/connect. Это е�
 Артефакты в outputs/improvement-cycles-20261108/cycle4 папки чата; probe.js/proxy.py
 строго диагностические, в код посетителя не включены. Точный релиз/CI/production
 проверки добавляются после фактического выката.
+
+## Выкат и завершение
+
+Push08.11.2026 05:36:13 Europe/Amsterdam, вне прогрева. Релиз
+5625ffd19a5510275d78f6200ef9fa23cf960607. CI42447488552 success;
+серверный HEAD совпал, health.release5625ffd19a55, instance1.
+Production audit-bot: index20/20,sitemap-hreflang,live-refresh,adsense —4 exit0.
+Новый CSS явно найден в head всех12страниц /<locale>/airport/DXB/arrivals:
+en/fr потребовали второй запрос после штатного обновления ISR/nginx, остальные первый.
+Ручного purge/revalidate не было. Не считать первую старую HTML-копию новым релизом.
+Ни платных API, ни production-браузера, ни рекламы/изменений аккаунтов.
+
+Собственные3176/3177 остановлены, .next-cycle84 удалён, generatedTS восстановлены,
+после cleanup tscPASS. Собственная IAB-вкладка закрыта, viewportreset.
+Старый untracked outputs/ не затронут. Серия4/8; не продлевать.
