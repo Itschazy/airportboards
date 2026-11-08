@@ -2,7 +2,7 @@ import test from 'node:test';
 import 'fake-indexeddb/auto';
 import assert from 'node:assert/strict';
 import {validateDate,formatHistoryDate,markDuplicates} from '../../public/flight-map/v10/history.js';
-import {createTransfer,exportCSV} from '../../public/flight-map/v10/transfer.js';
+const {createTransfer,exportCSV}=await import(`../../public/flight-map/${process.env.MAP_TRANSFER_VERSION||'v11'}/transfer.js`);
 import {createStorage} from '../../public/flight-map/v10/storage.js';
 const codes=new Set(['LHR','CDG','JFK','HND']);let seq=0;
 const transfer=createTransfer({codes,newId:()=>`f_${++seq}`,today:'2026-11-03'});
@@ -93,4 +93,19 @@ test('queued stale save cannot overwrite import that advances same store observe
   const importing=s.importAsync([imported]);const staleSaving=s.writeAsync([{...f,number:'EDITED'}]);
   await importing;await assert.rejects(staleSaving);assert.deepEqual(s.read(),[f,imported]);
  }finally{if(descriptor)Object.defineProperty(globalThis,'navigator',descriptor);else delete globalThis.navigator;}
+});
+
+// A single permitted 1.6MB chain used to allocate 394999 identical errors
+// after the 5000-record limit. The preview must stop work at the limit.
+test('long route chains stop at one limit error instead of allocating an error per remaining leg',()=>{
+ const text=Array.from({length:400000},(_,i)=>i%2?'CDG':'LHR').join(' ');
+ const result=parse(text,{format:'routes'});
+ assert.equal(result.rows.length,5000);
+ assert.equal(result.errors.length,1);assert.deepEqual(result.errors[0],{code:'record_limit',line:1});
+});
+test('route limit counts legs across lines, allows exactly 5000 and never truncates silently',()=>{
+ const exact='LHR CDG JFK\n'.repeat(2500);
+ const ok=parse(exact,{format:'routes'});assert.equal(ok.rows.length,5000);assert.equal(ok.errors.length,0);
+ const over=parse(exact+'HND LHR CDG',{format:'routes'});
+ assert.equal(over.rows.length,5000);assert.deepEqual(over.errors,[{code:'record_limit',line:2501}]);
 });

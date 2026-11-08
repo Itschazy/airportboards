@@ -273,7 +273,7 @@ const nextConfig: NextConfig = {
          * Условие остаётся прежним и обязательным: файл под старым номером не правят.
          * Заголовок проверяет check-flight-map.
          */
-        source: '/flight-map/:ver(v[1-8]|v10)/:path*',
+        source: '/flight-map/:ver(v[1-8]|v10|v11)/:path*',
         headers: [{ key: 'Cache-Control', value: 'public, max-age=31536000, immutable' }],
       },
       {

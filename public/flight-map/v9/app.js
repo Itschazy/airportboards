@@ -392,7 +392,7 @@ $('#enlargePreview').onclick=()=>{const enlarged=$('#sharePreview').classList.to
 $('#showStats').onchange=$('#showFlags').onchange=refreshShare;
 let transferPromise,pendingImport=null,importRevision=0,importBusy=false,importFormat='auto';
 // Парсер CSV загружается только по требованию, а не при первом открытии карты.
-const transfer=()=>transferPromise??=import(/* webpackIgnore: true */ '/flight-map/v10/transfer.js').then(m=>m.createTransfer({codes:airportCodes,newId})).catch(e=>{transferPromise=null;throw e;});
+const transfer=()=>transferPromise??=import(/* webpackIgnore: true */ '/flight-map/v11/transfer.js').then(m=>m.createTransfer({codes:airportCodes,newId})).catch(e=>{transferPromise=null;throw e;});
 function importMessage(e){
  const key=({file_size:'xTooLarge',record_limit:'xTooLarge',date_ambiguous:'xAmbiguousDate',airport_unknown:'xUnknownAirport',route_same:'xInvalidRoute',route_format:'xInvalidRoute'})[e.code]||(e.code?.startsWith('date_')?'xInvalidDate':'xInvalidCSV');
  return (e.line?t('xRow',{row:e.line})+': ':'')+t(key,key==='xUnknownAirport'?{code:e.value}:{});

@@ -2,7 +2,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import 'fake-indexeddb/auto';
 import {createStorage} from '../../public/flight-map/v10/storage.js';
-import {createTransfer} from '../../public/flight-map/v10/transfer.js';
+import {createTransfer} from '../../public/flight-map/v11/transfer.js';
 const api=createStorage(k=>k),codes=new Set(['HND','LAX']);
 const flight={id:'f_one',from:'HND',to:'LAX',date:'2026-11-03',number:'JL16'};
 function memory(){const data=new Map();return {getItem:k=>data.get(k)??null,setItem:(k,v)=>data.set(k,v)};}
