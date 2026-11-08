@@ -2,7 +2,7 @@
   "automationId": "airportsboard-2-8",
   "series": "20261108-series2",
   "totalRuns": 8,
-  "completedRuns": 6,
+  "completedRuns": 7,
   "intervalMinutes": 45,
   "status": "scheduled",
   "createdAt": "2026-11-08T07:40:26.350951+00:00",
@@ -75,6 +75,15 @@
       "completedAt": "2026-11-08T12:21:51.708323+00:00",
       "productionRelease": "1fd3becd21a5",
       "result": "Google confirmed prior en/flight-map request accepted in priority crawl queue; NTE inspection UI unavailable, no request sent. Current release mobile RUM n5, no LCP>4s; no product change/deploy."
+    },
+    {
+      "run": 7,
+      "trigger": "2026-11-08T13:01:19.928Z",
+      "status": "completed",
+      "task": "Новый обход Googlebot после заявки и свежий мобильный RUM",
+      "completedAt": "2026-11-08T13:03:08.485219+00:00",
+      "productionRelease": "1fd3becd21a5",
+      "result": "Verified Googlebot smartphone fetched en/airport/NTE HTTP200 at12:31:43UTC; indexing unconfirmed. Current release mobile RUM n60,3slow; no product change/deploy."
     }
   ]
 }
