@@ -1,7 +1,7 @@
 {
   "automationId": "airportsboard-8",
   "totalRuns": 8,
-  "completedRuns": 5,
+  "completedRuns": 6,
   "runs": [
     {
       "number": 1,
@@ -41,6 +41,14 @@
       "runtime": "c841da913860a17440d8fc3ca60fb273dd334767",
       "ci": 42450185689,
       "report": "cycle5.md"
+    },
+    {
+      "number": 6,
+      "trigger": "2026-11-08T05:50:19.300Z",
+      "result": "Bounded 7-day static retention prevents stale HTML ChunkLoadError after deploy; 16 regressions, 12-locale 375px UI, 76/76 historical production assets preserved",
+      "runtime": "68d59e2255b538cbf9f12f61ad715bfddb9cf252",
+      "ci": 42453385684,
+      "report": "cycle6.md"
     }
   ]
 }

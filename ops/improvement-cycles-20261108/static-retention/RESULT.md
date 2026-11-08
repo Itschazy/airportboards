@@ -54,3 +54,10 @@ Chrome9/p751628,Safari8/950,Yandex9/720,Yandex-app6/1548. Выборки мал�
 Артефакты outputs/improvement-cycles-20261108/cycle6 папки чата.
 Перед выкатом сохранены76productionstatic-файлов с hash/размером изlive+prev
 для точной проверки после замены. Production-результат дописать после CI.
+
+## Выкат проверен
+
+68d59e2255b538cbf9f12f61ad715bfddb9cf252, CI42453385684 success; push07:06:28 Amsterdam.
+СерверныйHEAD/healthсовпали. Production index20/20,sitemap/live-refresh/adsensePASS.
+76/76историческихресурсов:200+SHA256+immutable. Перенесено14файлов/189665байт.
+Внешнийобход12HTML:15уникальныхJS/CSS/fontURLs,все200. См.cycle6.md и артефакты.
