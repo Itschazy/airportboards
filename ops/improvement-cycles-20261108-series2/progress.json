@@ -2,7 +2,7 @@
   "automationId": "airportsboard-2-8",
   "series": "20261108-series2",
   "totalRuns": 8,
-  "completedRuns": 3,
+  "completedRuns": 4,
   "intervalMinutes": 45,
   "status": "scheduled",
   "createdAt": "2026-11-08T07:40:26.350951+00:00",
@@ -38,6 +38,20 @@
       "completedAt": "2026-11-08T10:09:37.805315+00:00",
       "productionRelease": "0d555f5cc27a",
       "result": "RUM62/p75LCP1652ms; fresh Chrome6x traces LCP977/972ms, card107/112ms; earliest click7.7s, not prehydration; product unchanged, no deploy"
+    },
+    {
+      "run": 4,
+      "trigger": "2026-11-08T10:39:19.009Z",
+      "status": "completed",
+      "task": "Потеря раннего нажатия на поиск табло",
+      "commit": "6e5937f2871249075430b4266c228a0c672852cc",
+      "pushAmsterdam": "2026-11-08T11:49:30.882719+01:00",
+      "completedAt": "2026-11-08T10:55:22.681651+00:00",
+      "ciRun": 42473054932,
+      "ciConclusion": "success",
+      "productionRelease": "6e5937f28712",
+      "productionChecks": "index20/20, sitemap-hreflang, live-refresh, adsense, SSR12/12 PASS",
+      "result": "Prehydration search click preserved; RU/AR375 trusted click and EN Escape PASS; 22 bootstrap and25 hook tests; no LCP speedup claim"
     }
   ]
 }
