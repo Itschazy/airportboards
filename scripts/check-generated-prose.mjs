@@ -78,5 +78,25 @@ say(lost.length === 0, lost.length
   ? `абзац ПРОПАЛ там, где оставлен намеренно: ${lost.join(', ')}`
   : `на ${KEEP.join(', ')} абзац на месте`);
 
+// Extended prose used a separate loader and bypassed the original guard.
+// NTE has no verified guide; AGP also has verified tables which must survive.
+for (const iata of ['NTE', 'AGP']) {
+  const corpus = JSON.parse(fs.readFileSync(`data/airport-content-extended/${iata}.json`, 'utf8'));
+  for (const loc of LOCALES) {
+    const r = await fetch(`${BASE}/${loc}/airport/${iata}`, { headers: UA });
+    if (r.status !== 200) { say(false, `${loc}/${iata}: HTTP ${r.status}`); continue; }
+    const text = norm(visible(await r.text()));
+    const sections = ['transport', 'terminals', 'tips'].filter(key => corpus[loc]?.[key]?.trim());
+    const found = sections.filter(key => text.includes(head(corpus[loc][key])));
+    say(KEEP.includes(loc) ? found.length === sections.length : found.length === 0,
+      `${loc}/${iata}: extended prose ${found.length}/${sections.length}, expected ${KEEP.includes(loc) ? sections.length : 0}`);
+    const table = corpus[loc]?.guide;
+    if (table) {
+      const destinations = [...(table.transfers || []), ...(table.transit || [])].map(row => row.dest);
+      say(destinations.length > 0 && destinations.every(dest => text.includes(norm(dest))), `${loc}/${iata}: verified table destinations preserved`);
+    }
+  }
+}
+
 console.log(fails ? `\nПРОВАЛОВ: ${fails}` : '\nсгенерированный текст стоит ровно там, где решено');
 process.exit(fails ? 1 : 0);
