@@ -1,3 +1,21 @@
+## Codex,08.11.2026 — airportsboard-8, запуск1/8 завершён
+
+Свежий main/serverHEAD/health57c5af40ff29123263734070c8fbbd856ff34137;
+cwd /Users/whereiszhenya/projects/runwayboard-flight-map-prototype-20261028,
+ветка codex/flight-map-prototype-20261028, база f2399bfb. Продукт не менялся,выката нет.
+RUM06–07.11UTC:3731mobile navigate,p75LCP1720мс,108>4с;93до первого байта,15render.
+Новый приоритет воспроизведения BKK/de/Safari,DXB arrivals/ЯндексСтарт,BCN/DOH;
+RUH в slow-render не повторился. Это не эксперимент до/после и не диагноз сети.
+Fixturebuild2473,188тестов карты,tsc,keys12×395,scripts,index20/20,firstpaint5/5,
+карта/help12локалей PASS. WebKit375:CEK—LHR add/reload/PNG/backup,AYTcardopen/close/focus PASS.
+Chrome extension binding timeoutMs; native активен чужой AppStoreConnect,ввод не направлялся.
+Нет нового AndroidLCP или проверки доставки PNG в соцприложения. Новых багов с воспроизведением не найдено.
+Осталось7 запусков; журнал ops/improvement-cycles-20261108/progress.json,протокол cycle1.md.
+Следующий: расширенная локальная fixture BKK/DXB/BCN/DOH,повторяемая диагностика;
+независимые проверки хранения/поиска продолжать при недоступном Chrome. Серию не продлевать.
+Свой3171/build очищены,generatedTS восстановлены,IABзакрыт,старыйuntrackedoutputs сохранён.
+Дизайн/DNS/SEO/данные/аккаунты сохранены. Документацию отдельно не пушить.
+
 ## Codex, 05.11.2026 — серия завершена, запуск20/20
 
 Автоматизация airportsboard-20 удалена инструментом (deleteStatus=deleted), не продлевать.
