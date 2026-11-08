@@ -57,6 +57,20 @@ const BOTS = [
   ['Googlebot', 'поиск', /Googlebot/i],
   ['Google (прочие)', 'поиск', /Google-InspectionTool|GoogleOther|Mediapartners-Google|AdsBot-Google/i],
   ['bingbot', 'поиск', /bingbot/i],
+  // Региональные движки раньше растворялись в «прочих», а Yeti не попадал
+  // даже туда: в имени нет bot/crawl/spider. Это заявленные UA, не IP-проверка.
+  // Роли и официальные источники: ops/regional-search-20261108/README.md.
+  ['Yeti (Naver)', 'поиск', /(?:^|[\s(;])Yeti(?=$|[\/;\s)])/i],
+  ['Ads-Naver', 'прочие боты', /(?:^|[\s(;])Ads-Naver(?=$|[\/;\s)])/i],
+  ['Blueno', 'прочие боты', /(?:^|[\s(;])Blueno(?=$|[\/;\s)])/i],
+  ['Baiduspider (сервисные)', 'прочие боты', /(?:^|[\s(;])Baiduspider-(?:cpro|ads|favo)(?=$|[\/;\s)])/i],
+  ['Baiduspider', 'поиск', /(?:^|[\s(;])Baiduspider(?:-(?:render|image|video|news))?(?=$|[\/;\s)])/i],
+  ['QwantBot News', 'поиск', /(?:^|[\s(;])Qwantbot-news(?=$|[\/;\s)])/i],
+  ['QwantBot', 'поиск', /(?:^|[\s(;])Qwantbot(?=$|[\/;\s)])/i],
+  ['Qwantify', 'поиск', /(?:^|[\s(;])Qwantify(?=$|[\/;\s)])/i],
+  ['DuckDuckBot', 'поиск', /(?:^|[\s(;])DuckDuckBot(?=$|[\/;\s)])/i],
+  ['SeznamBot', 'поиск', /(?:^|[\s(;])SeznamBot(?=$|[\/;\s)])/i],
+  ['YepBot', 'поиск', /(?:^|[\s(;])YepBot(?=$|[\/;\s)])/i],
   ['DataForSeoBot', 'SEO-сервисы', /DataForSeoBot/i],
   ['QlyzeBot', 'SEO-сервисы', /QlyzeBot/i],
   ['AhrefsBot', 'SEO-сервисы', /AhrefsBot/i],
@@ -137,7 +151,8 @@ for await (const line of rl) {
 const pct = (a, b) => (b ? `${Math.round((100 * a) / b)}%` : '—');
 const topN = (o, n) => Object.entries(o).sort((a, b) => b[1] - a[1]).slice(0, n);
 
-console.log(`обходчики по ${FILE}: строк ${total}${unparsed ? `, не разобрано ${unparsed}` : ''}; в карте сайта ${sitemap.size} адресов\n`);
+console.log(`обходчики по ${FILE}: строк ${total}${unparsed ? `, не разобрано ${unparsed}` : ''}; в карте сайта ${sitemap.size} адресов`);
+console.log('Имена по заявленному User-Agent; принадлежность IP не проверена. Обход не доказывает индексацию.\n');
 const rows = [...stats.entries()].sort((a, b) => b[1].hits - a[1].hits);
 for (const group of ['поиск', 'ИИ: индекс', 'ИИ: по запросу', 'ИИ: обучение', 'SEO-сервисы', 'прочие боты', 'свои']) {
   const g = rows.filter(([, s]) => s.group === group);

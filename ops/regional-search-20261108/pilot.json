@@ -1,0 +1,35 @@
+{
+  "note": "Hypotheses for manual native-query checks; not measured demand or proven rankings. Fixed URL sample in audit-pages.py.",
+  "queries": {
+    "ko": [
+      "인천공항 출도착",
+      "김포공항 운항정보",
+      "제주공항 실시간 출발",
+      "비행 기록 지도"
+    ],
+    "zh": [
+      "北京首都机场航班动态",
+      "浦东机场实时到达",
+      "广州白云机场航班动态",
+      "个人飞行地图"
+    ],
+    "ja": [
+      "羽田空港 発着情報",
+      "成田空港 到着便",
+      "関西空港 運航状況",
+      "フライト履歴 地図"
+    ],
+    "fr": [
+      "vols Charles de Gaulle arrivées",
+      "vols Orly départs",
+      "Nice aéroport vols en direct",
+      "carte de mes vols"
+    ],
+    "de": [
+      "Frankfurt Flughafen Ankunft",
+      "München Flughafen Abflug",
+      "BER Flugstatus",
+      "meine Flüge Karte"
+    ]
+  }
+}

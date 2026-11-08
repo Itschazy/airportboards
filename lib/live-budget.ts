@@ -111,9 +111,14 @@ const refused = { notBrowser: 0, budget: 0, perIp: 0, localhost: 0 };
 
 /**
  * Явное имя обходчика. Отдельно от BOT_RE, потому что BOT_RE — список ПОДСТРОК, а обходчик
- * всегда называет себя словом: Googlebot/2.1, YandexBot/3.0, AhrefsBot/7.0.
+ * обычно называет себя словом: Googlebot/2.1, YandexBot/3.0, AhrefsBot/7.0.
+ * Yeti — исключение Naver: официальный UA содержит Chrome/AppleWebKit, но не «bot».
+ * Без этого имени он проходил как платный посетитель. Не используем /naver/:
+ * обычный браузер приложения Naver должен получать свежесть. Это отказ только
+ * от покупки данных, НЕ запрет обхода: робот продолжает читать хранилище.
+ * https://searchadvisor.naver.com/guide/seo-basic-firewall (08.11.2026).
  */
-const CRAWLER_NAME = /bot\/|\bbot\b|crawler|spider|slurp|headless|lighthouse/i;
+const CRAWLER_NAME = /bot\/|\bbot\b|crawler|spider|slurp|headless|lighthouse|(?:^|[\s(;])Yeti(?=$|[\/;\s)])/i;
 
 /**
  * Встроенные браузеры приложений, в названии которых сидит подстрока из BOT_RE.

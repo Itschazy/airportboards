@@ -37,7 +37,9 @@ const SRC = fs.readFileSync('lib/live-budget.ts', 'utf8');
 // Регулярки читаются ИЗ КОДА, а не переписываются здесь: проверка, заведшая собственный
 // предикат, спорит с кодом вместо того чтобы его стеречь.
 const rx = (name) => {
-  const m = new RegExp(`const ${name} = /(.+?)/([gimsuy]*);`).exec(SRC);
+  // Конец строки обязателен: /; внутри класса символов (например Yeti)
+  // не завершает JS-регулярку и не должен обрезать её в проверке.
+  const m = new RegExp(`^const ${name} = /(.+)/([gimsuy]*);$`, 'm').exec(SRC);
   if (!m) throw new Error(`в lib/live-budget.ts нет ${name}`);
   return new RegExp(m[1], m[2]);
 };
@@ -58,6 +60,8 @@ const UAS = [
   ['приложение Яндекс, Android', true, 'Mozilla/5.0 (Linux; arm_64; Android 13) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/118.0.0.0 YaApp_Android/23.101.1 YaSearchBrowser/23.101.1 BroPP/1.0 SA/3 Mobile Safari/537.36'],
   ['приложение Яндекс, iOS', true, 'Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 YandexSearch/23.101.1'],
   ['Samsung Internet', true, 'Mozilla/5.0 (Linux; Android 13; SAMSUNG SM-A536B) AppleWebKit/537.36 (KHTML, like Gecko) SamsungBrowser/23.0 Chrome/115.0.0.0 Mobile Safari/537.36'],
+  ['Naver Whale', true, 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Whale/4.0 Safari/537.36'],
+  ['Naver Yeti, браузерная форма', false, 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko; compatible; Yeti/1.1; +https://naver.me/spd) Chrome/130.0.0.0 Safari/537.36'],
   ['VK WebView', true, 'Mozilla/5.0 (Linux; Android 13) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/120.0.0.0 Mobile Safari/537.36 VKAndroidApp/7.44'],
   ['Googlebot, браузерная форма', false, 'Mozilla/5.0 (Linux; Android 6.0.1; Nexus 5X) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)'],
   ['YandexBot, браузерная форма', false, 'Mozilla/5.0 (iPhone; CPU iPhone OS 8_1 like Mac OS X) AppleWebKit/600.1.4 (KHTML, like Gecko) Version/8.0 Mobile/12B411 Safari/600.1.4 (compatible; YandexBot/3.0; +http://yandex.com/bots)'],

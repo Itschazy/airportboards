@@ -1,3 +1,31 @@
+## Codex, 08.11.2026 — региональные поисковики: пакет к выкату
+
+Подготовлено исправление Naver Yeti в lib/live-budget.ts: современный UA с Chrome
+ошибочно разрешал платное обновление; теперь читает хранилище. Доступ к страницам
+и поведение Whale/Naver app/Samsung/Яндекс сохранены. bot-log-report отдельно
+учитывает Naver/Baidu/Qwant/DuckDuckGo/Seznam/Yep; заявленный UA не является IP-проверкой.
+Исправлен regex extractor check-live-refresh и добавлена offline-регрессия реального модуля
+с CLI-тестом тревоги 5xx. Воспроизведение до: 8/20, после: 20/20 + alarm PASS.
+
+Свежий origin/main 1fd3becd21a59b26ebec87102071f0b36df0e9ac; локальная ветка
+codex/flight-map-prototype-20261028, исходный docsHEAD 11f1c37e. Проверки:
+TypeScript, 12 ключевых наборов локалей, scripts/plurals/client-messages/rtl/
+board-regressions/icu-args/warm-budget/regional-crawlers и локальный live-refresh PASS.
+Сборка на фикстуре с пустым ключом завершена в .next-regional-audit; исходники с тех пор
+не менялись. Локальные index/sitemap-hreflang/adsense/search-i18n PASS в том же пакете.
+Протокол: outputs/regional-search-20261108/implementation, описание ops/regional-search-20261108.
+UI не менялся, физический Android/Whale не проверялись. На production проверены
+32 SSR URL, все HTTP200 с canonical/lang/12hreflang без noindex. Это не доказательство индексации.
+
+Регистрация Naver/Baidu разрешена владельцем, но не завершена: нужны пароль/телефон/SMS
+и согласия пользователя. В Baidu текущая форма требует телефон, способ только по email
+не подтверждён. Никаких токенов верификации пока нет. Не повторять пароли в отчётах.
+Владелец попросил продолжить независимые работы. Новый выкат в этом блоке ещё НЕ заявлен:
+после push нужны успешный CI, фактический runtime release и четыре production-check с audit-bot.
+Дизайн, DNS, тексты 12 языков и пользовательские данные не изменялись.
+
+---
+
 ## Codex, 08.11.2026 — серия 2 завершена: 8/8, автоматизация удалена
 
 Trigger 2026-11-08T13:46:20.327Z. airportsboard-2-8 удалена штатным automation_update,
