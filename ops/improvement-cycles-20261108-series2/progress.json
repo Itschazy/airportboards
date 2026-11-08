@@ -2,7 +2,7 @@
   "automationId": "airportsboard-2-8",
   "series": "20261108-series2",
   "totalRuns": 8,
-  "completedRuns": 1,
+  "completedRuns": 2,
   "intervalMinutes": 45,
   "status": "scheduled",
   "createdAt": "2026-11-08T07:40:26.350951+00:00",
@@ -20,6 +20,15 @@
       "ciConclusion": "success",
       "productionChecks": "index/sitemap-hreflang/live-refresh/adsense PASS",
       "result": "CLS BCN median 0.02033 -> 0.00195 in local Chromium375; not Android LCP"
+    },
+    {
+      "run": 2,
+      "trigger": "2026-11-08T09:09:18.569Z",
+      "status": "completed",
+      "task": "Свежий RUM и диагностика первого открытия/первого касания",
+      "completedAt": "2026-11-08T09:15:39.528762+00:00",
+      "productionRelease": "0d555f5cc27a",
+      "result": "RUM27/p75LCP1599ms; one native Chrome6x/Slow4G profile LCP0.92s, no export; 212 tests PASS; no product change/deploy"
     }
   ]
 }
