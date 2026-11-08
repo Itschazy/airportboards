@@ -1,0 +1,20 @@
+import fs from 'node:fs';
+import vm from 'node:vm';
+import ts from 'typescript';
+import React from 'react';
+import { jsx,jsxs } from 'react/jsx-runtime';
+import { renderToStaticMarkup } from 'react-dom/server';
+import assert from 'node:assert/strict';
+const source=fs.readFileSync('components/RecentlyViewed.tsx','utf8');
+const js=ts.transpileModule(source,{compilerOptions:{module:ts.ModuleKind.CommonJS,jsx:ts.JsxEmit.ReactJSX,target:ts.ScriptTarget.ES2020}}).outputText;
+let state, effects=[];
+const raw=JSON.stringify([{iata:'DXB',city:{unexpected:'stored object'}},{iata:'LHR',city:'London'}]);
+const ctx={exports:{},localStorage:{getItem:()=>raw},require(name){
+ if(name==='react')return {useState:()=>[state||[],v=>state=v],useEffect:fn=>effects.push(fn)};
+ if(name==='react/jsx-runtime')return {jsx,jsxs};
+ if(name==='next/link')return {default:({href,children,...props})=>React.createElement('a',{href,...props},children)};
+ throw new Error(name);
+}};
+vm.runInNewContext(js,ctx);
+ctx.exports.RecentlyViewed({locale:'en',title:'Recent',exclude:'DOH'});effects.forEach(fn=>fn());
+assert.doesNotThrow(()=>renderToStaticMarkup(ctx.exports.RecentlyViewed({locale:'en',title:'Recent',exclude:'DOH'})),'stored non-string city must not crash the board');

@@ -12,9 +12,25 @@ export function RecentlyViewed({ locale, title, exclude }: { locale: string; tit
   const [recent, setRecent] = useState<R[]>([]);
   useEffect(() => {
     try {
-      const all = JSON.parse(localStorage.getItem('ab_recent') || '[]') as R[];
-      setRecent(exclude ? all.filter(a => a.iata !== exclude) : all);
-    } catch {}
+      // История переживает версии сайта. Валидный JSON может содержать объект
+      // вместо city: React тогда роняет всё табло, а не только этот блок.
+      // Как и поиск, ограничиваем чтение 16 тысячами символов и пятью уникальными аэропортами.
+      // Старые записи с одними iata/city остаются пригодны; storage не переписываем.
+      const raw = localStorage.getItem('ab_recent');
+      const all: unknown = raw && raw.length <= 16_384 ? JSON.parse(raw) : [];
+      const valid: R[] = [];
+      const seen = new Set<string>();
+      if (Array.isArray(all)) for (const row of all) {
+        if (!row || typeof row !== 'object') continue;
+        const { iata, city } = row;
+        if (typeof iata !== 'string' || !/^[A-Z]{3}$/.test(iata) || iata === exclude || seen.has(iata)) continue;
+        if (typeof city !== 'string' || city.length > 256) continue;
+        seen.add(iata);
+        valid.push({ iata, city });
+        if (valid.length === 5) break;
+      }
+      setRecent(valid);
+    } catch { setRecent([]); }
   }, [exclude]);
   if (recent.length === 0) return null;
 
