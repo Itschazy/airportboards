@@ -2,7 +2,7 @@
   "automationId": "airportsboard-2-8",
   "series": "20261108-series2",
   "totalRuns": 8,
-  "completedRuns": 4,
+  "completedRuns": 5,
   "intervalMinutes": 45,
   "status": "scheduled",
   "createdAt": "2026-11-08T07:40:26.350951+00:00",
@@ -52,6 +52,20 @@
       "productionRelease": "6e5937f28712",
       "productionChecks": "index20/20, sitemap-hreflang, live-refresh, adsense, SSR12/12 PASS",
       "result": "Prehydration search click preserved; RU/AR375 trusted click and EN Escape PASS; 22 bootstrap and25 hook tests; no LCP speedup claim"
+    },
+    {
+      "run": 5,
+      "trigger": "2026-11-08T11:27:19.136Z",
+      "status": "completed",
+      "task": "Остановка импорта сверхлимитных цепочек маршрутов",
+      "commit": "3e21a160c8021d3397d46a0ca1d17fd77bde687f",
+      "pushAmsterdam": "2026-11-08T12:41:05.789414+01:00",
+      "completedAt": "2026-11-08T11:48:34.719968+00:00",
+      "ciRun": 42476828945,
+      "ciConclusion": "success",
+      "productionRelease": "3e21a160c802",
+      "productionChecks": "index20/20, sitemap-hreflang, live-refresh, adsense, current runtime HTML12/12 + asset hashes PASS",
+      "result": "Oversized route parse median Chromium79.8->18.9ms, Safari70->20ms desktop; 214tests, build, locales,375px import/undo PASS; not Android LCP"
     }
   ]
 }
