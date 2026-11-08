@@ -2,9 +2,9 @@
   "automationId": "airportsboard-2-8",
   "series": "20261108-series2",
   "totalRuns": 8,
-  "completedRuns": 7,
+  "completedRuns": 8,
   "intervalMinutes": 45,
-  "status": "scheduled",
+  "status": "completed",
   "createdAt": "2026-11-08T07:40:26.350951+00:00",
   "runs": [
     {
@@ -84,6 +84,17 @@
       "completedAt": "2026-11-08T13:03:08.485219+00:00",
       "productionRelease": "1fd3becd21a5",
       "result": "Verified Googlebot smartphone fetched en/airport/NTE HTTP200 at12:31:43UTC; indexing unconfirmed. Current release mobile RUM n60,3slow; no product change/deploy."
+    },
+    {
+      "run": 8,
+      "trigger": "2026-11-08T13:46:20.327Z",
+      "status": "completed",
+      "task": "Свежие индексные статусы, итог серии и удаление автоматизации",
+      "completedAt": "2026-11-08T13:48:54.341991+00:00",
+      "productionRelease": "1fd3becd21a5",
+      "result": "GSC map unknown->crawled-not-indexed; NTE Soft404->crawled-not-indexed, both crawled Nov8. RUM n135,4slow. No new deploy. Automation deleted."
     }
-  ]
+  ],
+  "automationDeleted": true,
+  "automationDeletedAt": "2026-11-08T13:48:54.342141+00:00"
 }
