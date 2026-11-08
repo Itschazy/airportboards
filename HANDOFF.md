@@ -1,3 +1,38 @@
+## Codex, 08.11.2026 — серия 2, запуск 6/8: Google принял запрос карты
+
+Trigger 2026-11-08T12:16:19.464Z, automation airportsboard-2-8. Выполнено 6/8,
+осталось 2 запуска; серию не продлевать. Прямой приоритет владельца — Google.
+Рабочая копия /Users/whereiszhenya/projects/runwayboard-flight-map-prototype-20261028,
+ветка codex/flight-map-prototype-20261028. Свежий main 1fd3becd21a59b26ebec87102071f0b36df0e9ac;
+продукт не менялся, нового выката нет. Начальный docs HEAD ce8ad45a.
+
+Предыдущий Request indexing /en/flight-map теперь подтверждён: native Chrome AX
+показал Indexing requested и URL was added to a priority crawl queue. После Dismiss
+основной экран также показал Indexing requested. Дубликат не отправляли.
+Это приём заявки, не индексация: сохранённый URL всё ещё unknown.
+Нативный screenshot остался старым; не использовать его как proof. Подтверждение
+сохранено как явно помеченная транскрипция наблюдения AX из журнала инструментов.
+
+URL Inspection NTE начата, браузер сменил адрес на новый inspection URL, но HTML
+не загрузился даже после одного полного reload. Request indexing NTE не нажимали.
+Предыдущий запрос владельцу о доступном окне не повторяли. Далее закончить NTE,
+карту больше не отправлять; следить за новым обходом/индексом фиксированных 24 URL.
+
+Свежие HTTP audit-bot: карта EN и NTE EN — 200, self-canonical, index/follow.
+Свежий мобильный RUM текущего release 1fd3becd21a5: всего 5 наблюдений, ни одного
+LCP >4 с. Yandex app departures n3/p75 2356 мс; Edge arrivals n1/708;
+Yandex departures n1/868. Недостаточно для выводов об ускорении или регрессиях,
+Chrome/Safari/карты в этом срезе нет. Нового подтверждённого кодового бага не найдено.
+Сборку/TS/UI/полные production-гейты не повторяли без изменений продукта.
+
+Автоматизация обновлена штатным инструментом: добавлен Google-приоритет, убраны
+уже закрытые кандидаты CLS/ранний поиск/лимит импорта и старые SHA. Сохранены id,
+ACTIVE, интервал 45 минут и всего 8 запусков. Новый цикл не создан.
+Протокол: ops/improvement-cycles-20261108-series2/cycle6.md.
+Артефакты: /Users/whereiszhenya/Documents/Codex/2026-10-18/airportsboard-live-12-next-js-15/outputs/improvement-cycles-20261108-series2/cycle6/.
+
+---
+
 ## Codex, 08.11.2026 — приоритет Google: исправление контента выкачено и проверено
 
 Последнее прямое поручение владельца — упор на индексацию Google и актуальные рекомендации.

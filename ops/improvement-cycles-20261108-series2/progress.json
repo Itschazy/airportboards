@@ -2,7 +2,7 @@
   "automationId": "airportsboard-2-8",
   "series": "20261108-series2",
   "totalRuns": 8,
-  "completedRuns": 5,
+  "completedRuns": 6,
   "intervalMinutes": 45,
   "status": "scheduled",
   "createdAt": "2026-11-08T07:40:26.350951+00:00",
@@ -66,6 +66,15 @@
       "productionRelease": "3e21a160c802",
       "productionChecks": "index20/20, sitemap-hreflang, live-refresh, adsense, current runtime HTML12/12 + asset hashes PASS",
       "result": "Oversized route parse median Chromium79.8->18.9ms, Safari70->20ms desktop; 214tests, build, locales,375px import/undo PASS; not Android LCP"
+    },
+    {
+      "run": 6,
+      "trigger": "2026-11-08T12:16:19.464Z",
+      "status": "completed",
+      "task": "Продолжение Google-приоритета и свежий мобильный RUM",
+      "completedAt": "2026-11-08T12:21:51.708323+00:00",
+      "productionRelease": "1fd3becd21a5",
+      "result": "Google confirmed prior en/flight-map request accepted in priority crawl queue; NTE inspection UI unavailable, no request sent. Current release mobile RUM n5, no LCP>4s; no product change/deploy."
     }
   ]
 }
