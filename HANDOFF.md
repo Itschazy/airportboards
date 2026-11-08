@@ -1,3 +1,30 @@
+## Codex, 08.11.2026 — airportsboard-8, запуск 3/8: ранжирование алиасов исправлено
+
+Релиз/origin/main/serverHEAD815101aa3ae6aac5565903d4a2efa906d6b37c64;
+ветка codex/flight-map-prototype-20261028,
+cwd /Users/whereiszhenya/projects/runwayboard-flight-map-prototype-20261028.
+Push04:43 Amsterdam вне прогрева; CI42443892355success, health.release совпал.
+Paris в RU теперь CDG/LBG/ORY перед ALE(Casparis); исправлен общий приоритет
+начала альтернативного названия на12локалях. Точный IATA/локальные имена выше,
+Casparis→ALE по-прежнему работает, состав совпадений не меняется.
+Red7/12 на старом коде →12/12green; полный набор212/212. Старый oracle сохранён
+для полного состава совпадений/сильных локальных и IATA-приоритетов.
+Fixturebuild2473,tsc,keys12×395,scripts/client-messages,local index/firstpaint/map/help PASS.
+WebKit375:RU/AR Paris, keyboard select, CDG–CEK add/reload; console errors0.
+Это bugfix, НЕ ускорение LCP: дополнительный CPU до0.033мс/запрос на desktop
+WebKit, в CJK/ar/hi14–20% к микрозамеру; Node heap+48.7KiB. Физические телефоны
+и соцприложения не проверены. Новый RUM-срез в этом запуске не выполнялся.
+Production audit-bot index20/20,sitemap-hreflang,live-refresh,adsense:4exit0.
+Первый runtime proof выявил старый nginx/SSR-кэш; штатное обновление дождались,
+проверены новые cache keys на всех12страницах и байты bundle; ручного purge не было.
+Дизайн/DNS/SEO/данные/аккаунты сохранены, рекламы/платных API нет.
+Серия3/8, осталось5; журнал ops/improvement-cycles-20261108/progress.json.
+Следующий шаг: незавершённый профиль BKK/DXB/BCN/DOH, свежий RUM по релизам при
+достаточной выборке; не дублировать исправленный Paris и не повторять бесконечно
+сломанные Chrome-вызовы. Свои3174/3175/build очищены, generatedTS восстановлены,
+IAB закрыт/reset, старый untracked outputs/ сохранён. Итоговые docs не пушить.
+Логи/скриншоты/замеры в outputs/improvement-cycles-20261108/cycle3 папки чата.
+
 ## Codex, 08.11.2026 — airportsboard-8, запуск 2/8: поиск карты ускорен и выкачен
 
 Релиз/origin/main/serverHEAD: 1d350e2b5e93455da614ed53e2bf80edf89dbacb.

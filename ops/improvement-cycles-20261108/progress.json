@@ -1,7 +1,7 @@
 {
   "automationId": "airportsboard-8",
   "totalRuns": 8,
-  "completedRuns": 2,
+  "completedRuns": 3,
   "runs": [
     {
       "number": 1,
@@ -17,6 +17,14 @@
       "runtime": "1d350e2b5e93455da614ed53e2bf80edf89dbacb",
       "ci": 42441281464,
       "report": "cycle2.md"
+    },
+    {
+      "number": 3,
+      "trigger": "2026-11-08T03:35:17.161Z",
+      "result": "Fixed alias-prefix ranking on all 12 locales; 212 tests, mobile UI and production checks pass",
+      "runtime": "815101aa3ae6aac5565903d4a2efa906d6b37c64",
+      "ci": 42443892355,
+      "report": "cycle3.md"
     }
   ]
 }
