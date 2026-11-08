@@ -2,9 +2,24 @@
   "automationId": "airportsboard-2-8",
   "series": "20261108-series2",
   "totalRuns": 8,
-  "completedRuns": 0,
+  "completedRuns": 1,
   "intervalMinutes": 45,
   "status": "scheduled",
   "createdAt": "2026-11-08T07:40:26.350951+00:00",
-  "runs": []
+  "runs": [
+    {
+      "run": 1,
+      "trigger": "2026-11-08T08:24:18.161Z",
+      "status": "completed",
+      "task": "CLS при включении отсчёта табло",
+      "commit": "0d555f5cc27aac0f79615f23fd9a81cfcf71ba93",
+      "ciRun": 42463653680,
+      "pushAmsterdam": "2026-11-08T09:36:21.848098+01:00",
+      "completedAt": "2026-11-08T08:40:10.856473+00:00",
+      "productionRelease": "0d555f5cc27a",
+      "ciConclusion": "success",
+      "productionChecks": "index/sitemap-hreflang/live-refresh/adsense PASS",
+      "result": "CLS BCN median 0.02033 -> 0.00195 in local Chromium375; not Android LCP"
+    }
+  ]
 }
