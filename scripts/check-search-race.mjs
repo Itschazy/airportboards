@@ -17,7 +17,7 @@ const hooks={
   useEffect(fn,deps){const i=cursor++;if(!depsEqual(slots[i]?.deps,deps)){const prev=slots[i];slots[i]={deps};effects.push(()=>{prev?.cleanup?.();slots[i].cleanup=fn();});}},
 };
 const calls=[], routes=[];
-const context={exports:{},require(name){if(name==='@/lib/quick-search'){const m={exports:{}};vm.runInNewContext(ts.transpileModule(fs.readFileSync('lib/quick-search.ts','utf8'),{compilerOptions:{target:ts.ScriptTarget.ES2020,module:ts.ModuleKind.CommonJS}}).outputText,m);return m.exports;}if(name==='react')return hooks;if(name==='react/jsx-runtime')return {jsx:(type,props)=>({type,props}),jsxs:(type,props)=>({type,props}),Fragment:'fragment'};if(name==='next/navigation')return {useRouter:()=>({push:p=>routes.push(p),prefetch(){}})};if(name==='next-intl')return {useTranslations:()=>x=>x};if(name==='@/lib/track')return {track(){},GOALS:{}};throw Error(name);},
+const context={exports:{},require(name){if(name==='@/lib/recent-airports'){const m={...context,exports:{}};vm.runInNewContext(ts.transpileModule(fs.readFileSync('lib/recent-airports.ts','utf8'),{compilerOptions:{target:ts.ScriptTarget.ES2020,module:ts.ModuleKind.CommonJS}}).outputText,m);return m.exports;}if(name==='@/lib/quick-search'){const m={exports:{}};vm.runInNewContext(ts.transpileModule(fs.readFileSync('lib/quick-search.ts','utf8'),{compilerOptions:{target:ts.ScriptTarget.ES2020,module:ts.ModuleKind.CommonJS}}).outputText,m);return m.exports;}if(name==='react')return hooks;if(name==='react/jsx-runtime')return {jsx:(type,props)=>({type,props}),jsxs:(type,props)=>({type,props}),Fragment:'fragment'};if(name==='next/navigation')return {useRouter:()=>({push:p=>routes.push(p),prefetch(){}})};if(name==='next-intl')return {useTranslations:()=>x=>x};if(name==='@/lib/track')return {track(){},GOALS:{}};throw Error(name);},
   setTimeout,clearTimeout,AbortController,document:{addEventListener(){},removeEventListener(){}},localStorage:{getItem(){return '[]';},setItem(){}},fetch(url,options){return new Promise((resolve,reject)=>calls.push({url,options,resolve:data=>resolve({ok:true,json:async()=>Array.isArray(data)?{airports:data}:data}),reject}));}};
 vm.runInNewContext(js,context);
 function render(){do{dirty=false;cursor=0;tree=context.exports.AirportSearch({locale:currentLocale,placeholder:'search'});for(const f of effects.splice(0))f();}while(dirty);}
@@ -118,3 +118,22 @@ for (const stored of ['null', '{}', '[null,42,{}]', 'invalid JSON', ' '.repeat(1
   for(const s of slots)s?.cleanup?.();
 }
 console.log('PASS: ранний Enter, поздний популярный ответ, обратный порядок ответов, ошибка сети, непрерывные подсказки, быстрый Челябинск, повтор без сети, поздний словарь, IME, смена локали, offline fallback, пустое поле без подсказок, повреждённая и ограниченная история');
+
+// Stored HI labels on EN; late EN reply cannot replace the new RU history.
+for(const slot of slots)slot?.cleanup?.();slots=[];effects=[];dirty=false;calls.length=0;routes.length=0;currentLocale='en';
+context.localStorage.getItem=()=>JSON.stringify([{...airport('DOH'),city:'दोहा'}]);
+render();input().props.onFocus();render();
+const enHistory=calls.find(c=>c.url.includes('codes=DOH'));assert.ok(enHistory,'History requests localized labels, not full catalogue');
+currentLocale='ru';render();
+const ruHistory=calls.find(c=>c.url.includes('locale=ru&codes=DOH'));assert.ok(ruHistory);
+ruHistory.resolve([{...airport('DOH'),city:'Доха'}]);await tick();
+enHistory.resolve([{...airport('DOH'),city:'Doha'}]);await tick();
+function text(node){if(typeof node==='string')return node;if(!node||typeof node!=='object')return '';if(typeof node.type==='function')return text(node.type(node.props));return [node.props?.children].flat(Infinity).map(text).join(' ');}
+assert.ok(text(findRole('listbox')).includes('Доха'));assert.ok(!text(findRole('listbox')).includes('Doha'));
+enter();assert.equal(routes.at(-1),'/ru/airport/DOH');
+input().props.onBlur();render();currentLocale='de';render();input().props.onFocus();render();
+calls.find(c=>c.url.includes('locale=de&codes=DOH')).reject(new Error('offline'));await tick();
+assert.ok(text(findRole('listbox')).includes('दोहा'),'Offline retains stored label');
+enter();assert.equal(routes.at(-1),'/de/airport/DOH','Offline still routes to the correct airport');
+for(const slot of slots)slot?.cleanup?.();for(const call of calls)call.reject(new Error('test cleanup'));
+console.log('PASS: localized search history, late locale response ignored, offline selection');

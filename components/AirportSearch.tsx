@@ -5,6 +5,7 @@ import { useRouter } from 'next/navigation';
 import { useTranslations } from 'next-intl';
 import { track, GOALS } from '@/lib/track';
 import { prepareQuick, quickSearch, prioritizeQuick, type AirportSuggestion, type QuickTuple } from '@/lib/quick-search';
+import { localizeRecent } from '@/lib/recent-airports';
 
 type Result = AirportSuggestion;
 
@@ -261,8 +262,16 @@ export function AirportSearch({ locale, placeholder }: { locale: string; placeho
     return () => { document.removeEventListener('mousedown', h); document.removeEventListener('touchstart', h); };
   }, []);
 
+  useEffect(() => {
+    if (!focused) return;
+    let active = true;
+    const rows = getRecent();
+    setRecent(rows);
+    void localizeRecent(rows, locale).then(localized => { if (active) setRecent(localized); });
+    return () => { active = false; };
+  }, [focused, locale]);
+
   const onFocus = useCallback(() => {
-    setRecent(getRecent());
     setFocused(true);
     setOpen(true);
   }, []);

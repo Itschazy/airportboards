@@ -9,17 +9,21 @@ import { renderToStaticMarkup } from 'react-dom/server';
 import assert from 'node:assert/strict';
 const source = fs.readFileSync(process.argv[2] || 'components/RecentlyViewed.tsx', 'utf8');
 const js = ts.transpileModule(source, {compilerOptions: {module: ts.ModuleKind.CommonJS, jsx: ts.JsxEmit.ReactJSX, target: ts.ScriptTarget.ES2020}}).outputText;
-function fixture(raw) {
-  let state = [], effects = [], deps, stored = raw, parseCalls = 0, writes = 0;
-  const context = {exports: {}, JSON: {parse(s) { parseCalls++; return JSON.parse(s); }},
+function fixture(raw, manualNetwork = false) {
+  let state = [], effects = [], deps, cleanup, stored = raw, parseCalls = 0, writes = 0;
+  const calls = [];
+  const context = {exports: {}, setTimeout, clearTimeout, AbortController, URLSearchParams,
+    fetch(url, options) {return new Promise((resolve, reject) => calls.push({url, options, resolve: airports => resolve({ok:true, json:async()=>({airports})}), reject}));}, JSON: {parse(s) { parseCalls++; return JSON.parse(s); }},
     localStorage: {getItem() { if (stored instanceof Error) throw stored; return stored; }, setItem() { writes++; }, removeItem() { writes++; }},
     require(name) {
-      if (name === 'react') return {useState: () => [state, v => {state = v;}], useEffect(fn, next) { if (!deps || next.some((v, i) => v !== deps[i])) {deps = next; effects.push(fn);} }};
+      if (name === '@/lib/recent-airports') { const moduleContext = {...context, exports:{}}; vm.runInNewContext(ts.transpileModule(fs.readFileSync('lib/recent-airports.ts','utf8'),{compilerOptions:{module:ts.ModuleKind.CommonJS,target:ts.ScriptTarget.ES2020}}).outputText,moduleContext); return moduleContext.exports; }
+      if (name === 'react') return {useState: () => [state, v => {state = v;}], useEffect(fn, next) { if (!deps || next.some((v, i) => v !== deps[i])) {deps = next; effects.push(() => { cleanup?.(); cleanup = fn(); });} }};
       if (name === 'react/jsx-runtime') return {jsx, jsxs};
       if (name === 'next/link') return {default: ({href, children, ...props}) => React.createElement('a', {href, ...props}, children)};
       throw new Error(name);
     }};
   vm.runInNewContext(js, context);
+  if (!manualNetwork) setImmediate(() => { for (const call of calls) call.reject(new Error("offline")); });
   return {
     render(locale = 'en', exclude = 'DOH') {
       const props = {locale, exclude, title: 'Recent'};
@@ -28,6 +32,7 @@ function fixture(raw) {
       return renderToStaticMarkup(context.exports.RecentlyViewed(props));
     },
     setRaw(value) {stored = value;},
+    calls, async flush() {await new Promise(resolve => setImmediate(resolve));}, close() {cleanup?.(); for (const call of calls) call.reject(new Error("offline"));},
     get parseCalls() {return parseCalls;}, get writes() {return writes;}, get stored() {return stored;},
   };
 }
@@ -58,3 +63,22 @@ for (const locale of ['ru','en','de','fr','es','it','tr','zh','ja','ko','ar','hi
   assert.ok(html.includes(`/${locale}/airport/LHR`)); assert.ok(html.includes('&lt;img')); assert.ok(!html.includes('<img')); assert.equal(f.writes,0);
 });
 console.log(`${count} scenarios passed`);
+
+// A stored name is not the language of the current page. This assertion failed
+// on the previous component even after a network turn (DOH stayed in Hindi).
+const f = fixture(JSON.stringify([{iata:'DOH',city:'दोहा'}]), true);
+f.render('en', 'AYT');
+for (const call of f.calls) call.resolve([{iata:'DOH',name:'Hamad',city:'Doha',country:'Qatar',iso2:'QA'}]);
+await f.flush();
+assert.ok(f.render('en','AYT').includes('Doha'), 'EN history must show Doha, not stored Hindi दोहा');
+f.close();
+console.log('PASS history uses the current locale');
+
+const race = fixture(JSON.stringify([{iata:'DOH',city:'दोहा'}]), true);
+race.render('en','AYT');const en=race.calls.at(-1);
+race.render('ru','AYT');const ru=race.calls.at(-1);
+ru.resolve([{iata:'DOH',name:'Хамад',city:'Доха',country:'Катар',iso2:'QA'}]);await race.flush();
+en.resolve([{iata:'DOH',name:'Hamad',city:'Doha',country:'Qatar',iso2:'QA'}]);await race.flush();
+assert.ok(race.render('ru','AYT').includes('Доха'));assert.ok(!race.render('ru','AYT').includes('Doha'));
+race.setRaw('{}');assert.equal(race.render('de','AYT'),'');assert.equal(race.writes,0);race.close();
+console.log('PASS history locale response race and invalid storage after switch');

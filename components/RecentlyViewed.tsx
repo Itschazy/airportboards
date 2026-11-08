@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
+import { localizeRecent } from '@/lib/recent-airports';
 
 type R = { iata: string; city: string };
 
@@ -11,6 +12,7 @@ export function RecentlyViewed({ locale, title, exclude }: { locale: string; tit
 }) {
   const [recent, setRecent] = useState<R[]>([]);
   useEffect(() => {
+    let active = true;
     try {
       // История переживает версии сайта. Валидный JSON может содержать объект
       // вместо city: React тогда роняет всё табло, а не только этот блок.
@@ -30,8 +32,10 @@ export function RecentlyViewed({ locale, title, exclude }: { locale: string; tit
         if (valid.length === 5) break;
       }
       setRecent(valid);
+      void localizeRecent(valid, locale).then(rows => { if (active) setRecent(rows); });
     } catch { setRecent([]); }
-  }, [exclude]);
+    return () => { active = false; };
+  }, [exclude, locale]);
   if (recent.length === 0) return null;
 
   return (
