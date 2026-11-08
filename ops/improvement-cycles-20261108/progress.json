@@ -1,7 +1,7 @@
 {
   "automationId": "airportsboard-8",
   "totalRuns": 8,
-  "completedRuns": 6,
+  "completedRuns": 7,
   "runs": [
     {
       "number": 1,
@@ -49,6 +49,14 @@
       "runtime": "68d59e2255b538cbf9f12f61ad715bfddb9cf252",
       "ci": 42453385684,
       "report": "cycle6.md"
+    },
+    {
+      "number": 7,
+      "trigger": "2026-11-08T06:35:18.099Z",
+      "result": "Localized recent airport labels in search and board on all 12 locales with bounded batch/cache, race protection and offline fallback; CI and production checks pass",
+      "runtime": "8d031b4813f56abb647b358e9d42496fbff1ac54",
+      "ci": 42456061735,
+      "report": "cycle7.md"
     }
   ]
 }
