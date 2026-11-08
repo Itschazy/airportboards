@@ -1,12 +1,12 @@
 import test from 'node:test';import assert from 'node:assert/strict';import fs from 'node:fs';import{brotliDecompressSync,gzipSync}from'node:zlib';
-import{decodeCatalogue,loadPayload}from'../../public/flight-map/v9/data.js';import{createSearch}from'../../public/flight-map/v9/search.js';import{createAirportSearch}from'../../public/flight-map/v8/entry.js';
+import{decodeCatalogue,loadPayload}from'../../public/flight-map/v9/data.js';import{createSearch}from'../../public/flight-map/v9/search.js';import{createAirportSearch as previous}from'../../public/flight-map/v8/entry.js';import{createAirportSearch}from'../../public/flight-map/v9/entry.js';
 const bytes=p=>fs.readFileSync(new URL('../../public/flight-map/'+p,import.meta.url)),read=p=>JSON.parse(bytes(p));
 for(const locale of ['ru','en','de','fr','es','it','tr','zh','ja','ko','ar','hi'])test(locale+': full first results and all data match the original catalogue',async()=>{
  const data=read(`v9/catalogue-${locale}.json`),source=read(`v4/airports-${locale}.json`),airports=decodeCatalogue(data);
  const module=await import('data:text/javascript;base64,'+brotliDecompressSync(bytes(`v9/catalogue-${locale}.js.br`)).toString('base64'));assert.deepEqual(module.default,data);
  assert.deepEqual(airports,source);assert.equal(airports.length,6074);assert.deepEqual(brotliDecompressSync(bytes(`v9/catalogue-${locale}.json.br`)),bytes(`v9/catalogue-${locale}.json`));
- const search=createSearch(airports,locale),expected=createAirportSearch(source,locale);
- for(const q of ['Paris','London','Heathrow','Челя','Chelyabinsk','東京','दिल्ली','دبي','CDG',source[500].city,'nosuchairport'])assert.deepEqual((await search.query(q)).map(a=>a.code),expected(q).map(a=>a.code),q);
+ const search=createSearch(airports,locale),expected=createAirportSearch(source,locale),oldSearch=previous(source,locale);
+ for(const q of ['Paris','London','Heathrow','Челя','Chelyabinsk','東京','दिल्ली','دبي','CDG',source[500].city,'nosuchairport']){assert.deepEqual((await search.query(q)).map(a=>a.code),expected(q).map(a=>a.code),q);if(q!=='CDG')assert.deepEqual((await search.query(q,{limit:airports.length})).map(a=>a.code).sort(),oldSearch(q,{limit:airports.length}).map(a=>a.code).sort(),q+' unchanged matches');}
  if(locale==='it')assert.ok((await search.query('Paris')).some(a=>a.code==='CDG'));
  assert.equal(search.ready,true);
  const old=gzipSync(bytes(`v7/core-${locale}.json`)).length+gzipSync(bytes(`v7/aliases-${locale}.json`)).length;

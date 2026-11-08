@@ -20,9 +20,11 @@ export function routePair(value,codes){const m=String(value).trim().toUpperCase(
 // вводе создавала 6074 временных строки (и повторное выравнивание строк
 // движком). Готовим один раз внутри тех же коротких порций индекса,
 // сохраняя порядок полей, пробелы и прежнее ранжирование.
-function indexedRow(a,city,name,latin=''){
+function indexedRow(a,city,name,latin='',alias=''){
  const code=a.code.toLowerCase();
- return {a,code,city,name,latin,hay:code+' '+city+' '+name+' '+latin};
+ // Алиас уже находится в конце latin: сохраняем только его начало,
+ // без второй удерживаемой строки на каждый аэропорт.
+ return {a,code,city,name,latin,aliasAt:latin.length-alias.length,hay:code+' '+city+' '+name+' '+latin};
 }
 function rowBuilder(){
  const normalized=new Map(),transliterated=new Map();
@@ -31,7 +33,7 @@ function rowBuilder(){
  return a=>{
   const city=norm(a.city),name=norm(a.name);
   const alias=a.alias===a.city+' '+a.name?[city,name].filter(Boolean).join(' '):norm(a.alias||'');
-  return indexedRow(a,city,name,[city,name,alias].filter(Boolean).map(translit).join(' '));
+  return indexedRow(a,city,name,[city,name,alias].filter(Boolean).map(translit).join(' '),translit(alias));
  };
 }
 export const createAirportSearch=(airports,locale='ru')=>searchFromRows(airports,locale,airports.map(rowBuilder()));
@@ -71,7 +73,11 @@ function searchFromRows(airports,locale,rows){
   const q=normalize(value);if(!q)return [...new Set([...recent,...defaults])].filter(c=>c!==exclude&&byCode.has(c)).slice(0,limit).map(c=>byCode.get(c));
   const terms=q.split(' '),rank=new Map(recent.map((c,i)=>[c,i])),out=[];
   for(const row of rows){if(row.a.code===exclude)continue;if(!terms.every(t=>row.hay.includes(t)))continue;
-   const score=row.code===q?0:row.city===q?1:row.city.startsWith(q)?2:row.code.startsWith(q)?3:row.city.includes(q)?4:row.latin.startsWith(q)?5:6;
+   // Начало английского имени — такое же осмысленное совпадение, как
+   // начало транслитерации. Иначе Paris в RU равен подстроке Casparis:
+   // ALE обгонял CDG по алфавиту, а недавний ALE — на других языках.
+   // Точные локальные города/коды остаются выше, состав совпадений тот же.
+   const score=row.code===q?0:row.city===q?1:row.city.startsWith(q)?2:row.code.startsWith(q)?3:row.city.includes(q)?4:(row.latin.startsWith(q)||row.latin.startsWith(q,row.aliasAt))?5:6;
    out.push({a:row.a,score,recent:rank.get(row.a.code)??9999});
   }
   return out.sort((a,b)=>a.score-b.score||a.recent-b.recent||(preferred.get(a.a.code)??9999)-(preferred.get(b.a.code)??9999)||a.a.code.localeCompare(b.a.code)).slice(0,limit).map(x=>x.a);
