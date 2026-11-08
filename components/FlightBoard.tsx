@@ -1671,14 +1671,17 @@ export function FlightBoard({ airport, locale, defaultMode = 'departures', displ
                     {/* nowrap у спокойного статуса снят: в 124px колонке он и так
                         в одну строку, а на телефоне «По расписанию» упиралось в
                         88px и вылезало за край вместо переноса. */}
-                    <div style={(f.status === 'ontime' || f.status === 'scheduled') ? {
+                    <div
+                      className="frow-status-label"
+                      data-status-base={(f.status === 'ontime' || f.status === 'scheduled') ? t(`st_${f.status}`) : undefined}
+                      style={(f.status === 'ontime' || f.status === 'scheduled') ? {
                       fontSize: 11.5, fontWeight: 600, color, lineHeight: 1.3,
                     } : {
                       fontSize: 12, fontWeight: 700, color, letterSpacing: '0.03em', textTransform: 'uppercase',
                       lineHeight: 1.3,
                       textShadow: !isPast && f.status === 'finalcall' ? '0 0 10px rgba(255,69,58,0.15)' : 'none',
                     }}>
-                      {label}
+                      <span>{label}</span>
                     </div>
                   </div>
                   <svg data-flip width="8" height="14" viewBox="0 0 8 14" fill="none" aria-hidden="true" className="route-arrow" style={{ flexShrink: 0 }}>

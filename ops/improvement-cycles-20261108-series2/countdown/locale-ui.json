@@ -1,0 +1,956 @@
+{
+  "before375": [
+    {
+      "lang": "ru",
+      "errors": false,
+      "overflow": 0,
+      "rows": [
+        {
+          "height": 40.640625,
+          "text": "Выход 2Через 23 мин"
+        },
+        {
+          "height": 40.640625,
+          "text": "Выход 3Через 48 мин"
+        },
+        {
+          "height": 55.5859375,
+          "text": "Выход 4По расписанию"
+        }
+      ],
+      "width": 375
+    },
+    {
+      "lang": "en",
+      "errors": false,
+      "overflow": 0,
+      "rows": [
+        {
+          "height": 40.640625,
+          "text": "Gate 2In 23 min"
+        },
+        {
+          "height": 40.640625,
+          "text": "Gate 3In 48 min"
+        },
+        {
+          "height": 40.640625,
+          "text": "Gate 4On time"
+        }
+      ],
+      "width": 375
+    },
+    {
+      "lang": "de",
+      "errors": false,
+      "overflow": 0,
+      "rows": [
+        {
+          "height": 40.640625,
+          "text": "Gate 2In 23 Min."
+        },
+        {
+          "height": 40.640625,
+          "text": "Gate 3In 48 Min."
+        },
+        {
+          "height": 40.640625,
+          "text": "Gate 4Pünktlich"
+        }
+      ],
+      "width": 375
+    },
+    {
+      "lang": "fr",
+      "errors": false,
+      "overflow": 0,
+      "rows": [
+        {
+          "height": 40.640625,
+          "text": "Porte 2Dans 23 min"
+        },
+        {
+          "height": 40.640625,
+          "text": "Porte 3Dans 48 min"
+        },
+        {
+          "height": 40.640625,
+          "text": "Porte 4À l'heure"
+        }
+      ],
+      "width": 375
+    },
+    {
+      "lang": "es",
+      "errors": false,
+      "overflow": 0,
+      "rows": [
+        {
+          "height": 40.640625,
+          "text": "Puerta 2En 23 min"
+        },
+        {
+          "height": 40.640625,
+          "text": "Puerta 3En 48 min"
+        },
+        {
+          "height": 40.640625,
+          "text": "Puerta 4A tiempo"
+        }
+      ],
+      "width": 375
+    },
+    {
+      "lang": "it",
+      "errors": false,
+      "overflow": 0,
+      "rows": [
+        {
+          "height": 40.640625,
+          "text": "Gate 2Tra 23 min"
+        },
+        {
+          "height": 40.640625,
+          "text": "Gate 3Tra 48 min"
+        },
+        {
+          "height": 40.640625,
+          "text": "Gate 4In orario"
+        }
+      ],
+      "width": 375
+    },
+    {
+      "lang": "tr",
+      "errors": false,
+      "overflow": 0,
+      "rows": [
+        {
+          "height": 40.640625,
+          "text": "Kapı 223 dk. sonra"
+        },
+        {
+          "height": 40.640625,
+          "text": "Kapı 348 dk. sonra"
+        },
+        {
+          "height": 40.640625,
+          "text": "Kapı 4Zamanında"
+        }
+      ],
+      "width": 375
+    },
+    {
+      "lang": "zh",
+      "errors": false,
+      "overflow": 0,
+      "rows": [
+        {
+          "height": 40.640625,
+          "text": "登机口 223分钟后"
+        },
+        {
+          "height": 40.640625,
+          "text": "登机口 348分钟后"
+        },
+        {
+          "height": 40.640625,
+          "text": "登机口 4准点"
+        }
+      ],
+      "width": 375
+    },
+    {
+      "lang": "ja",
+      "errors": false,
+      "overflow": 0,
+      "rows": [
+        {
+          "height": 40.640625,
+          "text": "ゲート 223 分後"
+        },
+        {
+          "height": 40.640625,
+          "text": "ゲート 348 分後"
+        },
+        {
+          "height": 40.640625,
+          "text": "ゲート 4定刻"
+        }
+      ],
+      "width": 375
+    },
+    {
+      "lang": "ko",
+      "errors": false,
+      "overflow": 0,
+      "rows": [
+        {
+          "height": 40.640625,
+          "text": "게이트 223분 후"
+        },
+        {
+          "height": 40.640625,
+          "text": "게이트 348분 후"
+        },
+        {
+          "height": 40.640625,
+          "text": "게이트 4정시"
+        }
+      ],
+      "width": 375
+    },
+    {
+      "lang": "ar",
+      "errors": false,
+      "overflow": 0,
+      "rows": [
+        {
+          "height": 40.640625,
+          "text": "بوابة 2بعد 23 د"
+        },
+        {
+          "height": 40.640625,
+          "text": "بوابة 3بعد 48 د"
+        },
+        {
+          "height": 40.640625,
+          "text": "بوابة 4في الموعد"
+        }
+      ],
+      "width": 375
+    },
+    {
+      "lang": "hi",
+      "errors": false,
+      "overflow": 0,
+      "rows": [
+        {
+          "height": 40.640625,
+          "text": "गेट 223 मि॰ में"
+        },
+        {
+          "height": 40.640625,
+          "text": "गेट 348 मि॰ में"
+        },
+        {
+          "height": 40.640625,
+          "text": "गेट 4समय पर"
+        }
+      ],
+      "width": 375
+    }
+  ],
+  "before320": [
+    {
+      "lang": "ru",
+      "overflow": 0,
+      "rows": [
+        {
+          "height": 55.5859375,
+          "text": "Выход 2Через 23 мин"
+        },
+        {
+          "height": 55.5859375,
+          "text": "Выход 3Через 48 мин"
+        },
+        {
+          "height": 55.5859375,
+          "text": "Выход 4По расписанию"
+        }
+      ],
+      "width": 320
+    },
+    {
+      "lang": "en",
+      "overflow": 0,
+      "rows": [
+        {
+          "height": 40.640625,
+          "text": "Gate 2In 23 min"
+        },
+        {
+          "height": 40.640625,
+          "text": "Gate 3In 48 min"
+        },
+        {
+          "height": 40.640625,
+          "text": "Gate 4On time"
+        }
+      ],
+      "width": 320
+    },
+    {
+      "lang": "de",
+      "overflow": 0,
+      "rows": [
+        {
+          "height": 40.640625,
+          "text": "Gate 2In 23 Min."
+        },
+        {
+          "height": 40.640625,
+          "text": "Gate 3In 48 Min."
+        },
+        {
+          "height": 40.640625,
+          "text": "Gate 4Pünktlich"
+        }
+      ],
+      "width": 320
+    },
+    {
+      "lang": "fr",
+      "overflow": 0,
+      "rows": [
+        {
+          "height": 40.640625,
+          "text": "Porte 2Dans 23 min"
+        },
+        {
+          "height": 40.640625,
+          "text": "Porte 3Dans 48 min"
+        },
+        {
+          "height": 40.640625,
+          "text": "Porte 4À l'heure"
+        }
+      ],
+      "width": 320
+    },
+    {
+      "lang": "es",
+      "overflow": 0,
+      "rows": [
+        {
+          "height": 40.640625,
+          "text": "Puerta 2En 23 min"
+        },
+        {
+          "height": 40.640625,
+          "text": "Puerta 3En 48 min"
+        },
+        {
+          "height": 40.640625,
+          "text": "Puerta 4A tiempo"
+        }
+      ],
+      "width": 320
+    },
+    {
+      "lang": "it",
+      "overflow": 0,
+      "rows": [
+        {
+          "height": 40.640625,
+          "text": "Gate 2Tra 23 min"
+        },
+        {
+          "height": 40.640625,
+          "text": "Gate 3Tra 48 min"
+        },
+        {
+          "height": 40.640625,
+          "text": "Gate 4In orario"
+        }
+      ],
+      "width": 320
+    },
+    {
+      "lang": "tr",
+      "overflow": 0,
+      "rows": [
+        {
+          "height": 40.640625,
+          "text": "Kapı 223 dk. sonra"
+        },
+        {
+          "height": 40.640625,
+          "text": "Kapı 348 dk. sonra"
+        },
+        {
+          "height": 40.640625,
+          "text": "Kapı 4Zamanında"
+        }
+      ],
+      "width": 320
+    },
+    {
+      "lang": "zh",
+      "overflow": 0,
+      "rows": [
+        {
+          "height": 40.640625,
+          "text": "登机口 223分钟后"
+        },
+        {
+          "height": 40.640625,
+          "text": "登机口 348分钟后"
+        },
+        {
+          "height": 40.640625,
+          "text": "登机口 4准点"
+        }
+      ],
+      "width": 320
+    },
+    {
+      "lang": "ja",
+      "overflow": 0,
+      "rows": [
+        {
+          "height": 40.640625,
+          "text": "ゲート 223 分後"
+        },
+        {
+          "height": 40.640625,
+          "text": "ゲート 348 分後"
+        },
+        {
+          "height": 40.640625,
+          "text": "ゲート 4定刻"
+        }
+      ],
+      "width": 320
+    },
+    {
+      "lang": "ko",
+      "overflow": 0,
+      "rows": [
+        {
+          "height": 40.640625,
+          "text": "게이트 223분 후"
+        },
+        {
+          "height": 40.640625,
+          "text": "게이트 348분 후"
+        },
+        {
+          "height": 40.640625,
+          "text": "게이트 4정시"
+        }
+      ],
+      "width": 320
+    },
+    {
+      "lang": "ar",
+      "overflow": 0,
+      "rows": [
+        {
+          "height": 40.640625,
+          "text": "بوابة 2بعد 23 د"
+        },
+        {
+          "height": 40.640625,
+          "text": "بوابة 3بعد 48 د"
+        },
+        {
+          "height": 40.640625,
+          "text": "بوابة 4في الموعد"
+        }
+      ],
+      "width": 320
+    },
+    {
+      "lang": "hi",
+      "overflow": 0,
+      "rows": [
+        {
+          "height": 40.640625,
+          "text": "गेट 223 मि॰ में"
+        },
+        {
+          "height": 40.640625,
+          "text": "गेट 348 मि॰ में"
+        },
+        {
+          "height": 40.640625,
+          "text": "गेट 4समय पर"
+        }
+      ],
+      "width": 320
+    }
+  ],
+  "after": [
+    {
+      "lang": "ru",
+      "duplicates": false,
+      "overflow": 0,
+      "rows": [
+        {
+          "height": 55.5859375,
+          "text": "Выход 2Через 21 мин"
+        },
+        {
+          "height": 55.5859375,
+          "text": "Выход 3Через 46 мин"
+        },
+        {
+          "height": 55.5859375,
+          "text": "Выход 4По расписанию"
+        }
+      ],
+      "width": 375
+    },
+    {
+      "lang": "en",
+      "duplicates": false,
+      "overflow": 0,
+      "rows": [
+        {
+          "height": 40.640625,
+          "text": "Gate 2In 21 min"
+        },
+        {
+          "height": 40.640625,
+          "text": "Gate 3In 46 min"
+        },
+        {
+          "height": 40.640625,
+          "text": "Gate 4On time"
+        }
+      ],
+      "width": 375
+    },
+    {
+      "lang": "de",
+      "duplicates": false,
+      "overflow": 0,
+      "rows": [
+        {
+          "height": 40.640625,
+          "text": "Gate 2In 21 Min."
+        },
+        {
+          "height": 40.640625,
+          "text": "Gate 3In 46 Min."
+        },
+        {
+          "height": 40.640625,
+          "text": "Gate 4Pünktlich"
+        }
+      ],
+      "width": 375
+    },
+    {
+      "lang": "fr",
+      "duplicates": false,
+      "overflow": 0,
+      "rows": [
+        {
+          "height": 40.640625,
+          "text": "Porte 2Dans 21 min"
+        },
+        {
+          "height": 40.640625,
+          "text": "Porte 3Dans 46 min"
+        },
+        {
+          "height": 40.640625,
+          "text": "Porte 4À l'heure"
+        }
+      ],
+      "width": 375
+    },
+    {
+      "lang": "es",
+      "duplicates": false,
+      "overflow": 0,
+      "rows": [
+        {
+          "height": 40.640625,
+          "text": "Puerta 2En 21 min"
+        },
+        {
+          "height": 40.640625,
+          "text": "Puerta 3En 46 min"
+        },
+        {
+          "height": 40.640625,
+          "text": "Puerta 4A tiempo"
+        }
+      ],
+      "width": 375
+    },
+    {
+      "lang": "it",
+      "duplicates": false,
+      "overflow": 0,
+      "rows": [
+        {
+          "height": 40.640625,
+          "text": "Gate 2Tra 21 min"
+        },
+        {
+          "height": 40.640625,
+          "text": "Gate 3Tra 46 min"
+        },
+        {
+          "height": 40.640625,
+          "text": "Gate 4In orario"
+        }
+      ],
+      "width": 375
+    },
+    {
+      "lang": "tr",
+      "duplicates": false,
+      "overflow": 0,
+      "rows": [
+        {
+          "height": 40.640625,
+          "text": "Kapı 221 dk. sonra"
+        },
+        {
+          "height": 40.640625,
+          "text": "Kapı 346 dk. sonra"
+        },
+        {
+          "height": 40.640625,
+          "text": "Kapı 4Zamanında"
+        }
+      ],
+      "width": 375
+    },
+    {
+      "lang": "zh",
+      "duplicates": false,
+      "overflow": 0,
+      "rows": [
+        {
+          "height": 40.640625,
+          "text": "登机口 221分钟后"
+        },
+        {
+          "height": 40.640625,
+          "text": "登机口 346分钟后"
+        },
+        {
+          "height": 40.640625,
+          "text": "登机口 4准点"
+        }
+      ],
+      "width": 375
+    },
+    {
+      "lang": "ja",
+      "duplicates": false,
+      "overflow": 0,
+      "rows": [
+        {
+          "height": 40.640625,
+          "text": "ゲート 221 分後"
+        },
+        {
+          "height": 40.640625,
+          "text": "ゲート 346 分後"
+        },
+        {
+          "height": 40.640625,
+          "text": "ゲート 4定刻"
+        }
+      ],
+      "width": 375
+    },
+    {
+      "lang": "ko",
+      "duplicates": false,
+      "overflow": 0,
+      "rows": [
+        {
+          "height": 40.640625,
+          "text": "게이트 221분 후"
+        },
+        {
+          "height": 40.640625,
+          "text": "게이트 346분 후"
+        },
+        {
+          "height": 40.640625,
+          "text": "게이트 4정시"
+        }
+      ],
+      "width": 375
+    },
+    {
+      "lang": "ar",
+      "duplicates": false,
+      "overflow": 0,
+      "rows": [
+        {
+          "height": 40.640625,
+          "text": "بوابة 2بعد 21 د"
+        },
+        {
+          "height": 40.640625,
+          "text": "بوابة 3بعد 46 د"
+        },
+        {
+          "height": 40.640625,
+          "text": "بوابة 4في الموعد"
+        }
+      ],
+      "width": 375
+    },
+    {
+      "lang": "hi",
+      "duplicates": false,
+      "overflow": 0,
+      "rows": [
+        {
+          "height": 40.640625,
+          "text": "गेट 221 मि॰ में"
+        },
+        {
+          "height": 40.640625,
+          "text": "गेट 346 मि॰ में"
+        },
+        {
+          "height": 40.640625,
+          "text": "गेट 4समय पर"
+        }
+      ],
+      "width": 375
+    },
+    {
+      "lang": "ru",
+      "duplicates": false,
+      "overflow": 0,
+      "rows": [
+        {
+          "height": 55.5859375,
+          "text": "Выход 2Через 21 мин"
+        },
+        {
+          "height": 55.5859375,
+          "text": "Выход 3Через 46 мин"
+        },
+        {
+          "height": 55.5859375,
+          "text": "Выход 4По расписанию"
+        }
+      ],
+      "width": 320
+    },
+    {
+      "lang": "en",
+      "duplicates": false,
+      "overflow": 0,
+      "rows": [
+        {
+          "height": 40.640625,
+          "text": "Gate 2In 21 min"
+        },
+        {
+          "height": 40.640625,
+          "text": "Gate 3In 46 min"
+        },
+        {
+          "height": 40.640625,
+          "text": "Gate 4On time"
+        }
+      ],
+      "width": 320
+    },
+    {
+      "lang": "de",
+      "duplicates": false,
+      "overflow": 0,
+      "rows": [
+        {
+          "height": 40.640625,
+          "text": "Gate 2In 21 Min."
+        },
+        {
+          "height": 40.640625,
+          "text": "Gate 3In 46 Min."
+        },
+        {
+          "height": 40.640625,
+          "text": "Gate 4Pünktlich"
+        }
+      ],
+      "width": 320
+    },
+    {
+      "lang": "fr",
+      "duplicates": false,
+      "overflow": 0,
+      "rows": [
+        {
+          "height": 40.640625,
+          "text": "Porte 2Dans 21 min"
+        },
+        {
+          "height": 40.640625,
+          "text": "Porte 3Dans 46 min"
+        },
+        {
+          "height": 40.640625,
+          "text": "Porte 4À l'heure"
+        }
+      ],
+      "width": 320
+    },
+    {
+      "lang": "es",
+      "duplicates": false,
+      "overflow": 0,
+      "rows": [
+        {
+          "height": 40.640625,
+          "text": "Puerta 2En 21 min"
+        },
+        {
+          "height": 40.640625,
+          "text": "Puerta 3En 46 min"
+        },
+        {
+          "height": 40.640625,
+          "text": "Puerta 4A tiempo"
+        }
+      ],
+      "width": 320
+    },
+    {
+      "lang": "it",
+      "duplicates": false,
+      "overflow": 0,
+      "rows": [
+        {
+          "height": 40.640625,
+          "text": "Gate 2Tra 21 min"
+        },
+        {
+          "height": 40.640625,
+          "text": "Gate 3Tra 46 min"
+        },
+        {
+          "height": 40.640625,
+          "text": "Gate 4In orario"
+        }
+      ],
+      "width": 320
+    },
+    {
+      "lang": "tr",
+      "duplicates": false,
+      "overflow": 0,
+      "rows": [
+        {
+          "height": 40.640625,
+          "text": "Kapı 221 dk. sonra"
+        },
+        {
+          "height": 40.640625,
+          "text": "Kapı 346 dk. sonra"
+        },
+        {
+          "height": 40.640625,
+          "text": "Kapı 4Zamanında"
+        }
+      ],
+      "width": 320
+    },
+    {
+      "lang": "zh",
+      "duplicates": false,
+      "overflow": 0,
+      "rows": [
+        {
+          "height": 40.640625,
+          "text": "登机口 221分钟后"
+        },
+        {
+          "height": 40.640625,
+          "text": "登机口 346分钟后"
+        },
+        {
+          "height": 40.640625,
+          "text": "登机口 4准点"
+        }
+      ],
+      "width": 320
+    },
+    {
+      "lang": "ja",
+      "duplicates": false,
+      "overflow": 0,
+      "rows": [
+        {
+          "height": 40.640625,
+          "text": "ゲート 221 分後"
+        },
+        {
+          "height": 40.640625,
+          "text": "ゲート 346 分後"
+        },
+        {
+          "height": 40.640625,
+          "text": "ゲート 4定刻"
+        }
+      ],
+      "width": 320
+    },
+    {
+      "lang": "ko",
+      "duplicates": false,
+      "overflow": 0,
+      "rows": [
+        {
+          "height": 40.640625,
+          "text": "게이트 221분 후"
+        },
+        {
+          "height": 40.640625,
+          "text": "게이트 346분 후"
+        },
+        {
+          "height": 40.640625,
+          "text": "게이트 4정시"
+        }
+      ],
+      "width": 320
+    },
+    {
+      "lang": "ar",
+      "duplicates": false,
+      "overflow": 0,
+      "rows": [
+        {
+          "height": 40.640625,
+          "text": "بوابة 2بعد 21 د"
+        },
+        {
+          "height": 40.640625,
+          "text": "بوابة 3بعد 46 د"
+        },
+        {
+          "height": 40.640625,
+          "text": "بوابة 4في الموعد"
+        }
+      ],
+      "width": 320
+    },
+    {
+      "lang": "hi",
+      "duplicates": false,
+      "overflow": 0,
+      "rows": [
+        {
+          "height": 40.640625,
+          "text": "गेट 221 मि॰ में"
+        },
+        {
+          "height": 40.640625,
+          "text": "गेट 346 मि॰ में"
+        },
+        {
+          "height": 40.640625,
+          "text": "गेट 4समय पर"
+        }
+      ],
+      "width": 320
+    }
+  ]
+}

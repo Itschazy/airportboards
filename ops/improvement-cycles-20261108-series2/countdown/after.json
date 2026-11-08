@@ -1,0 +1,584 @@
+[
+  {
+    "version": 2,
+    "statusSnapshots": [
+      {
+        "time": 232,
+        "rows": [
+          "Выход 2По расписанию",
+          "Выход 3По расписанию",
+          "Выход 4По расписанию"
+        ]
+      },
+      {
+        "time": 291.7999999523163,
+        "rows": [
+          "Выход 2Через 22 мин",
+          "Выход 3Через 47 мин",
+          "Выход 4По расписанию"
+        ]
+      }
+    ],
+    "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36",
+    "shifts": [
+      {
+        "time": 293.2999999523163,
+        "value": 0.0014140803839371658,
+        "sources": [
+          {
+            "tag": "SPAN",
+            "cls": "",
+            "from": {
+              "x": 183.71875,
+              "y": 219.375,
+              "width": 128.8125,
+              "height": 18,
+              "top": 219.375,
+              "right": 312.53125,
+              "bottom": 237.375,
+              "left": 183.71875
+            },
+            "to": {
+              "x": 139.9609375,
+              "y": 219.375,
+              "width": 128.8125,
+              "height": 18,
+              "top": 219.375,
+              "right": 268.7734375,
+              "bottom": 237.375,
+              "left": 139.9609375
+            }
+          },
+          {
+            "from": {
+              "x": 243.625,
+              "y": 467.0703125,
+              "width": 86.25,
+              "height": 14,
+              "top": 467.0703125,
+              "right": 329.875,
+              "bottom": 481.0703125,
+              "left": 243.625
+            },
+            "to": {
+              "x": 243.625,
+              "y": 467.0703125,
+              "width": 86.25,
+              "height": 14,
+              "top": 467.0703125,
+              "right": 329.875,
+              "bottom": 481.0703125,
+              "left": 243.625
+            }
+          },
+          {
+            "from": {
+              "x": 243.625,
+              "y": 562.65625,
+              "width": 86.25,
+              "height": 14,
+              "top": 562.65625,
+              "right": 329.875,
+              "bottom": 576.65625,
+              "left": 243.625
+            },
+            "to": {
+              "x": 243.625,
+              "y": 562.65625,
+              "width": 86.25,
+              "height": 14,
+              "top": 562.65625,
+              "right": 329.875,
+              "bottom": 576.65625,
+              "left": 243.625
+            }
+          },
+          {
+            "tag": "SPAN",
+            "cls": "",
+            "from": {
+              "x": 173.2578125,
+              "y": 219.375,
+              "width": 3.4609375,
+              "height": 18,
+              "top": 219.375,
+              "right": 176.71875,
+              "bottom": 237.375,
+              "left": 173.2578125
+            },
+            "to": {
+              "x": 129.5,
+              "y": 219.375,
+              "width": 3.4609375,
+              "height": 18,
+              "top": 219.375,
+              "right": 132.9609375,
+              "bottom": 237.375,
+              "left": 129.5
+            }
+          }
+        ]
+      },
+      {
+        "time": 299.2999999523163,
+        "value": 0.0005367656147625519,
+        "sources": [
+          {
+            "tag": "SPAN",
+            "cls": "",
+            "from": {
+              "x": 139.9609375,
+              "y": 219.375,
+              "width": 128.8125,
+              "height": 18,
+              "top": 219.375,
+              "right": 268.7734375,
+              "bottom": 237.375,
+              "left": 139.9609375
+            },
+            "to": {
+              "x": 183.71875,
+              "y": 219.375,
+              "width": 121.3515625,
+              "height": 18,
+              "top": 219.375,
+              "right": 305.0703125,
+              "bottom": 237.375,
+              "left": 183.71875
+            }
+          },
+          {
+            "tag": "SPAN",
+            "cls": "",
+            "from": {
+              "x": 129.5,
+              "y": 219.375,
+              "width": 3.4609375,
+              "height": 18,
+              "top": 219.375,
+              "right": 132.9609375,
+              "bottom": 237.375,
+              "left": 129.5
+            },
+            "to": {
+              "x": 173.2578125,
+              "y": 219.375,
+              "width": 3.4609375,
+              "height": 18,
+              "top": 219.375,
+              "right": 176.71875,
+              "bottom": 237.375,
+              "left": 173.2578125
+            }
+          }
+        ]
+      }
+    ],
+    "kind": "loaded",
+    "path": "/ru/airport/BCN",
+    "variant": "?phase=after&run=1",
+    "supported": [
+      "element",
+      "event",
+      "first-input",
+      "interaction-contentful-paint",
+      "largest-contentful-paint",
+      "layout-shift",
+      "long-animation-frame",
+      "longtask",
+      "mark",
+      "measure",
+      "navigation",
+      "paint",
+      "resource",
+      "soft-navigation",
+      "visibility-state"
+    ],
+    "lcp": {
+      "time": 304,
+      "size": 14806,
+      "tag": "P",
+      "class": "",
+      "text": "Статус табло 64 мин назад: у 0 из 120 предстоящих вылетов задержка на 15 минут и более."
+    },
+    "cls": 0.0019508459986997176,
+    "longTasks": [],
+    "firstRows": 287.2999999523163,
+    "now": 1279.7999999523163,
+    "width": 375,
+    "scrollWidth": 375,
+    "domNodes": 1438,
+    "rows": 30,
+    "nav": {
+      "ttfb": 209.70000004768372,
+      "html": 1.0999999046325684,
+      "dcl": 241.89999985694885,
+      "load": 277.89999985694885,
+      "bytes": 378398
+    },
+    "paint": [
+      {
+        "name": "first-paint",
+        "time": 304
+      },
+      {
+        "name": "first-contentful-paint",
+        "time": 304
+      }
+    ]
+  },
+  {
+    "version": 2,
+    "statusSnapshots": [
+      {
+        "time": 36.200000047683716,
+        "rows": [
+          "Выход 2По расписанию",
+          "Выход 3По расписанию",
+          "Выход 4По расписанию"
+        ]
+      },
+      {
+        "time": 93.40000009536743,
+        "rows": [
+          "Выход 2Через 22 мин",
+          "Выход 3Через 47 мин",
+          "Выход 4По расписанию"
+        ]
+      }
+    ],
+    "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36",
+    "shifts": [
+      {
+        "time": 98.5,
+        "value": 0.0006126838443462998,
+        "sources": [
+          {
+            "from": {
+              "x": 243.625,
+              "y": 467.0703125,
+              "width": 86.25,
+              "height": 14,
+              "top": 467.0703125,
+              "right": 329.875,
+              "bottom": 481.0703125,
+              "left": 243.625
+            },
+            "to": {
+              "x": 243.625,
+              "y": 467.0703125,
+              "width": 86.25,
+              "height": 14,
+              "top": 467.0703125,
+              "right": 329.875,
+              "bottom": 481.0703125,
+              "left": 243.625
+            }
+          },
+          {
+            "from": {
+              "x": 243.625,
+              "y": 562.65625,
+              "width": 86.25,
+              "height": 14,
+              "top": 562.65625,
+              "right": 329.875,
+              "bottom": 576.65625,
+              "left": 243.625
+            },
+            "to": {
+              "x": 243.625,
+              "y": 562.65625,
+              "width": 86.25,
+              "height": 14,
+              "top": 562.65625,
+              "right": 329.875,
+              "bottom": 576.65625,
+              "left": 243.625
+            }
+          }
+        ]
+      }
+    ],
+    "kind": "loaded",
+    "path": "/ru/airport/BCN",
+    "variant": "?phase=after&run=2",
+    "supported": [
+      "element",
+      "event",
+      "first-input",
+      "interaction-contentful-paint",
+      "largest-contentful-paint",
+      "layout-shift",
+      "long-animation-frame",
+      "longtask",
+      "mark",
+      "measure",
+      "navigation",
+      "paint",
+      "resource",
+      "soft-navigation",
+      "visibility-state"
+    ],
+    "lcp": {
+      "time": 112,
+      "size": 14806,
+      "tag": "P",
+      "class": "",
+      "text": "Статус табло 64 мин назад: у 0 из 120 предстоящих вылетов задержка на 15 минут и более."
+    },
+    "cls": 0.0006126838443462998,
+    "longTasks": [],
+    "firstRows": 89.90000009536743,
+    "now": 1066.9000000953674,
+    "width": 375,
+    "scrollWidth": 375,
+    "domNodes": 1439,
+    "rows": 30,
+    "nav": {
+      "ttfb": 9.799999952316284,
+      "html": 1.8000001907348633,
+      "dcl": 51.200000047683716,
+      "load": 65.60000014305115,
+      "bytes": 378398
+    },
+    "paint": [
+      {
+        "name": "first-paint",
+        "time": 112
+      },
+      {
+        "name": "first-contentful-paint",
+        "time": 112
+      }
+    ]
+  },
+  {
+    "version": 2,
+    "statusSnapshots": [
+      {
+        "time": 40.5,
+        "rows": [
+          "Выход 2По расписанию",
+          "Выход 3По расписанию",
+          "Выход 4По расписанию"
+        ]
+      },
+      {
+        "time": 92,
+        "rows": [
+          "Выход 2Через 21 мин",
+          "Выход 3Через 46 мин",
+          "Выход 4По расписанию"
+        ]
+      }
+    ],
+    "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36",
+    "shifts": [
+      {
+        "time": 93.90000009536743,
+        "value": 0.001429623610740372,
+        "sources": [
+          {
+            "tag": "SPAN",
+            "cls": "",
+            "from": {
+              "x": 183.71875,
+              "y": 219.375,
+              "width": 128.8125,
+              "height": 18,
+              "top": 219.375,
+              "right": 312.53125,
+              "bottom": 237.375,
+              "left": 183.71875
+            },
+            "to": {
+              "x": 139.9609375,
+              "y": 219.375,
+              "width": 128.8125,
+              "height": 18,
+              "top": 219.375,
+              "right": 268.7734375,
+              "bottom": 237.375,
+              "left": 139.9609375
+            }
+          },
+          {
+            "from": {
+              "x": 243.625,
+              "y": 467.0703125,
+              "width": 86.25,
+              "height": 14,
+              "top": 467.0703125,
+              "right": 329.875,
+              "bottom": 481.0703125,
+              "left": 243.625
+            },
+            "to": {
+              "x": 243.625,
+              "y": 467.0703125,
+              "width": 86.25,
+              "height": 14,
+              "top": 467.0703125,
+              "right": 329.875,
+              "bottom": 481.0703125,
+              "left": 243.625
+            }
+          },
+          {
+            "from": {
+              "x": 243.625,
+              "y": 562.65625,
+              "width": 86.25,
+              "height": 14,
+              "top": 562.65625,
+              "right": 329.875,
+              "bottom": 576.65625,
+              "left": 243.625
+            },
+            "to": {
+              "x": 243.625,
+              "y": 562.65625,
+              "width": 86.25,
+              "height": 14,
+              "top": 562.65625,
+              "right": 329.875,
+              "bottom": 576.65625,
+              "left": 243.625
+            }
+          },
+          {
+            "tag": "SPAN",
+            "cls": "",
+            "from": {
+              "x": 173.2578125,
+              "y": 219.375,
+              "width": 3.4609375,
+              "height": 18,
+              "top": 219.375,
+              "right": 176.71875,
+              "bottom": 237.375,
+              "left": 173.2578125
+            },
+            "to": {
+              "x": 129.5,
+              "y": 219.375,
+              "width": 3.4609375,
+              "height": 18,
+              "top": 219.375,
+              "right": 132.9609375,
+              "bottom": 237.375,
+              "left": 129.5
+            }
+          }
+        ]
+      },
+      {
+        "time": 100.70000004768372,
+        "value": 0.0005367656147625519,
+        "sources": [
+          {
+            "tag": "SPAN",
+            "cls": "",
+            "from": {
+              "x": 139.9609375,
+              "y": 219.375,
+              "width": 128.8125,
+              "height": 18,
+              "top": 219.375,
+              "right": 268.7734375,
+              "bottom": 237.375,
+              "left": 139.9609375
+            },
+            "to": {
+              "x": 183.71875,
+              "y": 219.375,
+              "width": 121.3515625,
+              "height": 18,
+              "top": 219.375,
+              "right": 305.0703125,
+              "bottom": 237.375,
+              "left": 183.71875
+            }
+          },
+          {
+            "tag": "SPAN",
+            "cls": "",
+            "from": {
+              "x": 129.5,
+              "y": 219.375,
+              "width": 3.4609375,
+              "height": 18,
+              "top": 219.375,
+              "right": 132.9609375,
+              "bottom": 237.375,
+              "left": 129.5
+            },
+            "to": {
+              "x": 173.2578125,
+              "y": 219.375,
+              "width": 3.4609375,
+              "height": 18,
+              "top": 219.375,
+              "right": 176.71875,
+              "bottom": 237.375,
+              "left": 173.2578125
+            }
+          }
+        ]
+      }
+    ],
+    "kind": "loaded",
+    "path": "/ru/airport/BCN",
+    "variant": "?phase=after&run=3",
+    "supported": [
+      "element",
+      "event",
+      "first-input",
+      "interaction-contentful-paint",
+      "largest-contentful-paint",
+      "layout-shift",
+      "long-animation-frame",
+      "longtask",
+      "mark",
+      "measure",
+      "navigation",
+      "paint",
+      "resource",
+      "soft-navigation",
+      "visibility-state"
+    ],
+    "lcp": {
+      "time": 104,
+      "size": 14806,
+      "tag": "P",
+      "class": "",
+      "text": "Статус табло 64 мин назад: у 0 из 120 предстоящих вылетов задержка на 15 минут и более."
+    },
+    "cls": 0.001966389225502924,
+    "longTasks": [],
+    "firstRows": 88.79999995231628,
+    "now": 1084,
+    "width": 375,
+    "scrollWidth": 375,
+    "domNodes": 1439,
+    "rows": 30,
+    "nav": {
+      "ttfb": 11.900000095367432,
+      "html": 1.6999998092651367,
+      "dcl": 54.799999952316284,
+      "load": 81,
+      "bytes": 378398
+    },
+    "paint": [
+      {
+        "name": "first-paint",
+        "time": 104
+      },
+      {
+        "name": "first-contentful-paint",
+        "time": 104
+      }
+    ]
+  }
+]

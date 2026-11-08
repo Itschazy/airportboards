@@ -1,0 +1,770 @@
+[
+  {
+    "version": 2,
+    "statusSnapshots": [
+      {
+        "time": 31.200000047683716,
+        "rows": [
+          "Выход 2По расписанию",
+          "Выход 3По расписанию",
+          "Выход 4По расписанию"
+        ]
+      },
+      {
+        "time": 83.90000009536743,
+        "rows": [
+          "Выход 2Через 25 мин",
+          "Выход 3Через 50 мин",
+          "Выход 4По расписанию"
+        ]
+      }
+    ],
+    "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36",
+    "shifts": [
+      {
+        "time": 84.90000009536743,
+        "value": 0.019793109957270662,
+        "sources": [
+          {
+            "tag": "DIV",
+            "cls": "frow",
+            "from": {
+              "x": 15.5,
+              "y": 618.1875,
+              "width": 344,
+              "height": 84.5859375,
+              "top": 618.1875,
+              "right": 359.5,
+              "bottom": 702.7734375,
+              "left": 15.5
+            },
+            "to": {
+              "x": 15.5,
+              "y": 614.1875,
+              "width": 344,
+              "height": 84.5859375,
+              "top": 614.1875,
+              "right": 359.5,
+              "bottom": 698.7734375,
+              "left": 15.5
+            }
+          },
+          {
+            "tag": "DIV",
+            "cls": "frow",
+            "from": {
+              "x": 15.5,
+              "y": 713.2734375,
+              "width": 344,
+              "height": 84.5859375,
+              "top": 713.2734375,
+              "right": 359.5,
+              "bottom": 797.859375,
+              "left": 15.5
+            },
+            "to": {
+              "x": 15.5,
+              "y": 709.7734375,
+              "width": 344,
+              "height": 84.5859375,
+              "top": 709.7734375,
+              "right": 359.5,
+              "bottom": 794.359375,
+              "left": 15.5
+            }
+          },
+          {
+            "tag": "DIV",
+            "cls": "frow-what",
+            "from": {
+              "x": 243.625,
+              "y": 440.375,
+              "width": 102.25,
+              "height": 56.5859375,
+              "top": 440.375,
+              "right": 345.875,
+              "bottom": 496.9609375,
+              "left": 243.625
+            },
+            "to": {
+              "x": 243.625,
+              "y": 446.8828125,
+              "width": 102.25,
+              "height": 41.640625,
+              "top": 446.8828125,
+              "right": 345.875,
+              "bottom": 488.5234375,
+              "left": 243.625
+            }
+          },
+          {
+            "tag": "DIV",
+            "cls": "frow-what",
+            "from": {
+              "x": 243.625,
+              "y": 534.03125,
+              "width": 102.25,
+              "height": 56.5859375,
+              "top": 534.03125,
+              "right": 345.875,
+              "bottom": 590.6171875,
+              "left": 243.625
+            },
+            "to": {
+              "x": 243.625,
+              "y": 540.5390625,
+              "width": 102.25,
+              "height": 41.640625,
+              "top": 540.5390625,
+              "right": 345.875,
+              "bottom": 582.1796875,
+              "left": 243.625
+            }
+          },
+          {
+            "tag": "SPAN",
+            "cls": "",
+            "from": {
+              "x": 183.71875,
+              "y": 219.375,
+              "width": 128.8125,
+              "height": 18,
+              "top": 219.375,
+              "right": 312.53125,
+              "bottom": 237.375,
+              "left": 183.71875
+            },
+            "to": {
+              "x": 139.9609375,
+              "y": 219.375,
+              "width": 128.8125,
+              "height": 18,
+              "top": 219.375,
+              "right": 268.7734375,
+              "bottom": 237.375,
+              "left": 139.9609375
+            }
+          }
+        ]
+      },
+      {
+        "time": 90.70000004768372,
+        "value": 0.0005367656147625519,
+        "sources": [
+          {
+            "tag": "SPAN",
+            "cls": "",
+            "from": {
+              "x": 139.9609375,
+              "y": 219.375,
+              "width": 128.8125,
+              "height": 18,
+              "top": 219.375,
+              "right": 268.7734375,
+              "bottom": 237.375,
+              "left": 139.9609375
+            },
+            "to": {
+              "x": 183.71875,
+              "y": 219.375,
+              "width": 121.3515625,
+              "height": 18,
+              "top": 219.375,
+              "right": 305.0703125,
+              "bottom": 237.375,
+              "left": 183.71875
+            }
+          },
+          {
+            "tag": "SPAN",
+            "cls": "",
+            "from": {
+              "x": 129.5,
+              "y": 219.375,
+              "width": 3.4609375,
+              "height": 18,
+              "top": 219.375,
+              "right": 132.9609375,
+              "bottom": 237.375,
+              "left": 129.5
+            },
+            "to": {
+              "x": 173.2578125,
+              "y": 219.375,
+              "width": 3.4609375,
+              "height": 18,
+              "top": 219.375,
+              "right": 176.71875,
+              "bottom": 237.375,
+              "left": 173.2578125
+            }
+          }
+        ]
+      }
+    ],
+    "kind": "loaded",
+    "path": "/ru/airport/BCN",
+    "variant": "?phase=before&run=1",
+    "supported": [
+      "element",
+      "event",
+      "first-input",
+      "interaction-contentful-paint",
+      "largest-contentful-paint",
+      "layout-shift",
+      "long-animation-frame",
+      "longtask",
+      "mark",
+      "measure",
+      "navigation",
+      "paint",
+      "resource",
+      "soft-navigation",
+      "visibility-state"
+    ],
+    "lcp": {
+      "time": 104,
+      "size": 14806,
+      "tag": "P",
+      "class": "",
+      "text": "Статус табло 61 мин назад: у 0 из 120 предстоящих вылетов задержка на 15 минут и более."
+    },
+    "cls": 0.020329875572033213,
+    "longTasks": [],
+    "firstRows": 79.10000014305115,
+    "now": 1059.5,
+    "width": 375,
+    "scrollWidth": 375,
+    "domNodes": 1409,
+    "rows": 30,
+    "nav": {
+      "ttfb": 7.800000190734863,
+      "html": 1.2999999523162842,
+      "dcl": 41.5,
+      "load": 58.80000019073486,
+      "bytes": 375360
+    },
+    "paint": [
+      {
+        "name": "first-paint",
+        "time": 104
+      },
+      {
+        "name": "first-contentful-paint",
+        "time": 104
+      }
+    ]
+  },
+  {
+    "version": 2,
+    "statusSnapshots": [
+      {
+        "time": 26,
+        "rows": [
+          "Выход 2По расписанию",
+          "Выход 3По расписанию",
+          "Выход 4По расписанию"
+        ]
+      },
+      {
+        "time": 73.90000009536743,
+        "rows": [
+          "Выход 2Через 25 мин",
+          "Выход 3Через 50 мин",
+          "Выход 4По расписанию"
+        ]
+      }
+    ],
+    "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36",
+    "shifts": [
+      {
+        "time": 75.10000014305115,
+        "value": 0.019793109957270662,
+        "sources": [
+          {
+            "tag": "DIV",
+            "cls": "frow",
+            "from": {
+              "x": 15.5,
+              "y": 618.1875,
+              "width": 344,
+              "height": 84.5859375,
+              "top": 618.1875,
+              "right": 359.5,
+              "bottom": 702.7734375,
+              "left": 15.5
+            },
+            "to": {
+              "x": 15.5,
+              "y": 614.1875,
+              "width": 344,
+              "height": 84.5859375,
+              "top": 614.1875,
+              "right": 359.5,
+              "bottom": 698.7734375,
+              "left": 15.5
+            }
+          },
+          {
+            "tag": "DIV",
+            "cls": "frow",
+            "from": {
+              "x": 15.5,
+              "y": 713.2734375,
+              "width": 344,
+              "height": 84.5859375,
+              "top": 713.2734375,
+              "right": 359.5,
+              "bottom": 797.859375,
+              "left": 15.5
+            },
+            "to": {
+              "x": 15.5,
+              "y": 709.7734375,
+              "width": 344,
+              "height": 84.5859375,
+              "top": 709.7734375,
+              "right": 359.5,
+              "bottom": 794.359375,
+              "left": 15.5
+            }
+          },
+          {
+            "tag": "DIV",
+            "cls": "frow-what",
+            "from": {
+              "x": 243.625,
+              "y": 440.375,
+              "width": 102.25,
+              "height": 56.5859375,
+              "top": 440.375,
+              "right": 345.875,
+              "bottom": 496.9609375,
+              "left": 243.625
+            },
+            "to": {
+              "x": 243.625,
+              "y": 446.8828125,
+              "width": 102.25,
+              "height": 41.640625,
+              "top": 446.8828125,
+              "right": 345.875,
+              "bottom": 488.5234375,
+              "left": 243.625
+            }
+          },
+          {
+            "tag": "DIV",
+            "cls": "frow-what",
+            "from": {
+              "x": 243.625,
+              "y": 534.03125,
+              "width": 102.25,
+              "height": 56.5859375,
+              "top": 534.03125,
+              "right": 345.875,
+              "bottom": 590.6171875,
+              "left": 243.625
+            },
+            "to": {
+              "x": 243.625,
+              "y": 540.5390625,
+              "width": 102.25,
+              "height": 41.640625,
+              "top": 540.5390625,
+              "right": 345.875,
+              "bottom": 582.1796875,
+              "left": 243.625
+            }
+          },
+          {
+            "tag": "SPAN",
+            "cls": "",
+            "from": {
+              "x": 183.71875,
+              "y": 219.375,
+              "width": 128.8125,
+              "height": 18,
+              "top": 219.375,
+              "right": 312.53125,
+              "bottom": 237.375,
+              "left": 183.71875
+            },
+            "to": {
+              "x": 139.9609375,
+              "y": 219.375,
+              "width": 128.8125,
+              "height": 18,
+              "top": 219.375,
+              "right": 268.7734375,
+              "bottom": 237.375,
+              "left": 139.9609375
+            }
+          }
+        ]
+      },
+      {
+        "time": 80.5,
+        "value": 0.0005367656147625519,
+        "sources": [
+          {
+            "tag": "SPAN",
+            "cls": "",
+            "from": {
+              "x": 139.9609375,
+              "y": 219.375,
+              "width": 128.8125,
+              "height": 18,
+              "top": 219.375,
+              "right": 268.7734375,
+              "bottom": 237.375,
+              "left": 139.9609375
+            },
+            "to": {
+              "x": 183.71875,
+              "y": 219.375,
+              "width": 121.3515625,
+              "height": 18,
+              "top": 219.375,
+              "right": 305.0703125,
+              "bottom": 237.375,
+              "left": 183.71875
+            }
+          },
+          {
+            "tag": "SPAN",
+            "cls": "",
+            "from": {
+              "x": 129.5,
+              "y": 219.375,
+              "width": 3.4609375,
+              "height": 18,
+              "top": 219.375,
+              "right": 132.9609375,
+              "bottom": 237.375,
+              "left": 129.5
+            },
+            "to": {
+              "x": 173.2578125,
+              "y": 219.375,
+              "width": 3.4609375,
+              "height": 18,
+              "top": 219.375,
+              "right": 176.71875,
+              "bottom": 237.375,
+              "left": 173.2578125
+            }
+          }
+        ]
+      }
+    ],
+    "kind": "loaded",
+    "path": "/ru/airport/BCN",
+    "variant": "?phase=before&run=2",
+    "supported": [
+      "element",
+      "event",
+      "first-input",
+      "interaction-contentful-paint",
+      "largest-contentful-paint",
+      "layout-shift",
+      "long-animation-frame",
+      "longtask",
+      "mark",
+      "measure",
+      "navigation",
+      "paint",
+      "resource",
+      "soft-navigation",
+      "visibility-state"
+    ],
+    "lcp": {
+      "time": 92,
+      "size": 14806,
+      "tag": "P",
+      "class": "",
+      "text": "Статус табло 61 мин назад: у 0 из 120 предстоящих вылетов задержка на 15 минут и более."
+    },
+    "cls": 0.020329875572033213,
+    "longTasks": [],
+    "firstRows": 74.10000014305115,
+    "now": 1053.8000001907349,
+    "width": 375,
+    "scrollWidth": 375,
+    "domNodes": 1409,
+    "rows": 30,
+    "nav": {
+      "ttfb": 6.5,
+      "html": 0.8000001907348633,
+      "dcl": 35.60000014305115,
+      "load": 50.700000047683716,
+      "bytes": 375360
+    },
+    "paint": [
+      {
+        "name": "first-paint",
+        "time": 92
+      },
+      {
+        "name": "first-contentful-paint",
+        "time": 92
+      }
+    ]
+  },
+  {
+    "version": 2,
+    "statusSnapshots": [
+      {
+        "time": 31.600000143051147,
+        "rows": [
+          "Выход 2По расписанию",
+          "Выход 3По расписанию",
+          "Выход 4По расписанию"
+        ]
+      },
+      {
+        "time": 80.29999995231628,
+        "rows": [
+          "Выход 2Через 25 мин",
+          "Выход 3Через 50 мин",
+          "Выход 4По расписанию"
+        ]
+      }
+    ],
+    "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36",
+    "shifts": [
+      {
+        "time": 83,
+        "value": 0.019793109957270662,
+        "sources": [
+          {
+            "tag": "DIV",
+            "cls": "frow",
+            "from": {
+              "x": 15.5,
+              "y": 618.1875,
+              "width": 344,
+              "height": 84.5859375,
+              "top": 618.1875,
+              "right": 359.5,
+              "bottom": 702.7734375,
+              "left": 15.5
+            },
+            "to": {
+              "x": 15.5,
+              "y": 614.1875,
+              "width": 344,
+              "height": 84.5859375,
+              "top": 614.1875,
+              "right": 359.5,
+              "bottom": 698.7734375,
+              "left": 15.5
+            }
+          },
+          {
+            "tag": "DIV",
+            "cls": "frow",
+            "from": {
+              "x": 15.5,
+              "y": 713.2734375,
+              "width": 344,
+              "height": 84.5859375,
+              "top": 713.2734375,
+              "right": 359.5,
+              "bottom": 797.859375,
+              "left": 15.5
+            },
+            "to": {
+              "x": 15.5,
+              "y": 709.7734375,
+              "width": 344,
+              "height": 84.5859375,
+              "top": 709.7734375,
+              "right": 359.5,
+              "bottom": 794.359375,
+              "left": 15.5
+            }
+          },
+          {
+            "tag": "DIV",
+            "cls": "frow-what",
+            "from": {
+              "x": 243.625,
+              "y": 440.375,
+              "width": 102.25,
+              "height": 56.5859375,
+              "top": 440.375,
+              "right": 345.875,
+              "bottom": 496.9609375,
+              "left": 243.625
+            },
+            "to": {
+              "x": 243.625,
+              "y": 446.8828125,
+              "width": 102.25,
+              "height": 41.640625,
+              "top": 446.8828125,
+              "right": 345.875,
+              "bottom": 488.5234375,
+              "left": 243.625
+            }
+          },
+          {
+            "tag": "DIV",
+            "cls": "frow-what",
+            "from": {
+              "x": 243.625,
+              "y": 534.03125,
+              "width": 102.25,
+              "height": 56.5859375,
+              "top": 534.03125,
+              "right": 345.875,
+              "bottom": 590.6171875,
+              "left": 243.625
+            },
+            "to": {
+              "x": 243.625,
+              "y": 540.5390625,
+              "width": 102.25,
+              "height": 41.640625,
+              "top": 540.5390625,
+              "right": 345.875,
+              "bottom": 582.1796875,
+              "left": 243.625
+            }
+          },
+          {
+            "tag": "SPAN",
+            "cls": "",
+            "from": {
+              "x": 183.71875,
+              "y": 219.375,
+              "width": 128.8125,
+              "height": 18,
+              "top": 219.375,
+              "right": 312.53125,
+              "bottom": 237.375,
+              "left": 183.71875
+            },
+            "to": {
+              "x": 139.9609375,
+              "y": 219.375,
+              "width": 128.8125,
+              "height": 18,
+              "top": 219.375,
+              "right": 268.7734375,
+              "bottom": 237.375,
+              "left": 139.9609375
+            }
+          }
+        ]
+      },
+      {
+        "time": 90.20000004768372,
+        "value": 0.0005367656147625519,
+        "sources": [
+          {
+            "tag": "SPAN",
+            "cls": "",
+            "from": {
+              "x": 139.9609375,
+              "y": 219.375,
+              "width": 128.8125,
+              "height": 18,
+              "top": 219.375,
+              "right": 268.7734375,
+              "bottom": 237.375,
+              "left": 139.9609375
+            },
+            "to": {
+              "x": 183.71875,
+              "y": 219.375,
+              "width": 121.3515625,
+              "height": 18,
+              "top": 219.375,
+              "right": 305.0703125,
+              "bottom": 237.375,
+              "left": 183.71875
+            }
+          },
+          {
+            "tag": "SPAN",
+            "cls": "",
+            "from": {
+              "x": 129.5,
+              "y": 219.375,
+              "width": 3.4609375,
+              "height": 18,
+              "top": 219.375,
+              "right": 132.9609375,
+              "bottom": 237.375,
+              "left": 129.5
+            },
+            "to": {
+              "x": 173.2578125,
+              "y": 219.375,
+              "width": 3.4609375,
+              "height": 18,
+              "top": 219.375,
+              "right": 176.71875,
+              "bottom": 237.375,
+              "left": 173.2578125
+            }
+          }
+        ]
+      }
+    ],
+    "kind": "loaded",
+    "path": "/ru/airport/BCN",
+    "variant": "?phase=before&run=3",
+    "supported": [
+      "element",
+      "event",
+      "first-input",
+      "interaction-contentful-paint",
+      "largest-contentful-paint",
+      "layout-shift",
+      "long-animation-frame",
+      "longtask",
+      "mark",
+      "measure",
+      "navigation",
+      "paint",
+      "resource",
+      "soft-navigation",
+      "visibility-state"
+    ],
+    "lcp": {
+      "time": 96,
+      "size": 14806,
+      "tag": "P",
+      "class": "",
+      "text": "Статус табло 61 мин назад: у 0 из 120 предстоящих вылетов задержка на 15 минут и более."
+    },
+    "cls": 0.020329875572033213,
+    "longTasks": [],
+    "firstRows": 77.10000014305115,
+    "now": 1059.9000000953674,
+    "width": 375,
+    "scrollWidth": 375,
+    "domNodes": 1409,
+    "rows": 30,
+    "nav": {
+      "ttfb": 7,
+      "html": 1.1000001430511475,
+      "dcl": 41.700000047683716,
+      "load": 57.40000009536743,
+      "bytes": 375360
+    },
+    "paint": [
+      {
+        "name": "first-paint",
+        "time": 96
+      },
+      {
+        "name": "first-contentful-paint",
+        "time": 96
+      }
+    ]
+  }
+]
