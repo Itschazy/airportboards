@@ -1,0 +1,2 @@
+24/24 sitemap, canonical, crawlable SSR link path and no meta noindex: PASS. Homepages omit robots meta (allowed default), other22 explicit index follow. Depth: {0: 2, 1: 17, 2: 3, 3: 2}
+Initial audit assertion incorrectly required explicit robots; corrected to noindex semantics, not a product fix.

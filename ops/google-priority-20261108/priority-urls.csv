@@ -1,0 +1,25 @@
+path,gsc_status,gsc_last_crawl,gsc_read_at,sitemap,canonical,ssr_link_depth,ssr_link_path,verified_googlebot_last,verified_googlebot_kind,verified_googlebot_status,hits_oct25_nov8
+/ru,crawled-not-indexed,"Sep 25, 2026, 3:21:07 AM",2026-11-08T11:10:39.853Z,https://airportsboard.live/sitemap-1.xml,https://airportsboard.live/ru,0,/ru,,,,0
+/en,indexed,"Nov 4, 2026, 6:46:15 PM",2026-11-08T11:24:15.377Z,https://airportsboard.live/sitemap-1.xml,https://airportsboard.live/en,0,/en,2026-11-07T05:12:26+01:00,smartphone,200,17
+/ru/flight-map,unknown,N/A,2026-11-08T11:11:26.398Z,https://airportsboard.live/sitemap-7.xml,https://airportsboard.live/ru/flight-map,1,/ru → /ru/flight-map,,,,0
+/en/flight-map,unknown,N/A,2026-11-08T11:11:49.347Z,https://airportsboard.live/sitemap-7.xml,https://airportsboard.live/en/flight-map,1,/en → /en/flight-map,,,,0
+/ru/airports,crawled-not-indexed,"Jun 25, 2026, 6:37:50 AM",2026-11-08T11:12:10.673Z,https://airportsboard.live/sitemap-6.xml,https://airportsboard.live/ru/airports,1,/ru → /ru/airports,,,,0
+/en/airports,crawled-not-indexed,"Oct 22, 2026, 8:48:25 AM",2026-11-08T11:12:25.276Z,https://airportsboard.live/sitemap-6.xml,https://airportsboard.live/en/airports,1,/en → /en/airports,2026-11-08T12:07:59+01:00,other,200,2
+/ru/airport/KZN,crawled-not-indexed,"Oct 18, 2026, 2:51:37 PM",2026-11-08T11:12:45.424Z,https://airportsboard.live/sitemap-7.xml,https://airportsboard.live/ru/airport/KZN,1,/ru → /ru/airport/KZN,,,,0
+/ru/airport/UFA,crawled-not-indexed,"Oct 18, 2026, 2:48:20 PM",2026-11-08T11:13:01.781Z,https://airportsboard.live/sitemap-12.xml,https://airportsboard.live/ru/airport/UFA,1,/ru → /ru/airport/UFA,,,,0
+/ru/airport/OVB,crawled-not-indexed,"Oct 16, 2026, 4:20:26 PM",2026-11-08T11:13:34.177Z,https://airportsboard.live/sitemap-3.xml,https://airportsboard.live/ru/airport/OVB,1,/ru → /ru/airport/OVB,,,,0
+/ru/airport/HRG,crawled-not-indexed,"Oct 18, 2026, 2:45:38 PM",2026-11-08T11:13:40.265Z,https://airportsboard.live/sitemap-1.xml,https://airportsboard.live/ru/airport/HRG,1,/ru → /ru/airport/HRG,,,,0
+/ru/airport/AYT,crawled-not-indexed,"Oct 18, 2026, 2:46:12 PM",2026-11-08T11:13:53.655Z,https://airportsboard.live/sitemap-4.xml,https://airportsboard.live/ru/airport/AYT,1,/ru → /ru/airport/AYT,,,,0
+/ru/airport/SSH,crawled-not-indexed,"Oct 18, 2026, 2:43:34 PM",2026-11-08T11:14:14.109Z,https://airportsboard.live/sitemap-0.xml,https://airportsboard.live/ru/airport/SSH,1,/ru → /ru/airport/SSH,,,,0
+/ru/airport/IST,crawled-not-indexed,"Oct 18, 2026, 2:46:00 PM",2026-11-08T11:14:37.288Z,https://airportsboard.live/sitemap-6.xml,https://airportsboard.live/ru/airport/IST,1,/ru → /ru/airport/IST,2026-11-07T17:45:13+01:00,other,200,2
+/ru/airport/LWN,unknown,N/A,2026-11-08T11:14:59.320Z,https://airportsboard.live/sitemap-11.xml,https://airportsboard.live/ru/airport/LWN,1,/ru → /ru/airport/LWN,2026-11-05T21:28:54+01:00,other,200,3
+/ru/airport/BJV,crawled-not-indexed,"Oct 18, 2026, 2:48:57 PM",2026-11-08T11:15:17.082Z,https://airportsboard.live/sitemap-12.xml,https://airportsboard.live/ru/airport/BJV,1,/ru → /ru/airport/BJV,,,,0
+/en/airport/LHR,unknown,N/A,2026-11-08T11:15:31.554Z,https://airportsboard.live/sitemap-8.xml,https://airportsboard.live/en/airport/LHR,1,/en → /en/airport/LHR,2026-10-25T13:46:29+01:00,smartphone,200,2
+/en/airport/ORK,unknown,N/A,2026-11-08T11:15:43.355Z,https://airportsboard.live/sitemap-12.xml,https://airportsboard.live/en/airport/ORK,3,/en → /en/airports → /en/airports/ireland → /en/airport/ORK,,,,0
+/en/airport/HKT,unknown,N/A,2026-11-08T11:15:51.946Z,https://airportsboard.live/sitemap-13.xml,https://airportsboard.live/en/airport/HKT,3,/en → /en/airports → /en/airports/thailand → /en/airport/HKT,,,,0
+/en/airport/TAS,unknown,N/A,2026-11-08T11:16:10.408Z,https://airportsboard.live/sitemap-14.xml,https://airportsboard.live/en/airport/TAS,2,/en → /en/airports/uzbekistan → /en/airport/TAS,,,,0
+/en/airport/BCN,unknown,N/A,2026-11-08T11:16:34.186Z,https://airportsboard.live/sitemap-1.xml,https://airportsboard.live/en/airport/BCN,2,/en → /en/airports/spain → /en/airport/BCN,,,,0
+/en/airport/JFK,unknown,N/A,2026-11-08T11:16:43.618Z,https://airportsboard.live/sitemap-7.xml,https://airportsboard.live/en/airport/JFK,1,/en → /en/airport/JFK,,,,0
+/en/airport/HND,crawled-not-indexed,"Jul 8, 2026, 4:11:49 PM",2026-11-08T11:16:57.655Z,https://airportsboard.live/sitemap-4.xml,https://airportsboard.live/en/airport/HND,1,/en → /en/airport/HND,,,,0
+/en/airport/SIN,unknown,N/A,2026-11-08T11:17:06.465Z,https://airportsboard.live/sitemap-12.xml,https://airportsboard.live/en/airport/SIN,1,/en → /en/airport/SIN,,,,0
+/en/airport/LHR/arrivals,unknown,N/A,2026-11-08T11:17:11.967Z,https://airportsboard.live/sitemap-15.xml,https://airportsboard.live/en/airport/LHR/arrivals,2,/en → /en/airport/LHR → /en/airport/LHR/arrivals,,,,0

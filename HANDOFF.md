@@ -1,3 +1,53 @@
+## Codex, 08.11.2026 — 24 приоритетных URL Google: проверка завершена
+
+Отдельное поручение «сделай всё из следующего приоритета». Не heartbeat;
+airportsboard-2-8 остаётся 4/8. Рабочая копия
+/Users/whereiszhenya/projects/runwayboard-flight-map-prototype-20261028,
+ветка codex/flight-map-prototype-20261028. Начальный docsHEAD7c44bbe2;
+свежие origin/main и фактический server HEAD6e5937f2871249075430b4266c228a0c672852cc.
+
+Свежий авторизованный GSC: 24 URL — 1 indexed (/en),12 crawled-not-indexed,
+11 unknown. Полные адреса/даты в ops/google-priority-20261108/priority-urls.csv.
+/en lastcrawl04.11; остальные известные crawl25.06–22.10, преимущественно18.10.
+Временная зона GSC не объявлена. Общий Pages437/24223 по-прежнему23.10,
+не свежий индекс8ноября. Manual actions и Security issues: No issues detected.
+Текущие21 sitemap-записи Success, index прочитан08.11;8шардов прочитаны07–08.11.
+20старых ошибочных отправок /sitemap/N.xml относятся10.10; их не переотправляли
+и не удаляли. Старый /sitemap/0.xml сегодня200. Это не новая поломка.
+
+Production только audit-bot: все24в актуальном sitemap21320URL, selfcanonical,
+нетmeta noindex, обычныеSSRanchors отглавной максимум3перехода. Длядоказательства
+дополнительно12каталоговстран; script/RSCне засчитывались какссылки.
+Первоначальная assertion требовалаexplicitrobots наhome, исправлена сама
+проверка: отсутствиеmeta разрешаетindex; продуктовыйбаг невыдумывался.
+
+14nginxлогов25.10–08.11:11954UAclaimsGooglebot,11365подтвержденыофициальными
+CIDRот06.11,589исключены. RawIP/посетители/querystrings неэкспортировались.
+Полные1–7ноября Europe/Amsterdam:2042requests,2014×200,24redirect,4×404,
+zero5xx/429. Из1352HTMLrequests223втекущемsitemap (16.5%); некаузально.
+4старыхJS404от05.11 ужеадресованыранееопубликованным68d59e22; серверretains36assets.
+Не повторялификс и неутверждаем восстановлениестарыхудалённыхфайлов.
+
+GSCunknownLHRнесмотрянаverifiedsmartphone200от25.10; LWNunknownнесмотряна
+обход27.10/05.11; ISTGSC18.10противсервер07.11. ПоэтомуunknownНЕравноnevercrawled.
+19URLнеимеютverifiedhit вretainedокне — неутверждениеобо всейистории.
+
+Новыйподтверждённыйпродуктовыйблокернеобнаружен. Толькооперационныеартефакты/
+передача; продукт, дизайн,DNS,12локалей,аккаунты,реклама,данные неизменны.
+Не запускалисьновыйbuild/tsc/mobileUI/CI/deploy/RequestIndexing/TestLive;
+старые проверки за новые не выдаются. Чужойoutputs/ сохранён, свояGSCвкладказакрыта.
+
+Следующийконтроль: фиксированнаявыборка после новыхобходов,сверкаGSC/логов,
+приоритетLHR/LWN/IST и первыйобходкарты. Еслипослеобходаактуальногоконтента
+crawled-not-indexedсохранится — адресныйаудитполезности/спроса; не массовыйmetadata
+rewrite/noindex/новыепосадочные. Индексациянеобещана.
+
+Полныйотчёт и доказательства:
+/Users/whereiszhenya/Documents/Codex/2026-10-18/airportsboard-live-12-next-js-15/outputs/google-priority-20261108/report.html
+Репозиторныйпротокол:ops/google-priority-20261108/report.md.
+
+---
+
 ## Codex, 08.11.2026 — серия 2, запуск 4/8: ранний поиск табло
 
 Trigger 2026-11-08T10:39:19.009Z, automation airportsboard-2-8.

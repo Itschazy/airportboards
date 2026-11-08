@@ -1,0 +1,376 @@
+{
+  "window": "2026-11-01..07, full server-local days Europe/Amsterdam",
+  "verifiedRequests": 2042,
+  "status": {
+    "200": 2014,
+    "301": 9,
+    "308": 6,
+    "307": 9,
+    "404": 4
+  },
+  "classes": {
+    "route": 496,
+    "airport": 667,
+    "robots": 267,
+    "asset": 373,
+    "airport-sub": 131,
+    "sitemap": 13,
+    "other-resource": 37,
+    "other-page": 58
+  },
+  "htmlRequests": 1352,
+  "htmlInCurrentSitemap": 223,
+  "targetRows": [
+    {
+      "path": "/ru",
+      "hitsOct25Nov8": 0,
+      "lastVerified": null,
+      "hitsNov1Nov7": 0
+    },
+    {
+      "path": "/en",
+      "hitsOct25Nov8": 17,
+      "lastVerified": {
+        "at": "2026-11-07T05:12:26+01:00",
+        "path": "/en",
+        "status": 200,
+        "kind": "smartphone"
+      },
+      "hitsNov1Nov7": 12
+    },
+    {
+      "path": "/ru/flight-map",
+      "hitsOct25Nov8": 0,
+      "lastVerified": null,
+      "hitsNov1Nov7": 0
+    },
+    {
+      "path": "/en/flight-map",
+      "hitsOct25Nov8": 0,
+      "lastVerified": null,
+      "hitsNov1Nov7": 0
+    },
+    {
+      "path": "/ru/airports",
+      "hitsOct25Nov8": 0,
+      "lastVerified": null,
+      "hitsNov1Nov7": 0
+    },
+    {
+      "path": "/en/airports",
+      "hitsOct25Nov8": 2,
+      "lastVerified": {
+        "at": "2026-11-08T12:07:59+01:00",
+        "path": "/en/airports",
+        "status": 200,
+        "kind": "other"
+      },
+      "hitsNov1Nov7": 0
+    },
+    {
+      "path": "/ru/airport/KZN",
+      "hitsOct25Nov8": 0,
+      "lastVerified": null,
+      "hitsNov1Nov7": 0
+    },
+    {
+      "path": "/ru/airport/UFA",
+      "hitsOct25Nov8": 0,
+      "lastVerified": null,
+      "hitsNov1Nov7": 0
+    },
+    {
+      "path": "/ru/airport/OVB",
+      "hitsOct25Nov8": 0,
+      "lastVerified": null,
+      "hitsNov1Nov7": 0
+    },
+    {
+      "path": "/ru/airport/HRG",
+      "hitsOct25Nov8": 0,
+      "lastVerified": null,
+      "hitsNov1Nov7": 0
+    },
+    {
+      "path": "/ru/airport/AYT",
+      "hitsOct25Nov8": 0,
+      "lastVerified": null,
+      "hitsNov1Nov7": 0
+    },
+    {
+      "path": "/ru/airport/SSH",
+      "hitsOct25Nov8": 0,
+      "lastVerified": null,
+      "hitsNov1Nov7": 0
+    },
+    {
+      "path": "/ru/airport/IST",
+      "hitsOct25Nov8": 2,
+      "lastVerified": {
+        "at": "2026-11-07T17:45:13+01:00",
+        "path": "/ru/airport/IST",
+        "status": 200,
+        "kind": "other"
+      },
+      "hitsNov1Nov7": 2
+    },
+    {
+      "path": "/ru/airport/LWN",
+      "hitsOct25Nov8": 3,
+      "lastVerified": {
+        "at": "2026-11-05T21:28:54+01:00",
+        "path": "/ru/airport/LWN",
+        "status": 200,
+        "kind": "other"
+      },
+      "hitsNov1Nov7": 1
+    },
+    {
+      "path": "/ru/airport/BJV",
+      "hitsOct25Nov8": 0,
+      "lastVerified": null,
+      "hitsNov1Nov7": 0
+    },
+    {
+      "path": "/en/airport/LHR",
+      "hitsOct25Nov8": 2,
+      "lastVerified": {
+        "at": "2026-10-25T13:46:29+01:00",
+        "path": "/en/airport/LHR",
+        "status": 200,
+        "kind": "smartphone"
+      },
+      "hitsNov1Nov7": 0
+    },
+    {
+      "path": "/en/airport/ORK",
+      "hitsOct25Nov8": 0,
+      "lastVerified": null,
+      "hitsNov1Nov7": 0
+    },
+    {
+      "path": "/en/airport/HKT",
+      "hitsOct25Nov8": 0,
+      "lastVerified": null,
+      "hitsNov1Nov7": 0
+    },
+    {
+      "path": "/en/airport/TAS",
+      "hitsOct25Nov8": 0,
+      "lastVerified": null,
+      "hitsNov1Nov7": 0
+    },
+    {
+      "path": "/en/airport/BCN",
+      "hitsOct25Nov8": 0,
+      "lastVerified": null,
+      "hitsNov1Nov7": 0
+    },
+    {
+      "path": "/en/airport/JFK",
+      "hitsOct25Nov8": 0,
+      "lastVerified": null,
+      "hitsNov1Nov7": 0
+    },
+    {
+      "path": "/en/airport/HND",
+      "hitsOct25Nov8": 0,
+      "lastVerified": null,
+      "hitsNov1Nov7": 0
+    },
+    {
+      "path": "/en/airport/SIN",
+      "hitsOct25Nov8": 0,
+      "lastVerified": null,
+      "hitsNov1Nov7": 0
+    },
+    {
+      "path": "/en/airport/LHR/arrivals",
+      "hitsOct25Nov8": 0,
+      "lastVerified": null,
+      "hitsNov1Nov7": 0
+    }
+  ],
+  "sitemaps": [
+    {
+      "at": "2026-10-25T12:40:47+01:00",
+      "path": "/sitemap-14.xml",
+      "status": 200,
+      "kind": "other"
+    },
+    {
+      "at": "2026-10-25T13:47:38+01:00",
+      "path": "/sitemap-3.xml",
+      "status": 200,
+      "kind": "other"
+    },
+    {
+      "at": "2026-10-25T16:31:01+01:00",
+      "path": "/sitemap-16.xml",
+      "status": 200,
+      "kind": "other"
+    },
+    {
+      "at": "2026-10-27T10:49:15+01:00",
+      "path": "/sitemap-16.xml",
+      "status": 200,
+      "kind": "other"
+    },
+    {
+      "at": "2026-10-27T11:47:50+01:00",
+      "path": "/sitemap-14.xml",
+      "status": 200,
+      "kind": "other"
+    },
+    {
+      "at": "2026-10-27T11:59:28+01:00",
+      "path": "/sitemap-3.xml",
+      "status": 200,
+      "kind": "other"
+    },
+    {
+      "at": "2026-10-29T11:28:18+01:00",
+      "path": "/sitemap-16.xml",
+      "status": 200,
+      "kind": "other"
+    },
+    {
+      "at": "2026-10-29T12:44:06+01:00",
+      "path": "/sitemap-14.xml",
+      "status": 200,
+      "kind": "other"
+    },
+    {
+      "at": "2026-10-29T13:01:33+01:00",
+      "path": "/sitemap-3.xml",
+      "status": 200,
+      "kind": "other"
+    },
+    {
+      "at": "2026-10-30T07:43:49+01:00",
+      "path": "/sitemap.xml",
+      "status": 301,
+      "kind": "other"
+    },
+    {
+      "at": "2026-10-30T07:43:51+01:00",
+      "path": "/sitemap.xml",
+      "status": 200,
+      "kind": "other"
+    },
+    {
+      "at": "2026-10-31T07:32:38+01:00",
+      "path": "/sitemap-14.xml",
+      "status": 200,
+      "kind": "other"
+    },
+    {
+      "at": "2026-10-31T12:03:37+01:00",
+      "path": "/sitemap-16.xml",
+      "status": 200,
+      "kind": "other"
+    },
+    {
+      "at": "2026-10-31T19:09:12+01:00",
+      "path": "/sitemap-3.xml",
+      "status": 200,
+      "kind": "other"
+    },
+    {
+      "at": "2026-11-02T09:57:19+01:00",
+      "path": "/sitemap-14.xml",
+      "status": 200,
+      "kind": "other"
+    },
+    {
+      "at": "2026-11-02T12:58:28+01:00",
+      "path": "/sitemap-16.xml",
+      "status": 200,
+      "kind": "other"
+    },
+    {
+      "at": "2026-11-02T20:39:54+01:00",
+      "path": "/sitemap-3.xml",
+      "status": 200,
+      "kind": "other"
+    },
+    {
+      "at": "2026-11-04T16:28:18+01:00",
+      "path": "/sitemap-14.xml",
+      "status": 200,
+      "kind": "other"
+    },
+    {
+      "at": "2026-11-04T17:54:16+01:00",
+      "path": "/sitemap-16.xml",
+      "status": 200,
+      "kind": "other"
+    },
+    {
+      "at": "2026-11-05T00:43:06+01:00",
+      "path": "/sitemap-3.xml",
+      "status": 200,
+      "kind": "other"
+    },
+    {
+      "at": "2026-11-06T11:45:05+01:00",
+      "path": "/sitemap-16.xml",
+      "status": 200,
+      "kind": "other"
+    },
+    {
+      "at": "2026-11-06T20:29:55+01:00",
+      "path": "/sitemap-3.xml",
+      "status": 200,
+      "kind": "other"
+    },
+    {
+      "at": "2026-11-06T22:05:33+01:00",
+      "path": "/sitemap-14.xml",
+      "status": 200,
+      "kind": "other"
+    },
+    {
+      "at": "2026-11-07T02:28:55+01:00",
+      "path": "/sitemap-10.xml",
+      "status": 200,
+      "kind": "other"
+    },
+    {
+      "at": "2026-11-07T19:18:50+01:00",
+      "path": "/sitemap-9.xml",
+      "status": 200,
+      "kind": "other"
+    },
+    {
+      "at": "2026-11-07T21:52:49+01:00",
+      "path": "/sitemap.xml",
+      "status": 200,
+      "kind": "other"
+    },
+    {
+      "at": "2026-11-07T23:30:30+01:00",
+      "path": "/sitemap-18.xml",
+      "status": 200,
+      "kind": "other"
+    },
+    {
+      "at": "2026-11-08T00:02:18+01:00",
+      "path": "/sitemap-2.xml",
+      "status": 200,
+      "kind": "other"
+    },
+    {
+      "at": "2026-11-08T06:56:15+01:00",
+      "path": "/sitemap-13.xml",
+      "status": 200,
+      "kind": "other"
+    },
+    {
+      "at": "2026-11-08T08:25:04+01:00",
+      "path": "/sitemap-16.xml",
+      "status": 200,
+      "kind": "other"
+    }
+  ]
+}
