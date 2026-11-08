@@ -1,3 +1,51 @@
+## Codex, 08.11.2026 — приоритет Google: исправление контента выкачено и проверено
+
+Последнее прямое поручение владельца — упор на индексацию Google и актуальные рекомендации.
+Это отдельная задача: счётчик airportsboard-2-8 остаётся 5/8.
+Рабочая копия: /Users/whereiszhenya/projects/runwayboard-flight-map-prototype-20261028.
+Ветка: codex/flight-map-prototype-20261028. Продуктовый origin/main и сервер:
+1fd3becd21a59b26ebec87102071f0b36df0e9ac, health release 1fd3becd21a5.
+Push 08.11 в 13:07:47 Europe/Amsterdam, вне прогрева. CI 42478790477: success,
+завершён в 12:10:19 UTC. Отдельный docs-коммит не выкатывается.
+
+Найден обход политики контента: extended-reader показывал непроверенную генерацию
+transport/terminals/tips на 11 иностранных языках. Применена общая граница
+GENERATED_PROSE_LOCALES, убран английский fallback. Русский сохранён по действующей
+политике; проверенные справочные и таблицы не менялись. В корпусе 244 extended-файла,
+124 без новой справочной — это потенциальный охват, не число индексируемых URL.
+NTE из старого списка Soft 404 воспроизводит дефект. Причинная связь с отказом Google
+не установлена. Изучены актуальные рекомендации, включая октябрьское уточнение
+точности AI-контента, обычные требования AI Overviews, URL, UGC и sitemap.
+Массовые посадочные, новые noindex и искусственный lastmod не применялись.
+
+Свежие проверки: 2 928 сочетаний аэропорта и языка, 60 переводов таблиц, fixture build,
+TypeScript до и после очистки, 395 ключей × 12 языков, scripts/client messages/ICU/
+guide freshness, SSR 36/36, generated prose 60/60. Desktop Chromium на ширине 375 px:
+NTE EN/RU/JA, AGP EN/AR, LHR EN; раскрытия и таблицы без горизонтального переполнения.
+Это не физический телефон и не Safari. Production audit-bot: index 20/20,
+sitemap-hreflang, live-refresh (3/6 моложе 10 минут), adsense — PASS.
+Первые en/NTE, fr/NTE и en/AGP отдали старый кэш; полный повтор 60/60 прошёл.
+Серверы 3196/3197 остановлены, build перенесён в /tmp/ab-google-focus/build-output,
+generated TS восстановлен. Существующий untracked outputs/ сохранён.
+Дизайн, DNS, реальные данные и аккаунты не менялись.
+
+GSC прочитан 8 ноября, но сводка Pages всё ещё от 23 октября: 437 indexed / 24 223 not,
+6 566 crawled-not-indexed, 17 255 discovered-not-indexed, 24 Soft 404. Все 24 примера
+прочитаны (обходы июня/июля). Свежие HTTP-проверки 60 URL: 59 × 200 и ожидаемый 308.
+В 24 приоритетных URL новых технических блокеров не найдено. Sitemap lastmod — PASS.
+/en/flight-map всё ещё unknown. Request indexing запущен один раз, но остался на
+Testing; подтверждения приёма нет. Cancel недоступен (elementHasNoFrame), AX и снимок
+расходятся. Владельцу задан вопрос о выводе окна Search Console на передний план.
+Не повторять заявку без проверки исхода. /en/airport/NTE на переобход пока не отправлен.
+
+Далее: при доступном окне закончить ручной запрос NTE и уточнить исход запроса карты;
+затем следить за новым обходом, статусом и показами фиксированных 24 URL.
+Отчёт: ops/google-indexing-focus-20261108/report.md.
+Артефакты: /Users/whereiszhenya/Documents/Codex/2026-10-18/airportsboard-live-12-next-js-15/outputs/google-indexing-focus-20261108/.
+Предыдущий Google-priority аудит не выдавать за повторно выполненный.
+
+---
+
 ## Codex, 08.11.2026 — серия 2, запуск 5/8: импорт маршрутов, выкат завершён
 
 Trigger 2026-11-08T11:27:19.136Z, automation airportsboard-2-8. Выполнено 5/8,
