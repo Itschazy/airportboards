@@ -1,3 +1,69 @@
+## Codex, 09.11.2026 — свежая Search Console: индекс200, дата падения24.10
+
+09.11.2026 — свежий read-only аудит авторизованной Google Search Console.
+Владелец открыл окно; native Chrome AX после этого работал. Подключение extension
+create/getTab падало timeoutMs; это не запрет сайта. Скачаны штатные CSV ZIP.
+Ресурс https://airportsboard.live/, All known pages, Web (text-based).
+
+Индекс: отчёт обновлён06.11,200 indexed /25813 not indexed. Экспорт Chart.csv
+уточняет:437 до23.10 включительно,200 с24.10 по06.11. Изменение −237/−54.2%.
+Это дата отражения изменения в отчёте, не точный момент исключения каждого URL.
+Нельзя приписывать падение последним правкам08–09.11; причина падения не установлена.
+Crawled-not-indexed7692 (раньше6566), discovered-not-indexed17643 (17255),
+noindex445, soft40421 (24), redirect5,4044, propercanonical3, differentcanonical0.
+До/после относятся к отчётным датам23.10 и06.11, а не свежему полному индексу09.11.
+Скачан экспорт200 indexed URL:197 имеют указанную Last crawled виюле,
+1 сентябрь,1 октябрь,1 ноябрь. Это даты GSC, не доказательство отсутствия более
+поздних визитов робота. Из фиксированной priority-выборки24 в этом экспорте
+совпадает только /en. Все24 URL Inspection повторно не проверялись.
+
+Performance:11.10–07.11 против13.09–10.10:9 clicks vs3,22 impressions vs12,
+CTR40.9%vs25%,position1vs1.3. Все9 нынешних кликов на /en (18pageimpressions).
+Таблица запросов пуста; нельзя объявлять трафик брендовым/ботовым или нулевым
+только по этому факту. На таком объёме позиции/CTR не доказывают SEO-успех.
+8кликов mobile,1desktop. Показов на уровне страниц больше общего итога из-за
+page/property aggregation, не суммировать их для вывода обобщем росте.
+Трёхмесячный08.08–07.11 срез:13clicks/41impressions,CTR31.7%,position1.5.
+Generative AI features Beta за теже28дней:9impressions vs1; показы, не клики.
+Сумма page rows12 не равна property9; не складывать с обычными показами.
+
+URL Inspection выполнен заново без Request indexing/Test live:
+/en/flight-map и /en/airport/NTE остаются Crawled-currently-not-indexed.
+Lastcrawl08.11 5:07:44PM /5:31:43PM в неуказанной интерфейсом зоне;
+Googlebotsmartphone,fetchSuccessful,crawl/indexAllowed,canonicalInspectedURL.
+Карта:No referring sitemaps detected; NTE:Temporary processing error вSitemaps.
+Эти поля не доказательство отсутствующего sitemap или неисправного XML.
+Нант всё ещё в старом Soft404 групповом CSV с датой17.07, но свежий Inspection
+показывает новый обход и другой статус. Приём заявки08.11 не повторяли.
+
+Manual actions /Security issues:оба No issues detected сегодня.
+Crawl stats обновлены07.11:199526requests90дней,808ms среднее;99%200.
+77.27% AdsBot,15.96%Image,3.90%Desktop,2.00%Smartphone;200K нельзяназывать
+обходом поисковым смартфонным роботом. Smartphone3.99K/552ms за90дней;
+по CSV783запроса01–07.11 против746за25–31.10 (+5.0%). Не LCP пользователя.
+Hoststatus:раньше проблемы robots.txt,сейчасacceptable;DNS/connectivityacceptable.
+Settings robots.txt Valid. Первая страница sitemap просмотрена:все10Success,
+включая свежие чтения18/16шардов08.11; полный41список сегодня не повторяли.
+
+Вывод: индекс ухудшился; устойчивого поиска Google на полезные табло ещё нет.
+Новый обход и небольшие AI-показы положительны, но ростаиндекса не подтверждают.
+Приоритет: установить, какие важные URL выпали24.10, сопоставить доступные прежние
+списки и текущее Inspection; затем адресный разбор содержательности/уникальности
+и реального SSR на наиболее востребованных URL из7692. Отдельно проверить
+445noindex/21soft404 по текущему состоянию, не снимать ограничениямассово.
+Следить за контрольной выборкой24 иNTE, исправлениями08–09.11 после новогообхода;
+не повторять заявки и не генерировать тексты радиобъёма. Новый crawl≠index≠traffic.
+
+В этом поручении код/дизайн/DNS/аккаунты/реклама не менялись;productionнеоткрывался,
+Airlabs/paidAPIневызывались. Нового выката/CI/сборки/тестовпродукта нет.
+Рабочая копия /Users/whereiszhenya/projects/runwayboard-flight-map-prototype-20261028,
+ветка codex/flight-map-prototype-20261028; начальный docsHEAD33c68e76.
+Последний ранее проверенный product/main/server124e5f0a,сегоднясервернеперепроверяли.
+Артефакты outputs/gsc-review-20261109:общийindexCSV,200indexed,21soft404,
+crawlобщий/Smartphone,performance,GenerativeAI;отчётreport.html.
+
+---
+
 ## Codex, 09.11.2026 — исправления Bing опубликованы и проверены
 
 09.11.2026 — аудит Bing Recommendations и публикация подтверждённых исправлений.
