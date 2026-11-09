@@ -71,7 +71,7 @@
     "arrivals_title": "{airport}{showCity, select, yes {, {city}} other {}} ({iata}) Live Arrivals",
     "departures_title": "{airport}{showCity, select, yes {, {city}} other {}} ({iata}) Live Departures",
     "arrivals_description": "Arrivals at {airport} ({iata}) today: origin airports, arrival times, flight status, delays and cancellations.",
-    "departures_description": "Live departures board at {airport} ({iata}) today: real-time departures and arrivals, flight status, times, delays and gates.",
+    "departures_description": "Departures from {airport} ({iata}) today: flight numbers, destinations, departure times, flight status, delays and cancellations.",
     "routes_title": "{airport} ({iata}) — Airlines and Destinations",
     "routes_description": "{airport} ({iata}) in {city}, {country}: which airlines operate here and where you can fly nonstop, plus the nearest airports with scheduled flights.",
     "info_title": "{airport} ({iata}) — airport information",
@@ -80,7 +80,7 @@
     "arrivals_title_stale": "{airport}{showCity, select, yes {, {city}} other {}} ({iata}) Arrivals Board",
     "departures_title_stale": "{airport}{showCity, select, yes {, {city}} other {}} ({iata}) Departures Board",
     "arrivals_description_stale": "Arrivals board for {airport} ({iata}): origin airports, arrival times, flight status, delays and cancellations.",
-    "departures_description_stale": "Departures board at {airport} ({iata}): departures and arrivals, flight status, times, delays and gates."
+    "departures_description_stale": "Departures from {airport} ({iata}): flight numbers, destinations, departure times, flight status, delays and cancellations."
   },
   "airport_info": {
     "location": "Location",

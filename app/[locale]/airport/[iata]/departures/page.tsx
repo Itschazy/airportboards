@@ -1,3 +1,4 @@
+import { compactAirportTitle } from '@/lib/airport-title';
 import { LocaleLinks } from '@/components/LocaleLinks';
 import type { Locale } from '@/lib/i18n';
 import type { Metadata } from 'next';
@@ -98,7 +99,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     ? `${name} (${airport.iata}) — ${tHome('ns_title')}`
     : infoOnly
       ? t('info_title', { airport: name, iata: airport.iata })
-      : t(fresh ? 'departures_title' : 'departures_title_stale', { airport: name, iata: airport.iata, city: cityName, showCity });
+      : compactAirportTitle(t(fresh ? 'departures_title' : 'departures_title_stale', { airport: name, iata: airport.iata, city: cityName, showCity }), locale);
   const description = boardless
     ? tHome('ns_meta', { airport: name, iata: airport.iata, city: cityName, country })
     : infoOnly

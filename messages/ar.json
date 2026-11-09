@@ -71,7 +71,7 @@
     "arrivals_title": "وصول الرحلات – مطار {airport}{showCity, select, yes {، {city}} other {}} ({iata}) مباشر",
     "departures_title": "مغادرة الرحلات – مطار {airport}{showCity, select, yes {، {city}} other {}} ({iata}) مباشر",
     "arrivals_description": "الرحلات الواصلة إلى {airport} ({iata}) اليوم: مطارات المغادرة، مواعيد الوصول، حالة الرحلات، التأخير والإلغاء.",
-    "departures_description": "مغادرة رحلات {airport} ({iata}) اليوم مباشرة: لوحة المغادرة مع المواعيد، التأخير والبوابات، إضافة إلى معلومات الوصول.",
+    "departures_description": "الرحلات المغادرة اليوم: {airport} ({iata}). أرقام الرحلات ومطارات الوجهة ومواعيد المغادرة وحالة الرحلات والتأخيرات والإلغاءات.",
     "routes_title": "{airport} ({iata}) — شركات الطيران والوجهات",
     "routes_description": "{airport} ({iata}) في {city}، {country}: ما هي شركات الطيران التي تعمل هنا والوجهات التي يمكنك السفر إليها دون توقف، بالإضافة إلى أقرب المطارات ذات الرحلات المجدولة.",
     "info_title": "{airport} ({iata}) — معلومات المطار",
@@ -80,7 +80,7 @@
     "arrivals_title_stale": "وصول الرحلات – مطار {airport}{showCity, select, yes {، {city}} other {}} ({iata})",
     "departures_title_stale": "مغادرة الرحلات – مطار {airport}{showCity, select, yes {، {city}} other {}} ({iata})",
     "arrivals_description_stale": "لوحة الوصول إلى {airport} ({iata}): مطارات المغادرة، مواعيد الوصول، حالة الرحلات، التأخير والإلغاء.",
-    "departures_description_stale": "مغادرة رحلات {airport} ({iata}): لوحة المغادرة مع المواعيد، التأخير والبوابات، ومعلومات الوصول."
+    "departures_description_stale": "الرحلات المغادرة: {airport} ({iata}). أرقام الرحلات ومطارات الوجهة ومواعيد المغادرة وحالة الرحلات والتأخيرات والإلغاءات."
   },
   "airport_info": {
     "location": "الموقع",

@@ -18,3 +18,17 @@ assert.ok(!f(stale,'en').includes('Live'));assert.ok(f(stale,'en').includes('(BL
 const distinct='A very long unique personal airport name that must never be truncated (AAA)';assert.equal(f(distinct,'en'),distinct);
 assert.equal(f('Онлайн-табло аэропорта Шереметьево, Москва (SVO) — прилеты и вылеты сегодня','ru'),'Табло Шереметьево, Москва (SVO) — прилеты и вылеты сегодня');
 console.log('PASS: airport title identity, locale-scoped, <=70 examples, short/stale preservation');
+
+// Страница вылетов раньше обходила компактный SEO-title; имя/код/направление
+// должны сохраниться, включая свежий и устаревший вариант HRE.
+for (const live of [' Live', '']) {
+  const value=f(`Robert Gabriel Mugabe International Airport, Harare (HRE)${live} Departures`,'en');
+  assert.ok(value.length<=70, value);
+  assert.ok(value.includes('Robert Gabriel Mugabe'));
+  assert.ok(value.includes('Harare (HRE)'));
+  assert.ok(value.endsWith('Departures'));
+  if (!live) assert.ok(!value.includes('Live'));
+}
+const longDeparture='Guarulhos - Governador André Franco Montoro International Airport, Sao Paulo (GRU) Live Departures';
+assert.equal(f(longDeparture,'en'),'Guarulhos - Governador André Franco Montoro, Sao Paulo (GRU) Departures');
+console.log('PASS: departures retain identity and direction; long proper names are not truncated');

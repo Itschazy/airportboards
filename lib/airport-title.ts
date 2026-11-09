@@ -15,6 +15,6 @@ export function compactAirportTitle(title: string, locale: string): string {
   // Нужно для BWI/SNA с несколькими частями имени; не отрезаем маршала/город.
   const named = shorter.length <= 70 ? shorter : shorter.replace(/ Airport\b/g, '');
   // При длинном имени BWI/ECP последним снимаем лишь обещание Live;
-  // направления Arrivals & Departures сохраняем, устаревшее Live не добавляем.
-  return named.length <= 70 ? named : named.replace(/ Live (?=Arrivals)/, ' ');
+  // направления Arrivals/Departures сохраняем, устаревшее Live не добавляем.
+  return named.length <= 70 ? named : named.replace(/ Live (?=Arrivals|Departures)/, ' ');
 }

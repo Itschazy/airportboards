@@ -71,7 +71,7 @@
     "arrivals_title": "{airport}{showCity, select, yes {, {city}} other {}} ({iata}) Varış Uçuşları | Canlı",
     "departures_title": "{airport}{showCity, select, yes {, {city}} other {}} ({iata}) Kalkış Uçuşları | Canlı",
     "arrivals_description": "Bugün {airport} ({iata}) varış uçuşları: kalkış havalimanları, varış saatleri, uçuş durumları, gecikmeler ve iptaller.",
-    "departures_description": "Bugün {airport} ({iata}) kalkış uçuşları tablosu: giden ve gelen uçuşlar, saatler ve durumlar canlı olarak gerçek zamanlı güncellenir.",
+    "departures_description": "Bugünkü kalkış uçuşları: {airport} ({iata}). Uçuş numaraları, varış havalimanları, kalkış saatleri, uçuş durumları, gecikmeler ve iptaller.",
     "routes_title": "{airport} ({iata}) — Havayolları ve Destinasyonlar",
     "routes_description": "{city}, {country} konumundaki {airport} ({iata}): burada hangi hava yollarının hizmet verdiği, aktarmasız uçabileceğiniz yerler ve tarifeli uçuşları olan en yakın havalimanları.",
     "info_title": "{airport} ({iata}) — havalimanı bilgileri",
@@ -80,7 +80,7 @@
     "arrivals_title_stale": "{airport}{showCity, select, yes {, {city}} other {}} ({iata}) Varış Uçuşları | Uçuş Tablosu",
     "departures_title_stale": "{airport}{showCity, select, yes {, {city}} other {}} ({iata}) Kalkış Uçuşları | Uçuş Tablosu",
     "arrivals_description_stale": "{airport} ({iata}) varış tablosu: kalkış havalimanları, varış saatleri, uçuş durumları, gecikmeler ve iptaller.",
-    "departures_description_stale": "{airport} ({iata}) kalkış uçuşları tablosu: giden ve gelen uçuşlar, saatler ve durumlar."
+    "departures_description_stale": "{airport} ({iata}) kalkış uçuşları: uçuş numaraları, varış havalimanları, kalkış saatleri, uçuş durumları, gecikmeler ve iptaller."
   },
   "airport_info": {
     "location": "Konum",

@@ -71,7 +71,7 @@
     "arrivals_title": "Arrivées {airport}{showCity, select, yes {, {city}} other {}} ({iata}) – vols en direct",
     "departures_title": "Départs {airport}{showCity, select, yes {, {city}} other {}} ({iata}) – vols en direct",
     "arrivals_description": "Arrivées à {airport} ({iata}) aujourd’hui : aéroports de provenance, horaires d’arrivée, statut des vols, retards et annulations.",
-    "departures_description": "Départs {airport} aujourd’hui en direct : tableau des vols, horaires, retards et arrivées de l’aéroport ({iata}).",
+    "departures_description": "Départs du jour : {airport} ({iata}). Numéros de vol, aéroports de destination, horaires de départ, statut des vols, retards et annulations.",
     "routes_title": "{airport} ({iata}) — Compagnies aériennes et destinations",
     "routes_description": "{airport} ({iata}) à {city}, {country} : quelles compagnies aériennes y opèrent, où vous pouvez voler sans escale, ainsi que les aéroports les plus proches avec des vols réguliers.",
     "info_title": "{airport} ({iata}) — informations sur l’aéroport",
@@ -80,7 +80,7 @@
     "arrivals_title_stale": "Arrivées {airport}{showCity, select, yes {, {city}} other {}} ({iata}) – tableau des vols",
     "departures_title_stale": "Départs {airport}{showCity, select, yes {, {city}} other {}} ({iata}) – tableau des vols",
     "arrivals_description_stale": "Tableau des arrivées à {airport} ({iata}) : aéroports de provenance, horaires d’arrivée, statut des vols, retards et annulations.",
-    "departures_description_stale": "Départs {airport} : tableau des vols, horaires, retards et arrivées de l’aéroport ({iata})."
+    "departures_description_stale": "Départs : {airport} ({iata}). Numéros de vol, aéroports de destination, horaires de départ, statut des vols, retards et annulations."
   },
   "airport_info": {
     "location": "Localisation",
