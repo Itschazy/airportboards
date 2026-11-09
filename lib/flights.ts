@@ -252,7 +252,17 @@ export function mapFlight(f: AirlabsFlight, direction: 'departures' | 'arrivals'
   // Вне 20 мин — 20 ч считаем мусором поставщика и не показываем вовсе.
   const span = f.dep_time_ts && f.arr_time_ts ? Math.round((f.arr_time_ts - f.dep_time_ts) / 60) : 0;
   const durationMin = span >= 20 && span <= 1200 ? span : undefined;
+  // Validate against the page catalogue on the server. Supplier-only codes (e.g.
+  // DGA at BZE) remain visible but must not lead the modal to a route that 404s.
+  const from = f.dep_iata?.toUpperCase();
+  const to = f.arr_iata?.toUpperCase();
+  const routePair = from && to && from !== to
+    && /^[A-Z]{3}$/.test(from) && /^[A-Z]{3}$/.test(to)
+    && Object.prototype.hasOwnProperty.call(CITY_BY_IATA, from)
+    && Object.prototype.hasOwnProperty.call(CITY_BY_IATA, to)
+    ? `${from}-${to}` : undefined;
   return {
+    ...(routePair ? { routePair } : {}),
     flight: flightNum,
     airline,
     arrIata: f.arr_iata,

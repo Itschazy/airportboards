@@ -279,6 +279,11 @@ export const DEMAND_PINNED = new Set([
   // Цена — около 40 запросов в сутки на троих; с тарифом в 1 млн (остаток 474 тыс. на 6 дней
   // октября) это не решение по бюджету, а только по смыслу.
   'HKT', 'MCX', 'SVO',
+
+  // 09.11.2026, check-warm-demand: TLV entered the top 25 (329 RU visits/30 days,
+  // 127 flights/day). Lift 90 min to 60 min: at most +16 requests/day before night
+  // skips, within the existing fixed tick budget; no new provider allowance.
+  'TLV',
 ]);
 
 /**

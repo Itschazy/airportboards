@@ -24,6 +24,8 @@ type Flight = {
   origin?: string;
   arrIata?: string;
   depIata?: string;
+  /** Server-validated catalogue pair; absent in older cached rows. */
+  routePair?: string;
   scheduled: string;
   actual?: string;
   gate?: string;
@@ -777,12 +779,14 @@ function BottomSheet({ flight: selectedFlight, mode, onClose, tz, locale, clockM
             It is also the sheet's only way OUT. Everything else here ends the journey: one
             action (pin), a close button, and a board the visitor already came from — which is
             most of why a session is 1.79 pages deep, since neither the mode tabs nor this sheet
-            change the URL. /{locale}/route/{FROM}-{TO} is an existing, indexed page that answers
+            change the URL. /{locale}/route/{FROM}-{TO} opens a catalogue route page that answers
             the obvious next question ("what else flies this route today"), so no new page class
             is created. Deliberately NOT /flight/{code}: that class 404s on purpose, and putting
             ~13k thin pages back into the index is a decision already taken the other way.
-            Linkified only for real IATA pairs, because the route page matches ^[A-Z]{3}-[A-Z]{3}$
-            and anything else would hand the visitor a 404. */}
+            mapFlight validates the pair against the server catalogue: syntax alone also
+            allowed supplier-only codes such as DGA, whose route pages return 404.
+            Missing validation on an older cached row leaves the strip as readable text;
+            the catalogue itself is not shipped to the client. */}
         {routeFrom.code && routeTo.code && (() => {
           const strip = (
             <>
@@ -798,7 +802,7 @@ function BottomSheet({ flight: selectedFlight, mode, onClose, tz, locale, clockM
             </>
           );
           const box = { gridColumn: '1 / -1', display: 'flex', alignItems: 'center', gap: 10, padding: '10px 14px', background: 'var(--glass-soft)', boxShadow: 'var(--glass-rim)', borderRadius: 'var(--r-card)' } as const;
-          const pair = /^[A-Z]{3}$/i.test(routeFrom.code) && /^[A-Z]{3}$/i.test(routeTo.code);
+          const pair = flight.routePair === `${routeFrom.code.toUpperCase()}-${routeTo.code.toUpperCase()}`;
           if (!pair) return <div style={box}>{strip}</div>;
           return (
             <Link
