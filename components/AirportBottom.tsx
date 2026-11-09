@@ -219,7 +219,11 @@ export async function AirportBottom({ airport, locale, about = null, displayName
     const otherLabel = inbound
       ? ('origin' in f && f.origin) || f.depIata
       : ('destination' in f && f.destination) || f.arrIata;
-    if (otherIata && otherIata !== airport.iata) {
+    // Provider boards may contain codes absent from our airport catalogue (for
+    // example BZE → DGA/PLJ). The route page requires both catalogue entries and
+    // otherwise returns 404. Keep those flights on the board, but do not promote
+    // broken route links; filter before ranking so valid destinations fill the slots.
+    if (otherIata && otherIata !== airport.iata && getAirport(otherIata)) {
       const e = routeMap.get(otherIata) || { label: otherLabel || otherIata, n: 0 };
       e.n++; routeMap.set(otherIata, e);
     }
