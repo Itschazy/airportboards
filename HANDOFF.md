@@ -1,3 +1,32 @@
+## Codex, 09.11.2026 — аудит, route CTA и спрос TLV опубликованы
+
+По поручению полного аудита опубликован218a4faa76a8ec1e554c825e6293585bb7c3f02a.
+FlightBoard modal больше не ведёт на supplier-only DGA: mapFlight отдаёт
+проверенную по серверному каталогу routePair, клиент сопоставляет пару.
+Рейсы сохранены, старые строки без нового поля остаются текстом до refresh.
+Добавлен TLV в DEMAND_PINNED:329RUorganicвизитов/30дней,90→60мин,
+не более+16запросов/сутки потребности внутри прежнего tickBudget.
+Регрессия oldFAIL/newPASS, TypeScript/fixturebuild2473PASS,24страницы12локалей,
+IAB карточки DGA/JFK и переходPASS. Plan/warm/board/scripts/index/cache/adsense
+проверены. npm audit0. UI не проверялся на физическом мобильном/Safari.
+CI42648949032success15:54:35UTC; Git и3originworkershealth218a4faa76a8.
+Public health новый, BZE SSR содержитroutePair. Postdeploy index20/20,
+live-refresh,adsensePASS. Принудительного прогрева/платныхAPI не было.
+НормативTLV изменён, фактическое следующее обновление ждёт штатного тика.
+RUM09.11до~15:50:mobile/navigate вылеты735,p75LCP1676мс;прилёты261,1732мс;
+>4с3.1%обоих. Все релизы, не эффект нынешнего пакета. RUorganic02–08.11
+8490визитов против9322неделейранее(−8.9%). Это толькоRU, не весьGA4.
+IndexNow последние5запусков500принято0ошибок; Яндекс0/15продолжаетотказывать.
+Сегодняшний GSC200indexed/25813notindexed взят из отдельного текущего аудита,
+заново не инспектировался. Причина437→200 неизвестна. ENmap/NTEнеповторять.
+Следующее: пилот6RUтаблоKZN/OVB/AYT/HRG/SSH/IST; редакционный пакет ещё не создан.
+AdSenseзаявка не отправлялась. Отчёт ops/full-audit-20261109/REPORT.txt,
+читабельный outputs/full-audit-20261109/report.html. CWD
+/Users/whereiszhenya/projects/runwayboard-flight-map-prototype-20261028,
+ветка codex/flight-map-prototype-20261028. Продуктmain218a4faa; docs отдельны.
+
+---
+
 ## Codex, 09.11.2026 — исправлены и опубликованы битые route-ссылки
 
 Пакет 3a4839babb0cf0307c3f62798c3d094b12153eef опубликован в main.
