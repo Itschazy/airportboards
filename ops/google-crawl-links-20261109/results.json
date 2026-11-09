@@ -1,0 +1,980 @@
+{
+  "collectedAt": "2026-11-09T10:54:11.033421+00:00",
+  "files": [
+    {
+      "file": "/var/log/nginx/access.log",
+      "lines": 261010,
+      "unparsedGoogle": 0,
+      "firstGoogle": "2026-11-09T00:00:23+01:00",
+      "lastGoogle": "2026-11-09T11:40:52+01:00"
+    },
+    {
+      "file": "/var/log/nginx/access.log.1",
+      "lines": 574413,
+      "unparsedGoogle": 0,
+      "firstGoogle": "2026-11-08T00:01:51+01:00",
+      "lastGoogle": "2026-11-08T23:47:53+01:00"
+    },
+    {
+      "file": "/var/log/nginx/access.log.10.gz",
+      "lines": 440534,
+      "unparsedGoogle": 0,
+      "firstGoogle": "2026-10-30T00:03:15+01:00",
+      "lastGoogle": "2026-10-30T23:31:33+01:00"
+    },
+    {
+      "file": "/var/log/nginx/access.log.11.gz",
+      "lines": 551117,
+      "unparsedGoogle": 0,
+      "firstGoogle": "2026-10-29T00:00:50+01:00",
+      "lastGoogle": "2026-10-29T23:59:24+01:00"
+    },
+    {
+      "file": "/var/log/nginx/access.log.12.gz",
+      "lines": 510098,
+      "unparsedGoogle": 0,
+      "firstGoogle": "2026-10-28T00:03:54+01:00",
+      "lastGoogle": "2026-10-28T23:34:54+01:00"
+    },
+    {
+      "file": "/var/log/nginx/access.log.13.gz",
+      "lines": 733477,
+      "unparsedGoogle": 0,
+      "firstGoogle": "2026-10-27T00:03:11+01:00",
+      "lastGoogle": "2026-10-27T23:56:19+01:00"
+    },
+    {
+      "file": "/var/log/nginx/access.log.14.gz",
+      "lines": 358774,
+      "unparsedGoogle": 0,
+      "firstGoogle": "2026-10-26T00:00:28+01:00",
+      "lastGoogle": "2026-10-26T23:56:30+01:00"
+    },
+    {
+      "file": "/var/log/nginx/access.log.2.gz",
+      "lines": 374258,
+      "unparsedGoogle": 0,
+      "firstGoogle": "2026-11-07T00:03:06+01:00",
+      "lastGoogle": "2026-11-07T23:45:06+01:00"
+    },
+    {
+      "file": "/var/log/nginx/access.log.3.gz",
+      "lines": 410822,
+      "unparsedGoogle": 0,
+      "firstGoogle": "2026-11-06T00:11:52+01:00",
+      "lastGoogle": "2026-11-06T23:46:53+01:00"
+    },
+    {
+      "file": "/var/log/nginx/access.log.4.gz",
+      "lines": 434568,
+      "unparsedGoogle": 0,
+      "firstGoogle": "2026-11-05T00:03:25+01:00",
+      "lastGoogle": "2026-11-05T23:53:28+01:00"
+    },
+    {
+      "file": "/var/log/nginx/access.log.5.gz",
+      "lines": 421931,
+      "unparsedGoogle": 0,
+      "firstGoogle": "2026-11-04T00:19:58+01:00",
+      "lastGoogle": "2026-11-04T23:42:00+01:00"
+    },
+    {
+      "file": "/var/log/nginx/access.log.6.gz",
+      "lines": 739620,
+      "unparsedGoogle": 0,
+      "firstGoogle": "2026-11-03T00:47:38+01:00",
+      "lastGoogle": "2026-11-03T23:46:28+01:00"
+    },
+    {
+      "file": "/var/log/nginx/access.log.7.gz",
+      "lines": 430463,
+      "unparsedGoogle": 0,
+      "firstGoogle": "2026-11-02T00:47:16+01:00",
+      "lastGoogle": "2026-11-02T23:32:40+01:00"
+    },
+    {
+      "file": "/var/log/nginx/access.log.8.gz",
+      "lines": 409432,
+      "unparsedGoogle": 0,
+      "firstGoogle": "2026-11-01T00:02:08+01:00",
+      "lastGoogle": "2026-11-01T23:54:37+01:00"
+    },
+    {
+      "file": "/var/log/nginx/access.log.9.gz",
+      "lines": 368204,
+      "unparsedGoogle": 0,
+      "firstGoogle": "2026-10-31T00:05:24+01:00",
+      "lastGoogle": "2026-10-31T23:38:43+01:00"
+    }
+  ],
+  "claimedRows": 6943,
+  "verifiedRows": 6356,
+  "unmatchedCount": 587,
+  "kindCounts": {
+    "desktop": 1467,
+    "smartphone": 4661,
+    "image": 34,
+    "inspection": 194
+  },
+  "searchByDay": {
+    "2026-10-26": 2178,
+    "2026-10-27": 536,
+    "2026-10-28": 276,
+    "2026-10-29": 308,
+    "2026-10-30": 193,
+    "2026-10-31": 168,
+    "2026-11-01": 119,
+    "2026-11-02": 105,
+    "2026-11-03": 200,
+    "2026-11-04": 323,
+    "2026-11-05": 529,
+    "2026-11-06": 431,
+    "2026-11-07": 314,
+    "2026-11-08": 338,
+    "2026-11-09": 110
+  },
+  "searchStatuses": {
+    "200": 6068,
+    "301": 21,
+    "502": 1,
+    "404": 22,
+    "307": 10,
+    "308": 6
+  },
+  "priority": [
+    {
+      "path": "/ru",
+      "searchHits": 0,
+      "first": null,
+      "last": null,
+      "statuses": {},
+      "kinds": {},
+      "inspectionHits": 0,
+      "inspectionLast": null,
+      "htmlLinkPath": [
+        "/ru"
+      ],
+      "gscInspectionEarlierToday": {
+        "path": "/ru",
+        "checkedAt": "2026-11-09T10:46:45.480Z",
+        "gscStatus": "crawled-not-indexed",
+        "gscLastCrawl": "Sep 25, 2026, 3:21:07 AM",
+        "crawlTimezone": "not disclosed by UI",
+        "sitemaps": "No referring sitemaps detected",
+        "crawlAllowed": true,
+        "fetch": "Successful",
+        "indexingAllowed": true,
+        "userCanonical": "https://airportsboard.live/ru",
+        "googleCanonical": "Inspected URL"
+      }
+    },
+    {
+      "path": "/en",
+      "searchHits": 17,
+      "first": "2026-10-26T09:12:23+01:00",
+      "last": "2026-11-07T05:12:26+01:00",
+      "statuses": {
+        "200": 17
+      },
+      "kinds": {
+        "smartphone": 13,
+        "desktop": 4
+      },
+      "inspectionHits": 0,
+      "inspectionLast": null,
+      "htmlLinkPath": [
+        "/en"
+      ],
+      "gscInspectionEarlierToday": {
+        "path": "/en",
+        "checkedAt": "2026-11-09T10:47:15.512Z",
+        "gscStatus": "indexed",
+        "gscLastCrawl": null,
+        "crawlTimezone": "not disclosed by UI",
+        "sitemaps": null,
+        "crawlAllowed": null,
+        "fetch": null,
+        "indexingAllowed": null,
+        "userCanonical": null,
+        "googleCanonical": null
+      }
+    },
+    {
+      "path": "/ru/flight-map",
+      "searchHits": 0,
+      "first": null,
+      "last": null,
+      "statuses": {},
+      "kinds": {},
+      "inspectionHits": 0,
+      "inspectionLast": null,
+      "htmlLinkPath": [
+        "/ru",
+        "/ru/flight-map"
+      ],
+      "gscInspectionEarlierToday": {
+        "path": "/ru/flight-map",
+        "checkedAt": "2026-11-09T10:48:42.830Z",
+        "gscStatus": "unknown",
+        "gscLastCrawl": null,
+        "crawlTimezone": "not disclosed by UI",
+        "sitemaps": "No referring sitemaps detected",
+        "crawlAllowed": null,
+        "fetch": null,
+        "indexingAllowed": null,
+        "userCanonical": null,
+        "googleCanonical": null
+      }
+    },
+    {
+      "path": "/en/flight-map",
+      "searchHits": 1,
+      "first": "2026-11-08T13:07:41+01:00",
+      "last": "2026-11-08T13:07:41+01:00",
+      "statuses": {
+        "200": 1
+      },
+      "kinds": {
+        "smartphone": 1
+      },
+      "inspectionHits": 2,
+      "inspectionLast": "2026-11-08T13:05:31+01:00",
+      "htmlLinkPath": [
+        "/en",
+        "/en/flight-map"
+      ],
+      "gscInspectionEarlierToday": {
+        "path": "/en/flight-map",
+        "checkedAt": "2026-11-09T10:49:03.123Z",
+        "gscStatus": "crawled-not-indexed",
+        "gscLastCrawl": "Nov 8, 2026, 5:07:44 PM",
+        "crawlTimezone": "not disclosed by UI",
+        "sitemaps": "No referring sitemaps detected",
+        "crawlAllowed": true,
+        "fetch": "Successful",
+        "indexingAllowed": true,
+        "userCanonical": "https://airportsboard.live/en/flight-map",
+        "googleCanonical": "Inspected URL"
+      }
+    },
+    {
+      "path": "/ru/airports",
+      "searchHits": 0,
+      "first": null,
+      "last": null,
+      "statuses": {},
+      "kinds": {},
+      "inspectionHits": 0,
+      "inspectionLast": null,
+      "htmlLinkPath": [
+        "/ru",
+        "/ru/airports"
+      ],
+      "gscInspectionEarlierToday": {
+        "path": "/ru/airports",
+        "checkedAt": "2026-11-09T10:47:38.470Z",
+        "gscStatus": "crawled-not-indexed",
+        "gscLastCrawl": "Jun 25, 2026, 6:37:50 AM",
+        "crawlTimezone": "not disclosed by UI",
+        "sitemaps": "Temporary processing error",
+        "crawlAllowed": true,
+        "fetch": "Successful",
+        "indexingAllowed": true,
+        "userCanonical": "https://airportsboard.live/ru/airports",
+        "googleCanonical": "Inspected URL"
+      }
+    },
+    {
+      "path": "/en/airports",
+      "searchHits": 2,
+      "first": "2026-11-08T12:07:58+01:00",
+      "last": "2026-11-08T12:07:59+01:00",
+      "statuses": {
+        "200": 2
+      },
+      "kinds": {
+        "smartphone": 1,
+        "desktop": 1
+      },
+      "inspectionHits": 0,
+      "inspectionLast": null,
+      "htmlLinkPath": [
+        "/en",
+        "/en/airports"
+      ],
+      "gscInspectionEarlierToday": {
+        "path": "/en/airports",
+        "checkedAt": "2026-11-09T10:48:04.504Z",
+        "gscStatus": "crawled-not-indexed",
+        "gscLastCrawl": "Oct 22, 2026, 8:48:25 AM",
+        "crawlTimezone": "not disclosed by UI",
+        "sitemaps": "No referring sitemaps detected",
+        "crawlAllowed": true,
+        "fetch": "Successful",
+        "indexingAllowed": true,
+        "userCanonical": "https://airportsboard.live/en/airports",
+        "googleCanonical": "Inspected URL"
+      }
+    },
+    {
+      "path": "/ru/airport/KZN",
+      "searchHits": 0,
+      "first": null,
+      "last": null,
+      "statuses": {},
+      "kinds": {},
+      "inspectionHits": 0,
+      "inspectionLast": null,
+      "htmlLinkPath": [
+        "/ru",
+        "/ru/airport/KZN"
+      ],
+      "gscInspectionEarlierToday": {
+        "path": "/ru/airport/KZN",
+        "checkedAt": "2026-11-09T10:39:56.961Z",
+        "gscStatus": "crawled-not-indexed",
+        "gscLastCrawl": "Oct 18, 2026, 2:51:37 PM",
+        "crawlTimezone": "not disclosed by UI",
+        "sitemaps": "none detected",
+        "crawlAllowed": true,
+        "fetch": "Successful",
+        "indexingAllowed": true,
+        "userCanonical": "https://airportsboard.live/ru/airport/KZN",
+        "googleCanonical": "Inspected URL"
+      }
+    },
+    {
+      "path": "/ru/airport/UFA",
+      "searchHits": 0,
+      "first": null,
+      "last": null,
+      "statuses": {},
+      "kinds": {},
+      "inspectionHits": 0,
+      "inspectionLast": null,
+      "htmlLinkPath": [
+        "/ru",
+        "/ru/airport/UFA"
+      ],
+      "gscInspectionEarlierToday": {
+        "path": "/ru/airport/UFA",
+        "checkedAt": "2026-11-09T10:40:19.516Z",
+        "gscStatus": "crawled-not-indexed",
+        "gscLastCrawl": "Oct 18, 2026, 2:48:20 PM",
+        "crawlTimezone": "not disclosed by UI",
+        "sitemaps": "none detected",
+        "crawlAllowed": true,
+        "fetch": "Successful",
+        "indexingAllowed": true,
+        "userCanonical": "https://airportsboard.live/ru/airport/UFA",
+        "googleCanonical": "Inspected URL"
+      }
+    },
+    {
+      "path": "/ru/airport/OVB",
+      "searchHits": 0,
+      "first": null,
+      "last": null,
+      "statuses": {},
+      "kinds": {},
+      "inspectionHits": 0,
+      "inspectionLast": null,
+      "htmlLinkPath": [
+        "/ru",
+        "/ru/airport/OVB"
+      ],
+      "gscInspectionEarlierToday": {
+        "path": "/ru/airport/OVB",
+        "checkedAt": "2026-11-09T10:42:12.406Z",
+        "gscStatus": "crawled-not-indexed",
+        "gscLastCrawl": "Oct 16, 2026, 4:20:26 PM",
+        "crawlTimezone": "not disclosed by UI",
+        "sitemaps": "https://airportsboard.live/sitemap-3.xml",
+        "crawlAllowed": true,
+        "fetch": "Successful",
+        "indexingAllowed": true,
+        "userCanonical": "https://airportsboard.live/ru/airport/OVB",
+        "googleCanonical": "Inspected URL"
+      }
+    },
+    {
+      "path": "/ru/airport/HRG",
+      "searchHits": 0,
+      "first": null,
+      "last": null,
+      "statuses": {},
+      "kinds": {},
+      "inspectionHits": 0,
+      "inspectionLast": null,
+      "htmlLinkPath": [
+        "/ru",
+        "/ru/airport/HRG"
+      ],
+      "gscInspectionEarlierToday": {
+        "path": "/ru/airport/HRG",
+        "checkedAt": "2026-11-09T10:41:51.018Z",
+        "gscStatus": "crawled-not-indexed",
+        "gscLastCrawl": "Oct 18, 2026, 2:45:38 PM",
+        "crawlTimezone": "not disclosed by UI",
+        "sitemaps": "none detected",
+        "crawlAllowed": true,
+        "fetch": "Successful",
+        "indexingAllowed": true,
+        "userCanonical": "https://airportsboard.live/ru/airport/HRG",
+        "googleCanonical": "Inspected URL"
+      }
+    },
+    {
+      "path": "/ru/airport/AYT",
+      "searchHits": 0,
+      "first": null,
+      "last": null,
+      "statuses": {},
+      "kinds": {},
+      "inspectionHits": 0,
+      "inspectionLast": null,
+      "htmlLinkPath": [
+        "/ru",
+        "/ru/airport/AYT"
+      ],
+      "gscInspectionEarlierToday": {
+        "path": "/ru/airport/AYT",
+        "checkedAt": "2026-11-09T10:41:30.701Z",
+        "gscStatus": "crawled-not-indexed",
+        "gscLastCrawl": "Oct 18, 2026, 2:46:12 PM",
+        "crawlTimezone": "not disclosed by UI",
+        "sitemaps": "none detected",
+        "crawlAllowed": true,
+        "fetch": "Successful",
+        "indexingAllowed": true,
+        "userCanonical": "https://airportsboard.live/ru/airport/AYT",
+        "googleCanonical": "Inspected URL"
+      }
+    },
+    {
+      "path": "/ru/airport/SSH",
+      "searchHits": 0,
+      "first": null,
+      "last": null,
+      "statuses": {},
+      "kinds": {},
+      "inspectionHits": 0,
+      "inspectionLast": null,
+      "htmlLinkPath": [
+        "/ru",
+        "/ru/airport/SSH"
+      ],
+      "gscInspectionEarlierToday": {
+        "path": "/ru/airport/SSH",
+        "checkedAt": "2026-11-09T10:42:31.391Z",
+        "gscStatus": "crawled-not-indexed",
+        "gscLastCrawl": "Oct 18, 2026, 2:43:34 PM",
+        "crawlTimezone": "not disclosed by UI",
+        "sitemaps": "Temporary processing error",
+        "crawlAllowed": true,
+        "fetch": "Successful",
+        "indexingAllowed": true,
+        "userCanonical": "https://airportsboard.live/ru/airport/SSH",
+        "googleCanonical": "Inspected URL"
+      }
+    },
+    {
+      "path": "/ru/airport/IST",
+      "searchHits": 2,
+      "first": "2026-11-07T17:45:12+01:00",
+      "last": "2026-11-07T17:45:13+01:00",
+      "statuses": {
+        "200": 2
+      },
+      "kinds": {
+        "smartphone": 1,
+        "desktop": 1
+      },
+      "inspectionHits": 0,
+      "inspectionLast": null,
+      "htmlLinkPath": [
+        "/ru",
+        "/ru/airport/IST"
+      ],
+      "gscInspectionEarlierToday": {
+        "path": "/ru/airport/IST",
+        "checkedAt": "2026-11-09T10:43:06.175Z",
+        "gscStatus": "crawled-not-indexed",
+        "gscLastCrawl": "Oct 18, 2026, 2:46:00 PM",
+        "crawlTimezone": "not disclosed by UI",
+        "sitemaps": "none detected",
+        "crawlAllowed": true,
+        "fetch": "Successful",
+        "indexingAllowed": true,
+        "userCanonical": "https://airportsboard.live/ru/airport/IST",
+        "googleCanonical": "Inspected URL"
+      }
+    },
+    {
+      "path": "/ru/airport/LWN",
+      "searchHits": 3,
+      "first": "2026-10-27T12:39:32+01:00",
+      "last": "2026-11-05T21:28:54+01:00",
+      "statuses": {
+        "200": 3
+      },
+      "kinds": {
+        "smartphone": 1,
+        "desktop": 2
+      },
+      "inspectionHits": 4,
+      "inspectionLast": "2026-10-28T06:13:28+01:00",
+      "htmlLinkPath": [
+        "/ru",
+        "/ru/airport/LWN"
+      ],
+      "gscInspectionEarlierToday": {
+        "path": "/ru/airport/LWN",
+        "checkedAt": "2026-11-09T10:44:03.501Z",
+        "gscStatus": "unknown",
+        "gscLastCrawl": null,
+        "crawlTimezone": "not disclosed by UI",
+        "sitemaps": "none detected",
+        "crawlAllowed": null,
+        "fetch": null,
+        "indexingAllowed": null,
+        "userCanonical": null,
+        "googleCanonical": null
+      }
+    },
+    {
+      "path": "/ru/airport/BJV",
+      "searchHits": 0,
+      "first": null,
+      "last": null,
+      "statuses": {},
+      "kinds": {},
+      "inspectionHits": 4,
+      "inspectionLast": "2026-10-28T06:15:07+01:00",
+      "htmlLinkPath": [
+        "/ru",
+        "/ru/airport/BJV"
+      ],
+      "gscInspectionEarlierToday": {
+        "path": "/ru/airport/BJV",
+        "checkedAt": "2026-11-09T10:43:37.717Z",
+        "gscStatus": "crawled-not-indexed",
+        "gscLastCrawl": "Oct 18, 2026, 2:48:57 PM",
+        "crawlTimezone": "not disclosed by UI",
+        "sitemaps": "none detected",
+        "crawlAllowed": true,
+        "fetch": "Successful",
+        "indexingAllowed": true,
+        "userCanonical": "https://airportsboard.live/ru/airport/BJV",
+        "googleCanonical": "Inspected URL"
+      }
+    },
+    {
+      "path": "/en/airport/LHR",
+      "searchHits": 0,
+      "first": null,
+      "last": null,
+      "statuses": {},
+      "kinds": {},
+      "inspectionHits": 0,
+      "inspectionLast": null,
+      "htmlLinkPath": [
+        "/en",
+        "/en/airport/LHR"
+      ],
+      "gscInspectionEarlierToday": {
+        "path": "/en/airport/LHR",
+        "checkedAt": "2026-11-09T10:40:42.707Z",
+        "gscStatus": "unknown",
+        "gscLastCrawl": null,
+        "crawlTimezone": "not disclosed by UI",
+        "sitemaps": "none detected",
+        "crawlAllowed": null,
+        "fetch": null,
+        "indexingAllowed": null,
+        "userCanonical": null,
+        "googleCanonical": null
+      }
+    },
+    {
+      "path": "/en/airport/ORK",
+      "searchHits": 0,
+      "first": null,
+      "last": null,
+      "statuses": {},
+      "kinds": {},
+      "inspectionHits": 0,
+      "inspectionLast": null,
+      "htmlLinkPath": [
+        "/en",
+        "/en/airports",
+        "/en/airports/ireland",
+        "/en/airport/ORK"
+      ],
+      "gscInspectionEarlierToday": {
+        "path": "/en/airport/ORK",
+        "checkedAt": "2026-11-09T10:44:49.195Z",
+        "gscStatus": "unknown",
+        "gscLastCrawl": null,
+        "sitemaps": "No referring sitemaps detected",
+        "crawlAllowed": null,
+        "fetch": null,
+        "indexingAllowed": null,
+        "userCanonical": null,
+        "googleCanonical": null
+      }
+    },
+    {
+      "path": "/en/airport/HKT",
+      "searchHits": 0,
+      "first": null,
+      "last": null,
+      "statuses": {},
+      "kinds": {},
+      "inspectionHits": 0,
+      "inspectionLast": null,
+      "htmlLinkPath": [
+        "/en",
+        "/en/airports",
+        "/en/airports/thailand",
+        "/en/airport/HKT"
+      ],
+      "gscInspectionEarlierToday": {
+        "path": "/en/airport/HKT",
+        "checkedAt": "2026-11-09T10:45:07.462Z",
+        "gscStatus": "unknown",
+        "gscLastCrawl": null,
+        "sitemaps": "No referring sitemaps detected",
+        "crawlAllowed": null,
+        "fetch": null,
+        "indexingAllowed": null,
+        "userCanonical": null,
+        "googleCanonical": null
+      }
+    },
+    {
+      "path": "/en/airport/TAS",
+      "searchHits": 0,
+      "first": null,
+      "last": null,
+      "statuses": {},
+      "kinds": {},
+      "inspectionHits": 0,
+      "inspectionLast": null,
+      "htmlLinkPath": [
+        "/en",
+        "/en/airports/uzbekistan",
+        "/en/airport/TAS"
+      ],
+      "gscInspectionEarlierToday": {
+        "path": "/en/airport/TAS",
+        "checkedAt": "2026-11-09T10:45:32.722Z",
+        "gscStatus": "unknown",
+        "gscLastCrawl": null,
+        "sitemaps": "No referring sitemaps detected",
+        "crawlAllowed": null,
+        "fetch": null,
+        "indexingAllowed": null,
+        "userCanonical": null,
+        "googleCanonical": null
+      }
+    },
+    {
+      "path": "/en/airport/BCN",
+      "searchHits": 0,
+      "first": null,
+      "last": null,
+      "statuses": {},
+      "kinds": {},
+      "inspectionHits": 0,
+      "inspectionLast": null,
+      "htmlLinkPath": [
+        "/en",
+        "/en/airports/spain",
+        "/en/airport/BCN"
+      ],
+      "gscInspectionEarlierToday": {
+        "path": "/en/airport/BCN",
+        "checkedAt": "2026-11-09T10:41:01.800Z",
+        "gscStatus": "unknown",
+        "gscLastCrawl": null,
+        "crawlTimezone": "not disclosed by UI",
+        "sitemaps": "none detected",
+        "crawlAllowed": null,
+        "fetch": null,
+        "indexingAllowed": null,
+        "userCanonical": null,
+        "googleCanonical": null
+      }
+    },
+    {
+      "path": "/en/airport/JFK",
+      "searchHits": 0,
+      "first": null,
+      "last": null,
+      "statuses": {},
+      "kinds": {},
+      "inspectionHits": 0,
+      "inspectionLast": null,
+      "htmlLinkPath": [
+        "/en",
+        "/en/airport/JFK"
+      ],
+      "gscInspectionEarlierToday": {
+        "path": "/en/airport/JFK",
+        "checkedAt": "2026-11-09T10:45:45.970Z",
+        "gscStatus": "unknown",
+        "gscLastCrawl": null,
+        "sitemaps": "No referring sitemaps detected",
+        "crawlAllowed": null,
+        "fetch": null,
+        "indexingAllowed": null,
+        "userCanonical": null,
+        "googleCanonical": null
+      }
+    },
+    {
+      "path": "/en/airport/HND",
+      "searchHits": 0,
+      "first": null,
+      "last": null,
+      "statuses": {},
+      "kinds": {},
+      "inspectionHits": 0,
+      "inspectionLast": null,
+      "htmlLinkPath": [
+        "/en",
+        "/en/airport/HND"
+      ],
+      "gscInspectionEarlierToday": {
+        "path": "/en/airport/HND",
+        "checkedAt": "2026-11-09T10:44:23.634Z",
+        "gscStatus": "crawled-not-indexed",
+        "gscLastCrawl": "Jul 8, 2026, 4:11:49 PM",
+        "crawlTimezone": "not disclosed by UI",
+        "sitemaps": "none detected",
+        "crawlAllowed": true,
+        "fetch": "Successful",
+        "indexingAllowed": true,
+        "userCanonical": "https://airportsboard.live/en/airport/HND",
+        "googleCanonical": "Inspected URL"
+      }
+    },
+    {
+      "path": "/en/airport/SIN",
+      "searchHits": 0,
+      "first": null,
+      "last": null,
+      "statuses": {},
+      "kinds": {},
+      "inspectionHits": 0,
+      "inspectionLast": null,
+      "htmlLinkPath": [
+        "/en",
+        "/en/airport/SIN"
+      ],
+      "gscInspectionEarlierToday": {
+        "path": "/en/airport/SIN",
+        "checkedAt": "2026-11-09T10:46:08.607Z",
+        "gscStatus": "unknown",
+        "gscLastCrawl": null,
+        "sitemaps": "No referring sitemaps detected",
+        "crawlAllowed": null,
+        "fetch": null,
+        "indexingAllowed": null,
+        "userCanonical": null,
+        "googleCanonical": null
+      }
+    },
+    {
+      "path": "/en/airport/LHR/arrivals",
+      "searchHits": 0,
+      "first": null,
+      "last": null,
+      "statuses": {},
+      "kinds": {},
+      "inspectionHits": 0,
+      "inspectionLast": null,
+      "htmlLinkPath": [
+        "/en",
+        "/en/airport/LHR",
+        "/en/airport/LHR/arrivals"
+      ],
+      "gscInspectionEarlierToday": {
+        "path": "/en/airport/LHR/arrivals",
+        "checkedAt": "2026-11-09T10:46:27.869Z",
+        "gscStatus": "unknown",
+        "gscLastCrawl": null,
+        "sitemaps": "No referring sitemaps detected",
+        "crawlAllowed": null,
+        "fetch": null,
+        "indexingAllowed": null,
+        "userCanonical": null,
+        "googleCanonical": null
+      }
+    },
+    {
+      "path": "/en/airport/NTE",
+      "searchHits": 1,
+      "first": "2026-11-08T13:31:43+01:00",
+      "last": "2026-11-08T13:31:43+01:00",
+      "statuses": {
+        "200": 1
+      },
+      "kinds": {
+        "smartphone": 1
+      },
+      "inspectionHits": 2,
+      "inspectionLast": "2026-11-08T13:30:28+01:00",
+      "htmlLinkPath": null,
+      "gscInspectionEarlierToday": null
+    }
+  ],
+  "linkAudit": {
+    "checkedPages": 36,
+    "errors": [],
+    "routes": {
+      "/ru": [
+        "/ru"
+      ],
+      "/en": [
+        "/en"
+      ],
+      "/ru/airports": [
+        "/ru",
+        "/ru/airports"
+      ],
+      "/ru/airport/HRG": [
+        "/ru",
+        "/ru/airport/HRG"
+      ],
+      "/ru/airport/SSH": [
+        "/ru",
+        "/ru/airport/SSH"
+      ],
+      "/ru/airport/AYT": [
+        "/ru",
+        "/ru/airport/AYT"
+      ],
+      "/ru/airport/IST": [
+        "/ru",
+        "/ru/airport/IST"
+      ],
+      "/ru/airport/LWN": [
+        "/ru",
+        "/ru/airport/LWN"
+      ],
+      "/ru/airport/BJV": [
+        "/ru",
+        "/ru/airport/BJV"
+      ],
+      "/ru/airport/OVB": [
+        "/ru",
+        "/ru/airport/OVB"
+      ],
+      "/ru/airport/UFA": [
+        "/ru",
+        "/ru/airport/UFA"
+      ],
+      "/ru/airport/KZN": [
+        "/ru",
+        "/ru/airport/KZN"
+      ],
+      "/ru/flight-map": [
+        "/ru",
+        "/ru/flight-map"
+      ],
+      "/en/airports": [
+        "/en",
+        "/en/airports"
+      ],
+      "/en/airport/JFK": [
+        "/en",
+        "/en/airport/JFK"
+      ],
+      "/en/airport/LHR": [
+        "/en",
+        "/en/airport/LHR"
+      ],
+      "/en/airport/SIN": [
+        "/en",
+        "/en/airport/SIN"
+      ],
+      "/en/airport/HND": [
+        "/en",
+        "/en/airport/HND"
+      ],
+      "/en/flight-map": [
+        "/en",
+        "/en/flight-map"
+      ],
+      "/en/airport/LHR/arrivals": [
+        "/en",
+        "/en/airport/LHR",
+        "/en/airport/LHR/arrivals"
+      ],
+      "/en/airport/BCN": [
+        "/en",
+        "/en/airports/spain",
+        "/en/airport/BCN"
+      ],
+      "/en/airport/TAS": [
+        "/en",
+        "/en/airports/uzbekistan",
+        "/en/airport/TAS"
+      ],
+      "/en/airport/HKT": [
+        "/en",
+        "/en/airports",
+        "/en/airports/thailand",
+        "/en/airport/HKT"
+      ],
+      "/en/airport/ORK": [
+        "/en",
+        "/en/airports",
+        "/en/airports/ireland",
+        "/en/airport/ORK"
+      ]
+    },
+    "missing": []
+  },
+  "distribution": {
+    "definition": "Verified common-crawler smartphone/desktop requests to locale-prefixed extensionless paths, excluding opengraph-image. URL shapes, not response Content-Type. Sitemap snapshot 2026-11-09, not historical inclusion.",
+    "requests": 4437,
+    "uniquePaths": 3591,
+    "requestsInCurrentSitemap": 720,
+    "byType": {
+      "airport": 2432,
+      "route": 1875,
+      "city": 43,
+      "airports": 44,
+      "flight-map": 1,
+      "az": 11,
+      "widgets": 3,
+      "home": 24,
+      "events": 2,
+      "event": 2
+    },
+    "byTypeStatus": {
+      "airport:200": 2431,
+      "route:200": 1858,
+      "city:200": 43,
+      "airports:200": 44,
+      "flight-map:200": 1,
+      "az:200": 11,
+      "airport:502": 1,
+      "widgets:200": 3,
+      "route:404": 17,
+      "home:200": 24,
+      "events:200": 2,
+      "event:200": 2
+    }
+  },
+  "release": "124e5f0ad5ce58e7c1d7b344b52f4a5fe0c44944",
+  "historical502Recheck": {
+    "path": "/de/airport/ALF",
+    "date": "2026-11-09",
+    "status": 200,
+    "userAgent": "audit-bot"
+  }
+}
