@@ -26,5 +26,8 @@ def check(t):
   canonical=s.select_one('link[rel=canonical]')['href'];assert canonical=='https://airportsboard.live'+p,(p,canonical)
   assert not any('noindex' in x.get('content','') for x in s.select('meta[name=robots]')),(p,'noindex')
  return {'path':p,'status':status,'h1':s.h1.get_text(' ',strip=True),'characters':len(text),'contentHash':hashlib.sha256(text.encode()).hexdigest(),'faqCount':len(faq),'guideBlocks':len(blocks),'htmlGuideVerified':mode!='before'}
-with concurrent.futures.ThreadPoolExecutor(max_workers=3) as pool:results=list(pool.map(check,paths))
-(out/(mode+'-pages.json')).write_text(json.dumps(results,ensure_ascii=False,indent=2));print('PASS',mode,len(results),'pages')
+def collect(t):
+ try:return check(t)
+ except Exception as e:return {'path':'/'+t[0]+'/airport/'+t[1]+t[2], 'error':str(e)}
+with concurrent.futures.ThreadPoolExecutor(max_workers=3) as pool:results=list(pool.map(collect,paths))
+(out/(mode+'-pages.json')).write_text(json.dumps(results,ensure_ascii=False,indent=2));errors=[r for r in results if 'error' in r];print('FAIL' if errors else 'PASS',mode,len(results),'pages',json.dumps(errors,ensure_ascii=False));sys.exit(1 if errors else 0)

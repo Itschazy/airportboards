@@ -1,3 +1,31 @@
+## Codex, 09.11.2026 — справочники 6 аэропортов опубликованы
+
+По поручению «делай содержательную доработку со всеми проверками» опубликован
+c08e6a09741144fc9bec68fe2b0abef7dbb16b69. KZN/OVB/AYT/HRG/SSH/IST, 72 JSON:
+парковка и повторный въезд KZN/OVB, пересадка на станции Обь, терминалы AYT,
+хранение IST, сон HRG, lounge SSH. Уточнены тариф OVB и альтернативы Wi-Fi AYT.
+Источники перепроверены 09.11; OVB обычным браузером, HRG/SSH two-source third-party.
+Русский и 11 переводов синхронны. Проверка одним агентом; независимого редактора
+и носителей языков не было. Источники/дата остаются внутренними по решению владельца.
+Build/types 2473 PASS; guidefresh 188x12, scripts 232292/8351, index20/20,
+JSON-LD, generated-prose, AdSense, diff PASS. 78 local HTML+FAQ+canonical PASS.
+UI IAB Chromium375px RU KZN/AR IST: раскрытие/читаемость/нет overflow PASS.
+Физический телефон/Safari не проверялись. CI42654549387 success16:27:38UTC.
+Git и3PM2workers/publichealth c08e6a097411. Production78/78 PASS после ISR:
+70 в полном проходе,8 после обновления кэша. Index20/20,AdSense PASS.
+ПлатныхAPI/cron и productionbrowser не было. AdSense не подавали, GSC-запросы
+не отправляли. Baseline6 URL взят из сегодняшнего прежнего аудита: все
+crawled-not-indexed; это не новая инспекция. Эффект ещё неизвестен.
+Следующее: 23.11/07.12 сверить lastcrawl→index→показы/клики тех же URL;
+не обещать срок индексации и не повторять ENmap/NTE-запросы.
+Отчёт ops/guide-pilot-20261109/REPORT.txt, source-ledger.json, production-pages.json;
+читабельный outputs/guide-pilot-20261109/report.html. Сервер локально остановлен,
+временная сборка обратимо перенесена в /tmp/airportsboard-next-guide-pilot-20261109-c08e6a09.
+CWD /Users/whereiszhenya/projects/runwayboard-flight-map-prototype-20261028,
+ветка codex/flight-map-prototype-20261028; продукт main c08e6a09, docs отдельно.
+
+---
+
 ## Codex, 09.11.2026 — аудит, route CTA и спрос TLV опубликованы
 
 По поручению полного аудита опубликован218a4faa76a8ec1e554c825e6293585bb7c3f02a.
