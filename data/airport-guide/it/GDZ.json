@@ -15,7 +15,7 @@
     "storage": {
       "title": "Deposito bagagli",
       "hint": "Livello 1, da 200 ₽",
-      "text": "Deposito bagagli automatico al livello 1, a sinistra dei banchi check-in, negli orari di apertura dell’aeroporto. Armadietto piccolo da 200 ₽ per 2 ore a 800 ₽ al giorno, medio 300–900 ₽, grande 400–1000 ₽. Pagamento in contanti o con carta al terminale, lo scontrino con codice a barre apre l’armadietto."
+      "text": "Deposito bagagli automatico al livello 1, a sinistra dei banchi check-in, negli orari di apertura dell’aeroporto. Armadietto piccolo da 200 ₽ per 2 ore a 800 ₽ ogni 24 ore, medio 300–900 ₽, grande 400–1000 ₽. Pagamento in contanti o con carta al terminale, lo scontrino con codice a barre apre l’armadietto."
     },
     "kids": {
       "title": "Con bambini",
@@ -25,7 +25,7 @@
     "parking": {
       "title": "Parcheggio",
       "hint": "15 min gratis",
-      "text": "250 posti. I primi 15 minuti gratis, poi 300 ₽ per ogni ora, oltre 3 ore 900 ₽/giorno. Sosta sulla seconda corsia di transito 1000 ₽/ora, parcheggio VIP 2000 ₽/ora. Nuovo ingresso entro un’ora senza i 15 minuti gratuiti."
+      "text": "250 posti. I primi 15 minuti gratis, poi 300 ₽ per ogni ora, oltre 3 ore 900 ₽/24 ore. Sosta sulla seconda corsia di transito 1000 ₽/ora, parcheggio VIP 2000 ₽/ora. Nuovo ingresso entro un’ora senza i 15 minuti gratuiti."
     }
   }
 }

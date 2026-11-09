@@ -5,6 +5,16 @@
       "title": "TRAX Green Line",
       "hint": "航站楼旁的车站",
       "text": "TRAX Green Line直接服务机场，Airport Station就在航站楼外。根据UTA信息，该线每日05:21–23:21运营，可前往City Center。在North Temple可换乘开往Ogden或Provo的FrontRunner，但FrontRunner周日不运营。UTA咨询电话为+1 801 7433882。"
+    },
+    "wifi": {
+      "title": "Wi‑Fi",
+      "hint": "免费Wi-Fi",
+      "text": "机场各处均提供免费Wi-Fi。选择SLCAirport.wifi网络，打开浏览器，接受使用条款，然后在连接页面点击CONNECT。"
+    },
+    "storage": {
+      "title": "行李寄存",
+      "hint": "通过Bringit Travel寄存",
+      "text": "Bringit Travel提供中转或长时间停留期间的行李寄存服务。行李在机场交接和取回；请在Bringit网站预订服务。"
     }
   }
 }

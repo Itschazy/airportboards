@@ -30,7 +30,7 @@
   "parking": {
    "title": "Otopark",
    "hint": "15 dakika ücretsiz",
-   "text": "А1 indirme-bindirme alanı: 15 dakika ücretsiz, sonrası saati 500 ₽, park yasak. С5 bekleme otoparkı (terminallere 10 dakika): 3 saat ücretsiz, sonrası saati 150 ₽, günlüğü 600 ₽. Terminallerin yanındaki А2 ve А3 otoparkları: ilk saat 300 ₽, sonrası saati 100 ₽, günlüğü 700 ₽."
+   "text": "А1 indirme-bindirme alanı: 15 dakika ücretsiz, sonrası saati 500 ₽, park yasak. С5 bekleme otoparkı (terminallere 10 dakika): 3 saat ücretsiz, sonrası saati 150 ₽, 24 saati 600 ₽. Terminallerin yanındaki А2 ve А3 otoparkları: ilk saat 300 ₽, sonrası saati 100 ₽, 24 saati 700 ₽."
   },
   "wifi": {
    "title": "Wi‑Fi",

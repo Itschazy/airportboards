@@ -14,13 +14,13 @@
   },
   "storage": {
    "title": "Left luggage",
-   "hint": "300 ₽ per day",
-   "text": "Baggage storage: 300 ₽ per 1 item per day."
+   "hint": "300 ₽ per 24 hours",
+   "text": "Baggage storage: 300 ₽ per 1 item per 24 hours."
   },
   "parking": {
    "title": "Parking",
    "hint": "15 min free",
-   "text": "The first 15 minutes are free. Cars: 100 ₽ per hour, 450 ₽ per day, from 3 days 400 ₽ per day. UAZ, Gazel, Sobol: 200 ₽ per hour, 650 ₽ per day. Lost receipt 500 ₽. Phone 8 (8352) 22-94-03, ext. 2-95."
+   "text": "The first 15 minutes are free. Cars: 100 ₽ per hour, 450 ₽ per 24 hours, for stays of 3 periods of 24 hours or more 400 ₽ per 24 hours. UAZ, Gazel, Sobol: 200 ₽ per hour, 650 ₽ per 24 hours. Lost receipt 500 ₽. Phone 8 (8352) 22-94-03, ext. 2-95."
   }
  }
 }

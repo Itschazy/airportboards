@@ -30,7 +30,7 @@
   "parking": {
    "title": "Parking",
    "hint": "15 min free",
-   "text": "Drop-off and pick-up zone А1: 15 minutes free, then 500 ₽ per hour, parking prohibited. Waiting car park С5 (10 minutes to the terminals): 3 hours free, then 150 ₽ per hour, a day 600 ₽. Car parks А2 and А3 at the terminals: first hour 300 ₽, then 100 ₽ per hour, a day 700 ₽."
+   "text": "Drop-off and pick-up zone А1: 15 minutes free, then 500 ₽ per hour, parking prohibited. Waiting car park С5 (10 minutes to the terminals): 3 hours free, then 150 ₽ per hour, 600 ₽ per 24 hours. Car parks А2 and А3 at the terminals: first hour 300 ₽, then 100 ₽ per hour, 700 ₽ per 24 hours."
   },
   "wifi": {
    "title": "Wi‑Fi",

@@ -20,7 +20,7 @@
   "storage": {
    "title": "Consigne à bagages",
    "hint": "Terminal 1, 24/7",
-   "text": "Terminal n° 1, rez-de-chaussée, jour et nuit. Valise, sac ou sac à dos jusqu'à 203 cm pour la somme des trois dimensions 600 ₽ par jour. Objets volumineux 700 ₽ par jour. Perte du jeton 400 ₽."
+   "text": "Terminal n° 1, niveau 1, jour et nuit. Valise, sac ou sac à dos jusqu'à 203 cm pour la somme des trois dimensions 600 ₽ par période de 24 heures. Objets volumineux 700 ₽ par période de 24 heures. Perte du jeton 400 ₽."
   },
   "kids": {
    "title": "Avec un enfant",

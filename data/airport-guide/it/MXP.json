@@ -10,6 +10,11 @@
       "title": "Sheraton Milan Malpensa",
       "hint": "Accesso diretto al terminal 1",
       "text": "Sheraton Milan Malpensa Airport Hotel & Conference Centre dispone di accesso diretto al terminal 1. L’hotel offre piscina coperta, centro fitness, spa e ristoranti; le suite sono insonorizzate."
+    },
+    "terminals": {
+      "title": "Terminal",
+      "hint": "Navetta gratuita T1–T2",
+      "text": "Una navetta gratuita collega i terminal 1 e 2."
     }
   }
 }

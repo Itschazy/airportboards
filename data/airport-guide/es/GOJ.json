@@ -15,7 +15,7 @@
   "storage": {
    "title": "Consigna",
    "hint": "Nivel 1, desde 250 ₽/hora",
-   "text": "Consigna automática en el nivel 1, a la izquierda de la salida de la zona de recogida de equipajes de vuelos nacionales. Taquilla estándar: 250 ₽ por hora o 550 ₽ por día. Taquilla grande: 350 ₽ por hora o 900 ₽ por día. Guardarropa: 100 ₽ por día."
+   "text": "Consigna automática en el nivel 1, a la izquierda de la salida de la zona de recogida de equipajes de vuelos nacionales. Taquilla estándar: 250 ₽ por hora o 550 ₽ por cada 24 horas. Taquilla grande: 350 ₽ por hora o 900 ₽ por cada 24 horas. Guardarropa: 100 ₽ por cada 24 horas."
   },
   "kids": {
    "title": "Con niños",
@@ -25,7 +25,7 @@
   "parking": {
    "title": "Aparcamiento",
    "hint": "15 min gratis",
-   "text": "Zona de recogida y bajada de pasajeros: los primeros 15 minutos gratis, del minuto 16 al 60, 890 ₽, después 890 ₽ por hora. Aparcamiento P junto a la terminal: hasta 1 hora 370 ₽, de 1 a 24 horas 750 ₽, hasta 2 días 1500 ₽. Aparcamiento gratuito abierto día y noche a 700 m de la terminal, sin vigilancia. Primer carril (zona VIP): 3000 ₽ por entrada."
+   "text": "Zona de recogida y bajada de pasajeros: los primeros 15 minutos gratis, del minuto 16 al 60, 890 ₽, después 890 ₽ por hora. Aparcamiento P junto a la terminal: hasta 1 hora 370 ₽, de 1 a 24 horas 750 ₽, hasta 2 periodos de 24 horas 1500 ₽. Aparcamiento gratuito abierto día y noche a 700 m de la terminal, sin vigilancia. Primer carril (zona VIP): 3000 ₽ por entrada."
   },
   "wifi": {
    "title": "Wi‑Fi",

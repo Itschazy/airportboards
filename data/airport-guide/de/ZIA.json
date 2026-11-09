@@ -10,7 +10,7 @@
   "parking": {
    "title": "Parken",
    "hint": "15 Min. kostenlos",
-   "text": "Kurzzeitzone: die ersten 15 Min. kostenlos, die erste Stunde 350 ₽, von der 2. bis zur 4. Stunde 250 ₽/Stunde, ab der 5. Stunde 3000 ₽/Tag. Langzeitzone: 700 ₽/Tag vom 1. bis zum 5. Tag, 100 ₽/Tag vom 6. bis zum 13., 700 ₽/Tag ab dem 14. Tag. Erneute kostenlose Einfahrt frühestens nach 45 Min."
+   "text": "Kurzzeitzone: die ersten 15 Min. kostenlos, die erste Stunde 350 ₽, von der 2. bis zur 4. Stunde 250 ₽/Stunde, ab der 5. Stunde 3000 ₽ pro 24 Stunden. Langzeitzone: 700 ₽ pro 24 Stunden für den 1. bis 5. Zeitraum, 100 ₽ pro 24 Stunden für den 6. bis 13. Zeitraum, 700 ₽ pro 24 Stunden ab dem 14. Zeitraum; jeder Zeitraum umfasst 24 Stunden. Erneute kostenlose Einfahrt frühestens nach 45 Min."
   },
   "storage": {
    "title": "Gepäckaufbewahrung",

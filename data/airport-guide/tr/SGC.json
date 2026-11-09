@@ -14,13 +14,13 @@
   },
   "storage": {
    "title": "Emanet",
-   "hint": "24/7, günlüğü 400 ₽",
+   "hint": "İlk takvim günü: 400 ₽",
    "text": "Gece gündüz açık. İlk gün 400 ₽ (00:00'a kadar), sonrası günlüğü 200 ₽; tamamlanmamış gün tam gün sayılır. Bir parçanın ağırlığı en fazla 30 kg."
   },
   "parking": {
    "title": "Otopark",
    "hint": "20 dakika ücretsiz",
-   "text": "Terminal önü meydanında ilk 20 dakika ücretsiz. Durak pavyonunun hemen arkasında 50 araçlık uzun süreli park alanı: günlüğü 750 ₽. Ödeme terminal binasındaki gişelerde ve ana giriş ile geliş salonundaki ödeme makinelerinde."
+   "text": "Terminal önü meydanında ilk 20 dakika ücretsiz. Durak pavyonunun hemen arkasında 50 araçlık uzun süreli park alanı: 24 saati 750 ₽. Ödeme terminal binasındaki gişelerde ve ana giriş ile geliş salonundaki ödeme makinelerinde."
   }
  }
 }

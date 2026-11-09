@@ -4,7 +4,7 @@
   "taxi": {
    "title": "Taxi",
    "hint": "Niveau 1, sorties 4–7, +50 bahts",
-   "text": "Le comptoir d'information taxis et les distributeurs de tickets se trouvent dans le terminal passagers au niveau 1, entre les sorties 4 et 7. Au tarif s'ajoute un supplément de 50 bahts au profit du chauffeur, sur décision du ministère des Transports ; les péages sont à la charge du passager. Il existe des courses courtes distances — autour de l'aéroport, 20 km au maximum ; pour les distances ordinaires, selon les règles du Département des transports terrestres, le prix peut être convenu avec le chauffeur."
+   "text": "Le comptoir d'information taxis et les distributeurs de tickets se trouvent dans le terminal passagers au niveau 1, entre les sorties 4 et 7. Au tarif s'ajoute un supplément de 50 bahts au profit du chauffeur, sur décision du ministère des Transports ; les péages sont à la charge du passager. Il existe des courses courtes distances — autour de l'aéroport, 20 km au maximum."
   },
   "terminals": {
    "title": "Terminaux",

@@ -15,7 +15,7 @@
   "storage": {
    "title": "Consigne à bagages",
    "hint": "Niveau 1, dès 200 ₽/h",
-   "text": "Consigne automatique dans l'aile droite de l'aérogare, niveau 1. Casier standard 200 ₽ de l'heure ou 500 ₽ par jour, grand casier 300 ₽ de l'heure ou 800 ₽ par jour. Emballage des bagages au même endroit, à partir de 950 ₽ par bagage."
+   "text": "Consigne automatique dans l'aile droite de l'aérogare, niveau 1. Casier standard 200 ₽ de l'heure ou 500 ₽ par période de 24 heures, grand casier 300 ₽ de l'heure ou 800 ₽ par période de 24 heures. Emballage des bagages au même endroit, à partir de 950 ₽ par bagage."
   },
   "kids": {
    "title": "Avec un enfant",

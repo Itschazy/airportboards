@@ -10,6 +10,11 @@
       "title": "Sheraton Milan Malpensa",
       "hint": "وصول مباشر إلى المبنى 1",
       "text": "يوفر Sheraton Milan Malpensa Airport Hotel & Conference Centre وصولًا مباشرًا إلى المبنى 1. يضم الفندق مسبحًا داخليًا ومركز لياقة وسبا ومطاعم، وتتميز الأجنحة بعزل الصوت."
+    },
+    "terminals": {
+      "title": "مبنى الركاب",
+      "hint": "حافلة مجانية T1–T2",
+      "text": "تعمل حافلة نقل مجانية بين مبنيي الركاب 1 و2."
     }
   }
 }

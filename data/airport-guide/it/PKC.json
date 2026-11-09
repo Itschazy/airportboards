@@ -19,8 +19,8 @@
     },
     "storage": {
       "title": "Deposito bagagli",
-      "hint": "Livello 1, 600 ₽/giorno",
-      "text": "Deposito bagagli al livello 1 del terminal. 300 ₽ fino a 1 ora, poi 600 ₽ al giorno. Gli oggetti si accettano solo imballati. Imballaggio bagagli al livello 1 dalle 7:00 alle 19:00, da 1 000 ₽ a collo."
+      "hint": "Livello 1, 600 ₽/24 h",
+      "text": "Deposito bagagli al livello 1 del terminal. 300 ₽ fino a 1 ora, poi 600 ₽ ogni 24 ore. Gli oggetti si accettano solo imballati. Imballaggio bagagli al livello 1 dalle 7:00 alle 19:00, da 1 000 ₽ a collo."
     },
     "sleep": {
       "title": "Dove dormire",

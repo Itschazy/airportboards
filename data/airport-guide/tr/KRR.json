@@ -19,7 +19,7 @@
   },
   "storage": {
    "title": "Emanet",
-   "hint": "24/7, günlüğü 400 ₽",
+   "hint": "İlk 24 saat 400 ₽",
    "text": "Terminal önü meydanında, gece gündüz açık. İlk 24 saat parça başına 400 ₽, sonraki her 24 saat 200 ₽. Bir parçanın ağırlığı en fazla 30 kg."
   },
   "kids": {
@@ -30,7 +30,7 @@
   "parking": {
    "title": "Otopark",
    "hint": "15 dk ücretsiz, saati 400₽",
-   "text": "Terminal önü meydanı: ilk 15 dakika ücretsiz, sonrası saati 400 ₽. Meydanın sağında ek saatlik otopark: saati 250 ₽. Günlük otopark günlüğü 900 ₽. Alternatif otopark ücretsiz."
+   "text": "Terminal önü meydanı: ilk 15 dakika ücretsiz, sonrası saati 400 ₽. Meydanın sağında ek saatlik otopark: saati 250 ₽. Günlük otopark 24 saati 900 ₽. Alternatif otopark ücretsiz."
   },
   "wifi": {
    "title": "Wi‑Fi",

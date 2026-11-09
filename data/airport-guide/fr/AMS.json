@@ -4,7 +4,7 @@
   "transport": {
    "title": "Comment s'y rendre",
    "hint": "Train NS vers Amsterdam CS",
-   "text": "La gare NS se trouve juste sous le bâtiment du terminal, on y descend par escalator ou ascenseur. Entre Amsterdam CS et l'aéroport, le train circule 8 fois par heure, avec arrêts à Sloterdijk et Lelylaan, et part toujours de l'aéroport depuis la voie 3. Depuis Amsterdam, Utrecht, Leyde, La Haye, Delft et Rotterdam, on peut rejoindre l'aéroport jour et nuit, souvent sans correspondance. Le billet s'achète à l'aéroport, ou l'on paie par carte sans contact ou téléphone en validant aux bornes jaunes en haut des escalators et des ascenseurs de Schiphol Plaza."
+   "text": "La gare NS se trouve juste sous le bâtiment du terminal, on y descend par escalator ou ascenseur. Entre Amsterdam CS et l'aéroport, le train circule 8 fois par heure, avec arrêts à Sloterdijk et Lelylaan, et part toujours de l'aéroport depuis la voie 3. Depuis Amsterdam, Utrecht, Leyde, La Haye, Delft et Rotterdam, on peut rejoindre l'aéroport jour et nuit, souvent sans correspondance. Le billet s'achète à l'aéroport, ou l'on paie par carte sans contact ou téléphone en validant aux bornes jaunes en haut des escalators et des ascenseurs de Schiphol Plaza. Si vous payez par carte bancaire ou téléphone, validez à l’entrée et à la sortie."
   },
   "taxi": {
    "title": "Taxi",
@@ -19,7 +19,7 @@
   "sleep": {
    "title": "Où dormir",
    "hint": "YOTELAIR et Mercure après contrôle",
-   "text": "Après le contrôle, deux hôtels sont ouverts jour et nuit : le Mercure Hotel dans le Lounge 3 et le YOTELAIR dans le Lounge 2, tous deux sur le chemin des portes D1–D57, E, F, G et H. On peut accéder au YOTELAIR même sans visa pour les Pays-Bas."
+   "text": "Après le contrôle, deux hôtels sont ouverts jour et nuit : le Mercure Hotel dans le Lounge 3 et le YOTELAIR dans le Lounge 2, tous deux sur le chemin des portes D1–D57, E, F, G et H. On peut accéder au YOTELAIR même sans visa pour les Pays-Bas. Pour séjourner au Mercure, il faut avoir un vol au départ le jour du départ de l’hôtel ; seuls les bagages à main sont autorisés dans l’hôtel."
   },
   "kids": {
    "title": "Avec un enfant",

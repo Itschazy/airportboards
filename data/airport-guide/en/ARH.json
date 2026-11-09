@@ -15,12 +15,12 @@
   "storage": {
    "title": "Left luggage",
    "hint": "Pavilion 3, 24/7",
-   "text": "Left luggage in Pavilion No. 3, open round the clock. An item up to 30 kg and shorter than 1 m costs 250 ₽ per day. Documents, money, valuables and perishable food are not accepted."
+   "text": "Left luggage in Pavilion No. 3, open round the clock. An item up to 30 kg and shorter than 1 m costs 250 ₽ per 24 hours. Documents, money, valuables and perishable food are not accepted."
   },
   "parking": {
    "title": "Parking",
    "hint": "30 min free at P2",
-   "text": "Short-stay P2: 30 minutes free, then 150 ₽ per hour, over 4 hours 800 ₽ per day. Long-stay P1: 400 ₽ per day from the first minute. Free P4 with 70 spaces 200 m from the terminal, no time limit. Lost parking ticket: 2,000 ₽."
+   "text": "Short-stay P2: 30 minutes free, then 150 ₽ per hour, over 4 hours 800 ₽ per 24 hours. Long-stay P1: 400 ₽ per 24 hours from the first minute. Free P4 with 70 spaces 200 m from the terminal, no time limit. Lost parking ticket: 2,000 ₽."
   }
  }
 }

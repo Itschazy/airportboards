@@ -4,7 +4,7 @@
   "taxi": {
    "title": "Taxi",
    "hint": "Livello 1, porte 4–7, +50 baht",
-   "text": "Il banco informazioni taxi e i distributori di tagliandi si trovano nel terminal passeggeri al livello 1, tra le porte 4 e 7. Alla tariffa si aggiunge un supplemento di 50 baht a favore del conducente, stabilito dal Ministero dei Trasporti; i pedaggi sono a carico del passeggero. Ci sono corse a breve distanza, nei dintorni dell’aeroporto, non oltre 20 km; per le distanze normali, secondo le regole del Dipartimento dei trasporti terrestri, il prezzo si può concordare con il conducente."
+   "text": "Il banco informazioni taxi e i distributori di tagliandi si trovano nel terminal passeggeri al livello 1, tra le porte 4 e 7. Alla tariffa si aggiunge un supplemento di 50 baht a favore del conducente, stabilito dal Ministero dei Trasporti; i pedaggi sono a carico del passeggero. Ci sono corse a breve distanza, nei dintorni dell’aeroporto, non oltre 20 km."
   },
   "terminals": {
    "title": "Terminal",

@@ -15,7 +15,7 @@
   "storage": {
    "title": "Gepäckaufbewahrung",
    "hint": "Ebene 1, ab 250 ₽/Std.",
-   "text": "Automatische Gepäckaufbewahrung auf Ebene 1, links vom Ausgang der Gepäckausgabe für Inlandsflüge. Standardfach: 250 ₽ pro Stunde oder 550 ₽ pro Tag. Großes Fach: 350 ₽ pro Stunde oder 900 ₽ pro Tag. Garderobe: 100 ₽ pro Tag."
+   "text": "Automatische Gepäckaufbewahrung auf Ebene 1, links vom Ausgang der Gepäckausgabe für Inlandsflüge. Standardfach: 250 ₽ pro Stunde oder 550 ₽ je 24 Stunden. Großes Fach: 350 ₽ pro Stunde oder 900 ₽ je 24 Stunden. Garderobe: 100 ₽ je 24 Stunden."
   },
   "kids": {
    "title": "Mit Kind",
@@ -25,7 +25,7 @@
   "parking": {
    "title": "Parken",
    "hint": "15 Min. kostenlos",
-   "text": "Hol- und Bringzone: die ersten 15 Minuten kostenlos, von der 16. bis zur 60. Minute 890 ₽, danach 890 ₽ pro Stunde. Parkplatz P am Terminal: bis 1 Stunde 370 ₽, von 1 bis 24 Stunden 750 ₽, bis 2 Tage 1500 ₽. Kostenloser Parkplatz rund um die Uhr 700 m vom Terminal, unbewacht. Erste Reihe (VIP-Zone): 3000 ₽ pro Einfahrt."
+   "text": "Hol- und Bringzone: die ersten 15 Minuten kostenlos, von der 16. bis zur 60. Minute 890 ₽, danach 890 ₽ pro Stunde. Parkplatz P am Terminal: bis 1 Stunde 370 ₽, von 1 bis 24 Stunden 750 ₽, bis zu 2 Zeiträumen von je 24 Stunden 1500 ₽. Kostenloser Parkplatz rund um die Uhr 700 m vom Terminal, unbewacht. Erste Reihe (VIP-Zone): 3000 ₽ pro Einfahrt."
   },
   "wifi": {
    "title": "Wi‑Fi",

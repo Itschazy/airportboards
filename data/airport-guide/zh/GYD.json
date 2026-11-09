@@ -19,11 +19,11 @@
     "parking": {
       "title": "停车",
       "hint": "前15分钟免费，24/7",
-      "text": "24小时开放，车位超过2000个：1号航站楼旁835个，2号航站楼旁1166个。前15分钟免费，2小时内1 AZN，4小时内2 AZN，12小时内6 AZN，一天内15 AZN，之后每天加收15 AZN。可用现金、银行卡或在线支付（Tezöde、AzParkinq、Birbank）。"
+      "text": "24小时开放，车位超过2000个：1号航站楼旁835个，2号航站楼旁1166个。前15分钟免费，2小时内1 AZN，4小时内2 AZN，12小时内6 AZN，24小时内15 AZN，之后每天加收15 AZN。可用现金、银行卡或在线支付（Tezöde、AzParkinq、Birbank）。"
     },
     "wifi": {
       "title": "Wi‑Fi",
-      "hint": "Baku-Airport-Free-WiFi",
+      "hint": "免费Wi-Fi",
       "text": "整个航站楼提供免费Wi‑Fi，包括咖啡馆、商店和商务休息室：网络名Baku-Airport-Free-WiFi。1号航站楼出发区设有可免费上网的电脑。"
     }
   }

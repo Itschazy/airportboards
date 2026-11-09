@@ -19,8 +19,8 @@
   },
   "parking": {
    "title": "Parking",
-   "hint": "300 ₽/day",
-   "text": "Paid car park, 300 ₽ per day. No booking or prepayment; pay when parking, subject to availability. The time to collect the car is agreed by phone 43-18-00."
+   "hint": "300 ₽/24 hours",
+   "text": "Paid car park, 300 ₽ per 24 hours. No booking or prepayment; pay when parking, subject to availability. The time to collect the car is agreed by phone 43-18-00."
   },
   "wifi": {
    "title": "Wi‑Fi",

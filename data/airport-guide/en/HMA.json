@@ -25,7 +25,7 @@
   "parking": {
    "title": "Parking",
    "hint": "20 min free",
-   "text": "Station forecourt: up to 20 minutes free, from minute 21 to 4 hours 300 ₽ per hour, a part hour counts as a full hour. From the 5th hour 1,200 ₽ per day, following days 1,200 ₽. A repeat entry within 20 minutes is paid, 300 ₽ per hour."
+   "text": "Airport terminal forecourt: up to 20 minutes free, from minute 21 to 4 hours 300 ₽ per hour, a part hour counts as a full hour. From the 5th hour 1,200 ₽ per 24 hours, each subsequent 24-hour period 1,200 ₽. A repeat entry within 20 minutes is paid, 300 ₽ per hour."
   }
  }
 }

@@ -10,6 +10,11 @@
       "title": "Sheraton Milan Malpensa",
       "hint": "ターミナル1へ直接アクセス",
       "text": "Sheraton Milan Malpensa Airport Hotel & Conference Centreからはターミナル1へ直接アクセスできます。ホテルには屋内プール、フィットネスセンター、スパ、レストランがあり、スイート客室には防音設備があります。"
+    },
+    "terminals": {
+      "title": "ターミナル",
+      "hint": "T1—T2無料シャトル",
+      "text": "ターミナル1と2の間を無料シャトルが運行しています。"
     }
   }
 }

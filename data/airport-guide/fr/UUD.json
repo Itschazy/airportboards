@@ -20,7 +20,7 @@
   "parking": {
    "title": "Parking",
    "hint": "15 min gratuites",
-   "text": "Courte durée P1 près du terminal : jusqu'à 15 minutes gratuit, 16–60 minutes 500 ₽, deuxième heure 300 ₽, troisième et quatrième 200 ₽ chacune, à partir de la 241e minute 1200 ₽, 24 heures maximum. Longue durée : jusqu'à 3 jours 800 ₽ par jour, du 4e au 6e 500 ₽."
+   "text": "Courte durée P1 près du terminal : jusqu'à 15 minutes gratuit, 16–60 minutes 500 ₽, deuxième heure 300 ₽, troisième et quatrième 200 ₽ chacune, à partir de la 241e minute 1200 ₽, 24 heures maximum. Longue durée : jusqu’à 3 tranches de 24 heures, 800 ₽ par 24 heures ; de la 4e à la 6e tranche, 500 ₽ par 24 heures."
   },
   "wifi": {
    "title": "Wi‑Fi",

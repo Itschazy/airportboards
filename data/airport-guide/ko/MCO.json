@@ -23,7 +23,7 @@
   },
   "parking": {
    "title": "주차",
-   "hint": "C 주차 건물 예약 1일 $32",
+   "hint": "C 예약 24시간 $32",
    "text": "터미널 A·B 옆에는 A·B 주차 건물, Terminal Top Parking, 발레 파킹이 있고, 터미널 C 옆에는 C 주차 건물, 철도역 옆에는 야외 주차장 Atlantis, Discovery, Endeavour가 있습니다. 이코노미 주차장은 North Park Place, South Park Place, West Park입니다. C 주차 건물은 예약할 수 있습니다: 24시간 $32, 최대 45일. 높이 7피트 초과 또는 길이 25피트 이하 차량은 South Park Place에서 받습니다. 주차 건물에서는 전용 차로에서 E-PASS/SunPass로 결제할 수 있습니다."
   },
   "wifi": {

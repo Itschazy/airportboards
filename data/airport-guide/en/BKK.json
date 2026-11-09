@@ -4,7 +4,7 @@
   "taxi": {
    "title": "Taxi",
    "hint": "Level 1, doors 4–7, +50 baht",
-   "text": "The taxi information counter and ticket machines are in the passenger terminal on Level 1, between doors 4 and 7. A 50 baht fee for the driver is added to the fare by order of the Ministry of Transport; the passenger pays the tolls. Short-distance trips are available — around the airport, no farther than 20 km; for regular distances, under Department of Land Transport rules, the price can be agreed with the driver."
+   "text": "The taxi information counter and ticket machines are in the passenger terminal on Level 1, between doors 4 and 7. A 50 baht fee for the driver is added to the fare by order of the Ministry of Transport; the passenger pays the tolls. Short-distance trips are available — around the airport, no farther than 20 km."
   },
   "terminals": {
    "title": "Terminals",

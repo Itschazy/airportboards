@@ -18,8 +18,8 @@
   },
   "parking": {
    "title": "Aparcamiento",
-   "hint": "15 min gratis",
-   "text": "Plaza de la terminal, a 30 m de la terminal: menos de 15 minutos gratis, más de 15 minutos 200 ₽ por hora, más de una hora 600 ₽ por día."
+   "hint": "Menos de 15 min gratis",
+   "text": "Plaza de la terminal, a 30 m de la terminal: menos de 15 minutos gratis, más de 15 minutos 200 ₽ por hora, más de una hora 600 ₽ por cada 24 horas."
   },
   "wifi": {
    "title": "Wi‑Fi",

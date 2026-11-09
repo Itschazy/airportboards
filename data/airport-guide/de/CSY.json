@@ -14,13 +14,13 @@
   },
   "storage": {
    "title": "Gepäckaufbewahrung",
-   "hint": "300 ₽ pro Tag",
-   "text": "Gepäckaufbewahrung: 300 ₽ für 1 Gepäckstück pro Tag."
+   "hint": "300 ₽ je 24 Stunden",
+   "text": "Gepäckaufbewahrung: 300 ₽ für 1 Gepäckstück je 24 Stunden."
   },
   "parking": {
    "title": "Parken",
    "hint": "15 Min. kostenlos",
-   "text": "Die ersten 15 Minuten kostenlos. Pkw: 100 ₽ pro Stunde, 450 ₽ pro Tag, ab 3 Tagen 400 ₽ pro Tag. UAZ, „GAZelle“, „Sobol“: 200 ₽ pro Stunde, 650 ₽ pro Tag. Verlust des Belegs 500 ₽. Telefon 8 (8352) 22-94-03, Durchwahl 2-95."
+   "text": "Die ersten 15 Minuten kostenlos. Pkw: 100 ₽ pro Stunde, 450 ₽ je 24 Stunden, ab 3 Zeiträumen von je 24 Stunden 400 ₽ je 24 Stunden. UAZ, „GAZelle“, „Sobol“: 200 ₽ pro Stunde, 650 ₽ je 24 Stunden. Verlust des Belegs 500 ₽. Telefon 8 (8352) 22-94-03, Durchwahl 2-95."
   }
  }
 }

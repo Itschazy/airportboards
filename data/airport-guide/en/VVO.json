@@ -1,6 +1,6 @@
 {
  "iata": "VVO",
- "about": "The airport is in the town of Artyom, Primorsky Krai. The route network has more than 40 destinations, served by more than 20 Russian and foreign airlines. There are lounges for domestic and international departures.",
+ "about": "The airport is in the town of Artyom, Primorsky Krai. The route network has more than 40 destinations, served by more than 20 Russian and foreign airlines. There are departure halls for domestic and international flights.",
  "blocks": {
   "transport": {
    "title": "Getting there",
@@ -14,7 +14,7 @@
   },
   "storage": {
    "title": "Left luggage",
-   "hint": "Level 1, 24/7, from 400 ₽",
+   "hint": "Level 1, 24/7",
    "text": "Level 1, behind the escalator, open round the clock. Standard rate: 500 ₽ for the first 24 hours, 200 ₽ for each further 24 hours, item up to 203 cm in total dimensions. An incomplete 24-hour period counts as a full one."
   },
   "sleep": {

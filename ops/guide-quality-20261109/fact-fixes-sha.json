@@ -1,0 +1,74 @@
+[
+  {
+    "file": "data/airport-guide/SHA.json",
+    "block": "storage",
+    "before": "В терминале 1 камера хранения находится напротив Gate 6 в зале вылета и работает с 07:00 до 20:30, с учётом фактического режима работы на месте. Багаж принимается платно на срок до 1 месяца. Пассажирам с паспортом, дающим право на 240-часовой безвизовый транзит, предоставляют бесплатное хранение 1 места багажа на 72 часа. Для сдачи и получения нужен действительный документ; вещи проверяют рентгеном.",
+    "after": "В терминале 1 камера хранения находится напротив двери 6 в общедоступной зоне вылета и работает с 07:00 до 20:30, с учётом фактического режима работы на месте. Багаж принимается платно на срок до 1 месяца. Пассажирам с паспортом, дающим право на 240-часовой безвизовый транзит, предоставляют бесплатное хранение 1 места багажа на 72 часа. Для сдачи и получения нужен действительный документ; вещи проверяют рентгеном."
+  },
+  {
+    "file": "data/airport-guide/en/SHA.json",
+    "block": "storage",
+    "before": "In Terminal 1, the left-luggage facility is opposite Gate 6 in the departures hall and is open from 07:00 to 20:30, subject to actual operating hours on site. Baggage can be stored for a fee for up to 1 month. Passengers whose passports qualify for 240-hour visa-free transit can store 1 piece of baggage free for 72 hours. A valid document is required to deposit and collect baggage; items undergo X-ray screening.",
+    "after": "In Terminal 1, the left-luggage facility is opposite door 6 in the public departures area and is open from 07:00 to 20:30, subject to actual operating hours on site. Baggage can be stored for a fee for up to 1 month. Passengers whose passports qualify for 240-hour visa-free transit can store 1 piece of baggage free for 72 hours. A valid document is required to deposit and collect baggage; items undergo X-ray screening."
+  },
+  {
+    "file": "data/airport-guide/de/SHA.json",
+    "block": "storage",
+    "before": "In Terminal 1 liegt die Gepäckaufbewahrung gegenüber Gate 6 in der Abflughalle und ist von 07:00 bis 20:30 geöffnet; die tatsächlichen Öffnungszeiten vor Ort sind maßgeblich. Gepäck kann gegen Gebühr bis zu 1 Monat aufbewahrt werden. Reisende, deren Reisepass zum visumfreien Transit von 240 Stunden berechtigt, können 1 Gepäckstück für 72 Stunden kostenlos aufbewahren lassen. Für Abgabe und Abholung ist ein gültiges Ausweisdokument nötig; die Gegenstände werden geröntgt.",
+    "after": "In Terminal 1 liegt die Gepäckaufbewahrung gegenüber Tür 6 im öffentlich zugänglichen Abflugbereich und ist von 07:00 bis 20:30 geöffnet; die tatsächlichen Öffnungszeiten vor Ort sind maßgeblich. Gepäck kann gegen Gebühr bis zu 1 Monat aufbewahrt werden. Reisende, deren Reisepass zum visumfreien Transit von 240 Stunden berechtigt, können 1 Gepäckstück für 72 Stunden kostenlos aufbewahren lassen. Für Abgabe und Abholung ist ein gültiges Ausweisdokument nötig; die Gegenstände werden geröntgt."
+  },
+  {
+    "file": "data/airport-guide/fr/SHA.json",
+    "block": "storage",
+    "before": "Dans le terminal 1, la consigne se trouve face à Gate 6 dans le hall des départs et est ouverte de 07:00 à 20:30, sous réserve des horaires effectivement appliqués sur place. Les bagages peuvent être conservés moyennant paiement pendant une durée maximale de 1 mois. Les passagers dont le passeport donne droit au transit sans visa de 240 heures bénéficient de l’entreposage gratuit de 1 bagage pendant 72 heures. Une pièce d’identité valide est nécessaire pour le dépôt et le retrait ; les objets sont contrôlés aux rayons X.",
+    "after": "Dans le terminal 1, la consigne se trouve en face de la porte d’entrée 6 dans la zone publique des départs et est ouverte de 07:00 à 20:30, sous réserve des horaires effectivement appliqués sur place. Les bagages peuvent être conservés moyennant paiement pendant une durée maximale de 1 mois. Les passagers dont le passeport donne droit au transit sans visa de 240 heures bénéficient de l’entreposage gratuit de 1 bagage pendant 72 heures. Une pièce d’identité valide est nécessaire pour le dépôt et le retrait ; les objets sont contrôlés aux rayons X."
+  },
+  {
+    "file": "data/airport-guide/es/SHA.json",
+    "block": "storage",
+    "before": "En el terminal 1, la consigna está frente a Gate 6 en el vestíbulo de salidas y abre de 07:00 a 20:30, sujeta al horario real aplicado en el lugar. El servicio de consigna es de pago y permite guardar el equipaje durante un máximo de 1 mes. Los pasajeros cuyo pasaporte permite el tránsito sin visado de 240 horas pueden guardar gratis 1 bulto durante 72 horas. Se requiere un documento de identidad válido para entregar y recoger el equipaje; los objetos pasan por rayos X.",
+    "after": "En el terminal 1, la consigna está frente a la puerta de acceso 6 en la zona pública de salidas y abre de 07:00 a 20:30, sujeta al horario real aplicado en el lugar. El servicio de consigna es de pago y permite guardar el equipaje durante un máximo de 1 mes. Los pasajeros cuyo pasaporte permite el tránsito sin visado de 240 horas pueden guardar gratis 1 bulto durante 72 horas. Se requiere un documento de identidad válido para entregar y recoger el equipaje; los objetos pasan por rayos X."
+  },
+  {
+    "file": "data/airport-guide/it/SHA.json",
+    "block": "storage",
+    "before": "Nel terminal 1 il deposito bagagli si trova di fronte a Gate 6 nella sala partenze ed è aperto dalle 07:00 alle 20:30, salvo gli orari effettivamente applicati sul posto. Il bagaglio viene custodito a pagamento fino a 1 mese. I passeggeri il cui passaporto dà diritto al transito senza visto di 240 ore possono depositare gratuitamente 1 collo per 72 ore. Per consegna e ritiro è necessario un documento d’identità valido; gli oggetti vengono controllati ai raggi X.",
+    "after": "Nel terminal 1 il deposito bagagli si trova di fronte alla porta d’ingresso 6 nell’area pubblica delle partenze ed è aperto dalle 07:00 alle 20:30, salvo gli orari effettivamente applicati sul posto. Il bagaglio viene custodito a pagamento fino a 1 mese. I passeggeri il cui passaporto dà diritto al transito senza visto di 240 ore possono depositare gratuitamente 1 collo per 72 ore. Per consegna e ritiro è necessario un documento d’identità valido; gli oggetti vengono controllati ai raggi X."
+  },
+  {
+    "file": "data/airport-guide/tr/SHA.json",
+    "block": "storage",
+    "before": "Terminal 1’deki bagaj muhafazası, gidiş salonunda Gate 6’nın karşısındadır; yerinde uygulanan fiilî saatler esas olmak üzere 07:00–20:30 arasında açıktır. Bagaj en fazla 1 ay ücretli olarak saklanır. 240 saatlik vizesiz transit hakkı tanıyan pasaporta sahip yolcular, 1 parça bagajını 72 saat ücretsiz bırakabilir. Teslim ve teslim alma için geçerli kimlik belgesi gerekir; eşyalar X-ray kontrolünden geçirilir.",
+    "after": "Terminal 1’deki bagaj muhafazası, halka açık gidiş alanında 6 numaralı giriş kapısının karşısındadır; yerinde uygulanan fiilî saatler esas olmak üzere 07:00–20:30 arasında açıktır. Bagaj en fazla 1 ay ücretli olarak saklanır. 240 saatlik vizesiz transit hakkı tanıyan pasaporta sahip yolcular, 1 parça bagajını 72 saat ücretsiz bırakabilir. Teslim ve teslim alma için geçerli kimlik belgesi gerekir; eşyalar X-ray kontrolünden geçirilir."
+  },
+  {
+    "file": "data/airport-guide/zh/SHA.json",
+    "block": "storage",
+    "before": "1号航站楼行李寄存处位于出发大厅Gate 6对面，营业时间为07:00至20:30，以现场实际运营时间为准。行李可付费寄存最长1个月。持有符合240小时过境免签条件护照的旅客，可免费寄存1件行李72小时。寄存和领取时均须出示有效证件，寄存物品须经X光检查。",
+    "after": "1号航站楼行李寄存处位于出发公共区6号门对面，营业时间为07:00至20:30，以现场实际运营时间为准。行李可付费寄存最长1个月。持有符合240小时过境免签条件护照的旅客，可免费寄存1件行李72小时。寄存和领取时均须出示有效证件，寄存物品须经X光检查。"
+  },
+  {
+    "file": "data/airport-guide/ja/SHA.json",
+    "block": "storage",
+    "before": "ターミナル1の手荷物預かりは出発ロビーのGate 6の向かいにあり、営業時間は07:00～20:30ですが、現地の実際の運用時間によります。手荷物は有料で最長1か月預けられます。240時間のビザなしトランジットの対象となる旅券を持つ利用者は、手荷物1個を72時間無料で預けられます。預け入れと受け取りの両方に有効な身分証明書が必要で、荷物はX線検査を受けます。",
+    "after": "ターミナル1の手荷物預かりは出発エリアの一般区域にある出入口6の向かいにあり、営業時間は07:00～20:30ですが、現地の実際の運用時間によります。手荷物は有料で最長1か月預けられます。240時間のビザなしトランジットの対象となる旅券を持つ利用者は、手荷物1個を72時間無料で預けられます。預け入れと受け取りの両方に有効な身分証明書が必要で、荷物はX線検査を受けます。"
+  },
+  {
+    "file": "data/airport-guide/ko/SHA.json",
+    "block": "storage",
+    "before": "터미널 1 수하물 보관소는 출발 홀 Gate 6 맞은편에 있으며, 운영 시간은 07:00–20:30이지만 현장 실제 운영 시간에 따릅니다. 수하물은 유료로 최대 1개월 보관할 수 있습니다. 240시간 무비자 환승 자격이 있는 여권을 소지한 승객은 수하물 1개를 72시간 무료로 보관할 수 있습니다. 맡길 때와 찾을 때 모두 유효한 신분증이 필요하며, 물품은 X선 검사를 받습니다.",
+    "after": "터미널 1 수하물 보관소는 출발 구역 일반구역의 출입문 6번 맞은편에 있으며, 운영 시간은 07:00–20:30이지만 현장 실제 운영 시간에 따릅니다. 수하물은 유료로 최대 1개월 보관할 수 있습니다. 240시간 무비자 환승 자격이 있는 여권을 소지한 승객은 수하물 1개를 72시간 무료로 보관할 수 있습니다. 맡길 때와 찾을 때 모두 유효한 신분증이 필요하며, 물품은 X선 검사를 받습니다."
+  },
+  {
+    "file": "data/airport-guide/ar/SHA.json",
+    "block": "storage",
+    "before": "يقع مكتب حفظ الأمتعة في مبنى الركاب 1 مقابل Gate 6 بصالة المغادرة، ويعمل من 07:00 إلى 20:30، وفق ساعات التشغيل الفعلية في الموقع. تُقبل الأمتعة مقابل رسوم لمدة تصل إلى 1 شهر. يُتاح لحاملي جوازات السفر المؤهلة للعبور دون تأشيرة لمدة 240 ساعة حفظ 1 قطعة أمتعة مجانًا لمدة 72 ساعة. يلزم مستند هوية صالح عند الإيداع والاستلام، وتُفحص الأمتعة بالأشعة السينية.",
+    "after": "يقع مكتب حفظ الأمتعة في مبنى الركاب 1 مقابل باب الدخول 6 في المنطقة العامة للمغادرة، ويعمل من 07:00 إلى 20:30، وفق ساعات التشغيل الفعلية في الموقع. تُقبل الأمتعة مقابل رسوم لمدة تصل إلى 1 شهر. يُتاح لحاملي جوازات السفر المؤهلة للعبور دون تأشيرة لمدة 240 ساعة حفظ 1 قطعة أمتعة مجانًا لمدة 72 ساعة. يلزم مستند هوية صالح عند الإيداع والاستلام، وتُفحص الأمتعة بالأشعة السينية."
+  },
+  {
+    "file": "data/airport-guide/hi/SHA.json",
+    "block": "storage",
+    "before": "टर्मिनल 1 का सामान रखने का केंद्र प्रस्थान हॉल में Gate 6 के सामने है। समय 07:00–20:30 है, लेकिन मौके पर वास्तविक संचालन समय लागू होता है। सामान शुल्क देकर अधिकतम 1 महीने तक रखा जा सकता है। 240 घंटे के वीज़ा-मुक्त ट्रांज़िट की पात्रता देने वाला पासपोर्ट रखने वाले यात्री 1 नग सामान 72 घंटे के लिए निःशुल्क रख सकते हैं। सामान जमा करने और लेने, दोनों समय वैध पहचान दस्तावेज़ चाहिए; सामान की एक्स-रे जाँच होती है।",
+    "after": "टर्मिनल 1 का सामान रखने का केंद्र प्रस्थान क्षेत्र के सार्वजनिक हिस्से में प्रवेश द्वार 6 के सामने है। समय 07:00–20:30 है, लेकिन मौके पर वास्तविक संचालन समय लागू होता है। सामान शुल्क देकर अधिकतम 1 महीने तक रखा जा सकता है। 240 घंटे के वीज़ा-मुक्त ट्रांज़िट की पात्रता देने वाला पासपोर्ट रखने वाले यात्री 1 नग सामान 72 घंटे के लिए निःशुल्क रख सकते हैं। सामान जमा करने और लेने, दोनों समय वैध पहचान दस्तावेज़ चाहिए; सामान की एक्स-रे जाँच होती है।"
+  }
+]

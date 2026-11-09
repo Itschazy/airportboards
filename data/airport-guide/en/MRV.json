@@ -24,8 +24,8 @@
   },
   "parking": {
    "title": "Parking",
-   "hint": "15 min free",
-   "text": "Short-stay car park P1 at the departure hall: less than 15 minutes free, 15–60 minutes 500 ₽, then 500 ₽ per hour, over 4 hours 1,200 ₽ per day. A repeat entry within an hour 500 ₽. There is a free car park in the adjacent area; its location is on the parking map."
+   "hint": "Under 15 minutes free",
+   "text": "Short-stay car park P1 at the departure hall: less than 15 minutes free, 15–60 minutes 500 ₽, then 500 ₽ per hour, over 4 hours 1,200 ₽ per 24 hours. A repeat entry within an hour 500 ₽. There is a free car park in the adjacent area; its location is on the parking map."
   }
  }
 }

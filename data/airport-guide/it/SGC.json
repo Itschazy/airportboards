@@ -14,13 +14,13 @@
   },
   "storage": {
    "title": "Deposito bagagli",
-   "hint": "24/7, 400 ₽ al giorno",
+   "hint": "Primo giorno di calendario: 400 ₽",
    "text": "Aperto giorno e notte. Il primo giorno 400 ₽ (fino alle 00:00), poi 200 ₽ al giorno, il giorno iniziato conta come intero. Peso di un collo fino a 30 kg."
   },
   "parking": {
    "title": "Parcheggio",
    "hint": "20 min gratis",
-   "text": "Sul piazzale dell’aerostazione i primi 20 minuti gratis. Area per soste lunghe da 50 auto subito dietro la pensilina della fermata: 750 ₽ al giorno. Pagamento alle casse dell’aerostazione e alle casse automatiche presso l’ingresso centrale e nella sala arrivi."
+   "text": "Sul piazzale dell’aerostazione i primi 20 minuti gratis. Area per soste lunghe da 50 auto subito dietro la pensilina della fermata: 750 ₽ ogni 24 ore. Pagamento alle casse dell’aerostazione e alle casse automatiche presso l’ingresso centrale e nella sala arrivi."
   }
  }
 }

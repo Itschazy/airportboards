@@ -19,7 +19,7 @@
   },
   "storage": {
    "title": "Gepäckaufbewahrung",
-   "hint": "24/7, 400 ₽ pro Tag",
+   "hint": "400 ₽ für die ersten 24 Stunden",
    "text": "Auf dem Vorplatz, rund um die Uhr. 400 ₽ pro Gepäckstück für die ersten 24 Stunden, 200 ₽ für je weitere 24 Stunden. Gewicht eines Gepäckstücks bis 30 kg."
   },
   "kids": {
@@ -30,7 +30,7 @@
   "parking": {
    "title": "Parken",
    "hint": "15 Min. kostenlos, 400 ₽/Std.",
-   "text": "Vorplatz: die ersten 15 Minuten kostenlos, danach 400 ₽ pro Stunde. Zusätzlicher Stundenparkplatz rechts vom Vorplatz: 250 ₽ pro Stunde. Tagesparkplatz 900 ₽ pro Tag. Der Ausweichparkplatz ist kostenlos."
+   "text": "Vorplatz: die ersten 15 Minuten kostenlos, danach 400 ₽ pro Stunde. Zusätzlicher Stundenparkplatz rechts vom Vorplatz: 250 ₽ pro Stunde. Tagesparkplatz 900 ₽ je 24 Stunden. Der Ausweichparkplatz ist kostenlos."
   },
   "wifi": {
    "title": "Wi‑Fi",

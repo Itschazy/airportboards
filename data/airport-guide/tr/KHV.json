@@ -35,7 +35,7 @@
   "parking": {
    "title": "Otopark",
    "hint": "15 dakika ücretsiz",
-   "text": "İç hatlar terminalinin karşısında kısa süreli P2: 15 dk'ya kadar ücretsiz, 30 dk'ya kadar 150 ₽, 60 dk'ya kadar 300 ₽, 24 saate kadar 500 ₽. Dalaeronavigatsiya binasının karşısında uzun süreli P1: 4 güne kadar günlüğü 500 ₽, 5. günden itibaren 350 ₽. Süre sınırı olmayan ücretsiz otopark var."
+   "text": "İç hatlar terminalinin karşısında kısa süreli P2: 15 dk'ya kadar ücretsiz, 30 dk'ya kadar 150 ₽, 60 dk'ya kadar 300 ₽, 24 saate kadar 500 ₽. Dalaeronavigatsiya binasının karşısında uzun süreli P1: 4 adet 24 saatlik döneme kadar her 24 saat için 500 ₽, 5 adet 24 saatlik dönemden itibaren her 24 saat için 350 ₽. Süre sınırı olmayan ücretsiz otopark var."
   }
  }
 }

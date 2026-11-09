@@ -1,0 +1,1601 @@
+{
+  "scope": [
+    "DXB",
+    "EDI",
+    "EVN",
+    "EWR",
+    "EYK",
+    "FCO",
+    "FLL",
+    "FRA",
+    "FUK",
+    "GCI",
+    "GDX",
+    "GDZ",
+    "GLA",
+    "GOJ",
+    "GRU",
+    "GYD",
+    "HAN",
+    "HKG",
+    "HMA",
+    "HND",
+    "HYD",
+    "IAD",
+    "IAH",
+    "IAR",
+    "ICN",
+    "IGT",
+    "IJK",
+    "IKT",
+    "JER",
+    "JFK",
+    "KEJ",
+    "KGD",
+    "KHV",
+    "KIX",
+    "KRR",
+    "KUF",
+    "KUL",
+    "KVX",
+    "LAS",
+    "LAX"
+  ],
+  "locales": [
+    "en",
+    "de",
+    "fr",
+    "es",
+    "it",
+    "tr"
+  ],
+  "status": "proposed-only",
+  "changes": [
+    {
+      "file": "data/airport-guide/en/EYK.json",
+      "path": "blocks.storage.hint",
+      "before": "380 ₽ per day",
+      "after": "380 ₽ per 24 hours",
+      "reason": [
+        "Тариф RU сутки: период 24 часа"
+      ],
+      "fileSha256": "ac3c25a0255f80c11419b6c227114f8e7d9e802a0ee8af375a3a00e49eeab882"
+    },
+    {
+      "file": "data/airport-guide/en/EYK.json",
+      "path": "blocks.storage.text",
+      "before": "Left luggage: 380 ₽ per item per day (price list from 01.10.2026).",
+      "after": "Left luggage: 380 ₽ per item per 24 hours (price list from 01.10.2026).",
+      "reason": [
+        "Тариф RU сутки: период 24 часа"
+      ],
+      "fileSha256": "ac3c25a0255f80c11419b6c227114f8e7d9e802a0ee8af375a3a00e49eeab882"
+    },
+    {
+      "file": "data/airport-guide/de/EYK.json",
+      "path": "blocks.storage.hint",
+      "before": "380 ₽ pro Tag",
+      "after": "380 ₽ je 24 Stunden",
+      "reason": [
+        "Тариф RU сутки: период 24 часа"
+      ],
+      "fileSha256": "fa0ecfb4c29ae7b7686f5a5257fabb3739df3c904a0b08b10ac42b6944d68b6d"
+    },
+    {
+      "file": "data/airport-guide/de/EYK.json",
+      "path": "blocks.storage.text",
+      "before": "Gepäckaufbewahrung: 380 ₽ pro Gepäckstück und Tag (Preisliste ab 01.10.2026).",
+      "after": "Gepäckaufbewahrung: 380 ₽ pro Gepäckstück und 24 Stunden (Preisliste ab 01.10.2026).",
+      "reason": [
+        "Тариф RU сутки: период 24 часа"
+      ],
+      "fileSha256": "fa0ecfb4c29ae7b7686f5a5257fabb3739df3c904a0b08b10ac42b6944d68b6d"
+    },
+    {
+      "file": "data/airport-guide/fr/EYK.json",
+      "path": "blocks.storage.hint",
+      "before": "380 ₽ par jour",
+      "after": "380 ₽ par période de 24 heures",
+      "reason": [
+        "Тариф RU сутки: период 24 часа"
+      ],
+      "fileSha256": "caa92f11aff133ba25627c7657276cd9451824805d3fb3dfec92dfedecf0b915"
+    },
+    {
+      "file": "data/airport-guide/fr/EYK.json",
+      "path": "blocks.storage.text",
+      "before": "Consigne à bagages : 380 ₽ par bagage et par jour (tarifs à partir du 01.10.2026).",
+      "after": "Consigne à bagages : 380 ₽ par bagage et par période de 24 heures (tarifs à partir du 01.10.2026).",
+      "reason": [
+        "Тариф RU сутки: период 24 часа"
+      ],
+      "fileSha256": "caa92f11aff133ba25627c7657276cd9451824805d3fb3dfec92dfedecf0b915"
+    },
+    {
+      "file": "data/airport-guide/es/EYK.json",
+      "path": "blocks.storage.hint",
+      "before": "380 ₽ al día",
+      "after": "380 ₽ por cada 24 horas",
+      "reason": [
+        "Тариф RU сутки: период 24 часа"
+      ],
+      "fileSha256": "3289c93be252dbb9ed0a0d74c09ceaa6c5065776ca827510e9eeb842ccb668be"
+    },
+    {
+      "file": "data/airport-guide/es/EYK.json",
+      "path": "blocks.storage.text",
+      "before": "Consigna: 380 ₽ por bulto al día (tarifas desde el 01.10.2026).",
+      "after": "Consigna: 380 ₽ por bulto por cada 24 horas (tarifas desde el 01.10.2026).",
+      "reason": [
+        "Тариф RU сутки: период 24 часа"
+      ],
+      "fileSha256": "3289c93be252dbb9ed0a0d74c09ceaa6c5065776ca827510e9eeb842ccb668be"
+    },
+    {
+      "file": "data/airport-guide/it/EYK.json",
+      "path": "blocks.storage.hint",
+      "before": "380 ₽ al giorno",
+      "after": "380 ₽ ogni 24 ore",
+      "reason": [
+        "Тариф RU сутки: период 24 часа"
+      ],
+      "fileSha256": "8ecff81291d784ccc1e631609c671badffeea7de04b04f3355c81b74f8cf0c97"
+    },
+    {
+      "file": "data/airport-guide/it/EYK.json",
+      "path": "blocks.storage.text",
+      "before": "Deposito bagagli: 380 ₽ a collo al giorno (listino dal 01.10.2026).",
+      "after": "Deposito bagagli: 380 ₽ a collo ogni 24 ore (listino dal 01.10.2026).",
+      "reason": [
+        "Тариф RU сутки: период 24 часа"
+      ],
+      "fileSha256": "8ecff81291d784ccc1e631609c671badffeea7de04b04f3355c81b74f8cf0c97"
+    },
+    {
+      "file": "data/airport-guide/tr/EYK.json",
+      "path": "blocks.storage.hint",
+      "before": "Günlüğü 380 ₽",
+      "after": "24 saati 380 ₽",
+      "reason": [
+        "Тариф RU сутки: период 24 часа"
+      ],
+      "fileSha256": "3913a09de8e752f4083bd248527750ea24e1a91dd63faf472a7ba47d26fbeac2"
+    },
+    {
+      "file": "data/airport-guide/tr/EYK.json",
+      "path": "blocks.storage.text",
+      "before": "Emanet: parça başına günlük 380 ₽ (01.10.2026'dan itibaren geçerli tarife).",
+      "after": "Emanet: parça başına her 24 saatte 380 ₽ (01.10.2026'dan itibaren geçerli tarife).",
+      "reason": [
+        "Тариф RU сутки: период 24 часа"
+      ],
+      "fileSha256": "3913a09de8e752f4083bd248527750ea24e1a91dd63faf472a7ba47d26fbeac2"
+    },
+    {
+      "file": "data/airport-guide/en/GDX.json",
+      "path": "blocks.storage.text",
+      "before": "Automated left luggage for domestic passengers on Level 2, from 8:30 to 20:30, card payment only. Standard locker 51×63×76 cm 1,000 ₽ per day, large 51×195×76 cm 2,000 ₽; less than a day is charged as a full day.",
+      "after": "Automated left luggage for domestic passengers on Level 2, from 8:30 to 20:30, card payment only. Standard locker 51×63×76 cm 1,000 ₽ per 24 hours, large 51×195×76 cm 2,000 ₽; less than 24 hours is charged as a full 24-hour period.",
+      "reason": [
+        "Тариф RU сутки: период 24 часа",
+        "RU неполные сутки оплачиваются как полные 24 часа"
+      ],
+      "fileSha256": "cf91533d807d0a70822dc88f8067dfe571c4d9fbad8567d35b8c462fb3ca8335"
+    },
+    {
+      "file": "data/airport-guide/de/GDX.json",
+      "path": "blocks.storage.text",
+      "before": "Automatische Gepäckaufbewahrung für Passagiere von Inlandsflügen auf Ebene 2, von 8:30 bis 20:30, Bezahlung nur mit Karte. Standardfach 51×63×76 cm 1000 ₽ pro Tag, großes Fach 51×195×76 cm 2000 ₽; weniger als ein Tag wird als ganzer Tag berechnet.",
+      "after": "Automatische Gepäckaufbewahrung für Passagiere von Inlandsflügen auf Ebene 2, von 8:30 bis 20:30, Bezahlung nur mit Karte. Standardfach 51×63×76 cm 1000 ₽ je 24 Stunden, großes Fach 51×195×76 cm 2000 ₽; weniger als 24 Stunden werden als volle 24 Stunden berechnet.",
+      "reason": [
+        "Тариф RU сутки: период 24 часа",
+        "RU неполные сутки оплачиваются как полные 24 часа"
+      ],
+      "fileSha256": "b60a5b53902146eff6885a54eb9e362ff1e0182b34a429fdff91e5dd5ba0aad9"
+    },
+    {
+      "file": "data/airport-guide/fr/GDX.json",
+      "path": "blocks.storage.text",
+      "before": "Consigne automatique pour les passagers des vols intérieurs au niveau 2, de 8:30 à 20:30, paiement par carte uniquement. Casier standard 51×63×76 cm 1000 ₽ par jour, grand 51×195×76 cm 2000 ₽ ; moins d'un jour est facturé comme un jour.",
+      "after": "Consigne automatique pour les passagers des vols intérieurs au niveau 2, de 8:30 à 20:30, paiement par carte uniquement. Casier standard 51×63×76 cm 1000 ₽ par période de 24 heures, grand 51×195×76 cm 2000 ₽ ; toute durée inférieure à 24 heures est facturée comme une période complète de 24 heures.",
+      "reason": [
+        "Тариф RU сутки: период 24 часа",
+        "RU неполные сутки оплачиваются как полные 24 часа"
+      ],
+      "fileSha256": "2dd9202c78875b52a5481fb103d475211cdbe7163bbf3a80df27808a1ef777b4"
+    },
+    {
+      "file": "data/airport-guide/es/GDX.json",
+      "path": "blocks.storage.text",
+      "before": "Consigna automática para pasajeros de vuelos nacionales en el nivel 2, de 8:30 a 20:30, pago solo con tarjeta. Taquilla estándar de 51×63×76 cm 1000 ₽ por día, grande de 51×195×76 cm 2000 ₽; menos de un día se paga como un día.",
+      "after": "Consigna automática para pasajeros de vuelos nacionales en el nivel 2, de 8:30 a 20:30, pago solo con tarjeta. Taquilla estándar de 51×63×76 cm 1000 ₽ por cada 24 horas, grande de 51×195×76 cm 2000 ₽; menos de 24 horas se cobra como un periodo completo de 24 horas.",
+      "reason": [
+        "Тариф RU сутки: период 24 часа",
+        "RU неполные сутки оплачиваются как полные 24 часа"
+      ],
+      "fileSha256": "372cca4e9270a202ab9a6ae8b2bad289fce87afad5ad2b6d6c601c951b5f8a5d"
+    },
+    {
+      "file": "data/airport-guide/it/GDX.json",
+      "path": "blocks.storage.text",
+      "before": "Deposito bagagli automatico per i passeggeri dei voli nazionali al livello 2, dalle 8:30 alle 20:30, pagamento solo con carta. Armadietto standard 51×63×76 cm 1000 ₽ al giorno, grande 51×195×76 cm 2000 ₽; meno di un giorno si paga come un giorno intero.",
+      "after": "Deposito bagagli automatico per i passeggeri dei voli nazionali al livello 2, dalle 8:30 alle 20:30, pagamento solo con carta. Armadietto standard 51×63×76 cm 1000 ₽ ogni 24 ore, grande 51×195×76 cm 2000 ₽; meno di 24 ore si paga come un periodo completo di 24 ore.",
+      "reason": [
+        "Тариф RU сутки: период 24 часа",
+        "RU неполные сутки оплачиваются как полные 24 часа"
+      ],
+      "fileSha256": "55cae70bf08ea5999bf26dd304ea48fc7ffb385b4fc5c7af75649294b1f9bd23"
+    },
+    {
+      "file": "data/airport-guide/tr/GDX.json",
+      "path": "blocks.storage.text",
+      "before": "İç hat yolcuları için otomatik emanet dolapları Kat 2'de, 8:30–20:30, ödeme yalnızca kartla. 51×63×76 cm standart dolap günlüğü 1000 ₽, 51×195×76 cm büyük dolap 2000 ₽; bir günden kısa süre bir gün olarak ücretlendirilir.",
+      "after": "İç hat yolcuları için otomatik emanet dolapları Kat 2'de, 8:30–20:30, ödeme yalnızca kartla. 51×63×76 cm standart dolap 24 saati 1000 ₽, 51×195×76 cm büyük dolap 2000 ₽; 24 saatten kısa süre tam 24 saat olarak ücretlendirilir.",
+      "reason": [
+        "Тариф RU сутки: период 24 часа",
+        "RU неполные сутки оплачиваются как полные 24 часа"
+      ],
+      "fileSha256": "04bd7e804dfbb33d2f1296585510c3d8a7b6bd99a451d14876e8a5ea968fa2e0"
+    },
+    {
+      "file": "data/airport-guide/en/GDZ.json",
+      "path": "blocks.storage.text",
+      "before": "Automated left luggage on Level 1, to the left of the check-in counters, during airport opening hours. Small locker from 200 ₽ for 2 hours to 800 ₽ per day, medium 300–900 ₽, large 400–1,000 ₽. Pay in cash or by card at the terminal; the receipt with a barcode opens the locker.",
+      "after": "Automated left luggage on Level 1, to the left of the check-in counters, during airport opening hours. Small locker from 200 ₽ for 2 hours to 800 ₽ per 24 hours, medium 300–900 ₽, large 400–1,000 ₽. Pay in cash or by card at the terminal; the receipt with a barcode opens the locker.",
+      "reason": [
+        "Тариф RU сутки: период 24 часа"
+      ],
+      "fileSha256": "e2f7174b81a269e5f9dfd2aa7e10ef582d6237314ed4cb9f99b13a10690b17eb"
+    },
+    {
+      "file": "data/airport-guide/en/GDZ.json",
+      "path": "blocks.parking.text",
+      "before": "250 spaces. First 15 minutes free, then 300 ₽ for each hour, over 3 hours 900 ₽/day. Parking on the second lane of the driveway 1,000 ₽/hour, VIP parking 2,000 ₽/hour. A repeat entry within an hour has no free 15 minutes.",
+      "after": "250 spaces. First 15 minutes free, then 300 ₽ for each hour, over 3 hours 900 ₽/24 hours. Parking on the second lane of the driveway 1,000 ₽/hour, VIP parking 2,000 ₽/hour. A repeat entry within an hour has no free 15 minutes.",
+      "reason": [
+        "Тариф RU сутки: период 24 часа"
+      ],
+      "fileSha256": "e2f7174b81a269e5f9dfd2aa7e10ef582d6237314ed4cb9f99b13a10690b17eb"
+    },
+    {
+      "file": "data/airport-guide/de/GDZ.json",
+      "path": "blocks.storage.text",
+      "before": "Automatische Gepäckaufbewahrung auf Ebene 1, links von den Check-in-Schaltern, während der Öffnungszeiten des Flughafens. Kleines Fach von 200 ₽ für 2 Stunden bis 800 ₽ pro Tag, mittleres 300–900 ₽, großes 400–1000 ₽. Bezahlung bar oder mit Karte am Terminal, der Beleg mit Strichcode öffnet das Fach.",
+      "after": "Automatische Gepäckaufbewahrung auf Ebene 1, links von den Check-in-Schaltern, während der Öffnungszeiten des Flughafens. Kleines Fach von 200 ₽ für 2 Stunden bis 800 ₽ je 24 Stunden, mittleres 300–900 ₽, großes 400–1000 ₽. Bezahlung bar oder mit Karte am Terminal, der Beleg mit Strichcode öffnet das Fach.",
+      "reason": [
+        "Тариф RU сутки: период 24 часа"
+      ],
+      "fileSha256": "1083b535212f8512bebcf572fa5f3b4e2bff821de2756c5d256e1177e6f90441"
+    },
+    {
+      "file": "data/airport-guide/de/GDZ.json",
+      "path": "blocks.parking.text",
+      "before": "250 Plätze. Die ersten 15 Minuten kostenlos, danach 300 ₽ für jede Stunde, über 3 Stunden 900 ₽/Tag. Halten an der zweiten Fahrspur 1000 ₽/Stunde, VIP-Parkplatz 2000 ₽/Stunde. Erneute Einfahrt innerhalb einer Stunde ohne kostenlose 15 Minuten.",
+      "after": "250 Plätze. Die ersten 15 Minuten kostenlos, danach 300 ₽ für jede Stunde, über 3 Stunden 900 ₽/24 Stunden. Parken an der zweiten Fahrspur 1000 ₽/Stunde, VIP-Parkplatz 2000 ₽/Stunde. Erneute Einfahrt innerhalb einer Stunde ohne kostenlose 15 Minuten.",
+      "reason": [
+        "Тариф RU сутки: период 24 часа",
+        "Стоянка: Parken, а не Halten"
+      ],
+      "fileSha256": "1083b535212f8512bebcf572fa5f3b4e2bff821de2756c5d256e1177e6f90441"
+    },
+    {
+      "file": "data/airport-guide/fr/GDZ.json",
+      "path": "blocks.storage.text",
+      "before": "Consigne automatique au niveau 1, à gauche des comptoirs d'enregistrement, aux heures d'ouverture de l'aéroport. Petit casier de 200 ₽ pour 2 heures à 800 ₽ par jour, moyen 300–900 ₽, grand 400–1000 ₽. Paiement en espèces ou par carte à la borne, le ticket à code-barres ouvre le casier.",
+      "after": "Consigne automatique au niveau 1, à gauche des comptoirs d'enregistrement, aux heures d'ouverture de l'aéroport. Petit casier de 200 ₽ pour 2 heures à 800 ₽ par période de 24 heures, moyen 300–900 ₽, grand 400–1000 ₽. Paiement en espèces ou par carte à la borne, le ticket à code-barres ouvre le casier.",
+      "reason": [
+        "Тариф RU сутки: период 24 часа"
+      ],
+      "fileSha256": "5750a356ea3c77b1d4bc0760dd9c35f9336bb9b308f1746bc67685ec11fd5e01"
+    },
+    {
+      "file": "data/airport-guide/fr/GDZ.json",
+      "path": "blocks.parking.text",
+      "before": "250 places. 15 premières minutes gratuites, ensuite 300 ₽ par heure, au-delà de 3 heures 900 ₽/jour. Stationnement sur la deuxième voie 1000 ₽/heure, parking VIP 2000 ₽/heure. Nouvelle entrée dans l'heure sans les 15 minutes gratuites.",
+      "after": "250 places. 15 premières minutes gratuites, ensuite 300 ₽ par heure, au-delà de 3 heures 900 ₽/24 h. Stationnement sur la deuxième voie 1000 ₽/heure, parking VIP 2000 ₽/heure. Nouvelle entrée dans l'heure sans les 15 minutes gratuites.",
+      "reason": [
+        "Тариф RU сутки: период 24 часа"
+      ],
+      "fileSha256": "5750a356ea3c77b1d4bc0760dd9c35f9336bb9b308f1746bc67685ec11fd5e01"
+    },
+    {
+      "file": "data/airport-guide/es/GDZ.json",
+      "path": "blocks.storage.text",
+      "before": "Consigna automática en el nivel 1, a la izquierda de los mostradores de facturación, en el horario del aeropuerto. Taquilla pequeña desde 200 ₽ por 2 horas hasta 800 ₽ por día, mediana 300–900 ₽, grande 400–1000 ₽. Pago en efectivo o con tarjeta en el terminal; el recibo con código de barras abre la taquilla.",
+      "after": "Consigna automática en el nivel 1, a la izquierda de los mostradores de facturación, en el horario del aeropuerto. Taquilla pequeña desde 200 ₽ por 2 horas hasta 800 ₽ por cada 24 horas, mediana 300–900 ₽, grande 400–1000 ₽. Pago en efectivo o con tarjeta en el terminal; el recibo con código de barras abre la taquilla.",
+      "reason": [
+        "Тариф RU сутки: период 24 часа"
+      ],
+      "fileSha256": "9339d8b3d17d485b9253d5eeb81e53899bb1c53953b7adeebeb7518fff546803"
+    },
+    {
+      "file": "data/airport-guide/es/GDZ.json",
+      "path": "blocks.parking.text",
+      "before": "250 plazas. Los primeros 15 minutos gratis, después 300 ₽ por cada hora; más de 3 horas, 900 ₽/día. Estacionamiento en el segundo carril de circulación 1000 ₽/hora, aparcamiento VIP 2000 ₽/hora. Una nueva entrada dentro de la misma hora no tiene los 15 minutos gratis.",
+      "after": "250 plazas. Los primeros 15 minutos gratis, después 300 ₽ por cada hora; más de 3 horas, 900 ₽/24 h. Estacionamiento en el segundo carril de circulación 1000 ₽/hora, aparcamiento VIP 2000 ₽/hora. Una nueva entrada en el plazo de una hora no tiene los 15 minutos gratis.",
+      "reason": [
+        "Тариф RU сутки: период 24 часа",
+        "В течение часа, не в пределах того же часа по часам"
+      ],
+      "fileSha256": "9339d8b3d17d485b9253d5eeb81e53899bb1c53953b7adeebeb7518fff546803"
+    },
+    {
+      "file": "data/airport-guide/it/GDZ.json",
+      "path": "blocks.storage.text",
+      "before": "Deposito bagagli automatico al livello 1, a sinistra dei banchi check-in, negli orari di apertura dell’aeroporto. Armadietto piccolo da 200 ₽ per 2 ore a 800 ₽ al giorno, medio 300–900 ₽, grande 400–1000 ₽. Pagamento in contanti o con carta al terminale, lo scontrino con codice a barre apre l’armadietto.",
+      "after": "Deposito bagagli automatico al livello 1, a sinistra dei banchi check-in, negli orari di apertura dell’aeroporto. Armadietto piccolo da 200 ₽ per 2 ore a 800 ₽ ogni 24 ore, medio 300–900 ₽, grande 400–1000 ₽. Pagamento in contanti o con carta al terminale, lo scontrino con codice a barre apre l’armadietto.",
+      "reason": [
+        "Тариф RU сутки: период 24 часа"
+      ],
+      "fileSha256": "909e14ff93863a24f4ff5d181ef4d0b7b561b5a0f054f233d6c27f46e0c0cc17"
+    },
+    {
+      "file": "data/airport-guide/it/GDZ.json",
+      "path": "blocks.parking.text",
+      "before": "250 posti. I primi 15 minuti gratis, poi 300 ₽ per ogni ora, oltre 3 ore 900 ₽/giorno. Sosta sulla seconda corsia di transito 1000 ₽/ora, parcheggio VIP 2000 ₽/ora. Nuovo ingresso entro un’ora senza i 15 minuti gratuiti.",
+      "after": "250 posti. I primi 15 minuti gratis, poi 300 ₽ per ogni ora, oltre 3 ore 900 ₽/24 ore. Sosta sulla seconda corsia di transito 1000 ₽/ora, parcheggio VIP 2000 ₽/ora. Nuovo ingresso entro un’ora senza i 15 minuti gratuiti.",
+      "reason": [
+        "Тариф RU сутки: период 24 часа"
+      ],
+      "fileSha256": "909e14ff93863a24f4ff5d181ef4d0b7b561b5a0f054f233d6c27f46e0c0cc17"
+    },
+    {
+      "file": "data/airport-guide/tr/GDZ.json",
+      "path": "blocks.storage.text",
+      "before": "Otomatik emanet dolapları Kat 1'de, check-in kontuarlarının solunda, havalimanının çalışma saatlerinde. Küçük dolap 2 saati 200 ₽'den günlüğü 800 ₽'ye kadar, orta 300–900 ₽, büyük 400–1000 ₽. Ücret, ödeme makinesinde nakit veya kartla ödenir; barkodlu fiş dolabı açar.",
+      "after": "Otomatik emanet dolapları Kat 1'de, check-in kontuarlarının solunda, havalimanının çalışma saatlerinde. Küçük dolap 2 saati 200 ₽'den 24 saati 800 ₽'ye kadar, orta 300–900 ₽, büyük 400–1000 ₽. Ücret, ödeme makinesinde nakit veya kartla ödenir; barkodlu fiş dolabı açar.",
+      "reason": [
+        "Тариф RU сутки: период 24 часа"
+      ],
+      "fileSha256": "d1b4510388f4d89b70b289b4ee16a83efa3bd2dbbb710736d8d79d2109285681"
+    },
+    {
+      "file": "data/airport-guide/tr/GDZ.json",
+      "path": "blocks.parking.text",
+      "before": "250 araçlık. İlk 15 dakika ücretsiz, sonra her saat 300 ₽, 3 saatin üzerinde günlüğü 900 ₽. İkinci şeritte park saati 1000 ₽, VIP otopark saati 2000 ₽. Bir saat içinde tekrar girişte ücretsiz 15 dakika yoktur.",
+      "after": "250 araçlık. İlk 15 dakika ücretsiz, sonra her saat 300 ₽, 3 saatin üzerinde 24 saati 900 ₽. İkinci şeritte park saati 1000 ₽, VIP otopark saati 2000 ₽. Bir saat içinde tekrar girişte ücretsiz 15 dakika yoktur.",
+      "reason": [
+        "Тариф RU сутки: период 24 часа"
+      ],
+      "fileSha256": "d1b4510388f4d89b70b289b4ee16a83efa3bd2dbbb710736d8d79d2109285681"
+    },
+    {
+      "file": "data/airport-guide/en/GOJ.json",
+      "path": "blocks.storage.text",
+      "before": "Automated left luggage on Level 1, to the left of the exit from the domestic baggage claim area. Standard locker: 250 ₽ per hour or 550 ₽ per day. Large locker: 350 ₽ per hour or 900 ₽ per day. Cloakroom: 100 ₽ per day.",
+      "after": "Automated left luggage on Level 1, to the left of the exit from the domestic baggage claim area. Standard locker: 250 ₽ per hour or 550 ₽ per 24 hours. Large locker: 350 ₽ per hour or 900 ₽ per 24 hours. Cloakroom: 100 ₽ per 24 hours.",
+      "reason": [
+        "Тариф RU сутки: период 24 часа"
+      ],
+      "fileSha256": "40caa126399dfdf1f88ee57730f1fe85fa79a32059f9020ab52747881c86ef2a"
+    },
+    {
+      "file": "data/airport-guide/de/GOJ.json",
+      "path": "blocks.storage.text",
+      "before": "Automatische Gepäckaufbewahrung auf Ebene 1, links vom Ausgang der Gepäckausgabe für Inlandsflüge. Standardfach: 250 ₽ pro Stunde oder 550 ₽ pro Tag. Großes Fach: 350 ₽ pro Stunde oder 900 ₽ pro Tag. Garderobe: 100 ₽ pro Tag.",
+      "after": "Automatische Gepäckaufbewahrung auf Ebene 1, links vom Ausgang der Gepäckausgabe für Inlandsflüge. Standardfach: 250 ₽ pro Stunde oder 550 ₽ je 24 Stunden. Großes Fach: 350 ₽ pro Stunde oder 900 ₽ je 24 Stunden. Garderobe: 100 ₽ je 24 Stunden.",
+      "reason": [
+        "Тариф RU сутки: период 24 часа"
+      ],
+      "fileSha256": "f0cecf9e6c6c4d094cdb45ada193892ab4a4e5cee505966de2c039a60b13abe3"
+    },
+    {
+      "file": "data/airport-guide/fr/GOJ.json",
+      "path": "blocks.storage.text",
+      "before": "Consigne automatique au niveau 1, à gauche de la sortie de la zone de livraison des bagages des vols intérieurs. Casier standard : 250 ₽ de l'heure ou 550 ₽ par jour. Grand casier : 350 ₽ de l'heure ou 900 ₽ par jour. Vestiaire : 100 ₽ par jour.",
+      "after": "Consigne automatique au niveau 1, à gauche de la sortie de la zone de livraison des bagages des vols intérieurs. Casier standard : 250 ₽ de l'heure ou 550 ₽ par période de 24 heures. Grand casier : 350 ₽ de l'heure ou 900 ₽ par période de 24 heures. Vestiaire : 100 ₽ par période de 24 heures.",
+      "reason": [
+        "Тариф RU сутки: период 24 часа"
+      ],
+      "fileSha256": "34a62f3fd3a88541b9cef17f6ef42a8ebad8a0670f9eb210a0c97da71fcd3d43"
+    },
+    {
+      "file": "data/airport-guide/es/GOJ.json",
+      "path": "blocks.storage.text",
+      "before": "Consigna automática en el nivel 1, a la izquierda de la salida de la zona de recogida de equipajes de vuelos nacionales. Taquilla estándar: 250 ₽ por hora o 550 ₽ por día. Taquilla grande: 350 ₽ por hora o 900 ₽ por día. Guardarropa: 100 ₽ por día.",
+      "after": "Consigna automática en el nivel 1, a la izquierda de la salida de la zona de recogida de equipajes de vuelos nacionales. Taquilla estándar: 250 ₽ por hora o 550 ₽ por cada 24 horas. Taquilla grande: 350 ₽ por hora o 900 ₽ por cada 24 horas. Guardarropa: 100 ₽ por cada 24 horas.",
+      "reason": [
+        "Тариф RU сутки: период 24 часа"
+      ],
+      "fileSha256": "03023fa357d2734a29433931c3aa7151bf6ecce1d565f84d95564e9c99e2a588"
+    },
+    {
+      "file": "data/airport-guide/it/GOJ.json",
+      "path": "blocks.storage.text",
+      "before": "Deposito bagagli automatico al livello 1, a sinistra dell’uscita dalla zona ritiro bagagli dei voli nazionali. Armadietto standard: 250 ₽ all’ora o 550 ₽ al giorno. Armadietto maggiorato: 350 ₽ all’ora o 900 ₽ al giorno. Guardaroba: 100 ₽ al giorno.",
+      "after": "Deposito bagagli automatico al livello 1, a sinistra dell’uscita dalla zona ritiro bagagli dei voli nazionali. Armadietto standard: 250 ₽ all’ora o 550 ₽ ogni 24 ore. Armadietto maggiorato: 350 ₽ all’ora o 900 ₽ ogni 24 ore. Guardaroba: 100 ₽ ogni 24 ore.",
+      "reason": [
+        "Тариф RU сутки: период 24 часа"
+      ],
+      "fileSha256": "55fb5367283824c73326de9e631cde6aa8bbc9879c959624351f2426f99ca663"
+    },
+    {
+      "file": "data/airport-guide/tr/GOJ.json",
+      "path": "blocks.storage.text",
+      "before": "Otomatik emanet dolapları Kat 1'de, iç hatlar bagaj alım alanı çıkışının solunda. Standart dolap: saati 250 ₽ veya günlüğü 550 ₽. Büyük dolap: saati 350 ₽ veya günlüğü 900 ₽. Vestiyer: günlüğü 100 ₽.",
+      "after": "Otomatik emanet dolapları Kat 1'de, iç hatlar bagaj alım alanı çıkışının solunda. Standart dolap: saati 250 ₽ veya 24 saati 550 ₽. Büyük dolap: saati 350 ₽ veya 24 saati 900 ₽. Vestiyer: 24 saati 100 ₽.",
+      "reason": [
+        "Тариф RU сутки: период 24 часа"
+      ],
+      "fileSha256": "250e3c49d6506f935de249735c6fbe31be2f07bd76fd4a2c2196ac5a220acc9e"
+    },
+    {
+      "file": "data/airport-guide/en/HMA.json",
+      "path": "blocks.parking.text",
+      "before": "Station forecourt: up to 20 minutes free, from minute 21 to 4 hours 300 ₽ per hour, a part hour counts as a full hour. From the 5th hour 1,200 ₽ per day, following days 1,200 ₽. A repeat entry within 20 minutes is paid, 300 ₽ per hour.",
+      "after": "Airport terminal forecourt: up to 20 minutes free, from minute 21 to 4 hours 300 ₽ per hour, a part hour counts as a full hour. From the 5th hour 1,200 ₽ per 24 hours, each subsequent 24-hour period 1,200 ₽. A repeat entry within 20 minutes is paid, 300 ₽ per hour.",
+      "reason": [
+        "Тариф RU сутки: период 24 часа",
+        "RU сутки/следующие сутки: явно периоды 24 часа",
+        "Площадь аэропорта, не железнодорожной станции"
+      ],
+      "fileSha256": "1282a207ea99245836d2cf4d5467dceaf116f62a46a25de4d80bb03a22d8bd5c"
+    },
+    {
+      "file": "data/airport-guide/de/HMA.json",
+      "path": "blocks.parking.text",
+      "before": "Vorplatz: bis 20 Minuten kostenlos, von der 21. Minute bis 4 Stunden 300 ₽ pro Stunde, eine angefangene Stunde zählt als volle. Ab der 5. Stunde 1200 ₽ pro Tag, jeder weitere Tag 1200 ₽. Erneute Einfahrt innerhalb von 20 Minuten kostenpflichtig, 300 ₽ pro Stunde.",
+      "after": "Vorplatz: bis 20 Minuten kostenlos, von der 21. Minute bis 4 Stunden 300 ₽ pro Stunde, eine angefangene Stunde zählt als volle. Ab der 5. Stunde 1200 ₽ je 24 Stunden, jeder weitere Zeitraum von 24 Stunden 1200 ₽. Erneute Einfahrt innerhalb von 20 Minuten kostenpflichtig, 300 ₽ pro Stunde.",
+      "reason": [
+        "Тариф RU сутки: период 24 часа",
+        "RU сутки/следующие сутки: явно периоды 24 часа"
+      ],
+      "fileSha256": "0dae775a0a203df032d0e9bb2e1f421c2b12915990d8eb1750c2af838e178d92"
+    },
+    {
+      "file": "data/airport-guide/fr/HMA.json",
+      "path": "blocks.parking.text",
+      "before": "Place de l'aérogare : jusqu'à 20 minutes gratuit, de la 21e minute à 4 heures 300 ₽ de l'heure, toute heure entamée est due. À partir de la 5e heure 1200 ₽ par jour, jour suivant 1200 ₽. Une nouvelle entrée dans les 20 minutes est payante, 300 ₽ de l'heure.",
+      "after": "Place de l'aérogare : jusqu'à 20 minutes gratuit, de la 21e minute à 4 heures 300 ₽ de l'heure, toute heure entamée est due. À partir de la 5e heure 1200 ₽ par période de 24 heures, chaque période suivante de 24 heures 1200 ₽. Une nouvelle entrée dans les 20 minutes est payante, 300 ₽ de l'heure.",
+      "reason": [
+        "Тариф RU сутки: период 24 часа",
+        "RU сутки/следующие сутки: явно периоды 24 часа"
+      ],
+      "fileSha256": "504fefe0b597bd004e66ff38c524d4d4432c4fe183e8aeb72b8108a2038b4c33"
+    },
+    {
+      "file": "data/airport-guide/es/HMA.json",
+      "path": "blocks.parking.text",
+      "before": "Plaza de la terminal: hasta 20 minutos gratis, del minuto 21 a 4 horas 300 ₽ por hora; la hora incompleta se cobra como completa. A partir de la 5.ª hora, 1200 ₽ por día; el día siguiente, 1200 ₽. Una nueva entrada dentro de 20 minutos es de pago, 300 ₽ por hora.",
+      "after": "Plaza de la terminal: hasta 20 minutos gratis, del minuto 21 a 4 horas 300 ₽ por hora; la hora incompleta se cobra como completa. A partir de la 5.ª hora, 1200 ₽ por cada 24 horas; cada periodo siguiente de 24 horas, 1200 ₽. Una nueva entrada dentro de 20 minutos es de pago, 300 ₽ por hora.",
+      "reason": [
+        "Тариф RU сутки: период 24 часа",
+        "RU сутки/следующие сутки: явно периоды 24 часа"
+      ],
+      "fileSha256": "4d7225f6bf9cdf631594cfe4230e137a03cc31283ebec85a6e05e326224bf55a"
+    },
+    {
+      "file": "data/airport-guide/it/HMA.json",
+      "path": "blocks.parking.text",
+      "before": "Piazzale dell’aerostazione: fino a 20 minuti gratis, dal 21° minuto a 4 ore 300 ₽ all’ora, l’ora iniziata si paga intera. Dalla 5ª ora 1200 ₽ al giorno, ogni giorno successivo 1200 ₽. Un nuovo ingresso entro 20 minuti è a pagamento, 300 ₽ all’ora.",
+      "after": "Piazzale dell’aerostazione: fino a 20 minuti gratis, dal 21° minuto a 4 ore 300 ₽ all’ora, l’ora iniziata si paga intera. Dalla 5ª ora 1200 ₽ ogni 24 ore, ogni successivo periodo di 24 ore 1200 ₽. Un nuovo ingresso entro 20 minuti è a pagamento, 300 ₽ all’ora.",
+      "reason": [
+        "Тариф RU сутки: период 24 часа",
+        "RU сутки/следующие сутки: явно периоды 24 часа"
+      ],
+      "fileSha256": "46eef1d65bedfc158d99d4d92ad1e6de750ac9f6c481ca7a529fd1b7e4df02fa"
+    },
+    {
+      "file": "data/airport-guide/tr/HMA.json",
+      "path": "blocks.parking.text",
+      "before": "Terminal önü meydanı: 20 dakikaya kadar ücretsiz, 21. dakikadan 4 saate kadar saati 300 ₽, tamamlanmamış saat tam saat sayılır. 5. saatten itibaren günlüğü 1200 ₽, sonraki gün 1200 ₽. 20 dakika içinde tekrar giriş ücretli, saati 300 ₽.",
+      "after": "Terminal önü meydanı: 20 dakikaya kadar ücretsiz, 21. dakikadan 4 saate kadar saati 300 ₽, tamamlanmamış saat tam saat sayılır. 5. saatten itibaren 24 saati 1200 ₽, sonraki her 24 saat 1200 ₽. 20 dakika içinde tekrar giriş ücretli, saati 300 ₽.",
+      "reason": [
+        "Тариф RU сутки: период 24 часа",
+        "RU сутки/следующие сутки: явно периоды 24 часа"
+      ],
+      "fileSha256": "2b187856ec8d82c73d93f05ebc9011181348645efd0d9821543240c865d4dd84"
+    },
+    {
+      "file": "data/airport-guide/en/IAR.json",
+      "path": "blocks.parking.hint",
+      "before": "300 ₽/day",
+      "after": "300 ₽/24 hours",
+      "reason": [
+        "Тариф RU сутки: период 24 часа"
+      ],
+      "fileSha256": "280d6305a7a4bbe5fbb58c937b313f443545213626900ab2f05e061583b1240e"
+    },
+    {
+      "file": "data/airport-guide/en/IAR.json",
+      "path": "blocks.parking.text",
+      "before": "Paid car park, 300 ₽ per day. No booking or prepayment; pay when parking, subject to availability. The time to collect the car is agreed by phone 43-18-00.",
+      "after": "Paid car park, 300 ₽ per 24 hours. No booking or prepayment; pay when parking, subject to availability. The time to collect the car is agreed by phone 43-18-00.",
+      "reason": [
+        "Тариф RU сутки: период 24 часа"
+      ],
+      "fileSha256": "280d6305a7a4bbe5fbb58c937b313f443545213626900ab2f05e061583b1240e"
+    },
+    {
+      "file": "data/airport-guide/de/IAR.json",
+      "path": "blocks.parking.hint",
+      "before": "300 ₽/Tag",
+      "after": "300 ₽/24 Stunden",
+      "reason": [
+        "Тариф RU сутки: период 24 часа"
+      ],
+      "fileSha256": "84012074ffae75f59e083dde5bb6dce57965c691b2ea9abd8ae53e4b197c9d51"
+    },
+    {
+      "file": "data/airport-guide/de/IAR.json",
+      "path": "blocks.parking.text",
+      "before": "Kostenpflichtiger Parkplatz, 300 ₽ pro Tag. Keine Reservierung und keine Vorauszahlung, Bezahlung beim Abstellen des Autos, sofern Plätze frei sind. Die Abholzeit des Autos wird telefonisch unter 43-18-00 abgestimmt.",
+      "after": "Kostenpflichtiger Parkplatz, 300 ₽ je 24 Stunden. Keine Reservierung und keine Vorauszahlung, Bezahlung beim Abstellen des Autos, sofern Plätze frei sind. Die Abholzeit des Autos wird telefonisch unter 43-18-00 abgestimmt.",
+      "reason": [
+        "Тариф RU сутки: период 24 часа"
+      ],
+      "fileSha256": "84012074ffae75f59e083dde5bb6dce57965c691b2ea9abd8ae53e4b197c9d51"
+    },
+    {
+      "file": "data/airport-guide/fr/IAR.json",
+      "path": "blocks.parking.hint",
+      "before": "300 ₽/jour",
+      "after": "300 ₽/24 h",
+      "reason": [
+        "Тариф RU сутки: период 24 часа"
+      ],
+      "fileSha256": "fdea2bb2ab8e6195af1298d7b0808a8152363c968ed74a6bf222a06d82501b2c"
+    },
+    {
+      "file": "data/airport-guide/fr/IAR.json",
+      "path": "blocks.parking.text",
+      "before": "Parking payant, 300 ₽ par jour. Pas de réservation ni de prépaiement, paiement au moment de garer la voiture, selon les places disponibles. L'heure de retour pour récupérer la voiture se précise par téléphone au 43-18-00.",
+      "after": "Parking payant, 300 ₽ par période de 24 heures. Pas de réservation ni de prépaiement, paiement au moment de garer la voiture, selon les places disponibles. L'heure de retour pour récupérer la voiture se précise par téléphone au 43-18-00.",
+      "reason": [
+        "Тариф RU сутки: период 24 часа"
+      ],
+      "fileSha256": "fdea2bb2ab8e6195af1298d7b0808a8152363c968ed74a6bf222a06d82501b2c"
+    },
+    {
+      "file": "data/airport-guide/es/IAR.json",
+      "path": "blocks.parking.hint",
+      "before": "300 ₽/día",
+      "after": "300 ₽/24 h",
+      "reason": [
+        "Тариф RU сутки: период 24 часа"
+      ],
+      "fileSha256": "5b37a81354429659b6c517d8b798983009fb55e2de996ff878ee175d8d2abe19"
+    },
+    {
+      "file": "data/airport-guide/es/IAR.json",
+      "path": "blocks.parking.text",
+      "before": "Aparcamiento de pago, 300 ₽ por día. No hay reserva ni prepago; se paga al dejar el coche, si hay plazas. La hora de recogida del coche se consulta por teléfono en el 43-18-00.",
+      "after": "Aparcamiento de pago, 300 ₽ por cada 24 horas. No hay reserva ni prepago; se paga al dejar el coche, si hay plazas. La hora de recogida del coche se consulta por teléfono en el 43-18-00.",
+      "reason": [
+        "Тариф RU сутки: период 24 часа"
+      ],
+      "fileSha256": "5b37a81354429659b6c517d8b798983009fb55e2de996ff878ee175d8d2abe19"
+    },
+    {
+      "file": "data/airport-guide/it/IAR.json",
+      "path": "blocks.parking.hint",
+      "before": "300 ₽/giorno",
+      "after": "300 ₽/24 ore",
+      "reason": [
+        "Тариф RU сутки: период 24 часа"
+      ],
+      "fileSha256": "74c7d930b16ea18ab3603c4b26a7c608bf128a33aee830e5a28a2cb5b50db46b"
+    },
+    {
+      "file": "data/airport-guide/it/IAR.json",
+      "path": "blocks.parking.text",
+      "before": "Parcheggio a pagamento, 300 ₽ al giorno. Niente prenotazione né pagamento anticipato, si paga quando si lascia l’auto se ci sono posti. L’orario di ritiro dell’auto si concorda al telefono 43-18-00.",
+      "after": "Parcheggio a pagamento, 300 ₽ ogni 24 ore. Niente prenotazione né pagamento anticipato, si paga quando si lascia l’auto se ci sono posti. L’orario di ritiro dell’auto si concorda al telefono 43-18-00.",
+      "reason": [
+        "Тариф RU сутки: период 24 часа"
+      ],
+      "fileSha256": "74c7d930b16ea18ab3603c4b26a7c608bf128a33aee830e5a28a2cb5b50db46b"
+    },
+    {
+      "file": "data/airport-guide/tr/IAR.json",
+      "path": "blocks.parking.hint",
+      "before": "Günlüğü 300 ₽",
+      "after": "24 saati 300 ₽",
+      "reason": [
+        "Тариф RU сутки: период 24 часа"
+      ],
+      "fileSha256": "266a60ceb074fc2c8fba5190b177f5be8ca4a883b60591110ab755063fa91b1a"
+    },
+    {
+      "file": "data/airport-guide/tr/IAR.json",
+      "path": "blocks.parking.text",
+      "before": "Ücretli otopark, günlüğü 300 ₽. Rezervasyon ve ön ödeme yok; yer varsa ödeme araç park edilirken yapılır. Aracı geri alma saati 43-18-00 numaralı telefondan teyit edilir.",
+      "after": "Ücretli otopark, 24 saati 300 ₽. Rezervasyon ve ön ödeme yok; yer varsa ödeme araç park edilirken yapılır. Aracı geri alma saati 43-18-00 numaralı telefondan teyit edilir.",
+      "reason": [
+        "Тариф RU сутки: период 24 часа"
+      ],
+      "fileSha256": "266a60ceb074fc2c8fba5190b177f5be8ca4a883b60591110ab755063fa91b1a"
+    },
+    {
+      "file": "data/airport-guide/en/IJK.json",
+      "path": "blocks.parking.text",
+      "before": "Up to 15 minutes free, from 16 to 30 minutes 250 ₽, from 30 minutes to 2 hours 500 ₽/hour, over 2 hours 750 ₽/day. VIP parking 300 ₽/hour up to 5 hours, no free time. Exit within 15 minutes after payment. Free for cars of disabled people listed in the federal register.",
+      "after": "Up to 15 minutes free, from 16 to 30 minutes 250 ₽, from 30 minutes to 2 hours 500 ₽/hour, over 2 hours 750 ₽/24 hours. VIP parking 300 ₽/hour up to 5 hours, no free time. Exit within 15 minutes after payment. Free for cars of disabled people listed in the federal register.",
+      "reason": [
+        "Тариф RU сутки: период 24 часа"
+      ],
+      "fileSha256": "da93608c909fc7db7a8de6ff43e1bca069e22abbb49ab60bfd90a520be784788"
+    },
+    {
+      "file": "data/airport-guide/de/IJK.json",
+      "path": "blocks.parking.text",
+      "before": "Bis 15 Minuten kostenlos, von 16 bis 30 Minuten 250 ₽, von 30 Minuten bis 2 Stunden 500 ₽/Stunde, über 2 Stunden 750 ₽/Tag. VIP-Parkplatz 300 ₽/Stunde bis 5 Stunden, ohne kostenlose Zeit. Ausfahrt innerhalb von 15 Minuten nach der Bezahlung. Für Fahrzeuge von Menschen mit Behinderung aus dem föderalen Register kostenlos.",
+      "after": "Bis 15 Minuten kostenlos, von 16 bis 30 Minuten 250 ₽, von 30 Minuten bis 2 Stunden 500 ₽/Stunde, über 2 Stunden 750 ₽/24 Stunden. VIP-Parkplatz 300 ₽/Stunde bis 5 Stunden, ohne kostenlose Zeit. Ausfahrt innerhalb von 15 Minuten nach der Bezahlung. Für Fahrzeuge von Menschen mit Behinderung aus dem föderalen Register kostenlos.",
+      "reason": [
+        "Тариф RU сутки: период 24 часа"
+      ],
+      "fileSha256": "9ff6009916cdbd8100ee27796d5d633ca16bdd76db0f2acc5b3ddf6ca005f747"
+    },
+    {
+      "file": "data/airport-guide/fr/IJK.json",
+      "path": "blocks.parking.text",
+      "before": "Jusqu'à 15 minutes gratuit, de 16 à 30 minutes 250 ₽, de 30 minutes à 2 heures 500 ₽/heure, au-delà de 2 heures 750 ₽/jour. Parking VIP 300 ₽/heure jusqu'à 5 heures, sans temps gratuit. Sortie dans les 15 minutes suivant le paiement. Gratuit pour les véhicules de personnes handicapées inscrits au registre fédéral.",
+      "after": "Jusqu'à 15 minutes gratuit, de 16 à 30 minutes 250 ₽, de 30 minutes à 2 heures 500 ₽/heure, au-delà de 2 heures 750 ₽/24 h. Parking VIP 300 ₽/heure jusqu'à 5 heures, sans temps gratuit. Sortie dans les 15 minutes suivant le paiement. Gratuit pour les véhicules de personnes handicapées inscrits au registre fédéral.",
+      "reason": [
+        "Тариф RU сутки: период 24 часа"
+      ],
+      "fileSha256": "cc81e450b3ed027094d408a74c1d2d86b96b969d6fcf1e6e8f4afcfa79ac218f"
+    },
+    {
+      "file": "data/airport-guide/es/IJK.json",
+      "path": "blocks.parking.text",
+      "before": "Hasta 15 minutos gratis, de 16 a 30 minutos 250 ₽, de 30 minutos a 2 horas 500 ₽/hora, más de 2 horas 750 ₽/día. Aparcamiento VIP 300 ₽/hora hasta 5 horas, sin tiempo gratuito. Salida dentro de los 15 minutos siguientes al pago. Gratis para vehículos de personas con discapacidad inscritos en el registro federal.",
+      "after": "Hasta 15 minutos gratis, de 16 a 30 minutos 250 ₽, de 30 minutos a 2 horas 500 ₽/hora, más de 2 horas 750 ₽/24 h. Aparcamiento VIP 300 ₽/hora hasta 5 horas, sin tiempo gratuito. Salida dentro de los 15 minutos siguientes al pago. Gratis para vehículos de personas con discapacidad inscritos en el registro federal.",
+      "reason": [
+        "Тариф RU сутки: период 24 часа"
+      ],
+      "fileSha256": "59b9c7e4b99cfd1b071d844f4ac98fde8ee5a3a3e2a2347055d2433ab35f3a0d"
+    },
+    {
+      "file": "data/airport-guide/it/IJK.json",
+      "path": "blocks.parking.text",
+      "before": "Fino a 15 minuti gratis, da 16 a 30 minuti 250 ₽, da 30 minuti a 2 ore 500 ₽/ora, oltre 2 ore 750 ₽/giorno. Parcheggio VIP 300 ₽/ora fino a 5 ore, senza tempo gratuito. Uscita entro 15 minuti dal pagamento. Gratis per le auto delle persone con disabilità iscritte nel registro federale.",
+      "after": "Fino a 15 minuti gratis, da 16 a 30 minuti 250 ₽, da 30 minuti a 2 ore 500 ₽/ora, oltre 2 ore 750 ₽/24 ore. Parcheggio VIP 300 ₽/ora fino a 5 ore, senza tempo gratuito. Uscita entro 15 minuti dal pagamento. Gratis per le auto delle persone con disabilità iscritte nel registro federale.",
+      "reason": [
+        "Тариф RU сутки: период 24 часа"
+      ],
+      "fileSha256": "becbb3ba32752a0c82de946367d286d78e56cad3c732e01da092ca3d35ca9fb0"
+    },
+    {
+      "file": "data/airport-guide/tr/IJK.json",
+      "path": "blocks.parking.text",
+      "before": "15 dakikaya kadar ücretsiz, 16 ila 30 dakika 250 ₽, 30 dakikadan 2 saate kadar saati 500 ₽, 2 saatten fazlası günlüğü 750 ₽. VIP otopark 5 saate kadar saati 300 ₽, ücretsiz süre yok. Ödemeden sonra 15 dakika içinde çıkış. Federal sicile kayıtlı engelli araçları için ücretsiz.",
+      "after": "15 dakikaya kadar ücretsiz, 16 ila 30 dakika 250 ₽, 30 dakikadan 2 saate kadar saati 500 ₽, 2 saatten fazlası 24 saati 750 ₽. VIP otopark 5 saate kadar saati 300 ₽, ücretsiz süre yok. Ödemeden sonra 15 dakika içinde çıkış. Federal sicile kayıtlı engelli araçları için ücretsiz.",
+      "reason": [
+        "Тариф RU сутки: период 24 часа"
+      ],
+      "fileSha256": "2553962b4cb6227c3a8c58691daad10883220f1ec99143a710b140233b3a0532"
+    },
+    {
+      "file": "data/airport-guide/en/IKT.json",
+      "path": "blocks.storage.hint",
+      "before": "610 ₽ per day",
+      "after": "610 ₽ per 24 hours",
+      "reason": [
+        "Тариф RU сутки: период 24 часа"
+      ],
+      "fileSha256": "f41b3c07ca31a7bf1e2410b5c7ec93438f0ccb0d44f0faed40c49c6e3f0a15a1"
+    },
+    {
+      "file": "data/airport-guide/en/IKT.json",
+      "path": "blocks.storage.text",
+      "before": "In the domestic terminal on Level 1, payment in cash or by card. 610 ₽ per item per day; baggage larger than 40×40×50 cm is charged by the number of spaces it occupies. In the international terminal left luggage is on Level 2 and operates only during flight delays. Phone +7 (3952) 266-194.",
+      "after": "In the domestic terminal on Level 1, payment in cash or by card. 610 ₽ per item per 24 hours; baggage larger than 40×40×50 cm is charged by the number of spaces it occupies. In the international terminal left luggage is on Level 2 and operates only during flight delays. Phone +7 (3952) 266-194.",
+      "reason": [
+        "Тариф RU сутки: период 24 часа"
+      ],
+      "fileSha256": "f41b3c07ca31a7bf1e2410b5c7ec93438f0ccb0d44f0faed40c49c6e3f0a15a1"
+    },
+    {
+      "file": "data/airport-guide/de/IKT.json",
+      "path": "blocks.storage.hint",
+      "before": "610 ₽ pro Tag",
+      "after": "610 ₽ je 24 Stunden",
+      "reason": [
+        "Тариф RU сутки: период 24 часа"
+      ],
+      "fileSha256": "2866a8cfa5277f744b615bcbff212b961d4dc172334aa273cf542d7fdc0058b2"
+    },
+    {
+      "file": "data/airport-guide/de/IKT.json",
+      "path": "blocks.storage.text",
+      "before": "Im Inlandsterminal auf Ebene 1, Bezahlung bar oder mit Karte. 610 ₽ pro Gepäckstück und Tag, Gepäck größer als 40×40×50 cm wird nach der Zahl der belegten Plätze berechnet. Im internationalen Terminal befindet sich die Aufbewahrung auf Ebene 2, sie ist nur bei Flugverspätungen geöffnet. Telefon +7 (3952) 266-194.",
+      "after": "Im Inlandsterminal auf Ebene 1, Bezahlung bar oder mit Karte. 610 ₽ pro Gepäckstück und 24 Stunden, Gepäck größer als 40×40×50 cm wird nach der Zahl der belegten Plätze berechnet. Im internationalen Terminal befindet sich die Aufbewahrung auf Ebene 2, sie ist nur bei Flugverspätungen geöffnet. Telefon +7 (3952) 266-194.",
+      "reason": [
+        "Тариф RU сутки: период 24 часа"
+      ],
+      "fileSha256": "2866a8cfa5277f744b615bcbff212b961d4dc172334aa273cf542d7fdc0058b2"
+    },
+    {
+      "file": "data/airport-guide/fr/IKT.json",
+      "path": "blocks.storage.hint",
+      "before": "610 ₽ par jour",
+      "after": "610 ₽ par période de 24 heures",
+      "reason": [
+        "Тариф RU сутки: период 24 часа"
+      ],
+      "fileSha256": "6d3621b588e31184eb3721b09e2fdb030aa95d7ba6d56cb90763f16004a2050b"
+    },
+    {
+      "file": "data/airport-guide/fr/IKT.json",
+      "path": "blocks.storage.text",
+      "before": "Dans le terminal domestique au niveau 1, paiement en espèces ou par carte. 610 ₽ par bagage et par jour ; un bagage de plus de 40×40×50 cm est facturé selon le nombre de places occupées. Dans le terminal international, la consigne est au niveau 2 et ne fonctionne qu'en cas de retard des vols. Téléphone +7 (3952) 266-194.",
+      "after": "Dans le terminal domestique au niveau 1, paiement en espèces ou par carte. 610 ₽ par bagage et par période de 24 heures ; un bagage de plus de 40×40×50 cm est facturé selon le nombre de places occupées. Dans le terminal international, la consigne est au niveau 2 et ne fonctionne qu'en cas de retard des vols. Téléphone +7 (3952) 266-194.",
+      "reason": [
+        "Тариф RU сутки: период 24 часа"
+      ],
+      "fileSha256": "6d3621b588e31184eb3721b09e2fdb030aa95d7ba6d56cb90763f16004a2050b"
+    },
+    {
+      "file": "data/airport-guide/es/IKT.json",
+      "path": "blocks.storage.hint",
+      "before": "610 ₽ al día",
+      "after": "610 ₽ por cada 24 horas",
+      "reason": [
+        "Тариф RU сутки: период 24 часа"
+      ],
+      "fileSha256": "c7c37694370f91ce79d3fa7d52ba3e915f59208c7c27dc48d90a1a04a25052aa"
+    },
+    {
+      "file": "data/airport-guide/es/IKT.json",
+      "path": "blocks.storage.text",
+      "before": "En la terminal nacional, en el nivel 1; pago en efectivo o con tarjeta. 610 ₽ por bulto al día; el equipaje de más de 40×40×50 cm se paga según el número de plazas que ocupe. En la terminal internacional, la consigna está en el nivel 2 y solo funciona cuando hay retrasos de vuelos. Teléfono +7 (3952) 266-194.",
+      "after": "En la terminal nacional, en el nivel 1; pago en efectivo o con tarjeta. 610 ₽ por bulto por cada 24 horas; el equipaje de más de 40×40×50 cm se paga según el número de plazas que ocupe. En la terminal internacional, la consigna está en el nivel 2 y solo funciona cuando hay retrasos de vuelos. Teléfono +7 (3952) 266-194.",
+      "reason": [
+        "Тариф RU сутки: период 24 часа"
+      ],
+      "fileSha256": "c7c37694370f91ce79d3fa7d52ba3e915f59208c7c27dc48d90a1a04a25052aa"
+    },
+    {
+      "file": "data/airport-guide/it/IKT.json",
+      "path": "blocks.storage.hint",
+      "before": "610 ₽ al giorno",
+      "after": "610 ₽ ogni 24 ore",
+      "reason": [
+        "Тариф RU сутки: период 24 часа"
+      ],
+      "fileSha256": "78935144f62c869655ca99ecfd496fcbe3372ed3a0bd651a8f728c5fa7eb968c"
+    },
+    {
+      "file": "data/airport-guide/it/IKT.json",
+      "path": "blocks.storage.text",
+      "before": "Nel terminal nazionale al livello 1, pagamento in contanti o con carta. 610 ₽ a collo al giorno, i bagagli oltre 40×40×50 cm si pagano in base al numero di posti occupati. Nel terminal internazionale il deposito è al livello 2 e funziona solo in caso di ritardo dei voli. Telefono +7 (3952) 266-194.",
+      "after": "Nel terminal nazionale al livello 1, pagamento in contanti o con carta. 610 ₽ a collo ogni 24 ore, i bagagli oltre 40×40×50 cm si pagano in base al numero di posti occupati. Nel terminal internazionale il deposito è al livello 2 e funziona solo in caso di ritardo dei voli. Telefono +7 (3952) 266-194.",
+      "reason": [
+        "Тариф RU сутки: период 24 часа"
+      ],
+      "fileSha256": "78935144f62c869655ca99ecfd496fcbe3372ed3a0bd651a8f728c5fa7eb968c"
+    },
+    {
+      "file": "data/airport-guide/tr/IKT.json",
+      "path": "blocks.storage.hint",
+      "before": "Günlüğü 610 ₽",
+      "after": "24 saati 610 ₽",
+      "reason": [
+        "Тариф RU сутки: период 24 часа"
+      ],
+      "fileSha256": "c11cba957a6589be5b0ffc020aeac5466b20d8951a158260f369345fb3894305"
+    },
+    {
+      "file": "data/airport-guide/tr/IKT.json",
+      "path": "blocks.storage.text",
+      "before": "İç hatlar terminalinde Kat 1'de, ödeme nakit veya kartla. Parça başına günlük 610 ₽; 40×40×50 cm'den büyük bagaj kapladığı yer sayısına göre ücretlendirilir. Dış hatlar terminalinde emanet Kat 2'de, yalnızca uçuş rötarlarında çalışır. Telefon +7 (3952) 266-194.",
+      "after": "İç hatlar terminalinde Kat 1'de, ödeme nakit veya kartla. Parça başına her 24 saatte 610 ₽; 40×40×50 cm'den büyük bagaj kapladığı yer sayısına göre ücretlendirilir. Dış hatlar terminalinde emanet Kat 2'de, yalnızca uçuş rötarlarında çalışır. Telefon +7 (3952) 266-194.",
+      "reason": [
+        "Тариф RU сутки: период 24 часа"
+      ],
+      "fileSha256": "c11cba957a6589be5b0ffc020aeac5466b20d8951a158260f369345fb3894305"
+    },
+    {
+      "file": "data/airport-guide/en/KEJ.json",
+      "path": "blocks.storage.hint",
+      "before": "From 200 ₽ per day",
+      "after": "From 200 ₽ per 24 hours",
+      "reason": [
+        "Тариф RU сутки: период 24 часа"
+      ],
+      "fileSha256": "6d53ca2feea58c21a12c0d752099d2f85dd83c73315d8b34e09c6b09dffb9fbf"
+    },
+    {
+      "file": "data/airport-guide/en/KEJ.json",
+      "path": "blocks.storage.text",
+      "before": "Left luggage follows the domestic terminal schedule. Hand luggage 200 ₽ per day, baggage up to 50×40×20 cm 220 ₽, larger 270 ₽, over 100×50×70 cm 500 ₽. Less than a day is charged as a full day.",
+      "after": "Left luggage follows the domestic terminal schedule. Hand luggage 200 ₽ per 24 hours, baggage up to 50×40×20 cm 220 ₽, larger 270 ₽, over 100×50×70 cm 500 ₽. Less than 24 hours is charged as a full 24-hour period.",
+      "reason": [
+        "Тариф RU сутки: период 24 часа",
+        "RU неполные сутки оплачиваются как полные 24 часа"
+      ],
+      "fileSha256": "6d53ca2feea58c21a12c0d752099d2f85dd83c73315d8b34e09c6b09dffb9fbf"
+    },
+    {
+      "file": "data/airport-guide/de/KEJ.json",
+      "path": "blocks.storage.hint",
+      "before": "Ab 200 ₽ pro Tag",
+      "after": "Ab 200 ₽ je 24 Stunden",
+      "reason": [
+        "Тариф RU сутки: период 24 часа"
+      ],
+      "fileSha256": "6bb287b98009f7839f6ef2a3be29ec16130717c098aa73d8b9993fe9ae8967d5"
+    },
+    {
+      "file": "data/airport-guide/de/KEJ.json",
+      "path": "blocks.storage.text",
+      "before": "Die Gepäckaufbewahrung ist nach dem Zeitplan des Inlandsterminals geöffnet. Handgepäck 200 ₽ pro Tag, Gepäck bis 50×40×20 cm 220 ₽, größeres 270 ₽, über 100×50×70 cm 500 ₽. Weniger als ein Tag wird als voller Tag berechnet.",
+      "after": "Die Gepäckaufbewahrung ist nach dem Zeitplan des Inlandsterminals geöffnet. Handgepäck 200 ₽ je 24 Stunden, Gepäck bis 50×40×20 cm 220 ₽, größeres 270 ₽, über 100×50×70 cm 500 ₽. Weniger als 24 Stunden werden als volle 24 Stunden berechnet.",
+      "reason": [
+        "Тариф RU сутки: период 24 часа",
+        "RU неполные сутки оплачиваются как полные 24 часа"
+      ],
+      "fileSha256": "6bb287b98009f7839f6ef2a3be29ec16130717c098aa73d8b9993fe9ae8967d5"
+    },
+    {
+      "file": "data/airport-guide/fr/KEJ.json",
+      "path": "blocks.storage.hint",
+      "before": "Dès 200 ₽ par jour",
+      "after": "Dès 200 ₽ par période de 24 heures",
+      "reason": [
+        "Тариф RU сутки: период 24 часа"
+      ],
+      "fileSha256": "aed54590340c109787025ec815de4a1b696186bc84083feddb760ca715e0991d"
+    },
+    {
+      "file": "data/airport-guide/fr/KEJ.json",
+      "path": "blocks.storage.text",
+      "before": "La consigne fonctionne selon les horaires de l'aérogare des lignes intérieures. Bagage à main 200 ₽ par jour, bagage jusqu'à 50×40×20 cm 220 ₽, plus grand 270 ₽, au-delà de 100×50×70 cm 500 ₽. Moins d'un jour est facturé comme un jour entier.",
+      "after": "La consigne fonctionne selon les horaires de l'aérogare des lignes intérieures. Bagage à main 200 ₽ par période de 24 heures, bagage jusqu'à 50×40×20 cm 220 ₽, plus grand 270 ₽, au-delà de 100×50×70 cm 500 ₽. Toute durée inférieure à 24 heures est facturée comme une période complète de 24 heures.",
+      "reason": [
+        "Тариф RU сутки: период 24 часа",
+        "RU неполные сутки оплачиваются как полные 24 часа"
+      ],
+      "fileSha256": "aed54590340c109787025ec815de4a1b696186bc84083feddb760ca715e0991d"
+    },
+    {
+      "file": "data/airport-guide/es/KEJ.json",
+      "path": "blocks.storage.hint",
+      "before": "Desde 200 ₽ al día",
+      "after": "Desde 200 ₽ por cada 24 horas",
+      "reason": [
+        "Тариф RU сутки: период 24 часа"
+      ],
+      "fileSha256": "d270685a03c16c6b6f2f986314161830c91094ddd746353f61f0ff17dad23f29"
+    },
+    {
+      "file": "data/airport-guide/es/KEJ.json",
+      "path": "blocks.storage.text",
+      "before": "La consigna funciona según el horario de la terminal de vuelos nacionales. Equipaje de mano 200 ₽ por día, equipaje de hasta 50×40×20 cm 220 ₽, más grande 270 ₽, de más de 100×50×70 cm 500 ₽. Menos de un día se paga como un día completo.",
+      "after": "La consigna funciona según el horario de la terminal de vuelos nacionales. Equipaje de mano 200 ₽ por cada 24 horas, equipaje de hasta 50×40×20 cm 220 ₽, más grande 270 ₽, de más de 100×50×70 cm 500 ₽. Menos de 24 horas se cobra como un periodo completo de 24 horas.",
+      "reason": [
+        "Тариф RU сутки: период 24 часа",
+        "RU неполные сутки оплачиваются как полные 24 часа"
+      ],
+      "fileSha256": "d270685a03c16c6b6f2f986314161830c91094ddd746353f61f0ff17dad23f29"
+    },
+    {
+      "file": "data/airport-guide/it/KEJ.json",
+      "path": "blocks.storage.hint",
+      "before": "Da 200 ₽ al giorno",
+      "after": "Da 200 ₽ ogni 24 ore",
+      "reason": [
+        "Тариф RU сутки: период 24 часа"
+      ],
+      "fileSha256": "eeb6e5a5ecd505b7f2e8f92a1703823692938b38a984100f37d51e852b510568"
+    },
+    {
+      "file": "data/airport-guide/it/KEJ.json",
+      "path": "blocks.storage.text",
+      "before": "Il deposito bagagli segue l’orario dell’aerostazione dei voli nazionali. Bagaglio a mano 200 ₽ al giorno, bagaglio fino a 50×40×20 cm 220 ₽, più grande 270 ₽, oltre 100×50×70 cm 500 ₽. Meno di un giorno si paga come un giorno intero.",
+      "after": "Il deposito bagagli segue l’orario dell’aerostazione dei voli nazionali. Bagaglio a mano 200 ₽ ogni 24 ore, bagaglio fino a 50×40×20 cm 220 ₽, più grande 270 ₽, oltre 100×50×70 cm 500 ₽. Meno di 24 ore si paga come un periodo completo di 24 ore.",
+      "reason": [
+        "Тариф RU сутки: период 24 часа",
+        "RU неполные сутки оплачиваются как полные 24 часа"
+      ],
+      "fileSha256": "eeb6e5a5ecd505b7f2e8f92a1703823692938b38a984100f37d51e852b510568"
+    },
+    {
+      "file": "data/airport-guide/tr/KEJ.json",
+      "path": "blocks.storage.hint",
+      "before": "Günlüğü 200 ₽'den",
+      "after": "24 saati 200 ₽'den",
+      "reason": [
+        "Тариф RU сутки: период 24 часа"
+      ],
+      "fileSha256": "788b42b79ed2ea5a3fd6237d5fab2e222e116d18901cb93d915d43ad57f165b7"
+    },
+    {
+      "file": "data/airport-guide/tr/KEJ.json",
+      "path": "blocks.storage.text",
+      "before": "Emanet iç hatlar terminal binasının çalışma saatlerine göre açık. El bagajı günlüğü 200 ₽, 50×40×20 cm'ye kadar bagaj 220 ₽, daha büyüğü 270 ₽, 100×50×70 cm'den büyüğü 500 ₽. Bir günden kısa süre tam gün olarak ücretlendirilir.",
+      "after": "Emanet iç hatlar terminal binasının çalışma saatlerine göre açık. El bagajı 24 saati 200 ₽, 50×40×20 cm'ye kadar bagaj 220 ₽, daha büyüğü 270 ₽, 100×50×70 cm'den büyüğü 500 ₽. 24 saatten kısa süre tam 24 saat olarak ücretlendirilir.",
+      "reason": [
+        "Тариф RU сутки: период 24 часа",
+        "RU неполные сутки оплачиваются как полные 24 часа"
+      ],
+      "fileSha256": "788b42b79ed2ea5a3fd6237d5fab2e222e116d18901cb93d915d43ad57f165b7"
+    },
+    {
+      "file": "data/airport-guide/en/KGD.json",
+      "path": "blocks.parking.text",
+      "before": "Short-stay parking from 01.10.2026: first 15 minutes free, then 400 ₽ for each hour, including a part hour. Long-stay 900 ₽ per day. Free car park for 300 cars 400 m from the terminal. Parking on the first lane in front of the building is prohibited.",
+      "after": "Short-stay parking from 01.10.2026: first 15 minutes free, then 400 ₽ for each hour, including a part hour. Long-stay 900 ₽ per 24 hours. Free car park for 300 cars 400 m from the terminal. Parking on the first lane in front of the building is prohibited.",
+      "reason": [
+        "Тариф RU сутки: период 24 часа"
+      ],
+      "fileSha256": "992677fdb8c9b4ae2c01a6214ecbc95868080a1f1a25d6c11ccb0c7f411e6ad8"
+    },
+    {
+      "file": "data/airport-guide/de/KGD.json",
+      "path": "blocks.parking.text",
+      "before": "Kurzzeitparkplatz ab 01.10.2026: die ersten 15 Minuten kostenlos, danach 400 ₽ für jede, auch angefangene, Stunde. Langzeitparkplatz 900 ₽ pro Tag. Kostenloser Parkplatz für 300 Autos 400 m vom Terminal. Halten in der ersten Reihe vor dem Gebäude ist verboten.",
+      "after": "Kurzzeitparkplatz ab 01.10.2026: die ersten 15 Minuten kostenlos, danach 400 ₽ für jede, auch angefangene, Stunde. Langzeitparkplatz 900 ₽ je 24 Stunden. Kostenloser Parkplatz für 300 Autos 400 m vom Terminal. Parken in der ersten Reihe vor dem Gebäude ist verboten.",
+      "reason": [
+        "Тариф RU сутки: период 24 часа",
+        "Стоянка запрещена: не добавлять запрет остановки"
+      ],
+      "fileSha256": "06ac850fc97fd77033c2c8f09bb1ea87211cb604903584f472b6e148788a9b7d"
+    },
+    {
+      "file": "data/airport-guide/fr/KGD.json",
+      "path": "blocks.parking.text",
+      "before": "Parking courte durée à partir du 01.10.2026 : 15 premières minutes gratuites, ensuite 400 ₽ par heure, y compris entamée. Longue durée 900 ₽ par jour. Parking gratuit de 300 voitures à 400 m de l'aérogare. Le stationnement sur la première voie devant le bâtiment est interdit.",
+      "after": "Parking courte durée à partir du 01.10.2026 : 15 premières minutes gratuites, ensuite 400 ₽ par heure, y compris entamée. Longue durée 900 ₽ par période de 24 heures. Parking gratuit de 300 voitures à 400 m de l'aérogare. Le stationnement sur la première voie devant le bâtiment est interdit.",
+      "reason": [
+        "Тариф RU сутки: период 24 часа"
+      ],
+      "fileSha256": "1a1e734acf0e619a999bab35113d56cd92c6db82c69ff3c282f1211c80d62e23"
+    },
+    {
+      "file": "data/airport-guide/es/KGD.json",
+      "path": "blocks.parking.text",
+      "before": "Aparcamiento de corta estancia desde el 01.10.2026: los primeros 15 minutos gratis, después 400 ₽ por cada hora, también la incompleta. Larga estancia: 900 ₽ por día. Aparcamiento gratuito a 400 m de la terminal, para 300 coches. Está prohibido estacionar en el primer carril frente al edificio.",
+      "after": "Aparcamiento de corta estancia desde el 01.10.2026: los primeros 15 minutos gratis, después 400 ₽ por cada hora, también la incompleta. Larga estancia: 900 ₽ por cada 24 horas. Aparcamiento gratuito a 400 m de la terminal, para 300 coches. Está prohibido estacionar en el primer carril frente al edificio.",
+      "reason": [
+        "Тариф RU сутки: период 24 часа"
+      ],
+      "fileSha256": "2b3c32b74d8e785ddab1fb18100519f6b75d84a50c62a26a28f57ead1814f23c"
+    },
+    {
+      "file": "data/airport-guide/it/KGD.json",
+      "path": "blocks.parking.text",
+      "before": "Parcheggio breve sosta dal 01.10.2026: i primi 15 minuti gratis, poi 400 ₽ per ogni ora, anche se non completa. Lunga sosta 900 ₽ al giorno. Parcheggio gratuito da 300 auto a 400 m dall’aerostazione. Vietata la sosta sulla prima corsia davanti all’edificio.",
+      "after": "Parcheggio breve sosta dal 01.10.2026: i primi 15 minuti gratis, poi 400 ₽ per ogni ora, anche se non completa. Lunga sosta 900 ₽ ogni 24 ore. Parcheggio gratuito da 300 auto a 400 m dall’aerostazione. Vietata la sosta sulla prima corsia davanti all’edificio.",
+      "reason": [
+        "Тариф RU сутки: период 24 часа"
+      ],
+      "fileSha256": "161c66581152bf58d07efa58f470e826b061be586d5be2be0266f01016c80d33"
+    },
+    {
+      "file": "data/airport-guide/tr/KGD.json",
+      "path": "blocks.parking.text",
+      "before": "01.10.2026'dan itibaren kısa süreli otopark: ilk 15 dakika ücretsiz, sonrası tamamlanmamış saat dahil her saat 400 ₽. Uzun süreli günlüğü 900 ₽. Terminal binasına 400 m uzaklıkta 300 araçlık ücretsiz otopark. Binanın önündeki birinci şeritte park yasaktır.",
+      "after": "01.10.2026'dan itibaren kısa süreli otopark: ilk 15 dakika ücretsiz, sonrası tamamlanmamış saat dahil her saat 400 ₽. Uzun süreli 24 saati 900 ₽. Terminal binasına 400 m uzaklıkta 300 araçlık ücretsiz otopark. Binanın önündeki birinci şeritte park yasaktır.",
+      "reason": [
+        "Тариф RU сутки: период 24 часа"
+      ],
+      "fileSha256": "c5e12081f1869864833d9a3a7aa4f7d84388ee39ab5b20ca1b74f402bb9b2a05"
+    },
+    {
+      "file": "data/airport-guide/en/KRR.json",
+      "path": "blocks.storage.hint",
+      "before": "24/7, 400 ₽ per day",
+      "after": "400 ₽ for the first 24 hours",
+      "reason": [
+        "Тариф RU сутки: период 24 часа"
+      ],
+      "fileSha256": "f98790021d19fe9e8c6ae3e4012d38f574d4fadf2eea0e00539d60be0d445b2c"
+    },
+    {
+      "file": "data/airport-guide/en/KRR.json",
+      "path": "blocks.parking.text",
+      "before": "Station forecourt: first 15 minutes free, then 400 ₽ per hour. Additional hourly car park to the right of the forecourt: 250 ₽ per hour. Daily car park 900 ₽ per day. The alternative car park is free.",
+      "after": "Airport terminal forecourt: first 15 minutes free, then 400 ₽ per hour. Additional hourly car park to the right of the forecourt: 250 ₽ per hour. Daily car park 900 ₽ per 24 hours. The alternative car park is free.",
+      "reason": [
+        "Тариф RU сутки: период 24 часа",
+        "Площадь аэропорта, не железнодорожной станции"
+      ],
+      "fileSha256": "f98790021d19fe9e8c6ae3e4012d38f574d4fadf2eea0e00539d60be0d445b2c"
+    },
+    {
+      "file": "data/airport-guide/de/KRR.json",
+      "path": "blocks.storage.hint",
+      "before": "24/7, 400 ₽ pro Tag",
+      "after": "400 ₽ für die ersten 24 Stunden",
+      "reason": [
+        "Тариф RU сутки: период 24 часа"
+      ],
+      "fileSha256": "e7772adb8b71ddd50d097efe93e40db4eecadcfe52676126049719625c5c1669"
+    },
+    {
+      "file": "data/airport-guide/de/KRR.json",
+      "path": "blocks.parking.text",
+      "before": "Vorplatz: die ersten 15 Minuten kostenlos, danach 400 ₽ pro Stunde. Zusätzlicher Stundenparkplatz rechts vom Vorplatz: 250 ₽ pro Stunde. Tagesparkplatz 900 ₽ pro Tag. Der Ausweichparkplatz ist kostenlos.",
+      "after": "Vorplatz: die ersten 15 Minuten kostenlos, danach 400 ₽ pro Stunde. Zusätzlicher Stundenparkplatz rechts vom Vorplatz: 250 ₽ pro Stunde. Tagesparkplatz 900 ₽ je 24 Stunden. Der Ausweichparkplatz ist kostenlos.",
+      "reason": [
+        "Тариф RU сутки: период 24 часа"
+      ],
+      "fileSha256": "e7772adb8b71ddd50d097efe93e40db4eecadcfe52676126049719625c5c1669"
+    },
+    {
+      "file": "data/airport-guide/fr/KRR.json",
+      "path": "blocks.storage.hint",
+      "before": "24/7, 400 ₽ par jour",
+      "after": "400 ₽ les premières 24 h",
+      "reason": [
+        "Тариф RU сутки: период 24 часа"
+      ],
+      "fileSha256": "33ed6be081c52458419ddefc25b44f7cacafa0282b561c690ef72eaf0421e2cb"
+    },
+    {
+      "file": "data/airport-guide/fr/KRR.json",
+      "path": "blocks.parking.text",
+      "before": "Place de l'aérogare : 15 premières minutes gratuites, ensuite 400 ₽ de l'heure. Parking horaire supplémentaire à droite de la place : 250 ₽ de l'heure. À la journée 900 ₽ par jour. Le parking alternatif est gratuit.",
+      "after": "Place de l'aérogare : 15 premières minutes gratuites, ensuite 400 ₽ de l'heure. Parking horaire supplémentaire à droite de la place : 250 ₽ de l'heure. À la journée 900 ₽ par période de 24 heures. Le parking alternatif est gratuit.",
+      "reason": [
+        "Тариф RU сутки: период 24 часа"
+      ],
+      "fileSha256": "33ed6be081c52458419ddefc25b44f7cacafa0282b561c690ef72eaf0421e2cb"
+    },
+    {
+      "file": "data/airport-guide/es/KRR.json",
+      "path": "blocks.storage.hint",
+      "before": "24/7, 400 ₽ al día",
+      "after": "400 ₽ las primeras 24 h",
+      "reason": [
+        "Тариф RU сутки: период 24 часа"
+      ],
+      "fileSha256": "fc953dff7357b51a5893f89cb2848781ad2212f05143c46345d95184f62189e7"
+    },
+    {
+      "file": "data/airport-guide/es/KRR.json",
+      "path": "blocks.parking.text",
+      "before": "Plaza de la terminal: los primeros 15 minutos gratis, después 400 ₽ por hora. Aparcamiento adicional por horas a la derecha de la plaza: 250 ₽ por hora. Por días: 900 ₽ por día. El aparcamiento alternativo es gratuito.",
+      "after": "Plaza de la terminal: los primeros 15 minutos gratis, después 400 ₽ por hora. Aparcamiento adicional por horas a la derecha de la plaza: 250 ₽ por hora. Por días: 900 ₽ por cada 24 horas. El aparcamiento alternativo es gratuito.",
+      "reason": [
+        "Тариф RU сутки: период 24 часа"
+      ],
+      "fileSha256": "fc953dff7357b51a5893f89cb2848781ad2212f05143c46345d95184f62189e7"
+    },
+    {
+      "file": "data/airport-guide/it/KRR.json",
+      "path": "blocks.storage.hint",
+      "before": "24/7, 400 ₽ al giorno",
+      "after": "400 ₽ per le prime 24 ore",
+      "reason": [
+        "Тариф RU сутки: период 24 часа"
+      ],
+      "fileSha256": "a18b7dc3c072caef575c0f529169124d98410600ea8d12093f02baf8c08a2813"
+    },
+    {
+      "file": "data/airport-guide/it/KRR.json",
+      "path": "blocks.parking.text",
+      "before": "Piazzale dell’aerostazione: i primi 15 minuti gratis, poi 400 ₽ all’ora. Parcheggio orario aggiuntivo a destra del piazzale: 250 ₽ all’ora. Giornaliero 900 ₽ al giorno. Il parcheggio alternativo è gratuito.",
+      "after": "Piazzale dell’aerostazione: i primi 15 minuti gratis, poi 400 ₽ all’ora. Parcheggio orario aggiuntivo a destra del piazzale: 250 ₽ all’ora. Giornaliero 900 ₽ ogni 24 ore. Il parcheggio alternativo è gratuito.",
+      "reason": [
+        "Тариф RU сутки: период 24 часа"
+      ],
+      "fileSha256": "a18b7dc3c072caef575c0f529169124d98410600ea8d12093f02baf8c08a2813"
+    },
+    {
+      "file": "data/airport-guide/tr/KRR.json",
+      "path": "blocks.storage.hint",
+      "before": "24/7, günlüğü 400 ₽",
+      "after": "İlk 24 saat 400 ₽",
+      "reason": [
+        "Тариф RU сутки: период 24 часа"
+      ],
+      "fileSha256": "3dc712d98e94ef9d7610e52e1f6a642b3fbbf8f8edff61bb922e73556051f8e3"
+    },
+    {
+      "file": "data/airport-guide/tr/KRR.json",
+      "path": "blocks.parking.text",
+      "before": "Terminal önü meydanı: ilk 15 dakika ücretsiz, sonrası saati 400 ₽. Meydanın sağında ek saatlik otopark: saati 250 ₽. Günlük otopark günlüğü 900 ₽. Alternatif otopark ücretsiz.",
+      "after": "Terminal önü meydanı: ilk 15 dakika ücretsiz, sonrası saati 400 ₽. Meydanın sağında ek saatlik otopark: saati 250 ₽. Günlük otopark 24 saati 900 ₽. Alternatif otopark ücretsiz.",
+      "reason": [
+        "Тариф RU сутки: период 24 часа"
+      ],
+      "fileSha256": "3dc712d98e94ef9d7610e52e1f6a642b3fbbf8f8edff61bb922e73556051f8e3"
+    },
+    {
+      "file": "data/airport-guide/en/KUF.json",
+      "path": "blocks.storage.text",
+      "before": "Automated left luggage on Level 1, to the right of the entrance, by the airline ticket offices. Standard locker 250 ₽ per hour or 550 ₽ per day. Large 350 ₽ per hour or 900 ₽ per day. Oversized baggage 1,200 ₽ per item.",
+      "after": "Automated left luggage on Level 1, to the right of the entrance, by the airline ticket offices. Standard locker 250 ₽ per hour or 550 ₽ per 24 hours. Large 350 ₽ per hour or 900 ₽ per 24 hours. Oversized baggage 1,200 ₽ per item.",
+      "reason": [
+        "Тариф RU сутки: период 24 часа"
+      ],
+      "fileSha256": "48de7b61f77000e2c506c69f5c8a84a63758959ea7922648b9024b00cb50ddc0"
+    },
+    {
+      "file": "data/airport-guide/de/KUF.json",
+      "path": "blocks.storage.text",
+      "before": "Automatische Gepäckaufbewahrung auf Ebene 1, rechts vom Eingang, bei den Ticketschaltern. Standardfach 250 ₽ pro Stunde oder 550 ₽ pro Tag. Großes Fach 350 ₽ pro Stunde oder 900 ₽ pro Tag. Sperrgepäck 1200 ₽ pro Stück.",
+      "after": "Automatische Gepäckaufbewahrung auf Ebene 1, rechts vom Eingang, bei den Ticketschaltern. Standardfach 250 ₽ pro Stunde oder 550 ₽ je 24 Stunden. Großes Fach 350 ₽ pro Stunde oder 900 ₽ je 24 Stunden. Sperrgepäck 1200 ₽ pro Stück.",
+      "reason": [
+        "Тариф RU сутки: период 24 часа"
+      ],
+      "fileSha256": "b8458ead5bfb0a983ca4f1121895c43dffb3569c5d6bd0786d2ee59cf39925f3"
+    },
+    {
+      "file": "data/airport-guide/fr/KUF.json",
+      "path": "blocks.storage.text",
+      "before": "Consigne automatique au niveau 1, à droite de l'entrée, près des guichets de billets d'avion. Casier standard 250 ₽ de l'heure ou 550 ₽ par jour. Grand casier 350 ₽ de l'heure ou 900 ₽ par jour. Bagage hors gabarit 1200 ₽ par bagage.",
+      "after": "Consigne automatique au niveau 1, à droite de l'entrée, près des guichets de billets d'avion. Casier standard 250 ₽ de l'heure ou 550 ₽ par période de 24 heures. Grand casier 350 ₽ de l'heure ou 900 ₽ par période de 24 heures. Bagage hors gabarit 1200 ₽ par bagage.",
+      "reason": [
+        "Тариф RU сутки: период 24 часа"
+      ],
+      "fileSha256": "beee6422701547f9499be593ed88186cf99130b8c609e33a1304a1a9f6644814"
+    },
+    {
+      "file": "data/airport-guide/es/KUF.json",
+      "path": "blocks.storage.text",
+      "before": "Consigna automática en el nivel 1, a la derecha de la entrada, junto a la venta de billetes. Taquilla estándar: 250 ₽ por hora o 550 ₽ por día. Grande: 350 ₽ por hora o 900 ₽ por día. Equipaje de gran tamaño: 1200 ₽ por bulto.",
+      "after": "Consigna automática en el nivel 1, a la derecha de la entrada, junto a la venta de billetes. Taquilla estándar: 250 ₽ por hora o 550 ₽ por cada 24 horas. Grande: 350 ₽ por hora o 900 ₽ por cada 24 horas. Equipaje de gran tamaño: 1200 ₽ por bulto.",
+      "reason": [
+        "Тариф RU сутки: период 24 часа"
+      ],
+      "fileSha256": "bbe1d1ed45d9d8d9bf6b0f64e361590185fde7ee0aa427d4b2bdd447fde4394f"
+    },
+    {
+      "file": "data/airport-guide/it/KUF.json",
+      "path": "blocks.storage.text",
+      "before": "Deposito bagagli automatico al livello 1, a destra dell’ingresso, presso le biglietterie aeree. Armadietto standard 250 ₽ all’ora o 550 ₽ al giorno. Maggiorato 350 ₽ all’ora o 900 ₽ al giorno. Bagaglio fuori misura 1200 ₽ a collo.",
+      "after": "Deposito bagagli automatico al livello 1, a destra dell’ingresso, presso le biglietterie aeree. Armadietto standard 250 ₽ all’ora o 550 ₽ ogni 24 ore. Maggiorato 350 ₽ all’ora o 900 ₽ ogni 24 ore. Bagaglio fuori misura 1200 ₽ a collo.",
+      "reason": [
+        "Тариф RU сутки: период 24 часа"
+      ],
+      "fileSha256": "522ae543ee19a388cac95348430c32803ed3492c70adfddad71be225aa5c44d2"
+    },
+    {
+      "file": "data/airport-guide/tr/KUF.json",
+      "path": "blocks.storage.text",
+      "before": "Otomatik emanet dolapları Kat 1'de, girişin sağında, bilet gişelerinin yanında. Standart dolap saati 250 ₽ veya günlüğü 550 ₽. Büyük dolap saati 350 ₽ veya günlüğü 900 ₽. Standart dışı bagaj parça başına 1200 ₽.",
+      "after": "Otomatik emanet dolapları Kat 1'de, girişin sağında, bilet gişelerinin yanında. Standart dolap saati 250 ₽ veya 24 saati 550 ₽. Büyük dolap saati 350 ₽ veya 24 saati 900 ₽. Standart dışı bagaj parça başına 1200 ₽.",
+      "reason": [
+        "Тариф RU сутки: период 24 часа"
+      ],
+      "fileSha256": "25d25871c39635049afeaf7e5d6d4730e2a7f076833f9e6cfa764de2a43c219b"
+    },
+    {
+      "file": "data/airport-guide/en/GDX.json",
+      "path": "blocks.parking.text",
+      "before": "Station forecourt P1, 30 m from the terminal: first 15 minutes free, up to an hour 500 ₽, each following hour 300 ₽, a day 2,000 ₽. A repeat entry within an hour for 1–15 minutes: 200 ₽.",
+      "after": "Airport terminal forecourt P1, 30 m from the terminal: first 15 minutes free, up to an hour 500 ₽, each following hour 300 ₽, 2,000 ₽ per 24 hours. A repeat entry within an hour for 1–15 minutes: 200 ₽.",
+      "reason": [
+        "RU сутки/следующие сутки: явно периоды 24 часа",
+        "Площадь аэропорта, не железнодорожной станции"
+      ],
+      "fileSha256": "cf91533d807d0a70822dc88f8067dfe571c4d9fbad8567d35b8c462fb3ca8335"
+    },
+    {
+      "file": "data/airport-guide/de/GDX.json",
+      "path": "blocks.parking.text",
+      "before": "Vorplatz P1 30 m vom Terminal: die ersten 15 Minuten kostenlos, bis zu einer Stunde 500 ₽, jede weitere Stunde 300 ₽, ein Tag 2000 ₽. Erneute Einfahrt innerhalb einer Stunde für 1–15 Minuten: 200 ₽.",
+      "after": "Vorplatz P1 30 m vom Terminal: die ersten 15 Minuten kostenlos, bis zu einer Stunde 500 ₽, jede weitere Stunde 300 ₽, 24 Stunden 2000 ₽. Erneute Einfahrt innerhalb einer Stunde für 1–15 Minuten: 200 ₽.",
+      "reason": [
+        "RU сутки/следующие сутки: явно периоды 24 часа"
+      ],
+      "fileSha256": "b60a5b53902146eff6885a54eb9e362ff1e0182b34a429fdff91e5dd5ba0aad9"
+    },
+    {
+      "file": "data/airport-guide/fr/GDX.json",
+      "path": "blocks.parking.text",
+      "before": "Place de l'aérogare P1 à 30 m du terminal : 15 premières minutes gratuites, jusqu'à une heure 500 ₽, chaque heure suivante 300 ₽, la journée 2000 ₽. Nouvelle entrée dans l'heure pour 1–15 minutes : 200 ₽.",
+      "after": "Place de l'aérogare P1 à 30 m du terminal : 15 premières minutes gratuites, jusqu'à une heure 500 ₽, chaque heure suivante 300 ₽, 24 heures 2000 ₽. Nouvelle entrée dans l'heure pour 1–15 minutes : 200 ₽.",
+      "reason": [
+        "RU сутки/следующие сутки: явно периоды 24 часа"
+      ],
+      "fileSha256": "2dd9202c78875b52a5481fb103d475211cdbe7163bbf3a80df27808a1ef777b4"
+    },
+    {
+      "file": "data/airport-guide/es/GDX.json",
+      "path": "blocks.parking.text",
+      "before": "Plaza de la terminal P1, a 30 m de la terminal: los primeros 15 minutos gratis, hasta una hora 500 ₽, cada hora siguiente 300 ₽, un día 2000 ₽. Nueva entrada dentro de la misma hora por 1–15 minutos: 200 ₽.",
+      "after": "Plaza de la terminal P1, a 30 m de la terminal: los primeros 15 minutos gratis, hasta una hora 500 ₽, cada hora siguiente 300 ₽, 24 horas 2000 ₽. Nueva entrada en el plazo de una hora por 1–15 minutos: 200 ₽.",
+      "reason": [
+        "RU сутки/следующие сутки: явно периоды 24 часа",
+        "В течение часа, не в пределах того же часа по часам"
+      ],
+      "fileSha256": "372cca4e9270a202ab9a6ae8b2bad289fce87afad5ad2b6d6c601c951b5f8a5d"
+    },
+    {
+      "file": "data/airport-guide/it/GDX.json",
+      "path": "blocks.parking.text",
+      "before": "Piazzale dell’aerostazione P1 a 30 m dal terminal: i primi 15 minuti gratis, fino a un’ora 500 ₽, ogni ora successiva 300 ₽, giornata intera 2000 ₽. Nuovo ingresso entro un’ora per 1–15 minuti: 200 ₽.",
+      "after": "Piazzale dell’aerostazione P1 a 30 m dal terminal: i primi 15 minuti gratis, fino a un’ora 500 ₽, ogni ora successiva 300 ₽, 24 ore 2000 ₽. Nuovo ingresso entro un’ora per 1–15 minuti: 200 ₽.",
+      "reason": [
+        "RU сутки/следующие сутки: явно периоды 24 часа"
+      ],
+      "fileSha256": "55cae70bf08ea5999bf26dd304ea48fc7ffb385b4fc5c7af75649294b1f9bd23"
+    },
+    {
+      "file": "data/airport-guide/tr/GDX.json",
+      "path": "blocks.parking.text",
+      "before": "Terminale 30 m uzaklıktaki P1 terminal önü meydanı: ilk 15 dakika ücretsiz, bir saate kadar 500 ₽, sonraki her saat 300 ₽, günlüğü 2000 ₽. Bir saat içinde 1–15 dakikalık tekrar giriş 200 ₽.",
+      "after": "Terminale 30 m uzaklıktaki P1 terminal önü meydanı: ilk 15 dakika ücretsiz, bir saate kadar 500 ₽, sonraki her saat 300 ₽, 24 saati 2000 ₽. Bir saat içinde 1–15 dakikalık tekrar giriş 200 ₽.",
+      "reason": [
+        "RU сутки/следующие сутки: явно периоды 24 часа"
+      ],
+      "fileSha256": "04bd7e804dfbb33d2f1296585510c3d8a7b6bd99a451d14876e8a5ea968fa2e0"
+    },
+    {
+      "file": "data/airport-guide/en/GOJ.json",
+      "path": "blocks.parking.text",
+      "before": "Drop-off and pick-up zone: first 15 minutes free, from minute 16 to 60: 890 ₽, then 890 ₽ per hour. Car park P at the terminal: up to 1 hour 370 ₽, from 1 to 24 hours 750 ₽, up to 2 days 1,500 ₽. Free round-the-clock car park 700 m from the terminal, unguarded. First lane (VIP zone): 3,000 ₽ per entry.",
+      "after": "Drop-off and pick-up zone: first 15 minutes free, from minute 16 to 60: 890 ₽, then 890 ₽ per hour. Car park P at the terminal: up to 1 hour 370 ₽, from 1 to 24 hours 750 ₽, up to 2 periods of 24 hours 1,500 ₽. Free round-the-clock car park 700 m from the terminal, unguarded. First lane (VIP zone): 3,000 ₽ per entry.",
+      "reason": [
+        "RU сутки/следующие сутки: явно периоды 24 часа"
+      ],
+      "fileSha256": "40caa126399dfdf1f88ee57730f1fe85fa79a32059f9020ab52747881c86ef2a"
+    },
+    {
+      "file": "data/airport-guide/de/GOJ.json",
+      "path": "blocks.parking.text",
+      "before": "Hol- und Bringzone: die ersten 15 Minuten kostenlos, von der 16. bis zur 60. Minute 890 ₽, danach 890 ₽ pro Stunde. Parkplatz P am Terminal: bis 1 Stunde 370 ₽, von 1 bis 24 Stunden 750 ₽, bis 2 Tage 1500 ₽. Kostenloser Parkplatz rund um die Uhr 700 m vom Terminal, unbewacht. Erste Reihe (VIP-Zone): 3000 ₽ pro Einfahrt.",
+      "after": "Hol- und Bringzone: die ersten 15 Minuten kostenlos, von der 16. bis zur 60. Minute 890 ₽, danach 890 ₽ pro Stunde. Parkplatz P am Terminal: bis 1 Stunde 370 ₽, von 1 bis 24 Stunden 750 ₽, bis zu 2 Zeiträumen von je 24 Stunden 1500 ₽. Kostenloser Parkplatz rund um die Uhr 700 m vom Terminal, unbewacht. Erste Reihe (VIP-Zone): 3000 ₽ pro Einfahrt.",
+      "reason": [
+        "RU сутки/следующие сутки: явно периоды 24 часа"
+      ],
+      "fileSha256": "f0cecf9e6c6c4d094cdb45ada193892ab4a4e5cee505966de2c039a60b13abe3"
+    },
+    {
+      "file": "data/airport-guide/fr/GOJ.json",
+      "path": "blocks.parking.text",
+      "before": "Zone de dépose et de prise en charge : 15 premières minutes gratuites, de la 16e à la 60e minute 890 ₽, ensuite 890 ₽ de l'heure. Parking P près du terminal : jusqu'à 1 heure 370 ₽, de 1 à 24 heures 750 ₽, jusqu'à 2 jours 1500 ₽. Parking gratuit jour et nuit à 700 m du terminal, non gardé. Première voie (zone VIP) : 3000 ₽ par entrée.",
+      "after": "Zone de dépose et de prise en charge : 15 premières minutes gratuites, de la 16e à la 60e minute 890 ₽, ensuite 890 ₽ de l'heure. Parking P près du terminal : jusqu'à 1 heure 370 ₽, de 1 à 24 heures 750 ₽, jusqu'à 2 périodes de 24 heures 1500 ₽. Parking gratuit jour et nuit à 700 m du terminal, non gardé. Première voie (zone VIP) : 3000 ₽ par entrée.",
+      "reason": [
+        "RU сутки/следующие сутки: явно периоды 24 часа"
+      ],
+      "fileSha256": "34a62f3fd3a88541b9cef17f6ef42a8ebad8a0670f9eb210a0c97da71fcd3d43"
+    },
+    {
+      "file": "data/airport-guide/es/GOJ.json",
+      "path": "blocks.parking.text",
+      "before": "Zona de recogida y bajada de pasajeros: los primeros 15 minutos gratis, del minuto 16 al 60, 890 ₽, después 890 ₽ por hora. Aparcamiento P junto a la terminal: hasta 1 hora 370 ₽, de 1 a 24 horas 750 ₽, hasta 2 días 1500 ₽. Aparcamiento gratuito abierto día y noche a 700 m de la terminal, sin vigilancia. Primer carril (zona VIP): 3000 ₽ por entrada.",
+      "after": "Zona de recogida y bajada de pasajeros: los primeros 15 minutos gratis, del minuto 16 al 60, 890 ₽, después 890 ₽ por hora. Aparcamiento P junto a la terminal: hasta 1 hora 370 ₽, de 1 a 24 horas 750 ₽, hasta 2 periodos de 24 horas 1500 ₽. Aparcamiento gratuito abierto día y noche a 700 m de la terminal, sin vigilancia. Primer carril (zona VIP): 3000 ₽ por entrada.",
+      "reason": [
+        "RU сутки/следующие сутки: явно периоды 24 часа"
+      ],
+      "fileSha256": "03023fa357d2734a29433931c3aa7151bf6ecce1d565f84d95564e9c99e2a588"
+    },
+    {
+      "file": "data/airport-guide/it/GOJ.json",
+      "path": "blocks.parking.text",
+      "before": "Zona di salita e discesa passeggeri: i primi 15 minuti gratis, dal 16° al 60° minuto 890 ₽, poi 890 ₽ all’ora. Parcheggio P presso il terminal: fino a 1 ora 370 ₽, da 1 a 24 ore 750 ₽, fino a 2 giorni 1500 ₽. Parcheggio gratuito giorno e notte a 700 m dal terminal, non custodito. Prima corsia (zona VIP): 3000 ₽ per ingresso.",
+      "after": "Zona di salita e discesa passeggeri: i primi 15 minuti gratis, dal 16° al 60° minuto 890 ₽, poi 890 ₽ all’ora. Parcheggio P presso il terminal: fino a 1 ora 370 ₽, da 1 a 24 ore 750 ₽, fino a 2 periodi di 24 ore 1500 ₽. Parcheggio gratuito giorno e notte a 700 m dal terminal, non custodito. Prima corsia (zona VIP): 3000 ₽ per ingresso.",
+      "reason": [
+        "RU сутки/следующие сутки: явно периоды 24 часа"
+      ],
+      "fileSha256": "55fb5367283824c73326de9e631cde6aa8bbc9879c959624351f2426f99ca663"
+    },
+    {
+      "file": "data/airport-guide/tr/GOJ.json",
+      "path": "blocks.parking.text",
+      "before": "İndirme-bindirme alanı: ilk 15 dakika ücretsiz, 16. ila 60. dakika arası 890 ₽, sonrası saati 890 ₽. Terminalin yanındaki P otoparkı: 1 saate kadar 370 ₽, 1 ila 24 saat 750 ₽, 2 güne kadar 1500 ₽. Terminale 700 m uzaklıkta gece gündüz açık ücretsiz otopark, korumasız. Birinci şerit (VIP alanı): giriş başına 3000 ₽.",
+      "after": "İndirme-bindirme alanı: ilk 15 dakika ücretsiz, 16. ila 60. dakika arası 890 ₽, sonrası saati 890 ₽. Terminalin yanındaki P otoparkı: 1 saate kadar 370 ₽, 1 ila 24 saat 750 ₽, 2 adet 24 saatlik döneme kadar 1500 ₽. Terminale 700 m uzaklıkta gece gündüz açık ücretsiz otopark, korumasız. Birinci şerit (VIP alanı): giriş başına 3000 ₽.",
+      "reason": [
+        "RU сутки/следующие сутки: явно периоды 24 часа"
+      ],
+      "fileSha256": "250e3c49d6506f935de249735c6fbe31be2f07bd76fd4a2c2196ac5a220acc9e"
+    },
+    {
+      "file": "data/airport-guide/en/IKT.json",
+      "path": "blocks.parking.text",
+      "before": "The first 10 minutes are free. 11–20 minutes 100 ₽, up to 1 hour 350 ₽, from 2 h 41 min to 24 hours 1,200 ₽, each following day 1,200 ₽. Each terminal has its own car park. Drop-off and pick-up zone: 10 minutes free, longer stays incur a penalty of 2,000 ₽ per hour.",
+      "after": "The first 10 minutes are free. 11–20 minutes 100 ₽, up to 1 hour 350 ₽, from 2 h 41 min to 24 hours 1,200 ₽, each following 24-hour period 1,200 ₽. Each terminal has its own car park. Drop-off and pick-up zone: 10 minutes free, longer stays incur a penalty of 2,000 ₽ per hour.",
+      "reason": [
+        "RU сутки/следующие сутки: явно периоды 24 часа"
+      ],
+      "fileSha256": "f41b3c07ca31a7bf1e2410b5c7ec93438f0ccb0d44f0faed40c49c6e3f0a15a1"
+    },
+    {
+      "file": "data/airport-guide/de/IKT.json",
+      "path": "blocks.parking.text",
+      "before": "Die ersten 10 Minuten kostenlos. 11–20 Minuten 100 ₽, bis 1 Stunde 350 ₽, von 2 Std. 41 Min. bis 24 Stunden 1200 ₽, jeder weitere Tag 1200 ₽. Jedes Terminal hat einen eigenen Parkplatz. Hol- und Bringzone: 10 Minuten kostenlos, länger Strafgebühr 2000 ₽ pro Stunde.",
+      "after": "Die ersten 10 Minuten kostenlos. 11–20 Minuten 100 ₽, bis 1 Stunde 350 ₽, von 2 Std. 41 Min. bis 24 Stunden 1200 ₽, jeder weitere Zeitraum von 24 Stunden 1200 ₽. Jedes Terminal hat einen eigenen Parkplatz. Hol- und Bringzone: 10 Minuten kostenlos, länger Strafgebühr 2000 ₽ pro Stunde.",
+      "reason": [
+        "RU сутки/следующие сутки: явно периоды 24 часа"
+      ],
+      "fileSha256": "2866a8cfa5277f744b615bcbff212b961d4dc172334aa273cf542d7fdc0058b2"
+    },
+    {
+      "file": "data/airport-guide/fr/IKT.json",
+      "path": "blocks.parking.text",
+      "before": "Les 10 premières minutes sont gratuites. 11–20 minutes 100 ₽, jusqu'à 1 heure 350 ₽, de 2 h 41 min à 24 heures 1200 ₽, chaque jour suivant 1200 ₽. Chaque terminal a son propre parking. Zone de dépose et de prise en charge : 10 minutes gratuites, au-delà pénalité de 2000 ₽ de l'heure.",
+      "after": "Les 10 premières minutes sont gratuites. 11–20 minutes 100 ₽, jusqu'à 1 heure 350 ₽, de 2 h 41 min à 24 heures 1200 ₽, chaque période suivante de 24 heures 1200 ₽. Chaque terminal a son propre parking. Zone de dépose et de prise en charge : 10 minutes gratuites, au-delà pénalité de 2000 ₽ de l'heure.",
+      "reason": [
+        "RU сутки/следующие сутки: явно периоды 24 часа"
+      ],
+      "fileSha256": "6d3621b588e31184eb3721b09e2fdb030aa95d7ba6d56cb90763f16004a2050b"
+    },
+    {
+      "file": "data/airport-guide/es/IKT.json",
+      "path": "blocks.parking.text",
+      "before": "Los primeros 10 minutos gratis. 11–20 minutos 100 ₽, hasta 1 hora 350 ₽, de 2 h 41 min a 24 horas 1200 ₽, cada día siguiente 1200 ₽. Cada terminal tiene su propio aparcamiento. Zona de recogida y bajada de pasajeros: 10 minutos gratis; si se excede, recargo de 2000 ₽ por hora.",
+      "after": "Los primeros 10 minutos gratis. 11–20 minutos 100 ₽, hasta 1 hora 350 ₽, de 2 h 41 min a 24 horas 1200 ₽, cada periodo siguiente de 24 horas 1200 ₽. Cada terminal tiene su propio aparcamiento. Zona de recogida y bajada de pasajeros: 10 minutos gratis; si se excede, recargo de 2000 ₽ por hora.",
+      "reason": [
+        "RU сутки/следующие сутки: явно периоды 24 часа"
+      ],
+      "fileSha256": "c7c37694370f91ce79d3fa7d52ba3e915f59208c7c27dc48d90a1a04a25052aa"
+    },
+    {
+      "file": "data/airport-guide/it/IKT.json",
+      "path": "blocks.parking.text",
+      "before": "I primi 10 minuti gratis. 11–20 minuti 100 ₽, fino a 1 ora 350 ₽, da 2 h 41 min a 24 ore 1200 ₽, ogni giorno successivo 1200 ₽. Ogni terminal ha il proprio parcheggio. Zona di salita e discesa passeggeri: 10 minuti gratis, oltre si paga una penale di 2000 ₽ all’ora.",
+      "after": "I primi 10 minuti gratis. 11–20 minuti 100 ₽, fino a 1 ora 350 ₽, da 2 h 41 min a 24 ore 1200 ₽, ogni successivo periodo di 24 ore 1200 ₽. Ogni terminal ha il proprio parcheggio. Zona di salita e discesa passeggeri: 10 minuti gratis, oltre si paga una penale di 2000 ₽ all’ora.",
+      "reason": [
+        "RU сутки/следующие сутки: явно периоды 24 часа"
+      ],
+      "fileSha256": "78935144f62c869655ca99ecfd496fcbe3372ed3a0bd651a8f728c5fa7eb968c"
+    },
+    {
+      "file": "data/airport-guide/tr/IKT.json",
+      "path": "blocks.parking.text",
+      "before": "İlk 10 dakika ücretsiz. 11–20 dakika 100 ₽, 1 saate kadar 350 ₽, 2 sa 41 dk'dan 24 saate kadar 1200 ₽, sonraki her gün 1200 ₽. Her terminalin kendi otoparkı var. İndirme-bindirme alanı: 10 dakika ücretsiz, daha uzun süre için saati 2000 ₽ ceza.",
+      "after": "İlk 10 dakika ücretsiz. 11–20 dakika 100 ₽, 1 saate kadar 350 ₽, 2 sa 41 dk'dan 24 saate kadar 1200 ₽, sonraki her 24 saat 1200 ₽. Her terminalin kendi otoparkı var. İndirme-bindirme alanı: 10 dakika ücretsiz, daha uzun süre için saati 2000 ₽ ceza.",
+      "reason": [
+        "RU сутки/следующие сутки: явно периоды 24 часа"
+      ],
+      "fileSha256": "c11cba957a6589be5b0ffc020aeac5466b20d8951a158260f369345fb3894305"
+    },
+    {
+      "file": "data/airport-guide/en/KEJ.json",
+      "path": "blocks.parking.text",
+      "before": "Station forecourt 30 m from the terminal, 173 spaces: up to 15 minutes free, first hour 300 ₽, second and third 200 ₽ each, from the fourth hour the daily rate of 1,000 ₽.",
+      "after": "Airport terminal forecourt 30 m from the terminal, 173 spaces: up to 15 minutes free, first hour 300 ₽, second and third 200 ₽ each, from the fourth hour the rate of 1,000 ₽ per 24 hours.",
+      "reason": [
+        "RU сутки/следующие сутки: явно периоды 24 часа",
+        "Площадь аэропорта, не железнодорожной станции"
+      ],
+      "fileSha256": "6d53ca2feea58c21a12c0d752099d2f85dd83c73315d8b34e09c6b09dffb9fbf"
+    },
+    {
+      "file": "data/airport-guide/de/KEJ.json",
+      "path": "blocks.parking.text",
+      "before": "Vorplatz 30 m vom Terminal, 173 Plätze: bis 15 Minuten kostenlos, die erste Stunde 300 ₽, die zweite und dritte je 200 ₽, ab der vierten Stunde Tagestarif 1000 ₽.",
+      "after": "Vorplatz 30 m vom Terminal, 173 Plätze: bis 15 Minuten kostenlos, die erste Stunde 300 ₽, die zweite und dritte je 200 ₽, ab der vierten Stunde Tarif von 1000 ₽ je 24 Stunden.",
+      "reason": [
+        "RU сутки/следующие сутки: явно периоды 24 часа"
+      ],
+      "fileSha256": "6bb287b98009f7839f6ef2a3be29ec16130717c098aa73d8b9993fe9ae8967d5"
+    },
+    {
+      "file": "data/airport-guide/fr/KEJ.json",
+      "path": "blocks.parking.text",
+      "before": "Place de l'aérogare à 30 m du terminal, 173 places : jusqu'à 15 minutes gratuit, première heure 300 ₽, deuxième et troisième 200 ₽ chacune, à partir de la quatrième heure tarif journalier de 1000 ₽.",
+      "after": "Place de l'aérogare à 30 m du terminal, 173 places : jusqu'à 15 minutes gratuit, première heure 300 ₽, deuxième et troisième 200 ₽ chacune, à partir de la quatrième heure tarif de 1000 ₽ par période de 24 heures.",
+      "reason": [
+        "RU сутки/следующие сутки: явно периоды 24 часа"
+      ],
+      "fileSha256": "aed54590340c109787025ec815de4a1b696186bc84083feddb760ca715e0991d"
+    },
+    {
+      "file": "data/airport-guide/es/KEJ.json",
+      "path": "blocks.parking.text",
+      "before": "Plaza de la terminal, a 30 m de la terminal, 173 plazas: hasta 15 minutos gratis, la primera hora 300 ₽, la segunda y la tercera 200 ₽ cada una, a partir de la cuarta hora tarifa diaria de 1000 ₽.",
+      "after": "Plaza de la terminal, a 30 m de la terminal, 173 plazas: hasta 15 minutos gratis, la primera hora 300 ₽, la segunda y la tercera 200 ₽ cada una, a partir de la cuarta hora tarifa de 1000 ₽ por cada 24 horas.",
+      "reason": [
+        "RU сутки/следующие сутки: явно периоды 24 часа"
+      ],
+      "fileSha256": "d270685a03c16c6b6f2f986314161830c91094ddd746353f61f0ff17dad23f29"
+    },
+    {
+      "file": "data/airport-guide/it/KEJ.json",
+      "path": "blocks.parking.text",
+      "before": "Piazzale dell’aerostazione a 30 m dal terminal, 173 posti: fino a 15 minuti gratis, la prima ora 300 ₽, la seconda e la terza 200 ₽ ciascuna, dalla quarta ora tariffa giornaliera di 1000 ₽.",
+      "after": "Piazzale dell’aerostazione a 30 m dal terminal, 173 posti: fino a 15 minuti gratis, la prima ora 300 ₽, la seconda e la terza 200 ₽ ciascuna, dalla quarta ora tariffa di 1000 ₽ ogni 24 ore.",
+      "reason": [
+        "RU сутки/следующие сутки: явно периоды 24 часа"
+      ],
+      "fileSha256": "eeb6e5a5ecd505b7f2e8f92a1703823692938b38a984100f37d51e852b510568"
+    },
+    {
+      "file": "data/airport-guide/tr/KEJ.json",
+      "path": "blocks.parking.text",
+      "before": "Terminale 30 m uzaklıkta terminal önü meydanı, 173 araçlık: 15 dakikaya kadar ücretsiz, ilk saat 300 ₽, ikinci ve üçüncü saat 200'er ₽, dördüncü saatten itibaren günlük tarife 1000 ₽.",
+      "after": "Terminale 30 m uzaklıkta terminal önü meydanı, 173 araçlık: 15 dakikaya kadar ücretsiz, ilk saat 300 ₽, ikinci ve üçüncü saat 200'er ₽, dördüncü saatten itibaren 24 saatlik tarife 1000 ₽.",
+      "reason": [
+        "RU сутки/следующие сутки: явно периоды 24 часа"
+      ],
+      "fileSha256": "788b42b79ed2ea5a3fd6237d5fab2e222e116d18901cb93d915d43ad57f165b7"
+    },
+    {
+      "file": "data/airport-guide/en/KHV.json",
+      "path": "blocks.parking.text",
+      "before": "Short-stay P2 opposite the domestic terminal: up to 15 min free, up to 30 min 150 ₽, up to 60 min 300 ₽, up to 24 hours 500 ₽. Long-stay P1 opposite the Dalaeronavigatsiya building: 500 ₽/day for up to 4 days, from 5 days 350 ₽. There is a free car park with no time limit.",
+      "after": "Short-stay P2 opposite the domestic terminal: up to 15 min free, up to 30 min 150 ₽, up to 60 min 300 ₽, up to 24 hours 500 ₽. Long-stay P1 opposite the Dalaeronavigatsiya building: 500 ₽ per 24 hours for up to 4 periods of 24 hours, from 5 periods 350 ₽ per 24 hours. There is a free car park with no time limit.",
+      "reason": [
+        "RU стоимость за сутки с порогом 4/5 суток"
+      ],
+      "fileSha256": "051a39c68c7930d1cae43fc7e6ab4469ad475d39b870549e27b7b5ca676f55fb"
+    },
+    {
+      "file": "data/airport-guide/de/KHV.json",
+      "path": "blocks.parking.text",
+      "before": "Kurzzeitparkplatz P2 gegenüber dem Inlandsterminal: bis 15 Min. kostenlos, bis 30 Min. 150 ₽, bis 60 Min. 300 ₽, bis 24 Stunden 500 ₽. Langzeitparkplatz P1 gegenüber dem Gebäude der Dalaeronawigazija: 500 ₽/Tag bis 4 Tage, ab 5 Tagen 350 ₽. Es gibt einen kostenlosen Parkplatz ohne Zeitbegrenzung.",
+      "after": "Kurzzeitparkplatz P2 gegenüber dem Inlandsterminal: bis 15 Min. kostenlos, bis 30 Min. 150 ₽, bis 60 Min. 300 ₽, bis 24 Stunden 500 ₽. Langzeitparkplatz P1 gegenüber dem Gebäude der Dalaeronawigazija: 500 ₽ je 24 Stunden bis zu 4 Zeiträumen von je 24 Stunden, ab 5 Zeiträumen 350 ₽ je 24 Stunden. Es gibt einen kostenlosen Parkplatz ohne Zeitbegrenzung.",
+      "reason": [
+        "RU стоимость за сутки с порогом 4/5 суток"
+      ],
+      "fileSha256": "c05bf3705100ddcfc606ab2c7b55b77ee1922d98444d58748c7782bebf1d506f"
+    },
+    {
+      "file": "data/airport-guide/fr/KHV.json",
+      "path": "blocks.parking.text",
+      "before": "Courte durée P2 face au terminal des lignes intérieures : jusqu'à 15 min gratuit, jusqu'à 30 min 150 ₽, jusqu'à 60 min 300 ₽, jusqu'à 24 heures 500 ₽. Longue durée P1 face au bâtiment de Dalaeronavigatsia : 500 ₽/jour jusqu'à 4 jours, à partir de 5 jours 350 ₽. Un parking gratuit sans limite de temps est disponible.",
+      "after": "Courte durée P2 face au terminal des lignes intérieures : jusqu'à 15 min gratuit, jusqu'à 30 min 150 ₽, jusqu'à 60 min 300 ₽, jusqu'à 24 heures 500 ₽. Longue durée P1 face au bâtiment de Dalaeronavigatsia : 500 ₽ par période de 24 heures jusqu’à 4 périodes de 24 heures ; à partir de 5 périodes, 350 ₽ par période de 24 heures. Un parking gratuit sans limite de temps est disponible.",
+      "reason": [
+        "RU стоимость за сутки с порогом 4/5 суток"
+      ],
+      "fileSha256": "f9bdff6c4b11885a040ea8ed135543b61eb24390f8f15f03d259c5064ae38235"
+    },
+    {
+      "file": "data/airport-guide/es/KHV.json",
+      "path": "blocks.parking.text",
+      "before": "Corta estancia P2, frente a la terminal de vuelos nacionales: hasta 15 min gratis, hasta 30 min 150 ₽, hasta 60 min 300 ₽, hasta 24 horas 500 ₽. Larga estancia P1, frente al edificio de Dalaeronavigatsiya: 500 ₽/día hasta 4 días, a partir de 5 días 350 ₽. Hay aparcamiento gratuito sin límite de tiempo.",
+      "after": "Corta estancia P2, frente a la terminal de vuelos nacionales: hasta 15 min gratis, hasta 30 min 150 ₽, hasta 60 min 300 ₽, hasta 24 horas 500 ₽. Larga estancia P1, frente al edificio de Dalaeronavigatsiya: 500 ₽ por cada 24 horas hasta 4 periodos de 24 horas; a partir de 5 periodos, 350 ₽ por cada 24 horas. Hay aparcamiento gratuito sin límite de tiempo.",
+      "reason": [
+        "RU стоимость за сутки с порогом 4/5 суток"
+      ],
+      "fileSha256": "419f48e15f4e943278d069d23ae6ed800d1c334132f19a1bb9c5a1ec326dff9e"
+    },
+    {
+      "file": "data/airport-guide/it/KHV.json",
+      "path": "blocks.parking.text",
+      "before": "Breve sosta P2 di fronte al terminal dei voli nazionali: fino a 15 min gratis, fino a 30 min 150 ₽, fino a 60 min 300 ₽, fino a 24 ore 500 ₽. Lunga sosta P1 di fronte all’edificio di Dalaeronavigatsiya: 500 ₽/giorno fino a 4 giorni, dal 5° giorno 350 ₽. C’è un parcheggio gratuito senza limiti di tempo.",
+      "after": "Breve sosta P2 di fronte al terminal dei voli nazionali: fino a 15 min gratis, fino a 30 min 150 ₽, fino a 60 min 300 ₽, fino a 24 ore 500 ₽. Lunga sosta P1 di fronte all’edificio di Dalaeronavigatsiya: 500 ₽ ogni 24 ore fino a 4 periodi di 24 ore; da 5 periodi, 350 ₽ ogni 24 ore. C’è un parcheggio gratuito senza limiti di tempo.",
+      "reason": [
+        "RU стоимость за сутки с порогом 4/5 суток"
+      ],
+      "fileSha256": "fda6725341635002be080fcc13c7d97c2a1e807514c8c09022e446a27debfceb"
+    },
+    {
+      "file": "data/airport-guide/tr/KHV.json",
+      "path": "blocks.parking.text",
+      "before": "İç hatlar terminalinin karşısında kısa süreli P2: 15 dk'ya kadar ücretsiz, 30 dk'ya kadar 150 ₽, 60 dk'ya kadar 300 ₽, 24 saate kadar 500 ₽. Dalaeronavigatsiya binasının karşısında uzun süreli P1: 4 güne kadar günlüğü 500 ₽, 5. günden itibaren 350 ₽. Süre sınırı olmayan ücretsiz otopark var.",
+      "after": "İç hatlar terminalinin karşısında kısa süreli P2: 15 dk'ya kadar ücretsiz, 30 dk'ya kadar 150 ₽, 60 dk'ya kadar 300 ₽, 24 saate kadar 500 ₽. Dalaeronavigatsiya binasının karşısında uzun süreli P1: 4 adet 24 saatlik döneme kadar her 24 saat için 500 ₽, 5 adet 24 saatlik dönemden itibaren her 24 saat için 350 ₽. Süre sınırı olmayan ücretsiz otopark var.",
+      "reason": [
+        "RU стоимость за сутки с порогом 4/5 суток"
+      ],
+      "fileSha256": "03ef68b68caffa22c7361baaa3158cf3b9666dbc202598f9ded77761104363c2"
+    },
+    {
+      "file": "data/airport-guide/en/KUF.json",
+      "path": "blocks.parking.text",
+      "before": "In the drop-off and pick-up zone the first 15 minutes are free, from minute 16 to 60: 880 ₽. Short-stay P1: up to an hour 357 ₽, up to 2 hours 682 ₽, a day 1,391 ₽. Long-stay P2: a day 791 ₽. Economy P4: 1,054 ₽ for the first 2 days. All car parks are open round the clock.",
+      "after": "In the drop-off and pick-up zone the first 15 minutes are free, from minute 16 to 60: 880 ₽. Short-stay P1: up to an hour 357 ₽, up to 2 hours 682 ₽, 24 hours 1,391 ₽. Long-stay P2: 24 hours 791 ₽. Economy P4: 1,054 ₽ for the first 2 periods of 24 hours. All car parks are open round the clock.",
+      "reason": [
+        "RU сутки и первые 2 суток: периоды 24 часа"
+      ],
+      "fileSha256": "48de7b61f77000e2c506c69f5c8a84a63758959ea7922648b9024b00cb50ddc0"
+    },
+    {
+      "file": "data/airport-guide/de/KUF.json",
+      "path": "blocks.parking.text",
+      "before": "In der Hol- und Bringzone sind die ersten 15 Minuten kostenlos, von der 16. bis zur 60. Minute 880 ₽. Kurzzeitparkplatz P1: bis zu einer Stunde 357 ₽, bis 2 Stunden 682 ₽, ein Tag 1391 ₽. Langzeitparkplatz P2: ein Tag 791 ₽. Economy P4: 1054 ₽ für die ersten 2 Tage. Alle Parkplätze sind rund um die Uhr geöffnet.",
+      "after": "In der Hol- und Bringzone sind die ersten 15 Minuten kostenlos, von der 16. bis zur 60. Minute 880 ₽. Kurzzeitparkplatz P1: bis zu einer Stunde 357 ₽, bis 2 Stunden 682 ₽, 24 Stunden 1391 ₽. Langzeitparkplatz P2: 24 Stunden 791 ₽. Economy P4: 1054 ₽ für die ersten 2 Zeiträume von je 24 Stunden. Alle Parkplätze sind rund um die Uhr geöffnet.",
+      "reason": [
+        "RU сутки и первые 2 суток: периоды 24 часа"
+      ],
+      "fileSha256": "b8458ead5bfb0a983ca4f1121895c43dffb3569c5d6bd0786d2ee59cf39925f3"
+    },
+    {
+      "file": "data/airport-guide/fr/KUF.json",
+      "path": "blocks.parking.text",
+      "before": "Dans la zone de dépose et de prise en charge, 15 premières minutes gratuites, de la 16e à la 60e minute 880 ₽. Courte durée P1 : jusqu'à une heure 357 ₽, jusqu'à 2 heures 682 ₽, la journée 1391 ₽. Longue durée P2 : la journée 791 ₽. Économique P4 : 1054 ₽ pour les 2 premiers jours. Tous les parkings sont ouverts jour et nuit.",
+      "after": "Dans la zone de dépose et de prise en charge, 15 premières minutes gratuites, de la 16e à la 60e minute 880 ₽. Courte durée P1 : jusqu'à une heure 357 ₽, jusqu'à 2 heures 682 ₽, 24 heures 1391 ₽. Longue durée P2 : 24 heures 791 ₽. Économique P4 : 1054 ₽ pour les 2 premières périodes de 24 heures. Tous les parkings sont ouverts jour et nuit.",
+      "reason": [
+        "RU сутки и первые 2 суток: периоды 24 часа"
+      ],
+      "fileSha256": "beee6422701547f9499be593ed88186cf99130b8c609e33a1304a1a9f6644814"
+    },
+    {
+      "file": "data/airport-guide/es/KUF.json",
+      "path": "blocks.parking.text",
+      "before": "En la zona de recogida y bajada de pasajeros, los primeros 15 minutos son gratis; del minuto 16 al 60, 880 ₽. Corta estancia P1: hasta una hora 357 ₽, hasta 2 horas 682 ₽, un día 1391 ₽. Larga estancia P2: un día 791 ₽. Económico P4: 1054 ₽ los 2 primeros días. Todos los aparcamientos abren día y noche.",
+      "after": "En la zona de recogida y bajada de pasajeros, los primeros 15 minutos son gratis; del minuto 16 al 60, 880 ₽. Corta estancia P1: hasta una hora 357 ₽, hasta 2 horas 682 ₽, 24 horas 1391 ₽. Larga estancia P2: 24 horas 791 ₽. Económico P4: 1054 ₽ los 2 primeros periodos de 24 horas. Todos los aparcamientos abren día y noche.",
+      "reason": [
+        "RU сутки и первые 2 суток: периоды 24 часа"
+      ],
+      "fileSha256": "bbe1d1ed45d9d8d9bf6b0f64e361590185fde7ee0aa427d4b2bdd447fde4394f"
+    },
+    {
+      "file": "data/airport-guide/it/KUF.json",
+      "path": "blocks.parking.text",
+      "before": "Nella zona di salita e discesa passeggeri i primi 15 minuti gratis, dal 16° al 60° minuto 880 ₽. Breve sosta P1: fino a un’ora 357 ₽, fino a 2 ore 682 ₽, un giorno 1391 ₽. Lunga sosta P2: un giorno 791 ₽. Economy P4: 1054 ₽ per i primi 2 giorni. Tutti i parcheggi sono aperti giorno e notte.",
+      "after": "Nella zona di salita e discesa passeggeri i primi 15 minuti gratis, dal 16° al 60° minuto 880 ₽. Breve sosta P1: fino a un’ora 357 ₽, fino a 2 ore 682 ₽, 24 ore 1391 ₽. Lunga sosta P2: 24 ore 791 ₽. Economy P4: 1054 ₽ per i primi 2 periodi di 24 ore. Tutti i parcheggi sono aperti giorno e notte.",
+      "reason": [
+        "RU сутки и первые 2 суток: периоды 24 часа"
+      ],
+      "fileSha256": "522ae543ee19a388cac95348430c32803ed3492c70adfddad71be225aa5c44d2"
+    },
+    {
+      "file": "data/airport-guide/tr/KUF.json",
+      "path": "blocks.parking.text",
+      "before": "İndirme-bindirme alanında ilk 15 dakika ücretsiz, 16. ila 60. dakika 880 ₽. Kısa süreli P1: bir saate kadar 357 ₽, 2 saate kadar 682 ₽, günlüğü 1391 ₽. Uzun süreli P2: günlüğü 791 ₽. Ekonomi P4: ilk 2 gün 1054 ₽. Tüm otoparklar gece gündüz açık.",
+      "after": "İndirme-bindirme alanında ilk 15 dakika ücretsiz, 16. ila 60. dakika 880 ₽. Kısa süreli P1: bir saate kadar 357 ₽, 2 saate kadar 682 ₽, 24 saati 1391 ₽. Uzun süreli P2: 24 saati 791 ₽. Ekonomi P4: ilk 2 adet 24 saatlik dönem 1054 ₽. Tüm otoparklar gece gündüz açık.",
+      "reason": [
+        "RU сутки и первые 2 суток: периоды 24 часа"
+      ],
+      "fileSha256": "25d25871c39635049afeaf7e5d6d4730e2a7f076833f9e6cfa764de2a43c219b"
+    },
+    {
+      "file": "data/airport-guide/en/IJK.json",
+      "path": "blocks.transport.text",
+      "before": "Airport transfer from the station forecourt in a car with a driver. Izhevsk and suburbs up to 30 km 1,500 ₽, Votkinsk 4,000 ₽, Sarapul 5,000 ₽, Chaikovsky 6,000 ₽. Book 3 hours or more in advance at izhavia.su or after arrival at the airport ticket office, if cars are available.",
+      "after": "Airport transfer from the airport terminal forecourt in a car with a driver. Izhevsk and suburbs up to 30 km 1,500 ₽, Votkinsk 4,000 ₽, Sarapul 5,000 ₽, Chaikovsky 6,000 ₽. Book 3 hours or more in advance at izhavia.su or after arrival at the airport ticket office, if cars are available.",
+      "reason": [
+        "Площадь аэропорта, не железнодорожной станции"
+      ],
+      "fileSha256": "da93608c909fc7db7a8de6ff43e1bca069e22abbb49ab60bfd90a520be784788"
+    },
+    {
+      "file": "data/airport-guide/en/KRR.json",
+      "path": "blocks.transport.text",
+      "before": "The stop is on the station forecourt. Trolleybus No. 7 goes to the bus station and Krasnodar-1 railway station along Stavropolskaya St. Minibus No. 30 goes to Kooperativny Rynok. The official taxi desk is in Terminal 1, baggage claim area.",
+      "after": "The stop is on the airport terminal forecourt. Trolleybus No. 7 goes to the bus station and Krasnodar-1 railway station along Stavropolskaya St. Minibus No. 30 goes to Kooperativny Rynok. The official taxi desk is in Terminal 1, baggage claim area.",
+      "reason": [
+        "Площадь аэропорта, не железнодорожной станции"
+      ],
+      "fileSha256": "f98790021d19fe9e8c6ae3e4012d38f574d4fadf2eea0e00539d60be0d445b2c"
+    },
+    {
+      "file": "data/airport-guide/en/KRR.json",
+      "path": "blocks.storage.text",
+      "before": "On the station forecourt, open round the clock. 400 ₽ per item for the first 24 hours, 200 ₽ for each further 24 hours. One item may weigh up to 30 kg.",
+      "after": "On the airport terminal forecourt, open round the clock. 400 ₽ per item for the first 24 hours, 200 ₽ for each further 24 hours. One item may weigh up to 30 kg.",
+      "reason": [
+        "Площадь аэропорта, не железнодорожной станции"
+      ],
+      "fileSha256": "f98790021d19fe9e8c6ae3e4012d38f574d4fadf2eea0e00539d60be0d445b2c"
+    },
+    {
+      "file": "data/airport-guide/en/KVX.json",
+      "path": "blocks.parking.text",
+      "before": "Those meeting passengers are better off waiting at the free car park P3, and when the passenger comes out, driving onto the station forecourt P1 and leaving within 15 minutes. For long stays there is the paid P2. Parking closer than 30 m to the terminal is prohibited; violations are recorded automatically.",
+      "after": "Those meeting passengers are better off waiting at the free car park P3, and when the passenger comes out, driving onto the airport terminal forecourt P1 and leaving within 15 minutes. For long stays there is the paid P2. Parking closer than 30 m to the terminal is prohibited; violations are recorded automatically.",
+      "reason": [
+        "Площадь аэропорта, не железнодорожной станции"
+      ],
+      "fileSha256": "1f36a6975e837c2c77404195bcfba1e1ff28f416930471949c8214b0ba4ba306"
+    },
+    {
+      "file": "data/airport-guide/fr/GOJ.json",
+      "path": "blocks.transport.text",
+      "before": "Bus urbains : n° 11 jusqu'à la rue Droujaeva, n° 56 jusqu'à Krasnoïe Sormovo, n° А50 jusqu'à la Maison de la culture de l'Usine automobile. Les trains de banlieue partent de la gare de N. Novgorod-Tchkalov vers la gare de Moscou, trajet de 26–34 minutes, billet 28 ₽. Transporteur ferroviaire : SA « Volgo-Viatskaïa PPK ».",
+      "after": "Bus urbains : n° 11 jusqu'à la rue Droujaeva, n° 56 jusqu'à Krasnoïe Sormovo, n° А50 jusqu'à la Maison de la culture de l'Usine automobile. Les trains de banlieue partent de la gare de N. Novgorod-Tchkalov vers la gare Moskovsky, trajet de 26–34 minutes, billet 28 ₽. Transporteur ferroviaire : SA « Volgo-Viatskaïa PPK ».",
+      "reason": [
+        "Собственное название Московского вокзала в Нижнем Новгороде, не направление Москва"
+      ],
+      "fileSha256": "34a62f3fd3a88541b9cef17f6ef42a8ebad8a0670f9eb210a0c97da71fcd3d43"
+    },
+    {
+      "file": "data/airport-guide/fr/GYD.json",
+      "path": "blocks.lounges.text",
+      "before": "L'aéroport compte les salons AZAL, Business Class Lounge, Absheron, Salam, Baku Club, Premium et Mugam. AZAL Lounge, au rez-de-chaussée du terminal 1 : enregistrement séparé sans file d'attente pour les passagers de classe affaires et économique premium, avec sa propre zone de dépose.",
+      "after": "L'aéroport compte les salons AZAL, Business Class Lounge, Absheron, Salam, Baku Club, Premium et Mugam. AZAL Lounge, au niveau 1 du terminal 1 : enregistrement séparé sans file d'attente pour les passagers de classe affaires et économique premium, avec sa propre zone de dépose.",
+      "reason": [
+        "Номер уровня 1 из RU"
+      ],
+      "fileSha256": "eb1e5e8b2de6f4387658e47f6396b56dc49d3dc9e7cf4927caa42340510494d1"
+    },
+    {
+      "file": "data/airport-guide/fr/KGD.json",
+      "path": "blocks.kids.text",
+      "before": "La salle mère-enfant est gratuite pour les passagers au départ avec des enfants de moins de 7 ans, les enfants handicapés de moins de 14 ans et les femmes dans la seconde moitié de la grossesse ; elle suit les horaires de l'aérogare. Il faut d'abord un certificat du poste médical au rez-de-chaussée, dans la partie droite du bâtiment ; les bagages sont déposés à la consigne.",
+      "after": "La salle mère-enfant est gratuite pour les passagers au départ avec des enfants de moins de 7 ans, les enfants handicapés de moins de 14 ans et les femmes dans la seconde moitié de la grossesse ; elle suit les horaires de l'aérogare. Il faut d'abord un certificat du poste médical au niveau 1, dans la partie droite du bâtiment ; les bagages sont déposés à la consigne.",
+      "reason": [
+        "Номер уровня 1 из RU"
+      ],
+      "fileSha256": "1a1e734acf0e619a999bab35113d56cd92c6db82c69ff3c282f1211c80d62e23"
+    },
+    {
+      "file": "data/airport-guide/tr/HND.json",
+      "path": "blocks.terminals.text",
+      "before": "Terminaller arasında ücretsiz servis otobüsü çalışır: 5:00'ten 20:00'ye kadar 4 dakikada bir, 20:00'den 0:00'a kadar 8 dakikada bir; terminale göre ilk seferler 4:47–5:04, son seferler 1:15–1:32 arası. Terminal 1'de durak Kat 1'de (geliş salonu), 8 numaralı durak. İç hatlardan dış hatlara veya dış hatlar arasında aktarma yapan yolculara danışma kontuarlarında (Terminal 1 ve 2'de Kat B1, Terminal 3'te Kat 2) pasaport ve biniş kartı gösterilerek Terminal 1 ile 3 ve 2 ile 3 arasında Keikyu veya Tokyo Monorail için ücretsiz bilet verilir.",
+      "after": "Terminaller arasında ücretsiz servis otobüsü çalışır: 5:00'ten 20:00'ye kadar 4 dakikada bir, 20:00'den 0:00'a kadar 8 dakikada bir; terminale göre ilk seferler 4:47–5:04, son seferler 1:15–1:32 arası. Terminal 1'de durak Kat 1'de (geliş salonu), 8 numaralı durak. İç ve dış hat uçuşları arasında veya dış hat uçuşları arasında aktarma yapan yolculara danışma kontuarlarında (Terminal 1 ve 2'de Kat B1, Terminal 3'te Kat 2) pasaport ve biniş kartı gösterilerek Terminal 1 ile 3 ve 2 ile 3 arasında Keikyu veya Tokyo Monorail için ücretsiz bilet verilir.",
+      "reason": [
+        "RU между внутренними/международными: оба направления пересадки"
+      ],
+      "fileSha256": "f46a3e33e97ca8612228323f8e88f9adac3979700dfee719804a45dbf74072c0"
+    }
+  ]
+}

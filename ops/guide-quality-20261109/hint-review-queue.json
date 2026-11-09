@@ -1,0 +1,128 @@
+[
+  {
+    "path": "data/airport-guide/ja/UFA.json",
+    "block": "wifi",
+    "hint": "Airport.FreeWiFi.Ufanet",
+    "length": 23,
+    "limit": 18
+  },
+  {
+    "path": "data/airport-guide/ja/UUD.json",
+    "block": "wifi",
+    "hint": "FreeAirportBaikalRT",
+    "length": 19,
+    "limit": 18
+  },
+  {
+    "path": "data/airport-guide/ja/BRS.json",
+    "block": "lounges",
+    "hint": "保安検査後のEscape Lounge",
+    "length": 19,
+    "limit": 18
+  },
+  {
+    "path": "data/airport-guide/ja/BRS.json",
+    "block": "sleep",
+    "hint": "ターミナル近くのHampton by Hilton",
+    "length": 25,
+    "limit": 18
+  },
+  {
+    "path": "data/airport-guide/ja/GYD.json",
+    "block": "wifi",
+    "hint": "Baku-Airport-Free-WiFi",
+    "length": 22,
+    "limit": 18
+  },
+  {
+    "path": "data/airport-guide/it/BRS.json",
+    "block": "sleep",
+    "hint": "Hampton by Hilton presso il terminal",
+    "length": 36,
+    "limit": 35
+  },
+  {
+    "path": "data/airport-guide/zh/UFA.json",
+    "block": "wifi",
+    "hint": "Airport.FreeWiFi.Ufanet",
+    "length": 23,
+    "limit": 18
+  },
+  {
+    "path": "data/airport-guide/zh/UUD.json",
+    "block": "wifi",
+    "hint": "FreeAirportBaikalRT",
+    "length": 19,
+    "limit": 18
+  },
+  {
+    "path": "data/airport-guide/zh/BRS.json",
+    "block": "sleep",
+    "hint": "航站楼旁的Hampton by Hilton",
+    "length": 22,
+    "limit": 18
+  },
+  {
+    "path": "data/airport-guide/zh/GYD.json",
+    "block": "wifi",
+    "hint": "Baku-Airport-Free-WiFi",
+    "length": 22,
+    "limit": 18
+  },
+  {
+    "path": "data/airport-guide/ko/UFA.json",
+    "block": "wifi",
+    "hint": "Airport.FreeWiFi.Ufanet",
+    "length": 23,
+    "limit": 18
+  },
+  {
+    "path": "data/airport-guide/ko/UUD.json",
+    "block": "wifi",
+    "hint": "FreeAirportBaikalRT",
+    "length": 19,
+    "limit": 18
+  },
+  {
+    "path": "data/airport-guide/ko/BRS.json",
+    "block": "lounges",
+    "hint": "보안검색 후 Escape Lounge",
+    "length": 20,
+    "limit": 18
+  },
+  {
+    "path": "data/airport-guide/ko/BRS.json",
+    "block": "sleep",
+    "hint": "터미널 인근 Hampton by Hilton",
+    "length": 24,
+    "limit": 18
+  },
+  {
+    "path": "data/airport-guide/ko/BRS.json",
+    "block": "parking",
+    "hint": "Waiting Zone: 1시간 무료",
+    "length": 20,
+    "limit": 18
+  },
+  {
+    "path": "data/airport-guide/ko/GYD.json",
+    "block": "transport",
+    "hint": "Aero Express, 1.30 AZN",
+    "length": 22,
+    "limit": 18
+  },
+  {
+    "path": "data/airport-guide/ko/GYD.json",
+    "block": "wifi",
+    "hint": "Baku-Airport-Free-WiFi",
+    "length": 22,
+    "limit": 18
+  },
+  {
+    "path": "data/airport-guide/tr/BRS.json",
+    "block": "sleep",
+    "hint": "Terminal yakınında Hampton by Hilton",
+    "length": 36,
+    "limit": 35
+  }
+]

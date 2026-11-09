@@ -9,6 +9,22 @@
       "text": "TRAX Green Line напрямую обслуживает аэропорт: Airport Station находится сразу снаружи терминала. По данным UTA, линия работает ежедневно с 05:21 до 23:21 и позволяет доехать до City Center. На North Temple можно пересесть на FrontRunner в направлении Ogden или Provo, но FrontRunner по воскресеньям не работает. Справочная UTA: +1 801 7433882.",
       "source": "rideuta.com",
       "url": "https://www.rideuta.com/Rider-Tools/Plan-Your-Trip-With-UTA/Airport-Travel"
+    },
+    {
+      "id": "wifi",
+      "title": "Wi-Fi",
+      "hint": "Бесплатно: SLCAirport.wifi",
+      "text": "Бесплатный Wi-Fi доступен по всему аэропорту. Выберите сеть SLCAirport.wifi, откройте браузер, примите условия и нажмите CONNECT на странице подключения.",
+      "source": "slcairport.com",
+      "url": "https://slcairport.com/airport-services/"
+    },
+    {
+      "id": "storage",
+      "title": "Хранение багажа",
+      "hint": "Через сервис Bringit Travel",
+      "text": "Bringit Travel предлагает хранение багажа на время пересадки или длительного пребывания. Передача и возврат вещей происходят в аэропорту; услугу заказывают на сайте Bringit.",
+      "source": "slcairport.com",
+      "url": "https://slcairport.com/airport-services/"
     }
   ]
 }

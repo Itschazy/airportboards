@@ -20,7 +20,7 @@
   "storage": {
    "title": "Consigne à bagages",
    "hint": "Hall des départs, dès 500 ₽",
-   "text": "Consigne automatique dans le hall des départs au niveau 1. Casier standard 500 ₽ par jour ou 200 ₽ de l'heure, grand casier 900 ₽ par jour ou 300 ₽ de l'heure. Le casier s'ouvre avec le code-barres du ticket."
+   "text": "Consigne automatique dans le hall des départs au niveau 1. Casier standard 500 ₽ par période de 24 heures ou 200 ₽ de l'heure, grand casier 900 ₽ par période de 24 heures ou 300 ₽ de l'heure. Le casier s'ouvre avec le code-barres du ticket."
   },
   "wifi": {
    "title": "Wi‑Fi",

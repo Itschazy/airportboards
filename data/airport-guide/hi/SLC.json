@@ -5,6 +5,16 @@
       "title": "TRAX Green Line",
       "hint": "टर्मिनल के पास स्टेशन",
       "text": "TRAX Green Line हवाई अड्डे को सीधे सेवा देती है: Airport Station टर्मिनल के ठीक बाहर है। UTA के अनुसार लाइन रोज़ 05:21–23:21 चलती है और City Center तक ले जाती है। North Temple पर Ogden या Provo की दिशा में FrontRunner में बदल सकते हैं, लेकिन FrontRunner रविवार को नहीं चलती। UTA सूचना नंबर: +1 801 7433882।"
+    },
+    "wifi": {
+      "title": "Wi‑Fi",
+      "hint": "निःशुल्क: SLCAirport.wifi",
+      "text": "पूरे हवाई अड्डे पर निःशुल्क Wi-Fi उपलब्ध है। SLCAirport.wifi चुनें, ब्राउज़र खोलें, शर्तें स्वीकार करें और कनेक्शन पेज पर CONNECT दबाएँ।"
+    },
+    "storage": {
+      "title": "सामान भंडारण",
+      "hint": "Bringit Travel के ज़रिए",
+      "text": "Bringit Travel उड़ानों के बीच ठहराव या लंबे प्रवास के दौरान सामान रखने की सेवा देता है। सामान हवाई अड्डे पर सौंपा और वापस लिया जाता है; सेवा Bringit की वेबसाइट पर बुक की जाती है।"
     }
   }
 }

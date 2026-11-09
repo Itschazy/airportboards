@@ -20,7 +20,7 @@
   "storage": {
    "title": "Emanet",
    "hint": "Gidiş salonu, 500 ₽'den",
-   "text": "Otomatik emanet dolapları Kat 1'deki gidiş salonunda. Standart dolap günlüğü 500 ₽ veya saati 200 ₽, büyük dolap günlüğü 900 ₽ veya saati 300 ₽. Dolap fişteki barkodla açılır."
+   "text": "Otomatik emanet dolapları Kat 1'deki gidiş salonunda. Standart dolap her 24 saat için 500 ₽ veya saati 200 ₽, büyük dolap her 24 saat için 900 ₽ veya saati 300 ₽. Dolap fişteki barkodla açılır."
   },
   "wifi": {
    "title": "Wi‑Fi",

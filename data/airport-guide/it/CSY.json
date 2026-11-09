@@ -14,13 +14,13 @@
   },
   "storage": {
    "title": "Deposito bagagli",
-   "hint": "300 ₽ al giorno",
-   "text": "Deposito bagagli: 300 ₽ per 1 collo al giorno."
+   "hint": "300 ₽ ogni 24 ore",
+   "text": "Deposito bagagli: 300 ₽ per 1 collo ogni 24 ore."
   },
   "parking": {
    "title": "Parcheggio",
    "hint": "15 min gratis",
-   "text": "I primi 15 minuti gratis. Autovetture: 100 ₽ all’ora, 450 ₽ al giorno, da 3 giorni 400 ₽ al giorno. UAZ, «Gazel», «Sobol»: 200 ₽ all’ora, 650 ₽ al giorno. Smarrimento della ricevuta 500 ₽. Telefono 8 (8352) 22-94-03, int. 2-95."
+   "text": "I primi 15 minuti gratis. Autovetture: 100 ₽ all’ora, 450 ₽ ogni 24 ore, da 3 periodi di 24 ore 400 ₽ ogni 24 ore. UAZ, «Gazel», «Sobol»: 200 ₽ all’ora, 650 ₽ ogni 24 ore. Smarrimento della ricevuta 500 ₽. Telefono 8 (8352) 22-94-03, int. 2-95."
   }
  }
 }

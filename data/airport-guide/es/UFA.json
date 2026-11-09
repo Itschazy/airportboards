@@ -25,12 +25,12 @@
   "kids": {
    "title": "Con niños",
    "hint": "Т1, nivel 1, 24/7",
-   "text": "Sala madre e hijo en la terminal 1, nivel 1, frente a los mostradores de facturación, día y noche. Niños menores de 7 años (con discapacidad, hasta 14) con un adulto. Hasta 12 horas antes de la salida y hasta 1 hora después de la llegada. Se necesitan pasaporte, partida de nacimiento, billetes y certificado del puesto sanitario de la terminal de vuelos nacionales."
+   "text": "Sala madre e hijo en la terminal 1, nivel 1, frente a los mostradores de facturación, día y noche. Niños menores de 7 años (con discapacidad, menores de 14 años) con un adulto. Hasta 12 horas antes de la salida y hasta 1 hora después de la llegada. Se necesitan pasaporte, partida de nacimiento, billetes y certificado del puesto sanitario de la terminal de vuelos nacionales."
   },
   "parking": {
    "title": "Aparcamiento",
    "hint": "15 min gratis",
-   "text": "Zona de recogida y bajada de pasajeros А1: 15 minutos gratis, después 500 ₽ por hora; prohibido estacionar. Aparcamiento de espera С5 (a 10 minutos de las terminales): 3 horas gratis, después 150 ₽ por hora, un día 600 ₽. Aparcamientos А2 y А3 junto a las terminales: la primera hora 300 ₽, después 100 ₽ por hora, un día 700 ₽."
+   "text": "Zona de recogida y bajada de pasajeros А1: 15 minutos gratis, después 500 ₽ por hora; prohibido estacionar. Aparcamiento de espera С5 (a 10 minutos de las terminales): 3 horas gratis, después 150 ₽ por hora, 600 ₽ por cada 24 horas. Aparcamientos А2 y А3 junto a las terminales: la primera hora 300 ₽, después 100 ₽ por hora, 700 ₽ por cada 24 horas."
   },
   "wifi": {
    "title": "Wi‑Fi",

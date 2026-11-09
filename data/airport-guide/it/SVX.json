@@ -20,7 +20,7 @@
     "storage": {
       "title": "Deposito bagagli",
       "hint": "Terminal A, livello −1",
-      "text": "Terminal A, livello −1. 200 ₽ all’ora, 500 ₽ per le prime 24 ore, 300 ₽ per ogni successivo periodo di 24 ore. Fuori misura (oltre 50×50×80 cm o più di 20 kg): 400 ₽ all’ora, 800 ₽ per le prime 24 ore, 500 ₽ per ogni successivo periodo di 24 ore. Guardaroba per capispalla: 100 ₽ a capo."
+      "text": "Terminal A, livello −1. 200 ₽ all’ora, 500 ₽ per le prime 24 ore, 300 ₽ per ogni successivo periodo di 24 ore. Fuori misura (oltre 50×50×80 cm o più di 20 kg): 400 ₽ all’ora, 800 ₽ per le prime 24 ore, 500 ₽ per ogni successivo periodo di 24 ore. Guardaroba per capispalla: 100 ₽ per completo."
     },
     "sleep": {
       "title": "Dove dormire",
@@ -35,7 +35,7 @@
     "parking": {
       "title": "Parcheggio",
       "hint": "15 min gratis",
-      "text": "Zona di salita e discesa passeggeri: fino a 15 minuti gratis, 16–60 minuti 880 ₽, poi 880 ₽ all’ora. Parcheggio P1 presso il terminal senza tempo gratuito: 1 ora 360 ₽, fino a 24 ore 900 ₽. Lunga sosta P2 e P6: da 1790 ₽ e 1380 ₽ per due giorni. P0 gratuito, 5 minuti dal terminal."
+      "text": "Zona di salita e discesa passeggeri: fino a 15 minuti gratis, 16–60 minuti 880 ₽, poi 880 ₽ all’ora. Parcheggio P1 presso il terminal senza tempo gratuito: 1 ora 360 ₽, fino a 24 ore 900 ₽. Lunga sosta P2 e P6: da 1790 ₽ e 1380 ₽ per 2 giorni di 24 ore. P0 gratuito, 5 minuti dal terminal."
     },
     "wifi": {
       "title": "Wi‑Fi",

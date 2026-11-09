@@ -19,8 +19,8 @@
   },
   "parking": {
    "title": "Aparcamiento",
-   "hint": "300 ₽/día",
-   "text": "Aparcamiento de pago, 300 ₽ por día. No hay reserva ni prepago; se paga al dejar el coche, si hay plazas. La hora de recogida del coche se consulta por teléfono en el 43-18-00."
+   "hint": "300 ₽/24 h",
+   "text": "Aparcamiento de pago, 300 ₽ por cada 24 horas. No hay reserva ni prepago; se paga al dejar el coche, si hay plazas. La hora de recogida del coche se consulta por teléfono en el 43-18-00."
   },
   "wifi": {
    "title": "Wi‑Fi",

@@ -10,7 +10,7 @@
   "parking": {
    "title": "Parking",
    "hint": "15 min gratuites",
-   "text": "Zone courte durée : 15 premières min gratuites, première heure 350 ₽, de la 2e à la 4e heure 250 ₽/heure, à partir de la 5e heure 3000 ₽/jour. Zone longue durée : 700 ₽/jour du 1er au 5e jour, 100 ₽/jour du 6e au 13e, 700 ₽/jour à partir du 14e jour. Nouvelle entrée gratuite au plus tôt 45 min après."
+   "text": "Zone courte durée : 15 premières min gratuites, première heure 350 ₽, de la 2e à la 4e heure 250 ₽/heure, à partir de la 5e heure 3000 ₽ par 24 heures. Zone longue durée : 700 ₽ par tranche de 24 heures de la 1re à la 5e tranche, 100 ₽ de la 6e à la 13e, 700 ₽ à partir de la 14e. Nouvelle entrée gratuite au plus tôt 45 min après."
   },
   "storage": {
    "title": "Consigne à bagages",

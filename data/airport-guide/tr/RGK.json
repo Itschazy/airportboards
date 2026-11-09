@@ -19,8 +19,8 @@
   },
   "storage": {
    "title": "Emanet",
-   "hint": "Kat 1, günlüğü 400 ₽'den",
-   "text": "Otomatik emanet dolapları terminal binasında Kat 1'de, havalimanının çalışma saatlerinde. Dolaplar boyuta göre günlüğü 400, 600 ve 1000 ₽. Süre 6 aya kadar. Ödeme kart veya nakit."
+   "hint": "Kat 1, 24 saati 400 ₽'den",
+   "text": "Otomatik emanet dolapları terminal binasında Kat 1'de, havalimanının çalışma saatlerinde. Dolaplar boyuta göre 24 saati 400, 600 ve 1000 ₽. Süre 6 aya kadar. Ödeme kart veya nakit."
   },
   "kids": {
    "title": "Çocukla",
@@ -30,7 +30,7 @@
   "parking": {
    "title": "Otopark",
    "hint": "15 dakika ücretsiz",
-   "text": "Terminallerin önünde indirme-bindirme 15 dakika ücretsiz, bir saat içinde tekrar giriş 250 ₽. P1: saati 400 ₽, 1 ila 5 saat arası saati 300 ₽, günlüğü 3000 ₽. P2: günlüğü 1000 ₽. P3: 180 dakika ücretsiz, 3 ila 5 saat arası saati 200 ₽, sonrası günlüğü 800 ₽."
+   "text": "Terminallerin önünde indirme-bindirme 15 dakika ücretsiz, bir saat içinde tekrar giriş 250 ₽. P1: saati 400 ₽, 1 ila 5 saat arası saati 300 ₽, 24 saati 3000 ₽. P2: 24 saati 1000 ₽. P3: 180 dakika ücretsiz, 3 ila 5 saat arası saati 200 ₽, sonrası 24 saati 800 ₽."
   },
   "wifi": {
    "title": "Wi‑Fi",

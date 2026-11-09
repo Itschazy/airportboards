@@ -10,6 +10,11 @@
       "title": "Sheraton Milan Malpensa",
       "hint": "टर्मिनल 1 तक सीधा प्रवेश",
       "text": "Sheraton Milan Malpensa Airport Hotel & Conference Centre से टर्मिनल 1 तक सीधा प्रवेश है। होटल में इनडोर पूल, फ़िटनेस सेंटर, स्पा और रेस्तराँ हैं; सुइट श्रेणी के कमरे ध्वनिरोधी हैं।"
+    },
+    "terminals": {
+      "title": "टर्मिनल",
+      "hint": "T1–T2 निःशुल्क शटल",
+      "text": "टर्मिनल 1 और 2 के बीच निःशुल्क शटल चलती है।"
     }
   }
 }

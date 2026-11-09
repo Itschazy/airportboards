@@ -20,7 +20,7 @@
   "parking": {
    "title": "Otopark",
    "hint": "15 dakika ücretsiz",
-   "text": "Terminalin önünde 150 araçlık ücretli otopark. İlk 15 dakika ücretsiz, 15 dakikadan 3 saate kadar saati 150 ₽, 3 saatten fazlası günlüğü 500 ₽. 60 dakika içinde tekrar girişte ücretsiz süre yok. Ödemeden sonra çıkış için 30 dakika."
+   "text": "Terminalin önünde 150 araçlık ücretli otopark. İlk 15 dakika ücretsiz, 15 dakikadan 3 saate kadar saati 150 ₽, 3 saatten fazlası 24 saati 500 ₽. 60 dakika içinde tekrar girişte ücretsiz süre yok. Ödemeden sonra çıkış için 30 dakika."
   },
   "wifi": {
    "title": "Wi‑Fi",

@@ -15,7 +15,7 @@
   "storage": {
    "title": "Left luggage",
    "hint": "Level 1, from 200 ₽",
-   "text": "Automated left luggage on Level 1, to the left of the check-in counters, during airport opening hours. Small locker from 200 ₽ for 2 hours to 800 ₽ per day, medium 300–900 ₽, large 400–1,000 ₽. Pay in cash or by card at the terminal; the receipt with a barcode opens the locker."
+   "text": "Automated left luggage on Level 1, to the left of the check-in counters, during airport opening hours. Small locker from 200 ₽ for 2 hours to 800 ₽ per 24 hours, medium 300–900 ₽, large 400–1,000 ₽. Pay in cash or by card at the terminal; the receipt with a barcode opens the locker."
   },
   "kids": {
    "title": "With children",
@@ -25,7 +25,7 @@
   "parking": {
    "title": "Parking",
    "hint": "15 min free",
-   "text": "250 spaces. First 15 minutes free, then 300 ₽ for each hour, over 3 hours 900 ₽/day. Parking on the second lane of the driveway 1,000 ₽/hour, VIP parking 2,000 ₽/hour. A repeat entry within an hour has no free 15 minutes."
+   "text": "250 spaces. First 15 minutes free, then 300 ₽ for each hour, over 3 hours 900 ₽/24 hours. Parking on the second lane of the driveway 1,000 ₽/hour, VIP parking 2,000 ₽/hour. A repeat entry within an hour has no free 15 minutes."
   }
  }
 }

@@ -19,8 +19,8 @@
   },
   "parking": {
    "title": "Parken",
-   "hint": "300 ₽/Tag",
-   "text": "Kostenpflichtiger Parkplatz, 300 ₽ pro Tag. Keine Reservierung und keine Vorauszahlung, Bezahlung beim Abstellen des Autos, sofern Plätze frei sind. Die Abholzeit des Autos wird telefonisch unter 43-18-00 abgestimmt."
+   "hint": "300 ₽/24 Stunden",
+   "text": "Kostenpflichtiger Parkplatz, 300 ₽ je 24 Stunden. Keine Reservierung und keine Vorauszahlung, Bezahlung beim Abstellen des Autos, sofern Plätze frei sind. Die Abholzeit des Autos wird telefonisch unter 43-18-00 abgestimmt."
   },
   "wifi": {
    "title": "Wi‑Fi",

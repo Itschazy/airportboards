@@ -5,7 +5,7 @@
   "transport": {
    "title": "Nasıl gidilir",
    "hint": "8А otobüsü, 42 dk",
-   "text": "8А numaralı şehir otobüsü Univermag durağından Aeroport durağına 42 dakikada gider, bilet 46 ₽. Şehre otobüs mkr. Blagoveshchensk durağına kadar gider, yaklaşık 40 dakika. Günde birkaç sefer var, tarife haftanın günlerine göre farklı. Blagoveşçensk – Bibikovo yolundaki onarım nedeniyle havalimanı bir saat erken yola çıkılmasını rica ediyor."
+   "text": "8А numaralı şehir otobüsü Univermag durağından Aeroport durağına 42 dakikada gider, bilet 46 ₽. Şehre otobüs Magazin Blagoveshchensk durağına kadar gider, yaklaşık 40 dakika. Günde birkaç sefer var, tarife haftanın günlerine göre farklı. Blagoveşçensk – Bibikovo yolundaki onarım nedeniyle havalimanı bir saat erken yola çıkılmasını rica ediyor."
   },
   "lounges": {
    "title": "Business salonları",
@@ -15,7 +15,7 @@
   "storage": {
    "title": "Emanet",
    "hint": "Kat 1, saati 200 ₽'den",
-   "text": "Otomatik emanet dolapları terminal binasının sağ kanadında, Kat 1. Standart dolap saati 200 ₽ veya günlüğü 500 ₽, büyük dolap saati 300 ₽ veya günlüğü 800 ₽. Aynı yerde parça başına 950 ₽'den bagaj sarma."
+   "text": "Otomatik emanet dolapları terminal binasının sağ kanadında, Kat 1. Standart dolap saati 200 ₽ veya 24 saati 500 ₽, büyük dolap saati 300 ₽ veya 24 saati 800 ₽. Aynı yerde parça başına 950 ₽'den bagaj sarma."
   },
   "kids": {
    "title": "Çocukla",

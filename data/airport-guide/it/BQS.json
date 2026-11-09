@@ -15,7 +15,7 @@
     "storage": {
       "title": "Deposito bagagli",
       "hint": "Livello 1, da 200 ₽/ora",
-      "text": "Deposito bagagli automatico nell’ala destra dell’aerostazione, livello 1. Armadietto standard 200 ₽ all’ora o 500 ₽ al giorno, maggiorato 300 ₽ all’ora o 800 ₽ al giorno. Nello stesso punto imballaggio bagagli da 950 ₽ a collo."
+      "text": "Deposito bagagli automatico nell’ala destra dell’aerostazione, livello 1. Armadietto standard 200 ₽ all’ora o 500 ₽ ogni 24 ore, maggiorato 300 ₽ all’ora o 800 ₽ ogni 24 ore. Nello stesso punto imballaggio bagagli da 950 ₽ a collo."
     },
     "kids": {
       "title": "Con bambini",

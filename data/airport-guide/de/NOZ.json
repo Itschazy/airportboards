@@ -35,7 +35,7 @@
   "parking": {
    "title": "Parken",
    "hint": "15 Min. kostenlos",
-   "text": "P1 nur zum Ein- und Aussteigen, Parken verboten. P2 Kurzzeit: 15 Minuten kostenlos, 16–60 Minuten 300 ₽, von der 2. bis zur 4. Stunde 100 ₽/Stunde, über 4 Stunden 700 ₽/Tag. P3 Langzeit: 15 Minuten kostenlos, 500 ₽/Tag bis 6 Tage. Angefangene Tage werden als volle berechnet."
+   "text": "P1 nur zum Ein- und Aussteigen, Parken verboten. P2 Kurzzeit: 15 Minuten kostenlos, 16–60 Minuten 300 ₽, von der 2. bis zur 4. Stunde 100 ₽/Stunde, über 4 Stunden 700 ₽/24 Stunden. P3 Langzeit: 15 Minuten kostenlos, 500 ₽/24 Stunden für bis zu 6 Zeiträume von je 24 Stunden. Angefangene 24-Stunden-Zeiträume werden voll berechnet."
   }
  }
 }

@@ -4,7 +4,7 @@
     "transport": {
       "title": "BMTAバス",
       "hint": "A1–A4系統",
-      "text": "A1は05:45から深夜までMo Chit 2へ、A2は06:00–23:00にVictory Monumentへ運行します。どちらも15分間隔で、運賃は30 THBです。Lumpini Park行きのA3とSanam Luang行きのA4は06:00–23:00に30分間隔で運行し、運賃は50 THBです。乗り場はService Hall前と、ターミナル1の1階の一般到着エリアにあります。"
+      "text": "A1は05:45から00:00までMo Chit 2へ、A2は06:00–23:00にVictory Monumentへ運行します。どちらも15分間隔で、運賃は30 THBです。Lumpini Park行きのA3とSanam Luang行きのA4は06:00–23:00に30分間隔で運行し、運賃は50 THBです。乗り場はService Hall前と、ターミナル1の1階の一般到着エリアにあります。"
     },
     "taxi": {
       "title": "メーター制タクシー",

@@ -4,7 +4,7 @@
   "taxi": {
    "title": "Taxi",
    "hint": "Nivel 1, puertas 4–7, +50 baht",
-   "text": "El mostrador de información de taxis y las máquinas expendedoras de tiques están en la terminal de pasajeros, en el nivel 1, entre las puertas 4 y 7. A la tarifa se suma un recargo de 50 baht para el conductor por disposición del Ministerio de Transporte; los peajes los paga el pasajero. Hay trayectos de corta distancia, por los alrededores del aeropuerto y no más allá de 20 km; en las distancias normales, según las normas del Departamento de Transporte Terrestre, el precio se puede acordar con el conductor."
+   "text": "El mostrador de información de taxis y las máquinas expendedoras de tiques están en la terminal de pasajeros, en el nivel 1, entre las puertas 4 y 7. A la tarifa se suma un recargo de 50 baht para el conductor por disposición del Ministerio de Transporte; los peajes los paga el pasajero. Hay trayectos de corta distancia, por los alrededores del aeropuerto y no más allá de 20 km."
   },
   "terminals": {
    "title": "Terminales",

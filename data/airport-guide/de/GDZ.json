@@ -15,7 +15,7 @@
   "storage": {
    "title": "Gepäckaufbewahrung",
    "hint": "Ebene 1, ab 200 ₽",
-   "text": "Automatische Gepäckaufbewahrung auf Ebene 1, links von den Check-in-Schaltern, während der Öffnungszeiten des Flughafens. Kleines Fach von 200 ₽ für 2 Stunden bis 800 ₽ pro Tag, mittleres 300–900 ₽, großes 400–1000 ₽. Bezahlung bar oder mit Karte am Terminal, der Beleg mit Strichcode öffnet das Fach."
+   "text": "Automatische Gepäckaufbewahrung auf Ebene 1, links von den Check-in-Schaltern, während der Öffnungszeiten des Flughafens. Kleines Fach von 200 ₽ für 2 Stunden bis 800 ₽ je 24 Stunden, mittleres 300–900 ₽, großes 400–1000 ₽. Bezahlung bar oder mit Karte am Terminal, der Beleg mit Strichcode öffnet das Fach."
   },
   "kids": {
    "title": "Mit Kind",
@@ -25,7 +25,7 @@
   "parking": {
    "title": "Parken",
    "hint": "15 Min. kostenlos",
-   "text": "250 Plätze. Die ersten 15 Minuten kostenlos, danach 300 ₽ für jede Stunde, über 3 Stunden 900 ₽/Tag. Halten an der zweiten Fahrspur 1000 ₽/Stunde, VIP-Parkplatz 2000 ₽/Stunde. Erneute Einfahrt innerhalb einer Stunde ohne kostenlose 15 Minuten."
+   "text": "250 Plätze. Die ersten 15 Minuten kostenlos, danach 300 ₽ für jede Stunde, über 3 Stunden 900 ₽/24 Stunden. Parken an der zweiten Fahrspur 1000 ₽/Stunde, VIP-Parkplatz 2000 ₽/Stunde. Erneute Einfahrt innerhalb einer Stunde ohne kostenlose 15 Minuten."
   }
  }
 }

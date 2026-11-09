@@ -20,7 +20,7 @@
   "parking": {
    "title": "Parken",
    "hint": "15 Min. kostenlos",
-   "text": "Kostenpflichtiger Parkplatz vor dem Terminal für 150 Autos. Die ersten 15 Minuten kostenlos, von 15 Minuten bis 3 Stunden 150 ₽/Stunde, über 3 Stunden 500 ₽/Tag. Erneute Einfahrt innerhalb von 60 Minuten ohne kostenlose Zeit. Nach der Bezahlung 30 Minuten für die Ausfahrt."
+   "text": "Kostenpflichtiger Parkplatz vor dem Terminal für 150 Autos. Die ersten 15 Minuten kostenlos, von 15 Minuten bis 3 Stunden 150 ₽/Stunde, über 3 Stunden 500 ₽/24 h. Erneute Einfahrt innerhalb von 60 Minuten ohne kostenlose Zeit. Nach der Bezahlung 30 Minuten für die Ausfahrt."
   },
   "wifi": {
    "title": "Wi‑Fi",

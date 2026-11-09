@@ -9,8 +9,8 @@
   },
   "storage": {
    "title": "Consigne à bagages",
-   "hint": "Dès 200 ₽ par jour",
-   "text": "La consigne fonctionne selon les horaires de l'aérogare des lignes intérieures. Bagage à main 200 ₽ par jour, bagage jusqu'à 50×40×20 cm 220 ₽, plus grand 270 ₽, au-delà de 100×50×70 cm 500 ₽. Moins d'un jour est facturé comme un jour entier."
+   "hint": "Dès 200 ₽ par période de 24 heures",
+   "text": "La consigne fonctionne selon les horaires de l'aérogare des lignes intérieures. Bagage à main 200 ₽ par période de 24 heures, bagage jusqu'à 50×40×20 cm 220 ₽, plus grand 270 ₽, au-delà de 100×50×70 cm 500 ₽. Toute durée inférieure à 24 heures est facturée comme une période complète de 24 heures."
   },
   "kids": {
    "title": "Avec un enfant",
@@ -20,7 +20,7 @@
   "parking": {
    "title": "Parking",
    "hint": "15 min gratuites",
-   "text": "Place de l'aérogare à 30 m du terminal, 173 places : jusqu'à 15 minutes gratuit, première heure 300 ₽, deuxième et troisième 200 ₽ chacune, à partir de la quatrième heure tarif journalier de 1000 ₽."
+   "text": "Place de l'aérogare à 30 m du terminal, 173 places : jusqu'à 15 minutes gratuit, première heure 300 ₽, deuxième et troisième 200 ₽ chacune, à partir de la quatrième heure tarif de 1000 ₽ par période de 24 heures."
   }
  }
 }

@@ -10,6 +10,11 @@
       "title": "Sheraton Milan Malpensa",
       "hint": "Terminal 1’e doğrudan erişim",
       "text": "Sheraton Milan Malpensa Airport Hotel & Conference Centre’ın terminal 1’e doğrudan erişimi vardır. Otelde kapalı havuz, fitness merkezi, spa ve restoranlar bulunur; süit odalar ses yalıtımlıdır."
+    },
+    "terminals": {
+      "title": "Terminal",
+      "hint": "Ücretsiz servis T1–T2",
+      "text": "Terminal 1 ile 2 arasında ücretsiz servis aracı çalışır."
     }
   }
 }

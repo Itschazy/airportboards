@@ -14,7 +14,7 @@
   "terminals": {
    "title": "Terminaller",
    "hint": "4 dakikada bir ücretsiz otobüs",
-   "text": "Terminaller arasında ücretsiz servis otobüsü çalışır: 5:00'ten 20:00'ye kadar 4 dakikada bir, 20:00'den 0:00'a kadar 8 dakikada bir; terminale göre ilk seferler 4:47–5:04, son seferler 1:15–1:32 arası. Terminal 1'de durak Kat 1'de (geliş salonu), 8 numaralı durak. İç hatlardan dış hatlara veya dış hatlar arasında aktarma yapan yolculara danışma kontuarlarında (Terminal 1 ve 2'de Kat B1, Terminal 3'te Kat 2) pasaport ve biniş kartı gösterilerek Terminal 1 ile 3 ve 2 ile 3 arasında Keikyu veya Tokyo Monorail için ücretsiz bilet verilir."
+   "text": "Terminaller arasında ücretsiz servis otobüsü çalışır: 5:00'ten 20:00'ye kadar 4 dakikada bir, 20:00'den 0:00'a kadar 8 dakikada bir; terminale göre ilk seferler 4:47–5:04, son seferler 1:15–1:32 arası. Terminal 1'de durak Kat 1'de (geliş salonu), 8 numaralı durak. İç ve dış hat uçuşları arasında veya dış hat uçuşları arasında aktarma yapan yolculara danışma kontuarlarında (Terminal 1 ve 2'de Kat B1, Terminal 3'te Kat 2) pasaport ve biniş kartı gösterilerek Terminal 1 ile 3 ve 2 ile 3 arasında Keikyu veya Tokyo Monorail için ücretsiz bilet verilir."
   },
   "lounges": {
    "title": "Business salonları",

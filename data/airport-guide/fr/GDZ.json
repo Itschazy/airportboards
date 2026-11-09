@@ -15,7 +15,7 @@
   "storage": {
    "title": "Consigne à bagages",
    "hint": "Niveau 1, dès 200 ₽",
-   "text": "Consigne automatique au niveau 1, à gauche des comptoirs d'enregistrement, aux heures d'ouverture de l'aéroport. Petit casier de 200 ₽ pour 2 heures à 800 ₽ par jour, moyen 300–900 ₽, grand 400–1000 ₽. Paiement en espèces ou par carte à la borne, le ticket à code-barres ouvre le casier."
+   "text": "Consigne automatique au niveau 1, à gauche des comptoirs d'enregistrement, aux heures d'ouverture de l'aéroport. Petit casier de 200 ₽ pour 2 heures à 800 ₽ par période de 24 heures, moyen 300–900 ₽, grand 400–1000 ₽. Paiement en espèces ou par carte à la borne, le ticket à code-barres ouvre le casier."
   },
   "kids": {
    "title": "Avec un enfant",
@@ -25,7 +25,7 @@
   "parking": {
    "title": "Parking",
    "hint": "15 min gratuites",
-   "text": "250 places. 15 premières minutes gratuites, ensuite 300 ₽ par heure, au-delà de 3 heures 900 ₽/jour. Stationnement sur la deuxième voie 1000 ₽/heure, parking VIP 2000 ₽/heure. Nouvelle entrée dans l'heure sans les 15 minutes gratuites."
+   "text": "250 places. 15 premières minutes gratuites, ensuite 300 ₽ par heure, au-delà de 3 heures 900 ₽/24 h. Stationnement sur la deuxième voie 1000 ₽/heure, parking VIP 2000 ₽/heure. Nouvelle entrée dans l'heure sans les 15 minutes gratuites."
   }
  }
 }

@@ -9,6 +9,22 @@
       "text": "Отель Sofitel Athens Airport находится в 2 минутах пешком от международного аэропорта Афин. В отеле есть крытый бассейн, фитнес-центр, ресторан, бар и Wi-Fi; заезд начинается в 13:00, выезд — до 11:00.",
       "source": "all.accor.com",
       "url": "https://all.accor.com/hotel/3167/index.en.shtml"
+    },
+    {
+      "id": "wifi",
+      "title": "Wi-Fi",
+      "hint": "120 минут, повторно бесплатно",
+      "text": "В терминале работает бесплатная сеть ATH Free Wifi. Выберите Internet Access на странице подключения: одна сессия длится 120 минут. Затем можно подключиться снова бесплатно.",
+      "source": "aia.gr",
+      "url": "https://www.aia.gr/en/traveller/services-facilities-airport/wifi-and-internet-kiosks"
+    },
+    {
+      "id": "storage",
+      "title": "Камера хранения",
+      "hint": "CARE4BAG, прилёт, выход 1",
+      "text": "CARE4BAG находится в общедоступной зоне прилёта у выхода 1 и работает круглосуточно. Здесь можно оставить багаж, коробки и спортивное снаряжение.",
+      "source": "aia.gr",
+      "url": "https://www.aia.gr/en/traveller/services-facilities-airport/baggage-services?contentTabId=tab-4065"
     }
   ]
 }

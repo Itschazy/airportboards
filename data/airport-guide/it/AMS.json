@@ -4,7 +4,7 @@
   "transport": {
    "title": "Come arrivare",
    "hint": "Treno NS per Amsterdam CS",
-   "text": "La stazione NS si trova direttamente sotto l’edificio del terminal: si scende con la scala mobile o l’ascensore. Tra Amsterdam CS e l’aeroporto il treno passa 8 volte all’ora, con fermate a Sloterdijk e Lelylaan, e dall’aeroporto parte sempre dal binario 3. Da Amsterdam, Utrecht, Leida, L’Aia, Delft e Rotterdam si raggiunge l’aeroporto giorno e notte, spesso senza cambi. Il biglietto si compra in aeroporto oppure si paga con carta contactless o con il telefono, validando ai validatori gialli in cima alle scale mobili e agli ascensori di Schiphol Plaza."
+   "text": "La stazione NS si trova direttamente sotto l’edificio del terminal: si scende con la scala mobile o l’ascensore. Tra Amsterdam CS e l’aeroporto il treno passa 8 volte all’ora, con fermate a Sloterdijk e Lelylaan, e dall’aeroporto parte sempre dal binario 3. Da Amsterdam, Utrecht, Leida, L’Aia, Delft e Rotterdam si raggiunge l’aeroporto giorno e notte, spesso senza cambi. Il biglietto si compra in aeroporto oppure si paga con carta contactless o con il telefono, validando ai validatori gialli in cima alle scale mobili e agli ascensori di Schiphol Plaza. Se paghi con carta bancaria o telefono, convalida sia all’ingresso sia all’uscita."
   },
   "taxi": {
    "title": "Taxi",
@@ -19,7 +19,7 @@
   "sleep": {
    "title": "Dove dormire",
    "hint": "YOTELAIR e Mercure dopo i controlli",
-   "text": "Dopo i controlli ci sono due hotel, aperti giorno e notte: Mercure Hotel nella Lounge 3 e YOTELAIR nella Lounge 2, entrambi lungo il percorso verso i gate D1–D57, E, F, G e H. A YOTELAIR si può accedere anche senza visto per i Paesi Bassi."
+   "text": "Dopo i controlli ci sono due hotel, aperti giorno e notte: Mercure Hotel nella Lounge 3 e YOTELAIR nella Lounge 2, entrambi lungo il percorso verso i gate D1–D57, E, F, G e H. A YOTELAIR si può accedere anche senza visto per i Paesi Bassi. Per soggiornare al Mercure occorre avere un volo in partenza il giorno del check-out; in hotel si può portare solo il bagaglio a mano."
   },
   "kids": {
    "title": "Con bambini",

@@ -5,6 +5,16 @@
       "title": "TRAX Green Line",
       "hint": "Station beside the terminal",
       "text": "TRAX Green Line serves the airport directly: Airport Station is immediately outside the terminal. According to UTA, the line operates daily from 05:21 to 23:21 and provides access to City Center. At North Temple, you can transfer to FrontRunner towards Ogden or Provo, but FrontRunner does not run on Sundays. UTA information: +1 801 7433882."
+    },
+    "wifi": {
+      "title": "Wi‑Fi",
+      "hint": "Free: SLCAirport.wifi",
+      "text": "Free Wi-Fi is available throughout the airport. Select SLCAirport.wifi, open your browser, accept the terms and press CONNECT on the connection page."
+    },
+    "storage": {
+      "title": "Left luggage",
+      "hint": "Through Bringit Travel",
+      "text": "Bringit Travel offers luggage storage during layovers or longer stays. Bags are handed over and collected at the airport; book the service on Bringit's website."
     }
   }
 }

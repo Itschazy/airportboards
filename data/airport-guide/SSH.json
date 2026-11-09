@@ -47,11 +47,13 @@
    "id": "lounges",
    "title": "Бизнес-залы",
    "hint": "Pearl Lounge, Т1, круглосуточно",
-   "text": "Pearl Lounge в терминале 1 находится после паспортного контроля и досмотра и работает круглосуточно. Войти можно по платному пропуску или через программу доступа в бизнес-залы; условия вашей карты нужно проверить перед посещением.",
+   "text": "Pearl Lounge в терминале 1 находится после паспортного контроля и досмотра и работает круглосуточно. Доступен только пассажирам международных рейсов, вылетающих из терминала 1. Войти можно по платному пропуску или через программу доступа в бизнес-залы; условия вашей карты нужно проверить перед посещением.",
    "source": "prioritypass.com",
    "url": "https://www.prioritypass.com/en-GB/lounges/egypt/sharm-el-sheikh-international/ssh-pearl-lounge",
-   "source2": "sleepinginairports.net",
-   "url2": "https://www.sleepinginairports.net/guides/sharm-el-sheikh-airport-guide.htm"
+   "source2": "en.dragonpass.com.cn",
+   "url2": "https://en.dragonpass.com.cn/lounge/303489",
+   "source3": "sleepinginairports.net",
+   "url3": "https://www.sleepinginairports.net/guides/sharm-el-sheikh-airport-guide.htm"
   }
  ]
 }

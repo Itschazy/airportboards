@@ -15,7 +15,7 @@
   "storage": {
    "title": "Consigna",
    "hint": "Nivel 1, desde 200 ₽",
-   "text": "Consigna automática en el nivel 1, a la izquierda de los mostradores de facturación, en el horario del aeropuerto. Taquilla pequeña desde 200 ₽ por 2 horas hasta 800 ₽ por día, mediana 300–900 ₽, grande 400–1000 ₽. Pago en efectivo o con tarjeta en el terminal; el recibo con código de barras abre la taquilla."
+   "text": "Consigna automática en el nivel 1, a la izquierda de los mostradores de facturación, en el horario del aeropuerto. Taquilla pequeña desde 200 ₽ por 2 horas hasta 800 ₽ por cada 24 horas, mediana 300–900 ₽, grande 400–1000 ₽. Pago en efectivo o con tarjeta en el terminal; el recibo con código de barras abre la taquilla."
   },
   "kids": {
    "title": "Con niños",
@@ -25,7 +25,7 @@
   "parking": {
    "title": "Aparcamiento",
    "hint": "15 min gratis",
-   "text": "250 plazas. Los primeros 15 minutos gratis, después 300 ₽ por cada hora; más de 3 horas, 900 ₽/día. Estacionamiento en el segundo carril de circulación 1000 ₽/hora, aparcamiento VIP 2000 ₽/hora. Una nueva entrada dentro de la misma hora no tiene los 15 minutos gratis."
+   "text": "250 plazas. Los primeros 15 minutos gratis, después 300 ₽ por cada hora; más de 3 horas, 900 ₽/24 h. Estacionamiento en el segundo carril de circulación 1000 ₽/hora, aparcamiento VIP 2000 ₽/hora. Una nueva entrada en el plazo de una hora no tiene los 15 minutos gratis."
   }
  }
 }

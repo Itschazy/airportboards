@@ -10,6 +10,11 @@
       "title": "Sheraton Milan Malpensa",
       "hint": "터미널 1로 바로 연결",
       "text": "Sheraton Milan Malpensa Airport Hotel & Conference Centre는 터미널 1로 바로 연결됩니다. 호텔에는 실내 수영장, 피트니스 센터, 스파, 레스토랑이 있으며 스위트 객실은 방음 처리되어 있습니다."
+    },
+    "terminals": {
+      "title": "터미널",
+      "hint": "T1–T2 무료 셔틀",
+      "text": "터미널 1과 2 사이에 무료 셔틀이 운행합니다."
     }
   }
 }

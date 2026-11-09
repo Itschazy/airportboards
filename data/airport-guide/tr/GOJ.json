@@ -15,7 +15,7 @@
   "storage": {
    "title": "Emanet",
    "hint": "Kat 1, saati 250 ₽'den",
-   "text": "Otomatik emanet dolapları Kat 1'de, iç hatlar bagaj alım alanı çıkışının solunda. Standart dolap: saati 250 ₽ veya günlüğü 550 ₽. Büyük dolap: saati 350 ₽ veya günlüğü 900 ₽. Vestiyer: günlüğü 100 ₽."
+   "text": "Otomatik emanet dolapları Kat 1'de, iç hatlar bagaj alım alanı çıkışının solunda. Standart dolap: saati 250 ₽ veya 24 saati 550 ₽. Büyük dolap: saati 350 ₽ veya 24 saati 900 ₽. Vestiyer: 24 saati 100 ₽."
   },
   "kids": {
    "title": "Çocukla",
@@ -25,7 +25,7 @@
   "parking": {
    "title": "Otopark",
    "hint": "15 dakika ücretsiz",
-   "text": "İndirme-bindirme alanı: ilk 15 dakika ücretsiz, 16. ila 60. dakika arası 890 ₽, sonrası saati 890 ₽. Terminalin yanındaki P otoparkı: 1 saate kadar 370 ₽, 1 ila 24 saat 750 ₽, 2 güne kadar 1500 ₽. Terminale 700 m uzaklıkta gece gündüz açık ücretsiz otopark, korumasız. Birinci şerit (VIP alanı): giriş başına 3000 ₽."
+   "text": "İndirme-bindirme alanı: ilk 15 dakika ücretsiz, 16. ila 60. dakika arası 890 ₽, sonrası saati 890 ₽. Terminalin yanındaki P otoparkı: 1 saate kadar 370 ₽, 1 ila 24 saat 750 ₽, 2 adet 24 saatlik döneme kadar 1500 ₽. Terminale 700 m uzaklıkta gece gündüz açık ücretsiz otopark, korumasız. Birinci şerit (VIP alanı): giriş başına 3000 ₽."
   },
   "wifi": {
    "title": "Wi‑Fi",

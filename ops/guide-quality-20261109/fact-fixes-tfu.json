@@ -1,0 +1,74 @@
+[
+  {
+    "file": "data/airport-guide/TFU.json",
+    "block": "sleep",
+    "before": "Holiday Inn Express Chengdu Tianfu Airport Zone находится в Wanhui Center в городе Цзяньян напротив станции Jianyang South. В отеле 316 номеров; в них предусмотрены розетки, USB-порты и душ. На странице оператора указан трансфер от аэропорта TFU и обратно. Заезд и выезд — в 14:00, минимальный возраст для самостоятельной регистрации — 18 лет.",
+    "after": "Holiday Inn Express Chengdu Tianfu Airport Zone находится в Wanhui Center в городе Цзяньян напротив станции Jianyang South. Бесплатный трансфер из аэропорта и обратно работает с 06:00 до 22:00. Места посадки в аэропорту — у выхода 12 на этаже вылета терминала T1 и у выхода 21 на этаже вылета терминала T2. Заезд — с 14:00, выезд — до 14:00; минимальный возраст для самостоятельной регистрации — 18 лет."
+  },
+  {
+    "file": "data/airport-guide/en/TFU.json",
+    "block": "sleep",
+    "before": "Holiday Inn Express Chengdu Tianfu Airport Zone is in Wanhui Center in Jianyang, opposite Jianyang South station. The hotel has 316 rooms, with power outlets, USB ports and a shower. The operator’s page lists a shuttle to and from TFU airport. Check-in and check-out are at 14:00; the minimum age for independent check-in is 18.",
+    "after": "Holiday Inn Express Chengdu Tianfu Airport Zone is in Wanhui Center in Jianyang, opposite Jianyang South station. The free airport shuttle runs to and from the airport from 06:00 to 22:00. Airport pickup points are at exit 12 on the departures floor of Terminal T1 and exit 21 on the departures floor of Terminal T2. Check-in is from 14:00 and check-out by 14:00; the minimum age to check in independently is 18."
+  },
+  {
+    "file": "data/airport-guide/de/TFU.json",
+    "block": "sleep",
+    "before": "Das Holiday Inn Express Chengdu Tianfu Airport Zone liegt im Wanhui Center in Jianyang gegenüber der Station Jianyang South. Das Hotel hat 316 Zimmer mit Steckdosen, USB-Anschlüssen und Dusche. Auf der Betreiberseite ist ein Transfer vom und zum Flughafen TFU aufgeführt. Check-in und Check-out sind um 14:00; das Mindestalter für den eigenständigen Check-in beträgt 18 Jahre.",
+    "after": "Das Holiday Inn Express Chengdu Tianfu Airport Zone liegt im Wanhui Center in Jianyang gegenüber dem Bahnhof Jianyang South. Der kostenlose Shuttle zum und vom Flughafen fährt von 06:00 bis 22:00. Die Abholpunkte am Flughafen befinden sich an Ausgang 12 auf der Abflugebene von Terminal T1 und an Ausgang 21 auf der Abflugebene von Terminal T2. Check-in ab 14:00, Check-out bis 14:00; das Mindestalter für einen eigenständigen Check-in beträgt 18 Jahre."
+  },
+  {
+    "file": "data/airport-guide/fr/TFU.json",
+    "block": "sleep",
+    "before": "Holiday Inn Express Chengdu Tianfu Airport Zone se trouve au Wanhui Center, à Jianyang, en face de la station Jianyang South. L’hôtel possède 316 chambres avec prises électriques, ports USB et douche. La page de l’opérateur indique une navette depuis et vers l’aéroport TFU. L’arrivée et le départ sont à 14:00 ; l’âge minimum pour s’enregistrer seul est de 18 ans.",
+    "after": "Le Holiday Inn Express Chengdu Tianfu Airport Zone se trouve au Wanhui Center à Jianyang, en face de la gare de Jianyang South. La navette gratuite entre l’hôtel et l’aéroport fonctionne dans les deux sens de 06:00 à 22:00. À l’aéroport, les points de prise en charge sont à la sortie 12 de l’étage des départs du terminal T1 et à la sortie 21 de l’étage des départs du terminal T2. Arrivée à partir de 14:00, départ avant 14:00 ; l’âge minimum pour s’enregistrer seul est de 18 ans."
+  },
+  {
+    "file": "data/airport-guide/es/TFU.json",
+    "block": "sleep",
+    "before": "Holiday Inn Express Chengdu Tianfu Airport Zone está en Wanhui Center, en Jianyang, frente a la estación Jianyang South. Tiene 316 habitaciones con enchufes, puertos USB y ducha. La página del operador indica traslado desde y hacia el aeropuerto TFU. La entrada y la salida son a las 14:00; la edad mínima para registrarse sin acompañante es de 18 años.",
+    "after": "El Holiday Inn Express Chengdu Tianfu Airport Zone está en Wanhui Center, en Jianyang, frente a la estación Jianyang South. El traslado gratuito entre el hotel y el aeropuerto funciona en ambos sentidos de 06:00 a 22:00. Los puntos de recogida en el aeropuerto están en la salida 12 de la planta de salidas de la terminal T1 y en la salida 21 de la planta de salidas de la terminal T2. Entrada desde las 14:00 y salida hasta las 14:00; la edad mínima para registrarse sin acompañante es de 18 años."
+  },
+  {
+    "file": "data/airport-guide/it/TFU.json",
+    "block": "sleep",
+    "before": "Holiday Inn Express Chengdu Tianfu Airport Zone si trova nel Wanhui Center a Jianyang, di fronte alla stazione Jianyang South. L’hotel ha 316 camere con prese elettriche, porte USB e doccia. La pagina dell’operatore indica una navetta da e per l’aeroporto TFU. Check-in e check-out sono alle 14:00; l’età minima per il check-in autonomo è di 18 anni.",
+    "after": "L’Holiday Inn Express Chengdu Tianfu Airport Zone si trova nel Wanhui Center a Jianyang, di fronte alla stazione Jianyang South. La navetta gratuita da e per l’aeroporto opera dalle 06:00 alle 22:00. I punti di prelievo in aeroporto sono all’uscita 12 del piano partenze del terminal T1 e all’uscita 21 del piano partenze del terminal T2. Check-in dalle 14:00 e check-out entro le 14:00; l’età minima per effettuare autonomamente il check-in è di 18 anni."
+  },
+  {
+    "file": "data/airport-guide/tr/TFU.json",
+    "block": "sleep",
+    "before": "Holiday Inn Express Chengdu Tianfu Airport Zone, Jianyang’da Jianyang South istasyonunun karşısındaki Wanhui Center’dadır. Otelde priz, USB bağlantısı ve duş bulunan 316 oda vardır. İşletmecinin sayfasında TFU Havalimanı’ndan gidiş-dönüş transfer belirtilir. Giriş ve çıkış saatleri 14:00’tür; bağımsız giriş için asgari yaş 18’dir.",
+    "after": "Holiday Inn Express Chengdu Tianfu Airport Zone, Jianyang şehrindeki Wanhui Center’da, Jianyang South istasyonunun karşısındadır. Havalimanına gidiş ve dönüş için ücretsiz servis 06:00–22:00 saatleri arasında çalışır. Havalimanındaki biniş noktaları, T1 terminalinin gidiş katındaki 12 numaralı çıkış ve T2 terminalinin gidiş katındaki 21 numaralı çıkıştır. Otele giriş 14:00’ten itibaren, çıkış en geç 14:00’tedir; tek başına giriş yapabilmek için en az 18 yaşında olmak gerekir."
+  },
+  {
+    "file": "data/airport-guide/zh/TFU.json",
+    "block": "sleep",
+    "before": "Holiday Inn Express Chengdu Tianfu Airport Zone位于简阳市的Wanhui Center，正对Jianyang South站。酒店有316间客房，配有插座、USB端口和淋浴。运营方页面列有往返TFU机场的接送服务。入住和退房时间均为14:00，独立办理入住的最低年龄为18岁。",
+    "after": "成都天府临空智选假日酒店（Holiday Inn Express Chengdu Tianfu Airport Zone）位于简阳市Wanhui Center，简阳南站对面。酒店提供往返机场的免费接驳车，服务时间为06:00至22:00。机场上车点为T1航站楼出发层12号出口和T2航站楼出发层21号出口。14:00起办理入住，须在14:00前退房；独立办理入住的最低年龄为18岁。"
+  },
+  {
+    "file": "data/airport-guide/ja/TFU.json",
+    "block": "sleep",
+    "before": "Holiday Inn Express Chengdu Tianfu Airport ZoneはJianyangのWanhui Center内、Jianyang South駅の向かいにあります。ホテルには316室があり、コンセント、USBポート、シャワーを備えています。運営者のページにはTFU空港との往復送迎が記載されています。チェックイン・チェックアウトはいずれも14:00で、単独でチェックインできる最低年齢は18歳です。",
+    "after": "Holiday Inn Express Chengdu Tianfu Airport Zoneは簡陽市のWanhui Center内、Jianyang South駅の向かいにある。空港とホテルを結ぶ無料送迎は06:00～22:00に運行。空港の乗り場はT1ターミナル出発階の出口12とT2ターミナル出発階の出口21。チェックインは14:00から、チェックアウトは14:00までで、単独でチェックインできる最低年齢は18歳。"
+  },
+  {
+    "file": "data/airport-guide/ko/TFU.json",
+    "block": "sleep",
+    "before": "Holiday Inn Express Chengdu Tianfu Airport Zone은 Jianyang의 Wanhui Center에 있으며 Jianyang South역 맞은편에 있습니다. 호텔에는 콘센트, USB 포트, 샤워 시설을 갖춘 객실이 316개 있습니다. 운영사 페이지에는 TFU공항 왕복 셔틀이 안내되어 있습니다. 체크인과 체크아웃은 모두 14:00이며, 단독 체크인 최소 연령은 18세입니다.",
+    "after": "Holiday Inn Express Chengdu Tianfu Airport Zone은 젠양시 Wanhui Center에 있으며 Jianyang South역 맞은편에 있습니다. 호텔과 공항을 오가는 무료 셔틀은 06:00–22:00에 운행합니다. 공항 탑승 장소는 T1 터미널 출발층 12번 출구와 T2 터미널 출발층 21번 출구입니다. 체크인은 14:00부터, 체크아웃은 14:00까지이며, 단독 체크인 최소 연령은 18세입니다."
+  },
+  {
+    "file": "data/airport-guide/ar/TFU.json",
+    "block": "sleep",
+    "before": "يقع Holiday Inn Express Chengdu Tianfu Airport Zone في Wanhui Center بمدينة Jianyang مقابل محطة Jianyang South. يضم الفندق 316 غرفة مزودة بمقابس ومنافذ USB ودُش. تذكر صفحة المشغل خدمة نقل من مطار TFU وإليه. تسجيل الوصول والمغادرة كلاهما في 14:00، والحد الأدنى للعمر للتسجيل المستقل هو 18 سنة.",
+    "after": "يقع Holiday Inn Express Chengdu Tianfu Airport Zone في Wanhui Center بمدينة جيانيانغ مقابل محطة Jianyang South. تعمل خدمة النقل المجانية من المطار وإليه من 06:00 إلى 22:00. نقطتا الركوب في المطار هما المخرج 12 في طابق المغادرة بمبنى T1 والمخرج 21 في طابق المغادرة بمبنى T2. يبدأ تسجيل الوصول في 14:00، ويجب تسجيل المغادرة بحلول 14:00؛ والحد الأدنى للعمر لتسجيل الوصول بشكل مستقل هو 18 عامًا."
+  },
+  {
+    "file": "data/airport-guide/hi/TFU.json",
+    "block": "sleep",
+    "before": "Holiday Inn Express Chengdu Tianfu Airport Zone, Jianyang के Wanhui Center में Jianyang South स्टेशन के सामने है। होटल में बिजली के सॉकेट, USB पोर्ट और शावर वाले 316 कमरे हैं। संचालक के पेज पर TFU एयरपोर्ट से आने-जाने की शटल दी गई है। चेक-इन और चेक-आउट दोनों 14:00 पर हैं; स्वतंत्र रूप से चेक-इन की न्यूनतम उम्र 18 वर्ष है।",
+    "after": "Holiday Inn Express Chengdu Tianfu Airport Zone, जियानयांग शहर के Wanhui Center में Jianyang South स्टेशन के सामने है। हवाई अड्डे से होटल और होटल से हवाई अड्डे तक निःशुल्क शटल 06:00 से 22:00 तक चलती है। हवाई अड्डे पर शटल में चढ़ने के स्थान T1 टर्मिनल के प्रस्थान तल पर निकास 12 और T2 टर्मिनल के प्रस्थान तल पर निकास 21 हैं। चेक-इन 14:00 से और चेक-आउट 14:00 तक है; स्वतंत्र रूप से चेक-इन करने की न्यूनतम आयु 18 वर्ष है।"
+  }
+]

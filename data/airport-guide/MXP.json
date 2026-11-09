@@ -17,6 +17,14 @@
       "text": "Sheraton Milan Malpensa Airport Hotel & Conference Centre имеет прямой доступ к терминалу 1. В отеле есть крытый бассейн, фитнес-центр, спа и рестораны; номера категории suite звукоизолированы.",
       "source": "marriott.com",
       "url": "https://www.marriott.com/en-us/hotels/milmp-sheraton-milan-malpensa-airport-hotel-and-conference-centre/overview/"
+    },
+    {
+      "id": "terminals",
+      "title": "Между терминалами",
+      "hint": "Бесплатный шаттл T1—T2",
+      "text": "Между терминалами 1 и 2 курсирует бесплатный шаттл.",
+      "source": "milanairports-shop.com",
+      "url": "https://www.milanairports-shop.com/en/info-and-support/contacts-and-faq"
     }
   ]
 }

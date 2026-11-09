@@ -14,13 +14,13 @@
   },
   "storage": {
    "title": "Consigne à bagages",
-   "hint": "24/7, 400 ₽ par jour",
+   "hint": "Premier jour calendaire : 400 ₽",
    "text": "Ouverte jour et nuit. Premier jour 400 ₽ (jusqu'à 00:00), ensuite 200 ₽ par jour, tout jour entamé est dû en entier. Poids d'un bagage jusqu'à 30 kg."
   },
   "parking": {
    "title": "Parking",
    "hint": "20 min gratuites",
-   "text": "Sur la place de l'aérogare, 20 premières minutes gratuites. Aire de stationnement prolongé de 50 voitures juste derrière l'abri de l'arrêt : 750 ₽ par jour. Paiement aux caisses de l'aérogare et aux bornes près de l'entrée centrale et dans le hall des arrivées."
+   "text": "Sur la place de l'aérogare, 20 premières minutes gratuites. Aire de stationnement prolongé de 50 voitures juste derrière l'abri de l'arrêt : 750 ₽ par 24 heures. Paiement aux caisses de l'aérogare et aux bornes près de l'entrée centrale et dans le hall des arrivées."
   }
  }
 }

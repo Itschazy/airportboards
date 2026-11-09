@@ -1,0 +1,74 @@
+[
+  {
+    "file": "data/airport-guide/NBC.json",
+    "block": "about",
+    "before": "Международный аэропорт Нижнекамск (Бегишево) имени Н.В. Лемаева, дочернее предприятие ПАО «КАМАЗ». В радиусе 25 км от аэропорта Набережные Челны, Нижнекамск, Елабуга и Альметьевск. Одна ВПП, больше 700 тыс. пассажиров в год.",
+    "after": "Международный аэропорт Нижнекамск (Бегишево) имени Н.В. Лемаева, дочернее предприятие ПАО «КАМАЗ». Аэропорт обслуживает Набережные Челны, Нижнекамск, Елабугу и Альметьевск. Одна ВПП, больше 700 тыс. пассажиров в год."
+  },
+  {
+    "file": "data/airport-guide/en/NBC.json",
+    "block": "about",
+    "before": "Nizhnekamsk (Begishevo) International Airport named after N.V. Lemaev, a subsidiary of PJSC KAMAZ. Within 25 km of the airport are Naberezhnye Chelny, Nizhnekamsk, Yelabuga and Almetyevsk. One runway, more than 700,000 passengers a year.",
+    "after": "Nizhnekamsk (Begishevo) International Airport named after N.V. Lemaev, a subsidiary of PJSC KAMAZ. The airport serves Naberezhnye Chelny, Nizhnekamsk, Yelabuga and Almetyevsk. One runway, more than 700,000 passengers a year."
+  },
+  {
+    "file": "data/airport-guide/de/NBC.json",
+    "block": "about",
+    "before": "Internationaler Flughafen Nischnekamsk (Begischewo) „N. W. Lemajew“, Tochterunternehmen der PAO „KAMAZ“. Im Umkreis von 25 km um den Flughafen liegen Nabereschnyje Tschelny, Nischnekamsk, Jelabuga und Almetjewsk. Eine Start- und Landebahn, mehr als 700.000 Passagiere pro Jahr.",
+    "after": "Internationaler Flughafen Nischnekamsk (Begischewo) „N. W. Lemajew“, Tochterunternehmen der PAO „KAMAZ“. Der Flughafen bedient Nabereschnyje Tschelny, Nischnekamsk, Jelabuga und Almetjewsk. Eine Start- und Landebahn, mehr als 700.000 Passagiere pro Jahr."
+  },
+  {
+    "file": "data/airport-guide/fr/NBC.json",
+    "block": "about",
+    "before": "Aéroport international de Nijnekamsk (Beguichevo) N. V. Lemaïev, filiale de la SA publique « KAMAZ ». Dans un rayon de 25 km autour de l'aéroport : Naberejnye Tchelny, Nijnekamsk, Ielabouga et Almetievsk. Une seule piste, plus de 700 000 passagers par an.",
+    "after": "Aéroport international de Nijnekamsk (Beguichevo) N. V. Lemaïev, filiale de la SA publique « KAMAZ ». L’aéroport dessert Naberejnye Tchelny, Nijnekamsk, Ielabouga et Almetievsk. Une seule piste, plus de 700 000 passagers par an."
+  },
+  {
+    "file": "data/airport-guide/es/NBC.json",
+    "block": "about",
+    "before": "Aeropuerto Internacional de Nizhnekamsk (Begishevo) N. V. Lemaev, filial de PAO «KAMAZ». En un radio de 25 km del aeropuerto están Naberezhnye Chelny, Nizhnekamsk, Yelabuga y Almetyevsk. Una sola pista, más de 700 mil pasajeros al año.",
+    "after": "Aeropuerto Internacional de Nizhnekamsk (Begishevo) N. V. Lemaev, filial de PAO «KAMAZ». El aeropuerto da servicio a Naberezhnye Chelny, Nizhnekamsk, Yelabuga y Almetyevsk. Una sola pista, más de 700 mil pasajeros al año."
+  },
+  {
+    "file": "data/airport-guide/it/NBC.json",
+    "block": "about",
+    "before": "Aeroporto internazionale di Nizhnekamsk (Begishevo) intitolato a N.V. Lemaev, società controllata di PAO «KAMAZ». Entro un raggio di 25 km dall’aeroporto ci sono Naberezhnye Chelny, Nizhnekamsk, Elabuga e Almetyevsk. Una sola pista, oltre 700.000 passeggeri l’anno.",
+    "after": "Aeroporto internazionale di Nizhnekamsk (Begishevo) intitolato a N.V. Lemaev, società controllata di PAO «KAMAZ». L’aeroporto serve Naberezhnye Chelny, Nizhnekamsk, Elabuga e Almetyevsk. Una sola pista, oltre 700.000 passeggeri l’anno."
+  },
+  {
+    "file": "data/airport-guide/tr/NBC.json",
+    "block": "about",
+    "before": "N. V. Lemayev adını taşıyan Nijnekamsk (Begishevo) Uluslararası Havalimanı, KAMAZ PAO'nun yan kuruluşu. Havalimanının 25 km yarıçapında Naberejnıye Çelnı, Nijnekamsk, Yelabuga ve Almetyevsk var. Tek pist, yılda 700 bin üzerinde yolcu.",
+    "after": "N. V. Lemayev adını taşıyan Nijnekamsk (Begishevo) Uluslararası Havalimanı, KAMAZ PAO'nun yan kuruluşu. Havalimanı Naberejnıye Çelnı, Nijnekamsk, Yelabuga ve Almetyevsk’e hizmet verir. Tek pist, yılda 700 bin üzerinde yolcu."
+  },
+  {
+    "file": "data/airport-guide/zh/NBC.json",
+    "block": "about",
+    "before": "下卡姆斯克（别吉舍沃）N. V. Lemaev国际机场，是KAMAZ公众股份公司的子公司。机场方圆25公里内有卡马河畔切尔尼、下卡姆斯克、叶拉布加和阿尔梅季耶夫斯克。一条跑道，年旅客量超过70万人次。",
+    "after": "下卡姆斯克（别吉舍沃）N. V. Lemaev国际机场，是KAMAZ公众股份公司的子公司。机场服务于卡马河畔切尔尼、下卡姆斯克、叶拉布加和阿尔梅季耶夫斯克。一条跑道，年旅客量超过70万人次。"
+  },
+  {
+    "file": "data/airport-guide/ja/NBC.json",
+    "block": "about",
+    "before": "N・V・レマエフ記念ニジネカムスク（ベギシェボ）国際空港は、KAMAZ社の子会社。空港から半径25 km圏内に、ナーベレジヌィエ・チェルヌイ、ニジネカムスク、エラブガ、アリメチエフスクがある。滑走路は1本で、旅客数は年間70万人超。",
+    "after": "N・V・レマエフ記念ニジネカムスク（ベギシェボ）国際空港は、KAMAZ社の子会社。ナーベレジヌィエ・チェルヌイ、ニジネカムスク、エラブガ、アリメチエフスクの各都市を結ぶ空の玄関口となっている。滑走路は1本で、旅客数は年間70万人超。"
+  },
+  {
+    "file": "data/airport-guide/ko/NBC.json",
+    "block": "about",
+    "before": "N.V. Lemaev의 이름을 딴 니즈네캄스크(베기셰보) 국제공항으로, KAMAZ PJSC의 자회사입니다. 공항 반경 25 km 안에 나베레즈니예첼니, 니즈네캄스크, 옐라부가, 알메티옙스크가 있습니다. 활주로 하나, 연간 승객 70만 명 이상.",
+    "after": "N.V. Lemaev의 이름을 딴 니즈네캄스크(베기셰보) 국제공항으로, KAMAZ PJSC의 자회사입니다. 나베레즈니예첼니, 니즈네캄스크, 옐라부가, 알메티옙스크 지역에 항공 서비스를 제공합니다. 활주로 하나, 연간 승객 70만 명 이상."
+  },
+  {
+    "file": "data/airport-guide/ar/NBC.json",
+    "block": "about",
+    "before": "مطار نيجنيكامسك الدولي (بيغيشيفو) الذي يحمل اسم N. V. Lemaev، وهو شركة تابعة لشركة KAMAZ المساهمة العامة. في نطاق 25 كم من المطار تقع نابيريجنيه تشيلني ونيجنيكامسك ويلابوغا وألميتيفسك. مدرج واحد، وأكثر من 700 ألف مسافر سنويًا.",
+    "after": "مطار نيجنيكامسك الدولي (بيغيشيفو) الذي يحمل اسم N. V. Lemaev، وهو شركة تابعة لشركة KAMAZ المساهمة العامة. يخدم المطار نابيريجنيه تشيلني ونيجنيكامسك ويلابوغا وألميتيفسك. مدرج واحد، وأكثر من 700 ألف مسافر سنويًا."
+  },
+  {
+    "file": "data/airport-guide/hi/NBC.json",
+    "block": "about",
+    "before": "N. V. Lemaev के नाम पर निज़्नेकाम्स्क (बेगिशेवो) अंतरराष्ट्रीय हवाई अड्डा, PAO KAMAZ की सहायक कंपनी। हवाई अड्डे से 25 किमी के दायरे में नाबेरेज़्निये चेल्नी, निज़्नेकाम्स्क, येलाबुगा और अल्मेत्येव्स्क। एक रनवे, प्रति वर्ष 700 हज़ार से अधिक यात्री।",
+    "after": "N. V. Lemaev के नाम पर निज़्नेकाम्स्क (बेगिशेवो) अंतरराष्ट्रीय हवाई अड्डा, PAO KAMAZ की सहायक कंपनी। यह हवाई अड्डा नाबेरेज़्निये चेल्नी, निज़्नेकाम्स्क, येलाबुगा और अल्मेत्येव्स्क को सेवा देता है। एक रनवे, प्रति वर्ष 700 हज़ार से अधिक यात्री।"
+  }
+]

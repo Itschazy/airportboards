@@ -14,13 +14,13 @@
   },
   "storage": {
    "title": "Left luggage",
-   "hint": "24/7, 400 ₽ per day",
+   "hint": "First calendar day: 400 ₽",
    "text": "Open round the clock. The first day 400 ₽ (until 00:00), then 200 ₽ per day; a part day counts as a full day. One item may weigh up to 30 kg."
   },
   "parking": {
    "title": "Parking",
    "hint": "20 min free",
-   "text": "On the station forecourt the first 20 minutes are free. A long-stay area for 50 cars right behind the bus shelter: 750 ₽ per day. Payment at the terminal ticket offices and at machines by the main entrance and in the arrivals hall."
+   "text": "On the airport terminal forecourt the first 20 minutes are free. A long-stay area for 50 cars right behind the bus shelter: 750 ₽ per 24 hours. Payment at the terminal payment counters and at machines by the main entrance and in the arrivals hall."
   }
  }
 }

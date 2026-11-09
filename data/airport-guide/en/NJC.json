@@ -5,7 +5,7 @@
   "transport": {
    "title": "Getting there",
    "hint": "4 km, bus 15",
-   "text": "4 km to the city centre. City buses: No. 4 to U Severnoy Roshchi settlement, No. 9 to Starovartovskaya, No. 15 to the railway station and bus station, No. 21 to DRSU. An airport bus to Strezhevoy runs from the station forecourt; timetable on the bus station website. The taxi rank is on the station forecourt opposite terminal No. 2."
+   "text": "4 km to the city centre. City buses: No. 4 to U Severnoy Roshchi settlement, No. 9 to Starovartovskaya, No. 15 to the railway station and bus station, No. 21 to DRSU. An airport bus to Strezhevoy runs from the airport terminal forecourt; timetable on the bus station website. The taxi rank is on the airport terminal forecourt opposite terminal No. 2."
   },
   "terminals": {
    "title": "Terminals",
@@ -20,7 +20,7 @@
   "storage": {
    "title": "Left luggage",
    "hint": "Terminal 1, 24/7",
-   "text": "Terminal No. 1, Level 1, open round the clock. A suitcase, bag or backpack up to 203 cm (sum of three dimensions): 600 ₽ per day. Oversized items 700 ₽ per day. Lost tag 400 ₽."
+   "text": "Terminal No. 1, Level 1, open round the clock. A suitcase, bag or backpack up to 203 cm (sum of three dimensions): 600 ₽ per 24 hours. Oversized items 700 ₽ per 24 hours. Lost tag 400 ₽."
   },
   "kids": {
    "title": "With children",
@@ -30,7 +30,7 @@
   "parking": {
    "title": "Parking",
    "hint": "15 min free",
-   "text": "Car park on the station forecourt. Up to 15 minutes free, then 200 ₽ per hour up to 5 hours. First 24 hours 1,000 ₽, each further 24 hours 800 ₽. A repeat entry within 30 minutes is paid from the moment of entry. Machines in terminals 1 and 2 accept banknotes only; the cashier at the exit accepts cards and QR."
+   "text": "Car park on the airport terminal forecourt. Up to 15 minutes free, then 200 ₽ per hour up to 5 hours. First 24 hours 1,000 ₽, each further 24 hours 800 ₽. A repeat entry within 30 minutes is paid from the moment of entry. Machines in terminals 1 and 2 accept banknotes only; the cashier at the exit accepts cards and QR."
   }
  }
 }

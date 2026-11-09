@@ -18,8 +18,8 @@
   },
   "parking": {
    "title": "Otopark",
-   "hint": "15 dakika ücretsiz",
-   "text": "Terminale 30 m uzaklıkta terminal önü meydanı: 15 dakikadan az ücretsiz, 15 dakikadan fazla saati 200 ₽, bir saatten fazla günlüğü 600 ₽."
+   "hint": "15 dakikadan az ücretsiz",
+   "text": "Terminale 30 m uzaklıkta terminal önü meydanı: 15 dakikadan az ücretsiz, 15 dakikadan fazla saati 200 ₽, bir saatten fazla 24 saati 600 ₽."
   },
   "wifi": {
    "title": "Wi‑Fi",

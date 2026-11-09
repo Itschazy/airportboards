@@ -18,8 +18,8 @@
   },
   "parking": {
    "title": "Parking",
-   "hint": "15 min free",
-   "text": "Station forecourt 30 m from the terminal: less than 15 minutes free, more than 15 minutes 200 ₽ per hour, more than an hour 600 ₽ per day."
+   "hint": "Under 15 minutes free",
+   "text": "Airport terminal forecourt 30 m from the terminal: less than 15 minutes free, more than 15 minutes 200 ₽ per hour, more than an hour 600 ₽ per 24 hours."
   },
   "wifi": {
    "title": "Wi‑Fi",

@@ -25,7 +25,8 @@
 import fs from 'node:fs';
 import path from 'node:path';
 
-const DIR = 'data/airport-guide';
+// Override is used by isolated regression fixtures; production data is the default.
+const DIR = process.env.AIRPORT_GUIDE_DIR || 'data/airport-guide';
 const MAX_DAYS = Number(process.argv[2]) || 180;
 const WARN_DAYS = Math.round(MAX_DAYS * 2 / 3);
 // Те же темы, что в lib/airport-guide.ts QUESTIONS; новый id сначала туда, потом сюда.
@@ -57,8 +58,13 @@ for (const f of files) {
     if (seen.has(b.id)) fails.push(`${where}: id повторяется`);
     seen.add(b.id);
     for (const k of ['title', 'hint', 'text', 'source']) if (!String(b[k] ?? '').trim()) fails.push(`${where}: пусто поле ${k}`);
-    for (const k of ['url', 'url2']) if (b[k] !== undefined && !/^https?:\/\/[^\s]+$/.test(b[k])) fails.push(`${where}: ${k} не ссылка`);
+    for (const k of ['url', 'url2', 'url3']) if (b[k] !== undefined && !/^https?:\/\/[^\s]+$/.test(b[k])) fails.push(`${where}: ${k} не ссылка`);
     if (!b.url) fails.push(`${where}: нет ссылки на источник`);
+    if (b.url3 || b.source3) {
+      let domain = '';
+      try { domain = new URL(b.url3).hostname.replace(/^www\./, ''); } catch {}
+      if (!domain || domain !== String(b.source3 || '').replace(/^www\./, '')) fails.push(`${where}: третий источник и домен url3 не совпадают`);
+    }
     const host = (u) => (u || '').replace(/^https?:\/\/(www\.)?/, '').split('/')[0];
     if (b.url && b.source && !b.url.replace(/^https?:\/\/(www\.)?/, '').startsWith(b.source.replace(/^www\./, ''))) {
       fails.push(`${where}: источник «${b.source}» не совпадает с доменом ссылки ${b.url}`);
@@ -107,7 +113,12 @@ function months(s) {
   return out;
 }
 function nums(s) {
-  const txt = String(s ?? '').replace(/(\d)[\s  ](?=\d{3}\b)/g, '$1');
+  // A four-digit year followed by a passenger count is not a thousands group.
+  // Japanese writes 883,000 as 88万3000; retain the combined numeric value.
+  const txt = String(s ?? '')
+    .replace(/(\d+)万(\d{1,4})(?!\d)/g, (_, high, low) => String(Number(high) * 10000 + Number(low)))
+    .replace(/(?<!\d)(20\d{2}) (?=\d{3}[.,]\d{3}\b)/g, '$1; ')
+    .replace(/(\d)[\s  ](?=\d{3}\b)/g, '$1');
   const out = new Set();
   for (const m of txt.matchAll(/\d+(?:[.,]\d+)*/g)) {
     const raw = m[0];
@@ -129,7 +140,10 @@ function nums(s) {
 const trCount = {};
 for (const loc of LOCALES) {
   const dir = path.join(DIR, loc);
-  if (!fs.existsSync(dir)) continue;
+  if (!fs.existsSync(dir)) { fails.push(`${loc}: отсутствует каталог переводов`); continue; }
+  for (const extra of fs.readdirSync(dir).filter(f => /^[A-Z]{3}\.json$/.test(f))) {
+    if (!files.includes(extra)) fails.push(`${loc}/${extra}: перевод без русского оригинала`);
+  }
   trCount[loc] = 0;
   for (const f of files) {
     const tf = path.join(dir, f);
@@ -138,12 +152,25 @@ for (const loc of LOCALES) {
     let tr, g;
     try { tr = JSON.parse(fs.readFileSync(tf, 'utf8')); g = JSON.parse(fs.readFileSync(path.join(DIR, f), 'utf8')); }
     catch (e) { fails.push(`${loc}/${f}: не JSON (${e.message})`); continue; }
+    // A date ending in 日 must never become a duration during day -> 24h edits.
+    // Number-set parity alone misses this when both 1 and 24 occur elsewhere.
+    if (loc === 'ja' && /\d{4}年\d{1,2}月\d+時間/.test(JSON.stringify(tr))) {
+      fails.push(`${loc}/${f}: повреждена японская дата: после месяца указана длительность`);
+    }
     if (tr.iata !== f.slice(0, 3)) fails.push(`${loc}/${f}: iata не совпадает`);
-    if (g.about && !tr.about) warns.push(`${loc}/${f.slice(0, 3)} без about`);
+    if (g.about && !String(tr.about ?? '').trim()) fails.push(`${loc}/${f.slice(0, 3)} без about`);
+    if (!g.about && tr.about) fails.push(`${loc}/${f.slice(0, 3)}: about без русского оригинала`);
+    if (g.about && tr.about) {
+      const a = nums(g.about), c = nums(tr.about), mo = months(g.about);
+      const miss = [...a].filter(n => !c.has(n)), extra = [...c].filter(n => !a.has(n) && !mo.has(n));
+      if (miss.length || extra.length) fails.push(`${loc}/${f} [about]: числа расходятся (нет ${miss.join(',') || '—'}; лишние ${extra.join(',') || '—'})`);
+    }
     for (const b of g.blocks ?? []) {
       const t = tr.blocks?.[b.id];
       const where = `${loc}/${f} [${b.id}]`;
       if (!t?.title || !t?.hint || !t?.text) { fails.push(`${where}: блок не переведён`); continue; }
+      const hintLimit = ['zh', 'ja', 'ko'].includes(loc) ? 18 : 35;
+      if ([...t.hint].length > hintLimit) fails.push(`${where}: подсказка длиннее ${hintLimit} символов`);
       const all = `${t.title} ${t.hint} ${t.text}`;
       // Кириллица допустима только в кодах маршрутов и зон так, как они написаны на табличке
       // («111Э», «110С», «Т1») — буква прилегает к цифре. Всё остальное — непереведённый текст.

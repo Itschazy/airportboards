@@ -5,7 +5,7 @@
   "transport": {
    "title": "Getting there",
    "hint": "Transfer to city 1,500 ₽",
-   "text": "Airport transfer from the station forecourt in a car with a driver. Izhevsk and suburbs up to 30 km 1,500 ₽, Votkinsk 4,000 ₽, Sarapul 5,000 ₽, Chaikovsky 6,000 ₽. Book 3 hours or more in advance at izhavia.su or after arrival at the airport ticket office, if cars are available."
+   "text": "Airport transfer from the airport terminal forecourt in a car with a driver. Izhevsk and suburbs up to 30 km 1,500 ₽, Votkinsk 4,000 ₽, Sarapul 5,000 ₽, Chaikovsky 6,000 ₽. Book 3 hours or more in advance at izhavia.su or after arrival at the airport ticket office, if cars are available."
   },
   "terminals": {
    "title": "Terminal",
@@ -30,7 +30,7 @@
   "parking": {
    "title": "Parking",
    "hint": "15 min free",
-   "text": "Up to 15 minutes free, from 16 to 30 minutes 250 ₽, from 30 minutes to 2 hours 500 ₽/hour, over 2 hours 750 ₽/day. VIP parking 300 ₽/hour up to 5 hours, no free time. Exit within 15 minutes after payment. Free for cars of disabled people listed in the federal register."
+   "text": "Up to 15 minutes free, from 16 to 30 minutes 250 ₽, from 30 minutes to 2 hours 500 ₽/hour, over 2 hours 750 ₽/24 hours. VIP parking 300 ₽/hour up to 5 hours, no free time. Exit within 15 minutes after payment. Free for cars of disabled people listed in the federal register."
   }
  }
 }

@@ -20,7 +20,7 @@
   "storage": {
    "title": "Left luggage",
    "hint": "Departure hall, from 500 ₽",
-   "text": "Automated left luggage in the departure hall on Level 1. Standard locker 500 ₽ per day or 200 ₽ per hour, large 900 ₽ per day or 300 ₽ per hour. The locker opens with the barcode on the receipt."
+   "text": "Automated left luggage in the departure hall on Level 1. Standard locker 500 ₽ per 24 hours or 200 ₽ per hour, large 900 ₽ per 24 hours or 300 ₽ per hour. The locker opens with the barcode on the receipt."
   },
   "wifi": {
    "title": "Wi‑Fi",

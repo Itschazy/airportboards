@@ -15,7 +15,7 @@
   "storage": {
    "title": "Gepäckaufbewahrung",
    "hint": "Ebene 1, ab 200 ₽/Std.",
-   "text": "Automatische Gepäckaufbewahrung im rechten Flügel des Terminals, Ebene 1. Standardfach 200 ₽ pro Stunde oder 500 ₽ pro Tag, großes Fach 300 ₽ pro Stunde oder 800 ₽ pro Tag. Dort auch Gepäckverpackung ab 950 ₽ pro Stück."
+   "text": "Automatische Gepäckaufbewahrung im rechten Flügel des Terminals, Ebene 1. Standardfach 200 ₽ pro Stunde oder 500 ₽ je 24 Stunden, großes Fach 300 ₽ pro Stunde oder 800 ₽ je 24 Stunden. Dort auch Gepäckverpackung ab 950 ₽ pro Stück."
   },
   "kids": {
    "title": "Mit Kind",

@@ -14,13 +14,13 @@
   },
   "storage": {
    "title": "Consigna",
-   "hint": "24/7, 400 ₽ al día",
+   "hint": "Primer día natural: 400 ₽",
    "text": "Funciona día y noche. El primer día, 400 ₽ (hasta las 00:00); después, 200 ₽ por día; el día incompleto se cuenta como completo. Peso de un bulto: hasta 30 kg."
   },
   "parking": {
    "title": "Aparcamiento",
    "hint": "20 min gratis",
-   "text": "En la plaza de la terminal, los primeros 20 minutos son gratis. Explanada de estacionamiento prolongado para 50 coches justo detrás del pabellón de la parada: 750 ₽ por día. Pago en las cajas de la terminal y en las máquinas de la entrada central y de la sala de llegadas."
+   "text": "En la plaza de la terminal, los primeros 20 minutos son gratis. Explanada de estacionamiento prolongado para 50 coches justo detrás del pabellón de la parada: 750 ₽ por cada 24 horas. Pago en las cajas de la terminal y en las máquinas de la entrada central y de la sala de llegadas."
   }
  }
 }

@@ -19,8 +19,8 @@
   },
   "storage": {
    "title": "Gepäckaufbewahrung",
-   "hint": "Ebene 1, ab 400 ₽/Tag",
-   "text": "Automatische Gepäckaufbewahrung auf Ebene 1 des Terminals, während der Öffnungszeiten des Flughafens. Fächer zu 400, 600 und 1000 ₽ pro Tag je nach Größe. Aufbewahrung bis zu 6 Monate. Bezahlung mit Karte oder bar."
+   "hint": "Ebene 1, ab 400 ₽/24 h",
+   "text": "Automatische Gepäckaufbewahrung auf Ebene 1 des Terminals, während der Öffnungszeiten des Flughafens. Fächer zu 400, 600 und 1000 ₽ pro 24 Stunden je nach Größe. Aufbewahrung bis zu 6 Monate. Bezahlung mit Karte oder bar."
   },
   "kids": {
    "title": "Mit Kind",
@@ -30,7 +30,7 @@
   "parking": {
    "title": "Parken",
    "hint": "15 Min. kostenlos",
-   "text": "An den Terminals ist Ein- und Aussteigen 15 Minuten kostenlos, erneute Einfahrt innerhalb einer Stunde 250 ₽. P1: 400 ₽/Stunde, von 1 bis 5 Stunden 300 ₽/Stunde, 3000 ₽/Tag. P2: 1000 ₽/Tag. P3: 180 Minuten kostenlos, von 3 bis 5 Stunden 200 ₽/Stunde, danach 800 ₽/Tag."
+   "text": "An den Terminals ist Ein- und Aussteigen 15 Minuten kostenlos, erneute Einfahrt innerhalb einer Stunde 250 ₽. P1: 400 ₽/Stunde, von 1 bis 5 Stunden 300 ₽/Stunde, 3000 ₽/24 h. P2: 1000 ₽/24 h. P3: 180 Minuten kostenlos, von 3 bis 5 Stunden 200 ₽/Stunde, danach 800 ₽/24 h."
   },
   "wifi": {
    "title": "Wi‑Fi",

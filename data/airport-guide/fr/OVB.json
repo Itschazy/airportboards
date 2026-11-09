@@ -1,6 +1,6 @@
 {
  "iata": "OVB",
- "about": "Tolmachevo est l’aéroport international de Novossibirsk, nommé en l’honneur de A. I. Pokryshkin, à 17 km à l’ouest du centre-ville. Son fuseau horaire est UTC+7 : l’heure locale a 4 heures d’avance sur Moscou.",
+ "about": "Tolmachevo est l’aéroport international de Novossibirsk, nommé en l’honneur d’A. I. Pokryshkin, à 17 km à l’ouest du centre-ville. Son fuseau horaire est UTC+7 : l’heure locale a 4 heures d’avance sur Moscou.",
  "blocks": {
   "transport": {
    "title": "Comment s'y rendre",
@@ -25,7 +25,7 @@
   "parking": {
    "title": "Parking",
    "hint": "15 min gratuites",
-   "text": "Sur la place de l'aérogare, 15 premières minutes gratuites, puis première heure 400 ₽, deuxième 300 ₽, ensuite 200 ₽ de l'heure, au-delà de 6 heures 1500 ₽ par jour. Parkings P1–P4 : jusqu'à 3 jours 700 ₽ par jour, jusqu'à 6 jours 500 ₽, au-delà 300 ₽. Entrée uniquement avec une plaque d'immatriculation reconnue. En cas de nouvelle entrée dans un délai de 1 heure après la sortie, les 15 premières minutes coûtent 100 ₽."
+   "text": "Sur le parvis de l'aérogare, les 15 premières minutes sont gratuites. Ensuite, la première heure coûte 400 ₽, la deuxième 300 ₽, puis chaque heure supplémentaire 200 ₽ ; au-delà de 6 heures, le tarif est de 1500 ₽ par tranche de 24 heures. Dans les parkings P1–P4, le tarif par tranche de 24 heures est de 700 ₽ pour un stationnement allant jusqu'à 3 tranches de 24 heures, de 500 ₽ jusqu'à 6 tranches et de 300 ₽ au-delà. L'entrée nécessite une plaque d'immatriculation reconnue. En cas de nouvelle entrée dans un délai de 1 heure après la sortie, les 15 premières minutes coûtent 100 ₽."
   }
  }
 }

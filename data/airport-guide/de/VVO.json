@@ -1,6 +1,6 @@
 {
  "iata": "VVO",
- "about": "Der Flughafen liegt in der Stadt Artjom in der Region Primorje. Das Streckennetz umfasst mehr als 40 Ziele, die Flüge führen mehr als 20 russische und ausländische Fluggesellschaften durch. Es gibt Lounges für Inlands- und internationale Abflüge.",
+ "about": "Der Flughafen liegt in der Stadt Artjom in der Region Primorje. Das Streckennetz umfasst mehr als 40 Ziele, die Flüge führen mehr als 20 russische und ausländische Fluggesellschaften durch. Es gibt Abflughallen für Inlands- und internationale Flüge.",
  "blocks": {
   "transport": {
    "title": "Anreise",
@@ -14,7 +14,7 @@
   },
   "storage": {
    "title": "Gepäckaufbewahrung",
-   "hint": "Ebene 1, 24/7, ab 400 ₽",
+   "hint": "Ebene 1, 24/7",
    "text": "Ebene 1, hinter der Rolltreppe, rund um die Uhr. Tarif „Standard“: 500 ₽ für die ersten 24 Stunden, 200 ₽ für je weitere 24 Stunden, Gepäckstück bis 203 cm Summe der Maße. Angefangene 24-Stunden-Zeiträume zählen als volle."
   },
   "sleep": {

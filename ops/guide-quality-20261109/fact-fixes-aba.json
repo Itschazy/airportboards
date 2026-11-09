@@ -1,0 +1,173 @@
+[
+  {
+    "file": "data/airport-guide/ABA.json",
+    "block": "parking",
+    "before": {
+      "id": "parking",
+      "title": "Парковка",
+      "hint": "Временно закрыта",
+      "text": "Платная парковка длительного пребывания в 50 м справа от аэровокзала временно не работает.",
+      "source": "airportabakan.ru",
+      "url": "https://airportabakan.ru/passazhiram-ru/platnaya-parkovka.html"
+    },
+    "after": {
+      "title": "Парковка",
+      "hint": "77 мест, круглосуточно",
+      "text": "Платная парковка длительного пребывания находится в 50 м справа от аэровокзала и работает круглосуточно. Всего 77 мест. Оплата в кассе аэровокзала наличными или банковской картой. Неполные 24 часа округляются до полных; отсчёт начинается с даты и времени въезда."
+    }
+  },
+  {
+    "file": "data/airport-guide/en/ABA.json",
+    "block": "parking",
+    "before": {
+      "title": "Parking",
+      "hint": "Temporarily closed",
+      "text": "The paid long-stay car park 50 m to the right of the terminal is temporarily closed."
+    },
+    "after": {
+      "title": "Parking",
+      "hint": "77 spaces, open 24 hours",
+      "text": "The paid long-stay car park is 50 m to the right of the terminal and is open round the clock. There are 77 spaces. Pay at the terminal cash desk in cash or by bank card. Partial 24-hour periods are rounded up to full periods, counted from the date and time of entry."
+    }
+  },
+  {
+    "file": "data/airport-guide/de/ABA.json",
+    "block": "parking",
+    "before": {
+      "title": "Parken",
+      "hint": "Vorübergehend geschlossen",
+      "text": "Der kostenpflichtige Langzeitparkplatz 50 m rechts vom Terminal ist vorübergehend außer Betrieb."
+    },
+    "after": {
+      "title": "Parken",
+      "hint": "77 Plätze, rund um die Uhr",
+      "text": "Der kostenpflichtige Langzeitparkplatz liegt 50 m rechts vom Terminal und ist rund um die Uhr geöffnet. Es gibt 77 Stellplätze. Bezahlt wird an der Kasse im Terminal, bar oder mit Bankkarte. Angefangene Zeiträume von 24 Stunden werden voll berechnet; die Berechnung beginnt mit Datum und Uhrzeit der Einfahrt."
+    }
+  },
+  {
+    "file": "data/airport-guide/fr/ABA.json",
+    "block": "parking",
+    "before": {
+      "title": "Parking",
+      "hint": "Fermé temporairement",
+      "text": "Le parking payant longue durée, à 50 m à droite de l'aérogare, est temporairement fermé."
+    },
+    "after": {
+      "title": "Parking",
+      "hint": "77 places, ouvert en continu",
+      "text": "Le parking payant de longue durée se trouve à 50 m à droite de l’aérogare et reste ouvert en permanence. Il compte 77 places. Le paiement se fait à la caisse de l’aérogare, en espèces ou par carte bancaire. Toute période de 24 heures entamée est facturée en entier, à compter de la date et de l’heure d’entrée."
+    }
+  },
+  {
+    "file": "data/airport-guide/es/ABA.json",
+    "block": "parking",
+    "before": {
+      "title": "Aparcamiento",
+      "hint": "Cerrado temporalmente",
+      "text": "El aparcamiento de pago de larga estancia, a 50 m a la derecha de la terminal, no funciona temporalmente."
+    },
+    "after": {
+      "title": "Aparcamiento",
+      "hint": "77 plazas, abierto siempre",
+      "text": "El aparcamiento de larga estancia de pago está a 50 m a la derecha de la terminal y permanece abierto las veinticuatro horas. Tiene 77 plazas. Se paga en la caja de la terminal, en efectivo o con tarjeta bancaria. Cada periodo de 24 horas iniciado se cobra completo, contando desde la fecha y hora de entrada."
+    }
+  },
+  {
+    "file": "data/airport-guide/it/ABA.json",
+    "block": "parking",
+    "before": {
+      "title": "Parcheggio",
+      "hint": "Temporaneamente chiuso",
+      "text": "Il parcheggio a pagamento per soste lunghe, a 50 m a destra dell’aerostazione, è temporaneamente fuori servizio."
+    },
+    "after": {
+      "title": "Parcheggio",
+      "hint": "77 posti, sempre aperto",
+      "text": "Il parcheggio a pagamento per la lunga sosta si trova 50 m a destra dell’aerostazione ed è sempre aperto. Dispone di 77 posti. Si paga alla cassa dell’aerostazione, in contanti o con carta bancaria. Ogni periodo di 24 ore iniziato viene conteggiato per intero, a partire dalla data e dall’ora di ingresso."
+    }
+  },
+  {
+    "file": "data/airport-guide/tr/ABA.json",
+    "block": "parking",
+    "before": {
+      "title": "Otopark",
+      "hint": "Geçici olarak kapalı",
+      "text": "Terminal binasının 50 m sağındaki ücretli uzun süreli otopark geçici olarak hizmet vermiyor."
+    },
+    "after": {
+      "title": "Otopark",
+      "hint": "77 araçlık, sürekli açık",
+      "text": "Ücretli uzun süreli otopark terminalin 50 m sağındadır ve gece gündüz açıktır. Toplam 77 araçlık yer vardır. Ödeme terminal kasasında nakit veya banka kartıyla yapılır. Başlanan her 24 saatlik dönem tam dönem olarak ücretlendirilir; hesaplama giriş tarihi ve saatinden başlar."
+    }
+  },
+  {
+    "file": "data/airport-guide/zh/ABA.json",
+    "block": "parking",
+    "before": {
+      "title": "停车",
+      "hint": "暂停开放",
+      "text": "航站楼右侧50米处的收费长时停车场暂停运营。"
+    },
+    "after": {
+      "title": "停车",
+      "hint": "77个车位，全天开放",
+      "text": "收费长时停车场位于航站楼右侧50米处，全天开放，共有77个车位。在航站楼收银处用现金或银行卡付款。自入场日期和时间起计费，不足24小时按完整24小时计。"
+    }
+  },
+  {
+    "file": "data/airport-guide/ja/ABA.json",
+    "block": "parking",
+    "before": {
+      "title": "駐車場",
+      "hint": "一時閉鎖中",
+      "text": "ターミナルの右50 mにある有料長期駐車場は、一時的に営業を休止している。"
+    },
+    "after": {
+      "title": "駐車場",
+      "hint": "77台、終日営業",
+      "text": "有料の長期駐車場はターミナルの右側50 mにあり、終日営業している。収容台数は77台。ターミナルの会計窓口で現金または銀行カードで支払う。入場日時から24時間単位で計算し、端数は切り上げる。"
+    }
+  },
+  {
+    "file": "data/airport-guide/ko/ABA.json",
+    "block": "parking",
+    "before": {
+      "title": "주차",
+      "hint": "임시 폐쇄",
+      "text": "여객터미널 오른쪽 50 m 거리의 유료 장기 주차장은 임시로 운영하지 않습니다."
+    },
+    "after": {
+      "title": "주차",
+      "hint": "77면, 상시 운영",
+      "text": "유료 장기 주차장은 터미널 오른쪽 50 m 지점에 있으며 상시 운영합니다. 총 77면입니다. 터미널 계산대에서 현금이나 은행 카드로 결제합니다. 입차 날짜와 시각부터 24시간 단위로 계산하며, 남은 시간이 24시간 미만이어도 올림하여 청구합니다."
+    }
+  },
+  {
+    "file": "data/airport-guide/ar/ABA.json",
+    "block": "parking",
+    "before": {
+      "title": "مواقف السيارات",
+      "hint": "مغلق مؤقتًا",
+      "text": "موقف السيارات المدفوع للإقامة الطويلة على بعد 50 م يمين مبنى الركاب لا يعمل مؤقتًا."
+    },
+    "after": {
+      "title": "مواقف السيارات",
+      "hint": "77 مكانًا، مفتوح دائمًا",
+      "text": "يقع موقف الإقامة الطويلة المدفوع على بعد 50 م إلى يمين مبنى الركاب، ويعمل على مدار الساعة. يضم 77 مكانًا. يتم الدفع في صندوق مبنى الركاب نقدًا أو ببطاقة مصرفية. تُحسب كل فترة من 24 ساعة بدأت كاملة، ويبدأ الحساب من تاريخ ووقت الدخول."
+    }
+  },
+  {
+    "file": "data/airport-guide/hi/ABA.json",
+    "block": "parking",
+    "before": {
+      "title": "पार्किंग",
+      "hint": "अस्थायी रूप से बंद",
+      "text": "टर्मिनल भवन से 50 मी दाईं ओर लंबी अवधि की सशुल्क पार्किंग अस्थायी रूप से काम नहीं कर रही है।"
+    },
+    "after": {
+      "title": "पार्किंग",
+      "hint": "77 स्थान, चौबीसों घंटे",
+      "text": "लंबे समय की सशुल्क पार्किंग टर्मिनल के दाईं ओर 50 मीटर पर है और चौबीसों घंटे खुली रहती है। कुल 77 स्थान हैं। भुगतान टर्मिनल के कैश काउंटर पर नकद या बैंक कार्ड से होता है। प्रवेश की तारीख और समय से 24 घंटे की अवधियाँ गिनी जाती हैं; अधूरी अवधि का भी पूरा शुल्क लगता है।"
+    }
+  }
+]

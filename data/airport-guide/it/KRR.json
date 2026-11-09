@@ -19,7 +19,7 @@
     },
     "storage": {
       "title": "Deposito bagagli",
-      "hint": "24/7, 400 ₽ al giorno",
+      "hint": "400 ₽ per le prime 24 ore",
       "text": "Sul piazzale dell’aerostazione, giorno e notte. 400 ₽ a collo per le prime 24 ore, 200 ₽ per ogni successivo periodo di 24 ore. Peso di un collo fino a 30 kg."
     },
     "kids": {
@@ -30,7 +30,7 @@
     "parking": {
       "title": "Parcheggio",
       "hint": "15 min gratis, 400₽/h",
-      "text": "Piazzale dell’aerostazione: i primi 15 minuti gratis, poi 400 ₽ all’ora. Parcheggio orario aggiuntivo a destra del piazzale: 250 ₽ all’ora. Giornaliero 900 ₽ al giorno. Il parcheggio alternativo è gratuito."
+      "text": "Piazzale dell’aerostazione: i primi 15 minuti gratis, poi 400 ₽ all’ora. Parcheggio orario aggiuntivo a destra del piazzale: 250 ₽ all’ora. Giornaliero 900 ₽ ogni 24 ore. Il parcheggio alternativo è gratuito."
     },
     "wifi": {
       "title": "Wi‑Fi",

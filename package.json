@@ -59,7 +59,8 @@
     "check:keyexpiry": "node scripts/check-key-expiry.mjs",
     "check:sitemaplangs": "node scripts/check-sitemap-hreflang.mjs",
     "check:generatedprose": "node scripts/check-generated-prose.mjs",
-    "maintain:cache": "node scripts/maintenance-runner.mjs cache"
+    "maintain:cache": "node scripts/maintenance-runner.mjs cache",
+    "check:guide-regressions": "node scripts/check-guide-fresh-regressions.mjs"
   },
   "dependencies": {
     "next": "15.5.28",

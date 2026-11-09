@@ -25,12 +25,12 @@
     "kids": {
       "title": "Con bambini",
       "hint": "Т1, livello 1, 24/7",
-      "text": "Sala madre e bambino nel terminal 1, livello 1, di fronte ai banchi check-in, giorno e notte. Bambini sotto i 7 anni (con disabilità fino a 14) con un adulto. Fino a 12 ore prima della partenza, fino a 1 ora dopo l’arrivo. Servono passaporto, certificato di nascita, biglietti e un certificato del presidio sanitario del terminal dei voli nazionali."
+      "text": "Sala madre e bambino nel terminal 1, livello 1, di fronte ai banchi check-in, giorno e notte. Bambini sotto i 7 anni (con disabilità sotto i 14 anni) con un adulto. Fino a 12 ore prima della partenza, fino a 1 ora dopo l’arrivo. Servono passaporto, certificato di nascita, biglietti e un certificato del presidio sanitario del terminal dei voli nazionali."
     },
     "parking": {
       "title": "Parcheggio",
       "hint": "15 min gratis",
-      "text": "Zona di salita e discesa passeggeri А1: 15 minuti gratis, poi 500 ₽ all’ora, sosta vietata. Parcheggio d’attesa С5 (a 10 minuti dai terminal): 3 ore gratis, poi 150 ₽ all’ora, un giorno 600 ₽. Parcheggi А2 e А3 presso i terminal: la prima ora 300 ₽, poi 100 ₽ all’ora, un giorno 700 ₽."
+      "text": "Zona di salita e discesa passeggeri А1: 15 minuti gratis, poi 500 ₽ all’ora, sosta vietata. Parcheggio d’attesa С5 (a 10 minuti dai terminal): 3 ore gratis, poi 150 ₽ all’ora, 600 ₽ ogni 24 ore. Parcheggi А2 e А3 presso i terminal: la prima ora 300 ₽, poi 100 ₽ all’ora, 700 ₽ ogni 24 ore."
     },
     "wifi": {
       "title": "Wi‑Fi",

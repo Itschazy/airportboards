@@ -10,7 +10,7 @@
   "parking": {
    "title": "Parking",
    "hint": "15 min free",
-   "text": "Short-stay zone: first 15 min free, first hour 350 ₽, from the 2nd to the 4th hour 250 ₽/hour, from the 5th hour 3,000 ₽/day. Long-stay zone: 700 ₽/day from day 1 to day 5, 100 ₽/day from day 6 to 13, 700 ₽/day from day 14. The next free entry is possible no sooner than 45 min later."
+   "text": "Short-stay zone: first 15 min free, first hour 350 ₽, from the 2nd to the 4th hour 250 ₽/hour, from the 5th hour 3,000 ₽ per 24 hours. Long-stay zone: 700 ₽ per 24 hours for periods 1 to 5, 100 ₽ per 24 hours for periods 6 to 13, 700 ₽ per 24 hours from period 14; each period is 24 hours. The next free entry is possible no sooner than 45 min later."
   },
   "storage": {
    "title": "Left luggage",

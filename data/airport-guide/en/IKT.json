@@ -19,8 +19,8 @@
   },
   "storage": {
    "title": "Left luggage",
-   "hint": "610 ₽ per day",
-   "text": "In the domestic terminal on Level 1, payment in cash or by card. 610 ₽ per item per day; baggage larger than 40×40×50 cm is charged by the number of spaces it occupies. In the international terminal left luggage is on Level 2 and operates only during flight delays. Phone +7 (3952) 266-194."
+   "hint": "610 ₽ per 24 hours",
+   "text": "In the domestic terminal on Level 1, payment in cash or by card. 610 ₽ per item per 24 hours; baggage larger than 40×40×50 cm is charged by the number of spaces it occupies. In the international terminal left luggage is on Level 2 and operates only during flight delays. Phone +7 (3952) 266-194."
   },
   "sleep": {
    "title": "Where to sleep",
@@ -35,7 +35,7 @@
   "parking": {
    "title": "Parking",
    "hint": "10 min free",
-   "text": "The first 10 minutes are free. 11–20 minutes 100 ₽, up to 1 hour 350 ₽, from 2 h 41 min to 24 hours 1,200 ₽, each following day 1,200 ₽. Each terminal has its own car park. Drop-off and pick-up zone: 10 minutes free, longer stays incur a penalty of 2,000 ₽ per hour."
+   "text": "The first 10 minutes are free. 11–20 minutes 100 ₽, up to 1 hour 350 ₽, from 2 h 41 min to 24 hours 1,200 ₽, each following 24-hour period 1,200 ₽. Each terminal has its own car park. Drop-off and pick-up zone: 10 minutes free, longer stays incur a penalty of 2,000 ₽ per hour."
   }
  }
 }

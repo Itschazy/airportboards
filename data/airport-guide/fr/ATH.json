@@ -5,6 +5,16 @@
       "title": "Sofitel Athens Airport",
       "hint": "À 2 minutes à pied de l’aéroport",
       "text": "Sofitel Athens Airport se trouve à 2 minutes à pied de l’aéroport international d’Athènes. L’hôtel dispose d’une piscine intérieure, d’un centre de fitness, d’un restaurant, d’un bar et du Wi-Fi ; l’arrivée est possible à partir de 13:00 et le départ jusqu’à 11:00."
+    },
+    "wifi": {
+      "title": "Wi‑Fi",
+      "hint": "120 min ; reconnexion gratuite",
+      "text": "Le réseau gratuit ATH Free Wifi est disponible dans le terminal. Sélectionnez Internet Access sur la page de connexion : chaque session dure 120 minutes. Vous pouvez ensuite vous reconnecter gratuitement."
+    },
+    "storage": {
+      "title": "Consigne à bagages",
+      "hint": "CARE4BAG, arrivées, sortie 1",
+      "text": "CARE4BAG se trouve dans la zone publique des arrivées, à la sortie 1, et ouvre 24 heures sur 24. Vous pouvez y déposer bagages, cartons et équipements sportifs."
     }
   }
 }

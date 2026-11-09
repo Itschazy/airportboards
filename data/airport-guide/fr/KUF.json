@@ -15,7 +15,7 @@
   "storage": {
    "title": "Consigne à bagages",
    "hint": "Niveau 1, dès 250 ₽/h",
-   "text": "Consigne automatique au niveau 1, à droite de l'entrée, près des guichets de billets d'avion. Casier standard 250 ₽ de l'heure ou 550 ₽ par jour. Grand casier 350 ₽ de l'heure ou 900 ₽ par jour. Bagage hors gabarit 1200 ₽ par bagage."
+   "text": "Consigne automatique au niveau 1, à droite de l'entrée, près des guichets de billets d'avion. Casier standard 250 ₽ de l'heure ou 550 ₽ par période de 24 heures. Grand casier 350 ₽ de l'heure ou 900 ₽ par période de 24 heures. Bagage hors gabarit 1200 ₽ par bagage."
   },
   "kids": {
    "title": "Avec un enfant",
@@ -25,7 +25,7 @@
   "parking": {
    "title": "Parking",
    "hint": "Dépose 15 min gratuites",
-   "text": "Dans la zone de dépose et de prise en charge, 15 premières minutes gratuites, de la 16e à la 60e minute 880 ₽. Courte durée P1 : jusqu'à une heure 357 ₽, jusqu'à 2 heures 682 ₽, la journée 1391 ₽. Longue durée P2 : la journée 791 ₽. Économique P4 : 1054 ₽ pour les 2 premiers jours. Tous les parkings sont ouverts jour et nuit."
+   "text": "Dans la zone de dépose et de prise en charge, 15 premières minutes gratuites, de la 16e à la 60e minute 880 ₽. Courte durée P1 : jusqu'à une heure 357 ₽, jusqu'à 2 heures 682 ₽, 24 heures 1391 ₽. Longue durée P2 : 24 heures 791 ₽. Économique P4 : 1054 ₽ pour les 2 premières périodes de 24 heures. Tous les parkings sont ouverts jour et nuit."
   },
   "wifi": {
    "title": "Wi‑Fi",

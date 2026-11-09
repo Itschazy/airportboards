@@ -10,6 +10,11 @@
       "title": "Sheraton Milan Malpensa",
       "hint": "直通1号航站楼",
       "text": "Sheraton Milan Malpensa Airport Hotel & Conference Centre可直接通往1号航站楼。酒店设有室内泳池、健身中心、水疗中心和餐厅；套房配有隔音设施。"
+    },
+    "terminals": {
+      "title": "航站楼",
+      "hint": "T1—T2免费接驳车",
+      "text": "航站楼1和2之间有免费接驳车。"
     }
   }
 }

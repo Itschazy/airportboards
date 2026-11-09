@@ -5,6 +5,11 @@
       "title": "Anreise",
       "hint": "Link: 38 Minuten ins Zentrum",
       "text": "Link light rail verbindet den Flughafen in 38 Minuten mit der Innenstadt von Seattle; die Züge fahren die meiste Zeit des Tages alle 8–10 Minuten. Von Gepäckband 16 geht es hinauf zur Ebene der Fußgängerbrücken, über Skybridge Six und nach links durch das Parkhaus zur Station SeaTac/Airport. Kostenlose Elektrofahrzeuge für alle Reisenden verkehren täglich von 05:00 bis Mitternacht zwischen Station und Brücke. Der Sound Transit Night Bus verbindet Flughafen und Innenstadt etwa alle 30 Minuten, beginnend ungefähr 15 Minuten nach dem letzten Zug."
+    },
+    "wifi": {
+      "title": "Wi‑Fi",
+      "hint": "Kostenlos: SEA-FREE-WIFI",
+      "text": "Am Flughafen steht das kostenlose Netz SEA-FREE-WIFI zur Verfügung."
     }
   }
 }

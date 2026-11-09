@@ -15,12 +15,12 @@
   "storage": {
    "title": "Consigna",
    "hint": "Pabellón 3, 24/7",
-   "text": "Consigna en el Pabellón n.º 3, abierta día y noche. Un bulto de hasta 30 kg y de menos de 1 m cuesta 250 ₽ por día. No se aceptan documentos, dinero, objetos de valor ni productos perecederos."
+   "text": "Consigna en el Pabellón n.º 3, abierta día y noche. Un bulto de hasta 30 kg y de menos de 1 m cuesta 250 ₽ por cada 24 horas. No se aceptan documentos, dinero, objetos de valor ni productos perecederos."
   },
   "parking": {
    "title": "Aparcamiento",
    "hint": "30 min gratis en P2",
-   "text": "Corta estancia P2: 30 minutos gratis, luego 150 ₽ por hora; más de 4 horas, 800 ₽ por día. Larga estancia P1: 400 ₽ por día desde el primer minuto. P4 gratuito de 70 plazas a 200 m de la terminal, sin límite de tiempo. Pérdida del tique de aparcamiento: 2 000 ₽."
+   "text": "Corta estancia P2: 30 minutos gratis, luego 150 ₽ por hora; más de 4 horas, 800 ₽ por cada 24 horas. Larga estancia P1: 400 ₽ por cada 24 horas desde el primer minuto. P4 gratuito de 70 plazas a 200 m de la terminal, sin límite de tiempo. Pérdida del tique de aparcamiento: 2 000 ₽."
   }
  }
 }

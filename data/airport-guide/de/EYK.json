@@ -8,8 +8,8 @@
   },
   "storage": {
    "title": "Gepäckaufbewahrung",
-   "hint": "380 ₽ pro Tag",
-   "text": "Gepäckaufbewahrung: 380 ₽ pro Gepäckstück und Tag (Preisliste ab 01.10.2026)."
+   "hint": "380 ₽ je 24 Stunden",
+   "text": "Gepäckaufbewahrung: 380 ₽ pro Gepäckstück und 24 Stunden (Preisliste ab 01.10.2026)."
   },
   "kids": {
    "title": "Mit Kind",

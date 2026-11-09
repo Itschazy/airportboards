@@ -4,7 +4,7 @@
   "taxi": {
    "title": "Taksi",
    "hint": "Kat 1, kapı 4–7, +50 baht",
-   "text": "Taksi danışma kontuarı ve kupon otomatları yolcu terminalinde Kat 1'de, 4 ile 7 numaralı kapılar arasında. Ulaştırma Bakanlığı kararıyla ücrete sürücü lehine 50 baht ek ücret eklenir, ücretli yolları yolcu öder. Kısa mesafe yolculuklar da var — havalimanı çevresinde, en fazla 20 km; normal mesafelerde Kara Ulaştırması Dairesi kurallarına göre fiyat sürücüyle kararlaştırılabilir."
+   "text": "Taksi danışma kontuarı ve kupon otomatları yolcu terminalinde Kat 1'de, 4 ile 7 numaralı kapılar arasında. Ulaştırma Bakanlığı kararıyla ücrete sürücü lehine 50 baht ek ücret eklenir, ücretli yolları yolcu öder. Kısa mesafe yolculuklar da var — havalimanı çevresinde, en fazla 20 km."
   },
   "terminals": {
    "title": "Terminaller",

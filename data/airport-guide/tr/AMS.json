@@ -4,7 +4,7 @@
   "transport": {
    "title": "Nasıl gidilir",
    "hint": "Amsterdam CS'ye NS treni",
-   "text": "NS istasyonu doğrudan terminal binasının altında; yürüyen merdiven veya asansörle inilir. Amsterdam CS ile havalimanı arasında tren saatte 8 kez sefer yapar, Sloterdijk ve Lelylaan'da durur ve havalimanından her zaman 3 numaralı perondan kalkar. Amsterdam, Utrecht, Leiden, Lahey, Delft ve Rotterdam'dan havalimanına gece gündüz, çoğu zaman aktarmasız ulaşılabilir. Bilet havalimanında alınır ya da Schiphol Plaza'da yürüyen merdivenlerin ve asansörlerin üst ucundaki sarı okuyuculara okutularak temassız kartla veya telefonla ödenir."
+   "text": "NS istasyonu doğrudan terminal binasının altında; yürüyen merdiven veya asansörle inilir. Amsterdam CS ile havalimanı arasında tren saatte 8 kez sefer yapar, Sloterdijk ve Lelylaan'da durur ve havalimanından her zaman 3 numaralı perondan kalkar. Amsterdam, Utrecht, Leiden, Lahey, Delft ve Rotterdam'dan havalimanına gece gündüz, çoğu zaman aktarmasız ulaşılabilir. Bilet havalimanında alınır ya da Schiphol Plaza'da yürüyen merdivenlerin ve asansörlerin üst ucundaki sarı okuyuculara okutularak temassız kartla veya telefonla ödenir. Banka kartı veya telefonla ödeme yaparken hem girişte hem çıkışta kartınızı ya da telefonunuzu okutun."
   },
   "taxi": {
    "title": "Taksi",
@@ -19,7 +19,7 @@
   "sleep": {
    "title": "Nerede uyunur",
    "hint": "Kontrol sonrası YOTELAIR ve Mercure",
-   "text": "Güvenlik kontrolünden sonra iki otel gece gündüz çalışır: Lounge 3'te Mercure Hotel ve Lounge 2'de YOTELAIR, ikisi de D1–D57, E, F, G ve H kapılarına giden yolda. YOTELAIR'e Hollanda vizesi olmadan da girilebilir."
+   "text": "Güvenlik kontrolünden sonra iki otel gece gündüz çalışır: Lounge 3'te Mercure Hotel ve Lounge 2'de YOTELAIR, ikisi de D1–D57, E, F, G ve H kapılarına giden yolda. YOTELAIR'e Hollanda vizesi olmadan da girilebilir. Mercure’de konaklamak için otelden çıkış gününüzde kalkacak bir uçuşunuz olmalı; otele yalnızca el bagajı götürülebilir."
   },
   "kids": {
    "title": "Çocukla",

@@ -1,6 +1,6 @@
 {
  "iata": "NBC",
- "about": "Aéroport international de Nijnekamsk (Beguichevo) N. V. Lemaïev, filiale de la SA publique « KAMAZ ». Dans un rayon de 25 km autour de l'aéroport : Naberejnye Tchelny, Nijnekamsk, Ielabouga et Almetievsk. Une seule piste, plus de 700 000 passagers par an.",
+ "about": "Aéroport international de Nijnekamsk (Beguichevo) N. V. Lemaïev, filiale de la SA publique « KAMAZ ». L’aéroport dessert Naberejnye Tchelny, Nijnekamsk, Ielabouga et Almetievsk. Une seule piste, plus de 700 000 passagers par an.",
  "blocks": {
   "transport": {
    "title": "Comment s'y rendre",
@@ -35,7 +35,7 @@
   "parking": {
    "title": "Parking",
    "hint": "20 min gratuites",
-   "text": "Parking payant de 150 places devant les terminaux A et B : 20 minutes gratuites, puis 200 ₽ de l'heure jusqu'à 3 heures, au-delà 700 ₽ par jour. En cas de nouvelle entrée dans les 30 minutes, pas de temps gratuit. Avant l'entrée sur le site, parking gratuit de 410 places."
+   "text": "Parking payant de 150 places devant les terminaux A et B : 20 minutes gratuites, puis 200 ₽ de l'heure jusqu'à 3 heures, au-delà 700 ₽ par période de 24 heures. En cas de nouvelle entrée dans les 30 minutes, pas de temps gratuit. Avant l'entrée sur le site, parking gratuit de 410 places."
   },
   "wifi": {
    "title": "Wi‑Fi",

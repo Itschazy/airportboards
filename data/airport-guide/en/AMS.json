@@ -4,7 +4,7 @@
   "transport": {
    "title": "Getting there",
    "hint": "NS train to Amsterdam CS",
-   "text": "The NS station is directly beneath the terminal building; go down by escalator or lift. Trains run between Amsterdam CS and the airport 8 times an hour, stopping at Sloterdijk and Lelylaan, and always depart from the airport from platform 3. From Amsterdam, Utrecht, Leiden, The Hague, Delft and Rotterdam the airport can be reached round the clock, often without changing. Buy a ticket at the airport or pay with a contactless card or phone, checking in at the yellow card readers at the top of the escalators and lifts in Schiphol Plaza."
+   "text": "The NS station is directly beneath the terminal building; go down by escalator or lift. Trains run between Amsterdam CS and the airport 8 times an hour, stopping at Sloterdijk and Lelylaan, and always depart from the airport from platform 3. From Amsterdam, Utrecht, Leiden, The Hague, Delft and Rotterdam the airport can be reached round the clock, often without changing. Buy a ticket at the airport or pay with a contactless card or phone, checking in at the yellow card readers at the top of the escalators and lifts in Schiphol Plaza. When paying by bank card or phone, remember to check in and check out."
   },
   "taxi": {
    "title": "Taxi",
@@ -19,7 +19,7 @@
   "sleep": {
    "title": "Where to sleep",
    "hint": "YOTELAIR and Mercure airside",
-   "text": "Two hotels operate after security, round the clock: Mercure Hotel in Lounge 3 and YOTELAIR in Lounge 2, both on the way to gates D1–D57, E, F, G and H. YOTELAIR can be used even without a visa for the Netherlands."
+   "text": "Two hotels operate after security, round the clock: Mercure Hotel in Lounge 3 and YOTELAIR in Lounge 2, both on the way to gates D1–D57, E, F, G and H. YOTELAIR can be used even without a visa for the Netherlands. To stay at Mercure, you must have a flight departing on the day you check out; only hand baggage is allowed in the hotel."
   },
   "kids": {
    "title": "With children",

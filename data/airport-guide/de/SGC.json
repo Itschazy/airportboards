@@ -14,13 +14,13 @@
   },
   "storage": {
    "title": "Gepäckaufbewahrung",
-   "hint": "24/7, 400 ₽ pro Tag",
+   "hint": "Erster Kalendertag: 400 ₽",
    "text": "Rund um die Uhr geöffnet. Der erste Tag 400 ₽ (bis 00:00), danach 200 ₽ pro Tag, angefangene Tage zählen als volle. Gewicht eines Gepäckstücks bis 30 kg."
   },
   "parking": {
    "title": "Parken",
    "hint": "20 Min. kostenlos",
-   "text": "Auf dem Vorplatz die ersten 20 Minuten kostenlos. Fläche für Langzeitparken mit 50 Plätzen direkt hinter dem Haltestellenpavillon: 750 ₽ pro Tag. Bezahlung an den Kassen des Terminals und an Automaten am Haupteingang und in der Ankunftshalle."
+   "text": "Auf dem Vorplatz die ersten 20 Minuten kostenlos. Fläche für Langzeitparken mit 50 Plätzen direkt hinter dem Haltestellenpavillon: 750 ₽ pro 24 Stunden. Bezahlung an den Kassen des Terminals und an Automaten am Haupteingang und in der Ankunftshalle."
   }
  }
 }

@@ -15,7 +15,7 @@
   "storage": {
    "title": "Left luggage",
    "hint": "Level 1, from 200 ₽/hour",
-   "text": "Automated left luggage in the right wing of the terminal, Level 1. A standard locker is 200 ₽ per hour or 500 ₽ per day, a large one 300 ₽ per hour or 800 ₽ per day. Baggage wrapping is also there, from 950 ₽ per item."
+   "text": "Automated left luggage in the right wing of the terminal, Level 1. A standard locker is 200 ₽ per hour or 500 ₽ per 24 hours, a large one 300 ₽ per hour or 800 ₽ per 24 hours. Baggage wrapping is also there, from 950 ₽ per item."
   },
   "kids": {
    "title": "With children",

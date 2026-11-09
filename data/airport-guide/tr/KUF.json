@@ -15,7 +15,7 @@
   "storage": {
    "title": "Emanet",
    "hint": "Kat 1, saati 250 ₽'den",
-   "text": "Otomatik emanet dolapları Kat 1'de, girişin sağında, bilet gişelerinin yanında. Standart dolap saati 250 ₽ veya günlüğü 550 ₽. Büyük dolap saati 350 ₽ veya günlüğü 900 ₽. Standart dışı bagaj parça başına 1200 ₽."
+   "text": "Otomatik emanet dolapları Kat 1'de, girişin sağında, bilet gişelerinin yanında. Standart dolap saati 250 ₽ veya 24 saati 550 ₽. Büyük dolap saati 350 ₽ veya 24 saati 900 ₽. Standart dışı bagaj parça başına 1200 ₽."
   },
   "kids": {
    "title": "Çocukla",
@@ -25,7 +25,7 @@
   "parking": {
    "title": "Otopark",
    "hint": "İndirme 15 dakika ücretsiz",
-   "text": "İndirme-bindirme alanında ilk 15 dakika ücretsiz, 16. ila 60. dakika 880 ₽. Kısa süreli P1: bir saate kadar 357 ₽, 2 saate kadar 682 ₽, günlüğü 1391 ₽. Uzun süreli P2: günlüğü 791 ₽. Ekonomi P4: ilk 2 gün 1054 ₽. Tüm otoparklar gece gündüz açık."
+   "text": "İndirme-bindirme alanında ilk 15 dakika ücretsiz, 16. ila 60. dakika 880 ₽. Kısa süreli P1: bir saate kadar 357 ₽, 2 saate kadar 682 ₽, 24 saati 1391 ₽. Uzun süreli P2: 24 saati 791 ₽. Ekonomi P4: ilk 2 adet 24 saatlik dönem 1054 ₽. Tüm otoparklar gece gündüz açık."
   },
   "wifi": {
    "title": "Wi‑Fi",

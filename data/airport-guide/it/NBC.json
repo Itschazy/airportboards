@@ -1,6 +1,6 @@
 {
   "iata": "NBC",
-  "about": "Aeroporto internazionale di Nizhnekamsk (Begishevo) intitolato a N.V. Lemaev, società controllata di PAO «KAMAZ». Entro un raggio di 25 km dall’aeroporto ci sono Naberezhnye Chelny, Nizhnekamsk, Elabuga e Almetyevsk. Una sola pista, oltre 700.000 passeggeri l’anno.",
+  "about": "Aeroporto internazionale di Nizhnekamsk (Begishevo) intitolato a N.V. Lemaev, società controllata di PAO «KAMAZ». L’aeroporto serve Naberezhnye Chelny, Nizhnekamsk, Elabuga e Almetyevsk. Una sola pista, oltre 700.000 passeggeri l’anno.",
   "blocks": {
     "transport": {
       "title": "Come arrivare",
@@ -35,7 +35,7 @@
     "parking": {
       "title": "Parcheggio",
       "hint": "20 min gratis",
-      "text": "Parcheggio a pagamento davanti ai terminal A e B da 150 posti: 20 minuti gratis, poi 200 ₽ all’ora fino a 3 ore, oltre 700 ₽ al giorno. Con un nuovo ingresso entro 30 minuti non c’è tempo gratuito. Prima dell’ingresso nell’area, parcheggio gratuito da 410 posti."
+      "text": "Parcheggio a pagamento davanti ai terminal A e B da 150 posti: 20 minuti gratis, poi 200 ₽ all’ora fino a 3 ore, oltre 700 ₽ ogni 24 ore. Con un nuovo ingresso entro 30 minuti non c’è tempo gratuito. Prima dell’ingresso nell’area, parcheggio gratuito da 410 posti."
     },
     "wifi": {
       "title": "Wi‑Fi",

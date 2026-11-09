@@ -25,7 +25,7 @@
   "parking": {
    "title": "Otopark",
    "hint": "20 dakika ücretsiz",
-   "text": "Terminal önü meydanı: 20 dakikaya kadar ücretsiz, 21. dakikadan 4 saate kadar saati 300 ₽, tamamlanmamış saat tam saat sayılır. 5. saatten itibaren günlüğü 1200 ₽, sonraki gün 1200 ₽. 20 dakika içinde tekrar giriş ücretli, saati 300 ₽."
+   "text": "Terminal önü meydanı: 20 dakikaya kadar ücretsiz, 21. dakikadan 4 saate kadar saati 300 ₽, tamamlanmamış saat tam saat sayılır. 5. saatten itibaren 24 saati 1200 ₽, sonraki her 24 saat 1200 ₽. 20 dakika içinde tekrar giriş ücretli, saati 300 ₽."
   }
  }
 }

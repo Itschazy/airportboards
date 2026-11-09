@@ -1,0 +1,4202 @@
+{
+  "summary": {
+    "catalogueAirports": 6074,
+    "guides": 188,
+    "guideBlocks": 779,
+    "locales": 12,
+    "translatedGuideFiles": 2068,
+    "withoutGuides": 5886,
+    "guidesWithOneOrTwoBlocks": 29,
+    "note": "Coverage inventory only. Missing topic is a research candidate, not evidence the service exists. No semantic review implied."
+  },
+  "airports": [
+    {
+      "iata": "ABA",
+      "country": "Russia",
+      "guide": true,
+      "status": "needs_editorial_audit",
+      "blocks": 4,
+      "checked": "2026-10-25",
+      "topics": [
+        "transport",
+        "lounges",
+        "kids",
+        "parking"
+      ],
+      "translations": 11,
+      "sourceUrls": [
+        "https://airportabakan.ru/passazhiram-ru/transport.html",
+        "https://airportabakan.ru/passazhiram-ru/uslugi-v-aerovokzale/item/45-zal-povyshennoj-komfortnosti.html",
+        "https://airportabakan.ru/passazhiram-ru/uslugi-v-aerovokzale/item/44-komnata-materi-i-rebenka.html",
+        "https://airportabakan.ru/passazhiram-ru/platnaya-parkovka.html"
+      ],
+      "sourceHash": "a05a2a3436731ede53c7c2e4925856ecd2125765316e67cd3b8b45efdd673e02"
+    },
+    {
+      "iata": "AER",
+      "country": "Russia",
+      "guide": true,
+      "status": "needs_editorial_audit",
+      "blocks": 8,
+      "checked": "2026-10-25",
+      "topics": [
+        "lounges",
+        "storage",
+        "sleep",
+        "kids",
+        "transport",
+        "parking",
+        "wifi",
+        "terminals"
+      ],
+      "translations": 11,
+      "sourceUrls": [
+        "https://aer.aero/vip_business/",
+        "https://aer.aero/services/bagazh/kamera-khraneniya/",
+        "https://aer.aero/services/uslugi-dlya-passazhirov/arenda-kapsul-dlya-otdykha/",
+        "https://aer.aero/services/passazhiram-s-detmi/uslugi-dlya-semeynogo-komforta/",
+        "https://aer.aero/transport/",
+        "https://aer.aero/transport/parking/",
+        "https://aer.aero/services/servisy-dlya-passazhirov/wi-fi/",
+        "https://aer.aero/airport_information/passenger_guide/"
+      ],
+      "sourceHash": "01c92dc5fa29670ac95e815bfd0dd655990b09f5584f69e2c026938b8d06a781"
+    },
+    {
+      "iata": "ALA",
+      "country": "Kazakhstan",
+      "guide": true,
+      "status": "needs_editorial_audit",
+      "blocks": 3,
+      "checked": "2026-10-29",
+      "topics": [
+        "transport",
+        "storage",
+        "wifi"
+      ],
+      "translations": 11,
+      "sourceUrls": [
+        "https://alaport.com/ru/transports/bus",
+        "https://alaport.com/ru/facility-and-services/luggage-storage",
+        "https://alaport.com/ru/facility-and-services/wifi"
+      ],
+      "sourceHash": "8e84cac0c5ea903fee2f752b96fe2a3e031ab0b8c5cd81f8f55dd4cae1adfdb1"
+    },
+    {
+      "iata": "AMS",
+      "country": "Netherlands",
+      "guide": true,
+      "status": "needs_editorial_audit",
+      "blocks": 5,
+      "checked": "2026-10-25",
+      "topics": [
+        "transport",
+        "taxi",
+        "storage",
+        "sleep",
+        "kids"
+      ],
+      "translations": 11,
+      "sourceUrls": [
+        "https://www.schiphol.nl/en/from-to-schiphol/by-public-transport/train/",
+        "https://www.schiphol.nl/en/from-to-schiphol/taxi/",
+        "https://www.schiphol.nl/en/at-schiphol/services/luggage-storage/",
+        "https://www.schiphol.nl/en/at-schiphol/services/sleep-after-passport-control/",
+        "https://www.schiphol.nl/en/at-schiphol/services/kids-playground/"
+      ],
+      "sourceHash": "c8d95805ce4d7ee04f9133f7fffdfc0e48dc96294dc2b31d3daa590c7f50ff72"
+    },
+    {
+      "iata": "ARH",
+      "country": "Russia",
+      "guide": true,
+      "status": "needs_editorial_audit",
+      "blocks": 4,
+      "checked": "2026-10-25",
+      "topics": [
+        "transport",
+        "lounges",
+        "storage",
+        "parking"
+      ],
+      "translations": 11,
+      "sourceUrls": [
+        "https://arh.aero/Menyu/Aero-port/Transport",
+        "https://arh.aero/Uslugi/Bizness-zal",
+        "https://arh.aero/Uslugi/PRIORITY-PASS",
+        "https://arh.aero/Uslugi/Kameri-hraneniya",
+        "https://arh.aero/Uslugi/Avtostoyanka"
+      ],
+      "sourceHash": "5759bf63b4a1a7138370324d3562b9a01618992534acdb3dd156563aec54c402"
+    },
+    {
+      "iata": "ASF",
+      "country": "Russia",
+      "guide": true,
+      "status": "needs_editorial_audit",
+      "blocks": 5,
+      "checked": "2026-10-25",
+      "topics": [
+        "transport",
+        "lounges",
+        "storage",
+        "kids",
+        "parking"
+      ],
+      "translations": 11,
+      "sourceUrls": [
+        "https://airportastrakhan.ru/transport/how/public-transport/",
+        "https://airportastrakhan.ru/services/comfort/busines/",
+        "https://airportastrakhan.ru/services/infrastructure/storage/",
+        "https://airportastrakhan.ru/passengers/information/babysroom/",
+        "https://airportastrakhan.ru/transport/parking/inf-parking/"
+      ],
+      "sourceHash": "0fdaf9a43c0221fbff3d8504afb5d1a384c99350cc6c8aa8eb3dbe8a6cdcd35b"
+    },
+    {
+      "iata": "ATH",
+      "country": "Greece",
+      "guide": true,
+      "status": "needs_editorial_audit",
+      "blocks": 1,
+      "checked": "2026-10-26",
+      "topics": [
+        "sleep"
+      ],
+      "translations": 11,
+      "sourceUrls": [
+        "https://all.accor.com/hotel/3167/index.en.shtml"
+      ],
+      "sourceHash": "d09ebec40d35e65c6d57de2f512cbd3d352b84f10164e4ab9a7f1fe086885ebe"
+    },
+    {
+      "iata": "ATL",
+      "country": "United States",
+      "guide": true,
+      "status": "needs_editorial_audit",
+      "blocks": 4,
+      "checked": "2026-10-26",
+      "topics": [
+        "transport",
+        "terminals",
+        "lounges",
+        "sleep"
+      ],
+      "translations": 11,
+      "sourceUrls": [
+        "https://itsmarta.com/getting-to-airport.aspx",
+        "https://theclubairportlounges.com/lounges/atl-the-club-concourse-f",
+        "https://minutesuites.com/locations/atlanta-airport/"
+      ],
+      "sourceHash": "ca61b829e0ebd69d007268f42df583fc8e55cd4a22615acd28d6eaef8325ee50"
+    },
+    {
+      "iata": "AUH",
+      "country": "United Arab Emirates",
+      "guide": true,
+      "status": "needs_editorial_audit",
+      "blocks": 4,
+      "checked": "2026-10-26",
+      "topics": [
+        "transport",
+        "storage",
+        "kids",
+        "wifi"
+      ],
+      "translations": 11,
+      "sourceUrls": [
+        "https://www.zayedinternationalairport.ae/en/parking-and-transport/transport/city-bus-routes-and-timetables",
+        "https://www.zayedinternationalairport.ae/en/plan-and-prepare/at-the-airport/baggage-services",
+        "https://www.zayedinternationalairport.ae/en/plan-and-prepare/passenger-assistance/family-services",
+        "https://www.zayedinternationalairport.ae/en/general/wifi"
+      ],
+      "sourceHash": "da7e1a4ce691f79617b502e72bc1108533d97e2a13eda0498aa4df71376f52cb"
+    },
+    {
+      "iata": "AYT",
+      "country": "Turkey",
+      "guide": true,
+      "status": "needs_editorial_audit",
+      "blocks": 6,
+      "checked": "2026-11-09",
+      "topics": [
+        "transport",
+        "taxi",
+        "storage",
+        "parking",
+        "wifi",
+        "terminals"
+      ],
+      "translations": 11,
+      "sourceUrls": [
+        "https://www.antalya-airport.aero/passazhiry-i-posetiteli-20-ru/transport-24-ru/avtobusy-i-obshchestvennyy-transport-77-ru",
+        "https://www.antalya-airport.aero/passazhiry-i-posetiteli-20-ru/transport-24-ru/taksi-78-ru",
+        "https://www.antalya-airport.aero/passazhiry-i-posetiteli-20-ru/uslugi-27-ru/obsluzhivanie-bagazha-60-ru",
+        "https://www.antalya-airport.aero/passazhiry-i-posetiteli-20-ru/parkovka-75-ru",
+        "https://www.antalya-airport.aero/passazhiry-i-posetiteli-20-ru/uslugi-27-ru/besplatnyy-wi-fi-64-ru"
+      ],
+      "sourceHash": "02d9920f75a5574782f509c2d6dd336a6f98b4321d753ca6500de80ab29504bd"
+    },
+    {
+      "iata": "BAX",
+      "country": "Russia",
+      "guide": true,
+      "status": "needs_editorial_audit",
+      "blocks": 7,
+      "checked": "2026-10-25",
+      "topics": [
+        "transport",
+        "lounges",
+        "storage",
+        "sleep",
+        "kids",
+        "parking",
+        "wifi"
+      ],
+      "translations": 11,
+      "sourceUrls": [
+        "https://airaltay.ru/transport/how/bus/110/",
+        "https://airaltay.ru/services/comfort/business/",
+        "https://airaltay.ru/services/infrastructure/storage/",
+        "https://airaltay.ru/airport/info/",
+        "https://airaltay.ru/services/infrastructure/babysroom/",
+        "https://airaltay.ru/transport/parking/tariff/",
+        "https://airaltay.ru/services/infrastructure/wifi/"
+      ],
+      "sourceHash": "ec630a4a0a147e5750a5ace63f69cc375a06e97df271c92d63779f7f96a1ccab"
+    },
+    {
+      "iata": "BCN",
+      "country": "Spain",
+      "guide": true,
+      "status": "needs_editorial_audit",
+      "blocks": 3,
+      "checked": "2026-10-25",
+      "topics": [
+        "transport",
+        "taxi",
+        "wifi"
+      ],
+      "translations": 11,
+      "sourceUrls": [
+        "https://www.aena.es/en/josep-tarradellas-barcelona-el-prat/getting-there/underground.html",
+        "https://www.aena.es/en/josep-tarradellas-barcelona-el-prat/getting-there/taxi.html",
+        "https://www.aena.es/en/josep-tarradellas-barcelona-el-prat/airport-services/wi-fi.html"
+      ],
+      "sourceHash": "b004bcd7df659df85f6d66eaf165f3745b73608d9e802993dc8e2a65766258a3"
+    },
+    {
+      "iata": "BJV",
+      "country": "Turkey",
+      "guide": true,
+      "status": "needs_editorial_audit",
+      "blocks": 5,
+      "checked": "2026-10-28",
+      "topics": [
+        "transport",
+        "lounges",
+        "kids",
+        "parking",
+        "wifi"
+      ],
+      "translations": 11,
+      "sourceUrls": [
+        "https://www.havas.net/en/bus-services",
+        "https://milas-bodrumairport.com/en/facility-and-services/primeclass-lounge-international-terminal",
+        "https://milas-bodrumairport.com/en/facility-and-services/mother-and-child-rooms",
+        "https://milas-bodrumairport.com/en/transports/car-parking",
+        "https://milas-bodrumairport.com/en/facility-and-services/wifi"
+      ],
+      "sourceHash": "8e930bb86858aa4cdbeed7e9198c680e1fba08e3633abc362ce4ffdf3e1c002e"
+    },
+    {
+      "iata": "BKK",
+      "country": "Thailand",
+      "guide": true,
+      "status": "needs_editorial_audit",
+      "blocks": 4,
+      "checked": "2026-10-25",
+      "topics": [
+        "taxi",
+        "terminals",
+        "lounges",
+        "storage"
+      ],
+      "translations": 11,
+      "sourceUrls": [
+        "https://suvarnabhumi.airportthai.co.th/service/transportation/detail/304",
+        "https://suvarnabhumi.airportthai.co.th/service/way-to-airport/detail/suvarnabhumi_airport_SAT-1",
+        "https://suvarnabhumi.airportthai.co.th/service/facility/detail/1003",
+        "https://suvarnabhumi.airportthai.co.th/service/facility/detail/781"
+      ],
+      "sourceHash": "8e9183e34275977b40bd307063d562b0418045341c5aa1981975127197718992"
+    },
+    {
+      "iata": "BLR",
+      "country": "India",
+      "guide": true,
+      "status": "needs_editorial_audit",
+      "blocks": 4,
+      "checked": "2026-10-26",
+      "topics": [
+        "transport",
+        "taxi",
+        "parking",
+        "wifi"
+      ],
+      "translations": 11,
+      "sourceUrls": [
+        "https://www.bengaluruairport.com/travellers/transport-parking/airport-VayuVajra",
+        "https://www.bengaluruairport.com/travellers/transport-parking/airport-taxi",
+        "https://www.bengaluruairport.com/travellers/transport-parking/parking",
+        "https://www.bengaluruairport.com/travellers/services/all-facilities/wifi-services"
+      ],
+      "sourceHash": "7f109920f9018e33c4d737d1732e1e7e8dbe5852afabc3a48eb381cbcfe8e5be"
+    },
+    {
+      "iata": "BOG",
+      "country": "Colombia",
+      "guide": true,
+      "status": "needs_editorial_audit",
+      "blocks": 4,
+      "checked": "2026-10-26",
+      "topics": [
+        "transport",
+        "terminals",
+        "parking",
+        "wifi"
+      ],
+      "translations": 11,
+      "sourceUrls": [
+        "https://eldorado.aero/en/transporte/como-llegar-al-aeropuerto",
+        "https://eldorado.aero/en/servicios/parqueaderos/terminal-1",
+        "https://eldorado.aero/en/servicios/internet-wifi"
+      ],
+      "sourceHash": "2179ba28024c27f3ac3340fc82e008501824e4cd12eb9bc4d8c86c76bfe375f2"
+    },
+    {
+      "iata": "BOM",
+      "country": "India",
+      "guide": true,
+      "status": "needs_editorial_audit",
+      "blocks": 1,
+      "checked": "2026-10-26",
+      "topics": [
+        "lounges"
+      ],
+      "translations": 11,
+      "sourceUrls": [
+        "https://www.aviserv.co/lounge-west-pier/"
+      ],
+      "sourceHash": "a2f055e57d9e7066bfe708d79076a00321fe883eaf5f4948011bb34051ffa5d1"
+    },
+    {
+      "iata": "BOS",
+      "country": "United States",
+      "guide": true,
+      "status": "needs_editorial_audit",
+      "blocks": 4,
+      "checked": "2026-10-26",
+      "topics": [
+        "transport",
+        "terminals",
+        "kids",
+        "wifi"
+      ],
+      "translations": 11,
+      "sourceUrls": [
+        "https://www.massport.com/logan-airport/getting-to-logan/public-transportation",
+        "https://www.massport.com/logan-airport/getting-to-logan/on-airport-shuttle",
+        "https://www.massport.com/logan-airport/at-the-airport/passenger-services"
+      ],
+      "sourceHash": "29b3c8dd2c638525df9ff80ce1acff593dc5b79307bcd3a73e0aa2db18991e32"
+    },
+    {
+      "iata": "BQS",
+      "country": "Russia",
+      "guide": true,
+      "status": "needs_editorial_audit",
+      "blocks": 6,
+      "checked": "2026-10-25",
+      "topics": [
+        "transport",
+        "lounges",
+        "storage",
+        "kids",
+        "parking",
+        "wifi"
+      ],
+      "translations": 11,
+      "sourceUrls": [
+        "https://ar-bqs.ru/how-to-get/to/bus/",
+        "https://ar-bqs.ru/how-to-get/from/bus/",
+        "https://ar-bqs.ru/services/businesshall/",
+        "https://ar-bqs.ru/services/luggage/",
+        "https://ar-bqs.ru/services/child-room/",
+        "https://ar-bqs.ru/parking/",
+        "https://ar-bqs.ru/services/wifi/"
+      ],
+      "sourceHash": "8bc42010d8514fabe5c8e7b4417d28c5e2d827ce24cd12c58d77ddd88067232a"
+    },
+    {
+      "iata": "BRS",
+      "country": "United Kingdom",
+      "guide": true,
+      "status": "needs_editorial_audit",
+      "blocks": 4,
+      "checked": "2026-10-30",
+      "topics": [
+        "transport",
+        "lounges",
+        "sleep",
+        "parking"
+      ],
+      "translations": 11,
+      "sourceUrls": [
+        "https://www.bristolairport.co.uk/to-and-from-the-airport/by-airport-flyer/",
+        "https://www.bristolairport.co.uk/at-the-airport/airport-lounge/",
+        "https://www.bristolairport.co.uk/at-the-airport/hotels/",
+        "https://www.bristolairport.co.uk/parking/waiting-zone/"
+      ],
+      "sourceHash": "3538e29e1086ac626a62567a77145bbdfc18f005ec78225669e07009fbc36080"
+    },
+    {
+      "iata": "BRU",
+      "country": "Belgium",
+      "guide": true,
+      "status": "needs_editorial_audit",
+      "blocks": 3,
+      "checked": "2026-10-30",
+      "topics": [
+        "transport",
+        "storage",
+        "wifi"
+      ],
+      "translations": 11,
+      "sourceUrls": [
+        "https://www.brusselsairport.be/en/passenger/mobility/public-transport/train",
+        "https://www.brusselsairport.be/en/passenger/at-the-airport/services/lockers",
+        "https://www.brusselsairport.be/en/passenger/at-the-airport/services/free-wifi"
+      ],
+      "sourceHash": "263bf05b887d7702f919855ebc5ee9d7eaa38ae0130514abd70190fccb3ce376"
+    },
+    {
+      "iata": "BTK",
+      "country": "Russia",
+      "guide": true,
+      "status": "needs_editorial_audit",
+      "blocks": 4,
+      "checked": "2026-10-25",
+      "topics": [
+        "lounges",
+        "sleep",
+        "parking",
+        "wifi"
+      ],
+      "translations": 11,
+      "sourceUrls": [
+        "https://aerobratsk.ru/highComfortRoom.html",
+        "https://aerobratsk.ru/hotel.html",
+        "https://aerobratsk.ru/parking.html",
+        "https://aerobratsk.ru/network.html"
+      ],
+      "sourceHash": "7713d713e754103716f1eff5e33d72cb69858c0b420d86ec277512f13dd63b57"
+    },
+    {
+      "iata": "CAI",
+      "country": "Egypt",
+      "guide": true,
+      "status": "needs_editorial_audit",
+      "blocks": 4,
+      "checked": "2026-10-26",
+      "topics": [
+        "transport",
+        "terminals",
+        "lounges",
+        "wifi"
+      ],
+      "translations": 11,
+      "sourceUrls": [
+        "https://www.cairo-airport.com/en-us/Services/Passenger-Guide/Move-From-To-Airport",
+        "https://www.cairo-airport.com/Automated-People-Mover",
+        "https://www.cairo-airport.com/Services/Ahlan-Service/Service-Information",
+        "https://www.orange.eg/en/about/media-center/press-kit/launching-advanced-technological-services-at-cairo-airport-861-event"
+      ],
+      "sourceHash": "3b9df7538607373222a084dbba8e404b95cc1018d6721913dddcc94cc3184997"
+    },
+    {
+      "iata": "CAN",
+      "country": "China",
+      "guide": true,
+      "status": "needs_editorial_audit",
+      "blocks": 6,
+      "checked": "2026-10-25",
+      "topics": [
+        "transport",
+        "taxi",
+        "lounges",
+        "storage",
+        "sleep",
+        "wifi"
+      ],
+      "translations": 11,
+      "sourceUrls": [
+        "https://www.gbiac.net/traffic/tfa",
+        "https://www.gbiac.net/airportFacility/restRoom?type=8",
+        "https://www.gbiac.net/airportFacility/service"
+      ],
+      "sourceHash": "6d1ae8729780edafd79425508fc6b610690523b1d722834896e08138e914fd73"
+    },
+    {
+      "iata": "CDG",
+      "country": "France",
+      "guide": true,
+      "status": "needs_editorial_audit",
+      "blocks": 5,
+      "checked": "2026-10-25",
+      "topics": [
+        "transport",
+        "taxi",
+        "storage",
+        "sleep",
+        "wifi"
+      ],
+      "translations": 11,
+      "sourceUrls": [
+        "https://www.parisaeroport.fr/en/passengers/transport-parking/public-transport-paris/cdg",
+        "https://www.parisaeroport.fr/en/passengers/transport-parking/taxi/cdg",
+        "https://www.parisaeroport.fr/en/passengers/at-the-airport/services/luggage-storage/cdg",
+        "https://www.parisaeroport.fr/en/passengers/at-the-airport/hotels/cdg",
+        "https://www.parisaeroport.fr/en/passengers/at-the-airport/services/wifi/cdg"
+      ],
+      "sourceHash": "e2ebabeefb7e2faf51b9d96ef44bc610561696064aa82ffb4d684e3c93400db5"
+    },
+    {
+      "iata": "CEE",
+      "country": "Russia",
+      "guide": true,
+      "status": "needs_editorial_audit",
+      "blocks": 4,
+      "checked": "2026-10-25",
+      "topics": [
+        "parking",
+        "lounges",
+        "sleep",
+        "kids"
+      ],
+      "translations": 11,
+      "sourceUrls": [
+        "https://severstal-avia.ru/severstal-avia/aeroport-cherepovecz/parking-space/",
+        "https://severstal-avia.ru/severstal-avia/aeroport-cherepovecz/on-pass-business-lounge/",
+        "https://severstal-avia.ru/severstal-avia/aeroport-cherepovecz/business-class-passengers/",
+        "https://severstal-avia.ru/severstal-avia/aeroport-cherepovecz/hotel/",
+        "https://severstal-avia.ru/severstal-avia/aeroport-cherepovecz/passengers-with-children/"
+      ],
+      "sourceHash": "223ea6a642af93c0c7add69389b2086998108fbcc184387b7bf290a117b5da0b"
+    },
+    {
+      "iata": "CEK",
+      "country": "Russia",
+      "guide": true,
+      "status": "needs_editorial_audit",
+      "blocks": 5,
+      "checked": "2026-10-25",
+      "topics": [
+        "transport",
+        "lounges",
+        "kids",
+        "parking",
+        "wifi"
+      ],
+      "translations": 11,
+      "sourceUrls": [
+        "https://cekport.ru/transport/how/",
+        "https://cekport.ru/services/comfort/business_russian/",
+        "https://cekport.ru/passengers/information/babysroom/",
+        "https://cekport.ru/transport/parking/tariff/",
+        "https://cekport.ru/services/infrastructure/wifi/"
+      ],
+      "sourceHash": "fc3f8241782b9fe702b6668ddd9ddae5e3f31c04e72ee2f59fd494d89e2b3bc2"
+    },
+    {
+      "iata": "CGK",
+      "country": "Indonesia",
+      "guide": true,
+      "status": "needs_editorial_audit",
+      "blocks": 1,
+      "checked": "2026-10-26",
+      "topics": [
+        "sleep"
+      ],
+      "translations": 11,
+      "sourceUrls": [
+        "https://www.jakartaairporthotel.com/"
+      ],
+      "sourceHash": "3bf4a226c33e808c00f34c1df394c0ec3e00178e5617f0e767736f3109679033"
+    },
+    {
+      "iata": "CGO",
+      "country": "China",
+      "guide": true,
+      "status": "needs_editorial_audit",
+      "blocks": 1,
+      "checked": "2026-10-26",
+      "topics": [
+        "transport"
+      ],
+      "translations": 11,
+      "sourceUrls": [
+        "https://www.zzmetro.com/lines/query/station/zid/11733"
+      ],
+      "sourceHash": "3eae023d332ed0982d1f4d6b132fee3d33c1b819219218e0280696fadd1e443c"
+    },
+    {
+      "iata": "CJU",
+      "country": "South Korea",
+      "guide": true,
+      "status": "needs_editorial_audit",
+      "blocks": 4,
+      "checked": "2026-10-26",
+      "topics": [
+        "transport",
+        "taxi",
+        "kids",
+        "wifi"
+      ],
+      "translations": 11,
+      "sourceUrls": [
+        "https://www.airport.co.kr/jejueng/cms/frCon/index.do?MENU_ID=90",
+        "https://www.airport.co.kr/jejueng/cms/frCon/index.do?MENU_ID=200",
+        "https://www.airport.co.kr/jejueng/cms/frCon/index.do?MENU_ID=300&CONTENTS_NO=8&acd=A1103"
+      ],
+      "sourceHash": "846ba3d19e82e2c3851c339aac178a5db631d7f3f8c258f701c0d5dc258865e4"
+    },
+    {
+      "iata": "CKG",
+      "country": "China",
+      "guide": true,
+      "status": "needs_editorial_audit",
+      "blocks": 2,
+      "checked": "2026-10-26",
+      "topics": [
+        "lounges",
+        "sleep"
+      ],
+      "translations": 11,
+      "sourceUrls": [
+        "https://www.csair.com/cn/tourguide/airport_service/priority_pass/domestic/18h9nnvi3sef0.shtml",
+        "https://www.ihg.com/holidayinnexpress/hotels/ru/ru/chongqing/ckgap/hoteldetail"
+      ],
+      "sourceHash": "4c537ea549a6cfb8e024fe6fc73a5aed2888e8304ac75d903c0b505982aef6c1"
+    },
+    {
+      "iata": "CLT",
+      "country": "United States",
+      "guide": true,
+      "status": "needs_editorial_audit",
+      "blocks": 4,
+      "checked": "2026-10-26",
+      "topics": [
+        "taxi",
+        "kids",
+        "parking",
+        "wifi"
+      ],
+      "translations": 11,
+      "sourceUrls": [
+        "https://www.cltairport.com/to-and-from/taxis-and-taxi-rates/",
+        "https://www.cltairport.com/airport-info/accessibility/terminal-amenities/mothers-room/",
+        "https://www.cltairport.com/parking/",
+        "https://www.cltairport.com/airport-info/services-and-amenities/wifi-and-charging/"
+      ],
+      "sourceHash": "837c0e8f8b3c7ff85df1b02359e1de5106960e45ad327e9fa865874208ec4906"
+    },
+    {
+      "iata": "CPH",
+      "country": "Denmark",
+      "guide": true,
+      "status": "needs_editorial_audit",
+      "blocks": 4,
+      "checked": "2026-10-26",
+      "topics": [
+        "transport",
+        "terminals",
+        "sleep",
+        "wifi"
+      ],
+      "translations": 11,
+      "sourceUrls": [
+        "https://www.cph.dk/en/parking-transport/bus-train-metro-taxi/metro",
+        "https://www.cph.dk/en/parking-transport/bus-train-metro-taxi/terminal-bus",
+        "https://www.cph.dk/en/practical/seating-areas",
+        "https://www.cph.dk/en/wi-fi"
+      ],
+      "sourceHash": "b3d80a81cd8c944118b24a3e2e75da1da3a30fb80bb6721fce312a49984bc81c"
+    },
+    {
+      "iata": "CSX",
+      "country": "China",
+      "guide": true,
+      "status": "needs_editorial_audit",
+      "blocks": 3,
+      "checked": "2026-10-26",
+      "topics": [
+        "transport",
+        "taxi",
+        "parking"
+      ],
+      "translations": 11,
+      "sourceUrls": [
+        "https://www.hunanairport.cn/content/2021/12/16/10625917.html",
+        "https://www.hunanairport.cn/content/2021/12/16/10625922.html",
+        "https://www.hunanairport.cn/content/2021/12/16/10625926.html"
+      ],
+      "sourceHash": "bec7e5499b787ccefac90c322917a165ad01d56b51ced5b32467196b7367bea0"
+    },
+    {
+      "iata": "CSY",
+      "country": "Russia",
+      "guide": true,
+      "status": "needs_editorial_audit",
+      "blocks": 4,
+      "checked": "2026-10-25",
+      "topics": [
+        "transport",
+        "lounges",
+        "storage",
+        "parking"
+      ],
+      "translations": 11,
+      "sourceUrls": [
+        "https://aerocheb.ru/kontaktyi/",
+        "https://aerocheb.ru/passazhiram/business/",
+        "https://aerocheb.ru/passazhiram/kamera-hraneniya/",
+        "https://aerocheb.ru/passazhiram/stoyanka/"
+      ],
+      "sourceHash": "0410e68f4d2310007456a0375bcb832a0b75b48f181d6a13b6ec59f9768aa262"
+    },
+    {
+      "iata": "CTU",
+      "country": "China",
+      "guide": true,
+      "status": "needs_editorial_audit",
+      "blocks": 4,
+      "checked": "2026-10-26",
+      "topics": [
+        "transport",
+        "taxi",
+        "terminals",
+        "storage"
+      ],
+      "translations": 11,
+      "sourceUrls": [
+        "https://www.cdairport.com/traffic3.aspx?t=36",
+        "https://www.cdairport.com/traffic3.aspx?t=31",
+        "https://www.cdairport.com/traffic3.aspx?t=199",
+        "https://www.cdairport.com/guide3.aspx?t=16&cid=19#nav"
+      ],
+      "sourceHash": "1e28a729a26fb0e50f94f1b2920bb1760b2b5c9bf08f83ade97784eacdd3be21"
+    },
+    {
+      "iata": "CUN",
+      "country": "Mexico",
+      "guide": true,
+      "status": "needs_editorial_audit",
+      "blocks": 2,
+      "checked": "2026-10-26",
+      "topics": [
+        "transport",
+        "sleep"
+      ],
+      "translations": 11,
+      "sourceUrls": [
+        "https://blog.ado.com.mx/aeropuerto-cancun-ado",
+        "https://www.hilton.com/en/hotels/cunrogi-hilton-garden-inn-cancun-airport/"
+      ],
+      "sourceHash": "5a6f196545c53e68064ed7b510914ca90046132f58255775910d2f18dbf00bee"
+    },
+    {
+      "iata": "CXR",
+      "country": "Vietnam",
+      "guide": true,
+      "status": "needs_editorial_audit",
+      "blocks": 3,
+      "checked": "2026-10-29",
+      "topics": [
+        "kids",
+        "parking",
+        "wifi"
+      ],
+      "translations": 11,
+      "sourceUrls": [
+        "https://camranh.aero/en/airport-guide/facilities-and-services",
+        "https://camranh.aero/en/airport-guide/transport/parking"
+      ],
+      "sourceHash": "8f5f46febd73c477b0b1a398f6178ca94f3888f68400c2a7e1e7fdf57b6cfa56"
+    },
+    {
+      "iata": "DEL",
+      "country": "India",
+      "guide": true,
+      "status": "needs_editorial_audit",
+      "blocks": 3,
+      "checked": "2026-10-25",
+      "topics": [
+        "transport",
+        "taxi",
+        "parking"
+      ],
+      "translations": 11,
+      "sourceUrls": [
+        "https://www.newdelhiairport.in/to-and-from-airport/metro/",
+        "https://www.newdelhiairport.in/to-and-from-airport/cab-or-taxi/",
+        "https://www.newdelhiairport.in/park-and-fly/"
+      ],
+      "sourceHash": "c3ce9bcf2e351c5567dc7650f255dcd545bc87f84154256922e85f432fc8f2a3"
+    },
+    {
+      "iata": "DEN",
+      "country": "United States",
+      "guide": true,
+      "status": "needs_editorial_audit",
+      "blocks": 6,
+      "checked": "2026-10-25",
+      "topics": [
+        "transport",
+        "taxi",
+        "lounges",
+        "sleep",
+        "kids",
+        "wifi"
+      ],
+      "translations": 11,
+      "sourceUrls": [
+        "https://www.flydenver.com/parking-and-transportation/to-and-from/public-bus-or-train-rtd/",
+        "https://www.flydenver.com/parking-and-transportation/to-and-from/taxi/",
+        "https://www.flydenver.com/at-the-airport/lounge-areas/",
+        "https://www.flydenver.com/at-the-airport/services-and-amenities/the-westin-hotel-at-den/",
+        "https://www.flydenver.com/at-the-airport/services-and-amenities/children-and-families/",
+        "https://www.flydenver.com/at-the-airport/services-and-amenities/wifi-and-technology/"
+      ],
+      "sourceHash": "feccd07150165db67110c1b535ac5e92cceada4f7ae18a0afc6922636894c6f1"
+    },
+    {
+      "iata": "DFW",
+      "country": "United States",
+      "guide": true,
+      "status": "needs_editorial_audit",
+      "blocks": 6,
+      "checked": "2026-10-25",
+      "topics": [
+        "transport",
+        "taxi",
+        "lounges",
+        "kids",
+        "parking",
+        "wifi"
+      ],
+      "translations": 11,
+      "sourceUrls": [
+        "https://www.dfwairport.com/explore/transportation/publictransit/schedules/",
+        "https://www.dfwairport.com/explore/transportation/transportation/",
+        "https://www.dfwairport.com/explore/lounges/",
+        "https://www.dfwairport.com/explore/familyfriendly/",
+        "https://www.dfwairport.com/park/",
+        "https://www.dfwairport.com/explore/wifi-tech/"
+      ],
+      "sourceHash": "06e992a49f554d00abbd0252e7d234da0c7ef7c384ad4eb3f4d5532c5c6d1937"
+    },
+    {
+      "iata": "DLM",
+      "country": "Turkey",
+      "guide": true,
+      "status": "needs_editorial_audit",
+      "blocks": 4,
+      "checked": "2026-10-25",
+      "topics": [
+        "transport",
+        "taxi",
+        "parking",
+        "wifi"
+      ],
+      "translations": 11,
+      "sourceUrls": [
+        "https://www.dalamanairport.aero/en/passengers/public-transport",
+        "https://www.dalamanairport.aero/en/passengers/taxi",
+        "https://www.dalamanairport.aero/en/passengers/parking",
+        "https://www.dalamanairport.aero/en/services/wifi"
+      ],
+      "sourceHash": "957af71c4688d55e7a79a70ef5a57c72a7b4890426710deac71edec003dd2b89"
+    },
+    {
+      "iata": "DME",
+      "country": "Russia",
+      "guide": true,
+      "status": "needs_editorial_audit",
+      "blocks": 7,
+      "checked": "2026-10-25",
+      "topics": [
+        "lounges",
+        "storage",
+        "sleep",
+        "kids",
+        "transport",
+        "parking",
+        "terminals"
+      ],
+      "translations": 11,
+      "sourceUrls": [
+        "https://www.dme.ru/airportguide/upgrade/business/biznes-zaly-aeroporta--domodedovo-/",
+        "https://www.dme.ru/airportguide/services/cloakroom/",
+        "https://www.dme.ru/airportguide/services/oteli/",
+        "https://www.dme.ru/airportguide/children/mother-and-child/",
+        "https://aeroexpress.ru/aero/route/domodedovo.html",
+        "https://parking.dme.ru/",
+        "https://dme.ru/book/news/novyi-segment-terminala-aeroporta-domodedovo-prinyal-pervye-reisy-posle-torzhestvennogo-otkrytiya/"
+      ],
+      "sourceHash": "14ea8658b8d7724668c59ccc53856274249061d45b9df5cf9e730b8eb591c140"
+    },
+    {
+      "iata": "DMK",
+      "country": "Thailand",
+      "guide": true,
+      "status": "needs_editorial_audit",
+      "blocks": 3,
+      "checked": "2026-10-26",
+      "topics": [
+        "transport",
+        "taxi",
+        "wifi"
+      ],
+      "translations": 11,
+      "sourceUrls": [
+        "https://donmueang.airportthai.co.th/service/transportation/detail/205",
+        "https://donmueang.airportthai.co.th/service/transportation/detail/211",
+        "https://donmueang.airportthai.co.th/service/airport-guide/detail/2025_Updated_Donmueang_Airport_Free_Wi-Fi_Access"
+      ],
+      "sourceHash": "4cdbb7ca7d6a7d8f123591b3574695b510ebff8997aa74a33b1ae7062bcd8ff1"
+    },
+    {
+      "iata": "DMM",
+      "country": "Saudi Arabia",
+      "guide": true,
+      "status": "needs_editorial_audit",
+      "blocks": 4,
+      "checked": "2026-10-29",
+      "topics": [
+        "transport",
+        "taxi",
+        "lounges",
+        "parking"
+      ],
+      "translations": 11,
+      "sourceUrls": [
+        "https://kfia.sa/Parking-Transport#Shuttle%20Bus",
+        "https://kfia.sa/Parking-Transport#Taxi%20Car%20Service",
+        "https://kfia.sa/Facilities/Lounges",
+        "https://kfia.sa/Parking-Transport#Parking%20and%20Vale"
+      ],
+      "sourceHash": "7b22595c6949e466c273c4a0a3f37537284545ac9e6b0091fa5d516529a28236"
+    },
+    {
+      "iata": "DOH",
+      "country": "Qatar",
+      "guide": true,
+      "status": "needs_editorial_audit",
+      "blocks": 4,
+      "checked": "2026-10-25",
+      "topics": [
+        "transport",
+        "taxi",
+        "sleep",
+        "wifi"
+      ],
+      "translations": 11,
+      "sourceUrls": [
+        "https://dohahamadairport.com/airport-guide/to-from-the-airport/metro",
+        "https://dohahamadairport.com/airport-guide/to-from-the-airport/Taxi",
+        "https://dohahamadairport.com/relax/quiet-rooms",
+        "https://dohahamadairport.com/airport-guide/facilities-services/connectivity"
+      ],
+      "sourceHash": "5447ee10eea04e41f2452bd15f6f214cc64f442fd623dd98974cefb29356710f"
+    },
+    {
+      "iata": "DTW",
+      "country": "United States",
+      "guide": true,
+      "status": "needs_editorial_audit",
+      "blocks": 2,
+      "checked": "2026-10-26",
+      "topics": [
+        "transport",
+        "sleep"
+      ],
+      "translations": 11,
+      "sourceUrls": [
+        "https://www.smartbus.org/ridesmart-fast",
+        "https://www.marriott.com/en-us/hotels/dtwma-the-westin-detroit-metropolitan-airport/overview/"
+      ],
+      "sourceHash": "5210c6096e88a0b3614965b9e44502ae8117978ab66758e30fdbcc9e04fc57ea"
+    },
+    {
+      "iata": "DUB",
+      "country": "Ireland",
+      "guide": true,
+      "status": "needs_editorial_audit",
+      "blocks": 4,
+      "checked": "2026-10-26",
+      "topics": [
+        "transport",
+        "taxi",
+        "storage",
+        "wifi"
+      ],
+      "translations": 11,
+      "sourceUrls": [
+        "https://www.dublinairport.com/to-from-the-airport/by-bus/dublin-buses",
+        "https://www.dublinairport.com/to-from-the-airport/by-taxi",
+        "https://www.dublinairport.com/at-the-airport/facilities/luggage-facilities",
+        "https://www.dublinairport.com/at-the-airport/facilities/wifi-printing-services"
+      ],
+      "sourceHash": "220d33603e1120701808e28c7c4bb2bae95df7544217147a7354999bc3809b67"
+    },
+    {
+      "iata": "DXB",
+      "country": "United Arab Emirates",
+      "guide": true,
+      "status": "needs_editorial_audit",
+      "blocks": 3,
+      "checked": "2026-10-25",
+      "topics": [
+        "transport",
+        "taxi",
+        "storage"
+      ],
+      "translations": 11,
+      "sourceUrls": [
+        "https://dubaiairports.ae/transport/metro",
+        "https://dubaiairports.ae/transport/taxi",
+        "https://dubaiairports.ae/information/baggage"
+      ],
+      "sourceHash": "7f4c430c266b0f03f452b7eb7178fa8dd6cf29a3ce8fe16556710a5cdc413f51"
+    },
+    {
+      "iata": "EDI",
+      "country": "United Kingdom",
+      "guide": true,
+      "status": "needs_editorial_audit",
+      "blocks": 4,
+      "checked": "2026-10-29",
+      "topics": [
+        "transport",
+        "storage",
+        "kids",
+        "parking"
+      ],
+      "translations": 11,
+      "sourceUrls": [
+        "https://www.edinburghairport.com/transport-links/trams",
+        "https://www.edinburghairport.com/shopping-and-eating/shops/excess-baggage",
+        "https://www.edinburghairport.com/prepare/services-and-facilities",
+        "https://www.edinburghairport.com/transport-links/pickup-and-dropoff-zones"
+      ],
+      "sourceHash": "d7edec4692a605bf818784005f79f7c0ff5aa74a083a6bbf1e3a452309a5646c"
+    },
+    {
+      "iata": "EVN",
+      "country": "Armenia",
+      "guide": true,
+      "status": "needs_editorial_audit",
+      "blocks": 3,
+      "checked": "2026-10-25",
+      "topics": [
+        "transport",
+        "taxi",
+        "parking"
+      ],
+      "translations": 11,
+      "sourceUrls": [
+        "https://zvartnots.am/RU/Content/Transport",
+        "https://zvartnots.am/RU/Content/Parking"
+      ],
+      "sourceHash": "6b29ce19c144d590cbb9ac6e9db8fcae3f53867d8dd61b2589b652efee204aa3"
+    },
+    {
+      "iata": "EWR",
+      "country": "United States",
+      "guide": true,
+      "status": "needs_editorial_audit",
+      "blocks": 4,
+      "checked": "2026-10-26",
+      "topics": [
+        "transport",
+        "taxi",
+        "terminals",
+        "wifi"
+      ],
+      "translations": 11,
+      "sourceUrls": [
+        "https://www.newarkairport.com/transportation/airtrain",
+        "https://www.newarkairport.com/transportation/taxi-service",
+        "https://www.newarkairport.com/explore-ewr/services"
+      ],
+      "sourceHash": "bae81e92b1ae33cd56fc183df06a0d553145074d853f6437f2505fabd5ce0a73"
+    },
+    {
+      "iata": "EYK",
+      "country": "Russia",
+      "guide": true,
+      "status": "needs_editorial_audit",
+      "blocks": 3,
+      "checked": "2026-10-25",
+      "topics": [
+        "lounges",
+        "storage",
+        "kids"
+      ],
+      "translations": 11,
+      "sourceUrls": [
+        "http://airportblr.ru/info/tarif20261001_sop.pdf",
+        "http://airportblr.ru/info/Pas/6.pdf"
+      ],
+      "sourceHash": "ba1c42806b97c5090d7fb8275813467944fc526dddc14816fb9785ddc1ecd448"
+    },
+    {
+      "iata": "FCO",
+      "country": "Italy",
+      "guide": true,
+      "status": "needs_editorial_audit",
+      "blocks": 4,
+      "checked": "2026-10-26",
+      "topics": [
+        "transport",
+        "storage",
+        "kids",
+        "wifi"
+      ],
+      "translations": 11,
+      "sourceUrls": [
+        "https://www.trenitalia.com/en/connections/leonardo-express.html",
+        "https://www.adr.it/web/aeroporti-di-roma-en/pax-fco-baggage-services",
+        "https://www.adr.it/web/aeroporti-di-roma-en/services-for-families",
+        "https://www.adr.it/web/aeroporti-di-roma-en/internet-wi-fi1"
+      ],
+      "sourceHash": "bec0f31ae6197ce6e583267aff3b061ecd91421c2f12251b12194f720410b930"
+    },
+    {
+      "iata": "FLL",
+      "country": "United States",
+      "guide": true,
+      "status": "needs_editorial_audit",
+      "blocks": 4,
+      "checked": "2026-10-26",
+      "topics": [
+        "transport",
+        "terminals",
+        "storage",
+        "wifi"
+      ],
+      "translations": 11,
+      "sourceUrls": [
+        "https://www.broward.org/airport/Passengers/Transportation",
+        "https://www.broward.org/airport/Passengers/Services"
+      ],
+      "sourceHash": "b95bb215f831319d87f191fe52cab621c0c80c2468141b06ede9471149f90c27"
+    },
+    {
+      "iata": "FRA",
+      "country": "Germany",
+      "guide": true,
+      "status": "needs_editorial_audit",
+      "blocks": 7,
+      "checked": "2026-10-25",
+      "topics": [
+        "transport",
+        "taxi",
+        "terminals",
+        "lounges",
+        "sleep",
+        "parking",
+        "wifi"
+      ],
+      "translations": 11,
+      "sourceUrls": [
+        "https://www.frankfurt-airport.com/en/transport-and-parking/to-from-the-airport/travel-by-train.html",
+        "https://www.frankfurt-airport.com/en/transport-and-parking/to-from-the-airport/travel-by-ride-hailing-car-sharing.html",
+        "https://www.frankfurt-airport.com/en/at-the-airport/orientation.html",
+        "https://www.frankfurt-airport.com/en/at-the-airport/facilities-services/lounges.html",
+        "https://www.frankfurt-airport.com/en/travel-planning/hotels/napcabs-airport.html",
+        "https://www.frankfurt-airport.com/en/transport-and-parking/parking-offers/terminal-parking.html",
+        "https://www.frankfurt-airport.com/en/at-the-airport/facilities-services/free-wi-fi.html"
+      ],
+      "sourceHash": "efb9188912d4fbe0cc27c753c7a406a5bf260541d6e4700e0ea6d6ab31e440b1"
+    },
+    {
+      "iata": "FUK",
+      "country": "Japan",
+      "guide": true,
+      "status": "needs_editorial_audit",
+      "blocks": 4,
+      "checked": "2026-10-26",
+      "topics": [
+        "transport",
+        "terminals",
+        "kids",
+        "wifi"
+      ],
+      "translations": 11,
+      "sourceUrls": [
+        "https://www.fukuoka-airport.jp/en/access/subway.html",
+        "https://www.fukuoka-airport.jp/en/access/bus2.html",
+        "https://www.fukuoka-airport.jp/en/service/m-nursing-room.html",
+        "https://www.fukuoka-airport.jp/en/service/wifi01.html"
+      ],
+      "sourceHash": "7c231576900610a4fb0ffe2ade3936eca3a9f8fe0db056c96e44bbd49fde7f70"
+    },
+    {
+      "iata": "GCI",
+      "country": "Guernsey",
+      "guide": true,
+      "status": "needs_editorial_audit",
+      "blocks": 4,
+      "checked": "2026-10-30",
+      "topics": [
+        "transport",
+        "taxi",
+        "storage",
+        "parking"
+      ],
+      "translations": 11,
+      "sourceUrls": [
+        "https://www.airport.gg/getting-to-from/bus",
+        "https://www.airport.gg/getting-to-from/taxi",
+        "https://www.airport.gg/passenger-information/left-luggage",
+        "https://www.airport.gg/passenger-information/parking"
+      ],
+      "sourceHash": "f9ca43b39d7c1090fdd2d14743670a8c1c01ad1fd1d7d971fd7ab93486e8e548"
+    },
+    {
+      "iata": "GDX",
+      "country": "Russia",
+      "guide": true,
+      "status": "needs_editorial_audit",
+      "blocks": 6,
+      "checked": "2026-10-25",
+      "topics": [
+        "transport",
+        "lounges",
+        "storage",
+        "kids",
+        "parking",
+        "wifi"
+      ],
+      "translations": 11,
+      "sourceUrls": [
+        "https://airport-magadan.ru/transport/how/bus/101/",
+        "https://airport-magadan.ru/services/comfort/business/",
+        "https://airport-magadan.ru/services/infrastructure/storage/",
+        "https://airport-magadan.ru/services/infrastructure/babysroom/",
+        "https://airport-magadan.ru/transport/parking/tariff/",
+        "https://airport-magadan.ru/services/infrastructure/wifi/"
+      ],
+      "sourceHash": "c4e39d200d36e8db7fef46abbc52d925df151d0ae9f66b00de37b801a0f143c9"
+    },
+    {
+      "iata": "GDZ",
+      "country": "Russia",
+      "guide": true,
+      "status": "needs_editorial_audit",
+      "blocks": 5,
+      "checked": "2026-10-25",
+      "topics": [
+        "transport",
+        "lounges",
+        "storage",
+        "kids",
+        "parking"
+      ],
+      "translations": 11,
+      "sourceUrls": [
+        "https://gelaero.ru/transport/public-transport/",
+        "https://gelaero.ru/transport/taxi/",
+        "https://gelaero.ru/services/business-lounge/",
+        "https://gelaero.ru/services/high-comfort-lounge/",
+        "https://gelaero.ru/passengers/baggage-allowance/luggage-storage/",
+        "https://gelaero.ru/passengers/mother-child-room/",
+        "https://gelaero.ru/transport/parking/"
+      ],
+      "sourceHash": "834724baafdbc71f6d252d3709b875d40a243b33ba2f0e37304844d15285f50c"
+    },
+    {
+      "iata": "GLA",
+      "country": "United Kingdom",
+      "guide": true,
+      "status": "needs_editorial_audit",
+      "blocks": 4,
+      "checked": "2026-10-29",
+      "topics": [
+        "transport",
+        "taxi",
+        "parking",
+        "wifi"
+      ],
+      "translations": 11,
+      "sourceUrls": [
+        "https://www.glasgowairport.com/to-and-from/glasgow-airport-express-service-500/",
+        "https://www.glasgowairport.com/to-and-from/taxi/",
+        "https://www.glasgowairport.com/to-and-from/pick-up-and-drop-off/",
+        "https://www.glasgowairport.com/at-the-airport/airport-services/free-wifi/"
+      ],
+      "sourceHash": "37f2af4e5ff1e3346e228bc24eedad06f75cd990616217fe5116f51deb9c3b1c"
+    },
+    {
+      "iata": "GOJ",
+      "country": "Russia",
+      "guide": true,
+      "status": "needs_editorial_audit",
+      "blocks": 6,
+      "checked": "2026-10-25",
+      "topics": [
+        "transport",
+        "lounges",
+        "storage",
+        "kids",
+        "parking",
+        "wifi"
+      ],
+      "translations": 11,
+      "sourceUrls": [
+        "https://ar-goj.ru/how-to-get/from/bus/",
+        "https://ar-goj.ru/how-to-get/to/bus/",
+        "https://ar-goj.ru/services/businesshall/",
+        "https://ar-goj.ru/services/luggage/",
+        "https://ar-goj.ru/services/child-room/",
+        "https://ar-goj.ru/parking/",
+        "https://ar-goj.ru/services/wifi/"
+      ],
+      "sourceHash": "087255981d500e5bd513cb72dc9ee36762af822ce3e57a14a4a025d09f812604"
+    },
+    {
+      "iata": "GRU",
+      "country": "Brazil",
+      "guide": true,
+      "status": "needs_editorial_audit",
+      "blocks": 3,
+      "checked": "2026-10-26",
+      "topics": [
+        "transport",
+        "storage",
+        "wifi"
+      ],
+      "translations": 11,
+      "sourceUrls": [
+        "https://www.gru.com.br/pt/passageiro/como-chegar-sair/trem/",
+        "https://www.gru.com.br/en/passenger/discover-gru/services-and-facilities/luggage-storage",
+        "https://www.gru.com.br/en/passenger/discover-gru/services-and-facilities/wifi"
+      ],
+      "sourceHash": "8848cf3961f7ee9c9341220d5be9dc94dfae43bb84874950fccc781d7d8a4096"
+    },
+    {
+      "iata": "GYD",
+      "country": "Azerbaijan",
+      "guide": true,
+      "status": "needs_editorial_audit",
+      "blocks": 5,
+      "checked": "2026-10-25",
+      "topics": [
+        "transport",
+        "lounges",
+        "kids",
+        "parking",
+        "wifi"
+      ],
+      "translations": 11,
+      "sourceUrls": [
+        "https://airport.az/ru/transport/aero-express/",
+        "https://airport.az/ru/facilities/lounges/",
+        "https://airport.az/ru/facilities/customers-with-children/",
+        "https://airport.az/ru/transport/parking/",
+        "https://airport.az/ru/facilities/internet-working-area/"
+      ],
+      "sourceHash": "69eff6da74180cbda00ec56d92f215d58dbf09d3644ad1a1bd799378aae4332f"
+    },
+    {
+      "iata": "HAN",
+      "country": "Vietnam",
+      "guide": true,
+      "status": "needs_editorial_audit",
+      "blocks": 3,
+      "checked": "2026-10-26",
+      "topics": [
+        "terminals",
+        "kids",
+        "wifi"
+      ],
+      "translations": 11,
+      "sourceUrls": [
+        "https://noibaiairport.vn/en/passenger-amenities-at-noi-bai-international-airport-nid21337.html",
+        "https://noibaiairport.vn/en/free-internet-wifi-nid60.html"
+      ],
+      "sourceHash": "3c98ecf9ebc98b4b0b673a8c8550eb63e6398de8bb071724693170241ee07557"
+    },
+    {
+      "iata": "HGH",
+      "country": "China",
+      "guide": true,
+      "status": "needs_editorial_audit",
+      "blocks": 1,
+      "checked": "2026-10-26",
+      "topics": [
+        "sleep"
+      ],
+      "translations": 11,
+      "sourceUrls": [
+        "https://www.ihg.com/holidayinnexpress/hotels/ru/ru/hangzhou/hghap/hoteldetail"
+      ],
+      "sourceHash": "4e7021bb068fa3bbcfdda0fd86aed613c1b76409759123f80874a919b84dab76"
+    },
+    {
+      "iata": "HKG",
+      "country": "Hong Kong",
+      "guide": true,
+      "status": "needs_editorial_audit",
+      "blocks": 6,
+      "checked": "2026-10-25",
+      "topics": [
+        "transport",
+        "taxi",
+        "lounges",
+        "storage",
+        "sleep",
+        "wifi"
+      ],
+      "translations": 11,
+      "sourceUrls": [
+        "https://www.hongkongairport.com/en/transport/to-from-airport/airport-express.page",
+        "https://www.hongkongairport.com/en/transport/to-from-airport/taxis.page",
+        "https://www.hongkongairport.com/en/passenger-guide/airport-facilities-services/pay-in-corporate-lounges",
+        "https://www.hongkongairport.com/en/passenger-guide/airport-facilities-services/baggage-storage",
+        "https://www.hongkongairport.com/en/passenger-guide/airport-facilities-services/resting-lounges",
+        "https://www.hongkongairport.com/en/passenger-guide/airport-facilities-services/wifi-and-internet-access"
+      ],
+      "sourceHash": "9d340ffadf18fbf58c31e3b300e95cc78833141d97e2c18ac1225e81769d6a9d"
+    },
+    {
+      "iata": "HKT",
+      "country": "Thailand",
+      "guide": true,
+      "status": "needs_editorial_audit",
+      "blocks": 2,
+      "checked": "2026-10-29",
+      "topics": [
+        "transport",
+        "wifi"
+      ],
+      "translations": 11,
+      "sourceUrls": [
+        "https://phuketsmartbus.com/ru/blog/phuket-smart-bus-stop-at-phuket-airport",
+        "https://phuket.airportthai.co.th/service/facility/detail/276"
+      ],
+      "sourceHash": "f30014544f8df30e7d42d1be01673c82f210df688863ca1fc9177afcf1424bf5"
+    },
+    {
+      "iata": "HMA",
+      "country": "Russia",
+      "guide": true,
+      "status": "needs_editorial_audit",
+      "blocks": 5,
+      "checked": "2026-10-25",
+      "topics": [
+        "transport",
+        "lounges",
+        "sleep",
+        "kids",
+        "parking"
+      ],
+      "translations": 11,
+      "sourceUrls": [
+        "https://ugraavia.ru/passengers/how-get-there/",
+        "https://ugraavia.ru/services/business-hall/",
+        "https://ugraavia.ru/services/sokol-hotel/",
+        "https://ugraavia.ru/services/mother-baby-room/",
+        "https://ugraavia.ru/services/parkovka"
+      ],
+      "sourceHash": "1a7165e4da18b002d2c432751f933c07df8de4233668ed8a5bec0d07479053d0"
+    },
+    {
+      "iata": "HND",
+      "country": "Japan",
+      "guide": true,
+      "status": "needs_editorial_audit",
+      "blocks": 8,
+      "checked": "2026-10-25",
+      "topics": [
+        "transport",
+        "taxi",
+        "terminals",
+        "lounges",
+        "storage",
+        "sleep",
+        "kids",
+        "wifi"
+      ],
+      "translations": 11,
+      "sourceUrls": [
+        "https://tokyo-haneda.com/en/access/train/index.html",
+        "https://tokyo-haneda.com/en/access/taxi/index.html",
+        "https://tokyo-haneda.com/en/access/travel_between_terminals/index.html",
+        "https://tokyo-haneda.com/en/service/facilities/lounge.html",
+        "https://tokyo-haneda.com/en/service/facilities/baggage_checkroom.html",
+        "https://tokyo-haneda.com/en/service/facilities/hotel.html",
+        "https://tokyo-haneda.com/en/service/facilities/kids_space.html",
+        "https://tokyo-haneda.com/en/service/facilities/wireless_lan.html"
+      ],
+      "sourceHash": "6513b8d75a042963738d94d3d59ae150ca03238cce1629212ca87fd109bd5841"
+    },
+    {
+      "iata": "HRG",
+      "country": "Egypt",
+      "guide": true,
+      "status": "needs_editorial_audit",
+      "blocks": 6,
+      "checked": "2026-11-09",
+      "topics": [
+        "transport",
+        "taxi",
+        "terminals",
+        "lounges",
+        "storage",
+        "sleep"
+      ],
+      "translations": 11,
+      "sourceUrls": [
+        "https://www.worldtravelguide.net/guides/africa/egypt/hurghada-international-airport/",
+        "https://www.iexplore.com/articles/travel-guides/africa/egypt/airports",
+        "https://www.sleepinginairports.net/guides/hurghada-airport-guide.htm",
+        "https://www.viplounges.com/egypt/hurghada/hurghada-international/hrg-terminal-1/pearl-lounge-1512",
+        "https://pearlassist.com/maasp-dep-hrg"
+      ],
+      "sourceHash": "ece23388267434e38140e72a0b4f34e9aba8feaa27479729970f300cc5551c4e"
+    },
+    {
+      "iata": "HYD",
+      "country": "India",
+      "guide": true,
+      "status": "needs_editorial_audit",
+      "blocks": 4,
+      "checked": "2026-10-26",
+      "topics": [
+        "transport",
+        "taxi",
+        "kids",
+        "wifi"
+      ],
+      "translations": 11,
+      "sourceUrls": [
+        "https://www.hyderabad.aero/travellers/to-and-from-airport",
+        "https://www.hyderabad.aero/rgia/airport-facilities/baby-care-rooms",
+        "https://www.hyderabad.aero/rgia/airport-facilities/wi-fi"
+      ],
+      "sourceHash": "e4055219abb448f6da1d5365721b5b23a7d19e5237b5f87ee71120d0771f8a1a"
+    },
+    {
+      "iata": "IAD",
+      "country": "United States",
+      "guide": true,
+      "status": "needs_editorial_audit",
+      "blocks": 4,
+      "checked": "2026-10-26",
+      "topics": [
+        "transport",
+        "terminals",
+        "kids",
+        "wifi"
+      ],
+      "translations": 11,
+      "sourceUrls": [
+        "https://www.flydulles.com/metro",
+        "https://www.flydulles.com/travel-information/2024-holiday-travel-guide/aerotrain-washington-dulles-international-airport",
+        "https://www.flydulles.com/travel-information/2024-holiday-travel-guide/nursing-rooms",
+        "https://www.flydulles.com/travel-information/services-amenities/free-wifi-internet-service"
+      ],
+      "sourceHash": "540cdb45b50a03579379190268dcc0e1d21b1960ceb4c74ade93554df723a839"
+    },
+    {
+      "iata": "IAH",
+      "country": "United States",
+      "guide": true,
+      "status": "needs_editorial_audit",
+      "blocks": 4,
+      "checked": "2026-10-26",
+      "topics": [
+        "transport",
+        "sleep",
+        "kids",
+        "wifi"
+      ],
+      "translations": 11,
+      "sourceUrls": [
+        "https://www.fly2houston.com/iah/ground-transportation/metro-downtown-direct/",
+        "https://www.fly2houston.com/iah/visitor-information/services/"
+      ],
+      "sourceHash": "103cdb30d6b346dc9e59a262b816071fd976f0fc34cd089389ca28875317b64e"
+    },
+    {
+      "iata": "IAR",
+      "country": "Russia",
+      "guide": true,
+      "status": "needs_editorial_audit",
+      "blocks": 5,
+      "checked": "2026-10-25",
+      "topics": [
+        "transport",
+        "lounges",
+        "kids",
+        "parking",
+        "wifi"
+      ],
+      "translations": 11,
+      "sourceUrls": [
+        "https://iaravia.ru/for-passengers/how-to-reach",
+        "https://iaravia.ru/ob-aeroporte/way",
+        "https://iaravia.ru/for-passengers/services/zal-povyshennoy-komfortnosti",
+        "https://iaravia.ru/for-passengers/services"
+      ],
+      "sourceHash": "95e42af4888998bf0522f5c351ab0878fb358365c5476b4b480e1de9dae55073"
+    },
+    {
+      "iata": "ICN",
+      "country": "South Korea",
+      "guide": true,
+      "status": "needs_editorial_audit",
+      "blocks": 5,
+      "checked": "2026-10-25",
+      "topics": [
+        "taxi",
+        "terminals",
+        "lounges",
+        "sleep",
+        "kids"
+      ],
+      "translations": 11,
+      "sourceUrls": [
+        "https://www.airport.kr/ap_en/1515/subview.do",
+        "https://www.airport.kr/ap_en/1525/subview.do",
+        "https://www.airport.kr/ap_en/1536/subview.do"
+      ],
+      "sourceHash": "932ad7f03051faf7547724ac908adcf7533e0c7d612ddb61c986aaebf18a54c9"
+    },
+    {
+      "iata": "IGT",
+      "country": "Russia",
+      "guide": true,
+      "status": "needs_editorial_audit",
+      "blocks": 3,
+      "checked": "2026-10-25",
+      "topics": [
+        "terminals",
+        "lounges",
+        "wifi"
+      ],
+      "translations": 11,
+      "sourceUrls": [
+        "https://airportmagas.ru/general",
+        "https://airportmagas.ru/2014-05-15-09-09-06/vip-passazhiram",
+        "https://airportmagas.ru/2014-05-15-09-09-06/uslugi-i-tseny"
+      ],
+      "sourceHash": "2b96c7d688bc073d104be6032c8cae5918ef9b9fe20c603392aa7de9d753aae5"
+    },
+    {
+      "iata": "IJK",
+      "country": "Russia",
+      "guide": true,
+      "status": "needs_editorial_audit",
+      "blocks": 6,
+      "checked": "2026-10-25",
+      "topics": [
+        "transport",
+        "terminals",
+        "lounges",
+        "storage",
+        "kids",
+        "parking"
+      ],
+      "translations": 11,
+      "sourceUrls": [
+        "https://izhavia.su/uslugi/transfer-iz-aeroporta-izhevska",
+        "https://izhavia.su/o-kompanii/novyy-passazhirskiy-terminal",
+        "https://izhavia.su/uslugi/zal-povyshennoy-komfortnosti",
+        "https://izhavia.su/uslugi/vip_zal",
+        "https://izhavia.su/uslugi/kamera-hraneniya",
+        "https://izhavia.su/uslugi/komnata-materi-i-rebenka",
+        "https://izhavia.su/passazhiram/parkovka"
+      ],
+      "sourceHash": "d632fda2cd99493c50cc54847e726dbaa4a4c3f7b3b20812efc905e0497d5335"
+    },
+    {
+      "iata": "IKT",
+      "country": "Russia",
+      "guide": true,
+      "status": "needs_editorial_audit",
+      "blocks": 7,
+      "checked": "2026-10-25",
+      "topics": [
+        "transport",
+        "terminals",
+        "lounges",
+        "storage",
+        "sleep",
+        "kids",
+        "parking"
+      ],
+      "translations": 11,
+      "sourceUrls": [
+        "https://iktport.ru/ru/passengers/route",
+        "https://iktport.ru/ru/passengers/sheme-terminal",
+        "https://iktport.ru/index.php?option=com_content&view=article&id=69&catid=22&lang=ru&Itemid=153",
+        "https://iktport.ru/documents/charges/2026/pax_services.pdf",
+        "https://iktport.ru/ru/passengers/baggage",
+        "https://iktport.ru/documents/charges/2026/baggagefizl.pdf",
+        "https://hotel.iktport.ru/",
+        "https://iktport.ru/ru/?view=article&id=72:children&catid=22",
+        "https://iktport.ru/documents/parking/parking.pdf"
+      ],
+      "sourceHash": "3a135fa79d99731898b336789d81d0c63cb1739325dd8da408982de70215a77b"
+    },
+    {
+      "iata": "IST",
+      "country": "Turkey",
+      "guide": true,
+      "status": "needs_editorial_audit",
+      "blocks": 6,
+      "checked": "2026-11-09",
+      "topics": [
+        "transport",
+        "sleep",
+        "kids",
+        "parking",
+        "wifi",
+        "storage"
+      ],
+      "translations": 11,
+      "sourceUrls": [
+        "https://www.istairport.com/en/airport/airport-transportation/urban-transportation/public-transportation?locale=ru",
+        "https://www.istairport.com/en/services/discover/accommodation/istanbul-airport-hotel?locale=ru",
+        "https://www.istairport.com/en/services/discover/child-and-family-friendly-airport?locale=ru",
+        "https://www.istairport.com/en/airport/airport-transportation/airport-carpark?locale=ru",
+        "https://www.istairport.com/en/services/discover/general-facilities/wi-fi?locale=ru",
+        "https://www.istairport.com/en/services/discover/airport-facilities/left-luggage-offices-and-storage-lockers?locale=en"
+      ],
+      "sourceHash": "328325f5cda63c40f77fefd0e2d145fecc46cb623d2236e6e19a785562565845"
+    },
+    {
+      "iata": "IWA",
+      "country": "Russia",
+      "guide": true,
+      "status": "needs_editorial_audit",
+      "blocks": 2,
+      "checked": "2026-10-25",
+      "topics": [
+        "transport",
+        "parking"
+      ],
+      "translations": 11,
+      "sourceUrls": [
+        "https://ivanovoaero.ru/info/kak-dobratsya/",
+        "https://ivanovoaero.ru/info/parkovka/"
+      ],
+      "sourceHash": "4a65c6a3876dc7ca5ef333da89f1f24917259876fe4453205968d39f3edcbf93"
+    },
+    {
+      "iata": "JED",
+      "country": "Saudi Arabia",
+      "guide": true,
+      "status": "needs_editorial_audit",
+      "blocks": 1,
+      "checked": "2026-10-26",
+      "topics": [
+        "sleep"
+      ],
+      "translations": 11,
+      "sourceUrls": [
+        "https://www.myaerotel.com/en-uk/find/middle-east/saudi-arabia/jeddah/aerotel-jeddah"
+      ],
+      "sourceHash": "e3237bb8f9a4118d1cbcacaaf187a8bfa112341ffcae4566d8d0a54147cb8db3"
+    },
+    {
+      "iata": "JER",
+      "country": "Jersey",
+      "guide": true,
+      "status": "needs_editorial_audit",
+      "blocks": 4,
+      "checked": "2026-10-30",
+      "topics": [
+        "transport",
+        "taxi",
+        "kids",
+        "parking"
+      ],
+      "translations": 11,
+      "sourceUrls": [
+        "https://www.jerseyairport.com/getting-here/publicbus/",
+        "https://www.jerseyairport.com/getting-here/taxicabs/",
+        "https://www.jerseyairport.com/airport/family-facilities/",
+        "https://www.jerseyairport.com/parking/arrivals/"
+      ],
+      "sourceHash": "52b389058d0a30b783e2bb27b200df88895494a0eda2d94ec180726e3ec7023c"
+    },
+    {
+      "iata": "JFK",
+      "country": "United States",
+      "guide": true,
+      "status": "needs_editorial_audit",
+      "blocks": 4,
+      "checked": "2026-10-25",
+      "topics": [
+        "transport",
+        "taxi",
+        "sleep",
+        "wifi"
+      ],
+      "translations": 11,
+      "sourceUrls": [
+        "https://www.jfkairport.com/transportation/airtrain",
+        "https://www.jfkairport.com/transportation/taxi-service",
+        "https://www.jfkairport.com/frequently-asked-questions"
+      ],
+      "sourceHash": "35ec8167e322642d6ecb55bc8842603f175d83544f45366b6cfe81b4e2d2ad68"
+    },
+    {
+      "iata": "KEJ",
+      "country": "Russia",
+      "guide": true,
+      "status": "needs_editorial_audit",
+      "blocks": 4,
+      "checked": "2026-10-25",
+      "topics": [
+        "lounges",
+        "storage",
+        "kids",
+        "parking"
+      ],
+      "translations": 11,
+      "sourceUrls": [
+        "https://airkem.ru/services/comfort/business/",
+        "https://airkem.ru/services/infrastructure/storage/",
+        "https://airkem.ru/services/infrastructure/babysroom/",
+        "https://airkem.ru/transport/parking/tariff/"
+      ],
+      "sourceHash": "02d0e6a6053e4212593c774888a37681b0529f37c41ec67db42acc569dd7528a"
+    },
+    {
+      "iata": "KGD",
+      "country": "Russia",
+      "guide": true,
+      "status": "needs_editorial_audit",
+      "blocks": 5,
+      "checked": "2026-10-25",
+      "topics": [
+        "transport",
+        "lounges",
+        "sleep",
+        "kids",
+        "parking"
+      ],
+      "translations": 11,
+      "sourceUrls": [
+        "https://kgdavia.ru/transport/how/bus/",
+        "https://kgdavia.ru/services/comfort/business/",
+        "https://kgdavia.ru/services/infrastructure/hotel/",
+        "https://kgdavia.ru/passengers/information/babysroom/",
+        "https://kgdavia.ru/transport/parking/tariff/"
+      ],
+      "sourceHash": "e43715a1a9ba7f1f454e690182d1a52c22928ec83d82d85c8ba24feded43c3ad"
+    },
+    {
+      "iata": "KGP",
+      "country": "Russia",
+      "guide": true,
+      "status": "needs_editorial_audit",
+      "blocks": 2,
+      "checked": "2026-10-25",
+      "topics": [
+        "terminals",
+        "lounges"
+      ],
+      "translations": 11,
+      "sourceUrls": [
+        "https://kogport.ru/pol-info/priobretenie-biletov/",
+        "https://kogport.ru/pol-info/registraciya-na-reys/",
+        "https://kogport.ru/biznes-klass/",
+        "https://kogport.ru/wp-content/uploads/2026/09/Прейскурант-ЗПК.pdf"
+      ],
+      "sourceHash": "eea2fdd0f3c8034f0efba0b4899de074c2619aa96e82e32fa43dec2fc25ca318"
+    },
+    {
+      "iata": "KHV",
+      "country": "Russia",
+      "guide": true,
+      "status": "needs_editorial_audit",
+      "blocks": 7,
+      "checked": "2026-10-25",
+      "topics": [
+        "transport",
+        "terminals",
+        "lounges",
+        "storage",
+        "sleep",
+        "kids",
+        "parking"
+      ],
+      "translations": 11,
+      "sourceUrls": [
+        "https://khv.aero/transport/",
+        "https://khv.aero/airport/about/skhema-terminalov/",
+        "https://khv.aero/airport/about/istoriya/",
+        "https://khv.aero/services/biznes-zaly/",
+        "https://khv.aero/passengers/kamera-khraneniya/",
+        "https://khv.aero/services/vnutrenniy-terminal/gostinitsa/",
+        "https://khv.aero/services/dlya-passazhirov-s-detmi/",
+        "https://khv.aero/services/",
+        "https://khv.aero/transport/parkovki/"
+      ],
+      "sourceHash": "8dd4d869da432fc8ff5c8583e775b4bd5df2430dcf408c3d181ec526ed7aa383"
+    },
+    {
+      "iata": "KIX",
+      "country": "Japan",
+      "guide": true,
+      "status": "needs_editorial_audit",
+      "blocks": 4,
+      "checked": "2026-10-26",
+      "topics": [
+        "terminals",
+        "storage",
+        "kids",
+        "wifi"
+      ],
+      "translations": 11,
+      "sourceUrls": [
+        "https://www.kansai-airport.or.jp/en/flight/route/transit",
+        "https://www.kansai-airport.or.jp/en/service/delivery/baggage-checkroom",
+        "https://www.kansai-airport.or.jp/en/service/child/babyroom",
+        "https://www.kansai-airport.or.jp/en/service/internet/free-wifi"
+      ],
+      "sourceHash": "e50e32a844ea03ba34f91d6f5a6f5b9ce97af6fc900a152f95c617eab1c2be9c"
+    },
+    {
+      "iata": "KMG",
+      "country": "China",
+      "guide": true,
+      "status": "needs_editorial_audit",
+      "blocks": 2,
+      "checked": "2026-10-26",
+      "topics": [
+        "transport",
+        "taxi"
+      ],
+      "translations": 11,
+      "sourceUrls": [
+        "https://km.ynairport.com/zhjt/5749.jhtml",
+        "https://km.ynairport.com/zhjt/5752.jhtml"
+      ],
+      "sourceHash": "448a01acee3f1d6156e173e28651b78e6a6815defe8ff23a86faca909c589450"
+    },
+    {
+      "iata": "KRR",
+      "country": "Russia",
+      "guide": true,
+      "status": "needs_editorial_audit",
+      "blocks": 7,
+      "checked": "2026-10-25",
+      "topics": [
+        "transport",
+        "terminals",
+        "lounges",
+        "storage",
+        "kids",
+        "parking",
+        "wifi"
+      ],
+      "translations": 11,
+      "sourceUrls": [
+        "https://krr.aero/transport/obshhestvennyj-transport/",
+        "https://krr.aero/transport/taxi/",
+        "https://krr.aero/about-airport/",
+        "https://krr.aero/about-airport/passenger_guide/",
+        "https://krr.aero/vip_business/biznes-zal-vnutrennikh-avialiniy/",
+        "https://krr.aero/vip_business/business-lounge-international-departures/",
+        "https://krr.aero/services/bagazh/kamera-khraneniya/",
+        "https://krr.aero/services/passazhiram-s-detmi/uslugi-dlya-semeynogo-komforta/",
+        "https://krr.aero/transport/parking/",
+        "https://krr.aero/services/servisy-dlya-passazhirov/wi-fi/"
+      ],
+      "sourceHash": "fbb3b47aa23e19ab46b73a1c1faa38b999c01b646b76eff362f3fe58830d2eb9"
+    },
+    {
+      "iata": "KUF",
+      "country": "Russia",
+      "guide": true,
+      "status": "needs_editorial_audit",
+      "blocks": 6,
+      "checked": "2026-10-25",
+      "topics": [
+        "transport",
+        "lounges",
+        "storage",
+        "kids",
+        "parking",
+        "wifi"
+      ],
+      "translations": 11,
+      "sourceUrls": [
+        "https://ar-kuf.ru/how-to-get/to/bus/",
+        "https://ar-kuf.ru/services/businesshall/",
+        "https://ar-kuf.ru/services/luggage/",
+        "https://ar-kuf.ru/services/child-room/",
+        "https://ar-kuf.ru/parking/",
+        "https://ar-kuf.ru/services/wifi/"
+      ],
+      "sourceHash": "f0e8d4e9a03a75930215f88b4d8aa231a02387a1aed82f74fecc4f08e29af5f4"
+    },
+    {
+      "iata": "KUL",
+      "country": "Malaysia",
+      "guide": true,
+      "status": "needs_editorial_audit",
+      "blocks": 4,
+      "checked": "2026-10-25",
+      "topics": [
+        "transport",
+        "taxi",
+        "terminals",
+        "parking"
+      ],
+      "translations": 11,
+      "sourceUrls": [
+        "https://www.malaysiaairports.com.my/en/klia1/air-travel/public-transport?tab=train",
+        "https://www.malaysiaairports.com.my/en/klia1/air-travel/public-transport",
+        "https://www.malaysiaairports.com.my/en/klia1/air-travel/inter-terminal-transfer",
+        "https://www.malaysiaairports.com.my/en/klia1/parking"
+      ],
+      "sourceHash": "12a0a6772881b56bc18c4ceb25704c53c8c8107c26ff4d3bd240d2e315a07606"
+    },
+    {
+      "iata": "KVX",
+      "country": "Russia",
+      "guide": true,
+      "status": "needs_editorial_audit",
+      "blocks": 3,
+      "checked": "2026-10-25",
+      "topics": [
+        "lounges",
+        "kids",
+        "parking"
+      ],
+      "translations": 11,
+      "sourceUrls": [
+        "https://pobedilovo43.ru/services/vip-obsluzhivanie/",
+        "https://pobedilovo43.ru/services/komnata-materi-i-rebenka/",
+        "https://pobedilovo43.ru/services/parkovka/"
+      ],
+      "sourceHash": "d1ed558acf0adf3910a8aae7e2cf512bcf2fb65c06ebf404574e9595633b8552"
+    },
+    {
+      "iata": "KZN",
+      "country": "Russia",
+      "guide": true,
+      "status": "needs_editorial_audit",
+      "blocks": 6,
+      "checked": "2026-11-09",
+      "topics": [
+        "transport",
+        "lounges",
+        "storage",
+        "sleep",
+        "kids",
+        "parking"
+      ],
+      "translations": 11,
+      "sourceUrls": [
+        "https://kazan.aero/for-passengers-and-guests/how-to-get/",
+        "https://kazan.aero/vip-lounge/new/",
+        "https://kazan.aero/services/luggage-storage/",
+        "https://kazan.aero/services/hotel/",
+        "https://kazan.aero/services/mother-and-child-room/",
+        "https://kazan.aero/services/parking/"
+      ],
+      "sourceHash": "2bb2e5929cba6b5998f02d7bdb91b8dc2154d5c0ea0c8cff01b6f4369a84253b"
+    },
+    {
+      "iata": "LAS",
+      "country": "United States",
+      "guide": true,
+      "status": "needs_editorial_audit",
+      "blocks": 4,
+      "checked": "2026-10-25",
+      "topics": [
+        "transport",
+        "taxi",
+        "terminals",
+        "parking"
+      ],
+      "translations": 11,
+      "sourceUrls": [
+        "https://www.harryreidairport.com/busses-shuttles/public-bus",
+        "https://www.harryreidairport.com/taxi-and-ride-share/taxis",
+        "https://www.harryreidairport.com/parking"
+      ],
+      "sourceHash": "3486b35f7f0dd405cb5c54ca4804f44201472cb1a875617e98502b87de7ecb03"
+    },
+    {
+      "iata": "LAX",
+      "country": "United States",
+      "guide": true,
+      "status": "needs_editorial_audit",
+      "blocks": 4,
+      "checked": "2026-10-25",
+      "topics": [
+        "transport",
+        "taxi",
+        "parking",
+        "wifi"
+      ],
+      "translations": 11,
+      "sourceUrls": [
+        "https://www.flylax.com/flyaway-bus",
+        "https://www.flylax.com/lax-traffic-and-ground-transportation",
+        "https://www.flylax.com/parking-at-lax",
+        "https://www.flylax.com/lax-wifi"
+      ],
+      "sourceHash": "3a919707673eaced0bb864a5a8e12b10a3d3792995d9ec53b5e644c0480c11ba"
+    },
+    {
+      "iata": "LBA",
+      "country": "United Kingdom",
+      "guide": true,
+      "status": "needs_editorial_audit",
+      "blocks": 4,
+      "checked": "2026-10-29",
+      "topics": [
+        "transport",
+        "taxi",
+        "kids",
+        "parking"
+      ],
+      "translations": 11,
+      "sourceUrls": [
+        "https://www.leedsbradfordairport.co.uk/getting-to-and-from",
+        "https://www.leedsbradfordairport.co.uk/help/travelling-with-children",
+        "https://www.leedsbradfordairport.co.uk/help/parking"
+      ],
+      "sourceHash": "223989be47bfa0be11727045c10a6e7d063eebe6c3ea23c983365063bc3ec1bb"
+    },
+    {
+      "iata": "LCY",
+      "country": "United Kingdom",
+      "guide": true,
+      "status": "needs_editorial_audit",
+      "blocks": 3,
+      "checked": "2026-10-30",
+      "topics": [
+        "transport",
+        "taxi",
+        "parking"
+      ],
+      "translations": 11,
+      "sourceUrls": [
+        "https://www.londoncityairport.com/getting-to-and-from",
+        "https://www.londoncityairport.com/getting-to-and-from/taxi-rank",
+        "https://www.londoncityairport.com/parking/pick-up"
+      ],
+      "sourceHash": "957917b23ae4cf1e27d967f1e9be1df8144707b696bb41e32b13c9fd62d919dc"
+    },
+    {
+      "iata": "LED",
+      "country": "Russia",
+      "guide": true,
+      "status": "needs_editorial_audit",
+      "blocks": 9,
+      "checked": "2026-10-25",
+      "topics": [
+        "lounges",
+        "storage",
+        "sleep",
+        "kids",
+        "transport",
+        "taxi",
+        "parking",
+        "wifi",
+        "terminals"
+      ],
+      "translations": 11,
+      "sourceUrls": [
+        "https://pulkovoairport.ru/passengers/services/business-lounge/",
+        "https://pulkovoairport.ru/passengers/baggage/storage/",
+        "https://pulkovoairport.ru/passengers/services/accommodation/",
+        "https://pulkovoairport.ru/passengers/pulkovo_children/",
+        "https://orgp.spb.ru/airport_pulkovo/",
+        "https://pulkovoairport.ru/transport/",
+        "https://pulkovoairport.ru/passengers/services/be_in_touch/wi-fi/",
+        "https://pulkovoairport.ru/passengers/services/cafes/"
+      ],
+      "sourceHash": "336470c8885dc83aded7a9e4365074fe1db98a06a4d7a08f344ded2bdbfffec1"
+    },
+    {
+      "iata": "LGA",
+      "country": "United States",
+      "guide": true,
+      "status": "needs_editorial_audit",
+      "blocks": 4,
+      "checked": "2026-10-26",
+      "topics": [
+        "transport",
+        "taxi",
+        "terminals",
+        "wifi"
+      ],
+      "translations": 11,
+      "sourceUrls": [
+        "https://www.laguardiaairport.com/transportation/public-transport",
+        "https://www.laguardiaairport.com/transportation/taxi-service",
+        "https://www.laguardiaairport.com/transportation/all-terminals-shuttle",
+        "https://www.laguardiaairport.com/explore-lga/services"
+      ],
+      "sourceHash": "1a4b25008b568f79ceaefffbbaf5db09744f7319d093214fbc50b0010128eca2"
+    },
+    {
+      "iata": "LGW",
+      "country": "United Kingdom",
+      "guide": true,
+      "status": "needs_editorial_audit",
+      "blocks": 3,
+      "checked": "2026-10-26",
+      "topics": [
+        "transport",
+        "kids",
+        "wifi"
+      ],
+      "translations": 11,
+      "sourceUrls": [
+        "https://www.gatwickairport.com/transport-options/train.html",
+        "https://www.gatwickairport.com/passenger-guides/travelling-with-children.html",
+        "https://www.gatwickairport.com/passenger-guides/wifi-charging.html"
+      ],
+      "sourceHash": "6515f06a80eec8c538e01baedfda2647dca65c857b367decfc1640a6a847008f"
+    },
+    {
+      "iata": "LHR",
+      "country": "United Kingdom",
+      "guide": true,
+      "status": "needs_editorial_audit",
+      "blocks": 5,
+      "checked": "2026-10-25",
+      "topics": [
+        "transport",
+        "taxi",
+        "lounges",
+        "storage",
+        "wifi"
+      ],
+      "translations": 11,
+      "sourceUrls": [
+        "https://www.heathrow.com/transport-and-directions/by-rail-or-train",
+        "https://www.heathrow.com/transport-and-directions/by-taxi-or-mini-cab",
+        "https://www.heathrow.com/at-the-airport/lounges-hotels-spas",
+        "https://www.heathrow.com/at-the-airport/airport-services/left-luggage",
+        "https://www.heathrow.com/at-the-airport/airport-services/internet-and-wifi"
+      ],
+      "sourceHash": "ecfc69a51acee30845269ab2ace9bdfc0a8e70e252b6912eaaa9426da099c949"
+    },
+    {
+      "iata": "LIM",
+      "country": "Peru",
+      "guide": true,
+      "status": "needs_editorial_audit",
+      "blocks": 4,
+      "checked": "2026-10-26",
+      "topics": [
+        "taxi",
+        "lounges",
+        "sleep",
+        "wifi"
+      ],
+      "translations": 11,
+      "sourceUrls": [
+        "https://www.lima-airport.com/en/pasajeros/transporte/taxi",
+        "https://www.lima-airport.com/en/pasajeros/establecimientos/ver/354",
+        "https://www.lima-airport.com/en/pasajeros/establecimientos/ver/355",
+        "https://www.lima-airport.com/en/pasajeros/servicios/wifi"
+      ],
+      "sourceHash": "220edbeee0845a30443a91a856fa5533e19256d3889004834b68edd623223af9"
+    },
+    {
+      "iata": "LIS",
+      "country": "Portugal",
+      "guide": true,
+      "status": "needs_editorial_audit",
+      "blocks": 4,
+      "checked": "2026-10-26",
+      "topics": [
+        "transport",
+        "terminals",
+        "kids",
+        "wifi"
+      ],
+      "translations": 11,
+      "sourceUrls": [
+        "https://www.lisbonairport.pt/en/lis/access-parking/getting-to-and-from-the-airport/public-transportation",
+        "https://www.lisbonairport.pt/en/lis/access-parking/getting-to-and-from-the-airport/terminal-2",
+        "https://www.lisbonairport.pt/en/lis/services-shopping/essential-services/family-services",
+        "https://www.lisbonairport.pt/en/lis/services-shopping/essential-services/free-wifi"
+      ],
+      "sourceHash": "0c5acb15a9f8e5e1485ca06aa1fbb1477cdb1db72a5d0687843e6f6fdf14eb2a"
+    },
+    {
+      "iata": "LWN",
+      "country": "Armenia",
+      "guide": true,
+      "status": "needs_editorial_audit",
+      "blocks": 1,
+      "checked": "2026-10-28",
+      "topics": [
+        "transport"
+      ],
+      "translations": 11,
+      "sourceUrls": [
+        "https://www.sixt.com/car-rental/armenia/gyumri/gyumri-shirak-airport/"
+      ],
+      "sourceHash": "6606d8e8daf24f330f8d630f3a1fda21010c86d55bf628467b9fa28412ed9192"
+    },
+    {
+      "iata": "MAD",
+      "country": "Spain",
+      "guide": true,
+      "status": "needs_editorial_audit",
+      "blocks": 3,
+      "checked": "2026-10-25",
+      "topics": [
+        "transport",
+        "taxi",
+        "wifi"
+      ],
+      "translations": 11,
+      "sourceUrls": [
+        "https://www.aena.es/en/adolfo-suarez-madrid-barajas/getting-there/underground.html",
+        "https://www.aena.es/en/adolfo-suarez-madrid-barajas/getting-there/taxi.html",
+        "https://www.aena.es/en/adolfo-suarez-madrid-barajas/airport-services/wi-fi.html"
+      ],
+      "sourceHash": "76f6dc9a6bf2c887a1f128c7223b06344c67499f9a322604e572af1eec23d50a"
+    },
+    {
+      "iata": "MAN",
+      "country": "United Kingdom",
+      "guide": true,
+      "status": "needs_editorial_audit",
+      "blocks": 4,
+      "checked": "2026-10-26",
+      "topics": [
+        "transport",
+        "storage",
+        "kids",
+        "wifi"
+      ],
+      "translations": 11,
+      "sourceUrls": [
+        "https://www.manchesterairport.co.uk/getting-to-and-from/by-train/",
+        "https://www.manchesterairport.co.uk/at-the-airport/airport-facilities/"
+      ],
+      "sourceHash": "3b710e40525c7b75c6b7945e6e4ad241deda8c4a6d18194d6bd7d030fec4c29d"
+    },
+    {
+      "iata": "MCO",
+      "country": "United States",
+      "guide": true,
+      "status": "needs_editorial_audit",
+      "blocks": 6,
+      "checked": "2026-10-25",
+      "topics": [
+        "transport",
+        "taxi",
+        "sleep",
+        "kids",
+        "parking",
+        "wifi"
+      ],
+      "translations": 11,
+      "sourceUrls": [
+        "https://flymco.com/train-service/",
+        "https://flymco.com/ground-transportation/",
+        "https://flymco.com/hotel/",
+        "https://flymco.com/family-friendly-amenities/",
+        "https://flymco.com/parking-information/",
+        "https://flymco.com/faq/"
+      ],
+      "sourceHash": "189dafba2eff8011b1f1e65b1974954c9595a873eee3d9e0e6c1108e693dddb7"
+    },
+    {
+      "iata": "MCX",
+      "country": "Russia",
+      "guide": true,
+      "status": "needs_editorial_audit",
+      "blocks": 3,
+      "checked": "2026-10-25",
+      "topics": [
+        "terminals",
+        "lounges",
+        "parking"
+      ],
+      "translations": 11,
+      "sourceUrls": [
+        "https://mcx.aero/scheme/",
+        "https://mcx.aero/infoforpass/",
+        "https://mcx.aero/upload/doc/%D0%9F%D0%BE%D0%B4%D0%BF.%20%D0%97%D0%9E%D0%9B%D0%94%20%D0%BF%D1%83%D0%B1%D0%BB.%20%D0%B4%D0%BE%D0%B3%D0%BE%D0%B2%D0%BE%D1%80.pdf",
+        "https://mcx.aero/upload/doc/%D0%9F%D1%83%D0%B1%D0%BB%D0%B8%D1%87%D0%BD%D1%8B%D0%B9%20%D0%B4%D0%BE%D0%B3%D0%BE%D0%B2%D0%BE%D1%80%20%D0%BF%D0%B0%D1%80%D0%BA%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D1%8F.pdf",
+        "https://mcx.aero/services/parking/"
+      ],
+      "sourceHash": "159064235f6703a45eb847821f460d6a72eebb96b932e78b3cc0e5f47fa6c947"
+    },
+    {
+      "iata": "MEL",
+      "country": "Australia",
+      "guide": true,
+      "status": "needs_editorial_audit",
+      "blocks": 5,
+      "checked": "2026-10-26",
+      "topics": [
+        "transport",
+        "storage",
+        "sleep",
+        "kids",
+        "wifi"
+      ],
+      "translations": 11,
+      "sourceUrls": [
+        "https://www.melbourneairport.com.au/bus-services",
+        "https://www.melbourneairport.com.au/facilities-services",
+        "https://www.melbourneairport.com.au/wi-fi"
+      ],
+      "sourceHash": "c3bf90cb51316637c2732c96c3890e2327d354ef3c4f4407c89394883e35538f"
+    },
+    {
+      "iata": "MEX",
+      "country": "Mexico",
+      "guide": true,
+      "status": "needs_editorial_audit",
+      "blocks": 3,
+      "checked": "2026-10-26",
+      "topics": [
+        "transport",
+        "terminals",
+        "storage"
+      ],
+      "translations": 11,
+      "sourceUrls": [
+        "https://www.aicm.com.mx/pasajeros/servicios/prestadores-de-servicios/transportes/metrobus",
+        "https://www.aicm.com.mx/pasajeros/servicios/servicios-aicm/aerotren",
+        "https://www.aicm.com.mx/pasajeros/servicios/prestadores-de-servicios/locker"
+      ],
+      "sourceHash": "4e127b0a4b92871d9f312645be2e41ab63b4335175f3ac4de062ed1582a2a406"
+    },
+    {
+      "iata": "MIA",
+      "country": "United States",
+      "guide": true,
+      "status": "needs_editorial_audit",
+      "blocks": 8,
+      "checked": "2026-10-25",
+      "topics": [
+        "transport",
+        "taxi",
+        "lounges",
+        "storage",
+        "sleep",
+        "kids",
+        "parking",
+        "wifi"
+      ],
+      "translations": 11,
+      "sourceUrls": [
+        "https://www.miami-airport.com/public-transportation.asp",
+        "https://www.miami-airport.com/taxicabs-shuttles.asp",
+        "https://www.miami-airport.com/clubs-and-lounges.asp",
+        "https://www.miami-airport.com/services-and-amenities.asp",
+        "https://www.miami-airport.com/airport-parking.asp"
+      ],
+      "sourceHash": "5e5bb9bd75f9040b0e9b9d825ce85d8c4f6dd4a4c8cf192e00737702ca50a8aa"
+    },
+    {
+      "iata": "MMK",
+      "country": "Russia",
+      "guide": true,
+      "status": "needs_editorial_audit",
+      "blocks": 3,
+      "checked": "2026-10-25",
+      "topics": [
+        "transport",
+        "storage",
+        "kids"
+      ],
+      "translations": 11,
+      "sourceUrls": [
+        "https://mmkavia.ru/transport/how/bus/",
+        "https://mmkavia.ru/services/infrastructure/storage/",
+        "https://mmkavia.ru/passengers/information/babysroom/"
+      ],
+      "sourceHash": "d5f9cf01e0b087646bc24e61d2ee96a83d0aba359c31b3b92e009e5810e9012f"
+    },
+    {
+      "iata": "MNL",
+      "country": "Philippines",
+      "guide": true,
+      "status": "needs_editorial_audit",
+      "blocks": 3,
+      "checked": "2026-10-26",
+      "topics": [
+        "taxi",
+        "parking",
+        "wifi"
+      ],
+      "translations": 11,
+      "sourceUrls": [
+        "https://newnaia.com.ph/transport",
+        "https://newnaia.com.ph/transport/parking",
+        "https://newnaia.com.ph/discover/other-services-amenities"
+      ],
+      "sourceHash": "688aaadb97c8bf19e3f5810dda1254cb91fceb637faae2c90a5f148d06f4c6fb"
+    },
+    {
+      "iata": "MRV",
+      "country": "Russia",
+      "guide": true,
+      "status": "needs_editorial_audit",
+      "blocks": 5,
+      "checked": "2026-10-25",
+      "topics": [
+        "transport",
+        "lounges",
+        "storage",
+        "kids",
+        "parking"
+      ],
+      "translations": 11,
+      "sourceUrls": [
+        "https://mvairport.ru/transport/how/taxi/",
+        "https://mvairport.ru/services/comfort/prioritypasslounge/",
+        "https://mvairport.ru/services/infrastructure/storage/",
+        "https://mvairport.ru/services/infrastructure/babysroom",
+        "https://mvairport.ru/airport/info/",
+        "https://mvairport.ru/transport/parking/tariff/"
+      ],
+      "sourceHash": "de08333571d184ce02f6fb3781577a3362e7b56942fbe88d7b38507a47b65d3d"
+    },
+    {
+      "iata": "MSP",
+      "country": "United States",
+      "guide": true,
+      "status": "needs_editorial_audit",
+      "blocks": 4,
+      "checked": "2026-10-26",
+      "topics": [
+        "transport",
+        "taxi",
+        "sleep",
+        "wifi"
+      ],
+      "translations": 11,
+      "sourceUrls": [
+        "https://www.mspairport.com/directions-and-transportation/ground-transportation/light-rail-transit",
+        "https://www.mspairport.com/directions-and-transportation/ground-transportation/taxi-service",
+        "https://www.mspairport.com/index%2Ephp/airport/service-amenities",
+        "https://www.mspairport.com/airport/service-amenities/wi-fi"
+      ],
+      "sourceHash": "30b69f4fdb0bc135c4393ddf666cd8c281ee3efe42cbd49ff49c422d80875026"
+    },
+    {
+      "iata": "MUC",
+      "country": "Germany",
+      "guide": true,
+      "status": "needs_editorial_audit",
+      "blocks": 5,
+      "checked": "2026-10-25",
+      "topics": [
+        "transport",
+        "storage",
+        "sleep",
+        "kids",
+        "wifi"
+      ],
+      "translations": 11,
+      "sourceUrls": [
+        "https://www.munich-airport.com/public-transport-260822",
+        "https://www.munich-airport.com/left-luggage-851650",
+        "https://www.munich-airport.com/napcabs-napcabsxl-524609",
+        "https://www.munich-airport.com/children-s-play-areas-813266",
+        "https://www.munich-airport.com/wi-fi-848044"
+      ],
+      "sourceHash": "b79c6a0ecf5f659290198e76301ffd54bcea086ed89f6ece79ce9bec3db9c3b6"
+    },
+    {
+      "iata": "MXP",
+      "country": "Italy",
+      "guide": true,
+      "status": "needs_editorial_audit",
+      "blocks": 2,
+      "checked": "2026-10-26",
+      "topics": [
+        "transport",
+        "sleep"
+      ],
+      "translations": 11,
+      "sourceUrls": [
+        "https://www.malpensaexpress.it/en/lines-and-timetable/most-searched-lines/malpensa-aeroporto-t1-milano-centrale-route/",
+        "https://www.marriott.com/en-us/hotels/milmp-sheraton-milan-malpensa-airport-hotel-and-conference-centre/overview/"
+      ],
+      "sourceHash": "e5207bb5dac5564cf5d71f15606c7043df880400d30f53e3155d9b94fa3caa86"
+    },
+    {
+      "iata": "NAL",
+      "country": "Russia",
+      "guide": true,
+      "status": "needs_editorial_audit",
+      "blocks": 3,
+      "checked": "2026-10-25",
+      "topics": [
+        "transport",
+        "lounges",
+        "kids"
+      ],
+      "translations": 11,
+      "sourceUrls": [
+        "https://nalchik-airport.ru/transport/how/taxi/17/",
+        "https://nalchik-airport.ru/passengers/vip/",
+        "https://nalchik-airport.ru/services/infrastructure/babysroom/"
+      ],
+      "sourceHash": "45431a2bc48891bcc4678bbd411c1a7f744d0e6c205bba40dbd0291c74c8cee2"
+    },
+    {
+      "iata": "NBC",
+      "country": "Russia",
+      "guide": true,
+      "status": "needs_editorial_audit",
+      "blocks": 8,
+      "checked": "2026-10-25",
+      "topics": [
+        "transport",
+        "terminals",
+        "lounges",
+        "storage",
+        "sleep",
+        "kids",
+        "parking",
+        "wifi"
+      ],
+      "translations": 11,
+      "sourceUrls": [
+        "https://nbc.aero/passengers/find-us/",
+        "https://nbc.aero/services/mother-and-baby-room/",
+        "https://nbc.aero/services/vip-services/",
+        "https://nbc.aero/services/luggage-storage/",
+        "https://nbc.aero/services/airport-hotel/",
+        "https://nbc.aero/services/parking-lot/",
+        "https://nbc.aero/services/wi-fi/"
+      ],
+      "sourceHash": "f40edbd10d4cb0ebc5376520305808ad3362687c15777caf66d8b171fd37d294"
+    },
+    {
+      "iata": "NCL",
+      "country": "United Kingdom",
+      "guide": true,
+      "status": "needs_editorial_audit",
+      "blocks": 4,
+      "checked": "2026-10-29",
+      "topics": [
+        "transport",
+        "taxi",
+        "kids",
+        "wifi"
+      ],
+      "translations": 11,
+      "sourceUrls": [
+        "https://www.newcastleairport.com/getting-to-and-from/getting-to-the-airport/by-metro/",
+        "https://www.newcastleairport.com/getting-to-and-from/getting-to-the-airport/by-taxi/",
+        "https://www.newcastleairport.com/at-the-airport/travelling-with-children/",
+        "https://www.newcastleairport.com/at-the-airport/airport-facilities/"
+      ],
+      "sourceHash": "fea73068881f5367e29059dbbf6fa9d4b56760022edf80de0c298e0bae279048"
+    },
+    {
+      "iata": "NER",
+      "country": "Russia",
+      "guide": true,
+      "status": "needs_editorial_audit",
+      "blocks": 3,
+      "checked": "2026-10-25",
+      "topics": [
+        "terminals",
+        "lounges",
+        "kids"
+      ],
+      "translations": 11,
+      "sourceUrls": [
+        "https://sever.aero/neryungri/about",
+        "https://sever.aero/neryungri/passengers/ticket-offices",
+        "https://sever.aero/neryungri/business-lounge",
+        "https://sever.aero/neryungri/passengers/services/mother-and-child-room"
+      ],
+      "sourceHash": "8e814251d4d0d514e595accf4dd069b43147dbf8e146e174597393d1a0ad50b1"
+    },
+    {
+      "iata": "NJC",
+      "country": "Russia",
+      "guide": true,
+      "status": "needs_editorial_audit",
+      "blocks": 6,
+      "checked": "2026-10-25",
+      "topics": [
+        "transport",
+        "terminals",
+        "lounges",
+        "storage",
+        "kids",
+        "parking"
+      ],
+      "translations": 11,
+      "sourceUrls": [
+        "https://nv-aero.ru/Home/Show?_id=19&_cl=t",
+        "https://nv-aero.ru/Home/Show?_id=6130&_cl=t",
+        "https://nv-aero.ru/Home/Show?_id=59&_cl=t",
+        "https://nv-aero.ru/Home/Show?_id=5109&_cl=t",
+        "https://nv-aero.ru/Home/doc/Rates/%D0%9F%D0%BB%D0%B0%D1%82%D0%BD%D1%8B%D0%B5%20%D1%83%D1%81%D0%BB%D1%83%D0%B3%D0%B8%20%D1%81%2001.01.2026.pdf",
+        "https://nv-aero.ru/Home/Show?_id=6117&_cl=t"
+      ],
+      "sourceHash": "367ed790ddc13654f2f1dd16dab0e288423b009ccc27869ce4e283a96d9b9e57"
+    },
+    {
+      "iata": "NKG",
+      "country": "China",
+      "guide": true,
+      "status": "needs_editorial_audit",
+      "blocks": 1,
+      "checked": "2026-10-26",
+      "topics": [
+        "sleep"
+      ],
+      "translations": 11,
+      "sourceUrls": [
+        "https://all.accor.com/hotel/8737/index.en.shtml"
+      ],
+      "sourceHash": "6f3d92ecf5c2270197e0ad94caac121899401756711eca196e9750f1cf3f816a"
+    },
+    {
+      "iata": "NLI",
+      "country": "Russia",
+      "guide": true,
+      "status": "needs_editorial_audit",
+      "blocks": 2,
+      "checked": "2026-10-25",
+      "topics": [
+        "storage",
+        "lounges"
+      ],
+      "translations": 11,
+      "sourceUrls": [
+        "http://khabavia.ru/wp-content/uploads/2026/06/%D0%9F%D1%80%D0%B5%D0%B9%D1%81%D0%BA%D1%83%D1%80%D0%B0%D0%BD%D1%82-1-26_%D0%9D%D0%9A%D0%9B-%D1%81-05.06.2026.pdf",
+        "http://khabavia.ru/%D0%B0%D1%8D%D1%80%D0%BE%D0%BF%D0%BE%D1%80%D1%82-%D0%BD%D0%B8%D0%BA%D0%BE%D0%BB%D0%B0%D0%B5%D0%B2%D1%81%D0%BA-%D0%BD%D0%B0-%D0%B0%D0%BC%D1%83%D1%80%D0%B5/"
+      ],
+      "sourceHash": "aaaec3370a0b294b58aeb2efb8e0a31b69936c20186107eff062ce87b512612b"
+    },
+    {
+      "iata": "NNM",
+      "country": "Russia",
+      "guide": true,
+      "status": "needs_editorial_audit",
+      "blocks": 3,
+      "checked": "2026-10-25",
+      "topics": [
+        "lounges",
+        "storage",
+        "parking"
+      ],
+      "translations": 11,
+      "sourceUrls": [
+        "https://avianao.ru/?page=business-lounge",
+        "https://avianao.ru/?page=contacts",
+        "https://avianao.ru/?page=left-luggage",
+        "https://avianao.ru/?page=parking"
+      ],
+      "sourceHash": "0bc22b482f5640f26c493df7d507316c74534b3f38f0a77c083a7ebbcf7f1398"
+    },
+    {
+      "iata": "NOJ",
+      "country": "Russia",
+      "guide": true,
+      "status": "needs_editorial_audit",
+      "blocks": 3,
+      "checked": "2026-10-25",
+      "topics": [
+        "transport",
+        "terminals",
+        "lounges"
+      ],
+      "translations": 11,
+      "sourceUrls": [
+        "https://www.airport-surgut.ru/branches/noyabrsk/info/"
+      ],
+      "sourceHash": "5912672a045d637774b9c0e6b99dddfa31bf7dbd6c7d3e33396d3ef77a373ec6"
+    },
+    {
+      "iata": "NOZ",
+      "country": "Russia",
+      "guide": true,
+      "status": "needs_editorial_audit",
+      "blocks": 7,
+      "checked": "2026-10-25",
+      "topics": [
+        "transport",
+        "terminals",
+        "lounges",
+        "storage",
+        "sleep",
+        "kids",
+        "parking"
+      ],
+      "translations": 11,
+      "sourceUrls": [
+        "https://www.aerokuz.ru/how-to-get/",
+        "https://www.aerokuz.ru/about/",
+        "https://www.aerokuz.ru/departing/",
+        "https://www.aerokuz.ru/services/domestic-lounge/",
+        "https://www.aerokuz.ru/services/vip-lounge/",
+        "https://www.aerokuz.ru/services/storage/",
+        "https://www.aerokuz.ru/services/hotel/",
+        "https://www.aerokuz.ru/services/nursery/",
+        "https://www.aerokuz.ru/services/parking/"
+      ],
+      "sourceHash": "379fc2983add90c527271f1bc09a64599a524340a0212f75c3e6a72d39668128"
+    },
+    {
+      "iata": "NRT",
+      "country": "Japan",
+      "guide": true,
+      "status": "needs_editorial_audit",
+      "blocks": 4,
+      "checked": "2026-10-26",
+      "topics": [
+        "terminals",
+        "storage",
+        "kids",
+        "wifi"
+      ],
+      "translations": 11,
+      "sourceUrls": [
+        "https://www.narita-airport.jp/en/access/shuttlebus/",
+        "https://www.narita-airport.jp/en/service/delivery/locker/",
+        "https://www.narita-airport.jp/en/service/child/baby/",
+        "https://www.narita-airport.jp/en/service/internet/power-outlet/"
+      ],
+      "sourceHash": "2c17be625755ec3dd7d1d7727789bb5151f0e1ad9a015db8a42fefa9ec82a890"
+    },
+    {
+      "iata": "NSK",
+      "country": "Russia",
+      "guide": true,
+      "status": "needs_editorial_audit",
+      "blocks": 5,
+      "checked": "2026-10-25",
+      "topics": [
+        "transport",
+        "terminals",
+        "lounges",
+        "sleep",
+        "kids"
+      ],
+      "translations": 11,
+      "sourceUrls": [
+        "https://airport-norilsk.ru/transport/",
+        "https://airport-norilsk.ru/ob-aeroporte/infrastruktura/",
+        "https://airport-norilsk.ru/ob-aeroporte/obshaya-informaciya/",
+        "https://airport-norilsk.ru/uslugi/vip-uslugi/",
+        "https://airport-norilsk.ru/uslugi/profilaktoriy/",
+        "https://airport-norilsk.ru/uslugi/komnata-materi-i-rebenka/"
+      ],
+      "sourceHash": "cf952481f399d9896add7ca7c0d86e409bc909387f45b9b4a673b5cb3ddc76e2"
+    },
+    {
+      "iata": "NUX",
+      "country": "Russia",
+      "guide": true,
+      "status": "needs_editorial_audit",
+      "blocks": 5,
+      "checked": "2026-10-25",
+      "topics": [
+        "transport",
+        "parking",
+        "lounges",
+        "storage",
+        "wifi"
+      ],
+      "translations": 11,
+      "sourceUrls": [
+        "https://ar-nux.ru/how-to-get/to/bus/",
+        "https://ar-nux.ru/parking/",
+        "https://ar-nux.ru/services/businesshall/",
+        "https://ar-nux.ru/services/luggage/",
+        "https://ar-nux.ru/services/besplatnyy-wi-fi-/"
+      ],
+      "sourceHash": "4d4adeb3c48e46ac47e99fee8ddfa5fa990fdd73744b0c39ad85fa7f2a7271b1"
+    },
+    {
+      "iata": "NYM",
+      "country": "Russia",
+      "guide": true,
+      "status": "needs_editorial_audit",
+      "blocks": 4,
+      "checked": "2026-10-25",
+      "topics": [
+        "transport",
+        "lounges",
+        "kids",
+        "parking"
+      ],
+      "translations": 11,
+      "sourceUrls": [
+        "https://avianadym.ru/Passengers/passengers_vilet_prilet.php",
+        "https://avianadym.ru/Passengers/passengers_vip_zali.php",
+        "https://avianadym.ru/Passengers/passengers_mother_and_child_room.php",
+        "https://avianadym.ru/Passengers/passengers_invalid.php"
+      ],
+      "sourceHash": "a34f77a5578c0b96d99589fd5fb69684ce759c4a9e4df28de0653fe0a87c5ae4"
+    },
+    {
+      "iata": "OKA",
+      "country": "Japan",
+      "guide": true,
+      "status": "needs_editorial_audit",
+      "blocks": 4,
+      "checked": "2026-10-26",
+      "topics": [
+        "transport",
+        "storage",
+        "kids",
+        "wifi"
+      ],
+      "translations": 11,
+      "sourceUrls": [
+        "https://www.yui-rail.co.jp/en/routemap/nahakuko/",
+        "https://www.naha-airport.co.jp/en/service/shipping/baggage/",
+        "https://www.naha-airport.co.jp/en/service/family/nursing/",
+        "https://www.naha-airport.co.jp/en/service/wifi/wifi-spot/"
+      ],
+      "sourceHash": "db2a1b3f376af5c99f1e7be938587af698c02aae45d0278367c144d7fc469121"
+    },
+    {
+      "iata": "ORD",
+      "country": "United States",
+      "guide": true,
+      "status": "needs_editorial_audit",
+      "blocks": 7,
+      "checked": "2026-10-25",
+      "topics": [
+        "transport",
+        "taxi",
+        "lounges",
+        "sleep",
+        "kids",
+        "parking",
+        "wifi"
+      ],
+      "translations": 11,
+      "sourceUrls": [
+        "https://www.flychicago.com/ohare/tofrom/publictransit/Pages/default.aspx",
+        "https://www.flychicago.com/ohare/tofrom/taxi/pages/default.aspx",
+        "https://www.flychicago.com/ohare/ServicesAmenities/services/Pages/lounges.aspx",
+        "https://www.flychicago.com/ohare/ServicesAmenities/amenities/Pages/hotel.aspx",
+        "https://www.flychicago.com/ohare/ServicesAmenities/services/Pages/children.aspx",
+        "https://www.flychicago.com/ohare/tofrom/parking/pages/general.aspx",
+        "https://www.flychicago.com/ohare/ServicesAmenities/services/Pages/technology.aspx"
+      ],
+      "sourceHash": "481eb2b632a224e72f79b135d40ca0ca4a48414446ce5a8555fe490db8eb2ab7"
+    },
+    {
+      "iata": "ORK",
+      "country": "Ireland",
+      "guide": true,
+      "status": "needs_editorial_audit",
+      "blocks": 5,
+      "checked": "2026-11-05",
+      "topics": [
+        "transport",
+        "taxi",
+        "terminals",
+        "parking",
+        "wifi"
+      ],
+      "translations": 11,
+      "sourceUrls": [
+        "https://www.corkairport.com/to-from-the-airport/by-bus",
+        "https://www.corkairport.com/to-from-the-airport/by-taxi",
+        "https://www.corkairport.com/at-the-airport/contacts-services",
+        "https://www.corkairport.com/parking/short-term-car-parking",
+        "https://www.corkairport.com/at-the-airport/contacts-services/wi-fi-printing-services"
+      ],
+      "sourceHash": "d87b09698715f1212d5bf61072362b4772071430841df0ecfd1e755d6b43e4e9"
+    },
+    {
+      "iata": "ORY",
+      "country": "France",
+      "guide": true,
+      "status": "needs_editorial_audit",
+      "blocks": 4,
+      "checked": "2026-10-26",
+      "topics": [
+        "transport",
+        "storage",
+        "kids",
+        "wifi"
+      ],
+      "translations": 11,
+      "sourceUrls": [
+        "https://www.parisaeroport.fr/en/passengers/transport-parking/public-transport-paris/best-way-to-get-there/ory",
+        "https://www.parisaeroport.fr/en/passengers/at-the-airport/services/luggage-storage/ory",
+        "https://www.parisaeroport.fr/en/passengers/at-the-airport/services/family-areas/ory",
+        "https://www.parisaeroport.fr/en/passengers/at-the-airport/services/wifi/ory"
+      ],
+      "sourceHash": "c3d7770fdd77b53536bdbe99a9988fef6d9425aca8e30f910771bcf274d1f19d"
+    },
+    {
+      "iata": "OSW",
+      "country": "Russia",
+      "guide": true,
+      "status": "needs_editorial_audit",
+      "blocks": 3,
+      "checked": "2026-10-25",
+      "topics": [
+        "lounges",
+        "kids",
+        "parking"
+      ],
+      "translations": 11,
+      "sourceUrls": [
+        "https://aviaorsk.ru/services/comfort/business/",
+        "https://aviaorsk.ru/services/infrastructure/babysroom/",
+        "https://aviaorsk.ru/transport/parking/tariff/"
+      ],
+      "sourceHash": "3d7570043c2fc4736a236f4526d47e1fb63b49a8e82f7676a838944a93587f55"
+    },
+    {
+      "iata": "OVB",
+      "country": "Russia",
+      "guide": true,
+      "status": "needs_editorial_audit",
+      "blocks": 5,
+      "checked": "2026-11-09",
+      "topics": [
+        "transport",
+        "lounges",
+        "storage",
+        "kids",
+        "parking"
+      ],
+      "translations": 11,
+      "sourceUrls": [
+        "https://tolmachevo.ru/transport/how/bus/111/",
+        "https://tolmachevo.ru/transport/how/ob-tolmchevo-ob/",
+        "https://tolmachevo.ru/services/comfort/biznes-premier/",
+        "https://tolmachevo.ru/services/comfort/businessm/",
+        "https://tolmachevo.ru/services/infrastructure/storage/",
+        "https://tolmachevo.ru/services/infrastructure/babysroom",
+        "https://tolmachevo.ru/transport/parking/tariff/"
+      ],
+      "sourceHash": "7cca1d0901172c7b8c0baf2a2cf01e65ae210a01207c45cb6c382777cb316a91"
+    },
+    {
+      "iata": "PEE",
+      "country": "Russia",
+      "guide": true,
+      "status": "needs_editorial_audit",
+      "blocks": 5,
+      "checked": "2026-10-25",
+      "topics": [
+        "transport",
+        "storage",
+        "kids",
+        "parking",
+        "wifi"
+      ],
+      "translations": 11,
+      "sourceUrls": [
+        "https://aviaperm.ru/transport/how/bus/",
+        "https://aviaperm.ru/services/infrastructure/storage/",
+        "https://aviaperm.ru/services/infrastructure/babysroom/",
+        "https://aviaperm.ru/transport/parking/tariff/",
+        "https://aviaperm.ru/services/infrastructure/wifi/"
+      ],
+      "sourceHash": "cb254df1f53e8181b251bb7833432b2eef96de8209ff958bff09e7391b0a6688"
+    },
+    {
+      "iata": "PEK",
+      "country": "China",
+      "guide": true,
+      "status": "needs_editorial_audit",
+      "blocks": 5,
+      "checked": "2026-10-25",
+      "topics": [
+        "transport",
+        "taxi",
+        "storage",
+        "kids",
+        "parking"
+      ],
+      "translations": 11,
+      "sourceUrls": [
+        "https://en.bcia.com.cn/dtjcx.html",
+        "https://en.bcia.com.cn/czc.html",
+        "https://en.bcia.com.cn/ssjfwxqy/10618/10618_dd0a0e9f48214f1ebf0011cf4597addb.html",
+        "https://en.bcia.com.cn/ssjfwxqy/10618/10618_f6950ca4e3904cdfaf74cd8541781c79.html",
+        "https://en.bcia.com.cn/tcc.html"
+      ],
+      "sourceHash": "3dbd443f6a039da105a0d08ad93411be7e418c154a8028e114eb5f14f3c0e6f7"
+    },
+    {
+      "iata": "PHL",
+      "country": "United States",
+      "guide": true,
+      "status": "needs_editorial_audit",
+      "blocks": 4,
+      "checked": "2026-10-26",
+      "topics": [
+        "transport",
+        "taxi",
+        "kids",
+        "wifi"
+      ],
+      "translations": 11,
+      "sourceUrls": [
+        "https://www.phl.org/getting-around/public-transportation",
+        "https://www.phl.org/getting-around/taxis-and-limousines",
+        "https://www.phl.org/at-phl/services-and-amenities/nursing-stations",
+        "https://www.phl.org/at-phl/services-and-amenities/free-wifi"
+      ],
+      "sourceHash": "f027ccc271fe4ea76fa7ca3767a0d212f3802ec2953c2f10f84fd3b1a0c10325"
+    },
+    {
+      "iata": "PHX",
+      "country": "United States",
+      "guide": true,
+      "status": "needs_editorial_audit",
+      "blocks": 3,
+      "checked": "2026-10-26",
+      "topics": [
+        "terminals",
+        "kids",
+        "wifi"
+      ],
+      "translations": 11,
+      "sourceUrls": [
+        "https://www.skyharbor.com/ground-transportation/phx-sky-train/",
+        "https://www.skyharbor.com/at-the-airport/services/nursing-rooms-nursing-pods/",
+        "https://www.skyharbor.com/at-the-airport/services/wifi/"
+      ],
+      "sourceHash": "f8e5f4de1d401032fd1df163951c4d542e19f47f0780714abdce52efadf83952"
+    },
+    {
+      "iata": "PKC",
+      "country": "Russia",
+      "guide": true,
+      "status": "needs_editorial_audit",
+      "blocks": 7,
+      "checked": "2026-10-25",
+      "topics": [
+        "transport",
+        "terminals",
+        "lounges",
+        "storage",
+        "sleep",
+        "kids",
+        "wifi"
+      ],
+      "translations": 11,
+      "sourceUrls": [
+        "https://ar-pkc.ru/how-to-get/to/bus/",
+        "https://ar-pkc.ru/how-to-get/from/bus/",
+        "https://ar-pkc.ru/services/novyy-terminal-aeroporta-elizovo/",
+        "https://ar-pkc.ru/about/airport-today/",
+        "https://ar-pkc.ru/services/businesshall/",
+        "https://ar-pkc.ru/services/luggage/",
+        "https://ar-pkc.ru/services/hotels/",
+        "https://ar-pkc.ru/services/child-room/",
+        "https://ar-pkc.ru/services/wifi/"
+      ],
+      "sourceHash": "a8c78fe5f7816418b33c73770f9dbd2178f33e907bda5a30b7c6e3bcc289d3d3"
+    },
+    {
+      "iata": "PKX",
+      "country": "China",
+      "guide": true,
+      "status": "needs_editorial_audit",
+      "blocks": 4,
+      "checked": "2026-10-26",
+      "topics": [
+        "transport",
+        "storage",
+        "kids",
+        "wifi"
+      ],
+      "translations": 11,
+      "sourceUrls": [
+        "https://www.bdia.com.cn/#/airportExpress",
+        "https://www.bdia.com.cn/#/servicelist?type=21&childrenid=103",
+        "https://www.bdia.com.cn/#/servicelist?type=14&childrenid=90",
+        "https://www.bdia.com.cn/#/servicelist?type=71&childrenid=84"
+      ],
+      "sourceHash": "78cee392662978244b6ee445272c44b1d63f931b0eb9b5ccffcce8d25f3f29a1"
+    },
+    {
+      "iata": "PMI",
+      "country": "Spain",
+      "guide": true,
+      "status": "needs_editorial_audit",
+      "blocks": 4,
+      "checked": "2026-10-26",
+      "topics": [
+        "transport",
+        "taxi",
+        "lounges",
+        "wifi"
+      ],
+      "translations": 11,
+      "sourceUrls": [
+        "https://www.aena.es/en/palma-de-mallorca/getting-there/bus.html",
+        "https://www.aena.es/en/palma-de-mallorca/getting-there/taxi.html",
+        "https://www.aena.es/en/palma-de-mallorca/vip-services/vip-lounge/sala-vip-valldemossa.html&p=1575049752114",
+        "https://www.aena.es/en/palma-de-mallorca/airport-services/wi-fi.html"
+      ],
+      "sourceHash": "8817a971e3f08819921830949b7d204482bdc4d1dba3e32c0f1b48191b53a89a"
+    },
+    {
+      "iata": "PVG",
+      "country": "China",
+      "guide": true,
+      "status": "needs_editorial_audit",
+      "blocks": 5,
+      "checked": "2026-10-25",
+      "topics": [
+        "transport",
+        "taxi",
+        "storage",
+        "sleep",
+        "wifi"
+      ],
+      "translations": 11,
+      "sourceUrls": [
+        "https://www.shanghaiairport.com/ensh/cxf/index.html",
+        "https://www.shanghaiairport.com/ensh/czc/index.html",
+        "https://www.shanghaiairport.com/ensh/pdjc/index.html",
+        "https://www.shanghaiairport.com/pudong/fuwusheshi/index_lcid_699.html"
+      ],
+      "sourceHash": "44f62eeff29215b44a485566f1919ec484e78c6043996c5b054039b7fc18f195"
+    },
+    {
+      "iata": "REN",
+      "country": "Russia",
+      "guide": true,
+      "status": "needs_editorial_audit",
+      "blocks": 6,
+      "checked": "2026-10-25",
+      "topics": [
+        "transport",
+        "lounges",
+        "storage",
+        "kids",
+        "parking",
+        "wifi"
+      ],
+      "translations": 11,
+      "sourceUrls": [
+        "https://ar-ren.ru/how-to-get/to/bus/",
+        "https://ar-ren.ru/how-to-get/from/bus/",
+        "https://ar-ren.ru/services/businesshall/",
+        "https://ar-ren.ru/services/luggage/",
+        "https://ar-ren.ru/services/child-room/",
+        "https://ar-ren.ru/parking/",
+        "https://ar-ren.ru/services/wifi/"
+      ],
+      "sourceHash": "4f48eadb8c048e4c8dac8ae28eafee51809a345911fd2dabdc033ec1cdd799ae"
+    },
+    {
+      "iata": "RGK",
+      "country": "Russia",
+      "guide": true,
+      "status": "needs_editorial_audit",
+      "blocks": 7,
+      "checked": "2026-10-25",
+      "topics": [
+        "transport",
+        "terminals",
+        "lounges",
+        "storage",
+        "kids",
+        "parking",
+        "wifi"
+      ],
+      "translations": 11,
+      "sourceUrls": [
+        "https://rgk-aero.ru/airport/directions/",
+        "https://rgk-aero.ru/passengers/services/taksi-i-nbsp-arenda-avtomobilya/",
+        "https://rgk-aero.ru/airport/schemes/",
+        "https://rgk-aero.ru/passengers/services/business-lounge/",
+        "https://rgk-aero.ru/passengers/luggage/kamera-khraneniya/",
+        "https://rgk-aero.ru/passengers/komnata-materi-i-nbsp-rebenka/",
+        "https://rgk-aero.ru/airport/parking/",
+        "https://rgk-aero.ru/passengers/services/wi-fi/"
+      ],
+      "sourceHash": "49a5f65282afc615e120f5244ed85242ea0f32cdc4d1401ec79a131ff56d0c9c"
+    },
+    {
+      "iata": "RUH",
+      "country": "Saudi Arabia",
+      "guide": true,
+      "status": "needs_editorial_audit",
+      "blocks": 1,
+      "checked": "2026-10-26",
+      "topics": [
+        "sleep"
+      ],
+      "translations": 11,
+      "sourceUrls": [
+        "https://www.marriott.com/en-us/hotels/ruhap-riyadh-airport-marriott-hotel/overview/"
+      ],
+      "sourceHash": "2e36b155a786e9866719d5576120752ab92d3af79b19bac1d4b97f31df042335"
+    },
+    {
+      "iata": "SAW",
+      "country": "Turkey",
+      "guide": true,
+      "status": "needs_editorial_audit",
+      "blocks": 1,
+      "checked": "2026-10-26",
+      "topics": [
+        "sleep"
+      ],
+      "translations": 11,
+      "sourceUrls": [
+        "https://isgairporthotel.com/en/services/"
+      ],
+      "sourceHash": "5ddb7a034373954034399ab1b4f21eb71bbb00fc9034c6452d990a136afacf1a"
+    },
+    {
+      "iata": "SCW",
+      "country": "Russia",
+      "guide": true,
+      "status": "needs_editorial_audit",
+      "blocks": 2,
+      "checked": "2026-10-25",
+      "topics": [
+        "storage",
+        "parking"
+      ],
+      "translations": 11,
+      "sourceUrls": [
+        "https://komiaviatrans.ru/airport/standart.php?id=1"
+      ],
+      "sourceHash": "5c40ec4a0b0a232ea9d8c4ec2fe90888af9ba127e327f2cc2bb6d360ca8b2f55"
+    },
+    {
+      "iata": "SEA",
+      "country": "United States",
+      "guide": true,
+      "status": "needs_editorial_audit",
+      "blocks": 1,
+      "checked": "2026-10-26",
+      "topics": [
+        "transport"
+      ],
+      "translations": 11,
+      "sourceUrls": [
+        "https://www.soundtransit.org/ride-with-us/popular-destinations/sea-tac-airport"
+      ],
+      "sourceHash": "62977f0669bac24318f30e2fd46351f1c96bb3ed04fa943d299e65171c68ed18"
+    },
+    {
+      "iata": "SFO",
+      "country": "United States",
+      "guide": true,
+      "status": "needs_editorial_audit",
+      "blocks": 7,
+      "checked": "2026-10-25",
+      "topics": [
+        "transport",
+        "taxi",
+        "storage",
+        "sleep",
+        "kids",
+        "parking",
+        "wifi"
+      ],
+      "translations": 11,
+      "sourceUrls": [
+        "https://www.flysfo.com/passengers/ground-transportation",
+        "https://www.flysfo.com/passengers/ground-transportation/taxis",
+        "https://www.flysfo.com/passengers/services/baggage-storage-facilities",
+        "https://www.flysfo.com/passengers/services-amenities/grand-hyatt-sfo",
+        "https://www.flysfo.com/kids-spots",
+        "https://www.flysfo.com/passengers/parking/long-term",
+        "https://www.flysfo.com/passengers/services-amenities/wi-fi"
+      ],
+      "sourceHash": "fa9035dd6f39221957bf68845d58cbdb43f026b18450c435536784359a9f51f4"
+    },
+    {
+      "iata": "SGC",
+      "country": "Russia",
+      "guide": true,
+      "status": "needs_editorial_audit",
+      "blocks": 4,
+      "checked": "2026-10-25",
+      "topics": [
+        "transport",
+        "lounges",
+        "storage",
+        "parking"
+      ],
+      "translations": 11,
+      "sourceUrls": [
+        "https://www.airport-surgut.ru/surgut/how-to-find/",
+        "https://www.airport-surgut.ru/surgut/services/biznes-zal/",
+        "https://www.airport-surgut.ru/surgut/services/superior-comfort/",
+        "https://www.airport-surgut.ru/surgut/services/kamera-khraneniya/",
+        "https://www.airport-surgut.ru/surgut/parking/"
+      ],
+      "sourceHash": "f6be3639a22371557e2956848905623c378271b16a44b3006975132a493f8b26"
+    },
+    {
+      "iata": "SGN",
+      "country": "Vietnam",
+      "guide": true,
+      "status": "needs_editorial_audit",
+      "blocks": 3,
+      "checked": "2026-10-26",
+      "topics": [
+        "lounges",
+        "sleep",
+        "wifi"
+      ],
+      "translations": 11,
+      "sourceUrls": [
+        "https://www.sasco.com.vn/en/products/phong-cho-apricot-2069",
+        "https://www.sasco.com.vn/en/sleep-zone",
+        "https://www.sasco.com.vn/en/airport-facilities/wifi-san-bay-646"
+      ],
+      "sourceHash": "1771234fa342c9742bd508dc386a700abe43ee287ea3043e574d04631c94483a"
+    },
+    {
+      "iata": "SHA",
+      "country": "China",
+      "guide": true,
+      "status": "needs_editorial_audit",
+      "blocks": 2,
+      "checked": "2026-10-26",
+      "topics": [
+        "storage",
+        "kids"
+      ],
+      "translations": 11,
+      "sourceUrls": [
+        "https://www.shanghaiairport.com/ensh/hqjc/index.html"
+      ],
+      "sourceHash": "17741a6ae489e162ed9c4900e294cfc14c9f4471af311c2ee5d44260ac620fde"
+    },
+    {
+      "iata": "SIN",
+      "country": "Singapore",
+      "guide": true,
+      "status": "needs_editorial_audit",
+      "blocks": 7,
+      "checked": "2026-10-25",
+      "topics": [
+        "transport",
+        "taxi",
+        "terminals",
+        "lounges",
+        "storage",
+        "sleep",
+        "kids"
+      ],
+      "translations": 11,
+      "sourceUrls": [
+        "https://www.changiairport.com/en/at-changi/transport-and-directions/leaving-the-airport.html",
+        "https://www.changiairport.com/en/at-changi/transport-and-directions/transferring-between-terminals-jewel.html",
+        "https://www.changiairport.com/en/at-changi/facilities-and-services-directory.html?category=pay-per-use-lounges",
+        "https://www.changiairport.com/en/at-changi/facilities-and-services-directory/baggage-storage.html",
+        "https://www.changiairport.com/en/at-changi/facilities-and-services-directory/free-snooze-lounges-changi-airport-rest-areas.html",
+        "https://www.changiairport.com/en/at-changi/special-assistance/children.html"
+      ],
+      "sourceHash": "7bd0630f79c6e07744ceb0a13a61f9c93e753c82e296f8aeec10cbecdf416eb5"
+    },
+    {
+      "iata": "SKX",
+      "country": "Russia",
+      "guide": true,
+      "status": "needs_editorial_audit",
+      "blocks": 5,
+      "checked": "2026-10-25",
+      "topics": [
+        "transport",
+        "storage",
+        "kids",
+        "parking",
+        "wifi"
+      ],
+      "translations": 11,
+      "sourceUrls": [
+        "https://aviamordovia.ru/transport/how/public-transport/",
+        "https://aviamordovia.ru/services/infrastructure/storage/",
+        "https://aviamordovia.ru/services/infrastructure/babysroom/",
+        "https://aviamordovia.ru/transport/parking/tariff/",
+        "https://aviamordovia.ru/services/infrastructure/wifi/"
+      ],
+      "sourceHash": "b82b1decb9f93696a638876766ff301ce39f19146d886c3ae546f000a3be5c0d"
+    },
+    {
+      "iata": "SLC",
+      "country": "United States",
+      "guide": true,
+      "status": "needs_editorial_audit",
+      "blocks": 1,
+      "checked": "2026-10-26",
+      "topics": [
+        "transport"
+      ],
+      "translations": 11,
+      "sourceUrls": [
+        "https://www.rideuta.com/Rider-Tools/Plan-Your-Trip-With-UTA/Airport-Travel"
+      ],
+      "sourceHash": "b85b4ddfc3e6124fc25de2dc5867f4f9a4dd7600f6a9bced6f6a6547c9f17df5"
+    },
+    {
+      "iata": "SSH",
+      "country": "Egypt",
+      "guide": true,
+      "status": "needs_editorial_audit",
+      "blocks": 5,
+      "checked": "2026-11-09",
+      "topics": [
+        "transport",
+        "taxi",
+        "terminals",
+        "storage",
+        "lounges"
+      ],
+      "translations": 11,
+      "sourceUrls": [
+        "https://www.worldtravelguide.net/guides/africa/egypt/sharm-el-sheikh/sharm-el-sheikh-international-airport/",
+        "https://www.sleepinginairports.net/guides/sharm-el-sheikh-airport-guide.htm",
+        "https://www.prioritypass.com/en-GB/lounges/egypt/sharm-el-sheikh-international/ssh-pearl-lounge"
+      ],
+      "sourceHash": "16252ff6b81c2ff6c28ed8549ce51a5c62163d6aa54114e3f0ac0fc7e42cf6e4"
+    },
+    {
+      "iata": "STN",
+      "country": "United Kingdom",
+      "guide": true,
+      "status": "needs_editorial_audit",
+      "blocks": 4,
+      "checked": "2026-10-26",
+      "topics": [
+        "transport",
+        "kids",
+        "lounges",
+        "wifi"
+      ],
+      "translations": 11,
+      "sourceUrls": [
+        "https://www.stanstedairport.com/getting-to-and-from/by-train/",
+        "https://www.stanstedairport.com/at-the-airport/airport-facilities/",
+        "https://www.stanstedairport.com/at-the-airport/escape-lounge/",
+        "https://www.stanstedairport.com/at-the-airport/airport-facilities/free-wifi/"
+      ],
+      "sourceHash": "589a0f6fb34f035aa3e4953f9c25a62fe54a27bca3ef23ef64604d98fb34945e"
+    },
+    {
+      "iata": "SVO",
+      "country": "Russia",
+      "guide": true,
+      "status": "needs_editorial_audit",
+      "blocks": 8,
+      "checked": "2026-10-25",
+      "topics": [
+        "lounges",
+        "storage",
+        "sleep",
+        "kids",
+        "transport",
+        "parking",
+        "wifi",
+        "terminals"
+      ],
+      "translations": 11,
+      "sourceUrls": [
+        "https://svo.su/ru/services/business-halls",
+        "https://svo.su/ru/services/in-airport/left-luggage",
+        "https://svo.su/ru/services/in-airport/GettSleep",
+        "https://svo.su/ru/services/in-airport/baby-care-room",
+        "https://svo.su/ru/htgt/to-sheremetyevo/aeroexpress",
+        "https://svo.su/ru/htgt/to-sheremetyevo/own-car",
+        "https://svo.su/ru/services/in-airport/wi-fi",
+        "https://svo.su/ru/htgt/to-sheremetyevo/between-terminals"
+      ],
+      "sourceHash": "03fefd4fdd8e420f2aed20db3aa56ce17762810730a3c79c4c2a86240bf3ea4a"
+    },
+    {
+      "iata": "SVX",
+      "country": "Russia",
+      "guide": true,
+      "status": "needs_editorial_audit",
+      "blocks": 8,
+      "checked": "2026-10-25",
+      "topics": [
+        "transport",
+        "terminals",
+        "lounges",
+        "storage",
+        "sleep",
+        "kids",
+        "parking",
+        "wifi"
+      ],
+      "translations": 11,
+      "sourceUrls": [
+        "https://ar-svx.ru/how-to-get/to/bus/",
+        "https://ar-svx.ru/services/luggage/",
+        "https://ar-svx.ru/services/power-nap-delovoy-son-koltsovo/",
+        "https://ar-svx.ru/services/businesshall/",
+        "https://ar-svx.ru/services/hotels/",
+        "https://ar-svx.ru/services/child-room/",
+        "https://ar-svx.ru/parking/",
+        "https://ar-svx.ru/services/wifi/"
+      ],
+      "sourceHash": "5027f39799329d2784455793ba657021409900fe58ede194d75e9e96dcf34983"
+    },
+    {
+      "iata": "SYD",
+      "country": "Australia",
+      "guide": true,
+      "status": "needs_editorial_audit",
+      "blocks": 3,
+      "checked": "2026-10-26",
+      "topics": [
+        "terminals",
+        "kids",
+        "wifi"
+      ],
+      "translations": 11,
+      "sourceUrls": [
+        "https://www.sydneyairport.com.au/parking-and-transport/arriving/international/get-to-your-next-flight",
+        "https://www.sydneyairport.com.au/info-sheet/travelling-with-children",
+        "https://www.sydneyairport.com.au/info-sheet/T1-facilities-and-services"
+      ],
+      "sourceHash": "54824508c25bfe44feab45a9d43bdfa3d212bba5fd2280886806088e8ec734b7"
+    },
+    {
+      "iata": "SZX",
+      "country": "China",
+      "guide": true,
+      "status": "needs_editorial_audit",
+      "blocks": 1,
+      "checked": "2026-10-26",
+      "topics": [
+        "sleep"
+      ],
+      "translations": 11,
+      "sourceUrls": [
+        "https://www.hilton.com/en/hotels/szxhdgi-hilton-garden-inn-shenzhen-airport/"
+      ],
+      "sourceHash": "237a06eb658a00ba460b7a7d5d173cf11a396767234baca9890599ac15b06e58"
+    },
+    {
+      "iata": "TAS",
+      "country": "Uzbekistan",
+      "guide": true,
+      "status": "needs_editorial_audit",
+      "blocks": 2,
+      "checked": "2026-10-29",
+      "topics": [
+        "taxi",
+        "lounges"
+      ],
+      "translations": 11,
+      "sourceUrls": [
+        "https://www.uzairports.com/blog/447",
+        "https://uzairports.com/portfolio/14"
+      ],
+      "sourceHash": "1a75bd707613eafd196ee5b8243f02f1a9bb4113ad9fc45c9f245141a369d0b5"
+    },
+    {
+      "iata": "TBS",
+      "country": "Georgia",
+      "guide": true,
+      "status": "needs_editorial_audit",
+      "blocks": 3,
+      "checked": "2026-10-25",
+      "topics": [
+        "transport",
+        "taxi",
+        "wifi"
+      ],
+      "translations": 11,
+      "sourceUrls": [
+        "https://tbilisiairport.com/en-EN/passenger-guide/to-from-the-airport/page/bus",
+        "https://tbilisiairport.com/en-EN/passenger-guide/to-from-the-airport/page/taxi",
+        "https://tbilisiairport.com/en-EN/passenger-guide/airport-facilities-services/page/internet-wi-fi"
+      ],
+      "sourceHash": "cbe4f244eb8bf7aa34f708113f209790f73932ef1b706c213b30fcfd403c653e"
+    },
+    {
+      "iata": "TBW",
+      "country": "Russia",
+      "guide": true,
+      "status": "needs_editorial_audit",
+      "blocks": 3,
+      "checked": "2026-10-25",
+      "topics": [
+        "terminals",
+        "kids",
+        "parking"
+      ],
+      "translations": 11,
+      "sourceUrls": [
+        "https://tambov.aero/?page_id=263",
+        "https://tambov.aero/?page_id=91",
+        "https://tambov.aero/?page_id=273",
+        "https://tambov.aero/?page_id=145"
+      ],
+      "sourceHash": "88eedda606b9d40dc663888bf21ddd3568adddc3ce649dd48193dc35ed30ba39"
+    },
+    {
+      "iata": "TFU",
+      "country": "China",
+      "guide": true,
+      "status": "needs_editorial_audit",
+      "blocks": 1,
+      "checked": "2026-10-26",
+      "topics": [
+        "sleep"
+      ],
+      "translations": 11,
+      "sourceUrls": [
+        "https://www.ihg.com/holidayinnexpress/hotels/ru/ru/chengdu/ctuta/hoteldetail"
+      ],
+      "sourceHash": "d4cbb3639fd747d31ce700ef63d3e78294d756831b45832676d62cb92c316049"
+    },
+    {
+      "iata": "TPE",
+      "country": "Taiwan",
+      "guide": true,
+      "status": "needs_editorial_audit",
+      "blocks": 3,
+      "checked": "2026-10-26",
+      "topics": [
+        "transport",
+        "storage",
+        "wifi"
+      ],
+      "translations": 11,
+      "sourceUrls": [
+        "https://www.taoyuan-airport.com/transportation?lang=en",
+        "https://www.taoyuan-airport.com/services_facilities/B68BD5D9-EE87-EC11-80F5-000C29A1B907",
+        "https://www.taoyuan-airport.com/wifi?lang=en"
+      ],
+      "sourceHash": "cf36fadabc3b86b911e3363423169072e8e62e7086aeedb28a73d8c195081ae5"
+    },
+    {
+      "iata": "UFA",
+      "country": "Russia",
+      "guide": true,
+      "status": "needs_editorial_audit",
+      "blocks": 7,
+      "checked": "2026-10-25",
+      "topics": [
+        "transport",
+        "terminals",
+        "lounges",
+        "storage",
+        "kids",
+        "parking",
+        "wifi"
+      ],
+      "translations": 11,
+      "sourceUrls": [
+        "https://www.airportufa.ru/regulations/get/by-bus/",
+        "https://www.airportufa.ru/regulations/get/by-taxi/",
+        "https://www.airportufa.ru/regulations/get/parking/",
+        "https://www.airportufa.ru/biznes-zal/",
+        "https://www.airportufa.ru/services/services/storage/",
+        "https://www.airportufa.ru/regulations/child/baby-room/",
+        "https://www.airportufa.ru/services/services/wifi/"
+      ],
+      "sourceHash": "0675006778e826234ea819f696cc226b10bd418d99104c460c6a577cb49e400f"
+    },
+    {
+      "iata": "UKX",
+      "country": "Russia",
+      "guide": true,
+      "status": "needs_editorial_audit",
+      "blocks": 4,
+      "checked": "2026-10-25",
+      "topics": [
+        "transport",
+        "terminals",
+        "storage",
+        "kids"
+      ],
+      "translations": 11,
+      "sourceUrls": [
+        "https://www.uskairport.ru/passengers/disability.html",
+        "https://www.uskairport.ru/passengers/reg.html",
+        "https://www.uskairport.ru/passengers/baggage.html",
+        "https://www.uskairport.ru/passengers/services.html"
+      ],
+      "sourceHash": "9d4a115d68d659ca31a2e531fd9ec20eca12c5220f5f4f2a6a406b750395f26c"
+    },
+    {
+      "iata": "ULV",
+      "country": "Russia",
+      "guide": true,
+      "status": "needs_editorial_audit",
+      "blocks": 5,
+      "checked": "2026-10-25",
+      "topics": [
+        "terminals",
+        "lounges",
+        "sleep",
+        "parking",
+        "wifi"
+      ],
+      "translations": 11,
+      "sourceUrls": [
+        "https://ulkaero.ru/ru/for-passengers/information",
+        "https://ulkaero.ru/ru/for-passengers/departing",
+        "https://ulkaero.ru/ru/services/vip",
+        "https://ulkaero.ru/ru/services/hotel",
+        "https://ulkaero.ru/ru/services/parking",
+        "https://ulkaero.ru/ru/for-passengers/internet"
+      ],
+      "sourceHash": "1bbdb93e29c56610b96cbe9b914a64bb693083f98342515f75cdf3ab8b6667e7"
+    },
+    {
+      "iata": "URC",
+      "country": "China",
+      "guide": true,
+      "status": "needs_editorial_audit",
+      "blocks": 1,
+      "checked": "2026-10-26",
+      "topics": [
+        "sleep"
+      ],
+      "translations": 11,
+      "sourceUrls": [
+        "https://www.hilton.com/en/hotels/urcurhx-hampton-urumqi-international-airport/"
+      ],
+      "sourceHash": "f8d68f94344167432202e07dd0d049683e409b335d0efc976e6e067ea7ba4cfb"
+    },
+    {
+      "iata": "UUA",
+      "country": "Russia",
+      "guide": true,
+      "status": "needs_editorial_audit",
+      "blocks": 4,
+      "checked": "2026-10-25",
+      "topics": [
+        "lounges",
+        "sleep",
+        "kids",
+        "parking"
+      ],
+      "translations": 11,
+      "sourceUrls": [
+        "https://bugavia.ru/services/zal_ozhidaniya_vip.php",
+        "https://bugavia.ru/services/hotel.php",
+        "https://bugavia.ru/services/",
+        "https://bugavia.ru/passengers/",
+        "https://bugavia.ru/services/parkovka.php"
+      ],
+      "sourceHash": "21252d7173a10ef8ed9e3289eef39061933216246f7d2824fd924695acd88c58"
+    },
+    {
+      "iata": "UUD",
+      "country": "Russia",
+      "guide": true,
+      "status": "needs_editorial_audit",
+      "blocks": 5,
+      "checked": "2026-10-25",
+      "topics": [
+        "transport",
+        "storage",
+        "kids",
+        "parking",
+        "wifi"
+      ],
+      "translations": 11,
+      "sourceUrls": [
+        "https://www.airportbaikal.ru/transport/how/bus/55",
+        "https://www.airportbaikal.ru/services/infrastructure/storage/",
+        "https://www.airportbaikal.ru/services/infrastructure/babysroom/",
+        "https://www.airportbaikal.ru/transport/parking/tariff/",
+        "https://www.airportbaikal.ru/services/infrastructure/wifi/"
+      ],
+      "sourceHash": "af79122d651afe816cac190a987ba88fd7fb5e2e530d842e69a97cdfc1a5b645"
+    },
+    {
+      "iata": "UUS",
+      "country": "Russia",
+      "guide": true,
+      "status": "needs_editorial_audit",
+      "blocks": 5,
+      "checked": "2026-10-25",
+      "topics": [
+        "transport",
+        "parking",
+        "lounges",
+        "storage",
+        "kids"
+      ],
+      "translations": 11,
+      "sourceUrls": [
+        "https://uusaero.ru/how-to-get/",
+        "https://uusaero.ru/services/parking/",
+        "https://uusaero.ru/services/domestic-lounge/",
+        "https://uusaero.ru/services/international-lounge/",
+        "https://uusaero.ru/services/storage/",
+        "https://uusaero.ru/services/nursery/"
+      ],
+      "sourceHash": "b481ba8d47cdbb136db43c27e92e0cff2755011082429078087f0910d38b01af"
+    },
+    {
+      "iata": "VIE",
+      "country": "Austria",
+      "guide": true,
+      "status": "needs_editorial_audit",
+      "blocks": 4,
+      "checked": "2026-10-26",
+      "topics": [
+        "transport",
+        "lounges",
+        "sleep",
+        "kids"
+      ],
+      "translations": 11,
+      "sourceUrls": [
+        "https://viennaairport.com/en/passengers/arrival__parking/s-bahn__suburban_railway",
+        "https://viennaairport.com/en/passengers/airport/lounges/vienna_lounge",
+        "https://viennaairport.com/en/passengers/airport/hotel__conferences__offices",
+        "https://viennaairport.com/en/passengers/arrival__departure/travelling_with_children"
+      ],
+      "sourceHash": "a6205b98f5c3b9bb54ddc8bad9a1f21383e4e77d2f8d56a1cddfac0580dac6bb"
+    },
+    {
+      "iata": "VKO",
+      "country": "Russia",
+      "guide": true,
+      "status": "needs_editorial_audit",
+      "blocks": 8,
+      "checked": "2026-10-25",
+      "topics": [
+        "lounges",
+        "storage",
+        "sleep",
+        "kids",
+        "transport",
+        "parking",
+        "wifi",
+        "terminals"
+      ],
+      "translations": 11,
+      "sourceUrls": [
+        "https://www.vnukovo.ru/ru/for-passengers/services/business-i-vip-zali/",
+        "https://www.vnukovo.ru/ru/for-passengers/services/kamera-hraneniya/",
+        "https://www.vnukovo.ru/ru/for-passengers/services/oteli/doubletree-by-hilton-moscow/",
+        "https://www.vnukovo.ru/ru/for-passengers/services/komnata-materi-i-rebenka/",
+        "https://www.vnukovo.ru/ru/for-passengers/kak-dobratsya/metro/",
+        "https://www.vnukovo.ru/ru/for-passengers/kak-dobratsya/express/",
+        "https://www.vnukovo.ru/ru/for-passengers/kak-dobratsya/parkovka/",
+        "https://www.vnukovo.ru/ru/for-passengers/services/wi-fi/",
+        "https://www.vnukovo.ru/ru/ob-aeroporte/o-kompanii/mezhdunarodniy-aeroport-vnukovo/"
+      ],
+      "sourceHash": "917aa2db055018e10be9e8100b29acb6a9876c0923cd0b6165160b67da6c81c6"
+    },
+    {
+      "iata": "VOG",
+      "country": "Russia",
+      "guide": true,
+      "status": "needs_editorial_audit",
+      "blocks": 5,
+      "checked": "2026-10-25",
+      "topics": [
+        "transport",
+        "lounges",
+        "storage",
+        "kids",
+        "wifi"
+      ],
+      "translations": 11,
+      "sourceUrls": [
+        "https://airportvolgograd.ru/transport/how/bus/6/",
+        "https://airportvolgograd.ru/transport/how/train/",
+        "https://airportvolgograd.ru/services/comfort/internal/",
+        "https://airportvolgograd.ru/services/infrastructure/storage/",
+        "https://airportvolgograd.ru/passengers/information/babysroom/",
+        "https://airportvolgograd.ru/services/infrastructure/wifi/"
+      ],
+      "sourceHash": "d5fae502537a1ebabd2cf52068e0c368d967bd750d68c72982d498fd237b332f"
+    },
+    {
+      "iata": "VVO",
+      "country": "Russia",
+      "guide": true,
+      "status": "needs_editorial_audit",
+      "blocks": 6,
+      "checked": "2026-10-25",
+      "topics": [
+        "transport",
+        "lounges",
+        "storage",
+        "sleep",
+        "kids",
+        "parking"
+      ],
+      "translations": 11,
+      "sourceUrls": [
+        "https://aerovlad.ru/ru/transport/trains",
+        "https://aerovlad.ru/ru/transport/taxi",
+        "https://aerovlad.ru/ru/services/vip-rooms/biznes-zal-laguna",
+        "https://aerovlad.ru/ru/services/vip-rooms/zal-prioriti",
+        "https://aerovlad.ru/ru/services/14",
+        "https://aerovlad.ru/ru/services/11",
+        "https://aerovlad.ru/ru/services/15",
+        "https://aerovlad.ru/ru/parking"
+      ],
+      "sourceHash": "e1fb0e735651e0b990f7bd4786f2b97121ce0dd42f2f8ab52d43dd0b06e56587"
+    },
+    {
+      "iata": "WUH",
+      "country": "China",
+      "guide": true,
+      "status": "needs_editorial_audit",
+      "blocks": 1,
+      "checked": "2026-10-26",
+      "topics": [
+        "sleep"
+      ],
+      "translations": 11,
+      "sourceUrls": [
+        "https://www.fliport.com/fliport_garden/Wuhanhuayuan/about"
+      ],
+      "sourceHash": "cd7bd30e21660d9055747921b8c9927ee82bc7f9b7f6c881fd3c824756f7fc1e"
+    },
+    {
+      "iata": "XIY",
+      "country": "China",
+      "guide": true,
+      "status": "needs_editorial_audit",
+      "blocks": 1,
+      "checked": "2026-10-26",
+      "topics": [
+        "sleep"
+      ],
+      "translations": 11,
+      "sourceUrls": [
+        "https://all.accor.com/hotel/C0E4/index.en.shtml"
+      ],
+      "sourceHash": "dcfbd1b736ee350699b1c73c1986a35d942e22e320e44d9b92a15d5087c721b2"
+    },
+    {
+      "iata": "XMN",
+      "country": "China",
+      "guide": true,
+      "status": "needs_editorial_audit",
+      "blocks": 4,
+      "checked": "2026-10-26",
+      "topics": [
+        "taxi",
+        "storage",
+        "wifi",
+        "lounges"
+      ],
+      "translations": 11,
+      "sourceUrls": [
+        "https://www.xiamenairport.com.cn/jcjt/jcjt-czc.aspx",
+        "https://www.xiamenairport.com.cn/lkzn/lkxz-xlfw.aspx",
+        "https://www.xiamenairport.com.cn/lkzn/fwss-wlsw.aspx",
+        "https://www.xiamenairport.com.cn/lkzn/fwss-xxs.aspx"
+      ],
+      "sourceHash": "d98fff65efdc5302814f1665dc2d6d6f0212c0b4e9430b5167526900e613f174"
+    },
+    {
+      "iata": "YYZ",
+      "country": "Canada",
+      "guide": true,
+      "status": "needs_editorial_audit",
+      "blocks": 4,
+      "checked": "2026-10-26",
+      "topics": [
+        "transport",
+        "terminals",
+        "kids",
+        "wifi"
+      ],
+      "translations": 11,
+      "sourceUrls": [
+        "https://www.torontopearson.com/en/transportation-and-parking/up-express",
+        "https://www.torontopearson.com/en/transportation-and-parking/terminal-link-train",
+        "https://www.torontopearson.com/en/while-you-are-here/family-travel",
+        "https://www.torontopearson.com/en/while-you-are-here/free-wifi"
+      ],
+      "sourceHash": "2190729b56fbda4e4a25d40717d477843b14f52335bac665fa35e22c260930eb"
+    },
+    {
+      "iata": "ZIA",
+      "country": "Russia",
+      "guide": true,
+      "status": "needs_editorial_audit",
+      "blocks": 4,
+      "checked": "2026-10-25",
+      "topics": [
+        "transport",
+        "parking",
+        "storage",
+        "kids"
+      ],
+      "translations": 11,
+      "sourceUrls": [
+        "https://zia.aero/transport/public-transport/",
+        "https://zia.aero/transport/parking/",
+        "https://zia.aero/services/baggage-storage/",
+        "https://zia.aero/services/with-child/"
+      ],
+      "sourceHash": "80331202220e6d548e4fd2608e73219beb70f20226e7a3b85c853a4f0381b0e4"
+    },
+    {
+      "iata": "ZRH",
+      "country": "Switzerland",
+      "guide": true,
+      "status": "needs_editorial_audit",
+      "blocks": 4,
+      "checked": "2026-10-26",
+      "topics": [
+        "transport",
+        "storage",
+        "kids",
+        "wifi"
+      ],
+      "translations": 11,
+      "sourceUrls": [
+        "https://www.flughafen-zuerich.ch/en/passengers/practical/parking-and-transport/train-tram-and-bus",
+        "https://www.flughafen-zuerich.ch/en/passengers/practical/services/services-for-travellers/baggageservices",
+        "https://www.flughafen-zuerich.ch/en/passengers/practical/services/services-for-travellers/family-services",
+        "https://www.flughafen-zuerich.ch/en/passengers/practical/services/wifi-and-internet"
+      ],
+      "sourceHash": "72c3bd88b9933a08844fd85b0f24969da328aa955e8e48ad27f9b898dbe16867"
+    }
+  ],
+  "scope": "188 existing guides; expand later according to measured demand"
+}

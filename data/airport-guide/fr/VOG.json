@@ -13,8 +13,8 @@
   },
   "storage": {
    "title": "Consigne à bagages",
-   "hint": "Terminal С2, 500 ₽ par jour",
-   "text": "Consigne au rez-de-chaussée du terminal des lignes intérieures, pour les passagers des vols intérieurs et internationaux, jour et nuit. Premier jour calendaire 500 ₽ par bagage, chaque jour suivant 100 ₽. Une pièce d'identité est requise ; taille d'un bagage au maximum 75 × 60 × 65 cm, durée jusqu'à 90 jours."
+   "hint": "Premier jour calendaire : 500 ₽",
+   "text": "Consigne au niveau 1 du terminal des lignes intérieures, pour les passagers des vols intérieurs et internationaux, jour et nuit. Premier jour calendaire 500 ₽ par bagage, chaque jour suivant 100 ₽. Une pièce d'identité est requise ; taille d'un bagage au maximum 75 × 60 × 65 cm, durée jusqu'à 90 jours."
   },
   "kids": {
    "title": "Avec un enfant",

@@ -15,7 +15,7 @@
   "storage": {
    "title": "Consigna",
    "hint": "Nivel 1, desde 200 ₽/hora",
-   "text": "Consigna automática en el ala derecha de la terminal, nivel 1. Taquilla estándar: 200 ₽ por hora o 500 ₽ por día; grande: 300 ₽ por hora o 800 ₽ por día. Allí mismo, embalaje de equipaje desde 950 ₽ por bulto."
+   "text": "Consigna automática en el ala derecha de la terminal, nivel 1. Taquilla estándar: 200 ₽ por hora o 500 ₽ por cada 24 horas; grande: 300 ₽ por hora o 800 ₽ por cada 24 horas. Allí mismo, embalaje de equipaje desde 950 ₽ por bulto."
   },
   "kids": {
    "title": "Con niños",

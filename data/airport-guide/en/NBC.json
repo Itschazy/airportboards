@@ -1,6 +1,6 @@
 {
  "iata": "NBC",
- "about": "Nizhnekamsk (Begishevo) International Airport named after N.V. Lemaev, a subsidiary of PJSC KAMAZ. Within 25 km of the airport are Naberezhnye Chelny, Nizhnekamsk, Yelabuga and Almetyevsk. One runway, more than 700,000 passengers a year.",
+ "about": "Nizhnekamsk (Begishevo) International Airport named after N.V. Lemaev, a subsidiary of PJSC KAMAZ. The airport serves Naberezhnye Chelny, Nizhnekamsk, Yelabuga and Almetyevsk. One runway, more than 700,000 passengers a year.",
  "blocks": {
   "transport": {
    "title": "Getting there",
@@ -35,7 +35,7 @@
   "parking": {
    "title": "Parking",
    "hint": "20 min free",
-   "text": "Paid car park in front of terminals A and B with 150 spaces: 20 minutes free, then 200 ₽ per hour up to 3 hours, longer 700 ₽ per day. On a repeat entry within 30 minutes there is no free time. Before the entrance to the grounds there is a free car park with 410 spaces."
+   "text": "Paid car park in front of terminals A and B with 150 spaces: 20 minutes free, then 200 ₽ per hour up to 3 hours, longer 700 ₽ per 24 hours. On a repeat entry within 30 minutes there is no free time. Before the entrance to the grounds there is a free car park with 410 spaces."
   },
   "wifi": {
    "title": "Wi‑Fi",

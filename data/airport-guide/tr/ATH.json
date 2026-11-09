@@ -5,6 +5,16 @@
       "title": "Sofitel Athens Airport",
       "hint": "Havalimanından yürüyerek 2 dakika",
       "text": "Sofitel Athens Airport, Atina uluslararası havalimanından yürüyerek 2 dakika uzaklıktadır. Otelde kapalı havuz, fitness merkezi, restoran, bar ve Wi-Fi vardır; giriş 13:00’ten itibaren, çıkış 11:00’e kadardır."
+    },
+    "wifi": {
+      "title": "Wi‑Fi",
+      "hint": "120 dk; yeniden bağlantı ücretsiz",
+      "text": "Terminalde ücretsiz ATH Free Wifi ağı bulunur. Bağlantı sayfasında Internet Access seçeneğini seçin: her oturum 120 dakika sürer. Ardından ücretsiz olarak yeniden bağlanabilirsiniz."
+    },
+    "storage": {
+      "title": "Emanet",
+      "hint": "CARE4BAG, geliş, çıkış 1",
+      "text": "CARE4BAG, geliş katının halka açık alanında çıkış 1 yanında bulunur ve 24 saat açıktır. Buraya bagaj, kutu ve spor ekipmanı bırakabilirsiniz."
     }
   }
 }

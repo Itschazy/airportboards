@@ -15,12 +15,12 @@
   "storage": {
    "title": "Consigne à bagages",
    "hint": "Pavillon 3, 24/7",
-   "text": "Consigne à bagages dans le Pavillon n° 3, jour et nuit. Un bagage pesant jusqu'à 30 kg et de moins de 1 m coûte 250 ₽ par jour. Les documents, l'argent, les objets de valeur et les denrées périssables ne sont pas acceptés."
+   "text": "Consigne à bagages dans le Pavillon n° 3, jour et nuit. Un bagage pesant jusqu'à 30 kg et de moins de 1 m coûte 250 ₽ par période de 24 heures. Les documents, l'argent, les objets de valeur et les denrées périssables ne sont pas acceptés."
   },
   "parking": {
    "title": "Parking",
    "hint": "30 min gratuites sur P2",
-   "text": "Courte durée P2 : 30 minutes gratuites, puis 150 ₽ de l'heure, au-delà de 4 heures 800 ₽ par jour. Longue durée P1 : 400 ₽ par jour dès la première minute. P4 gratuit de 70 places à 200 m de l'aérogare, sans limite de temps. Perte du ticket de parking : 2 000 ₽."
+   "text": "Courte durée P2 : 30 minutes gratuites, puis 150 ₽ de l'heure, au-delà de 4 heures 800 ₽ par période de 24 heures. Longue durée P1 : 400 ₽ par période de 24 heures dès la première minute. P4 gratuit de 70 places à 200 m de l'aérogare, sans limite de temps. Perte du ticket de parking : 2 000 ₽."
   }
  }
 }

@@ -5,6 +5,16 @@
       "title": "Sofitel Athens Airport",
       "hint": "距机场步行2分钟",
       "text": "Sofitel Athens Airport距雅典国际机场步行2分钟。酒店设有室内泳池、健身中心、餐厅、酒吧及Wi-Fi；13:00起办理入住，11:00前退房。"
+    },
+    "wifi": {
+      "title": "Wi‑Fi",
+      "hint": "每次120分钟，可免费重连",
+      "text": "航站楼内提供免费网络ATH Free Wifi。在连接页面选择Internet Access，每次连接可使用120分钟。结束后可以免费重新连接。"
+    },
+    "storage": {
+      "title": "行李寄存",
+      "hint": "CARE4BAG，到达区出口1",
+      "text": "CARE4BAG位于到达公共区域的出口1旁，24小时营业。可寄存行李、箱子和体育器材。"
     }
   }
 }

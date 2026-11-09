@@ -4,7 +4,7 @@
   "transport": {
    "title": "Anreise",
    "hint": "NS-Zug nach Amsterdam CS",
-   "text": "Der NS-Bahnhof liegt direkt unter dem Terminalgebäude, erreichbar per Rolltreppe oder Aufzug. Zwischen Amsterdam CS und dem Flughafen fährt der Zug 8-mal pro Stunde mit Halt in Sloterdijk und Lelylaan und fährt am Flughafen immer von Gleis 3 ab. Aus Amsterdam, Utrecht, Leiden, Den Haag, Delft und Rotterdam ist der Flughafen rund um die Uhr erreichbar, oft ohne Umsteigen. Das Ticket kauft man am Flughafen oder zahlt kontaktlos mit Karte oder Telefon und checkt an den gelben Validatoren oberhalb der Rolltreppen und Aufzüge auf der Schiphol Plaza ein."
+   "text": "Der NS-Bahnhof liegt direkt unter dem Terminalgebäude, erreichbar per Rolltreppe oder Aufzug. Zwischen Amsterdam CS und dem Flughafen fährt der Zug 8-mal pro Stunde mit Halt in Sloterdijk und Lelylaan und fährt am Flughafen immer von Gleis 3 ab. Aus Amsterdam, Utrecht, Leiden, Den Haag, Delft und Rotterdam ist der Flughafen rund um die Uhr erreichbar, oft ohne Umsteigen. Das Ticket kauft man am Flughafen oder zahlt kontaktlos mit Karte oder Telefon und checkt an den gelben Validatoren oberhalb der Rolltreppen und Aufzüge auf der Schiphol Plaza ein. Bei Zahlung mit Bankkarte oder Smartphone müssen Sie sowohl ein- als auch auschecken."
   },
   "taxi": {
    "title": "Taxi",
@@ -19,7 +19,7 @@
   "sleep": {
    "title": "Schlafen",
    "hint": "YOTELAIR, Mercure nach Kontrolle",
-   "text": "Nach der Sicherheitskontrolle gibt es zwei Hotels, rund um die Uhr geöffnet: Mercure Hotel in Lounge 3 und YOTELAIR in Lounge 2, beide auf dem Weg zu den Gates D1–D57, E, F, G und H. YOTELAIR ist sogar ohne Visum für die Niederlande zugänglich."
+   "text": "Nach der Sicherheitskontrolle gibt es zwei Hotels, rund um die Uhr geöffnet: Mercure Hotel in Lounge 3 und YOTELAIR in Lounge 2, beide auf dem Weg zu den Gates D1–D57, E, F, G und H. YOTELAIR ist sogar ohne Visum für die Niederlande zugänglich. Für einen Aufenthalt im Mercure benötigen Sie einen Flug am Tag des Check-outs; ins Hotel darf nur Handgepäck mitgenommen werden."
   },
   "kids": {
    "title": "Mit Kind",

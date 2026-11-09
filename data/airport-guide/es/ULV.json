@@ -20,7 +20,7 @@
   "parking": {
    "title": "Aparcamiento",
    "hint": "15 min gratis",
-   "text": "Aparcamiento de pago frente a la terminal, para 150 coches. Los primeros 15 minutos gratis, de 15 minutos a 3 horas 150 ₽/hora, más de 3 horas 500 ₽/día. Una nueva entrada dentro de 60 minutos no tiene tiempo gratuito. Tras el pago hay 30 minutos para salir."
+   "text": "Aparcamiento de pago frente a la terminal, para 150 coches. Los primeros 15 minutos gratis, de 15 minutos a 3 horas 150 ₽/hora, más de 3 horas 500 ₽/24 h. Una nueva entrada dentro de 60 minutos no tiene tiempo gratuito. Tras el pago hay 30 minutos para salir."
   },
   "wifi": {
    "title": "Wi‑Fi",

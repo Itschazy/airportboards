@@ -14,7 +14,7 @@
   "storage": {
    "title": "Gepäckaufbewahrung",
    "hint": "Ebene 2, 8:30–20:30",
-   "text": "Automatische Gepäckaufbewahrung für Passagiere von Inlandsflügen auf Ebene 2, von 8:30 bis 20:30, Bezahlung nur mit Karte. Standardfach 51×63×76 cm 1000 ₽ pro Tag, großes Fach 51×195×76 cm 2000 ₽; weniger als ein Tag wird als ganzer Tag berechnet."
+   "text": "Automatische Gepäckaufbewahrung für Passagiere von Inlandsflügen auf Ebene 2, von 8:30 bis 20:30, Bezahlung nur mit Karte. Standardfach 51×63×76 cm 1000 ₽ je 24 Stunden, großes Fach 51×195×76 cm 2000 ₽; weniger als 24 Stunden werden als volle 24 Stunden berechnet."
   },
   "kids": {
    "title": "Mit Kind",
@@ -24,7 +24,7 @@
   "parking": {
    "title": "Parken",
    "hint": "15 Min. kostenlos",
-   "text": "Vorplatz P1 30 m vom Terminal: die ersten 15 Minuten kostenlos, bis zu einer Stunde 500 ₽, jede weitere Stunde 300 ₽, ein Tag 2000 ₽. Erneute Einfahrt innerhalb einer Stunde für 1–15 Minuten: 200 ₽."
+   "text": "Vorplatz P1 30 m vom Terminal: die ersten 15 Minuten kostenlos, bis zu einer Stunde 500 ₽, jede weitere Stunde 300 ₽, 24 Stunden 2000 ₽. Erneute Einfahrt innerhalb einer Stunde für 1–15 Minuten: 200 ₽."
   },
   "wifi": {
    "title": "Wi‑Fi",

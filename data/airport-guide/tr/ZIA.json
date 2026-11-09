@@ -10,7 +10,7 @@
   "parking": {
    "title": "Otopark",
    "hint": "15 dakika ücretsiz",
-   "text": "Kısa süreli alan: ilk 15 dk ücretsiz, ilk saat 350 ₽, 2. ila 4. saat saati 250 ₽, 5. saatten itibaren günlüğü 3000 ₽. Uzun süreli alan: 1. ila 5. gün günlüğü 700 ₽, 6. ila 13. gün günlüğü 100 ₽, 14. günden itibaren günlüğü 700 ₽. Ücretsiz tekrar giriş en erken 45 dk sonra."
+   "text": "Kısa süreli alan: ilk 15 dk ücretsiz, ilk saat 350 ₽, 2. ila 4. saat saati 250 ₽, 5. saatten itibaren her 24 saat için 3000 ₽. Uzun süreli alan: 24 saatlik 1. ila 5. dönemde her dönem 700 ₽, 6. ila 13. dönemde 100 ₽, 14. dönemden itibaren 700 ₽. Ücretsiz tekrar giriş en erken 45 dk sonra."
   },
   "storage": {
    "title": "Emanet",

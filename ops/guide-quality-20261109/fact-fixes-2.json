@@ -1,0 +1,290 @@
+[
+  {
+    "file": "data/airport-guide/BKK.json",
+    "block": "taxi",
+    "before": "Стойка информации о такси и автоматы выдачи талонов — в пассажирском терминале на этаже 1, между дверями 4 и 7. К тарифу добавляется сбор 50 бат в пользу водителя по распоряжению Министерства транспорта, платные дороги оплачивает пассажир. Есть поездки на короткие расстояния — вокруг аэропорта, не дальше 20 км; на обычные расстояния по правилам Департамента наземного транспорта цену можно согласовать с водителем.",
+    "after": "Стойка информации о такси и автоматы выдачи талонов — в пассажирском терминале на этаже 1, между дверями 4 и 7. К тарифу добавляется сбор 50 бат в пользу водителя по распоряжению Министерства транспорта, платные дороги оплачивает пассажир. Есть поездки на короткие расстояния — вокруг аэропорта, не дальше 20 км."
+  },
+  {
+    "file": "data/airport-guide/en/BKK.json",
+    "block": "taxi",
+    "before": "The taxi information counter and ticket machines are in the passenger terminal on Level 1, between doors 4 and 7. A 50 baht fee for the driver is added to the fare by order of the Ministry of Transport; the passenger pays the tolls. Short-distance trips are available — around the airport, no farther than 20 km; for regular distances, under Department of Land Transport rules, the price can be agreed with the driver.",
+    "after": "The taxi information counter and ticket machines are in the passenger terminal on Level 1, between doors 4 and 7. A 50 baht fee for the driver is added to the fare by order of the Ministry of Transport; the passenger pays the tolls. Short-distance trips are available — around the airport, no farther than 20 km."
+  },
+  {
+    "file": "data/airport-guide/de/BKK.json",
+    "block": "taxi",
+    "before": "Der Taxi-Infoschalter und die Automaten für Taxischeine befinden sich im Passagierterminal auf Ebene 1 zwischen den Türen 4 und 7. Zum Fahrpreis kommt auf Anordnung des Verkehrsministeriums eine Gebühr von 50 Baht für den Fahrer hinzu, Mautstraßen zahlt der Fahrgast. Es gibt Kurzstreckenfahrten rund um den Flughafen, nicht weiter als 20 km; bei normalen Entfernungen kann der Preis nach den Regeln des Department of Land Transport mit dem Fahrer vereinbart werden.",
+    "after": "Der Taxi-Infoschalter und die Automaten für Taxischeine befinden sich im Passagierterminal auf Ebene 1 zwischen den Türen 4 und 7. Zum Fahrpreis kommt auf Anordnung des Verkehrsministeriums eine Gebühr von 50 Baht für den Fahrer hinzu, Mautstraßen zahlt der Fahrgast. Es gibt Kurzstreckenfahrten rund um den Flughafen, nicht weiter als 20 km."
+  },
+  {
+    "file": "data/airport-guide/fr/BKK.json",
+    "block": "taxi",
+    "before": "Le comptoir d'information taxis et les distributeurs de tickets se trouvent dans le terminal passagers au niveau 1, entre les sorties 4 et 7. Au tarif s'ajoute un supplément de 50 bahts au profit du chauffeur, sur décision du ministère des Transports ; les péages sont à la charge du passager. Il existe des courses courtes distances — autour de l'aéroport, 20 km au maximum ; pour les distances ordinaires, selon les règles du Département des transports terrestres, le prix peut être convenu avec le chauffeur.",
+    "after": "Le comptoir d'information taxis et les distributeurs de tickets se trouvent dans le terminal passagers au niveau 1, entre les sorties 4 et 7. Au tarif s'ajoute un supplément de 50 bahts au profit du chauffeur, sur décision du ministère des Transports ; les péages sont à la charge du passager. Il existe des courses courtes distances — autour de l'aéroport, 20 km au maximum."
+  },
+  {
+    "file": "data/airport-guide/es/BKK.json",
+    "block": "taxi",
+    "before": "El mostrador de información de taxis y las máquinas expendedoras de tiques están en la terminal de pasajeros, en el nivel 1, entre las puertas 4 y 7. A la tarifa se suma un recargo de 50 baht para el conductor por disposición del Ministerio de Transporte; los peajes los paga el pasajero. Hay trayectos de corta distancia, por los alrededores del aeropuerto y no más allá de 20 km; en las distancias normales, según las normas del Departamento de Transporte Terrestre, el precio se puede acordar con el conductor.",
+    "after": "El mostrador de información de taxis y las máquinas expendedoras de tiques están en la terminal de pasajeros, en el nivel 1, entre las puertas 4 y 7. A la tarifa se suma un recargo de 50 baht para el conductor por disposición del Ministerio de Transporte; los peajes los paga el pasajero. Hay trayectos de corta distancia, por los alrededores del aeropuerto y no más allá de 20 km."
+  },
+  {
+    "file": "data/airport-guide/it/BKK.json",
+    "block": "taxi",
+    "before": "Il banco informazioni taxi e i distributori di tagliandi si trovano nel terminal passeggeri al livello 1, tra le porte 4 e 7. Alla tariffa si aggiunge un supplemento di 50 baht a favore del conducente, stabilito dal Ministero dei Trasporti; i pedaggi sono a carico del passeggero. Ci sono corse a breve distanza, nei dintorni dell’aeroporto, non oltre 20 km; per le distanze normali, secondo le regole del Dipartimento dei trasporti terrestri, il prezzo si può concordare con il conducente.",
+    "after": "Il banco informazioni taxi e i distributori di tagliandi si trovano nel terminal passeggeri al livello 1, tra le porte 4 e 7. Alla tariffa si aggiunge un supplemento di 50 baht a favore del conducente, stabilito dal Ministero dei Trasporti; i pedaggi sono a carico del passeggero. Ci sono corse a breve distanza, nei dintorni dell’aeroporto, non oltre 20 km."
+  },
+  {
+    "file": "data/airport-guide/tr/BKK.json",
+    "block": "taxi",
+    "before": "Taksi danışma kontuarı ve kupon otomatları yolcu terminalinde Kat 1'de, 4 ile 7 numaralı kapılar arasında. Ulaştırma Bakanlığı kararıyla ücrete sürücü lehine 50 baht ek ücret eklenir, ücretli yolları yolcu öder. Kısa mesafe yolculuklar da var — havalimanı çevresinde, en fazla 20 km; normal mesafelerde Kara Ulaştırması Dairesi kurallarına göre fiyat sürücüyle kararlaştırılabilir.",
+    "after": "Taksi danışma kontuarı ve kupon otomatları yolcu terminalinde Kat 1'de, 4 ile 7 numaralı kapılar arasında. Ulaştırma Bakanlığı kararıyla ücrete sürücü lehine 50 baht ek ücret eklenir, ücretli yolları yolcu öder. Kısa mesafe yolculuklar da var — havalimanı çevresinde, en fazla 20 km."
+  },
+  {
+    "file": "data/airport-guide/zh/BKK.json",
+    "block": "taxi",
+    "before": "出租车信息柜台和取号机位于客运航站楼1楼4号至7号门之间。根据交通部规定，车费外另加50泰铢给司机，收费公路的费用由乘客支付。提供短途服务——机场周边、不超过20公里；普通距离按陆路交通厅的规定可与司机协商价格。",
+    "after": "出租车信息柜台和取号机位于客运航站楼1楼4号至7号门之间。根据交通部规定，车费外另加50泰铢给司机，收费公路的费用由乘客支付。提供短途服务——机场周边、不超过20公里。"
+  },
+  {
+    "file": "data/airport-guide/ja/BKK.json",
+    "block": "taxi",
+    "before": "タクシー案内カウンターと配車券の発券機は、旅客ターミナル1階の4番ドアと7番ドアの間にある。運輸省の指示により、運転手に支払われる手数料50バーツが運賃に加算され、有料道路の料金は乗客が負担する。空港周辺の20 km以内の短距離の乗車もある。通常の距離では、陸運局の規則に従い、料金を運転手と交渉することができる。",
+    "after": "タクシー案内カウンターと配車券の発券機は、旅客ターミナル1階の4番ドアと7番ドアの間にある。運輸省の指示により、運転手に支払われる手数料50バーツが運賃に加算され、有料道路の料金は乗客が負担する。空港周辺の20 km以内の短距離の乗車もある。"
+  },
+  {
+    "file": "data/airport-guide/ko/BKK.json",
+    "block": "taxi",
+    "before": "택시 안내 데스크와 배차권 발급기는 여객터미널 1층 4번과 7번 출입구 사이에 있습니다. 교통부 규정에 따라 요금에 기사 몫인 50바트의 수수료가 추가되며, 유료 도로 요금은 승객이 부담합니다. 공항 주변 20 km 이내의 단거리 운행도 있으며, 일반 거리는 육상교통국 규정에 따라 기사와 요금을 협의할 수 있습니다.",
+    "after": "택시 안내 데스크와 배차권 발급기는 여객터미널 1층 4번과 7번 출입구 사이에 있습니다. 교통부 규정에 따라 요금에 기사 몫인 50바트의 수수료가 추가되며, 유료 도로 요금은 승객이 부담합니다. 공항 주변 20 km 이내의 단거리 운행도 있습니다."
+  },
+  {
+    "file": "data/airport-guide/ar/BKK.json",
+    "block": "taxi",
+    "before": "يقع مكتب معلومات سيارات الأجرة وأجهزة إصدار القسائم في مبنى الركاب في المستوى 1، بين البابين 4 و7. تُضاف إلى التعرفة رسوم 50 بات لصالح السائق بموجب قرار وزارة النقل، ويدفع الراكب رسوم الطرق المدفوعة. تتوفر رحلات لمسافات قصيرة — حول المطار، لا تتجاوز 20 كم؛ أما للمسافات العادية فيمكن وفق قواعد إدارة النقل البري الاتفاق على السعر مع السائق.",
+    "after": "يقع مكتب معلومات سيارات الأجرة وأجهزة إصدار القسائم في مبنى الركاب في المستوى 1، بين البابين 4 و7. تُضاف إلى التعرفة رسوم 50 بات لصالح السائق بموجب قرار وزارة النقل، ويدفع الراكب رسوم الطرق المدفوعة. تتوفر رحلات لمسافات قصيرة — حول المطار، لا تتجاوز 20 كم."
+  },
+  {
+    "file": "data/airport-guide/hi/BKK.json",
+    "block": "taxi",
+    "before": "टैक्सी सूचना काउंटर और कूपन देने वाली मशीनें यात्री टर्मिनल में लेवल 1 पर, द्वार 4 और 7 के बीच हैं। परिवहन मंत्रालय के आदेश से किराए में चालक के लिए 50 बाट का शुल्क जुड़ता है, टोल सड़कों का भुगतान यात्री करता है। कम दूरी की यात्राएँ भी हैं — हवाई अड्डे के आसपास, 20 किमी से अधिक नहीं; सामान्य दूरी के लिए भूमि परिवहन विभाग के नियमों के अनुसार किराया चालक से तय किया जा सकता है।",
+    "after": "टैक्सी सूचना काउंटर और कूपन देने वाली मशीनें यात्री टर्मिनल में लेवल 1 पर, द्वार 4 और 7 के बीच हैं। परिवहन मंत्रालय के आदेश से किराए में चालक के लिए 50 बाट का शुल्क जुड़ता है, टोल सड़कों का भुगतान यात्री करता है। कम दूरी की यात्राएँ भी हैं — हवाई अड्डे के आसपास, 20 किमी से अधिक नहीं।"
+  },
+  {
+    "file": "data/airport-guide/DFW.json",
+    "block": "lounges",
+    "before": "В аэропорту больше 20 залов и премиальных зон. Все пять терминалов соединены внутри зоны досмотра поездом Skylink, поэтому пассажиры с правом доступа могут пользоваться залами в любом терминале, независимо от выхода на посадку. Среди операторов — American Airlines, American Express Centurion Lounge, Capital One Lounge, Chase Sapphire Lounge by The Club, The Club DFW, Plaza Premium Lounges и PS DFW.",
+    "after": "В аэропорту больше 20 залов и премиальных зон. Все пять терминалов соединены внутри зоны досмотра поездом Skylink, поэтому пассажиры с правом доступа могут пользоваться залами в любом терминале, независимо от выхода на посадку. Среди операторов — American Airlines, American Express Centurion Lounge, Capital One Lounge, Chase Sapphire Lounge by The Club, The Club DFW, Plaza Premium Lounges. PS DFW находится в отдельном частном терминале рядом с зоной деловой авиации."
+  },
+  {
+    "file": "data/airport-guide/en/DFW.json",
+    "block": "lounges",
+    "before": "The airport has more than 20 lounges and premium spaces. All five terminals are linked airside by the Skylink train, so eligible passengers can use lounges in any terminal regardless of their departure gate. Operators include American Airlines, American Express Centurion Lounge, Capital One Lounge, Chase Sapphire Lounge by The Club, The Club DFW, Plaza Premium Lounges and PS DFW.",
+    "after": "The airport has more than 20 lounges and premium spaces. All five terminals are linked airside by the Skylink train, so eligible passengers can use lounges in any terminal regardless of their departure gate. Operators include American Airlines, American Express Centurion Lounge, Capital One Lounge, Chase Sapphire Lounge by The Club, The Club DFW, Plaza Premium Lounges. PS DFW is in a separate private terminal near the corporate aviation facilities."
+  },
+  {
+    "file": "data/airport-guide/de/DFW.json",
+    "block": "lounges",
+    "before": "Der Flughafen hat mehr als 20 Lounges und Premiumbereiche. Alle fünf Terminals sind innerhalb des Sicherheitsbereichs durch den Zug Skylink verbunden, daher können Zugangsberechtigte die Lounges in jedem Terminal nutzen, unabhängig vom Abfluggate. Zu den Betreibern gehören American Airlines, American Express Centurion Lounge, Capital One Lounge, Chase Sapphire Lounge by The Club, The Club DFW, Plaza Premium Lounges und PS DFW.",
+    "after": "Der Flughafen hat mehr als 20 Lounges und Premiumbereiche. Alle fünf Terminals sind innerhalb des Sicherheitsbereichs durch den Zug Skylink verbunden, daher können Zugangsberechtigte die Lounges in jedem Terminal nutzen, unabhängig vom Abfluggate. Zu den Betreibern gehören American Airlines, American Express Centurion Lounge, Capital One Lounge, Chase Sapphire Lounge by The Club, The Club DFW, Plaza Premium Lounges. PS DFW befindet sich in einem separaten privaten Terminal nahe dem Bereich für Geschäftsflugverkehr."
+  },
+  {
+    "file": "data/airport-guide/fr/DFW.json",
+    "block": "lounges",
+    "before": "L'aéroport compte plus de 20 salons et espaces premium. Les cinq terminaux sont reliés côté zone réservée par le train Skylink, si bien que les passagers ayant droit d'accès peuvent utiliser les salons de n'importe quel terminal, quelle que soit leur porte d'embarquement. Parmi les exploitants : American Airlines, American Express Centurion Lounge, Capital One Lounge, Chase Sapphire Lounge by The Club, The Club DFW, Plaza Premium Lounges et PS DFW.",
+    "after": "L'aéroport compte plus de 20 salons et espaces premium. Les cinq terminaux sont reliés côté zone réservée par le train Skylink, si bien que les passagers ayant droit d'accès peuvent utiliser les salons de n'importe quel terminal, quelle que soit leur porte d'embarquement. Parmi les exploitants : American Airlines, American Express Centurion Lounge, Capital One Lounge, Chase Sapphire Lounge by The Club, The Club DFW, Plaza Premium Lounges. PS DFW se trouve dans un terminal privé distinct, près de la zone d’aviation d’affaires."
+  },
+  {
+    "file": "data/airport-guide/es/DFW.json",
+    "block": "lounges",
+    "before": "En el aeropuerto hay más de 20 salas y zonas prémium. Las cinco terminales están unidas en la zona posterior al control por el tren Skylink, así que los pasajeros con derecho de acceso pueden usar las salas de cualquier terminal, sea cual sea su puerta de embarque. Entre los operadores están American Airlines, American Express Centurion Lounge, Capital One Lounge, Chase Sapphire Lounge by The Club, The Club DFW, Plaza Premium Lounges y PS DFW.",
+    "after": "En el aeropuerto hay más de 20 salas y zonas prémium. Las cinco terminales están unidas en la zona posterior al control por el tren Skylink, así que los pasajeros con derecho de acceso pueden usar las salas de cualquier terminal, sea cual sea su puerta de embarque. Entre los operadores están American Airlines, American Express Centurion Lounge, Capital One Lounge, Chase Sapphire Lounge by The Club, The Club DFW, Plaza Premium Lounges. PS DFW se encuentra en una terminal privada independiente, cerca de las instalaciones de aviación ejecutiva."
+  },
+  {
+    "file": "data/airport-guide/it/DFW.json",
+    "block": "lounges",
+    "before": "In aeroporto ci sono oltre 20 sale e aree premium. Tutti e cinque i terminal sono collegati all’interno dell’area dopo i controlli dal treno Skylink, quindi i passeggeri che ne hanno diritto possono usare le sale di qualsiasi terminal, indipendentemente dal gate d’imbarco. Tra gli operatori: American Airlines, American Express Centurion Lounge, Capital One Lounge, Chase Sapphire Lounge by The Club, The Club DFW, Plaza Premium Lounges e PS DFW.",
+    "after": "In aeroporto ci sono oltre 20 sale e aree premium. Tutti e cinque i terminal sono collegati all’interno dell’area dopo i controlli dal treno Skylink, quindi i passeggeri che ne hanno diritto possono usare le sale di qualsiasi terminal, indipendentemente dal gate d’imbarco. Tra gli operatori: American Airlines, American Express Centurion Lounge, Capital One Lounge, Chase Sapphire Lounge by The Club, The Club DFW, Plaza Premium Lounges. PS DFW si trova in un terminal privato separato, vicino alle strutture dell’aviazione d’affari."
+  },
+  {
+    "file": "data/airport-guide/tr/DFW.json",
+    "block": "lounges",
+    "before": "Havalimanında 20'den fazla salon ve premium alan var. Beş terminalin hepsi güvenlik kontrolünden sonraki alanda Skylink treniyle birbirine bağlıdır; bu yüzden giriş hakkı olan yolcular biniş kapısından bağımsız olarak her terminaldeki salonları kullanabilir. İşletmeciler arasında American Airlines, American Express Centurion Lounge, Capital One Lounge, Chase Sapphire Lounge by The Club, The Club DFW, Plaza Premium Lounges ve PS DFW var.",
+    "after": "Havalimanında 20'den fazla salon ve premium alan var. Beş terminalin hepsi güvenlik kontrolünden sonraki alanda Skylink treniyle birbirine bağlıdır; bu yüzden giriş hakkı olan yolcular biniş kapısından bağımsız olarak her terminaldeki salonları kullanabilir. İşletmeciler arasında American Airlines, American Express Centurion Lounge, Capital One Lounge, Chase Sapphire Lounge by The Club, The Club DFW, Plaza Premium Lounges var. PS DFW, iş havacılığı tesislerinin yakınındaki ayrı bir özel terminaldedir."
+  },
+  {
+    "file": "data/airport-guide/zh/DFW.json",
+    "block": "lounges",
+    "before": "机场有20多个休息室和高端区域。五座航站楼在安检后区域内由Skylink列车相连，因此有资格的旅客可以使用任意航站楼的休息室，与登机口无关。运营方包括American Airlines、American Express Centurion Lounge、Capital One Lounge、Chase Sapphire Lounge by The Club、The Club DFW、Plaza Premium Lounges和PS DFW。",
+    "after": "机场有20多个休息室和高端区域。五座航站楼在安检后区域内由Skylink列车相连，因此有资格的旅客可以使用任意航站楼的休息室，与登机口无关。运营方包括American Airlines、American Express Centurion Lounge、Capital One Lounge、Chase Sapphire Lounge by The Club、The Club DFW、Plaza Premium Lounges。PS DFW位于公务航空设施附近的独立私人航站楼内。"
+  },
+  {
+    "file": "data/airport-guide/ja/DFW.json",
+    "block": "lounges",
+    "before": "空港には20を超えるラウンジとプレミアムエリアがある。5つのターミナルはすべて保安検査後のエリア内で列車Skylinkによって結ばれているため、利用資格のある旅客は搭乗ゲートに関係なく、どのターミナルのラウンジでも利用できる。運営会社にはAmerican Airlines、American Express Centurion Lounge、Capital One Lounge、Chase Sapphire Lounge by The Club、The Club DFW、Plaza Premium Lounges、PS DFWなどがある。",
+    "after": "空港には20を超えるラウンジとプレミアムエリアがある。5つのターミナルはすべて保安検査後のエリア内で列車Skylinkによって結ばれているため、利用資格のある旅客は搭乗ゲートに関係なく、どのターミナルのラウンジでも利用できる。運営会社にはAmerican Airlines、American Express Centurion Lounge、Capital One Lounge、Chase Sapphire Lounge by The Club、The Club DFW、Plaza Premium Loungesなどがある。PS DFWはビジネス航空施設の近くにある独立した専用ターミナルに位置する。"
+  },
+  {
+    "file": "data/airport-guide/ko/DFW.json",
+    "block": "lounges",
+    "before": "공항에는 라운지와 프리미엄 공간이 20곳 넘게 있습니다. 다섯 터미널 모두 보안검색 후 구역 안에서 Skylink 열차로 연결되므로, 이용 자격이 있는 승객은 탑승 게이트와 관계없이 어느 터미널의 라운지든 이용할 수 있습니다. 운영사로는 American Airlines, American Express Centurion Lounge, Capital One Lounge, Chase Sapphire Lounge by The Club, The Club DFW, Plaza Premium Lounges, PS DFW 등이 있습니다.",
+    "after": "공항에는 라운지와 프리미엄 공간이 20곳 넘게 있습니다. 다섯 터미널 모두 보안검색 후 구역 안에서 Skylink 열차로 연결되므로, 이용 자격이 있는 승객은 탑승 게이트와 관계없이 어느 터미널의 라운지든 이용할 수 있습니다. 운영사로는 American Airlines, American Express Centurion Lounge, Capital One Lounge, Chase Sapphire Lounge by The Club, The Club DFW, Plaza Premium Lounges 등이 있습니다. PS DFW는 비즈니스 항공 시설 근처의 별도 전용 터미널에 있습니다."
+  },
+  {
+    "file": "data/airport-guide/ar/DFW.json",
+    "block": "lounges",
+    "before": "في المطار أكثر من 20 صالة ومنطقة مميزة. ترتبط المباني الخمسة كلها داخل المنطقة بعد التفتيش الأمني بقطار Skylink، لذا يمكن للركاب الذين يحق لهم الدخول استخدام الصالات في أي مبنى، بغض النظر عن بوابة الصعود. ومن بين المشغّلين American Airlines وAmerican Express Centurion Lounge وCapital One Lounge وChase Sapphire Lounge by The Club وThe Club DFW وPlaza Premium Lounges وPS DFW.",
+    "after": "في المطار أكثر من 20 صالة ومنطقة مميزة. ترتبط المباني الخمسة كلها داخل المنطقة بعد التفتيش الأمني بقطار Skylink، لذا يمكن للركاب الذين يحق لهم الدخول استخدام الصالات في أي مبنى، بغض النظر عن بوابة الصعود. ومن بين المشغّلين American Airlines وAmerican Express Centurion Lounge وCapital One Lounge وChase Sapphire Lounge by The Club وThe Club DFW وPlaza Premium Lounges. يقع PS DFW في مبنى خاص منفصل قرب مرافق طيران الأعمال."
+  },
+  {
+    "file": "data/airport-guide/hi/DFW.json",
+    "block": "lounges",
+    "before": "हवाई अड्डे में 20 से अधिक लाउंज और प्रीमियम क्षेत्र हैं। पाँचों टर्मिनल सुरक्षा जाँच के बाद वाले क्षेत्र के अंदर Skylink ट्रेन से जुड़े हैं, इसलिए प्रवेश के अधिकार वाले यात्री बोर्डिंग गेट की परवाह किए बिना किसी भी टर्मिनल के लाउंज का उपयोग कर सकते हैं। संचालकों में — American Airlines, American Express Centurion Lounge, Capital One Lounge, Chase Sapphire Lounge by The Club, The Club DFW, Plaza Premium Lounges और PS DFW।",
+    "after": "हवाई अड्डे में 20 से अधिक लाउंज और प्रीमियम क्षेत्र हैं। पाँचों टर्मिनल सुरक्षा जाँच के बाद वाले क्षेत्र के अंदर Skylink ट्रेन से जुड़े हैं, इसलिए प्रवेश के अधिकार वाले यात्री बोर्डिंग गेट की परवाह किए बिना किसी भी टर्मिनल के लाउंज का उपयोग कर सकते हैं। संचालकों में — American Airlines, American Express Centurion Lounge, Capital One Lounge, Chase Sapphire Lounge by The Club, The Club DFW, Plaza Premium Lounges शामिल हैं। PS DFW व्यावसायिक विमानन सुविधाओं के पास एक अलग निजी टर्मिनल में है।"
+  },
+  {
+    "file": "data/airport-guide/AMS.json",
+    "block": "transport",
+    "before": "Станция NS — прямо под зданием терминала, спуститься на эскалаторе или лифте. Между Amsterdam CS и аэропортом поезд ходит 8 раз в час, с остановками Sloterdijk и Lelylaan, и всегда отправляется из аэропорта с пути 3. Из Амстердама, Утрехта, Лейдена, Гааги, Делфта и Роттердама до аэропорта можно доехать круглосуточно, часто без пересадок. Билет покупают в аэропорту или платят бесконтактной картой либо телефоном, отмечаясь на жёлтых валидаторах наверху эскалаторов и лифтов в Schiphol Plaza.",
+    "after": "Станция NS — прямо под зданием терминала, спуститься на эскалаторе или лифте. Между Amsterdam CS и аэропортом поезд ходит 8 раз в час, с остановками Sloterdijk и Lelylaan, и всегда отправляется из аэропорта с пути 3. Из Амстердама, Утрехта, Лейдена, Гааги, Делфта и Роттердама до аэропорта можно доехать круглосуточно, часто без пересадок. Билет покупают в аэропорту или платят бесконтактной картой либо телефоном, отмечаясь на жёлтых валидаторах наверху эскалаторов и лифтов в Schiphol Plaza. При оплате банковской картой или телефоном обязательно отметьтесь при входе и при выходе."
+  },
+  {
+    "file": "data/airport-guide/AMS.json",
+    "block": "sleep",
+    "before": "После досмотра работают два отеля, круглосуточно: Mercure Hotel в Lounge 3 и YOTELAIR в Lounge 2, оба по пути к выходам D1–D57, E, F, G и H. В YOTELAIR можно попасть даже без визы в Нидерланды.",
+    "after": "После досмотра работают два отеля, круглосуточно: Mercure Hotel в Lounge 3 и YOTELAIR в Lounge 2, оба по пути к выходам D1–D57, E, F, G и H. В YOTELAIR можно попасть даже без визы в Нидерланды. В Mercure принимают пассажиров с рейсом в день выезда из отеля; с собой можно взять только ручную кладь."
+  },
+  {
+    "file": "data/airport-guide/en/AMS.json",
+    "block": "transport",
+    "before": "The NS station is directly beneath the terminal building; go down by escalator or lift. Trains run between Amsterdam CS and the airport 8 times an hour, stopping at Sloterdijk and Lelylaan, and always depart from the airport from platform 3. From Amsterdam, Utrecht, Leiden, The Hague, Delft and Rotterdam the airport can be reached round the clock, often without changing. Buy a ticket at the airport or pay with a contactless card or phone, checking in at the yellow card readers at the top of the escalators and lifts in Schiphol Plaza.",
+    "after": "The NS station is directly beneath the terminal building; go down by escalator or lift. Trains run between Amsterdam CS and the airport 8 times an hour, stopping at Sloterdijk and Lelylaan, and always depart from the airport from platform 3. From Amsterdam, Utrecht, Leiden, The Hague, Delft and Rotterdam the airport can be reached round the clock, often without changing. Buy a ticket at the airport or pay with a contactless card or phone, checking in at the yellow card readers at the top of the escalators and lifts in Schiphol Plaza. When paying by bank card or phone, remember to check in and check out."
+  },
+  {
+    "file": "data/airport-guide/en/AMS.json",
+    "block": "sleep",
+    "before": "Two hotels operate after security, round the clock: Mercure Hotel in Lounge 3 and YOTELAIR in Lounge 2, both on the way to gates D1–D57, E, F, G and H. YOTELAIR can be used even without a visa for the Netherlands.",
+    "after": "Two hotels operate after security, round the clock: Mercure Hotel in Lounge 3 and YOTELAIR in Lounge 2, both on the way to gates D1–D57, E, F, G and H. YOTELAIR can be used even without a visa for the Netherlands. To stay at Mercure, you must have a flight departing on the day you check out; only hand baggage is allowed in the hotel."
+  },
+  {
+    "file": "data/airport-guide/de/AMS.json",
+    "block": "transport",
+    "before": "Der NS-Bahnhof liegt direkt unter dem Terminalgebäude, erreichbar per Rolltreppe oder Aufzug. Zwischen Amsterdam CS und dem Flughafen fährt der Zug 8-mal pro Stunde mit Halt in Sloterdijk und Lelylaan und fährt am Flughafen immer von Gleis 3 ab. Aus Amsterdam, Utrecht, Leiden, Den Haag, Delft und Rotterdam ist der Flughafen rund um die Uhr erreichbar, oft ohne Umsteigen. Das Ticket kauft man am Flughafen oder zahlt kontaktlos mit Karte oder Telefon und checkt an den gelben Validatoren oberhalb der Rolltreppen und Aufzüge auf der Schiphol Plaza ein.",
+    "after": "Der NS-Bahnhof liegt direkt unter dem Terminalgebäude, erreichbar per Rolltreppe oder Aufzug. Zwischen Amsterdam CS und dem Flughafen fährt der Zug 8-mal pro Stunde mit Halt in Sloterdijk und Lelylaan und fährt am Flughafen immer von Gleis 3 ab. Aus Amsterdam, Utrecht, Leiden, Den Haag, Delft und Rotterdam ist der Flughafen rund um die Uhr erreichbar, oft ohne Umsteigen. Das Ticket kauft man am Flughafen oder zahlt kontaktlos mit Karte oder Telefon und checkt an den gelben Validatoren oberhalb der Rolltreppen und Aufzüge auf der Schiphol Plaza ein. Bei Zahlung mit Bankkarte oder Smartphone müssen Sie sowohl ein- als auch auschecken."
+  },
+  {
+    "file": "data/airport-guide/de/AMS.json",
+    "block": "sleep",
+    "before": "Nach der Sicherheitskontrolle gibt es zwei Hotels, rund um die Uhr geöffnet: Mercure Hotel in Lounge 3 und YOTELAIR in Lounge 2, beide auf dem Weg zu den Gates D1–D57, E, F, G und H. YOTELAIR ist sogar ohne Visum für die Niederlande zugänglich.",
+    "after": "Nach der Sicherheitskontrolle gibt es zwei Hotels, rund um die Uhr geöffnet: Mercure Hotel in Lounge 3 und YOTELAIR in Lounge 2, beide auf dem Weg zu den Gates D1–D57, E, F, G und H. YOTELAIR ist sogar ohne Visum für die Niederlande zugänglich. Für einen Aufenthalt im Mercure benötigen Sie einen Flug am Tag des Check-outs; ins Hotel darf nur Handgepäck mitgenommen werden."
+  },
+  {
+    "file": "data/airport-guide/fr/AMS.json",
+    "block": "transport",
+    "before": "La gare NS se trouve juste sous le bâtiment du terminal, on y descend par escalator ou ascenseur. Entre Amsterdam CS et l'aéroport, le train circule 8 fois par heure, avec arrêts à Sloterdijk et Lelylaan, et part toujours de l'aéroport depuis la voie 3. Depuis Amsterdam, Utrecht, Leyde, La Haye, Delft et Rotterdam, on peut rejoindre l'aéroport jour et nuit, souvent sans correspondance. Le billet s'achète à l'aéroport, ou l'on paie par carte sans contact ou téléphone en validant aux bornes jaunes en haut des escalators et des ascenseurs de Schiphol Plaza.",
+    "after": "La gare NS se trouve juste sous le bâtiment du terminal, on y descend par escalator ou ascenseur. Entre Amsterdam CS et l'aéroport, le train circule 8 fois par heure, avec arrêts à Sloterdijk et Lelylaan, et part toujours de l'aéroport depuis la voie 3. Depuis Amsterdam, Utrecht, Leyde, La Haye, Delft et Rotterdam, on peut rejoindre l'aéroport jour et nuit, souvent sans correspondance. Le billet s'achète à l'aéroport, ou l'on paie par carte sans contact ou téléphone en validant aux bornes jaunes en haut des escalators et des ascenseurs de Schiphol Plaza. Si vous payez par carte bancaire ou téléphone, validez à l’entrée et à la sortie."
+  },
+  {
+    "file": "data/airport-guide/fr/AMS.json",
+    "block": "sleep",
+    "before": "Après le contrôle, deux hôtels sont ouverts jour et nuit : le Mercure Hotel dans le Lounge 3 et le YOTELAIR dans le Lounge 2, tous deux sur le chemin des portes D1–D57, E, F, G et H. On peut accéder au YOTELAIR même sans visa pour les Pays-Bas.",
+    "after": "Après le contrôle, deux hôtels sont ouverts jour et nuit : le Mercure Hotel dans le Lounge 3 et le YOTELAIR dans le Lounge 2, tous deux sur le chemin des portes D1–D57, E, F, G et H. On peut accéder au YOTELAIR même sans visa pour les Pays-Bas. Pour séjourner au Mercure, il faut avoir un vol au départ le jour du départ de l’hôtel ; seuls les bagages à main sont autorisés dans l’hôtel."
+  },
+  {
+    "file": "data/airport-guide/es/AMS.json",
+    "block": "transport",
+    "before": "La estación de NS está justo debajo del edificio de la terminal; se baja por escalera mecánica o en ascensor. Entre Amsterdam CS y el aeropuerto el tren pasa 8 veces por hora, con paradas en Sloterdijk y Lelylaan, y en el aeropuerto siempre sale de la vía 3. Desde Ámsterdam, Utrecht, Leiden, La Haya, Delft y Róterdam se puede llegar al aeropuerto día y noche, a menudo sin transbordos. El billete se compra en el aeropuerto, o se paga con tarjeta sin contacto o con el móvil, validando en las validadoras amarillas situadas en lo alto de las escaleras mecánicas y los ascensores de Schiphol Plaza.",
+    "after": "La estación de NS está justo debajo del edificio de la terminal; se baja por escalera mecánica o en ascensor. Entre Amsterdam CS y el aeropuerto el tren pasa 8 veces por hora, con paradas en Sloterdijk y Lelylaan, y en el aeropuerto siempre sale de la vía 3. Desde Ámsterdam, Utrecht, Leiden, La Haya, Delft y Róterdam se puede llegar al aeropuerto día y noche, a menudo sin transbordos. El billete se compra en el aeropuerto, o se paga con tarjeta sin contacto o con el móvil, validando en las validadoras amarillas situadas en lo alto de las escaleras mecánicas y los ascensores de Schiphol Plaza. Si paga con tarjeta bancaria o teléfono, valide tanto al entrar como al salir."
+  },
+  {
+    "file": "data/airport-guide/es/AMS.json",
+    "block": "sleep",
+    "before": "Tras el control funcionan dos hoteles, día y noche: Mercure Hotel en Lounge 3 y YOTELAIR en Lounge 2, ambos de camino a las puertas D1–D57, E, F, G y H. A YOTELAIR se puede acceder incluso sin visado para los Países Bajos.",
+    "after": "Tras el control funcionan dos hoteles, día y noche: Mercure Hotel en Lounge 3 y YOTELAIR en Lounge 2, ambos de camino a las puertas D1–D57, E, F, G y H. A YOTELAIR se puede acceder incluso sin visado para los Países Bajos. Para alojarse en el Mercure, debe tener un vuelo que salga el día de salida del hotel; solo se permite llevar equipaje de mano al hotel."
+  },
+  {
+    "file": "data/airport-guide/it/AMS.json",
+    "block": "transport",
+    "before": "La stazione NS si trova direttamente sotto l’edificio del terminal: si scende con la scala mobile o l’ascensore. Tra Amsterdam CS e l’aeroporto il treno passa 8 volte all’ora, con fermate a Sloterdijk e Lelylaan, e dall’aeroporto parte sempre dal binario 3. Da Amsterdam, Utrecht, Leida, L’Aia, Delft e Rotterdam si raggiunge l’aeroporto giorno e notte, spesso senza cambi. Il biglietto si compra in aeroporto oppure si paga con carta contactless o con il telefono, validando ai validatori gialli in cima alle scale mobili e agli ascensori di Schiphol Plaza.",
+    "after": "La stazione NS si trova direttamente sotto l’edificio del terminal: si scende con la scala mobile o l’ascensore. Tra Amsterdam CS e l’aeroporto il treno passa 8 volte all’ora, con fermate a Sloterdijk e Lelylaan, e dall’aeroporto parte sempre dal binario 3. Da Amsterdam, Utrecht, Leida, L’Aia, Delft e Rotterdam si raggiunge l’aeroporto giorno e notte, spesso senza cambi. Il biglietto si compra in aeroporto oppure si paga con carta contactless o con il telefono, validando ai validatori gialli in cima alle scale mobili e agli ascensori di Schiphol Plaza. Se paghi con carta bancaria o telefono, convalida sia all’ingresso sia all’uscita."
+  },
+  {
+    "file": "data/airport-guide/it/AMS.json",
+    "block": "sleep",
+    "before": "Dopo i controlli ci sono due hotel, aperti giorno e notte: Mercure Hotel nella Lounge 3 e YOTELAIR nella Lounge 2, entrambi lungo il percorso verso i gate D1–D57, E, F, G e H. A YOTELAIR si può accedere anche senza visto per i Paesi Bassi.",
+    "after": "Dopo i controlli ci sono due hotel, aperti giorno e notte: Mercure Hotel nella Lounge 3 e YOTELAIR nella Lounge 2, entrambi lungo il percorso verso i gate D1–D57, E, F, G e H. A YOTELAIR si può accedere anche senza visto per i Paesi Bassi. Per soggiornare al Mercure occorre avere un volo in partenza il giorno del check-out; in hotel si può portare solo il bagaglio a mano."
+  },
+  {
+    "file": "data/airport-guide/tr/AMS.json",
+    "block": "transport",
+    "before": "NS istasyonu doğrudan terminal binasının altında; yürüyen merdiven veya asansörle inilir. Amsterdam CS ile havalimanı arasında tren saatte 8 kez sefer yapar, Sloterdijk ve Lelylaan'da durur ve havalimanından her zaman 3 numaralı perondan kalkar. Amsterdam, Utrecht, Leiden, Lahey, Delft ve Rotterdam'dan havalimanına gece gündüz, çoğu zaman aktarmasız ulaşılabilir. Bilet havalimanında alınır ya da Schiphol Plaza'da yürüyen merdivenlerin ve asansörlerin üst ucundaki sarı okuyuculara okutularak temassız kartla veya telefonla ödenir.",
+    "after": "NS istasyonu doğrudan terminal binasının altında; yürüyen merdiven veya asansörle inilir. Amsterdam CS ile havalimanı arasında tren saatte 8 kez sefer yapar, Sloterdijk ve Lelylaan'da durur ve havalimanından her zaman 3 numaralı perondan kalkar. Amsterdam, Utrecht, Leiden, Lahey, Delft ve Rotterdam'dan havalimanına gece gündüz, çoğu zaman aktarmasız ulaşılabilir. Bilet havalimanında alınır ya da Schiphol Plaza'da yürüyen merdivenlerin ve asansörlerin üst ucundaki sarı okuyuculara okutularak temassız kartla veya telefonla ödenir. Banka kartı veya telefonla ödeme yaparken hem girişte hem çıkışta kartınızı ya da telefonunuzu okutun."
+  },
+  {
+    "file": "data/airport-guide/tr/AMS.json",
+    "block": "sleep",
+    "before": "Güvenlik kontrolünden sonra iki otel gece gündüz çalışır: Lounge 3'te Mercure Hotel ve Lounge 2'de YOTELAIR, ikisi de D1–D57, E, F, G ve H kapılarına giden yolda. YOTELAIR'e Hollanda vizesi olmadan da girilebilir.",
+    "after": "Güvenlik kontrolünden sonra iki otel gece gündüz çalışır: Lounge 3'te Mercure Hotel ve Lounge 2'de YOTELAIR, ikisi de D1–D57, E, F, G ve H kapılarına giden yolda. YOTELAIR'e Hollanda vizesi olmadan da girilebilir. Mercure’de konaklamak için otelden çıkış gününüzde kalkacak bir uçuşunuz olmalı; otele yalnızca el bagajı götürülebilir."
+  },
+  {
+    "file": "data/airport-guide/zh/AMS.json",
+    "block": "transport",
+    "before": "NS火车站就在航站楼正下方，乘自动扶梯或电梯下行即可。Amsterdam CS与机场之间每小时8班火车，途经Sloterdijk和Lelylaan，从机场出发的列车始终在3站台发车。从阿姆斯特丹、乌得勒支、莱顿、海牙、代尔夫特和鹿特丹可全天候前往机场，通常无需换乘。车票可在机场购买，也可用非接触式银行卡或手机支付，在Schiphol Plaza自动扶梯和电梯上方的黄色验票机上刷卡。",
+    "after": "NS火车站就在航站楼正下方，乘自动扶梯或电梯下行即可。Amsterdam CS与机场之间每小时8班火车，途经Sloterdijk和Lelylaan，从机场出发的列车始终在3站台发车。从阿姆斯特丹、乌得勒支、莱顿、海牙、代尔夫特和鹿特丹可全天候前往机场，通常无需换乘。车票可在机场购买，也可用非接触式银行卡或手机支付，在Schiphol Plaza自动扶梯和电梯上方的黄色验票机上刷卡。使用银行卡或手机支付时，进站和出站都必须刷卡或刷手机。"
+  },
+  {
+    "file": "data/airport-guide/zh/AMS.json",
+    "block": "sleep",
+    "before": "安检后有两家酒店全天候营业：Lounge 3的Mercure Hotel和Lounge 2的YOTELAIR，均位于前往D1–D57、E、F、G和H登机口的途中。即使没有荷兰签证也可以入住YOTELAIR。",
+    "after": "安检后有两家酒店全天候营业：Lounge 3的Mercure Hotel和Lounge 2的YOTELAIR，均位于前往D1–D57、E、F、G和H登机口的途中。即使没有荷兰签证也可以入住YOTELAIR。入住Mercure须持有退房当天出发的航班，只能携带手提行李进入酒店。"
+  },
+  {
+    "file": "data/airport-guide/ja/AMS.json",
+    "block": "transport",
+    "before": "NSの駅はターミナルビルの真下にあり、エスカレーターかエレベーターで下りる。Amsterdam CSと空港の間は列車が1時間に8本運行し、SloterdijkとLelylaanに停車、空港からは常に3番線から発車する。アムステルダム、ユトレヒト、ライデン、ハーグ、デルフト、ロッテルダムからは24時間空港へ行くことができ、乗り換えなしの場合も多い。乗車券は空港で購入するか、Schiphol Plazaのエスカレーターとエレベーターを上がったところにある黄色の読み取り機にタッチして、非接触型カードまたはスマートフォンで支払う。",
+    "after": "NSの駅はターミナルビルの真下にあり、エスカレーターかエレベーターで下りる。Amsterdam CSと空港の間は列車が1時間に8本運行し、SloterdijkとLelylaanに停車、空港からは常に3番線から発車する。アムステルダム、ユトレヒト、ライデン、ハーグ、デルフト、ロッテルダムからは24時間空港へ行くことができ、乗り換えなしの場合も多い。乗車券は空港で購入するか、Schiphol Plazaのエスカレーターとエレベーターを上がったところにある黄色の読み取り機にタッチして、非接触型カードまたはスマートフォンで支払う。銀行カードやスマートフォンで支払う場合は、乗車前と降車後の両方で端末にタッチする。"
+  },
+  {
+    "file": "data/airport-guide/ja/AMS.json",
+    "block": "sleep",
+    "before": "保安検査後に2つのホテルが24時間営業している：Lounge 3のMercure HotelとLounge 2のYOTELAIRで、どちらもD1–D57、E、F、G、Hゲートへ向かう途中にある。YOTELAIRはオランダのビザがなくても利用できる。",
+    "after": "保安検査後に2つのホテルが24時間営業している：Lounge 3のMercure HotelとLounge 2のYOTELAIRで、どちらもD1–D57、E、F、G、Hゲートへ向かう途中にある。YOTELAIRはオランダのビザがなくても利用できる。Mercureの宿泊にはチェックアウト当日に出発する便の利用が必要で、ホテルに持ち込めるのは機内持ち込み手荷物のみ。"
+  },
+  {
+    "file": "data/airport-guide/ko/AMS.json",
+    "block": "transport",
+    "before": "NS 역은 터미널 건물 바로 아래에 있으며, 에스컬레이터나 엘리베이터로 내려갑니다. Amsterdam CS와 공항 사이 열차는 시간당 8회 운행하며 Sloterdijk와 Lelylaan에 정차하고, 공항에서는 항상 3번 선로에서 출발합니다. 암스테르담, 위트레흐트, 레이던, 헤이그, 델프트, 로테르담에서 공항까지 24시간 갈 수 있으며, 환승 없이 가는 경우가 많습니다. 승차권은 공항에서 구입하거나, Schiphol Plaza의 에스컬레이터와 엘리베이터 위쪽에 있는 노란색 단말기에 비접촉 카드나 휴대전화를 태그해 결제합니다.",
+    "after": "NS 역은 터미널 건물 바로 아래에 있으며, 에스컬레이터나 엘리베이터로 내려갑니다. Amsterdam CS와 공항 사이 열차는 시간당 8회 운행하며 Sloterdijk와 Lelylaan에 정차하고, 공항에서는 항상 3번 선로에서 출발합니다. 암스테르담, 위트레흐트, 레이던, 헤이그, 델프트, 로테르담에서 공항까지 24시간 갈 수 있으며, 환승 없이 가는 경우가 많습니다. 승차권은 공항에서 구입하거나, Schiphol Plaza의 에스컬레이터와 엘리베이터 위쪽에 있는 노란색 단말기에 비접촉 카드나 휴대전화를 태그해 결제합니다.은행 카드나 휴대전화로 결제할 때는 승차 전과 하차 후 모두 단말기에 태그해야 합니다."
+  },
+  {
+    "file": "data/airport-guide/ko/AMS.json",
+    "block": "sleep",
+    "before": "보안검색 후 구역에서 호텔 두 곳이 상시 운영합니다: Lounge 3의 Mercure Hotel과 Lounge 2의 YOTELAIR이며, 둘 다 D1–D57, E, F, G, H 게이트로 가는 길에 있습니다. YOTELAIR는 네덜란드 비자가 없어도 이용할 수 있습니다.",
+    "after": "보안검색 후 구역에서 호텔 두 곳이 상시 운영합니다: Lounge 3의 Mercure Hotel과 Lounge 2의 YOTELAIR이며, 둘 다 D1–D57, E, F, G, H 게이트로 가는 길에 있습니다. YOTELAIR는 네덜란드 비자가 없어도 이용할 수 있습니다.Mercure에 숙박하려면 체크아웃 당일 출발하는 항공편이 있어야 하며, 호텔에는 기내 휴대 수하물만 가져갈 수 있습니다."
+  },
+  {
+    "file": "data/airport-guide/ar/AMS.json",
+    "block": "transport",
+    "before": "تقع محطة NS أسفل مبنى الركاب مباشرة، ويُنزل إليها بالسلم المتحرك أو بالمصعد. يسير القطار بين Amsterdam CS والمطار 8 مرات في الساعة، مع التوقف في Sloterdijk وLelylaan، ويغادر من المطار دائمًا من الرصيف 3. يمكن الوصول إلى المطار من أمستردام وأوترخت ولايدن ولاهاي ودلفت وروتردام على مدار الساعة، وغالبًا دون تبديل. تُشترى التذكرة في المطار، أو يُدفع ببطاقة لا تلامسية أو بالهاتف مع تمريرها على أجهزة التحقق الصفراء أعلى السلالم المتحركة والمصاعد في Schiphol Plaza.",
+    "after": "تقع محطة NS أسفل مبنى الركاب مباشرة، ويُنزل إليها بالسلم المتحرك أو بالمصعد. يسير القطار بين Amsterdam CS والمطار 8 مرات في الساعة، مع التوقف في Sloterdijk وLelylaan، ويغادر من المطار دائمًا من الرصيف 3. يمكن الوصول إلى المطار من أمستردام وأوترخت ولايدن ولاهاي ودلفت وروتردام على مدار الساعة، وغالبًا دون تبديل. تُشترى التذكرة في المطار، أو يُدفع ببطاقة لا تلامسية أو بالهاتف مع تمريرها على أجهزة التحقق الصفراء أعلى السلالم المتحركة والمصاعد في Schiphol Plaza. عند الدفع ببطاقة مصرفية أو هاتف، يجب تسجيل الدخول والخروج بتمرير البطاقة أو الهاتف على القارئ."
+  },
+  {
+    "file": "data/airport-guide/ar/AMS.json",
+    "block": "sleep",
+    "before": "بعد التفتيش الأمني يعمل فندقان على مدار الساعة: Mercure Hotel في Lounge 3 وYOTELAIR في Lounge 2، وكلاهما في الطريق إلى البوابات D1–D57 وE وF وG وH. ويمكن دخول YOTELAIR حتى دون تأشيرة إلى هولندا.",
+    "after": "بعد التفتيش الأمني يعمل فندقان على مدار الساعة: Mercure Hotel في Lounge 3 وYOTELAIR في Lounge 2، وكلاهما في الطريق إلى البوابات D1–D57 وE وF وG وH. ويمكن دخول YOTELAIR حتى دون تأشيرة إلى هولندا. للإقامة في Mercure، يجب أن تكون لديك رحلة مغادرة في يوم تسجيل الخروج من الفندق، ولا يُسمح بإحضار سوى أمتعة المقصورة إلى الفندق."
+  },
+  {
+    "file": "data/airport-guide/hi/AMS.json",
+    "block": "transport",
+    "before": "NS स्टेशन ठीक टर्मिनल भवन के नीचे है, एस्केलेटर या लिफ़्ट से नीचे उतरें। Amsterdam CS और हवाई अड्डे के बीच ट्रेन घंटे में 8 बार चलती है, Sloterdijk और Lelylaan पर रुकती है, और हवाई अड्डे से हमेशा प्लेटफ़ॉर्म 3 से छूटती है। एम्स्टर्डम, यूट्रेक्ट, लाइडेन, द हेग, डेल्फ़्ट और रॉटरडैम से हवाई अड्डे तक चौबीसों घंटे पहुँचा जा सकता है, अक्सर बिना ट्रेन बदले। टिकट हवाई अड्डे पर ख़रीदें या कॉन्टैक्टलेस कार्ड अथवा फ़ोन से भुगतान करें — Schiphol Plaza में एस्केलेटरों और लिफ़्टों के ऊपर लगे पीले वैलिडेटरों पर टैप करके।",
+    "after": "NS स्टेशन ठीक टर्मिनल भवन के नीचे है, एस्केलेटर या लिफ़्ट से नीचे उतरें। Amsterdam CS और हवाई अड्डे के बीच ट्रेन घंटे में 8 बार चलती है, Sloterdijk और Lelylaan पर रुकती है, और हवाई अड्डे से हमेशा प्लेटफ़ॉर्म 3 से छूटती है। एम्स्टर्डम, यूट्रेक्ट, लाइडेन, द हेग, डेल्फ़्ट और रॉटरडैम से हवाई अड्डे तक चौबीसों घंटे पहुँचा जा सकता है, अक्सर बिना ट्रेन बदले। टिकट हवाई अड्डे पर ख़रीदें या कॉन्टैक्टलेस कार्ड अथवा फ़ोन से भुगतान करें — Schiphol Plaza में एस्केलेटरों और लिफ़्टों के ऊपर लगे पीले वैलिडेटरों पर टैप करके। बैंक कार्ड या फ़ोन से भुगतान करते समय यात्रा शुरू करने से पहले और समाप्त होने के बाद, दोनों बार रीडर पर टैप करें।"
+  },
+  {
+    "file": "data/airport-guide/hi/AMS.json",
+    "block": "sleep",
+    "before": "सुरक्षा जाँच के बाद दो होटल चौबीसों घंटे खुले हैं: Lounge 3 में Mercure Hotel और Lounge 2 में YOTELAIR, दोनों गेट D1–D57, E, F, G और H के रास्ते में। YOTELAIR में नीदरलैंड्स के वीज़ा के बिना भी जाया जा सकता है।",
+    "after": "सुरक्षा जाँच के बाद दो होटल चौबीसों घंटे खुले हैं: Lounge 3 में Mercure Hotel और Lounge 2 में YOTELAIR, दोनों गेट D1–D57, E, F, G और H के रास्ते में। YOTELAIR में नीदरलैंड्स के वीज़ा के बिना भी जाया जा सकता है। Mercure में ठहरने के लिए होटल से चेक-आउट के दिन प्रस्थान करने वाली उड़ान होनी चाहिए; होटल में केवल हाथ का सामान ले जा सकते हैं।"
+  }
+]

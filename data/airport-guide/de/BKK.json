@@ -4,7 +4,7 @@
   "taxi": {
    "title": "Taxi",
    "hint": "Ebene 1, Türen 4–7, +50 Baht",
-   "text": "Der Taxi-Infoschalter und die Automaten für Taxischeine befinden sich im Passagierterminal auf Ebene 1 zwischen den Türen 4 und 7. Zum Fahrpreis kommt auf Anordnung des Verkehrsministeriums eine Gebühr von 50 Baht für den Fahrer hinzu, Mautstraßen zahlt der Fahrgast. Es gibt Kurzstreckenfahrten rund um den Flughafen, nicht weiter als 20 km; bei normalen Entfernungen kann der Preis nach den Regeln des Department of Land Transport mit dem Fahrer vereinbart werden."
+   "text": "Der Taxi-Infoschalter und die Automaten für Taxischeine befinden sich im Passagierterminal auf Ebene 1 zwischen den Türen 4 und 7. Zum Fahrpreis kommt auf Anordnung des Verkehrsministeriums eine Gebühr von 50 Baht für den Fahrer hinzu, Mautstraßen zahlt der Fahrgast. Es gibt Kurzstreckenfahrten rund um den Flughafen, nicht weiter als 20 km."
   },
   "terminals": {
    "title": "Terminals",

@@ -10,7 +10,7 @@
     "parking": {
       "title": "Parcheggio",
       "hint": "15 min gratis",
-      "text": "Zona breve sosta: i primi 15 min gratis, la prima ora 350 ₽, dalla 2ª alla 4ª ora 250 ₽/ora, dalla 5ª ora 3000 ₽/giorno. Zona lunga sosta: 700 ₽/giorno dal 1° al 5° giorno, 100 ₽/giorno dal 6° al 13°, 700 ₽/giorno dal 14° giorno. Nuovo ingresso gratuito non prima di 45 min."
+      "text": "Zona breve sosta: i primi 15 min gratis, la prima ora 350 ₽, dalla 2ª alla 4ª ora 250 ₽/ora, dalla 5ª ora 3000 ₽ ogni 24 ore. Zona lunga sosta: 700 ₽ per ogni periodo di 24 ore dal 1° al 5°, 100 ₽ dal 6° al 13°, 700 ₽ dal 14° periodo. Nuovo ingresso gratuito non prima di 45 min."
     },
     "storage": {
       "title": "Deposito bagagli",

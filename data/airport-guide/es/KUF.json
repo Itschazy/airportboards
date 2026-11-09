@@ -15,7 +15,7 @@
   "storage": {
    "title": "Consigna",
    "hint": "Nivel 1, desde 250 ₽/hora",
-   "text": "Consigna automática en el nivel 1, a la derecha de la entrada, junto a la venta de billetes. Taquilla estándar: 250 ₽ por hora o 550 ₽ por día. Grande: 350 ₽ por hora o 900 ₽ por día. Equipaje de gran tamaño: 1200 ₽ por bulto."
+   "text": "Consigna automática en el nivel 1, a la derecha de la entrada, junto a la venta de billetes. Taquilla estándar: 250 ₽ por hora o 550 ₽ por cada 24 horas. Grande: 350 ₽ por hora o 900 ₽ por cada 24 horas. Equipaje de gran tamaño: 1200 ₽ por bulto."
   },
   "kids": {
    "title": "Con niños",
@@ -25,7 +25,7 @@
   "parking": {
    "title": "Aparcamiento",
    "hint": "Bajada: 15 min gratis",
-   "text": "En la zona de recogida y bajada de pasajeros, los primeros 15 minutos son gratis; del minuto 16 al 60, 880 ₽. Corta estancia P1: hasta una hora 357 ₽, hasta 2 horas 682 ₽, un día 1391 ₽. Larga estancia P2: un día 791 ₽. Económico P4: 1054 ₽ los 2 primeros días. Todos los aparcamientos abren día y noche."
+   "text": "En la zona de recogida y bajada de pasajeros, los primeros 15 minutos son gratis; del minuto 16 al 60, 880 ₽. Corta estancia P1: hasta una hora 357 ₽, hasta 2 horas 682 ₽, 24 horas 1391 ₽. Larga estancia P2: 24 horas 791 ₽. Económico P4: 1054 ₽ los 2 primeros periodos de 24 horas. Todos los aparcamientos abren día y noche."
   },
   "wifi": {
    "title": "Wi‑Fi",

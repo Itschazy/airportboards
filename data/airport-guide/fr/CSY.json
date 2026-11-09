@@ -14,13 +14,13 @@
   },
   "storage": {
    "title": "Consigne à bagages",
-   "hint": "300 ₽ par jour",
-   "text": "Consigne des bagages : 300 ₽ pour 1 bagage par jour."
+   "hint": "300 ₽ par période de 24 heures",
+   "text": "Consigne des bagages : 300 ₽ pour 1 bagage par période de 24 heures."
   },
   "parking": {
    "title": "Parking",
    "hint": "15 min gratuites",
-   "text": "Les 15 premières minutes sont gratuites. Voitures particulières : 100 ₽ de l'heure, 450 ₽ par jour, à partir de 3 jours 400 ₽ par jour. UAZ, « Gazelle », « Sobol » : 200 ₽ de l'heure, 650 ₽ par jour. Perte du reçu 500 ₽. Téléphone 8 (8352) 22-94-03, poste 2-95."
+   "text": "Les 15 premières minutes sont gratuites. Voitures particulières : 100 ₽ de l'heure, 450 ₽ par période de 24 heures, à partir de 3 périodes de 24 heures 400 ₽ par période de 24 heures. UAZ, « Gazelle », « Sobol » : 200 ₽ de l'heure, 650 ₽ par période de 24 heures. Perte du reçu 500 ₽. Téléphone 8 (8352) 22-94-03, poste 2-95."
   }
  }
 }

@@ -25,7 +25,7 @@
   "parking": {
    "title": "Otopark",
    "hint": "15 dakika ücretsiz",
-   "text": "Terminal önü meydanında ilk 15 dakika ücretsiz, sonra ilk saat 400 ₽, ikinci saat 300 ₽, sonrası saati 200 ₽, 6 saatin üzerinde günlüğü 1500 ₽. P1–P4 otoparkları: 3 güne kadar günlüğü 700 ₽, 6 güne kadar 500 ₽, daha uzun 300 ₽. Giriş yalnızca plakası tanınan araçlarla. Çıkıştan sonraki 1 saat içinde yeniden girerseniz ilk 15 dakika 100 ₽ tutar."
+   "text": "Terminal önündeki alanda ilk 15 dakika ücretsizdir. Sonrasında ilk saat 400 ₽, ikinci saat 300 ₽ ve sonraki her saat 200 ₽; 6 saati aşan park süresinde ise her 24 saat için 1500 ₽ alınır. P1–P4 otoparklarında her 24 saatlik dönem için ücret, 3 döneme kadar kalanlarda 700 ₽, 6 döneme kadar kalanlarda 500 ₽, daha uzun kalanlarda 300 ₽'dir. Giriş yalnızca plakası tanınan araçlar için mümkündür. Çıkıştan sonraki 1 saat içinde yeniden girerseniz ilk 15 dakika 100 ₽ tutar."
   }
  }
 }

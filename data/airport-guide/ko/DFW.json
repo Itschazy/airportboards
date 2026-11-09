@@ -13,8 +13,8 @@
   },
   "lounges": {
    "title": "비즈니스 라운지",
-   "hint": "20곳 이상, 전 터미널",
-   "text": "공항에는 라운지와 프리미엄 공간이 20곳 이상 있습니다. 다섯 터미널 모두 보안검색 후 구역 안에서 Skylink 열차로 연결되므로, 이용 자격이 있는 승객은 탑승 게이트와 관계없이 어느 터미널의 라운지든 이용할 수 있습니다. 운영사로는 American Airlines, American Express Centurion Lounge, Capital One Lounge, Chase Sapphire Lounge by The Club, The Club DFW, Plaza Premium Lounges, PS DFW 등이 있습니다."
+   "hint": "20곳 초과, 전 터미널",
+   "text": "공항에는 라운지와 프리미엄 공간이 20곳 넘게 있습니다. 다섯 터미널 모두 보안검색 후 구역 안에서 Skylink 열차로 연결되므로, 이용 자격이 있는 승객은 탑승 게이트와 관계없이 어느 터미널의 라운지든 이용할 수 있습니다. 운영사로는 American Airlines, American Express Centurion Lounge, Capital One Lounge, Chase Sapphire Lounge by The Club, The Club DFW, Plaza Premium Lounges 등이 있습니다. PS DFW는 비즈니스 항공 시설 근처의 별도 전용 터미널에 있습니다."
   },
   "kids": {
    "title": "아이와 함께",

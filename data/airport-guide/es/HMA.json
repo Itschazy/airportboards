@@ -25,7 +25,7 @@
   "parking": {
    "title": "Aparcamiento",
    "hint": "20 min gratis",
-   "text": "Plaza de la terminal: hasta 20 minutos gratis, del minuto 21 a 4 horas 300 ₽ por hora; la hora incompleta se cobra como completa. A partir de la 5.ª hora, 1200 ₽ por día; el día siguiente, 1200 ₽. Una nueva entrada dentro de 20 minutos es de pago, 300 ₽ por hora."
+   "text": "Plaza de la terminal: hasta 20 minutos gratis, del minuto 21 a 4 horas 300 ₽ por hora; la hora incompleta se cobra como completa. A partir de la 5.ª hora, 1200 ₽ por cada 24 horas; cada periodo siguiente de 24 horas, 1200 ₽. Una nueva entrada dentro de 20 minutos es de pago, 300 ₽ por hora."
   }
  }
 }

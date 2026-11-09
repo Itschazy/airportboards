@@ -9,8 +9,8 @@
   },
   "storage": {
    "title": "Gepäckaufbewahrung",
-   "hint": "Ab 200 ₽ pro Tag",
-   "text": "Die Gepäckaufbewahrung ist nach dem Zeitplan des Inlandsterminals geöffnet. Handgepäck 200 ₽ pro Tag, Gepäck bis 50×40×20 cm 220 ₽, größeres 270 ₽, über 100×50×70 cm 500 ₽. Weniger als ein Tag wird als voller Tag berechnet."
+   "hint": "Ab 200 ₽ je 24 Stunden",
+   "text": "Die Gepäckaufbewahrung ist nach dem Zeitplan des Inlandsterminals geöffnet. Handgepäck 200 ₽ je 24 Stunden, Gepäck bis 50×40×20 cm 220 ₽, größeres 270 ₽, über 100×50×70 cm 500 ₽. Weniger als 24 Stunden werden als volle 24 Stunden berechnet."
   },
   "kids": {
    "title": "Mit Kind",
@@ -20,7 +20,7 @@
   "parking": {
    "title": "Parken",
    "hint": "15 Min. kostenlos",
-   "text": "Vorplatz 30 m vom Terminal, 173 Plätze: bis 15 Minuten kostenlos, die erste Stunde 300 ₽, die zweite und dritte je 200 ₽, ab der vierten Stunde Tagestarif 1000 ₽."
+   "text": "Vorplatz 30 m vom Terminal, 173 Plätze: bis 15 Minuten kostenlos, die erste Stunde 300 ₽, die zweite und dritte je 200 ₽, ab der vierten Stunde Tarif von 1000 ₽ je 24 Stunden."
   }
  }
 }

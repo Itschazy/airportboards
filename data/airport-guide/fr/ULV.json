@@ -20,7 +20,7 @@
   "parking": {
    "title": "Parking",
    "hint": "15 min gratuites",
-   "text": "Parking payant de 150 voitures devant le terminal. 15 premières minutes gratuites, de 15 minutes à 3 heures 150 ₽/heure, au-delà de 3 heures 500 ₽/jour. Nouvelle entrée dans les 60 minutes sans temps gratuit. Après paiement, 30 minutes pour sortir."
+   "text": "Parking payant de 150 voitures devant le terminal. 15 premières minutes gratuites, de 15 minutes à 3 heures 150 ₽/heure, au-delà de 3 heures 500 ₽/24 h. Nouvelle entrée dans les 60 minutes sans temps gratuit. Après paiement, 30 minutes pour sortir."
   },
   "wifi": {
    "title": "Wi‑Fi",

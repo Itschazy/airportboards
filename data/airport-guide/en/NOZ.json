@@ -35,7 +35,7 @@
   "parking": {
    "title": "Parking",
    "hint": "15 min free",
-   "text": "P1 drop-off and pick-up only, parking prohibited. P2 short-stay: 15 minutes free, 16–60 minutes 300 ₽, from the 2nd to the 4th hour 100 ₽/hour, over 4 hours 700 ₽/day. P3 long-stay: 15 minutes free, 500 ₽/day for up to 6 days. A part day is charged as a full day."
+   "text": "P1 drop-off and pick-up only, parking prohibited. P2 short-stay: 15 minutes free, 16–60 minutes 300 ₽, from the 2nd to the 4th hour 100 ₽/hour, over 4 hours 700 ₽/24 hours. P3 long-stay: 15 minutes free, 500 ₽/24 hours for up to 6 periods of 24 hours. An incomplete 24-hour period is charged as a full period."
   }
  }
 }

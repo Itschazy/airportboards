@@ -10,7 +10,7 @@
   "parking": {
    "title": "Aparcamiento",
    "hint": "15 min gratis",
-   "text": "Zona de corta estancia: los primeros 15 min gratis, la primera hora 350 ₽, de la 2.ª a la 4.ª hora 250 ₽/hora, a partir de la 5.ª hora 3000 ₽/día. Zona de larga estancia: 700 ₽/día del día 1 al 5, 100 ₽/día del 6 al 13, 700 ₽/día a partir del día 14. Una nueva entrada gratuita solo es posible pasados 45 min."
+   "text": "Zona de corta estancia: los primeros 15 min gratis, la primera hora 350 ₽, de la 2.ª a la 4.ª hora 250 ₽/hora, a partir de la 5.ª hora 3000 ₽ por cada 24 horas. Zona de larga estancia: 700 ₽ por cada periodo de 24 horas del 1.º al 5.º, 100 ₽ del 6.º al 13.º y 700 ₽ a partir del 14.º. Una nueva entrada gratuita solo es posible pasados 45 min."
   },
   "storage": {
    "title": "Consigna",

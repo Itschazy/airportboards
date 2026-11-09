@@ -9,8 +9,8 @@
   },
   "storage": {
    "title": "Consigna",
-   "hint": "Desde 200 ₽ al día",
-   "text": "La consigna funciona según el horario de la terminal de vuelos nacionales. Equipaje de mano 200 ₽ por día, equipaje de hasta 50×40×20 cm 220 ₽, más grande 270 ₽, de más de 100×50×70 cm 500 ₽. Menos de un día se paga como un día completo."
+   "hint": "Desde 200 ₽ por cada 24 horas",
+   "text": "La consigna funciona según el horario de la terminal de vuelos nacionales. Equipaje de mano 200 ₽ por cada 24 horas, equipaje de hasta 50×40×20 cm 220 ₽, más grande 270 ₽, de más de 100×50×70 cm 500 ₽. Menos de 24 horas se cobra como un periodo completo de 24 horas."
   },
   "kids": {
    "title": "Con niños",
@@ -20,7 +20,7 @@
   "parking": {
    "title": "Aparcamiento",
    "hint": "15 min gratis",
-   "text": "Plaza de la terminal, a 30 m de la terminal, 173 plazas: hasta 15 minutos gratis, la primera hora 300 ₽, la segunda y la tercera 200 ₽ cada una, a partir de la cuarta hora tarifa diaria de 1000 ₽."
+   "text": "Plaza de la terminal, a 30 m de la terminal, 173 plazas: hasta 15 minutos gratis, la primera hora 300 ₽, la segunda y la tercera 200 ₽ cada una, a partir de la cuarta hora tarifa de 1000 ₽ por cada 24 horas."
   }
  }
 }

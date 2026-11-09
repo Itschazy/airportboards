@@ -15,7 +15,7 @@
   "storage": {
    "title": "Consigne à bagages",
    "hint": "Niveau 1, 24/7",
-   "text": "Consigne automatique dans le hall central de l'aérogare, niveau 1. Ouverte jour et nuit. Casier standard : 300 ₽ de l'heure ou 500 ₽ par jour."
+   "text": "Consigne automatique dans le hall central de l'aérogare, niveau 1. Ouverte jour et nuit. Casier standard : 300 ₽ de l'heure ou 500 ₽ par 24 heures."
   },
   "kids": {
    "title": "Avec un enfant",
