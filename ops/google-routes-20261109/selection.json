@@ -1,0 +1,225 @@
+{
+  "requests": 1875,
+  "uniquePaths": 1623,
+  "pairs": 1007,
+  "byDay": {
+    "2026-10-26": 938,
+    "2026-10-27": 125,
+    "2026-10-28": 52,
+    "2026-10-29": 58,
+    "2026-10-30": 28,
+    "2026-10-31": 28,
+    "2026-11-01": 10,
+    "2026-11-02": 14,
+    "2026-11-03": 15,
+    "2026-11-04": 58,
+    "2026-11-05": 122,
+    "2026-11-06": 153,
+    "2026-11-07": 124,
+    "2026-11-08": 108,
+    "2026-11-09": 42
+  },
+  "sample": {
+    "/ja/route/DGA-BZE": [
+      "historical404"
+    ],
+    "/ja/route/PLJ-BZE": [
+      "historical404"
+    ],
+    "/zh/route/MCM-NCE": [
+      "historical404"
+    ],
+    "/ja/route/CUK-BZE": [
+      "historical404"
+    ],
+    "/de/route/NBJ-FIH": [
+      "historical404"
+    ],
+    "/ja/route/PBH-YON": [
+      "historical404"
+    ],
+    "/fr/route/DED-DXN": [
+      "historical404"
+    ],
+    "/en/route/PKC-KRV": [
+      "historical404"
+    ],
+    "/zh/route/MMU-DJT": [
+      "historical404"
+    ],
+    "/en/route/RDD-SIY": [
+      "historical404"
+    ],
+    "/de/route/LNS-HCC": [
+      "historical404"
+    ],
+    "/it/route/VNS-NMI": [
+      "historical404"
+    ],
+    "/fr/route/DGO-NLU": [
+      "historical404"
+    ],
+    "/it/route/OSS-BSZ": [
+      "historical404"
+    ],
+    "/ja/route/OSS-BSZ": [
+      "historical404"
+    ],
+    "/es/route/ECN-COV": [
+      "historical404"
+    ],
+    "/hi/route/BBI-UKE": [
+      "historical404"
+    ],
+    "/ja/route/KMJ-NKM": [
+      "frequent"
+    ],
+    "/ar/route/ORK-GLA": [
+      "frequent"
+    ],
+    "/de/route/PHX-GEG": [
+      "frequent"
+    ],
+    "/tr/route/BLR-CCU": [
+      "frequent"
+    ],
+    "/zh/route/OKA-NGO": [
+      "frequent"
+    ],
+    "/ar/route/DAR-IRI": [
+      "frequent"
+    ],
+    "/ko/route/BOS-CLT": [
+      "frequent"
+    ],
+    "/ar/route/MAA-KUL": [
+      "frequent"
+    ],
+    "/ko/route/ZNZ-NBO": [
+      "frequent"
+    ],
+    "/zh/route/TLV-ATH": [
+      "frequent"
+    ],
+    "/ar/route/FRA-BRU": [
+      "frequent",
+      "recent"
+    ],
+    "/ar/route/LAX-SFO": [
+      "frequent",
+      "currentSitemap"
+    ],
+    "/ar/route/OLP-ADL": [
+      "frequent"
+    ],
+    "/de/route/MCY-MEL": [
+      "frequent"
+    ],
+    "/zh/route/CMH-DCA": [
+      "frequent"
+    ],
+    "/ko/route/GIG-FOR": [
+      "frequent"
+    ],
+    "/de/route/EWR-LAX": [
+      "frequent",
+      "currentSitemap"
+    ],
+    "/de/route/MAD-OPO": [
+      "frequent"
+    ],
+    "/de/route/CLJ-CRL": [
+      "frequent"
+    ],
+    "/de/route/EGC-STN": [
+      "frequent"
+    ],
+    "/ar/route/WUA-HET": [
+      "recent"
+    ],
+    "/ja/route/CJU-KWJ": [
+      "recent"
+    ],
+    "/ko/route/SUF-HHN": [
+      "recent"
+    ],
+    "/hi/route/SUI-UFA": [
+      "recent"
+    ],
+    "/ko/route/SBW-MKM": [
+      "recent"
+    ],
+    "/ar/route/LAS-FAT": [
+      "recent"
+    ],
+    "/it/route/DAT-SHA": [
+      "recent"
+    ],
+    "/ar/route/NJC-UFA": [
+      "recent"
+    ],
+    "/it/route/TYN-DSN": [
+      "recent"
+    ],
+    "/ko/route/HNS-JNU": [
+      "recent"
+    ],
+    "/ar/route/POZ-BGY": [
+      "recent"
+    ],
+    "/ar/route/SEA-LWS": [
+      "recent"
+    ],
+    "/it/route/ZAG-BEG": [
+      "recent"
+    ],
+    "/ru/route/MTY-IAH": [
+      "recent"
+    ],
+    "/hi/route/AWZ-MHD": [
+      "recent"
+    ],
+    "/ko/route/TGD-WAW": [
+      "recent"
+    ],
+    "/it/route/ARI-SCL": [
+      "recent"
+    ],
+    "/hi/route/LGW-SVG": [
+      "recent"
+    ],
+    "/ko/route/FBM-JNB": [
+      "recent"
+    ],
+    "/de/route/DXB-DOH": [
+      "currentSitemap"
+    ],
+    "/it/route/DFW-IAH": [
+      "currentSitemap"
+    ],
+    "/en/route/JFK-LAX": [
+      "currentSitemap"
+    ],
+    "/ar/route/DXB-DOH": [
+      "currentSitemap"
+    ],
+    "/zh/route/YYZ-YYC": [
+      "currentSitemap"
+    ],
+    "/ru/route/AMS-MUC": [
+      "currentSitemap"
+    ],
+    "/it/route/IST-FRA": [
+      "currentSitemap"
+    ],
+    "/ar/route/MAD-LIS": [
+      "currentSitemap"
+    ],
+    "/en/route/BCN-STN": [
+      "control"
+    ],
+    "/ru/route/KZN-IST": [
+      "control"
+    ]
+  }
+}

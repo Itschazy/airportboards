@@ -1,3 +1,35 @@
+## Codex, 09.11.2026 — исправлены и опубликованы битые route-ссылки
+
+Пакет 3a4839babb0cf0307c3f62798c3d094b12153eef опубликован в main.
+Дефект воспроизведён: BZE departures/arrivals, OSS, LAD отдавали 9 HTML-ссылок
+на route-пары с кодом вне каталога; прямые запросы целей возвращали 404.
+AirportBottom теперь проверяет getAirport до агрегации/top-8. Рейсы сохранены,
+тексты, дизайн, DNS, robots/canonical и API-бюджет не менялись.
+Регрессия: старый код FAIL, новый PASS в обоих направлениях; TypeScript,
+fixture build, 12 locale keys, 13 offline checks, local index/sitemap/refresh/
+adsense/scope PASS. 24 SSR страницы на 12 языках: 8 корректных ссылок и все
+13 тестовых рейсов. UI IAB Chromium 375px EN и AR, раскрытие и переход PASS;
+не физический Android/Safari, не замер скорости. Скриншоты сохранены.
+Push 12:08:54 Amsterdam; CI 42606651593 success. Сервер Git и health release
+совпадают; production check-index/sitemap-hreflang/live-refresh/adsense PASS.
+На пяти исходных HTML-страницах после публикации нет ссылок с неизвестным кодом.
+
+Маршрутный аудит: ранее сохранённые логи дают 1 875 запросов/1 623 URL/1 007пар.
+Свежая целевая выборка66:40 index с рейсами,9 noindex пустых,17 настоящих404.
+Все11 выбранных URL из текущей sitemap имеют рейсы и index. Все49 ответов200
+selfcanonical; FAQ представлен в HTML. Это не репрезентативная выборка всего
+каталога. Массово маршруты не закрывались. Причина потери индекса24.10 не доказана.
+Следующий кандидат: FlightBoard modal route CTA проверяет только форму IATA;
+воспроизвести неизвестный код, исправлять без загрузки каталога в клиент.
+Этот отдельный путь статически найден, но не изменён текущим пакетом.
+GSC24 продолжать наблюдать; ENmap/NTE заявки не дублировать.
+
+Отчёт ops/google-routes-20261109/REPORT.txt, outputs/google-routes-20261109/report.html.
+CWD /Users/whereiszhenya/projects/runwayboard-flight-map-prototype-20261028,
+ветка codex/flight-map-prototype-20261028. Все данные/ограничения в отчёте.
+
+---
+
 ## Codex, 09.11.2026 — проверенный Googlebot и HTML-ссылки на 24 URL
 
 Продолжение диагностики Google: прочитаны 15 nginx access logs за 26.10–09.11

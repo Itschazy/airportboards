@@ -1,0 +1,38 @@
+[
+  {
+    "path": "/en/route/BZE-DGA",
+    "status": 404
+  },
+  {
+    "path": "/en/route/BZE-PLJ",
+    "status": 404
+  },
+  {
+    "path": "/en/route/BZE-TZA",
+    "status": 404
+  },
+  {
+    "path": "/en/route/CUK-BZE",
+    "status": 404
+  },
+  {
+    "path": "/en/route/DGA-BZE",
+    "status": 404
+  },
+  {
+    "path": "/en/route/LAD-NBJ",
+    "status": 404
+  },
+  {
+    "path": "/en/route/OSS-BSZ",
+    "status": 404
+  },
+  {
+    "path": "/en/route/PLJ-BZE",
+    "status": 404
+  },
+  {
+    "path": "/en/route/PND-BZE",
+    "status": 404
+  }
+]

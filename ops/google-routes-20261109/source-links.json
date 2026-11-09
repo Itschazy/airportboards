@@ -1,0 +1,71 @@
+[
+  {
+    "path": "/en/airport/BZE",
+    "routeLinks": [
+      "/en/route/BZE-SPR",
+      "/en/route/BZE-SAP",
+      "/en/route/BZE-TZA",
+      "/en/route/BZE-RTB",
+      "/en/route/BZE-PLJ",
+      "/en/route/BZE-DGA"
+    ],
+    "invalidAirportLinks": [
+      "/en/route/BZE-TZA",
+      "/en/route/BZE-PLJ",
+      "/en/route/BZE-DGA"
+    ]
+  },
+  {
+    "path": "/en/airport/BZE/arrivals",
+    "routeLinks": [
+      "/en/route/SPR-BZE",
+      "/en/route/DGA-BZE",
+      "/en/route/PLJ-BZE",
+      "/en/route/CUK-BZE",
+      "/en/route/PND-BZE",
+      "/en/route/SAP-BZE",
+      "/en/route/PTY-BZE",
+      "/en/route/RTB-BZE"
+    ],
+    "invalidAirportLinks": [
+      "/en/route/DGA-BZE",
+      "/en/route/PLJ-BZE",
+      "/en/route/CUK-BZE",
+      "/en/route/PND-BZE"
+    ]
+  },
+  {
+    "path": "/en/airport/OSS",
+    "routeLinks": [
+      "/en/route/OSS-BSZ",
+      "/en/route/OSS-TAS",
+      "/en/route/OSS-OVB"
+    ],
+    "invalidAirportLinks": [
+      "/en/route/OSS-BSZ"
+    ]
+  },
+  {
+    "path": "/en/airport/DEL",
+    "routeLinks": [
+      "/en/route/DEL-BOM",
+      "/en/route/DEL-BLR",
+      "/en/route/DEL-PNQ",
+      "/en/route/DEL-AMD",
+      "/en/route/DEL-CCU",
+      "/en/route/DEL-MAA",
+      "/en/route/DEL-HYD",
+      "/en/route/DEL-DXB"
+    ],
+    "invalidAirportLinks": []
+  },
+  {
+    "path": "/en/airport/LAD",
+    "routeLinks": [
+      "/en/route/LAD-NBJ"
+    ],
+    "invalidAirportLinks": [
+      "/en/route/LAD-NBJ"
+    ]
+  }
+]

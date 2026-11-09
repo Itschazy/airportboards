@@ -1,0 +1,18 @@
+{
+  "checks": [
+    "check-scripts",
+    "check-plurals",
+    "check-rtl",
+    "check-icu-args",
+    "check-client-messages",
+    "check-board-regressions",
+    "check-airport-title",
+    "check-bing-route-discovery",
+    "check-indexnow-page-content",
+    "check-indexnow-queue",
+    "check-guide-sitemap",
+    "check-sitemap-shards",
+    "check-warm-budget"
+  ],
+  "failed": []
+}

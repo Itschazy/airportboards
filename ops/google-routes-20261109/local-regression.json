@@ -1,0 +1,338 @@
+[
+  {
+    "path": "/en/airport/BZE",
+    "routes": [
+      "/en/route/BZE-JFK",
+      "/en/route/BZE-LHR",
+      "/en/route/BZE-AMS",
+      "/en/route/BZE-CDG",
+      "/en/route/BZE-FRA",
+      "/en/route/BZE-IST",
+      "/en/route/BZE-DXB",
+      "/en/route/BZE-SIN"
+    ],
+    "flightRows": 13
+  },
+  {
+    "path": "/en/airport/BZE/arrivals",
+    "routes": [
+      "/en/route/JFK-BZE",
+      "/en/route/LHR-BZE",
+      "/en/route/AMS-BZE",
+      "/en/route/CDG-BZE",
+      "/en/route/FRA-BZE",
+      "/en/route/IST-BZE",
+      "/en/route/DXB-BZE",
+      "/en/route/SIN-BZE"
+    ],
+    "flightRows": 13
+  },
+  {
+    "path": "/ru/airport/BZE",
+    "routes": [
+      "/ru/route/BZE-JFK",
+      "/ru/route/BZE-LHR",
+      "/ru/route/BZE-AMS",
+      "/ru/route/BZE-CDG",
+      "/ru/route/BZE-FRA",
+      "/ru/route/BZE-IST",
+      "/ru/route/BZE-DXB",
+      "/ru/route/BZE-SIN"
+    ],
+    "flightRows": 13
+  },
+  {
+    "path": "/ru/airport/BZE/arrivals",
+    "routes": [
+      "/ru/route/JFK-BZE",
+      "/ru/route/LHR-BZE",
+      "/ru/route/AMS-BZE",
+      "/ru/route/CDG-BZE",
+      "/ru/route/FRA-BZE",
+      "/ru/route/IST-BZE",
+      "/ru/route/DXB-BZE",
+      "/ru/route/SIN-BZE"
+    ],
+    "flightRows": 13
+  },
+  {
+    "path": "/ar/airport/BZE",
+    "routes": [
+      "/ar/route/BZE-JFK",
+      "/ar/route/BZE-LHR",
+      "/ar/route/BZE-AMS",
+      "/ar/route/BZE-CDG",
+      "/ar/route/BZE-FRA",
+      "/ar/route/BZE-IST",
+      "/ar/route/BZE-DXB",
+      "/ar/route/BZE-SIN"
+    ],
+    "flightRows": 13
+  },
+  {
+    "path": "/ar/airport/BZE/arrivals",
+    "routes": [
+      "/ar/route/JFK-BZE",
+      "/ar/route/LHR-BZE",
+      "/ar/route/AMS-BZE",
+      "/ar/route/CDG-BZE",
+      "/ar/route/FRA-BZE",
+      "/ar/route/IST-BZE",
+      "/ar/route/DXB-BZE",
+      "/ar/route/SIN-BZE"
+    ],
+    "flightRows": 13
+  },
+  {
+    "path": "/de/airport/BZE",
+    "routes": [
+      "/de/route/BZE-JFK",
+      "/de/route/BZE-LHR",
+      "/de/route/BZE-AMS",
+      "/de/route/BZE-CDG",
+      "/de/route/BZE-FRA",
+      "/de/route/BZE-IST",
+      "/de/route/BZE-DXB",
+      "/de/route/BZE-SIN"
+    ],
+    "flightRows": 13
+  },
+  {
+    "path": "/de/airport/BZE/arrivals",
+    "routes": [
+      "/de/route/JFK-BZE",
+      "/de/route/LHR-BZE",
+      "/de/route/AMS-BZE",
+      "/de/route/CDG-BZE",
+      "/de/route/FRA-BZE",
+      "/de/route/IST-BZE",
+      "/de/route/DXB-BZE",
+      "/de/route/SIN-BZE"
+    ],
+    "flightRows": 13
+  },
+  {
+    "path": "/es/airport/BZE",
+    "routes": [
+      "/es/route/BZE-JFK",
+      "/es/route/BZE-LHR",
+      "/es/route/BZE-AMS",
+      "/es/route/BZE-CDG",
+      "/es/route/BZE-FRA",
+      "/es/route/BZE-IST",
+      "/es/route/BZE-DXB",
+      "/es/route/BZE-SIN"
+    ],
+    "flightRows": 13
+  },
+  {
+    "path": "/es/airport/BZE/arrivals",
+    "routes": [
+      "/es/route/JFK-BZE",
+      "/es/route/LHR-BZE",
+      "/es/route/AMS-BZE",
+      "/es/route/CDG-BZE",
+      "/es/route/FRA-BZE",
+      "/es/route/IST-BZE",
+      "/es/route/DXB-BZE",
+      "/es/route/SIN-BZE"
+    ],
+    "flightRows": 13
+  },
+  {
+    "path": "/fr/airport/BZE",
+    "routes": [
+      "/fr/route/BZE-JFK",
+      "/fr/route/BZE-LHR",
+      "/fr/route/BZE-AMS",
+      "/fr/route/BZE-CDG",
+      "/fr/route/BZE-FRA",
+      "/fr/route/BZE-IST",
+      "/fr/route/BZE-DXB",
+      "/fr/route/BZE-SIN"
+    ],
+    "flightRows": 13
+  },
+  {
+    "path": "/fr/airport/BZE/arrivals",
+    "routes": [
+      "/fr/route/JFK-BZE",
+      "/fr/route/LHR-BZE",
+      "/fr/route/AMS-BZE",
+      "/fr/route/CDG-BZE",
+      "/fr/route/FRA-BZE",
+      "/fr/route/IST-BZE",
+      "/fr/route/DXB-BZE",
+      "/fr/route/SIN-BZE"
+    ],
+    "flightRows": 13
+  },
+  {
+    "path": "/it/airport/BZE",
+    "routes": [
+      "/it/route/BZE-JFK",
+      "/it/route/BZE-LHR",
+      "/it/route/BZE-AMS",
+      "/it/route/BZE-CDG",
+      "/it/route/BZE-FRA",
+      "/it/route/BZE-IST",
+      "/it/route/BZE-DXB",
+      "/it/route/BZE-SIN"
+    ],
+    "flightRows": 13
+  },
+  {
+    "path": "/it/airport/BZE/arrivals",
+    "routes": [
+      "/it/route/JFK-BZE",
+      "/it/route/LHR-BZE",
+      "/it/route/AMS-BZE",
+      "/it/route/CDG-BZE",
+      "/it/route/FRA-BZE",
+      "/it/route/IST-BZE",
+      "/it/route/DXB-BZE",
+      "/it/route/SIN-BZE"
+    ],
+    "flightRows": 13
+  },
+  {
+    "path": "/ja/airport/BZE",
+    "routes": [
+      "/ja/route/BZE-JFK",
+      "/ja/route/BZE-LHR",
+      "/ja/route/BZE-AMS",
+      "/ja/route/BZE-CDG",
+      "/ja/route/BZE-FRA",
+      "/ja/route/BZE-IST",
+      "/ja/route/BZE-DXB",
+      "/ja/route/BZE-SIN"
+    ],
+    "flightRows": 13
+  },
+  {
+    "path": "/ja/airport/BZE/arrivals",
+    "routes": [
+      "/ja/route/JFK-BZE",
+      "/ja/route/LHR-BZE",
+      "/ja/route/AMS-BZE",
+      "/ja/route/CDG-BZE",
+      "/ja/route/FRA-BZE",
+      "/ja/route/IST-BZE",
+      "/ja/route/DXB-BZE",
+      "/ja/route/SIN-BZE"
+    ],
+    "flightRows": 13
+  },
+  {
+    "path": "/ko/airport/BZE",
+    "routes": [
+      "/ko/route/BZE-JFK",
+      "/ko/route/BZE-LHR",
+      "/ko/route/BZE-AMS",
+      "/ko/route/BZE-CDG",
+      "/ko/route/BZE-FRA",
+      "/ko/route/BZE-IST",
+      "/ko/route/BZE-DXB",
+      "/ko/route/BZE-SIN"
+    ],
+    "flightRows": 13
+  },
+  {
+    "path": "/ko/airport/BZE/arrivals",
+    "routes": [
+      "/ko/route/JFK-BZE",
+      "/ko/route/LHR-BZE",
+      "/ko/route/AMS-BZE",
+      "/ko/route/CDG-BZE",
+      "/ko/route/FRA-BZE",
+      "/ko/route/IST-BZE",
+      "/ko/route/DXB-BZE",
+      "/ko/route/SIN-BZE"
+    ],
+    "flightRows": 13
+  },
+  {
+    "path": "/zh/airport/BZE",
+    "routes": [
+      "/zh/route/BZE-JFK",
+      "/zh/route/BZE-LHR",
+      "/zh/route/BZE-AMS",
+      "/zh/route/BZE-CDG",
+      "/zh/route/BZE-FRA",
+      "/zh/route/BZE-IST",
+      "/zh/route/BZE-DXB",
+      "/zh/route/BZE-SIN"
+    ],
+    "flightRows": 13
+  },
+  {
+    "path": "/zh/airport/BZE/arrivals",
+    "routes": [
+      "/zh/route/JFK-BZE",
+      "/zh/route/LHR-BZE",
+      "/zh/route/AMS-BZE",
+      "/zh/route/CDG-BZE",
+      "/zh/route/FRA-BZE",
+      "/zh/route/IST-BZE",
+      "/zh/route/DXB-BZE",
+      "/zh/route/SIN-BZE"
+    ],
+    "flightRows": 13
+  },
+  {
+    "path": "/hi/airport/BZE",
+    "routes": [
+      "/hi/route/BZE-JFK",
+      "/hi/route/BZE-LHR",
+      "/hi/route/BZE-AMS",
+      "/hi/route/BZE-CDG",
+      "/hi/route/BZE-FRA",
+      "/hi/route/BZE-IST",
+      "/hi/route/BZE-DXB",
+      "/hi/route/BZE-SIN"
+    ],
+    "flightRows": 13
+  },
+  {
+    "path": "/hi/airport/BZE/arrivals",
+    "routes": [
+      "/hi/route/JFK-BZE",
+      "/hi/route/LHR-BZE",
+      "/hi/route/AMS-BZE",
+      "/hi/route/CDG-BZE",
+      "/hi/route/FRA-BZE",
+      "/hi/route/IST-BZE",
+      "/hi/route/DXB-BZE",
+      "/hi/route/SIN-BZE"
+    ],
+    "flightRows": 13
+  },
+  {
+    "path": "/tr/airport/BZE",
+    "routes": [
+      "/tr/route/BZE-JFK",
+      "/tr/route/BZE-LHR",
+      "/tr/route/BZE-AMS",
+      "/tr/route/BZE-CDG",
+      "/tr/route/BZE-FRA",
+      "/tr/route/BZE-IST",
+      "/tr/route/BZE-DXB",
+      "/tr/route/BZE-SIN"
+    ],
+    "flightRows": 13
+  },
+  {
+    "path": "/tr/airport/BZE/arrivals",
+    "routes": [
+      "/tr/route/JFK-BZE",
+      "/tr/route/LHR-BZE",
+      "/tr/route/AMS-BZE",
+      "/tr/route/CDG-BZE",
+      "/tr/route/FRA-BZE",
+      "/tr/route/IST-BZE",
+      "/tr/route/DXB-BZE",
+      "/tr/route/SIN-BZE"
+    ],
+    "flightRows": 13
+  }
+]

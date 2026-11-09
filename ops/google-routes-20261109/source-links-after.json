@@ -1,0 +1,72 @@
+[
+  {
+    "path": "/en/airport/BZE",
+    "checkedAt": "2026-11-09T11:13:06.963437+00:00",
+    "status": 200,
+    "cache": "HIT",
+    "routeLinks": [
+      "/en/route/BZE-SPR",
+      "/en/route/BZE-SAP",
+      "/en/route/BZE-RTB",
+      "/en/route/BZE-CUN",
+      "/en/route/BZE-PTY",
+      "/en/route/BZE-IAH",
+      "/en/route/BZE-FLL",
+      "/en/route/BZE-ATL"
+    ],
+    "invalidAirportLinks": []
+  },
+  {
+    "path": "/en/airport/BZE/arrivals",
+    "checkedAt": "2026-11-09T11:13:08.944697+00:00",
+    "status": 200,
+    "cache": "STALE",
+    "routeLinks": [
+      "/en/route/SPR-BZE",
+      "/en/route/SAP-BZE",
+      "/en/route/PTY-BZE",
+      "/en/route/RTB-BZE",
+      "/en/route/IAH-BZE",
+      "/en/route/ATL-BZE",
+      "/en/route/FLL-BZE",
+      "/en/route/YYZ-BZE"
+    ],
+    "invalidAirportLinks": []
+  },
+  {
+    "path": "/en/airport/OSS",
+    "checkedAt": "2026-11-09T11:13:13.606694+00:00",
+    "status": 200,
+    "cache": "STALE",
+    "routeLinks": [
+      "/en/route/OSS-TAS",
+      "/en/route/OSS-OVB"
+    ],
+    "invalidAirportLinks": []
+  },
+  {
+    "path": "/en/airport/DEL",
+    "checkedAt": "2026-11-09T11:13:17.274990+00:00",
+    "status": 200,
+    "cache": "STALE",
+    "routeLinks": [
+      "/en/route/DEL-BOM",
+      "/en/route/DEL-BLR",
+      "/en/route/DEL-PNQ",
+      "/en/route/DEL-AMD",
+      "/en/route/DEL-CCU",
+      "/en/route/DEL-HYD",
+      "/en/route/DEL-MAA",
+      "/en/route/DEL-PAT"
+    ],
+    "invalidAirportLinks": []
+  },
+  {
+    "path": "/en/airport/LAD",
+    "checkedAt": "2026-11-09T11:13:19.055487+00:00",
+    "status": 200,
+    "cache": "STALE",
+    "routeLinks": [],
+    "invalidAirportLinks": []
+  }
+]
