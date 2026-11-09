@@ -25,6 +25,11 @@
       "title": "Wi‑Fi",
       "hint": "Illimitato, gratuito",
       "text": "Internet gratuito e illimitato: rete Wi‑Fi iGA, accesso con il numero di telefono e la password via SMS o con il codice d’accesso rilasciato dai chioschi nel terminal dopo la scansione del passaporto."
+    },
+    "storage": {
+      "title": "Deposito bagagli",
+      "hint": "Da 210 ₺ per 24 ore",
+      "text": "I depositi bagagli si trovano al livello arrivi, accanto all'uscita dei passeggeri dei voli nazionali e di fronte all'uscita 13. Per 24 ore, una piccola borsa duty-free costa 210 ₺, un bagaglio delle dimensioni di un bagaglio a mano 270 ₺ e una valigia grande 550 ₺. Per i bagagli più grandi sono previste tariffe separate."
     }
   }
 }

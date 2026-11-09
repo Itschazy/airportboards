@@ -1,6 +1,6 @@
 {
  "iata": "IST",
- "checked": "2026-10-25",
+ "checked": "2026-11-09",
  "blocks": [
   {
    "id": "transport",
@@ -41,6 +41,14 @@
    "text": "Бесплатный безлимитный интернет: сеть Wi‑Fi iGA, вход по номеру телефона с паролем из SMS или по коду доступа, который выдают киоски в терминале после сканирования паспорта.",
    "source": "istairport.com",
    "url": "https://www.istairport.com/en/services/discover/general-facilities/wi-fi?locale=ru"
+  },
+  {
+   "id": "storage",
+   "title": "Камера хранения",
+   "hint": "От 210 ₺ за 24 часа",
+   "text": "Камеры хранения находятся на этаже прилёта: рядом с выходом пассажиров внутренних рейсов и напротив выхода 13. За 24 часа небольшая сумка из duty-free стоит 210 ₺, сумка размера ручной клади — 270 ₺, большой чемодан — 550 ₺. Для более крупного багажа действуют отдельные тарифы.",
+   "source": "istairport.com",
+   "url": "https://www.istairport.com/en/services/discover/airport-facilities/left-luggage-offices-and-storage-lockers?locale=en"
   }
  ]
 }

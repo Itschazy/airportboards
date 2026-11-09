@@ -1,16 +1,16 @@
 {
  "iata": "OVB",
- "about": "Tolmatschowo: Internationaler Flughafen Nowosibirsk „A. I. Pokryschkin“, 17 km westlich des Stadtzentrums. Zwei Start- und Landebahnen mit 3597 und 3602 m Länge. Der Terminalkomplex ist auf 1800 Passagiere pro Stunde bei Inlandsflügen und 1300 bei internationalen ausgelegt.",
+ "about": "Tolmachevo ist der internationale Flughafen von Nowosibirsk, benannt nach A. I. Pokryshkin, 17 km westlich des Stadtzentrums. Die Zeitzone ist UTC+7: Die Ortszeit liegt 4 Stunden vor der Moskauer Zeit.",
  "blocks": {
   "transport": {
    "title": "Anreise",
-   "hint": "Express 111Э, alle 30 Min.",
-   "text": "Der Expressbus Nr. 111Э verbindet den Flughafen alle 30 Minuten mit dem Bahnhof „Nowosibirsk-Glawny“: ab Bahnhof von 05:00 bis 00:30, ab Flughafen von 04:00 bis 23:30. Vorortzüge halten an der Station „Ob“ neben dem Flughafen, von dort fahren die Busse Nr. 4 (40 ₽), Nr. 111Э und Nr. 112 zum Terminal."
+   "hint": "111Э und Umstieg am Bahnhof Ob",
+   "text": "Der Expressbus 111Э verbindet den Flughafen alle 30 Minuten mit dem Bahnhof Novosibirsk-Glavny: ab Bahnhof von 05:00 bis 00:30, ab Flughafen von 04:00 bis 23:30. Wer mit dem Vorortzug zum Bahnhof Ob fährt, muss für die Weiterfahrt zum Terminal umsteigen. Bus 4 fährt den Bahnhof an; die Fahrt kostet 40 ₽. Die Busse 111Э und 112 halten an der Haltestelle 2-ya Severnaya in der Stantsionnaya-Straße."
   },
   "lounges": {
    "title": "Business-Lounges",
-   "hint": "Sektoren B und C, 4000 ₽/4 Std.",
-   "text": "Business-Lounges für Inlandsflüge „Komfort“ und „Premjer“ auf Ebene 2 von Sektor C im Sicherheitsbereich: nach der Kontrolle auf Ebene 3 gegenüber Gate Nr. 6 den Schildern folgend nach unten gehen. Lounge für internationale Flüge auf Ebene 3 von Sektor B, 50 Plätze. Bezahlter Besuch 4000 ₽ für 4 Stunden, Kinder von 2–12 Jahren 2000 ₽, unter 2 Jahren kostenlos."
+   "hint": "Premjer: 4000 ₽ für 4 Stunden",
+   "text": "Business-Lounges für Inlandsflüge „Komfort“ und „Premjer“ auf Ebene 2 von Sektor C im Sicherheitsbereich: nach der Kontrolle auf Ebene 3 gegenüber Gate Nr. 6 den Schildern folgend nach unten gehen. Lounge für internationale Flüge auf Ebene 3 von Sektor B, 50 Plätze. In Premjer und der internationalen Lounge kostet ein Besuch 4000 ₽ für 4 Stunden, Kinder von 2–12 Jahren 2000 ₽, unter 2 Jahren kostenlos."
   },
   "storage": {
    "title": "Gepäckaufbewahrung",
@@ -25,7 +25,7 @@
   "parking": {
    "title": "Parken",
    "hint": "15 Min. kostenlos",
-   "text": "Auf dem Vorplatz die ersten 15 Minuten kostenlos, danach die erste Stunde 400 ₽, die zweite 300 ₽, dann 200 ₽ pro Stunde, über 6 Stunden 1500 ₽ pro Tag. Parkplätze P1–P4: bis 3 Tage 700 ₽ pro Tag, bis 6 Tage 500 ₽, länger 300 ₽. Einfahrt nur mit erkanntem Kennzeichen."
+   "text": "Auf dem Vorplatz die ersten 15 Minuten kostenlos, danach die erste Stunde 400 ₽, die zweite 300 ₽, dann 200 ₽ pro Stunde, über 6 Stunden 1500 ₽ pro Tag. Parkplätze P1–P4: bis 3 Tage 700 ₽ pro Tag, bis 6 Tage 500 ₽, länger 300 ₽. Einfahrt nur mit erkanntem Kennzeichen. Bei erneuter Einfahrt innerhalb von 1 Stunde nach der Ausfahrt kosten die ersten 15 Minuten 100 ₽."
   }
  }
 }

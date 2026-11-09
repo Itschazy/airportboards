@@ -20,6 +20,11 @@
    "title": "Deposito bagagli",
    "hint": "Presente in aeroporto",
    "text": "In aeroporto c’è un deposito bagagli. Il prezzo non è indicato dalle fonti."
+  },
+  "lounges": {
+   "title": "Sale business",
+   "hint": "Pearl Lounge, T1, aperta 24 ore",
+   "text": "La Pearl Lounge nel terminal 1 si trova dopo i controlli passaporti e di sicurezza ed è aperta 24 ore su 24. Si può accedere con un pass a pagamento o tramite un programma di accesso alle lounge; verificate le condizioni della vostra carta prima della visita."
   }
  }
 }

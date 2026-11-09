@@ -24,7 +24,12 @@
   "wifi": {
    "title": "Wi‑Fi",
    "hint": "1 Stunde kostenlos",
-   "text": "Kostenloses Internet für 1 Stunde in allen Terminals. Den PIN-Code geben kostenlose Wi‑Fi-Kioske in den Ankunfts- und Abflughallen aus, nötig sind ein Mobiltelefon und ein Reisepass oder Personalausweis. Im CIP-Terminal und in den Lounges ist der Zugang unbegrenzt."
+   "text": "Kostenloses Internet für 1 Stunde in allen Terminals. Eine PIN erhalten Sie an den kostenlosen WLAN-Kiosken in den Ankunfts- und Abflughallen. Für den Zugang werden Mobiltelefon, Reisepass oder Personalausweis verwendet. Im CIP-Terminal und in den Lounges ist der Zugang zeitlich unbegrenzt."
+  },
+  "terminals": {
+   "title": "Terminal",
+   "hint": "T1 und Inlandsterminal verbunden",
+   "text": "Das internationale Terminal 1 und das Inlandsterminal sind miteinander verbunden: Trotz getrennter Eingänge ist ein direkter Fußweg möglich. Das internationale Terminal 2 liegt etwa 2,5 km von Terminal 1 entfernt, rund 5 Autominuten. Zwischen den internationalen Terminals verkehren öffentliche Busse und Taxis."
   }
  }
 }

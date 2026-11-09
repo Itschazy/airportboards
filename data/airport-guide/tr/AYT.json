@@ -24,7 +24,12 @@
   "wifi": {
    "title": "Wi‑Fi",
    "hint": "1 saat ücretsiz",
-   "text": "Tüm terminallerde 1 saat ücretsiz internet. PIN kodunu geliş ve gidiş salonlarındaki ücretsiz Wi‑Fi kioskları verir; cep telefonu ve pasaport veya kimlik kartı gerekir. CIP terminalinde ve dinlenme alanlarında erişim sınırsızdır."
+   "text": "Tüm terminallerde 1 saat ücretsiz internet vardır. Geliş ve gidiş salonlarındaki ücretsiz Wi-Fi kiosklarından PIN alınabilir. Erişim için cep telefonu, pasaport veya kimlik kartı kullanılır. CIP terminalinde ve dinlenme salonlarında erişim sınırsızdır."
+  },
+  "terminals": {
+   "title": "Terminal",
+   "hint": "T1 ve İç Hatlar bağlantılı",
+   "text": "Dış Hatlar Terminali 1 ile İç Hatlar Terminali birbirine bağlıdır: girişleri ayrı olsa da aralarında doğrudan yürüyerek geçilebilir. Dış Hatlar Terminali 2, Terminal 1'den yaklaşık 2,5 km uzaktadır; araçla yaklaşık 5 dakika sürer. Dış hatlar terminalleri arasında belediye otobüsü veya taksi kullanılabilir."
   }
  }
 }

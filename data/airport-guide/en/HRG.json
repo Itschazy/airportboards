@@ -25,6 +25,11 @@
    "title": "Left luggage",
    "hint": "Available at the airport",
    "text": "The airport has a left luggage office. Sources do not state where exactly it is or how much it costs."
+  },
+  "sleep": {
+   "title": "Where to sleep",
+   "hint": "Sleep pods in Pearl Lounge, T1",
+   "text": "Pearl Lounge in Terminal 1 has sleep pods. Before paying, check with the lounge whether passengers on your flight can enter and whether a sleeping space is included in the service you choose."
   }
  }
 }

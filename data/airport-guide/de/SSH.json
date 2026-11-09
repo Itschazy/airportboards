@@ -20,6 +20,11 @@
    "title": "Gepäckaufbewahrung",
    "hint": "Am Flughafen vorhanden",
    "text": "Am Flughafen gibt es eine Gepäckaufbewahrung. Den Preis geben die Quellen nicht an."
+  },
+  "lounges": {
+   "title": "Business-Lounges",
+   "hint": "Pearl Lounge, T1, rund um die Uhr",
+   "text": "Die Pearl Lounge in Terminal 1 liegt hinter der Pass- und Sicherheitskontrolle und ist rund um die Uhr geöffnet. Der Zugang ist mit einem kostenpflichtigen Lounge-Pass oder über ein Lounge-Zugangsprogramm möglich; prüfen Sie vor dem Besuch die Bedingungen Ihrer Karte."
   }
  }
 }

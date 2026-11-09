@@ -25,6 +25,11 @@
    "title": "Wi‑Fi",
    "hint": "Illimité, gratuit",
    "text": "Internet gratuit et illimité : réseau Wi‑Fi iGA, connexion par numéro de téléphone avec mot de passe reçu par SMS ou par code d'accès délivré par les bornes du terminal après scan du passeport."
+  },
+  "storage": {
+   "title": "Consigne à bagages",
+   "hint": "À partir de 210 ₺ pour 24 heures",
+   "text": "Les consignes à bagages se trouvent au niveau des arrivées, près de la sortie des passagers des vols intérieurs et en face de la sortie 13. Pour 24 heures, un petit sac de duty-free coûte 210 ₺, un bagage de taille cabine 270 ₺ et une grande valise 550 ₺. Les bagages plus volumineux ont des tarifs distincts."
   }
  }
 }

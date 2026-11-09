@@ -24,7 +24,12 @@
   "wifi": {
    "title": "Wi‑Fi",
    "hint": "Gratis 1 hora",
-   "text": "Internet gratuito durante 1 hora en todas las terminales. El código PIN lo dan los quioscos Wi‑Fi gratuitos de las salas de llegadas y salidas; se necesita un teléfono móvil y pasaporte o documento de identidad. En la terminal CIP y en las zonas de descanso el acceso es ilimitado."
+   "text": "Internet gratuito durante 1 hora en todas las terminales. Puede obtener un PIN en los quioscos Wi-Fi gratuitos de las salas de llegadas y salidas. Para acceder se utiliza un teléfono móvil, pasaporte o documento de identidad. El acceso es ilimitado en la terminal CIP y las salas de descanso."
+  },
+  "terminals": {
+   "title": "Terminal",
+   "hint": "T1 conectada con vuelos nacionales",
+   "text": "La terminal internacional 1 y la terminal nacional están conectadas: se puede caminar directamente entre ambas, aunque tienen entradas separadas. La terminal internacional 2 está a unos 2,5 km de la terminal 1, aproximadamente 5 minutos en coche. Hay autobuses públicos y taxis entre las terminales internacionales."
   }
  }
 }

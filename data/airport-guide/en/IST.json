@@ -25,6 +25,11 @@
    "title": "Wi‑Fi",
    "hint": "Unlimited, free",
    "text": "Free unlimited internet: iGA Wi‑Fi network, login with a phone number and an SMS password or with an access code issued by kiosks in the terminal after scanning a passport."
+  },
+  "storage": {
+   "title": "Left luggage",
+   "hint": "From 210 ₺ per 24 hours",
+   "text": "Left-luggage offices are on the arrivals level, next to the domestic passenger exit and opposite exit 13. For 24 hours, a small duty-free bag costs 210 ₺, a cabin-sized bag 270 ₺ and a large suitcase 550 ₺. Larger items have separate rates."
   }
  }
 }

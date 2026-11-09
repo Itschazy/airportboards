@@ -25,6 +25,11 @@
    "title": "Deposito bagagli",
    "hint": "Presente in aeroporto",
    "text": "In aeroporto c’è un deposito bagagli. Le fonti non indicano dove si trovi esattamente né quanto costi."
+  },
+  "sleep": {
+   "title": "Dove dormire",
+   "hint": "Capsule nella Pearl Lounge, T1",
+   "text": "La Pearl Lounge del terminal 1 dispone di capsule per dormire. Prima di pagare, verificate con la lounge se i passeggeri del vostro volo possono accedere e se un posto per dormire è incluso nel servizio scelto."
   }
  }
 }

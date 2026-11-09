@@ -24,7 +24,12 @@
   "wifi": {
    "title": "Wi‑Fi",
    "hint": "Gratuit 1 heure",
-   "text": "Internet gratuit pendant 1 heure dans tous les terminaux. Le code PIN est délivré par les bornes Wi‑Fi gratuites des halls d'arrivée et de départ ; un téléphone mobile et un passeport ou une pièce d'identité sont nécessaires. Dans le terminal CIP et les espaces de repos, l'accès est illimité."
+   "text": "Internet gratuit pendant 1 heure dans tous les terminaux. Un code PIN peut être obtenu aux bornes Wi-Fi gratuites des halls d'arrivée et de départ. L'accès utilise un téléphone mobile, un passeport ou une carte d'identité. L'accès est illimité dans le terminal CIP et les salons."
+  },
+  "terminals": {
+   "title": "Terminal",
+   "hint": "T1 relié au terminal intérieur",
+   "text": "Le terminal international 1 et le terminal intérieur sont reliés : on peut passer directement de l'un à l'autre à pied, malgré leurs entrées séparées. Le terminal international 2 se trouve à environ 2,5 km du terminal 1, soit environ 5 minutes en voiture. Des bus publics et des taxis relient les terminaux internationaux."
   }
  }
 }

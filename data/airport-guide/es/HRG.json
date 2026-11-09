@@ -25,6 +25,11 @@
    "title": "Consigna",
    "hint": "Hay en el aeropuerto",
    "text": "En el aeropuerto hay consigna de equipaje. Las fuentes no indican dónde está exactamente ni cuánto cuesta."
+  },
+  "sleep": {
+   "title": "Dónde dormir",
+   "hint": "Cápsulas en Pearl Lounge, T1",
+   "text": "Pearl Lounge, en la terminal 1, dispone de cápsulas para dormir. Antes de pagar, consulte con la sala si admite a los pasajeros de su vuelo y si el servicio elegido incluye un espacio para dormir."
   }
  }
 }

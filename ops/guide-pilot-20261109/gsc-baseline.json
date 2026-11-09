@@ -1,0 +1,84 @@
+{
+  "source": "ops/google-diagnosis-20261109/inspections.json",
+  "note": "Same-day earlier inspections; not a new request. GSC crawl date is not a full bot log.",
+  "urls": [
+    {
+      "path": "/ru/airport/KZN",
+      "checkedAt": "2026-11-09T10:39:56.961Z",
+      "gscStatus": "crawled-not-indexed",
+      "gscLastCrawl": "Oct 18, 2026, 2:51:37 PM",
+      "crawlTimezone": "not disclosed by UI",
+      "sitemaps": "none detected",
+      "crawlAllowed": true,
+      "fetch": "Successful",
+      "indexingAllowed": true,
+      "userCanonical": "https://airportsboard.live/ru/airport/KZN",
+      "googleCanonical": "Inspected URL"
+    },
+    {
+      "path": "/ru/airport/AYT",
+      "checkedAt": "2026-11-09T10:41:30.701Z",
+      "gscStatus": "crawled-not-indexed",
+      "gscLastCrawl": "Oct 18, 2026, 2:46:12 PM",
+      "crawlTimezone": "not disclosed by UI",
+      "sitemaps": "none detected",
+      "crawlAllowed": true,
+      "fetch": "Successful",
+      "indexingAllowed": true,
+      "userCanonical": "https://airportsboard.live/ru/airport/AYT",
+      "googleCanonical": "Inspected URL"
+    },
+    {
+      "path": "/ru/airport/HRG",
+      "checkedAt": "2026-11-09T10:41:51.018Z",
+      "gscStatus": "crawled-not-indexed",
+      "gscLastCrawl": "Oct 18, 2026, 2:45:38 PM",
+      "crawlTimezone": "not disclosed by UI",
+      "sitemaps": "none detected",
+      "crawlAllowed": true,
+      "fetch": "Successful",
+      "indexingAllowed": true,
+      "userCanonical": "https://airportsboard.live/ru/airport/HRG",
+      "googleCanonical": "Inspected URL"
+    },
+    {
+      "path": "/ru/airport/OVB",
+      "checkedAt": "2026-11-09T10:42:12.406Z",
+      "gscStatus": "crawled-not-indexed",
+      "gscLastCrawl": "Oct 16, 2026, 4:20:26 PM",
+      "crawlTimezone": "not disclosed by UI",
+      "sitemaps": "https://airportsboard.live/sitemap-3.xml",
+      "crawlAllowed": true,
+      "fetch": "Successful",
+      "indexingAllowed": true,
+      "userCanonical": "https://airportsboard.live/ru/airport/OVB",
+      "googleCanonical": "Inspected URL"
+    },
+    {
+      "path": "/ru/airport/SSH",
+      "checkedAt": "2026-11-09T10:42:31.391Z",
+      "gscStatus": "crawled-not-indexed",
+      "gscLastCrawl": "Oct 18, 2026, 2:43:34 PM",
+      "crawlTimezone": "not disclosed by UI",
+      "sitemaps": "Temporary processing error",
+      "crawlAllowed": true,
+      "fetch": "Successful",
+      "indexingAllowed": true,
+      "userCanonical": "https://airportsboard.live/ru/airport/SSH",
+      "googleCanonical": "Inspected URL"
+    },
+    {
+      "path": "/ru/airport/IST",
+      "checkedAt": "2026-11-09T10:43:06.175Z",
+      "gscStatus": "crawled-not-indexed",
+      "gscLastCrawl": "Oct 18, 2026, 2:46:00 PM",
+      "crawlTimezone": "not disclosed by UI",
+      "sitemaps": "none detected",
+      "crawlAllowed": true,
+      "fetch": "Successful",
+      "indexingAllowed": true,
+      "userCanonical": "https://airportsboard.live/ru/airport/IST",
+      "googleCanonical": "Inspected URL"
+    }
+  ]
+}

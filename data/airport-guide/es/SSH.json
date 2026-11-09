@@ -20,6 +20,11 @@
    "title": "Consigna",
    "hint": "Hay en el aeropuerto",
    "text": "En el aeropuerto hay consigna de equipaje. Las fuentes no indican el precio."
+  },
+  "lounges": {
+   "title": "Salas VIP",
+   "hint": "Pearl Lounge, T1, abierto 24 horas",
+   "text": "Pearl Lounge está en la terminal 1, después de los controles de pasaportes y seguridad, y abre las 24 horas. Se puede acceder con un pase de pago o mediante un programa de acceso a salas; consulte las condiciones de su tarjeta antes de la visita."
   }
  }
 }

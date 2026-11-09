@@ -20,6 +20,11 @@
    "title": "Consigne à bagages",
    "hint": "Disponible à l'aéroport",
    "text": "L'aéroport dispose d'une consigne à bagages. Les sources n'indiquent pas le prix."
+  },
+  "lounges": {
+   "title": "Salons",
+   "hint": "Pearl Lounge, T1, ouvert 24 h/24",
+   "text": "Le Pearl Lounge du terminal 1 se trouve après les contrôles des passeports et de sûreté et est ouvert 24 h/24. L'accès est possible avec un pass payant ou via un programme d'accès aux salons ; vérifiez les conditions de votre carte avant la visite."
   }
  }
 }

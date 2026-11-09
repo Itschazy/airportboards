@@ -1,0 +1,295 @@
+[
+  {
+    "iata": "KZN",
+    "checked": "2026-11-09",
+    "basis": "official",
+    "blocks": [
+      {
+        "id": "transport",
+        "text": "Автобус №197 идёт от автовокзала «Восточный» по проспекту Победы, мимо метро «Проспект Победы», и заканчивает маршрут у Терминалов 1 и 1А. Ходит с 6:00 до 22:00, перевозчик ПАТП-8. Пригородные поезда Казань — Аэропорт возит компания «Содружество». Такси работает круглосуточно.",
+        "urls": [
+          "https://kazan.aero/for-passengers-and-guests/how-to-get/"
+        ]
+      },
+      {
+        "id": "lounges",
+        "text": "«Болгар — Ак Барс Банк Лаунж»: 2 этаж после досмотра, справа после выхода №4, 3 500 ₽. «Свияжск»: 3 этаж после досмотра, 4 500 ₽. На международном вылете в Терминале 1А: Sky Lounge на 1 этаже, 5 500 ₽, и Prime Lounge на 2 этаже, 3 200 ₽. Детям 2–12 лет половина цены.",
+        "urls": [
+          "https://kazan.aero/vip-lounge/new/"
+        ]
+      },
+      {
+        "id": "storage",
+        "text": "Терминал 1, цокольный этаж, круглосуточно. Место багажа стоит 400 ₽ до полуночи текущих суток, дальше 200 ₽ за каждые сутки. Неполные сутки считаются как полные. Оператор PACK&FLY, телефон +7 843 254 00 21.",
+        "urls": [
+          "https://kazan.aero/services/luggage-storage/"
+        ]
+      },
+      {
+        "id": "sleep",
+        "text": "Гостиница «Полёт» стоит на территории аэропорта, в 270 м от Терминала 1. Питание заказывают при бронировании или с доставкой в номер, столовая на 3 этаже Терминала 1. Администратор: +7 (843) 267-87-05.",
+        "urls": [
+          "https://kazan.aero/services/hotel/"
+        ]
+      },
+      {
+        "id": "kids",
+        "text": "Комната матери и ребёнка на 2 этаже Терминала 1, круглосуточно. Пускают с детьми до 7 лет, с детьми с инвалидностью до 14 лет и беременных во второй половине срока. Внутри две спальни с кроватками, две игровые, место для еды с микроволновкой и подогревателем, душ. Телефон +7 (843) 267-87-86.",
+        "urls": [
+          "https://kazan.aero/services/mother-and-child-room/"
+        ]
+      },
+      {
+        "id": "parking",
+        "text": "На парковке Р1 у терминалов 1 и 1А первые 20 минут бесплатны. При повторном въезде в течение 1 часа бесплатного периода нет. На Р2 напротив Терминала 2 бесплатно только 5 минут. Оплата — в паркоматах или приложении аэропорта; после оплаты нужно выехать в течение 20 минут. Телефон парковки: +7 (843) 254-01-55.",
+        "urls": [
+          "https://kazan.aero/services/parking/"
+        ]
+      }
+    ]
+  },
+  {
+    "iata": "OVB",
+    "checked": "2026-11-09",
+    "basis": "official",
+    "blocks": [
+      {
+        "id": "transport",
+        "text": "Экспресс №111Э связывает аэропорт с вокзалом «Новосибирск-Главный» каждые 30 минут: от вокзала с 05:00 до 00:30, от аэропорта с 04:00 до 23:30. При поездке на электричке до станции «Обь» до терминала нужна пересадка. Автобус №4 заезжает к станции, билет стоит 40 ₽. Автобусы №111Э и №112 останавливаются на «2-й Северной» по улице Станционная.",
+        "urls": [
+          "https://tolmachevo.ru/transport/how/bus/111/",
+          "https://tolmachevo.ru/transport/how/ob-tolmchevo-ob/"
+        ]
+      },
+      {
+        "id": "lounges",
+        "text": "Бизнес-залы внутренних линий «Комфорт» и «Премьер» на 2 этаже Сектора C в чистой зоне: после досмотра на 3 этаже напротив выхода № 6 спуститься по указателям. Зал международных линий на 3 этаже Сектора B, 50 мест. В «Премьере» и международном зале платный визит 4000 ₽ за 4 часа, дети 2–12 лет 2000 ₽, до 2 лет бесплатно.",
+        "urls": [
+          "https://tolmachevo.ru/services/comfort/biznes-premier/",
+          "https://tolmachevo.ru/services/comfort/businessm/"
+        ]
+      },
+      {
+        "id": "storage",
+        "text": "Камера хранения для пассажиров внутренних и международных рейсов находится в Секторе C и работает круглосуточно. Багаж 500 ₽ в сутки за место, верхняя одежда 100 ₽ в сутки. Хранение меньше суток оплачивается как полные сутки.",
+        "urls": [
+          "https://tolmachevo.ru/services/infrastructure/storage/"
+        ]
+      },
+      {
+        "id": "kids",
+        "text": "Комната матери и ребёнка на 3 этаже Сектора C, круглосуточно и бесплатно. Для вылетающих пассажиров с детьми до 7 лет, детей-инвалидов до 14 лет и женщин во второй половине беременности. Есть кухня, спальня с кроватками, игровая комната.",
+        "urls": [
+          "https://tolmachevo.ru/services/infrastructure/babysroom"
+        ]
+      },
+      {
+        "id": "parking",
+        "text": "На привокзальной площади первые 15 минут бесплатно, затем первый час 400 ₽, второй 300 ₽, далее 200 ₽ в час, свыше 6 часов 1500 ₽ в сутки. Парковки P1–P4: до 3 суток 700 ₽ в сутки, до 6 суток 500 ₽, дольше 300 ₽. Въезд только с распознанным госномером. При повторном въезде в течение 1 часа после выезда первые 15 минут стоят 100 ₽.",
+        "urls": [
+          "https://tolmachevo.ru/transport/parking/tariff/"
+        ]
+      }
+    ]
+  },
+  {
+    "iata": "AYT",
+    "checked": "2026-11-09",
+    "basis": "official",
+    "blocks": [
+      {
+        "id": "transport",
+        "text": "До междугороднего автовокзала и центра Антальи ходят городские автобусы, расписание — в приложении Antalyakart или по телефону 0242 606 07 07. Трамвай AntRay идёт по маршруту аэропорт — центр города — междугородний автовокзал — район Фатих. Туристов турфирм у выхода из терминала встречают стойки туроператоров с их автобусами.",
+        "urls": [
+          "https://www.antalya-airport.aero/passazhiry-i-posetiteli-20-ru/transport-24-ru/avtobusy-i-obshchestvennyy-transport-77-ru"
+        ]
+      },
+      {
+        "id": "taxi",
+        "text": "Стоянки такси напротив выходов из всех терминалов, у водителей бейджи аэропорта. Тарифы — на информационном стенде рядом со стоянкой; есть онлайн-бронирование через кооперативную службу такси аэропорта (antalyaairporttaxi.net).",
+        "urls": [
+          "https://www.antalya-airport.aero/passazhiry-i-posetiteli-20-ru/transport-24-ru/taksi-78-ru"
+        ]
+      },
+      {
+        "id": "storage",
+        "text": "Камера хранения находится в зале прилёта внутреннего терминала; ею могут пользоваться пассажиры, вылетающие из терминала 1 или внутреннего терминала. Упаковка багажа — круглосуточно, платно, в залах вылета терминалов 1 и 2.",
+        "urls": [
+          "https://www.antalya-airport.aero/passazhiry-i-posetiteli-20-ru/uslugi-27-ru/obsluzhivanie-bagazha-60-ru"
+        ]
+      },
+      {
+        "id": "parking",
+        "text": "Многоэтажная парковка на 2643 машины напротив внутреннего терминала. Стоимость считает калькулятор на сайте аэропорта; абонементы оформляют в центре обслуживания на первом этаже (P1).",
+        "urls": [
+          "https://www.antalya-airport.aero/passazhiry-i-posetiteli-20-ru/parkovka-75-ru"
+        ]
+      },
+      {
+        "id": "wifi",
+        "text": "Бесплатный интернет на 1 час во всех терминалах. PIN-код можно получить в бесплатных киосках Wi‑Fi в залах прилёта и вылета. Для доступа используют мобильный телефон, паспорт или удостоверение личности. В терминале CIP и зонах отдыха доступ без ограничения.",
+        "urls": [
+          "https://www.antalya-airport.aero/passazhiry-i-posetiteli-20-ru/uslugi-27-ru/besplatnyy-wi-fi-64-ru"
+        ]
+      },
+      {
+        "id": "terminals",
+        "text": "Международный терминал 1 и внутренний терминал соединены: между ними можно перейти напрямую, хотя входы отдельные. Международный терминал 2 находится примерно в 2,5 км от терминала 1 — около 5 минут на машине. Между международными терминалами можно проехать на общественном автобусе или такси.",
+        "urls": [
+          "https://www.antalya-airport.aero/passazhiry-i-posetiteli-20-ru/transport-24-ru/avtobusy-i-obshchestvennyy-transport-77-ru"
+        ]
+      }
+    ]
+  },
+  {
+    "iata": "HRG",
+    "checked": "2026-11-09",
+    "basis": "third-party",
+    "blocks": [
+      {
+        "id": "transport",
+        "text": "До центра Хургады около 20 минут на машине. Маршрутки в город ждут у выхода из аэропорта и отправляются, когда заполнятся, твёрдого расписания у них нет.",
+        "urls": [
+          "https://www.worldtravelguide.net/guides/africa/egypt/hurghada-international-airport/",
+          "https://www.iexplore.com/articles/travel-guides/africa/egypt/airports"
+        ]
+      },
+      {
+        "id": "taxi",
+        "text": "Такси стоят у выхода из зоны прилёта. Цену поездки договаривают с водителем до посадки. Есть прокат машин, в том числе Hertz.",
+        "urls": [
+          "https://www.worldtravelguide.net/guides/africa/egypt/hurghada-international-airport/",
+          "https://www.sleepinginairports.net/guides/hurghada-airport-guide.htm"
+        ]
+      },
+      {
+        "id": "terminals",
+        "text": "В аэропорту два пассажирских терминала. В терминалах есть банкоматы и пункты обмена валюты.",
+        "urls": [
+          "https://www.worldtravelguide.net/guides/africa/egypt/hurghada-international-airport/",
+          "https://www.sleepinginairports.net/guides/hurghada-airport-guide.htm"
+        ]
+      },
+      {
+        "id": "lounges",
+        "text": "Pearl Lounge в терминале 1 — после паспортного контроля и досмотра, на втором этаже у выхода 30, работает круглосуточно. Кого пускают, источники пишут по-разному — условия входа уточняйте у зала.",
+        "urls": [
+          "https://www.sleepinginairports.net/guides/hurghada-airport-guide.htm",
+          "https://www.viplounges.com/egypt/hurghada/hurghada-international/hrg-terminal-1/pearl-lounge-1512"
+        ]
+      },
+      {
+        "id": "storage",
+        "text": "В аэропорту есть камера хранения багажа. Где именно она находится и сколько стоит, источники не указывают.",
+        "urls": [
+          "https://www.worldtravelguide.net/guides/africa/egypt/hurghada-international-airport/",
+          "https://www.sleepinginairports.net/guides/hurghada-airport-guide.htm"
+        ]
+      },
+      {
+        "id": "sleep",
+        "text": "В Pearl Lounge терминала 1 есть капсулы для сна. Перед оплатой уточните у зала, доступен ли он пассажирам вашего рейса и включено ли место для сна в выбранную услугу.",
+        "urls": [
+          "https://pearlassist.com/maasp-dep-hrg",
+          "https://www.sleepinginairports.net/guides/hurghada-airport-guide.htm"
+        ]
+      }
+    ]
+  },
+  {
+    "iata": "SSH",
+    "checked": "2026-11-09",
+    "basis": "third-party",
+    "blocks": [
+      {
+        "id": "transport",
+        "text": "Маршрутки в Шарм-эш-Шейх обычно отправляются, когда заполнятся; цену договаривают с водителем заранее. Есть прокат машин — Hertz, Thrifty и местные компании.",
+        "urls": [
+          "https://www.worldtravelguide.net/guides/africa/egypt/sharm-el-sheikh/sharm-el-sheikh-international-airport/",
+          "https://www.sleepinginairports.net/guides/sharm-el-sheikh-airport-guide.htm"
+        ]
+      },
+      {
+        "id": "taxi",
+        "text": "Такси у аэропорта есть; цену поездки договаривают с водителем до посадки.",
+        "urls": [
+          "https://www.worldtravelguide.net/guides/africa/egypt/sharm-el-sheikh/sharm-el-sheikh-international-airport/",
+          "https://www.sleepinginairports.net/guides/sharm-el-sheikh-airport-guide.htm"
+        ]
+      },
+      {
+        "id": "terminals",
+        "text": "В аэропорту два пассажирских терминала. Есть банкоматы и пункты обмена валюты.",
+        "urls": [
+          "https://www.worldtravelguide.net/guides/africa/egypt/sharm-el-sheikh/sharm-el-sheikh-international-airport/",
+          "https://www.sleepinginairports.net/guides/sharm-el-sheikh-airport-guide.htm"
+        ]
+      },
+      {
+        "id": "storage",
+        "text": "В аэропорту есть камера хранения багажа. Цену источники не указывают.",
+        "urls": [
+          "https://www.worldtravelguide.net/guides/africa/egypt/sharm-el-sheikh/sharm-el-sheikh-international-airport/",
+          "https://www.sleepinginairports.net/guides/sharm-el-sheikh-airport-guide.htm"
+        ]
+      },
+      {
+        "id": "lounges",
+        "text": "Pearl Lounge в терминале 1 находится после паспортного контроля и досмотра и работает круглосуточно. Войти можно по платному пропуску или через программу доступа в бизнес-залы; условия вашей карты нужно проверить перед посещением.",
+        "urls": [
+          "https://www.prioritypass.com/en-GB/lounges/egypt/sharm-el-sheikh-international/ssh-pearl-lounge",
+          "https://www.sleepinginairports.net/guides/sharm-el-sheikh-airport-guide.htm"
+        ]
+      }
+    ]
+  },
+  {
+    "iata": "IST",
+    "checked": "2026-11-09",
+    "basis": "official",
+    "blocks": [
+      {
+        "id": "transport",
+        "text": "Метро M11 связывает аэропорт с Гайреттепе, а с 20 июня 2026 года линия продлена до Халкалы. Автобусы Havaist отправляются с транспортного этажа −2 по многим районам города, в том числе Бешикташ, Кадыкёй, Аксарай, Султанахмет (Чатладыкапы) и автовокзал Эсенлер. Городские автобусы İETT — 5 маршрутов до центра.",
+        "urls": [
+          "https://www.istairport.com/en/airport/airport-transportation/urban-transportation/public-transportation?locale=ru"
+        ]
+      },
+      {
+        "id": "sleep",
+        "text": "Отель YOTEL прямо в терминале: 171 кабина в общей зоне (напротив стоек регистрации P) и 280 в зоне вылета (YOTELAIR, зона A–B), вторая — только для улетающих международными рейсами. Бронирование от 4 часов. Почасовые Sleepcabins YOTELAIR — напротив входа в iGA Lounge, этажом выше, только без предварительной брони.",
+        "urls": [
+          "https://www.istairport.com/en/services/discover/accommodation/istanbul-airport-hotel?locale=ru"
+        ]
+      },
+      {
+        "id": "kids",
+        "text": "Есть комната матери и ребёнка, игровые площадки пяти тематик общей площадью 700 м², бесплатные поездки на багги для пассажиров с детьми до 2 лет, отдельные семейные парковочные места и семейные пункты досмотра.",
+        "urls": [
+          "https://www.istairport.com/en/services/discover/child-and-family-friendly-airport?locale=ru"
+        ]
+      },
+      {
+        "id": "parking",
+        "text": "Многоуровневая парковка под одной крышей, круглосуточное видеонаблюдение и охрана. С 1 января 2024 года без абонемента оплата посуточная; стоимость считает калькулятор на сайте аэропорта. При оплате через приложение аэропорта скидка 10% (кроме абонементов на 15 и 30 дней). Парковщик — у входа в терминал CIP.",
+        "urls": [
+          "https://www.istairport.com/en/airport/airport-transportation/airport-carpark?locale=ru"
+        ]
+      },
+      {
+        "id": "wifi",
+        "text": "Бесплатный безлимитный интернет: сеть Wi‑Fi iGA, вход по номеру телефона с паролем из SMS или по коду доступа, который выдают киоски в терминале после сканирования паспорта.",
+        "urls": [
+          "https://www.istairport.com/en/services/discover/general-facilities/wi-fi?locale=ru"
+        ]
+      },
+      {
+        "id": "storage",
+        "text": "Камеры хранения находятся на этаже прилёта: рядом с выходом пассажиров внутренних рейсов и напротив выхода 13. За 24 часа небольшая сумка из duty-free стоит 210 ₺, сумка размера ручной клади — 270 ₺, большой чемодан — 550 ₺. Для более крупного багажа действуют отдельные тарифы.",
+        "urls": [
+          "https://www.istairport.com/en/services/discover/airport-facilities/left-luggage-offices-and-storage-lockers?locale=en"
+        ]
+      }
+    ]
+  }
+]

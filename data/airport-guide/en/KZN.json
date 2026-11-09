@@ -29,8 +29,8 @@
   },
   "parking": {
    "title": "Parking",
-   "hint": "20 min free",
-   "text": "The first 20 minutes from entry are free. Parking is paid at pay stations in the terminals and car parks or in the airport app. Questions about parking at terminals 1, 1А and 2: +7 (843) 254-01-55."
+   "hint": "Р1: 20 min, Р2: 5 min free",
+   "text": "At car park Р1 by terminals 1 and 1А, the first 20 minutes are free. Re-entering within 1 hour gives no free period. At Р2 opposite Terminal 2, only 5 minutes are free. Pay at a parking machine or in the airport app, then leave within 20 minutes of payment. Parking enquiries: +7 (843) 254-01-55."
   }
  }
 }

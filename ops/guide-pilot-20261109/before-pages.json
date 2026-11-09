@@ -1,0 +1,122 @@
+[
+  {
+    "path": "/ru/airport/KZN",
+    "status": 200,
+    "h1": "KZN Казань",
+    "characters": 7963,
+    "contentHash": "306350225d7becf436b54589c495bf1fd6a4fa29089bd85b4b2789f71e6df573",
+    "faqCount": 18,
+    "guideBlocks": 6,
+    "htmlGuideVerified": false
+  },
+  {
+    "path": "/ru/airport/OVB",
+    "status": 200,
+    "h1": "OVB Толмачёво",
+    "characters": 8122,
+    "contentHash": "62b95574d8c694c8b41674e7ec1be850123d0d23aa747af7a276ed7be336c46f",
+    "faqCount": 17,
+    "guideBlocks": 5,
+    "htmlGuideVerified": false
+  },
+  {
+    "path": "/ru/airport/AYT",
+    "status": 200,
+    "h1": "AYT Анталия",
+    "characters": 9028,
+    "contentHash": "6c91a13170e62f79a02371c1e74dd4937db706f20af0bcf563a1cb371ba65e27",
+    "faqCount": 17,
+    "guideBlocks": 6,
+    "htmlGuideVerified": false
+  },
+  {
+    "path": "/ru/airport/HRG",
+    "status": 200,
+    "h1": "HRG Хургада",
+    "characters": 8460,
+    "contentHash": "8f33415f498e05890d6b66837908deeed3688718a8058added5482ecf33f977a",
+    "faqCount": 17,
+    "guideBlocks": 6,
+    "htmlGuideVerified": false
+  },
+  {
+    "path": "/ru/airport/SSH",
+    "status": 200,
+    "h1": "SSH Шарм-эш-Шейх",
+    "characters": 8154,
+    "contentHash": "1f13550588b0ed19f63af999939bf67e5e3d6c618f7f902dbf1528a6f6e8ac1e",
+    "faqCount": 16,
+    "guideBlocks": 5,
+    "htmlGuideVerified": false
+  },
+  {
+    "path": "/ru/airport/IST",
+    "status": 200,
+    "h1": "IST Стамбул",
+    "characters": 9134,
+    "contentHash": "481eaad7028497df04818856ac99d50e62f5c0f7f92ba6eac3eda8c7b554955c",
+    "faqCount": 17,
+    "guideBlocks": 6,
+    "htmlGuideVerified": false
+  },
+  {
+    "path": "/ru/airport/KZN/arrivals",
+    "status": 200,
+    "h1": "KZN Казань · Прилёты",
+    "characters": 7462,
+    "contentHash": "892f9ccd60a65ba339060bfc8feaf7a6df788f6c026e19eab3787314d7c6d9e8",
+    "faqCount": 15,
+    "guideBlocks": 6,
+    "htmlGuideVerified": false
+  },
+  {
+    "path": "/ru/airport/OVB/arrivals",
+    "status": 200,
+    "h1": "OVB Толмачёво · Прилёты",
+    "characters": 7658,
+    "contentHash": "e161d3d161e599e3e450e949faf3227f22f9d68b773d6da2a54bec737017355d",
+    "faqCount": 14,
+    "guideBlocks": 5,
+    "htmlGuideVerified": false
+  },
+  {
+    "path": "/ru/airport/AYT/arrivals",
+    "status": 200,
+    "h1": "AYT Анталия · Прилёты",
+    "characters": 8670,
+    "contentHash": "938b582445850cc5efb86f4f3af1e70ef0b56739e4fb17b8d7b55431a7950fb5",
+    "faqCount": 14,
+    "guideBlocks": 6,
+    "htmlGuideVerified": false
+  },
+  {
+    "path": "/ru/airport/HRG/arrivals",
+    "status": 200,
+    "h1": "HRG Хургада · Прилёты",
+    "characters": 7819,
+    "contentHash": "ed63d3ca5ffd9c7ce4371a65dcd3a6dd2d76faf393544919db575588cd5681fb",
+    "faqCount": 14,
+    "guideBlocks": 6,
+    "htmlGuideVerified": false
+  },
+  {
+    "path": "/ru/airport/SSH/arrivals",
+    "status": 200,
+    "h1": "SSH Шарм-эш-Шейх · Прилёты",
+    "characters": 7411,
+    "contentHash": "38620554e9f4346e312b9b70f76e39d5b3535540825101d51b6d31a5121106d7",
+    "faqCount": 13,
+    "guideBlocks": 5,
+    "htmlGuideVerified": false
+  },
+  {
+    "path": "/ru/airport/IST/arrivals",
+    "status": 200,
+    "h1": "IST Стамбул · Прилёты",
+    "characters": 8497,
+    "contentHash": "5c7d68a0642d81f87a8f48f7f2fe5c65d33f9901bb26ef8cdfae615f3f4d31fd",
+    "faqCount": 14,
+    "guideBlocks": 6,
+    "htmlGuideVerified": false
+  }
+]

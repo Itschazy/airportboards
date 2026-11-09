@@ -29,8 +29,8 @@
   },
   "parking": {
    "title": "Otopark",
-   "hint": "20 dakika ücretsiz",
-   "text": "Girişten itibaren ilk 20 dakika ücretsiz. Ücretli otopark ödemesi terminallerdeki ve otopark alanlarındaki ödeme makinelerinde veya havalimanı uygulamasında yapılır. Terminal 1, 1А ve 2'deki otoparkla ilgili sorular: +7 (843) 254-01-55."
+   "hint": "Р1: 20 dk, Р2: 5 dk ücretsiz",
+   "text": "1 ve 1А terminalleri yanındaki Р1 otoparkında ilk 20 dakika ücretsizdir. 1 saat içinde yeniden girişte ücretsiz süre verilmez. Terminal 2 karşısındaki Р2 otoparkında yalnızca 5 dakika ücretsizdir. Ödeme otopark makinelerinden veya havalimanı uygulamasından yapılır; ödemeden sonra 20 dakika içinde çıkılmalıdır. Otopark telefonu: +7 (843) 254-01-55."
   }
  }
 }

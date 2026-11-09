@@ -1,6 +1,6 @@
 {
  "iata": "HRG",
- "checked": "2026-10-25",
+ "checked": "2026-11-09",
  "basis": "third-party",
  "blocks": [
   {
@@ -50,6 +50,16 @@
    "text": "В аэропорту есть камера хранения багажа. Где именно она находится и сколько стоит, источники не указывают.",
    "source": "worldtravelguide.net",
    "url": "https://www.worldtravelguide.net/guides/africa/egypt/hurghada-international-airport/",
+   "source2": "sleepinginairports.net",
+   "url2": "https://www.sleepinginairports.net/guides/hurghada-airport-guide.htm"
+  },
+  {
+   "id": "sleep",
+   "title": "Где поспать",
+   "hint": "Капсулы в Pearl Lounge, Т1",
+   "text": "В Pearl Lounge терминала 1 есть капсулы для сна. Перед оплатой уточните у зала, доступен ли он пассажирам вашего рейса и включено ли место для сна в выбранную услугу.",
+   "source": "pearlassist.com",
+   "url": "https://pearlassist.com/maasp-dep-hrg",
    "source2": "sleepinginairports.net",
    "url2": "https://www.sleepinginairports.net/guides/hurghada-airport-guide.htm"
   }

@@ -25,6 +25,11 @@
    "title": "Wi‑Fi",
    "hint": "Ilimitado y gratuito",
    "text": "Internet gratuito e ilimitado: red Wi‑Fi iGA, acceso con el número de teléfono y una contraseña por SMS o con un código de acceso que dan los quioscos de la terminal tras escanear el pasaporte."
+  },
+  "storage": {
+   "title": "Consigna",
+   "hint": "Desde 210 ₺ por 24 horas",
+   "text": "Las consignas están en el nivel de llegadas, junto a la salida de pasajeros de vuelos nacionales y frente a la salida 13. Por 24 horas, una bolsa pequeña de duty-free cuesta 210 ₺, un bulto de tamaño de cabina 270 ₺ y una maleta grande 550 ₺. El equipaje de mayor tamaño tiene tarifas distintas."
   }
  }
 }

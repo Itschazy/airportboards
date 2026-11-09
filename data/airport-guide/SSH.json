@@ -1,6 +1,6 @@
 {
  "iata": "SSH",
- "checked": "2026-10-25",
+ "checked": "2026-11-09",
  "basis": "third-party",
  "blocks": [
   {
@@ -40,6 +40,16 @@
    "text": "В аэропорту есть камера хранения багажа. Цену источники не указывают.",
    "source": "worldtravelguide.net",
    "url": "https://www.worldtravelguide.net/guides/africa/egypt/sharm-el-sheikh/sharm-el-sheikh-international-airport/",
+   "source2": "sleepinginairports.net",
+   "url2": "https://www.sleepinginairports.net/guides/sharm-el-sheikh-airport-guide.htm"
+  },
+  {
+   "id": "lounges",
+   "title": "Бизнес-залы",
+   "hint": "Pearl Lounge, Т1, круглосуточно",
+   "text": "Pearl Lounge в терминале 1 находится после паспортного контроля и досмотра и работает круглосуточно. Войти можно по платному пропуску или через программу доступа в бизнес-залы; условия вашей карты нужно проверить перед посещением.",
+   "source": "prioritypass.com",
+   "url": "https://www.prioritypass.com/en-GB/lounges/egypt/sharm-el-sheikh-international/ssh-pearl-lounge",
    "source2": "sleepinginairports.net",
    "url2": "https://www.sleepinginairports.net/guides/sharm-el-sheikh-airport-guide.htm"
   }

@@ -25,6 +25,11 @@
    "title": "Consigne à bagages",
    "hint": "Disponible à l'aéroport",
    "text": "L'aéroport dispose d'une consigne à bagages. Les sources n'indiquent ni son emplacement exact ni son prix."
+  },
+  "sleep": {
+   "title": "Où dormir",
+   "hint": "Capsules au Pearl Lounge, T1",
+   "text": "Le Pearl Lounge du terminal 1 dispose de capsules de sommeil. Avant de payer, vérifiez auprès du salon si les passagers de votre vol peuvent y accéder et si une place pour dormir est comprise dans la prestation choisie."
   }
  }
 }

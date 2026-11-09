@@ -20,6 +20,11 @@
    "title": "Left luggage",
    "hint": "Available at the airport",
    "text": "The airport has a left luggage office. Sources do not state the price."
+  },
+  "lounges": {
+   "title": "Lounges",
+   "hint": "Pearl Lounge, T1, open 24 hours",
+   "text": "Pearl Lounge in Terminal 1 is after passport control and security and is open 24 hours. Access is available with a paid lounge pass or through a lounge access programme; check your card's conditions before visiting."
   }
  }
 }

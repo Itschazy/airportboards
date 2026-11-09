@@ -1,16 +1,16 @@
 {
   "iata": "OVB",
-  "about": "Tolmachevo: aeroporto internazionale di Novosibirsk intitolato ad A. I. Pokryshkin, a 17 km a ovest del centro città. Due piste lunghe 3597 e 3602 m. Il complesso dei terminal è progettato per 1800 passeggeri all’ora sui voli nazionali e 1300 su quelli internazionali.",
+  "about": "Tolmachevo è l’aeroporto internazionale di Novosibirsk, intitolato ad A. I. Pokryshkin, a 17 km a ovest del centro città. Il fuso orario è UTC+7: l’ora locale è 4 ore avanti rispetto a Mosca.",
   "blocks": {
     "transport": {
       "title": "Come arrivare",
-      "hint": "Espresso 111Э, ogni 30 min",
-      "text": "L’autobus espresso n. 111Э collega l’aeroporto con la stazione ferroviaria «Novosibirsk-Glavny» ogni 30 minuti: dalla stazione dalle 05:00 alle 00:30, dall’aeroporto dalle 04:00 alle 23:30. I treni suburbani fermano alla stazione «Ob» vicino all’aeroporto, da cui partono per il terminal gli autobus n. 4 (40 ₽), n. 111Э e n. 112."
+      "hint": "111Э e cambio alla stazione Ob",
+      "text": "L'autobus espresso 111Э collega l'aeroporto alla stazione Novosibirsk-Glavny ogni 30 minuti: partenze dalla stazione dalle 05:00 alle 00:30 e dall'aeroporto dalle 04:00 alle 23:30. Se si arriva in treno suburbano alla stazione Ob, occorre cambiare mezzo per raggiungere il terminal. L'autobus 4 entra alla stazione; il biglietto costa 40 ₽. Gli autobus 111Э e 112 fermano a 2-ya Severnaya, in via Stantsionnaya."
     },
     "lounges": {
       "title": "Sale business",
-      "hint": "Settori B e C, 4000 ₽ per 4 h",
-      "text": "Sale business dei voli nazionali «Komfort» e «Premyer» al livello 2 del Settore C nella zona sterile: dopo i controlli al livello 3, di fronte al gate n. 6, scendere seguendo la segnaletica. Sala dei voli internazionali al livello 3 del Settore B, 50 posti. Ingresso a pagamento 4000 ₽ per 4 ore, bambini 2–12 anni 2000 ₽, sotto i 2 anni gratis."
+      "hint": "Premyer: 4000 ₽ per 4 ore",
+      "text": "Sale business dei voli nazionali «Komfort» e «Premyer» al livello 2 del Settore C nella zona sterile: dopo i controlli al livello 3, di fronte al gate n. 6, scendere seguendo la segnaletica. Sala dei voli internazionali al livello 3 del Settore B, 50 posti. In Premyer e nella sala internazionale, ingresso a 4000 ₽ per 4 ore, bambini 2–12 anni 2000 ₽, sotto i 2 anni gratis."
     },
     "storage": {
       "title": "Deposito bagagli",
@@ -25,7 +25,7 @@
     "parking": {
       "title": "Parcheggio",
       "hint": "15 min gratis",
-      "text": "Sul piazzale dell’aerostazione i primi 15 minuti gratis, poi la prima ora 400 ₽, la seconda 300 ₽, poi 200 ₽ all’ora, oltre 6 ore 1500 ₽ al giorno. Parcheggi P1–P4: fino a 3 giorni 700 ₽ al giorno, fino a 6 giorni 500 ₽, oltre, 300 ₽. Ingresso solo con targa riconosciuta."
+      "text": "Sul piazzale dell’aerostazione i primi 15 minuti gratis, poi la prima ora 400 ₽, la seconda 300 ₽, poi 200 ₽ all’ora, oltre 6 ore 1500 ₽ al giorno. Parcheggi P1–P4: fino a 3 giorni 700 ₽ al giorno, fino a 6 giorni 500 ₽, oltre, 300 ₽. Ingresso solo con targa riconosciuta. In caso di nuovo ingresso entro 1 ora dall'uscita, i primi 15 minuti costano 100 ₽."
     }
   }
 }

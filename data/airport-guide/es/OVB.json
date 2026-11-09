@@ -1,16 +1,16 @@
 {
  "iata": "OVB",
- "about": "Tolmachevo: aeropuerto internacional de Novosibirsk A. I. Pokryshkin, a 17 km al oeste del centro de la ciudad. Dos pistas de 3597 y 3602 m de longitud. El complejo terminal está diseñado para 1800 pasajeros por hora en vuelos nacionales y 1300 en internacionales.",
+ "about": "Tolmachevo es el aeropuerto internacional de Novosibirsk, que lleva el nombre de A. I. Pokryshkin, a 17 km al oeste del centro de la ciudad. Su zona horaria es UTC+7: la hora local está 4 horas por delante de Moscú.",
  "blocks": {
   "transport": {
    "title": "Cómo llegar",
-   "hint": "Exprés 111Э, cada 30 min",
-   "text": "El autobús exprés n.º 111Э une el aeropuerto con la estación de ferrocarril «Novosibirsk-Glavny» cada 30 minutos: desde la estación de 05:00 a 00:30, desde el aeropuerto de 04:00 a 23:30. Los trenes de cercanías paran en la estación «Ob», junto al aeropuerto; desde ella van a la terminal los autobuses n.º 4 (40 ₽), n.º 111Э y n.º 112."
+   "hint": "111Э y transbordo en la estación Ob",
+   "text": "El autobús exprés 111Э conecta el aeropuerto con la estación Novosibirsk-Glavny cada 30 minutos: sale de la estación de 05:00 a 00:30 y del aeropuerto de 04:00 a 23:30. Si llega en tren de cercanías a la estación Ob, debe hacer transbordo para ir a la terminal. El autobús 4 entra en la estación; el billete cuesta 40 ₽. Los autobuses 111Э y 112 paran en 2-ya Severnaya, en la calle Stantsionnaya."
   },
   "lounges": {
    "title": "Salas VIP",
-   "hint": "Sectores B y C, 4000 ₽ por 4 h",
-   "text": "Salas business de vuelos nacionales «Komfort» y «Premier» en el nivel 2 del Sector C, en la zona estéril: tras el control de seguridad en el nivel 3, frente a la puerta n.º 6, bajar siguiendo las indicaciones. Sala de vuelos internacionales en el nivel 3 del Sector B, 50 plazas. Visita de pago: 4000 ₽ por 4 horas, niños de 2–12 años 2000 ₽, menores de 2 años gratis."
+   "hint": "Premier: 4000 ₽ por 4 horas",
+   "text": "Salas business de vuelos nacionales «Komfort» y «Premier» en el nivel 2 del Sector C, en la zona estéril: tras el control de seguridad en el nivel 3, frente a la puerta n.º 6, bajar siguiendo las indicaciones. Sala de vuelos internacionales en el nivel 3 del Sector B, 50 plazas. En Premier y la sala internacional: 4000 ₽ por 4 horas, niños de 2–12 años 2000 ₽, menores de 2 años gratis."
   },
   "storage": {
    "title": "Consigna",
@@ -25,7 +25,7 @@
   "parking": {
    "title": "Aparcamiento",
    "hint": "15 min gratis",
-   "text": "En la plaza de la terminal, los primeros 15 minutos son gratis; después, la primera hora 400 ₽, la segunda 300 ₽, a continuación 200 ₽ por hora; más de 6 horas, 1500 ₽ por día. Aparcamientos P1–P4: hasta 3 días, 700 ₽ por día; hasta 6 días, 500 ₽; más tiempo, 300 ₽. Entrada solo con matrícula reconocida."
+   "text": "En la plaza de la terminal, los primeros 15 minutos son gratis; después, la primera hora 400 ₽, la segunda 300 ₽, a continuación 200 ₽ por hora; más de 6 horas, 1500 ₽ por día. Aparcamientos P1–P4: hasta 3 días, 700 ₽ por día; hasta 6 días, 500 ₽; más tiempo, 300 ₽. Entrada solo con matrícula reconocida. Si vuelve a entrar en un plazo de 1 hora después de salir, los primeros 15 minutos cuestan 100 ₽."
   }
  }
 }

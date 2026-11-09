@@ -1,16 +1,16 @@
 {
  "iata": "OVB",
- "about": "Tolmachevo: Novosibirsk International Airport named after A. I. Pokryshkin, 17 km west of the city centre. Two runways, 3,597 and 3,602 m long. The terminal complex is designed for 1,800 passengers per hour on domestic routes and 1,300 on international routes.",
+ "about": "Tolmachevo is Novosibirsk’s international airport, named after A. I. Pokryshkin, 17 km west of the city centre. Its time zone is UTC+7: local time is 4 hours ahead of Moscow.",
  "blocks": {
   "transport": {
    "title": "Getting there",
-   "hint": "Express 111Э, every 30 min",
-   "text": "Express bus No. 111Э connects the airport with Novosibirsk-Glavny railway station every 30 minutes: from the station from 05:00 to 00:30, from the airport from 04:00 to 23:30. Suburban trains stop at Ob station near the airport; from there buses No. 4 (40 ₽), No. 111Э and No. 112 go to the terminal."
+   "hint": "111Э and a change at Ob station",
+   "text": "Express bus 111Э connects the airport with Novosibirsk-Glavny station every 30 minutes: departures from the station run from 05:00 to 00:30, and from the airport from 04:00 to 23:30. If taking a suburban train to Ob station, you need to change for the terminal. Bus 4 calls at the station; the fare is 40 ₽. Buses 111Э and 112 stop at 2-ya Severnaya on Stantsionnaya Street."
   },
   "lounges": {
    "title": "Lounges",
-   "hint": "Sectors B and C, 4,000 ₽ / 4 h",
-   "text": "Domestic business lounges Komfort and Premier on Level 2 of Sector C airside: after security on Level 3 opposite gate No. 6, go down following the signs. The international lounge is on Level 3 of Sector B, 50 seats. Paid visit 4,000 ₽ for 4 hours, children 2–12 years 2,000 ₽, under 2 free."
+   "hint": "Premier: 4,000 ₽ for 4 hours",
+   "text": "Domestic business lounges Komfort and Premier on Level 2 of Sector C airside: after security on Level 3 opposite gate No. 6, go down following the signs. The international lounge is on Level 3 of Sector B, 50 seats. In Premier and the international lounge, a paid visit costs 4,000 ₽ for 4 hours, children 2–12 years 2,000 ₽, under 2 free."
   },
   "storage": {
    "title": "Left luggage",
@@ -25,7 +25,7 @@
   "parking": {
    "title": "Parking",
    "hint": "15 min free",
-   "text": "On the station forecourt the first 15 minutes are free, then the first hour 400 ₽, the second 300 ₽, then 200 ₽ per hour, over 6 hours 1,500 ₽ per day. Car parks P1–P4: up to 3 days 700 ₽ per day, up to 6 days 500 ₽, longer 300 ₽. Entry only with a recognised licence plate."
+   "text": "On the station forecourt the first 15 minutes are free, then the first hour 400 ₽, the second 300 ₽, then 200 ₽ per hour, over 6 hours 1,500 ₽ per day. Car parks P1–P4: up to 3 days 700 ₽ per day, up to 6 days 500 ₽, longer 300 ₽. Entry only with a recognised licence plate. If you re-enter within 1 hour of leaving, the first 15 minutes cost 100 ₽."
   }
  }
 }

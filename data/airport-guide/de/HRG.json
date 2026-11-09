@@ -25,6 +25,11 @@
    "title": "Gepäckaufbewahrung",
    "hint": "Am Flughafen vorhanden",
    "text": "Am Flughafen gibt es eine Gepäckaufbewahrung. Wo genau sie sich befindet und was sie kostet, geben die Quellen nicht an."
+  },
+  "sleep": {
+   "title": "Schlafen",
+   "hint": "Schlafkabinen: Pearl Lounge, T1",
+   "text": "Die Pearl Lounge in Terminal 1 bietet Schlafkabinen. Klären Sie vor der Zahlung mit der Lounge, ob Reisende Ihres Fluges Zutritt haben und ob ein Schlafplatz in der gewählten Leistung enthalten ist."
   }
  }
 }

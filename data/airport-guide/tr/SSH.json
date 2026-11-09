@@ -20,6 +20,11 @@
    "title": "Emanet",
    "hint": "Havalimanında var",
    "text": "Havalimanında bagaj emaneti var. Ücreti kaynaklarda belirtilmiyor."
+  },
+  "lounges": {
+   "title": "Business salonları",
+   "hint": "Pearl Lounge, T1, 24 saat açık",
+   "text": "Terminal 1'deki Pearl Lounge, pasaport ve güvenlik kontrollerinden sonra yer alır ve 24 saat açıktır. Ücretli salon giriş kartıyla veya bir salon erişim programıyla girilebilir; ziyaret öncesinde kartınızın koşullarını kontrol edin."
   }
  }
 }

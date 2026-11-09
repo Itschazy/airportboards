@@ -25,6 +25,11 @@
    "title": "Wi‑Fi",
    "hint": "Unbegrenzt, kostenlos",
    "text": "Kostenloses unbegrenztes Internet: Wi‑Fi-Netz iGA, Anmeldung mit Telefonnummer und Passwort per SMS oder mit einem Zugangscode, den Kioske im Terminal nach dem Scannen des Reisepasses ausgeben."
+  },
+  "storage": {
+   "title": "Gepäckaufbewahrung",
+   "hint": "Ab 210 ₺ für 24 Stunden",
+   "text": "Die Gepäckaufbewahrungen liegen auf der Ankunftsebene neben dem Ausgang für Inlandspassagiere und gegenüber Ausgang 13. Für 24 Stunden kostet eine kleine Duty-free-Tasche 210 ₺, eine Tasche in Handgepäckgröße 270 ₺ und ein großer Koffer 550 ₺. Für größere Gepäckstücke gelten gesonderte Tarife."
   }
  }
 }

@@ -24,7 +24,12 @@
   "wifi": {
    "title": "Wi‑Fi",
    "hint": "Free for 1 hour",
-   "text": "Free internet for 1 hour in all terminals. PIN codes are issued by free Wi‑Fi kiosks in the arrival and departure halls; a mobile phone and a passport or ID card are required. In the CIP terminal and rest areas access is unlimited."
+   "text": "Free internet for 1 hour in all terminals. A PIN can be obtained from free Wi-Fi kiosks in the arrivals and departures halls. Access uses a mobile phone, passport or identity card. Access is unlimited in the CIP terminal and lounges."
+  },
+  "terminals": {
+   "title": "Terminal",
+   "hint": "T1 and Domestic are connected",
+   "text": "International Terminal 1 and the Domestic Terminal are connected, allowing a direct walk between them despite their separate entrances. International Terminal 2 is about 2.5 km from Terminal 1, roughly 5 minutes by car. Public buses and taxis connect the international terminals."
   }
  }
 }
