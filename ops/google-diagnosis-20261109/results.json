@@ -1,0 +1,23 @@
+{
+  "date": "2026-11-09",
+  "gscInspection": {
+    "crawled-not-indexed": 13,
+    "unknown": 10,
+    "indexed": 1
+  },
+  "httpCount": 490,
+  "httpStatuses": {
+    "200": 475,
+    "404": 15
+  },
+  "noindexReportNow": {
+    "index, follow": 100,
+    "noindex, follow": 330,
+    "404": 15
+  },
+  "sitemapUrls": 21272,
+  "sitemapNoindexConflicts": [],
+  "crawledSampleSize": 1000,
+  "crawledSampleInCurrentSitemap": 151,
+  "soft404RowsPresent": 7
+}

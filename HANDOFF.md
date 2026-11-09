@@ -1,3 +1,44 @@
+## Codex, 09.11.2026 — проверены24 Google Inspection и490 текущих URL
+
+Поручение «проверяй»: завершён адресный диагностический проход09.11,
+GSC24 URL Inspection10:39–10:49UTC:1indexed (/en),13crawled-not-indexed,
+10unknown. Заявки/Validate fix/Test live не нажимались. KZN/UFA/AYT/HRG/SSH/
+IST/BJV имеют Last crawl18.10;OVB16.10,до добавления справочной. Это даты GSC,
+не доказательство отсутствия всех более поздних визитов робота. EN LHR/ORK/HKT/
+TAS/BCN/JFK/SIN/LHRarrivals unknown;HND CNIс08.07. ENmap CNI после08.11;
+RUmap/LWN unknown. Все24 статуса и времена сохранены в ops/google-diagnosis-20261109.
+
+Свежий production audit-bot490 URL:475ответов200,15ожидаемыхairline404.
+24priority все200/selfcanonical/безnoindex,одинH1,13hreflang,валидныйJSON-LD;
+все18табло содержат SSRстроки,скрипты/RSC исключены из подсчёта.
+445старыхGSCnoindex теперь330noindex/100index/15airline404. В проверенной
+выборке0текущихnoindexвsitemap. CRGarrivalsEN/ARпо2строки сnoindex:
+service=0,официальныйCRG generalaviation/corporate/training/charter;
+строки не доказывают регулярные рейсы,запрет не снят.
+21старыйSoft404:7canonicalдублей,5selfсо строками,8selfбезтекущихстрок,
+1noindexHOK. NTE33строки. СтатусGoogle этих21 не объявлен исправленным.
+GSCcrawled-not-indexed1000примеровиз7692:151внынешнейsitemap;
+это выборка исключённых,не доля всегообхода. Полный прежнийсписок437
+не найден;состав237потерь/причина437→200не доказаны.
+
+20sitemap21272URL/1776путей,24priority присутствуют; штатные sitemap-hreflang
+иindex20/20 PASS. Lastmodна сохранённыхсегодняXML PASS;не сравнивалсявесьstore.
+robotsGooglebotразрешён. Системного техническогоблокера на24нет.
+ОфициальныеGooglePageindexing/recrawlдокументы сверены сегодня;
+повторные заявки не ускоряют переобход,индекс не гарантирован.
+Артефакты outputs/gsc-diagnosis-20261109/report.html иREPORT.txtвops.
+Следующийшаг:верифицированныеGooglebotвизиты24URLпротивGSC,заметность
+приоритетов во внутренних/внешнихссылках,адреснаяценность8пустыхSoft404.
+Не закрыватьмассовохвост,несниматьnoindexмассово,неповторятьENmap/NTEзаявки08.11.
+
+CWD /Users/whereiszhenya/projects/runwayboard-flight-map-prototype-20261028,
+ветка codex/flight-map-prototype-20261028,начальныйdocsHEAD019f078a;
+свежийorigin/main124e5f0a,серверныйSHAсегоднянеперечитывался. Продуктовыйкод,
+дизайн,DNS,аккаунтыиAPIне менялись. Новыйdeploy/CI/buildнепроводился:
+подтверждённойкодовойошибкивэтойвыборкенет. Толькоотчёт/передача.
+
+---
+
 ## Codex, 09.11.2026 — свежая Search Console: индекс200, дата падения24.10
 
 09.11.2026 — свежий read-only аудит авторизованной Google Search Console.
