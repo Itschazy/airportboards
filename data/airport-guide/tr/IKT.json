@@ -19,8 +19,8 @@
   },
   "storage": {
    "title": "Emanet",
-   "hint": "24 saati 610 ₽",
-   "text": "İç hatlar terminalinde Kat 1'de, ödeme nakit veya kartla. Parça başına her 24 saatte 610 ₽; 40×40×50 cm'den büyük bagaj kapladığı yer sayısına göre ücretlendirilir. Dış hatlar terminalinde emanet Kat 2'de, yalnızca uçuş rötarlarında çalışır. Telefon +7 (3952) 266-194."
+   "hint": "Günlük 610 ₽’den",
+   "text": "İç hatlar terminalinde Kat 1’de, ödeme nakit veya kartla. Beyan edilen bagaj değeri 2000 ₽’ye kadar ise temel ücret parça başına günlük 610 ₽’dir. Değer beyanı zorunludur; 2000 ₽ üzerindeki her ek 1000 ₽ beyan değeri için 100 ₽ ek ücret alınır. 40×40×50 cm’den büyük bagaj kapladığı yer sayısına göre ücretlendirilir. Dış hatlar terminalindeki emanet Kat 2’dedir ve yalnızca dış hat uçuşları geciktiğinde açılır. Telefon +7 (3952) 266-194."
   },
   "sleep": {
    "title": "Nerede uyunur",
@@ -35,7 +35,7 @@
   "parking": {
    "title": "Otopark",
    "hint": "10 dakika ücretsiz",
-   "text": "İlk 10 dakika ücretsiz. 11–20 dakika 100 ₽, 1 saate kadar 350 ₽, 2 sa 41 dk'dan 24 saate kadar 1200 ₽, sonraki her 24 saat 1200 ₽. Her terminalin kendi otoparkı var. İndirme-bindirme alanı: 10 dakika ücretsiz, daha uzun süre için saati 2000 ₽ ceza."
+   "text": "İlk 10 dakika ücretsiz. 11–20 dakika 100 ₽, 21–30 dakika 200 ₽, 31–40 dakika 250 ₽, 41–50 dakika 300 ₽, 51–60 dakika 350 ₽. 1 sa 01 dk ile 2 sa 40 dk arasında ücret her 10 dakika için 50 ₽ artarak 400 ₽’den 850 ₽’ye çıkar; 2 sa 41 dk'dan 24 saate kadar 1200 ₽, sonraki her 24 saat 1200 ₽. Her terminalin kendi otoparkı var. İndirme-bindirme alanı: 10 dakika ücretsiz, daha uzun süre için saati 2000 ₽ ceza."
   }
  }
 }

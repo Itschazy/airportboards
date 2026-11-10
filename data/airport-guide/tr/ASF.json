@@ -24,7 +24,7 @@
   "parking": {
    "title": "Otopark",
    "hint": "10 dakika ücretsiz",
-   "text": "Terminal önü meydanı: ilk 10 dakika ücretsiz, ilk saat 250 ₽, ikinciden dördüncüye kadar saati 200 ₽, 4 saatten fazlası her 24 saat için 900 ₽. Günlük otopark (5 numaralı giriş): ilk üç saat saati 200 ₽, 181. dakikadan itibaren ilk 24 saat 600 ₽, iki adet 24 saatlik dönem 1100 ₽, üç dönem 1500 ₽, sonrası her 24 saat için 300 ₽. En az 130 araçlık ücretsiz bir otopark var."
+   "text": "Terminal önü meydanı: ilk 10 dakika ücretsiz, ilk saat 250 ₽, ikinciden dördüncüye kadar saati 200 ₽, 4 saatten fazlası gün başına 900 ₽. Günlük otopark (5 numaralı giriş): ilk üç saat saati 200 ₽, 181. dakikadan itibaren ilk gün 600 ₽, iki gün 1100 ₽, üç gün 1500 ₽, sonrası gün başına 300 ₽. En az 130 araçlık ücretsiz bir otopark var."
   }
  }
 }

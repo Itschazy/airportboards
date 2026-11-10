@@ -20,7 +20,7 @@
   "storage": {
    "title": "Gepäckaufbewahrung",
    "hint": "Terminal A, Ebene −1",
-   "text": "Terminal A, Ebene −1. 200 ₽ pro Stunde, 500 ₽ für die ersten 24 Stunden, 300 ₽ für je weitere 24 Stunden. Sperrgepäck (größer als 50×50×80 cm oder schwerer als 20 kg): 400 ₽ pro Stunde, 800 ₽ für die ersten 24 Stunden, 500 ₽ für je weitere 24 Stunden. Garderobe für Oberbekleidung: 100 ₽ pro Garnitur."
+   "text": "Terminal A, Ebene −1. 200 ₽ pro Stunde, 500 ₽ für den ersten Tag, 300 ₽ für jeden weiteren Tag. Sperrgepäck (größer als 50×50×80 cm oder schwerer als 20 kg): 400 ₽ pro Stunde, 800 ₽ für den ersten Tag, 500 ₽ für jeden weiteren Tag. Garderobe für Oberbekleidung: 100 ₽ pro Garnitur für bis zu 1 Stunde, 300 ₽ für 1 bis 24 Stunden, 200 ₽ für jeden weiteren Tag."
   },
   "sleep": {
    "title": "Schlafen",
@@ -35,7 +35,7 @@
   "parking": {
    "title": "Parken",
    "hint": "15 Min. kostenlos",
-   "text": "Hol- und Bringzone: bis 15 Minuten kostenlos, 16–60 Minuten 880 ₽, danach 880 ₽ pro Stunde. Parkplatz P1 am Terminal ohne kostenlose Zeit: 1 Stunde 360 ₽, bis 24 Stunden 900 ₽. Langzeitparkplätze P2 und P6: ab 1790 ₽ bzw. 1380 ₽ für 2 Tage (je 24 Stunden). P0 kostenlos, 5 Minuten zum Terminal."
+   "text": "Hol- und Bringzone: bis 15 Minuten kostenlos, 16–60 Minuten 880 ₽, danach 880 ₽ pro Stunde. Parkplatz P1 am Terminal ohne kostenlose Zeit: 1 Stunde 360 ₽, bis 24 Stunden 900 ₽. Langzeitparkplätze P2 und P6: ab 1790 ₽ bzw. 1380 ₽ für 2 Tage. P0 kostenlos, 5 Minuten zum Terminal."
   },
   "wifi": {
    "title": "Wi‑Fi",

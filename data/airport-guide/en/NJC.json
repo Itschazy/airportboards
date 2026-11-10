@@ -15,12 +15,12 @@
   "lounges": {
    "title": "Lounges",
    "hint": "Terminal 1, 24/7",
-   "text": "Business lounge on Level 1 of terminal 1, open round the clock. Admits business class passengers and holders of elite airline cards, others for a fee if places are available. Departure 7,950 ₽ for 2 h 30 min, each following hour 1,141 ₽. Arrival, meeting or seeing off 4,050 ₽. Children 2–12 years 70 % of the fare, under 2 free."
+   "text": "Business lounge on Level 1 of terminal 1, open round the clock. Business-class passengers and elite cardholders are served under agreements with airlines; without such an agreement, a fee applies. Other passengers are admitted for a fee subject to available space. Departure 7,950 ₽ for 2 h 30 min, each following hour 1,141 ₽. Arrival, meeting or seeing off 4,050 ₽. Check the child fare conditions with the lounge before visiting."
   },
   "storage": {
    "title": "Left luggage",
    "hint": "Terminal 1, 24/7",
-   "text": "Terminal No. 1, Level 1, open round the clock. A suitcase, bag or backpack up to 203 cm (sum of three dimensions): 600 ₽ per 24 hours. Oversized items 700 ₽ per 24 hours. Lost tag 400 ₽."
+   "text": "Terminal No. 1, Level 1, open round the clock. A suitcase, bag or backpack up to 203 cm (sum of three dimensions): 600 ₽ per day. Oversized items 700 ₽ per day. Lost tag 400 ₽."
   },
   "kids": {
    "title": "With children",
@@ -30,7 +30,7 @@
   "parking": {
    "title": "Parking",
    "hint": "15 min free",
-   "text": "Car park on the airport terminal forecourt. Up to 15 minutes free, then 200 ₽ per hour up to 5 hours. First 24 hours 1,000 ₽, each further 24 hours 800 ₽. A repeat entry within 30 minutes is paid from the moment of entry. Machines in terminals 1 and 2 accept banknotes only; the cashier at the exit accepts cards and QR."
+   "text": "Car park on the airport terminal forecourt. Up to 15 minutes free, then 200 ₽ per hour up to 5 hours. First day 1,000 ₽, each further day 800 ₽. A repeat entry within 30 minutes is paid from the moment of entry. Machines in terminals 1 and 2 accept banknotes only; the cashier at the exit accepts cards and QR."
   }
  }
 }

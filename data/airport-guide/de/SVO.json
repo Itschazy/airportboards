@@ -10,7 +10,7 @@
   "storage": {
    "title": "Gepäckaufbewahrung",
    "hint": "B, D und Aeroexpress",
-   "text": "Kostenpflichtige Gepäckaufbewahrungen gibt es in Terminal B (Ebene 1), Terminal D (Ebene −1) und im Aeroexpress-Terminal, alle im öffentlichen Bereich. In B und im Aeroexpress-Terminal sind sie rund um die Uhr geöffnet. Die ersten 24 Stunden kosten 700 ₽ pro Gepäckstück, danach 300 ₽ pro 24 Stunden. Ein Gepäckstück wiegt höchstens 32 kg, Aufbewahrung bis zu 6 Monate."
+   "text": "Kostenpflichtige Gepäckaufbewahrungen gibt es in Terminal B (Ebene 1), Terminal D (Ebene −1) und im Aeroexpress-Terminal, alle im öffentlichen Bereich. In B und im Aeroexpress-Terminal sind sie rund um die Uhr geöffnet. In B und D gilt der Tarif „Standard“: 700 ₽ für den ersten Kalendertag bis 00:00, danach 300 ₽ für jeden weiteren Kalendertag. Angefangene Kalendertage werden voll berechnet. Ein Gepäckstück darf höchstens 32 kg wiegen."
   },
   "sleep": {
    "title": "Schlafen",

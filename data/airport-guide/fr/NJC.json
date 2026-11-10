@@ -15,12 +15,12 @@
   "lounges": {
    "title": "Salons",
    "hint": "Terminal 1, 24/7",
-   "text": "Salon au niveau 1 du terminal 1, ouvert jour et nuit. Accès pour les passagers de classe affaires et les titulaires de cartes élite des compagnies aériennes, pour les autres payant selon les places disponibles. Départ 7950 ₽ pour 2 h 30 min, chaque heure suivante 1141 ₽. Arrivée, accueil ou accompagnement 4050 ₽. Enfants de 2 à 12 ans 70 % du tarif, gratuit pour les moins de 2 ans."
+   "text": "Salon au niveau 1 du terminal 1, ouvert jour et nuit. Les passagers de classe affaires et les titulaires de cartes élite sont accueillis dans le cadre d’accords avec les compagnies aériennes ; sans un tel accord, l’accès est payant. Les autres passagers sont admis moyennant paiement, sous réserve de places disponibles. Départ 7950 ₽ pour 2 h 30 min, chaque heure suivante 1141 ₽. Arrivée, accueil ou accompagnement 4050 ₽. Vérifiez les conditions du tarif enfant auprès du salon avant la visite."
   },
   "storage": {
    "title": "Consigne à bagages",
    "hint": "Terminal 1, 24/7",
-   "text": "Terminal n° 1, niveau 1, jour et nuit. Valise, sac ou sac à dos jusqu'à 203 cm pour la somme des trois dimensions 600 ₽ par période de 24 heures. Objets volumineux 700 ₽ par période de 24 heures. Perte du jeton 400 ₽."
+   "text": "Terminal n° 1, niveau 1, jour et nuit. Valise, sac ou sac à dos jusqu'à 203 cm pour la somme des trois dimensions 600 ₽ par jour. Objets volumineux 700 ₽ par jour. Perte du jeton 400 ₽."
   },
   "kids": {
    "title": "Avec un enfant",
@@ -30,7 +30,7 @@
   "parking": {
    "title": "Parking",
    "hint": "15 min gratuites",
-   "text": "Parking sur la place de l'aérogare. Jusqu'à 15 minutes gratuit, ensuite 200 ₽ de l'heure jusqu'à 5 heures. Premières 24 heures 1000 ₽, chaque tranche de 24 heures suivante 800 ₽. Une nouvelle entrée dans les 30 minutes est payante dès l'entrée. Les bornes des terminaux 1 et 2 n'acceptent que les billets, la caisse à la sortie accepte les cartes et le QR."
+   "text": "Parking sur la place de l'aérogare. Jusqu'à 15 minutes gratuit, ensuite 200 ₽ de l'heure jusqu'à 5 heures. Premier jour 1000 ₽, chaque jour suivant 800 ₽. Une nouvelle entrée dans les 30 minutes est payante dès l'entrée. Les bornes des terminaux 1 et 2 n'acceptent que les billets, la caisse à la sortie accepte les cartes et le QR."
   }
  }
 }

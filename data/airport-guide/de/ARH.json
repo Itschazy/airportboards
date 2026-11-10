@@ -15,12 +15,12 @@
   "storage": {
    "title": "Gepäckaufbewahrung",
    "hint": "Pavillon 3, 24/7",
-   "text": "Gepäckaufbewahrung in Pavillon Nr. 3, rund um die Uhr. Ein Gepäckstück bis 30 kg und kürzer als 1 m kostet 250 ₽ je 24 Stunden. Nicht angenommen werden Dokumente, Geld, Wertsachen und verderbliche Lebensmittel."
+   "text": "Gepäckaufbewahrung in Pavillon Nr. 3, rund um die Uhr. Ein Gepäckstück bis 30 kg und kürzer als 1 m kostet 341,60 ₽ pro Tag. Nicht angenommen werden Dokumente, Geld, Wertsachen und verderbliche Lebensmittel."
   },
   "parking": {
    "title": "Parken",
    "hint": "30 Min. kostenlos auf P2",
-   "text": "Kurzzeitparkplatz P2: 30 Minuten kostenlos, danach 150 ₽ pro Stunde, über 4 Stunden 800 ₽ je 24 Stunden. Langzeitparkplatz P1: 400 ₽ je 24 Stunden ab der ersten Minute. Kostenloser Parkplatz P4 mit 70 Plätzen 200 m vom Terminal entfernt, ohne Zeitbegrenzung. Verlust des Parkscheins: 2 000 ₽."
+   "text": "Kurzzeitparkplatz P2: 30 Minuten kostenlos, danach 150 ₽ pro Stunde, über 4 Stunden 800 ₽ pro Tag. Langzeitparkplatz P1: 400 ₽ pro Tag ab der ersten Minute. Kostenloser Parkplatz P4 mit 70 Plätzen 200 m vom Terminal entfernt, ohne Zeitbegrenzung. Verlust des Parkscheins: 2 000 ₽."
   }
  }
 }

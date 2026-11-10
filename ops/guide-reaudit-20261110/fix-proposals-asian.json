@@ -1,0 +1,37 @@
+[
+  {
+    "file": "data/airport-guide/zh/VVO.json",
+    "field": "blocks.storage.text",
+    "before": "1楼，自动扶梯后面，24小时开放。Standart价格：首24小时500 ₽，之后每24小时200 ₽，每件三边之和不超过203厘米。不足24小时的时段按24小时计算。",
+    "after": "1楼，自动扶梯后面，24小时开放。Standart价格：首个自然日（00:00至23:59）500 ₽，之后每个自然日200 ₽，每件三边之和不超过203厘米。不足一个自然日按一个自然日收费。",
+    "reason": "Calendar billing confirmed by parent on official source; hint unchanged."
+  },
+  {
+    "file": "data/airport-guide/ja/VVO.json",
+    "field": "blocks.storage.text",
+    "before": "1階、エスカレーターの裏手にあり、24時間営業。Standard料金：最初の24時間500 ₽、以降24時間ごとに200 ₽、1個は三辺の合計203 cmまで。24時間未満の端数も24時間として計算する。",
+    "after": "1階、エスカレーターの裏手にあり、24時間営業。Standard料金：最初の暦日（00:00～23:59）500 ₽、以降1暦日ごとに200 ₽、1個は三辺の合計203 cmまで。1暦日に満たない場合も1暦日分の料金となる。",
+    "reason": "Calendar billing confirmed by parent on official source; hint unchanged."
+  },
+  {
+    "file": "data/airport-guide/ko/VVO.json",
+    "field": "blocks.storage.text",
+    "before": "1층, 에스컬레이터 뒤, 상시 운영. Standard 요금: 처음 24시간 500 ₽, 이후 24시간마다 200 ₽, 짐 크기는 세 변의 합 203 cm까지. 24시간 미만도 24시간으로 계산합니다.",
+    "after": "1층, 에스컬레이터 뒤편, 24시간 운영. Standard 요금: 첫날(달력 기준 00:00–23:59) 500 ₽, 이후 하루(달력 기준)마다 200 ₽, 수하물 한 개의 세 변의 합은 203 cm 이하. 하루를 채우지 않아도 달력 기준 하루 요금이 부과됩니다.",
+    "reason": "Calendar billing confirmed by parent on official source; hint unchanged."
+  },
+  {
+    "file": "data/airport-guide/ar/VVO.json",
+    "field": "blocks.storage.text",
+    "before": "المستوى 1، خلف السلم المتحرك، على مدار الساعة. تعرفة Standard: 500 ₽ لأول 24 ساعة، و200 ₽ عن كل 24 ساعة تالية، والقطعة حتى 203 سم كمجموع للأبعاد. فترة الـ 24 ساعة غير المكتملة تُحسب كاملة.",
+    "after": "المستوى 1، خلف السلم المتحرك، على مدار الساعة. تعرفة Standard: اليوم التقويمي الأول (00:00–23:59) بسعر 500 ₽، وكل يوم تقويمي تالٍ بسعر 200 ₽، والقطعة حتى 203 سم كمجموع للأبعاد الثلاثة. يُحسب اليوم التقويمي غير المكتمل يومًا كاملًا.",
+    "reason": "Calendar billing confirmed by parent on official source; hint unchanged."
+  },
+  {
+    "file": "data/airport-guide/hi/VVO.json",
+    "field": "blocks.storage.text",
+    "before": "लेवल 1, एस्केलेटर के पीछे, चौबीसों घंटे। Standart दर: पहले 24 घंटे के 500 ₽, हर अगले 24 घंटे के 200 ₽, मापों के योग में 203 सेमी तक का नग। 24 घंटे की अधूरी अवधि पूरी गिनी जाती है।",
+    "after": "लेवल 1, एस्केलेटर के पीछे, चौबीसों घंटे। Standart दर: पहला कैलेंडर दिन (00:00–23:59) 500 ₽, उसके बाद प्रत्येक कैलेंडर दिन 200 ₽; प्रति नग तीनों मापों का योग 203 सेमी तक। अधूरे कैलेंडर दिन का भी पूरे दिन का शुल्क लगता है।",
+    "reason": "Calendar billing confirmed by parent on official source; hint unchanged."
+  }
+]

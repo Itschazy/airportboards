@@ -15,7 +15,7 @@
   "storage": {
    "title": "Gepäckaufbewahrung",
    "hint": "Ebene 1, ab 250 ₽/Std.",
-   "text": "Automatische Gepäckaufbewahrung auf Ebene 1, rechts vom Eingang, bei den Ticketschaltern. Standardfach 250 ₽ pro Stunde oder 550 ₽ je 24 Stunden. Großes Fach 350 ₽ pro Stunde oder 900 ₽ je 24 Stunden. Sperrgepäck 1200 ₽ pro Stück."
+   "text": "Automatische Gepäckaufbewahrung auf Ebene 1, rechts vom Eingang, bei den Ticketschaltern. Standardfach 250 ₽ pro Stunde oder 550 ₽ pro Tag. Großes Fach 350 ₽ pro Stunde oder 900 ₽ pro Tag."
   },
   "kids": {
    "title": "Mit Kind",
@@ -25,7 +25,7 @@
   "parking": {
    "title": "Parken",
    "hint": "Aussteigen 15 Min. kostenlos",
-   "text": "In der Hol- und Bringzone sind die ersten 15 Minuten kostenlos, von der 16. bis zur 60. Minute 880 ₽. Kurzzeitparkplatz P1: bis zu einer Stunde 357 ₽, bis 2 Stunden 682 ₽, 24 Stunden 1391 ₽. Langzeitparkplatz P2: 24 Stunden 791 ₽. Economy P4: 1054 ₽ für die ersten 2 Zeiträume von je 24 Stunden. Alle Parkplätze sind rund um die Uhr geöffnet."
+   "text": "In der Hol- und Bringzone sind die ersten 15 Minuten kostenlos, von der 16. bis zur 60. Minute 880 ₽. Kurzzeitparkplatz P1: bis zu einer Stunde 357 ₽, bis 2 Stunden 682 ₽, bis 3 Stunden 1000 ₽, über 3 bis 24 Stunden 1391 ₽; jeder weitere Tag 1391 ₽. Langzeitparkplatz P2: die ersten 24 Stunden 791 ₽; für längere Aufenthalte gelten andere Tarife. Economy P4: 1054 ₽ für die ersten 2 Tage. Alle Parkplätze sind rund um die Uhr geöffnet."
   },
   "wifi": {
    "title": "Wi‑Fi",

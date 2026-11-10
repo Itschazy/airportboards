@@ -35,7 +35,7 @@
   "parking": {
    "title": "Parking",
    "hint": "20 min gratuites",
-   "text": "Parking payant de 150 places devant les terminaux A et B : 20 minutes gratuites, puis 200 ₽ de l'heure jusqu'à 3 heures, au-delà 700 ₽ par période de 24 heures. En cas de nouvelle entrée dans les 30 minutes, pas de temps gratuit. Avant l'entrée sur le site, parking gratuit de 410 places."
+   "text": "Parking payant de 150 places devant les terminaux A et B : 20 minutes gratuites, puis 200 ₽ de l'heure jusqu'à 3 heures, au-delà 700 ₽ par jour. En cas de nouvelle entrée dans les 30 minutes, pas de temps gratuit. Avant l'entrée sur le site, parking gratuit de 410 places."
   },
   "wifi": {
    "title": "Wi‑Fi",

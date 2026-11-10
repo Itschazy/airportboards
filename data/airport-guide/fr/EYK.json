@@ -8,8 +8,8 @@
   },
   "storage": {
    "title": "Consigne à bagages",
-   "hint": "380 ₽ par période de 24 heures",
-   "text": "Consigne à bagages : 380 ₽ par bagage et par période de 24 heures (tarifs à partir du 01.10.2026)."
+   "hint": "380 ₽ par jour",
+   "text": "Consigne à bagages : 380 ₽ par bagage et par jour (tarifs à partir du 01.10.2026)."
   },
   "kids": {
    "title": "Avec un enfant",

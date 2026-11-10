@@ -25,7 +25,7 @@
   "parking": {
    "title": "Parken",
    "hint": "20 Min. kostenlos",
-   "text": "Vorplatz: bis 20 Minuten kostenlos, von der 21. Minute bis 4 Stunden 300 ₽ pro Stunde, eine angefangene Stunde zählt als volle. Ab der 5. Stunde 1200 ₽ je 24 Stunden, jeder weitere Zeitraum von 24 Stunden 1200 ₽. Erneute Einfahrt innerhalb von 20 Minuten kostenpflichtig, 300 ₽ pro Stunde."
+   "text": "Vorplatz: bis 20 Minuten kostenlos, von der 21. Minute bis 4 Stunden 300 ₽ pro Stunde, eine angefangene Stunde zählt als volle. Ab der 5. Stunde 1200 ₽ pro Tag, jeder weitere Tag 1200 ₽. Erneute Einfahrt innerhalb von 20 Minuten kostenpflichtig, 300 ₽ pro Stunde."
   }
  }
 }

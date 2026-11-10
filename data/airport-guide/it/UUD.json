@@ -20,7 +20,7 @@
     "parking": {
       "title": "Parcheggio",
       "hint": "15 min gratis",
-      "text": "Breve sosta P1 presso il terminal: fino a 15 minuti gratis, 16–60 minuti 500 ₽, la seconda ora 300 ₽, la terza e la quarta 200 ₽ ciascuna, dal 241° minuto 1200 ₽, non oltre 24 ore. Lunga sosta: fino a 3 periodi di 24 ore, 800 ₽ ogni 24 ore; dal 4° al 6° periodo, 500 ₽ ogni 24 ore."
+      "text": "Breve sosta P1 presso il terminal: fino a 15 minuti gratis, 16–60 minuti 500 ₽, la seconda ora 300 ₽, la terza e la quarta 200 ₽ ciascuna, dal 241° minuto 1200 ₽, non oltre un giorno. Lunga sosta: fino a 3 giorni, 800 ₽ al giorno; dal 4° al 6° giorno, 500 ₽ al giorno."
     },
     "wifi": {
       "title": "Wi‑Fi",

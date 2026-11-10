@@ -83,13 +83,30 @@ for (const f of files) {
 // блок, не просочился ли русский, и не поменялось ли ЧИСЛО — цена, время, номер автобуса. Числа
 // сравниваются множествами по блоку: «400 ₽» в оригинале обязано быть 400 и в переводе.
 const LOCALES = ['en', 'de', 'fr', 'es', 'it', 'tr', 'zh', 'ja', 'ko', 'ar', 'hi'];
+// Calendar billing is not a rolling 24-hour period. Number parity cannot catch
+// this error (especially next to opening hours 24/7). Require an explicit
+// calendar-day or midnight qualifier when the original makes that distinction.
+// This is a narrow regression guard, not a substitute for semantic review.
+const CALENDAR = {
+  en: /calendar|midnight|00:00|23:59/i,
+  de: /Kalendertag|Mitternacht|00:00|23:59/i,
+  fr: /calendair|civil|minuit|00:00|23:59/i,
+  es: /natural|calendario|medianoche|00:00|23:59/i,
+  it: /calendario|solare|mezzanotte|00:00|23:59/i,
+  tr: /takvim|gece yarısı|00:00|23:59/i,
+  zh: /自然日|日历日|曆日|历日|午夜|零点|00:00|23:59/,
+  ja: /暦日|暦上|日付|午前0時|午前零時|深夜0時|00:00|23:59/,
+  ko: /역일|달력|자정|00:00|23:59/,
+  ar: /تقويم|منتصف الليل|00:00|23:59/,
+  hi: /कैलेंडर|कैलण्डर|मध्यरात्रि|आधी रात|00:00|23:59/,
+};
 // Числа сравниваются по ЗНАЧЕНИЮ, а не по написанию: «700 тыс.» в оригинале и «70만» в корейском —
 // одно и то же число, и требовать буквальных цифр значит заставлять переводчика писать
 // неестественно («700천»). Множители слов: тыс./млн по-русски и их аналоги в 11 языках.
 // Даты: «1 июня» в CJK становится «6월 1일» — номер месяца законно появляется в переводе, поэтому
 // месяцы оригинала добавляются к его множеству чисел.
 const MULT = [
-  [/^\s*(тыс\.?|тысяч[аи]?|thousand|tausend|mille|mil\b|bin\b|हज़ार|ألف|آلاف|천|千)/i, 1e3],
+  [/^\s*(тыс\.?|тысяч[аи]?|thousand|tausend|mille|mil\b|bin(?:den|in|e)?\b|हज़ार|ألف|آلاف|천|千)/i, 1e3],
   [/^\s*(млн\.?|миллион(а|ов)?|million(s)?|mio\.?|millones|millón|milioni|milione|milyon|मिलियन|مليون|ملايين|백만)/i, 1e6],
   [/^\s*(万|만)/, 1e4], [/^\s*(亿|億|억)/, 1e8], [/^\s*(लाख)/, 1e5], [/^\s*(करोड़)/, 1e7],
 ];
@@ -120,6 +137,8 @@ function nums(s) {
     .replace(/(?<!\d)(20\d{2}) (?=\d{3}[.,]\d{3}\b)/g, '$1; ')
     .replace(/(\d)[\s  ](?=\d{3}\b)/g, '$1');
   const out = new Set();
+  // Arabic normally writes "two days" with a dual noun, without the digit 2.
+  if (/(?:^|[^\p{L}])(?:يومين|يومان)(?=$|[^\p{L}])/u.test(txt)) out.add('2');
   for (const m of txt.matchAll(/\d+(?:[.,]\d+)*/g)) {
     const raw = m[0];
     // Оба разделителя («10,223.60», «10.223,60») — последний дробный, остальные — тысячи.
@@ -172,10 +191,15 @@ for (const loc of LOCALES) {
       const hintLimit = ['zh', 'ja', 'ko'].includes(loc) ? 18 : 35;
       if ([...t.hint].length > hintLimit) fails.push(`${where}: подсказка длиннее ${hintLimit} символов`);
       const all = `${t.title} ${t.hint} ${t.text}`;
+      if (/календарн/i.test(`${b.hint} ${b.text}`) && !CALENDAR[loc].test(`${t.hint} ${t.text}`)) {
+        fails.push(`${where}: потеряно уточнение календарных суток`);
+      }
       // Кириллица допустима только в кодах маршрутов и зон так, как они написаны на табличке
       // («111Э», «110С», «Т1») — буква прилегает к цифре. Всё остальное — непереведённый текст.
       if (/[\u0400-\u04FF]/.test(all.replace(/\d+-?[\u0400-\u04FF]{1,2}(?![Ѐ-ӿA-Za-z])|(?<![Ѐ-ӿA-Za-z])[\u0400-\u04FF]{1,2}-?\d+/gu, ''))) fails.push(`${where}: кириллица в переводе`);
-      const a = nums(`${b.hint} ${b.text}`), c = nums(`${t.hint} ${t.text}`), mo = months(`${b.hint} ${b.text}`);
+      // A field boundary is not a thousands separator: hint "24/7" followed
+      // by text "500 ..." must never be parsed as 7500.
+      const a = nums(`${b.hint}; ${b.text}`), c = nums(`${t.hint}; ${t.text}`), mo = months(`${b.hint} ${b.text}`);
       const miss = [...a].filter((n) => !c.has(n)), extra = [...c].filter((n) => !a.has(n) && !mo.has(n));
       if (miss.length || extra.length) fails.push(`${where}: числа расходятся с оригиналом (нет ${miss.join(',') || '—'}; лишние ${extra.join(',') || '—'})`);
     }

@@ -14,13 +14,13 @@
   },
   "storage": {
    "title": "Consigna",
-   "hint": "300 ₽ por cada 24 horas",
-   "text": "Consigna de equipaje: 300 ₽ por 1 bulto por cada 24 horas."
+   "hint": "300 ₽ por día",
+   "text": "Consigna de equipaje: 300 ₽ por 1 bulto por día."
   },
   "parking": {
    "title": "Aparcamiento",
    "hint": "15 min gratis",
-   "text": "Los primeros 15 minutos, gratis. Turismos: 100 ₽ por hora, 450 ₽ por cada 24 horas, a partir de 3 periodos de 24 horas 400 ₽ por cada 24 horas. UAZ, «Gazel», «Sobol»: 200 ₽ por hora, 650 ₽ por cada 24 horas. Pérdida del recibo: 500 ₽. Teléfono 8 (8352) 22-94-03, ext. 2-95."
+   "text": "Los primeros 15 minutos, gratis. Turismos: 100 ₽ por hora, 450 ₽ por día, a partir de 3 días 400 ₽ por día. UAZ, «Gazel», «Sobol»: 200 ₽ por hora, 650 ₽ por día. Pérdida del recibo: 500 ₽. Teléfono 8 (8352) 22-94-03, ext. 2-95."
   }
  }
 }

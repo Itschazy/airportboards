@@ -15,7 +15,7 @@
   "storage": {
    "title": "Left luggage",
    "hint": "Level 1, from 200 ₽/hour",
-   "text": "Automated left luggage in the right wing of the terminal, Level 1. A standard locker is 200 ₽ per hour or 500 ₽ per 24 hours, a large one 300 ₽ per hour or 800 ₽ per 24 hours. Baggage wrapping is also there, from 950 ₽ per item."
+   "text": "Automated left luggage in the right wing of the terminal, Level 1. A standard locker is 200 ₽ per hour or 500 ₽ per day, a large one 300 ₽ per hour or 800 ₽ per day. Baggage wrapping is also there, from 950 ₽ per item."
   },
   "kids": {
    "title": "With children",
@@ -25,7 +25,7 @@
   "parking": {
    "title": "Parking",
    "hint": "15 min free",
-   "text": "Drop-off and pick-up zone: up to 15 minutes free, 16–60 minutes 600 ₽, then 600 ₽ per hour. Car park Р1 with 600 spaces 2 minutes from the terminal, paid from the first minute: up to 30 minutes 100 ₽, up to an hour 150 ₽, up to 2 hours 250 ₽, up to 24 hours 400 ₽, each further 24 hours 400 ₽."
+   "text": "Drop-off and pick-up zone: up to 15 minutes free, 16–60 minutes 600 ₽, then 600 ₽ per hour. Car park Р1 with 600 spaces 2 minutes from the terminal, paid from the first minute: up to 30 minutes 100 ₽, up to an hour 150 ₽, up to 2 hours 250 ₽, up to 24 hours 400 ₽, each further day 400 ₽."
   },
   "wifi": {
    "title": "Wi‑Fi",

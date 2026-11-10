@@ -15,7 +15,7 @@
   "storage": {
    "title": "Consigna",
    "hint": "Nivel 1, desde 200 ₽/hora",
-   "text": "Consigna automática en el ala derecha de la terminal, nivel 1. Taquilla estándar: 200 ₽ por hora o 500 ₽ por cada 24 horas; grande: 300 ₽ por hora o 800 ₽ por cada 24 horas. Allí mismo, embalaje de equipaje desde 950 ₽ por bulto."
+   "text": "Consigna automática en el ala derecha de la terminal, nivel 1. Taquilla estándar: 200 ₽ por hora o 500 ₽ por día; grande: 300 ₽ por hora o 800 ₽ por día. Allí mismo, embalaje de equipaje desde 950 ₽ por bulto."
   },
   "kids": {
    "title": "Con niños",
@@ -25,7 +25,7 @@
   "parking": {
    "title": "Aparcamiento",
    "hint": "15 min gratis",
-   "text": "Zona de recogida y bajada de pasajeros: hasta 15 minutos gratis, 16–60 minutos 600 ₽, después 600 ₽ por hora. Aparcamiento Р1 de 600 plazas a 2 minutos de la terminal, de pago desde el primer minuto: hasta 30 minutos 100 ₽, hasta una hora 150 ₽, hasta 2 horas 250 ₽, hasta 24 horas 400 ₽, cada 24 horas siguientes 400 ₽."
+   "text": "Zona de recogida y bajada de pasajeros: hasta 15 minutos gratis, 16–60 minutos 600 ₽, después 600 ₽ por hora. Aparcamiento Р1 de 600 plazas a 2 minutos de la terminal, de pago desde el primer minuto: hasta 30 minutos 100 ₽, hasta una hora 150 ₽, hasta 2 horas 250 ₽, hasta 24 horas 400 ₽, cada día siguiente 400 ₽."
   },
   "wifi": {
    "title": "Wi‑Fi",

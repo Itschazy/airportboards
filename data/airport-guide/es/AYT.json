@@ -28,7 +28,7 @@
   },
   "terminals": {
    "title": "Terminal",
-   "hint": "T1 conectada con vuelos nacionales",
+   "hint": "T1 y terminal nacional conectadas",
    "text": "La terminal internacional 1 y la terminal nacional están conectadas: se puede caminar directamente entre ambas, aunque tienen entradas separadas. La terminal internacional 2 está a unos 2,5 km de la terminal 1, aproximadamente 5 minutos en coche. Hay autobuses públicos y taxis entre las terminales internacionales."
   }
  }

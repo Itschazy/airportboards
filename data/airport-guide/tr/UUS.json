@@ -10,7 +10,7 @@
   "parking": {
    "title": "Otopark",
    "hint": "15 dakika ücretsiz",
-   "text": "İndirme-bindirme alanı: 15 dk ücretsiz, 60 dk'ya kadar 400 ₽, sonra ilk 24 saat 1200 ₽ ve sonraki her 24 saat 600 ₽. Uzun süreli P1: 24 saatlik ilk 5 dönemde her 24 saat için 500 ₽, sonrası 400 ₽. Hareket kısıtlılığı olan yolcular için \"Engelli\" işaretiyle ücretsiz."
+   "text": "İndirme-bindirme alanı: 15 dk ücretsiz, 60 dk'ya kadar 400 ₽, sonra ilk gün 1200 ₽ ve sonraki her gün 600 ₽. Uzun süreli P1: ilk 5 günde gün başına 500 ₽, sonrası 400 ₽. Hareket kısıtlılığı olan yolcular için \"Engelli\" işaretiyle ücretsiz."
   },
   "lounges": {
    "title": "Business salonları",
@@ -20,7 +20,7 @@
   "storage": {
    "title": "Emanet",
    "hint": "Kat 1, 500 ₽'den",
-   "text": "Emanet terminal binasında Kat 1'de. Normal bagaj: ilk 24 saat 500 ₽, sonraki her 24 saat 200 ₽. 203 cm'den büyük standart dışı bagaj: 850 ₽ ve 400 ₽. Bir parça en fazla 30 kg, süre 30 güne kadar."
+   "text": "Emanet terminal binasında Kat 1'de. Normal bagaj: ilk gün 500 ₽, sonraki her gün 200 ₽. 203 cm'den büyük standart dışı bagaj: 850 ₽ ve 400 ₽. Bir parça en fazla 30 kg, süre 30 güne kadar."
   },
   "kids": {
    "title": "Çocukla",

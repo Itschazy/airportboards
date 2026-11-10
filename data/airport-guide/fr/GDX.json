@@ -14,7 +14,7 @@
   "storage": {
    "title": "Consigne à bagages",
    "hint": "Niveau 2, 8:30–20:30",
-   "text": "Consigne automatique pour les passagers des vols intérieurs au niveau 2, de 8:30 à 20:30, paiement par carte uniquement. Casier standard 51×63×76 cm 1000 ₽ par période de 24 heures, grand 51×195×76 cm 2000 ₽ ; toute durée inférieure à 24 heures est facturée comme une période complète de 24 heures."
+   "text": "Consigne automatique pour les passagers des vols intérieurs au niveau 2, de 8:30 à 20:30, paiement par carte uniquement. Casier standard 51×63×76 cm 1000 ₽ par jour, grand 51×195×76 cm 2000 ₽ ; toute journée entamée est facturée en entier."
   },
   "kids": {
    "title": "Avec un enfant",
@@ -24,7 +24,7 @@
   "parking": {
    "title": "Parking",
    "hint": "15 min gratuites",
-   "text": "Place de l'aérogare P1 à 30 m du terminal : 15 premières minutes gratuites, jusqu'à une heure 500 ₽, chaque heure suivante 300 ₽, 24 heures 2000 ₽. Nouvelle entrée dans l'heure pour 1–15 minutes : 200 ₽."
+   "text": "Place de l'aérogare P1 à 30 m du terminal : 15 premières minutes gratuites, jusqu'à une heure 500 ₽, chaque heure suivante 300 ₽, un jour 2000 ₽. Nouvelle entrée dans l'heure pour 1–15 minutes : 200 ₽."
   },
   "wifi": {
    "title": "Wi‑Fi",

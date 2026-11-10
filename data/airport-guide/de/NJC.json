@@ -15,12 +15,12 @@
   "lounges": {
    "title": "Business-Lounges",
    "hint": "Terminal 1, 24/7",
-   "text": "Business-Lounge auf Ebene 1 von Terminal 1, rund um die Uhr geöffnet. Zugang für Passagiere der Business Class und Inhaber von Elite-Karten der Fluggesellschaften, alle anderen gegen Gebühr bei freien Plätzen. Abflug 7950 ₽ für 2 Std. 30 Min., jede weitere Stunde 1141 ₽. Ankunft, Abholung oder Verabschiedung 4050 ₽. Kinder von 2–12 Jahren 70 % des Tarifs, unter 2 Jahren kostenlos."
+   "text": "Business-Lounge auf Ebene 1 von Terminal 1, rund um die Uhr geöffnet. Business-Class-Passagiere und Inhaber von Elite-Karten werden im Rahmen von Verträgen mit Fluggesellschaften betreut; ohne einen solchen Vertrag ist der Zugang kostenpflichtig. Andere Passagiere werden gegen Gebühr aufgenommen, sofern Plätze verfügbar sind. Abflug 7950 ₽ für 2 Std. 30 Min., jede weitere Stunde 1141 ₽. Ankunft, Abholung oder Verabschiedung 4050 ₽. Erkundigen Sie sich vor dem Besuch bei der Lounge nach den Bedingungen des Kindertarifs."
   },
   "storage": {
    "title": "Gepäckaufbewahrung",
    "hint": "Terminal 1, 24/7",
-   "text": "Terminal Nr. 1, Ebene 1, rund um die Uhr. Koffer, Tasche oder Rucksack bis 203 cm Summe der drei Maße 600 ₽ pro 24 Stunden. Sperrige Gegenstände 700 ₽ pro 24 Stunden. Verlust der Marke 400 ₽."
+   "text": "Terminal Nr. 1, Ebene 1, rund um die Uhr. Koffer, Tasche oder Rucksack bis 203 cm Summe der drei Maße 600 ₽ pro Tag. Sperrige Gegenstände 700 ₽ pro Tag. Verlust der Marke 400 ₽."
   },
   "kids": {
    "title": "Mit Kind",
@@ -30,7 +30,7 @@
   "parking": {
    "title": "Parken",
    "hint": "15 Min. kostenlos",
-   "text": "Parkplatz auf dem Vorplatz. Bis 15 Minuten kostenlos, danach 200 ₽ pro Stunde bis 5 Stunden. Die ersten 24 Stunden 1000 ₽, je weitere 24 Stunden 800 ₽. Erneute Einfahrt innerhalb von 30 Minuten ist ab der Einfahrt kostenpflichtig. Die Automaten in den Terminals 1 und 2 nehmen nur Banknoten, die Kasse an der Ausfahrt akzeptiert Karten und QR."
+   "text": "Parkplatz auf dem Vorplatz. Bis 15 Minuten kostenlos, danach 200 ₽ pro Stunde bis 5 Stunden. Der erste Tag 1000 ₽, jeder weitere Tag 800 ₽. Erneute Einfahrt innerhalb von 30 Minuten ist ab der Einfahrt kostenpflichtig. Die Automaten in den Terminals 1 und 2 nehmen nur Banknoten, die Kasse an der Ausfahrt akzeptiert Karten und QR."
   }
  }
 }

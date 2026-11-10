@@ -1,0 +1,1889 @@
+{
+  "date": "2026-11-10",
+  "baseline_preserved": {
+    "inventory_rows": 168,
+    "counts": {
+      "confirmed": 101,
+      "unavailable": 38,
+      "conflict": 10,
+      "partial": 19
+    },
+    "ledger_sha256": "56805d6efdec5402f03a1b8757309191e9a9c791f7d895aecae5e8391cde892b"
+  },
+  "scope": "22 approved correction blocks plus KEJ neutral billing unit. Fix resolution is separate from source coverage. No inferred fullsourcePASS.",
+  "correction_rows": [
+    {
+      "code": "ARH",
+      "block": "storage",
+      "baseline_status": "conflict",
+      "resolution": "approved Russian wording applied and independently reviewed",
+      "ru_matches_approved": true,
+      "ru_current": {
+        "hint": "Павильон 3, 24/7",
+        "text": "Камера хранения в Павильоне № 3, круглосуточно. Место багажа до 30 кг и короче 1 м стоит 341,60 ₽ в сутки. Не берут документы, деньги, ценности и скоропортящиеся продукты.",
+        "url": "https://arh.aero/Uslugi/Kameri-hraneniya"
+      },
+      "file_sha256": "61b550986b7dc3cc7113dc20eef6ebaa4a068e8d3b3cf4185ac7398cdd2c6701",
+      "evidence": {
+        "url": "https://arh.aero/Uslugi/Kameri-hraneniya",
+        "files": [
+          "sources-european/ARH-storage.json"
+        ]
+      },
+      "reason": "Официальная пассажирская страница: 341,60 руб./сутки для стандартного багажа.",
+      "limitations": [],
+      "source_profile_status": "not automatically upgraded",
+      "translations": "Separate reviewers; not certified by this RUrecord"
+    },
+    {
+      "code": "CEE",
+      "block": "parking",
+      "baseline_status": "conflict",
+      "resolution": "approved Russian wording applied and independently reviewed",
+      "ru_matches_approved": true,
+      "ru_current": {
+        "hint": "90 мин бесплатно",
+        "text": "Привокзальная площадь: до 90 минут бесплатно, при задержке рейса повторный заезд на 90 минут без оплаты. Свыше 90 минут сбор 1000 ₽ за каждые календарные сутки. Платная круглосуточная парковка: 350 ₽ за календарные сутки. При расчёте оплаты день длится с 00:00 до 24:00 независимо от времени стоянки в этот день. Телефон (8202) 675-217.",
+        "url": "https://severstal-avia.ru/severstal-avia/aeroport-cherepovecz/parking-space/",
+        "url2": "https://severstal-avia.ru/upload/severstal/parking_v02.pdf"
+      },
+      "file_sha256": "4d1f68a1b36a68d5272b3acc52793811b73a9cd7db8f57c64cfb56d31bc4cbf1",
+      "evidence": {
+        "url": "https://severstal-avia.ru/severstal-avia/aeroport-cherepovecz/parking-space/",
+        "files": [
+          "sources-european/CEE-parking.json",
+          "sources-european/CEE-rules.png"
+        ]
+      },
+      "reason": "HTML прямо называет календарный сбор; PDF правил отдельно определяет сутки платной парковки как 00:00–24:00.",
+      "limitations": [],
+      "source_profile_status": "not automatically upgraded",
+      "translations": "Separate reviewers; not certified by this RUrecord"
+    },
+    {
+      "code": "KUF",
+      "block": "parking",
+      "baseline_status": "conflict",
+      "resolution": "approved Russian wording applied and independently reviewed",
+      "ru_matches_approved": true,
+      "ru_current": {
+        "hint": "Высадка 15 мин бесплатно",
+        "text": "В зоне посадки и высадки первые 15 минут бесплатно, с 16 по 60 минуту 880 ₽. Краткосрочная P1: до часа 357 ₽, до 2 часов 682 ₽, до 3 часов 1000 ₽, свыше 3 до 24 часов 1391 ₽; каждые следующие сутки 1391 ₽. Долгосрочная P2: первые 24 часа 791 ₽; за более длительную стоянку действуют другие тарифы. Эконом P4: 1054 ₽ за первые 2 суток. Все парковки круглосуточные.",
+        "url": "https://ar-kuf.ru/parking/"
+      },
+      "file_sha256": "d62906ea3883b6a576f8d6c945347fa1fe022aaa0908c2b22c01370bfda9193f",
+      "evidence": {
+        "url": "https://ar-kuf.ru/parking/",
+        "files": [
+          "fact-asian-sources.json"
+        ]
+      },
+      "reason": "791 ₽ относится только к первым 24 часам; следующие периоды имеют пакетные цены.",
+      "limitations": [],
+      "source_profile_status": "not automatically upgraded",
+      "translations": "Separate reviewers; not certified by this RUrecord"
+    },
+    {
+      "code": "KUF",
+      "block": "storage",
+      "baseline_status": "conflict",
+      "resolution": "approved Russian wording applied and independently reviewed",
+      "ru_matches_approved": true,
+      "ru_current": {
+        "hint": "1 этаж, от 250 ₽/час",
+        "text": "Автоматическая камера хранения на 1 этаже, справа от входа, у авиакасс. Стандартная ячейка 250 ₽ в час или 550 ₽ в сутки. Увеличенная 350 ₽ в час или 900 ₽ в сутки.",
+        "url": "https://ar-kuf.ru/services/luggage/"
+      },
+      "file_sha256": "d62906ea3883b6a576f8d6c945347fa1fe022aaa0908c2b22c01370bfda9193f",
+      "evidence": {
+        "url": "https://ar-kuf.ru/services/luggage/",
+        "files": [
+          "fact-asian-sources.json"
+        ]
+      },
+      "reason": "1200 ₽ в источнике относится к упаковке негабаритного багажа; цена не относится к хранению.",
+      "limitations": [],
+      "source_profile_status": "not automatically upgraded",
+      "translations": "Separate reviewers; not certified by this RUrecord"
+    },
+    {
+      "code": "NSK",
+      "block": "sleep",
+      "baseline_status": "partial",
+      "resolution": "approved Russian wording applied and independently reviewed",
+      "ru_matches_approved": true,
+      "ru_current": {
+        "hint": "Профилакторий, 24/7",
+        "text": "Профилакторий аэропорта на привокзальной площади. 30 номеров на 55 мест, работает круглосуточно. Селят пассажиров и других граждан по паспорту, оплата — 100% предоплата. Телефон +7 (3919) 31-53-70.",
+        "url": "https://airport-norilsk.ru/uslugi/profilaktoriy/"
+      },
+      "file_sha256": "510b21be1e20e60d8721b8b2ab7eae2637943616b379894b8032f3046dc1b972",
+      "evidence": {
+        "url": "https://airport-norilsk.ru/uslugi/profilaktoriy/",
+        "files": [
+          "fact-asian-sources.json"
+        ]
+      },
+      "reason": "Общий старый абзац требует целые сутки, но датированная таблица с 01.05.2026 содержит тарифы на 3 и 6 часов. Удаляем чрезмерное обобщение, сохраняем 100% предоплату.",
+      "limitations": [
+        "Source oldgeneralwhole-day rule conflicts with datedhourlytable; oldovergeneralisation removed."
+      ],
+      "source_profile_status": "not automatically upgraded",
+      "translations": "Separate reviewers; not certified by this RUrecord"
+    },
+    {
+      "code": "RGK",
+      "block": "parking",
+      "baseline_status": "conflict",
+      "resolution": "approved Russian wording applied and independently reviewed",
+      "ru_matches_approved": true,
+      "ru_current": {
+        "hint": "15 мин бесплатно",
+        "text": "У терминалов посадка и высадка бесплатно 15 минут, повторный въезд в течение часа 250 ₽. P1: первый час 400 ₽, свыше 1 часа до 5 часов 300 ₽/час, свыше 5 часов 1500 ₽/сутки. P2: 800 ₽/сутки. P3: первые 180 минут бесплатно, свыше 3 до 5 часов 200 ₽/час, далее 800 ₽/сутки.",
+        "url": "https://rgk-aero.ru/airport/parking/",
+        "url2": "https://rgk-aero.ru/upload/iblock/552/11m0fgrpltk8bz2rbv9ertwczf16bmyl/%D0%9F%D1%80%D0%B5%D0%B9%D1%81%D0%BA%D1%83%D1%80%D0%B0%D0%BD%D1%82%20%D0%BD%D0%B0%20%D1%83%D1%81%D0%BB%D1%83%D0%B3%D0%B8%20%D0%BF%D0%BB%D0%B0%D1%82%D0%BD%D0%BE%D0%B9%20%D0%BF%D0%B0%D1%80%D0%BA%D0%BE%D0%B2%D0%BA%D0%B8%20%20%D1%81%2001.11.2026.pdf"
+      },
+      "file_sha256": "0d3fe2a6e66ff4a766a369680fbe1f76a806e40e0028713abb32034b00416edf",
+      "evidence": {
+        "url": "https://rgk-aero.ru/airport/parking/",
+        "files": [
+          "fact-asian-sources.json"
+        ],
+        "pdf_url": "https://rgk-aero.ru/upload/iblock/552/11m0fgrpltk8bz2rbv9ertwczf16bmyl/%D0%9F%D1%80%D0%B5%D0%B9%D1%81%D0%BA%D1%83%D1%80%D0%B0%D0%BD%D1%82%20%D0%BD%D0%B0%20%D1%83%D1%81%D0%BB%D1%83%D0%B3%D0%B8%20%D0%BF%D0%BB%D0%B0%D1%82%D0%BD%D0%BE%D0%B9%20%D0%BF%D0%B0%D1%80%D0%BA%D0%BE%D0%B2%D0%BA%D0%B8%20%20%D1%81%2001.11.2026.pdf",
+        "locator": "RGK parking extra_sources[0], PDF table rows1–3"
+      },
+      "reason": "Прочитан полный извлечённый текст официального PDF: приказ №514 от 30.10.2026, действует с 01.11.2026. P1 1500, P2 800, P3 800. HTML P2 1000 устарел относительно датированного приказа.",
+      "limitations": [],
+      "source_profile_status": "not automatically upgraded",
+      "translations": "Separate reviewers; not certified by this RUrecord"
+    },
+    {
+      "code": "SVO",
+      "block": "storage",
+      "baseline_status": "conflict",
+      "resolution": "approved Russian wording applied and independently reviewed",
+      "ru_matches_approved": true,
+      "ru_current": {
+        "hint": "B, D и Аэроэкспресс",
+        "text": "Платные камеры хранения есть в Терминале B (1 этаж), Терминале D (этаж −1) и в терминале «Аэроэкспресс», все в общей зоне. В B и в терминале «Аэроэкспресс» работают круглосуточно. В B и D тариф «Стандарт»: 700 ₽ за первый календарный день до 00:00, затем 300 ₽ за каждый следующий календарный день. Неполный календарный день оплачивается полностью. Одно место весит не больше 32 кг.",
+        "url": "https://svo.su/ru/services/in-airport/left-luggage"
+      },
+      "file_sha256": "6d4ac4b07aca05c760372eb4e3e2ea65b4eeaca4a03b25ea3e6bbe91cd222465",
+      "evidence": {
+        "url": "https://svo.su/ru/services/in-airport/left-luggage",
+        "files": [
+          "fact-asian-sources.json"
+        ]
+      },
+      "reason": "700/300 ₽ явно относится только к B/D, сутки календарные. Удалён срок 6 месяцев: страница одновременно называет уничтожение невостребованных вещей после 90 суток.",
+      "limitations": [
+        "Source contradictory maxstorage periods remain; disputed6month promise removed."
+      ],
+      "source_profile_status": "not automatically upgraded",
+      "translations": "Separate reviewers; not certified by this RUrecord"
+    },
+    {
+      "code": "ZIA",
+      "block": "storage",
+      "baseline_status": "conflict",
+      "resolution": "approved Russian wording applied and independently reviewed",
+      "ru_matches_approved": true,
+      "ru_current": {
+        "hint": "2 этаж, 24/7, от 600 ₽",
+        "text": "Камера хранения на 2 этаже в общей зоне, работает круглосуточно. Тариф «Стандарт»: 700 ₽ за первый календарный день до 00:00, 300 ₽ за каждый следующий. «Стандарт лайт»: 600 ₽ за первый календарный день, далее 300 ₽. Неполный календарный день оплачивается полностью. Негабарит от 1150 ₽. Вес одного места до 30 кг.",
+        "url": "https://zia.aero/services/baggage-storage/"
+      },
+      "file_sha256": "6ad07f82f4243abf3a70893299fd1ed0bc7e6e32d23eec782e6005364fb57fc3",
+      "evidence": {
+        "url": "https://zia.aero/services/baggage-storage/",
+        "files": [
+          "fact-asian-sources.json"
+        ]
+      },
+      "reason": "Источник определяет календарные дни. Удалён срок 6 месяцев: та же страница называет вещи невостребованными уже через 30 суток.",
+      "limitations": [
+        "Source contradictory maxstorage periods remain; disputed6month promise removed."
+      ],
+      "source_profile_status": "not automatically upgraded",
+      "translations": "Separate reviewers; not certified by this RUrecord"
+    },
+    {
+      "code": "SVX",
+      "block": "storage",
+      "baseline_status": "conflict",
+      "resolution": "approved Russian wording applied and independently reviewed",
+      "ru_matches_approved": true,
+      "ru_current": {
+        "hint": "Терминал А, этаж −1",
+        "text": "Терминал А, этаж −1. 200 ₽ в час, 500 ₽ за первые сутки, 300 ₽ за каждые следующие. Негабарит (больше 50×50×80 см или тяжелее 20 кг): 400 ₽ в час, 800 ₽ за первые сутки, 500 ₽ за следующие. Гардероб для верхней одежды: 100 ₽ за комплект до 1 часа, от 1 до 24 часов 300 ₽, за каждые следующие сутки 200 ₽.",
+        "url": "https://ar-svx.ru/services/luggage/"
+      },
+      "file_sha256": "beaeb7b41d9aabd6794de2a8c5b3a732ed67bc42e615492b55b08893b976997c",
+      "evidence": {
+        "url": "https://ar-svx.ru/services/luggage/",
+        "files": [
+          "fact-asian-sources.json"
+        ]
+      },
+      "reason": "100 ₽ — только до 1 часа; полный тариф гардероба явно опубликован.",
+      "limitations": [],
+      "source_profile_status": "not automatically upgraded",
+      "translations": "Separate reviewers; not certified by this RUrecord"
+    },
+    {
+      "code": "LED",
+      "block": "parking",
+      "baseline_status": "partial",
+      "resolution": "approved Russian wording applied and independently reviewed",
+      "ru_matches_approved": true,
+      "ru_current": {
+        "hint": "15 мин у входа бесплатно",
+        "text": "В зоне подъезда к пассажирскому терминалу первые 15 минут бесплатно. С 16-й по 30-ю минуту, с 31-й по 60-ю и за каждые следующие 30 минут — по 2000 ₽. При повторном въезде платно с первой минуты: 2000 ₽ за первые 30 минут и каждые следующие 30 минут. P2 (краткосрочная): 450 ₽ за 30 минут, 2–4 минуты пешком. P4 (долгосрочная): 1100 ₽ за первые сутки, от 14 суток 700 ₽ в сутки. Бесплатная парковка на 120 мест расположена на Пулковском шоссе в 3 км от аэропорта.",
+        "url": "https://pulkovoairport.ru/transport/"
+      },
+      "file_sha256": "bced9e8d634d40a96d24a9721fa680d664ce1dda8a5492f320665b0be300fd2b",
+      "evidence": {
+        "url": "https://pulkovoairport.ru/transport/",
+        "files": [
+          "fact-asian-sources.json"
+        ]
+      },
+      "reason": "Раздел «Для высадки или встречи пассажира»: точные интервалы16–30,31–60,затем каждые30 минут; повторный въезд платный с1мин. В этом разделе источник не устанавливает восстановление льготы через30мин. Отдельные транзитные зоны в блок не добавлены.",
+      "limitations": [],
+      "source_profile_status": "not automatically upgraded",
+      "translations": "Separate reviewers; not certified by this RUrecord"
+    },
+    {
+      "code": "VVO",
+      "block": "storage",
+      "baseline_status": "conflict",
+      "resolution": "approved Russian wording applied and independently reviewed",
+      "ru_matches_approved": true,
+      "ru_current": {
+        "hint": "1 этаж, 24/7",
+        "text": "Камера хранения на 1 этаже за эскалатором работает круглосуточно. Тариф «Стандарт»: 500 ₽ за первый календарный день, 200 ₽ за каждый следующий. Календарный день заканчивается в 23:59; неполный день оплачивается полностью. Одно место — до 203 см по сумме трёх измерений.",
+        "url": "https://aerovlad.ru/ru/services/14"
+      },
+      "file_sha256": "90480be402c0b9e277f113ea490f2da314d55827d20c8f75f2f454fdb4ae8d53",
+      "evidence": {
+        "url": "https://aerovlad.ru/ru/services/14",
+        "files": [
+          "russian-sources/58ec82f41f72.txt"
+        ]
+      },
+      "reason": "Не смешивать календарный тариф обычной камеры хранения с отсчётом от сдачи в отдельном бюро находок.",
+      "limitations": [],
+      "source_profile_status": "not automatically upgraded",
+      "translations": "Separate reviewers; not certified by this RUrecord"
+    },
+    {
+      "code": "SGC",
+      "block": "lounges",
+      "baseline_status": "partial",
+      "resolution": "approved Russian wording applied and independently reviewed",
+      "ru_matches_approved": true,
+      "ru_current": {
+        "hint": "ON PASS, 3500 ₽",
+        "text": "Бизнес-зал в зале прилёта, 2 этаж (на лифте), работает круглосуточно и не обслуживает международные рейсы. Доступ для пассажиров бизнес-класса и владельцев карт программ лояльности зависит от авиакомпании и выполняемого рейса; эконом-класс — за плату. Зал ON PASS: 2 этаж стерильной зоны, только внутренние рейсы, круглосуточно; взрослый 3500 ₽, ребёнок 2–12 лет 2500 ₽.",
+        "url": "https://www.airport-surgut.ru/surgut/services/biznes-zal/",
+        "url2": "https://www.airport-surgut.ru/surgut/services/superior-comfort/"
+      },
+      "file_sha256": "52e0e2c528558ffdc6f9aaba42c13e16130aad7905cfb368425743b452d99ec5",
+      "evidence": {
+        "url": "https://www.airport-surgut.ru/surgut/services/biznes-zal/",
+        "files": [
+          "russian-sources/f07ab41d8b36.txt",
+          "russian-sources/2ae4719b4550.txt"
+        ]
+      },
+      "reason": "Источник ограничивает перевозчиков и привязывает карты к рейсам соответствующих компаний.",
+      "limitations": [],
+      "source_profile_status": "not automatically upgraded",
+      "translations": "Separate reviewers; not certified by this RUrecord"
+    },
+    {
+      "code": "SSH",
+      "block": "lounges",
+      "baseline_status": "partial",
+      "resolution": "approved Russian wording applied and independently reviewed",
+      "ru_matches_approved": true,
+      "ru_current": {
+        "hint": "Pearl Lounge, Т1, круглосуточно",
+        "text": "Pearl Lounge в терминале 1 находится после паспортного контроля и досмотра и работает круглосуточно. Доступен только пассажирам международных рейсов, вылетающих из терминала 1. Войти можно по платному пропуску или через программу доступа в бизнес-залы; условия вашей карты нужно проверить перед посещением. По условиям Priority Pass и DragonPass посещение ограничено 3 часами.",
+        "url": "https://www.prioritypass.com/en-GB/lounges/egypt/sharm-el-sheikh-international/ssh-pearl-lounge",
+        "url2": "https://en.dragonpass.com.cn/lounge/303489"
+      },
+      "file_sha256": "ecf2389967a3bffcbcf9c1a041ab60c44ac7bedcd144be246f0bcd33f8fe37dd",
+      "evidence": {
+        "url": "https://www.prioritypass.com/en-GB/lounges/egypt/sharm-el-sheikh-international/ssh-pearl-lounge",
+        "files": [
+          "fact-pilot-russian.json"
+        ]
+      },
+      "reason": "Не распространять лимит программ на все платные пропуски.",
+      "limitations": [
+        "Changed3hprogramlimit verified; pre-existing paidpass claim not freshly verified in finalpass."
+      ],
+      "source_profile_status": "not automatically upgraded",
+      "translations": "Separate reviewers; not certified by this RUrecord"
+    },
+    {
+      "code": "MRV",
+      "block": "parking",
+      "baseline_status": "conflict",
+      "resolution": "approved Russian wording applied and independently reviewed",
+      "ru_matches_approved": true,
+      "ru_current": {
+        "hint": "Менее 15 минут бесплатно",
+        "text": "Краткосрочная парковка P1 у зала вылетов: меньше 15 минут бесплатно, 15–60 минут 500 ₽, дальше 500 ₽ в час, больше 4 часов 1200 ₽ за календарные сутки; расчётный час — 00:00, неполные сутки оплачиваются полностью. Повторный проезд в течение часа 500 ₽. Есть бесплатная парковка на прилегающей территории, место — на схеме парковок.",
+        "url": "https://mvairport.ru/transport/parking/tariff/"
+      },
+      "file_sha256": "b92ce09dc91406145ff715871d2d63436915201a1c251f56469c6e70871965a0",
+      "evidence": {
+        "url": "https://mvairport.ru/transport/parking/tariff/",
+        "files": [
+          "browser-MRV-parking.txt"
+        ]
+      },
+      "reason": "Общее явное определение посуточной тарификации применяется и к P1; не переводить как rolling 24 hours.",
+      "limitations": [],
+      "source_profile_status": "not automatically upgraded",
+      "translations": "Separate reviewers; not certified by this RUrecord"
+    },
+    {
+      "code": "IJK",
+      "block": "transport",
+      "baseline_status": "partial",
+      "resolution": "approved Russian wording applied and independently reviewed",
+      "ru_matches_approved": true,
+      "ru_current": {
+        "hint": "Трансфер в город 1500 ₽",
+        "text": "Трансфер аэропорта от привокзальной площади на машине с водителем, доступен пассажирам регулярных рейсов. Поездка по одному адресу в Ижевске стоит 1500 ₽; в пригороде в радиусе до 30 км от аэропорта — по этому же тарифу, по предварительному согласованию. Воткинск 4000 ₽, Сарапул 5000 ₽, Чайковский 6000 ₽. Заказ за 3 часа и более на izhavia.su или после прилёта в кассе аэропорта, при наличии свободных машин.",
+        "url": "https://izhavia.su/uslugi/transfer-iz-aeroporta-izhevska"
+      },
+      "file_sha256": "ea063a0446261d692f15afa545aade8a80b3dc1ab56f420788ffcec41052e5f8",
+      "evidence": {
+        "urls": [
+          "https://izhavia.su/uslugi/transfer-iz-aeroporta-izhevska"
+        ]
+      },
+      "reason": "Источник требует регулярного рейса, одного адреса и предварительного согласования пригорода; 30 км отсчитываются от аэропорта.",
+      "limitations": [
+        "Independent freshweb403; peer original source report only, no saved raw. Not full independent sourcePASS."
+      ],
+      "source_profile_status": "not automatically upgraded",
+      "translations": "Separate reviewers; not certified by this RUrecord"
+    },
+    {
+      "code": "IKT",
+      "block": "storage",
+      "baseline_status": "partial",
+      "resolution": "approved Russian wording applied and independently reviewed",
+      "ru_matches_approved": true,
+      "ru_current": {
+        "hint": "От 610 ₽ в сутки",
+        "text": "Во внутреннем терминале на 1 этаже, оплата наличными или картой. Базовая цена 610 ₽ за место в сутки при объявленной стоимости багажа до 2000 ₽. Оценка стоимости обязательна; сверх 2000 ₽ доплата 100 ₽ за каждую следующую 1000 ₽ объявленной стоимости. Багаж больше 40×40×50 см оплачивается по числу занятых мест. В международном терминале камера на 2 этаже, работает только при задержке международных рейсов. Телефон +7 (3952) 266-194.",
+        "url": "https://iktport.ru/ru/passengers/baggage",
+        "url2": "https://iktport.ru/documents/charges/2026/baggagefizl.pdf"
+      },
+      "file_sha256": "3de104b1ced4b812915a539e9488449bcfe4f0b08484feca1435b4fa28016317",
+      "evidence": {
+        "urls": [
+          "https://iktport.ru/ru/passengers/baggage",
+          "https://iktport.ru/documents/charges/2026/baggagefizl.pdf"
+        ]
+      },
+      "reason": "Свежие официальные PDF визуально прочитаны, сохранены в sources-european/IKT-storage.pdf и IKT-parking.pdf.",
+      "limitations": [],
+      "source_profile_status": "not automatically upgraded",
+      "translations": "Separate reviewers; not certified by this RUrecord"
+    },
+    {
+      "code": "IKT",
+      "block": "parking",
+      "baseline_status": "partial",
+      "resolution": "approved Russian wording applied and independently reviewed",
+      "ru_matches_approved": true,
+      "ru_current": {
+        "hint": "10 мин бесплатно",
+        "text": "Первые 10 минут бесплатно. 11–20 минут 100 ₽, 21–30 минут 200 ₽, 31–40 минут 250 ₽, 41–50 минут 300 ₽, 51–60 минут 350 ₽. С 1 ч 01 мин до 2 ч 40 мин тариф растёт от 400 до 850 ₽ с шагом 50 ₽ за каждые 10 минут. От 2 ч 41 мин до 24 часов 1200 ₽, каждые следующие сутки 1200 ₽. У каждого терминала своя парковка. Зона посадки и высадки: 10 минут бесплатно, дольше пени 2000 ₽ в час.",
+        "url": "https://iktport.ru/ru/passengers/route",
+        "url2": "https://iktport.ru/documents/parking/parking.pdf"
+      },
+      "file_sha256": "3de104b1ced4b812915a539e9488449bcfe4f0b08484feca1435b4fa28016317",
+      "evidence": {
+        "urls": [
+          "https://iktport.ru/ru/passengers/route",
+          "https://iktport.ru/documents/parking/parking.pdf"
+        ]
+      },
+      "reason": "Свежие официальные PDF визуально прочитаны, сохранены в sources-european/IKT-storage.pdf и IKT-parking.pdf.",
+      "limitations": [],
+      "source_profile_status": "not automatically upgraded",
+      "translations": "Separate reviewers; not certified by this RUrecord"
+    },
+    {
+      "code": "GYD",
+      "block": "parking",
+      "baseline_status": "partial",
+      "resolution": "approved Russian wording applied and independently reviewed",
+      "ru_matches_approved": true,
+      "ru_current": {
+        "hint": "15 мин бесплатно, 24/7",
+        "text": "Круглосуточно, больше 2 тысяч мест: 835 у терминала 1 и 1166 у терминала 2. Первые 15 минут бесплатно; до 2 часов 1 AZN, 2–4 часа 2 AZN, 4–6 часов 3 AZN, 6–8 часов 4 AZN, 8–10 часов 5 AZN, 10–12 часов 6 AZN, 12–14 часов 10 AZN, 14–24 часа 15 AZN, каждый следующий день +15 AZN. Оплата наличными, картой или онлайн (Tezöde, AzParkinq, Birbank).",
+        "url": "https://airport.az/ru/transport/parking/"
+      },
+      "file_sha256": "437d926538e66fccec4d38185c396f84958b9fdbcea7a912d2f11dcfbddc6c33",
+      "evidence": {
+        "urls": [
+          "https://airport.az/ru/transport/parking/"
+        ]
+      },
+      "reason": "В источнике восемь диапазонов, сокращение до12/досуток создаёт неверное впечатление тарифа промежуточного времени.",
+      "limitations": [],
+      "source_profile_status": "not automatically upgraded",
+      "translations": "Separate reviewers; not certified by this RUrecord"
+    },
+    {
+      "code": "KGD",
+      "block": "parking",
+      "baseline_status": "confirmed",
+      "resolution": "approved Russian wording applied and independently reviewed",
+      "ru_matches_approved": true,
+      "ru_current": {
+        "hint": "15 мин бесплатно, 400 ₽/час",
+        "text": "Краткосрочная парковка с 01.10.2026: первые 15 минут бесплатно, дальше 400 ₽ за каждый час, в том числе неполный. При повторном въезде в течение 2 часов оплата с первой минуты, без бесплатных 15 минут. Долгосрочная 900 ₽ в сутки. Бесплатная парковка в 400 м от аэровокзала на 300 машин. Стоянка на первой линии перед зданием запрещена.",
+        "url": "https://kgdavia.ru/transport/parking/tariff/"
+      },
+      "file_sha256": "ac2d61109d9d83f7a23db70308b6a315f2c4930aac5f26f88d733f928f988f83",
+      "evidence": {
+        "urls": [
+          "https://kgdavia.ru/transport/parking/tariff/"
+        ]
+      },
+      "reason": "Сохранённый root браузерный текст browser-KGD-parking.txt, строка AX71: повторный въезд в течение 2 часов с1минуты. Точный момент равенства2ч не уточняем сверх источника.",
+      "limitations": [],
+      "source_profile_status": "not automatically upgraded",
+      "translations": "Separate reviewers; not certified by this RUrecord"
+    },
+    {
+      "code": "ZIA",
+      "block": "parking",
+      "baseline_status": "partial",
+      "resolution": "approved Russian wording applied and independently reviewed",
+      "ru_matches_approved": true,
+      "ru_current": {
+        "hint": "15 мин бесплатно",
+        "text": "Краткосрочная зона: первые 15 мин бесплатно, первый час 350 ₽, со 2 по 4 час 250 ₽/час, с 5 часа 3000 ₽/сутки. Долгосрочная зона: 700 ₽/сутки с 1 по 5 сутки, 100 ₽/сутки с 6 по 13, 700 ₽/сутки с 14 суток. Повторный бесплатный въезд возможен не раньше чем через 45 минут после окончания первого 15-минутного бесплатного периода.",
+        "url": "https://zia.aero/transport/parking/"
+      },
+      "file_sha256": "6ad07f82f4243abf3a70893299fd1ed0bc7e6e32d23eec782e6005364fb57fc3",
+      "evidence": {
+        "file": "fact-asian-sources.json",
+        "row": "ZIA parking",
+        "url": "https://zia.aero/transport/parking/"
+      },
+      "reason": "Официальный текст прямо задаёт точку отсчёта45мин; нельзя трактовать как45мин после выезда.",
+      "limitations": [],
+      "source_profile_status": "not automatically upgraded",
+      "translations": "Separate reviewers; not certified by this RUrecord"
+    },
+    {
+      "code": "NJC",
+      "block": "lounges",
+      "baseline_status": "partial",
+      "resolution": "approved Russian wording applied and independently reviewed",
+      "ru_matches_approved": true,
+      "ru_current": {
+        "hint": "Терминал 1, 24/7",
+        "text": "Бизнес-зал на 1 этаже терминала 1, работает круглосуточно. Пассажиров бизнес-класса и владельцев элитных карт обслуживают по договорам с авиакомпаниями; без такого договора — за плату. Остальных пассажиров принимают за плату при наличии свободных мест. Вылет 7950 ₽ за 2 ч 30 мин, каждый следующий час 1141 ₽. Прилёт, встреча или проводы 4050 ₽. Условия детского тарифа уточните у зала перед посещением.",
+        "url": "https://nv-aero.ru/Home/Show?_id=5109&_cl=t",
+        "url2": "https://nv-aero.ru/Home/doc/Rates/%D0%9F%D0%BB%D0%B0%D1%82%D0%BD%D1%8B%D0%B5%20%D1%83%D1%81%D0%BB%D1%83%D0%B3%D0%B8%20%D1%81%2001.01.2026.pdf"
+      },
+      "file_sha256": "7ad79c1154f0837d188bd7492ef600429ff9c80edf8554d91ef0a15aef381dcd",
+      "evidence": {
+        "file": "fact-asian-sources.json",
+        "rows": [
+          "NJC lounges HTML",
+          "index19 NJC kids PDF, section11"
+        ],
+        "url": "https://nv-aero.ru/Home/Show?_id=5109&_cl=t"
+      },
+      "reason": "PDF одновременно устанавливает70% для2–12лет и бесплатно до2лет включительно. Удаляем спорную границу, не выдумываем возраст. HTML дополнительно ограничивает бесплатный доступ договором авиакомпании.",
+      "limitations": [
+        "Source ageambiguity remains; unsafe exactage assertion removed instead of inventing rule."
+      ],
+      "source_profile_status": "not automatically upgraded",
+      "translations": "Separate reviewers; not certified by this RUrecord"
+    },
+    {
+      "code": "IAR",
+      "block": "kids",
+      "baseline_status": "partial",
+      "resolution": "approved Russian wording applied and independently reviewed",
+      "ru_matches_approved": true,
+      "ru_current": {
+        "hint": "Зал вылета, бесплатно",
+        "text": "Комната пассажиров с детьми находится в зале вылета, в стерильной зоне. Для входа нужен посадочный талон. Возрастные условия уточните у аэропорта перед поездкой. Бесплатно, до 3 часов перед вылетом днём и до 4 часов ночью. В зале прилёта комнаты нет.",
+        "url": "https://iaravia.ru/for-passengers/services"
+      },
+      "file_sha256": "7c4e4a65ddb3848d2358bf6c8d6c3effd5315c13d1799db4058583d65845d81c",
+      "evidence": {
+        "url": "https://iaravia.ru/for-passengers/services",
+        "method": "web fresh open 2026-11-10",
+        "source_lines": [
+          66,
+          73,
+          119
+        ]
+      },
+      "reason": "Свежий web10.11: вступление допускаетдвояко14лет; правила запрещают взрослым бездошкольников. Удаляем спорное обещание границы, остальные факты подтверждены.",
+      "limitations": [
+        "Source ageambiguity remains; unsafe exactage assertion removed instead of inventing rule."
+      ],
+      "source_profile_status": "not automatically upgraded",
+      "translations": "Separate reviewers; not certified by this RUrecord"
+    }
+  ],
+  "additional_kej_review": {
+    "code": "KEJ",
+    "block": "parking",
+    "resolution": "Unsupported explicit24hours removed; dailywording matches saved officialAX",
+    "evidence": "browser-KEJ-parking.txt",
+    "ru_current": {
+      "id": "parking",
+      "title": "Парковка",
+      "hint": "15 мин бесплатно",
+      "text": "Привокзальная площадь в 30 м от терминала, 173 места: до 15 минут бесплатно, первый час 300 ₽, второй и третий по 200 ₽, с четвёртого часа тариф 1000 ₽ в сутки.",
+      "source": "airkem.ru",
+      "url": "https://airkem.ru/transport/parking/tariff/"
+    },
+    "file_sha256": "cb213d78038d2d13f7fd1f0ed4958e4fb01532505f8e9b31649d1a5c20ce04d1"
+  },
+  "source_limitations_preserved": [
+    {
+      "code": "AER",
+      "block": "parking",
+      "status": "unavailable",
+      "evidence": {
+        "code": "AER",
+        "block": "parking",
+        "status": "unavailable",
+        "checked_fields": [
+          "title",
+          "hint",
+          "text"
+        ],
+        "ru_reviewed": {
+          "code": "AER",
+          "block": "parking",
+          "id": "parking",
+          "title": "Парковка",
+          "hint": "15 минут бесплатно",
+          "text": "На привокзальной площади (въезды 1–6) первые 15 минут бесплатно, дальше 400 ₽ в час. На суточной парковке (въезды 31, 32) первые 15 минут бесплатно, дальше 300 ₽ в час, а если стоять больше 3 часов, 1 500 ₽ в сутки. Она в 100 м до главного входа, поворот направо. Альтернативная парковка примерно в 400 м от терминала.",
+          "source": "aer.aero",
+          "url": "https://aer.aero/transport/parking/"
+        },
+        "assessment": "Источник AER недоступен: Firecrawl proxy connection failure / web timeout или недоступныйURL.",
+        "source_evidence": {
+          "url": "https://aer.aero/transport/parking/",
+          "quote": "",
+          "method": "Firecrawl basic then web fallback / direct official PDF where noted",
+          "retrieved_on": "2026-11-10"
+        }
+      }
+    },
+    {
+      "code": "AER",
+      "block": "storage",
+      "status": "unavailable",
+      "evidence": {
+        "code": "AER",
+        "block": "storage",
+        "status": "unavailable",
+        "checked_fields": [
+          "title",
+          "hint",
+          "text"
+        ],
+        "ru_reviewed": {
+          "code": "AER",
+          "block": "storage",
+          "id": "storage",
+          "title": "Камера хранения",
+          "hint": "Сектор C, 1 этаж, 24/7",
+          "text": "Сектор C, 1 этаж, открыта круглосуточно. Первые сутки стоят от 600 ₽ за место, каждые следующие от 300 ₽. Место весит не больше 30 кг, сумма трёх измерений не больше 203 см. Вещи, которые не забрали за 30 дней, считаются невостребованными. Телефон 8 (862) 249-78-46.",
+          "source": "aer.aero",
+          "url": "https://aer.aero/services/bagazh/kamera-khraneniya/"
+        },
+        "assessment": "Источник AER недоступен: Firecrawl proxy connection failure / web timeout или недоступныйURL.",
+        "source_evidence": {
+          "url": "https://aer.aero/services/bagazh/kamera-khraneniya/",
+          "quote": "",
+          "method": "Firecrawl basic then web fallback / direct official PDF where noted",
+          "retrieved_on": "2026-11-10"
+        }
+      }
+    },
+    {
+      "code": "ASF",
+      "block": "kids",
+      "status": "unavailable",
+      "evidence": {
+        "code": "ASF",
+        "block": "kids",
+        "status": "unavailable",
+        "checked_fields": [
+          "title",
+          "hint",
+          "text"
+        ],
+        "ru_reviewed": {
+          "code": "ASF",
+          "block": "kids",
+          "id": "kids",
+          "title": "С ребёнком",
+          "hint": "Бесплатно, 24/7",
+          "text": "Комната матери и ребёнка бесплатна и работает круглосуточно, для пребывания до 3–4 часов. Для пассажиров с детьми до 7 лет (при свободных местах до 8), детей-инвалидов до 14 лет и женщин во второй половине беременности.",
+          "source": "airportastrakhan.ru",
+          "url": "https://airportastrakhan.ru/passengers/information/babysroom/"
+        },
+        "assessment": "Защищённый источник: только обычный браузер по CLAUDE; CUA запрещён securitySTOP, обход не выполнялся.",
+        "source_evidence": {
+          "url": "https://airportastrakhan.ru/passengers/information/babysroom/",
+          "quote": "",
+          "method": "Firecrawl basic then web fallback / direct official PDF where noted",
+          "retrieved_on": "2026-11-10"
+        }
+      }
+    },
+    {
+      "code": "ASF",
+      "block": "lounges",
+      "status": "unavailable",
+      "evidence": {
+        "code": "ASF",
+        "block": "lounges",
+        "status": "unavailable",
+        "checked_fields": [
+          "title",
+          "hint",
+          "text"
+        ],
+        "ru_reviewed": {
+          "code": "ASF",
+          "block": "lounges",
+          "id": "lounges",
+          "title": "Бизнес-залы",
+          "hint": "2 этаж, круглосуточно",
+          "text": "Бизнес-зал внутренних линий на втором этаже в чистой зоне, после досмотра, открыт круглосуточно. Пускают пассажиров бизнес-класса, участников бонусных программ авиакомпаний и банков, а также всех, кто оплатит визит картой, по QR-коду или наличными. Пребывание не дольше двух часов до вылета.",
+          "source": "airportastrakhan.ru",
+          "url": "https://airportastrakhan.ru/services/comfort/busines/"
+        },
+        "assessment": "Защищённый источник: только обычный браузер по CLAUDE; CUA запрещён securitySTOP, обход не выполнялся.",
+        "source_evidence": {
+          "url": "https://airportastrakhan.ru/services/comfort/busines/",
+          "quote": "",
+          "method": "Firecrawl basic then web fallback / direct official PDF where noted",
+          "retrieved_on": "2026-11-10"
+        }
+      }
+    },
+    {
+      "code": "ASF",
+      "block": "parking",
+      "status": "unavailable",
+      "evidence": {
+        "code": "ASF",
+        "block": "parking",
+        "status": "unavailable",
+        "checked_fields": [
+          "title",
+          "hint",
+          "text"
+        ],
+        "ru_reviewed": {
+          "code": "ASF",
+          "block": "parking",
+          "id": "parking",
+          "title": "Парковка",
+          "hint": "10 мин бесплатно",
+          "text": "Привокзальная площадь: первые 10 минут бесплатно, первый час 250 ₽, со второго по четвёртый по 200 ₽, больше 4 часов — 900 ₽ за сутки. Суточная стоянка (въезд № 5): первые три часа по 200 ₽, с 181-й минуты за первые сутки 600 ₽, за двое суток 1100 ₽, за трое 1500 ₽, дальше 300 ₽ в сутки. Есть бесплатная стоянка не меньше чем на 130 машин.",
+          "source": "airportastrakhan.ru",
+          "url": "https://airportastrakhan.ru/transport/parking/inf-parking/"
+        },
+        "assessment": "Защищённый источник: только обычный браузер по CLAUDE; CUA запрещён securitySTOP, обход не выполнялся.",
+        "source_evidence": {
+          "url": "https://airportastrakhan.ru/transport/parking/inf-parking/",
+          "quote": "",
+          "method": "Firecrawl basic then web fallback / direct official PDF where noted",
+          "retrieved_on": "2026-11-10"
+        }
+      }
+    },
+    {
+      "code": "BAX",
+      "block": "parking",
+      "status": "unavailable",
+      "evidence": {
+        "code": "BAX",
+        "block": "parking",
+        "status": "unavailable",
+        "checked_fields": [
+          "title",
+          "hint",
+          "text"
+        ],
+        "ru_reviewed": {
+          "code": "BAX",
+          "block": "parking",
+          "id": "parking",
+          "title": "Парковка",
+          "hint": "Бесплатная стоянка",
+          "text": "За парковой зоной аэропорта есть бесплатная автостоянка примерно на 100 машин, время не ограничено. На привокзальной площади работают эвакуаторы, стоянка вне отведённых мест запрещена.",
+          "source": "airaltay.ru",
+          "url": "https://airaltay.ru/transport/parking/tariff/"
+        },
+        "assessment": "Защищённый источник: только обычный браузер по CLAUDE; CUA запрещён securitySTOP, обход не выполнялся.",
+        "source_evidence": {
+          "url": "https://airaltay.ru/transport/parking/tariff/",
+          "quote": "",
+          "method": "Firecrawl basic then web fallback / direct official PDF where noted",
+          "retrieved_on": "2026-11-10"
+        }
+      }
+    },
+    {
+      "code": "BTK",
+      "block": "parking",
+      "status": "unavailable",
+      "evidence": {
+        "code": "BTK",
+        "block": "parking",
+        "status": "unavailable",
+        "checked_fields": [
+          "title",
+          "hint",
+          "text"
+        ],
+        "ru_reviewed": {
+          "code": "BTK",
+          "block": "parking",
+          "id": "parking",
+          "title": "Парковка",
+          "hint": "80 мест бесплатно",
+          "text": "На привокзальной площади бесплатная парковка на 80 мест, 8 из них для людей с инвалидностью. Долгосрочная парковка от 300 ₽ в сутки. Отогрев машины зимой стоит 4 200 ₽ за 20 минут, зарядка аккумулятора 2 100 ₽.",
+          "source": "aerobratsk.ru",
+          "url": "https://aerobratsk.ru/parking.html"
+        },
+        "assessment": "Защищённый источник: только обычный браузер по CLAUDE; CUA запрещён securitySTOP, обход не выполнялся.",
+        "source_evidence": {
+          "url": "https://aerobratsk.ru/parking.html",
+          "quote": "",
+          "method": "Firecrawl basic then web fallback / direct official PDF where noted",
+          "retrieved_on": "2026-11-10"
+        }
+      }
+    },
+    {
+      "code": "CEK",
+      "block": "kids",
+      "status": "unavailable",
+      "evidence": {
+        "code": "CEK",
+        "block": "kids",
+        "status": "unavailable",
+        "checked_fields": [
+          "title",
+          "hint",
+          "text"
+        ],
+        "ru_reviewed": {
+          "code": "CEK",
+          "block": "kids",
+          "id": "kids",
+          "title": "С ребёнком",
+          "hint": "Бесплатно, 24/7",
+          "text": "Комната матери и ребёнка бесплатна и работает круглосуточно, для пребывания до 3–4 часов. Для пассажиров с детьми до 8 лет, детей-инвалидов до 14 лет и женщин во второй половине беременности. Если закрыто — стойка информации на первом этаже напротив входа.",
+          "source": "cekport.ru",
+          "url": "https://cekport.ru/passengers/information/babysroom/"
+        },
+        "assessment": "Защищённый источник: только обычный браузер по CLAUDE; CUA запрещён securitySTOP, обход не выполнялся.",
+        "source_evidence": {
+          "url": "https://cekport.ru/passengers/information/babysroom/",
+          "quote": "",
+          "method": "Firecrawl basic then web fallback / direct official PDF where noted",
+          "retrieved_on": "2026-11-10"
+        }
+      }
+    },
+    {
+      "code": "CEK",
+      "block": "parking",
+      "status": "unavailable",
+      "evidence": {
+        "code": "CEK",
+        "block": "parking",
+        "status": "unavailable",
+        "checked_fields": [
+          "title",
+          "hint",
+          "text"
+        ],
+        "ru_reviewed": {
+          "code": "CEK",
+          "block": "parking",
+          "id": "parking",
+          "title": "Парковка",
+          "hint": "15 мин бесплатно",
+          "text": "Парковка P на привокзальной площади: 15 минут бесплатно один раз в час, первый час 300 ₽, дальше 250 ₽ в час, первые сутки в сумме 1300 ₽, свыше суток 700 ₽ в сутки. Бесплатная парковка на 100 мест для встречающих — с южной стороны посёлка Аэропорт.",
+          "source": "cekport.ru",
+          "url": "https://cekport.ru/transport/parking/tariff/"
+        },
+        "assessment": "Защищённый источник: только обычный браузер по CLAUDE; CUA запрещён securitySTOP, обход не выполнялся.",
+        "source_evidence": {
+          "url": "https://cekport.ru/transport/parking/tariff/",
+          "quote": "",
+          "method": "Firecrawl basic then web fallback / direct official PDF where noted",
+          "retrieved_on": "2026-11-10"
+        }
+      }
+    },
+    {
+      "code": "GDX",
+      "block": "parking",
+      "status": "unavailable",
+      "evidence": {
+        "code": "GDX",
+        "block": "parking",
+        "status": "unavailable",
+        "checked_fields": [
+          "title",
+          "hint",
+          "text"
+        ],
+        "ru_reviewed": {
+          "code": "GDX",
+          "block": "parking",
+          "id": "parking",
+          "title": "Парковка",
+          "hint": "15 мин бесплатно",
+          "text": "Привокзальная площадь P1 в 30 м от терминала: первые 15 минут бесплатно, до часа 500 ₽, каждый следующий час 300 ₽, сутки 2000 ₽. Повторный въезд в течение часа на 1–15 минут — 200 ₽.",
+          "source": "airport-magadan.ru",
+          "url": "https://airport-magadan.ru/transport/parking/tariff/"
+        },
+        "assessment": "Защищённый источник: только обычный браузер по CLAUDE; CUA запрещён securitySTOP, обход не выполнялся.",
+        "source_evidence": {
+          "url": "https://airport-magadan.ru/transport/parking/tariff/",
+          "quote": "",
+          "method": "Firecrawl basic then web fallback / direct official PDF where noted",
+          "retrieved_on": "2026-11-10"
+        }
+      }
+    },
+    {
+      "code": "GDX",
+      "block": "storage",
+      "status": "unavailable",
+      "evidence": {
+        "code": "GDX",
+        "block": "storage",
+        "status": "unavailable",
+        "checked_fields": [
+          "title",
+          "hint",
+          "text"
+        ],
+        "ru_reviewed": {
+          "code": "GDX",
+          "block": "storage",
+          "id": "storage",
+          "title": "Камера хранения",
+          "hint": "2 этаж, 8:30–20:30",
+          "text": "Автоматическая камера хранения для пассажиров внутренних рейсов на 2 этаже, с 8:30 до 20:30, оплата только картой. Стандартная ячейка 51×63×76 см 1000 ₽ в сутки, большая 51×195×76 см 2000 ₽; меньше суток оплачивается как сутки.",
+          "source": "airport-magadan.ru",
+          "url": "https://airport-magadan.ru/services/infrastructure/storage/"
+        },
+        "assessment": "Защищённый источник: только обычный браузер по CLAUDE; CUA запрещён securitySTOP, обход не выполнялся.",
+        "source_evidence": {
+          "url": "https://airport-magadan.ru/services/infrastructure/storage/",
+          "quote": "",
+          "method": "Firecrawl basic then web fallback / direct official PDF where noted",
+          "retrieved_on": "2026-11-10"
+        }
+      }
+    },
+    {
+      "code": "GYD",
+      "block": "parking",
+      "status": "partial",
+      "evidence": {
+        "code": "GYD",
+        "block": "parking",
+        "status": "partial",
+        "checked_fields": [
+          "title",
+          "hint",
+          "text"
+        ],
+        "ru_reviewed": {
+          "code": "GYD",
+          "block": "parking",
+          "id": "parking",
+          "title": "Парковка",
+          "hint": "15 мин бесплатно, 24/7",
+          "text": "Круглосуточно, больше 2 тысяч мест: 835 у терминала 1 и 1166 у терминала 2. Первые 15 минут бесплатно, до 2 часов 1 AZN, до 4 часов 2 AZN, до 12 часов 6 AZN, до суток 15 AZN, каждый следующий день +15 AZN. Оплата наличными, картой или онлайн (Tezöde, AzParkinq, Birbank).",
+          "source": "airport.az",
+          "url": "https://airport.az/ru/transport/parking/"
+        },
+        "assessment": "Числа/вместимость/оплата подтверждены. Сжатие тарифов в RU «до12ч6AZN, досуток15» скрывает ступени4–6ч3,6–8ч4,8–10ч5,12–14ч10. Лучше обозначить конкретные интервалы10–12 и14–24 либо полный ряд: иначе выглядит завышенной ценой для промежуточных периодов.",
+        "source_evidence": {
+          "url": "https://airport.az/ru/transport/parking/",
+          "quote": "10-12 часа: | 6 AZN",
+          "method": "Firecrawl basic then web fallback / direct official PDF where noted",
+          "retrieved_on": "2026-11-10",
+          "local_artifact": "ops/guide-reaudit-20261110/sources-european/GYD-parking.json",
+          "sha256": "a861be124a0988931fa526ccf2fae24bfa15f5246d5fc1b6360117342feb2ab6",
+          "cached_at": null,
+          "artifact_may_be_failed_attempt": false
+        }
+      }
+    },
+    {
+      "code": "HMA",
+      "block": "parking",
+      "status": "partial",
+      "evidence": {
+        "code": "HMA",
+        "block": "parking",
+        "status": "partial",
+        "checked_fields": [
+          "title",
+          "hint",
+          "text"
+        ],
+        "ru_reviewed": {
+          "code": "HMA",
+          "block": "parking",
+          "id": "parking",
+          "title": "Парковка",
+          "hint": "20 мин бесплатно",
+          "text": "Привокзальная площадь: до 20 минут бесплатно, от 21 минуты до 4 часов 300 ₽ в час, неполный час как полный. С 5-го часа 1200 ₽ за сутки, следующие сутки 1200 ₽. Повторный въезд в течение 20 минут платный, 300 ₽ в час.",
+          "source": "ugraavia.ru",
+          "url": "https://ugraavia.ru/services/parkovka"
+        },
+        "assessment": "Текст правил подтверждает 20 минут бесплатно. Полный тариф находится в изображении: в текущем проходе не удалось прочитать изображение средствами web; цены и повторный въезд не подтверждаю.",
+        "source_evidence": {
+          "url": "https://ugraavia.ru/services/parkovka",
+          "quote": "первые 20 минут с момента въезда",
+          "method": "Firecrawl basic then web fallback / direct official PDF where noted",
+          "retrieved_on": "2026-11-10",
+          "local_artifact": "ops/guide-reaudit-20261110/sources-european/HMA-parking.json",
+          "sha256": "0b77d22c3b964a5848aa16380559ec3c4051eda461e36fca3cf0e00835c1bc2e",
+          "cached_at": null,
+          "artifact_may_be_failed_attempt": true
+        }
+      }
+    },
+    {
+      "code": "HRG",
+      "block": "sleep",
+      "status": "partial",
+      "evidence": {
+        "code": "HRG",
+        "block": "sleep",
+        "status": "partial",
+        "urls": [
+          "https://pearlassist.com/maasp-dep-hrg",
+          "https://www.sleepinginairports.net/guides/hurghada-airport-guide.htm"
+        ],
+        "evidence": "Оператор Pearl подтверждает sleeping pods в T1; SleepingInAirports также подтверждает, но ссылается на airport website, независимость происхождения не установлена. Основное утверждение подтверждено первичным оператором."
+      }
+    },
+    {
+      "code": "IAR",
+      "block": "kids",
+      "status": "partial",
+      "evidence": {
+        "code": "IAR",
+        "block": "kids",
+        "status": "partial",
+        "checked_fields": [
+          "title",
+          "hint",
+          "text"
+        ],
+        "ru_reviewed": {
+          "code": "IAR",
+          "block": "kids",
+          "id": "kids",
+          "title": "С ребёнком",
+          "hint": "Зал вылета, бесплатно",
+          "text": "Комната пассажиров с детьми находится в зале вылета, в стерильной зоне. Пускают с детьми или детьми-инвалидами до 14 лет по посадочному талону. Бесплатно, до 3 часов перед вылетом днём и до 4 часов ночью. В зале прилёта комнаты нет.",
+          "source": "iaravia.ru",
+          "url": "https://iaravia.ru/for-passengers/services"
+        },
+        "assessment": "Расположение, бесплатность, boarding pass,3/4часа и отсутствие комнаты прилёта подтверждены. Источник сам неоднозначен по возрасту: вступление «с детьми или с детьми-инвалидами до14», ниже запрещает взрослых без детей дошкольного возраста. Наше общее «дети до14» шире второго правила; не объявляю подтверждённым доступ всех детей до14.",
+        "source_evidence": {
+          "url": "https://iaravia.ru/for-passengers/services",
+          "quote": "без детей дошкольного возраста",
+          "method": "Firecrawl basic then web fallback / direct official PDF where noted",
+          "retrieved_on": "2026-11-10"
+        }
+      }
+    },
+    {
+      "code": "IJK",
+      "block": "parking",
+      "status": "unavailable",
+      "evidence": {
+        "code": "IJK",
+        "block": "parking",
+        "status": "unavailable",
+        "checked_fields": [
+          "title",
+          "hint",
+          "text"
+        ],
+        "ru_reviewed": {
+          "code": "IJK",
+          "block": "parking",
+          "id": "parking",
+          "title": "Парковка",
+          "hint": "15 мин бесплатно",
+          "text": "До 15 минут бесплатно, от 16 до 30 минут 250 ₽, от 30 минут до 2 часов 500 ₽/час, больше 2 часов 750 ₽/сутки. VIP-парковка 300 ₽/час до 5 часов, без бесплатного времени. Выезд в течение 15 минут после оплаты. Для автомобилей инвалидов из федерального реестра бесплатно.",
+          "source": "izhavia.su",
+          "url": "https://izhavia.su/passazhiram/parkovka"
+        },
+        "assessment": "Web вернул403Forbidden; повторов/обходов/браузера после securitySTOP не было.",
+        "source_evidence": {
+          "url": "https://izhavia.su/passazhiram/parkovka",
+          "quote": "",
+          "method": "Firecrawl basic then web fallback / direct official PDF where noted",
+          "retrieved_on": "2026-11-10"
+        }
+      }
+    },
+    {
+      "code": "IJK",
+      "block": "transport",
+      "status": "partial",
+      "evidence": {
+        "code": "IJK",
+        "block": "transport",
+        "status": "partial",
+        "checked_fields": [
+          "title",
+          "hint",
+          "text"
+        ],
+        "ru_reviewed": {
+          "code": "IJK",
+          "block": "transport",
+          "id": "transport",
+          "title": "Как доехать",
+          "hint": "Трансфер в город 1500 ₽",
+          "text": "Трансфер аэропорта от привокзальной площади на машине с водителем. Ижевск и пригород до 30 км 1500 ₽, Воткинск 4000 ₽, Сарапул 5000 ₽, Чайковский 6000 ₽. Заказ за 3 часа и более на izhavia.su или после прилета в кассе аэропорта, при наличии свободных машин.",
+          "source": "izhavia.su",
+          "url": "https://izhavia.su/uslugi/transfer-iz-aeroporta-izhevska"
+        },
+        "assessment": "Цены/радиус/заказ3часа/касса/наличие авто подтверждены. Недостающие существенные условия источника: услуга на регулярных рейсах; пригород до30км от аэропорта по предварительному согласованию.",
+        "source_evidence": {
+          "url": "https://izhavia.su/uslugi/transfer-iz-aeroporta-izhevska",
+          "quote": "Услуга доступна на регулярных рейсах.",
+          "method": "Firecrawl basic then web fallback / direct official PDF where noted",
+          "retrieved_on": "2026-11-10"
+        }
+      }
+    },
+    {
+      "code": "IKT",
+      "block": "parking",
+      "status": "partial",
+      "evidence": {
+        "code": "IKT",
+        "block": "parking",
+        "status": "partial",
+        "checked_fields": [
+          "title",
+          "hint",
+          "text"
+        ],
+        "ru_reviewed": {
+          "code": "IKT",
+          "block": "parking",
+          "id": "parking",
+          "title": "Парковка",
+          "hint": "10 мин бесплатно",
+          "text": "Первые 10 минут бесплатно. 11–20 минут 100 ₽, до 1 часа 350 ₽, от 2 ч 41 мин до 24 часов 1200 ₽, каждые следующие сутки 1200 ₽. У каждого терминала своя парковка. Зона посадки и высадки: 10 минут бесплатно, дольше пени 2000 ₽ в час.",
+          "source": "iktport.ru",
+          "url": "https://iktport.ru/ru/passengers/route",
+          "url2": "https://iktport.ru/documents/parking/parking.pdf"
+        },
+        "assessment": "PDF визуально подтверждает все числа и пени2000/ч. Но RU «до1часа350» сглаживает ступени21–30мин200,31–40мин250,41–50мин300,51–60мин350. Рекомендуется «51–60мин350» для точности.",
+        "source_evidence": {
+          "url": "https://iktport.ru/ru/passengers/route",
+          "quote": "с 51 мин. до 60 мин.",
+          "method": "Firecrawl basic then web fallback / direct official PDF where noted",
+          "retrieved_on": "2026-11-10",
+          "url2": "https://iktport.ru/documents/parking/parking.pdf"
+        }
+      }
+    },
+    {
+      "code": "IKT",
+      "block": "storage",
+      "status": "partial",
+      "evidence": {
+        "code": "IKT",
+        "block": "storage",
+        "status": "partial",
+        "checked_fields": [
+          "title",
+          "hint",
+          "text"
+        ],
+        "ru_reviewed": {
+          "code": "IKT",
+          "block": "storage",
+          "id": "storage",
+          "title": "Камера хранения",
+          "hint": "610 ₽ в сутки",
+          "text": "Во внутреннем терминале на 1 этаже, оплата наличными или картой. 610 ₽ за место в сутки, багаж больше 40×40×50 см оплачивается по числу занятых мест. В международном терминале камера на 2 этаже, работает только при задержке рейсов. Телефон +7 (3952) 266-194.",
+          "source": "iktport.ru",
+          "url": "https://iktport.ru/ru/passengers/baggage",
+          "url2": "https://iktport.ru/documents/charges/2026/baggagefizl.pdf"
+        },
+        "assessment": "HTML+визуально PDF подтверждают все факты RU:610,размер40×40×50,расчётмест,этажи,оплата,только задержки международных,телефон. PDF имеет существенную доплату: оценка выше2000₽ +100₽ за каждую следующую1000₽; её нет в кратком блоке, поэтому базовая цена верна, полнота ограничена.",
+        "source_evidence": {
+          "url": "https://iktport.ru/ru/passengers/baggage",
+          "quote": "за 1 сутки/место",
+          "method": "Firecrawl basic then web fallback / direct official PDF where noted",
+          "retrieved_on": "2026-11-10",
+          "url2": "https://iktport.ru/documents/charges/2026/baggagefizl.pdf"
+        }
+      }
+    },
+    {
+      "code": "IST",
+      "block": "storage",
+      "status": "unavailable",
+      "evidence": {
+        "code": "IST",
+        "block": "storage",
+        "status": "unavailable",
+        "urls": [
+          "https://www.istairport.com/en/services/discover/airport-facilities/left-luggage-offices-and-storage-lockers?locale=en"
+        ],
+        "evidence": "Web timeout; native browser evidence не сохранено до security STOP."
+      }
+    },
+    {
+      "code": "KRR",
+      "block": "parking",
+      "status": "unavailable",
+      "evidence": {
+        "code": "KRR",
+        "block": "parking",
+        "status": "unavailable",
+        "urls": [
+          "https://krr.aero/transport/parking/"
+        ],
+        "checked_at": "2026-11-10",
+        "reviewer": "review_russian",
+        "evidence": [
+          "Обычный requests завершился RemoteDisconnected;сменаUA/обход не выполнялись."
+        ]
+      }
+    },
+    {
+      "code": "KRR",
+      "block": "storage",
+      "status": "unavailable",
+      "evidence": {
+        "code": "KRR",
+        "block": "storage",
+        "status": "unavailable",
+        "urls": [
+          "https://krr.aero/services/bagazh/kamera-khraneniya/"
+        ],
+        "checked_at": "2026-11-10",
+        "reviewer": "review_russian",
+        "evidence": [
+          "Обычный requests завершился RemoteDisconnected;сменаUA/обход не выполнялись."
+        ]
+      }
+    },
+    {
+      "code": "KRR",
+      "block": "transport",
+      "status": "unavailable",
+      "evidence": {
+        "code": "KRR",
+        "block": "transport",
+        "status": "unavailable",
+        "urls": [
+          "https://krr.aero/transport/obshhestvennyj-transport/",
+          "https://krr.aero/transport/taxi/"
+        ],
+        "checked_at": "2026-11-10",
+        "reviewer": "review_russian",
+        "evidence": [
+          "Обычный requests завершился RemoteDisconnected;сменаUA/обход не выполнялись."
+        ]
+      }
+    },
+    {
+      "code": "KZN",
+      "block": "parking",
+      "status": "unavailable",
+      "evidence": {
+        "code": "KZN",
+        "block": "parking",
+        "status": "unavailable",
+        "urls": [
+          "https://kazan.aero/services/parking/"
+        ],
+        "evidence": "Web не вернул содержательного текста; native browser evidence не сохранено до security STOP."
+      }
+    },
+    {
+      "code": "LED",
+      "block": "parking",
+      "status": "partial",
+      "evidence": {
+        "code": "LED",
+        "block": "parking",
+        "id": "parking",
+        "title": "Парковка",
+        "hint": "15 мин у входа бесплатно",
+        "text": "У терминала первые 15 минут бесплатно, потом 2000 ₽ за каждые 30 минут. Заезжать можно не чаще раза в 30 минут. P2 (краткосрочная): 450 ₽ за 30 минут, 2–4 минуты пешком. P4 (долгосрочная): 1100 ₽ за первые сутки, от 14 суток 700 ₽ в сутки. Бесплатная парковка P0 на 120 мест стоит на Пулковском шоссе в 3 км от аэропорта.",
+        "source": "pulkovoairport.ru",
+        "url": "https://pulkovoairport.ru/transport/",
+        "i": 13,
+        "status": "partial",
+        "evidence": "P2/P4/P0 and15min correct; source2000 applies16–30 then31–60 thenevery30min. Text compresses to every30after15, potentially misleading exact boundary.",
+        "proposal": "State source brackets16–30,31–60 then each30min.",
+        "source_file": "fact-asian-sources.json",
+        "secondary_evidence_indices": []
+      }
+    },
+    {
+      "code": "MMK",
+      "block": "kids",
+      "status": "unavailable",
+      "evidence": {
+        "code": "MMK",
+        "block": "kids",
+        "id": "kids",
+        "title": "С ребёнком",
+        "hint": "2 этаж, бесплатно, 24/7",
+        "text": "Комната матери и ребёнка на втором этаже в левом крыле аэровокзала, бесплатно и круглосуточно. Для пассажиров с детьми до 7 лет, детей-инвалидов до 14 лет и женщин во второй половине беременности. Внутрь только с ручной кладью, багаж сдаётся в камеру хранения.",
+        "source": "mmkavia.ru",
+        "url": "https://mmkavia.ru/passengers/information/babysroom/",
+        "i": 18,
+        "status": "unavailable",
+        "evidence": "Basic fetch returned only removed base64image, no readable source.",
+        "source_file": "fact-asian-sources.json",
+        "secondary_evidence_indices": []
+      }
+    },
+    {
+      "code": "NJC",
+      "block": "lounges",
+      "status": "partial",
+      "evidence": {
+        "code": "NJC",
+        "block": "lounges",
+        "id": "lounges",
+        "title": "Бизнес-залы",
+        "hint": "Терминал 1, 24/7",
+        "text": "Бизнес-зал на 1 этаже терминала 1, работает круглосуточно. Пускают пассажиров бизнес-класса и владельцев элитных карт авиакомпаний, остальных за плату при свободных местах. Вылет 7950 ₽ за 2 ч 30 мин, каждый следующий час 1141 ₽. Прилёт, встреча или проводы 4050 ₽. Дети 2–12 лет 70 % тарифа, до 2 лет бесплатно.",
+        "source": "nv-aero.ru",
+        "url": "https://nv-aero.ru/Home/Show?_id=5109&_cl=t",
+        "url2": "https://nv-aero.ru/Home/doc/Rates/%D0%9F%D0%BB%D0%B0%D1%82%D0%BD%D1%8B%D0%B5%20%D1%83%D1%81%D0%BB%D1%83%D0%B3%D0%B8%20%D1%81%2001.01.2026.pdf",
+        "i": 20,
+        "status": "partial",
+        "evidence": "Location24h/access and tariff rates confirmed from page+PDF19; PDF has contradictory age2inclusivefree vs2–12paid; RUunder2 not fully resolves source contradiction.",
+        "source_file": "fact-asian-sources.json",
+        "secondary_evidence_indices": [
+          19
+        ]
+      }
+    },
+    {
+      "code": "NNM",
+      "block": "parking",
+      "status": "unavailable",
+      "evidence": {
+        "code": "NNM",
+        "block": "parking",
+        "status": "unavailable",
+        "urls": [
+          "https://avianao.ru/?page=parking"
+        ],
+        "checked_at": "2026-11-10",
+        "reviewer": "review_russian",
+        "evidence": [
+          "HTTP200 отдаёт динамическую оболочку без тарифнойтаблицы;файлnnm-parking.txt. Браузерпереданroot."
+        ],
+        "artifacts": [
+          "ops/guide-reaudit-20261110/russian-sources/nnm-parking.txt"
+        ]
+      }
+    },
+    {
+      "code": "NOZ",
+      "block": "parking",
+      "status": "unavailable",
+      "evidence": {
+        "code": "NOZ",
+        "block": "parking",
+        "id": "parking",
+        "title": "Парковка",
+        "hint": "15 мин бесплатно",
+        "text": "P1 только посадка и высадка, стоянка запрещена. P2 краткосрочная: 15 минут бесплатно, 16–60 минут 300 ₽, со 2 по 4 час 100 ₽/час, больше 4 часов 700 ₽/сутки. P3 долгосрочная: 15 минут бесплатно, 500 ₽/сутки до 6 суток. Неполные сутки оплачиваются как полные.",
+        "source": "aerokuz.ru",
+        "url": "https://www.aerokuz.ru/services/parking/",
+        "i": 24,
+        "status": "unavailable",
+        "evidence": "Onlycookie/loadingtext returned; no parking content.",
+        "source_file": "fact-asian-sources.json",
+        "secondary_evidence_indices": []
+      }
+    },
+    {
+      "code": "NSK",
+      "block": "about",
+      "status": "partial",
+      "evidence": {
+        "code": "NSK",
+        "block": "about",
+        "text": "Аэропорт на юге Таймырского полуострова, на севере Красноярского края. Оператор ООО «Аэропорт «Норильск». Четыре авиакомпании выполняют регулярные рейсы в десять городов России, пассажиропоток за 2024 год 883 тыс. человек.",
+        "url": "https://airport-norilsk.ru/ob-aeroporte/",
+        "i": 25,
+        "status": "partial",
+        "evidence": "Geography,4carriers10settlements883k2024 confirmed; operator not in thispage but LLC in sleep source26.",
+        "source_file": "fact-asian-sources.json",
+        "secondary_evidence_indices": [
+          26
+        ]
+      }
+    },
+    {
+      "code": "NSK",
+      "block": "sleep",
+      "status": "partial",
+      "evidence": {
+        "code": "NSK",
+        "block": "sleep",
+        "id": "sleep",
+        "title": "Где поспать",
+        "hint": "Профилакторий, 24/7",
+        "text": "Профилакторий аэропорта на привокзальной площади. 30 номеров на 55 мест, работает круглосуточно. Селят пассажиров и других граждан по паспорту, оплата за целые сутки, 100% предоплата. Телефон +7 (3919) 31-53-70.",
+        "source": "airport-norilsk.ru",
+        "url": "https://airport-norilsk.ru/uslugi/profilaktoriy/",
+        "i": 26,
+        "status": "partial",
+        "evidence": "Location30rooms55people24hpassportprepaymentphone confirmed; whole-day rule conflicts internally with dated2026 tariff table3h/6h rates.",
+        "proposal": "Remove absolute whole-day billing claim; refer to duration/category.",
+        "source_file": "fact-asian-sources.json",
+        "secondary_evidence_indices": []
+      }
+    },
+    {
+      "code": "OSW",
+      "block": "parking",
+      "status": "unavailable",
+      "evidence": {
+        "code": "OSW",
+        "block": "parking",
+        "id": "parking",
+        "title": "Парковка",
+        "hint": "15 мин бесплатно",
+        "text": "Краткосрочная парковка с 01.01.2026: до 15 минут бесплатно, до часа 250 ₽, до суток 500 ₽, от суток 500 ₽. Территория не охраняется.",
+        "source": "aviaorsk.ru",
+        "url": "https://aviaorsk.ru/transport/parking/tariff/",
+        "i": 32,
+        "status": "unavailable",
+        "evidence": "Onlybase64image placeholder returned.",
+        "source_file": "fact-asian-sources.json",
+        "secondary_evidence_indices": []
+      }
+    },
+    {
+      "code": "OVB",
+      "block": "about",
+      "status": "unavailable",
+      "evidence": {
+        "code": "OVB",
+        "block": "about",
+        "status": "unavailable",
+        "urls": [
+          "https://tolmachevo.ru/airport/info/"
+        ],
+        "evidence": "Защищённый официальный сайт: обычный браузер требовался; сохранённого AX нет. Не делались requests/bypass."
+      }
+    },
+    {
+      "code": "OVB",
+      "block": "lounges",
+      "status": "unavailable",
+      "evidence": {
+        "code": "OVB",
+        "block": "lounges",
+        "status": "unavailable",
+        "urls": [
+          "https://tolmachevo.ru/services/comfort/biznes-premier/",
+          "https://tolmachevo.ru/services/comfort/businessm/"
+        ],
+        "evidence": "Защищённый официальный сайт: обычный браузер требовался; сохранённого AX нет. Не делались requests/bypass."
+      }
+    },
+    {
+      "code": "OVB",
+      "block": "parking",
+      "status": "unavailable",
+      "evidence": {
+        "code": "OVB",
+        "block": "parking",
+        "status": "unavailable",
+        "urls": [
+          "https://tolmachevo.ru/transport/parking/tariff/"
+        ],
+        "evidence": "Защищённый официальный сайт: обычный браузер требовался; сохранённого AX нет. Не делались requests/bypass."
+      }
+    },
+    {
+      "code": "OVB",
+      "block": "transport",
+      "status": "unavailable",
+      "evidence": {
+        "code": "OVB",
+        "block": "transport",
+        "status": "unavailable",
+        "urls": [
+          "https://tolmachevo.ru/transport/how/bus/111/",
+          "https://tolmachevo.ru/transport/how/ob-tolmchevo-ob/"
+        ],
+        "evidence": "Защищённый официальный сайт: обычный браузер требовался; сохранённого AX нет. Не делались requests/bypass."
+      }
+    },
+    {
+      "code": "PEE",
+      "block": "parking",
+      "status": "partial",
+      "evidence": {
+        "code": "PEE",
+        "block": "parking",
+        "status": "partial",
+        "url": "https://aviaperm.ru/transport/parking/tariff/",
+        "evidence_file": "browser-PEE-parking.txt",
+        "evidence_sha256": "2c624d4ec2ae9d90a1df8fea24852cf6130a4552a16b977f3dad3d2d229be087",
+        "evidence": "Страница подтверждает круглосуточную работу парковочного комплекса и общие правила.",
+        "caveat": "Тарифы в графике/PDF не попали в AX. Числа 15/10 минут, 300/500/400 ₽ по этому файлу не подтверждены."
+      }
+    },
+    {
+      "code": "PEE",
+      "block": "storage",
+      "status": "unavailable",
+      "evidence": {
+        "code": "PEE",
+        "block": "storage",
+        "status": "unavailable",
+        "urls": [
+          "https://aviaperm.ru/services/infrastructure/storage/"
+        ],
+        "checked_at": "2026-11-10",
+        "reviewer": "review_russian",
+        "evidence": [
+          "CLAUDE требует обычный браузер для этого домена. IAB недоступен;Chrome extension createTab/tabs.new ошибка timeoutMs. Обход защиты не выполнялся. Root проводит nativeChrome проверку отдельно."
+        ]
+      }
+    },
+    {
+      "code": "PEK",
+      "block": "parking",
+      "status": "unavailable",
+      "evidence": {
+        "code": "PEK",
+        "block": "parking",
+        "status": "unavailable",
+        "urls": [
+          "https://en.bcia.com.cn/tcc.html"
+        ],
+        "checked_at": "2026-11-10",
+        "reviewer": "review_russian",
+        "evidence": [
+          "HTTP200 отдаёт только Please enable JavaScript and refresh the page;защита не обходилась."
+        ],
+        "artifacts": [
+          "ops/guide-reaudit-20261110/russian-sources/ee14b112d5fb.txt"
+        ]
+      }
+    },
+    {
+      "code": "PVG",
+      "block": "storage",
+      "status": "unavailable",
+      "evidence": {
+        "code": "PVG",
+        "block": "storage",
+        "id": "storage",
+        "title": "Камера хранения",
+        "hint": "Терминалы 1 и 2, от 15 юаней",
+        "text": "Терминал 1: зал вылета на этаже 3 между дверями 4 и 5 и зал прилёта на этаже 1 напротив двери 7. Терминал 2: зал вылета на этаже 3 у острова A и зал международного прилёта у выхода 2A. Все пункты работают с 06:00 до 24:00, хранят до 2 месяцев, при сдаче нужен документ, вещи просвечивают. Ручная кладь до 20 дюймов — 15, 20 и 25 юаней за срок до 4, 10 и 24 часов; багаж от 20 до 28 дюймов — 30, 40 и 45 юаней; больше 28 дюймов — 60 юаней за место в сутки.",
+        "source": "shanghaiairport.com",
+        "url": "https://www.shanghaiairport.com/ensh/pdjc/index.html",
+        "i": 34,
+        "status": "unavailable",
+        "evidence": "Facilitymenu only; luggage detail dynamically absent from basic markdown.",
+        "source_file": "fact-asian-sources.json",
+        "secondary_evidence_indices": []
+      }
+    },
+    {
+      "code": "SCW",
+      "block": "parking",
+      "status": "partial",
+      "evidence": {
+        "code": "SCW",
+        "block": "parking",
+        "id": "parking",
+        "title": "Парковка",
+        "hint": "ул. Колхозная, 3Б",
+        "text": "Автостоянка аэропорта на ул. Колхозной, 3Б, ещё места на ул. Колхозной напротив аэровокзала. У пандуса аэровокзала выделена зона посадки и высадки пассажиров с инвалидностью.",
+        "source": "komiaviatrans.ru",
+        "url": "https://komiaviatrans.ru/airport/standart.php?id=1",
+        "i": 40,
+        "status": "partial",
+        "evidence": "Kolhoznayaopposite and disabilityramp confirmed,3Baddress absent.",
+        "source_file": "fact-asian-sources.json",
+        "secondary_evidence_indices": []
+      }
+    },
+    {
+      "code": "SGC",
+      "block": "lounges",
+      "status": "partial",
+      "evidence": {
+        "code": "SGC",
+        "block": "lounges",
+        "status": "partial",
+        "urls": [
+          "https://www.airport-surgut.ru/surgut/services/biznes-zal/",
+          "https://www.airport-surgut.ru/surgut/services/superior-comfort/"
+        ],
+        "checked_at": "2026-11-10",
+        "reviewer": "review_russian",
+        "evidence": [
+          "Расположение,24/7,ограничение на внутренние,ONPASS3500/2500 подтверждены двумястраницами.",
+          "Первый зал допускает бизнес4перечисленныхавиакомпаний;элитныекарты толькона соответствующихрейсах. RU обобщает доступ."
+        ],
+        "fix": "Указать доступ по правилам авиакомпаний;при расширении добавить лимиты4ч/2ч30м/ONPASS3ч.",
+        "artifacts": [
+          "ops/guide-reaudit-20261110/russian-sources/f07ab41d8b36.txt",
+          "ops/guide-reaudit-20261110/russian-sources/2ae4719b4550.txt"
+        ]
+      }
+    },
+    {
+      "code": "SKX",
+      "block": "parking",
+      "status": "unavailable",
+      "evidence": {
+        "code": "SKX",
+        "block": "parking",
+        "status": "unavailable",
+        "urls": [
+          "https://aviamordovia.ru/transport/parking/tariff/"
+        ],
+        "checked_at": "2026-11-10",
+        "reviewer": "review_russian",
+        "evidence": [
+          "CLAUDE требует обычный браузер для этого домена. IAB недоступен;Chrome extension createTab/tabs.new ошибка timeoutMs. Обход защиты не выполнялся. Root проводит nativeChrome проверку отдельно."
+        ]
+      }
+    },
+    {
+      "code": "SSH",
+      "block": "lounges",
+      "status": "partial",
+      "evidence": {
+        "code": "SSH",
+        "block": "lounges",
+        "status": "partial",
+        "urls": [
+          "https://www.prioritypass.com/en-GB/lounges/egypt/sharm-el-sheikh-international/ssh-pearl-lounge",
+          "https://en.dragonpass.com.cn/lounge/303489",
+          "https://www.sleepinginairports.net/guides/sharm-el-sheikh-airport-guide.htm"
+        ],
+        "evidence": "Priority Pass и DragonPass: T1 после passport/security, international departures only, 24h, максимум 3 часа. Лимит опущен в RU; paid pass по третьему источнику в этом проходе не перепроверен."
+      }
+    },
+    {
+      "code": "ULV",
+      "block": "about",
+      "status": "partial",
+      "evidence": {
+        "code": "ULV",
+        "block": "about",
+        "text": "Международный аэропорт Ульяновск (Баратаевка) имени Н. М. Карамзина, адрес: ул. Авиационная, 20. Оператор ОАО «Аэропорт Ульяновск». Реконструированный аэровокзал введен в 2013 году, пропускная способность 240 пассажиров в час.",
+        "url": "https://ulkaero.ru/ru/about",
+        "i": 53,
+        "status": "partial",
+        "evidence": "OJSCoperator,2013reconstruction240/hour,internationalstatusconfirmed. Karamzinname andAviatsionnaya20absentfromretrievedaboutpage.",
+        "source_file": "fact-asian-sources.json",
+        "secondary_evidence_indices": []
+      }
+    },
+    {
+      "code": "UUD",
+      "block": "parking",
+      "status": "unavailable",
+      "evidence": {
+        "code": "UUD",
+        "block": "parking",
+        "id": "parking",
+        "title": "Парковка",
+        "hint": "15 мин бесплатно",
+        "text": "Краткосрочная P1 у терминала: до 15 минут бесплатно, 16–60 минут 500 ₽, второй час 300 ₽, третий и четвёртый по 200 ₽, от 241 минуты 1200 ₽, не дольше суток. Долговременная: до 3 суток 800 ₽ в сутки, с 4-х по 6-е 500 ₽.",
+        "source": "airportbaikal.ru",
+        "url": "https://www.airportbaikal.ru/transport/parking/tariff/",
+        "i": 55,
+        "status": "unavailable",
+        "evidence": "Basic retrieval returned only Base64-Image-Removed placeholder; no readable content. No bypass attempted.",
+        "source_file": "fact-asian-sources.json",
+        "secondary_evidence_indices": []
+      }
+    },
+    {
+      "code": "UUD",
+      "block": "transport",
+      "status": "unavailable",
+      "evidence": {
+        "code": "UUD",
+        "block": "transport",
+        "id": "transport",
+        "title": "Как доехать",
+        "hint": "Автобусы 10, 55, 77",
+        "text": "Городские автобусы № 10, 55 и 77 идут через центр (остановка «Площадь Советов») до привокзальной площади аэропорта. Начало движения в будни в 6:15, в выходные в 7:00, интервал 7–10 минут; проезд на № 55 стоит 40 ₽. На машине от центра около 20 минут.",
+        "source": "airportbaikal.ru",
+        "url": "https://www.airportbaikal.ru/transport/how/bus/55",
+        "i": 56,
+        "status": "unavailable",
+        "evidence": "Basic retrieval returned only Base64-Image-Removed placeholder; no readable content. No bypass attempted.",
+        "source_file": "fact-asian-sources.json",
+        "secondary_evidence_indices": []
+      }
+    },
+    {
+      "code": "UUD",
+      "block": "wifi",
+      "status": "unavailable",
+      "evidence": {
+        "code": "UUD",
+        "block": "wifi",
+        "id": "wifi",
+        "title": "Wi‑Fi",
+        "hint": "Сеть FreeAirportBaikalRT",
+        "text": "Бесплатный Wi‑Fi: сеть FreeAirportBaikalRT, вход по номеру телефона с кодом из SMS.",
+        "source": "airportbaikal.ru",
+        "url": "https://www.airportbaikal.ru/services/infrastructure/wifi/",
+        "i": 57,
+        "status": "unavailable",
+        "evidence": "Basic retrieval returned only Base64-Image-Removed placeholder; no readable content. No bypass attempted.",
+        "source_file": "fact-asian-sources.json",
+        "secondary_evidence_indices": []
+      }
+    },
+    {
+      "code": "UUS",
+      "block": "about",
+      "status": "partial",
+      "evidence": {
+        "code": "UUS",
+        "block": "about",
+        "text": "Аэровокзал находится в планировочном районе Хомутово на южной окраине Южно-Сахалинска, в 10 км от центра. Аэровокзальный комплекс обслуживает АО «Аэровокзал Южно-Сахалинск», площадь комплекса более 47 тыс. кв. м.",
+        "url": "https://uusaero.ru/how-to-get/",
+        "i": 58,
+        "status": "partial",
+        "evidence": "Khomutovo,southcity,10kmconfirmed. Operatorand47000sqmnotonretrievedhow-to-getpage.",
+        "source_file": "fact-asian-sources.json",
+        "secondary_evidence_indices": []
+      }
+    },
+    {
+      "code": "UUS",
+      "block": "parking",
+      "status": "unavailable",
+      "evidence": {
+        "code": "UUS",
+        "block": "parking",
+        "id": "parking",
+        "title": "Парковка",
+        "hint": "15 мин бесплатно",
+        "text": "Зона посадки и высадки: 15 мин бесплатно, до 60 мин 400 ₽, затем 1200 ₽ за первые сутки и 600 ₽ за следующие. Долгосрочная P1: 500 ₽/сутки с 1 по 5 сутки, дальше 400 ₽. Для маломобильных пассажиров бесплатно при знаке «Инвалид».",
+        "source": "uusaero.ru",
+        "url": "https://uusaero.ru/services/parking/",
+        "i": 59,
+        "status": "unavailable",
+        "evidence": "Basic fetch returned77% loading/cookieplaceholder, no parking facts.",
+        "source_file": "fact-asian-sources.json",
+        "secondary_evidence_indices": []
+      }
+    },
+    {
+      "code": "UUS",
+      "block": "storage",
+      "status": "unavailable",
+      "evidence": {
+        "code": "UUS",
+        "block": "storage",
+        "id": "storage",
+        "title": "Камера хранения",
+        "hint": "1 этаж, от 500 ₽",
+        "text": "Камера хранения на 1 этаже аэровокзала. Обычный багаж: 500 ₽ за первые сутки, 200 ₽ за следующие. Негабарит больше 203 см: 850 ₽ и 400 ₽. Одно место до 30 кг, срок до 30 суток.",
+        "source": "uusaero.ru",
+        "url": "https://uusaero.ru/services/storage/",
+        "i": 60,
+        "status": "unavailable",
+        "evidence": "Basic fetch returned58% loading/cookieplaceholder, no storage facts.",
+        "source_file": "fact-asian-sources.json",
+        "secondary_evidence_indices": []
+      }
+    },
+    {
+      "code": "VKO",
+      "block": "kids",
+      "status": "unavailable",
+      "evidence": {
+        "code": "VKO",
+        "block": "kids",
+        "id": "kids",
+        "title": "С ребёнком",
+        "hint": "Терминал А, 2 этаж",
+        "text": "Детский зал ожидания на 2-м этаже терминала А, круглосуточно и бесплатно, не раньше чем за 6 часов до вылета. Принимают детей до 7 лет (с ОВЗ до 12) с одним взрослым и беременных во второй половине срока. Багаж и коляски внутрь не берут, телефон +7 (495) 436-29-26.",
+        "source": "vnukovo.ru",
+        "url": "https://www.vnukovo.ru/ru/for-passengers/services/komnata-materi-i-rebenka/",
+        "i": 62,
+        "status": "unavailable",
+        "evidence": "Basic retrieval returned only Base64-Image-Removed placeholder; no readable content. No bypass attempted.",
+        "source_file": "fact-asian-sources.json",
+        "secondary_evidence_indices": []
+      }
+    },
+    {
+      "code": "VKO",
+      "block": "parking",
+      "status": "unavailable",
+      "evidence": {
+        "code": "VKO",
+        "block": "parking",
+        "id": "parking",
+        "title": "Парковка",
+        "hint": "15 мин бесплатно",
+        "text": "Заезд на привокзальную площадь бесплатный на 15 минут, всего не больше 60 минут в сутки. Многоуровневые паркинги № 1 и № 2 по 350 мест каждый. Тариф: 1-й час 600 ₽, 2-й час 400 ₽, дальше 1500 ₽ за сутки. Подземный паркинг в отеле DoubleTree через дорогу стоит 2000 ₽ в сутки.",
+        "source": "vnukovo.ru",
+        "url": "https://www.vnukovo.ru/ru/for-passengers/kak-dobratsya/parkovka/",
+        "i": 63,
+        "status": "unavailable",
+        "evidence": "Basic retrieval returned only Base64-Image-Removed placeholder; no readable content. No bypass attempted.",
+        "source_file": "fact-asian-sources.json",
+        "secondary_evidence_indices": []
+      }
+    },
+    {
+      "code": "VOG",
+      "block": "kids",
+      "status": "unavailable",
+      "evidence": {
+        "code": "VOG",
+        "block": "kids",
+        "status": "unavailable",
+        "urls": [
+          "https://airportvolgograd.ru/passengers/information/babysroom/"
+        ],
+        "checked_at": "2026-11-10",
+        "reviewer": "review_russian",
+        "evidence": [
+          "CLAUDE требует обычный браузер для этого домена. IAB недоступен;Chrome extension createTab/tabs.new ошибка timeoutMs. Обход защиты не выполнялся. Root проводит nativeChrome проверку отдельно."
+        ]
+      }
+    },
+    {
+      "code": "VOG",
+      "block": "storage",
+      "status": "unavailable",
+      "evidence": {
+        "code": "VOG",
+        "block": "storage",
+        "status": "unavailable",
+        "urls": [
+          "https://airportvolgograd.ru/services/infrastructure/storage/"
+        ],
+        "checked_at": "2026-11-10",
+        "reviewer": "review_russian",
+        "evidence": [
+          "CLAUDE требует обычный браузер для этого домена. IAB недоступен;Chrome extension createTab/tabs.new ошибка timeoutMs. Обход защиты не выполнялся. Root проводит nativeChrome проверку отдельно."
+        ]
+      }
+    },
+    {
+      "code": "VVO",
+      "block": "about",
+      "status": "partial",
+      "evidence": {
+        "code": "VVO",
+        "block": "about",
+        "status": "partial",
+        "urls": [
+          "https://aerovlad.ru/ru/about"
+        ],
+        "checked_at": "2026-11-10",
+        "reviewer": "review_russian",
+        "evidence": [
+          "Артём,40+направлений,20+авиакомпаний подтверждены. Залы внутренних/международныхвылетов не найдены в указаннойaboutстранице."
+        ],
+        "fix": "Добавить отдельный официальный источник залов либо убрать эту фразу.",
+        "artifacts": [
+          "ops/guide-reaudit-20261110/russian-sources/8e485e6d1489.txt"
+        ]
+      }
+    },
+    {
+      "code": "ZIA",
+      "block": "parking",
+      "status": "partial",
+      "evidence": {
+        "code": "ZIA",
+        "block": "parking",
+        "id": "parking",
+        "title": "Парковка",
+        "hint": "15 мин бесплатно",
+        "text": "Краткосрочная зона: первые 15 мин бесплатно, первый час 350 ₽, со 2 по 4 час 250 ₽/час, с 5 часа 3000 ₽/сутки. Долгосрочная зона: 700 ₽/сутки с 1 по 5 сутки, 100 ₽/сутки с 6 по 13, 700 ₽/сутки с 14 суток. Повторный бесплатный въезд не раньше чем через 45 мин.",
+        "source": "zia.aero",
+        "url": "https://zia.aero/transport/parking/",
+        "i": 64,
+        "status": "partial",
+        "evidence": "Allrates/24hunitconfirmed. Repeatfree45min is measured AFTER END OF FIRST15MIN PERIOD, RUomits anchor, potentially read as45minafterexit.",
+        "proposal": "Повторный бесплатный въезд — не ранее чем через45минут после завершения первого15-минутного периода.",
+        "source_file": "fact-asian-sources.json",
+        "secondary_evidence_indices": []
+      }
+    }
+  ],
+  "limitation_counts": {
+    "unavailable": 38,
+    "partial": 19
+  },
+  "additional_krr_review": {
+    "code": "KRR",
+    "block": "storage",
+    "resolution": "Hint400 ₽ за первые сутки matches RUbody and removes unsupported24h; baseline sourceunavailable unchanged",
+    "file_sha256": "f79420dcf30e36779e67d90c92ed9bcbb5142c2bf4bf8a102fbe727ddeb5b1f3",
+    "ru_hint": "400 ₽ за первые сутки",
+    "full_source_pass": false
+  }
+}

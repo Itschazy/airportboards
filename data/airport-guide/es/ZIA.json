@@ -10,12 +10,12 @@
   "parking": {
    "title": "Aparcamiento",
    "hint": "15 min gratis",
-   "text": "Zona de corta estancia: los primeros 15 min gratis, la primera hora 350 ₽, de la 2.ª a la 4.ª hora 250 ₽/hora, a partir de la 5.ª hora 3000 ₽ por cada 24 horas. Zona de larga estancia: 700 ₽ por cada periodo de 24 horas del 1.º al 5.º, 100 ₽ del 6.º al 13.º y 700 ₽ a partir del 14.º. Una nueva entrada gratuita solo es posible pasados 45 min."
+   "text": "Zona de corta estancia: los primeros 15 min gratis, la primera hora 350 ₽, de la 2.ª a la 4.ª hora 250 ₽/hora, a partir de la 5.ª hora 3000 ₽ por cada 24 horas. Zona de larga estancia: 700 ₽ por cada periodo de 24 horas del 1.º al 5.º, 100 ₽ del 6.º al 13.º y 700 ₽ a partir del 14.º. Una nueva entrada gratuita es posible como mínimo 45 minutos después de finalizar el primer periodo gratuito de 15 minutos."
   },
   "storage": {
    "title": "Consigna",
    "hint": "Nivel 2, 24/7, desde 600 ₽",
-   "text": "Consigna en el nivel 2, en la zona pública; funciona día y noche. Tarifa «Standard»: 700 ₽ las primeras 24 horas, 300 ₽ por cada 24 horas siguientes. «Standard Lite»: 600 ₽ y 300 ₽. Equipaje de gran tamaño desde 1150 ₽. Peso de un bulto: hasta 30 kg; plazo de custodia de hasta 6 meses."
+   "text": "Consigna en el nivel 2, en la zona pública; funciona día y noche. Tarifa «Standard»: 700 ₽ por el primer día natural hasta las 00:00 y 300 ₽ por cada día siguiente. «Standard Lite»: 600 ₽ por el primer día natural y después 300 ₽. Los días naturales incompletos se cobran íntegros. Equipaje de gran tamaño desde 1150 ₽. Cada bulto puede pesar hasta 30 kg."
   },
   "kids": {
    "title": "Con niños",

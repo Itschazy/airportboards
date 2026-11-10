@@ -10,7 +10,7 @@
   "storage": {
    "title": "Gepäckaufbewahrung",
    "hint": "Sektor C, Ebene 1, 24/7",
-   "text": "Sektor C, Ebene 1, rund um die Uhr geöffnet. Die ersten 24 Stunden kosten ab 600 ₽ pro Gepäckstück, je weitere 24 Stunden ab 300 ₽. Ein Gepäckstück wiegt höchstens 30 kg, die Summe der drei Maße beträgt höchstens 203 cm. Gegenstände, die nicht innerhalb von 30 Tagen abgeholt werden, gelten als herrenlos. Telefon 8 (862) 249-78-46."
+   "text": "Sektor C, Ebene 1, rund um die Uhr geöffnet. Der erste Tag kostet ab 600 ₽ pro Gepäckstück, jeder weitere Tag ab 300 ₽. Ein Gepäckstück wiegt höchstens 30 kg, die Summe der drei Maße beträgt höchstens 203 cm. Gegenstände, die nicht innerhalb von 30 Tagen abgeholt werden, gelten als herrenlos. Telefon 8 (862) 249-78-46."
   },
   "sleep": {
    "title": "Schlafen",
@@ -30,7 +30,7 @@
   "parking": {
    "title": "Parken",
    "hint": "15 Minuten kostenlos",
-   "text": "Auf dem Vorplatz (Einfahrten 1–6) sind die ersten 15 Minuten kostenlos, danach 400 ₽ pro Stunde. Auf dem Tagesparkplatz (Einfahrten 31, 32) sind die ersten 15 Minuten kostenlos, danach 300 ₽ pro Stunde, bei mehr als 3 Stunden 1 500 ₽ je 24 Stunden. Er liegt 100 m vor dem Haupteingang, rechts abbiegen. Ein Ausweichparkplatz liegt etwa 400 m vom Terminal entfernt."
+   "text": "Auf dem Vorplatz (Einfahrten 1–6) sind die ersten 15 Minuten kostenlos, danach 400 ₽ pro Stunde. Auf dem Tagesparkplatz (Einfahrten 31, 32) sind die ersten 15 Minuten kostenlos, danach 300 ₽ pro Stunde, bei mehr als 3 Stunden 1 500 ₽ pro Tag. Er liegt 100 m vor dem Haupteingang, rechts abbiegen. Ein Ausweichparkplatz liegt etwa 400 m vom Terminal entfernt."
   },
   "wifi": {
    "title": "Wi‑Fi",

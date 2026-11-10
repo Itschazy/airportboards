@@ -15,12 +15,12 @@
   "lounges": {
    "title": "Salas VIP",
    "hint": "Terminal 1, 24/7",
-   "text": "Sala business en el nivel 1 de la terminal 1, abierta día y noche. Admite a pasajeros de clase business y titulares de tarjetas élite de aerolíneas; a los demás, previo pago si hay plazas libres. Salida: 7950 ₽ por 2 h 30 min, cada hora siguiente 1141 ₽. Llegada, recibimiento o despedida: 4050 ₽. Niños de 2–12 años, 70 % de la tarifa; menores de 2 años gratis."
+   "text": "Sala business en el nivel 1 de la terminal 1, abierta día y noche. Los pasajeros de clase business y los titulares de tarjetas élite reciben el servicio según los acuerdos con las aerolíneas; sin dicho acuerdo, el acceso es de pago. Los demás pasajeros pueden acceder previo pago, si hay plazas disponibles. Salida: 7950 ₽ por 2 h 30 min, cada hora siguiente 1141 ₽. Llegada, recibimiento o despedida: 4050 ₽. Consulte las condiciones de la tarifa infantil con la sala antes de la visita."
   },
   "storage": {
    "title": "Consigna",
    "hint": "Terminal 1, 24/7",
-   "text": "Terminal n.º 1, nivel 1, día y noche. Maleta, bolsa o mochila de hasta 203 cm de suma de las tres dimensiones: 600 ₽ por cada 24 horas. Objetos voluminosos: 700 ₽ por cada 24 horas. Pérdida de la ficha: 400 ₽."
+   "text": "Terminal n.º 1, nivel 1, día y noche. Maleta, bolsa o mochila de hasta 203 cm de suma de las tres dimensiones: 600 ₽ por día. Objetos voluminosos: 700 ₽ por día. Pérdida de la ficha: 400 ₽."
   },
   "kids": {
    "title": "Con niños",
@@ -30,7 +30,7 @@
   "parking": {
    "title": "Aparcamiento",
    "hint": "15 min gratis",
-   "text": "Aparcamiento en la plaza de la terminal. Hasta 15 minutos gratis, después 200 ₽ por hora hasta 5 horas. Las primeras 24 horas 1000 ₽, cada 24 horas siguientes 800 ₽. Una nueva entrada dentro de 30 minutos se paga desde el momento de entrar. Las máquinas de las terminales 1 y 2 solo aceptan billetes; la caja de la salida acepta tarjetas y QR."
+   "text": "Aparcamiento en la plaza de la terminal. Hasta 15 minutos gratis, después 200 ₽ por hora hasta 5 horas. El primer día 1000 ₽, cada día siguiente 800 ₽. Una nueva entrada dentro de 30 minutos se paga desde el momento de entrar. Las máquinas de las terminales 1 y 2 solo aceptan billetes; la caja de la salida acepta tarjetas y QR."
   }
  }
 }

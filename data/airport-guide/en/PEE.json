@@ -20,7 +20,7 @@
   "parking": {
    "title": "Parking",
    "hint": "15 min free",
-   "text": "Short-stay central car park: up to 15 minutes free, up to an hour 300 ₽, up to 24 hours 500 ₽, then 500 ₽ per 24 hours. Long-stay: up to 10 minutes free, up to 24 hours 400 ₽, then 400 ₽ per 24 hours. An incomplete hour or 24-hour period is charged in full."
+   "text": "Short-stay central car park: up to 15 minutes free, up to an hour 300 ₽, up to one day 500 ₽, then 500 ₽ per day. Long-stay: up to 10 minutes free, up to one day 400 ₽, then 400 ₽ per day. An incomplete hour or day is charged in full."
   },
   "wifi": {
    "title": "Wi‑Fi",

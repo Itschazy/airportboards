@@ -1,0 +1,862 @@
+{
+  "summary": {
+    "date": "2026-11-10",
+    "scope": "All65 ENprescreen rows from168inventory, plus first10registry link. No newfetch. Nonbilling durations separated.",
+    "counts": {
+      "neutral_day": 48,
+      "keep": 9,
+      "mixed": 5,
+      "nonbilling_duration_keep": 3
+    },
+    "candidate_count": 65,
+    "additional_count": 44,
+    "instructions": "No global24replacement. Preserve24/7, open24hours, explicitdurationbrackets. Only neutralise undefined dailybilling. Other11locale reviewers must apply semantic equivalents and inspect mixedblocks separately. Unavailable sources stayunavailable."
+  },
+  "rows": [
+    {
+      "code": "AER",
+      "block": "parking",
+      "action": "neutral_day",
+      "reason": "No explicit rolling24hour definition in inspected source/ledger. Sourceunavailable is not proof of24h; conservative daily wording, not proven false.",
+      "already_in_first10": false,
+      "ru_text": "На привокзальной площади (въезды 1–6) первые 15 минут бесплатно, дальше 400 ₽ в час. На суточной парковке (въезды 31, 32) первые 15 минут бесплатно, дальше 300 ₽ в час, а если стоять больше 3 часов, 1 500 ₽ в сутки. Она в 100 м до главного входа, поворот направо. Альтернативная парковка примерно в 400 м от терминала.",
+      "en_before": {
+        "title": "Parking",
+        "hint": "15 minutes free",
+        "text": "On the airport terminal forecourt (entrances 1–6) the first 15 minutes are free, then 400 ₽ per hour. At the daily car park (entrances 31, 32) the first 15 minutes are free, then 300 ₽ per hour, and for stays over 3 hours 1,500 ₽ per 24 hours. It is 100 m before the main entrance, turn right. An alternative car park is about 400 m from the terminal."
+      }
+    },
+    {
+      "code": "AER",
+      "block": "storage",
+      "action": "neutral_day",
+      "reason": "No explicit rolling24hour definition in inspected source/ledger. Sourceunavailable is not proof of24h; conservative daily wording, not proven false.",
+      "already_in_first10": false,
+      "ru_text": "Сектор C, 1 этаж, открыта круглосуточно. Первые сутки стоят от 600 ₽ за место, каждые следующие от 300 ₽. Место весит не больше 30 кг, сумма трёх измерений не больше 203 см. Вещи, которые не забрали за 30 дней, считаются невостребованными. Телефон 8 (862) 249-78-46.",
+      "en_before": {
+        "title": "Left luggage",
+        "hint": "Sector C, Level 1, 24/7",
+        "text": "Sector C, Level 1, open round the clock. The first 24 hours cost from 600 ₽ per item, each further 24 hours from 300 ₽. An item may weigh no more than 30 kg, with the sum of three dimensions no more than 203 cm. Items not collected within 30 days are treated as unclaimed. Phone 8 (862) 249-78-46."
+      }
+    },
+    {
+      "code": "AMS",
+      "block": "storage",
+      "action": "keep",
+      "reason": "root independently verified terms4.1 per24h",
+      "already_in_first10": false,
+      "ru_text": "Камера хранения на уровне −1 между Arrivals 1 и Arrivals 2, круглосуточно, до 30 дней; за сутки: ручная кладь (до 55×35×25 см) €7, багаж €9.50, негабарит €12, гардероб €2.50 за вещь. За утерянную квитанцию — сбор €8. После досмотра в транзитной зоне у выходов — ячейки 40×40×70 см за €8.50, до 7 дней, круглосуточно.",
+      "en_before": {
+        "title": "Left luggage",
+        "hint": "Level −1, from €7 per 24 h",
+        "text": "Left luggage is on Level −1 between Arrivals 1 and Arrivals 2, open round the clock, for up to 30 days; per 24 hours: hand luggage (up to 55×35×25 cm) €7, baggage €9.50, oversized items €12, cloakroom €2.50 per item. A lost receipt costs a fee of €8. After security, in the transit area by the gates, there are lockers of 40×40×70 cm for €8.50, for up to 7 days, round the clock."
+      }
+    },
+    {
+      "code": "ARH",
+      "block": "parking",
+      "action": "neutral_day",
+      "reason": "No explicit rolling24hour definition in inspected source/ledger. Sourceunavailable is not proof of24h; conservative daily wording, not proven false.",
+      "already_in_first10": false,
+      "ru_text": "Краткосрочная P2: 30 минут бесплатно, затем 150 ₽ за час, свыше 4 часов 800 ₽ в сутки. Долгосрочная P1: 400 ₽ в сутки с первой минуты. Бесплатная P4 на 70 мест в 200 м от аэровокзала, без ограничения времени. Потеря парковочного билета: 2 000 ₽.",
+      "en_before": {
+        "title": "Parking",
+        "hint": "30 min free at P2",
+        "text": "Short-stay P2: 30 minutes free, then 150 ₽ per hour, over 4 hours 800 ₽ per 24 hours. Long-stay P1: 400 ₽ per 24 hours from the first minute. Free P4 with 70 spaces 200 m from the terminal, no time limit. Lost parking ticket: 2,000 ₽."
+      }
+    },
+    {
+      "code": "ARH",
+      "block": "storage",
+      "action": "neutral_day",
+      "reason": "Official341.60/day no rolling definition.",
+      "already_in_first10": true,
+      "en_before": {
+        "title": "Left luggage",
+        "hint": "Pavilion 3, 24/7",
+        "text": "Left luggage in Pavilion No. 3, open round the clock. An item up to 30 kg and shorter than 1 m costs 341.60 ₽ per 24 hours. Documents, money, valuables and perishable food are not accepted."
+      },
+      "note": "Included from earlier snapshot; concurrent translators have already removed24h in currentEN."
+    },
+    {
+      "code": "ASF",
+      "block": "parking",
+      "action": "neutral_day",
+      "reason": "No explicit rolling24hour definition in inspected source/ledger. Sourceunavailable is not proof of24h; conservative daily wording, not proven false.",
+      "already_in_first10": false,
+      "ru_text": "Привокзальная площадь: первые 10 минут бесплатно, первый час 250 ₽, со второго по четвёртый по 200 ₽, больше 4 часов — 900 ₽ за сутки. Суточная стоянка (въезд № 5): первые три часа по 200 ₽, с 181-й минуты за первые сутки 600 ₽, за двое суток 1100 ₽, за трое 1500 ₽, дальше 300 ₽ в сутки. Есть бесплатная стоянка не меньше чем на 130 машин.",
+      "en_before": {
+        "title": "Parking",
+        "hint": "10 min free",
+        "text": "Airport terminal forecourt: first 10 minutes free, first hour 250 ₽, second to fourth hour 200 ₽ each, over 4 hours 900 ₽ per 24 hours. Daily car park (entrance No. 5): first three hours 200 ₽ each, from the 181st minute 600 ₽ for the first 24 hours, 1,100 ₽ for two 24-hour periods, 1,500 ₽ for three, then 300 ₽ per 24 hours. There is a free car park for at least 130 cars."
+      }
+    },
+    {
+      "code": "BQS",
+      "block": "parking",
+      "action": "mixed",
+      "reason": "Keep first2–24hour bracket400; subsequentdaily400 should be neutral unless further definition found.",
+      "already_in_first10": false,
+      "ru_text": "Зона посадки и высадки: до 15 минут бесплатно, 16–60 минут 600 ₽, дальше 600 ₽ в час. Парковка Р1 на 600 мест в 2 минутах от терминала, оплата с первой минуты: до 30 минут 100 ₽, до часа 150 ₽, до 2 часов 250 ₽, до суток 400 ₽, каждые следующие сутки 400 ₽.",
+      "en_before": {
+        "title": "Parking",
+        "hint": "15 min free",
+        "text": "Drop-off and pick-up zone: up to 15 minutes free, 16–60 minutes 600 ₽, then 600 ₽ per hour. Car park Р1 with 600 spaces 2 minutes from the terminal, paid from the first minute: up to 30 minutes 100 ₽, up to an hour 150 ₽, up to 2 hours 250 ₽, up to 24 hours 400 ₽, each further 24 hours 400 ₽."
+      }
+    },
+    {
+      "code": "BQS",
+      "block": "storage",
+      "action": "neutral_day",
+      "reason": "No explicit rolling24hour definition in inspected source/ledger. Sourceunavailable is not proof of24h; conservative daily wording, not proven false.",
+      "already_in_first10": false,
+      "ru_text": "Автоматическая камера хранения в правом крыле аэровокзала, 1 этаж. Стандартная ячейка 200 ₽ в час или 500 ₽ в сутки, увеличенная 300 ₽ в час или 800 ₽ в сутки. Там же упаковка багажа от 950 ₽ за место.",
+      "en_before": {
+        "title": "Left luggage",
+        "hint": "Level 1, from 200 ₽/hour",
+        "text": "Automated left luggage in the right wing of the terminal, Level 1. A standard locker is 200 ₽ per hour or 500 ₽ per 24 hours, a large one 300 ₽ per hour or 800 ₽ per 24 hours. Baggage wrapping is also there, from 950 ₽ per item."
+      }
+    },
+    {
+      "code": "BTK",
+      "block": "parking",
+      "action": "neutral_day",
+      "reason": "No explicit rolling24hour definition in inspected source/ledger. Sourceunavailable is not proof of24h; conservative daily wording, not proven false.",
+      "already_in_first10": false,
+      "ru_text": "На привокзальной площади бесплатная парковка на 80 мест, 8 из них для людей с инвалидностью. Долгосрочная парковка от 300 ₽ в сутки. Отогрев машины зимой стоит 4 200 ₽ за 20 минут, зарядка аккумулятора 2 100 ₽.",
+      "en_before": {
+        "title": "Parking",
+        "hint": "80 spaces free",
+        "text": "Free car park with 80 spaces on the airport terminal forecourt, 8 of them for people with disabilities. Long-stay parking from 300 ₽ per 24 hours. Warming up a car in winter costs 4,200 ₽ for 20 minutes, battery charging 2,100 ₽."
+      }
+    },
+    {
+      "code": "CEK",
+      "block": "parking",
+      "action": "neutral_day",
+      "reason": "No explicit rolling24hour definition in inspected source/ledger. Sourceunavailable is not proof of24h; conservative daily wording, not proven false.",
+      "already_in_first10": false,
+      "ru_text": "Парковка P на привокзальной площади: 15 минут бесплатно один раз в час, первый час 300 ₽, дальше 250 ₽ в час, первые сутки в сумме 1300 ₽, свыше суток 700 ₽ в сутки. Бесплатная парковка на 100 мест для встречающих — с южной стороны посёлка Аэропорт.",
+      "en_before": {
+        "title": "Parking",
+        "hint": "15 min free",
+        "text": "Car park P on the airport terminal forecourt: 15 minutes free once an hour, first hour 300 ₽, then 250 ₽ per hour, first 24 hours 1,300 ₽ in total, beyond 24 hours 700 ₽ per 24 hours. A free car park with 100 spaces for those meeting passengers is on the south side of the Aeroport settlement."
+      }
+    },
+    {
+      "code": "CSY",
+      "block": "parking",
+      "action": "neutral_day",
+      "reason": "No explicit rolling24hour definition in inspected source/ledger. Sourceunavailable is not proof of24h; conservative daily wording, not proven false.",
+      "already_in_first10": false,
+      "ru_text": "Первые 15 минут бесплатно. Легковые: 100 ₽ в час, 450 ₽ в сутки, от 3 суток 400 ₽ в сутки. УАЗ, «Газель», «Соболь»: 200 ₽ в час, 650 ₽ в сутки. Утеря квитанции 500 ₽. Телефон 8 (8352) 22-94-03, доб. 2-95.",
+      "en_before": {
+        "title": "Parking",
+        "hint": "15 min free",
+        "text": "The first 15 minutes are free. Cars: 100 ₽ per hour, 450 ₽ per 24 hours, for stays of 3 periods of 24 hours or more 400 ₽ per 24 hours. UAZ, Gazel, Sobol: 200 ₽ per hour, 650 ₽ per 24 hours. Lost receipt 500 ₽. Phone 8 (8352) 22-94-03, ext. 2-95."
+      }
+    },
+    {
+      "code": "CSY",
+      "block": "storage",
+      "action": "neutral_day",
+      "reason": "No explicit rolling24hour definition in inspected source/ledger. Sourceunavailable is not proof of24h; conservative daily wording, not proven false.",
+      "already_in_first10": false,
+      "ru_text": "Хранение багажа: 300 ₽ за 1 место в сутки.",
+      "en_before": {
+        "title": "Left luggage",
+        "hint": "300 ₽ per 24 hours",
+        "text": "Baggage storage: 300 ₽ per 1 item per 24 hours."
+      }
+    },
+    {
+      "code": "EYK",
+      "block": "storage",
+      "action": "neutral_day",
+      "reason": "No explicit rolling24hour definition in inspected source/ledger. Sourceunavailable is not proof of24h; conservative daily wording, not proven false.",
+      "already_in_first10": false,
+      "ru_text": "Камера хранения: 380 ₽ за место в сутки (прейскурант с 01.10.2026).",
+      "en_before": {
+        "title": "Left luggage",
+        "hint": "380 ₽ per 24 hours",
+        "text": "Left luggage: 380 ₽ per item per 24 hours (price list from 01.10.2026)."
+      }
+    },
+    {
+      "code": "GDX",
+      "block": "parking",
+      "action": "neutral_day",
+      "reason": "No explicit rolling24hour definition in inspected source/ledger. Sourceunavailable is not proof of24h; conservative daily wording, not proven false.",
+      "already_in_first10": false,
+      "ru_text": "Привокзальная площадь P1 в 30 м от терминала: первые 15 минут бесплатно, до часа 500 ₽, каждый следующий час 300 ₽, сутки 2000 ₽. Повторный въезд в течение часа на 1–15 минут — 200 ₽.",
+      "en_before": {
+        "title": "Parking",
+        "hint": "15 min free",
+        "text": "Airport terminal forecourt P1, 30 m from the terminal: first 15 minutes free, up to an hour 500 ₽, each following hour 300 ₽, 2,000 ₽ per 24 hours. A repeat entry within an hour for 1–15 minutes: 200 ₽."
+      }
+    },
+    {
+      "code": "GDX",
+      "block": "storage",
+      "action": "neutral_day",
+      "reason": "No explicit rolling24hour definition in inspected source/ledger. Sourceunavailable is not proof of24h; conservative daily wording, not proven false.",
+      "already_in_first10": false,
+      "ru_text": "Автоматическая камера хранения для пассажиров внутренних рейсов на 2 этаже, с 8:30 до 20:30, оплата только картой. Стандартная ячейка 51×63×76 см 1000 ₽ в сутки, большая 51×195×76 см 2000 ₽; меньше суток оплачивается как сутки.",
+      "en_before": {
+        "title": "Left luggage",
+        "hint": "Level 2, 8:30–20:30",
+        "text": "Automated left luggage for domestic passengers on Level 2, from 8:30 to 20:30, card payment only. Standard locker 51×63×76 cm 1,000 ₽ per 24 hours, large 51×195×76 cm 2,000 ₽; less than 24 hours is charged as a full 24-hour period."
+      }
+    },
+    {
+      "code": "GDZ",
+      "block": "parking",
+      "action": "keep",
+      "reason": "official source firstday from timeofentry; subsequentdays same tariff",
+      "already_in_first10": false,
+      "ru_text": "250 мест. Первые 15 минут бесплатно, далее 300 ₽ за каждый час, свыше 3 часов 900 ₽/сутки. Стоянка на второй линии проезда 1000 ₽/час, VIP-парковка 2000 ₽/час. Повторный въезд в течение часа без бесплатных 15 минут.",
+      "en_before": {
+        "title": "Parking",
+        "hint": "15 min free",
+        "text": "250 spaces. First 15 minutes free, then 300 ₽ for each hour, over 3 hours 900 ₽/24 hours. Parking on the second lane of the driveway 1,000 ₽/hour, VIP parking 2,000 ₽/hour. A repeat entry within an hour has no free 15 minutes."
+      }
+    },
+    {
+      "code": "GDZ",
+      "block": "storage",
+      "action": "keep",
+      "reason": "official source12–24hour bracket explicitly stated",
+      "already_in_first10": false,
+      "ru_text": "Автоматическая камера хранения на 1 этаже, слева от стоек регистрации, в часы работы аэропорта. Малая ячейка от 200 ₽ за 2 часа до 800 ₽ за сутки, средняя 300–900 ₽, большая 400–1000 ₽. Оплата наличными или картой в терминале, чек со штрихкодом открывает ячейку.",
+      "en_before": {
+        "title": "Left luggage",
+        "hint": "Level 1, from 200 ₽",
+        "text": "Automated left luggage on Level 1, to the left of the check-in counters, during airport opening hours. Small locker from 200 ₽ for 2 hours to 800 ₽ per 24 hours, medium 300–900 ₽, large 400–1,000 ₽. Pay in cash or by card at the terminal; the receipt with a barcode opens the locker."
+      }
+    },
+    {
+      "code": "GOJ",
+      "block": "parking",
+      "action": "mixed",
+      "reason": "Keep1–24hours750; up to2days1500 neutral, do not expandto2periods24.",
+      "already_in_first10": false,
+      "ru_text": "Зона посадки и высадки: первые 15 минут бесплатно, с 16 по 60 минуту 890 ₽, далее 890 ₽ в час. Парковка P у терминала: до 1 часа 370 ₽, от 1 до 24 часов 750 ₽, до 2 суток 1500 ₽. Бесплатная круглосуточная парковка в 700 м от терминала, не охраняется. Первая линия (VIP-зона): 3000 ₽ за въезд.",
+      "en_before": {
+        "title": "Parking",
+        "hint": "15 min free",
+        "text": "Drop-off and pick-up zone: first 15 minutes free, from minute 16 to 60: 890 ₽, then 890 ₽ per hour. Car park P at the terminal: up to 1 hour 370 ₽, from 1 to 24 hours 750 ₽, up to 2 periods of 24 hours 1,500 ₽. Free round-the-clock car park 700 m from the terminal, unguarded. First lane (VIP zone): 3,000 ₽ per entry."
+      }
+    },
+    {
+      "code": "GOJ",
+      "block": "storage",
+      "action": "neutral_day",
+      "reason": "No explicit rolling24hour definition in inspected source/ledger. Sourceunavailable is not proof of24h; conservative daily wording, not proven false.",
+      "already_in_first10": false,
+      "ru_text": "Автоматическая камера хранения на 1 этаже, слева от выхода из зоны получения багажа внутренних рейсов. Стандартная ячейка: 250 ₽ в час или 550 ₽ в сутки. Увеличенная ячейка: 350 ₽ в час или 900 ₽ в сутки. Гардероб: 100 ₽ в сутки.",
+      "en_before": {
+        "title": "Left luggage",
+        "hint": "Level 1, from 250 ₽/hour",
+        "text": "Automated left luggage on Level 1, to the left of the exit from the domestic baggage claim area. Standard locker: 250 ₽ per hour or 550 ₽ per 24 hours. Large locker: 350 ₽ per hour or 900 ₽ per 24 hours. Cloakroom: 100 ₽ per 24 hours."
+      }
+    },
+    {
+      "code": "HMA",
+      "block": "parking",
+      "action": "neutral_day",
+      "reason": "No explicit rolling24hour definition in inspected source/ledger. Sourceunavailable is not proof of24h; conservative daily wording, not proven false.",
+      "already_in_first10": false,
+      "ru_text": "Привокзальная площадь: до 20 минут бесплатно, от 21 минуты до 4 часов 300 ₽ в час, неполный час как полный. С 5-го часа 1200 ₽ за сутки, следующие сутки 1200 ₽. Повторный въезд в течение 20 минут платный, 300 ₽ в час.",
+      "en_before": {
+        "title": "Parking",
+        "hint": "20 min free",
+        "text": "Airport terminal forecourt: up to 20 minutes free, from minute 21 to 4 hours 300 ₽ per hour, a part hour counts as a full hour. From the 5th hour 1,200 ₽ per 24 hours, each subsequent 24-hour period 1,200 ₽. A repeat entry within 20 minutes is paid, 300 ₽ per hour."
+      }
+    },
+    {
+      "code": "IAR",
+      "block": "parking",
+      "action": "neutral_day",
+      "reason": "No explicit rolling24hour definition in inspected source/ledger. Sourceunavailable is not proof of24h; conservative daily wording, not proven false.",
+      "already_in_first10": false,
+      "ru_text": "Платная парковка, 300 ₽ в сутки. Бронирования и предоплаты нет, оплата при постановке машины при наличии мест. Время возврата за машиной уточняют по телефону 43-18-00.",
+      "en_before": {
+        "title": "Parking",
+        "hint": "300 ₽/24 hours",
+        "text": "Paid car park, 300 ₽ per 24 hours. No booking or prepayment; pay when parking, subject to availability. The time to collect the car is agreed by phone 43-18-00."
+      }
+    },
+    {
+      "code": "IJK",
+      "block": "parking",
+      "action": "neutral_day",
+      "reason": "No explicit rolling24hour definition in inspected source/ledger. Sourceunavailable is not proof of24h; conservative daily wording, not proven false.",
+      "already_in_first10": false,
+      "ru_text": "До 15 минут бесплатно, от 16 до 30 минут 250 ₽, от 30 минут до 2 часов 500 ₽/час, больше 2 часов 750 ₽/сутки. VIP-парковка 300 ₽/час до 5 часов, без бесплатного времени. Выезд в течение 15 минут после оплаты. Для автомобилей инвалидов из федерального реестра бесплатно.",
+      "en_before": {
+        "title": "Parking",
+        "hint": "15 min free",
+        "text": "Up to 15 minutes free, from 16 to 30 minutes 250 ₽, from 30 minutes to 2 hours 500 ₽/hour, over 2 hours 750 ₽/24 hours. VIP parking 300 ₽/hour up to 5 hours, no free time. Exit within 15 minutes after payment. Free for cars of disabled people listed in the federal register."
+      }
+    },
+    {
+      "code": "IKT",
+      "block": "parking",
+      "action": "keep",
+      "reason": "PDF explicit24hours and subsequentday roundedto24",
+      "already_in_first10": false,
+      "ru_text": "Первые 10 минут бесплатно. 11–20 минут 100 ₽, 21–30 минут 200 ₽, 31–40 минут 250 ₽, 41–50 минут 300 ₽, 51–60 минут 350 ₽. С 1 ч 01 мин до 2 ч 40 мин тариф растёт от 400 до 850 ₽ с шагом 50 ₽ за каждые 10 минут. От 2 ч 41 мин до 24 часов 1200 ₽, каждые следующие сутки 1200 ₽. У каждого терминала своя парковка. Зона посадки и высадки: 10 минут бесплатно, дольше пени 2000 ₽ в час.",
+      "en_before": {
+        "title": "Parking",
+        "hint": "10 min free",
+        "text": "The first 10 minutes are free. 11–20 minutes 100 ₽, 21–30 minutes 200 ₽, 31–40 minutes 250 ₽, 41–50 minutes 300 ₽, 51–60 minutes 350 ₽. From 1 h 01 min to 2 h 40 min, the rate rises from 400 to 850 ₽ in steps of 50 ₽ for each 10 minutes; from 2 h 41 min to 24 hours 1,200 ₽, each following 24-hour period 1,200 ₽. Each terminal has its own car park. Drop-off and pick-up zone: 10 minutes free, longer stays incur a penalty of 2,000 ₽ per hour."
+      }
+    },
+    {
+      "code": "IKT",
+      "block": "storage",
+      "action": "neutral_day",
+      "reason": "PDF610/day valuation rules, no rolling definition.",
+      "already_in_first10": true,
+      "en_before": {
+        "title": "Left luggage",
+        "hint": "From 610 ₽ per 24 hours",
+        "text": "In the domestic terminal on Level 1, payment in cash or by card. The base rate is 610 ₽ per item per 24 hours for baggage with a declared value of up to 2,000 ₽. A value must be declared; above 2,000 ₽, a surcharge of 100 ₽ applies for each further 1,000 ₽ of declared value. Baggage larger than 40×40×50 cm is charged by the number of spaces it occupies. In the international terminal, left luggage is on Level 2 and operates only during delays to international flights. Phone +7 (3952) 266-194."
+      },
+      "note": "Included from earlier snapshot; concurrent translators have already removed24h in currentEN."
+    },
+    {
+      "code": "IWA",
+      "block": "parking",
+      "action": "neutral_day",
+      "reason": "No explicit rolling24hour definition in inspected source/ledger. Sourceunavailable is not proof of24h; conservative daily wording, not proven false.",
+      "already_in_first10": false,
+      "ru_text": "Охраняемая автоматическая парковка со шлагбаумом. Первые 10 минут бесплатно, час 100 ₽, сутки 400 ₽. Оплата в терминале (наличные без сдачи или карта), по QR-коду, в приложении Hippoparking или на сайте. После оплаты на выезд 15 минут.",
+      "en_before": {
+        "title": "Parking",
+        "hint": "10 min free",
+        "text": "Guarded automated car park with a barrier. First 10 minutes free, an hour 100 ₽, 400 ₽ per 24 hours. Pay at the machine (cash without change or card), by QR code, in the Hippoparking app or on the website. After payment you have 15 minutes to exit."
+      }
+    },
+    {
+      "code": "KEJ",
+      "block": "storage",
+      "action": "neutral_day",
+      "reason": "HTML тариф/сутки and partial day full, no rolling definition.",
+      "already_in_first10": true,
+      "en_before": {
+        "title": "Left luggage",
+        "hint": "From 200 ₽ per 24 hours",
+        "text": "Left luggage follows the domestic terminal schedule. Hand luggage 200 ₽ per 24 hours, baggage up to 50×40×20 cm 220 ₽, larger 270 ₽, over 100×50×70 cm 500 ₽. Less than 24 hours is charged as a full 24-hour period."
+      },
+      "note": "Included from earlier snapshot; concurrent translators have already removed24h in currentEN."
+    },
+    {
+      "code": "KGD",
+      "block": "parking",
+      "action": "keep",
+      "reason": "browserAX from3rdhourto24hours then nextfull/partialdays",
+      "already_in_first10": false,
+      "ru_text": "Краткосрочная парковка с 01.10.2026: первые 15 минут бесплатно, дальше 400 ₽ за каждый час, в том числе неполный. При повторном въезде в течение 2 часов оплата с первой минуты, без бесплатных 15 минут. Долгосрочная 900 ₽ в сутки. Бесплатная парковка в 400 м от аэровокзала на 300 машин. Стоянка на первой линии перед зданием запрещена.",
+      "en_before": {
+        "title": "Parking",
+        "hint": "15 min free, 400 ₽/hour",
+        "text": "Short-stay parking from 01.10.2026: first 15 minutes free, then 400 ₽ for each hour, including a part hour. On repeat entry within 2 hours, charging starts from the first minute, with no free 15 minutes. Long-stay 900 ₽ per 24 hours. Free car park for 300 cars 400 m from the terminal. Parking on the first lane in front of the building is prohibited."
+      }
+    },
+    {
+      "code": "KHV",
+      "block": "parking",
+      "action": "keep",
+      "reason": "source60min–24hours and above24hours subsequentperiod",
+      "already_in_first10": false,
+      "ru_text": "Краткосрочная P2 напротив терминала внутренних линий: до 15 мин бесплатно, до 30 мин 150 ₽, до 60 мин 300 ₽, до 24 часов 500 ₽. Долгосрочная P1 напротив здания Дальаэронавигации: 500 ₽/сутки до 4 суток, с 5 суток 350 ₽. Есть бесплатная парковка без ограничения времени.",
+      "en_before": {
+        "title": "Parking",
+        "hint": "15 min free",
+        "text": "Short-stay P2 opposite the domestic terminal: up to 15 min free, up to 30 min 150 ₽, up to 60 min 300 ₽, up to 24 hours 500 ₽. Long-stay P1 opposite the Dalaeronavigatsiya building: 500 ₽ per 24 hours for up to 4 periods of 24 hours, from 5 periods 350 ₽ per 24 hours. There is a free car park with no time limit."
+      }
+    },
+    {
+      "code": "KRR",
+      "block": "parking",
+      "action": "neutral_day",
+      "reason": "No explicit rolling24hour definition in inspected source/ledger. Sourceunavailable is not proof of24h; conservative daily wording, not proven false.",
+      "already_in_first10": false,
+      "ru_text": "Привокзальная площадь: первые 15 минут бесплатно, далее 400 ₽ за час. Дополнительная почасовая парковка справа от площади: 250 ₽ за час. Суточная 900 ₽ в сутки. Альтернативная парковка бесплатна.",
+      "en_before": {
+        "title": "Parking",
+        "hint": "15 min free, 400₽/h",
+        "text": "Airport terminal forecourt: first 15 minutes free, then 400 ₽ per hour. Additional hourly car park to the right of the forecourt: 250 ₽ per hour. Daily car park 900 ₽ per 24 hours. The alternative car park is free."
+      }
+    },
+    {
+      "code": "KRR",
+      "block": "storage",
+      "action": "neutral_day",
+      "reason": "No explicit rolling24hour definition in inspected source/ledger. Sourceunavailable is not proof of24h; conservative daily wording, not proven false.",
+      "already_in_first10": false,
+      "ru_text": "На привокзальной площади, круглосуточно. 400 ₽ за место в первые сутки, 200 ₽ за каждые следующие. Вес одного места до 30 кг.",
+      "en_before": {
+        "title": "Left luggage",
+        "hint": "400 ₽ for the first 24 hours",
+        "text": "On the airport terminal forecourt, open round the clock. 400 ₽ per item for the first 24 hours, 200 ₽ for each further 24 hours. One item may weigh up to 30 kg."
+      }
+    },
+    {
+      "code": "KUF",
+      "block": "parking",
+      "action": "mixed",
+      "reason": "Keep P1/P2 explicit24hourbrackets; subsequent daily/P4two-day clauses neutral.",
+      "already_in_first10": false,
+      "ru_text": "В зоне посадки и высадки первые 15 минут бесплатно, с 16 по 60 минуту 880 ₽. Краткосрочная P1: до часа 357 ₽, до 2 часов 682 ₽, до 3 часов 1000 ₽, свыше 3 до 24 часов 1391 ₽; каждые следующие сутки 1391 ₽. Долгосрочная P2: первые 24 часа 791 ₽; за более длительную стоянку действуют другие тарифы. Эконом P4: 1054 ₽ за первые 2 суток. Все парковки круглосуточные.",
+      "en_before": {
+        "title": "Parking",
+        "hint": "Drop-off 15 min free",
+        "text": "In the drop-off and pick-up zone the first 15 minutes are free, from minute 16 to 60: 880 ₽. Short-stay P1: up to an hour 357 ₽, up to 2 hours 682 ₽, up to 3 hours 1,000 ₽, over 3 and up to 24 hours 1,391 ₽; each subsequent 24-hour period 1,391 ₽. Long-stay P2: the first 24 hours 791 ₽; different rates apply to longer stays. Economy P4: 1,054 ₽ for the first 2 periods of 24 hours. All car parks are open round the clock."
+      }
+    },
+    {
+      "code": "KUF",
+      "block": "storage",
+      "action": "neutral_day",
+      "reason": "Lockers hour/day no explicit24h.",
+      "already_in_first10": true,
+      "en_before": {
+        "title": "Left luggage",
+        "hint": "Level 1, from 250 ₽/hour",
+        "text": "Automated left luggage on Level 1, to the right of the entrance, by the airline ticket offices. Standard locker 250 ₽ per hour or 550 ₽ per 24 hours. Large 350 ₽ per hour or 900 ₽ per 24 hours."
+      },
+      "note": "Included from earlier snapshot; concurrent translators have already removed24h in currentEN."
+    },
+    {
+      "code": "KVX",
+      "block": "kids",
+      "action": "nonbilling_duration_keep",
+      "reason": "Stay duration atmost1day, not billingday. No tariffboundary; keep duration24h.",
+      "already_in_first10": false,
+      "ru_text": "Комната матери и ребёнка на 2 этаже, слева от зала прилёта. Круглосуточно и бесплатно, не дольше суток. Пускают одного взрослого с детьми до 7 лет, с детьми с инвалидностью до 14 лет и беременных во второй половине срока. Кроватки и постельное бельё есть.",
+      "en_before": {
+        "title": "With children",
+        "hint": "Level 2, 24/7, free",
+        "text": "Mother and child room on Level 2, to the left of the arrivals hall. Open round the clock and free, for no longer than 24 hours. Admits one adult with children under 7, with children with disabilities under 14, and women in the second half of pregnancy. Cots and bed linen are provided."
+      }
+    },
+    {
+      "code": "LAS",
+      "block": "parking",
+      "action": "neutral_day",
+      "reason": "No explicit rolling24hour definition in inspected source/ledger. Sourceunavailable is not proof of24h; conservative daily wording, not proven false.",
+      "already_in_first10": false,
+      "ru_text": "Более 17 000 мест у обоих терминалов и на удалённой площадке, круглосуточно. Краткосрочная: $4 за первый час, $8 до 2 часов, далее $5 в час, максимум $38 в сутки. Долгосрочная: $12 за 2 часа, далее $4 в час, максимум $20 в сутки; по предварительной брони в терминале 3 с субботы по среду — $16. Economy и удалённая площадка (к ней ходит бесплатный шаттл): $6 за 2 часа, далее $2 в час, максимум $14 в сутки; валет $34 в сутки. Площадка для ожидающих (Cell Phone Lot) бесплатная.",
+      "en_before": {
+        "title": "Parking",
+        "hint": "17,000+ spaces, from $14 per 24 h",
+        "text": "More than 17,000 spaces at both terminals and at a remote lot, round the clock. Short-term: $4 for the first hour, $8 up to 2 hours, then $5 an hour, maximum $38 per 24 hours. Long-term: $12 for 2 hours, then $4 an hour, maximum $20 per 24 hours; with advance booking at Terminal 3, Saturday to Wednesday — $16. Economy and the remote lot (the latter served by a free shuttle): $6 for 2 hours, then $2 an hour, maximum $14 per 24 hours; valet $34 per 24 hours. The waiting lot (Cell Phone Lot) is free."
+      }
+    },
+    {
+      "code": "LAX",
+      "block": "parking",
+      "action": "keep",
+      "reason": "Official saved LAX page explicitly says Maximum for each24-hour period for60/70/75/35/20USD; opening24h not used as billing proof.",
+      "already_in_first10": false,
+      "ru_text": "Восемь паркингов напротив терминалов, больше 7 000 мест: первые 10 минут бесплатно, первый час $9 ($11 в P3 и P4), каждые следующие 30 минут $7 ($9 в P3 и P4), максимум $60 за сутки; Premium в P1, P3 и P7 — до $70 за сутки, валет — $75 за сутки. LAX Economy Parking (6100 W. 94th Street) — максимум $35 за сутки, LAX Budget Parking (5455 West 111th Street) — максимум $20; с обеих круглосуточно ходит бесплатный шаттл к розовым зонам LAX Shuttle на уровне прилёта. Тарифы включают налог 10%, место можно забронировать заранее.",
+      "en_before": {
+        "title": "Parking",
+        "hint": "From $20 per 24 hours",
+        "text": "Eight parking structures opposite the terminals, more than 7,000 spaces: first 10 minutes free, first hour $9 ($11 in P3 and P4), each additional 30 minutes $7 ($9 in P3 and P4), maximum $60 per 24 hours; Premium in P1, P3 and P7 up to $70 per 24 hours, valet $75 per 24 hours. LAX Economy Parking (6100 W. 94th Street) — maximum $35 per 24 hours, LAX Budget Parking (5455 West 111th Street) — maximum $20; from both, a free shuttle runs round the clock to the pink LAX Shuttle zones on the arrivals level. Rates include 10% tax; a space can be booked in advance."
+      }
+    },
+    {
+      "code": "LED",
+      "block": "parking",
+      "action": "neutral_day",
+      "reason": "No explicit rolling24hour definition in inspected source/ledger. Sourceunavailable is not proof of24h; conservative daily wording, not proven false.",
+      "already_in_first10": false,
+      "ru_text": "В зоне подъезда к пассажирскому терминалу первые 15 минут бесплатно. С 16-й по 30-ю минуту, с 31-й по 60-ю и за каждые следующие 30 минут — по 2000 ₽. При повторном въезде платно с первой минуты: 2000 ₽ за первые 30 минут и каждые следующие 30 минут. P2 (краткосрочная): 450 ₽ за 30 минут, 2–4 минуты пешком. P4 (долгосрочная): 1100 ₽ за первые сутки, от 14 суток 700 ₽ в сутки. Бесплатная парковка на 120 мест расположена на Пулковском шоссе в 3 км от аэропорта.",
+      "en_before": {
+        "title": "Parking",
+        "hint": "15 min free at entrance",
+        "text": "In the access zone by the passenger terminal, the first 15 minutes are free. Minutes 16–30, minutes 31–60 and each subsequent 30 minutes cost 2,000 ₽ each. On repeat entry, charging starts from the first minute: 2,000 ₽ for the first 30 minutes and each subsequent 30 minutes. P2 (short-stay): 450 ₽ for 30 minutes, 2–4 minutes on foot. P4 (long-stay): 1,100 ₽ for the first 24 hours, from 14 days 700 ₽ per 24 hours. The free car park with 120 spaces is on Pulkovskoe Shosse, 3 km from the airport."
+      }
+    },
+    {
+      "code": "MCX",
+      "block": "parking",
+      "action": "neutral_day",
+      "reason": "No explicit rolling24hour definition in inspected source/ledger. Sourceunavailable is not proof of24h; conservative daily wording, not proven false.",
+      "already_in_first10": false,
+      "ru_text": "Общая зона: до 15 минут при первом заезде бесплатно, дальше 400 ₽ в час, свыше 3 часов 1200 ₽ в сутки. Суточная парковка справа при въезде 600 ₽ в сутки. Зона высадки (первая линия): свыше 10 минут 1500 ₽ в час. Повторный заезд в течение 30 минут платный. После оплаты 30 минут на выезд.",
+      "en_before": {
+        "title": "Parking",
+        "hint": "15 min free",
+        "text": "General zone: up to 15 minutes free on the first entry, then 400 ₽ per hour, over 3 hours 1,200 ₽ per 24 hours. Daily car park on the right at the entrance 600 ₽ per 24 hours. Drop-off zone (first lane): over 10 minutes 1,500 ₽ per hour. A repeat entry within 30 minutes is paid. After payment you have 30 minutes to exit."
+      }
+    },
+    {
+      "code": "NBC",
+      "block": "parking",
+      "action": "neutral_day",
+      "reason": "HTML700руб/сутки; no period definition.",
+      "already_in_first10": true,
+      "en_before": {
+        "title": "Parking",
+        "hint": "20 min free",
+        "text": "Paid car park in front of terminals A and B with 150 spaces: 20 minutes free, then 200 ₽ per hour up to 3 hours, longer 700 ₽ per 24 hours. On a repeat entry within 30 minutes there is no free time. Before the entrance to the grounds there is a free car park with 410 spaces."
+      },
+      "note": "Included from earlier snapshot; concurrent translators have already removed24h in currentEN."
+    },
+    {
+      "code": "NJC",
+      "block": "kids",
+      "action": "nonbilling_duration_keep",
+      "reason": "Departure withinnextday is continuous waitingduration, not calendarbilling. Keep24h; paidbedprice already perday.",
+      "already_in_first10": false,
+      "ru_text": "Комната матери и ребёнка только при билете с вылетом не позднее чем через сутки. Женщинам с детьми до 7 лет и детям-инвалидам бесплатно. Остальным 1200 ₽ за койко-место в сутки.",
+      "en_before": {
+        "title": "With children",
+        "hint": "Room for children under 7",
+        "text": "The mother and child room is available only with a ticket for a departure within the next 24 hours. Free for women with children under 7 and disabled children. Others pay 1,200 ₽ per bed per day."
+      }
+    },
+    {
+      "code": "NJC",
+      "block": "parking",
+      "action": "neutral_day",
+      "reason": "No explicit rolling24hour definition in inspected source/ledger. Sourceunavailable is not proof of24h; conservative daily wording, not proven false.",
+      "already_in_first10": false,
+      "ru_text": "Парковка на привокзальной площади. До 15 минут бесплатно, дальше 200 ₽ в час до 5 часов. Первые сутки 1000 ₽, каждые следующие 800 ₽. Повторный въезд в течение 30 минут платный с момента въезда. Автоматы в терминалах 1 и 2 берут только купюры, касса на выезде принимает карты и QR.",
+      "en_before": {
+        "title": "Parking",
+        "hint": "15 min free",
+        "text": "Car park on the airport terminal forecourt. Up to 15 minutes free, then 200 ₽ per hour up to 5 hours. First 24 hours 1,000 ₽, each further 24 hours 800 ₽. A repeat entry within 30 minutes is paid from the moment of entry. Machines in terminals 1 and 2 accept banknotes only; the cashier at the exit accepts cards and QR."
+      }
+    },
+    {
+      "code": "NJC",
+      "block": "storage",
+      "action": "neutral_day",
+      "reason": "No explicit rolling24hour definition in inspected source/ledger. Sourceunavailable is not proof of24h; conservative daily wording, not proven false.",
+      "already_in_first10": false,
+      "ru_text": "Терминал № 1, первый этаж, круглосуточно. Чемодан, сумка или рюкзак до 203 см по сумме трёх измерений 600 ₽ в сутки. Крупногабаритные вещи 700 ₽ в сутки. Утеря номерка 400 ₽.",
+      "en_before": {
+        "title": "Left luggage",
+        "hint": "Terminal 1, 24/7",
+        "text": "Terminal No. 1, Level 1, open round the clock. A suitcase, bag or backpack up to 203 cm (sum of three dimensions): 600 ₽ per 24 hours. Oversized items 700 ₽ per 24 hours. Lost tag 400 ₽."
+      }
+    },
+    {
+      "code": "NLI",
+      "block": "storage",
+      "action": "neutral_day",
+      "reason": "Official PDF rub/item/day, no rolling definition.",
+      "already_in_first10": true,
+      "en_before": {
+        "title": "Left luggage",
+        "hint": "419 ₽ per item per 24 hours",
+        "text": "Baggage storage at left luggage: 418.83 ₽ per item per 24 hours including VAT. Prices per the price list from 5 June 2026."
+      },
+      "note": "Included from earlier snapshot; concurrent translators have already removed24h in currentEN."
+    },
+    {
+      "code": "NNM",
+      "block": "parking",
+      "action": "neutral_day",
+      "reason": "No explicit rolling24hour definition in inspected source/ledger. Sourceunavailable is not proof of24h; conservative daily wording, not proven false.",
+      "already_in_first10": false,
+      "ru_text": "До 45 минут бесплатно. С 46 до 60 минут: 500 ₽. Свыше часа и до суток: 350 ₽ за каждый час. Свыше суток, до 30 суток: 600 ₽ в сутки. Тарифы действуют с 1 августа 2026 года.",
+      "en_before": {
+        "title": "Parking",
+        "hint": "45 min free",
+        "text": "Up to 45 minutes free. From 46 to 60 minutes: 500 ₽. Over an hour and up to 24 hours: 350 ₽ for each hour. Over 24 hours, up to 30 days: 600 ₽ per 24 hours. Rates valid from 1 August 2026."
+      }
+    },
+    {
+      "code": "NOZ",
+      "block": "parking",
+      "action": "neutral_day",
+      "reason": "No explicit rolling24hour definition in inspected source/ledger. Sourceunavailable is not proof of24h; conservative daily wording, not proven false.",
+      "already_in_first10": false,
+      "ru_text": "P1 только посадка и высадка, стоянка запрещена. P2 краткосрочная: 15 минут бесплатно, 16–60 минут 300 ₽, со 2 по 4 час 100 ₽/час, больше 4 часов 700 ₽/сутки. P3 долгосрочная: 15 минут бесплатно, 500 ₽/сутки до 6 суток. Неполные сутки оплачиваются как полные.",
+      "en_before": {
+        "title": "Parking",
+        "hint": "15 min free",
+        "text": "P1 drop-off and pick-up only, parking prohibited. P2 short-stay: 15 minutes free, 16–60 minutes 300 ₽, from the 2nd to the 4th hour 100 ₽/hour, over 4 hours 700 ₽/24 hours. P3 long-stay: 15 minutes free, 500 ₽/24 hours for up to 6 periods of 24 hours. An incomplete 24-hour period is charged as a full period."
+      }
+    },
+    {
+      "code": "NUX",
+      "block": "storage",
+      "action": "neutral_day",
+      "reason": "No explicit rolling24hour definition in inspected source/ledger. Sourceunavailable is not proof of24h; conservative daily wording, not proven false.",
+      "already_in_first10": false,
+      "ru_text": "Автоматическая камера хранения в зале вылета на 1 этаже. Стандартная ячейка 500 ₽ в сутки или 200 ₽ в час, увеличенная 900 ₽ в сутки или 300 ₽ в час. Ячейка открывается по штрих-коду на чеке.",
+      "en_before": {
+        "title": "Left luggage",
+        "hint": "Departure hall, from 500 ₽",
+        "text": "Automated left luggage in the departure hall on Level 1. Standard locker 500 ₽ per 24 hours or 200 ₽ per hour, large 900 ₽ per 24 hours or 300 ₽ per hour. The locker opens with the barcode on the receipt."
+      }
+    },
+    {
+      "code": "OSW",
+      "block": "parking",
+      "action": "neutral_day",
+      "reason": "No explicit rolling24hour definition in inspected source/ledger. Sourceunavailable is not proof of24h; conservative daily wording, not proven false.",
+      "already_in_first10": false,
+      "ru_text": "Краткосрочная парковка с 01.01.2026: до 15 минут бесплатно, до часа 250 ₽, до суток 500 ₽, от суток 500 ₽. Территория не охраняется.",
+      "en_before": {
+        "title": "Parking",
+        "hint": "15 min free",
+        "text": "Short-stay parking from 01.01.2026: up to 15 minutes free, up to an hour 250 ₽, up to 24 hours 500 ₽, from 24 hours 500 ₽. The area is not guarded."
+      }
+    },
+    {
+      "code": "OVB",
+      "block": "parking",
+      "action": "keep",
+      "reason": "RU explicitlydefines24hours; freshsourceunavailable, retain prior explicitRU per requested triage rule, not renewed sourcePASS",
+      "already_in_first10": false,
+      "ru_text": "На площади перед терминалом аэропорта первые 15 минут бесплатно, затем первый час 400 ₽, второй 300 ₽, далее 200 ₽ в час, свыше 6 часов 1500 ₽ за 24 часа. Парковки P1–P4: до 3 суток 700 ₽ за 24 часа, до 6 суток 500 ₽, дольше 300 ₽. Въезд только с распознанным госномером. При повторном въезде в течение 1 часа после выезда первые 15 минут стоят 100 ₽. Сутки в тарифе — 24 часа.",
+      "en_before": {
+        "title": "Parking",
+        "hint": "15 min free",
+        "text": "On the airport terminal forecourt, the first 15 minutes are free, then the first hour costs 400 ₽, the second 300 ₽ and each subsequent hour 200 ₽. Stays longer than 6 hours cost 1,500 ₽ per 24 hours. At car parks P1–P4, the rate per 24 hours is 700 ₽ for stays of up to 3 periods of 24 hours, 500 ₽ for stays of up to 6 such periods, and 300 ₽ for longer stays. Entry is only possible with a recognised licence plate. If you re-enter within 1 hour of leaving, the first 15 minutes cost 100 ₽."
+      }
+    },
+    {
+      "code": "PEE",
+      "block": "parking",
+      "action": "neutral_day",
+      "reason": "No explicit rolling24hour definition in inspected source/ledger. Sourceunavailable is not proof of24h; conservative daily wording, not proven false.",
+      "already_in_first10": false,
+      "ru_text": "Краткосрочная центральная парковка: до 15 минут бесплатно, до часа 300 ₽, до суток 500 ₽, дальше 500 ₽ в сутки. Долгосрочная: до 10 минут бесплатно, до суток 400 ₽, дальше 400 ₽ в сутки. Неполный час и неполные сутки оплачиваются как полные.",
+      "en_before": {
+        "title": "Parking",
+        "hint": "15 min free",
+        "text": "Short-stay central car park: up to 15 minutes free, up to an hour 300 ₽, up to 24 hours 500 ₽, then 500 ₽ per 24 hours. Long-stay: up to 10 minutes free, up to 24 hours 400 ₽, then 400 ₽ per 24 hours. An incomplete hour or 24-hour period is charged in full."
+      }
+    },
+    {
+      "code": "PEK",
+      "block": "parking",
+      "action": "neutral_day",
+      "reason": "No explicit rolling24hour definition in inspected source/ledger. Sourceunavailable is not proof of24h; conservative daily wording, not proven false.",
+      "already_in_first10": false,
+      "ru_text": "Гараж №2 — перед T2, около 4 300 мест: почасовая стоянка на этажах F2, F1 и B1, долгосрочная — на B2, B3 и B4. Гараж №3 — к югу от T3, около 4 300 мест, на его этаже 2 станция Airport Express; почасовые зоны B и C на B1, долгосрочные D и E на B1 и H на B2. В гараже №2 машина до 19 мест — 3 юаня за 10 минут, долгосрочная стоянка (больше 5,5 часа подряд, только в зоне B2–B4) — 100 юаней в сутки; меньше 10 минут бесплатно.",
+      "en_before": {
+        "title": "Parking",
+        "hint": "Garage 2: long-stay parking",
+        "text": "Car Park No. 2 is in front of T2, about 4,300 spaces: hourly parking on levels F2, F1 and B1, long-term on B2, B3 and B4. Car Park No. 3 is south of T3, about 4,300 spaces, with the Airport Express station on its Level 2; hourly zones B and C on B1, long-term zones D and E on B1 and H on B2. In Car Park No. 2, vehicles with up to 19 seats pay 3 yuan per 10 minutes; long-term parking (more than 5.5 hours in a row, only in the B2–B4 area) is 100 yuan per 24 hours; under 10 minutes is free."
+      }
+    },
+    {
+      "code": "PKC",
+      "block": "storage",
+      "action": "neutral_day",
+      "reason": "No explicit rolling24hour definition in inspected source/ledger. Sourceunavailable is not proof of24h; conservative daily wording, not proven false.",
+      "already_in_first10": false,
+      "ru_text": "Камера хранения на 1 этаже терминала. 300 ₽ до 1 часа, далее 600 ₽ в сутки. Вещи принимают только в упаковке. Упаковка багажа на 1 этаже с 7:00 до 19:00, от 1 000 ₽ за место.",
+      "en_before": {
+        "title": "Left luggage",
+        "hint": "Level 1, 600 ₽/24 h",
+        "text": "Left luggage on Level 1 of the terminal. 300 ₽ for up to 1 hour, then 600 ₽ per 24 hours. Items are accepted only when wrapped. Baggage wrapping on Level 1 from 7:00 to 19:00, from 1,000 ₽ per item."
+      }
+    },
+    {
+      "code": "REN",
+      "block": "storage",
+      "action": "neutral_day",
+      "reason": "No explicit rolling24hour definition in inspected source/ledger. Sourceunavailable is not proof of24h; conservative daily wording, not proven false.",
+      "already_in_first10": false,
+      "ru_text": "Автоматическая камера хранения в центральном зале аэровокзала, 1 этаж. Работает круглосуточно. Стандартная ячейка: 300 ₽ в час или 500 ₽ в сутки.",
+      "en_before": {
+        "title": "Left luggage",
+        "hint": "Level 1, 24/7",
+        "text": "Automated left luggage in the central hall of the terminal, Level 1. Open round the clock. Standard locker: 300 ₽ per hour or 500 ₽ per 24 hours."
+      }
+    },
+    {
+      "code": "RGK",
+      "block": "parking",
+      "action": "neutral_day",
+      "reason": "DatedPDF01.11 eachday/partialfull no explicit24h.",
+      "already_in_first10": true,
+      "en_before": {
+        "title": "Parking",
+        "hint": "15 min free",
+        "text": "At the terminals drop-off and pick-up is free for 15 minutes; a repeat entry within an hour 250 ₽. P1: first hour 400 ₽, over 1 and up to 5 hours 300 ₽/hour, over 5 hours 1,500 ₽/24 h. P2: 800 ₽/24 h. P3: first 180 minutes free, over 3 and up to 5 hours 200 ₽/hour, then 800 ₽/24 h."
+      },
+      "note": "Included from earlier snapshot; concurrent translators have already removed24h in currentEN."
+    },
+    {
+      "code": "RGK",
+      "block": "storage",
+      "action": "neutral_day",
+      "reason": "No explicit rolling24hour definition in inspected source/ledger. Sourceunavailable is not proof of24h; conservative daily wording, not proven false.",
+      "already_in_first10": false,
+      "ru_text": "Автоматическая камера хранения на 1 этаже аэровокзала, в часы работы аэропорта. Ячейки 400, 600 и 1000 ₽ в сутки в зависимости от размера. Срок до 6 месяцев. Оплата картой или наличными.",
+      "en_before": {
+        "title": "Left luggage",
+        "hint": "Level 1, from 400 ₽/24 h",
+        "text": "Automated left luggage on Level 1 of the terminal, during airport opening hours. Lockers 400, 600 and 1,000 ₽ per 24 hours depending on size. Storage up to 6 months. Payment by card or cash."
+      }
+    },
+    {
+      "code": "SGC",
+      "block": "parking",
+      "action": "neutral_day",
+      "reason": "Separate longstay750/day HTML+PDF no24hdefinition. Do not use apron2026rules for this separate area.",
+      "already_in_first10": true,
+      "en_before": {
+        "title": "Parking",
+        "hint": "20 min free",
+        "text": "On the airport terminal forecourt the first 20 minutes are free. A long-stay area for 50 cars right behind the bus shelter: 750 ₽ per 24 hours. Payment at the terminal payment counters and at machines by the main entrance and in the arrivals hall."
+      },
+      "note": "Included from earlier snapshot; concurrent translators have already removed24h in currentEN."
+    },
+    {
+      "code": "SKX",
+      "block": "parking",
+      "action": "neutral_day",
+      "reason": "No explicit rolling24hour definition in inspected source/ledger. Sourceunavailable is not proof of24h; conservative daily wording, not proven false.",
+      "already_in_first10": false,
+      "ru_text": "Привокзальная площадь в 30 м от терминала: меньше 15 минут бесплатно, больше 15 минут 200 ₽ в час, больше часа 600 ₽ в сутки.",
+      "en_before": {
+        "title": "Parking",
+        "hint": "Under 15 minutes free",
+        "text": "Airport terminal forecourt 30 m from the terminal: less than 15 minutes free, more than 15 minutes 200 ₽ per hour, more than an hour 600 ₽ per 24 hours."
+      }
+    },
+    {
+      "code": "SVX",
+      "block": "parking",
+      "action": "mixed",
+      "reason": "Keep P1to24hours900; P2/P6two-day tariff neutral, remove parenthetical24hours each.",
+      "already_in_first10": false,
+      "ru_text": "Зона посадки и высадки: до 15 минут бесплатно, 16–60 минут 880 ₽, далее 880 ₽ в час. Парковка P1 у терминала без бесплатного времени: 1 час 360 ₽, до 24 часов 900 ₽. Долгосрочные P2 и P6: от 1790 ₽ и 1380 ₽ за двое суток. P0 бесплатная, 5 минут до терминала.",
+      "en_before": {
+        "title": "Parking",
+        "hint": "15 min free",
+        "text": "Drop-off and pick-up zone: up to 15 minutes free, 16–60 minutes 880 ₽, then 880 ₽ per hour. Car park P1 at the terminal with no free time: 1 hour 360 ₽, up to 24 hours 900 ₽. Long-stay P2 and P6: from 1,790 ₽ and 1,380 ₽ for 2 days (24 hours each). P0 is free, 5 minutes from the terminal."
+      }
+    },
+    {
+      "code": "SVX",
+      "block": "storage",
+      "action": "mixed",
+      "reason": "Storage daily rates neutral; preserve wardrobe explicit1–24hours.",
+      "already_in_first10": true,
+      "ru_text": "Терминал А, этаж −1. 200 ₽ в час, 500 ₽ за первые сутки, 300 ₽ за каждые следующие. Негабарит (больше 50×50×80 см или тяжелее 20 кг): 400 ₽ в час, 800 ₽ за первые сутки, 500 ₽ за следующие. Гардероб для верхней одежды: 100 ₽ за комплект до 1 часа, от 1 до 24 часов 300 ₽, за каждые следующие сутки 200 ₽.",
+      "en_before": {
+        "title": "Left luggage",
+        "hint": "Terminal A, Level −1",
+        "text": "Terminal A, Level −1. 200 ₽ per hour, 500 ₽ for the first day, 300 ₽ for each further day. Oversized (larger than 50×50×80 cm or heavier than 20 kg): 400 ₽ per hour, 800 ₽ for the first day, 500 ₽ for each further day. Cloakroom for outerwear: 100 ₽ per set for up to 1 hour, 300 ₽ for 1–24 hours, 200 ₽ for each subsequent day."
+      }
+    },
+    {
+      "code": "UFA",
+      "block": "parking",
+      "action": "neutral_day",
+      "reason": "No explicit rolling24hour definition in inspected source/ledger. Sourceunavailable is not proof of24h; conservative daily wording, not proven false.",
+      "already_in_first10": false,
+      "ru_text": "Зона посадки и высадки А1: 15 минут бесплатно, далее 500 ₽ в час, стоянка запрещена. Парковка ожидания С5 (10 минут до терминалов): 3 часа бесплатно, далее 150 ₽ в час, сутки 600 ₽. Парковки А2 и А3 у терминалов: первый час 300 ₽, далее 100 ₽ в час, сутки 700 ₽.",
+      "en_before": {
+        "title": "Parking",
+        "hint": "15 min free",
+        "text": "Drop-off and pick-up zone А1: 15 minutes free, then 500 ₽ per hour, parking prohibited. Waiting car park С5 (10 minutes to the terminals): 3 hours free, then 150 ₽ per hour, 600 ₽ per 24 hours. Car parks А2 and А3 at the terminals: first hour 300 ₽, then 100 ₽ per hour, 700 ₽ per 24 hours."
+      }
+    },
+    {
+      "code": "ULV",
+      "block": "parking",
+      "action": "neutral_day",
+      "reason": "No explicit rolling24hour definition in inspected source/ledger. Sourceunavailable is not proof of24h; conservative daily wording, not proven false.",
+      "already_in_first10": false,
+      "ru_text": "Платная парковка перед терминалом на 150 машин. Первые 15 минут бесплатно, от 15 минут до 3 часов 150 ₽/час, больше 3 часов 500 ₽/сутки. Повторный въезд в течение 60 минут без бесплатного времени. После оплаты на выезд 30 минут.",
+      "en_before": {
+        "title": "Parking",
+        "hint": "15 min free",
+        "text": "Paid car park in front of the terminal for 150 cars. First 15 minutes free, from 15 minutes to 3 hours 150 ₽/hour, over 3 hours 500 ₽/24 h. A repeat entry within 60 minutes has no free time. After payment you have 30 minutes to exit."
+      }
+    },
+    {
+      "code": "UUD",
+      "block": "parking",
+      "action": "neutral_day",
+      "reason": "No explicit rolling24hour definition in inspected source/ledger. Sourceunavailable is not proof of24h; conservative daily wording, not proven false.",
+      "already_in_first10": false,
+      "ru_text": "Краткосрочная P1 у терминала: до 15 минут бесплатно, 16–60 минут 500 ₽, второй час 300 ₽, третий и четвёртый по 200 ₽, от 241 минуты 1200 ₽, не дольше суток. Долговременная: до 3 суток 800 ₽ в сутки, с 4-х по 6-е 500 ₽.",
+      "en_before": {
+        "title": "Parking",
+        "hint": "15 min free",
+        "text": "Short-stay P1 at the terminal: up to 15 minutes free, 16–60 minutes 500 ₽, second hour 300 ₽, third and fourth 200 ₽ each, from minute 241 1,200 ₽, no longer than 24 hours. Long-stay: for up to 3 periods of 24 hours, 800 ₽ per 24 hours; for periods 4 to 6, 500 ₽ per 24 hours."
+      }
+    },
+    {
+      "code": "UUS",
+      "block": "parking",
+      "action": "neutral_day",
+      "reason": "No explicit rolling24hour definition in inspected source/ledger. Sourceunavailable is not proof of24h; conservative daily wording, not proven false.",
+      "already_in_first10": false,
+      "ru_text": "Зона посадки и высадки: 15 мин бесплатно, до 60 мин 400 ₽, затем 1200 ₽ за первые сутки и 600 ₽ за следующие. Долгосрочная P1: 500 ₽/сутки с 1 по 5 сутки, дальше 400 ₽. Для маломобильных пассажиров бесплатно при знаке «Инвалид».",
+      "en_before": {
+        "title": "Parking",
+        "hint": "15 min free",
+        "text": "Drop-off and pick-up zone: 15 min free, up to 60 min 400 ₽, then 1,200 ₽ for the first 24 hours and 600 ₽ for each further 24 hours. Long-stay P1: 500 ₽ per 24 hours for the first 5 periods of 24 hours, then 400 ₽. Free for passengers with reduced mobility displaying a Disabled sign."
+      }
+    },
+    {
+      "code": "UUS",
+      "block": "storage",
+      "action": "neutral_day",
+      "reason": "No explicit rolling24hour definition in inspected source/ledger. Sourceunavailable is not proof of24h; conservative daily wording, not proven false.",
+      "already_in_first10": false,
+      "ru_text": "Камера хранения на 1 этаже аэровокзала. Обычный багаж: 500 ₽ за первые сутки, 200 ₽ за следующие. Негабарит больше 203 см: 850 ₽ и 400 ₽. Одно место до 30 кг, срок до 30 суток.",
+      "en_before": {
+        "title": "Left luggage",
+        "hint": "Level 1, from 500 ₽",
+        "text": "Left luggage on Level 1 of the terminal. Regular baggage: 500 ₽ for the first 24 hours, 200 ₽ for each further 24 hours. Oversized over 203 cm: 850 ₽ and 400 ₽. One item up to 30 kg, storage up to 30 days."
+      }
+    },
+    {
+      "code": "VKO",
+      "block": "parking",
+      "action": "neutral_day",
+      "reason": "No explicit rolling24hour definition in inspected source/ledger. Sourceunavailable is not proof of24h; conservative daily wording, not proven false.",
+      "already_in_first10": false,
+      "ru_text": "Заезд на привокзальную площадь бесплатный на 15 минут, всего не больше 60 минут в сутки. Многоуровневые паркинги № 1 и № 2 по 350 мест каждый. Тариф: 1-й час 600 ₽, 2-й час 400 ₽, дальше 1500 ₽ за сутки. Подземный паркинг в отеле DoubleTree через дорогу стоит 2000 ₽ в сутки.",
+      "en_before": {
+        "title": "Parking",
+        "hint": "15 min free",
+        "text": "Entry to the airport terminal forecourt is free for 15 minutes, no more than 60 minutes a day in total. Multi-level car parks No. 1 and No. 2 with 350 spaces each. Rate: 1st hour 600 ₽, 2nd hour 400 ₽, then 1,500 ₽ per 24 hours. The underground car park at the DoubleTree hotel across the road costs 2,000 ₽ per 24 hours."
+      }
+    },
+    {
+      "code": "VOG",
+      "block": "kids",
+      "action": "nonbilling_duration_keep",
+      "reason": "Stay duration atmost1day, not billingday. Keepduration24h; openinghours unaffected.",
+      "already_in_first10": false,
+      "ru_text": "Комнаты матери и ребёнка есть в терминалах внутренних (С2) и международных (С) линий, бесплатно и круглосуточно, до одних суток. Для детей до 7 лет и женщин во второй половине беременности с билетом на вылет, документом и справкой из здравпункта.",
+      "en_before": {
+        "title": "With children",
+        "hint": "Terminals C and С2, free",
+        "text": "Mother and child rooms are in the domestic (С2) and international (C) terminals, free and open round the clock, for up to 24 hours. For children under 7 and women in the second half of pregnancy with a departure ticket, an identity document and a certificate from the health post."
+      }
+    },
+    {
+      "code": "ZIA",
+      "block": "parking",
+      "action": "keep",
+      "reason": "source explicitlydefines24hours fromentry",
+      "already_in_first10": false,
+      "ru_text": "Краткосрочная зона: первые 15 мин бесплатно, первый час 350 ₽, со 2 по 4 час 250 ₽/час, с 5 часа 3000 ₽/сутки. Долгосрочная зона: 700 ₽/сутки с 1 по 5 сутки, 100 ₽/сутки с 6 по 13, 700 ₽/сутки с 14 суток. Повторный бесплатный въезд возможен не раньше чем через 45 минут после окончания первого 15-минутного бесплатного периода.",
+      "en_before": {
+        "title": "Parking",
+        "hint": "15 min free",
+        "text": "Short-stay zone: first 15 min free, first hour 350 ₽, from the 2nd to the 4th hour 250 ₽/hour, from the 5th hour 3,000 ₽ per 24 hours. Long-stay zone: 700 ₽ per 24 hours for periods 1 to 5, 100 ₽ per 24 hours for periods 6 to 13, 700 ₽ per 24 hours from period 14; each period is 24 hours. The next free entry is possible no earlier than 45 minutes after the end of the first free 15-minute period."
+      }
+    }
+  ]
+}

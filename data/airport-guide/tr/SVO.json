@@ -10,7 +10,7 @@
   "storage": {
    "title": "Emanet",
    "hint": "B, D ve Aeroexpress",
-   "text": "Ücretli emanetler Terminal B'de (Kat 1), Terminal D'de (Kat −1) ve Aeroexpress terminalinde, hepsi genel alanda. B'de ve Aeroexpress terminalinde gece gündüz açık. İlk 24 saat parça başına 700 ₽, sonrası her 24 saat için 300 ₽. Bir parça en fazla 32 kg, saklama süresi 6 aya kadar."
+   "text": "Ücretli emanetler Terminal B'de (Kat 1), Terminal D'de (Kat −1) ve Aeroexpress terminalinde, hepsi genel alanda. B'de ve Aeroexpress terminalinde gece gündüz açık. B ve D’de Standart tarife: 00:00’a kadar ilk takvim günü 700 ₽, sonraki her takvim günü 300 ₽. Tamamlanmamış takvim günü tam ücretlendirilir. Bir parça en fazla 32 kg olabilir."
   },
   "sleep": {
    "title": "Nerede uyunur",

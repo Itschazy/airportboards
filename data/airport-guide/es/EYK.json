@@ -8,8 +8,8 @@
   },
   "storage": {
    "title": "Consigna",
-   "hint": "380 ₽ por cada 24 horas",
-   "text": "Consigna: 380 ₽ por bulto por cada 24 horas (tarifas desde el 01.10.2026)."
+   "hint": "380 ₽ por día",
+   "text": "Consigna: 380 ₽ por bulto por día (tarifas desde el 01.10.2026)."
   },
   "kids": {
    "title": "Con niños",

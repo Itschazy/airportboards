@@ -5,7 +5,7 @@
   "parking": {
    "title": "Otopark",
    "hint": "90 dakika ücretsiz",
-   "text": "Terminal önü meydanı: 90 dakikaya kadar ücretsiz, uçuş rötar yaparsa 90 dakikalık ikinci giriş ücretsiz. 90 dakikanın üzerinde her 24 saat için 1000 ₽ ücret. Gece gündüz açık ücretli otopark: 24 saati 350 ₽. Telefon (8202) 675-217."
+   "text": "Terminal önü meydanı: 90 dakikaya kadar ücretsiz, uçuş rötar yaparsa 90 dakikalık ikinci giriş ücretsiz. 90 dakikanın üzerinde her takvim günü için 1000 ₽ ücret. Gece gündüz açık ücretli otopark: takvim günü başına 350 ₽. Ücret hesabında gün 00:00–24:00 arasıdır; o günkü park süresi dikkate alınmaz. Telefon (8202) 675-217."
   },
   "lounges": {
    "title": "Business salonları",

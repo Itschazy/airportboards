@@ -20,7 +20,7 @@
   "parking": {
    "title": "Otopark",
    "hint": "15 dakika ücretsiz",
-   "text": "Terminalin yanındaki kısa süreli P1: 15 dakikaya kadar ücretsiz, 16–60 dakika 500 ₽, ikinci saat 300 ₽, üçüncü ve dördüncü saat 200'er ₽, 241. dakikadan itibaren 1200 ₽, en fazla 24 saat. Uzun süreli: 24 saatlik 3 döneme kadar her 24 saat için 800 ₽, 4. ila 6. dönemde her 24 saat için 500 ₽."
+   "text": "Terminalin yanındaki kısa süreli P1: 15 dakikaya kadar ücretsiz, 16–60 dakika 500 ₽, ikinci saat 300 ₽, üçüncü ve dördüncü saat 200'er ₽, 241. dakikadan itibaren 1200 ₽, en fazla bir gün. Uzun süreli: 3 güne kadar gün başına 800 ₽, 4. ila 6. günde gün başına 500 ₽."
   },
   "wifi": {
    "title": "Wi‑Fi",

@@ -15,12 +15,12 @@
   "lounges": {
    "title": "Business salonları",
    "hint": "Terminal 1, 24/7",
-   "text": "Business salonu Terminal 1'de Kat 1'de, gece gündüz açık. Business sınıfı yolcuları ve havayolu elit kart sahipleri kabul edilir, diğerleri yer varsa ücret karşılığında. Gidiş 2 sa 30 dk için 7950 ₽, sonraki her saat 1141 ₽. Geliş, karşılama veya uğurlama 4050 ₽. 2–12 yaş çocuklar tarifenin %70'i, 2 yaşından küçük ücretsiz."
+   "text": "Business salonu Terminal 1'de Kat 1'de, gece gündüz açık. Business sınıfı yolculara ve elit kart sahiplerine havayollarıyla yapılan anlaşmalar kapsamında hizmet verilir; böyle bir anlaşma yoksa ücret alınır. Diğer yolcular yer müsaitliğine bağlı olarak ücret karşılığında kabul edilir. Gidiş 2 sa 30 dk için 7950 ₽, sonraki her saat 1141 ₽. Geliş, karşılama veya uğurlama 4050 ₽. Çocuk tarifesinin koşullarını ziyaretten önce salondan öğrenin."
   },
   "storage": {
    "title": "Emanet",
    "hint": "Terminal 1, 24/7",
-   "text": "1 numaralı terminal, Kat 1, gece gündüz açık. Üç boyutunun toplamı 203 cm'ye kadar valiz, çanta veya sırt çantası her 24 saat için 600 ₽. Büyük boyutlu eşyalar her 24 saat için 700 ₽. Numaralı fişi kaybetme: 400 ₽."
+   "text": "1 numaralı terminal, Kat 1, gece gündüz açık. Üç boyutunun toplamı 203 cm'ye kadar valiz, çanta veya sırt çantası gün başına 600 ₽. Büyük boyutlu eşyalar gün başına 700 ₽. Numaralı fişi kaybetme: 400 ₽."
   },
   "kids": {
    "title": "Çocukla",
@@ -30,7 +30,7 @@
   "parking": {
    "title": "Otopark",
    "hint": "15 dakika ücretsiz",
-   "text": "Terminal önü meydanında otopark. 15 dakikaya kadar ücretsiz, sonra 5 saate kadar saati 200 ₽. İlk 24 saat 1000 ₽, sonraki her 24 saat 800 ₽. 30 dakika içinde tekrar giriş, giriş anından itibaren ücretlidir. Terminal 1 ve 2'deki ödeme makineleri yalnızca banknot kabul eder; çıkıştaki gişe kart ve QR kabul eder."
+   "text": "Terminal önü meydanında otopark. 15 dakikaya kadar ücretsiz, sonra 5 saate kadar saati 200 ₽. İlk gün 1000 ₽, sonraki her gün 800 ₽. 30 dakika içinde tekrar giriş, giriş anından itibaren ücretlidir. Terminal 1 ve 2'deki ödeme makineleri yalnızca banknot kabul eder; çıkıştaki gişe kart ve QR kabul eder."
   }
  }
 }

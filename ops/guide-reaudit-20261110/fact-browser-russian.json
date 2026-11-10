@@ -1,0 +1,68 @@
+{
+  "date": "2026-11-10",
+  "reviewer": "review_russian",
+  "method": "Offline independent reading of native Chrome AX saved by root; no browser interaction by this reviewer",
+  "scope": "All six browser-*.txt present at time of review",
+  "blocks": [
+    {
+      "code": "KEJ",
+      "block": "parking",
+      "status": "confirmed",
+      "url": "https://airkem.ru/transport/parking/tariff/",
+      "evidence_file": "browser-KEJ-parking.txt",
+      "evidence_sha256": "369874f1ee846ecba3a1fc775ab4ce2c0916cb22363769eb33912a626a6e51e6",
+      "evidence": "30 м; 173 места; до 15 минут бесплатно; первый час 300 ₽; второй и третий по 200 ₽; с 4-го часа посуточный тариф 1000 ₽.",
+      "caveat": "Слово «сутки» в HTML не определено отдельно как 24 часа. Явного календарного исключения не найдено; PDF не проверен. Это не доказанный конфликт."
+    },
+    {
+      "code": "KEJ",
+      "block": "storage",
+      "status": "confirmed",
+      "url": "https://airkem.ru/services/infrastructure/storage/",
+      "evidence_file": "browser-KEJ-storage.txt",
+      "evidence_sha256": "c1819a8af91b5e890ac0be3ce17b031f2cecf618eab7124f1a1e1b61d2ce3fa8",
+      "evidence": "Ручная кладь 200 ₽/сутки; до 50×40×20 см 220 ₽; свыше 270 ₽; свыше 100×50×70 см 500 ₽. Неполные сутки оплачиваются полностью; график совпадает с аэровокзалом ВВЛ.",
+      "caveat": ""
+    },
+    {
+      "code": "KGD",
+      "block": "parking",
+      "status": "confirmed",
+      "url": "https://kgdavia.ru/transport/parking/tariff/",
+      "evidence_file": "browser-KGD-parking.txt",
+      "evidence_sha256": "066def7290947d6b87c6365c26fc0b2c74f746471f6b3a01c0fd91e64e1b7c2b",
+      "evidence": "С 01.10.2026 400 ₽ за полный/неполный час; первые 15 минут бесплатно; 900 ₽/сутки; бесплатная площадка 400 м/300 машин. Первая линия: парковка запрещена, въезд только договорным такси и общественному транспорту.",
+      "caveat": "Повторный въезд в течение 2 часов платный с первой минуты: полезное ограничение отсутствует в RU. Корейское обозначение запрета остановки чрезмерно: источник запрещает парковку, а посадку/высадку разрешает указанному транспорту."
+    },
+    {
+      "code": "KGD",
+      "block": "kids",
+      "status": "confirmed",
+      "url": "https://kgdavia.ru/passengers/information/babysroom/",
+      "evidence_file": "browser-KGD-kids.txt",
+      "evidence_sha256": "022f672fed6dd02e380add4cb68ee02342ef912b2f6cb4b47ae00c6daa6cb0a7",
+      "evidence": "Бесплатно для вылетающих: дети до 7 лет, дети-инвалиды до 14, вторая половина беременности; график аэровокзала. Справка после медосмотра: медпункт 1 этаж справа. Багаж в камеру хранения.",
+      "caveat": "Для входа также требуются паспорт, свидетельство о рождении, билет/посадочный, беременным обменная карта; RU не перечисляет эти документы."
+    },
+    {
+      "code": "MRV",
+      "block": "parking",
+      "status": "conflict",
+      "url": "https://mvairport.ru/transport/parking/tariff/",
+      "evidence_file": "browser-MRV-parking.txt",
+      "evidence_sha256": "ce404643a57e3ff33492c30f62c9b6d2bc8634dd5d8f2c525ca9619e7687b880",
+      "evidence": "P1: менее 15 мин бесплатно, 15–60 мин 500 ₽, далее 500 ₽/час, свыше 4 часов 1200 ₽/сутки; неполные сутки полные. Ниже общее правило посуточной парковки: «расчетный час 00:00».",
+      "caveat": "В переводах 24 hours несовместимо с явным расчётным часом. P1 тоже переходит на посуточный тариф; отдельного исключения для неё источник не содержит. P1 по серьёзности: неправильное ожидание цены при пересечении полуночи."
+    },
+    {
+      "code": "PEE",
+      "block": "parking",
+      "status": "partial",
+      "url": "https://aviaperm.ru/transport/parking/tariff/",
+      "evidence_file": "browser-PEE-parking.txt",
+      "evidence_sha256": "2c624d4ec2ae9d90a1df8fea24852cf6130a4552a16b977f3dad3d2d229be087",
+      "evidence": "Страница подтверждает круглосуточную работу парковочного комплекса и общие правила.",
+      "caveat": "Тарифы в графике/PDF не попали в AX. Числа 15/10 минут, 300/500/400 ₽ по этому файлу не подтверждены."
+    }
+  ]
+}

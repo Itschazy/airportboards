@@ -25,7 +25,7 @@
   "parking": {
    "title": "Parking",
    "hint": "Moins de 15 min gratuites",
-   "text": "Parking courte durée P1 près du hall des départs : moins de 15 minutes gratuit, 15–60 minutes 500 ₽, ensuite 500 ₽ de l'heure, au-delà de 4 heures 1200 ₽ par période de 24 heures. Nouveau passage dans l'heure 500 ₽. Un parking gratuit existe sur le terrain attenant, emplacement sur le plan des parkings."
+   "text": "Parking courte durée P1 près du hall des départs : moins de 15 minutes gratuit, 15–60 minutes 500 ₽, ensuite 500 ₽ de l'heure, au-delà de 4 heures 1200 ₽ par jour calendaire ; le jour de facturation change à 00:00 et tout jour entamé est facturé en entier. Nouveau passage dans l'heure 500 ₽. Un parking gratuit existe sur le terrain attenant, emplacement sur le plan des parkings."
   }
  }
 }

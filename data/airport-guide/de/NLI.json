@@ -4,8 +4,8 @@
   "blocks": {
     "storage": {
       "title": "Gepäckaufbewahrung",
-      "hint": "419 ₽ pro Gepäckstück/24 Std.",
-      "text": "Aufbewahrung von Gepäck in der Gepäckaufbewahrung: 418,83 ₽ pro Gepäckstück und 24 Stunden inkl. MwSt. Preise laut Preisliste ab 5. Juni 2026."
+      "hint": "419 ₽ pro Gepäckstück/Tag",
+      "text": "Aufbewahrung von Gepäck in der Gepäckaufbewahrung: 418,83 ₽ pro Gepäckstück und Tag inkl. MwSt. Preise laut Preisliste ab 5. Juni 2026."
     },
     "lounges": {
       "title": "Business-Lounges",

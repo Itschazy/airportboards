@@ -19,8 +19,8 @@
   },
   "storage": {
    "title": "Gepäckaufbewahrung",
-   "hint": "Ebene 1, 600 ₽/24 h",
-   "text": "Gepäckaufbewahrung auf Ebene 1 des Terminals. 300 ₽ bis 1 Stunde, danach 600 ₽ pro 24 Stunden. Gegenstände werden nur verpackt angenommen. Gepäckverpackung auf Ebene 1 von 7:00 bis 19:00, ab 1 000 ₽ pro Stück."
+   "hint": "Ebene 1, 600 ₽/Tag",
+   "text": "Gepäckaufbewahrung auf Ebene 1 des Terminals. 300 ₽ bis 1 Stunde, danach 600 ₽ pro Tag. Gegenstände werden nur verpackt angenommen. Gepäckverpackung auf Ebene 1 von 7:00 bis 19:00, ab 1 000 ₽ pro Stück."
   },
   "sleep": {
    "title": "Schlafen",

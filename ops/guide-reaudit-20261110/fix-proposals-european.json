@@ -1,0 +1,54 @@
+{
+  "source": "https://aerovlad.ru/ru/services/14",
+  "status": "proposed; source confirmed by parent; hints only level1/24x7 and need no change",
+  "changes": [
+    {
+      "file": "data/airport-guide/en/VVO.json",
+      "path": "blocks.storage.text",
+      "before": "Level 1, behind the escalator, open round the clock. Standard rate: 500 ₽ for the first 24 hours, 200 ₽ for each further 24 hours, item up to 203 cm in total dimensions. An incomplete 24-hour period counts as a full one.",
+      "after": "Level 1, behind the escalator, open round the clock. Standard rate: 500 ₽ for the first calendar day (00:00–23:59), 200 ₽ for each subsequent calendar day, item up to 203 cm in total dimensions. A partial calendar day is charged as a full day.",
+      "reason": "Official storage tariff uses calendar day00:00–23:59; confirmed by parent fresh source, not24h rolling",
+      "fileSha256": "1c1d1cdc6b369e650a91bb50a58cc0e7db805356854fe46b3af33a1f95738845"
+    },
+    {
+      "file": "data/airport-guide/de/VVO.json",
+      "path": "blocks.storage.text",
+      "before": "Ebene 1, hinter der Rolltreppe, rund um die Uhr. Tarif „Standard“: 500 ₽ für die ersten 24 Stunden, 200 ₽ für je weitere 24 Stunden, Gepäckstück bis 203 cm Summe der Maße. Angefangene 24-Stunden-Zeiträume zählen als volle.",
+      "after": "Ebene 1, hinter der Rolltreppe, rund um die Uhr. Tarif „Standard“: 500 ₽ für den ersten Kalendertag (00:00–23:59), 200 ₽ für jeden weiteren Kalendertag, Gepäckstück bis 203 cm Summe der Maße. Angefangene Kalendertage werden voll berechnet.",
+      "reason": "Official storage tariff uses calendar day00:00–23:59; confirmed by parent fresh source, not24h rolling",
+      "fileSha256": "b0e6827b42683aeeec630fa25f8d39422cb640ba5fb337bf1bc025110a9ca96a"
+    },
+    {
+      "file": "data/airport-guide/fr/VVO.json",
+      "path": "blocks.storage.text",
+      "before": "Niveau 1, derrière l'escalator, jour et nuit. Tarif « Standard » : 500 ₽ pour les premières 24 heures, 200 ₽ par tranche de 24 heures suivante, bagage jusqu'à 203 cm pour la somme des dimensions. Toute tranche de 24 heures entamée est due en entier.",
+      "after": "Niveau 1, derrière l'escalator, jour et nuit. Tarif « Standard » : 500 ₽ pour le premier jour calendaire (00:00–23:59), 200 ₽ par jour calendaire suivant, bagage jusqu'à 203 cm pour la somme des dimensions. Tout jour calendaire entamé est dû en entier.",
+      "reason": "Official storage tariff uses calendar day00:00–23:59; confirmed by parent fresh source, not24h rolling",
+      "fileSha256": "9b971b5a85322d164471eeecdacf4c4671c0961c1d9dd8079d2f5c9ca2a689e5"
+    },
+    {
+      "file": "data/airport-guide/es/VVO.json",
+      "path": "blocks.storage.text",
+      "before": "Nivel 1, detrás de la escalera mecánica, día y noche. Tarifa «Standard»: 500 ₽ las primeras 24 horas, 200 ₽ por cada 24 horas siguientes, bulto de hasta 203 cm de suma de dimensiones. Un periodo de 24 horas incompleto se cuenta como completo.",
+      "after": "Nivel 1, detrás de la escalera mecánica, día y noche. Tarifa «Standard»: 500 ₽ el primer día natural (00:00–23:59), 200 ₽ por cada día natural siguiente, bulto de hasta 203 cm de suma de dimensiones. Cada día natural iniciado se cobra completo.",
+      "reason": "Official storage tariff uses calendar day00:00–23:59; confirmed by parent fresh source, not24h rolling",
+      "fileSha256": "4cdbc6059c8fcc98908f105df14a604c1fb8adab3d9768eb6370a8aa36915bc5"
+    },
+    {
+      "file": "data/airport-guide/it/VVO.json",
+      "path": "blocks.storage.text",
+      "before": "Livello 1, dietro la scala mobile, giorno e notte. Tariffa «Standard»: 500 ₽ per le prime 24 ore, 200 ₽ per ogni successivo periodo di 24 ore, collo fino a 203 cm come somma delle dimensioni. Il periodo di 24 ore iniziato conta come intero.",
+      "after": "Livello 1, dietro la scala mobile, giorno e notte. Tariffa «Standard»: 500 ₽ per il primo giorno di calendario (00:00–23:59), 200 ₽ per ogni successivo giorno di calendario, collo fino a 203 cm come somma delle dimensioni. Ogni giorno di calendario iniziato si paga per intero.",
+      "reason": "Official storage tariff uses calendar day00:00–23:59; confirmed by parent fresh source, not24h rolling",
+      "fileSha256": "ece745f08a34af489246d1b082c215f910bb150e8da58694a47089371567803c"
+    },
+    {
+      "file": "data/airport-guide/tr/VVO.json",
+      "path": "blocks.storage.text",
+      "before": "Kat 1, yürüyen merdivenin arkasında, gece gündüz açık. Standart tarife: ilk 24 saat 500 ₽, sonraki her 24 saat 200 ₽; boyutlarının toplamı 203 cm'ye kadar parça. Tamamlanmamış 24 saatlik dönem tam sayılır.",
+      "after": "Kat 1, yürüyen merdivenin arkasında, gece gündüz açık. Standart tarife: ilk takvim günü (00:00–23:59) 500 ₽, sonraki her takvim günü 200 ₽; boyutlarının toplamı 203 cm'ye kadar parça. Başlanan her takvim günü tam gün olarak ücretlendirilir.",
+      "reason": "Official storage tariff uses calendar day00:00–23:59; confirmed by parent fresh source, not24h rolling",
+      "fileSha256": "5bbd22de8822c5c901a46eb98796f0f7598e93348ae1a82706c8a7a610870d96"
+    }
+  ]
+}

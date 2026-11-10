@@ -20,7 +20,7 @@
   "parking": {
    "title": "Parken",
    "hint": "15 Min. kostenlos",
-   "text": "Kurzzeitparkplatz P1 am Terminal: bis 15 Minuten kostenlos, 16–60 Minuten 500 ₽, die zweite Stunde 300 ₽, die dritte und vierte je 200 ₽, ab der 241. Minute 1200 ₽, höchstens 24 Stunden. Langzeitparkplatz: für bis zu 3 Zeiträume von je 24 Stunden 800 ₽ pro 24 Stunden, für den 4. bis 6. Zeitraum 500 ₽ pro 24 Stunden."
+   "text": "Kurzzeitparkplatz P1 am Terminal: bis 15 Minuten kostenlos, 16–60 Minuten 500 ₽, die zweite Stunde 300 ₽, die dritte und vierte je 200 ₽, ab der 241. Minute 1200 ₽, höchstens einen Tag. Langzeitparkplatz: für bis zu 3 Tage 800 ₽ pro Tag, für den 4. bis 6. Tag 500 ₽ pro Tag."
   },
   "wifi": {
    "title": "Wi‑Fi",

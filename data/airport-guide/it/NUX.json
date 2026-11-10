@@ -20,7 +20,7 @@
   "storage": {
    "title": "Deposito bagagli",
    "hint": "Sala partenze, da 500 ₽",
-   "text": "Deposito bagagli automatico nella sala partenze al livello 1. Armadietto standard 500 ₽ ogni 24 ore o 200 ₽ all’ora, maggiorato 900 ₽ ogni 24 ore o 300 ₽ all’ora. L’armadietto si apre con il codice a barre sullo scontrino."
+   "text": "Deposito bagagli automatico nella sala partenze al livello 1. Armadietto standard 500 ₽ al giorno o 200 ₽ all’ora, maggiorato 900 ₽ al giorno o 300 ₽ all’ora. L’armadietto si apre con il codice a barre sullo scontrino."
   },
   "wifi": {
    "title": "Wi‑Fi",

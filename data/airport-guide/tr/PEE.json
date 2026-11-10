@@ -20,7 +20,7 @@
   "parking": {
    "title": "Otopark",
    "hint": "15 dakika ücretsiz",
-   "text": "Kısa süreli merkez otoparkı: 15 dakikaya kadar ücretsiz, bir saate kadar 300 ₽, 24 saate kadar 500 ₽, sonrası her 24 saat için 500 ₽. Uzun süreli: 10 dakikaya kadar ücretsiz, 24 saate kadar 400 ₽, sonrası her 24 saat için 400 ₽. Tamamlanmamış saat ve 24 saatlik dönem tam olarak ücretlendirilir."
+   "text": "Kısa süreli merkez otoparkı: 15 dakikaya kadar ücretsiz, bir saate kadar 300 ₽, bir güne kadar 500 ₽, sonrası gün başına 500 ₽. Uzun süreli: 10 dakikaya kadar ücretsiz, bir güne kadar 400 ₽, sonrası gün başına 400 ₽. Tamamlanmamış saat ve gün tam olarak ücretlendirilir."
   },
   "wifi": {
    "title": "Wi‑Fi",

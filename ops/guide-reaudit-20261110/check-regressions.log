@@ -1,0 +1,29 @@
+PASS complete valid fixture
+PASS CJK hint at limit accepted
+PASS CJK hint exceeding limit rejected
+PASS mismatched third source rejected
+PASS missing entire locale rejected
+PASS missing translated about rejected
+PASS changed about value rejected
+PASS year beside Italian grouped count preserved
+PASS Turkish inflected thousand accepted
+PASS Turkish changed inflected thousand rejected
+PASS Japanese compound number accepted
+PASS Japanese changed compound number rejected
+PASS duration replacing Japanese date rejected
+PASS Japanese date beside duration accepted
+PASS Arabic dual two days accepted
+PASS Arabic single day cannot replace two days
+PASS orphan translation rejected
+PASS calendar billing with round-the-clock service accepted
+PASS en: rolling period replacing calendar billing rejected
+PASS de: rolling period replacing calendar billing rejected
+PASS fr: rolling period replacing calendar billing rejected
+PASS es: rolling period replacing calendar billing rejected
+PASS it: rolling period replacing calendar billing rejected
+PASS tr: rolling period replacing calendar billing rejected
+PASS zh: rolling period replacing calendar billing rejected
+PASS ja: rolling period replacing calendar billing rejected
+PASS ko: rolling period replacing calendar billing rejected
+PASS ar: rolling period replacing calendar billing rejected
+PASS hi: rolling period replacing calendar billing rejected

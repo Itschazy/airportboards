@@ -15,7 +15,7 @@
   "storage": {
    "title": "Emanet",
    "hint": "Kat 1, saati 200 ₽'den",
-   "text": "Otomatik emanet dolapları terminal binasının sağ kanadında, Kat 1. Standart dolap saati 200 ₽ veya 24 saati 500 ₽, büyük dolap saati 300 ₽ veya 24 saati 800 ₽. Aynı yerde parça başına 950 ₽'den bagaj sarma."
+   "text": "Otomatik emanet dolapları terminal binasının sağ kanadında, Kat 1. Standart dolap saati 200 ₽ veya günlük 500 ₽, büyük dolap saati 300 ₽ veya günlük 800 ₽. Aynı yerde parça başına 950 ₽'den bagaj sarma."
   },
   "kids": {
    "title": "Çocukla",
@@ -25,7 +25,7 @@
   "parking": {
    "title": "Otopark",
    "hint": "15 dakika ücretsiz",
-   "text": "İndirme-bindirme alanı: 15 dakikaya kadar ücretsiz, 16–60 dakika 600 ₽, sonrası saati 600 ₽. Terminale 2 dakika uzaklıkta 600 araçlık Р1 otoparkı, ilk dakikadan itibaren ücretli: 30 dakikaya kadar 100 ₽, bir saate kadar 150 ₽, 2 saate kadar 250 ₽, 24 saate kadar 400 ₽, sonraki her 24 saat 400 ₽."
+   "text": "İndirme-bindirme alanı: 15 dakikaya kadar ücretsiz, 16–60 dakika 600 ₽, sonrası saati 600 ₽. Terminale 2 dakika uzaklıkta 600 araçlık Р1 otoparkı, ilk dakikadan itibaren ücretli: 30 dakikaya kadar 100 ₽, bir saate kadar 150 ₽, 2 saate kadar 250 ₽, 24 saate kadar 400 ₽, sonraki her gün 400 ₽."
   },
   "wifi": {
    "title": "Wi‑Fi",

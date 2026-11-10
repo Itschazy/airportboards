@@ -1,0 +1,58 @@
+{
+  "changes": [
+    {
+      "file": "data/airport-guide/en/KUF.json",
+      "code": "KUF",
+      "block": "parking",
+      "locale": "en",
+      "field": "text",
+      "before": "In the drop-off and pick-up zone the first 15 minutes are free, from minute 16 to 60: 880 ₽. Short-stay P1: up to an hour 357 ₽, up to 2 hours 682 ₽, up to 3 hours 1,000 ₽, over 3 and up to 24 hours 1,391 ₽; each subsequent 24-hour period 1,391 ₽. Long-stay P2: the first 24 hours 791 ₽; different rates apply to longer stays. Economy P4: 1,054 ₽ for the first 2 periods of 24 hours. All car parks are open round the clock.",
+      "after": "In the drop-off and pick-up zone the first 15 minutes are free, from minute 16 to 60: 880 ₽. Short-stay P1: up to an hour 357 ₽, up to 2 hours 682 ₽, up to 3 hours 1,000 ₽, over 3 and up to 24 hours 1,391 ₽; each subsequent 24-hour period 1,391 ₽. Long-stay P2: the first 24 hours 791 ₽; different rates apply to longer stays. Economy P4: 1,054 ₽ for the first 2 days. All car parks are open round the clock."
+    },
+    {
+      "file": "data/airport-guide/de/KUF.json",
+      "code": "KUF",
+      "block": "parking",
+      "locale": "de",
+      "field": "text",
+      "before": "In der Hol- und Bringzone sind die ersten 15 Minuten kostenlos, von der 16. bis zur 60. Minute 880 ₽. Kurzzeitparkplatz P1: bis zu einer Stunde 357 ₽, bis 2 Stunden 682 ₽, bis 3 Stunden 1000 ₽, über 3 bis 24 Stunden 1391 ₽; je weitere 24 Stunden 1391 ₽. Langzeitparkplatz P2: die ersten 24 Stunden 791 ₽; für längere Aufenthalte gelten andere Tarife. Economy P4: 1054 ₽ für die ersten 2 Zeiträume von je 24 Stunden. Alle Parkplätze sind rund um die Uhr geöffnet.",
+      "after": "In der Hol- und Bringzone sind die ersten 15 Minuten kostenlos, von der 16. bis zur 60. Minute 880 ₽. Kurzzeitparkplatz P1: bis zu einer Stunde 357 ₽, bis 2 Stunden 682 ₽, bis 3 Stunden 1000 ₽, über 3 bis 24 Stunden 1391 ₽; je weitere 24 Stunden 1391 ₽. Langzeitparkplatz P2: die ersten 24 Stunden 791 ₽; für längere Aufenthalte gelten andere Tarife. Economy P4: 1054 ₽ für die ersten 2 Tage. Alle Parkplätze sind rund um die Uhr geöffnet."
+    },
+    {
+      "file": "data/airport-guide/fr/KUF.json",
+      "code": "KUF",
+      "block": "parking",
+      "locale": "fr",
+      "field": "text",
+      "before": "Dans la zone de dépose et de prise en charge, 15 premières minutes gratuites, de la 16e à la 60e minute 880 ₽. Courte durée P1 : jusqu'à une heure 357 ₽, jusqu'à 2 heures 682 ₽, jusqu'à 3 heures 1000 ₽, au-delà de 3 heures et jusqu'à 24 heures 1391 ₽ ; chaque période suivante de 24 heures 1391 ₽. Longue durée P2 : les premières 24 heures 791 ₽ ; d'autres tarifs s'appliquent aux séjours plus longs. Économique P4 : 1054 ₽ pour les 2 premières périodes de 24 heures. Tous les parkings sont ouverts jour et nuit.",
+      "after": "Dans la zone de dépose et de prise en charge, 15 premières minutes gratuites, de la 16e à la 60e minute 880 ₽. Courte durée P1 : jusqu'à une heure 357 ₽, jusqu'à 2 heures 682 ₽, jusqu'à 3 heures 1000 ₽, au-delà de 3 heures et jusqu'à 24 heures 1391 ₽ ; chaque période suivante de 24 heures 1391 ₽. Longue durée P2 : les premières 24 heures 791 ₽ ; d'autres tarifs s'appliquent aux séjours plus longs. Économique P4 : 1054 ₽ pour les 2 premiers jours. Tous les parkings sont ouverts jour et nuit."
+    },
+    {
+      "file": "data/airport-guide/es/KUF.json",
+      "code": "KUF",
+      "block": "parking",
+      "locale": "es",
+      "field": "text",
+      "before": "En la zona de recogida y bajada de pasajeros, los primeros 15 minutos son gratis; del minuto 16 al 60, 880 ₽. Corta estancia P1: hasta una hora 357 ₽, hasta 2 horas 682 ₽, hasta 3 horas 1000 ₽, más de 3 y hasta 24 horas 1391 ₽; cada periodo posterior de 24 horas 1391 ₽. Larga estancia P2: las primeras 24 horas 791 ₽; para estancias más largas se aplican otras tarifas. Económico P4: 1054 ₽ los 2 primeros periodos de 24 horas. Todos los aparcamientos abren día y noche.",
+      "after": "En la zona de recogida y bajada de pasajeros, los primeros 15 minutos son gratis; del minuto 16 al 60, 880 ₽. Corta estancia P1: hasta una hora 357 ₽, hasta 2 horas 682 ₽, hasta 3 horas 1000 ₽, más de 3 y hasta 24 horas 1391 ₽; cada periodo posterior de 24 horas 1391 ₽. Larga estancia P2: las primeras 24 horas 791 ₽; para estancias más largas se aplican otras tarifas. Económico P4: 1054 ₽ los 2 primeros días. Todos los aparcamientos abren día y noche."
+    },
+    {
+      "file": "data/airport-guide/it/KUF.json",
+      "code": "KUF",
+      "block": "parking",
+      "locale": "it",
+      "field": "text",
+      "before": "Nella zona di salita e discesa passeggeri i primi 15 minuti gratis, dal 16° al 60° minuto 880 ₽. Breve sosta P1: fino a un’ora 357 ₽, fino a 2 ore 682 ₽, fino a 3 ore 1000 ₽, oltre 3 e fino a 24 ore 1391 ₽; ogni successivo periodo di 24 ore 1391 ₽. Lunga sosta P2: le prime 24 ore 791 ₽; per soste più lunghe si applicano altre tariffe. Economy P4: 1054 ₽ per i primi 2 periodi di 24 ore. Tutti i parcheggi sono aperti giorno e notte.",
+      "after": "Nella zona di salita e discesa passeggeri i primi 15 minuti gratis, dal 16° al 60° minuto 880 ₽. Breve sosta P1: fino a un’ora 357 ₽, fino a 2 ore 682 ₽, fino a 3 ore 1000 ₽, oltre 3 e fino a 24 ore 1391 ₽; ogni successivo periodo di 24 ore 1391 ₽. Lunga sosta P2: le prime 24 ore 791 ₽; per soste più lunghe si applicano altre tariffe. Economy P4: 1054 ₽ per i primi 2 giorni. Tutti i parcheggi sono aperti giorno e notte."
+    },
+    {
+      "file": "data/airport-guide/tr/KUF.json",
+      "code": "KUF",
+      "block": "parking",
+      "locale": "tr",
+      "field": "text",
+      "before": "İndirme-bindirme alanında ilk 15 dakika ücretsiz, 16. ila 60. dakika 880 ₽. Kısa süreli P1: bir saate kadar 357 ₽, 2 saate kadar 682 ₽, 3 saate kadar 1000 ₽, 3 saatten fazla ve 24 saate kadar 1391 ₽; sonraki her 24 saat 1391 ₽. Uzun süreli P2: ilk 24 saat 791 ₽; daha uzun park sürelerinde farklı tarifeler uygulanır. Ekonomi P4: ilk 2 adet 24 saatlik dönem 1054 ₽. Tüm otoparklar gece gündüz açık.",
+      "after": "İndirme-bindirme alanında ilk 15 dakika ücretsiz, 16. ila 60. dakika 880 ₽. Kısa süreli P1: bir saate kadar 357 ₽, 2 saate kadar 682 ₽, 3 saate kadar 1000 ₽, 3 saatten fazla ve 24 saate kadar 1391 ₽; sonraki her 24 saat 1391 ₽. Uzun süreli P2: ilk 24 saat 791 ₽; daha uzun park sürelerinde farklı tarifeler uygulanır. Ekonomi P4: ilk 2 gün 1054 ₽. Tüm otoparklar gece gündüz açık."
+    }
+  ]
+}

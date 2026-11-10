@@ -36,6 +36,11 @@ try {
  check('changed about value rejected',false,'[about]: числа расходятся');
  write('en/AAA.json',{...translated,about:'nel 2024 883.000 persone'});
  check('year beside Italian grouped count preserved',true);
+ write('tr/AAA.json',{...translated,about:'2024 yılında 883 binden fazla yolcu.'});
+ check('Turkish inflected thousand accepted',true);
+ write('tr/AAA.json',{...translated,about:'2024 yılında 884 binden fazla yolcu.'});
+ check('Turkish changed inflected thousand rejected',false,'[about]: числа расходятся');
+ write('tr/AAA.json',translated);
  write('ja/AAA.json',{...translated,about:'2024年の旅客数は88万3000人。'});
  check('Japanese compound number accepted',true);
  write('ja/AAA.json',{...translated,about:'2024年の旅客数は88万4000人。'});
@@ -49,6 +54,24 @@ try {
  check('Japanese date beside duration accepted',true);
  write('AAA.json',original);
  for(const l of locales) write(`${l}/AAA.json`,translated);
+ write('AAA.json',{...original,blocks:[{...original.blocks[0],text:'До 2 суток: 500 ₽.'}]});
+ for(const l of locales) write(`${l}/AAA.json`,{...translated,blocks:{wifi:{...translated.blocks.wifi,text:'Up to 2 days: 500.'}}});
+ write('ar/AAA.json',{...translated,blocks:{wifi:{...translated.blocks.wifi,text:'حتى يومين: 500.'}}});
+ check('Arabic dual two days accepted',true);
+ write('ar/AAA.json',{...translated,blocks:{wifi:{...translated.blocks.wifi,text:'حتى يوم واحد: 500.'}}});
+ check('Arabic single day cannot replace two days',false,'числа расходятся');
+ write('AAA.json',original);
+ for(const l of locales) write(`${l}/AAA.json`,translated);
  write('en/ZZZ.json',{...translated,iata:'ZZZ'});
  check('orphan translation rejected',false,'перевод без русского оригинала');
+ fs.unlinkSync(path.join(root,'en/ZZZ.json'));
+ write('AAA.json',{...original,blocks:[{...original.blocks[0],hint:'24/7',text:'Хранение 500 ₽ за календарные сутки. Круглосуточно.'}]});
+ const terms = {en:'calendar day',de:'Kalendertag',fr:'jour calendaire',es:'día natural',it:'giorno solare',tr:'takvim günü',zh:'自然日',ja:'暦日',ko:'달력상의 하루',ar:'يوم تقويمي',hi:'कैलेंडर दिन'};
+ for(const l of locales) write(`${l}/AAA.json`,{...translated,blocks:{wifi:{...translated.blocks.wifi,hint:'24/7',text:`500: ${terms[l]}. 24/7.`}}});
+ check('calendar billing with round-the-clock service accepted',true);
+ for(const l of locales) {
+   write(`${l}/AAA.json`,{...translated,blocks:{wifi:{...translated.blocks.wifi,hint:'24/7',text:'500: 24h. 24/7.'}}});
+   check(`${l}: rolling period replacing calendar billing rejected`,false,'потеряно уточнение календарных суток');
+   write(`${l}/AAA.json`,{...translated,blocks:{wifi:{...translated.blocks.wifi,hint:'24/7',text:`500: ${terms[l]}. 24/7.`}}});
+ }
 } finally { fs.rmSync(root,{recursive:true}); }

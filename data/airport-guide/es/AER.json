@@ -10,7 +10,7 @@
   "storage": {
    "title": "Consigna",
    "hint": "Sector C, nivel 1, 24/7",
-   "text": "Sector C, nivel 1, abierta día y noche. Las primeras 24 horas cuestan desde 600 ₽ por bulto; cada 24 horas siguientes, desde 300 ₽. Un bulto pesa como máximo 30 kg y la suma de sus tres dimensiones no supera los 203 cm. Los objetos no recogidos en 30 días se consideran no reclamados. Teléfono 8 (862) 249-78-46."
+   "text": "Sector C, nivel 1, abierta día y noche. El primer día cuesta desde 600 ₽ por bulto; cada día siguiente, desde 300 ₽. Un bulto pesa como máximo 30 kg y la suma de sus tres dimensiones no supera los 203 cm. Los objetos no recogidos en 30 días se consideran no reclamados. Teléfono 8 (862) 249-78-46."
   },
   "sleep": {
    "title": "Dónde dormir",
@@ -30,7 +30,7 @@
   "parking": {
    "title": "Aparcamiento",
    "hint": "15 minutos gratis",
-   "text": "En la plaza de la terminal (accesos 1–6), los primeros 15 minutos son gratis; después, 400 ₽ por hora. En el aparcamiento por cada 24 horas (accesos 31, 32), los primeros 15 minutos son gratis; después, 300 ₽ por hora, y si se aparca más de 3 horas, 1 500 ₽ por cada 24 horas. Está 100 m antes de la entrada principal, girando a la derecha. Hay un aparcamiento alternativo a unos 400 m de la terminal."
+   "text": "En la plaza de la terminal (accesos 1–6), los primeros 15 minutos son gratis; después, 400 ₽ por hora. En el aparcamiento por día (accesos 31, 32), los primeros 15 minutos son gratis; después, 300 ₽ por hora, y si se aparca más de 3 horas, 1 500 ₽ por día. Está 100 m antes de la entrada principal, girando a la derecha. Hay un aparcamiento alternativo a unos 400 m de la terminal."
   },
   "wifi": {
    "title": "Wi‑Fi",

@@ -1,0 +1,173 @@
+   ▲ Next.js 15.5.28
+   - Environments: .env.production
+   - Experiments (use with caution):
+     ✓ inlineCss
+
+   Creating an optimized production build ...
+ ✓ Compiled successfully in 20.6s
+   Linting and checking validity of types ...
+
+   We detected TypeScript in your project and reconfigured your tsconfig.json file for you.
+   The following suggested values were added to your tsconfig.json. These values can be changed to fit your project's needs:
+
+   	- include was updated to add '.next-reaudit-20261110/types/**/*.ts'
+
+   Collecting page data ...
+   Generating static pages (0/2473) ...
+[flightStore] импортировано из /tmp/ab-reaudit-20261110.json: бортов 26
+   Generating static pages (618/2473) 
+   Generating static pages (1236/2473) 
+   Generating static pages (1854/2473) 
+ ✓ Generating static pages (2473/2473)
+   Finalizing page optimization ...
+   Collecting build traces ...
+
+Route (app)                                      Size  First Load JS  Revalidate  Expire
+┌ ○ /                                           198 B         103 kB
+├ ○ /_not-found                                 996 B         104 kB
+├ ● /[locale]                                 6.21 kB         124 kB
+├   ├ /en
+├   ├ /ru
+├   ├ /zh
+├   └ [+9 more paths]
+├ ● /[locale]/[...rest]                         198 B         103 kB
+├   ├ /en/404
+├   ├ /ru/404
+├   ├ /zh/404
+├   └ [+9 more paths]
+├ ● /[locale]/about                             199 B         106 kB
+├   ├ /en/about
+├   ├ /ru/about
+├   ├ /zh/about
+├   └ [+9 more paths]
+├ ƒ /[locale]/airline/[code]                    199 B         106 kB
+├ ● /[locale]/airport/[iata]                    132 B         135 kB         30s      1y
+├   ├ /en/airport/JFK                                                        30s      1y
+├   ├ /en/airport/LHR                                                        30s      1y
+├   ├ /en/airport/CDG                                                        30s      1y
+├   └ [+357 more paths]
+├ ● /[locale]/airport/[iata]/arrivals           132 B         135 kB         30s      1y
+├   ├ /en/airport/JFK/arrivals                                               30s      1y
+├   ├ /en/airport/LHR/arrivals                                               30s      1y
+├   ├ /en/airport/CDG/arrivals                                               30s      1y
+├   └ [+357 more paths]
+├ ● /[locale]/airport/[iata]/departures         133 B         135 kB         30s      1y
+├   ├ /en/airport/JFK/departures                                             30s      1y
+├   ├ /en/airport/LHR/departures                                             30s      1y
+├   ├ /en/airport/CDG/departures                                             30s      1y
+├   └ [+357 more paths]
+├ ƒ /[locale]/airport/[iata]/opengraph-image    198 B         103 kB
+├ ● /[locale]/airports                          199 B         106 kB          1d      1y
+├   ├ /en/airports                                                            1d      1y
+├   ├ /ru/airports                                                            1d      1y
+├   ├ /zh/airports                                                            1d      1y
+├   └ [+9 more paths]
+├ ● /[locale]/airports/[country]                169 B         106 kB          1d      1y
+├   ├ /en/airports/united-states                                              1d      1y
+├   ├ /en/airports/canada                                                     1d      1y
+├   ├ /en/airports/australia                                                  1d      1y
+├   └ [+477 more paths]
+├ ● /[locale]/az/[letter]                       199 B         106 kB
+├   ├ /en/az/a
+├   ├ /en/az/b
+├   ├ /en/az/c
+├   └ [+309 more paths]
+├ ● /[locale]/city/[slug]                       169 B         106 kB          1d      1y
+├   ├ /en/city/houston                                                        1d      1y
+├   ├ /en/city/moscow                                                         1d      1y
+├   ├ /en/city/columbus                                                       1d      1y
+├   └ [+237 more paths]
+├ ● /[locale]/contact                           199 B         106 kB
+├   ├ /en/contact
+├   ├ /ru/contact
+├   ├ /zh/contact
+├   └ [+9 more paths]
+├ ● /[locale]/event/[slug]                      199 B         106 kB          1h      1y
+├   ├ /en/event/asian-games-nagoya-2026                                       1h      1y
+├   ├ /en/event/f1-abu-dhabi                                                  1h      1y
+├   ├ /en/event/f1-baku                                                       1h      1y
+├   └ [+153 more paths]
+├ ● /[locale]/event/[slug]/opengraph-image      198 B         103 kB
+├ ● /[locale]/events                            199 B         106 kB          1h      1y
+├   ├ /en/events                                                              1h      1y
+├   ├ /ru/events                                                              1h      1y
+├   ├ /zh/events                                                              1h      1y
+├   └ [+9 more paths]
+├ ● /[locale]/favorites                       1.68 kB         120 kB
+├   ├ /en/favorites
+├   ├ /ru/favorites
+├   ├ /zh/favorites
+├   └ [+9 more paths]
+├ ● /[locale]/flight-map                      1.72 kB         105 kB
+├   ├ /en/flight-map
+├   ├ /ru/flight-map
+├   ├ /zh/flight-map
+├   └ [+9 more paths]
+├ ● /[locale]/flight-map/help                   198 B         103 kB
+├   ├ /en/flight-map/help
+├   ├ /ru/flight-map/help
+├   ├ /zh/flight-map/help
+├   └ [+9 more paths]
+├ ƒ /[locale]/flight/[code]                     199 B         106 kB
+├ ● /[locale]/manifest.webmanifest              198 B         103 kB
+├   ├ /en/manifest.webmanifest
+├   ├ /ru/manifest.webmanifest
+├   ├ /zh/manifest.webmanifest
+├   └ [+9 more paths]
+├ ● /[locale]/privacy                           199 B         106 kB
+├   ├ /en/privacy
+├   ├ /ru/privacy
+├   ├ /zh/privacy
+├   └ [+9 more paths]
+├ ƒ /[locale]/route/[pair]                      199 B         106 kB
+├ ● /[locale]/settings                        2.25 kB         121 kB
+├   ├ /en/settings
+├   ├ /ru/settings
+├   ├ /zh/settings
+├   └ [+9 more paths]
+├ ● /[locale]/terms                             199 B         106 kB
+├   ├ /en/terms
+├   ├ /ru/terms
+├   ├ /zh/terms
+├   └ [+9 more paths]
+├ ● /[locale]/widgets                         2.52 kB         117 kB
+├   ├ /en/widgets
+├   ├ /ru/widgets
+├   ├ /zh/widgets
+├   └ [+9 more paths]
+├ ○ /ads.txt                                    198 B         103 kB
+├ ƒ /api/airlabs-usage                          198 B         103 kB
+├ ƒ /api/airports/counts                        198 B         103 kB
+├ ƒ /api/airports/search                        198 B         103 kB
+├ ƒ /api/cron/warm                              198 B         103 kB
+├ ƒ /api/flights/[iata]                         198 B         103 kB
+├ ƒ /api/health                                 198 B         103 kB
+├ ƒ /api/revalidate                             198 B         103 kB
+├ ƒ /api/rum                                    198 B         103 kB
+├ ○ /apple-icon                                 198 B         103 kB
+├ ƒ /embed/[iata]                               276 B         115 kB
+├ ○ /icon                                       198 B         103 kB
+├ ○ /icon1                                      198 B         103 kB
+├ ○ /icon2                                      198 B         103 kB
+├ ○ /llms.txt                                   198 B         103 kB
+├ ○ /manifest.webmanifest                       198 B         103 kB
+├ ○ /opengraph-image                            198 B         103 kB
+├ ○ /robots.txt                                 198 B         103 kB
+├ ○ /sitemap.xml                                198 B         103 kB
+└ ● /sitemap/[__metadata_id__]                  198 B         103 kB          1d      1y
+    ├ /sitemap/0.xml                                                          1d      1y
+    ├ /sitemap/1.xml                                                          1d      1y
+    ├ /sitemap/2.xml                                                          1d      1y
+    └ [+17 more paths]
++ First Load JS shared by all                  103 kB
+  ├ chunks/1255-dc3ddf72a1dc71a7.js           46.6 kB
+  ├ chunks/4bd1b696-f785427dddbba9fb.js       54.2 kB
+  └ other shared chunks (total)               2.04 kB
+
+
+ƒ Middleware                                  46.3 kB
+
+○  (Static)   prerendered as static content
+●  (SSG)      prerendered as static HTML (uses generateStaticParams)
+ƒ  (Dynamic)  server-rendered on demand
+

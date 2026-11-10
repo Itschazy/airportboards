@@ -10,7 +10,7 @@
   "storage": {
    "title": "Left luggage",
    "hint": "B, D and Aeroexpress",
-   "text": "Paid left luggage is available in Terminal B (Level 1), Terminal D (Level −1) and the Aeroexpress terminal, all landside. In B and the Aeroexpress terminal it is open round the clock. The first 24 hours cost 700 ₽ per item, then 300 ₽ per 24 hours. One item may weigh no more than 32 kg; storage for up to 6 months."
+   "text": "Paid left luggage is available in Terminal B (Level 1), Terminal D (Level −1) and the Aeroexpress terminal, all landside. In B and the Aeroexpress terminal it is open round the clock. In B and D, the Standard rate is 700 ₽ for the first calendar day until 00:00, then 300 ₽ for each subsequent calendar day. A partial calendar day is charged in full. Each item may weigh no more than 32 kg."
   },
   "sleep": {
    "title": "Where to sleep",

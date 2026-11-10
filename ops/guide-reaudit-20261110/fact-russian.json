@@ -1,0 +1,392 @@
+[
+  {
+    "code": "ABA",
+    "block": "parking",
+    "status": "confirmed",
+    "urls": [
+      "https://airportabakan.ru/passazhiram-ru/platnaya-parkovka.html"
+    ],
+    "checked_at": "2026-11-10",
+    "reviewer": "review_russian",
+    "evidence": [
+      "HTML подтверждает 50м справа,77мест,24/7,оплата наличными/картой в кассе; период от времени въезда, округление вверх."
+    ],
+    "artifacts": [
+      "ops/guide-reaudit-20261110/russian-sources/1324c7066af4.txt"
+    ]
+  },
+  {
+    "code": "KEJ",
+    "block": "parking",
+    "status": "unavailable",
+    "urls": [
+      "https://airkem.ru/transport/parking/tariff/"
+    ],
+    "checked_at": "2026-11-10",
+    "reviewer": "review_russian",
+    "evidence": [
+      "CLAUDE требует обычный браузер для этого домена. IAB недоступен;Chrome extension createTab/tabs.new ошибка timeoutMs. Обход защиты не выполнялся. Root проводит nativeChrome проверку отдельно."
+    ]
+  },
+  {
+    "code": "KEJ",
+    "block": "storage",
+    "status": "unavailable",
+    "urls": [
+      "https://airkem.ru/services/infrastructure/storage/"
+    ],
+    "checked_at": "2026-11-10",
+    "reviewer": "review_russian",
+    "evidence": [
+      "CLAUDE требует обычный браузер для этого домена. IAB недоступен;Chrome extension createTab/tabs.new ошибка timeoutMs. Обход защиты не выполнялся. Root проводит nativeChrome проверку отдельно."
+    ]
+  },
+  {
+    "code": "KGD",
+    "block": "kids",
+    "status": "unavailable",
+    "urls": [
+      "https://kgdavia.ru/passengers/information/babysroom/"
+    ],
+    "checked_at": "2026-11-10",
+    "reviewer": "review_russian",
+    "evidence": [
+      "CLAUDE требует обычный браузер для этого домена. IAB недоступен;Chrome extension createTab/tabs.new ошибка timeoutMs. Обход защиты не выполнялся. Root проводит nativeChrome проверку отдельно."
+    ]
+  },
+  {
+    "code": "KGD",
+    "block": "parking",
+    "status": "unavailable",
+    "urls": [
+      "https://kgdavia.ru/transport/parking/tariff/"
+    ],
+    "checked_at": "2026-11-10",
+    "reviewer": "review_russian",
+    "evidence": [
+      "CLAUDE требует обычный браузер для этого домена. IAB недоступен;Chrome extension createTab/tabs.new ошибка timeoutMs. Обход защиты не выполнялся. Root проводит nativeChrome проверку отдельно."
+    ]
+  },
+  {
+    "code": "KRR",
+    "block": "parking",
+    "status": "unavailable",
+    "urls": [
+      "https://krr.aero/transport/parking/"
+    ],
+    "checked_at": "2026-11-10",
+    "reviewer": "review_russian",
+    "evidence": [
+      "Обычный requests завершился RemoteDisconnected;сменаUA/обход не выполнялись."
+    ]
+  },
+  {
+    "code": "KRR",
+    "block": "storage",
+    "status": "unavailable",
+    "urls": [
+      "https://krr.aero/services/bagazh/kamera-khraneniya/"
+    ],
+    "checked_at": "2026-11-10",
+    "reviewer": "review_russian",
+    "evidence": [
+      "Обычный requests завершился RemoteDisconnected;сменаUA/обход не выполнялись."
+    ]
+  },
+  {
+    "code": "KRR",
+    "block": "transport",
+    "status": "unavailable",
+    "urls": [
+      "https://krr.aero/transport/obshhestvennyj-transport/",
+      "https://krr.aero/transport/taxi/"
+    ],
+    "checked_at": "2026-11-10",
+    "reviewer": "review_russian",
+    "evidence": [
+      "Обычный requests завершился RemoteDisconnected;сменаUA/обход не выполнялись."
+    ]
+  },
+  {
+    "code": "MRV",
+    "block": "parking",
+    "status": "unavailable",
+    "urls": [
+      "https://mvairport.ru/transport/parking/tariff/"
+    ],
+    "checked_at": "2026-11-10",
+    "reviewer": "review_russian",
+    "evidence": [
+      "CLAUDE требует обычный браузер для этого домена. IAB недоступен;Chrome extension createTab/tabs.new ошибка timeoutMs. Обход защиты не выполнялся. Root проводит nativeChrome проверку отдельно."
+    ]
+  },
+  {
+    "code": "NBC",
+    "block": "about",
+    "status": "confirmed",
+    "urls": [
+      "https://nbc.aero/airport/about/"
+    ],
+    "checked_at": "2026-11-10",
+    "reviewer": "review_russian",
+    "evidence": [
+      "Дочернее предприятие КАМАЗ,перечень обслуживаемых городов,1ВПП,700000+/год,имяЛемаева подтверждены; ошибочный радиус25км не перенесён."
+    ],
+    "artifacts": [
+      "ops/guide-reaudit-20261110/russian-sources/623b290f8dd8.txt"
+    ]
+  },
+  {
+    "code": "NBC",
+    "block": "parking",
+    "status": "confirmed",
+    "urls": [
+      "https://nbc.aero/services/parking-lot/"
+    ],
+    "checked_at": "2026-11-10",
+    "reviewer": "review_russian",
+    "evidence": [
+      "150мест уA/B;20мин бесплатно;200/час до3ч;700/сутки;повторный въезд30мин без льготы;410мест бесплатно."
+    ],
+    "artifacts": [
+      "ops/guide-reaudit-20261110/russian-sources/b06216418234.txt"
+    ]
+  },
+  {
+    "code": "NBC",
+    "block": "storage",
+    "status": "confirmed",
+    "urls": [
+      "https://nbc.aero/services/luggage-storage/"
+    ],
+    "checked_at": "2026-11-10",
+    "reviewer": "review_russian",
+    "evidence": [
+      "1этажB,24/7;первые400 до23:59,далее200;до30кг;Pack&Fly/информация."
+    ],
+    "artifacts": [
+      "ops/guide-reaudit-20261110/russian-sources/067a30b78ead.txt"
+    ]
+  },
+  {
+    "code": "NLI",
+    "block": "storage",
+    "status": "confirmed",
+    "urls": [
+      "http://khabavia.ru/wp-content/uploads/2026/06/%D0%9F%D1%80%D0%B5%D0%B9%D1%81%D0%BA%D1%83%D1%80%D0%B0%D0%BD%D1%82-1-26_%D0%9D%D0%9A%D0%9B-%D1%81-05.06.2026.pdf",
+      "http://khabavia.ru/%D0%B0%D1%8D%D1%80%D0%BE%D0%BF%D0%BE%D1%80%D1%82-%D0%BD%D0%B8%D0%BA%D0%BE%D0%BB%D0%B0%D0%B5%D0%B2%D1%81%D0%BA-%D0%BD%D0%B0-%D0%B0%D0%BC%D1%83%D1%80%D0%B5/"
+    ],
+    "checked_at": "2026-11-10",
+    "reviewer": "review_russian",
+    "evidence": [
+      "Свежий PDF1404924байт,визуально все3стр:п2п3.6 руб/место/сутки418.83сНДС;дата05.06.2026 подтверждена страницейаэропорта."
+    ],
+    "artifacts": [
+      "ops/guide-reaudit-20261110/russian-sources/nli-20261110.pdf",
+      "ops/guide-reaudit-20261110/russian-sources/nli-2.png",
+      "ops/guide-reaudit-20261110/russian-sources/nli-index.txt"
+    ]
+  },
+  {
+    "code": "NNM",
+    "block": "parking",
+    "status": "unavailable",
+    "urls": [
+      "https://avianao.ru/?page=parking"
+    ],
+    "checked_at": "2026-11-10",
+    "reviewer": "review_russian",
+    "evidence": [
+      "HTTP200 отдаёт динамическую оболочку без тарифнойтаблицы;файлnnm-parking.txt. Браузерпереданroot."
+    ],
+    "artifacts": [
+      "ops/guide-reaudit-20261110/russian-sources/nnm-parking.txt"
+    ]
+  },
+  {
+    "code": "PEE",
+    "block": "parking",
+    "status": "unavailable",
+    "urls": [
+      "https://aviaperm.ru/transport/parking/tariff/"
+    ],
+    "checked_at": "2026-11-10",
+    "reviewer": "review_russian",
+    "evidence": [
+      "CLAUDE требует обычный браузер для этого домена. IAB недоступен;Chrome extension createTab/tabs.new ошибка timeoutMs. Обход защиты не выполнялся. Root проводит nativeChrome проверку отдельно."
+    ]
+  },
+  {
+    "code": "PEE",
+    "block": "storage",
+    "status": "unavailable",
+    "urls": [
+      "https://aviaperm.ru/services/infrastructure/storage/"
+    ],
+    "checked_at": "2026-11-10",
+    "reviewer": "review_russian",
+    "evidence": [
+      "CLAUDE требует обычный браузер для этого домена. IAB недоступен;Chrome extension createTab/tabs.new ошибка timeoutMs. Обход защиты не выполнялся. Root проводит nativeChrome проверку отдельно."
+    ]
+  },
+  {
+    "code": "PEK",
+    "block": "parking",
+    "status": "unavailable",
+    "urls": [
+      "https://en.bcia.com.cn/tcc.html"
+    ],
+    "checked_at": "2026-11-10",
+    "reviewer": "review_russian",
+    "evidence": [
+      "HTTP200 отдаёт только Please enable JavaScript and refresh the page;защита не обходилась."
+    ],
+    "artifacts": [
+      "ops/guide-reaudit-20261110/russian-sources/ee14b112d5fb.txt"
+    ]
+  },
+  {
+    "code": "SGC",
+    "block": "about",
+    "status": "confirmed",
+    "urls": [
+      "https://www.airport-surgut.ru/surgut/info/"
+    ],
+    "checked_at": "2026-11-10",
+    "reviewer": "review_russian",
+    "evidence": [
+      "ОператорАОАэропортСургут,30+направлений,бизнес/VIPзалы и телетрапы прямо в тексте."
+    ],
+    "artifacts": [
+      "ops/guide-reaudit-20261110/russian-sources/085db5b80a71.txt"
+    ]
+  },
+  {
+    "code": "SGC",
+    "block": "lounges",
+    "status": "partial",
+    "urls": [
+      "https://www.airport-surgut.ru/surgut/services/biznes-zal/",
+      "https://www.airport-surgut.ru/surgut/services/superior-comfort/"
+    ],
+    "checked_at": "2026-11-10",
+    "reviewer": "review_russian",
+    "evidence": [
+      "Расположение,24/7,ограничение на внутренние,ONPASS3500/2500 подтверждены двумястраницами.",
+      "Первый зал допускает бизнес4перечисленныхавиакомпаний;элитныекарты толькона соответствующихрейсах. RU обобщает доступ."
+    ],
+    "fix": "Указать доступ по правилам авиакомпаний;при расширении добавить лимиты4ч/2ч30м/ONPASS3ч.",
+    "artifacts": [
+      "ops/guide-reaudit-20261110/russian-sources/f07ab41d8b36.txt",
+      "ops/guide-reaudit-20261110/russian-sources/2ae4719b4550.txt"
+    ]
+  },
+  {
+    "code": "SGC",
+    "block": "parking",
+    "status": "confirmed",
+    "urls": [
+      "https://www.airport-surgut.ru/surgut/parking/"
+    ],
+    "checked_at": "2026-11-10",
+    "reviewer": "review_russian",
+    "evidence": [
+      "HTML и отдельныйPDF01.01.2025 подтверждают750/сутки,50мест за остановкой;20мин бесплатной площади подтвержденыPDF20.04.2026. Это разные зоны."
+    ],
+    "artifacts": [
+      "ops/guide-reaudit-20261110/russian-sources/0368217e67b7.txt",
+      "ops/guide-reaudit-20261110/russian-sources/sgc-longstay.pdf",
+      "ops/guide-reaudit-20261110/russian-sources/sgc-parking-2026.pdf"
+    ]
+  },
+  {
+    "code": "SGC",
+    "block": "storage",
+    "status": "confirmed",
+    "urls": [
+      "https://www.airport-surgut.ru/surgut/services/kamera-khraneniya/"
+    ],
+    "checked_at": "2026-11-10",
+    "reviewer": "review_russian",
+    "evidence": [
+      "Явное определение первыхсуток:от сдачи до00:00,400;далее200;24/7;30кг. Примечание про отсчёт от сдачи не доказывает иной24часовойпериод; первоначальное подозрениеconflict снято после независимойсверкиroot."
+    ],
+    "artifacts": [
+      "ops/guide-reaudit-20261110/russian-sources/ea0a865d7aef.txt"
+    ]
+  },
+  {
+    "code": "SKX",
+    "block": "parking",
+    "status": "unavailable",
+    "urls": [
+      "https://aviamordovia.ru/transport/parking/tariff/"
+    ],
+    "checked_at": "2026-11-10",
+    "reviewer": "review_russian",
+    "evidence": [
+      "CLAUDE требует обычный браузер для этого домена. IAB недоступен;Chrome extension createTab/tabs.new ошибка timeoutMs. Обход защиты не выполнялся. Root проводит nativeChrome проверку отдельно."
+    ]
+  },
+  {
+    "code": "VOG",
+    "block": "kids",
+    "status": "unavailable",
+    "urls": [
+      "https://airportvolgograd.ru/passengers/information/babysroom/"
+    ],
+    "checked_at": "2026-11-10",
+    "reviewer": "review_russian",
+    "evidence": [
+      "CLAUDE требует обычный браузер для этого домена. IAB недоступен;Chrome extension createTab/tabs.new ошибка timeoutMs. Обход защиты не выполнялся. Root проводит nativeChrome проверку отдельно."
+    ]
+  },
+  {
+    "code": "VOG",
+    "block": "storage",
+    "status": "unavailable",
+    "urls": [
+      "https://airportvolgograd.ru/services/infrastructure/storage/"
+    ],
+    "checked_at": "2026-11-10",
+    "reviewer": "review_russian",
+    "evidence": [
+      "CLAUDE требует обычный браузер для этого домена. IAB недоступен;Chrome extension createTab/tabs.new ошибка timeoutMs. Обход защиты не выполнялся. Root проводит nativeChrome проверку отдельно."
+    ]
+  },
+  {
+    "code": "VVO",
+    "block": "about",
+    "status": "partial",
+    "urls": [
+      "https://aerovlad.ru/ru/about"
+    ],
+    "checked_at": "2026-11-10",
+    "reviewer": "review_russian",
+    "evidence": [
+      "Артём,40+направлений,20+авиакомпаний подтверждены. Залы внутренних/международныхвылетов не найдены в указаннойaboutстранице."
+    ],
+    "fix": "Добавить отдельный официальный источник залов либо убрать эту фразу.",
+    "artifacts": [
+      "ops/guide-reaudit-20261110/russian-sources/8e485e6d1489.txt"
+    ]
+  },
+  {
+    "code": "VVO",
+    "block": "storage",
+    "status": "conflict",
+    "urls": [
+      "https://aerovlad.ru/ru/services/14"
+    ],
+    "checked_at": "2026-11-10",
+    "reviewer": "review_russian",
+    "evidence": [
+      "Источник явным образом определяет первые500 как00:00–23:59 и следующие200 за календарные сутки. RU говорит сутки без уточнения; переводы24hours неправильно меняют период.",
+      "Внизу отдельная услуга бюро находок имеет отсчёт от сдачи: её правило не относится к обычной камере."
+    ],
+    "fix": "Первый календарный день500,каждый следующий200;синхронно все11переводов.",
+    "artifacts": [
+      "ops/guide-reaudit-20261110/russian-sources/58ec82f41f72.txt"
+    ]
+  }
+]

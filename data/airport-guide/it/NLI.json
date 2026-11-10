@@ -4,8 +4,8 @@
   "blocks": {
     "storage": {
       "title": "Deposito bagagli",
-      "hint": "419 ₽ a collo / 24 ore",
-      "text": "Custodia dei bagagli nel deposito: 418,83 ₽ a collo ogni 24 ore IVA inclusa. Prezzi secondo il listino dal 5 giugno 2026."
+      "hint": "419 ₽ a collo / giorno",
+      "text": "Custodia dei bagagli nel deposito: 418,83 ₽ a collo al giorno IVA inclusa. Prezzi secondo il listino dal 5 giugno 2026."
     },
     "lounges": {
       "title": "Sale business",

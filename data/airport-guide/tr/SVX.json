@@ -20,7 +20,7 @@
   "storage": {
    "title": "Emanet",
    "hint": "A terminali, Kat −1",
-   "text": "A terminali, Kat −1. Saati 200 ₽, ilk 24 saat 500 ₽, sonraki her 24 saat 300 ₽. Standart dışı (50×50×80 cm'den büyük veya 20 kg'dan ağır): saati 400 ₽, ilk 24 saat 800 ₽, sonraki her 24 saat 500 ₽. Dış giyim vestiyeri: takım başına 100 ₽."
+   "text": "A terminali, Kat −1. Saati 200 ₽, ilk gün 500 ₽, sonraki her gün 300 ₽. Standart dışı (50×50×80 cm'den büyük veya 20 kg'dan ağır): saati 400 ₽, ilk gün 800 ₽, sonraki her gün 500 ₽. Dış giyim vestiyeri: takım başına 1 saate kadar 100 ₽, 1–24 saat 300 ₽, sonraki her gün 200 ₽."
   },
   "sleep": {
    "title": "Nerede uyunur",
@@ -35,7 +35,7 @@
   "parking": {
    "title": "Otopark",
    "hint": "15 dakika ücretsiz",
-   "text": "İndirme-bindirme alanı: 15 dakikaya kadar ücretsiz, 16–60 dakika 880 ₽, sonrası saati 880 ₽. Terminalin yanındaki ücretsiz süresi olmayan P1 otoparkı: 1 saat 360 ₽, 24 saate kadar 900 ₽. Uzun süreli P2 ve P6: her biri 24 saat olan 2 gün için 1790 ₽ ve 1380 ₽'den. P0 ücretsiz, terminale 5 dakika."
+   "text": "İndirme-bindirme alanı: 15 dakikaya kadar ücretsiz, 16–60 dakika 880 ₽, sonrası saati 880 ₽. Terminalin yanındaki ücretsiz süresi olmayan P1 otoparkı: 1 saat 360 ₽, 24 saate kadar 900 ₽. Uzun süreli P2 ve P6: 2 gün için 1790 ₽ ve 1380 ₽'den. P0 ücretsiz, terminale 5 dakika."
   },
   "wifi": {
    "title": "Wi‑Fi",

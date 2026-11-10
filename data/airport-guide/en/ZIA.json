@@ -10,12 +10,12 @@
   "parking": {
    "title": "Parking",
    "hint": "15 min free",
-   "text": "Short-stay zone: first 15 min free, first hour 350 ₽, from the 2nd to the 4th hour 250 ₽/hour, from the 5th hour 3,000 ₽ per 24 hours. Long-stay zone: 700 ₽ per 24 hours for periods 1 to 5, 100 ₽ per 24 hours for periods 6 to 13, 700 ₽ per 24 hours from period 14; each period is 24 hours. The next free entry is possible no sooner than 45 min later."
+   "text": "Short-stay zone: first 15 min free, first hour 350 ₽, from the 2nd to the 4th hour 250 ₽/hour, from the 5th hour 3,000 ₽ per 24 hours. Long-stay zone: 700 ₽ per 24 hours for periods 1 to 5, 100 ₽ per 24 hours for periods 6 to 13, 700 ₽ per 24 hours from period 14; each period is 24 hours. The next free entry is possible no earlier than 45 minutes after the end of the first free 15-minute period."
   },
   "storage": {
    "title": "Left luggage",
    "hint": "Level 2, 24/7, from 600 ₽",
-   "text": "Left luggage on Level 2 in the landside area, open round the clock. Standard rate: 700 ₽ for the first 24 hours, 300 ₽ for each further 24 hours. Standard Lite: 600 ₽ and 300 ₽. Oversized from 1,150 ₽. One item may weigh up to 30 kg, storage up to 6 months."
+   "text": "Left luggage on Level 2 in the landside area, open round the clock. Standard rate: 700 ₽ for the first calendar day until 00:00, 300 ₽ for each subsequent calendar day. Standard Lite: 600 ₽ for the first calendar day, then 300 ₽. A partial calendar day is charged in full. Oversized baggage from 1,150 ₽. Each item may weigh up to 30 kg."
   },
   "kids": {
    "title": "With children",

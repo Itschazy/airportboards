@@ -15,7 +15,7 @@
   "storage": {
    "title": "Consigna",
    "hint": "Nivel 1, 24/7",
-   "text": "Consigna automática en la sala central de la terminal, nivel 1. Funciona día y noche. Taquilla estándar: 300 ₽ por hora o 500 ₽ por cada 24 horas."
+   "text": "Consigna automática en la sala central de la terminal, nivel 1. Funciona día y noche. Taquilla estándar: 300 ₽ por hora o 500 ₽ por día."
   },
   "kids": {
    "title": "Con niños",

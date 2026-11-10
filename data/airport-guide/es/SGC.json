@@ -10,7 +10,7 @@
   "lounges": {
    "title": "Salas VIP",
    "hint": "ON PASS, 3500 ₽",
-   "text": "Sala business en la sala de llegadas, nivel 2 (en ascensor), abierta día y noche; clase business y titulares de tarjetas élite de aerolíneas, clase turista previo pago; no atiende vuelos internacionales. Sala ON PASS: nivel 2 de la zona estéril, solo vuelos nacionales, día y noche, adulto 3500 ₽, niño de 2–12 años 2500 ₽."
+   "text": "La sala business en la sala de llegadas, nivel 2 (en ascensor), abre día y noche y no atiende vuelos internacionales. El acceso de pasajeros de clase business y titulares de tarjetas de fidelidad depende de la aerolínea y del vuelo; para la clase turista es de pago. Sala ON PASS: nivel 2 de la zona estéril, solo vuelos nacionales, día y noche, adulto 3500 ₽, niño de 2–12 años 2500 ₽."
   },
   "storage": {
    "title": "Consigna",
@@ -20,7 +20,7 @@
   "parking": {
    "title": "Aparcamiento",
    "hint": "20 min gratis",
-   "text": "En la plaza de la terminal, los primeros 20 minutos son gratis. Explanada de estacionamiento prolongado para 50 coches justo detrás del pabellón de la parada: 750 ₽ por cada 24 horas. Pago en las cajas de la terminal y en las máquinas de la entrada central y de la sala de llegadas."
+   "text": "En la plaza de la terminal, los primeros 20 minutos son gratis. Explanada de estacionamiento prolongado para 50 coches justo detrás del pabellón de la parada: 750 ₽ por día. Pago en las cajas de la terminal y en las máquinas de la entrada central y de la sala de llegadas."
   }
  }
 }

@@ -1,0 +1,170 @@
+{
+  "date": "2026-11-10",
+  "scope": "10 blocks independently evidenced by this reviewer; not exhaustive168locale scan",
+  "count": 10,
+  "rows": [
+    {
+      "code": "KEJ",
+      "block": "parking",
+      "status": "period unverified, not proven false",
+      "basis": "HTML only посуточный тариф; RU itself says за24часа. PDF unavailable.",
+      "ru": "Привокзальная площадь в 30 м от терминала, 173 места: до 15 минут бесплатно, первый час 300 ₽, второй и третий по 200 ₽, с четвёртого часа тариф за 24 часа 1000 ₽.",
+      "english": {
+        "title": "Parking",
+        "hint": "15 min free",
+        "text": "Airport terminal forecourt 30 m from the terminal, 173 spaces: up to 15 minutes free, first hour 300 ₽, second and third 200 ₽ each, from the fourth hour the rate of 1,000 ₽ per 24 hours."
+      },
+      "action": "Translate billing сутки neutrally as day; preserve opening hours and separately explicit24h duration. KEJ parking also needs RUneutralisation."
+    },
+    {
+      "code": "KEJ",
+      "block": "storage",
+      "status": "period unverified, not proven false",
+      "basis": "HTML тариф/сутки and partial day full, no rolling definition.",
+      "ru": "Камера хранения работает по графику аэровокзала внутренних линий. Ручная кладь 200 ₽ в сутки, багаж до 50×40×20 см 220 ₽, крупнее 270 ₽, свыше 100×50×70 см 500 ₽. Меньше суток оплачивается как полные сутки.",
+      "english": {
+        "title": "Left luggage",
+        "hint": "From 200 ₽ per 24 hours",
+        "text": "Left luggage follows the domestic terminal schedule. Hand luggage 200 ₽ per 24 hours, baggage up to 50×40×20 cm 220 ₽, larger 270 ₽, over 100×50×70 cm 500 ₽. Less than 24 hours is charged as a full 24-hour period."
+      },
+      "action": "Translate only undefined billing-day units neutrally; no global24replacement."
+    },
+    {
+      "code": "NBC",
+      "block": "parking",
+      "status": "period unverified, not proven false",
+      "basis": "HTML700руб/сутки; no period definition.",
+      "ru": "Платная парковка перед терминалами А и B на 150 мест: 20 минут бесплатно, затем 200 ₽ в час до 3 часов, дольше 700 ₽ в сутки. При повторном въезде в течение 30 минут бесплатного времени нет. Перед въездом на территорию бесплатная парковка на 410 мест.",
+      "english": {
+        "title": "Parking",
+        "hint": "20 min free",
+        "text": "Paid car park in front of terminals A and B with 150 spaces: 20 minutes free, then 200 ₽ per hour up to 3 hours, longer 700 ₽ per 24 hours. On a repeat entry within 30 minutes there is no free time. Before the entrance to the grounds there is a free car park with 410 spaces."
+      },
+      "action": "Translate only undefined billing-day units neutrally; no global24replacement."
+    },
+    {
+      "code": "NLI",
+      "block": "storage",
+      "status": "period unverified, not proven false",
+      "basis": "Official PDF rub/item/day, no rolling definition.",
+      "ru": "Хранение багажа в камере хранения: 418,83 ₽ за одно место в сутки с НДС. Цены по прейскуранту с 5 июня 2026 года.",
+      "english": {
+        "title": "Left luggage",
+        "hint": "419 ₽ per item per 24 hours",
+        "text": "Baggage storage at left luggage: 418.83 ₽ per item per 24 hours including VAT. Prices per the price list from 5 June 2026."
+      },
+      "action": "Translate only undefined billing-day units neutrally; no global24replacement."
+    },
+    {
+      "code": "SGC",
+      "block": "parking",
+      "status": "period unverified, not proven false",
+      "basis": "Separate longstay750/day HTML+PDF no24hdefinition. Do not use apron2026rules for this separate area.",
+      "ru": "На привокзальной площади первые 20 минут бесплатно. Площадка для длительной стоянки на 50 машин сразу за остановочным павильоном: 750 ₽ в сутки. Оплата в кассах аэровокзала и автоматах у центрального входа и в зале прилёта.",
+      "english": {
+        "title": "Parking",
+        "hint": "20 min free",
+        "text": "On the airport terminal forecourt the first 20 minutes are free. A long-stay area for 50 cars right behind the bus shelter: 750 ₽ per 24 hours. Payment at the terminal payment counters and at machines by the main entrance and in the arrivals hall."
+      },
+      "action": "Translate only undefined billing-day units neutrally; no global24replacement."
+    },
+    {
+      "code": "ARH",
+      "block": "storage",
+      "status": "period unverified, not proven false",
+      "basis": "Official341.60/day no rolling definition.",
+      "ru": "Камера хранения в Павильоне № 3, круглосуточно. Место багажа до 30 кг и короче 1 м стоит 341,60 ₽ в сутки. Не берут документы, деньги, ценности и скоропортящиеся продукты.",
+      "english": {
+        "title": "Left luggage",
+        "hint": "Pavilion 3, 24/7",
+        "text": "Left luggage in Pavilion No. 3, open round the clock. An item up to 30 kg and shorter than 1 m costs 341.60 ₽ per 24 hours. Documents, money, valuables and perishable food are not accepted."
+      },
+      "action": "Translate only undefined billing-day units neutrally; no global24replacement."
+    },
+    {
+      "code": "IKT",
+      "block": "storage",
+      "status": "period unverified, not proven false",
+      "basis": "PDF610/day valuation rules, no rolling definition.",
+      "ru": "Во внутреннем терминале на 1 этаже, оплата наличными или картой. Базовая цена 610 ₽ за место в сутки при объявленной стоимости багажа до 2000 ₽. Оценка стоимости обязательна; сверх 2000 ₽ доплата 100 ₽ за каждую следующую 1000 ₽ объявленной стоимости. Багаж больше 40×40×50 см оплачивается по числу занятых мест. В международном терминале камера на 2 этаже, работает только при задержке международных рейсов. Телефон +7 (3952) 266-194.",
+      "english": {
+        "title": "Left luggage",
+        "hint": "From 610 ₽ per 24 hours",
+        "text": "In the domestic terminal on Level 1, payment in cash or by card. The base rate is 610 ₽ per item per 24 hours for baggage with a declared value of up to 2,000 ₽. A value must be declared; above 2,000 ₽, a surcharge of 100 ₽ applies for each further 1,000 ₽ of declared value. Baggage larger than 40×40×50 cm is charged by the number of spaces it occupies. In the international terminal, left luggage is on Level 2 and operates only during delays to international flights. Phone +7 (3952) 266-194."
+      },
+      "action": "Translate only undefined billing-day units neutrally; no global24replacement."
+    },
+    {
+      "code": "RGK",
+      "block": "parking",
+      "status": "period unverified, not proven false",
+      "basis": "DatedPDF01.11 eachday/partialfull no explicit24h.",
+      "ru": "У терминалов посадка и высадка бесплатно 15 минут, повторный въезд в течение часа 250 ₽. P1: первый час 400 ₽, свыше 1 часа до 5 часов 300 ₽/час, свыше 5 часов 1500 ₽/сутки. P2: 800 ₽/сутки. P3: первые 180 минут бесплатно, свыше 3 до 5 часов 200 ₽/час, далее 800 ₽/сутки.",
+      "english": {
+        "title": "Parking",
+        "hint": "15 min free",
+        "text": "At the terminals drop-off and pick-up is free for 15 minutes; a repeat entry within an hour 250 ₽. P1: first hour 400 ₽, over 1 and up to 5 hours 300 ₽/hour, over 5 hours 1,500 ₽/24 h. P2: 800 ₽/24 h. P3: first 180 minutes free, over 3 and up to 5 hours 200 ₽/hour, then 800 ₽/24 h."
+      },
+      "action": "Translate only undefined billing-day units neutrally; no global24replacement."
+    },
+    {
+      "code": "KUF",
+      "block": "storage",
+      "status": "period unverified, not proven false",
+      "basis": "Lockers hour/day no explicit24h.",
+      "ru": "Автоматическая камера хранения на 1 этаже, справа от входа, у авиакасс. Стандартная ячейка 250 ₽ в час или 550 ₽ в сутки. Увеличенная 350 ₽ в час или 900 ₽ в сутки.",
+      "english": {
+        "title": "Left luggage",
+        "hint": "Level 1, from 250 ₽/hour",
+        "text": "Automated left luggage on Level 1, to the right of the entrance, by the airline ticket offices. Standard locker 250 ₽ per hour or 550 ₽ per 24 hours. Large 350 ₽ per hour or 900 ₽ per 24 hours."
+      },
+      "action": "Translate only undefined billing-day units neutrally; no global24replacement."
+    },
+    {
+      "code": "SVX",
+      "block": "storage",
+      "status": "period unverified, not proven false",
+      "basis": "Main storage firstday/nextday no definition; preserve wardrobe explicit1–24hours.",
+      "ru": "Терминал А, этаж −1. 200 ₽ в час, 500 ₽ за первые сутки, 300 ₽ за каждые следующие. Негабарит (больше 50×50×80 см или тяжелее 20 кг): 400 ₽ в час, 800 ₽ за первые сутки, 500 ₽ за следующие. Гардероб для верхней одежды: 100 ₽ за комплект до 1 часа, от 1 до 24 часов 300 ₽, за каждые следующие сутки 200 ₽.",
+      "english": {
+        "title": "Left luggage",
+        "hint": "Terminal A, Level −1",
+        "text": "Terminal A, Level −1. 200 ₽ per hour, 500 ₽ for the first 24 hours, 300 ₽ for each further 24 hours. Oversized (larger than 50×50×80 cm or heavier than 20 kg): 400 ₽ per hour, 800 ₽ for the first 24 hours, 500 ₽ for each further 24 hours. Cloakroom for outerwear: 100 ₽ per set for up to 1 hour, 300 ₽ for 1–24 hours, 200 ₽ for each subsequent 24-hour period."
+      },
+      "action": "Translate only undefined billing-day units neutrally; no global24replacement."
+    }
+  ],
+  "exclude_confirmed_period": [
+    {
+      "code": "ABA",
+      "block": "parking",
+      "reason": "Entry date/time + full24hrounding verified HTML"
+    },
+    {
+      "code": "AMS",
+      "block": "storage",
+      "reason": "root verified terms4.1 explicit24h"
+    },
+    {
+      "code": "KGD",
+      "block": "parking",
+      "reason": "savedAX explicit from3rdhour to24h and following periods"
+    },
+    {
+      "code": "IKT",
+      "block": "parking",
+      "reason": "PDF explicit24h first and subsequent rounding"
+    },
+    {
+      "code": "ZIA",
+      "block": "parking",
+      "reason": "source explicitly defines сутки=24hours fromentry"
+    },
+    {
+      "code": "KUF",
+      "block": "parking",
+      "reason": "P1/P2 explicit24hour brackets; do notreplace first24. P4generic2day shouldstay neutral."
+    }
+  ],
+  "limitations": "A separate broad EN prescreen yielded65rows, including explicit24hproof and irrelevantopening24h; it must not be used as an automatic fix list. Sourceunavailable rows stay evidencegaps."
+}

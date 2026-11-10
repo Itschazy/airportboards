@@ -25,7 +25,7 @@
     "parking": {
       "title": "Parcheggio",
       "hint": "Meno di 15 minuti gratis",
-      "text": "Parcheggio breve sosta P1 presso la sala partenze: meno di 15 minuti gratis, 15–60 minuti 500 ₽, poi 500 ₽ all’ora, oltre 4 ore 1200 ₽ ogni 24 ore. Nuovo passaggio entro un’ora 500 ₽. C’è un parcheggio gratuito nell’area adiacente, posizione sulla mappa dei parcheggi."
+      "text": "Parcheggio breve sosta P1 presso la sala partenze: meno di 15 minuti gratis, 15–60 minuti 500 ₽, poi 500 ₽ all’ora, oltre 4 ore 1200 ₽ per giorno di calendario; il giorno di fatturazione cambia alle 00:00 e ogni giorno iniziato si paga per intero. Nuovo passaggio entro un’ora 500 ₽. C’è un parcheggio gratuito nell’area adiacente, posizione sulla mappa dei parcheggi."
     }
   }
 }

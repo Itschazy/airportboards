@@ -1,0 +1,137 @@
+[
+  {
+    "code": "AMS",
+    "block": "sleep",
+    "status": "confirmed",
+    "url": "https://www.schiphol.nl/en/at-schiphol/services/sleep-after-passport-control/",
+    "checked": "2026-11-10",
+    "note": "All factual assertions in the current RU block checked against live official source text.",
+    "evidenceFile": "source-AMS-sleep.json"
+  },
+  {
+    "code": "AMS",
+    "block": "storage",
+    "status": "confirmed",
+    "url": "https://www.schiphol.nl/en/at-schiphol/services/luggage-storage/",
+    "checked": "2026-11-10",
+    "note": "All tariff/size/location assertions confirmed by source. 24-hour period explicitly stated in official linked baggage storage terms, article4.1.",
+    "evidenceFile": "source-AMS-storage.json"
+  },
+  {
+    "code": "AMS",
+    "block": "transport",
+    "status": "confirmed",
+    "url": "https://www.schiphol.nl/en/from-to-schiphol/by-public-transport/train/",
+    "checked": "2026-11-10",
+    "note": "All factual assertions in the current RU block checked against live official source text.",
+    "evidenceFile": "source-AMS-transport.json"
+  },
+  {
+    "code": "ATH",
+    "block": "storage",
+    "status": "confirmed",
+    "url": "https://www.aia.gr/en/traveller/services-facilities-airport/baggage-services?contentTabId=tab-4065",
+    "checked": "2026-11-10",
+    "note": "All factual assertions in the current RU block checked against live official source text.",
+    "evidenceFile": "source-ATH-storage.json"
+  },
+  {
+    "code": "ATH",
+    "block": "wifi",
+    "status": "confirmed",
+    "url": "https://www.aia.gr/en/traveller/services-facilities-airport/wifi-and-internet-kiosks",
+    "checked": "2026-11-10",
+    "note": "All factual assertions in the current RU block checked against live official source text.",
+    "evidenceFile": "source-ATH-wifi.json"
+  },
+  {
+    "code": "BKK",
+    "block": "storage",
+    "status": "confirmed",
+    "url": "https://suvarnabhumi.airportthai.co.th/service/facility/detail/781",
+    "checked": "2026-11-10",
+    "note": "All factual assertions in the current RU block checked against live official source text.",
+    "evidenceFile": "source-BKK-storage.json"
+  },
+  {
+    "code": "BKK",
+    "block": "taxi",
+    "status": "confirmed",
+    "url": "https://suvarnabhumi.airportthai.co.th/service/transportation/detail/304",
+    "checked": "2026-11-10",
+    "note": "All factual assertions in the current RU block checked against live official source text.",
+    "evidenceFile": "source-BKK-taxi.json"
+  },
+  {
+    "code": "DFW",
+    "block": "lounges",
+    "status": "confirmed",
+    "url": "https://www.dfwairport.com/explore/lounges/",
+    "checked": "2026-11-10",
+    "note": "All factual assertions in the current RU block checked against live official source text.",
+    "evidenceFile": "source-DFW-lounges.json"
+  },
+  {
+    "code": "MXP",
+    "block": "terminals",
+    "status": "confirmed",
+    "url": "https://www.milanairports-shop.com/en/info-and-support/contacts-and-faq",
+    "checked": "2026-11-10",
+    "note": "All factual assertions in the current RU block checked against live official source text.",
+    "evidenceFile": "source-MXP-terminals.json"
+  },
+  {
+    "code": "SEA",
+    "block": "transport",
+    "status": "confirmed",
+    "url": "https://www.soundtransit.org/ride-with-us/popular-destinations/sea-tac-airport",
+    "checked": "2026-11-10",
+    "note": "Current SoundTransit full page confirms all assertions including 05:00-midnight carts.",
+    "evidenceFile": "source-SEA-transport.json"
+  },
+  {
+    "code": "SEA",
+    "block": "wifi",
+    "status": "confirmed",
+    "url": "https://www.portseattle.org/page/asl-auditory-and-vision-assistance",
+    "checked": "2026-11-10",
+    "note": "All factual assertions in the current RU block checked against live official source text.",
+    "evidenceFile": "source-SEA-wifi.json"
+  },
+  {
+    "code": "SHA",
+    "block": "storage",
+    "status": "confirmed",
+    "url": "https://www.shanghaiairport.com/ensh/hqjc/index.html",
+    "checked": "2026-11-10",
+    "note": "Dynamic details live HTML /ensh/hqjc/info_lcid_453.html embeds full service data. Government July2026 notice independently confirms public departures door6, one item free72h.",
+    "evidenceFile": "source-SHA-storage.json"
+  },
+  {
+    "code": "SLC",
+    "block": "storage",
+    "status": "confirmed",
+    "url": "https://slcairport.com/airport-services/",
+    "checked": "2026-11-10",
+    "note": "All factual assertions in the current RU block checked against live official source text.",
+    "evidenceFile": "source-SLC-storage.json"
+  },
+  {
+    "code": "SLC",
+    "block": "wifi",
+    "status": "confirmed",
+    "url": "https://slcairport.com/airport-services/",
+    "checked": "2026-11-10",
+    "note": "All factual assertions in the current RU block checked against live official source text.",
+    "evidenceFile": "source-SLC-storage.json"
+  },
+  {
+    "code": "TFU",
+    "block": "sleep",
+    "status": "confirmed",
+    "url": "https://www.ihg.com/holidayinnexpress/hotels/us/en/chengdu/ctuta/hoteldetail",
+    "checked": "2026-11-10",
+    "note": "All assertions confirmed by IHG. No local area shuttle is a separate service from the explicitly free airport shuttle; no contradiction.",
+    "evidenceFile": "source-TFU-sleep.json"
+  }
+]

@@ -15,7 +15,7 @@
     "storage": {
       "title": "Deposito bagagli",
       "hint": "Livello 1, 24/7",
-      "text": "Livello 1, dietro la scala mobile, giorno e notte. Tariffa «Standard»: 500 ₽ per le prime 24 ore, 200 ₽ per ogni successivo periodo di 24 ore, collo fino a 203 cm come somma delle dimensioni. Il periodo di 24 ore iniziato conta come intero."
+      "text": "Il deposito bagagli al livello 1, dietro la scala mobile, è aperto giorno e notte. Tariffa «Standard»: 500 ₽ per il primo giorno di calendario, 200 ₽ per ogni giorno successivo. Il giorno di calendario termina alle 23:59; ogni giorno iniziato si paga per intero. La somma delle tre dimensioni di un collo non deve superare 203 cm."
     },
     "sleep": {
       "title": "Dove dormire",

@@ -1,0 +1,1206 @@
+[
+  {
+    "file": "data/airport-guide/de/AER.json",
+    "sha256": "22ae047302a62ff17a4f93596274b7005732a443e14ff495c197e2096318c114"
+  },
+  {
+    "file": "data/airport-guide/de/ARH.json",
+    "sha256": "88c7077e7867c99182bb390b418891cb8b607293060fbd9cd655ce6dbca3c1d8"
+  },
+  {
+    "file": "data/airport-guide/de/ASF.json",
+    "sha256": "83fb265e64843168d60984f006da7385901cb68465bf52f3c309e475d1e771bd"
+  },
+  {
+    "file": "data/airport-guide/de/BQS.json",
+    "sha256": "a32be900561d96ab56b601613093644fc6f002469fb116ba70b8651f4b945bf1"
+  },
+  {
+    "file": "data/airport-guide/de/BTK.json",
+    "sha256": "8bfdb3431e0f78cd5c54ffa7a1e52cdea836f5080bd98bc1f1ac047462ee0463"
+  },
+  {
+    "file": "data/airport-guide/de/CEE.json",
+    "sha256": "b0867a2c6594b674af2f2a3b914fecd996656f08186b9e0e664af2ceae38abc1"
+  },
+  {
+    "file": "data/airport-guide/de/CEK.json",
+    "sha256": "32daaaf1d087f4d602a9424da73df9c85cca3a2c1433e19eca291870ed91e6de"
+  },
+  {
+    "file": "data/airport-guide/de/CSY.json",
+    "sha256": "f40ee7646bce6403b1073a011d84c6edf5d612a0e712448941992691801c29e6"
+  },
+  {
+    "file": "data/airport-guide/de/EYK.json",
+    "sha256": "fa0ecfb4c29ae7b7686f5a5257fabb3739df3c904a0b08b10ac42b6944d68b6d"
+  },
+  {
+    "file": "data/airport-guide/de/GDX.json",
+    "sha256": "99b3eb7c01477a8af325839adde8a33c73d40a21e58a47e3c6c8528e741d2c31"
+  },
+  {
+    "file": "data/airport-guide/de/GOJ.json",
+    "sha256": "804f033ce5c03ed2b2afea11cb2d241ee3ddc6825969dd3cb71b9508020b992b"
+  },
+  {
+    "file": "data/airport-guide/de/GYD.json",
+    "sha256": "8e7d02ce8c126d81edd52aa362beb2efb7d501b271b89d05124db8750e056319"
+  },
+  {
+    "file": "data/airport-guide/de/HMA.json",
+    "sha256": "0dae775a0a203df032d0e9bb2e1f421c2b12915990d8eb1750c2af838e178d92"
+  },
+  {
+    "file": "data/airport-guide/de/IAR.json",
+    "sha256": "4566cb9f3a53f6964311fac77de41a6ffb64525df938daf462e71b9cbdb71886"
+  },
+  {
+    "file": "data/airport-guide/de/IJK.json",
+    "sha256": "da80dbb0e9263339538fc38e8e069efd16f1eee4b7d2240bf416df761e65c5e4"
+  },
+  {
+    "file": "data/airport-guide/de/IKT.json",
+    "sha256": "448acbc771bbd2dca386adf80f4b204d9cd209c03134b4cf8f42cc2a288685b6"
+  },
+  {
+    "file": "data/airport-guide/de/IWA.json",
+    "sha256": "c37f2f1d984beec0aca299f044b16d2ed1fb0e313c977a94dc55675614f8eb77"
+  },
+  {
+    "file": "data/airport-guide/de/KEJ.json",
+    "sha256": "99176a719594587e7c84bc9183b82c724f25c3185e201ad9bba0aedb7d0272aa"
+  },
+  {
+    "file": "data/airport-guide/de/KGD.json",
+    "sha256": "54c4d8a662392326ec31c3bd772e9013b1cef1bed0f2e6daf96e32624ae3126c"
+  },
+  {
+    "file": "data/airport-guide/de/KRR.json",
+    "sha256": "794c58995e368ff40958308fc401ab46fe2131149efb4fc23b089a46ec4dbe2f"
+  },
+  {
+    "file": "data/airport-guide/de/KUF.json",
+    "sha256": "41ca5dad9323f8bd934e1ee7b278d3cb9bca3a40e40de14e81d6c094aff80320"
+  },
+  {
+    "file": "data/airport-guide/de/LAS.json",
+    "sha256": "66a945d628aa4e39ca3f008ee2cec185339c76b5f3a6d2c7294c3da81368b654"
+  },
+  {
+    "file": "data/airport-guide/de/LED.json",
+    "sha256": "4877bf339b62831025f0659aec125f4b1436eb0122e7ae6be118ecad0a6d87fe"
+  },
+  {
+    "file": "data/airport-guide/de/MCX.json",
+    "sha256": "ef08993ec0d837e0e4fda21803b6c1e2d03e141563c553b3cadf99b4e4b020c9"
+  },
+  {
+    "file": "data/airport-guide/de/MRV.json",
+    "sha256": "c9a779bb63d65affb3b528c5405cf380b9f96ca1d3a0bbb2744a34a90cb5753a"
+  },
+  {
+    "file": "data/airport-guide/de/NBC.json",
+    "sha256": "4afde4602d464434560b5399980f6f58d1810b3be5eca6f644fbd4547df6ff58"
+  },
+  {
+    "file": "data/airport-guide/de/NJC.json",
+    "sha256": "ea3d8581fae10d5fb563be43e49d659dcf4ef22921bd0c0371b84913e314d485"
+  },
+  {
+    "file": "data/airport-guide/de/NLI.json",
+    "sha256": "31ae5ae9e046ee7818298535d166fbc84d4fbf1a182b47aef6a55515833c9998"
+  },
+  {
+    "file": "data/airport-guide/de/NNM.json",
+    "sha256": "07f3c49fdcb94f7881896b34d068756f9785725af814fd257db0e83819d6846e"
+  },
+  {
+    "file": "data/airport-guide/de/NOZ.json",
+    "sha256": "b321743e972580a80b5667e3bf8afde308401e67c4a777d64d8e3ead7685d681"
+  },
+  {
+    "file": "data/airport-guide/de/NSK.json",
+    "sha256": "8f2266ae1d63584137b30e3d41c35a0ca930d983ae98b419d81b134297f09a86"
+  },
+  {
+    "file": "data/airport-guide/de/NUX.json",
+    "sha256": "6591722c02fb5f08292ba1044610320b0993f8610e11eb6174e83ac31a0df269"
+  },
+  {
+    "file": "data/airport-guide/de/OSW.json",
+    "sha256": "0b865c84234675c712a29da434a27d231acfbb3fd28e0cb1cfc2d7287df6f574"
+  },
+  {
+    "file": "data/airport-guide/de/PEE.json",
+    "sha256": "2512af94515dab9fad1ebf4c071d84a3c00b769b8f86d4252b636ec4a5d3cc13"
+  },
+  {
+    "file": "data/airport-guide/de/PEK.json",
+    "sha256": "69504bd97fb4896e8518e2c155aae3616c3d0667241f557b37680a14ef671cfa"
+  },
+  {
+    "file": "data/airport-guide/de/PKC.json",
+    "sha256": "e2e6920b91ef9e9fedd603bb355e72cd085660d340f87962e44ad8d6f5170eff"
+  },
+  {
+    "file": "data/airport-guide/de/REN.json",
+    "sha256": "61481104570e39373af5f931fd0c8d93d418b4ee8ae819acfe2832b71304dc81"
+  },
+  {
+    "file": "data/airport-guide/de/RGK.json",
+    "sha256": "6126dabe5ad9aa90689f296efb24fbb52f013d12c02cc0839597a02a436563d5"
+  },
+  {
+    "file": "data/airport-guide/de/SGC.json",
+    "sha256": "807a35a8d10a635b5d0852dfabbf29693d976db710d9de4ae96ff64e70327407"
+  },
+  {
+    "file": "data/airport-guide/de/SKX.json",
+    "sha256": "2c647a24afd248c843419b3336d93ec54d54c7c971d7675d9c9d527ed69be353"
+  },
+  {
+    "file": "data/airport-guide/de/SSH.json",
+    "sha256": "f866830d55127ca3151bcb600d4ef4f9eecab1d820957d7dbbf573849bb2cc05"
+  },
+  {
+    "file": "data/airport-guide/de/SVO.json",
+    "sha256": "20d60911af0e4d087e223195eae59b9a19c2740548d9f097916562c1f708c736"
+  },
+  {
+    "file": "data/airport-guide/de/SVX.json",
+    "sha256": "ec44b49cb598f42a3c7d910ba31ddf446b0aa7712501a33d80958d39844944d1"
+  },
+  {
+    "file": "data/airport-guide/de/UFA.json",
+    "sha256": "30a881d4acd53308a92c348aefa29013e5b2f771a577080c9ff042b682c89fb8"
+  },
+  {
+    "file": "data/airport-guide/de/ULV.json",
+    "sha256": "49c13e64654b337547c9b202527e40bf4034b3033f6e11da37c25c2bfcd75f33"
+  },
+  {
+    "file": "data/airport-guide/de/UUD.json",
+    "sha256": "7b2953e5bd7a2fc205c5ea79a71de915bb445019177e22353c2e211bdacb52be"
+  },
+  {
+    "file": "data/airport-guide/de/UUS.json",
+    "sha256": "9ba4be60da8ae7383e72d6463854361ee3e9eed6b4f048cdca78d370c7a6540b"
+  },
+  {
+    "file": "data/airport-guide/de/VKO.json",
+    "sha256": "5f48709c43c0ffb77cdaec76836ce84d0c06af89150873ab813634d727101a81"
+  },
+  {
+    "file": "data/airport-guide/de/VVO.json",
+    "sha256": "ea9ef17ccfbaa84dd50a31f24c0ef0df95577bbfa8728c7859936b7db7f392e2"
+  },
+  {
+    "file": "data/airport-guide/de/ZIA.json",
+    "sha256": "6aea8af35594d1f4f52e5313ceb5dc93e7d94c364e84fbaac9a09c82313c3ee5"
+  },
+  {
+    "file": "data/airport-guide/en/AER.json",
+    "sha256": "8b4bf7639160b704dc5d6ea6537bf14ab20c0250e78d6d3ba2044b88f24f0269"
+  },
+  {
+    "file": "data/airport-guide/en/ARH.json",
+    "sha256": "52b549bde445f755914d21b8b1f7caea2fd88111cbbbcda4598b213732dfa2de"
+  },
+  {
+    "file": "data/airport-guide/en/ASF.json",
+    "sha256": "4de62d94de7f72f439a190445e5ba7879f7d8941fdb58c0ad42c92b734f1e125"
+  },
+  {
+    "file": "data/airport-guide/en/BQS.json",
+    "sha256": "9e948d9b265791776d336c518bb6dbf929356403f20fbed85eef56d6c8a7e4f3"
+  },
+  {
+    "file": "data/airport-guide/en/BTK.json",
+    "sha256": "07f2e66d48b80e809109382b665215218ba343bf688692511033ec36e4dd6fbd"
+  },
+  {
+    "file": "data/airport-guide/en/CEE.json",
+    "sha256": "608807999b4a6ed3003a0f7105584710e85e99bc74daa653eb8ea4bfaf1ad2ef"
+  },
+  {
+    "file": "data/airport-guide/en/CEK.json",
+    "sha256": "9de7f2aa437d70bb655457efeb2e44c4843c7b7a977b569bb86678d4eb7c0d40"
+  },
+  {
+    "file": "data/airport-guide/en/CSY.json",
+    "sha256": "a3d1f65167a1a07b2ea8a8d4cfeb52a3f3af1161c4b539c55bc4c5c8358ac00f"
+  },
+  {
+    "file": "data/airport-guide/en/EYK.json",
+    "sha256": "ac3c25a0255f80c11419b6c227114f8e7d9e802a0ee8af375a3a00e49eeab882"
+  },
+  {
+    "file": "data/airport-guide/en/GDX.json",
+    "sha256": "02a7c370e3b73d15908805169974f2d313df9d2c53f332521236d893578c415b"
+  },
+  {
+    "file": "data/airport-guide/en/GOJ.json",
+    "sha256": "40caa126399dfdf1f88ee57730f1fe85fa79a32059f9020ab52747881c86ef2a"
+  },
+  {
+    "file": "data/airport-guide/en/GYD.json",
+    "sha256": "2c4ab782842a67c560ddf95860fb13fe288a70dddb283f782cbc5167beeb5372"
+  },
+  {
+    "file": "data/airport-guide/en/HMA.json",
+    "sha256": "e088166c2c097632ceda9a6ca43896865fcdb0e1964049bb6424c45adf05246f"
+  },
+  {
+    "file": "data/airport-guide/en/IAR.json",
+    "sha256": "f023637bf1dd5c5c3640b2809c60fd0d3e3c08aafbab81c445ce35153cd0921e"
+  },
+  {
+    "file": "data/airport-guide/en/IJK.json",
+    "sha256": "7c65e6ff648171f46acae2858b88a9b312858f06f428b991a7b3cbddeafa18ef"
+  },
+  {
+    "file": "data/airport-guide/en/IKT.json",
+    "sha256": "f5ede8a107b7855b90501d1b408cf3e030d2babf19e1637b73c606f25e85576b"
+  },
+  {
+    "file": "data/airport-guide/en/IWA.json",
+    "sha256": "4279c7ebdf7b922466849da38294b2d133cd37869bbbbde663a1495d40595678"
+  },
+  {
+    "file": "data/airport-guide/en/KEJ.json",
+    "sha256": "3602b2c868dc58e14c0cd05b603f070e3f0dad840f578cc7e3a1e4963a1f7636"
+  },
+  {
+    "file": "data/airport-guide/en/KGD.json",
+    "sha256": "ec3255e4cf3e6a4e2e78d9f8553e4ddbf61b86c6927113ad5af6fdc1d3d1d622"
+  },
+  {
+    "file": "data/airport-guide/en/KRR.json",
+    "sha256": "bedf1d8b5f5f752c434c030dffdeceb3690c15612daae6af54f9c590d9d26009"
+  },
+  {
+    "file": "data/airport-guide/en/KUF.json",
+    "sha256": "7c2c82017e89c54e2dc7347683af28022618442b4ae4b3f4dd77f365f8f598ae"
+  },
+  {
+    "file": "data/airport-guide/en/LAS.json",
+    "sha256": "53c13ee7b8f9d15cf9bbc1bcf58a65be5da177249a63cd35164febbf6083f8a6"
+  },
+  {
+    "file": "data/airport-guide/en/LED.json",
+    "sha256": "a470053f0c9cd41d26e1e66b5cf8c5962bd5ceb1f5e6d7f989634ed70b71d5ab"
+  },
+  {
+    "file": "data/airport-guide/en/MCX.json",
+    "sha256": "41574da3ea2ac2cb13432316241faf50d4ebd9bb05608732c919f054c60fcdf6"
+  },
+  {
+    "file": "data/airport-guide/en/MRV.json",
+    "sha256": "eda0ace1fb0a63f6f9d5b040d61fb0bef2e5b5aa9044326da77be8565b5c3742"
+  },
+  {
+    "file": "data/airport-guide/en/NBC.json",
+    "sha256": "630a463b3f2c144764de3fbc207a754ff7df07f0c3b638258ab0157d9fb2a60d"
+  },
+  {
+    "file": "data/airport-guide/en/NJC.json",
+    "sha256": "3b19ff892bc2a3755f8744448c48abbd830327d6d536626deb46123c3ef10cd7"
+  },
+  {
+    "file": "data/airport-guide/en/NLI.json",
+    "sha256": "d9a014ead7e8ce0aedd06d506b9451a336e4f6cfe765c5d26fed79b93233172d"
+  },
+  {
+    "file": "data/airport-guide/en/NNM.json",
+    "sha256": "ec581740b9f1349bf4fe7b47a295b0b2ba37814df344942e00b36c42a9d2d335"
+  },
+  {
+    "file": "data/airport-guide/en/NOZ.json",
+    "sha256": "1fb67f24d3e914b46b0ab93d5e19ac01c7455490913595ae0ec7b5e273c4368d"
+  },
+  {
+    "file": "data/airport-guide/en/NSK.json",
+    "sha256": "633aea61d3b207bf703c7c47d558fb98ab2bb473b02fc0baba639f17e727f0c4"
+  },
+  {
+    "file": "data/airport-guide/en/NUX.json",
+    "sha256": "ffa956b7301604b1dd8288286adfe5bb764c4957455399f82988845298364621"
+  },
+  {
+    "file": "data/airport-guide/en/OSW.json",
+    "sha256": "d5df9488c8439f8436d411de78af7f1f6e3526a7d4000f697bef96f34ebd3094"
+  },
+  {
+    "file": "data/airport-guide/en/PEE.json",
+    "sha256": "d8601429209d526ada162a5041b2c47f22213b717112bfad730dc60cef2ee157"
+  },
+  {
+    "file": "data/airport-guide/en/PEK.json",
+    "sha256": "0c1200ba14dfa23b99a38f508e3498a4c9349fe4609f158cbd744966e231b810"
+  },
+  {
+    "file": "data/airport-guide/en/PKC.json",
+    "sha256": "9fe194d69b5a37534994f6398e135eee22317f432c9bf7ad2c25d8505fef18dc"
+  },
+  {
+    "file": "data/airport-guide/en/REN.json",
+    "sha256": "a156d80b88a56d4413369f42cabe12c5086ff8fd947fbd381080fa392317b726"
+  },
+  {
+    "file": "data/airport-guide/en/RGK.json",
+    "sha256": "4b37af6b2388f42754da5012c8220da4be67aab061f097e6a253932e11978301"
+  },
+  {
+    "file": "data/airport-guide/en/SGC.json",
+    "sha256": "596b4379795ebe144ddbab2e10fc1b5b6099536ce05b276dab23da58db524615"
+  },
+  {
+    "file": "data/airport-guide/en/SKX.json",
+    "sha256": "02a3ecfd5159242115d8630d3a8ecfef8549fc11228dd46bcc9b38087687b145"
+  },
+  {
+    "file": "data/airport-guide/en/SSH.json",
+    "sha256": "6dd55f582389dc5c47d98bc8d8e37f83c59be5b0e537d6c006d875d2b7ade49d"
+  },
+  {
+    "file": "data/airport-guide/en/SVO.json",
+    "sha256": "84f18d40cc3fefe6fc58634b0cd5bdac2a57147b43bdbeab78626a18f49ce1f1"
+  },
+  {
+    "file": "data/airport-guide/en/SVX.json",
+    "sha256": "68d04425232830f6fbfaac99df5f1bdaf9b16beb8eb2e0cbac27f03865592ab5"
+  },
+  {
+    "file": "data/airport-guide/en/UFA.json",
+    "sha256": "b5a57532e7bde79606260a4a0be5fd0be61556a77205b69749f4130dc50aae5c"
+  },
+  {
+    "file": "data/airport-guide/en/ULV.json",
+    "sha256": "f0faa335212ddd23ec339b3c428a0e048d5350239d3c0ebeae611d76a75624e6"
+  },
+  {
+    "file": "data/airport-guide/en/UUD.json",
+    "sha256": "3ca18e63f1618e52c5f8d805303ed2167352e18bd8da93a269612026dff17dd9"
+  },
+  {
+    "file": "data/airport-guide/en/UUS.json",
+    "sha256": "e104540499adc3f8675cc69ba426998799b7774727fd2995eec36551ec11df12"
+  },
+  {
+    "file": "data/airport-guide/en/VKO.json",
+    "sha256": "d6dcc57a127c23cd3088ba1c7a61414cf2269e771705be49f2e0d34196eeed97"
+  },
+  {
+    "file": "data/airport-guide/en/VVO.json",
+    "sha256": "2f8755c3cef8cb2e4b501a6342e58ce6f51e60d86dd3dcb29b7a1167fa56ad5b"
+  },
+  {
+    "file": "data/airport-guide/en/ZIA.json",
+    "sha256": "4f016ff871384c0961a0dec5a0eb0b673669d5d9617062f1806b4d6ec996eab0"
+  },
+  {
+    "file": "data/airport-guide/es/AER.json",
+    "sha256": "62f792bf1f8f18163d4b0dafdbf61992ae2be92ca47062a7f980f8dd53e53849"
+  },
+  {
+    "file": "data/airport-guide/es/ARH.json",
+    "sha256": "d70fcac0c83df8f05063f1a3ee6d433aa76d72952838e55522ae729ffd629aec"
+  },
+  {
+    "file": "data/airport-guide/es/ASF.json",
+    "sha256": "22014f04486674a4a0d8752f275b530fd052b4a3266f922505a4315559cf898e"
+  },
+  {
+    "file": "data/airport-guide/es/AYT.json",
+    "sha256": "5b319c7cc1830dda530e720066c5ffd1523c4ff24e4a47f3da01089f30256e60"
+  },
+  {
+    "file": "data/airport-guide/es/BQS.json",
+    "sha256": "68257cf9c546c111233b1ad2c0976deb89e6db547adf71c832f86e904112f6d6"
+  },
+  {
+    "file": "data/airport-guide/es/BTK.json",
+    "sha256": "f9f949ef9660ccd9ce93ca563acf92e4008b429cdc166bcac5f02edc99929265"
+  },
+  {
+    "file": "data/airport-guide/es/CEE.json",
+    "sha256": "6334c2682308f0ed3dd040b7eb3b827ca00821e666b5c85b8d96fad0721ae490"
+  },
+  {
+    "file": "data/airport-guide/es/CEK.json",
+    "sha256": "94e0bbcb1c8da5efbbf5cb63731bb9ce42fcb7f7383df0d23d9f8c9cd3f5bb0e"
+  },
+  {
+    "file": "data/airport-guide/es/CSY.json",
+    "sha256": "621b275a5060c561140e84b4b2c664b03705f989d17f99e57651b2ae2983c0ba"
+  },
+  {
+    "file": "data/airport-guide/es/EYK.json",
+    "sha256": "85ff738314f17210af0a158205804c7eda9e1a855f6cb18f2ca013e3daf26aca"
+  },
+  {
+    "file": "data/airport-guide/es/GDX.json",
+    "sha256": "957e9b85f44cad609a5770409ace0b5579150a57505ca4864d68844e03d9bfc8"
+  },
+  {
+    "file": "data/airport-guide/es/GOJ.json",
+    "sha256": "03023fa357d2734a29433931c3aa7151bf6ecce1d565f84d95564e9c99e2a588"
+  },
+  {
+    "file": "data/airport-guide/es/GYD.json",
+    "sha256": "002aedeef1042982180c3d45a2a47422e2545a495e7eb8a0357cee3489f214f9"
+  },
+  {
+    "file": "data/airport-guide/es/HMA.json",
+    "sha256": "3a4651490e983274959bbbc3ff4a1dc8f31ecf61d833f673eec938665fc6cc04"
+  },
+  {
+    "file": "data/airport-guide/es/IAR.json",
+    "sha256": "92148a6ac2b1bcd5d51e5e0028ee21598b897f565779d2bd704ae5700a207b25"
+  },
+  {
+    "file": "data/airport-guide/es/IJK.json",
+    "sha256": "0cea088a48fedb5275b77381b6ba466f1868d608effc7d33b7b02671bd8e3367"
+  },
+  {
+    "file": "data/airport-guide/es/IKT.json",
+    "sha256": "114f9251398e059ff8d86943c1f221be5f752d67a8abba1960b6c78e36075d04"
+  },
+  {
+    "file": "data/airport-guide/es/IWA.json",
+    "sha256": "0f85e2c33b7f38d3329692a03bb42e10e1c1432124972e474cc4ef19bee4da4f"
+  },
+  {
+    "file": "data/airport-guide/es/KEJ.json",
+    "sha256": "df1769b763bb53300b23a903e42c0f5713d5a5e68fe432f43c4b2df741d45949"
+  },
+  {
+    "file": "data/airport-guide/es/KGD.json",
+    "sha256": "c93404293fcfeb8a496c6b11e86f193b948c4f1cc6a54d982d4da88f51d18db8"
+  },
+  {
+    "file": "data/airport-guide/es/KRR.json",
+    "sha256": "197a1b006116958a8cd05a274c7ef67a8c8eefde9c43d296b1ccb8b46b2ce266"
+  },
+  {
+    "file": "data/airport-guide/es/KUF.json",
+    "sha256": "4760f22412dda2ca389176f5f752b488992410ad3608425f005f01deaadf8030"
+  },
+  {
+    "file": "data/airport-guide/es/LAS.json",
+    "sha256": "98ecff12e926db8caf3b3574768371ae2b0f0ef5c33bc714a97d8dc992d18410"
+  },
+  {
+    "file": "data/airport-guide/es/LED.json",
+    "sha256": "921b2d114c55afbbe078de3aefa16764f3e20948f5b4c985cd3fc4567f298144"
+  },
+  {
+    "file": "data/airport-guide/es/MCX.json",
+    "sha256": "54678daa29161fcd590ff5b4062522fa70e251666e5613d320c0102d061bd7ad"
+  },
+  {
+    "file": "data/airport-guide/es/MRV.json",
+    "sha256": "d77376a2500850f13f38a4172ed1b47bdb6454fc21118c3425a2fca9173ac794"
+  },
+  {
+    "file": "data/airport-guide/es/NBC.json",
+    "sha256": "6175000efd0a0f83f0d56a0e5660255e7c46c492c1bc14f0f4f7d7df777a58c6"
+  },
+  {
+    "file": "data/airport-guide/es/NJC.json",
+    "sha256": "3aaeffb3113a8da5e2fa2aff748052a9d370dedc020785f404b02ba59a20facd"
+  },
+  {
+    "file": "data/airport-guide/es/NLI.json",
+    "sha256": "a77e6bbe18524ac5ef4e5e78b40c85911e9408933d7f5d8d0d3ce082c9acb088"
+  },
+  {
+    "file": "data/airport-guide/es/NNM.json",
+    "sha256": "58ed83e77b633a2cc9908864636abaefe17f6546875594a8364affc7ff73acd2"
+  },
+  {
+    "file": "data/airport-guide/es/NOZ.json",
+    "sha256": "7bedf5d91c3560a6fabe43dd9c2a68493f197fb79feec99f662b9edf9d9af5f5"
+  },
+  {
+    "file": "data/airport-guide/es/NSK.json",
+    "sha256": "2712827a255a60dcca04d2861f05b76704947f64da519db7473d025e820d3e26"
+  },
+  {
+    "file": "data/airport-guide/es/NUX.json",
+    "sha256": "faf187b8a4c824a86fce2d60cc941e4ca0be12ec88166db5dbccea4833e8aa02"
+  },
+  {
+    "file": "data/airport-guide/es/OSW.json",
+    "sha256": "a0aa9554ac9ef95a88d983bbc0953acbd68ab4bec7b0f7c85d86f715b2078d24"
+  },
+  {
+    "file": "data/airport-guide/es/PEE.json",
+    "sha256": "63226905b010203ffac02a5d72792a1548a14ecf47fcc782505d590de5afeec9"
+  },
+  {
+    "file": "data/airport-guide/es/PEK.json",
+    "sha256": "51c4ce49041097641ce2e8e7d6dfb8cd7996bdb99d7157a1dc7c893eef449ae4"
+  },
+  {
+    "file": "data/airport-guide/es/PKC.json",
+    "sha256": "d8c98ee25872483f2131fceb0c87a33d5b01e88c00d7d885a6b7fcb9b154e659"
+  },
+  {
+    "file": "data/airport-guide/es/REN.json",
+    "sha256": "c2d3eb91d9304d6d38a21ad9d09690ba3e913d53a67dd26666f9f6fbac1d7a8b"
+  },
+  {
+    "file": "data/airport-guide/es/RGK.json",
+    "sha256": "2afa6b8b52c773907ae44d3c0b8b16b7fbe6c131720ef103ff14af08b12baf8a"
+  },
+  {
+    "file": "data/airport-guide/es/SGC.json",
+    "sha256": "f919649ad4f64ba8b050485b424c421604f0005b8aeb83de2caf40011f484fa3"
+  },
+  {
+    "file": "data/airport-guide/es/SKX.json",
+    "sha256": "5701202eb4724fe51b49080c9d9f322005954b26dff0b10c3d11017b734d7b69"
+  },
+  {
+    "file": "data/airport-guide/es/SSH.json",
+    "sha256": "24b82a56b40827c4b155830efc4f577aad822efa46767f2d8a191c1d55c0b585"
+  },
+  {
+    "file": "data/airport-guide/es/SVO.json",
+    "sha256": "d9d2dc38a1b2e68f5678eb4db78bc418a81822a18f44a3e4420238d205cf751d"
+  },
+  {
+    "file": "data/airport-guide/es/SVX.json",
+    "sha256": "5073db73591949a84234b954a006f0c47b661c9be61dbd6c3938d8baf77fc83d"
+  },
+  {
+    "file": "data/airport-guide/es/UFA.json",
+    "sha256": "bb2a9e2c55af25abeda9303af891f4872d235dd859b5a3307e6ad0e8cb7790f9"
+  },
+  {
+    "file": "data/airport-guide/es/ULV.json",
+    "sha256": "535ebe60ff9df8b128f9f03b28ccaf9573e317e9307a6f151d45410f9290f4dc"
+  },
+  {
+    "file": "data/airport-guide/es/UUD.json",
+    "sha256": "9ef6acced9b2eff39ab8a81244dd58d7d0c2cee83f104d4814ebca91f9565218"
+  },
+  {
+    "file": "data/airport-guide/es/UUS.json",
+    "sha256": "f1379b01034495b49a5e41bf5b1f2401b3deb37eb5f8940b79eee85a08bb9ade"
+  },
+  {
+    "file": "data/airport-guide/es/VKO.json",
+    "sha256": "4ec6ef56feef4b77399219d87dd3a2f01a94c37ca113a8f0495d5884ac8babe0"
+  },
+  {
+    "file": "data/airport-guide/es/VVO.json",
+    "sha256": "e8aa7146962a597e78bd39ad979ae2eca5523a802ecdfe679f95e6363dd40965"
+  },
+  {
+    "file": "data/airport-guide/es/ZIA.json",
+    "sha256": "17261ca3ec53655754e8f7364aa68197864751032df89c621ce6f6f807f6d807"
+  },
+  {
+    "file": "data/airport-guide/fr/AER.json",
+    "sha256": "70516a87216d817afbeb8b9d8d3c4359c98f44d0ba7b27cbb693c3411cc1d4b5"
+  },
+  {
+    "file": "data/airport-guide/fr/ARH.json",
+    "sha256": "e64fb39a97928da4908f975d35663e0838f1ab9d5c062d9f1808c6af1a3da1aa"
+  },
+  {
+    "file": "data/airport-guide/fr/ASF.json",
+    "sha256": "9be5cf4a247338011a78329f55a1b57baec4275406403e76dee55ed2bb313ed0"
+  },
+  {
+    "file": "data/airport-guide/fr/BQS.json",
+    "sha256": "94ebc9ffcd6885fe59ec1e93da180a2f0a1f2e468d917656b31497b5921856b8"
+  },
+  {
+    "file": "data/airport-guide/fr/BTK.json",
+    "sha256": "1072ab267e5a382b96c0d2241674c7c7c9a0448b24fb251aa5f815093ee208a3"
+  },
+  {
+    "file": "data/airport-guide/fr/CEE.json",
+    "sha256": "aede385bab56ee6ed2e8302f076f859b0df33259856e5c9bc9ec1374263c636c"
+  },
+  {
+    "file": "data/airport-guide/fr/CEK.json",
+    "sha256": "8bdc23ed0bb9c879e05029a41ba82ff4182d9e377960e0f4aef83a200bcec2ef"
+  },
+  {
+    "file": "data/airport-guide/fr/CSY.json",
+    "sha256": "a67d23e45ba71c685e00540b0e8c6306fd08b25d6984ac6703d65117a62a4f7c"
+  },
+  {
+    "file": "data/airport-guide/fr/EYK.json",
+    "sha256": "5dff9b72b41a431ad9c42e194136768669d9b6105b50cf4d5969f951bd39ed36"
+  },
+  {
+    "file": "data/airport-guide/fr/GDX.json",
+    "sha256": "1069314708cc03ab22f1e77ca5820c6b2b877be934e8df705bf07b02262cf241"
+  },
+  {
+    "file": "data/airport-guide/fr/GOJ.json",
+    "sha256": "2d34500dac4d2f2146c2f51fe0e39a571ac70b719f83b4383f2642c1f203c5d0"
+  },
+  {
+    "file": "data/airport-guide/fr/GYD.json",
+    "sha256": "64d9d131a69ee0ff64a2d767ab06248b8771e2f085784348c4369547ef6747a9"
+  },
+  {
+    "file": "data/airport-guide/fr/HMA.json",
+    "sha256": "3fa1d6817095e19b602c0edc12a455ee1caa19e83dea5ab07082897820bd3233"
+  },
+  {
+    "file": "data/airport-guide/fr/IAR.json",
+    "sha256": "6ced183fcc20a3762454f007fb8d52ca3b6f7ce0466377afd96d0ecb93206c23"
+  },
+  {
+    "file": "data/airport-guide/fr/IJK.json",
+    "sha256": "3b1ab6116597a2f9675bcbd4c532389924668d07cd971ad8aab46da8edf7da8c"
+  },
+  {
+    "file": "data/airport-guide/fr/IKT.json",
+    "sha256": "db3467b640cd6494500a7b604ed3aec20d740f43caab5d01727c2d0fcd9f1ad9"
+  },
+  {
+    "file": "data/airport-guide/fr/IWA.json",
+    "sha256": "615a2eb7e4f1ad13ccdf742945065cffade3ebd722b99771b1d93928fcbb329d"
+  },
+  {
+    "file": "data/airport-guide/fr/KEJ.json",
+    "sha256": "40ee74a3c0fea4844997ee14f064c29e8c9e090e4b9b9368e30ec5e357140d6d"
+  },
+  {
+    "file": "data/airport-guide/fr/KGD.json",
+    "sha256": "1070d48482f7eb979846b06caa060d4d0613736fc2ccbbce1378ded4b7a2ce6f"
+  },
+  {
+    "file": "data/airport-guide/fr/KRR.json",
+    "sha256": "55e7215f1af72aaacc1e485cf43b1e1d7da3d2111937a44429dc4cab43ed1c43"
+  },
+  {
+    "file": "data/airport-guide/fr/KUF.json",
+    "sha256": "7b2742f0b6f84c9820c54fc1529b7f20b7eadcb7c200cbdd9805fbe1bf9523c2"
+  },
+  {
+    "file": "data/airport-guide/fr/LAS.json",
+    "sha256": "fca37c74c67fbfbd34ab45dda39982013a76a82252a13d437cdf224208232bfb"
+  },
+  {
+    "file": "data/airport-guide/fr/LED.json",
+    "sha256": "d794cc50798da1424a61da38ef6929a718ce67fc0254aa33c71815cf2a493df2"
+  },
+  {
+    "file": "data/airport-guide/fr/MCX.json",
+    "sha256": "65cb4f3a8aaf1652e062af6edb437bcd0440550a3cc6696d6726695ff8e5792d"
+  },
+  {
+    "file": "data/airport-guide/fr/MRV.json",
+    "sha256": "24938ff438190916e81150be8157fcf78fa9ce843b1d99898e07297d3a0d802e"
+  },
+  {
+    "file": "data/airport-guide/fr/NBC.json",
+    "sha256": "1edb1999b37af68a08f39afb6d13a2426b48aa88fb07b33c276a45096b4c4af4"
+  },
+  {
+    "file": "data/airport-guide/fr/NJC.json",
+    "sha256": "d676cf55b805549198154b2f0df79749e768ae95d11c0825df8e23c4f0aa4f9b"
+  },
+  {
+    "file": "data/airport-guide/fr/NLI.json",
+    "sha256": "030d96312478a9147e4a7a1c181efb129fd9a8203b9b436d651f81d8564b2e50"
+  },
+  {
+    "file": "data/airport-guide/fr/NNM.json",
+    "sha256": "dd77f2bc81e28301804bb854e9a39ab08775f4ac938e2497cb9a1e30a1ba31d2"
+  },
+  {
+    "file": "data/airport-guide/fr/NOZ.json",
+    "sha256": "bc4538ccda0588fff45d82cef5239d52d6fae755d969ce68f677a1b8ad628f7d"
+  },
+  {
+    "file": "data/airport-guide/fr/NSK.json",
+    "sha256": "032652ffa84f10c31059b973a33e9fc256df53cdb972e6db7a6fa1b83ecfa9bf"
+  },
+  {
+    "file": "data/airport-guide/fr/NUX.json",
+    "sha256": "9621d5eda0a18d3198908605f543690bb822b8d3e9f35b3c18cd236b4f98d702"
+  },
+  {
+    "file": "data/airport-guide/fr/OSW.json",
+    "sha256": "749f4d5fa7f12ffc6fa7d5fadebf1271d27aa1b7451b1b6018d92f5c19fb98e4"
+  },
+  {
+    "file": "data/airport-guide/fr/PEE.json",
+    "sha256": "b0baad92ea6dd7b75b9eea7f50486e6cf3a89701dea0fe7753275077c0bf9278"
+  },
+  {
+    "file": "data/airport-guide/fr/PEK.json",
+    "sha256": "8c4e5ce28009946448bab123ccb8351e502388039b2308aa147102be03cbed05"
+  },
+  {
+    "file": "data/airport-guide/fr/PKC.json",
+    "sha256": "8ec55a1a3dfdf86aee7eb34cdf4e5fbc43b797a7a1c2c3162aefb698b6145d64"
+  },
+  {
+    "file": "data/airport-guide/fr/REN.json",
+    "sha256": "817bbd38ef18cd0c5481f6fe7b359b575d59f386f9e8184d68b0127dbecfe3fa"
+  },
+  {
+    "file": "data/airport-guide/fr/RGK.json",
+    "sha256": "a2ea33a6bfb69a782d1fb99252b921f3dedf72851a1eceaf008054c86b9ad8b5"
+  },
+  {
+    "file": "data/airport-guide/fr/SGC.json",
+    "sha256": "ba4e95e918a49896d2bfc4ad3399ddf9c9550b91333251d8ae372eba6f4a929e"
+  },
+  {
+    "file": "data/airport-guide/fr/SKX.json",
+    "sha256": "6cb1cf9a8e06db46074f2cfce736198fc03d3260913b360a0cf6d39a0bf146fb"
+  },
+  {
+    "file": "data/airport-guide/fr/SSH.json",
+    "sha256": "42b29a989e2da85f93db8137db36b13f6c6d4bf28e7eab24e4c1ba101d9eec2a"
+  },
+  {
+    "file": "data/airport-guide/fr/SVO.json",
+    "sha256": "bdf3018461d88384438fb8d87e0449b93e6830b11fca346847cd1b11545d9516"
+  },
+  {
+    "file": "data/airport-guide/fr/SVX.json",
+    "sha256": "e25000b5f7761847597a893a090c0f54c0c64d37092bc2b939edf6fb30b0b0eb"
+  },
+  {
+    "file": "data/airport-guide/fr/UFA.json",
+    "sha256": "fdfdfce9b8aba2876e7be251ef6e7ee0d9b6832863143b7f38f0669a1f37ddfa"
+  },
+  {
+    "file": "data/airport-guide/fr/ULV.json",
+    "sha256": "03bcfe5919dbce6c70a7caa543ca9d7def7a77c5208daccf6aeb4fa4513b62bb"
+  },
+  {
+    "file": "data/airport-guide/fr/UUD.json",
+    "sha256": "3c89b863924a32bd77d60df6b116189098e9a5afef782448f7879ea4bbf8794f"
+  },
+  {
+    "file": "data/airport-guide/fr/UUS.json",
+    "sha256": "d12552d304f18ab6860686ca2e9197bc2696a3b937abccbfe6b9b592ce20e598"
+  },
+  {
+    "file": "data/airport-guide/fr/VKO.json",
+    "sha256": "a9a5424c120e84eaf1dcced24322a7d106dede92eac400b149269859495a848c"
+  },
+  {
+    "file": "data/airport-guide/fr/VVO.json",
+    "sha256": "5d523884c6ea0f1d352518ff2721cc2d400f02ce2e6b6125f91345d8e56cae7e"
+  },
+  {
+    "file": "data/airport-guide/fr/ZIA.json",
+    "sha256": "3d5f5a54aaf3d5b6e49edd5756a58a3f833808a6cb451f38cb0967adea46436a"
+  },
+  {
+    "file": "data/airport-guide/it/AER.json",
+    "sha256": "1c422715e303c819584691b2a283eb8e1558ceb74ae4d9b18cb7ae86188df8de"
+  },
+  {
+    "file": "data/airport-guide/it/ARH.json",
+    "sha256": "56b6f473e086c341de5f01652197e297202e035ebd4c530c5cc76a9d9cf21bce"
+  },
+  {
+    "file": "data/airport-guide/it/ASF.json",
+    "sha256": "61202a0146196766498fda372a760504a7203c1e4e22d24d396f2c1423d487c7"
+  },
+  {
+    "file": "data/airport-guide/it/BQS.json",
+    "sha256": "637586d41288d635f57005917fa89587df1562ada4f8c06dd7df751f159c046b"
+  },
+  {
+    "file": "data/airport-guide/it/BTK.json",
+    "sha256": "40c4303367c6540c53c791fd101bfc82f61a5f3cc09af6515bedc9ada858583f"
+  },
+  {
+    "file": "data/airport-guide/it/CEE.json",
+    "sha256": "2c66661d4706a24c32d478ab738283dbc025a60f3ec2322d894fbeaa0f92985d"
+  },
+  {
+    "file": "data/airport-guide/it/CEK.json",
+    "sha256": "340c3c124699820f205405703059f943336764c4a30802a305df191a612e311c"
+  },
+  {
+    "file": "data/airport-guide/it/CSY.json",
+    "sha256": "8d2cc6c2736693b8b762a94fcbb0c9da7cc30c048024769618863c89152ccf51"
+  },
+  {
+    "file": "data/airport-guide/it/EYK.json",
+    "sha256": "8ecff81291d784ccc1e631609c671badffeea7de04b04f3355c81b74f8cf0c97"
+  },
+  {
+    "file": "data/airport-guide/it/GDX.json",
+    "sha256": "e5e3a394e38c66f8a7eaeabf128174e9f5bcbb05609cd8ae097e83d9827a554c"
+  },
+  {
+    "file": "data/airport-guide/it/GOJ.json",
+    "sha256": "55fb5367283824c73326de9e631cde6aa8bbc9879c959624351f2426f99ca663"
+  },
+  {
+    "file": "data/airport-guide/it/GYD.json",
+    "sha256": "e1aef17e09d8d6a0e64612b6679b2b716ad61e49f5944ed6f2d82569d54430ea"
+  },
+  {
+    "file": "data/airport-guide/it/HMA.json",
+    "sha256": "46eef1d65bedfc158d99d4d92ad1e6de750ac9f6c481ca7a529fd1b7e4df02fa"
+  },
+  {
+    "file": "data/airport-guide/it/IAR.json",
+    "sha256": "daf1dae08a18342d10f1cd44a9019753d7dedfaa55d119c756354e011a8741a6"
+  },
+  {
+    "file": "data/airport-guide/it/IJK.json",
+    "sha256": "33081b49e6a35dfaa1fe8576cb7df6122b3a4090c971e84c3db91dc277e549cd"
+  },
+  {
+    "file": "data/airport-guide/it/IKT.json",
+    "sha256": "a7fe41c08d7e145d6c7829e25b184b2478ea6622e16fd9b1fa4f46bc68db4b52"
+  },
+  {
+    "file": "data/airport-guide/it/IWA.json",
+    "sha256": "e6466deeb61b0817e4459cc98b97782d061547bd09abeeb6b51dc86fe6e051f6"
+  },
+  {
+    "file": "data/airport-guide/it/KEJ.json",
+    "sha256": "c7f6a92026aba2f63d73b3cedae67b9d2cdb32329855ae4625fdd29f32efd425"
+  },
+  {
+    "file": "data/airport-guide/it/KGD.json",
+    "sha256": "4b40ad2e0a9517dfd803d73f1189d7a897c4ad7a8db1405224dd0bee698f30be"
+  },
+  {
+    "file": "data/airport-guide/it/KRR.json",
+    "sha256": "9408fcf6049942e549b360d0f616a9880a7fe0cc9d5b0b6f5796e50671c92976"
+  },
+  {
+    "file": "data/airport-guide/it/KUF.json",
+    "sha256": "9d0ff7d1e103ed60339bedd0e12df4e703ff66fec615ecfd2d39bce892c6abbf"
+  },
+  {
+    "file": "data/airport-guide/it/LAS.json",
+    "sha256": "46722873051f86f7ed173a7eebab24febb0ac26087f59c507961258e18a59bf6"
+  },
+  {
+    "file": "data/airport-guide/it/LED.json",
+    "sha256": "c6a3ca584d6385ce97fefcb61a99ba7f3e6853f2761220d68366183d18348437"
+  },
+  {
+    "file": "data/airport-guide/it/MCX.json",
+    "sha256": "f49c109f6e141f667d3f5f3e2def0ae8d9289fe7374de26f668a5a2400f8c58a"
+  },
+  {
+    "file": "data/airport-guide/it/MRV.json",
+    "sha256": "099524d69271edf4108449e0f279ea43b16e4425f310a6559fc6dc2257e16194"
+  },
+  {
+    "file": "data/airport-guide/it/NBC.json",
+    "sha256": "3fd1e286b810b111e2fa51d685c42cdef0e1c8baff5b5ab87f67983a8eb680e6"
+  },
+  {
+    "file": "data/airport-guide/it/NJC.json",
+    "sha256": "37db056937797edac1ad5815fb0424068055c9f34a13e76bcede3048c8664f98"
+  },
+  {
+    "file": "data/airport-guide/it/NLI.json",
+    "sha256": "ff6a8face420239c42af71def034a7eed4300412e89f37a28719fb37e57788e0"
+  },
+  {
+    "file": "data/airport-guide/it/NNM.json",
+    "sha256": "bbd423b9a80522f9a6788b4b9c3599baaabdae980cb60a8c129c8045c0b2c0f0"
+  },
+  {
+    "file": "data/airport-guide/it/NOZ.json",
+    "sha256": "4d5f4fd3ee4fe115e8d16262c45e5f96ea928d052cae620708f3cdfdb1801666"
+  },
+  {
+    "file": "data/airport-guide/it/NSK.json",
+    "sha256": "5e0560d1795df1f03b418598c9da09f37a27dff83c7c28e04381b923811bb35e"
+  },
+  {
+    "file": "data/airport-guide/it/NUX.json",
+    "sha256": "6ebe1fb45211f6f202400a8bc2b17e98556327ec8e921f197a093b27dc3793f9"
+  },
+  {
+    "file": "data/airport-guide/it/OSW.json",
+    "sha256": "12d02da8d44170690e277b36e23cc92a70fc0f67634e345cf7aeb8181bcbb89c"
+  },
+  {
+    "file": "data/airport-guide/it/PEE.json",
+    "sha256": "3974dbd971d36cd4ac09d85f54f79cb7dac156509349eb732c9175eee728c66e"
+  },
+  {
+    "file": "data/airport-guide/it/PEK.json",
+    "sha256": "dd15c9d65ee005b4cb87ceab2712d0347b7de97df98ce0ac71f7575a567a2218"
+  },
+  {
+    "file": "data/airport-guide/it/PKC.json",
+    "sha256": "1142b6b1dbc0c5100a1470b6509dcb395c0fed0e32deed98ac7e4a7cfc8c777f"
+  },
+  {
+    "file": "data/airport-guide/it/REN.json",
+    "sha256": "4cdf4c6cc0b8127f1569157988b1ad1b71aa79d228ea6c7dd27827fc9ea8c5d2"
+  },
+  {
+    "file": "data/airport-guide/it/RGK.json",
+    "sha256": "b40988a4fd637c75a2e2c4302db12044127fc1f8602621709f48af6735881c54"
+  },
+  {
+    "file": "data/airport-guide/it/SGC.json",
+    "sha256": "8bd8907a4b1a5595247be7b27964eb979e7c25ad4aab4819afd8fd759b585111"
+  },
+  {
+    "file": "data/airport-guide/it/SKX.json",
+    "sha256": "c8de4d01ebf8807a1cb9d54d443b9df4f1745db68e6664ed77a1a81b20217d72"
+  },
+  {
+    "file": "data/airport-guide/it/SSH.json",
+    "sha256": "af11cc5ecd61e46e955b8cdfb963703290accf4d64c1aa5d81365eac18888262"
+  },
+  {
+    "file": "data/airport-guide/it/SVO.json",
+    "sha256": "ef2157c88996b2f7cb503d496d7a661188967aa63b2b6bb2ae5d9e796383838d"
+  },
+  {
+    "file": "data/airport-guide/it/SVX.json",
+    "sha256": "557e4a5a4da5dc7ead4f1a55a7aeeb7474824651916ccf1ef92836a80bfb3297"
+  },
+  {
+    "file": "data/airport-guide/it/UFA.json",
+    "sha256": "85c1e9c30ba43f31d8e0846c6cf42c3076dcae557acf8a98036f94edd656bfe1"
+  },
+  {
+    "file": "data/airport-guide/it/ULV.json",
+    "sha256": "278a770587bc30ce780cab6d229041f9b9925b35d744a8d6934777e6afee1844"
+  },
+  {
+    "file": "data/airport-guide/it/UUD.json",
+    "sha256": "7e67c92af444c81ebe555ac705b4c22773e54c8cc08ecdd2d5a9b9677a8b09d7"
+  },
+  {
+    "file": "data/airport-guide/it/UUS.json",
+    "sha256": "eb1ef66788fd07f6e3634042c8ce83a8e5c81e679a483d3f87c1835c8c60bde2"
+  },
+  {
+    "file": "data/airport-guide/it/VKO.json",
+    "sha256": "d5b51c77bb0e137780c98f0120323d899e861b5edb0242f300bb9137abaec14f"
+  },
+  {
+    "file": "data/airport-guide/it/VVO.json",
+    "sha256": "3cba96a0838d279fe7522d3f89d628cb041f84df3308c4d0464e3f687ad14875"
+  },
+  {
+    "file": "data/airport-guide/it/ZIA.json",
+    "sha256": "5a0b42749f50ac02d9735fb748a4078d0f400e6e321694dd72a400451328734f"
+  },
+  {
+    "file": "data/airport-guide/tr/AER.json",
+    "sha256": "1f09804af734c7b567413c385e9100199fed647f1fd27046123e230d5d1d28cf"
+  },
+  {
+    "file": "data/airport-guide/tr/ARH.json",
+    "sha256": "172948b04abdf070f06882af7ff07b6a5acbf400816920484329c082c02f33f2"
+  },
+  {
+    "file": "data/airport-guide/tr/ASF.json",
+    "sha256": "b542b3f3687535103c2dc64419a79ce931f87b53d65fe554eb7b980257e464e4"
+  },
+  {
+    "file": "data/airport-guide/tr/BQS.json",
+    "sha256": "4632f248ab5ebd729f41369029032f023abd26d382e10022acf55dc1c251b6b3"
+  },
+  {
+    "file": "data/airport-guide/tr/BTK.json",
+    "sha256": "1310d84c87117f5d633b0748b7c13b28735d3c61838f2fedf05b8e424e8c55a3"
+  },
+  {
+    "file": "data/airport-guide/tr/CEE.json",
+    "sha256": "0c34f273a0401d5cb22e883f03e7289d915756acf12abe308e6212ace0c65560"
+  },
+  {
+    "file": "data/airport-guide/tr/CEK.json",
+    "sha256": "81d13d05df53a8ddf3e1af2ef2d03160b02bd07a731bb5604989361b6ef4c424"
+  },
+  {
+    "file": "data/airport-guide/tr/CSY.json",
+    "sha256": "288c9c9b3a2f16071396bd5c850f29403ae88b0fdf4c533e501fc18dc3612017"
+  },
+  {
+    "file": "data/airport-guide/tr/EYK.json",
+    "sha256": "8244f2d5dd28267bdef33c6167fd65acd9122ea3fd0600140ecc05a4ee28483d"
+  },
+  {
+    "file": "data/airport-guide/tr/GDX.json",
+    "sha256": "f509d773bcd3563c8830fedfc98a8156bb4f9c4d305a659849d871150c3cde08"
+  },
+  {
+    "file": "data/airport-guide/tr/GOJ.json",
+    "sha256": "f401fe6b253b53cf8d243c91777676a1ca00231090994067da757853e82b9bbb"
+  },
+  {
+    "file": "data/airport-guide/tr/GYD.json",
+    "sha256": "eadb9dfe5a771334667bb06dcf7418fd89e3661e681539164630ff3611c823da"
+  },
+  {
+    "file": "data/airport-guide/tr/HMA.json",
+    "sha256": "28c6b90f5f575ff5c8d82e77d11b1e3b7578062a2f38369650f1f9986a3e06cc"
+  },
+  {
+    "file": "data/airport-guide/tr/IAR.json",
+    "sha256": "a5f8d7f2a091f3332b84c5e00689d9eb8bf6c1c5bc4bda5a92595e1a26cad4cc"
+  },
+  {
+    "file": "data/airport-guide/tr/IJK.json",
+    "sha256": "4a5af9f7ebeba4b3efce0ab86d29711101417df8974fb18729a19df639db50bb"
+  },
+  {
+    "file": "data/airport-guide/tr/IKT.json",
+    "sha256": "214a4ea94f8cdacc8a19e26988b0a172066da28c7b84e8412c96ad331565bf5a"
+  },
+  {
+    "file": "data/airport-guide/tr/IWA.json",
+    "sha256": "8f70f0ea22e90d46da7fb231edcc8e4496e96f0a7cb86367fd5120e0afa7e87e"
+  },
+  {
+    "file": "data/airport-guide/tr/KEJ.json",
+    "sha256": "cef9563f28c708bb28b22005bab77f4314c765027d015e3f0da727acb5817df8"
+  },
+  {
+    "file": "data/airport-guide/tr/KGD.json",
+    "sha256": "2fdef98d7a90145084b07fa1e084f7a43d21d6d6c4e75b85cf446b19ca92f125"
+  },
+  {
+    "file": "data/airport-guide/tr/KRR.json",
+    "sha256": "30281f7d95785f8e283a82b7a8baa1705783f46ab9645482b57a7a2e27fc8ad0"
+  },
+  {
+    "file": "data/airport-guide/tr/KUF.json",
+    "sha256": "28c89c6dfc0b1fac183868c43a24773c7550c48b4c47f4c180a5ccbbb6143185"
+  },
+  {
+    "file": "data/airport-guide/tr/LAS.json",
+    "sha256": "1609f21638ce1f10e18a746866618d1b7517bf261c30fa689e709d2603656b0d"
+  },
+  {
+    "file": "data/airport-guide/tr/LED.json",
+    "sha256": "6cb7424c07317c1736de1d640b4280d3453debdf44ec6ad752beaedcd68e00fc"
+  },
+  {
+    "file": "data/airport-guide/tr/MCX.json",
+    "sha256": "9de01d2e75c13d486e31b86d35dda616b991faeaf9996b12027153f83e3da122"
+  },
+  {
+    "file": "data/airport-guide/tr/MRV.json",
+    "sha256": "c33f93e93946f348d960da4631001d9edfb570bf1012b262029b298c3efd036f"
+  },
+  {
+    "file": "data/airport-guide/tr/NBC.json",
+    "sha256": "f72fc499bf6f459a7c37a924114031fd7a59c17e6575273802a05e2ff202e381"
+  },
+  {
+    "file": "data/airport-guide/tr/NJC.json",
+    "sha256": "e49ca1023765862039887dcdf782285b4726efc19e4e77f752aa97e71dccceb1"
+  },
+  {
+    "file": "data/airport-guide/tr/NLI.json",
+    "sha256": "b6d32a54ff87610048518c25b7b475ae6dd52de86ebf33e523605bfc7f62750e"
+  },
+  {
+    "file": "data/airport-guide/tr/NNM.json",
+    "sha256": "c88488b43c3525694f6ffd0a7f144640f24aa1fcdf91e2e98be21bf8e4a17b1f"
+  },
+  {
+    "file": "data/airport-guide/tr/NOZ.json",
+    "sha256": "32b9f88080c69ad012897d9e7eb4dee49bb7204dc2e9d32b922fb8657ebbc736"
+  },
+  {
+    "file": "data/airport-guide/tr/NSK.json",
+    "sha256": "1bfea5d5ce8bba5412c8ddf0bdd32b1c3a1d63200fb896eb74b490dfb34ac53a"
+  },
+  {
+    "file": "data/airport-guide/tr/NUX.json",
+    "sha256": "16f39188ac1bc5c539268be74f615e1d2cb4fdd4ea67e451b00489ee747d02bf"
+  },
+  {
+    "file": "data/airport-guide/tr/OSW.json",
+    "sha256": "1f5547c658d3647b732e5fe4aa407da3804a0d01bf1bd75127eb3dba88f0b5bd"
+  },
+  {
+    "file": "data/airport-guide/tr/PEE.json",
+    "sha256": "ed8d8e712ac3d9610ee5682b1c9654260ec962033fb99041873a6f5552034cab"
+  },
+  {
+    "file": "data/airport-guide/tr/PEK.json",
+    "sha256": "c39b60441f134d876b5cabc3af9aa79e82b68dfb5531981c082618a9e14be179"
+  },
+  {
+    "file": "data/airport-guide/tr/PKC.json",
+    "sha256": "a5448ef0903fc67640b3bbdbd8077d6fef68cc1bd3a4783d16c6dc616523e268"
+  },
+  {
+    "file": "data/airport-guide/tr/REN.json",
+    "sha256": "d9ebd222f22df1e273a1ec902535dbd8345fec60549f83e1b2b1f85f0537ff30"
+  },
+  {
+    "file": "data/airport-guide/tr/RGK.json",
+    "sha256": "7ad017b060d8045d99cce8847869687664a73137fd8f5493acc1d66fa9b5d971"
+  },
+  {
+    "file": "data/airport-guide/tr/SGC.json",
+    "sha256": "83bdae8171a78ab1187658b2b714127fa0800c1f6e39d668f342794100501c00"
+  },
+  {
+    "file": "data/airport-guide/tr/SKX.json",
+    "sha256": "4468edf2b8a92c6f84dc62aac39e4db0be73aa1fd7bd64e7acbd2fe0a3398a41"
+  },
+  {
+    "file": "data/airport-guide/tr/SSH.json",
+    "sha256": "7adb5a7d837f85aeaee930c9c28635566b512516a3e2933189e02fd422283c3f"
+  },
+  {
+    "file": "data/airport-guide/tr/SVO.json",
+    "sha256": "2307ad9911abc5394768ca385c1a6aff0df5bf3c300c910643e2dc438b071919"
+  },
+  {
+    "file": "data/airport-guide/tr/SVX.json",
+    "sha256": "6b790ec761141c6d6f9e3248b691d1b1941b85883329d1b1dec2ee444d4384e6"
+  },
+  {
+    "file": "data/airport-guide/tr/UFA.json",
+    "sha256": "76a804cb04ab9823eeeea29bb6e020d319381f174b9c01cc9d6e1db0ca2b12db"
+  },
+  {
+    "file": "data/airport-guide/tr/ULV.json",
+    "sha256": "7322a28533d99b839d0d17e61b83f365da87be693c50bdb891ed5d8eb78c6056"
+  },
+  {
+    "file": "data/airport-guide/tr/UUD.json",
+    "sha256": "2684b8da9c15146203ff552cfa123c67d00f2161459f063f9b7338deb3eaf9c4"
+  },
+  {
+    "file": "data/airport-guide/tr/UUS.json",
+    "sha256": "556f0b9f1baf68c0d404986ceca58f8eca5a05dc732c142166ace731bf6bc118"
+  },
+  {
+    "file": "data/airport-guide/tr/VKO.json",
+    "sha256": "7dd4d8c936b4e155ada824c4fd4a874e74b68f979b8f02e5f232cf21d87db2d8"
+  },
+  {
+    "file": "data/airport-guide/tr/VVO.json",
+    "sha256": "b536c0d7ff351fc483a299a4a09607091aff0e0a4ee028011a8860e6afe5c271"
+  },
+  {
+    "file": "data/airport-guide/tr/ZIA.json",
+    "sha256": "1c37c326f6798e5f60c3c2a8e36b677b15de6323bd6608f4077aaa5cfdd99423"
+  }
+]

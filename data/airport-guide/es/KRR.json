@@ -19,8 +19,8 @@
   },
   "storage": {
    "title": "Consigna",
-   "hint": "400 ₽ las primeras 24 h",
-   "text": "En la plaza de la terminal, día y noche. 400 ₽ por bulto las primeras 24 horas, 200 ₽ por cada 24 horas siguientes. Peso de un bulto: hasta 30 kg."
+   "hint": "400 ₽ el primer día",
+   "text": "En la plaza de la terminal, día y noche. 400 ₽ por bulto el primer día, 200 ₽ por cada día siguiente. Peso de un bulto: hasta 30 kg."
   },
   "kids": {
    "title": "Con niños",
@@ -30,7 +30,7 @@
   "parking": {
    "title": "Aparcamiento",
    "hint": "15 min gratis, 400 ₽/h",
-   "text": "Plaza de la terminal: los primeros 15 minutos gratis, después 400 ₽ por hora. Aparcamiento adicional por horas a la derecha de la plaza: 250 ₽ por hora. Por días: 900 ₽ por cada 24 horas. El aparcamiento alternativo es gratuito."
+   "text": "Plaza de la terminal: los primeros 15 minutos gratis, después 400 ₽ por hora. Aparcamiento adicional por horas a la derecha de la plaza: 250 ₽ por hora. Por días: 900 ₽ por día. El aparcamiento alternativo es gratuito."
   },
   "wifi": {
    "title": "Wi‑Fi",

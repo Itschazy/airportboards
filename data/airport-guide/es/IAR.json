@@ -15,12 +15,12 @@
   "kids": {
    "title": "Con niños",
    "hint": "Sala de salidas, gratis",
-   "text": "La sala para pasajeros con niños está en la sala de salidas, en la zona estéril. Se admite a pasajeros con niños o niños con discapacidad menores de 14 años, con tarjeta de embarque. Gratis, hasta 3 horas antes de la salida de día y hasta 4 horas de noche. En la sala de llegadas no la hay."
+   "text": "La sala para pasajeros con niños está en la sala de salidas, en la zona estéril. Para entrar se necesita una tarjeta de embarque. Consulte las condiciones de edad con el aeropuerto antes del viaje. Gratis, hasta 3 horas antes de la salida de día y hasta 4 horas de noche. En la sala de llegadas no la hay."
   },
   "parking": {
    "title": "Aparcamiento",
-   "hint": "300 ₽/24 h",
-   "text": "Aparcamiento de pago, 300 ₽ por cada 24 horas. No hay reserva ni prepago; se paga al dejar el coche, si hay plazas. La hora de recogida del coche se consulta por teléfono en el 43-18-00."
+   "hint": "300 ₽/día",
+   "text": "Aparcamiento de pago, 300 ₽ por día. No hay reserva ni prepago; se paga al dejar el coche, si hay plazas. La hora de recogida del coche se consulta por teléfono en el 43-18-00."
   },
   "wifi": {
    "title": "Wi‑Fi",

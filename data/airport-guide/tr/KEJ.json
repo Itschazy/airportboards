@@ -9,8 +9,8 @@
   },
   "storage": {
    "title": "Emanet",
-   "hint": "24 saati 200 ₽'den",
-   "text": "Emanet iç hatlar terminal binasının çalışma saatlerine göre açık. El bagajı 24 saati 200 ₽, 50×40×20 cm'ye kadar bagaj 220 ₽, daha büyüğü 270 ₽, 100×50×70 cm'den büyüğü 500 ₽. 24 saatten kısa süre tam 24 saat olarak ücretlendirilir."
+   "hint": "Günlük 200 ₽'den",
+   "text": "Emanet iç hatlar terminal binasının çalışma saatlerine göre açık. El bagajı günlük 200 ₽, 50×40×20 cm'ye kadar bagaj 220 ₽, daha büyüğü 270 ₽, 100×50×70 cm'den büyüğü 500 ₽. Tamamlanmamış gün tam gün olarak ücretlendirilir."
   },
   "kids": {
    "title": "Çocukla",
@@ -20,7 +20,7 @@
   "parking": {
    "title": "Otopark",
    "hint": "15 dakika ücretsiz",
-   "text": "Terminale 30 m uzaklıkta terminal önü meydanı, 173 araçlık: 15 dakikaya kadar ücretsiz, ilk saat 300 ₽, ikinci ve üçüncü saat 200'er ₽, dördüncü saatten itibaren 24 saatlik tarife 1000 ₽."
+   "text": "Terminale 30 m uzaklıkta terminal önü meydanı, 173 araçlık: 15 dakikaya kadar ücretsiz, ilk saat 300 ₽, ikinci ve üçüncü saat 200'er ₽, dördüncü saatten itibaren günlük tarife 1000 ₽."
   }
  }
 }

@@ -5,7 +5,7 @@
   "transport": {
    "title": "Nasıl gidilir",
    "hint": "Şehre transfer 1500 ₽",
-   "text": "Havalimanının terminal önü meydanından şoförlü araçla transfer. İjevsk ve 30 km'ye kadar banliyöler 1500 ₽, Votkinsk 4000 ₽, Sarapul 5000 ₽, Chaykovsky 6000 ₽. Sipariş en az 3 saat önceden izhavia.su üzerinden veya inişten sonra havalimanı gişesinden, boş araç varsa."
+   "text": "Havalimanının terminal önü meydanından şoförlü araçla transfer, tarifeli uçuş yolcularına sunulur. İjevsk’te tek bir adrese yolculuk 1500 ₽; havalimanından en fazla 30 km yarıçap içindeki banliyö adreslerine aynı tarife önceden anlaşılması koşuluyla uygulanır. Votkinsk 4000 ₽, Sarapul 5000 ₽, Chaykovsky 6000 ₽. En az 3 saat önceden izhavia.su üzerinden veya inişten sonra havalimanı gişesinden, araç müsaitliğine bağlı olarak sipariş verilir."
   },
   "terminals": {
    "title": "Terminal",
@@ -30,7 +30,7 @@
   "parking": {
    "title": "Otopark",
    "hint": "15 dakika ücretsiz",
-   "text": "15 dakikaya kadar ücretsiz, 16 ila 30 dakika 250 ₽, 30 dakikadan 2 saate kadar saati 500 ₽, 2 saatten fazlası 24 saati 750 ₽. VIP otopark 5 saate kadar saati 300 ₽, ücretsiz süre yok. Ödemeden sonra 15 dakika içinde çıkış. Federal sicile kayıtlı engelli araçları için ücretsiz."
+   "text": "15 dakikaya kadar ücretsiz, 16 ila 30 dakika 250 ₽, 30 dakikadan 2 saate kadar saati 500 ₽, 2 saatten fazlası günlük 750 ₽. VIP otopark 5 saate kadar saati 300 ₽, ücretsiz süre yok. Ödemeden sonra 15 dakika içinde çıkış. Federal sicile kayıtlı engelli araçları için ücretsiz."
   }
  }
 }

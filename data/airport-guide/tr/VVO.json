@@ -15,7 +15,7 @@
   "storage": {
    "title": "Emanet",
    "hint": "Kat 1, 24/7",
-   "text": "Kat 1, yürüyen merdivenin arkasında, gece gündüz açık. Standart tarife: ilk 24 saat 500 ₽, sonraki her 24 saat 200 ₽; boyutlarının toplamı 203 cm'ye kadar parça. Tamamlanmamış 24 saatlik dönem tam sayılır."
+   "text": "Kat 1’de yürüyen merdivenin arkasındaki emanet gece gündüz açıktır. Standart tarife: ilk takvim günü 500 ₽, sonraki her gün 200 ₽. Takvim günü 23:59’da biter; tamamlanmamış gün tam ücretlendirilir. Bir parçanın üç boyutunun toplamı en fazla 203 cm olabilir."
   },
   "sleep": {
    "title": "Nerede uyunur",

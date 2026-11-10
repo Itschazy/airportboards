@@ -10,7 +10,7 @@
   "lounges": {
    "title": "Business-Lounges",
    "hint": "ON PASS, 3500 ₽",
-   "text": "Business-Lounge in der Ankunftshalle, Ebene 2 (mit dem Aufzug), rund um die Uhr; Business Class und Inhaber von Elite-Karten der Fluggesellschaften, Economy Class gegen Gebühr, internationale Flüge werden nicht bedient. Lounge ON PASS: Ebene 2 im Sicherheitsbereich, nur Inlandsflüge, rund um die Uhr, Erwachsene 3500 ₽, Kinder von 2–12 Jahren 2500 ₽."
+   "text": "Die Business-Lounge in der Ankunftshalle, Ebene 2 (mit dem Aufzug), ist rund um die Uhr geöffnet und bedient keine internationalen Flüge. Der Zugang für Business-Class-Passagiere und Inhaber von Treueprogrammkarten hängt von der Fluggesellschaft und dem jeweiligen Flug ab; Economy-Class-Passagiere zahlen eine Gebühr. Lounge ON PASS: Ebene 2 im Sicherheitsbereich, nur Inlandsflüge, rund um die Uhr, Erwachsene 3500 ₽, Kinder von 2–12 Jahren 2500 ₽."
   },
   "storage": {
    "title": "Gepäckaufbewahrung",
@@ -20,7 +20,7 @@
   "parking": {
    "title": "Parken",
    "hint": "20 Min. kostenlos",
-   "text": "Auf dem Vorplatz die ersten 20 Minuten kostenlos. Fläche für Langzeitparken mit 50 Plätzen direkt hinter dem Haltestellenpavillon: 750 ₽ pro 24 Stunden. Bezahlung an den Kassen des Terminals und an Automaten am Haupteingang und in der Ankunftshalle."
+   "text": "Auf dem Vorplatz die ersten 20 Minuten kostenlos. Fläche für Langzeitparken mit 50 Plätzen direkt hinter dem Haltestellenpavillon: 750 ₽ pro Tag. Bezahlung an den Kassen des Terminals und an Automaten am Haupteingang und in der Ankunftshalle."
   }
  }
 }

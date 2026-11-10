@@ -15,7 +15,7 @@
   "storage": {
    "title": "Consigne à bagages",
    "hint": "Niveau 1, 24/7",
-   "text": "Niveau 1, derrière l'escalator, jour et nuit. Tarif « Standard » : 500 ₽ pour les premières 24 heures, 200 ₽ par tranche de 24 heures suivante, bagage jusqu'à 203 cm pour la somme des dimensions. Toute tranche de 24 heures entamée est due en entier."
+   "text": "La consigne au niveau 1, derrière l’escalator, est ouverte jour et nuit. Tarif « Standard » : 500 ₽ pour le premier jour calendaire, 200 ₽ pour chaque jour suivant. Le jour calendaire se termine à 23:59 ; tout jour entamé est facturé en entier. La somme des trois dimensions d’un bagage ne doit pas dépasser 203 cm."
   },
   "sleep": {
    "title": "Où dormir",

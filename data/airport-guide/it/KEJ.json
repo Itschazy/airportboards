@@ -9,8 +9,8 @@
     },
     "storage": {
       "title": "Deposito bagagli",
-      "hint": "Da 200 ₽ ogni 24 ore",
-      "text": "Il deposito bagagli segue l’orario dell’aerostazione dei voli nazionali. Bagaglio a mano 200 ₽ ogni 24 ore, bagaglio fino a 50×40×20 cm 220 ₽, più grande 270 ₽, oltre 100×50×70 cm 500 ₽. Meno di 24 ore si paga come un periodo completo di 24 ore."
+      "hint": "Da 200 ₽ al giorno",
+      "text": "Il deposito bagagli segue l’orario dell’aerostazione dei voli nazionali. Bagaglio a mano 200 ₽ al giorno, bagaglio fino a 50×40×20 cm 220 ₽, più grande 270 ₽, oltre 100×50×70 cm 500 ₽. Ogni giorno iniziato si paga per intero."
     },
     "kids": {
       "title": "Con bambini",
@@ -20,7 +20,7 @@
     "parking": {
       "title": "Parcheggio",
       "hint": "15 min gratis",
-      "text": "Piazzale dell’aerostazione a 30 m dal terminal, 173 posti: fino a 15 minuti gratis, la prima ora 300 ₽, la seconda e la terza 200 ₽ ciascuna, dalla quarta ora tariffa di 1000 ₽ ogni 24 ore."
+      "text": "Piazzale dell’aerostazione a 30 m dal terminal, 173 posti: fino a 15 minuti gratis, la prima ora 300 ₽, la seconda e la terza 200 ₽ ciascuna, dalla quarta ora tariffa di 1000 ₽ al giorno."
     }
   }
 }

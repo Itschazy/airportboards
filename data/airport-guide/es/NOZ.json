@@ -35,7 +35,7 @@
   "parking": {
    "title": "Aparcamiento",
    "hint": "15 min gratis",
-   "text": "P1: solo para subir y bajar pasajeros; prohibido estacionar. P2, corta estancia: 15 minutos gratis, 16–60 minutos 300 ₽, de la 2.ª a la 4.ª hora 100 ₽/hora, más de 4 horas 700 ₽/24 horas. P3, larga estancia: 15 minutos gratis, 500 ₽/24 horas hasta 6 periodos de 24 horas. El periodo de 24 horas incompleto se paga como completo."
+   "text": "P1: solo para subir y bajar pasajeros; prohibido estacionar. P2, corta estancia: 15 minutos gratis, 16–60 minutos 300 ₽, de la 2.ª a la 4.ª hora 100 ₽/hora, más de 4 horas 700 ₽/día. P3, larga estancia: 15 minutos gratis, 500 ₽/día hasta 6 días. El día incompleto se paga como completo."
   }
  }
 }

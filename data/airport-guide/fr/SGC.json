@@ -10,7 +10,7 @@
   "lounges": {
    "title": "Salons",
    "hint": "ON PASS, 3500 ₽",
-   "text": "Salon d'affaires dans le hall des arrivées, niveau 2 (par ascenseur), jour et nuit ; classe affaires et titulaires de cartes élite des compagnies aériennes, classe économique moyennant paiement, pas de service pour les vols internationaux. Salon ON PASS : niveau 2 de la zone réservée, vols intérieurs uniquement, jour et nuit, adulte 3500 ₽, enfant de 2 à 12 ans 2500 ₽."
+   "text": "Le salon d’affaires dans le hall des arrivées, niveau 2 (par ascenseur), est ouvert jour et nuit et ne dessert pas les vols internationaux. L’accès des passagers de classe affaires et des titulaires de cartes de fidélité dépend de la compagnie aérienne et du vol effectué ; l’accès en classe économique est payant. Salon ON PASS : niveau 2 de la zone réservée, vols intérieurs uniquement, jour et nuit, adulte 3500 ₽, enfant de 2 à 12 ans 2500 ₽."
   },
   "storage": {
    "title": "Consigne à bagages",
@@ -20,7 +20,7 @@
   "parking": {
    "title": "Parking",
    "hint": "20 min gratuites",
-   "text": "Sur la place de l'aérogare, 20 premières minutes gratuites. Aire de stationnement prolongé de 50 voitures juste derrière l'abri de l'arrêt : 750 ₽ par 24 heures. Paiement aux caisses de l'aérogare et aux bornes près de l'entrée centrale et dans le hall des arrivées."
+   "text": "Sur la place de l'aérogare, 20 premières minutes gratuites. Aire de stationnement prolongé de 50 voitures juste derrière l'abri de l'arrêt : 750 ₽ par jour. Paiement aux caisses de l'aérogare et aux bornes près de l'entrée centrale et dans le hall des arrivées."
   }
  }
 }

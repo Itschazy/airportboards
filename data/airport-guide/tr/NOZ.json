@@ -35,7 +35,7 @@
   "parking": {
    "title": "Otopark",
    "hint": "15 dakika ücretsiz",
-   "text": "P1 yalnızca indirme-bindirme, park yasak. P2 kısa süreli: 15 dakika ücretsiz, 16–60 dakika 300 ₽, 2. ila 4. saat saati 100 ₽, 4 saatten fazlası her 24 saat için 700 ₽. P3 uzun süreli: 15 dakika ücretsiz, 6 adet 24 saatlik döneme kadar her 24 saat için 500 ₽. Tamamlanmamış 24 saatlik dönem tam dönem olarak ücretlendirilir."
+   "text": "P1 yalnızca indirme-bindirme, park yasak. P2 kısa süreli: 15 dakika ücretsiz, 16–60 dakika 300 ₽, 2. ila 4. saat saati 100 ₽, 4 saatten fazlası gün başına 700 ₽. P3 uzun süreli: 15 dakika ücretsiz, 6 güne kadar gün başına 500 ₽. Tamamlanmamış gün tam gün olarak ücretlendirilir."
   }
  }
 }

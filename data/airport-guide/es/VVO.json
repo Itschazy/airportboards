@@ -15,7 +15,7 @@
   "storage": {
    "title": "Consigna",
    "hint": "Nivel 1, 24/7",
-   "text": "Nivel 1, detrás de la escalera mecánica, día y noche. Tarifa «Standard»: 500 ₽ las primeras 24 horas, 200 ₽ por cada 24 horas siguientes, bulto de hasta 203 cm de suma de dimensiones. Un periodo de 24 horas incompleto se cuenta como completo."
+   "text": "La consigna del nivel 1, detrás de la escalera mecánica, abre día y noche. Tarifa «Standard»: 500 ₽ por el primer día natural y 200 ₽ por cada día siguiente. El día natural termina a las 23:59; un día incompleto se cobra íntegro. La suma de las tres dimensiones de cada bulto puede ser de hasta 203 cm."
   },
   "sleep": {
    "title": "Dónde dormir",

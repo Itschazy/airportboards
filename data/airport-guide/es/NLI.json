@@ -4,8 +4,8 @@
   "blocks": {
     "storage": {
       "title": "Consigna",
-      "hint": "419 ₽ por bulto / 24 h",
-      "text": "Custodia de equipaje en la consigna: 418,83 ₽ por bulto cada 24 horas, IVA incluido. Precios según la tarifa vigente desde el 5 de junio de 2026."
+      "hint": "419 ₽ por bulto / día",
+      "text": "Custodia de equipaje en la consigna: 418,83 ₽ por bulto por día, IVA incluido. Precios según la tarifa vigente desde el 5 de junio de 2026."
     },
     "lounges": {
       "title": "Salas VIP",

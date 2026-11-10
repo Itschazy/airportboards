@@ -14,7 +14,7 @@
     "storage": {
       "title": "Deposito bagagli",
       "hint": "Livello 2, 8:30–20:30",
-      "text": "Deposito bagagli automatico per i passeggeri dei voli nazionali al livello 2, dalle 8:30 alle 20:30, pagamento solo con carta. Armadietto standard 51×63×76 cm 1000 ₽ ogni 24 ore, grande 51×195×76 cm 2000 ₽; meno di 24 ore si paga come un periodo completo di 24 ore."
+      "text": "Deposito bagagli automatico per i passeggeri dei voli nazionali al livello 2, dalle 8:30 alle 20:30, pagamento solo con carta. Armadietto standard 51×63×76 cm 1000 ₽ al giorno, grande 51×195×76 cm 2000 ₽; ogni giorno iniziato si paga per intero."
     },
     "kids": {
       "title": "Con bambini",
@@ -24,7 +24,7 @@
     "parking": {
       "title": "Parcheggio",
       "hint": "15 min gratis",
-      "text": "Piazzale dell’aerostazione P1 a 30 m dal terminal: i primi 15 minuti gratis, fino a un’ora 500 ₽, ogni ora successiva 300 ₽, 24 ore 2000 ₽. Nuovo ingresso entro un’ora per 1–15 minuti: 200 ₽."
+      "text": "Piazzale dell’aerostazione P1 a 30 m dal terminal: i primi 15 minuti gratis, fino a un’ora 500 ₽, ogni ora successiva 300 ₽, un giorno 2000 ₽. Nuovo ingresso entro un’ora per 1–15 minuti: 200 ₽."
     },
     "wifi": {
       "title": "Wi‑Fi",

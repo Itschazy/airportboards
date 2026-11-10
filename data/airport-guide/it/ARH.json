@@ -15,12 +15,12 @@
     "storage": {
       "title": "Deposito bagagli",
       "hint": "Padiglione 3, 24/7",
-      "text": "Deposito bagagli nel Padiglione n. 3, aperto giorno e notte. Un collo fino a 30 kg e più corto di 1 m costa 250 ₽ ogni 24 ore. Non si accettano documenti, denaro, oggetti di valore e alimenti deperibili."
+      "text": "Deposito bagagli nel Padiglione n. 3, aperto giorno e notte. Un collo fino a 30 kg e più corto di 1 m costa 341,60 ₽ al giorno. Non si accettano documenti, denaro, oggetti di valore e alimenti deperibili."
     },
     "parking": {
       "title": "Parcheggio",
       "hint": "30 min gratis al P2",
-      "text": "Breve sosta P2: 30 minuti gratis, poi 150 ₽ all’ora, oltre 4 ore 800 ₽ ogni 24 ore. Lunga sosta P1: 400 ₽ ogni 24 ore dal primo minuto. Parcheggio gratuito P4 da 70 posti a 200 m dall’aerostazione, senza limiti di tempo. Smarrimento del ticket: 2 000 ₽."
+      "text": "Breve sosta P2: 30 minuti gratis, poi 150 ₽ all’ora, oltre 4 ore 800 ₽ al giorno. Lunga sosta P1: 400 ₽ al giorno dal primo minuto. Parcheggio gratuito P4 da 70 posti a 200 m dall’aerostazione, senza limiti di tempo. Smarrimento del ticket: 2 000 ₽."
     }
   }
 }

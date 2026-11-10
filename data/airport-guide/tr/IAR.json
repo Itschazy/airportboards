@@ -15,12 +15,12 @@
   "kids": {
    "title": "Çocukla",
    "hint": "Gidiş salonu, ücretsiz",
-   "text": "Çocuklu yolcu odası gidiş salonunda, steril alanda. 14 yaşından küçük çocuklarla veya engelli çocuklarla biniş kartıyla girilir. Ücretsiz; kalkıştan önce gündüz 3 saate, gece 4 saate kadar. Geliş salonunda oda yok."
+   "text": "Çocuklu yolcu odası gidiş salonunda, steril alanda. Giriş için biniş kartı gerekir. Yaş koşullarını seyahatten önce havalimanından öğrenin. Ücretsiz; kalkıştan önce gündüz 3 saate, gece 4 saate kadar. Geliş salonunda oda yok."
   },
   "parking": {
    "title": "Otopark",
-   "hint": "24 saati 300 ₽",
-   "text": "Ücretli otopark, 24 saati 300 ₽. Rezervasyon ve ön ödeme yok; yer varsa ödeme araç park edilirken yapılır. Aracı geri alma saati 43-18-00 numaralı telefondan teyit edilir."
+   "hint": "Günlük 300 ₽",
+   "text": "Ücretli otopark, günlük 300 ₽. Rezervasyon ve ön ödeme yok; yer varsa ödeme araç park edilirken yapılır. Aracı geri alma saati 43-18-00 numaralı telefondan teyit edilir."
   },
   "wifi": {
    "title": "Wi‑Fi",

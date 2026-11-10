@@ -15,7 +15,7 @@
     "storage": {
       "title": "Deposito bagagli",
       "hint": "Livello 1, da 250 ₽/ora",
-      "text": "Deposito bagagli automatico al livello 1, a destra dell’ingresso, presso le biglietterie aeree. Armadietto standard 250 ₽ all’ora o 550 ₽ ogni 24 ore. Maggiorato 350 ₽ all’ora o 900 ₽ ogni 24 ore. Bagaglio fuori misura 1200 ₽ a collo."
+      "text": "Deposito bagagli automatico al livello 1, a destra dell’ingresso, presso le biglietterie aeree. Armadietto standard 250 ₽ all’ora o 550 ₽ al giorno. Maggiorato 350 ₽ all’ora o 900 ₽ al giorno."
     },
     "kids": {
       "title": "Con bambini",
@@ -25,7 +25,7 @@
     "parking": {
       "title": "Parcheggio",
       "hint": "Salita e discesa 15 min gratis",
-      "text": "Nella zona di salita e discesa passeggeri i primi 15 minuti gratis, dal 16° al 60° minuto 880 ₽. Breve sosta P1: fino a un’ora 357 ₽, fino a 2 ore 682 ₽, 24 ore 1391 ₽. Lunga sosta P2: 24 ore 791 ₽. Economy P4: 1054 ₽ per i primi 2 periodi di 24 ore. Tutti i parcheggi sono aperti giorno e notte."
+      "text": "Nella zona di salita e discesa passeggeri i primi 15 minuti gratis, dal 16° al 60° minuto 880 ₽. Breve sosta P1: fino a un’ora 357 ₽, fino a 2 ore 682 ₽, fino a 3 ore 1000 ₽, oltre 3 e fino a 24 ore 1391 ₽; ogni giorno successivo 1391 ₽. Lunga sosta P2: le prime 24 ore 791 ₽; per soste più lunghe si applicano altre tariffe. Economy P4: 1054 ₽ per i primi 2 giorni. Tutti i parcheggi sono aperti giorno e notte."
     },
     "wifi": {
       "title": "Wi‑Fi",

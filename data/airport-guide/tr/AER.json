@@ -10,7 +10,7 @@
   "storage": {
    "title": "Emanet",
    "hint": "C sektörü, Kat 1, 24/7",
-   "text": "C sektörü, Kat 1, gece gündüz açık. İlk 24 saat parça başına 600 ₽'den, sonraki her 24 saat 300 ₽'den başlar. Bir parça en fazla 30 kg, üç boyutun toplamı en fazla 203 cm. 30 gün içinde alınmayan eşyalar sahipsiz sayılır. Telefon 8 (862) 249-78-46."
+   "text": "C sektörü, Kat 1, gece gündüz açık. İlk gün parça başına 600 ₽'den, sonraki her gün 300 ₽'den başlar. Bir parça en fazla 30 kg, üç boyutun toplamı en fazla 203 cm. 30 gün içinde alınmayan eşyalar sahipsiz sayılır. Telefon 8 (862) 249-78-46."
   },
   "sleep": {
    "title": "Nerede uyunur",
@@ -30,7 +30,7 @@
   "parking": {
    "title": "Otopark",
    "hint": "15 dakika ücretsiz",
-   "text": "Terminal önü meydanında (1–6 numaralı girişler) ilk 15 dakika ücretsiz, sonrası saati 400 ₽. Günlük otoparkta (31, 32 numaralı girişler) ilk 15 dakika ücretsiz, sonrası saati 300 ₽; 3 saatten uzun kalınırsa 24 saati 1 500 ₽. Ana girişe 100 m kala, sağa dönüşte. Alternatif otopark terminalden yaklaşık 400 m uzakta."
+   "text": "Terminal önü meydanında (1–6 numaralı girişler) ilk 15 dakika ücretsiz, sonrası saati 400 ₽. Günlük otoparkta (31, 32 numaralı girişler) ilk 15 dakika ücretsiz, sonrası saati 300 ₽; 3 saatten uzun kalınırsa günlük 1 500 ₽. Ana girişe 100 m kala, sağa dönüşte. Alternatif otopark terminalden yaklaşık 400 m uzakta."
   },
   "wifi": {
    "title": "Wi‑Fi",

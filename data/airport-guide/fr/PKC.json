@@ -19,8 +19,8 @@
   },
   "storage": {
    "title": "Consigne à bagages",
-   "hint": "Niveau 1, 600 ₽/24 h",
-   "text": "Consigne au niveau 1 du terminal. 300 ₽ jusqu'à 1 heure, ensuite 600 ₽ par 24 heures. Les affaires ne sont acceptées qu'emballées. Emballage des bagages au niveau 1 de 7:00 à 19:00, à partir de 1 000 ₽ par bagage."
+   "hint": "Niveau 1, 600 ₽/jour",
+   "text": "Consigne au niveau 1 du terminal. 300 ₽ jusqu'à 1 heure, ensuite 600 ₽ par jour. Les affaires ne sont acceptées qu'emballées. Emballage des bagages au niveau 1 de 7:00 à 19:00, à partir de 1 000 ₽ par bagage."
   },
   "sleep": {
    "title": "Où dormir",

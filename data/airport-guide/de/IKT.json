@@ -19,8 +19,8 @@
   },
   "storage": {
    "title": "Gepäckaufbewahrung",
-   "hint": "610 ₽ je 24 Stunden",
-   "text": "Im Inlandsterminal auf Ebene 1, Bezahlung bar oder mit Karte. 610 ₽ pro Gepäckstück und 24 Stunden, Gepäck größer als 40×40×50 cm wird nach der Zahl der belegten Plätze berechnet. Im internationalen Terminal befindet sich die Aufbewahrung auf Ebene 2, sie ist nur bei Flugverspätungen geöffnet. Telefon +7 (3952) 266-194."
+   "hint": "Ab 610 ₽ pro Tag",
+   "text": "Im Inlandsterminal auf Ebene 1, Bezahlung bar oder mit Karte. Der Grundpreis beträgt 610 ₽ pro Gepäckstück und Tag bei einem deklarierten Gepäckwert bis 2000 ₽. Die Wertangabe ist Pflicht; über 2000 ₽ werden für jeweils weitere 1000 ₽ des deklarierten Wertes zusätzlich 100 ₽ berechnet. Gepäck größer als 40×40×50 cm wird nach der Zahl der belegten Plätze berechnet. Im internationalen Terminal liegt die Aufbewahrung auf Ebene 2 und öffnet nur bei Verspätungen internationaler Flüge. Telefon +7 (3952) 266-194."
   },
   "sleep": {
    "title": "Schlafen",
@@ -35,7 +35,7 @@
   "parking": {
    "title": "Parken",
    "hint": "10 Min. kostenlos",
-   "text": "Die ersten 10 Minuten kostenlos. 11–20 Minuten 100 ₽, bis 1 Stunde 350 ₽, von 2 Std. 41 Min. bis 24 Stunden 1200 ₽, jeder weitere Zeitraum von 24 Stunden 1200 ₽. Jedes Terminal hat einen eigenen Parkplatz. Hol- und Bringzone: 10 Minuten kostenlos, länger Strafgebühr 2000 ₽ pro Stunde."
+   "text": "Die ersten 10 Minuten kostenlos. 11–20 Minuten 100 ₽, 21–30 Minuten 200 ₽, 31–40 Minuten 250 ₽, 41–50 Minuten 300 ₽, 51–60 Minuten 350 ₽. Von 1 Std. 01 Min. bis 2 Std. 40 Min. steigt der Tarif von 400 auf 850 ₽ in Schritten von 50 ₽ je 10 Minuten; von 2 Std. 41 Min. bis 24 Stunden 1200 ₽, jeder weitere Zeitraum von 24 Stunden 1200 ₽. Jedes Terminal hat einen eigenen Parkplatz. Hol- und Bringzone: 10 Minuten kostenlos, länger Strafgebühr 2000 ₽ pro Stunde."
   }
  }
 }

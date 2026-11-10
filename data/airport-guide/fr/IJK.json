@@ -5,7 +5,7 @@
   "transport": {
    "title": "Comment s'y rendre",
    "hint": "Transfert en ville 1500 ₽",
-   "text": "Transfert de l'aéroport depuis la place de l'aérogare en voiture avec chauffeur. Ijevsk et banlieue jusqu'à 30 km 1500 ₽, Votkinsk 4000 ₽, Sarapoul 5000 ₽, Tchaïkovski 6000 ₽. Réservation au moins 3 heures à l'avance sur izhavia.su ou après l'arrivée à la caisse de l'aéroport, selon les voitures disponibles."
+   "text": "Transfert de l’aéroport depuis la place de l’aérogare en voiture avec chauffeur, accessible aux passagers des vols réguliers. Le trajet vers une seule adresse à Ijevsk coûte 1500 ₽ ; en banlieue, dans un rayon de 30 km de l’aéroport, le même tarif s’applique sur accord préalable. Votkinsk 4000 ₽, Sarapoul 5000 ₽, Tchaïkovski 6000 ₽. Réservation au moins 3 heures à l’avance sur izhavia.su ou après l’arrivée à la caisse de l’aéroport, sous réserve de disponibilité des voitures."
   },
   "terminals": {
    "title": "Terminal",
@@ -30,7 +30,7 @@
   "parking": {
    "title": "Parking",
    "hint": "15 min gratuites",
-   "text": "Jusqu'à 15 minutes gratuit, de 16 à 30 minutes 250 ₽, de 30 minutes à 2 heures 500 ₽/heure, au-delà de 2 heures 750 ₽/24 h. Parking VIP 300 ₽/heure jusqu'à 5 heures, sans temps gratuit. Sortie dans les 15 minutes suivant le paiement. Gratuit pour les véhicules de personnes handicapées inscrits au registre fédéral."
+   "text": "Jusqu'à 15 minutes gratuit, de 16 à 30 minutes 250 ₽, de 30 minutes à 2 heures 500 ₽/heure, au-delà de 2 heures 750 ₽/jour. Parking VIP 300 ₽/heure jusqu'à 5 heures, sans temps gratuit. Sortie dans les 15 minutes suivant le paiement. Gratuit pour les véhicules de personnes handicapées inscrits au registre fédéral."
   }
  }
 }

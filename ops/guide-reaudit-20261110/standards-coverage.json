@@ -1,0 +1,368 @@
+{
+  "date": "2026-11-10",
+  "base": "e3902bc9",
+  "head": "015ff415",
+  "ru_files": [
+    {
+      "path": "data/airport-guide/ABA.json",
+      "sha256": "76cddcc463e17144c61f11aa6bae89a30fd23ad81101b498013b8e8e0372d845",
+      "changed_fields_read": [
+        "parking.hint",
+        "parking.text"
+      ],
+      "editorial_read": true,
+      "checked_before": "2026-10-25",
+      "checked_after": "2026-10-25",
+      "fact_check": "delegated_source_audit_except_pilot_subset"
+    },
+    {
+      "path": "data/airport-guide/AMS.json",
+      "sha256": "f876bcc659af60d82f28dd099890839f1529ca115afebb5b6920c23e010b7ae9",
+      "changed_fields_read": [
+        "transport.text",
+        "sleep.text"
+      ],
+      "editorial_read": true,
+      "checked_before": "2026-10-25",
+      "checked_after": "2026-10-25",
+      "fact_check": "delegated_source_audit_except_pilot_subset"
+    },
+    {
+      "path": "data/airport-guide/ATH.json",
+      "sha256": "772b8f82e01c49d3e7a30c5374a8e8a2d703f15012c5cc27886a3792534b78c2",
+      "changed_fields_read": [
+        "wifi.title",
+        "wifi.hint",
+        "wifi.text",
+        "storage.title",
+        "storage.hint",
+        "storage.text"
+      ],
+      "editorial_read": true,
+      "checked_before": "2026-10-26",
+      "checked_after": "2026-10-26",
+      "fact_check": "delegated_source_audit_except_pilot_subset"
+    },
+    {
+      "path": "data/airport-guide/AYT.json",
+      "sha256": "02d9920f75a5574782f509c2d6dd336a6f98b4321d753ca6500de80ab29504bd",
+      "changed_fields_read": [
+        "wifi.text",
+        "terminals.title",
+        "terminals.hint",
+        "terminals.text"
+      ],
+      "editorial_read": true,
+      "checked_before": "2026-10-25",
+      "checked_after": "2026-11-09",
+      "fact_check": "delegated_source_audit_except_pilot_subset"
+    },
+    {
+      "path": "data/airport-guide/BKK.json",
+      "sha256": "6414cdf898d373227b2d3851f57e2778e734436a448bcb849e14f856ab146443",
+      "changed_fields_read": [
+        "taxi.text"
+      ],
+      "editorial_read": true,
+      "checked_before": "2026-10-25",
+      "checked_after": "2026-10-25",
+      "fact_check": "delegated_source_audit_except_pilot_subset"
+    },
+    {
+      "path": "data/airport-guide/DFW.json",
+      "sha256": "0fa060b01cc478f736c7e01c377f439b6ac991bb83d7a5e29387c1624c832e4b",
+      "changed_fields_read": [
+        "lounges.text"
+      ],
+      "editorial_read": true,
+      "checked_before": "2026-10-25",
+      "checked_after": "2026-10-25",
+      "fact_check": "delegated_source_audit_except_pilot_subset"
+    },
+    {
+      "path": "data/airport-guide/HRG.json",
+      "sha256": "ece23388267434e38140e72a0b4f34e9aba8feaa27479729970f300cc5551c4e",
+      "changed_fields_read": [
+        "sleep.title",
+        "sleep.hint",
+        "sleep.text"
+      ],
+      "editorial_read": true,
+      "checked_before": "2026-10-25",
+      "checked_after": "2026-11-09",
+      "fact_check": "delegated_source_audit_except_pilot_subset"
+    },
+    {
+      "path": "data/airport-guide/IST.json",
+      "sha256": "328325f5cda63c40f77fefd0e2d145fecc46cb623d2236e6e19a785562565845",
+      "changed_fields_read": [
+        "storage.title",
+        "storage.hint",
+        "storage.text"
+      ],
+      "editorial_read": true,
+      "checked_before": "2026-10-25",
+      "checked_after": "2026-11-09",
+      "fact_check": "delegated_source_audit_except_pilot_subset"
+    },
+    {
+      "path": "data/airport-guide/KEJ.json",
+      "sha256": "70ab7b7d205892871dd535ced08f6c6414d4d9f06fcbf68b2dd99109fb9a87fb",
+      "changed_fields_read": [
+        "parking.text"
+      ],
+      "editorial_read": true,
+      "checked_before": "2026-10-25",
+      "checked_after": "2026-10-25",
+      "fact_check": "delegated_source_audit_except_pilot_subset"
+    },
+    {
+      "path": "data/airport-guide/KRR.json",
+      "sha256": "0cfb7c3a5bbdb263619352f29ed5703b8f63e2c4386a6b92b2bd3163ed93347a",
+      "changed_fields_read": [
+        "storage.hint"
+      ],
+      "editorial_read": true,
+      "checked_before": "2026-10-25",
+      "checked_after": "2026-10-25",
+      "fact_check": "delegated_source_audit_except_pilot_subset"
+    },
+    {
+      "path": "data/airport-guide/KZN.json",
+      "sha256": "2bb2e5929cba6b5998f02d7bdb91b8dc2154d5c0ea0c8cff01b6f4369a84253b",
+      "changed_fields_read": [
+        "parking.hint",
+        "parking.text"
+      ],
+      "editorial_read": true,
+      "checked_before": "2026-10-25",
+      "checked_after": "2026-11-09",
+      "fact_check": "delegated_source_audit_except_pilot_subset"
+    },
+    {
+      "path": "data/airport-guide/MRV.json",
+      "sha256": "f8dbbcfa86fdbee662d9ba14a53e4b794689ace0db3cfd76a016e4b7d7ec7586",
+      "changed_fields_read": [
+        "parking.hint"
+      ],
+      "editorial_read": true,
+      "checked_before": "2026-10-25",
+      "checked_after": "2026-10-25",
+      "fact_check": "delegated_source_audit_except_pilot_subset"
+    },
+    {
+      "path": "data/airport-guide/MXP.json",
+      "sha256": "2cd61d3406f854db02e0e89bec0bc9ba3d2c03445ef36a91d82d15ba67bf1162",
+      "changed_fields_read": [
+        "terminals.title",
+        "terminals.hint",
+        "terminals.text"
+      ],
+      "editorial_read": true,
+      "checked_before": "2026-10-26",
+      "checked_after": "2026-10-26",
+      "fact_check": "delegated_source_audit_except_pilot_subset"
+    },
+    {
+      "path": "data/airport-guide/NBC.json",
+      "sha256": "6dba3f3bad40478145e1c6cfb1312b371049f9d066123f6dc66d0377aee82773",
+      "changed_fields_read": [
+        "about"
+      ],
+      "editorial_read": true,
+      "checked_before": "2026-10-25",
+      "checked_after": "2026-10-25",
+      "fact_check": "delegated_source_audit_except_pilot_subset"
+    },
+    {
+      "path": "data/airport-guide/NLI.json",
+      "sha256": "001eec4bb67b54366f69369f9db50d1b467ba677bc9b99681e190c6e865a5b5b",
+      "changed_fields_read": [
+        "storage.text"
+      ],
+      "editorial_read": true,
+      "checked_before": "2026-10-25",
+      "checked_after": "2026-10-25",
+      "fact_check": "delegated_source_audit_except_pilot_subset"
+    },
+    {
+      "path": "data/airport-guide/OVB.json",
+      "sha256": "78af4bcfcc0f56a5990e92898d34df650ce0a23ef0b3a01cca8ec13a3e155946",
+      "changed_fields_read": [
+        "transport.hint",
+        "transport.text",
+        "lounges.hint",
+        "lounges.text",
+        "parking.text",
+        "about"
+      ],
+      "editorial_read": true,
+      "checked_before": "2026-10-25",
+      "checked_after": "2026-11-09",
+      "fact_check": "delegated_source_audit_except_pilot_subset"
+    },
+    {
+      "path": "data/airport-guide/PEK.json",
+      "sha256": "d42a684260d65579d16d169dce0bf9a74a17fdf6910d54af3dfaa7f3a0cb2cb1",
+      "changed_fields_read": [
+        "parking.hint"
+      ],
+      "editorial_read": true,
+      "checked_before": "2026-10-25",
+      "checked_after": "2026-10-25",
+      "fact_check": "delegated_source_audit_except_pilot_subset"
+    },
+    {
+      "path": "data/airport-guide/SEA.json",
+      "sha256": "33a762650533ce59a4b7dc2f5e488fa1155b99e023d344d5f27932a3e30d1aa0",
+      "changed_fields_read": [
+        "transport.text",
+        "wifi.title",
+        "wifi.hint",
+        "wifi.text"
+      ],
+      "editorial_read": true,
+      "checked_before": "2026-10-26",
+      "checked_after": "2026-10-26",
+      "fact_check": "delegated_source_audit_except_pilot_subset"
+    },
+    {
+      "path": "data/airport-guide/SGC.json",
+      "sha256": "a49b530fff26296f5f281d9f21253d65175fa13caeacd7288c09791f05ed466f",
+      "changed_fields_read": [
+        "storage.hint"
+      ],
+      "editorial_read": true,
+      "checked_before": "2026-10-25",
+      "checked_after": "2026-10-25",
+      "fact_check": "delegated_source_audit_except_pilot_subset"
+    },
+    {
+      "path": "data/airport-guide/SHA.json",
+      "sha256": "2f09ebbf790229f9427bd8e5d76005bc2e09dd110f4613b790626f80b700d0b4",
+      "changed_fields_read": [
+        "storage.text"
+      ],
+      "editorial_read": true,
+      "checked_before": "2026-10-26",
+      "checked_after": "2026-10-26",
+      "fact_check": "delegated_source_audit_except_pilot_subset"
+    },
+    {
+      "path": "data/airport-guide/SKX.json",
+      "sha256": "84fcfad05b1abb698289e5d65c253d8a53735820026866512957ffa5fc30807f",
+      "changed_fields_read": [
+        "parking.hint"
+      ],
+      "editorial_read": true,
+      "checked_before": "2026-10-25",
+      "checked_after": "2026-10-25",
+      "fact_check": "delegated_source_audit_except_pilot_subset"
+    },
+    {
+      "path": "data/airport-guide/SLC.json",
+      "sha256": "16d693dbba47924e14bc9cd20730f323d50599fbdbded2d5bf3c4db7405c011e",
+      "changed_fields_read": [
+        "wifi.title",
+        "wifi.hint",
+        "wifi.text",
+        "storage.title",
+        "storage.hint",
+        "storage.text"
+      ],
+      "editorial_read": true,
+      "checked_before": "2026-10-26",
+      "checked_after": "2026-10-26",
+      "fact_check": "delegated_source_audit_except_pilot_subset"
+    },
+    {
+      "path": "data/airport-guide/SSH.json",
+      "sha256": "8d901bbbd549315cb3ab2504b0be2b769677f2c41c28e064526c145fb29766b0",
+      "changed_fields_read": [
+        "lounges.title",
+        "lounges.hint",
+        "lounges.text"
+      ],
+      "editorial_read": true,
+      "checked_before": "2026-10-25",
+      "checked_after": "2026-11-09",
+      "fact_check": "delegated_source_audit_except_pilot_subset"
+    },
+    {
+      "path": "data/airport-guide/TFU.json",
+      "sha256": "a6ee38ae9072d26045f4caefe6f321a3c0d8decaa9d4d5ae1a5de0e9718decf8",
+      "changed_fields_read": [
+        "sleep.text"
+      ],
+      "editorial_read": true,
+      "checked_before": "2026-10-26",
+      "checked_after": "2026-10-26",
+      "fact_check": "delegated_source_audit_except_pilot_subset"
+    },
+    {
+      "path": "data/airport-guide/VOG.json",
+      "sha256": "8244fc66584808aac84d6139b0d027deca7fa710a71ba0aebea97d24c4322a53",
+      "changed_fields_read": [
+        "storage.hint"
+      ],
+      "editorial_read": true,
+      "checked_before": "2026-10-25",
+      "checked_after": "2026-10-25",
+      "fact_check": "delegated_source_audit_except_pilot_subset"
+    },
+    {
+      "path": "data/airport-guide/VVO.json",
+      "sha256": "9b2af719272ba27a17f5bcf9013bd5af68e1a69a14c89b01fb266fa20420ebee",
+      "changed_fields_read": [
+        "storage.hint"
+      ],
+      "editorial_read": true,
+      "checked_before": "2026-10-25",
+      "checked_after": "2026-10-25",
+      "fact_check": "delegated_source_audit_except_pilot_subset"
+    }
+  ],
+  "script_review": [
+    "scripts/check-guide-fresh.mjs",
+    "scripts/check-guide-fresh-regressions.mjs"
+  ],
+  "fresh_checks": {
+    "guidefresh": "PASS",
+    "regression_cases": 13
+  },
+  "sources": {
+    "AYT": [
+      "wifi and terminals official pages confirmed"
+    ],
+    "HRG": [
+      "Pearl operator sleeping pods T1 confirmed",
+      "SleepingInAirports pods T1 confirmed; independence uncertain"
+    ],
+    "SSH": [
+      "PriorityPass and DragonPass airside international T1 24h confirmed; each says maximum3h"
+    ],
+    "KZN": [
+      "web empty; browser unavailable"
+    ],
+    "IST": [
+      "web timeout; browser unavailable"
+    ],
+    "OVB": [
+      "not fetched: requires ordinary browser"
+    ]
+  },
+  "product_edits": false,
+  "deploy": false,
+  "limitations": [
+    "No full source review of all26 RU files",
+    "No semantic translation audit in this axis",
+    "No production access",
+    "No bot protection bypass"
+  ],
+  "additional_fact_review": "fact-russian.json",
+  "fresh_findings": [
+    "VVO storage calendar periods",
+    "SGC lounge access scope",
+    "SSH program3h visit limit"
+  ]
+}

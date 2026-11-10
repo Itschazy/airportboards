@@ -19,8 +19,8 @@
   },
   "storage": {
    "title": "Consigna",
-   "hint": "610 ₽ por cada 24 horas",
-   "text": "En la terminal nacional, en el nivel 1; pago en efectivo o con tarjeta. 610 ₽ por bulto por cada 24 horas; el equipaje de más de 40×40×50 cm se paga según el número de plazas que ocupe. En la terminal internacional, la consigna está en el nivel 2 y solo funciona cuando hay retrasos de vuelos. Teléfono +7 (3952) 266-194."
+   "hint": "Desde 610 ₽ por día",
+   "text": "En la terminal nacional, en el nivel 1; pago en efectivo o con tarjeta. La tarifa base es de 610 ₽ por bulto por día para equipaje con un valor declarado de hasta 2000 ₽. Es obligatorio declarar el valor; por encima de 2000 ₽ se cobran 100 ₽ adicionales por cada 1000 ₽ más de valor declarado. El equipaje de más de 40×40×50 cm se cobra según el número de plazas ocupadas. En la terminal internacional, la consigna está en el nivel 2 y solo abre cuando se retrasan vuelos internacionales. Teléfono +7 (3952) 266-194."
   },
   "sleep": {
    "title": "Dónde dormir",
@@ -35,7 +35,7 @@
   "parking": {
    "title": "Aparcamiento",
    "hint": "10 min gratis",
-   "text": "Los primeros 10 minutos gratis. 11–20 minutos 100 ₽, hasta 1 hora 350 ₽, de 2 h 41 min a 24 horas 1200 ₽, cada periodo siguiente de 24 horas 1200 ₽. Cada terminal tiene su propio aparcamiento. Zona de recogida y bajada de pasajeros: 10 minutos gratis; si se excede, recargo de 2000 ₽ por hora."
+   "text": "Los primeros 10 minutos gratis. 11–20 minutos 100 ₽, 21–30 minutos 200 ₽, 31–40 minutos 250 ₽, 41–50 minutos 300 ₽, 51–60 minutos 350 ₽. De 1 h 01 min a 2 h 40 min, la tarifa sube de 400 a 850 ₽ en incrementos de 50 ₽ cada 10 minutos; de 2 h 41 min a 24 horas 1200 ₽, cada periodo siguiente de 24 horas 1200 ₽. Cada terminal tiene su propio aparcamiento. Zona de recogida y bajada de pasajeros: 10 minutos gratis; si se excede, recargo de 2000 ₽ por hora."
   }
  }
 }

@@ -4,8 +4,8 @@
   "blocks": {
     "storage": {
       "title": "Left luggage",
-      "hint": "419 ₽ per item per 24 hours",
-      "text": "Baggage storage at left luggage: 418.83 ₽ per item per 24 hours including VAT. Prices per the price list from 5 June 2026."
+      "hint": "419 ₽ per item per day",
+      "text": "Baggage storage at left luggage: 418.83 ₽ per item per day including VAT. Prices per the price list from 5 June 2026."
     },
     "lounges": {
       "title": "Lounges",

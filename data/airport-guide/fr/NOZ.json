@@ -35,7 +35,7 @@
   "parking": {
    "title": "Parking",
    "hint": "15 min gratuites",
-   "text": "P1 : uniquement dépose et prise en charge, stationnement interdit. P2 courte durée : 15 minutes gratuites, 16–60 minutes 300 ₽, de la 2e à la 4e heure 100 ₽/heure, au-delà de 4 heures 700 ₽/24 heures. P3 longue durée : 15 minutes gratuites, 500 ₽/24 heures jusqu'à 6 périodes de 24 heures. Toute période de 24 heures entamée est due en entier."
+   "text": "P1 : uniquement dépose et prise en charge, stationnement interdit. P2 courte durée : 15 minutes gratuites, 16–60 minutes 300 ₽, de la 2e à la 4e heure 100 ₽/heure, au-delà de 4 heures 700 ₽/jour. P3 longue durée : 15 minutes gratuites, 500 ₽/jour jusqu'à 6 jours. Toute journée entamée est due en entier."
   }
  }
 }

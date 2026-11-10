@@ -10,12 +10,12 @@
   "parking": {
    "title": "Parking",
    "hint": "15 min gratuites",
-   "text": "Zone courte durée : 15 premières min gratuites, première heure 350 ₽, de la 2e à la 4e heure 250 ₽/heure, à partir de la 5e heure 3000 ₽ par 24 heures. Zone longue durée : 700 ₽ par tranche de 24 heures de la 1re à la 5e tranche, 100 ₽ de la 6e à la 13e, 700 ₽ à partir de la 14e. Nouvelle entrée gratuite au plus tôt 45 min après."
+   "text": "Zone courte durée : 15 premières min gratuites, première heure 350 ₽, de la 2e à la 4e heure 250 ₽/heure, à partir de la 5e heure 3000 ₽ par 24 heures. Zone longue durée : 700 ₽ par tranche de 24 heures de la 1re à la 5e tranche, 100 ₽ de la 6e à la 13e, 700 ₽ à partir de la 14e. Une nouvelle entrée gratuite est possible au plus tôt 45 minutes après la fin de la première période gratuite de 15 minutes."
   },
   "storage": {
    "title": "Consigne à bagages",
    "hint": "Niveau 2, 24/7, dès 600 ₽",
-   "text": "Consigne au niveau 2 en zone publique, ouverte jour et nuit. Tarif « Standard » : 700 ₽ pour les premières 24 heures, 300 ₽ par tranche de 24 heures suivante. « Standard Light » : 600 ₽ et 300 ₽. Hors format à partir de 1150 ₽. Poids d'un bagage jusqu'à 30 kg, durée de garde jusqu'à 6 mois."
+   "text": "Consigne au niveau 2 en zone publique, ouverte jour et nuit. Tarif « Standard » : 700 ₽ pour le premier jour calendaire jusqu’à 00:00, 300 ₽ pour chaque jour suivant. « Standard Light » : 600 ₽ pour le premier jour calendaire, puis 300 ₽. Tout jour calendaire entamé est facturé en entier. Bagage hors format à partir de 1150 ₽. Poids d’un bagage : jusqu’à 30 kg."
   },
   "kids": {
    "title": "Avec un enfant",

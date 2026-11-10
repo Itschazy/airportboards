@@ -10,7 +10,7 @@
   "parking": {
    "title": "Aparcamiento",
    "hint": "15 min gratis",
-   "text": "Zona de recogida y bajada de pasajeros: 15 min gratis, hasta 60 min 400 ₽, después 1200 ₽ las primeras 24 horas y 600 ₽ por cada 24 horas siguientes. Larga estancia P1: 500 ₽ por cada 24 horas durante los 5 primeros periodos de 24 horas, después 400 ₽. Gratis para pasajeros con movilidad reducida con la señal de «Persona con discapacidad»."
+   "text": "Zona de recogida y bajada de pasajeros: 15 min gratis, hasta 60 min 400 ₽, después 1200 ₽ el primer día y 600 ₽ por cada día siguiente. Larga estancia P1: 500 ₽ por día durante los 5 primeros días, después 400 ₽. Gratis para pasajeros con movilidad reducida con la señal de «Persona con discapacidad»."
   },
   "lounges": {
    "title": "Salas VIP",
@@ -20,7 +20,7 @@
   "storage": {
    "title": "Consigna",
    "hint": "Nivel 1, desde 500 ₽",
-   "text": "Consigna en el nivel 1 de la terminal. Equipaje normal: 500 ₽ las primeras 24 horas, 200 ₽ por cada 24 horas siguientes. Equipaje de gran tamaño, de más de 203 cm: 850 ₽ y 400 ₽. Un bulto, hasta 30 kg; plazo de hasta 30 días."
+   "text": "Consigna en el nivel 1 de la terminal. Equipaje normal: 500 ₽ el primer día, 200 ₽ por cada día siguiente. Equipaje de gran tamaño, de más de 203 cm: 850 ₽ y 400 ₽. Un bulto, hasta 30 kg; plazo de hasta 30 días."
   },
   "kids": {
    "title": "Con niños",

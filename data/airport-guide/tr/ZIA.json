@@ -10,12 +10,12 @@
   "parking": {
    "title": "Otopark",
    "hint": "15 dakika ücretsiz",
-   "text": "Kısa süreli alan: ilk 15 dk ücretsiz, ilk saat 350 ₽, 2. ila 4. saat saati 250 ₽, 5. saatten itibaren her 24 saat için 3000 ₽. Uzun süreli alan: 24 saatlik 1. ila 5. dönemde her dönem 700 ₽, 6. ila 13. dönemde 100 ₽, 14. dönemden itibaren 700 ₽. Ücretsiz tekrar giriş en erken 45 dk sonra."
+   "text": "Kısa süreli alan: ilk 15 dk ücretsiz, ilk saat 350 ₽, 2. ila 4. saat saati 250 ₽, 5. saatten itibaren her 24 saat için 3000 ₽. Uzun süreli alan: 24 saatlik 1. ila 5. dönemde her dönem 700 ₽, 6. ila 13. dönemde 100 ₽, 14. dönemden itibaren 700 ₽. Ücretsiz tekrar giriş, ilk ücretsiz 15 dakikalık sürenin bitiminden en erken 45 dakika sonra mümkündür."
   },
   "storage": {
    "title": "Emanet",
    "hint": "Kat 2, 24/7, 600 ₽'den",
-   "text": "Emanet Kat 2'de, genel alanda, gece gündüz açık. Standart tarife: ilk 24 saat 700 ₽, sonraki her 24 saat 300 ₽. Standart Layt: 600 ₽ ve 300 ₽. Standart dışı 1150 ₽'den. Bir parça en fazla 30 kg, saklama süresi 6 aya kadar."
+   "text": "Emanet Kat 2'de, genel alanda, gece gündüz açık. Standart tarife: 00:00’a kadar ilk takvim günü 700 ₽, sonraki her gün 300 ₽. Standart Layt: ilk takvim günü 600 ₽, sonrası 300 ₽. Tamamlanmamış takvim günü tam ücretlendirilir. Standart dışı bagaj 1150 ₽’den başlar. Bir parça en fazla 30 kg olabilir."
   },
   "kids": {
    "title": "Çocukla",

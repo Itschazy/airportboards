@@ -19,7 +19,7 @@
   "parking": {
    "title": "Otopark",
    "hint": "15 dakika ücretsiz, 24/7",
-   "text": "Gece gündüz açık, 2 bin yerden fazla: Terminal 1'de 835, Terminal 2'de 1166. İlk 15 dakika ücretsiz, 2 saate kadar 1 AZN, 4 saate kadar 2 AZN, 12 saate kadar 6 AZN, 24 saate kadar 15 AZN, sonraki her gün +15 AZN. Ödeme nakit, kartla veya çevrim içi (Tezöde, AzParkinq, Birbank)."
+   "text": "Gece gündüz açık, 2 bin yerden fazla: Terminal 1'de 835, Terminal 2'de 1166. İlk 15 dakika ücretsiz, 2 saate kadar 1 AZN, 2–4 saat 2 AZN, 4–6 saat 3 AZN, 6–8 saat 4 AZN, 8–10 saat 5 AZN, 10–12 saat 6 AZN, 12–14 saat 10 AZN, 14–24 saat 15 AZN, sonraki her gün +15 AZN. Ödeme nakit, kartla veya çevrim içi (Tezöde, AzParkinq, Birbank)."
   },
   "wifi": {
    "title": "Wi‑Fi",

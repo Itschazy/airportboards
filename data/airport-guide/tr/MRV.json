@@ -25,7 +25,7 @@
   "parking": {
    "title": "Otopark",
    "hint": "15 dakikadan az ücretsiz",
-   "text": "Gidiş salonunun yanında kısa süreli P1 otoparkı: 15 dakikadan az ücretsiz, 15–60 dakika 500 ₽, sonrası saati 500 ₽, 4 saatten fazlası her 24 saat için 1200 ₽. Bir saat içinde tekrar geçiş 500 ₽. Çevredeki alanda ücretsiz otopark var, yeri otopark planında."
+   "text": "Gidiş salonunun yanında kısa süreli P1 otoparkı: 15 dakikadan az ücretsiz, 15–60 dakika 500 ₽, sonrası saati 500 ₽, 4 saatten fazlası takvim günü başına 1200 ₽; ücretlendirmede gün 00:00’da değişir, tamamlanmamış gün tam ücretlendirilir. Bir saat içinde tekrar geçiş 500 ₽. Çevredeki alanda ücretsiz otopark var, yeri otopark planında."
   }
  }
 }

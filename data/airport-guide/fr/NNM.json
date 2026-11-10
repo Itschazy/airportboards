@@ -15,7 +15,7 @@
   "parking": {
    "title": "Parking",
    "hint": "45 min gratuites",
-   "text": "Jusqu'à 45 minutes gratuit. De 46 à 60 minutes : 500 ₽. Au-delà d'une heure et jusqu'à 24 heures : 350 ₽ par heure. Au-delà de 24 heures, jusqu'à 30 jours : 600 ₽ par 24 heures. Tarifs en vigueur depuis le 1er août 2026."
+   "text": "Jusqu'à 45 minutes gratuit. De 46 à 60 minutes : 500 ₽. Au-delà d'une heure et jusqu'à un jour : 350 ₽ par heure. Au-delà du premier jour, jusqu'à 30 jours : 600 ₽ par jour. Tarifs en vigueur depuis le 1er août 2026."
   }
  }
 }

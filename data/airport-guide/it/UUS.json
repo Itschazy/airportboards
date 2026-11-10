@@ -10,7 +10,7 @@
     "parking": {
       "title": "Parcheggio",
       "hint": "15 min gratis",
-      "text": "Zona di salita e discesa passeggeri: 15 min gratis, fino a 60 min 400 ₽, poi 1200 ₽ per le prime 24 ore e 600 ₽ per ogni successivo periodo di 24 ore. Lunga sosta P1: 500 ₽ ogni 24 ore per i primi 5 periodi di 24 ore, poi 400 ₽. Per i passeggeri a mobilità ridotta gratis con il contrassegno disabili."
+      "text": "Zona di salita e discesa passeggeri: 15 min gratis, fino a 60 min 400 ₽, poi 1200 ₽ per il primo giorno e 600 ₽ per ogni giorno successivo. Lunga sosta P1: 500 ₽ al giorno per i primi 5 giorni, poi 400 ₽. Per i passeggeri a mobilità ridotta gratis con il contrassegno disabili."
     },
     "lounges": {
       "title": "Sale business",
@@ -20,7 +20,7 @@
     "storage": {
       "title": "Deposito bagagli",
       "hint": "Livello 1, da 500 ₽",
-      "text": "Deposito bagagli al livello 1 dell’aerostazione. Bagaglio normale: 500 ₽ per le prime 24 ore, 200 ₽ per ogni successivo periodo di 24 ore. Fuori misura oltre 203 cm: 850 ₽ e 400 ₽. Un collo fino a 30 kg, durata fino a 30 giorni."
+      "text": "Deposito bagagli al livello 1 dell’aerostazione. Bagaglio normale: 500 ₽ per il primo giorno, 200 ₽ per ogni giorno successivo. Fuori misura oltre 203 cm: 850 ₽ e 400 ₽. Un collo fino a 30 kg, durata fino a 30 giorni."
     },
     "kids": {
       "title": "Con bambini",

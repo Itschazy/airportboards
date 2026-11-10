@@ -19,8 +19,8 @@
   },
   "storage": {
    "title": "Left luggage",
-   "hint": "400 ₽ for the first 24 hours",
-   "text": "On the airport terminal forecourt, open round the clock. 400 ₽ per item for the first 24 hours, 200 ₽ for each further 24 hours. One item may weigh up to 30 kg."
+   "hint": "400 ₽ for the first day",
+   "text": "On the airport terminal forecourt, open round the clock. 400 ₽ per item for the first day, 200 ₽ for each further day. One item may weigh up to 30 kg."
   },
   "kids": {
    "title": "With children",
@@ -30,7 +30,7 @@
   "parking": {
    "title": "Parking",
    "hint": "15 min free, 400₽/h",
-   "text": "Airport terminal forecourt: first 15 minutes free, then 400 ₽ per hour. Additional hourly car park to the right of the forecourt: 250 ₽ per hour. Daily car park 900 ₽ per 24 hours. The alternative car park is free."
+   "text": "Airport terminal forecourt: first 15 minutes free, then 400 ₽ per hour. Additional hourly car park to the right of the forecourt: 250 ₽ per hour. Daily car park 900 ₽ per day. The alternative car park is free."
   },
   "wifi": {
    "title": "Wi‑Fi",

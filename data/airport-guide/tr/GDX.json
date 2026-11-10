@@ -14,7 +14,7 @@
   "storage": {
    "title": "Emanet",
    "hint": "Kat 2, 8:30–20:30",
-   "text": "İç hat yolcuları için otomatik emanet dolapları Kat 2'de, 8:30–20:30, ödeme yalnızca kartla. 51×63×76 cm standart dolap 24 saati 1000 ₽, 51×195×76 cm büyük dolap 2000 ₽; 24 saatten kısa süre tam 24 saat olarak ücretlendirilir."
+   "text": "İç hat yolcuları için otomatik emanet dolapları Kat 2'de, 8:30–20:30, ödeme yalnızca kartla. 51×63×76 cm standart dolap günlük 1000 ₽, 51×195×76 cm büyük dolap 2000 ₽; tamamlanmamış gün tam gün olarak ücretlendirilir."
   },
   "kids": {
    "title": "Çocukla",
@@ -24,7 +24,7 @@
   "parking": {
    "title": "Otopark",
    "hint": "15 dakika ücretsiz",
-   "text": "Terminale 30 m uzaklıktaki P1 terminal önü meydanı: ilk 15 dakika ücretsiz, bir saate kadar 500 ₽, sonraki her saat 300 ₽, 24 saati 2000 ₽. Bir saat içinde 1–15 dakikalık tekrar giriş 200 ₽."
+   "text": "Terminale 30 m uzaklıktaki P1 terminal önü meydanı: ilk 15 dakika ücretsiz, bir saate kadar 500 ₽, sonraki her saat 300 ₽, günlük 2000 ₽. Bir saat içinde 1–15 dakikalık tekrar giriş 200 ₽."
   },
   "wifi": {
    "title": "Wi‑Fi",

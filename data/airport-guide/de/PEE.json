@@ -20,7 +20,7 @@
   "parking": {
    "title": "Parken",
    "hint": "15 Min. kostenlos",
-   "text": "Zentraler Kurzzeitparkplatz: bis 15 Minuten kostenlos, bis zu einer Stunde 300 ₽, bis 24 Stunden 500 ₽, danach 500 ₽ pro 24 Stunden. Langzeitparkplatz: bis 10 Minuten kostenlos, bis 24 Stunden 400 ₽, danach 400 ₽ pro 24 Stunden. Angefangene Stunden und 24-Stunden-Zeiträume werden voll berechnet."
+   "text": "Zentraler Kurzzeitparkplatz: bis 15 Minuten kostenlos, bis zu einer Stunde 300 ₽, bis zu einem Tag 500 ₽, danach 500 ₽ pro Tag. Langzeitparkplatz: bis 10 Minuten kostenlos, bis zu einem Tag 400 ₽, danach 400 ₽ pro Tag. Angefangene Stunden und Tage werden voll berechnet."
   },
   "wifi": {
    "title": "Wi‑Fi",

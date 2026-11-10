@@ -20,7 +20,7 @@
   "parking": {
    "title": "Otopark",
    "hint": "15 dakika ücretsiz",
-   "text": "Terminal önü meydanındaki P otoparkı: saatte bir kez 15 dakika ücretsiz, ilk saat 300 ₽, sonrası saati 250 ₽, ilk 24 saat toplamda 1300 ₽, 24 saatin üzerinde her 24 saat için 700 ₽. Karşılayanlar için 100 araçlık ücretsiz otopark Aeroport yerleşiminin güney tarafında."
+   "text": "Terminal önü meydanındaki P otoparkı: saatte bir kez 15 dakika ücretsiz, ilk saat 300 ₽, sonrası saati 250 ₽, ilk gün toplamda 1300 ₽, ilk günden sonra gün başına 700 ₽. Karşılayanlar için 100 araçlık ücretsiz otopark Aeroport yerleşiminin güney tarafında."
   },
   "wifi": {
    "title": "Wi‑Fi",

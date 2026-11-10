@@ -35,7 +35,7 @@
   "parking": {
    "title": "Otopark",
    "hint": "Giriş önünde 15 dk ücretsiz",
-   "text": "Terminal önünde ilk 15 dakika ücretsiz, sonra her 30 dakika için 2000 ₽. 30 dakikada en fazla bir kez girilebilir. P2 (kısa süreli): 30 dakikası 450 ₽, yürüyerek 2–4 dakika. P4 (uzun süreli): ilk 24 saat 1100 ₽, 14 günden itibaren her 24 saat için 700 ₽. 120 araçlık ücretsiz P0 otoparkı Pulkovskoye Şossesi'nde, havalimanına 3 km uzaklıkta."
+   "text": "Yolcu terminaline yaklaşım alanında ilk 15 dakika ücretsizdir. 16–30. dakikalar, 31–60. dakikalar ve sonraki her 30 dakikalık dönem için ayrı ayrı 2000 ₽ alınır. Tekrar girişte ilk dakikadan itibaren ücret uygulanır: ilk 30 dakika ve sonraki her 30 dakika için 2000 ₽. P2 (kısa süreli): 30 dakikası 450 ₽, yürüyerek 2–4 dakika. P4 (uzun süreli): ilk gün 1100 ₽, 14 günden itibaren gün başına 700 ₽. 120 araçlık ücretsiz otopark Pulkovskoye Şossesi'nde, havalimanına 3 km uzaklıkta."
   },
   "wifi": {
    "title": "Wi‑Fi",

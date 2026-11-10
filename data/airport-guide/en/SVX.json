@@ -20,7 +20,7 @@
   "storage": {
    "title": "Left luggage",
    "hint": "Terminal A, Level −1",
-   "text": "Terminal A, Level −1. 200 ₽ per hour, 500 ₽ for the first 24 hours, 300 ₽ for each further 24 hours. Oversized (larger than 50×50×80 cm or heavier than 20 kg): 400 ₽ per hour, 800 ₽ for the first 24 hours, 500 ₽ for each further 24 hours. Cloakroom for outerwear: 100 ₽ per set."
+   "text": "Terminal A, Level −1. 200 ₽ per hour, 500 ₽ for the first day, 300 ₽ for each further day. Oversized (larger than 50×50×80 cm or heavier than 20 kg): 400 ₽ per hour, 800 ₽ for the first day, 500 ₽ for each further day. Cloakroom for outerwear: 100 ₽ per set for up to 1 hour, 300 ₽ for 1–24 hours, 200 ₽ for each subsequent day."
   },
   "sleep": {
    "title": "Where to sleep",
@@ -35,7 +35,7 @@
   "parking": {
    "title": "Parking",
    "hint": "15 min free",
-   "text": "Drop-off and pick-up zone: up to 15 minutes free, 16–60 minutes 880 ₽, then 880 ₽ per hour. Car park P1 at the terminal with no free time: 1 hour 360 ₽, up to 24 hours 900 ₽. Long-stay P2 and P6: from 1,790 ₽ and 1,380 ₽ for 2 days (24 hours each). P0 is free, 5 minutes from the terminal."
+   "text": "Drop-off and pick-up zone: up to 15 minutes free, 16–60 minutes 880 ₽, then 880 ₽ per hour. Car park P1 at the terminal with no free time: 1 hour 360 ₽, up to 24 hours 900 ₽. Long-stay P2 and P6: from 1,790 ₽ and 1,380 ₽ for 2 days. P0 is free, 5 minutes from the terminal."
   },
   "wifi": {
    "title": "Wi‑Fi",

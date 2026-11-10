@@ -1,6 +1,6 @@
 {
  "iata": "NBC",
- "about": "N. V. Lemayev adını taşıyan Nijnekamsk (Begishevo) Uluslararası Havalimanı, KAMAZ PAO'nun yan kuruluşu. Havalimanı Naberejnıye Çelnı, Nijnekamsk, Yelabuga ve Almetyevsk’e hizmet verir. Tek pist, yılda 700 bin üzerinde yolcu.",
+ "about": "N. V. Lemayev adını taşıyan Nijnekamsk (Begishevo) Uluslararası Havalimanı, KAMAZ PAO'nun yan kuruluşu. Havalimanı Naberejnıye Çelnı, Nijnekamsk, Yelabuga ve Almetyevsk’e hizmet verir. Tek pist, yılda 700 binden fazla yolcu.",
  "blocks": {
   "transport": {
    "title": "Nasıl gidilir",
@@ -35,7 +35,7 @@
   "parking": {
    "title": "Otopark",
    "hint": "20 dakika ücretsiz",
-   "text": "A ve B terminallerinin önünde 150 araçlık ücretli otopark: 20 dakika ücretsiz, sonra 3 saate kadar saati 200 ₽, daha uzun süre her 24 saat için 700 ₽. 30 dakika içinde tekrar girişte ücretsiz süre yok. Alana girişten önce 410 araçlık ücretsiz otopark."
+   "text": "A ve B terminallerinin önünde 150 araçlık ücretli otopark: 20 dakika ücretsiz, sonra 3 saate kadar saati 200 ₽, daha uzun süre gün başına 700 ₽. 30 dakika içinde tekrar girişte ücretsiz süre yok. Alana girişten önce 410 araçlık ücretsiz otopark."
   },
   "wifi": {
    "title": "Wi‑Fi",

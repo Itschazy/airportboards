@@ -20,7 +20,7 @@
   "parking": {
    "title": "Parking",
    "hint": "15 min free",
-   "text": "Short-stay P1 at the terminal: up to 15 minutes free, 16–60 minutes 500 ₽, second hour 300 ₽, third and fourth 200 ₽ each, from minute 241 1,200 ₽, no longer than 24 hours. Long-stay: for up to 3 periods of 24 hours, 800 ₽ per 24 hours; for periods 4 to 6, 500 ₽ per 24 hours."
+   "text": "Short-stay P1 at the terminal: up to 15 minutes free, 16–60 minutes 500 ₽, second hour 300 ₽, third and fourth 200 ₽ each, from minute 241 1,200 ₽, no longer than one day. Long-stay: for up to 3 days, 800 ₽ per day; for days 4 to 6, 500 ₽ per day."
   },
   "wifi": {
    "title": "Wi‑Fi",

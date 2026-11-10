@@ -15,12 +15,12 @@
     "kids": {
       "title": "Con bambini",
       "hint": "Sala partenze, gratis",
-      "text": "La sala per passeggeri con bambini si trova nella sala partenze, nella zona sterile. Si accede con bambini o bambini con disabilità sotto i 14 anni con la carta d’imbarco. Gratis, fino a 3 ore prima della partenza di giorno e fino a 4 ore di notte. Nella sala arrivi questa sala non c’è."
+      "text": "La sala per passeggeri con bambini si trova nella sala partenze, nella zona sterile. Per entrare è necessaria la carta d’imbarco. Verificate le condizioni relative all’età con l’aeroporto prima del viaggio. Gratis, fino a 3 ore prima della partenza di giorno e fino a 4 ore di notte. Nella sala arrivi questa sala non c’è."
     },
     "parking": {
       "title": "Parcheggio",
-      "hint": "300 ₽/24 ore",
-      "text": "Parcheggio a pagamento, 300 ₽ ogni 24 ore. Niente prenotazione né pagamento anticipato, si paga quando si lascia l’auto se ci sono posti. L’orario di ritiro dell’auto si concorda al telefono 43-18-00."
+      "hint": "300 ₽/giorno",
+      "text": "Parcheggio a pagamento, 300 ₽ al giorno. Niente prenotazione né pagamento anticipato, si paga quando si lascia l’auto se ci sono posti. L’orario di ritiro dell’auto si concorda al telefono 43-18-00."
     },
     "wifi": {
       "title": "Wi‑Fi",

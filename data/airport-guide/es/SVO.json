@@ -10,7 +10,7 @@
     "storage": {
       "title": "Consigna",
       "hint": "B, D y Aeroexpress",
-      "text": "Hay consignas de pago en la Terminal B (nivel 1), en la Terminal D (nivel −1) y en la terminal de «Aeroexpress», todas en la zona pública. En B y en la terminal de «Aeroexpress» funcionan día y noche. Las primeras 24 horas cuestan 700 ₽ por bulto; después, 300 ₽ por cada 24 horas. Un bulto pesa como máximo 32 kg; plazo de custodia de hasta 6 meses."
+      "text": "Hay consignas de pago en la Terminal B (nivel 1), en la Terminal D (nivel −1) y en la terminal de «Aeroexpress», todas en la zona pública. En B y en la terminal de «Aeroexpress» funcionan día y noche. En B y D, la tarifa «Standard» es de 700 ₽ por el primer día natural hasta las 00:00 y después de 300 ₽ por cada día natural siguiente. Los días naturales incompletos se cobran íntegros. Cada bulto puede pesar como máximo 32 kg."
     },
     "sleep": {
       "title": "Dónde dormir",

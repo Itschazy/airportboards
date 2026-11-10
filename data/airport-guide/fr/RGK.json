@@ -19,8 +19,8 @@
   },
   "storage": {
    "title": "Consigne à bagages",
-   "hint": "Niveau 1, dès 400 ₽/24 h",
-   "text": "Consigne automatique au niveau 1 de l'aérogare, aux heures d'ouverture de l'aéroport. Casiers à 400, 600 et 1000 ₽ par 24 heures selon la taille. Durée jusqu'à 6 mois. Paiement par carte ou en espèces."
+   "hint": "Niveau 1, dès 400 ₽/jour",
+   "text": "Consigne automatique au niveau 1 de l'aérogare, aux heures d'ouverture de l'aéroport. Casiers à 400, 600 et 1000 ₽ par jour selon la taille. Durée jusqu'à 6 mois. Paiement par carte ou en espèces."
   },
   "kids": {
    "title": "Avec un enfant",
@@ -30,7 +30,7 @@
   "parking": {
    "title": "Parking",
    "hint": "15 min gratuites",
-   "text": "Devant les terminaux, dépose et prise en charge gratuites 15 minutes, nouvelle entrée dans l'heure 250 ₽. P1 : 400 ₽/heure, de 1 à 5 heures 300 ₽/heure, 3000 ₽/24 h. P2 : 1000 ₽/24 h. P3 : 180 minutes gratuites, de 3 à 5 heures 200 ₽/heure, ensuite 800 ₽/24 h."
+   "text": "Devant les terminaux, dépose et prise en charge gratuites 15 minutes, nouvelle entrée dans l'heure 250 ₽. P1 : première heure 400 ₽, au-delà de 1 heure et jusqu’à 5 heures 300 ₽/heure, au-delà de 5 heures 1500 ₽/jour. P2 : 800 ₽/jour. P3 : les 180 premières minutes gratuites, au-delà de 3 heures et jusqu’à 5 heures 200 ₽/heure, ensuite 800 ₽/jour."
   },
   "wifi": {
    "title": "Wi‑Fi",

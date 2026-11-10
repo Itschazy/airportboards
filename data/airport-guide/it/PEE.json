@@ -20,7 +20,7 @@
     "parking": {
       "title": "Parcheggio",
       "hint": "15 min gratis",
-      "text": "Parcheggio centrale breve sosta: fino a 15 minuti gratis, fino a un’ora 300 ₽, fino a 24 ore 500 ₽, poi 500 ₽ ogni 24 ore. Lunga sosta: fino a 10 minuti gratis, fino a 24 ore 400 ₽, poi 400 ₽ ogni 24 ore. L’ora iniziata e il periodo di 24 ore iniziato si pagano interi."
+      "text": "Parcheggio centrale breve sosta: fino a 15 minuti gratis, fino a un’ora 300 ₽, fino a un giorno 500 ₽, poi 500 ₽ al giorno. Lunga sosta: fino a 10 minuti gratis, fino a un giorno 400 ₽, poi 400 ₽ al giorno. L’ora iniziata e il giorno iniziato si pagano interi."
     },
     "wifi": {
       "title": "Wi‑Fi",

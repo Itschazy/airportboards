@@ -15,7 +15,7 @@
   "storage": {
    "title": "Consigne à bagages",
    "hint": "Niveau 1, dès 200 ₽/h",
-   "text": "Consigne automatique dans l'aile droite de l'aérogare, niveau 1. Casier standard 200 ₽ de l'heure ou 500 ₽ par période de 24 heures, grand casier 300 ₽ de l'heure ou 800 ₽ par période de 24 heures. Emballage des bagages au même endroit, à partir de 950 ₽ par bagage."
+   "text": "Consigne automatique dans l'aile droite de l'aérogare, niveau 1. Casier standard 200 ₽ de l'heure ou 500 ₽ par jour, grand casier 300 ₽ de l'heure ou 800 ₽ par jour. Emballage des bagages au même endroit, à partir de 950 ₽ par bagage."
   },
   "kids": {
    "title": "Avec un enfant",
@@ -25,7 +25,7 @@
   "parking": {
    "title": "Parking",
    "hint": "15 min gratuites",
-   "text": "Zone de dépose et de prise en charge : jusqu'à 15 minutes gratuit, 16–60 minutes 600 ₽, ensuite 600 ₽ de l'heure. Parking Р1 de 600 places à 2 minutes du terminal, payant dès la première minute : jusqu'à 30 minutes 100 ₽, jusqu'à une heure 150 ₽, jusqu'à 2 heures 250 ₽, jusqu'à 24 heures 400 ₽, chaque tranche de 24 heures suivante 400 ₽."
+   "text": "Zone de dépose et de prise en charge : jusqu'à 15 minutes gratuit, 16–60 minutes 600 ₽, ensuite 600 ₽ de l'heure. Parking Р1 de 600 places à 2 minutes du terminal, payant dès la première minute : jusqu'à 30 minutes 100 ₽, jusqu'à une heure 150 ₽, jusqu'à 2 heures 250 ₽, jusqu'à 24 heures 400 ₽, chaque jour suivant 400 ₽."
   },
   "wifi": {
    "title": "Wi‑Fi",

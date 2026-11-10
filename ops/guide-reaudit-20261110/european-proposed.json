@@ -1,0 +1,27 @@
+{
+  "status": "proposals only; data untouched",
+  "changes": [
+    {
+      "file": "data/airport-guide/es/AYT.json",
+      "line": 31,
+      "path": "blocks.terminals.hint",
+      "priority": "P3",
+      "status": "new low-severity semantic imprecision",
+      "reason": "RU describes a physical connection between Terminal1 and the domestic terminal. The new hint says T1 is connected to domestic flights, replacing a building with a flight category. Body is correct, so low severity.",
+      "before": "T1 conectada con vuelos nacionales",
+      "after": "T1 y terminal nacional conectadas",
+      "fileSha256": "689f2d9ccdeb50d114a2d56e20bc2c55fd9485aa651929b348439b762c74f09b"
+    },
+    {
+      "file": "data/airport-guide/tr/NBC.json",
+      "line": 3,
+      "path": "about",
+      "priority": "P3",
+      "status": "pre-existing grammar defect retained in changed field",
+      "reason": "700 bin üzerinde omits the required genitive suffix in this construction; use 700 binin üzerinde or 700 binden fazla. Meaning of >700000 is recoverable. The defective phrase existed before the change and was retained in the edited about.",
+      "before": "N. V. Lemayev adını taşıyan Nijnekamsk (Begishevo) Uluslararası Havalimanı, KAMAZ PAO'nun yan kuruluşu. Havalimanı Naberejnıye Çelnı, Nijnekamsk, Yelabuga ve Almetyevsk’e hizmet verir. Tek pist, yılda 700 bin üzerinde yolcu.",
+      "after": "N. V. Lemayev adını taşıyan Nijnekamsk (Begishevo) Uluslararası Havalimanı, KAMAZ PAO'nun yan kuruluşu. Havalimanı Naberejnıye Çelnı, Nijnekamsk, Yelabuga ve Almetyevsk’e hizmet verir. Tek pist, yılda 700 binden fazla yolcu.",
+      "fileSha256": "768c5e06b1a5ad6f8f5c611ed193e707838afbe9795680fdff17c78c9b2347aa"
+    }
+  ]
+}

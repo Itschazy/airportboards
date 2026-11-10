@@ -20,7 +20,7 @@
   "parking": {
    "title": "Parking",
    "hint": "15 min gratuites",
-   "text": "Parking central courte durée : jusqu'à 15 minutes gratuit, jusqu'à une heure 300 ₽, jusqu'à 24 heures 500 ₽, ensuite 500 ₽ par 24 heures. Longue durée : jusqu'à 10 minutes gratuit, jusqu'à 24 heures 400 ₽, ensuite 400 ₽ par 24 heures. Toute heure ou tranche de 24 heures entamée est due en entier."
+   "text": "Parking central courte durée : jusqu'à 15 minutes gratuit, jusqu'à une heure 300 ₽, jusqu'à un jour 500 ₽, ensuite 500 ₽ par jour. Longue durée : jusqu'à 10 minutes gratuit, jusqu'à un jour 400 ₽, ensuite 400 ₽ par jour. Toute heure ou journée entamée est due en entier."
   },
   "wifi": {
    "title": "Wi‑Fi",

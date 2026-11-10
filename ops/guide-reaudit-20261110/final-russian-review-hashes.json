@@ -1,0 +1,252 @@
+{
+  "date": "2026-11-10",
+  "head": "015ff41596babb4255b308229ff79b03b6058267",
+  "scope_count": {
+    "blocks": 24,
+    "ru_files": 21
+  },
+  "scope_blocks": [
+    {
+      "code": "ARH",
+      "block": "storage"
+    },
+    {
+      "code": "CEE",
+      "block": "parking"
+    },
+    {
+      "code": "KUF",
+      "block": "parking"
+    },
+    {
+      "code": "KUF",
+      "block": "storage"
+    },
+    {
+      "code": "NSK",
+      "block": "sleep"
+    },
+    {
+      "code": "RGK",
+      "block": "parking"
+    },
+    {
+      "code": "SVO",
+      "block": "storage"
+    },
+    {
+      "code": "ZIA",
+      "block": "storage"
+    },
+    {
+      "code": "SVX",
+      "block": "storage"
+    },
+    {
+      "code": "LED",
+      "block": "parking"
+    },
+    {
+      "code": "VVO",
+      "block": "storage"
+    },
+    {
+      "code": "SGC",
+      "block": "lounges"
+    },
+    {
+      "code": "SSH",
+      "block": "lounges"
+    },
+    {
+      "code": "MRV",
+      "block": "parking"
+    },
+    {
+      "code": "IJK",
+      "block": "transport"
+    },
+    {
+      "code": "IKT",
+      "block": "storage"
+    },
+    {
+      "code": "IKT",
+      "block": "parking"
+    },
+    {
+      "code": "GYD",
+      "block": "parking"
+    },
+    {
+      "code": "KGD",
+      "block": "parking"
+    },
+    {
+      "code": "ZIA",
+      "block": "parking"
+    },
+    {
+      "code": "NJC",
+      "block": "lounges"
+    },
+    {
+      "code": "IAR",
+      "block": "kids"
+    },
+    {
+      "code": "KEJ",
+      "block": "parking"
+    },
+    {
+      "code": "KRR",
+      "block": "storage"
+    }
+  ],
+  "files": [
+    {
+      "path": "data/airport-guide/ARH.json",
+      "sha256": "61b550986b7dc3cc7113dc20eef6ebaa4a068e8d3b3cf4185ac7398cdd2c6701",
+      "checked": "2026-10-25",
+      "checked_unchanged": true
+    },
+    {
+      "path": "data/airport-guide/CEE.json",
+      "sha256": "4d1f68a1b36a68d5272b3acc52793811b73a9cd7db8f57c64cfb56d31bc4cbf1",
+      "checked": "2026-10-25",
+      "checked_unchanged": true
+    },
+    {
+      "path": "data/airport-guide/GYD.json",
+      "sha256": "437d926538e66fccec4d38185c396f84958b9fdbcea7a912d2f11dcfbddc6c33",
+      "checked": "2026-10-25",
+      "checked_unchanged": true
+    },
+    {
+      "path": "data/airport-guide/IAR.json",
+      "sha256": "7c4e4a65ddb3848d2358bf6c8d6c3effd5315c13d1799db4058583d65845d81c",
+      "checked": "2026-10-25",
+      "checked_unchanged": true
+    },
+    {
+      "path": "data/airport-guide/IJK.json",
+      "sha256": "ea063a0446261d692f15afa545aade8a80b3dc1ab56f420788ffcec41052e5f8",
+      "checked": "2026-10-25",
+      "checked_unchanged": true
+    },
+    {
+      "path": "data/airport-guide/IKT.json",
+      "sha256": "3de104b1ced4b812915a539e9488449bcfe4f0b08484feca1435b4fa28016317",
+      "checked": "2026-10-25",
+      "checked_unchanged": true
+    },
+    {
+      "path": "data/airport-guide/KEJ.json",
+      "sha256": "cb213d78038d2d13f7fd1f0ed4958e4fb01532505f8e9b31649d1a5c20ce04d1",
+      "checked": "2026-10-25",
+      "checked_unchanged": true
+    },
+    {
+      "path": "data/airport-guide/KGD.json",
+      "sha256": "ac2d61109d9d83f7a23db70308b6a315f2c4930aac5f26f88d733f928f988f83",
+      "checked": "2026-10-25",
+      "checked_unchanged": true
+    },
+    {
+      "path": "data/airport-guide/KRR.json",
+      "sha256": "f79420dcf30e36779e67d90c92ed9bcbb5142c2bf4bf8a102fbe727ddeb5b1f3",
+      "checked": "2026-10-25",
+      "checked_unchanged": true
+    },
+    {
+      "path": "data/airport-guide/KUF.json",
+      "sha256": "d62906ea3883b6a576f8d6c945347fa1fe022aaa0908c2b22c01370bfda9193f",
+      "checked": "2026-10-25",
+      "checked_unchanged": true
+    },
+    {
+      "path": "data/airport-guide/LED.json",
+      "sha256": "bced9e8d634d40a96d24a9721fa680d664ce1dda8a5492f320665b0be300fd2b",
+      "checked": "2026-10-25",
+      "checked_unchanged": true
+    },
+    {
+      "path": "data/airport-guide/MRV.json",
+      "sha256": "b92ce09dc91406145ff715871d2d63436915201a1c251f56469c6e70871965a0",
+      "checked": "2026-10-25",
+      "checked_unchanged": true
+    },
+    {
+      "path": "data/airport-guide/NJC.json",
+      "sha256": "7ad79c1154f0837d188bd7492ef600429ff9c80edf8554d91ef0a15aef381dcd",
+      "checked": "2026-10-25",
+      "checked_unchanged": true
+    },
+    {
+      "path": "data/airport-guide/NSK.json",
+      "sha256": "510b21be1e20e60d8721b8b2ab7eae2637943616b379894b8032f3046dc1b972",
+      "checked": "2026-10-25",
+      "checked_unchanged": true
+    },
+    {
+      "path": "data/airport-guide/RGK.json",
+      "sha256": "0d3fe2a6e66ff4a766a369680fbe1f76a806e40e0028713abb32034b00416edf",
+      "checked": "2026-10-25",
+      "checked_unchanged": true
+    },
+    {
+      "path": "data/airport-guide/SGC.json",
+      "sha256": "52e0e2c528558ffdc6f9aaba42c13e16130aad7905cfb368425743b452d99ec5",
+      "checked": "2026-10-25",
+      "checked_unchanged": true
+    },
+    {
+      "path": "data/airport-guide/SSH.json",
+      "sha256": "ecf2389967a3bffcbcf9c1a041ab60c44ac7bedcd144be246f0bcd33f8fe37dd",
+      "checked": "2026-11-09",
+      "checked_unchanged": true
+    },
+    {
+      "path": "data/airport-guide/SVO.json",
+      "sha256": "6d4ac4b07aca05c760372eb4e3e2ea65b4eeaca4a03b25ea3e6bbe91cd222465",
+      "checked": "2026-10-25",
+      "checked_unchanged": true
+    },
+    {
+      "path": "data/airport-guide/SVX.json",
+      "sha256": "beaeb7b41d9aabd6794de2a8c5b3a732ed67bc42e615492b55b08893b976997c",
+      "checked": "2026-10-25",
+      "checked_unchanged": true
+    },
+    {
+      "path": "data/airport-guide/VVO.json",
+      "sha256": "90480be402c0b9e277f113ea490f2da314d55827d20c8f75f2f454fdb4ae8d53",
+      "checked": "2026-10-25",
+      "checked_unchanged": true
+    },
+    {
+      "path": "data/airport-guide/ZIA.json",
+      "sha256": "6ad07f82f4243abf3a70893299fd1ed0bc7e6e32d23eec782e6005364fb57fc3",
+      "checked": "2026-10-25",
+      "checked_unchanged": true
+    }
+  ],
+  "reviewed_code_and_docs": [
+    {
+      "path": "CLAUDE.md",
+      "sha256": "6542c84f7c3ac2adfb6da48c32fdaf401811b6c5ab2558d4a5e63a99702fc0d8"
+    },
+    {
+      "path": "scripts/check-guide-fresh.mjs",
+      "sha256": "860044776b67d4af3086d72cea40967da36c59ec4a3df14113d70fb812382d75"
+    },
+    {
+      "path": "scripts/check-guide-fresh-regressions.mjs",
+      "sha256": "0e78eadefe3ab01df6cc4186cb2cf4c333029356a07d98595842b5384b130777"
+    }
+  ],
+  "guard_regressions": {
+    "passed": 29,
+    "failed": 0
+  }
+}

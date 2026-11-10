@@ -30,7 +30,7 @@
   "parking": {
    "title": "Parking",
    "hint": "15 min gratuites",
-   "text": "Zone de dépose et de prise en charge А1 : 15 minutes gratuites, ensuite 500 ₽ de l'heure, stationnement interdit. Parking d'attente С5 (10 minutes des terminaux) : 3 heures gratuites, ensuite 150 ₽ de l'heure, 600 ₽ par 24 heures. Parkings А2 et А3 près des terminaux : première heure 300 ₽, ensuite 100 ₽ de l'heure, 700 ₽ par 24 heures."
+   "text": "Zone de dépose et de prise en charge А1 : 15 minutes gratuites, ensuite 500 ₽ de l'heure, stationnement interdit. Parking d'attente С5 (10 minutes des terminaux) : 3 heures gratuites, ensuite 150 ₽ de l'heure, 600 ₽ par jour. Parkings А2 et А3 près des terminaux : première heure 300 ₽, ensuite 100 ₽ de l'heure, 700 ₽ par jour."
   },
   "wifi": {
    "title": "Wi‑Fi",

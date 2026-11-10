@@ -19,8 +19,8 @@
     },
     "storage": {
       "title": "Deposito bagagli",
-      "hint": "610 ₽ ogni 24 ore",
-      "text": "Nel terminal nazionale al livello 1, pagamento in contanti o con carta. 610 ₽ a collo ogni 24 ore, i bagagli oltre 40×40×50 cm si pagano in base al numero di posti occupati. Nel terminal internazionale il deposito è al livello 2 e funziona solo in caso di ritardo dei voli. Telefono +7 (3952) 266-194."
+      "hint": "Da 610 ₽ al giorno",
+      "text": "Nel terminal nazionale al livello 1, pagamento in contanti o con carta. La tariffa base è di 610 ₽ a collo al giorno per bagagli con valore dichiarato fino a 2000 ₽. La dichiarazione del valore è obbligatoria; oltre 2000 ₽ si applica un supplemento di 100 ₽ per ogni ulteriore 1000 ₽ di valore dichiarato. I bagagli oltre 40×40×50 cm si pagano in base al numero di posti occupati. Nel terminal internazionale il deposito è al livello 2 e apre solo in caso di ritardo dei voli internazionali. Telefono +7 (3952) 266-194."
     },
     "sleep": {
       "title": "Dove dormire",
@@ -35,7 +35,7 @@
     "parking": {
       "title": "Parcheggio",
       "hint": "10 min gratis",
-      "text": "I primi 10 minuti gratis. 11–20 minuti 100 ₽, fino a 1 ora 350 ₽, da 2 h 41 min a 24 ore 1200 ₽, ogni successivo periodo di 24 ore 1200 ₽. Ogni terminal ha il proprio parcheggio. Zona di salita e discesa passeggeri: 10 minuti gratis, oltre si paga una penale di 2000 ₽ all’ora."
+      "text": "I primi 10 minuti gratis. 11–20 minuti 100 ₽, 21–30 minuti 200 ₽, 31–40 minuti 250 ₽, 41–50 minuti 300 ₽, 51–60 minuti 350 ₽. Da 1 h 01 min a 2 h 40 min, la tariffa sale da 400 a 850 ₽ con incrementi di 50 ₽ ogni 10 minuti; da 2 h 41 min a 24 ore 1200 ₽, ogni successivo periodo di 24 ore 1200 ₽. Ogni terminal ha il proprio parcheggio. Zona di salita e discesa passeggeri: 10 minuti gratis, oltre si paga una penale di 2000 ₽ all’ora."
     }
   }
 }

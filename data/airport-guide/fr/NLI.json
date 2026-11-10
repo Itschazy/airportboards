@@ -4,8 +4,8 @@
   "blocks": {
     "storage": {
       "title": "Consigne à bagages",
-      "hint": "419 ₽ par bagage / 24 h",
-      "text": "Garde des bagages à la consigne : 418,83 ₽ par bagage et par période de 24 heures, TVA incluse. Prix selon la grille tarifaire à partir du 5 juin 2026."
+      "hint": "419 ₽ par bagage / jour",
+      "text": "Garde des bagages à la consigne : 418,83 ₽ par bagage et par jour, TVA incluse. Prix selon la grille tarifaire à partir du 5 juin 2026."
     },
     "lounges": {
       "title": "Salons",

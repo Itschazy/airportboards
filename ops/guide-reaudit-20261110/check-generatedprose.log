@@ -1,0 +1,43 @@
+  ✓ сгенерированный текст оставлен на: ru
+  ✓ русский в списке — канал с людьми не тронут
+  ✓ страниц проверено: 36
+  ✓ на снятых языках сгенерированного абзаца нет — ни своего, ни английского
+  ✓ на ru абзац на месте
+  ✓ en/NTE: extended prose 0/3, expected 0
+  ✓ ru/NTE: extended prose 3/3, expected 3
+  ✓ zh/NTE: extended prose 0/3, expected 0
+  ✓ ar/NTE: extended prose 0/3, expected 0
+  ✓ de/NTE: extended prose 0/3, expected 0
+  ✓ ko/NTE: extended prose 0/3, expected 0
+  ✓ ja/NTE: extended prose 0/3, expected 0
+  ✓ fr/NTE: extended prose 0/3, expected 0
+  ✓ es/NTE: extended prose 0/3, expected 0
+  ✓ it/NTE: extended prose 0/3, expected 0
+  ✓ hi/NTE: extended prose 0/3, expected 0
+  ✓ tr/NTE: extended prose 0/3, expected 0
+  ✓ en/AGP: extended prose 0/3, expected 0
+  ✓ en/AGP: verified table destinations preserved
+  ✓ ru/AGP: extended prose 3/3, expected 3
+  ✓ ru/AGP: verified table destinations preserved
+  ✓ zh/AGP: extended prose 0/3, expected 0
+  ✓ zh/AGP: verified table destinations preserved
+  ✓ ar/AGP: extended prose 0/3, expected 0
+  ✓ ar/AGP: verified table destinations preserved
+  ✓ de/AGP: extended prose 0/3, expected 0
+  ✓ de/AGP: verified table destinations preserved
+  ✓ ko/AGP: extended prose 0/3, expected 0
+  ✓ ko/AGP: verified table destinations preserved
+  ✓ ja/AGP: extended prose 0/3, expected 0
+  ✓ ja/AGP: verified table destinations preserved
+  ✓ fr/AGP: extended prose 0/3, expected 0
+  ✓ fr/AGP: verified table destinations preserved
+  ✓ es/AGP: extended prose 0/3, expected 0
+  ✓ es/AGP: verified table destinations preserved
+  ✓ it/AGP: extended prose 0/3, expected 0
+  ✓ it/AGP: verified table destinations preserved
+  ✓ hi/AGP: extended prose 0/3, expected 0
+  ✓ hi/AGP: verified table destinations preserved
+  ✓ tr/AGP: extended prose 0/3, expected 0
+  ✓ tr/AGP: verified table destinations preserved
+
+сгенерированный текст стоит ровно там, где решено

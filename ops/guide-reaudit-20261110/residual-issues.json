@@ -1,0 +1,711 @@
+{
+  "date": "2026-11-10",
+  "scope": "Unconfirmed rows plus explicit caveats on confirmed browser rows. Fix-package presence means intended remediation, not verified resolution.",
+  "counts": {
+    "remaining verification gap": 38,
+    "approved package; verification pending": 19,
+    "remaining partial evidence or source ambiguity": 13
+  },
+  "rows": [
+    {
+      "code": "AER",
+      "block": "parking",
+      "status": "unavailable",
+      "reason": "Источник AER недоступен: Firecrawl proxy connection failure / web timeout или недоступныйURL.",
+      "disposition": "remaining verification gap",
+      "approved_fix_reason": null,
+      "ru_matches_approved_after": false,
+      "evidence_registry": "fact-european.json"
+    },
+    {
+      "code": "AER",
+      "block": "storage",
+      "status": "unavailable",
+      "reason": "Источник AER недоступен: Firecrawl proxy connection failure / web timeout или недоступныйURL.",
+      "disposition": "remaining verification gap",
+      "approved_fix_reason": null,
+      "ru_matches_approved_after": false,
+      "evidence_registry": "fact-european.json"
+    },
+    {
+      "code": "ARH",
+      "block": "storage",
+      "status": "conflict",
+      "reason": "Официальный тариф 341,60 ₽, в RU 250 ₽. Павильон 3, 24/7, ≤30 кг, длина <1 м и исключённые вещи подтверждены. Предложение заменить 250 на 341,60 во всех языках.",
+      "disposition": "approved package; verification pending",
+      "approved_fix_reason": "Официальная пассажирская страница: 341,60 руб./сутки для стандартного багажа.",
+      "ru_matches_approved_after": true,
+      "evidence_registry": "fact-european.json"
+    },
+    {
+      "code": "ASF",
+      "block": "kids",
+      "status": "unavailable",
+      "reason": "Защищённый источник: только обычный браузер по CLAUDE; CUA запрещён securitySTOP, обход не выполнялся.",
+      "disposition": "remaining verification gap",
+      "approved_fix_reason": null,
+      "ru_matches_approved_after": false,
+      "evidence_registry": "fact-european.json"
+    },
+    {
+      "code": "ASF",
+      "block": "lounges",
+      "status": "unavailable",
+      "reason": "Защищённый источник: только обычный браузер по CLAUDE; CUA запрещён securitySTOP, обход не выполнялся.",
+      "disposition": "remaining verification gap",
+      "approved_fix_reason": null,
+      "ru_matches_approved_after": false,
+      "evidence_registry": "fact-european.json"
+    },
+    {
+      "code": "ASF",
+      "block": "parking",
+      "status": "unavailable",
+      "reason": "Защищённый источник: только обычный браузер по CLAUDE; CUA запрещён securitySTOP, обход не выполнялся.",
+      "disposition": "remaining verification gap",
+      "approved_fix_reason": null,
+      "ru_matches_approved_after": false,
+      "evidence_registry": "fact-european.json"
+    },
+    {
+      "code": "BAX",
+      "block": "parking",
+      "status": "unavailable",
+      "reason": "Защищённый источник: только обычный браузер по CLAUDE; CUA запрещён securitySTOP, обход не выполнялся.",
+      "disposition": "remaining verification gap",
+      "approved_fix_reason": null,
+      "ru_matches_approved_after": false,
+      "evidence_registry": "fact-european.json"
+    },
+    {
+      "code": "BTK",
+      "block": "parking",
+      "status": "unavailable",
+      "reason": "Защищённый источник: только обычный браузер по CLAUDE; CUA запрещён securitySTOP, обход не выполнялся.",
+      "disposition": "remaining verification gap",
+      "approved_fix_reason": null,
+      "ru_matches_approved_after": false,
+      "evidence_registry": "fact-european.json"
+    },
+    {
+      "code": "CEE",
+      "block": "parking",
+      "status": "conflict",
+      "reason": "1000 ₽ на площади прямо за календарные сутки. PDF платной парковки также считает сутки от 00:00 до 24:00: 350 ₽ тоже календарные, не 24 часа от въезда. Остальные 90 минут/повтор при задержке/24-7/телефон подтверждены. Предложение явно календарные сутки в обеих ставках RU+11.",
+      "disposition": "approved package; verification pending",
+      "approved_fix_reason": "HTML прямо называет календарный сбор; PDF правил отдельно определяет сутки платной парковки как 00:00–24:00.",
+      "ru_matches_approved_after": true,
+      "evidence_registry": "fact-european.json"
+    },
+    {
+      "code": "CEK",
+      "block": "kids",
+      "status": "unavailable",
+      "reason": "Защищённый источник: только обычный браузер по CLAUDE; CUA запрещён securitySTOP, обход не выполнялся.",
+      "disposition": "remaining verification gap",
+      "approved_fix_reason": null,
+      "ru_matches_approved_after": false,
+      "evidence_registry": "fact-european.json"
+    },
+    {
+      "code": "CEK",
+      "block": "parking",
+      "status": "unavailable",
+      "reason": "Защищённый источник: только обычный браузер по CLAUDE; CUA запрещён securitySTOP, обход не выполнялся.",
+      "disposition": "remaining verification gap",
+      "approved_fix_reason": null,
+      "ru_matches_approved_after": false,
+      "evidence_registry": "fact-european.json"
+    },
+    {
+      "code": "GDX",
+      "block": "parking",
+      "status": "unavailable",
+      "reason": "Защищённый источник: только обычный браузер по CLAUDE; CUA запрещён securitySTOP, обход не выполнялся.",
+      "disposition": "remaining verification gap",
+      "approved_fix_reason": null,
+      "ru_matches_approved_after": false,
+      "evidence_registry": "fact-european.json"
+    },
+    {
+      "code": "GDX",
+      "block": "storage",
+      "status": "unavailable",
+      "reason": "Защищённый источник: только обычный браузер по CLAUDE; CUA запрещён securitySTOP, обход не выполнялся.",
+      "disposition": "remaining verification gap",
+      "approved_fix_reason": null,
+      "ru_matches_approved_after": false,
+      "evidence_registry": "fact-european.json"
+    },
+    {
+      "code": "GYD",
+      "block": "parking",
+      "status": "partial",
+      "reason": "Числа/вместимость/оплата подтверждены. Сжатие тарифов в RU «до12ч6AZN, досуток15» скрывает ступени4–6ч3,6–8ч4,8–10ч5,12–14ч10. Лучше обозначить конкретные интервалы10–12 и14–24 либо полный ряд: иначе выглядит завышенной ценой для промежуточных периодов.",
+      "disposition": "approved package; verification pending",
+      "approved_fix_reason": "В источнике восемь диапазонов, сокращение до12/досуток создаёт неверное впечатление тарифа промежуточного времени.",
+      "ru_matches_approved_after": true,
+      "evidence_registry": "fact-european.json"
+    },
+    {
+      "code": "HMA",
+      "block": "parking",
+      "status": "partial",
+      "reason": "Текст правил подтверждает 20 минут бесплатно. Полный тариф находится в изображении: в текущем проходе не удалось прочитать изображение средствами web; цены и повторный въезд не подтверждаю.",
+      "disposition": "remaining partial evidence or source ambiguity",
+      "approved_fix_reason": null,
+      "ru_matches_approved_after": false,
+      "evidence_registry": "fact-european.json"
+    },
+    {
+      "code": "HRG",
+      "block": "sleep",
+      "status": "partial",
+      "reason": "Оператор Pearl подтверждает sleeping pods в T1; SleepingInAirports также подтверждает, но ссылается на airport website, независимость происхождения не установлена. Основное утверждение подтверждено первичным оператором.",
+      "disposition": "remaining partial evidence or source ambiguity",
+      "approved_fix_reason": null,
+      "ru_matches_approved_after": false,
+      "evidence_registry": "fact-pilot-russian.json"
+    },
+    {
+      "code": "IAR",
+      "block": "kids",
+      "status": "partial",
+      "reason": "Расположение, бесплатность, boarding pass,3/4часа и отсутствие комнаты прилёта подтверждены. Источник сам неоднозначен по возрасту: вступление «с детьми или с детьми-инвалидами до14», ниже запрещает взрослых без детей дошкольного возраста. Наше общее «дети до14» шире второго правила; не объявляю подтверждённым доступ всех детей до14.",
+      "disposition": "remaining partial evidence or source ambiguity",
+      "approved_fix_reason": null,
+      "ru_matches_approved_after": false,
+      "evidence_registry": "fact-european.json"
+    },
+    {
+      "code": "IJK",
+      "block": "parking",
+      "status": "unavailable",
+      "reason": "Web вернул403Forbidden; повторов/обходов/браузера после securitySTOP не было.",
+      "disposition": "remaining verification gap",
+      "approved_fix_reason": null,
+      "ru_matches_approved_after": false,
+      "evidence_registry": "fact-european.json"
+    },
+    {
+      "code": "IJK",
+      "block": "transport",
+      "status": "partial",
+      "reason": "Цены/радиус/заказ3часа/касса/наличие авто подтверждены. Недостающие существенные условия источника: услуга на регулярных рейсах; пригород до30км от аэропорта по предварительному согласованию.",
+      "disposition": "approved package; verification pending",
+      "approved_fix_reason": "Источник требует регулярного рейса, одного адреса и предварительного согласования пригорода; 30 км отсчитываются от аэропорта.",
+      "ru_matches_approved_after": true,
+      "evidence_registry": "fact-european.json"
+    },
+    {
+      "code": "IKT",
+      "block": "parking",
+      "status": "partial",
+      "reason": "PDF визуально подтверждает все числа и пени2000/ч. Но RU «до1часа350» сглаживает ступени21–30мин200,31–40мин250,41–50мин300,51–60мин350. Рекомендуется «51–60мин350» для точности.",
+      "disposition": "approved package; verification pending",
+      "approved_fix_reason": "Свежие официальные PDF визуально прочитаны, сохранены в sources-european/IKT-storage.pdf и IKT-parking.pdf.",
+      "ru_matches_approved_after": true,
+      "evidence_registry": "fact-european.json"
+    },
+    {
+      "code": "IKT",
+      "block": "storage",
+      "status": "partial",
+      "reason": "HTML+визуально PDF подтверждают все факты RU:610,размер40×40×50,расчётмест,этажи,оплата,только задержки международных,телефон. PDF имеет существенную доплату: оценка выше2000₽ +100₽ за каждую следующую1000₽; её нет в кратком блоке, поэтому базовая цена верна, полнота ограничена.",
+      "disposition": "approved package; verification pending",
+      "approved_fix_reason": "Свежие официальные PDF визуально прочитаны, сохранены в sources-european/IKT-storage.pdf и IKT-parking.pdf.",
+      "ru_matches_approved_after": true,
+      "evidence_registry": "fact-european.json"
+    },
+    {
+      "code": "IST",
+      "block": "storage",
+      "status": "unavailable",
+      "reason": "Web timeout; native browser evidence не сохранено до security STOP.",
+      "disposition": "remaining verification gap",
+      "approved_fix_reason": null,
+      "ru_matches_approved_after": false,
+      "evidence_registry": "fact-pilot-russian.json"
+    },
+    {
+      "code": "KEJ",
+      "block": "parking",
+      "status": "confirmed",
+      "reason": "30 м; 173 места; до 15 минут бесплатно; первый час 300 ₽; второй и третий по 200 ₽; с 4-го часа посуточный тариф 1000 ₽. Caveat: Слово «сутки» в HTML не определено отдельно как 24 часа. Явного календарного исключения не найдено; PDF не проверен. Это не доказанный конфликт.",
+      "disposition": "remaining partial evidence or source ambiguity",
+      "approved_fix_reason": null,
+      "ru_matches_approved_after": false,
+      "evidence_registry": "fact-browser-russian.json"
+    },
+    {
+      "code": "KGD",
+      "block": "kids",
+      "status": "confirmed",
+      "reason": "Бесплатно для вылетающих: дети до 7 лет, дети-инвалиды до 14, вторая половина беременности; график аэровокзала. Справка после медосмотра: медпункт 1 этаж справа. Багаж в камеру хранения. Caveat: Для входа также требуются паспорт, свидетельство о рождении, билет/посадочный, беременным обменная карта; RU не перечисляет эти документы.",
+      "disposition": "remaining partial evidence or source ambiguity",
+      "approved_fix_reason": null,
+      "ru_matches_approved_after": false,
+      "evidence_registry": "fact-browser-russian.json"
+    },
+    {
+      "code": "KGD",
+      "block": "parking",
+      "status": "confirmed",
+      "reason": "С 01.10.2026 400 ₽ за полный/неполный час; первые 15 минут бесплатно; 900 ₽/сутки; бесплатная площадка 400 м/300 машин. Первая линия: парковка запрещена, въезд только договорным такси и общественному транспорту. Caveat: Повторный въезд в течение 2 часов платный с первой минуты: полезное ограничение отсутствует в RU. Корейское обозначение запрета остановки чрезмерно: источник запрещает парковку, а посадку/высадку разрешает указанному транспорту.",
+      "disposition": "approved package; verification pending",
+      "approved_fix_reason": "Сохранённый root браузерный текст browser-KGD-parking.txt, строка AX71: повторный въезд в течение 2 часов с1минуты. Точный момент равенства2ч не уточняем сверх источника.",
+      "ru_matches_approved_after": true,
+      "evidence_registry": "fact-browser-russian.json"
+    },
+    {
+      "code": "KRR",
+      "block": "parking",
+      "status": "unavailable",
+      "reason": "Обычный requests завершился RemoteDisconnected;сменаUA/обход не выполнялись.",
+      "disposition": "remaining verification gap",
+      "approved_fix_reason": null,
+      "ru_matches_approved_after": false,
+      "evidence_registry": "fact-russian.json"
+    },
+    {
+      "code": "KRR",
+      "block": "storage",
+      "status": "unavailable",
+      "reason": "Обычный requests завершился RemoteDisconnected;сменаUA/обход не выполнялись.",
+      "disposition": "remaining verification gap",
+      "approved_fix_reason": null,
+      "ru_matches_approved_after": false,
+      "evidence_registry": "fact-russian.json"
+    },
+    {
+      "code": "KRR",
+      "block": "transport",
+      "status": "unavailable",
+      "reason": "Обычный requests завершился RemoteDisconnected;сменаUA/обход не выполнялись.",
+      "disposition": "remaining verification gap",
+      "approved_fix_reason": null,
+      "ru_matches_approved_after": false,
+      "evidence_registry": "fact-russian.json"
+    },
+    {
+      "code": "KUF",
+      "block": "parking",
+      "status": "conflict",
+      "reason": "P2 791 is up to24h only,48h1578,3days2351: not flat791/24h. Other stated prices correct.",
+      "disposition": "approved package; verification pending",
+      "approved_fix_reason": "791 ₽ относится только к первым 24 часам; следующие периоды имеют пакетные цены.",
+      "ru_matches_approved_after": true,
+      "evidence_registry": "fact-asian.json"
+    },
+    {
+      "code": "KUF",
+      "block": "storage",
+      "status": "conflict",
+      "reason": "1200 oversized price belongs to wrapping section, not storage; lockers250/550 and350/900 confirmed.",
+      "disposition": "approved package; verification pending",
+      "approved_fix_reason": "1200 ₽ в источнике относится к упаковке негабаритного багажа; цена не относится к хранению.",
+      "ru_matches_approved_after": true,
+      "evidence_registry": "fact-asian.json"
+    },
+    {
+      "code": "KZN",
+      "block": "parking",
+      "status": "unavailable",
+      "reason": "Web не вернул содержательного текста; native browser evidence не сохранено до security STOP.",
+      "disposition": "remaining verification gap",
+      "approved_fix_reason": null,
+      "ru_matches_approved_after": false,
+      "evidence_registry": "fact-pilot-russian.json"
+    },
+    {
+      "code": "LED",
+      "block": "parking",
+      "status": "partial",
+      "reason": "P2/P4/P0 and15min correct; source2000 applies16–30 then31–60 thenevery30min. Text compresses to every30after15, potentially misleading exact boundary.",
+      "disposition": "approved package; verification pending",
+      "approved_fix_reason": "Раздел «Для высадки или встречи пассажира»: точные интервалы16–30,31–60,затем каждые30 минут; повторный въезд платный с1мин. В этом разделе источник не устанавливает восстановление льготы через30мин. Отдельные транзитные зоны в блок не добавлены.",
+      "ru_matches_approved_after": true,
+      "evidence_registry": "fact-asian.json"
+    },
+    {
+      "code": "MMK",
+      "block": "kids",
+      "status": "unavailable",
+      "reason": "Basic fetch returned only removed base64image, no readable source.",
+      "disposition": "remaining verification gap",
+      "approved_fix_reason": null,
+      "ru_matches_approved_after": false,
+      "evidence_registry": "fact-asian.json"
+    },
+    {
+      "code": "MRV",
+      "block": "parking",
+      "status": "conflict",
+      "reason": "P1: менее 15 мин бесплатно, 15–60 мин 500 ₽, далее 500 ₽/час, свыше 4 часов 1200 ₽/сутки; неполные сутки полные. Ниже общее правило посуточной парковки: «расчетный час 00:00». Caveat: В переводах 24 hours несовместимо с явным расчётным часом. P1 тоже переходит на посуточный тариф; отдельного исключения для неё источник не содержит. P1 по серьёзности: неправильное ожидание цены при пересечении полуночи.",
+      "disposition": "approved package; verification pending",
+      "approved_fix_reason": "Общее явное определение посуточной тарификации применяется и к P1; не переводить как rolling 24 hours.",
+      "ru_matches_approved_after": true,
+      "evidence_registry": "fact-browser-russian.json"
+    },
+    {
+      "code": "NJC",
+      "block": "lounges",
+      "status": "partial",
+      "reason": "Location24h/access and tariff rates confirmed from page+PDF19; PDF has contradictory age2inclusivefree vs2–12paid; RUunder2 not fully resolves source contradiction.",
+      "disposition": "remaining partial evidence or source ambiguity",
+      "approved_fix_reason": null,
+      "ru_matches_approved_after": false,
+      "evidence_registry": "fact-asian.json"
+    },
+    {
+      "code": "NNM",
+      "block": "parking",
+      "status": "unavailable",
+      "reason": "HTTP200 отдаёт динамическую оболочку без тарифнойтаблицы;файлnnm-parking.txt. Браузерпереданroot.",
+      "disposition": "remaining verification gap",
+      "approved_fix_reason": null,
+      "ru_matches_approved_after": false,
+      "evidence_registry": "fact-russian.json"
+    },
+    {
+      "code": "NOZ",
+      "block": "parking",
+      "status": "unavailable",
+      "reason": "Onlycookie/loadingtext returned; no parking content.",
+      "disposition": "remaining verification gap",
+      "approved_fix_reason": null,
+      "ru_matches_approved_after": false,
+      "evidence_registry": "fact-asian.json"
+    },
+    {
+      "code": "NSK",
+      "block": "about",
+      "status": "partial",
+      "reason": "Geography,4carriers10settlements883k2024 confirmed; operator not in thispage but LLC in sleep source26.",
+      "disposition": "remaining partial evidence or source ambiguity",
+      "approved_fix_reason": null,
+      "ru_matches_approved_after": false,
+      "evidence_registry": "fact-asian.json"
+    },
+    {
+      "code": "NSK",
+      "block": "sleep",
+      "status": "partial",
+      "reason": "Location30rooms55people24hpassportprepaymentphone confirmed; whole-day rule conflicts internally with dated2026 tariff table3h/6h rates.",
+      "disposition": "approved package; verification pending",
+      "approved_fix_reason": "Общий старый абзац требует целые сутки, но датированная таблица с 01.05.2026 содержит тарифы на 3 и 6 часов. Удаляем чрезмерное обобщение, сохраняем 100% предоплату.",
+      "ru_matches_approved_after": true,
+      "evidence_registry": "fact-asian.json"
+    },
+    {
+      "code": "OSW",
+      "block": "parking",
+      "status": "unavailable",
+      "reason": "Onlybase64image placeholder returned.",
+      "disposition": "remaining verification gap",
+      "approved_fix_reason": null,
+      "ru_matches_approved_after": false,
+      "evidence_registry": "fact-asian.json"
+    },
+    {
+      "code": "OVB",
+      "block": "about",
+      "status": "unavailable",
+      "reason": "Защищённый официальный сайт: обычный браузер требовался; сохранённого AX нет. Не делались requests/bypass.",
+      "disposition": "remaining verification gap",
+      "approved_fix_reason": null,
+      "ru_matches_approved_after": false,
+      "evidence_registry": "fact-pilot-russian.json"
+    },
+    {
+      "code": "OVB",
+      "block": "lounges",
+      "status": "unavailable",
+      "reason": "Защищённый официальный сайт: обычный браузер требовался; сохранённого AX нет. Не делались requests/bypass.",
+      "disposition": "remaining verification gap",
+      "approved_fix_reason": null,
+      "ru_matches_approved_after": false,
+      "evidence_registry": "fact-pilot-russian.json"
+    },
+    {
+      "code": "OVB",
+      "block": "parking",
+      "status": "unavailable",
+      "reason": "Защищённый официальный сайт: обычный браузер требовался; сохранённого AX нет. Не делались requests/bypass.",
+      "disposition": "remaining verification gap",
+      "approved_fix_reason": null,
+      "ru_matches_approved_after": false,
+      "evidence_registry": "fact-pilot-russian.json"
+    },
+    {
+      "code": "OVB",
+      "block": "transport",
+      "status": "unavailable",
+      "reason": "Защищённый официальный сайт: обычный браузер требовался; сохранённого AX нет. Не делались requests/bypass.",
+      "disposition": "remaining verification gap",
+      "approved_fix_reason": null,
+      "ru_matches_approved_after": false,
+      "evidence_registry": "fact-pilot-russian.json"
+    },
+    {
+      "code": "PEE",
+      "block": "parking",
+      "status": "partial",
+      "reason": "Страница подтверждает круглосуточную работу парковочного комплекса и общие правила. Caveat: Тарифы в графике/PDF не попали в AX. Числа 15/10 минут, 300/500/400 ₽ по этому файлу не подтверждены.",
+      "disposition": "remaining partial evidence or source ambiguity",
+      "approved_fix_reason": null,
+      "ru_matches_approved_after": false,
+      "evidence_registry": "fact-browser-russian.json"
+    },
+    {
+      "code": "PEE",
+      "block": "storage",
+      "status": "unavailable",
+      "reason": "CLAUDE требует обычный браузер для этого домена. IAB недоступен;Chrome extension createTab/tabs.new ошибка timeoutMs. Обход защиты не выполнялся. Root проводит nativeChrome проверку отдельно.",
+      "disposition": "remaining verification gap",
+      "approved_fix_reason": null,
+      "ru_matches_approved_after": false,
+      "evidence_registry": "fact-russian.json"
+    },
+    {
+      "code": "PEK",
+      "block": "parking",
+      "status": "unavailable",
+      "reason": "HTTP200 отдаёт только Please enable JavaScript and refresh the page;защита не обходилась.",
+      "disposition": "remaining verification gap",
+      "approved_fix_reason": null,
+      "ru_matches_approved_after": false,
+      "evidence_registry": "fact-russian.json"
+    },
+    {
+      "code": "PVG",
+      "block": "storage",
+      "status": "unavailable",
+      "reason": "Facilitymenu only; luggage detail dynamically absent from basic markdown.",
+      "disposition": "remaining verification gap",
+      "approved_fix_reason": null,
+      "ru_matches_approved_after": false,
+      "evidence_registry": "fact-asian.json"
+    },
+    {
+      "code": "RGK",
+      "block": "parking",
+      "status": "conflict",
+      "reason": "HTMLP11500not3000. DatedPDF01.11.2026 confirmsP11500 andP2800 (HTML1000outdated).",
+      "disposition": "approved package; verification pending",
+      "approved_fix_reason": "Прочитан полный извлечённый текст официального PDF: приказ №514 от 30.10.2026, действует с 01.11.2026. P1 1500, P2 800, P3 800. HTML P2 1000 устарел относительно датированного приказа.",
+      "ru_matches_approved_after": true,
+      "evidence_registry": "fact-asian.json"
+    },
+    {
+      "code": "SCW",
+      "block": "parking",
+      "status": "partial",
+      "reason": "Kolhoznayaopposite and disabilityramp confirmed,3Baddress absent.",
+      "disposition": "remaining partial evidence or source ambiguity",
+      "approved_fix_reason": null,
+      "ru_matches_approved_after": false,
+      "evidence_registry": "fact-asian.json"
+    },
+    {
+      "code": "SGC",
+      "block": "lounges",
+      "status": "partial",
+      "reason": "Расположение,24/7,ограничение на внутренние,ONPASS3500/2500 подтверждены двумястраницами.; Первый зал допускает бизнес4перечисленныхавиакомпаний;элитныекарты толькона соответствующихрейсах. RU обобщает доступ.",
+      "disposition": "approved package; verification pending",
+      "approved_fix_reason": "Источник ограничивает перевозчиков и привязывает карты к рейсам соответствующих компаний.",
+      "ru_matches_approved_after": true,
+      "evidence_registry": "fact-russian.json"
+    },
+    {
+      "code": "SKX",
+      "block": "parking",
+      "status": "unavailable",
+      "reason": "CLAUDE требует обычный браузер для этого домена. IAB недоступен;Chrome extension createTab/tabs.new ошибка timeoutMs. Обход защиты не выполнялся. Root проводит nativeChrome проверку отдельно.",
+      "disposition": "remaining verification gap",
+      "approved_fix_reason": null,
+      "ru_matches_approved_after": false,
+      "evidence_registry": "fact-russian.json"
+    },
+    {
+      "code": "SSH",
+      "block": "lounges",
+      "status": "partial",
+      "reason": "Priority Pass и DragonPass: T1 после passport/security, international departures only, 24h, максимум 3 часа. Лимит опущен в RU; paid pass по третьему источнику в этом проходе не перепроверен.",
+      "disposition": "approved package; verification pending",
+      "approved_fix_reason": "Не распространять лимит программ на все платные пропуски.",
+      "ru_matches_approved_after": true,
+      "evidence_registry": "fact-pilot-russian.json"
+    },
+    {
+      "code": "SVO",
+      "block": "storage",
+      "status": "conflict",
+      "reason": "Billingcalendar00:00–23:59partialfull;700/300StandardonlyB/D. AeroexpressBagazhmatseparate. Source6months vs90daydestructioninternalconflict.",
+      "disposition": "approved package; verification pending",
+      "approved_fix_reason": "700/300 ₽ явно относится только к B/D, сутки календарные. Удалён срок 6 месяцев: страница одновременно называет уничтожение невостребованных вещей после 90 суток.",
+      "ru_matches_approved_after": true,
+      "evidence_registry": "fact-asian.json"
+    },
+    {
+      "code": "SVX",
+      "block": "storage",
+      "status": "conflict",
+      "reason": "Storageprices/dimensionscorrect. Wardrobe100 onlyupto1h,1–24h300,nextday200; blockunqualified100 misleading.",
+      "disposition": "approved package; verification pending",
+      "approved_fix_reason": "100 ₽ — только до 1 часа; полный тариф гардероба явно опубликован.",
+      "ru_matches_approved_after": true,
+      "evidence_registry": "fact-asian.json"
+    },
+    {
+      "code": "ULV",
+      "block": "about",
+      "status": "partial",
+      "reason": "OJSCoperator,2013reconstruction240/hour,internationalstatusconfirmed. Karamzinname andAviatsionnaya20absentfromretrievedaboutpage.",
+      "disposition": "remaining partial evidence or source ambiguity",
+      "approved_fix_reason": null,
+      "ru_matches_approved_after": false,
+      "evidence_registry": "fact-asian.json"
+    },
+    {
+      "code": "UUD",
+      "block": "parking",
+      "status": "unavailable",
+      "reason": "Basic retrieval returned only Base64-Image-Removed placeholder; no readable content. No bypass attempted.",
+      "disposition": "remaining verification gap",
+      "approved_fix_reason": null,
+      "ru_matches_approved_after": false,
+      "evidence_registry": "fact-asian.json"
+    },
+    {
+      "code": "UUD",
+      "block": "transport",
+      "status": "unavailable",
+      "reason": "Basic retrieval returned only Base64-Image-Removed placeholder; no readable content. No bypass attempted.",
+      "disposition": "remaining verification gap",
+      "approved_fix_reason": null,
+      "ru_matches_approved_after": false,
+      "evidence_registry": "fact-asian.json"
+    },
+    {
+      "code": "UUD",
+      "block": "wifi",
+      "status": "unavailable",
+      "reason": "Basic retrieval returned only Base64-Image-Removed placeholder; no readable content. No bypass attempted.",
+      "disposition": "remaining verification gap",
+      "approved_fix_reason": null,
+      "ru_matches_approved_after": false,
+      "evidence_registry": "fact-asian.json"
+    },
+    {
+      "code": "UUS",
+      "block": "about",
+      "status": "partial",
+      "reason": "Khomutovo,southcity,10kmconfirmed. Operatorand47000sqmnotonretrievedhow-to-getpage.",
+      "disposition": "remaining partial evidence or source ambiguity",
+      "approved_fix_reason": null,
+      "ru_matches_approved_after": false,
+      "evidence_registry": "fact-asian.json"
+    },
+    {
+      "code": "UUS",
+      "block": "parking",
+      "status": "unavailable",
+      "reason": "Basic fetch returned77% loading/cookieplaceholder, no parking facts.",
+      "disposition": "remaining verification gap",
+      "approved_fix_reason": null,
+      "ru_matches_approved_after": false,
+      "evidence_registry": "fact-asian.json"
+    },
+    {
+      "code": "UUS",
+      "block": "storage",
+      "status": "unavailable",
+      "reason": "Basic fetch returned58% loading/cookieplaceholder, no storage facts.",
+      "disposition": "remaining verification gap",
+      "approved_fix_reason": null,
+      "ru_matches_approved_after": false,
+      "evidence_registry": "fact-asian.json"
+    },
+    {
+      "code": "VKO",
+      "block": "kids",
+      "status": "unavailable",
+      "reason": "Basic retrieval returned only Base64-Image-Removed placeholder; no readable content. No bypass attempted.",
+      "disposition": "remaining verification gap",
+      "approved_fix_reason": null,
+      "ru_matches_approved_after": false,
+      "evidence_registry": "fact-asian.json"
+    },
+    {
+      "code": "VKO",
+      "block": "parking",
+      "status": "unavailable",
+      "reason": "Basic retrieval returned only Base64-Image-Removed placeholder; no readable content. No bypass attempted.",
+      "disposition": "remaining verification gap",
+      "approved_fix_reason": null,
+      "ru_matches_approved_after": false,
+      "evidence_registry": "fact-asian.json"
+    },
+    {
+      "code": "VOG",
+      "block": "kids",
+      "status": "unavailable",
+      "reason": "CLAUDE требует обычный браузер для этого домена. IAB недоступен;Chrome extension createTab/tabs.new ошибка timeoutMs. Обход защиты не выполнялся. Root проводит nativeChrome проверку отдельно.",
+      "disposition": "remaining verification gap",
+      "approved_fix_reason": null,
+      "ru_matches_approved_after": false,
+      "evidence_registry": "fact-russian.json"
+    },
+    {
+      "code": "VOG",
+      "block": "storage",
+      "status": "unavailable",
+      "reason": "CLAUDE требует обычный браузер для этого домена. IAB недоступен;Chrome extension createTab/tabs.new ошибка timeoutMs. Обход защиты не выполнялся. Root проводит nativeChrome проверку отдельно.",
+      "disposition": "remaining verification gap",
+      "approved_fix_reason": null,
+      "ru_matches_approved_after": false,
+      "evidence_registry": "fact-russian.json"
+    },
+    {
+      "code": "VVO",
+      "block": "about",
+      "status": "partial",
+      "reason": "Артём,40+направлений,20+авиакомпаний подтверждены. Залы внутренних/международныхвылетов не найдены в указаннойaboutстранице.",
+      "disposition": "remaining partial evidence or source ambiguity",
+      "approved_fix_reason": null,
+      "ru_matches_approved_after": false,
+      "evidence_registry": "fact-russian.json"
+    },
+    {
+      "code": "VVO",
+      "block": "storage",
+      "status": "conflict",
+      "reason": "Источник явным образом определяет первые500 как00:00–23:59 и следующие200 за календарные сутки. RU говорит сутки без уточнения; переводы24hours неправильно меняют период.; Внизу отдельная услуга бюро находок имеет отсчёт от сдачи: её правило не относится к обычной камере.",
+      "disposition": "approved package; verification pending",
+      "approved_fix_reason": "Не смешивать календарный тариф обычной камеры хранения с отсчётом от сдачи в отдельном бюро находок.",
+      "ru_matches_approved_after": true,
+      "evidence_registry": "fact-russian.json"
+    },
+    {
+      "code": "ZIA",
+      "block": "parking",
+      "status": "partial",
+      "reason": "Allrates/24hunitconfirmed. Repeatfree45min is measured AFTER END OF FIRST15MIN PERIOD, RUomits anchor, potentially read as45minafterexit.",
+      "disposition": "remaining partial evidence or source ambiguity",
+      "approved_fix_reason": null,
+      "ru_matches_approved_after": false,
+      "evidence_registry": "fact-asian.json"
+    },
+    {
+      "code": "ZIA",
+      "block": "storage",
+      "status": "conflict",
+      "reason": "Explicitcalendar00:00–23:59partialfull;firstuntil00:00,not24h. Prices700/300,600/300,1150and30kg/floor2/24hcorrect. Internal6months vs unclaimed30days conflict.",
+      "disposition": "approved package; verification pending",
+      "approved_fix_reason": "Источник определяет календарные дни. Удалён срок 6 месяцев: та же страница называет вещи невостребованными уже через 30 суток.",
+      "ru_matches_approved_after": true,
+      "evidence_registry": "fact-asian.json"
+    }
+  ]
+}

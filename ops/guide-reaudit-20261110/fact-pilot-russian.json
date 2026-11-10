@@ -1,0 +1,101 @@
+{
+  "date": "2026-11-10",
+  "scope": "10 changed source-inventory blocks of pilot six",
+  "blocks": [
+    {
+      "code": "AYT",
+      "block": "terminals",
+      "status": "confirmed",
+      "urls": [
+        "https://www.antalya-airport.aero/passazhiry-i-posetiteli-20-ru/transport-24-ru/avtobusy-i-obshchestvennyy-transport-77-ru"
+      ],
+      "evidence": "Официальные RU страницы прочитаны web 10.11: T1/внутренний соединены с отдельными входами; T2 2,5 км/5 минут; автобус/такси. Wi-Fi 1 час, PIN в киосках, телефон/паспорт/ID, CIP и lounges без ограничения."
+    },
+    {
+      "code": "AYT",
+      "block": "wifi",
+      "status": "confirmed",
+      "urls": [
+        "https://www.antalya-airport.aero/passazhiry-i-posetiteli-20-ru/uslugi-27-ru/besplatnyy-wi-fi-64-ru"
+      ],
+      "evidence": "Официальные RU страницы прочитаны web 10.11: T1/внутренний соединены с отдельными входами; T2 2,5 км/5 минут; автобус/такси. Wi-Fi 1 час, PIN в киосках, телефон/паспорт/ID, CIP и lounges без ограничения."
+    },
+    {
+      "code": "HRG",
+      "block": "sleep",
+      "status": "partial",
+      "urls": [
+        "https://pearlassist.com/maasp-dep-hrg",
+        "https://www.sleepinginairports.net/guides/hurghada-airport-guide.htm"
+      ],
+      "evidence": "Оператор Pearl подтверждает sleeping pods в T1; SleepingInAirports также подтверждает, но ссылается на airport website, независимость происхождения не установлена. Основное утверждение подтверждено первичным оператором."
+    },
+    {
+      "code": "IST",
+      "block": "storage",
+      "status": "unavailable",
+      "urls": [
+        "https://www.istairport.com/en/services/discover/airport-facilities/left-luggage-offices-and-storage-lockers?locale=en"
+      ],
+      "evidence": "Web timeout; native browser evidence не сохранено до security STOP."
+    },
+    {
+      "code": "KZN",
+      "block": "parking",
+      "status": "unavailable",
+      "urls": [
+        "https://kazan.aero/services/parking/"
+      ],
+      "evidence": "Web не вернул содержательного текста; native browser evidence не сохранено до security STOP."
+    },
+    {
+      "code": "OVB",
+      "block": "about",
+      "status": "unavailable",
+      "urls": [
+        "https://tolmachevo.ru/airport/info/"
+      ],
+      "evidence": "Защищённый официальный сайт: обычный браузер требовался; сохранённого AX нет. Не делались requests/bypass."
+    },
+    {
+      "code": "OVB",
+      "block": "lounges",
+      "status": "unavailable",
+      "urls": [
+        "https://tolmachevo.ru/services/comfort/biznes-premier/",
+        "https://tolmachevo.ru/services/comfort/businessm/"
+      ],
+      "evidence": "Защищённый официальный сайт: обычный браузер требовался; сохранённого AX нет. Не делались requests/bypass."
+    },
+    {
+      "code": "OVB",
+      "block": "parking",
+      "status": "unavailable",
+      "urls": [
+        "https://tolmachevo.ru/transport/parking/tariff/"
+      ],
+      "evidence": "Защищённый официальный сайт: обычный браузер требовался; сохранённого AX нет. Не делались requests/bypass."
+    },
+    {
+      "code": "OVB",
+      "block": "transport",
+      "status": "unavailable",
+      "urls": [
+        "https://tolmachevo.ru/transport/how/bus/111/",
+        "https://tolmachevo.ru/transport/how/ob-tolmchevo-ob/"
+      ],
+      "evidence": "Защищённый официальный сайт: обычный браузер требовался; сохранённого AX нет. Не делались requests/bypass."
+    },
+    {
+      "code": "SSH",
+      "block": "lounges",
+      "status": "partial",
+      "urls": [
+        "https://www.prioritypass.com/en-GB/lounges/egypt/sharm-el-sheikh-international/ssh-pearl-lounge",
+        "https://en.dragonpass.com.cn/lounge/303489",
+        "https://www.sleepinginairports.net/guides/sharm-el-sheikh-airport-guide.htm"
+      ],
+      "evidence": "Priority Pass и DragonPass: T1 после passport/security, international departures only, 24h, максимум 3 часа. Лимит опущен в RU; paid pass по третьему источнику в этом проходе не перепроверен."
+    }
+  ]
+}

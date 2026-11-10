@@ -24,7 +24,7 @@
   "parking": {
    "title": "Parken",
    "hint": "10 Min. kostenlos",
-   "text": "Vorplatz: die ersten 10 Minuten kostenlos, die erste Stunde 250 ₽, die zweite bis vierte je 200 ₽, über 4 Stunden 900 ₽ pro 24 Stunden. Tagesparkplatz (Einfahrt Nr. 5): die ersten drei Stunden je 200 ₽, ab der 181. Minute für die ersten 24 Stunden 600 ₽, für zweimal 24 Stunden 1100 ₽, für dreimal 24 Stunden 1500 ₽, danach 300 ₽ pro 24 Stunden. Es gibt einen kostenlosen Parkplatz für mindestens 130 Autos."
+   "text": "Vorplatz: die ersten 10 Minuten kostenlos, die erste Stunde 250 ₽, die zweite bis vierte je 200 ₽, über 4 Stunden 900 ₽ pro Tag. Tagesparkplatz (Einfahrt Nr. 5): die ersten drei Stunden je 200 ₽, ab der 181. Minute für den ersten Tag 600 ₽, für zwei Tage 1100 ₽, für drei Tage 1500 ₽, danach 300 ₽ pro Tag. Es gibt einen kostenlosen Parkplatz für mindestens 130 Autos."
   }
  }
 }

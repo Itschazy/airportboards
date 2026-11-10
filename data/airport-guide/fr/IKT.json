@@ -19,8 +19,8 @@
   },
   "storage": {
    "title": "Consigne à bagages",
-   "hint": "610 ₽ par période de 24 heures",
-   "text": "Dans le terminal domestique au niveau 1, paiement en espèces ou par carte. 610 ₽ par bagage et par période de 24 heures ; un bagage de plus de 40×40×50 cm est facturé selon le nombre de places occupées. Dans le terminal international, la consigne est au niveau 2 et ne fonctionne qu'en cas de retard des vols. Téléphone +7 (3952) 266-194."
+   "hint": "Dès 610 ₽ par jour",
+   "text": "Dans le terminal domestique au niveau 1, paiement en espèces ou par carte. Le tarif de base est de 610 ₽ par bagage et par jour pour une valeur déclarée jusqu’à 2000 ₽. La déclaration de valeur est obligatoire ; au-delà de 2000 ₽, un supplément de 100 ₽ s’applique pour chaque tranche supplémentaire de 1000 ₽ de valeur déclarée. Les bagages de plus de 40×40×50 cm sont facturés selon le nombre de places occupées. Dans le terminal international, la consigne est au niveau 2 et n’ouvre qu’en cas de retard de vols internationaux. Téléphone +7 (3952) 266-194."
   },
   "sleep": {
    "title": "Où dormir",
@@ -35,7 +35,7 @@
   "parking": {
    "title": "Parking",
    "hint": "10 min gratuites",
-   "text": "Les 10 premières minutes sont gratuites. 11–20 minutes 100 ₽, jusqu'à 1 heure 350 ₽, de 2 h 41 min à 24 heures 1200 ₽, chaque période suivante de 24 heures 1200 ₽. Chaque terminal a son propre parking. Zone de dépose et de prise en charge : 10 minutes gratuites, au-delà pénalité de 2000 ₽ de l'heure."
+   "text": "Les 10 premières minutes sont gratuites. 11–20 minutes 100 ₽, 21–30 minutes 200 ₽, 31–40 minutes 250 ₽, 41–50 minutes 300 ₽, 51–60 minutes 350 ₽. De 1 h 01 min à 2 h 40 min, le tarif passe de 400 à 850 ₽ par paliers de 50 ₽ toutes les 10 minutes ; de 2 h 41 min à 24 heures 1200 ₽, chaque période suivante de 24 heures 1200 ₽. Chaque terminal a son propre parking. Zone de dépose et de prise en charge : 10 minutes gratuites, au-delà pénalité de 2000 ₽ de l'heure."
   }
  }
 }

@@ -5,7 +5,7 @@
   "transport": {
    "title": "Anreise",
    "hint": "Transfer in die Stadt 1500 ₽",
-   "text": "Flughafentransfer ab dem Vorplatz im Auto mit Fahrer. Ischewsk und Umland bis 30 km 1500 ₽, Wotkinsk 4000 ₽, Sarapul 5000 ₽, Tschaikowski 6000 ₽. Bestellung mindestens 3 Stunden vorher auf izhavia.su oder nach der Ankunft an der Flughafenkasse, sofern Autos frei sind."
+   "text": "Flughafentransfer ab dem Terminalvorplatz im Auto mit Fahrer, verfügbar für Passagiere von Linienflügen. Eine Fahrt zu einer Adresse in Ischewsk kostet 1500 ₽; Ziele im Umland im Umkreis von bis zu 30 km vom Flughafen sind nach vorheriger Absprache zum gleichen Tarif möglich. Wotkinsk 4000 ₽, Sarapul 5000 ₽, Tschaikowski 6000 ₽. Bestellung mindestens 3 Stunden vorher auf izhavia.su oder nach der Ankunft an der Flughafenkasse, sofern Autos verfügbar sind."
   },
   "terminals": {
    "title": "Terminal",
@@ -30,7 +30,7 @@
   "parking": {
    "title": "Parken",
    "hint": "15 Min. kostenlos",
-   "text": "Bis 15 Minuten kostenlos, von 16 bis 30 Minuten 250 ₽, von 30 Minuten bis 2 Stunden 500 ₽/Stunde, über 2 Stunden 750 ₽/24 Stunden. VIP-Parkplatz 300 ₽/Stunde bis 5 Stunden, ohne kostenlose Zeit. Ausfahrt innerhalb von 15 Minuten nach der Bezahlung. Für Fahrzeuge von Menschen mit Behinderung aus dem föderalen Register kostenlos."
+   "text": "Bis 15 Minuten kostenlos, von 16 bis 30 Minuten 250 ₽, von 30 Minuten bis 2 Stunden 500 ₽/Stunde, über 2 Stunden 750 ₽/Tag. VIP-Parkplatz 300 ₽/Stunde bis 5 Stunden, ohne kostenlose Zeit. Ausfahrt innerhalb von 15 Minuten nach der Bezahlung. Für Fahrzeuge von Menschen mit Behinderung aus dem föderalen Register kostenlos."
   }
  }
 }

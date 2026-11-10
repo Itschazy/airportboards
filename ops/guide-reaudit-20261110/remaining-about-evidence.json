@@ -1,0 +1,40 @@
+[
+  {
+    "code": "NYM",
+    "block": "lounges",
+    "claim": "отдельный вход/собственная парковка",
+    "status": "confirmed",
+    "matches": [
+      {
+        "block": "parking",
+        "excerpt": "располагается на привокзальной площади в правой части «Зала регистрации», имеет отдельный вход, индивидуальный подъезд и парковку для автотранспорта.\n\nКомплекс услуг включает"
+      }
+    ],
+    "note": "Independently read full VIP paragraph in NYM parking extra_sources[0]; explicitly separate entrance, individual access and parking. Combined with main lounge source closes cited evidence gap.",
+    "url": "https://avianadym.ru/Passengers/passengers_vilet_prilet.php"
+  },
+  {
+    "code": "SCW",
+    "block": "parking",
+    "claim": "адрес Колхозная3Б",
+    "status": "unverified",
+    "matches": [],
+    "note": "Absence in saved official source is not proof claim is false. No new network fetch or data change."
+  },
+  {
+    "code": "ULV",
+    "block": "about",
+    "claim": "имяКарамзина иАвиционная20",
+    "status": "unverified",
+    "matches": [],
+    "note": "Absence in saved official source is not proof claim is false. No new network fetch or data change."
+  },
+  {
+    "code": "UUS",
+    "block": "about",
+    "claim": "оператор и47000кв.м",
+    "status": "unverified",
+    "matches": [],
+    "note": "Absence in saved official source is not proof claim is false. No new network fetch or data change."
+  }
+]

@@ -10,7 +10,7 @@
   "storage": {
    "title": "Consigne à bagages",
    "hint": "B, D et Aeroexpress",
-   "text": "Des consignes payantes se trouvent dans le Terminal B (niveau 1), le Terminal D (niveau −1) et le terminal « Aeroexpress », toutes en zone publique. Dans B et le terminal « Aeroexpress », elles sont ouvertes jour et nuit. Les premières 24 heures coûtent 700 ₽ par bagage, ensuite 300 ₽ par 24 heures. Un bagage pèse au maximum 32 kg, durée de garde jusqu'à 6 mois."
+   "text": "Des consignes payantes se trouvent dans le Terminal B (niveau 1), le Terminal D (niveau −1) et le terminal « Aeroexpress », toutes en zone publique. Dans B et le terminal « Aeroexpress », elles sont ouvertes jour et nuit. Dans B et D, le tarif « Standard » est de 700 ₽ pour le premier jour calendaire jusqu’à 00:00, puis de 300 ₽ par jour calendaire suivant. Tout jour calendaire entamé est facturé en entier. Un bagage ne doit pas dépasser 32 kg."
   },
   "sleep": {
    "title": "Où dormir",

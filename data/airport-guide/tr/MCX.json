@@ -15,7 +15,7 @@
   "parking": {
    "title": "Otopark",
    "hint": "15 dakika ücretsiz",
-   "text": "Genel alan: ilk girişte 15 dakikaya kadar ücretsiz, sonrası saati 400 ₽, 3 saatin üzerinde her 24 saat için 1200 ₽. Girişte sağdaki günlük otopark her 24 saat için 600 ₽. İndirme alanı (birinci şerit): 10 dakikanın üzerinde saati 1500 ₽. 30 dakika içinde tekrar giriş ücretli. Ödemeden sonra çıkış için 30 dakika."
+   "text": "Genel alan: ilk girişte 15 dakikaya kadar ücretsiz, sonrası saati 400 ₽, 3 saatin üzerinde gün başına 1200 ₽. Girişte sağdaki günlük otopark gün başına 600 ₽. İndirme alanı (birinci şerit): 10 dakikanın üzerinde saati 1500 ₽. 30 dakika içinde tekrar giriş ücretli. Ödemeden sonra çıkış için 30 dakika."
   }
  }
 }

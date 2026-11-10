@@ -20,7 +20,7 @@
   "parking": {
    "title": "Aparcamiento",
    "hint": "15 min gratis",
-   "text": "Aparcamiento central de corta estancia: hasta 15 minutos gratis, hasta una hora 300 ₽, hasta 24 horas 500 ₽, después 500 ₽ por cada 24 horas. Larga estancia: hasta 10 minutos gratis, hasta 24 horas 400 ₽, después 400 ₽ por cada 24 horas. La hora incompleta y el periodo de 24 horas incompleto se pagan como completos."
+   "text": "Aparcamiento central de corta estancia: hasta 15 minutos gratis, hasta una hora 300 ₽, hasta un día 500 ₽, después 500 ₽ por día. Larga estancia: hasta 10 minutos gratis, hasta un día 400 ₽, después 400 ₽ por día. La hora incompleta y el día incompleto se pagan como completos."
   },
   "wifi": {
    "title": "Wi‑Fi",

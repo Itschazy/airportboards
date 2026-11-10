@@ -8,8 +8,8 @@
   },
   "storage": {
    "title": "Left luggage",
-   "hint": "380 ₽ per 24 hours",
-   "text": "Left luggage: 380 ₽ per item per 24 hours (price list from 01.10.2026)."
+   "hint": "380 ₽ per day",
+   "text": "Left luggage: 380 ₽ per item per day (price list from 01.10.2026)."
   },
   "kids": {
    "title": "With children",

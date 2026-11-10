@@ -20,7 +20,7 @@
   "storage": {
    "title": "Consigne à bagages",
    "hint": "Terminal A, niveau −1",
-   "text": "Terminal A, niveau −1. 200 ₽ de l'heure, 500 ₽ pour les premières 24 heures, 300 ₽ par tranche de 24 heures suivante. Hors format (plus de 50×50×80 cm ou plus de 20 kg) : 400 ₽ de l'heure, 800 ₽ pour les premières 24 heures, 500 ₽ par tranche de 24 heures suivante. Vestiaire pour vêtements d'extérieur : 100 ₽ par ensemble."
+   "text": "Terminal A, niveau −1. 200 ₽ de l'heure, 500 ₽ pour le premier jour, 300 ₽ par jour suivant. Hors format (plus de 50×50×80 cm ou plus de 20 kg) : 400 ₽ de l'heure, 800 ₽ pour le premier jour, 500 ₽ par jour suivant. Vestiaire pour vêtements d'extérieur : 100 ₽ par ensemble jusqu’à 1 heure, 300 ₽ de 1 à 24 heures, 200 ₽ par jour suivant."
   },
   "sleep": {
    "title": "Où dormir",
@@ -35,7 +35,7 @@
   "parking": {
    "title": "Parking",
    "hint": "15 min gratuites",
-   "text": "Zone de dépose et de prise en charge : jusqu'à 15 minutes gratuit, 16–60 minutes 880 ₽, ensuite 880 ₽ de l'heure. Parking P1 près du terminal sans temps gratuit : 1 heure 360 ₽, jusqu'à 24 heures 900 ₽. Longue durée P2 et P6 : à partir de 1790 ₽ et 1380 ₽ pour 2 jours de 24 heures. P0 gratuit, à 5 minutes du terminal."
+   "text": "Zone de dépose et de prise en charge : jusqu'à 15 minutes gratuit, 16–60 minutes 880 ₽, ensuite 880 ₽ de l'heure. Parking P1 près du terminal sans temps gratuit : 1 heure 360 ₽, jusqu'à 24 heures 900 ₽. Longue durée P2 et P6 : à partir de 1790 ₽ et 1380 ₽ pour 2 jours. P0 gratuit, à 5 minutes du terminal."
   },
   "wifi": {
    "title": "Wi‑Fi",

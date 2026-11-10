@@ -10,7 +10,7 @@
     "storage": {
       "title": "Deposito bagagli",
       "hint": "B, D e Aeroexpress",
-      "text": "Ci sono depositi bagagli a pagamento nel Terminal B (livello 1), nel Terminal D (livello −1) e nel terminal «Aeroexpress», tutti nell’area pubblica. In B e nel terminal «Aeroexpress» sono aperti giorno e notte. Le prime 24 ore costano 700 ₽ a collo, poi 300 ₽ ogni 24 ore. Un collo pesa al massimo 32 kg, custodia fino a 6 mesi."
+      "text": "Ci sono depositi bagagli a pagamento nel Terminal B (livello 1), nel Terminal D (livello −1) e nel terminal «Aeroexpress», tutti nell’area pubblica. In B e nel terminal «Aeroexpress» sono aperti giorno e notte. In B e D, la tariffa «Standard» è di 700 ₽ per il primo giorno di calendario fino alle 00:00, poi 300 ₽ per ogni giorno di calendario successivo. Ogni giorno di calendario iniziato si paga per intero. Un collo può pesare al massimo 32 kg."
     },
     "sleep": {
       "title": "Dove dormire",

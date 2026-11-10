@@ -5,7 +5,7 @@
     "transport": {
       "title": "Come arrivare",
       "hint": "Transfer in città 1500 ₽",
-      "text": "Transfer dell’aeroporto dal piazzale dell’aerostazione in auto con autista. Izhevsk e dintorni fino a 30 km 1500 ₽, Votkinsk 4000 ₽, Sarapul 5000 ₽, Chaykovsky 6000 ₽. Prenotazione con 3 ore o più di anticipo su izhavia.su o dopo l’arrivo alla cassa dell’aeroporto, se ci sono auto libere."
+      "text": "Transfer dell’aeroporto dal piazzale dell’aerostazione in auto con autista, disponibile per i passeggeri dei voli di linea. Il viaggio verso un solo indirizzo a Izhevsk costa 1500 ₽; nei dintorni, entro un raggio di 30 km dall’aeroporto, si applica la stessa tariffa previo accordo. Votkinsk 4000 ₽, Sarapul 5000 ₽, Chaykovsky 6000 ₽. Prenotazione con almeno 3 ore di anticipo su izhavia.su o dopo l’arrivo alla cassa dell’aeroporto, secondo la disponibilità di auto."
     },
     "terminals": {
       "title": "Terminal",
@@ -30,7 +30,7 @@
     "parking": {
       "title": "Parcheggio",
       "hint": "15 min gratis",
-      "text": "Fino a 15 minuti gratis, da 16 a 30 minuti 250 ₽, da 30 minuti a 2 ore 500 ₽/ora, oltre 2 ore 750 ₽/24 ore. Parcheggio VIP 300 ₽/ora fino a 5 ore, senza tempo gratuito. Uscita entro 15 minuti dal pagamento. Gratis per le auto delle persone con disabilità iscritte nel registro federale."
+      "text": "Fino a 15 minuti gratis, da 16 a 30 minuti 250 ₽, da 30 minuti a 2 ore 500 ₽/ora, oltre 2 ore 750 ₽/giorno. Parcheggio VIP 300 ₽/ora fino a 5 ore, senza tempo gratuito. Uscita entro 15 minuti dal pagamento. Gratis per le auto delle persone con disabilità iscritte nel registro federale."
     }
   }
 }

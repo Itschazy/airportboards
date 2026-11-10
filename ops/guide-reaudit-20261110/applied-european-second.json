@@ -1,0 +1,220 @@
+{
+  "changes": [
+    {
+      "file": "data/airport-guide/en/ZIA.json",
+      "code": "ZIA",
+      "block": "parking",
+      "locale": "en",
+      "field": "text",
+      "before": "Short-stay zone: first 15 min free, first hour 350 ₽, from the 2nd to the 4th hour 250 ₽/hour, from the 5th hour 3,000 ₽ per 24 hours. Long-stay zone: 700 ₽ per 24 hours for periods 1 to 5, 100 ₽ per 24 hours for periods 6 to 13, 700 ₽ per 24 hours from period 14; each period is 24 hours. The next free entry is possible no sooner than 45 min later.",
+      "after": "Short-stay zone: first 15 min free, first hour 350 ₽, from the 2nd to the 4th hour 250 ₽/hour, from the 5th hour 3,000 ₽ per 24 hours. Long-stay zone: 700 ₽ per 24 hours for periods 1 to 5, 100 ₽ per 24 hours for periods 6 to 13, 700 ₽ per 24 hours from period 14; each period is 24 hours. The next free entry is possible no earlier than 45 minutes after the end of the first free 15-minute period."
+    },
+    {
+      "file": "data/airport-guide/de/ZIA.json",
+      "code": "ZIA",
+      "block": "parking",
+      "locale": "de",
+      "field": "text",
+      "before": "Kurzzeitzone: die ersten 15 Min. kostenlos, die erste Stunde 350 ₽, von der 2. bis zur 4. Stunde 250 ₽/Stunde, ab der 5. Stunde 3000 ₽ pro 24 Stunden. Langzeitzone: 700 ₽ pro 24 Stunden für den 1. bis 5. Zeitraum, 100 ₽ pro 24 Stunden für den 6. bis 13. Zeitraum, 700 ₽ pro 24 Stunden ab dem 14. Zeitraum; jeder Zeitraum umfasst 24 Stunden. Erneute kostenlose Einfahrt frühestens nach 45 Min.",
+      "after": "Kurzzeitzone: die ersten 15 Min. kostenlos, die erste Stunde 350 ₽, von der 2. bis zur 4. Stunde 250 ₽/Stunde, ab der 5. Stunde 3000 ₽ pro 24 Stunden. Langzeitzone: 700 ₽ pro 24 Stunden für den 1. bis 5. Zeitraum, 100 ₽ pro 24 Stunden für den 6. bis 13. Zeitraum, 700 ₽ pro 24 Stunden ab dem 14. Zeitraum; jeder Zeitraum umfasst 24 Stunden. Eine erneute kostenlose Einfahrt ist frühestens 45 Minuten nach Ende des ersten kostenlosen 15-Minuten-Zeitraums möglich."
+    },
+    {
+      "file": "data/airport-guide/fr/ZIA.json",
+      "code": "ZIA",
+      "block": "parking",
+      "locale": "fr",
+      "field": "text",
+      "before": "Zone courte durée : 15 premières min gratuites, première heure 350 ₽, de la 2e à la 4e heure 250 ₽/heure, à partir de la 5e heure 3000 ₽ par 24 heures. Zone longue durée : 700 ₽ par tranche de 24 heures de la 1re à la 5e tranche, 100 ₽ de la 6e à la 13e, 700 ₽ à partir de la 14e. Nouvelle entrée gratuite au plus tôt 45 min après.",
+      "after": "Zone courte durée : 15 premières min gratuites, première heure 350 ₽, de la 2e à la 4e heure 250 ₽/heure, à partir de la 5e heure 3000 ₽ par 24 heures. Zone longue durée : 700 ₽ par tranche de 24 heures de la 1re à la 5e tranche, 100 ₽ de la 6e à la 13e, 700 ₽ à partir de la 14e. Une nouvelle entrée gratuite est possible au plus tôt 45 minutes après la fin de la première période gratuite de 15 minutes."
+    },
+    {
+      "file": "data/airport-guide/es/ZIA.json",
+      "code": "ZIA",
+      "block": "parking",
+      "locale": "es",
+      "field": "text",
+      "before": "Zona de corta estancia: los primeros 15 min gratis, la primera hora 350 ₽, de la 2.ª a la 4.ª hora 250 ₽/hora, a partir de la 5.ª hora 3000 ₽ por cada 24 horas. Zona de larga estancia: 700 ₽ por cada periodo de 24 horas del 1.º al 5.º, 100 ₽ del 6.º al 13.º y 700 ₽ a partir del 14.º. Una nueva entrada gratuita solo es posible pasados 45 min.",
+      "after": "Zona de corta estancia: los primeros 15 min gratis, la primera hora 350 ₽, de la 2.ª a la 4.ª hora 250 ₽/hora, a partir de la 5.ª hora 3000 ₽ por cada 24 horas. Zona de larga estancia: 700 ₽ por cada periodo de 24 horas del 1.º al 5.º, 100 ₽ del 6.º al 13.º y 700 ₽ a partir del 14.º. Una nueva entrada gratuita es posible como mínimo 45 minutos después de finalizar el primer periodo gratuito de 15 minutos."
+    },
+    {
+      "file": "data/airport-guide/it/ZIA.json",
+      "code": "ZIA",
+      "block": "parking",
+      "locale": "it",
+      "field": "text",
+      "before": "Zona breve sosta: i primi 15 min gratis, la prima ora 350 ₽, dalla 2ª alla 4ª ora 250 ₽/ora, dalla 5ª ora 3000 ₽ ogni 24 ore. Zona lunga sosta: 700 ₽ per ogni periodo di 24 ore dal 1° al 5°, 100 ₽ dal 6° al 13°, 700 ₽ dal 14° periodo. Nuovo ingresso gratuito non prima di 45 min.",
+      "after": "Zona breve sosta: i primi 15 min gratis, la prima ora 350 ₽, dalla 2ª alla 4ª ora 250 ₽/ora, dalla 5ª ora 3000 ₽ ogni 24 ore. Zona lunga sosta: 700 ₽ per ogni periodo di 24 ore dal 1° al 5°, 100 ₽ dal 6° al 13°, 700 ₽ dal 14° periodo. Un nuovo ingresso gratuito è possibile non prima di 45 minuti dalla fine del primo periodo gratuito di 15 minuti."
+    },
+    {
+      "file": "data/airport-guide/tr/ZIA.json",
+      "code": "ZIA",
+      "block": "parking",
+      "locale": "tr",
+      "field": "text",
+      "before": "Kısa süreli alan: ilk 15 dk ücretsiz, ilk saat 350 ₽, 2. ila 4. saat saati 250 ₽, 5. saatten itibaren her 24 saat için 3000 ₽. Uzun süreli alan: 24 saatlik 1. ila 5. dönemde her dönem 700 ₽, 6. ila 13. dönemde 100 ₽, 14. dönemden itibaren 700 ₽. Ücretsiz tekrar giriş en erken 45 dk sonra.",
+      "after": "Kısa süreli alan: ilk 15 dk ücretsiz, ilk saat 350 ₽, 2. ila 4. saat saati 250 ₽, 5. saatten itibaren her 24 saat için 3000 ₽. Uzun süreli alan: 24 saatlik 1. ila 5. dönemde her dönem 700 ₽, 6. ila 13. dönemde 100 ₽, 14. dönemden itibaren 700 ₽. Ücretsiz tekrar giriş, ilk ücretsiz 15 dakikalık sürenin bitiminden en erken 45 dakika sonra mümkündür."
+    },
+    {
+      "file": "data/airport-guide/en/IAR.json",
+      "code": "IAR",
+      "block": "kids",
+      "locale": "en",
+      "field": "text",
+      "before": "The room for passengers with children is in the departure hall, airside. Admits passengers with children or disabled children under 14 with a boarding pass. Free, up to 3 hours before departure during the day and up to 4 hours at night. There is no room in the arrivals hall.",
+      "after": "The room for passengers with children is in the departure hall, airside. A boarding pass is required for entry. Check the age conditions with the airport before travelling. Free, up to 3 hours before departure during the day and up to 4 hours at night. There is no room in the arrivals hall."
+    },
+    {
+      "file": "data/airport-guide/de/IAR.json",
+      "code": "IAR",
+      "block": "kids",
+      "locale": "de",
+      "field": "text",
+      "before": "Der Raum für Passagiere mit Kindern befindet sich in der Abflughalle, im Sicherheitsbereich. Zugang mit Kindern oder Kindern mit Behinderung unter 14 Jahren mit Bordkarte. Kostenlos, bis zu 3 Stunden vor Abflug tagsüber und bis zu 4 Stunden nachts. In der Ankunftshalle gibt es keinen solchen Raum.",
+      "after": "Der Raum für Passagiere mit Kindern befindet sich in der Abflughalle, im Sicherheitsbereich. Für den Zutritt ist eine Bordkarte erforderlich. Erkundigen Sie sich vor der Reise beim Flughafen nach den Altersbedingungen. Kostenlos, bis zu 3 Stunden vor Abflug tagsüber und bis zu 4 Stunden nachts. In der Ankunftshalle gibt es keinen solchen Raum."
+    },
+    {
+      "file": "data/airport-guide/fr/IAR.json",
+      "code": "IAR",
+      "block": "kids",
+      "locale": "fr",
+      "field": "text",
+      "before": "La salle des passagers avec enfants se trouve dans le hall des départs, en zone réservée. Accès avec des enfants ou des enfants handicapés de moins de 14 ans sur présentation de la carte d'embarquement. Gratuit, jusqu'à 3 heures avant le départ le jour et jusqu'à 4 heures la nuit. Il n'y a pas de salle dans le hall des arrivées.",
+      "after": "La salle des passagers avec enfants se trouve dans le hall des départs, en zone réservée. Une carte d’embarquement est nécessaire pour entrer. Vérifiez les conditions d’âge auprès de l’aéroport avant le voyage. Gratuit, jusqu'à 3 heures avant le départ le jour et jusqu'à 4 heures la nuit. Il n'y a pas de salle dans le hall des arrivées."
+    },
+    {
+      "file": "data/airport-guide/es/IAR.json",
+      "code": "IAR",
+      "block": "kids",
+      "locale": "es",
+      "field": "text",
+      "before": "La sala para pasajeros con niños está en la sala de salidas, en la zona estéril. Se admite a pasajeros con niños o niños con discapacidad menores de 14 años, con tarjeta de embarque. Gratis, hasta 3 horas antes de la salida de día y hasta 4 horas de noche. En la sala de llegadas no la hay.",
+      "after": "La sala para pasajeros con niños está en la sala de salidas, en la zona estéril. Para entrar se necesita una tarjeta de embarque. Consulte las condiciones de edad con el aeropuerto antes del viaje. Gratis, hasta 3 horas antes de la salida de día y hasta 4 horas de noche. En la sala de llegadas no la hay."
+    },
+    {
+      "file": "data/airport-guide/it/IAR.json",
+      "code": "IAR",
+      "block": "kids",
+      "locale": "it",
+      "field": "text",
+      "before": "La sala per passeggeri con bambini si trova nella sala partenze, nella zona sterile. Si accede con bambini o bambini con disabilità sotto i 14 anni con la carta d’imbarco. Gratis, fino a 3 ore prima della partenza di giorno e fino a 4 ore di notte. Nella sala arrivi questa sala non c’è.",
+      "after": "La sala per passeggeri con bambini si trova nella sala partenze, nella zona sterile. Per entrare è necessaria la carta d’imbarco. Verificate le condizioni relative all’età con l’aeroporto prima del viaggio. Gratis, fino a 3 ore prima della partenza di giorno e fino a 4 ore di notte. Nella sala arrivi questa sala non c’è."
+    },
+    {
+      "file": "data/airport-guide/tr/IAR.json",
+      "code": "IAR",
+      "block": "kids",
+      "locale": "tr",
+      "field": "text",
+      "before": "Çocuklu yolcu odası gidiş salonunda, steril alanda. 14 yaşından küçük çocuklarla veya engelli çocuklarla biniş kartıyla girilir. Ücretsiz; kalkıştan önce gündüz 3 saate, gece 4 saate kadar. Geliş salonunda oda yok.",
+      "after": "Çocuklu yolcu odası gidiş salonunda, steril alanda. Giriş için biniş kartı gerekir. Yaş koşullarını seyahatten önce havalimanından öğrenin. Ücretsiz; kalkıştan önce gündüz 3 saate, gece 4 saate kadar. Geliş salonunda oda yok."
+    },
+    {
+      "file": "data/airport-guide/en/NJC.json",
+      "code": "NJC",
+      "block": "lounges",
+      "locale": "en",
+      "field": "text",
+      "before": "Business lounge on Level 1 of terminal 1, open round the clock. Admits business class passengers and holders of elite airline cards, others for a fee if places are available. Departure 7,950 ₽ for 2 h 30 min, each following hour 1,141 ₽. Arrival, meeting or seeing off 4,050 ₽. Children 2–12 years 70 % of the fare, under 2 free.",
+      "after": "Business lounge on Level 1 of terminal 1, open round the clock. Business-class passengers and elite cardholders are served under agreements with airlines; without such an agreement, a fee applies. Other passengers are admitted for a fee subject to available space. Departure 7,950 ₽ for 2 h 30 min, each following hour 1,141 ₽. Arrival, meeting or seeing off 4,050 ₽. Children 2–12 years 70 % of the fare, under 2 free."
+    },
+    {
+      "file": "data/airport-guide/de/NJC.json",
+      "code": "NJC",
+      "block": "lounges",
+      "locale": "de",
+      "field": "text",
+      "before": "Business-Lounge auf Ebene 1 von Terminal 1, rund um die Uhr geöffnet. Zugang für Passagiere der Business Class und Inhaber von Elite-Karten der Fluggesellschaften, alle anderen gegen Gebühr bei freien Plätzen. Abflug 7950 ₽ für 2 Std. 30 Min., jede weitere Stunde 1141 ₽. Ankunft, Abholung oder Verabschiedung 4050 ₽. Kinder von 2–12 Jahren 70 % des Tarifs, unter 2 Jahren kostenlos.",
+      "after": "Business-Lounge auf Ebene 1 von Terminal 1, rund um die Uhr geöffnet. Business-Class-Passagiere und Inhaber von Elite-Karten werden im Rahmen von Verträgen mit Fluggesellschaften betreut; ohne einen solchen Vertrag ist der Zugang kostenpflichtig. Andere Passagiere werden gegen Gebühr aufgenommen, sofern Plätze verfügbar sind. Abflug 7950 ₽ für 2 Std. 30 Min., jede weitere Stunde 1141 ₽. Ankunft, Abholung oder Verabschiedung 4050 ₽. Kinder von 2–12 Jahren 70 % des Tarifs, unter 2 Jahren kostenlos."
+    },
+    {
+      "file": "data/airport-guide/fr/NJC.json",
+      "code": "NJC",
+      "block": "lounges",
+      "locale": "fr",
+      "field": "text",
+      "before": "Salon au niveau 1 du terminal 1, ouvert jour et nuit. Accès pour les passagers de classe affaires et les titulaires de cartes élite des compagnies aériennes, pour les autres payant selon les places disponibles. Départ 7950 ₽ pour 2 h 30 min, chaque heure suivante 1141 ₽. Arrivée, accueil ou accompagnement 4050 ₽. Enfants de 2 à 12 ans 70 % du tarif, gratuit pour les moins de 2 ans.",
+      "after": "Salon au niveau 1 du terminal 1, ouvert jour et nuit. Les passagers de classe affaires et les titulaires de cartes élite sont accueillis dans le cadre d’accords avec les compagnies aériennes ; sans un tel accord, l’accès est payant. Les autres passagers sont admis moyennant paiement, sous réserve de places disponibles. Départ 7950 ₽ pour 2 h 30 min, chaque heure suivante 1141 ₽. Arrivée, accueil ou accompagnement 4050 ₽. Enfants de 2 à 12 ans 70 % du tarif, gratuit pour les moins de 2 ans."
+    },
+    {
+      "file": "data/airport-guide/es/NJC.json",
+      "code": "NJC",
+      "block": "lounges",
+      "locale": "es",
+      "field": "text",
+      "before": "Sala business en el nivel 1 de la terminal 1, abierta día y noche. Admite a pasajeros de clase business y titulares de tarjetas élite de aerolíneas; a los demás, previo pago si hay plazas libres. Salida: 7950 ₽ por 2 h 30 min, cada hora siguiente 1141 ₽. Llegada, recibimiento o despedida: 4050 ₽. Niños de 2–12 años, 70 % de la tarifa; menores de 2 años gratis.",
+      "after": "Sala business en el nivel 1 de la terminal 1, abierta día y noche. Los pasajeros de clase business y los titulares de tarjetas élite reciben el servicio según los acuerdos con las aerolíneas; sin dicho acuerdo, el acceso es de pago. Los demás pasajeros pueden acceder previo pago, si hay plazas disponibles. Salida: 7950 ₽ por 2 h 30 min, cada hora siguiente 1141 ₽. Llegada, recibimiento o despedida: 4050 ₽. Niños de 2–12 años, 70 % de la tarifa; menores de 2 años gratis."
+    },
+    {
+      "file": "data/airport-guide/it/NJC.json",
+      "code": "NJC",
+      "block": "lounges",
+      "locale": "it",
+      "field": "text",
+      "before": "Sala business al livello 1 del terminal 1, aperta giorno e notte. Accedono i passeggeri di classe business e i titolari di carte élite delle compagnie aeree, gli altri a pagamento se ci sono posti liberi. Partenza 7950 ₽ per 2 h 30 min, ogni ora successiva 1141 ₽. Arrivo, accoglienza o accompagnamento 4050 ₽. Bambini 2–12 anni 70 % della tariffa, sotto i 2 anni gratis.",
+      "after": "Sala business al livello 1 del terminal 1, aperta giorno e notte. I passeggeri di classe business e i titolari di carte élite sono serviti in base ad accordi con le compagnie aeree; in assenza di un accordo, l’accesso è a pagamento. Gli altri passeggeri sono ammessi a pagamento, secondo la disponibilità di posti. Partenza 7950 ₽ per 2 h 30 min, ogni ora successiva 1141 ₽. Arrivo, accoglienza o accompagnamento 4050 ₽. Bambini 2–12 anni 70 % della tariffa, sotto i 2 anni gratis."
+    },
+    {
+      "file": "data/airport-guide/tr/NJC.json",
+      "code": "NJC",
+      "block": "lounges",
+      "locale": "tr",
+      "field": "text",
+      "before": "Business salonu Terminal 1'de Kat 1'de, gece gündüz açık. Business sınıfı yolcuları ve havayolu elit kart sahipleri kabul edilir, diğerleri yer varsa ücret karşılığında. Gidiş 2 sa 30 dk için 7950 ₽, sonraki her saat 1141 ₽. Geliş, karşılama veya uğurlama 4050 ₽. 2–12 yaş çocuklar tarifenin %70'i, 2 yaşından küçük ücretsiz.",
+      "after": "Business salonu Terminal 1'de Kat 1'de, gece gündüz açık. Business sınıfı yolculara ve elit kart sahiplerine havayollarıyla yapılan anlaşmalar kapsamında hizmet verilir; böyle bir anlaşma yoksa ücret alınır. Diğer yolcular yer müsaitliğine bağlı olarak ücret karşılığında kabul edilir. Gidiş 2 sa 30 dk için 7950 ₽, sonraki her saat 1141 ₽. Geliş, karşılama veya uğurlama 4050 ₽. 2–12 yaş çocuklar tarifenin %70'i, 2 yaşından küçük ücretsiz."
+    },
+    {
+      "file": "data/airport-guide/en/NJC.json",
+      "code": "NJC",
+      "block": "lounges",
+      "locale": "en",
+      "field": "text",
+      "before": "Business lounge on Level 1 of terminal 1, open round the clock. Business-class passengers and elite cardholders are served under agreements with airlines; without such an agreement, a fee applies. Other passengers are admitted for a fee subject to available space. Departure 7,950 ₽ for 2 h 30 min, each following hour 1,141 ₽. Arrival, meeting or seeing off 4,050 ₽. Children 2–12 years 70 % of the fare, under 2 free.",
+      "after": "Business lounge on Level 1 of terminal 1, open round the clock. Business-class passengers and elite cardholders are served under agreements with airlines; without such an agreement, a fee applies. Other passengers are admitted for a fee subject to available space. Departure 7,950 ₽ for 2 h 30 min, each following hour 1,141 ₽. Arrival, meeting or seeing off 4,050 ₽. Check the child fare conditions with the lounge before visiting."
+    },
+    {
+      "file": "data/airport-guide/de/NJC.json",
+      "code": "NJC",
+      "block": "lounges",
+      "locale": "de",
+      "field": "text",
+      "before": "Business-Lounge auf Ebene 1 von Terminal 1, rund um die Uhr geöffnet. Business-Class-Passagiere und Inhaber von Elite-Karten werden im Rahmen von Verträgen mit Fluggesellschaften betreut; ohne einen solchen Vertrag ist der Zugang kostenpflichtig. Andere Passagiere werden gegen Gebühr aufgenommen, sofern Plätze verfügbar sind. Abflug 7950 ₽ für 2 Std. 30 Min., jede weitere Stunde 1141 ₽. Ankunft, Abholung oder Verabschiedung 4050 ₽. Kinder von 2–12 Jahren 70 % des Tarifs, unter 2 Jahren kostenlos.",
+      "after": "Business-Lounge auf Ebene 1 von Terminal 1, rund um die Uhr geöffnet. Business-Class-Passagiere und Inhaber von Elite-Karten werden im Rahmen von Verträgen mit Fluggesellschaften betreut; ohne einen solchen Vertrag ist der Zugang kostenpflichtig. Andere Passagiere werden gegen Gebühr aufgenommen, sofern Plätze verfügbar sind. Abflug 7950 ₽ für 2 Std. 30 Min., jede weitere Stunde 1141 ₽. Ankunft, Abholung oder Verabschiedung 4050 ₽. Erkundigen Sie sich vor dem Besuch bei der Lounge nach den Bedingungen des Kindertarifs."
+    },
+    {
+      "file": "data/airport-guide/fr/NJC.json",
+      "code": "NJC",
+      "block": "lounges",
+      "locale": "fr",
+      "field": "text",
+      "before": "Salon au niveau 1 du terminal 1, ouvert jour et nuit. Les passagers de classe affaires et les titulaires de cartes élite sont accueillis dans le cadre d’accords avec les compagnies aériennes ; sans un tel accord, l’accès est payant. Les autres passagers sont admis moyennant paiement, sous réserve de places disponibles. Départ 7950 ₽ pour 2 h 30 min, chaque heure suivante 1141 ₽. Arrivée, accueil ou accompagnement 4050 ₽. Enfants de 2 à 12 ans 70 % du tarif, gratuit pour les moins de 2 ans.",
+      "after": "Salon au niveau 1 du terminal 1, ouvert jour et nuit. Les passagers de classe affaires et les titulaires de cartes élite sont accueillis dans le cadre d’accords avec les compagnies aériennes ; sans un tel accord, l’accès est payant. Les autres passagers sont admis moyennant paiement, sous réserve de places disponibles. Départ 7950 ₽ pour 2 h 30 min, chaque heure suivante 1141 ₽. Arrivée, accueil ou accompagnement 4050 ₽. Vérifiez les conditions du tarif enfant auprès du salon avant la visite."
+    },
+    {
+      "file": "data/airport-guide/es/NJC.json",
+      "code": "NJC",
+      "block": "lounges",
+      "locale": "es",
+      "field": "text",
+      "before": "Sala business en el nivel 1 de la terminal 1, abierta día y noche. Los pasajeros de clase business y los titulares de tarjetas élite reciben el servicio según los acuerdos con las aerolíneas; sin dicho acuerdo, el acceso es de pago. Los demás pasajeros pueden acceder previo pago, si hay plazas disponibles. Salida: 7950 ₽ por 2 h 30 min, cada hora siguiente 1141 ₽. Llegada, recibimiento o despedida: 4050 ₽. Niños de 2–12 años, 70 % de la tarifa; menores de 2 años gratis.",
+      "after": "Sala business en el nivel 1 de la terminal 1, abierta día y noche. Los pasajeros de clase business y los titulares de tarjetas élite reciben el servicio según los acuerdos con las aerolíneas; sin dicho acuerdo, el acceso es de pago. Los demás pasajeros pueden acceder previo pago, si hay plazas disponibles. Salida: 7950 ₽ por 2 h 30 min, cada hora siguiente 1141 ₽. Llegada, recibimiento o despedida: 4050 ₽. Consulte las condiciones de la tarifa infantil con la sala antes de la visita."
+    },
+    {
+      "file": "data/airport-guide/it/NJC.json",
+      "code": "NJC",
+      "block": "lounges",
+      "locale": "it",
+      "field": "text",
+      "before": "Sala business al livello 1 del terminal 1, aperta giorno e notte. I passeggeri di classe business e i titolari di carte élite sono serviti in base ad accordi con le compagnie aeree; in assenza di un accordo, l’accesso è a pagamento. Gli altri passeggeri sono ammessi a pagamento, secondo la disponibilità di posti. Partenza 7950 ₽ per 2 h 30 min, ogni ora successiva 1141 ₽. Arrivo, accoglienza o accompagnamento 4050 ₽. Bambini 2–12 anni 70 % della tariffa, sotto i 2 anni gratis.",
+      "after": "Sala business al livello 1 del terminal 1, aperta giorno e notte. I passeggeri di classe business e i titolari di carte élite sono serviti in base ad accordi con le compagnie aeree; in assenza di un accordo, l’accesso è a pagamento. Gli altri passeggeri sono ammessi a pagamento, secondo la disponibilità di posti. Partenza 7950 ₽ per 2 h 30 min, ogni ora successiva 1141 ₽. Arrivo, accoglienza o accompagnamento 4050 ₽. Verificate le condizioni della tariffa bambini con la sala prima della visita."
+    },
+    {
+      "file": "data/airport-guide/tr/NJC.json",
+      "code": "NJC",
+      "block": "lounges",
+      "locale": "tr",
+      "field": "text",
+      "before": "Business salonu Terminal 1'de Kat 1'de, gece gündüz açık. Business sınıfı yolculara ve elit kart sahiplerine havayollarıyla yapılan anlaşmalar kapsamında hizmet verilir; böyle bir anlaşma yoksa ücret alınır. Diğer yolcular yer müsaitliğine bağlı olarak ücret karşılığında kabul edilir. Gidiş 2 sa 30 dk için 7950 ₽, sonraki her saat 1141 ₽. Geliş, karşılama veya uğurlama 4050 ₽. 2–12 yaş çocuklar tarifenin %70'i, 2 yaşından küçük ücretsiz.",
+      "after": "Business salonu Terminal 1'de Kat 1'de, gece gündüz açık. Business sınıfı yolculara ve elit kart sahiplerine havayollarıyla yapılan anlaşmalar kapsamında hizmet verilir; böyle bir anlaşma yoksa ücret alınır. Diğer yolcular yer müsaitliğine bağlı olarak ücret karşılığında kabul edilir. Gidiş 2 sa 30 dk için 7950 ₽, sonraki her saat 1141 ₽. Geliş, karşılama veya uğurlama 4050 ₽. Çocuk tarifesinin koşullarını ziyaretten önce salondan öğrenin."
+    }
+  ]
+}

@@ -35,7 +35,7 @@
     "parking": {
       "title": "Parcheggio",
       "hint": "15 min gratis",
-      "text": "P1 solo carico e scarico, sosta vietata. P2 breve sosta: 15 minuti gratis, 16–60 minuti 300 ₽, dalla 2ª alla 4ª ora 100 ₽/ora, oltre 4 ore 700 ₽/24 ore. P3 lunga sosta: 15 minuti gratis, 500 ₽/24 ore fino a 6 periodi di 24 ore. Ogni periodo di 24 ore iniziato si paga per intero."
+      "text": "P1 solo carico e scarico, sosta vietata. P2 breve sosta: 15 minuti gratis, 16–60 minuti 300 ₽, dalla 2ª alla 4ª ora 100 ₽/ora, oltre 4 ore 700 ₽/giorno. P3 lunga sosta: 15 minuti gratis, 500 ₽/giorno fino a 6 giorni. Ogni giorno iniziato si paga per intero."
     }
   }
 }

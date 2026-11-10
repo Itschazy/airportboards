@@ -15,7 +15,7 @@
   "storage": {
    "title": "Left luggage",
    "hint": "Level 1, 24/7",
-   "text": "Level 1, behind the escalator, open round the clock. Standard rate: 500 ₽ for the first 24 hours, 200 ₽ for each further 24 hours, item up to 203 cm in total dimensions. An incomplete 24-hour period counts as a full one."
+   "text": "Left luggage on Level 1 behind the escalator is open round the clock. Standard rate: 500 ₽ for the first calendar day, 200 ₽ for each subsequent day. The calendar day ends at 23:59; a partial day is charged in full. Each item may measure up to 203 cm in the sum of its three dimensions."
   },
   "sleep": {
    "title": "Where to sleep",

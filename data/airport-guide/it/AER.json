@@ -10,7 +10,7 @@
     "storage": {
       "title": "Deposito bagagli",
       "hint": "Settore C, livello 1, 24/7",
-      "text": "Settore C, livello 1, aperto giorno e notte. Le prime 24 ore costano da 600 ₽ a collo, ogni successivo periodo di 24 ore da 300 ₽. Un collo pesa al massimo 30 kg, la somma delle tre dimensioni non supera 203 cm. Gli oggetti non ritirati entro 30 giorni sono considerati non reclamati. Telefono 8 (862) 249-78-46."
+      "text": "Settore C, livello 1, aperto giorno e notte. Il primo giorno costa da 600 ₽ a collo, ogni giorno successivo da 300 ₽. Un collo pesa al massimo 30 kg, la somma delle tre dimensioni non supera 203 cm. Gli oggetti non ritirati entro 30 giorni sono considerati non reclamati. Telefono 8 (862) 249-78-46."
     },
     "sleep": {
       "title": "Dove dormire",
@@ -30,7 +30,7 @@
     "parking": {
       "title": "Parcheggio",
       "hint": "15 minuti gratis",
-      "text": "Sul piazzale dell’aerostazione (ingressi 1–6) i primi 15 minuti sono gratuiti, poi 400 ₽ all’ora. Nel parcheggio giornaliero (ingressi 31, 32) i primi 15 minuti sono gratuiti, poi 300 ₽ all’ora, e per soste oltre 3 ore 1 500 ₽ ogni 24 ore. Si trova a 100 m prima dell’ingresso principale, svolta a destra. Un parcheggio alternativo si trova a circa 400 m dal terminal."
+      "text": "Sul piazzale dell’aerostazione (ingressi 1–6) i primi 15 minuti sono gratuiti, poi 400 ₽ all’ora. Nel parcheggio giornaliero (ingressi 31, 32) i primi 15 minuti sono gratuiti, poi 300 ₽ all’ora, e per soste oltre 3 ore 1 500 ₽ al giorno. Si trova a 100 m prima dell’ingresso principale, svolta a destra. Un parcheggio alternativo si trova a circa 400 m dal terminal."
     },
     "wifi": {
       "title": "Wi‑Fi",
