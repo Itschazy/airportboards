@@ -1,0 +1,25 @@
+production: 50/1224, errors=0
+production: 100/1224, errors=0
+production: 150/1224, errors=0
+production: 200/1224, errors=0
+production: 250/1224, errors=0
+production: 300/1224, errors=0
+production: 350/1224, errors=0
+production: 400/1224, errors=1
+production: 450/1224, errors=1
+production: 500/1224, errors=1
+production: 550/1224, errors=2
+production: 600/1224, errors=2
+production: 650/1224, errors=2
+production: 700/1224, errors=4
+production: 750/1224, errors=4
+production: 800/1224, errors=5
+production: 850/1224, errors=7
+production: 900/1224, errors=8
+production: 950/1224, errors=10
+production: 1000/1224, errors=11
+production: 1050/1224, errors=11
+production: 1100/1224, errors=12
+production: 1150/1224, errors=12
+production: 1200/1224, errors=14
+FAIL production 1224 pages [{"path": "/fr/airport/PEK", "error": "('/fr/airport/PEK', 'missing HTML', 'Garage n° 2 — devant T2, environ 4 300 places : st')"}, {"path": "/it/airport/IAR/arrivals", "error": "('/it/airport/IAR/arrivals', 'missing HTML', 'La sala per passeggeri con bambini si trova nella ')"}, {"path": "/tr/airport/KGD", "error": "('/tr/airport/KGD', 'missing HTML', \"01.10.2026'dan itibaren kısa süreli otopark: ilk 1\")"}, {"path": "/tr/airport/NSK", "error": "('/tr/airport/NSK', 'missing HTML', 'Havalimanının dinlenme evi (profilaktoriy) termina')"}, {"path": "/zh/airport/LAS", "error": "('/zh/airport/LAS', 'missing HTML', '两座航站楼旁及远程停车场共17,000多个车位，全天候开放。短时停车：首小时$4，2小时以内$8，之')"}, {"path": "/zh/airport/UUS", "error": "('/zh/airport/UUS', 'missing HTML', '上下客区：15分钟免费，60分钟内400 ₽，之后首日1200 ₽，之后每天600 ₽。长时停车场P')"}, {"path": "/ja/airport/CEE", "error": "('/ja/airport/CEE', 'missing HTML', 'ターミナル前広場：90分まで無料、便が遅延した場合は再入場でさらに90分無料。90分を超えると暦日ご')"}, {"path": "/ja/airport/NSK", "error": "('/ja/airport/NSK', 'missing HTML', '空港の保養所はターミナル前広場にある。30室、55人収容、24時間営業。旅客やその他の人をパスポート')"}, {"path": "/ko/airport/BTK/arrivals", "error": "('/ko/airport/BTK/arrivals', 'missing HTML', '터미널 앞 광장에 80면 규모의 무료 주차장이 있으며 그중 8면은 장애인용입니다. 장기 주')"}, {"path": "/ko/airport/EYK/arrivals", "error": "('/ko/airport/EYK/arrivals', 'missing HTML', '수하물 보관소: 짐 한 개당 하루당 380 ₽(2026년 10월 1일부터 적용되는 요금표)')"}, {"path": "/ko/airport/NNM/arrivals", "error": "('/ko/airport/NNM/arrivals', 'missing HTML', '45분까지 무료. 46분부터 60분까지: 500 ₽. 한 시간 초과 하루까지: 시간당 35')"}, {"path": "/ar/airport/KEJ", "error": "('/ar/airport/KEJ', 'missing HTML', 'يعمل حفظ الأمتعة وفق جدول مبنى الرحلات الداخلية. ا')"}, {"path": "/hi/airport/KUF/arrivals", "error": "('/hi/airport/KUF/arrivals', 'missing HTML', 'स्वचालित अमानती सामान घर लेवल 1 पर, प्रवेश द्वार क')"}, {"path": "/hi/airport/PEK/arrivals", "error": "('/hi/airport/PEK/arrivals', 'missing HTML', 'गैराज नंबर 2 — T2 के सामने, लगभग 4,300 जगहें: घंटे')"}]

@@ -1,4 +1,4 @@
-import sys,json,pathlib,urllib.request,concurrent.futures,re,hashlib
+import sys,json,pathlib,urllib.request,concurrent.futures,re,hashlib,ssl
 from bs4 import BeautifulSoup
 base=sys.argv[1];mode=sys.argv[2];out=pathlib.Path('ops/guide-reaudit-20261110');D=pathlib.Path('data/airport-guide')
 codes=sorted(p.stem for p in D.glob('*.json'));locs=['ru','en','de','fr','es','it','tr','zh','ja','ko','ar','hi']
@@ -7,9 +7,11 @@ if mode=='production':
  changed=json.loads((out/'changed-guides.json').read_text())
  paths=[(l,c,suf) for l in locs for c in changed for suf in ['', '/arrivals']]
 norm=lambda s:' '.join(s.split())
+# Use the macOS system CA bundle; retain certificate and hostname verification.
+tls=ssl.create_default_context(cafile='/etc/ssl/cert.pem')
 def check(t):
  l,c,suf=t;p=f'/{l}/airport/{c}{suf}'
- with urllib.request.urlopen(urllib.request.Request(base+p,headers={'User-Agent':'audit-bot'}),timeout=45) as r:status=r.status;html=r.read().decode()
+ with urllib.request.urlopen(urllib.request.Request(base+p,headers={'User-Agent':'audit-bot'}),timeout=45,context=tls) as r:status=r.status;html=r.read().decode()
  s=BeautifulSoup(html,'html.parser');j=[]
  for el in s.select('script[type="application/ld+json"]'):
   data=json.loads(el.string or el.get_text());j.extend(data if isinstance(data,list) else [data])
@@ -33,9 +35,11 @@ def check(t):
 def collect(t):
  try:return check(t)
  except Exception as e:return {'path':'/'+t[0]+'/airport/'+t[1]+t[2], 'error':str(e)}
-with concurrent.futures.ThreadPoolExecutor(max_workers=2 if mode=='production' else 4) as pool:
+with concurrent.futures.ThreadPoolExecutor(max_workers=6 if mode=='production' else 4) as pool:
  results=[]
  for result in pool.map(collect,paths):
   results.append(result)
-  if len(results)%200==0:print(f'{mode}: {len(results)}/{len(paths)}',flush=True)
+  if len(results)%50==0:
+   (out/(mode+'-checkpoint.json')).write_text(json.dumps(results,ensure_ascii=False,indent=2))
+   print(f'{mode}: {len(results)}/{len(paths)}, errors={sum("error" in r for r in results)}',flush=True)
 (out/(mode+'-pages.json')).write_text(json.dumps(results,ensure_ascii=False,indent=2));errors=[r for r in results if 'error' in r];print('FAIL' if errors else 'PASS',mode,len(results),'pages',json.dumps(errors,ensure_ascii=False));sys.exit(1 if errors else 0)

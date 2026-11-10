@@ -3,7 +3,7 @@
   "scope": "Unconfirmed rows plus explicit caveats on confirmed browser rows. Fix-package presence means intended remediation, not verified resolution.",
   "counts": {
     "remaining verification gap": 38,
-    "approved package; verification pending": 19,
+    "correction applied and reviewed; evidence limitations retained": 19,
     "remaining partial evidence or source ambiguity": 13
   },
   "rows": [
@@ -32,7 +32,7 @@
       "block": "storage",
       "status": "conflict",
       "reason": "Официальный тариф 341,60 ₽, в RU 250 ₽. Павильон 3, 24/7, ≤30 кг, длина <1 м и исключённые вещи подтверждены. Предложение заменить 250 на 341,60 во всех языках.",
-      "disposition": "approved package; verification pending",
+      "disposition": "correction applied and reviewed; evidence limitations retained",
       "approved_fix_reason": "Официальная пассажирская страница: 341,60 руб./сутки для стандартного багажа.",
       "ru_matches_approved_after": true,
       "evidence_registry": "fact-european.json"
@@ -92,7 +92,7 @@
       "block": "parking",
       "status": "conflict",
       "reason": "1000 ₽ на площади прямо за календарные сутки. PDF платной парковки также считает сутки от 00:00 до 24:00: 350 ₽ тоже календарные, не 24 часа от въезда. Остальные 90 минут/повтор при задержке/24-7/телефон подтверждены. Предложение явно календарные сутки в обеих ставках RU+11.",
-      "disposition": "approved package; verification pending",
+      "disposition": "correction applied and reviewed; evidence limitations retained",
       "approved_fix_reason": "HTML прямо называет календарный сбор; PDF правил отдельно определяет сутки платной парковки как 00:00–24:00.",
       "ru_matches_approved_after": true,
       "evidence_registry": "fact-european.json"
@@ -142,7 +142,7 @@
       "block": "parking",
       "status": "partial",
       "reason": "Числа/вместимость/оплата подтверждены. Сжатие тарифов в RU «до12ч6AZN, досуток15» скрывает ступени4–6ч3,6–8ч4,8–10ч5,12–14ч10. Лучше обозначить конкретные интервалы10–12 и14–24 либо полный ряд: иначе выглядит завышенной ценой для промежуточных периодов.",
-      "disposition": "approved package; verification pending",
+      "disposition": "correction applied and reviewed; evidence limitations retained",
       "approved_fix_reason": "В источнике восемь диапазонов, сокращение до12/досуток создаёт неверное впечатление тарифа промежуточного времени.",
       "ru_matches_approved_after": true,
       "evidence_registry": "fact-european.json"
@@ -192,7 +192,7 @@
       "block": "transport",
       "status": "partial",
       "reason": "Цены/радиус/заказ3часа/касса/наличие авто подтверждены. Недостающие существенные условия источника: услуга на регулярных рейсах; пригород до30км от аэропорта по предварительному согласованию.",
-      "disposition": "approved package; verification pending",
+      "disposition": "correction applied and reviewed; evidence limitations retained",
       "approved_fix_reason": "Источник требует регулярного рейса, одного адреса и предварительного согласования пригорода; 30 км отсчитываются от аэропорта.",
       "ru_matches_approved_after": true,
       "evidence_registry": "fact-european.json"
@@ -202,7 +202,7 @@
       "block": "parking",
       "status": "partial",
       "reason": "PDF визуально подтверждает все числа и пени2000/ч. Но RU «до1часа350» сглаживает ступени21–30мин200,31–40мин250,41–50мин300,51–60мин350. Рекомендуется «51–60мин350» для точности.",
-      "disposition": "approved package; verification pending",
+      "disposition": "correction applied and reviewed; evidence limitations retained",
       "approved_fix_reason": "Свежие официальные PDF визуально прочитаны, сохранены в sources-european/IKT-storage.pdf и IKT-parking.pdf.",
       "ru_matches_approved_after": true,
       "evidence_registry": "fact-european.json"
@@ -212,7 +212,7 @@
       "block": "storage",
       "status": "partial",
       "reason": "HTML+визуально PDF подтверждают все факты RU:610,размер40×40×50,расчётмест,этажи,оплата,только задержки международных,телефон. PDF имеет существенную доплату: оценка выше2000₽ +100₽ за каждую следующую1000₽; её нет в кратком блоке, поэтому базовая цена верна, полнота ограничена.",
-      "disposition": "approved package; verification pending",
+      "disposition": "correction applied and reviewed; evidence limitations retained",
       "approved_fix_reason": "Свежие официальные PDF визуально прочитаны, сохранены в sources-european/IKT-storage.pdf и IKT-parking.pdf.",
       "ru_matches_approved_after": true,
       "evidence_registry": "fact-european.json"
@@ -252,7 +252,7 @@
       "block": "parking",
       "status": "confirmed",
       "reason": "С 01.10.2026 400 ₽ за полный/неполный час; первые 15 минут бесплатно; 900 ₽/сутки; бесплатная площадка 400 м/300 машин. Первая линия: парковка запрещена, въезд только договорным такси и общественному транспорту. Caveat: Повторный въезд в течение 2 часов платный с первой минуты: полезное ограничение отсутствует в RU. Корейское обозначение запрета остановки чрезмерно: источник запрещает парковку, а посадку/высадку разрешает указанному транспорту.",
-      "disposition": "approved package; verification pending",
+      "disposition": "correction applied and reviewed; evidence limitations retained",
       "approved_fix_reason": "Сохранённый root браузерный текст browser-KGD-parking.txt, строка AX71: повторный въезд в течение 2 часов с1минуты. Точный момент равенства2ч не уточняем сверх источника.",
       "ru_matches_approved_after": true,
       "evidence_registry": "fact-browser-russian.json"
@@ -292,7 +292,7 @@
       "block": "parking",
       "status": "conflict",
       "reason": "P2 791 is up to24h only,48h1578,3days2351: not flat791/24h. Other stated prices correct.",
-      "disposition": "approved package; verification pending",
+      "disposition": "correction applied and reviewed; evidence limitations retained",
       "approved_fix_reason": "791 ₽ относится только к первым 24 часам; следующие периоды имеют пакетные цены.",
       "ru_matches_approved_after": true,
       "evidence_registry": "fact-asian.json"
@@ -302,7 +302,7 @@
       "block": "storage",
       "status": "conflict",
       "reason": "1200 oversized price belongs to wrapping section, not storage; lockers250/550 and350/900 confirmed.",
-      "disposition": "approved package; verification pending",
+      "disposition": "correction applied and reviewed; evidence limitations retained",
       "approved_fix_reason": "1200 ₽ в источнике относится к упаковке негабаритного багажа; цена не относится к хранению.",
       "ru_matches_approved_after": true,
       "evidence_registry": "fact-asian.json"
@@ -322,7 +322,7 @@
       "block": "parking",
       "status": "partial",
       "reason": "P2/P4/P0 and15min correct; source2000 applies16–30 then31–60 thenevery30min. Text compresses to every30after15, potentially misleading exact boundary.",
-      "disposition": "approved package; verification pending",
+      "disposition": "correction applied and reviewed; evidence limitations retained",
       "approved_fix_reason": "Раздел «Для высадки или встречи пассажира»: точные интервалы16–30,31–60,затем каждые30 минут; повторный въезд платный с1мин. В этом разделе источник не устанавливает восстановление льготы через30мин. Отдельные транзитные зоны в блок не добавлены.",
       "ru_matches_approved_after": true,
       "evidence_registry": "fact-asian.json"
@@ -342,7 +342,7 @@
       "block": "parking",
       "status": "conflict",
       "reason": "P1: менее 15 мин бесплатно, 15–60 мин 500 ₽, далее 500 ₽/час, свыше 4 часов 1200 ₽/сутки; неполные сутки полные. Ниже общее правило посуточной парковки: «расчетный час 00:00». Caveat: В переводах 24 hours несовместимо с явным расчётным часом. P1 тоже переходит на посуточный тариф; отдельного исключения для неё источник не содержит. P1 по серьёзности: неправильное ожидание цены при пересечении полуночи.",
-      "disposition": "approved package; verification pending",
+      "disposition": "correction applied and reviewed; evidence limitations retained",
       "approved_fix_reason": "Общее явное определение посуточной тарификации применяется и к P1; не переводить как rolling 24 hours.",
       "ru_matches_approved_after": true,
       "evidence_registry": "fact-browser-russian.json"
@@ -392,7 +392,7 @@
       "block": "sleep",
       "status": "partial",
       "reason": "Location30rooms55people24hpassportprepaymentphone confirmed; whole-day rule conflicts internally with dated2026 tariff table3h/6h rates.",
-      "disposition": "approved package; verification pending",
+      "disposition": "correction applied and reviewed; evidence limitations retained",
       "approved_fix_reason": "Общий старый абзац требует целые сутки, но датированная таблица с 01.05.2026 содержит тарифы на 3 и 6 часов. Удаляем чрезмерное обобщение, сохраняем 100% предоплату.",
       "ru_matches_approved_after": true,
       "evidence_registry": "fact-asian.json"
@@ -492,7 +492,7 @@
       "block": "parking",
       "status": "conflict",
       "reason": "HTMLP11500not3000. DatedPDF01.11.2026 confirmsP11500 andP2800 (HTML1000outdated).",
-      "disposition": "approved package; verification pending",
+      "disposition": "correction applied and reviewed; evidence limitations retained",
       "approved_fix_reason": "Прочитан полный извлечённый текст официального PDF: приказ №514 от 30.10.2026, действует с 01.11.2026. P1 1500, P2 800, P3 800. HTML P2 1000 устарел относительно датированного приказа.",
       "ru_matches_approved_after": true,
       "evidence_registry": "fact-asian.json"
@@ -512,7 +512,7 @@
       "block": "lounges",
       "status": "partial",
       "reason": "Расположение,24/7,ограничение на внутренние,ONPASS3500/2500 подтверждены двумястраницами.; Первый зал допускает бизнес4перечисленныхавиакомпаний;элитныекарты толькона соответствующихрейсах. RU обобщает доступ.",
-      "disposition": "approved package; verification pending",
+      "disposition": "correction applied and reviewed; evidence limitations retained",
       "approved_fix_reason": "Источник ограничивает перевозчиков и привязывает карты к рейсам соответствующих компаний.",
       "ru_matches_approved_after": true,
       "evidence_registry": "fact-russian.json"
@@ -532,7 +532,7 @@
       "block": "lounges",
       "status": "partial",
       "reason": "Priority Pass и DragonPass: T1 после passport/security, international departures only, 24h, максимум 3 часа. Лимит опущен в RU; paid pass по третьему источнику в этом проходе не перепроверен.",
-      "disposition": "approved package; verification pending",
+      "disposition": "correction applied and reviewed; evidence limitations retained",
       "approved_fix_reason": "Не распространять лимит программ на все платные пропуски.",
       "ru_matches_approved_after": true,
       "evidence_registry": "fact-pilot-russian.json"
@@ -542,7 +542,7 @@
       "block": "storage",
       "status": "conflict",
       "reason": "Billingcalendar00:00–23:59partialfull;700/300StandardonlyB/D. AeroexpressBagazhmatseparate. Source6months vs90daydestructioninternalconflict.",
-      "disposition": "approved package; verification pending",
+      "disposition": "correction applied and reviewed; evidence limitations retained",
       "approved_fix_reason": "700/300 ₽ явно относится только к B/D, сутки календарные. Удалён срок 6 месяцев: страница одновременно называет уничтожение невостребованных вещей после 90 суток.",
       "ru_matches_approved_after": true,
       "evidence_registry": "fact-asian.json"
@@ -552,7 +552,7 @@
       "block": "storage",
       "status": "conflict",
       "reason": "Storageprices/dimensionscorrect. Wardrobe100 onlyupto1h,1–24h300,nextday200; blockunqualified100 misleading.",
-      "disposition": "approved package; verification pending",
+      "disposition": "correction applied and reviewed; evidence limitations retained",
       "approved_fix_reason": "100 ₽ — только до 1 часа; полный тариф гардероба явно опубликован.",
       "ru_matches_approved_after": true,
       "evidence_registry": "fact-asian.json"
@@ -682,7 +682,7 @@
       "block": "storage",
       "status": "conflict",
       "reason": "Источник явным образом определяет первые500 как00:00–23:59 и следующие200 за календарные сутки. RU говорит сутки без уточнения; переводы24hours неправильно меняют период.; Внизу отдельная услуга бюро находок имеет отсчёт от сдачи: её правило не относится к обычной камере.",
-      "disposition": "approved package; verification pending",
+      "disposition": "correction applied and reviewed; evidence limitations retained",
       "approved_fix_reason": "Не смешивать календарный тариф обычной камеры хранения с отсчётом от сдачи в отдельном бюро находок.",
       "ru_matches_approved_after": true,
       "evidence_registry": "fact-russian.json"
@@ -702,10 +702,11 @@
       "block": "storage",
       "status": "conflict",
       "reason": "Explicitcalendar00:00–23:59partialfull;firstuntil00:00,not24h. Prices700/300,600/300,1150and30kg/floor2/24hcorrect. Internal6months vs unclaimed30days conflict.",
-      "disposition": "approved package; verification pending",
+      "disposition": "correction applied and reviewed; evidence limitations retained",
       "approved_fix_reason": "Источник определяет календарные дни. Удалён срок 6 месяцев: та же страница называет вещи невостребованными уже через 30 суток.",
       "ru_matches_approved_after": true,
       "evidence_registry": "fact-asian.json"
     }
-  ]
+  ],
+  "state_note": "Source status is the baseline source assessment. Corrections were subsequently applied and independently reviewed; see source-resolution.json and final review hashes. Unavailable sources are not upgraded."
 }

@@ -1,0 +1,25 @@
+
+Indexability audit -> https://airportsboard.live
+
+PASS  valid airport JFK [/en/airport/JFK]
+PASS  arrivals subpage [/en/airport/JFK/arrivals]
+PASS  departures subpage (canonical -> parent) [/en/airport/JFK/departures]
+PASS  nonexistent airport ZZZZ [/en/airport/ZZZZ]
+PASS  nonexistent airport XYZ [/en/airport/XYZ]
+PASS  lowercase iata jfk [/en/airport/jfk]
+PASS  route bad airports [/en/route/AAA-BBB]
+PASS  route same airport [/en/route/JFK-JFK]
+PASS  route valid (no-data soft-404 guard) [/en/route/JFK-LAX]
+PASS  flight bad format [/en/flight/garbage123]
+PASS  flight not-found (soft-404 guard) [/en/flight/ZZ9999]
+PASS  airline unknown [/en/airline/ZZ]
+PASS  airline valid SU (404, or noindex) [/en/airline/SU]
+PASS  city multi-airport (index) [/en/city/london]
+PASS  city single-airport (noindex) [/en/city/annaba]
+PASS  locale ru [/ru/airport/JFK]
+PASS  locale ar [/ar/airport/JFK]
+PASS  robots.txt + sitemap [/robots.txt]
+PASS  sitemap index [/sitemap.xml]
+PASS  sitemap child 0 [/sitemap-0.xml]
+
+20/20 passed, 0 failed.

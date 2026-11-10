@@ -1,0 +1,29 @@
+{
+  "head": "8fe257dc9bbd075f2976e2fcea491b2f80b3d64d",
+  "workers": [
+    {
+      "release": "8fe257dc9bbd",
+      "pid": 1084589,
+      "instance": "1",
+      "execMode": "cluster_mode"
+    },
+    {
+      "release": "8fe257dc9bbd",
+      "pid": 1084611,
+      "instance": "2",
+      "execMode": "cluster_mode"
+    },
+    {
+      "release": "8fe257dc9bbd",
+      "pid": 1084588,
+      "instance": "0",
+      "execMode": "cluster_mode"
+    }
+  ],
+  "public": {
+    "at": "2026-11-10T08:03:03.963Z",
+    "release": "8fe257dc9bbd",
+    "pid": 1084589,
+    "instance": "1"
+  }
+}
