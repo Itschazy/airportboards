@@ -10,7 +10,7 @@
   "parking": {
    "title": "Parking",
    "hint": "15 min free",
-   "text": "Drop-off and pick-up zone: 15 min free, up to 60 min 400 ₽, then 1,200 ₽ for the first day and 600 ₽ for each further day. Long-stay P1: 500 ₽ per day for the first 5 days, then 400 ₽. Free for passengers with reduced mobility displaying a Disabled sign."
+   "text": "Short-stay P2: the first 15 min are free; over 15 min up to and including 60 min costs 400 ₽; longer stays cost 1,200 ₽ for the first day and 600 ₽ per subsequent day. Long-stay P3: 500 ₽ per day for days 1–5, then 400 ₽. Re-entry within 30 min after leaving has no free period. Free parking for passengers with disabilities requires proof of disability and a Disabled sign on the vehicle."
   },
   "lounges": {
    "title": "Lounges",
@@ -20,7 +20,7 @@
   "storage": {
    "title": "Left luggage",
    "hint": "Level 1, from 500 ₽",
-   "text": "Left luggage on Level 1 of the terminal. Regular baggage: 500 ₽ for the first day, 200 ₽ for each further day. Oversized over 203 cm: 850 ₽ and 400 ₽. One item up to 30 kg, storage up to 30 days."
+   "text": "Left luggage on Level 1 of the terminal. Charges are per calendar day ending at midnight; a partial day counts as a full day. Baggage with combined length, width and height up to 203 cm: 500 ₽ for the first day and 200 ₽ per subsequent day. Over 203 cm: 850 ₽ for the first day and 400 ₽ per subsequent day. Once collected, baggage must be checked in again for further storage."
   },
   "kids": {
    "title": "With children",

@@ -1,0 +1,50 @@
+{
+  "ru": {
+    "parking": "Краткосрочная P2: первые 15 мин бесплатно, свыше 15 до 60 мин включительно 400 ₽, дольше — 1200 ₽ за первые сутки, следующие сутки 600 ₽. Долгосрочная P3: 500 ₽ в сутки с 1 по 5 сутки, дальше 400 ₽. При повторном въезде в течение 30 мин после выезда бесплатных минут нет. Бесплатная парковка для пассажиров с инвалидностью — при подтверждении инвалидности и знаке «Инвалид» на автомобиле.",
+    "storage": "Камера хранения на 1 этаже аэровокзала. Оплата за календарный день до полуночи, неполный день считается полным. Багаж с суммой трёх измерений до 203 см включительно: 500 ₽ за первый день, 200 ₽ за каждый следующий. Свыше 203 см: 850 ₽ за первый день, 400 ₽ за каждый следующий. После получения багажа повторная сдача оформляется заново."
+  },
+  "en": {
+    "parking": "Short-stay P2: the first 15 min are free; over 15 min up to and including 60 min costs 400 ₽; longer stays cost 1,200 ₽ for the first day and 600 ₽ per subsequent day. Long-stay P3: 500 ₽ per day for days 1–5, then 400 ₽. Re-entry within 30 min after leaving has no free period. Free parking for passengers with disabilities requires proof of disability and a Disabled sign on the vehicle.",
+    "storage": "Left luggage on Level 1 of the terminal. Charges are per calendar day ending at midnight; a partial day counts as a full day. Baggage with combined length, width and height up to 203 cm: 500 ₽ for the first day and 200 ₽ per subsequent day. Over 203 cm: 850 ₽ for the first day and 400 ₽ per subsequent day. Once collected, baggage must be checked in again for further storage."
+  },
+  "de": {
+    "parking": "Kurzzeitparkplatz P2: die ersten 15 Min. kostenlos, über 15 bis einschließlich 60 Min. 400 ₽, länger 1200 ₽ für den ersten Tag und 600 ₽ je Folgetag. Langzeitparkplatz P3: 500 ₽ pro Tag vom 1. bis zum 5. Tag, danach 400 ₽. Bei erneuter Einfahrt innerhalb von 30 Min. nach der Ausfahrt entfällt die kostenlose Zeit. Kostenloses Parken für Reisende mit Behinderung erfordert einen Nachweis der Behinderung und ein Behindertenschild am Fahrzeug.",
+    "storage": "Gepäckaufbewahrung auf Ebene 1 des Terminals. Abrechnung pro Kalendertag bis Mitternacht; angefangene Tage zählen voll. Gepäck mit einer Summe aus Länge, Breite und Höhe von höchstens 203 cm: 500 ₽ für den ersten Tag, 200 ₽ je Folgetag. Über 203 cm: 850 ₽ für den ersten Tag, 400 ₽ je Folgetag. Nach der Abholung muss das Gepäck für eine weitere Aufbewahrung erneut aufgegeben werden."
+  },
+  "fr": {
+    "parking": "Parking courte durée P2 : les 15 premières min sont gratuites ; au-delà de 15 min et jusqu’à 60 min incluses, 400 ₽ ; au-delà, 1200 ₽ pour le premier jour, puis 600 ₽ par jour. Longue durée P3 : 500 ₽ par jour du 1er au 5e jour, puis 400 ₽. Une nouvelle entrée dans les 30 min suivant la sortie ne donne pas droit à une période gratuite. Le stationnement gratuit pour les passagers handicapés nécessite un justificatif du handicap et un macaron « Handicapé » sur le véhicule.",
+    "storage": "Consigne au niveau 1 de l’aérogare. Facturation par jour calendaire jusqu’à minuit ; tout jour entamé est dû. Bagage dont la somme longueur, largeur et hauteur ne dépasse pas 203 cm : 500 ₽ le premier jour, puis 200 ₽ par jour. Au-delà de 203 cm : 850 ₽ le premier jour, puis 400 ₽ par jour. Après retrait, le bagage doit faire l’objet d’un nouveau dépôt pour être conservé à nouveau."
+  },
+  "es": {
+    "parking": "Aparcamiento de corta estancia P2: los primeros 15 min son gratis; más de 15 y hasta 60 min inclusive, 400 ₽; para estancias más largas, 1200 ₽ el primer día y 600 ₽ cada día posterior. Larga estancia P3: 500 ₽ al día del día 1 al 5, después 400 ₽. Volver a entrar en los 30 min posteriores a la salida no da derecho a tiempo gratuito. La gratuidad para pasajeros con discapacidad exige acreditar la discapacidad y llevar el distintivo de discapacidad en el vehículo.",
+    "storage": "Consigna en el nivel 1 de la terminal. Se cobra por día natural hasta medianoche; los días incompletos se cobran enteros. Equipaje cuya suma de largo, ancho y alto no supere 203 cm: 500 ₽ el primer día y 200 ₽ cada día posterior. Más de 203 cm: 850 ₽ el primer día y 400 ₽ cada día posterior. Tras recoger el equipaje, hay que formalizar un nuevo depósito para volver a guardarlo."
+  },
+  "it": {
+    "parking": "Parcheggio breve sosta P2: primi 15 min gratis; oltre 15 e fino a 60 min inclusi, 400 ₽; per soste più lunghe, 1200 ₽ il primo giorno e 600 ₽ per ogni giorno successivo. Lunga sosta P3: 500 ₽ al giorno dal giorno 1 al 5, poi 400 ₽. Rientrando entro 30 min dall’uscita non si ha diritto al periodo gratuito. La sosta gratuita per i passeggeri con disabilità richiede un documento che attesti la disabilità e il contrassegno disabili sul veicolo.",
+    "storage": "Deposito bagagli al livello 1 dell’aerostazione. Si paga per giorno di calendario fino a mezzanotte; le frazioni di giorno si pagano per intero. Bagagli con somma di lunghezza, larghezza e altezza fino a 203 cm inclusi: 500 ₽ il primo giorno, 200 ₽ per ogni giorno successivo. Oltre 203 cm: 850 ₽ il primo giorno, 400 ₽ per ogni giorno successivo. Dopo il ritiro, per lasciare nuovamente il bagaglio occorre effettuare un nuovo deposito."
+  },
+  "tr": {
+    "parking": "Kısa süreli P2: ilk 15 dk ücretsiz; 15 dk’dan fazla, 60 dk dahil olmak üzere 400 ₽; daha uzun sürelerde ilk gün 1200 ₽, sonraki her gün 600 ₽. Uzun süreli P3: 1–5. günlerde günlük 500 ₽, sonrasında 400 ₽. Çıkıştan sonraki 30 dk içinde yeniden girişte ücretsiz süre uygulanmaz. Engelli yolcuların ücretsiz park etmesi için engellilik belgesi ve araçta engelli işareti gerekir.",
+    "storage": "Emanet terminal binasında Kat 1’de. Ücret gece yarısında biten takvim günü üzerinden alınır; günün bir kısmı tam gün sayılır. Uzunluk, genişlik ve yükseklik toplamı en fazla 203 cm olan bagaj: ilk gün 500 ₽, sonraki her gün 200 ₽. 203 cm üzeri: ilk gün 850 ₽, sonraki her gün 400 ₽. Bagaj teslim alındıktan sonra tekrar bırakılacaksa yeni bir emanet işlemi yapılır."
+  },
+  "zh": {
+    "parking": "短时停车场P2：前15分钟免费，超过15分钟至60分钟（含）400 ₽，更长时间首日1200 ₽，之后每天600 ₽。长时停车场P3：第1至第5天每天500 ₽，之后每天400 ₽。驶离后30分钟内再次进入，没有免费时段。残疾旅客免费停车须提供残疾证明，并在车辆上悬挂残疾人标志。",
+    "storage": "行李寄存处位于航站楼1楼。按截至午夜的自然日计费，不足一天按一天计算。长、宽、高之和不超过203厘米的行李：首日500 ₽，之后每天200 ₽。超过203厘米：首日850 ₽，之后每天400 ₽。取出行李后，如需继续寄存，须重新办理手续。"
+  },
+  "ja": {
+    "parking": "短期駐車場P2：最初の15分は無料、15分超60分以下は400 ₽、それを超える場合は初日1200 ₽、翌日以降は1日600 ₽。長期駐車場P3：1～5日目は1日500 ₽、以降400 ₽。出庫後30分以内の再入庫には無料時間は適用されません。障がいのある旅客の無料駐車には、障がいを証明する書類と車両の障がい者標識が必要です。",
+    "storage": "手荷物預かり所はターミナル1階。真夜中までの暦日単位で課金され、1日未満も1日分となります。縦・横・高さの合計が203 cm以下の荷物：初日500 ₽、翌日以降は1日200 ₽。203 cm超：初日850 ₽、翌日以降は1日400 ₽。受け取った荷物を再度預ける場合は、新たに手続きが必要です。"
+  },
+  "ko": {
+    "parking": "단기 주차장 P2: 처음 15분은 무료, 15분 초과 60분 이하는 400 ₽, 그보다 길면 첫날 1200 ₽, 이후 하루마다 600 ₽입니다. 장기 주차장 P3: 1~5일째는 하루 500 ₽, 이후 400 ₽입니다. 출차 후 30분 이내에 재입차하면 무료 시간이 적용되지 않습니다. 장애인 승객의 무료 주차에는 장애 증빙과 차량의 장애인 표지가 필요합니다.",
+    "storage": "수하물 보관소는 여객터미널 1층에 있습니다. 자정까지의 달력상 날짜 단위로 요금이 부과되며, 하루 미만도 하루로 계산합니다. 가로·세로·높이의 합이 203 cm 이하인 수하물: 첫날 500 ₽, 이후 하루마다 200 ₽입니다. 203 cm 초과: 첫날 850 ₽, 이후 하루마다 400 ₽입니다. 찾은 수하물을 다시 맡기려면 새로 접수해야 합니다."
+  },
+  "ar": {
+    "parking": "الموقف قصير المدة P2: أول 15 دقيقة مجانًا، وأكثر من 15 وحتى 60 دقيقة شاملةً بسعر 400 ₽؛ وللمدة الأطول 1200 ₽ لليوم الأول و600 ₽ لكل يوم تالٍ. الموقف طويل المدة P3: 500 ₽ يوميًا من اليوم 1 إلى اليوم 5، ثم 400 ₽. إعادة الدخول خلال 30 دقيقة بعد الخروج لا تشمل فترة مجانية. يتطلب الوقوف المجاني للمسافرين ذوي الإعاقة إثبات الإعاقة ووضع علامة ذوي الإعاقة على السيارة.",
+    "storage": "حفظ الأمتعة في المستوى 1 من مبنى الركاب. تُحسب الرسوم عن اليوم التقويمي المنتهي عند منتصف الليل، ويُحسب جزء اليوم يومًا كاملًا. الأمتعة التي لا يتجاوز مجموع طولها وعرضها وارتفاعها 203 سم: 500 ₽ لليوم الأول و200 ₽ لكل يوم تالٍ. أكثر من 203 سم: 850 ₽ لليوم الأول و400 ₽ لكل يوم تالٍ. بعد استلام الأمتعة، يتطلب إيداعها مجددًا إجراء معاملة حفظ جديدة."
+  },
+  "hi": {
+    "parking": "अल्पावधि पार्किंग P2: पहले 15 मिनट निःशुल्क; 15 मिनट से अधिक और 60 मिनट तक 400 ₽; इससे अधिक समय के लिए पहले दिन 1200 ₽ और हर अगले दिन 600 ₽। दीर्घावधि P3: दिन 1 से 5 तक 500 ₽ प्रतिदिन, फिर 400 ₽। बाहर निकलने के 30 मिनट के भीतर दोबारा प्रवेश करने पर निःशुल्क समय नहीं मिलता। दिव्यांग यात्रियों की निःशुल्क पार्किंग के लिए दिव्यांगता का प्रमाण और वाहन पर दिव्यांग चिह्न आवश्यक है।",
+    "storage": "अमानती सामान घर टर्मिनल भवन के लेवल 1 पर है। शुल्क मध्यरात्रि तक के कैलेंडर दिन के हिसाब से लगता है; अधूरा दिन भी पूरा दिन माना जाता है। जिस सामान की लंबाई, चौड़ाई और ऊँचाई का कुल योग 203 सेमी तक है: पहले दिन 500 ₽, हर अगले दिन 200 ₽। 203 सेमी से अधिक: पहले दिन 850 ₽, हर अगले दिन 400 ₽। सामान वापस लेने के बाद उसे फिर रखने के लिए नया जमा पंजीकरण कराना होता है।"
+  }
+}

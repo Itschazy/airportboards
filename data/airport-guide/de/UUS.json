@@ -10,7 +10,7 @@
   "parking": {
    "title": "Parken",
    "hint": "15 Min. kostenlos",
-   "text": "Hol- und Bringzone: 15 Min. kostenlos, bis 60 Min. 400 ₽, danach 1200 ₽ für den ersten Tag und 600 ₽ für jeden weiteren Tag. Langzeitparkplatz P1: 500 ₽ pro Tag für die ersten 5 Tage, danach 400 ₽. Für Passagiere mit eingeschränkter Mobilität mit Behindertenschild kostenlos."
+   "text": "Kurzzeitparkplatz P2: die ersten 15 Min. kostenlos, über 15 bis einschließlich 60 Min. 400 ₽, länger 1200 ₽ für den ersten Tag und 600 ₽ je Folgetag. Langzeitparkplatz P3: 500 ₽ pro Tag vom 1. bis zum 5. Tag, danach 400 ₽. Bei erneuter Einfahrt innerhalb von 30 Min. nach der Ausfahrt entfällt die kostenlose Zeit. Kostenloses Parken für Reisende mit Behinderung erfordert einen Nachweis der Behinderung und ein Behindertenschild am Fahrzeug."
   },
   "lounges": {
    "title": "Business-Lounges",
@@ -20,7 +20,7 @@
   "storage": {
    "title": "Gepäckaufbewahrung",
    "hint": "Ebene 1, ab 500 ₽",
-   "text": "Gepäckaufbewahrung auf Ebene 1 des Terminals. Normales Gepäck: 500 ₽ für den ersten Tag, 200 ₽ für jeden weiteren Tag. Sperrgepäck über 203 cm: 850 ₽ und 400 ₽. Ein Gepäckstück bis 30 kg, Aufbewahrung bis 30 Tage."
+   "text": "Gepäckaufbewahrung auf Ebene 1 des Terminals. Abrechnung pro Kalendertag bis Mitternacht; angefangene Tage zählen voll. Gepäck mit einer Summe aus Länge, Breite und Höhe von höchstens 203 cm: 500 ₽ für den ersten Tag, 200 ₽ je Folgetag. Über 203 cm: 850 ₽ für den ersten Tag, 400 ₽ je Folgetag. Nach der Abholung muss das Gepäck für eine weitere Aufbewahrung erneut aufgegeben werden."
   },
   "kids": {
    "title": "Mit Kind",
