@@ -59,6 +59,7 @@
     "check:keyexpiry": "node scripts/check-key-expiry.mjs",
     "check:sitemaplangs": "node scripts/check-sitemap-hreflang.mjs",
     "check:generatedprose": "node scripts/check-generated-prose.mjs",
+    "check:appairport": "node scripts/check-app-airport.mjs",
     "maintain:cache": "node scripts/maintenance-runner.mjs cache",
     "check:guide-regressions": "node scripts/check-guide-fresh-regressions.mjs"
   },

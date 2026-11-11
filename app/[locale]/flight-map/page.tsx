@@ -2,13 +2,12 @@ import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { setRequestLocale } from 'next-intl/server';
 import { FlightMap } from '@/components/FlightMap';
-import shell from '@/lib/flight-map/shell-i18n.json';
-import { flightMapCopy, flightMapMessages, locales, escapeHTML } from '@/lib/flight-map/localization';
+import { flightMapCopy, flightMapMessages, locales } from '@/lib/flight-map/localization';
+import { fillFlightMapShell } from '@/lib/flight-map/shell';
 import { runtimeUrl } from '@/lib/flight-map/runtime-url';
 import { renderInfo } from '@/lib/flight-map/content';
 import './flight-map.css';
 import { initialMapLayoutScript } from '@/lib/flight-map/layout-hint';
-import { createI18n } from '@/public/flight-map/v4/i18n';
 import { ldScript } from '@/lib/json-ld';
 
 type Props = { params: Promise<{ locale: string }> };
@@ -54,12 +53,9 @@ export default async function FlightMapPage({ params }: Props) {
       { '@type': 'ListItem', position: 2, name: copy.heading, item: url },
     ] },
   ] };
-  const { statLabel } = createI18n(locale, messages);
-  const stats = `<div class="stat"><b>0</b><span>${escapeHTML(statLabel('flights',0))}</span></div><div class="stat"><b>0</b><span>${escapeHTML(statLabel('countries',0))}</span></div><div class="stat"><b>0</b><span>${escapeHTML(messages.m088)}</span></div>`;
-  const html = shell.replace(/\{\{(\w+)\}\}/g, (_, key) => escapeHTML(key === 'locale' ? locale : messages[key]))
-    .replace('<div class="stats" id="stats"></div>', `<div class="stats" id="stats">${stats}</div>`)
-    .replace('<div id="flightList"></div>', `<div id="flightList"><div class="empty-list">${escapeHTML(messages.m097)}</div></div>`)
-    .replace(/<!-- flight-map-seo:start -->[\s\S]*?<!-- flight-map-seo:end -->/, renderInfo(copy, { note: String(messages.m028 ?? ''), helpLink: { href: `/${locale}/flight-map/help`, label: String(messages.xHelp) } }));
+  // Оболочку (шаблон, нулевая статистика, пустой список) собирает lib/flight-map/shell.ts —
+  // её же вызывает сборка приложения. Блок SEO/FAQ остаётся здесь: он нужен только сайту.
+  const html = fillFlightMapShell(locale, messages, { info: renderInfo(copy, { note: String(messages.m028 ?? ''), helpLink: { href: `/${locale}/flight-map/help`, label: String(messages.xHelp) } }) });
   return <>
     {/* Только эта страница заранее загружает свой runtime и каталог текущего
         языка. Раньше они ждали hydration → import → дочерние modules → fetch,

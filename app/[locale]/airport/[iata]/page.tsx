@@ -8,13 +8,11 @@ import { notFound, permanentRedirect } from 'next/navigation';
 import Link from 'next/link';
 import airportsAll from '@/data/airports.json';
 import { getAirport, getStaticIataCodes, getCountries, getCities, nearestAirports } from '@/lib/airports';
-import { hasNoService, nearestServiced, serviceLevel, serviceMeasuredOn, isUnfillable, sourcedNoCommercialService } from '@/lib/warm';
+import { hasNoService, nearestServiced, serviceLevel, isUnfillable, sourcedNoCommercialService } from '@/lib/warm';
 import { hasWikiAirlines } from '@/lib/wiki-routes';
-import { localizedMeasuredOn } from '@/lib/measured-date';
 import { airportNodeId } from '@/lib/airport-sameas';
 import { getAirportContent } from '@/lib/airport-content';
 import { getAirportName, getAirportNameBare } from '@/lib/airport-names';
-import { hasGenericWord } from '@/lib/generic-word';
 import { Breadcrumb } from '@/components/Breadcrumb';
 import { deName as withDe } from '@/lib/fr-elision';
 import { getCityName, getCountryName } from '@/lib/places';
@@ -26,27 +24,9 @@ import { locales } from '@/lib/i18n';
 import { currentIata } from '@/lib/iata-aliases';
 import { showCityFlag, fold } from '@/lib/show-city';
 import { assertLocale } from '@/lib/locale-guard';
+import { airportBoardProps } from '@/lib/airport-page-props';
 import { getAirportGuide, guideAmenities } from '@/lib/airport-guide';
 import { ldScript } from '@/lib/json-ld';
-
-/**
- * Срез борта для показа и признак «всё уже в прошлом».
- *
- * orderBoard на мёртвом борту отдаёт ХВОСТ по возрастанию — то есть самое ценное стоит в
- * конце списка. Страница резала его `slice(0, 40)`, компонент рисовал первые тридцать: два
- * среза подряд с головы, и человек видел самые СТАРЫЕ строки из имеющихся, а десять–двадцать
- * самых свежих не доезжали до разметки вовсе. Замер 12.08 на AYT: на экране 07:00–07:55, в
- * полезной нагрузке было до 08:30, в хранилище — примерно до 09:00.
- *
- * Считается на сервере от НАСТОЯЩЕГО времени, а не от времени снимка: вопрос «что уже
- * улетело» — про часы читателя, а не про то, что видел поставщик данных.
- */
-function boardWindow(rows: { ts?: number }[], n: number): { rows: any[]; allPast: boolean } {
-  const now = Date.now() / 1000;
-  const allPast = rows.length > 0 && rows.every(r => !r.ts || r.ts < now);
-  return { rows: allPast ? rows.slice(-n) : rows.slice(0, n), allPast };
-}
-
 
 const BASE = 'https://airportsboard.live';
 
@@ -345,61 +325,20 @@ export default async function AirportPage({ params }: Props) {
       .filter(a => a.closed === handover)
       .map(a => `${getAirportName(a.iata, locale, a.name)} (${a.iata})`);
   })();
-  // Honest delay summary for mega-tier boards — the "are there delays at X right now"
-  // query family, answered from data we hold rather than prose. Gates (all mandatory):
-  // count only status==='delayed' (=15+ min, see mapStatus), denominator = flights still
-  // to depart (the 80-row board includes already-departed rows), suppress when the board
-  // is cold, empty of upcoming flights, or the store data is older than two hours — a
-  // "right now" claim on a six-hour-old snapshot would be the exact kind of lie the last
-  // three waves removed.
-  const delayLine = (() => {
-    if ((serviceLevel(airport.iata) ?? 0) < 400) return null;
-    const fetchedAt = getBoardFetchedAt(airport.iata, 'departures');
-    if (!fetchedAt) return null;
-    const ageMin = Math.round((Date.now() - fetchedAt) / 60000);
-    if (ageMin > 120) return null;
-    const pending = initialFlights.filter(f => f.status !== 'departed' && f.status !== 'cancelled');
-    if (!pending.length) return null;
-    const delayed = pending.filter(f => f.status === 'delayed').length;
-    return tHome('delays_line', {
-      m: String(Math.max(1, ageMin)),
-      delayed: String(delayed),
-      pending: String(pending.length),
-    });
-  })();
-  const noService = hasNoService(airport.iata);
-  // The body half of the honest-title branch in generateMetadata(). Same three conditions in
-  // the same order, so a page can never advertise "airport information" in the SERP and then
-  // render a live-board skeleton — the exact contradiction AdSense rejected the site over.
-  // Self-healing: all three are read from data on every render, so the moment the warmer
-  // measures real service the board and its chrome come back on their own.
-  const infoOnly = initialFlights.length === 0
-    && !hasWikiAirlines(airport.iata)
-    && serviceLevel(airport.iata) === null;
+  // Пропсы табло — lead, строка задержек, noService, infoOnly, пометка пустого борта и срез
+  // первого экрана — считает lib/airport-page-props.ts: те же строки отдаёт приложению
+  // /api/app/airport. Борт и переводчики ей передаются готовыми: сама она к поставщику не
+  // ходит и ничего не ждёт (почему последнее важно — у boardTranslators).
+  const boardProps = airportBoardProps(airport, locale, 'airport', initialFlights, { home: tHome, ui: tUi });
+  const noService = boardProps.noService;
   const nearestWithFlights = noService
     ? (() => {
         const n = nearestServiced(airport.iata, nearestAirports(airport.lat, airport.lon, 12));
         return n ? { ...getAirport(n.iata)!, km: n.km } : null;
       })()
     : null;
-  const name = getAirportName(airport.iata, locale, airport.name);
-  // What to put under an empty board when the airport is NOT known to be service-free — i.e.
-  // the warmer simply has not reached it yet. Never "No flights found": that would assert
-  // something false about a real airport, and 1,580 of these are airports whose zero verdict
-  // OurAirports contradicts outright (see scripts/crosscheck-service.mjs). Where we do have a
-  // measured schedule figure, say it — the page then answers "how busy is this airport" even
-  // with no live rows, which is the whole point for a crawler that will never run our JS.
-  const pendingNote = (!noService && initialFlights.length === 0)
-    ? (() => {
-        const measured = serviceLevel(airport.iata);
-        const on = serviceMeasuredOn();
-        const line = tUi('board_pending');
-        return measured && measured > 0 && on
-          ? `${line} ${tHome('faq_deps_a', { n: measured, name, iata: airport.iata, date: localizedMeasuredOn(on, locale), deAirport: locale === 'de' && !hasGenericWord('de', name) ? `Flughafen ${name}` : name })}`
-          : line;
-      })()
-    : null;
-  const city = getCityName(airport.city, locale);
+  const name = boardProps.displayName;
+  const city = boardProps.cityName;
   const country = getCountryName(airport.country, locale);
   // Same source as the <meta> description — see airportDescription(). Structured data is
   // what AI crawlers actually parse, so it must not claim a live board the page cannot show.
@@ -460,10 +399,6 @@ export default async function AirportPage({ params }: Props) {
     },
   ];
 
-
-  // Один вызов на рендер: между двумя вызовами Date.now() успел бы тикнуть, и строка
-  // могла бы перепрыгнуть из будущего в прошлое между срезом и признаком.
-  const board = boardWindow(initialFlights, 40);
 
   return (
     <>
@@ -541,7 +476,7 @@ export default async function AirportPage({ params }: Props) {
       {/* The visible <h1> now lives in FlightBoard's airport header (single semantic h1). */}
       {/* SSR only the first 40 rows to keep the HTML light (the client refetches the full
           board on mount); AirportBottom still gets the full set to aggregate routes/airlines. */}
-      <FlightBoard airport={airport} locale={locale} displayName={name} cityName={city} initialFlights={board.rows} initialAllPast={board.allPast} initialFetchedAt={getBoardFetchedAt(airport.iata, 'departures')} boardTotal={initialFlights.length} lead={tHome(fold(name) === fold(city) ? 'airport_lead_same' : 'airport_lead', { name, iata: airport.iata, city, country })} statusLine={delayLine} noService={noService} infoOnly={infoOnly} pendingNote={pendingNote} aboutTitle={tHome('about_title', { iata: airport.iata })} aboutExtra={<AirportBottom part="reference" about={about} airport={airport} locale={locale} displayName={name} flights={initialFlights} noService={noService} nearestServed={nearestWithFlights} schedule />} />
+      <FlightBoard airport={airport} locale={locale} displayName={boardProps.displayName} cityName={boardProps.cityName} initialFlights={boardProps.initialFlights} initialAllPast={boardProps.initialAllPast} initialFetchedAt={boardProps.initialFetchedAt} boardTotal={boardProps.boardTotal} lead={boardProps.lead} statusLine={boardProps.statusLine} noService={boardProps.noService} infoOnly={boardProps.infoOnly} pendingNote={boardProps.pendingNote} aboutTitle={boardProps.aboutTitle} aboutExtra={<AirportBottom part="reference" about={about} airport={airport} locale={locale} displayName={name} flights={initialFlights} noService={noService} nearestServed={nearestWithFlights} schedule />} />
       <AirportBottom airport={airport} locale={locale} about={about} displayName={name} flights={initialFlights} noService={noService} nearestServed={nearestWithFlights} schedule tail={<><Breadcrumb label={tNav('aria_breadcrumb')} trail={crumbs} foot /><LocaleLinks locale={locale as Locale} path={`/airport/${airport.iata}`} /></>} />
     </>
   );

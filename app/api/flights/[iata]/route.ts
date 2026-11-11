@@ -2,6 +2,7 @@ import { NextRequest, NextResponse } from 'next/server';
 import { getBoard, getBoardFetchedAt, OUTBOUND_ROWS } from '@/lib/flights';
 import { mayFetchLive } from '@/lib/live-budget';
 import { getAirport } from '@/lib/airports';
+import { withAppCors } from '@/lib/app-cors';
 
 /**
  * Ответ борта НЕ КЭШИРУЕТСЯ общим кэшем — по той же причине, что и сама страница табло.
@@ -39,10 +40,10 @@ export async function GET(
    * то есть сузить до каталога не ломает ни одного своего вызывающего.
    */
   if (!getAirport(code)) {
-    return NextResponse.json(
+    return withAppCors(req, NextResponse.json(
       { error: 'unknown airport', iata: code },
       { status: 404, headers: { 'Cache-Control': BOARD_CACHE_CONTROL } },
-    );
+    ));
   }
   /**
    * direction ПРОВЕРЯЕТСЯ, а не приводится типом.
@@ -84,12 +85,14 @@ export async function GET(
   // Local-dev convenience only: with no key at all, show sample data so the board isn't
   // blank while developing. NEVER in production — prod serves real data or an empty board.
   if (!flights.length && !process.env.AIRLABS_API_KEY && process.env.NODE_ENV !== 'production') {
-    return NextResponse.json(mockData(code, direction), {
+    return withAppCors(req, NextResponse.json(mockData(code, direction), {
       headers: { 'Cache-Control': BOARD_CACHE_CONTROL },
-    });
+    }));
   }
 
-  return NextResponse.json(
+  // CORS для приложений (lib/app-cors.ts) — на всех трёх ветках ответа, включая 404: иначе
+  // WebView приложения не отличил бы «нет такого аэропорта» от сетевого сбоя.
+  return withAppCors(req, NextResponse.json(
     // fetchedAt = when airlabs actually produced this data, so the client can label its
     // real age instead of assuming the response time is the data time.
     /**
@@ -102,7 +105,7 @@ export async function GET(
      */
     { iata: code, direction, flights: flights.slice(0, OUTBOUND_ROWS), fetchedAt: getBoardFetchedAt(code, direction) },
     { headers: { 'Cache-Control': BOARD_CACHE_CONTROL } }
-  );
+  ));
 }
 
 function mockData(iata: string, direction: string) {

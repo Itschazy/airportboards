@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { getBoard, CACHE_SECONDS } from '@/lib/flights';
+import { withAppCors } from '@/lib/app-cors';
 
 // "Popular now" counters on the homepage.
 //
@@ -25,7 +26,9 @@ export async function GET(req: NextRequest) {
     out[c] = { dep, arr };
   }));
 
-  return NextResponse.json(out, {
+  // CORS для приложений (lib/app-cors.ts). Ответ разрешает общий кэш (s-maxage), поэтому
+  // Vary: Origin обёртка ставит на каждый ответ, а не только приложению.
+  return withAppCors(req, NextResponse.json(out, {
     headers: { 'Cache-Control': `s-maxage=${CACHE_SECONDS}, stale-while-revalidate=${CACHE_SECONDS}` },
-  });
+  }));
 }
